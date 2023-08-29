@@ -68,20 +68,29 @@ local newPart = remoteFunction:InvokeServer(Color3.fromRGB(200, 0, 50), Vector3.
 
 if newPart then
 	print("The server created the requested part:", newPart)
+elseif newPart == false then
+	print("The server denied the request. No part was created")
 end
 ```
 
-```lua title="Script in ServerScriptService" highlight="4, 8-10, 12, 19"
+```lua title="Script in ServerScriptService" highlight="4, 6-7, 10-17, 19, 28"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 local t = require(ReplicatedStorage:WaitForChild("t"))
 
+-- Create type validator in advance to avoid unnecessary overhead
+local createPartTypeValidator = t.tuple(t.instanceIsA("Player"), t.Color3, t.Vector3)
 -- Create new part with the passed properties
 local function createPart(player, partColor, partPosition)
 	-- Type check the passed arguments
-	local typeValidator = t.tuple(t.instanceIsA("Player"), t.Color3, t.Vector3)
-	assert(typeValidator(player, partColor, partPosition))
+	if not createPartTypeValidator(player, partColor, partPosition) then
+		-- Silently return "false" if type check fails here
+		-- Raising an error without a cooldown can be abused by malicious cheaters
+		-- to bog down the server. Provide client feedback instead!
+
+		return false
+	end
 
 	print(player.Name .. " requested a new part")
 	local newPart = Instance.new("Part")
@@ -110,6 +119,52 @@ end
 local function isInf(n: number): boolean
 	-- Number could be -inf or inf
 	return math.abs(n) == math.huge
+end
+```
+
+Another common attack that exploiters may use involves sending `Library.table|tables` in place of an `Class.Instance`. Complex payloads can mimic what would be an otherwise ordinary object reference.
+
+For example, provided with an [in-experience shop](#in-experience-shop) system where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
+
+```lua title="LocalScript in StarterPlayerScripts" highlight="5, 17"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
+local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
+local payload = {
+	Name = "Ultra Blade",
+	ClassName = "Folder",
+	Parent = itemDataFolder,
+
+	Price = {
+		Name = "Price",
+		ClassName = "NumberValue",
+		Value = 0, -- Negative values could also be used which would result in giving currency rather than taking it!
+	},
+}
+
+-- Send malicious payload to the server. This will be rejected
+print(buyItemEvent:InvokeServer(payload))
+-- ^ Outputs "false Invalid item provided"
+
+-- Send a real item to the server. This will go through!
+print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))
+-- ^ Outputs "true" and remaining currency if purchase succeeds
+```
+
+```lua title="Script in ServerScriptService"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
+local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
+
+buyItemEvent.OnServerInvoke = function (player, item)
+	-- Check if the passed item isn't spoofed and is in the ItemData folder
+	if typeof(item) ~= "Instance" or not item:IsDescendantOf(itemDataFolder) then
+		return false, "Invalid item provided"
+	end
+
+	-- The server can then go on to process the purchase based on the example flow below
 end
 ```
 
