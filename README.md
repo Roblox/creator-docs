@@ -4,7 +4,7 @@ This repository holds source code for the creator documentation at [create.roblo
 
 **Note**: Currently, the repository has guides, tutorials, and educational content. Engine API reference files and code samples are coming soon.
 
-https://github.com/Roblox/creator-docs/assets/84365734/6f0ee20b-5d57-411b-a0bb-f31916ee310d
+<https://github.com/Roblox/creator-docs/assets/84365734/7c6be6a3-71b1-41e8-84e0-ccacff18ce8d>
 
 ## Reporting Issues
 

@@ -49,7 +49,7 @@ learning how to build an environment, try the [core curriculum](../../tutorials/
    </AccordionSummary>
    <AccordionDetails>
 
-Learn how to add simple shapes to the 3D space in order to figure out how users will
+Learn how to [add simple shapes to the 3D space](greybox-your-environment.md) in order to figure out how users will
 experience gameplay before investing time into polishing assets.
 
         <a href="https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing">
@@ -72,7 +72,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn about the concepts behind designing high-quality assets in third-party modeling tools that replace the greybox environment.
+    Learn about the concepts behind [designing high-quality assets](develop-polished-assets.md) in third-party modeling tools that replace the greybox environment.
 
         <a href="https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library">
         <Button
@@ -94,7 +94,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn how to import and configure your assets in a central location within your experience for easy access and reuse.
+    Learn how to [import and configure your assets](assemble-an-asset-library.md) in a central location within your experience for easy access and reuse.
 
         <a href="https://www.roblox.com/games/14447787049/Environment-Art-Assembling">
         <Button
@@ -116,7 +116,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn how to utilize your asset library, as well as how to add and configure additional elements of the 3D space to bring your world to life.
+    Learn how to [utilize your asset library](assemble-an-asset-library.md), as well as how to add and configure additional elements of the 3D space to bring your world to life.
 
         <a href="https://www.roblox.com/games/14447826396/Environment-Art-Constructing">
         <Button
@@ -138,7 +138,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn different strategies to keep your frame rate and performance levels high across devices, especially those with memory limitations.
+    Learn different strategies to [keep your frame rate and performance levels high](optimize-your-experience.md) across devices, especially those with memory limitations.
 
         <a href="https://www.roblox.com/games/14447845297/Environment-Art-Optimizing">
         <Button

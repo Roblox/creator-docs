@@ -160,87 +160,87 @@ To apply your asset library to the platforms:
 
 5. Add and configure the following **PlatformB** assets into their respective sea stack platform models:
 
-<table>
-<thead>
-<tr>
-<th>Parent Model</th>
-<th>Origin.Position</th>
-<th>Scale</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Level_3c</td>
-<td>`89, 31, 48`</td>
-<td>`0.8`</td>
-</tr>
-<tr>
-<td>Level_4a</td>
-<td>`104, 65.5, 46.5`</td>
-<td>`0.6`</td>
-</tr>
-<tr>
-<td>Level_4b</td>
-<td>`127, 66, 67.5`</td>
-<td>`0.6`</td>
-</tr>
-<tr>
-<td>Level_4b</td>
-<td>`133.5, 164.5, 70.5`</td>
-<td>`0.7`</td>
-</tr>
-<tr>
-<td>Level_4c</td>
-<td>`152, 65.5, 91`</td>
-<td>`1`</td>
-</tr>
-<tr>
-<td>Level_4d</td>
-<td>`200, 66, 107`</td>
-<td>`0.5`</td>
-</tr>
-<tr>
-<td>Level_4e</td>
-<td>`238.5, 66, 81`</td>
-<td>`0.8`</td>
-</tr>
-<tr>
-<td>Level_5a</td>
-<td>`262, 120, 57.5`</td>
-<td>`0.7`</td>
-</tr>
-<tr>
-<td>Level_5b</td>
-<td>`245, 122, 15`</td>
-<td>`0.4`</td>
-</tr>
-<tr>
-<td>Level_5c</td>
-<td>`271, 122.5, -5.5`</td>
-<td>`0.4`</td>
-</tr>
-<tr>
-<td>Level_5d</td>
-<td>`318, 121, -22`</td>
-<td>`0.9`</td>
-</tr>
-<tr>
-<td>Level_6a</td>
-<td>`363, 201, -52.5`</td>
-<td>`1.2`</td>
-</tr>
-<tr>
-<td>Level_6b</td>
-<td>`381, 201, 11`</td>
-<td>`0.4`</td>
-</tr>
-<tr>
-<td>Level_6c</td>
-<td>`389, 201, 47`</td>
-<td>`0.6`</td>
-</tr>
-</tbody>
-</table>
+   <table>
+   <thead>
+   <tr>
+   <th>Parent Model</th>
+   <th>Origin.Position</th>
+   <th>Scale</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Level_3c</td>
+   <td>`89, 31, 48`</td>
+   <td>`0.8`</td>
+   </tr>
+   <tr>
+   <td>Level_4a</td>
+   <td>`104, 65.5, 46.5`</td>
+   <td>`0.6`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`127, 66, 67.5`</td>
+   <td>`0.6`</td>
+   </tr>
+   <tr>
+   <td>Level_4b</td>
+   <td>`133.5, 164.5, 70.5`</td>
+   <td>`0.7`</td>
+   </tr>
+   <tr>
+   <td>Level_4c</td>
+   <td>`152, 65.5, 91`</td>
+   <td>`1`</td>
+   </tr>
+   <tr>
+   <td>Level_4d</td>
+   <td>`200, 66, 107`</td>
+   <td>`0.5`</td>
+   </tr>
+   <tr>
+   <td>Level_4e</td>
+   <td>`238.5, 66, 81`</td>
+   <td>`0.8`</td>
+   </tr>
+   <tr>
+   <td>Level_5a</td>
+   <td>`262, 120, 57.5`</td>
+   <td>`0.7`</td>
+   </tr>
+   <tr>
+   <td>Level_5b</td>
+   <td>`245, 122, 15`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_5c</td>
+   <td>`271, 122.5, -5.5`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_5d</td>
+   <td>`318, 121, -22`</td>
+   <td>`0.9`</td>
+   </tr>
+   <tr>
+   <td>Level_6a</td>
+   <td>`363, 201, -52.5`</td>
+   <td>`1.2`</td>
+   </tr>
+   <tr>
+   <td>Level_6b</td>
+   <td>`381, 201, 11`</td>
+   <td>`0.4`</td>
+   </tr>
+   <tr>
+   <td>Level_6c</td>
+   <td>`389, 201, 47`</td>
+   <td>`0.6`</td>
+   </tr>
+   </tbody>
+   </table>
 
    <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" width="80%" />
 
@@ -981,92 +981,92 @@ To apply your asset library to the mountains:
    3. Set **CFrame.Orientation** to **0, 46, 0**.
 4. Repeat this process, adding and configuring the following mountain assets along the border of your water terrain. The sample **Island Jump - Final** experience uses the following values:
 
-<table>
-<thead>
-<tr>
-<th>Size</th>
-<th>CFrame.Position</th>
-<th>CFrame.Orientation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>`2048, 212, 2048`</td>
-<td>`-326, 230, -1614`</td>
-<td>`-15, -155, 0`</td>
-</tr>
-<tr>
-<td>`2048, 416, 1871`</td>
-<td>`434, 160, -1543`</td>
-<td>`0, -2, 0`</td>
-</tr>
-<tr>
-<td>`2048, 400, 2048`</td>
-<td>`1200, 147, -1534`</td>
-<td>`-15, -155, 0`</td>
-</tr>
-<tr>
-<td>`2048, 540, 1488`</td>
-<td>`1726, 220, -1139`</td>
-<td>`0, -95, 0`</td>
-</tr>
-<tr>
-<td>`2044, 442, 2044`</td>
-<td>`2344, 174, -413`</td>
-<td>`0, 5, 0`</td>
-</tr>
-<tr>
-<td>`2048, 458, 2048`</td>
-<td>`2267, 157, 1084`</td>
-<td>`0, -81, 0`</td>
-</tr>
-<tr>
-<td>`2048, 678, 2048`</td>
-<td>`1662, 221, 1804`</td>
-<td>`0, 9, 0`</td>
-</tr>
-<tr>
-<td>`2043, 352, 1467`</td>
-<td>`1025, 147, 2462`</td>
-<td>`0, 54, 0`</td>
-</tr>
-<tr>
-<td>`1980, 531, 1742`</td>
-<td>`361, 180, 2119`</td>
-<td>`0, 21, 0`</td>
-</tr>
-<tr>
-<td>`2048, 415, 2048`</td>
-<td>`-580, 160, 1961`</td>
-<td>`0, -122, 0`</td>
-</tr>
-<tr>
-<td>`2048, 415, 2048`</td>
-<td>`-900, 160, 1652`</td>
-<td>`0, 24, 0`</td>
-</tr>
-<tr>
-<td>`1321, 403, 1321`</td>
-<td>`-1303, 133, 770`</td>
-<td>`0, 55, 0`</td>
-</tr>
-<tr>
-<td>`2048, 335, 2048`</td>
-<td>`-1653, 114, 161`</td>
-<td>`0, -20, 0`</td>
-</tr>
-<tr>
-<td>`2048, 249, 2048`</td>
-<td>`-1928, 79, -674`</td>
-<td>`0, 24, 0`</td>
-</tr>
-<tr>
-<td>`2048, 450, 2048`</td>
-<td>`-1426, 73, -895`</td>
-<td>`0, -20, 0`</td>
-</tr>
-</tbody>
-</table>
+   <table>
+   <thead>
+   <tr>
+   <th>Size</th>
+   <th>CFrame.Position</th>
+   <th>CFrame.Orientation</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>`2048, 212, 2048`</td>
+   <td>`-326, 230, -1614`</td>
+   <td>`-15, -155, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 416, 1871`</td>
+   <td>`434, 160, -1543`</td>
+   <td>`0, -2, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 400, 2048`</td>
+   <td>`1200, 147, -1534`</td>
+   <td>`-15, -155, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 540, 1488`</td>
+   <td>`1726, 220, -1139`</td>
+   <td>`0, -95, 0`</td>
+   </tr>
+   <tr>
+   <td>`2044, 442, 2044`</td>
+   <td>`2344, 174, -413`</td>
+   <td>`0, 5, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 458, 2048`</td>
+   <td>`2267, 157, 1084`</td>
+   <td>`0, -81, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 678, 2048`</td>
+   <td>`1662, 221, 1804`</td>
+   <td>`0, 9, 0`</td>
+   </tr>
+   <tr>
+   <td>`2043, 352, 1467`</td>
+   <td>`1025, 147, 2462`</td>
+   <td>`0, 54, 0`</td>
+   </tr>
+   <tr>
+   <td>`1980, 531, 1742`</td>
+   <td>`361, 180, 2119`</td>
+   <td>`0, 21, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 415, 2048`</td>
+   <td>`-580, 160, 1961`</td>
+   <td>`0, -122, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 415, 2048`</td>
+   <td>`-900, 160, 1652`</td>
+   <td>`0, 24, 0`</td>
+   </tr>
+   <tr>
+   <td>`1321, 403, 1321`</td>
+   <td>`-1303, 133, 770`</td>
+   <td>`0, 55, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 335, 2048`</td>
+   <td>`-1653, 114, 161`</td>
+   <td>`0, -20, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 249, 2048`</td>
+   <td>`-1928, 79, -674`</td>
+   <td>`0, 24, 0`</td>
+   </tr>
+   <tr>
+   <td>`2048, 450, 2048`</td>
+   <td>`-1426, 73, -895`</td>
+   <td>`0, -20, 0`</td>
+   </tr>
+   </tbody>
+   </table>
 
    <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Mountains-Final.jpg" width="80%" />
 

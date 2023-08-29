@@ -3295,7 +3295,7 @@ To delete excess geometry:
 
 2. Delete the baseplate object.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/DeletingGeo-2.png" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/DeletingGeo-2.png" width="100%"/>
 
 ## Sculpt Terrain
 
