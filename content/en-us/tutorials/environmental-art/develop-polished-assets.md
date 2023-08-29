@@ -104,7 +104,7 @@ The most fundamental rule for trim sheets is to avoid contextual details that yo
 
 <img src="../../assets/resources/mystery-of-duvall-drive/materializing-the-world/furniture-set-stain.png" width="100%"/>
 
-Following this fundamental rule, the final sample laser tag environment uses the following trim sheet texture maps with six rows of simple detail work to add visual interest and cohesion to its modular kit and props. You can use this **trim sheet** for UV unwrapping in third-party modeling tools, then utilize its texture maps in a `Class.SurfaceAppearance` object when you assemble your asset library. For more information on what each of these texture maps provide to meshes, see [PBR Textures - Texture Maps](../../art/modeling/surface-appearance.md#texture-maps).
+Following this fundamental rule, the final sample laser tag environment uses the following trim sheet texture maps with six rows of simple detail work to add visual interest and cohesion to its modular kit and props. You can use this <a href="../../assets/tutorials/environmental-art-curriculum/Section2/TrimSheetTextureMaps.zip" download>trim sheet</a> for UV unwrapping in third-party modeling tools, then utilize its texture maps in a `Class.SurfaceAppearance` object when you assemble your asset library. For more information on what each of these texture maps provide to meshes, see [PBR Textures - Texture Maps](../../art/modeling/surface-appearance.md#texture-maps).
 
 <Alert severity="info">
     This trim sheet file is only useful for UV unwrapping processes in third-party modeling tools. If you try to upload its texture maps to a `Class.SurfaceAppearance` object without completing a UV unwrapping process, there isn't any data for Studio to map to the texture itself.

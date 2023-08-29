@@ -4,6 +4,8 @@ This repository holds source code for the creator documentation at [create.roblo
 
 **Note**: Currently, the repository has guides, tutorials, and educational content. Engine API reference files and code samples are coming soon.
 
+If you're unfamiliar with the GitHub contribution process, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and the following video.
+
 <https://github.com/Roblox/creator-docs/assets/84365734/7c6be6a3-71b1-41e8-84e0-ccacff18ce8d>
 
 ## Reporting Issues
@@ -73,7 +75,7 @@ The Roblox documentation has three main document types:
 
   Guides teach you about a feature or workflow without being overly prescriptive about the end result. They introduce concepts and features and cover the tasks you can accomplish using various tools or other approaches.
 
-  Guides benefits massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
+  Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
 
 - (Coming soon) API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
 
