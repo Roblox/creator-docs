@@ -199,6 +199,16 @@ Imagine a game where a player can fire a laser beam at another player. Rather th
 - Confirm that the hit player is alive.
 - Store weapon and player state on the server and confirm that a firing player is not blocked by a current action such as reloading or a state like sprinting.
 
+#### DataStore Manipulation
+
+In games using `Class.DataStoreService` to save player data, exploiters may take advantage of invalid [data](#data-validation), and more obscure methods, to prevent a DataStore from saving properly. This can be especially abused in games with item trading, marketplaces and similar systems where items or currency leave a player's inventory.
+
+Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitised based on the following:
+- `Class.Instance` values cannot be serialised into a DataStore and will fail. Utilise [type validation](#remote-runtime-type-validation) to prevent this.
+- DataStores have a data size limit per key of 4 megabytes. Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
+- Table indices cannot be [NaN](#data-validation) or nil. Iterate over all tables passed by the client and verify all indices are valid.
+- DataStores can only accept valid UTF-8 characters. Sanitise all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"` an operation can be aborted if any invalid characters are found in a string.
+
 ### Remote Throttling
 
 If a client is able to make your server complete a computationally expensive operation, or access a rate-limited service like `Class.DataStoreService` via a `Class.RemoteEvent`, it's critical that you implement **rate limiting** to ensure the operation is not called too frequently. Rate limiting can be implemented by tracking when the client last invoked a remote event and rejecting the next request if it's called too soon.
