@@ -543,7 +543,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 
    	-- Replace line break tags so grapheme loop will not miss those characters
    	displayText = displayText:gsub("<br%s*/>", "\n")
-    -- Remove RichText tags since char-by-char animation will break the tags
+    	-- Remove RichText tags since char-by-char animation will break the tags
    	displayText = displayText:gsub("<[^<>]->", "")
 
    	-- Set translated/modified text on parent
