@@ -30,10 +30,11 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 
 	-- Read data store key
 	local getSuccess, currentData = pcall(function()
-return playerDataStore:GetAsync(userId)
+		return playerDataStore:GetAsync(userId)
 	end)
+
 	if getSuccess then
-print(currentData)
+		print(currentData)
 	end
 
 	-- Do further actions with currentData

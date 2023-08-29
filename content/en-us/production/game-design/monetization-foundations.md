@@ -64,7 +64,7 @@ Purchasable items can be divided into two categories:
     <figcaption>Consumable item in *Evade*</figcaption>
   </figure>
 
-They can then be futher divided into categories of utility:
+They can then be further divided into categories of utility:
 
 - **Enhancement:** These items improve the experience in some way, such as granting increased speed, protection, strength, tools or event mode access.
 - **Expression:** These items personalize the player's experience and makes them unique, such as skins, emotes, and pets.
@@ -196,7 +196,7 @@ Another common merchandising strategy is to use a chance-based system. In chance
       <figcaption>Chance wheel in *Dragon Adventure*</figcaption>
     </figure>
 
-- **Machine Style:** Each possible item is contained within a capsule, and players purchasing the ability to pull a lever and get one of the possible listed rewards.
+- **Machine Style:** Each possible item is contained within a capsule, and players purchase the ability to pull a lever and get one of the possible listed rewards.
   <figure>
       <img src="../../assets/game-design/monetization-foundations/monetization-foundation-12.png" width="70%"/>
       <figcaption>Machine Style *Creatures of Sonaria*</figcaption>
@@ -231,9 +231,9 @@ Bundles are a great way to package up items that go together, whether it's a gro
 
 <br />
 
-The _starter pack_ is a limited time purchase option presented to new players who first join an experience. It's a player's first look at the items in the shop the developer believe are relevant to early gameplay. It's also a new player's first interaction with Robux exchange rates and pricing.
+The _starter pack_ is a limited time purchase option presented to new players who first join an experience. It's a player's first look at the items in the shop the developer believes are relevant to early gameplay. It's also a new player's first interaction with Robux exchange rates and pricing.
 
-The starter pack can give new players a positive impression of the overall monetization strategy and provide key contextual information needed to understand the experience. Keep in mind that you're asking players for money very soon after their initial joining. Take care to begin building a customer relationship that ensures your players they will derive an obvious benefit from their first purchase.
+The starter pack can give new players a positive impression of the overall monetization strategy and provide key contextual information needed to understand the experience. Keep in mind that you're asking players for money very soon after their initial joining. Take care to begin building a customer relationship that ensures your players will derive an obvious benefit from their first purchase.
 
 Common durations for starter packs are anywhere from a day to a week, depending on the experience's design. This natural limitation makes starter packs an ideal candidate for applying of merchandising best practices, such as:
 
@@ -255,7 +255,7 @@ There are several good places to surface the starter pack in your UI. Clicking i
 
 ### Thoughtful Design
 
-Once you decide how players will see the starter pack, consider the starter pack visualization. Opening the offer in the shop encourages players to get familiar with the shop in general and can serve as a natural transition to exploring the all the options available for purchase.
+Once you decide how players will see the starter pack, consider the starter pack visualization. Opening the offer in the shop encourages players to get familiar with the shop in general and can serve as a natural transition to exploring all the options available for purchase.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-15.png" width="70%"/>
@@ -339,7 +339,7 @@ Good season passes are inviting. As a subset of an experience's shop, season pas
 
 ### Free and Premium Passes
 
-Good season passes have both a free and premium pass that present opportunities for players to earn rewards. The free pass is a set of rewards which any player can earn by engaging with the missions or tasks provided. The free pass of a season pass often serves as a more advanced version of a daily quests. The premium pass is a superset of the free pass rewards and enables to paid players the opportunity to earn even more. Having both free and premium passes ensures that non-paying players can still earn rewards and enjoy your experience, while rewarding paying players with worthwhile bonuses.
+Good season passes have both a free and premium pass that present opportunities for players to earn rewards. The free pass is a set of rewards which any player can earn by engaging with the missions or tasks provided. The free season pass often serves as a more advanced version of daily quests. The premium pass is a superset of the free pass rewards and enables paid players the opportunity to earn even more. Having both free and premium passes ensures that non-paying players can still earn rewards and enjoy your experience, while rewarding paying players with worthwhile bonuses.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-21.png" width="70%"/>
@@ -352,7 +352,7 @@ For more about daily quests, see [quest design](../../production/game-design/int
 
 ### Attractive rewards
 
-A good season pass has worthwhile rewards for players to earn. Merchandising techniques like previewing item rewards is an effective way to communicate this to your players. These rewards should also appeal to most players to attract the broadest possible segment of your community. Start by making the rewards relate to the core loop. It's important to clearly present what items are included in the both the free and premium passes to avoid having players guess what rewards are available from each. Doing this enables players to have concrete goals, allowing for deeper immersion and longer engagement as they actively strive to earn the attractive rewards that stand out to them.
+A good season pass has worthwhile rewards for players to earn. Merchandising techniques like previewing item rewards is an effective way to communicate this to your players. These rewards should also appeal to most players to attract the broadest possible segment of your community. Start by making the rewards relate to the core loop. It's important to clearly present what items are included in both the free and premium passes to avoid having players guess what rewards are available from each. Doing this enables players to have concrete goals, allowing for deeper immersion and longer engagement as they actively strive to earn the attractive rewards that stand out to them.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-24.png" width="70%"/>
