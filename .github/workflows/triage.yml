@@ -5,26 +5,7 @@ on:
   # Be careful when adding more actions to this workflow
   # https://github.com/actions/labeler#permissions
   pull_request_target:
-    types:
-      [
-        assigned,
-        unassigned,
-        labeled,
-        unlabeled,
-        opened,
-        edited,
-        closed,
-        reopened,
-        synchronize,
-        converted_to_draft,
-        ready_for_review,
-        locked,
-        unlocked,
-        review_requested,
-        review_request_removed,
-        auto_merge_enabled,
-        auto_merge_disabled,
-      ]
+    types: [labeled, unlabeled, opened, ready_for_review, reopened, synchronize]
 
 jobs:
   label-pull-request:
