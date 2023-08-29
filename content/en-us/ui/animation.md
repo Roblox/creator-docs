@@ -543,7 +543,8 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 
    	-- Replace line break tags so grapheme loop will not miss those characters
    	displayText = displayText:gsub("<br%s*/>", "\n")
-   	displayText:gsub("<[^<>]->", "")
+    	-- Remove RichText tags since char-by-char animation will break the tags
+   	displayText = displayText:gsub("<[^<>]->", "")
 
    	-- Set translated/modified text on parent
    	guiObject.Text = displayText
@@ -552,7 +553,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
    	for first, last in utf8.graphemes(displayText) do
    		index = index + 1
    		guiObject.MaxVisibleGraphemes = index
-   		wait(delayBetweenChars)
+   		task.wait(delayBetweenChars)
    	end
    end
 
