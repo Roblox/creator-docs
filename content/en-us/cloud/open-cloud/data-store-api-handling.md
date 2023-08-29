@@ -206,7 +206,7 @@ Ordered Data Stores endpoints use [Perfect-Encoding](https://www.rfc-editor.org/
 
 ### Universe ID
 
-The **Universe ID** is the unique identifier of the experience in which you want to access your data stores. The value of an experience's Universe ID is the value of its `Class.DataModel.GameId`, **not** the same as the **Startting Place ID**, which identifies the starting place of an experience rather than the entire experience.
+The **Universe ID** is the unique identifier of the experience in which you want to access your data stores. The value of an experience's Universe ID is the value of its `Class.DataModel.GameId`, **not** the same as the **Starting Place ID**, which identifies the starting place of an experience rather than the entire experience.
 
 You can obtain the **Universe ID** of an experience with the following steps:
 
@@ -220,7 +220,7 @@ You can obtain the **Universe ID** of an experience with the following steps:
 You can organize your data stores by setting a unique string as a scope that specifies a subfolder for the entry. Once you set a scope, it automatically prepends to all keys in all operations done on the data store. Scopes are optional and by default as `global` for standard data stores but required for ordered data stores.
 
 <Alert severity="warning">
-It is **strongly recommended** to use `prefix` paramaters instead of `scope` for sorting and listing **standard** data stores.
+It is **strongly recommended** to use the `prefix` parameter instead of `scope` for sorting and listing **standard** data stores.
 </Alert>
 
 The scope categorizes your data with a string and a separator with "/", such as:

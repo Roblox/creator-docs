@@ -136,7 +136,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
     DISCORD_BOT_TOKEN = ""
     GUILDED_BOT_TOKEN = ""
     OPEN_CLOUD_API_KEY = ""
-    ROBOLOX_WEBHOOK_SECRET = ""
+    ROBLOX_WEBHOOK_SECRET = ""
 
     # Dictionary of the Start place ID to
     # (universe ID, list of (data stores name, scope, and entry key)) for
@@ -281,7 +281,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
         # Validates signature
         timestamp_message = "{}.{}".format(timestamp, message.embeds[0].description)
         digest = hmac.new(
-            bot_config.ROBOLOX_WEBHOOK_SECRET.encode(),
+            bot_config.ROBLOX_WEBHOOK_SECRET.encode(),
             msg=timestamp_message.encode(),
             digestmod=hashlib.sha256
         ).digest()
