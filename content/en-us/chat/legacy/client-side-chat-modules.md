@@ -113,7 +113,7 @@ The **ChatBar** handles client-side text entry for the Lua Chat System. There ar
 #### CaptureFocus
 
 - **Parameters:** None
-- **Description:** Forces the client to focus on the `TextBox` of the chat bar. Equivalent to calling `TextBox:CaptureFocus` on the rsult of GetTextBox.
+- **Description:** Forces the client to focus on the `TextBox` of the chat bar. Equivalent to calling `TextBox:CaptureFocus` on the result of GetTextBox.
 - **Returns:** void
 
 #### ReleaseFocus
@@ -301,7 +301,7 @@ Whisper chat and team chat use ChatCustomState to indicate to the player where t
 
 ## ChatSettings
 
-The **ChatSettings** is a dictionary of settings for the client-side of the Lua Chat System. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be cahgned during run-time.
+The **ChatSettings** is a dictionary of settings for the client-side of the Lua Chat System. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be changed during run-time.
 
 To change a setting, require this module using a `LocalScript` in the following manner:
 
