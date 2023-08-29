@@ -152,7 +152,7 @@ print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))
 -- ^ Outputs "true" and remaining currency if purchase succeeds
 ```
 
-```lua title="Script in ServerScriptService"
+```lua title="Script in ServerScriptService" highlight="7-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
