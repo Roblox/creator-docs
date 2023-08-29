@@ -1,0 +1,54 @@
+navigation:
+  - heading: Code Samples
+  - title: Overview
+    path: /samples/
+  - heading: Developer Modules
+  - title: Overview
+    path: /resources/modules/
+  - title: Selfie Mode
+    path: /resources/modules/selfie-mode
+  - title: Merch Booth
+    path: /resources/modules/merch-booth
+  - title: Friends Locator
+    path: /resources/modules/friends-locator
+  - title: Profile Card
+    path: /resources/modules/profile-card
+  - title: Emote Bar
+    path: /resources/modules/emote-bar
+  - title: Spawn With Friends
+    path: /resources/modules/spawn-with-friends
+  - title: Photo Booth
+    path: /resources/modules/photo-booth
+  - title: Surface Art
+    path: /resources/modules/surface-art
+  - title: Scavenger Hunt
+    path: /resources/modules/scavenger-hunt
+  - title: Social Interactions
+    path: /resources/modules/social-interactions
+  - title: Event Sequencer
+    path: /resources/modules/event-sequencer
+  - heading: Projects and Kits
+  - title: Plant Reference Project
+    path: /resources/plant-reference-project
+  - title: Battle Royale
+    section:
+      - title: Overview
+        path: /resources/battle-royale/
+      - title: Installation and Setup
+        path: /resources/battle-royale/installation-and-setup
+      - title: Running the Game
+        path: /resources/battle-royale/running-the-game
+      - title: Core Scripts
+        path: /resources/battle-royale/core-scripts
+      - title: Pickup System
+        path: /resources/battle-royale/pickup-system
+      - title: Building System
+        path: /resources/battle-royale/building-system
+      - title: Minimap System
+        path: /resources/battle-royale/minimap-system
+      - title: The Storm
+        path: /resources/battle-royale/the-storm
+  - title: Weapons Kit
+    path: /resources/weapons-kit
+  - title: NPC Kit
+    path: /resources/npc-kit

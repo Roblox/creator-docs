@@ -1,0 +1,78 @@
+name: Content Checks
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - ready_for_review
+      - reopened
+  push:
+    branches:
+      - main
+      - staging
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+concurrency:
+  group: content-checks-${{ github.event_name }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request_target' }}
+jobs:
+  quality:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Sparse checkout of content directory from fork to temp directory
+        if: ${{ github.event_name == 'pull_request_target' }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: 'temp_content'
+          sparse-checkout: 'content/'
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+
+      - name: Move the content from temp directory to main repo's content directory
+        if: ${{ github.event_name == 'pull_request_target' }}
+        run: |
+          rm -rf content/
+          ls -la temp_content/content/
+          mv temp_content/content/ content/
+          ls -la temp_content/
+          rm -rf temp_content/
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+
+      - name: Install Node.js dependencies
+        shell: bash
+        run: npm ci
+
+      - name: Print workflow information
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Pull request number: ${{ github.event.pull_request.number }}"
+          echo "Pull request user login: ${{ github.event.pull_request.user.login }}"
+          echo "Base ref: ${{ github.event.pull_request.base.ref }}"
+          echo "Head sha: ${{ github.event.pull_request.head.sha }}"
+          git status
+          git remote -v
+          git log --oneline -n 10
+
+      - name: Run quality checks
+        # Don't run local code for security reasons
+        uses: Roblox/creator-docs/.github/actions/quality-checks@main
+        with:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: origin/${{ github.event.pull_request.base.ref }}
+          COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}

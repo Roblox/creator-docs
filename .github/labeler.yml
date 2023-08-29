@@ -1,0 +1,72 @@
+# https://github.com/actions/labeler
+### Tools ###
+
+# Add 'tools' label to any file change not in content dir
+tools:
+  - '!content/**/*'
+
+# Add extra label for .github folder for extra visibility
+github:
+  - '.github/**/*'
+
+### Content ###
+
+art:
+  - 'content/en-us/art/**/*'
+  - 'content/common/navigation/engine/art.yaml'
+
+assets:
+  - 'content/en-us/assets/**/*'
+
+education:
+  - 'content/en-us/education/**/*'
+  - 'content/en-us/assets/education/**/*'
+  - 'content/common/navigation/education.yaml'
+
+design:
+  - 'content/en-us/production/game-design/**/*'
+  - 'content/common/navigation/engine/design.yaml'
+
+# Add 'engine guides' label to any .md change not in any other category
+# Need to use `any` syntax for excluding subfolders
+engine guides:
+  - any:
+      [
+        'content/en-us/**/*.md',
+        'content/common/navigation/engine/guides.yaml',
+        '!content/en-us/art/**/*',
+        '!content/en-us/assets/**/*',
+        '!content/en-us/cloud/**/*',
+        '!content/en-us/education/**/*',
+        '!content/en-us/production/game-design/**/*',
+        '!content/en-us/reference/**/*',
+        '!content/en-us/resources/**/*',
+        '!content/en-us/studio/**/*',
+        '!content/en-us/tutorials/**/*',
+      ]
+
+engine reference:
+  - 'content/en-us/reference/**/*.yaml'
+
+navigation:
+  - 'content/common/navigation/**/*'
+
+cloud:
+  - 'content/en-us/cloud/**/*'
+  - 'content/en-us/assets/open-cloud/**/*'
+  - 'content/en-us/reference/cloud/**/*'
+  - 'content/common/navigation/cloud/**/*'
+
+resources:
+  - 'content/en-us/resources/**/*'
+  - 'content/common/navigation/engine/resources.yaml'
+
+studio:
+  - 'content/en-us/studio/**/*'
+  - 'content/en-us/assets/studio/**/*'
+  - 'content/common/navigation/engine/studio.yaml'
+
+tutorials:
+  - 'content/en-us/tutorials/**/*'
+  - 'content/en-us/assets/tutorials/**/*'
+  - 'content/common/navigation/engine/tutorials.yaml'

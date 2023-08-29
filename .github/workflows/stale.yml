@@ -1,0 +1,36 @@
+name: 'Stale'
+on:
+  schedule:
+    # 8 is Midnight Pacific Standard Time
+    # Run again in 1 hour to get all PRs
+    # 20 is Noon Pacific Standard Time
+    - cron: '0 8,9,20 * * *' # https://crontab.guru/#0_8,9,20_*_*_*
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  stale:
+    name: 'Close Stale Pull Requests'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v8 # https://github.com/actions/stale
+        with:
+          # Don't do anything to issues
+          days-before-issue-stale: -1
+          days-before-issue-close: -1
+          # Pull Requests
+          stale-pr-message: >-
+            This pull request has been inactive for 14 days. If it remains
+            inactive for another 7 days, it will close. Please 
+            update or comment on this pull request to keep it open. 🙏
+          close-pr-message: >-
+            This pull request has been inactive for 21 days. It's closing now. 
+            Please feel free to reopen it if you still need it. 🙏
+          stale-pr-label: 'stale'
+          days-before-pr-stale: 14
+          days-before-pr-close: 7
+          delete-branch: true
+          # GitHub Actions has a rate limit of 1,000 operations per hour
+          # See https://docs.github.com/en/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28#rate-limits-for-requests-from-github-actions
+          operations-per-run: 500
+          # For debugging
+          debug-only: false

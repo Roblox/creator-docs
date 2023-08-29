@@ -1,0 +1,81 @@
+defaultType: markdown
+backTo:
+  title: Back to Guides
+  path: /platform
+navigation:
+  - heading: Roblox Studio
+  - title: Overview # merge working in studio content into here
+    path: /studio/
+  - title: Setting Up Studio
+    path: /studio/setting-up-roblox-studio
+  - title: Studio Interface
+    path: /studio/ui-overview
+  - title: Customization
+    path: /studio/customization
+  - heading: Building Tools
+  - title: Align Tool
+    path: /studio/align-tool
+  - title: Pivot Tools
+    path: /studio/pivot-tools
+  - title: Terrain Editor
+    path: /studio/terrain-editor
+  - title: Rig Builder
+    path: /studio/rig-builder
+  - heading: Scripting Tools
+  - title: Script Editor
+    path: /studio/script-editor
+  - title: Debugging
+    path: /studio/debugging
+  - heading: Testing Tools
+  - title: Studio Testing Modes
+    path: /studio/testing-modes
+  - title: Output Window
+    path: /studio/output
+  - title: Avatar Preview
+    path: /studio/avatar-preview
+  - title: Developer Console
+    path: /studio/developer-console
+  #- title: ScriptProfiler # If this is part of the dev console, figure out if it can just be added to that article
+  #  path: /studio/scriptprofiler
+  - title: MicroProfiler
+    section:
+      - title: Overview
+        path: /studio/microprofiler/
+      - title: Task Scheduler
+        path: /studio/microprofiler/task-scheduler
+      - title: Tag Table
+        path: /studio/microprofiler/tag-table
+      - title: Using MicroProfiler
+        path: /studio/microprofiler/using-microprofiler
+  - heading: UI Reference
+  - title: Quick Access Tools
+    path: /studio/quick-access
+  - title: Home Tab
+    path: /studio/home-tab
+  - title: Model Tab
+    path: /studio/model-tab
+  - title: Avatar Tab
+    path: /studio/avatar-tab
+  - title: Test Tab
+    path: /studio/test-tab
+  - title: View Tab
+    path: /studio/view-tab
+  - title: Plugins Tab
+    path: /studio/plugins-tab
+  - title: Script Tab
+    path: /studio/script-tab
+  - title: Explorer Window
+    path: /studio/explorer
+  - title: Properties Window
+    path: /studio/properties
+  - title: Game Settings
+    path: /studio/game-settings
+  - title: Instance Attributes
+    path: /studio/instance-attributes
+  - title: Studio Shortcuts
+    path: /studio/shortcuts
+  - heading: Plugins
+  - title: Overview
+    path: /studio/plugins
+  - title: Building Studio Widgets
+    path: /studio/building-studio-widgets

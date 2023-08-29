@@ -1,0 +1,52 @@
+name: Triage
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target
+  # All event types
+  # Be careful when adding more actions to this workflow
+  # https://github.com/actions/labeler#permissions
+  pull_request_target:
+    types:
+      [
+        assigned,
+        unassigned,
+        labeled,
+        unlabeled,
+        opened,
+        edited,
+        closed,
+        reopened,
+        synchronize,
+        converted_to_draft,
+        ready_for_review,
+        locked,
+        unlocked,
+        review_requested,
+        review_request_removed,
+        auto_merge_enabled,
+        auto_merge_disabled,
+      ]
+
+jobs:
+  label-pull-request:
+    name: 'Label Pull Request'
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4 # https://github.com/actions/labeler
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          sync-labels: true
+          dot: true
+  first-interaction:
+    name: First Interaction
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1 # https://github.com/actions/first-interaction
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: "Hi @${{ github.event.pull_request.user.login }}, thanks so much for helping improve the Roblox creator documentation! Our technical writing team will review your pull request soon. In the meantime, please ensure you've read through the [README.md](https://github.com/Roblox/creator-docs#readme), contribution guidelines, and [style recommendations](https://github.com/Roblox/creator-docs/blob/main/STYLE.md)."

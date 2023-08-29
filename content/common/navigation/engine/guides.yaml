@@ -1,0 +1,585 @@
+defaultType: markdown
+navigation:
+  - heading: Learn the basics
+  - title: Platform Overview
+    path: /platform
+  - title: Creation Overview
+    path: /creation
+  - title: Create Your First Experience
+    path: /tutorials/first-experience/
+  - title: Coding Fundamentals
+    path: /tutorials/fundamentals/coding-1/coding-fundamentals
+    navigation: /engine/tutorials-fundamentals.yaml
+    #section:
+    #  - title: Setting Up Roblox Studio
+    #    path: /docs/getting-started/setting-up-roblox-studio
+    #  - title: Introduction to Roblox Studio ## not sure where this is going
+    #    path: /docs/getting-started/introduction-to-roblox-studio  ## this is now /first-experience/
+  - heading: Create
+
+  - title: Roblox Studio
+    path: /studio/
+    navigation: /engine/studio.yaml
+
+  - title: Projects
+    section:
+      - title: Overview
+        path: /projects/
+      - title: Architecture
+        section:
+          - title: Data Model
+            path: /projects/data-model
+          - title: Client-Server Runtime
+            path: /projects/client-server
+      - title: Managing
+        path: /projects/managing
+      - title: Teleporting
+        path: /projects/teleporting
+      - title: Working in Teams # needs some work with naming
+        section:
+          - title: Setting Up a Team
+            path: /projects/setting-up-a-team
+          - title: Collaboration
+            path: /projects/collaboration
+          - title: Groups
+            path: /projects/groups
+  - title: Assets
+    section:
+      - title: Overview
+        path: /projects/assets/
+      - title: Packages
+        path: /projects/assets/packages
+      - title: Managing
+        section:
+          - title: Asset Manager
+            path: /projects/assets/manager
+          - title: Toolbox
+            path: /projects/assets/toolbox
+          - title: Asset Catalog API
+            path: /projects/assets/api
+      - title: Archiving
+        path: /projects/assets/archiving
+      - title: In-Experience Asset Creation
+        path: /projects/assets/in-experience-asset-creation
+  - title: 3D Workspace
+    section:
+      - title: Overview
+        path: /workspace/
+      - title: Parts
+        section:
+          - title: Overview
+            path: /parts/
+          - title: Solid Modeling
+            path: /parts/solid-modeling
+          - title: Textures and Decals
+            path: /parts/textures-decals
+      - title: Meshes
+        path: /parts/meshes
+      - title: Models
+        path: /parts/models
+      - title: Materials
+        path: /parts/materials
+      - title: Terrain
+        path: /parts/terrain
+      - title: Streaming
+        path: /workspace/streaming
+      - title: Physics
+        section:
+          - title: Overview
+            path: /physics/
+          - title: Assemblies
+            path: /physics/assemblies
+          - title: Network Ownership
+            path: /physics/network-ownership
+          #- title: Joints
+          #  path: /physics/joints
+          - title: Mechanical Constraints
+            section:
+              - title: Overview
+                path: /physics/mechanical-constraints
+              - title: BallSocket
+                path: /physics/constraints/ball-socket
+              - title: Hinge
+                path: /physics/constraints/hinge
+              - title: Prismatic
+                path: /physics/constraints/prismatic
+              - title: Cylindrical
+                path: /physics/constraints/cylindrical
+              - title: Spring
+                path: /physics/constraints/spring
+              - title: TorsionSpring
+                path: /physics/constraints/torsion-spring
+              - title: Universal
+                path: /physics/constraints/universal
+              - title: Rope
+                path: /physics/constraints/rope
+              - title: Rod
+                path: /physics/constraints/rod
+              - title: Plane
+                path: /physics/constraints/plane
+              - title: Weld
+                path: /physics/constraints/weld
+              - title: Rigid
+                path: /physics/constraints/rigid
+              - title: NoCollision
+                path: /physics/constraints/no-collision
+          - title: Mover Constraints
+            section:
+              - title: Overview
+                path: /physics/mover-constraints
+              - title: LinearVelocity
+                path: /physics/constraints/linear-velocity
+              - title: AngularVelocity
+                path: /physics/constraints/angular-velocity
+              - title: AlignPosition
+                path: /physics/constraints/align-position
+              - title: AlignOrientation
+                path: /physics/constraints/align-orientation
+              - title: VectorForce
+                path: /physics/constraints/vector-force
+              - title: Torque
+                path: /physics/constraints/torque
+              - title: LineForce
+                path: /physics/constraints/line-force
+          - title: Adaptive Timestepping
+            path: /physics/adaptive-timestepping
+          - title: Roblox Units
+            path: /physics/units
+      - title: Effects
+        section:
+          - title: Overview
+            path: /effects/
+          - title: Light Sources
+            path: /effects/light-sources
+          - title: Particle Emitters
+            path: /effects/particle-emitters
+          - title: Beams
+            path: /effects/beams
+          - title: Trails
+            path: /effects/trails
+          - title: Highlighting
+            path: /effects/highlighting
+      - title: Camera
+        path: /workspace/camera
+      - title: Spatial Data
+        section:
+          #- title: Object World Space
+          #  path: /workspace/object-world-space
+          - title: CFrames
+            path: /workspace/cframes
+          - title: Collisions
+            path: /workspace/collisions
+          - title: Raycasting
+            path: /workspace/raycasting
+          # - title: Bézier Curves
+          #   path: /docs/mechanics/bezier-curves
+  - title: Scripting
+    section:
+      - title: Overview
+        path: /scripting/
+        # there's lots of files in scripting/... that need reconcilation
+      - title: Scripts
+        path: /scripting/scripts
+      - title: Services
+        path: /scripting/services
+      - title: Events
+        section:
+          - title: Built-In
+            path: /scripting/events/built-in
+          - title: Custom
+            path: /scripting/events/custom
+          - title: Remote
+            path: /scripting/events/remote
+      - title: Scheduler
+        path: /scripting/scheduler
+      - title: Multi-Threading
+        path:
+          /scripting/multithreading
+          # - title: Debouncing
+          #   path: /scripting/debounce
+      - title: Security Tactics and Cheat Mitigation
+        path: /scripting/security/security-tactics
+      - title: Luau
+        section:
+          - title: Overview
+            path: /luau/
+          - title: Types
+            section:
+              - title: Nil
+                path: /luau/nil
+              - title: Booleans
+                path: /luau/booleans
+              - title: Numbers
+                path: /luau/numbers
+              - title: Strings
+                path: /luau/strings
+              - title: Tables
+                path: /luau/tables
+              - title: Enums
+                path: /luau/enums
+              - title: Tuples
+                path: /luau/tuples
+              - title: Userdata
+                path: /luau/userdata
+          - title: Data Structures
+            section:
+              - title: Queues
+                path: /luau/queues
+              - title: Stacks
+                path: /luau/stacks
+              - title: Metatables
+                path: /luau/metatables
+          - title: Features
+            section:
+              - title: Comments
+                path: /luau/comments
+              - title: Variables
+                path: /luau/variables
+              - title: Scope
+                path: /luau/scope
+              - title: Operators
+                path: /luau/operators
+              - title: Control Structures
+                path: /luau/control-structures
+              - title: Functions
+                path: /luau/functions
+              - title: Type Coercion
+                path: /luau/type-coercion
+  - title: Environment
+    section:
+      - title: Overview
+        path: /environment/
+      - title: Global Lighting
+        path: /environment/lighting
+      - title: Atmosphere
+        path: /environment/atmosphere
+      - title: Post-Processing Effects
+        path: /environment/post-processing-effects
+      - title: Skyboxes
+        path: /environment/skybox
+      - title: Clouds
+        path: /environment/clouds
+      - title: Global Wind
+        path: /environment/global-wind
+  - title: Characters
+    section:
+      - title: Overview
+        path: /characters/
+      - title: Appearance
+        path: /characters/appearance
+      - title: Emotes
+        path: /characters/emotes
+      - title: Pathfinding
+        path: /characters/pathfinding
+      - title: Name and Health Display
+        path: /characters/name-health-display
+      - title: R6 to R15 Adapter
+        path: /characters/r6-to-r15-adapter
+  - title: Players
+    section:
+      - title: Overview
+        path: /players/
+      - title: Teams
+        path: /players/teams
+      - title: Leaderboards
+        path: /players/leaderboards
+      - title: Tools
+        path: /players/tools
+      - title: UI
+        section:
+          - title: Avatar Editor
+            path: /players/avatar-editor
+          - title: Avatar Inspect Menu
+            path: /players/avatar-inspect-menu
+          - title: Avatar Context Menu
+            path: /players/avatar-context-menu
+          - title: Disabling Default UI Elements
+            path: /players/disabling-ui
+  - title: Input
+    section:
+      - title: Overview
+        path: /input/
+      - title: Mouse and Keyboard
+        section:
+          - title: Overview
+            path: /input/mouse-and-keyboard
+          - title: Customizing Mouse Icons
+            path: /input/customizing-mouse-icons
+      - title: Mobile Input
+        path: /input/mobile
+      - title: Gamepad
+        path: /input/gamepad
+  - title: Sound
+    section:
+      - title: Overview
+        path: /sound/
+      - title: Audio Assets
+        path: /sound/assets
+      - title: Objects
+        path: /sound/objects
+      - title: Groups
+        path: /sound/groups
+      - title: Effects
+        path: /sound/dynamic-effects
+  - title: User Interface
+    section:
+      - title: Overview
+        path: /ui/
+      - title: Containers
+        section:
+          - title: On-Screen UI Containers
+            path: /ui/on-screen-containers
+          - title: In-Experience UI Containers
+            path: /ui/in-experience-containers
+      - title: Objects
+        section:
+          - title: Frames
+            path: /ui/frames
+          - title: Labels
+            path: /ui/labels
+          - title: Buttons
+            path: /ui/buttons
+          - title: Text Input
+            path: /ui/text
+      - title: Layout and Design
+        section:
+          - title: Layout and Appearance
+            path: /ui/layout-and-appearance
+          - title: Positioning and Sizing
+            path: /ui/positioning-and-sizing
+          - title: Rich Text Markup
+            path: /ui/rich-text
+          - title: Automatic Sizing
+            path: /ui/automatic-sizing
+          - title: 9-Slice
+            path: /ui/9-slice
+          - title: Cross-Platform Design
+            path: /ui/cross-platform-design
+      - title: UI Animation
+        path: /ui/animation
+      - title: Proximity Prompts
+        path: /ui/proximity-prompts
+      - title: Drag Detectors
+        path: /ui/drag-detectors
+      - title: Text Filtering
+        path: /ui/text-filtering
+      - title: Loading Screens
+        path: /ui/customizing-loading-screens
+  - title: Animation
+    section:
+      - title: Overview
+        path: /animation/
+      - title: Creating Animations
+        section:
+          - title: Animation Editor
+            path: /animation/editor
+          - title: Animation Events
+            path: /animation/events
+          - title: Animation Capture
+            path: /animation/capture
+          - title: Curve Editor
+            path: /animation/curve-editor
+          - title: Inverse Kinematics
+            path: /animation/inverse-kinematics
+      - title: Using Animations
+        path: /animation/using
+
+  - title: Chat
+    section:
+      - title: Spatial Voice
+        path: /chat/spatial-voice
+      - title: Text Chat
+        section:
+          - title: Overview
+            path: /chat/in-experience-text-chat
+          - title: Customizing In-Experience Text Chat
+            path: /chat/customizing-in-experience-text-chat
+          - title: Bubble Chat
+            path: /chat/bubble-chat
+          - title: Migrating to In-Experience Text Chat
+            path: /chat/migrate-to-in-experience-text-chat
+
+  - title: Cloud Services
+    section:
+      - title: Data Stores
+        section:
+          - title: Overview
+            path: /cloud-services/datastores
+          - title: Implementing Player Data and Purchasing Systems
+            path: /scripting/data/player-data-purchasing
+      - title: Memory Stores
+        section:
+          - title: Overview
+            path: /cloud-services/memory-stores/
+          - title: Sorted Map
+            path: /cloud-services/memory-stores/sorted-map
+          - title: Queue
+            path: /cloud-services/memory-stores/queue
+          - title: Observability
+            path: /cloud-services/memory-stores/observability
+      - title: Cross-Server Messaging
+        path: /cloud-services/cross-server-messaging
+
+  - heading: Distribute
+  - title: Overview
+    path: /production/
+  - title: Roblox User Base
+    path: /production/roblox-user-base
+  - title: Publishing
+    section:
+      - title: Overview
+        path: /production/publishing/
+      - title: Experiences
+        section:
+          - title: Overview
+            path: /production/publishing/publishing-experiences-and-places
+          - title: Experience Icons
+            path: /production/publishing/experience-icons
+          - title: Experience Thumbnails
+            path: /production/promotion/promotional-thumbnails
+          - title: Badges
+            path: /production/publishing/badges
+      # - title: Accessories
+      #   section:
+      #   - title: Publishing
+      #     path: /production/publishing/publishing-to-marketplace
+      #   - title: Avatar Marketplace Thumbnails
+      #     path: /production/publishing/marketplace-thumbnails
+      - title: Assets
+        section:
+          - title: Overview
+            path: /production/publishing/publishing-assets
+          - title: Creator Marketplace
+            path: /production/publishing/creator-marketplace
+      - title: Guidelines
+        section:
+          - title: Experience Guidelines
+            path: /production/promotion/experience-guidelines
+          - title: About GDPR and CCPA
+            path: /production/publishing/about-GDPR-and-CCPA
+          - title: DMCA Guidelines
+            path: /production/publishing/dmca-guidelines
+          - title: Accessibility Guidelines
+            path: /production/publishing/accessibility
+          - title: Xbox Guidelines
+            path: /production/publishing/xbox-guidelines
+          - title: VR Guidelines
+            path: /production/publishing/vr-guidelines
+      - title: Account Verification
+        path: /production/publishing/account-verification
+  - title: Promotion
+    section:
+      - title: Overview
+        path: /production/promotion/
+      - title: Discovery
+        path: /production/promotion/discovery
+      - title: Events Platform
+        path: /production/promotion/events-platform
+      - title: Player Invite Prompts
+        path: /production/promotion/invite-prompts
+      - title: Advertising
+        section:
+          - title: Advertising on Roblox
+            path: /production/promotion/advertising-on-roblox
+          - title: Ads Manager
+            path: /production/promotion/ads-manager
+          - title: Sponsoring Experiences
+            path: /production/promotion/sponsoring-experiences
+          - title: Sponsoring Items
+            path: /production/promotion/sponsoring-items
+          - title: User Advertisements
+            path: /production/promotion/user-advertisements
+          - title: Complying with Advertising Standards
+            path: /production/promotion/complying-with-advertising-standards
+      - title: Getting Featured on Roblox Owned Channels
+        path: /production/promotion/getting-featured-on-roblox-owned-channels
+      - title: Nominating for the Discover Page
+        path: /production/promotion/nominating-for-the-discover-page
+      - title: Growing Your Audience
+        path: /production/promotion/growing-your-audience
+  - title: Monetization
+    section:
+      - title: Overview
+        path: /production/monetization/
+      - title: Earning on Roblox
+        path: /production/earning-on-roblox
+      - title: Products
+        section:
+          - title: Immersive Ads
+            path: /production/monetization/immersive-ads
+          - title: Developer Products
+            path: /production/monetization/developer-products
+          - title: Passes
+            path: /production/monetization/game-passes
+          - title: Engagement-Based Payouts
+            path: /production/monetization/engagement-based-payouts
+          - title: Paid Access
+            path: /production/monetization/paid-access
+          - title: Private Servers
+            path: /production/monetization/private-servers
+      - title: Resources
+        section:
+          - title: Building Your Business
+            path: /production/monetization/business-resources
+          - title: Randomized Virtual Items Policy
+            path: /production/monetization/randomized-virtual-items-policy
+          - title: Game Fund
+            path: /production/monetization/game-fund
+  - title: Localization
+    section:
+      - title: Overview
+        path: /production/localization/
+      - title: Accessing Localization Settings
+        path: /production/localization/accessing-localization-settings
+      - title: Translating Experience Page Information
+        path: /production/localization/translating-experience-page-information
+      - title: Translating In-Experience Content
+        section:
+          - title: Overview
+            path: /production/localization/translating-in-experience-content
+          - title: Translating Dynamic Content
+            path: /production/localization/translating-dynamic-content
+          - title: Localizing with Scripting
+            path: /production/localization/localizing-with-scripting
+      - title: Working With Translators
+        path: /production/localization/working-with-translators
+      - title: Language Codes
+        path: /production/localization/language-codes
+  - title: Analytics
+    section:
+      - title: Overview
+        path: /production/analytics/
+      - title: Real-Time
+        section:
+          - title: Performance
+            path: /production/analytics/performance
+          - title: Error Report
+            path: /production/analytics/error-report
+      - title: Analytics Dashboard
+        section:
+          - title: Overview
+            path: /production/analytics/analytics-dashboard
+          - title: Retention
+            path: /production/analytics/retention
+          - title: Engagement
+            path: /production/analytics/engagement
+          - title: Acquisition
+            path: /production/analytics/acquisition
+          - title: Audience
+            path: /production/analytics/audience
+          - title: Monetization
+            path: /production/analytics/monetization
+      - title: Third-Party Analytics Services
+        path: /production/analytics/third-party-analytics
+  - title: Community
+    section:
+      - title: Overview
+        path: /production/community/
+      - title: Event Organizers
+        path: /production/community/event-organizers
+      - title: Talent Hub Developer Safety
+        path: /production/community/talent-hub-developer-safety
+  - heading: For Educators
+  - title: Go to Educator Onboarding
+    path: /education/educator-onboarding/landing
+    navigation: /education.yaml

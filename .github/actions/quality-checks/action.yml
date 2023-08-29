@@ -1,0 +1,40 @@
+name: Quality Checks
+description: Reusable action for running the quality checks
+inputs:
+  BASE_BRANCH:
+    description: Base branch
+  COMMIT_HASH:
+    description: Commit hash
+  EVENT_NAME:
+    description: Github event name
+  GITHUB_PAT:
+    description: Github token
+  PULL_REQUEST_NUMBER:
+    description: Pull request number
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run quality checks
+      shell: bash
+      run: |
+        echo "Base branch: ${{ inputs.BASE_BRANCH }}"
+        echo "Commit hash: ${{ inputs.COMMIT_HASH }}"
+        echo "GitHub event name: ${{ inputs.EVENT_NAME }}"
+        echo "Pull request number: ${{ inputs.PULL_REQUEST_NUMBER }}"
+
+        if [ "${{ inputs.EVENT_NAME }}" = "pull_request" ] || [ "${{ inputs.EVENT_NAME }}" = "pull_request_target" ]; then
+          npm run check -- --files='changed' --postPullRequestComments=true
+        elif [ "${{ inputs.EVENT_NAME }}" = "push" ]; then
+          npm run check -- --files='last-commit' --postPullRequestComments=false
+        elif [ "${{ inputs.EVENT_NAME }}" = "workflow_dispatch" ]; then
+          npm run check -- --files='all' --postPullRequestComments=false
+        else
+          echo "Unknown GitHub event name: ${{ inputs.EVENT_NAME }}"
+          exit 1
+        fi
+      env:
+        GITHUB_PAT: ${{ inputs.GITHUB_PAT }}
+        BASE_BRANCH: ${{ inputs.BASE_BRANCH }}
+        COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
+        PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}

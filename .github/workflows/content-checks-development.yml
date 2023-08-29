@@ -1,0 +1,59 @@
+name: Content Checks (Development)
+on:
+  # Use pull_request for development, pull_request_target for forks
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - ready_for_review
+      - reopened
+  push:
+    branches:
+      - main
+      - staging
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+concurrency:
+  group: content-checks-development-${{ github.event_name }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  quality:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+
+      - name: Install Node.js dependencies
+        shell: bash
+        run: npm ci
+
+      - name: Print workflow information
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Pull request number: ${{ github.event.pull_request.number }}"
+          echo "Pull request user login: ${{ github.event.pull_request.user.login }}"
+          echo "Base ref: ${{ github.event.pull_request.base.ref }}"
+          echo "Head sha: ${{ github.event.pull_request.head.sha }}"
+          git status
+          git remote -v
+          git log --oneline -n 10
+
+      - name: Run quality checks
+        uses: ./.github/actions/quality-checks
+        with:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: origin/${{ github.event.pull_request.base.ref }}
+          COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}

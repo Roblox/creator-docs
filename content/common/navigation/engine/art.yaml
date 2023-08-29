@@ -1,0 +1,166 @@
+navigation:
+  - heading: Meshes
+  - title: Overview
+    path: /art/modeling/
+  - title: Reference
+    section:
+      - title: Specifications
+        path: /art/modeling/specifications
+      - title: Project Files and References
+        path: /art/modeling/project-files
+      - title: Blender and Maya Export Settings
+        path: /art/modeling/export-requirements
+      - title: 3D Importer
+        path: /art/modeling/3d-importer
+  - title: Rigging and Skinning
+    section:
+      - title: Rigged Meshes
+        path: /art/modeling/rigging
+      - title: Rigging a Simple Mesh
+        path: /art/modeling/rigging-a-simple-mesh
+      - title: Skinned Meshes
+        path: /art/modeling/skinning
+      - title: Skinning a Simple Mesh
+        path: /art/modeling/skinning-a-simple-mesh
+  - title: PBR Textures
+    section:
+      - title: Overview
+        path: /art/modeling/surface-appearance
+      - title: Material References
+        path: /art/modeling/material-reference
+
+  - heading: Characters
+  - title: Overview
+    path: /art/avatar/
+  - title: Reference
+    section:
+      - title: Specifications
+        path: /art/avatar/specifications
+      - title: Project Files and Templates
+        path: /art/avatar/project-files
+      - title: Blender Validation Tool
+        path: /art/avatar/validation-tool
+      - title: Bodies
+        section:
+          - title: Rigging a Humanoid Model
+            path: /art/modeling/rigging-a-humanoid-model
+          - title: Skinning a Humanoid Model
+            path: /art/modeling/skinning-a-humanoid-model
+          - title: Calisthenics Tool
+            path: /art/modeling/calisthenics-tool
+          - title: Exporting Avatar Animations (Maya)
+            path: /art/avatar/exporting-avatar-animations-from-maya
+      - title: Heads
+        section:
+          - title: Overview
+            path: /art/avatar/facial-animation/
+          - title: Creating Basic Heads
+            path: /art/avatar/facial-animation/creating-basic-heads
+          - title: Creating Face Accessories
+            path: /art/avatar/facial-animation/creating-face-accessories
+          - title: FACS Poses Reference
+            path: /art/avatar/facial-animation/facs-poses-reference
+          - title: Using Heads in Studio
+            path: /art/avatar/facial-animation/using-heads-in-studio
+
+  - title: Creating with Templates
+    section:
+      - title: Overview
+        path: /art/avatar/creating/
+      - title: Modeling
+        path: /art/avatar/creating/modeling
+      - title: Texturing
+        path: /art/avatar/creating/texturing
+      - title: Caging
+        path: /art/avatar/creating/caging
+      - title: Cleanup
+        path: /art/avatar/creating/cleanup
+      - title: Exporting
+        path: /art/avatar/creating/exporting
+  - title: Testing
+    section:
+      - title: Overview
+        path: /art/avatar/testing/
+      - title: In Blender
+        path: /art/avatar/testing/blender
+      - title: In Studio
+        path: /art/avatar/testing/studio
+  - heading: Clothing and Accessories
+    section:
+  - title: Overview
+    path: /art/accessories/
+  - title: Reference
+    section:
+      - title: Specifications
+        path: /art/accessories/specifications
+      - title: Project Files and References
+        path: /art/accessories/project-files
+      - title: Accessory Fitting Tool
+        path: /art/accessories/accessory-fitting-tool
+  - title: Layered Clothing
+    section:
+      - title: Overview
+        path: /art/accessories/layered-clothing
+      - title: Creating Layered Models
+        path: /art/accessories/creating-in-blender
+      - title: Automatic Skinning Transfer
+        path: /art/accessories/automatic-skinning-transfer
+      - title: Clothing Validation Tool
+        path: /art/accessories/validation-tool
+  - title: Classic Clothing
+    path: /art/accessories/classic-clothing
+
+  - heading: Publishing and Selling
+  - title: Marketplace Policy
+    path: /art/marketplace/marketplace-policy
+  - title: Intellectual Property
+    path: /art/marketplace/intellectual-property
+  - title: Custom Thumbnails
+    path: /art/marketplace/custom-thumbnails
+  - title: Publishing to Marketplace
+    path: /art/marketplace/publishing-to-marketplace
+  - title: Marketplace Fees and Commissions
+    path: /art/marketplace/marketplace-fees-and-commissions
+  - heading: Example Projects
+  - title: The Mystery of Duvall Drive
+    section:
+      - title: Overview
+        path: /resources/the-mystery-of-duvall-drive/
+      - title: Constructing the House
+        path: /resources/the-mystery-of-duvall-drive/constructing-the-house
+      - title: Materializing the World
+        path: /resources/the-mystery-of-duvall-drive/materializing-the-world
+      - title: Immersive Narrative
+        path: /resources/the-mystery-of-duvall-drive/immersive-narrative
+      - title: Streaming in Immersion
+        path: /resources/the-mystery-of-duvall-drive/streaming-in-immersion
+      - title: Developing a Moving World
+        path: /resources/the-mystery-of-duvall-drive/developing-a-moving-world
+      - title: Designing Dark Soundscapes
+        path: /resources/the-mystery-of-duvall-drive/designing-dark-soundscapes
+      - title: Technical Overview
+        section:
+          - title: Overview
+            path: /resources/the-mystery-of-duvall-drive/technical-overview
+          - title: Main Design Requirements
+            path: /resources/the-mystery-of-duvall-drive/main-design-requirements
+          - title: Foundational Gameplay Systems
+            path: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
+          - title: Supporting Systems
+            path: /resources/the-mystery-of-duvall-drive/supporting-systems
+  - title: Beyond The Dark
+    section:
+      - title: Overview
+        path: /resources/beyond-the-dark/
+      - title: Architecture
+        path: /resources/beyond-the-dark/building-architecture
+      - title: Characters
+        path: /resources/beyond-the-dark/custom-characters
+      - title: Layered Clothing
+        path: /resources/beyond-the-dark/layered-clothing
+      - title: Sound Design
+        path: /resources/beyond-the-dark/sound-design
+      - title: User Interface
+        path: /resources/beyond-the-dark/user-interface
+  - title: City People Cars
+    path: /resources/city-people-cars

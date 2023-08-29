@@ -1,0 +1,34 @@
+navigation:
+  - heading: Design
+  - title: Overview
+    path: /production/game-design/
+  - heading: Design Your Experience
+  - title: Designing For Roblox
+    path: /production/game-design/designing-for-roblox
+  - title: Core Loops
+    path: /production/game-design/core-loops
+  - title: Prototyping
+    path: /production/game-design/prototyping
+  - heading: Build Your Experience
+  - title: Onboarding
+    path: /production/game-design/onboarding
+  - title: Quest Design
+    path: /production/game-design/introduction-to-quest-design
+  - title: UI and UX
+    path: /production/game-design/ui-ux-design
+  - heading: Monetize Your Experience
+  - title: Monetization Foundations
+    path: /production/game-design/monetization-foundations
+  - title: Season Pass Design
+    path: /production/game-design/season-pass-design
+  - title: Contextual Purchases
+    path: /production/game-design/contextual-purchases
+  - title: Balancing Virtual Economies
+    path: /production/game-design/balancing-virtual-economies
+  - heading: Support Your Experience
+  - title: LiveOps Essentials
+    path: /production/game-design/liveops-essentials
+  - title: Analytics Essentials
+    path: /production/game-design/analytics-essentials
+  - title: Content Updates
+    path: /production/game-design/content-updates

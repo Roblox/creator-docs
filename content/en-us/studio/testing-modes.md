@@ -1,0 +1,205 @@
+---
+title: Studio Testing Modes
+description: Testing Modes for your experience in Studio include Play, Play Here, and Run.
+---
+
+Because of the underlying [client-server model](../projects/client-server.md) of the Roblox engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
+
+<img src="../assets/studio/general/Toolbar-Test-Tab.png"
+   width="575" />
+
+## Playtest Options
+
+There are three common options for playtesting an experience. Clicking the small arrow below the main button lets you choose from each option, and sets that option as the default.
+
+<img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+	  <th>Shortcut</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Play**</td>
+	  <td><kbd>F5</kbd></td>
+      <td>Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around (0,&nbsp;100,&nbsp;0).</td>
+    </tr>
+    <tr>
+      <td>**Play Here**</td>
+	  <td></td>
+      <td>Starts simulating the experience, inserting your avatar in front of the camera's current position.</td>
+    </tr>
+	<tr>
+      <td>**Run**</td>
+	  <td><kbd>F8</kbd></td>
+      <td>Starts simulating the experience but does not insert your avatar. The simulation begins at the current camera position and you can navigate around using the Studio camera controls.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Client/Server Toggle
+
+When testing in either **Play** or **Play&nbsp;Here** mode, Studio runs two separate simulations &mdash; one **client** simulation and one **server** simulation &mdash; which can provide a more accurate impression of how the experience will execute in production.
+
+While playing solo, you can toggle between **Client** and **Server** modes by clicking the **Client/Server** toggle button. When you toggle, the button changes to reflect the current simulation mode.
+
+<img src="../assets/studio/debugging/Client-Server-Toggle.png" width="600" />
+
+#### Controls and Camera
+
+Depending on the mode, control of your character and the camera changes as follows:
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Client.jpg" />
+    <figcaption>In <b>Client</b> mode, the simulation uses your character controls and camera setup. This testing mode is a close simulation of the experience running on the Roblox application, without multiple players.</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Server.jpg" />
+    <figcaption>In <b>Server</b> mode, your character is inserted but is not under your control. You can move about the place with a free-floating camera, select objects, and inspect their properties.</figcaption>
+  </figure>
+</GridContainer>
+
+#### Explorer Window
+
+Within the [Explorer](../studio/explorer.md) window hierarchy, certain objects only exist in their expected containers.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-Explorer-Client.png" width="320" />
+    <figcaption>In <b>Client</b> mode, the expected client-side objects are present in the hierarchy, including those copied over from <b>StarterPack</b> to the player's <b>Backpack</b> and from <b>StarterPlayer</b> into the player's <b>PlayerScripts</b>.</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-Explorer-Server.png" width="320" />
+    <figcaption>In <b>Server</b> mode, the expected server-side objects are present in the hierarchy, including scripts in <b>ServerScriptService</b> and objects you placed in <b>ServerStorage</b>.</figcaption>
+  </figure>
+</GridContainer>
+
+### Output Window
+
+In the [Output](../studio/output.md) window, messages are labeled **blue** (client) or **green** (server), indicating their origin from either the client or server. For messages output from `Class.ModuleScript|ModuleScripts`, the label color is determined by whether the module was called from a client-side `Class.LocalScript`, or a server-side `Class.Script`.
+
+<img src="../assets/studio/general/Output-Window-Client-Server-Labels.png" width="800" />
+
+## Multi-Client Simulation
+
+Using the **Clients and Servers** options, you can launch multiple sessions of Studio, one acting as the server and each other acting as a client. This testing mode is a valuable tool for comparing how a client "sees" other clients within the experience.
+
+1. Make sure **Local Server** is selected in the upper box, then select the number of player sessions to test. Usually **1&nbsp;Player** is sufficient, although you can simulate up to eight.
+
+   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Setup.png" width="575" />
+
+1. Press the **Start** button to begin the client-server simulation.
+
+   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Start.png" width="575" />
+
+When you're finished testing, press the **Cleanup** button from any of the simulation sessions to close **all** simulated clients and the simulated server.
+
+<img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Cleanup.png" width="575" />
+
+## Device Emulation
+
+The **Device** emulator lets you emulate various devices directly in Studio, providing insight on how controls operate on a mobile device or how [on-screen UI](../ui/on-screen-containers.md) displays on different screens and aspect ratios.
+
+<img src="../assets/studio/general/Test-Tab-Emulation-Device.png"
+   width="575" />
+
+In emulation mode, you can select devices from the dropdown menu above the 3D view, adjust the **view&nbsp;size**, and change the **device orientation** between landscape and portrait modes.
+The **Device Selector** tab allows you to test an experience with low-end devices. It's useful for examining [streaming-enabled](../workspace/streaming.md) experiences, as the 3D content of these experiences dynamically loads and unloads on the player's device based on various factors specific to the device, including available memory.
+
+<img src="../assets/studio/general/Editor-Window-Emulation-Options.jpg"
+   width="800" />
+
+## Player Emulation
+
+For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player** emulator.
+
+<img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="575" />
+
+1. Click the **Player** button to open the emulator window.
+1. Toggle on **Enable Test Profile** in the window. Emulation will remain as toggled (enabled or disabled) even if you close the window.
+1. Lower down in the window, the following options are available:
+
+   - **Locale** - Lets you emulate a [localized](../production/localization/index.md) language while playtesting.
+   - **Region** - Lets you emulate a player's country/region while playtesting; this selection may impact other toggles and checkboxes in the window as outlined in `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()`.
+
+1. Start playtesting in either **Play** or **Play&nbsp;Here** mode to test the chosen settings.
+
+## Collaborative Testing
+
+If you're working on an experience with others in [Collaboration](../projects/collaboration.md) mode, you can test with other creators as follows:
+
+1. In the **Clients and Servers** section, select **Team Test** in the upper box.
+
+   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Team-Test.png" width="575" />
+
+1. Press the **Start** button to publish the current state of the experience and create a new Studio session with your character inserted. Other collaborators can then join by pressing **Join** from the **Test** tab.
+
+   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Team-Test-Join.png" width="575" />
+
+   <Alert severity="info">
+   Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.
+   </Alert>
+
+## Testing in VR
+
+If you'd like to support Virtual Reality (VR) headsets for your experience, make sure to test in VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open-source industry standard providing access to VR.
+
+<Alert severity="info">
+Currently, Testing in VR is only supported on Windows PCs.
+</Alert>
+
+### Headset Configuration
+
+To enable Studio testing in VR, you must first connect your headset to your PC and configure the OpenXR runtime **before** launching on Studio. If you've already launched Studio, quit and complete the configuration steps first.
+
+If you only have one VR headset, installing the corresponding VR app automatically configures the runtime for you. If you have multiple headsets, you need to set up the runtime manually and make sure to **only** configure the one that you want to use for testing.
+
+The following steps are for the two most common VR apps:
+
+- SteamVR for headsets such as HTC Vive and Valve Index.
+- Oculus for headsets such as Meta Quest and Oculus Rift.
+
+<Tabs>
+<TabItem label="Steam VR">
+
+1. Install and open the SteamVR app on your computer.
+2. Under **SteamVR Settings**, select the **Developer** tab, then select **Show Advanced Settings**.
+3. Set SteamVR as OpenXR runtime.
+4. Turn the controllers on by pressing the **System** button until you hear a beeping sound.
+   - To turn the controller off, press and hold the **System** button until you hear the same beeping sound.
+
+If you follow the steps correctly, the status icons on the SteamVR app and the status lights on the hardware should all be green, indicating that the configuration is completed.
+
+<Alert severity="info">
+When you quit the SteamVR app, the controllers automatically turn off. The controllers also automatically turn off after being idle for a period of time.
+</Alert>
+
+</TabItem>
+<TabItem label="Oculus VR">
+
+1. Install and open the Oculus App on your computer.
+2. Confirm that your device is connected and the status is ready.
+3. Under **Settings / General** in the Oculus App, select **OpenXR Runtime**.
+4. (Optional) Bring up the **Devices** tab and find your headset to confirm the configuration by checking if the status is green without errors.
+
+<Alert severity="info">
+If you are using Quest 2 with a link cable, you need to enable the link inside the headset.
+</Alert>
+
+</TabItem>
+</Tabs>
+
+### Studio VR Mode
+
+After configuring your headset, turning on the Studio VR testing mode through the following steps:
+
+1. In the **File** menu, select **Studio Settings**.
+2. Select **Rendering**.
+3. Under **General** settings, turn on **VR Mode**.
+
+You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects, or you close the Roblox Studio Beta app on the headset, you need to restart Studio to re-run testing.

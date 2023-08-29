@@ -1,0 +1,31 @@
+{
+  "Navigation General Item": {
+    "prefix": ["nav:item"],
+    "body": [
+      "- title: ${1:title}",
+      "\tpath: ${2:path}",
+      "\ttype: ${3|markdown,cloudapi|}",
+      "\t# source: /docs/content-file-location",
+      "\t# section: [ list of child items]"
+    ],
+    "scope": "yaml"
+  },
+  "Navigation Head": {
+    "prefix": ["nav:head"],
+    "body": ["- heading: ${0}"],
+    "scope": "yaml"
+  },
+  "Navigation CloudAPI Item": {
+    "prefix": ["nav:cloudapi"],
+    "body": [
+      "- title: ${1:title}",
+      "\ttype: cloudapi",
+      "\tversions:",
+      "\t\t- name: v1",
+      "\t\t  path: ${2:path}",
+      "\t\t- name: v2",
+      "\t\t  path: ${3:path}"
+    ],
+    "scope": "yaml"
+  }
+}

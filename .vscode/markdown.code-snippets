@@ -1,0 +1,53 @@
+{
+  "Markdown SideBarLink": {
+    "prefix": ["rbx:side-bar-link"],
+    "description": "Link to expand the left nav tree",
+    "body": [
+      "<SideBarLink nodeId='${1:/leftnav-nodeId}'>",
+      "\t${0}",
+      "</SideBarLink>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown HomePageNewsCard": {
+    "prefix": ["rbx:home-page-news-card"],
+    "description": "News Card in landing page",
+    "body": [
+      "<HomePageNewsCard",
+      "\thref='${1:href}'",
+      "\tmageSrc='${2:/assets/imageSrc}'",
+      "\timageLabel='${3:Image Title}'",
+      "\tdescription='${4:description}'",
+      "\ttitle='${5:Card Title}'",
+      "/>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Button": {
+    "prefix": ["rbx:button", "rbx:link-button"],
+    "description": "rbx/ui Button wrapped with Link",
+    "body": [
+      "<a href='${1:href}'>",
+      "\t<Button variant='${2|text,outlined,contained|}' color='${3|primary,secondary,destructive|}' size='${4|medium,large,small|}'>",
+      "\t\t${0}",
+      "\t</Button>",
+      "</a>"
+    ],
+    "scope": "markdown"
+  },
+  "Markdown Tabs": {
+    "prefix": ["rbx:tabs"],
+    "description": "rbx/ui Tabs with TabItems",
+    "body": [
+      "<Tabs>",
+      "\t<TabItem label='${1:First Tab Label}'>",
+      "\t\t${3}",
+      "\t</TabItem>",
+      "\t<TabItem label='${2:Second Tab Label}'>",
+      "\t\t${4}",
+      "\t</TabItem>",
+      "</Tabs>"
+    ],
+    "scope": "markdown"
+  }
+}
