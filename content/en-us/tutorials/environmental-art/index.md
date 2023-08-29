@@ -116,7 +116,7 @@ experience gameplay before investing time into polishing assets.
    </AccordionSummary>
    <AccordionDetails>
 
-    Learn how to [utilize your asset library](assemble-an-asset-library.md), as well as how to add and configure additional elements of the 3D space to bring your world to life.
+    Learn how to [utilize your asset library](construct-your-world.md), as well as how to add and configure additional elements of the 3D space to bring your world to life.
 
         <a href="https://www.roblox.com/games/14447826396/Environment-Art-Constructing">
         <Button

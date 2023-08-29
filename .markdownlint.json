@@ -1,0 +1,57 @@
+{
+  "MD001": true,
+  "MD003": {
+    "style": "atx"
+  },
+  "MD004": {
+    "style": "dash"
+  },
+  "MD005": true,
+  "MD007": true,
+  "MD009": true,
+  "MD010": false,
+  "MD011": false,
+  "MD012": true,
+  "MD013": false,
+  "MD014": true,
+  "MD018": true,
+  "MD019": true,
+  "MD020": true,
+  "MD021": true,
+  "MD023": true,
+  "MD024": false,
+  "MD025": true,
+  "MD026": true,
+  "MD027": true,
+  "MD028": true,
+  "MD029": true,
+  "MD030": false,
+  "MD031": true,
+  "MD032": true,
+  "MD033": false,
+  "MD034": true,
+  "MD035": {
+    "style": "---"
+  },
+  "MD036": false,
+  "MD037": false,
+  "MD038": true,
+  "MD039": true,
+  "MD040": true,
+  "MD042": true,
+  "MD045": false,
+  "MD046": false,
+  "MD047": true,
+  "MD048": {
+    "style": "backtick"
+  },
+  "MD049": {
+    "style": "underscore"
+  },
+  "MD050": {
+    "style": "asterisk"
+  },
+  "MD051": true,
+  "MD052": true,
+  "MD053": true
+}
