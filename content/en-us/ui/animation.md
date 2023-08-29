@@ -553,7 +553,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
    	for first, last in utf8.graphemes(displayText) do
    		index = index + 1
    		guiObject.MaxVisibleGraphemes = index
-   		wait(delayBetweenChars)
+   		task.wait(delayBetweenChars)
    	end
    end
 
