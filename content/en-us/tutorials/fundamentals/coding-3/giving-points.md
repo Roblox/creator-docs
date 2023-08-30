@@ -27,7 +27,7 @@ To setup this project, you'll need a leaderboard to track the points and a part 
        leaderstats.Name = "leaderstats"
        leaderstats.Parent = player
 
-       -- Example of a IntValue
+       -- Example of an IntValue
        local points = Instance.new("IntValue")
        points.Name = "Points"
        points.Value = 0

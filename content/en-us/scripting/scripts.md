@@ -19,7 +19,7 @@ Roblox has three types of scripts:
 
 - `Class.Script` for scripts that can run on the server.
 - `Class.LocalScript` for scripts that can run on a client.
-- `Class.ModuleScript` for reusable modules that can be included in server or
+- `Class.ModuleScript` for reusable modules that can be included in server and
   client scripts.
 
 To control where scripts run, see the [server](../projects/data-model.md#server),

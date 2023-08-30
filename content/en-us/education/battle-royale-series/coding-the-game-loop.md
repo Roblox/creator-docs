@@ -155,13 +155,13 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
    end
    ```
 
-2. Check if the current number of players `(Players.NumPlayers)` is greater or equal to the `minimumPlayers` variable created earlier in the GameSettings module.
+2. Check if the current number of players `(#Players:GetPlayers())` is greater or equal to the `minimumPlayers` variable created earlier in the GameSettings module.
 
    ```lua
    while true do
       repeat
 
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
    end
    ```
 
@@ -172,7 +172,7 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
       repeat
          print("Starting intermission")
          task.wait(gameSettings.intermissionDuration)
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
    end
    ```
 
@@ -196,7 +196,7 @@ Once there are enough players, have them wait a short transition time. Then, sen
       repeat
          print("Starting intermission")
          task.wait(gameSettings.intermissionDuration)
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
       print("Intermission over")
       task.wait(gameSettings.transitionTime)
    end
@@ -213,7 +213,7 @@ Once there are enough players, have them wait a short transition time. Then, sen
       repeat
          print("Starting intermission")
          task.wait(gameSettings.intermissionDuration)
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
       print("Intermission over")
       task.wait(gameSettings.transitionTime)
@@ -307,7 +307,7 @@ while true do
 	repeat
 		print("Starting intermission")
 		task.wait(gameSettings.intermissionDuration)
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	print("Intermission over")
 	task.wait(gameSettings.transitionTime)

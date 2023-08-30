@@ -150,7 +150,7 @@ Get the updated announcement in GameManager and display it to the players using 
 
      repeat
        task.wait(gameSettings.intermissionDuration)
-     until Players.NumPlayers >= gameSettings.minimumPlayers
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
      task.wait(gameSettings.transitionTime)
@@ -280,8 +280,8 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
 
      repeat
        task.wait(gameSettings.intermissionDuration)
-     until Players.NumPlayers >= gameSettings.minimumPlayers
-
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+     
      displayManager.updateStatus("Get ready!")
      task.wait(gameSettings.transitionTime)
 
@@ -368,7 +368,7 @@ First, start a function to send players back to the lobby.
 
      repeat
        task.wait(gameSettings.intermissionDuration)
-     until Players.NumPlayers >= gameSettings.minimumPlayers
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
      task.wait(gameSettings.transitionTime)
@@ -415,7 +415,7 @@ while true do
 
 	repeat
 		task.wait(gameSettings.intermissionDuration)
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
 	task.wait(gameSettings.transitionTime)
