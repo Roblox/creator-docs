@@ -6,7 +6,7 @@ next: /art/avatar/testing/studio
 previous: /art/avatar/testing/
 ---
 
-You can quickly verify many of your components in Blender where you can catch issues that may cause issues later. You can use a mix of Blender native tools and Roblox's helper plugins to check for many common issues in your character model.
+You can quickly verify many of your components in Blender, allowing you to catch out problems that may cause issues later on. You can use a mix of Blender native tools and Roblox's helper plugins to check for many common issues in your character model.
 
 ## Facial Animation Data
 
@@ -14,9 +14,9 @@ Facial animation uses multiple modeling components to work effectively. If using
 
 Use the following steps to help verify the integrity of your facial animation data:
 
-1. With the armature selected, check the animation frame in the **timeline**:
+1. With the Armature object selected, check the animation frame in the **timeline**:
 
-   1. The timeline range typically ranges between **0–330**, though not all templates use the entire range, and there may be gaps between poses.
+   1. The timeline typically ranges between **0–330**, though not all templates use the entire range, and there may be gaps between poses.
       <img src="../../../assets/art/avatar/basic-creation/Testing-Animation-Timeline.png" />
    2. The **neutral pose** should be on **frame 0**.
    3. There shouldn't be any keyframe gaps between the frames with animation data.
@@ -42,12 +42,12 @@ If you are using a template and run into issues, it's possible the facial data w
 
 ## Body Skinning
 
-Properly skinning your character models ensure natural joint movements and realistic pose and expressions. There are several ways to verify skinning data, like using Blender's Pose Mode to pose the joints and examine how certain orientations can affect the joint skinning.
+Properly skinning your character models ensures natural joint movements and realistic poses and expressions. There are several ways to verify skinning data, like using Blender's Pose Mode to pose the joints and examine how certain orientations can affect the joint skinning.
 
 Use the following steps in Blender to verify your joint skinning in Pose mode:
 
-1. With the Armature selected, navigate to the **Object Properties** > **Viewport Display** and enable **Show In Front**. This allows you to see and access bones in your character.
-2. Select the **Armature** so that it is highlighted, and switch to **Pose Mode**.
+1. With the **Armature** object selected, navigate to the **Object Properties** > **Viewport Display** and enable **Show In Front**. This allows you to see and access bones within your character.
+2. With the armature selected, and switch to **Pose Mode**.
 3. Select all the face bones of your model and press <kbd>H</kbd> to hide. You can reveal these again later with <kbd>Alt</kbd> + <kbd>H</kbd> in Pose mode.
 4. Select any body bone and press <kbd>R</kbd> to rotate. Verify that your body bones correctly deform and bend the character mesh as expected in natural poses.
 

@@ -429,8 +429,8 @@ local function Run(ChatService)
 
 	ChatService:RegisterFilterMessageFunction("TimeBotFilter", addMessageType)
 
-	spawn(function()
-		while wait(5) do
+	task.spawn(function()
+		while task.wait(5) do
 			timeBot:SayMessage("The current time is: " .. os.time(), "All", {})
 		end
 	end)

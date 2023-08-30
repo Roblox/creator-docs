@@ -3,11 +3,11 @@ title: Using Heads in Studio
 description: If you have a model with a live head, you can import the model into Studio, equip face accessories, and create and save animations.
 ---
 
-You can import character models with animateable heads into Studio and use the automatically generated `Class.FaceControls` instance to pose or animate the face.
+You can import character models with animatable heads into Studio and use the automatically generated `Class.FaceControls` instance to pose or animate the face.
 
 To set up heads with facial animation in your experience:
 
-1. [Import a model with an animateable head](#importing-heads). You can either create your own or use one of the provided reference model files.
+1. [Import a model with an animatable head](#importing-heads). You can either create your own or use one of the provided reference model files.
 2. (Optional) [Import face accessories](#importing-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
 3. [Animate the head](#animating-heads) in the Animation Editor by either adding in individual animation tracks, or by using the Face Animation Editor.
 
@@ -31,11 +31,11 @@ If you want to experiment with pre-made heads before [making your own](../../../
     </tr>
     <tr>
       <td>[Goblin Character Model](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx)</td>
-      <td>A Goblin character model with an animateable head.</td>
+      <td>A Goblin character model with an animatable head.</td>
     </tr>
     <tr>
       <td>[Blocky Character Model](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx)</td>
-      <td>A Blocky character model with an animateable head.</td>
+      <td>A Blocky character model with an animatable head.</td>
     </tr>
     <tr>
       <td>[Blocky Face Accessories and Clothing](../../../assets/avatar/dynamic-heads/reference-files/Blocky-Face-Accessories.zip)</td>
@@ -122,7 +122,7 @@ The following options are available for the `Class.WrapLayer.AutoSkin` property:
 
 ## Animating Heads
 
-Animateable head `Class.MeshPart|MeshParts` include a `Class.FaceControls` instance which allows you to access your facial pose properties.
+Animatable head `Class.MeshPart|MeshParts` include a `Class.FaceControls` instance which allows you to access your facial pose properties.
 
 <GridContainer numColumns="2">
   <figure>

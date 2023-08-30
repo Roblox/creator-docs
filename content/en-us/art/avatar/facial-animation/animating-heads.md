@@ -1,6 +1,6 @@
 ---
 title: Animating Heads
-description: You can create facial animations for a character's with live heads using the Animation Editor.
+description: You can create facial animations for a character with live heads using the Animation Editor.
 ---
 
 You can utilize the [Animation Editor](../../../animation/editor.md) to animate supported heads in the following ways:
@@ -9,7 +9,7 @@ You can utilize the [Animation Editor](../../../animation/editor.md) to animate 
 - You can use the [Face Animation Editor](#using-the-face-animation-editor) to access facial sliders that let you quickly create and save unique expressions on the timeline.
 - You can use the [Animation Capture for Faces](../../../animation/capture.md#face) extension to automatically track and record facial movements with a webcam that converts your movement into keyframes on the timeline.
 
-In all methods, creating and combining multiple facial expressions over a duration of time results in a face animation. You cannot import face animations, so these methods are the only ways you can create and utilize face animations.
+In all methods, creating and combining multiple facial expressions over a duration of time results in a face animation. Since you cannot import face animations, these methods are the only ways to create and utilize them.
 
 After you create and publish a head that supports facial animation to Roblox, you can play the animation from a script or replace a character's default animation with your new animation. These animations can make your characters feel more expressive and full of life, such as playing a silly expression when a character walks, or an annoyed expression when a character is idle.
 

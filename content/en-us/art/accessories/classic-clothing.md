@@ -7,7 +7,7 @@ Classic clothing are a type of 2D cosmetic item that you can apply to the surfac
 
 This guide covers the process of creating a classic clothes asset using the following steps:
 
-1. Designing an image for a [T-shirt](#t-shirts), or [Shirts and Pants](#shirts-and-pants) using third-party image processing program.
+1. Designing an image for a [T-shirt](#t-shirts) or [Shirts and Pants](#shirts-and-pants) using a third-party image processing program.
 2. [Testing](#testing) the look of the classic clothes in Studio.
 3. [Uploading](#uploading) the image assets to the Marketplace.
 
@@ -118,7 +118,7 @@ To ensure the best quality results, you can test your clothes before uploading o
    <img src="../../assets/accessories/classic-clothing/Properties-Graphic.png"
    width="320" />
 
-   **Graphic** (T-Shirt)
+   **Graphic** (T-shirt)
 
    <img src="../../assets/accessories/classic-clothing/Properties-ShirtTemplate.png"
    width="320" />
@@ -141,12 +141,12 @@ To make sure your clothing looks as good as possible on as many avatars as possi
 
 ## Uploading
 
-After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../art/marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
+After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../art/marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
 
 To upload a custom clothing item:
 
 1. Navigate to the Roblox [Create](https://www.roblox.com/develop) page.
 2. Click on either **Shirts**, **Pants** or **T-shirts** in the left column, depending on your design.
-3. In the main panel, click **Choose File** to select your template file. Your shirt or pants image must be exactly 585 pixels wide and 559 pixels tall or the upload will fail.
+3. In the main panel, click **Choose File** to select your template file. Your shirt or pants image must be exactly 585 pixels wide and 559 pixels tall, or the upload will fail.
 4. Choose a name for your clothing.
 5. Click on the **Upload** button. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.
