@@ -24,13 +24,13 @@ With the ability to record up to 60 second animations, you can quickly provide b
    This beta feature is slowly rolling out to users, so you might not currently have access to this tool.
 </Alert>
 
-To ensure that you are able to utilize your camera to record and create facial animations, you must first enable the **Face Recorder** beta feature. If you do not enable the beta feature, the [Animation Editor](../animation/editor.md) only displays its default UI options without face recording functionality.
+To ensure that you are able to utilize your camera to record and create facial animations, you must first enable the **Face Capture** beta feature. If you do not enable the beta feature, the [Animation Editor](../animation/editor.md) only displays its default UI options without face recording functionality.
 
 To enable the Animation Capture - Face beta feature:
 
 1. In the menu bar, click **File**. A contextual menu displays.
 2. Select **Beta Features**. The **Beta Features** window displays.
-3. In the beta features list, enable **Face Recorder**.
+3. In the beta features list, enable **Face Capture**.
 
    <img src="../assets/animation/face-recorder/Face-Recorder-Beta-Feature.jpg" width="550" />
 
@@ -58,7 +58,7 @@ To record your face and create an animation:
 
 3. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
 
-4. Navigate to the **track list** and click the **Face Recorder** button. A pop-up displays asking you to acknowledge that you consent to the collection of your facial movements to enable the feature and camera access.
+4. Navigate to the **track list** and click the **Face Capture** button. A pop-up displays asking you to acknowledge that you consent to the collection of your facial movements to enable the feature and camera access.
 
    <img src="../assets/animation/face-recorder/Face-Recorder-Button.jpg"
    width="80%" />
