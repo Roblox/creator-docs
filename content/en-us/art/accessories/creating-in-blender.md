@@ -1,6 +1,6 @@
 ---
 title: Creating Layered Models In Blender
-description: Convert a 3D model into a layered 3D model in Blender before importing and converting the model into Studio as a Class.Accessory.
+description: Convert a 3D model into a layered 3D model in Blender before importing and converting the model into Studio as an Class.Accessory.
 ---
 
 You can use a third party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create the layered 3D model that you can [import and convert](../../art/accessories/accessory-fitting-tool.md) into Studio as an `Class.Accessory`. To create a layered model, you must **parent** (Blender) or **bind** (Maya) a 3D model to a mannequin armature and then modify two additional meshes to fit around the inner and outer surface of the accessory model.
@@ -61,7 +61,7 @@ To parent the mesh object with the mannequin armature:
    <video controls width="80%" src="../../assets/accessories/3_lc-blender-parenting-a-mesh.mp4">
    </video>
 
-4. Reduce visual clutter by hiding the all objects except the **cages** and **model**. Click on the <img src="../../assets/accessories/lc-blender-hide-symbol.png" /> symbol next to the object in the Outliner panel.
+4. Reduce visual clutter by hiding all objects except the **cages** and **model**. Click on the <img src="../../assets/accessories/lc-blender-hide-symbol.png" /> symbol next to the object in the Outliner panel.
 
    <video controls width="80%" src="../../assets/accessories/4_lc-blender-outliner-cleanup.mp4">
    </video>
@@ -78,7 +78,7 @@ You can quickly add these two full-body meshes from the [Clothing_Cage_Template.
 Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.
 </Alert>
 
-To add quickly add clothing cages to your project:
+To quickly add clothing cages to your project:
 
 1. Download the [Clothing_Cage_Template.blend](../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) project.
 2. In your current Blender project, switch to Object Mode and navigate to **File** > **Append**. A file browser displays.
