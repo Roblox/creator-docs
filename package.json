@@ -5,8 +5,7 @@
   "private": true,
   "description": "Open source code for the Roblox creator documentation",
   "engines": {
-    "node": "16.15.0",
-    "npm": "8.5.5"
+    "node": ">= 18"
   },
   "scripts": {
     "check": "npx ts-node tools/checks/main.ts",
