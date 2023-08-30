@@ -165,13 +165,13 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
    end
    ```
 
-3. In the repeat loop, add a print statement saying the intermission is starting. Use `wait()` to pause for the intermission using `intermissionDuration` from GameSettings.
+3. In the repeat loop, add a print statement saying the intermission is starting. Use `task.wait()` to pause for the intermission using `intermissionDuration` from GameSettings.
 
    ```lua
    while true do
       repeat
          print("Starting intermission")
-         wait(gameSettings.intermissionDuration)
+         task.wait(gameSettings.intermissionDuration)
       until Players.NumPlayers >= gameSettings.minimumPlayers
    end
    ```
@@ -182,23 +182,23 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
 
 At this point, if you're not spawning as intended, try one of the following below.
 
-- `wait()` should be inside the repeat loop. Without the wait, the script will run too many times in a second, overloading Roblox Studio and causing an error.
+- `task.wait()` should be inside the repeat loop. Without the wait, the script will run too many times in a second, overloading Roblox Studio and causing an error.
 - In the Game Settings module, the variable `intermissionDuration` should be greater than 1. If lower, the script can repeat too often, causing slow down issues.
 
 ### Ending the Intermission
 
 Once there are enough players, have them wait a short transition time. Then, send them into the match by calling the `prepareGame()` function in MatchManager. Remember, that function just prints a line, but you'll add more code later.
 
-1. At the end of the repeat loop, add a print statement saying the intermission is over to test your code. Then, follow it with a `wait()` using GameSetting's `transitionTime` variable.
+1. At the end of the repeat loop, add a print statement saying the intermission is over to test your code. Then, follow it with a `task.wait()` using GameSetting's `transitionTime` variable.
 
    ```lua
    while true do
       repeat
          print("Starting intermission")
-         wait(gameSettings.intermissionDuration)
+         task.wait(gameSettings.intermissionDuration)
       until Players.NumPlayers >= gameSettings.minimumPlayers
       print("Intermission over")
-      wait(gameSettings.transitionTime )
+      task.wait(gameSettings.transitionTime)
    end
    ```
 
@@ -212,11 +212,11 @@ Once there are enough players, have them wait a short transition time. Then, sen
    while true do
       repeat
          print("Starting intermission")
-         wait(gameSettings.intermissionDuration)
+         task.wait(gameSettings.intermissionDuration)
       until Players.NumPlayers >= gameSettings.minimumPlayers
 
       print("Intermission over")
-      wait(gameSettings.transitionTime)
+      task.wait(gameSettings.transitionTime)
       matchManager.prepareGame()
    end
    ```
@@ -306,11 +306,11 @@ local gameSettings = require(moduleScripts:WaitForChild("GameSettings"))
 while true do
 	repeat
 		print("Starting intermission")
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 	until Players.NumPlayers >= gameSettings.minimumPlayers
 
 	print("Intermission over")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 end

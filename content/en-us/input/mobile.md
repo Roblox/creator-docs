@@ -92,7 +92,7 @@ The following code sample in a `Class.LocalScript` sets the screen orientation t
 local Players = game:GetService("Players")
 local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 
-wait(2)
+task.wait(2)
 
 playerGUI.ScreenOrientation = Enum.ScreenOrientation.Portrait
 ```

@@ -133,7 +133,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    -- for moving text and images
    function UITween.move(object, position, time, delay)
 
-   	wait(delay)
+   	task.wait(delay)
    	object:TweenPosition(position, Enum.EasingDirection.Out, Enum.EasingStyle.Quint, time)
    end
 
@@ -211,10 +211,10 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    UITween.size(mapUIFrameStroke, frameSizeMid, 0.4, 0)
    UITween.fade(mapUIFrameFill, 0, 2, 0.5)
    UITween.size(mapUIFrameFill, frameSizeEnd, 0.4, 0.25)
-   wait(0.25)
+   task.wait(0.25)
    UITween.size(mapUIFrameStroke, frameSizeMid, 0.4, 0)
    UITween.size(mapUIFrameFill, frameSizeMid, 0.4, 0.25)
-   wait(0.25)
+   task.wait(0.25)
    UITween.size(mapUIFrameStroke, frameSizeEnd, 0.4, 0)
    UITween.size(mapUIFrameFill, frameSizeEnd, 0.4, 0.25)
    ```

@@ -43,7 +43,7 @@ local timeRemaining = 10
 
 while timeRemaining > 0 do
 	print("Seconds remaining: " .. timeRemaining)
-	wait(1)
+	task.wait(1)
 	timeRemaining = timeRemaining - 1
 end
 
@@ -70,7 +70,7 @@ You can use a `while`—`do` loop to write infinite game loops by setting `true`
 ```lua
 while true do
 	print("Looping...")
-	wait(0.5)
+	task.wait(0.5)
 end
 
 --[[ Resulting output:
@@ -83,7 +83,7 @@ Looping...
 ```
 
 <Alert severity="error">
-Always include a delay such as <InlineCode>wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
+Always include a delay such as <InlineCode>task.wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
 </Alert>
 
 ## Repeat Loops
@@ -222,7 +222,7 @@ local timeout = 5
 
 while true do
 	print("Seconds elapsed:", secondsElapsed)
-	wait(1)
+	task.wait(1)
 	secondsElapsed = secondsElapsed + 1
 
 	if secondsElapsed == timeout then

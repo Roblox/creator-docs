@@ -185,10 +185,10 @@ With the Display Manager set up, it can be used in other scripts to update the G
 
       repeat
          print("Starting intermission")
-         wait(gameSettings.intermissionDuration)
+         task.wait(gameSettings.intermissionDuration)
       until Players.NumPlayers >= gameSettings.minimumPlayers
 
-      wait(gameSettings.transitionTime)
+      task.wait(gameSettings.transitionTime)
 
       matchManager.prepareGame()
       matchEnd.Event:Wait()
@@ -203,11 +203,11 @@ With the Display Manager set up, it can be used in other scripts to update the G
       displayManager.updateStatus("Waiting for Players")
 
       repeat
-         wait(gameSettings.intermissionDuration)
+         task.wait(gameSettings.intermissionDuration)
       until Players.NumPlayers >= gameSettings.minimumPlayers
 
       displayManager.updateStatus("Get ready!")
-      wait(gameSettings.transitionTime)
+      task.wait(gameSettings.transitionTime)
 
       matchManager.prepareGame()
       matchEnd.Event:Wait()
@@ -368,7 +368,7 @@ Remember that module scripts are used to centralize similar code. Since the time
          -- Adding +1 makes sure the timer display ends at 1 instead of 0.
          timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
          -- By not setting the time for wait, it offers more accurate looping
-         wait()
+         task.wait()
       end
    ```
 
@@ -384,7 +384,7 @@ Remember that module scripts are used to centralize similar code. Since the time
          -- Adding +1 makes sure the timer display ends at 1 instead of 0.
          timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
          -- By not setting the time for wait, it offers more accurate looping
-         wait()
+         task.wait()
       end
    end
    ```
@@ -421,11 +421,11 @@ while true do
 	displayManager.updateStatus("Waiting for Players")
 
 	repeat
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 	until Players.NumPlayers >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 	matchEnd.Event:Wait()
@@ -498,7 +498,7 @@ local function startTimer()
 		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
 		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
 		-- By not setting the time for wait, it offers more accurate looping
-		wait()
+		task.wait()
 	end
 
 end

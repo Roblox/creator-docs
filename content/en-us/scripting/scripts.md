@@ -199,9 +199,9 @@ Switch.Changed:Connect(function(newState)
 end
 
 -- Test the flipping a few times
-wait(1)
+task.wait(1)
 Switch.flip()
-wait(1)
+task.wait(1)
 Switch.flip()
 ```
 

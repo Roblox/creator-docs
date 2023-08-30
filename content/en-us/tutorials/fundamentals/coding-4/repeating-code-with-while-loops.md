@@ -121,16 +121,16 @@ With the while loop created, instructions can be added to change the part's colo
 
 ### Making the Script Wait
 
-If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. To make the script wait before running the next line of code, use a `wait()` function.
+If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. To make the script wait before running the next line of code, use a `task.wait()` function.
 
-1. On the line after changing the brick color, type `wait(3)`. Whatever number placed inside the `()` is how many seconds the script will wait.
+1. On the line after changing the brick color, type `task.wait(3)`. Whatever number placed inside the `()` is how many seconds the script will wait.
 
    ```lua
    local loopingPart = game.Workspace.LoopingPart
 
    while true do
        loopingPart.Color = Color3.fromRGB(82, 227, 255)
-       wait(3)
+       task.wait(3)
    end
    ```
 
@@ -139,9 +139,9 @@ If you add a second line of color changing code right now, it would change the b
    ```lua
    while true do
      loopingPart.Color = Color3.fromRGB(82, 227, 255)
-     wait(3)
+     task.wait(3)
      loopingPart.Color = Color3.fromRGB(177, 52, 255)
-     wait(3)
+     task.wait(3)
    end
    ```
 
@@ -177,9 +177,9 @@ while true do
     -- Changes loopingPart's color
     loopingPart.Color = Color3.fromRGB(82, 227, 255)
     -- Wait 3 seconds before next instruction
-    wait(3)
+    task.wait(3)
     loopingPart.Color = Color3.fromRGB(177, 52, 255)
-    wait(3)
+    task.wait(3)
 end
 ```
 

@@ -149,11 +149,11 @@ Get the updated announcement in GameManager and display it to the players using 
      displayManager.updateStatus("Waiting for Players")
 
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
      until Players.NumPlayers >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
@@ -176,7 +176,7 @@ Get the updated announcement in GameManager and display it to the players using 
    local endStatus = matchManager.getEndStatus(endState)
    displayManager.updateStatus(endStatus)
 
-   wait(gameSettings.transitionTime)
+   task.wait(gameSettings.transitionTime)
    ```
 
 4. Start a **test server** and check that players see the following messages for the time up and winning player conditions.
@@ -197,7 +197,7 @@ Get the updated announcement in GameManager and display it to the players using 
 At this point, you're unable to see the messages, try one of the following below.
 
 - If your end status message is "Error Found", none of the conditions were successful. Check the code in `MatchManager.getEndStatus()` against the code samples.
-- If the end status doesn't display, check that `wait(gameSettings.transitionTime)` is after sending the message to displayManager.
+- If the end status doesn't display, check that `task.wait(gameSettings.transitionTime)` is after sending the message to displayManager.
 
 ## Starting New Matches
 
@@ -272,18 +272,18 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
 
    ```
 
-2. Next, call the cleanup function. Open **GameManager** and find the while true do loop. So players have weapons removed during the ending intermission, call `matchManager.cleanupMatch()` before the last `wait()`.
+2. Next, call the cleanup function. Open **GameManager** and find the while true do loop. So players have weapons removed during the ending intermission, call `matchManager.cleanupMatch()` before the last `task.wait()`.
 
    ```lua
    while true do
      displayManager.updateStatus("Waiting for Players")
 
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
      until Players.NumPlayers >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
@@ -292,7 +292,7 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
      displayManager.updateStatus(endStatus)
 
      matchManager.cleanupMatch()
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
    end
    ```
 
@@ -367,11 +367,11 @@ First, start a function to send players back to the lobby.
      displayManager.updateStatus("Waiting for Players")
 
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
      until Players.NumPlayers >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
@@ -380,7 +380,7 @@ First, start a function to send players back to the lobby.
      displayManager.updateStatus(endStatus)
 
      matchManager.cleanupMatch()
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.resetMatch()
    end
@@ -414,11 +414,11 @@ while true do
 	displayManager.updateStatus("Waiting for Players")
 
 	repeat
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 	until Players.NumPlayers >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 	local endState = matchEnd.Event:Wait()
@@ -427,7 +427,7 @@ while true do
 	displayManager.updateStatus(endStatus)
 
 	matchManager.cleanupMatch()
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.resetMatch()
 end
@@ -479,7 +479,7 @@ local function startTimer()
 		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
 		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
 		-- By not setting the time for wait, it offers more accurate looping
-		wait()
+		task.wait()
 	end
 end
 

@@ -167,7 +167,7 @@ local function LightningFunc(info)
 	…
 ```
 
-In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use wait(number). Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
+In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use `task.wait(number)`. Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
 
 ```lua
 beam.Texture = textures[info.textIdx]
@@ -193,7 +193,7 @@ if(audioFolder and audioPart) then
 	end
 end
 
-wait(info.waitTillFlashes)
+task.wait(info.waitTillFlashes)
 
 -- and so on
 
