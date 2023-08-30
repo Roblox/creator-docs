@@ -129,7 +129,7 @@ type Car = {
 
 ## Variadics
 
-Lets assume a function that creates a table from a set of values.
+Lets assume a function that calculates the sum of a variadic ammount of numbers
 
 ```lua
 local function addLotsOfNumbers(...)
