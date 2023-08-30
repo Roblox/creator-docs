@@ -175,7 +175,7 @@ While a value between 30 and 70 degrees usually produces a good result, values b
 In addition to the **Union**, **Intersect**, and **Negate** tools in Studio, you can allow players to use solid modeling operations while inside an experience through `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:IntersectAsync()|IntersectAsync()`, and `Class.BasePart:SubtractAsync()|SubtractAsync()`. All of these methods must be called on a `Class.BasePart` and they all require an array of one or more parts to union with, intersect with, or subtract from the calling part.
 
 <Alert severity="warning">
-In-experience solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:IntersectAsync()|IntersectAsync()`, or `Class.BasePart:SubtractAsync()|SubtractAsync()` calls in quick sequence.
+In-experience solid modeling operations are asynchronous, meaning they can impact performance. For best results, you should not perform a large series of `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:IntersectAsync()|IntersectAsync()`, or `Class.BasePart:SubtractAsync()|SubtractAsync()` calls in quick succession.
 </Alert>
 
 <Alert severity="info">
