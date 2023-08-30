@@ -29,10 +29,13 @@ The following example server-side script prompts users to save a car that they p
 
 ```lua title="Example Script for In-Experience Asset Creation"
 
+-- Define the AssetService variable
+local AssetService = game:GetService("AssetService")
+
 -- Set up PromptCreateAssetAsync() for prompting the submission dialog
 local function CreateAsset(player, instance)
 	local complete, result, assetId = pcall(function()
-		return assetservice:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
+		return AssetService:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
 	end)
 	if complete then
 		if result == Enum.PromptCreateAssetResult.Success then
@@ -50,9 +53,9 @@ end
 
 -- Add an event handler
 local function onUserPublish(player, promptObject)
-	-- User save the car instance with the experience default color
+	-- User saves the car instance with the experience's default color
 	if promptObject.name == "car" then
-		createAsset(player, car)
+		CreateAsset(player, car)
 	elseif promptObject.name == "CarPaintYellow" or promptObject.name == "CarPaintBlue" or promptObject.name == "CarPaintBlack" or promptObject.name == "CarPaintRed" then
 		PaintCarColor(promptObject.name)
 	end
