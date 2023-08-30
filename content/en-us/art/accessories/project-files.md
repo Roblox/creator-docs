@@ -41,7 +41,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" download>Clothing_Cage_Template.blend</a></td>
-    <td>Starting template for Blender; includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
+    <td>Starting template for Blender that includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Combined-Template.blend" download>Combined-Template.blend</a></td>
