@@ -15,7 +15,7 @@ The point giving part can be added into any project where points are relevant. F
 
 ### Point Tracking
 
-To setup this project, you'll need a leaderboard to track the points and a part that changes colors. Code for the leaderboard will be provided.
+To set up this project, you'll need a leaderboard to track the points and a part that changes colors. Code for the leaderboard will be provided.
 
 1. Create a new script in **ServerScriptService** named Leaderboard. Copy and paste the code below into the script.
 
@@ -42,7 +42,7 @@ To setup this project, you'll need a leaderboard to track the points and a part 
 
 ### Color Changing Part
 
-The script will cycle through three different colors for the part. Each color will have a variable to store it's RGB value, a data type that includes a set of three numbers (red, green, blue) that create colors.
+The script will cycle through three different colors for the part. Each color will have a variable to store its RGB value, a data type that includes a set of three numbers (red, green, blue) that create colors.
 
 1. Create a part named PointPart with an attached script named PointScript.
 2. In PointScript, use `script.Parent` to refer to the part.
@@ -340,7 +340,7 @@ The particle effect will be the same color as the part when touched. Since the c
    particle.Color = ColorSequence.new(currentColor)
    ```
 
-3. The particle will need to be parented to player that touched it. Create a variable to get the player's Character model. Then, parent the particle to the player's head.
+3. The particle will need to be parented to the player that touched it. Create a variable to get the player's Character model. Then, parent the particle to the player's head.
 
    ```lua
    local particle = Instance.new("ParticleEmitter")
@@ -369,7 +369,7 @@ The particle effect will be the same color as the part when touched. Since the c
 
 ### Troubleshooting Tips
 
-At this point, if particles doesn't work as intended, try one of the following below.
+At this point, if particles don't work as intended, try one of the following below.
 
 - Make when creating a new instance that ParticleEmitter is spelled **exactly** as shown and inside quotations.
 - When parenting the particles, make sure to use `:` between `playerCharacter` and `WaitForChild()` with no spaces between.
@@ -411,7 +411,7 @@ local function givePoints(player)
 		playerPoints.Value = playerPoints.Value - losePoints
 	end
 
-	-- Destroy the part, wait a second, and thne destroy the particle
+	-- Destroy the part, wait a second, and then destroy the particle
 	pointPart:Destroy()
 	
 	-- Creates a sparkles effect and destroys it
@@ -433,7 +433,7 @@ end
 
 pointPart.Touched:Connect(partTouched)
 
--- Changes the color of the part based on variables. Needs to be at bottom of script.
+-- Changes the color of the part based on variables. Needs to be at the bottom of the script.
 while true do
 	pointPart.Color = blue
 	task.wait(4)
