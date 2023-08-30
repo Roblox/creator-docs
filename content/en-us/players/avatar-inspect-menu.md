@@ -23,7 +23,7 @@ By default, the Inspect Menu shows the same information as the user's Roblox Ava
 In the cases where the default Inspect Menu may not be accurate to the current character's outfit, you can inspect a character's current outfit with the following steps:
 
 1. Disable the default profile-based Inspect Menu by setting `Class.GuiService:SetInspectMenuEnabled()` with a value of **false**.
-2. Get an current `Class.HumanoidDescription` from the target player character.
+2. Get a current `Class.HumanoidDescription` from the target player character.
 3. Call `Class.GuiService:InspectPlayerFromHumanoidDescription()` to load the Inspect menu based off of the `Class.HumanoidDescription`.
 
 Use the following code sample to inspect the currently equipped items of a specific player:
