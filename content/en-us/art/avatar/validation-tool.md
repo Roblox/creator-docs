@@ -1,6 +1,6 @@
 ---
 title: Blender Validation Tool
-description: The Avatar Character Validation Tool checks for common character model issues in Blender.
+description: The Avatar Validation Tool checks for common character model issues in Blender.
 ---
 
 The **Avatar Validation Tool** is a supplemental Blender add-on you can use to quickly identify common issues with your character model. This tool checks that your model meets most of Roblox's avatar [technical specifications](../../art/avatar/specifications.md) and, when possible, attempts to automatically resolve them.
@@ -19,7 +19,7 @@ To install the Validation Tool in Blender:
 
 1. Download [**ValidationTool_Blender.zip**](../../assets/art/ValidationTool_V2.zip) and save the .zip file locally. Do not open the .zip file.
 2. In Blender, navigate to **Edit** > **Preferences**.
-3. In Preferences, go to the **Add-Ons** section on the left side-bar.
+3. In Preferences, go to the **Add-Ons** section on the left sidebar.
 
    <img src="../../assets/accessories/validation-tool/Blender-Add-On-Preferences.png" width="80%" />
 
@@ -112,7 +112,8 @@ Each button on the validation tool performs a different check against the expect
 <dd>Checks for common polygon issues:<ul>
 <li>Meshes are watertight</li>
 <li>Meshes are within polycount budgets</li>
-<li>Meshes don't use N-Gons Meshes are non-manifold</li>
+<li>Meshes don't use N-Gons Meshes</li>
+<li>Meshes are non-manifold</li>
 <li>Meshes don't have vertex color information</li></ul><p />Refer to the output messages to manually resolve any polygon data issues.</dd><p />
 
 <dt>**Texture Format**</dt>
