@@ -42,13 +42,10 @@ Through the chat message sending and delivering process, methods, callbacks, and
 As the flowchart shows, the in-experience text chat system processes a chat message through the following steps:
 
 1. A user sends a message from their local device, triggering the `Class.TextChannel:SendAsync()` method. This method processes the message and determines whether it's a chat command or a regular chat message.
-
 1. If the user input is a chat command, it fires the `Class.TextChatCommand.Triggered` event to perform the action you have defined for the command.
-
 1. If the user input is a regular chat message, it fires `Class.TextChatService.SendingMessage` to display the original message to the sender on the sending client. At the same time, the `Class.TextChannel:SendAsync()` passes the message to the server.
 1. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other users based on the permissions you set and Roblox community filtering requirements.
 1. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other users, The server applies any filters and fires `Class.TextChannel.OnIncomingMessage` twice:
-
 1. The first time on the sending client to signal that the server is processing the message through the `Class.TextChatService.MessageReceived` event. This also replaces the local message on the sending client with the incoming message to the display on receiving clients. The message can be identical if the original message doesn't require filtering.
 1. The second time is on the receiving client to trigger the `Class.TextChatService.MessageReceived` event to display the message to other users.
 
