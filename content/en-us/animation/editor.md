@@ -377,7 +377,7 @@ If the track only contains keyframes with default values, such as an `Datatype.C
     src="../assets/animation/animation-editor/Optimization-Preview.png"
     width="90%" />
 
-During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first, and the number of keyframes can be adjusted using a slider.
+During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first. You can adjust the number of keyframes using the slider.
 
 While using the slider, you can preview the animation and scrub through the timeline to check your animation but you can not perform editing operations, such as changing keyframe values or adding tracks.
 
