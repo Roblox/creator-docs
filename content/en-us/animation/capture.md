@@ -14,7 +14,7 @@ The Animation Capture tools allow you to:
 
 **Animation Capture - Face** allows you to use your camera to puppeteer rigs with [animation compatible heads](../art/avatar/facial-animation/index.md) and generate corresponding keyframes to your movement.
 
-With the ability to record up to 60 second animations, you can quickly provide both your playable and nonplayable characters the means to realistically grin, raise their eyebrows, drop their jaw, or any other expression necessary for your experience.
+With the ability to record up to 60-second animations, you can quickly provide both your playable and nonplayable characters the means to realistically grin, raise their eyebrows, drop their jaw, or any other expression necessary for your experience.
 
 <video src="../assets/animation/face-recorder/Face-Recorder.mp4" controls width="100%"></video>
 
