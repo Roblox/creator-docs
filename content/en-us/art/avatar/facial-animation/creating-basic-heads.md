@@ -441,7 +441,7 @@ The export settings for animatable heads differ slightly from [standard third-pa
 
 1. In the topbar, click **File**. A pop-up menu displays.
 2. Select **Export**, then **FBX (.fbx)**. The **Blender File View** window displays.
-3. Expand **Include** and enable **Limit To > Active Active Collection**. Note that this step is optional if you do not have additional collections in your Blender project.
+3. Expand **Include** and enable **Limit To > Active Collection**. Note that this step is optional if you do not have additional collections in your Blender project.
 4. In the **Include** section, enable **Custom Properties**.
 5. Expand the **Armature** section and uncheck **Add Leaf Bones**.
 6. Enable **Bake Animation**.
