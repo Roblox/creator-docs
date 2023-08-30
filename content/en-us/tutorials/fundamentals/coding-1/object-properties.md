@@ -50,7 +50,7 @@ Now that you know where the part is, the part's location needs to be translated 
    ```
 
     <Alert severity="info">
-    A long way to get to Workspace would be `game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
+    A long way to get to Workspace would be `workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
     </Alert>
 
 ### Changing a Property with Code

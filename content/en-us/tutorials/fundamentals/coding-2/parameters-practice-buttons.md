@@ -59,7 +59,7 @@ Below is one possible code solution
 -- Turns the button green when something touches the button.
 
 local button = script.Parent
-local bridge = game.Workspace.Bridge
+local bridge = workspace.Bridge
 
 local function buttonPressed()
     print("button touched")
@@ -96,7 +96,7 @@ Your version might look something like this:
 ```lua
 local button = script.Parent
 -- Reminder: Replace the name of the part, Gate, with the one in your project
-local gate = game.Workspace.Gate
+local gate = workspace.Gate
 
 local function buttonPressed()
     print("button touched")
