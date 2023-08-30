@@ -38,11 +38,11 @@ GuiService:SetInspectMenuEnabled(false)
 
 local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
 if humanoid then
--- Get current HumanoidDescription from a player character
-local humanoidDescription = humanoid:GetAppliedDescription()
+  -- Get current HumanoidDescription from a player character
+  local humanoidDescription = humanoid:GetAppliedDescription()
 
--- Load the inspect menu from a humanoid description
-GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
+  -- Load the inspect menu from a humanoid description
+  GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
 end
 ```
 
@@ -59,10 +59,10 @@ local Players = game:GetService("Players")
 
 -- Get user ID by player name
 local success, userId = pcall(function()
-return Players:GetUserIdFromNameAsync("IgnisRBX")
+  return Players:GetUserIdFromNameAsync("IgnisRBX")
 end)
 
 if success then
-GuiService:InspectPlayerFromUserId(userId)
+  GuiService:InspectPlayerFromUserId(userId)
 end
 ```

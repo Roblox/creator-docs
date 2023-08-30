@@ -171,11 +171,11 @@ The following example shows steps for adding a `Class.Script` on the server that
    ```lua
    local tool = script.Parent
    local function onActivate()
-           if game.Lighting.ClockTime \>= 8 and game.Lighting.ClockTime < 16 then
-             game.Lighting.ClockTime = 20
-           else
-             game.Lighting.ClockTime = 8
-           end
+    if game.Lighting.ClockTime \>= 8 and game.Lighting.ClockTime < 16 then
+      game.Lighting.ClockTime = 20
+    else
+      game.Lighting.ClockTime = 8
+    end
    end
    tool.Activated:Connect(onActivate)
    ```
