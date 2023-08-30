@@ -22,6 +22,8 @@ To setup this project, you'll need a leaderboard to track the points and a part 
    ```lua
    --In ServerScriptService, create a script named PlayerSetup with the contents below.
 
+   local Players = game:GetService("Players")
+
    local function onPlayerJoin(player)
        local leaderstats = Instance.new("Folder")
        leaderstats.Name = "leaderstats"
@@ -36,7 +38,7 @@ To setup this project, you'll need a leaderboard to track the points and a part 
    end
 
    -- Run onPlayerJoin when the PlayerAdded event fires
-   game.Players.PlayerAdded:Connect(onPlayerJoin)
+   Players.PlayerAdded:Connect(onPlayerJoin)
    ```
 
 ### Color Changing Part
@@ -427,8 +429,7 @@ end
 
 
 local function partTouched(otherPart)
-	--local player = Players:GetPlayerFromCharacter(otherPart.Parent)
-	local player = game.Players:GetPlayerFromCharacter(otherPart.Parent)
+	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
 
 	if player then
 		givePoints(player)

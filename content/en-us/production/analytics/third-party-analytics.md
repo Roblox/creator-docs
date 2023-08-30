@@ -203,11 +203,13 @@ To report a custom event to PlayFab Analytics, use the `Class.AnalyticsService:F
 The following example uses `Class.AnalyticsService:FireInGameEconomyEvent()|FireInGameEconomyEvent()` to invoke an analytics economy event when a user touches a `gold` `Class.Part`:
 
 ```lua
-local gold = script.Parent
+local Players = game:GetService("Players")
 local AnalyticsService = game:GetService("AnalyticsService")
 
+local gold = script.Parent
+
 gold.Touched:Connect(function (otherPart)
-	local player = game.Players:GetPlayerFromCharacter(otherPart.Parent)
+	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
 	if player == nil then return end
 
 	local location = {

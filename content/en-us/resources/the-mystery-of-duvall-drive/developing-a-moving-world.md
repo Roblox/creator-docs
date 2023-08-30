@@ -421,6 +421,7 @@ Because `Class.TweenService` is such a general system, all our wall data model h
 That same script, with some modifications in the following code sample, also triggered audio for the pantry moving. This added a lot to the movement!
 
 ```lua
+local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 
 local model = script.Parent
@@ -492,7 +493,7 @@ tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
 	if(otherPart.Name == "HumanoidRootPart" ) then
-		local player = game.Players:FindFirstChild(otherPart.Parent.Name)
+		local player = Players:FindFirstChild(otherPart.Parent.Name)
 		if(player) then
 			--print("touch")
 			playersNear[player] = 1
