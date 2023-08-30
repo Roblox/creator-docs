@@ -51,7 +51,7 @@ There are three asset types that map to project-level items:
 
 - **Places** - Every experience has one or more places, or individual 3D worlds. Each place is represented by a data model that describes the place's 3D world and logic.
 - **Badges** - A badge is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
-- **Passes** - A pass is a monetization product that allows you to charge a one-time Robux feel in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+- **Passes** - A pass is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects. For more information on these asset types, see [Projects - Places](../../projects/index.md#places), [Badges](../../production/publishing/badges.md), and [Passes](../../production/monetization/game-passes.md).
 
@@ -76,7 +76,7 @@ For more information on both types of these assets for places, such as where and
     <tbody>
         <tr>
             <td>**Models**</td>
-            <td>A `Class.Model` is a container object for geometric groupings, such as `Class.BasePart`, `Class.MeshPart`, `Class.Motor6D`, and other `Class.Model` objects. Whenever you group object together in Studio, they automatically become a `Class.Model` object.<br /><br />For more information, see [Models](../../parts/models.md).</td>
+            <td>A `Class.Model` is a container object for geometric groupings, such as `Class.BasePart`, `Class.MeshPart`, `Class.Motor6D`, and other `Class.Model` objects. Whenever you group objects together in Studio, they automatically become a `Class.Model` object.<br /><br />For more information, see [Models](../../parts/models.md).</td>
         </tr>
         <tr>
             <td>**Meshes**</td>
@@ -84,7 +84,7 @@ For more information on both types of these assets for places, such as where and
         </tr>
         <tr>
             <td>**Audio**</td>
-            <td>A `Class.Sound` object is an an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes where the sound emits and how its volume changes in relation to each user's position within the experience.<br /><br />You can import audio assets in either `.mp3` or `.ogg` format. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+            <td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes where the sound emits and how its volume changes in relation to each user's position within the experience.<br /><br />You can import audio assets in either `.mp3` or `.ogg` format. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
         </tr>
         <tr>
             <td>**Images**</td>
