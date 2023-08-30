@@ -77,7 +77,7 @@ local touchedPart = part.Touched:Wait()
 print("The part was touched by", touchedPart:GetFullName())
 ```
 
-The `Wait` function returns the event's arguments. You can assign these arguments to variables where `Wait` is called.
+The `Library.task.wait()` function returns the event's arguments. You can assign these arguments to variables where `Library.task.wait()` is called.
 
 ```lua
 -- Script in ServerScriptService
