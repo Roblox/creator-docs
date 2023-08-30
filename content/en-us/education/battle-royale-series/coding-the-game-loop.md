@@ -189,7 +189,7 @@ At this point, if you're not spawning as intended, try one of the following belo
 
 Once there are enough players, have them wait a short transition time. Then, send them into the match by calling the `prepareGame()` function in MatchManager. Remember, that function just prints a line, but you'll add more code later.
 
-1. At the end of the repeat loop, add a print statement saying the intermission is over to test your code. Then, follow it with a `task.wait()` using GameSetting's `transitionTime` variable.
+1. At the end of the repeat loop, add a print statement saying the intermission is over to test your code. Then, follow it with a `Library.task.wait()` using GameSetting's `transitionTime` variable.
 
    ```lua
    while true do
