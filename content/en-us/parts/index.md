@@ -3,7 +3,7 @@ title: Parts
 description: Parts are Roblox's primary building blocks.
 ---
 
-`Class.Part|Parts` are descendant of the `Class.BasePart` class and are Roblox's
+`Class.Part|Parts` are descendants of the `Class.BasePart` class and are Roblox's
 primitive building blocks with properties like position, size, orientation, and
 color. You can use basic parts as is, or you can apply [solid
 modeling](/parts/solid-modeling) operations to combine parts into more complex
