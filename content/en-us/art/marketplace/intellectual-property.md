@@ -93,7 +93,7 @@ Only the IP rights holder knows what rights they have and who they have given pe
 
 If you find content on Roblox that you believe infringes your IP rights, please see our [DMCA Guidelines](../../production/publishing/dmca-guidelines.md#what-is-the-dmca) for additional information on how to submit an intellectual property takedown notice to us.
 
-- Submitting a IP takedown notice to us is a legal process.
+- Submitting an IP takedown notice to us is a legal process.
 - Only the rights holder or their authorized representative can report content that infringes on their intellectual property rights.
 - If Roblox receives a takedown notice about content from someone other than the IP owner or the owner's representative, Roblox cannot legally take action against the infringer unless contacted by the actual owner.
 

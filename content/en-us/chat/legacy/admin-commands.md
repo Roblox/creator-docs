@@ -13,7 +13,7 @@ An **admin command** is a keyword or phrase that a user with certain level of co
 
 ## Setup
 
-Whenever a Roblox place loads it checks if the Chat service is empty. If it does not find the components it needs, the place will insert the latest version of those components. This means that overwriting or making changes to these components in a experience will prevent them from being updated.
+Whenever a Roblox place loads it checks if the Chat service is empty. If it does not find the components it needs, the place will insert the latest version of those components. This means that overwriting or making changes to these components in an experience will prevent them from being updated.
 
 The first step in setting up the admin commands library is to add a new Chat Module to the Chat service. The library in this tutorial takes care of the heavy lifting done by a Chat Module so the only object you need to add to the Chat service is a new `Class.ModuleScript` . The name of your module script can be anything, but I suggest something intuitive like `AdminCommands`.
 

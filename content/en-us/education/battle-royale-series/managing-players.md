@@ -345,7 +345,7 @@ while true do
 	repeat
 		wait(gameSettings.intermissionDuration)
 		print("Restarting intermission")
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	print("Intermission over")
 	wait(gameSettings.transitionTime)

@@ -436,7 +436,7 @@ Using the easing options of `Datatype.TweenInfo`, you can control the easing **s
   </tr>
   <tr>
     <td><b>Circular</b></td>
-    <td>Follows a circlular arc, slowing down as tween approaches the target.</td>
+    <td>Follows a circular arc, slowing down as tween approaches the target.</td>
   </tr>
   <tr>
     <td><b>Back</b></td>

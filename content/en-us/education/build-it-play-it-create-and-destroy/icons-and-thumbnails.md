@@ -72,7 +72,7 @@ For the game thumbnail, you can use the same screenshot or take another one. Thu
 
 ## Sharing with Friends
 
-When you first publish a experience, it's automatically set to private. Making it public in the Game Settings menu will allow friends to be able to join with a link.
+When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow friends to be able to join with a link.
 
 1. In the Game Settings window, select **Permissions**.
 
