@@ -165,7 +165,7 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
    end
    ```
 
-3. In the repeat loop, add a print statement saying the intermission is starting. Use `task.wait()` to pause for the intermission using `intermissionDuration` from GameSettings.
+3. In the repeat loop, add a print statement saying the intermission is starting. Use `Library.task.wait()` to pause for the intermission using `intermissionDuration` from GameSettings.
 
    ```lua
    while true do
