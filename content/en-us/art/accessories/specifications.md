@@ -72,12 +72,6 @@ When ready to export, see [Export Requirements](../../art/modeling/export-requir
     <td>3</td>
   </tr>
   <tr>
-    <td>Shoulder</td>
-    <td>3</td>
-    <td>3</td>
-    <td>3</td>
-  </tr>
-  <tr>
     <td>Front</td>
     <td>3</td>
     <td>3</td>
@@ -106,7 +100,7 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
 
 Attachments are points on the accessory model that connect to another attachment of the same name on a character model. It is important that these are correctly applied so rigid accessories can attach to your models. Layered accessories also use attachment points to correctly associate with various body parts. See the following specifications for attachments:
 
-- **One attachment** - Each accessory, including layered accessories, require at least one attachment point to it's associated body part.
+- **One attachment** - Each accessory, including layered accessories, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
 
   If setting attachment names manually, use the following `Class.Attachment` name for each accessory type:
@@ -188,7 +182,7 @@ Rigging and skinning a layered accessory allows the accessory to move naturally 
 
 If using modeling software to skin your accessories, keep in mind that **Joint Influences** (Maya) or **Bone Assignments** (Blender) per vertex should be limited to **4**.
 
-For more information basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
+For more information on basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
 
 ### Cage Meshes
 
@@ -217,7 +211,7 @@ The outer cage mesh object must have the same name as the accessory model append
 <img src="../../assets/accessories/lc-requirements-outercage-outliner.png" width="60%" />
 
 <Alert severity="warning">
-The vertexes and UVs of the inner and outer cage meshes shouldn't be altered, as they are used to match coordinates between other cages.
+The vertexes and UVs of the inner and outer cage meshes should not be altered, as they are used to match coordinates between other cages.
 You can complete the UV texturing of the actual accessory mesh layer (not the \_InnerCage or \_OuterCage objects) at your discretion.
 </Alert>
 
@@ -227,25 +221,25 @@ Your items must meet the following requirements before you upload them to the Ma
 
 - Ensure that your items adhere to the [Marketplace Program Guidelines](../../art/marketplace/marketplace-policy.md).
 - Whenever possible, ensure that your items adhere to the following modeling requirements:
-  - [Custom mesh specifications](../../art/modeling/specifications.md)
-  - Any applicable [accessory specifications](../../art/accessories/project-files.md)
+  - [Custom mesh specifications](../../art/modeling/specifications.md).
+  - Any applicable [accessory specifications](../../art/accessories/project-files.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
-- Your `Class.Accessory` instance doesn't contain extraneous objects, like `Class.Script` or additional `Class.Part` instances. Your `Class.Accessory` hierarchy must closely resemble one of the following examples:
+- Your `Class.Accessory` instance does not contain extraneous objects, like `Class.Script` or additional `Class.Part` instances. Your `Class.Accessory` hierarchy must closely resemble one of the following examples:
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../../assets/accessories/Rigid-Accessory-Example.png" />
-    <figcaption>Rigid accessory hierarchy</figcaption>
+    <figcaption>Rigid accessory hierarchy.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/accessories/Rigid-Accessory-With-Thumbnail-Example.png" />
-    <figcaption>Rigid accessory hierarchy with [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md)</figcaption>
+    <figcaption>Rigid accessory hierarchy with [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md).</figcaption>
   </figure>
   <figure>
     <img src="../../assets/accessories/Layered-Accessory-Example.png" />
-    <figcaption>Layered accessory hierarchy with [SurfaceAppearance](../../art/modeling/surface-appearance.md) and [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md)</figcaption>
+    <figcaption>Layered accessory hierarchy with [SurfaceAppearance](../../art/modeling/surface-appearance.md) and [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md).</figcaption>
   </figure>
 </GridContainer>
 

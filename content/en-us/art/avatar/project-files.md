@@ -5,7 +5,7 @@ description: Download various character-related project files and reference file
 
 ## Project Files
 
-The following `.fbx`, `.blend`, and `.ma` files project files are available to use as examples, boilerplate, or reference:
+The following `.fbx`, `.blend`, and `.ma` project files are available to use as examples, boilerplate, or reference:
 
 <Tabs>
   <TabItem label="Models">

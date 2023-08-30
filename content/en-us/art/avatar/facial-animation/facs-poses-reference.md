@@ -20,11 +20,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserB.mp4" width="70%"></video>
 </GridContainer>
 
-When you use `Class.FaceControls.ChinRaiser|ChinRaiser` when the character's mouth is closed, the character's lower lip collides with their upper lip. When you need to keep the mouth closed while raising the chin, use [`ChinRaiserUpperLip`](#chinraiserupperlip) and `Class.FaceControls.ChinRaiser|ChinRaiser` together to raise both the lower and upper lip, and avoid a collision. Note that if you use this method, you must set both `Class.FaceControls.ChinRaiser|ChinRaiser` and [`ChinRaiserUpperLip`](#chinraiserupperlip) to the same value so the lips move the same distance upwards.
+When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mouth is closed, the character's lower lip collides with their upper lip. When you need to keep the mouth closed while raising the chin, use [`ChinRaiserUpperLip`](#chinraiserupperlip) and `Class.FaceControls.ChinRaiser|ChinRaiser` together to raise both the lower and upper lip, and avoid a collision. Note that if you use this method, you must set both `Class.FaceControls.ChinRaiser|ChinRaiser` and [`ChinRaiserUpperLip`](#chinraiserupperlip) to the same value so the lips move the same distance upwards.
 
 ## ChinRaiserUpperLip
 
-`Class.FaceControls.ChinRaiserUpperLip|ChinRaiserUpperLip` raises the upper lip up when ChinRaiser is engaged and it's touching the upper lip.
+`Class.FaceControls.ChinRaiserUpperLip|ChinRaiserUpperLip` raises the upper lip up when ChinRaiser is engaged and it is touching the upper lip.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/ChinRaiserUpperLipA.mp4" width="70%"></video>
@@ -69,7 +69,7 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` when the character's mou
 
 ## LipsTogether
 
-`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and the lips collide with each other.
+`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-1.mp4" width="70%"></video>
@@ -155,7 +155,7 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## LeftLowerLipDepressor
 
-`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth.
+`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip downwards away from the upper lip, revealing the lower teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorA.mp4" width="70%"></video>
@@ -353,7 +353,7 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightNoseWrinkler
 
-`Class.FaceControls.RightNoseWrinkler|RightNoseWrinkler` raises the character's right nostril, pulls the brow down slightly, and wrinkles on the right side of the nose.
+`Class.FaceControls.RightNoseWrinkler|RightNoseWrinkler` raises the character's right nostril, pulls the brow down slightly, and wrinkles the right side of the nose.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightNoseWrinklerA.mp4" width="70%"></video>
