@@ -52,7 +52,7 @@ The reference character model provided is meant for educational purposes and doe
       <td>A Cubie character model with a fully rigged face and over 50 poses saved and mapped. You can import this file into Studio, or open the file in your preferred 3D modeling software.</td>
     </tr>
     <tr>
-      <td><a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_head_ALB.png" download>Cubie-Texture_ALB.png</a></td>
+      <td><a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_Head_ALB.png" download>Cubie-Texture_ALB.png</a></td>
       <td>A Cubie texture image file. After you import the Cubie model into Studio, you can add this file as the head part's <b>TextureID</b>.</td>
     </tr>
     <tr>
@@ -69,7 +69,7 @@ Many character models already include a head with distinct facial features, but 
 - **Face parts** - Ensure that you include distinct face features, such as eyes, upper teeth, lower teeth, and a tongue.
 - **Lip vertices** - If you want your character to use its mouth, separate the lip vertices so that the mouth can open.
 - **Inner components** - If your character has inner mouth components, such as a tongue and teeth, model a mouth bag within the head mesh to contain these features. If your character uses eye sockets, model a similar eye bag to contain these features.
-- **No extra data** - Ensure that all children face parts of the head_Geo don't contain history or frozen transformations.
+- **No extra data** - Ensure that all children face parts of the Head_Geo don't contain history or frozen transformations.
 - **Outer cage** - Make sure the character model has an outer cage to support face accessories and layered clothing. For more information, see [Cage Mesh Requirements](../../../art/avatar/specifications.md#inner-and-outer-cages).
 
 You can follow along the rest of this head creation process using a [rigged Cubie character](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Model-Only.blend) that meets these modeling requirements. This version doesn't include any facial rigging or pose data so you can use it as reference in this guide.
@@ -80,7 +80,7 @@ Your character must have an internal bone structure to drive the vertices of the
 
 ### RootFaceJoint
 
-The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This RootFaceJoint bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the head_Geo mesh.
+The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This RootFaceJoint bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh.
 
 To add a RootFaceJoint bone:
 
@@ -254,7 +254,7 @@ To start creating face bone controls:
 3. In **Edit Mode**, select all non-face bones, right click and select **Delete Selected Bones**.
 4. Rename the bones to include **\_Con**, to denote them as controller bones. You can batch rename them with the following process:
    1. In the **Outliner**, hold <kbd>Shift</kbd> and click all the controller bones.
-   2. Navigate to **Edit** > **Batch Rename**. A rename modal will appear.
+   2. Navigate to **Edit** > **Batch Rename**. A rename modal displays.
    3. Set to **Selected** and use the dropdown to set to **Bones**.
    4. Set **Type** to **Set Name**.
    5. Set **Method** to **Suffix**.
@@ -451,5 +451,5 @@ The export settings for animatable heads differ slightly from [standard third-pa
 At this point, you can now import the `.fbx` into Studio as a character with a supported animatable head. For model import and usage instructions, see [Using Heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md).
 
 <Alert severity="warning">
-   When importing Cubie into Studio, make sure to also save the head texture <a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_head_ALB.png" download>Cubie-Texture_ALB.png</a> which you can apply to the head mesh of the imported character as a TextureID.
+   When importing Cubie into Studio, make sure to also save the head texture <a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_Head_ALB.png" download>Cubie-Texture_ALB.png</a> which you can apply to the head mesh of the imported character as a TextureID.
 </Alert>
