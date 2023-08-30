@@ -11,7 +11,7 @@ Your experience is almost ready for others to play! Before sharing, you'll make 
 
 While making the experience, many variables were set to small values, like the player's starting spaces was 2. While this made it easy to test, this might not be the right number for players in their final experience.
 
-Before sharing your experience with others, it's important that the variables feel **challenging**, but **fair**. Getting the right numbers for a experience will give players a more fun experience.
+Before sharing your experience with others, it's important that the variables feel **challenging**, but **fair**. Getting the right numbers for an experience will give players a more fun experience.
 
 1. In ServerScriptService > PlayerSetup change the value of `Spaces`. Remember this is how many spaces a player has to hold items before they must sell them. A number between 6-10 is a good starting point, but play-testing for the right amount is best.
 
