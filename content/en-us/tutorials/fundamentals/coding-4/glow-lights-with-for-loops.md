@@ -81,7 +81,7 @@ Remember, a for loop starts with keyword `for` followed by a control variable. T
    ```lua
    for currentBrightness = 0, 5, brightnessChange do
       light.Brightness = currentBrightness
-      wait(timeChange)
+      task.wait(timeChange)
    end
    ```
 
@@ -113,7 +113,7 @@ To dim the light, use a second for loop. The values of this loop will be reverse
    -- Second loop dims lamp
    for currentBrightness = 5, 0, -brightnessChange do
       light.Brightness = currentBrightness
-      wait(timeChange)
+      task.wait(timeChange)
    end
    ```
 
@@ -139,14 +139,13 @@ Right now, the light only turns on and off once. To make the lamp continuously g
    while true do
       for currentBrightness = 0, 5, brightnessChange do
          light.Brightness = currentBrightness
-         wait(timeChange)
+         task.wait(timeChange)
       end
 
       for currentBrightness  = 5, 0, -brightnessChange do
          light.Brightness = currentBrightness
-         wait(timeChange)
+         task.wait(timeChange)
       end
-
    end
    ```
 
@@ -171,13 +170,13 @@ local timeChange = 0.2
 while true do
 	for count = 0, 5, brightnessChange do
 	    light.Brightness = count
-	wait(timeChange)
+	task.wait(timeChange)
 	end
 
 	-- Second loop to turn off light
 	for count = 5, 0, -brightnessChange do
 		light.Brightness = count
-		wait(timeChange)
+		task.wait(timeChange)
 	end
 end
 ```

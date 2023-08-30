@@ -191,26 +191,26 @@ end
 
 In the while loop, you need to write code to wait a few seconds between the platform disappearing and reappearing.
 
-The built-in function `wait` can be used for this. In the parentheses the number of seconds to wait is needed: for example `wait(3)`.
+The built-in function `task.wait` can be used for this. In the parentheses the number of seconds to wait is needed: for example `task.wait(3)`.
 
 <Alert severity="error">
 
-Whatever you do, never make a `while true` loop without including a `wait` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
+Whatever you do, never make a `while true` loop without including a `task.wait` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
 
 </Alert>
 
 Three seconds is a sensible starting point for the length of time between each platform state.
 
-1. In the while loop, call the `wait` function with **3** in the parentheses.
+1. In the while loop, call the `task.wait` function with **3** in the parentheses.
 2. Call the `disappear` function.
-3. Call the `wait` function again with **3** in the parentheses.
+3. Call the `task.wait` function again with **3** in the parentheses.
 4. Call the `appear` function.
 
 ```lua
 while true do
-   wait(3)
+   task.wait(3)
    disappear()
-   wait(3)
+   task.wait(3)
    appear()
 end
 ```
@@ -239,9 +239,9 @@ local function appear()
 end
 
 while true do
-   wait(3)
+   task.wait(3)
    disappear()
-   wait(3)
+   task.wait(3)
    appear()
 end
 ```
