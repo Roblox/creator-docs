@@ -131,9 +131,10 @@ You can detect the current state of all buttons and sticks on a gamepad with the
 Use the following code sample to detect if the Gamepad1 R2 button is being held when the player character's left foot comes contacts a surface:
 
 ```lua
+local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
-local player = game.Players.LocalPlayer
+local player = Players.LocalPlayer
 local character = player.Character
 if not character or not character.Parent then
 	character = player.CharacterAdded:Wait()
