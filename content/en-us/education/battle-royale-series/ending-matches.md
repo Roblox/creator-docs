@@ -135,7 +135,7 @@ When the timer ends, fire the Match End event and send the matching end state va
 
      repeat
        wait(gameSettings.intermissionDuration)
-     until Players.NumPlayers >= gameSettings.minimumPlayers
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
      wait(gameSettings.transitionTime)
@@ -153,7 +153,7 @@ When the timer ends, fire the Match End event and send the matching end state va
 
      repeat
        wait(gameSettings.intermissionDuration)
-     until Players.NumPlayers >= gameSettings.minimumPlayers
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
      wait(gameSettings.transitionTime)
@@ -511,7 +511,7 @@ while true do
 
 	repeat
 		wait(gameSettings.intermissionDuration)
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
 	wait(gameSettings.transitionTime)
