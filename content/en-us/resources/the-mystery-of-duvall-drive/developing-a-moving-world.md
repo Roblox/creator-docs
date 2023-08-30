@@ -167,7 +167,7 @@ local function LightningFunc(info)
 	…
 ```
 
-In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use wait(number). Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
+In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use `Library.task.wait()|task.wait(number)`. Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
 
 ```lua
 beam.Texture = textures[info.textIdx]
@@ -193,7 +193,7 @@ if(audioFolder and audioPart) then
 	end
 end
 
-wait(info.waitTillFlashes)
+task.wait(info.waitTillFlashes)
 
 -- and so on
 
@@ -537,7 +537,7 @@ To do this, we needed to first use assets from our current kit and add any new c
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/base-piece.png" width="100%" />
 
-We knew that since we were using constraints, we wouldn't be able to anchor these meshes because they wouldn't move even with the presence of a constraint/motor driving them. The constraint needed to be a child of something that was anchored in order for the platform to not just fall out of the world. We solved this through an part we named **Motor_Anchor** that had a [hinge constraint](../../physics/mechanical-constraints.md#hingeconstraint) to drive the overall movement of the platform. After that, we needed the two meshes to move as one, so we created a part we named **Motor_Turn**, then we welded the two meshes to it. This way the constraint would be able to work on a single part, as opposed to multiple hinges working with multiple parts.
+We knew that since we were using constraints, we wouldn't be able to anchor these meshes because they wouldn't move even with the presence of a constraint/motor driving them. The constraint needed to be a child of something that was anchored in order for the platform to not just fall out of the world. We solved this through a part we named **Motor_Anchor** that had a [hinge constraint](../../physics/mechanical-constraints.md#hingeconstraint) to drive the overall movement of the platform. After that, we needed the two meshes to move as one, so we created a part we named **Motor_Turn**, then we welded the two meshes to it. This way the constraint would be able to work on a single part, as opposed to multiple hinges working with multiple parts.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/unanchored-platform.png" width="100%" />
 

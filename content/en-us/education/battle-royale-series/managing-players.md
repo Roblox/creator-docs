@@ -343,12 +343,12 @@ local gameSettings = require(moduleScripts:WaitForChild("GameSettings"))
 
 while true do
 	repeat
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 		print("Restarting intermission")
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	print("Intermission over")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 end
