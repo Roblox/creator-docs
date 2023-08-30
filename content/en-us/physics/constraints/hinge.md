@@ -10,7 +10,7 @@ For an overview on creating, visualizing, and simulating mechanical constraints,
 A `Class.HingeConstraint`
 allows its two attachments to rotate about one axis, forcing them into
 the same position and **X** axis alignment. This constraint can also be
-powered to behave like a [motor](#angular-power) or [servo](#angular-power), and you can set limits to restict the hinge's rotational range.
+powered to behave like a [motor](#angular-power) or [servo](#angular-power), and you can set limits to restrict the hinge's rotational range.
 
 <video controls src="../../assets/physics/constraints/Hinge-Demo.mp4" width="90%" alt="Demo video of HingeConstraint"></video>
 
