@@ -121,7 +121,7 @@ Test your experience and you should see the leaderboard appear in the top right 
 
 ## Counting Time
 
-Each user should earn a point for each second they are alive. A `while` loop and the `task.wait` function can be used to update the value of points every second.
+Each user should earn a point for each second they are alive. A `while` loop and the `Library.task.wait()` function can be used to update the value of points every second.
 
 1. At the end of the script, create a `while` loop with `true` as the condition.
 2. In the loop, `task.wait` for 1 second.
