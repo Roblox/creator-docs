@@ -71,7 +71,7 @@ rigs.
   <tr>
     <td><img src="../assets/animation/animation-editor/Controls-Next-Key.png"
    width="100%" /></td>
-    <td>Moves the scrubber to the next key</td>
+    <td>Moves the scrubber to the next key.</td>
   </tr>
     <tr>
     <td><img src="../assets/animation/animation-editor/Controls-Last-Key.png"
@@ -173,7 +173,7 @@ Animation Editor.
 To open the Animation Editor:
 
 1. In the menu bar, navigate to the **Avatar** tab.
-1. In the **Animations** section, click on the **Animation Editor**.
+2. In the **Animations** section, click on the **Animation Editor**.
    The **Animation Editor** window displays.
 
    <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
@@ -347,10 +347,10 @@ To duplicate one or more keyframes:
 
 1. Navigate to the **timeline** and select one or more keyframes. Every
    selected keyframe is now surrounded by a blue border.
-1. Press **Control+C** (**Command ⌘+C** on Mac). Every selected
+1. Press **Ctrl+C** (**Command ⌘+C** on Mac). Every selected
    keyframe copies to your clipboard.
 1. Move the **scrubber** to a new frame position.
-1. Press **Control+V** (**Command ⌘+V** on Mac). The keyframe(s) paste
+1. Press **Ctrl+V** (**Command ⌘+V** on Mac). The keyframe(s) paste
    into the new frame position.
 
 ### Deleting Keyframes
@@ -377,7 +377,7 @@ If the track only contains keyframes with default values, such as an `Datatype.C
     src="../assets/animation/animation-editor/Optimization-Preview.png"
     width="90%" />
 
-During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first and the number of keyframes can be adjusted using a slider.
+During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first, and the number of keyframes can be adjusted using a slider.
 
 While using the slider, you can preview the animation and scrub through the timeline to check your animation but you can not perform editing operations, such as changing keyframe values or adding tracks.
 
