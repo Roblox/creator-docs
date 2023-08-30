@@ -19,7 +19,7 @@ type Vector2 = {x: number, y: number}
 ```
 
 ## Inference Modes
-There are three type inference modes that Luau can use in [Script]()s
+There are three type inference modes that Luau can use in `Class.Script|Scripts`
 
 * `--!nocheck` - Don't check types
 * `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
@@ -40,7 +40,7 @@ There are 4 primitive types that can be used in an annotation:
 * `number` - a numeric value
 * `string` - text
 
-Functions and tables are defined differently, and within Roblox, all `Instances` and `Enums` have their own types
+Functions and tables are defined differently, and within Roblox, all `Class.Instance|Instances` and `DataType.Enums` have their own types
 
 ```lua
 part.Touched:Connect(function(otherPart: BasePart)
@@ -305,7 +305,7 @@ local function Signal<A...>(f: (A...) -> (), ...: A...)
 
 ## Type Exports
 
-Types can be exported through [ModuleScript]() using the `export` keyword infront of a type definition
+Types can be exported through `Class.ModuleScript` using the `export` keyword infront of a type definition
 
 ```lua
 export type Cat = {
