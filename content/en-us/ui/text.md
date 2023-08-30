@@ -71,3 +71,17 @@ local function onFocusLost(enterPressed, inputObject)
 end
 textBox.FocusLost:Connect(onFocusLost)
 ```
+
+As another example, you can add a filter in a textbox that will only allow numerical input using the `Class.TextBox.GetPropertyChangedSignal` event, which fires when the user types in anything while focused in the `Class.TextBox`, or when the `Class.TextBox`'s text gets changed outside of the focus.
+
+<Alert severity="warning">
+  While using `Class.TextBox`'s `Class.TextBox.GetPropertyChangedSignal` event, attempt to <i>avoid</i> yielding functions such as firing [RemoteEvents](../reference/engine/classes/RemoteEvent) or using `task.wait()`.
+</Alert>
+
+```lua
+local textBox = script.Parent
+local function filterNumerals()
+	textBox.Text = string.gsub(textBox.Text, "[^%-%d]", "")
+end
+textBox:GetPropertyChangedSignal("Text"):Connect(filterNumerals)
+```
