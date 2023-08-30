@@ -285,7 +285,7 @@ The following tables include all available properties for customization:
 
 You can individually style and modify chat bubble behaviors based on specific conditions that overrides your general settings. For example, you can use chat bubbles to differentiate NPCs and users, highlight critical health status, and apply special effects to messages with pre-defined keywords.
 
-To set per-bubble customization, add a client-side `Class.LocalScript` using `Class.BubbleChatMessageProperties`, which overrides matching properties of `Class.BubbleChatConfiguration`, and the `Class.TextChatService:OnBubbleAdded()` callback to specify how to customize each bubble. The callback supplies you with the `Class.TextChatMessage` property as well as the adornee, so you can apply the customization based on attributes associated with users, the chat text content, user character properties, and any special conditions you want to define.
+To set per-bubble customization, add a client-side `Class.LocalScript` using `Class.BubbleChatMessageProperties`, which overrides matching properties of `Class.BubbleChatConfiguration`, and the `Class.TextChatService.OnBubbleAdded` callback to specify how to customize each bubble. The callback supplies you with the `Class.TextChatMessage` property as well as the adornee, so you can apply the customization based on attributes associated with users, the chat text content, user character properties, and any special conditions you want to define.
 
 The following example adds special appearance to VIP users' chat bubbles by checking if a chat message sender has the `IsVIP` attribute:
 
@@ -399,4 +399,4 @@ end
 
 ## NPC Bubbles
 
-You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService:OnBubbleAdded()` callback just like any other chat bubble.
+You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
