@@ -1,5 +1,5 @@
 ---
-title: Creating Basic heads
+title: Creating Basic Heads
 description: The process of creating a basic animatable head in Blender.
 ---
 
@@ -88,8 +88,8 @@ To add a RootFaceJoint bone:
    <img src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/Open-Project.png" width="70%" />
 
 2. Click on any bones to select the armature, then switch to **Edit Mode**.
-3. In the **Outliner**, click on the **head** bone.
-4. In the **Viewport**, press <kbd>E</kbd> and drag your mouse up to extrude an additional child bone from the **head** bone.
+3. In the **Outliner**, click on the **Head** bone.
+4. In the **Viewport**, press <kbd>E</kbd> and drag your mouse up to extrude an additional child bone from the **Head** bone.
 5. In the **Outliner**, rename this bone **Face**.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/1_Adding_RootFaceJoint.mp4">
@@ -110,7 +110,7 @@ The following instructions describe a basic process of [adding face bones](#addi
 <Alert severity="info">
    You can download a [reference Cubie model](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.fbx) with a completed rig with 30+ facial bones added and skinned. You can use this for a reference for unique bone placements not covered in this guide, such as cheeks, lips, and jaws.
   
-   See [Using heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md) for download links of more complex characters.
+   See [Using Heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md) for download links of more complex characters.
 </Alert>
 
 #### Adding Face Bones
@@ -137,8 +137,8 @@ To add bones to the character eyes:
 6. Adjust the bones horizontally and front-facing. A quick method for setting bones horizontally:
 
    1. In the top right of the **Viewport**, extend the **Tool Panel** to the **Transform** section.
-   2. With the bones selected, copy the **head Y** location to the **Tail Y** location.
-   3. Set the **Tail Z** to **0.2** centimeters. This sets the Tail Z coordinates 0.2 centimeters offset from the head Z coordinates.
+   2. With the bones selected, copy the **Head Y** location to the **Tail Y** location.
+   3. Set the **Tail Z** to **0.2** centimeters. This sets the Tail Z coordinates 0.2 centimeters offset from the Head Z coordinates.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/4_Positioning_Eye_Bones.mp4">
    </video>
@@ -315,7 +315,7 @@ The following image is an example of Blender's animation timeline with 5 frames.
 
 There are [50 base poses](./facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
 
-You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Nevertheless, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
+You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Therefore, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
 
 The following steps outline the process of posing 5 poses with the facial bones created in our reference, but you can apply these steps for any additional poses for a more expressive head. To pose your face bones in Blender:
 
@@ -330,7 +330,7 @@ The following steps outline the process of posing 5 poses with the facial bones 
    2. If you are posing `EyesLookLeft`, select both eye controller bones and drag the eyes to the character's left.
    3. If you are posing `EyesLookRight`, select both eye controller bones and drag the eyes to the character's right.
    4. If you are posing `LeftEyeClosed`, select both eye controller bones and drag the left eyelids down to meet the bottom eyelids.
-   5. If you are posing `RightEyeClosed`, select both eye controller bones and drag the left eyelids down to meet the bottom eyelids.
+   5. If you are posing `RightEyeClosed`, select both eye controller bones and drag the right eyelids down to meet the bottom eyelids.
 3. In the **Viewport**, press <kbd>A</kbd> to select all bones.
 4. Right-click and select **Insert Keyframe** > **Location and Rotation**. This ensures that each frame contains the positional and rotational information for all bones.
 
@@ -362,7 +362,7 @@ For example, both `LeftEyeClosed` and `LeftCheekRaiser` control movement around 
   </figure>
 </GridContainer>
 
-A **combination pose**, or **corrective**, is the combination of 2-3 FACS poses that control the same facial features in a single animation frame with a **corrective difference from 100% of their default values**. By defining and mapping a combination pose to your head, you can correct how you want the two or more FACS poses to combine. For example, if you add a corrective for each of the previous use cases, the lower eyelid and upper eyelid contact make contact with each other without colliding:
+A **combination pose**, or **corrective**, is the combination of 2-3 FACS poses that control the same facial features in a single animation frame with a **corrective difference from 100% of their default values**. By defining and mapping a combination pose to your head, you can correct how you want the two or more FACS poses to combine. For example, if you add a corrective for each of the previous use cases, the lower and upper eyelids make contact with each other without colliding:
 
 <GridContainer numColumns="3">
   <figure>
@@ -389,18 +389,18 @@ Aside from mapping each pose to its proper pose name, you also need to map the [
 
 <Alert severity="info">
    If you are using Maya, you can map the RootFaceJoint and facial pose data using the **Extra Attributes** in a similar format as Blender's Custom Properties. To add attributes:
-   1. Select the **head_Geo** object and navigate to the Attribute Editor.
+   1. Select the **Head_Geo** object and navigate to the Attribute Editor.
    2. Under the Attributes dropdown, select **Add Attributes...**.
 </Alert>
 
 <Alert severity="error">
-   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the head will fail the [import process](../../../art/avatar/facial-animation/using-heads-in-studio.md#importing-heads).
+   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the [import process](../../../art/avatar/facial-animation/using-heads-in-studio.md#importing-heads) will fail.
 </Alert>
 
 To map your saved poses and the RootFaceJoint:
 
 1. Switch to **Object Mode**.
-2. Select the **head_Geo mesh**.
+2. Select the **Head_Geo mesh**.
 3. In the **Object Properties** tab of the **Properties Editor**, navigate to the **Custom Properties** section, then click the **New** button. A new custom property displays underneath the **New** button.
 
    <img src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/Mapping-New-Button.png" width="50%" />
@@ -448,7 +448,7 @@ The export settings for animatable heads differ slightly from [standard third-pa
 7. Expand **Bake Animation** and uncheck **NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
 8. Click the **Export FBX** button. Save the FBX to the directory of your choice.
 
-At this point, you can now import the `.fbx` into Studio as a character with a supported animatable head. For model import and usage instructions, see [Using heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md).
+At this point, you can now import the `.fbx` into Studio as a character with a supported animatable head. For model import and usage instructions, see [Using Heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md).
 
 <Alert severity="warning">
    When importing Cubie into Studio, make sure to also save the head texture <a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_head_ALB.png" download>Cubie-Texture_ALB.png</a> which you can apply to the head mesh of the imported character as a TextureID.
