@@ -44,7 +44,7 @@ Roblox Studio supports a texture resolution of **1024 x 1024** for albedo textur
   <figure><img src="../../../assets/art/avatar/basic-creation/Texture-Resolution-B.png" /><figcaption>Texture painting at 2048 x 2048 resolution</figcaption></figure>
 </GridContainer>
 
-When adding fine details to your texture, increase the image resolution of your texture map temporarily to **2048 x 2048** or **4096x4096**. After completing your texturing, change the image resolution back to **1024 x 1024** to bake in the changes.
+When adding fine details to your texture, increase the image resolution of your texture map temporarily to **2048 x 2048** or **4096 x 4096**. After completing your texturing, change the image resolution back to **1024 x 1024** to bake in the changes.
 
 To change your texture image resolution:
 
