@@ -49,7 +49,7 @@ Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `
      repeat
        wait(gameSettings.intermissionDuration)
        print("Restarting intermission")
-     until Players.NumPlayers >= gameSettings.minimumPlayers
+     until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      print("Intermission over")
      wait(gameSettings.transitionTime)
@@ -343,7 +343,7 @@ while true do
 	repeat
 		wait(gameSettings.intermissionDuration)
 		print("Restarting intermission")
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	print("Intermission over")
 	wait(gameSettings.transitionTime)
