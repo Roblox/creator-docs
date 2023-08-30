@@ -16,7 +16,7 @@ The condition for `if` statements, `while` loops, and `repeat` loops can be any 
 
 The basic `if` statement tests its condition. If the condition is true, then Luau executes the code between `then` and `end`.
 
-Ypu can use an `elseif` statements to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
+You can use an `elseif` statements to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
 
 In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from top to bottom, stops at the first `true` condition, and executes the code that follows it.
 
