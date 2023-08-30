@@ -5,7 +5,7 @@ next: /tutorials/scripting/basic-scripting/fading-trap
 prev: /tutorials/scripting/basic-scripting/intro-to-scripting
 ---
 
-In [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intro-to-scripting.md), you learned how to make changes in a experience in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
+In [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intro-to-scripting.md), you learned how to make changes in an experience in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
 
 <video controls loop muted>
   <source src="../../../assets/tutorials/deadly-lava/lavaFloorGameplay.mp4" />

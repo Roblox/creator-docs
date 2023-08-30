@@ -14,7 +14,7 @@ A head part that supports facial animation is a specialized skinned head `Class.
 
 An animatable head model contains an internal facial [rig](../../../art/modeling/rigging.md), or bone structure, that drives the deformation of the viewable geometry. When creating a dynamic head in a 3D modeling software, modelers save these bone deformations as individual **poses**.
 
-When importing a head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical [skinning](../../../art/modeling/skinning.md), you can not access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
+When importing a head that supports facial animation into Studio, Studio creates a `Class.FaceControls` instance you can use to access and combine these individual poses to create expressions and animations. Unlike typical [skinning](../../../art/modeling/skinning.md), you cannot access the facial `Class.Bone|Bones` of a head mesh directly in Studio.
 
 For information on implementing heads in Studio, including information on how to import custom heads and face accessories in addition to a reference experience and example model files, see [Using Heads in Studio](../../../art/avatar/facial-animation/using-heads-in-studio.md).
 
@@ -50,6 +50,6 @@ See [Creating Face Accessories](../../../art/avatar/facial-animation/creating-fa
 
 ## FACS Poses Reference
 
-Animateable heads use the Facial Action Coding System (FACS) as a universal system that allows modelers and animators to reference similar facial features and head mesh across different head models.
+Animatable heads use the Facial Action Coding System (FACS) as a universal system that allows modelers and animators to reference similar facial features and head mesh across different head models.
 
 When creating your head in a third-party modeling software, see [FACS Poses Reference](../../../art/avatar/facial-animation/facs-poses-reference.md) for a list of the base facial poses, their descriptions, and video examples.

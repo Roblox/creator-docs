@@ -5,7 +5,7 @@ description: Verify the important aspects of your character model in Blender and
 next: /art/avatar/testing/blender
 ---
 
-It's important to constantly test your models during and after the creation process to ensures that your character can interact with various social and environmental elements in any experience.
+It's important to constantly test your models during and after the creation process to ensure that your character can interact with various social and environmental elements in any experience.
 
 Whether you are using a template character, or your own custom assets, use the information provided in [Testing in Blender](../../../art/avatar/testing/blender.md) and [Testing in Studio](../../../art/avatar/testing/studio.md) throughout your workflow to comprehensively test your assets and quality check your models.
 
@@ -42,7 +42,7 @@ Use the following table as an overview of common tests and resources to verify e
   </tr>
   <tr>
     <td><img src="../../../assets/art/avatar/Component-Cage-Mesh.png" /> <br /><center>**Cage Mesh**</center></td>
-    <td>Manually verify that your cage mesh completely and tightly covers your character model and follows [avatar outer cage specifications](../../../art/avatar/specifications.md#outer-cages).</td>
+    <td>Manually verify that your cage mesh completely and tightly covers your character model, and follows [avatar outer cage specifications](../../../art/avatar/specifications.md#outer-cages).</td>
   </tr>
   <tr>
     <td><img src="../../../assets/art/avatar/Component-Attachments.png" /> <br /><center>**Attachments**</center></td>

@@ -45,7 +45,7 @@ All accessories require a single mesh object that represents the geometry of the
   <figure><img src="../../assets/art/accessories/Texture-Applied-Example.png" /><figcaption>T-shirt model with texture applied</figcaption></figure>
 </GridContainer>
 
-Textures are image files that define the surface appearance of your accessory. You can create textures within a texture painting program or a 3D Modeling software. In Studio, textures images are imported as image assets and are set to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
+Textures are image files that define the surface appearance of your accessory. You can create textures within a texture painting program or a 3D modeling software. In Studio, textures images are imported as image assets and are set to `Class.MeshPart` objects by a child `Class.SurfaceAppearance` object or a `Class.MeshPart.TextureID` property.
 
 #### Attachments
 
@@ -55,7 +55,7 @@ Textures are image files that define the surface appearance of your accessory. Y
   <figure><img src="../../assets/art/accessories/Attachment-Data-Model-Example.png" width="80%"/><figcaption>Geometry with the "_Att" suffix automatically convert to `Class.Attachment` objects in Studio</figcaption></figure>
 </GridContainer>
 
-Attachment points define where accessories attach to a character's body. For layered accessories, the attachment point is used to associate with the correct body part, in cases like dismemberment.In Studio, attachments are represented by `Class.Attachment` objects.
+Attachment points define where accessories attach to a character's body. For layered accessories, the attachment point is used to associate with the correct body part, in cases like dismemberment. In Studio, attachments are represented by `Class.Attachment` objects.
 
 #### Layered Components
 

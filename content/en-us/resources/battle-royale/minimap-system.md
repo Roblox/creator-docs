@@ -38,7 +38,7 @@ To add new indicators that show up on the minimap, complete these steps:
    function MinimapGui.start(teamDividingAngle)
 
    	while not _setupFinished do
-   		wait()
+   		task.wait()
    	end
 
    	MinimapGui.addMapTag("DeliveryVehicle", "Bus")

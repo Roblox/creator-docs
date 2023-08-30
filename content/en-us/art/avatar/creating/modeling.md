@@ -26,7 +26,7 @@ When modeling an existing avatar template, it's important to understand several 
 
 ### Non-Destructive Modeling
 
-Non-destructive modeling means using a process that doesn't alter the physical shape or construction of the base mesh object. When modifying a template model, don't use tools or functions that delete or add vertices to your meshes. Instead, use Blender's sculpting tools to **only change the position of existing vertices** to alter the shape of your character. This ensures that vertices and faces that have skinning or animation data associated with them retain that important character data.
+Non-destructive modeling means using a process that doesn't alter the physical shape or construction of the base mesh object. When modifying a template model, don't use tools or functions that delete or add vertices to your meshes. Instead, use Blender's sculpting tools to alter the shape of your character by **only changing the position of existing vertices**. This ensures that vertices and faces that have skinning or animation data associated with them retain that important character data.
 
 <Alert severity = 'warning'>
 Extreme geometric changes, even if the vertices are not deleted, can still adversely affect your rigging and skinning. It's important to choose a starting template file close to your final design and to make consistent and proportional changes when sculpting.
@@ -55,7 +55,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Nasolabial-B.png" />
       </TabItem></Tabs></td>
-    <td>**Forehead Wrinkles and Nasolabial Edges**: The edge lines for the forehead wrinkles and nasolabial edges are vital for various expressions involving the mouth, forehead furrowing, eyebrow movement and cheeks. If you modify these sections of your topography, ensure that you retain the original shape is whenever possible, and that they maintain a similar relative relationship to each other. </td>
+    <td>**Forehead Wrinkles and Nasolabial Edges**: The edge lines for the forehead wrinkles and nasolabial edges are vital for various expressions involving the mouth, forehead furrowing, eyebrow movement and cheeks. If you modify these sections of your topography, ensure that you retain the original shape whenever possible, and that they maintain a similar relative relationship to each other. </td>
   </tr>
   <tr>
   <td>
@@ -90,7 +90,7 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
       <TabItem label = "Narrow">
          <img src="../../../assets/art/avatar/basic-creation/Edge-Flow-Eyebrow-B.png" />
       </TabItem></Tabs></td>
-    <td>**Eyelids and Eyebrows**: The eyelids and eyebrows require adequate space between the two regions.<br /><br />If modifying the topography above the eyes, keep in mind that the eyelids and eyebrows require a natural space between the two regions. Both the eyelids and eyebrows can shift and change positions with various face expressions and, if improperly modeled, can clash into each other during a facial pose.</td>
+    <td>**Eyelids and Eyebrows**: The eyelids and eyebrows require adequate space between the two regions.<br /><br />If modifying the topography above the eyes, keep in mind that the eyelids and eyebrows require a natural space between the two regions. Both the eyelids and eyebrows can shift and change positions with various facial expressions and, if improperly modeled, can clash into each other during a facial pose.</td>
   </tr>
 </tbody>
 </table>
@@ -170,7 +170,7 @@ To begin sculpting the head:
    4. Broaden the chin so it prominently protrudes.
       <video controls src="../../../assets/art/avatar/basic-creation/Sculpting_06.mp4" width="100%" muted></video>
 
-6. Perform a refinement pass to add final details to the model to polish and accentuate your main features, such as:
+6. Perform a refinement pass to add final details, polish, and accentuate your main features, such as:
    - Adding details in the outer and inner ears
    - Adding more detail to chin and cheeks
    - Improving edge lines and spacing in areas with crowded vertices
