@@ -28,7 +28,6 @@ To enable the Animation Capture - Face beta feature:
 2. Select **Beta Features**. The **Beta Features** window displays.
 3. In the beta features list, enable **Face Capture**.
 
-   <img src="../assets/animation/face-recorder/Face-Recorder-Beta-Feature.jpg" width="550" />
 
 4. Click the **Save** button.
 5. Restart Studio.
