@@ -175,13 +175,133 @@ Instead, use the syntax `...type` to define the variadic type
 type addLotsOfNumbers = (...number) -> number
 ```
 
-## Generics
+## Unions and Intersections
+It is possible to define a type to be two or more types using a union or intersection
 
-TODO (help wanted)
+```lua
+type NumberOrString = number | string
+type Object1 = {foo: string}
+type Object2 = {bar: number}
+type Object1and2 = Object1 & Object2 -- {foo: string} & {bar: number}
+```
+
+## Defining an inferred type
+
+The `typeof` function can be used in a type definition to define an inferred type
+
+```lua
+type Car = typeof {
+	Speed = 0,
+	Wheels = 4
+} --> Car: {Speed: number, Wheels: number}
+```
+
+One interesting use is to define a metatable type using `setmetatable` inside `typeof`
+
+```lua
+type Vector = typeof(setmetatable({}::{
+	x: number,
+	y: number
+}, {}::{
+	__add: (Vector, Vector|number) -> Vector
+}))
+
+-- Vector + Vector would return a Vector type
+```
+
+## Generics
+Generics allow you to define at a most basic level, substitution types. Lets assume a basic object that creates a State keyword
+
+```lua
+local State = {
+	Key = "TimesClickec",
+	Value = 0
+}
+```
+
+The type for this state object without generics would be
+```lua
+type State = {
+	Key: string,
+	Value: number
+}
+```
+
+However, you may want to `Value` to be a type based on the incoming value, this can be done with generics. Generic types use the following basic shape:
+
+```lua
+type GenericType<T> = T
+```
+
+The `<T>` denotes a type that can be set to anything. The best way to visualise this is as a substitution type. 
+
+```lua
+type List<T> = {T}
+
+local Names: List<string> = {"Bob", "Dan", "Mary"}
+local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13}
+```
+
+Generics can also have multiple substitutions inside the brackets
+
+```lua
+type Map<K, V> = {[K]: V}
+```
+
+Using the state object above, it can be reworked to use a generic type as such
+
+```lua
+type State<T> = {
+	Key: string,
+	Value: T
+}
+```
+
+### Function Generics
+
+Functions can also use generics, however, they behave a little differently when inference is introduced into it
+
+Using the State example again, it can be designed to infer the value of T from the function's incoming arguments
+
+```lua
+local function State<T>(key: string, value: T): State<T>
+	return {
+		Key = key,
+		Value = value
+	}
+end
+
+local Activated = State("Activated", false) -- State<boolean>
+local TimesClicked = State("TimesClicked", 0) -- State<number>
+```
 
 ### Type Packs
 
-TODO
+Type packs are an extension to variadics that allow the definition of generic variadics inside functions.
+
+```lua
+type Event<A...> = {
+	Fire: (Event<A...>, A...)
+	Connect: (Event<A...>, func: (A...) -> ())
+}
+
+-- the event can be defined with as many types as you want
+local ChangedSignal: Event<string, any>
+
+ChangedSignal:Connect(function(changedName, changedValue)
+	-- changedName will be defined as a string
+	-- changedValue will be defined as any
+end)
+
+ChangedSignal:Fire("Size", Vector2.new(100, 50)) --> ok
+ChangedSignal:Fire(20, 100) --> not ok, number cannot be converted to string
+```
+
+Type packs are defined in functions using `...` on the right-hand side of a generic
+
+```lua
+local function Signal<A...>(f: (A...) -> (), ...: A...)
+```
 
 ## Type Exports
 
