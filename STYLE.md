@@ -137,7 +137,7 @@ The following table contains some examples and how they render in the documentat
     </tr>
     <tr>
       <td><code>`Enum.Font`</code></td>
-      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">CameraType</a></code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">Font</a></code></td>
     </tr>
     <tr>
       <td><code>`Enum.Font|GothamMedium`</code></td>
