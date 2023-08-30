@@ -182,7 +182,7 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
 
 At this point, if you're not spawning as intended, try one of the following below.
 
-- `task.wait()` should be inside the repeat loop. Without the wait, the script will run too many times in a second, overloading Roblox Studio and causing an error.
+- `Library.task.wait()` should be inside the repeat loop. Without the wait, the script will run too many times in a second, overloading Roblox Studio and causing an error.
 - In the Game Settings module, the variable `intermissionDuration` should be greater than 1. If lower, the script can repeat too often, causing slow down issues.
 
 ### Ending the Intermission
