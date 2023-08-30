@@ -411,8 +411,9 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 The `Class.Player.GameplayPaused` property indicates the player's current pause state. This property can be used with a `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` connection to show or hide a custom GUI.
 
 ```lua title='LocalScript'
+local Players = game:GetService("Players")
 local GuiService = game:GetService("GuiService")
-local player = game.Players.LocalPlayer
+local player = Players.LocalPlayer
 
 -- Disable default pause modal
 GuiService:SetGameplayPausedNotificationEnabled(false)
