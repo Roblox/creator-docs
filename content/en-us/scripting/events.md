@@ -68,7 +68,7 @@ connection = part.Touched:Connect(onPartTouched)
 
 <h3>Waiting for Events to Fire</h3>
 
-If you want a script to yield or pause until a specific event fires, use the `Library.task.wait()` function.
+If you want a script to yield or pause until a specific event fires, use the `Datatype.RBXScriptSignal.Wait()` function.
 
 ```lua
 -- Script in ServerScriptService
@@ -77,7 +77,7 @@ local touchedPart = part.Touched:Wait()
 print("The part was touched by", touchedPart:GetFullName())
 ```
 
-The `Library.task.wait()` function returns the event's arguments. You can assign these arguments to variables where `Library.task.wait()` is called.
+The `Datatype.RBXScriptSignal.Wait()` function returns the event's arguments. You can assign these arguments to variables where `Datatype.RBXScriptSignal.Wait()` is called.
 
 ```lua
 -- Script in ServerScriptService
