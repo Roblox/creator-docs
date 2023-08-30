@@ -16,7 +16,7 @@ The condition for `if` statements, `while` loops, and `repeat` loops can be any 
 
 The basic `if` statement tests its condition. If the condition is true, then Luau executes the code between `then` and `end`.
 
-Ypu can use an `elseif` statements to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
+You can use an `elseif` statement to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
 
 In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from top to bottom, stops at the first `true` condition, and executes the code that follows it.
 
@@ -128,7 +128,7 @@ The optional increment defaults to `1`. It doesn't need to be a whole number.
 
 ```lua
 for counter = 1, 3 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -138,7 +138,7 @@ end
 ]]
 
 for counter = 1, 6, 2 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -148,7 +148,7 @@ end
 ]]
 
 for counter = 2, 0, -0.5 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -221,9 +221,9 @@ local secondsElapsed = 0
 local timeout = 5
 
 while true do
-	print("Seconds elapsed:", secondsElapsed)
 	task.wait(1)
 	secondsElapsed = secondsElapsed + 1
+	print("Seconds elapsed:", secondsElapsed)
 
 	if secondsElapsed == timeout then
 		break
@@ -233,7 +233,7 @@ end
 print("Five seconds elapsed. Time to move on!")
 
 --[[ Resulting output:
-0
+1
 2
 3
 4
