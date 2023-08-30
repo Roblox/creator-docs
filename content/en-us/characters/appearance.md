@@ -250,18 +250,17 @@ end
 Use the following sample code to apply a `Class.HumanoidDescription` to all current players in the game:
 
 ```lua
-for \_, player in pairs(game.Players:GetChildren()) do
+for \_, player in pairs(game.Players:GetPlayers()) do
 local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
-  -- Create a HumanoidDescription
-  local humanoidDescription = Instance.new("HumanoidDescription")
-  humanoidDescription.HatAccessory = "2551510151,2535600138"
-  humanoidDescription.BodyTypeScale = 0.1
-  humanoidDescription.ClimbAnimation = 619521311
-  humanoidDescription.Face = 86487700
-  humanoidDescription.GraphicTShirt = 1711661
-  humanoidDescription.HeadColor = Color3.new(0, 1, 0)
-
   if humanoid then
+    -- Create a HumanoidDescription
+    local humanoidDescription = Instance.new("HumanoidDescription")
+    humanoidDescription.HatAccessory = "2551510151,2535600138"
+    humanoidDescription.BodyTypeScale = 0.1
+    humanoidDescription.ClimbAnimation = 619521311
+    humanoidDescription.Face = 86487700
+    humanoidDescription.GraphicTShirt = 1711661
+    humanoidDescription.HeadColor = Color3.new(0, 1, 0)
     humanoid:ApplyDescription(humanoidDescription)
   end
 end
