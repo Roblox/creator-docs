@@ -57,7 +57,7 @@ To export your texture image files:
 
 When exporting a `.fbx` from Blender, it's important to use specific settings to ensure compatibility with Studio import.
 
-To export this your character:
+To export your character:
 
 1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
 2. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
@@ -71,5 +71,5 @@ To export this your character:
 <img src="../../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" />
 
 <Alert severity = 'success'>
-After exporting your .fbx file, see [Testing Characters](../../../art/avatar/testing/index.md) In Studio for steps on importing your character model into a test place and verifying your avatar and related components.
+After exporting your .fbx file, see [Testing Characters](../../../art/avatar/testing/index.md) for steps on importing your character model into a test place via Studio and verifying your avatar and related components.
 </Alert>
