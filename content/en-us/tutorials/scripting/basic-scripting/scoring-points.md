@@ -121,16 +121,16 @@ Test your experience and you should see the leaderboard appear in the top right 
 
 ## Counting Time
 
-Each user should earn a point for each second they are alive. A `while` loop and the `wait` function can be used to update the value of points every second.
+Each user should earn a point for each second they are alive. A `while` loop and the `Library.task.wait()` function can be used to update the value of points every second.
 
 1. At the end of the script, create a `while` loop with `true` as the condition.
-2. In the loop, `wait` for 1 second.
+2. In the loop, `task.wait` for 1 second.
 
 ```lua
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  wait(1)
+  task.wait(1)
 end
 ```
 
@@ -145,7 +145,7 @@ An array is a list of items stored in order. Each item can be accessed by its **
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for currentPlayer = 1, #playerList do
     -- Add your logic here for each player in the playerList
@@ -165,7 +165,7 @@ Objects stored in an array are accessed using **square brackets** - for instance
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for currentPlayer = 1, #playerList do
     local player = playerList[currentPlayer]
@@ -304,7 +304,7 @@ Finally, `IsAlive` should be **checked** before any point is awarded in the `whi
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
 
   for currentPlayer = 1, #playerList do
@@ -362,7 +362,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for i = 1, #playerList do
     local player = playerList[i]

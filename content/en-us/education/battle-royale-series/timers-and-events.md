@@ -47,12 +47,12 @@ Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `
    ```lua
    while true do
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
        print("Restarting intermission")
      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      print("Intermission over")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      -- Placeholder wait for the length of the game.
@@ -107,7 +107,7 @@ To add a timer into the game, use the premade module script in the steps below. 
          self._duration = duration
          self._startTime = tick()
          while self._running and tick() - self._startTime < duration do
-           wait()
+           task.wait()
          end
          local completed = self._running
          self._running = false
@@ -341,12 +341,12 @@ local matchEnd = events:WaitForChild("MatchEnd")
 
 while true do
 	repeat
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 		print("Restarting intermission")
 	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	print("Intermission over")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 	-- Placeholder wait for the length of the game.
