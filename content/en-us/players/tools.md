@@ -173,7 +173,7 @@ The following example shows steps for adding a `Class.Script` on the server that
 
    local tool = script.Parent
    local function onActivate()
-    if Lighting.ClockTime \>= 8 and Lighting.ClockTime < 16 then
+    if Lighting.ClockTime >= 8 and Lighting.ClockTime < 16 then
       Lighting.ClockTime = 20
     else
       Lighting.ClockTime = 8
