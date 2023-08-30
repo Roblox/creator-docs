@@ -176,12 +176,12 @@ To start, the script will need to make the bridge solid, or collidable and then 
    end
    ```
 
-4. Use a wait function to make the for loop run only once a second.
+4. Use a task.wait function to make the for loop run only once a second.
 
    ```lua
    for count = timerDuration, 0, -1 do
       timerText.Text = count
-      wait(1)
+      task.wait(1)
    end
    ```
 
@@ -241,7 +241,7 @@ This is because the for loop is being called each time you touch the button and 
       -- For loop that counts down from timerDuration
       for count = timerDuration, 0, -1 do
          timerText.Text = count
-         wait(1)
+         task.wait(1)
       end
 
       -- Make the bridge not walkable
@@ -288,7 +288,7 @@ local function startTimer()
 	-- For loop that counts down from timerDuration
 	for count = timerDuration, 0, -1 do
 		timerText.Text = count
-		wait(1)
+		task.wait(1)
 	end
 
 	-- Make the bridge not walkable

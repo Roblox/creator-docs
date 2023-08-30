@@ -132,13 +132,13 @@ page3.Parent = screenGui
 
 while true do
     pageLayout:Next()
-    wait(2)
+    task.wait(2)
     pageLayout:Next()
-    wait(2)
+    task.wait(2)
     pageLayout:Previous()
-    wait(2)
+    task.wait(2)
     pageLayout:Previous()
-    wait(2)
+    task.wait(2)
 end
 ```
 

@@ -194,12 +194,12 @@ To loop through colors, the script will use a while =loop that changes the part'
    ```lua
    -- Loops through 3 colors, waiting between each color
    while true do
-   	pointPart.Color = blue
-   	wait(3)
-   	pointPart.Color = green
-   	wait(2)
-   	pointPart.Color = red
-   	wait(1)
+     pointPart.Color = blue
+     task.wait(3)
+     pointPart.Color = green
+     task.wait(2)
+     pointPart.Color = red
+     task.wait(1)
    end
    ```
 
@@ -350,7 +350,7 @@ The particle effect will be the same color as the part when touched. Since the c
    particle.Parent = playerCharacter:WaitForChild("Head")
    ```
 
-4. Use `wait()` for a quick second, then destroy the particles.
+4. Use `task.wait()` for a quick second, then destroy the particles.
 
    ```lua
    local particle = Instance.new("ParticleEmitter")
@@ -359,7 +359,7 @@ The particle effect will be the same color as the part when touched. Since the c
    local playerCharacter = player.Character
    particle.Parent = playerCharacter:WaitForChild("Head")
 
-   wait(1)
+   task.wait(1)
    particle:Destroy()
    ```
 
@@ -419,7 +419,7 @@ local function givePoints(player)
 	local particle = Instance.new("ParticleEmitter")
 	particle.Color = ColorSequence.new(currentColor)
 	particle.Parent = playerCharacter:WaitForChild("Head")
-	wait(1)
+	task.wait(1)
 	particle:Destroy()
 end
 
@@ -436,10 +436,10 @@ pointPart.Touched:Connect(partTouched)
 -- Changes the color of the part based on variables. Needs to be at bottom of script.
 while true do
 	pointPart.Color = blue
-	wait(4)
+	task.wait(4)
 	pointPart.Color = green
-	wait(3)
+	task.wait(3)
 	pointPart.Color = red
-	wait(2)
+	task.wait(2)
 end
 ```
