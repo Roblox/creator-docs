@@ -97,7 +97,7 @@ local function onTouchEnded(otherPart)
 	print(model.Name, "un-intersected from", otherPart.Name, "| Model parts touching:", numTouchingParts)
 end
 
-for _, child in pairs(model:GetChildren()) do
+for _, child in ipairs(model:GetChildren()) do
 	if child:IsA("BasePart") then
 		child.Touched:Connect(onTouched)
 		child.TouchEnded:Connect(onTouchEnded)
@@ -309,7 +309,7 @@ end
 
 local function onCharacterAdded(character)
 	-- Process existing and new descendants for physics setup
-	for _, descendant in pairs(character:GetDescendants()) do
+	for _, descendant in ipairs(character:GetDescendants()) do
 		onDescendantAdded(descendant)
 	end
 	character.DescendantAdded:Connect(onDescendantAdded)

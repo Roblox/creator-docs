@@ -178,12 +178,12 @@ The skinned character's mesh positions aren't updated when the Creature animates
    local vfxTable = {} -- where we will store all the parts and offsets
 
    -- Assign a table to each model that will hold all vfx parts and offset
-   for _, model in pairs(vfxModels) do
+   for _, model in ipairs(vfxModels) do
     vfxTable[model] = {}
     local vfxParts = model:FindFirstChild("VFX"):GetChildren() -- Find theVFX folder
 
     -- Find the bone via attribute and calculate the offset for each part.
-    for _,part in pairs(vfxParts) do
+    for _,part in ipairs(vfxParts) do
       local name = part:GetAttribute("AttachedBoneName")
       local bone = model:FindFirstChild(name, true)
       if (bone) then

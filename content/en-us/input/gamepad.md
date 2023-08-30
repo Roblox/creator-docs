@@ -69,7 +69,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local availableInputs = UserInputService:GetSupportedGamepadKeyCodes(Enum.UserInputType.Gamepad2)
 print("This controller supports the following controls:")
-for _, control in pairs(availableInputs) do
+for _, control in ipairs(availableInputs) do
 	print(control)
 end
 ```
@@ -144,7 +144,7 @@ local leftFoot = character:WaitForChild("LeftFoot")
 -- When leftFoot comes into contact with something, check the gamepad input state
 leftFoot.Touched:Connect(function(hit)
 	local state = UserInputService:GetGamepadState(Enum.UserInputType.Gamepad1)
-	for _, input in pairs(state) do
+	for _, input in ipairs(state) do
 
 		-- If the ButtonR2 is currently held then print out a message
 		if input.KeyCode == Enum.KeyCode.ButtonR2 and input.UserInputState == Enum.UserInputState.Begin then

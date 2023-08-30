@@ -250,7 +250,7 @@ end
 Use the following sample code to apply a `Class.HumanoidDescription` to all current players in the game:
 
 ```lua
-for \_, player in pairs(game.Players:GetPlayers()) do
+for _, player in ipairs(game.Players:GetPlayers()) do
   local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
   if humanoid then
     -- Create a HumanoidDescription

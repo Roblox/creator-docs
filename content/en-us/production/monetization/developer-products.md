@@ -188,7 +188,7 @@ local success, developerProducts = pcall(function()
 end)
 
 if developerProducts then
-	for _, developerProduct in pairs(developerProducts) do
+	for _, developerProduct in ipairs(developerProducts) do
 		for field, value in pairs(developerProduct) do
 			print(field .. ": " .. value)
 		end

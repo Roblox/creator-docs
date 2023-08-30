@@ -244,11 +244,11 @@ When players move into the transition state, remove their weapons.
    return PlayerManager
    ```
 
-3. In that function, use a for loop with `pairs()` to go through the active players table. In the loop, call `removePlayerWeapon()` and pass in the player found.
+3. In that function, use a for loop with `ipairs()` to go through the active players table. In the loop, call `removePlayerWeapon()` and pass in the player found.
 
    ```lua
    function PlayerManager.removeAllWeapons()
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in ipairs(activePlayers) do
        removePlayerWeapon(whichPlayer)
      end
    end
@@ -318,12 +318,12 @@ First, start a function to send players back to the lobby.
 1. In PlayerManager:
 
    - Create a module function named `resetPlayers()`.
-   - Add a for loop with `pairs()` to iterate through activePlayers.
+   - Add a for loop with `ipairs()` to iterate through activePlayers.
    - In the loop, call `respawnPlayerInLobby()` and pass in the player as the parameter.
 
    ```lua
    function PlayerManager.resetPlayers()
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in ipairs(activePlayers) do
        respawnPlayerInLobby(whichPlayer)
      end
    end
@@ -559,7 +559,7 @@ end
 
 local function removeActivePlayer(player)
 	print("removing player")
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in ipairs(activePlayers) do
 		if whichPlayer == player then
 			table.remove(activePlayers, playerKey)
 			playersLeft.Value = #activePlayers
@@ -616,7 +616,7 @@ end
 function PlayerManager.sendPlayersToMatch()
 	local availableSpawnPoints = spawnLocations:GetChildren()
 
-	for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+	for playerKey, whichPlayer in ipairs(Players:GetPlayers()) do
 		table.insert(activePlayers,whichPlayer)
 
 		-- Gets a spawn location and then removes it from the table so the next player gets the next spawn
@@ -638,13 +638,13 @@ function PlayerManager.getWinnerName()
 end
 
 function PlayerManager.removeAllWeapons()
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in ipairs(activePlayers) do
 		removePlayerWeapon(whichPlayer)
 	end
 end
 
 function PlayerManager.resetPlayers()
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in ipairs(activePlayers) do
 		respawnPlayerInLobby(whichPlayer)
 	end
 

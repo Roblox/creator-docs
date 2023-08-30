@@ -127,7 +127,7 @@ testButton.Parent = testWidget
 
 local function syncGuiColors(objects)
 	local function setColors()
-		for _, guiObject in pairs(objects) do
+		for _, guiObject in ipairs(objects) do
 			-- Sync background color
 			guiObject.BackgroundColor3 = settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainBackground)
 			-- Sync text color

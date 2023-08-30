@@ -106,7 +106,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	local animator = humanoid:WaitForChild("Animator")
 
    	-- Stop all animation tracks
-   	for _, playingTrack in pairs(animator:GetPlayingAnimationTracks()) do
+   	for _, playingTrack in ipairs(animator:GetPlayingAnimationTracks()) do
    		playingTrack:Stop(0)
    	end
 
@@ -140,7 +140,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	local animator = humanoid:WaitForChild("Animator")
 
    	-- Stop all animation tracks
-   	for _, playingTrack in pairs(animator:GetPlayingAnimationTracks()) do
+   	for _, playingTrack in ipairs(animator:GetPlayingAnimationTracks()) do
    		playingTrack:Stop(0)
    	end
 
