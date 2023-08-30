@@ -127,3 +127,80 @@ type Car = {
 }
 ```
 
+## Variadics
+
+Lets assume a function that creates a table from a set of values.
+
+```lua
+local function addLotsOfNumbers(...)
+	local sum = 0
+
+	for _, v in {...} does
+		sum += v
+	end
+
+	return sum
+end
+```
+
+As expected, this can take any value and wont complain if you give it an invalid type such as a `string`.
+
+```lua
+print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
+print(addLotsOfNumbers(1, 2, "3", 4, 5)) -- attempt to add string to number
+```
+
+Instead, we can assign a type to the `...` just like how you'd assign any other type
+
+```lua
+local function addLotsOfNumbers(...: number)
+```
+
+And now, the second line raises a type error
+
+```lua
+print(addLotsOfNumbers(1, 2, 3, 4, 5))
+print(addLotsOfNumbers(1, 2, "3", 4, 5)) -- TypeError: Type `string` could not be converted into `number`.
+```
+
+However, with a type definition, the following statement does not work
+
+```lua
+type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
+```
+
+Instead, use the syntax `...type` to define the variadic type
+
+```lua
+type addLotsOfNumbers = (...number) -> number
+```
+
+## Generics
+
+TODO (help wanted)
+
+### Type Packs
+
+TODO
+
+## Type Exports
+
+Types can be exported through [ModuleScript]() using the `export` keyword infront of a type definition
+
+```lua
+export type Cat = {
+	Name: string,
+	Meow: (Cat) -> ()
+}
+```
+
+```lua
+local Cat = require(script.Cat)
+
+local newCat: Cat.Cat = {
+	Name = "metatablecat",
+	Meow = function(self)
+		print(`{self.Name} said meow`)
+	end
+}
+```
