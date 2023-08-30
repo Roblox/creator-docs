@@ -172,7 +172,7 @@ a part or MeshPart.
   and props. They also support `Class.SurfaceAppearance`, which permits advanced
   graphic options such as normal maps.
 
-In the following image, parts were used to construct the walls, floors,
+In the following image, parts were used to construct the walls, floors, and
 railings. All other objects like candles and bookshelves are `Class.MeshPart`
 objects. For more information, see [Meshes](../parts/meshes.md) and [External
 Modeling](/art/modeling).
@@ -206,7 +206,7 @@ building:
   include a tree that's duplicated many times in an environment. If a developer
   needs to make a change, such as swap textures for the tree, it can be updated
   once in the package instead of for each individual instance.
-- Package make **grayboxing** quicker. A package can start with graybox assets,
+- Packages make **grayboxing** quicker. A package can start with graybox assets,
   and eventually be replaced with final art assets. When assets are replaced,
   they retain all original positions and orientations.
 
