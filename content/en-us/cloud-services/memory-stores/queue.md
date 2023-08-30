@@ -87,7 +87,7 @@ while true do
 		return queue:ReadAsync(1, false, 30)
 	end)
 	if not readSuccess
-		wait(1)
+		task.wait(1)
 	elseif #items > 0 then
 		print(items, id)
 		local removeSuccess, removeError = pcall(function()

@@ -147,7 +147,7 @@ You can add custom character models, clothing accessories, and animations that a
 
 To add custom assets:
 
-1. Click the ⊕ icon next to the catalog search. A prompt displays to choose a supported object.
+1. Click the ⊕ icon next to the catalog search. A prompt appears, allowing you to choose a supported object.
 
    <img src="../../assets/accessories/accessory-fitting-tool/Custom-Asset-Icon.png" />
 
@@ -195,12 +195,12 @@ When editing clothing items, the following tools populate in the viewport:
 
 #### Cage Editing
 
-When the Cage Editing interface is enabled, additional tools display in the viewport. The viewport also displays the vertices of the selected cage over the mannequin, allowing you make positional edits to the cage and change how a clothing item can fit on a body.
+When the Cage Editing interface is enabled, additional tools display in the viewport. The viewport also displays the vertices of the selected cage over the mannequin, allowing you to make positional edits to the cage and change how a clothing item can fit on a body.
 
    <img src="../../assets/accessories/accessory-fitting-tool/Cage-Editing-Example.png" />
 
 <Alert severity = 'warning'>
-You can use these Cage Editing tools minor to moderate cage edits. If your asset requires major fit or sculpting changes, edit the cage meshes directly in a third-party modeling software, such as Blender or Maya, and import the updated model into Studio.
+You can use these Cage Editing tools for minor to moderate cage edits. If your asset requires major fit or sculpting changes, edit the cage meshes directly in a third-party modeling software, such as Blender or Maya, and import the updated model into Studio.
 </Alert>
 
 Use the following cage editing tools to help visualize and edit any cage vertices:

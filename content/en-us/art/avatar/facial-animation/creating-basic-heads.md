@@ -10,7 +10,7 @@ description: The process of creating a basic animatable head in Blender.
 You can create or modify an existing model to support animated heads in a third-party modeling software, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). When creating a head, your character model must meet the following requirements:
 
 - The model follows standard [modeling requirements](#modeling-requirements), and includes head geometry, such as eyes, a mouth, and teeth.
-- The model's head must include a [rig](#rigging), or internal bone structure. These bones drive the various deformation of vertices to create facial expressions. You can create a [control system](#adding-controls) to simplify the posing process.
+- The model's head must include a [rig](#rigging), or internal bone structure. These bones drive the various deformations of vertices to create facial expressions. You can create a [control system](#adding-controls) to simplify the posing process.
 - The model has facial poses [saved to the animation timeline](#posing) and [mapped to the head mesh](#mapping). Typical animatable heads include [50 standard base poses](../../../art/avatar/facial-animation/facs-poses-reference.md) that allow for a diverse range of expressions.
 
 To meet these requirements, you can apply the steps in this guide when designing and posing your own head. This guide covers the basic processes of adding facial bones, posing, and mapping 5 basic FACS poses in Blender on a simplified reference character (Cubie), then exporting the model.
@@ -53,7 +53,7 @@ The reference character model provided is meant for educational purposes and doe
     </tr>
     <tr>
       <td><a href="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie_Head_ALB.png" download>Cubie-Texture_ALB.png</a></td>
-      <td>A Cubie texture image file. After you import the Cubie model into Studio, you can add this file as the Head Part's <b>TextureID</b>.</td>
+      <td>A Cubie texture image file. After you import the Cubie model into Studio, you can add this file as the head part's <b>TextureID</b>.</td>
     </tr>
     <tr>
       <td>[Cubie-Complete.ma](../../../assets/avatar/dynamic-heads/creating-dynamic-heads/reference-files/Cubie-Complete.ma)</td>
@@ -80,7 +80,7 @@ Your character must have an internal bone structure to drive the vertices of the
 
 ### RootFaceJoint
 
-The **RootFaceJoint** is a bone that is parented under the standard R15 Head bone. This RootFaceJoint bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the Head bone and then map the bone name as a property in the Head_Geo mesh.
+The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This RootFaceJoint bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh.
 
 To add a RootFaceJoint bone:
 
@@ -115,9 +115,9 @@ The following instructions describe a basic process of [adding face bones](#addi
 
 #### Adding Face Bones
 
-The specific head bones your character requires depend on the poses you intend your character to use. The following examples cover the process for adding 1 bone for each eye and 4 bones for the eyelids to allow for blinking, winking, and gaze direction.
+The specific head bones your character requires depend on the poses you intend for it to use. The following examples cover the process for adding 1 bone for each eye and 4 bones for the eyelids to allow for blinking, winking, and gaze direction.
 
-When creating a face rig, use less than 50 face bones when possible and keep the bones organized and specific for their associated facial features. In general, high numbers of vertices and joints can impact your experience's performance.
+When creating a face rig, use less than 50 face bones where possible and keep the bones organized and specific for their associated facial features. In general, high numbers of vertices and joints can impact your experience's performance.
 
 ##### Eyes
 
@@ -264,7 +264,7 @@ To start creating face bone controls:
       </video>
 5. Switch to **Object Mode** and select the original **Joints armature** object.
 6. Switch to **Pose Mode**.
-7. Click on the original joint bones, such as **LeftEye**, then navigate to the **Bone Constraints** property panel.
+7. Click on the original joint bones, such as **LeftEye**, then navigate to the **Bone Constraints Property Panel**.
 8. Add **Copy Location** and **Copy Rotation**, then set each original bone's constraint to target their corresponding Controller Bone, such as **LeftEye_Con**.
 9. In the **Copy Rotation** constraint, set the following properties:
    1. In **Axis**, disable the **X**, **Y**, and **Z**.
@@ -306,7 +306,7 @@ To create custom bone shapes for easier control bone access:
 
 **Posing** is the process of manipulating the bones of your head mesh into a specific position per animation frame. After the model's head has been rigged, you can begin the process of saving poses to the timeline. This data enables Studio to access each facial movement and animate or blend facial poses to create dynamic expressions.
 
-When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../art/avatar/facial-animation/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with a [animatable head](../../../art/avatar/facial-animation/using-heads-in-studio.md) with a `Class.FaceControls` instance.
+When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../art/avatar/facial-animation/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with an [animatable head](../../../art/avatar/facial-animation/using-heads-in-studio.md) with a `Class.FaceControls` instance.
 
 Each frame within your modeling software's animation timeline can contain one unique FACS pose, so when you want to create multiple FACS poses, you must save each FACS pose to a different frame. You must also include a frame with your character having a neutral face with the face controllers and bones set to their default values. This ensures that Studio can calculate the bone position differences between your character's neutral expression and each FACS pose. For this reason, set Frame 0 as your character's neutral expression, and save FACS poses starting at Frame 1.
 
@@ -315,7 +315,7 @@ The following image is an example of Blender's animation timeline with 5 frames.
 
 There are [50 base poses](./facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
 
-You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Nevertheless, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
+You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Therefore, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
 
 The following steps outline the process of posing 5 poses with the facial bones created in our reference, but you can apply these steps for any additional poses for a more expressive head. To pose your face bones in Blender:
 
@@ -330,7 +330,7 @@ The following steps outline the process of posing 5 poses with the facial bones 
    2. If you are posing `EyesLookLeft`, select both eye controller bones and drag the eyes to the character's left.
    3. If you are posing `EyesLookRight`, select both eye controller bones and drag the eyes to the character's right.
    4. If you are posing `LeftEyeClosed`, select both eye controller bones and drag the left eyelids down to meet the bottom eyelids.
-   5. If you are posing `RightEyeClosed`, select both eye controller bones and drag the left eyelids down to meet the bottom eyelids.
+   5. If you are posing `RightEyeClosed`, select both eye controller bones and drag the right eyelids down to meet the bottom eyelids.
 3. In the **Viewport**, press <kbd>A</kbd> to select all bones.
 4. Right-click and select **Insert Keyframe** > **Location and Rotation**. This ensures that each frame contains the positional and rotational information for all bones.
 
@@ -362,7 +362,7 @@ For example, both `LeftEyeClosed` and `LeftCheekRaiser` control movement around 
   </figure>
 </GridContainer>
 
-A **combination pose**, or **corrective**, is the combination of 2-3 FACS poses that control the same facial features in a single animation frame with a **corrective difference from 100% of their default values**. By defining and mapping a combination pose to your head, you can correct how you want the two or more FACS poses to combine. For example, if you add a corrective for each of the previous use cases, the lower eyelid and upper eyelid contact make contact with each other without colliding:
+A **combination pose**, or **corrective**, is the combination of 2-3 FACS poses that control the same facial features in a single animation frame with a **corrective difference from 100% of their default values**. By defining and mapping a combination pose to your head, you can correct how you want the two or more FACS poses to combine. For example, if you add a corrective for each of the previous use cases, the lower and upper eyelids make contact with each other without colliding:
 
 <GridContainer numColumns="3">
   <figure>
@@ -394,7 +394,7 @@ Aside from mapping each pose to its proper pose name, you also need to map the [
 </Alert>
 
 <Alert severity="error">
-   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the head will fail the [import process](../../../art/avatar/facial-animation/using-heads-in-studio.md#importing-heads).
+   If you leave any empty strings, or try to import the head into Studio with multiple frames per FACS pose name, the [import process](../../../art/avatar/facial-animation/using-heads-in-studio.md#importing-heads) will fail.
 </Alert>
 
 To map your saved poses and the RootFaceJoint:
@@ -441,7 +441,7 @@ The export settings for animatable heads differ slightly from [standard third-pa
 
 1. In the topbar, click **File**. A pop-up menu displays.
 2. Select **Export**, then **FBX (.fbx)**. The **Blender File View** window displays.
-3. Expand **Include** and enable **Limit To > Active Active Collection**. Note that this step is optional if you do not have additional collections in your Blender project.
+3. Expand **Include** and enable **Limit To > Active Collection**. Note that this step is optional if you do not have additional collections in your Blender project.
 4. In the **Include** section, enable **Custom Properties**.
 5. Expand the **Armature** section and uncheck **Add Leaf Bones**.
 6. Enable **Bake Animation**.

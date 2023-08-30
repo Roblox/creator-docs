@@ -263,7 +263,7 @@ The item will then go back to normal after a short time. This way, players only 
    end
    ```
 
-3. Type `wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your experience.
+3. Type `task.wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your experience.
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
@@ -271,14 +271,14 @@ The item will then go back to normal after a short time. This way, players only 
      canHarvest.Value = false
      partTouched.Transparency = 1
      partTouched.CanCollide = false
-     wait(5)
+     task.wait(5)
    end
    ```
 
 4. After the wait, do the opposite of previous code, by setting the CanHarvest to true, and resetting the Transparency and CanCollide to their original values.
 
    ```lua
-     wait(5)
+     task.wait(5)
      canHarvest.Value = true
      partTouched.Transparency = 0
      partTouched.CanCollide = true
@@ -287,7 +287,7 @@ The item will then go back to normal after a short time. This way, players only 
 
 5. Play the project and check:
 
-   - The player only gets 1 item for harvesting a item.
+   - The player only gets 1 item for harvesting an item.
    - The item disappears and then reappears after five seconds.
 
    <video controls src="../../assets/education/adventure-game-series/adventure-harvestItemFull.mp4" width="100%"></video>
@@ -323,7 +323,7 @@ local function onTouch(partTouched)
 			partTouched.Transparency = 1
 			partTouched.CanCollide = false
 
-			wait(5)
+			task.wait(5)
 			-- Make the harvested item reappear and usable again
 			canHarvest.Value = true
 			partTouched.Transparency = 0
