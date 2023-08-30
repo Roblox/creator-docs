@@ -7,7 +7,7 @@ In addition to building and creating, playing is a proven way to learn and impro
 
 ## Creating Private Servers
 
-To see if a experience offers private servers, look for the Private Servers section beneath the game's description. If private servers are offered, there will be a button saying "Create Private Server"
+To see if an experience offers private servers, look for the Private Servers section beneath the game's description. If private servers are offered, there will be a button saying "Create Private Server"
 
 <img src="../../assets/education/legacy/VIPGamePage.png" />
 
@@ -42,7 +42,7 @@ Below are some ways our educators have used private servers in the classroom.
 - Create a private server for students to explore a historical site.
 - Allow students to connect virtually when they may not have the opportunity to do otherwise.
 - Graduation and birthday parties.
-- If students have created a experience, allow them to create a private
+- If students have created an experience, allow them to create a private
   server so only members of the class can play.
 
 ## Tips from an Educator
