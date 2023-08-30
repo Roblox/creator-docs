@@ -3,7 +3,7 @@ title: Account Verification
 description: Explains how to verify your Roblox account.
 ---
 
-**Account Verification** is the process of connecting your identity on Roblox to your real world identity, either through a government ID or through your phone number. When you verify your acccount, you can publish more of each asset type and maximize their discoverability within the [Creator Marketplace](../../production/publishing/creator-marketplace.md), monetize your [plugins](../../studio/plugins.md), and access age-restricted Studio features, such as [chat with spatial voice](../../chat/spatial-voice.md).
+**Account Verification** is the process of connecting your identity on Roblox to your real world identity, either through a government ID or through your phone number. When you verify your account, you can publish more of each asset type and maximize their discoverability within the [Creator Marketplace](../../production/publishing/creator-marketplace.md), monetize your [plugins](../../studio/plugins.md), and access age-restricted Studio features, such as [chat with spatial voice](../../chat/spatial-voice.md).
 
 <img src="../../assets/publishing/account-verification/Identity-Verification-Overview.jpg" width="100%" />
 
