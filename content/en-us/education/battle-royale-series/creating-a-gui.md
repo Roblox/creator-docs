@@ -186,7 +186,7 @@ With the Display Manager set up, it can be used in other scripts to update the G
       repeat
          print("Starting intermission")
          wait(gameSettings.intermissionDuration)
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
       wait(gameSettings.transitionTime)
 
@@ -204,7 +204,7 @@ With the Display Manager set up, it can be used in other scripts to update the G
 
       repeat
          wait(gameSettings.intermissionDuration)
-      until Players.NumPlayers >= gameSettings.minimumPlayers
+      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
       displayManager.updateStatus("Get ready!")
       wait(gameSettings.transitionTime)
@@ -422,7 +422,7 @@ while true do
 
 	repeat
 		wait(gameSettings.intermissionDuration)
-	until Players.NumPlayers >= gameSettings.minimumPlayers
+	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
 	wait(gameSettings.transitionTime)

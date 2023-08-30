@@ -26,9 +26,7 @@ experience on any devices you choose. An experience can be published **privately
 ## Monetization
 
 Users can spend Robux in experiences for items such as new vehicles or
-power-ups, and creators can also earn Robux from [engagement-based-payouts](../production/monetization/engagement-based-payouts.md), [private
-servers](/production/monetization/private-servers) and [paid
-access](/production/monetization/paid-access). There are two main methods of
+power-ups, and creators can also earn Robux from [engagement-based payouts](../production/monetization/engagement-based-payouts.md), [private servers](/production/monetization/private-servers) and [paid access](/production/monetization/paid-access). There are two main methods of
 [monetizing](../production/monetization/index.md) within an experience:
 
 - [Developer Products](../production/monetization/developer-products.md) - users can purchase
@@ -44,7 +42,7 @@ world currency using the **Developer Exchange**.
 
 Roblox players come from around the world and speak a variety of languages. It's
 important to [localize](../production/localization/index.md) the experience so everyone can
-understand and enjoy the experience.
+understand and enjoy it.
 
 Roblox automatically captures text from an experience and stores it in a table
 for translation in the experience's **Localization** page, where all localization settings can be configured.

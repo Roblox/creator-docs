@@ -174,7 +174,7 @@ Developers earn extra Robux for simply building an engaging experience. Roblox c
 
 ## Creating, Selling, and Reselling Avatar Items
 
-In 2022 alone, 1.8 billion total avatar items were sold on the platform making virtual items a critical part of our economy and how creators can earn.
+In 2022 alone, 1.8 billion total avatar items were sold on the platform, making virtual items a critical part of our economy and how creators can earn.
 
 Creators can [create](../art/marketplace/publishing-to-marketplace.md) and sell accessories, clothes, bodies, and heads for avatars in the [Marketplace][link_marketplace] or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
 
