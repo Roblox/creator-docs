@@ -156,7 +156,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 You can create functions without names, known as **anonymous functions**, to use as [callbacks](#callbacks) and [event handlers](#event-handlers). Like named functions, anonymous functions need to start and end with the `function` and `end` keywords, but you don't need the `local` keyword to indicate local scope because they always have local scope.
 
-In the following example, the callback for the `task.delay()` function and the event handler for the `Class.Players.PlayerAdded` event are both anonymous functions.
+In the following example, the callback for the `Library.task.delay()` function and the event handler for the `Class.Players.PlayerAdded` event are both anonymous functions.
 
 ```lua
 -- Anonymous function in a callback to task.delay()
