@@ -47,7 +47,7 @@ As the flowchart shows, the in-experience text chat system processes a chat mess
 1. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other users based on the permissions you set and Roblox community filtering requirements.
 1. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other users, the server applies any filters and fires `Class.TextChannel.OnIncomingMessage` twice:
    1. The first time on the sending client to signal that the server is processing the message through the `Class.TextChatService.MessageReceived` event. This also replaces the local message on the sending client with the incoming message to the display on receiving clients. The message can be identical if the original message doesn't require filtering.
-	1. The second time is on the receiving client to trigger the `Class.TextChatService.MessageReceived` event to display the message to other users.
+   1. The second time is on the receiving client to trigger the `Class.TextChatService.MessageReceived` event to display the message to other users.
 
 There are several areas of the chat system workflow that you can extend and customize the behavior, but the steps of how the system operates remain the same.
 
