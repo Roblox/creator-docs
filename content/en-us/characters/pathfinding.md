@@ -543,7 +543,7 @@ To create a `Class.PathfindingLink` using this example:
    					-- Increase waypoint index and move to next waypoint
    					nextWaypointIndex += 1
 
-   					-- Use boat if waypoint label is the modifier ID "UseBoat"; otherwise move to next waypoint
+   					-- Use boat if waypoint label is "UseBoat"; otherwise move to next waypoint
    					if waypoints[nextWaypointIndex].Label == "UseBoat" then
    						useBoat()
    					else
