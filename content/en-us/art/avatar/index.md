@@ -17,7 +17,7 @@ Custom avatars are first created in 3D modeling programs, such as [Blender](http
 
 ## Components of an Avatar
 
-All avatar character models are made up of several fundamental components that provide users the functionality and flexibility to interact with their world. Many of these components are never made visible to the user, but these components enable the many powerful avatar features that enhance social and environmental interactions. When creating avatar characters, all of these components are typically created first in your modeling software and then converted to their appropriate Roblox Studio instance on import.
+All avatar character models are made up of several fundamental components that provide users the functionality and flexibility to interact with their world. Many of these components are never made visible to the user, but they enable powerful avatar features that enhance social and environmental interactions. When creating avatar characters, all of these components are typically created first in your modeling software and then converted to their appropriate Roblox Studio instance on import.
 
 Each avatar character is made up of the following rendered and non-rendered components:
 
@@ -110,20 +110,20 @@ If you are caging your own non-template character model, it's important to use o
   <figure><img src="../../assets/art/avatar/Attachments-Data-Model.png" width="70%"/><figcaption>Each avatar character must include their associated 19 attachment points</figcaption></figure>
 </GridContainer>
 
-Attachment points define where rigid 3D accessories and equipables attach to the character's body. These are not rendered to the end-user but are represented as sphere geometries in 3D modeling softwares and, when imported into Studio, these geometries are created as `Class.Attachment` instances using the standardized names.
+Attachment points define where rigid 3D accessories and equipables attach to the character's body. These are not rendered to the end-user but are represented as sphere geometries in 3D modeling software and, when imported into Studio, these geometries are created as `Class.Attachment` instances using the standardized names.
 
-When wearing layered clothing, the clothing isn't attached directly to the attachment, but clothing does reference the associated attachment point during ragdoll and dismemberment animations.
+When wearing layered clothing, the clothing isn't attached directly to the attachment, but it does reference the associated attachment point during ragdoll and dismemberment animations.
 
 ## Creation Process
 
 When designing an avatar model, you must export all of the avatar components in a single `.fbx` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
 
-In general, the creation process follow these typical workflows:
+In general, the creation process follows these typical workflows:
 
 <GridContainer numColumns="2">
   <figure><figcaption><center>Basic Creation with Templates</center></figcaption><img src="../../assets/art/avatar/Workflow-Templates.png"/><figcaption>Customize a Roblox template character that already includes all the necessary components.  See [Creating with Templates](../../art/avatar/creating/index.md) for guides and instructions.</figcaption></figure>
 
-  <figure><figcaption><center>Advance Creation from Scratch</center></figcaption><img src="../../assets/art/avatar/Workflow-Scratch.png"/><figcaption>Create characters from scratch, allowing full customization of the avatar character's components.</figcaption></figure>
+  <figure><figcaption><center>Advanced Creation from Scratch</center></figcaption><img src="../../assets/art/avatar/Workflow-Scratch.png"/><figcaption>Create characters from scratch, allowing full customization of the avatar character's components.</figcaption></figure>
 </GridContainer>
 
 <Alert severity = 'warning'>

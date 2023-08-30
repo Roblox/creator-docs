@@ -57,13 +57,15 @@ Whenever a player is added to the experience, they'll need to be added to the le
 5. After the end of the function, connect `OnPlayerJoin` to the `PlayerAdded` event. Whenever a player joins the experience, each player will be provided the leaderboard.
 
    ```lua
-       local function onPlayerJoin(player)
-       local leaderstats = Instance.new("Folder")
-       leaderstats.Name = "leaderstats"
-       leaderstats.Parent = player
-       end
+   local Players = game:GetService("Players")
 
-       game.Players.PlayerAdded:Connect(onPlayerJoin)
+   local function onPlayerJoin(player)
+      local leaderstats = Instance.new("Folder")
+      leaderstats.Name = "leaderstats"
+      leaderstats.Parent = player
+   end
+
+   Players.PlayerAdded:Connect(onPlayerJoin)
    ```
 
     <Alert severity="warning">
@@ -191,6 +193,8 @@ If the leaderboard doesn't appear, try checking the following below.
 A finished version of the script can be referenced below.
 
 ```lua
+ local Players = game:GetService("Players")
+
  -- Creates a leaderboard that shows player variables
  local function onPlayerJoin(player)
    local leaderstats = Instance.new("Folder")
@@ -215,5 +219,5 @@ A finished version of the script can be referenced below.
  end
 
  -- Run onPlayerJoin when the PlayerAdded event fires
- game.Players.PlayerAdded:Connect(onPlayerJoin)
+ Players.PlayerAdded:Connect(onPlayerJoin)
 ```

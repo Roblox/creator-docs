@@ -28,7 +28,7 @@ AvatarEditorService:PromptAllowInventoryReadAccess()
 local result = AvatarEditorService.PromptAllowInventoryReadAccessCompleted:Wait()
 
 if result == Enum.AvatarPromptResult.Success then
--- Access granted!
+  -- Access granted!
 end
 ```
 
@@ -52,18 +52,18 @@ AvatarEditorService:PromptAllowInventoryReadAccess()
 local result = AvatarEditorService.PromptAllowInventoryReadAccessCompleted:Wait()
 
 if result == Enum.AvatarPromptResult.Success then
--- Access granted!
-local assetTypes = {
-Enum.AvatarAssetType.BackAccessory,
-Enum.AvatarAssetType.ShoulderAccessory,
-Enum.AvatarAssetType.WaistAccessory
-}
-local pagesObject = AvatarEditorService:GetInventory(assetTypes)
-local currentPage = pagesObject:GetCurrentPage()
-for i = 1, #currentPage do
-local item = currentPage[i]
-print(item)
-end
+  -- Access granted!
+  local assetTypes = {
+    Enum.AvatarAssetType.BackAccessory,
+    Enum.AvatarAssetType.ShoulderAccessory,
+    Enum.AvatarAssetType.WaistAccessory
+  }
+  local pagesObject = AvatarEditorService:GetInventory(assetTypes)
+  local currentPage = pagesObject:GetCurrentPage()
+  for i = 1, #currentPage do
+    local item = currentPage[i]
+    print(item)
+  end
 end
 ```
 
@@ -133,8 +133,8 @@ local AvatarEditorService = game:GetService("AvatarEditorService")
 
 local catalogSearchParams = CatalogSearchParams.new()
 local assetTypes = {
-Enum.AvatarAssetType.BackAccessory,
-Enum.AvatarAssetType.ShoulderAccessory
+  Enum.AvatarAssetType.BackAccessory,
+  Enum.AvatarAssetType.ShoulderAccessory
 }
 catalogSearchParams.AssetTypes = assetTypes
 
@@ -143,8 +143,8 @@ local pagesObject =
 AvatarEditorService:SearchCatalog(catalogSearchParams)
 local currentPage = pagesObject:GetCurrentPage()
 for i = 1, #currentPage do
-local item = currentPage[i]
-print(item)
+  local item = currentPage[i]
+  print(item)
 end
 ```
 
@@ -170,7 +170,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local character = player.Character
 if not character or not character.Parent then
-character = player.CharacterAdded:Wait()
+  character = player.CharacterAdded:Wait()
 end
 local humanoid = character:WaitForChild("Humanoid")
 
@@ -179,7 +179,7 @@ AvatarEditorService:PromptSaveAvatar(currentDescription, humanoid.RigType)
 
 local result = AvatarEditorService.PromptSaveAvatarCompleted:Wait()
 if result == Enum.AvatarPromptResult.Success then
--- Avatar saved!
+  -- Avatar saved!
 end
 ```
 
@@ -198,7 +198,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local character = player.Character
 if not character or not character.Parent then
-character = player.CharacterAdded:Wait()
+  character = player.CharacterAdded:Wait()
 end
 local humanoid = character:WaitForChild("Humanoid")
 
@@ -207,7 +207,7 @@ AvatarEditorService:PromptCreateOutfit(currentDescription, humanoid.RigType)
 
 local result = AvatarEditorService.PromptCreateOutfitCompleted:Wait()
 if result == Enum.AvatarPromptResult.Success then
--- Outfit saved!
+  -- Outfit saved!
 end
 ```
 

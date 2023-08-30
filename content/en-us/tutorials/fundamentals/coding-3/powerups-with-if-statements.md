@@ -113,7 +113,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 
    ```
 
-2. Use `wait(1)` to pause the script for one second, then set CanTouch to true. Playtest and make sure the speed boost can be reapplied after one second.
+2. Use `task.wait(1)` to pause the script for one second, then set CanTouch to true. Playtest and make sure the speed boost can be reapplied after one second.
 
    ```lua title="Finished script"
    local speedBoost= script.Parent
@@ -125,7 +125,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
      if humanoid and humanoid.WalkSpeed <= 50 then
        humanoid.WalkSpeed = humanoid.WalkSpeed + 10
        speedBoost.CanTouch = false
-       wait(1)
+       task.wait(1)
        speedBoost.CanTouch = true
       end
    end

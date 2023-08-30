@@ -62,11 +62,11 @@ Use a for loop to go through the array and control how fast the parts should dis
     end
    ```
 
-3. So there's a delay before a part disappears, in the loop, add a `wait()` using `VANISH_RATE`.
+3. So there's a delay before a part disappears, in the loop, add a `task.wait()` using `VANISH_RATE`.
 
    ```lua
    for partIndex = 1, #pathArray  do
-      wait(VANISH_RATE)
+      task.wait(VANISH_RATE)
    end
    ```
 
@@ -74,7 +74,7 @@ Use a for loop to go through the array and control how fast the parts should dis
 
    ```lua
    for partIndex = 1, #pathArray  do
-      wait(VANISH_RATE)
+      task.wait(VANISH_RATE)
       local whichPart = pathArray[partIndex]
       whichPart.CanCollide = false
       whichPart.Transparency = 1
@@ -91,23 +91,23 @@ If the bridge doesn't disappear, check the possible issues below:
 
 **Issue:** Parts disappear too fast or are all gone at the start.
 
-- Depending on how fast your character loads into the experience, the first parts may already be invisible. To address this, add a small wait, such as `wait(2)`, at the start of the script.
+- Depending on how fast your character loads into the experience, the first parts may already be invisible. To address this, add a small wait, such as `task.wait(2)`, at the start of the script.
 
 ### Coding the Second Loop
 
 Right now, the parts disappear forever. To make them reappear, create a second for loop that will go through each part and instantly make each piece walkable.
 
-1. After the first loop, add a `wait()` to create a short delay before the path reappears.
+1. After the first loop, add a `task.wait()` to create a short delay before the path reappears.
 
    ```lua
     for partIndex = 1, #pathArray  do
-       wait(VANISH_RATE)
+       task.wait(VANISH_RATE)
        local whichPart = pathArray[partIndex]
        whichPart.CanCollide = false
        whichPart.Transparency = 1
     end
 
-    wait(1)
+    task.wait(1)
    ```
 
 2. **On your own**, try coding a second for loop that makes the path useable again by changing each part's CanCollide property to true and Transparency to 0. When finished, check your work against the code below.
@@ -139,14 +139,14 @@ The parts disappear and reappear, but only once. To make the code keep repeating
     while true do
       -- Make a part disappear from the array in order
        for partIndex = 1, #pathArray  do
-          wait(VANISH_RATE)
+          task.wait(VANISH_RATE)
           local whichPart = pathArray[partIndex]
           whichPart.CanCollide = false
           whichPart.Transparency = 1
        end
 
        -- Wait for a second before making the path reappear
-       wait(1)
+       task.wait(1)
 
        -- Reset the path by making all parts walkable again
        for partIndex = 1, #pathArray do
@@ -175,14 +175,14 @@ A finished version of the project can be downloaded.
  while true do
     -- Make a part disappear from the array in order
       for partIndex = 1, #pathArray  do
-         wait(VANISH_RATE)
+         task.wait(VANISH_RATE)
          local whichPart = pathArray[partIndex]
          whichPart.CanCollide = false
          whichPart.Transparency = 1
       end
 
     -- Wait for a second before making the path reappear
-    wait(1.0)
+    task.wait(1.0)
 
     -- Reset the path by making all parts walkable again
     for partIndex = 1, #pathArray do

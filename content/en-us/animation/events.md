@@ -69,6 +69,7 @@ local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
 local character = player.Character
+-- If character does not exist, wait until it does
 if not character or not character.Parent then
 	character = player.CharacterAdded:Wait()
 end

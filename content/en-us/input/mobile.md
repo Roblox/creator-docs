@@ -84,7 +84,7 @@ Because this property affects all new users who join the experience, you can set
 
 #### In-Experience Orientation
 
-`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when a experience needs to provide a particular experience like locking the view to portrait for a minigame.
+`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when an experience needs to provide a particular experience like locking the view to portrait for a minigame.
 
 The following code sample in a `Class.LocalScript` sets the screen orientation to portrait:
 
@@ -92,7 +92,7 @@ The following code sample in a `Class.LocalScript` sets the screen orientation t
 local Players = game:GetService("Players")
 local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 
-wait(2)
+task.wait(2)
 
 playerGUI.ScreenOrientation = Enum.ScreenOrientation.Portrait
 ```
