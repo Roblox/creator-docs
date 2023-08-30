@@ -1,6 +1,6 @@
 ---
 title: Creating Layered Models In Blender
-description: Convert a 3D model into a layered 3D model in Blender before importing and converting the model into Studio as an Class.Accessory.
+description: Convert a 3D model into a layered 3D model in Blender before importing and converting the model into Studio as an Accessory.
 ---
 
 You can use a third party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create the layered 3D model that you can [import and convert](../../art/accessories/accessory-fitting-tool.md) into Studio as an `Class.Accessory`. To create a layered model, you must **parent** (Blender) or **bind** (Maya) a 3D model to a mannequin armature and then modify two additional meshes to fit around the inner and outer surface of the accessory model.
