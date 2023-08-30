@@ -71,5 +71,5 @@ To export your character:
 <img src="../../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" />
 
 <Alert severity = 'success'>
-After exporting your .fbx file, see [Testing Characters](../../../art/avatar/testing/index.md) for steps on importing your character model into a test place via Studio and verifying your avatar and related components.
+After exporting your .fbx file, see [Testing Characters in Studio](../../../art/avatar/testing/index.md) for steps on importing your character model into a test place and verifying your avatar and related components.
 </Alert>
