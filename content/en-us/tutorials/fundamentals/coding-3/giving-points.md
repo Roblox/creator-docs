@@ -22,21 +22,22 @@ To setup this project, you'll need a leaderboard to track the points and a part 
    ```lua
    --In ServerScriptService, create a script named PlayerSetup with the contents below.
 
+   local Players = game:GetService("Players")
+
    local function onPlayerJoin(player)
-       local leaderstats = Instance.new("Folder")
-       leaderstats.Name = "leaderstats"
-       leaderstats.Parent = player
+   	local leaderstats = Instance.new("Folder")
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
 
-       -- Example of an IntValue
-       local points = Instance.new("IntValue")
-       points.Name = "Points"
-       points.Value = 0
-       points.Parent = leaderstats
-
+   	-- Example of an IntValue
+   	local points = Instance.new("IntValue")
+   	points.Name = "Points"
+   	points.Value = 0
+   	points.Parent = leaderstats
    end
 
    -- Run onPlayerJoin when the PlayerAdded event fires
-   game.Players.PlayerAdded:Connect(onPlayerJoin)
+   Players.PlayerAdded:Connect(onPlayerJoin)
    ```
 
 ### Color Changing Part
@@ -108,7 +109,7 @@ PointsScript will need two functions. The first function will give and subtract 
 
    -- Gives or subtracts points
    local function givePoints(player)
-       print("Giving player points")
+   	print("Giving player points")
    end
    ```
 
@@ -117,8 +118,7 @@ PointsScript will need two functions. The first function will give and subtract 
    ```lua
    -- Gives or subtracts points
    local function givePoints(player)
-       print("Giving player points")
-
+   	print("Giving player points")
    end
 
    -- Checks if player touched the part
@@ -132,7 +132,7 @@ PointsScript will need two functions. The first function will give and subtract 
    ```lua
    -- Checks if player touched the part
    local function partTouched(otherPart)
-       local player = Players:GetPlayerFromCharacter(otherPart.Parent)
+   	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
    end
    ```
 
@@ -144,11 +144,11 @@ PointsScript will need two functions. The first function will give and subtract 
    ```lua
    -- Checks if player touched the part
    local function partTouched(otherPart)
-       -- Gets the player if one touched the part
-       local player = Players:GetPlayerFromCharacter(otherPart.Parent)
-       if player then
-           givePoints(player)
-       end
+   	-- Gets the player if one touched the part
+   	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
+   	if player then
+   		givePoints(player)
+   	end
    end
 
    pointPart.Touched:Connect(partTouched)
@@ -170,11 +170,11 @@ To loop through colors, the script will use a while =loop that changes the part'
    ```lua
    -- Checks if player touched the part
    local function partTouched(otherPart)
-       -- Gets the player if one touched the part
-       local player = Players:GetPlayerFromCharacter(otherPart.Parent)
-       if player then
-           givePoints(player)
-       end
+   	-- Gets the player if one touched the part
+   	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
+   	if player then
+   		givePoints(player)
+   	end
    end
 
    pointPart.Touched:Connect(partTouched)
@@ -194,12 +194,12 @@ To loop through colors, the script will use a while =loop that changes the part'
    ```lua
    -- Loops through 3 colors, waiting between each color
    while true do
-       pointPart.Color = blue
-       task.wait(3)
-       pointPart.Color = green
-       task.wait(2)
-       pointPart.Color = red
-       task.wait(1)
+     pointPart.Color = blue
+     task.wait(3)
+     pointPart.Color = green
+     task.wait(2)
+     pointPart.Color = red
+     task.wait(1)
    end
    ```
 
@@ -226,7 +226,7 @@ Whenever a player touches the part, the script will need to know the current col
 
    ```lua
    local function givePoints(player)
-       local currentColor = pointPart.Color
+   	local currentColor = pointPart.Color
    end
    ```
 
@@ -234,9 +234,9 @@ Whenever a player touches the part, the script will need to know the current col
 
    ```lua
    local function givePoints(player)
-       local currentColor = pointPart.Color
+   	local currentColor = pointPart.Color
 
-       local playerStats = player:WaitForChild("leaderstats")
+   	local playerStats = player:WaitForChild("leaderstats")
    end
    ```
 
@@ -244,10 +244,10 @@ Whenever a player touches the part, the script will need to know the current col
 
    ```lua
    local function givePoints(player)
-       local currentColor = pointPart.Color
+   	local currentColor = pointPart.Color
 
-       local playerStats = player:WaitForChild("leaderstats")
-       local playerPoints= playerStats:WaitForChild("Points")
+   	local playerStats = player:WaitForChild("leaderstats")
+   	local playerPoints= playerStats:WaitForChild("Points")
    end
    ```
 
@@ -259,15 +259,14 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    local function givePoints(player)
-       local currentColor = pointPart.Color
+   	local currentColor = pointPart.Color
 
-       local playerStats = player:WaitForChild("leaderstats")
-       local playerPoints= playerStats:WaitForChild("Points")
+   	local playerStats = player:WaitForChild("leaderstats")
+   	local playerPoints= playerStats:WaitForChild("Points")
 
-       if currentColor == blue then
-           playerPoints.Value = playerPoints.Value + smallPoints
-       end
-
+   	if currentColor == blue then
+   		playerPoints.Value = playerPoints.Value + smallPoints
+   	end
    end
    ```
 
@@ -275,9 +274,9 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-       playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value = playerPoints.Value + smallPoints
    elseif currentColor == green then
-       playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value = playerPoints.Value + largePoints
    end
    ```
 
@@ -285,11 +284,11 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-       playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value = playerPoints.Value + smallPoints
    elseif currentColor == green then
-       playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value = playerPoints.Value + largePoints
    else
-       playerPoints.Value = playerPoints.Value - losePoints
+   	playerPoints.Value = playerPoints.Value - losePoints
    end
    ```
 
@@ -297,11 +296,11 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-       playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value = playerPoints.Value + smallPoints
    elseif currentColor == green then
-       playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value = playerPoints.Value + largePoints
    else
-       playerPoints.Value = playerPoints.Value - losePoints
+   	playerPoints.Value = playerPoints.Value - losePoints
    end
 
    pointPart:Destroy()
@@ -326,7 +325,7 @@ The particle effect will be the same color as the part when touched. Since the c
 1. In `givePoints()` at the bottom, create a new **ParticleEmitter** instance. Make sure the instance name is spelled exactly as shown.
 
    ```lua
-       local particle = Instance.new("ParticleEmitter")
+   	local particle = Instance.new("ParticleEmitter")
    end
    ```
 
@@ -400,21 +399,21 @@ local Players = game:GetService("Players")
 local function givePoints(player)
 	local currentColor = pointPart.Color
 
-    local playerStats = player:WaitForChild("leaderstats")
+	local playerStats = player:WaitForChild("leaderstats")
 	local playerPoints = playerStats:WaitForChild("Points")
-
+	
 	-- Gives player gold based on the color of the part
 	if currentColor == blue then
-	    playerPoints.Value = playerPoints.Value + smallPoints
+		playerPoints.Value = playerPoints.Value + smallPoints
 	elseif currentColor == green then
-	    playerPoints.Value = playerPoints.Value + largePoints
+		playerPoints.Value = playerPoints.Value + largePoints
 	else
-	    playerPoints.Value = playerPoints.Value - losePoints
+		playerPoints.Value = playerPoints.Value - losePoints
 	end
 
 	-- Destroy the part, wait a second, and thne destroy the particle
 	pointPart:Destroy()
-
+	
 	-- Creates a sparkles effect and destroys it
 	local playerCharacter = player.Character
 	local particle = Instance.new("ParticleEmitter")
@@ -424,10 +423,8 @@ local function givePoints(player)
 	particle:Destroy()
 end
 
-
 local function partTouched(otherPart)
-	--local player = Players:GetPlayerFromCharacter(otherPart.Parent)
-	local player = game.Players:GetPlayerFromCharacter(otherPart.Parent)
+	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
 
 	if player then
 		givePoints(player)

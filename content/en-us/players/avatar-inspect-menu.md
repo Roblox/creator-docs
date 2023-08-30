@@ -23,7 +23,7 @@ By default, the Inspect Menu shows the same information as the user's Roblox Ava
 In the cases where the default Inspect Menu may not be accurate to the current character's outfit, you can inspect a character's current outfit with the following steps:
 
 1. Disable the default profile-based Inspect Menu by setting `Class.GuiService:SetInspectMenuEnabled()` with a value of **false**.
-2. Get an current `Class.HumanoidDescription` from the target player character.
+2. Get a current `Class.HumanoidDescription` from the target player character.
 3. Call `Class.GuiService:InspectPlayerFromHumanoidDescription()` to load the Inspect menu based off of the `Class.HumanoidDescription`.
 
 Use the following code sample to inspect the currently equipped items of a specific player:
@@ -38,11 +38,11 @@ GuiService:SetInspectMenuEnabled(false)
 
 local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
 if humanoid then
--- Get current HumanoidDescription from a player character
-local humanoidDescription = humanoid:GetAppliedDescription()
+  -- Get current HumanoidDescription from a player character
+  local humanoidDescription = humanoid:GetAppliedDescription()
 
--- Load the inspect menu from a humanoid description
-GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
+  -- Load the inspect menu from a humanoid description
+  GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
 end
 ```
 
@@ -59,10 +59,10 @@ local Players = game:GetService("Players")
 
 -- Get user ID by player name
 local success, userId = pcall(function()
-return Players:GetUserIdFromNameAsync("IgnisRBX")
+  return Players:GetUserIdFromNameAsync("IgnisRBX")
 end)
 
 if success then
-GuiService:InspectPlayerFromUserId(userId)
+  GuiService:InspectPlayerFromUserId(userId)
 end
 ```
