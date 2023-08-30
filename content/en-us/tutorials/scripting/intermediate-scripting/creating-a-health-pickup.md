@@ -200,7 +200,7 @@ The pickup should provide visual feedback that it is disabled - a common way to 
    end
    ```
 
-3. Call the `Global.RobloxGlobals.wait()|task.wait` function, passing `COOLDOWN` as the amount to wait.
+3. Call the `Library.task.wait()` function, passing `COOLDOWN` as the amount to wait.
 4. Set `Transparency` back to `ENABLED_TRANSPARENCY` and `Enabled` back to `true`.
 
    ```lua
