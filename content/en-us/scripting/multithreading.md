@@ -126,7 +126,7 @@ You can support multiple mechanisms to accommodate your cross-thread communicati
 
 The **Actor Messaging API** allows a script, either in a serial or parallel context, to send data to an actor in the same data model. Communication through this API is asynchronous, in which the sender doesn't block until the receiver receives the message.
 
-When sending messages using this API, you need to define a **topic** to for categorizing the message. Each message can only be sent to a single actor, but that actor can internally have multiple callbacks bound to a message. Only scripts that are descendants of an actor can receive messages.
+When sending messages using this API, you need to define a **topic** for categorizing the message. Each message can only be sent to a single actor, but that actor can internally have multiple callbacks bound to a message. Only scripts that are descendants of an actor can receive messages.
 
 The API has the following methods:
 
@@ -224,7 +224,7 @@ remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 
 ## Example: Server-side Procedural Terrain Generation
 
-To create a very large world for your experience, you can populate the world dynamically on the server. Usually you can generate the world in independent chunks, and the generator script needs to do a lot of math for objects placement, materials usage, and voxel filling. You can run the generation code in parallel to improve the efficiency of the process, as the following code sample shows:
+To create a very large world for your experience, you can populate the world dynamically on the server. Usually you can generate the world in independent chunks, and the generator script needs to do a lot of math for object placement, materials usage, and voxel filling. You can run the generation code in parallel to improve the efficiency of the process, as the following code sample shows:
 
 ```lua
 -- To achieve parallel execution, we need to use multiple actors
