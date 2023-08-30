@@ -68,7 +68,7 @@ connection = part.Touched:Connect(onPartTouched)
 
 <h3>Waiting for Events to Fire</h3>
 
-If you want a script to yield or pause until a specific event fires, use the `Wait()` function.
+If you want a script to yield or pause until a specific event fires, use the `Library.task.wait()` function.
 
 ```lua
 -- Script in ServerScriptService
