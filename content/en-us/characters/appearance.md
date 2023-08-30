@@ -251,7 +251,7 @@ Use the following sample code to apply a `Class.HumanoidDescription` to all curr
 
 ```lua
 for \_, player in pairs(game.Players:GetPlayers()) do
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+  local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
   if humanoid then
     -- Create a HumanoidDescription
     local humanoidDescription = Instance.new("HumanoidDescription")
