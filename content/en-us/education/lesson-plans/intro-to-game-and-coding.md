@@ -16,7 +16,7 @@ description: Learn how to build an obstacle course and code color changing block
     <td>
       <ul>
         <li>Manipulate 3D parts to create an obstacle course.</li>
-        <li>Design and playtest a experience, focusing on a fun user experience.</li>
+        <li>Design and playtest an experience, focusing on a fun user experience.</li>
         <li>Create scripts using variables and loops for in-game visual effects.</li>
         </ul>
       </td>

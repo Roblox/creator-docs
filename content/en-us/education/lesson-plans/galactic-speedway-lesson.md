@@ -5,7 +5,7 @@ description: Create a spaceship and race it on an alien planet.
 
 <img src="../../assets/education/lesson-plans/galactic-speedway-hero.jpg" width="100%" />
 
-**Lesson Description**: Create your very own spaceship and race it on an alien planet. Practice skills like 3D modeling and coding as you publish a experience on Roblox.
+**Lesson Description**: Create your very own spaceship and race it on an alien planet. Practice skills like 3D modeling and coding as you publish an experience on Roblox.
 
 **ISTE Standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
