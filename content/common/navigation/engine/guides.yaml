@@ -246,7 +246,7 @@ navigation:
               - title: Type Coercion
                 path: /luau/type-coercion
           - title: Luau Type Checking
-            path: /luau/type-checking.md
+            path: /luau/type-checking
   - title: Environment
     section:
       - title: Overview
