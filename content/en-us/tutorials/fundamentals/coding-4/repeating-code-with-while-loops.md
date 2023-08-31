@@ -25,21 +25,21 @@ Use any Roblox project for this exercise. When finished, this part can be used a
 
 ## Using Variables to Store a Part
 
-Not only can variables hold strings, they can also hold a reference, or directions, to an object. Once a script knows the direction to a part, it can affect changes to it.
+Variables can also hold references to objects besides strings. For example, when a script knows the reference to a part, the script can change it.
 
 Rather than typing `workspace.NameOfYourPart` over and over, that entire line can be stored inside a local variable. Local variables are created by typing `local` and then the name of the variable.
 
 For example: `local nameOfVariable`.
 
 <Alert severity="info">
-A local variable only works in the script where it was created. If a local variable named `part1` is created in Script1, it cannot be used Script2. Most variables you use will be local variables.
+A local variable only works in the script where it was created. If a local variable named `part1` is created in Script1, it cannot be used in Script2. Most variables you use will be local variables.
 </Alert>
 
 1. Under the comment, create a local variable by typing `local loopingPart`.
 
    ```lua
    -- Changes the color of LoopingPart every few seconds
-   local looping part
+   local loopingPart
    ```
 
 2. Set the variable to the looping part by typing `= workspace.loopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
@@ -55,13 +55,13 @@ A local variable only works in the script where it was created. If a local varia
 
 ## While Loops
 
-Before creating the while loop for the color changing part, it's worthwhile to explain it's syntax. A while loop has three components:
+Before creating the while loop for the color changing part, it's worthwhile to explain its syntax. A while loop has three components:
 
 - The `while` keyword.
 - A condition, always after the keyword.
 - Instructions, between the `do` and `end` keywords.
 
-In loops, conditions can be a variety of logical statements. Some examples might be if two numbers are the same. A loop will run if it's condition is true.
+In loops, conditions can be a variety of logical statements. Some examples might be if two numbers are the same. A loop will run if its condition is true.
 
 Notice in the sample below, the condition is true, meaning this loop will run forever. In later lessons, you'll code specific conditions that stop.
 
@@ -93,7 +93,7 @@ Next, you'll set up the while loop for the color changing part.
 
 ### Adding Code in the Loop
 
-With the while loop created, instructions can be added to change the part's color over time. Inside the loop, add a line of code for each color. Each color will use RBG values, a way of storing colors as numbers in computer science.
+With the while loop created, instructions can be added to change the part's color over time. Inside the loop, add a line of code for each color. Each color will use RGB values, a way of storing colors as numbers in computer science.
 
 1. Between `while true do` and `end`, set the Color property of the part to `Datatype.Color3.fromRGB()`.
 
@@ -146,7 +146,7 @@ If you add a second line of color changing code right now, it would change the b
    ```
 
    <Alert severity="warning">
-   As you add more code in the loop, may sure it's all in **scope**, meaning code is in the right place. In order for code to run in the loop, it has to be between the `while true do` and before `end`.
+   As you add more code in the loop, make sure it's all in **scope**, meaning code is in the right place. In order for code to run in the loop, it has to be between the `while true do` and before `end`.
    </Alert>
 
 3. Test the code and see if the colors change.
@@ -154,7 +154,7 @@ If you add a second line of color changing code right now, it would change the b
    <video controls src="../../../assets/education/coding-4/loops-and-parts-finishedPart.mp4" width="100%"></video>
 
 **Troubleshooting Notes**
-At this point, if color changing part doesn't work as intended, try one of the following below.
+At this point, if the color changing part doesn't work as intended, try one of the following below.
 
 **Issue**: Colors are skipped
 
