@@ -21,7 +21,7 @@ Roblox Battle Royale uses the [Weapons Kit](../../resources/weapons-kit.md), so 
 
 There are several important folders related to the pickup system. Make sure that these folders are set up correctly in your project:
 
-- `Class.Workspace.PickupSpawners` — Contains pickup spawner `Class.Part|Parts` which tell the system where to place visual pickup `Class.Model|Models` (see the next point). Note that these spawners are **not required** to be in this folder since the system looks for parts tagged with the **PickupSpawner** tag instead of the folder path.
+- `Workspace/PickupSpawners` — Contains pickup spawner `Class.Part|Parts` which tell the system where to place visual pickup `Class.Model|Models` (see the next point). Note that these spawners are **not required** to be in this folder since the system looks for parts tagged with the **PickupSpawner** tag instead of the folder path.
 
   <img
   alt="Pickup Spawners"
