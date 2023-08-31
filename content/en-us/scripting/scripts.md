@@ -271,7 +271,9 @@ The following `Class.LocalScript` sends a message with the id "RequestA" with an
 
 ```lua
 -- LocalScript in ReplicatedFirst
-local NetworkManagerClient = require(game.ReplicatedFirst:WaitForChild("NetworkManagerClient"))
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+
+local NetworkManagerClient = require(ReplicatedFirst:WaitForChild("NetworkManagerClient"))
 NetworkManagerClient.FireServer("RequestA", "Hello")
 ```
 
