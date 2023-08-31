@@ -127,9 +127,9 @@ Here's the list of available metamethods:
 		  <td>Fired when the # length operator is used on the Object.</td>
 		</tr>
 	  <tr>
-		  <td>__iter(table)
+		  <td>__iter(table)</td>
 		  <td>Used to denote a custom iterator when using generalized iteration.</td>
-		  </td>
+		</tr>
 	</tbody>
 </table>
 
