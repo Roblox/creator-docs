@@ -222,7 +222,7 @@ local State = {
 }
 ```
 
-The type for this state object without generics would be
+The type for this state object without generics would be.
 
 ```lua
 type State = {
