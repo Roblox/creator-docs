@@ -37,7 +37,7 @@ To practice, your first function will print your favorite food in the Output Win
 1. Create a new script in **ServerScriptService**.
 2. Rename the script _FunctionsPractice_.
 3. Delete `"Hello World"`.
-4. Add comment at the top. For example: `-- Prints your favorite food`
+4. Add a comment at the top. For example: `-- Prints your favorite food`
 
 Next, you create and name the function. All functions should have names that help you remember what their purpose is. Functions names are camelCased, with the first letter lowercase and next words capitalized.
 
@@ -78,7 +78,7 @@ end
 ```
 
 <Alert severity="success">
-As you typed, your code should have indented automatically. This makes it easier for you and others to see the start and end of a function. If it didn't auto indent, you can press <kbd>Tab</kbd> at the beginning of the line to quickly indent it.
+As you typed, your code should have been indented automatically. This makes it easier for you and others to see the start and end of a function. If it didn't auto indent, you can press <kbd>Tab</kbd> at the beginning of the line to quickly indent it.
 </Alert>
 
 ### Telling the Function to Run
