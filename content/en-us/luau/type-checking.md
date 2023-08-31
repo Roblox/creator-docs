@@ -104,10 +104,11 @@ type FindSource = (script: BaseScript, pattern: string) -> (string, number)
 
 ## Table Types
 
-Luau does not have a simple `table` type, instead, table types are defined using `{}` syntax. One way of defining tables is using the `{type}` syntax which defines a list type.
+Luau does not have a `table` type, instead, table types are defined using `{}` syntax. One way of defining tables is using the `{type}` syntax, which defines a list type.
 
 ```lua
 local numbers: {number} = {1, 2, 3, 4, 5}
+local characterParts: {Instance} = LocalPlayer.Character:GetChildren()
 ```
 
 Index types can be defined using `{[indexType] = valueType}`.
