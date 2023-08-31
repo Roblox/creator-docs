@@ -332,17 +332,17 @@ local function Signal<A...>(f: (A...) -> (), ...: A...)
 
 Types can be exported through `Class.ModuleScript` using the `export` keyword infront of a type definition.
 
-```lua
+```lua title="Types Module in ReplicatedStorage"
 export type Cat = {
 	Name: string,
 	Meow: (Cat) -> ()
 }
 ```
 
-```lua
-local Cat = require(script.Cat)
+```lua title="Script that uses the Types module"
+local Types = require(ReplicatedStorage.Types)
 
-local newCat: Cat.Cat = {
+local newCat: Types.Cat = {
 	Name = "metatablecat",
 	Meow = function(self)
 		print(`{self.Name} said meow`)
