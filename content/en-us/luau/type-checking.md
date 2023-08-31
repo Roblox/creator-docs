@@ -11,7 +11,7 @@ local foo = "bar" --> string
 local x = 5 --> number
 ```
 
-## Defining a type
+## Defining a Type
 A type can be defined using the `type` keyword
 
 ```lua
@@ -92,7 +92,7 @@ To return multiple types, place all return types in brackets
 local function FindSource(script: BaseScript, pattern: string): (string, number)
 ```
 
-### Defining a functional type
+### Defining a Functional Type
 
 A functional type can be defined by using the syntax `(in) -> out`, for example, the type signatures of the functions above is
 
@@ -101,7 +101,7 @@ type add = (x: number, y: number) -> number
 type FindSource = (script: BaseScript, pattern: string) -> (string, number)
 ```
 
-## Table types
+## Table Types
 
 Luau does not have a simple `table` type, instead, table types are defined using `{}` syntax. At the most basic level, a table can be defined with the syntax `{type}`
 
@@ -185,7 +185,7 @@ type Object2 = {bar: number}
 type Object1and2 = Object1 & Object2 -- {foo: string} & {bar: number}
 ```
 
-## Defining an inferred type
+## Defining an Inferred Type
 
 The `typeof` function can be used in a type definition to define an inferred type
 
