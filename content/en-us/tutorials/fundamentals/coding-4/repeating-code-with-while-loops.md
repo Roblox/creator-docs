@@ -42,7 +42,7 @@ A local variable only works in the script where it was created. If a local varia
    local loopingPart
    ```
 
-2. Set the variable to the looping part by typing `= workspace.LoopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
+2. Set the variable to the looping part by typing `= workspace.loopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
 
    ```lua
    -- Changes the color of LoopingPart every few seconds
