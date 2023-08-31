@@ -146,7 +146,7 @@ sortGarbage(cementBlock, glassBottle)
 sortGarbage(glassBottle, cementBlock)
 ```
 
-If you were to only pass in only one argument, that argument would be treated as trash. If you were to pass in three argument, nothing would happen to the third argument because there's not a third parameter.
+If you were to only pass in only one argument, that argument would be treated as trash. If you were to pass in three arguments, nothing would happen to the third argument because there's not a third parameter.
 
 ## Summary
 
