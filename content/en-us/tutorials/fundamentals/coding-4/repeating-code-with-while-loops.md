@@ -121,8 +121,7 @@ With the while loop created, instructions can be added to change the part's colo
 
 ### Making the Script Wait
 
-If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. This also 
-causes the experience to crash. To make the script wait before running the next line of code, use a `Library.task.wait()` function.
+If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. This also causes the experience to crash. To make the script wait before running the next line of code, use a `Library.task.wait()` function.
 
 1. On the line after changing the brick color, type `task.wait(3)`. Whatever number placed inside the `()` is how many seconds the script will wait.
 
