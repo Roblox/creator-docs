@@ -25,7 +25,7 @@ Use any Roblox project for this exercise. When finished, this part can be used a
 
 ## Using Variables to Store a Part
 
-Not only can variables hold strings, they can also hold a reference, or directions, to an object. Once a script knows the direction to a part, it can effect changes to it.
+Variables can also hold references to objects besides strings. For example, when a script knows the reference to a part, the script can change it.
 
 Rather than typing `game.Workspace.NameOfYourPart` over and over, that entire line can be stored inside a local variable. Local variables are created by typing `local` and then the name of the variable.
 
