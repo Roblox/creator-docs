@@ -119,6 +119,10 @@ Here's the list of available metamethods:
 		  <td>Used in weak tables, declaring whether the keys and/or values of a table are weak. **Note:** References to Roblox instances are never weak. Tables that hold such references will never be garbage collected.</td>
 		</tr>
 	  <tr>
+		  <td>__gc(table)</td>
+		  <td>Fired when the table is garbage-collected. **Note:** On Roblox, this metamethod is disabled.</td>
+		</tr>
+	  <tr>
 		  <td>__len(table)</td>
 		  <td>Fired when the # length operator is used on the Object.</td>
 		</tr>
