@@ -231,7 +231,7 @@ For more information on the different script types, see [Scripts](../scripting/s
 
 A tool might work fine in Studio but not in a live Roblox experience. If this occurs, use the following tips for troubleshooting:
 
-- `LocalScripts` and `Scripts` can't directly listen to each other, so you need to add a `Class.RemoteEvent` to send messages between the two scripts.
+- `Class.LocalScript|LocalScripts` and `Class.Script|Scripts` can't directly listen to each other, so you need to add a `Class.RemoteEvent` to send messages between the two scripts.
 - Make sure that each `Class.Script` and `Class.LocalScript` only takes care of exactly what it's supposed to do.
 
 For more information on `Class.RemoteEvent|RemoteEvents`, see [Remote Events and Callbacks](../scripting/events/remote.md).

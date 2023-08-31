@@ -7,7 +7,7 @@ Analytics Dashboard helps you measure and gain insight into your experience's pe
 
 - [Retention](../../production/analytics/retention.md) KPIs that measure how many users return to your experience again after their first visit.
 - [Engagement](../../production/analytics/engagement.md) KPIs that reflect how users actively use your experience and represent your core user base.
-- [Acquisition](../../production/analytics/acquisition.md) statistics that shows you the sources of users finding your experience and how users from different sources convert.
+- [Acquisition](../../production/analytics/acquisition.md) statistics that show you the sources of users finding your experience and how users from different sources convert.
 - [Monetization](../../production/analytics/monetization.md) KPIs that help you understand the business performance of your experience.
 
 Any experience with more than 10 Daily Active Users (DAU) and 10 play hours for 7 consecutive days is eligible for accessing all KPIs on the dashboard.
