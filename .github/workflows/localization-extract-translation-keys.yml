@@ -1,0 +1,103 @@
+# Localization: Extract Navigation Translation Keys From Navigation Files
+name: Localization Extract Navigation Translation Keys
+on:
+  # pull_request: # Uncomment these lines for test
+  #   types:
+  #     - opened
+  #     - synchronize
+  push:
+    branches:
+      - staging
+    paths:
+      - 'content/common/navigation/**.yaml'
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+concurrency:
+  group: localization-extract-translation-keys-${{ github.event_name }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request_target' }}
+env:
+  GH_TOKEN: ${{ secrets.LOCALIZATION_GIT_API_KEY }}
+  GH_USER_NAME: ${{ secrets.LOCALIZATION_USER_NAME }}
+  GH_EMAIL: ${{ secrets.LOCALIZATION_EMAIL }}
+  CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+  CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+  CROWDIN_BASE_URL: ${{ secrets.CROWDIN_BASE_URL }}
+jobs:
+  Extract-Navigation-Translation-Key-Value-Pair:
+    name: Extract translation key value pair in CDS # Extract from `content/common/navigation/**.yaml` to `content/en-us/navigation/navigation.json`
+    # Uncomment for skip
+    # if: ${{ false }}
+    runs-on: [self-hosted, generic-linux, ephemeral]
+    env:
+      navigation_file_changed: false # Is the `content/en-us/navigation/navigation.json` file changed after running the `npm run tool:extractTranslationKeys`?
+    steps:
+      - name: Checkout CDS repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: staging
+          token: ${{ env.GH_TOKEN }}
+          
+      - name: Checkout CDI repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: staging
+          token: ${{ env.GH_TOKEN }}
+          path: ./creator-docs-internal
+          repository: Roblox/creator-docs-internal
+
+      - name: Copy tools from CDI to CDS
+        run: |
+          # Delete tools in CDS
+          rm -rf tools
+          rm package.json
+          rm package-lock.json
+          rm tsconfig.json
+          # Copy tools from CDI
+          cp -R creator-docs-internal/tools ./
+          cp creator-docs-internal/package.json ./
+          cp creator-docs-internal/package-lock.json ./
+          cp creator-docs-internal/tsconfig.json ./
+          # Delete CDI
+          rm -rf creator-docs-internal
+
+      - name: Using Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run command to extract translation key value pair from navigation dir
+        run: npm run tool:extractTranslationKeys
+
+      - name: Check if the `content/en-us/navigation/navigation.json` file has changed
+        run: |
+          if test "$(git diff --name-only content/en-us/navigation/navigation.json)"; then
+              echo "navigation_file_changed=true" >> $GITHUB_ENV
+          else
+              echo "navigation_file_changed=false" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and push to staging branch when the `content/en-us/navigation/navigation.json` file has changed
+        if: ${{ env.navigation_file_changed == 'true' }}
+        run: |
+          now=$(date +'%Y-%m-%dT%H:%M:%S')
+          git config user.email ${{ env.GH_EMAIL }}
+          git config user.name ${{ env.GH_USER_NAME }}
+          git commit content/en-us/navigation/navigation.json -m "The navigation.json file was updated to match the latest content/navigatin/**.yaml. $now"
+          git push --force origin staging
+
+      - name: Install Crowdin CLI
+        if: ${{ env.navigation_file_changed == 'true' }}
+        run: npm i -g @crowdin/cli
+
+      - name: Push the `content/en-us/navigation/navigation.json` file to Crowdin
+        if: ${{ env.navigation_file_changed == 'true' }}
+        env:
+          CROWDIN_BRANCH_NAME: '[Roblox.creator-docs-staging] staging'
+          CROWDIN_API_KEY: ${{ env.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: ${{ env.CROWDIN_PROJECT_ID }}
+          CROWDIN_BASE_URL: ${{ env.CROWDIN_BASE_URL }}
+        run: crowdin upload sources -b "${{ env.CROWDIN_BRANCH_NAME }}" -v --preserve-hierarchy -s="content/en-us/navigation/*.json" -t="content/%locale%/navigation/%original_file_name%" -T ${{ env.CROWDIN_API_KEY }} -i ${{ env.CROWDIN_PROJECT_ID }} --base-url ${{ env.CROWDIN_BASE_URL }}
