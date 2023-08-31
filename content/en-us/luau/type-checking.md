@@ -56,6 +56,28 @@ An optional type can be defined using `?` at the end of the annotation.
 local foo: string? = nil
 ```
 
+### Literal Types
+
+Strings and booleans can also be casted to literal values, instead of using `string` and `boolean` respectively.
+
+```lua
+local alwaysHelloWorld: "Hello World!" = "Hello World!"
+local alwaysTrue: true = false -- TypeError: Type 'false' could not be converted into 'true'
+
+alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbyte World"' could not be into '"Hello World!"'
+```
+
+### Type Casts
+
+Sometimes, you may need to assist the typechecker by changing the type of a value using type casts, this can be done with the `::` keyword.
+
+```lua
+local numericValue  = 1
+
+local value = numericValue :: any -- ok, all expressions may be cast to 'any'
+local flag = numericValue :: boolean -- not ok, invalid 'number' to 'boolean' conversion
+```
+
 ## Function Typing
 
 Assume the following function:
