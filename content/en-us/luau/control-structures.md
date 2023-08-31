@@ -166,6 +166,32 @@ The generic `for` loop iterates over items in a collection rather than a sequenc
 
 For loops need a function, or iterator, to iterate over different types of collections. The global `ipairs()` returns an iterator for arrays, and the global `pairs()` returns an iterator for dictionaries. The `Library.string` library provides `Library.string.gmatch()` to iterate over strings.
 
+### Generalized Iteration
+
+In Luau, it is possible to iterater over a table by using the `in` keyword directly on the table instead of using an iterator function.
+
+```lua
+for i, v in {1, 2, 3, 4, 5} do
+	print(i, v)
+end
+```
+
+The `__iter` metamethod can be used to create a custom iterator function that can be called when using generalized iteration.
+
+```lua
+local obj = {items = {1, 4, 9}}
+
+setmetatable(obj, {
+	__iter = function(o)
+		return next, o.items 
+	end
+})
+
+for k, v in obj do
+  assert(k * k == v)
+end
+```
+
 #### Arrays
 
 The `ipairs()` function returns an iterator that iterates through numerical indices in a table and returns an `index` and `value` for each element. This makes it appropriate for arrays, where all indices are numeric.
