@@ -28,13 +28,13 @@ There are two common types of quests:
 
    <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-0.png"/>
-      <figcaption>Achievement badge in *Jailbreak*</figcaption>
+      <figcaption>Achievement badge in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
     </figure>
 
 - **Dailies**: Also known as daily quests, these are short tasks with modest rewards that are available for and must be completed within 24-hours. Some daily quest systems provide the same quests every day, while others rotate quests to provide players with new objectives to avoid repetition. Dailies have simple objectives with low requirements for completion to encourage players to complete the quests in a single play session.
     <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-1.png" width="70%"/>
-      <figcaption>Daily quests in *World//Zero*</figcaption>
+      <figcaption>Daily quests in [*World//Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
     </figure>
 
 For these easy quests, small rewards are appropriate, due to the rate at which they're completed. Because they are available daily, Dailies can provide a reliable source of soft currency and incentivize players to log in every day.
@@ -72,11 +72,11 @@ One way to keep players engaged in a game is to provide them with a mixture of s
 
 By creating quests that require players to explore different areas of the game or complete certain tasks, you can draw attention to the full breadth of the game's features and content. This can be especially helpful for games with large worlds or complex systems, as players might not realize all the game has to offer.
 
-In this example from _Squishmallows_, one of the game's many locations, the campsite, is being surfaced. This quest might be the first time that a player learns that there is a campsite in the game, and the reward incentivizes them to explore the map to find it.
+In this example from [_Squishmallows_](https://www.roblox.com/games/7941853407/), one of the game's many locations, the campsite, is being surfaced. This quest might be the first time that a player learns that there is a campsite in the game, and the reward incentivizes them to explore the map to find it.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-8.png" width="30%"/>
-      <figcaption>Quests in *Squishmallows*</figcaption>
+      <figcaption>Quests in [*Squishmallows*](https://www.roblox.com/games/7941853407/)</figcaption>
     </figure>
 
 ### Teach through Tutorials
@@ -91,7 +91,7 @@ Quests can also teach players how to use those features by acting as tutorials. 
 
 <figure>
   <img src="../../assets/game-design/introduction-to-quest-design/quest-design-9.png" width="35%"/>
-      <figcaption>Tutorial quest in *RoCitizens*</figcaption>
+      <figcaption>Tutorial quest in [*RoCitizens*](https://www.roblox.com/games/137877687/)</figcaption>
   </figure>
 
 ### Add Session Variety
@@ -100,7 +100,7 @@ The longer a player plays a game, the more familiar they become with its systems
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-3.png" width="70%"/>
-      <figcaption>Quests in *The Wild West*</figcaption>
+      <figcaption>Quests in [*The Wild West*](https://www.roblox.com/games/2317712696/)</figcaption>
     </figure>
 
 ### Create Resource Drip
@@ -115,7 +115,7 @@ For these reasons, it can be beneficial to drip-feed resources to players over t
 
 <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" width="70%"/>
-      <figcaption>Daily quests in *Adopt Me!*</figcaption>
+      <figcaption>Daily quests in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
     </figure>
 
 ### Increase Engagement
@@ -137,11 +137,11 @@ A _progression system_ can help players achieve them by promoting engagement wit
 
 Quests can act as a progression system by providing a structured way to advance through the game's content. With each quest completed, players earn rewards like weapons or skill points that help to prepare them for the next challenge.
 
-[Season Passes](../../production/game-design/season-pass-design.md) are progression systems that incorporate quests. In _Dragon Adventures_, players complete quests called "missions" in order to earn points toward reward tiers. The quests are all activities that are tied to the core loop mechanics of hatching and raising dragons. As players progress through the tiers, they unlock more rewards, culminating in unlocking an exclusive dragon as the final season reward. Through this UI, players can track their progress through the tiers as the deadline for the end of the season approaches.
+[Season Passes](../../production/game-design/season-pass-design.md) are progression systems that incorporate quests. In [_Dragon Adventures_](https://www.roblox.com/games/3475397644/), players complete quests called "missions" in order to earn points toward reward tiers. The quests are all activities that are tied to the core loop mechanics of hatching and raising dragons. As players progress through the tiers, they unlock more rewards, culminating in unlocking an exclusive dragon as the final season reward. Through this UI, players can track their progress through the tiers as the deadline for the end of the season approaches.
 
 <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-11.png" width="70%"/>
-      <figcaption>Season pass progression in *Dragon Adventures*</figcaption>
+      <figcaption>Season pass progression in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
     </figure>
 
 ### Encourage New Gameplay
@@ -150,7 +150,7 @@ Quests can encourage players to play the game in more interesting and challengin
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-4.png" width="70%"/>
-      <figcaption>Achievement badge in *Jailbreak*</figcaption>
+      <figcaption>Achievement badge in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
     </figure>
 
 These alternate gameplay goals can be especially engaging for experienced players who might have tried everything the game has to offer. Without new challenges, even the most dedicated players eventually grow bored and move on to other games. Achievements are one way to keep them engaged between content updates.
@@ -159,11 +159,11 @@ These alternate gameplay goals can be especially engaging for experienced player
 
 In addition to their objectives, quantities, and rewards, quests can optionally include _flavor text_ that provides bits of narrative, and backstory about the game's world. While not strictly necessary, especially in games without narrative elements, story-based quests can enrich the player's experience and make them feel more immersed in the game world.
 
-In _Spellbound_, the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the game's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
+In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the game's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-5.png" width="70%"/>
-      <figcaption>Quest narrative in *Spellbound*</figcaption>
+      <figcaption>Quest narrative in [*Spellbound*](https://www.roblox.com/games/6468323505/)</figcaption>
     </figure>
 
 ## Resources
