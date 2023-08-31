@@ -279,7 +279,9 @@ The following `Class.Script` connects to the network message id "RequestA" and p
 
 ```lua
 -- Script in ServerScriptService
-local NetworkManagerServer = require(game.ServerScriptService:WaitForChild("NetworkManagerServer"))
+local ServerScriptService = game:GetService("ServerScriptService")
+
+local NetworkManagerServer = require(ServerScriptService:WaitForChild("NetworkManagerServer"))
 NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, ...)
 	print("Received RequestA from", player, ...)
 end)
