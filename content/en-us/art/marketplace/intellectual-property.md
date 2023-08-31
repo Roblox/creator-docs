@@ -79,7 +79,7 @@ Another way to strengthen your IP protection is incorporating your own unique tr
 To protect the creativity of others, the Roblox [Terms of Use](https://www.roblox.com/catalog/10546552/Trojan-Infantry-Helmet) states that **any content you create must respect the intellectual property rights of others – both on and off our platform**.
 
 - This means you should not upload content you do not own or did not get the owner's permission to use.
-- Infringing on someone's intellectual property is not only a violation of Roblox's Terms of Use but it's also a violation of the law.
+- Infringing on someone's intellectual property is not only a violation of Roblox's Terms of Use, but it's also a violation of the law.
 
 ## Roblox Protecting Your IP
 
@@ -87,7 +87,7 @@ Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.c
 
 - Roblox must adopt and reasonably implement a policy providing for the termination in appropriate circumstances of users who are repeat copyright infringers.
 - Roblox investigates each report and takes appropriate action, which may include removing or disabling the infringing content, and permanently terminating the accounts of users who have repeatedly infringed on the IP of others.
-- If the filing is compliant with legal requirements, and the infringing item is taken down, the infringing creator will lose any [upfront payment(s)](marketplace-fees-and-commissions.md#upfront-payment) from publishing Limiteds and Robux earned from item sale(s).
+- If the filing is compliant with legal requirements and the infringing item is taken down, the infringing creator will lose any [upfront payment(s)](marketplace-fees-and-commissions.md#upfront-payment) from publishing Limiteds, as well as Robux earned from sales of the item.
 
 Only the IP rights holder knows what rights they have and who they have given permission to use their creations. Because of that, **we rely on rights holders to let us know what they believe infringes their rights by filing a takedown report**.
 
