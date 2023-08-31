@@ -55,9 +55,9 @@ You'll need the Output window throughout this course, so now is a good time to e
 
 ## Identifying Data Types
 
-Coding languages classify different kinds of values into **data types**. For example, one data type is **number**. Number data types are self-explanatory as they are made up of only numbers.
+Coding languages classify different kinds of values into **data types**. For example, one data type is a **number**. Number data types are self-explanatory as they are made up of only numbers.
 
-Another data type is a string. **Strings** can hold numbers, letters, and characters. Take another look at the default code in the new script; the words and quotations within the parenthesis is an example of a **string** data type.
+Another data type is a **string**. Strings can hold numbers, letters, and characters. Take another look at the default code in the new script; the words and quotations within the parenthesis is an example of a **string** data type.
 
 ```lua title = 'Default code'
 print("Hello world!")

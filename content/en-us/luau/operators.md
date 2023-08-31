@@ -122,7 +122,7 @@ if not falseVariable then
 end
 ```
 
-You can also use the `not` operator to test for the opposite of a entire multi-condition statement. In the following code sample, the `if`—`then` conditional tests that it's neither true that three is greater than four nor is it true that five is greater than four.
+You can also use the `not` operator to test for the opposite of an entire multi-condition statement. In the following code sample, the `if`—`then` conditional tests that it's neither true that three is greater than four nor is it true that five is greater than four.
 
 ```lua
 local three = 3

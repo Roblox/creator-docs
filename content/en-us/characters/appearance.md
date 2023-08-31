@@ -168,9 +168,11 @@ end
 Use the following sample code to create a `Class.HumanoidDescription` from an outfit ID using `Class.Players:GetHumanoidDescriptionFromOutfitId()|Players.GetHumanoidDescriptionFromOutfitID`:
 
 ```lua
+local Players = game:GetService("Players")
+
 local outfitId = 480059254
 
-local humanoidDescriptionFromOutfit = game.Players:GetHumanoidDescriptionFromOutfitId(outfitId)
+local humanoidDescriptionFromOutfit = Players:GetHumanoidDescriptionFromOutfitId(outfitId)
 ```
 
 #### From a Specific User
@@ -178,9 +180,11 @@ local humanoidDescriptionFromOutfit = game.Players:GetHumanoidDescriptionFromOut
 Use the following sample code to create a `Class.HumanoidDescription` from a user ID using `Class.Players:GetHumanoidDescriptionFromUserId()`:
 
 ```lua
+local Players = game:GetService("Players")
+
 local userId = 491243243
 
-local humanoidDescriptionFromUser = game.Players:GetHumanoidDescriptionFromUserId(userId)
+local humanoidDescriptionFromUser = Players:GetHumanoidDescriptionFromUserId(userId)
 ```
 
 ### Modifying HumanoidDescription
@@ -250,18 +254,19 @@ end
 Use the following sample code to apply a `Class.HumanoidDescription` to all current players in the game:
 
 ```lua
-for \_, player in pairs(game.Players:GetChildren()) do
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
-  -- Create a HumanoidDescription
-  local humanoidDescription = Instance.new("HumanoidDescription")
-  humanoidDescription.HatAccessory = "2551510151,2535600138"
-  humanoidDescription.BodyTypeScale = 0.1
-  humanoidDescription.ClimbAnimation = 619521311
-  humanoidDescription.Face = 86487700
-  humanoidDescription.GraphicTShirt = 1711661
-  humanoidDescription.HeadColor = Color3.new(0, 1, 0)
+local Players = game:GetService("Players")
 
+for _, player in pairs(Players:GetPlayers()) do
+  local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
   if humanoid then
+    -- Create a HumanoidDescription
+    local humanoidDescription = Instance.new("HumanoidDescription")
+    humanoidDescription.HatAccessory = "2551510151,2535600138"
+    humanoidDescription.BodyTypeScale = 0.1
+    humanoidDescription.ClimbAnimation = 619521311
+    humanoidDescription.Face = 86487700
+    humanoidDescription.GraphicTShirt = 1711661
+    humanoidDescription.HeadColor = Color3.new(0, 1, 0)
     humanoid:ApplyDescription(humanoidDescription)
   end
 end
@@ -272,8 +277,10 @@ end
 Use the following sample code to set a specific `Class.HumanoidDescription` for all spawning player characters:
 
 ```lua
+local Players = game:GetService("Players")
+
 -- Stop automatic spawning so it can be done in the "PlayerAdded" callback
-game.Players.CharacterAutoLoads = false
+Players.CharacterAutoLoads = false
 
 local function onPlayerAdded(player)
   -- Create a HumanoidDescription
@@ -290,20 +297,22 @@ local function onPlayerAdded(player)
 end
 
 -- Connect "PlayerAdded" event to "onPlayerAdded()" function
-game.Players.PlayerAdded:Connect(onPlayerAdded)
+Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
 If the `Class.HumanoidDescription` instance was created in the Explorer and parented to the workspace, use the following sample code in a `Class.Script` to access the workplace instance:
 
 ```lua
+local Players = game:GetService("Players")
+
 -- Stop automatic spawning so it can be done in the "PlayerAdded" callback
-game.Players.CharacterAutoLoads = false
+Players.CharacterAutoLoads = false
 
 local function onPlayerAdded(player)
-  -- Spawn character with "game.Workspace.StudioHumanoidDescription"
-  player:LoadCharacterWithHumanoidDescription(game.Workspace.StudioHumanoidDescription)
+  -- Spawn character with "workspace.StudioHumanoidDescription"
+  player:LoadCharacterWithHumanoidDescription(workspace.StudioHumanoidDescription)
 end
 
 -- Connect "PlayerAdded" event to "onPlayerAdded()" function
-game.Players.PlayerAdded:Connect(onPlayerAdded)
+Players.PlayerAdded:Connect(onPlayerAdded)
 ```

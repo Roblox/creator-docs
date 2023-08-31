@@ -1,15 +1,15 @@
 ---
 title: Testing in Studio
 comments:
-description: Verify the important aspects of your character model in a custom Studio test place.
+description: Verify the important aspects of your character model in a custom Studio test experience.
 previous: /art/avatar/testing/blender
 ---
 
-Test your character models in Studio to understand how your model looks and feels within a Roblox experience.
+Test your character model in Studio to understand how it looks and feels within a Roblox experience.
 
-Roblox provides an [Avatar Test Place](https://www.roblox.com/games/13176231501/Avatar-Test-Place) that you can open in Studio and import your character model in. This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
+Roblox provides an [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place) that you can open in Studio and import your character model in. This experience provides a wide variety of environmental and clothing tests to ensure that your character model and related components work as expected.
 
-## Setting up Test Place
+## Setting up Test Experience
 
 The following is the general testing process setting up the Avatar Test experience:
 
@@ -24,7 +24,7 @@ In order to use the [Avatar Test experience](https://www.roblox.com/games/131762
 
 To download the Avatar Test experience:
 
-1. Navigate to the [Avatar Test page](https://www.roblox.com/games/13176231501/Avatar-Test-Place).
+1. Navigate to the [Avatar Test experience](https://www.roblox.com/games/13176231501/Avatar-Test-Place).
 2. In the button next to the experience title, select **…** > **Edit**. The page navigates to the Studio launcher.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Avatar-Test-Place.png" />
@@ -32,7 +32,7 @@ To download the Avatar Test experience:
 
 ### Importing
 
-After you open the test place in Studio, import your custom character model.
+After you open the test experience in Studio, import your custom character model.
 
 1. In the menu bar, navigate to **Avatar** > **Import 3D**. A file browser displays.
 
@@ -88,15 +88,16 @@ To add individual image texture files:
 In order to play as the character during a playtest, rename and move the model instance:
 
 1. In the Explorer, rename the character **model** as `StarterCharacter`.
-2. In the Explorer, click and drag the model under the `Class.StarterPlayer` directory. If an existing model exists, remove the previous one.
+2. In the Explorer, navigate to the `Class.StarterPlayer` directory. If a `StarterCharacter` model already exists, remove it.
+3. Click and drag the model under the directory.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-StarterPlayer.png" />
 
 After you rename and add your model, navigate to the **Test** > **Play** button to start a test session of the experience as the custom model.
 
-## Using Test Place
+## Using Test Experience
 
-The Avatar Test place includes several features in the interface and environment to quickly perform comprehensive tests of your avatar characters. You can use the [test checklist](#checklist) to ensure you are reviewing all the important aspects of your avatar character.
+The Avatar Test experience includes several features in the interface and environment to quickly perform comprehensive tests of your avatar characters. You can use the [test checklist](#checklist) to ensure you are reviewing all the important aspects of your avatar character.
 
 When playtesting the experience, use the following UI buttons on the right side to open various testing tools and options:
 
@@ -143,7 +144,7 @@ When playtesting the experience, use the following UI buttons on the right side 
 
 ### Checklist
 
-Use the following checklists to ensure that you are comprehensively testing each component of your avatar. Use the Avatar menu to switch between a control avatar character to verify expected behavior.
+Use the following checklists to ensure that you are comprehensively testing each component of your avatar. Use the Avatar menu to switch between your custom avatar and a control avatar to verify expected behavior.
 
 #### Movement and Animation
 
@@ -191,11 +192,11 @@ Check the following for any anomalies:
     <td>Use any of the death cubes to set your character to a ragdoll state and respawn.</td>
   </tr>
   <tr>
-    <td>Facial animation</td>
+    <td>Facial Animation</td>
     <td>Use the **Face UI menu** to toggle a face animation cycle.</td>
   </tr>
   <tr>
-    <td>Emotes and animation</td>
+    <td>Emotes and Animation</td>
     <td>Use the **Emote UI menu** to access and play the available emotes. </td>
   </tr>
 </tbody>

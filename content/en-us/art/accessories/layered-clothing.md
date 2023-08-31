@@ -14,7 +14,7 @@ You can create custom layered clothing assets by modeling the asset in a 3D soft
 - [Creating Layered Clothing](../../art/accessories/creating-in-blender.md) for instructions on making a basic 3D asset layerable in Blender, using a reference 3D t-shirt model and a project template.
 - [How We Built Beyond The Dark](../../resources/beyond-the-dark/index.md) for details on how Roblox implemented layered clothing technology in a [showcase demo](https://www.roblox.com/games/7208091524/Beyond-the-Dark-Vistech-Showcase).
 
-After you have a model exported, use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on converting the layered model into an `Class.Accessory` object.
+After you have exported a model, use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on converting the layered model into an `Class.Accessory` object.
 
 <Alert severity = 'info'>
 If you are participating in the UGC program, you can upload and sell your accessories to the Marketplace. For more information on selling your items, see [Selling 3D Accessories](../../art/accessories/index.md#creation-process).

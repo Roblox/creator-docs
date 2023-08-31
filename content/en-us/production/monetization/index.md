@@ -30,7 +30,7 @@ It can be helpful to think of Roblox users in two categories:
 
 ### Social Features
 
-Roblox users tend to enjoy experiences which emphasize social interaction. For instance, having items or events that are only available for a **limited time** can create excitement around that content. A **trading** system encourage users to interact. While both systems can be successful on their own, they are particularly effective when combined.
+Roblox users tend to enjoy experiences which emphasize social interaction. For instance, having items or events that are only available for a **limited time** can create excitement around that content. A **trading** system encourages users to interact. While both systems can be successful on their own, they are particularly effective when combined.
 
 ### Live Ops
 

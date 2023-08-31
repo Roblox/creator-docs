@@ -67,8 +67,9 @@ game:GetService("Players").PlayerRemoving:Connect(function(player)
 
 	-- Save to data store
 	local setSuccess, errorMessage = pcall(function()
-	    playerDataStore:SetAsync(userId, playerDataStore)
+	    playerDataStore:SetAsync(userId, currentData)
 	end)
+
 	if not setSuccess then
 	    warn(errorMessage)
 	end

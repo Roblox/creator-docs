@@ -141,7 +141,7 @@ local function Run(ChatService)
 	local function createPart(speakerName, message, channelName)
 		if string.sub(message, 1, 5) == "/part" then
 			local newPart = Instance.new("Part")
-			newPart.Parent = game.Workspace
+			newPart.Parent = workspace
 			return true
 		end
 		return false
@@ -429,8 +429,8 @@ local function Run(ChatService)
 
 	ChatService:RegisterFilterMessageFunction("TimeBotFilter", addMessageType)
 
-	spawn(function()
-		while wait(5) do
+	task.spawn(function()
+		while task.wait(5) do
 			timeBot:SayMessage("The current time is: " .. os.time(), "All", {})
 		end
 	end)

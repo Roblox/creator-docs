@@ -45,12 +45,12 @@ local humanoidDescription = humanoid.HumanoidDescription
 
 -- Set custom emotes within a table
 local emoteTable = {
-["Hello"] = {3576686446},
-["Stadium"] = {3360686498},
-["Tilt"] = {3360692915},
-["Shrug"] = {3576968026},
-["Salute"] = {3360689775},
-["Point"] = {3576823880}
+  ["Hello"] = {3576686446},
+  ["Stadium"] = {3360686498},
+  ["Tilt"] = {3360692915},
+  ["Shrug"] = {3576968026},
+  ["Salute"] = {3360689775},
+  ["Point"] = {3576823880}
 }
 humanoidDescription:SetEmotes(emoteTable)
 

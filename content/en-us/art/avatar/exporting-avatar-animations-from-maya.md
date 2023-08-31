@@ -92,7 +92,7 @@ To export your avatar animation from Maya:
       <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Plugin-Manager.jpg" />
 
    1. In the search field, input **fbxmaya**. The **fbxmaya.mll** plugin displays.
-   1. Enable the **Loaded** and **Auto load**.
+   1. Enable the **Loaded** and **Auto load** options.
 
       <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Loaded-and-AutoLoad-Radio-Buttons.jpg" />
 
@@ -156,4 +156,4 @@ To test the animation in Studio:
 
    1. Select the FBX animation you just exported from Maya, then click **Open**. The animation's keyframes load into the Animation Editor.
 
-1. Navigate to the **Media and Playback Controls** and click the Play button to play the avatar animation.
+1. Navigate to the **Media and Playback Controls** and click the **Play button** to play the avatar animation.
