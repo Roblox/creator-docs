@@ -135,7 +135,7 @@ Lets assume a function that calculates the sum of a variadic ammount of numbers
 local function addLotsOfNumbers(...)
 	local sum = 0
 
-	for _, v in {...} does
+	for _, v in {...} do
 		sum += v
 	end
 
