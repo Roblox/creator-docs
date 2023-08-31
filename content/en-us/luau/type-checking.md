@@ -66,7 +66,7 @@ local function add(x, y)
 end
 ```
 
-This function will add x to y, however it might error if a string is given to this function. This is because Luau doesn't know that we want to only use numbers in this function. Lets rework this function such that it does constrain `x` and `y` to be numbers.
+This function will add x to y, however it might error if a string is given to this function, Luau doesn't know that we want to only use numbers in this function. Lets rework this function such that it does constrain `x` and `y` to be numbers.
 
 ```lua
 local function add(x: number, y: number)
@@ -74,7 +74,7 @@ local function add(x: number, y: number)
 end
 ```
 
-By adding type annotations to the parameters of the function, Luau now knows that the function takes two numbers, and throws a warning if you try to put anything into the function that isn't a number.
+By adding type annotations to the parameters of the function, Luau now knows that the function takes two numbers and throws a warning if you try to pass anything that isn't a number into the function.
 
 ```lua
 add(5, 10) -- ok
@@ -95,7 +95,7 @@ local function FindSource(script: BaseScript, pattern: string): (string, number)
 
 ### Defining a Functional Type
 
-A functional type can be defined by using the syntax `(in) -> out`. Using the functions from the previous examples, the type signatures of the functions are:
+A functional type can be defined by using the syntax `(in) -> out`. Using the functions from the previous examples, the types of the functions are:
 
 ```lua
 type add = (x: number, y: number) -> number
@@ -119,7 +119,7 @@ local frobulator: {[string]: any} = {
 }
 ```
 
-Tables can also have explicit string indicies defined in a type.
+Tables can also have explicit string indices defined in a type.
 
 ```lua
 type Car = {
@@ -130,7 +130,7 @@ type Car = {
 
 ## Variadics
 
-Here's a function that calculates the sum of a variadic set of numbers.
+Here's a function that calculates the sum of a variadic amount of numbers.
 
 ```lua
 local function addLotsOfNumbers(...)
@@ -144,7 +144,7 @@ local function addLotsOfNumbers(...)
 end
 ```
 
-As expected, this can take any value and the typechecker wont raise a warning if you give it an invalid type such as a `string`.
+As expected, this can take any value, and the typechecker wont raise a warning if you give it an invalid type, such as a `string`.
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
@@ -178,7 +178,7 @@ type addLotsOfNumbers = (...number) -> number
 
 ## Unions and Intersections
 
-It is possible to define a type to be two or more types using a union or intersection.
+It is possible to define a type to be two or more types, using a union or intersection.
 
 ```lua
 type NumberOrString = number | string
@@ -198,7 +198,7 @@ type Car = typeof {
 } --> Car: {Speed: number, Wheels: number}
 ```
 
-One way to use `typeof`, is to define a metatable type using `setmetatable` inside the function.
+One way to use `typeof`, is to define a metatable type using `setmetatable` inside the `typeof` function.
 
 ```lua
 type Vector = typeof(setmetatable({}::{
@@ -213,7 +213,7 @@ type Vector = typeof(setmetatable({}::{
 
 ## Generics
 
-Generics allow you to define at a most basic level, substitution types. Lets assume a basic object that creates a State keyword.
+Generics allow you to define at a most basic level, substitution types. Lets assume a basic object that creates a State object.
 
 ```lua
 local State = {
