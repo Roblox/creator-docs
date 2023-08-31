@@ -181,7 +181,7 @@ Before selling the player the upgrade, you need to check if they have enough mon
    ```lua
    if playerGold.Value >= upgradeCost then
       -- Subtract the item's cost from the player's money
-      playerGold.Value = playerGold.Value - upgradeCost
+      playerGold.Value -= upgradeCost
    end
    ```
 
@@ -189,8 +189,8 @@ Before selling the player the upgrade, you need to check if they have enough mon
 
    ```lua
    if playerGold.Value >= upgradeCost then
-      playerGold.Value = playerGold.Value - upgradeCost
-      playerSpaces.Value = playerSpaces.Value + newSpaces
+      playerGold.Value -= upgradeCost
+      playerSpaces.Value += newSpaces
    end
    ```
 
@@ -231,8 +231,8 @@ local function giveUpgrade(player)
 	if playerGold.Value >= upgradeCost then
 		print("Player can buy item")
 		-- Subtract the item's cost from the player's money
-		playerGold.Value = playerGold.Value - upgradeCost
-		playerSpaces.Value = playerSpaces.Value + newSpaces
+		playerGold.Value -= upgradeCost
+		playerSpaces.Value += newSpaces
 	end
 end
 

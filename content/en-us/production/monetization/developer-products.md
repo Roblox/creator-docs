@@ -116,7 +116,7 @@ productFunctions[456456] = function(receipt, player)
 	local gold = stats and stats:FindFirstChild("Gold")
 
 	if gold then
-		gold.Value = gold.Value + 100
+		gold.Value += 100
 		return true
 	end
 end

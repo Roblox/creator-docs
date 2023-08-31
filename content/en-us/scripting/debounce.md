@@ -106,7 +106,7 @@ local function healPlayer(otherPart)
 	if humanoid then
 		if not part:GetAttribute("CoolingDown") then
 			part:SetAttribute("CoolingDown", true)  -- Set attribute to true
-			humanoid.Health = humanoid.Health + 25  -- Increase player health
+			humanoid.Health += 25  -- Increase player health
 			part.Transparency = 0.75  -- Make part semi-transparent to indicate cooldown state
 			task.wait(COOLDOWN_TIME)  -- Wait for cooldown duration
 			part.Transparency = 0  -- Reset part to fully opaque
