@@ -29,7 +29,7 @@ There are three type inference modes that Luau can use in `Class.Script|Scripts`
 
 ## Types
 
-A type annoatation can be defined using the `:` operator after a variable, followed by a type definition, by default, in `nonstrict` mode, all variables are assigned the type `any`.
+A type annotation can be defined using the `:` operator after a variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.
 
 ```lua
 local foo: string = "bar"
