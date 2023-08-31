@@ -18,7 +18,7 @@ Season passes are time-bound design strategies used in Roblox experiences to del
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-0.png" width="70%"/>
-    <figcaption>Season Pass in *Jailbreak*</figcaption>
+    <figcaption>Season Pass in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 <Alert severity="warning">
@@ -74,7 +74,7 @@ The _Season length_ is the duration that a season of rewards is available to pla
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-4.png" width="70%"/>
-    <figcaption>Season Length in *Jailbreak*</figcaption>
+    <figcaption>Season Length in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 ### Season Tiers
@@ -83,7 +83,7 @@ _Season tiers_ are the milestones that players meet in order to earn rewards thr
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-5.png" width="70%"/>
-    <figcaption>Season Tiers in *Jailbreak*</figcaption>
+    <figcaption>Season Tiers in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 <h4>Tier Rewards</h4>
@@ -104,7 +104,7 @@ Extra attention is needed in implementing the following sections of a season pas
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-6.png" width="70%"/>
-    <figcaption>Tier Rewards in *Jailbreak*</figcaption>
+    <figcaption>Tier Rewards in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 <h4>Final Rewards</h4>
@@ -116,11 +116,11 @@ Although your Tiers UI shows the rewards that players earn, it's good practice t
 <GridContainer numColumns="2">
   <figure>
    <img src="../../assets/game-design/season-pass-design/season-pass-design-2.png" width="95%"/>
-    <figcaption> Final reward in *Jailbreak* </figcaption>
+    <figcaption> Final reward in [*Jailbreak*](https://www.roblox.com/games/606849621/) </figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-1.png" width="100%"/>
-    <figcaption> Final reward in *Dragon Adventures* </figcaption>
+    <figcaption> Final reward in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
 </GridContainer>
 
@@ -139,7 +139,7 @@ A _free pass_ is a version of a season pass that is available to all players. Pl
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-7.png" width="70%"/>
-    <figcaption>Free Season Pass in *Jailbreak*</figcaption>
+    <figcaption>Free Season Pass in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 Free passholders should not be able to complete premium missions or earn premium tier rewards unless they upgrade to the premium pass. Having this tiered difference still encourages and rewards player effort and playtime, but provides a monetization opportunity for your experience and incentivizes players to keep playing.
@@ -150,7 +150,7 @@ A _premium pass_ is a variation of a season pass that players have to pay in ord
 
 <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-8.png" width="70%"/>
-    <figcaption>Premium season pass in *Jailbreak*</figcaption>
+    <figcaption>Premium season pass in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 If free players upgrade to the premium pass mid-season, it's good practice to award all of the premium reward for tiers that they have already completed, so they get the full value out of the pass and aren't penalized for waiting.
@@ -191,11 +191,11 @@ Deriving _mission categories_ from the different activities in your experience i
 <GridContainer numColumns="2">
   <figure>
    <img src="../../assets/game-design/season-pass-design/season-pass-design-13.png" width="100%"/>
-    <figcaption> Daily Missions from *Jailbreak* </figcaption>
+    <figcaption> Daily Missions from [*Jailbreak*](https://www.roblox.com/games/606849621/) </figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-14.png" width="96%"/>
-    <figcaption> Daily Missions from *Dragon Adventures* </figcaption>
+    <figcaption> Daily Missions from [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
 </GridContainer>
 
@@ -214,11 +214,11 @@ Like categories, you can designate easy, medium and hard difficulties for tasks 
 <GridContainer numColumns="2">
   <figure>
    <img src="../../assets/game-design/season-pass-design/season-pass-design-9.png" width="100%"/>
-    <figcaption> Daily Missions from *Dragon Adventures* </figcaption>
+    <figcaption> Daily Missions from [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-10.png" width="96%"/>
-    <figcaption> Weekly Missions from *Dragon Adventures* </figcaption>
+    <figcaption> Weekly Missions from [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
 </GridContainer>
 
@@ -230,7 +230,7 @@ Difficulty designations also help you determine the appropriate amount of XP to 
 
  <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-12.png" width="60%"/>
-    <figcaption> Season Pass HUD surfacing in *Dragon Adventures* </figcaption>
+    <figcaption> Season Pass HUD surfacing in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
 
 Surfacing methods include:
