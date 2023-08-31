@@ -161,9 +161,9 @@ You can set mobile movement control schemes for Roblox experiences by changing t
 
 ### Automatic Jumping
 
-When `StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
+When `Class.StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `Class.StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
 
-Disable `StarterPlayer.AutoJumpEnabled` to disable this feature and force users to jump only using their key bindings.
+Disable `Class.StarterPlayer.AutoJumpEnabled` to disable this feature and force users to jump only using their key bindings.
 
 ## Adding Mobile Buttons
 
