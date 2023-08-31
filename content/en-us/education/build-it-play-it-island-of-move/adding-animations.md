@@ -91,7 +91,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    function PlayerAnimationFeedback:LoadAnimation(humanoid)
      local feedbackAnimation = Instance.new("Animation")
      feedbackAnimation.AnimationId = ANIMATION_ID
-     feedbackAnimationTrack = humanoid:LoadAnimation(feedbackAnimation)
+     feedbackAnimationTrack = humanoid.Animator:LoadAnimation(feedbackAnimation)
      feedbackAnimationTrack.Priority = Enum.AnimationPriority.Action
      feedbackAnimationTrack.Looped = false
    end
@@ -99,7 +99,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    -- Function to play the animation
    function PlayerAnimationFeedback:PlayAnimation()
      feedbackAnimationTrack:Play(ANIMATION_FADE)
-     wait(feedbackAnimationTrack.Length)
+     task.wait(feedbackAnimationTrack.Length)
    end
 
    return PlayerAnimationFeedback

@@ -90,19 +90,24 @@ To link to the Roblox Engine API, use the following syntax. The parser detects t
 - `` `Class.Name` ``
 - `` `Class.Name.Property` ``
 - `` `Class.Name:Method()` ``
+- `` `Class.Name.Event` ``
+- `` `Class.Name.Callback` ``
+
 - `` `Datatype.Name` ``
+- `` `Datatype.Name:Method()` ``
 - `` `Datatype.Name.constructor()` ``
+
 - `` `Enum.Name` ``
-- `` `Enum.Name.Item` ``
+
 - `` `Global.LuaGlobals.Name` ``
 - `` `Global.RobloxGlobals.Name` ``
 - `` `Library.Name` ``
 - `` `Library.Name.function()` ``
 
-If necessary, override the default link text using a `|` character:
+If desired, override the default link text using a `|` character:
 
-- `` `Class.ClassName.Property|NewLinkText` ``
-- `` `Global.LuaGlobals.Name|or even use multiple words` ``
+- `` `Class.Name.Property|PropertyName` ``
+- `` `Enum.Name|EnumItemName` ``
 
 The following table contains some examples and how they render in the documentation.
 
@@ -126,17 +131,25 @@ The following table contains some examples and how they render in the documentat
       <td><code>`Class.MarketplaceService:GetProductInfo()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#GetProductInfo">MarketplaceService:GetProductInfo()</a></code></td>
     </tr>
+   <tr>
+      <td><code>`Datatype.Color3`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3">Color3</a></code></td>
+    </tr>
     <tr>
-      <td><code>`Enum.CameraType`</code></td>
-      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/CameraType">CameraType</a></code></td>
+      <td><code>`Enum.Font`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">Font</a></code></td>
+    </tr>
+    <tr>
+      <td><code>`Enum.Font|GothamMedium`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">GothamMedium</a></code></td>
     </tr>
     <tr>
       <td><code>`Global.RobloxGlobals.tick()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/globals/RobloxGlobals#tick">tick()</a></code></td>
     </tr>
     <tr>
-      <td><code>`Library.coroutine|coroutines`</code></td>
-      <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutines</a></code></td>
+      <td><code>`Library.coroutine.create()`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutine.create()</a></code></td>
     </tr>
   </tbody>
 </table>

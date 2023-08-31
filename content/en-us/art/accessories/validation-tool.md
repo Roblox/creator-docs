@@ -16,7 +16,7 @@ The **Layered Clothing Validation Tool** is a supplemental tool you can install 
   </figure>
 </GridContainer>
 
-While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../art/accessories/specifications.md#layered-requirements) prior to importing them into Studio.
+While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../art/accessories/specifications.md#layered-requirements) prior to importing it into Studio.
 
 ## Installing the Validation Tool
 
@@ -57,7 +57,7 @@ To install the Clothing Validation Tool in Blender:
 
 ### Maya
 
-Before you begin the process of installing the validation tool in Maya, you must install [Python 3.0](https://www.python.org/downloads/) or higher. If you already have Python installed, you can proceed to installing the validation tool.
+Before you begin the process of installing the Validation Tool in Maya, you must install [Python 3.0](https://www.python.org/downloads/) or higher. If you already have Python installed, you can proceed to installing the Validation Tool.
 
 To install Python 3.0+ on your device:
 
@@ -73,8 +73,8 @@ To install the Clothing Validation Tool in Maya:
 1. Download [ValidationTool_Maya.zip](../../assets/accessories/validation-tool/ValidationTool_Maya.zip) and unzip the content in a local directory.
 2. Open the contents of the `.zip` file in a file browser.
 
-   - If on PC, **double-click** `install.bat`. This runs a batch script that enables you to quickly run the validation tool in Maya.
-   - If on Mac, **right-click** the `install.command` file and select **Open With** > **Terminal**. This runs a terminal script that enables you to quickly run the validation tool in Maya.
+   - If on PC, **double-click** `install.bat`. This runs a batch script that enables you to quickly run the Validation Tool in Maya.
+   - If on Mac, **right-click** the `install.command` file and select **Open With** > **Terminal**. This runs a terminal script that enables you to quickly run the Validation Tool in Maya.
 
      <img src="../../assets/accessories/validation-tool/Mac-Right-Click-Install.png" width="40%" />
 
@@ -119,14 +119,14 @@ With the plugin active and a layered asset in your workspace, you can begin vali
   </figure>
 </GridContainer>
 
-To use the validation tool on your asset:
+To use the Validation Tool on your asset:
 
 1. **Select** the object in your scene.
-2. Open the validation tool and click **Check Assets**. After a few moments, the UI updates and produces an output message.
+2. Open the Validation Tool and click **Check Assets**. After a few moments, the UI updates and produces an output message.
 3. Results with issues are highlighted with red or yellow. Some issues can be automatically corrected by clicking the highlighted button.
 
 <Alert severity="info">
-This validation tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../art/accessories/specifications.md#layered-requirements) before uploading to Studio.
+This Validation Tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../art/accessories/specifications.md#layered-requirements) before uploading to Studio.
 </Alert>
 
 ## Checks and Troubleshooting Steps
