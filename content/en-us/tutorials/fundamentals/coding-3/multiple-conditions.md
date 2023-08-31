@@ -295,7 +295,7 @@ It's recommended that every if statement has an else, just in case the code does
    ```
 
    <Alert severity="info">
-    An `else` statement should always be the **last** check in an a control structure.
+    An `else` statement should always be the **last** check in a control structure.
    </Alert>
 
 2 . Playtest to see the else message.
