@@ -192,8 +192,10 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    ```
 
    ```lua title='Applying UI Tween to Objects'
+   local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
    -- Add UITween Module
-   local UITween = require(game.ReplicatedStorage.UITweenModule)
+   local UITween = require(ReplicatedStorage.UITweenModule)
 
    -- Find player Guis and UI objects
    local playerGui = game:GetService('Players').LocalPlayer:WaitForChild('PlayerGui')
