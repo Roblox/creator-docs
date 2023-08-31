@@ -27,7 +27,7 @@ Use any Roblox project for this exercise. When finished, this part can be used a
 
 Not only can variables hold strings, they can also hold a reference, or directions, to an object. Once a script knows the direction to a part, it can affect changes to it.
 
-Rather than typing `game.Workspace.NameOfYourPart` over and over, that entire line can be stored inside a local variable. Local variables are created by typing `local` and then the name of the variable.
+Rather than typing `workspace.NameOfYourPart` over and over, that entire line can be stored inside a local variable. Local variables are created by typing `local` and then the name of the variable.
 
 For example: `local nameOfVariable`.
 
@@ -39,14 +39,14 @@ A local variable only works in the script where it was created. If a local varia
 
    ```lua
    -- Changes the color of LoopingPart every few seconds
-   local looping part
+   local loopingPart
    ```
 
-2. Set the variable to the looping part by typing `= game.Workspace.loopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
+2. Set the variable to the looping part by typing `= workspace.LoopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
 
    ```lua
    -- Changes the color of LoopingPart every few seconds
-   local loopingPart = game.Workspace.LoopingPart
+   local loopingPart = workspace.LoopingPart
    ```
 
    <Alert severity="info">
@@ -79,7 +79,7 @@ Next, you'll set up the while loop for the color changing part.
 
    ```lua
    -- Changes the color of loopingPart every few seconds
-   local loopingPart = game.Workspace.LoopingPart
+   local loopingPart = workspace.LoopingPart
 
    -- Looping Code
    while true do
@@ -98,7 +98,7 @@ With the while loop created, instructions can be added to change the part's colo
 1. Between `while true do` and `end`, set the Color property of the part to `Datatype.Color3.fromRGB()`.
 
    ```lua
-   local loopingPart = game.Workspace.LoopingPart
+   local loopingPart = workspace.LoopingPart
 
    while true do
        loopingPart.Color = Color3.fromRGB()
@@ -108,7 +108,7 @@ With the while loop created, instructions can be added to change the part's colo
 2. Setting the color can be done using a color picker in Studio. To do so, left click inside the `()` next to `fromRGB`. Then, click on the color wheel icon. Once you have a desired color, press OK to automatically add the color value in the code.
 
    ```lua
-   local loopingPart = game.Workspace.LoopingPart
+   local loopingPart = workspace.LoopingPart
 
    while true do
        loopingPart.Color = Color3.fromRGB(82, 227, 255)
@@ -121,12 +121,13 @@ With the while loop created, instructions can be added to change the part's colo
 
 ### Making the Script Wait
 
-If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. To make the script wait before running the next line of code, use a `Library.task.wait()` function.
+If you add a second line of color changing code right now, it would change the brick's color so fast you might not even see the first color go by. This also 
+causes the experience to crash. To make the script wait before running the next line of code, use a `Library.task.wait()` function.
 
 1. On the line after changing the brick color, type `task.wait(3)`. Whatever number placed inside the `()` is how many seconds the script will wait.
 
    ```lua
-   local loopingPart = game.Workspace.LoopingPart
+   local loopingPart = workspace.LoopingPart
 
    while true do
        loopingPart.Color = Color3.fromRGB(82, 227, 255)
@@ -170,7 +171,7 @@ At this point, if color changing part doesn't work as intended, try one of the f
 
 ```lua
 -- Create a variable to store the part
-local loopingPart = game.Workspace.LoopingPart
+local loopingPart = workspace.LoopingPart
 
 -- Looping Code
 while true do
