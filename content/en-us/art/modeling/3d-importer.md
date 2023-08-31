@@ -13,7 +13,7 @@ The 3D Importer allows you to import `.fbx` or `.obj` 3D models into Studio as a
 - Meshes with animation data.
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/avatar/facial-animation/index.md).
 
-The 3D Importer is divided in three sections:
+The 3D Importer is divided into three sections:
 
 <img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" />
 
@@ -170,7 +170,7 @@ File geometry includes information on the file dimensions and polycount of the e
   </tr>
   <tr>
     <td>Invert Negative Faces</td>
-    <td>Flip negative faces. By default, this is **disabled**.</td>
+    <td>Inverts the orientation of negative faces in the mesh. By default, this is **disabled**.</td>
   </tr>
 </tbody>
 </table>
