@@ -168,7 +168,7 @@ For loops need a function, or iterator, to iterate over different types of colle
 
 ### Generalized Iteration
 
-In Luau, it is possible to iterater over a table by using the `in` keyword directly on the table instead of using an iterator function.
+In Luau, it is possible to iterate over a table by using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`.
 
 ```lua
 for i, v in {1, 2, 3, 4, 5} do
@@ -176,7 +176,7 @@ for i, v in {1, 2, 3, 4, 5} do
 end
 ```
 
-The `__iter` metamethod can be used to create a custom iterator function that can be called when using generalized iteration.
+The `__iter` metamethod can be used to create a custom iterator function, that can be called when using generalized iteration.
 
 ```lua
 local obj = {items = {1, 4, 9}}
