@@ -70,7 +70,7 @@ property.
 
 ### ColorShift_Top
 
-The `Class.Lighting|ColorShift_Top`
+The `Class.Lighting.ColorShift_Top|ColorShift_Top`
 property sets a hue that reflects from surfaces facing the sun or moon.
 
 <GridContainer numColumns="2">
@@ -86,7 +86,7 @@ property sets a hue that reflects from surfaces facing the sun or moon.
 
 ### ColorShift_Bottom
 
-The `Class.Lighting|ColorShift_Bottom`
+The `Class.Lighting.ColorShift_Bottom|ColorShift_Bottom`
 property sets a hue that reflects from surfaces that are facing away
 from the sun or moon.
 
@@ -177,7 +177,7 @@ property renders shadows.
 
 ### ShadowSoftness
 
-The `Class.Lighting|ShadowSoftness`
+The `Class.Lighting.ShadowSoftness|ShadowSoftness`
 property adjusts how blurry shadows are from a value of 0 (hard edges)
 to 1 (soft edges).
 
@@ -259,7 +259,7 @@ In the following images, note how the ambient light changes, particularly inside
 
 ### EnvironmentSpecularScale
 
-The `Class.Lighting|EnvironmentSpecularScale`
+The `Class.Lighting.EnvironmentSpecularScale|EnvironmentSpecularScale`
 property determines how much specular light is derived from the
 environment. When set near a value of **1**, smooth objects better reflect
 the environment and metal appears more realistic.
