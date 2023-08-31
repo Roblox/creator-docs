@@ -129,7 +129,7 @@ Here's the list of available metamethods:
 	  <tr>
 		  <td>__iter(table)</td>
 		  <td>Used to denote a custom iterator when using generalized iteration.</td>
-		</tr>
+    </tr>
 	</tbody>
 </table>
 
