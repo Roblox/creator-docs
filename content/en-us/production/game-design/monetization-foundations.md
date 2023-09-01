@@ -325,7 +325,7 @@ A good season pass is contextual and organized, clearly communicating the reward
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-19.png" width="70%"/>
-    <figcaption>Season pass in [*Bot Clash Simulator*](https://www.roblox.com/games/9300407930/)</figcaption>
+    <figcaption>Season pass in *Bot Clash Simulator*</figcaption>
   </figure>
 
 <h4>Inviting</h4>
