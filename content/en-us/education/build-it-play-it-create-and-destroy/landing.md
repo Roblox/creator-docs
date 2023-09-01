@@ -5,7 +5,7 @@ next: /education/build-it-play-it-create-and-destroy/designing-a-map
 prev:
 ---
 
-Learn how to design a multiplayer map for a experience in which players destroy cities with laser beams for points. Creating this map is great practice if you want to learn how to build battle royales or other combat games down the road.
+Learn how to design a multiplayer map for an experience in which players destroy cities with laser beams for points. Creating this map is great practice if you want to learn how to build battle royales or other combat games down the road.
 
 <video controls src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_introVideo_final_webOptimize.mp4" width="100%"></video>
 

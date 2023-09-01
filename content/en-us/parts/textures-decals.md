@@ -11,10 +11,10 @@ add a `Class.Texture` or
 `Class.Decal` object to a part or union, you
 can:
 
-- Change the texture or decal `Class.Decal|Color3` property to
+- Change the texture or decal `Class.Decal.Color3|Color3` property to
   set a color tint using RGB color codes.
 
-- Change the texture or decal `Class.Decal|Transparency`
+- Change the texture or decal `Class.Decal.Transparency|Transparency`
   property to a value between the default of **0**
   (fully visible) and **1** (invisible).
 
@@ -128,7 +128,7 @@ Unlike decals, textures provide further functionality to scale, offset, and anim
 
 The size of the part doesn't affect the texture. Instead, scaling a part only increases or decreases the number of times the texture repeats.
 
-The `Class.Texture|StudsPerTileU` and `Class.Texture|StudsPerTileV` properties determine the size of each "tile" in studs. `Class.Texture|StudsPerTileU` determines the texture's horizontal size while `Class.Texture|StudsPerTileV` determines the texture's vertical size.
+The `Class.Texture.StudsPerTileU|StudsPerTileU` and `Class.Texture.StudsPerTileV|StudsPerTileV` properties determine the size of each "tile" in studs. `Class.Texture.StudsPerTileU|StudsPerTileU` determines the texture's horizontal size while `Class.Texture.StudsPerTileV|StudsPerTileV` determines the texture's vertical size.
 
 <GridContainer numColumns="3">
   <figure>
@@ -153,7 +153,7 @@ To scale a texture:
 
 ### Offsetting Textures
 
-If you want more control over a texture's position, offset the texture by adjusting the `Class.Texture|OffsetStudsU` and `Class.Texture|OffsetStudsV` properties. This is also helpful for [animation](#animating-textures).
+If you want more control over a texture's position, offset the texture by adjusting the `Class.Texture.OffsetStudsU|OffsetStudsU` and `Class.Texture.OffsetStudsV|OffsetStudsV` properties. This is also helpful for [animation](#animating-textures).
 
 <GridContainer numColumns="3">
   <figure>
@@ -178,7 +178,7 @@ To offset a texture:
 
 ### Animating Textures
 
-Using `Class.TweenService`, you can tween texture properties like `Class.Texture|OffsetStudsU` and `Class.Texture|StudsPerTileV` to achieve animated surfaces. For example, if you apply two fog textures to one container and animate them with the following script, you can achieve the appearance of a layered moving fog:
+Using `Class.TweenService`, you can tween texture properties like `Class.Texture.OffsetStudsU|OffsetStudsU` and `Class.Texture.StudsPerTileV|StudsPerTileV` to achieve animated surfaces. For example, if you apply two fog textures to one container and animate them with the following script, you can achieve the appearance of a layered moving fog:
 
 <figure>
   <video src="../assets/modeling/textures-decals/Animated-Textures.mp4" controls width="80%"></video>

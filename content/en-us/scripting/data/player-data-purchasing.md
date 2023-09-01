@@ -58,7 +58,7 @@ This high-level diagram illustrates the key systems in the sample and how they i
 
 ### Background
 
-As `Class.DataStoreService` makes web requests under the hood, its requests are not guaranteed to succeed. When this happens, the `Class.DataStore` methods throw errors, allowing you to handle them.
+As `Class.DataStoreService` makes web requests under the hood, its requests are not guaranteed to succeed. When this happens, the `Class.GlobalDataStore|DataStore` methods throw errors, allowing you to handle them.
 
 A common "gotcha" can occur if you attempt to handle data store failures like this:
 
@@ -82,7 +82,7 @@ While this is a perfectly valid retry mechanism for a generic function, it is no
 1. The request fails, so a retry is scheduled to run in 2 seconds.
 1. Before the retry occurs, request B sets the value of `K` to 2, but the retry of request A immediately overwrites this value and sets `K` to 1.
 
-Even though `Class.DataStore#UpdateAsync` operates on the latest version of the key's value, `UpdateAsync` requests must still be processed in order to avoid invalid transient states (for example, a purchase subtracts coins before a coin addition gets processed, resulting in negative coins).
+Even though `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` operates on the latest version of the key's value, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` requests must still be processed in order to avoid invalid transient states (for example, a purchase subtracts coins before a coin addition gets processed, resulting in negative coins).
 
 Our player data system uses a new class, `DataStoreWrapper`, which provides yielding retries that are guaranteed to be processed in order per key.
 
@@ -90,7 +90,7 @@ Our player data system uses a new class, `DataStoreWrapper`, which provides yiel
 
 <img src="../../assets/data/player-data-purchasing/retry-diagram.png" alt="An process diagram illustrating the retry system" width="60%" />
 
-`DataStoreWrapper` provides methods corresponding to the `Class.DataStore` methods: `Class.DataStore:getAsync()`, `Class.DataStore:setAsync()`, `Class.DataStore:updateAsync()` and `Class.DataStore:removeAsync()`.
+`DataStoreWrapper` provides methods corresponding to the `Class.GlobalDataStore|DataStore` methods: `Class.GlobalDataStore:GetAsync()|DataStore:GetAsync()`, `Class.GlobalDataStore:SetAsync()|DataStore:SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|DataStore:UpdateAsync()` and `Class.GlobalDataStore:RemoveAsync()|DataStore:RemoveAsync()`.
 
 These methods, when called:
 
@@ -112,15 +112,15 @@ These methods, when called:
 
    `Value=0, SetAsync(1), GetAsync(), SetAsync(2)`
 
-   The expected behavior is that `GetAsync()` would return `1`, but if we remove the `SetAsync()` request from the queue due to it being made redundant by the most recent one, it would return `0`.
+   The expected behavior is that `Class.GlobalDataStore:GetAsync()|GetAsync()` would return `1`, but if we remove the `Class.GlobalDataStore:SetAsync()|SetAsync()` request from the queue due to it being made redundant by the most recent one, it would return `0`.
 
-   The logical progression is that when a new write request is added, only prune stale requests as far back as the most recent read request. `UpdateAsync()`, by far the most common operation (and the only one used by this system), can both read and write, so it would be difficult to reconcile within this design this without adding extra complexity.
+   The logical progression is that when a new write request is added, only prune stale requests as far back as the most recent read request. `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, by far the most common operation (and the only one used by this system), can both read and write, so it would be difficult to reconcile within this design this without adding extra complexity.
 
-   `DataStoreWrapper` could require you to specify whether an `UpdateAsync()` request was permitted to read and/or write, but it would have no applicability to our player data system, where this cannot be determined ahead of time due to the session locking mechanism (covered in more detail later).
+   `DataStoreWrapper` could require you to specify whether an `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` request was permitted to read and/or write, but it would have no applicability to our player data system, where this cannot be determined ahead of time due to the session locking mechanism (covered in more detail later).
 
 2. Once removed from the queue, it's hard to decide on an intuitive rule for _how_ this should be handled. When a `DataStoreWrapper` request is made, the current thread is yielded until it is completed. If we removed stale requests from the queue, we would have to decide whether to return `false, "Removed from queue"` or to never return and discard the active thread. Both approaches come with their own drawbacks and offload additional complexity onto the consumer.
 
-Ultimately, our view is that the simple approach (processing every request) is preferable here and creates a clearer environment to navigate in when approaching complex issues like session locking. The only exception to this is during `game.OnClose`, where clearing the queue becomes necessary to save all users' data in time and the value individual function calls return is no longer an ongoing concern. To account for this, we expose a `skipAllQueuesToLastEnqueued` method. For more context, see [Player Data](#player-data).
+Ultimately, our view is that the simple approach (processing every request) is preferable here and creates a clearer environment to navigate in when approaching complex issues like session locking. The only exception to this is during `Class.DataModel:BindToClose()`, where clearing the queue becomes necessary to save all users' data in time and the value individual function calls return is no longer an ongoing concern. To account for this, we expose a `skipAllQueuesToLastEnqueued` method. For more context, see [Player Data](#player-data).
 
 ## Session Locking
 
@@ -130,20 +130,20 @@ Ultimately, our view is that the simple approach (processing every request) is p
 
 Player data is stored in memory on the server and is only read from and written to the underlying data stores when necessary. You can read and update in-memory player data instantly without needing web requests and avoid exceeding `Class.DataStoreService` limits.
 
-For this model to work as intended, it is imperative that no more than one server is able to load a player's data into memory from the `Class.DataStore` at the same time.
+For this model to work as intended, it is imperative that no more than one server is able to load a player's data into memory from the `Class.GlobalDataStore|DataStore` at the same time.
 
 For example, if server A loads a player's data, server B can't load that data until server A releases its lock on it during a final save. Without a locking mechanism, server B could load out-of-date player data from the data store before server A has a chance to save the more recent version that it has in memory. Then if server A saves its newer data after server B loads the out-of-date data, server B would overwrite that newer data during its next save.
 
 Even though Roblox only allows a client to be connected to one server at a time, you can't assume that data from one session is always saved before the next session starts. Consider the following scenarios that can occur when a player leaves server A:
 
-1. Server A makes a `DataStore` request to save their data, but the request fails and requires several retries to successfully complete. During the retry period, the player joins server B.
-2. Server A makes too many `UpdateAsync` calls to the same key and gets throttled. The final save request is placed in a queue. While the request is in the queue, the player joins server B.
-3. On server A, some code connected to the `PlayerRemoving` event yields before the player's data is saved. Before this operation completes, the player joins server B.
+1. Server A makes a `Class.GlobalDataStore|DataStore` request to save their data, but the request fails and requires several retries to successfully complete. During the retry period, the player joins server B.
+2. Server A makes too many `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` calls to the same key and gets throttled. The final save request is placed in a queue. While the request is in the queue, the player joins server B.
+3. On server A, some code connected to the `Class.Players.PlayerRemoving|PlayerRemoving` event yields before the player's data is saved. Before this operation completes, the player joins server B.
 4. The performance of server A has degraded to the point that the final save is delayed until after the player joins server B.
 
 These scenarios should be rare, but they do occur, particularly in situations where a player disconnects from one server and connects to another in rapid succession (for example, while teleporting). Some malicious users might even attempt to abuse this behavior to complete actions without them persisting. This can be particularly impactful in games that allow players to trade and is a common source of item duplication exploits.
 
-Session locking addresses this vulnerability by ensuring that when a player's `DataStore` key is first read by the server, the server atomically writes a lock to the key's metadata inside the same `UpdateAsync` call. If this lock value is present when any other server attempts to read or write the key, the server does not proceed.
+Session locking addresses this vulnerability by ensuring that when a player's `Class.GlobalDataStore|DataStore` key is first read by the server, the server atomically writes a lock to the key's metadata inside the same `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` call. If this lock value is present when any other server attempts to read or write the key, the server does not proceed.
 
 ### Approach
 
@@ -151,9 +151,9 @@ Session locking addresses this vulnerability by ensuring that when a player's `D
 
 `SessionLockedDataStoreWrapper` is a meta-wrapper around the `DataStoreWrapper` class. `DataStoreWrapper` provides queueing and retrying functionality, which `SessionLockedDataStoreWrapper` supplements with session locking.
 
-`SessionLockedDataStoreWrapper` passes every `DataStore` request—regardless of whether it is `GetAsync`, `SetAsync` or `UpdateAsync`—through `UpdateAsync`. This is because `UpdateAsync` allows a key to be both read and written to atomically. It is also possible to abandon the write based on the value read by returning `nil` in the transformation callback.
+`SessionLockedDataStoreWrapper` passes every `Class.GlobalDataStore|DataStore` request—regardless of whether it is `Class.GlobalDataStore:GetAsync()|GetAsync`, `Class.GlobalDataStore:SetAsync()|SetAsync` or `Class.GlobalDataStore:UpdateAsync()|UpdateAsync`—through `Class.GlobalDataStore:UpdateAsync()|UpdateAsync`. This is because `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` allows a key to be both read and written to atomically. It is also possible to abandon the write based on the value read by returning `nil` in the transformation callback.
 
-The transformation function passed into `UpdateAsync` for each request performs the following operations:
+The transformation function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` for each request performs the following operations:
 
 1. Verifies the key is safe to access, abandoning the operation if it is not. "Safe to access" means:
 
@@ -161,13 +161,13 @@ The transformation function passed into `UpdateAsync` for each request performs 
 
    - If this server has placed its own `LockId` value in the key's metadata previously, then this value is still in the key's metadata. This accounts for the situation where another server has taken over this server's lock (by expiry or by force) and later released it. Alternatively phrased, even if `LockId` is `nil`, another server could still have replaced and removed a lock in the time since you locked the key.
 
-2. `UpdateAsync` performs the `DataStore` operation the consumer of `SessionLockedDataStoreWrapper` requested. For example, `GetAsync` translates to `function(value) return value end`.
+2. `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` performs the `Class.GlobalDataStore|DataStore` operation the consumer of `SessionLockedDataStoreWrapper` requested. For example, `Class.GlobalDataStore:GetAsync()|GetAsync()` translates to `function(value) return value end`.
 
-3. Depending on the parameters passed into the request, `UpdateAsync` either locks or unlocks the key:
+3. Depending on the parameters passed into the request, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` either locks or unlocks the key:
 
-   1. If the key is to be locked, `UpdateAsync` sets the `LockId` in the key's metadata to a GUID. This GUID is stored in-memory on the server so it can be verified the next time it accesses the key. If the server already has a lock on this key, it makes no changes. It also schedules a task to warn you if you don't access the key again to maintain the lock within the lock's expiration time.
+   1. If the key is to be locked, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` sets the `LockId` in the key's metadata to a GUID. This GUID is stored in-memory on the server so it can be verified the next time it accesses the key. If the server already has a lock on this key, it makes no changes. It also schedules a task to warn you if you don't access the key again to maintain the lock within the lock's expiration time.
 
-   2. If the key is to be unlocked, `UpdateAsync` removes the `LockId` in the key's metadata.
+   2. If the key is to be unlocked, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` removes the `LockId` in the key's metadata.
 
 A custom retry handler is passed into the underlying `DataStoreWrapper` so that the operation is retried if it was aborted at step 1 due to the session being locked.
 
@@ -175,11 +175,11 @@ A custom error message is also returned to the consumer, allowing the player dat
 
 ### Caveats
 
-The session locking regime relies on a server always releasing its lock on a key when it is done with it. This should always happen through an instruction to unlock the key as part of the final write in `PlayerRemoving` or `OnGameClose`.
+The session locking regime relies on a server always releasing its lock on a key when it is done with it. This should always happen through an instruction to unlock the key as part of the final write in `Class.Players.PlayerRemoving|PlayerRemoving` or `Class.DataModel:BindToClose()|BindToClose()`.
 
 However, the unlock can fail in certain situations. For example:
 
-- The server crashed or `DataStoreService` was inoperable for all attempts to access the key.
+- The server crashed or `Class.DataStoreService` was inoperable for all attempts to access the key.
 - Due to an error in logic or similar bug, the instruction to unlock the key was not made.
 
 To maintain the lock on a key, you must regularly access it for as long as it is loaded in memory. This would normally be done as part of the auto-save loop running in the background in most player data systems, but this system also exposes a `refreshLockAsync` method if you need to do it manually.
@@ -192,29 +192,29 @@ If the lock expiry time has been exceeded without the lock being updated, then a
 
 ### Background
 
-The `ProcessReceipt` callback performs the critical job of determining when to finalize a purchase. `ProcessReceipt` is called in very specific scenarios. For its set of guarantees, see `MarketplaceService.ProcessReceipt`.
+The `ProcessReceipt` callback performs the critical job of determining when to finalize a purchase. `ProcessReceipt` is called in very specific scenarios. For its set of guarantees, see `Class.MarketplaceService.ProcessReceipt`.
 
 Although the definition of "handling" a purchase can differ between experiences, we use the following criteria
 
 1. The purchase has not previously been handled.
 1. The purchase is reflected in the current session.
-1. The purchase has been saved to a `DataStore`.
+1. The purchase has been saved to a `Class.GlobalDataStore|DataStore`.
 
-   Every purchase, even one-time consumables, should be reflected in the `DataStore` so users' purchase history is included with their session data.
+   Every purchase, even one-time consumables, should be reflected in the `Class.GlobalDataStore|DataStore` so users' purchase history is included with their session data.
 
 This requires conducting the following operations before returning `PurchaseGranted`:
 
 1. Verify the `PurchaseId` has not already been recorded as handled.
 2. Award the purchase in the player's in-memory player data.
 3. Record the `PurchaseId` as handled in the player's in-memory player data.
-4. Write the player's in-memory player data to the `DataStore`.
+4. Write the player's in-memory player data to the `Class.GlobalDataStore|DataStore`.
 
 Sesson locking simplifies this flow, as you no longer need to worry about the following scenarios:
 
-- The in-memory player data in the current server potentially being out-of-date, requiring you to fetch the latest value from the `DataStore` before verifying the `PurchaseId` history
+- The in-memory player data in the current server potentially being out-of-date, requiring you to fetch the latest value from the `Class.GlobalDataStore|DataStore` before verifying the `PurchaseId` history
 - The callback for the same purchase running in another server, requiring you to both read and write the `PurchaseId` history and save the updated player data with the purchase reflected atomically to prevent race conditions
 
-Session locking guarantees that, if an attempt to write to the player's `DataStore` is successful, no other server has successfully read or written to the player's `DataStore` between the data being loaded and saved in this server. In short, the in-memory player data in this server is the most up-to-date version available. There are some caveats, but they do not impact this behavior.
+Session locking guarantees that, if an attempt to write to the player's `Class.GlobalDataStore|DataStore` is successful, no other server has successfully read or written to the player's `Class.GlobalDataStore|DataStore` between the data being loaded and saved in this server. In short, the in-memory player data in this server is the most up-to-date version available. There are some caveats, but they do not impact this behavior.
 
 ### Approach
 
@@ -228,7 +228,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
 1. Verify the `PurchaseId` is not already recorded as processed in the player data.
 
-   Due to session locking, the array of `PurchaseIds` the system has in memory is the most up-to-date version. If the `PurchaseId` is recorded as processed and reflected in a value that has been loaded to or saved to the `DataStore`, return `PurchaseGranted`. If it is recorded as processed, but _not_ reflected in the `DataStore`, return `NotProcessedYet`.
+   Due to session locking, the array of `PurchaseIds` the system has in memory is the most up-to-date version. If the `PurchaseId` is recorded as processed and reflected in a value that has been loaded to or saved to the `Class.GlobalDataStore|DataStore`, return `PurchaseGranted`. If it is recorded as processed, but _not_ reflected in the `Class.GlobalDataStore|DataStore`, return `NotProcessedYet`.
 
 1. Update the Player Data locally in this server to "award" the purchase.
 
@@ -240,7 +240,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
 1. Update the player data locally in this server to store the `PurchaseId`.
 
-1. Submit a request to save the in-memory data to the `DataStore`, returning `PurchaseGranted` if the request is successful. If not, return `NotProcessedYet`.
+1. Submit a request to save the in-memory data to the `Class.GlobalDataStore|DataStore`, returning `PurchaseGranted` if the request is successful. If not, return `NotProcessedYet`.
 
    If this save request is not successful, a later request to save the player's in-memory session data could still succeed. During the next `ProcessReceipt` call, step 2 handles this situation and returns `PurchaseGranted`.
 
@@ -295,7 +295,7 @@ Modules that provide an interface for game code to synchronously read and write 
 
 - Error statuses encountered when saving or loading player data are replicated to `PlayerDataClient`.
 - Access this information with the `getLoadError` and `getSaveError` methods, along with the `loaded` and `saved` signals.
-- There are two types of errors: `DataStoreError` (the `DataStoreService` request failed) and `SessionLocked` (see [Session Locking](#session-locking)).
+- There are two types of errors: `DataStoreError` (the `Class.DataStoreService` request failed) and `SessionLocked` (see [Session Locking](#session-locking)).
 - Use these events to disable client purchase prompts and implement warning dialogs. This image shows an example dialog:
 
 <img src="../../assets/data/player-data-purchasing/data-warning.png" alt="A screenshot of an example warning that could be shown when player data fails to load" width="60%" />
@@ -312,8 +312,8 @@ Modules that provide an interface for game code to synchronously read and write 
 
 1. On a periodic loop, the server writes each player's data to the data store (provided it is safe to save). This welcome redundancy mitigates loss in case of a server crash and is also necessary to maintain the session lock.
 
-1. When a request to shutdown the server is received, the following occurs in a `BindToClose` callback:
+1. When a request to shutdown the server is received, the following occurs in a `Class.DataModel:BindToClose()|BindToClose` callback:
 
-   1. A request is made to save each player's data in the server, following the process normally gone through when a player leaves the server. These requests are made in parallel, as `BindToClose` callbacks only have 30 seconds to complete.
+   1. A request is made to save each player's data in the server, following the process normally gone through when a player leaves the server. These requests are made in parallel, as `Class.DataModel:BindToClose()|BindToClose` callbacks only have 30 seconds to complete.
    1. To expedite the saves, all other requests in each key's queue are cleared from the underlying `DataStoreWrapper` (see [Retries](#retries)).
    1. The callback doesn't return until all requests have completed.

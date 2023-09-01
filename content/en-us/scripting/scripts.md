@@ -19,7 +19,7 @@ Roblox has three types of scripts:
 
 - `Class.Script` for scripts that can run on the server.
 - `Class.LocalScript` for scripts that can run on a client.
-- `Class.ModuleScript` for reusable modules that can be included in server or
+- `Class.ModuleScript` for reusable modules that can be included in server and
   client scripts.
 
 To control where scripts run, see the [server](../projects/data-model.md#server),
@@ -143,7 +143,7 @@ If you want to modify the same data for multiple copies of the same
 object or reuse the same data for different objects, store the data in
 `Class.ModuleScript|ModuleScripts`. It's an easier way for you to reuse the data in other scripts, and you can store tables and functions.
 
-The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` stores the configuration values for a generic gun:
+The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` stores the configuration values for a generic gun:
 
 ```lua title="Weapon Stats"
 -- ModuleScript in ReplicatedStorage named GunConfig
@@ -169,7 +169,7 @@ You can use `Class.ModuleScript|ModuleScripts` to store
 `Class.BindableEvent|BindableEvents` and provide
 custom event handlers that are directly tied to the methods of `Class.ModuleScript`.
 
-The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` has a custom event that fires when the switch changes state:
+The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` has a custom event that fires when the switch changes state:
 
 ```lua title="Switch Module"
 -- ModuleScript in ReplicatedStorage named Switch
@@ -192,16 +192,18 @@ The following `Class.LocalScript` in `Class.ReplicatedFirst` connects a function
 
 ```lua
 -- LocalScript in ReplicatedFirst
-local Switch = require(game.ReplicatedStorage:WaitForChild("Switch"))
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Switch = require(ReplicatedStorage:WaitForChild("Switch"))
 
 Switch.Changed:Connect(function(newState)
 	print("Switch state is now", newState)
 end
 
 -- Test the flipping a few times
-wait(1)
+task.wait(1)
 Switch.flip()
-wait(1)
+task.wait(1)
 Switch.flip()
 ```
 
@@ -225,7 +227,9 @@ The following `Class.ModuleScript` in `Class.ReplicatedFirst` provides an encaps
 -- ModuleScript in ReplicatedFirst named NetworkManagerClient
 local NetworkManagerClient = {}
 
-local remoteEvent = game.ReplicatedStorage:WaitForChild("RemoteEvent")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 
 -- Encapsulating the remote object's FireServer function
 function NetworkManagerClient.FireServer(id, ...)
@@ -254,7 +258,9 @@ function NetworkManagerServer.GetServerEventSignal(id)
 end
 
 -- Connecting to
-local remoteEvent = game.ReplicatedStorage:WaitForChild("RemoteEvent")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
 	-- Finding every bindable event that matches the id of the received remote event
 	for _, signal in next, networkSignalList do
@@ -271,7 +277,9 @@ The following `Class.LocalScript` sends a message with the id "RequestA" with an
 
 ```lua
 -- LocalScript in ReplicatedFirst
-local NetworkManagerClient = require(game.ReplicatedFirst:WaitForChild("NetworkManagerClient"))
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+
+local NetworkManagerClient = require(ReplicatedFirst:WaitForChild("NetworkManagerClient"))
 NetworkManagerClient.FireServer("RequestA", "Hello")
 ```
 
@@ -279,7 +287,9 @@ The following `Class.Script` connects to the network message id "RequestA" and p
 
 ```lua
 -- Script in ServerScriptService
-local NetworkManagerServer = require(game.ServerScriptService:WaitForChild("NetworkManagerServer"))
+local ServerScriptService = game:GetService("ServerScriptService")
+
+local NetworkManagerServer = require(ServerScriptService:WaitForChild("NetworkManagerServer"))
 NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, ...)
 	print("Received RequestA from", player, ...)
 end)

@@ -33,13 +33,13 @@ You can use `nil` to clear some properties of objects. For example, you can set 
 local part = Instance.new("Part")
 -- Parent new Part to the workspace, making it viewable
 part.Parent = workspace
-wait(1)
+task.wait(1)
 -- Remove the Part from view, but not from memory
 part.Parent = nil
-wait(1)
+task.wait(1)
 -- Part still exists because it's referenced by the variable 'part', so it can be returned to view
 part.Parent = workspace
-wait(1)
+task.wait(1)
 -- Remove the part from view again
 part.Parent = nil
 -- Clear part reference so it gets picked up by the garbage collector

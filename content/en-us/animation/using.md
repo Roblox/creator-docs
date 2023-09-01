@@ -1,6 +1,6 @@
 ---
 title: Using Animations
-description: Expalins the process of playing animations through scripts, and replacing default animations.
+description: Explains the process of playing animations through scripts, and replacing default animations.
 ---
 
 Once you have [created an animation](../animation/editor.md), you need to use scripts to include them in your experience. You can either [play animations manually](#playing-animations-from-scripts) from scripts or [replace default animations](#replacing-default-animations) for player characters.
@@ -15,9 +15,9 @@ To play an animation on a rig containing a `Class.Humanoid`
 object, such as typical playable characters, follow this basic pattern:
 
 1. Ensure that the local player's `Class.Humanoid` contains an `Class.Animator` object.
-1. Create a new `Class.Animation` instance with the proper `Class.Animation.AnimationId|AnimationId`.
-1. Load the animation via `Class.Animator:LoadAnimation()` to create an `Class.AnimationTrack`.
-1. Play the track with `Class.AnimationTrack:Play()`.
+2. Create a new `Class.Animation` instance with the proper `Class.Animation.AnimationId|AnimationId`.
+3. Load the animation via `Class.Animator:LoadAnimation()` to create an `Class.AnimationTrack`.
+4. Play the track with `Class.AnimationTrack:Play()`.
 
 For example, the following `Class.LocalScript`, when placed in
 `Class.StarterPlayerScripts`, loads a "kick" animation onto the player's character and plays it. The script also utilizes the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()` method to detect when a specific [animation event](../animation/events.md) occurs.

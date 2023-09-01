@@ -98,7 +98,7 @@ You can also make an in-experience tool without parts or meshes as an inventory 
 
 <img src="../assets/mechanics/in-experience-tools/Tool-RequiresHandle.png" width="45%" />
 
-## Adding Tools to Your Expereince
+## Adding Tools to Your Experience
 
 Once you finish setting up your in-experience tool, you need to place it in the proper area of your experience's object hierarchy. Where you place the tool within the experience's object hierarchy depends on it's intended use.
 
@@ -169,13 +169,15 @@ The following example shows steps for adding a `Class.Script` on the server that
 2. Copy the following code and paste it into your `Class.Script`.
 
    ```lua
+   local Lighting = game:GetService("Lighting")
+
    local tool = script.Parent
    local function onActivate()
-           if game.Lighting.ClockTime \>= 8 and game.Lighting.ClockTime < 16 then
-             game.Lighting.ClockTime = 20
-           else
-             game.Lighting.ClockTime = 8
-           end
+    if Lighting.ClockTime >= 8 and Lighting.ClockTime < 16 then
+      Lighting.ClockTime = 20
+    else
+      Lighting.ClockTime = 8
+    end
    end
    tool.Activated:Connect(onActivate)
    ```
@@ -231,7 +233,7 @@ For more information on the different script types, see [Scripts](../scripting/s
 
 A tool might work fine in Studio but not in a live Roblox experience. If this occurs, use the following tips for troubleshooting:
 
-- `LocalScripts` and `Scripts` can't directly listen to each other, so you need to add a `Class.RemoteEvent` to send messages between the two scripts.
+- `Class.LocalScript|LocalScripts` and `Class.Script|Scripts` can't directly listen to each other, so you need to add a `Class.RemoteEvent` to send messages between the two scripts.
 - Make sure that each `Class.Script` and `Class.LocalScript` only takes care of exactly what it's supposed to do.
 
 For more information on `Class.RemoteEvent|RemoteEvents`, see [Remote Events and Callbacks](../scripting/events/remote.md).

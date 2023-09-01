@@ -59,7 +59,7 @@ Playtest your game with peers and check for the following:
 
 Test, evaluate, and modify variables to improve gameplay. Some examples:
 
-- Change `Class.GameSettings.matchDuration` to make matches longer in a larger map.
+- Change `GameSettings.matchDuration` to make matches longer in a larger map.
 - Make the intermission duration longer if players feel it's too sudden.
 
 ### Make the Lobby Social

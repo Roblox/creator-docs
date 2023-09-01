@@ -6,12 +6,12 @@ console.log('::group::🛠️ Getting configuration');
 const config = await getConfig();
 console.log('::endgroup::');
 
-import fs from 'fs';
 import path from 'path';
 import {
   FileExtension,
   getAllContentFileNamesWithExtension,
   getFilePathFromRepoRoot,
+  outputDirectory,
   readFileSync,
   repositoryRoot,
   writeListToFile,
@@ -22,10 +22,10 @@ import {
 } from './utils/git.js';
 import {
   GitHubLabel,
-  PullRequestComment,
   addLabelToIssue,
   getNewPullRequestCommentForVFileMessage,
   postPullRequestComments,
+  pullRequestReviewComments,
 } from './utils/github.js';
 import {
   REQUIRED_CHECKS,
@@ -34,14 +34,22 @@ import {
   RETEXT_SPELL,
   getReTextAnalysis,
 } from './utils/retext.js';
-import { Locale } from './utils/utils.js';
+import { Emoji, Locale } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
+import {
+  allowedHttpLinksTextFileFullPath,
+  checkHttpLinks,
+  allNonRobloxHttpLinks,
+} from './utils/links.js';
+import {
+  addToSummaryOfRequirements,
+  addToSummaryOfSuggestions,
+  summaryOfRequirements,
+  summaryOfSuggestions,
+} from './utils/console.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
-let pullRequestReviewComments: PullRequestComment[] = [];
-let summaryOfRequirements: string = '';
-let summaryOfSuggestions: string = '';
 let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
@@ -52,6 +60,7 @@ const getFilesToCheck = async () => {
       locale: Locale.EN_US,
       fileExtension: FileExtension.MARKDOWN,
     });
+    filesToCheck.push(...['README.md', 'STYLE.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
@@ -95,18 +104,18 @@ const logSummariesToConsole = () => {
     console.log();
   }
   if (summaryOfSuggestions && !config.onlyRequiredChecks) {
-    console.log('💡 The checks found some suggestions:');
+    console.log(`${Emoji.Bulb} The checks found some suggestions:`);
     console.log(summaryOfSuggestions);
   }
   if (summaryOfRequirements) {
-    console.log('⛔️ The checks found some requirements:');
+    console.log(`${Emoji.NoEntry} The checks found some requirements:`);
     console.log(summaryOfRequirements);
     console.log(
-      '⛔️ Please fix the requirements before merging your pull request.'
+      `${Emoji.NoEntry} Please fix the requirements before merging your pull request.`
     );
   }
   if (!summaryOfSuggestions && !summaryOfRequirements) {
-    console.log('✅ No issues found');
+    console.log(`${Emoji.WhiteCheckMark} No issues found`);
   }
 };
 
@@ -139,15 +148,19 @@ try {
           }
           if (REQUIRED_CHECKS.has(message.source)) {
             isRequiredCheck = true;
-            summaryOfRequirements += `⛔️ Requirement: ${messageSummary}\n`;
+            addToSummaryOfRequirements(
+              `${Emoji.NoEntry} Requirement: ${messageSummary}`
+            );
           } else {
-            summaryOfSuggestions += `💡 Suggestion: ${messageSummary}\n`;
+            addToSummaryOfSuggestions(
+              `${Emoji.Bulb} Suggestion: ${messageSummary}`
+            );
           }
         }
         // Always print required messages, suggestions are optional
         if (isRequiredCheck || !config.onlyRequiredChecks) {
           console.log('📩 Message from check:');
-          console.log(isRequiredCheck ? `⛔️` : `💡`, message);
+          console.log(isRequiredCheck ? Emoji.NoEntry : Emoji.Bulb, message);
         }
         // Only comment required checks to avoid too much noise
         if (config.postPullRequestComments && isRequiredCheck) {
@@ -171,11 +184,23 @@ try {
         }
       });
     } else {
-      console.log('✅ No messages from checks');
+      console.log(`${Emoji.WhiteCheckMark} No messages from checks`);
     }
+    checkHttpLinks({ fileName: filePathFromRepoRoot, content, config });
     console.log('::endgroup::');
   }
-  writeListToFile('misspelled-words.txt', deduplicate(missSpelledWords).sort());
+  if (config.debug) {
+    writeListToFile(
+      path.join(outputDirectory, 'misspelled-words.txt'),
+      deduplicate(missSpelledWords).sort(),
+      'utf-8'
+    );
+    writeListToFile(
+      allowedHttpLinksTextFileFullPath,
+      deduplicate(allNonRobloxHttpLinks).sort(),
+      'utf-8'
+    );
+  }
   if (config.postPullRequestComments && pullRequestReviewComments.length > 0) {
     await postCommentsToGitHub();
   }
