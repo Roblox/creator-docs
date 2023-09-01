@@ -39,11 +39,11 @@ Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](http
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-3.png" width="100%"/>
-    <figcaption>Items prior to selection in [*Spellbound RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
+    <figcaption>Items prior to selection in *Spellbound RPG*</figcaption></figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-2.png" width="90%"/>
-    <figcaption>Items after selection in [*Spellbound RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
+    <figcaption>Items after selection in *Spellbound RPG*</figcaption></figcaption>
   </figure>
 </GridContainer>
 
@@ -52,11 +52,11 @@ In [_Super Striker League_](https://www.roblox.com/games/3360853050/), player in
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-6.png" width="100%"/>
-    <figcaption>Contextual buttons in [_Super Striker League_](https://www.roblox.com/games/3360853050/)</figcaption>
+    <figcaption>Contextual buttons in _Super Striker League_</figcaption></figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-7.png" width="100%"/>
-    <figcaption>Contextual buttons in [_Super Striker League_](https://www.roblox.com/games/3360853050/)</figcaption>
+    <figcaption>Contextual buttons in _Super Striker League_</figcaption>
   </figure>
 </GridContainer>
 
@@ -64,7 +64,7 @@ In [_The Survival Game,_](https://www.roblox.com/games/11156779721/) players nee
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-1.png" width="60%"/>
-    <figcaption> HUD features in [_The Survival Game_](https://www.roblox.com/games/11156779721/) </figcaption>
+    <figcaption> HUD features in _The Survival Game_ </figcaption></figcaption>
   </figure>
 
 ### Attention
@@ -85,21 +85,21 @@ In [_Jailbreak_](https://www.roblox.com/games/606849621/)'s season pass UI, a st
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-8.png" width="60%"/>
-    <figcaption> Season pass UI in [_Jailbreak_](https://www.roblox.com/games/606849621/) </figcaption>
+    <figcaption> Season pass UI in _Jailbreak_ </figcaption>
   </figure>
 
 In [_Dragon Adventures,_](https://www.roblox.com/games/3475397644/) visual priority is given to the highest-value coin bundle by increasing it's size and separating it with more padding, to distinguish it from smaller bundles.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-9.png" width="60%"/>
-    <figcaption> Coin bundles in [_Dragon Adventures_](https://www.roblox.com/games/3475397644/)</figcaption>
+    <figcaption> Coin bundles in _Dragon Adventures_</figcaption>
   </figure>
 
 In [_Tower Defense Simulator_](https://www.roblox.com/games/3260590327/), both size and proximity are used to visually group and distinguish Daily Tower Skins from Daily Crates.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-10.png" width="60%"/>
-    <figcaption> [_Tower Defense Simulator_](https://www.roblox.com/games/3260590327/) shop</figcaption>
+    <figcaption> _Tower Defense Simulator_ shop</figcaption>
   </figure>
 
 ### Visual language
@@ -130,7 +130,7 @@ Headers and titles containing significant high-level information should be large
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-13.png" width="40%"/>
-    <figcaption> Clothing Shop in [*Winds of Fortune*](https://www.roblox.com/games/7714627632/)</figcaption>
+    <figcaption> Clothing Shop in *Winds of Fortune*</figcaption>
   </figure>
 
 Once the visual language has been designed, it can be documented in a _Style Guide_, a set of rules and examples that help everyone on the team understand how to apply the language consistently across the game.
@@ -148,11 +148,11 @@ Given their widespread use, players are typically familiar with such conventions
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-14.png" width="100%"/>
-    <figcaption>X Close Buttons in [*Winds of Fortune*](https://www.roblox.com/games/7714627632/), [*Dragon Adventures*](https://www.roblox.com/games/3475397644/), [*BotClashSimulator*](https://www.roblox.com/games/9300407930/), and [*DOORS*](https://www.roblox.com/games/6516141723/)</figcaption>
+    <figcaption>X Close Buttons in *Winds of Fortune*, *Dragon Adventures*, *BotClashSimulator*, and *DOORS*</figcaption>
   </figure>
   <figure>
    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-15.png" width="90%"/>
-    <figcaption>Green "Health" stat consistency in [*Winds of Fortune*](https://www.roblox.com/games/7714627632/)</figcaption>
+    <figcaption>Green "Health" stat consistency in *Winds of Fortune*</figcaption>
   </figure>
 </GridContainer>
 
@@ -247,7 +247,7 @@ For example, to equip an item on an avatar in [Berry Avenue RP](https://www.robl
 
  <figure>
     <video controls src="../../assets/game-design/ui-ux-design/ui-ux-design-18-video.mp4"></video>
-    <figcaption>Avatar customization flow in [*Berry Avenue RP*](https://www.roblox.com/games/8481844229/).</figcaption>
+    <figcaption>Avatar customization flow in *Berry Avenue RP*.</figcaption>
   </figure>
 
 These steps taken together represent the avatar customization flow. This flow is simple and straightforward, with as few steps as possible needed to equip an item. Because players do not have to perform many actions or think too much about what they need to do this flow is low in _friction_, a measurement of the effort required to reach a goal.

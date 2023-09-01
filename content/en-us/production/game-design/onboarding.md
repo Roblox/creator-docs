@@ -128,10 +128,10 @@ Contextual tutorials also teach non-core concepts, letting players learn about t
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/onboarding/onboarding_7.png" width="100%"/>
-    <figcaption>Contextual market tutorial in [*Squishmallows*](https://www.roblox.com/games/7941853407/).</figcaption>
+    <figcaption>Contextual market tutorial in *Squishmallows*.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/onboarding/onboarding_8.png" width="100%"/>
-    <figcaption>Contextual market tutorial in [*Squishmallows*](https://www.roblox.com/games/7941853407/).</figcaption>
+    <figcaption>Contextual market tutorial in *Squishmallows*.</figcaption>
   </figure>
 </GridContainer>
