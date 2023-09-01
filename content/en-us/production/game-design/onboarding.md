@@ -113,11 +113,11 @@ In [_Squishmallows_](https://www.roblox.com/games/7941853407/), contextual tutor
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/onboarding/onboarding_5.png" width="100%"/>
-    <figcaption>Contextual combination station tutorial in [*Squishmallows*](https://www.roblox.com/games/7941853407/).</figcaption>
+    <figcaption>Contextual combination station tutorial in *Squishmallows*.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/onboarding/onboarding_6.png" width="100%"/>
-    <figcaption>Contextual combination station tutorial in [*Squishmallows*](https://www.roblox.com/games/7941853407/).</figcaption>
+    <figcaption>Contextual combination station tutorial in *Squishmallows*.</figcaption>
   </figure>
 </GridContainer>
 

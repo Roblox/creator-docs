@@ -51,7 +51,7 @@ Ideally, there are multiple systems in a game from which cadenced content can be
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update1.jpg" width="50%"/>
-    <figcaption>Themed update in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
+    <figcaption>Themed update in *Adopt Me!*</figcaption>
   </figure>
 
 Seasons and holidays are also rich sources of ideas with potential for limited-time cadence content. However, it is important to keep in mind that holidays are not universal and may not appeal to all players. Developers must determine which seasonal themes will be most popular with their game's audience.

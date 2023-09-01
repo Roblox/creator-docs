@@ -141,7 +141,7 @@ Quests can act as a progression system by providing a structured way to advance 
 
 <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-11.png" width="70%"/>
-      <figcaption>Season pass progression in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
+      <figcaption>Season pass progression in *Dragon Adventures*</figcaption>
     </figure>
 
 ### Encourage New Gameplay
@@ -150,7 +150,7 @@ Quests can encourage players to play the game in more interesting and challengin
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-4.png" width="70%"/>
-      <figcaption>Achievement badge in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
+      <figcaption>Achievement badge in *Jailbreak*</figcaption>
     </figure>
 
 These alternate gameplay goals can be especially engaging for experienced players who might have tried everything the game has to offer. Without new challenges, even the most dedicated players eventually grow bored and move on to other games. Achievements are one way to keep them engaged between content updates.
@@ -163,7 +163,7 @@ In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts 
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-5.png" width="70%"/>
-      <figcaption>Quest narrative in [*Spellbound*](https://www.roblox.com/games/6468323505/)</figcaption>
+      <figcaption>Quest narrative in *Spellbound*</figcaption>
     </figure>
 
 ## Resources
