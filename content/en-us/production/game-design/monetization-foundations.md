@@ -48,7 +48,7 @@ In [_Doors_](https://www.roblox.com/games/6516141723/), players explore dark hal
 
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-0.png" width="70%"/>
-    <figcaption>Flashlight in [*Doors*](https://www.roblox.com/games/6516141723/)</figcaption>
+    <figcaption>Flashlight in *Doors*</figcaption>
   </figure>
 
 Purchasable items can be divided into two categories:
@@ -91,21 +91,21 @@ To be effective, a shop needs to be effectively integrated within the experience
 
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-1.png" width="70%"/>
-    <figcaption>Shop UI in [*Doors*](https://www.roblox.com/games/6516141723/)</figcaption>
+    <figcaption>Shop UI in *Doors*</figcaption>
   </figure>
 
 ### Contextual
 
 A good shop is contextual. If a new player only knows the name and price of an item without the surrounding context of other purchasable options, they won't know what kind of value it provides compared to other items in the experience.
 
-The design decisions of organizing the items in your shop keeps players informed and ensures that potential customers know what they're looking at, why it's useful, and how they might utilize it and enjoy it if they were to purchase it. An example of this is seen in [_Doors_](https://www.roblox.com/games/6516141723/):
+The design decisions of organizing the items in your shop keeps players informed and ensures that potential customers know what they're looking at, why it's useful, and how they might utilize it and enjoy it if they were to purchase it. An example of this is seen in _Doors_:
 
 - **Future anticipation:** Players are alerted that "Knobs", the experience's in-game currency, is receiving more use cases in the future. This alerts players that additional content is coming to utilize the in-game currency, which both builds anticipation for a future release and increases the perceived value of the product.
 
 - **Present explanation:** Players are given the explanation and context of purchasable "Revives". This alerts players that reviving is a core part of the gameplay experience and that this functionality is limited. As players navigate the shop, explanations like this help players accumulate knowledge about the experience.
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-4.png" width="70%"/>
-    <figcaption>Shop in [*Doors*](https://www.roblox.com/games/6516141723/)</figcaption>
+    <figcaption>Shop in *Doors*</figcaption>
   </figure>
 
 ### Inviting
@@ -141,7 +141,7 @@ How you attract attention to your shop and items depends on your experience's un
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-6.png" width="70%"/>
-    <figcaption>Shop in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
+    <figcaption>Shop in *Dragon Adventures*</figcaption>
   </figure>
 
 Interesting imagery using creative art and animations can make each purchase experience memorable and worthwhile for your players, but be careful not to overuse terms like "exclusive" or "limited" in order to maintain their effectiveness over time.
@@ -160,7 +160,7 @@ Clear language and imagery help show why purchasing an item is worthwhile. It's 
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-7.png" width="50%"/>
-    <figcaption>VIP rewards in [_MeloBlox Simulator_](https://www.roblox.com/games/5803957966/)</figcaption>
+    <figcaption>VIP rewards in _MeloBlox Simulator_</figcaption>
   </figure>
 
 Discounts and bonuses are another example of clear language and imagery used to communicate value. In this example, you can see that the value of this special offer is shown with the original price of 3000 Robux struck through and the special offer price of 799 Robux. The change in price suggests the purchase is at a deep discount. A similar technique is used in [_The Survival Game_](https://www.roblox.com/games/11156779721/), with the store specifying the percentage bonus of additional coins in each increasing bundle.
@@ -172,7 +172,7 @@ Discounts and bonuses are another example of clear language and imagery used to 
   </figure>
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-9.png" width="90%"/>
-    <figcaption>Shop in [_The Survival Game_](https://www.roblox.com/games/11156779721/)</figcaption>
+    <figcaption>Shop in _The Survival Game_</figcaption>
   </figure>
 </GridContainer>
 
@@ -193,7 +193,7 @@ Another common merchandising strategy is to use a chance-based system. In chance
 
   <figure>
       <img src="../../assets/game-design/monetization-foundations/monetization-foundation-11.png" width="70%"/>
-      <figcaption>Chance wheel in [*Dragon Adventure*](https://www.roblox.com/games/3475397644/)</figcaption>
+      <figcaption>Chance wheel in *Dragon Adventure*</figcaption>
     </figure>
 
 - **Machine Style:** Each possible item is contained within a capsule, and players purchase the ability to pull a lever and get one of the possible listed rewards.
@@ -268,7 +268,7 @@ Contextual descriptions tell the player why the items are significant and the va
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-16.png" width="70%"/>
-    <figcaption>Contextual description in [*_Sword Fighters Simulator_*](https://www.roblox.com/games/11040063484/)</figcaption>
+    <figcaption>Contextual description in *_Sword Fighters Simulator_*</figcaption>
   </figure>
 
 ### Price Calculations
@@ -277,7 +277,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-17.png" width="70%"/>
-    <figcaption>Price calculation in [*_Sword Fighters Simulator_*](https://www.roblox.com/games/11040063484/)</figcaption>
+    <figcaption>Price calculation in *_Sword Fighters Simulator_*</figcaption>
   </figure>
 
 ## Season Passes
@@ -334,7 +334,7 @@ Good season passes are inviting. As a subset of an experience's shop, season pas
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-20.png" width="70%"/>
-    <figcaption>Descriptive and enticing rewards in [*Bot Clash Simulator*](https://www.roblox.com/games/9300407930/)</figcaption>
+    <figcaption>Descriptive and enticing rewards in *Bot Clash Simulator*</figcaption>
   </figure>
 
 ### Free and Premium Passes
@@ -356,7 +356,7 @@ A good season pass has worthwhile rewards for players to earn. Merchandising tec
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-24.png" width="70%"/>
-    <figcaption>Final reward in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
+    <figcaption>Final reward in *Jailbreak*</figcaption>
   </figure>
 
 ### Manageable Timeframes
@@ -366,11 +366,11 @@ With the right implementation, season passes can be great for day-to-day engagem
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-23.png" width="100%"/>
-    <figcaption>Daily missions [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
+    <figcaption>Daily missions *Dragon Adventures*</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-22.png" width="100%"/>
-    <figcaption>Weekly missions [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
+    <figcaption>Weekly missions *Dragon Adventures*</figcaption>
   </figure>
 </GridContainer>
 
