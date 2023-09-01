@@ -522,9 +522,4 @@ print(string1) --> Hello world, 1 time!
 print(string2) --> Hello world, 2 times!
 ```
 
-You can escape curly brackets by using `\{` and `\}` respectively:
-
-```lua
-print(`Hello \{world\}!`) --> Hello {world}!
-```
 
