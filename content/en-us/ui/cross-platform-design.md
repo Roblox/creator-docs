@@ -143,7 +143,7 @@ customButton.Position = UDim2.new(0, absPositionX + (absSizeX / 2), 0, absPositi
 
 Another approach for adaptable UI is to adjust your layout based on which **input type** the user is using, for example keyboard/mouse, touch, or gamepad.
 
-The following `Class.ModuleScript` determines the user's input type on join and detects changes to input type during gameplay. From a `Class.LocalScript` that requires the module, you can detect the user's input type at any time and/or connect to the module's `Class.BindableEvent` to detect input type changes. Upon detection, you can reposition UI elements to better accomodate the current input.
+The following `Class.ModuleScript` determines the user's input type on join and detects changes to input type during gameplay. From a `Class.LocalScript` that requires the module, you can detect the user's input type at any time and/or connect to the module's `Class.BindableEvent` to detect input type changes. Upon detection, you can reposition UI elements to better accommodate the current input.
 
 ```lua title='ModuleScript - Input Type Detection' highlight='54,57'
 local UserInputService = game:GetService("UserInputService")

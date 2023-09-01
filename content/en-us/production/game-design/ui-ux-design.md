@@ -34,7 +34,7 @@ Important information and features change during the course of a game, depending
 
 <h4>Examples</h4>
 
-Irrelevant elements can cause confusion and distraction. _Spellbound RPG_ has a clean, minimalist UI is particularly crucial for mobile interfaces, as small screens can easily get overwhelmed with excessive buttons, screens, and text.
+Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](https://www.roblox.com/games/6468323505/) has a clean, minimalist UI is particularly crucial for mobile interfaces, as small screens can easily get overwhelmed with excessive buttons, screens, and text.
 
 <GridContainer numColumns="2">
   <figure>
@@ -47,7 +47,7 @@ Irrelevant elements can cause confusion and distraction. _Spellbound RPG_ has a 
   </figure>
 </GridContainer>
 
-In _Super Striker League_, player interactions vary based on whether they control the ball. Without the ball, players can Sprint and Tackle to regain control. Once in possession, the buttons switch to Deke and Pass, enabling players to dodge opponents and pass the ball. By alternating these buttons, the UI stays contextually useful, avoiding unnecessary distractions.
+In [_Super Striker League_](https://www.roblox.com/games/3360853050/), player interactions vary based on whether they control the ball. Without the ball, players can Sprint and Tackle to regain control. Once in possession, the buttons switch to Deke and Pass, enabling players to dodge opponents and pass the ball. By alternating these buttons, the UI stays contextually useful, avoiding unnecessary distractions.
 
 <GridContainer numColumns="2">
   <figure>
@@ -60,7 +60,7 @@ In _Super Striker League_, player interactions vary based on whether they contro
   </figure>
 </GridContainer>
 
-In _The Survival Game,_ players need to be aware of their health and hunger status, and have quick access to their map, inventory, and tools. This information allows them to make decisions and prioritize actions for survival. If this information or tools are hard to find or missing, survival becomes more challenging and needlessly frustrating.
+In [_The Survival Game,_](https://www.roblox.com/games/11156779721/) players need to be aware of their health and hunger status, and have quick access to their map, inventory, and tools. This information allows them to make decisions and prioritize actions for survival. If this information or tools are hard to find or missing, survival becomes more challenging and needlessly frustrating.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-1.png" width="60%"/>
@@ -81,21 +81,21 @@ Moderation is key with these tools. Excessive use of bright, moving elements mig
 
 <h4>Examples</h4>
 
-In _Jailbreak_'s season pass UI, a stripe of golden yellow lies beneath the season pass-exclusive icons, drawing attention to the premium rewards and making them visually distinct from the free ones.
+In [_Jailbreak_](https://www.roblox.com/games/606849621/)'s season pass UI, a stripe of golden yellow lies beneath the season pass-exclusive icons, drawing attention to the premium rewards and making them visually distinct from the free ones.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-8.png" width="60%"/>
     <figcaption> Season pass UI in _Jailbreak_ </figcaption>
   </figure>
 
-In _Dragon Adventures,_ visual priority is given to the highest-value coin bundle by increasing it's size and separating it with more padding, to distinguish it from smaller bundles.
+In [_Dragon Adventures,_](https://www.roblox.com/games/3475397644/) visual priority is given to the highest-value coin bundle by increasing it's size and separating it with more padding, to distinguish it from smaller bundles.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-9.png" width="60%"/>
     <figcaption> Coin bundles in _Dragon Adventures_</figcaption>
   </figure>
 
-In _Tower Defense Simulator_, both size and proximity are used to visually group and distinguish Daily Tower Skins from Daily Crates.
+In [_Tower Defense Simulator_](https://www.roblox.com/games/3260590327/), both size and proximity are used to visually group and distinguish Daily Tower Skins from Daily Crates.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-10.png" width="60%"/>
@@ -112,7 +112,7 @@ Icons can employ a visual identity that conveys meaning and associations. For in
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-11.png" width="80%"/>
-    <figcaption> Player Stats in *Winds of Fortune*</figcaption>
+    <figcaption> Player Stats in [*Winds of Fortune*](https://www.roblox.com/games/7714627632/)</figcaption>
   </figure>
 
 <h4>Buttons</h4>
@@ -121,7 +121,7 @@ As a prevalent form of player input, buttons must be easy to identify. Housing b
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-12.png" width="60%"/>
-    <figcaption> Buttons in *BotClash Simulator*</figcaption>
+    <figcaption> Buttons in [*BotClash Simulator*](https://www.roblox.com/games/9300407930/)</figcaption>
   </figure>
 
 <h4>Text</h4>
@@ -201,7 +201,7 @@ _Conventions_ are UX designs and principles that players may already be familiar
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-16.png" width="40%"/>
-    <figcaption> "E" proximity prompt in *Mermaid Life*</figcaption>
+    <figcaption> "E" proximity prompt in [*Mermaid Life*](https://www.roblox.com/games/4377254026/)</figcaption>
   </figure>
 
 Examples of conventions include:
@@ -219,7 +219,7 @@ _Metaphors_ relate an abstract concept to a more familiar one, creating a shortc
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-4.png" width="60%"/>
-    <figcaption> Spellcasting as cards in *Spellbound Wizard RPG*</figcaption>
+    <figcaption> Spellcasting as cards in [*Spellbound RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
   </figure>
 
 <h4>Feedback</h4>
@@ -237,7 +237,7 @@ When feedback is missing or insufficient, players might not know what they've ac
 
 Multiple interactions are often required for a player to complete a goal. UX designers are concerned with how players navigate from one action or UI screen or choice to the next and make sure that these paths are logical and convenient.
 
-For example, to equip an item on an avatar in Berry Avenue RP, a player must:
+For example, to equip an item on an avatar in [Berry Avenue RP](https://www.roblox.com/games/8481844229/), a player must:
 
 - Find and tap the Avatar button
 - Select an item category (face, head, neck, etc)

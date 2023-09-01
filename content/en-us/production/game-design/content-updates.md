@@ -28,7 +28,7 @@ A content cadence draws on existing gameplay systems to produce small, frequent 
 - Levels/maps
 - Quests
 
-Many of these examples are predominantly art-based, requiring little to no programming or game design work to produce. Simple variants on existing assets, like assets with only slight changes to color, are ideal because they can be produced quickly on a recurring schedule by the fewest possible team members. A good example of a content cadence are Pet Variants in _Adopt Me!_
+Many of these examples are predominantly art-based, requiring little to no programming or game design work to produce. Simple variants on existing assets, like assets with only slight changes to color, are ideal because they can be produced quickly on a recurring schedule by the fewest possible team members. A good example of a content cadence are Pet Variants in [_Adopt Me!_](https://www.roblox.com/games/920587237/)
 
 <GridContainer numColumns="2">
   <figure>
@@ -59,7 +59,7 @@ Seasons and holidays are also rich sources of ideas with potential for limited-t
 <GridContainer numColumns="2">
   <figure>
    <img src="../../assets/game-design/content-update/content-update4.jpg" />
-    <figcaption>Seasonal content in *Robloxian High School*</figcaption>
+    <figcaption>Seasonal content in [*Robloxian High School*](https://www.roblox.com/games/447452406/)</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/content-update/content-update5.jpg" />
@@ -107,7 +107,7 @@ A _season pass_ system, also known as a battle pass, is a combination of limited
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update6.png" width="50%"/>
-    <figcaption>Season Pass in *Jailbreak*</figcaption>
+    <figcaption>Season Pass in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 However they choose to deliver their content updates, if developers structure their releases sustainably and keep up with the cadence, players will never be without new content for long. For more about season passes, see [Season Pass Design](../../production/game-design/season-pass-design.md)
