@@ -1,7 +1,6 @@
 ---
 title: Luau Typing
-description: Luau uses gradual typing through the use
-of type annotations and inference.
+description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
 Luau uses a typing engine which gives every variable an inferred type.
