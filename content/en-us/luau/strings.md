@@ -492,3 +492,39 @@ the following:
 		</tr>
 	</tbody>
 </table>
+
+## String Interpolation
+
+In Luau, it's possible to interpolate strings or variables. To declare a interpolated string, put **backticks** (`` ` ``) around the characters:
+
+```lua
+local string1 = `Hello world!`
+print(string1)  --> Hello world!
+```
+
+To interpolate a string, create **placeholders** by wrapping a variable with curly brackets (`{` and `}`). The resulting string is placeholders get combined into a single string:
+
+```lua
+local world = "world"
+local string1 = `Hello {world}!`
+print(string1)  --> Hello world!
+```
+
+Interpolation is possible for numbers. Math operations are allowed:
+
+```lua
+local number = 1
+local world = "world"
+local string1 = `Hello {world}, {number} time!`
+local string2 = `Hello {world}, {number + 1} times!`
+
+print(string1) --> Hello world, 1 time!
+print(string2) --> Hello world, 2 times!
+```
+
+You can escape the curly brackets by using `\{` and `\}` respectively:
+
+```lua
+print(`Hello \{world\}!`) --> Hello {world}!
+```
+
