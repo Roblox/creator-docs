@@ -83,5 +83,5 @@ local textBox = script.Parent
 local function onlyAllowNumbers()
 	textBox.Text = string.gsub(textBox.Text, "%D", "")
 end
-textBox:GetPropertyChangedSignal("Text"):Connect(filterNumerals)
+textBox:GetPropertyChangedSignal("Text"):Connect(onlyAllowNumbers)
 ```
