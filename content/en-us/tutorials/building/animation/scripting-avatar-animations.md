@@ -252,7 +252,7 @@ Animations that the player uses are stored on the player's `Class.Animator` obje
 1. Above `onShockTrigger`, create a new **Animation** instance named `shockAnimation`. Then, set the `AnimationID` of that to the desired animation. Use the ID in the code box if needed.
 
    ```lua
-   local shockButton = game.Workspace.ShockButton.Button
+   local shockButton = workspace.ShockButton.Button
    local proximityPrompt = shockButton.ProximityPrompt
    local shockParticle = shockButton.ExplosionParticle
 

@@ -51,8 +51,8 @@ Now that the timer is in place, create a script to control the bridge and displa
 
    ```lua
    local bridge = script.Parent
-   local button = game.Workspace.ButtonBridge
-   local timerText = game.Workspace.TimerDisplay.SurfaceGui.TextLabel
+   local button = workspace.ButtonBridge
+   local timerText = workspace.TimerDisplay.SurfaceGui.TextLabel
 
    -- How long the bridge will stay solid
    local timerDuration = 5
@@ -268,10 +268,10 @@ This is because the for loop is being called each time you touch the button and 
 ```lua
 local bridge = script.Parent
 -- Gets the button as it's typed in the Explorer
-local button = game.Workspace.ButtonBridge
+local button = workspace.ButtonBridge
 
 -- Gets the part for the display
-local timerPart = game.Workspace.TimerDisplay
+local timerPart = workspace.TimerDisplay
 -- Gets the Text that will display the timer
 local timerText = timerPart.SurfaceGui.TextLabel
 

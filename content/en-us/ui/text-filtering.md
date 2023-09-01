@@ -91,7 +91,7 @@ sendButton.MouseButton1Click:Connect(onClick)
 local TextService = game:GetService("TextService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local sign = game.Workspace.Sign
+local sign = workspace.Sign
 local signTop = sign.Top
 local signSurfaceGui = signTop.SurfaceGui
 local signLabel = signSurfaceGui.SignLabel
