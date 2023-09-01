@@ -188,7 +188,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://skysmart.ru/programmirovanie-dlya-detej?direction=basics" title="Skysmart">Skysmart</a><br/>
 <a href="https://small.academy/cursuri/programare-roblox/" title="Small Academy">Small Academy</a><br/>
 <a href="https://www.smart-kiddo.com/" title="Smart Kiddo Education">Smart Kiddo Education</a><br/>
-<a href="http://www.stemwork.com.hk/" title="STEM Work">STEM Work</a><br/>
+<a href="https://www.stemwork.com.hk/" title="STEM Work">STEM Work</a><br/>
 <a href="https://www.smartkidsclubtt.com/" title="Smart Kids Educational Club">Smart Kids Educational Club</a><br/>
 <a href="https://techkidzafrica.co.ke/" title="TechKidz Africa's">TechKidz Africa's</a><br/>
 <a href="https://themade.org/" title="The MADE">The MADE</a><br/>
@@ -454,7 +454,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.kodingkingdom.com/home/?page_id=25212" title="Koding Kingdom">Koding Kingdom</a>
 <a href="https://www.robocodeacademy.com/holiday-camps/" title="RoboCode Academy">RoboCode Academy</a>
 <a href="https://www.smart-kiddo.com/" title="Smart Kiddo Education">Smart Kiddo Education</a>
-<a href="http://www.stemwork.com.hk/" title="STEM Work">STEM Work</a>
+<a href="https://www.stemwork.com.hk/" title="STEM Work">STEM Work</a>
 <a href="https://www.idtech.com/roblox-summer-camps?utm_source=roblox&amp;utm_medium=website&amp;utm_campaign=2018&amp;utm_content=roblox-site" title="iD Tech">iD Tech</a>
 
 #### Hungary
