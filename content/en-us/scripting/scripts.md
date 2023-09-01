@@ -143,7 +143,7 @@ If you want to modify the same data for multiple copies of the same
 object or reuse the same data for different objects, store the data in
 `Class.ModuleScript|ModuleScripts`. It's an easier way for you to reuse the data in other scripts, and you can store tables and functions.
 
-The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` stores the configuration values for a generic gun:
+The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` stores the configuration values for a generic gun:
 
 ```lua title="Weapon Stats"
 -- ModuleScript in ReplicatedStorage named GunConfig
@@ -169,7 +169,7 @@ You can use `Class.ModuleScript|ModuleScripts` to store
 `Class.BindableEvent|BindableEvents` and provide
 custom event handlers that are directly tied to the methods of `Class.ModuleScript`.
 
-The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` has a custom event that fires when the switch changes state:
+The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` has a custom event that fires when the switch changes state:
 
 ```lua title="Switch Module"
 -- ModuleScript in ReplicatedStorage named Switch
