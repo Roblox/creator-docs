@@ -205,7 +205,7 @@ end
 `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` changes any stored value in a data store. This function requires the key name of the entry plus a **callback function** which defines how the entry should be updated. This callback takes the current value and returns the new value, based on whatever logic you define. If the callback returns `nil`, the write operation is cancelled and the value remains unchanged.
 
 <Alert severity="warning">
-  The callback function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` is <b>not</b> permitted to yield, so it cannot contain any yielding function like <InlineCode>task.wait()</InlineCode>.
+  The callback function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` is <b>not</b> permitted to yield, so it cannot contain any yielding function like `Library.task.wait()`.
 </Alert>
 
 ```lua
@@ -539,7 +539,7 @@ Consider the following data set:
 
 ## Error Codes
 
-Requests to data stores may occasionally fail due to poor connectivity or other issues. Wrapping data store functions in `pcall()` can handle any errors and return a message with an error code.
+Requests to data stores may occasionally fail due to poor connectivity or other issues. Wrapping data store functions in `Global.LuaGlobals.pcall()` can handle any errors and return a message with an error code.
 
 ### Error Code Reference
 
@@ -818,7 +818,7 @@ Along with request frequency, data stores limit how much data can be used per en
 </table>
 
 <Alert severity="info">
-  Since the data store name, key name, and scope are strings, their length can be checked with <InlineCode>string.len()</InlineCode>. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
+  Since the data store name, key name, and scope are strings, their length can be checked with 'Library.string.len()'. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
 </Alert>
 
 ### Throughput Limits
