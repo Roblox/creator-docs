@@ -143,7 +143,7 @@ Even though Roblox only allows a client to be connected to one server at a time,
 
 These scenarios should be rare, but they do occur, particularly in situations where a player disconnects from one server and connects to another in rapid succession (for example, while teleporting). Some malicious users might even attempt to abuse this behavior to complete actions without them persisting. This can be particularly impactful in games that allow players to trade and is a common source of item duplication exploits.
 
-Session locking addresses this vulnerability by ensuring that when a player's `Class.GlobalDataStore|DataStore` key is first read by the server, the server atomically writes a lock to the key's metadata inside the same `UpdateAsync` call. If this lock value is present when any other server attempts to read or write the key, the server does not proceed.
+Session locking addresses this vulnerability by ensuring that when a player's `Class.GlobalDataStore|DataStore` key is first read by the server, the server atomically writes a lock to the key's metadata inside the same `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` call. If this lock value is present when any other server attempts to read or write the key, the server does not proceed.
 
 ### Approach
 
@@ -161,7 +161,7 @@ The transformation function passed into `Class.GlobalDataStore:UpdateAsync()|Upd
 
    - If this server has placed its own `LockId` value in the key's metadata previously, then this value is still in the key's metadata. This accounts for the situation where another server has taken over this server's lock (by expiry or by force) and later released it. Alternatively phrased, even if `LockId` is `nil`, another server could still have replaced and removed a lock in the time since you locked the key.
 
-2. `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` performs the `Class.GlobalDataStore|DataStore` operation the consumer of `SessionLockedDataStoreWrapper` requested. For example, `GetAsync` translates to `function(value) return value end`.
+2. `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` performs the `Class.GlobalDataStore|DataStore` operation the consumer of `SessionLockedDataStoreWrapper` requested. For example, `Class.GlobalDataStore:GetAsync()|GetAsync` translates to `function(value) return value end`.
 
 3. Depending on the parameters passed into the request, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync` either locks or unlocks the key:
 
@@ -175,7 +175,7 @@ A custom error message is also returned to the consumer, allowing the player dat
 
 ### Caveats
 
-The session locking regime relies on a server always releasing its lock on a key when it is done with it. This should always happen through an instruction to unlock the key as part of the final write in `Class.Players.PlayerRemoving|PlayerRemoving` or `OnGameClose`.
+The session locking regime relies on a server always releasing its lock on a key when it is done with it. This should always happen through an instruction to unlock the key as part of the final write in `Class.Players.PlayerRemoving|PlayerRemoving` or `Class.DataModel:BindToClose()|BindToClose`.
 
 However, the unlock can fail in certain situations. For example:
 
@@ -295,7 +295,7 @@ Modules that provide an interface for game code to synchronously read and write 
 
 - Error statuses encountered when saving or loading player data are replicated to `PlayerDataClient`.
 - Access this information with the `getLoadError` and `getSaveError` methods, along with the `loaded` and `saved` signals.
-- There are two types of errors: `DataStoreError` (the `DataStoreService` request failed) and `SessionLocked` (see [Session Locking](#session-locking)).
+- There are two types of errors: `DataStoreError` (the `Class.DataStoreService` request failed) and `SessionLocked` (see [Session Locking](#session-locking)).
 - Use these events to disable client purchase prompts and implement warning dialogs. This image shows an example dialog:
 
 <img src="../../assets/data/player-data-purchasing/data-warning.png" alt="A screenshot of an example warning that could be shown when player data fails to load" width="60%" />
