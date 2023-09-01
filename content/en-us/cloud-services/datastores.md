@@ -818,7 +818,7 @@ Along with request frequency, data stores limit how much data can be used per en
 </table>
 
 <Alert severity="info">
-  Since the data store name, key name, and scope are strings, their length can be checked with 'Library.string.len()'. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
+  Since the data store name, key name, and scope are strings, their length can be checked with `Library.string.len()`. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
 </Alert>
 
 ### Throughput Limits
