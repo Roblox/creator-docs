@@ -39,11 +39,11 @@ Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](http
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-3.png" width="100%"/>
-    <figcaption>Items prior to selection in *Spellbound RPG*</figcaption></figcaption>
+    <figcaption>Items prior to selection in *Spellbound RPG*</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-2.png" width="90%"/>
-    <figcaption>Items after selection in *Spellbound RPG*</figcaption></figcaption>
+    <figcaption>Items after selection in *Spellbound RPG*</figcaption>
   </figure>
 </GridContainer>
 
@@ -64,7 +64,7 @@ In [_The Survival Game,_](https://www.roblox.com/games/11156779721/) players nee
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-1.png" width="60%"/>
-    <figcaption> HUD features in _The Survival Game_ </figcaption></figcaption>
+    <figcaption> HUD features in _The Survival Game_ </figcaption>
   </figure>
 
 ### Attention
