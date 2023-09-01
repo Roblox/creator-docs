@@ -495,7 +495,7 @@ the following:
 
 ## String Interpolation
 
-In Luau, you can interpolate strings. To declare a interpolated string, put **backticks** (`` ` ``) around the characters:
+In Luau, you can interpolate strings. To declare an interpolated string, put **backticks** (`` ` ``) around the characters:
 
 ```lua
 local string1 = `Hello world!`
