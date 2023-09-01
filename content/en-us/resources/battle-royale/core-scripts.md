@@ -6,11 +6,11 @@ prev: /resources/battle-royale/running-the-game
 next: /resources/battle-royale/pickup-system
 ---
 
-The core game loop in Roblox Battle Royale is generally handled by two scripts, specifically `Class.ServerScriptService.Server` on the server and `StarterPlayer/StarterPlayerScripts/Client` on the client.
+The core game loop in Roblox Battle Royale is generally handled by two scripts, specifically `ServerScriptService/Server` on the server and `StarterPlayer/StarterPlayerScripts/Client` on the client.
 
 ## Initial Setup
 
-The `Class.ReplicatedFirst.InitialSetup` script configures a few engine-level systems — built-in UI, chat, etc. — and ensures that the client loads the assets referenced in `ReplicatedFirst/Configurations/AssetPreloads` before proceeding.
+The `ReplicatedFirst/InitialSetup` script configures a few engine-level systems — built-in UI, chat, etc. — and ensures that the client loads the assets referenced in `ReplicatedFirst/Configurations/AssetPreloads` before proceeding.
 
 ## Game Stages
 
