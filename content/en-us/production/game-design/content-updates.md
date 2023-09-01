@@ -37,7 +37,7 @@ Many of these examples are predominantly art-based, requiring little to no progr
   </figure>
   <figure>
     <img src="../../assets/game-design/content-update/content-update3.png" width="500%"/>
-    <figcaption>Colored pet variant in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
+    <figcaption>Colored pet variant in *Adopt Me!*</figcaption>
   </figure>
 </GridContainer>
 
