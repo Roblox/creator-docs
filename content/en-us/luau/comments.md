@@ -38,3 +38,13 @@ You can define multiline block comments with double hyphens and double brackets 
 local function stopCosmicMoonRay()
 end
 ```
+
+If necessary, you can nest multiple brackets inside a block comment using the same quantity of equals sign in both the beginning and the ending bracket.
+
+The example below uses one equals sign (can be more than one)
+
+```lua
+--[=[
+     In-depth detail about cosmic moon ray: [[[TOP SECRET]]]
+]=]
+```
