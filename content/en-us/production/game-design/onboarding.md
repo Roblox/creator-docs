@@ -34,7 +34,7 @@ For successful onboarding, players need to grasp controls for an experience's na
 
 <figure>
     <img src="../../assets/game-design/onboarding/onboarding_2.png" width="50%" />
-    <figcaption>*Super Striker League* controls.</figcaption>
+    <figcaption>[*Super Striker League*](https://www.roblox.com/games/3360853050/) controls.</figcaption>
   </figure>
 
 Besides controls, onboarding should also impart knowledge of the experience's **Core Loop**, the necessary repetitive actions for progress that defines what the experience is. It's important that players understand both what they are expected to do and why they should do it.
@@ -85,7 +85,7 @@ To learn how to accomplish this through season passes, see [Season Pass Design](
 
 <figure>
     <img src="../../assets/game-design/onboarding/onboarding_4.png" width="50%"/>
-    <figcaption>Season Pass in *Jailbreak*.</figcaption>
+    <figcaption>Season Pass in [*Jailbreak*](https://www.roblox.com/games/606849621/).</figcaption>
   </figure>
 
 <h4>Moments of Joy</h4>
@@ -108,7 +108,7 @@ Traditional tutorial flows guide players in a fixed sequence through an experien
 
 <h4>Use Cases</h4>
 
-In _Squishmallows_, contextual tutorials are used to effectively teach players how and when to use the combination station. When a player has two identical Squishmallows in their inventory, a contextual tutorial triggers, and shows players how to combine three _Squishmallows_ at the combination station in order to create a larger one.
+In [_Squishmallows_](https://www.roblox.com/games/7941853407/), contextual tutorials are used to effectively teach players how and when to use the combination station. When a player has two identical Squishmallows in their inventory, a contextual tutorial triggers, and shows players how to combine three _Squishmallows_ at the combination station in order to create a larger one.
 
 <GridContainer numColumns="2">
   <figure>
