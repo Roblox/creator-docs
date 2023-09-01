@@ -87,7 +87,7 @@ local function add(x, y)
 end
 ```
 
-This function will add x to y, however it might error if a string is given to this function, Luau doesn't know that we want to only use numbers in this function. Lets rework this function such that it does constrain `x` and `y` to be numbers.
+This function will add x to y, however it might error if a string is given to this function, Luau doesn't know that this function can only use numbers, lets rework this function such that it does constrain `x` and `y` to be numbers.
 
 ```lua
 local function add(x: number, y: number)
@@ -253,7 +253,7 @@ type State = {
 }
 ```
 
-However, you may want to `Value` to be a type based on the incoming value, this can be done with generics. Generic types use the following basic shape:
+However, you may want `Value` to be a type based on the incoming value, this can be done with generics. Generic types use the following basic shape:
 
 ```lua
 type GenericType<T> = T
@@ -285,7 +285,9 @@ type State<T> = {
 
 ### Function Generics
 
-Functions can also use generics, however, they behave a little differently when inference is introduced into it, using the State example again, it can be designed to infer the value of `T` from the function's incoming arguments
+Functions can also use generics, however, they behave differently when inference is introduced into it, using the State example again, it can be designed to infer the value of `T`, from the function's incoming arguments.
+
+A generic function is defined by adding a `<>` to the right of the function name.
 
 ```lua
 local function State<T>(key: string, value: T): State<T>
