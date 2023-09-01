@@ -24,9 +24,9 @@ You can hide the user's mouse icon by setting the `Class.UserInputService.MouseI
 local UserInputService = game:GetService("UserInputService")
 
 while true do
-	wait(2)
+	task.wait(2)
 	UserInputService.MouseIconEnabled = false
-	wait(2)
+	task.wait(2)
 	UserInputService.MouseIconEnabled = true
 end
 ```
@@ -40,7 +40,7 @@ If a user's mouse icon is locked in a position, `Class.UserInputService.InputCha
 ```lua
 local UserInputService = game:GetService("UserInputService")
 
-wait(1)
+task.wait(1)
 
 UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
 

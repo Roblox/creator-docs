@@ -3,21 +3,21 @@ title: Accessory Project Files and References
 description: Download various accessory-related project files and reference files.
 ---
 
-The following `.fbx`, `.blend`, and `.ma` files project files are available to use as templates or as reference:
+The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
   <TabItem label="Clothing">
   <table>
 <thead>
   <tr>
-    <th>Filename</th>
-    <th>Description</th>
+    <th><b>File</b></th>
+    <th><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
     <tr>
     <td><a href="../../assets/accessories/reference-files/Tshirt-model.fbx" download>Tshirt-model.fbx</a></td>
-    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.</td>
+    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md), ready for caging in a 3D modeling software.</td>
   </tr>
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>
@@ -41,7 +41,7 @@ The following `.fbx`, `.blend`, and `.ma` files project files are available to u
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" download>Clothing_Cage_Template.blend</a></td>
-    <td>Starting template for Blender, includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
+    <td>Starting template for Blender that includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Combined-Template.blend" download>Combined-Template.blend</a></td>

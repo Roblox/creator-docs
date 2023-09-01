@@ -52,16 +52,20 @@ To use the platform, the script needs a function to check if any players touch i
 2. To change any of the stats on the leaderboard, the script needs to know what player is controlling the humanoid. In the if statement, use the `GetPlayerFromCharacter()` function to find a player.
 
    ```lua
+   local Players = game:GetService("Players")
+
    if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+     local player = Players:GetPlayerFromCharacter(humanoid.Parent)
    end
    ```
 
 3. On the next line, get that player's leaderstats container.
 
    ```lua
+   local Players = game:GetService("Players")
+
    if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+     local player = Players:GetPlayerFromCharacter(humanoid.Parent)
      -- Gets the player's leaderboard. Needed to get items and money
      local playerStats = player:FindFirstChild("leaderstats")
    end
@@ -70,8 +74,10 @@ To use the platform, the script needs a function to check if any players touch i
 4. On the next line, create variables to get the player's money and items.
 
    ```lua
+   local Players = game:GetService("Players")
+
    if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+     local player = Players:GetPlayerFromCharacter(humanoid.Parent)
      -- Gets the player's leaderboard. Needed to get items and money
      local playerStats = player:FindFirstChild("leaderstats")
      -- Gets the player's items and money
@@ -95,11 +101,13 @@ To use the platform, the script needs a function to check if any players touch i
 6. At the bottom of the script, connect the `onTouch()` to sellPart's Touched event.
 
    ```lua
+   local Players = game:GetService("Players")
+
    local function onTouch (partTouched)
      local character = partTouched.Parent
      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
      if humanoid then
-       local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+       local player = Players:GetPlayerFromCharacter(humanoid.Parent)
        -- Gets the player's leaderboard. Needed to get items and money
        local playerStats = player:FindFirstChild("leaderstats")
        -- Gets the player's items and money
@@ -167,8 +175,10 @@ In this experience, a player will get 100 Gold for each item. After getting mone
 5. In the `onTouch()` function, **under the second if statement**, call the `sellItems()` function. Pass in the parameters, `playerItems` and `playerGold` so they can be changed.
 
    ```lua
+   local Players = game:GetService("Players")
+
    if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+     local player = Players:GetPlayerFromCharacter(humanoid.Parent)
      -- Gets the player's leaderboard. Needed to get items and money
      local playerStats = player:FindFirstChild("leaderstats")
      -- Gets the player's items and money

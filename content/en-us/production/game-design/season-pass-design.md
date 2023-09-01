@@ -120,7 +120,7 @@ Although your Tiers UI shows the rewards that players earn, it's good practice t
   </figure>
   <figure>
     <img src="../../assets/game-design/season-pass-design/season-pass-design-1.png" width="100%"/>
-    <figcaption> Final reward in *Dragon Adventures* </figcaption>
+    <figcaption> Final reward in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/) </figcaption>
   </figure>
 </GridContainer>
 

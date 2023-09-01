@@ -44,7 +44,7 @@ When deciding what kind of items to create, first determine what items makes sen
 
 Most importantly, determine what purpose each item you sell should serve. If a player purchases an item they should find value in it and be able to easily identify its relevancy to the experience.
 
-In _Doors_, players explore dark hallways and rooms, and can purchase a flashlight before starting a session. The flashlight is then used to light up the darkness and aid the player in exploration. This tangible and immediately understood value seamlessly integrates into the experience and encourages players to purchase it. When describing your items for purchase, it's important to be accurate and truthful in your descriptions so players know exactly what they're buying and the value it provides.
+In [_Doors_](https://www.roblox.com/games/6516141723/), players explore dark hallways and rooms, and can purchase a flashlight before starting a session. The flashlight is then used to light up the darkness and aid the player in exploration. This tangible and immediately understood value seamlessly integrates into the experience and encourages players to purchase it. When describing your items for purchase, it's important to be accurate and truthful in your descriptions so players know exactly what they're buying and the value it provides.
 
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-0.png" width="70%"/>
@@ -56,12 +56,12 @@ Purchasable items can be divided into two categories:
 - **Durable items:** Items that can be used or applied an unlimited number of times, such as cosmetic skins.
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-2.png" width="20%"/>
-    <figcaption>Skin in *Tower Defense Simulator*</figcaption>
+    <figcaption>Skin in [*Tower Defense Simulator*](https://www.roblox.com/games/3260590327/)</figcaption>
   </figure>
 - **Consumable items:** Items that have limited uses, such as temporary boosts.
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-3.png" width="20%"/>
-    <figcaption>Consumable item in *Evade*</figcaption>
+    <figcaption>Consumable item in [*Evade*](https://www.roblox.com/games/9872472334/)</figcaption>
   </figure>
 
 They can then be further divided into categories of utility:
@@ -118,7 +118,7 @@ New content and item updates invites players back to the store to see what's new
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-5.png" width="70%"/>
-    <figcaption>Shop in *Dragon Adventures*</figcaption>
+    <figcaption>Shop in [*Dragon Adventures*](https://www.roblox.com/games/3475397644/)</figcaption>
   </figure>
 
 ## Merchandising
@@ -137,7 +137,7 @@ _Merchandising_ is how players become aware of what's being sold in the shop. Me
 
 ### Attract Attention
 
-How you attract attention to your shop and items depends on your experience's unique style. _Pet Simulator X_ uses descriptive language to build excitement.
+How you attract attention to your shop and items depends on your experience's unique style. [_Pet Simulator X_](https://www.roblox.com/games/6284583030/) uses descriptive language to build excitement.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-6.png" width="70%"/>
@@ -156,19 +156,19 @@ You can effectively communicate the value of items in your shop by employing the
 
 #### Clear Language and Imagery
 
-Clear language and imagery help show why purchasing an item is worthwhile. It's important to clearly show the benefit of the item, whether it's a percentage bonus, percentage savings or number of uses. _MeloBlox Simulator_ is very clear and organized, leading with the term "VIP Benefits" at the top and listing the extensive number of benefits players can expect to receive.
+Clear language and imagery help show why purchasing an item is worthwhile. It's important to clearly show the benefit of the item, whether it's a percentage bonus, percentage savings or number of uses. [_MeloBlox Adventure_](https://www.roblox.com/games/5803957966/) is very clear and organized, leading with the term "VIP Benefits" at the top and listing the extensive number of benefits players can expect to receive.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-7.png" width="50%"/>
     <figcaption>VIP rewards in _MeloBlox Simulator_</figcaption>
   </figure>
 
-Discounts and bonuses are another example of clear language and imagery used to communicate value. In this example, you can see that the value of this special offer is shown with the original price of 3000 Robux struck through and the special offer price of 799 Robux. The change in price suggests the purchase is at a deep discount. A similar technique is used in _The Survival Game_, with the store specifying the percentage bonus of additional coins in each increasing bundle.
+Discounts and bonuses are another example of clear language and imagery used to communicate value. In this example, you can see that the value of this special offer is shown with the original price of 3000 Robux struck through and the special offer price of 799 Robux. The change in price suggests the purchase is at a deep discount. A similar technique is used in [_The Survival Game_](https://www.roblox.com/games/11156779721/), with the store specifying the percentage bonus of additional coins in each increasing bundle.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-8.png" width="90%"/>
-    <figcaption>Shop in *Car Dealership Tycoon*</figcaption>
+    <figcaption>Shop in [*Car Dealership Tycoon*](https://www.roblox.com/games/1554960397/)</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-9.png" width="90%"/>
@@ -180,7 +180,7 @@ Another example of using clear language and imagery to communicate value is thro
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-10.png" width="60%"/>
-    <figcaption>Shop in *World//Zero*</figcaption>
+    <figcaption>Shop in [*World // Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
   </figure>
 
 In all cases, ensure that your merchandising terms and item descriptions are truthful and accurate so players know exactly what they will receive. Be mindful to not "oversell" items and remember that you are building a relationship with your players that depends on obtaining and maintaining trust.
@@ -199,12 +199,12 @@ Another common merchandising strategy is to use a chance-based system. In chance
 - **Machine Style:** Each possible item is contained within a capsule, and players purchase the ability to pull a lever and get one of the possible listed rewards.
   <figure>
       <img src="../../assets/game-design/monetization-foundations/monetization-foundation-12.png" width="70%"/>
-      <figcaption>Machine Style *Creatures of Sonaria*</figcaption>
+      <figcaption>Machine Style [*Creatures of Sonaria*](https://www.roblox.com/games/5233782396/)</figcaption>
     </figure>
 - **Mystery Box:** Each possible item is given a percentage chance of being acquired based on rarity, and players purchase the ability to open the box and see what's inside.
   <figure>
       <img src="../../assets/game-design/monetization-foundations/monetization-foundation-13.png" width="70%"/>
-      <figcaption>Mystery Box in *Murder Mystery 2*</figcaption>
+      <figcaption>Mystery Box in [*Murder Mystery 2*](https://www.roblox.com/games/142823291/)</figcaption>
     </figure>
 
 <Alert severity="warning">
@@ -248,7 +248,7 @@ For a beginner that is not yet familiar with your experience, showcase the start
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-14.png" width="70%"/>
-    <figcaption>Starter pack in *My Restaurant!*</figcaption>
+    <figcaption>Starter pack in [*My Restaurant!*](https://www.roblox.com/games/4490140733/)</figcaption>
   </figure>
 
 There are several good places to surface the starter pack in your UI. Clicking into the starter pack icon can open the offer directly, or open the offer in the context of the experience's shop.
@@ -259,7 +259,7 @@ Once you decide how players will see the starter pack, consider the starter pack
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-15.png" width="70%"/>
-    <figcaption>Starter pack in *_Sword Fighters Simulator_*</figcaption>
+    <figcaption>Starter pack in [*_Sword Fighters Simulator_*](https://www.roblox.com/games/11040063484/)</figcaption>
   </figure>
 
 ### Contextual Descriptions
@@ -316,7 +316,7 @@ The season pass should be easy to find and integrated into the aesthetic of the 
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-18.png" width="70%"/>
-    <figcaption>Season pass in *Bot Clash Simulator*</figcaption>
+    <figcaption>Season pass in [*Bot Clash Simulator*](https://www.roblox.com/games/9300407930/)</figcaption>
   </figure>
 
 <h4>Contextual</h4>
@@ -343,7 +343,7 @@ Good season passes have both a free and premium pass that present opportunities 
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-21.png" width="70%"/>
-    <figcaption>Free and premium passes in *Jailbreak*</figcaption>
+    <figcaption>Free and premium passes in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
   </figure>
 
 For more about free and premium passes, see [season pass design](../../production/game-design/season-pass-design.md#season-tiers).

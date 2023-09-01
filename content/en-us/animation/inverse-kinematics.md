@@ -14,7 +14,7 @@ This animation technique can provide solutions to the following examples:
 	</figure>
 	<figure>
 		<video controls src="../assets/animation/inverse-kinematics/IK-Uneven-Surfaces.mp4" width="90%"></video>
-		<figcaption>Make a character's feet can interact realistically on different surfaces and slopes.</figcaption>
+		<figcaption>Make a character's feet interact realistically on different surfaces and slopes.</figcaption>
 	</figure>
    <figure>
 		<video controls src="../assets/animation/inverse-kinematics/IK-Drag-Accessory.mp4" width="90%"></video>

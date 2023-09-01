@@ -20,7 +20,7 @@ Because the skinning transfer process uses a character's outer cage to help calc
 To enable the automatic skinning transfer process, you must enable the `Class.WrapLayer.AutoSkin|AutoSkin` property within the `Class.WrapLayer` instance of the layered `Class.Accessory` you want to automatically skin, then set it to one of the following values:
 
 - `Disabled`: Disables the automatic skinning transfer process. This is the default value.
-- `EnabledOverride`: Enables the automatic skinning transfer process, and allows it to override any existing skinning information found on the accessory at run time.
+- `EnabledOverride`: Enables the automatic skinning transfer process, and allows it to override any existing skinning information found on the accessory at runtime.
 - `EnabledPreserve`: Enables the automatic skinning transfer process, but doesn't allow it to override any existing skinning information found on the accessory at runtime. If there isn't any skinning to maintain, the automatic skinning transfer process automatically creates new skinning data.
 
 When there isn't any skinning data on the accessory, or if you choose to override any existing skinning data associated with the accessory, the Roblox engine calculates skinning data from the character's geometry and cages, then the new skinning data and rig associated with the accessory drives the accessory's deformations and motions in sync with the source geometry itself.

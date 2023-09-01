@@ -14,7 +14,7 @@ Right now, defeated players respawn in the arena. Instead, send them back to the
 1. In PlayerManager, create a local function named `respawnPlayerInLobby()`. In that function, do the following:
 
 - Set the player's RespawnLocation property to the lobbySpawn.
-- Reload the character with `player:LoadCharacter()`. Remember, `LoadCharacter()` recreates the player at their spawn, removing any tools they had.
+- Reload the character with `Class.Player:LoadCharacter()`. Remember, `Class.Player:LoadCharacter()|LoadCharacter()` recreates the player at their spawn, removing any tools they had.
 
 ## Using Anonymous Functions
 
@@ -134,11 +134,11 @@ When the timer ends, fire the Match End event and send the matching end state va
      displayManager.updateStatus("Waiting for Players")
 
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
@@ -152,11 +152,11 @@ When the timer ends, fire the Match End event and send the matching end state va
      displayManager.updateStatus("Waiting for Players")
 
      repeat
-       wait(gameSettings.intermissionDuration)
+       task.wait(gameSettings.intermissionDuration)
      until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
      displayManager.updateStatus("Get ready!")
-     wait(gameSettings.transitionTime)
+     task.wait(gameSettings.transitionTime)
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
@@ -510,11 +510,11 @@ while true do
 	displayManager.updateStatus("Waiting for Players")
 
 	repeat
-		wait(gameSettings.intermissionDuration)
+		task.wait(gameSettings.intermissionDuration)
 	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
 	displayManager.updateStatus("Get ready!")
-	wait(gameSettings.transitionTime)
+	task.wait(gameSettings.transitionTime)
 
 	matchManager.prepareGame()
 	local endState = matchEnd.Event:Wait()
@@ -567,7 +567,7 @@ local function startTimer()
 		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
 		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
 		-- By not setting the time for wait, it offers more accurate looping
-		wait()
+		task.wait()
 	end
 
 end
