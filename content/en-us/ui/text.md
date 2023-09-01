@@ -72,7 +72,7 @@ end
 textBox.FocusLost:Connect(onFocusLost)
 ```
 
-As another example, you can add a filter in a textbox that will only allow numerical input using the `Class.TextBox.GetPropertyChangedSignal` event, which fires when the user types in anything while focused in the `Class.TextBox`, or when the `Class.TextBox`'s text gets changed outside of the focus.
+As another example, you might want to only allow numbers in a `Class.TextBox`. The following code uses the `Class.TextBox.GetPropertyChangedSignal` event to detect when the `Class.TextBox.Text` changes, such as when a user starts typing. Then it uses the `Library.string.gsub()` function to disallow non-numbers:
 
 <Alert severity="warning">
   While using `Class.TextBox`'s `Class.TextBox.GetPropertyChangedSignal` event, attempt to <i>avoid</i> yielding functions such as firing [RemoteFunctions](../reference/engine/classes/RemoteFunctions) or using `task.wait()`.
