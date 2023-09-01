@@ -502,7 +502,7 @@ local string1 = `Hello world!`
 print(string1)  --> Hello world!
 ```
 
-To interpolate a string, create a **placeholder** by wrapping a variable with curly brackets (`{` and `}`). Placeholders get combined into a single string:
+Create **placeholders** by wrapping a variable with curly brackets (`{` and `}`) inside the string. Placeholders get combined into a single string:
 
 ```lua
 local world = "world"
