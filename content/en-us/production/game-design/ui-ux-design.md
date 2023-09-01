@@ -219,7 +219,7 @@ _Metaphors_ relate an abstract concept to a more familiar one, creating a shortc
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-4.png" width="60%"/>
-    <figcaption> Spellcasting as cards in [*Spellbound Wizard RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
+    <figcaption> Spellcasting as cards in [*Spellbound RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
   </figure>
 
 <h4>Feedback</h4>

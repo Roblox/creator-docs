@@ -156,7 +156,7 @@ You can effectively communicate the value of items in your shop by employing the
 
 #### Clear Language and Imagery
 
-Clear language and imagery help show why purchasing an item is worthwhile. It's important to clearly show the benefit of the item, whether it's a percentage bonus, percentage savings or number of uses. [_MeloBlox Simulator_](https://www.roblox.com/games/5803957966/) is very clear and organized, leading with the term "VIP Benefits" at the top and listing the extensive number of benefits players can expect to receive.
+Clear language and imagery help show why purchasing an item is worthwhile. It's important to clearly show the benefit of the item, whether it's a percentage bonus, percentage savings or number of uses. [_MeloBlox Adventure_](https://www.roblox.com/games/5803957966/) is very clear and organized, leading with the term "VIP Benefits" at the top and listing the extensive number of benefits players can expect to receive.
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-7.png" width="50%"/>
@@ -180,7 +180,7 @@ Another example of using clear language and imagery to communicate value is thro
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-10.png" width="60%"/>
-    <figcaption>Shop in [*World//Zero*](https://www.roblox.com/games/11156779721/)</figcaption>
+    <figcaption>Shop in [*World // Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
   </figure>
 
 In all cases, ensure that your merchandising terms and item descriptions are truthful and accurate so players know exactly what they will receive. Be mindful to not "oversell" items and remember that you are building a relationship with your players that depends on obtaining and maintaining trust.

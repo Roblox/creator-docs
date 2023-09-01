@@ -34,7 +34,7 @@ There are two common types of quests:
 - **Dailies**: Also known as daily quests, these are short tasks with modest rewards that are available for and must be completed within 24-hours. Some daily quest systems provide the same quests every day, while others rotate quests to provide players with new objectives to avoid repetition. Dailies have simple objectives with low requirements for completion to encourage players to complete the quests in a single play session.
     <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-1.png" width="70%"/>
-      <figcaption>Daily quests in [*World//Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
+      <figcaption>Daily quests in [*World // Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
     </figure>
 
 For these easy quests, small rewards are appropriate, due to the rate at which they're completed. Because they are available daily, Dailies can provide a reliable source of soft currency and incentivize players to log in every day.
