@@ -80,7 +80,7 @@ As another example, you might want to only allow numbers in a `Class.TextBox`. T
 
 ```lua
 local textBox = script.Parent
-local function filterNumerals()
+local function onlyAllowNumbers()
 	textBox.Text = string.gsub(textBox.Text, "%D", "")
 end
 textBox:GetPropertyChangedSignal("Text"):Connect(filterNumerals)
