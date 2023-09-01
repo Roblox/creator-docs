@@ -14,7 +14,7 @@ Right now, defeated players respawn in the arena. Instead, send them back to the
 1. In PlayerManager, create a local function named `respawnPlayerInLobby()`. In that function, do the following:
 
 - Set the player's RespawnLocation property to the lobbySpawn.
-- Reload the character with `player:LoadCharacter()`. Remember, `LoadCharacter()` recreates the player at their spawn, removing any tools they had.
+- Reload the character with `Class.Player:LoadCharacter()`. Remember, `Class.Player:LoadCharacter()|LoadCharacter()` recreates the player at their spawn, removing any tools they had.
 
 ## Using Anonymous Functions
 
