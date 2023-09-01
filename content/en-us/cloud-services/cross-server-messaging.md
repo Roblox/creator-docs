@@ -44,7 +44,7 @@ end)
 
 ### Publish Messages
 
-Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player|Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running experience server instance.
+Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player.Name|Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running experience server instance.
 
 ```lua
 local MessagingService = game:GetService("MessagingService")
