@@ -11,11 +11,11 @@ Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a fr
 
 The following system specifications ensure that Studio runs smoothly:
 
-- **Windows** &ndash; Windows 7, Windows 8/8.1, Windows 10, or Windows 11. For Windows 10 or earlier, you also need Internet Explorer 11 or higher and the latest version of [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section).&sup1; For Windows 8/8.1, you need to run Roblox in Desktop Mode, as Metro Mode isn't supported.
+- **Windows (64-bit)** &ndash; Windows 7, 8, 8.1, 10, or 11. For Windows 10 or earlier, you also need Internet Explorer 11 or higher and the latest version of [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section).&sup1;
 - **macOS** &ndash; macOS 10.13 (High Sierra) and above.
 - **Processor** &ndash; Processor with a clock speed of 1.6 GHz or better.
-- **Memory** &ndash; 4GB+ of system memory.
-- **Hard Disk** &ndash; At least 10GB of available hard disk space after installation.
+- **RAM** &ndash; 4 GB of system memory.
+- **Hard Disk** &ndash; At least 10 GB of available hard disk space after installation.
 - **Graphics Card** &ndash; A computer less than 5 years old with a dedicated video card or a laptop less than 3 years old with an integrated video card.
 - **Internet Access** &ndash; At least 4-8 MB/s to keep Studio up-to-date and save projects to your Roblox account.
 
