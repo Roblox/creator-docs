@@ -495,14 +495,14 @@ the following:
 
 ## String Interpolation
 
-In Luau, it's possible to interpolate strings or variables. To declare a interpolated string, put **backticks** (`` ` ``) around the characters:
+In Luau, you can interpolate strings or variables. To declare a interpolated string, put **backticks** (`` ` ``) around the characters:
 
 ```lua
 local string1 = `Hello world!`
 print(string1)  --> Hello world!
 ```
 
-To interpolate a string, create **placeholders** by wrapping a variable with curly brackets (`{` and `}`). The resulting string is placeholders get combined into a single string:
+To interpolate a string, create a **placeholder** by wrapping a variable with curly brackets (`{` and `}`). Placeholders get combined into a single string:
 
 ```lua
 local world = "world"
@@ -510,7 +510,7 @@ local string1 = `Hello {world}!`
 print(string1)  --> Hello world!
 ```
 
-Interpolation is possible for numbers. Math operations are allowed:
+Placeholders can contain numbers. Math operations are allowed inside placeholders:
 
 ```lua
 local number = 1
@@ -522,7 +522,7 @@ print(string1) --> Hello world, 1 time!
 print(string2) --> Hello world, 2 times!
 ```
 
-You can escape the curly brackets by using `\{` and `\}` respectively:
+You can escape curly brackets by using `\{` and `\}` respectively:
 
 ```lua
 print(`Hello \{world\}!`) --> Hello {world}!
