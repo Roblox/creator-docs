@@ -76,7 +76,7 @@ In this example from [_Squishmallows_](https://www.roblox.com/games/7941853407/)
 
   <figure>
       <img src="../../assets/game-design/introduction-to-quest-design/quest-design-8.png" width="30%"/>
-      <figcaption>Quests in [*Squishmallows*](https://www.roblox.com/games/7941853407/)</figcaption>
+      <figcaption>Quests in *Squishmallows*</figcaption>
     </figure>
 
 ### Teach through Tutorials
