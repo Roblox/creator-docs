@@ -309,8 +309,8 @@ local Players = game:GetService("Players")
 Players.CharacterAutoLoads = false
 
 local function onPlayerAdded(player)
-  -- Spawn character with "game.Workspace.StudioHumanoidDescription"
-  player:LoadCharacterWithHumanoidDescription(game.Workspace.StudioHumanoidDescription)
+  -- Spawn character with "workspace.StudioHumanoidDescription"
+  player:LoadCharacterWithHumanoidDescription(workspace.StudioHumanoidDescription)
 end
 
 -- Connect "PlayerAdded" event to "onPlayerAdded()" function
