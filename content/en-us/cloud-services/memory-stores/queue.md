@@ -45,7 +45,7 @@ After you get a queue, call any of the following functions to read or write data
 </table>
 
 <Alert severity="warning">
-All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `pcall()` to catch and handle errors, like the code sample in each section shows.
+All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `Global.LuaGlobals.pcall()` to catch and handle errors, like the code sample in each section shows.
 </Alert>
 
 ## Adding Data
