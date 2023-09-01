@@ -52,7 +52,7 @@ In [_Super Striker League_](https://www.roblox.com/games/3360853050/), player in
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-6.png" width="100%"/>
-    <figcaption>Contextual buttons in _Super Striker League_</figcaption></figcaption>
+    <figcaption>Contextual buttons in _Super Striker League_</figcaption>
   </figure>
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-7.png" width="100%"/>
