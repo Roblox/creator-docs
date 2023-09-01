@@ -81,7 +81,7 @@ As another example, you can add a filter in a textbox that will only allow numer
 ```lua
 local textBox = script.Parent
 local function filterNumerals()
-	textBox.Text = string.gsub(textBox.Text, "[^%-%d]", "")
+	textBox.Text = string.gsub(textBox.Text, "%D", "")
 end
 textBox:GetPropertyChangedSignal("Text"):Connect(filterNumerals)
 ```
