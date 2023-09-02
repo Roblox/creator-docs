@@ -265,10 +265,10 @@ local metatable = {
     	for key, value in pairs(t2) do
     		if sum[key] then
     			sum[key] = sum[key] + value
-   		else
-   			sum[key] = value
+   			else
+   				sum[key] = value
+   			end
    		end
-   	end
    	return sum
    end
 }
@@ -293,7 +293,7 @@ local function mathProblem(num)
     	num = math.floor(num * 10 + 65)
     end
     for i = 1, 10 do
-    	num = num + i - 1
+    	num += i - 1
     end
     return num
 end
