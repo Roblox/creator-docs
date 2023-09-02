@@ -57,7 +57,7 @@ local foo: string? = nil
 
 ### Literal Types
 
-Strings and booleans can also be casted to literal values, instead of using `string` and `boolean` respectively.
+Strings and booleans can also be cast to literal values, instead of using `string` and `boolean` respectively.
 
 ```lua
 local alwaysHelloWorld: "Hello World!" = "Hello World!"
@@ -71,7 +71,7 @@ alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbyte World"' could 
 Sometimes, you may need to assist the typechecker by changing the type of a value using type casts, this can be done with the `::` operator.
 
 ```lua
-local numericValue  = 1
+local numericValue = 1
 
 local value = numericValue :: any -- ok, all expressions may be cast to 'any'
 local flag = numericValue :: boolean -- not ok, invalid 'number' to 'boolean' conversion
@@ -152,7 +152,7 @@ type Car = {
 
 ## Variadics
 
-Here's a function that calculates the sum of a variadic amount of numbers.
+Here's a function that calculates the sum of an arbitrary amount of numbers.
 
 ```lua
 local function addLotsOfNumbers(...)
@@ -331,7 +331,7 @@ local function Signal<A...>(f: (A...) -> (), ...: A...)
 
 ## Type Exports
 
-Types can be exported through `Class.ModuleScript` using the `export` keyword infront of a type definition.
+Types can be exported from a `Class.ModuleScript` using the `export` keyword.
 
 ```lua title="Types Module in ReplicatedStorage"
 export type Cat = {
