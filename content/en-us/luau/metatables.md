@@ -264,11 +264,11 @@ local metatable = {
 
     	for key, value in pairs(t2) do
     		if sum[key] then
-    			sum[key] = sum[key] + value
-   			else
-   				sum[key] = value
-   			end
+    			sum[key] += value
+   		else
+   			sum[key] = value
    		end
+   	end
    	return sum
    end
 }
