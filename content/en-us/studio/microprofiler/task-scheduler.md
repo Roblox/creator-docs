@@ -8,7 +8,7 @@ The **Task Scheduler** coordinates tasks done each frame as the game runs, even 
 While there may be multiple tasks running, the task scheduler can potentially be overloaded, especially in the following situations:
 
 - Using a custom character rig or input scheme.
-- Animating parts yourself (instead of using an `Class.Animator`.
+- Animating parts yourself (instead of using an `Class.Animator`).
 - Depending heavily on precise physics.
 - Replicating objects regularly.
 
