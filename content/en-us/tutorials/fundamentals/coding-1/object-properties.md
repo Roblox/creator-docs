@@ -22,7 +22,7 @@ If you don't see the Properties window, go to the **View** tab and click the Pro
 
 ## Adding Comments to Scripts
 
-Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Color` property at the start of the game.
+Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Class.BasePart.Color|Color` property at the start of the game.
 
 1. Select an existing part or create a new one. Rename the part PracticePart.
 
@@ -50,7 +50,7 @@ Now that you know where the part is, the part's location needs to be translated 
    ```
 
     <Alert severity="info">
-    A long way to get to Workspace would be `game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
+    A long way to get to Workspace would be `Class.Workspace|game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `Class.Workspace|workspace` as a shortcut.
     </Alert>
 
 ### Changing a Property with Code
@@ -72,7 +72,7 @@ For the part, the script will change its Color property to a new Color3, a data 
     Roblox will autocomplete words as you type to help speed up the coding process. You can use the arrow keys to move down the list when the words appear. Pick an option by pressing <kbd>Enter</kbd>.
    </Alert>
 
-2. Next, type `= Datatype.Color3.fromRGB()` This code will allow you to assign a new color.
+2. Next, type `= Color3.fromRGB()` This code will allow you to assign a new color.
 
    ```lua title = 'Uses Color3.fromRGB()'
    -- Changes the color of a part
@@ -100,4 +100,4 @@ For the part, the script will change its Color property to a new Color3, a data 
 
 All objects have properties. Parts have properties like color and transparency. At the same time, other object types have their unique properties.
 
-To change the color of a part, you need to be able to describe where to find it. If the part is in Workspace, use the keyword `workspace`. Then use dot operators to state the desired part and access its properties.
+To change the color of a part, you need to be able to describe where to find it. If the part is in Workspace, use the keyword `Class.Workspace|workspace`. Then use dot operators to state the desired part and access its properties.
