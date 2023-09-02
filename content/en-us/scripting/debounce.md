@@ -17,7 +17,7 @@ local function damagePlayer(otherPart)
 
 	local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then
-		humanoid.Health = humanoid.Health - 10  -- Reduce player health
+		humanoid.Health -= 10  -- Reduce player health
 	end
 end
 
@@ -42,7 +42,7 @@ local function damagePlayer(otherPart)
 	if humanoid then
 		if not part:GetAttribute("Touched") then
 			part:SetAttribute("Touched", true)  -- Set attribute to true
-			humanoid.Health = humanoid.Health - 10  -- Reduce player health
+			humanoid.Health -= 10  -- Reduce player health
 			task.wait(RESET_TIME)  -- Wait for reset duration
 			part:SetAttribute("Touched", false)  -- Reset attribute
 		end
