@@ -24,9 +24,9 @@ This animation technique can provide solutions to the following examples:
 
 ## IKControl
 
-You can use an `Class.IKControl|IKControl` to procedurally add IK to your character rigs outside of the Animation Editor. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
+You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the Animation Editor. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
 
-When adding an `Class.IKControl|IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#testing-ikcontrols) to ensure that you achieve the desired behavior.
+When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#testing-ikcontrols) to ensure that you achieve the desired behavior.
 
 ### Required Properties
 
@@ -61,9 +61,9 @@ When adding a `Class.IKControl` to your character's `Class.Humanoid` or `Class.A
 
 ### Testing IKControls
 
-You can add and edit `Class.IKControl|IKControl` programmatically or directly through the Explorer. You can even add and make changes to `Class.IKControl|IKControl` during a Play test to quickly check how various properties affect a character's movements.
+You can add and edit `Class.IKControl` programmatically or directly through the Explorer. You can even add and make changes to `Class.IKControl` during a Play test to quickly check how various properties affect a character's movements.
 
-To quickly test your `Class.IKControl|IKControl` using an `Class.Attachment` as a target:
+To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
 
 1. In the Test tab, select **Play** to start the Play test.
 2. In the Explorer, navigate to **Workspace** → your user's `Class.Model`. This `Class.Model` instance is named as your current Roblox account.
@@ -122,9 +122,9 @@ You can use `Class.Constraint|Constraints` to restrict how joints can move when 
 
 To add constraints to your character using `Class.IKControl`, your `Class.IKControl` and constraint must meet the following conditions:
 
-- The attachments referenced in the constraint's `Attachment0`/`Attachment1` properties attaches to the same parts as the `Class.Motor6D` `Part0`/`Part1`.
-- The relative positions of `Attachment0`/`Attachment1` must equal the corresponding positions of the `Class.Motor6D` `C0`/`C1` CFrames.
-- The constraint and the IKControl share the same parent `Model`.
+- The attachments referenced in the constraint's `Class.Constraint.Attachment0|Attachment0`/`Class.Constraint.Attachment1|Attachment1` properties attaches to the same parts as the `Class.Motor6D` `Class.Motor6D.Part0|Part0`/`Class.Motor6D.Part1|Part1`.
+- The relative positions of `Class.Constraint.Attachment0|Attachment0`/`Class.Constraint.Attachment1|Attachment1` must equal the corresponding positions of the `Class.Motor6D` `Class.Motor6D.C0|C0`/`Class.Motor6D.C1|C1` CFrames.
+- The constraint and the IKControl share the same parent `Class.Model`.
 
 The following instructions describe the process of adding a `Class.HingeConstraint` to restrict the rotation of a character's elbow and adding a `Class.BallSocketConstraint` to the wrist to limit the rotation angle.
 
@@ -169,7 +169,7 @@ Even with the elbow constraint, the IKControl can still produce unrealistic pose
 <figcaption>The wrist bends unnaturally at certain orientations</figcaption>
 </figure>
 
-You can improve this by adding a `Class.BallSocketConstraint` to limit the rotation of the wrist. While this is similar to the process for adding a `Class.HingeConstraint` to the elbow, you can use the `Class.BallSocketConstraint.EnableLimits|Enable Limits` property on this constraint to further control the range of motion of the wrist.
+You can improve this by adding a `Class.BallSocketConstraint` to limit the rotation of the wrist. While this is similar to the process for adding a `Class.HingeConstraint` to the elbow, you can use the `Class.BallSocketConstraint.EnableLimits|EnableLimits` property on this constraint to further control the range of motion of the wrist.
 
 To add a `Class.BallSocketConstraint` for the wrist:
 
