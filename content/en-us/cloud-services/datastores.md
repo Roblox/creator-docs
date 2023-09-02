@@ -159,7 +159,7 @@ end
 ```
 
 <Alert severity="warning">
-  Functions like `Class.GlobalDataStore:SetAsync()|SetAsync()` that access a data store's contents are network calls that may occasionally fail. As shown above, it's recommended that these calls be wrapped in <InlineCode>pcall()</InlineCode> to catch and handle errors.
+  Functions like `Class.GlobalDataStore:SetAsync()|SetAsync()` that access a data store's contents are network calls that may occasionally fail. As shown above, it's recommended that these calls be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.
 </Alert>
 
 ### Reading Data

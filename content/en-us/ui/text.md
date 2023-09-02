@@ -71,3 +71,14 @@ local function onFocusLost(enterPressed, inputObject)
 end
 textBox.FocusLost:Connect(onFocusLost)
 ```
+
+As another example, you might want to only allow numbers in a `Class.TextBox`. The following code uses the `Class.TextBox.GetPropertyChangedSignal` event to detect when the `Class.TextBox.Text` changes, such as when a user starts typing. Then it uses the `Library.string.gsub()` function to disallow non-numbers:
+
+
+```lua
+local textBox = script.Parent
+local function onlyAllowNumbers()
+	textBox.Text = string.gsub(textBox.Text, "%D", "")
+end
+textBox:GetPropertyChangedSignal("Text"):Connect(onlyAllowNumbers)
+```
