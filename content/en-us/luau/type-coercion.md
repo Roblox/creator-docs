@@ -60,9 +60,11 @@ print(part3.Material) -- Enum.Material.Concrete
 The `Class.Lighting.TimeOfDay` property, which defines whether it is night, day, or any other time, is a string representation of the `Datatype.DateTime` data type. If you assign a number to `Class.Lighting.TimeOfDay`, Luau converts it to the string representation of `Datatype.DateTime`.
 
 ```lua
-game.Lighting.TimeOfDay = "05:00:00"
-print(game.Lighting.TimeOfDay) -- 05:00:00
+local Lighting = game:GetService("Lighting")
 
-game.Lighting.TimeOfDay = 5
-print(game.Lighting.TimeOfDay) -- 05:00:00
+Lighting.TimeOfDay = "05:00:00"
+print(Lighting.TimeOfDay) -- 05:00:00
+
+Lighting.TimeOfDay = 5
+print(Lighting.TimeOfDay) -- 05:00:00
 ```

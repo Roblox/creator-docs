@@ -19,7 +19,7 @@ You must filter any displayed text that you don't have explicit control over to 
 
   - **Text Input** - `Class.TextBox` input, custom GUI with character buttons, and interactive keyboard models in the 3D space.
 
-  - **Implicit Input** - Spelling out words with 3D `Parts` and `Models`.
+  - **Implicit Input** - Spelling out words with 3D `Class.Part|Parts` and `Class.Model|Models`.
 
 - **Random Words** - If your experience generates words from random characters and displays them to users, there is a chance that it creates inappropriate words.
 
@@ -49,7 +49,7 @@ end
 ```
 
 <Alert severity="warning">
-Note that you should always wrap `Class.TextService:FilterStringAsync()` in `pcall` since it's an asynchronous network call that may occasionally fail. If the `pcall` fails, you should **not** display the text because it's safer to display empty text than unfiltered text.
+Note that you should always wrap `Class.TextService:FilterStringAsync()` in `Global.LuaGlobals.pcall()` since it's an asynchronous network call that may occasionally fail. If the `Global.LuaGlobals.pcall()` fails, you should **not** display the text because it's safer to display empty text than unfiltered text.
 </Alert>
 
 The `Class.TextFilterResult` object returned by `Class.TextService:FilterStringAsync()` has two methods that you can call in different cases:
@@ -91,7 +91,7 @@ sendButton.MouseButton1Click:Connect(onClick)
 local TextService = game:GetService("TextService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local sign = game.Workspace.Sign
+local sign = workspace.Sign
 local signTop = sign.Top
 local signSurfaceGui = signTop.SurfaceGui
 local signLabel = signSurfaceGui.SignLabel

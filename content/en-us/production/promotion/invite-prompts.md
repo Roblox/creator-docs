@@ -149,7 +149,7 @@ By default, the invite notification that friends receive contains the sender's `
 
 To prompt an invite, you should first determine whether the player **can** send an invite, as the ability may vary depending on the platform or player. Once confirmed, you can display the invitation prompt to the player.
 
-1. Call `Class.SocialService:CanSendGameInviteAsync()`, wrapped in a `pcall()` since it's an asynchronous network call that may occasionally fail.
+1. Call `Class.SocialService:CanSendGameInviteAsync()`, wrapped in a `Global.LuaGlobals.pcall()` since it's an asynchronous network call that may occasionally fail.
 1. If the invite ability is confirmed, call `Class.SocialService:PromptGameInvite()` with the optional [invite options object](#setting-invite-options) as the second argument.
 
 Once prompted, the player will see an on-screen prompt to invite multiple friends, or the specific friend defined in the [invite options object](#setting-invite-options). When the player then clicks the **Invite** button for one or more friends, those friends will receive a notification containing the sender's `Class.Player.DisplayName|DisplayName`, username, and the experience name. Notifications may be further customized as outlined in [Setting Notification Options](#setting-notification-options).
