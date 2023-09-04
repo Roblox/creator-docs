@@ -8,6 +8,7 @@ import { Locale } from './utils.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 export const repositoryRoot = path.join(__dirname, '/../../../');
+export const outputDirectory = path.join(repositoryRoot, 'tools', 'output');
 
 export enum FileExtension {
   JSON = '.json',
@@ -75,10 +76,6 @@ const ensureDirExistsSync = (dirPath: string): void => {
   }
 };
 
-export const getOutputDirectory = (): string => {
-  return path.join(repositoryRoot, 'tools/output');
-};
-
 /**
  * Writes a deduplicated and sorted list of strings and numbers to a file.
  *
@@ -94,11 +91,34 @@ export const writeListToFile = (
   list: (string | number)[],
   encoding: BufferEncoding = 'utf-8'
 ) => {
-  const outputDir = getOutputDirectory();
-  ensureDirExistsSync(outputDir);
-
-  const outputFile = path.join(outputDir, outputFileName);
+  ensureDirExistsSync(path.dirname(outputFileName));
   if (list.length > 0) {
-    fs.writeFileSync(outputFile, list.join('\n'), encoding);
+    fs.writeFileSync(outputFileName, list.join('\n'), encoding);
+  }
+};
+
+/**
+ * Reads a list of strings and numbers from a file and returns it as an array.
+ *
+ * @param inputFileName - Name of the input file to read from.
+ * @param encoding - Character encoding for the file read operation. Default is 'utf-8'.
+ *
+ * @return Array of strings and numbers read from the file.
+ *
+ * This function assumes that the file has one string or number per line.
+ * It also assumes that the target directory already exists.
+ */
+export const readListFromFile = (
+  inputFileName: string,
+  encoding: BufferEncoding = 'utf-8'
+): (string | number)[] => {
+  if (fs.existsSync(inputFileName)) {
+    const fileContents = fs.readFileSync(inputFileName, encoding);
+    return fileContents.split('\n').map((line) => {
+      // If the line can be converted to a number, do so
+      return isNaN(Number(line)) ? line : Number(line);
+    });
+  } else {
+    throw new Error(`File ${inputFileName} does not exist.`);
   }
 };

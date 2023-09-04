@@ -11,14 +11,14 @@ next: /tutorials/core/building/create-basic-visual-effects
 
 Players can now collect coins and lose them when they die, but the coins don't
 do anything, and most of the game world is inaccessible without the ability to
-jump very high. This section of the tutorial teaches you how too finish the logic
+jump very high. This section of the tutorial teaches you how to finish the logic
 for your experience by adding an on-screen button that spends coins to increase jumping power.
 
 ## Create the Upgrade Button
 
 2D interfaces in Roblox are typically made up of a collection of GUI components
 inside of a GUI container. In this case, you only need a `Class.TextButton`
-component that says **Upgrade** inside a `Class.ScreenGui` container.
+component that says **Upgrade Jump (5 Coins)** inside a `Class.ScreenGui` container.
 
 To create the GUI:
 
@@ -33,7 +33,7 @@ To create the GUI:
 1. In the **Explorer** window, insert a **TextButton** into the **JumpPurchaseGui** container, then rename the text
    button to **JumpButton**.
 1. **(Optional)** Customize the button's appearance and position by configuring its properties. Simple suggestions include:
-   - Set the **Text** property to **Upgrade**.
+   - Set the **Text** property to **Upgrade Jump (5 Coins)**.
    - Set the **TextSize** property to **25**.
    - Set **AnchorPoint** to **1, 1** and Position to **{1, 0},{1, 0}** to move the button to the bottom right corner.
 
