@@ -69,7 +69,7 @@ alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbye World"' could n
 
 ### Type Casts
 
-Sometimes, you may need to assist the typechecker by changing the type of a value using type casts, this can be done with the `::` operator.
+Sometimes, you may need to assist the typechecker by changing the type of a value using type casts. This can be done with the `::` operator.
 
 ```lua
 local numericValue = 1
