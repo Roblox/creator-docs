@@ -1,5 +1,5 @@
 ---
-title: Luau Typing
+title: Luau Type Checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
@@ -63,7 +63,8 @@ Strings and booleans can also be cast to literal values, instead of using `strin
 local alwaysHelloWorld: "Hello World!" = "Hello World!"
 local alwaysTrue: true = false -- TypeError: Type 'false' could not be converted into 'true'
 
-alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbyte World"' could not be into '"Hello World!"'
+alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbye World"' could not be into '"Hello World!"'
+
 ```
 
 ### Type Casts
@@ -87,7 +88,7 @@ local function add(x, y)
 end
 ```
 
-This function will add x to y, however it might error if a string is given to this function, Luau doesn't know that this function can only use numbers, lets rework this function such that it does constrain `x` and `y` to be numbers.
+This function adds `x` to `y`, but will error if a string is passed as an argument. Luau doesn't know that this function can only use numbers, so lets type this function to constrain `x` and `y` as numbers.
 
 ```lua
 local function add(x: number, y: number)
@@ -166,7 +167,8 @@ local function addLotsOfNumbers(...)
 end
 ```
 
-As expected, this can take any value, and the typechecker wont raise a warning if you give it an invalid type, such as a `string`.
+As expected, this can take any value, and the typechecker won't raise a warning if you give it an invalid type, such as a `string`.
+
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
@@ -192,7 +194,7 @@ However, with a type definition, the following statement does not work.
 type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
 ```
 
-Instead, use the syntax `...type` to define the variadic type.
+Instead, use the syntax `...type` to define a variadic type.
 
 ```lua
 type addLotsOfNumbers = (...number) -> number
