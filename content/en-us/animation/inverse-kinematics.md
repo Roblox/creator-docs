@@ -169,7 +169,7 @@ Even with the elbow constraint, the IKControl can still produce unrealistic pose
 <figcaption>The wrist bends unnaturally at certain orientations</figcaption>
 </figure>
 
-You can improve this by adding a `Class.BallSocketConstraint` to limit the rotation of the wrist. While this is similar to the process for adding a `Class.HingeConstraint` to the elbow, you can use the `Class.BallSocketConstraint.EnableLimits|EnableLimits` property on this constraint to further control the range of motion of the wrist.
+You can improve this by adding a `Class.BallSocketConstraint` to limit the rotation of the wrist. While this is similar to the process for adding a `Class.HingeConstraint` to the elbow, you can use the `Class.BallSocketConstraint.LimitsEnabled|LimitsEnabled` property on this constraint to further control the range of motion of the wrist.
 
 To add a `Class.BallSocketConstraint` for the wrist:
 
