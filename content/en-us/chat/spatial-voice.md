@@ -89,7 +89,7 @@ SoundService:SetListener(Enum.ListenerType.ObjectCFrame, myHead)
 
 ## Checking Chat with Spatial Voice Status
 
-You can check if a user has enabled chat with spatial voice by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()`in a `Class.LocalScript`.
+You can check if a user has enabled chat with spatial voice by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()` in a `Class.LocalScript`.
 
 For example, if you want to enable a UI-layer for voice-enabled users, reference the following script:
 
