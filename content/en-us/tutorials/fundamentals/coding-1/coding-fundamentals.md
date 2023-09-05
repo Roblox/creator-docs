@@ -1,18 +1,16 @@
 ---
 title: Coding Fundamentals
-description: Learn how to code on Roblox for free with these tutorials. Build projects, code games, and learn computer science with Luau.
+description: Teaches the basics of coding with Lua.
 next: /tutorials/fundamentals/coding-1/landing
 ---
 
 ### Series Description
 
-Start coding on Roblox with this free, easy-to-follow series covering the fundamentals of how to use the programming language Lua. These courses are perfect for those new to coding or just starting with Lua. Each course is centered around a foundational computer science principle and features individual lessons with step-by-step tutorials you can use to create your own experiences on Roblox.
+Start coding on Roblox with this easy-to-follow series covering the fundamentals of how to use the programming language Lua. These courses are perfect for those new to coding or just starting with Lua. Each course centers around a foundational computer science principle, and features individual lessons with step-by-step tutorials you can use to create your own experiences on Roblox.
 
 Before beginning this course, the reader should have basic knowledge of Roblox Studio, as demonstrated in [Introduction to Studio](../../first-experience/index.md).
 
 ### Series Contents
-
-Each series contains a set of at least four different lessons.
 
 <table>
 <thead>
