@@ -129,7 +129,7 @@ print(string2)  --> Hello world, 2 times!
 print(string3)  --> Hello world a third time!
 ```
 
-Standard escape rules apply for backticks, curly braces and backslashes:
+Standard escape rules apply for backticks, curly brackets, and backslashes:
 
 ```lua
 local string1 = `Hello \`\{world\}\`!`
