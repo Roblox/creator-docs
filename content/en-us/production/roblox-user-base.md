@@ -19,13 +19,13 @@ Always bear in mind how your experience plays to these strengths when designing 
 
 Part of what makes Roblox so special is the **diversity** and **inclusivity** of its community and its content, whether that's giving a safe space for gender identities, the creation of inclusive content, or the wide variety of developers creating content on the platform.
 
-Roblox's user base now has more users that are at least 13 years old (**O13**) than under the age of 13 (**U13**). Understanding how Roblox works and its network effects will require some focus on younger users, but there's a growing opportunity to create content for their older counterparts.
+Roblox's user base now has more users that are at least 13 years old than under the age of 13. Understanding how Roblox works and its network effects will require some focus on younger users, but there's a growing opportunity to create content for their older counterparts.
 
 <figure>
   <img
-    alt="O13 user base as a percentage of Daily Active Users"
+    alt="Over 13 user base as a percentage of Daily Active Users"
     src="../assets/getting-started/developing-on-roblox/Percentage-O13-Users-Chart.jpg"/>
-  <figcaption>O13 user base as a percentage of Daily Active Users</figcaption>
+  <figcaption>Over 13 user base as a percentage of Daily Active Users</figcaption>
 </figure>
 
 Roblox is also expanding **geographically**. While the US, UK and Canada are still the biggest regions in terms of users, Europe, APAC, and the rest of the world are growing more year over year. As more local developers come online from around the world, this growth is only set to continue.
@@ -45,7 +45,7 @@ Understanding your audience means understanding the other experiences your users
 
 ### Social Factors
 
-Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on Discord and Twitter.
+Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
 
 Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promoting on Roblox](../production/promotion/index.md).
 
@@ -79,7 +79,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Builderman</b></td>
-    <td>The username of Roblox founder and CEO Dave Baszucki.</td>
+    <td>The username of Roblox founder and CEO David Baszucki.</td>
   </tr>
   <tr>
     <td><b>Developer Forum</b></td>
@@ -107,7 +107,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Marketplace</b></td>
-    <td>Allows approved developers to sell creations such as plugins to other developers for use in their experiences.</td>
+    <td>Allows approved developers to sell creations such as plugins and avatar items.</td>
   </tr>
   <tr>
     <td><b>Moderation</b></td>
@@ -123,7 +123,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
   </tr>
   <tr>
     <td><b>Place</b></td>
-    <td>Roblox experiences consist of places, similar to how games comprise scenes in Unity or maps in the Unreal Engine.</td>
+    <td>Roblox experiences consist of one or more places, similar to how games comprise scenes in Unity or maps in the Unreal Engine.</td>
   </tr>
   <tr>
     <td><b>Private Server</b></td>

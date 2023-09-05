@@ -13,7 +13,7 @@ If you want to build an experience with many distinct places, such as a fantasy 
 
 To enable teleportation in your experience, use `Class.TeleportService:TeleportAsync()`. The method accepts three parameters:
 
-- The `place ID` for users to teleport to.
+- The `Class.DataModel.PlaceId|PlaceId` for users to teleport to.
 - An array containing the `Class.Player` instances representing the users to teleport.
 - An optional `Class.TeleportOptions` instance that contains custom properties for the `Class.TeleportService:TeleportAsync()|TeleportAsync()` call.
 
@@ -123,7 +123,7 @@ To retrieve only the teleport data on the client, you can use `Class.TeleportSer
 
 Like any API call that involves network requests, teleports might fail and throw an error. Even if a call succeeds and the teleport initiates, it can still fail at the last moment without throwing an error and leave the user in the server. When this happens, it triggers `Class.TeleportService.TeleportInitFailed`.
 
-Wrap teleports in a protected call (`pcall()`) and retry if it fails. The following example `Class.ModuleScript` defines a `SafeTeleport` function to teleport the user in a protected call and a `handleFailedTeleport` function to retry failed teleports that are one-time hiccups and drops invalid ones that might have errors in the code.
+Wrap teleports in a protected call (`Global.LuaGlobals.pcall()`) and retry if it fails. The following example `Class.ModuleScript` defines a `SafeTeleport` function to teleport the user in a protected call and a `handleFailedTeleport` function to retry failed teleports that are one-time hiccups and drops invalid ones that might have errors in the code.
 
 ```lua
 local TeleportService = game:GetService("TeleportService")
