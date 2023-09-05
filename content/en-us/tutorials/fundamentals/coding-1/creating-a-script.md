@@ -99,9 +99,10 @@ Time to declare your own variables. These steps will use a string to store the n
 
 ### Naming Variables
 
-Variables can be named anything, but good names will always describe their purpose. Generic names make your code difficult to read and update later. Coders will also use different capitalization styles to remind themselves how the variable is used within the script. A good default style is **camelCase**. 
+Variables can be named anything, but good names will always describe their purpose. Generic names make your code difficult to read and update later. Coders will also use different capitalization styles to remind themselves how the variable is used within the script. A good default style is **camelCase**.
 
 To write in camelCase:
+
 - Begin with a lowercase letter
 - Leave out spaces
 - Capitalize additional words
