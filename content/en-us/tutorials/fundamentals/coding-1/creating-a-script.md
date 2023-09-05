@@ -76,7 +76,7 @@ Strings like `"Hello World"` always sit inside quotation marks, `"like this"`. M
 **Declaring** a variable is what coders call the process of creating a new variable. In Lua, to declare a new variable, type `local`, then type the name for the new variable. A variable that can hold a player name might look like: `local playerName`
 
 <Alert severity="info">
-When declaring new variables, some coding languages require that you also state what data type the variable can use. For example, a variable in Java would be `String name = "Pavel"`. Lua only requires a name.Lua only requires a name.
+When declaring new variables, some coding languages require that you also state what data type the variable can use. For example, a variable in Java would be `String name = "Pavel"`. Lua only requires a name.
 </Alert>
 
 In Lua, variables can be global or local. You'll usually use **local** variables. Local variables can only be used within the script or chunk of code where they were created. Global variables can potentially be used by other scripts, but too many global variables can make your experience slow and unresponsive. It's better to stay in the habit of making variables local unless necessary.
@@ -99,10 +99,12 @@ Time to declare your own variables. These steps will use a string to store the n
 
 ### Naming Variables
 
-Variables can be named anything, but good names will always describe their purpose. Generic names make your code difficult to read and update later. Coders will also use different capitalization styles to remind themselves how the variable is used within the script. A good default style is **camelCase**. To write in camelCase:
-Begin with a lowercase letter
-Leave out spaces
-Capitalize additional words
+Variables can be named anything, but good names will always describe their purpose. Generic names make your code difficult to read and update later. Coders will also use different capitalization styles to remind themselves how the variable is used within the script. A good default style is **camelCase**. 
+
+To write in camelCase:
+- Begin with a lowercase letter
+- Leave out spaces
+- Capitalize additional words
 
 Good Variable Names
 
@@ -132,7 +134,7 @@ New variables are empty. To **assign** it a value, or put something inside its c
 
 ### Using Print() For Your Own Messages
 
-Print functions display text on the screen, as you saw earlier. It's one of the first functions many people learn since it's a simple way of giving the script a command. To see your variable, use the `print()` function.
+Print functions display text on the screen, as you saw earlier. It's one of the first functions many people learn since it's a simple way of giving the script a command. To see your variable, use the `Global.LuaGlobals.print()` function.
 
 1. On a new line, type `print()`.
 
