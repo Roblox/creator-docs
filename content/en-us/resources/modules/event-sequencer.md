@@ -365,7 +365,7 @@ If a scene contains absolutely no terrain, you should still click **Save Terrain
 The **OnSetup** lifecycle hook is intended for initializing assets and variables that will be referenced in [OnRun](#onrun) or [OnEndScene](#onendscene), setting up `Datatype.RBXScriptSignal:Connect()|connections` that are intended to last for the duration of the scene, etc. This hook receives the `timePositionObject` parameter which lets you read the current time at setup.
 
 <Alert severity="warning">
-It's recommended that you do **not** call `wait` or `Library.task.wait()` within **OnSetup**, as it will delay the [OnRun](#onrun) start while the scene's timer continues to count up.
+It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnSetup**, as it will delay the [OnRun](#onrun) start while the scene's timer continues to count up.
 </Alert>
 
 ```lua title='Client Schema' highlight='11,21'
@@ -421,7 +421,7 @@ end
 **OnRun** is the main operational lifecycle hook within a [schema](#scene-schemas). It should contain all timed [configurations](#schema-configurations) for the scene, from playing [audio](#audio) or an [animation](#animate) to [scheduling an event](#schedule) like a fireworks display.
 
 <Alert severity="warning">
-It's recommended that you do **not** call `wait` or `Library.task.wait()` within **OnRun**, as it will delay the scene's orchestration while the scene's timer continues to count up.
+It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnRun**, as it will delay the scene's orchestration while the scene's timer continues to count up.
 </Alert>
 
 ```lua title='Client Schema' highlight='1,14'
