@@ -136,7 +136,7 @@ New variables are empty. To **assign** it a value, or put something inside its c
 
 Print functions display text on the screen, as you saw earlier. It's one of the first functions many people learn since it's a simple way of giving the script a command. To see your variable, use the `Global.LuaGlobals.print()` function.
 
-1. On a new line, type `Global.LuaGlobals.print()`.
+1. On a new line, type `print()`.
 
    ```lua title = 'Adds empty print()'
    local myAnimal = "Porcupines"
