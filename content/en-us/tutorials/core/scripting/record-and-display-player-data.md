@@ -363,7 +363,7 @@ data. To update **CoinService**:
     - Creating the helper function
       `updatePlayerCoins()` to update the player's coin count and associated
       leaderboard stat.
-    - Replacing the placeholder `Global.LuaGlobals.print()` statement in
+    - Replacing the placeholder `print()` statement in
       `onCoinTouched()` with a call to `updatePlayerCoins()`.
 
     </AccordionDetails>
