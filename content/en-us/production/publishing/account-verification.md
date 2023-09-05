@@ -64,7 +64,7 @@ To verify your account with your phone number:
 
 ## Checking Account Verification Status
 
-The `Class.Player.IsVerified` method lets you check the verification status of users accessing your experiences, allowing you to limit access to specific content, ranked queues, or even the experience itself. Because users that verify their accounts connect their Roblox identity to their real-world identity, it's much less likely they will cheat, spam, or otherwise risk being blocked from your experience, making this method especially useful for competitive and ranked experiences.
+The `Class.Player:IsVerified()` method lets you check the verification status of users accessing your experiences, allowing you to limit access to specific content, ranked queues, or even the experience itself. Because users that verify their accounts connect their Roblox identity to their real-world identity, it's much less likely they will cheat, spam, or otherwise risk being blocked from your experience, making this method especially useful for competitive and ranked experiences.
 
 The following script checks the verification status of each player as they join the experience. If they have verified their account, the console prints **true**.
 
