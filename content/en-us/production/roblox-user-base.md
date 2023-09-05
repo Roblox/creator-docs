@@ -45,7 +45,7 @@ Understanding your audience means understanding the other experiences your users
 
 ### Social Factors
 
-Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X.
+Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
 
 Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promoting on Roblox](../production/promotion/index.md).
 
