@@ -286,7 +286,7 @@ the client:
   </tr>
   <tr>
     <td>`Class.StarterCharacterScripts`</td>
-    <td>`Class.Player.Character`</td>
+    <td><code>Player.Character</code></td>
     <td>Scripts that are copied to the client when they spawn. These scripts do not persist when the player respawns.</td>
   </tr>
 	<tr>
