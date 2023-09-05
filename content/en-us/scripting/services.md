@@ -48,9 +48,9 @@ Cloud services also have corresponding web APIs, making them accessible from ext
 ### Calling in Scripts
 
 You retrieve services to utilize them using the global variable
-`game`, a reference to the root of the data model.
+`Class.DataModel|game`, a reference to the root of the data model.
 It's best practice to include services at the top of each script that utilizes
-them for quick identification with the `game:GetService()` method.
+them for quick identification with the `Class.DataModel:GetService()|game:GetService()` method.
 
 ```lua highlight='1-3'
 local CollectionService = game:GetService("CollectionService")
@@ -68,12 +68,12 @@ for c = 1, #lightSources do
 end
 ```
 
-Service-related `game` methods that you might use include:
+Service-related `Class.DataModel|game` methods that you might use include:
 
-- `game:GetService()` returns the instance of the specified service.
+- `Class.DataModel:GetService()|game:GetService()` returns the instance of the specified service.
 
-- `game:FindService()` searches for the instance of the specified service.
+- `Class.DataModel:FindService()|game:FindService()` searches for the instance of the specified service.
 
-- `game:GetChildren()` returns an array of all root children of the data model, which are the top-level container services.
+- `Class.DataModel:GetChildren()|game:GetChildren()` returns an array of all root children of the data model, which are the top-level container services.
 
-- `game:GetDescendants()` returns an array of all the descendants of the data model, including all container services and their children.
+- `Class.DataModel:GetDescendants()|game:GetDescendants()` returns an array of all the descendants of the data model, including all container services and their children.
