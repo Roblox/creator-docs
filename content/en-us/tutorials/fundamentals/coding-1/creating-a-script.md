@@ -158,7 +158,7 @@ Print functions display text on the screen, as you saw earlier. It's one of the 
 
 ### Combining Strings
 
-You can display any string in the Output using `Global.LuaGlobals.print()`; you can even print multiple strings stored within variables or typed directly within the function. **Concatenation** is combining strings. To concatenate the string assigned to your variable and a second string, use two dots `..` The following example concatenates two variables and two typed strings.
+You can display any string in the Output using `print()`; you can even print multiple strings stored within variables or typed directly within the function. **Concatenation** is combining strings. To concatenate the string assigned to your variable and a second string, use two dots `..` The following example concatenates two variables and two typed strings.
 
 ```lua title = 'Uses variables and strings together'
 

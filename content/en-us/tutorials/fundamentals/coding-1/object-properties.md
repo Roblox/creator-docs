@@ -50,7 +50,7 @@ Now that you know where the part is, the part's location needs to be translated 
    ```
 
     <Alert severity="info">
-    A long way to get to Workspace would be `Class.Workspace|game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `Class.Workspace|workspace` as a shortcut.
+    A long way to get to Workspace would be `game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
     </Alert>
 
 ### Changing a Property with Code
@@ -100,4 +100,4 @@ For the part, the script will change its Color property to a new Color3, a data 
 
 All objects have properties. Parts have properties like color and transparency. At the same time, other object types have their unique properties.
 
-To change the color of a part, you need to be able to describe where to find it. If the part is in Workspace, use the keyword `Class.Workspace|workspace`. Then use dot operators to state the desired part and access its properties.
+To change the color of a part, you need to be able to describe where to find it. If the part is in Workspace, use the keyword `workspace`. Then use dot operators to state the desired part and access its properties.
