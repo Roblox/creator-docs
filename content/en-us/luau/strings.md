@@ -104,6 +104,38 @@ local string2 = "Hello\tworld!"
 print(string2)  --> Hello	world!
 ```
 
+## String Interpolation
+
+Luau supports string interpolation, a feature that lets you insert expressions into strings. Use backticks (`` ` ``) to declare an interpolated string. Then add expressions inside of curly brackets:
+
+```lua
+local world = "world"
+local string1 = `Hello {world}!`
+print(string1)  --> Hello world!
+```
+
+Although variables are the most common usage, you can use any expression, including math:
+
+```lua
+local world = "world"
+local number = 1
+local string1 = `Hello {world}, {number} time!`
+local string2 = `Hello {world}, {number + 1} times!`
+local letters = {"w", "o", "r", "l", "d"}
+local string3 = `Hello {table.concat(letters)} a third time!`
+
+print(string1)  --> Hello world, 1 time!
+print(string2)  --> Hello world, 2 times!
+print(string3)  --> Hello world a third time!
+```
+
+Standard escape rules apply for backticks, curly brackets, and backslashes:
+
+```lua
+local string1 = `Hello \`\{world\}\`!`
+print(string1)  --> Hello `{world}`!
+```
+
 ## Math Conversion
 
 If you perform math operations on a string, Luau automatically converts the string to a number. If the string doesn't have a number representation, it throws an error.
