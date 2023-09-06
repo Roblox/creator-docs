@@ -287,7 +287,7 @@ type State<T> = {
 
 ### Function Generics
 
-Functions can also use generics, however, they behave differently when inference is introduced into it, using the State example again, it can be designed to infer the value of `T`, from the function's incoming arguments.
+Functions can also use generics. The State example can infer the value of `T` from the function's incoming arguments.
 
 A generic function is defined by adding a `<>` to the right of the function name.
 
