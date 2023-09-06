@@ -17,12 +17,14 @@ The following table lists the relevant legacy global methods and their preferred
 
 | Legacy Global Methods                   | Task Methods                 | Additional Alternative Methods |
 | :-------------------------------------- | :--------------------------- | :----------------------------- |
-| `Global.RobloxGlobals.wait()`                                | `Library.task.wait()`        | `Class.RunService.Heartbeat:Wait()`  |
-| `Global.RobloxGlobals.wait()|wait(n)`                               | `Library.task.wait()|task.wait(n)`       |                                |
-| `Global.RobloxGlobals.spawn()|spawn(f)`                              | `Library.task.defer()|task.defer(f)`      | `task.delay(0, f)`             |
-| `Global.RobloxGlobals.delay()|delay(n, f)`                           | `Library.task.delay()|task.delay(n, f)`           |                                |
-| `Global.RobloxGlobals.spawn()|spawn(function () f(uv1, ...) end)`    | `Library.task.defer()|task.defer(f, uv1, ...)`    | `Library.task.delay()|task.delay(0, f, uv1, ...)`   |
-| `Global.RobloxGlobals.delay()|delay(n, function () f(uv1, ...) end)` | `Library.task.delay()|task.delay(n, f, uv1, ...)` |                                |
+| Legacy Global Methods                   | Task Methods                                       | Additional Alternatives                            |
+| :---------------------------------------| :------------------------------------------------- | :------------------------------------------------- |
+| `wait()`                                | `Library.task.wait()`                              | `Class.RunService.Heartbeat`                       |
+| `wait(n)`                               | `Library.task.wait()\|task.wait(n)`                |                                                    |
+| `spawn(f)`                              | `Library.task.defer()\|task.defer(f)`              | `Library.task.delay()\|task.delay(0, f)`           |
+| `delay(n, f)`                           | `Library.task.delay()\|task.delay(n, f)`           |                                                    |
+| `spawn(function () f(uv1, ...) end)`    | `Library.task.defer()\|task.defer(f, uv1, ...)`    | `Library.task.delay()\|task.delay(0, f, uv1, ...)` |
+| `delay(n, function () f(uv1, ...) end)` | `Library.task.delay()\|task.delay(n, f, uv1, ...)` |                                                    |
 
 #### task.spawn
 
