@@ -1,6 +1,11 @@
 export enum Emoji {
+  AlarmClock = '⏰',
   Bulb = '💡',
+  EnvelopeWithArrow = '📩',
+  Label = '🏷️',
   NoEntry = '⛔️',
+  Mag = '🔍',
+  Mailbox = '📫',
   WhiteCheckMark = '✅',
 }
 

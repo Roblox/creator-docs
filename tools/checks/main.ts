@@ -128,65 +128,69 @@ try {
     );
     console.log('::group::🔍 Checking', filePathFromRepoRoot);
     const content = readFileSync(filePath);
-    const retextVFile = await getReTextAnalysis(content);
-    if (config.debug) {
-      console.log(retextVFile);
+    if (config.checkRetextAnalysis) {
+      const retextVFile = await getReTextAnalysis(content);
+      if (config.debug) {
+        console.log(retextVFile);
+      }
+      if (retextVFile.messages.length > 0) {
+        retextVFile.messages.forEach((message) => {
+          const messageSummary = `In ${filePathFromRepoRoot}, line ${message.line}, column ${message.column}, ${message.reason}`;
+          let isRequiredCheck = false;
+          if (message.source) {
+            if (
+              message.source === RETEXT_INAPPROPRIATE ||
+              message.source === RETEXT_PROFANITIES
+            ) {
+              labelPullRequestAsInappropriate = true;
+            }
+            if (message.source === RETEXT_SPELL && message.actual) {
+              missSpelledWords.push(message.actual);
+            }
+            if (REQUIRED_CHECKS.has(message.source)) {
+              isRequiredCheck = true;
+              addToSummaryOfRequirements(
+                `${Emoji.NoEntry} Requirement: ${messageSummary}`
+              );
+            } else {
+              addToSummaryOfSuggestions(
+                `${Emoji.Bulb} Suggestion: ${messageSummary}`
+              );
+            }
+          }
+          // Always print required messages, suggestions are optional
+          if (isRequiredCheck || !config.onlyRequiredChecks) {
+            console.log('📩 Message from check:');
+            console.log(isRequiredCheck ? Emoji.NoEntry : Emoji.Bulb, message);
+          }
+          // Only comment required checks to avoid too much noise
+          if (config.postPullRequestComments && isRequiredCheck) {
+            const pullRequestReviewComment =
+              getNewPullRequestCommentForVFileMessage({
+                commit_id: config.commitHash,
+                isRequiredCheck,
+                /**
+                 * Ignore this error:
+                 * Type 'VFileMessage' is missing the following properties
+                 * from type 'VFileMessage': ancestors, place ts(2739)
+                 */ //@ts-ignore
+                message,
+                path: filePathFromRepoRoot,
+                pull_number: config.pullRequestNumber,
+                repository: config.repository,
+              });
+            console.log(`📫 Comment to post:`);
+            console.log(pullRequestReviewComment);
+            pullRequestReviewComments.push(pullRequestReviewComment);
+          }
+        });
+      } else {
+        console.log(`${Emoji.WhiteCheckMark} No messages from checks`);
+      }
     }
-    if (retextVFile.messages.length > 0) {
-      retextVFile.messages.forEach((message) => {
-        const messageSummary = `In ${filePathFromRepoRoot}, line ${message.line}, column ${message.column}, ${message.reason}`;
-        let isRequiredCheck = false;
-        if (message.source) {
-          if (
-            message.source === RETEXT_INAPPROPRIATE ||
-            message.source === RETEXT_PROFANITIES
-          ) {
-            labelPullRequestAsInappropriate = true;
-          }
-          if (message.source === RETEXT_SPELL && message.actual) {
-            missSpelledWords.push(message.actual);
-          }
-          if (REQUIRED_CHECKS.has(message.source)) {
-            isRequiredCheck = true;
-            addToSummaryOfRequirements(
-              `${Emoji.NoEntry} Requirement: ${messageSummary}`
-            );
-          } else {
-            addToSummaryOfSuggestions(
-              `${Emoji.Bulb} Suggestion: ${messageSummary}`
-            );
-          }
-        }
-        // Always print required messages, suggestions are optional
-        if (isRequiredCheck || !config.onlyRequiredChecks) {
-          console.log('📩 Message from check:');
-          console.log(isRequiredCheck ? Emoji.NoEntry : Emoji.Bulb, message);
-        }
-        // Only comment required checks to avoid too much noise
-        if (config.postPullRequestComments && isRequiredCheck) {
-          const pullRequestReviewComment =
-            getNewPullRequestCommentForVFileMessage({
-              commit_id: config.commitHash,
-              isRequiredCheck,
-              /**
-               * Ignore this error:
-               * Type 'VFileMessage' is missing the following properties
-               * from type 'VFileMessage': ancestors, place ts(2739)
-               */ //@ts-ignore
-              message,
-              path: filePathFromRepoRoot,
-              pull_number: config.pullRequestNumber,
-              repository: config.repository,
-            });
-          console.log(`📫 Comment to post:`);
-          console.log(pullRequestReviewComment);
-          pullRequestReviewComments.push(pullRequestReviewComment);
-        }
-      });
-    } else {
-      console.log(`${Emoji.WhiteCheckMark} No messages from checks`);
+    if (config.checkHttpLinks) {
+      checkHttpLinks({ fileName: filePathFromRepoRoot, content, config });
     }
-    checkHttpLinks({ fileName: filePathFromRepoRoot, content, config });
     console.log('::endgroup::');
   }
   if (config.debug) {
@@ -206,7 +210,7 @@ try {
   }
   logSummariesToConsole();
 } catch (e) {
-  console.error('❌ Error running the check', e);
+  console.error(`${Emoji.NoEntry} Error running the check`, e);
   process.exit(1);
   console.log('Exit code 1'); // This should never output
 }
