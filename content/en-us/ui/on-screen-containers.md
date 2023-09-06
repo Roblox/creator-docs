@@ -23,9 +23,13 @@ You do not need to create a `Class.StarterGui` object as it is always present in
 
 <img src="../assets/studio/explorer/StarterGui.png" width="320" />
 
+<Alert severity="info">
+    If `Class.Players.CharacterAutoLoads` is disabled, the GuiObjects held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
+</Alert>
+
 ## PlayerGui
 
-A `Class.Player`'s `Class.PlayerGui` is a container for that specific player's on-screen UI objects. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the [`Class.StarterGui`](#startergui) service clones all of its contents into the `Class.PlayerGui` container.
+The `Class.PlayerGui` is a container for on-screen UI objects for a specific `Class.Player`. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the [`Class.StarterGui`](#startergui) service clones all of its contents into the `Class.PlayerGui` container.
 
 ## ScreenGui
 
