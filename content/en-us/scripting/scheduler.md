@@ -15,8 +15,6 @@ Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()`, `Global.
 
 The following table lists the relevant legacy global methods and their preferred, more optimized counterparts:
 
-| Legacy Global Methods                   | Task Methods                 | Additional Alternative Methods |
-| :-------------------------------------- | :--------------------------- | :----------------------------- |
 | Legacy Global Methods                   | Task Methods                                       | Additional Alternatives                            |
 | :---------------------------------------| :------------------------------------------------- | :------------------------------------------------- |
 | `wait()`                                | `Library.task.wait()`                              | `Class.RunService.Heartbeat`                       |
@@ -47,7 +45,7 @@ end
 
 `Library.task.defer()` takes a thread or function and defers it until the next [resumption cycle](https://devforum.roblox.com/t/beta-deferred-lua-event-handling) at which point it is resumed with the engine's scheduler. Additional arguments are passed to the thread or function resuming.
 
-You should typically use this when you want similar behavior to `Library.task.spawn()` but don't care about the thread running immediately. The following code sample illustrates how the `Global.LuaGlobals.print()` statement for `"A"` will defer until after the `Global.LuaGlobals.print()` statement for `"B"` executes:
+You should typically use this when you want similar behavior to `Library.task.spawn()` but don't care about the thread running immediately. The following code sample illustrates how the `print()` statement for `"A"` will defer until after the `print()` statement for `"B"` executes:
 
 ```lua
 task.defer(print, "A")
@@ -57,7 +55,7 @@ print("B")
 ```
 
 <Alert severity="info">
-`Library.task.defer()` is an optimized version of `Global.RobloxGlobals.spawn()` which schedules a thread to resume as soon as possible (but not immediately) without any throttling.
+`Library.task.defer()` is an optimized version of `spawn()` that schedules a thread to resume as soon as possible (but not immediately) without any throttling.
 </Alert>
 
 #### task.delay
@@ -75,7 +73,7 @@ end, os.clock())
 A duration of zero will result in the thread or function resuming on the next step.
 
 <Alert severity="info">
-`Library.task.delay()` is an optimized version of `Global.RobloxGlobals.delay()` which schedules a thread to resume after some time elapses without throttling.
+`Library.task.delay()` is an optimized version of `delay()` that schedules a thread to resume after some time elapses without throttling.
 </Alert>
 
 #### task.wait
@@ -94,5 +92,5 @@ print(elapsedTime) --> 2.0792941
 If no duration is given the duration will default to zero meaning the thread will automatically resume on the next step. This means `Library.task.wait()` is equivalent in behavior to `Class.RunService.Heartbeat`.
 
 <Alert severity="info">
-`Library.task.wait()` is an optimized version of `Global.RobloxGlobals.wait()` which schedules the current thread to resume after some time elapses without throttling.
+`Library.task.wait()` is an optimized version of `wait()` that schedules the current thread to resume after some time elapses without throttling.
 </Alert>
