@@ -22,7 +22,7 @@ If you don't see the Properties window, go to the **View** tab and click the Pro
 
 ## Adding Comments to Scripts
 
-Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Color` property at the start of the game.
+Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Class.BasePart.Color|Color` property at the start of the game.
 
 1. Select an existing part or create a new one. Rename the part PracticePart.
 
@@ -72,7 +72,7 @@ For the part, the script will change its Color property to a new Color3, a data 
     Roblox will autocomplete words as you type to help speed up the coding process. You can use the arrow keys to move down the list when the words appear. Pick an option by pressing <kbd>Enter</kbd>.
    </Alert>
 
-2. Next, type `= Datatype.Color3.fromRGB()` This code will allow you to assign a new color.
+2. Next, type `= Color3.fromRGB()` This code will allow you to assign a new color.
 
    ```lua title = 'Uses Color3.fromRGB()'
    -- Changes the color of a part

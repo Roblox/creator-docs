@@ -115,7 +115,7 @@ To add additional bones into the armature:
    width="80%"></video>
 
 4. Press and hold your mouse's scroll wheel to move the camera around the mesh object to see different views and angles to ensure that the bones are within the mesh object. [Reposition the bones](#positioning-bones) as necessary.
-5. In the Outliner, and expand the **Armature** object. The armature's bone hierarchy displays.
+5. In the Outliner, expand the **Armature** object. The armature's bone hierarchy displays.
 6. In the Outliner, double-click and **rename** each bone. Bone object names remain the same when you import the mesh object into Studio.
 
    <video controls src="../../assets/modeling/skinned-meshes/Renaming-Bones.mp4"
@@ -132,7 +132,7 @@ To parent an armature to a mesh:
 1. At the top of the 3D viewport, click on the Mode dropdown, then switch back to **Object Mode**.
 2. Press <kbd>Alt</kbd>+<kbd>A</kbd> (Windows) or <kbd>Option</kbd>+<kbd>A</kbd> (Mac) to deselect every object.
 3. Hold <kbd>shift</kbd> and select the **mesh object** and then the **armature**. The selection order is important.
-4. In the Viewport, right-click on the **mesh object**. A pop-up menu displays.
+4. In the viewport, right-click on the **mesh object**. A pop-up menu displays.
 5. Select **Parent**, then **With Automatic Weights**.
 
    <video controls
