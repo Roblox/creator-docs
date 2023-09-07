@@ -24,7 +24,7 @@ You do not need to create a `Class.StarterGui` object as it is always present in
 <img src="../assets/studio/explorer/StarterGui.png" width="320" />
 
 <Alert severity="info">
-    If `Class.Players.CharacterAutoLoads` is disabled, the GuiObjects held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
+    If `Class.Players.CharacterAutoLoads` is disabled, the `Class.GuiObject|GuiObjects` held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
 </Alert>
 
 ## PlayerGui
