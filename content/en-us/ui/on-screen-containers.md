@@ -29,7 +29,7 @@ You do not need to create a `Class.StarterGui` object as it is always present in
 
 ## PlayerGui
 
-The `Class.PlayerGui` is a container for on-screen UI objects for a specific `Class.Player`. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the [`Class.StarterGui`](#startergui) service clones all of its contents into the `Class.PlayerGui` container.
+`Class.PlayerGui` is a container for on-screen UI objects for a specific `Class.Player`. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the `Class.StarterGui` service clones all of its contents into the `Class.PlayerGui` container.
 
 ## ScreenGui
 
