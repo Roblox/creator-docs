@@ -41,7 +41,7 @@ To use the Custom Thumbnail Tool:
    - Hold <kbd>Shift</kbd> for fine adjustment.
 
 5. When complete, click **Accept** to generate the thumbnail configuration objects.
-6. You can preview the thumbnail by right-clicking the accessory in the Explorer window and selecting **Save To Roblox…**. The Asset Configuration dialog displays and displays the current thumbnail.
+6. You can preview the thumbnail by right-clicking the accessory in the Explorer window and selecting **Save To Roblox…**. The Asset Configuration dialog appears and displays the current thumbnail.
    <img
    src="../../assets/publishing/marketplace/Asset-Configure-Dropdown.png"
    width="600" />
