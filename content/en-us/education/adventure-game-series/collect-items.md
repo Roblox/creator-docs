@@ -213,12 +213,12 @@ Now that the tool script has the playerItems and playerSpaces variables created,
    To access the contents of any value object, type .Value at the end of it. If you just do the object itself, you'll just get it's name.
    </Alert>
 
-2. In the if statement itself, add to the player's items by typing `playerItems.Value = playerItems.Value + 1`.
+2. In the if statement itself, add to the player's items by typing `playerItems.Value += 1`.
 
    ```lua
    if canHarvest then
      if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-         playerItems.Value = playerItems.Value + 1
+         playerItems.Value += 1
 
      end
    end
@@ -246,7 +246,7 @@ The item will then go back to normal after a short time. This way, players only 
    ```lua
    if canHarvest then
      if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-       playerItems.Value = playerItems.Value + 1
+       playerItems.Value += 1
        canHarvest.Value = false
      end
    end
@@ -256,7 +256,7 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value = playerItems.Value + 1
+     playerItems.Value += 1
      canHarvest.Value = false
      partTouched.Transparency = 1
      partTouched.CanCollide = false
@@ -267,7 +267,7 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value = playerItems.Value + 1
+     playerItems.Value += 1
      canHarvest.Value = false
      partTouched.Transparency = 1
      partTouched.CanCollide = false
@@ -317,7 +317,7 @@ local function onTouch(partTouched)
 	local canHarvest = partTouched:FindFirstChild("CanHarvest")
 	if canHarvest then
 		if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-			playerItems.Value = playerItems.Value + 1
+			playerItems.Value += 1
 			canHarvest.Value = false
 			-- Reset partTouched, the harvested item
 			partTouched.Transparency = 1

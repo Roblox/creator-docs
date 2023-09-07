@@ -112,7 +112,7 @@ else
 	parentTransform = parentObj.CFrame
 end
 
-curObjInfo.curAngle = curObjInfo.curAngle + dT * curObjInfo.timeToAngle
+curObjInfo.curAngle += dT * curObjInfo.timeToAngle
 local rotatedLocalCFrame = curObjInfo.origLocalCFrame * CFrame.Angles( curObjInfo.axisMask.X * curObjInfo.curAngle, curObjInfo.axisMask.Y * curObjInfo.curAngle, curObjInfo.axisMask.Z * curObjInfo.curAngle )
 
 if(obj:IsA("Model")) then
