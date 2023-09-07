@@ -695,7 +695,7 @@ Asynchronously adds an item to the merch booth so that it's eligible for purchas
 See [Adding Items](#adding-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
 
 <Alert severity="warning">
-  This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `pcall()` to catch and handle errors.
+  This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.
 </Alert>
 
 ```lua title='Script - Add Avatar Assets' highlight='6-10, 15'

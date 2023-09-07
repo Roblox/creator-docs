@@ -37,6 +37,8 @@ const isValidFileOption = (value: any): value is FileOption => {
 export interface IConfig {
   baseBranch: string;
   commitHash: string;
+  checkHttpLinks: boolean;
+  checkRetextAnalysis: boolean;
   debug: boolean;
   files: FileOption;
   onlyRequiredChecks: boolean;
@@ -166,6 +168,16 @@ export const getConfig = async (): Promise<IConfig> => {
       type: 'string',
       description: 'The base branch to compare changes with',
       default: process.env.BASE_BRANCH,
+    })
+    .option('checkHttpLinks', {
+      type: 'boolean',
+      description: 'Whether to check HTTP links',
+      default: process.env.CHECK_HTTP_LINKS,
+    })
+    .option('checkRetextAnalysis', {
+      type: 'boolean',
+      description: 'Whether to check retext analysis',
+      default: process.env.CHECK_RETEXT_ANALYSIS,
     })
     .option('commitHash', {
       type: 'string',

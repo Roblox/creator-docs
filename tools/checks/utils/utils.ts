@@ -1,3 +1,14 @@
+export enum Emoji {
+  AlarmClock = '⏰',
+  Bulb = '💡',
+  EnvelopeWithArrow = '📩',
+  Label = '🏷️',
+  NoEntry = '⛔️',
+  Mag = '🔍',
+  Mailbox = '📫',
+  WhiteCheckMark = '✅',
+}
+
 export enum Locale {
   DE_DE = 'de-de',
   EN_US = 'en-us',

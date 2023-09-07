@@ -146,19 +146,38 @@ Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that t
   </figure>
   </GridContainer>
   </TabItem>
+
+<TabItem label="Realistic">
+  <GridContainer numColumns="2">
+  <figure><img src="../../assets/art/avatar/templates/SemiRealistic-Templates.png"/><figcaption><center>Realistic</center></figcaption></figure>
+  <figure>
+  Female: <a href="../../assets/art/reference-files/SemiRealisticFemale.zip">SemiRealisticFemale.zip</a> <br />
+  Male: <a href="../../assets/art/reference-files/SemiRealisticMale.zip">SemiRealisticMale.zip</a>
+  </figure>
+  </GridContainer>
+  </TabItem>
+  <TabItem label="Anime">
+  <GridContainer numColumns="2">
+  <figure><img src="../../assets/art/avatar/templates/Anime-Templates.png"/><figcaption><center>Anime</center></figcaption></figure>
+  <figure>
+   Female: <a href="../../assets/art/reference-files/AnimeFemale.zip">AnimeFemale.zip</a> <br />
+   Male: <a href="../../assets/art/reference-files/AnimeMale.zip">AnimeMale.zip</a>  
+  </figure>
+  </GridContainer>
+  </TabItem>
+    <TabItem label="Stylized">
+  <GridContainer numColumns="2">
+  <figure><img src="../../assets/art/avatar/templates/Stylized-Templates.png"/><figcaption><center>Stylized</center></figcaption></figure>
+  <figure>
+   Single body: <a href="../../assets/art/reference-files/StylizedHuman.zip">Stylized.zip</a>  
+  </figure>
+  </GridContainer>
+  </TabItem>
   <TabItem label="Caricature">
   <GridContainer numColumns="2">
   <figure><img src="../../assets/art/avatar/templates/Caricature-Templates.png"/><figcaption><center>Caricature</center></figcaption></figure>
   <figure>
   Single body: <a href="../../assets/art/reference-files/Caricature.zip">Caricature.zip</a>
-  </figure>
-  </GridContainer>
-  </TabItem>
-  <TabItem label="Stylized">
-  <GridContainer numColumns="2">
-  <figure><img src="../../assets/art/avatar/templates/Stylized-Templates.png"/><figcaption><center>Stylized</center></figcaption></figure>
-  <figure>
-   Single body: <a href="../../assets/art/reference-files/StylizedHuman.zip">Stylized.zip</a>  
   </figure>
   </GridContainer>
   </TabItem>
