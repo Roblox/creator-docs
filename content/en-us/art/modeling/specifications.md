@@ -32,22 +32,21 @@ Roblox supports third-party meshes with an internal rig, or skeleton structure t
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Custom-Puffer-Blender.png" />
-    <figcaption>Generic rig model</figcaption>
+    <figcaption>Generic rig model.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Hierarchy-Custom-Blender-Bones.png" width="75%" />
-    <figcaption>Generic rig bone structure (Blender)</figcaption>
+    <figcaption>Generic rig bone structure (Blender).</figcaption>
   </figure>
 </GridContainer>
 
 See the following requirements for general rigging and skinning:
 
 - **Transformations** - All bones (Blender) or joints (Maya) must be frozen and have scale values set to `1`, `1`, `1` and rotation values set to `0`, `0`, `0`.
-- **Symmetry** - When possible, maintain symmetry in your rig.
+- **Symmetry** - When possible, maintain symmetry when applying influences to a rig
 - **Root Joint** - The root bone or joint should always be set to `0`, `0`, `0`.
 - **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
-- **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
 
 ## Textures
 

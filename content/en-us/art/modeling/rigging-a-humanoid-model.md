@@ -109,8 +109,7 @@ To parent the model to the armature:
 
 ## Assigning Meshes to Bones
 
-Now that you connect your armature to the mesh object, you can assign the vertices of your individual limbs to be fully influenced by one corresponding
-bones. After this process is completed, the model will be ready for skinning. See [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md) for instructions on applying multiple bone influences to a mesh.
+Now that you have connected your armature to the mesh object, you can assign the vertices of your individual limbs to be fully influenced by one corresponding bone. After this process is completed, the model will be ready for skinning. See [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md) for instructions on applying multiple bone influences to a mesh.
 
 <Alert severity="warning">
 The **Root** and **HumanoidRootNode** parent bones in a humanoid rig should not have any influences applied to them. Any added influences are dropped when importing into Studio.

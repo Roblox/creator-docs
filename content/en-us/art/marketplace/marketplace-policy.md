@@ -31,7 +31,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 - Be especially careful when submitting items in or near the mouth or waist of the avatar. Make sure to frequently test your assets on multiple types of characters to avoid design issues.
 - Do not create items that intentionally disrupt a user's experience, such as:
   - Obscuring the majority of the user's avatar.
-  - Obscure the user's in-experience UI.
+  - Obscuring the user's in-experience UI.
   - Obscuring other users' avatars or in-experience view.
   - Making a user's avatar disappear (completely or partially).
 - Do not create items that depend on issues or glitches on the Roblox platform.
@@ -39,7 +39,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 
 ## Avatar Body Guidelines
 
-Submissions of avatar bodies to the Marketplace include additional policy guidelines along with the general [UGC Program Guidelines](#ugc-program-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+Submissions of avatar bodies to the Marketplace must follow additional policy guidelines, along with the general [UGC Program Guidelines](#ugc-program-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ### Modesty Layers
 
@@ -79,7 +79,7 @@ You must add an **upper torso** modesty layer if your avatar uses a skin-like te
 For upper torso modesty layers, the following applies:
 
 - For characters that resemble minors, the upper torso modesty layer must provide full coverage of the entire breast and stomach area, such as a tank top.
-- For character's that don't resemble minors, the upper torso modesty layer must provide full coverage of the entire breast area.
+- For characters that don't resemble minors, the upper torso modesty layer must provide full coverage of the entire breast area.
   - Cleavage can be depicted using outlines but must be completely covered by the modesty layer.
   - Full coverage of the back is not required, but it must be clear that the avatar character is not naked if seen from the back.
 
@@ -116,4 +116,4 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 
 ### Customizable Skin Tones
 
-Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/avatar/specifications.md#custom-skin-tone).
+Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/avatar/specifications.md#custom-skin-tone).
