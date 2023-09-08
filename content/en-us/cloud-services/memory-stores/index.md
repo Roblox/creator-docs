@@ -28,13 +28,13 @@ When users join the experience, the additional memory quota is available immedia
 
 With the observability feature available, you can view the memory size quota of your experience in real-time using the Memory Usage chart. For more information on properly arranging your memory usage to ensure an uninterrupted experience for your users, see [Identifying Peak Times and Performance Bottlenecks](../../cloud-services/memory-stores/observability.md#identifying-peak-times-and-performance-bottlenecks).
 
-### API Requests Limits
+### API Request Limits
 
 For API requests limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue or sorted map is limited to **100,000** request units per minute.
 
 Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreService:GetRangeAsync()` for sorted maps and `Class.MemoryStoreService:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreService:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreService:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
 
-The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, then you receive an error response when the service throttling your requests.
+The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you will receive an error response when the service throttles your requests.
 
 With the [observability](../../cloud-services/memory-stores/observability.md) feature available, you can view the request unit quota of your experience in real-time.
 
