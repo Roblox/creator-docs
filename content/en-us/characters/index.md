@@ -18,7 +18,7 @@ You can use the following components within your `Class.Model` object to enable 
 - A group of parts, or [assembly](../physics/assemblies.md), that includes the following:
   - A collection with the name `HumanoidRootPart` to indicate the root part of the assembly.
   - A part with the name `Head` to display a display name over.
-  - Additional parts that make up the cosmetic individual body parts, commonly this includes the 6 (R6) or 15 (R15) body parts used for human-like models.
+  - Additional parts that make up the cosmetic individual body parts, which commonly include the 6 (R6) or 15 (R15) body parts used for human-like models.
   - Joints, such as `Class.Bone` or `Class.Motor6D`, that connects each body part as an assembly.
 - A `Class.Humanoid` instance to quickly add common character properties to a model.
 
@@ -39,7 +39,7 @@ With these components, the character model displays a `Class.Humanoid.DisplayNam
 
 Avatar characters use a standardized set of character components that allow you to use body and facial animations, and equip clothing and accessories. By standardizing the components, all avatar character models can access these features, whether they are controlled by a player or an NPC.
 
-By default, all users join experiences as their saved Roblox avatar which already includes all the components for an avatar character. A complete avatar character has the following components in their `Class.Model`:
+By default, all users join experiences as their saved Roblox avatar, which already includes all the components for an avatar character. A complete avatar character has the following components in their `Class.Model`:
 
 - An [assembly](../physics/assemblies.md) of `Class.MeshPart` objects, that includes the following:
   - A part with the name `HumanoidRootPart` to indicate the root part of the assembly.
