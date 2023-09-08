@@ -120,7 +120,7 @@ local function onPlayerAdded(player)
 			-- Set health bar display distance to 15 studs
 			humanoid.HealthDisplayDistance = 15
 			-- Only show health bar when humanoid is damaged
-			humanoid.HealthDistanceType = Enum.HumanoidHealthDisplayType.DisplayWhenDamaged
+			humanoid.HealthDisplayType = Enum.HumanoidHealthDisplayType.DisplayWhenDamaged
 		end
 	end)
 end
