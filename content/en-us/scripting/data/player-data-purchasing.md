@@ -209,7 +209,7 @@ This requires conducting the following operations before returning `PurchaseGran
 3. Record the `PurchaseId` as handled in the player's in-memory player data.
 4. Write the player's in-memory player data to the `Class.GlobalDataStore|DataStore`.
 
-Sesson locking simplifies this flow, as you no longer need to worry about the following scenarios:
+Session locking simplifies this flow, as you no longer need to worry about the following scenarios:
 
 - The in-memory player data in the current server potentially being out-of-date, requiring you to fetch the latest value from the `Class.GlobalDataStore|DataStore` before verifying the `PurchaseId` history
 - The callback for the same purchase running in another server, requiring you to both read and write the `PurchaseId` history and save the updated player data with the purchase reflected atomically to prevent race conditions
