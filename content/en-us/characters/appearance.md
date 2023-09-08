@@ -67,7 +67,7 @@ The **Avatar Type** setting sets your experience to only load **R15** or **R6** 
 
 - **R15** is the default modern avatar with 15 limbs. This avatar allows for more flexible customization, accessory options, and animations.
 
-- **R6** is a classic simple avatar with 6 limbs. This avatar type provides a retro feel but is limited in animations and additional customization. Body scale property changes do not affect <b>R6</b> characters.
+- **R6** is a classic simple avatar with 6 limbs. This avatar type provides a retro feel but is limited in animations and additional customization. Changes to the body scale property do not affect <b>R6</b> characters.
 
 <GridContainer numColumns="2">
   <figure>
