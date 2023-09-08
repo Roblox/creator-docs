@@ -7,7 +7,7 @@ Cross-Server Messaging enables you to communicate to other servers or client ins
 
 - **Cross-Server Chat**: Enable users to chat with each other even if they're not in the same server.
 - **Global Announcements**: Send announcements such as "A user found a special item!" in the experience to all servers.
-- **Real Time Server Browser**: Compile a list of all live servers and update every minute for monitoring.
+- **Real-Time Server Browser**: Compile a list of all live servers and update every minute for monitoring.
 
 You can support cross-server messaging in your experience using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample experience to see how cross-server messaging works before you implement it. To enable cross-server communication using external tools to improve your productivity, see [Communicating to Live Servers from External Tools](../cloud/open-cloud/usage-messaging.md).
 
