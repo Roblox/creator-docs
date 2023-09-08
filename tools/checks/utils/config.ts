@@ -4,6 +4,7 @@ import { hideBin } from 'yargs/helpers';
 import { getRepositoryName } from './git.js';
 import { repositoryRoot } from './files.js';
 import path from 'path';
+import { Emoji } from './utils.js';
 
 dotenv.config({
   path: path.join(repositoryRoot, '/.env.default'),
@@ -216,7 +217,9 @@ export const getConfig = async (): Promise<IConfig> => {
       default: process.env.REPOSITORY || (await getRepositoryName()),
     })
     .check((argv) => {
+      console.log(`::group::${Emoji.HammerAndWrench} Getting configuration`);
       console.log('Received:', argv);
+      console.log('::endgroup::');
       const validationResult = validateIConfig(argv);
       if (validationResult.isValid) {
         return true;
