@@ -3,6 +3,10 @@ title: Monetization Analysis
 description: Explains how to improve monetization metrics for your experience.
 ---
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Tm3Hi9nLKNo?si=pO5c6ffOvnxfoGqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 **Monetization** measures your experience's ability to generate revenue.
 
 ## Viewing Monetization Metrics

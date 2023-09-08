@@ -2,11 +2,6 @@
 title: Analytics Essentials
 description: Analytics Essentials
 ---
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RfpMZZFy8Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<br />
-
 Roblox offers a variety of analytics features to help you chart your experience's growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
 
 Analytics provide a high level overview of your experience's health and surface optimization opportunities. The highest level of analytics you can use to uncover these opportunities are called _key performance indicators_ (KPIs). Three of the most prominent KPIs are:
@@ -19,6 +14,10 @@ For an in-depth look at all the analytics features Roblox offers to help you imp
 
 ## Engagement Metrics
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 Engagement metrics reveal how often and for how long players are interacting with your experience. Three of the most important engagement metrics are:
 
 - **Daily active users (DAU):** The daily active users metric tracks the number of players that are in your experience for a given day. This is a great way to understand the overall health of your experience over time. If you have 1,000,000 players one day, and a few days later you see a downtrend to 500,000, you can identify a problem and begin troubleshooting.
@@ -29,6 +28,10 @@ Engagement metrics reveal how often and for how long players are interacting wit
 
 ## Retention Metrics
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 Retention metrics determine if players are returning to your experience. Three of the most important retention metrics are:
 
 - **Day 1 (D1) retention:** Day 1 retention measures how many players return to your experience on your second day (D1) from the first day they play your experience (D0). A low D1 is indicative of low retention, often as a result of a poor user onboarding experience. This usually means the player is confused or frustrated, or they're not getting to the fun fast enough. To learn more about how to design an effective onboarding experience, see [Onboarding](../../production/game-design/onboarding.md).
@@ -38,6 +41,10 @@ Retention metrics determine if players are returning to your experience. Three o
 - **Day 30 (D30) retention:** D30 retention tracks the amount of players who return to your experience after 30 days. If this number is low, it's often indicative of a lack of end-game content or lack of an end-game goal. Consider if you have enough content at the end of your experience for seasoned players, be it quests, social aspects, or narrative elements.
 
 ## Monetization Metrics
+
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Tm3Hi9nLKNo?si=pO5c6ffOvnxfoGqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
 
 Monetization metrics indicate much revenue your experience is generating. Three of the most important monetization metrics are:
 
