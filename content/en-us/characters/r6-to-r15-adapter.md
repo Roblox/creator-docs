@@ -58,7 +58,7 @@ Games that resize the R6 body parts won't see the scale change propagated to the
 
 ### GetChildren API Calls
 
-`GetChildren()` calls returns both the R6 proxy parts and their corresponding R15 parts. You may need to account for this extra information.
+`GetChildren()` calls return both the R6 proxy parts and their corresponding R15 parts. You may need to account for this extra information.
 
 ### FindFirstChild API Calls
 
