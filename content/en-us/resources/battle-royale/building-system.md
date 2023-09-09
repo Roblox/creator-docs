@@ -28,8 +28,8 @@ Tiles use 3 components: the [visual asset](#asset) that is used as the tile obje
 
 An asset is a `Class.BasePart` (`Class.Part`, `Class.MeshPart`, etc.) placed in `ReplicatedStorage/BuildingSystem/Assets` representing what the tile looks like in the game world. This `Class.BasePart` must have two children:
 
-- **ObjectType** — A `Class.StringValue` with a `Value` of the tile type name.
-- **StartingRotation** — A `Class.NumberValue` with a `Value` should be the tile's starting rotation when a user places it in the world.
+- **ObjectType** — A `Class.StringValue` with a `Class.StringValue.Value|Value` of the tile type name.
+- **StartingRotation** — A `Class.NumberValue` with a `Class.NumberValue.Value|Value` of the tile's starting rotation when a user places it in the world.
 
 ### Occupancy
 
