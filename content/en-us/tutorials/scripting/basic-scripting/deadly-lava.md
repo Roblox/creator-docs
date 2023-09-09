@@ -15,12 +15,12 @@ In [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intr
 
 You need a place in your world to put the deadly lava. If you followed the [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intro-to-scripting.md) course, the lava floor would fit nicely in the gap covered by the disappearing platforms.
 
-1. Insert a **Part** and move it into place in your world. Name it **LavaFloor**.
+1. Insert a `Class.Part` and move it into place in your world. Name it **LavaFloor**.
 2. Resize it so it covers the floor of the enclosing space.
 
    ![](../../../assets/tutorials/deadly-lava/partInserted.jpg)
 
-3. Make the floor look more like lava by setting the **Material** property to **Neon** and the **Color** to an orange shade.
+3. Make the floor look more like lava by setting the `Class.Part.Material|Material` property to `Enum.Material.Neon` and the `Class.Part.Color|Color` to an orange shade.
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/deadly-lava/propertiesSet.jpg" />
@@ -39,11 +39,11 @@ You need a place in your world to put the deadly lava. If you followed the [Intr
 
 ## Connecting to an Event
 
-Use an **event** to detect when a user touches the lava. Every part has a **Touched** event which fires when something touches it. You can **connect** to this event to run a function when it fires.
+Use an **event** to detect when a user touches the lava. Every part has a `Class.Part.Touched|Touched` event which fires when something touches it. You can **connect** to this event to run a function when it fires.
 
 1. Declare a new function called `kill`.
 2. Access the `Touched` event on the lava object using a dot, just like a property: `lava.Touched`.
-3. Call the `Connect` function on the `Touched` event, passing the `kill` function.
+3. Call the `Connect` function on the `Class.Part.Touched|Touched` event, passing the `kill` function.
 
    ```lua
    local lava = script.Parent
@@ -59,7 +59,7 @@ Any code you write in the `kill` function will now run whenever something touche
 
 ## Getting the Touching Part
 
-To kill the user, the function will need an object associated with that user. A part's `Touched` event can provide the "other part" that touched it — but only if you request it by making it a **parameter** of the function.
+To kill the user, the function will need an object associated with that user. A part's `Class.Part.Touched|Touched` event can provide the "other part" that touched it — but only if you request it by making it a **parameter** of the function.
 
 Parameters are definitions of what a function expects to receive when it's called. A parameter can be used in a function just like any other variable. You can pass information to a parameter by including it in the parentheses when a function is called. Parameters are defined in the parentheses on the first line of a function. Create a **parameter** called `otherPart` for the `kill` function.
 
@@ -96,7 +96,7 @@ end
 lava.Touched:Connect(kill)
 ```
 
-From the character model, you'll need to get the Humanoid object in order to kill the user. You can do this with the **FindFirstChild** function - just pass it the name of the thing you're looking for and it will provide the first matching child it finds in that object. Call FindFirstChild on the `partParent` variable with `"Humanoid"` as the child to find, and store the result in a new variable called `humanoid`.
+From the character model, you'll need to get the Humanoid object in order to kill the user. You can do this with the `Class.Instance:FindFirstChild()|FindFirstChild()` function - just pass it the name of the thing you're looking for and it will provide the first matching child it finds in that object. Call `Class.Instance:FindFirstChild()|FindFirstChild()` on the `partParent` variable with `"Humanoid"` as the child to find, and store the result in a new variable called `humanoid`.
 
 ```lua
 local lava = script.Parent
@@ -135,7 +135,7 @@ In Lua, any value other than false or nil (an empty value) is evaluated as true 
 
 ## Setting Character Health
 
-Now that the `Class.Humanoid` has been checked, its properties can be changed. If you set its **Health** property to **0**, the associated Character will die. In the body of the if statement, set the Health property of humanoid to 0.
+Now that the `Class.Humanoid` has been checked, its properties can be changed. If you set its `Class.Humanoid.Health|Health` property to **0**, the associated Character will die. In the body of the if statement, set the `Class.Humanoid.Health|Health` property of humanoid to 0.
 
 ```lua
 local function kill(otherPart)
