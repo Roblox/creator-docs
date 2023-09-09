@@ -380,26 +380,30 @@ In some cases, it's necessary to detect when an object streams in or out and rea
    local CollectionService = game:GetService("CollectionService")
    local RunService = game:GetService("RunService")
 
-   local random = Random.new(tick())
+   local tagName = "FlickerLightSource"
+   local random = Random.new(os.clock())
    local heartbeatCount = 0
    local flickerSources = {}
 
-   -- Detect tagged parts streaming in or out
-   if workspace.StreamingEnabled then
-   	CollectionService:GetInstanceAddedSignal("FlickerLightSource"):Connect(function(light)
-   		flickerSources[light] = true
-   	end)
-   	CollectionService:GetInstanceRemovedSignal("FlickerLightSource"):Connect(function(light)
-   		flickerSources[light] = nil
-   	end)
+   -- Detect currently and new tagged parts streaming in or out
+   for _, light in CollectionService:GetTagged(tagName) do
+    flickerSources[light] = true
    end
+
+   CollectionService:GetInstanceAddedSignal(tagName):Connect(function(light)
+   	flickerSources[light] = true
+   end)
+
+   CollectionService:GetInstanceRemovedSignal(tagName):Connect(function(light)
+   	flickerSources[light] = nil
+   end)
 
    -- Flicker loop
    RunService.Heartbeat:Connect(function()
    	heartbeatCount += 1
    	if heartbeatCount > 5 then
    		heartbeatCount = 0
-   		for light, _ in pairs(flickerSources) do
+   		for light in flickerSources do
    			light.Brightness = 8 + random:NextNumber(-0.4, 0.4)
    		end
    	end
