@@ -109,7 +109,7 @@ local function onPartTouch(otherPart)
 		local leaderstats = player.leaderstats
 		local goldStat = leaderstats and leaderstats:FindFirstChild("Gold")
 		if goldStat then
-			goldStat.Value = goldStat.Value + 10
+			goldStat.Value += 10
 		end
 	end
 end

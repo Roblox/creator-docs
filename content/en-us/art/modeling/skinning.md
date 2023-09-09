@@ -12,7 +12,7 @@ A **skinned mesh** is a [rigged](./rigging.md) mesh that bends naturally when th
   </figure>
   <figure>
     <video controls src="../../assets/modeling/skinned-meshes/Head-Skinned-Example.mp4"></video>
-    <figcaption>An skinned model uses 15 skinned meshes that bend naturally since the meshes are influenced by two or more bones.</figcaption>
+    <figcaption>A skinned model uses 15 skinned meshes that bend naturally since the meshes are influenced by two or more bones.</figcaption>
   </figure>
 </GridContainer>
 
@@ -30,11 +30,11 @@ You can skip the process of skinning a layered accessory by using [automatic ski
 
 Skinned models use a naming convention starting with "S" and ending with the number of individual meshes that make up the model. This is used to quickly identify the type and number of meshes that a model has. Although S1 and S15 models are common, a model can be of varying sizes and can have any number of individual meshes, such as a S5, S20, or S200.
 
-- **S1** refers a single mesh that is skinned, or associated with an internal rig. Many organic models, such as a tree or fabric accessory items, are good candidates to be made into an S1 model. You can even design humanoid characters, such as NPCs, as S1 models but they will not be able to take full advantage of the animation and humanoid options available for S15 characters.
+- **S1** refers to a single mesh that is skinned, or associated with an internal rig. Many organic models, such as a tree or fabric accessory items, are good candidates to be made into an S1 model. You can even design humanoid characters, such as NPCs, as S1 models but they will not be able to take full advantage of the animation and humanoid options available for S15 characters.
 
   For instructions on turning a basic mesh into an S1 model in Blender, see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md).
 
-- **S15 models** typically refer to a R15 humanoid models that have been skinned. Like an R15 character, an S15 model is made up of 15 meshes that are parented to a single rig. A R15 character model does not have weighted influences specified on its joints and, when the joints are rotated or animated, the meshes will not stretch and deform.
+- **S15 models** typically refer to R15 humanoid models that have been skinned. Like an R15 character, an S15 model is made up of 15 meshes that are parented to a single rig. A R15 character model does not have weighted influences specified on its joints and, when the joints are rotated or animated, the meshes will not stretch or deform.
 
   For instructions on skinning a rigged humanoid model, see [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md).
 
@@ -70,7 +70,7 @@ The following reference `.fbx` files are available for download as examples and 
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola</a></td>
     <td>S15</td>
     <td>
-      A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+      A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), it's incompatible with layered clothing or accessories.
     </td>
   </tr>
 </tbody>

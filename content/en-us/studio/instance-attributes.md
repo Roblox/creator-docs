@@ -59,6 +59,7 @@ You can store the following types/values in attributes:
 			<li>`Datatype.ColorSequence`</li>
 			<li>`Datatype.NumberRange`</li>
 			<li>`Datatype.Rect`</li>
+			<li>`Datatype.Font`</li>
 		</ul>
 	</Grid>
 </Grid>

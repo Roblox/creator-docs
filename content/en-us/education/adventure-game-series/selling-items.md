@@ -158,7 +158,7 @@ In this experience, a player will get 100 Gold for each item. After getting mone
    local function sellItems(playerItems, playerGold)
      local totalSell = playerItems.Value * 100
      -- Add how much the player earns to their money
-     playerGold.Value = playerGold.Value + totalSell
+     playerGold.Value += totalSell
    end
    ```
 
@@ -167,7 +167,7 @@ In this experience, a player will get 100 Gold for each item. After getting mone
    ```lua
    local function sellItems(playerItems, playerGold)
      local totalSell = playerItems.Value * 100
-     playerGold.Value = playerGold.Value + totalSell
+     playerGold.Value += totalSell
      playerItems.Value = 0
    end
    ```

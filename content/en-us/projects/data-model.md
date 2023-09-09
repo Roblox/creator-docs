@@ -71,7 +71,7 @@ client, or have them communicate across the network boundary.
 - A `Class.LocalScript` object represents a script that can only run on the
   client.
 - A `Class.ModuleScript` object represents a reusable script that you can
-  `Global.RobloxGlobals.require()|require()` from both
+  `Global.RobloxGlobals.require()` from both
   server and client scripts.
 
 For scripts to behave properly, you must place them in the correct containers in
@@ -201,7 +201,7 @@ maintain consistency. This container is typically used for `Class.ModuleScript`
 objects that need to be shared and accessed by both `Class.Script` (server-side)
 and `Class.LocalScript` (client-side) objects. In addition, you can use this
 container to replicate any objects that don't need to exist in the 3D world
-until needed, such as a `ParticleEmitter` for cloning and parenting to all
+until needed, such as a `Class.ParticleEmitter` for cloning and parenting to all
 incoming character models.
 
 For more information on how replication works, see [Client-Server Runtime](../projects/client-server.md).

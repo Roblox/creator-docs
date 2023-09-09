@@ -78,7 +78,7 @@ In real life, we don't usually think about the algorithms we use everyday. Compu
     <td>
     ```lua
     for countDown 10,1,1 do
-      time = time - 1
+      time -= 1
       task.wait(1)
     end
     ```

@@ -3,15 +3,15 @@ title: Modeling Project Files and References
 description: Download various modeling-related project files and reference files.
 ---
 
-The following `.fbx`, `.blend`, and `.ma` files project files are available to use as templates or as reference:
+The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
   <TabItem label="Models">
   <table>
 <thead>
   <tr>
-    <th>Filename</th>
-    <th>Description</th>
+    <th><b>File</b></th>
+    <th><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
@@ -29,7 +29,7 @@ The following `.fbx`, `.blend`, and `.ma` files project files are available to u
   </tr>
   <tr>
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola.fbx</a></td>
-    <td>A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
+    <td>A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model lacks [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), it cannot equip layered clothing or accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" download>Fish-Person.zip</a></td>
@@ -45,7 +45,7 @@ The following `.fbx`, `.blend`, and `.ma` files project files are available to u
   </tr>
     <tr>
     <td><a href="../../assets/accessories/reference-files/Tshirt-model.fbx" download>Tshirt-model.fbx</a></td>
-    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.</td>
+    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md), ready for caging in a 3D modeling software.</td>
   </tr>
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>

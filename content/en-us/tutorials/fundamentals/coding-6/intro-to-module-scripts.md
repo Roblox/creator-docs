@@ -17,7 +17,7 @@ Normal scripts should be used for standalone elements of a game, such as touchin
 
 ## Module Script Basics
 
-Module scripts are actually their own seperate object compared to script objects. In Roblox, module scripts can be denoted with a **purple** icon.
+Module scripts are actually their own separate object compared to script objects. In Roblox, module scripts can be denoted with a **purple** icon.
 
 ### Creating a Module Script
 
@@ -101,7 +101,7 @@ return rewardManager
 
 ## Using Modules In Others Scripts
 
-By itself, a module script can't run code — it needs to be loaded in another script using the keyword `require()`. The function `require()` accepts one argument, the location of the module script in the Explorer.
+By itself, a module script can't run code — it needs to be loaded in another script using the keyword `Global.RobloxGlobals.require()`. The function `Global.RobloxGlobals.require()` accepts one argument, the location of the module script in the Explorer.
 
 To use a module, in a separate script, set a variable equal to `require(moduleScript)`.
 
@@ -162,11 +162,11 @@ Some of the tips here address common issues when working with module scripts. Ke
 
 **Issue:** Get an error message including: `"Infinite yield possible"` or `"not a valid member"`.
 
-- Check the spelling of the module script where it's loaded. `require()` must include the exact path and spelling of the module script, which may be named differently than the module table.
+- Check the spelling of the module script where it's loaded. `Global.RobloxGlobals.require()` must include the exact path and spelling of the module script, which may be named differently than the module table.
 
 **Issue:** Get an error message including: `"attempt to index global"`.
 
-- In any scripts using a module script, make sure it's loaded using the function `require()`. If not, that script cannot use functions and variables from the module script.
+- In any scripts using a module script, make sure it's loaded using the function `Global.RobloxGlobals.require()`. If not, that script cannot use functions and variables from the module script.
 
 ## Summary
 

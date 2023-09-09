@@ -507,7 +507,7 @@ function MyClass.new(property: number): ClassType
 end
 
 function MyClass.addOne(self: ClassType)
-	self.property = self.property + 1
+	self.property += 1
 end
 
 return MyClass

@@ -107,7 +107,7 @@ You can use the following material reference values as a baseline for creating y
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/023_WornMetals.png" />
-<figcaption><center><b>Worn Metals</b><br />Roughness: 0.2-.04 <br /> Metalness: 1.0 </center></figcaption>
+<figcaption><center><b>Worn Metals</b><br />Roughness: 0.2-0.4 <br /> Metalness: 1.0 </center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/024_GlassMirror.png" />
