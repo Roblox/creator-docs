@@ -19,7 +19,7 @@ This article covers using **arrays**, a specific table type, to create a talking
 
 There are different types of tables. One type is an **array**, which stores lists of values in a specific order. To create an array, create a variable and assign it curly brackets `{ }`. Separate values within the brackets with commas like below:
 
-`local myArray = {"item1", "item2", 10, Workplace.Part, myVariable}`
+`local myArray = {"item1", "item2", 10, workspace.Part, myVariable}`
 
 ### Creating a Talking Character
 
@@ -48,7 +48,7 @@ These steps use an array to store different phrases for the NPC to say when play
    ```lua
       -- Cycles through chat dialogue when prompt is used
 
-      local Chat = game:GetService("Chat")
+      local TextChatService = game:GetService("TextChatService")
 
       local prompt = script.Parent
 
@@ -57,11 +57,11 @@ These steps use an array to store different phrases for the NPC to say when play
       local head = characterParts.Head
 
       -- Add array here
-      local dialogueArray= {}
+      local dialogueArray = {}
 
       local function speak()
          local dialogue = "I've got one thing to say!"
-         Chat:Chat(head, dialogue)
+         TextChatService:DisplayBubble(head, dialogue)
       end
 
       prompt.Triggered:Connect(speak)
@@ -70,14 +70,14 @@ These steps use an array to store different phrases for the NPC to say when play
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.
 
    ```lua
-   local dialogueArray= {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
    ```
 
 ## Using Array Indexes
 
 Each value in the array is assigned an `index` number. Indexes are assigned to values in the order in which the values are stored. The first value is at index 1, the second at index 2, and so forth.
 
-Some coding languages, like Java, start indexes a 0.
+Some coding languages, like Java, start indexes at 0.
 
 In the array just created, `"Hi"` is at index 1, and `"Goodbye!"` is at index 3.
 
@@ -111,11 +111,11 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
 1. Replace the variable `dialogue`'s default string value with index 2.
 
    ```lua
-    local dialogueArray= {"Hi!", "Do I know you?", "Goodbye!"}
+    local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
 
     local function speak()
       local dialogue = dialogueArray[2]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
     end
    ```
 
@@ -136,7 +136,7 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
 1. To keep track of the current index, add a new variable named `dialogueIndex`. Set the variable to 1 to start at the beginning of the array.
 
    ```lua
-    local dialogueArray= {"Hi!", "Do I know you?", "Goodbye!"}
+    local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
     local dialogueIndex = 1
    ```
 
@@ -145,7 +145,7 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
     end
    ```
 
@@ -154,9 +154,9 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
 
-      dialogueIndex = dialogueIndex + 1
+      dialogueIndex += 1
     end
    ```
 
@@ -185,27 +185,27 @@ Use the array size to check when it's time to cycle back to the first piece of d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
         dialogueIndex = 1
       end
 
-      dialogueIndex = dialogueIndex + 1
+      dialogueIndex += 1
     end
    ```
 
-2. If `dialogueIndex` isn't at the end, it should still add 1 to `dialogueIndex`. Move `dialogueIndex = dialogueIndex + 1` under an else statement.
+2. If `dialogueIndex` isn't at the end, it should still add 1 to `dialogueIndex`. Move `dialogueIndex += 1` under an else statement.
 
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
         dialogueIndex = 1
       else
-        dialogueIndex = dialogueIndex + 1
+        dialogueIndex +=
       end
     end
    ```
@@ -223,7 +223,7 @@ This script used an array to create a list of possible dialogue lines for a Non-
 ```lua title="Completed script"
    -- Cycles through chat dialogue when prompt is used
 
-   local Chat = game:GetService("Chat")
+   local TextChatService = game:GetService("TextChatService")
 
    local prompt = script.Parent
 
@@ -232,18 +232,18 @@ This script used an array to create a list of possible dialogue lines for a Non-
    local head = characterParts.Head
 
    -- Add array here
-   local dialogueArray= {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
    local dialogueIndex = 1
 
    local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
          dialogueIndex = 1
 
       else
-         dialogueIndex = dialogueIndex + 1
+         dialogueIndex += 1
       end
    end
 
@@ -271,6 +271,6 @@ Try one of the optional challenges below.
    local function speak()
       local randomIndex = randomGenerator:NextInteger(1, #dialogueArray)
       local dialogue = dialogueArray[randomIndex]
-      Chat:Chat(head, dialogue)
+      TextChatService:DisplayBubble(head, dialogue)
    end
 ```
