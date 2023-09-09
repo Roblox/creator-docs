@@ -38,3 +38,15 @@ You can define multiline block comments with double hyphens and double brackets 
 local function stopCosmicMoonRay()
 end
 ```
+
+## TODO Comments
+
+You can add special comments that are bolded by typing (`TODO`). Any text following this will be in bold (until broken by a space).
+
+- Use TODO to keep track of and communicate issues.
+
+```lua
+-- TODO: Finish the function below so that it actually does what its name implies.
+local function stopWorldFromBlowingUp()
+end
+```
