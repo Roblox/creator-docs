@@ -41,7 +41,7 @@ To begin with, the script needs to restore a player's health. This pattern shoul
    end
    ```
 
-4. In the function, get the character model from the parent of `otherPart`. Next, check to see if it has a `Class.Humanoid` using `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA`.
+4. In the function, get the character model from the parent of `otherPart`. Next, check to see if it has a `Class.Humanoid` using `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA()`.
 5. If it has a humanoid, set their **Health** property to `MAX_HEALTH`.
 
    ```lua
@@ -58,18 +58,18 @@ To begin with, the script needs to restore a player's health. This pattern shoul
 
 <Alert severity="info">
 
-The code here calls `Class.BasePart.FindFirstChildWhichIsA|FindFirstChildWhichIsA` – which takes the **type** of the object desired – instead of `Class.BasePart.FindFirstChild|FindFirstChild` which only takes the name. This is a safer option as it can only ever return a Humanoid instead of something which just happens to be called "Humanoid".
+The code here calls `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA()` – which takes the **type** of the object desired – instead of `Class.Instance:FindFirstChild()|FindFirstChild()` which only takes the name. This is a safer option as it can only ever return a Humanoid instead of something which just happens to be called "Humanoid".
 
 </Alert>
 
 ## Getting the Pickups Folder
 
-The folder holding the health pickups may not have loaded into the game by the time the script runs. `WaitForChild` can be used to pause the script and get the HealthPickups folder when it loads.
+The folder holding the health pickups may not have loaded into the game by the time the script runs. `Class.Instance:WaitForChild()|WaitForChild()` can be used to pause the script and get the HealthPickups folder when it loads.
 
-When called on a folder, the `GetChildren` function will return an array of the folder's contents.
+When called on a folder, the `Class.Instance:GetChildren()|GetChildren()` function will return an array of the folder's contents.
 
-1. Beneath MAX_HEALTH, declare a variable called `healthPickupsFolder` and use the `WaitForChild` function to get the **HealthPickups** folder from the Workspace.
-2. Create a variable named `healthPickups` to store the result of calling the `GetChildren` function on `healthPickupsFolder`.
+1. Beneath MAX_HEALTH, declare a variable called `healthPickupsFolder` and use the `Class.Instance:WaitForChild()|WaitForChild()` function to get the **HealthPickups** folder from the Workspace.
+2. Create a variable named `healthPickups` to store the result of calling the `Class.Instance:GetChildren()|GetChildren()` function on `healthPickupsFolder`.
 
    ```lua
    local MAX_HEALTH = 100
@@ -114,7 +114,7 @@ for _, healthPickup in ipairs(healthPickups) do
 end
 ```
 
-A wrapper function will be needed to pass the health pickup to the `onTouchHealthPickup` function when connecting to the `Touched` event.
+A wrapper function will be needed to pass the health pickup to the `onTouchHealthPickup` function when connecting to the `Class.BasePart.Touched|Touched` event.
 
 1. In the for loop, connect the Touched event to an anonymous function with a parameter called `otherPart`.
 2. Call the `onTouchHealthPickups` function, passing both the `otherPart` parameter and the `healthPickup`.
@@ -201,7 +201,7 @@ The pickup should provide visual feedback that it is disabled - a common way to 
    ```
 
 3. Call the `Library.task.wait()` function, passing `COOLDOWN` as the amount to wait.
-4. Set `Transparency` back to `ENABLED_TRANSPARENCY` and `Enabled` back to `true`.
+4. Set `Class.BasePart.Transparency|Transparency` back to `ENABLED_TRANSPARENCY` and `Enabled` back to `true`.
 
    ```lua
    local function onTouchHealthPickup(otherPart, healthPickup)
