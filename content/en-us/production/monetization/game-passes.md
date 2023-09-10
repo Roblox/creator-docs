@@ -1,7 +1,7 @@
 ---
 title: Passes
 description: Passes allow you to charge a one-time Robux fee in order for users to access special privileges in your experience.
----
+---game
 
 **Passes** allow you to charge a **one-time Robux fee** in order for players to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
