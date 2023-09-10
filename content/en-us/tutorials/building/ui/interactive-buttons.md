@@ -46,11 +46,11 @@ There are two types of button objects that can be used in your GUI design:
 
 The following steps show how to add an `Class.ImageButton` to the screen and flip it between three appearances depending on the player's interaction.
 
-1. In the Explorer window, hover over the **StarterGui** object, click the **+** button, and insert a **ScreenGui**.
+1. In the Explorer window, hover over the `Class.StarterGui` object, click the **+** button, and insert a `Class.ScreenGui`.
 
    <img src="../../../assets/tutorials/shared/interface/StarterGui-ScreenGui.png" width="60%" />
 
-2. Select the new **ScreenGui** object and, in a similar way, insert an **ImageButton**.
+2. Select the new `Class.ScreenGui` object and, in a similar way, insert an `Class.ImageButton`.
 
    <img src="../../../assets/tutorials/interactive-buttons/New-ImageButton.png" width="60%" />
 
@@ -66,7 +66,7 @@ The following steps show how to add an `Class.ImageButton` to the screen and fli
 
 For the button to dynamically resize on various devices and screens, it's best to use **Scale** properties.
 
-1. In the **Properties** window, locate the **Size** property and click the arrow to expand its tree.
+1. In the **Properties** window, locate the `Class.ImageButton.Size|Size` property and click the arrow to expand its tree.
 
    <img src="../../../assets/tutorials/shared/interface/Expand-Size-Tree.png" width="60%" />
 
@@ -74,18 +74,18 @@ For the button to dynamically resize on various devices and screens, it's best t
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-Size.png" width="60%" />
 
-3. Constrain the button to a square bounding box by setting **SizeConstraint** to **RelativeYY**.
+3. Constrain the button to a square bounding box by setting `Class.ImageButton.SizeConstraint|SizeConstraint` to **RelativeYY**.
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-SizeConstraint.png" width="60%" />
 
 ### Scaling
 
 The current size should work nicely on a phone, but the **X/Y** scale of **0.15** (15%) may appear too large on a computer screen. To correct this, you can add a `Class.UISizeConstraint`.
 
-1. Hover over the **MapButton** object and insert a **UISizeConstraint**.
+1. Hover over the **MapButton** object and insert a `Class.UISizeConstraint`.
 
    <img src="../../../assets/tutorials/interactive-buttons/New-UISizeConstraint.png" width="60%" />
 
-2. Select the new size constraint object and set its **MaxSize** property to **90, 90**.
+2. Select the new size constraint object and set its `Class.UISizeConstraint.MaxSize|MaxSize` property to **90, 90**.
 
    <img src="../../../assets/tutorials/interactive-buttons/UISizeConstraint-MaxSize.png" width="60%" />
 
@@ -93,11 +93,11 @@ The current size should work nicely on a phone, but the **X/Y** scale of **0.15*
 
 Buttons should typically be moved within a player's thumb reach on mobile devices, for instance the lower-right area of the screen.
 
-1. Change the button's **AnchorPoint** property to **0.5, 1** so that positioning will be based around its bottom-center point.
+1. Change the button's `Class.ImageButton.AnchorPoint|AnchorPoint` property to **0.5, 1** so that positioning will be based around its bottom-center point.
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-AnchorPoint.png" width="60%" />
 
-2. Expand the button's **Position** tree and set the following property values. This will move the button near the default jump button that appears on phones/tablets.
+2. Expand the button's `Class.ImageButton.Position|Position` tree and set the following property values. This will move the button near the default jump button that appears on phones/tablets.
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-Position.png" width="60%" />
 
@@ -122,17 +122,17 @@ This button needs three custom images — its normal appearance on the screen, a
     </Grid>
 </Grid>
 
-Setting these appearances can be done through the **Image**, **HoverImage**, and **PressedImage** properties.
+Setting these appearances can be done through the `Class.ImageButton.Image|Image`, `Class.ImageButton.HoverImage|HoverImage`, and `Class.ImageButton.PressedImage|PressedImage` properties.
 
-1. Locate the button's **Image** property and paste in `rbxassetid://6025368017`, or [use your own asset](../../../production/publishing/publishing-assets.md).
+1. Locate the button's `Class.ImageButton.Image|Image` property and paste in `rbxassetid://6025368017`, or [use your own asset](../../../production/publishing/publishing-assets.md).
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-Image.png" width="60%" />
 
-2. For the **HoverImage** property, paste in `rbxassetid://6025452347`.
+2. For the `Class.ImageButton.HoverImage|HoverImage` property, paste in `rbxassetid://6025452347`.
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-HoverImage.png" width="60%" />
 
-3. For the **PressedImage** property, paste in `rbxassetid://6025454897`.
+3. For the `Class.ImageButton.PressedImage|PressedImage` property, paste in `rbxassetid://6025454897`.
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-PressedImage.png" width="60%" />
 
@@ -140,13 +140,13 @@ Setting these appearances can be done through the **Image**, **HoverImage**, and
 
 To finalize the button's appearance on screen, make the following adjustments:
 
-1. Set **BackgroundTransparency** to a value of **1** to make the background transparent.
+1. Set `Class.ImageButton.BackgroundTransparency|BackgroundTransparency` to a value of **1** to make the background transparent.
 
    <img src="../../../assets/tutorials/interactive-buttons/Background-Transparency.png" width="60%" />
 
    ![alt](../../../assets/tutorials/interactive-buttons/ImageButton-Finalized-A.jpg)
 
-2. Rotate the button slightly by setting **Rotation** to **-5**.
+2. Rotate the button slightly by setting `Class.ImageButton.Rotation|Rotation` to **-5**.
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-Rotation.png" width="60%" />
 
@@ -156,7 +156,7 @@ To finalize the button's appearance on screen, make the following adjustments:
 
 The final task is hooking up basic button functionality.
 
-1. In the Explorer window, hover over the **MapButton** object and insert a **LocalScript**.
+1. In the Explorer window, hover over the **MapButton** object and insert a `Class.LocalScript`.
 
    <img src="../../../assets/tutorials/interactive-buttons/MapButton-LocalScript.png" width="60%" />
 
@@ -190,4 +190,4 @@ If the button doesn't work as expected, check the following:
 
 - Make sure you used a client-side `Class.LocalScript`, not a server-side `Class.Script`.
 - Ensure that the `Class.LocalScript` is a **direct child** of the button object (not a child of the `Class.ScreenGui` container).
-- Confirm that your button's **Image**, **HoverImage**, and **PressedImage** properties are set to the appropriate image assets.
+- Confirm that your button's `Class.ImageButton.Image|Image`, `Class.ImageButton.HoverImage|HoverImage`, and `Class.ImageButton.PressedImage|PressedImage` properties are set to the appropriate image assets.
