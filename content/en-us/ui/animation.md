@@ -17,8 +17,8 @@ To tween the **position** of a `Class.GuiObject`:
 
 1. Set the `Class.GuiObject.AnchorPoint|AnchorPoint` for the object.
 1. Determine `Datatype.UDim2` coordinates for the object's target position, using the **scale** parameters of `Datatype.UDim2` instead of exact pixel values so that the object tweens to the exact center of the screen.
-1. Pass a `Datatype.TweenInfo` and the target position to `Class.TweenService:Create()`.
-1. Play the tween with `Class.Tween.Play`.
+1. Pass a `Datatype.TweenInfo` and the target `Class.GuiObject.Position|Position` to `Class.TweenService:Create()`.
+1. Play the tween with `Class.Tween:Play()`.
 
 The following code snippet moves an `Class.ImageLabel` within a `Class.ScreenGui` to the exact center of the screen:
 
@@ -46,8 +46,8 @@ To tween the **size** of a `Class.GuiObject`:
 
 1. Determine `Datatype.UDim2` coordinates for the object's target size, using the **scale** parameters of `Datatype.UDim2` instead of exact pixel values so that the object tweens to a relative percentage of the screen size.
 1. Attach a `Class.UIAspectRatioConstraint` to the object to maintain its designed aspect ratio when tweening.
-1. Pass a `Datatype.TweenInfo` and the target size to `Class.TweenService:Create()`.
-1. Play the tween with `Class.Tween.Play`.
+1. Pass a `Datatype.TweenInfo` and the target `Class.GuiObject.Size|Size` to `Class.TweenService:Create()`.
+1. Play the tween with `Class.Tween:Play()`.
 
 The following code snippet scales an `Class.ImageLabel` within a `Class.ScreenGui` to 40% of the screen width or height (whichever is smaller) from the object's center anchor point:
 
@@ -77,9 +77,9 @@ tween:Play()
 To tween the **rotation** of a `Class.GuiObject`:
 
 1. Set the `Class.GuiObject.AnchorPoint|AnchorPoint` for the object to rotate around.
-1. Determine the target `Rotation` for the object.
+1. Determine the target `Class.GuiObject.Rotation|Rotation` for the object.
 1. Pass a `Datatype.TweenInfo` and the target rotation to `Class.TweenService:Create()`.
-1. Play the tween with `Class.Tween.Play`.
+1. Play the tween with `Class.Tween:Play()`.
 
 ```lua title='UI Tween - Size' highlight='8,10,13,15'
 local TweenService = game:GetService("TweenService")
