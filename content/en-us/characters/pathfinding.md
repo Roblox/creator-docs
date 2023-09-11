@@ -371,6 +371,8 @@ local function followPath(destination)
 				followPath(destination)
 			end
 		end)
+	end
+end 
 ```
 
 <Alert severity="error">
