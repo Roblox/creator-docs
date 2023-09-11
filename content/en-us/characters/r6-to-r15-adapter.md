@@ -62,7 +62,7 @@ Games that resize the R6 body parts won't see the scale change propagated to the
 
 ### FindFirstChild API Calls
 
-Don't immediately use `Class.Instance:FindFirstChild()|FindFirstChild()`, or "dot indexing", in your scripts to find character parts. Instead, use `Class.Instance:WaitForChild()|WaitForChild()` before you call `Class.Instance:FindFirstChild()|FindFirstChild()`. Replication in `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` is different and the experience may fail to find a child that doesn't exist yet.
+Don't immediately use `Class.Instance:FindFirstChild()|FindFirstChild()`, or "dot indexing," in your scripts to find character parts. Instead, use `Class.Instance:WaitForChild()|WaitForChild()` before you call `Class.Instance:FindFirstChild()|FindFirstChild()`. Replication in `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` is different, and the experience may fail to find a child that doesn't exist yet.
 
 This has always been a best practice for Roblox scripts, even if some cases work without following this practice.
 
