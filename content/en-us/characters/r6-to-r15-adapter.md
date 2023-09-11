@@ -15,7 +15,7 @@ It's important to understand how the adapter uses [adapter parts](#adapter-parts
 
 The R6 to R15 Adapter implements a Lua-script injection when an avatar spawns that creates adapter parts.
 
-These are invisible `Class.MeshPart|Meshparts` that have the exact same name as R6 body parts and are welded to their corresponding R15 body parts. The scripts allow adapter parts to accept R6-based script interactions and forward them to the appropriate R15 parts.
+These are invisible `Class.MeshPart|MeshParts` that have the exact same name as R6 body parts and are welded to their corresponding R15 body parts. The scripts allow adapter parts to accept R6-based script interactions and forward them to the appropriate R15 parts.
 
 The adapter parts perform the following:
 
