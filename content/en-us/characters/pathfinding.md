@@ -249,6 +249,8 @@ local function followPath(destination)
 	if success and path.Status == Enum.PathStatus.Success then
 		-- Get the path waypoints
 		waypoints = path:GetWaypoints()
+	end
+end
 ```
 
 <figure>
