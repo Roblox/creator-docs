@@ -15,7 +15,7 @@ It's important to understand how the adapter uses [adapter parts](#adapter-parts
 
 The R6 to R15 Adapter implements a Lua-script injection when an avatar spawns that creates adapter parts.
 
-These are invisible `Class.MeshParts` that have the exact same name as R6 body parts and are welded to their corresponding R15 body parts. The scripts allow adapter parts to accept R6-based script interactions and forward them to the appropriate R15 parts.
+These are invisible `Class.MeshPart|MeshParts` that have the exact same name as R6 body parts and are welded to their corresponding R15 body parts. The scripts allow adapter parts to accept R6-based script interactions and forward them to the appropriate R15 parts.
 
 The adapter parts perform the following:
 
@@ -27,7 +27,7 @@ The adapter parts perform the following:
 
 ## Enabling the R6 to R15 Adapter
 
-You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode` property in Workspace. At this time, the **Default** setting disables the `AvatarUnificationMode`.
+You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode` property in Workspace. At this time, the **Default** setting disables the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode`.
 
 To enable the R6 to R15 Adapter:
 
@@ -58,17 +58,17 @@ Games that resize the R6 body parts won't see the scale change propagated to the
 
 ### GetChildren API Calls
 
-`GetChildren()` calls returns both the R6 proxy parts and their corresponding R15 parts. You may need to account for this extra information.
+`Class.Instance:GetChildren()|GetChildren()` calls returns both the R6 proxy parts and their corresponding R15 parts. You may need to account for this extra information.
 
 ### FindFirstChild API Calls
 
-Don't immediately use FindFirstChild(), or "dot indexing", in your scripts to find character parts. Instead, use `WaitForChild()` before you call `FindFirstChild()`. Replication in `AvatarUnificationMode` is different and the experience may fail to find a child that doesn't exist yet.
+Don't immediately use `Class.Instance:FindFirstChild()|FindFirstChild()`, or "dot indexing," in your scripts to find character parts. Instead, use `Class.Instance:WaitForChild()|WaitForChild()` before you call `Class.Instance:FindFirstChild()|FindFirstChild()`. Replication in `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` is different, and the experience may fail to find a child that doesn't exist yet.
 
 This has always been a best practice for Roblox scripts, even if some cases work without following this practice.
 
 ### Head.ClassName Conditionals
 
-`AvatarUnificationMode` sets the Head to a `Class.MeshPart`. Any calls that read or write to the `Class.SpecialMesh.MeshId` property will fail.
+`Class.Workspace.AvatarUnificationMode|AvatarUnificationMode` sets the Head to a `Class.MeshPart`. Any calls that read or write to the `Class.SpecialMesh.MeshId` property will fail.
 
 ### Head Collisions
 
