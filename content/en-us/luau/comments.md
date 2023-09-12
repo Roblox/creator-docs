@@ -41,9 +41,7 @@ end
 
 ## TODO Comments
 
-You can add special comments that are bolded by typing (`TODO`). Any text following this will be in bold (until broken by a space).
-
-- Use TODO to keep track of and communicate issues.
+Roblox Studio supports special `TODO` comments. Studio bolds any text following `TODO` (until broken by a space):
 
 ```lua
 -- TODO: Finish the function below so that it actually does what its name implies.
