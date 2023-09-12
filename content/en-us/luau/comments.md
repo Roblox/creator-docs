@@ -48,4 +48,5 @@ Roblox Studio supports special `TODO` comments. Studio bolds any text following 
 local function stopWorldFromBlowingUp()
 end
 ```
+
 Use `TODO` comments to keep track of and communicate issues within your code.
