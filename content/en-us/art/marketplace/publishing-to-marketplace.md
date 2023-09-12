@@ -67,7 +67,7 @@ To upload your asset:
 1. In Studio, add the marketplace item to your workspace.
    - For accessories, the item must be an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
    - For bodies and heads, the item must be a `Class.Model`. For information on the expected data model and specifications, see [Avatar Specifications](../../art/avatar/specifications.md).
-2. In the [Explorer](../../studio/explorer.md) window, right click the object and select **Save to Roblox**.
+2. In the **Explorer** window, right click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>

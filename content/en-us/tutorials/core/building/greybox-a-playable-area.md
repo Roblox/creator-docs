@@ -103,9 +103,49 @@ To create an organization structure:
 
 ### Insert Parts
 
+<Alert severity="info">
+    The following instructions provide two different instructional paths: you can either insert parts into your own unique environment, or you can insert parts in a way that exactly recreates the greybox environment within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building).
+</Alert>
+
 Now that you have an organizational structure to contain your assets, you can now begin inserting parts into the 3D space to represent your sea stack platforms.
 
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
 To insert a cylinder part for your first platform:
+
+1. In the menu bar, select the **Home** tab.
+1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
+
+   <img src="../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" width="800" />
+
+1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
+
+   <img src="../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" width="320" />
+
+1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../parts/index.md#manipulating-parts).
+
+   <img src="../../../assets/studio/general/Home-Tab-Move.png" width="800" />
+
+   <img src="../../../assets/studio/general/Home-Tab-Scale.png" width="800" />
+
+   <img src="../../../assets/studio/general/Home-Tab-Rotate.png" width="800" />
+
+   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg " width="80%" />
+
+1. Using the same process, add and configure at least seven more sea stack platforms with increasing levels of height into the **Blockout_Parts** model.
+
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%" />
+
+1. In the **Explorer** window, select the **Block_Out** model.
+1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move the your parts when the experience starts.
+
+   <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the sea stack platforms within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience:
 
 1. In the menu bar, select the **Home** tab.
 1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
@@ -123,17 +163,9 @@ To insert a cylinder part for your first platform:
    1. Set **CFrame.Position** to **-23, -4, 9** so the top of the platform is only a short jump from the surface of the island.
    1. Set **CFrame.Orientation** to **0, 0, 90** so the flat surface of the cylinder faces toward the sky.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" width="80%" />
 
-1. **(Optional)** If you don't want to use the same values from the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience, navigate back to the **Home** tab, and then the **Move**, **Scale**, and **Rotate** tools to position a large, flat part in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../parts/index.md#manipulating-parts).
-
-   <img src="../../../assets/studio/general/Home-Tab-Move.png" width="800" />
-
-   <img src="../../../assets/studio/general/Home-Tab-Scale.png" width="800" />
-
-   <img src="../../../assets/studio/general/Home-Tab-Rotate.png" width="800" />
-
-1. Using either process, add and configure at least seven more sea stack levels. The sample **Island Jump - Building** experience uses the following values for the rest of the sea stack platforms:
+1. Using this process, add and configure seven more sea stack levels with the following values for the rest of the sea stack platforms:
 
    <table>
    <thead>
@@ -250,10 +282,15 @@ To insert a cylinder part for your first platform:
    </tbody>
    </table>
 
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%"  />
+
 1. In the **Explorer** window, select the **Block_Out** model.
 1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move the your parts when the experience starts.
 
    <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
+
+  </TabItem>
+</Tabs>
 
 ### Align Parts
 
@@ -350,7 +387,8 @@ To create a hollow tunnel:
 
    <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Negate.jpg" width="740" />
 
-1. In the **Explorer** window, select both the negated part and the cylinder tunnel part.16. In the **Model** tab, navigate back to the **Solid Modeling** section, then click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
+1. In the **Explorer** window, select both the negated part and the cylinder tunnel part.
+1. In the **Model** tab, navigate back to the **Solid Modeling** section, then click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
 
    <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Union.jpg" width="740" />
 

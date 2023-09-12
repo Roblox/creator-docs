@@ -43,7 +43,7 @@ Make sure that every asset you import adheres to the [Community Rules](https://e
 
 You can publish assets directly in Studio through the [Toolbox](../../projects/assets/toolbox.md) without needing to access the [Creator Dashboard](https://create.roblox.com/dashboard/creations). To publish an asset within Studio:
 
-1. Navigate to the [View](../../studio/view-tab.md) tab of the menu bar and select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays.
+1. Navigate to the **View** tab of the menu bar and select **Toolbox**. The **Toolbox** window displays.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 

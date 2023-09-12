@@ -106,7 +106,7 @@ To insert an image ad:
 
 1. Insert a block part into your experience.
 
-   1. In the menu bar, select the [Home](../../studio/home-tab.md) tab.
+   1. In the menu bar, select the **Home** tab.
    1. Click the small arrow below **Part**. A dropdown menu displays.
 
       <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />

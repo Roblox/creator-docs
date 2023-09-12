@@ -16,7 +16,7 @@ You can insert [creator-uploaded meshes](#inserting-meshes) or import [custom me
 
 You can browse thousands of user-uploaded meshes from the [Creator Marketplace](../production/publishing/creator-marketplace.md) through the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md).
 
-1. Navigate to the [View](../studio/view-tab.md) tab and select **Toolbox**.
+1. Navigate to the **View** tab and select **Toolbox**.
 
    <img src="../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
