@@ -43,8 +43,7 @@ Unlike `Class.StarterGui` and `Class.PlayerGui`, you have to manually create a `
 
 2. Insert a **ScreenGui**.
 
-   <img src="../assets/studio/explorer/ScreenGui-In-StarterGui.png"
-   width="320" />
+   <img src="../assets/studio/explorer/StarterGui-ScreenGui.png" width="320" />
 
 ### Parenting a ScreenGui
 

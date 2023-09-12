@@ -5,11 +5,34 @@ description: Explains how to publish user-generated content to the Marketplace.
 
 If you are a creator participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your item meets the [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the [Marketplace](https://www.roblox.com/catalog) for a fee. Before uploading the item, you must review the Marketplace restrictions and understand the moderation process to prevent unexpected issues during and after the upload process.
 
-See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
+There are limits on the number of assets you can upload to Roblox and enable for sale on the Marketplace:
 
-<Alert severity = 'info'>
-This article covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
-</Alert>
+<figure>
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Limiteds</th>
+    <th>Bodies or Heads</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Uploading and moderation</td>
+    <td>N/A</td>
+    <td>10 per day</td>
+
+  </tr>
+  <tr>
+    <td>Enabling on sale<sup>&dagger;</sup></td>
+    <td>1 per day</td>
+    <td>N/A</td>
+
+  </tr>
+</tbody>
+</table>
+<figcaption><sup>&dagger;</sup>*For assets that can be taken off-sale, only the first time the asset is enabled for sale counts against this limit.*</figcaption>
+</figure>
 
 ## Moderation
 
@@ -27,6 +50,10 @@ If you believe an asset is infringing on your IP, or that one of your assets has
 
 ## Uploading an Asset
 
+<Alert severity = 'info'>
+This content covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+</Alert>
+
 When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../art/marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
 For details on converting a custom model to a rigid or layered accessory, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
@@ -40,10 +67,7 @@ To upload your asset:
 1. In Studio, add the marketplace item to your workspace.
    - For accessories, the item must be an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
    - For bodies and heads, the item must be a `Class.Model`. For information on the expected data model and specifications, see [Avatar Specifications](../../art/avatar/specifications.md).
-2. In the Explorer Window, right click the object and select **Save to Roblox**.
-   <img
-   src="../../assets/publishing/marketplace/Save-To-Roblox.png"
-   width="300" />
+2. In the [Explorer](../../studio/explorer.md) window, right click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>

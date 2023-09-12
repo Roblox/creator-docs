@@ -106,10 +106,10 @@ To insert an image ad:
 
 1. Insert a block part into your experience.
 
-   1. In the menu bar, select the **Model** tab.
-   1. Navigate to the **Parts** section, then click the small arrow below **Part**. A dropdown menu displays.
+   1. In the menu bar, select the [Home](../../studio/home-tab.md) tab.
+   1. Click the small arrow below **Part**. A dropdown menu displays.
 
-      <img src="../../assets/studio/general/Model-Tab-Insert-Part-Menu.png" width="468" />
+      <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />
 
    1. Select **Block**. A block part displays within the viewport.
 
@@ -186,18 +186,15 @@ To insert a portal ad:
 1. Open the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
    1. In the menu bar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
-1. In the **Categories** section, click the **See All** button. All categories display.
+1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.
 
-   <img src="../../assets/monetization/immersive-ads/PortalAds-SeeAllButton.jpg" width="30%" />
+   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
 
 1. Click the **Ads** tile.
 
-   <img src="../../assets/monetization/immersive-ads/PortalAds-AdsTile.jpg" width="30%" />
+   <img src="../../assets/studio/toolbox/Marketplace-Categories-Ads.png" width="200" />
 
 1. Click any of the **Portal** template packages. The ad unit displays in the viewport.
-
-   <img src="../../assets/monetization/immersive-ads/PortalAds-Packages.jpg" width="40%" />
-
 1. **(Optional)** Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.
 
 Once you publish the experience, users can see the ad unit in one of the following states:
