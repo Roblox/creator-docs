@@ -108,11 +108,11 @@ To create a `Class.Sound` object for background audio:
 
 `Class.Sound` object properties work together to influence how users experience your audio, such as:
 
-- How loud they hear specific audio individually and in relation to one another ([`Volume`](#volume)).
-- How they perceive volume when they move away from the audio source ([`RollOffMinDistance`](#rolloffmindistance-and-rolloffmaxdistance), [`RollOffMaxDistance`](#rolloffmindistance-and-rolloffmaxdistance), and [`Enum.RollOffMode`](#rolloffmode))
-- What part of the audio they can listen to ([`TimePosition`](#timeposition)).
-- How fast and at what pitch they hear it ([`PlaybackSpeed`](#playbackspeed)).
-- If the audio automatically replays upon completion ([`Looped`](#looped)).
+- How loud they hear specific audio individually and in relation to one another ([Volume](#volume)).
+- How they perceive volume when they move away from the audio source ([RollOffMinDistance](#rolloffmindistance-and-rolloffmaxdistance), [RollOffMaxDistance](#rolloffmindistance-and-rolloffmaxdistance), and [RollOffMode](#rolloffmode))
+- What part of the audio they can listen to ([TimePosition](#timeposition)).
+- How fast and at what pitch they hear it ([PlaybackSpeed](#playbackspeed)).
+- If the audio automatically replays upon completion ([Looped](#looped)).
 
 ### Volume
 

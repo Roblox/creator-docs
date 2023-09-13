@@ -198,6 +198,53 @@ export const getNonRobloxLinks = (content: string) => {
   return httpLinks;
 };
 
+const processHttpLink = ({
+  fileName,
+  config,
+  link,
+}: {
+  config: IConfig;
+  fileName: string;
+  link: LinkInfo;
+}) => {
+  const urlNoHash = removeUrlHash(link.ref);
+  if (config.debug) {
+    allNonRobloxHttpLinks.push(urlNoHash);
+  }
+  if (!isAllowedHttpLink(urlNoHash)) {
+    // Create messages
+    const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
+    const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
+    const allowedListFilePath =
+      allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
+    const message = `link ${link.ref} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
+
+    // Log messages
+    console.log(shortIntro + message);
+    addToSummaryOfRequirements(fullIntro + message);
+
+    // Post messages
+    if (config.postPullRequestComments) {
+      const body = `${Emoji.NoEntry} The link ${
+        link.ref
+      } isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
+        config.repository
+      }/blob/${config.baseBranch.replace(
+        'origin/',
+        ''
+      )}/${allowedListFilePath}).`;
+      createNewPullRequestComment({
+        body,
+        commit_id: config.commitHash,
+        line: link.lineNumber,
+        path: fileName,
+        pull_number: config.pullRequestNumber,
+        repository: config.repository,
+      });
+    }
+  }
+};
+
 export const checkHttpLinks = ({
   content,
   fileName,
@@ -209,41 +256,6 @@ export const checkHttpLinks = ({
 }) => {
   const httpLinks = getNonRobloxLinks(content);
   httpLinks.forEach((link) => {
-    const urlNoHash = removeUrlHash(link.ref);
-    if (config.debug) {
-      allNonRobloxHttpLinks.push(urlNoHash);
-    }
-    if (!isAllowedHttpLink(urlNoHash)) {
-      // Create messages
-      const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
-      const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
-      const allowedListFilePath =
-        allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
-      const message = `link ${link.ref} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
-
-      // Log messages
-      console.log(shortIntro + message);
-      addToSummaryOfRequirements(fullIntro + message);
-
-      // Post messages
-      if (config.postPullRequestComments) {
-        const body = `${Emoji.NoEntry} The link ${
-          link.ref
-        } isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
-          config.repository
-        }/blob/${config.baseBranch.replace(
-          'origin/',
-          ''
-        )}/${allowedListFilePath}).`;
-        createNewPullRequestComment({
-          body,
-          commit_id: config.commitHash,
-          line: link.lineNumber,
-          path: fileName,
-          pull_number: config.pullRequestNumber,
-          repository: config.repository,
-        });
-      }
-    }
+    processHttpLink({ config, fileName, link });
   });
 };

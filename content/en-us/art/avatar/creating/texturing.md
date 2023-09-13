@@ -3,7 +3,7 @@ title: Texturing
 comments:
 description: Use Blender to apply a custom surface appearance on your character model.
 next: /art/avatar/creating/caging
-previous: /art/avatar/creating/modeling
+prev: /art/avatar/creating/modeling
 ---
 
 **Texturing** is the process of customizing the color, tone, and shading of your model's surface. Custom meshes and models use a 2D image, known as a texture map, to project various surface appearance elements onto your 3D object.
