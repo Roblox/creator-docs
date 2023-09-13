@@ -159,7 +159,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
 1. In the **Properties** window,
 
    1. Set **Name** to **Level_1** for organization purposes.
-   1. Set **Size** to **12, 131, 142** to create a large platform.
+   1. Set **Size** to **12, 131, 131** to create a large platform.
    1. Set **CFrame.Position** to **-23, -4, 9** so the top of the platform is only a short jump from the surface of the island.
    1. Set **CFrame.Orientation** to **0, 0, 90** so the flat surface of the cylinder faces toward the sky.
 
@@ -179,7 +179,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    <tbody>
    <tr>
    <td>Level_2</td>
-   <td>`20, 83, 81`</td>
+   <td>`20, 81, 81`</td>
    <td>`-8, 0, 24`</td>
    <td>`0, 0, 90`</td>
    </tr>
@@ -191,91 +191,91 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    </tr>
    <tr>
    <td>Level_3b</td>
-   <td>`40, 44, 34`</td>
+   <td>`40, 34, 34`</td>
    <td>`87, 10, 4`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_3c</td>
-   <td>`40, 54, 44`</td>
+   <td>`40, 44, 44`</td>
    <td>`97, 10, 49`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_4a</td>
-   <td>`75, 44, 39`</td>
+   <td>`75, 39, 39`</td>
    <td>`112, 27.5, 46.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_4b</td>
-   <td>`75, 65, 69`</td>
+   <td>`75, 65, 65`</td>
    <td>`137, 27.5, 69`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_4c</td>
-   <td>`75, 61, 60`</td>
+   <td>`75, 60, 60`</td>
    <td>`159.5, 27.5, 91.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_4d</td>
-   <td>`75, 46, 30`</td>
+   <td>`75, 30, 30`</td>
    <td>`207, 27.5, 106.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_4e</td>
-   <td>`75, 61, 65`</td>
+   <td>`75, 61, 61`</td>
    <td>`250, 27.5, 74`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_5a</td>
-   <td>`130, 62, 60`</td>
+   <td>`130, 60, 60`</td>
    <td>`268, 55, 50`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_5b</td>
-   <td>`130, 37, 25`</td>
+   <td>`130, 25, 25`</td>
    <td>`256, 55, 2.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_5c</td>
-   <td>`130, 37, 25`</td>
+   <td>`130, 25, 25`</td>
    <td>`276, 55, -17.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_5d</td>
-   <td>`130, 54, 68`</td>
+   <td>`130, 54, 54`</td>
    <td>`322, 55, -21`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_6a</td>
-   <td>`211, 90, 79`</td>
+   <td>`211, 79, 79`</td>
    <td>`367, 94.5, -41`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_6b</td>
-   <td>`211, 90, 24`</td>
+   <td>`211, 24, 24`</td>
    <td>`387, 94.5, 11.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_6c</td>
-   <td>`211, 90, 44`</td>
+   <td>`211, 44, 44`</td>
    <td>`397, 94.5, 51.5`</td>
    <td>`0, 0, 90`</td>
    </tr>
    <tr>
    <td>Level_7</td>
-   <td>`321, 71, 61`</td>
+   <td>`321, 61, 61`</td>
    <td>`407, 149.5, 79`</td>
    <td>`0, 0, 90`</td>
    </tr>
