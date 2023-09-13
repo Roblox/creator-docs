@@ -378,16 +378,14 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
    ```lua title='LocalScript - CollectionService Streaming Detection' highlight='10-15'
    local CollectionService = game:GetService("CollectionService")
-   local RunService = game:GetService("RunService")
 
    local tagName = "FlickerLightSource"
    local random = Random.new(os.clock())
-   local heartbeatCount = 0
    local flickerSources = {}
 
    -- Detect currently and new tagged parts streaming in or out
    for _, light in CollectionService:GetTagged(tagName) do
-    flickerSources[light] = true
+   	flickerSources[light] = true
    end
 
    CollectionService:GetInstanceAddedSignal(tagName):Connect(function(light)
@@ -399,14 +397,12 @@ In some cases, it's necessary to detect when an object streams in or out and rea
    end)
 
    -- Flicker loop
-   RunService.Heartbeat:Connect(function()
-   	heartbeatCount += 1
-   	if heartbeatCount > 5 then
-   		heartbeatCount = 0
-   		for light in flickerSources do
-   			light.Brightness = 8 + random:NextNumber(-0.4, 0.4)
-   		end
+   while true do
+   	for light in flickerSources do
+   		light.Brightness = 8 + random:NextNumber(-0.4, 0.4)
    	end
+
+   	task.wait(0.05)
    end)
    ```
 
