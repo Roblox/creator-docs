@@ -97,16 +97,32 @@ navigation:
         path: /art/accessories/project-files
       - title: Accessory Fitting Tool
         path: /art/accessories/accessory-fitting-tool
-  - title: Layered Clothing
+      - title: Layered Clothing
+        section:
+          - title: Overview
+            path: /art/accessories/layered-clothing
+          - title: Creating Layered Models
+            path: /art/accessories/creating-in-blender
+          - title: Automatic Skinning Transfer
+            path: /art/accessories/automatic-skinning-transfer
+          - title: Clothing Validation Tool
+            path: /art/accessories/validation-tool
+  - title: Creating Basic Clothing
     section:
       - title: Overview
-        path: /art/accessories/layered-clothing
-      - title: Creating Layered Models
-        path: /art/accessories/creating-in-blender
-      - title: Automatic Skinning Transfer
-        path: /art/accessories/automatic-skinning-transfer
-      - title: Clothing Validation Tool
-        path: /art/accessories/validation-tool
+        path: /art/accessories/creating/
+      - title: Modeling
+        path: /art/accessories/creating/modeling
+      - title: Texturing
+        path: /art/accessories/creating/texturing
+      - title: Rigging
+        path: /art/accessories/creating/rigging
+      - title: Caging
+        path: /art/accessories/creating/caging
+      - title: Exporting
+        path: /art/accessories/creating/exporting
+
+
   - title: Classic Clothing
     path: /art/accessories/classic-clothing
 

@@ -2,7 +2,7 @@
 title: Testing in Studio
 comments:
 description: Verify the important aspects of your character model in a custom Studio test experience.
-previous: /art/avatar/testing/blender
+prev: /art/avatar/testing/blender
 ---
 
 Test your character model in Studio to understand how it looks and feels within a Roblox experience.

@@ -51,13 +51,14 @@ https://digitaldragon.co/camps/thanksgiving-week-camp-roblox/
 https://digitalsake.com/
 https://digitane.jp/
 https://discord.com/developers/applications
-https://docs.blender.org/manual/en/latest/physics/cloth/examples.html#using-simulation-to-shape-sculpt-a-mesh
+https://docs.blender.org/manual/en/latest/physics/cloth/examples.html
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html
 https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html
 https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html
 https://docs.blender.org/manual/en/latest/editors/3dview/display/shading.html
 https://docs.blender.org/manual/en/latest/editors/3dview/modes.html
 https://docs.blender.org/manual/en/latest/editors/outliner/interface.html?highlight=orphan
+https://docs.blender.org/manual/en/latest/physics/cloth/examples.html
 https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/introduction.html
 https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/tool_settings/options.html
 https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/tools.html

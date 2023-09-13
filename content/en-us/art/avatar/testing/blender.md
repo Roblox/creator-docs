@@ -3,7 +3,7 @@ title: Testing in Blender
 comments:
 description: Verify the important aspects of your character model in Blender before importing into Studio.
 next: /art/avatar/testing/studio
-previous: /art/avatar/testing/
+prev: /art/avatar/testing/
 ---
 
 You can quickly verify many of your components in Blender, allowing you to catch out problems that may cause issues later on. You can use a mix of Blender native tools and Roblox's helper plugins to check for many common issues in your character model.
