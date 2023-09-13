@@ -5,51 +5,17 @@ next: /tutorials/building/environments/in-game-sounds
 prev: /tutorials/building/environments/lighting-with-props
 ---
 
-Audio in Roblox is created with a **Sound** object. Sounds can be positional, such as the sound of a waterfall, or universal for all players. This tutorial will show you how to create a universal sound to play background music.
+Audio in Roblox is created with a `Class.Sound` object. Sounds can be positional, such as the sound of a waterfall, or universal for all players. This tutorial will show you how to create a universal sound to play background music.
 
 <video controls>
    <source src="../../../assets/tutorials/playing-background-music/introToSound_bgMusic_web.mp4" />
 </video>
 
-## Finding Music
-
-Music can be uploaded, or it can be obtained from the Toolbox which contains thousands of free-to-use tracks. For this tutorial, you'll need the **asset ID** of an uploaded track or one found in the marketplace.
-
-### Uploading Music
-
-On Roblox, uploading audio files comes at a small cost in Robux — this accounts for the time it takes moderators to review every sound file that users upload.
-
-1. Visit the [Create Audio](https://www.roblox.com/develop?View=3) page to upload a track.
-
-2. Once the file is uploaded, it will appear in the list on the Audio page. Click the name to open its dedicated page and **copy** its **numeric ID** from the URL in the browser window.
-
-<Alert severity="info">
-In the URL, `https://www.roblox.com/library/1837849285/Night-Vision`, the asset ID is `1837849285`.
-</Alert>
-
-### Audio Marketplace
-
-A wide variety of songs can also be found in the marketplace.
-
-1. Open the **Toolbox** and go to the **Marketplace** tab. From the dropdown menu, select **Audio**.
-
-   ![alt](../../../assets/tutorials/playing-background-music/playingBGMusic_toolboxAudio.png)
-
-2. Click the **Sort** button and then, in the **Creator** field, type in a contributor such as Roblox or Monstercat (electronic music label partnered with Roblox).
-
-   ![alt](../../../assets/tutorials/playing-background-music/playingBGMusic_sortAndShowCreator.png)
-
-3. While browsing, sample songs by pressing the preview button.
-
-   ![alt](../../../assets/tutorials/playing-background-music/Audio-Item-Play-Button.png)
-
-4. After finding a song, right-click the listing and select **Copy Asset ID**. This ID will be used later to add in the background music.
-
-   ![alt](../../../assets/tutorials/playing-background-music/Audio-Item-Copy-ID.png)
-
 ## Playing Music
 
-With a previously copied asset ID, a new Sound object can be created. Once set up, a script will play the music for each player.
+You can [upload](../../../sound/assets.md#importing-custom-audio) music or [obtain it from the marketplace](../../../sound/assets.md#finding-audio-assets), which contains thousands of free-to-use tracks. For this tutorial, you need the **asset ID** of a track.
+
+The basic steps are to copy an asset ID, create a `Class.Sound` object, and use a script to play the music.
 
 ### Sound Setup
 

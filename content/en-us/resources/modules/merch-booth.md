@@ -1,10 +1,6 @@
 ---
 title: Merch Booth
 description: The Merch Booth module lets you sell avatar assets, passes, and products directly in an experience.
-comments: |
-  1. Needs tabbed swapper component for configure() section.
-  2. Potentially fix broken enum links (search "`Enum.").
-  3. Fix up code blocks in Adding Items section to only show necessary lines.
 ---
 
 The **MerchBooth** [developer module](../../resources/modules/index.md) lets you offer [avatar assets](../../art/accessories/index.md), [passes](../../production/monetization/game-passes.md), and [developer products](../../production/monetization/developer-products.md) for sale directly within your experience. Players can browse items, preview assets on their own avatar, purchase items, and instantly use or equip them&nbsp;— all without leaving your experience. This can help you [monetize](../../production/monetization/index.md) your experience and gain revenue through the 40% affiliate fee associated with selling other creators' items.
@@ -24,7 +20,7 @@ To use the **MerchBooth** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -247,7 +243,7 @@ By default, a right-side **catalog button** lets users open the booth at any tim
 In some cases, it may be useful to [remove](#togglecatalogbutton) this button and connect your own:
 
 1. Create a new button as outlined in [Buttons and Text Input](../../ui/buttons.md).
-1. Create a **LocalScript** as a child of the button object.
+1. Create a `Class.LocalScript` as a child of the button object.
 
    <img src="../../assets/studio/explorer/LocalScript-In-TextButton.png" width="320" />
 
@@ -283,12 +279,16 @@ To create a shoppable region:
 
 1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
 
-1. Disable the part's `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it. Also set its `Class.BasePart.Transparency|Transparency` to the maximum to hide it from users in the experience.
+1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from users in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
 
-   <GridContainer numColumns="2">
-     <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Collision.png" />
-     <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Transparency.png" />
-   </GridContainer>
+   <Grid container spacing={3}>
+   <Grid item>
+   <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Transparency.png" width="320" />
+   </Grid>
+   <Grid item>
+   <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Collision.png" width="320" />
+   </Grid>
+   </Grid>
 
 1. Insert a new `Class.LocalScript` under **StarterPlayerScripts**.
 
@@ -500,8 +500,8 @@ MerchBooth.setControlKeyCodes(MerchBooth.Controls.ProximityPrompts, {
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
-**Appearance**
-
+<Tabs>
+<TabItem label="Appearance">
 <table>
 <thead>
 	<tr>
@@ -529,7 +529,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`textFont`</td>
 		<td>Font of "main text" such as prices, descriptions, and other general info (`Enum.Font`).</td>
-		<td>Gotham</td>
+		<td>`Enum.Font|Gotham`</td>
 	</tr>
 	<tr>
 		<td>`textSize`</td>
@@ -549,7 +549,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`headerFont`</td>
 		<td>Font of the header text used for the window title (`Enum.Font`).</td>
-		<td>GothamMedium</td>
+		<td>`Enum.Font|GothamMedium`</td>
 	</tr>
 	<tr>
 		<td>`headerTextSize`</td>
@@ -559,7 +559,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`titleFont`</td>
 		<td>Font of the title text used for item names on the item detail page (`Enum.Font`).</td>
-		<td>GothamBold</td>
+		<td>`Enum.Font|GothamBold`</td>
 	</tr>
 	<tr>
 		<td>`titleTextSize`</td>
@@ -603,9 +603,8 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
-
-**Proximity Prompts**
-
+</TabItem>
+<TabItem label="Proximity Prompts">
 <table>
 <thead>
 	<tr>
@@ -623,7 +622,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`proximityButtonExclusivity`</td>
 		<td>`Enum.ProximityPromptExclusivity` specifying which prompts can be shown at the same time.</td>
-		<td>OnePerButton</td>
+		<td>`Enum.ProximityPromptExclusivity|OnePerButton`</td>
 	</tr>
 	<tr>
 		<td>`proximityButtonOffset`</td>
@@ -637,9 +636,8 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
-
-**Behavior**
-
+</TabItem>
+<TabItem label="Behavior">
 <table>
 <thead>
 	<tr>
@@ -671,6 +669,8 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ```lua title='LocalScript'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -695,7 +695,7 @@ Asynchronously adds an item to the merch booth so that it's eligible for purchas
 See [Adding Items](#adding-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
 
 <Alert severity="warning">
-  This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `pcall()` to catch and handle errors.
+  This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.
 </Alert>
 
 ```lua title='Script - Add Avatar Assets' highlight='6-10, 15'

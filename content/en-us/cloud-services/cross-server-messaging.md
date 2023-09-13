@@ -7,7 +7,7 @@ Cross-Server Messaging enables you to communicate to other servers or client ins
 
 - **Cross-Server Chat**: Enable users to chat with each other even if they're not in the same server.
 - **Global Announcements**: Send announcements such as "A user found a special item!" in the experience to all servers.
-- **Realtime Server Browser**: Compile a list of all live servers and update every minute for monitoring.
+- **Real-Time Server Browser**: Compile a list of all live servers and update every minute for monitoring.
 
 You can support cross-server messaging in your experience using `Class.MessagingService`. You can also use the [Teleportation Playground](https://www.roblox.com/games/3112653247/Teleportation-Playground) sample experience to see how cross-server messaging works before you implement it. To enable cross-server communication using external tools to improve your productivity, see [Communicating to Live Servers from External Tools](../cloud/open-cloud/usage-messaging.md).
 
@@ -44,7 +44,7 @@ end)
 
 ### Publish Messages
 
-Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player|Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running experience server instance.
+Use `Class.MessagingService:PublishAsync()` to match a specific topic and publish a message to it. For example, the following code sample uses `Class.MessagingService:PublishAsync()|PublishAsync()` to notify all users when a user joins a new server, including the `Class.Player.Name` representing the user's display name and the `Class.DataModel.JobId|JobId`, a unique identifier for the running experience server instance.
 
 ```lua
 local MessagingService = game:GetService("MessagingService")

@@ -21,10 +21,6 @@ After you complete this section, you will learn how to develop high-quality asse
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/PlaceholderMaterials.jpg" width="100%"/>
 
-<Alert severity="info">
-    The instructions in this section of the tutorial show you how to **exactly** recreate the sample greybox environment, which takes about 30 minutes or less from start to finish. If you don't want to use the provided coordinates, you can adjust the geometry however you need to meet the specifications of your own experience, or use the sample itself for the rest of the tutorial.
-</Alert>
-
 ## Three Lane Map Layout
 
 The **three lane map layout** is a first-person shooter map layout that includes a spawn zone for each team on opposite sides of the map, three primary lanes that each team can use to travel to either spawn zone, and cross lanes that allow for users to travel from one primary lane to another. This type of map layout is a common layout for first-person shooter experiences because it quickly places users into combat zones as soon as they join a match, and it allows for a variety of playstyles depending on which primary lane users choose to follow.
@@ -69,7 +65,11 @@ Now that you are familiar with three lane map layouts, it's time to learn how to
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CreatingPlayableAreas-Intro1.jpg" width="100%"/>
 
-**While you can adjust the geometry however you need to meet the specifications of your own experience**, note that the sample file keeps every doorway and hallway at least 10 studs wide, and every wall at least 10 studs tall. These parameters ensure that two users are able to pass through hallways and doorways concurrently, no one is able to jump over walls with Roblox's default jump height of 5 studs, and that the camera can safely maneuver the map without interfering with geometry.
+<Alert severity="info">
+    The following instructions provide two different instructional paths: you can either insert parts to represent your own unique laser tag environment, or you can insert parts in a way that exactly recreates the greybox environment within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file.
+</Alert>
+
+If you adjust the geometry to meet the specifications of your own experience, note that the sample file keeps every doorway and hallway at least 10 studs wide, and every wall at least 10 studs tall. These parameters ensure that two users are able to pass through hallways and doorways concurrently, no one is able to jump over walls with Roblox's default jump height of 5 studs, and that the camera can safely maneuver the map without interfering with geometry.
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CreatingPlayableAreas-Intro2.png" width="60%"/>
 
@@ -89,10 +89,37 @@ It's important to have spaces in the experience with peaks and valleys because i
 
 In addition, a rise in elevation creates both a physical and emotional sense of ascension, allowing users with a high ground to have a bird's eye view of the battlefield in order to get a better sense of where to travel next. When they're ready to move on, the drop in elevation creates both a physical and emotional sense of descension, pushing users to make quick decisions to maneuver around enemy lines of sight and achieve their goals.
 
-To create the floor geometry:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
-2. Add and configure a **block** `Class.Part` for the left-side surface of the main floor. You can use this same process for each step as you create all of the playable areas.
+1. Using **block** parts, create symmetrical left and right surfaces for the **main floor** of your building. This geometry represents the length of your playable interior, and its symmetry denotes the center of the map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralFloor-1.jpg" width="100%"/>
+
+1. Using **block** parts, create symmetrical left and right surfaces for the **mezzanine floor** of your building. This geometry represents the highest ground on the map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-3.jpg" width="100%"/>
+
+1. Using **wedge** parts, create a **rise in elevation** between the main and mezzanine floors. This geometry breaks the lines of sight for players traveling the interior primary lane, or the cross lane in the middle of the map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-4.jpg" width="100%"/>
+
+1. Using **wedge** parts, create a **drop in elevation** between the main and outdoor floor. This geometry is your exterior primary lane, and it descends to the lowest point on the map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-5.jpg" width="100%"/>
+
+1. Anchor all of your parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the floor geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
+
+1. Open Roblox Studio with a **Baseplate** template.
+1. Add and configure a **block** part for the left-side surface of the **main floor**. You can use this same process for each step as you create all of the playable areas.
 
    1. In the menu bar, select the **Model** tab.
    1. In the **Parts** section, click the dropdown arrow and select **Block**. A block part displays in the viewport.
@@ -105,7 +132,7 @@ To create the floor geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-1.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the main floor:
+1. Add and configure the following **block** parts for the **main floor**:
 
    <table>
    <thead>
@@ -136,7 +163,7 @@ To create the floor geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-2.jpg" width="100%"/>
 
-4. Add and configure the following **block** `Class.Part|Parts` for the mezzanine floor:
+1. Add and configure the following **block** parts for the **mezzanine floor**:
 
    <table>
    <thead>
@@ -177,7 +204,7 @@ To create the floor geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-3.jpg" width="100%"/>
 
-5. Add and configure the following **wedge** `Class.Part|Parts` for the elevation between the first and mezzanine floors:
+1. Add and configure the following **wedge** parts for the **rise in elevation** between the main and mezzanine floor:
 
    <table>
    <thead>
@@ -218,11 +245,14 @@ To create the floor geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-4.jpg" width="100%"/>
 
-6. Add and configure the following **wedge** `Class.Part` for the elevation between the ground and first floor with a **Size** of `270, 11, 45`, **CFrame.Position** of `-2.5, -0.5, 160`, and a **CFrame.Orientation** of `0, -90, 0`.
+1. Add and configure the following **wedge** part for the **drop in elevation** between the main and outdoor floor with a **Size** of `270, 11, 45`, **CFrame.Position** of `-2.5, -0.5, 160`, and a **CFrame.Orientation** of `0, -90, 0`.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Floor-5.jpg" width="100%"/>
 
-7. Anchor all of these floor parts.
+1. Anchor all of these floor parts.
+
+  </TabItem>
+</Tabs>
 
 ### Perimeter Wall Geometry
 
@@ -232,9 +262,23 @@ To help visualize the geometry of the perimeter walls of the building you are cr
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-Intro.jpg" width="100%"/>
 
-To create the perimeter wall geometry:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the top perimeter walls:
+To create your own perimeter wall geometry:
+
+1. Using **block** parts, create a **perimeter boundary** around your main floor except for the edge that opens to the exterior primary lane. This geometry prevents players from leaving your playable area while allowing them to enter and exit the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralPerimeter-1.jpg" width="100%"/>
+
+1. Anchor these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the perimeter wall geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
+
+1. Add and configure the following **block** parts for the **top** perimeter walls:
 
    <table>
    <thead>
@@ -265,7 +309,7 @@ To create the perimeter wall geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-1.jpg" width="100%"/>
 
-2. Add and configure the following **block** `Class.Part|Parts` for the side perimeter walls:
+1. Add and configure the following **block** parts for the **side** perimeter walls:
 
    <table>
    <thead>
@@ -291,7 +335,7 @@ To create the perimeter wall geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the bottom left perimeter walls:
+1. Add and configure the following **block** parts for the **bottom left** perimeter walls:
 
    <table>
    <thead>
@@ -322,7 +366,7 @@ To create the perimeter wall geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-3.jpg" width="100%"/>
 
-4. Add and configure the following **block** `Class.Part|Parts` for the bottom right perimeter walls:
+1. Add and configure the following **block** parts for the **bottom right** perimeter walls:
 
    <table>
    <thead>
@@ -353,7 +397,10 @@ To create the perimeter wall geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-4.jpg" width="100%"/>
 
-5. Anchor all of these perimeter wall parts.
+1. Anchor all of these perimeter wall parts.
+
+  </TabItem>
+</Tabs>
 
 ### Spawn Zone Geometry
 
@@ -367,9 +414,23 @@ To help visualize the geometry of the spawn zone areas you are creating for the 
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-Intro.jpg" width="100%"/>
 
-To create the spawn zone geometry:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the additional spawn zone walls:
+To create your own spawn zone geometry:
+
+1. Using **block** parts, segment symmetrical sections on the far left and right of the map for each team's **spawn zon**e with two exit points.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralSpawnZone-1.jpg" width="100%"/>
+
+1. Anchor these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the spawn zone geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
+
+1. Add and configure the following **block** parts for the additional **spawn zone walls**:
 
    <table>
    <thead>
@@ -395,7 +456,7 @@ To create the spawn zone geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-1.jpg" width="100%"/>
 
-2. Add and configure the following **block** `Class.Part|Parts` for the left spawn zone's doorways:
+1. Add and configure the following **block** parts for the left spawn zone's **doorways**:
 
    <table>
    <thead>
@@ -436,7 +497,7 @@ To create the spawn zone geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the right spawn zone's doorways:
+1. Add and configure the following **block** parts for the right spawn zone's **doorways**:
 
    <table>
    <thead>
@@ -477,13 +538,16 @@ To create the spawn zone geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-3.jpg" width="100%"/>
 
-4. Anchor all of these spawn zone parts.
+1. Anchor all of these spawn zone parts.
+
+  </TabItem>
+</Tabs>
 
 ### Combat Pockets Geometry
 
 The fourth step in creating the laser tag greybox environment is to create the geometry for combat pockets in the interior of the building. This geometry makes up the majority of the playable areas in the experience because combat pockets arise from the intersections of primary lane and cross lanes, which span the entirety of the building.
 
-The instructions in this section refer to this geometry as three separate combat pockets according to their location on a top-view of the map: the left combat pocket, the middle combat pocket, and the right combat pocket. All three combat pockets include three entrance or exit points at most to refrain from giving users choice overload as they're navigating the space.
+The instructions in this section refer to this geometry as three separate combat pockets according to their location on a top-view of the map: the left combat pocket, the middle combat pocket, and the right combat pocket. Most combat pockets include a maxiumum of three entrance or exit points to refrain from giving users choice overload as they're navigating the space.
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro1.jpg" width="100%"/>
 
@@ -491,9 +555,35 @@ To help visualize geometry of the combat pockets you are creating for the experi
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro2.jpg" width="100%"/>
 
-To create the combat pockets geometry:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left combat pocket.
+To create your own combat pockets geometry:
+
+1. Using **block** parts, create a **left combat pocket** with two exit points that allow players to traverse the middle lane, and one exit point that opens to the interior primary lane. This geometry must have space on either side of the combat pocket to allow for cross lanes, and block player entry from the exterior primary lane.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-1.jpg" width="100%"/>
+
+1. Using **block** parts, create and position a symmetrical copy of this combat pocket near the other team's spawn zone. This geometry represents your **right combat pocket**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralCombatPockets-2.jpg" width="100%"/>
+
+1. Using **block** parts, create a **middle combat pocket** with two exit points that allow players to traverse the middle lane, one exit point that opens to the interior primary lane, and open space along the edge that flows into the exterior primary lane.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralCombatPockets-3.jpg" width="100%"/>
+
+1. **(Optional)** Using **block** parts, create **hallway additions** to the middle combat pocket to break up sight lines across the interior primary lane.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralCombatPockets-4.jpg" width="100%"/>
+
+1. Anchor these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the combat pockets geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
+
+1. Add and configure the following **block** parts for the **left combat pocket**.
 
    <table>
    <thead>
@@ -564,7 +654,7 @@ To create the combat pockets geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-1.jpg" width="100%"/>
 
-2. Add and configure the following **block** `Class.Part|Parts` for the top hallway addition to the middle combat pocket that breaks up sight lines across the interior primary lane:
+1. Add and configure the following **block** parts for the **top hallway addition** to the middle combat pocket that breaks up sight lines across the interior primary lane:
 
    <table>
    <thead>
@@ -625,7 +715,7 @@ To create the combat pockets geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the middle room of the middle combat pocket:
+1. Add and configure the following **block** parts for the **middle room** of the middle combat pocket:
 
    <table>
    <thead>
@@ -681,7 +771,7 @@ To create the combat pockets geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-3.jpg" width="100%"/>
 
-4. Add and configure the following **block** `Class.Part|Parts` for the right combat pocket:
+1. Add and configure the following **block** parts for the **right combat pocket**:
 
    <table>
    <thead>
@@ -752,7 +842,10 @@ To create the combat pockets geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-4.jpg" width="100%"/>
 
-5. Anchor all of these combat pocket parts.
+1. Anchor all of these combat pocket parts.
+
+  </TabItem>
+</Tabs>
 
 ### Exterior Geometry
 
@@ -762,9 +855,23 @@ To help visualize the geometry of the exterior assets you are creating for the e
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-Intro.jpg" width="100%"/>
 
-To build the exterior geometry:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left tower:
+To create your own exterior geometry:
+
+1. Using **block** parts, create symmetrical **obstacles** along the exterior primary lane. For example, the sample greybox environment adds parts to block lines of sight that will later become towers, pillars, and planters.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralExterior-1.jpg" width="100%"/>
+
+1. Anchor these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the exterior geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
+
+1. Add and configure the following **block** parts for the **left tower**:
 
    <table>
    <thead>
@@ -795,7 +902,7 @@ To build the exterior geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-1.jpg" width="100%"/>
 
-2. Add and configure the following **block** `Class.Part|Parts` for the right tower:
+1. Add and configure the following **block** parts for the **right tower**:
 
    <table>
    <thead>
@@ -826,7 +933,7 @@ To build the exterior geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the obstacles to the left of the towers:
+1. Add and configure the following **block** parts for the **obstacles** to the left of the towers:
 
    <table>
    <thead>
@@ -857,7 +964,7 @@ To build the exterior geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-3.jpg" width="100%"/>
 
-4. Add and configure the following **block** `Class.Part|Parts` for the obstacles to the right of the towers:
+1. Add and configure the following **block** parts for the **obstacles** to the right of the towers:
 
    <table>
    <thead>
@@ -888,7 +995,7 @@ To build the exterior geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-4.jpg" width="100%"/>
 
-5. Add and configure the following **block** `Class.Part|Parts` for the obstacles between the towers:
+1. Add and configure the following **block** parts for the **obstacles** between the towers:
 
    <table>
    <thead>
@@ -919,7 +1026,10 @@ To build the exterior geometry:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-5.jpg" width="100%"/>
 
-6. Anchor all of these tower parts.
+1. Anchor all of these tower parts.
+
+  </TabItem>
+</Tabs>
 
 ## Apply Placeholder Materials
 

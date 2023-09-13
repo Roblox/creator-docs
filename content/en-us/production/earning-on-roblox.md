@@ -21,20 +21,20 @@ This page provides information about different ways to earn on Roblox and how to
 
 ## Economy Powered by Creators
 
-We are building one of the world's largest immersive platforms with over 66M global daily active users (DAUs) in 15 languages across 180 countries, available across platforms including mobile, desktop, consoles, and (soon) VR headsets. In 2022, more than 50% of our daily active users were over the age of 13 and users over the age of 17 accounted for 38% of our daily active users. In 2022, our community visited over 15 million experiences, and in the first quarter of 2023 alone, users spent 14.5 billion hours in experiences.
+We are building one of the world's largest immersive platforms with 65.5M global daily active users (DAUs) in 15 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2022, more than 50% of our daily active users were over the age of 13 and users over the age of 17 accounted for 38% of our daily active users. In 2022, our community visited over 15 million experiences, and in the second quarter of 2023 alone, users spent 14 billion hours on our platform.
 
 <figure>
 <img src="../assets/monetization/earning/Economy-Stats.png" width="800" alt="Roblox economy stats" />
-<figcaption>From left to right: (1) As of March&nbsp;31,&nbsp;2023; (2) Based on the year ended December&nbsp;31,&nbsp;2022 (3) Represents number of unique creators earning Robux during March&nbsp;2023; (4) $1.1B developer earnings by 11,000 creators registered for our [Developer Exchange](https://create.roblox.com/dashboard/devex) program during 2021 and 2022, up 164% from the previous two-year period.</figcaption>
+<figcaption>From left to right: (1) As of June&nbsp;30,&nbsp;2023; (2) Based on the year ended December&nbsp;31,&nbsp;2022 (3) Represents number of unique creators earning Robux during June&nbsp;2023; (4) $1.1B developer earnings by 11,000 creators registered for our [Developer Exchange](https://create.roblox.com/dashboard/devex) program during 2021 and 2022, up 164% from the previous two-year period.</figcaption>
 </figure>
 
 <h4>We are one of the biggest virtual economies&sup1;</h4>
 
-In 2022 alone, we had more than 3.2 billion virtual transactions, and another 900 million during the first quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the quarter ending March&nbsp;2023, over 4.5M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.
+In 2022 alone, we had more than 3.2 billion virtual transactions, and another 875 million during the second quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the quarter ending June&nbsp;2023, over 4.8M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.
 
 <h4>We exist to serve and not compete with our community</h4>
 
-Because Roblox is a platform, we do not create experiences that compete with our community for earnings. Instead, we're always searching for new ways to increase creators' earnings. In 2021 and 2022, our creator community earned $538 million and $624 million, respectively.&sup3; This combined figure of $1.1 billion is up 164% over the previous two years, and we anticipate that number will be approximately $800 million in 2023 alone.
+Because Roblox is a platform, we do not create experiences that compete with our community for earnings. Instead, we're always searching for new ways to increase creators' earnings. In 2021 and 2022, our creator community earned $538 million and $624 million, respectively.&sup3; This combined figure of $1.1 billion is up 164% over the previous two years.
 
 <h4>As a result, creators can focus on creating</h4>
 
@@ -61,7 +61,7 @@ Unlike other platforms where you wait days or weeks for approvals, you can modif
 
 <h4>Platform-driven discovery and rapid viral growth</h4>
 
-Our platform, with more than 66 million daily active users (DAUs) as of Q1&nbsp;2023 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [on&#8209;platform&nbsp;ads](../production/promotion/advertising-on-roblox.md).
+Our platform, with 65.5 million daily active users (DAUs) as of Q2&nbsp;2023 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [on&#8209;platform&nbsp;ads](../production/promotion/advertising-on-roblox.md).
 
 <h4>Rapid iteration and scaling with no upfront costs</h4>
 
@@ -100,7 +100,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#00a2ff;",fontSize:"120%;",color:"white;"}}>
-		<b>4.8%</b>
+		<b>4.6%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -122,7 +122,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#00a2ff;",fontSize:"120%;",color:"white;"}}>
-		<b>24.2%</b>
+		<b>24.3%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -131,7 +131,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#004F80;",fontSize:"120%;",color:"white;"}}>
-		<b>17.0%</b>
+		<b>18.0%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -140,7 +140,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#004F80;",fontSize:"120%;",color:"white;"}}>
-		<b>7.1%</b>
+		<b>6.2%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -151,7 +151,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <figure>
-<figcaption>\* 29% returned directly to the developers of experiences cents per dollar spent in experience assumes the full amount of Robux earned are exchanged through the DevEx program, and not spent on the platform. Figures are as of March&nbsp;31,&nbsp;2023.</figcaption>
+<figcaption>\* 29% returned directly to the developers of experiences cents per dollar spent in experience assumes the full amount of Robux earned are exchanged through the DevEx program, and not spent on the platform. Figures are as of June&nbsp;30,&nbsp;2023.</figcaption>
 </figure>
 
 ### Experience Monetization
@@ -161,7 +161,7 @@ Once you've developed an experience, you can earn through the following methods:
 #### In-Experience Purchases
 
 - [Developer Products](../production/monetization/developer-products.md) which are items or abilities that a user can purchase, such as in-experience currency.
-- [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power-up.
+- [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private Servers](../production/monetization/private-servers.md) for users to play with just friends (subscription-based access fees).
 
 #### Engagement-Based Payouts

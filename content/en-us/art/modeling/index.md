@@ -100,7 +100,7 @@ Whether you are creating assets for sale on the Marketplace, or for a specific u
    3. [Character Specifications](../../art/avatar/specifications.md)
    4. [Marketplace Policy](../../art/marketplace/marketplace-policy.md)
 2. **Import into Studio** - Import the custom mesh or model into Studio using the [3D Importer](../../art/modeling/3d-importer.md).
-3. **Test and Create** - Test the asset in your experience to ensure compatibility with your experience and environment. You may require redesigning your asset and additional reiteration.
+3. **Test and Create** - Test the asset in your experience to ensure compatibility with your experience and environment. You may need to redesign your asset and go through additional iterations.
 4. **Publish and Sell** - If you are part of the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your custom asset conforms to the [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can [publish your item](../../art/marketplace/publishing-to-marketplace.md) for others to purchase and receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md) for each sale of your asset.
 
 ## Resources

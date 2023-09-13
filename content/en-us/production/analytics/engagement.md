@@ -3,6 +3,10 @@ title: Engagement
 description: Explains how to improve engagement metrics for your experience.
 ---
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 **Engagement** measures how engaging your experience is for users.
 
 ## Viewing Engagement Metrics
@@ -29,7 +33,7 @@ Usually, the friction of joining and leaving an experience is very low on Roblox
 
 3. **Remove unnecessary barriers to social interaction**: Many successful experiences on Roblox highlight socializing with friends and other users a core part of their design. Try to design your experience to support group play and social interaction where possible.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BkQL2_DY9Mc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/BkQL2_DY9Mc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Give Users a Reason to Keep Coming Back
 

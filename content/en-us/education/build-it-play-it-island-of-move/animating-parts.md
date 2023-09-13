@@ -285,7 +285,7 @@ local function activateAction()
 	tweenObject.Completed:Connect(function()
 		inTween = false
 		-- Increment hit count
-		hitCount = hitCount + 1
+		hitCount += 1
 		-- After 3 hits, destroy the object
 		if hitCount == 3 then
 			partToTween:Destroy()

@@ -11,9 +11,9 @@ description: Event Sequencer is a powerful framework for building live, cross-se
 
 This framework has been battle tested in Roblox events like the [Twenty One Pilots](https://www.youtube.com/watch?v=0fAhhoXK12o) and [24kGoldn](https://www.youtube.com/watch?v=UfzqGkfRKr4) concerts, as well as many highly visited experiences.
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fAhhoXK12o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>&nbsp;</p>
+</figure>
 
 To see **EventSequencer** in action within an editable place, check out the [Concert](https://www.roblox.com/games/10275826693/Concert) template in Roblox Studio. This template is a comprehensive starting point for developers to create events/concerts and familiarize themselves with the various features and components involved.
 
@@ -27,7 +27,7 @@ To use the **EventSequencer** framework in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -67,7 +67,7 @@ This mode is best for existing experiences, as it preserves the design and layou
 
 To enable inline mode:
 
-1. Inside the **EventSequencer** folder that you placed in **ServerScriptService**, drill down to and select the **Inline** value inside the **ReplicatedStorage** folder.
+1. Inside the **EventSequencer** model that you placed in **ServerScriptService**, drill down and select the **Inline** value inside the **ReplicatedStorage** folder.
 
    <img src="../../assets/developer-modules/event-sequencer/Inline-BoolValue.png" width="320" />
 
@@ -97,10 +97,14 @@ To get started quickly, you can find an empty scene inside the module's main fol
 
 Each scene should have a **time length**, in seconds, defining its duration &mdash; just like a movie or concert has a set duration. Time length is defined as a numeric [attribute](../../studio/instance-attributes.md) on the scene's folder named **TimeLength** which you can set directly in Studio or programmatically through `Class.Instance:SetAttribute()`.
 
-<GridContainer numColumns="2">
-  <img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" />
-  <img src="../../assets/developer-modules/event-sequencer/Scene-Attribute-TimeLength.png" />
-</GridContainer>
+<Grid container spacing={3}>
+<Grid item>
+<img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" width="320" />
+</Grid>
+<Grid item>
+<img src="../../assets/developer-modules/event-sequencer/Scene-Attribute-TimeLength.png" width="320" />
+</Grid>
+</Grid>
 
 #### Environment
 
@@ -163,18 +167,15 @@ A scene's **schema** defines what happens at what point in the scene's timeline.
 
 Schema [lifecycle hooks](#schema-lifecycle-hooks) let you manage when scene operations occur. A scene in production will typically run in the most simple flow:
 
-<Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip
-label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
 [OnRun](#onrun) may be interrupted when seeking:
 
-<Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;<Chip label='seek' color='secondary'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;<Chip label='seek' color='secondary'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&hellip;&nbsp;**seek**&nbsp;&rarr; [OnRun](#onrun)&hellip;&nbsp;**seek**&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
-<p>All three hooks can also repeat if the scene is replayed:</p>
+All three hooks can also repeat if the scene is replayed:
 
-<Chip label='OnSetup' />&nbsp;&rarr; <Chip label='OnRun' />&nbsp;&rarr; <Chip
-label='OnEndScene' />&nbsp;<Chip label='replay' color='secondary'/>&nbsp;&rarr; <Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip
-label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)&hellip;&nbsp;**replay**&nbsp;&rarr; [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
 #### Configurations
 
@@ -214,18 +215,18 @@ width="100%" />
 
    <table>
    <tbody>
-	 <tr>
+    <tr>
    <td>`placeIDs`</td>
    <td>Comma-delimited list of `Class.DataModel.PlaceId|PlaceId` values to support seeking within.</td>
-	 </tr>
-	 <tr>
+    </tr>
+    <tr>
    <td>`userIDs`</td>
    <td>Comma-delimited list of `Class.Player.UserId|UserIds` for those who can seek within the supported places.</td>
-	 </tr>
-	 <tr>
+    </tr>
+    <tr>
    <td>`groups`</td>
    <td>Comma-delimited list of tables, each containing a [group](../../projects/groups.md) ID and the minimum rank of that group's members who can seek within the supported places.</td>
-	 </tr>
+    </tr>
    </tbody>
    </table>
 
@@ -241,7 +242,7 @@ To install the plugin:
 
 1. From Studio's **View** menu, open the **Toolbox**.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
 2. With the **Marketplace** tab selected, select **Plugins** from the dropdown menu.
 
@@ -249,15 +250,13 @@ To install the plugin:
 
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
-   <img src="../../assets/developer-modules/event-sequencer/Toolbox-Scene-Manager-Plugin.png" width="360" />
+   <img src="../../assets/studio/toolbox/Marketplace-Scene-Manager-Plugin.png" width="360" />
 
 4. Click the plugin's icon to view its details and then click the blue **Install** button.
 
    <img src="../../assets/studio/toolbox/Install-Button.png" width="320" />
 
 5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
-
-   <img src="../../assets/developer-modules/event-sequencer/Plugins-Tab-Scene-Manager-Plugin.png" width="640" />
 
 ### Loading and Unloading Scenes
 
@@ -310,18 +309,21 @@ The top-level `Class.Lighting` service stores all of a place's lighting properti
 
    <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Save-Lighting.png" width="294" />
 
-1. Select and expand that scene's **Environment**/**Lighting** folder and you'll see the same lighting properties as [attributes](../../studio/instance-attributes.md) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
-
-   <GridContainer numColumns="2">
-     <figure>
-       <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Instances.png" />
-       <figcaption>Cloned instances</figcaption>
-     </figure>
-     <figure>
-       <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Attributes.png" />
-       <figcaption>Saved attributes</figcaption>
-     </figure>
-   </GridContainer>
+1. Select and expand that scene's **Environment**/**Lighting** configuration and you'll see the same lighting properties as [attributes](../../studio/instance-attributes.md) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
+   <Grid container spacing={3}>
+   <Grid item>
+    <figure>
+   <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Instances.png" width="320" />
+   <figcaption>Cloned instances</figcaption>
+    </figure>
+   </Grid>
+   <Grid item>
+   <figure>
+   <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Attributes.png" width="320" />
+   <figcaption>Saved attributes</figcaption>
+    </figure>
+   </Grid>
+   </Grid>
 
    Once lighting properties and children are saved for a scene, you can quickly load them back into the top-level `Class.Lighting` service by clicking **Load Lighting** from the plugin window.
 
@@ -365,7 +367,7 @@ If a scene contains absolutely no terrain, you should still click **Save Terrain
 The **OnSetup** lifecycle hook is intended for initializing assets and variables that will be referenced in [OnRun](#onrun) or [OnEndScene](#onendscene), setting up `Datatype.RBXScriptSignal:Connect()|connections` that are intended to last for the duration of the scene, etc. This hook receives the `timePositionObject` parameter which lets you read the current time at setup.
 
 <Alert severity="warning">
-It's recommended that you do **not** call `wait` or `Library.task.wait()` within **OnSetup**, as it will delay the [OnRun](#onrun) start while the scene's timer continues to count up.
+It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnSetup**, as it will delay the [OnRun](#onrun) start while the scene's timer continues to count up.
 </Alert>
 
 ```lua title='Client Schema' highlight='11,21'
@@ -421,7 +423,7 @@ end
 **OnRun** is the main operational lifecycle hook within a [schema](#scene-schemas). It should contain all timed [configurations](#schema-configurations) for the scene, from playing [audio](#audio) or an [animation](#animate) to [scheduling an event](#schedule) like a fireworks display.
 
 <Alert severity="warning">
-It's recommended that you do **not** call `wait` or `Library.task.wait()` within **OnRun**, as it will delay the scene's orchestration while the scene's timer continues to count up.
+It's recommended that you do **not** call `Global.RobloxGlobals.wait()` or `Library.task.wait()` within **OnRun**, as it will delay the scene's orchestration while the scene's timer continues to count up.
 </Alert>
 
 ```lua title='Client Schema' highlight='1,14'

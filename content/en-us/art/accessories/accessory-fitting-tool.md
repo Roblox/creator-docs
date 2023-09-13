@@ -8,20 +8,16 @@ The **Accessory Fitting Tool (AFT)** is a built-in Studio tool that allows you t
 
 The AFT automatically handles the conversion of the custom `Class.Model` or `Class.MeshPart` based on the user menu selections, allowing you to create **layerable clothing accessories** or **rigid accessories**. After generating your accessory, the AFT creates the correct `Class.Accessory` object hierarchy with any updated fit edits, sets the appropriate `AccessoryType` property, and generates any required body attachment points.
 
-  <Tabs>
-  <TabItem label="Layered Accessories">
+<GridContainer numColumns="2">
       <figure>
       <img src="../../assets/accessories/accessory-fitting-tool/Layered-Example.png" />
-      <figcaption>Test your layered accessories with different combinations of references and apply minor cage editing adjustments for clothing accessories when required.</figcaption>
+      <figcaption>Test and edit the cages of your layered clothing assets.</figcaption>
       </figure>
-    </TabItem>
-  <TabItem label="Rigid Accessories">
       <figure>
       <img src="../../assets/accessories/accessory-fitting-tool/Rigid-Example.png" />
-      <figcaption>Test your rigid accessories with different combinations of references and apply position and orientation changes when required.</figcaption>
+      <figcaption>Test and edit the orientation and placement of your rigid assets.</figcaption>
       </figure>
-  </TabItem>
-  </Tabs>
+</GridContainer>
 
 <Alert severity = 'warning'>
 If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../art/marketplace/marketplace-policy.md).
@@ -252,11 +248,11 @@ When fitting rigid accessories, a bounding box appears around the mannequin indi
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/accessories/accessory-fitting-tool/Bounding-Box-Example-1.png" />
-    <figcaption>Test your accessories with different bodies, clothing items, and animations.</figcaption>
+    <figcaption>Adjust your rigid accessory fit within the bounding box.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/accessories/accessory-fitting-tool/Bounding-Box-Example-2.png" />
-    <figcaption>Apply minor cage editing adjustments for clothing accessories.</figcaption>
+    <figcaption>If the accessory is outside the appropriate space, the bounding box turns red.</figcaption>
   </figure>
 </GridContainer>
 
@@ -264,19 +260,28 @@ When fitting rigid accessories, a bounding box appears around the mannequin indi
 
 You can create the accessory at any time. The tool applies any fit changes and generates the appropriate Accessory instance in the workspace depending on the type of accessory selected and any configurations applied.
 
-Whenever you are ready to create the accessory, click the Generate button to create the Accessories with the following hierarchies:
+When you are ready to generate your accessory:
+
+1. If you are creating a **rigid accessory**, use the dropdown and select **Generate Legacy Accessory**.
+2. If you are creating a **layered accessory**, select **Generate MeshPart Accessory**.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/accessories/accessory-fitting-tool/LC-Hierarchy.png" />
-    <figcaption>Clothing accessory hierarchy</figcaption>
+    <figcaption>Hierarchy generated for layered clothing.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/accessories/accessory-fitting-tool/Rigid-Hierarchy.png" />
-    <figcaption>Rigid accessory hierarchy</figcaption>
+    <figcaption>Hierarchy generated for rigid accessories.</figcaption>
   </figure>
 </GridContainer>
 
 <Alert severity = 'warning'>
 Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). See [Marketplace requirements](../../art/marketplace/marketplace-policy.md) for additional information.
 </Alert>
+
+With an accessory successfully created, you can now try the following:
+
+- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance#humanoiddescription).
+- Save the accessory as an [avatar asset](../../../projects/assets.md#for-avatars) for use in an experience later.
+- If you are part of the UGC Program, you can [upload your asset](../../../art/marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.

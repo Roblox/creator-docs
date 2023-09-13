@@ -18,7 +18,7 @@ To open the Creator Marketplace:
 1. Navigate to the **View** tab of the menu bar in Studio.
 2. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -26,12 +26,12 @@ To open the Creator Marketplace:
 
 With millions of assets available, it's helpful to narrow the search results to find exactly what you are looking for. To find a specific asset:
 
-1. In the top-left corner within the **Marketplace** tab, select the filter dropdown and choose from the following asset filter categories: **Models**, **Images**, **Meshes**, **Audio**, **Fonts**, **Videos**, and **Plugins**.
+1. In the top-left corner within the **Marketplace** tab, select the filter dropdown and choose an asset filter category.
 
 2. **(Optional)** In the top-right corner, select the filter icon. The **All Views** and **Creator** filter display.
 
    1. To view an individual creator's assets, enter a specific creator's username within the **Search for users** field.
-   1. Click the **Apply** button.
+   2. Click the **Apply** button.
 
 3. In the **Search** field, type what you want to find and select the search icon.
 

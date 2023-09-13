@@ -60,7 +60,7 @@ When the creator sees others using those specific original design elements in th
 </Grid>
 </figure>
 
-But just because the original creator can request the removal of those three Trojan helmets does not mean that they can remove *all* Trojan helmets from the platform. For example, the helmet below is likely not infringing because it does not include any of the creator's unique elements:
+But just because the original creator can request the removal of those three Trojan helmets does not mean that they can remove _all_ Trojan helmets from the platform. For example, the helmet below is likely not infringing because it does not include any of the creator's unique elements:
 
 <figure>
 <Grid container numColumns="2" spacing={3} justifyContent={"center"}>
@@ -79,7 +79,7 @@ Another way to strengthen your IP protection is incorporating your own unique tr
 To protect the creativity of others, the Roblox [Terms of Use](https://www.roblox.com/catalog/10546552/Trojan-Infantry-Helmet) states that **any content you create must respect the intellectual property rights of others – both on and off our platform**.
 
 - This means you should not upload content you do not own or did not get the owner's permission to use.
-- Infringing on someone's intellectual property is not only a violation of Roblox's Terms of Use but it's also a violation of the law.
+- Infringing on someone's intellectual property is not only a violation of Roblox's Terms of Use, but it's also a violation of the law.
 
 ## Roblox Protecting Your IP
 
@@ -87,7 +87,7 @@ Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.c
 
 - Roblox must adopt and reasonably implement a policy providing for the termination in appropriate circumstances of users who are repeat copyright infringers.
 - Roblox investigates each report and takes appropriate action, which may include removing or disabling the infringing content, and permanently terminating the accounts of users who have repeatedly infringed on the IP of others.
-- If the filing is compliant with legal requirements, and the infringing item is taken down, the infringing creator will lose any [upfront payment(s)](marketplace-fees-and-commissions.md#upfront-payment) from publishing Limiteds and Robux earned from item sale(s).
+- If the filing is compliant with legal requirements and the infringing item is taken down, the infringing creator will lose any [upfront payment(s)](marketplace-fees-and-commissions.md#upfront-payment) from publishing Limiteds, as well as Robux earned from sales of the item.
 
 Only the IP rights holder knows what rights they have and who they have given permission to use their creations. Because of that, **we rely on rights holders to let us know what they believe infringes their rights by filing a takedown report**.
 
@@ -99,7 +99,7 @@ If you find content on Roblox that you believe infringes your IP rights, please 
 
 ## Roblox-created IP
 
-What we shared above equally applies to items that we created as well. We've found that the majority of complaints we see about copies of Roblox-created items do not in fact *infringe on our IP*. We do enforce our own rights when items infringe on our IP, but IP protections do not necessarily extend to every idea presented in a work, but rather the original and unique elements of a work.
+What we shared above equally applies to items that we created as well. We've found that the majority of complaints we see about copies of Roblox-created items do not in fact _infringe on our IP_. We do enforce our own rights when items infringe on our IP, but IP protections do not necessarily extend to every idea presented in a work, but rather the original and unique elements of a work.
 
 For example, Roblox may publish a virtual item that's a replica of an ordinary, common item in the real world where countless versions (both physical and digital) already exist from many different makers. This might be an unbranded baseball cap or an [orange traffic cone](https://www.roblox.com/catalog/1082932/Traffic-Cone). With so few distinguishing elements of the Roblox-created item, even items that appear similar to our creations may not infringe on our IP rights.
 

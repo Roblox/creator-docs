@@ -38,3 +38,15 @@ You can define multiline block comments with double hyphens and double brackets 
 local function stopCosmicMoonRay()
 end
 ```
+
+## TODO Comments
+
+Roblox Studio supports special `TODO` comments. Studio bolds any text following `TODO` (until broken by a space):
+
+```lua
+-- TODO: Finish the function below so that it actually does what its name implies.
+local function stopWorldFromBlowingUp()
+end
+```
+
+Use `TODO` comments to keep track of and communicate issues within your code.
