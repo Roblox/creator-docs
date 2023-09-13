@@ -8,7 +8,7 @@ With your clothing model completed, you can export the file as a `.fbx` and impo
 
 <center>
 <figure>
-<img src="../../../assets/art/accessories/creating/Exporting-Clothing-in-Studio.png" width = "60%"/>
+<img src="../../../assets/art/accessories/creating/Exporting-Clothing-in-Studio.png" width="60%" />
 <figcaption>
 Import your clothing into Studio as a `Class.Model` before converting to a `Class.Accessory`
 </figcaption>
@@ -81,9 +81,8 @@ To generate the accessory object:
   </figure>
 </GridContainer>
 
-<Alert severity='success'>
 Congratulations, you've completed your clothing tutorial. With this accessory, you can:
-- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance#humanoiddescription).
-- Save the accessory as an [avatar asset](../../../projects/assets.md#for-avatars) for use in an experience later.
+
+- Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#humanoiddescription).
+- Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in an experience later.
 - If you are part of the UGC Program, you can [upload your asset](../../../art/marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
-</Alert>
