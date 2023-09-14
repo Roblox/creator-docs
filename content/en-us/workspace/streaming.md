@@ -380,7 +380,7 @@ In some cases, it's necessary to detect when an object streams in or out and rea
    local CollectionService = game:GetService("CollectionService")
 
    local tagName = "FlickerLightSource"
-   local random = Random.new(os.clock())
+   local random = Random.new()
    local flickerSources = {}
 
    -- Detect currently and new tagged parts streaming in or out
