@@ -6,15 +6,6 @@ prev: /art/accessories/creating/caging
 
 With your clothing model completed, you can export the file as a `.fbx` and import it into Studio.
 
-<center>
-<figure>
-<img src="../../../assets/art/accessories/creating/Exporting-Clothing-in-Studio.png" width="60%" />
-<figcaption>
-Import your clothing into Studio as a `Class.Model` before converting to a `Class.Accessory`
-</figcaption>
-</figure>
-</center>
-
 This section covers the following processes:
 
 1. Exporting the model from Blender.
@@ -54,8 +45,7 @@ With the `.fbx` saved locally, you can now import the file into Studio:
 3. Select your exported `.fbx` and verify any possible warnings or errors.
    1. Warnings or errors related to the clothing mesh may require returning to Blender to resolve.
 4. Select **Import** to add the model to your workspace.
-
-<img src="../../../assets/art/accessories/creating/Exporting-Clothing-In-Studio.png" />
+   <img src="../../../assets/art/accessories/creating/Exporting-Clothing-In-Studio.png" />
 
 ## Creating an Accessory
 

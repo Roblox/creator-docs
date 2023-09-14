@@ -217,7 +217,7 @@ const processHttpLink = ({
     const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
     const allowedListFilePath =
       allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
-    const message = `link ${link.ref} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
+    const message = `page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
 
     // Log messages
     console.log(shortIntro + message);
@@ -225,9 +225,9 @@ const processHttpLink = ({
 
     // Post messages
     if (config.postPullRequestComments) {
-      const body = `${Emoji.NoEntry} The link ${
-        link.ref
-      } isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
+      const body = `${
+        Emoji.NoEntry
+      } The page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
         config.repository
       }/blob/${config.baseBranch.replace(
         'origin/',
