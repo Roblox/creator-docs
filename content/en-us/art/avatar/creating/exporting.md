@@ -2,7 +2,7 @@
 title: Exporting
 comments:
 description: Export your character model from Blender using the correct settings and processes.
-previous: /art/avatar/creating/cleanup
+prev: /art/avatar/creating/cleanup
 ---
 
 <Alert severity = 'warning'>

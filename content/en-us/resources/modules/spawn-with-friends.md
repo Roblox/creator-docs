@@ -20,7 +20,7 @@ To use the **SpawnWithFriends** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -100,27 +100,27 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`teleportToFriendOnRespawn`</td>
 		<td>If set to `false`, teleportation to a friend will only happen manually via [teleportToRandomFriend](#teleporttorandomfriend).</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`teleportDistance`</td>
 		<td>How far away players should spawn from each other, measured in studs.</td>
-		<td>`5`</td>
+		<td>5</td>
 	</tr>
 	<tr>
 		<td>`maxCharacterVelocity`</td>
 		<td>Characters moving faster than this value won't be picked as teleportation candidates, for instance those in moving vehicles.</td>
-		<td>`48`</td>
+		<td>48</td>
 	</tr>
 	<tr>
 		<td>`bypassFriendshipCheck`</td>
 		<td>If set to true, **all** players will be candidates for teleportation, not just friends.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 	<tr>
 		<td>`showLogs`</td>
 		<td>Whether or not to display log messages in the output.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 </tbody>
 </table>

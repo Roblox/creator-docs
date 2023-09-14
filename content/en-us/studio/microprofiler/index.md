@@ -17,7 +17,7 @@ The orange bars indicate the processing time each frame is taking. They should g
 <img src="../../assets/optimization/microprofiler/2MicroProfiler-Frames-Spike.jpeg"
    width="50%" />
 
-To pause the recording of frames, press Ctrl+P. While paused, a timeline appears over the game view, and you can navigate through frames by clicking on the graph, or dragging on the interface. Scrolling will zoom on the timeline. You'll see colorful labels describing different tasks being performed; labels that appear directly underneath another label indicate that a task is performed during another task.
+To pause the recording of frames, press `Ctrl+P` or click **Pause** along the top bar. While paused, a timeline appears over the game view, and you can navigate through frames by clicking or dragging on the graph. Scrolling zooms on the timeline. Colorful labels describe different tasks being performed; labels that appear directly underneath another label indicate that a task is performed during another task.
 
 <img src="../../assets/optimization/microprofiler/3MicroProfiler-Timeline.jpeg"
    width="50%" />
