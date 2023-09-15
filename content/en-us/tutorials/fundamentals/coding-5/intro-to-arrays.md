@@ -205,7 +205,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
       if dialogueIndex == #dialogueArray then
         dialogueIndex = 1
       else
-        dialogueIndex +=
+        dialogueIndex += 1
       end
     end
    ```
