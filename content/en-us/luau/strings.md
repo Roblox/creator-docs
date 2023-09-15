@@ -32,7 +32,7 @@ print(string1)
 --> Hello 'world'!
 ```
 
-If necessary, you can nest multiple brackets inside a string using the same quantity of equals sign in both the beginning and the ending bracket.
+If necessary, you can nest multiple brackets inside a string using the same number of equal signs in both the beginning and ending bracket:
 ```lua
 local string1 = [=[Hello
 [[world!]]
