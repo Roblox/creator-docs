@@ -3,7 +3,7 @@ title: Modeling
 comments:
 description: Use Blender to sculpt a template character model to create a unique avatar.
 next: /art/avatar/creating/texturing
-previous: /art/avatar/creating/
+prev: /art/avatar/creating/
 ---
 
 Modeling, sometimes known as **sculpting**, is the process of shaping the geometry of your model or mesh. This guide covers important concepts and tips you should review before creating your own unique character shape.

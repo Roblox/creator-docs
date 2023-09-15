@@ -166,7 +166,7 @@ You can display any string in the Output using `print()`; you can even print mul
 local firstAnimal = "porcupines"
 local secondAnimal = "dolphins"
 
-print("I like " .. firstAnimal " and " .. secondAnimal )
+print("I like " .. firstAnimal .. " and " .. secondAnimal)
 ```
 
 Play around with printing different combinations of strings.

@@ -128,22 +128,42 @@ Roblox automatically retains saved versions of each place for version control an
 
 1. Locate and select the version to revert to, then click the **Open** button to launch a new Studio session for the selected version.
 
-## Restarting Servers
+## Updating Experiences
 
-When you make updates to a place that you want users to immediately be aware of, it's recommended to restart all servers, as your changes might not affect servers currently running your experience.
+After you publish an updated version of an experience to Roblox, players aren't immediately removed from the old version of the experience. Instead, you have a few options for how quickly you transition players to the new version. All options have advantages and are appropriate in certain situations.
 
-<Alert severity="warning">
-You should restart servers only when necessary, such as upon publishing a significant update, as doing so will instantly kick all players from the experience and may discourage them from rejoining afterwards.
+The first option is to do nothing. If you take no action, players transition to the new version of the experience as the servers running the old version eventually empty and shut down. This option is nondisruptive, but your player base might be playing different versions of the experience for a prolonged period of time. If you recently published a major update, having players on the old version can be undesirable. This approach is best for minor updates.
+
+### Restarting Servers for Updates
+
+The **Restart Servers for Updates** option is the best choice for most updates. When you choose this option, Roblox performs the following actions:
+
+- Stops matchmaking to existing servers.
+- Starts replacement servers.
+- Shuts down existing servers as their replacements become ready.
+- Prompts players to rejoin the new version of the experience. If they choose to rejoin, all players on an existing server connect to the same replacement server.
+
+Depending on the number of servers to replace, this process takes between 1-6 minutes. Most experiences update in less than one minute.
+
+To restart all servers for updates:
+
+1. Navigate to the [Creator Dashboard][1].
+1. On your experience thumbnail, click **...** and **Restart Servers for Updates**.
+
+### Shutting Down All Servers
+
+The **Shut Down All Servers** option immediately shuts down all servers and removes players from the experience. This option is highly disruptive: if players rejoin the experience, matchmaking does not keep them together. As such, **Shut Down All Servers** is best for after you've fixed a game-breaking bug or other situations in which you don't want players on the old version for even a short duration.
+
+<Alert severity="info">
+A comparable option is to make your experience private, which shuts down its servers just as quickly.
 </Alert>
 
-To restart all servers:
+To shut down all servers:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click the <span style={{fontWeight:"800"}}>&ctdot;</span> in the corner of the experience's thumbnail and select **Shut Down All Servers**.
+1. Navigate to the [Creator Dashboard][1].
+1. On your experience thumbnail, click **...** and **Shut Down All Servers**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Shutdown-Servers.png" width="494" />
-
-1. Confirm shutdown by clicking the **OK** button.
+Alternatively, select **File** > **Game Settings** > **Other** in Roblox Studio. Then click **Shutdown**.
 
 ## Metadata Best Practices
 
@@ -224,3 +244,5 @@ Open your own <u>restaurant</u>, make delicious <u>food</u>, get lots of <u>cust
 <Alert severity="error">
 Play our fun granny obby game. Obby obby obby obby obby obby obby adopt me bloxburg arsenal ninja legends parkour tycoon battle disaster survival super hero simulator run jump gun rpg pokemon wild west space alien piggy baldi granny murder mystery prison life jail break mario zelda dungeon quest.
 </Alert>
+
+[1]: https://create.roblox.com/dashboard/creations
