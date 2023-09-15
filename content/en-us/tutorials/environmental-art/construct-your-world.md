@@ -2132,7 +2132,7 @@ The final exterior assets you can convert for the outdoor space are the eight pl
 
 To apply your asset library to the left-most planter:
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left-most planter:
+1. Add and configure the following **block** parts for the left-most planter:
 
    <table>
    <thead>
@@ -2179,7 +2179,7 @@ To apply your asset library to the left-most planter:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Planters-6.jpg" width="100%"/>
 
-7. Add and configure the following **block** `Class.Part|Parts` for the dirt and edging of the planter:
+7. Add and configure the following **block** parts for the dirt and edging of the planter:
 
    <table>
    <thead>
@@ -2232,7 +2232,7 @@ To apply your asset library to the left-most planter:
 
 9. Anchor all of these parts and foliage assets.
 
-Now that you know how to use the solid modeling tools, you can experiment in creating types of planters with different exteriors, materials, plant variety, and trim pieces. For example, the other variations of planters within the final sample laser tag environment either make an 'L' shape, or they layer **block** `Class.Part|Parts` and white trim together to provide higher cover in the middle of the map.
+Now that you know how to use the solid modeling tools, you can experiment in creating types of planters with different exteriors, materials, plant variety, and trim pieces. For example, the other variations of planters within the final sample laser tag environment either make an 'L' shape, or they layer **block** parts and white trim together to provide higher cover in the middle of the map.
 
 <GridContainer numColumns="2">
   <figure>
@@ -3608,7 +3608,45 @@ Using the [Terrain Editor](../../parts/terrain.md), you can quickly generate and
     Sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own experience, it's normal and expected for your environment to look and feel different from the sample laser tag environment.
 </Alert>
 
-To add terrain:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own terrain to the outdoor area:
+
+1. Open the **Terrain Editor**.
+
+   1. In the menu bar, navigate to the **Model** tab.
+   1. Click the **Editor** icon.
+
+   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="100%" alt="Terrain Editor indicated in Home tab" />
+
+1. Navigate to the **Edit** tab, then click the **Draw** button.
+1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map. For example, the sample starts this process with the settings in the following image.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-3.jpg" width="40%"/>
+
+1. In the **Materials Settings** section, select a material for the **unplayable area**, such as water or cracked lava, then in the viewport, draw where you want your playable area to end. This material communicates where the map ends for the outdoor space.
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-4.mp4" width="100%"></video>
+
+1. Navigate back to the **Materials Settings** section, select a material for the **playable area**, such as grass, pavement, or wood planks, then in the viewport, draw where you want your playable area to start. This material communicates where the map starts for the outdoor space
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-6.mp4" width="100%"></video>
+
+1. Navigate back to the **Terrain Editor**, then select the **Paint** tool.
+1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map, and select a new material.
+1. In the viewport, draw along the exterior lane. This material communicates the primary path players can take as they are navigating the outdoor space.
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-9.mp4" width="100%"></video>
+
+1. **(Optiona)** Add and configure any applicable props to the outdoor space for visual variation.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-10.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To recreate the terrain within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Open the **Terrain Editor**.
 
@@ -3669,6 +3707,9 @@ To add terrain:
 
     <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-10.jpg" width="100%"/>
 
+  </TabItem>
+</Tabs>
+
 ## Contain the Playable Area
 
 If you playtest your experience and navigate off the island, your character will fall until they reach the project's `Class.Workspace.FallenPartsDestroyHeight` and respawn back in your team's spawn zone. To ensure that users cannot fall off the island, or join the match too early from the floating area spawn zone before they separate into teams, you must contain the playable area with an invisible barrier.
@@ -3685,8 +3726,9 @@ To contain the playable area in your experience:
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ContainingPlayableArea-1.jpg" width="100%"/>
 
 1. Select these parts, then in the **Properties** window,
-   1. Enable **Anchored**.
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
+   1. Enable **Anchored**.
 
   </TabItem>
   <TabItem key = "2" label="Recreate the Sample">
@@ -3786,6 +3828,7 @@ To exactly recreate the containment of the playable area within the sample [Envi
 
 2. Select these parts, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
 
   </TabItem>
@@ -3814,6 +3857,29 @@ The first type of special effect the final sample laser tag environment uses to 
   </figure>
 </GridContainer>
 
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To add and configure your own dynamic clouds in the background:
+
+1. In the **Explorer** window, add a **Clouds** object to the **Terrain** object.
+
+   1. Hover over the **Terrain** object and click the **⊕** button. A contextual menu displays.
+   1. From the contextual menu, insert a **Clouds** object.
+
+      <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-1.jpg" width="40%"/>
+
+2. Select the **Clouds** object, then in the **Properties** window,
+
+   1. Set **Cover** to a value between **0** (no clouds) and **1** (full cloud cover).
+   1. Set **Density** to a value between **0** (light, translucent clouds) and **1** (heavy, dark clouds).
+   1. Set **Color** to a material color of cloud particles according to the art style of your experience.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
 To add and configure dynamic clouds in the background:
 
 1. In the **Explorer** window, add a **Clouds object** to the **Terrain** object.
@@ -3824,24 +3890,31 @@ To add and configure dynamic clouds in the background:
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-1.jpg" width="40%"/>
 
 2. Select the **Clouds** object, then in the **Properties** window,
+
    1. Set **Cover** to **0.625**.
    1. Set **Density** to **0.5**.
    1. Set **Color** to **143, 143, 143**.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
 
 ### Foreground Clouds
 
 The second type of special effect the final sample laser tag environment uses to add movement to the 3D space is an effect called particle emitters. [Particle emitters](../../effects/particle-emitters.md) emit 2D images, or particles, that look and behave for the duration of their lifetime according to the particle emitter's set properties, and they are useful for creating movement that feels and often is close to the user.
 
-To add and configure floating a cloud asset in the foreground around the island:
+Particle emitters have many properties you can adjust to achieve both subtle and bold effects. The following instructions show you how to exactly recreate the foreground clouds within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep these clouds large and with a gentle motion between the gameplay space and the static background.
 
-1. Add a **block** `Class.Part` with a `Class.Part.Size` of **362, 60, 431** to the environment that covers the entire island.
-2. Select this **block** `Class.Part`, then in the **Properties** window,
+To add and configure foreground clouds:
+
+1. Add a **block** part to a position where you want users to see a floating cloud.
+2. Select this **block** part, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
 3. Create a particle emitter within this part.
-   1. In the **Explorer** window, hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+   1. In the **Explorer** window, hover over the **block** part and click the **⊕** button. A contextual menu displays.
    1. From the contextual menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area.
 4. Select this particle emitter, then in the **Properties** window,
 
@@ -3849,21 +3922,21 @@ To add and configure floating a cloud asset in the foreground around the island:
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-4a.png" width="100%"/>
 
-   1. Set **LightEmission** to **0.3**.
-   1. Set **LightInfluence** to **0.2**.
-   1. Set **Orientation** to **FacingCameraWorldUp**.
-   1. Set **Size** to **100**.
-   1. Set **Squash** to **-0.25**.
-   1. Set **Texture** to **rbxassetid://10714362544**.
+   1. Set **LightEmission** to **0.3** to blend the colors of the texture and its environment.
+   1. Set **LightInfluence** to **0.2** to allow environment light to have a subtle effect on the color of particles.
+   1. Set **Orientation** to **FacingCameraWorldUp** so particles always emit up toward the sky.
+   1. Set **Size** to **100** to create large clouds.
+   1. Set **Squash** to **-0.25** to shrink particles horizontally.
+   1. Set **Texture** to an image of a cloud. The sample uses **rbxassetid://10714362544**.
    1. Set **Transparency** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-4b.png" width="100%"/>
 
-   1. Set **Lifetime** to **30**.
-   1. Set **Rate** to **0.25**.
-   1. Set **Acceleration** to **0, -0.8, 0**.
-   1. Set **Drag** to **0.1**.
-   1. Enable **LockedToPart**.
+   1. Set **Lifetime** to **30** to fade out particles at 30 seconds.
+   1. Set **Rate** to **0.25** to emit particles slowly.
+   1. Set **Acceleration** to **0, -0.8, 0** to impact particle speed over their lifetime.
+   1. Set **Drag** to **0.1** to make particles look their speed over time.
+   1. Enable **LockedToPart** to keep particles close to the particle emitter.
 
    <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/CloudVid1.mp4" width="100%"></video>
 
@@ -3879,36 +3952,39 @@ In addition, you can layer multiple particle emitters together to give clouds mo
 
 Particle emitters are such a versatile type of special effect because they offer so many properties you can customize to create interesting visual effects, such as glowing portals, green billowing smoke, or vibrant explosions. The final sample laser tag environment uses particle emitters again in this section to create floating dust particles that surround the user as they navigate the outdoor space.
 
+Similar to the foreground clouds steps, the following instructions show you how to exactly recreate the dust particles within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep particle speed slow to only provide micro motion within the environment.
+
 To add and configure dust particles for the outdoor space:
 
-1. Add a **block** `Class.Part` with a `Class.Part.Size` of **339, 42, 100** to the environment that represents where you want users to see a floating cloud.
-2. Select this **block** `Class.Part`, then in the **Properties** window,
+1. Add a **block** part to the environment that covers the entire island.
+2. Select this **block** part, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
 3. Create a particle emitter within this part.
-   1. In the **Explorer** window, hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+   1. In the **Explorer** window, hover over the **block** part and click the **⊕** button. A contextual menu displays.
    1. From the contextual menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area.
 4. Select this particle emitter, then in the **Properties** window,
 
-   1. Set **Color** to **192, 241, 255**.
+   1. Set **Color** to **192, 241, 255** to give the particles a light blue hue.
    1. Set **Size** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticles-4b.png" width="100%"/>
 
-   1. Set **Texture** to **rbxassetid://14302399641**.
+   1. Set **Texture** to a dust mote image. The sample uses **rbxassetid://14302399641**.
    1. Set **Transparency** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticles-4d.png" width="100%"/>
 
-   1. Set **ZOffset** to **-5**.
-   1. Set **Lifetime** to **1, 10**.
-   1. Set **Rate** to **50000**.
-   1. Set **RotSpeed** to **-60**.
-   1. Set **Speed** to **1, 5**.
-   1. Set **Acceleration** to **1, -1, 1**.
-   1. Enable **LockedToPart**.
+   1. Set **ZOffset** to **-5** to move particles away from the camera.
+   1. Set **Lifetime** to **1, 10** to set the minimum and maximum age of a particle to 1 and 10 seconds, respectively.
+   1. Set **Rate** to **50000** to create many particles for your environment.
+   1. Set **RotSpeed** to **-60** to create a range of speeds for newly emitted particles.
+   1. Set **Speed** to **1, 5** to set the minimum and maximum speed of a particle to 1 and 5 studs per second, respectively.
+   1. Set **Acceleration** to **1, -1, 1** to impact particle speed over its lifetime.
+   1. Enable **LockedToPart** to keep particles close to the particle emitter.
 
-<video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticlesVid-1.mp4" width="100%"></video>
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticlesVid-1.mp4" width="100%"></video>
 
 ## Configure Lighting Sources
 
@@ -3927,7 +4003,27 @@ Studio begins every experience with the `Enum.Technology.ShadowMap` lighting sys
 
 For example, the `Enum.Technology.Future` lighting system automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual experience as users navigate through combat pockets.
 
-To configure global lighting:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To configure your own global lighting:
+
+1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Global Lighting](../../environment/lighting.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-1.jpg" width="100%"/>
+
+1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Atmospheric Effects](../../environment/atmosphere.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
+
+1. **(Optional)** Apply one or more customizable filters, such as bloom, depth of field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the global lighting configuration within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window,
 
@@ -3959,7 +4055,10 @@ To configure global lighting:
 
 4. In the **Explorer** window, select the **Lighting** service's child **DepthOfField** object, then in the **Properties** window, set **FarIntensity** to **0.05**.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
 
 ### Local Lighting
 
@@ -3973,18 +4072,76 @@ Local light sources create points of reference and directionality for users. For
     Applying light sources is an art form, and it takes time to figure out what lighting configurations work to meet the needs of your experience. It's normal and expected for your lighting to look and feel different from the final sample laser tag environment.
 </Alert>
 
-To configure local lighting:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To configure your own local lighting:
+
+1. Add and configure glowing lights around the perimeter hallways that provide orientation cues to users navigating around the building.
+
+   1. Add and position a **block** part near the top of one of your perimeter hallways, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+   1. In the **Explorer** window, add a **SurfaceLight** object to the part.
+      1. Hover over the part and click the **⊕** button. A contextual menu displays.
+      1. From the contextual menu, insert a **SurfaceLight** object.
+   1. Select the **SurfaceLight** object, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Face** to the direction you want the light to shine.
+      1. Set **Range** to a value that reflects how far you want your light to reach.
+   1. Repeat this process, positioning and orienting parts to complete the glowing perimeter lights.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-1.jpg" width="100%"/>
+
+1. Add and configure small hallway interior lights that illuminate cross lanes.
+
+   1. Add and position a **block** part near the top of one of your cross lane hallways, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+   1. In the **Explorer** window, add a **SpotLight** object to the part.
+      1. Hover over the part and click the **⊕** button. A contextual menu displays.
+      1. From the contextual menu, insert a **SpotLight** object.
+   1. Select the **SpotLight** object, then in the **Properties** window,
+      1. Set **Angle** to a value that reflects the angle you want your light to shine.
+      1. Set **Face** to the direction you want the light to shine.
+      1. Set **Range** to a value that reflects how far you want your light to reach.
+   1. Repeat this process, positioning and orienting parts above doors and hallways until you are happy with the interior lighting.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-2.jpg" width="100%"/>
+
+1. Add and configure the spawn zone lights.
+
+   1. Add a **block** part that is the size of your left spawn zone, and position it above the spawn zone's ceiling.
+   1. In the **Properties** window,
+      1. Set **Color** to the color theme of the team on the left of the map.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3A.jpg" width="100%"/>
+
+   1. Repeat this process for the right spawn zone.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
+
+   1. **(Optional)** Add and anchor light fixtures around the interior and exterior of the building from your own asset library.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the local lighting configuration within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the glowing perimeter lights.
 
-   1. Add a **block** `Class.Part` for one of the glowing perimeter lights, then in the **Properties** window,
+   1. Add a **block** part for one of the glowing perimeter lights, then in the **Properties** window,
       1. Set **Color** to **199, 166, 147**
       1. Set **Material** to **Neon**.
       1. Set **Size** to **89.254, 1, 1**.
       1. Set **CFrame.Position** to **-78.297, 21, 293.439**.
       1. Enable **Anchored**.
    1. In the **Explorer** window, add a **SurfaceLight** object to the part.
-      1. Hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+      1. Hover over the **block** part and click the **⊕** button. A contextual menu displays.
       1. From the contextual menu, insert a **SurfaceLight** object.
    1. Select the **SurfaceLight** object, then in the **Properties** window,
       1. Set **Color** to **211, 190, 150**.
@@ -3996,14 +4153,14 @@ To configure local lighting:
 
 2. Add and configure the small hallway interior lights.
 
-   1. Add a **block** `Class.Part` for one of the glowing perimeter lights, then in the **Properties** window,
+   1. Add a **block** part for one of the small hallway interior lights, then in the **Properties** window,
       1. Set **Color** to **163, 162, 165**.
       1. Set **Material** to **Neon**.
       1. Set **Size** to **0.25, 0.25, 1**.
       1. Set **CFrame.Position** to **-53.962, 19.936, 291.932**.
       1. Enable **Anchored**.
    1. In the **Explorer** window, add a **SpotLight** object to the part.
-      1. Hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+      1. Hover over the **block** part and click the **⊕** button. A contextual menu displays.
       1. From the contextual menu, insert a **SpotLight** object.
    1. Select the **SpotLight** object, then in the **Properties** window,
       1. Set **Angle** to **135**.
@@ -4015,7 +4172,7 @@ To configure local lighting:
 
 3. Add and configure the spawn zone lights.
 
-   1. Add a **block** `Class.Part` for the left spawn zone, then in the **Properties** window,
+   1. Add a **block** part for the left spawn zone, then in the **Properties** window,
 
       1. Set **Color** to **88, 218, 171**.
       1. Set **Material** to **Neon**.
@@ -4023,7 +4180,9 @@ To configure local lighting:
       1. Set **CFrame.Position** to **-77, 20.6, 321**.
       1. Enable **Anchored**.
 
-   1. Add a **block** `Class.Part` for the right spawn zone, then in the **Properties** window,
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3A.jpg" width="100%"/>
+
+   1. Add a **block** part for the right spawn zone, then in the **Properties** window,
       1. Set **Color** to **255, 170, 255**.
       1. Set **Material** to **Neon**.
       1. Set **Size** to **62.5, 1, 37.5**.
@@ -4033,6 +4192,9 @@ To configure local lighting:
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
 
 4. **(Optional)** Using the sample [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), add and anchor light fixtures around the interior and exterior of the building. For example, the final sample laser tag environment uses **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, and **Roblox Sign** lighting fixtures to complete the environment.
+
+  </TabItem>
+</Tabs>
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-4.jpg" width="100%"/>
 
