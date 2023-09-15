@@ -131,6 +131,7 @@ For advanced customization of your bubble, add UI objects representing certain a
 - `Class.ImageLabel` for background image settings.
 - `Class.UIGradient` for background gradient settings.
 - `Class.UICorner` for the corner shape of bubbles.
+- `Class.UIPadding` for the padding space between the text and bubble edges, relative to the parent's normal size.
 
 To add these objects as children of **BubbleChatConfiguration**, you can either add a script or use the Studio user interface directly:
 
@@ -279,6 +280,41 @@ The following tables include all available properties for customization:
 	</tr>
 </tbody>
 </table>
+
+<h4>UIGradient</h4>
+
+<table>
+<thead>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+		<th>Default</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>`Class.UIPadding.PaddingBottom|PaddingBottom`</td>
+		<td>Padding on the bottom. </td>
+		<td>`UDim.new(0,8)`</td>
+	</tr>
+	<tr>
+		<td>`Class.UIPadding.PaddingLeft|PaddingLeft`</td>
+		<td>>Padding on the left.</td>
+		<td>`UDim.new(0,8)`</td>
+	</tr>
+	<tr>
+		<td>`Class.UIPadding.PaddingRight|PaddingRight`</td>
+		<td>Padding on the right.</td>
+		<td>`UDim.new(0,8)`</td>
+	</tr>
+	<tr>
+		<td>`Class.UIPadding.PaddingTop|PaddingTop`</td>
+		<td>Padding on the top.</td>
+		<td>`UDim.new(0,8)`</td>
+	</tr>
+</tbody>
+</table>
+
 <br />
 
 ## Per-Bubble Customization
@@ -400,3 +436,7 @@ end
 ## NPC Bubbles
 
 You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
+
+<Alert severity="warning">
+  `Class.TextChatService:DisplayBubble()` only works on client-side local scripts.
+</Alert>

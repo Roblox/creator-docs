@@ -14,9 +14,7 @@ To rig a simple model in Blender:
 - [Test your rigged mesh](#testing) to ensure that the bones are properly positioned and influenced within the mesh.
 
 <Alert severity="info">
-  This guide uses a downloadable [example robot model](../../assets/modeling/meshes/reference-files/shoebot-base-model.fbx) and [Blender version 3.0](https://www.blender.org/download/releases/3-0/). If you are
-  using another version of Blender, there may be minor differences in UI and
-  settings.
+  This guide uses a downloadable [example robot model](../../assets/modeling/meshes/reference-files/shoebot-base-model.fbx) and [Blender version 3.0](https://www.blender.org/download/releases/3-0/). If you are using another version of Blender, there may be minor differences in UI and settings.
   </Alert>
 
 ## Setting up Blender
@@ -117,7 +115,7 @@ To parent an armature to a mesh:
 ## Assigning Vertices to Bones
 
 With your armature connected to the mesh object, you can now assign the mesh vertices of your limbs to be fully influenced by their corresponding
-bones. As a rigid model, each limb will completely bend and articulate when the bones are rotated which is ideal for a non-organic character like a robot.
+bones. As a rigid model, each limb will completely bend and articulate when the bones are rotated, which is ideal for a non-organic character like a robot.
 
 To assign bone influence to the left and right arms:
 
@@ -157,4 +155,4 @@ To test your applied influences:
    To reset the rotation of a selected bone to neutral, press <KeyboardInput>Alt</KeyboardInput>+<KeyboardInput>R</KeyboardInput>. While rotating, you can also press your mouse's scroll wheel to change the axes of your rotation.
 </Alert>
 
-The robot model is now a rigged mesh and ready to [export](../../art/modeling/export-requirements.md) for Studio. For reference, you can download the [final export](../../assets/modeling/meshes/reference-files/shoebot-rigged-model.fbx) (`.fbx`) of the model rigged in this guide.
+The robot model is now a rigged mesh and ready to [export](../../art/modeling/export-requirements.md) to Studio. For reference, you can download the [final export](../../assets/modeling/meshes/reference-files/shoebot-rigged-model.fbx) (`.fbx`) of the model rigged in this guide.

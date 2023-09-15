@@ -98,7 +98,7 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(character)
 		local humanoid = character:WaitForChild("Humanoid")
 		humanoid.Died:Connect(function()
-			deaths = deaths + 1
+			deaths += 1
 			print(player.Name .. " death count: " .. deaths)
 		end)
 	end)

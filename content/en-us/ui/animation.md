@@ -551,7 +551,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
 
    	local index = 0
    	for first, last in utf8.graphemes(displayText) do
-   		index = index + 1
+   		index += 1
    		guiObject.MaxVisibleGraphemes = index
    		task.wait(delayBetweenChars)
    	end

@@ -3,13 +3,36 @@ title: Publishing to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
-If you are a creator participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your item meets the [marketplace policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the [Marketplace](https://www.roblox.com/catalog) for a fee. Before uploading the item, you must review the Marketplace restrictions and understand the moderation process to prevent unexpected issues during and after the upload process.
+If you are a creator participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your item meets the [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the [Marketplace](https://www.roblox.com/catalog) for a fee. Before uploading the item, you must review the Marketplace restrictions and understand the moderation process to prevent unexpected issues during and after the upload process.
 
-See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
+There are limits on the number of assets you can upload to Roblox and enable for sale on the Marketplace:
 
-<Alert severity = 'info'>
-This article covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
-</Alert>
+<figure>
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th>Limiteds</th>
+    <th>Bodies or Heads</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Uploading and moderation</td>
+    <td>N/A</td>
+    <td>10 per day</td>
+
+  </tr>
+  <tr>
+    <td>Enabling on sale<sup>&dagger;</sup></td>
+    <td>1 per day</td>
+    <td>N/A</td>
+
+  </tr>
+</tbody>
+</table>
+<figcaption><sup>&dagger;</sup>*For assets that can be taken off-sale, only the first time the asset is enabled for sale counts against this limit.*</figcaption>
+</figure>
 
 ## Moderation
 
@@ -17,7 +40,7 @@ When uploading an asset to the Marketplace, the Moderation team reviews the item
 
 To ensure that your asset has the best chance of successfully clearing moderation, make sure your asset adheres to the [Marketplace Policy](../../art/marketplace/marketplace-policy.md) and that the metadata, such as the title and description, follow [general best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices).
 
-Moderations can happen after the item passes initial moderation. If Roblox removes an item with sales, Roblox refunds anyone who purchased the item and cancels any pending payments for that item.
+Additional moderation can occur even after the item clears the initial moderation process. If Roblox removes an item with sales, Roblox refunds anyone who purchased the item and cancels any pending payments for that item.
 
 If you believe your asset has been incorrectly moderated, you can [file an appeal](https://en.help.roblox.com/hc/en-us/articles/360000272703) with our moderation staff.
 
@@ -27,12 +50,16 @@ If you believe an asset is infringing on your IP, or that one of your assets has
 
 ## Uploading an Asset
 
+<Alert severity = 'info'>
+This content covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+</Alert>
+
 When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../art/marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
-For details on converting a custom model to a rigid or layered accessory, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
+For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
-You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace policy](../../art/marketplace/marketplace-policy.md).
+You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md).
 </Alert>
 
 To upload your asset:
@@ -40,10 +67,7 @@ To upload your asset:
 1. In Studio, add the marketplace item to your workspace.
    - For accessories, the item must be an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
    - For bodies and heads, the item must be a `Class.Model`. For information on the expected data model and specifications, see [Avatar Specifications](../../art/avatar/specifications.md).
-2. In the Explorer Window, right click the object and select **Save to Roblox**.
-   <img
-   src="../../assets/publishing/marketplace/Save-To-Roblox.png"
-   width="300" />
+2. In the **Explorer** window, right click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>
@@ -97,7 +121,7 @@ For other validation issues, keep in mind the following common uploading conflic
 
 - Studio's text filter identifies inappropriate strings in the name or description.
 - Roblox's automation flags your account for repeat actions. This may occur more often if you added tags to your item. Try submitting without tags and add them later once the item is published.
-- Your item uses an `AssetID` or `TextureID` that belongs to an existing asset in the Marketplace, or the doesn't belong to you or an appropriate group.
+- Your item uses an `AssetID` or `TextureID` that belongs to an existing asset in the Marketplace, or doesn't belong to you or an appropriate group.
 - Your item uses an `AssetID` or `TextureID` that is still pending moderation.
 
 ## Updating an Asset
@@ -121,7 +145,7 @@ You can adjust the metadata for any of your creations at any time. Keep in mind 
 On the Configure page, you can update the following fields:
 
 - **Title** - The name of your asset in the Marketplace.
-- **Description** - This description of your asset in the Marketplace.
+- **Description** - The description of your asset in the Marketplace.
 - **Tags** - You can add up to 5 tags from a preset list to each of your items to aid in discovery. Roblox already includes implicit tags related to the accessory type, such as **Hair**, **Back**, or **Shoulder**.
 - **Open for Comments** - When enabled, users can comment on the public asset page for your creation.
 
@@ -169,7 +193,7 @@ To set your asset as limited:
 
 If you are selling a Limited item, you can enable **Limit Copies Per User** to set the number of times a user can purchase this asset. This only affects the purchases from the original listing and users can still purchase additional copies of the same Limited asset from resellers. You can't change this setting after publishing.
 
-Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer own the maximum number of copies, they can purchase the copies from the original listing.
+Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
 
 Limited assets on the Marketplace before the release of this setting don't include a copy limit.
 

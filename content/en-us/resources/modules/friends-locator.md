@@ -16,7 +16,7 @@ To use the **FriendsLocator** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -57,9 +57,9 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    })
    ```
 
-1. From the **Test** tab, select the following combination for **Clients and Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
+1. From the [Test](../../studio/test-tab.md) tab, select the following combination for **Clients&nbsp;and&nbsp;Servers**, then click the **Start** button. Three new instances of Studio will open; one simulated server and two simulated clients.
 
-   <img src="../../assets/developer-modules/friends-locator/Clients-Servers-Start.png" width="575" />
+   <img src="../../assets/developer-modules/friends-locator/Clients-Servers-Start.png" width="800" />
 
 1. Go into either of the **client** Studio instances, move a distance of 100 studs away from the other character, and you should see a **locator&nbsp;icon** appear over its head.
 
@@ -108,13 +108,9 @@ To replace the default UI:
 
 1. Create a new `Class.ScreenGui` instance inside the **StarterGui** container.
 
-   <img src="../../assets/studio/explorer/ScreenGui-In-StarterGui.png" width="320" />
+   <img src="../../assets/studio/explorer/StarterGui-ScreenGui.png" width="320" />
 
-1. Create a `Class.Frame` instance named **FriendLocator** as a child of the new `Class.ScreenGui`.
-
-   <img src="../../assets/developer-modules/friends-locator/Custom-UI-Frame-In-ScreenGui.png" width="320" />
-
-1. Design your custom UI by adding `Class.ImageLabel|ImageLabels`, `Class.TextLabel|TextLabels`, etc. to the **FriendLocator** frame.
+1. Create a `Class.Frame` instance named **FriendLocator** as a child of the new `Class.ScreenGui`, then add elements like `Class.ImageLabel|ImageLabels`, `Class.TextLabel|TextLabels` to design your custom UI.
 
    <img src="../../assets/developer-modules/friends-locator/Custom-UI-Objects-In-Frame.png" width="320" />
 
@@ -153,27 +149,27 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`alwaysOnTop`</td>
 		<td>If `true`, shows locator icons on top of everything, preventing them from being blocked by 3D world objects.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`showAllPlayers`</td>
 		<td>If `true`, shows locations for all players, not just friends; this can help verify the module's functionality in Studio.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 	<tr>
 		<td>`teleportToFriend`</td>
 		<td>Teleports player character to the friend's location when their locator icon is clicked or tapped.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`thresholdDistance`</td>
 		<td>Camera distance threshold at which locator icons appear; friends closer than this distance will not display icons.</td>
-		<td>`100`</td>
+		<td>100</td>
 	</tr>
 	<tr>
 		<td>`maxLocators`</td>
 		<td>Maximum number of locator icons shown at any given time.</td>
-		<td>`10`</td>
+		<td>10</td>
 	</tr>
 </tbody>
 </table>

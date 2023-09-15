@@ -17,7 +17,7 @@ Normal scripts should be used for standalone elements of a game, such as touchin
 
 ## Module Script Basics
 
-Module scripts are actually their own seperate object compared to script objects. In Roblox, module scripts can be denoted with a **purple** icon.
+Module scripts are actually their own separate object compared to script objects. In Roblox, module scripts can be denoted with a **purple** icon.
 
 ### Creating a Module Script
 

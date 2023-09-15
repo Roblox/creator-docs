@@ -4,6 +4,7 @@ import { hideBin } from 'yargs/helpers';
 import { getRepositoryName } from './git.js';
 import { repositoryRoot } from './files.js';
 import path from 'path';
+import { Emoji } from './utils.js';
 
 dotenv.config({
   path: path.join(repositoryRoot, '/.env.default'),
@@ -37,6 +38,9 @@ const isValidFileOption = (value: any): value is FileOption => {
 export interface IConfig {
   baseBranch: string;
   commitHash: string;
+  checkHttpLinks: boolean;
+  checkMarkdownLint: boolean;
+  checkRetextAnalysis: boolean;
   debug: boolean;
   files: FileOption;
   onlyRequiredChecks: boolean;
@@ -167,6 +171,21 @@ export const getConfig = async (): Promise<IConfig> => {
       description: 'The base branch to compare changes with',
       default: process.env.BASE_BRANCH,
     })
+    .option('checkHttpLinks', {
+      type: 'boolean',
+      description: 'Whether to check HTTP links',
+      default: getEnvVar('CHECK_HTTP_LINKS', DataType.Boolean),
+    })
+    .option('checkMarkdownLint', {
+      type: 'boolean',
+      description: 'Whether to check markdownlint',
+      default: getEnvVar('CHECK_MARKDOWN_LINT', DataType.Boolean),
+    })
+    .option('checkRetextAnalysis', {
+      type: 'boolean',
+      description: 'Whether to check retext analysis',
+      default: getEnvVar('CHECK_RETEXT_ANALYSIS', DataType.Boolean),
+    })
     .option('commitHash', {
       type: 'string',
       description: 'The commit hash to post a pull request comment on',
@@ -204,7 +223,9 @@ export const getConfig = async (): Promise<IConfig> => {
       default: process.env.REPOSITORY || (await getRepositoryName()),
     })
     .check((argv) => {
+      console.log(`::group::${Emoji.HammerAndWrench} Getting configuration`);
       console.log('Received:', argv);
+      console.log('::endgroup::');
       const validationResult = validateIConfig(argv);
       if (validationResult.isValid) {
         return true;
