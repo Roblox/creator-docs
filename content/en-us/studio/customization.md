@@ -1,5 +1,4 @@
----
-title: Customizing Studio
+---Customizing Studio
 description: Explore the customization options for Roblox Studio.
 ---
 
