@@ -1,5 +1,5 @@
 ---
-title: Passes
+title: What Is A Gamepass?
 description: Passes allow you to charge a one-time Robux fee in order for users to access special privileges in your experience.
 ---
 
