@@ -214,6 +214,7 @@ local function followPath(destination)
 	local success, errorMessage = pcall(function()
 		path:ComputeAsync(character.PrimaryPart.Position, destination)
 	end)
+end
 ```
 
 <img src="../assets/mechanics/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
