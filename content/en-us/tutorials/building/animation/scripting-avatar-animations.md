@@ -204,9 +204,6 @@ The remainder of this tutorial uses a pre-made model that includes a [ProximityP
    1. In a browser, open the model page, click the **Get** button. This adds the model into your inventory.
    2. In Studio, go to the **View** tab and click on the **Toolbox**.
    3. In the Toolbox window, click on the **Inventory** button. Then, make sure the dropdown is on **My Models**.
-
-      ![alt](../../../assets/tutorials/shared/interface/Interface-Toolbox-MyModels.png)
-
    4. Select the **Shock Button** model to add it into the game.
 
     </Alert>

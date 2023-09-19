@@ -97,7 +97,7 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
 
 local setSuccess, isNewKey = pcall(function()
-	return = sortedMap:SetAsync("User_1234", 1000, 30)
+	return sortedMap:SetAsync("User_1234", 1000, 30)
 end)
 if setSuccess then
 	print(isNewKey)
@@ -161,7 +161,9 @@ local function placeBid(itemKey, bidAmount)
 end
 ```
 
-The latency for `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` is similar to `Class.MemoryStoreSortedMap:GetAsync()|GetAsync()` and `Class.MemoryStoreSortedMap:SetAsync()|SetAsync()` unless there is contention. When contention occurs, the system automatically retries the operation until successful.
+The latency for `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` is similar to `Class.MemoryStoreSortedMap:GetAsync()|GetAsync()` and `Class.MemoryStoreSortedMap:SetAsync()|SetAsync()` unless there is contention.
+
+When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns nil, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
 
 ## Removing Data
 

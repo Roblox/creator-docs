@@ -50,9 +50,44 @@ For example, the final sample laser tag environment uses new floor pieces with u
 
 While this technique replaces and converts the original greybox geometry, it still respects the intention behind the original design to create peaks and valleys that control sight lines and engagement distances throughout the experience outside of horizontal movement. This means that users retain all physical and emotional senses of ascension and descension while also having the benefit of knowing where they are in the 3D space.
 
-To apply your asset library to the floors:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the indoor floors:
+To apply your own asset library to the floors:
+
+1. Using **block** parts, create symmetrical surfaces for your indoor floors.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-1.jpg" width="100%"/>
+
+1. Using **wedge** parts, create a **rise in elevation** between the main and mezzanine floors on the inside of your building.
+1. Select these indoor parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a distinct visual treatment from other surfaces in your environment. This allows players to always know they are within the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-2.jpg" width="100%"/>
+
+1. Using **block** parts, create symmetrical surfaces for your **outdoor floors**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-3.jpg" width="100%"/>
+
+1. Using **wedge** parts, create a **rise in elevation** between the main and mezzanine floors on the outside of your building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-4.jpg" width="100%"/>
+
+1. Using **block** or **wedge** parts, create a drop in elevation between the main and outdoor floors on the outside of your building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-5.jpg" width="100%"/>
+
+1. Select these outdoor parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a distinct visual treatment from other surfaces in your environment. This allows players to always know they are outside of the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralFloors-6.jpg" width="100%"/>
+
+1. Anchor all of these floor parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the floors within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the indoor floors:
 
    <table>
    <thead>
@@ -101,7 +136,7 @@ To apply your asset library to the floors:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Floors-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the outdoor floors:
+3. Add and configure the following **block** parts for the outdoor floors:
 
    <table>
    <thead>
@@ -175,7 +210,7 @@ To apply your asset library to the floors:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Floors-5.jpg" width="100%"/>
 
-6. Add and configure the following **block** `Class.Part|Parts` for the stairs leading down into the outdoor space:
+6. Add and configure the following **block** parts for the stairs leading down into the outdoor space:
 
    <table>
    <thead>
@@ -246,6 +281,9 @@ To apply your asset library to the floors:
 
 8. Anchor all of these parts and modular assets.
 
+  </TabItem>
+</Tabs>
+
 ### Spawn Zones
 
 The original greybox design for spawn zones was to create an area at opposite ends of their map for users to join their respective team when the match starts. The placement of these spawn zones allows users to have a safe location at the start of the match that's far away from enemy fire.
@@ -254,7 +292,29 @@ The original greybox design for spawn zones was to create an area at opposite en
 
 The final sample laser tag environment keeps the intent of this design while also adding a color theme: **pastel blue-green** for the team that assembles on the left side of the map, and **carnation pink** for the team that assembles on the right side of the map. You will continue to use this same color scheme throughout this section of the tutorial to differentiate areas of the map near each team's respective spawn zone.
 
-To apply your asset library to the spawn zones:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the spawn zones:
+
+1. Add and configure any applicable **wall**, **corner**, and **door frame** modular assets to the inside of your **left spawn zone**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/SpawnZones-1.jpg" width="100%"/>
+
+1. Select your wall components, then in the **Properties** window, set **Color** to a **unique** hue. You will continue to use this color throughout the rest of the map to orient players to their location relative to this team's color theme.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/SpawnZones-2.jpg" width="100%"/>
+
+1. Repeat this process for your **right spawn zone**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/SpawnZones-4.jpg" width="100%"/>
+
+1. Anchor all of these spawn zone assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the spawn zones within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the following **modular** assets for the left spawn zone:
 
@@ -448,6 +508,9 @@ To apply your asset library to the spawn zones:
 
 5. Anchor all of these modular assets.
 
+  </TabItem>
+</Tabs>
+
 ### Combat Pockets
 
 The original greybox design for the combat pockets was to create intentional spaces for combat where the map's primary lanes intersect with the cross lanes. In addition, the original greybox design required that each combat pocket needed to only include three entrance or exit points at most to refrain from giving users choice overload as they're navigating the space.
@@ -466,6 +529,34 @@ In addition, the technique in this section also applies props from the sample as
     <img src="../../assets/tutorials/environmental-art-curriculum/Section4/CombatPockets-Intro3.jpg" width="100%"/>
   </figure>
 </GridContainer>
+
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the combat pockets:
+
+1. Add and configure any applicable props or **wall**, **corner**, **door frame**, and **door** modular assets to the inside and outside of your **left combat pocket**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralCombatPockets-1.jpg" width="100%"/>
+
+1. Select your wall components on the outside of your left combat pocket, then in the **Properties** window, set **Color** to the **same** hue as the left spawn zone's color theme. This allows players to orient themselves relative to this team's color theme as they are navigating primary and cross lanes.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralCombatPockets-2.jpg" width="100%"/>
+
+1. Select your wall components on the inside of your left combat pocket, then in the **Properties** window, set **Color** to a **unique** hue. This allows players to orient themselves when they are within the combat pocket and looking through exit points.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/CombatPockets-6.jpg" width="100%"/>
+
+1. Repeat this process for your **middle combat pocket** and **right combat pocket**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/CombatPockets-16.jpg" width="100%"/>
+
+1. Anchor all of these combat pocket assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the combat pockets within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 To apply your asset library to the combat pockets:
 
@@ -1328,6 +1419,9 @@ To apply your asset library to the combat pockets:
 
 17. Anchor all of these prop and modular assets.
 
+  </TabItem>
+</Tabs>
+
 ### Perimeter Hallways
 
 By applying your asset library to the exterior of the combat pockets in the previous section, most cross lanes now include polished assets aside from the hallways that make up the perimeter of the building. In addition to using the same color scheme from previous sections, the final sample laser tag environment also uses wall assets with their default orange color to inform users where they are in relation to the back of the building.
@@ -1344,7 +1438,38 @@ Aside from this technique that applies the sample [Environment Art Asset Library
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-Intro2.jpg" width="100%"/>
 
-To apply your asset library to the perimeter hallways:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the perimeter hallways:
+
+1. Add and configure any applicable prop or **wall**, **corner**, and **door frame** modular assets to the perimeter hallways on the **left-side** of the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-1.jpg" width="100%"/>
+
+1. Select your wall components, then in the **Properties** window, set **Color** to the **same** hue as the left spawn zone's color theme.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-2.jpg" width="100%"/>
+
+1. Add and configure any applicable prop or **wall**, **corner**, and **door frame** modular assets to the perimeter hallways at the **back** of the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-4.jpg" width="100%"/>
+
+1. Select your wall components, then in the **Properties** window, set **Color** to a **unique** hue. This allows players to orient themselves relative to where they are in relation to the interior primary lane. The sample experience keeps these assets their default color.
+1. Add and configure any applicable prop or **wall**, **corner**, and **door frame** modular assets to the perimeter hallways on the right-side of the building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-5.jpg" width="100%"/>
+
+1. Select your wall components, then in the Properties window, set Color to the same hue as the right spawn zone's color theme.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Perimeter-6.jpg" width="100%"/>
+
+1. Anchor all of these perimeter hallway assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the perimeter hallways within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the following **modular** assets for the perimeter hallways on the left-side of the building:
 
@@ -1690,13 +1815,30 @@ To apply your asset library to the perimeter hallways:
 
 7. Anchor all of these prop and modular assets.
 
+  </TabItem>
+</Tabs>
+
 ### Doors
 
 The final sample laser tag environment applies doors directly onto the greybox geometry to exactly match the original design, however, not all entrance or exit points have door assets. You may find that the requirements of your own experience require more or less doors, depending on how you want to control combat within your combat pockets. More doors often leads to longer wait times before users enter or exit a combat pocket, but less doors may open up unwanted lines of sight.
 
 For this reason, it's recommended to playtest with multiple variations to experiment different play styles. In fact, you may experiment with placing door assets into your combat pockets that only open to users from one side of the door, or not at all.
 
-To apply your asset library to the doors:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the doors:
+
+1. Add and configure any **door** modular assets to the doorways of your combat pockets.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Doors-2.jpg" width="100%"/>
+
+1. **(Optional)** Anchor all of these door assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the doors within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the following **Door** assets for the left combat pocket:
 
@@ -1744,6 +1886,9 @@ To apply your asset library to the doors:
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Doors-2.jpg" width="100%"/>
 
+  </TabItem>
+</Tabs>
+
 ### Exterior Assets
 
 The original greybox design for exterior assets was to set placeholder positions for objects that provide cover from enemy fire while users navigate the exterior primary lane. This was useful to help visualize what would help users as they ascend or descend stairs, cross the middle combat pocket, or otherwise exist in the outdoor space, but as you construct your environment, you can improve this design by providing different uses for these cover objects.
@@ -1754,9 +1899,31 @@ The following sections provide guidance on how to convert these initial placehol
 
 The first exterior assets you can convert for the outdoor space are the two towers right outside of the middle combat pocket that intersect with the exterior primary lane. The technique in this section not only creates objects that are aesthetically pleasing to the eye, but it also creates objects that provide users a sense of scale in their environment. Every other object so far is about the size of the user's character **except** for these towers, which can lead to intrigue in the story behind the architecture or overall island that the building rests on.
 
-To apply your asset library to the towers:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left tower:
+To apply your own asset library to the towers:
+
+1. Using **block** parts, create a tower that is much larger than the player to provide a sense of scale in the environment.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralTowers-1.jpg" width="100%"/>
+
+1. Apply unique colors and materials to different block parts according to the art style of your experience.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Towers-1.jpg" width="100%"/>
+
+1. Duplicate this tower, then position it to a symmetrical location on your map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Towers-3.jpg" width="100%"/>
+
+1. Anchor all of these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the towers within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the left tower:
 
    <table>
    <thead>
@@ -1815,20 +1982,45 @@ To apply your asset library to the towers:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Towers-1.jpg" width="100%"/>
 
-2. Group everything into a `Class.Model` object, then duplicate the model.
-3. Move the duplicate tower to a CFrame.Position of **-30.572, 57.93, 133.5**.
+2. Group everything into a model, then duplicate the model.
+3. Move the duplicate tower to a **CFrame.Position** of **-30.572, 57.93, 133.5**.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Towers-3.jpg" width="100%"/>
 
-4. Anchor both of these `Class.Model` objects.
+4. Anchor both of these models.
+
+  </TabItem>
+</Tabs>
 
 #### Columns
 
 The second exterior assets you can convert for the outdoor space are the two columns that hold up the overhang pieces you will make later in this tutorial. Similar to the towers, the technique in this section not only creates objects that are aesthetically pleasing to the eye, but it also provides further visual cues to users about where they are in the overall environment. For example, each column has either pastel blue-green or carnation pink detailing to inform users if they are closest to either their own or their enemy's spawn zone.
 
-To apply your asset library to the columns:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left column:
+1. Using **block** and **wedge** parts, create a column that will hold the roof of your building.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GeneralColumns-1.jpg" width="100%"/>
+
+1. Apply unique colors and materials to different parts according to the art style of your experience.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-2.jpg" width="100%"/>
+
+1. Duplicate this column, then position it to a symmetrical location on your map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-5.jpg" width="100%"/>
+
+1. **(Optional)** Change the color of one part in each column to match each team's respective color theme.
+
+1. Anchor all of these parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the columns within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the left column:
 
    <table>
    <thead>
@@ -1893,7 +2085,7 @@ To apply your asset library to the columns:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-1.jpg" width="100%"/>
 
-2. Add and configure the following **wedge** `Class.Part` for the top of the left column:
+2. Add and configure the following **wedge** part for the top of the left column:
 
    <table>
    <thead>
@@ -1920,16 +2112,19 @@ To apply your asset library to the columns:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-2.jpg" width="100%"/>
 
-3. Group everything into a `Class.Model` object, then duplicate the model.
+3. Group everything into a model, then duplicate the model.
 4. Move the duplicate column to a **CFrame.Position** of **-18.169, 14.081, 81.5** and a **CFrame.Orientation** of **0, -90, 180**.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-4.jpg" width="100%"/>
 
-5. Select the pastel blue-green **block** `Class.Part`, then in the **Properties** window, set the **Color** property to **255, 170, 255** to match the color theme of the team on the right of the map.
+5. Select the pastel blue-green **block** part, then in the **Properties** window, set the **Color** property to **255, 170, 255** to match the color theme of the team on the right of the map.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-5.jpg" width="100%"/>
 
-6. Anchor both of these `Class.Model` objects.
+6. Anchor both of these models.
+
+  </TabItem>
+</Tabs>
 
 #### Planters
 
@@ -1937,7 +2132,7 @@ The final exterior assets you can convert for the outdoor space are the eight pl
 
 To apply your asset library to the left-most planter:
 
-1. Add and configure the following **block** `Class.Part|Parts` for the left-most planter:
+1. Add and configure the following **block** parts for the left-most planter:
 
    <table>
    <thead>
@@ -1984,7 +2179,7 @@ To apply your asset library to the left-most planter:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Planters-6.jpg" width="100%"/>
 
-7. Add and configure the following **block** `Class.Part|Parts` for the dirt and edging of the planter:
+7. Add and configure the following **block** parts for the dirt and edging of the planter:
 
    <table>
    <thead>
@@ -2037,7 +2232,7 @@ To apply your asset library to the left-most planter:
 
 9. Anchor all of these parts and foliage assets.
 
-Now that you know how to use the solid modeling tools, you can experiment in creating types of planters with different exteriors, materials, plant variety, and trim pieces. For example, the other variations of planters within the final sample laser tag environment either make an 'L' shape, or they layer **block** `Class.Part|Parts` and white trim together to provide higher cover in the middle of the map.
+Now that you know how to use the solid modeling tools, you can experiment in creating types of planters with different exteriors, materials, plant variety, and trim pieces. For example, the other variations of planters within the final sample laser tag environment either make an 'L' shape, or they layer **block** parts and white trim together to provide higher cover in the middle of the map.
 
 <GridContainer numColumns="2">
   <figure>
@@ -2062,7 +2257,35 @@ The roof of the building is one of the most complex assets in the final sample l
 
 The first, top-most layer of the roof is the skylight geometry. The purpose of this layer is to provide outdoor light into interior combat areas.
 
-To apply your asset library to the skylights:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the skylights:
+
+1. Add and configure any **skylight** modular assets to the ceiling of your building. This allows global lighting into combat areas, and provides a richer sense of immersion for players.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-5.jpg" width="100%"/>
+
+1. Using **block** parts, create glass for some of your skylights.
+
+   1. Add and position a **block** part into a skylight.
+
+      <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-6.jpg" width="100%"/>
+
+   1. Select the part, then in the **Properties** window,
+
+      1. Set **Color** to **105, 162, 172.**
+      1. Set **Material** to **Neon**.
+      1. Set **Transparency** to **0.6**.
+
+      <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-7.jpg" width="100%"/>
+
+1. Anchor all of these skylight assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the skylights within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the following **modular** assets for the left skylight:
 
@@ -2384,7 +2607,7 @@ To apply your asset library to the skylights:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-5.jpg" width="100%"/>
 
-6. Add and configure the following **block** `Class.Part|Parts` for the skylight glass for the two skylights near the back of the building:
+6. Add and configure the following **block** parts for the skylight glass for the two skylights near the back of the building:
 
    <table>
    <thead>
@@ -2423,13 +2646,31 @@ To apply your asset library to the skylights:
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Skylight-8.jpg" width="100%"/>
 
+  </TabItem>
+</Tabs>
+
 #### Ceiling
 
 The second layer of the roof is the ceiling geometry that users see at the top of their view as they navigate the interior of the building. The purpose of this layer is to fill the open areas between the top trim of each wall asset.
 
-To apply your asset library to the ceiling:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the fill:
+To apply your own asset library to the ceiling of the roof:
+
+1. Using **block** and **wedge** parts, fill in the open space around your skylights.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Ceiling-3.jpg" width="100%"/>
+
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a distinct visual treatment from other surfaces in your environment. This helps players orient themselves when they are moving their camera quickly.
+1. Anchor all of these ceiling assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the ceiling within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the fill:
 
    <table>
    <thead>
@@ -2540,7 +2781,7 @@ To apply your asset library to the ceiling:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Ceiling-1.jpg" width="100%"/>
 
-2. Add and configure the following **wedge** `Class.Part|Parts` for the elevated ceiling:
+2. Add and configure the following **wedge** parts for the elevated ceiling:
 
    <table>
    <thead>
@@ -2573,13 +2814,34 @@ To apply your asset library to the ceiling:
 
 4. Anchor all of these parts.
 
+  </TabItem>
+</Tabs>
+
 #### Top Roof
 
 The third layer of the roof is the top roof geometry. The purpose of this layer is to provide bulk to the outermost roof area that users see as they look at the building from the outdoor space. It also adds a sense of depth to the skylights, making the building look more complete from the inside and out.
 
-To apply your asset library to the top of the roof:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the top roof on the left of the map:
+To apply your own asset library to the top of the roof:
+
+1. Using **block** and **wedge** parts, add in a thick layer to cover the ceiling without hiding your skylights. This surface is what players can see when they are looking at the building from the outdoor space.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-3.jpg" width="100%"/>
+
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-4.jpg" width="100%"/>
+
+1. Anchor all of these top roof assets.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the top of the roof within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the top roof on the left of the map:
 
    <table>
    <thead>
@@ -2622,7 +2884,7 @@ To apply your asset library to the top of the roof:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-1.jpg" width="100%"/>
 
-2. Add and configure the following **block** `Class.Part|Parts` for the top roof on the top middle of the map:
+2. Add and configure the following **block** parts for the top roof on the top middle of the map:
 
    <table>
    <thead>
@@ -2653,7 +2915,7 @@ To apply your asset library to the top of the roof:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the top roof on the right of the map:
+3. Add and configure the following **block** parts for the top roof on the right of the map:
 
    <table>
    <thead>
@@ -2704,7 +2966,7 @@ To apply your asset library to the top of the roof:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-4.jpg" width="100%"/>
 
-5. Add and configure the following **block** `Class.Part|Parts` for the top roof on the lower middle of the map:
+5. Add and configure the following **block** parts for the top roof on the lower middle of the map:
 
    <table>
    <thead>
@@ -2735,7 +2997,7 @@ To apply your asset library to the top of the roof:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-6.jpg" width="100%"/>
 
-7. Add and configure the following **block** `Class.Part|Parts` for the top roof on the sides of the middle of the map:
+7. Add and configure the following **block** parts for the top roof on the sides of the middle of the map:
 
    <table>
    <thead>
@@ -2758,7 +3020,7 @@ To apply your asset library to the top of the roof:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-7.jpg" width="100%"/>
 
-8. Add and configure the following **wedge** `Class.Part|Parts` for the top roof on the sides of the middle of the map:
+8. Add and configure the following **wedge** parts for the top roof on the sides of the middle of the map:
 
    <table>
    <thead>
@@ -2793,13 +3055,31 @@ To apply your asset library to the top of the roof:
 
 10. Anchor all of these parts.
 
+  </TabItem>
+</Tabs>
+
 #### Overhang
 
 The fourth layer of the roof is the overhang geometry that the column assets hold up in order for the building to be structurally sound. The purpose of this layer is to provide an aesthetically pleasing awning space for users navigating the exterior primary lane.
 
-To apply your asset library to the overhang:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` for the overhang on the left of the map:
+To apply your own asset library to the overhang of the roof:
+
+1. Using **block** and **wedge** parts, add in a thick overhang for your columns to hold up. This surface provides players partial cover from the sun while they are navigating the exterior primary lane.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Overhang-4.jpg" width="100%"/>
+
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+1. Anchor all of these overhang parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the overhang within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts for the overhang on the left of the map:
 
    <table>
    <thead>
@@ -2845,7 +3125,7 @@ To apply your asset library to the overhang:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Overhang-1.jpg" width="100%"/>
 
-2. Add and configure the following **wedge** `Class.Part|Parts` for the overhang on the left of the map:
+2. Add and configure the following **wedge** parts for the overhang on the left of the map:
 
    <table>
    <thead>
@@ -2888,7 +3168,7 @@ To apply your asset library to the overhang:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Overhang-2.jpg" width="100%"/>
 
-3. Add and configure the following **block** `Class.Part|Parts` for the overhang on the right of the map:
+3. Add and configure the following **block** parts for the overhang on the right of the map:
 
    <table>
    <thead>
@@ -2934,7 +3214,7 @@ To apply your asset library to the overhang:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Overhang-3.jpg" width="100%"/>
 
-4. Add and configure the following **wedge** `Class.Part|Parts` for the overhang on the right of the map:
+4. Add and configure the following **wedge** parts for the overhang on the right of the map:
 
    <table>
    <thead>
@@ -2979,11 +3259,29 @@ To apply your asset library to the overhang:
 
 5. Anchor all of these parts.
 
+  </TabItem>
+</Tabs>
+
 #### Trim
 
 The final layer of the roof is the trim geometry that surrounds the perimeter of the roof. The purpose of this layer is to provide visual cohesion between each previous layer from users looking at the room from the outdoor space.
 
-To apply your asset library to the trim of the roof:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own asset library to the trim of the roof:
+
+1. Add and configure **trim** modular assets along the overhang of your roof.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Trim-5.jpg" width="100%"/>
+
+1. Select these parts, then in the **Properties** window, set **Color**, **Material**, and/or **MaterialVariant** to values that apply a visual treatment according to the art style of your experience.
+1. Anchor all of these overhang parts.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the trim of the roof within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the following **modular** assets for the top-most trim:
 
@@ -3283,6 +3581,9 @@ To apply your asset library to the trim of the roof:
 
 6. Anchor all of these trim assets.
 
+  </TabItem>
+</Tabs>
+
 ## Delete Excess Geometry
 
 Now that your building is complete, it's time to delete the underlying greybox geometry and the baseplate. This process removes excess polygons that users will never see nor interact with, which quickly improves memory and performance for devices with memory and graphics processing unit (GPU) limitations. In addition, removing the baseplate also allows the building to float in the sky, which is good preparation for you to sculpt terrain for the outdoor space in the next section.
@@ -3307,7 +3608,45 @@ Using the [Terrain Editor](../../parts/terrain.md), you can quickly generate and
     Sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own experience, it's normal and expected for your environment to look and feel different from the sample laser tag environment.
 </Alert>
 
-To add terrain:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To apply your own terrain to the outdoor area:
+
+1. Open the **Terrain Editor**.
+
+   1. In the menu bar, navigate to the **Model** tab.
+   1. Click the **Editor** icon.
+
+   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="100%" alt="Terrain Editor indicated in Home tab" />
+
+1. Navigate to the **Edit** tab, then click the **Draw** button.
+1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map. For example, the sample starts this process with the settings in the following image.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-3.jpg" width="40%"/>
+
+1. In the **Materials Settings** section, select a material for the **unplayable area**, such as water or cracked lava, then in the viewport, draw where you want your playable area to end. This material communicates where the map ends for the outdoor space.
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-4.mp4" width="100%"></video>
+
+1. Navigate back to the **Materials Settings** section, select a material for the **playable area**, such as grass, pavement, or wood planks, then in the viewport, draw where you want your playable area to start. This material communicates where the map starts for the outdoor space
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-6.mp4" width="100%"></video>
+
+1. Navigate back to the **Terrain Editor**, then select the **Paint** tool.
+1. In the **Brush Settings** section, customize your brush according to the material you want to add to your map, and select a new material.
+1. In the viewport, draw along the exterior lane. This material communicates the primary path players can take as they are navigating the outdoor space.
+
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-9.mp4" width="100%"></video>
+
+1. **(Optiona)** Add and configure any applicable props to the outdoor space for visual variation.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-10.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To recreate the terrain within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Open the **Terrain Editor**.
 
@@ -3368,15 +3707,35 @@ To add terrain:
 
     <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Terrain-10.jpg" width="100%"/>
 
+  </TabItem>
+</Tabs>
+
 ## Contain the Playable Area
 
 If you playtest your experience and navigate off the island, your character will fall until they reach the project's `Class.Workspace.FallenPartsDestroyHeight` and respawn back in your team's spawn zone. To ensure that users cannot fall off the island, or join the match too early from the floating area spawn zone before they separate into teams, you must contain the playable area with an invisible barrier.
 
 The values in this section are highly dependent on the terrain within the final sample laser tag environment. It's recommended to playtest and verify that there are no gaps in the barrier according to the custom terrain within your own experience.
 
-To contain the playable area:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
 
-1. Add and configure the following **block** `Class.Part|Parts` to surround the playable area. The top containment part in the following image is semi-transparent for visual reference.
+To contain the playable area in your experience:
+
+1. Using **block** parts, surround the playable area in your outdoor area. It's important to ensure these parts are tall enough to block players from jumping over your barrier, and that there are no cracks they can slip through and fall off the edge of your map.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ContainingPlayableArea-1.jpg" width="100%"/>
+
+1. Select these parts, then in the **Properties** window,
+   1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
+   1. Enable **Anchored**.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the containment of the playable area within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
+
+1. Add and configure the following **block** parts to surround the playable area. The top containment part in the following image is semi-transparent for visual reference.
 
    <table>
    <thead>
@@ -3469,7 +3828,11 @@ To contain the playable area:
 
 2. Select these parts, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
+
+  </TabItem>
+</Tabs>
 
 ## Configure Special Effects
 
@@ -3494,6 +3857,29 @@ The first type of special effect the final sample laser tag environment uses to 
   </figure>
 </GridContainer>
 
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To add and configure your own dynamic clouds in the background:
+
+1. In the **Explorer** window, add a **Clouds** object to the **Terrain** object.
+
+   1. Hover over the **Terrain** object and click the **⊕** button. A contextual menu displays.
+   1. From the contextual menu, insert a **Clouds** object.
+
+      <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-1.jpg" width="40%"/>
+
+2. Select the **Clouds** object, then in the **Properties** window,
+
+   1. Set **Cover** to a value between **0** (no clouds) and **1** (full cloud cover).
+   1. Set **Density** to a value between **0** (light, translucent clouds) and **1** (heavy, dark clouds).
+   1. Set **Color** to a material color of cloud particles according to the art style of your experience.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
 To add and configure dynamic clouds in the background:
 
 1. In the **Explorer** window, add a **Clouds object** to the **Terrain** object.
@@ -3504,24 +3890,31 @@ To add and configure dynamic clouds in the background:
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-1.jpg" width="40%"/>
 
 2. Select the **Clouds** object, then in the **Properties** window,
+
    1. Set **Cover** to **0.625**.
    1. Set **Density** to **0.5**.
    1. Set **Color** to **143, 143, 143**.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/BackgroundClouds-2.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
 
 ### Foreground Clouds
 
 The second type of special effect the final sample laser tag environment uses to add movement to the 3D space is an effect called particle emitters. [Particle emitters](../../effects/particle-emitters.md) emit 2D images, or particles, that look and behave for the duration of their lifetime according to the particle emitter's set properties, and they are useful for creating movement that feels and often is close to the user.
 
-To add and configure floating a cloud asset in the foreground around the island:
+Particle emitters have many properties you can adjust to achieve both subtle and bold effects. The following instructions show you how to exactly recreate the foreground clouds within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep these clouds large and with a gentle motion between the gameplay space and the static background.
 
-1. Add a **block** `Class.Part` with a `Class.Part.Size` of **362, 60, 431** to the environment that covers the entire island.
-2. Select this **block** `Class.Part`, then in the **Properties** window,
+To add and configure foreground clouds:
+
+1. Add a **block** part to a position where you want users to see a floating cloud.
+2. Select this **block** part, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
 3. Create a particle emitter within this part.
-   1. In the **Explorer** window, hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+   1. In the **Explorer** window, hover over the **block** part and click the **⊕** button. A contextual menu displays.
    1. From the contextual menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area.
 4. Select this particle emitter, then in the **Properties** window,
 
@@ -3529,21 +3922,21 @@ To add and configure floating a cloud asset in the foreground around the island:
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-4a.png" width="100%"/>
 
-   1. Set **LightEmission** to **0.3**.
-   1. Set **LightInfluence** to **0.2**.
-   1. Set **Orientation** to **FacingCameraWorldUp**.
-   1. Set **Size** to **100**.
-   1. Set **Squash** to **-0.25**.
-   1. Set **Texture** to **rbxassetid://10714362544**.
+   1. Set **LightEmission** to **0.3** to blend the colors of the texture and its environment.
+   1. Set **LightInfluence** to **0.2** to allow environment light to have a subtle effect on the color of particles.
+   1. Set **Orientation** to **FacingCameraWorldUp** so particles always emit up toward the sky.
+   1. Set **Size** to **100** to create large clouds.
+   1. Set **Squash** to **-0.25** to shrink particles horizontally.
+   1. Set **Texture** to an image of a cloud. The sample uses **rbxassetid://10714362544**.
    1. Set **Transparency** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-4b.png" width="100%"/>
 
-   1. Set **Lifetime** to **30**.
-   1. Set **Rate** to **0.25**.
-   1. Set **Acceleration** to **0, -0.8, 0**.
-   1. Set **Drag** to **0.1**.
-   1. Enable **LockedToPart**.
+   1. Set **Lifetime** to **30** to fade out particles at 30 seconds.
+   1. Set **Rate** to **0.25** to emit particles slowly.
+   1. Set **Acceleration** to **0, -0.8, 0** to impact particle speed over their lifetime.
+   1. Set **Drag** to **0.1** to make particles look their speed over time.
+   1. Enable **LockedToPart** to keep particles close to the particle emitter.
 
    <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/CloudVid1.mp4" width="100%"></video>
 
@@ -3559,36 +3952,39 @@ In addition, you can layer multiple particle emitters together to give clouds mo
 
 Particle emitters are such a versatile type of special effect because they offer so many properties you can customize to create interesting visual effects, such as glowing portals, green billowing smoke, or vibrant explosions. The final sample laser tag environment uses particle emitters again in this section to create floating dust particles that surround the user as they navigate the outdoor space.
 
+Similar to the foreground clouds steps, the following instructions show you how to exactly recreate the dust particles within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file, but you can modify any property for the needs of your own experience. It's recommended to keep particle speed slow to only provide micro motion within the environment.
+
 To add and configure dust particles for the outdoor space:
 
-1. Add a **block** `Class.Part` with a `Class.Part.Size` of **339, 42, 100** to the environment that represents where you want users to see a floating cloud.
-2. Select this **block** `Class.Part`, then in the **Properties** window,
+1. Add a **block** part to the environment that covers the entire island.
+2. Select this **block** part, then in the **Properties** window,
    1. Set **Transparency** to **1**.
+   1. Disable **CanCollide**.
    1. Enable **Anchored**.
 3. Create a particle emitter within this part.
-   1. In the **Explorer** window, hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+   1. In the **Explorer** window, hover over the **block** part and click the **⊕** button. A contextual menu displays.
    1. From the contextual menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area.
 4. Select this particle emitter, then in the **Properties** window,
 
-   1. Set **Color** to **192, 241, 255**.
+   1. Set **Color** to **192, 241, 255** to give the particles a light blue hue.
    1. Set **Size** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticles-4b.png" width="100%"/>
 
-   1. Set **Texture** to **rbxassetid://14302399641**.
+   1. Set **Texture** to a dust mote image. The sample uses **rbxassetid://14302399641**.
    1. Set **Transparency** to a number sequence that looks like the following image.
 
       <img src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticles-4d.png" width="100%"/>
 
-   1. Set **ZOffset** to **-5**.
-   1. Set **Lifetime** to **1, 10**.
-   1. Set **Rate** to **50000**.
-   1. Set **RotSpeed** to **-60**.
-   1. Set **Speed** to **1, 5**.
-   1. Set **Acceleration** to **1, -1, 1**.
-   1. Enable **LockedToPart**.
+   1. Set **ZOffset** to **-5** to move particles away from the camera.
+   1. Set **Lifetime** to **1, 10** to set the minimum and maximum age of a particle to 1 and 10 seconds, respectively.
+   1. Set **Rate** to **50000** to create many particles for your environment.
+   1. Set **RotSpeed** to **-60** to create a range of speeds for newly emitted particles.
+   1. Set **Speed** to **1, 5** to set the minimum and maximum speed of a particle to 1 and 5 studs per second, respectively.
+   1. Set **Acceleration** to **1, -1, 1** to impact particle speed over its lifetime.
+   1. Enable **LockedToPart** to keep particles close to the particle emitter.
 
-<video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticlesVid-1.mp4" width="100%"></video>
+   <video controls src="../../assets/tutorials/environmental-art-curriculum/Section4/DustParticlesVid-1.mp4" width="100%"></video>
 
 ## Configure Lighting Sources
 
@@ -3607,7 +4003,27 @@ Studio begins every experience with the `Enum.Technology.ShadowMap` lighting sys
 
 For example, the `Enum.Technology.Future` lighting system automatically detects when a user is either in an interior or exterior space, then it responds by enabling the appropriate lighting model. This means that reflections are able to reflect off the floor and ceiling within the building, providing a richer visual experience as users navigate through combat pockets.
 
-To configure global lighting:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To configure your own global lighting:
+
+1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Global Lighting](../../environment/lighting.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-1.jpg" width="100%"/>
+
+1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Atmospheric Effects](../../environment/atmosphere.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
+
+1. **(Optional)** Apply one or more customizable filters, such as bloom, depth of field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the global lighting configuration within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window,
 
@@ -3639,7 +4055,10 @@ To configure global lighting:
 
 4. In the **Explorer** window, select the **Lighting** service's child **DepthOfField** object, then in the **Properties** window, set **FarIntensity** to **0.05**.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
+
+  </TabItem>
+</Tabs>
 
 ### Local Lighting
 
@@ -3653,18 +4072,76 @@ Local light sources create points of reference and directionality for users. For
     Applying light sources is an art form, and it takes time to figure out what lighting configurations work to meet the needs of your experience. It's normal and expected for your lighting to look and feel different from the final sample laser tag environment.
 </Alert>
 
-To configure local lighting:
+<Tabs>
+  <TabItem key = "1" label="Create Your Own">
+
+To configure your own local lighting:
+
+1. Add and configure glowing lights around the perimeter hallways that provide orientation cues to users navigating around the building.
+
+   1. Add and position a **block** part near the top of one of your perimeter hallways, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+   1. In the **Explorer** window, add a **SurfaceLight** object to the part.
+      1. Hover over the part and click the **⊕** button. A contextual menu displays.
+      1. From the contextual menu, insert a **SurfaceLight** object.
+   1. Select the **SurfaceLight** object, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Face** to the direction you want the light to shine.
+      1. Set **Range** to a value that reflects how far you want your light to reach.
+   1. Repeat this process, positioning and orienting parts to complete the glowing perimeter lights.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-1.jpg" width="100%"/>
+
+1. Add and configure small hallway interior lights that illuminate cross lanes.
+
+   1. Add and position a **block** part near the top of one of your cross lane hallways, then in the **Properties** window,
+      1. Set **Color** to a bright color.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+   1. In the **Explorer** window, add a **SpotLight** object to the part.
+      1. Hover over the part and click the **⊕** button. A contextual menu displays.
+      1. From the contextual menu, insert a **SpotLight** object.
+   1. Select the **SpotLight** object, then in the **Properties** window,
+      1. Set **Angle** to a value that reflects the angle you want your light to shine.
+      1. Set **Face** to the direction you want the light to shine.
+      1. Set **Range** to a value that reflects how far you want your light to reach.
+   1. Repeat this process, positioning and orienting parts above doors and hallways until you are happy with the interior lighting.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-2.jpg" width="100%"/>
+
+1. Add and configure the spawn zone lights.
+
+   1. Add a **block** part that is the size of your left spawn zone, and position it above the spawn zone's ceiling.
+   1. In the **Properties** window,
+      1. Set **Color** to the color theme of the team on the left of the map.
+      1. Set **Material** to **Neon**.
+      1. Enable **Anchored**.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3a.jpg" width="100%"/>
+
+   1. Repeat this process for the right spawn zone.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
+
+   1. **(Optional)** Add and anchor light fixtures around the interior and exterior of the building from your own asset library.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the local lighting configuration within the sample [Environment Art - Constructing](https://www.roblox.com/games/14447826396/Environment-Art-Constructing) place file:
 
 1. Add and configure the glowing perimeter lights.
 
-   1. Add a **block** `Class.Part` for one of the glowing perimeter lights, then in the **Properties** window,
+   1. Add a **block** part for one of the glowing perimeter lights, then in the **Properties** window,
       1. Set **Color** to **199, 166, 147**
       1. Set **Material** to **Neon**.
       1. Set **Size** to **89.254, 1, 1**.
       1. Set **CFrame.Position** to **-78.297, 21, 293.439**.
       1. Enable **Anchored**.
    1. In the **Explorer** window, add a **SurfaceLight** object to the part.
-      1. Hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+      1. Hover over the **block** part and click the **⊕** button. A contextual menu displays.
       1. From the contextual menu, insert a **SurfaceLight** object.
    1. Select the **SurfaceLight** object, then in the **Properties** window,
       1. Set **Color** to **211, 190, 150**.
@@ -3676,14 +4153,14 @@ To configure local lighting:
 
 2. Add and configure the small hallway interior lights.
 
-   1. Add a **block** `Class.Part` for one of the glowing perimeter lights, then in the **Properties** window,
+   1. Add a **block** part for one of the small hallway interior lights, then in the **Properties** window,
       1. Set **Color** to **163, 162, 165**.
       1. Set **Material** to **Neon**.
       1. Set **Size** to **0.25, 0.25, 1**.
       1. Set **CFrame.Position** to **-53.962, 19.936, 291.932**.
       1. Enable **Anchored**.
    1. In the **Explorer** window, add a **SpotLight** object to the part.
-      1. Hover over the **block** `Class.Part` and click the **⊕** button. A contextual menu displays.
+      1. Hover over the **block** part and click the **⊕** button. A contextual menu displays.
       1. From the contextual menu, insert a **SpotLight** object.
    1. Select the **SpotLight** object, then in the **Properties** window,
       1. Set **Angle** to **135**.
@@ -3695,7 +4172,7 @@ To configure local lighting:
 
 3. Add and configure the spawn zone lights.
 
-   1. Add a **block** `Class.Part` for the left spawn zone, then in the **Properties** window,
+   1. Add a **block** part for the left spawn zone, then in the **Properties** window,
 
       1. Set **Color** to **88, 218, 171**.
       1. Set **Material** to **Neon**.
@@ -3703,7 +4180,9 @@ To configure local lighting:
       1. Set **CFrame.Position** to **-77, 20.6, 321**.
       1. Enable **Anchored**.
 
-   1. Add a **block** `Class.Part` for the right spawn zone, then in the **Properties** window,
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3a.jpg" width="100%"/>
+
+   1. Add a **block** part for the right spawn zone, then in the **Properties** window,
       1. Set **Color** to **255, 170, 255**.
       1. Set **Material** to **Neon**.
       1. Set **Size** to **62.5, 1, 37.5**.
@@ -3713,6 +4192,9 @@ To configure local lighting:
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3B.jpg" width="100%"/>
 
 4. **(Optional)** Using the sample [Environment Art Asset Library](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library), add and anchor light fixtures around the interior and exterior of the building. For example, the final sample laser tag environment uses **LightFixtureTall**, **LightFixtureShort**, **TouchScreenA**, and **Roblox Sign** lighting fixtures to complete the environment.
+
+  </TabItem>
+</Tabs>
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-4.jpg" width="100%"/>
 
