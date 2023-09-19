@@ -56,7 +56,7 @@ This content covers 3D accessories and clothing assets. See [Classic Clothing](.
 
 When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../art/marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
-For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions).
+For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
 You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md).
