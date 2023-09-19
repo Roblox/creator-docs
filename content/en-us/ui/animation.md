@@ -17,7 +17,7 @@ To tween the **position** of a `Class.GuiObject`:
 
 1. Set the `Class.GuiObject.AnchorPoint|AnchorPoint` for the object.
 1. Determine `Datatype.UDim2` coordinates for the object's target position, using the **scale** parameters of `Datatype.UDim2` instead of exact pixel values so that the object tweens to the exact center of the screen.
-1. Pass a `Datatype.TweenInfo` and the target `Class.GuiObject.Position|Position` to `Class.TweenService:Create()`.
+1. Pass a `Datatype.TweenInfo` and the target position to `Class.TweenService:Create()`.
 1. Play the tween with `Class.Tween:Play()`.
 
 The following code snippet moves an `Class.ImageLabel` within a `Class.ScreenGui` to the exact center of the screen:
