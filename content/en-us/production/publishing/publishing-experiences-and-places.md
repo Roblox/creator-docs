@@ -170,12 +170,12 @@ The first option is to do nothing. If you take no action, players transition to 
 
 The **Restart Servers for Updates** option is the best choice for most updates. When you choose this option, Roblox performs the following actions:
 
-- Stops matchmaking to existing servers.
+- Stops matchmaking to servers running the old version of the experience. Servers running the latest version are unaffected.
 - Starts replacement servers.
-- Shuts down existing servers as their replacements become ready.
+- Shuts down old servers as their replacements become ready.
 - Prompts players to rejoin the new version of the experience. If they choose to rejoin, all players on an existing server connect to the same replacement server.
 
-Depending on the number of servers to replace, this process takes between 1-6 minutes. Most experiences update in less than one minute.
+Depending on the number of servers to replace, this process can take up to six minutes. Most experiences update in less than one minute.
 
 To restart all servers for updates:
 
@@ -187,7 +187,7 @@ To restart all servers for updates:
 The **Shut Down All Servers** option immediately shuts down all servers and removes players from the experience. This option is highly disruptive: if players rejoin the experience, matchmaking does not keep them together. As such, **Shut Down All Servers** is best for after you've fixed a game-breaking bug or other situations in which you don't want players on the old version for even a short duration.
 
 <Alert severity="info">
-A comparable option is to make your experience private, which shuts down its servers just as quickly.
+A comparable option is to make your experience private, which shuts down its servers just as quickly. This option has the added benefit of preventing players from rejoining the experience while you fix an issue.
 </Alert>
 
 To shut down all servers:

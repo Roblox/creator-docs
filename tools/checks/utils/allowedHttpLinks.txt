@@ -103,6 +103,7 @@ https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/roact/
 https://github.com/osyrisrblx/t
+https://github.com/Roblox/roblox-blender-plugin
 https://grandtraining.co.nz/
 https://greece.alg.academy/
 https://helpx.adobe.com/uk/photoshop/using/whats-new.html
