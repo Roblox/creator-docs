@@ -65,11 +65,10 @@ In real life, we don't usually think about the algorithms we use everyday. Compu
       set color
       rotate
       set location
-      parent to workplace
+      parent to workspace
     end
     ```
     </td>
-
   </tr>
   <tr>
     <td>
@@ -77,7 +76,7 @@ In real life, we don't usually think about the algorithms we use everyday. Compu
     </td>
     <td>
     ```lua
-    for countDown 10,1,1 do
+    for countDown = 10, 1, 1 do
       time -= 1
       task.wait(1)
     end
