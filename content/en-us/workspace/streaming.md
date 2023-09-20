@@ -403,7 +403,7 @@ In some cases, it's necessary to detect when an object streams in or out and rea
    	end
 
    	task.wait(0.05)
-   end)
+   end
    ```
 
 ## Customizing the Pause Screen
