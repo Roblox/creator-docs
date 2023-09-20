@@ -361,7 +361,7 @@ In Luau, you can write variables and logic in a tighter scope than their functio
 local example = "Example text"
 
 do
-	local example = example .. " changed!"
+	example ..= " changed!"
 	print(example)  -- Outputs 'Example text changed!'
 end
 

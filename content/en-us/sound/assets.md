@@ -11,33 +11,29 @@ The [Creator Marketplace](../production/publishing/creator-marketplace.md) is wh
 
 To find audio assets:
 
-1. Navigate to the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md), then use the filter dropdown to select the **Audio** category.
+1. Navigate to the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md), then use the category selector dropdown to select **Audio**.
 
    <img src="../assets/studio/toolbox/Marketplace-Audio.png" width="360" />
 
-1. **(Optional)** Use the **advanced sort** popup to sort by endorsed audio.
+1. **(Optional)** Use the **advanced filter** popup to sort by endorsed audio.
 
-   1. To the right of the search bar, click the **advanced sort** icon.
+   1. On the right side of the search bar, click the **advanced filter** button.
+
+      <img src="../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="360" />
 
    1. In the **Creator** field, enter **Roblox**, **Monstercat**, or **APM**.
 
    1. Click the **Apply** button.
 
-   <img src="../assets/studio/toolbox/Marketplace-Advanced-Sort-Creator.png" width="360" />
-
-1. To filter results by audio type, click either the **Sound Effect** or **Music** button.
-
-   <img src="../assets/studio/toolbox/Marketplace-Audio-Type-Picker.png" width="360" />
-
-1. To sort by sound effect category or by music genre, click the **Browse by Category** or **Browse by Genre** dropdown.
+1. To sort results by sound effects or music tracks, click either the **Sound&nbsp;Effect** or **Music** button. Then, optionally, filter by sound category or music genre from the dropdown lists.
 
    <GridContainer numColumns="2">
      <figure>
-       <img src="../assets/studio/toolbox/Marketplace-Audio-Sound-Effects-Category.png" />
+       <img src="../assets/studio/toolbox/Marketplace-Audio-Sound-Effects-Category.png" width="360" />
        <figcaption>Sound effects by category</figcaption>
      </figure>
      <figure>
-       <img src="../assets/studio/toolbox/Marketplace-Audio-Music-Genre.png" />
+       <img src="../assets/studio/toolbox/Marketplace-Audio-Music-Genre.png" width="360" />
        <figcaption>Music tracks by genre</figcaption>
      </figure>
    </GridContainer>
@@ -45,8 +41,6 @@ To find audio assets:
 1. In the **Search** field, type keywords for the audio you want to find and select the search icon. Results populate according to your set filters.
 
 1. Right-click the desired audio and select **Copy&nbsp;Asset&nbsp;ID** to get its asset ID for [playing the audio](../sound/objects.md) through a `Class.Sound` object.
-
-   <img src="../assets/studio/toolbox/Marketplace-Audio-Copy-Asset-ID.png" width="360" />
 
 ## Importing Custom Audio
 

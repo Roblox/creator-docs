@@ -20,9 +20,9 @@ description: PBR textures are advanced textures using multiple texture maps.
 </TabItem>
 </Tabs>
 
-You can use a variety of applications and workflows to create PBR textures during the modeling and texturing process of a custom 3D object as long as Roblox Studio [supports](../../art/avatar/specifications.md#textures) the texture maps.
+Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/avatar/specifications.md#textures) the specific texture maps you're using.
 
-This guide provides instructions on [setting up](#enabling-surface-appearance) your mesh objects to use PBR textures maps and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [Material References](../../art/modeling/material-reference.md) for common material values and image comparisons as well as clothing examples.
+This guide provides instructions on [setting up](#enabling-surface-appearance) your mesh objects to use PBR texture maps, and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [Material References](../../art/modeling/material-reference.md) for common material values, image comparisons and clothing examples.
 
 ## Enabling Surface Appearance
 
@@ -52,7 +52,7 @@ To enable surface appearance for a `Class.MeshPart`:
 Studio currently supports 4 types of PBR texture maps: **Color**, **Normal**, **Metalness**, **Roughness**. Each of these maps correspond to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
 
 <Alert severity = 'warning'>
-Avoid adjusting material values to look better in one specific lighting situation. You should base your material values on the physical characteristics and test and reiterate to achieve a result that remains visually accurate in various lighting environments.
+Avoid adjusting material values to look better in one specific lighting situation. You should base your material values on the physical characteristics and test and iterate to achieve a result that remains visually accurate in various lighting environments.
 </Alert>
 
 See the following examples for an overview of Roblox's supported texture maps and additional resources:
@@ -76,7 +76,7 @@ The `Class.SurfaceAppearance.ColorMap|ColorMap` property sets the color data of 
 </GridContainer>
 </TabItem>
 <TabItem label="Normal">
-The `Class.SurfaceAppearance.NormalMap|NormalMap` texture property defines the topography of the surface allowing you to visual textures such as bumps, dents, or cracks to your surface. See [Normal](#normal) for additional information.
+The `Class.SurfaceAppearance.NormalMap|NormalMap` texture property defines the topography of the surface allowing you to add visual textures such as bumps, dents, or cracks to your surface. See [Normal](#normal) for additional information.
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap.jpg" />
@@ -137,7 +137,7 @@ For technical details on texture file requirements, see [texture requirements](.
 The **color**, or **albedo**, map determines the color of your texture and consists of mostly color information with little to no lighting or textural information. For additional customization, you can also add [transparency](#alpha-modes) in your albedo texture by adding opacity to your image map.
 
 <Alert severity = 'info'>
-While albedo maps and generic [non-PBR texture maps](../../parts/textures-decals.md), commonly known as **diffuse maps**, contain very similar base color data for an surface, diffuse maps often include shading and lighting values to imitate a specific visual element that are more effectively handled by PBR's [normal](#normal), [roughness](#roughness), and [metalness](#metalness) maps. Using a typical diffuse map instead of an albedo map can often look wrong when the lighting doesn't match with these added baked-in texture elements.
+While albedo maps and generic [non-PBR texture maps](../../parts/textures-decals.md), commonly known as **diffuse maps**, contain very similar base color data for a surface, diffuse maps often include shading and lighting values to imitate a specific visual element that are more effectively handled by PBR's [normal](#normal), [roughness](#roughness), and [metalness](#metalness) maps. Using a typical diffuse map instead of an albedo map may often look incorrect when the lighting doesn't match with these added baked-in texture elements.
 </Alert>
 
 #### Alpha Modes
@@ -151,7 +151,7 @@ You can apply transparency in two different behaviors by setting the following `
 
 ##### Overlay
 
-You can use **Overlay** to reveal sections of the mesh's original color. Since the transparent areas of the color map expose the underlying color, you can design an unique texture map that partially or fully reveals the mesh's `Class.MeshPart.Color|Color` property for custom skin tones or other situations with unique colors.
+You can use **Overlay** to reveal sections of the mesh's original color. Since the transparent areas of the color map expose the underlying color, you can design a unique texture map that partially or fully reveals the mesh's `Class.MeshPart.Color|Color` property for custom skin tones or other situations with unique colors.
 
 The following example demonstrates how the **Overlay** mode works using a white sphere reference:
 
@@ -273,7 +273,7 @@ Normal maps prominently affect the visual surface of a mesh and can accentuate a
 
 ### Roughness
 
-**Roughness**, or **microsurface**, maps determine how light is spread across your model's surface. When roughness is at 0.0, the surface doesn't scatter light at all resulting in a much sharper and brighter reflections and glossiness on your material. At 1.0, light and reflections evenly scatter over the model resulting in a less reflective matte-like surface.
+**Roughness**, or **microsurface**, maps determine how light is spread across your model's surface. When roughness is at 0.0, the surface doesn't scatter light at all, resulting in a much sharper and brighter reflection and glossiness on your material. At 1.0, light and reflections evenly scatter over the model resulting in a less reflective matte-like surface.
 
 Roughness may impact how reflective an object is at different angles, referred to as the **Fresnel** effect. See [Fresnel](#fresnel) for more details and best-practices to maintain consistent reflective behavior.
 
@@ -325,9 +325,9 @@ See the following figure for comparisons of various metalness map values:
 </figure>
 </GridContainer>
 
-Different PBR renderers use various types of workflows for processing reflectiveness. Studio only uses the **metalness workflow** which determines whether a material is a **nonmetal** or a **metal**, sometimes referred to as an **insulator** or **conductor**.
+Different PBR renderers use various workflows for processing reflectiveness. Studio only uses the **metalness workflow** which determines whether a material is a **nonmetal** or a **metal**, sometimes referred to as an **insulator** or **conductor**.
 
-In most cases, you should set this value as either at 0.0 (non-metal) or at 1.0 (metal). You can use partial metalness values when creating more uncommon surfaces with moderate reflective properties, like satin or silk. This practice can subtly fake the reflections in the material to highlight the color from the [color/albedo map](#color-albedo) over colors reflected in the environment.
+In most cases, you should set this value to either 0.0 (non-metal) or 1.0 (metal). You can use partial metalness values when creating more uncommon surfaces with moderate reflective properties, like satin or silk. This practice can subtly fake the reflections in the material to highlight the color from the [color/albedo map](#color-albedo) over colors reflected in the environment.
 
 <Alert severity = 'info'>
 Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [Material References](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.

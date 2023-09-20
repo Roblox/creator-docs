@@ -326,7 +326,7 @@ The following is a list of tags given by [MicroProfiler](../../studio/microprofi
   </tr>
   <tr>
     <td>physicsStepped/worldStep/stepWorld OR stepWorldThrottled</td>
-    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in realtime, some steps may be throttled (stepWorldThrottled) and only "real time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
+    <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (stepWorldThrottled) and only "real time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
     <td>Depends on where the time is going based on the following three phases: stepContacts: narrow phase collision detection geometry tests. Solver step: integrate time and resolve collisions and other constraints updateBroadphase: update positions of assemblies in collision detection system and find possibly colliding narrow phase pairs.</td>
   </tr>
   <tr>
