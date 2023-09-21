@@ -15,7 +15,7 @@ In [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intr
 
 You need a place in your world to put the deadly lava. If you followed the [Introduction to Scripting](../../../tutorials/scripting/basic-scripting/intro-to-scripting.md) course, the lava floor would fit nicely in the gap covered by the disappearing platforms.
 
-1. Insert a `Class.Part` and move it into place in your world. Name it **LavaFloor**.
+1. Insert a `Part` and move it into place in your world. Name it **LavaFloor**.
 2. Resize it so it covers the floor of the enclosing space.
 
    ![](../../../assets/tutorials/deadly-lava/partInserted.jpg)
