@@ -42,7 +42,7 @@ To create a flare:
       </thead>
       <tbody>
       <tr>
-      <td>VFX_Flare</td>
+      <td>Emitter_Flare</td>
       <td>`20, 20, 20`</td>
       <td>`400, 331, 79`</td>
       <td>`0, 0, 0`</td>
@@ -71,7 +71,7 @@ Each particle displays an image set by the `Class.ParticleEmitter.Texture|Textur
 
 You can use Roblox's pre-made flare image for the `Class.ParticleEmitter.Texture|Texture` of the particle emitter. To use Roblox's pre-made asset:
 
-1. In the **Explorer** window, select **Emitter_Flare**.
+1. In the **Explorer** window, select **Emitter_Flare** > **Attachment** > **ParticleEmitter**.
 1. In the **Properties** window, set **Texture** to `rbxassetid://8983307836`.
 
 #### Basic Properties
@@ -84,7 +84,7 @@ Properties such as `Class.ParticleEmitter.Lifetime` require a minimum and maximu
 
 To configure the basic properties of the particle emitter:
 
-1. In the **Explorer** window, select **Emitter_Flare**.
+1. In the **Explorer** window, select **Emitter_Flare** > **Attachment** > **ParticleEmitter**.
 1. In the **Properties** window,
 
    1. Set **Color** to **127, 84, 59**, or to a color you prefer for the flare.
@@ -101,7 +101,7 @@ Some properties such as `Class.ParticleEmitter.Size` and `Class.ParticleEmitter.
 
 To configure the sequences for `Class.ParticleEmitter.Size` and `Class.ParticleEmitter.Transparency`:
 
-1. In the **Explorer** window, select **Emitter_Flare**.
+1. In the **Explorer** window, select **Emitter_Flare** > **Attachment** > **ParticleEmitter**.
 1. In the **Properties** window, click the **…** next to the value for **Size** to open its `Datatype.NumberSequence`.
 1. Add points to the sequence by clicking on it, and move them until the window resembles the following example:
 
@@ -130,7 +130,7 @@ To ensure the flare stands out more, you can put a light into it. There are thre
 
 A `Class.PointLight` is best for this to emit light spherically from the part at the position of the particle effect. To create a light source in the part:
 
-1. Add a **PointLight** to **VFX_Flare**.
+1. Add a **PointLight** to **Emitter_Flare** > **Attachment**.
 1. Select the **PointLight** object, then in the **Properties** window,
    1. Set **Brightness** to **2** to make the light brighter.
    1. Set **Range** to **36** to increase the light's range.
@@ -156,7 +156,7 @@ To create dust particles:
    </thead>
    <tbody>
    <tr>
-   <td>VFX_DustMotes</td>
+   <td>Emitter_DustMotes</td>
    <td>`645, 355, 275`</td>
    <td>`198, 168, 26`</td>
    <td>`0, 0, 0`</td>
@@ -185,7 +185,7 @@ For each point in a `Datatype.NumberSequence`, you can set an _envelope_ using t
 
 Here are the values for all other previously explained properties. Refer back to [Configure the Flare](#configure-the-flare) for these explanations.
 
-1. In the **Explorer** window, select **Emitter_DustMotes**.
+1. In the **Explorer** window, select **Emitter_DustMotes** > **ParticleEmitter**.
 1. In the **Properties** window,
 
    1. Set **Color** to **192, 241, 255**.
