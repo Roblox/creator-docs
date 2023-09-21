@@ -40,7 +40,7 @@ The following example is one path to improve your core loop:
 
 <br />
 
-To learn more on how to design core loops, see [Core Loops](../../production/game-design/core-loops.md)
+To learn more on how to design core loops, see [Core Loops](../../production/game-design/core-loops.md).
 
 ### First-time User Experience
 
@@ -69,6 +69,10 @@ You can also use analytics to improve your FTUE:
 Avoid a complex or time consuming FTUE, as you want to get users to the fun as quickly as possible, ideally in 5 minutes or less after entering your experience.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+To learn more on how to design your FTUE, see [Onboarding](../../production/game-design/onboarding.md).
 
 ### Performance
 

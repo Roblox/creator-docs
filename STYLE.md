@@ -198,7 +198,7 @@ We have the following guidelines for images:
 
 Alerts are a great way to call attention to important information or offset blocks of prose, but use them sparingly and keep them short. When everything is an alert, nothing is:
 
-```
+```md
 <Alert severity="warning">
 This is a beta feature and is subject to change in future releases.
 </Alert>
