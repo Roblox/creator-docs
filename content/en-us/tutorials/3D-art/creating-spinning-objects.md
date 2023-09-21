@@ -26,7 +26,7 @@ To use a script to make a propeller spin indefinitely:
 
    1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
 
-      <img width="80%" img src="../../assets/tutorials/creating-neon-signs/Import-3D.jpg" />
+      <img src="../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
 
    1. Select the **Propeller-Scripting-Method** `.fbx` file, then click the **Open** button. The **Import Preview** window displays.
    1. In the hierarchy panel, select **Propeller_Geo**.
@@ -82,7 +82,7 @@ To configure the propeller components:
 
    1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
 
-      <img width="80%" img src="../../assets/tutorials/creating-neon-signs/Import-3D.jpg" />
+      <img src="../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
 
    1. Select the **Propeller-HingeConstraint-Method** `.fbx` file, then click the **Open** button. The **Import Preview** window displays.
    1. In the **Object General** section, rename the model **Propeller**.

@@ -6,7 +6,7 @@ hideBreadcrumbs: true
 ---
 
 Learn how to create Roblox experiences with a full suite of structured learning
-that walk you through how to build, script, and polish your experiences with
+that walks you through how to build, script, and polish your experiences with
 amazing art and visuals.
 
 <br /> <br />

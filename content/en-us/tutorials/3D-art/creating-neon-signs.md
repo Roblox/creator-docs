@@ -99,7 +99,7 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
 
    1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
 
-      <img width="80%" img src="../../assets/tutorials/creating-neon-signs/Import-3D.jpg" />
+      <img src="../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
 
    1. Select the **open-text** `.obj` file, then click the **Open** button. The **Import Preview** window displays.
    1. Keep the default import settings, then click the **Import** button. The open text models display within the viewport.

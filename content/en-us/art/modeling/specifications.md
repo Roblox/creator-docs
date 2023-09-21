@@ -23,7 +23,6 @@ See the following specifications for general geometry:
 - **Budgets** - Humanoid characters must be within 10k triangles, not including accessories. Less detailed meshes, such as accessories, must be within 4k triangles.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - **No N-gons** - Models must be in quads where possible.
-- **Scale** - Your scene units in Maya or Blender should be set to Centimeters to closely match with Studio's scale.
 
 ## Rigging and Skinning
 

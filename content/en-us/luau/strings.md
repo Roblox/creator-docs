@@ -32,6 +32,18 @@ print(string1)
 --> Hello 'world'!
 ```
 
+If necessary, you can nest multiple brackets inside a string using the same number of equal signs in both the beginning and ending bracket:
+
+```lua
+local string1 = [=[Hello
+[[world!]]
+]=]
+
+print(string1)
+--> Hello
+--> [[world!]]
+```
+
 ## Combining Strings
 
 To combine strings, **concatenate** them with two dots (`..`). Concatenating strings doesn't insert a space between them, so you'll need to include space(s) at the end/beginning of a preceding/subsequent string, or concatenate a space between the two strings.
