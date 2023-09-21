@@ -93,7 +93,7 @@ Only a user can see their own camera configuration, so it is always controlled u
 
 All character models contain a part named **HumanoidRootPart**, which can be used to get the character's position in the world. This sets position the camera points at.
 
-1. Use `Class.Instance:FindFirstChild()|FindFirstChild()` to get the HumanoidRootPart and check it exists using an if statement.
+1. Use `FindFirstChild` to get the HumanoidRootPart and check it exists using an if statement.
 
    ```lua
    local Players = game:GetService("Players")
