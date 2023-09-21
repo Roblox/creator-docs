@@ -3,7 +3,7 @@ title: Cleanup
 comments:
 description: When designing characters in Blender, the character model requires minor adjustments to be Studio-ready.
 next: /art/avatar/creating/exporting
-previous: /art/avatar/creating/caging
+prev: /art/avatar/creating/caging
 ---
 
 Whenever you are ready to export your model, it's important to clean up your project to ensure that your model is ready to export. This includes a variety of tasks that ensure the customized template model and all of the avatar components can import into Studio successfully.

@@ -1,9 +1,6 @@
 ---
 title: Photo Booth
 description: The Photo Booth module lets players strike a unique pose with a background.
-comments: |
-  1. Needs tabbed swapper component for configure() section.
-  2. Potentially fix broken enum links (search "`Enum.").
 ---
 
 Taking a photo is a perfect way to commemorate a great experience. The **PhotoBooth** [developer module](../../resources/modules/index.md) is an easy-to-use photo staging tool which lets the players strike a unique pose with a background that represents their experience.
@@ -19,7 +16,7 @@ To use the **PhotoBooth** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -163,8 +160,8 @@ end)
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
-**Appearance**
-
+<Tabs>
+<TabItem label="Appearance">
 <table>
 <thead>
 	<tr>
@@ -177,57 +174,57 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`frameMessage`</td>
 		<td>Message that is shown at the bottom of the photo. Its duration can be controlled via the `fadeUiDelay` property.</td>
-		<td>`"Use your device to take a screenshot and share!"`</td>
+		<td>"Use your device to take a screenshot and share!"</td>
 	</tr>
 	<tr>
 		<td>`fadeUiDelay`</td>
 		<td>Time to show the frame message before it fades out, in seconds. Set to a negative number to never fade.</td>
-		<td>`3`</td>
+		<td>3</td>
 	</tr>
 	<tr>
 		<td>`closeButtonImage`</td>
 		<td>Image to use for the close photo button, placed overtop the `closeButtonBackgroundImage` image.</td>
-		<td>`"rbxassetid://7027440823"`</td>
+		<td>"rbxassetid://7027440823"</td>
 	</tr>
 	<tr>
 		<td>`closeButtonBackgroundImage`</td>
 		<td>Background image to use for the close photo button.</td>
-		<td>`"rbxassetid://7027440891"`</td>
+		<td>"rbxassetid://7027440891"</td>
 	</tr>
 	<tr>
 		<td>`cameraLandscapePosition`</td>
 		<td>Distance of the photo booth's camera, in front and upward from the character, when taking a photo in landscape mode (`Datatype.Vector2`).</td>
-		<td>`(5, 2)`</td>
+		<td>(5, 2)</td>
 	</tr>
 	<tr>
 		<td>`cameraPortraitPosition`</td>
 		<td>Distance of the photo booth's camera, in front and upward from the character,  when taking a photo in portrait mode (`Datatype.Vector2`).</td>
-		<td>`(10, 1)`</td>
+		<td>(10, 1)</td>
 	</tr>
 	<tr>
 		<td>`countdownFont`</td>
 		<td>Font to use for the numbers in the countdown (`Enum.Font`).</td>
-		<td>`GothamBlack`</td>
+		<td>`Enum.Font|GothamBlack`</td>
 	</tr>
 	<tr>
 		<td>`countdownTextColor`</td>
 		<td>Color of the numbers in the countdown (`Datatype.Color3`).</td>
-		<td>`[255, 255, 255]`</td>
+		<td>[255, 255, 255]</td>
 	</tr>
 	<tr>
 		<td>`printoutCharacterPosition`</td>
 		<td>Position of the character on the screen when the printout is showing (`Datatype.UDim2`).</td>
-		<td>`(0.5, 0, 0.5, 0)`</td>
+		<td>(0.5, 0, 0.5, 0)</td>
 	</tr>
 	<tr>
 		<td>`printoutCharacterSize`</td>
 		<td>Amount of screen space the character takes up in the printout (`Datatype.UDim2`).</td>
-		<td>`(1, 0, 1, 0)`</td>
+		<td>(1, 0, 1, 0)</td>
 	</tr>
 	<tr>
 		<td>`characterAnimation`</td>
 		<td>Asset ID of the animation the character takes in the photo, paused at its starting frame.</td>
-		<td>`"rbxassetid://6899663224"`</td>
+		<td>"rbxassetid://6899663224"</td>
 	</tr>
 	<tr>
 		<td>`filterImage`</td>
@@ -236,9 +233,8 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
-
-**Behavior**
-
+</TabItem>
+<TabItem label="Behavior">
 <table>
 <thead>
 	<tr>
@@ -251,44 +247,32 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`maxActivationDistance`</td>
 		<td>Maximum distance, in studs, a player's character can be from the photo booth for the prompt to appear.</td>
-		<td>`10`</td>
+		<td>10</td>
 	</tr>
 	<tr>
 		<td>`countdownBeepSound`</td>
 		<td>Asset ID of the `Class.Sound` to play for each number shown in the countdown.</td>
-		<td>`"rbxassetid://7743999789"`</td>
+		<td>"rbxassetid://7743999789"</td>
 	</tr>
 	<tr>
 		<td>`countdownFlashSound`</td>
 		<td>Asset ID for the `Class.Sound` to play when the flash effect is shown.</td>
-		<td>`"rbxassetid://7744000850"`</td>
+		<td>"rbxassetid://7744000850"</td>
 	</tr>
 	<tr>
 		<td>`countdownSeconds`</td>
 		<td>Number of seconds to count down for.</td>
-		<td>`3`</td>
+		<td>3</td>
 	</tr>
-</tbody>
-</table>
-
-**Other**
-
-<table>
-<thead>
-	<tr>
-		<th>Key</th>
-		<th>Description</th>
-		<th>Default</th>
-	</tr>
-</thead>
-<tbody>
 	<tr>
 		<td>`photoboothTag`</td>
 		<td>Tag used by `Class.CollectionService` to find all "booths" in the place.</td>
-		<td>`"PhotoBooth"`</td>
+		<td>"PhotoBooth"</td>
 	</tr>
 </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ```lua title='LocalScript - ConfigurePhotoBooth'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

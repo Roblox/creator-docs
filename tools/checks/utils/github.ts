@@ -147,6 +147,12 @@ export const createNewPullRequestComment = ({
   pullRequestReviewComments.push(comment);
 };
 
+export const requiredCheckMessage = `${Emoji.NoEntry} This change is a requirement. Please fix it before merging.`;
+
+export const suggestedCheckMessage = `${Emoji.Bulb} This change is a suggestion but not a requirement.`;
+
+export const automatedMessageDisclaimer = `${Emoji.RobotFace} The feedback in this comment is automated and might be incorrect.`;
+
 /**
  * Construct a new pull request comment for a given VFileMessage and
  * other essential information
@@ -172,12 +178,8 @@ export const getNewPullRequestCommentForVFileMessage = ({
       : `The content quality check says: `
   }${message.reason ? message.reason + '\n' : ''}
 ${message.note ? message.note.split(' (source: ')[0] + '\n' : ''}
-${
-  isRequiredCheck
-    ? `${Emoji.NoEntry} This change is a requirement.`
-    : `${Emoji.Bulb} This change is a suggestion but not a requirement.`
-}
-🤖 The feedback in this comment is automated and might be incorrect.`;
+${isRequiredCheck ? requiredCheckMessage : suggestedCheckMessage}
+${automatedMessageDisclaimer}`;
   const comment = {
     body: commentBody,
     commit_id,

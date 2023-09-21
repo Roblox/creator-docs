@@ -55,10 +55,8 @@ navigation:
             path: /projects/assets/manager
           - title: Toolbox
             path: /projects/assets/toolbox
-          - title: Asset Catalog API
+          - title: External Catalog Queries
             path: /projects/assets/api
-      - title: Archiving
-        path: /projects/assets/archiving
       - title: In-Experience Asset Creation
         path: /projects/assets/in-experience-asset-creation
   - title: 3D Workspace
@@ -507,6 +505,8 @@ navigation:
         section:
           - title: Immersive Ads
             path: /production/monetization/immersive-ads
+          - title: Subscriptions
+            path: /production/monetization/subscriptions
           - title: Developer Products
             path: /production/monetization/developer-products
           - title: Passes
