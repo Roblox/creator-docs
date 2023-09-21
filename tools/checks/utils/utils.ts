@@ -8,6 +8,7 @@ export enum Emoji {
   Mag = '🔍',
   Mailbox = '📫',
   OpenFileFolder = '📂',
+  RobotFace = '🤖',
   WhiteCheckMark = '✅',
 }
 
