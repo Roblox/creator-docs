@@ -60,7 +60,7 @@ When declaring a variable to contain a service, it's best to name it with the ex
 
 To make a user's points display in the leaderboard, all you need to do is create a new `Class.Folder` in their `Class.Player` object called `"leaderstats"` and put their points in there. New objects can be created from within a script via the `Datatype.Instance.new()` function.
 
-1. Create a new `Class.Folder` object using `Instance.new("Folder")`, storing the result in a new variable called `leaderstats`.
+1. Create a new `Folder` object using `Instance.new("Folder")`, storing the result in a new variable called `leaderstats`.
 
    ```lua
    local function onPlayerAdded(player)
@@ -93,11 +93,11 @@ Make sure you name the folder **exactly** as it is shown here (`"leaderstats"`) 
 
 The leaderboard system reads any values in the `leaderstats` folder and displays whatever it finds.
 
-To add a stat which will track a player's points, a new `Class.IntValue` object can be parented to the `leaderstats` folder. The name of the value object will be displayed alongside its current value.
+To add a stat which will track a player's points, a new `IntValue` object can be parented to the `leaderstats` folder. The name of the value object will be displayed alongside its current value.
 
-1. Use a variable named `points` to create a new `Class.IntValue` object using `Datatype.Instance.new()`.
-2. Set the `Class.IntValue.Name|Name` to `"Points"`.
-3. Set the `Class.IntValue.Value|Value` to **0**; this is what the leaderboard will initially display for the player.
+1. Use a variable named `points` to create a new `IntValue` object using `Datatype.Instance.new()`.
+2. Set the `Name` to `"Points"`.
+3. Set the `Value` to **0**; this is what the leaderboard will initially display for the player.
 4. Parent the `points` object to the `leaderstats` folder.
 
 ```lua
