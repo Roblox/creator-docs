@@ -94,7 +94,7 @@ A part can be made invisible by changing the `Class.BasePart.Transparency|Transp
 <figcaption>Changing the Transparency property of the cube</figcaption>
 </figure>
 
-The `Class.BasePart.CanCollide|CanCollide` property determines if other parts (and users) can pass right through the part. If you set it to **false**, users will fall through the platform.
+The `CanCollide` property determines if other parts (and users) can pass right through the part. If you set it to **false**, users will fall through the platform.
 
 <figure>
 <video controls loop muted>
