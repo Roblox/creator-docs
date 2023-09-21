@@ -79,7 +79,7 @@ Complementary contextual purchases are opportunities for players to purchase mul
 
 <figure>
   <img src="../../assets/game-design/contextual-purchases/contextual-purchases-8.png" width="50%"/>
-    <figcaption>*Bee Swarm Simulation* shop. </figcaption>
+    <figcaption>*Bee Swarm Simulator* shop. </figcaption>
   </figure>
 
 A complementary contextual purchase opportunity would be to prompt the player to also purchase the other pass they didn't initially choose, due to the passes' complementary nature. Communicating the complementary nature of two or more items in a shop can also be helpful for newer players learning about the experience.
