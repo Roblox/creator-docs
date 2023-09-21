@@ -436,3 +436,7 @@ end
 ## NPC Bubbles
 
 You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
+
+<Alert severity="warning">
+  `Class.TextChatService:DisplayBubble()` only works on client-side local scripts.
+</Alert>

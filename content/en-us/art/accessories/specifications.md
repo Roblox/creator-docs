@@ -15,7 +15,6 @@ When ready to export, see [Export Requirements](../../art/modeling/export-requir
 - **Texture Budget** - Texture maps can't exceed **1024x1024px**. Assets using additional maps with `Class.SurfaceAppearance` can use smaller **256x256px** maps to optimize performance with virtually no loss in detail.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - **No N-gons** - Models must be in quads where possible.
-- **Scale** - Your scene units in Maya or Blender should be set to Centimeters to closely match with Studio's scale.
 
 - **Mesh Size** - Meshes must follow a standard size (in studs, centered on attachment point) depending on its type:
 

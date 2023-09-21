@@ -59,11 +59,9 @@ To create `Class.MaterialVariant` objects for your tileable textures:
    <GridContainer numColumns="2">
      <figure>
        <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7a.jpg" width="85%"/>
-       <figcaption>Moss</figcaption>
      </figure>
      <figure>
        <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7b.jpg" width="100%"/>
-       <figcaption>MossFlowers</figcaption>
      </figure>
    </GridContainer>
 

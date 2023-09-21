@@ -59,6 +59,12 @@ The [Immersive Ads](../../production/monetization/immersive-ads.md) system allow
   </figure>
 </GridContainer>
 
+### Subscriptions
+
+[Subscriptions](../../production/monetization/subscriptions.md) within experiences let you offer users recurring benefits for a monthly fee.
+
+<img src="../../assets/monetization/developer-products/subscriptions.png" width="800" />
+
 ### Developer Products
 
 A [Developer Product](../../production/monetization/developer-products.md) is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions. You can prompt purchases, record them, and get product information through scripting.
