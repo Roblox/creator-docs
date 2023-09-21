@@ -1,9 +1,6 @@
 ---
 title: Selfie Mode
 description: The Selfie Mode module lets players capture screenshots to commemorate fun moments.
-comments: |
-  1. Needs tabbed swapper component for Depth Of Field, Filter, Pose, and setTheme() sections.
-  2. Potentially fix broken enum links (search "`Enum.").
 ---
 
 Players already take screenshots to commemorate fun moments in experiences. The **SelfieMode** [developer module](../../resources/modules/index.md) lets players capture a cleaner memory of that moment without the chat window or player list, while also supporting filter effects, hiding of other characters, and posing.
@@ -19,7 +16,7 @@ To use the **SelfieMode** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -78,16 +75,14 @@ SelfieMode.configure({
 
 By default, **SelfieMode** shows a generic **depth of field** effect (subtle blur of the background) when a player toggles the action.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Depth-Of-Field-Off.jpg" />
-    <figcaption>Off</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Depth-Of-Field-On.jpg" />
-    <figcaption>On</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+  <TabItem label="Off">
+    <img src="../../assets/developer-modules/selfie-mode/Depth-Of-Field-Off.jpg" width="90%" />
+  </TabItem>
+  <TabItem label="On">
+    <img src="../../assets/developer-modules/selfie-mode/Depth-Of-Field-On.jpg" width="90%" />
+  </TabItem>
+</Tabs>
 
 <Alert severity="warning">
 <p>This effect does not render on mobile devices such as phones and tablets. As such, it will not be offered as an action on those devices.</p>
@@ -124,39 +119,33 @@ By default, other characters are visible alongside the player's character. Playe
 
 The **Filter** action lets the player apply a preset filter from the options **Pop**, **Soft**, **Antique**, **Cute**, **Dramatic**, and **Monochrome**.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Filters-Soft.jpg" />
-    <figcaption>Soft</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Filters-Dramatic.jpg" />
-    <figcaption>Dramatic</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Filters-Monochrome.jpg" />
-    <figcaption>Monochrome</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+  <TabItem label="Soft">
+    <img src="../../assets/developer-modules/selfie-mode/Filters-Soft.jpg" width="90%" />
+  </TabItem>
+  <TabItem label="Dramatic">
+    <img src="../../assets/developer-modules/selfie-mode/Filters-Dramatic.jpg" width="90%" />
+  </TabItem>
+	<TabItem label="Monochrome">
+    <img src="../../assets/developer-modules/selfie-mode/Filters-Monochrome.jpg" width="90%" />
+  </TabItem>
+</Tabs>
 
 #### Pose
 
 The **Pose** action lets the player select a preset pose from the options **Cheer**, **Clapping**, **Dolphin**, **Flossing**, **Guitar**, **Jump&nbsp;Wave**, **Louder**, **Top&nbsp;Rock**, **Twirl**, and **Wave**.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Poses-Flossing.jpg" />
-    <figcaption>Flossing</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Poses-Louder.jpg" />
-    <figcaption>Louder</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/developer-modules/selfie-mode/Poses-Twirl.jpg" />
-    <figcaption>Twirl</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+  <TabItem label="Flossing">
+    <img src="../../assets/developer-modules/selfie-mode/Poses-Flossing.jpg" width="90%" />
+  </TabItem>
+  <TabItem label="Louder">
+    <img src="../../assets/developer-modules/selfie-mode/Poses-Louder.jpg" width="90%" />
+  </TabItem>
+	<TabItem label="Twirl">
+    <img src="../../assets/developer-modules/selfie-mode/Poses-Twirl.jpg" width="90%" />
+  </TabItem>
+</Tabs>
 
 ## API Reference
 
@@ -293,7 +282,7 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`disableCharacterMovement`</td>
 		<td>If true, prevents character from moving while selfie mode is open.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 	<tr>
 		<td>`depthOfFieldEffect`</td>
@@ -459,8 +448,8 @@ end
 
 Configures the selfie mode theme, including text size, font, button/tooltip colors, and more. This function can only be called from a `Class.LocalScript`.
 
-**General**
-
+<Tabs>
+<TabItem label="General">
 <table>
 <thead>
 	<tr>
@@ -478,7 +467,7 @@ Configures the selfie mode theme, including text size, font, button/tooltip colo
 	<tr>
 		<td>`font`</td>
 		<td>Font used across all UI (`Enum.Font`).</td>
-		<td>GothamMedium</td>
+		<td>`Enum.Font|GothamMedium`</td>
 	</tr>
 	<tr>
 		<td>`padding`</td>
@@ -507,9 +496,8 @@ Configures the selfie mode theme, including text size, font, button/tooltip colo
 	</tr>
 </tbody>
 </table>
-
-**Buttons and Tooltips**
-
+</TabItem>
+<TabItem label="Buttons and Tooltips">
 <table>
 <thead>
 	<tr>
@@ -566,6 +554,8 @@ Configures the selfie mode theme, including text size, font, button/tooltip colo
 	</tr>
 </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ```lua title='LocalScript' highlight=''
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

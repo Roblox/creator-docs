@@ -1,9 +1,6 @@
 ---
 title: Scavenger Hunt
 description: The Scavenger Hunt module gives players an inherently gamified way to explore an experience.
-comments: |
-  1. Needs tabbed swapper component for configureClient() section.
-  2. Potentially fix broken enum links (search "`Enum.").
 ---
 
 The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives players an inherently gamified way to explore your experience, organically introducing them to the entire place. Player progress is persistent, so scavenger hunts can continue across sessions.
@@ -23,7 +20,7 @@ To use the **ScavengerHunt** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -61,14 +58,14 @@ If you don't want to use the bundled mesh tokens, any `Class.Model` or `Class.Ba
 - Object contains a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the token is collected.
 
   <GridContainer numColumns="2">
-    <figure>
-      <img src="../../assets/developer-modules/scavenger-hunt/Token-BasePart-Structure.png" />
-      <figcaption>BasePart</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/developer-modules/scavenger-hunt/Token-Model-Structure.png" />
-      <figcaption>Model</figcaption>
-    </figure>
+   <figure>
+   <img src="../../assets/developer-modules/scavenger-hunt/Token-Model-Structure.png" width="320" />
+   <figcaption>Model</figcaption>
+   </figure>
+   <figure>
+   <img src="../../assets/developer-modules/scavenger-hunt/Token-BasePart-Structure.png" width="320" />
+   <figcaption>MeshPart</figcaption>
+   </figure>
   </GridContainer>
 
 <Alert severity="error">
@@ -85,7 +82,7 @@ Regions differ slightly from tokens, as large areas that are marked as "collecte
 
 1. Create an anchored part around the region, such as a block or sphere. The module will automatically disable the `Class.BasePart.CanCollide|CanCollide` property on runtime so players do not physically collide with the region.
 1. Give it a **unique name**. This name is how the module tracks which regions each player has entered.
-1. Assign the part a `Class.CollectionService` tag of `ScavengerHuntPart`. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
+1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the tag `ScavengerHuntPart` to the part so that `Class.CollectionService` detects it. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
 1. Include a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the region is entered.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Region-Structure.png" width="320" />
@@ -224,8 +221,8 @@ end)
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
-**General**
-
+<Tabs>
+<TabItem label="General">
 <table>
 <thead>
 	<tr>
@@ -238,83 +235,82 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`autoDismissTime`</td>
 		<td>Time in seconds before the modal automatically dismisses itself or navigates to the next page if there is one. Set to 0 to disable.</td>
-		<td>`20`</td>
+		<td>20</td>
 	</tr>
 	<tr>
 		<td>`closeModalGamepad`</td>
 		<td>Gamepad button used to close modals (`Enum.KeyCode`).</td>
-		<td>`ButtonA`</td>
+		<td>`Enum.KeyCode|ButtonA`</td>
 	</tr>
 	<tr>
 		<td>`closeModalKeyboard`</td>
 		<td>Keyboard key used to close modals (`Enum.KeyCode`).</td>
-		<td>`E`</td>
+		<td>`Enum.KeyCode|E`</td>
 	</tr>
 	<tr>
 		<td>`completeModalText`</td>
 		<td>Text to show on the modal that appears after clicking the token tracker when the scavenger hunt is complete.</td>
-		<td>`"Thanks for participating!"`</td>
+		<td>"Thanks for participating!"</td>
 	</tr>
 	<tr>
 		<td>`infoModalText`</td>
 		<td>Text to show on the modal that appears after clicking the token tracker.</td>
-		<td>`"Find all the tokens to complete the hunt"`</td>
+		<td>"Find all the tokens to complete the hunt"</td>
 	</tr>
 	<tr>
 		<td>`tokenRotationSpeed`</td>
 		<td>Speed at which the tokens rotate, in degrees per second. Set to 0 to prevent rotation.</td>
-		<td>`20`</td>
+		<td>20</td>
 	</tr>
 	<tr>
 		<td>`nextArrowImage`</td>
 		<td>Image used to indicate there are more modal pages to show after the current modal page.</td>
-		<td>`"rbxassetid://8167172095"`</td>
+		<td>"rbxassetid://8167172095"</td>
 	</tr>
 	<tr>
 		<td>`openTokenTrackerGamepad`</td>
 		<td>Gamepad button used to show the modals that appear after activating the token tracker (`Enum.KeyCode`).</td>
-		<td>`ButtonY`</td>
+		<td>`Enum.KeyCode|ButtonY`</td>
 	</tr>
 	<tr>
 		<td>`openTokenTrackerKeyboard`</td>
 		<td>Keyboard key used to show the modals that appear after activating the token tracker (`Enum.KeyCode`).</td>
-		<td>`Y`</td>
+		<td>`Enum.KeyCode|Y`</td>
 	</tr>
 	<tr>
 		<td>`openTokenTrackerGamepadButtonImage`</td>
 		<td>Image for the gamepad button that is used to activate the token tracker.</td>
-		<td>`"rbxassetid://8025860488"`</td>
+		<td>"rbxassetid://8025860488"</td>
 	</tr>
 	<tr>
 		<td>`regionIcon`</td>
 		<td>Icon to display next to the token tracker when entering regions.</td>
-		<td>`"rbxassetid://8073794624"`</td>
+		<td>"rbxassetid://8073794624"</td>
 	</tr>
 	<tr>
 		<td>`tokenIcon`</td>
 		<td>Icon to display next to the token tracker when collecting tokens.</td>
-		<td>`"rbxassetid://8073794477"`</td>
+		<td>"rbxassetid://8073794477"</td>
 	</tr>
 	<tr>
 		<td>`tokenTrackerPositionSmallDevice`</td>
 		<td>Position of the token tracker UI on small devices such as phones (`Datatype.UDim2`).</td>
-		<td>`(1, 0, 0, 84)`</td>
+		<td>(1, 0, 0, 84)</td>
 	</tr>
 	<tr>
 		<td>`tokenTrackerPositionLargeDevice`</td>
 		<td>Position of the token tracker UI on larger devices like tablets and PC (`Datatype.UDim2`).</td>
-		<td>`(1, 0, 1, -16)`</td>
+		<td>(1, 0, 1, -16)</td>
 	</tr>
 	<tr>
 		<td>`useRegions`</td>
 		<td>Instead of [tokens](#using-tokens), use [regions](#using-regions).</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 </tbody>
 </table>
-
-**Modals**
-
+</TabItem>
+<TabItem label="Modals">
 <table>
 <thead>
 	<tr>
@@ -327,38 +323,37 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`modal.backgroundColor`</td>
 		<td>Background color of the modals (`Datatype.Color3`).</td>
-		<td>`[0, 0, 0]`</td>
+		<td>[0, 0, 0]</td>
 	</tr>
 	<tr>
 		<td>`modal.font`</td>
 		<td>Font of the text that appears in a modal (`Enum.Font`).</td>
-		<td>`GothamMedium`</td>
+		<td>`Enum.Font|GothamMedium`</td>
 	</tr>
 	<tr>
 		<td>`modal.textColor`</td>
 		<td>Color of the text that appears in a modal (`Datatype.Color3`).</td>
-		<td><InlineCode>[255,&nbsp;255,&nbsp;255]</InlineCode></td>
+		<td>[255,&nbsp;255,&nbsp;255]</td>
 	</tr>
 	<tr>
 		<td>`modal.textSize`</td>
 		<td>Size of the text that appears in a modal.</td>
-		<td>`16`</td>
+		<td>16</td>
 	</tr>
 	<tr>
 		<td>`useCustomModals`</td>
 		<td>If true, default modals are not displayed. This lets you show custom modals as outlined in [Custom&nbsp;GUI](#custom-gui).</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 	<tr>
 		<td>`useCustomTokenTracker`</td>
 		<td>If true, the default token tracker is not displayed. This lets you show a custom token tracker GUI instead.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 </tbody>
 </table>
-
-**Navigation Beam**
-
+</TabItem>
+<TabItem label="Navigation Beam">
 <table>
 <thead>
 	<tr>
@@ -371,85 +366,87 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`showNavigationBeam`</td>
 		<td>If true, a `Class.Beam` from the player to the nearest token will be shown.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.color`</td>
 		<td>`Datatype.ColorSequence` defining the beam's color across its segments. See `Class.Beam.Color` for details.</td>
-		<td><InlineCode>[255,&nbsp;255,&nbsp;255]</InlineCode>&nbsp;&rarr; <InlineCode>[255,&nbsp;255,&nbsp;255]</InlineCode></td>
+		<td>[255,&nbsp;255,&nbsp;255]&nbsp;&rarr; [255,&nbsp;255,&nbsp;255]</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.curveSize0`</td>
 		<td>Position of the first control point in the beam's Bézier curve. See `Class.Beam.CurveSize0` for more info.</td>
-		<td>`0`</td>
+		<td>0</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.curveSize1`</td>
 		<td>Position of the second control point in the beam's Bézier curve. See `Class.Beam.CurveSize1` for more info.</td>
-		<td>`0`</td>
+		<td>0</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.faceCamera`</td>
 		<td>Whether the beam's segments will always face the camera regardless of its orientation. See `Class.Beam.FaceCamera` for details.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.lightEmission`</td>
 		<td>Degree to which the colors of the beam are blended with the colors behind it. See `Class.Beam.LightEmission` for details.</td>
-		<td>`0`</td>
+		<td>0</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.lightInfluence`</td>
 		<td>Degree to which the beam is influenced by the environment's lighting. See `Class.Beam.LightInfluence` for details.</td>
-		<td>`0`</td>
+		<td>0</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.segments`</td>
 		<td>How many straight segments the beam is made up of.</td>
-		<td>`10`</td>
+		<td>10</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.texture`</td>
 		<td>Asset ID of the texture to be displayed on the beam.</td>
-		<td>`"rbxassetid://8081777495"`</td>
+		<td>"rbxassetid://8081777495"</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.textureLength`</td>
 		<td>Length of the beam's texture, depending on the setting for `navigationBeam.textureMode`. See `Class.Beam.TextureLength` for details.</td>
-		<td>`1`</td>
+		<td>1</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.textureMode`</td>
 		<td>Manner in which the beam texture scales and repeats (`Enum.TextureMode`).</td>
-		<td>`Wrap`</td>
+		<td>`Enum.TextureMode|Wrap`</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.textureSpeed`</td>
 		<td>Speed at which the texture image moves along the beam.</td>
-		<td>`1`</td>
+		<td>1</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.transparency`</td>
 		<td>`Datatype.NumberSequence` defining the beam's transparency across its segments. See `Class.Beam.Transparency` for details.</td>
-		<td><InlineCode>(0,&nbsp;0)</InlineCode>&nbsp;&rarr; <InlineCode>(0.15,&nbsp;1)</InlineCode>&nbsp;&rarr; <InlineCode>(1,&nbsp;1)</InlineCode></td>
+		<td>(0,&nbsp;0)&nbsp;&rarr; (0.15,&nbsp;1)&nbsp;&rarr; (1,&nbsp;1)</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.width0`</td>
 		<td>Width of the beam at its base, in studs.</td>
-		<td>`1`</td>
+		<td>1</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.width1`</td>
 		<td>Width of the beam at its end, in studs.</td>
-		<td>`1`</td>
+		<td>1</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.zOffset`</td>
 		<td>Distance, in studs, by which the beam's display is offset, relative to the camera.</td>
-		<td>`0`</td>
+		<td>0</td>
 	</tr>
 </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ```lua title='LocalScript'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -487,17 +484,17 @@ Overrides default server-side configuration options through the following keys/v
 	<tr>
 		<td>`tokenTag`</td>
 		<td>Tag used by `Class.CollectionService` to find all the tokens or regions used in the scavenger hunt.</td>
-		<td>`"ScavengerHuntPart"`</td>
+		<td>"ScavengerHuntPart"</td>
 	</tr>
 	<tr>
 		<td>`datastoreName`</td>
 		<td>Name of the `Class.DataStore` used by the scavenger hunt to store each player's collection progress.</td>
-		<td>`"ScavengerHuntTokens"`</td>
+		<td>"ScavengerHuntTokens"</td>
 	</tr>
 	<tr>
 		<td>`resetOnPlayerRemoving`</td>
 		<td>If true, resets the user's progress when they leave the experience; convenient for not saving progress while testing the scavenger hunt.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 </tbody>
 </table>
