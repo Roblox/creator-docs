@@ -12,7 +12,7 @@ A game designer's role is to create an engaging experience for players, retain t
 
 <GridContainer numColumns="2">
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/Tm3Hi9nLKNo?si=pO5c6ffOvnxfoGqr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <figcaption>Sketch Series: Monetization Metrics</figcaption>
   </figure>
   <figure>

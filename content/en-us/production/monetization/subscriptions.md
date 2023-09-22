@@ -4,10 +4,10 @@ description: Subscriptions within experiences let you offer users recurring bene
 ---
 
 <Alert severity="warning">
-   Subscription creation tooling is live for eligible creators to develop and test offerings before full functionality is enabled at a later date. Do not attempt to publish your subscriptions at this time. Attempting to purchase published subscriptions will fail.
+Subscription creation tooling is live for eligible creators to develop and test offerings before full functionality is enabled at a later date. Do not attempt to publish your subscriptions at this time. Attempting to purchase published subscriptions will fail.
 </Alert>
 
-_Subscriptions_ within experiences let you offer users recurring benefits for a monthly fee. Similar to [Passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
+**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [Passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
 
 - **Auto-renewal:** Subscriptions are auto-renewing, not one-time purchases, and are priced in local currency.
 - **Robux Payout:** You receive subscription revenue in Robux. For more details, see [Earning with Subscriptions](#earning-with-subscriptions).
@@ -35,11 +35,11 @@ To create a subscription:
 
 1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Associated Items** > **Subscriptions**. Then click **CREATE A SUBSCRIPTION**.
 
-    <img src="../../assets/monetization/subscriptions/subscriptions-1.png" width="80%"/>
+   <img src="../../assets/monetization/subscriptions/subscriptions-1.png" width="80%"/>
 
 2. Upload a cover image for your subscription. The image is visible to others after moderation.
 
-	<img src="../../assets/monetization/subscriptions/subscriptions-2.png" width="80%"/>
+   <img src="../../assets/monetization/subscriptions/subscriptions-2.png" width="80%"/>
 
 3. Create a unique **Subscription Name**. No two subscriptions within an experience can share the same name. This subscription name appears alongside a shortened version of your experience name in billing statements. Allowed characters are a-z, A-Z, 0-9, spaces, and `.,:/!?@#&'`.
 4. Write a **Description** of your subscription. This is what users see when deciding to purchase your subscription. Your description must clearly describe what benefits your subscription offers. Descriptions are capped at 1,000 characters and support emojis. Once activated, a subscription's benefits cannot be changed.
@@ -51,14 +51,14 @@ To create a subscription:
 
 6. Select the **Price** of your subscription (in USD). You earn Robux based on the web price. Mobile app subscribers are charged a higher price. Subscribers are charged in their local currency.
 
-	<img src="../../assets/monetization/subscriptions/subscriptions-3.png" width="80%"/>
+   <img src="../../assets/monetization/subscriptions/subscriptions-3.png" width="80%"/>
 
 7. The **Recurring Cadence** is how often the user is charged for subscription. Currently, this value is always monthly. Click **CREATE SUBSCRIPTION**.
-8.  Double-check the details and click **CREATE**.
+8. Double-check the details and click **CREATE**.
 
-<Alert severity="warning">
+   <Alert severity="warning">
    After creating your subscription, you can't make changes to anything but the cover image.
-</Alert>
+   </Alert>
 
 ## Editing Subscriptions
 
@@ -70,7 +70,7 @@ After creating a subscription, the only modification you can make is to update t
 
 1. With the subscription selected, click the **CHANGE** button.
 
-	<img src="../../assets/monetization/subscriptions/subscriptions-4.png" width="80%"/>
+   <img src="../../assets/monetization/subscriptions/subscriptions-4.png" width="80%"/>
 
 2. Choose the new image and click **SAVE** and then **SAVE CHANGES**. The new image goes live after successfully passing moderation.
 
@@ -80,7 +80,7 @@ To edit more than a subscription's image, delete and re-create the subscriptions
 
 Use the following script to check if a player has an active subscription upon joining your experience:
 
-``` lua
+```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
@@ -92,12 +92,12 @@ local function checkSubStatus(player)
 		-- returns IsRenewing and IsSubscribed
 		subStatus = MarketplaceService:GetUserSubscriptionStatusAsync(player, subscriptionID)
 	end)
-	
+
 	if not success then
 		warn("Error while checking if player has subscription: " .. tostring(message))
 		return
 	end
-	
+
 	if subStatus["IsSubscribed"] then
 		print(player.Name .. " is subscribed with " .. subscriptionID)
 		-- Give player all items and/or permissions associated with the subscription
@@ -105,7 +105,6 @@ local function checkSubStatus(player)
 end
 
 Players.PlayerAdded:Connect(checkSubStatus)
-
 ```
 
 After you determine whether a player has a subscription, you can confer subscription benefits.
@@ -140,5 +139,5 @@ Earnings are subject to 30 day holds and are added to your Robux balance after t
 Refunds received outside the hold window result in the payout amount for the refunded transaction being deducted from your Robux balance. If your experience is owned by a Group, and the Group's balance is less than the amount to be deducted, the remainder is deducted from the Group owner's Robux balance.
 
 <Alert severity="warning">
-   Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees. This additional opportunity will be supported at a later date.
+Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees. This additional opportunity will be supported at a later date.
 </Alert>

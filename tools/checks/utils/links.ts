@@ -175,7 +175,14 @@ export const isAllowedHttpLink = (link: string) => {
   if (isRobloxUrl(sanitizedUrl)) {
     return true;
   } else {
-    return allowedHttpLinksSet.has(sanitizedUrl);
+    let isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl);
+    if (!isAllowedHttpLink) {
+      // Test if pathname includes `(` to support some links that end with `)`
+      if (sanitizedUrl.includes(`(`)) {
+        isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl + `)`);
+      }
+    }
+    return isAllowedHttpLink;
   }
 };
 
