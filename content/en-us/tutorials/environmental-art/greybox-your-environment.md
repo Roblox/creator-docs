@@ -95,6 +95,13 @@ In addition, a rise in elevation creates both a physical and emotional sense of 
 To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
+1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
+
+   1. Set **Rotate** to **90**.
+   1. Set **Move** to **5 studs**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" width="60%"/>
+
 1. Using **block** parts, create symmetrical left and right surfaces for the **main floor** of your building. This geometry represents the length of your playable interior, and its symmetry denotes the center of the map.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section1/GeneralFloor-1.jpg" width="100%"/>
@@ -119,6 +126,13 @@ To create your own floor geometry:
 To exactly recreate the floor geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
 1. Open Roblox Studio with a **Baseplate** template.
+1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
+
+   1. Set **Rotate** to **90**.
+   1. Set **Move** to **5 studs**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
+
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" width="60%"/>
+
 1. Add and configure a **block** part for the left-side surface of the **main floor**. You can use this same process for each step as you create all of the playable areas.
 
    1. In the menu bar, select the **Model** tab.
