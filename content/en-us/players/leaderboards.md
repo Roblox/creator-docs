@@ -119,10 +119,12 @@ goldChunk.Touched:Connect(onPartTouch)
 ## Ordering Stats
 
 There are two ways to control what order stats will display in:
+
 1. If a stat has an `Class.Instance` inside it called `IsPrimary`, that stat will appear first in the list.
 2. If a stat has a `Class.NumberValue` inside it called `Priority`, then value of the `Priority` value will be used to determine its order. Higher priority values appear first.
 
 There are several caveats to be aware of when using the stat ordering features:
+
 - Stats with `IsPrimary` will always order before stats with `Priority` and unordered stats.
 - Stats with both `IsPrimary` and `Priority` are considered to only have `Priority`.
 - Unordered stats are considered to have a priority value of zero.
