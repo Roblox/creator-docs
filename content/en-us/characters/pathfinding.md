@@ -214,6 +214,7 @@ local function followPath(destination)
 	local success, errorMessage = pcall(function()
 		path:ComputeAsync(character.PrimaryPart.Position, destination)
 	end)
+end
 ```
 
 <img src="../assets/mechanics/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
@@ -249,6 +250,8 @@ local function followPath(destination)
 	if success and path.Status == Enum.PathStatus.Success then
 		-- Get the path waypoints
 		waypoints = path:GetWaypoints()
+	end
+end
 ```
 
 <figure>
@@ -371,6 +374,8 @@ local function followPath(destination)
 				followPath(destination)
 			end
 		end)
+	end
+end 
 ```
 
 <Alert severity="error">

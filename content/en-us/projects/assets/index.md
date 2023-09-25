@@ -22,17 +22,6 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
 
 This cloud-based asset system allows you to store assets through Roblox so you don't need to maintain local copies as part of a saved Studio experience, and that you can reuse assets across the platform in various contexts for your projects, such as in different objects, places, or character bodies. You can find millions of free-to-use assets for projects on the [Creator Marketplace](https://create.roblox.com/marketplace), purchase assets for avatars on the [Marketplace](https://www.roblox.com/catalog), or create your own assets and import them directly into Studio through asset management tools.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/publishing/publishing-assets/creator-marketplace-example.jpg" width="90%" />
-    <figcaption>Creator Marketplace</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/publishing/publishing-assets/marketplace-example.jpg" width="100%" />
-    <figcaption>Marketplace</figcaption>
-  </figure>
-</GridContainer>
-
 When you import assets, they must pass a moderation check to ensure they meet Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846) before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain sole ownership of their usage on the platform, assign them to group ownership, or publish them to the Creator Marketplace in order to make them publicly available for all users to use within their own projects. Every asset you import is accessible within the [Toolbox](../../projects/assets/toolbox.md), allowing you to reuse them across all of your projects.
 
 ## Asset Types

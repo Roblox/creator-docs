@@ -18,15 +18,11 @@ You can browse thousands of user-uploaded meshes from the [Creator Marketplace](
 
 1. Navigate to the **View** tab and select **Toolbox**.
 
-   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
 1. From the **Marketplace** tab, select the category dropdown and choose **Meshes**.
 
    <img src="../assets/studio/toolbox/Marketplace-Meshes.png" width="360" />
-
-1. **(Optional)** Click the **filter** button to the right of the search bar to filter meshes by verified creators and/or a specific creator's username.
-
-   <img src="../assets/modeling/meshes/Toolbox-Filter-Button.png" width="360" />
 
 1. In the **Search** field, type anything you'd like to find.
 1. Either click or drag-and-drop a mesh to insert it into the viewport.

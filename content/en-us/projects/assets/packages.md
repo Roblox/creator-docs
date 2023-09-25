@@ -45,21 +45,9 @@ A package can be created from any single node or sub-tree root node in the data 
 
 ## Inserting Packages
 
-To insert a package which doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md) under these guidelines:
+To insert a package which doesn't already exist in the current place, you must **initially** insert it from the **Inventory**&nbsp;&rarr; **My&nbsp;Packages** sort.
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
-- From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/studio/packages/Toolbox-My-Packages.png" width="360" />
-    <figcaption>Toolbox &rarr; Inventory &rarr; My Packages</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/studio/packages/Toolbox-Group-Packages.png" width="360" />
-    <figcaption>Toolbox &rarr; Creations &rarr; Group Packages</figcaption>
-  </figure>
-</GridContainer>
+<img src="../../assets/studio/toolbox/Inventory-My-Packages.png" width="360" />
 
 Once you've inserted a package into a place's data model, it appears in the **Packages** folder of the [Asset Manager](../../projects/assets/manager.md) and remains there even if you later delete all copies of it. However, when you publish the place, the folder will update to reflect only packages used within the place.
 
