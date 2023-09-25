@@ -300,7 +300,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-If the `Class.HumanoidDescription` instance was created in the Explorer and parented to the workspace, use the following sample code in a `Class.Script` to access the workplace instance:
+If the `Class.HumanoidDescription` instance was created in the Explorer and parented to the workspace, use the following sample code in a `Class.Script` to access the workspace instance:
 
 ```lua
 local Players = game:GetService("Players")

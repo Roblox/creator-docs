@@ -79,7 +79,7 @@ A rigging armature defines how a layered asset can move with a character model. 
   <figure><img src="../../assets/art/accessories/Outer-Cage-Example.png" /><figcaption>The outer cage defines the outer surface of the clothing item where any additional clothes can wrap and layer over</figcaption></figure>
 </GridContainer>
 
-Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt will stretch and fit over a character body. The outer cage of a t-shirt defines how additional layered accessories will stretch and fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
+Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt stretches and fits over a character body. The outer cage of a t-shirt defines how additional layered accessories fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
 
 ### Creation Process
 

@@ -41,7 +41,7 @@ If you followed [Deadly Lava](../../../tutorials/scripting/basic-scripting/deadl
 
 Having the platform vanish in an instant would be no fun at all as users would find it impossible to get across the gap. Instead, the platform should **fade away** before users fall through it to give them a chance to jump off.
 
-You could change the Transparency property and wait a very short time over and over again to get this effect, but a gradual fade would require at least 10 changes between 0 and 1. That's 20 lines of very repetitive code.
+You could change the `Transparency` property and wait a very short time over and over again to get this effect, but a gradual fade would require at least 10 changes between 0 and 1. That's 20 lines of very repetitive code.
 
 This can be achieved much more effectively using a **for** loop which repeats code a specific number of times. Each loop of the code is known as an **iteration**. A for loop is defined with three things, separated by commas:
 
@@ -54,7 +54,7 @@ This can be achieved much more effectively using a **for** loop which repeats co
 In **FadeOnTouch**:
 
 1. In the function, create a `for` loop starting from `1` which iterates `10` times.
-2. Inside the for loop, set the **Transparency** property to the control variable divided by `10`.
+2. Inside the for loop, set the `Transparency` property to the control variable divided by `10`.
 3. Call the `task.wait` function with a time of `0.1`.
 
    ```lua
@@ -70,16 +70,16 @@ In **FadeOnTouch**:
    platform.Touched:Connect(fade)
    ```
 
-When the loop runs, count increases by 1 with each iteration. This means that the platform's **Transparency** will increase by 0.1 every 0.1 seconds, reaching full transparency after 1 second.
+When the loop runs, count increases by 1 with each iteration. This means that the platform's `Transparency` will increase by 0.1 every 0.1 seconds, reaching full transparency after 1 second.
 
 ## Reappearing
 
 After the platform has vanished, users should fall through it. The platform should also come back a few seconds after it fades - otherwise, users would never get to try the jump again if they failed. The CanCollide property controls whether users can fall through a part.
 
-1. Set the **CanCollide** property of the platform to `false` after the for loop.
+1. Set the `CanCollide` property of the platform to `false` after the for loop.
 2. Wait for a few seconds using the `task.wait` function.
-3. Set the **CanCollide** property back to `true`.
-4. Set the **Transparency** property back to `0`.
+3. Set the `CanCollide` property back to `true`.
+4. Set the `Transparency` property back to `0`.
 
    ```lua
    local platform = script.Parent
