@@ -13,7 +13,6 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces. Meshes used as outer cages do not need to be watertight.
 - **No N-gons** - Model your assets in quads where possible.
-- **Scale** - Your scene units in Maya or Blender should be set to Centimeters to closely match with Studio's scale.
 - **Transformations** - All translation, rotation, and scale values must be frozen and pivots set to `0`, `0`, `0`.
 - **Orientation** - Characters must face positive Z and stand up in positive Y.
 - **Pose** - Before exporting, set your character to an I-Pose when possible.

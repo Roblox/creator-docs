@@ -378,32 +378,32 @@ In some cases, it's necessary to detect when an object streams in or out and rea
 
    ```lua title='LocalScript - CollectionService Streaming Detection' highlight='10-15'
    local CollectionService = game:GetService("CollectionService")
-   local RunService = game:GetService("RunService")
 
-   local random = Random.new(tick())
-   local heartbeatCount = 0
+   local tagName = "FlickerLightSource"
+   local random = Random.new()
    local flickerSources = {}
 
-   -- Detect tagged parts streaming in or out
-   if workspace.StreamingEnabled then
-   	CollectionService:GetInstanceAddedSignal("FlickerLightSource"):Connect(function(light)
-   		flickerSources[light] = true
-   	end)
-   	CollectionService:GetInstanceRemovedSignal("FlickerLightSource"):Connect(function(light)
-   		flickerSources[light] = nil
-   	end)
+   -- Detect currently and new tagged parts streaming in or out
+   for _, light in CollectionService:GetTagged(tagName) do
+   	flickerSources[light] = true
    end
 
-   -- Flicker loop
-   RunService.Heartbeat:Connect(function()
-   	heartbeatCount += 1
-   	if heartbeatCount > 5 then
-   		heartbeatCount = 0
-   		for light, _ in pairs(flickerSources) do
-   			light.Brightness = 8 + random:NextNumber(-0.4, 0.4)
-   		end
-   	end
+   CollectionService:GetInstanceAddedSignal(tagName):Connect(function(light)
+   	flickerSources[light] = true
    end)
+
+   CollectionService:GetInstanceRemovedSignal(tagName):Connect(function(light)
+   	flickerSources[light] = nil
+   end)
+
+   -- Flicker loop
+   while true do
+   	for light in flickerSources do
+   		light.Brightness = 8 + random:NextNumber(-0.4, 0.4)
+   	end
+
+   	task.wait(0.05)
+   end
    ```
 
 ## Customizing the Pause Screen

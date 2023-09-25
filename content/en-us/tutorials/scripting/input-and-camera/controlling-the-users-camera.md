@@ -138,7 +138,7 @@ All character models contain a part named **HumanoidRootPart**, which can be use
 
 ### Setting the Camera Position
 
-The camera also needs a position. To give the user's view a 2D side-scrolling look, the camera needs to look directly at the side of the character. Place the camera to the side of the user by adding depth to just the **Z axis** of the camera's position using a Vector3.
+The camera also needs a position. To give the user's view a 2D side-scrolling look, the camera needs to look directly at the side of the character. Place the camera to the side of the user by adding depth to just the **Z axis** of the camera's position using a `Datatype.Vector3`.
 
 ```lua
 local player = Players.LocalPlayer
