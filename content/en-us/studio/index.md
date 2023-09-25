@@ -43,6 +43,10 @@ Finally, you can test directly in Studio through multiple [testing and emulation
 <img src="../assets/studio/overview/Script-Editor.png" alt="Example code in Studio's integrated script editor"/>
 </figure>
 
+<Alert severity="success">
+Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+</Alert>
+
 ## Fast Publishing and Updating
 
 <figure>

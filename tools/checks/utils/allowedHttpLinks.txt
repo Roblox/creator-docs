@@ -426,3 +426,11 @@ https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
 https://youtu.be/OEmFocfE0Xs
 https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF
+https://code.visualstudio.com/Docs/languages/json
+https://github.com/redhat-developer/vscode-yaml
+https://json-schema.org/specification
+https://json-schema.org/specification-links.html
+https://json.schemastore.org/github-action.json
+https://json.schemastore.org/github-workflow.json
+https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+https://www.schemastore.org/json/
