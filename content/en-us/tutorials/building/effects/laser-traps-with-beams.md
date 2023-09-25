@@ -87,7 +87,7 @@ With the attachments in place, a beam can now be created.
     </Grid>
    </Grid>
 
-   So the beam is visible at any position, go into the beam properties and enable FaceCamera.
+   So the beam is visible at any position, go into the beam properties and enable `FaceCamera`.
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_toggleFaceCamera.png" />
 
@@ -112,7 +112,7 @@ Beams use 2D images that can be customized with properties to affect the color, 
     </Grid>
    </Grid>
 
-2. In the beam's **Texture** property, paste the asset ID.
+2. In the beam's `Texture` property, paste the asset ID.
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showBeamWithTexture.jpg" />
@@ -121,24 +121,24 @@ Beams use 2D images that can be customized with properties to affect the color, 
 
 3. Make the laser appear brighter by changing a few properties.
 
-   1. Add a faint glow by changing the **LightEmission** property to **0.5**.
-   2. Change **Transparency** to **0** (fully opaque).
+   1. Add a faint glow by changing the `LightEmission` property to 0.5.
+   2. Change `Transparency` to 0 (fully opaque).
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showBeamLightEmission.jpg" />
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_transparencyLightEmission.png" />
    </GridContainer>
 
-4. Make the beam wider by setting both **Width0** and **Width1** to **4**.
+4. Make the beam wider by setting both **Width0** and **Width1** to 4.
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamWidthLarger.jpg" />
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_setWidth.png" />
    </GridContainer>
 
-5. The **TextureSpeed** property animates the texture over time. For a fast, flickering effect, set it to **3**.
+5. The `TextureSpeed` property animates the texture over time. For a fast, flickering effect, set it to 3.
 
-6. Make the laser look a bit more dangerous by changing its **Color** property.
+6. Make the laser look a bit more dangerous by changing its `Color` property.
 
    <GridContainer numColumns="2">
      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamColor.jpg" />
@@ -193,4 +193,4 @@ The script for the trap will check if an invisible part is touches a player. The
   <source src="../../../assets/tutorials/laser-traps-with-beams/laserTrap_testFinalLaser.mp4" />
 </video>
 
-With the beam complete, explore additional beam properties like **CurveSize0** and **CurveSize1**, [import](../../../production/publishing/publishing-assets.md) your own textures, or even make a new object like a force field.
+With the beam complete, explore additional beam properties like `CurveSize0` and `CurveSize1`, [import](../../../production/publishing/publishing-assets.md) your own textures, or even make a new object like a force field.
