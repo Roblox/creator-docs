@@ -3,7 +3,7 @@ title: Automatic Skinning Transfer
 description: Automatic skinning transfer can create deformation data for character accessories without manual skinning.
 ---
 
-**Automatic skinning transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [skinning](../../art/modeling/skinning.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using automatic skinning transfer, the Roblox engine creates and applies skinning at runtime.
+**Automatic skinning transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [rigging and skinning](../../art/modeling/rigging.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using automatic skinning transfer, the Roblox engine creates and applies skinning at runtime.
 
 **No skinning of accessory geometry is required to use automatic skinning transfer**. In fact, auto-skinned accessories work well with most characters they're attached to, even if those characters have a different number of joints, bones, or use a different kind of skinning, and the accessories move accurately with characters as they animate.
 

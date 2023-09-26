@@ -99,7 +99,7 @@ For [layered clothing](../art/accessories/layered-clothing.md) items such as **S
 
 ### Check Face
 
-The **Check Face** interface zooms into the face and allows you to animate between various facial poses. This interface only works for character heads which support [facial animation](../art/avatar/facial-animation/index.md).
+The **Check Face** interface zooms into the face and allows you to animate between various facial poses. This interface only works for character heads which support [facial animation](../art/characters/facial-animation/index.md).
 
 <figure>
 <img src="../assets/studio/avatar-preview/Interface-Check-Face.jpg" width="700" alt="Check Face interface of Avatar Preview tool" />
@@ -135,7 +135,7 @@ The **Check Face** interface zooms into the face and allows you to animate betwe
   </tr>
 	<tr>
     <td>**FACS**</td>
-    <td>[FACS](../art/avatar/facial-animation/facs-poses-reference.md) (Facial Action Coding System) poses for describing visually discernible facial movement.</td>
+    <td>[FACS](../art/characters/facial-animation/facs-poses-reference.md) (Facial Action Coding System) poses for describing visually discernible facial movement.</td>
   </tr>
 </tbody>
 </table>

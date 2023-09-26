@@ -65,7 +65,7 @@ By default, all users join experiences as their saved Roblox avatar, which alrea
 <Alert severity = 'info'>
 If you are creating your own custom avatar character, you must configure your character model's components in a third-party modeling tool like Blender or Maya before importing the model into Studio.
 
-See [Avatars](../art/avatar/index.md) for information regarding the creation of avatar components, creation guides, and marketplace information.
+See [Avatars](../art/characters/index.md) for information regarding the creation of avatar components, creation guides, and marketplace information.
 </Alert>
 
 For information on modifying and customizing existing characters in your experience, see [Character Appearance](../characters/appearance.md).

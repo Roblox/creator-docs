@@ -29,7 +29,7 @@ To begin creating a humanoid rigged mesh, first set up the following in your Ble
 
 ### Importing Model
 
-When rigging a model, make sure the character model you are using follows Studio's [Avatar Character Specifications](../../art/avatar/specifications.md). For this guide, import a [Lola reference model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx) into the mannequin template project.
+When rigging a model, make sure the character model you are using follows Studio's [Avatar Character Specifications](../../art/characters/specifications.md). For this guide, import a [Lola reference model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx) into the mannequin template project.
 
 To import your model:
 
@@ -57,7 +57,7 @@ At any point during the skinning process, you can also toggle one of the various
 In this guide, set up X-Axis Mirroring to make symmetrical changes to the left and right bones before repositioning the bones to the imported model. Try to maintain symmetry whenever possible when rigging a model.
 
 <Alert severity="warning">
-If modifying bones or creating a new bone structure, keep in mind the <a href="../../art/avatar/specifications.md#humanoid-rigs">specific bone hierarchy and naming requirements</a> for R15 character models.
+If modifying bones or creating a new bone structure, keep in mind the <a href="../../art/characters/specifications.md#humanoid-rigs">specific bone hierarchy and naming requirements</a> for R15 character models.
 </Alert>
 
 ### Enable X-Axis Mirror

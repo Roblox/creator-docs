@@ -87,7 +87,7 @@ Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.c
 
 - Roblox must adopt and reasonably implement a policy providing for the termination in appropriate circumstances of users who are repeat copyright infringers.
 - Roblox investigates each report and takes appropriate action, which may include removing or disabling the infringing content, and permanently terminating the accounts of users who have repeatedly infringed on the IP of others.
-- If the filing is compliant with legal requirements and the infringing item is taken down, the infringing creator will lose any [upfront payment(s)](marketplace-fees-and-commissions.md#upfront-payment) from publishing Limiteds, as well as Robux earned from sales of the item.
+- If the filing is compliant with legal requirements and the infringing item is taken down, the infringing creator will lose any [per-unit fee(s)](marketplace-fees-and-commissions.md#per-unit-fee) from publishing Limiteds, as well as Robux earned from sales of the item.
 
 Only the IP rights holder knows what rights they have and who they have given permission to use their creations. Because of that, **we rely on rights holders to let us know what they believe infringes their rights by filing a takedown report**.
 

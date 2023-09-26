@@ -220,5 +220,5 @@ To weight paint a partial strength influence to the upper torso:
 You can continue to weight paint the rest of the limbs of your model using these processes. When completed, you can [export](../../art/modeling/export-requirements.md) your skinned model as a `.fbx` using the Blender export settings for use in Studio. For reference, you can download a [Blender project](../../assets/modeling/meshes/reference-files/lola-skinned-s15.blend) with the model fully skinned.
 
 <Alert severity="warning">
-Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
 </Alert>

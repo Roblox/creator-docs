@@ -133,7 +133,7 @@ To replace the default UI:
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table.
 
@@ -192,7 +192,7 @@ FriendsLocator.configure({
 
 #### clicked
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>clicked(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>clicked(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a locator icon is clicked/activated by the local player. This event can only be connected in a `Class.LocalScript`.
 
@@ -226,7 +226,7 @@ end)
 
 #### visibilityChanged
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>visibilityChanged(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>, isVisible:</InlineCode>`boolean`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>visibilityChanged(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>, isVisible:</InlineCode>`boolean`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a locator icon is shown/hidden on the local player's screen. This event can only be connected in a `Class.LocalScript`.
 

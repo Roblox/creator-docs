@@ -167,12 +167,12 @@ To achieve the layering effect, your clothing must meet the following requiremen
 
 - Asset must be [weighted and bound](#rigging-and-skinning) to an R15 skeleton (Maya) or armature (Blender).
 - Asset must contain an [inner mesh cage](#inner-cage) and an [outer mesh cage](#outer-cage).
-- Asset must continue to follow any applicable [custom mesh requirements](../../art/avatar/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
+- Asset must continue to follow any applicable [custom mesh requirements](../../art/characters/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
 
 See [Creating Layered Models](./creating-in-blender.md) for a basic guide on applying these requirements on a reference asset in Blender. Once the `.fbx` file is [exported](../../art/modeling/export-requirements.md), see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on creating an accessory from your model.
 
 <Alert severity='info'>
-If you are part of the UGC program, you can sell your layered accessories on the Marketplace. See [Selling 3D Accessories](../../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
+If you meet certain account requirements, you can sell your layered accessories on the Marketplace. See [Selling 3D Accessories](../../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
 </Alert>
 
 ### Rigging and Skinning
