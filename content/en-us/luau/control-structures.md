@@ -179,16 +179,30 @@ end
 Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function:
 
 ```lua
-local obj = {items = {1, 4, 9}}
+local myTable = {1, 2, 3, 4, 5}
 
-setmetatable(obj, {
-	__iter = function(o)
-		return next, o.items 
+myMetatable = { 
+	__iter = function(self)
+		local i = #self
+		local firstRun = true
+		return function()
+			if firstRun then
+				firstRun = false
+				return i, self[i]
+			else
+				i -= 1
+				if i > 0 then
+					return i, self[i]
+				end
+			end
+		end
 	end
-})
+}
 
-for k, v in obj do
-  assert(k * k == v)
+setmetatable(myTable, myMetatable)
+
+for i, v in myTable do
+	print(i, v)
 end
 ```
 
