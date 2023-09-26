@@ -51,11 +51,11 @@ An **access token** represents the authorization from a creator or user for a th
 
 A **refresh token** is for refreshing an authorization session. An app can use the refresh token to obtain a new full token set, including an access token, a refresh token, and an ID token. A refresh token:
 
-- Has a lifetime of six month.
+- Is valid for 6 months.
 
-- Can be used after the access token expires.
+- Can only be used once to refresh tokens before it expires.
 
-- Can be invalidated before it expires if an app user revokes the authorization from user settings.
+- Can be invalidated before it expires if an app user revokes the authorization.
 
 ### ID Token
 
