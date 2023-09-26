@@ -10,11 +10,8 @@ prev: /resources/beyond-the-dark/building-architecture
 
 You can import custom meshes to create everything from NPCs to an animated cloth of a sail boat. We used the custom setting of the Avatar Importer to bring in more exotic custom characters, like the mysterious black hole creatures and the friendly, if unaware, service droids.
 
-The following sections go over how we used [rigging](../../art/modeling/rigging.md), [skinning](../../art/modeling/skinning.md), [PBR (surface
-appearance)](/art/modeling/surface-appearance), and VFX to build one of our more complicated characters that we
-named the "Creature." We wanted it to glow, emit some light, have trails of
-particle smoke, and a fluid motion that involved skinning a rig with enough
-joints to create the convincing waves of its tentacles.
+The following sections go over how we used [rigging and skinning](../../art/modeling/rigging.md), [PBR (surface
+appearance)](/art/modeling/surface-appearance), and VFX to build one of our more complicated characters that we named the "Creature." We wanted it to glow, emit some light, have trails of particle smoke, and a fluid motion that involved skinning a rig with enough joints to create the convincing waves of its tentacles.
 
 <img
   alt="Creature Banner"
@@ -86,7 +83,7 @@ To import the mesh into Studio:
    - The character has all joint and bone hierarchy and all meshes.
    - Meshes are all under 10,000 triangles for each part of the mesh.
    - Mesh total size isn't over 2000 units in any axis.
-   - See [Mesh Requirements](../../art/avatar/specifications.md) for a complete list of model specifications.
+   - See [Mesh Requirements](../../art/characters/specifications.md) for a complete list of model specifications.
 
    <img
    alt="Creature in DCC Tool"

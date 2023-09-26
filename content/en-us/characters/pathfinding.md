@@ -375,7 +375,7 @@ local function followPath(destination)
 			end
 		end)
 	end
-end 
+end
 ```
 
 <Alert severity="error">

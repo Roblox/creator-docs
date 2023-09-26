@@ -84,7 +84,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -141,13 +141,13 @@ SpawnWithFriends.configure({
 
 #### teleportToRandomFriend
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>teleportToRandomFriend(playerToTeleport:</InlineCode>`Class.Player`<InlineCode>):</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>teleportToRandomFriend(playerToTeleport:</InlineCode>`Class.Player`<InlineCode>):</InlineCode>`boolean`</Typography>
 
 Manually triggers teleportation of a player to one of their friends in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
 
 #### setTeleportationValidator
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setTeleportationValidator(validator:</InlineCode>`function`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTeleportationValidator(validator:</InlineCode>`function`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Allows you to perform custom pre-teleportation checks by hooking up a validator callback function. The callback receives three parameters:
 

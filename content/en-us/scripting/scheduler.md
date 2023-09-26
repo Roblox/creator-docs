@@ -16,7 +16,7 @@ Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()`, `Global.
 The following table lists the relevant legacy global methods and their preferred, more optimized counterparts:
 
 | Legacy Global Methods                   | Task Methods                                       | Additional Alternatives                            |
-| :---------------------------------------| :------------------------------------------------- | :------------------------------------------------- |
+| :-------------------------------------- | :------------------------------------------------- | :------------------------------------------------- |
 | `wait()`                                | `Library.task.wait()`                              | `Class.RunService.Heartbeat`                       |
 | `wait(n)`                               | `Library.task.wait()\|task.wait(n)`                |                                                    |
 | `spawn(f)`                              | `Library.task.defer()\|task.defer(f)`              | `Library.task.delay()\|task.delay(0, f)`           |

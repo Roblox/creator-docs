@@ -1,0 +1,449 @@
+---
+title: Resources
+description: Get all the resources you need to build characters and accessories.
+hideInPageNavigation: true
+hideBreadcrumbs: true
+---
+
+## Templates
+
+<Grid container style={{margin: -6}}>
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+
+<CardContent>
+<figure>
+<img src="../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/RoundMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
+
+<Button href="../assets/art/reference-files/RoundFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+
+<CardContent>
+<figure>
+<img src="../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/SquareMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
+
+<Button href="../assets/art/reference-files/SquareFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
+
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+
+<CardContent>
+<figure>
+<img src="../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/MuzzleMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
+
+<Button href="../assets/art/reference-files/MuzzleFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
+
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<figure>
+<img src="../assets/art/avatar/templates/SemiRealistic-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/SemiRealisticMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
+
+<Button href="../assets/art/reference-files/SemiRealisticFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
+
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<figure>
+<img src="../assets/art/avatar/templates/Anime-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/AnimeMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
+
+<Button href="../assets/art/reference-files/AnimeFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
+
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<figure>
+<img src="../assets/art/avatar/templates/Caricature-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/Caricature.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<figure>
+<img src="../assets/art/avatar/templates/Stylized-Templates.png" width = "100%"/>
+</figure>
+<figure>
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/StylizedHuman.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+</Card>
+</Grid>
+
+</Grid>
+
+## Project Files
+
+<Grid container alignItems='stretch' style={{margin: -6}}>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>R15 Rig and Attachments</center>
+<figure>
+<center> <img src="../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+Standard armature rig template for Blender. Use this template for rigging **bodies** and **clothing** items.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+  <Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Cages for Clothing</center>
+<figure>
+<center> <img src="../assets/art/resources/Clothing-Cage-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+Project files for creation, includes a full-body inner and outer cage mesh for creation of **clothing** items.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Cages for Bodies</center>
+<figure>
+<center> <img src="../assets/art/resources/Body-Cages-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+Project files for creation, includes the 15 individual body part cages required for caging your avatar **bodies**.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+  <Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+</CardActions>
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Combined Project Files</center>
+<figure>
+<center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
+</figure>
+<figure>
+Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. <br /> <br /> Use this template to rig and cage bodies and clothing.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
+
+<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+</CardActions>
+</Card>
+</Grid>
+
+</Grid>
+
+## References
+
+<Grid container alignItems='stretch' style={{margin: -6}}>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Fish Person</center>
+<figure>
+<center> <img src="../assets/art/resources/Fish-Person-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A rigged and skinned humanoid character model with a full body cage, facial animation rig, and associated PBR texture maps.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Goblin</center>
+<figure>
+<center> <img src="../assets/art/resources/Goblin-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A rigged and skinned humanoid character model with a full body cage, facial animation rig.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Blocky</center>
+<figure>
+<center> <img src="../assets/art/resources/Blocky-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A Blocky character model with an animatable head and a full body cage.
+</figure>
+<br />
+
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Lola</center>
+<figure>
+<center> <img src="../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+A skinned R15 character created from the <a href="../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+</figure>
+<br />
+
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/modeling/skinned-meshes/Lola.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Tshirt - Uncaged</center>
+<figure>
+<center> <img src="../assets/art/resources/Tshirt-Resource.png" width="100%" /> </center>
+</figure>
+<figure>
+Uncaged example clothing from [Creating Layered Clothing](../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.
+</figure>
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+  <Button href="../assets/accessories/reference-files/Tshirt-model.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+</Card>
+
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Clothing Examples</center>
+<figure>
+<center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
+</figure>
+<figure>
+Caged 3D accessory models and associated PBR textures. Ready for import into Studio or in a modeling tool.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/accessories/reference-files/Additional-FBX-assets.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
+</Grid>
+
+## Add-Ons and Tools
+
+<Grid container alignItems='stretch'>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Blender Studio Plugin</center>
+<figure>
+<center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
+</figure>
+<figure>
+Open-source Blender Studio add-on that allows you to upload assets directly from Blender to Studio.
+</figure>
+
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+  <Button href="https://github.com/Roblox/roblox-blender-plugin" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Github</Button>
+</CardActions>
+</Card>
+
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Blender Validation Tool</center>
+<figure>
+<center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
+</figure>
+<figure>
+Blender add-on for verifying avatar technical compatibility before importing into Studio.
+</figure>
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../art/accessories/validation-tool.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Instructions</Button>
+</CardActions>
+</Card>
+
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Blender Calisthenics Tool</center>
+<figure>
+<center> <img src="../assets/art/Generic-Icon.png" width="100%" /> </center>
+</figure>
+<figure>
+Blender add-on for checking skinning data on characters and clothing.
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/modeling/skinned-meshes/calisthenic-tool/CalisthenicsTool.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0"}}>Link to Instructions</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
+</Grid>

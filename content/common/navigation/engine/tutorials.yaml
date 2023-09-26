@@ -20,6 +20,14 @@ navigation:
         path: /tutorials/building/modeling/sculpting-terrain
       - title: Creating Neon Signs
         path: /tutorials/3D-art/creating-neon-signs
+      - title: Rigging a Simple Mesh (Blender)
+        path: /art/modeling/rigging-a-simple-mesh
+      - title: Skinning a Simple Mesh (Blender)
+        path: /art/modeling/skinning-a-simple-mesh
+      - title: Rigging a Humanoid Model (Blender)
+        path: /art/modeling/rigging-a-humanoid-model.md
+      - title: Skinning a Humanoid Model (Blender)
+        path: /art/modeling/skinning-a-humanoid-model.md
   - title: User Interfaces
     section:
       - title: Creating a Score Bar

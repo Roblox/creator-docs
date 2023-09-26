@@ -496,7 +496,7 @@ MerchBooth.setControlKeyCodes(MerchBooth.Controls.ProximityPrompts, {
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -688,7 +688,7 @@ MerchBooth.configure({
 
 #### addItemAsync
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>addItemAsync(assetId:</InlineCode>`number`<InlineCode>, productType:</InlineCode>`Enum.InfoType`<InlineCode>, hideFromCatalog:</InlineCode>`boolean`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>addItemAsync(assetId:</InlineCode>`number`<InlineCode>, productType:</InlineCode>`Enum.InfoType`<InlineCode>, hideFromCatalog:</InlineCode>`boolean`<InlineCode>)</InlineCode></Typography>
 
 Asynchronously adds an item to the merch booth so that it's eligible for purchase in the experience. `assetId` is the item's asset ID, `productType` is the item's `Enum.InfoType` enum, and `hideFromCatalog` can be used to hide the item in the catalog view.
 
@@ -763,7 +763,7 @@ end
 
 #### getItems
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getItems():</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getItems():</InlineCode>`Library.table`</Typography>
 
 Returns a dictionary representing all of the currently registered items. Each key is an item's asset ID as a string, and each key's value is an [Item](#item). This function can only be called from a `Class.Script`.
 
@@ -783,7 +783,7 @@ end
 
 #### removeItem
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>removeItem(assetId:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>removeItem(assetId:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Unregisters an item previously added with [addItemAsync](#additemasync), removing its tile in the catalog view and any [proximity prompts](#proximity-prompts) assigned to it. This function can only be called from a `Class.Script`.
 
@@ -804,7 +804,7 @@ end
 
 #### addProximityButton
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}>`addProximityButton(adornee:` `Class.BasePart`|`Class.Model`|`Class.Attachment|Attachment,` `assetId: `[`number`](../../luau/numbers.md)`)`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}>`addProximityButton(adornee:` `Class.BasePart`|`Class.Model`|`Class.Attachment|Attachment,` `assetId:`[`number`](../../luau/numbers.md)`)`</Typography>
 
 Adds a [proximity prompt](#proximity-prompts) over the given `adornee` that will trigger the display of an item's purchase view, given its asset ID. This can be used as an alternative to the 2D catalog view, encouraging users to discover items in the 3D environment.
 
@@ -832,7 +832,7 @@ end
 
 #### removeProximityButton
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}>`removeProximityButton(adornee:` `Class.BasePart`|`Class.Model`|`Class.Attachment|Attachment)`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}>`removeProximityButton(adornee:` `Class.BasePart`|`Class.Model`|`Class.Attachment|Attachment)`</Typography>
 
 Removes a [proximity prompt](#proximity-prompts) generated through [addProximityButton](#addproximitybutton). This function can only be called from a `Class.Script`.
 
@@ -858,7 +858,7 @@ end
 
 #### setCatalogSort
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setCatalogSort(sortFunction:</InlineCode>`function`<InlineCode>):</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setCatalogSort(sortFunction:</InlineCode>`function`<InlineCode>):</InlineCode>`boolean`</Typography>
 
 Sets the sorting function `sortFunction` to be used in the catalog view. The provided sorting function can use logic based on [Item](#item) info such as `price` or `title`. This function can only be called from a `Class.LocalScript`.
 
@@ -896,7 +896,7 @@ end)
 
 #### setControlKeyCodes
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setControlKeyCodes(control:</InlineCode><a href="#merchboothcontrols">`MerchBooth.Controls`</a><InlineCode>, keyCodes:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setControlKeyCodes(control:</InlineCode><a href="#merchboothcontrols">`MerchBooth.Controls`</a><InlineCode>, keyCodes:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Configures the key and button values for interactions with the merch booth. The first parameter must be a [MerchBooth.Controls](#merchboothcontrols) enum and the second parameter a table containing the keys `keyboard` and/or `gamepad` with corresponding `Enum.KeyCode` enums.
 
@@ -944,7 +944,7 @@ MerchBooth.setControlKeyCodes(MerchBooth.Controls.ProximityPrompts, {
 
 #### openMerchBooth
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>openMerchBooth():</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>openMerchBooth():</InlineCode></Typography>
 
 Opens the merch booth window (if closed) and navigates to the catalog view. This function can only be called from a `Class.LocalScript`.
 
@@ -965,7 +965,7 @@ MerchBooth.openMerchBooth()
 
 #### openItemView
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>openItemView(itemId:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>openItemView(itemId:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Navigates to the single item view of the given `itemId`, opening the merch booth window if it is currently closed. This function can only be called from a `Class.LocalScript`.
 
@@ -984,7 +984,7 @@ end
 
 #### toggleCatalogButton
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>toggleCatalogButton(enabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>toggleCatalogButton(enabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></Typography>
 
 Toggles on/off the catalog button on the right side of the screen. This is useful when implementing a [custom button](#custom-catalog-button) or limiting the merch booth's appearance to [regions](#shoppable-regions) or [proximity prompts](#proximity-prompts). Can only be called from a `Class.LocalScript`.
 
@@ -998,7 +998,7 @@ MerchBooth.toggleCatalogButton(false)
 
 #### isMerchBoothOpen
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>isMerchBoothOpen():</InlineCode>`Tuple`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isMerchBoothOpen():</InlineCode>`Tuple`</Typography>
 
 Returns `true` if either the catalog or the item view is open. If the item view is open, the item's asset ID is returned as the second value. This function can only be called from a `Class.LocalScript`.
 
@@ -1020,7 +1020,7 @@ end
 
 #### closeMerchBooth
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>closeMerchBooth():</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>closeMerchBooth():</InlineCode></Typography>
 
 Closes the merch booth window. This function can only be called from a `Class.LocalScript`.
 
@@ -1034,13 +1034,13 @@ MerchBooth.closeMerchBooth()
 
 #### isMerchBoothEnabled
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>isMerchBoothEnabled():</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isMerchBoothEnabled():</InlineCode>`boolean`</Typography>
 
 This function may be used in tandem with [setEnabled](#setenabled) to check whether the merch booth is currently enabled or not. Can only be called from a `Class.LocalScript`.
 
 #### setEnabled
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setEnabled(enabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setEnabled(enabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></Typography>
 
 Sets whether the entire merch booth is enabled or not. When disabled, this function removes the entire UI, including [proximity prompts](#proximity-prompts), and disconnects all [events](#events). This function can only be called from a `Class.LocalScript`.
 
@@ -1059,7 +1059,7 @@ end
 
 #### itemAdded
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>itemAdded(assetId:</InlineCode>`number`<InlineCode>, itemInfo:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>itemAdded(assetId:</InlineCode>`number`<InlineCode>, itemInfo:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when an item is added through [addItemAsync](#additemasync). This event can only be connected in a `Class.Script`.
 
@@ -1094,7 +1094,7 @@ end)
 
 #### itemRemoved
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>itemRemoved(assetId:</InlineCode>`number`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>itemRemoved(assetId:</InlineCode>`number`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when an item is removed through [removeItem](#removeitem). This event can only be connected in a `Class.Script`.
 
@@ -1124,7 +1124,7 @@ end)
 
 #### merchBoothOpened
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>merchBoothOpened():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>merchBoothOpened():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when either the catalog **or** item detail view are opened.
 
@@ -1140,7 +1140,7 @@ end)
 
 #### merchBoothClosed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>merchBoothClosed():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>merchBoothClosed():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when either the catalog **or** item detail view are closed.
 
@@ -1156,7 +1156,7 @@ end)
 
 #### catalogViewOpened
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>catalogViewOpened():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>catalogViewOpened():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the catalog view is opened.
 
@@ -1172,7 +1172,7 @@ end)
 
 #### catalogViewClosed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>catalogViewClosed():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>catalogViewClosed():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the catalog view is closed.
 
@@ -1188,7 +1188,7 @@ end)
 
 #### itemViewOpened
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>itemViewOpened():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>itemViewOpened():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the item detail view is opened.
 
@@ -1204,7 +1204,7 @@ end)
 
 #### itemViewClosed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>itemViewClosed():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>itemViewClosed():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the item detail view is closed.
 

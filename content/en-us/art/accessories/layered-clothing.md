@@ -17,5 +17,5 @@ You can create custom layered clothing assets by modeling the asset in a 3D soft
 After you have exported a model, use the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on converting the layered model into an `Class.Accessory` object.
 
 <Alert severity = 'info'>
-If you are participating in the UGC program, you can upload and sell your accessories to the Marketplace. For more information on selling your items, see [Selling 3D Accessories](../../art/accessories/index.md#creation-process).
+If you meet certain account requirements, you can upload and sell your accessories to the Marketplace. For more information on selling your items, see [Selling 3D Accessories](../../art/accessories/index.md#creation-process).
 </Alert>

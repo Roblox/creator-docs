@@ -1,5 +1,5 @@
 ---
-title: Export Requirements
+title: Export Settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
@@ -7,7 +7,7 @@ Export your mesh or model as a `.fbx` to take advantage of all of Studio's 3D im
 
 Check that your model meets Roblox's [modeling specifications](../../art/modeling/specifications.md) before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
-- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/avatar/specifications.md).
+- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/characters/specifications.md).
 - If you are creating an accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
 
 <Tabs>
@@ -31,7 +31,7 @@ To export the `.fbx` file in Blender:
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" />
 
-6. Unless exporting content with animation keyframes, such as a walk cycle or a character with [facial animation data](../../art/avatar/facial-animation/index.md), disable **Bake Animation**.
+6. Unless exporting content with animation keyframes, such as a walk cycle or a character with [facial animation data](../../art/characters/facial-animation/index.md), disable **Bake Animation**.
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" /> <br />
 

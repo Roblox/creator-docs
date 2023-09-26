@@ -879,7 +879,7 @@ While **inform** is critical for [seeking](#seeking-and-switching-scenes) suppor
 
 #### loadScene
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>loadScene(sceneName:</InlineCode>`Library.string`<InlineCode>, startTime:</InlineCode>`number`<InlineCode>?)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>loadScene(sceneName:</InlineCode>`Library.string`<InlineCode>, startTime:</InlineCode>`number`<InlineCode>?)</InlineCode></Typography>
 
 Programmatically loads a scene by `sceneName` and starts it at `startTime` from its beginning. There will be a 5 second "grace period" for the scene to load from the server before the seek occurs and the scene starts playing. This means that if you call `loadScene("[SceneName]", 20)` at exactly 4:15:00 PM, the framework will wait 5 seconds in addition to the requested 20, kicking off the scene at 4:15:25 PM.
 
@@ -909,7 +909,7 @@ Do not call `loadScene` from within a schema [lifecycle hook](#schema-lifecycle-
 
 #### createSchema
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>createSchema():</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>createSchema():</InlineCode>`Library.table`</Typography>
 
 Returns an instance of the scene [schema](#scene-schemas) to create logic for the scene.
 
@@ -927,7 +927,7 @@ end
 
 #### seek
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>seek(time:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>seek(time:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Seeks to the `time` value, in seconds, from the currently loaded scene's beginning.
 
@@ -945,7 +945,7 @@ Do not call `seek` from within a schema [lifecycle hook](#schema-lifecycle-hooks
 
 #### setSceneWarningTime
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setSceneWarningTime(endSceneTimeWindow:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSceneWarningTime(endSceneTimeWindow:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Sets the amount of time from the **end** of all scenes at which a warning is dispatched. You can detect the warning either client-side through [onSceneEndingWarningForClient](#onsceneendingwarningforclient) or server-side through [onSceneEndingWarningForServer](#onsceneendingwarningforserver).
 
@@ -968,13 +968,13 @@ end)
 
 #### setSeekingPermissions
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setSeekingPermissions(permissions:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSeekingPermissions(permissions:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Grants seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them. See [Seeking and Switching Scenes](#seeking-scenes) for more information.
 
 #### getCurrentSceneEnvironment
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getCurrentSceneEnvironment():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentSceneEnvironment():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
 
 Returns the current scene's client-side or server-side [Environment](#environment) folder, depending on whether it's called from the [Client](#client) schema script or [Server](#server) schema script respectively.
 
@@ -1027,7 +1027,7 @@ end
 
 #### getCurrentServerEnvironmentFromClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getCurrentServerEnvironmentFromClient():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentServerEnvironmentFromClient():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
 
 Returns the current scene's **server-side** [Environment](#environment) folder. Unlike [getCurrentSceneEnvironment](#getcurrentsceneenvironment), you can call this from the [Client](#client) schema script.
 
@@ -1058,7 +1058,7 @@ end
 
 #### isLoadingScene
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>isLoadingScene():</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isLoadingScene():</InlineCode>`boolean`</Typography>
 
 Called from the server to know if a scene is currently loading.
 
@@ -1083,7 +1083,7 @@ print("Scene loaded")
 
 #### onSceneEndingWarningForClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneEndingWarningForClient():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the client before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.LocalScript`.
 
@@ -1100,7 +1100,7 @@ end)
 
 #### onSceneEndingWarningForServer
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneEndingWarningForServer():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForServer():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the server before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.Script`.
 
@@ -1117,7 +1117,7 @@ end)
 
 #### onSceneLoadedForClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneLoadedForClient():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneLoadedForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the client when the scene is starting. This event can only be connected in a `Class.LocalScript`.
 
@@ -1138,7 +1138,7 @@ end)
 
 #### onOrchestrationFinished
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onOrchestrationFinished():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onOrchestrationFinished():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the server when a scene has reached its [time length](#time-length) and has effectively ended. This event receives an `endedSceneName` string name argument for the scene that just finished and you can chain off this event to conditionally [load another scene](#loadscene). Can only be connected in a `Class.Script`.
 

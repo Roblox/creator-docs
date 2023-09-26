@@ -266,7 +266,7 @@ SelfieMode.activateAction(SelfieMode.Action.Filter)
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -304,7 +304,7 @@ SelfieMode.configure({
 
 #### openSelfieMode
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>openSelfieMode()</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>openSelfieMode()</InlineCode></Typography>
 
 A player will typically open selfie mode with the "camera" button on the right side of the screen, but this function lets you open it through code. When implementing a custom button as shown below, you should disable the default button through [setHudButtonEnabled](#sethudbuttonenabled). This function can only be called from a `Class.LocalScript`.
 
@@ -326,7 +326,7 @@ end)
 
 #### closeSelfieMode
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>closeSelfieMode()</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>closeSelfieMode()</InlineCode></Typography>
 
 A player will typically close selfie mode with the **&CircleTimes;** button at the bottom of the screen, but this function lets you close it through code. Can only be called from a `Class.LocalScript`.
 
@@ -340,7 +340,7 @@ SelfieMode.closeSelfieMode()
 
 #### isSelfieModeOpen
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>isSelfieModeOpen():</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isSelfieModeOpen():</InlineCode>`boolean`</Typography>
 
 Returns `true` if selfie mode is open as a result of player action or through [openSelfieMode](#openselfiemode). This function can only be called from a `Class.LocalScript`.
 
@@ -356,7 +356,7 @@ print(SelfieMode.isSelfieModeOpen())
 
 #### setHudButtonEnabled
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setHudButtonEnabled()</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setHudButtonEnabled()</InlineCode></Typography>
 
 Sets whether the default button to enter selfie mode is shown. Useful when implementing [openSelfieMode](#openselfiemode) through a custom UI button. This function can only be called from a `Class.LocalScript`.
 
@@ -378,7 +378,7 @@ end)
 
 #### getAction
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getAction(action:</InlineCode><a href="#selfiemodeaction">`SelfieMode.Action`</a><InlineCode>):</InlineCode><a href="#action">`Action`</a></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getAction(action:</InlineCode><a href="#selfiemodeaction">`SelfieMode.Action`</a><InlineCode>):</InlineCode><a href="#action">`Action`</a></Typography>
 
 Gets an [Action](#action) type through a [SelfieMode.Action](#selfiemodeaction) enum.
 
@@ -392,7 +392,7 @@ local lockGazeAction = SelfieMode.getAction(SelfieMode.Action.LockGaze)
 
 #### activateAction
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>activateAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>activateAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>)</InlineCode></Typography>
 
 Programmatically activates one of the default [actions](#selfie-mode-actions). This is the same as when a player toggles the action on from the action bar. Can only be called from a `Class.LocalScript`.
 
@@ -407,7 +407,7 @@ SelfieMode.activateAction(SelfieMode.Action.Filter)
 
 #### deactivateAction
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>deactivateAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>deactivateAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>)</InlineCode></Typography>
 
 Programmatically deactivates one of the default [actions](#selfie-mode-actions). This is the same as when a player toggles the action off from the action bar. Can only be called from a `Class.LocalScript`.
 
@@ -422,7 +422,7 @@ SelfieMode.deactivateAction(SelfieMode.Action.Filter)
 
 #### toggleAction
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>toggleAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>toggleAction(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`boolean`</Typography>
 
 Toggles an [action](#selfie-mode-actions) on if it's off, or toggles it off if it's on. This is the same as when a player clicks the action from the action bar. Returns the new "is&nbsp;toggled&nbsp;on" state as a boolean. Can only be called from a `Class.LocalScript`.
 
@@ -444,7 +444,7 @@ end
 
 #### setTheme
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setTheme(theme:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTheme(theme:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Configures the selfie mode theme, including text size, font, button/tooltip colors, and more. This function can only be called from a `Class.LocalScript`.
 
@@ -571,7 +571,7 @@ SelfieMode.setTheme({
 
 #### setEnabled
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setEnabled(isEnabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setEnabled(isEnabled:</InlineCode>`boolean`<InlineCode>)</InlineCode></Typography>
 
 Sets whether selfie mode is enabled or not. When disabled, all UI for the module is removed and all events are disconnected. This function can only be called from a `Class.LocalScript`.
 
@@ -587,7 +587,7 @@ SelfieMode.setEnabled(false)
 
 #### selfieModeOpened
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>selfieModeOpened():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selfieModeOpened():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the player opens selfie mode or when [openSelfieMode](#openselfiemode) is called. This event can only be connected in a `Class.LocalScript`.
 
@@ -603,7 +603,7 @@ end)
 
 #### selfieModeClosed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>selfieModeClosed():</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selfieModeClosed():</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when the player closes selfie mode or when [closeSelfieMode](#closeselfiemode) is called. This event can only be connected in a `Class.LocalScript`.
 
@@ -619,7 +619,7 @@ end)
 
 #### actionActivated
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>actionActivated(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>actionActivated(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when an action is activated; this may be one of the primary actions like [Depth&nbsp;of&nbsp;Field](#depth-of-field), [Lock&nbsp;Gaze](#lock-gaze), or [Hide&nbsp;Others](#hide-others); alternatively it may be a sub-action like a [filter](#filter) or [pose](#pose). The connected function receives the activated [Action](#action). This event can only be connected in a `Class.LocalScript`.
 
@@ -635,7 +635,7 @@ end)
 
 #### actionDeactivated
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>actionDeactivated(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>actionDeactivated(action:</InlineCode><a href="#action">`SelfieMode.Action`</a><InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when a primary action or sub-action is deactivated. The connected function receives the deactivated [Action](#action). This event can only be connected in a `Class.LocalScript`.
 
@@ -651,7 +651,7 @@ end)
 
 #### filterChanged
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>filterChanged(newFilter:</InlineCode>`Library.string`<InlineCode>, oldFilter:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>filterChanged(newFilter:</InlineCode>`Library.string`<InlineCode>, oldFilter:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when a [filter](#filter) is applied or removed. The connected function receives the new filter name and the old filter name. This event can only be connected in a `Class.LocalScript`.
 
@@ -667,7 +667,7 @@ end)
 
 #### poseChanged
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>poseChanged(newPose:</InlineCode>`Library.string`<InlineCode>, oldPose:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>poseChanged(newPose:</InlineCode>`Library.string`<InlineCode>, oldPose:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Datatype.RBXScriptSignal`</Typography>
 
 Fires when a [pose](#pose) is applied or removed. The connected function receives the new pose name and the old pose name. This event can only be connected in a `Class.LocalScript`.
 

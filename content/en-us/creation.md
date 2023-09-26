@@ -21,7 +21,7 @@ what makes Roblox unique and what to think about before creating.
 <Grid container direction='column' style={{gap: 16}}>
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Overview</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about our unique platform and values.</Typography>
@@ -32,7 +32,7 @@ what makes Roblox unique and what to think about before creating.
 </Grid>
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>The Roblox User Base</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn what characterizes
@@ -41,7 +41,7 @@ the Roblox audience, and what social and cultural factors you should consider wh
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Designing for Roblox</h4>
 <Typography color='textSecondary' variant='body2' style={{marginBottom: 20}}>Discover some common practices from successful experiences and find out how to tailor your designs to the unique characteristics of Roblox. </Typography>
 <a href="./production/game-design/index.md">
@@ -57,7 +57,7 @@ they technically work, so you understand how to build the best experiences
 possible for your users.
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Roblox Projects</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how to
@@ -66,7 +66,7 @@ build projects in Roblox Studio and publish them as experiences on Roblox. </Typ
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Working with Assets</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how to upload assets to the
 Roblox cloud and how to use them in your projects.</Typography>
@@ -77,7 +77,7 @@ Roblox cloud and how to use them in your projects.</Typography>
 </Grid>
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>The Data Model</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand the data model, the underlying definition
@@ -86,7 +86,7 @@ of how places in your 3D experiences look and function.</Typography>
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Client-Server Runtime</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how your experiences run in the Roblox Cloud.</Typography>
 <a href="./projects/client-server.md">
@@ -96,7 +96,7 @@ of how places in your 3D experiences look and function.</Typography>
 </Grid>
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>3D Workspace</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>The 3D Workspace is where you define all objects that are rendered by Roblox.</Typography>
@@ -104,7 +104,7 @@ of how places in your 3D experiences look and function.</Typography>
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 <h4 style={{marginBottom: 12}}>Scripting</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn how to script logic for your Roblox experiences.</Typography>
 <a href="./scripting/index.md">
@@ -113,44 +113,20 @@ of how places in your 3D experiences look and function.</Typography>
 </Grid>
 </Grid>
 
-## Characters and Accessories
-
-Learn how to build character models and accessories in 3rd party tools like Blender and Maya and
-import them in Studio for use in your experiences.
-
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
-<h4 style={{marginBottom: 12}}>Overview</h4>
+<h4 style={{marginBottom: 12}}>Characters</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how character models work for NPCs and Players in Roblox.</Typography>
 <a href="./characters/index.md">
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Custom Models and Meshes</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Understand how to use Blender and other tools to create custom 3D objects.</Typography>
 <a href="./art/modeling/index.md">
-  <Button variant="text">Learn More</Button>
-</a>
-</Grid>
-</Grid>
-
-<Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
-
-<h4 style={{marginBottom: 12}}>Avatar Characters</h4>
-<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn how to create avatar characters for use in Roblox.</Typography>
-<a href="./art/avatar/index.md">
-  <Button variant="text">Learn More</Button>
-</a>
-</Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
-
-<h4 style={{marginBottom: 12}}>Accessories</h4>
-<Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn how to create clothing and accessories for characters.</Typography>
-<a href="./art/accessories/index.md">
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
@@ -164,7 +140,7 @@ create characters and accessories.
 
 <Grid item container direction='row' style={{gap: '16px'}}>
 
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Studio Overview</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about Studio, the all-in-one IDE for Roblox.</Typography>
@@ -172,7 +148,7 @@ create characters and accessories.
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>UI Overview</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about the Studio UI and all the features and tools that are available.</Typography>
@@ -188,7 +164,7 @@ With tens of millions daily active users, there's many ways to monetize
 and grow your creations.
 
 <Grid item container direction='row' style={{gap: '16px'}}>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Promoting on Roblox</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Discover how experiences are commonly promoted on Roblox and how you can spend your budget most appropriately.</Typography>
@@ -196,7 +172,7 @@ and grow your creations.
   <Button variant="text">Learn More</Button>
 </a>
 </Grid>
-<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px', background: '#171717'}}>
+<Grid item container direction='column' xs={12} lg={6} style={{flex: 1, padding: '20px', minWidth: '200px'}}>
 
 <h4 style={{marginBottom: 12}}>Earning on Roblox</h4>
 <Typography color='textSecondary' variant='body2' style={{paddingBottom: '20px'}}>Learn about monetization options and strategies on the platform along with associated considerations for developers.</Typography>
@@ -206,3 +182,7 @@ and grow your creations.
 </Grid>
 </Grid>
 </Grid>
+
+## Avatars
+
+Learn how to build character models and accessories in 3rd party tools like Blender and Maya and sell them on the Marketplace. See [Avatars](./avatar/index.md) for creation guides, technical specifications, and additional resources.

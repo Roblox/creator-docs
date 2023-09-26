@@ -364,7 +364,7 @@ Animators can often generate many keyframes during the course of animation, espe
 
 #### Automatic Optimization
 
-The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/avatar/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
+The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
 
 If 3 or more consecutive keyframes have the same value in a track, the animation editor removes the intermediary keyframes and keeps only the first and last keyframes.
 
