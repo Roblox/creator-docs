@@ -131,7 +131,7 @@ To insert a cylinder part for your first platform:
 
    <img src="../../../assets/studio/general/Home-Tab-Rotate.png" width="800" />
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg " width="80%" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" width="80%" />
 
 1. Using the same process, add and configure at least seven more sea stack platforms with increasing levels of height into the **Blockout_Parts** model.
 

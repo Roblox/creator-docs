@@ -5,6 +5,10 @@ description: Luau is the scripting language creators use in Roblox Studio.
 
 [Luau](https://luau-lang.org) is the scripting language creators use in Roblox Studio. It is a fast, small, safe, gradually typed embeddable scripting language derived from [Lua 5.1](https://www.lua.org/pil/5.1.html). Use Luau in scripts to make your experience dynamic and interactive. For a comparison of language features in Luau and C#, see [Luau and C# Comparison](../luau/luau-csharp-comparison.md).
 
+<Alert severity="success">
+Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+</Alert>
+
 ## Support in Studio
 
 The Script Editor in Studio supports Luau with autocompletion, syntax highlighting, static linting, type checking, and script analysis. It also shows documentation and function signatures for members of the [Roblox Engine API](/reference/engine).

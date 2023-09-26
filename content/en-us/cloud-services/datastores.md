@@ -35,7 +35,7 @@ local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 ### Scopes
 
 <Alert severity="warning">
-  If you aren't currently using the legacy scopes feature, use <a href="#listing-and-prefixes">listing and prefixes</a> to organize keys in your data store.
+  For new experiences, it is not recommended to use the legacy scopes feature. Instead, use [listing and prefixes](#listing-and-prefixes) to organize keys in your data store. If you have an existing experience that uses scopes, you can continue using them.
 </Alert>
 
 Every key in a data store has a default "global" scope, but you can further organize keys by setting a unique string as a scope for the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()`. This automatically prepends the scope to all keys in all operations done on the data store.
