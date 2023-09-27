@@ -7,7 +7,7 @@ description: Face accessories are 3D accessories that move and animate with a li
    <b>This guide covers advanced topics.</b> Before you begin, you should have prior knowledge on modeling, UV mapping, rigging, animation, and how to set up a character in [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
 </Alert>
 
-A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered clothing](../../../art/accessories/layered-clothing.md) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
+A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered accessories](../../../art/accessories#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
 
 To create a face accessory, use a third-party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create a 3D model with the following requirements:
 
@@ -24,6 +24,10 @@ This guide covers the basic process in Blender for applying rigging and cage dat
 ## Reference Files
 
 The following are face accessory reference files, including all example files from this guide:
+
+<Alert severity = 'warning'>
+The reference character model provided is meant for educational purposes and does not meet the avatar character [technical specifications](../../../art/characters/specifications.md) for general use.
+</Alert>
 
 <table>
 <thead>
@@ -166,7 +170,7 @@ To export:
       <video controls width="70%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Removing-Extra-Objects.mp4">
       </video>
 
-2. Follow Studio's [Export Requirements for Blender](../../../art/modeling/export-requirements.md) and save the file to your preferred location. The final export of the eyebrow `.fbx` is available for reference.
+2. Follow Studio's [Export Requirements for Blender](../../../art/accessories/export-settings.md) and save the file to your preferred location. The final export of the eyebrow `.fbx` is available for reference.
 
 ## Testing in Studio
 

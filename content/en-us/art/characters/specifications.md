@@ -5,7 +5,7 @@ description: Character Specification lists the specific technical requirements f
 
 Character models require a specific set of components and configuration standards to ensure all avatar features work as expected. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
 
-When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
+When ready to export, see [Export Requirements](../../art/characters/export-settings.md) for mesh export settings for Blender and Maya.
 
 ## Geometry
 
@@ -794,7 +794,7 @@ The following are examples of skin tone shading for the face, and you can apply 
 
 ## Outer Cages
 
-Outer cages are non-rendered meshes that Roblox uses to define the outer surfaces of a body part using a `Class.WrapTarget` instance. Outer cages on your character model allow your character to wear layerable accessories, such as [clothing](../../art/accessories/layered-clothing.md).
+Outer cages are non-rendered meshes that Roblox uses to define the outer surfaces of a body part using a `Class.WrapTarget` instance. Outer cages on your character model allow your character to wear layerable accessories, such as clothing.
 
 For general use, see the following requirements for adding inner and outer cage meshes to your model:
 

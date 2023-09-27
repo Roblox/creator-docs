@@ -349,7 +349,7 @@ A skinned R15 character created from the <a href="../art/modeling/skinning-a-hum
 <center> <img src="../assets/art/resources/Tshirt-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-Uncaged example clothing from [Creating Layered Clothing](../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.
+Uncaged example clothing ready for caging in a 3D modeling software.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
