@@ -199,11 +199,11 @@ Imagine a game where a player can fire a laser beam at another player. Rather th
 
 #### DataStore Manipulation
 
-In games using `Class.DataStoreService` to save player data, exploiters may take advantage of invalid [data](#data-validation), and more obscure methods, to prevent a DataStore from saving properly. This can be especially abused in games with item trading, marketplaces and similar systems where items or currency leave a player's inventory.
+In experiences using `Class.DataStoreService` to save player data, exploiters may take advantage of invalid [data](#data-validation), and more obscure methods, to prevent a `Class.DataStore` from saving properly. This can be especially abused in experiences with item trading, marketplaces, and similar systems where items or currency leave a player's inventory.
 
-Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitised based on the following:
+Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitized based on the following:
 
-- `Class.Instance` values cannot be serialised into a DataStore and will fail. Utilise [type validation](#remote-runtime-type-validation) to prevent this.
+- `Class.Instance` values cannot be serialized into a `Class.DataStore` and will fail. Utilize [type validation](#remote-runtime-type-validation) to prevent this.
 - DataStores have a data size limit per key of 4 megabytes. Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
 - Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
 - `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"`, an operation can be aborted if any invalid characters are found in a string.
