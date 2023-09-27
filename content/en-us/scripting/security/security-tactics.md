@@ -127,7 +127,7 @@ Another common attack that exploiters may use involves sending `Library.table|ta
 
 For example, provided with an [in-experience shop](#in-experience-shop) system where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
 
-```lua title="LocalScript in StarterPlayerScripts" highlight="5, 17"
+```lua title="LocalScript in StarterPlayerScripts" highlight="5, 18, 21"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
@@ -140,18 +140,15 @@ local payload = {
 	Price = {
 		Name = "Price",
 		ClassName = "NumberValue",
-		Value = 0, -- Negative values could also be used which would result in giving currency rather than taking it!
+		Value = 0,  -- Negative values could also be used, resulting in giving currency rather than taking it!
 	},
 }
 
--- Send malicious payload to the server. This will be rejected
-print(buyItemEvent:InvokeServer(payload))
--- ^ Outputs "false Invalid item provided"
+-- Send malicious payload to the server (this will be rejected)
+print(buyItemEvent:InvokeServer(payload))  -- Outputs "false Invalid item provided"
 
--- Send a real item to the server. This will go through!
-print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))
--- ^ Outputs "true" and remaining currency if purchase succeeds
-```
+-- Send a real item to the server (this will go through!)
+print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))  -- Outputs "true" and remaining currency if purchase succeeds
 
 ```lua title="Script in ServerScriptService" highlight="7-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
