@@ -205,8 +205,8 @@ Ensure that any actions performed through a `Class.RemoteEvent` or `Class.Remote
 
 - `Class.Instance` values cannot be serialised into a DataStore and will fail. Utilise [type validation](#remote-runtime-type-validation) to prevent this.
 - DataStores have a data size limit per key of 4 megabytes. Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
-- Table indices cannot be [NaN](#data-validation) or nil. Iterate over all tables passed by the client and verify all indices are valid.
-- DataStores can only accept valid UTF-8 characters. Sanitise all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"` an operation can be aborted if any invalid characters are found in a string.
+- Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
+- `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"`, an operation can be aborted if any invalid characters are found in a string.
 
 ### Remote Throttling
 
