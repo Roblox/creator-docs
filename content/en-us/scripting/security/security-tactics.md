@@ -73,7 +73,7 @@ elseif newPart == false then
 end
 ```
 
-```lua title="Script in ServerScriptService" highlight="4, 6-7, 10-17, 19, 28"
+```lua title="Script in ServerScriptService" highlight="4, 7, 12, 18, 29"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
