@@ -81,6 +81,7 @@ local t = require(ReplicatedStorage:WaitForChild("t"))
 
 -- Create type validator in advance to avoid unnecessary overhead
 local createPartTypeValidator = t.tuple(t.instanceIsA("Player"), t.Color3, t.Vector3)
+
 -- Create new part with the passed properties
 local function createPart(player, partColor, partPosition)
 	-- Type check the passed arguments
