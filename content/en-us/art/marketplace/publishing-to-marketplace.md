@@ -3,7 +3,7 @@ title: Publishing to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
-If you are a creator participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your item meets the [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the [Marketplace](https://www.roblox.com/catalog) for a fee. Before uploading the item, you must review the Marketplace restrictions and understand the moderation process to prevent unexpected issues during and after the upload process.
+If you are participating in the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and you have an avatar asset that meets Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the Marketplace.
 
 There are limits on the number of assets you can upload to Roblox and enable for sale on the Marketplace:
 
@@ -34,29 +34,16 @@ There are limits on the number of assets you can upload to Roblox and enable for
 <figcaption><sup>&dagger;</sup>*For assets that can be taken off-sale, only the first time the asset is enabled for sale counts against this limit.*</figcaption>
 </figure>
 
-## Moderation
-
-When uploading an asset to the Marketplace, the Moderation team reviews the item before you can sell the item. This process can take up to 24 hours. After approval, Roblox sets your item as "Ready To Sell" in the Creator Dashboard or within Studio.
-
-To ensure that your asset has the best chance of successfully clearing moderation, make sure your asset adheres to the [Marketplace Policy](../../art/marketplace/marketplace-policy.md) and that the metadata, such as the title and description, follow [general best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices).
-
-Additional moderation can occur even after the item clears the initial moderation process. If Roblox removes an item with sales, Roblox refunds anyone who purchased the item and cancels any pending payments for that item.
-
-If you believe your asset has been incorrectly moderated, you can [file an appeal](https://en.help.roblox.com/hc/en-us/articles/360000272703) with our moderation staff.
-
 <Alert severity = 'info'>
-If you believe an asset is infringing on your IP, or that one of your assets has been incorrectly removed due to IP, submit a [DMCA request](../../production/publishing/dmca-guidelines.md).
+The following publishing instructions apply to 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
 </Alert>
 
 ## Uploading an Asset
 
-<Alert severity = 'info'>
-This content covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
-</Alert>
-
 When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../art/marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
-For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md).
+- After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../../art/marketplace/moderation.md) for additional information on this process.
+- For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
 You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md).
@@ -65,8 +52,9 @@ You can't update or edit assets and thumbnails after uploading. You must test al
 To upload your asset:
 
 1. In Studio, add the marketplace item to your workspace.
-   - For accessories, the item must be an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
-   - For bodies and heads, the item must be a `Class.Model`. For information on the expected data model and specifications, see [Avatar Specifications](../../art/avatar/specifications.md).
+   - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory Specifications](../../art/accessories/specifications.md)
+     - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
+   - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../../art/characters/specifications.md).
 2. In the **Explorer** window, right click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
@@ -104,7 +92,7 @@ During the upload process, you may encounter issues that prevent an item from up
 <figure>
 For technical issues during the validation step, hover over the error to see the specific failure output. Most issues may require adjusting your model in your third-party modeling application and re-importing into Studio.
 
-See the modeling specifications for [accessories](../../art/accessories/specifications.md) and [avatars](../../art/avatar/specifications.md) for technical requirements.
+See the modeling specifications for [accessories](../../art/accessories/specifications.md) and [avatars](../../art/characters/specifications.md) for technical requirements.
 
 </figure>
 

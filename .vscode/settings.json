@@ -57,35 +57,27 @@
   "yaml.format.proseWrap": "always",
   "yaml.format.singleQuote": true,
   "yaml.schemas": {
-    "./schemas/classes.json": [
-      "/content/*/reference/lua/classes/*.yaml",
-      "/templates/class.yaml"
+    "./tools/schemas/classes.json": [
+      "/content/*/reference/engine/classes/*.yaml",
+      "/tools/examples/class.yaml"
     ],
-    "./schemas/code_samples.json": [
-      "/content/*/reference/lua/code_samples/*.yaml",
-      "/templates/code_sample.yaml"
+    "./tools/schemas/datatypes.json": [
+      "/content/*/reference/engine/datatypes/*.yaml",
+      "/tools/examples/datatype.yaml"
     ],
-    "./schemas/datatypes.json": [
-      "/content/*/reference/lua/datatypes/*.yaml",
-      "/templates/datatype.yaml"
+    "./tools/schemas/enums.json": [
+      "/content/*/reference/engine/enums/*.yaml",
+      "/tools/examples/enum.yaml"
     ],
-    "./schemas/enums.json": [
-      "/content/*/reference/lua/enums/*.yaml",
-      "/templates/enum.yaml"
+    "./tools/schemas/globals.json": [
+      "/content/*/reference/engine/globals/*.yaml",
+      "/tools/examples/global.yaml"
     ],
-    "./schemas/globals.json": [
-      "/content/*/reference/lua/globals/*.yaml",
-      "/templates/global.yaml"
+    "./tools/schemas/libraries.json": [
+      "/content/*/reference/engine/libraries/*.yaml",
+      "/tools/examples/library.yaml"
     ],
-    "./schemas/libraries.json": [
-      "/content/*/reference/lua/libraries/*.yaml",
-      "/templates/library.yaml"
-    ],
-    "./schemas/custom_translation.json": [
-      "/content/*/reference/lua/custom_translation.yaml",
-      "/templates/custom_translation.yaml"
-    ],
-    "./schemas/navigation.json": "/content/*/navigation/**/*.yaml"
+    "./tools/schemas/navigation.json": "/content/*/navigation/**/*.yaml"
   },
   "cSpell.words": [
     "½",

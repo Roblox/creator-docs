@@ -216,7 +216,7 @@ Images to be used as art for the canvas are represented by a table with two valu
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -396,7 +396,7 @@ SurfaceArt.configure({
 
 #### getCanvases
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getCanvases():</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCanvases():</InlineCode>`Library.table`</Typography>
 
 Returns all of the canvases tagged with the `SurfaceCanvas` tag.
 
@@ -410,7 +410,7 @@ local canvases = SurfaceArt.getCanvases()
 
 #### placeArt
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>placeArt(player:</InlineCode>`Class.Player`<InlineCode>, canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>placeArt(player:</InlineCode>`Class.Player`<InlineCode>, canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Places an art piece programmatically on behalf of a player. Note that the `canvas` object must be tagged with the `SurfaceCanvas` tag when the server is initialized. It is recommended to use this only with a canvas returned from [getCanvases](#getcanvases).
 
@@ -430,7 +430,7 @@ end)
 
 #### removeAllArt
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>removeAllArt():</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>removeAllArt():</InlineCode>`nil`</Typography>
 
 Removes all artwork from all surfaces.
 
@@ -446,7 +446,7 @@ SurfaceArt.removeAllArt()
 
 #### artChanged
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>artChanged(canvas:</InlineCode>`Class.BasePart`<InlineCode>, spot:</InlineCode>`Class.Frame`<InlineCode>, spotPosition:</InlineCode>`Datatype.Vector3`<InlineCode>, artId:</InlineCode>`Library.string`<InlineCode>, ownerUserId:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>artChanged(canvas:</InlineCode>`Class.BasePart`<InlineCode>, spot:</InlineCode>`Class.Frame`<InlineCode>, spotPosition:</InlineCode>`Datatype.Vector3`<InlineCode>, artId:</InlineCode>`Library.string`<InlineCode>, ownerUserId:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when an artwork is changed at a particular location on a canvas. When an artwork is removed, `artId` will be `nil`. Note that a `Datatype.Vector3` value is passed as the third parameter to the event handler so that you can position a [custom effect](#showing-custom-effects) at the exact position where the artwork is placed. This event can only be connected in a `Class.LocalScript`.
 
@@ -494,7 +494,7 @@ end)
 
 #### promptShown
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>promptShown(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptShown(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a canvas interaction prompt is shown to a player. The connected function receives the canvas upon which the prompt is showing. This event can only be connected in a `Class.LocalScript`.
 
@@ -525,7 +525,7 @@ end)
 
 #### promptHidden
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>promptHidden(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptHidden(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a canvas interaction prompt is hidden. The connected function receives the canvas upon which the prompt was showing. This event can only be connected in a `Class.LocalScript`.
 
@@ -556,7 +556,7 @@ end)
 
 #### selectorShown
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>selectorShown():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selectorShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the surface art selector UI is shown to a player. This event can only be connected in a `Class.LocalScript`.
 
@@ -573,7 +573,7 @@ end)
 
 #### selectorHidden
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>selectorHidden():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selectorHidden():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the surface art selector UI is hidden for a player. This event can only be connected in a `Class.LocalScript`.
 

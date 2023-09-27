@@ -86,7 +86,7 @@ Each of these numbers will be an IntValue, a placeholder object for a number.
 
 Start with coding a stat for gold.
 
-1. In `OnPlayerJoin`, under `leaderstats.Parent = player`, type `local gold = Instance.new("IntValue")`.This creates a new IntValue and stores it in the variable gold.
+1. In `OnPlayerJoin`, under `leaderstats.Parent = player`, type `local gold = Instance.new("IntValue")`. This creates a new IntValue and stores it in the variable gold.
 
    ```lua
     local function onPlayerJoin(player)
@@ -111,7 +111,7 @@ Start with coding a stat for gold.
     If you decide to use your own stat names, keep track of their exact name and spelling. They'll be referenced later in the series for other scripts.
     </Alert>
 
-3. On a new line, `type gold.Value = 0`. This sets the starting value for players.
+3. On a new line, type `gold.Value = 0`. This sets the starting value for players.
 
    ```lua
     local function onPlayerJoin(player)
@@ -165,7 +165,7 @@ Remember that items can be anything based off the game design document. Such as 
     end
    ```
 
-2. Create a new stat for the player's bag spaces. Set `spaces.Value to 2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
+2. Create a new stat for the player's bag spaces. Set `spaces.Value` to `2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
 
    ```lua
     local function onPlayerJoin(player)

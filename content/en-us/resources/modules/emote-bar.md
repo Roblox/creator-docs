@@ -168,7 +168,7 @@ EmoteBar.configureClient({
 
 #### configureServer
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default server-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -227,7 +227,7 @@ EmoteBar.configureServer({
 
 #### configureClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`. Depending on the value of [`guiType`](#emotebarguitype), options in the noted tabs also apply.
 
@@ -382,7 +382,7 @@ EmoteBar.configureClient({
 
 #### setEmotes
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setEmotes(emotes:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setEmotes(emotes:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Sets the custom emotes to use. These will be added to the defaults if `useDefaultEmotes` is `true`, or replace the defaults if `useDefaultEmotes` is `false`. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -419,7 +419,7 @@ EmoteBar.setEmotes({
 
 #### setGuiVisibility
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setGuiVisibility(visible:</InlineCode>`boolean`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setGuiVisibility(visible:</InlineCode>`boolean`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Shows or hides the emotes GUI. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -433,7 +433,7 @@ EmoteBar.setGuiVisibility(false)
 
 #### getEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Library.table`</Typography>
 
 Gets an [Emote](#emote) by name. Returns `nil` if the emote cannot be found. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -451,7 +451,7 @@ local shrug = EmoteBar.getEmote("Shrug")
 
 #### playEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>playEmote(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>playEmote(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode>`nil`</Typography>
 
 Plays the given [Emote](#emote) and fires the [emotePlayed](#emoteplayed) event on the server, if connected. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -466,7 +466,7 @@ EmoteBar.playEmote(shrug)
 
 #### lockEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>lockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Locks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -480,7 +480,7 @@ EmoteBar.lockEmote("Applaud")
 
 #### unlockEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>unlockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>unlockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Unlocks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -496,7 +496,7 @@ EmoteBar.unlockEmote("Applaud")
 
 #### emotePlayed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>emotePlayed(player:</InlineCode>`Class.Player`<InlineCode>, emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>emotePlayed(player:</InlineCode>`Class.Player`<InlineCode>, emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when any client plays an emote. This event can only be connected in a `Class.LocalScript`.
 
@@ -530,7 +530,7 @@ end)
 
 #### lockedEmoteActivated
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>lockedEmoteActivated(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockedEmoteActivated(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a client clicks a locked emote. This event can only be connected in a `Class.LocalScript`.
 

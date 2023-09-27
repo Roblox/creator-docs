@@ -93,7 +93,7 @@ Note that players under the age of 13 will only see the status message if it's a
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function should be called from a `Class.LocalScript` within **StarterPlayerScripts**.
 

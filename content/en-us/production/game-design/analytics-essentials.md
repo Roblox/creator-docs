@@ -2,6 +2,7 @@
 title: Analytics Essentials
 description: Analytics Essentials
 ---
+
 Roblox offers a variety of analytics features to help you chart your experience's growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
 
 Analytics provide a high level overview of your experience's health and surface optimization opportunities. The highest level of analytics you can use to uncover these opportunities are called _key performance indicators_ (KPIs). Three of the most prominent KPIs are:

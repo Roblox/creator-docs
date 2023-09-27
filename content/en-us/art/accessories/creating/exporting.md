@@ -71,8 +71,11 @@ To generate the accessory object:
   </figure>
 </GridContainer>
 
+<Alert severity = 'success'>
 Congratulations, you've completed your clothing tutorial. With this accessory, you can:
 
 - Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../../characters/appearance.md#humanoiddescription).
 - Save the accessory as an [avatar asset](../../../projects/assets/index.md#for-avatars) for use in an experience later.
-- If you are part of the UGC Program, you can [upload your asset](../../../art/marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
+- If you meet certain account requirements, you can [upload your asset](../../../art/marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
+
+</Alert>

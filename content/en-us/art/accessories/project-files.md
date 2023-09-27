@@ -3,6 +3,10 @@ title: Accessory Project Files and References
 description: Download various accessory-related project files and reference files.
 ---
 
+<Alert severity = 'info'>
+See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
+</Alert>
+
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
