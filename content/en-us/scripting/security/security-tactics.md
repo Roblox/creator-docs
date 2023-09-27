@@ -87,8 +87,8 @@ local function createPart(player, partColor, partPosition)
 	-- Type check the passed arguments
 	if not createPartTypeValidator(player, partColor, partPosition) then
 		-- Silently return "false" if type check fails here
-		-- Raising an error without a cooldown can be abused by malicious cheaters
-		-- to bog down the server. Provide client feedback instead!
+		-- Raising an error without a cooldown can be abused to bog down the server
+		-- Provide client feedback instead!
 
 		return false
 	end
