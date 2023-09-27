@@ -322,8 +322,9 @@ their Roblox username and display name, so don't use them as unique identifiers 
 | name               | Roblox display name.                      |
 | nickname           | Roblox display name.                      |
 | preferred_username | Roblox username.                          |
-| created_at         | Creation timestamp of the Roblox account. |
+| created_at         | Creation time of the Roblox account as a Unix timestamp. |
 | profile            | Roblox account profile URL.               |
+| picture            | Roblox avatar headshot image. Can be null if the avatar headshot image hasn't yet been generated or has been moderated. |
 
 ```json title="Example User with Profile Scope"
 {
@@ -332,7 +333,8 @@ their Roblox username and display name, so don't use them as unique identifiers 
   "nickname": "exampleuser",
   "preferred_username": "exampleuser",
   "created_at": 1584682495,
-  "profile": "https://www.roblox.com/users/1516563360/profile"
+  "profile": "https://www.roblox.com/users/1516563360/profile",
+  "picture": "https://tr.rbxcdn.com/03dc2a9abe7b1aacaaf93ea46d5c0646/150/150/AvatarHeadshot/Png"
 }
 ```
 

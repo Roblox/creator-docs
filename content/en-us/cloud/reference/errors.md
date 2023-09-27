@@ -91,7 +91,6 @@ The following table describes possible values for `code`.
 
 ## v1 Resource Error Model
 
-
 All error responses have the same, standard format, which includes:
 
 - An `error` field, which is a high-level cause that is applicable to all Open Cloud endpoints.
