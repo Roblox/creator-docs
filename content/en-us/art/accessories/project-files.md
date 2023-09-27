@@ -21,7 +21,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 <tbody>
     <tr>
     <td><a href="../../assets/accessories/reference-files/Tshirt-model.fbx" download>Tshirt-model.fbx</a></td>
-    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md), ready for caging in a 3D modeling software.</td>
+    <td>Uncaged example clothing ready for caging in a 3D modeling software.</td>
   </tr>
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>

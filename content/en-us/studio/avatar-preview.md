@@ -60,7 +60,7 @@ From this interface, you can right‑click anywhere over the rig preview and sel
 </Alert>
 
 <figure>
-<figcaption>&sup1; Clothing and accessory support includes both rigid accessories, such as basic shoulder accessories, as well as [layered clothing](../art/accessories/layered-clothing.md).</figcaption>
+<figcaption>&sup1; Clothing and accessory support all [avatar accessories](../art/accessories/index.md#3d-accessories), including rigid accessories, such as basic shoulder accessories, as well as layered clothing, such as a jacket or shirt.</figcaption>
 </figure>
 
 #### Equipping Items
@@ -173,7 +173,7 @@ If all you have is a standalone head `Class.Model`, you can add it as a custom i
 </Alert>
 
 <Alert severity="warning">
-Currently, only rigid [accessories](../art/accessories/index.md) and [layered clothing](../art/accessories/layered-clothing.md) are supported for adding to the palette, with limited or no support for [animations](../animation/index.md), shoes, accessories without preexisting categories, and non‑head body parts. Increased support for these items will come in the future.
+Currently, only [accessories](../art/accessories/index.md#3d-accessories) are supported for adding to the palette, with limited or no support for [animations](../animation/index.md), shoes, accessories without preexisting categories, and non‑head body parts. Increased support for these items will come in the future.
 </Alert>
 
 To add an item to the palette:

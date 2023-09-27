@@ -13,7 +13,7 @@ If you are ready to sell an item and the item meets the requirements below, see 
 
 ## General Guidelines
 
-When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/publishing-to-marketplace.md#moderation) and item removal.
+When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/moderation.md) and item removal.
 
 Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following program guidelines:
 
