@@ -148,6 +148,7 @@ print(buyItemEvent:InvokeServer(payload))  -- Outputs "false Invalid item provid
 
 -- Send a real item to the server (this will go through!)
 print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))  -- Outputs "true" and remaining currency if purchase succeeds
+```
 
 ```lua title="Script in ServerScriptService" highlight="7-10"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -155,7 +156,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
 local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
 
-buyItemEvent.OnServerInvoke = function (player, item)
+buyItemEvent.OnServerInvoke = function(player, item)
 	-- Check if the passed item isn't spoofed and is in the ItemData folder
 	if typeof(item) ~= "Instance" or not item:IsDescendantOf(itemDataFolder) then
 		return false, "Invalid item provided"
