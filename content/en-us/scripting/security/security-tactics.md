@@ -156,7 +156,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
 local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
 
-buyItemEvent.OnServerInvoke = function(player, item)
+local function buyItem(player, item)
 	-- Check if the passed item isn't spoofed and is in the ItemData folder
 	if typeof(item) ~= "Instance" or not item:IsDescendantOf(itemDataFolder) then
 		return false, "Invalid item provided"
@@ -164,6 +164,9 @@ buyItemEvent.OnServerInvoke = function(player, item)
 
 	-- The server can then go on to process the purchase based on the example flow below
 end
+
+-- Bind "buyItem()" to the remote function's callback
+buyItemEvent.OnServerInvoke = buyItem
 ```
 
 ### Value Validation
