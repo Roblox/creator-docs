@@ -11,6 +11,8 @@ navigation:
     path: /art/accessories/project-files
   - title: Export Settings
     path: /art/accessories/export-settings
+  - title: Custom Thumbnails
+    path: /art/marketplace/custom-thumbnails
   - title: Classic Clothing
     path: /art/accessories/classic-clothing
 
@@ -41,6 +43,8 @@ navigation:
         path: /art/characters/facial-animation/facs-poses-reference
       - title: Using Heads in Studio
         path: /art/characters/facial-animation/using-heads-in-studio
+      - title: Animating Heads
+        path: /art/characters/facial-animation/animating-heads
   - title: Testing
     section:
       - title: Overview
@@ -73,8 +77,7 @@ navigation:
     path: /art/accessories/automatic-skinning-transfer
 
   - heading: Third Party Add-ons
-  - title: Blender Studio Plugin (Github)
-    path: /avatar/resources
+
   - title: Calisthenics Tool
     path: /art/modeling/calisthenics-tool
   - title: Validation Tool

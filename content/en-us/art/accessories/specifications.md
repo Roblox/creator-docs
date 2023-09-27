@@ -7,7 +7,7 @@ When creating accessories and clothing for Roblox, it's important to meet specif
 
 Although rigid accessories and layerable accessories share many technical requirements, layerable accessories must include additional components to ensure the accessories deform and stretch appropriately on different body types. If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../art/marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
 
-When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
+When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
 
 ## Geometry and Budgets
 
@@ -169,7 +169,7 @@ To achieve the layering effect, your clothing must meet the following requiremen
 - Asset must contain an [inner mesh cage](#inner-cage) and an [outer mesh cage](#outer-cage).
 - Asset must continue to follow any applicable [custom mesh requirements](../../art/characters/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
 
-See [Creating Layered Models](./creating-in-blender.md) for a basic guide on applying these requirements on a reference asset in Blender. Once the `.fbx` file is [exported](../../art/modeling/export-requirements.md), see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on creating an accessory from your model.
+See [Creating Layered Models](../../art/accessories/creating/index.md) for a basic guide on applying these requirements on a reference asset in Blender. Once the `.fbx` file is [exported](../../art/accessories/export-settings.md), see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on creating an accessory from your model.
 
 <Alert severity='info'>
 If you meet certain account requirements, you can sell your layered accessories on the Marketplace. See [Selling 3D Accessories](../../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
