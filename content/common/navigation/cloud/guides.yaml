@@ -13,7 +13,7 @@ navigation:
         path: /cloud/open-cloud/oauth2-develop
   - title: API Keys
     path: /cloud/open-cloud/api-keys
-  - heading: V2 Resources
+  - heading: V2 Resources (Beta)
   - title: Inventory
     path: /cloud/open-cloud/inventory
   - heading: V1 Resources
