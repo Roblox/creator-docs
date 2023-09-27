@@ -69,7 +69,7 @@ local newPart = remoteFunction:InvokeServer(Color3.fromRGB(200, 0, 50), Vector3.
 if newPart then
 	print("The server created the requested part:", newPart)
 elseif newPart == false then
-	print("The server denied the request. No part was created")
+	print("The server denied the request. No part was created.")
 end
 ```
 
