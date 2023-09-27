@@ -127,7 +127,7 @@ Another common attack that exploiters may use involves sending `Library.table|ta
 
 For example, provided with an [in-experience shop](#in-experience-shop) system where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
 
-```lua title="LocalScript in StarterPlayerScripts" highlight="5, 18, 21"
+```lua title="LocalScript in StarterPlayerScripts" highlight="5, 17, 20"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
@@ -136,7 +136,6 @@ local payload = {
 	Name = "Ultra Blade",
 	ClassName = "Folder",
 	Parent = itemDataFolder,
-
 	Price = {
 		Name = "Price",
 		ClassName = "NumberValue",
