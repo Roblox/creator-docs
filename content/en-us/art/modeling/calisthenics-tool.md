@@ -8,7 +8,7 @@ The **Calisthenics Tool** is a supplemental [Blender](https://www.blender.org/) 
 Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
 
 <Alert severity = 'info'>
-The Calisthenics Tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../art/avatar/specifications.md) and any applicable [layered clothing specifications](../../art/accessories/specifications.md) for the best results in your experience.
+The Calisthenics tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../art/characters/specifications.md) and any applicable [layered clothing specifications](../../art/accessories/specifications.md) for the best results in your experience.
 </Alert>
 
 <GridContainer numColumns="3">
@@ -66,7 +66,7 @@ After installation, you can use the Calisthenics Tool whenever you want to test 
 You can try out the Calisthenics Tool using an [example character model](../../assets/modeling/skinned-meshes/calisthenic-tool/Fish-Character-No-FACS.fbx).
 
 <Alert severity = 'info'>
-For demonstration purposes, this reference model doesn't contain FACS data. If you require a reference with facial animation, you can download the same model with FACS data from our [reference models](../../art/avatar/specifications.md#reference-files).
+For demonstration purposes, this reference model doesn't contain FACS data. If you require a reference with facial animation, you can download the same model with FACS data from our [reference models](../../art/characters/specifications.md#reference-files).
 </Alert>
 
 ### Testing Animations
@@ -74,7 +74,7 @@ For demonstration purposes, this reference model doesn't contain FACS data. If y
 When testing your character model, first set the armature in the Calisthenics Tool then select one of the reference animations. It is important to visually verify your skinning quality using various movements and angles to ensure the best results for your model.
 
 <Alert severity ='warning'>
-If you encounter any errors or warnings when setting armature or playing animations, verify that your model uses an appropriate bone hierarchy and naming convention outlined in Roblox's [custom mesh requirements](../../art/avatar/specifications.md).
+If you encounter any errors or warnings when setting armature or playing animations, verify that your model uses an appropriate bone hierarchy and naming convention outlined in Roblox's [custom mesh requirements](../../art/characters/specifications.md).
 </Alert>
 
 To test animations:
@@ -123,7 +123,7 @@ To test accessories:
 When you are ready to export your model, you can export your character directly through the Calisthenics Tool. The tool automatically clears any of the test data and applies appropriate export settings.
 
 <Alert severity = 'info'>
-Using this tool to export models with [facial animations](../../art/avatar/facial-animation/index.md) may result in unexpected behavior because the stored FACS data can conflict with the tool's reference animations.
+Using this tool to export models with [facial animations](../../art/characters/facial-animation/index.md) may result in unexpected behavior because the stored FACS data can conflict with the tool's reference animations.
 </Alert>
 
 To export from the Calisthenics Tool:

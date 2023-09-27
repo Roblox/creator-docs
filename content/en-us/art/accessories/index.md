@@ -1,11 +1,12 @@
 ---
 title: Accessories
 description: Accessories are objects like clothing or props that Roblox avatars can equip.
+hideBreadcrumbs: true
 ---
 
 <img src="../../assets/avatar/character-customization/Avatar-Banner.jpg" />
 
-Accessories are cosmetic items that users can equip and wear on their avatar character, such as clothes, weapons, and props. Roblox users can obtain accessories and other cosmetic items from the [Marketplace](https://www.roblox.com/catalog) and use the [Avatar Editor](https://www.roblox.com/my/avatar) to equip and save items in their inventory. When joining most experiences, equipped cosmetic items load with the user's avatar character, allowing you to express yourself with a unique appearance wherever you go.
+Accessories are cosmetic items that users can equip and wear on their avatar character, such as clothes, weapons, and props. Roblox users can obtain accessories and other cosmetic items from the [Marketplace](https://www.roblox.com/catalog). When joining most experiences, equipped cosmetic items load with the user's avatar character, allowing you to express yourself with a unique appearance wherever you go.
 
 Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.
 
@@ -18,7 +19,8 @@ Custom accessories are first created in 3D modeling programs, such as [Blender](
 - A basic background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up an accessory](#components-of-an-accessory).
 - An understanding of the general [accessory creation process](#creation-process).
-- [Various tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
+- Review the [clothing creation tutorial](../../art/accessories/creating/index.md), a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
+- [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
 ### Components of an Accessory
 
@@ -113,6 +115,10 @@ If you are interested in specific avatar creation topics, use the following tabl
 </thead>
 <tbody>
   <tr>
+    <td>Tutorials</td>
+    <td>[Basic Clothing Creation](../../art/accessories/creating/index.md)</td>
+  </tr>
+  <tr>
     <td>Reference Files</td>
     <td>[Accessory and Clothing Reference Files](../../art/modeling/project-files.md)</td>
   </tr>
@@ -122,7 +128,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Cosmetic Creation</td>
-    <td>[Accessories Overview](../../art/accessories/specifications.md)<br /><br />[Layered Clothing Overview](../../art/accessories/layered-clothing.md)<br /><br />[Creating Face Accessories](../../art/avatar/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../art/marketplace/marketplace-policy.md)</td>
+    <td>[Accessories Overview](../../art/accessories/specifications.md)<br /><br />[Layered Clothing Overview](../../art/accessories/layered-clothing.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../art/marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
@@ -130,7 +136,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Rigging and Skinning</td>
-    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Humanoid Rig Requirements](../../art/avatar/specifications.md#rigging)<br /><br />[Rigging Facial Bones](../../art/avatar/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skinning Facial Bones](../../art/avatar/facial-animation/creating-basic-heads.md#skinning-face-bones)</td>
+    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Humanoid Rig Requirements](../../art/characters/specifications.md#rigging)<br /><br />[Rigging Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skinning Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#skinning-face-bones)</td>
   </tr>
   <tr>
     <td>Testing and Validation</td>
