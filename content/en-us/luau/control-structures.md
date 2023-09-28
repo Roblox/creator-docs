@@ -176,12 +176,12 @@ for i, v in {1, 2, 3, 4, 5} do
 end
 ```
 
-Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function:
+Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function. This contrived example iterates over an array in reverse order, from its last element to its first:
 
 ```lua
 local myTable = {1, 2, 3, 4, 5}
 
-myMetatable = { 
+myMetatable = {
 	__iter = function(self)
 		local i = #self
 		local firstRun = true
