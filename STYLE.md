@@ -158,7 +158,7 @@ The following table contains some examples and how they render in the documentat
 
 When referencing a term from the API in prose, use [automatic API links](#links) whenever it makes sense. The examples in this section demonstrate the API link syntax.
 
-Not every mention of a class, method, or property needs an auto-link. Particularly in an ordered list, overuse of links can distract readers and pull them out of the task flow. In those situations, use your best judgment on whether a link is necessary and helpful.
+Not every mention of a class, method, or property needs an auto-link. Particularly in an ordered list, overuse of links can distract readers and pull them out of the task flow. In those situations, use your best judgment on whether a link is necessary and helpful. In other situations, such as the API documentation or a reference table, auto-links are almost always a good idea.
 
 If you refer to a term without linking to it, maintain the same capitalization and wrap it in backticks. For example, refer to a `BasePart`, not a "base part."
 
