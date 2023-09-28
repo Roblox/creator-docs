@@ -49,7 +49,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publish a message to all of your experience's live servers with the following steps:
 
-1. [Create an API key](../../cloud/open-cloud/managing-api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/credentials). Make sure you perform the following settings:
+1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/credentials). Make sure you perform the following settings:
 
    1. Add **Messaging Service API** to **Access Permissions**.
    2. Add **Publish** operation to your selected experience.
@@ -89,7 +89,7 @@ Third-Party app support through OAuth 2.0 is a Beta feature that might be subjec
 
 To use Messaging Service API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](../../cloud/open-cloud/app-registration.md#registering-an-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
+1. When [registering your application](./oauth2-registration.md#registering-an-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
 2. When [implementing the authorization flow](../../cloud/open-cloud/oauth2-overview.md#implementing-authorization-flows), include `universe-messaging-service:publish` in the `scope` parameter of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
