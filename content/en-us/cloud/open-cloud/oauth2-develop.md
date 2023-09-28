@@ -4,7 +4,7 @@ description: Introduces OAuth 2.0 authentication implementation.
 ---
 
 Open Cloud supports the OAuth 2.0 authorization flow with and without
-[PKCE](../../cloud/open-cloud/oauth2-overview#authorization-code-flow-with-pkce),
+[PKCE](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow-with-pkce),
 depending on whether your clients are confidential or public.
 
 - _Confidential clients_ are apps that are capable of keeping credentials
