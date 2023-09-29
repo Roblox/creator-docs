@@ -3,7 +3,8 @@ title: Luau Type Checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
-Luau uses a typing engine which gives every variable an inferred type.
+Luau uses a typing engine that gives every variable an inferred type.
+
 
 ```lua
 local foo = "bar" --> string
@@ -12,7 +13,7 @@ local x = 5 --> number
 
 ## Defining a Type
 
-A type can be defined using the `type` keyword.
+Use the `type` keyword to define your own types:
 
 ```lua
 type Vector2 = {x: number, y: number}
@@ -26,6 +27,8 @@ There are three type inference modes that Luau can use in `Class.Script|Scripts`
 * `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
 * `--!strict` - Asserts all types based off the inferred or explicitly annotated type
 
+To use the non-default modes, add `--!nocheck` or `--!strict` to the top of your scripts. Studio highlights type mismatches in the editor and surfaces them as warnings in the Script Analyzer window.
+
 ## Types
 
 A type annotation can be defined using the `:` operator after a variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.
@@ -35,13 +38,15 @@ local foo: string = "bar"
 local x: number = 5
 ```
 
-There are 4 primitive types that can be used in an annotation:
+There are four primitive types that can be used in an annotation:
+
 * `nil` - no value
-* `boolean` - `true`/`false` value
+- `boolean` - `true` or `false`
 * `number` - a numeric value
 * `string` - text
 
-Functions and tables are defined differently, and within Roblox, all `Class.Instance|Instances` and `DataType.Enums` have their own types.
+Within Roblox, all classes, data types, and enums have their own types that you can check against:
+
 
 ```lua
 part.Touched:Connect(function(otherPart: BasePart)
@@ -49,7 +54,7 @@ part.Touched:Connect(function(otherPart: BasePart)
 end)
 ```
 
-An optional type can be defined using `?` at the end of the annotation.
+To add an optional type, use a `?` at the end of the annotation:
 
 ```lua
 local foo: string? = nil
@@ -57,30 +62,32 @@ local foo: string? = nil
 
 ### Literal Types
 
-Strings and booleans can also be cast to literal values, instead of using `string` and `boolean` respectively.
+You can also cast strings and booleans to literal values instead of using `string` and `boolean`:
+
 
 ```lua
-local alwaysHelloWorld: "Hello World!" = "Hello World!"
-local alwaysTrue: true = false -- TypeError: Type 'false' could not be converted into 'true'
+local alwaysHelloWorld: "Hello world!" = "Hello world!"
+alwaysHelloWorld = "Just hello!" -- Type Error: Type '"Just hello!"' could not be into '"Hello world!"'
 
-alwaysHelloWorld = "Goodbye World!" -- TypeError: Type '"Goodbye World"' could not be into '"Hello World!"'
-
+local alwaysTrue: true = false -- Type Error: Type 'false' could not be converted into 'true'
 ```
 
 ### Type Casts
 
-Sometimes, you may need to assist the typechecker by changing the type of a value using type casts. This can be done with the `::` operator.
+Sometimes, you might need to assist the typechecker by explicitly casting a value to a different type with the `::` operator:
 
 ```lua
-local numericValue = 1
+local myNumber = 1
+local myString: string
 
-local value = numericValue :: any -- ok, all expressions may be cast to 'any'
-local flag = numericValue :: boolean -- not ok, invalid 'number' to 'boolean' conversion
+myString = myNumber -- not ok, type conversion error
+myString = myNumber :: any -- ok, all expressions can be cast to 'any'
+local myFlag = myNumber :: boolean -- not ok, types are unrelated
 ```
 
 ## Function Typing
 
-Assume the following function:
+Consider the following function:
 
 ```lua
 local function add(x, y)
@@ -88,7 +95,8 @@ local function add(x, y)
 end
 ```
 
-This function adds `x` to `y`, but will error if a string is passed as an argument. Luau doesn't know that this function can only use numbers, so lets type this function to constrain `x` and `y` as numbers.
+This function adds `x` to `y`, but errors if one or both of them is a string. Luau doesn't know that this function can only use numbers. To prevent this category of problem, add types to the parameters:
+
 
 ```lua
 local function add(x: number, y: number)
@@ -96,23 +104,25 @@ local function add(x: number, y: number)
 end
 ```
 
-By adding type annotations to the parameters of the function, Luau now knows that the function takes two numbers and throws a warning if you try to pass anything that isn't a number into the function.
+Luau now knows that the function takes two numbers and throws a warning if you try to pass anything that isn't a number into the function:
 
 ```lua
 add(5, 10) -- ok
 add(5, "foo") -- TypeError: Type `string` could not be converted into `number`.
 ```
 
-To define a return type, put a `:` operator at the end of the function definition.
+To define a return type, put a `:` operator at the end of the function definition:
 
 ```lua
 local function add(x: number, y: number): number
 ```
 
-To return multiple types, place all return types in brackets.
+To return multiple types, place the types in parentheses:
 
 ```lua
 local function FindSource(script: BaseScript, pattern: string): (string, number)
+	return 42, true -- type errors
+end
 ```
 
 ### Defining a Functional Type
@@ -133,12 +143,15 @@ local numbers: {number} = {1, 2, 3, 4, 5}
 local characterParts: {Instance} = LocalPlayer.Character:GetChildren()
 ```
 
-Index types can be defined using `{[indexType] = valueType}`.
+Define index types using `{[indexType]: valueType}`:
+
 
 ```lua
-local frobulator: {[string]: any} = {
-	Foo = "bar",
+local frobulator: {[string]: number} = {
+	Foo = 1,
 	Baz = 10
+}
+frobulator["bar"] = true -- type error, boolean can't convert to number
 }
 ```
 
@@ -167,15 +180,16 @@ local function addLotsOfNumbers(...)
 end
 ```
 
-As expected, this can take any value, and the typechecker won't raise a warning if you give it an invalid type, such as a `string`.
+As expected, this function can take any value, and the typechecker won't raise a warning if you provide an invalid type, such as a `string`.
 
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
-print(addLotsOfNumbers(1, 2, "3", 4, 5)) -- attempt to add string to number
+print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- attempt to add string to number
 ```
 
-Instead, it is possible to assign a type to the `...`, just like how other types are assigned.
+Instead, assign a type to the `...`, just like how you assign any other type:
+
 
 ```lua
 local function addLotsOfNumbers(...: number)
@@ -185,10 +199,12 @@ And now, the second line raises a type error.
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5))
-print(addLotsOfNumbers(1, 2, "3", 4, 5)) -- TypeError: Type `string` could not be converted into `number`.
+print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- TypeError: Type `string` could not be converted into `number`.
+
 ```
 
-However, with a type definition, the following statement does not work.
+However, with a type definition, the following statement does not work:
+
 
 ```lua
 type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
@@ -202,18 +218,22 @@ type addLotsOfNumbers = (...number) -> number
 
 ## Unions and Intersections
 
-It is possible to define a type to be two or more types, using a union or intersection.
+You can even define a type as two or more types using a union or intersection:
 
 ```lua
-type NumberOrString = number | string
-type Object1 = {foo: string}
-type Object2 = {bar: number}
-type Object1and2 = Object1 & Object2 -- {foo: string} & {bar: number}
+type numberOrString = number | string
+type type1 = {foo: string}
+type type2 = {bar: number}
+type type1and2 = type1 & type2 -- {foo: string} & {bar: number}
+
+local numString1: numberOrString = true -- type error
+local numString2: type1and2 = {foo = "hello", bar = 1}
 ```
 
 ## Defining an Inferred Type
 
-The `typeof` function can be used in a type definition to define an inferred type.
+Use the `typeof` function in a type definition for inferred types:
+
 
 ```lua
 type Car = typeof {
@@ -222,7 +242,7 @@ type Car = typeof {
 } --> Car: {Speed: number, Wheels: number}
 ```
 
-One way to use `typeof`, is to define a metatable type using `setmetatable` inside the `typeof` function.
+One way to use `typeof` is to define a metatable type using `setmetatable` inside the `typeof` function:
 
 ```lua
 type Vector = typeof(setmetatable({}::{
@@ -237,7 +257,7 @@ type Vector = typeof(setmetatable({}::{
 
 ## Generics
 
-Generics allow you to define at a most basic level, substitution types. Lets assume a basic object that creates a State object.
+Generics allow you to define, at a basic level, substitution types. Consider the following `State` object:
 
 ```lua
 local State = {
@@ -246,7 +266,7 @@ local State = {
 }
 ```
 
-The type for this state object without generics would be.
+Without generics, the type for this object would be as follows:
 
 ```lua
 type State = {
@@ -255,13 +275,13 @@ type State = {
 }
 ```
 
-However, you may want `Value` to be a type based on the incoming value, this can be done with generics. Generic types use the following basic shape:
+However, you might want the type for `Value` to be based on the incoming value, which is where generics come in:
 
 ```lua
 type GenericType<T> = T
 ```
 
-The `<T>` denotes a type that can be set to anything. The best way to visualize this is as a substitution type. 
+The `<T>` denotes a type that can be set to anything. The best way to visualize this is as a substitution type.
 
 ```lua
 type List<T> = {T}
@@ -276,7 +296,7 @@ Generics can also have multiple substitutions inside the brackets.
 type Map<K, V> = {[K]: V}
 ```
 
-Using the state object above, it can be reworked to use a generic type.
+To rework the `State` object from earlier to use a generic type:
 
 ```lua
 type State<T> = {
@@ -287,9 +307,9 @@ type State<T> = {
 
 ### Function Generics
 
-Functions can also use generics. The State example can infer the value of `T` from the function's incoming arguments.
+Functions can also use generics. The `State` example infers the value of `T` from the function's incoming arguments.
 
-A generic function is defined by adding a `<>` to the right of the function name.
+To define a generic function, add a `<>` to the function name:
 
 ```lua
 local function State<T>(key: string, value: T): State<T>
@@ -325,7 +345,7 @@ ChangedSignal:Fire("Size", Vector2.new(100, 50)) --> ok
 ChangedSignal:Fire(20, 100) --> not ok, number cannot be converted to string
 ```
 
-Type packs are defined in functions using `...` on the right-hand side of a generic.
+To define a type pack, add `...` to the right side of a generic:
 
 ```lua
 local function Signal<A...>(f: (A...) -> (), ...: A...)
@@ -333,7 +353,7 @@ local function Signal<A...>(f: (A...) -> (), ...: A...)
 
 ## Type Exports
 
-Types can be exported from a `Class.ModuleScript` using the `export` keyword.
+To export a type from a `Class.ModuleScript`, use the `export` keyword:
 
 ```lua title="Types Module in ReplicatedStorage"
 export type Cat = {
@@ -343,6 +363,7 @@ export type Cat = {
 ```
 
 ```lua title="Script that uses the Types module"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Types = require(ReplicatedStorage.Types)
 
 local newCat: Types.Cat = {
@@ -351,4 +372,6 @@ local newCat: Types.Cat = {
 		print(`{self.Name} said meow`)
 	end
 }
+
+newCat:Meow()
 ```
