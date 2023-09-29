@@ -23,9 +23,9 @@ type Vector2 = {x: number, y: number}
 
 There are three type inference modes that Luau can use in `Class.Script|Scripts`:
 
-* `--!nocheck` - Don't check types
-* `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
-* `--!strict` - Asserts all types based off the inferred or explicitly annotated type
+- `--!nocheck` - Don't check types
+- `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
+- `--!strict` - Asserts all types based off the inferred or explicitly annotated type
 
 To use the non-default modes, add `--!nocheck` or `--!strict` to the top of your scripts. Studio highlights type mismatches in the editor and surfaces them as warnings in the Script Analyzer window.
 
@@ -40,10 +40,10 @@ local x: number = 5
 
 There are four primitive types that can be used in an annotation:
 
-* `nil` - no value
+- `nil` - no value
 - `boolean` - `true` or `false`
-* `number` - a numeric value
-* `string` - text
+- `number` - a numeric value
+- `string` - text
 
 Within Roblox, all classes, data types, and enums have their own types that you can check against:
 
