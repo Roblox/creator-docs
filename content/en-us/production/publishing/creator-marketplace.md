@@ -48,6 +48,13 @@ In addition to the Creator Marketplace's filters, you can view an asset's commun
 - **Yellow** - The asset has moderate community confidence.
 - **Green** - The asset has high community confidence.
 
+### Trusted Reviews
+
+Users can now leave reviews on Creator Marketplace assets in addition to the currently available thumbs up or down ratings. To improve reliability and ensure authentic feedback, only users that acquire the asset are able to submit reviews. After submitting a review:
+
+- Asset creators can respond to reviews, closing the feedback loop.
+- The community can mark reviews as helpful for future users.
+
 ## Adding Assets to Experiences
 
 To add assets to your experience from the Creator Marketplace:

@@ -293,3 +293,7 @@ Roblox offers several tools to import, store, and publish your assets:
         </tr>
     </tbody>
 </table>
+
+To further help with asset organization, you can archive audio, decals, images, and meshes in the **DEVELOPMENT ITEMS** section of the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model).
+
+After you archive an asset, it is no longer usable in Roblox experiences. The asset fails to load and disappears from the website.
