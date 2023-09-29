@@ -366,6 +366,4 @@ local newCat: Types.Cat = {
 }
 
 newCat:Meow()
-
-newCat:Meow()
 ```
