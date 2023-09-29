@@ -364,6 +364,7 @@ export type Cat = {
 
 ```lua title="Script that uses the Types module"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Types = require(ReplicatedStorage.Types)
 
 local newCat: Types.Cat = {
@@ -372,6 +373,8 @@ local newCat: Types.Cat = {
 		print(`{self.Name} said meow`)
 	end
 }
+
+newCat:Meow()
 
 newCat:Meow()
 ```
