@@ -48,7 +48,7 @@ These steps use an array to store different phrases for the NPC to say when play
    ```lua
       -- Cycles through chat dialogue when prompt is used
 
-      local TextChatService = game:GetService("TextChatService")
+      local Chat = game:GetService("Chat")
 
       local prompt = script.Parent
 
@@ -61,7 +61,7 @@ These steps use an array to store different phrases for the NPC to say when play
 
       local function speak()
          local dialogue = "I've got one thing to say!"
-         TextChatService:DisplayBubble(head, dialogue)
+         Chat:Chat(head, dialogue)
       end
 
       prompt.Triggered:Connect(speak)
@@ -115,7 +115,7 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
 
     local function speak()
       local dialogue = dialogueArray[2]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
     end
    ```
 
@@ -145,7 +145,7 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
     end
    ```
 
@@ -154,7 +154,7 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
 
       dialogueIndex += 1
     end
@@ -185,7 +185,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
         dialogueIndex = 1
@@ -200,7 +200,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
    ```lua
     local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
         dialogueIndex = 1
@@ -223,7 +223,7 @@ This script used an array to create a list of possible dialogue lines for a Non-
 ```lua title="Completed script"
    -- Cycles through chat dialogue when prompt is used
 
-   local TextChatService = game:GetService("TextChatService")
+   local Chat = game:GetService("Chat")
 
    local prompt = script.Parent
 
@@ -237,7 +237,7 @@ This script used an array to create a list of possible dialogue lines for a Non-
 
    local function speak()
       local dialogue = dialogueArray[dialogueIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
 
       if dialogueIndex == #dialogueArray then
          dialogueIndex = 1
@@ -271,6 +271,6 @@ Try one of the optional challenges below.
    local function speak()
       local randomIndex = randomGenerator:NextInteger(1, #dialogueArray)
       local dialogue = dialogueArray[randomIndex]
-      TextChatService:DisplayBubble(head, dialogue)
+      Chat:Chat(head, dialogue)
    end
 ```
