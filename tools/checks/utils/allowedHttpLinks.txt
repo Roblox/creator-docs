@@ -52,6 +52,7 @@ https://digitalsake.com/
 https://digitane.jp/
 https://discord.com/developers/applications
 https://docs.blender.org/manual/en/latest/physics/cloth/examples.html
+https://docs.blender.org/manual/en/latest/
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html
 https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html
 https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html
@@ -103,6 +104,7 @@ https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/creator-docs
 https://github.com/Roblox/roact/
 https://github.com/osyrisrblx/t
+https://github.com/Roblox/roblox-blender-plugin
 https://grandtraining.co.nz/
 https://greece.alg.academy/
 https://helpx.adobe.com/uk/photoshop/using/whats-new.html
@@ -424,3 +426,15 @@ https://www.youtube.com/watch?v=fx33sPEAZEk
 https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
 https://youtu.be/OEmFocfE0Xs
+https://en.wikipedia.org/wiki/Exponential_backoff
+https://en.wikipedia.org/wiki/Shard_(database_architecture)
+https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
+https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF
+https://code.visualstudio.com/Docs/languages/json
+https://github.com/redhat-developer/vscode-yaml
+https://json-schema.org/specification
+https://json-schema.org/specification-links.html
+https://json.schemastore.org/github-action.json
+https://json.schemastore.org/github-workflow.json
+https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+https://www.schemastore.org/json/

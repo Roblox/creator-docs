@@ -91,7 +91,7 @@ The **Output** window, accessible from the [View](./view-tab.md) tab, displays e
 ## Code Assist
 
 <Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **AI-Powered** **Code Completion**.
+This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **AI-Powered** **Code Completion**. You can also contribute your Luau scripts for AI training to help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
 </Alert>
 
 **Code Assist** is an AI assistant that suggests lines or functions of code as you type, helping you code more efficiently and stay focused. Based on contexts from your comment and code, suggestions will be triggered in two ways:

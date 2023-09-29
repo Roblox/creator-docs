@@ -124,7 +124,7 @@ For example, if you depict or reference flatulence, vomiting, and/or unrealistic
 
 ### Gambling
 
-Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards. Experiences that depict unplayable gambling content are only available to verified users that are at least 13 years old.
+Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards.
 
 ### Alcohol
 

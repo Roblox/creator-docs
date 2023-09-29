@@ -4119,7 +4119,7 @@ To configure your own local lighting:
       1. Set **Material** to **Neon**.
       1. Enable **Anchored**.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3A.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3a.jpg" width="100%"/>
 
    1. Repeat this process for the right spawn zone.
 
@@ -4180,7 +4180,7 @@ To exactly recreate the local lighting configuration within the sample [Environm
       1. Set **CFrame.Position** to **-77, 20.6, 321**.
       1. Enable **Anchored**.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3A.jpg" width="100%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/LocalLighting-3a.jpg" width="100%"/>
 
    1. Add a **block** part for the right spawn zone, then in the **Properties** window,
       1. Set **Color** to **255, 170, 255**.

@@ -3,7 +3,7 @@ title: VR Guidelines
 description: Guidelines on publishing an experience for VR devices.
 ---
 
-Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing experiences to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest&nbsp;2.
+Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing experiences to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest&nbsp;2. At minimum, Oculus drivers require an NVidia GTX1060 graphics card or equivalent.
 
 ## Graphics Quality Mode
 

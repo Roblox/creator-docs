@@ -20,7 +20,7 @@ description: PBR textures are advanced textures using multiple texture maps.
 </TabItem>
 </Tabs>
 
-Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/avatar/specifications.md#textures) the specific texture maps you're using.
+Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/characters/specifications.md#textures) the specific texture maps you're using.
 
 This guide provides instructions on [setting up](#enabling-surface-appearance) your mesh objects to use PBR texture maps, and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [Material References](../../art/modeling/material-reference.md) for common material values, image comparisons and clothing examples.
 
@@ -183,7 +183,7 @@ The following example uses the **Overlay** mode for custom characters, revealing
 </figure>
 </GridContainer>
 
-See [Custom Skin Tone](../../art/avatar/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
+See [Custom Skin Tone](../../art/characters/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
 
 ##### Transparency
 

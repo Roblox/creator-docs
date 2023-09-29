@@ -1,0 +1,84 @@
+navigation:
+  - title: Getting Started
+    path: /avatar/
+  - heading: Clothing and Accessories
+    section:
+  - title: Overview
+    path: /art/accessories/
+  - title: Specifications
+    path: /art/accessories/specifications
+  - title: Reference Files
+    path: /art/accessories/project-files
+  - title: Export Settings
+    path: /art/accessories/export-settings
+  - title: Custom Thumbnails
+    path: /art/marketplace/custom-thumbnails
+  - title: Classic Clothing
+    path: /art/accessories/classic-clothing
+
+  - heading: Characters
+  - title: Overview
+    path: /art/characters/
+  - title: Specifications
+    path: /art/characters/specifications
+  - title: Reference Files
+    path: /art/characters/project-files
+  - title: Export Settings
+    path: /art/characters/export-settings
+  - title: Bodies
+    section:
+      - title: Rigging a Humanoid Model
+        path: /art/modeling/rigging-a-humanoid-model
+      - title: Skinning a Humanoid Model
+        path: /art/modeling/skinning-a-humanoid-model
+  - title: Heads
+    section:
+      - title: Overview
+        path: /art/characters/facial-animation/
+      - title: Creating Basic Heads
+        path: /art/characters/facial-animation/creating-basic-heads
+      - title: Creating Face Accessories
+        path: /art/characters/facial-animation/creating-face-accessories
+      - title: FACS Poses Reference
+        path: /art/characters/facial-animation/facs-poses-reference
+      - title: Using Heads in Studio
+        path: /art/characters/facial-animation/using-heads-in-studio
+      - title: Animating Heads
+        path: /art/characters/facial-animation/animating-heads
+  - title: Testing
+    section:
+      - title: Overview
+        path: /art/characters/testing/
+      - title: In Blender
+        path: /art/characters/testing/blender
+      - title: In Studio
+        path: /art/characters/testing/studio
+
+  - heading: Publishing and Selling
+  - title: Policies and Guidelines
+    section:
+      - title: Marketplace Policy
+        path: /art/marketplace/marketplace-policy
+      - title: Intellectual Property
+        path: /art/marketplace/intellectual-property
+      - title: Moderation
+        path: /art/marketplace/moderation
+  - title: Publishing to Marketplace
+    path: /art/marketplace/publishing-to-marketplace
+  - title: Marketplace Fees and Commissions
+    path: /art/marketplace/marketplace-fees-and-commissions
+
+  - heading: Studio Tools
+  - title: 3D Importer
+    path: /art/modeling/3d-importer
+  - title: Accessory Fitting Tool
+    path: /art/accessories/accessory-fitting-tool
+  - title: Automatic Skinning
+    path: /art/accessories/automatic-skinning-transfer
+
+  - heading: Third Party Add-ons
+
+  - title: Calisthenics Tool
+    path: /art/modeling/calisthenics-tool
+  - title: Validation Tool
+    path: /art/accessories/validation-tool

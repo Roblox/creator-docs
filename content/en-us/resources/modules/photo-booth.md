@@ -156,7 +156,7 @@ end)
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -289,7 +289,7 @@ PhotoBooth.configure({
 
 #### setBackgrounds
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setBackgrounds(backgrounds:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setBackgrounds(backgrounds:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides the default backgrounds provided by the photo booth. Background images should be at 16:9 aspect ratio (1024&times;768) for an optimal experience and their asset IDs should be included in the backgrounds array. 1–4&nbsp;(inclusive) backgrounds can be provided.
 
@@ -308,7 +308,7 @@ PhotoBooth.setBackgrounds({
 
 #### countdownStarted
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>countdownStarted():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>countdownStarted():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the countdown starts. This event can only be connected in a `Class.LocalScript`.
 
@@ -324,7 +324,7 @@ end)
 
 #### printoutShown
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>printoutShown():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>printoutShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the printout is shown to the user. This event can only be connected in a `Class.LocalScript`.
 
@@ -340,7 +340,7 @@ end)
 
 #### promptShown
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>promptShown():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the printout is closed and the camera button is showing again. This event can only be connected in a `Class.LocalScript`.
 
@@ -358,12 +358,12 @@ end)
 
 #### hideOtherGuis
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
 
 This callback runs immediately before the printout is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the printout is shown. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
 
 #### showOtherGuis
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
 
 This callback runs after the printout has been closed, letting you reenable entire `Class.ScreenGui|ScreenGuis` or elements within them. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.

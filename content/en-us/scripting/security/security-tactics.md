@@ -68,20 +68,30 @@ local newPart = remoteFunction:InvokeServer(Color3.fromRGB(200, 0, 50), Vector3.
 
 if newPart then
 	print("The server created the requested part:", newPart)
+elseif newPart == false then
+	print("The server denied the request. No part was created.")
 end
 ```
 
-```lua title="Script in ServerScriptService" highlight="4, 8-10, 12, 19"
+```lua title="Script in ServerScriptService" highlight="4, 7, 12, 18, 29"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 local t = require(ReplicatedStorage:WaitForChild("t"))
 
+-- Create type validator in advance to avoid unnecessary overhead
+local createPartTypeValidator = t.tuple(t.instanceIsA("Player"), t.Color3, t.Vector3)
+
 -- Create new part with the passed properties
 local function createPart(player, partColor, partPosition)
 	-- Type check the passed arguments
-	local typeValidator = t.tuple(t.instanceIsA("Player"), t.Color3, t.Vector3)
-	assert(typeValidator(player, partColor, partPosition))
+	if not createPartTypeValidator(player, partColor, partPosition) then
+		-- Silently return "false" if type check fails here
+		-- Raising an error without a cooldown can be abused to bog down the server
+		-- Provide client feedback instead!
+
+		return false
+	end
 
 	print(player.Name .. " requested a new part")
 	local newPart = Instance.new("Part")
@@ -111,6 +121,52 @@ local function isInf(n: number): boolean
 	-- Number could be -inf or inf
 	return math.abs(n) == math.huge
 end
+```
+
+Another common attack that exploiters may use involves sending `Library.table|tables` in place of an `Class.Instance`. Complex payloads can mimic what would be an otherwise ordinary object reference.
+
+For example, provided with an [in-experience shop](#in-experience-shop) system where item data like prices are stored in `Class.NumberValue` objects, an exploiter may circumvent all other checks by doing the following:
+
+```lua title="LocalScript in StarterPlayerScripts" highlight="5, 17, 20"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
+local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
+local payload = {
+	Name = "Ultra Blade",
+	ClassName = "Folder",
+	Parent = itemDataFolder,
+	Price = {
+		Name = "Price",
+		ClassName = "NumberValue",
+		Value = 0,  -- Negative values could also be used, resulting in giving currency rather than taking it!
+	},
+}
+
+-- Send malicious payload to the server (this will be rejected)
+print(buyItemEvent:InvokeServer(payload))  -- Outputs "false Invalid item provided"
+
+-- Send a real item to the server (this will go through!)
+print(buyItemEvent:InvokeServer(itemDatafolder["Real Blade"]))  -- Outputs "true" and remaining currency if purchase succeeds
+```
+
+```lua title="Script in ServerScriptService" highlight="7-10"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local itemDataFolder = ReplicatedStorage:WaitForChild("ItemData")
+local buyItemEvent = ReplicatedStorage:WaitForChild("BuyItemEvent")
+
+local function buyItem(player, item)
+	-- Check if the passed item isn't spoofed and is in the ItemData folder
+	if typeof(item) ~= "Instance" or not item:IsDescendantOf(itemDataFolder) then
+		return false, "Invalid item provided"
+	end
+
+	-- The server can then go on to process the purchase based on the example flow below
+end
+
+-- Bind "buyItem()" to the remote function's callback
+buyItemEvent.OnServerInvoke = buyItem
 ```
 
 ### Value Validation
@@ -143,6 +199,17 @@ Imagine a game where a player can fire a laser beam at another player. Rather th
 - If you've implemented [teams](../../players/teams.md) or a "players against bots" combat system, confirm that the hit character is an enemy, not a teammate.
 - Confirm that the hit player is alive.
 - Store weapon and player state on the server and confirm that a firing player is not blocked by a current action such as reloading or a state like sprinting.
+
+#### DataStore Manipulation
+
+In experiences using `Class.DataStoreService` to save player data, exploiters may take advantage of invalid [data](#data-validation), and more obscure methods, to prevent a `Class.DataStore` from saving properly. This can be especially abused in experiences with item trading, marketplaces, and similar systems where items or currency leave a player's inventory.
+
+Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitized based on the following:
+
+- `Class.Instance` values cannot be serialized into a `Class.DataStore` and will fail. Utilize [type validation](#remote-runtime-type-validation) to prevent this.
+- `Class.DataStore|DataStores` have [data limits](../../cloud-services/datastores.md#data-limits). Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
+- Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
+- `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"`, an operation can be aborted if any invalid characters are found in a string.
 
 ### Remote Throttling
 

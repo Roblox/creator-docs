@@ -116,6 +116,16 @@ end
 goldChunk.Touched:Connect(onPartTouch)
 ```
 
+## Ordering Stats
+
+There are three ways to control the order of stats in a leaderboard:
+
+- Add the stats in the order that you want them to appear.
+- Add a child `Class.BoolValue` named `IsPrimary` to the stat. Set its value to true to place the stat first in the list.
+- Add a child `Class.NumberValue` named `Priority` to the stat. Then set its value to an integer. Higher priority values appear first. Stats without a priority have a default priority of 0.
+
+`IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` set to true, `Priority` determines their order.
+
 ## Hiding the Leaderboard
 
 To hide the leaderboard, such as on a menu screen or during a cutscene, place a `Class.LocalScript` within `Class.StarterGui` or `Class.StarterPlayerScripts` containing a call to `Class.StarterGui:SetCoreGuiEnabled()|StarterGui`.
