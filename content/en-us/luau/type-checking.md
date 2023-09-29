@@ -5,7 +5,6 @@ description: Luau uses gradual typing through the use of type annotations and in
 
 Luau uses a typing engine that gives every variable an inferred type.
 
-
 ```lua
 local foo = "bar" --> string
 local x = 5 --> number
@@ -47,7 +46,6 @@ There are four primitive types that can be used in an annotation:
 
 Within Roblox, all classes, data types, and enums have their own types that you can check against:
 
-
 ```lua
 local somePart: Part = Instance.new("Part")
 local brickColor: BrickColor = somePart.BrickColor
@@ -63,7 +61,6 @@ local foo: string? = nil
 ### Literal Types
 
 You can also cast strings and booleans to literal values instead of using `string` and `boolean`:
-
 
 ```lua
 local alwaysHelloWorld: "Hello world!" = "Hello world!"
@@ -96,7 +93,6 @@ end
 ```
 
 This function adds `x` to `y`, but errors if one or both of them is a string. Luau doesn't know that this function can only use numbers. To prevent this category of problem, add types to the parameters:
-
 
 ```lua
 local function add(x: number, y: number)
@@ -145,7 +141,6 @@ local characterParts: {Instance} = LocalPlayer.Character:GetChildren()
 
 Define index types using `{[indexType]: valueType}`:
 
-
 ```lua
 local frobulator: {[string]: number} = {
 	Foo = 1,
@@ -189,7 +184,6 @@ print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- attempt to add string to number
 
 Instead, assign a type to the `...`, just like how you assign any other type:
 
-
 ```lua
 local function addLotsOfNumbers(...: number)
 ```
@@ -203,7 +197,6 @@ print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- TypeError: Type `string` could not
 ```
 
 However, with a type definition, the following statement does not work:
-
 
 ```lua
 type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
@@ -232,7 +225,6 @@ local numString2: type1and2 = {foo = "hello", bar = 1}
 ## Defining an Inferred Type
 
 Use the `typeof` function in a type definition for inferred types:
-
 
 ```lua
 type Car = typeof {
