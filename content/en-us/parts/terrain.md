@@ -173,6 +173,23 @@ To add animated grass to the **Grass** material:
 
    <img src="../assets/studio/properties/Terrain-Decoration.png" width="320" alt="Decoration property of Terrain object in Properties window of Studio" />
 
+1. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
+
+   <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
+
+    <Alert severity="success">
+   This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Grass Length Customization**.
+   </Alert>
+
+   <Tabs>
+   <TabItem label="0.1">
+   <img src="../assets/modeling/terrain/Terrain-GrassLength-Short.jpg" width="780" height="400" alt="GrassLength of 0.1" />
+   </TabItem>
+    <TabItem label="1.0">
+   <img src="../assets/modeling/terrain/Terrain-GrassLength-Long.jpg" width="780" height="400" alt="GrassLength of 1.0" />
+   </TabItem>
+   </Tabs>
+
 1. If desired, adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
 
 ### Custom Terrain Colors

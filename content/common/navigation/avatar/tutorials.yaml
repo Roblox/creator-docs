@@ -1,0 +1,30 @@
+navigation:
+  - title: Avatar Tutorials
+    path: /avatar/tutorials
+  - heading: Clothing
+  - title: Overview
+    path: /art/accessories/creating/
+  - title: Modeling
+    path: /art/accessories/creating/modeling
+  - title: Texturing
+    path: /art/accessories/creating/texturing
+  - title: Rigging
+    path: /art/accessories/creating/rigging
+  - title: Caging
+    path: /art/accessories/creating/caging
+  - title: Exporting
+    path: /art/accessories/creating/exporting
+
+  - heading: Characters
+  - title: Overview
+    path: /art/characters/creating/
+  - title: Modeling
+    path: /art/characters/creating/modeling
+  - title: Texturing
+    path: /art/characters/creating/texturing
+  - title: Caging
+    path: /art/characters/creating/caging
+  - title: Cleanup
+    path: /art/characters/creating/cleanup
+  - title: Exporting
+    path: /art/characters/creating/exporting

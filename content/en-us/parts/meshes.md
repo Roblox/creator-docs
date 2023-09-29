@@ -18,15 +18,11 @@ You can browse thousands of user-uploaded meshes from the [Creator Marketplace](
 
 1. Navigate to the **View** tab and select **Toolbox**.
 
-   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
 1. From the **Marketplace** tab, select the category dropdown and choose **Meshes**.
 
    <img src="../assets/studio/toolbox/Marketplace-Meshes.png" width="360" />
-
-1. **(Optional)** Click the **filter** button to the right of the search bar to filter meshes by verified creators and/or a specific creator's username.
-
-   <img src="../assets/modeling/meshes/Toolbox-Filter-Button.png" width="360" />
 
 1. In the **Search** field, type anything you'd like to find.
 1. Either click or drag-and-drop a mesh to insert it into the viewport.
@@ -46,12 +42,12 @@ Meshes that you've personally [imported](#importing-meshes) or those which were 
 
 ## Importing Meshes
 
-You can import custom meshes created through other applications through Studio's [3D&nbsp;Importer](../art/modeling/3d-importer.md) as `.fbx` or `.obj` files. All imported meshes must adhere to Studio's [mesh requirements](../art/avatar/specifications.md).
+You can import custom meshes created through other applications through Studio's [3D&nbsp;Importer](../art/modeling/3d-importer.md) as `.fbx` or `.obj` files. All imported meshes must adhere to Studio's [mesh requirements](../art/characters/specifications.md).
 
 <img src="../assets/studio/general/Home-Tab-Import-3D.png" width="715" />
 
 <Alert severity='info'>
-If you are part of the UGC program, you can sell your custom meshes as accessories on the [Marketplace](https://www.roblox.com/catalog). See [Selling 3D Accessories](../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
+If you meet certain account requirements, you can sell your custom meshes as accessories on the [Marketplace](https://www.roblox.com/catalog). See [Avatar documentation](../avatar/index.md) for an overview of the avatar creation, uploading, and selling process.
 </Alert>
 
 ### Bulk Import

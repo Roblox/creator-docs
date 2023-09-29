@@ -39,6 +39,8 @@ export interface IConfig {
   baseBranch: string;
   commitHash: string;
   checkHttpLinks: boolean;
+  checkMarkdownLint: boolean;
+  checkRelativeLinks: boolean;
   checkRetextAnalysis: boolean;
   debug: boolean;
   files: FileOption;
@@ -173,12 +175,22 @@ export const getConfig = async (): Promise<IConfig> => {
     .option('checkHttpLinks', {
       type: 'boolean',
       description: 'Whether to check HTTP links',
-      default: process.env.CHECK_HTTP_LINKS,
+      default: getEnvVar('CHECK_HTTP_LINKS', DataType.Boolean),
+    })
+    .option('checkMarkdownLint', {
+      type: 'boolean',
+      description: 'Whether to check markdownlint',
+      default: getEnvVar('CHECK_MARKDOWN_LINT', DataType.Boolean),
+    })
+    .option('checkRelativeLinks', {
+      type: 'boolean',
+      description: 'Whether to check relative links',
+      default: getEnvVar('CHECK_RELATIVE_LINKS', DataType.Boolean),
     })
     .option('checkRetextAnalysis', {
       type: 'boolean',
       description: 'Whether to check retext analysis',
-      default: process.env.CHECK_RETEXT_ANALYSIS,
+      default: getEnvVar('CHECK_RETEXT_ANALYSIS', DataType.Boolean),
     })
     .option('commitHash', {
       type: 'string',

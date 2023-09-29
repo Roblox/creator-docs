@@ -35,7 +35,7 @@ To use the **SocialInteractions** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -196,7 +196,7 @@ SocialInteractions.setTriggerWordsForChatAnimation("rbxassetid://5911729486", {"
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -212,22 +212,22 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`useBodyOrientation`</td>
 		<td>Toggles the **body&nbsp;orientation** feature.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`waistOrientationWeight`</td>
 		<td>Body orientation uses a mix of waist and neck rotation; this parameter determines which of the two is prevalent. A value of 1 places complete emphasis on the waist while 0 places complete emphasis on the neck.</td>
-		<td>`0.5`</td>
+		<td>0.5</td>
 	</tr>
 	<tr>
 		<td>`useChatAnimations`</td>
 		<td>Toggles the **chat&nbsp;animations** feature.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`useDefaultTriggerWordsForChatEmotes`</td>
 		<td>Chat animations comes with a default list of [trigger&nbsp;words](#chat-animation-trigger-words). Set this parameter to `false` if you'd like to turn them off and provide your own.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 </tbody>
 </table>
@@ -246,7 +246,7 @@ SocialInteractions.configure({
 
 #### setTriggerWordsForChatAnimation
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setTriggerWordsForChatAnimation(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWords:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTriggerWordsForChatAnimation(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWords:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Registers a new animation in the chat animation feature. Typing any word that matches a string pattern included in the `triggerWords` table will activate the animation whose ID is passed as the first parameter.
 
@@ -268,7 +268,7 @@ SocialInteractions.setTriggerWordsForChatAnimation(
 
 #### onChatAnimationPlayed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onChatAnimationPlayed(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWord:</InlineCode>`Library.string`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onChatAnimationPlayed(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWord:</InlineCode>`Library.string`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a chat animation plays. The connected function receives the animation ID and the word that triggered the animation as its arguments. This event can only be connected in a `Class.LocalScript`.
 

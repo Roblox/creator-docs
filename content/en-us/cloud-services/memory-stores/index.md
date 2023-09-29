@@ -46,6 +46,23 @@ For a single sorted map or queue, the following size and item count limits apply
 
 - Maximum total size (including keys for sorted map): 100MB
 
+## Best Practices
+
+To keep your memory usage pattern optimal and avoid hitting the [limits](#limits-and-quotas), follow these best practices:
+
+- **Remove processed items.** Consistently cleaning up read items using `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps can free up memory and keep the data structure up-to-date.
+- **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreService:GetQueue()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
+  - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire experience.
+  - Always either explicitly delete unneeded items or set a short item expiration.
+  - Generally, it's recommended to use explicit deletion for releasing memory as it takes effect immediately, and use item expiration as a safety mechanism to prevent unused items from occupying memory indefinitely.
+- **Only keep the necessary values in memory.** For example, for an auction house experience, only the highest offered bid value is useful to maintain the auctioning system. You can use `Class.MemoryStoreQueue:UpdateAsync()`  on one key to keep the highest bid rather than keeping all bids in your data structure.
+- **Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to find a good rate of requests to send.** This algorithm can help you stay below the API request limits and reduce **DataUpdateConflicts** errors rather than constantly hitting `Class.MemoryStoreService` to get the correct response.
+- **Split a giant data structure into multiple smaller ones by [sharding](https://en.wikipedia.org/wiki/Shard_(database_architecture)).** It's easier to manage data stored in smaller structures rather than storing everything in one large data structure that can constantly hit both request and usage limits.
+  - For sorted maps, instead of putting keys with a set of different prefixes in one sorted map, separate each prefix into its own sorted map.
+  - For example, instead of having a monolithic sorted map that contains keys for each user and their associated value, shard the map into multiple maps based on the first digits of user IDs to enhance scalability.
+
+- **Compress stored values.** For example, use the [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm to reduce the stored value size.
+
 ## Observability
 
 The [memory stores observability dashboard](../../cloud-services/memory-stores/observability.md) provides insights and analytics for monitoring and troubleshooting your memory store usage. With real-time updating charts on different aspects of your memory usage and API requests, you can track the memory usage pattern of your experience, view the current allocated quotas, monitor the API status, and identify potential issues for performance optimization.

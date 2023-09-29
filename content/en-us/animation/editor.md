@@ -364,7 +364,7 @@ Animators can often generate many keyframes during the course of animation, espe
 
 #### Automatic Optimization
 
-The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/avatar/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
+The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
 
 If 3 or more consecutive keyframes have the same value in a track, the animation editor removes the intermediary keyframes and keeps only the first and last keyframes.
 
@@ -546,10 +546,7 @@ To set an animation to a different priority:
 ## Saving an Animation
 
 When you save an animation, Studio saves it as a
-`Class.KeyframeSequence`
-object. This object contains all keyframes for an animation, determines
-if the animation is looped, and notes its priority against other
-animations.
+`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#exporting-an-animation) before referencing the published animation in your experience.
 
 To save an animation:
 
@@ -560,18 +557,48 @@ To save an animation:
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
    width="330" />
 
-2. Select **Save** or **Save As** to save the animation as a child of
-   the **AnimSaves** object (itself a child of the rig).
+2. Select **Save** or **Save As** to save the animation with a reference added to the **AnimSaves** object.
 
    <img src="../assets/animation/animation-editor/Saved-Animation.png"
    width="320" />
 
-<Alert severity="info" variant="standard">
-  The saved `Class.KeyframeSequence`
-  is <b>not</b> used to load the animation in an experience. For details on
-  exporting an animation for use in an experience, see
-  <a href="#exporting-an-animation">Exporting an Animation</a>.
+### Accessing Local Data
+
+Roblox saves animation data locally to `Class.ServerStorage` to preserve your animation work. In most cases, your experience shouldn't directly access this local data and instead should reference a published animation.
+
+In the rare cases that your experience requires accessing local data, reference the value of the `Class.ObjectValue` in your rig's AnimSaves folder rather than directly accessing the `Class.ServerStorage`. See the following examples:
+
+```lua title="Access local animation data"
+local myAnim = myRig.AnimSaves.Value.myAnimation
+-- Accesses your local animation data with the value reference in your rig
+```
+
+```lua title="Incorrectly access local data"
+local myAnim = ServerStorage.RBX_ANIMSAVES.myRig.myAnimation
+-- Can conflict with other rigs sharing the same name
+```
+
+<Alert severity = 'warning'>
+Since local data is stored in `Class.ServerStorage`, it doesn't replicate and isn't available from clients. If your clients need access to that data, you must move the `Class.KeyframeSequence` or `Class.CurveAnimation` objects and their descendants to `Class.ReplicatedStorage`.
 </Alert>
+
+### Migrating Legacy Data
+
+The Animation Editor previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#accessing-local-data) in the same way.
+
+To migrate your legacy animation data:
+
+1. With the Animation Editor, select a rig with older animations that aren't saved in `Class.ServerStorage`. A migration window displays.
+
+   <img src="../assets/animation/animation-editor/Migrate-Animations.png" width = "65%" />
+
+2. Select **Delete**, **Migrate**, or **Ignore** for each detected animation.
+
+   - **Delete**: Delete animations that are already published or no longer being used.
+   - **Migrate**: Migrate animations that are still in progress or that haven't yet been published.
+   - **Ignore**: Ignore animations if you have yet to update your experience's code to [access local data](#accessing-local-data) from `Class.ServerStorage`. Once updated, migrate these animations.
+
+3. Press **OK** when complete.
 
 ## Exporting an Animation
 
@@ -609,10 +636,9 @@ To export an animation:
 Once the upload is complete, you can copy the animation's asset ID
 from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Using Animations](../animation/using.md).
 
-1. Click the **Creations** tab and select **Animations** from the dropdown menu.
+1. Click the **Inventory** tab and select **My Animations** from the dropdown menu.
 
-   <img src="../assets/studio/toolbox/Creations-Animations.png"
-   width="360" />
+   <img src="../assets/studio/toolbox/Inventory-My-Animations.png" width="360" />
 
 2. Right-click the desired animation and select **Copy Asset ID** from the contextual menu.
 3. See [Using Animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.

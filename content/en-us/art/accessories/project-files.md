@@ -3,6 +3,10 @@ title: Accessory Project Files and References
 description: Download various accessory-related project files and reference files.
 ---
 
+<Alert severity = 'info'>
+See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
+</Alert>
+
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
@@ -17,7 +21,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 <tbody>
     <tr>
     <td><a href="../../assets/accessories/reference-files/Tshirt-model.fbx" download>Tshirt-model.fbx</a></td>
-    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md), ready for caging in a 3D modeling software.</td>
+    <td>Uncaged example clothing ready for caging in a 3D modeling software.</td>
   </tr>
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>

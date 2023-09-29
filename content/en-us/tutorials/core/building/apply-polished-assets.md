@@ -87,20 +87,20 @@ To add in additional container objects to your organization structure:
 
 ## Apply Asset Library
 
-Now that you have an organizational structure to contain your new assets, you can now begin to apply the sample asset library to your greybox geometry. As you follow the following instructions that exactly recreate the final environment within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience, **you can adjust any part of the process to meet the specifications of your own experience**. Every environment has different needs according to the world that you're creating.
+<Alert severity="info">
+    The following instructions provide two different instructional paths: you can either apply the asset library to your own unique environment, or you can apply the asset library in a way that exactly recreates the final environment within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience.
+</Alert>
+
+Now that you have an organizational structure to contain your new assets, you can now begin to apply the asset library to your greybox geometry. As you follow either instructional path, note that the example imagery make the placeholder assets semi-transparent so you can see your progress between steps.
 
 <Tabs>
-  <TabItem label="Graybox Version">
+  <TabItem key = "1" label="Graybox Version">
     <img src="../../../assets/tutorials/core-building-and-scripting/Pre-Polished-Assets.jpg" width="800" height="450" />
   </TabItem>
-  <TabItem label="Polished Assets">
+  <TabItem key = "2" label="Polished Assets">
     <img src="../../../assets/tutorials/core-building-and-scripting/Final-Polished-Assets.jpg" width="800" height="450" />
   </TabItem>
 </Tabs>
-
-<Alert severity="info">
-    The following images make the placeholder assets semi-transparent for educational purposes.
-</Alert>
 
 ### Platforms
 
@@ -113,15 +113,39 @@ Both platform types are `Class.Model` objects that include two `Class.MeshPart` 
 
 <img src="../../../assets/tutorials/core-building-and-scripting/Platform-Types.jpg" width="80%" />
 
-To apply your asset library to the platforms:
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Platforms">
+
+To apply the asset library to your platforms:
+
+1. In the **Explorer** window, navigate to the asset library and copy **PlatformA**.
+   1. Right-click **PlatformA**. A contextual menu displays.
+   1. From the contextual menu, select **Copy**.
+1. In the **Platforms** folder, paste **PlatformA** into the **Level_1** model.
+1. In the **Home** tab, use the **Move** and **Scale** tools to position and scale the model to the size of your first placeholder sea stack platform.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" width="80%" />
+
+1. Repeat this process, adding and configuring either a **PlatformA** or **PlatformB** asset to the top of each placeholder sea stack platform.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" width="80%" />
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the sea stack platforms within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience:
 
 1. In the **Explorer** window, navigate to the asset library and copy **PlatformA**.
    1. Right-click **PlatformA**. A contextual menu displays.
    1. From the contextual menu, select **Copy**.
 2. In the **Platforms** folder, paste **PlatformA** into the **Level_1** model.
 3. In the **Properties** window,
+
    1. Set **Origin.Position** to **-30, 3, 9**.
    1. Set **Scale** to **2.2**.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/First-Platform.jpg" width="80%" />
+
 4. Repeat this process, adding and configuring the following **PlatformA** assets into their respective sea stack platform models:
 
    <table>
@@ -244,6 +268,9 @@ To apply your asset library to the platforms:
 
    <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Platforms-5.jpg" width="80%" />
 
+  </TabItem>
+</Tabs>
+
 ### Sea Stacks
 
 The sample asset library includes two types of sea stack rock formations you can stack in creative ways to form the pillars of your sea stack platforms:
@@ -262,7 +289,27 @@ Both platform types are `Class.MeshPart` objects.
   </figure>
 </GridContainer>
 
-To apply your asset library to the sea stacks:
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Sea Stacks">
+
+To apply the asset library to your sea stacks:
+
+1. In the **Explorer** window, navigate to the asset library and copy **SeaStackMesh**.
+1. In the **Platforms** folder, paste **SeaStackMesh** into one of your level models.
+1. In the **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh until it is the length of your placeholder sea stack. If necessary, use more than one instance of the **SeaStackMesh** mesh.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-3.jpg" width="80%" />
+
+1. Repeat this process, adding and configuring more **SeaStackMesh** and **SeaStackCaveMesh** meshes for each respective sea stack and tunnel in your experience.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/SeaStacks-18.jpg" width="80%" />
+
+1. Delete your placeholder greybox sea stack platforms.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the sea stacks within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience:
 
 1. In the **Explorer** window, navigate to the asset library and copy **SeaStackMesh**.
 2. In the **Platforms** folder, paste **SeaStackMesh** into the **Level_3a** model three times.
@@ -803,20 +850,42 @@ To apply your asset library to the sea stacks:
 
 19. Delete your placeholder greybox sea stack platforms.
 
+  </TabItem>
+</Tabs>
+
 ### Coins
 
-The sample asset library includes a single **Coin** asset that's a `Class.MeshPart` object with a child `Class.SurfaceAppearance` object. The `Class.SurfaceAppearance` object creates a shiny metallic effect on the coin, making it more realistic and enticing for players to collect. You can place these objects anywhere you set your initial placeholder coins, or modify their position and orientation values where you think they will be more useful to players.
+The sample asset library includes a single **Coin** asset that's a `Class.MeshPart` object with a child `Class.SurfaceAppearance` object. The `Class.SurfaceAppearance` object creates a shiny metallic effect on the coin, making it more realistic and enticing for players to collect.
+
+You can place these objects anywhere you set your initial placeholder coins, or modify their position and orientation values where you think they will be more useful to players.
 
 <img src="../../../assets/tutorials/core-building-and-scripting/Final-Coin.jpg" width="80%" />
 
-To apply your asset library to the coins:
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Coins">
+
+To apply the asset library to your coins:
+
+1. In the **Explorer** window, navigate to the asset library and copy **Coin**.
+1. In the **Platforms** folder, paste **Coin** into the **Coins** folder.
+1. In the **Home** tab, use the **Move** and **Rotate** tools to position and rotate the mesh until it's at the same configuration of first your placeholder coin.
+1. Repeat this process, adding and configuring **coin** assets wherever you set your initial coin placeholder objects.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Coins-Final.jpg" width="80%" />
+
+1. Delete your placeholder coins.
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the coins within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience:
 
 1. In the **Explorer** window, navigate to the asset library and copy **Coin**.
 2. In the **Platforms** folder, paste **Coin** into the **Coins** folder.
 3. In the **Properties** window,
    1. Set **CFrame.Position** to **-121, 3, 6**.
    1. Set **CFrame.Orientation** to **0, -105, 0**.
-4. Repeat this process, adding and configuring the following **coin** assets wherever you set your initial coin placeholder objects. The sample **Island Jump - Final** experience uses the following values:
+4. Repeat this process, adding and configuring the following **coin** assets wherever you set your initial coin placeholder objects:
 
    <table>
    <thead>
@@ -965,13 +1034,31 @@ To apply your asset library to the coins:
 
 5. Delete your placeholder coins.
 
+  </TabItem>
+</Tabs>
+
 ### Mountains
 
 The sample asset library includes a single **MountainMesh** asset you can use to decorate the background of your world, hide the edge of your water terrain, and enclose the environment around your sea stack platforms. By rotating and scaling individual mountains, the asset's material blends together with neighboring mountains. This technique effectively reduces players' ability to detect that the whole mountain range is just one repeating mesh.
 
 <img src="../../../assets/tutorials/core-building-and-scripting/Mountain-Meshes-Stacked.jpg" width="80%" />
 
-To apply your asset library to the mountains:
+<Tabs>
+  <TabItem key = "1" label="Apply Your Own Mountains">
+
+To apply the asset library to your mountains:
+
+1. In the **Explorer** window, navigate to the asset library and copy **MountainMesh**.
+1. In the **Platforms** folder, paste **MountainMesh** into the **Mountains** folder.
+1. In the **Home** tab, use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate the mesh along the border of your water terrain.
+1. Repeat this process, adding and configuring mountains of different sizes and rotations until the border of your water terrain has cover.
+
+   <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Mountains-Final.jpg" width="80%" />
+
+  </TabItem>
+  <TabItem key = "2" label="Recreate the Sample">
+
+To exactly recreate the mountains within the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) experience:
 
 1. In the **Explorer** window, navigate to the asset library and copy **MountainMesh**.
 2. In the **Platforms** folder, paste **MountainMesh** into the **Mountains** folder.
@@ -979,7 +1066,7 @@ To apply your asset library to the mountains:
    1. Set **Size** to **2048, 334, 2048**.
    2. Set **CFrame.Position** to **-1243, 115, -1402**.
    3. Set **CFrame.Orientation** to **0, 46, 0**.
-4. Repeat this process, adding and configuring the following mountain assets along the border of your water terrain. The sample **Island Jump - Final** experience uses the following values:
+4. Repeat this process, adding and configuring the following mountain assets along the border of your water terrain:
 
    <table>
    <thead>
@@ -1070,6 +1157,9 @@ To apply your asset library to the mountains:
 
    <img src="../../../assets/tutorials/core-building-and-scripting/ApplyAssetLibrary/Mountains-Final.jpg" width="80%" />
 
+  </TabItem>
+</Tabs>
+
 ## Playtest
 
 After you finish applying your asset library and constructing your environment, you must playtest your experience to ensure any variations in your layout from your polished assets haven't impacted players' ability to finish your game.
@@ -1088,3 +1178,7 @@ To playtest your experience:
    width="800" />
 
 Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../platform.md), or follow additional tutorial curricula, such as the [Environmental Art Curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
+
+<Alert severity="info">
+We’re interested in hearing from you about your experience following the Core Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Core Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-core-curriculum/2592219).
+</Alert>

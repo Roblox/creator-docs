@@ -11,9 +11,9 @@ description: Event Sequencer is a powerful framework for building live, cross-se
 
 This framework has been battle tested in Roblox events like the [Twenty One Pilots](https://www.youtube.com/watch?v=0fAhhoXK12o) and [24kGoldn](https://www.youtube.com/watch?v=UfzqGkfRKr4) concerts, as well as many highly visited experiences.
 
+<figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0fAhhoXK12o" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>&nbsp;</p>
+</figure>
 
 To see **EventSequencer** in action within an editable place, check out the [Concert](https://www.roblox.com/games/10275826693/Concert) template in Roblox Studio. This template is a comprehensive starting point for developers to create events/concerts and familiarize themselves with the various features and components involved.
 
@@ -27,7 +27,7 @@ To use the **EventSequencer** framework in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -67,7 +67,7 @@ This mode is best for existing experiences, as it preserves the design and layou
 
 To enable inline mode:
 
-1. Inside the **EventSequencer** folder that you placed in **ServerScriptService**, drill down to and select the **Inline** value inside the **ReplicatedStorage** folder.
+1. Inside the **EventSequencer** model that you placed in **ServerScriptService**, drill down and select the **Inline** value inside the **ReplicatedStorage** folder.
 
    <img src="../../assets/developer-modules/event-sequencer/Inline-BoolValue.png" width="320" />
 
@@ -97,10 +97,14 @@ To get started quickly, you can find an empty scene inside the module's main fol
 
 Each scene should have a **time length**, in seconds, defining its duration &mdash; just like a movie or concert has a set duration. Time length is defined as a numeric [attribute](../../studio/instance-attributes.md) on the scene's folder named **TimeLength** which you can set directly in Studio or programmatically through `Class.Instance:SetAttribute()`.
 
-<GridContainer numColumns="2">
-  <img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" />
-  <img src="../../assets/developer-modules/event-sequencer/Scene-Attribute-TimeLength.png" />
-</GridContainer>
+<Grid container spacing={3}>
+<Grid item>
+<img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" width="320" />
+</Grid>
+<Grid item>
+<img src="../../assets/developer-modules/event-sequencer/Scene-Attribute-TimeLength.png" width="320" />
+</Grid>
+</Grid>
 
 #### Environment
 
@@ -163,18 +167,15 @@ A scene's **schema** defines what happens at what point in the scene's timeline.
 
 Schema [lifecycle hooks](#schema-lifecycle-hooks) let you manage when scene operations occur. A scene in production will typically run in the most simple flow:
 
-<Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip
-label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
 [OnRun](#onrun) may be interrupted when seeking:
 
-<Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;<Chip label='seek' color='secondary'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;<Chip label='seek' color='secondary'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&hellip;&nbsp;**seek**&nbsp;&rarr; [OnRun](#onrun)&hellip;&nbsp;**seek**&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
-<p>All three hooks can also repeat if the scene is replayed:</p>
+All three hooks can also repeat if the scene is replayed:
 
-<Chip label='OnSetup' />&nbsp;&rarr; <Chip label='OnRun' />&nbsp;&rarr; <Chip
-label='OnEndScene' />&nbsp;<Chip label='replay' color='secondary'/>&nbsp;&rarr; <Chip label='OnSetup'/>&nbsp;&rarr; <Chip label='OnRun'/>&nbsp;&rarr; <Chip
-label='OnEndScene'/>
+- [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)&hellip;&nbsp;**replay**&nbsp;&rarr; [OnSetup](#onsetup)&nbsp;&rarr; [OnRun](#onrun)&nbsp;&rarr; [OnEndScene](#onendscene)
 
 #### Configurations
 
@@ -214,18 +215,18 @@ width="100%" />
 
    <table>
    <tbody>
-	 <tr>
+    <tr>
    <td>`placeIDs`</td>
    <td>Comma-delimited list of `Class.DataModel.PlaceId|PlaceId` values to support seeking within.</td>
-	 </tr>
-	 <tr>
+    </tr>
+    <tr>
    <td>`userIDs`</td>
    <td>Comma-delimited list of `Class.Player.UserId|UserIds` for those who can seek within the supported places.</td>
-	 </tr>
-	 <tr>
+    </tr>
+    <tr>
    <td>`groups`</td>
    <td>Comma-delimited list of tables, each containing a [group](../../projects/groups.md) ID and the minimum rank of that group's members who can seek within the supported places.</td>
-	 </tr>
+    </tr>
    </tbody>
    </table>
 
@@ -241,7 +242,7 @@ To install the plugin:
 
 1. From Studio's **View** menu, open the **Toolbox**.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
 2. With the **Marketplace** tab selected, select **Plugins** from the dropdown menu.
 
@@ -249,15 +250,13 @@ To install the plugin:
 
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
-   <img src="../../assets/developer-modules/event-sequencer/Toolbox-Scene-Manager-Plugin.png" width="360" />
+   <img src="../../assets/studio/toolbox/Marketplace-Scene-Manager-Plugin.png" width="360" />
 
 4. Click the plugin's icon to view its details and then click the blue **Install** button.
 
    <img src="../../assets/studio/toolbox/Install-Button.png" width="320" />
 
 5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
-
-   <img src="../../assets/developer-modules/event-sequencer/Plugins-Tab-Scene-Manager-Plugin.png" width="640" />
 
 ### Loading and Unloading Scenes
 
@@ -310,18 +309,21 @@ The top-level `Class.Lighting` service stores all of a place's lighting properti
 
    <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Save-Lighting.png" width="294" />
 
-1. Select and expand that scene's **Environment**/**Lighting** folder and you'll see the same lighting properties as [attributes](../../studio/instance-attributes.md) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
-
-   <GridContainer numColumns="2">
-     <figure>
-       <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Instances.png" />
-       <figcaption>Cloned instances</figcaption>
-     </figure>
-     <figure>
-       <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Attributes.png" />
-       <figcaption>Saved attributes</figcaption>
-     </figure>
-   </GridContainer>
+1. Select and expand that scene's **Environment**/**Lighting** configuration and you'll see the same lighting properties as [attributes](../../studio/instance-attributes.md) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
+   <Grid container spacing={3}>
+   <Grid item>
+    <figure>
+   <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Instances.png" width="320" />
+   <figcaption>Cloned instances</figcaption>
+    </figure>
+   </Grid>
+   <Grid item>
+   <figure>
+   <img src="../../assets/developer-modules/event-sequencer/Saved-Lighting-Attributes.png" width="320" />
+   <figcaption>Saved attributes</figcaption>
+    </figure>
+   </Grid>
+   </Grid>
 
    Once lighting properties and children are saved for a scene, you can quickly load them back into the top-level `Class.Lighting` service by clicking **Load Lighting** from the plugin window.
 
@@ -877,7 +879,7 @@ While **inform** is critical for [seeking](#seeking-and-switching-scenes) suppor
 
 #### loadScene
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>loadScene(sceneName:</InlineCode>`Library.string`<InlineCode>, startTime:</InlineCode>`number`<InlineCode>?)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>loadScene(sceneName:</InlineCode>`Library.string`<InlineCode>, startTime:</InlineCode>`number`<InlineCode>?)</InlineCode></Typography>
 
 Programmatically loads a scene by `sceneName` and starts it at `startTime` from its beginning. There will be a 5 second "grace period" for the scene to load from the server before the seek occurs and the scene starts playing. This means that if you call `loadScene("[SceneName]", 20)` at exactly 4:15:00 PM, the framework will wait 5 seconds in addition to the requested 20, kicking off the scene at 4:15:25 PM.
 
@@ -907,7 +909,7 @@ Do not call `loadScene` from within a schema [lifecycle hook](#schema-lifecycle-
 
 #### createSchema
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>createSchema():</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>createSchema():</InlineCode>`Library.table`</Typography>
 
 Returns an instance of the scene [schema](#scene-schemas) to create logic for the scene.
 
@@ -925,7 +927,7 @@ end
 
 #### seek
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>seek(time:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>seek(time:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Seeks to the `time` value, in seconds, from the currently loaded scene's beginning.
 
@@ -943,7 +945,7 @@ Do not call `seek` from within a schema [lifecycle hook](#schema-lifecycle-hooks
 
 #### setSceneWarningTime
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setSceneWarningTime(endSceneTimeWindow:</InlineCode>`number`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSceneWarningTime(endSceneTimeWindow:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
 
 Sets the amount of time from the **end** of all scenes at which a warning is dispatched. You can detect the warning either client-side through [onSceneEndingWarningForClient](#onsceneendingwarningforclient) or server-side through [onSceneEndingWarningForServer](#onsceneendingwarningforserver).
 
@@ -966,13 +968,13 @@ end)
 
 #### setSeekingPermissions
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setSeekingPermissions(permissions:</InlineCode>`Library.table`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSeekingPermissions(permissions:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
 
 Grants seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them. See [Seeking and Switching Scenes](#seeking-scenes) for more information.
 
 #### getCurrentSceneEnvironment
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getCurrentSceneEnvironment():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentSceneEnvironment():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
 
 Returns the current scene's client-side or server-side [Environment](#environment) folder, depending on whether it's called from the [Client](#client) schema script or [Server](#server) schema script respectively.
 
@@ -1025,7 +1027,7 @@ end
 
 #### getCurrentServerEnvironmentFromClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getCurrentServerEnvironmentFromClient():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentServerEnvironmentFromClient():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
 
 Returns the current scene's **server-side** [Environment](#environment) folder. Unlike [getCurrentSceneEnvironment](#getcurrentsceneenvironment), you can call this from the [Client](#client) schema script.
 
@@ -1056,7 +1058,7 @@ end
 
 #### isLoadingScene
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>isLoadingScene():</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isLoadingScene():</InlineCode>`boolean`</Typography>
 
 Called from the server to know if a scene is currently loading.
 
@@ -1081,7 +1083,7 @@ print("Scene loaded")
 
 #### onSceneEndingWarningForClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneEndingWarningForClient():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the client before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.LocalScript`.
 
@@ -1098,7 +1100,7 @@ end)
 
 #### onSceneEndingWarningForServer
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneEndingWarningForServer():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForServer():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the server before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.Script`.
 
@@ -1115,7 +1117,7 @@ end)
 
 #### onSceneLoadedForClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onSceneLoadedForClient():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneLoadedForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the client when the scene is starting. This event can only be connected in a `Class.LocalScript`.
 
@@ -1136,7 +1138,7 @@ end)
 
 #### onOrchestrationFinished
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onOrchestrationFinished():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onOrchestrationFinished():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the server when a scene has reached its [time length](#time-length) and has effectively ended. This event receives an `endedSceneName` string name argument for the scene that just finished and you can chain off this event to conditionally [load another scene](#loadscene). Can only be connected in a `Class.Script`.
 

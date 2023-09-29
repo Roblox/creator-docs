@@ -1,9 +1,6 @@
 ---
 title: Emote Bar
 description: The Emote Bar module aims to provide players an accessible, customizable way to socially interact.
-comments: |
-  1. Needs tabbed swapper component for configureClient() section.
-  2. Potentially fix broken enum links (search "`Enum.").
 ---
 
 Emotes are a core component of any social experience. The **EmoteBar** [developer module](../../resources/modules/index.md) aims to provide players an accessible, customizable way to facilitate meaningful social interaction.
@@ -19,7 +16,7 @@ To use the **EmoteBar** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -171,7 +168,7 @@ EmoteBar.configureClient({
 
 #### configureServer
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default server-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -187,32 +184,32 @@ Overrides default server-side configuration options through the following keys/v
 	<tr>
 		<td>`useDefaultEmotes`</td>
 		<td>Whether the provided default emotes are included or not.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`useMegaEmotes`</td>
 		<td>Enables or disables the [mega emotes](#mega-emotes) feature.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`emoteMinPlayers`</td>
 		<td>Minimum number of players performing the same emote to contribute to a mega emote.</td>
-		<td>`3`</td>
+		<td>3</td>
 	</tr>
 	<tr>
 		<td>`emoteMaxPlayers`</td>
 		<td>Maximum number of players performing the same emote to contribute to a mega emote.</td>
-		<td>`50`</td>
+		<td>50</td>
 	</tr>
 	<tr>
 		<td>`playParticles`</td>
 		<td>Enables or disables the emotes players are playing as floating particles above their heads.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`sendContributingEmotes`</td>
 		<td>Enables or disables sending a small emote icon to contribute to the mega emote.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 </tbody>
 </table>
@@ -230,12 +227,12 @@ EmoteBar.configureServer({
 
 #### configureClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`. Depending on the value of [`guiType`](#emotebarguitype), options in the noted tabs also apply.
 
-**General**
-
+<Tabs>
+<TabItem label="General">
 <table>
 <thead>
 	<tr>
@@ -247,28 +244,29 @@ Overrides default client-side configuration options through the following keys/v
 <tbody>
 	<tr>
 		<td>`guiType`</td>
-		<td>Controls which form the GUI will take for displaying emotes (`EmoteBar.GuiType`).</td>
-		<td>`EmoteBar`</td>
+		<td>Controls which form the GUI will take for displaying emotes ([`EmoteBar.GuiType`](#emotebarguitype)).</td>
+		<td>[`EmoteBar`](#emotebarguitype)</td>
 	</tr>
 	<tr>
 		<td>`useTempo`</td>
 		<td>Enables or disables the [tempo](#tempo) feature where users are able to control how fast or slow their emotes are played by repeatedly activating the same emote rhythmically.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`tempoActivationWindow`</td>
 		<td>Amount of time, in seconds, the user has between sequential activations of an emote for it to count as part of the tempo.</td>
-		<td>`3`</td>
+		<td>3</td>
 	</tr>
 	<tr>
 		<td>`lockedImage`</td>
 		<td>Image to display overtop locked emotes.</td>
-		<td>`"rbxassetid://6905802778"`</td>
+		<td>"rbxassetid://6905802778"</td>
 	</tr>
 </tbody>
 </table>
-
-**EmoteBar**
+</TabItem>
+<TabItem label="Bar">
+If the value of [`guiType`](#emotebarguitype) is `EmoteBar` (default), the following options apply:
 
 <table>
 <thead>
@@ -282,52 +280,53 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`maxEmotesPerPage`</td>
 		<td>Maximum number of emotes that are displayed at a time. Smaller screens will automatically show fewer emotes.</td>
-		<td>`4`</td>
+		<td>4</td>
 	</tr>
 	<tr>
 		<td>`emoteBarPosLandscape`</td>
 		<td>Position of the emote bar in landscape mode (`Datatype.UDim2`).</td>
-		<td>`(0.5, 0, 1, -16)`</td>
+		<td>(0.5, 0, 1, -16)</td>
 	</tr>
 	<tr>
 		<td>`emoteBarPosPortrait`</td>
 		<td>Position of the emote bar in portrait mode (`Datatype.UDim2`).</td>
-		<td>`(0.5, 0, 1, -100)`</td>
+		<td>(0.5, 0, 1, -100)</td>
 	</tr>
 	<tr>
 		<td>`useEmoteHotkeys`</td>
 		<td>Whether emote hotkeys are used. If `true`, this binds 1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;etc. as hotkeys for the emote bar. Only numeric keys 1&ndash;9 are supported.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`usePageHotkeys`</td>
 		<td>Whether page hotkeys are used. If `true`, `nextPageKey` and `prevPageKey` are used to cycle between pages.</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`prevPageKey`</td>
 		<td>Key used to cycle to the previous page of emotes (`Enum.KeyCode`).</td>
-		<td>`Q`</td>
+		<td>`Enum.KeyCode|Q`</td>
 	</tr>
 	<tr>
 		<td>`nextPageKey`</td>
 		<td>Key used to cycle to the next page of emotes (`Enum.KeyCode`).</td>
-		<td>`E`</td>
+		<td>`Enum.KeyCode|E`</td>
 	</tr>
 	<tr>
 		<td>`leftArrowImage`</td>
 		<td>Image for the left arrow (previous page).</td>
-		<td>`"rbxassetid://6998633654"`</td>
+		<td>"rbxassetid://6998633654"</td>
 	</tr>
 	<tr>
 		<td>`rightArrowImage`</td>
 		<td>Image for the right arrow (next page).</td>
-		<td>`"rbxassetid://6998635824"`</td>
+		<td>"rbxassetid://6998635824"</td>
 	</tr>
 </tbody>
 </table>
-
-**EmoteWheel**
+</TabItem>
+<TabItem label="Wheel">
+If the value of [`guiType`](#emotebarguitype) is `EmoteWheel`, the following options apply:
 
 <table>
 <thead>
@@ -341,20 +340,22 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`closeImage`</td>
 		<td>Image for the close button on the emote wheel, placed overtop the `closeBackgroundImage` image.</td>
-		<td>`"rbxassetid://7027440823"`</td>
+		<td>"rbxassetid://7027440823"</td>
 	</tr>
 	<tr>
 		<td>`closeBackgroundImage`</td>
 		<td>Background image for the close button on the emote wheel.</td>
-		<td>`"rbxassetid://7027440823"`</td>
+		<td>"rbxassetid://7027440823"</td>
 	</tr>
 	<tr>
 		<td>`emoteHoverImage`</td>
 		<td>Image for hover-over indication of the selected emote in the wheel.</td>
-		<td>`"rbxassetid://7344843157"`</td>
+		<td>"rbxassetid://7344843157"</td>
 	</tr>
 </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ```lua title='LocalScript - Emote Bar' highlight='5-10'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -381,7 +382,7 @@ EmoteBar.configureClient({
 
 #### setEmotes
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setEmotes(emotes:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setEmotes(emotes:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Sets the custom emotes to use. These will be added to the defaults if `useDefaultEmotes` is `true`, or replace the defaults if `useDefaultEmotes` is `false`. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -418,7 +419,7 @@ EmoteBar.setEmotes({
 
 #### setGuiVisibility
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setGuiVisibility(visible:</InlineCode>`boolean`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setGuiVisibility(visible:</InlineCode>`boolean`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Shows or hides the emotes GUI. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -432,7 +433,7 @@ EmoteBar.setGuiVisibility(false)
 
 #### getEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>getEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Library.table`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Library.table`</Typography>
 
 Gets an [Emote](#emote) by name. Returns `nil` if the emote cannot be found. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -450,7 +451,7 @@ local shrug = EmoteBar.getEmote("Shrug")
 
 #### playEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>playEmote(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>playEmote(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode>`nil`</Typography>
 
 Plays the given [Emote](#emote) and fires the [emotePlayed](#emoteplayed) event on the server, if connected. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -465,7 +466,7 @@ EmoteBar.playEmote(shrug)
 
 #### lockEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>lockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Locks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -479,7 +480,7 @@ EmoteBar.lockEmote("Applaud")
 
 #### unlockEmote
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>unlockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>unlockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Unlocks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -495,7 +496,7 @@ EmoteBar.unlockEmote("Applaud")
 
 #### emotePlayed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>emotePlayed(player:</InlineCode>`Class.Player`<InlineCode>, emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>emotePlayed(player:</InlineCode>`Class.Player`<InlineCode>, emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when any client plays an emote. This event can only be connected in a `Class.LocalScript`.
 
@@ -529,7 +530,7 @@ end)
 
 #### lockedEmoteActivated
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>lockedEmoteActivated(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockedEmoteActivated(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a client clicks a locked emote. This event can only be connected in a `Class.LocalScript`.
 

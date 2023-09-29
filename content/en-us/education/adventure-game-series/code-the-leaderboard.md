@@ -43,11 +43,11 @@ Whenever a player is added to the experience, they'll need to be added to the le
 4. Name the new **Folder** instance `leaderstats`, and parent it to the player. Naming the folder `leaderstats` lets Roblox Studio know to create a leaderboard.
 
    ```lua
-     local function onPlayerJoin(player)
+   local function onPlayerJoin(player)
       local leaderstats = Instance.new("Folder")
       leaderstats.Name = "leaderstats"
       leaderstats.Parent = player
-     end
+   end
    ```
 
     <Alert severity="warning">
@@ -86,7 +86,7 @@ Each of these numbers will be an IntValue, a placeholder object for a number.
 
 Start with coding a stat for gold.
 
-1. In `OnPlayerJoin`, under `leaderstats.Parent = player`, type `local gold = Instance.new("IntValue")`.This creates a new IntValue and stores it in the variable gold.
+1. In `OnPlayerJoin`, under `leaderstats.Parent = player`, type `local gold = Instance.new("IntValue")`. This creates a new IntValue and stores it in the variable gold.
 
    ```lua
     local function onPlayerJoin(player)
@@ -111,7 +111,7 @@ Start with coding a stat for gold.
     If you decide to use your own stat names, keep track of their exact name and spelling. They'll be referenced later in the series for other scripts.
     </Alert>
 
-3. On a new line, `type gold.Value = 0`. This sets the starting value for players.
+3. On a new line, type `gold.Value = 0`. This sets the starting value for players.
 
    ```lua
     local function onPlayerJoin(player)
@@ -158,14 +158,14 @@ Remember that items can be anything based off the game design document. Such as 
       gold.Parent = leaderstats
 
       -- Create the Items stat
-      local items= Instance.new("IntValue")
+      local items = Instance.new("IntValue")
       items.Name = "Items"
       items.Value = 0
       items.Parent = leaderstats
     end
    ```
 
-2. Create a new stat for the player's bag spaces. Set `spaces.Value to 2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
+2. Create a new stat for the player's bag spaces. Set `spaces.Value` to `2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
 
    ```lua
     local function onPlayerJoin(player)
@@ -206,7 +206,7 @@ A finished version of the script can be referenced below.
    gold.Value = 0
    gold.Parent = leaderstats
 
-   local items= Instance.new("IntValue")
+   local items = Instance.new("IntValue")
    items.Name = "Items"
    items.Value = 0
    items.Parent = leaderstats
@@ -215,7 +215,6 @@ A finished version of the script can be referenced below.
    spaces.Name = "Spaces"
    spaces.Value = 2
    spaces.Parent = leaderstats
-
  end
 
  -- Run onPlayerJoin when the PlayerAdded event fires

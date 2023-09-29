@@ -38,7 +38,7 @@ import { Emoji, Locale } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
 import {
   allowedHttpLinksTextFileFullPath,
-  checkHttpLinks,
+  checkContentLinks,
   allNonRobloxHttpLinks,
 } from './utils/links.js';
 import {
@@ -47,6 +47,7 @@ import {
   logSummariesToConsole,
   summaryOfRequirements,
 } from './utils/console.js';
+import { checkMarkdownLint } from './utils/markdownlint.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -60,7 +61,7 @@ const getFilesToCheck = async () => {
       locale: Locale.EN_US,
       fileExtension: FileExtension.MARKDOWN,
     });
-    filesToCheck.push(...['README.md', 'STYLE.md']);
+    filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
@@ -182,8 +183,11 @@ try {
       }
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
-    if (config.checkHttpLinks) {
-      checkHttpLinks({ fileName: filePathFromRepoRoot, content, config });
+    if (config.checkHttpLinks || config.checkRelativeLinks) {
+      checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
+    }
+    if (config.checkMarkdownLint) {
+      checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });
     }
     console.log('::endgroup::');
   }

@@ -1,8 +1,9 @@
+import * as fs from 'fs';
 import * as path from 'path';
 import { readListFromFile, repositoryRoot } from './files.js';
 import { Emoji } from './utils.js';
 import { addToSummaryOfRequirements } from './console.js';
-import { createNewPullRequestComment } from './github.js';
+import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
 // Double escape the regular expressions to combine them
 
@@ -132,12 +133,16 @@ export const getLinksOfTypeFromContentString = (
 };
 
 /**
- * Checks if url starts with http
- * @param url url to check
+ * Checks if link starts with http
+ * @param link link to check
  * @returns
  */
-export const isHttpLink = (url: string): boolean => {
-  return url.startsWith('http');
+export const isHttpLink = (link: string): boolean => {
+  return link.startsWith('http');
+};
+
+export const isRelativeLink = (link: string): boolean => {
+  return link.startsWith('./') || link.startsWith('../');
 };
 
 export const isRobloxUrl = (url: string): boolean => {
@@ -175,7 +180,14 @@ export const isAllowedHttpLink = (link: string) => {
   if (isRobloxUrl(sanitizedUrl)) {
     return true;
   } else {
-    return allowedHttpLinksSet.has(sanitizedUrl);
+    let isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl);
+    if (!isAllowedHttpLink) {
+      // Test if pathname includes `(` to support some links that end with `)`
+      if (sanitizedUrl.includes(`(`)) {
+        isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl + `)`);
+      }
+    }
+    return isAllowedHttpLink;
   }
 };
 
@@ -183,22 +195,143 @@ export const allNonRobloxHttpLinks: string[] = [];
 
 export const getNonRobloxLinks = (content: string) => {
   const httpLinks: LinkInfo[] = [];
+  const relativeLinks: LinkInfo[] = [];
   const assetLinks = getLinksOfTypeFromContentString(content, LinkType.Asset);
   const pageLinks = getLinksOfTypeFromContentString(content, LinkType.Page);
   assetLinks.forEach((link) => {
     if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
       httpLinks.push(link);
     }
+    if (link.ref && isRelativeLink(link.ref)) {
+      relativeLinks.push(link);
+    }
   });
   pageLinks.forEach((link) => {
     if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
       httpLinks.push(link);
     }
+    if (link.ref && isRelativeLink(link.ref)) {
+      relativeLinks.push(link);
+    }
   });
-  return httpLinks;
+  return { httpLinks, relativeLinks };
 };
 
-export const checkHttpLinks = ({
+const processHttpLink = ({
+  fileName,
+  config,
+  link,
+}: {
+  config: IConfig;
+  fileName: string;
+  link: LinkInfo;
+}) => {
+  const urlNoHash = removeUrlHash(link.ref);
+  if (config.debug) {
+    allNonRobloxHttpLinks.push(urlNoHash);
+  }
+  // Don't need do anything else if the link is allowed
+  if (isAllowedHttpLink(urlNoHash)) {
+    return;
+  }
+
+  // Create messages
+  const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
+  const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
+  const allowedListFilePath =
+    allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
+  const message = `page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
+
+  // Log messages
+  console.log(shortIntro + message);
+  addToSummaryOfRequirements(fullIntro + message);
+
+  // Post messages
+  if (config.postPullRequestComments) {
+    const body = `The page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
+      config.repository
+    }/blob/${config.baseBranch.replace('origin/', '')}/${allowedListFilePath}).
+    
+${requiredCheckMessage}`;
+    createNewPullRequestComment({
+      body,
+      commit_id: config.commitHash,
+      line: link.lineNumber,
+      path: fileName,
+      pull_number: config.pullRequestNumber,
+      repository: config.repository,
+    });
+  }
+};
+
+const closedSourceFiles = [
+  'content/en-us/art/marketplace/marketplace-fees-and-commissions.md',
+  'content/en-us/index/index.md',
+  'content/en-us/production/promotion/advertising-on-roblox.md',
+  'content/en-us/production/promotion/complying-with-advertising-standards.md',
+  'content/en-us/production/promotion/discovery.md',
+  'content/en-us/production/promotion/sponsoring-experiences.md',
+  'content/en-us/production/promotion/sponsoring-items.md',
+  'content/en-us/reference/cloud/index.md',
+  'content/en-us/reference/cloud/oauth2/authorization-flow.md',
+  'content/en-us/reference/cloud/oauth2/discovery-document.md',
+  'content/en-us/reference/cloud/oauth2/tokens.md',
+  'content/en-us/reference/cloud/oauth2/user-information.md',
+  'content/en-us/samples/index.md',
+];
+
+const closedSourceFilesSet = new Set(closedSourceFiles);
+
+const processRelativeLink = ({
+  fileName,
+  config,
+  link,
+}: {
+  config: IConfig;
+  fileName: string;
+  link: LinkInfo;
+}) => {
+  // Remove ../../path/to/page.md#section-1
+  const urlNoHash = link.ref.split('#')[0];
+  const fileDir = path.dirname(fileName);
+  const newFilePathFromRoot = path.join(fileDir, urlNoHash);
+  const newFilePathFull = path.join(repositoryRoot, fileDir, urlNoHash);
+  const doesFileExist = fs.existsSync(newFilePathFull);
+  let isClosedSourceFile = false;
+  if (!doesFileExist) {
+    isClosedSourceFile = closedSourceFilesSet.has(newFilePathFromRoot);
+  }
+  // Don't need to do anything else if the file exists or is closed source
+  if (doesFileExist || isClosedSourceFile) {
+    return;
+  }
+
+  // Create messages
+  const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
+  const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
+  const message = `check for relative links couldn't find the file \`${urlNoHash}\`. Please double-check and fix the link to this file. Relative links are case-sensitive.`;
+
+  // Log messages
+  console.log(shortIntro + message);
+  addToSummaryOfRequirements(fullIntro + message);
+
+  // Post messages
+  if (config.postPullRequestComments) {
+    const body = `The ${message}
+    
+${requiredCheckMessage}`;
+    createNewPullRequestComment({
+      body,
+      commit_id: config.commitHash,
+      line: link.lineNumber,
+      path: fileName,
+      pull_number: config.pullRequestNumber,
+      repository: config.repository,
+    });
+  }
+};
+
+export const checkContentLinks = ({
   content,
   fileName,
   config,
@@ -207,43 +340,15 @@ export const checkHttpLinks = ({
   fileName: string;
   config: IConfig;
 }) => {
-  const httpLinks = getNonRobloxLinks(content);
-  httpLinks.forEach((link) => {
-    const urlNoHash = removeUrlHash(link.ref);
-    if (config.debug) {
-      allNonRobloxHttpLinks.push(urlNoHash);
-    }
-    if (!isAllowedHttpLink(urlNoHash)) {
-      // Create messages
-      const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
-      const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
-      const allowedListFilePath =
-        allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
-      const message = `link ${link.ref} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
-
-      // Log messages
-      console.log(shortIntro + message);
-      addToSummaryOfRequirements(fullIntro + message);
-
-      // Post messages
-      if (config.postPullRequestComments) {
-        const body = `${Emoji.NoEntry} The link ${
-          link.ref
-        } isn't in the list of allowed HTTP links. Please explain why you are using it and add it to [${allowedListFilePath}](https://github.com/Roblox/${
-          config.repository
-        }/blob/${config.baseBranch.replace(
-          'origin/',
-          ''
-        )}/${allowedListFilePath}).`;
-        createNewPullRequestComment({
-          body,
-          commit_id: config.commitHash,
-          line: link.lineNumber,
-          path: fileName,
-          pull_number: config.pullRequestNumber,
-          repository: config.repository,
-        });
-      }
-    }
-  });
+  const { httpLinks, relativeLinks } = getNonRobloxLinks(content);
+  if (config.checkHttpLinks) {
+    httpLinks.forEach((link) => {
+      processHttpLink({ config, fileName, link });
+    });
+  }
+  if (config.checkRelativeLinks) {
+    relativeLinks.forEach((link) => {
+      processRelativeLink({ config, fileName, link });
+    });
+  }
 };

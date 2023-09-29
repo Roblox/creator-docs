@@ -27,7 +27,7 @@ Data structures are how coders store and organize entire sets of data. In Lua, d
     <td>
     Have a general understanding of variables in Lua.
 
-    Feel comfortable conditional statements (`if` and `else`) and loops (`for`` and `while`).
+    Feel comfortable using conditional statements (`if` and `else`) and loops (`for` and `while`).
     </td>
 
    </tr>

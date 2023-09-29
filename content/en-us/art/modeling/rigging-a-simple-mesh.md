@@ -3,7 +3,7 @@ title: Rigging a Simple Mesh
 description: Explains the process for rigging a basic model in Blender.
 ---
 
-You can create a **rigged mesh** using a third party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). You should rig a model after designing it, but prior to [exporting](../../art/modeling/export-requirements.md) or any additional [skinning](../../art/modeling/skinning.md).
+You can create a **rigged mesh** using a third party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). You should rig a model after designing it, but prior to [exporting](../../art/modeling/export-requirements.md).
 
 To rig a simple model in Blender:
 
