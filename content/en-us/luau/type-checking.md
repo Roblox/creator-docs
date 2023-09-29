@@ -49,9 +49,9 @@ Within Roblox, all classes, data types, and enums have their own types that you 
 
 
 ```lua
-part.Touched:Connect(function(otherPart: BasePart)
-	local brickColor: Enum.BrickColor = otherPart.BrickColor
-end)
+local somePart: Part = Instance.new("Part")
+local brickColor: BrickColor = somePart.BrickColor
+local material: Enum.Material = somePart.Material
 ```
 
 To add an optional type, use a `?` at the end of the annotation:
@@ -181,7 +181,6 @@ end
 ```
 
 As expected, this function can take any value, and the typechecker won't raise a warning if you provide an invalid type, such as a `string`.
-
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
