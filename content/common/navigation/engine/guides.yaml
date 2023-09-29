@@ -507,6 +507,8 @@ navigation:
         section:
           - title: Immersive Ads
             path: /production/monetization/immersive-ads
+          - title: Subscriptions
+            path: /production/monetization/subscriptions
           - title: Developer Products
             path: /production/monetization/developer-products
           - title: Passes

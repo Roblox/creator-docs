@@ -8,6 +8,10 @@ providing more engaging and immersive interactions for your users.
 [Luau](../luau/index.md) is the scripting language supported by Roblox, and you use it to
 build functionality within the Roblox engine.
 
+<Alert severity="success">
+Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+</Alert>
+
 ## Scripts
 
 [Scripts](../scripting/scripts.md) are containers that hold Luau code, and can run on

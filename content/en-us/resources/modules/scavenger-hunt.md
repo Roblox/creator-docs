@@ -217,7 +217,7 @@ end)
 
 #### configureClient
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -468,7 +468,7 @@ ScavengerHunt.configureClient({
 
 #### configureServer
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default server-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -511,7 +511,7 @@ ScavengerHunt.configureServer({
 
 #### disable
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>disable():</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>disable():</InlineCode>`nil`</Typography>
 
 Hides all UI for the scavenger hunt, disconnects all input event listeners, and prevents players from collecting tokens or interacting with regions. This function can only be called from a `Class.Script`.
 
@@ -525,7 +525,7 @@ ScavengerHunt.disable()
 
 #### enable
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>enable():</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>enable():</InlineCode>`nil`</Typography>
 
 Shows all UI for the scavenger hunt, connects all input event listeners, and allows players to collect tokens and interact with regions. This function can only be called from a `Class.Script`.
 
@@ -541,7 +541,7 @@ ScavengerHunt.enable()
 
 #### collected
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>collected(player:</InlineCode>`Class.Player`<InlineCode>, itemName:</InlineCode>`Library.string`<InlineCode>, totalCollected:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>collected(player:</InlineCode>`Class.Player`<InlineCode>, itemName:</InlineCode>`Library.string`<InlineCode>, totalCollected:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a player collides with a token or enters a region. The connected function will receive the `Class.Player` that collided with the token or entered the region and the name of the token that was collided into or the region that was entered. This event can only be connected in a `Class.Script`.
 
@@ -579,7 +579,7 @@ end)
 
 #### allCollected
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>allCollected(player:</InlineCode>`Class.Player`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>allCollected(player:</InlineCode>`Class.Player`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a player collects all tokens or enters all regions in the scavenger hunt. The connected function will receive the `Class.Player` that collected all tokens, and it is only ever fired once per player. This event can only be connected in a `Class.Script`.
 
@@ -609,7 +609,7 @@ end)
 
 #### showInfoModal
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>showInfoModal():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showInfoModal():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to true. This event can only be connected in a `Class.LocalScript`.
 
@@ -627,7 +627,7 @@ end)
 
 #### showCompleteModal
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>showCompleteModal():</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showCompleteModal():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to `true` and the player has collected all tokens in the scavenger hunt. This event can only be connected in a `Class.LocalScript`.
 
@@ -647,12 +647,12 @@ end)
 
 #### hideOtherGuis
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
 
 This callback runs immediately before a modal is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the modal is shown. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
 
 #### showOtherGuis
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
 
 This callback runs immediately after a modal has been dismissed, letting you enable entire `Class.ScreenGui|ScreenGuis` or elements within them. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.

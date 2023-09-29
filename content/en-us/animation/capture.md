@@ -7,12 +7,12 @@ You can record or upload video content to the [Animation Editor](../animation/ed
 
 The Animation Capture tools allow you to:
 
-- [Record your face](#face) with a webcam to puppeteer characters with [animation compatible heads](../art/avatar/facial-animation/index.md).
+- [Record your face](#face) with a webcam to puppeteer characters with [animation compatible heads](../art/characters/facial-animation/index.md).
 - [Upload full-body video content](#body) to generate high quality realistic animations for an entire character.
 
 ## Face
 
-**Animation Capture - Face** allows you to use your camera to puppeteer rigs with [animation compatible heads](../art/avatar/facial-animation/index.md) and generate corresponding keyframes to your movement.
+**Animation Capture - Face** allows you to use your camera to puppeteer rigs with [animation compatible heads](../art/characters/facial-animation/index.md) and generate corresponding keyframes to your movement.
 
 With the ability to record up to 60-second animations, you can quickly provide both your playable and nonplayable characters the means to realistically grin, raise their eyebrows, drop their jaw, or any other expression necessary for your experience.
 

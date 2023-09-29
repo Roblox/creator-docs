@@ -39,6 +39,14 @@ local function stopCosmicMoonRay()
 end
 ```
 
+If necessary, you can nest multiple brackets inside a block comment using the same number of equal signs in both the beginning and ending bracket:
+
+```lua
+--[=[
+    In-depth detail about cosmic moon ray: [[[TOP SECRET]]]
+]=]
+```
+
 ## TODO Comments
 
 Roblox Studio supports special `TODO` comments. Studio bolds any text following `TODO` (until broken by a space):

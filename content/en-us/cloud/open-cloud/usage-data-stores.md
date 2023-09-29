@@ -35,7 +35,7 @@ Although Open Cloud APIs are similar to the Lua `Class.DataStoreService`, there 
 
 Data stores usually store sensitive information, such as user profiles and virtual currency. To maintain security, each Open Cloud API has corresponding required permissions that you must add to your API key, such as the `List Keys` permission for the listing API. If you don't add the required permissions, your API call returns an error. For the specific permissions that are required for each operation, see the API reference of [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json).
 
-When [configuring your API keys](../../cloud/open-cloud/managing-api-keys.md#creating-an-api-key), you can set granular permissions, such as read, write, and list entry, for each data store within a specific experience, or you can give a key to read or write all data stores within an experience. You can also limit access to a subset of data stores needed for your tool instead of exposing all data stores. This mitigates the impact in case your key gets leaked.
+When [configuring your API keys](./api-keys.md#creating-an-api-key), you can set granular permissions, such as read, write, and list entry, for each data store within a specific experience, or you can give a key to read or write all data stores within an experience. You can also limit access to a subset of data stores needed for your tool instead of exposing all data stores. This mitigates the impact in case your key gets leaked.
 
 ## Building Tools
 
@@ -57,7 +57,7 @@ From a high level, you can build your Python app by adding API key permissions a
 
 #### Adding API Key Permissions for Data Stores
 
-When [creating an API Key](../../cloud/open-cloud/managing-api-keys.md) for this example, make sure you perform the following settings:
+When [creating an API Key](./api-keys.md) for this example, make sure you perform the following settings:
 
 1. From the **Select API System** menu in the **Access Permissions** section, select **Data Stores**.
 
@@ -74,7 +74,7 @@ When [creating an API Key](../../cloud/open-cloud/managing-api-keys.md) for this
       You don't need the `create entries` API key permission since the app doesn't create new user inventories.
       </Alert>
 
-1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](../../cloud/open-cloud/managing-api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
+1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](./api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
 
 #### Adding Scripts for the User Inventory Support Portal
 
@@ -206,7 +206,7 @@ The example app requires four methods to achieve its functionalities: [`List`](.
 - **Read** for the `list` method.
 - **Write** for `Create`, `Update`, and `Increment` methods.
 
-When [creating an API Key](../../cloud/open-cloud/managing-api-keys.md) for this example, make sure you perform the following operations:
+When [creating an API Key](./api-keys.md) for this example, make sure you perform the following operations:
 
 1. From the **Select API System** menu in the **Access Permissions** section, select **Ordered Data Stores**.
 
@@ -215,7 +215,7 @@ When [creating an API Key](../../cloud/open-cloud/managing-api-keys.md) for this
    1. Click the **Select Experience to Add** dropdown and select the target experience.
    2. In the **Experience Operations**, expand the dropdown to select **Read** and **Write** operations.
 
-1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](../../cloud/open-cloud/managing-api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
+1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](./api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
 
 #### Adding Scripts for the Leaderboard
 

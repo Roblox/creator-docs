@@ -13,7 +13,7 @@ In Roblox, custom 3D assets generally fall under three types of applications:
 - **Avatar models** for users or non-player characters (NPCs).
 - **Accessory models** that character models can equip and wear, like clothing and cosmetics.
 
-Creators who are part of the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can publish and sell their models on the Marketplace and earn a commission for each sale. For more information, see [Creating and Selling](#creating-and-selling).
+If you meet certain account requirements, you can publish and sell your avatar-ready models on the Marketplace and earn a commission for each sale. For more information, see Roblox's [Avatar documentation](../../avatar/index.md).
 
 <GridContainer numColumns="3">
   <figure>
@@ -90,19 +90,6 @@ The following objects are automatically created in Studio if they are detected b
 - `Class.WrapLayer` - Created when Studio detects a mesh object with `_InnerCage` and similarly named mesh object with `_OuterCage` at the end of their names.
 - `Class.FaceControls` - Created when Studio detects an avatar character head and the appropriate facial animation data in the model.
 
-## Creating and Selling
-
-Whether you are creating assets for sale on the Marketplace, or for a specific use within experiences, the creation workflow is typically the same:
-
-1. **Design and Model** - Create the 3D asset in a third party application, such as Blender or Maya. Ensure that all assets follow any of the applicable requirements:
-   1. [General Mesh Specifications](../../art/modeling/specifications.md)
-   2. [Accessory Specifications](../../art/accessories/specifications.md)
-   3. [Character Specifications](../../art/avatar/specifications.md)
-   4. [Marketplace Policy](../../art/marketplace/marketplace-policy.md)
-2. **Import into Studio** - Import the custom mesh or model into Studio using the [3D Importer](../../art/modeling/3d-importer.md).
-3. **Test and Create** - Test the asset in your experience to ensure compatibility with your experience and environment. You may need to redesign your asset and go through additional iterations.
-4. **Publish and Sell** - If you are part of the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and your custom asset conforms to the [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can [publish your item](../../art/marketplace/publishing-to-marketplace.md) for others to purchase and receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md) for each sale of your asset.
-
 ## Resources
 
 There are a variety of resources available for creators of all backgrounds to get started with custom meshes.
@@ -124,11 +111,11 @@ If you are interested in specific avatar creation topics, use the following tabl
   <tr>
     <td>Technical Specs</td>
     <td>[.FBX Export Settings](../../art/modeling/export-requirements.md)<br /><br />[General Mesh Specifications](../../art/modeling/specifications.md)<br /><br />
-    [Avatar Specifications](../../art/avatar/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../art/marketplace/marketplace-policy.md)</td>
+    [Avatar Specifications](../../art/characters/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../art/marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
-    <td>Cosmetic Creation</td>
-    <td>[Accessories Overview](../../art/accessories/specifications.md)<br /><br />[Layered Clothing Overview](../../art/accessories/layered-clothing.md)<br /><br />[Creating Face Accessories](../../art/avatar/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../art/marketplace/marketplace-policy.md)</td>
+    <td>Bodies and Clothing Creation</td>
+    <td>[Accessories Overview](../../art/accessories/index.md)<br /><br />[Bodies Overview](../../art/characters/index.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../art/marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
@@ -136,12 +123,12 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Rigging and Skinning</td>
-    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Rigging Basic Meshes](../../art/modeling/rigging-a-simple-mesh.md) <br /><br />[Rigging Facial Bones](../../art/avatar/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Skinning Facial Bones](../../art/avatar/facial-animation/creating-basic-heads.md#skinning-face-bones)<br /><br />[Avatar Rig Requirements](../../art/avatar/specifications.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)</td>
+    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Rigging Basic Meshes](../../art/modeling/rigging-a-simple-mesh.md) <br /><br />[Rigging Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Skinning Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#skinning-face-bones)<br /><br />[Avatar Rig Requirements](../../art/characters/specifications.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)</td>
   </tr>
 
   <tr>
     <td>Facial Animation and Live Heads</td>
-    <td>[Basic Head Creation](../../art/avatar/facial-animation/creating-basic-heads.md)<br /><br />[Creating Face Accessories](../../art/avatar/facial-animation/creating-face-accessories.md)<br /><br />[FACS Pose References](../../art/avatar/facial-animation/facs-poses-reference.md)</td>
+    <td>[Basic Head Creation](../../art/characters/facial-animation/creating-basic-heads.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[FACS Pose References](../../art/characters/facial-animation/facs-poses-reference.md)</td>
   </tr>
   <tr>
     <td>Testing and Validation</td>

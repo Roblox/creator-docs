@@ -66,7 +66,7 @@ For example, in the following image, the left tower remains multiple assets unde
 Expanding on the second technique, assets with geometric complexity have more polygons, meaning they have more vertices that the engine needs to calculate as it renders their visual appearance. This means that assets with less complexity and fidelity are less costly to render, leading to an improvement in both performance and memory.
 
 <Alert severity="warning">
-    If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new assetID, otherwise the Roblox engine needs to make two separate calls for each assetID.
+If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new assetID, otherwise the Roblox engine needs to make two separate calls for each assetID.
 </Alert>
 
 ### Delete Layered Transparencies
@@ -86,3 +86,7 @@ For example, consider the following view of a planter in the sample environment.
 </GridContainer>
 
 When you finish reviewing all of your content to ensure it's optimal across devices, your experience is now ready for publication!
+
+<Alert severity="info">
+We’re interested in hearing from you about your experience following the Environmental Art Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Environmental Art Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-environmental-art-curriculum/2592218).
+</Alert>
