@@ -150,7 +150,9 @@ end
 Players.PlayerAdded:Connect(leaderboardSetup)
 ```
 
+<Alert severity="info">
 `IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` values set to true, their `Priority` values determine the leaderboard order.
+</Alert>
 
 ## Hiding the Leaderboard
 
