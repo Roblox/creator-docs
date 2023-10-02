@@ -121,10 +121,38 @@ goldChunk.Touched:Connect(onPartTouch)
 There are three ways to control the order of stats in a leaderboard:
 
 - Add the stats in the order that you want them to appear.
-- Add a child `Class.BoolValue` named `IsPrimary` to the stat. Set its value to true to place the stat first in the list.
-- Add a child `Class.NumberValue` named `Priority` to the stat. Then set its value to an integer. Higher priority values appear first. Stats without a priority have a default priority of 0.
+- Add a child `Class.BoolValue` named `IsPrimary` to the stat. Set its value to true to place the stat first in the leaderboard.
+- Add a child `Class.NumberValue` named `Priority` to the stat. Set its value to an integer. Higher priority values appear earlier in the leaderboard. Stats without a priority have a default priority of 0.
 
-`IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` set to true, `Priority` determines their order.
+This code sample shows how to add `IsPrimary` and `Priority` values to a stat:
+
+```lua
+local Players = game:GetService("Players")
+
+local function leaderboardSetup(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+	local gold = Instance.new("IntValue")
+	gold.Name = "Gold"
+	gold.Value = 0
+	gold.Parent = leaderstats
+	local priorityGold = Instance.new("NumberValue")
+	priorityGold.Name = "Priority"
+	priorityGold.Value = 1
+	priorityGold.Parent = gold
+	local isPrimary = Instance.new("BoolValue")
+	isPrimary.Name = "IsPrimary"
+	isPrimary.Value = true
+	isPrimary.Parent = gold
+end
+Players.PlayerAdded:Connect(leaderboardSetup)
+```
+
+<Alert severity="info">
+`IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` values set to true, their `Priority` values determine the leaderboard order.
+</Alert>
 
 ## Hiding the Leaderboard
 
