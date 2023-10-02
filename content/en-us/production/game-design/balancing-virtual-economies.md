@@ -43,7 +43,7 @@ If the developers launch the event without estimating the economic impact of inc
 
 <figure>
   <img src="../../assets/game-design/balancing-virtual-economies/balancing-virtual-economies-1.png" width="70%"/>
-    <figcaption>An ubalanced event in *Feline Fishing Fun*. </figcaption>
+    <figcaption>An unbalanced event in *Feline Fishing Fun*. </figcaption>
   </figure>
 
 ## Impact Estimation
