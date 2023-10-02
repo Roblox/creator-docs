@@ -24,13 +24,9 @@ In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from 
 if 2 + 2 == 5 then
 	print("Two plus two is five") -- Doesn't print because the condition is false
 elseif 2 + 3 == 5 then
-	print("Two plus three is five") -- Doesn't print because the condition is false
-else
-	print("What is two plus two?") -- What is two plus two?
-end
-
-if 2 + 3 == 5 then
 	print("Two plus three is five") -- Two plus three is five
+else
+	print("All conditions failed") -- Doesn't print because the previous condition is true
 end
 ```
 
