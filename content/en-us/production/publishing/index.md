@@ -23,7 +23,7 @@ While there are limits on the number of assets you can publish per 30 days, you 
 
 ## Accessories and Clothing
 
-If you meet certain account requirements,, you can upload and sell avatar accessories and clothing assets on the [Marketplace](https://www.roblox.com/catalog), assuming they meet the [marketplace policy](../../art/marketplace/marketplace-policy.md) and any applicable [technical specifications](../../art/accessories/specifications.md#marketplace-requirements).
+If you meet certain account requirements, you can upload and sell avatar accessories and clothing assets on the [Marketplace](https://www.roblox.com/catalog), assuming they meet the [marketplace policy](../../art/marketplace/marketplace-policy.md) and any applicable [technical specifications](../../art/accessories/specifications.md#marketplace-requirements).
 
 Once they pass moderation, you can:
 

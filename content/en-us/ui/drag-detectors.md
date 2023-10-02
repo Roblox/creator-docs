@@ -4,7 +4,7 @@ description: Drag detectors instances encourage physical interaction with object
 ---
 
 <Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **DragDetectors**.
+Creating drag detectors in Studio is currently in beta. To implement them, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **DragDetectors**.
 </Alert>
 
 `Class.DragDetector` instances encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
