@@ -611,6 +611,8 @@ Consider the following best practices for using `Class.PathfindingService` in st
 
       To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.
 
-      <Alert severity="error">
-      Persistent models are intended for very rare circumstances and overuse may negatively impact performance. If using the approach outlined above, be cautious about how many models you set as persistent for pathfinding purposes.
+      <Alert severity="warning">
+      Persistent models are intended for very rare circumstances, such as when a small number of parts must always be present on clients for `Class.LocalScript` use. If possible, server-side `Class.Script|Scripts` should be used, or `Class.LocalScript|LocalScripts` should be tolerant of parts streaming in and out. Persistent models are **not** intended to circumvent streaming, and overuse may negatively impact performance.
+
+      Avoid creating catch-all persitent models that have a large number of sub-models. For example, if you're creating an experience with a large number of vehicles, don't create a single persistent model which contains every vehicle in the experience that you want to be persistent. Instead, set each individual vehicle model to be persistent, if necessary.
       </Alert>
