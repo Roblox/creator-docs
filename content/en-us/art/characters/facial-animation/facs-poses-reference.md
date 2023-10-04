@@ -7,9 +7,178 @@ The [Facial Action Coding System](https://en.wikipedia.org/wiki/Facial_Action_Co
 
 The following is a list of 50 base poses that you can use in Roblox to portray a wide range of face emotions. Except for the first neutral pose, the order of poses you save to your character model doesn't matter since this information is set during the [mapping](../../../art/characters/facial-animation/creating-basic-heads.md#mapping) process as a custom property.
 
-<Alert severity = 'info'>
-You can combine multiple FACS base poses together in one animation frame to create complex facial expressions. However, some combinations of poses might collide unless you also add a [corrective](../../../art/characters/facial-animation/creating-basic-heads.md#combination-poses) to their full default values.
+<Alert severity = 'warning'>
+If you intend to publish your avatar to the Marketplace, your avatar head must include the minimum 17 facial base poses. Marketplace validation rejects assets that do not include these 17 required base poses.
 </Alert>
+
+You can combine multiple FACS base poses together in one animation frame to create complex facial expressions. However, some combinations of poses might collide unless you also add a [corrective](../../../art/characters/facial-animation/creating-basic-heads.md#combination-poses) to their full default values.
+
+## EyesLookDown
+
+`Class.FaceControls.EyesLookDown|EyesLookDown` makes the eyes gaze down. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookLeft
+
+`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookRight
+
+`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightB.mp4" width="70%"></video>
+</GridContainer>
+
+## EyesLookUp
+
+`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpB.mp4" width="70%"></video>
+</GridContainer>
+
+## JawDrop
+
+`Class.FaceControls.JawDrop|JawDrop` lowers the jaw downward, opening the mouth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftEyeClosed
+
+`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftLipCornerPuller
+
+`Class.FaceControls.LeftLipCornerPuller|LeftLipCornerPuller` raises the corners of the mouth upwards in a smile. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftLipStretcher
+
+`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftLowerLipDepressor
+
+`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip downwards away from the upper lip, revealing the lower teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorB.mp4" width="70%"></video>
+</GridContainer>
+
+## LeftUpperLipRaiser
+
+`Class.FaceControls.LeftUpperLipRaiser|LeftUpperLipRaiser` raises the character's left upper lip away from the lower lip revealing the upper teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftUpperLipRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftUpperLipRaiserB.mp4" width="70%"></video>
+</GridContainer>
+
+## LipsTogether
+
+`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-1.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-1.mp4" width="70%"></video>
+</GridContainer>
+
+This pose's main use case is in connection with the [`JawDrop`](#jawdrop) property. If you set [`JawDrop`](#jawdrop) and `Class.FaceControls.LipsTogether|LipsTogether` to 100% of their default values, the character's lips stay together as the jaw drops.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-2.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-2.mp4" width="70%"></video>
+</GridContainer>
+
+In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and ease `Class.FaceControls.LipsTogether|LipsTogether` in and out of 100% of its default value, the character's lips open and close.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-3.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-3.mp4" width="70%"></video>
+</GridContainer>
+
+## Pucker
+
+`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightEyeClosed
+
+`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightLipCornerPuller
+
+`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightLipStretcher
+
+`Class.FaceControls.RightLipStretcher|RightLipStretcher` stretches the corners of the mouth apart. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightLowerLipDepressor
+
+`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorB.mp4" width="70%"></video>
+</GridContainer>
+
+## RightUpperLipRaiser
+
+`Class.FaceControls.RightUpperLipRaiser|RightUpperLipRaiser` raises the right upper lip away from the lower lip, revealing the upper teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+
+<GridContainer numColumns="2">
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserA.mp4" width="70%"></video>
+  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserB.mp4" width="70%"></video>
+</GridContainer>
 
 ## ChinRaiser
 
@@ -67,29 +236,6 @@ When you use `Class.FaceControls.ChinRaiser|ChinRaiser` and the character's mout
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipPresserB.mp4" width="70%"></video>
 </GridContainer>
 
-## LipsTogether
-
-`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-1.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-1.mp4" width="70%"></video>
-</GridContainer>
-
-This pose's main use case is in connection with the [`JawDrop`](#jawdrop) property. If you set [`JawDrop`](#jawdrop) and `Class.FaceControls.LipsTogether|LipsTogether` to 100% of their default values, the character's lips stay together as the jaw drops.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-2.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-2.mp4" width="70%"></video>
-</GridContainer>
-
-In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and ease `Class.FaceControls.LipsTogether|LipsTogether` in and out of 100% of its default value, the character's lips open and close.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-3.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherB-3.mp4" width="70%"></video>
-</GridContainer>
-
 ## MouthLeft
 
 `Class.FaceControls.MouthLeft|MouthLeft` moves the mouth to the character's left. This property doesn't move the character's jaw, teeth, or tongue, only their mouth. If you want to move those additional facial features, use [`JawLeft`](#jawleft) instead.
@@ -106,15 +252,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/MouthRightA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/MouthRightB.mp4" width="70%"></video>
-</GridContainer>
-
-## Pucker
-
-`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerB.mp4" width="70%"></video>
 </GridContainer>
 
 ## UpperLipSuck
@@ -153,42 +290,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerDownB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftLowerLipDepressor
-
-`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip downwards away from the upper lip, revealing the lower teeth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorB.mp4" width="70%"></video>
-</GridContainer>
-
-## LeftLipCornerPuller
-
-`Class.FaceControls.LeftLipCornerPuller|LeftLipCornerPuller` raises the corners of the mouth upwards in a smile.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerB.mp4" width="70%"></video>
-</GridContainer>
-
-## LeftLipStretcher
-
-`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherB.mp4" width="70%"></video>
-</GridContainer>
-
-## LeftUpperLipRaiser
-
-`Class.FaceControls.LeftUpperLipRaiser|LeftUpperLipRaiser` raises the character's left upper lip away from the lower lip revealing the upper teeth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftUpperLipRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftUpperLipRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightCheekPuff
 
 `Class.FaceControls.RightCheekPuff|RightCheekPuff` puffs up the character's right cheek.
@@ -214,51 +315,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerDownB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightLowerLipDepressor
-
-`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightLipCornerPuller
-
-`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightLipStretcher
-
-`Class.FaceControls.RightLipStretcher|RightLipStretcher` stretches the corners of the mouth apart.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightUpperLipRaiser
-
-`Class.FaceControls.RightUpperLipRaiser|RightUpperLipRaiser` raises the right upper lip away from the lower lip, revealing the upper teeth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
-## JawDrop
-
-`Class.FaceControls.JawDrop|JawDrop` lowers the jaw downward, opening the mouth.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropB.mp4" width="70%"></video>
 </GridContainer>
 
 ## JawLeft
@@ -360,42 +416,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightNoseWrinklerB.mp4" width="70%"></video>
 </GridContainer>
 
-## EyesLookDown
-
-`Class.FaceControls.EyesLookDown|EyesLookDown` makes the eyes gaze down.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookLeft
-
-`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookUp
-
-`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpB.mp4" width="70%"></video>
-</GridContainer>
-
-## EyesLookRight
-
-`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightB.mp4" width="70%"></video>
-</GridContainer>
-
 ## LeftCheekRaiser
 
 `Class.FaceControls.LeftCheekRaiser|LeftCheekRaiser` squints the character's left eye.
@@ -414,15 +434,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeUpperLidRaiserB.mp4" width="70%"></video>
 </GridContainer>
 
-## LeftEyeClosed
-
-`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedB.mp4" width="70%"></video>
-</GridContainer>
-
 ## RightCheekRaiser
 
 `Class.FaceControls.RightCheekRaiser|RightCheekRaiser` squints the character's right eye.
@@ -439,15 +450,6 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeUpperLidRaiserA.mp4" width="70%"></video>
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeUpperLidRaiserB.mp4" width="70%"></video>
-</GridContainer>
-
-## RightEyeClosed
-
-`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid.
-
-<GridContainer numColumns="2">
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedA.mp4" width="70%"></video>
-  <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedB.mp4" width="70%"></video>
 </GridContainer>
 
 ## TongueDown

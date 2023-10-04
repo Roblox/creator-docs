@@ -43,11 +43,11 @@ Whenever a player is added to the experience, they'll need to be added to the le
 4. Name the new **Folder** instance `leaderstats`, and parent it to the player. Naming the folder `leaderstats` lets Roblox Studio know to create a leaderboard.
 
    ```lua
-     local function onPlayerJoin(player)
+   local function onPlayerJoin(player)
       local leaderstats = Instance.new("Folder")
       leaderstats.Name = "leaderstats"
       leaderstats.Parent = player
-     end
+   end
    ```
 
     <Alert severity="warning">
@@ -158,7 +158,7 @@ Remember that items can be anything based off the game design document. Such as 
       gold.Parent = leaderstats
 
       -- Create the Items stat
-      local items= Instance.new("IntValue")
+      local items = Instance.new("IntValue")
       items.Name = "Items"
       items.Value = 0
       items.Parent = leaderstats
@@ -206,7 +206,7 @@ A finished version of the script can be referenced below.
    gold.Value = 0
    gold.Parent = leaderstats
 
-   local items= Instance.new("IntValue")
+   local items = Instance.new("IntValue")
    items.Name = "Items"
    items.Value = 0
    items.Parent = leaderstats
@@ -215,7 +215,6 @@ A finished version of the script can be referenced below.
    spaces.Name = "Spaces"
    spaces.Value = 2
    spaces.Parent = leaderstats
-
  end
 
  -- Run onPlayerJoin when the PlayerAdded event fires

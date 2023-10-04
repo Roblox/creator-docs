@@ -3,11 +3,11 @@ title: Handling API Requests for Data Stores
 description: Explains how to properly handle parameters of Open Cloud API requests for data stores.
 ---
 
-Before sending requests to Open Cloud APIs for [standard data stores](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json), you need to understand how to handle them properly. For information on the usage of the API, see the [Usage Guide](../../cloud/open-cloud/usage-data-stores.md).
+Before sending requests to Open Cloud APIs for [standard data stores](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json), you need to understand how to handle them properly. For information on the usage of the API, see the [Usage Guide](./usage-data-stores.md).
 
 ## Authorization
 
-Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Managing API Keys](../../cloud/open-cloud/managing-api-keys.md).
+Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Managing API Keys](api-keys.md).
 
 ## Throttling
 

@@ -1,7 +1,7 @@
 columns:
   - - title: Overview
       path: /
-    - title: Experiences
+    - title: Engine
       path: /platform
       items:
         - title: Guides
@@ -42,4 +42,4 @@ columns:
           path: /cloud/open-cloud/
         - title: Reference
           navigation: /cloud/reference.yaml
-          path: /reference/cloud/
+          path: /cloud/reference/
