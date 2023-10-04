@@ -339,6 +339,8 @@ navigation:
             path: /ui/buttons
           - title: Text Input
             path: /ui/text
+          - title: Video Assets
+            path: /ui/video-assets
       - title: Layout and Design
         section:
           - title: Layout and Appearance
