@@ -21,11 +21,29 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 Roblox supports 3 standards of body types: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body type is the same, each body type has a unique maximum total body size, as well as a range for each body asset.
 
+<center>
+<figure>
+   <img src="../../assets/art/Body-Scale-Diagram.png" width = "60%"/>
+<figcaption>
+A visualization of how Roblox combines the 15 body parts into 5 distinct assets.
+</figcaption>
+</figure>
+</center>
+
 <Alert severity='warning'>
 Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body type to ensure a standard avatar size and scale.
 </Alert>
 
 #### Normal
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width = "60%"/>
+<figcaption>
+A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
 
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body type.
 
@@ -126,6 +144,15 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
 
 #### Slender
 
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width = "60%"/>
+<figcaption>
+A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
+
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body type.
 
 <br />
@@ -224,6 +251,15 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
 </GridContainer>
 
 #### Classic
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Classic.png" width = "60%"/>
+<figcaption>
+A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
 
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body type.
 
@@ -573,6 +609,30 @@ See the following requirements for skinning:
 - **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
 - **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
+
+## Facial Animations
+
+Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md):
+
+- EyesLookDown
+- EyesLookLeft
+- EyesLookRight
+- EyesLookUp
+- JawDrop
+- LeftEyeClosed
+- LeftLipCornerPuller
+- LeftLipStretcher
+- LeftLowerLipDepressor
+- LeftUpperLipRaiser
+- LipsTogether
+- Pucker
+- RightEyeClosed
+- RightLipCornerPuller
+- RightLipStretcher
+- RightLowerLipDepressor
+- RightUpperLipRaiser
+
+While the 17 poses are a minimum requirement, it's recommended to include as many facial poses as possible in your asset to improve expressiveness and facial animation fidelity for facial animation and avatar chat.
 
 ## Textures
 

@@ -110,7 +110,7 @@ The next question of the violence category asks you to specify whether the frequ
 
 Blood is the red liquid that flows through human and animal bodies that's essential to life. If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Experience Questionnaire, and specify whether the realism of blood is **unrealistic** or **realistic**. Unrealistic blood doesn't look like real blood, so if you display blood within your experience as pixels, or as a different color or shape, it meets the unrealistic criteria. Realistic blood, however, has the same color, shape, and splatter properties as blood in the real world.
 
-If you answer unrealistic, the questionnaire asks if the blood depictions are infrequent and/or fleeting, such as yellow blood splattering on the screen for a few seconds. Experiences that include frequent unrealistic blood depictions are only available to users that are at least 13 years old.
+If you answer unrealistic, the questionnaire asks if the blood depictions are infrequent and/or fleeting, such as yellow blood splattering on the screen for a few seconds.
 
 #### Level
 

@@ -10,7 +10,7 @@ See [Resources](../../avatar/resources.md) for a complete list of avatar-related
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
-  <TabItem label="Clothing">
+  <TabItem label="Clothing and Mannequins">
   <table>
 <thead>
   <tr>
@@ -26,6 +26,30 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>
     <td>Caged 3D accessory models ready for import into Studio or in a modeling tool.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
+    <td>A [Classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" download>ClassicMannequin_With-Cages</a></td>
+    <td>A [Classic](../../art/characters/specifications.md#classic) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin.fbx" download>RthroMannequin.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin_With-Cages.fbx" download>RthroMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin with **body cages** to use in Studio or your modeling application to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin.fbx" download>RthroSlenderMannequin.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin_With-Cages.fbx" download>RthroSlenderMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin with **body cages** to use in Studio or your modeling application to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
   </tr>
 </tbody>
 </table>

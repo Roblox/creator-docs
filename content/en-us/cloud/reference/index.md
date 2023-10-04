@@ -9,8 +9,7 @@ banner:
 
 Open Cloud APIs are a set of resources and methods that let you build tools and
 apps to access Roblox resources with standard web APIs. Open Cloud APIs are
-RESTful, support HTTPS requests, and support [API
-Key](../open-cloud/api-keys.md) and
+RESTful, support HTTPS requests, and support [API Key](../open-cloud/api-keys.md) and
 [OAuth 2.0](../open-cloud/oauth2-overview.md) authentication.
 
 The **Common Components** section of the reference documentation describe

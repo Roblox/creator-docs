@@ -199,12 +199,77 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 </Card>
 
 </Grid>
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
 
+<center>Classic Mannequin</center>
+<figure>
+<center> <img src="../../assets/art/resources/Body-Scale-Classic.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Classic](../../art/characters/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../../assets/art/reference-files/ClassicMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Rthro Mannequin</center>
+<figure>
+<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../../assets/art/reference-files/RthroMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../../assets/art/reference-files/RthroMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Rthro Slender Mannequin</center>
+<figure>
+<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Rthro Slender](../../art/characters/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../../assets/art/reference-files/RthroSlenderMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../../assets/art/reference-files/RthroSlenderMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
 </Grid>
 
 ## Templates
 
 These project files require additional configuration before they are ready for Studio import. See [Creating with Templates](../characters/creating/index.md) for additional information.
+
+<Alert severity = 'warning'>
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/cleanup.md) in order for the assets to properly validate before publishing to the Marketplace.
+</Alert>
 
 <Grid container style={{margin: -6}}>
 <Grid item xs={12} md={4} style={{padding: 6}}>
