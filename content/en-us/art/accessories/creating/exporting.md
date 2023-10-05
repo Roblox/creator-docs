@@ -1,6 +1,6 @@
 ---
-title: Basic Clothing Creation
-description: This tutorial covers the basic steps required in Blender to Studio-ready clothing assets from scratch.
+title: Exporting
+description: Covers the process of exporting a custom clothing asset from Blender.
 prev: /art/accessories/creating/caging
 ---
 

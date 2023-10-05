@@ -464,40 +464,40 @@ Each attachments must also follow a specific naming convention and positional co
   <tr>
     <td rowspan="4">Head</td>
     <td>FaceCenter_Att</td>
-    <td>Front of mesh</td>
+    <td>Anywhere within mesh bounding box</td>
   </tr>
   <tr>
     <td>FaceFront_Att</td>
-    <td>Top of mesh</td>
+    <td>Front half of mesh bounding box</td>
   </tr>
   <tr>
     <td>Hat_Att</td>
-    <td>Top of mesh, can overlap with Hair_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hair_Att</td>
   </tr>
   <tr>
     <td>Hair_Att</td>
-    <td>Top of mesh, can overlap with Hat_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hat_Att</td>
   </tr>
   <tr>
     <td rowspan="5">UpperTorso</td>
     <td>LeftCollar_Att</td>
-    <td>Left top of mesh</td>
+    <td>Left top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>RightCollar_Att</td>
-    <td>Right top of mesh</td>
+    <td>Right top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>Neck_Att</td>
-    <td>Upper front of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>BodyBack_Att</td>
-    <td>Back of mesh</td>
+    <td>Back half of mesh bounding box</td>
   </tr>
   <tr>
     <td>BodyFront_Att</td>
-    <td>Front of mesh</td>
+    <td>Front half of mesh bounding box</td>
   </tr>
   <tr>
     <td rowspan="4">LowerTorso</td>
@@ -506,45 +506,45 @@ Each attachments must also follow a specific naming convention and positional co
   </tr>
   <tr>
     <td>WaistFront_Att</td>
-    <td>Front of mesh, can overlap with WaistCenter_Att</td>
+    <td>Front half of mesh bounding box, can overlap with WaistCenter_Att</td>
   </tr>
   <tr>
     <td>WaistBack_Att</td>
-    <td>Back of mesh</td>
+    <td>Back half of mesh bounding box</td>
   </tr>
   <tr>
     <td>WaistCenter_Att</td>
-    <td>Front of mesh, can overlap with WaistFront_Att</td>
+    <td>Anywhere in mesh bounding box, can overlap with WaistFront_Att</td>
   </tr>
   <tr>
     <td>RightUpperArm</td>
     <td>RightShoulder_Att</td>
-    <td>Top of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>RightHand</td>
     <td>RightGrip_Att</td>
-    <td>Must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box, must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
   </tr>
   <tr>
     <td>LeftUpperArm</td>
     <td>LeftShoulder_Att</td>
-    <td>Top of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>LeftHand</td>
     <td>LeftGrip_Att</td>
-    <td>Must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box, must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
   </tr>
   <tr>
     <td>RightFoot</td>
     <td>RightFoot_Att</td>
-    <td>Anywhere in mesh</td>
+    <td>Anywhere in mesh bounding box</td>
   </tr>
   <tr>
     <td>LeftFoot</td>
     <td>LeftFoot_Att</td>
-    <td>Anywhere in mesh</td>
+    <td>Anywhere in mesh bounding box</td>
   </tr>
 </tbody>
 </table>
@@ -612,7 +612,7 @@ See the following requirements for skinning:
 
 ## Facial Animations
 
-Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md):
+Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md) to support avatar chat:
 
 - EyesLookDown
 - EyesLookLeft

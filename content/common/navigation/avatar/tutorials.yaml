@@ -1,6 +1,22 @@
 navigation:
   - title: Avatar Tutorials
     path: /avatar/tutorials
+  - heading: Rigid Accessories
+  - title: Overview
+    path: /art/accessories/creating-rigid/
+  - title: Modeling
+    path: /art/accessories/creating-rigid/modeling
+  - title: Texturing
+    path: /art/accessories/creating-rigid/texturing
+  - title: Exporting
+    path: /art/accessories/creating-rigid/exporting
+  - title: Importing into Studio
+    path: /art/accessories/creating-rigid/importing
+  - title: Fitting and Conversion
+    path: /art/accessories/creating-rigid/converting
+  - title: Publishing
+    path: /art/accessories/creating-rigid/publishing
+
   - heading: Clothing
   - title: Overview
     path: /art/accessories/creating/
