@@ -36,7 +36,7 @@ if finishTime >= 5 and <= 10 then
 end
 
 if finishTime > 10 and <= 15 then
-   get a bronze medal
+   -- Get a bronze medal
 end
 ```
 
