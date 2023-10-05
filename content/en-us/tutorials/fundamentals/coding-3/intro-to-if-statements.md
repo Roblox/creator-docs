@@ -49,7 +49,7 @@ One particular operator to be aware of is `==`. It stands for "is equal to." So 
 
    ```
 
-2. After the keyword `if`, type a true statement such as `3 = 3 == 6`.
+2. After the keyword `if`, type a true statement such as `3 + 3 == 6`.
 
    ```lua
      if 3 + 3 == 6 then
