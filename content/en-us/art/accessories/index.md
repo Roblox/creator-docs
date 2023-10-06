@@ -19,7 +19,9 @@ Custom accessories are first created in 3D modeling programs, such as [Blender](
 - A basic background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up an accessory](#components-of-an-accessory).
 - An understanding of the general [accessory creation process](#creation-process).
-- Review the [clothing creation tutorial](../../art/accessories/creating/index.md), a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
+- Review Roblox's official tutorials to create your own accessories:
+  - [Rigid accessory creation tutorial](../../art/accessories/creating-rigid/index.md) - covers each process required for converting a 3D model to a rigid accessory and publishing it to the Marketplace.
+  - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
 - [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
 ### Components of an Accessory
@@ -116,7 +118,7 @@ If you are interested in specific avatar creation topics, use the following tabl
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Basic Clothing Creation](../../art/accessories/creating/index.md)</td>
+    <td>[Rigid Accessory Creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic Clothing Creation](../../art/accessories/creating/index.md)</td>
   </tr>
   <tr>
     <td>Reference Files</td>

@@ -242,7 +242,7 @@ By default, a right-side **catalog button** lets users open the booth at any tim
 
 In some cases, it may be useful to [remove](#togglecatalogbutton) this button and connect your own:
 
-1. Create a new button as outlined in [Buttons and Text Input](../../ui/buttons.md).
+1. Create a new button as outlined in [Buttons](../../ui/buttons.md).
 1. Create a `Class.LocalScript` as a child of the button object.
 
    <img src="../../assets/studio/explorer/LocalScript-In-TextButton.png" width="320" />

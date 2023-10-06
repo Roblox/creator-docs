@@ -6,9 +6,8 @@ description: Explains the process of nominating your experience for specialized 
 Sorts are collections of experiences that users see when they are
 browsing the
 [Discover](https://www.roblox.com/discover#/) page,
-such as **Most Engaging**, **Up-and-Coming**, and **Roleplay**. While most sorts generate automatically, you can nominate your experiences to
-[Learn & Explore](#learn--explore-criteria) and [Xbox
-Featured](#xbox-featured-criteria) sort categories. Experiences you nominate
+such as **Most Engaging**, **Up-and-Coming**, and **Roleplay**. While most sorts generate automatically, you can nominate your experiences to the
+[Learn & Explore](#learn--explore-criteria) sort. Experiences you nominate
 should have a consistent and active user base, be well-liked by the community,
 and remain public to all users. Consequently, [Paid
 Access](/production/monetization/paid-access) experiences are ineligible.
@@ -61,29 +60,4 @@ occasionally rotates and refreshes this sort category. If an experience is
 removed, you will receive prior notice and an opportunity to re-apply in the
 future. The Education team is glad to offer feedback for experiences on a
 case-by-case basis. For questions, contact <a href='mailto:education@roblox.com'>education@roblox.com</a>.
-</Alert>
-
-## Xbox Featured Criteria
-
-The **Xbox Featured** sort highlights experiences specifically
-compatible with Xbox devices, such as having full support for gamepad
-input in Xbox-specific terminology.
-
-An experience in the **Xbox Featured** sort must:
-
-- Be fully playable on the Xbox One.
-- Pass the [Xbox Guidelines](../../production/publishing/xbox-guidelines.md). Roblox will contact you if changes are needed to pass guidelines.
-- Have a "Like" ratio above 70%, and maintain at least 50 concurrent users.
-- Only 1 experience on the sort per developer/group.
-
-<Button
-  size="medium"
-  variant="contained"
-  href="https://roblox.qualtrics.com/jfe/form/SV_eahNb2yR0EnHQMe">
-Apply for Xbox Featured Sort
-</Button>
-
-<Alert severity="info">
-To ensure fresh content, we rotate experiences in this sort category monthly.
-For questions, contact us through the [Developer Forum](https://devforum.roblox.com/g/Featuring_Program)
 </Alert>

@@ -66,7 +66,7 @@ To add assets to your experience from the Creator Marketplace:
    - If your asset is a model or mesh, it displays both in the viewport and the **Explorer** window.
    - If your asset is an image, video, or audio file, it displays in the **Explorer** window.
    - If your asset is a plugin, it displays in the **Plugins** tab of the menu bar.
-   - If your asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [text input objects](../../ui/buttons.md), as well as the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
+   - If your asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [buttons](../../ui/buttons.md), as well as the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
 
 ### Disabling Scripts
 

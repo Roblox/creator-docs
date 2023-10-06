@@ -1,6 +1,6 @@
 ---
-title: Buttons and Text Input
-description: Buttons allow users to perform an action, and text input allows users to input text.
+title: Buttons
+description: Buttons allow users to prompt an action.
 ---
 
 When designing buttons, `Class.TextButton` and
@@ -25,9 +25,7 @@ There are two types of buttons you can use on a screen or surface of a part:
   <img src="../assets/ui/button-text-input/ImageButton-Examples.jpg"
    width="800" />
 
-  **An example of an ImageButton**
-
-## Creating Buttons on a Screen
+## Creating Buttons on the Screen
 
 Buttons on a screen are useful to quickly guide users to various menus or pages.
 
@@ -47,7 +45,7 @@ To add a button to the screen:
 
    <img src="../assets/ui/button-text-input/ImageButton-Screen-New.jpg" width="800" />
 
-## Creating Buttons on a Part's Face
+## Creating Buttons on Part Faces
 
 Buttons on a part are useful for allowing users to interact with parts. For
 example, you can let users step on a button to complete an action.
@@ -103,13 +101,13 @@ An `Class.ImageButton` has three properties to change its visual appearance:
 
 To change the appearance of an `Class.ImageButton` with user input:
 
-1. Add an **ImageButton** to a [screen](#creating-buttons-on-a-screen) or a [surface](#creating-buttons-on-a-screen).
+1. Add an **ImageButton** to a [screen](#creating-buttons-on-the-screen) or a [surface](#creating-buttons-on-the-screen).
 
 2. In the **Explorer** window, click the **ImageButton** object.
 
 3. In the **Properties** window, assign three different respective asset IDs for the **Image**, **HoverImage**, and **PressedImage** properties.
 
-### Scripting Buttons
+## Scripting Buttons
 
 You can script an action when a user presses a button by connecting the button to a `Class.GuiButton.Activated` event. For example, when you parent the following `Class.LocalScript` to a button, the button changes to a random color every time a user clicks it.
 

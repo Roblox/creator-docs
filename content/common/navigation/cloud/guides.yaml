@@ -11,6 +11,8 @@ navigation:
         path: /cloud/open-cloud/oauth2-registration
       - title: Implementation
         path: /cloud/open-cloud/oauth2-develop
+      - title: Sample App
+        path: /cloud/open-cloud/oauth2-sample
   - title: API Keys
     path: /cloud/open-cloud/api-keys
   - heading: V2 Resources (Beta)

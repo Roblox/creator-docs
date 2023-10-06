@@ -113,7 +113,7 @@ style={{position: "relative"}}>
 </Grid>
 </>
 
-<a href="../art/accessories/creating">
+<a href="../art/accessories/creating-rigid">
   <Button
     variant="contained"
     size="large">

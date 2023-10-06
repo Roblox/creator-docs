@@ -298,12 +298,8 @@ navigation:
       - title: Overview
         path: /input/
       - title: Mouse and Keyboard
-        section:
-          - title: Overview
-            path: /input/mouse-and-keyboard
-          - title: Customizing Mouse Icons
-            path: /input/customizing-mouse-icons
-      - title: Mobile Input
+        path: /input/mouse-and-keyboard
+      - title: Mobile
         path: /input/mobile
       - title: Gamepad
         path: /input/gamepad
@@ -338,7 +334,11 @@ navigation:
           - title: Buttons
             path: /ui/buttons
           - title: Text Input
-            path: /ui/text
+            path: /ui/text-input
+          - title: Proximity Prompts
+            path: /ui/proximity-prompts
+          - title: Drag Detectors
+            path: /ui/drag-detectors
           - title: Video Assets
             path: /ui/video-assets
       - title: Layout and Design
@@ -357,10 +357,6 @@ navigation:
             path: /ui/cross-platform-design
       - title: UI Animation
         path: /ui/animation
-      - title: Proximity Prompts
-        path: /ui/proximity-prompts
-      - title: Drag Detectors
-        path: /ui/drag-detectors
       - title: Text Filtering
         path: /ui/text-filtering
       - title: Loading Screens
@@ -383,7 +379,6 @@ navigation:
             path: /animation/inverse-kinematics
       - title: Using Animations
         path: /animation/using
-
   - title: Chat
     section:
       - title: Spatial Voice
@@ -398,7 +393,6 @@ navigation:
             path: /chat/bubble-chat
           - title: Migrating to In-Experience Text Chat
             path: /chat/migrate-to-in-experience-text-chat
-
   - title: Cloud Services
     section:
       - title: Data Stores

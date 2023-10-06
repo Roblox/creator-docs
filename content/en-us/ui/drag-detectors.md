@@ -3,10 +3,6 @@ title: Drag Detectors
 description: Drag detectors instances encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, and much more.
 ---
 
-<Alert severity="success">
-Creating drag detectors in Studio is currently in beta. To implement them, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **DragDetectors**.
-</Alert>
-
 `Class.DragDetector` instances encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
 
 - Place a `Class.DragDetector` under any part or model to [make it draggable](#making-objects-draggable) via all inputs (mouse, touch, gamepad, and VR), all without a single line of code.
