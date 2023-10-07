@@ -14,9 +14,7 @@ allow you to display customizable text and images within a
 
 <img src="../assets/ui/labels/Labels-Example.jpg" width="80%" />
 
-**Examples of TextLabel and ImageLabel**
-
-## Creating Labels on a Screen
+## Creating Labels on the Screen
 
 Labels on a screen are useful for things like displaying images of characters
 with dialog.
@@ -37,7 +35,7 @@ To add a label to a screen:
 
    <img src="../assets/ui/button-text-input/ImageButton-Screen-New.jpg" width="80%" />
 
-## Creating Labels on a Part
+## Creating Labels on Part Faces
 
 Labels on a part are useful for things like creating billboards, posters, and
 wallpaper.
@@ -62,7 +60,7 @@ To add a label to the face of a part:
    If you don't see the button, try [choosing a different face](../parts/textures-decals.md#choosing-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
    </Alert>
 
-## Adjusting ImageLabel properties
+## Adjusting ImageLabel Properties
 
 All images within an `Class.ImageLabel` must be assets that have been [imported](../projects/assets/manager.md#importing-assets) to Studio. While the image automatically scales to fit the area of the rectangle, the image looks best when it displays at its native resolution.
 

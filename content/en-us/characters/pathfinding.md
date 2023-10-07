@@ -214,6 +214,7 @@ local function followPath(destination)
 	local success, errorMessage = pcall(function()
 		path:ComputeAsync(character.PrimaryPart.Position, destination)
 	end)
+end
 ```
 
 <img src="../assets/mechanics/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
@@ -374,7 +375,7 @@ local function followPath(destination)
 			end
 		end)
 	end
-end 
+end
 ```
 
 <Alert severity="error">
@@ -573,7 +574,7 @@ To create a `Class.PathfindingLink` using this example:
 
    	humanoid.Seated:Connect(function()
    		-- Start boat moving if agent is seated
-   		if humanoid.Sit == true then
+   		if humanoid.Sit then
    			task.wait(1)
    			boat.CylindricalConstraint.Velocity = 5
    		end
@@ -606,11 +607,6 @@ Consider the following best practices for using `Class.PathfindingService` in st
 
 - Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [Handling Blocked Paths](#handling-blocked-paths) technique and re-compute the path when necessary.
 
-- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#computing-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but
-  `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
+- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#computing-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
 
       To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.
-
-      <Alert severity="error">
-      Persistent models are intended for very rare circumstances and overuse may negatively impact performance. If using the approach outlined above, be cautious about how many models you set as persistent for pathfinding purposes.
-      </Alert>

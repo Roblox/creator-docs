@@ -110,7 +110,7 @@ The next question of the violence category asks you to specify whether the frequ
 
 Blood is the red liquid that flows through human and animal bodies that's essential to life. If your experience includes blood, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it within the Experience Questionnaire, and specify whether the realism of blood is **unrealistic** or **realistic**. Unrealistic blood doesn't look like real blood, so if you display blood within your experience as pixels, or as a different color or shape, it meets the unrealistic criteria. Realistic blood, however, has the same color, shape, and splatter properties as blood in the real world.
 
-If you answer unrealistic, the questionnaire asks if the blood depictions are infrequent and/or fleeting, such as yellow blood splattering on the screen for a few seconds. Experiences that include frequent unrealistic blood depictions are only available to users that are at least 13 years old.
+If you answer unrealistic, the questionnaire asks if the blood depictions are infrequent and/or fleeting, such as yellow blood splattering on the screen for a few seconds.
 
 #### Level
 
@@ -124,7 +124,7 @@ For example, if you depict or reference flatulence, vomiting, and/or unrealistic
 
 ### Gambling
 
-Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards. Experiences that depict unplayable gambling content are only available to verified users that are at least 13 years old.
+Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards.
 
 ### Alcohol
 

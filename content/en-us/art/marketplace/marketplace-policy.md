@@ -11,15 +11,11 @@ Only creators participating in the [UGC program](https://devforum.roblox.com/t/u
 
 If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../art/marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
-<Alert severity = 'info'>
-This article covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
-</Alert>
+## General Guidelines
 
-## UGC Program Guidelines
+When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/moderation.md) and item removal.
 
-When designing and creating your assets, follow these UGC Program Guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/publishing-to-marketplace.md#moderation) and item removal.
-
-Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following UGC Program Guidelines:
+Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following program guidelines:
 
 - Follow the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). For instance, do not create items that are political, religious, gory, violent, self-harm-related, drug-related, sexual/wedding/dating-related, or items that are likely to be used for these types of roleplay. These are some examples of items that violate the Community Standards.
 - Do not use any Roblox-created assets or official [Roblox branding or iconography](https://en.help.roblox.com/hc/en-us/articles/115001708126) as part of your items.
@@ -39,7 +35,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 
 ## Avatar Body Guidelines
 
-Submissions of avatar bodies to the Marketplace must follow additional policy guidelines, along with the general [UGC Program Guidelines](#ugc-program-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+Submissions of avatar bodies to the Marketplace must follow additional policy guidelines, along with the [general guidelines](#general-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 ### Body Part Requirements
 
@@ -53,11 +49,12 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 left leg
 - Heads
   - Head (includes baked-in eyes, nose, and mouth, if applicable)
-    - All heads should have some movement capability enabled by [FACS controls](../../art/avatar/facial-animation/facs-poses-reference.md).
+    - All heads must include the 17 minimum [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).
+    - It's recommended to include more poses to increase facial animation quality and fidelity.
   - Eyebrows (optional)
   - Eyelashes (optional)
 
-Avatars must adhere to the [appropriate size requirements](../../art/avatar/specifications.md#body-types) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/avatar/specifications.md) for more information.
+Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-types) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
 
 Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
@@ -221,4 +218,4 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 
 ### Customizable Skin Tones
 
-Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/avatar/specifications.md#custom-skin-tone).
+Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/characters/specifications.md#custom-skin-tone).

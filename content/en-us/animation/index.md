@@ -23,7 +23,7 @@ When creating animations, Studio provides the following features to animate effe
 
 - Switch to the [Curve Editor](../animation/curve-editor.md) to access the curve-based animation UI and more control over your animation tracks.
 
-- Make realistic animations by posing and animating `Class.Bone|Bones` of a [rigged mesh](../art/modeling/rigging.md). You can combine this with a [skinned mesh](../art/modeling/skinning.md) to generate natural-looking character poses.
+- Make realistic animations by posing and animating `Class.Bone|Bones` of a [rigged mesh](../art/modeling/rigging.md).
 
 ## Inverse Kinematics
 

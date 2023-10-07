@@ -1,9 +1,13 @@
 ---
 title: Classic Clothing
-description: Classic clothing are decals you can apply to a character's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
+description: Classic clothing are decals you can apply to a classic character model's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
 ---
 
-Classic clothing are a type of 2D cosmetic item that you can apply to the surface of an avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
+<Alert severity="warning">
+Modern user-generated avatars do not support classic clothing.
+</Alert>
+
+Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
 
 This guide covers the process of creating a classic clothes asset using the following steps:
 

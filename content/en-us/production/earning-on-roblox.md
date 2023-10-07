@@ -160,6 +160,7 @@ Once you've developed an experience, you can earn through the following methods:
 
 #### In-Experience Purchases
 
+- [Subscriptions](./monetization/subscriptions.md) offer you the ability to earn from your experience through subscription-based offerings and business models.
 - [Developer Products](../production/monetization/developer-products.md) which are items or abilities that a user can purchase, such as in-experience currency.
 - [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private Servers](../production/monetization/private-servers.md) for users to play with just friends (subscription-based access fees).
@@ -178,7 +179,7 @@ In 2022 alone, 1.8 billion total avatar items were sold on the platform, making 
 
 Creators can [create](../art/marketplace/publishing-to-marketplace.md) and sell accessories, clothes, bodies, and heads for avatars in the [Marketplace][link_marketplace] or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
 
-After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. If you're participating in the [UGC](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) program, you can upload and sell [clothing and 3D accessories](../art/accessories/index.md) and [avatar bodies and heads](../art/avatar/index.md). It costs 750&nbsp;Robux per asset to upload for accessories and clothing.
+After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. If you're participating in the [UGC](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) program, you can upload and sell [clothing and 3D accessories](../art/accessories/index.md) and [avatar bodies and heads](../art/characters/index.md). It costs 750&nbsp;Robux per asset to upload for accessories and clothing.
 
 You receive a commission every time a user purchases your item. When community items are sold in the marketplace, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience who we refer to as an "affiliate." An affiliate earns commission for marketing another user's creations.
 
@@ -198,7 +199,7 @@ As follows is an overview of our commission structure. To learn more about fees 
 - Affiliate (Roblox) receives **40%**
 - Platform receives **30%**
 
-These commissions also apply to the original sale of [Limiteds](../art/marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../art/marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require an [upfront payment](../art/marketplace/marketplace-fees-and-commissions.md#upfront-payment) and can be [resold](../art/marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
+These commissions also apply to the original sale of [Limiteds](../art/marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../art/marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../art/marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
 </Grid>
 <Grid item xs={12} lg={5}>
 <img src="../assets/monetization/earning/Percentages-Clothes-Accessories.png" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />

@@ -196,7 +196,7 @@ SocialInteractions.setTriggerWordsForChatAnimation("rbxassetid://5911729486", {"
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -246,7 +246,7 @@ SocialInteractions.configure({
 
 #### setTriggerWordsForChatAnimation
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setTriggerWordsForChatAnimation(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWords:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTriggerWordsForChatAnimation(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWords:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Registers a new animation in the chat animation feature. Typing any word that matches a string pattern included in the `triggerWords` table will activate the animation whose ID is passed as the first parameter.
 
@@ -268,7 +268,7 @@ SocialInteractions.setTriggerWordsForChatAnimation(
 
 #### onChatAnimationPlayed
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>onChatAnimationPlayed(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWord:</InlineCode>`Library.string`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onChatAnimationPlayed(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWord:</InlineCode>`Library.string`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when a chat animation plays. The connected function receives the animation ID and the word that triggered the animation as its arguments. This event can only be connected in a `Class.LocalScript`.
 

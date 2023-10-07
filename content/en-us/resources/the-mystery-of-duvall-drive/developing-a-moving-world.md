@@ -223,7 +223,7 @@ After we had the clouds and the lightning working the way we wanted it to, we th
 We knew to really sell the effect of the wind and rain, we needed the trees themselves to move. There are a few ways you can do this within the engine, including moving parts using [plugins](../../studio/plugins.md) that are publicly available, using `Class.TweenService`, or animating models directly. For our purposes, animations gave us the ability to control the motion we wanted out of our trees, and it allowed us to use a single animation we could share among all trees within the experience.
 
 <Alert severity="warning">
-There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your experience, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the official [skinned meshes documentation](../../art/modeling/skinning.md) for the most up-to-date information.
+There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your experience, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the [rigging and skinning documentation](../../art/modeling/rigging.md) for the most up-to-date information.
 </Alert>
 
 We started by skinning several trees from the [Endorse Model Pack - Forest Assets](https://www.roblox.com/library/6432306802/Forest-Pack). Since these trees already existed, and our experience took place in the Pacific Northwest, it saved us some time early on from having to create each tree model.
@@ -233,7 +233,7 @@ We started by skinning several trees from the [Endorse Model Pack - Forest Asset
   <figcaption>The Forest pack contains several tree types, which can save you time in your own experiences.</figcaption>
 </figure>
 
-After we picked our trees, we knew we needed to skin them. **[Skinning a mesh](../../art/modeling/skinning.md)** is the act of adding joints (or bones) to a mesh in another 3D modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), then applying influence to those joints/bones to move the mesh. This is most commonly used in [humanoid characters](../../art/modeling/skinning-a-humanoid-model.md), but with [custom characters](../../art/modeling/skinning-a-simple-mesh.md), you can skin pretty much anything.
+After we picked our trees, we knew we needed to skin them. [Skinning a mesh](../../art/modeling/rigging.md) is the act of adding joints (or bones) to a mesh in another 3D modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), then applying influence to those joints/bones to move the mesh. This is most commonly used in [humanoid characters](../../art/modeling/skinning-a-humanoid-model.md), but with [custom characters](../../art/modeling/skinning-a-simple-mesh.md), you can skin pretty much anything.
 
 We knew we wanted to save time and reuse the same animation, so we built our first tree rig and made sure the joint names were generic because we wanted to use these same names in the rigs for the other trees. We also knew we needed to include primary, secondary, and tertiary joints/bones for the trunks to bend with the wind, the branches to swing, and the leaves to seem like they were shaking in response. For this process, we needed to create a **secondary motion**, which is an animation concept where any action causes other parts of the object to react to that action and appear to catch up with the initial movement.
 
@@ -263,7 +263,7 @@ To do this, we took the Beechwood tree from that Forest Pack and built a similar
   <figcaption>The Beechwood tree has the same exact naming for its joints, just not the same amount. This is fine since the animation system will only apply animation to those specific joints that match the name in it! For this reason, we could apply the same animations to anything that matched the joint names!</figcaption>
 </figure>
 
-After we [rigged](../../art/modeling/rigging.md) and [skinned](../../art/modeling/skinning.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the experience.
+After we [rig and skin](../../art/modeling/rigging.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the experience.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/redwood-tree-animation.png" width="80%" />

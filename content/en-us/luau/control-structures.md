@@ -24,13 +24,9 @@ In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from 
 if 2 + 2 == 5 then
 	print("Two plus two is five") -- Doesn't print because the condition is false
 elseif 2 + 3 == 5 then
-	print("Two plus three is five") -- Doesn't print because the condition is false
-else
-	print("What is two plus two?") -- What is two plus two?
-end
-
-if 2 + 3 == 5 then
 	print("Two plus three is five") -- Two plus three is five
+else
+	print("All conditions failed") -- Doesn't print because the previous condition is true
 end
 ```
 
@@ -165,6 +161,46 @@ end
 The generic `for` loop iterates over items in a collection rather than a sequence of numbers. With generic `for` loops, you can execute code for each item in the collection, and can easily use each item in the code.
 
 For loops need a function, or iterator, to iterate over different types of collections. The global `ipairs()` returns an iterator for arrays, and the global `pairs()` returns an iterator for dictionaries. The `Library.string` library provides `Library.string.gmatch()` to iterate over strings.
+
+### Generalized Iteration
+
+In Luau, you can iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
+
+```lua
+for i, v in {1, 2, 3, 4, 5} do
+	print(i, v)
+end
+```
+
+Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function. This contrived example iterates over an array in reverse order, from its last element to its first:
+
+```lua
+local myTable = {1, 2, 3, 4, 5}
+
+myMetatable = {
+	__iter = function(self)
+		local i = #self
+		local firstRun = true
+		return function()
+			if firstRun then
+				firstRun = false
+				return i, self[i]
+			else
+				i -= 1
+				if i > 0 then
+					return i, self[i]
+				end
+			end
+		end
+	end
+}
+
+setmetatable(myTable, myMetatable)
+
+for i, v in myTable do
+	print(i, v)
+end
+```
 
 #### Arrays
 

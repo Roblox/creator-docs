@@ -38,7 +38,7 @@ import { Emoji, Locale } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
 import {
   allowedHttpLinksTextFileFullPath,
-  checkHttpLinks,
+  checkContentLinks,
   allNonRobloxHttpLinks,
 } from './utils/links.js';
 import {
@@ -183,8 +183,8 @@ try {
       }
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
-    if (config.checkHttpLinks) {
-      checkHttpLinks({ fileName: filePathFromRepoRoot, config, content });
+    if (config.checkHttpLinks || config.checkRelativeLinks) {
+      checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
     }
     if (config.checkMarkdownLint) {
       checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });

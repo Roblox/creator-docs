@@ -221,5 +221,5 @@ end)
 ```
 
 <Alert severity="warning">
-Since a user may use a different input or controller than the device's expected default, your UI should respect the **active** input type. The example `Class.ModuleScript` handles this through `Class.UserInputService:GetLastInputType()` and `Class.UserInputService.LastInputTypeChanged` instead of simply checking whether the device has input "capability" like touch. For additional information on verifying mobile input types, see [Mobile Inputs](../input/mobile.md).
+Since a user may use a different input or controller than the device's expected default, your UI should respect the **active** input type. The example `Class.ModuleScript` handles this through `Class.UserInputService:GetLastInputType()` and `Class.UserInputService.LastInputTypeChanged` instead of simply checking whether the device has input "capability" like touch. For additional information on verifying mobile input types, see [Mobile Input](../input/mobile.md).
 </Alert>

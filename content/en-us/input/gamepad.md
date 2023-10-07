@@ -1,5 +1,5 @@
 ---
-title: Gamepad
+title: Gamepad Input
 description: Explains how to accept input from USB gamepads, such as Xbox and PlayStation controllers.
 ---
 
@@ -84,7 +84,7 @@ There are three ways to receive input from a gamepad:
 
 ### ContextActionService
 
-You can use `Class.ContextActionService` for binding controls to both gamepads and other input sources such as [mobile touchscreen buttons](../input/mobile.md#adding-mobile-buttons) or binding multiple functions to a single button input on any device. For example, use `Class.ContextActionService` to bind an OpenSpellBook action to the right trigger (R2) on a gamepad and the B key on a keyboard in one function.
+You can use `Class.ContextActionService` for binding controls to both gamepads and other input sources such as [mobile touchscreen buttons](../input/mobile.md) or binding multiple functions to a single button input on any device. For example, use `Class.ContextActionService` to bind an OpenSpellBook action to the right trigger (R2) on a gamepad and the B key on a keyboard in one function.
 
 Use the following code sample to bind an OpenSpellBook action to the gamepad's R2 button and the B key on the keyboard:
 

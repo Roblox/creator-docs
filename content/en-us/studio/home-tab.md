@@ -117,7 +117,7 @@ The **Part** button inserts a new part into the workspace. Clicking the small dr
 
 ## UI Designer
 
-The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md), and [buttons](../ui/buttons.md). For detailed information on the objects available in the UI tab, see [UI](../ui/index.md).
+The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md) and [buttons](../ui/buttons.md). For detailed information on the objects available in the UI tab, see [UI](../ui/index.md).
 
 <img src="../assets/studio/general/Home-Tab-UI.png" width="780" alt="UI button indicated in Home tab" />
 
