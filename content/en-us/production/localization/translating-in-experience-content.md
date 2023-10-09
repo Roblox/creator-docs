@@ -154,9 +154,7 @@ To add source content through the `.csv` upload:
 1. In Studio, navigate to the **Plugins** tab.
 2. In the **Localization** section, select **Tools**.
 
-   <img
-   src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png"
-   width="80%" />
+   <img src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="800" alt="Localization tools button indicated in Plugins tab" />
 
 3. In the **Cloud Localization Table** section, select **Download** to save the `.csv`.
 4. Open the `.csv` in your preferred spreadsheet editor.
@@ -268,9 +266,7 @@ To translate text through the .csv:
 1. In Studio, navigate to the **Plugins** tab.
 2. In the Localization section, select **Tools**.
 
-   <img
-   src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png"
-   width="80%" />
+   <img src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="800" alt="Localization tools button indicated in Plugins tab" />
 
 3. In the **Cloud Localization Table** section, select **Download** to save the .csv.
 4. Open the `.csv` in your preferred spreadsheet editor.
