@@ -10,6 +10,8 @@ navigation:
   - title: Coding Fundamentals
     path: /tutorials/fundamentals/coding-1/coding-fundamentals
     navigation: /engine/tutorials-fundamentals.yaml
+  - title: Documentation Assistant
+    path: /assistant/guide
     #section:
     #  - title: Setting Up Roblox Studio
     #    path: /docs/getting-started/setting-up-roblox-studio

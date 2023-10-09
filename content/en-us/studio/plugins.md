@@ -3,7 +3,7 @@ title: Plugins
 description: Plugins are extensions to Studio that you can create to add custom features.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can either [find](../production/publishing/creator-marketplace.md#finding-assets), install, and [manage](#managing-plugins) community-made plugins from the Creator Marketplace, or you can [create](#creating-new-plugins) and [publish](#publishing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Marketplace for creators to use within their own development processes, you can either offer them for free or sell them for [Robux](../production/monetization/index.md).
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-marketplace.md#finding-assets) community-made plugins from the Creator Marketplace, or you can [create](#creating-new-plugins) and [publish](#publishing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Marketplace, you can either offer them for free or sell them for [Robux](../production/monetization/index.md).
 
 ## Creating New Plugins
 
@@ -17,7 +17,7 @@ local Selection = game:GetService("Selection")
 local toolbar = plugin:CreateToolbar("Custom Script Tools")
 
 -- Add a toolbar button named "Create Empty Script"
-local newScriptButton = toolbar:CreateButton("Create Empty Script", "Create an empty script", "rbxassetid://4458901886")
+local newScriptButton = toolbar:CreateButton("Create Empty Script", "Create an empty script", "rbxassetid://14978048121")
 
 -- Make button clickable even if 3D viewport is hidden
 newScriptButton.ClickableWhenViewportHidden = true
@@ -54,15 +54,15 @@ Plugins start from scripts. To create a plugin, create a `Class.Script` and save
 
 To add a button for your plugin to the **Plugins** tab of the Studio toolbar, use the `Class.Plugin:CreateToolbar()` and `Class.PluginToolbar:CreateButton()` methods. In the code for **EmptyScriptAdder**, line 5 creates a new section in the toolbar named **Custom Script Tools** and line 8 creates a button named **Create Empty Script**.
 
-   <img src="../assets/studio/plugins/Plugin-Toolbar-Button.png" width="80%" />
+   <img src="../assets/studio/plugins/Plugin-Toolbar-Button.png" width="800" alt="New plugin button added to toolbar in Studio" />
 
 ### Executing Code on Click
 
-To make the plugin execute code when a user clicks the toolbar button, connect a function to the button's `Class.PluginToolbarButton.Click` event. In the code for **EmptyScriptAdder**, the connecting function is `onNewScriptButtonClicked`.
+To make the plugin execute code when a user clicks the toolbar button, connect a function to the button's `Class.PluginToolbarButton.Click` event. In the code for **EmptyScriptAdder**, the connecting function is `onNewScriptButtonClicked()`.
 
-#### Checking User Selection
+### Checking User Selection
 
-To modify a plugin's behavior based on what the user has selected, use the `Class.Selection` service. The `onNewScriptButtonClicked` function checks if the user has anything selected and creates the new script as its child instead of inside `Class.ServerScriptService`. If the user doesn't have anything selected, it creates the new script in `Class.ServerScriptService`.
+To modify a plugin's behavior based on what the user has selected, use the `Class.Selection` service. The `onNewScriptButtonClicked()` function checks if the user has anything selected and creates the new script as its child instead of inside `Class.ServerScriptService`. If the user doesn't have anything selected, it creates the new script in `Class.ServerScriptService`.
 
 <img src="../assets/studio/plugins/Plugin-Inserted-Script.png" width="320" />
 
@@ -139,21 +139,3 @@ To publish a plugin:
    <Alert severity="info">
    If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md#inventory). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
    </Alert>
-
-## Managing Plugins
-
-To manage a plugin after you install it:
-
-1. Click the **Manage Plugins** button in the **Plugins** tab to open the **Plugins Management** window.
-
-   <img src="../assets/studio/general/Plugins-Tab-Manage-Plugins.png" width="80%" />
-
-2. For the plugin you want to manage, use the following options.
-
-   <img src="../assets/studio/plugins/Plugin-Management.png" width="100%" />
-
-   <ol type="A">
-   <li><b>Update</b> &ndash; Update the plugin to its latest published version. If this button isn't visible, the plugin is up-to-date.</li>
-   <li><b>Active</b> &ndash; Toggles whether the plugin is active or not.</li>
-   <li><b>Details</b> / <b>Uninstall</b> &ndash; Opens a menu to view the plugin's details or uninstall it.</li>
-   </ol>
