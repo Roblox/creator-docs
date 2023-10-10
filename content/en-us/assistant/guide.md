@@ -1,8 +1,12 @@
 ---
-title: Documentation Assistant
+title: Assistant for Documentation
 description: How to use the Documentation Assistant to help you build, grow, and monetize your creations.
 ---
-The Documentation Assistant is an AI assistant to help you build, grow, and monetize your creations by utilizing Roblox documentation. The Assistant is trained on the official Roblox documentation and designed to answer three categories of questions:
+<Alert severity="warning">
+The Assistant for Documentation is in beta. You may not have access yet. Additional Assistant capabilities are in development.
+</Alert>
+
+The Assistant for Documentation is an AI assistant to help you build, grow, and monetize your creations by utilizing Roblox documentation. The Assistant is trained on the official Roblox documentation and designed to answer three categories of questions:
 
 - **Build**: Answers questions about creating an experience in Roblox Studio. To learn more about building an experience on Roblox, see [Creation Overview](/creation).
 - **Grow**: Answers questions about improving an existing experience by leveraging its analytics. To learn more about leveraging your experience's analytics, see [Analytics](../production/analytics/).
