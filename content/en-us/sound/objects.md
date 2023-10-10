@@ -274,7 +274,7 @@ end
 
 ### Playing Interface Audio
 
-You can play interface audio for `Class.GuiObject|GuiObjects`, such as [buttons](../ui/buttons.md#buttons) and [labels](../ui/labels.md), by hooking up a `Class.Sound` object to the `Activated` event listener of the `Class.GuiObject`. This lets you provide auditory feedback to users, such as when they hover over a `Class.GuiObject` or select it.
+You can play interface audio for `Class.GuiObject|GuiObjects`, such as [buttons](../ui/buttons.md) and [labels](../ui/labels.md), by hooking up a `Class.Sound` object to the `Activated` event listener of the `Class.GuiObject`. This lets you provide auditory feedback to users, such as when they hover over a `Class.GuiObject` or select it.
 
 To play a `Class.Sound` object's audio when a user activates a `Class.GuiObject`:
 

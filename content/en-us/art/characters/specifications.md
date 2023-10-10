@@ -21,11 +21,29 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 
 Roblox supports 3 standards of body types: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body type is the same, each body type has a unique maximum total body size, as well as a range for each body asset.
 
+<center>
+<figure>
+   <img src="../../assets/art/Body-Scale-Diagram.png" width = "60%"/>
+<figcaption>
+A visualization of how Roblox combines the 15 body parts into 5 distinct assets.
+</figcaption>
+</figure>
+</center>
+
 <Alert severity='warning'>
 Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body type to ensure a standard avatar size and scale.
 </Alert>
 
 #### Normal
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width = "60%"/>
+<figcaption>
+A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
 
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body type.
 
@@ -126,6 +144,15 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
 
 #### Slender
 
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width = "60%"/>
+<figcaption>
+A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
+
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body type.
 
 <br />
@@ -224,6 +251,15 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
 </GridContainer>
 
 #### Classic
+
+<center>
+<figure>
+   <img src="../../assets/art/resources/Body-Scale-Classic.png" width = "60%"/>
+<figcaption>
+A Classic body scale [downloadable mannequin](../../avatar/resources.md#references).
+</figcaption>
+</figure>
+</center>
 
 In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body type.
 
@@ -428,40 +464,40 @@ Each attachments must also follow a specific naming convention and positional co
   <tr>
     <td rowspan="4">Head</td>
     <td>FaceCenter_Att</td>
-    <td>Front of mesh</td>
+    <td>Anywhere within mesh bounding box</td>
   </tr>
   <tr>
     <td>FaceFront_Att</td>
-    <td>Top of mesh</td>
+    <td>Front half of mesh bounding box</td>
   </tr>
   <tr>
     <td>Hat_Att</td>
-    <td>Top of mesh, can overlap with Hair_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hair_Att</td>
   </tr>
   <tr>
     <td>Hair_Att</td>
-    <td>Top of mesh, can overlap with Hat_Att</td>
+    <td>Top half of mesh bounding box, can overlap with Hat_Att</td>
   </tr>
   <tr>
     <td rowspan="5">UpperTorso</td>
     <td>LeftCollar_Att</td>
-    <td>Left top of mesh</td>
+    <td>Left top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>RightCollar_Att</td>
-    <td>Right top of mesh</td>
+    <td>Right top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>Neck_Att</td>
-    <td>Upper front of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>BodyBack_Att</td>
-    <td>Back of mesh</td>
+    <td>Back half of mesh bounding box</td>
   </tr>
   <tr>
     <td>BodyFront_Att</td>
-    <td>Front of mesh</td>
+    <td>Front half of mesh bounding box</td>
   </tr>
   <tr>
     <td rowspan="4">LowerTorso</td>
@@ -470,45 +506,45 @@ Each attachments must also follow a specific naming convention and positional co
   </tr>
   <tr>
     <td>WaistFront_Att</td>
-    <td>Front of mesh, can overlap with WaistCenter_Att</td>
+    <td>Front half of mesh bounding box, can overlap with WaistCenter_Att</td>
   </tr>
   <tr>
     <td>WaistBack_Att</td>
-    <td>Back of mesh</td>
+    <td>Back half of mesh bounding box</td>
   </tr>
   <tr>
     <td>WaistCenter_Att</td>
-    <td>Front of mesh, can overlap with WaistFront_Att</td>
+    <td>Anywhere in mesh bounding box, can overlap with WaistFront_Att</td>
   </tr>
   <tr>
     <td>RightUpperArm</td>
     <td>RightShoulder_Att</td>
-    <td>Top of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>RightHand</td>
     <td>RightGrip_Att</td>
-    <td>Must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box, must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
   </tr>
   <tr>
     <td>LeftUpperArm</td>
     <td>LeftShoulder_Att</td>
-    <td>Top of mesh</td>
+    <td>Top half of mesh bounding box</td>
   </tr>
   <tr>
     <td>LeftHand</td>
     <td>LeftGrip_Att</td>
-    <td>Must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box, must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
   </tr>
   <tr>
     <td>RightFoot</td>
     <td>RightFoot_Att</td>
-    <td>Anywhere in mesh</td>
+    <td>Anywhere in mesh bounding box</td>
   </tr>
   <tr>
     <td>LeftFoot</td>
     <td>LeftFoot_Att</td>
-    <td>Anywhere in mesh</td>
+    <td>Anywhere in mesh bounding box</td>
   </tr>
 </tbody>
 </table>
@@ -573,6 +609,30 @@ See the following requirements for skinning:
 - **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
 - **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
+
+## Facial Animations
+
+Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md) to support avatar chat:
+
+- EyesLookDown
+- EyesLookLeft
+- EyesLookRight
+- EyesLookUp
+- JawDrop
+- LeftEyeClosed
+- LeftLipCornerPuller
+- LeftLipStretcher
+- LeftLowerLipDepressor
+- LeftUpperLipRaiser
+- LipsTogether
+- Pucker
+- RightEyeClosed
+- RightLipCornerPuller
+- RightLipStretcher
+- RightLowerLipDepressor
+- RightUpperLipRaiser
+
+While the 17 poses are a minimum requirement, it's recommended to include as many facial poses as possible in your asset to improve expressiveness and facial animation fidelity for facial animation and avatar chat.
 
 ## Textures
 

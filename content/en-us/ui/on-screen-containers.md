@@ -8,9 +8,10 @@ description: On-screen UI containers hold GuiObjects that you want to display on
 that you want to display on a user's screen. All on-screen UI objects and code
 are stored and changed on the client.
 
+<figure>
 <img src="../assets/ui/container-frames/Frame-Example.jpg" width="80%" />
-
-This example screen has a ScreenGui with a [frame](./frames.md) container that holds a `Class.TextLabel`, `Class.TextBox` input field, and [ImageButton](../ui/buttons.md).
+<figcaption>This example screen has a `Class.ScreenGui` with a [Frame](../ui/frames.md) container that holds a [Label](../ui/labels.md) (`Class.TextLabel`), [Text Input](../ui/text-input.md) field (`Class.TextBox`), and [Button](../ui/buttons.md) (`Class.ImageButton`).</figcaption>
+</figure>
 
 <Alert severity="info">
     For UI container objects that hold `Class.GuiObject|GuiObjects` that you want to display within an experience, such as on the face of a part, see <a href="../ui/in-experience-containers.md">In-Experience UI Containers</a>.

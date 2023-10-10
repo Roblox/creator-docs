@@ -29,6 +29,102 @@ Learn how to create assets with structured tutorials that walks through each cre
   </BaseAccordion>
 
 <br /> <br />
+
+<Card>
+<CardContent>
+
+<h2 style={{marginBottom: 12}}>Rigid Accessories</h2>
+
+<Typography variant="body2" color="textSecondary" component="p">
+Using a provided reference asset, this tutorial covers each process in the workflow to successfully convert a mesh object in Blender to a publishable accessory item in Studio.
+</Typography>
+
+<>
+<Grid
+    alignItems="stretch"
+    container
+    direction="row">
+
+<Grid item md={6} xs={12}
+    direction="column"  >
+
+<div class="container"
+style={{position: "relative"}}>
+<img src="../assets/art/accessories/creating-rigid/Studio-Mask-Preview.png" width = "90%"/>
+</div>
+
+</Grid>
+
+<Grid item md={6} xs={12} direction='column'>
+
+<>
+<Stepper activeStep={6} orientation="vertical">
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Set up your custom asset in Blender.">
+
+<h5 style={{marginTop: 36}}>Model</h5>
+</StepLabel>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel
+ optional="Connect your asset with PBR textures.">
+
+<h5 style={{marginTop: 36}}>Texture</h5>
+</StepLabel>
+</Step>
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Clean up and export your model." >
+<h5 style={{marginTop: 36}}>Export from Blender</h5>
+</StepLabel>
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Use the 3D Importer to bring in your custom asset.">
+
+<h5 style={{marginTop: 36}}>Import into Studio</h5>
+</StepLabel>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Use the Accessory Fitting Tool to create the accessory.">
+
+<h5 style={{marginTop: 36}}>Fit and Convert</h5>
+</StepLabel>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Upload and publish your accessory to the Marketplace">
+
+<h5 style={{marginTop: 36}}>Publish</h5>
+</StepLabel>
+
+</Step>
+
+</Stepper>
+</>
+
+</Grid>
+
+</Grid>
+</>
+
+<a href="../art/accessories/creating-rigid">
+  <Button
+    variant="contained"
+    size="large">
+  Start creating
+  </Button>
+</a>
+</CardContent>
+
+</Card>
+
+<br /><br />
 <Card>
 <CardContent>
 

@@ -610,7 +610,3 @@ Consider the following best practices for using `Class.PathfindingService` in st
 - A common approach in pathfinding is to use the coordinates of existing objects for [computation](#computing-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
 
       To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.
-
-      <Alert severity="error">
-      Persistent models are intended for very rare circumstances and overuse may negatively impact performance. If using the approach outlined above, be cautious about how many models you set as persistent for pathfinding purposes.
-      </Alert>

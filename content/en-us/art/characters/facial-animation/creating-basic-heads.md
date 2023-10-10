@@ -306,7 +306,7 @@ To create custom bone shapes for easier control bone access:
 
 **Posing** is the process of manipulating the bones of your head mesh into a specific position per animation frame. After the model's head has been rigged, you can begin the process of saving poses to the timeline. This data enables Studio to access each facial movement and animate or blend facial poses to create dynamic expressions.
 
-When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../art/characters/facial-animation/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with a [animatable head](../../../art/characters/facial-animation/using-heads-in-studio.md) with a `Class.FaceControls` instance.
+When posing the bones of your character's head mesh to new positions, follow the [Facial Action Coding System](../../../art/characters/facial-animation/facs-poses-reference.md) (FACS) as a reference for your facial expression poses. FACS is a comprehensive, anatomically-based system for describing all visually discernible facial movement, and it allows for all facial animations to be shareable between characters. This means that once you create a facial animation, you can reuse it for any character with an [animatable head](../../../art/characters/facial-animation/using-heads-in-studio.md) with a `Class.FaceControls` instance.
 
 Each frame within your modeling software's animation timeline can contain one unique FACS pose, so when you want to create multiple FACS poses, you must save each FACS pose to a different frame. You must also include a frame with your character having a neutral face with the face controllers and bones set to their default values. This ensures that Studio can calculate the bone position differences between your character's neutral expression and each FACS pose. For this reason, set Frame 0 as your character's neutral expression, and save FACS poses starting at Frame 1.
 
@@ -314,6 +314,10 @@ The following image is an example of Blender's animation timeline with 5 frames.
 <img src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/Animation-Timeline.png" width="70%" />
 
 There are [50 base poses](./facs-poses-reference.md) that you can use in Roblox to portray a wide range of face emotions for your characters. When you are deciding which poses you need, remember that FACS pose names are always based on the orientation of the character, not the camera. For example, `LeftEyeClosed` closes the character's left eye, which is to the right of the camera view.
+
+<Alert severity = 'warning'>
+If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](./facs-poses-reference.md).
+</Alert>
 
 You might not require all 50 base poses for your character. For example, a simple robot that opens its mouth and blinks can just have `JawDrop`, `LeftEyeClosed`, and `RightEyeClosed`. Therefore, the more expressive you want your character to be, the more FACS poses you need to include in your animation timeline. It's recommended to save the base poses that you intend to use with your head in alphabetical order, then use any frames afterwards for [combination poses](#combination-poses).
 
@@ -384,6 +388,10 @@ On import, Studio calculates and stores the corrective difference for combinatio
 ## Mapping
 
 After you finish posing each FACS pose that your character needs, you must map, or link, **each animation frame that you pose** to its corresponding FACS base or combination pose name. Mapping stores the bone positions and translations within the head `Class.MeshPart`, and when you begin to animate your head within the [Animation Editor](../../../animation/editor.md), the `Class.FaceControls` instance uses this stored data to transform your character's facial features to the applicable FACS pose.
+
+<Alert severity = 'warning'>
+If you intend to sell your character head to the Marketplace, you must include the minimum 17 base [FACS poses](./facs-poses-reference.md).
+</Alert>
 
 Aside from mapping each pose to its proper pose name, you also need to map the [RootFaceJoint](#rootfacejoint) so that Studio can properly locate that joint and hide all of the children joints and their bones within the `Class.FaceControls` instance on import.
 

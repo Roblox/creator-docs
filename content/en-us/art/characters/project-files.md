@@ -37,6 +37,30 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" download>Goblin.fbx</a></td>
     <td>A Goblin character model with an [animatable head](../../art/characters/facial-animation/index.md) and a full body cage.</td>
   </tr>
+    <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
+    <td>A [Classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" download>ClassicMannequin_With-Cages</a></td>
+    <td>A [Classic](../../art/characters/specifications.md#classic) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin.fbx" download>RthroMannequin.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin_With-Cages.fbx" download>RthroMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing designto use in Studio or your modeling application. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin.fbx" download>RthroSlenderMannequin.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin_With-Cages.fbx" download>RthroSlenderMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin with **body cages** to use in Studio or your modeling application to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
 </tbody>
 </table>
   </TabItem>
@@ -123,6 +147,10 @@ If you are creating character models, you can choose from a variety of starting 
 
 Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that template model. If using Blender or following the [template creation guides](../../art/characters/creating/index.md), use the `.blend` project.
 
+<Alert severity = 'warning'>
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/cleanup.md) in order for the assets to properly validate before publishing to the Marketplace.
+</Alert>
+
 <Tabs>
   <TabItem label="Head Shapes">
   <GridContainer numColumns="2">
@@ -186,7 +214,3 @@ Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that t
   </GridContainer>
   </TabItem>
 </Tabs>
-
-<Alert severity = 'info'>
-See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
-</Alert>

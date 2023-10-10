@@ -3,10 +3,14 @@ title: Monetization
 description: Monetization is a part of Roblox's overall structure to provide value to creators.
 ---
 
-Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), and offering [private servers](#private-servers) for users to play just with friends.
+Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), and offering [private servers](#private-servers) for users to play just with friends.
+
+If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
+
+<br />
 
 <Alert severity="info">
-  If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
+For an in-depth look at designing optimal monetization strategies for your experience, see [Monetization Foundations](../../production/game-design/monetization-foundations.md).
 </Alert>
 
 ## Monetization Strategies
@@ -28,6 +32,8 @@ It can be helpful to think of Roblox users in two categories:
 - **Tourists** typically hop from one experience to another, prioritizing variety over depth. They prefer items with immediate effects, either through making gameplay more fun or through making them stand out, inviting other users to question how and where they got the item.
 - **Locals** are more likely to focus on a particular experience or smaller set of experiences. They engage more deeply, and typically form almost all an experience's engaged user base. They are more interested in items with long term benefits, such as a '[battle pass](../../production/game-design/season-pass-design.md)'.
 
+To learn more about how to design your experience with Roblox users in mind, see: [Designing for Roblox](../../production/game-design/designing-for-roblox.md).
+
 ### Social Features
 
 Roblox users tend to enjoy experiences which emphasize social interaction. For instance, having items or events that are only available for a **limited time** can create excitement around that content. A **trading** system encourages users to interact. While both systems can be successful on their own, they are particularly effective when combined.
@@ -41,6 +47,8 @@ Post-launch support is in many ways easier on Roblox than on other platforms as 
 When designing updates, keep them focused on a particular **theme**. This makes it easier for users to understand the new update and tell what content is new when they join. It also helps you coordinate your content and promotional assets. For example, if you're adding a new Zoo to your roleplaying experience, make sure all new content has some connection to the Zoo theme.
 
 Don't be afraid to make users earn their **access** to new content. New users will flock to play new updates, but if they don't feel like they've **achieved** something in the experience, they may check out soon after. You can create a sense of earning an update either through monetizing the update content or creating pre-requisite conditions for playing the new content.
+
+To learn more about how to design effective post-launch support for your experience, see [Live Ops Essentials](../../production/game-design/liveops-essentials.md).
 
 ## Products
 
