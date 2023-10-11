@@ -44,7 +44,15 @@ If you intend to sell the asset on the Marketplace, use the following steps to b
    </TabItem>
    </Tabs>
 
-Once moderation passes, update your asset to set your Marketplace settings and set your asset on sale. See [Updating a Marketplace Asset](../../../art/marketplace/publishing-to-marketplace.md#updating-an-asset) for specific details and instructions and each type of sale option and setting.
+7. After your accessory clears moderation, enable the **On Sale** toggle and configure your Marketplace settings.
+   1. For more information on each Marketplace setting, see [Updating a Marketplace Asset](../../../art/marketplace/publishing-to-marketplace.md#updating-an-asset).
+8. Select **Publish** to set your item on sale.
+9. To get a link to your Marketplace listing, navigate to your Creations page and select **Copy URL** from your item.
+   <img src="../../../assets/art/accessories/creating-rigid/Copy-Marketplace-URL.png" />
+
+You now have your accessory added to the Marketplace catalog! Use the your item's Marketplace link to view your listing at any time, or to send to your friends and followers for additional engagement.
+
+<img src="../../../assets/art/accessories/creating-rigid/Marketplace-Listing.png" />
 
 <Alert severity = 'info'>
 See the following resources for additional Marketplace policy and related information:
