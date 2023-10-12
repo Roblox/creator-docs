@@ -2,11 +2,11 @@
 title: Roblox Avatars
 description: Create and upload avatar characters, clothing, and accessories to the Roblox Marketplace.
 hideBreadcrumbs: true
-banner:
-  title: Avatar
-  subtitle: Create and sell avatar items.
-  backgroundUrl: ../../assets/accessories/Layered-Clothing-Banner2.png
 ---
+
+<img src="../assets/accessories/Layered-Clothing-Banner2.png" alt="Roblox avatars" width="100%" />
+
+**Create and sell avatar items.**
 
 Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with [experiences](../platform.md) and customize themselves with a wide range of clothing and accessories from the [Marketplace](https://www.roblox.com/catalog). Currently, only creators participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can upload and sell items on the Marketplace.
 

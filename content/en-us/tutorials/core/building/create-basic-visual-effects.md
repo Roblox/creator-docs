@@ -23,7 +23,7 @@ particles that add texture to the atmosphere.
 ## Create a Flare
 
 The first type of particle emitter the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) uses to add dynamic movement to the
-experinece is a giant flare at the top of the tallest sea stack platform. As the rest of the environment
+experience is a giant flare at the top of the tallest sea stack platform. As the rest of the environment
 is static, this effect becomes a focal point in the 3D space, which incentizes players to progress through the environment
 so that they can reach the final platform of the experience.
 
@@ -34,7 +34,6 @@ To create a flare:
    <table>
       <thead>
       <tr>
-      <th>Name</th>
       <th>Size</th>
       <th>CFrame.Position</th>
       <th>CFrame.Orientation</th>
@@ -42,7 +41,6 @@ To create a flare:
       </thead>
       <tbody>
       <tr>
-      <td>VFX_Flare</td>
       <td>`20, 20, 20`</td>
       <td>`400, 331, 79`</td>
       <td>`0, 0, 0`</td>
@@ -50,13 +48,13 @@ To create a flare:
       </tbody>
    </table>
 1. Select this block part, then in the **Properties** window,
-   1. Set **Name** to **Emitter_Flare**.
+   1. Set **Name** to **VFX_Flare**.
    1. Set **Transparency** to **1** so the part is invisible.
    1. Enable **Anchored** so the physics system doesn't move the part when the experience starts.
 1. Add an attachment to this part.
    1. In the **Explorer** window, hover over the block part and click the **⊕** button. A contextual menu displays.
    1. From the contextual menu, insert an **Attachment**. An attachment displays in the center of the part in the direction of the positive Y axis.
-1. Add a particle emitter to this attachment. The particle emitter immediately emits particles in the direction of the attachment.
+1. Add a particle emitter to this attachment, and rename the particle emitter to **Emitter_Flare**. The particle emitter immediately emits particles in the direction of the attachment.
 
 <video controls src="../../../assets/tutorials/core-building-and-scripting/Flare-1.mp4" width="80%"></video>
 
@@ -130,7 +128,7 @@ To ensure the flare stands out more, you can put a light into it. There are thre
 
 A `Class.PointLight` is best for this to emit light spherically from the part at the position of the particle effect. To create a light source in the part:
 
-1. Add a **PointLight** to **VFX_Flare**.
+1. Add a **PointLight** to **Emitter_Flare**.
 1. Select the **PointLight** object, then in the **Properties** window,
    1. Set **Brightness** to **2** to make the light brighter.
    1. Set **Range** to **36** to increase the light's range.
@@ -148,7 +146,6 @@ To create dust particles:
    <table>
    <thead>
    <tr>
-   <th>Name</th>
    <th>Size</th>
    <th>CFrame.Position</th>
    <th>CFrame.Orientation</th>
@@ -156,7 +153,6 @@ To create dust particles:
    </thead>
    <tbody>
    <tr>
-   <td>VFX_DustMotes</td>
    <td>`645, 355, 275`</td>
    <td>`198, 168, 26`</td>
    <td>`0, 0, 0`</td>
@@ -165,13 +161,12 @@ To create dust particles:
    </table>
 
 1. Select this block part, then in the **Properties** window,
-
-   1. Set **Name** to **Emitter_DustMotes**.
+   1. Set **Name** to **VFX_DustMotes**.
    1. Set **Transparency** to **1** so the part is invisible.
    1. Disable **CanCollide** so players don't collide with the part as they move through the playable area.
    1. Enable **Anchored** so the physics system doesn't move the part when the experience starts.
 
-1. Add a particle emitter to this part. The particle emitter immediately emits particles within the part's area.
+1. Add a particle emitter to this part, then rename the particle emitter to **Emitter_DustMotes**. The particle emitter immediately emits particles within the part's area.
 
 <video controls src="../../../assets/tutorials/core-building-and-scripting/DustParticles-1.mp4" width="80%"></video>
 
