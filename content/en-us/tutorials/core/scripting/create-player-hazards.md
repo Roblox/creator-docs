@@ -99,14 +99,11 @@ bottom of the script:
 
 ```lua
 local function onPlayerAdded(player)
-	-- Check if the player already has coins
-	local currentCoins = PlayerData.getValue(player, COIN_KEY_NAME)
-	if currentCoins == nil or currentCoins == 0 then
-		-- Reset player coins to 0 if they don't have any coins
-		updatePlayerCoins(player, function(_)
-			return 0
-		end)
-	end
+  -- Reset player coins to 0
+  updatePlayerCoins(player, function(_)
+    return 0
+  end)
+
   player.CharacterAdded:Connect(function(character)
     -- WaitForChild would stop the player loop, so below should be done in a separate thread
     task.spawn(function()
@@ -156,6 +153,7 @@ lifecycle events:
   can execute.
 - `Class.Player.PlayerRemoved` fires when a player leaves the experience to
   clean up player state.
+- In the current setup, there is a potential issue if a player collects coins before the `Players.PlayerAdded` event is executed or before the `for loop` executes. In such cases, the player's coin count could be reset to zero upon character creation.To mitigate this issue, consider implementing more advanced techniques, such as freezing the player's character until the necessary initialization is complete, or using code scheduling to ensure a seamless experience. However, these solutions involve more complex scripting concepts and are beyond the scope of this beginner's tutorial.
 
 </AccordionDetails>
 </BaseAccordion>
