@@ -7,6 +7,10 @@ hideBreadcrumbs: true
 
 ## Templates
 
+<Alert severity = 'warning'>
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/cleanup.md) in order for the assets to properly validate before publishing to the Marketplace.
+</Alert>
+
 <Grid container style={{margin: -6}}>
 <Grid item xs={12} md={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
@@ -258,6 +262,69 @@ Template file containing all content from previous templates, includes rig skele
 <Card style={{height: '100%'}}>
 <CardContent>
 
+<center>Classic Mannequin</center>
+<figure>
+<center> <img src="../assets/art/resources/Body-Scale-Classic.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Classic](../art/characters/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/ClassicMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Rthro Mannequin</center>
+<figure>
+<center> <img src="../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Rthro Normal](../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/RthroMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../assets/art/reference-files/RthroMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Rthro Slender Mannequin</center>
+<figure>
+<center> <img src="../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" /> </center>
+</figure>
+<figure>
+A blank mannequin using Roblox's [Rthro Slender](../art/characters/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
+</figure>
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/RthroSlenderMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
+
+<Button href="../assets/art/reference-files/RthroSlenderMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
 <center>Fish Person</center>
 <figure>
 <center> <img src="../assets/art/resources/Fish-Person-Resource.png" width="100%" /> </center>
@@ -349,7 +416,7 @@ A skinned R15 character created from the <a href="../art/modeling/skinning-a-hum
 <center> <img src="../assets/art/resources/Tshirt-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-Uncaged example clothing from [Creating Layered Clothing](../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.
+Uncaged example clothing ready for caging in a 3D modeling software.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -439,7 +506,7 @@ Blender add-on for checking skinning data on characters and clothing.
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../assets/modeling/skinned-meshes/calisthenic-tool/CalisthenicsTool.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0"}}>Link to Instructions</Button>
+<Button href="../art/modeling/calisthenics-tool.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0"}}>Link to Instructions</Button>
 </CardActions>
 
 </Card>

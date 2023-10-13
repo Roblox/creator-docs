@@ -75,7 +75,7 @@ navigation:
   - title: Studio Shortcuts
     path: /studio/shortcuts
   - heading: Plugins
-  - title: Overview
+  - title: Creating and Publishing
     path: /studio/plugins
   - title: Building Studio Widgets
     path: /studio/building-studio-widgets

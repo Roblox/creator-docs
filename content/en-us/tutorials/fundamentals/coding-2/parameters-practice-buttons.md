@@ -54,7 +54,7 @@ Try to figure it out yourself before looking at the code solution.
 Code Solution
 Below is one possible code solution
 
-```Lua
+```lua
 -- Insert this script into button
 -- Turns the button green when something touches the button.
 

@@ -7,7 +7,7 @@ You can import character models with animatable heads into Studio and use the au
 
 To set up heads with facial animation in your experience:
 
-1. [Import a model with an animatable head](#importing-heads). You can either create your own or use one of the provided reference model files.
+1. [Import a model with an animatable head](../../../art/characters/testing/studio.md#importing). You can either create your own or use one of the provided reference model files.
 2. (Optional) [Import face accessories](#importing-face-accessories) you want to deform with the facial expressions of your head. You can either create your own or use one of the provided reference accessory files.
 3. [Animate the head](#animating-heads) in the Animation Editor by either adding in individual animation tracks, or by using the Face Animation Editor.
 
@@ -43,36 +43,6 @@ If you want to experiment with pre-made heads before [making your own](../../../
     </tr>
   </tbody>
 </table>
-
-## Importing Heads
-
-You can import any model with a head from a `.fbx` file into Studio. If you would like to include face accessories such as a beard or mustache, you must import and equip the face accessories separately.
-
-<Alert severity="warning">
-At this time, use the **Avatar Importer** for importing models with facial animation data.
-</Alert>
-
-To import a head into your experience:
-
-1. In the menu bar, navigate to the **Plugins** tab and click **Avatar Importer**.
-
-   <img src="../../../assets/studio/general/Plugins-Tab-Avatar-Importer.png" width="80%" />
-
-2. Select the type of avatar you want to import to use your head. If you're unsure, select **Rthro**. A file browser displays.
-
-   <img src="../../../assets/avatar/dynamic-heads/using-dynamic-heads-in-studio/Avatar-Importer-Picker-Rthro.jpg" width="70%" />
-
-3. Select your head **.fbx** file, then click the **Open** button. A popup warning displays with a warning that you may not be importing an Rthro character.
-
-   <img src="../../../assets/avatar/dynamic-heads/using-dynamic-heads-in-studio/Importing-Popup.png" width="70%" />
-
-4. Select **Continue as Rthro**. The character displays in your workspace, and the [Output window](../../../studio/output.md) prints all upload details.
-
-   <img src="../../../assets/avatar/dynamic-heads/using-dynamic-heads-in-studio/Importing-Dynamic-Head-Final-Result.jpg" width="80%" />
-
-   <Alert severity="warning">
-   If you are importing your own head model and an error or warning message displays in the Output window, see <a href="#troubleshooting">Troubleshooting</a> for guidance on how to handle your specific error or warning message.
-   </Alert>
 
 ## Importing Face Accessories
 

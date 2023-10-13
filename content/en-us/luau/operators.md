@@ -225,6 +225,15 @@ Lua supports the usual binary operators along with exponentiation, modulus, and 
     <td><InlineCode>__div</InlineCode></td>
   </tr>
   <tr>
+    <td><InlineCode>//</InlineCode></td>
+    <td>Floor Division</td>
+    <td>
+      <InlineCode>10 // 4 = 2</InlineCode><br />
+      <InlineCode>-10 // 4 = -3</InlineCode>
+    </td>
+    <td><InlineCode>__idiv</InlineCode></td>
+  </tr>
+  <tr>
     <td><InlineCode>^</InlineCode></td>
     <td>Exponentiation</td>
     <td><InlineCode>2 ^ 4 = 16</InlineCode></td>
@@ -253,58 +262,64 @@ The operation in a compound assignment occurs once. For example, if an expressio
 In the following examples, suppose `local x = 3`.
 
 <table>
-	<thead>
-		<tr>
-			<th>Operator</th>
-			<th>Operation</th>
-			<th>Example</th>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Example</th>
       <th>New Value of <InlineCode>x</InlineCode></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><InlineCode>+=</InlineCode></td>
-			<td>Addition</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><InlineCode>+=</InlineCode></td>
+      <td>Addition</td>
       <td><InlineCode>x += 2</InlineCode></td>
       <td><InlineCode>5</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>-=</InlineCode></td>
-			<td>Subtraction</td>
+    </tr>
+    <tr>
+      <td><InlineCode>-=</InlineCode></td>
+      <td>Subtraction</td>
       <td><InlineCode>x -= 2</InlineCode></td>
       <td><InlineCode>1</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>*=</InlineCode></td>
-			<td>Multiplication</td>
+    </tr>
+    <tr>
+      <td><InlineCode>*=</InlineCode></td>
+      <td>Multiplication</td>
       <td><InlineCode>x *= 2</InlineCode></td>
       <td><InlineCode>6</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>/=</InlineCode></td>
-			<td>Division</td>
+    </tr>
+    <tr>
+      <td><InlineCode>/=</InlineCode></td>
+      <td>Division</td>
       <td><InlineCode>x /= 2</InlineCode></td>
       <td><InlineCode>1.5</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>%=</InlineCode></td>
-			<td>Modulus</td>
+    </tr>
+    <tr>
+      <td><InlineCode>//=</InlineCode></td>
+      <td>Floor Division</td>
+      <td><InlineCode>x //= 2</InlineCode></td>
+      <td><InlineCode>1</InlineCode></td>
+    </tr>
+    <tr>
+      <td><InlineCode>%=</InlineCode></td>
+      <td>Modulus</td>
       <td><InlineCode>x %= 2</InlineCode></td>
       <td><InlineCode>1</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>^=</InlineCode></td>
-			<td>Exponentiation</td>
+    </tr>
+    <tr>
+      <td><InlineCode>^=</InlineCode></td>
+      <td>Exponentiation</td>
       <td><InlineCode>x ^= 2</InlineCode></td>
       <td><InlineCode>9</InlineCode></td>
-		</tr>
-		<tr>
-			<td><InlineCode>..=</InlineCode></td>
-			<td>Concatenation</td>
+    </tr>
+    <tr>
+      <td><InlineCode>..=</InlineCode></td>
+      <td>Concatenation</td>
       <td><InlineCode>x ..= " World!" </InlineCode></td>
       <td><InlineCode>"3 World!"</InlineCode></td>
-		</tr>
-	</tbody>
+    </tr>
+  </tbody>
 </table>
 
 ## Miscellaneous

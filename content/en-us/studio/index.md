@@ -1,11 +1,8 @@
 ---
 title: Welcome to Roblox Studio
 description: Learn how Roblox Studio is an all-in-one IDE that lets you create experiences that run on the Roblox Engine.
-banner:
-  title: Welcome to Roblox Studio
-  subtitle: Build anything you can imagine with the all-in-one IDE for Roblox.
-  backgroundUrl: /assets/studio/overview/Studio-Banner.jpg
 ---
+**Build anything you can imagine with the all-in-one IDE for Roblox.**
 
 Roblox Studio is an all-in-one IDE that lets you create experiences that run on
 Roblox. It's free to use and lets you reach millions of users using

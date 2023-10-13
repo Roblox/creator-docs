@@ -180,7 +180,7 @@ end
 ```
 
 <Alert severity="warning">
-  `Class.GlobalDataStore:GetAsync()|GetAsync()` caches the data for 4 seconds, so the returned value is not guaranteed to be the one saved on Roblox servers.
+  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](#caching) behavior. To opt out of caching, see [Disabling caching](#disabling-caching).
 </Alert>
 
 ### Incrementing Data
@@ -853,13 +853,21 @@ performance on Roblox servers.
 
 ## Caching
 
-Keys cache locally for 4 seconds after the first read. A `Class.GlobalDataStore:GetAsync()|GetAsync()` call within these 4 seconds returns a value from the cache. Modifications to the key by `Class.GlobalDataStore:SetAsync()|SetAsync()` or `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` apply to the cache immediately and restart the 4 second timer.
+By default, the engine stores values that you retrieve from the backend using `Class.GlobalDataStore:GetAsync()|GetAsync()` in a local cache for 4 seconds, and `Class.GlobalDataStore:GetAsync()|GetAsync()` requests for cached keys return the cached value instead of continuing to the backend. This way, your `Class.GlobalDataStore:GetAsync()|GetAsync()` requests returning a cached value don't count towards your [throughput](#throughput-limits) and [server](#server-limits) limits.
 
-`Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, and `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` don't implement caching and always fetch the latest data from the service.
+Caching also applies to modifications to keys using `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, and `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`. Additionally, all `Class.GlobalDataStore:GetAsync()|GetAsync()` calls that retrieve a value not being cached from the backend update the cache immediately and restart the 4 second timer.
+
+`Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, and `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` don't implement caching and always fetch the latest data from the service backend.
 
 <Alert severity="warning">
   Caching is local to a particular data store instance, so different data stores can have their caches in different states. For example, if you access a key twice through two different data store instances, such as getting a data store with a specified scope and another through with the `Class.DataStoreOptions.AllScopes|AllScopes` property enabled, each data store instance will have its own cache. If you change the value of that key in one data store instance and not the other, you will have inconsistent data.
 </Alert>
+
+### Disabling Caching
+
+To opt out of using the cache to retrieve the most up-to-date value from the servers, add the `Class.DataStoreGetOptions` parameter to your `Class.GlobalDataStore:GetAsync()|GetAsync()` call and set its `Class.DataStoreGetOptions.UseCache|UseCache` property to `false` to make your request ignore any keys in the cache.
+
+Disabling caching is useful if you have multiple servers writing to a key with high frequency and need to get the latest value from servers. However, it can cause you to consume more of your [data stores limits and quotas](#limits), since `Class.GlobalDataStore:GetAsync()|GetAsync()` requests bypassing caching always count towards your throughput and server limits.
 
 ## Best Practices
 

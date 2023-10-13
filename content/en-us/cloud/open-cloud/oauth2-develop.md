@@ -1,146 +1,205 @@
 ---
-title: Developing OAuth 2.0 Applications
-description: Provides recommendations and sample implementations for developing an OAuth 2.0 app.
+title: OAuth 2.0 App Implementation
+description: Introduces OAuth 2.0 authentication implementation.
 ---
 
-This guide covers the required logic and implementations for developing an OAuth 2.0 app.
+Open Cloud supports the OAuth 2.0 authorization flow with and without
+[PKCE](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow-with-pkce),
+depending on whether your clients are confidential or public.
+
+- _Confidential clients_ are apps that are capable of keeping credentials
+  confidential, such as a website that can securely store and retrieve secrets on
+  its backend.
+- _Public clients_ are apps that can't keep secrets, such as mobile
+  and web browser apps.
+
+We recommend the OAuth 2.0 authorization code flow with PKCE for _all_ clients
+and require it for public clients.
 
 <Alert severity="warning">
-Third-Party app support through OAuth 2.0 is a Beta feature that might be subject to changes for future releases.
+Store the client secret in a secure place and never expose it to the public. Bad
+actors can use it to impersonate your application.
 </Alert>
 
-## Implementing Authorization Flows
+To implement the authorization code flow, your app performs the following steps:
 
-All OAuth 2.0 apps need to support at least one [authorization flow](../../cloud/open-cloud/oauth2-overview.md#authorization-flows) based on the application type. The following capabilities and actions are required by all types of applications for completing the authorization flow:
+1. Generate a code verifier and code challenge (PKCE only). This lets you
+   include a challenge in your requests rather than the client secret, which
+   improves security.
+1. Send a `GET` request to the authorization endpoint with the appropriate parameters.
+1. Handle the authorization callback. After obtaining authorization, use the
+   authorization code from Roblox in a redirect request to the URL you specified
+   during app creation. Parse the authorization code for later use.
+1. Send a `POST` request to the token endpoint with the authorization code. If
+   successful, you receive access and refresh tokens with which to make API
+   calls.
+1. Call any Open Cloud API that supports OAuth 2.0 authentication based on the
+   reference documentation for the resources you want to access.
 
-- Passing in a valid client ID, which you can obtain after [registering your app](../../cloud/open-cloud/app-registration.md#registering-an-app).
-- At the beginning of the authorization process, redirecting app users to the [authorization endpoint](../../reference/cloud/oauth2/authorization-flow.md), such as by opening the authorization request URL in the user's browser.
-- Providing at least one redirect URL, the re-entry point of your app that users are redirected to once they finish authorization.
-- Receiving incoming requests through redirections from the authorization server.
+The following sections describe each step in greater depth.
 
-### Confidential Clients
+## Generating a Code Challenge (For PKCE only)
 
-**Confidential clients** are applications capable of keeping the confidentiality of their credentials, such as a website that can securely store and retrieve secrets in its backend. Open Cloud supports the following two flows for confidential clients:
+Before initiating the authorization process, you need to generate a code
+challenge from a code verifier. You can use libraries or built-in functions in
+the programming language of your choice to create the code verifier, calculate
+the hash, and perform Base64 encoding to generate the code challenge.
 
-- (**Recommended**) The [Authorization Code Flow with PKCE](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow-with-pkce) that requires each authorization request to include the client ID, client secret, and a `code_challenge` parameter for security enhancements.
-- (**Not Recommended**) The [Authorization Code Flow](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow) that requires each authorization request to include the client ID and the client secret obtained from the registration.
+When creating the code verifier, only use unreserved characters, including
+uppercase and lowercase letters (A-Z , a-z), decimal digits (0-9), hyphen (-),
+period (.), underscore (\_), and tilde (~), with a minimum length of 43
+characters and a maximum length of 128 characters.
 
-### Public Clients
+The following example shows how to use Javascript to create a code verifier and
+generate the code challenge using the SHA-256 hashing algorithm:
 
-**Public clients** are applications that can't keep secrets, such as native apps and web browser-based apps. Using the [Authorization Code Flow with PKCE](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow-with-pkce) is mandatory for public clients. Instead of passing the client secret to authorization requests, include the client ID and a `code_challenge` parameter for enhanced security.
+```javascript title="Generate Code Challenge"
+const crypto = require('crypto');
 
-<Alert severity="warning">
-Don't pass the client secret for your public client as bad actors can use it to impersonate your application. Instead, store the client secret in a secure place and never expose it to the front-end.
-</Alert>
+// base64URL encode the verifier and challenge
+function base64URLEncode(str) {
+  return str.toString('base64')
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=/g, '');
+}
 
-## Handling Token Exchanges
+// create sha256 hash from code verifier
+function sha256(buffer) {
+  return crypto.createHash('sha256').update(buffer).digest(`base64`);
 
-Once a user is redirected back to your app after their authorization session, you need to exchange the authorization code for an [access token](../../cloud/open-cloud/oauth2-overview.md#access-token), [refresh token](../../cloud/open-cloud/oauth2-overview.md#refresh-token), and [ID token](../../cloud/open-cloud/oauth2-overview.md#id-token). Make sure to implement the required logic so your app can perform the following steps:
-
-1. Request an access token and refresh token by sending a token request to the authorization server's token endpoint. The request should include the authorization code, client ID, and the client secret or code challenge, depending on the authorization flow you use.
-
-1. Parse the token response received from the authorization server. If the response is valid, it contains an access token, refresh token, and other relevant information.
-
-1. Store the access token securely, typically in a server-side session or database, depending on your application's architecture.
-
-1. Include the access token in the header of API requests to resource servers to authorize the requests.
-
-## Testing
-
-Once you finish developing your app's functionalities, make sure to test its authorization flow before making it available to your users. You can test it using the `User Information` [endpoint](../../reference/cloud/oauth2/user-information.md) to see if you can successfully retrieve a test user's information using the access token.
-
-## Example: Implementing Authorization Code Flow with PKCE
-
-This example guides you through the process implementing the Authorization Code Flow with PKCE, the recommended method for securing OAuth 2.0 authentication flows, especially for public clients.
-
-### Generating a Code Challenge
-
-Before initiating the authorization process, you need to generate a code challenge from a code verifier. You can use libraries or built-in functions in the programming language of your choice to create the code verifier, calculate the hash, and perform Base64URL encoding to generate the code challenge.
-
-When creating the code verifier, only use unreserved characters, including uppercase and lowercase letters (A-Z , a-z), decimal digits (0-9), hyphen (-), period (.), underscore (\_), and tilde (~), with a minimum length of 43 characters and a maximum length of 128 characters.
-
-The following example shows how to use Python to create a code verifier and generate the code challenge using the SHA-256 hashing algorithm from it:
-
-```python title="Generate Code Challenge"
-import string
-import secrets
-import hashlib
-import base64
-
-def generate_code_verifier():
-
-    # Define the length of your code verifier. Must be between 43 and 128
-    length = 48
-
-    # Define all unreserved characters
-    characters = string.ascii_letters + string.digits + '-._~'
-
-    # Generate a random code verifier string
-    code_verifier = ''.join(secrets.choice(characters) for _ in range(length))
-
-    return code_verifier
-
-def generate_code_challenge(code_verifier):
-
-    # Hash the code verifier using the SHA256 algorithm
-    sha256_hash = hashlib.sha256(code_verifier.encode()).digest()
-
-    # Encode the hashed value using base64url encoding
-    code_challenge = base64.urlsafe_b64encode(sha256_hash).decode()
-
-    return code_challenge
-
-# Print the code challenge value
-print(generate_code_challenge(generate_code_verifier()))
+// create a random code verifier
+var code_verifier = base64URLEncode(crypto.randomBytes(32));
+// generate a challenge from the code verifier
+var code_challenge = base64URLEncode(sha256(verifier));
 ```
 
-### Constructing the Authorization URL
+For PKCE, you need both the code verifier and challenge values in later steps.
 
-To initiate the user authorization process, you need to construct the authorization URL and redirect the user to that URL. You can construct the authorization URL by combining the authorization endpoint with the required parameters, including:
+## Constructing the Authorization URL
 
-- `client_id`: Your app's client ID obtained after [registering your app](../../cloud/open-cloud/app-registration.md).
+<Alert severity="info">
+  See the [authorization endpoint reference documentation](/cloud/reference/oauth2#get-v1authorize)
+  for complete information on how to construct the authorization URL.
+</Alert>
+
+To initiate the user authorization process, construct an
+authorization URL with the required parameters:
+
+- `client_id`: Your app's client ID obtained after [registering your app](oauth2-registration.md).
 - `redirect_uri`: Your app's redirect URI, the re-entry point of your app.
-- `scope`: The requested scopes that define the access permissions your app needs in a space-separated list.
+- `scope`: The requested scopes that define the access permissions your app
+  needs in a space-separated list.
 - `response_type`: Set it to `code` to indicate the authorization code flow.
-- `code_challenge`: The code challenge generated in the previous step.
-- `code_challenge_method`: Set it to `S256` to indicate that the code challenge was transformed using the SHA-256 algorithm, the most widely supported and secure code challenge method.
 
-Your authorization request URL needs to be in the format of the following example:
+**Required for PKCE only**
 
-```plain title="Example PKCE Authorization URL"
-https://apis.roblox.com/oauth/v1/authorize?client_id=1112223334445555
-    &redirect_uri=https://www.example.com
-    &scope=openid%20profile%20asset:read
-    &response_type=code
-    &nonce=12345 // Optional
-    &state=6789 // Optional
-    &code_challenge=Q12AEaAT69Vl3jhuKSOCK6cFyhHkEQ_haJxUgXJBm4
+- `code_challenge`: The code challenge generated from a code verifier.
+- `code_challenge_method`: Set this parameter value to `S256` to indicate that
+  the code challenge was transformed using the SHA-256 algorithm, the most
+  widely supported and secure code challenge method.
+- `state`: An opaque, secure random value to maintain state
+  between the request and callback.
+
+**Required for non-PKCE only**
+
+- `client_secret`: Your app's client secret obtained after [registering your app](oauth2-registration.md). If you are using authentication with
+  PKCE, omit this parameter.
+  Your authorization request URL must be well formatted, like in the following
+  example:
+
+```bash title="Example PKCE Authorization URL"
+https://apis.roblox.com/oauth/v1/authorize?client_id=7290610391231237934964
+    &code_challenge=PLEKKVCjdD1V_07wOKlAm7P02NC-LZ_1hQfdu5XSXEI
     &code_challenge_method=S256
+    &redirect_uri=https://example.com/redirect
+    &scope=openid%20profile
+    &response_type=code
+    &state=abc123
 ```
 
-For more information on all required and optional query parameters of the authorization URL, see the [API reference](../../reference/cloud/oauth2/authorization-flow.md).
+When users visit the URL, they are taken through the authorization flow. If
+successful, Roblox redirects the user to the specified `redirect_uri`.
 
-### Handling Authorization Callbacks
+## Handling Authorization Callbacks
 
-After a user grants authorization, the authorization server redirects them back to your app's redirect URI with an authorization code. If you don't have a backend web server with decomposed objects for query parameters, you can use the following example to manually parse the redirect URI and extract the authorization code when your app receives the authorization callback, so you can use it to exchange the tokens.
+When an authorization flow is successful, your app receives a `GET` request from
+the Roblox authorization server at the `redirect_uri` that you specified. In the
+request, you receive `code` (authorization code) and `state`(if you provided a
+value previously) parameters.
 
-```python title="Extract Authorization Code"
-from urllib.parse import urlparse, parse_qs
+- The `code` parameter contains an authorization code that the app can
+  exchange for an access token from the authorization server. Most backend
+  server languages have standard ways to access query parameters as decomposed
+  objects. You'll need to obtain the `code` parameter and use it to exchange
+  for access tokens.
 
-def extract_authorization_code(redirected_uri):
+- The `state` parameter is an opaque value that you initially provided in the
+  authorization request. You can use this parameter to maintain the state or
+  context of the authorization process.
 
-    # Parse and extract all parameters from the URL
-    parsed_url = urlparse(redirected_uri)
-    query_params = parse_qs(parsed_url.query)
+For example, you might receive a `GET` request with the following URL if you
+specified your redirect URI to be `https://example.com/redirect`.
 
-    # Get the value of the "code" parameter. If doesn't exist, set to an
-    # If it doesn't exist, set the value to an empty string
-    authorization_code = query_params.get('code', [''])[0]
-    return authorization_code
-
-# Print out the authorization code of an app with the
-# redirect URI as "https://www.example.com"
-print(extract_authorization_code("https://www.roblox.com/example-redirect?code=hfa87439baj"))
+```bash title="Example Redirect URL"
+https://example.com/redirect?code=10c45PNuquKnFJ6pUcy5-fHkghEM6lSegm-7hj9mVEprub1dSDuStuKK_EAUXY7AHTD63xcnmvxSLthp-C8g3jzIGZVzuXSd20Y2dEYI9hx0LZmPg95ME4z2K03UheiZbroyXUjYyB3ReoMqobzDVPzyx6IS8kj2Uu-11Xq_0JiTYxtDatuqXRNIAmJT8gMJmbSyOLOP_vnDvbeMUiBsqCRrkTGVbWSwYSc8sTVVE-535kYdqQOgNjH1ffCoZLGl8YYxLnpb2CXJlRQPrcjkA&state=6789
 ```
 
-Once you obtain the authorization code, you can use it to call the [Token API](../../reference/cloud/oauth2/tokens.md) to exchange for tokens and then use tokens for API requests.
+If authorization fails, your app receives a `GET` request to the specified
+redirect URL with the `error`, `error_description`, and `state` (if applicable)
+parameters.
+
+- The `error` parameter indicates the specific OAuth 2.0 error that occurred
+  during the authorization process.
+- The `error_description` parameter provides additional details of the error.
+- The `state` parameter helps your app maintain state in the case of a
+  failure.
+
+## Exchanging an authorization code for access tokens
+
+When you have parsed the authorization `code`, exchange it for
+tokens to access desired Roblox resources:
+
+1. Request an access token and refresh token by sending a `POST` request to the
+   [token exchange endpoint](/cloud/reference/oauth2#post-v1token). The
+   request must include the authorization code, client ID, and the code
+   verifier value (PKCE) or client secret (non-PKCE) in `x-www-form-urlencoded` format.
+
+1. Parse the applicable tokens from the response received. The access token is
+   valid for 15 minutes. Store the refresh token securely, typically on the server side, so you can use it to obtain new tokens in the future.
+
+   ```json title="Example Token Endpoint Response"
+   {
+     "access_token": "eyJhbGciOiJFUzI1NiIsImtpZCI6IlBOeHhpb2JFNE8zbGhQUUlUZG9QQ3FCTE81amh3aXZFS1pHOWhfTGJNOWMiLCJ0eXAiOiJKV11234.eyJzdWIiOiIyMDY3MjQzOTU5IiwiYWlkIjoiM2Q2MWU3NDctM2ExNS00NTE4LWJiNDEtMWU3M2VhNDUyZWIwIiwic2NvcGUiOiJvcGVuaWQ6cmVhZCBwcm9maWxlOnJlYWQiLCJqdGkiOiJBVC5QbmFWVHpJU3k2YkI5TG5QYnZpTCIsIm5iZiI6MTY5MTYzOTY5OCwiZXhwIjoxNjkxNjQwNTk4LCJpYXQiOjE2OTE2Mzk2OTgsImlzcyI6Imh0dHBzOi8vYXBpcy5yb2Jsb3guY29tL29hdXRoLyIsImF1ZCI6IjcyOTA2MTAzOTc5ODc5MzQ5Nj1234.BjwMkC8Q5a_iP1Q5Th8FrS7ntioAollv_zW9mprF1ats9CD2axCvupZydVzYphzQ8TawunnYXp0Xe8k0t8ithg",
+     "refresh_token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoidGpHd1BHaURDWkprZEZkREg1dFZ5emVzRWQyQ0o1NDgtUi1Ya1J1TTBBRSIsInR5cCI6IkpXVCJ9..nKYZvjvXH6msDG8Udluuuw.PwP-_HJIjrgYdY-gMR0Q3cabNwIbmItcMEQHx5r7qStVVa5l4CbrKwJvjY-w9xZ9VFb6P70WmXndNifnio5BPZmivW5QkJgv5_sxLoCwsqB1bmEkz2nFF4ANLzQLCQMvQwgXHPMfCK-lclpVEwnHk4kemrCFOvfuH4qJ1V0Q0j0WjsSU026M67zMaFrrhSKwQh-SzhmXejhKJOjhNfY9hAmeS-LsLLdszAq_JyN7fIvZl1fWDnER_CeDAbQDj5K5ECNOHAQ3RemQ2dADVlc07VEt2KpSqUlHlq3rcaIcNRHCue4GfbCc1lZwQsALbM1aSIzF68klXs1Cj_ZmXxOSOyHxwmbQCHwY7aa16f3VEJzCYa6m0m5U_oHy84iQzsC-_JvBaeFCachrLWmFY818S-nH5fCIORdYgc4s7Fj5HdULnnVwiKeQLKSaYsfneHtqwOc_ux2QYv6Cv6Xn04tkB2TEsuZ7dFwPI-Hw2O30vCzLTcZ-Fl08ER0J0hhq4ep7B641IOnPpMZ1m0gpJJRPbHX_ooqHol9zHZ0gcLKMdYy1wUgsmn_nK_THK3m0RmENXNtepyLw_tSd5vqqIWZ5NFglKSqVnbomEkxneEJRgoFhBGMZiR-3FXMaVryUjq-N.Q_t4NGxTUSMsLVEppkTu0Q6rwt2rKJfFGuvy3s12345",
+     "token_type": "Bearer",
+     "expires_in": 899,
+     "id_token": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkNWWDU1Mi1zeWh4Y1VGdW5vNktScmtReFB1eW15YTRQVllodWdsd3hnNzgiLCJ0eXAiOiJKV11234.eyJzdWIiOiIyMDY3MjQzOTU5IiwibmFtZSI6ImxpbmtzZ29hdCIsIm5pY2tuYW1lIjoibGlua3Nnb2F0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoibGlua3Nnb2F0IiwiY3JlYXRlZF9hdCI6MTYwNzM1NDIzMiwicHJvZmlsZSI6Imh0dHBzOi8vd3d3LnJvYmxveC5jb20vdXNlcnMvMjA2NzI0Mzk1OS9wcm9maWxlIiwibm9uY2UiOiIxMjM0NSIsImp0aSI6IklELnltd3ZjTUdpOVg4azkyNm9qd1I5IiwibmJmIjoxNjkxNjM5Njk4LCJleHAiOjE2OTE2NzU2OTgsImlhdCI6MTY5MTYzOTY5OCwiaXNzIjoiaHR0cHM6Ly9hcGlzLnJvYmxveC5jb20vb2F1dGgvIiwiYXVkIjoiNzI5MDYxMDM5Nzk4NzkzNDk2NCJ9.kZgCMJQGsariwCi8HqsUadUBMM8ZOmf_IPDoWyQY9gVX4Kx3PubDz-Q6MvZ9eU5spNFz0-PEH-G2WSvq2ljDyg",
+     "scope": "openid profile"
+   }
+   ```
+
+## Making a call to a resource method
+
+Now that you have the required access token, you can use it to make
+authenticated calls to resource methods. Include the access token in the header of all API requests to
+authorize them.
+
+For example, you can test if your app functions correctly by
+going through the entire authorization flow and then making a `GET` request
+to the
+[user information endpoint](/cloud/reference/oauth2#get-v1userinfo) with an access
+token. Ensure you have the `openid` or both the `openid` and `profile`
+scopes before calling this endpoint. If successful, the response from that
+endpoint looks like this:
+
+```json title="Example User Information Response"
+{
+  "sub": "12345678",
+  "name": "Jane Doe",
+  "nickname": "robloxjanedoe",
+  "preferred_username": "robloxjanedoe",
+  "created_at": 1607354232,
+  "profile": "https://www.roblox.com/users/12345678/profile"
+}
+```
