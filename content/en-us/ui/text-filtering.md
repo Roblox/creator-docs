@@ -105,7 +105,7 @@ local function getTextObject(message, fromPlayerId)
 	end)
 	if success then
 		return textObject
-	elseif errorMessage then
+	else
 		print("Error generating TextFilterResult: ", errorMessage)
 	end
 	return false
@@ -118,7 +118,7 @@ local function getFilteredMessage(textObject)
 	end)
 	if success then
 		return filteredMessage
-	elseif errorMessage then
+	else
 		print("Error filtering message: ", errorMessage)
 	end
 	return false
