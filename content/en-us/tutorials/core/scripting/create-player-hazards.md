@@ -153,7 +153,7 @@ lifecycle events:
   can execute.
 - `Class.Player.PlayerRemoved` fires when a player leaves the experience to
   clean up player state.
-- In the current setup, there is a potential issue if a player collects coins before the `Players.PlayerAdded` event is executed or before the `for loop` executes. In such cases, the player's coin count could be reset to zero upon character creation.To mitigate this issue, consider implementing more advanced techniques, such as freezing the player's character until the necessary initialization is complete, or using code scheduling to ensure a seamless experience. However, these solutions involve more complex scripting concepts and are beyond the scope of this beginner's tutorial.
+- This code contains a potential issue where players could collect coins before the `Players.PlayerAdded` event executes and then have their coin counts reset to zero. To mitigate this issue, consider solutions such as code scheduling or freezing the player's character until initialization finishes. However, these solutions involve more complex scripting concepts that are beyond the scope of this tutorial.
 
 </AccordionDetails>
 </BaseAccordion>
