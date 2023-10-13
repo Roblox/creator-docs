@@ -8,13 +8,13 @@ To optimize asset management across your entire team or across multiple projects
 
 ## Creating Packages
 
-A package can be created from any single node or sub-tree root node in the data model.
+You can create a package from any single object or any single parent and children branch of objects. When you create a package for a single object, it's recommended to add that object to a `Class.Model` grouping first so that you can add, remove, or scale objects within the package later without breaking the package.
 
-1. In the [Explorer](../../studio/explorer.md) window, right-click the desired object/node and select **Convert to Package** from the contextual menu.
+1. In the **Explorer** window, right-click the desired object or parent of object, then select **Convert to Package** from the contextual menu.
 
    <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" width="300" />
 
-1. In the dialog window, fill in the requested details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the desired group in which you have permission to create/edit group experiences.
+1. In the contextual window, fill in the requested details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the desired group in which you have permission to create/edit group experiences.
 
    <Alert severity="warning">
    Ownership transfers are **not** supported by the asset system, so carefully consider the owner when creating a package.
@@ -55,6 +55,10 @@ Once you've inserted a package into a place's data model, it appears in the **Pa
   <img src="../../assets/studio/packages/Asset-Manager-Packages.png" width="360" />
   <figcaption>Asset Manager &rarr; Packages</figcaption>
 </figure>
+
+<Alert severity="warning">
+Take caution when inserting packages that you didn't create into your experiences, as they may contain malicious scripts that can impact your experience's performance. Malicious packages can be difficult to troubleshoot without reverting to an older version of your experience, so it's recommended to always save your experience and investigate any scripts within unfamiliar packages before bringing them into your place file.
+</Alert>
 
 ## Modifying Packages
 

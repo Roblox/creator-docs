@@ -42,7 +42,7 @@ As your experience expands to more platforms, be sure to show button icons that 
 - `Class.UserInputService:GetStringForKeyCode()` can convert the US query key codes to console keyboard layouts. It's helpful for showing your custom assets as button icons to match the look and feel of your experience. The following example shows how you can map custom assets for `Enum.KeyCode.ButtonA`:
 
   ```lua title="Mapping Custom Assets"
-  local userInputService = game.UserInputService
+  local UserInputService = game:GetService("UserInputService")
   local imageLabel = script.Parent
   local key = Enum.KeyCode.ButtonA
 
@@ -51,7 +51,7 @@ As your experience expands to more platforms, be sure to show button icons that 
       ButtonCross = "rbxasset://BUTTON_CROSS_ASSET" -- Replace with the desired ButtonCross asset
   }
 
-  local mappedKey = userInputService:GetStringForKeyCode(key)
+  local mappedKey = UserInputService:GetStringForKeyCode(key)
   local image = mappings[mappedKey]
 
   imageLabel.Image = image
@@ -60,11 +60,11 @@ As your experience expands to more platforms, be sure to show button icons that 
 - `Class.UserInputService:GetImageForKeyCode()` returns Roblox default icons for the requested key code as easy drop-in replacements, like the following example for mapping `Enum.KeyCode.ButtonA` shows:
 
   ```lua title="Mapping Default Icons"
-  local userInputService = game.UserInputService
+  local UserInputService = game:GetService("UserInputService")
   local imageLabel = script.Parent
   local key = Enum.KeyCode.ButtonA
 
-  local mappedIcon = userInputService:GetImageForKeyCode(key)
+  local mappedIcon = UserInputService:GetImageForKeyCode(key)
   imageLabel.Image = mappedIcon
   ```
 

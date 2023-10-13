@@ -91,6 +91,8 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
+          - title: Character Controllers
+            path: /physics/character-controllers
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints

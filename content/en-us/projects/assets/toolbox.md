@@ -136,6 +136,10 @@ Below the preview frame is additional info and context actions for the asset:
 </TabItem>
 </Tabs>
 
+<Alert severity="warning">
+Take caution when inserting packages that you didn't create into your experiences, as they may contain malicious scripts that can impact your experience's performance. Malicious packages can be difficult to troubleshoot without reverting to an older version of your experience, so it's recommended to always save your experience and investigate any scripts within unfamiliar packages before bringing them into your place file.
+</Alert>
+
 ## Asset Configuration and Versioning
 
 Right-clicking an asset and selecting **Edit Asset** opens the **Asset Configuration** window. In this window, you can edit the asset's details or restore it to a previous version.

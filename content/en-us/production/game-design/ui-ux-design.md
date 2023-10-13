@@ -34,7 +34,7 @@ Important information and features change during the course of a game, depending
 
 <h4>Examples</h4>
 
-Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](https://www.roblox.com/games/6468323505/) has a clean, minimalist UI is particularly crucial for mobile interfaces, as small screens can easily get overwhelmed with excessive buttons, screens, and text.
+Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](https://www.roblox.com/games/6468323505/) has a clean, minimalist UI that is particularly crucial for mobile interfaces, as small screens can easily get overwhelmed with excessive buttons, screens, and text.
 
 <GridContainer numColumns="2">
   <figure>
@@ -88,7 +88,7 @@ In [_Jailbreak_](https://www.roblox.com/games/606849621/)'s season pass UI, a st
     <figcaption> Season pass UI in _Jailbreak_ </figcaption>
   </figure>
 
-In [_Dragon Adventures,_](https://www.roblox.com/games/3475397644/) visual priority is given to the highest-value coin bundle by increasing it's size and separating it with more padding, to distinguish it from smaller bundles.
+In [_Dragon Adventures,_](https://www.roblox.com/games/3475397644/) visual priority is given to the highest-value coin bundle by increasing its size and separating it with more padding, to distinguish it from smaller bundles.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-9.png" width="60%"/>
@@ -250,7 +250,7 @@ For example, to equip an item on an avatar in [Berry Avenue RP](https://www.robl
     <figcaption>Avatar customization flow in *Berry Avenue RP*.</figcaption>
   </figure>
 
-These steps taken together represent the avatar customization flow. This flow is simple and straightforward, with as few steps as possible needed to equip an item. Because players do not have to perform many actions or think too much about what they need to do this flow is low in _friction_, a measurement of the effort required to reach a goal.
+These steps taken together represent the avatar customization flow. This flow is simple and straightforward, with as few steps as possible needed to equip an item. Because players do not have to perform many actions or think too much about what they need to do, this flow is low in _friction_, a measurement of the effort required to reach a goal.
 
 Designing efficient, low-friction flows requires careful consideration of use cases. Those use cases can be expressed as player goals such as:
 
