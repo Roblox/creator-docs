@@ -52,6 +52,7 @@ A game designer's role is to create an engaging experience for players, retain t
 
 - [Monetization Foundations:](../../production/game-design/monetization-foundations.md) Learn monetization best practices and shop design to maximize your experience's monetary growth potential.
 - [Season Pass Design:](../../production/game-design/season-pass-design.md) Learn how to design season passes for your experiences to deliver new content, promote player retention, and generate revenue.
+- [Subscription Design:](../../production/game-design/subscription-design.md) Learn how to design recurring purchases that your players look forward to each month.
 - [Contextual Purchases:](../../production/game-design/contextual-purchases.md) Learn how to design compelling and unintrusive purchase opportunities that occur outside an experience's shop.
 - [Balancing Virtual Economies:](../../production/game-design/balancing-virtual-economies.md) Learn best practices to balance virtual economies when introducing new events.
 

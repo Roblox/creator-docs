@@ -8,14 +8,18 @@ The [Facial Action Coding System](https://en.wikipedia.org/wiki/Facial_Action_Co
 The following is a list of 50 base poses that you can use in Roblox to portray a wide range of face emotions. Except for the first neutral pose, the order of poses you save to your character model doesn't matter since this information is set during the [mapping](../../../art/characters/facial-animation/creating-basic-heads.md#mapping) process as a custom property.
 
 <Alert severity = 'warning'>
-If you intend to publish your avatar to the Marketplace, your avatar head must include the minimum 17 facial base poses. Marketplace validation rejects assets that do not include these 17 required base poses.
+If you intend to publish your avatar to the Marketplace, your avatar head must include the required [17 facial base poses](../../../art/characters/specifications.md#facial-animations). Marketplace validation rejects assets that do not include these 17 required base poses.
 </Alert>
 
 You can combine multiple FACS base poses together in one animation frame to create complex facial expressions. However, some combinations of poses might collide unless you also add a [corrective](../../../art/characters/facial-animation/creating-basic-heads.md#combination-poses) to their full default values.
 
 ## EyesLookDown
 
-`Class.FaceControls.EyesLookDown|EyesLookDown` makes the eyes gaze down. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.EyesLookDown|EyesLookDown` makes the eyes gaze down.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookDownA.mp4" width="70%"></video>
@@ -24,7 +28,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## EyesLookLeft
 
-`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.EyesLookLeft|EyesLookLeft` makes the eyes gaze left.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookLeftA.mp4" width="70%"></video>
@@ -33,7 +41,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## EyesLookRight
 
-`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.EyesLookRight|EyesLookRight` makes the eyes gaze right.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookRightA.mp4" width="70%"></video>
@@ -42,7 +54,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## EyesLookUp
 
-`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.EyesLookUp|EyesLookUp` makes the eyes gaze up.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/EyesLookUpA.mp4" width="70%"></video>
@@ -51,7 +67,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## JawDrop
 
-`Class.FaceControls.JawDrop|JawDrop` lowers the jaw downward, opening the mouth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.JawDrop|JawDrop` lowers the jaw downward, opening the mouth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/JawDropA.mp4" width="70%"></video>
@@ -60,7 +80,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LeftEyeClosed
 
-`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftEyeClosed|LeftEyeClosed` closes the character's left eyelid.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftEyeClosedA.mp4" width="70%"></video>
@@ -69,7 +93,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LeftLipCornerPuller
 
-`Class.FaceControls.LeftLipCornerPuller|LeftLipCornerPuller` raises the corners of the mouth upwards in a smile. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftLipCornerPuller|LeftLipCornerPuller` raises the corners of the mouth upwards in a smile.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipCornerPullerA.mp4" width="70%"></video>
@@ -78,7 +106,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LeftLipStretcher
 
-`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftLipStretcher|LeftLipStretcher` stretches the corners of the mouth apart.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLipStretcherA.mp4" width="70%"></video>
@@ -87,7 +119,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LeftLowerLipDepressor
 
-`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip downwards away from the upper lip, revealing the lower teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftLowerLipDepressor|LeftLowerLipDepressor` lowers the lower lip downwards away from the upper lip, revealing the lower teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftLowerLipDepressorA.mp4" width="70%"></video>
@@ -96,7 +132,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LeftUpperLipRaiser
 
-`Class.FaceControls.LeftUpperLipRaiser|LeftUpperLipRaiser` raises the character's left upper lip away from the lower lip revealing the upper teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LeftUpperLipRaiser|LeftUpperLipRaiser` raises the character's left upper lip away from the lower lip revealing the upper teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LeftUpperLipRaiserA.mp4" width="70%"></video>
@@ -105,7 +145,11 @@ You can combine multiple FACS base poses together in one animation frame to crea
 
 ## LipsTogether
 
-`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.LipsTogether|LipsTogether` brings the character's lips together. However, if the character's mouth is closed, their lips are already together and they collide.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/LipsTogetherA-1.mp4" width="70%"></video>
@@ -128,7 +172,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## Pucker
 
-`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.Pucker|Pucker` makes a kiss-like shape with the mouth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/PuckerA.mp4" width="70%"></video>
@@ -137,7 +185,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightEyeClosed
 
-`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightEyeClosed|RightEyeClosed` closes the character's right eyelid.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightEyeClosedA.mp4" width="70%"></video>
@@ -146,7 +198,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightLipCornerPuller
 
-`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightLipCornerPuller|RightLipCornerPuller` raises the corners of the mouth upwards in a smile.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipCornerPullerA.mp4" width="70%"></video>
@@ -155,7 +211,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightLipStretcher
 
-`Class.FaceControls.RightLipStretcher|RightLipStretcher` stretches the corners of the mouth apart. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightLipStretcher|RightLipStretcher` stretches the corners of the mouth apart.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLipStretcherA.mp4" width="70%"></video>
@@ -164,7 +224,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightLowerLipDepressor
 
-`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightLowerLipDepressor|RightLowerLipDepressor` lowers the lower lip down away from the upper lip revealing the lower teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightLowerLipDepressorA.mp4" width="70%"></video>
@@ -173,7 +237,11 @@ In addition, if you set [`JawDrop`](#jawdrop) to 100% of its default value, and 
 
 ## RightUpperLipRaiser
 
-`Class.FaceControls.RightUpperLipRaiser|RightUpperLipRaiser` raises the right upper lip away from the lower lip, revealing the upper teeth. If publishing to the Marketplace, your avatar asset must include this pose.
+<Alert severity = 'warning'>
+ If publishing to the Marketplace, your avatar asset must include this pose.
+</Alert>
+
+`Class.FaceControls.RightUpperLipRaiser|RightUpperLipRaiser` raises the right upper lip away from the lower lip, revealing the upper teeth.
 
 <GridContainer numColumns="2">
   <video controls muted src="../../../assets/avatar/dynamic-heads/facs-pose-reference/RightUpperLipRaiserA.mp4" width="70%"></video>

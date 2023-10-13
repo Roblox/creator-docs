@@ -506,7 +506,7 @@ Blender add-on for checking skinning data on characters and clothing.
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../assets/modeling/skinned-meshes/calisthenic-tool/CalisthenicsTool.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0"}}>Link to Instructions</Button>
+<Button href="../art/modeling/calisthenics-tool.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0"}}>Link to Instructions</Button>
 </CardActions>
 
 </Card>

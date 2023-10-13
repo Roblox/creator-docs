@@ -4,17 +4,18 @@ description: Describes how to make authenticated calls to Open Cloud with API ke
 ---
 
 <Alert severity="warning">
-  OAuth 2.0 authentication is a beta feature that might be subject to change for
-  future releases. All Open Cloud endpoints also support [API Key authentication](../open-cloud/api-keys.md).
+OAuth 2.0 authentication is a beta feature that might be subject to change for
+future releases. All Open Cloud endpoints also support
+[API key authentication](../open-cloud/api-keys.md).
 </Alert>
 
 <Alert severity="info">
-For complete implementation guides and information
-on OAuth 2.0, see the [OAuth 2.0 Overview](../open-cloud/oauth2-overview.md).
+For complete implementation guides and information on OAuth 2.0, including a
+sample app, see the [OAuth 2.0 Overview](../open-cloud/oauth2-overview.md).
 </Alert>
 
 This document describes endpoints that you call to implement the OAuth 2.0
-authorization code flow as well as other endpoints useful for implementing
+authorization code flow, as well as other endpoints useful for implementing
 authentication in your apps.
 
 ```http title="Base URL"
@@ -316,14 +317,14 @@ curl --location --request GET 'https://apis.roblox.com/oauth/v1/userinfo' \
 You can use the `sub` value to uniquely identify the user. Users can change
 their Roblox username and display name, so don't use them as unique identifiers to refer to users on your app.
 
-| Claim              | Description                               |
-| ------------------ | ----------------------------------------- |
-| sub                | Roblox user ID.                           |
-| name               | Roblox display name.                      |
-| nickname           | Roblox display name.                      |
-| preferred_username | Roblox username.                          |
-| created_at         | Creation time of the Roblox account as a Unix timestamp. |
-| profile            | Roblox account profile URL.               |
+| Claim              | Description                                                                                                             |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| sub                | Roblox user ID.                                                                                                         |
+| name               | Roblox display name.                                                                                                    |
+| nickname           | Roblox display name.                                                                                                    |
+| preferred_username | Roblox username.                                                                                                        |
+| created_at         | Creation time of the Roblox account as a Unix timestamp.                                                                |
+| profile            | Roblox account profile URL.                                                                                             |
 | picture            | Roblox avatar headshot image. Can be null if the avatar headshot image hasn't yet been generated or has been moderated. |
 
 ```json title="Example User with Profile Scope"

@@ -1,11 +1,9 @@
 ---
 title: Cloud
 description: In addition to using Engine and Studio tools to create experiences on Roblox, you can automate your internal workflows, improve your efficiency creating content, and support your experience operation needs from the web.
-banner:
-  title: Open Cloud
-  subtitle: Manage Roblox resources from the web.
-  backgroundUrl: /assets/landing/cloud/banner.jpg
 ---
+
+**Manage Roblox resources from the web.**
 
 With Open Cloud, you can build tools and apps to access Roblox resources through
 standard web APIs. These APIs allow you to automate internal workflows, improve

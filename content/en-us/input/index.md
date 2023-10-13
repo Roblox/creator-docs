@@ -21,7 +21,7 @@ Once you're comfortable with testing and developing your inputs on mouse and
 keyboard, make your experience compatible with multiple platforms by setting up
 mobile and gamepad inputs.
 
-See [Mouse and Keyboard](../input/mouse-and-keyboard.md) for more
+See [Mouse and Keyboard Input](../input/mouse-and-keyboard.md) for more
 information on setting up your first custom inputs.
 
 ## Mobile
@@ -34,7 +34,7 @@ You can bind a single action to a traditional PC input and create an on-screen
 button for touchscreen devices. You can also dynamically update input behavior
 so that inputs trigger certain actions only in certain contexts.
 
-See [Mobile](../input/mobile.md) for more information on creating
+See [Mobile Input](../input/mobile.md) for more information on creating
 setting up cross-platform and dynamic inputs.
 
 ## Gamepad
@@ -43,7 +43,7 @@ Roblox accepts input from USB gamepads such as Xbox and Playstation controllers.
 Gamepads require additional steps to detect and verify connected gamepads before
 binding controller inputs to actions.
 
-See [Gamepad](../input/gamepad.md) for more information on setting up
+See [Gamepad Input](../input/gamepad.md) for more information on setting up
 gamepad inputs for your experience.
 
 ## Customizing the Camera

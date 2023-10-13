@@ -1,6 +1,6 @@
 ---
-title: Basic Clothing Creation
-description: This tutorial covers the basic steps required in Blender to Studio-ready clothing assets from scratch.
+title: Texturing
+description: Covers the process of texture painting a custom clothing asset in Blender.
 prev: /art/accessories/creating/modeling
 next: /art/accessories/creating/rigging
 ---
