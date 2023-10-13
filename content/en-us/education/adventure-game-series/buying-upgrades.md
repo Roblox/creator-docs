@@ -59,7 +59,7 @@ Right now, the TextLabel is really small and hard for players to see. It needs t
 
 ### Adding a Click Detector
 
-Players will buy items by clicking on the shop rather than just touching it. The script will use a click detector to tell if a player has clicked the shop sign. **Click detectors** are objects that allow users to interact with something in the environment, such as opening a door.
+Players will buy items by clicking on the shop rather than just touching it. The script will use a click detector to tell if a player has clicked the shop sign. **ClickDetectors** are objects that allow users to interact with something in the environment, such as opening a door.
 
 1. In the BuyButton, add a ClickDetector.
 
@@ -151,9 +151,12 @@ Before selling the player the upgrade, you need to check if they have enough mon
       print("Someone clicked the button")
       -- Get's the player's leaderboard to get other IntValues
       local playerStats = player:FindFirstChild("leaderstats")
-      -- Gets the player's money and spaces to make changes
-      local playerGold = playerStats:FindFirstChild("Gold")
-      local playerSpaces = playerStats:FindFirstChild("Spaces")
+
+      if playerStats then
+         -- Gets the player's money and spaces to make changes
+         local playerGold = playerStats:FindFirstChild("Gold")
+         local playerSpaces = playerStats:FindFirstChild("Spaces")
+      end
    end
    ```
 
@@ -166,12 +169,15 @@ Before selling the player the upgrade, you need to check if they have enough mon
    ```lua
    local function giveUpgrade(player)
       local playerStats = player:FindFirstChild("leaderstats")
-      local playerGold = playerStats:FindFirstChild("Gold")
-      local playerSpaces = playerStats:FindFirstChild("Spaces")
 
-      -- Checks if player has enough money to afford the upgrade
-      if playerGold.Value >= upgradeCost then
+      if playerStats then
+         local playerGold = playerStats:FindFirstChild("Gold")
+         local playerSpaces = playerStats:FindFirstChild("Spaces")
 
+         -- Checks if player has enough money to afford the upgrade
+         if playerGold and playerSpaces and playerGold.Value >= upgradeCost then
+
+         end
       end
    end
    ```
@@ -179,7 +185,7 @@ Before selling the player the upgrade, you need to check if they have enough mon
 3. In the if statement, subtract the upgrade's cost from the player's gold.
 
    ```lua
-   if playerGold.Value >= upgradeCost then
+   if playerGold and playerSpaces and playerGold.Value >= upgradeCost then
       -- Subtract the item's cost from the player's money
       playerGold.Value -= upgradeCost
    end
@@ -188,7 +194,7 @@ Before selling the player the upgrade, you need to check if they have enough mon
 4. On the next line, add the number of the player's current spaces along with the new spaces granted per upgrade.
 
    ```lua
-   if playerGold.Value >= upgradeCost then
+   if playerGold and playerSpaces and playerGold.Value >= upgradeCost then
       playerGold.Value -= upgradeCost
       playerSpaces.Value += newSpaces
    end
@@ -223,17 +229,20 @@ local function giveUpgrade(player)
 	print("Someone clicked the button")
 	-- Get's the player's leaderboard to get other IntValues
 	local playerStats = player:FindFirstChild("leaderstats")
-	-- Gets the player's money and spaces to make changes
-	local playerGold = playerStats:FindFirstChild("Gold")
-	local playerSpaces = playerStats:FindFirstChild("Spaces")
 
-	-- Checks if player has enough money to afford the upgrade
-	if playerGold.Value >= upgradeCost then
-		print("Player can buy item")
-		-- Subtract the item's cost from the player's money
-		playerGold.Value -= upgradeCost
-		playerSpaces.Value += newSpaces
-	end
+   if playerStats then
+      -- Gets the player's money and spaces to make changes
+      local playerGold = playerStats:FindFirstChild("Gold")
+      local playerSpaces = playerStats:FindFirstChild("Spaces")
+
+	   -- Checks if player has enough money to afford the upgrade
+      if playerGold and playerSpaces and playerGold.Value >= upgradeCost then
+      	print("Player can buy item")
+      	-- Subtract the item's cost from the player's money
+         playerGold.Value -= upgradeCost
+         playerSpaces.Value += newSpaces
+      end
+   end
 end
 
 clickDetector.MouseClick:Connect(giveUpgrade)
