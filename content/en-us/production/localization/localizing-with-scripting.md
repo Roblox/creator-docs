@@ -391,8 +391,6 @@ function TranslationHelper.translate(text, object)
 	if not object then
 		object = game
 	end
-	local translation = ""
-	local foundTranslation = false
 	if foundPlayerTranslator then
 		return playerTranslator:Translate(object, text)
 	end

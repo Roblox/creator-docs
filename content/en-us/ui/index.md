@@ -3,7 +3,7 @@ title: UI
 description: User Interfaces are graphical elements in your experience that users interact with.
 ---
 
-You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in GUI [elements](#elements) and their [containers](#containers).
+You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in GUI [objects](#objects) and their [containers](#containers).
 
 ## Containers
 
@@ -11,7 +11,7 @@ Container objects such as [frames](#frames) hold and display UI elements. Depend
 
 ### Frames
 
-Frames act as containers for other `Class.GuiObject|GuiObjects`, such as [TextLabels](../ui/labels.md#textlabels) or [TextButtons](../ui/buttons.md#textbuttons). When you manipulate frames, you also manipulate the objects they contain.
+Frames act as containers for other `Class.GuiObject|GuiObjects` such as [Labels](../ui/labels.md) or [Buttons](../ui/buttons.md). When you manipulate frames, you also manipulate the objects they contain.
 
 <img src="../assets/ui/container-frames/Frame-Example.jpg" width="80%" />
 
@@ -27,7 +27,7 @@ Frames act as containers for other `Class.GuiObject|GuiObjects`, such as [TextLa
 
 <img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="80%" />
 
-## Elements
+## Objects
 
 Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common `Class.GuiObject|GuiObjects` are [frames](#frames), [labels](#labels), [buttons](#buttons-and-text-input), and [text input](#buttons-and-text-input) objects.
 
@@ -37,13 +37,13 @@ Using the `Class.GuiObject.Position|Position`, `Class.GuiObject.Size|Size`, `Cla
 
 ### Labels
 
-Labels allow you to display customizable [text](../ui/labels.md#textlabels) and [images](../ui/labels.md#imagelabels).
+Labels allow you to display customizable [text](../ui/labels.md) and [images](../ui/labels.md).
 
 <img src="../assets/ui/labels/Labels-Example.jpg" width="80%" />
 
 ### Buttons and Text Input
 
-Button objects, such as [TextButtons](../ui/buttons.md#textbuttons) or [ImageButtons](../ui/buttons.md#imagebuttons), allow a user to perform an action, while [TextBox](../ui/buttons.md#textboxes) objects allow a user to input text. You can customize these objects to provide context and prompts for what you want a user to do.
+[Button](../ui/buttons.md) objects allow users to prompt an action while [Text Input](../ui/text-input.md) objects allow users to input text. You can customize these objects to provide context and prompts for what you want a user to do.
 
 <img src="../assets/ui/button-text-input/TextBox-Example.jpg" width="80%" />
 
@@ -51,7 +51,13 @@ Button objects, such as [TextButtons](../ui/buttons.md#textbuttons) or [ImageBut
 
 [Proximity Prompts](../ui/proximity-prompts.md) are unique built-in UI objects which prompt user interaction to trigger an action when they approach in-experience objects such as doors, light switches, and buttons.
 
-<video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="80%"></video>
+<video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="80%" alt="Proximity prompts used in a variety of implementations in the 3D world"></video>
+
+### Drag Detectors
+
+[Drag Detectors](../ui/drag-detectors.md) encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
+
+<video src="../assets/input/drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
 
 ## Layout and Design
 
@@ -76,18 +82,3 @@ UI [rich text](../ui/rich-text.md) utilizes simple markup tags to style sections
   <img src="../assets/ui/rich-text/Example-Small-Caps.png" />
   <img src="../assets/ui/rich-text/Example-Underline.png" />
 </GridContainer>
-
-## Chat
-
-### Bubble Chat
-
-The built-in **bubble chat** system enables the display of customizable chat bubbles above avatars and NPCs. Key features include:
-
-- Animated transitions for improved engagement.
-- Numerous customization options, including bubble duration, text and background color, the distance in which bubbles minimize or hide, and much more.
-- Ability to define unique bubble styles per-user or NPC.
-
-<figure>
-  <video src="../assets/ui/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="80%"></video>
-  <figcaption>Two players chatting while bubble chat is enabled</figcaption>
-</figure>

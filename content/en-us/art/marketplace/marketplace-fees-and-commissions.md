@@ -1,7 +1,7 @@
 ---
 title: Marketplace Fees and Commissions
 description: Explains upload fees and commission from selling accessories and clothes on the Marketplace.
-comments: Don't open source this file. Be wary on editing content on this page! This page has gone through legal / economy / marketplace product updates and may be subject to changes as the policies/processes evolve and grow.
+comments: Updates to this page require careful internal review. We generally don't accept pull requests on it.
 ---
 
 <Alert severity = 'warning'>

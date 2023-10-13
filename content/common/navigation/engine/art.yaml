@@ -22,9 +22,9 @@ navigation:
   - heading: Animation
     section:
   - title: Exporting Animations from Maya
-    path: /art/characters/exporting-avatar-animations-from-maya.md
+    path: /art/characters/exporting-avatar-animations-from-maya
   - title: Animating Heads
-    path: /art/characters/facial-animation/animating-heads.md
+    path: /art/characters/facial-animation/animating-heads
   - heading: Environment and Lighting
   - title: Assembling Modular Environments
     path: /tutorials/3D-art/assembling-modular-environments

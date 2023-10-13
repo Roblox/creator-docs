@@ -1,6 +1,6 @@
 ---
-title: Basic Clothing Creation
-description: This tutorial covers the basic steps required in Blender to Studio-ready clothing assets from scratch.
+title: Rigging
+description: Covers the process of rigging a custom clothing asset in Blender.
 next: /art/accessories/creating/caging
 prev: /art/accessories/creating/texturing
 ---

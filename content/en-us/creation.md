@@ -3,11 +3,9 @@ title: Creation Overview
 description: Learn everything you need to know about creating on Roblox.
 next: /tutorials/first-experience
 prev: /platform
-banner:
-  title: Creation Overview
-  subtitle: Learn everything you need to know about creating on Roblox.
-  backgroundUrl: ../../assets/landing/guides/banner.jpg
 ---
+
+**Learn everything you need to know about creating on Roblox.**
 
 If you're new to developing Roblox experiences, read these guides for a tour of
 Roblox creation before diving into the product documentation and tutorials.

@@ -5,7 +5,7 @@ description: The Script tab contains tools for writing, testing, and debugging s
 
 The **Script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
 
-<img alt="Script tab in the Toolbar" src="../assets/studio/general/Toolbar-Script-Tab.png" width="928px" />
+<img src="../assets/studio/general/Toolbar-Script-Tab.png" width="888" alt="Script tab indicated in Studio toolbar" />
 
 ## Clipboard
 
@@ -26,12 +26,12 @@ The **Navigate** section lets you quickly jump between any open script.
 <tbody>
   <tr>
     <td>**Back**</td>
-	<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>-</kbd></td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>-</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>-</kbd>&nbsp;(macOS)</td>
     <td>Navigates to the previous open script.</td>
   </tr>
   <tr>
     <td>**Fwd**</td>
-	<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>=</kbd></td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>=</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>=</kbd>&nbsp;(macOS)</td>
     <td>Navigates to the next open script.</td>
   </tr>
 </tbody>
@@ -41,7 +41,7 @@ The **Navigate** section lets you quickly jump between any open script.
 
 The **Edit** section lets you search and edit any part of the script, as well as select instances within the [Explorer](../studio/explorer.md) window for bulk actions. See [Studio Shortcuts](../studio/shortcuts.md#script-editor) for default shortcuts tied to these actions.
 
-<img alt="Edit Tools in Script Tab" src="../assets/studio/general/Script-Tab-Edit-Tools.png" width="928px" />
+<img src="../assets/studio/general/Script-Tab-Edit-Tools.png" width="888" alt="Edit tools indicated in Script tab" />
 
 <table>
 <thead>
@@ -88,7 +88,7 @@ The **Edit** section lets you search and edit any part of the script, as well as
 
 The **Format** section lets you format sections or the entirety of the script for readability. The dropdown lets you select either **Format Selection** or **Format Document**.
 
-<img alt="Format options in Script tab" src="../assets/studio/general/Script-Tab-Format-Options.png" width="928px" />
+<img src="../assets/studio/general/Script-Tab-Format-Options.png" width="888" alt="Format options indicated in Script tab" />
 
 <table>
 <thead>
@@ -101,7 +101,7 @@ The **Format** section lets you format sections or the entirety of the script fo
 <tbody>
   <tr>
     <td>**Format Selection**</td>
-	<td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td>
+	<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Windows)<br /><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(macOS)</td>
     <td>Formats the currently selected portion of the script with proper layout and indentation.</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ The **Format** section lets you format sections or the entirety of the script fo
 
 There are three common options for playtesting an experience. Click the button to start a playtest of that type, or click the small arrow below the button to choose another option.
 
-<img alt="Playtest options in Script tab" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="541" />
+<img src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="888" alt="Playtest options in Script tab" />
 
 <table>
   <thead>
@@ -168,7 +168,7 @@ Once a playtest is running, the following options become available:
   </tr>
   <tr>
     <td>**Stop**</td>
-    <td><kbd>Shift</kbd>+<kbd>F5</kbd></td>
+    <td><kbd>Shift</kbd><kbd>F5</kbd></td>
     <td>Stops simulation of the experience and resets all objects and instances to how they were before **Play**, **Play Here**, or **Run** was clicked.</td>
   </tr>
 </tbody>
@@ -178,7 +178,7 @@ Once a playtest is running, the following options become available:
 
 The **Debugger** section lets you control the [debugger](../studio/debugging.md).
 
-<img alt="Debugging tools in Script tab" src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="928px" />
+<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="888" alt="Debugging tools indicated in Script tab"/>
 
 <table>
 <thead>
@@ -201,7 +201,7 @@ The **Debugger** section lets you control the [debugger](../studio/debugging.md)
   </tr>
   <tr>
     <td>**Step Out**</td>
-    <td><kbd>Shift</kbd> + <kbd>F11</kbd></td>
+    <td><kbd>Shift</kbd><kbd>F11</kbd></td>
     <td>Moves the debugger out of the current function and to the next line of code after the function was initially called. If the current line is not inside a function, the debugger moves to the next line.</td>
   </tr>
 </tbody>
@@ -252,7 +252,7 @@ The **Actions** section at the furthest right contains miscellaneous script acti
   </tr>
   <tr>
     <td>**Reload Script**</td>
-	<td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>R</kbd></td>
+	<td><kbd>Ctrl</kbd><kbd>R</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>R</kbd>&nbsp;(macOS)</td>
     <td>Applies any changes that have been made to a script to the active playtest. The changes are not saved to the script outside of the playtest unless your Studio settings are set to auto-save runtime script changes or you confirm to save the changes upon stopping the playtest. This action is only available while playtesting.</td>
   </tr>
   <tr>
@@ -262,17 +262,17 @@ The **Actions** section at the furthest right contains miscellaneous script acti
   </tr>
   <tr>
     <td>**Toggle Comment**</td>
-	<td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>/</kbd></td>
+	<td><kbd>Ctrl</kbd><kbd>/</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>/</kbd>&nbsp;(macOS)</td>
     <td>Toggles whether a line of script is a comment or not.</td>
   </tr>
   <tr>
     <td>**Expand All Folds**</td>
-	<td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>E</kbd></td>
+	<td><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(macOS)</td>
     <td>Expands all collapsed folds in the script.</td>
   </tr>
   <tr>
     <td>**Collapse All Folds**</td>
-	<td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>E</kbd></td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(macOS)</td>
     <td>Collapses all foldable sections of the script.</td>
   </tr>
 </tbody>
