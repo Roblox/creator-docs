@@ -1,5 +1,4 @@
----
-title: Educator Onboarding
+this are obby game need to go stage 100 and  if you win, a party awaits you
 description: Learn how to get started teaching with Roblox in the classroom. Get your students to create accounts, learn lessons to use, and understand how to play.
 next: /education/educator-onboarding/1-intro-to-roblox
 prev:
