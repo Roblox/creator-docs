@@ -1,4 +1,4 @@
----
+obby game/go stage 100/win=party/---
 title: Environmental Art Tutorial Overview
 description: //
 next: /tutorials/environmental-art/greybox-your-environment
