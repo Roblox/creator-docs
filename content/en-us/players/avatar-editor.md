@@ -60,8 +60,7 @@ if result == Enum.AvatarPromptResult.Success then
   }
   local pagesObject = AvatarEditorService:GetInventory(assetTypes)
   local currentPage = pagesObject:GetCurrentPage()
-  for i = 1, #currentPage do
-    local item = currentPage[i]
+  for i, item in currentPage do
     print(item)
   end
 end
@@ -142,8 +141,7 @@ local pagesObject =
 --This function returns a CatalogPages object containing the results.
 AvatarEditorService:SearchCatalog(catalogSearchParams)
 local currentPage = pagesObject:GetCurrentPage()
-for i = 1, #currentPage do
-  local item = currentPage[i]
+for i, item in currentPage do
   print(item)
 end
 ```
@@ -168,10 +166,7 @@ local AvatarEditorService = game:GetService("AvatarEditorService")
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-  character = player.CharacterAdded:Wait()
-end
+local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 
 local currentDescription = humanoid:GetAppliedDescription()
@@ -196,10 +191,7 @@ local AvatarEditorService = game:GetService("AvatarEditorService")
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-  character = player.CharacterAdded:Wait()
-end
+local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 
 local currentDescription = humanoid:GetAppliedDescription()
