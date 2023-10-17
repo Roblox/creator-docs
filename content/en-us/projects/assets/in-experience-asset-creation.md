@@ -64,8 +64,9 @@ end
 PublishEvent.OnServerEvent:Connect(onUserPublish)
 ```
 
-[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit in Studio** option to reference the design.
-<img src="../../assets/in-experience-creation/edit-in-studio.jpg" width="90%" alt="A screenshot shows where to find the Edit in Studio option"/>
+[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit&nbsp;in&nbsp;Studio** option to reference the design.
+
+<img src="../../assets/misc/In-Experience-Creation-Place.jpg" width="90%" alt="Edit in Studio option from the demo experience's main page" />
 
 ## Post-Creation and Attribution
 
@@ -78,7 +79,7 @@ After users create and save an asset from your experience, they can find it in t
 
 When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
 
-<img src="../../assets/in-experience-creation/example-attribution.png" width="24%" alt="A screenshot shows the attribution of an in-experience creation"/>
+<img src="../../assets/creator-dashboard/In-Experience-Creation-Attribution.png" width="24%" alt="A screenshot shows the attribution of an in-experience creation"/>
 
 <Alert severity="warning">
 Attribution is currently tied to a specific version of the created asset. If a user saves a package from an experience and further edits in Studio to create a new version, attribution no longer displays for the new version.

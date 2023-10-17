@@ -147,13 +147,3 @@ Roblox relies on the information you provide in the Experience Questionnaire to 
   - If your experience otherwise has inaccurate Experience Guidelines according to its content, Roblox may remove the Experience Guidelines (or some or all of the descriptors if the age recommendation is 17+) from your experience. Roblox treats unrated experiences the same as experiences with an age recommendation of Ages 13+, meaning they are neither recommended to users under 9 nor playable by users with **Allowed Experiences** set to All Ages or 9+.
 
 Please review your experience and confirm that your answers accurately reflect the content of your experience. If you intentionally misrepresent your experience, you may be subject to moderation consequences.
-
-<figure>
-<img src="../../assets/promotion/Moderation-Notification.jpg" width="80%" />
-<figcaption>Moderation notification example</figcaption>
-</figure>
-
-<figure>
-<img src="../../assets/promotion/Moderation-Feedback.jpg" width="80%" />
-<figcaption>Creator Dashboard moderation feedback example</figcaption>
-</figure>

@@ -26,17 +26,18 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. Get the **Universe ID** of the experience in which you want to publish the place.
 
-   1. Navigate to the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard**.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience with the place that you want to update.
-   1. Hover over the thumbnail of the target experience and click the **...** button to display a list of options, then select **Copy Universe ID** from the list.
-      <img src="../../assets/open-cloud/copy-universeid.png" width="60%" />
+   1. Hover over the thumbnail of the target experience and click the **&ctdot;** button to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID** from the list.
+
+      <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
 
 1. Get the **Place ID** of the place that you want to update.
 
    1. Stay on the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard** and click the thumbnail of the target experience.
-   2. On the left navigation menu, click the **Places** tab.
-   3. Find the place that you want to update and click its thumbnail.
-   4. The **Place ID** is in the redirected URL. For example, in the URL `https://create.roblox.com/creations/experiences/0000000/places/111111/configure`, the **Place ID** is `111111`.
+   1. On the left navigation menu, click the **Places** tab.
+   1. Find the place that you want to update and click its thumbnail.
+   1. The **Place ID** is in the redirected URL. For example, in the URL `https://create.roblox.com/creations/experiences/0000000/places/111111/configure`, the **Place ID** is `111111`.
 
 1. Add the API Key in the **x-api-key** header of a `POST` request to the API. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
 

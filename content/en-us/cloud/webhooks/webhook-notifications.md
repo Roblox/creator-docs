@@ -29,10 +29,13 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
 1. Click the dropdown menu on your account and select **Settings** from the list.
+
    <img src="../../assets/creator-dashboard/dashboard-settings.png" width="100%" alt="Account settings on Creator Dashboard" />
 
 1. From the **SETTINGS** menu, select **Webhooks**.
+
    <img src="../../assets/creator-dashboard/settings-menu-webhook.png" width="40%" alt="Webhooks settings on Creator Dashboard" />
+
 1. Click the **Add Webhook** button.
 1. Complete configuration fields, include:
    1. **Webhook URL**: Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
@@ -82,6 +85,7 @@ You can test whether the webhook you've configured can successfully receive noti
 1. Navigate to the [Webhooks](https://create.roblox.com/dashboard/settings/webhooks) configuration page on **Creator Dashboard**.
 1. Select the webhook you want to test from the list of configured webhooks.
 1. Click the pencil icon next to the target webhook.
+
    <img src="../../assets/creator-dashboard/example-webhook.png" width="80%" alt="The pencil icon next to an example webhook" />
 
 1. Click the **TEST RESPONSE** button.
@@ -148,7 +152,8 @@ To verify a signature:
 1. Extract the timestamp value from the `Timestamp` footer of the notification.
 
 1. Extract the message body from the notification. For the following example notification, the message body is `You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ`.
-   <img src="../../assets/webhooks/example-message-body.png" width="50%" alt="Example message body on Guilded"/>
+
+   <img src="../../assets/misc/Webhooks-Example-Message-Body.png" width="50%" alt="Example message body on Guilded"/>
 
 1. Concatenate the timestamp value and the message with a period character in the format as: `168487229.You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ`.
 

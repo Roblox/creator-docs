@@ -286,7 +286,7 @@ To add a keyframe for a single part of the rig:
 1. Navigate to the **timeline**, then move the **scrubber** to a new
    position.
 2. In the **track list**, navigate to the part's **track** and click
-   the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+   the **&ctdot;** button. A contextual menu displays.
 
    <img
    src="../assets/animation/animation-editor/Track-List-Track-Options.png"
@@ -381,9 +381,9 @@ During animating, you can use the Animation Editor's **Keyframe Optimization** t
 
 While using the slider, you can preview the animation and scrub through the timeline to check your animation but you can not perform editing operations, such as changing keyframe values or adding tracks.
 
-To access the Optimize Keyframes tool:
+To access the **Optimize Keyframes** tool:
 
-1. In the **Animation Editor**, click **...** button and select **Optimize Keyframes**. A dialog box with a slider displays.
+1. In the **Animation Editor**, click ****&ctdot;**** button and select **Optimize Keyframes**. A dialog box with a slider displays.
 
    <img
     alt="Optimize Keyframes"
@@ -534,7 +534,7 @@ Roblox uses seven levels of priority, ordered here from highest to lowest:
 To set an animation to a different priority:
 
 1. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A
+   and click the **&ctdot;** button. A
    contextual menu displays.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
@@ -551,7 +551,7 @@ When you save an animation, Studio saves it as a
 To save an animation:
 
 1. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A
+   and click the **&ctdot;** button. A
    contextual menu displays.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
@@ -623,7 +623,7 @@ To export an animation:
    3. Click the **Save** button.
 
 2. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button.
+   and click the **&ctdot;** button.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
    width="330" />

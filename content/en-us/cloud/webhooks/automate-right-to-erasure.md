@@ -19,7 +19,7 @@ Upon completing this tutorial, you should be able to create a locally-running cu
    </Alert>
 1. The bot responds to the webhook message in Discord or Guilded with the deletion status.
 
-<img src="../../assets/webhooks/bot-workflow.png" width="100%" />
+<img src="../../assets/misc/Webhooks-Bot-Workflow.png" width="100%" />
 
 ## Configuring a Webhook with Third-Party Integration
 
@@ -60,7 +60,7 @@ After obtaining the third-party server URL, use it to [configure a webhook](../.
 
 You can test the webhook using the **Test Response** button to see if you receive a notification in your server's **#general** channel from Roblox. If you don't receive the notification, try again or check your server settings to troubleshoot the error.
 
-<img src="../../assets/webhooks/sample-notification.png" width="50%" alt="Example notification on Guilded"/>
+<img src="../../assets/misc/Webhooks-Sample-Notification.png" width="50%" alt="Example notification on Guilded"/>
 
 ## Configuring a Bot
 
@@ -113,9 +113,9 @@ For the bot to locate the PII data requested by users for deletion, obtain the f
 - The **Universe ID**, the unique identifier of your experience.
 - The **Start Place ID**, the unique identifier of the start place of an experience.
 
-To obtain these identifiers, open the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard**. Then select an experience and copy the Universe ID and Start Place ID.
+To obtain these identifiers, open the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Place) page on **Creator Dashboard**. Then select an experience and copy the **Universe&nbsp;ID** and **Start&nbsp;Place&nbsp;ID**.
 
-<img src="../../assets/open-cloud/copy-universeid.png" width="40%" alt="User interface for copying the Universe ID and Start Place ID"/>
+<img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID-Start-Place-ID.png" width="420" alt="Interface showing Universe ID and Start Place ID in experience context menu" />
 
 ## Adding Scripts
 

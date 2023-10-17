@@ -11,11 +11,11 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 
 ## Geometry and Budgets
 
+- **Single Mesh** - Accessories must be a single mesh.
 - **Budgets** - Accessories can't exceed **4k** triangles.
 - **Texture Budget** - Texture maps can't exceed **1024x1024px**. Assets using additional maps with `Class.SurfaceAppearance` can use smaller **256x256px** maps to optimize performance with virtually no loss in detail.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
-- **No N-gons** - Models must be in quads where possible.
-
+- Use **quads** whenever possible. Avoid faces with 5 or more sides.
 - **Mesh Size** - Meshes must follow a standard size (in studs, centered on attachment point) depending on its type:
 
 <table>
@@ -97,7 +97,9 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
 
 ### Attachment Points
 
-Attachments are points on the accessory model that connect to another attachment of the same name on a character model. It is important that these are correctly applied so rigid accessories can attach to your models. Layered accessories also use attachment points to correctly associate with various body parts. See the following specifications for attachments:
+Attachments are points on the accessory model that connect to another attachment of the same name on a character model. When creating rigid accessories, accessory points are automatically created when using the Accessory Fitting Tool. Studio only recognizes third-party attachment objects when importing meshes with caging data, such as clothing or bodies.
+
+See the following specifications for attachments:
 
 - **One attachment** - Each accessory, including layered accessories, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
@@ -225,23 +227,4 @@ Your items must meet the following requirements before you upload them to the Ma
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
-- Your `Class.Accessory` instance does not contain extraneous objects, like `Class.Script` or additional `Class.Part` instances. Your `Class.Accessory` hierarchy must closely resemble one of the following examples:
-
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../../assets/accessories/Rigid-Accessory-Example.png" />
-    <figcaption>Rigid accessory hierarchy.</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/accessories/Rigid-Accessory-With-Thumbnail-Example.png" />
-    <figcaption>Rigid accessory hierarchy with [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md).</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/accessories/Layered-Accessory-Example.png" />
-    <figcaption>Layered accessory hierarchy with [SurfaceAppearance](../../art/modeling/surface-appearance.md) and [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md).</figcaption>
-  </figure>
-</GridContainer>
-
-<Alert severity ='info'>
-Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support `Class.SurfaceAppearance`.
-</Alert>
+- Your `Class.Accessory` instance does not contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.

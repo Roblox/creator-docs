@@ -7,6 +7,8 @@ navigation:
     path: /art/accessories/
   - title: Specifications
     path: /art/accessories/specifications
+  - title: Body Scale
+    path: /art/accessories/body-scale
   - title: Reference Files
     path: /art/accessories/project-files
   - title: Export Settings
