@@ -25,6 +25,8 @@ Apply the following to simplify the UI design for consoles:
 
 - **Minimal controller input complexity**: Unlike tappable or clickable input methods, console users navigate by pressing one button at a time, so an action that takes one move on other devices might take extra moves with a controller. Make sure that key actions in your experience only take a few moves to access.
 
+- **No Chat Window**: Regardless of whether you use the default in-experience text chat system or fork the legacy chat system as your custom chat system, [disable the chat window](../../chat/customizing-in-experience-text-chat.md#chat-window-configuration) for console experiences.
+
 <Alert severity="info">
 As controllers aren't just for consoles and VR but also are available on devices such as desktop and mobile, minimizing the number of moves needed can enhance the UI for all devices and input types in addition to PlayStation and Xbox.
 </Alert>
