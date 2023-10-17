@@ -177,7 +177,7 @@ railings. All other objects like candles and bookshelves are `Class.MeshPart`
 objects. For more information, see [Meshes](../parts/meshes.md) and [External
 Modeling](/art/modeling).
 
-<img src="../assets/developing-on-roblox/building-best-practices-exampleParts.jpg" />
+<img src="../assets/misc/Building-Best-Practices-Example-Parts.jpg" />
 
 ### Default Materials
 

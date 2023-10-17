@@ -77,7 +77,7 @@ The `Class.StarterPlayer.DevCameraOcclusionMode|DevCameraOcclusionMode` property
 </table>
 
 <figure>
-  <video controls src="../assets/workspace/Camera-Occlusion.mp4" width="90%" alt="Camera occlusion mode: Zoom vs. Invisicam"></video>
+  <video controls src="../assets/workspace/camera/Camera-Occlusion.mp4" width="90%" alt="Camera occlusion mode: Zoom vs. Invisicam"></video>
   <figcaption>**Zoom** and **Invisicam** occlusion modes</figcaption>
 </figure>
 

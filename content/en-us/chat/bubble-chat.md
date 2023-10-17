@@ -5,7 +5,7 @@ description: The text chat system allows users to communicate and socialize with
 
 With the [in-experience text chat](../chat/in-experience-text-chat.md) system, you can support **bubble chat** to display customizable speech chat bubbles above user avatars and NPCs. Bubble chat can make your experience more visually immersive and help users easily identify messages and their speakers in a contextually relevant manner. This feature is especially useful for experiences where users need to focus on the content in the meantime communicating with others in a less obtrusive way.
 
-<video src="../assets/ui/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="100%"></video>
+<video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="100%"></video>
 
 ## Bubble Chat Configuration
 
@@ -13,17 +13,17 @@ To enable bubble chat in your experience:
 
 1. In the [Explorer](../studio/explorer.md) window, select **BubbleChatConfiguration** under **TextChatService**.
 
-   <img src="../assets/ui/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
 2. In the [Properties](../studio/properties.md) window, check the **Enabled** checkbox under the **Behavior** category.
 
-   <img src="../assets/ui/in-experience-text-chat/TextChatService-BubbleChatConfiguration-Enabled.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration-Enabled.png" width="320" />
 
 ## Bubble Customization
 
 After enabling bubble chat, you can customize the appearance and behavior of your chat bubbles to match your experience theme. Use the [Properties](../studio/properties.md) window of **BubbleChatConfiguration** for [basic](#basic-customization) changes like text color and spacing. For [advanced](#advanced-customization) customization, such as adding background images for bubbles, add UI objects as children of **BubbleChatConfiguration** and then modify these objects.
 
-<img src="../assets/ui/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
+<img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
 Alternatively, you can add a `Class.LocalScript` in `Class.StarterPlayerScripts` with all your customization settings. This allows the engine to apply your customizations during runtime, overriding the settings in Studio. It's useful for adding special effects to chat bubbles when users trigger certain events or conditions.
 
@@ -108,7 +108,7 @@ The following table shows common bubble chat customization properties. For a ful
 	</tr>
 	<tr>
 		<td>`Class.BubbleChatConfiguration.MinimizeDistance|MinimizeDistance`</td>
-		<td>Distance from the camera when bubbles turn into a single bubble with an ellipsis&nbsp;(<span style={{fontWeight:"800"}}>&ctdot;</span>) to indicate chatter.</td>
+		<td>Distance from the camera when bubbles turn into a single bubble with an ellipsis&nbsp;(**&ctdot;**) to indicate chatter.</td>
 		<td>40</td>
 	</tr>
 	<tr>
@@ -165,7 +165,7 @@ ImageLabel.SliceCenter = Rect.new(40, 40, 360, 160)
 ImageLabel.SliceScale = 0.5
 ```
 
-<img src="../assets/ui/in-experience-text-chat/advanced-bubble.png" width="300" />
+<img src="../assets/players/in-experience-text-chat/Advanced-Bubble.png" width="300" />
 
 The following tables include all available properties for customization:
 
@@ -350,7 +350,7 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 end
 ```
 
-<video src="../assets/ui/in-experience-text-chat/vip-bubble.mp4" controls width="90%"></video>
+<video src="../assets/players/in-experience-text-chat/VIP-Bubble.mp4" controls width="90%"></video>
 
 ### Available Options
 
@@ -431,7 +431,7 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 end
 ```
 
-<video src="../assets/ui/in-experience-text-chat/low-health-bubble.mp4" controls width="90%"></video>
+<video src="../assets/players/in-experience-text-chat/Low-Health-Bubble.mp4" controls width="90%"></video>
 
 ## NPC Bubbles
 

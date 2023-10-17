@@ -35,7 +35,7 @@ If you previously set the maximum number of users in a place to more than 50, yo
 To set the maximum number of users:
 
 1. In the left-hand navigation of the **Game Settings** dialog, select **Places**. Every place within your experience displays.
-2. Click the **...** button next to the place with more than 50 players, then select **Edit**.
+2. Click the **&ctdot;** button next to the place with more than 50 players, then select **Edit**.
 3. In the **Max Players** field, type in any number **equal to or less than 50**.
 4. Click the **Save** button.
 

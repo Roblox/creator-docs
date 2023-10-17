@@ -3,7 +3,7 @@ title: Audio Assets
 description: Audio Assets are sounds you can use in your experience.
 ---
 
-You can [find](#finding-audio-assets) a variety of free-to-use audio assets on the Creator Marketplace, or you can [import custom audio](#importing-custom-audio) that you are certain you have permission to use, such as audio you make yourself. By default, the [audio asset privacy system](#audio-asset-privacy-system) ensures that asset IDs from the assets you import are private and only available to you within the [Asset Manager](../projects/assets/manager.md) and [Toolbox](../projects/assets/toolbox.md), but you can also [view](#viewing-permissions) and [grant permissions](#granting-permissions) to specific experiences to use them.
+You can [find](#finding-audio-assets) a variety of free-to-use audio assets on the Creator Marketplace, or you can [import custom audio](#importing-custom-audio) that you are certain you have permission to use, such as audio you make yourself. By default, the [audio asset privacy system](#audio-asset-privacy-system) ensures that asset IDs from the assets you import are private and only available to you within the [Asset Manager](../projects/assets/manager.md) and [Toolbox](../projects/assets/toolbox.md), but you can also view and grant permissions to specific experiences to use them.
 
 ## Finding Audio Assets
 
@@ -72,7 +72,7 @@ To import one or more audio files:
 
    <img src="../assets/studio/asset-manager/Audio-Import.png" width="360" />
 
-Your audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the [Asset Manager](../projects/assets/manager.md) and in the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view, use, and download your private audio asset, the audio asset privacy system allows you to [view](#viewing-permissions) and [grant](#granting-permissions) permissions to specific experiences to use your assets.
+Your audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the [Asset Manager](../projects/assets/manager.md) and in the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view, use, and download your private audio asset, the audio asset privacy system allows you to view and grant permissions to specific experiences to use your assets.
 
 ### Troubleshooting
 
@@ -82,56 +82,47 @@ If Studio continues to reject the audio you are trying to import, ensure you're 
 
 ## Audio Asset Privacy System
 
-The **audio asset privacy system** lets you control how other users can use your audio assets on Roblox. There are two types of asset privacy statuses any asset can have: **public** and **private**. Users can use a public audio asset in any experience, such as the free-to-use endorsed audio assets on the Creator Marketplace, but for private audio assets the creator must [grant](#granting-permissions) permission to each individual experience that wants to use it.
+The **audio asset privacy system** lets you control how other users can use your audio assets on Roblox. There are two audio asset privacy statuses:
 
-<Alert severity="info">
-  The privacy of the audio assets you import protects the file contents of the asset from unauthorized reuse but other users can still see its metadata, such as its name and description.
-</Alert>
+- **Public** — Creators can use a public audio asset in any experience, such as the free‑to‑use endorsed audio assets on the [Creator Marketplace](../production/publishing/creator-marketplace.md).
+- **Private** — You must [grant permission](#granting-permission) to each experience that wants to use the asset. If an experience doesn't have permission to use an audio asset, it cannot load in that experience and an error message displays in the [Output](../studio/output.md) window:
 
-### Viewing Permissions
+   <img src="../assets/audio/audio-assets/Output-Window-Load-Error.png" width="800" />
 
-An audio asset's configure page displays every experience and their owner that has permission to use the audio asset. If an experience doesn't have permission to use an audio asset, it can't load in that experience and an [error message](#studio) displays.
+   <Alert severity="info">
+   The privacy of imported audio assets protects the file contents of the asset from unauthorized reuse, but other users can still see its metadata, such as its name and description.
+   </Alert>
 
-To view permissions on an audio asset's configure page:
+### Granting Permission
 
-1. Navigate to [Roblox.com/develop](https://www.roblox.com/develop).
-2. (Optional) If you want to view a group creation's audio asset configure page, in the horizontal navigation, select **Group Creations**.
-3. In the vertical navigation, select **Audio**.
-4. To the right of the audio asset you want to view permissions for, click the **Gear** icon. A pop-up menu displays.
-5. Select **Configure**. The asset's configure page displays.
+The audio asset privacy system in an unpublished place can check if you're the creator of the audio asset, but it can't check for audio asset permissions because there isn't an experience yet. To grant permissions on the Roblox site or within Studio, you must first publish your experience.
 
-### Granting Permissions
+#### Per Audio Asset
 
-The audio asset privacy system in an unpublished place can check if you're the creator of the audio asset, but it can't check for audio asset permissions because there isn't an experience yet. To grant permissions on the [Roblox site](#roblox-site) or within [Studio](#studio), you must first [publish your experience](../production/publishing/publishing-experiences-and-places.md#publishing-a-starting-place).
+Through the [Creator Dashboard][creatordashboard], you can grant permission to specific experiences to use an audio asset owned by you or a [group](../projects/groups.md) you belong to.
 
-#### Roblox Site
+To grant audio asset permission to one or more experiences:
 
-You can grant audio asset permissions to any experience that you can edit. To grant audio asset permissions to an experience on the Roblox site:
+1. Visit the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Audio) page, sorted by [AUDIO](https://create.roblox.com/dashboard/creations?activeTab=Audio).
+2. In the list of audio assets below the upload widget, click the asset for which to grant permission.
+3. In the **Experiences with Access** section, enter the **Universe&nbsp;IDs** of the experiences you want to grant permission to, separating multiple IDs with commas.
 
-1. Retrieve the **universeID** of any of your experiences that you want to grant permission to use your audio asset.
-   1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations). Every experience you have created displays.
-   1. Right-click on an experience. A pop-up menu displays.
-   1. Select **Copy Universe ID**.
-2. Navigate to the [audio asset's configure page](#viewing-permissions).
-3. In the **Sharing** section, enter the **universeID** in the **Enter Universe IDs** field.
+   <img src="../assets/creator-dashboard/Audio-Asset-Permission-IDs.png" width="750" />
 
-   <img src="../assets/audio/audio-assets/Granting-Permissions-Roblox-Site.jpg" width="90%" />
+4. Click the **SAVE CHANGES** button at the bottom of the screen to complete the process.
 
-4. (Optional) If you want to grant access to multiple experiences at a time, delimit the universeIDs with commas. For example: universeId1, universeId2, universeId3
-5. Click the **Provide Access** button.
+#### Through Place Publishing
 
-#### Studio
+When you [publish a place](../production/publishing/publishing-experiences-and-places.md) containing any private audio assets to a **new** experience, a popup displays with options on how to manage those assets:
 
-The experience you're working on in Studio receives permission to use an audio asset when you:
+<figure>
+<img src="../assets/audio/audio-assets/Granting-Permissions-Publish.png" width="840" />
+</figure>
 
-- [Import the audio asset](#importing-custom-audio) to the [Asset Manager](../projects/assets/manager.md).
-- Insert the audio asset from the **Inventory**, **Recent**, or **Creation** tabs of the [Toolbox](../projects/assets/toolbox.md).
-- [Insert the audio asset](../sound/objects.md) into a `Class.Sound` object.
+If you are qualified to grant permission to the new experience&nbsp;&mdash; for example if both experiences are owned by you or [groups](../projects/groups.md) you belong to&nbsp;&mdash; the **Grant&nbsp;All&nbsp;Permissions** option grants the new experience permission to use the private audio assets.
 
-When you [publish a place](../production/publishing/publishing-experiences-and-places.md#publishing-a-starting-place) to a new experience, a pop-up menu displays to let you grant permission to the new experience to use all private audio assets within that place **if you are the asset creator**.
+If you are **not** qualified to grant permission to the new experience, you can still proceed to publish, but the new experience will not gain access to the assets and an error message will appear in the [Output](../studio/output.md) window:
 
-<img src="../assets/audio/audio-assets/Granting-Permissions-Publish.jpg" width="60%" />
+<img src="../assets/audio/audio-assets/Output-Window-Grant-Error.png" width="800" />
 
-If an audio asset otherwise fails to load for permission reasons, the [Output](../studio/output.md) window displays an error that you can click on to open a pop-up menu that lets you grant permission to your experience to use that audio asset
-
-<img src="../assets/audio/audio-assets/Granting-Permissions-Error.jpg" width="80%" />
+[creatordashboard]: https://create.roblox.com/dashboard/creations

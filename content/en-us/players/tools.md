@@ -17,7 +17,7 @@ You can create a new tool object with the following steps:
 
 2. Select **Tool** under the **Interaction** category.
 
-   <img src="../assets/mechanics/in-experience-tools/Create-New-Tool.png" width="45%" />
+   <img src="../assets/players/in-experience-tools/Create-New-Tool.png" width="45%" />
 
 ### Adding Parts or Meshes
 
@@ -33,7 +33,7 @@ If you want to create a tool without adding parts or meshes, you can [create it 
 
 To enable users to carry tools around, you need to set a `Class.Part` and name it `Handle` for attaching to the user's hand. The following example shows a magic wand with three parts: a glowing tip, the main body, and a red handle. When a user equips the wand, they hold it at the `Class.Part` named `Handle`.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-Wand-Handle-Focus.jpeg" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-Wand-Handle-Focus.jpeg" width="45%" />
 
 Make sure to have only one `Class.Part` named `Handle`. If you name multiple `Class.Part|Parts` as `Handle`, the tool randomly picks one of them as the hand attachment point that might cause issues such as users holding blades of swords instead of hilts.
 
@@ -45,21 +45,21 @@ The `Handle` must be a **direct child** of the tool object. Do not nest it insid
 
 If your tool's grip orientation is incorrect, such as dragging on the ground or facing backwards, you can fix it by adjusting **Grip** properties under the **Appearance** category in the **Properties** window.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-Grip-Properties.png" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-Grip-Properties.png" width="45%" />
 
 Since the ideal grip orientation for every tool is different, you need to experiment with changing the values next to the **GripForward**, **GripRight**, and **GripUp** properties until your tool's grip looks correct. The following example shows possible incorrect and correct grips for a magic wand:
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/mechanics/in-experience-tools/Tool-Grip-Dragging.jpeg" />
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Dragging.jpeg" />
     <figcaption>Tool dragging on ground</figcaption>
   </figure>
   <figure>
-    <img src="../assets/mechanics/in-experience-tools/Tool-Grip-Backwards.jpeg" />
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Backwards.jpeg" />
     <figcaption>Tool facing backwards</figcaption>
   </figure>
   <figure>
-    <img src="../assets/mechanics/in-experience-tools/Tool-Grip-Correct.jpeg" />
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Correct.jpeg" />
     <figcaption>Tool oriented correctly</figcaption>
   </figure>
 </GridContainer>
@@ -68,11 +68,11 @@ You can also enable user characters to offset tools from their hand with the **G
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/mechanics/in-experience-tools/Tool-Grip-Offset-Default.jpeg" />
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Offset-Default.jpeg" />
     <figcaption>Default offset (0,0,0)</figcaption>
   </figure>
   <figure>
-    <img src="../assets/mechanics/in-experience-tools/Tool-Grip-Offset-Shoulder.jpeg" />
+    <img src="../assets/players/in-experience-tools/Tool-Grip-Offset-Shoulder.jpeg" />
     <figcaption>Tool offset to shoulder</figcaption>
   </figure>
 </GridContainer>
@@ -81,7 +81,7 @@ You can also enable user characters to offset tools from their hand with the **G
 
 Tools that a user owns are stored in their `Class.Backpack`. Users can view the icon of each tool in their backpacks on an **action bar**:
 
-<img src="../assets/mechanics/in-experience-tools/Tool-Action-Bar.jpeg" width="90%" />
+<img src="../assets/players/in-experience-tools/Tool-Action-Bar.jpeg" width="90%" />
 
 In the tool's **Properties** window, use the following properties to customize the tool's appearance in the action bar:
 
@@ -96,7 +96,7 @@ By default, a user can drop a tool by pressing the **Backspace** key on Windows 
 
 You can also make an in-experience tool without parts or meshes as an inventory item that waits for user input, such as a magic spell that user characters can click others or touch the screen to cast it. Inventory item tools don't require handles, so you need to uncheck the **RequiresHandle** property in the tool's **Properties** window.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-RequiresHandle.png" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-RequiresHandle.png" width="45%" />
 
 ## Adding Tools to Your Experience
 
@@ -106,19 +106,19 @@ Once you finish setting up your in-experience tool, you need to place it in the 
 
 If you want all users to start out with a tool in their inventory, put it inside the **StarterPack** folder. When any user spawns, the system copies the tool to their backpack.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-StarterPack.png" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-StarterPack.png" width="45%" />
 
 ### Collectible Tool
 
 If you want to allow users to collect tools as they move, you can place the tools in the **Workspace** in the **Explorer** hierarchy. For example, you might want to place a super rocket launcher in a hard-to-reach area of your experience world.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-Workspace.png" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-Workspace.png" width="45%" />
 
 ### Earned and Purchased Tool
 
 If you want to set a tool as awards when a user does something special or offer it for sale in an in-experience store, put the tool inside **ServerStorage** in the **Explorer** hierarchy, which can clone the tool to the user's backpack at the proper time.
 
-<img src="../assets/mechanics/in-experience-tools/Tool-ServerStorage.png" width="45%" />
+<img src="../assets/players/in-experience-tools/Tool-ServerStorage.png" width="45%" />
 
 ## Adding Tools Effects
 
@@ -185,8 +185,8 @@ The following example shows steps for adding a `Class.Script` on the server that
 3. Playtest your experience by picking up the tool and then clicking anywhere on the screen of your experience to switch between day and night:
 
    <GridContainer numColumns="2">
-     <img src="../assets/mechanics/in-experience-tools/Tool-Time-Wand-Day.jpeg" />
-     <img src="../assets/mechanics/in-experience-tools/Tool-Time-Wand-Night.jpeg" />
+     <img src="../assets/players/in-experience-tools/Tool-Time-Wand-Day.jpeg" />
+     <img src="../assets/players/in-experience-tools/Tool-Time-Wand-Night.jpeg" />
    </GridContainer>
 
 ### Different Types of Scripts for Tools Implementation

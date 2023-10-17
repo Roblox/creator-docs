@@ -44,7 +44,7 @@ While PBR textures are not required for accessories, adding PBR textures can add
 
 To configure and link your PBR textures to your model:
 
-1. Download [Rigid_Mask_Textures.zip](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Textures.zip) and unzip the textures images locally.
+1. Download [Rigid_Mask_Textures.zip](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Textures.zip) and unzip the textures images locally in the same directory as your Blender project.
 2. In Blender, navigate to the **Shading** tab. Ensure that your object is selected.
 
    1. If you don't see the **PrincipledBSDF node**, select the **+New** button to create a new material.
