@@ -17,7 +17,7 @@ To import your asset:
       <img src="../../../assets/art/accessories/creating-rigid/3D-Importer.png" />
 
 3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance`.
-4. If textures didn't load correctly, add them manually:
+4. If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the Asset Manager.
 
    1. Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
    2. In the Asset Manager, and select the **Bulk Import** button.

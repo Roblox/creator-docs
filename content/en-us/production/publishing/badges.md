@@ -62,7 +62,7 @@ To locate a Badge ID:
 
 1. Navigate to the **Badges** section of an experience's **Associated Items** page.
 
-1. Hover over a Badge thumbnail and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+1. Hover over a Badge thumbnail and click the **&ctdot;** button. A contextual menu displays.
 
 1. Select **Copy Asset ID**. The Badge ID copies to your clipboard.
 

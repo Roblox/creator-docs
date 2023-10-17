@@ -138,7 +138,7 @@ To set a particle emitter's color sequence:
 
 2. In the **Properties** window, select the **Color** property.
 
-3. Click the **...** button. A color sequence pop-up displays.
+3. Click the **&ctdot;** button. A color sequence pop-up displays.
    By default, the color sequence is all white.
 
    <img

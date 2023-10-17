@@ -149,7 +149,7 @@ To test the animation in Studio:
 
 1. Import your avatar animation into the rig.
 
-   1. Navigate to the **Media and Playback Controls** and click the **...** button. A contextual menu displays.
+   1. Navigate to the **Media and Playback Controls** and click the **&ctdot;** button. A contextual menu displays.
    1. Hover over **Import**, then select **From FBX Animation**. A file browser displays.
 
       <img width="60%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Importing-From-FBX-Animation.jpg" />

@@ -15,7 +15,7 @@ Console experiences receive commands from users through input controllers, which
 
 ### Simplifying UI
 
-<img src="../../assets/console/ui-navigation.png" width="70%" />
+<img src="../../assets/publishing/console/UI-Navigation.png" width="70%" />
 
 Apply the following to simplify the UI design for consoles:
 
@@ -35,7 +35,7 @@ Unlike mobiles and desktops, navigation is always sequential on consoles, so use
 
 ### Accommodating Dynamic Button Icons
 
-<img src="../../assets/console/buttons.png" width="50%" />
+<img src="../../assets/publishing/console/Buttons.png" width="50%" />
 
 As your experience expands to more platforms, be sure to show button icons that match different devices. `Class.UserInputService` has two methods available that can achieve this:
 
@@ -70,7 +70,7 @@ As your experience expands to more platforms, be sure to show button icons that 
 
 ## Providing Haptic Feedback
 
-<img src="../../assets/console/haptic-feedback.png" width="60%" />
+<img src="../../assets/publishing/console/Haptic-Feedback.png" width="60%" />
 
 One unique advantage of controllers is the capability of providing haptic feedback by physically vibrating the controller to engage users' sense of touch. You can use `Class.HapticService` to enhance user immersion and provide useful feedback. Examples that can be more immersive with haptic feedback include:
 
@@ -82,14 +82,14 @@ One unique advantage of controllers is the capability of providing haptic feedba
 
 ## Building for the 10ft Experience
 
-<img src="../../assets/console/10-ft-experience.png" width="60%" />
+<img src="../../assets/publishing/console/10ft-Experience.png" width="60%" />
 
 When on consoles, users are typically sitting 10 feet away from the screen. A scale factor of 1.5x ensures that the UI is comfortable, easy to navigate, and with legible fonts.
 
 ### Considering TV Safe-Area
 
 <figure>
-  <img src="../../assets/console/tv-safe-area.png" width="60%" alt="An example illustration showing the dimensions of the TV-safe and unsafe zone."/>
+  <img src="../../assets/publishing/console/TV-Safe-Area.png" width="60%" alt="An example illustration showing the dimensions of the TV-safe and unsafe zone."/>
   <figcaption>The blue area represents the TV-unsafe zone.</figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ Implement your UI using relative sizes and relative positions to measure everyth
 
 ## Adapting Progressive Disclosure
 
-<img src="../../assets/console/progressive-disclosure.png" width="100%" />
+<img src="../../assets/publishing/console/Progressive-Disclosure.png" width="100%" />
 
 Progressive disclosure defers advanced or rarely used features to a secondary screen. It's one of the best ways to declutter your UI and make it easy to use. For the console UX, it's common and faster to have the user go in and out of screens rather than fitting everything onto one screen like designing for desktops.
 

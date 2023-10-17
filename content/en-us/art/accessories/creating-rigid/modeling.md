@@ -5,40 +5,13 @@ next: /art/accessories/creating-rigid/texturing
 prev: /art/accessories/creating-rigid/
 ---
 
-**Modeling** is the process of creating and shaping the 3D geometry of an object. Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../../art/marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
+**Modeling** is the process of creating and shaping the 3D geometry of an object. Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../../art/accessories/specifications.md), such as keeping your geometry as a single mesh within a polycount budget, and [policy requirements](../../../art/marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 
-Using the [reference mask asset](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Model-Only.fbx), this part of the tutorial covers important modeling concepts, such as [body scale](#body-scale), and the steps to correctly import and set up a pre-made 3D model into Blender's workspace. You can apply these concepts and steps to any rigid accessory, whether you are importing a custom model or sculpting your own from scratch.
+Using the [reference mask asset](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Model-Only.fbx), this part of the tutorial covers the steps to correctly import and set up a pre-made 3D model into Blender's workspace. You can apply these steps to any rigid accessory, whether you are importing a custom model or sculpting your own from scratch.
 
-## Body Scale
-
-Roblox supports three common avatar sizes, known as **Classic**, **Rthro**, and **Rthro Slender**. This standard sizing helps keep avatar characters consistent, allowing developers to create experiences and environments that can fit commonly sized character models.
-
-When modeling some rigid assets, like a helmet that contours around a character's head, it's important to use a mannequin to help ensure your proportions fit. The asset provided in this tutorial example was originally modeled using **Rthro** proportions.
-
-If you are modeling your asset, visit the [References resources](../../../avatar/resources.md#references) to download any of the following mesh mannequin:
-
-<GridContainer numColumns="3">
-<figure>
-    <img src="../../../assets/art/resources/Body-Scale-Classic.png" />
-<figcaption>
-Classic blocky body type. <br /><br /> Roughly 4.75 studs tall.
-</figcaption>
-</figure>
-<figure>
-    <img src="../../../assets/art/resources/Body-Scale-Rthro-Normal.png" />
-<figcaption>
-Rthro Normal body type. <br /><br /> Roughly 5.75-6.5 studs tall, with wider shoulders and narrower hips.
-</figcaption>
-</figure>
-<figure>
-    <img src="../../../assets/art/resources/Body-Scale-Rthro-Slender.png" />
-<figcaption>
-Rthro Slender body type. <br /><br /> Roughly 5.25-6.25 studs tall, with narrower shoulders and wider hips.
-</figcaption>
-</figure>
-</GridContainer>
-
-See [Accessory Specifications](../../../art/accessories/specifications.md#geometry-and-budgets) for specific range values and other geometry requirements.
+<Alert severity = 'warning'>
+If you are creating your rigid accessory from scratch, it's important to understand Roblox's various standard [body sizes and proportions](../../../art/accessories/body-scale.md), as well as ensure that your design follows [Roblox's policy ](../../../art/marketplace/marketplace-policy.md)and [technical](../../../art/accessories/specifications.md) requirements.
+</Alert>
 
 ## Blender Setup
 
@@ -53,12 +26,14 @@ To import and set up your rigid accessory model in Blender:
 
    <img src="../../../assets/art/accessories/creating-rigid/Blender-Scale-1.png" />
 
+   <video controls src="../../../assets/art/accessories/creating-rigid/Scaling-FBX-Import.mp4" width="100%"></video>
+
 5. If you are sculpting your asset from scratch, orient the object in your workspace. If you are importing, you may not need to make any adjustment.
    1. Make sure your asset is facing **-Y forward**.
    2. Ideally your accessory should be moved to `0`,`0`,`0` in the world to ensure it imports at the center of the camera in Studio.
 
 <Alert severity='success'>
-You've completed the modeling section of this tutorial. If desired, download a [reference version](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Texturing-Completed.blend) of this stage of the project for comparison.
+You've completed the modeling section of this tutorial. If desired, download a [reference version](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Modeling-Completed.blend) of this stage of the project for comparison.
 
 There are many tools and workflows to create your own unique asset. For additional suggestions, try creating different asset types, such as shoulder pads or belts, or importing a reference model into Blender as a mannequin to test your cosmetics.
 </Alert>

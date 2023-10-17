@@ -7,111 +7,97 @@ Thumbnails appear at the top of your experience's main page, allowing you to fur
 
 There are two types of thumbnails that you can use to market your experience:
 
-- **Image** &mdash; Supplements the experience icon, such as screenshots of gameplay or slides that demonstrate key details of your experience.
+- **Image** &mdash; Supplements the experience icon, such as screenshots of gameplay or slides that demonstrate key details of your experience. Free to upload.
 
-- **Video** &mdash; Links directly to YouTube. Many creators use this type of thumbnail to display trailers.
-
-Images are free to upload while videos have a moderation cost of **500 Robux**.
+- **Video** &mdash; Links directly to YouTube. Many creators use this type of thumbnail to display trailers. Moderation cost of **500&nbsp;Robux**.
 
 <img src="../../assets/publishing/experience-metadata/Thumbnail-Example.jpg" alt="Example of how thumbnails are displayed to users" />
 
-## Opening the Thumbnails Page
+## Managing Thumbnails
 
-The **Thumbnails** page is where you perform all thumbnail-related tasks, such as [uploading](#adding-thumbnails), [ordering](#ordering-thumbnails), and [deleting](#deleting-thumbnails) thumbnails.
-
-To open the **Thumbnails** page:
+The **Thumbnails** page is where you perform all thumbnail-related tasks, such as [uploading](#uploading), [ordering](#ordering), and [deleting](#deleting) thumbnails.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click on the experience you want to perform a thumbnail-related for. The experience's **Overview** page displays.
-1. In the left-hand navigation, select **Places**. All places within that experience display.
+2. Click on the experience you want to upload a thumbnail for. The experience's **Overview** page displays.
+3. In the left-hand navigation, select **Places**.
 
-   <img src="../../assets/promotion/Places-Page.jpg" width="30%" />
+   <img src="../../assets/creator-dashboard/Experience-Menu-Places-No-Icon.png" width="312" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-1. Select the start place that displays with a star icon (**&starf;**).
+4. Click the **start place** marked with a star icon. If the experience contains only one place, it will be the only option.
 
-   <img src="../../assets/promotion/Start-Place.jpg" width="424" />
+   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="720" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
-1. In the left-hand navigation, select **Thumbnails**. The **Thumbnails** page displays.
+5. In the place's left-hand navigation menu, select **Thumbnails**.
 
-   <img src="../../assets/creator-dashboard/Place-Menu-Thumbnails.png" width="312" />
+   <img src="../../assets/creator-dashboard/Place-Menu-Thumbnails.png" width="312" alt="Icon button indicated for a place on the Creator Dashboard" />
 
-## Adding Thumbnails
+### Uploading
 
-You can add up to 10 images or video links per experience from the [Thumbnails](#opening-the-thumbnails-page) page.
+You can add up to 10 images or video links per experience from the **Thumbnails** page of the [Creator Dashboard](https://create.roblox.com/dashboard/creations). All uploaded images and linked videos will be moderated to ensure they adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 
-### Images
+<Tabs>
+<TabItem label="Images">
 
-When you're creating an image to upload, use a template of **1920×1080 pixels** in either `.jpg`, `.gif`, `.png`, `.tga`, or `.bmp` format.
+When you're creating an image to upload, use a template of **1920×1080 pixels** and export it in `.jpg`, `.gif`, `.png`, `.tga`, or `.bmp` format.
 
-To upload an image from the **Thumbnails** page:
+1. Set the media type to **Image** and click the **UPLOAD&nbsp;IMAGE** button. Then, from the file browser, select and confirm the image you want to use as the thumbnail.
 
-1. Set the media type to **Image** and click the **UPLOAD&nbsp;IMAGE** button. A file browser displays.
+   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Upload-Image.png" width="600" />
 
-   <img src="../../assets/promotion/CD-Upload-Image.png" width="600" />
+1. **(Optional)** Add an **Alt Text** description of your thumbnail so it's accessible to everyone. The description should be concise and describe your thumbnail accurately enough for players to understand its context.
+1. Click the **SAVE CHANGES** button at the bottom of the page.
 
-2. Select the image you want to display on your experience's main page, then click the **Open** button. The file browser closes, and a preview of your thumbnail displays.
-
-3. Click the **SAVE CHANGES** button.
-
-Once the moderation team reviews your image thumbnail to ensure it adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), it displays to all users.
-
-### Videos
+</TabItem>
+<TabItem label="Videos">
 
 While you can't directly upload videos to Roblox, you can link to videos you own on YouTube.
 
-To link to a video for a thumbnail in the **Thumbnails** page:
-
-1. Set the media type to **Video**. Additional fields display.
-
-1. In the **YouTube URL** field, enter the URL of the video that you want to display as a video thumbnail, then click the **ADD&nbsp;VIDEO** button
-
-   <img src="../../assets/promotion/CD-Link-Video.png" width="600" />
-
-1. Click the **SAVE CHANGES** button.
-
-Once the Moderation team reviews your image thumbnail to ensure it adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), it displays to all users.
-
 <Alert severity="warning">
-  Xbox doesn't currently support video thumbnails.
+Xbox doesn't currently support video thumbnails.
 </Alert>
 
-### Auto-Generated
+1. Set the media type to **Video**.
+1. In the **YouTube URL** field, enter the URL of the video that you want to display as a video thumbnail, then click the **ADD&nbsp;VIDEO** button
 
-In addition to uploading custom image thumbnails, you can let Roblox auto-generate images from the experience itself to showcase your environment designs. Auto-generated thumbnails are based on Studio's camera position for the most recent publish of the place.
+   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Link-Video.png" width="600" />
 
-To auto-generate an image from the **Thumbnails** page:
+1. **(Optional)** Add an **Alt Text** description of the video so it's accessible to everyone. The description should be concise and describe the video's content accurately enough for players to understand its context.
+1. Click the **SAVE CHANGES** button.
 
-1. Set the media type to **Auto-generated image**. A preview displays.
+</TabItem>
+<TabItem label="Auto-Generated">
 
-1. Click the **ADD THUMBNAIL** button.
+Roblox can auto‑generate images from the experience itself to showcase your environment designs. Auto‑generated thumbnails are based on Studio's camera position for the most recent publish of the place.
 
-   <img src="../../assets/promotion/CD-Create-Auto-Generated.png" width="600" />
+1. Set the media type to **Auto-generated image** and click the **ADD&nbsp;THUMBNAIL** button.
+
+   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Auto-Generated.png" width="600" />
+
+1. **(Optional)** Add an **Alt Text** description of the thumbnail so it's accessible to everyone. The description should be concise and describe the thumbnail accurately enough for players to understand its context.
+1. Click the **SAVE CHANGES** button at the bottom of the page.
+
+</TabItem>
+</Tabs>
+
+### Ordering
+
+If you [upload](#uploading) multiple thumbnails, the experience's main page cycles through them automatically. To change the order of the thumbnail cycle from the **Thumbnails** page:
+
+1. Click and hold a thumbnail's "order" icon and drag it up or down. The other thumbnails move according to the dragged thumbnail's new position.
+
+   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Order.png" width="800" />
 
 1. Click the **SAVE CHANGES** button.
 
-## Ordering Thumbnails
+### Deleting
 
-If you upload multiple thumbnails, the experience's main page cycles through them automatically. To change the order of the thumbnail cycle from the **Thumbnails** page:
+To delete an [uploaded](#uploading) thumbnail from the **Thumbnails** page:
 
-1. Click-and-hold a thumbnail's order icon.
+1. Click the "trash" icon. A popup window displays asking if you'd like to permanently delete the thumbnail.
 
-   <img src="../../assets/promotion/Order-Icon.jpg" width="50%" />
+   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Delete.png" width="800" />
 
-2. Drag it up or down. The other thumbnails move according to the thumbnail's new position.
-
-3. Click the **SAVE CHANGES** button.
-
-## Deleting Thumbnails
-
-Once you have uploaded a thumbnail to the **Thumbnails** page, it displays below the preview image with a trash can icon near the right of its tile. To delete a thumbnail:
-
-1. Click the trash can icon. A pop-up window displays asking if you would like to permanently delete the thumbnail.
-
-   <img src="../../assets/promotion/Trash-Can-Icon.jpg" width="50%" />
-
-2. Click the **DELETE** button.
-
-Once you confirm the action, the thumbnail deletes from the queue and from the experience's main page.
+1. Click the **DELETE** button to confirm the action and delete the thumbnail from the queue on the experience's main page.
 
 ## Capturing Thumbnails in Free Camera Mode
 
@@ -121,7 +107,7 @@ Free camera mode is a useful tool to capture in-experience screenshots and video
 
 2. In the **Home** tab of the menu bar, navigate to the **Test** section and click **Play**.
 
-3. Press **<kbd>Left Shift</kbd> + <kbd>P</kbd>**.
+3. Press <kbd>Left Shift</kbd> and <kbd>P</kbd>.
 
 Once in free camera mode, you can use the following controls:
 
@@ -154,11 +140,11 @@ Once in free camera mode, you can use the following controls:
     <td>Zooms the camera in or out.</td>
   </tr>
   <tr>
-    <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td>
+    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd> (macOS)</td>
     <td>Disables all `Class.CoreGui|CoreGuis` but not user-created GUIs.</td>
   </tr>
   <tr>
-    <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td>
+    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd> (macOS)</td>
     <td>Disables all user-created GUIs but not  `Class.CoreGui|CoreGuis`.</td>
   </tr>
 </tbody>
