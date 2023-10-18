@@ -112,7 +112,7 @@ With the emitter complete, the explosion can now be played through a script. The
 
    ```lua
    local trapObject = script.Parent
-   local particleEmitter = trapObject:FindFirstChild("Explosion")
+   local particleEmitter = trapObject.Explosion
 
    local EMIT_AMOUNT = 100
    ```
@@ -121,9 +121,9 @@ With the emitter complete, the explosion can now be played through a script. The
 
    ```lua
    local trapObject = script.Parent
-   local particleEmitter = trapObject:FindFirstChild("Explosion")
+   local particleEmitter = trapObject.Explosion
 
-   local EMIT_AMOUNT= 30
+   local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
        local character = otherPart.Parent
@@ -145,9 +145,9 @@ In scripts, particles are emitted using the `Class.ParticleEmitter:Emit()|Emit()
 
    ```lua
    local trapObject = script.Parent
-   local particleEmitter = trapObject:FindFirstChild("Explosion")
+   local particleEmitter = trapObject.Explosion
 
-   local EMIT_AMOUNT= 100
+   local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
        local character = otherPart.Parent

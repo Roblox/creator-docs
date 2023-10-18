@@ -268,7 +268,7 @@ A blank mannequin using Roblox's [Rthro Slender](../../art/characters/specificat
 These project files require additional configuration before they are ready for Studio import. See [Creating with Templates](../characters/creating/index.md) for additional information.
 
 <Alert severity = 'warning'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/cleanup.md) in order for the assets to properly validate before publishing to the Marketplace.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
 <Grid container style={{margin: -6}}>

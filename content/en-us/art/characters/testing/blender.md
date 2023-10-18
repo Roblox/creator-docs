@@ -3,7 +3,7 @@ title: Testing in Blender
 comments:
 description: Verify the important aspects of your character model in Blender before importing into Studio.
 next: /art/characters/testing/studio
-previous: /art/characters/testing/
+prev: /art/characters/testing/
 ---
 
 You can quickly verify many of your components in Blender, allowing you to catch out problems that may cause issues later on. You can use a mix of Blender native tools and Roblox's helper plugins to check for many common issues in your character model.
@@ -76,5 +76,5 @@ If you are using a template, it's possible the skinning data was affected by a d
 Your avatar components should match the requirements provided in the [avatar specifications](../../../art/characters/specifications.md). When using templates and following appropriate non-destructive modeling practices, most of these components should not be touched, but you should still double-check that each component is compliant with the technical requirements.
 
 <Alert severity = 'success'>
-If you are using Roblox character templates and are ready to export into Studio, see [Exporting instructions](../../../art/characters/creating/exporting.md) for template files.
+If you are using Roblox character templates and are ready to export into Studio, see [Exporting instructions](../../../art/characters/creating/exporting-textures.md) for specific export instructions for template files.
 </Alert>

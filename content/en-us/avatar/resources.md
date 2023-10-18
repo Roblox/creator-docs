@@ -8,7 +8,7 @@ hideBreadcrumbs: true
 ## Templates
 
 <Alert severity = 'warning'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/cleanup.md) in order for the assets to properly validate before publishing to the Marketplace.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
 <Grid container style={{margin: -6}}>
