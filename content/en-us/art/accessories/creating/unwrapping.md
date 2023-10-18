@@ -1,8 +1,8 @@
 ---
-title: Texturing
-description: Covers the process of texture painting a custom clothing asset in Blender.
-prev: /art/accessories/creating/modeling
-next: /art/accessories/creating/rigging
+title: Creating Seams and Unwrapping
+description: Use Blender's seams and unwrapping functionality to project your 3D surface on a 2D texture plane.
+prev: /art/accessories/creating/watertight
+next: /art/accessories/creating/texture-map
 ---
 
 **Texturing** is the process of customizing the color, tone, and shading of your model's surface. Custom meshes and models use a 2D image, known as a texture map, to project various surface appearance elements onto your 3D object. In this tutorial, apply a complete color to your shirt and add a smaller design using Blender's Texture Paint mode.
@@ -59,40 +59,3 @@ To UV Unwrap your object by your selected seams:
 3. Switch to **Texture Paint** mode, your UVs display on the left window when your object is selected.
 
    <video controls src="../../../assets/art/accessories/creating/Texturing_02.mp4" width="100%"></video>
-
-## Creating a Texture Map
-
-Before applying any texture colors or shading, create an image to apply and save your textures to. To create a new texture map image:
-
-1. With the clothing mesh selected, navigate to **Properties Panel** > **Material Preview** tab.
-   <img src="../../../assets/art/accessories/creating/Texturing-Add-Image.png" width="40%" />
-
-2. Select the **+ New** button.
-3. Next to Base Color, select the **yellow dot** and click **Image Texture**.
-   <img src="../../../assets/art/accessories/creating/Texturing-Add-Base.png" width="80%" />
-4. Click the **+ New** button.
-
-   1. Name the texture image the same as your clothing mesh with a `_TXT` affix.
-   2. Set the color to black, or any base color of your preference.
-   3. Keep the rest of the default settings.
-   4. Press **OK** when completed.
-
-   <video controls src="../../../assets/art/accessories/creating/Texturing_03.mp4" width="100%"></video>
-
-## Texture Painting
-
-With a new image ready to apply textures to, use Blender's Texture Paint mode to quickly brush texture colors onto your mesh:
-
-1. Navigate to **Texture Paint mode**.
-2. On the viewport, select the clothing object.
-3. Open up the sidebar tools to access brush settings.
-4. Select a color, brush size, and falloff to apply. You might need to adjust settings, depending on the modifications you intend to apply.
-5. Draw on either the UV 2D map, or the 3D mesh.
-6. Save the `.png` of your texture map by selecting **Image** > **Save**.
-   <video controls src="../../../assets/art/accessories/creating/Texturing_04.mp4" width="100%"></video>
-
-<Alert severity = 'success'>
-You've completed the texturing section of this tutorial. If desired, download a [reference sample](../../../assets/art/reference-files/checkpoint/2_LongSleeve-Texturing-Complete.blend) of this project and texture image for comparison.
-
-There are a lot of ways to texture and apply a unique appearance to your meshes. For additional suggestions, try utilizing alpha transparencies, unique seams, [PBR textures](../../modeling/surface-appearance.md), or Blender's other texturing tools and techniques.
-</Alert>

@@ -1,7 +1,7 @@
 ---
-title: Converting
+title: Using the Accessory Fitting Tool
 description: Use the Accessory Fitting tool to convert your model to an rigid accessory.
-next: /art/accessories/creating-rigid/publishing
+next: /art/accessories/creating-rigid/validation
 prev: /art/accessories/creating-rigid/importing
 ---
 

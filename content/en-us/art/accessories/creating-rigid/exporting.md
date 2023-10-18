@@ -1,7 +1,7 @@
 ---
-title: Exporting
-description: Covers the steps to properly export rigid accessories from Blender.
-prev: /art/accessories/creating-rigid/texturing
+title: Exporting FBX
+description: Use Blender's .fbx exporter with the correct settings to create a Studio-ready asset.
+prev: /art/accessories/creating-rigid/clean-up
 next: /art/accessories/creating-rigid/importing
 ---
 

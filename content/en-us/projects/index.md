@@ -123,7 +123,7 @@ Your experience defines settings that you manage in Roblox Studio, which include
   clothing overrides.
 - **World** - Configure settings such as gravity, character jump behavior, and walk speed.
 - **Other** - Contains miscellaneous options for your experience, such as
-  collaborative editing and spatial voice features.
+  asynchronous drafts mode editing and spatial voice features.
 
 For more information, see [Managing Projects](../projects/managing.md).
 

@@ -1,8 +1,8 @@
 ---
-title: Exporting
-comments:
-description: Export your character model from Blender using the correct settings and processes.
-previous: /art/characters/creating/cleanup
+title: Exporting Textures
+description: Export your character textures from Blender using the correct settings and processes.
+next: /art/characters/creating/exporting-character
+prev: /art/characters/creating/final-checks
 ---
 
 <Alert severity = 'warning'>
@@ -52,24 +52,3 @@ To export your texture image files:
 1. Navigate to **File** > **External Data** > **Unpack Resources**.
 2. Select **Use files in current directory** to save in the same directory as your project. Blender exports your image files to a textures directory in your project's parent directory.
    <img src="../../../assets/art/avatar/basic-creation/Exporting-Pack-Resources.png" width = "55%"/>
-
-## Exporting Character Model
-
-When exporting a `.fbx` from Blender, it's important to use specific settings to ensure compatibility with Studio import.
-
-To export your character:
-
-1. In the topbar, click **File** > **Export** > **FBX (.fbx)**. The Blender file browser window displays.
-2. Set **Path Mode** to **Copy** and enable the **Embed Textures** icon.
-3. In the Include section, enable **Custom Properties**.
-4. Expand the Armature section and uncheck **Add Leaf Bones**.
-5. Enable **Bake Animation**.
-6. Expand Bake Animation and **uncheck NLA Strips**, **All Actions**, and **Force Start/End Keyframes**.
-7. In Bake Animation, set **Simplify** to **0.0**.
-8. Click the **Export FBX** button. Save the `.fbx` to the directory of your choice.
-
-<img src="../../../assets/art/avatar/basic-creation/Export-Settings.png" width = "60%" />
-
-<Alert severity = 'success'>
-After exporting your .fbx file, see [Testing Characters](../../../art/characters/testing/index.md) In Studio for steps on importing your character model into a test place and verifying your avatar and related components.
-</Alert>

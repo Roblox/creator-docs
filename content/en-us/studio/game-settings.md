@@ -309,8 +309,8 @@ The **Other** tab includes settings that are typically reserved for special situ
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Collaborative Editing</b></td>
-    <td>Enables collaborative scripting in a [Team Create](../projects/collaboration.md) session.</td>
+    <td><b>Enable Drafts Mode</b></td>
+    <td>Enables asynchronous, drafts-based script editing in a [Team Create](../projects/collaboration.md) session.</td>
   </tr>
   <tr>
     <td><b>Shutdown All Servers</b></td>
