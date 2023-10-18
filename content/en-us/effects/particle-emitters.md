@@ -564,7 +564,7 @@ To create an explosion:
 
    ```lua
    local trapObject = script.Parent
-   local particleEmitter = trapObject:FindFirstChild("Explosion")
+   local particleEmitter = trapObject.Explosion
 
    local EMIT_AMOUNT= 100
 
