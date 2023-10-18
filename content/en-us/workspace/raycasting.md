@@ -6,7 +6,7 @@ description: Raycasting allows you to detect collisions and determine the positi
 At its most basic level, **raycasting** is the act of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length. Once cast, you can detect if the ray hits a `Class.BasePart` or `Class.Terrain` cell.
 
 <figure>
-  <video controls src="../assets/mechanics/raycasting/Laser-Maze.mp4" width="100%"></video>
+  <video controls src="../assets/workspace/raycasting/Laser-Maze.mp4" width="100%"></video>
   <figcaption>Lasers are fired by floating orbs, and raycasting determines whether a laser hits a platform. Platforms touched by the lasers are temporarily destroyed.</figcaption>
 </figure>
 

@@ -37,9 +37,9 @@ To upload an experience icon:
 
    <img src="../../assets/creator-dashboard/Experience-Menu-Places-No-Icon.png" width="312" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-1. Click the **start place** marked with a star icon. If the experience contains only one place, this will be the only option.
+1. Click the **start place** marked with a star icon. If the experience contains only one place, it will be the only option.
 
-   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="600" alt="Start place tile indicated in Places display on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="720" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
 1. In the place's left-hand navigation menu, select **Icon**.
 

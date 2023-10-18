@@ -128,7 +128,7 @@ By default, the invite notification that friends receive contains the sender's `
 
    <img src="../../assets/promotion/invite-prompts/CD-Button-Save-Notification-String.png" width="479" />
 
-1. On the notifications page, click the <span style={{fontWeight:"800"}}>&ctdot;</span> button for the notification and select **Copy Asset ID**.
+1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
 
    <img src="../../assets/promotion/invite-prompts/CD-Notification-List-Copy-Asset-ID.png" width="800" />
 

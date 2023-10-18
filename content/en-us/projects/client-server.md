@@ -118,4 +118,4 @@ responsible for filtering chat messages and deciding which messages to replicate
 to other clients. For example, the server may filter out messages that contain
 profanity or are too long.
 
-<video src="../assets/ui/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="90%"></video>
+<video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="90%"></video>

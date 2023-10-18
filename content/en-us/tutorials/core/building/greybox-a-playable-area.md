@@ -138,7 +138,7 @@ To insert a cylinder part for your first platform:
    <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%" />
 
 1. In the **Explorer** window, select the **Block_Out** model.
-1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move the your parts when the experience starts.
+1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
    <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
 
@@ -285,7 +285,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%"  />
 
 1. In the **Explorer** window, select the **Block_Out** model.
-1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move the your parts when the experience starts.
+1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
    <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
 

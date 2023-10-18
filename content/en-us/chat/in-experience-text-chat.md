@@ -110,11 +110,11 @@ The following example shows how to create a chat command that allows users to in
 1. Insert a `Class.TextChatCommand` instance inside `Class.TextChatService`.
 1. Rename it to **SizeCommand**.
 
-   <img src="../assets/ui/in-experience-text-chat/TextChatCommand-SizeCommand.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatCommand-SizeCommand.png" width="320" />
 
 1. Set its **PrimaryAlias** property to `/super` and its **SecondaryAlias** to `/mini`.
 
-   <img src="../assets/ui/in-experience-text-chat/TextChatCommand-Aliases.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatCommand-Aliases.png" width="320" />
 
 1. Insert the following `Class.Script` inside `Class.ServerScriptService` to define a callback for the chat command that scales the character's size.
 
@@ -150,4 +150,4 @@ The following example shows how to create a chat command that allows users to in
    end)
    ```
 
-   <video controls src="../assets/ui/in-experience-text-chat/Text-Custom-Command.mp4" width="90%"></video>
+   <video controls src="../assets/players/in-experience-text-chat/Text-Custom-Command.mp4" width="90%"></video>
