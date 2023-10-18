@@ -1,0 +1,28 @@
+backTo:
+  title: Back to Avatar Tutorials
+  path: /avatar/tutorials/
+navigation:
+  - title: Overview
+    path: /art/accessories/creating-rigid/
+  - heading: Modeling
+  - title: Blender Setup
+    path: /art/accessories/creating-rigid/modeling-setup
+  - heading: Texturing
+  - title: Importing PBR Textures
+    path: /art/accessories/creating-rigid/texturing
+  - heading: Exporting
+  - title: Project Cleanup
+    path: /art/accessories/creating-rigid/clean-up
+  - title: Exporting FBX from Blender
+    path: /art/accessories/creating-rigid/exporting
+  - heading: Importing
+  - title: Using Studio's 3D Importer
+    path: /art/accessories/creating-rigid/importing
+  - heading: Converting Accessory
+  - title: Using the Accessory Fitting Tool
+    path: /art/accessories/creating-rigid/converting
+  - heading: Publishing to Marketplace
+  - title: Uploading your Asset
+    path: /art/accessories/creating-rigid/validation
+  - title: Selling your Accessory
+    path: /art/accessories/creating-rigid/publishing
