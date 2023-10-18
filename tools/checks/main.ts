@@ -57,19 +57,26 @@ const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
   console.log('Checking only Markdown files...');
   if (config.files === FileOption.All) {
-    filesToCheck = getAllContentFileNamesWithExtension({
-      locale: Locale.EN_US,
-      fileExtension: FileExtension.MARKDOWN,
-    });
+    filesToCheck.push(
+      ...getAllContentFileNamesWithExtension({
+        locale: Locale.EN_US,
+        fileExtension: FileExtension.MARKDOWN,
+      }),
+      ...getAllContentFileNamesWithExtension({
+        locale: Locale.EN_US,
+        fileExtension: FileExtension.YAML,
+      })
+    );
     filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
-      fileExtensions: [FileExtension.MARKDOWN],
+      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML],
     });
   } else if (config.files === FileOption.LastCommit) {
     filesToCheck = await getFilesChangedInLastCommitByExtensions([
       FileExtension.MARKDOWN,
+      FileExtension.YAML,
     ]);
   }
   console.log(`Files to check (${filesToCheck.length}):`, filesToCheck);
@@ -172,6 +179,8 @@ try {
       filePath,
       repositoryRoot
     );
+    const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
+    const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
     const content = readFileSync(filePath);
     if (config.checkRetextAnalysis) {
@@ -186,7 +195,7 @@ try {
     if (config.checkHttpLinks || config.checkRelativeLinks) {
       checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
     }
-    if (config.checkMarkdownLint) {
+    if (isMarkdownFile && config.checkMarkdownLint) {
       checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });
     }
     console.log('::endgroup::');
