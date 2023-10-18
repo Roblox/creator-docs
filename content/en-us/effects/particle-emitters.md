@@ -566,7 +566,7 @@ To create an explosion:
    local trapObject = script.Parent
    local particleEmitter = trapObject.Explosion
 
-   local EMIT_AMOUNT= 100
+   local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
       local character = otherPart.Parent
