@@ -1,5 +1,5 @@
 ---
-title: Characters
+title: Characters name:poop
 description: Characters are interactive models that interact with the world or other users.
 ---
 
