@@ -29,21 +29,23 @@ Start by getting the winning player's name if there was one. Previously, the cod
 
    ```lua
    function PlayerManager.getWinnerName()
-     if activePlayers[1] then
+     local winningPlayer = activePlayers[1]
+
+     if winningPlayer then
      end
    end
    ```
 
 3. In the if statement:
 
-   - Store the winning player in a variable.
    - Return the player's name.
    - For the else, return an error string.
 
    ```lua
    function PlayerManager.getWinnerName()
-     if activePlayers[1] then
-       local winningPlayer = activePlayers[1]
+     local winningPlayer = activePlayers[1]
+
+     if winningPlayer then
        return winningPlayer.Name
      else
        return "Error: No winning player found"
@@ -218,12 +220,17 @@ When players move into the transition state, remove their weapons.
        local character = whichPlayer.Character
 
        -- If the player has it currently on their character
-       if character:FindFirstChild("Weapon") then
-         character.Weapon:Destroy()
+       local weapon = character:FindFirstChild("Weapon")
+
+       if weapon then
+         weapon:Destroy()
        end
+
        -- If theplayer has the weapon in their backpack
-       if whichPlayer.Backpack:FindFirstChild("Weapon") then
-         whichPlayer.Backpack.Weapon:Destroy()
+       local weapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+
+       if weapon then
+         weapon:Destroy()
        end
      else
        print("No player to remove weapon")
@@ -244,11 +251,11 @@ When players move into the transition state, remove their weapons.
    return PlayerManager
    ```
 
-3. In that function, use a for loop with `pairs()` to go through the active players table. In the loop, call `removePlayerWeapon()` and pass in the player found.
+3. In that function, use a for loop to go through the active players table. In the loop, call `removePlayerWeapon()` and pass in the player found.
 
    ```lua
    function PlayerManager.removeAllWeapons()
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in activePlayers do
        removePlayerWeapon(whichPlayer)
      end
    end
@@ -318,12 +325,12 @@ First, start a function to send players back to the lobby.
 1. In PlayerManager:
 
    - Create a module function named `resetPlayers()`.
-   - Add a for loop with `pairs()` to iterate through activePlayers.
+   - Add a for loop to iterate through activePlayers.
    - In the loop, call `respawnPlayerInLobby()` and pass in the player as the parameter.
 
    ```lua
    function PlayerManager.resetPlayers()
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in activePlayers do
        respawnPlayerInLobby(whichPlayer)
      end
    end
@@ -338,7 +345,7 @@ First, start a function to send players back to the lobby.
 
    ```lua
    function PlayerManager.resetPlayers()
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in activePlayers do
        respawnPlayerInLobby(whichPlayer)
      end
 
@@ -559,7 +566,7 @@ end
 
 local function removeActivePlayer(player)
 	print("removing player")
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in activePlayers do
 		if whichPlayer == player then
 			table.remove(activePlayers, playerKey)
 			playersLeft.Value = #activePlayers
@@ -599,14 +606,19 @@ local function removePlayerWeapon(whichPlayer)
 	if whichPlayer then
 		local character = whichPlayer.Character
 
-		-- If the player has it currently on their character
-		if character:FindFirstChild("Weapon") then
-			character.Weapon:Destroy()
-		end
-		-- If the player has the weapon in their backpack
-		if whichPlayer.Backpack:FindFirstChild("Weapon") then
-			whichPlayer.Backpack.Weapon:Destroy()
-		end
+    -- If the player has it currently on their character
+    local weapon = character:FindFirstChild("Weapon")
+
+    if weapon then
+      weapon:Destroy()
+    end
+
+    -- If theplayer has the weapon in their backpack
+    local weapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+
+    if weapon then
+      weapon:Destroy()
+    end
 	else
 		print("No player to remove weapon")
 	end
@@ -616,7 +628,7 @@ end
 function PlayerManager.sendPlayersToMatch()
 	local availableSpawnPoints = spawnLocations:GetChildren()
 
-	for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+	for playerKey, whichPlayer in Players:GetPlayers() do
 		table.insert(activePlayers,whichPlayer)
 
 		-- Gets a spawn location and then removes it from the table so the next player gets the next spawn
@@ -629,8 +641,9 @@ function PlayerManager.sendPlayersToMatch()
 end
 
 function PlayerManager.getWinnerName()
-	if activePlayers[1] then
-		local winningPlayer = activePlayers[1]
+  local winningPlayer = activePlayers[1]
+
+	if winningPlayer then
 		return winningPlayer.Name
 	else
 		return "Error: No player found"
@@ -638,13 +651,13 @@ function PlayerManager.getWinnerName()
 end
 
 function PlayerManager.removeAllWeapons()
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in activePlayers do
 		removePlayerWeapon(whichPlayer)
 	end
 end
 
 function PlayerManager.resetPlayers()
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in activePlayers do
 		respawnPlayerInLobby(whichPlayer)
 	end
 
