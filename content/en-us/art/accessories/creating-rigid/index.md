@@ -1,7 +1,7 @@
 ---
 title: Rigid Accessory Creation
 description: This tutorial covers the basic steps required to publish a custom asset on the Marketplace.
-next: /art/accessories/creating-rigid/modeling
+next: /art/accessories/creating-rigid/modeling-setup
 ---
 
 Rigid accessories are 3D objects that users can equip to their avatar characters in an experience or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar). Unlike [clothing accessories](../../../art/accessories/creating/index.md) or [bodies](../../../art/characters/creating/index.md) that require caging, rigging, and skinning in a third-party modeling application, rigid accessories attach directly to an avatar character and do not bend or deform to the character's body. Since they do not require additional configuration in a third-party application beyond modeling and texturing, rigid accessories are usually the most basic type of 3D avatar item to create.

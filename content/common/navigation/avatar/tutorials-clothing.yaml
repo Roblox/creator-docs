@@ -1,0 +1,45 @@
+backTo:
+  title: Back to Avatar Tutorials
+  path: /avatar/tutorials/
+navigation:
+  - title: Overview
+    path: /art/accessories/creating/
+  - heading: Modeling
+  - title: Setting Up Mesh
+    path: /art/accessories/creating/modeling-setup
+  - title: Trimming Clothing Shape
+    path: /art/accessories/creating/trimming
+  - title: Sculpting Detail
+    path: /art/accessories/creating/sculpting
+  - title: Making Mesh Watertight
+    path: /art/accessories/creating/watertight
+
+  - heading: Texturing
+  - title: Creating Seams and Unwrapping
+    path: /art/accessories/creating/unwrapping
+  - title: Creating a Texture Map
+    path: /art/accessories/creating/texture-map
+  - title: Texture Painting
+    path: /art/accessories/creating/texture-painting
+
+  - heading: Rigging
+  - title: Armature Setup
+    path: /art/accessories/creating/armature-setup
+  - title: Testing Poses
+    path: /art/accessories/creating/testing-poses
+
+  - heading: Caging
+  - title: Caging Setup
+    path: /art/accessories/creating/caging-setup
+  - title: Modifying Outer Cage
+    path: /art/accessories/creating/modifying-cage
+
+  - heading: Exporting
+  - title: Exporting FBX
+    path: /art/accessories/creating/exporting
+
+  - heading: Importing and Converting
+  - title: Using Studio's 3D Importer
+    path: /art/accessories/creating/importing
+  - title: Using the Accessory Fitting Tool
+    path: /art/accessories/creating/converting
