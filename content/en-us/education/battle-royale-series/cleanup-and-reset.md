@@ -227,10 +227,10 @@ When players move into the transition state, remove their weapons.
        end
 
        -- If theplayer has the weapon in their backpack
-       local weapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+       local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
 
-       if weapon then
-         weapon:Destroy()
+       if backpackWeapon then
+         backpackWeapon:Destroy()
        end
      else
        print("No player to remove weapon")
@@ -614,10 +614,10 @@ local function removePlayerWeapon(whichPlayer)
     end
 
     -- If theplayer has the weapon in their backpack
-    local weapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+    local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
 
-    if weapon then
-      weapon:Destroy()
+    if backpackWeapon then
+      backpackWeapon:Destroy()
     end
 	else
 		print("No player to remove weapon")
