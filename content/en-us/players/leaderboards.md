@@ -100,19 +100,19 @@ local goldChunk = script.Parent
 
 local function onPartTouch(otherPart)
 	local partParent = otherPart.Parent
-	local humanoid = partParent:FindFirstChildWhichIsA("Humanoid")
-	if humanoid then
+	local player = Players:GetPlayerFromCharacter(partParent)
+	local leaderstats = player and player:FindFirstChild("leaderstats")
+	local goldStat = leaderstats and leaderstats:FindFirstChild("Gold")
+
+	if goldStat then
 		-- Destroy the pickup
 		goldChunk:Destroy()
+
 		-- Update the player's leaderboard stat
-		local player = Players:GetPlayerFromCharacter(partParent)
-		local leaderstats = player.leaderstats
-		local goldStat = leaderstats and leaderstats:FindFirstChild("Gold")
-		if goldStat then
-			goldStat.Value += 10
-		end
+		goldStat.Value += 10
 	end
 end
+
 goldChunk.Touched:Connect(onPartTouch)
 ```
 
@@ -138,15 +138,18 @@ local function leaderboardSetup(player)
 	gold.Name = "Gold"
 	gold.Value = 0
 	gold.Parent = leaderstats
+
 	local priorityGold = Instance.new("NumberValue")
 	priorityGold.Name = "Priority"
 	priorityGold.Value = 1
 	priorityGold.Parent = gold
+
 	local isPrimary = Instance.new("BoolValue")
 	isPrimary.Name = "IsPrimary"
 	isPrimary.Value = true
 	isPrimary.Parent = gold
 end
+
 Players.PlayerAdded:Connect(leaderboardSetup)
 ```
 
@@ -160,6 +163,5 @@ To hide the leaderboard, such as on a menu screen or during a cutscene, place a 
 
 ```lua
 local StarterGui = game:GetService("StarterGui")
-
 StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
 ```
