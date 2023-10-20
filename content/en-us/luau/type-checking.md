@@ -3,7 +3,7 @@ title: Luau Type Checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
-Luau uses a typing engine that gives every variable an inferred type.
+Luau uses a typing engine that gives every variable an inferred type. These types are used to provide better warnings, errors, and suggestions in the Script Editor.
 
 ```lua
 local foo = "bar" --> string
@@ -26,11 +26,12 @@ There are three type inference modes that Luau can use in `Class.Script|Scripts`
 - `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
 - `--!strict` - Asserts all types based off the inferred or explicitly annotated type
 
-To use the non-default modes, add `--!nocheck` or `--!strict` to the top of your scripts. Studio highlights type mismatches in the editor and surfaces them as warnings in the Script Analyzer window.
+The default mode for the type checker is `--!nonstrict`. To use a different mode, put `--!strict` or `--!nocheck` at the top of your script. These modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the Script Editor and surfaced as warnings in the Script Analyzer window.
 
 ## Types
 
-A type annotation can be defined using the `:` operator after a variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.
+A type annotation can be defined using the `:` operator after a local variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.
+
 
 ```lua
 local foo: string = "bar"
@@ -52,11 +53,13 @@ local brickColor: BrickColor = somePart.BrickColor
 local material: Enum.Material = somePart.Material
 ```
 
-To add an optional type, use a `?` at the end of the annotation:
+To make a type optional, use a `?` at the end of the annotation:
 
 ```lua
 local foo: string? = nil
 ```
+
+This will allow the variable to be either the specified type (in this case `string`) or `nil`.
 
 ### Literal Types
 
@@ -142,11 +145,11 @@ local characterParts: {Instance} = LocalPlayer.Character:GetChildren()
 Define index types using `{[indexType]: valueType}`:
 
 ```lua
-local frobulator: {[string]: number} = {
+local numberList: {[string]: number} = {
 	Foo = 1,
 	Baz = 10
 }
-frobulator["bar"] = true -- type error, boolean can't convert to number
+numberList["bar"] = true -- type error, boolean can't convert to number
 }
 ```
 
@@ -161,7 +164,8 @@ type Car = {
 
 ## Variadics
 
-Here's a function that calculates the sum of an arbitrary amount of numbers.
+Here's a function that calculates the sum of an arbitrary amount of numbers:
+
 
 ```lua
 local function addLotsOfNumbers(...)
@@ -224,7 +228,7 @@ local numString2: type1and2 = {foo = "hello", bar = 1}
 
 ## Defining an Inferred Type
 
-Use the `typeof` function in a type definition for inferred types:
+You can use the `typeof` function in a type definition for inferred types:
 
 ```lua
 type Car = typeof {
@@ -248,7 +252,7 @@ type Vector = typeof(setmetatable({}::{
 
 ## Generics
 
-Generics allow you to define, at a basic level, substitution types. Consider the following `State` object:
+Generics are at a basic level parameters for types. Consider the following `State` object:
 
 ```lua
 local State = {
@@ -277,8 +281,8 @@ The `<T>` denotes a type that can be set to anything. The best way to visualize 
 ```lua
 type List<T> = {T}
 
-local Names: List<string> = {"Bob", "Dan", "Mary"}
-local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13}
+local Names: List<string> = {"Bob", "Dan", "Mary"} -- type becomes {string}
+local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13} -- type becomes {number}
 ```
 
 Generics can also have multiple substitutions inside the brackets.
@@ -344,7 +348,7 @@ local function Signal<A...>(f: (A...) -> (), ...: A...)
 
 ## Type Exports
 
-To export a type from a `Class.ModuleScript`, use the `export` keyword:
+To make it so a type can be used outside of a `Class.ModuleScript`, use the `export` keyword:
 
 ```lua title="Types Module in ReplicatedStorage"
 export type Cat = {
