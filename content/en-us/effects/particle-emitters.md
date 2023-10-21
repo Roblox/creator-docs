@@ -138,7 +138,7 @@ To set a particle emitter's color sequence:
 
 2. In the **Properties** window, select the **Color** property.
 
-3. Click the **...** button. A color sequence pop-up displays.
+3. Click the **&ctdot;** button. A color sequence pop-up displays.
    By default, the color sequence is all white.
 
    <img
@@ -564,9 +564,9 @@ To create an explosion:
 
    ```lua
    local trapObject = script.Parent
-   local particleEmitter = trapObject:FindFirstChild("Explosion")
+   local particleEmitter = trapObject.Explosion
 
-   local EMIT_AMOUNT= 100
+   local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
       local character = otherPart.Parent

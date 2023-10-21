@@ -179,7 +179,7 @@ The **Places** tab contains place-specific settings.
     <td>Lets you create a new place within your experience.</td>
   </tr>
   <tr>
-    <td>**...**</td>
+    <td>**&ctdot;**</td>
     <td>Opens a pop-up menu with options to **Configure&nbsp;Place** (edit place-specific settings such as the maximum number of players), or **Version&nbsp;History** to view, download, and open any previous version of the experience.</td>
   </tr>
 </tbody>
@@ -309,8 +309,8 @@ The **Other** tab includes settings that are typically reserved for special situ
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Collaborative Editing</b></td>
-    <td>Enables collaborative scripting in a [Team Create](../projects/collaboration.md) session.</td>
+    <td><b>Enable Drafts Mode</b></td>
+    <td>Enables asynchronous, drafts-based script editing in a [Team Create](../projects/collaboration.md) session.</td>
   </tr>
   <tr>
     <td><b>Shutdown All Servers</b></td>

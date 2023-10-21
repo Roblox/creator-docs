@@ -11,7 +11,7 @@ Check that your model meets Roblox's [avatar character specifications](../../art
 - If you are creating a generic mesh, ensure that your model follows Roblox's [General Specifications](../../art/modeling/specifications.md).
 
 <Alert severity = 'error'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/cleanup.md) in order for the assets to properly validate.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate.
 </Alert>
 
 <Tabs>

@@ -1,9 +1,8 @@
 ---
 title: Caging
-comments:
 description: Cage your avatar characters in Blender to support layerable accessories and clothing.
-next: /art/characters/creating/cleanup
-previous: /art/characters/creating/texturing
+next: /art/characters/creating/combining-head-geometry
+prev: /art/characters/creating/texturing-pbr
 ---
 
 **Caging** is the process of updating the [cage mesh component](../../../art/characters/index.md#cage-meshes) of your avatar character. To allow your character to correctly wear layered clothing and accessories, you must update the default template cage mesh object to match the sculpting changes you made to your custom character.

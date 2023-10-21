@@ -147,7 +147,7 @@ Currently, you can only update models. Audio and decals don't have version contr
    1. Navigate to the [Creation](https://create.roblox.com/creations) page of **Creator Dashboard**.
    1. Select the **DEVELOPMENT ITEMS** category.
    1. Select the category of your asset and find the target asset.
-   1. Hover over the thumbnail of the target asset and click the **...** button to display a list of options, then select **Copy Asset ID** from the list.
+   1. Hover over the thumbnail of the target asset and click the **&ctdot;** button to display a list of options, then select **Copy Asset ID** from the list.
       <img src="../../assets/open-cloud/copy-asset-id.png" width="50%" />
 1. Add the file path and content type of your asset in your request.
 

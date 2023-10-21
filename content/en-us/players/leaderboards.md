@@ -5,7 +5,7 @@ description: In-experience Leaderboards let you display user information to all 
 
 Roblox has a built-in **leaderboard system** that lets you display user information like scores, currency, or the fastest time in a race.
 
-<img alt="Leaderboard Screen" src="../assets/ui/leaderboard/Leaderboard-Screen-1.jpeg" width="80%" />
+<img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-Screen-1.jpeg" width="80%" />
 
 ## Setting up the Leaderboard
 
@@ -13,7 +13,7 @@ To set up the leaderboard and add players when they enter the experience:
 
 1. Create a new `Class.Script` within `Class.ServerScriptService`.
 
-   <img alt="Leaderboard Insert Script" src="../assets/ui/leaderboard/Leaderboards-Insert-Script.png" width="80%" />
+   <img alt="Leaderboard Insert Script" src="../assets/players/leaderboard/Leaderboards-Insert-Script.png" width="80%" />
 
 2. In the script, connect a function to the `Class.Players.PlayerAdded|PlayerAdded` event.
 
@@ -77,7 +77,7 @@ These lines accomplish the following:
 
 2. The instance's `Class.Instance.Name|Name` is set to **Gold**. This is exactly how the stat will appear on the in-game leaderboard.
 
-   <img alt="Leaderboards Name Column" src="../assets/ui/leaderboard/Leaderboards-Name-Column.png" width="80%" />
+   <img alt="Leaderboards Name Column" src="../assets/players/leaderboard/Leaderboards-Name-Column.png" width="80%" />
 
 3. The stat's initial `Class.IntValue.Value|Name` is set to **0**. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/datastores.md) if you're implementing persistent leaderboards.
 
@@ -87,7 +87,7 @@ These lines accomplish the following:
 
 4. The instance is parented to the **leaderstats** folder which adds it to the leaderboard. When players enter the game, their names appear on the board.
 
-   <img alt="Leaderboards Multiple Players" src="../assets/ui/leaderboard/Leaderboards-Multiple-Players.png" width="80%" />
+   <img alt="Leaderboards Multiple Players" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="80%" />
 
 ## Updating Stats
 

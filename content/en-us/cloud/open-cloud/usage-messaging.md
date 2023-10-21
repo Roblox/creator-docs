@@ -56,10 +56,11 @@ After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publi
 
 2. Get the **Universe ID**, the identifier of the experience in which you want to send your messages to.
 
-   1. Navigate to the [Creations](https://create.roblox.com/creations) page on the **Creator Dashboard**.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
-   1. Click the **...** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID** from the list.
-      <img src="../../assets/open-cloud/copy-universeid.png" width="60%" />
+   1. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID**.
+
+      <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
 
 3. Add the API Key in the `x-api-key` header of a `POST` request to the API like the following example:
 

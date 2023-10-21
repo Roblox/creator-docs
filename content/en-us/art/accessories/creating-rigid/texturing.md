@@ -1,8 +1,8 @@
 ---
-title: Texturing
+title: Importing PBR Textures
 description: Covers the process of associating PBR textures to rigid accessories in Blender.
-prev: /art/accessories/creating-rigid/modeling
-next: /art/accessories/creating-rigid/exporting
+prev: /art/accessories/creating-rigid/modeling-setup
+next: /art/accessories/creating-rigid/clean-up
 ---
 
 **Texturing** is the process of applying a surface appearance to a 3D object. Blender provides various tools and features to create and connect your own texture maps to your asset, allowing you to preview your model's final appearance and link the texture images to your exported file.
@@ -39,12 +39,12 @@ Metalness Map
 This tutorial doesn't cover the PBR texture creation process, which typically involves using third-party software such as ZBrush or Substance 3D Painter. Instead, this section goes over the process of bringing premade PBR image files into Blender and properly associating them to your asset on export.
 
 <Alert severity = 'warning'>
-While PBR textures are not required for accessories, adding PBR textures can add extra visual flair and realism to elevate your creations. For an example on using Blender to create a basic, non-PBR texture, see [Texturing Basic Clothing](../../../art/accessories/creating/texturing.md).
+While PBR textures are not required for accessories, adding PBR textures can add extra visual flair and realism to elevate your creations. For an example on using Blender to create a basic, non-PBR texture, see [Texturing Basic Clothing](../../../art/accessories/creating/unwrapping.md).
 </Alert>
 
 To configure and link your PBR textures to your model:
 
-1. Download [Rigid_Mask_Textures.zip](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Textures.zip) and unzip the textures images locally.
+1. Download [Rigid_Mask_Textures.zip](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Textures.zip) and unzip the textures images locally in the same directory as your Blender project.
 2. In Blender, navigate to the **Shading** tab. Ensure that your object is selected.
 
    1. If you don't see the **PrincipledBSDF node**, select the **+New** button to create a new material.
@@ -68,7 +68,7 @@ To configure and link your PBR textures to your model:
       3. Connect the NormalMap's **Normal** to the **Principled BSDF** > **Normal**.
          <img src="../../../assets/art/accessories/creating-rigid/Normal-Node.png" />
 
-5. Test your textures by changing the viewport viewing mode to **Viewport Shading**.
+5. Test your textures by changing the viewport viewing mode to **Viewport Shading > Material Preview Mode**.
    <video controls src="../../../assets/art/accessories/creating-rigid/Adding-PBR.mp4" width="100%"></video>
 
 <Alert severity = 'success'>
