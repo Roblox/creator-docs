@@ -5,18 +5,18 @@ description: Pathfinding is the process of moving a character along a logical pa
 
 **Pathfinding** is the process of moving a character along a logical path to reach a destination, avoiding obstacles and (optionally) hazardous materials or defined regions.
 
-<video controls src="../assets/mechanics/pathfinding/Showcase.mp4" width="100%" alt="Video showcase of character pathfinding across a series of bridges"></video>
+<video controls src="../assets/avatar/pathfinding/Showcase.mp4" width="100%" alt="Video showcase of character pathfinding across a series of bridges"></video>
 
 ## Navigation Visualization
 
 To assist with pathfinding layout and debugging, Studio can render a **navigation mesh**. Colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping.
 
-<img src="../assets/mechanics/pathfinding/Navigation-Mesh.jpg"
+<img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg"
     width="800" alt="Navigation mesh showing in Studio" />
 
 In addition, Studio can render **navigation labels** that indicate specific materials and region labels that are taken into consideration when using [pathfinding modifiers](#pathfinding-modifiers), as well as link point labels assigned to [pathfinding links](#pathfinding-links).
 
-<img src="../assets/mechanics/pathfinding/Navigation-Labels.jpg"
+<img src="../assets/avatar/pathfinding/Navigation-Labels.jpg"
     width="800" alt="Navigation labels showing on navigation mesh" />
 
 To enable navigation visualization:
@@ -24,7 +24,7 @@ To enable navigation visualization:
 1. Open **File** &rarr; **Studio Settings**.
 1. In the **Studio** tab, enable **Show&nbsp;Navigation&nbsp;Mesh** and, optionally, **Show&nbsp;Navigation&nbsp;Labels**.
 
-   <img src="../assets/mechanics/pathfinding/Settings-Navigation-Visualization.png" width="600" alt="Navigation visualization options in Studio settings" />
+   <img src="../assets/avatar/pathfinding/Settings-Navigation-Visualization.png" width="600" alt="Navigation visualization options in Studio settings" />
 
 ## Creating Paths
 
@@ -102,7 +102,7 @@ local path = PathfindingService:CreatePath({
 
 Note that the agent can climb `Class.TrussPart|TrussParts` during pathfinding assuming you set `AgentCanClimb` to `true` when [creating the path](#creating-paths) and nothing blocks the agent from the truss climbing path. A climbable path has the **Climb** label and the [cost](#setting-material-costs) for a climbable path is **1** by default.
 
-<img src="../assets/mechanics/pathfinding/Path-TrussPart.jpg" width="800" alt="Path going up a climbable TrussPart ladder" />
+<img src="../assets/avatar/pathfinding/Path-TrussPart.jpg" width="800" alt="Path going up a climbable TrussPart ladder" />
 
 ```lua title='LocalScript - Truss Climbing Path' highlight='6,8'
 local PathfindingService = game:GetService("PathfindingService")
@@ -217,7 +217,7 @@ local function followPath(destination)
 end
 ```
 
-<img src="../assets/mechanics/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
+<img src="../assets/avatar/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
 
 ### Getting Waypoints
 
@@ -255,7 +255,7 @@ end
 ```
 
 <figure>
-<img src="../assets/mechanics/pathfinding/Waypoints.jpg"
+<img src="../assets/avatar/pathfinding/Waypoints.jpg"
     width="800" alt="Waypoints indicated across computed path" />
 <figcaption>Waypoints indicated across computed path</figcaption>
 </figure>
@@ -326,7 +326,7 @@ local function followPath(destination)
 end
 ```
 
-<video controls src="../assets/mechanics/pathfinding/Simple-Path.mp4" width="800" alt="Video of character following simple path across islands and bridges"></video>
+<video controls src="../assets/avatar/pathfinding/Simple-Path.mp4" width="800" alt="Video of character following simple path across islands and bridges"></video>
 
 ### Handling Blocked Paths
 
@@ -386,7 +386,7 @@ Currently, `Class.Model|Models` containing a `Class.Humanoid` instance, includin
 
 By default, `Class.Path:ComputeAsync()` returns the **shortest** path between the starting point and destination, with the exception that it attempts to avoid jumps. This looks unnatural in some situations&nbsp;&mdash; for instance, a path may go through water rather than over a nearby bridge simply because the path through water is geometrically shorter.
 
-<img src="../assets/mechanics/pathfinding/Paths-Shortest-Best.jpg" width="800" alt="Two paths indicated with the shorter path not necessarily more logical" />
+<img src="../assets/avatar/pathfinding/Paths-Shortest-Best.jpg" width="800" alt="Two paths indicated with the shorter path not necessarily more logical" />
 
 To optimize pathfinding even further, you can implement **pathfinding modifiers** to compute smarter paths across various [materials](#setting-material-costs), around defined [regions](#working-with-regions), or through [obstacles](#ignoring-obstacles).
 
@@ -410,7 +410,7 @@ local path = PathfindingService:CreatePath({
 })
 ```
 
-<video controls src="../assets/mechanics/pathfinding/Bridge-Path.mp4" width="800" alt="Video showing how material costs determine preference of non-water traversal"></video>
+<video controls src="../assets/avatar/pathfinding/Bridge-Path.mp4" width="800" alt="Video showing how material costs determine preference of non-water traversal"></video>
 
 ### Working With Regions
 
@@ -418,11 +418,11 @@ In some cases, [material preference](#setting-material-costs) is not enough. For
 
 1. Create an `Class.BasePart.Anchored|Anchored` part around the dangerous region and set its `Class.BasePart.CanCollide|CanCollide` property to **false**.
 
-   <img src="../assets/mechanics/pathfinding/GeyserBlocker-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
+   <img src="../assets/avatar/pathfinding/GeyserBlocker-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
 
 1. Insert a `Class.PathfindingModifier` instance onto the part, locate its `Class.PathfindingModifier.Label|Label` property, and assign a meaningful name like **DangerZone**.
 
-   <img src="../assets/mechanics/pathfinding/GeyserBlocker-PathfindingModifier-Label.png" width="320" alt="PathfindingModifier instance with Label property set to DangerZone" />
+   <img src="../assets/avatar/pathfinding/GeyserBlocker-PathfindingModifier-Label.png" width="320" alt="PathfindingModifier instance with Label property set to DangerZone" />
 
 1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing a matching key and associated numeric value. A modifier can be defined as non-traversable by setting its value to `Library.math.huge`.
 
@@ -438,7 +438,7 @@ In some cases, [material preference](#setting-material-costs) is not enough. For
    })
    ```
 
-   <video controls src="../assets/mechanics/pathfinding/GeyserBlocker-Path.mp4" width="750"></video>
+   <video controls src="../assets/avatar/pathfinding/GeyserBlocker-Path.mp4" width="750"></video>
 
 ### Ignoring Obstacles
 
@@ -446,15 +446,15 @@ In some cases, it's useful to pathfind through solid obstacles as if they didn't
 
 1. Create an `Class.BasePart.Anchored|Anchored` part around the object and set its `Class.BasePart.CanCollide|CanCollide` property to **false**.
 
-   <img src="../assets/mechanics/pathfinding/DoorPassThrough-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
+   <img src="../assets/avatar/pathfinding/DoorPassThrough-Block.jpg" width="750" alt="Anchored part defining a region to apply a pathfinding modifier to" />
 
 1. Insert a `Class.PathfindingModifier` instance onto the part and enable its `Class.PathfindingModifier.PassThrough|PassThrough` property.
 
-   <img src="../assets/mechanics/pathfinding/DoorPassThrough-PathfindingModifier-PassThrough.png" width="320" alt="PathfindingModifier instance with PassThrough property enabled" />
+   <img src="../assets/avatar/pathfinding/DoorPassThrough-PathfindingModifier-PassThrough.png" width="320" alt="PathfindingModifier instance with PassThrough property enabled" />
 
    Now, when a path is computed from the zombie NPC to the player character, the path extends beyond the door and you can prompt the zombie to traverse it. Even if the zombie is unable to open the door, it reacts as if it "hears" the character behind the door.
 
-   <img src="../assets/mechanics/pathfinding/Zombie-Full-Path.jpg" width="750" alt="Zombie NPC path passing through the previously blocking door" />
+   <img src="../assets/avatar/pathfinding/Zombie-Full-Path.jpg" width="750" alt="Zombie NPC path passing through the previously blocking door" />
 
 ## Pathfinding Links
 
@@ -462,23 +462,23 @@ Sometimes it's necessary to find a path across a space that cannot be normally t
 
 Using the island example from above, you can make the agent use a boat instead of walking across all of the bridges.
 
-<img src="../assets/mechanics/pathfinding/PathfindingLink-Path.jpg" width="800" alt="PathfindingLink showing how an agent can use a boat instead of walking across all of the bridges" />
+<img src="../assets/avatar/pathfinding/PathfindingLink-Path.jpg" width="800" alt="PathfindingLink showing how an agent can use a boat instead of walking across all of the bridges" />
 
 To create a `Class.PathfindingLink` using this example:
 
 1. Create two `Class.Attachment|Attachments`, one on the boat's seat and one near the boat's landing point.
 
-   <img src="../assets/mechanics/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end" />
 
 1. Create a `Class.PathfindingLink` object in the workspace, then assign its **Attachment0** and **Attachment1** properties to the starting and ending attachments respectively.
 
-   <img src="../assets/mechanics/pathfinding/PathfindingLink-Attachments-Properties.png" width="320" alt="Attachment0/Attachment1 properties of a PathfindingLink" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments-Properties.png" width="320" alt="Attachment0/Attachment1 properties of a PathfindingLink" />
 
-   <img src="../assets/mechanics/pathfinding/PathfindingLink-In-World.jpg" width="750" alt="PathfindingLink visualized in the 3D world" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-In-World.jpg" width="750" alt="PathfindingLink visualized in the 3D world" />
 
 1. Assign a meaningful name like **UseBoat** to its `Class.PathfindingLink.Label|Label` property. This name is used as a flag in the pathfinding script to trigger a custom action when the agent reaches the starting link point.
 
-   <img src="../assets/mechanics/pathfinding/PathfindingLink-Label.png" width="320" alt="Label property specified for PathfindingLink" />
+   <img src="../assets/avatar/pathfinding/PathfindingLink-Label.png" width="320" alt="Label property specified for PathfindingLink" />
 
 1. Include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` containing both a `Water` key and a custom key matching the `Class.PathfindingLink.Label|Label` property name. Assign the custom key a lower value than `Water`.
 
@@ -597,11 +597,11 @@ To create a `Class.PathfindingLink` using this example:
    followPath(TEST_DESTINATION)
    ```
 
-   <video controls src="../assets/mechanics/pathfinding/Boat-Path.mp4" width="750" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
+   <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="750" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
 
 ## Streaming Compatibility
 
-In-experience [content streaming](../workspace/streaming.md) is a powerful feature that dynamically loads and unloads 3D content as a player's character moves around the world. As they explore the 3D space, new subsets of the space stream to their device and some of the existing subsets might stream out.
+In-experience [instance streaming](../workspace/streaming.md) is a powerful feature that dynamically loads and unloads 3D content as a player's character moves around the world. As they explore the 3D space, new subsets of the space stream to their device and some of the existing subsets might stream out.
 
 Consider the following best practices for using `Class.PathfindingService` in streaming-enabled experiences:
 
@@ -609,4 +609,4 @@ Consider the following best practices for using `Class.PathfindingService` in st
 
 - A common approach in pathfinding is to use the coordinates of existing objects for [computation](#computing-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
 
-      To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.
+  To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.

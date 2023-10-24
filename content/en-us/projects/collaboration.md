@@ -142,17 +142,18 @@ When a collaborator selects an object, a selection box in their color appears ar
 
 If multiple creators have made edits to a part or instance, pressing **Undo** for that object reverts it to the state before you made a change **and** revert all changes that other editors might have made following your latest edit.
 
-## Collaborative Scripting
+## Scripting Using Drafts Mode
 
 If [Team Create](#team-create) is on, Roblox stores scripts in a central cloud-based repository that all collaborators can access. This allows creators to:
 
-- Independently work on the same script that others are editing.
-- Know when others are working on a script.
+- Work on the same script that others are editing using Drafts.
 - Test changes locally before committing them to the cloud.
 - Compare and commit script changes to the cloud when ready.
 
 <Alert severity="warning">
-Collaborative scripting is <b>disabled</b> by default. To enable it, select <b>Game Settings</b> &rarr; <b>Options</b> and turn on <b>Enable&nbsp;Collaborative&nbsp;Editing</b>. Note that you'll also need to <a href="#disabling-team-create">disable</a> [Team Create](#team-create) and then reenable it to restart the session.
+Drafts Mode is **disabled** by default. To enable it, select **Game Settings** > **Options** and turn on **Enable Drafts Mode**. Note that all collaborators need to exit the place—it must be completely empty—and then reenter it for this setting to take effect.
+
+You can also [disable Team Create](#disabling-team-create) and then reenable it to restart the session.
 </Alert>
 
 ### Drafting Scripts

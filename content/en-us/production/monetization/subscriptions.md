@@ -13,6 +13,10 @@ Subscription creation tooling is live for eligible creators to develop and test 
 - **Robux Payout:** You receive subscription revenue in Robux. For more details, see [Earning with Subscriptions](#earning-with-subscriptions).
 - **Single-Tiered:** All subscriptions within an experience can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
 
+<Alert severity="info">
+To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md).
+</Alert>
+
 ## Subscription Guidelines
 
 Before creating your subscriptions, ensure they align with [Roblox's Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) and comply with local laws. Any experience that engages in scams, attempts to mislead users with false offerings, or otherwise violate our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) will be taken down. In addition, ensure your subscriptions abide by the following guidelines:

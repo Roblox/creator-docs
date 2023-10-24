@@ -177,7 +177,7 @@ railings. All other objects like candles and bookshelves are `Class.MeshPart`
 objects. For more information, see [Meshes](../parts/meshes.md) and [External
 Modeling](/art/modeling).
 
-<img src="../assets/developing-on-roblox/building-best-practices-exampleParts.jpg" />
+<img src="../assets/misc/Building-Best-Practices-Example-Parts.jpg" />
 
 ### Default Materials
 
@@ -244,7 +244,7 @@ If you're struggling with performance in an experience, try the following:
   performance.
 - Limit overlapping transparent objects (such as glass, particles or beams).
 - Use fewer [decals](../parts/textures-decals.md).
-- Enable [content streaming](../workspace/streaming.md).
+- Enable [instance streaming](../workspace/streaming.md).
 
 ### Physics
 

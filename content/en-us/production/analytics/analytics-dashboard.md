@@ -39,7 +39,7 @@ By default, for a [group experience](../../projects/groups.md), only the group o
 
 1. Select the group you want to grant permission on the [Groups](https://www.roblox.com/groups) page.
 
-2. Click the **...** button and select **Configure Group** in the dropdown menu.
+2. Click the **&ctdot;** button and select **Configure Group** in the dropdown menu.
 
 3. Navigate to the **Roles** tab. Select an existing role that you want to grant access to the analytics dashboard or create a new role.
 

@@ -41,25 +41,30 @@ You can store the following types/values in attributes:
 			<li>[boolean](../luau/booleans.md)</li>
 			<li>[number](../luau/numbers.md)</li>
 			<li>`Datatype.UDim`</li>
-			<li>`Datatype.UDim2`</li>
 		</ul>
 	</Grid>
 	<Grid item>
 		<ul>
+			<li>`Datatype.UDim2`</li>
 			<li>`Datatype.BrickColor`</li>
 			<li>`Datatype.Color3`</li>
 			<li>`Datatype.Vector2`</li>
-			<li>`Datatype.Vector3`</li>
-			<li>`Datatype.EnumItem`</li>
 		</ul>
 	</Grid>
 	<Grid item>
 		<ul>
+			<li>`Datatype.Vector3`</li>
+			<li>`Datatype.EnumItem`</li>
 			<li>`Datatype.NumberSequence`</li>
 			<li>`Datatype.ColorSequence`</li>
+		</ul>
+	</Grid>
+	<Grid item>
+		<ul>
 			<li>`Datatype.NumberRange`</li>
 			<li>`Datatype.Rect`</li>
 			<li>`Datatype.Font`</li>
+			<li>`Datatype.CFrame`</li>
 		</ul>
 	</Grid>
 </Grid>

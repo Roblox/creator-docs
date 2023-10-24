@@ -91,6 +91,8 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
+          - title: Character Controllers
+            path: /physics/character-controllers
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -457,8 +459,8 @@ navigation:
             path: /production/publishing/dmca-guidelines
           - title: Accessibility Guidelines
             path: /production/publishing/accessibility
-          - title: Xbox Guidelines
-            path: /production/publishing/xbox-guidelines
+          - title: Console Guidelines
+            path: /production/publishing/console-guidelines
           - title: VR Guidelines
             path: /production/publishing/vr-guidelines
       - title: Account Verification

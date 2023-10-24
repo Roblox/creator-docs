@@ -1,13 +1,13 @@
 ---
-title: Exporting
-description: Covers the steps to properly export rigid accessories from Blender.
-prev: /art/accessories/creating-rigid/texturing
+title: Exporting FBX
+description: Use Blender's .fbx exporter with the correct settings to create a Studio-ready asset.
+prev: /art/accessories/creating-rigid/clean-up
 next: /art/accessories/creating-rigid/importing
 ---
 
-After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequin meshes, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
+After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
 
-An often forgotten cleanup step involves **applying your transformations**, also known as **freezing your transforms**, by setting your orientation, rotation, and scale deltas to zero. Failure to apply any transformations can result in unexpected behavior and orientation when importing the mesh in Studio.
+Along with deleting your extra objects and mannequins, an often forgotten cleanup step involves **applying your transformations**, also known as **freezing your transforms**, by setting your orientation, rotation, and scale deltas to zero. Failure to apply any transformations can result in unexpected behavior and orientation when importing the mesh in Studio.
 
 To freeze your transforms:
 

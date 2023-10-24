@@ -2,11 +2,9 @@
 title: Platform Overview
 description: Learn about the unique value propositions on Roblox.
 next: /creation
-banner:
-  title: Platform Overview
-  subtitle: Learn about the unique value propositions on Roblox.
-  backgroundUrl: ../../assets/landing/guides/banner.jpg
 ---
+
+**Learn about the unique value propositions on Roblox.**
 
 Roblox's vision is to reimagine how people come together. As a **User-Generated Content** (UGC) platform, we provide the technology for creators to bring that vision to life. Whether you're an individual creator, a professional development studio, or something in between, we're committed to supporting and growing our community so we can make Roblox better and empower you to create all you can imagine.
 

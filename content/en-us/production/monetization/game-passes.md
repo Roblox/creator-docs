@@ -38,16 +38,12 @@ When you're creating an image to use for your Pass, consider the following requi
 
 To create a new Pass:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click on the experience you want to create a Pass for. The experience's **Overview** page displays.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the experience you want to create a Pass for. The experience's **Overview** page displays.
 1. In the left-hand navigation, select **Associated Items**. The **Associated Items** page displays for that specific experience.
 
    <img src="../../assets/monetization/game-passes/Associated-Items.jpg" width="30%" />
 
 1. In the horizontal navigation, select **PASSES**. All Passes for that experience display.
-
-   <img src="../../assets/monetization/game-passes/Associated-Items-Passes.jpg" width="50%" />
-
 1. Click the **CREATE A PASS** button. The **Create a Pass** page displays.
 1. Click the **UPLOAD IMAGE** button. A file browser displays.
 1. Select the image you want to display as the icon, then click the **Open** button.
@@ -72,7 +68,7 @@ To locate a Pass ID:
 
 1. Navigate to the **Passes** section of an experience's **Associated Items** page.
 
-1. Hover over a Pass thumbnail and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+1. Hover over a Pass thumbnail and click the **&ctdot;** button. A contextual menu displays.
 
 1. Select **Copy Asset ID**. The Pass ID copies to your clipboard.
 
@@ -86,7 +82,7 @@ To monetize a Pass:
 
 1. Navigate to the **Passes** section of an experience's **Associated Items** page.
 
-1. Hover over a Pass thumbnail and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+1. Hover over a Pass thumbnail and click the **&ctdot;** button. A contextual menu displays.
 
 1. Select **Open in New Tab**. The **Configure Pass** page displays.
 

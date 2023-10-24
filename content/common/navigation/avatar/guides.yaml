@@ -7,6 +7,8 @@ navigation:
     path: /art/accessories/
   - title: Specifications
     path: /art/accessories/specifications
+  - title: Body Scale
+    path: /art/accessories/body-scale
   - title: Reference Files
     path: /art/accessories/project-files
   - title: Export Settings
@@ -25,35 +27,16 @@ navigation:
     path: /art/characters/project-files
   - title: Export Settings
     path: /art/characters/export-settings
-  - title: Bodies
-    section:
-      - title: Rigging a Humanoid Model
-        path: /art/modeling/rigging-a-humanoid-model
-      - title: Skinning a Humanoid Model
-        path: /art/modeling/skinning-a-humanoid-model
   - title: Heads
     section:
       - title: Overview
         path: /art/characters/facial-animation/
-      - title: Creating Basic Heads
-        path: /art/characters/facial-animation/creating-basic-heads
-      - title: Creating Face Accessories
-        path: /art/characters/facial-animation/creating-face-accessories
-      - title: FACS Poses Reference
-        path: /art/characters/facial-animation/facs-poses-reference
       - title: Using Heads in Studio
         path: /art/characters/facial-animation/using-heads-in-studio
       - title: Animating Heads
         path: /art/characters/facial-animation/animating-heads
-  - title: Testing
-    section:
-      - title: Overview
-        path: /art/characters/testing/
-      - title: In Blender
-        path: /art/characters/testing/blender
-      - title: In Studio
-        path: /art/characters/testing/studio
-
+      - title: FACS Poses Reference
+        path: /art/characters/facial-animation/facs-poses-reference
   - heading: Publishing and Selling
   - title: Policies and Guidelines
     section:

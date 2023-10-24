@@ -21,6 +21,8 @@ navigation:
     path: /production/game-design/monetization-foundations
   - title: Season Pass Design
     path: /production/game-design/season-pass-design
+  - title: Subscription Design
+    path: /production/game-design/subscription-design
   - title: Contextual Purchases
     path: /production/game-design/contextual-purchases
   - title: Balancing Virtual Economies

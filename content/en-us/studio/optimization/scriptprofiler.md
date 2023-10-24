@@ -13,15 +13,15 @@ To start a new profiling session:
 
 1. Press <kbd>F9</kbd> to open the **Developer Console**.
 
-   <img  src="../../assets/optimization/scriptprofiler/scriptprofiler-developer-console.png"/>
+   <img  src="../../assets/optimization/script-profiler/scriptprofiler-developer-console.png"/>
 
 2. The default feature is Log. To change it, click the arrow and select **ScriptProfiler** from the dropdown menu.
 
-   <img  src="../../assets/optimization/scriptprofiler/scriptprofiler-picker-400x480.png" width="400px" />
+   <img  src="../../assets/optimization/script-profiler/scriptprofiler-picker-400x480.png" width="400px" />
 
 3. Click **Start** to begin the profiling session. It might not look like anything is happening, but the profiler is sampling all scripts executing at this time.
 
-   <img  src="../../assets/optimization/scriptprofiler/scriptprofiler-start-600x200.png" width="600px"/>
+   <img  src="../../assets/optimization/script-profiler/scriptprofiler-start-600x200.png" width="600px"/>
 
 4. Click **Stop** when finished to display the captured data. <Alert severity='info'> **Server-side**, collected data is cleared once all running sessions have ended.</Alert>
 
@@ -31,11 +31,11 @@ The captured data is organized into various categories such as how it relates to
 
 1. Expand **&lt;root&gt;** and then each category in the tree to see captured information within.
 
-   <img  src="../../assets/optimization/scriptprofiler/scriptprofiler-expand-root-600x200.png" width="600px"/>
+   <img  src="../../assets/optimization/script-profiler/scriptprofiler-expand-root-600x200.png" width="600px"/>
 
 2. Hover your cursor over a node in the call-tree to view file and line information.
 
-   <img  src="../../assets/optimization/scriptprofiler/scriptprofiler-line-information-600x200.png" width="600px"/>
+   <img  src="../../assets/optimization/script-profiler/scriptprofiler-line-information-600x200.png" width="600px"/>
 
 The profiler supports sampling Luau functions, method calls, and property access, but it attributes the time spent in standard library calls or accessing primitive types, such as `Datatype.CFrame`, to the calling function. Profiling data for functions that don't significantly contribute will be noisy. Threads that sleep or wait for results don't contribute to the overall time displayed by the profiler because they don't consume CPU resources.
 
@@ -45,7 +45,7 @@ Manually specified profiler regions via `Library.debug.profilebegin()` and `Libr
 
 By default, ScriptProfiler represents time spent in each node as milliseconds of CPU time. To toggle displaying the time spent as percentages of the total recording session, click Unit: %.
 
-<img src="../../assets/optimization/scriptprofiler/scriptprofiler-units-600x200.png" width="600px" />
+<img src="../../assets/optimization/script-profiler/scriptprofiler-units-600x200.png" width="600px" />
 
 ## Profiling Scripts on the Server
 

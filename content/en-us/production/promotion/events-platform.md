@@ -9,9 +9,7 @@ As part of your [promotion](../../production/promotion/index.md) initiatives, th
 
 ## Managing Events
 
-You can manage events through the [Creator&nbsp;Dashboard](https://create.roblox.com/creations), under the **EVENTS** tab.
-
-<img src="../../assets/creator-dashboard/Creations-Events-Tab.png" width="800" alt="Events tab for experiences on the Creator Dashboard" />
+You can manage events through the [Creator&nbsp;Dashboard](https://create.roblox.com/creations), under the [EVENTS](https://create.roblox.com/dashboard/creations?activeTab=UpcomingEvent) tab.
 
 ### Creating Events
 
@@ -19,7 +17,7 @@ To create an event, you must be the **group owner** of any [group-owned](../../p
 
 1. Navigate to the [Creator&nbsp;Dashboard](https://create.roblox.com/creations).
 
-1. With the **EVENTS** tab selected, click the **CREATE&nbsp;EVENT** button.
+1. With the [EVENTS](https://create.roblox.com/dashboard/creations?activeTab=UpcomingEvent) tab selected, click the **CREATE&nbsp;EVENT** button.
 
    <img src="../../assets/promotion/events-platform/CD-Create-Event-Button.png" width="800" alt="Create Event button on Events page of the Creator Dashboard" />
 
@@ -70,7 +68,7 @@ Events that you saved as **drafts** during creation remain editable until you pu
 
 To publish a draft event:
 
-1. Hover over the event thumbnail, click the <span style={{fontWeight:"800"}}>&ctdot;</span> button, and select **Configure&nbsp;Event**.
+1. Hover over the event thumbnail, click the **&ctdot;** button, and select **Configure&nbsp;Event**.
 
    <img src="../../assets/promotion/events-platform/CD-Event-Menu-Configure-Event.png" width="800" alt="Event's right-click context menu indicating the selection of Configure Event" />
 
@@ -84,7 +82,7 @@ To cancel an upcoming/active event, or to delete a draft/past/canceled event and
 
 1. Visit the [upcoming](https://create.roblox.com/creations?activeTab=UpcomingEvent), [past](https://create.roblox.com/creations?activeTab=PastEvent), or [drafts](https://create.roblox.com/creations?activeTab=DraftEvent) page.
 
-1. Hover over the event thumbnail, click the <span style={{fontWeight:"800"}}>&ctdot;</span> button, and select either **Cancel Event** or **Delete Event**.
+1. Hover over the event thumbnail, click the **&ctdot;** button, and select either **Cancel Event** or **Delete Event**.
 
    <Tabs>
    <TabItem label="Cancel Event">
@@ -113,7 +111,7 @@ All published events feature an event details page which you can share with play
 	<img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Copy-URL.jpg" width="800" alt="Share button indicated on event details page" />
   </TabItem>
   <TabItem label="Upcoming Events">
-	From the [upcoming](https://create.roblox.com/creations?activeTab=UpcomingEvent) events page, hover over the event thumbnail, click the <span style={{fontWeight:"800"}}>&ctdot;</span> button, and select **Copy Event Details URL**.
+	From the [upcoming](https://create.roblox.com/creations?activeTab=UpcomingEvent) events page, hover over the event thumbnail, click the **&ctdot;** button, and select **Copy Event Details URL**.
 	<img src="../../assets/promotion/events-platform/CD-Event-Menu-Copy-Event-Details-URL.png" width="800" alt="Event's right-click context menu indicating the selection of Copy Event Details URL" />
   </TabItem>
 </Tabs>

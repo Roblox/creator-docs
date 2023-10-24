@@ -3,21 +3,19 @@ title: Streaming in Immersion
 comments:
 next: /resources/the-mystery-of-duvall-drive/developing-a-moving-world
 prev: /resources/the-mystery-of-duvall-drive/immersive-narrative
-description: Explains the use of content streaming The Mystery of Duvall Drive.
+description: Explains the use of instance streaming The Mystery of Duvall Drive.
 ---
 
-Roblox Studio is a powerful engine that can create experiences on a wide variety of platforms, but even some high-end phones may struggle to load all of our content at once. To address this, we used [Content Streaming](../../workspace/streaming.md) to achieve the highest level of quality possible on a wide spectrum of devices. Content streaming allowed us to author all our content in one place and dynamically load smaller portions of the content visible to the user.
-
-You can enable Content Streaming by [enabling the `Class.Workspace.StreamingEnabled` property](../../workspace/streaming.md#enabling-content-streaming). Once enabled, content streaming allows you to load in only what was near the user. While Content Streaming may not solve all memory and performance issues, it does make a major difference by not loading content until it's relevant to the user.
+Roblox Studio is a powerful engine that can create experiences on a wide variety of platforms, but even some high-end phones may struggle to load all of our content at once. To address this, we used [streaming](../../workspace/streaming.md) to achieve the highest level of quality possible on a wide spectrum of devices. Streaming allowed us to author all our content in one place and dynamically load smaller portions of the content visible to the user.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/streaming-in-immersion/content-streaming.png" width="100%" />
-  <figcaption>Content Streaming is set on the workspace itself. We found the default settings worked well for us.</figcaption>
+  <figcaption>Streaming enabled on the workspace itself, with default settings</figcaption>
 </figure>
 
 ## Technical Considerations
 
-When enabling Content Streaming on your experience, there are a few things to consider to ensure that your experience runs well and that you maximize the benefits of the streaming feature:
+When enabling streaming on your experience, there are a few things to consider to ensure that your experience runs well and that you maximize the benefits of the streaming feature:
 
 1. **Are there scripts or elements that are reliant on another piece of content?** If so, one or more of your dependencies may not be loaded at certain times.
 2. **Are there scripts that scan the workspace when the experience starts?** Client scripts should not rely on finding all instances they require at the time an experience starts and this is not a recommended practice.
@@ -38,7 +36,7 @@ When creating The Mystery of Duvall Drive, we encountered all three of these pro
 
 ## Streaming-Friendly Level Design
 
-To create an immersive environment, players have to be consistently surrounded by the world we built for them. When using content streaming, we had to make sure that players wouldn't see unexpected content, such as seeing the "end of the world" if there weren't any visual assets loaded in their content streaming range.
+To create an immersive environment, players have to be consistently surrounded by the world we built for them. When using instance streaming, we had to make sure that players wouldn't see unexpected content, such as seeing the "end of the world" if there weren't any visual assets loaded in their instance streaming range.
 
 Since distant trees behind the house and other blocking geometry like hills and mountains would be out of range, we had to find a solution to keep players from seeing the horizon and breaking their immersion. To address this, we added nearby blocking geometry along all areas of the player's path and designed the path that would wind to effectively hide the lack of content in the distance. We placed blocking geometry in a way that ensures the player would be surrounded by streamable visual assets at any point on the path. This aligned well with our original design to create a windy driveway and is a prime example of thoughtful level design that incorporates aesthetic and technical applications.
 

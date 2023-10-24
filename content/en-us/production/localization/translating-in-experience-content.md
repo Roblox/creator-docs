@@ -100,6 +100,12 @@ To enable the ATC tool:
 2. Launch the experience by testing in Studio using the **Team Test** option or by clicking **Play** on the main experience menu page.
 3. Play through the experience and ensure you open any GUIs containing text.
 
+ATC also checks your experience on a daily basis for new strings and strings that no longer exist, such as usernames or strings related to a past event. The tool updates the localization table and adds or removes entries accordingly. The ATC only removes auto-scraped strings with automatic translations and ignores strings that were manually added or that have manual translations.
+
+If you do not want ATC to perform daily updates, navigate to your localization settings and disable the second ATC toggle:
+
+<img src="../../assets/localization/Portal-Enable-ATC-Auto.png" width="80%" />
+
 <Alert severity="info">
 ATC can not capture some experience objects. These objects may require special handling with <a href="./localizing-with-scripting.md">localization scripts</a>. The current exemptions are:
 <ul>

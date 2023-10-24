@@ -57,7 +57,7 @@ Labels allow you to display customizable [text](../ui/labels.md) and [images](..
 
 [Drag Detectors](../ui/drag-detectors.md) encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
 
-<video src="../assets/input/drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
+<video src="../assets/ui/drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
 
 ## Layout and Design
 

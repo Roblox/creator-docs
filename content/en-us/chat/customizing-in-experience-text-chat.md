@@ -13,10 +13,10 @@ You can toggle appearance of the **chat window** and **input bar** in one of two
 
    <Grid container spacing={3}>
    <Grid item>
-   <img src="../assets/ui/in-experience-text-chat/TextChatService-Configuration-Objects.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatService-Configuration-Objects.png" width="320" />
    </Grid>
    <Grid item>
-   <img src="../assets/ui/in-experience-text-chat/ChatWindowConfiguration-Enabled.png" width="400" /><br /><img src="../assets/ui/in-experience-text-chat/ChatInputBarConfiguration-Enabled.png" width="400" />
+   <img src="../assets/players/in-experience-text-chat/ChatWindowConfiguration-Enabled.png" width="400" /><br /><img src="../assets/players/in-experience-text-chat/ChatInputBarConfiguration-Enabled.png" width="400" />
    </Grid>
    </Grid>
 
@@ -144,7 +144,7 @@ end
 
 <img
   alt="VIP users' chat tags"
-  src="../assets/ui/in-experience-text-chat/Chat-Tag-VIP.jpg"
+  src="../assets/players/in-experience-text-chat/Chat-Tag-VIP.jpg"
   width="90%" />
 
 ### Coloring Usernames
