@@ -219,70 +219,102 @@ local function is_valid_utf8(input)
 
 	while i <= #input do
 		local c = string.byte(input, i)
-		local bytes_to_read = 0
 
 		if c >= 0x00 and c <= 0x7F then
-			bytes_to_read = 1
+			--// Fallthrough
 		elseif c >= 0xC2 and c <= 0xDF then
-			bytes_to_read = 2
+			local next_byte = string.byte(input, i + 1)
+			
+			if not next_byte or next_byte < 0x80 or next_byte > 0xBF then
+				return false
+			end
+			
+			i = i + 1
 		elseif c == 0xE0 then
-			bytes_to_read = 3
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
 			
-			local next_byte = string.byte(input, i + 1)
-			
-			if next_byte and next_byte >= 0xA0 and next_byte <= 0xBF then
-				i = i + 1
-			else
+			if not next_byte1 or not next_byte2 or
+				next_byte1 < 0xA0 or next_byte1 > 0xBF or
+				next_byte2 < 0x80 or next_byte2 > 0xBF then
 				return false
 			end
+			
+			i = i + 2
 		elseif c >= 0xE1 and c <= 0xEC then
-			bytes_to_read = 3
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
+			
+			if not next_byte1 or not next_byte2 or
+				next_byte1 < 0x80 or next_byte1 > 0xBF or
+				next_byte2 < 0x80 or next_byte2 > 0xBF then
+				return false
+			end
+			
+			i = i + 2
 		elseif c == 0xED then
-			bytes_to_read = 3
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
 			
-			local next_byte = string.byte(input, i + 1)
-			
-			if next_byte and next_byte >= 0x80 and next_byte <= 0x9F then
-				i = i + 1
-			else
+			if not next_byte1 or not next_byte2 or
+				next_byte1 < 0x80 or next_byte1 > 0x9F or
+				next_byte2 < 0x80 or next_byte2 > 0xBF then
 				return false
 			end
+			
+			i = i + 2
 		elseif c >= 0xEE and c <= 0xEF then
-			bytes_to_read = 3
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
+			
+			if not next_byte1 or not next_byte2 or
+				next_byte1 < 0x80 or next_byte1 > 0xBF or
+				next_byte2 < 0x80 or next_byte2 > 0xBF then
+				return false
+			end
+			
+			i = i + 2
 		elseif c == 0xF0 then
-			bytes_to_read = 4
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
+			local next_byte3 = string.byte(input, i + 3)
 			
-			local next_byte = string.byte(input, i + 1)
-			
-			if next_byte and next_byte >= 0x90 and next_byte <= 0xBF then
-				i = i + 1
-			else
+			if not next_byte1 or not next_byte2 or not next_byte3 or
+				next_byte1 < 0x90 or next_byte1 > 0xBF or
+				next_byte2 < 0x80 or next_byte2 > 0xBF or
+				next_byte3 < 0x80 or next_byte3 > 0xBF then
 				return false
 			end
+			
+			i = i + 3
 		elseif c >= 0xF1 and c <= 0xF3 then
-			bytes_to_read = 4
-		elseif c == 0xF4 then
-			bytes_to_read = 4
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
+			local next_byte3 = string.byte(input, i + 3)
 			
-			local next_byte = string.byte(input, i + 1)
-			
-			if next_byte and next_byte >= 0x80 and next_byte <= 0x8F then
-				i = i + 1
-			else
+			if not next_byte1 or not next_byte2 or not next_byte3 or
+				next_byte1 < 0x80 or next_byte1 > 0xBF or
+				next_byte2 < 0x80 or next_byte2 > 0xBF or
+				next_byte3 < 0x80 or next_byte3 > 0xBF then
 				return false
 			end
+			
+			i = i + 3
+		elseif c == 0xF4 then
+			local next_byte1 = string.byte(input, i + 1)
+			local next_byte2 = string.byte(input, i + 2)
+			local next_byte3 = string.byte(input, i + 3)
+			
+			if not next_byte1 or not next_byte2 or not next_byte3 or
+				next_byte1 < 0x80 or next_byte1 > 0x8F or
+				next_byte2 < 0x80 or next_byte2 > 0xBF or
+				next_byte3 < 0x80 or next_byte3 > 0xBF then
+				return false
+			end
+			
+			i = i + 3
 		else
 			return false
-		end
-
-		for j = 1, bytes_to_read - 1 do
-			i = i + 1
-
-			local next_byte = string.byte(input, i)
-
-			if not (next_byte and next_byte >= 0x80 and next_byte <= 0xBF) then
-				return false
-			end
 		end
 
 		i = i + 1
