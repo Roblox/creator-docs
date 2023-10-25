@@ -225,26 +225,50 @@ local function is_valid_utf8(input)
 			bytes_to_read = 1
 		elseif c >= 0xC2 and c <= 0xDF then
 			bytes_to_read = 2
-		elseif c == 0xE0 or (c >= 0xE1 and c <= 0xEC) then
+		elseif c == 0xE0 then
+			bytes_to_read = 3
+			
+			local next_byte = string.byte(input, i + 1)
+			
+			if next_byte and next_byte >= 0xA0 and next_byte <= 0xBF then
+				i = i + 1
+			else
+				return false
+			end
+		elseif c >= 0xE1 and c <= 0xEC then
 			bytes_to_read = 3
 		elseif c == 0xED then
 			bytes_to_read = 3
 			
 			local next_byte = string.byte(input, i + 1)
 			
-			if not (next_byte and next_byte >= 0x80 and next_byte <= 0x9F) then
+			if next_byte and next_byte >= 0x80 and next_byte <= 0x9F then
+				i = i + 1
+			else
 				return false
 			end
 		elseif c >= 0xEE and c <= 0xEF then
 			bytes_to_read = 3
-		elseif c == 0xF0 or (c >= 0xF1 and c <= 0xF3) then
+		elseif c == 0xF0 then
+			bytes_to_read = 4
+			
+			local next_byte = string.byte(input, i + 1)
+			
+			if next_byte and next_byte >= 0x90 and next_byte <= 0xBF then
+				i = i + 1
+			else
+				return false
+			end
+		elseif c >= 0xF1 and c <= 0xF3 then
 			bytes_to_read = 4
 		elseif c == 0xF4 then
 			bytes_to_read = 4
 			
 			local next_byte = string.byte(input, i + 1)
 			
-			if not (next_byte and next_byte >= 0x80 and next_byte <= 0x8F) then
+			if next_byte and next_byte >= 0x80 and next_byte <= 0x8F then
+				i = i + 1
+			else
 				return false
 			end
 		else
@@ -253,9 +277,9 @@ local function is_valid_utf8(input)
 
 		for j = 1, bytes_to_read - 1 do
 			i = i + 1
-			
+
 			local next_byte = string.byte(input, i)
-			
+
 			if not (next_byte and next_byte >= 0x80 and next_byte <= 0xBF) then
 				return false
 			end
