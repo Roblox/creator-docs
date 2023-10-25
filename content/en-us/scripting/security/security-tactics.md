@@ -209,7 +209,64 @@ Ensure that any actions performed through a `Class.RemoteEvent` or `Class.Remote
 - `Class.Instance` values cannot be serialized into a `Class.DataStore` and will fail. Utilize [type validation](#remote-runtime-type-validation) to prevent this.
 - `Class.DataStore|DataStores` have [data limits](../../cloud-services/datastores.md#data-limits). Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
 - Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
-- `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure only bytes 1-127 are used. By using `Library.string.find()` with the pattern `"[%z\128-\255]"`, an operation can be aborted if any invalid characters are found in a string.
+- `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure they are valid.
+
+Sanitizing strings to make sure they are valid can be done by verifying each byte in a string to make sure they are a valid UTF-8 pattern if they begin with a character bigger than 127, the below function can be used to verify any input provided by the client. 
+
+```lua
+local function is_valid_utf8(input)
+	local i = 1
+
+	while i <= #input do
+		local c = string.byte(input, i)
+		local bytes_to_read = 0
+
+		if c >= 0x00 and c <= 0x7F then
+			bytes_to_read = 1
+		elseif c >= 0xC2 and c <= 0xDF then
+			bytes_to_read = 2
+		elseif c == 0xE0 or (c >= 0xE1 and c <= 0xEC) then
+			bytes_to_read = 3
+		elseif c == 0xED then
+			bytes_to_read = 3
+			
+			local next_byte = string.byte(input, i + 1)
+			
+			if not (next_byte and next_byte >= 0x80 and next_byte <= 0x9F) then
+				return false
+			end
+		elseif c >= 0xEE and c <= 0xEF then
+			bytes_to_read = 3
+		elseif c == 0xF0 or (c >= 0xF1 and c <= 0xF3) then
+			bytes_to_read = 4
+		elseif c == 0xF4 then
+			bytes_to_read = 4
+			
+			local next_byte = string.byte(input, i + 1)
+			
+			if not (next_byte and next_byte >= 0x80 and next_byte <= 0x8F) then
+				return false
+			end
+		else
+			return false
+		end
+
+		for j = 1, bytes_to_read - 1 do
+			i = i + 1
+			
+			local next_byte = string.byte(input, i)
+			
+			if not (next_byte and next_byte >= 0x80 and next_byte <= 0xBF) then
+				return false
+			end
+		end
+
+		i = i + 1
+	end
+
+	return true
+end
+```
 
 ### Remote Throttling
 
