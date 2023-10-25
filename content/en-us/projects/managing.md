@@ -244,7 +244,7 @@ If you're struggling with performance in an experience, try the following:
   performance.
 - Limit overlapping transparent objects (such as glass, particles or beams).
 - Use fewer [decals](../parts/textures-decals.md).
-- Enable [content streaming](../workspace/streaming.md).
+- Enable [instance streaming](../workspace/streaming.md).
 
 ### Physics
 

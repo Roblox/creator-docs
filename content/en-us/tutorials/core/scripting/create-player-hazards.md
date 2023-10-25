@@ -103,6 +103,7 @@ local function onPlayerAdded(player)
   updatePlayerCoins(player, function(_)
     return 0
   end)
+
   player.CharacterAdded:Connect(function(character)
     -- WaitForChild would stop the player loop, so below should be done in a separate thread
     task.spawn(function()
@@ -152,6 +153,7 @@ lifecycle events:
   can execute.
 - `Class.Player.PlayerRemoved` fires when a player leaves the experience to
   clean up player state.
+- This code contains a potential issue where players could collect coins before the `Players.PlayerAdded` event executes and then have their coin counts reset to zero. To mitigate this issue, consider solutions such as code scheduling or freezing the player's character until initialization finishes. However, these solutions involve more complex scripting concepts that are beyond the scope of this tutorial.
 
 </AccordionDetails>
 </BaseAccordion>
