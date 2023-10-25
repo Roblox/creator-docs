@@ -211,7 +211,7 @@ Ensure that any actions performed through a `Class.RemoteEvent` or `Class.Remote
 - Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
 - `Class.DataStore|DataStores` can only accept valid UTF-8 characters. Sanitize all strings provided by the client to ensure they are valid.
 
-Sanitizing strings to make sure they are valid can be done by verifying each byte in a string to make sure they are a valid UTF-8 pattern if they begin with a character bigger than 127, the below function can be used to verify any input provided by the client. 
+Sanitizing strings to make sure they are valid can be done by verifying each byte in a string to make sure they are a valid UTF-8 pattern if they begin with a character bigger than 127, the below function can be used to verify any input provided by the client.
 
 ```lua
 local function is_valid_utf8(input)
