@@ -1,20 +1,20 @@
 ---
-title: Content Streaming
-description: Content streaming allows the Roblox engine to dynamically load and unload 3D content in regions of the world.
+title: Instance Streaming
+description: Instance streaming allows the Roblox engine to dynamically load and unload 3D content in regions of the world.
 ---
 
-In-experience **content streaming** allows the Roblox engine to dynamically load and unload 3D content and related instances in regions of the world. This can improve the overall player experience in several ways, for example:
+In-experience **instance streaming** allows the Roblox engine to dynamically load and unload 3D content and related instances in regions of the world. This can improve the overall player experience in several ways, for example:
 
 - **Faster join times** &mdash; Players can start playing in one part of the world while more of the world loads in the background.
 - **Memory efficiency** &mdash; Experiences can be played on devices with less memory since content is dynamically streamed in and out. More immersive and detailed worlds can be played on a wider range of devices.
 - **Improved performance** &mdash; Better frame rates and performance, as the server can spend less time and bandwidth synchronizing changes between the world and players in it.
 - **Level of detail** &mdash; Distant models and terrain remain visible even when they're not streamed to clients, keeping the experience optimized without entirely sacrificing background visuals.
 
-## Enabling Content Streaming
+## Enabling Streaming
 
-Content streaming can be enabled through the **StreamingEnabled** property of the **Workspace** object in Studio (this property cannot be set in a script).
+Instance streaming can be enabled through the **StreamingEnabled** property of the **Workspace** object in Studio. This property cannot be set in a script.
 
-<img src="../assets/optimization/content-streaming/Properties-Workspace-StreamingEnabled.png" width="320" alt="StreamingEnabled property enabled on Workspace object in Studio" />
+<img src="../assets/optimization/streaming/Properties-Workspace-StreamingEnabled.png" width="320" alt="StreamingEnabled property enabled on Workspace object in Studio" />
 
 Once enabled, it's recommended that you adhere to the following practices:
 
@@ -32,19 +32,19 @@ When a player joins, all instances in the `Class.Workspace` are sent to the clie
 
 <br />
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when the experience loads</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when eligible for streaming in</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-D.png" width="22" /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-D.png" width="22" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Instance sent along with its parent</figcaption></p></Grid>
 </Grid>
 
-<img src="../assets/optimization/content-streaming/Chart-Streaming-In.png" width="800" alt="Diagram showing the Workspace with various child instances" />
+<img src="../assets/optimization/streaming/Chart-Streaming-In.png" width="800" alt="Diagram showing the Workspace with various child instances" />
 <figcaption><sup>&dagger;</sup> Terrain is treated uniquely, in that the instance streams in when the experience loads, but terrain regions only stream in when needed</figcaption>
 
 ### Streaming Out
@@ -142,9 +142,9 @@ There may be a slight delay of ~10 milliseconds between when a part is created o
 
 ## Streaming Properties
 
-The following properties control how content streaming applies to your experience. All of these properties are **non-scriptable** and must be set on the **Workspace** object in Studio.
+The following properties control how instance streaming applies to your experience. All of these properties are **non-scriptable** and must be set on the **Workspace** object in Studio.
 
-<img src="../assets/optimization/content-streaming/Properties-Workspace-Streaming-Properties.png" width="320" alt="Streaming properties shown on Workspace object in Studio" />
+<img src="../assets/optimization/streaming/Properties-Workspace-Streaming-Properties.png" width="320" alt="Streaming properties shown on Workspace object in Studio" />
 
 ### StreamingIntegrityMode
 
@@ -152,16 +152,16 @@ Your experience may behave in unintended ways if a player moves into a region of
 
 ### StreamingMinRadius
 
-The **StreamingMinRadius** property indicates the radius around the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which content streams in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.
+The **StreamingMinRadius** property indicates the radius around the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which instances stream in at the highest priority. Care should be taken when increasing the default, as doing so will require more memory and more server bandwidth at the expense of other components.
 
 ### StreamingTargetRadius
 
-The **StreamingTargetRadius** property controls the maximum distance away from the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which content streams in. Note that the engine is allowed to retain previously loaded content beyond the target radius, memory permitting.
+The **StreamingTargetRadius** property controls the maximum distance away from the player's character (or `Class.Player.ReplicationFocus|ReplicationFocus`) in which instances stream in. Note that the engine is allowed to retain previously loaded instances beyond the target radius, memory permitting.
 
-A smaller **StreamingTargetRadius** reduces server workload, as the server will not stream in additional content beyond the set value. However, the target radius is also the maximum distance players will be able to see the full detail of your experience, so you should pick a value that creates a nice balance between these.
+A smaller **StreamingTargetRadius** reduces server workload, as the server will not stream in additional instances beyond the set value. However, the target radius is also the maximum distance players will be able to see the full detail of your experience, so you should pick a value that creates a nice balance between these.
 
 <Alert severity="info">
-**StreamingTargetRadius** should be larger than **StreamingMinRadius**. The content between the target radius and the minimum radius acts as a buffer in case the client temporarily stops receiving new content from the server. When the minimum radius and the target radius are equal, there is no buffer, which can lead to an increase in network pauses or an otherwise suboptimal user experience.
+**StreamingTargetRadius** should be larger than **StreamingMinRadius**. 3D content between the target radius and the minimum radius acts as a buffer in case the client temporarily stops receiving new content from the server. When the minimum radius and the target radius are equal, there is no buffer, which can lead to an increase in network pauses or an otherwise suboptimal user experience.
 </Alert>
 
 ### StreamOutBehavior
@@ -182,11 +182,11 @@ The **StreamOutBehavior** property sets the [streaming out](#streaming-out) beha
     </tr>
     <tr>
       <td>**LowMemory**</td>
-      <td>The client only streams out parts in a low memory situation and may remove content until only the minimum radius is present.</td>
+      <td>The client only streams out parts in a low memory situation and may remove 3D content until only the minimum radius is present.</td>
     </tr>
 	<tr>
       <td>**Opportunistic**</td>
-      <td>Regions beyond [StreamingTargetRadius](#streamingtargetradius) can be removed on the client even when there is no memory pressure. In this mode, the client never removes content that is closer than the target radius, except in low memory situations.</td>
+      <td>Regions beyond [StreamingTargetRadius](#streamingtargetradius) can be removed on the client even when there is no memory pressure. In this mode, the client never removes instances that are closer than the target radius, except in low memory situations.</td>
     </tr>
   </tbody>
 </table>
@@ -197,7 +197,7 @@ As noted previously, the client of a joining player receives all instances in th
 
 To avoid issues with model streaming and minimize use of `Class.Instance:WaitForChild()|WaitForChild()`, you can customize how `Class.Model|Models` and their descendants stream through their `Class.Model.ModelStreamingMode|ModelStreamingMode` property.
 
-<img src="../assets/optimization/content-streaming/Properties-Model-ModelStreamingMode.png" width="320" alt="ModelStreamingMode property indicated on a model's properties in Studio" />
+<img src="../assets/optimization/streaming/Properties-Model-ModelStreamingMode.png" width="320" alt="ModelStreamingMode property indicated on a model's properties in Studio" />
 
 <table>
   <thead>
@@ -238,19 +238,19 @@ When a `Class.Model` is set to **Default** or **Nonatomic**, its child `Class.Sc
 
 <br />
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when the experience loads</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when eligible for streaming in</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-D.png" width="22" /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-D.png" width="22" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Instance sent along with its parent</figcaption></p></Grid>
 </Grid>
 
-<img src="../assets/optimization/content-streaming/Chart-ModelStreamingMode-Nonatomic.png" width="800" alt="Diagram showing the Workspace with a nonatomic model"/>
+<img src="../assets/optimization/streaming/Chart-ModelStreamingMode-Nonatomic.png" width="800" alt="Diagram showing the Workspace with a nonatomic model"/>
 
 ```lua title='LocalScript' highlight='2, 5-6'
 -- Default/Nonatomic model exists at load time and is immediately accessible
@@ -267,19 +267,19 @@ If a `Class.Model` is changed to **Atomic**, all of its descendants are streamed
 
 <br />
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when the experience loads</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when eligible for streaming in</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-D.png" width="22" /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-D.png" width="22" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Instance sent along with its parent</figcaption></p></Grid>
 </Grid>
 
-<img src="../assets/optimization/content-streaming/Chart-ModelStreamingMode-Atomic.png" width="800" alt="Diagram showing the Workspace with an atomic model"/>
+<img src="../assets/optimization/streaming/Chart-ModelStreamingMode-Atomic.png" width="800" alt="Diagram showing the Workspace with an atomic model"/>
 
 ```lua title='LocalScript' highlight='2, 5-6'
 -- Atomic model does not exist at load time; use WaitForChild()
@@ -296,23 +296,23 @@ local part = model.Part
 
 <br />
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-A.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when the experience loads</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-B.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client when eligible for streaming in</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-C.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-C.png" width="22" style={{marginBottom:"5px;"}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p style={{marginBottom:"0px;"}}><figcaption>Instance sent to client soon after player joins, exempt from streaming out</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={1} alignItems="flex-start">
-	<Grid item><img src="../assets/optimization/content-streaming/Chart-Symbol-D.png" width="22" /></Grid>
+	<Grid item><img src="../assets/optimization/streaming/Chart-Symbol-D.png" width="22" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Instance sent along with its parent</figcaption></p></Grid>
 </Grid>
 
-<img src="../assets/optimization/content-streaming/Chart-ModelStreamingMode-Persistent.png" width="800" alt="Diagram showing the Workspace with a persistent model"/>
+<img src="../assets/optimization/streaming/Chart-ModelStreamingMode-Persistent.png" width="800" alt="Diagram showing the Workspace with a persistent model"/>
 
 ```lua title='LocalScript' highlight='2, 5-6'
 -- Persistent model does not exist at load time; use WaitForChild()

@@ -58,7 +58,7 @@ Create unique Roblox avatars, using mesh geometry, rigs, facial animation, and o
 </GridContainer> <br />
 
 <Alert severity = 'info'>
-If you're looking to integrate avatars, accessories, and clothes into experiences, see the [Characters](../characters/index.md) section in the Experiences documentation.
+If you're looking to integrate avatars, accessories, and clothes into experiences, see the [Characters](../characters/index.md) section in the Engine documentation.
 </Alert>
 
 ## Selling

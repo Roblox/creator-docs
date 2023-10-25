@@ -3,7 +3,7 @@ title: Event Organizers
 description: Explains how to be an event organizer through the Roblox Creator Events program to host virtual events.
 ---
 
-As a Roblox creator, you can host virtual events through the Roblox Creator Events program. If you're interested in participating, [apply](https://roblox.qualtrics.com/jfe/form/SV_555bDM0Ci8F1WFU) to become a voluntary Event Organizer for the Creator Events Program.
+As a Roblox creator, you can host virtual events through the Roblox Creator Events program. If you're interested in participating, [apply](https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i) to become a voluntary Event Organizer for the Creator Events Program.
 
 To preview events hosted by our community creators, visit our [past events](https://events.roblox.com/home/content) page which contains a video library of our past events. Alternatively, RSVP to an upcoming event [here](https://events.roblox.com/home/events).
 
@@ -27,7 +27,7 @@ To preview events hosted by our community creators, visit our [past events](http
 
 ## Application Process
 
-Fill out the [application](https://roblox.qualtrics.com/jfe/form/SV_555bDM0Ci8F1WFU) carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
+Fill out the [application](https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i) carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
 
 ### After Initial Acceptance
 
