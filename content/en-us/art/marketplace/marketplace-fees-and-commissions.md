@@ -183,12 +183,12 @@ The following are the current Marketplace price ranges (in Robux):
   </tr>
   <tr>
     <td>Body</td>
-    <td>0 - 10,000</td>
+    <td>75 - 10,000</td>
     <td>N/A</td>
   </tr>
   <tr>
     <td>Head</td>
-    <td>0 - 10,000</td>
+    <td>75 - 10,000</td>
     <td>N/A</td>
   </tr>
 </tbody>

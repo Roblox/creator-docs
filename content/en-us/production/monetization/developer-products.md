@@ -100,8 +100,11 @@ local productFunctions = {}
 
 -- ProductId 123123 brings the user back to full health
 productFunctions[123123] = function(receipt, player)
-	if player.Character and player.Character:FindFirstChild("Humanoid") then
-	player.Character.Humanoid.Health = player.Character.Humanoid.MaxHealth
+	local character = player.Character
+	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
+
+	if humanoid then
+		humanoid.Health = humanoid.MaxHealth
 		-- Indicate a successful purchase
 		return true
 	end
@@ -185,8 +188,8 @@ local success, developerProducts = pcall(function()
 end)
 
 if developerProducts then
-	for _, developerProduct in pairs(developerProducts) do
-		for field, value in pairs(developerProduct) do
+	for _, developerProduct in developerProducts do
+		for field, value in developerProduct do
 			print(field .. ": " .. value)
 		end
 		print(" ")
