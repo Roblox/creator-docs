@@ -48,6 +48,7 @@ import {
   summaryOfRequirements,
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
+import { checkYamlSchema } from './utils/schemas.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -193,10 +194,13 @@ try {
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
     if (config.checkHttpLinks || config.checkRelativeLinks) {
-      checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
+      checkContentLinks({ config, content, filePath: filePathFromRepoRoot });
     }
     if (isMarkdownFile && config.checkMarkdownLint) {
-      checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });
+      checkMarkdownLint({ config, content, filePath: filePathFromRepoRoot });
+    }
+    if (isYamlFile) {
+      checkYamlSchema({ config, content, filePath: filePathFromRepoRoot });
     }
     console.log('::endgroup::');
   }

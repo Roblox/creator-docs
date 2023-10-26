@@ -57,25 +57,25 @@
   "yaml.format.proseWrap": "always",
   "yaml.format.singleQuote": true,
   "yaml.schemas": {
-    "./tools/schemas/classes.json": [
+    "./tools/schemas/engine/classes.json": [
       "/content/*/reference/engine/classes/*.yaml",
-      "/tools/examples/class.yaml"
+      "/tools/schemas/engine/examples/class.yaml"
     ],
-    "./tools/schemas/datatypes.json": [
+    "./tools/schemas/engine/datatypes.json": [
       "/content/*/reference/engine/datatypes/*.yaml",
-      "/tools/examples/datatype.yaml"
+      "/tools/schemas/engine/examples/datatype.yaml"
     ],
-    "./tools/schemas/enums.json": [
+    "./tools/schemas/engine/enums.json": [
       "/content/*/reference/engine/enums/*.yaml",
-      "/tools/examples/enum.yaml"
+      "/tools/schemas/engine/examples/enum.yaml"
     ],
-    "./tools/schemas/globals.json": [
+    "./tools/schemas/engine/globals.json": [
       "/content/*/reference/engine/globals/*.yaml",
-      "/tools/examples/global.yaml"
+      "/tools/schemas/engine/examples/global.yaml"
     ],
-    "./tools/schemas/libraries.json": [
+    "./tools/schemas/engine/libraries.json": [
       "/content/*/reference/engine/libraries/*.yaml",
-      "/tools/examples/library.yaml"
+      "/tools/schemas/engine/examples/library.yaml"
     ],
     "./tools/schemas/navigation.json": "/content/*/navigation/**/*.yaml"
   },
