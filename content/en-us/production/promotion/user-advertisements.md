@@ -3,6 +3,10 @@ title: User Advertisements
 description: User Advertisements notify users of experiences they can play, items they can purchase, or groups they can join.
 ---
 
+<Alert severity="warning">
+  User Ads are being deprecated. You can learn about the future of advertising on Roblox [here](https://devforum.roblox.com/t/upcoming-ads-roadmap-and-changes/2660524).
+</Alert>
+
 User advertisements allow you to notify users of experiences they can play,
 items they can purchase in the [Marketplace](https://www.roblox.com/catalog), or
 groups they can join. When a user clicks the ad, it opens the main page of
@@ -42,11 +46,6 @@ Advertisement space works on a bidding system where the higher you set your **Da
 </table>
 
 ## Creating Ads
-
-<Alert severity="warning">
-If you're running an ad blocker application, you must temporarily disable it in
-order to create an ad.
-</Alert>
 
 There are three types of image advertisements you can create:
 
@@ -99,6 +98,11 @@ Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](http
 Your ad is now within the moderation queue and is only visible to you on the
 **User Ads** page. Once the Moderation team approves your ad, you can run an ad
 cycle.
+
+<Alert severity="info">
+If you're running an ad blocker, you must temporarily disable it in
+order to create an ad.
+</Alert>
 
 ## Running Ad Cycles
 
