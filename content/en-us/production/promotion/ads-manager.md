@@ -17,7 +17,7 @@ When creating an account, users can choose between creating a personal or busine
 
 To create an ad account:
 
-1. Visit [ads.roblox.com](https://ads.roblox.com) while signed in to the age verified account and select the **CREATE AD ACCOUNT** button.
+1. Visit [ads.roblox.com](https://ads.roblox.com) while signed in to your Roblox account and select the **CREATE AD ACCOUNT** button.
 2. Choose between a **Personal** or **Business** ad account. A personal account is for individuals who wish to advertise on Roblox, while a business account manages a company's ad presence on Roblox.
 3. Check the box to confirm the provided information and click the **CREATE AD ACCOUNT** button. You'll receive a welcome letter at your verified email address confirming your account creation.
 
