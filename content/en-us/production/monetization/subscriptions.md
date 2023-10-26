@@ -82,46 +82,225 @@ To edit more than a subscription's image, delete and re-create the subscriptions
 
 ## Integrating Subscriptions into Experiences
 
-Use the following script to check if a player has an active subscription upon joining your experience:
+This code sample is a simple example of how to implement subscription detection in your game:
 
 ```lua
+-- Run this code on the server
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
-local subscriptionID = "EXP-11111111" -- replace with your subscription ID
+local SUBSCRIPTION_ID = "EXP-11111111" -- Replace with your subscription ID
+
+local function grantAward(player: Player)
+	-- You should grant the award associated with the subscription here
+end
+
+local function revokeAwardIfGranted(player: Player)
+	-- This method is called for every player who does _not_ have the subscription
+    -- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
+    -- you should use this method to handle the revocation
+end
 
 local function checkSubStatus(player)
-	local subStatus = {}
-	local success, message = pcall(function()
-		-- returns IsRenewing and IsSubscribed
-		subStatus = MarketplaceService:GetUserSubscriptionStatusAsync(player, subscriptionID)
+	local success, response = pcall(function()
+		return MarketplaceService:GetUserSubscriptionStatusAsync(player, SUBSCRIPTION_ID)
 	end)
 
 	if not success then
-		warn("Error while checking if player has subscription: " .. tostring(message))
+		warn(`Error while checking if player has subscription: {response}`)
 		return
 	end
 
-	if subStatus["IsSubscribed"] then
-		print(player.Name .. " is subscribed with " .. subscriptionID)
-		-- Give player all items and/or permissions associated with the subscription
+	if response.IsSubscribed then
+		grantAward(player)
+	else
+		revokeAwardIfGranted(player)
+	end
+end
+
+local function onUserSubscriptionStatusChanged(player: Player, subscriptionId: string)
+	if subscriptionId == SUBSCRIPTION_ID then
+		checkSubStatus(player)
 	end
 end
 
 Players.PlayerAdded:Connect(checkSubStatus)
+Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
 ```
 
-After you determine whether a player has a subscription, you can confer subscription benefits.
+### Replacing a Game Pass with a Subscription
+
+One option for rolling out subscriptions in your experience is to replace an existing Game Pass with a subscription. This is a great option if you want to quickly implement subscriptions in your experience without adding new features or awards.
+
+There are two important considerations when replacing a Game Pass with a subscription:
+
+- Any existing holders of the Game Pass should continue to receive the benefit they paid for.
+- The Game Pass should be taken off sale so that new users can purchase the subscription instead.
+- Subscriptions can be revoked, which means if your Game Pass previously persisted its benefits to a data store, you need to "undo" these benefits. This consideration does not apply to all Game Pass implementations, but might apply to more complex ones.
+
+The following code sample shows how to replace a Game Pass with a subscription:
+
+```lua
+-- Run this code on the server
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
+
+local LEGACY_GAME_PASS_ID = 1234 -- Replace with the ID of the game pass being replaced by a subscription
+local SUBSCRIPTION_ID = "EXP-11111111" -- Replace with your subscription ID
+
+local function awardBenefit(player: Player)
+	-- You should award the subscription here
+end
+
+local function revokeBenefitIfGranted(player: Player)
+	-- This method is called for every player who does _not_ have the subscription
+    -- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
+    -- you should use this method to handle the revocation
+end
+
+local function checkSubscriptionStatus(player: Player)
+	local success, result = pcall(function()
+		return MarketplaceService:GetUserSubscriptionStatusAsync(player, SUBSCRIPTION_ID)
+	end)
+
+	if not success then
+		print(`Error fetching subscription status: {result}`)
+		return
+	end
+
+	if result.IsSubscribed then
+		awardBenefit(player)
+	else
+		revokeBenefitIfGranted(player)
+	end
+end
+
+local function onPlayerAdded(player: Player)
+	local success, result = pcall(function()
+		return MarketplaceService:UserOwnsGamePassAsync(player.UserId, LEGACY_GAME_PASS_ID)
+	end)
+
+	if not success then
+		print(`Error fetching game pass status: {result}`)
+		return
+	end
+
+	if result then
+		-- If the player has purchased the legacy game pass, we do not need to look up their subscription status
+		-- as they have the benefit granted for life
+		awardBenefit(player)
+		return
+	end
+
+	checkSubscriptionStatus(player)
+end
+
+local function onUserSubscriptionStatusChanged(player: Player, subscriptionId: string)
+	if subscriptionId == SUBSCRIPTION_ID then
+		checkSubscriptionStatus(player)
+	end
+end
+
+
+local function onPromptGamePassPurchaseFinished(player: Player, purchasedPassID: number, purchaseSuccess: boolean)
+	if purchaseSuccess and purchasedPassID == LEGACY_GAME_PASS_ID then
+		awardBenefit(player)
+	end
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
+-- We will continue to listen for in-game game pass purchases in case the game pass is still on sale
+MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptGamePassPurchaseFinished)
+```
+
+### Prompting Subscription Purchases
+
+Although users can purchase subscriptions directly from an experience's **Game Details** page, you should also add a way to purchase a subscription in-game.
+
+When you prompt a subscription purchase, `Players.UserSubscriptionStatusChanged` fires if the player already owns the subscription, which helps catch scenarios where a player purchases a subscription from the **Game Details** page while they are already in-game.
+
+Although you can prompt a subscription purchase from the client, checking if a user already has a subscription via `MarketplaceService.GetUserSubscriptionStatusAsync` must be done from the server.
+
+This example creates a `RemoteFunction` that the client can use to request the status of a subscription:
+
+```lua
+--This code should run on the server
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Create a RemoteFunction that the client can use to request the subscription status
+local getSubscriptionStatusRemote = Instance.new("RemoteFunction")
+getSubscriptionStatusRemote.Name = "GetSubscriptionStatus"
+getSubscriptionStatusRemote.Parent = ReplicatedStorage
+
+getSubscriptionStatusRemote.OnServerInvoke = function(player: Player, subscriptionId: string)
+	assert(typeof(subscriptionId) == "string")
+
+	return MarketplaceService:GetUserSubscriptionStatusAsync(player, subscriptionId)
+end
+```
+
+```lua
+-- This code should run on the client
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
+
+local SUBSCRIPTION_ID = "EXP-11111111" -- Replace with your subscription ID
+
+local getSubscriptionStatusRemote = ReplicatedStorage:WaitForChild("GetSubscriptionStatus")
+local purchaseSubscriptionButton = script.Parent.PromptPurchaseSubscription -- Replace with your button
+
+
+local function playerHasSubscription()
+    -- Note if your subscription is replacing a game pass, you will need to check if the game pass is owned here too
+
+	local success, result = pcall(function()
+		return getSubscriptionStatusRemote:InvokeServer(SUBSCRIPTION_ID)
+	end)
+
+	if not success then
+		print(`Error fetching subscription status: {result}`)
+		return
+	end
+
+    return result.IsSubscribed
+end
+
+-- Hides the button if the player already has the subscription
+local function hideButtonIfPlayerHasSubscription()
+    if playerHasSubscription() then
+        purchaseSubscriptionButton.Visible = false
+    end
+end
+
+local function onPromptSubscriptionPurchaseFinished(player: Player, subscriptionId: string, didTryPurchasing: boolean)
+    if didTryPurchasing then
+        -- It can take a while for the subscription to be registered, so we will check to see if the purchase went through in 10 seconds
+        -- and hide the button if it has
+        task.delay(10, hideButtonIfPlayerHasSubscription)
+    end
+end
+
+-- If the player already has the subscription, we don't want to show the button at all
+hideButtonIfPlayerHasSubscription()
+
+purchaseSubscriptionButton.Activated:Connect(function()
+    MarketplaceService:PromptSubscriptionPurchase(Players.LocalPlayer, SUBSCRIPTION_ID)
+
+    -- If the player already has the subscription, hide the button
+    hideButtonIfPlayerHasSubscription()
+end)
+
+MarketplaceService.PromptSubscriptionPurchaseFinished:Connect(onPromptSubscriptionPurchaseFinished)
+```
+
+### Other relevant functions
 
 Other relevant functions are available in `Class.MarketplaceService`:
 
 - `Class.MarketplaceService:GetSubscriptionProductInfoAsync()`
 - `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`
 - `Class.MarketplaceService:GetUserSubscriptionStatusAsync()`
-
-### Prompting Subscription Purchases
-
-The process for prompting in-experience subscription purchases is nearly identical to [Passes](./game-passes.md). Use the `Class.MarketplaceService:PromptSubscriptionPurchase()` method. For sample code, see [Prompting In-Experience Purchases](./game-passes.md#prompting-in-experience-purchases).
 
 ## Earning with Subscriptions
 

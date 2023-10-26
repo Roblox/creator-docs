@@ -25,7 +25,7 @@ Roblox supports 3 standards of body types: **Normal**, **Slender**, and **Classi
 <figure>
    <img src="../../assets/art/Body-Scale-Diagram.png" width = "60%"/>
 <figcaption>
-A visualization of how Roblox combines the 15 body parts into 5 distinct assets.
+A visualization of how Roblox combines the 15 body parts into 6 distinct assets.
 </figcaption>
 </figure>
 </center>
@@ -434,6 +434,25 @@ See the following specifications for the individual mesh objects that make up a 
 - **Caps** - Limbs must be capped, so that they form a full watertight mesh when separated from the body. Caps can be rounded or flat depending on design.
 
    <img src="../../assets/modeling/meshes/Modeling-Requirements-Caps.png" width="600" />
+
+### Visibility
+
+To ensure that avatar sizes are visually consistent, you must standardize body part visibility with the following requirements:
+
+- **Opacity** - Body parts must be fully opaque.
+- **Bounding Boxes** - Body part assets must take up a significant visible portion of their bounding box in a front, side, and back view.
+  - Body parts, such as Torso, Left Arm, Right Leg, must take up at least 50% of body part's bounding box.
+  - The head part must take up at least 35% of the mesh's bounding box.
+    <GridContainer numColumns="2">
+      <figure>
+        <img src="../../assets/art/avatar/Valid-Visibility.png" />
+        <figcaption>An acceptable head mesh example that takes up a majority of the bounding box in the front view</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/art/avatar/Invalid-Visibility.png" />
+        <figcaption>A non-acceptable head mesh example that does not take up the appropriate amount of bounding box space in the front view</figcaption>
+      </figure>
+    </GridContainer>
 
 ## Attachments
 
