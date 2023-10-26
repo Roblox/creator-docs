@@ -5,15 +5,15 @@ description: In-experience Leaderboards let you display user information to all 
 
 Roblox has a built-in **leaderboard system** that lets you display user information like scores, currency, or the fastest time in a race.
 
-<img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-Screen-1.jpeg" width="80%" />
+<img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-Screen-1.jpeg" width="100%" />
 
 ## Setting up the Leaderboard
 
 To set up the leaderboard and add players when they enter the experience:
 
-1. Create a new `Class.Script` within `Class.ServerScriptService`.
+1. Create a new `Class.Script` within `Class.ServerScriptService` and name it **Leaderboard**.
 
-   <img alt="Leaderboard Insert Script" src="../assets/players/leaderboard/Leaderboards-Insert-Script.png" width="80%" />
+   <img alt="Leaderboard Insert Script" src="../assets/players/leaderboard/Leaderboards-Insert-Script.png" width="320" />
 
 2. In the script, connect a function to the `Class.Players.PlayerAdded|PlayerAdded` event.
 
@@ -43,9 +43,9 @@ To set up the leaderboard and add players when they enter the experience:
    Players.PlayerAdded:Connect(leaderboardSetup)
    ```
 
-<Alert severity="warning">
-	It's essential that the folder is named `leaderstats` with all lowercase letters. Roblox doesn't add the player to the leaderboard if you name it any other way.
-</Alert>
+   <Alert severity="warning">
+   It's essential that the folder is named `leaderstats` with all lowercase letters. Roblox doesn't add the player to the leaderboard if you name it any other way.
+   </Alert>
 
 ## Adding Stats
 
@@ -75,17 +75,17 @@ These lines accomplish the following:
 
 1. An `Class.IntValue` instance is created.
 
-2. The instance's `Class.Instance.Name|Name` is set to **Gold**. This is exactly how the stat will appear on the in-game leaderboard.
+2. The instance's `Class.Instance.Name|Name` is set to `"Gold"`. This is exactly how the stat will appear on the leaderboard.
 
    <img alt="Leaderboards Name Column" src="../assets/players/leaderboard/Leaderboards-Name-Column.png" width="80%" />
 
-3. The stat's initial `Class.IntValue.Value|Name` is set to **0**. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/datastores.md) if you're implementing persistent leaderboards.
+3. The stat's initial `Class.IntValue.Value|Value` is set to `0`. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/datastores.md) if you're implementing persistent leaderboards.
 
    <Alert severity="info">
-     	Value type objects such as `Class.IntValue`, `Class.NumberValue`, and `Class.StringValue` must be set through their `Value` property, as in `gold.Value = 0`, not by direct declaration, as in `gold = 0`.
-    </Alert>
+   Note that the value of objects such as `Class.IntValue`, `Class.NumberValue`, and `Class.StringValue` must be set through their `Value` property, as in `gold.Value` on line 10.
+   </Alert>
 
-4. The instance is parented to the **leaderstats** folder which adds it to the leaderboard. When players enter the game, their names appear on the board.
+4. The instance is parented to the `leaderstats` folder which adds it to the leaderboard. When a player enters the experience, their name appears on the board.
 
    <img alt="Leaderboards Multiple Players" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="80%" />
 
@@ -121,10 +121,10 @@ goldChunk.Touched:Connect(onPartTouch)
 There are three ways to control the order of stats in a leaderboard:
 
 - Add the stats in the order that you want them to appear.
-- Add a child `Class.BoolValue` named `IsPrimary` to the stat. Set its value to true to place the stat first in the leaderboard.
-- Add a child `Class.NumberValue` named `Priority` to the stat. Set its value to an integer. Higher priority values appear earlier in the leaderboard. Stats without a priority have a default priority of 0.
+- Add a child `Class.BoolValue` named `IsPrimary` to the stat and set its value to `true` to place the stat first in the leaderboard.
+- Add a child `Class.NumberValue` named `Priority` to the stat and set its value to an integer. Higher priority values appear earlier in the leaderboard. Stats without a priority have a default priority of 0.
 
-This code sample shows how to add `IsPrimary` and `Priority` values to a stat:
+This code sample shows how to add an `IsPrimary` value to a stat:
 
 ```lua
 local Players = game:GetService("Players")
@@ -139,11 +139,6 @@ local function leaderboardSetup(player)
 	gold.Value = 0
 	gold.Parent = leaderstats
 
-	local priorityGold = Instance.new("NumberValue")
-	priorityGold.Name = "Priority"
-	priorityGold.Value = 1
-	priorityGold.Parent = gold
-
 	local isPrimary = Instance.new("BoolValue")
 	isPrimary.Name = "IsPrimary"
 	isPrimary.Value = true
@@ -154,7 +149,7 @@ Players.PlayerAdded:Connect(leaderboardSetup)
 ```
 
 <Alert severity="info">
-`IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` values set to true, their `Priority` values determine the leaderboard order.
+`IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` values set to `true`, their `Priority` values determine the leaderboard order.
 </Alert>
 
 ## Hiding the Leaderboard
