@@ -330,9 +330,9 @@ First, start a function to send players back to the lobby.
 
    ```lua
    function PlayerManager.resetPlayers()
-     for playerKey, whichPlayer in activePlayers do
-       respawnPlayerInLobby(whichPlayer)
-     end
+   	for playerKey, whichPlayer in activePlayers do
+   		respawnPlayerInLobby(whichPlayer)
+   	end
    end
 
    -- Events
@@ -345,11 +345,11 @@ First, start a function to send players back to the lobby.
 
    ```lua
    function PlayerManager.resetPlayers()
-     for playerKey, whichPlayer in activePlayers do
-       respawnPlayerInLobby(whichPlayer)
-     end
+   	for playerKey, whichPlayer in activePlayers do
+   		respawnPlayerInLobby(whichPlayer)
+   	end
 
-     activePlayers = {}
+   	activePlayers = {}
    end
 
    ```
@@ -358,7 +358,7 @@ First, start a function to send players back to the lobby.
 
    ```lua
    function MatchManager.resetMatch()
-     playerManager.resetPlayers()
+   	playerManager.resetPlayers()
    end
 
    matchStart.Event:Connect(startTimer)
@@ -371,27 +371,26 @@ First, start a function to send players back to the lobby.
 
    ```lua
    while true do
-     displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     displayManager.updateStatus("Get ready!")
-     task.wait(gameSettings.transitionTime)
+		displayManager.updateStatus("Get ready!")
+		task.wait(gameSettings.transitionTime)
 
-     matchManager.prepareGame()
-     local endState = matchEnd.Event:Wait()
+		matchManager.prepareGame()
+		local endState = matchEnd.Event:Wait()
 
-     local endStatus = matchManager.getEndStatus(endState)
-     displayManager.updateStatus(endStatus)
+		local endStatus = matchManager.getEndStatus(endState)
+		displayManager.updateStatus(endStatus)
 
-     matchManager.cleanupMatch()
-     task.wait(gameSettings.transitionTime)
+		matchManager.cleanupMatch()
+		task.wait(gameSettings.transitionTime)
 
-     matchManager.resetMatch()
+		matchManager.resetMatch()
    end
-
    ```
 
 5. Start a test server and run a match. Confirm that you can at least go through two game loops without any errors.
@@ -585,6 +584,7 @@ local function preparePlayer(player, whichSpawn)
 	player:LoadCharacter()
 
 	local character = player.Character or player.CharacterAdded:Wait()
+
 	-- Give the player a tool
 	local sword = playerWeapon:Clone()
 	sword.Parent = character
@@ -606,19 +606,19 @@ local function removePlayerWeapon(whichPlayer)
 	if whichPlayer then
 		local character = whichPlayer.Character
 
-    -- If the player has it currently on their character
-    local weapon = character:FindFirstChild("Weapon")
+		-- If the player has it currently on their character
+		local weapon = character:FindFirstChild("Weapon")
 
-    if weapon then
-      weapon:Destroy()
-    end
+		if weapon then
+			weapon:Destroy()
+		end
 
-    -- If theplayer has the weapon in their backpack
-    local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+		-- If the player has the weapon in their backpack
+		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
 
-    if backpackWeapon then
-      backpackWeapon:Destroy()
-    end
+		if backpackWeapon then
+			backpackWeapon:Destroy()
+		end
 	else
 		print("No player to remove weapon")
 	end
