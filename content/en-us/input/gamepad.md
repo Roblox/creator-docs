@@ -69,7 +69,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local availableInputs = UserInputService:GetSupportedGamepadKeyCodes(Enum.UserInputType.Gamepad2)
 print("This controller supports the following controls:")
-for _, control in pairs(availableInputs) do
+for _, control in availableInputs do
 	print(control)
 end
 ```
@@ -135,17 +135,13 @@ local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-	character = player.CharacterAdded:Wait()
-end
-
+local character = player.Character or player.CharacterAdded:Wait()
 local leftFoot = character:WaitForChild("LeftFoot")
 
 -- When leftFoot comes into contact with something, check the gamepad input state
 leftFoot.Touched:Connect(function(hit)
 	local state = UserInputService:GetGamepadState(Enum.UserInputType.Gamepad1)
-	for _, input in pairs(state) do
+	for _, input in state do
 
 		-- If the ButtonR2 is currently held then print out a message
 		if input.KeyCode == Enum.KeyCode.ButtonR2 and input.UserInputState == Enum.UserInputState.Begin then
@@ -265,29 +261,28 @@ assert(player,"This should be running in a LocalScript!")
 local function updateHapticFeedback()
 	-- Check if you currently have a character.
 	local character = player.Character
-	if character then
-		-- Do you have a Humanoid?
-		local humanoid = character:FindFirstChildOfClass("Humanoid")
-		if humanoid then
-			-- Are you in a vehicle seat?
-			local seatPart = humanoid.SeatPart
-			if seatPart and seatPart:IsA("VehicleSeat") then
-				-- Measure the current speed of the vehicle by taking the magnitude of the seat's velocity.
-				local speed = seatPart.Velocity.Magnitude
 
-				-- Measure the current throttle from the user.
-				local throttle = math.abs(seatPart.ThrottleFloat)
+	-- Do you have a Humanoid?
+	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
 
-				-- Compute how much the controller should be vibrating.
-				local vibrationScale = math.min(1, (speed * throttle) / seatPart.MaxSpeed)
+	-- Are you in a vehicle seat?
+	local seatPart = humanoid and humanoid.SeatPart
+	
+	if seatPart and seatPart:IsA("VehicleSeat") then
+		-- Measure the current speed of the vehicle by taking the magnitude of the seat's velocity.
+		local speed = seatPart.Velocity.Magnitude
 
-				-- Apply the vibration.
-				HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Small, vibrationScale)
+		-- Measure the current throttle from the user.
+		local throttle = math.abs(seatPart.ThrottleFloat)
 
-				-- Return so the motor doesn't get reset.
-				return
-			end
-		end
+		-- Compute how much the controller should be vibrating.
+		local vibrationScale = math.min(1, (speed * throttle) / seatPart.MaxSpeed)
+
+		-- Apply the vibration.
+		HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Small, vibrationScale)
+
+		-- Return so the motor doesn't get reset.
+		return
 	end
 
 	-- If nothing is happening, turn off the motor.
