@@ -1,4 +1,10 @@
----
+--- local AssetService = game:GetService("AssetService")
+
+local BUNDLE_ID = 13
+
+local bundleDetails = AssetService:GetBundleDetailsAsync(BUNDLE_ID)
+
+print(bundleDetails)
 title: Strings
 description: Strings are sequence of characters, such as letters, numbers, and symbols.
 ---
