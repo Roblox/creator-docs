@@ -168,24 +168,24 @@ The script for the trap will check if an invisible part is touches a player. The
 
 3. In the main model or part named **LaserTrap**, add a new script. Copy the code below and paste it into the new script.
 
-  ```lua
-  local laserTrap = script.Parent
-  local collisionBox = laserTrap.CollisionBox
+   ```lua
+   local laserTrap = script.Parent
+   local collisionBox = laserTrap.CollisionBox
 
-  -- Hide the collision box
-  collisionBox.Transparency = 1
+   -- Hide the collision box
+   collisionBox.Transparency = 1
 
-  local function onTouch(otherPart)
-    local character = otherPart.Parent
-    local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   local function onTouch(otherPart)
+     local character = otherPart.Parent
+     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-    if humanoid then
-      humanoid.Health = 0
-    end
-  end
+     if humanoid then
+       humanoid.Health = 0
+     end
+   end
 
-  collisionBox.Touched:Connect(onTouch)
-  ```
+   collisionBox.Touched:Connect(onTouch)
+   ```
 
 4. Test the trap by walking into the laser beam. If it's not working correctly, make sure the script is in the right place and the collision box is properly named.
 
