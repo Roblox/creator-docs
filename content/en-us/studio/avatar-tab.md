@@ -10,7 +10,6 @@ The **Avatar** tab contains the standard [transform tools](../studio/model-tab.m
 ## Accessory Tools
 
 The **Accessory** section contains tools for creating layered or rigid [accessories](../art/accessories/index.md) from imported custom meshes.
-The **Accessory** section contains tools for creating layered or rigid [accessories](../art/accessories/index.md) from imported custom meshes.
 
 <img src="../assets/studio/general/Avatar-Tab-Accessory-Tools.png" width="868" />
 
