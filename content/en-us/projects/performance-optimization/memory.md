@@ -4,7 +4,7 @@ description: Explains performance issues caused by memory consumption and best p
 ---
 
 Memory performance issues describe a broad category of problems with the common
-symptom of excessive memory consumption on either th server or the client.
+symptom of excessive memory consumption on either the server or the client.
 
 High levels of memory consumption is generally not a problem as long as the
 device or server has memory available, but when Roblox requires more memory than
