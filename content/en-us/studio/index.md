@@ -61,4 +61,4 @@ Studio has built-in [collaboration](../projects/collaboration.md) tools so you a
 
 You can also extend the feature set of Studio with custom [plugins](../studio/plugins.md), or build your own plugins to share with the rest of the Roblox community.
 
-</figure>
+</figure>so you
