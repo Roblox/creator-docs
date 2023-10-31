@@ -133,7 +133,7 @@ The three scripts below will look for the particle emitter and beam objects crea
      local particleAttachment = humanoidRootPart:WaitForChild("ParticleAttachment")
 
      -- Go through particles on the attachment and play them according to the type of particle
-     for _, particle in pairs(particleAttachment:GetChildren()) do
+     for _, particle in particleAttachment:GetChildren() do
        if particle:IsA("ParticleEmitter") then
          particle:Emit(EMIT_RATE)
        end
@@ -148,7 +148,7 @@ The three scripts below will look for the particle emitter and beam objects crea
        playerParticleAttachment.Parent = humanoidRootPart
 
        -- Clone particles in the folder, even if there are more than one and attach to player
-       for _, emitter in ipairs(ServerStorage.TutorialParticles:GetChildren()) do
+       for _, emitter in ServerStorage.TutorialParticles:GetChildren() do
          emitter:Clone().Parent = playerParticleAttachment
        end
      end)
@@ -182,7 +182,7 @@ The three scripts below will look for the particle emitter and beam objects crea
    local function getTargetAttachment()
      local currentTarget = goalParts[goalIndex.Value]
      local interactionPart = currentTarget:FindFirstChild("InteractionPart")
-     local attachment = interactionPart:FindFirstChildOfClass("Attachment")
+     local attachment = interactionPart and interactionPart:FindFirstChildOfClass("Attachment")
 
      if not attachment then
        attachment = Instance.new("Attachment")
@@ -206,9 +206,9 @@ The three scripts below will look for the particle emitter and beam objects crea
    end
 
    local function setupGoals()
-     for _, part in ipairs(goalParts) do
+     for _, part in goalParts do
        local interactionPart = part:FindFirstChild("InteractionPart")
-       local proximityPrompt = interactionPart:FindFirstChild("ProximityPrompt")
+       local proximityPrompt = interactionPart and interactionPart:FindFirstChild("ProximityPrompt")
 
        if proximityPrompt then
          proximityPrompt.Triggered:Connect(function(player)

@@ -15,6 +15,13 @@ an experience on Roblox. Where applicable, you'll find notes on tradeoffs,
 compromises, and the rationale of various implementation choices, so you can
 make the best decision for your own experiences.
 
+## Get the File
+
+1. Navigate to the <a href="https://www.roblox.com/games/14353060924/Plant" target="_blank">Plant</a> experience page.
+1. Click the **&ctdot;** button and **Edit in Studio**.
+
+## Use Cases
+
 [Plant][planturl] covers the following use cases:
 
 - Session data and player data persistence

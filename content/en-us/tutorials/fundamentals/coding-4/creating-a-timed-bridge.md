@@ -39,7 +39,9 @@ When crossing the bridge, players will need to see how many seconds are left bef
 2. Select the Surface GUI. In the Properties, make the following changes:
 
    - Change the **Face** so you can see the text label on the front of the timer where the player is looking.
-   - Set **CanvasSize** to `{1, 0},{1, 0}`.
+
+3. Select the TextLabel. In the Properties, make the following changes:
+   - Set **Size** to `{1, 0},{1, 0}`.
    - Set **TextScaled** to true.
    - Set **Text** to be blank. Text will be updated using the script.
 

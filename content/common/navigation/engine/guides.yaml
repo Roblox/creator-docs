@@ -45,6 +45,16 @@ navigation:
             path: /projects/collaboration
           - title: Groups
             path: /projects/groups
+      - title: Performance Optimization
+        section:
+          - title: Overview
+            path: /projects/performance-optimization/
+          - title: Computation
+            path: /projects/performance-optimization/computation
+          - title: Memory
+            path: /projects/performance-optimization/memory
+          - title: Load Times
+            path: /projects/performance-optimization/load-times
   - title: Assets
     section:
       - title: Overview

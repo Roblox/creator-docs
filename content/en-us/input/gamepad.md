@@ -51,6 +51,7 @@ Use the following code sample to check for a specific gamepad and print a messag
 
 ```lua
 local UserInputService = game:GetService("UserInputService")
+
 if UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad1) then
 	print("Gamepad1 is connected")
 elseif UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad2) then
@@ -69,7 +70,7 @@ local UserInputService = game:GetService("UserInputService")
 
 local availableInputs = UserInputService:GetSupportedGamepadKeyCodes(Enum.UserInputType.Gamepad2)
 print("This controller supports the following controls:")
-for _, control in pairs(availableInputs) do
+for _, control in availableInputs do
 	print(control)
 end
 ```
@@ -135,19 +136,15 @@ local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-	character = player.CharacterAdded:Wait()
-end
-
+local character = player.Character or player.CharacterAdded:Wait()
 local leftFoot = character:WaitForChild("LeftFoot")
 
--- When leftFoot comes into contact with something, check the gamepad input state
+-- When left foot comes into contact with something, check the gamepad input state
 leftFoot.Touched:Connect(function(hit)
 	local state = UserInputService:GetGamepadState(Enum.UserInputType.Gamepad1)
-	for _, input in pairs(state) do
+	for _, input in state do
 
-		-- If the ButtonR2 is currently held then print out a message
+		-- If the ButtonR2 is currently held, print out a message
 		if input.KeyCode == Enum.KeyCode.ButtonR2 and input.UserInputState == Enum.UserInputState.Begin then
 			print("Character's left foot touched something while holding right trigger")
 		end
@@ -208,6 +205,7 @@ Use the following sample code to verify if vibration is supported on gamepad 1:
 
 ```lua
 local HapticService = game:GetService("HapticService")
+
 local isVibrationSupported = HapticService:IsVibrationSupported(Enum.UserInputType.Gamepad1)
 ```
 
@@ -224,8 +222,10 @@ Use the following sample code to verify if large vibration motors are supported 
 
 ```lua
 local HapticService = game:GetService("HapticService")
+
 local isVibrationSupported = HapticService:IsVibrationSupported(Enum.UserInputType.Gamepad1)
 local largeSupported = false
+
 if isVibrationSupported then
 	largeSupported = HapticService:IsMotorSupported(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large)
 end
@@ -235,65 +235,62 @@ end
 
 Once you have confirmed that a user's gamepad supports vibration you can start using the gamepad motors. You can use `Class.HapticService:SetMotor()` to turn on a specific motor on a gamepad. This function takes the gamepad and the amplitude of the vibration as arguments. The amplitude can be any value between `0` and `1`.
 
-The following sample code sets the amplitude for gamepad 1's large motor to `.5`:
+The following sample code sets the amplitude for gamepad 1's large motor to `0.5`:
 
 ```lua
 local HapticService = game:GetService("HapticService")
-HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large, .5)
+
+HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large, 0.5)
 ```
 
 You can also use `Class.HapticService:GetMotor()` to get the current vibration amplitude of a given motor. Use the following code sample to print the current amplitude for gamepad 1's large motor:
 
 ```lua
 local HapticService = game:GetService("HapticService")
+
 print(HapticService:GetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Large)
 ```
 
 The following code is a sample implementation of vibration when a user character gets into a vehicle, where the vibration is based on the throttle of the vehicle:
 
 ```lua
--- Services
 local HapticService = game:GetService("HapticService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
--- Make sure you are running in a LocalScript.
 local player = Players.LocalPlayer
 assert(player,"This should be running in a LocalScript!")
 
--- Setup Haptic Feedback Listener
+-- Set up haptic feedback listener
 local function updateHapticFeedback()
-	-- Check if you currently have a character.
+	-- Check for player character and humanoid
 	local character = player.Character
-	if character then
-		-- Do you have a Humanoid?
-		local humanoid = character:FindFirstChildOfClass("Humanoid")
-		if humanoid then
-			-- Are you in a vehicle seat?
-			local seatPart = humanoid.SeatPart
-			if seatPart and seatPart:IsA("VehicleSeat") then
-				-- Measure the current speed of the vehicle by taking the magnitude of the seat's velocity.
-				local speed = seatPart.Velocity.Magnitude
+	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
 
-				-- Measure the current throttle from the user.
-				local throttle = math.abs(seatPart.ThrottleFloat)
+	-- Check if humanoid is in vehicle seat
+	local seatPart = humanoid and humanoid.SeatPart
+	
+	if seatPart and seatPart:IsA("VehicleSeat") then
+		-- Measure the current speed of the vehicle by taking the magnitude of the seat's velocity
+		local speed = seatPart.Velocity.Magnitude
 
-				-- Compute how much the controller should be vibrating.
-				local vibrationScale = math.min(1, (speed * throttle) / seatPart.MaxSpeed)
+		-- Measure the current throttle from the user
+		local throttle = math.abs(seatPart.ThrottleFloat)
 
-				-- Apply the vibration.
-				HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Small, vibrationScale)
+		-- Compute how much the controller should be vibrating
+		local vibrationScale = math.min(1, (speed * throttle) / seatPart.MaxSpeed)
 
-				-- Return so the motor doesn't get reset.
-				return
-			end
-		end
+		-- Apply the vibration
+		HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Small, vibrationScale)
+
+		-- Return so the motor doesn't get reset
+		return
 	end
 
-	-- If nothing is happening, turn off the motor.
+	-- If nothing is happening, turn off the motor
 	HapticService:SetMotor(Enum.UserInputType.Gamepad1, Enum.VibrationMotor.Small, 0)
 end
 
--- Connect the haptic feedback listener to be updated 60 times a second.
+-- Connect the haptic feedback listener to be updated on heartbeat
 RunService.Heartbeat:Connect(updateHapticFeedback)
 ```

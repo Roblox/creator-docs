@@ -23,22 +23,22 @@ export const lintMarkdownContent = ({ content }: { content: string }) => {
 
 export const processMarkdownLintResult = ({
   config,
-  fileName,
+  filePath,
   result,
 }: {
   config: IConfig;
-  fileName: string;
+  filePath: string;
   result: LintError;
 }) => {
   const errorNames = result.ruleNames.join('/');
   const column = result.errorRange ? `${result.errorRange[0]}` : '';
 
   /** Console */
-  const consoleMessage = `${Emoji.NoEntry} Requirement: In ${fileName}, line ${
+  const consoleMessage = `${Emoji.NoEntry} Requirement: In ${filePath}, line ${
     result.lineNumber
-  }, ${
-    column ? `column ${column}` : ''
-  }, markdownlint detected error ${errorNames}: ${result.ruleDescription}. ${
+  },${
+    column ? `column ${column},` : ''
+  } markdownlint detected error ${errorNames}: ${result.ruleDescription}. ${
     result.errorDetail ? `${result.errorDetail}. ` : ''
   }For more info, see ${result.ruleInformation}.`;
   console.log(consoleMessage);
@@ -65,7 +65,7 @@ ${requiredCheckMessage}`;
       body,
       commit_id: config.commitHash,
       line: result.lineNumber,
-      path: fileName,
+      path: filePath,
       pull_number: config.pullRequestNumber,
       repository: config.repository,
     });
@@ -75,21 +75,21 @@ ${requiredCheckMessage}`;
 export const checkMarkdownLint = ({
   config,
   content,
-  fileName,
+  filePath: filePath,
 }: {
   config: IConfig;
   content: string;
-  fileName: string;
+  filePath: string;
 }) => {
   const lintResults = lintMarkdownContent({ content });
   if (config.debug) {
-    console.log(`MarkdownLint errors for ${fileName}:`, lintResults);
+    console.log(`MarkdownLint errors for ${filePath}:`, lintResults);
   }
   if (!lintResults) {
     console.log('No linting errors found.');
     return;
   }
   for (const result of lintResults) {
-    processMarkdownLintResult({ config, fileName, result });
+    processMarkdownLintResult({ config, filePath, result });
   }
 };
