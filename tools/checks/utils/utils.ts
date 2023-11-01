@@ -42,3 +42,8 @@ export const serializeTuple = (...tuple: Tuple): string => {
  * @returns A new array containing unique items from the given list.
  */
 export const deduplicate = <T>(list: T[]): T[] => [...new Set(list)];
+
+// https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
+export const capitalizeFirstLetter = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
