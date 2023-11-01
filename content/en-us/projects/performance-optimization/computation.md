@@ -102,9 +102,9 @@ computation to be expensive.
   of `Class.RunService` without limiting the frequency, means these operations
   will be repeated every frame which often results in an unnecessary increase in
   computation time. These events include:
-  - `Class.RunService:RenderStepped()`
-  - `Class.RunService:Stepped()`
-  - `Class.RunService:Heartbeat()`
+  - `Class.RunService.RenderStepped`
+  - `Class.RunService.Stepped`
+  - `Class.RunService.Heartbeat`
 
 <h4>How to Mitigate</h4>
 
@@ -230,7 +230,7 @@ comes with a significant computation cost.
 <h4>Common Problems</h4>
 
 - **Leaving all HumanoidStateTypes enabled on NPCs** - There is a performance
-  cost to leaving certain `Enum.HumanoidStateType|Humanoid physics states`
+  cost to leaving certain `Enum.HumanoidStateType|HumanoidStateTypes`
   enabled and any that are not needed for your NPCs should be disabled. For
   example, unless your NPC is going to be climbing ladders, it's safe to disable
   the `Climbing` state.
@@ -385,7 +385,7 @@ same `MeshId` are handled in a single draw call when:
     user's camera. <Alert severity="warning"> This might result in visual
     artifacts on shadows. </Alert>
   - Disable shadows on moving objects when possible.
-  - Disable `Class.LightObject.Shadows` on light instances where the object does
+  - Disable `Class.Light.Shadows` on light instances where the object does
     not need to cast shadows.
   - Limit the range and angle of light instances.
   - Use fewer light instances.
