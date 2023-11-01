@@ -80,6 +80,10 @@ const getFilesToCheck = async () => {
       FileExtension.YAML,
     ]);
   }
+  const prefixesToIgnore = ['.github/', 'content/common/navigation/'];
+  filesToCheck = filesToCheck.filter((filePath) => {
+    return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
+  });
   console.log(`Files to check (${filesToCheck.length}):`, filesToCheck);
   console.log('::endgroup::');
 };

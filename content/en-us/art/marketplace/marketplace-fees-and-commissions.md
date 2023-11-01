@@ -33,7 +33,7 @@ Limited assets follow a different payout structure. See [Limiteds](#limiteds) fo
 
 ## Limiteds
 
-When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset. Limiteds require a [per-unit fee](#per-unit-fee) and can be [resold](#reselling) by Premium members.
+When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset. Limiteds require a [per-unit fee](#per-unit-fee) and can be [resold](#reselling) by Premium members unless the item creator disables reselling.
 
 At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
 

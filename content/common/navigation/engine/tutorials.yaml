@@ -12,12 +12,6 @@ navigation:
   - heading: Use Cases
   - title: Modeling
     section:
-      - title: Building Unique 3D Objects
-        path: /tutorials/building/modeling/building-unique-3d-objects
-      - title: Applying Surface Images
-        path: /tutorials/building/modeling/applying-surface-images
-      - title: Sculpting Terrain
-        path: /tutorials/building/modeling/sculpting-terrain
       - title: Creating Neon Signs
         path: /tutorials/3D-art/creating-neon-signs
       - title: Rigging a Simple Mesh (Blender)
