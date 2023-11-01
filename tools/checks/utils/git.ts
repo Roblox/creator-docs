@@ -186,3 +186,17 @@ export const getFilesChangedInLastCommitByExtensions = async (
   );
   return changedFilesWithExtension;
 };
+
+export const getOldFile = async ({
+  branch,
+  filePath,
+}: {
+  branch: string;
+  filePath: string;
+}) => {
+  try {
+    return await git.show([`${branch}:${filePath}`]);
+  } catch (e) {
+    console.error(`Error getting old file: ${e}`);
+  }
+};

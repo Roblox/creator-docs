@@ -74,7 +74,7 @@ If you add an experience to your watchlist that you don't have analytics permiss
 - Title
 - Owner
 
-"Watchlists are applied on the account level, are private, and persist when toggling between groups. To add an experience to your watchlist, paste the **Experience URL** or add it from your **Experience Table**, which is a list view of all the experiences owned by your account or selected group.
+Watchlists are applied on the account level, are private, and persist when toggling between groups. To add an experience to your watchlist, paste the **Experience URL** or add it from your **Experience Table**, which is a list view of all the experiences owned by your account or selected group.
 
 <figure>
     <img src="../../assets/analytics/overview/watchlist.png" width="720%"/>
