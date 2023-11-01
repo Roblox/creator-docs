@@ -60,7 +60,7 @@ You can also use analytics to improve your FTUE:
 
 2. **Track the completion rate of each step**. Use special in-experience items to mark the completion of each step. Track both positive and negative experiences. For example, if the FTUE includes a battle with an NPC, track both whether users win or lose more frequently.
 
-1. **Identify and fix big drop-offs**. For example, if visiting the pet store has the highest drop-off rate, you can reduce friction in this step by making the pet store easier to find.
+3. **Identify and fix big drop-offs**. For example, if visiting the pet store has the highest drop-off rate, you can reduce friction in this step by making the pet store easier to find.
 
 Avoid a complex or time consuming FTUE, as you want to get users to the fun as quickly as possible, ideally in 5 minutes or less after entering your experience.
 
