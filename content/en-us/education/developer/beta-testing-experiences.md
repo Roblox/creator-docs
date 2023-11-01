@@ -282,8 +282,7 @@ Analytics gathered during a beta program are often used to gauge if a launch exp
 
 ### Tracking Analytics
 
-Roblox provides a variety of built-in analytics using the [Analytics Dashboard](../../production/analytics/analytics-dashboard.md). Developers are also encouraged to set up
-[custom analytics](../../production/analytics/third-party-analytics.md), which can be implemented through third party services like Microsoft Playfab. Custom reporting gives developers more insight into user behavior.
+Roblox provides a variety of built-in analytics using the [Analytics Dashboard](../../production/analytics/analytics-dashboard.md).
 
 <table>
 <tbody>
@@ -315,7 +314,7 @@ Measuring success is often determined by the analytics important during a beta. 
 - How much content is in the experience and what level of retention and engagement should be aimed for? For instance, a one-time guided classroom experience will focus more on average session length than retention.
 - What is the intended target age for users? What was the age range of users during the beta, and was there any discrepancy?
 
-For all experiences, we recommend setting up custom reporting (see [Adding Custom Events](../../production/analytics/third-party-analytics.md#adding-custom-events)) for the following:
+For all experiences, consult its [analytics](../../production/analytics/index.md) to determine:
 
 - Onboarding and tutorial completion.
 - Metrics related to educational learning objectives. These differ between experiences.
