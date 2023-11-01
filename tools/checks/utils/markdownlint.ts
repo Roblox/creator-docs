@@ -5,11 +5,15 @@ import { IConfig } from './config.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { Emoji } from './utils.js';
 
-export const lintMarkdownContent = ({ content }: { content: string }) => {
+export const lintMarkdownContent = ({
+  fileContent,
+}: {
+  fileContent: string;
+}) => {
   const options = {
     config: markdownLintConfig,
     strings: {
-      content,
+      fileContent,
     },
     handleRuleFailures: true,
   };
@@ -74,14 +78,14 @@ ${requiredCheckMessage}`;
 
 export const checkMarkdownLint = ({
   config,
-  content,
+  fileContent,
   filePath: filePath,
 }: {
   config: IConfig;
-  content: string;
+  fileContent: string;
   filePath: string;
 }) => {
-  const lintResults = lintMarkdownContent({ content });
+  const lintResults = lintMarkdownContent({ fileContent });
   if (config.debug) {
     console.log(`MarkdownLint errors for ${filePath}:`, lintResults);
   }
