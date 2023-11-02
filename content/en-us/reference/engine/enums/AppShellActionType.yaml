@@ -1,0 +1,63 @@
+name: AppShellActionType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: OpenApp
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: TapChatTab
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: TapConversationEntry
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: TapAvatarTab
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ReadConversation
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: TapGamePageTab
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: TapHomePageTab
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: GamePageLoaded
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: HomePageLoaded
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: AvatarEditorPageLoaded
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''

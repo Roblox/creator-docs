@@ -1,0 +1,117 @@
+name: UIListLayout
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Positions sibling UI elements in a single row.
+description: |
+  A UIListLayout lays out sibling UI elements in a single row within the parent
+  UI element, either horizontally or vertically. Each sibling UI element retains
+  its original `Class.GuiObject.Size`, but its `Class.GuiObject.Position` will
+  be taken under control by the UIListLayout. While under control, the Position
+  property of sibling UI elements will not be editable in the Properties window.
+
+  You can use the elements' `Class.GuiObject.LayoutOrder` by changing
+  `Class.UIListLayout.SortOrder` to LayoutOrder. A UIListLayout will
+  automatically re-layout elements when elements are added/removed, or if a
+  relevant property changes: `Class.GuiObject.LayoutOrder`,
+  `Class.Instance.Name` or `Class.GuiObject.Size`. This can be triggered
+  manually by calling `Class.UIGridStyleLayout:ApplyLayout()`, though this is
+  typically not necessary.
+
+  Since each property that changes how elements are laid out will re-apply the
+  layout, it is recommended to set the `Class.Instance.Parent` property last so
+  that the layout is only applied once. Similarly, since adding more UI elements
+  will also re-apply the layout, add the UIListLayout last so it does not
+  recalculate positions after each element.
+code_samples:
+  - UI-Sort-Order
+  - Show-All-Fonts
+  - UI-Scale-Demo
+inherits:
+  - UIGridStyleLayout
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIListLayout.HorizontalFlex
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIFlexAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIListLayout.ItemLineAlignment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ItemLineAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIListLayout.Padding
+    summary: |
+      Determines the amount of free space between each element.
+    description: |
+      Determines the amount of free space between each element. Can be set
+      either using scale (Percentage of parent's size in the current direction)
+      or offset (a static spacing value, similar to pixel size).
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIListLayout.VerticalFlex
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIFlexAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIListLayout.Wraps
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

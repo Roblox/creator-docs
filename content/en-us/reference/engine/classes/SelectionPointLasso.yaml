@@ -1,0 +1,39 @@
+name: SelectionPointLasso
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  A 3D GUI object which displays a lasso between the defined Humanoid and a
+  given Vector3 point.
+code_samples:
+inherits:
+  - SelectionLasso
+tags:
+  - Deprecated
+deprecation_message: |
+  The SelectionPointLasso class is deprecated. It should not be used for new
+  work.
+properties:
+  - name: SelectionPointLasso.Point
+    summary: |
+      Sets the Vector3 target of the lasso object.
+    description: |
+      Sets the Vector3 target of the lasso object.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: |
+      SelectionPartLasso has been deprecated. Developers are advised to use the
+      `Class.Beam` object instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

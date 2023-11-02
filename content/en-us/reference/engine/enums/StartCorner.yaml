@@ -1,0 +1,36 @@
+name: StartCorner
+type: enum
+summary: |
+  Used by `Class.UIGridLayout.StartCorner` to decide where the first element is
+  placed.
+description: |
+  Used by `Class.UIGridLayout.StartCorner` to decide where the first element is
+  placed.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: TopLeft
+    summary: |
+      Grid starts in top left corner.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: TopRight
+    summary: |
+      Grid starts in top right corner.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: BottomLeft
+    summary: |
+      Grid starts in bottom left corner.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: BottomRight
+    summary: |
+      Grid starts in bottom right corner.
+    value: 3
+    tags: []
+    deprecation_message: ''

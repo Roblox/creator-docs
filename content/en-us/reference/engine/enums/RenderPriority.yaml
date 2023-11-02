@@ -1,0 +1,43 @@
+name: RenderPriority
+type: enum
+summary: |
+  A list of standard reserved values in BindToRenderStep.
+description: |
+  A list of standard reserved values in BindToRenderStep.
+
+  See `Class.RunService:BindToRenderStep()` for the proper usage, as the enum
+  itself isn't used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: First
+    summary: |
+      This should run first.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Input
+    summary: |
+      This should run as second.
+    value: 100
+    tags: []
+    deprecation_message: ''
+  - name: Camera
+    summary: |
+      This should run after Input.
+    value: 200
+    tags: []
+    deprecation_message: ''
+  - name: Character
+    summary: |
+      This should run after Camera.
+    value: 300
+    tags: []
+    deprecation_message: ''
+  - name: Last
+    summary: |
+      This should run as last, after Character.
+    value: 2000
+    tags: []
+    deprecation_message: ''

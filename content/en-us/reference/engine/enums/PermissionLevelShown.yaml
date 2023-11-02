@@ -1,0 +1,45 @@
+name: PermissionLevelShown
+type: enum
+summary: |
+  Used to set the highest permission level that APIs have to have in order to be
+  shown in the Object Browser.
+description: |
+  Used to set the highest permission level that APIs have to have in order to be
+  shown in the Object Browser.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Game
+    summary: |
+      Member must have no security permissions in order to be shown.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: RobloxGame
+    summary: |
+      Member must have security permissions less than or equal to
+      **RobloxPlaceSecurity** to be shown.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: RobloxScript
+    summary: |
+      Member must have security permissions less than or equal to
+      **RobloxScriptSecurity** to be shown.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Studio
+    summary: |
+      Member must have security permissions less than or equal to
+      **LocalUserSecurity** to be shown.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Roblox
+    summary: |
+      Member is shown no matter what security it has.
+    value: 4
+    tags: []
+    deprecation_message: ''

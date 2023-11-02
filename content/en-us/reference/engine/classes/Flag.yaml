@@ -1,0 +1,59 @@
+name: Flag
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  The Flag object is a deprecated object that was used to make capture the flag
+  games.
+description: |
+  The Flag is a unit spawned with a `Class.FlagStand` object, and will respawn
+  when captured. When a player touches this object's Handle, which must be a
+  child of the Flag object, which is a Part named "Handle", the flag will be
+  added to the player's backpack and will appear in their hand. A player cannot
+  select other weapons while carrying a flag, and can drop the flag at anytime
+  by pressing "Backspace" on the keyboard. If the player carrying a flag steps
+  onto another FlagStand of a different team color, the flag will be removed
+  from the player's backpack and a point will be added to the user's
+  leaderstats, if provided. The flag will then regenerate at the originating
+  flag stand. This allows for 'Capture the Flag' to be made games very easily,
+  which was the reason for its creation.
+code_samples:
+inherits:
+  - Tool
+tags:
+  - Deprecated
+deprecation_message: |
+  The `Class.Flag` and `Class.FlagStand` objects were created to allow
+  developers to make 'Capture the Flag' style games quickly. However they have
+  been deprecated and developers are advised to design their own systems which
+  will be more flexible and reliable.
+properties:
+  - name: Flag.TeamColor
+    summary: |
+      The `Class.Team` this flag is for. Corresponds with the TeamColors in the
+      `Class.Teams` service.
+    description: |
+      The `Class.Team` this flag is for. Corresponds with the TeamColors in the
+      `Class.Teams` service.
+
+      The `Class.Flag` and `Class.FlagStand` objects were created to allow
+      developers to make 'Capture the Flag' style games quickly. However they
+      have been deprecated and developers are advised to design their own
+      systems which will be more flexible and reliable.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: |
+      This property was a part of the now deprecated `Class.Flag` service. It
+      should not be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

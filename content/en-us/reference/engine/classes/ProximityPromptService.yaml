@@ -1,0 +1,231 @@
+name: ProximityPromptService
+type: class
+category:
+memory_category: Instances
+summary: |
+  Allows developers to interact with `Class.ProximityPrompt` objects in a global
+  way.
+description: |
+  The ProximityPromptService allows developers to interact with
+  `Class.ProximityPrompt` objects in a global way. It may be more convenient to
+  listen to events on this service rather than individual ProximityPrompt
+  objects.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Service
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: ProximityPromptService.Enabled
+    summary: |
+      Whether `Class.ProximityPrompt|ProximityPrompts` are enabled, and
+      therefore shown, in-game.
+    description: |
+      This property determines whether `Class.ProximityPrompt|ProximityPrompts`
+      are enabled, and therefore shown, in-game. When false, no prompts will be
+      shown.
+
+      For example, in a round based system developers could disable prompts at
+      certain points in the game to disable proximity-based interactions.
+
+      ```lua
+      -- Server Script 1
+      local ProximityPromptService = game:GetService("ProximityPromptService")
+      local enablePrompts = workspace.EnablePrompts -- BindableEvent
+
+      -- Connected to a BindableEvent that is fired by another script controlling game logic
+      enablePrompts.OnServerEvent:Connect(function(enabled)
+      	ProximityPromptService.Enabled = enabled
+      end)
+      ```
+
+      ```lua
+      -- Server Script 2
+      local enablePrompts = workspace.EnablePrompts -- BindableEvent
+
+      -- Some game event
+      enablePrompts:FireServer(false) -- Disable
+      wait(5)
+      enablePrompts:FireServer(true) -- Re-enable
+      ```
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPromptService.MaxPromptsVisible
+    summary: |
+      The maximum number of `Class.ProximityPrompt|ProximityPrompts` that will
+      be shown to the user.
+    description: |
+      This property indicates the maximum number of
+      `Class.ProximityPrompt|ProximityPrompts` that will be shown to the user.
+
+      The code block below demonstrates how this limit would be applied:
+
+      ```lua
+      local ProximityPromptService = game:GetService("ProximityPromptService")
+      ProximityPromptService.MaxPromptsVisible = 2 -- No more than 2 prompts will be shown to the user at any given time
+      ```
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: ProximityPromptService.PromptButtonHoldBegan
+    summary: |
+      Triggers when the player begins holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`.
+    description: |
+      This event triggers when the player begins holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`. This can be used to animate
+      a progress bar.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt that the player begins interacting with.
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The player who holds the key/button.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPromptService.PromptButtonHoldEnded
+    summary: |
+      Triggers when the user stops holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`.
+    description: |
+      This event triggers when the user stops holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`. This can be used to animate
+      a progress bar.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt that the player stops interacting with.
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The player who releases the held key/button.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPromptService.PromptHidden
+    summary: |
+      Triggers client-side when a prompt becomes hidden.
+    description: |
+      This event triggers client-side, in connected
+      `Class.LocalScript|LocalScripts` when a prompt becomes hidden.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt instance that becomes hidden.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPromptService.PromptShown
+    summary: |
+      Triggers client-side when a prompt becomes visible.
+    description: |
+      This event triggers client-side, in connected
+      `Class.LocalScript|LocalScripts`, when a prompt becomes visible.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt instance that becomes visible.
+      - name: inputType
+        type: ProximityPromptInputType
+        default:
+        summary: |
+          The input that triggered the event.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPromptService.PromptTriggerEnded
+    summary: |
+      Triggers when the player stops holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button while triggering a
+      prompt.
+    description: |
+      This event triggers when the player stops holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button while triggering a
+      prompt. This is intended to allow interactions which require the player to
+      hold a button while something happens in-game.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt that the players stops interacting with.
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The player that releases the key/button.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPromptService.PromptTriggered
+    summary: |
+      Triggers when the user interacts with this prompt.
+    description: |
+      This event triggers when the player interacts with this prompt.
+    code_samples:
+    parameters:
+      - name: prompt
+        type: ProximityPrompt
+        default:
+        summary: |
+          The prompt that the players interacts with.
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The interacting player.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -1,0 +1,81 @@
+name: AnimationClip
+type: class
+category: Animations
+memory_category: Instances
+summary: |
+  Represents all types of animation data that the Roblox animation system can
+  consume.
+description: |
+  The non-creatable `Class.AnimationClip` instance type represents abstract
+  animation data that can be fed to the Roblox animation system.
+  `Class.KeyframeSequence` and `Class.CurveAnimation` are two current instance
+  types that inherit from `Class.AnimationClip`.
+
+  There are different ways to represent animation data. To simplify the use of
+  Roblox's animation system, all such representations are their own instance
+  types but inherit from the `Class.AnimationClip` instance. Animation clips
+  published to Roblox via the [Animation Editor](../../../animation/editor.md)
+  can be loaded into the Roblox engine using an `Class.Animation` instance.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: AnimationClip.Loop
+    summary: |
+      Determines whether the animation stored in this `Class.AnimationClip` is
+      intended to loop.
+    description: |
+      Determines whether the animation stored in this `Class.AnimationClip` is
+      intended to loop. When set to true, the animation will continuously repeat
+      each time it finishes.
+
+      Note that `Class.AnimationTrack` instances internally load an
+      `Class.AnimationClip` when an `Class.Animation` is requested via its
+      `Class.Animation.AnimationId|AnimationId`, and the
+      `Class.AnimationTrack.Looped` property will default to the original
+      `Class.AnimationClip` value. Note also that this value can be overwritten.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AnimationClip.Priority
+    summary: |
+      Determines which clip takes priority when multiple animations are playing
+      simultaneously.
+    description: |
+      Determines which clip takes priority when multiple animations are playing
+      simultaneously. Multiple playing animations look to this property to
+      figure out which `Class.Keyframe` poses should be played over one another.
+
+      Note that `Class.AnimationTrack` instances internally load an
+      `Class.AnimationClip` when an `Class.Animation` is requested via its
+      `Class.Animation.AnimationId|AnimationId`, and the
+      `Class.AnimationTrack.Priority` property will default to the original
+      `Class.AnimationClip` value. Note also that this value can be overwritten.
+    code_samples:
+      - KeyframeSequence-Instantiation
+    type: AnimationPriority
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

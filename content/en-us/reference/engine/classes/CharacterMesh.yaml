@@ -1,0 +1,90 @@
+name: CharacterMesh
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  Modifies the appearance of an R6 body part.
+description: |
+  This property modifies the appearance of an R6 body part. It has no effect in
+  R15 characters.
+code_samples:
+inherits:
+  - CharacterAppearance
+tags: []
+deprecation_message: ''
+properties:
+  - name: CharacterMesh.BaseTextureId
+    summary: |
+      The texture of a CharacterMesh. It can be overridden by Shirts, Pants,
+      T-Shirts, and the `Class.CharacterMesh.OverlayTextureId` property.
+    description: |
+      The texture of a CharacterMesh. It can be overridden by Shirts, Pants,
+      T-Shirts, and the `Class.CharacterMesh.OverlayTextureId` property.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CharacterMesh.BodyPart
+    summary: |
+      The part of the Character's body that is affected.
+    description: |
+      The part of the Character's body that is affected.
+    code_samples:
+    type: BodyPart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CharacterMesh.MeshId
+    summary: |
+      Used to load a mesh file, and apply it to the given BodyPart.
+    description: |
+      Used to load a mesh file, and apply it to the given BodyPart.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CharacterMesh.OverlayTextureId
+    summary: |
+      The assetId of the overlay texture. The overlay covers Shirts, Pants,
+      T-Shirts, and the `Class.CharacterMesh.BaseTextureId`.
+    description: |
+      The assetId of the overlay texture. The overlay covers Shirts, Pants,
+      T-Shirts, and the `Class.CharacterMesh.BaseTextureId`.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

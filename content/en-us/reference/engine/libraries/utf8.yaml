@@ -1,0 +1,233 @@
+name: utf8
+type: library
+summary: |
+  This library provides basic support for `UTF-8` encoding.
+description: |
+  This library provides basic support for `UTF-8` encoding. This library does
+  not provide any support for Unicode other than the handling of the encoding.
+  Any operation that needs the meaning of a character, such as character
+  classification, is outside its scope.
+
+  Unless stated otherwise, all functions that expect a byte position as a
+  parameter assume that the given position is either the start of a byte
+  sequence or one plus the length of the subject string. As in the string
+  library, negative indices count from the end of the string.
+
+  You can find a large catalog of usable `UTF-8`characters
+  [here](https://www.w3schools.com/charsets/ref_html_utf8.asp).
+code_samples:
+properties:
+  - name: utf8.charpattern
+    type: string
+    summary: |
+      The pattern `"[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]*"`, which matches exactly
+      zero or more UTF-8 byte sequence, assuming that the subject is a valid
+      UTF-8 string.
+    description: |
+      The pattern `"[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]*"`, which matches exactly
+      zero or more UTF-8 byte sequence, assuming that the subject is a valid
+      UTF-8 string.
+    tags:
+    code_samples:
+functions:
+  - name: utf8.char
+    summary: |
+      Converts zero or more codepoints to UTF-8 byte sequences.
+    description: |
+      Receives zero or more codepoints as integers, converts each one to its
+      corresponding UTF-8 byte sequence and returns a string with the
+      concatenation of all these sequences.
+    parameters:
+      - name: codepoints
+        type: Tuple<int>
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.codes
+    summary: |
+      Returns an iterator function that iterates over all codepoints in a given
+      string.
+    description: |
+      Returns an iterator function so that the construction:
+
+      ```lua
+      for position, codepoint in utf8.codes(str) do
+      	-- body
+      end
+      ```
+
+      will iterate over all codepoints in string `str`. It raises an error if it
+      meets any invalid byte sequence.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: |
+          The string to iterate over.
+    returns:
+      - type: function
+        summary: ''
+      - type: string
+        summary: ''
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.codepoint
+    summary: |
+      Returns the codepoints (as integers) from all codepoints in a given
+      string.
+    description: |
+      Returns the codepoints (as integers) from all codepoints in the provided
+      string (str) that start between byte positions `i` and `j` (both
+      included). The default for `i` is `1` and for `j` is `i`. It raises an
+      error if it meets any invalid byte sequence.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: ''
+      - name: i
+        type: int
+        default: 1
+        summary: |
+          The index of the codepoint that should be fetched from this string.
+      - name: j
+        type: int
+        default: i
+        summary: |
+          The index of the last codepoint between `i` and `j` that will be
+          returned. If excluded, this will default to the value of `i`.
+    returns:
+      - type: Tuple<int>
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.len
+    summary: |
+      Returns the number of UTF-8 codepoints in a given string.
+    description: |
+      Returns the number of UTF-8 codepoints in the string _str_ that start
+      between positions `i` and `j` (both inclusive). The default for `i` is `1`
+      and for `j` is `-1`. If it finds any invalid byte sequence, returns a nil
+      value plus the position of the first invalid byte.
+    parameters:
+      - name: s
+        type: string
+        default:
+        summary: ''
+      - name: i
+        type: int
+        default: 1
+        summary: |
+          The starting position.
+      - name: j
+        type: int
+        default: -1
+        summary: |
+          The ending position.
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.offset
+    summary: |
+      Returns the position (in bytes) where the encoding of the n-th codepoint
+      of `s` (counting from byte position `i`) starts.
+    description: |
+      Returns the position (in bytes) where the encoding of the n-th codepoint
+      of `s` (counting from byte position `i`) starts. A negative `n` gets
+      characters before position `i`. The default for `i` is `1` when `n` is
+      non-negative and `#s + 1` otherwise, so that `utf8.offset(s, -n)` gets the
+      offset of the n-th character from the end of the string. If the specified
+      character is neither in the subject nor right after its end, the function
+      returns `nil`.
+    parameters:
+      - name: s
+        type: string
+        default:
+        summary: ''
+      - name: 'n'
+        type: int
+        default:
+        summary: ''
+      - name: i
+        type: int
+        default: 1
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.graphemes
+    summary: |
+      Returns an iterator function that iterates over the grapheme clusters of a
+      given string.
+    description: |
+      Returns an iterator function so that
+
+      ```lua
+      for first, last in utf8.graphemes(str) do
+      	local grapheme = s:sub(first, last)
+      	-- body
+      end
+      ```
+
+      will iterate the grapheme clusters of the string.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: ''
+      - name: i
+        type: number
+        default:
+        summary: ''
+      - name: j
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: function
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.nfcnormalize
+    summary: |
+      Converts the input string to Normal Form C.
+    description: |
+      Converts the input string to Normal Form C, which tries to convert
+      decomposed characters into composed characters.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: utf8.nfdnormalize
+    summary: |
+      Converts the input string to Normal Form D.
+    description: |
+      Converts the input string to Normal Form D, which tries to break up
+      composed characters into decomposed characters.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: |
+          The string to convert.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:

@@ -1,0 +1,56 @@
+name: ConeHandleAdornment
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  A cone that can be adorned to a `Class.BasePart`.
+description: |
+  For handles to be interactive, they must be parented to a player's PlayerGui
+  or the CoreGui.
+
+  A **ConeHandleAdornment** is a cone that can be adorned to a `Class.BasePart`.
+  This adornment can listen to input events and is commonly used to make dragger
+  tools.
+code_samples:
+inherits:
+  - HandleAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: ConeHandleAdornment.Height
+    summary: |
+      The height of the cone adornment.
+    description: |
+      The height of the cone adornment.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ConeHandleAdornment.Radius
+    summary: |
+      The radius of the cone adornment.
+    description: |
+      The radius of the cone adornment.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

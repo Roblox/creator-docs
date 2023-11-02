@@ -1,0 +1,30 @@
+name: AnalyticsEconomyAction
+type: enum
+summary: ''
+description: |
+  This enum is used as an argument in
+  `Class.AnalyticsService:FireInGameEconomyEvent()`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Default action. Used for an undefined Action.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Acquire
+    summary: |
+      Indicates the acquisition of an in game resource. For example, a player
+      acquires virtual currency by completing a specific in game task.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Spend
+    summary: |
+      Indicates the spending or loss of an in game resource. For example, a
+      player spends virtual currency to acquire a new item.
+    value: 2
+    tags: []
+    deprecation_message: ''

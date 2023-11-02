@@ -1,0 +1,23 @@
+name: TextTruncate
+type: enum
+summary: |
+  Controls the truncation of text when using the TextTruncate property.
+description: |
+  Controls the truncation of text when using the TextTruncate property.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      Text is not truncated.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: AtEnd
+    summary: |
+      Text is truncated at the end of the text, extra graphemes that cannot fit
+      into the space are replaced with '...'.
+    value: 1
+    tags: []
+    deprecation_message: ''

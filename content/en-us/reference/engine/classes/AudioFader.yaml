@@ -1,0 +1,38 @@
+name: AudioFader
+type: class
+category:
+memory_category: Internal
+summary: |
+  Adjusts the volume of audio streams.
+description: |
+  `Class.AudioFader` adjusts the volume of audio streams. It provides one
+  **Input** pin and one **Output** pin which can be connected to/from by
+  `Class.Wire|Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioFader.Volume
+    summary: |
+      Volume level which is multiplied onto the input stream.
+    description: |
+      Volume level which is multiplied onto the input stream. Ranges from 0
+      to 3.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

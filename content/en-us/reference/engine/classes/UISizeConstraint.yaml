@@ -1,0 +1,71 @@
+name: UISizeConstraint
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Ensures a GuiObject does not become larger or smaller than the constraint's
+  max size or min size.
+description: |
+  The UISizeConstraint ensures a `Class.GuiObject` does not become larger or
+  smaller than the `Class.UISizeConstraint.MaxSize` and
+  `Class.UISizeConstraint.MinSize`.
+
+  For example, if the MaxSize is set to `{200, 200}` and the MinSize is set to
+  `{100, 100}`, then the constrained GuiObject cannot scale to be larger than
+  200 pixels wide and 200 pixels tall or smaller than 100 pixels wide and 100
+  pixels tall.
+
+  If the object with this constraint is also under the control of a
+  `Class.UILayout` such as `Class.UIGridLayout`, then the constraint determines
+  the objects size and overwrites any size the layout would apply.
+
+  A UISizeConstraint can be applied to a GuiObject by parenting it to that
+  object.
+code_samples:
+  - uisizeconstraint
+inherits:
+  - UIConstraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: UISizeConstraint.MaxSize
+    summary: |
+      The largest size in pixels the object is allowed to be.
+    description: |
+      The largest size in pixels the object is allowed to be. The X and Y of
+      this value must be greater than or equal to the corresponding components
+      of `Class.UISizeConstraint.MinSize`.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UISizeConstraint.MinSize
+    summary: |
+      The smallest size in pixels the object is allowed to be.
+    description: |
+      The smallest size in pixels the object is allowed to be. The X and Y of
+      this value must be less than or equal to the corresponding components of
+      `Class.UISizeConstraint.MaxSize`.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

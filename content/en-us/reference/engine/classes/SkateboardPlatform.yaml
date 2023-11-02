@@ -1,0 +1,280 @@
+name: SkateboardPlatform
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  A SkateboardPlatform can be used to create a skateboard. When characters get
+  on a skateboard, they are stuck to it until they press the escape key. Until
+  then, the character uses skateboard animations and travels faster than a
+  walking character.
+description: |
+  A SkateboardPlatform can be used to create a skateboard. When characters get
+  on a skateboard, they are stuck to it until they press the escape key. Until
+  then, the character uses skateboard animations and travels faster than a
+  walking character.
+code_samples:
+inherits:
+  - Part
+tags:
+  - Deprecated
+deprecation_message: |
+  The SkateboardPlatform object has been deprecated and is no longer supported
+  by Roblox. Developers looking to create skateboards or similar vehicles are
+  advised to program their own systems. Additionally, the `Class.VehicleSeat`
+  object can be used to quickly create simple vehicles.
+properties:
+  - name: SkateboardPlatform.Controller
+    summary: |
+      The SkateboardPlatform's active SkateboardController.
+    description: |
+      The SkateboardPlatform's active SkateboardController.
+    code_samples:
+    type: SkateboardController
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: SkateboardPlatform.ControllingHumanoid
+    summary: |
+      The `Class.Humanoid` that is controlling the SkateboardPlatform.
+    description: |
+      The `Class.Humanoid` that is controlling the SkateboardPlatform.
+    code_samples:
+    type: Humanoid
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: SkateboardPlatform.Steer
+    summary: |
+      The direction of movement, tied to the keys A and D. Must be 1 (right), 0
+      (straight), or -1 (left). Will refresh back to 0 unless constantly set.
+    description: |
+      The direction of movement, tied to the keys A and D. Must be 1 (right), 0
+      (straight), or -1 (left). Will refresh back to 0 unless constantly set.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SkateboardPlatform.StickyWheels
+    summary: |
+      If true, wheels won't roll without user input.
+    description: |
+      If true, wheels won't roll without user input.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SkateboardPlatform.Throttle
+    summary: |
+      The direction of movement, tied to the keys W and S. Must be an integer 1
+      (forward), 0 (null), or -1 (reverse). Will refresh back to 0 unless
+      constantly set.
+    description: |
+      The direction of movement, tied to the keys W and S. Must be an integer 1
+      (forward), 0 (null), or -1 (reverse). Will refresh back to 0 unless
+      constantly set.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: SkateboardPlatform:ApplySpecificImpulse
+    summary: |
+      Adds ''impulseWorld'' to the SkateboardPlatform's
+      `Class.BasePart.Velocity`.
+    description: |
+      Adds ''impulseWorld'' to the SkateboardPlatform's
+      `Class.BasePart.Velocity`.
+    code_samples:
+    parameters:
+      - name: impulseWorld
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: SkateboardPlatform.Equipped
+    summary: |
+      Fired when the skateboard is equipped.
+    description: |
+      Fired when the skateboard is equipped.
+    code_samples:
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: |
+          The `Class.Humanoid` associated with the character equipping the
+          skateboard.
+      - name: skateboardController
+        type: Instance
+        default:
+        summary: |
+          The `Class.SkateboardController`.
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security: None
+    thread_safety: Unsafe
+  - name: SkateboardPlatform.MoveStateChanged
+    summary: |
+      Fired when the SkateboardPlatform's
+      `Class.SkateboardPlatform.ControllingHumanoid` changes the force being
+      used on the SkateboardPlatform.
+    description: |
+      Fired when the SkateboardPlatform's
+      `Class.SkateboardPlatform.ControllingHumanoid` changes the force being
+      used on the SkateboardPlatform.
+    code_samples:
+    parameters:
+      - name: newState
+        type: MoveState
+        default:
+        summary: |
+          The new `Enum.MoveState`.
+      - name: oldState
+        type: MoveState
+        default:
+        summary: |
+          The old `Enum.MoveState`.
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security: None
+    thread_safety: Unsafe
+  - name: SkateboardPlatform.Unequipped
+    summary: |
+      Fired whenever the skateboard is unequipped.
+    description: |
+      Fired whenever the skateboard is unequipped.
+    code_samples:
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: |
+          The `Class.Humanoid` associated with the character that unequipped the
+          skateboard.
+    tags: []
+    deprecation_message: |
+      The SkateboardPlatform object has been deprecated and is no longer
+      supported by Roblox. Developers looking to create skateboards or similar
+      vehicles are advised to program their own systems. Additionally, the
+      `Class.VehicleSeat` object can be used to quickly create simple vehicles.
+    security: None
+    thread_safety: Unsafe
+  - name: SkateboardPlatform.equipped
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: ''
+      - name: skateboardController
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.SkateboardPlatform.Equipped`
+      which has also been deprecated. Neither event should be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: SkateboardPlatform.unequipped
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of
+      `Class.SkateboardPlatform.Unequipped` which has also been deprecated.
+      Neither event should be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

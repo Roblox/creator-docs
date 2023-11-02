@@ -1,0 +1,193 @@
+name: JointInstance
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  JointInstance is the base class for joints, such as Connectors, Welds, and
+  Snaps.
+description: |
+  JointInstance is the base class for joints, such as Connectors, Welds, and
+  Snaps.
+
+  `Class.Weld`, `Class.Snap`, `Class.WeldConstraint`, `Class.Motor`, and
+  `Class.Motor6D` joints all combine multiple parts into the same Assembly. An
+  assembly is a rigid body if none of its parts are anchored. No physical forces
+  can ever separate the parts of an Assembly or move them relative to each other
+  unless the joints are removed or updated. They're a single body.
+
+  Every Assembly has a root part, see `Class.BasePart:GetRootPart()`. When a
+  JointInstance's `Class.JointInstance.C0|C0`/`Class.JointInstance.C1|C1` is
+  modified the root part will stay where it was.
+
+  Welds do not have any directionality. `Class.JointInstance.Part0|Part0` or
+  `Class.JointInstance.Part1|Part1`, doesn't matter. You can imagine rigid
+  joints forming a tree branching down from the root part. All the parts down
+  the tree from root will move, and their welded "children" in this tree will
+  move with them.
+
+  A typical Roblox avatar is a single assembly. Here's a visualization of this
+  tree in a basic R15 humanoid rig on the left, and a representation of this
+  implicit tree of which parts move relative to which parts on the right.
+
+  ![Assembly Representation](/assets/legacy/AssemblyTree.png)
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: JointInstance.Active
+    summary: |
+      Determines if the joint is currently active in the world.
+    description: |
+      This property determines if the joint is currently active in the world. If
+      true, the joint is active.
+
+      If the `Class.JointInstance` is not in `Class.Workspace` or
+      `Class.JointsService`, or one of its parts is not in Workspace the joint
+      will be inactive.
+
+      Rigid joints like `Class.Weld`, `Class.Snap`, `Class.WeldConstraint`,
+      `Class.Motor`, or `Class.Motor6D` may also be disabled due to conflicts
+      with other rigid joints, such as joints between the same two parts or
+      indirect cycles in the weld graph. Joints disabled this way may be
+      re-enabled later when another joint or part is added or removed.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: JointInstance.C0
+    summary: |
+      Determines how the offset point is attached to
+      `Class.JointInstance.Part0`.
+    description: |
+      C0 is the position aspect of the orientation between two parts in a weld.
+      `Class.JointInstance.Part0` and `Class.JointInstance.Part1` move
+      accordingly to this value, which denotes their respective positions.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: JointInstance.C1
+    summary: |
+      Is subtracted from the `Class.JointInstance.C0` property to create an
+      offset point for `Class.JointInstance.Part1`.
+    description: |
+      Is subtracted from the `Class.JointInstance.C0` property to create an
+      offset point for `Class.JointInstance.Part1`.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: JointInstance.Enabled
+    summary: |
+      Sets whether the joint is active or not.
+    description: |
+      This property sets whether the joint is active or not.
+
+      When this property is set to true, if the joints's
+      `Class.JointInstance.Part0` and `Class.JointInstance.Part1` properties are
+      set, then the joint will ensure that its two parts will be connected and
+      behave according to joint type (e.g. `Class.Weld|Welds`, and
+      `Class.Snap|Snaps`).
+
+      See also:
+
+      - `Class.JointInstance.Active`, determines if the joint is currently
+        active in the world
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: JointInstance.Part0
+    summary: |
+      The first `Class.BasePart` that the joint connects.
+    description: |
+      The first `Class.BasePart` that the joint connects.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: JointInstance.Part1
+    summary: |
+      The second `Class.BasePart` that the joint connects.
+    description: |
+      The second `Class.BasePart` that the joint connects.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: JointInstance.part1
+    summary: ''
+    description: ''
+    code_samples:
+    type: BasePart
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.JointInstance.Part1` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

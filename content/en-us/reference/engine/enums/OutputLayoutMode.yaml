@@ -1,0 +1,22 @@
+name: OutputLayoutMode
+type: enum
+summary: |
+  Sets the layout mode of the output.
+description: |
+  Sets the layout mode of the output.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Horizontal
+    summary: |
+      The output layout is horizontal (x-axis).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Vertical
+    summary: |
+      The output layout is vertical (y-axis).
+    value: 1
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,909 @@
+name: PhysicsSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: ''
+description: |
+  The PhysicsSettings is a singleton class, which lets you view debugging
+  features in Roblox's physics engine. You can find it under the Physics tab in
+  Studio's settings menu.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Settings
+deprecation_message: ''
+properties:
+  - name: PhysicsSettings.AllowSleep
+    summary: |
+      When set to true, physically simulated objects will stop being simulated
+      if they have little to no motion for a set period of time.
+    description: |
+      When set to true, physically simulated objects will stop being simulated
+      if they have little to no motion for a set period of time.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreAnchorsShown
+    summary: |
+      When set to true, parts that are `Class.BasePart.Anchored` will show a
+      gray surface outline on the surface of the part's bounding box that is
+      currently facing the ground.
+    description: |
+      When set to true, parts that are `Class.BasePart.Anchored` will show a
+      gray surface outline on the surface of the part's bounding box that is
+      currently facing the ground.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreAssembliesShown
+    summary: |
+      When set to true, each physics assembly is assigned a unique color and the
+      `Class.Part` associated with the assembly are outlined with the color.
+      Parts that are attached together by `Class.JointInstance` will share the
+      same color.
+    description: |
+      When set to true, each physics assembly is assigned a unique color and the
+      `Class.Part` associated with the assembly are outlined with the color.
+      Parts that are attached together by `Class.JointInstance` will share the
+      same color.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreAssemblyCentersOfMassShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreAwakePartsHighlighted
+    summary: |
+      When set to true, parts that are actively being physically simulated will
+      have a red outline.
+    description: |
+      When set to true, parts that are actively being physically simulated will
+      have a red outline.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreBodyTypesShown
+    summary: |
+      When set to true, `Class.Part` will be outlined with a specific color,
+      depending on the state of its root simulation body.
+    description: |
+      When set to true, `Class.Part` will be outlined with a specific color,
+      depending on the state of its root simulation body.
+
+      #### Body Types
+
+      <table>
+      	<tbody><tr>
+      		<th width="50">Color</th>
+      		<th>Body Type</th>
+      		<th>Description</th>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FF0000"></td>
+      		<td>Real Time Body</td>
+      		<td>Physics Body that is always simulated in real time, and is never throttled. Used for Humanoids.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#00FF00"></td>
+      		<td>Free Fall Body</td>
+      		<td>Physics Body that is freely moving with no physical contact.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#0000FF"></td>
+      		<td>Joint Body</td>
+      		<td>Physics Body that is being influenced by a physically simulated joint, such as a Motor or a Hinge.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FFFF00"></td>
+      		<td>Contact Body</td>
+      		<td>Physics Body that is in contact with another physics body.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FF7700"></td>
+      		<td>Symmetric Contact Body</td>
+      		<td>Physics Body that is experiencing a torquing force, while in contact with another body.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#777700"></td>
+      		<td>Vertical Contact Body</td>
+      		<td>Physics Body that is moving very little along the Y plane, while in contact with another body.</td>
+      	</tr>
+      </tbody></table>
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreCollisionCostsShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreConstraintForcesShownForSelectedOrHoveredInstances
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreConstraintTorquesShownForSelectedOrHoveredInstances
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreContactForcesShownForSelectedOrHoveredAssemblies
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreContactIslandsShown
+    summary: |
+      When set to true, each contact island will render `Class.SelectionBox`
+      adorns on the parts in contact islands, where each contact island is
+      assigned a random color.
+    description: |
+      When set to true, each contact island will render `Class.SelectionBox`
+      adorns on the parts in contact islands, where each contact island is
+      assigned a random color.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreContactPointsShown
+    summary: |
+      When set to true, sphere adorns will be drawn at the contact points of
+      each part where physics interactions are occurring.
+    description: |
+      When set to true, sphere adorns will be drawn at the contact points of
+      each part where physics interactions are occurring. Each sphere also has
+      an arrow drawn in 3D, facing the surface that the contact point is
+      detecting.
+
+      #### Solver Variations
+
+      The behavior of this property varies depending on whether Roblox's physics
+      engine is using the `PGS Physics Solver`, or the `Spring Physics Solver`.
+
+      This is controlled by the `Class.Workspace`'s
+      `Class.Workspace.PGSPhysicsSolverEnabled` property.
+
+      ##### Spring Physics Solver
+
+      When `Class.Workspace.PGSPhysicsSolverEnabled` is set to false, the
+      contact points are color coded as listed below. The length of the arrow
+      extruding from the sphere depends on how much force the contact point is
+      exerting, and what the contact type is.
+
+      <table>
+      	<tbody><tr>
+      		<th width="50">Color</th>
+      		<th width="200">Contact Type</th>
+      		<th>Description</th>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#CCCC00"></td>
+      		<td>Normal Contact</td>
+      		<td>Contact point with no special conditions.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#656500"></td>
+      		<td>Resting Contact</td>
+      		<td>Contact point that has been active for at least 4 frames.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#CC0000"></td>
+      		<td>Second Pass Contact</td>
+      		<td>Contact point that was made by a kernel joint going through a second pass. Rarely seen.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#CC6500"></td>
+      		<td>Real Time Contact</td>
+      		<td>Contact point that was made with a real-time physics body. This applies to tripped <code>Class.Humanoid</code>.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#0000CC"></td>
+      		<td>Joint Contact</td>
+      		<td>Contact point that was made under the context of a physically simulated joint. This applies to Motors and Hinges.</td>
+      	</tr>
+      </tbody></table>
+      <b>PGS Physics Solver</b>
+
+      When `Class.Workspace.PGSPhysicsSolverEnabled` is set to true, the contact
+      points are always colored **RED**, and the length of the arrow will always
+      be 1 stud. There are no special conditions tracked, because the PGS solver
+      does not keep specific lookup tables for the states listed in the Spring
+      Solver.
+
+      <table>
+      	<tbody><tr>
+      		<th width="50">Color</th>
+      		<th width="200">Contact Type</th>
+      		<th>Description</th>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#CC0000"></td>
+      		<td>Normal Contact</td>
+      		<td>Contact point with no special conditions.</td>
+      	</tr>
+      </tbody></table>
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreJointCoordinatesShown
+    summary: |
+      When set to true, XYZ axes are rendered at the `Class.BasePart.CFrame` of
+      every part.
+    description: |
+      When set to true, XYZ axes are rendered at the `Class.BasePart.CFrame` of
+      every part.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreMagnitudesShownForDrawnForcesAndTorques
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreMechanismsShown
+    summary: |
+      When set to true, every individual mechanism of parts is given a unique
+      color.
+    description: |
+      When set to true, every individual mechanism of parts is given a unique
+      color.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreModelCoordsShown
+    summary: |
+      An ancient property that hasn't work correctly since late 2007. It's
+      supposed to render an XYZ axis on the root part of a `Class.Model`, but
+      the axis rendering component doesn't work correctly.
+    description: |
+      An ancient property that hasn't work correctly since late 2007. It's
+      supposed to render an XYZ axis on the root part of a `Class.Model`, but
+      the axis rendering component doesn't work correctly.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreNonAnchorsShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreOwnersShown
+    summary: |
+      When set to true, each `Class.Player`'s character is outlined with a
+      unique color, and each part that the player has network ownership over is
+      outlined with the same color.
+    description: |
+      When set to true, each `Class.Player`'s character is outlined with a
+      unique color, and each part that the player has network ownership over is
+      outlined with the same color.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ArePartCoordsShown
+    summary: |
+      An ancient property that hasn't worked correctly since late 2007. It's
+      supposed to render a large XYZ axis in the center of each
+      `Class.BasePart`, but the axis rendering component doesn't work correctly.
+    description: |
+      An ancient property that hasn't worked correctly since late 2007. It's
+      supposed to render a large XYZ axis in the center of each
+      `Class.BasePart`, but the axis rendering component doesn't work correctly.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreRegionsShown
+    summary: |
+      When set to true, a cylinder is drawn around each `Class.Player`'s
+      character, representing their `Class.Player.SimulationRadius`.
+    description: |
+      When set to true, a cylinder is drawn around each `Class.Player`'s
+      character, representing their `Class.Player.SimulationRadius`. Each
+      physically simulated object will check to see which player is closest to
+      that object, and if they are within the player's simulation radius. If
+      both conditions are met, that player will becomes the network owner of
+      that object.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreSolverIslandsShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreTerrainReplicationRegionsShown
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreTimestepsShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreUnalignedPartsShown
+    summary: |
+      When set to true, parts that aren't aligned on the 1x1x1 grid will be
+      outlined yellow.
+    description: |
+      When set to true, parts that aren't aligned on the 1x1x1 grid will be
+      outlined yellow.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreWorldCoordsShown
+    summary: |
+      An ancient property that hasn't worked correctly since late 2007. It's
+      supposed to render a large XYZ axis in the center of the world, but the
+      axis rendering component doesn't work correctly.
+    description: |
+      An ancient property that hasn't worked correctly since late 2007. It's
+      supposed to render a large XYZ axis in the center of the world, but the
+      axis rendering component doesn't work correctly.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.DisableCSGv2
+    summary: |
+      When set to true, Roblox will fall back to using its legacy CSG solver
+      when performing solid model operations.
+    description: |
+      When set to true, Roblox will fall back to using its legacy CSG solver
+      when performing solid model operations.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.DisableCSGv3ForPlugins
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.FluidForceDrawScale
+    summary: |
+      Sets the scale of arrows drawn for aerodynamic force visualization.
+    description: |
+      Sets the scale of arrows drawn for aerodynamic force visualization. The
+      default value is 1.0; smaller values draw smaller arrows and vice versa.
+      The default value is a good starting point for a wide range of aerodynamic
+      mechanisms.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ForceCSGv2
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ForceDrawScale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.IsInterpolationThrottleShown
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.IsReceiveAgeShown
+    summary: |
+      This property is supposed to show the `Class.BasePart.ReceiveAge` of a
+      part, but it does not work correctly.
+    description: |
+      This property is supposed to show the `Class.BasePart.ReceiveAge` of a
+      part, but it does not work correctly.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.IsTreeShown
+    summary: |
+      When set to true, the joint connections of each part, and the states of
+      their underlying primitive components are visualized as a spanning tree.
+    description: |
+      When set to true, the joint connections of each part, and the states of
+      their underlying primitive components are visualized as a spanning tree.
+
+      ##### Spanning Tree Table
+
+      There are several visualizations made available when this property is set
+      to true:
+
+      <table>
+      	<tbody><tr>
+      		<th width="50">Color</th>
+      		<th width="125">Adorn Type</th>
+      		<th>Description</th>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FF0000"></td>
+      		<td>Box</td>
+      		<td>Root Primitive of a Mechanism that is currently anchored, or connected to an anchored primitive. See <code>Class.BasePart:IsGrounded()</code>.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FF7F00"></td>
+      		<td>Box</td>
+      		<td>Root Primitive of a Mechanism that is free to be physically simulated.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#0000FF"></td>
+      		<td>Box</td>
+      		<td>Root Primitive of a Mechanism that has moving components.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#CCCC00"></td>
+      		<td>Sphere</td>
+      		<td>Root Primitive of an Assembly.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#FF7F00"></td>
+      		<td>Cylinder</td>
+      		<td>Root Primitive of a Clump.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#B2B2B2"></td>
+      		<td>Line</td>
+      		<td>Connection between two Primitives that share the same Assembly and Clump.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#0000FF"></td>
+      		<td>Line</td>
+      		<td>Connection between two Primitives that share the same Assembly.</td>
+      	</tr>
+      	<tr>
+      		<td bgcolor="#29D0D0"></td>
+      		<td>Line</td>
+      		<td>Connection between two Primitives.</td>
+      	</tr>
+      </tbody></table>
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.PhysicsEnvironmentalThrottle
+    summary: |
+      Controls the throttle rate of Roblox's physics engine.
+    description: |
+      Controls the throttle rate of Roblox's physics engine. By default, the
+      physics engine will adjust the physics environment throttle depending on
+      how much work the physics engine is doing, and the current framerate. See
+      the enum page for `Enum.EnviromentalPhysicsThrottle` for more information.
+    code_samples:
+    type: EnviromentalPhysicsThrottle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ShowDecompositionGeometry
+    summary: |
+      When set to true, the underlying collision geometry for
+      `Class.PartOperation` and `Class.MeshPart` is rendered.
+    description: |
+      When set to true, the underlying collision geometry for
+      `Class.PartOperation` and `Class.MeshPart` is rendered.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ShowFluidForcesForSelectedOrHoveredMechanisms
+    summary: |
+      When set to true, enables aerodynamic visualization for selected or
+      hovered mechanisms in Studio's play and run modes.
+    description: |
+      When set to true, enables aerodynamic visualization for selected or
+      hovered mechanisms in Studio's play and run modes. This visualization
+      shows aerodynamic force, torque, and center of pressure for the hovered or
+      selected mechanisms.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.SolverConvergenceMetricType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SolverConvergenceMetricType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.SolverConvergenceVisualizationMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SolverConvergenceVisualizationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ThrottleAdjustTime
+    summary: |
+      If the `Class.PhysicsSettings.PhysicsEnvironmentalThrottle` is set to
+      `DefaultAuto`, this specifies the maximum time that the physics
+      environmental throttle has to wait before it is allowed to automatically
+      change.
+    description: |
+      If the `Class.PhysicsSettings.PhysicsEnvironmentalThrottle` is set to
+      `DefaultAuto`, this specifies the maximum time that the physics
+      environmental throttle has to wait before it is allowed to automatically
+      change.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.UseCSGv2
+    summary: |
+      If set to true, version 2 of Roblox's CSG solver will be used instead of
+      version 1.
+    description: |
+      If set to true, version 2 of Roblox's CSG solver will be used instead of
+      version 1.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

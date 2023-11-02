@@ -1,0 +1,142 @@
+name: UserInputType
+type: enum
+summary: |
+  Describes the type of a user input event.
+description: |
+  The **UserInputType** enum describes the kind of input being performed (mouse,
+  keyboard, gamepad, touch, etc). This enum is used by the
+  `Class.InputObject.UserInputType` property of the same name, as well as
+  various `Class.UserInputService` and `Class.GuiObject` events.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: MouseButton1
+    summary: |
+      The left mouse button.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: MouseButton2
+    summary: |
+      The right mouse button.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: MouseButton3
+    summary: |
+      The middle mouse button.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: MouseWheel
+    summary: |
+      The mouse wheel.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: MouseMovement
+    summary: |
+      Movement of the mouse. Fires changed events each time the player's cursor
+      position changes and when the move enters/leaves the game window.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Touch
+    summary: |
+      A tap on the screen from a mobile device.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Keyboard
+    summary: |
+      Key press on a keyboard.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Focus
+    summary: |
+      The client regaining focus of the Roblox window.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Accelerometer
+    summary: |
+      The accelerometer of a mobile device.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Gyro
+    summary: |
+      The Gyroscope of a mobile device.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad1
+    summary: |
+      Input from the 1st plugged in Gamepad.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad2
+    summary: |
+      Input from the 2nd plugged in Gamepad.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad3
+    summary: |
+      Input from the 3rd plugged in Gamepad.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad4
+    summary: |
+      Input from the 4th plugged in Gamepad.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad5
+    summary: |
+      Input from the 5th plugged in Gamepad.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad6
+    summary: |
+      Input from the 6th plugged in Gamepad.
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad7
+    summary: |
+      Input from the 7th plugged in Gamepad.
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: Gamepad8
+    summary: |
+      Input from the 8th plugged in Gamepad.
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: TextInput
+    summary: |
+      Input of Text into a text-based `Class.GuiObject`. Normally this is only a
+      `Class.TextBox`.
+    value: 20
+    tags: []
+    deprecation_message: ''
+  - name: InputMethod
+    summary: |
+      Text input from an input method editor (IME). `Class.InputObject`s with
+      this type aren't currently fired.
+    value: 21
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      Unknown UserInputType.
+    value: 22
+    tags: []
+    deprecation_message: ''

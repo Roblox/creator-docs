@@ -1,0 +1,294 @@
+name: AudioPlayer
+type: class
+category:
+memory_category: Internal
+summary: |
+  Used to play audio assets.
+description: |
+  `Class.AudioPlayer` is used to play audio assets. It provides a single
+  **Output** pin which can be connected to other pins via `Class.Wire|Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioPlayer.AssetId
+    summary: |
+      The asset to be loaded into the `Class.AudioPlayer`.
+    description: |
+      The asset to be loaded into the `Class.AudioPlayer`. If
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is true, the asset loads immediately
+      once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes true.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.AutoLoad
+    summary: |
+      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
+      once assigned.
+    description: |
+      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
+      once assigned. If false, the asset will load upon the first attempt to
+      play.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.IsPlaying
+    summary: |
+      Denotes whether this `Class.AudioPlayer` is currently playing.
+    description: |
+      Denotes whether this `Class.AudioPlayer` is currently playing. This
+      property is read-only, but replicates. To play and stop an
+      `Class.AudioPlayer` at runtime, use the `Class.AudioPlayer:Play()|Play()`
+      and `Class.AudioPlayer:Stop()|Stop()` methods.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AudioPlayer.IsReady
+    summary: |
+      Denotes whether this `Class.AudioPlayer` is loaded, buffered, and ready to
+      play.
+    description: |
+      Denotes whether this `Class.AudioPlayer` is loaded, buffered, and ready to
+      play. Although uncommon, `Class.AudioPlayer|AudioPlayers` may have their
+      assets unloaded at runtime if there is extreme memory pressure, in which
+      case `Class.AudioPlayer.IsReady|IsReady` will become false.
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: true
+  - name: AudioPlayer.LoopRegion
+    summary: |
+      A range, in seconds, denoting a desired loop start and loop end within the
+      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` of this
+      `Class.AudioPlayer`.
+    description: |
+      A range, in seconds, denoting a desired loop start and loop end within the
+      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` of this
+      `Class.AudioPlayer`.
+
+      If the `Class.AudioPlayer.LoopRegion|LoopRegion` minimum is **greater**
+      than the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum, the
+      loop starts from the `Class.AudioPlayer.LoopRegion|LoopRegion` minimum.
+
+      If the `Class.AudioPlayer.LoopRegion|LoopRegion` minimum is **less** than
+      the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum, the loop
+      starts from the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum.
+
+      If the `Class.AudioPlayer.LoopRegion|LoopRegion` maximum is **greater**
+      than the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` maximum, the
+      loop ends at the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`
+      maximum.
+
+      If the `Class.AudioPlayer.LoopRegion|LoopRegion` maximum is **less** than
+      the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` maximum, the loop
+      ends at exactly the `Class.AudioPlayer.LoopRegion|LoopRegion` maximum.
+
+      If the `Class.AudioPlayer.LoopRegion|LoopRegion` minimum **equals** the
+      `Class.AudioPlayer.LoopRegion|LoopRegion` maximum, the `Class.AudioPlayer`
+      uses the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` property
+      instead.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Regions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.Looping
+    summary: |
+      Controls whether this `Class.AudioPlayer` loops.
+    description: |
+      Controls whether this `Class.AudioPlayer` loops when exceeding the end of
+      its `Class.AudioPlayer.TimeLength|TimeLength`,
+      `Class.AudioPlayer.LoopRegion|LoopRegion`, or
+      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.PlaybackRegion
+    summary: |
+      Range in seconds denoting a desired start time (minimum) and stop time
+      (maximum) within the `Class.AudioPlayer.TimeLength|TimeLength`.
+    description: |
+      Range in seconds denoting a desired start time (minimum) and stop time
+      (maximum) within the `Class.AudioPlayer.TimeLength|TimeLength`.
+
+      If the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum is
+      **greater** than 0, the sound begins playing from the
+      `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum time.
+
+      If the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum is
+      **less** than 0, the sound begins playing from 0.
+
+      If the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` maximum is
+      **greater** than the `Class.AudioPlayer.TimeLength|TimeLength`, the sound
+      stops at `Class.AudioPlayer.TimeLength|TimeLength`.
+
+      If the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` maximum is
+      **less** than the `Class.AudioPlayer.TimeLength|TimeLength`, the sound
+      stops at exactly the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion`
+      maximum.
+
+      If the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` minimum
+      **equals** the `Class.AudioPlayer.PlaybackRegion|PlaybackRegion` maximum,
+      the sound plays in its entirety.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Regions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.PlaybackSpeed
+    summary: |
+      Controls how quickly the asset will be played, which controls its pitch.
+    description: |
+      Multiplier controlling how quickly the asset will be played, directly
+      controlling its perceived pitch. Ranges from 0 to 20.
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioPlayer.TimeLength
+    summary: |
+      Denotes the length of the loaded asset.
+    description: |
+      Denotes the length of the loaded `Class.AudioPlayer.AssetId|AssetId` in
+      seconds.
+    code_samples: []
+    type: double
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: true
+  - name: AudioPlayer.TimePosition
+    summary: |
+      Tracks the current position of the playhead within the asset.
+    description: |
+      Tracks and controls the current position of the playhead within the
+      `Class.AudioPlayer.AssetId|AssetId`, in seconds.
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: AudioPlayer:Play
+    summary: |
+      Plays the `Class.AudioPlayer` from wherever its
+      `Class.AudioPlayer.TimePosition|TimePosition` is.
+    description: |
+      Plays the `Class.AudioPlayer` from wherever its
+      `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
+      to client.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AudioPlayer:Stop
+    summary: |
+      Stops the `Class.AudioPlayer` wherever its
+      `Class.AudioPlayer.TimePosition|TimePosition` is.
+    description: |
+      Stops the `Class.AudioPlayer` wherever its
+      `Class.AudioPlayer.TimePosition|TimePosition` is. Replicates from server
+      to client.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

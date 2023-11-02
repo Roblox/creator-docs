@@ -1,0 +1,29 @@
+name: TickCountSampleMethod
+type: enum
+summary: |
+  Controls the precision of a timer.
+description: |
+  Compute time using a faster, but less precise method.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Fast
+    summary: |
+      Compute time using a faster, but less precise method.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Benchmark
+    summary: |
+      Dynamically decide between using ''Fast'' and ''Precise'' depending on
+      performance.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Precise
+    summary: |
+      Compute time using a precise method.
+    value: 2
+    tags: []
+    deprecation_message: ''

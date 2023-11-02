@@ -1,0 +1,194 @@
+name: MessagingService
+type: class
+category:
+memory_category: Instances
+summary: |
+  MessagingService allows game servers in the same game to communicate with each
+  other.
+description: |
+  The MessagingService allows game servers in the same game to communicate with
+  each other in real time (< 1 second) using topics. Topics are developer
+  defined strings (1-80 characters) that game servers can send and receive
+  messages.
+
+  Delivery is best effort and not guaranteed. Make sure to architect your game
+  so delivery failures are not critical.
+
+  ## Limitations
+
+  Note: these limits are subject to change.
+
+  <table>
+  	<thead>
+  		<tr>
+  			<th>Limit</th>
+  			<th>Maximum</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>
+  				<b>Size of message</b>
+  			</td>
+  			<td>
+  				1kB
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<b>Messages sent per game server</b>
+  			</td>
+  			<td>
+  				 150 + 60 * (number of players in this game server) per minute
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<b>Messages received per topic</b>
+  			</td>
+  			<td>
+  				(10 + 20 * number of servers) per minute
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				<b>Messages received for entire game</b>
+  			</td>
+  			<td>
+  				 (100 + 50 * number of servers) per minute
+  			</td>
+  		</tr>
+      <tr>
+  			<td>
+  				<b>Subscriptions allowed per game server</b>
+  			</td>
+  			<td>
+  				 5 + 2 * (number of players in this game server)
+  			</td>
+  		</tr>
+  	</tbody>
+  </table>
+
+  [Cross-Server Messaging](../../../cloud-services/cross-server-messaging.md)
+  explores how to communicate between game servers in greater detail with
+  relevant code samples. Note that Cross-Server Messaging has separate
+  namespaces for live games and Studio, and they can't communicate with each
+  other.
+
+  If you want to publish ad-hoc messages to live game servers, you can use the
+  [Open Cloud APIs](../../../cloud/open-cloud/usage-messaging.md).
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: MessagingService:PublishAsync
+    summary: |
+      Invokes the supplied callback whenever a message is pushed to the topic.
+    description: |
+      This function sends the provided message to all subscribers to the topic,
+      triggering their registered callbacks to be invoked.
+
+      Yields until the message is received by the backend.
+    code_samples:
+    parameters:
+      - name: topic
+        type: string
+        default:
+        summary: |
+          Determines where the message is sent.
+      - name: message
+        type: Variant
+        default:
+        summary: |
+          The data to include in the message.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MessagingService:SubscribeAsync
+    summary: |
+      Begins listening to the given topic.
+    description: |
+      This function registers a callback to begin listening to the given topic.
+      The callback is invoked when a topic receives a message. It can be called
+      multiple times for the same topic.
+
+      #### Callback
+
+      The callback is invoked with a single argument, a table with the following
+      entries:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Field</th>
+      			<th>Summary</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>
+      				<b>Data</b>
+      			</td>
+      			<td>
+      				Developer supplied payload
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				<b>Sent</b>
+      			</td>
+      			<td>
+      				Unix time in seconds at which the message was sent
+      			</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      It yields until the subscription is properly registered and returns a
+      connection object.
+
+      To unsubscribe, call `Datatype.RBXScriptConnection|:Disconnect()` on the
+      returned object. Once Disconnect() is called, the callback should never be
+      invoked. Killing the script containing the connections also causes the
+      underlying connect to be unsubscribed.
+
+      See also:
+
+      - `Class.MessagingService:PublishAsync()`, sends the provided message to
+        all subscribers to the topic, triggering their registered callbacks to
+        be invoked
+    code_samples:
+      - subscribing-to-cross-server-messages
+    parameters:
+      - name: topic
+        type: string
+        default:
+        summary: |
+          Determines where to listen for messages.
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          Function to be invoked whenever a message is received.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          Connection that can be used to unsubscribe from the topic.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

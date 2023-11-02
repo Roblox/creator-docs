@@ -1,0 +1,19 @@
+name: RunningAverageItemDouble
+type: class
+category:
+memory_category: Instances
+summary: |
+  Measures the runtime average of a **double** value.
+description: |
+  A special type of `Class.StatsItem` which measures the runtime average of an
+  internal **double** value.
+code_samples:
+inherits:
+  - StatsItem
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

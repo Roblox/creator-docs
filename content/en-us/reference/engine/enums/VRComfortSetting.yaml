@@ -1,0 +1,28 @@
+name: VRComfortSetting
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Comfort
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Normal
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Expert
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

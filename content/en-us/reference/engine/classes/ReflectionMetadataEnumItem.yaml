@@ -1,0 +1,21 @@
+name: ReflectionMetadataEnumItem
+type: class
+category:
+memory_category: Instances
+summary: |
+  Contains information about a specific EnumItem embedded within an Enum.
+description: |
+  The ReflectionMetadataEnumItem is the class containing information about a
+  specific EnumItem embedded within an Enum and should be parented to a
+  `Class.ReflectionMetadataEnum`.
+
+  Since it is an internal object, it cannot be used by developers.
+code_samples:
+inherits:
+  - ReflectionMetadataItem
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,474 @@
+name: ScriptDocument
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  A `Class.ScriptDocument` instance is a proxy of the document of a Studio
+  Script Editor. It's different from the `Class.LuaSourceContainer` open in the
+  editor in that it represents the ephemeral state of an open document, and its
+  representation is in a format that's more suited for reading and editing code
+  than executing it. In particular, `Class.ScriptDocument` reflects any changes
+  that have been made to the open script in Drafts Mode, which the source
+  property doesn't.
+
+  The Script Editor itself exists and changes on a different thread than any
+  `Class.DataModel`, so the `Class.ScriptDocument` replicates the open Script
+  Editor, but it isn't the open editor. Because of the replication, there's
+  sometimes a slight delay between changing the text in the editor and updating
+  the `Class.ScriptDocument`. The delay usually occurs because the
+  `Class.DataModel` is busy, and it's almost always extremely small, but it
+  still exists.
+
+  The existence of a `Class.ScriptDocument` indicates that a document is open in
+  the Script Editor. All `Class.ScriptDocument` instances have
+  `Class.ScriptEditorService` as its parent. Each instance adheres to the
+  following encoding conventions:
+
+  - All text in `Class.ScriptDocument` is UTF-8 encoded.
+  - All line indices are 1-indexed.
+  - All character indices are 1-indexed and count UTF-8 bytes, not graphemes, so
+    the same warning from `Class.TextBox.CursorPosition` applies: many Unicode
+    characters take more than one byte.
+  - All ranges are inclusive of their start position and exclusive of their end
+    position, so start == end implies an empty range.
+
+  All APIs for `Class.ScriptDocument` are at **Plugin** level security.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: ScriptDocument:GetLine
+    summary: |
+      Returns the text of the specified line. When no argument is provided,
+      returns the line of the current cursor position.
+    description: |
+      Returns the text of the specified line. When no argument is provided,
+      returns the line of the current cursor position.
+    code_samples:
+      - ScriptDocument-SelectionChanged-GetLine
+    parameters:
+      - name: lineIndex
+        type: int?
+        default: nil
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetLineCount
+    summary: |
+      Returns the number of lines in the document.
+    description: |
+      Returns the number of lines in the active document.
+    code_samples:
+      - ScriptDocument-GetLineCount
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetScript
+    summary: |
+      Returns the underlying `Class.LuaSourceContainer` instance, if one exists,
+      otherwise `nil`.
+    description: |
+      Returns the underlying `Class.LuaSourceContainer` instance, if one exists,
+      otherwise `nil`.
+    code_samples:
+      - ScriptDocument-GetScript
+    parameters: []
+    returns:
+      - type: LuaSourceContainer
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetSelectedText
+    summary: |
+      Gets the text selected in the editor, or an empty string if there is no
+      selection.
+    description: |
+      Gets the text selected in the editor, or an empty string if there is no
+      selection.
+    code_samples:
+      - ScriptDocument-HasSelectedText-GetSelectedText
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetSelection
+    summary: |
+      Returns the last known selection of the Script Editor in the format:
+      `CursorLine, CursorChar, AnchorLine, AnchorChar`. If the Script Editor has
+      no selection, `CursorLine == AnchorLine` and `CursorChar == AnchorChar`.
+    description: |
+      Returns the last known selection of the Script Editor in the format:
+      `CursorLine, CursorChar, AnchorLine, AnchorChar`. If the Script Editor has
+      no selection, `CursorLine == AnchorLine` and `CursorChar == AnchorChar`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: |
+          CursorLine, CursorChar, AnchorLine, AnchorChar.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetSelectionEnd
+    summary: |
+      Gets the larger of the cursor position and anchor. If the editor has no
+      selection, they are the same value.
+    description: |
+      Gets the larger of the cursor position and anchor. If the editor has no
+      selection, they are the same value.
+    code_samples:
+      - ScriptDocument-GetSelectionStart-GetSelectionEnd
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetSelectionStart
+    summary: |
+      Gets the smaller of the cursor position and anchor. If the editor has no
+      selection, they are the same value.
+    description: |
+      Gets the smaller of the cursor position and anchor. If the editor has no
+      selection, they are the same value.
+    code_samples:
+      - ScriptDocument-GetSelectionStart-GetSelectionEnd
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetText
+    summary: |
+      Returns text from the open editor.
+    description: |
+      Returns text from the open editor. Must be called with 0, 2 or 4
+      arguments:
+
+      - If called with 0 arguments, gets the entire contents of the open editor.
+      - If called with 2 arguments, gets the text of the document starting at
+        (`startLine`, `startColumn`).
+      - If called with 4 arguments, gets the text of the document starting at
+        (`startLine`, `startColumn`) and ending at (`endLine`, `endColumn`).
+    code_samples:
+      - ScriptDocument-GetText
+    parameters:
+      - name: startLine
+        type: int?
+        default: nil
+        summary: ''
+      - name: startCharacter
+        type: int?
+        default: nil
+        summary: ''
+      - name: endLine
+        type: int?
+        default: nil
+        summary: ''
+      - name: endCharacter
+        type: int?
+        default: nil
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:GetViewport
+    summary: |
+      Returns the currently displayed line numbers in the editor change.
+    description: |
+      Returns the currently displayed line numbers in the editor change. The
+      editor displays the lines between startLine and endLine, inclusive. The
+      first and last line might only display partially. For example, only the
+      topmost pixel of the last line might be on screen. Furthermore, code
+      folding might hide lines between startLine and endLine.
+    code_samples:
+      - ScriptDocument-GetViewport
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:HasSelectedText
+    summary: |
+      Returns whether or not the editor has any text selected.
+    description: |
+      Returns whether or not the editor has any text selected.
+    code_samples:
+      - ScriptDocument-HasSelectedText-GetSelectedText
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:IsCommandBar
+    summary: |
+      Returns true if the `Class.ScriptDocument` represents the Command bar.
+    description: |
+      Returns true if the `Class.ScriptDocument` represents the Command bar. The
+      command bar has special rules and limitations in this API:
+
+      - Studio creates the Command bar before running plugins, so it doesn't
+        always fire the opened event, although it does close and reopen as
+        Studio transitions between DataModels.
+      - You can't edit the Command bar with `EditTextAsync` for security
+        reasons.
+    code_samples:
+      - ScriptDocument-IsCommandBar
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:CloseAsync
+    summary: |
+      Requests that the editor associated with this document close. Yields the
+      current thread until the editor responds to the request.
+    description: |
+      Requests that the editor associated with this document close. Yields the
+      current thread until the editor responds to the request. If the function
+      succeeds, it returns (true, nil). If the function fails, it returns
+      (false, string) as a description of the problem.
+
+      This function can't close the command bar.
+    code_samples:
+      - ScriptDocument-CloseAsync
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:EditTextAsync
+    summary: |
+      Replaces the text in the specified range from (`startLine`, `startColumn`)
+      to (`endLine`, `endColumn`) with newText.
+    description: |
+      Replaces the text in the specified range from (`startLine`, `startColumn`)
+      to (`endLine`, `endColumn`) with `newText`. If the range is empty, then
+      the function inserts the text at (`startLine`, `startColumn`). If the text
+      cursor is within the specified range, the cursor moves to the end position
+      of the edit. Otherwise, the text cursor doesn't move. This function yields
+      the current thread until it receives a reply from the editor about the
+      edit.
+
+      If the function succeeds, it returns (true, nil).
+
+      The function throws an error if:
+
+      - The range is invalid.
+      - The range would slice a unicode character (e.g., replacing only some of
+        the bytes of the unicode character).
+      - The `newText` itself contains invalid UTF-8.
+
+      If the function fails, it returns (false, string). The string is a
+      description of the problem. The most common failure type is a version
+      mismatch. This occurs when you try to call `EditTextAsync` during the time
+      when the `Class.ScriptDocument` is out of sync with the contents of the
+      editor. If this happens, you can retry the edit.
+    code_samples: []
+    parameters:
+      - name: newText
+        type: string
+        default:
+        summary: ''
+      - name: startLine
+        type: int
+        default:
+        summary: ''
+      - name: startCharacter
+        type: int
+        default:
+        summary: ''
+      - name: endLine
+        type: int
+        default:
+        summary: ''
+      - name: endCharacter
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:ForceSetSelectionAsync
+    summary: |
+      Asks the editor to set its cursor selection to the argument values.
+    description: |
+      Asks the editor to set its cursor selection to the argument values. Both
+      anchor arguments must be passed, or neither. If neither is passed, then
+      they each default to being the same as the corresponding cursor argument.
+      The editor might decline to update its cursor if the text content of the
+      document has changed. Unlike
+      `Class.ScriptDocument:RequestSetSelectionAsync()`, the editor will not
+      decline to move its cursor if the cursor has moved since the request was
+      made. Returns (true, nil) if the cursor was updated, and (false, string)
+      with an explanation string if it was not. Yields the current thread until
+      the editor replies.
+    code_samples:
+      - ScriptDocument-ForceSetSelectionAsync
+    parameters:
+      - name: cursorLine
+        type: int
+        default:
+        summary: ''
+      - name: cursorCharacter
+        type: int
+        default:
+        summary: ''
+      - name: anchorLine
+        type: int?
+        default: nil
+        summary: ''
+      - name: anchorCharacter
+        type: int?
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument:RequestSetSelectionAsync
+    summary: |
+      Asks the editor to set its cursor selection to the argument values.
+    description: |
+      Asks the editor to set its cursor selection to the argument values. Both
+      anchor arguments must be passed, or neither. If neither is passed, then
+      they each default to being the same as the corresponding cursor argument.
+      The editor might decline to update its cursor if the text content of the
+      document has changed, or the cursor has moved since the request was made.
+      Returns (true, nil) if the cursor was updated, and (false, string) with an
+      explanation string if it was not. Yields the current thread until the
+      editor replies.
+    code_samples:
+      - ScriptDocument-RequestSetSelectionAsync
+    parameters:
+      - name: cursorLine
+        type: int
+        default:
+        summary: ''
+      - name: cursorCharacter
+        type: int
+        default:
+        summary: ''
+      - name: anchorLine
+        type: int?
+        default: nil
+        summary: ''
+      - name: anchorCharacter
+        type: int?
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: ScriptDocument.SelectionChanged
+    summary: |
+      Fires when the ScriptDocument changes, including immediately after a text
+      change.
+    description: |
+      Fires when the ScriptDocument changes, including immediately after a text
+      change.
+    code_samples:
+      - ScriptDocument-SelectionChanged-GetLine
+    parameters:
+      - name: positionLine
+        type: int64
+        default:
+        summary: ''
+      - name: positionCharacter
+        type: int64
+        default:
+        summary: ''
+      - name: anchorLine
+        type: int64
+        default:
+        summary: ''
+      - name: anchorCharacter
+        type: int64
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptDocument.ViewportChanged
+    summary: |
+      Fires when the displayed line numbers in the editor change.
+    description: |
+      Fires when the displayed line numbers in the editor change. See
+      `Class.ScriptDocument.GetViewport` for details.
+    code_samples:
+      - ScriptDocument-ViewportChanged
+    parameters:
+      - name: startLine
+        type: int64
+        default:
+        summary: ''
+      - name: endLine
+        type: int64
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

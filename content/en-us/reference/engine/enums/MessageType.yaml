@@ -1,0 +1,36 @@
+name: MessageType
+type: enum
+summary: |
+  Message category and severity level.
+description: |
+  A message can be a simple diagnostic or a sign of a system instability or
+  failure. The channel that the message appears in indicates its severity. The
+  MessageType indicates which channel the message displays in.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: MessageOutput
+    summary: |
+      The message is from the standard output channel.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: MessageInfo
+    summary: |
+      The message is from the information channel.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: MessageWarning
+    summary: |
+      The message is from the warning channel.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: MessageError
+    summary: |
+      The message is from the error channel.
+    value: 3
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,36 @@
+name: InstanceAdornment
+type: class
+category:
+memory_category: Instances
+summary: |
+  A base class for all objects that adorn `Class.Instance` classes.
+description: ''
+code_samples:
+inherits:
+  - GuiBase3d
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: InstanceAdornment.Adornee
+    summary: |
+      Which `Class.Instance` to adorn.
+    description: |
+      Since adornments are usually parented to some GUI, this property
+      determines which `Class.Instance` they are adorning. They render in 3D
+      positioned relative to the "adornee", not to their parent.
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

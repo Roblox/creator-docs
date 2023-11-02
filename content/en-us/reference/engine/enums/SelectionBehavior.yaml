@@ -1,0 +1,26 @@
+name: SelectionBehavior
+type: enum
+summary: |
+  Customization options for gamepad selection when
+  `Class.GuiBase2d.SelectionGroup` is true.
+description: |
+  Customization options for gamepad selection when
+  `Class.GuiBase2d.SelectionGroup` is true.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Escape
+    value: 0
+    summary: |
+      Prioritizes GuiObjects within the same SelectionGroup but allows the
+      selection to move to other outside GuiObjects if no suitable button is
+      found.
+    tags: []
+    deprecation_message: ''
+  - name: Stop
+    value: 1
+    summary: |
+      Constrains gamepad selection to the SelectionGroup.
+    tags: []
+    deprecation_message: ''

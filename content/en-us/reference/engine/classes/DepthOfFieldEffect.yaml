@@ -1,0 +1,115 @@
+name: DepthOfFieldEffect
+type: class
+category:
+memory_category: Instances
+summary: |
+  Simulates a camera lens by blurring parts of a scene not in focus.
+description: |
+  The **DepthOfFieldEffect** simulates a camera lens by blurring parts of a
+  scene not in focus. Distant objects can be blurred or this effect can be used
+  to focus on specific parts of a scene, like an item in an in-game shop.
+
+  Like other post-processing effects, **DepthOfFieldEffect** will only work
+  while `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting`
+  or `Class.Workspace.CurrentCamera`. Also, it may render differently on low-end
+  devices or depending on your Studio settings (see the **Quality Level**
+  settings in **Rendering** &rarr; **Performance**).
+
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+
+  <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+code_samples:
+inherits:
+  - PostEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: DepthOfFieldEffect.FarIntensity
+    summary: |
+      Intensity of the far field blur.
+    description: |
+      Intensity of the far field blur, moving out in distance from the
+      `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` point plus
+      `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
+
+      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DepthOfFieldEffect.FocusDistance
+    summary: |
+      Distance away from the camera where objects are in focus.
+    description: |
+      Controls the distance away from the camera (in studs) where objects are in
+      focus.
+
+      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DepthOfFieldEffect.InFocusRadius
+    summary: |
+      Controls the distance away from the
+      `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` where no blur is
+      applied.
+    description: |
+      Controls the distance away from the
+      `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` (on both sides)
+      where no blur is applied. Measured in studs.
+
+      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DepthOfFieldEffect.NearIntensity
+    summary: |
+      Intensity of the near field blur.
+    description: |
+      Intensity of the near field blur, between the camera and the
+      `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` point minus
+      `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
+
+      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

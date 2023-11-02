@@ -1,0 +1,236 @@
+name: Fire
+type: class
+category: Effects
+memory_category: Instances
+summary: |
+  A particle emitter with the visual aesthetic of fire.
+description: |
+  **Fire** is one of several premade particle-emitting classes. Like other
+  particle emitting objects, a Fire emits particles when parented to a
+  `Class.BasePart` an `Class.Attachment` and while `Class.Fire.Enabled|Enabled`.
+  This object is useful to create a quick visual effect in a pinch; for more
+  detailed work it is preferable to use a `Class.ParticleEmitter` instead.
+
+  Fire particles emit from the center of `Class.BasePart` to which they are
+  parented. The particles are emit toward the top (+Y) direction; however, a
+  negative `Class.Fire.Heat` may be used to emit in the bottom (-Y) direction.
+  Using an `Class.Attachment` as a Parent instead allows the emission
+  position/direction to be modified by changing the `Class.Attachment.CFrame` or
+  related properties.
+
+  When `Class.Fire.Enabled|Enabled` is off, existing particles continue to
+  render until they expire. However, if the Fire's
+  `Class.Instance.Parent|Parent` is set to nil all existing particles
+  immediately disappear, similar to the behavior of
+  `Class.ParticleEmitter:Clear()`. It is possible to set the
+  `Class.Instance.Parent|Parent` to nil and back to the exact original object to
+  achieve the same effect. If immediate disappearance is not desired, try moving
+  the Fire's parent to some far away position, then
+  `Class.Instance:Destroy()|Destroy` the Fire after a few seconds using
+  `Class.Debris:AddItem()`. This will give the existing particles time to
+  expire.
+
+  Fire objects emit no light on their own. To help create a cohesive environment
+  around a burning object, try adding a `Class.PointLight` with an orange
+  `Class.Light.Color|Color`. This can help your fire appear more realistic.
+
+  Fire object consist of two emitters. Both of these are affected in various
+  ways by the Fire's `Class.Fire.Size|Size`, `Class.Fire.Heat|Heat`,
+  `Class.Fire.Color|Color` and `Class.Fire.SecondaryColor|SecondaryColor`. The
+  particles emit from the smaller, secondary emitter have a significantly longer
+  lifetime (and rise farther) than those emit by the primary emitter. In the
+  video to the right, you can see the two emitters with the distinct colors.
+
+  Unlike actual flames, the Fire object **does not spread on its own**. If you
+  notice this behavior in your game, it is happening because of a
+  `Class.Script`.
+code_samples:
+  - Lighting-Torches
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Fire.Color
+    summary: |
+      Determines the color of the primary (outer) flame particles.
+    description: |
+      The Color property determines the color of the larger particles emit by a
+      `Class.Fire` object. It is essentially the color of the outer portion of
+      the flame.
+
+      In general, the cooler flames are on the outside of a fire. Therefore,
+      fire looks more realistic if the outer portions are red or orange-yellow.
+      A fire that is bright all throughout doesn't look very realistic, so avoid
+      setting this property to yellow. Try adding a `Class.PointLight` with the
+      `Class.PointLight.Color` as a sibling to the `Class.Fire`. This will
+      provide light to the surrounding environment and make it feel more
+      cohesive with the flame particles.
+    code_samples:
+      - Lighting-Torches
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Fire.Enabled
+    summary: |
+      Determines whether flame particles are emit.
+    description: |
+      The Enabled property, much like `Class.ParticleEmitter.Enabled`,
+      determines whether flame particles are emit. Any particles already emit
+      will continue to render until their lifetime expires. This property is
+      useful for keeping pre-made fire effects off until they are needed later.
+      Since flame particles are destroyed when the `Class.Fire` object's
+      `Class.Instance.Parent` is set to nil, this property is useful in allowing
+      existing particles the opportunity to expire before destroying the Fire
+      object altogether. See the function below.
+
+      ```
+      local Debris = game:GetService("Debris")
+      local part = script.Parent
+      function douseFlames(fire)
+      	fire.Enabled = false -- No more new particles
+      	Debris:AddItem(fire, 2) -- Remove the object after a delay (after existing particles have expired)
+      end
+      douseFlames(part.Fire)
+      ```
+    code_samples:
+      - Toggle-Fire-Effect
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Fire.Heat
+    summary: |
+      Determines the velocity at which particles are emit.
+    description: |
+      The Heat property determines how fast particles are emit from the
+      `Class.Fire` object. It is limited to the range [-25, 25]. Positive values
+      are in the top (+Y) direction of the parent `Class.BasePart` or
+      `Class.Attachment`. It also affects the
+      `Class.ParticleEmitter.Acceleration` of the inner particles. Below, you
+      can see the effects of higher heat on the velocity/acceleration of the
+      flame particles (left has Heat = 9, right has Heat = 18).
+    code_samples:
+      - Lighting-Torches
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Fire.SecondaryColor
+    summary: |
+      Determines the color of the of the secondary (inner) flame particles.
+    description: |
+      The SecondaryColor property determines the color of the smaller particles
+      emit by a `Class.Fire` object. It is essentially the color of the inner
+      portion of the flame. Below, you can see the SecondaryColor of the flame
+      is set to white to differentiate with the larger, outer particles which
+      have `Class.Fire.Color` set to blue. It should be noted that the inner
+      particles use a `Class.ParticleEmitter.LightEmission` of 1, so darker
+      colors will instead cause the particles to appear transparent (and
+      therefore black will stop rendering inner particles altogether).
+    code_samples:
+      - Lighting-Torches
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Fire.Size
+    summary: |
+      Determines the size of the flame particles.
+    description: |
+      This property determines the size of the flame particles. It must be in
+      the range of [2, 30]. Unlike `Class.ParticleEmitter.Size`, the actual size
+      of the flames will not match 1-to-1 with the equivalent size in studs; it
+      is somewhat smaller.
+
+      ![Two torches - the left has Size = 5 and the right has Size = 10](/assets/legacy/Fire_Size.png)
+
+      To make your environment more cohesive, try adding a `Class.PointLight` as
+      a sibling to the `Class.Fire` object. Set the
+      `Class.PointLight.Brightness` and `Class.PointLight.Range` proportional to
+      this property so that larger flames produce more light.
+    code_samples:
+      - Lighting-Torches
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Fire.TimeScale
+    summary: |
+      Value between 0-1 that controls the speed of the particle effect.
+    description: |
+      A value between 0-1 than controls the speed of the particle effect. At 1
+      it runs at normal speed, at 0.5 it runs at half speed, and at 0 it freezes
+      time.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Fire.size
+    summary: ''
+    description: ''
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.Fire.Size` which should be
+      used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

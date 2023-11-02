@@ -1,0 +1,23 @@
+name: WorldModel
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  Provides some physics features to a `Class.ViewportFrame`.
+description: |
+  The WorldModel provides some physics features to a `Class.ViewportFrame`.
+
+  More specifically, you can make a WorldModel a child of a ViewportFrame, and
+  then parent geometry to the WorldModel. This will then allow you to use
+  raycasts in the ViewportFrame through the WorldModel. Furthermore you can put
+  `Class.Humanoid` characters in the WorldModel and their joints will be set-up
+  correctly, and you can animate them.
+code_samples:
+inherits:
+  - WorldRoot
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

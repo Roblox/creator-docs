@@ -1,0 +1,28 @@
+name: DialogPurpose
+type: enum
+summary: |
+  The DialogPurpose enum is used to set the icon of a `Class.Dialog`.
+description: |
+  The DialogPurpose enum is used to set the icon of a `Class.Dialog`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Quest
+    summary: |
+      Shows an exclamation point ('''!''').
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Help
+    summary: |
+      Shows a question mark ('''?''').
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Shop
+    summary: |
+      Shows a dollar sign ('''$''').
+    value: 2
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,131 @@
+name: PolicyService
+type: class
+category:
+memory_category: Instances
+summary: |
+  Helps you build gameplay components for compliance.
+description: |
+  Important for getting your game to all audiences, `Class.PolicyService` helps
+  you build gameplay components that can be made compliant with various national
+  regulations for multiple countries. This service is used to query information
+  regarding policy compliance for players around the world based on age range,
+  location, and platform type.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: PolicyService:GetPolicyInfoForPlayerAsync
+    summary: |
+      Returns policy information about a player which is based on geolocation,
+      age group, and platform.
+    description: |
+      Returns policy information about a player which is based on geolocation,
+      age group, and platform. The structure of the returned dictionary is as
+      follows:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Required for</th>
+      <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>AreAdsAllowed</td>
+      <td>Boolean</td>
+      <td>Any experience that includes immersive ads</td>
+      <td>When true, the player might see immersive ads within an experience.</td>
+      </tr>
+      <tr>
+      <td>ArePaidRandomItemsRestricted</td>
+      <td>Boolean</td>
+      <td>Any experience that has paid random items</td>
+      <td>When true, the player cannot interact with paid (via in-experience currency or Robux) random item generators.</td>
+      </tr>
+      <tr>
+      <td>AllowedExternalLinkReferences</td>
+      <td>Array of strings</td>
+      <td>Any experience that references external links</td>
+      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", and "YouTube".</td>
+      </tr>
+      <tr>
+      <td>IsPaidItemTradingAllowed</td>
+      <td>Boolean</td>
+      <td>Any experience that allows users to purchase virtual items that they can trade with other players</td>
+      <td>When true, the player can trade virtual items that they purchased with in-experience currency or Robux.</td>
+      </tr>
+      <tr>
+      <td>IsSubjectToChinaPolicies</td>
+      <td>Boolean</td>
+      <td>Any experience that is available in China</td>
+      <td>When true, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
+      </tr>
+       	</tbody>
+      </table>
+
+      #### Exceptions
+
+      Like any async call, this needs to be wrapped in a `pcall` and
+      error-handled properly. A full list of possible error messages and their
+      reasons is as below:
+
+      <table>
+      <thead>
+      <tr>
+      <th>Message</th>
+      <th>Reason</th>
+      </tr>
+      </thead>
+      <tbody>
+       <tr>
+      <td>Instance was not a player</td>
+      <td>Dev's usage - The parameter is not a Player instance</td>
+      </tr>
+       <tr>
+      <td>Players not found</td>
+        <td>Internal error - Players object missing</td>
+      </tr>
+       <tr>
+      <td>This method cannot be called on the client for a non-local player</td>
+      <td>Dev's usage - This method cannot be called on the client for a non-local player</td>
+      </tr>
+      <tr>
+      <td>GetPolicyInfoForPlayerAsync is called too many times</td>
+      <td>Internal error - GetPolicyInfoForPlayerAsync is called more than 100(current setting) times before http response coming back</td>
+      </tr>
+       	</tbody>
+      </table>
+
+      See also:
+
+      - `Class.LocalizationService:GetCountryRegionForPlayerAsync()`, returns
+        country/region code string according to player's client IP geolocation
+    code_samples:
+      - getting-policy-information-for-a-player
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The Player that you are getting policy information for.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing information about the policy information of a
+          given player.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

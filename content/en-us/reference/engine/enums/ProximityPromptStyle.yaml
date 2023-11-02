@@ -1,0 +1,22 @@
+name: ProximityPromptStyle
+type: enum
+summary: ''
+description: ''
+code_samples:
+  - generating-a-custom-proximity-prompt
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default prompt UI style.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    summary: |
+      Custom prompt UI style as set by the developer. For more information, see
+      `Class.ProximityPrompt.Style`.
+    value: 1
+    tags: []
+    deprecation_message: ''

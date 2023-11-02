@@ -1,0 +1,206 @@
+name: TextChatMessage
+type: class
+category:
+memory_category: Instances
+summary: |
+  Immutable data object representing a text chat message.
+description: |
+  Immutable data object representing a text chat message.
+
+  To learn more about using TextChatMessages, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: TextChatMessage.BubbleChatMessageProperties
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BubbleChatMessageProperties
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatMessage.MessageId
+    summary: |
+      A unique identifier for the `Class.TextChatMessage`.
+    description: |
+      A unique identifier for the `Class.TextChatMessage`.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.Metadata
+    summary: |
+      A general purpose field for storing miscellaneous data about the
+      `Class.TextChatMessage`.
+    description: |
+      A general purpose field for storing miscellaneous data about the
+      `Class.TextChatMessage`. The second argument of
+      `Class.TextChannel:SendAsync()` and
+      `Class.TextChannel:DisplaySystemMessage()` is used to populate this field.
+
+      If `Class.TextChatService.CreateDefaultTextChannels` is `true`, default
+      system messages sent to the system channel have unique
+      `Class.TextChatMessage.Metadata` values.
+
+      Use this field to apply additional formatting for special messages within
+      `Class.TextChatService.OnIncomingMessage` and
+      `Class.TextChannel.OnIncomingMessage` callbacks.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.PrefixText
+    summary: |
+      A prefix to add to a user's message.
+    description: |
+      A prefix to add to a user's message. This supports Rich Text, so
+      developers can set custom properties for this text to support chat tags.
+
+      By default, `Class.TextChatMessage.PrefixText` is the name of the
+      `Class.TextSource`, which is the `Class.Player.DisplayName` of the user
+      associated with the `Class.TextSource` via `Class.TextSource.UserId`.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.Status
+    summary: |
+      Indicates the status of the `Class.TextChatMessage`.
+    description: |
+      Indicates the status of the `Class.TextChatMessage`.
+    code_samples: []
+    type: TextChatMessageStatus
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.Text
+    summary: |
+      The filtered text message for the user.
+    description: |
+      The filtered text message for the user. Different users may receive
+      different strings from this property based on filtering rules. It can be
+      an empty string.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.TextChannel
+    summary: |
+      A reference to the origin `Class.TextChannel`.
+    description: |
+      A reference to the origin `Class.TextChannel`.
+    code_samples: []
+    type: TextChannel
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatMessage.TextSource
+    summary: |
+      A reference to the origin `Class.TextSource`.
+    description: |
+      A reference to the origin `Class.TextSource`.
+    code_samples: []
+    type: TextSource
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatMessage.Timestamp
+    summary: |
+      A timestamp of when the message was originally sent.
+    description: |
+      A timestamp of when the message was originally sent.
+    code_samples: []
+    type: DateTime
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessage.Translation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

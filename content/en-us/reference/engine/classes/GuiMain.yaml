@@ -1,0 +1,20 @@
+name: GuiMain
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  The original name of the `Class.ScreenGui`. This class functions identically
+  to the ScreenGui, and should not be used.
+code_samples:
+inherits:
+  - ScreenGui
+tags:
+  - Deprecated
+deprecation_message: |
+  This deprecated class is the original name of the `Class.ScreenGui`. It
+  functions identically to the ScreenGui, and should not be used.
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,13 @@
+name: TrackerPromptEvent
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: LODCameraRecommendDisable
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,37 @@
+name: LoadCharacterLayeredClothing
+type: enum
+summary: |
+  Indicates whether characters spawning into an experience will have layered
+  clothing accessories equipped on them.
+description: |
+  Indicates whether characters spawning into an experience will have layered
+  clothing accessories equipped on them (Although
+  `Enum.MeshPartHeadsAndAccessories` also need to be enabled). This is set in
+  `Class.StarterPlayer.LoadCharacterLayeredClothing`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The behavior of the default setting is not constant. It can mean Disabled
+      or Enabled depending on what the global back-end flag settings are
+      currently.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      This means layered clothing will not be equipped on characters in the
+      experience.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    summary: |
+      This means layered clothing will be equipped on characters in the
+      experience (Although `Enum.MeshPartHeadsAndAccessories` also need to be
+      enabled for the experience).
+    value: 2
+    tags: []
+    deprecation_message: ''

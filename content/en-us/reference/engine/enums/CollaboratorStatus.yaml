@@ -1,0 +1,28 @@
+name: CollaboratorStatus
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Editing3D
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Scripting
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PrivateScripting
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

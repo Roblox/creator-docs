@@ -1,0 +1,84 @@
+name: UITextSizeConstraint
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Ensures that the size of text rendered by certain `Class.GuiObject` classes
+  lies within the range described by
+  `Class.UITextSizeConstraint.MaxTextSize|MaxTextSize` and
+  `Class.UITextSizeConstraint.MinTextSize|MinTextSize`.
+description: |
+  A **UITextSizeConstraint** ensures that the size of text rendered by certain
+  `Class.GuiObject` classes (`Class.TextLabel`, `Class.TextButton`, or
+  `Class.TextBox`) lies within the range described by
+  `Class.UITextSizeConstraint.MaxTextSize|MaxTextSize` and
+  `Class.UITextSizeConstraint.MinTextSize|MinTextSize`. It is meant to be used
+  alongside `Class.TextLabel.TextScaled`, which automatically scales text to
+  fill its containing object. Like other UI constraints, it is applied when
+  parented to the object to be constrained.
+
+  It's recommended that no values lower than 9 be used for
+  `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property, otherwise text
+  may not be readable to most users.
+code_samples:
+inherits:
+  - UIConstraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: UITextSizeConstraint.MaxTextSize
+    summary: |
+      The largest size in pixels the font is allowed to be.
+    description: |
+      This property indicates the largest size in pixels the font is allowed to
+      be. It defaults to 1000 pixels and much be set larger than or equal to the
+      `Class.UITextSizeConstraint|UITextSizeConstraint's`
+      `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property.
+
+      If the affected `Class.GuiObject` has its
+      `Class.TextLabel.TextScaled|TextScaled` property set to true the text size
+      constrained by this property will scale dynamically with the container's
+      size. It will scale upwards with the GuiObject's size until the max size
+      is reached, at which point it will stay constant if the UI element
+      continues to grow.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UITextSizeConstraint.MinTextSize
+    summary: |
+      The smallest size in pixels the font is allowed to be.
+    description: |
+      This property indicated the smallest size in pixels the font is allowed to
+      be. This value defaults to 1 pixel and must be set less than or equal to
+      `Class.UITextSizeConstraint.MaxTextSize`.
+
+      If the affected `Class.GuiObject` has its
+      `Class.TextLabel.TextScaled|TextScaled` property set to true the text size
+      constrained by this property will scale dynamically with the container's
+      size. It will scale downwards with the GuiObject's size until the min size
+      is reached, at which point it will stay constant if the UI element
+      continues to shrink.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

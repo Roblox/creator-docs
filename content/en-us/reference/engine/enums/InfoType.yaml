@@ -1,0 +1,38 @@
+name: InfoType
+type: enum
+summary: ''
+description: |
+  Used to represent the possible information formats returnable by
+  `Class.MarketplaceService:GetProductInfo()`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Asset
+    summary: |
+      Asset format type - the product is an asset.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Product
+    summary: |
+      Product format type - the product is a produce (e.g. Developer product).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: GamePass
+    summary: |
+      GamePass format type - the product is a GamePass.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Subscription
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Bundle
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,28 @@
+name: ReservedHighlightId
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Standard
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Active
+    value: 131072
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Hover
+    value: 262144
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Selection
+    value: 524288
+    summary: ''
+    tags: []
+    deprecation_message: ''

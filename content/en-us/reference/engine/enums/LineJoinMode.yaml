@@ -1,0 +1,35 @@
+name: LineJoinMode
+type: enum
+summary: |
+  This enum is used by `Class.UIStroke.LineJoinMode` to determine how corners
+  are interpreted.
+description: |
+  This enum is used by `Class.UIStroke.LineJoinMode` to determine how corners
+  are interpreted.
+
+  See also:
+
+  For a more detailed walkthrough of the UIStroke object, take a look at the
+  Applying Strokes article.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Round
+    summary: |
+      The corners are rounded (see image above).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Bevel
+    summary: |
+      The corners are beveled (see image above).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Miter
+    summary: |
+      The corners are mitered (see image above).
+    value: 2
+    tags: []
+    deprecation_message: ''

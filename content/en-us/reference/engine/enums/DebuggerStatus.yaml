@@ -1,0 +1,64 @@
+name: DebuggerStatus
+type: enum
+summary: |
+  Result of a debugger request.
+description: |
+  Result of a debugger request.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: |
+      Request has completed successfully.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    summary: |
+      Timed out while waiting for response.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ConnectionLost
+    summary: |
+      Connection to the debugger was lost.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: InvalidResponse
+    summary: |
+      Failed to parse response.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: InternalError
+    summary: |
+      Exception encountered while processing response.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: InvalidState
+    summary: |
+      The request was not appropriate for the current debugger state.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: RpcError
+    summary: |
+      Response was an error.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: InvalidArgument
+    summary: |
+      One of the request arguments was invalid.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: ConnectionClosed
+    summary: |
+      Connection closed while waiting for response.
+    value: 8
+    tags: []
+    deprecation_message: ''

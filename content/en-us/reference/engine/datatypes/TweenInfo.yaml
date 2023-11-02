@@ -1,0 +1,104 @@
+name: TweenInfo
+type: datatype
+summary: |
+  Stores parameters for `Class.Tween|Tweens`.
+description: |
+  The `Datatype.TweenInfo` data type stores parameters for
+  `Class.TweenService:Create()` to specify the behavior of the tween. The
+  properties of a `Datatype.TweenInfo` cannot be written to after its creation.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: TweenInfo.new
+    summary: Creates a new `Datatype.TweenInfo` from the provided parameters.
+    description: Creates a new `Datatype.TweenInfo` from the provided parameters.
+    parameters:
+      - name: time
+        type: number
+        default: 1
+        summary: ''
+      - name: easingStyle
+        type: EasingStyle
+        default: Enum.EasingStyle.Quad
+        summary: ''
+      - name: easingDirection
+        type: EasingDirection
+        default: Enum.EasingDirection.Out
+        summary: ''
+      - name: repeatCount
+        type: number
+        default: 0
+        summary: ''
+      - name: reverses
+        type: bool
+        default: false
+        summary: ''
+      - name: delayTime
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: TweenInfo.EasingDirection
+    type: EasingDirection
+    summary: |
+      The direction in which the EasingStyle executes.
+    description: |
+      The direction in which the EasingStyle executes.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: TweenInfo.Time
+    type: number
+    summary: |
+      The amount of time the tween takes in seconds.
+    description: |
+      The amount of time the tween takes in seconds.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: TweenInfo.DelayTime
+    type: number
+    summary: |
+      The amount of time that elapses before tween starts in seconds.
+    description: |
+      The amount of time that elapses before tween starts in seconds.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: TweenInfo.RepeatCount
+    type: number
+    summary: |
+      The number of times the tween repeats after tweening once.
+    description: |
+      The number of times the tween repeats after tweening once.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: TweenInfo.EasingStyle
+    type: EasingStyle
+    summary: |
+      The style in which the tween executes.
+    description: |
+      The style in which the tween executes.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: TweenInfo.Reverses
+    type: bool
+    summary: |
+      Whether or not the tween does the reverse tween once the initial tween
+      completes.
+    description: |
+      Whether or not the tween does the reverse tween once the initial tween
+      completes.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

@@ -1,0 +1,151 @@
+name: BaseScript
+type: class
+category:
+memory_category: Script
+summary: |
+  The base class for all script objects which run automatically.
+description: |
+  The base class for all script objects which run automatically.
+code_samples:
+inherits:
+  - LuaSourceContainer
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: BaseScript.Disabled
+    summary: |
+      Determines whether a `Class.BaseScript` will run or not.
+    description: |
+      Determines whether a `Class.BaseScript` will run or not.
+
+      If a script is disabled by changing this property to true while the script
+      is running, the current running thread of the script will be terminated.
+
+      If this property is changed from true to false, the script will run again.
+      This means that `Class.BaseScript.Disabled|Disabled` can be toggled to
+      restart a script:
+
+      ```lua
+      scriptObject.Disabled = true
+      scriptObject.Disabled = false
+      ```
+
+      Note that the above code snippet cannot be used within the script itself,
+      since disabling the script from within itself will terminate the thread
+      and the line to reenable it will never execute.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseScript.Enabled
+    summary: |
+      Determines whether a `Class.BaseScript` will run or not.
+    description: |
+      Determines whether a `Class.BaseScript` will run or not. This should be
+      used in favor of the similar but opposite
+      `Class.BaseScript.Disabled|Disabled` property.
+
+      If a script is disabled by changing this property to false while the
+      script is running, the current running thread of the script will be
+      terminated.
+
+      If this property is changed from false to true, the script will run again.
+      This means that `Class.BaseScript.Enabled|Enabled` can be toggled to
+      restart a script:
+
+      ```lua
+      scriptObject.Enabled = false
+      scriptObject.Enabled = true
+      ```
+
+      Note that the above code snippet cannot be used within the script itself,
+      since disabling the script from within itself will terminate the thread
+      and the line to reenable it will never execute.
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: BaseScript.LinkedSource
+    summary: |
+      The content ID of an uploaded script. When set binds the uploaded code to
+      the script's `Class.Script.Source`.
+    description: |
+      The content ID of an uploaded script. When set binds the uploaded code to
+      the script's `Class.Script.Source`.
+
+      By default, this property is set to _'[Embedded]'_. This means the source
+      of the script is not linked to an upload script and is instead written in
+      the script.
+
+      ```lua
+      script.LinkedSource = "http://www.roblox.com/asset/?id=1014476" -- link source
+      ```
+
+      Developers should remove a linked source via the properties window, rather
+      than setting the property to _'[Embedded]'_.
+
+      For the LinkedSource property for `Class.ModuleScript`s, please see
+      `Class.ModuleScript.LinkedSource`.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: |
+      This property is now replaced by
+      [packages](../../../projects/assets/packages.md) which has greater
+      functionality.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseScript.RunContext
+    summary: |
+      Determines the context under which the script will run.
+    description: |
+      Determines the context under which the script will run.
+
+      When using the Legacy RunContext scripts will only run when parented to
+      certain containers dependent on whether they are a `Class.Script` or
+      `Class.LocalScript`.
+
+      If RunContext is assigned while the script is running any threads created
+      by the script will be terminated and the script will start running under
+      the new context if possible.
+
+      Note, RunContext cannot be used from a LocalScript.
+    code_samples: []
+    type: RunContext
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,18 @@
+name: RotationType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: MovementRelative
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: CameraRelative
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''

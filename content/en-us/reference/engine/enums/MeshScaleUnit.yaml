@@ -1,0 +1,38 @@
+name: MeshScaleUnit
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Stud
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Meter
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CM
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: MM
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Foot
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Inch
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,29 @@
+name: ThumbnailType
+type: enum
+summary: ''
+description: |
+  Describes the type of user thumbnail that should be returned by
+  GetUserThumbnailAsync.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: HeadShot
+    summary: |
+      The returned thumbnail shows just the headshot (head and up) of the user's
+      avatar.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: AvatarBust
+    summary: |
+      The returned thumbnail shows the bust (chest up) of the user's avatar.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AvatarThumbnail
+    summary: |
+      The returned thumbnail shows the entire body of the user's avatar.
+    value: 2
+    tags: []
+    deprecation_message: ''

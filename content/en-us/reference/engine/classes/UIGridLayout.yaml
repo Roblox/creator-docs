@@ -1,0 +1,182 @@
+name: UIGridLayout
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Positions sibling UI elements by filling rows using the space of the parent UI
+  element.
+description: |
+  A UIGridLayout (not to be confused with the abstract `Class.UIGridStyleLayout`
+  from which this class inherits) lays out sibling UI elements in multiple rows
+  within the parent UI element, adding elements to a row one-by-one until the
+  next element would not fit. It then continues adding elements in the next row.
+  A UIGridLayout will take UI elements' `Class.GuiObject.Size` and
+  `Class.GuiObject.Position` under control. While under control, these UI
+  elements' properties will not be editable in the Properties window.
+
+  By default, it lays out elements in **ascending** order where lower values
+  take more priority over higher values, but this can be changed to use
+  elements' names by changing `Class.UIListLayout.SortOrder` to **Name**. A
+  UIListLayout will automatically re-layout elements when elements are
+  added/removed, or if a relevant property changes:
+  `Class.GuiObject.LayoutOrder` or `Class.Instance.Name`. This can be triggered
+  manually by calling `Class.UIGridStyleLayout:ApplyLayout()`, though this is
+  typically not necessary.
+
+  The actual cell sizes are the same for all cells. A UIGridLayout will respect
+  UI constraints placed with it, such as `Class.UISizeConstraint` and
+  `Class.UIAspectRatioConstraint`. Elements in the layout can span multiple
+  cells if they have a `Class.UISizeConstraint` with a
+  `Class.UISizeConstraint.MinSize|MinSize` set higher than the
+  `Class.UIGridLayout.CellSize|CellSize`. It is possible to limit the number of
+  elements per row using `Class.UIGridLayout.FillDirectionMaxCells`. If set to
+  1, it is possible to create a single row of elements (as each element would be
+  positioned in its own row).
+
+  This layout is appropriate when line breaks are OK after arbitrary cells. For
+  example, a set of inventory spaces is a good use of this layout. If building a
+  table of values in which a line break is not appropriate in the middle of
+  tabular data, it might be a better idea to use a `Class.UITableLayout`
+  instead.
+code_samples:
+inherits:
+  - UIGridStyleLayout
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIGridLayout.AbsoluteCellCount
+    summary: |
+      The number of elements in the grid.
+    description: |
+      Measures the maximum number of elements in each direction. Read-only.
+    code_samples:
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: UIGridLayout.AbsoluteCellSize
+    summary: |
+      The absolute size of each element in the grid.
+    description: |
+      Provides the size of each element of the grid in offsets. Read-only. Not
+      affected by any `Class.UIScale`, `Class.UISizeConstraint` or
+      `Class.UIAspectRatioConstraint` applied to any individual element in the
+      grid.
+    code_samples:
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: UIGridLayout.CellPadding
+    summary: |
+      Determines how much space there is between elements in the grid.
+    description: |
+      (default {0, 5},{0, 5}) Determines how much space there is between
+      elements in the grid. As with all UDim2s, this space can be both in a
+      percentage of the parent container's size and raw pixel offset.
+    code_samples:
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridLayout.CellSize
+    summary: |
+      Determines the size of each element in the grid.
+    description: |
+      (default {0, 100},{0, 100}) Determines the size of each element in the
+      grid. As with all UDim2s, this size can be both in a percentage of the
+      parent container's size and raw pixel offset. If the element being size
+      has a `Class.UIConstraint` then the size will be determined by the
+      constraint, not the grid.
+    code_samples:
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridLayout.FillDirectionMaxCells
+    summary: |
+      Determines the maximum number of cells that may be used in a row or column
+      before before the next one is started.
+    description: |
+      FillDirectionMaxCells determines the number of cells in the grid that can
+      be used before continuing on the next row/column (whether this is a row or
+      column is dependent on `Class.UIGridStyleLayout.FillDirection`). This
+      value must be non-negative.
+
+      - If set to zero, there is no maximum number of cells that may appear in
+        one row/column except for how many can fit within the parent UI element.
+      - If set to one, this creates a list similar to those created by
+        `Class.UIListLayout`.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridLayout.StartCorner
+    summary: |
+      Determines from which corner the grid starts laying out UI elements.
+    description: |
+      StartCorner (`Enum.StartCorner`) determines from which corner the grid
+      starts laying out UI elements. The grid continues in the
+      `Class.UIGridStyleLayout.FillDirection`, filling elements one by one until
+      `Class.UIGridLayout.FIllDirectionMaxCells` cells have been laid out in
+      that row/column or if all the parent UI element's space has been occupied
+      by previous cells.
+
+      Above, the potion is the first `Class.ImageLabel`, followed by the gem and
+      the sword. The UIGridLayout is using a `Enum.StartCorner` of BottomRight.
+      The `Class.UIGridStyleLayout.FillDirection` is Horizontal.
+    code_samples:
+    type: StartCorner
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

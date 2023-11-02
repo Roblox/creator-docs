@@ -1,0 +1,46 @@
+name: NormalId
+type: enum
+summary: |
+  The NormalId Enum sets which side/face of a Part is used.
+description: |
+  The NormalId Enum sets which side/face of a Part is used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Right
+    summary: |
+      The right face of a Part.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Top
+    summary: |
+      The top face of a Part.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Back
+    summary: |
+      The back face of a Part.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      The left face of a Part.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Bottom
+    summary: |
+      The bottom face of a Part.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Front
+    summary: |
+      The front face of a Part.
+    value: 5
+    tags: []
+    deprecation_message: ''

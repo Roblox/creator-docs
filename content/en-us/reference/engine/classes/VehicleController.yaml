@@ -1,0 +1,17 @@
+name: VehicleController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  A VehicleController is an object responsible for translating
+  `Enum.PlayerActions` to movements with a `Class.VehicleSeat`.
+code_samples:
+inherits:
+  - Controller
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

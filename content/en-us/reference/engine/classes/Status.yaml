@@ -1,0 +1,27 @@
+name: Status
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  An unfinished object which offers no functionality to developers.
+description: |
+  Used as a storage for custom Humanoid statuses. This object would've been
+  officially used in the RbxStatus library, but remains unfinished.
+code_samples:
+inherits:
+  - Model
+tags:
+  - NotCreatable
+  - Deprecated
+deprecation_message: |
+  Status is an unfinished object designed to store custom `Class.Humanoid`
+  statuses. It has been depreciated and should not be used by developers in new
+  work.
+
+  Developers looking to implement custom `Class.Humanoid` statuses should use
+  `Class.CollectionService` which provides a more flexible and robust system for
+  tagging objects.
+properties: []
+methods: []
+events: []
+callbacks: []

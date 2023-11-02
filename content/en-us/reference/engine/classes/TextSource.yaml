@@ -1,0 +1,74 @@
+name: TextSource
+type: class
+category:
+memory_category: Instances
+summary: |
+  Represents a speaker in a `Class.TextChannel`.
+description: |
+  Represents a speaker in a `Class.TextChannel`.
+
+  `Class.TextSource`s provide details on permissions users have in
+  `Class.TextChannel`s. There may be multiple `Class.TextSource`s for a user if
+  that user belongs in multiple `Class.TextChannel`s.
+
+  Create `Class.TextSource`s with `Class.TextChannel:AddUserAsync()`, which adds
+  a `Class.TextSource` to the `Class.TextChannel` as a descendant.
+
+  Remove `Class.TextSource`s by calling `Class.TextSource.Destroy`.
+
+  Name of a `Class.TextSource` is the `Class.Player.DisplayName` of the user
+  associated with the `Class.TextSource` via `Class.TextSource.UserId`.
+
+  To learn more about using TextSources, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: TextSource.CanSend
+    summary: |
+      Determines whether the user can send messages to the `Class.TextChannel`.
+    description: |
+      Determines whether the user can send messages to the `Class.TextChannel`.
+
+      If `false`, user can only read messages in the `Class.TextChannel`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextSource.UserId
+    summary: |
+      UserId of the user represented by the `Class.TextSource`.
+    description: |
+      UserId of the user represented by the `Class.TextSource`.
+
+      Support for non-user entities may be added in the future via passing in
+      negative numbers for this property.
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

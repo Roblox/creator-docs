@@ -1,0 +1,96 @@
+name: ObjectValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a reference to another instance.
+description: |
+  A ObjectValue is an object whose purpose is to store a single reference to
+  another object. If this object is duplicated within studio and the value
+  refers to an object also being copied, then the new ObjectValue will point to
+  the copied object instead of the original. Otherwise, the same value is kept.
+  Copying and pasting this object will clear the value field.
+
+  The value of this can be set within studio like other reference-type fields
+  (such as `Class.Model.PrimaryPart`): click the field within the Properties
+  window, then click the object you wish to set it to within the game view or
+  Explorer window. You can clear the field (set it to `nil`) by clicking the X
+  that appears when you click the field.
+
+  Like all "-Value" objects, this single value is stored in the Value property.
+  The Changed event for this (and other objects like it) will fire with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
+code_samples:
+  - ObjectValue-Example
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: ObjectValue.Value
+    summary: |
+      Holds a reference to an instance.
+    description: |
+      Holds a reference to an instance.
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: ObjectValue.Changed
+    summary: |
+      Fired whenever the `Class.ObjectValue.Value` is changed.
+    description: |
+      This event fires whenever the `Class.ObjectValue.Value` property is
+      changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      ObjectValue changes and to track the different values that it may change
+      to.
+
+      For instance, this even may be useful in games that rely on ObjectValues
+      to track game states and values, such as RPG targeting systems.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - ObjectValue-Changed1
+    parameters:
+      - name: value
+        type: Instance
+        default:
+        summary: |
+          The value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ObjectValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of `Class.ObjectValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

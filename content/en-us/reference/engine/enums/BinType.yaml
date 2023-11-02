@@ -1,0 +1,35 @@
+name: BinType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: |
+  This deprecated Enum is used by `Class.HopperBin` which has also been
+  deprecated. Neither should be used in new work.
+items:
+  - name: Script
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: GameTool
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Grab
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Clone
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Hammer
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

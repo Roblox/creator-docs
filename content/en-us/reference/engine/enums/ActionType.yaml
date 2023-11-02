@@ -1,0 +1,33 @@
+name: ActionType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Nothing
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Pause
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Lose
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Draw
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Win
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

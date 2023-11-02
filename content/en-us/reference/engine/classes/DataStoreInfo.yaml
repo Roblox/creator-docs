@@ -1,0 +1,88 @@
+name: DataStoreInfo
+type: class
+category:
+memory_category: Instances
+summary: |
+  Object describing data store information.
+description: |
+  Object describing data store information such as name, created time, and time
+  last updated. This object is a member of the `Class.DataStoreListingPages`
+  object returned by `Class.DataStoreService:ListDataStoresAsync()`.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreInfo.CreatedTime
+    summary: |
+      Indicates when the data store was created in milliseconds since epoch.
+    description: |
+      This property indicates when the data store was created in milliseconds
+      since epoch.
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreInfo.DataStoreName
+    summary: |
+      The name of the data store.
+    description: |
+      This property indicates the name of the data store. It is used as a unique
+      identifier to retrieve a data store instance with
+      `Class.DataStoreService:GetDataStore()`.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreInfo.UpdatedTime
+    summary: |
+      Indicates the last time the data store was updated in milliseconds since
+      epoch.
+    description: |
+      This property indicates the last time the data store was updated in
+      milliseconds since epoch.
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

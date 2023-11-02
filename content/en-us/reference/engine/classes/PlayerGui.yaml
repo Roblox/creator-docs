@@ -1,0 +1,174 @@
+name: PlayerGui
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  A container for a Player's currently rendered ScreenGuis.
+description: |
+  The PlayerGui object is a container that holds a `Class.Player`'s user GUI. If
+  a `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
+  inside of the ScreenGui will be drawn to the player's screen. Any
+  `Class.LocalScript` will run as soon as it is inserted into a PlayerGui.
+
+  When a player first joins a game, their PlayerGui is automatically inserted
+  into their `Class.Player` object. When the player's `Class.Player.Character`
+  spawns for the first time all of the contents of `Class.StarterGui` are
+  automatically copied into the player's PlayerGui. Note that if
+  `Class.Players.CharacterAutoLoads` is set to false the character will not
+  spawn and StarterGui contents will not be copied until
+  `Class.Player:LoadCharacter()` is called. If
+  `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to true then every time the
+  player's character respawns all of the contents of that player's PlayerGui is
+  cleared and replaced with the contents of StarterGui.
+
+  ```lua
+  -- Accessing PlayerGui from a LocalScript:
+  game:GetService('Players').LocalPlayer:WaitForChild('PlayerGui')
+  ```
+code_samples:
+inherits:
+  - BasePlayerGui
+tags:
+  - NotCreatable
+  - PlayerReplicated
+deprecation_message: ''
+properties:
+  - name: PlayerGui.CurrentScreenOrientation
+    summary: |
+      Describes the user's current screen orientation.
+    description: |
+      Describes the user's current screen orientation.
+    code_samples:
+    type: ScreenOrientation
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PlayerGui.ScreenOrientation
+    summary: |
+      Sets the preferred screen orientation mode for this user, if the user is
+      on a mobile device.
+    description: |
+      Sets the preferred screen orientation mode for this user, if the user is
+      on a mobile device.
+    code_samples:
+    type: ScreenOrientation
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PlayerGui.SelectionImageObject
+    summary: |
+      Overrides the default selection adornment (used for gamepads). For best
+      results, this should point to a GuiObject.
+    description: |
+      Overrides the default selection adornment (used for gamepads). For best
+      results, this should point to a GuiObject.
+    code_samples:
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: PlayerGui:GetTopbarTransparency
+    summary: |
+      Returns the transparency of the Topbar.
+    description: |
+      Returns the transparency of the Topbar.
+    code_samples:
+      - PlayerGui-GetTopbarTransparency1
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerGui:SetTopbarTransparency
+    summary: |
+      Sets the transparency of the Topbar CoreGui.
+    description: |
+      SetTopbarTransparency sets the transparency of the Topbar CoreGui. A value
+      of 0 is completely opaque, and a value of 1 is completely transparent.
+      Values outside of the range [0, 1] are clamped. The default transparency
+      of the topbar is 0.5. The current transparency can be retrieved using the
+      similarly-named
+      `Class.PlayerGui:GetTopbarTransparency()|GetTopbarTransparency` function.
+
+      #### Comparison of Values
+
+      The screenshots below show the topbar at 1.0, 0.5 and 0.0 transparency.
+      <img src="/assets/legacy/Topbar_Transparency_1.0.png" alt="The TopBar with a transparency of 1.0 (completely hidden)]"  />
+      <img src="/assets/legacy/Topbar_Transparency_0.5.png" alt="The TopBar with a transparency of 0.5 (50% transparency)]"  />
+      <img src="/assets/legacy/Topbar_Transparency_0.png" alt="The TopBar with a transparency of 0.0 (completely opaque)"  />
+
+      #### Usage
+
+      This method is often used when re-styling the topbar to match the visual
+      aesthetic of a game. By hiding the topbar, you can create your own custom
+      topbar. See the code samples for an example.
+
+      #### Alternative
+
+      Using the `Class.StarterGui:SetCore()` method with the `TopbarEnabled`
+      option allows you to enable/disable the entire topbar and all of its
+      features (player list, health, etc). By contrast, this method only affects
+      how the topbar is displayed.
+    code_samples:
+      - PlayerGui-SetTopbarTransparency1
+      - custom-topbar-style
+    parameters:
+      - name: transparency
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: PlayerGui.TopbarTransparencyChangedSignal
+    summary: |
+      Fires when the transparency of the Topbar CoreGui changes.
+    description: |
+      Fires when the transparency of the Topbar CoreGui changes.
+    code_samples:
+      - PlayerGui-TopbarTransparencyChangedSignal1
+    parameters:
+      - name: transparency
+        type: float
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

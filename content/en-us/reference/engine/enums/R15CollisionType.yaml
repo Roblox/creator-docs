@@ -1,0 +1,22 @@
+name: R15CollisionType
+type: enum
+summary: |
+  Collision behavior type for a R15 character.
+description: |
+  Internal enum used to save the collision behavior setting for R15 characters.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OuterBox
+    summary: |
+      Dynamically sized collision boxes based on mesh sizes.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: InnerBox
+    summary: |
+      Fixed size collision boxes, similar to the classic avatar collision.
+    value: 1
+    tags: []
+    deprecation_message: ''

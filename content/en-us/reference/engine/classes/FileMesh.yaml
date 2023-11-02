@@ -1,0 +1,105 @@
+name: FileMesh
+type: class
+category: Meshes
+memory_category: PhysicsParts
+summary: |
+  The FileMesh object applies a mesh to a `Class.BasePart` when parented to it.
+  Its properties are inherited by the `Class.SpecialMesh` object.
+description: |
+  The FileMesh object applies a textured mesh to a `Class.BasePart` when
+  parented to it. Its properties are inherited by the `Class.SpecialMesh`
+  object.
+
+  ## What is a FileMesh?
+
+  FileMeshes allow user uploaded meshes to be applied to a `Class.BasePart`. The
+  mesh that is applied is dependent on the `Class.FileMesh.MeshId` property. A
+  texture can also be applied to this mesh using `Class.FileMesh.TextureId`.
+
+  Although it is not an abstract class, and can be used by developers, all
+  `Class.FileMesh` properties are inherited by the `Class.SpecialMesh` object. A
+  `Class.SpecialMesh` behaves identically to the FileMesh object when its
+  `Class.SpecialMesh.MeshType` is set to 'FileMesh'. Although both objects are
+  functional, the `Class.SpecialMesh` object is the official supported class.
+
+  For more information on using meshes, please see the `Class.SpecialMesh` page.
+code_samples:
+  - FileMesh-Offset-and-Scale
+inherits:
+  - DataModelMesh
+tags: []
+deprecation_message: ''
+properties:
+  - name: FileMesh.MeshId
+    summary: |
+      The MeshId is the content ID of the mesh that is to be displayed.
+    description: |
+      The MeshId is the content ID of the mesh that is to be displayed.
+
+      The content ID for a mesh is generated when a developer uploads a mesh to
+      the Roblox website.
+
+      #### How do I create a mesh?
+
+      Meshes can currently only uploaded using `Class.MeshPart`s or the asset
+      manager. Once uploaded however, the content ID for the mesh can be used
+      for the MeshId property. For more information, see
+      [Meshes](../../../parts/meshes.md).
+    code_samples:
+      - Mesh-VertexColor
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FileMesh.TextureId
+    summary: |
+      The TextureId is the content ID of the texture that is to be applied to
+      the mesh.
+    description: |
+      The TextureId is the content ID of the image that is to be applied to used
+      for the meshes texture. When the TextureId property is set to an empty
+      string, no texture will be applied to the mesh.
+
+      #### How can I change the texture of a mesh?
+
+      Using the TextureId property, the texture of a mesh can be changed without
+      having to reupload the mesh. To do this, a new image will need to be
+      uploaded to Roblox with the desired texture. The original texture image
+      file can be obtained by exporting the mesh using the 'Export Selection'
+      option in Roblox Studio. The image file will be saved alongside the
+      exported .obj file.
+
+      The new texture can then be re-uploaded to Roblox as a Decal and its
+      content ID can be applied to the mesh using the TextureId property.
+
+      #### How can I make a textured mesh?
+
+      A mesh can only be textured if the mesh has been UV mapped. UV mapping
+      refers to the practice of projecting a texture map onto a mesh. This
+      cannot be done using Roblox Studio and has to be done using an external 3D
+      modelling application such as [Blender][1].
+
+      [1]: https://www.blender.org/
+    code_samples:
+      - Mesh-VertexColor
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

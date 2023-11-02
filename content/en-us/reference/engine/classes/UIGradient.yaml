@@ -1,0 +1,189 @@
+name: UIGradient
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  A `Class.UIComponent`, that blends a color gradient to its parent
+  `Class.GuiObject`, so you can layer multiple colors into your text, UI
+  background or other UI content.
+description: |
+  **UIGradient** is a `Class.UIComponent` that applies a color and transparency
+  gradient to the UI elements rendered by the parent `Class.GuiObject`. The
+  appearance of the gradient is configurable through the following properties:
+
+  - `Class.UIGradient.Color|Color`, a `Datatype.ColorSequence`
+  - `Class.UIGradient.Transparency|Transparency`, a `Datatype.NumberSequence`
+  - `Class.UIGradient.Offset|Offset`, a `Datatype.Vector2`
+  - `Class.UIGradient.Rotation|Rotation`, a number
+
+  A UIGradient will not apply to child or descendant GuiObjects. In order to
+  apply the same gradient to multiple objects, you will need multiple
+  UIGradients.
+
+  #### Supported Objects
+
+  You can apply gradients to `Class.Frame`, `Class.TextLabel`,
+  `Class.TextButton`, `Class.ImageLabel`, `Class.ImageButton`, and
+  `Class.ViewportFrame`. However, `Class.ScrollingFrame` and `Class.TextBox` are
+  not currently supported.
+
+  #### Performance Considerations
+
+  In order to efficiently use a UIGradient, follow these principles:
+
+  - Avoid using more than 6 color stops on the `Class.UIGradient.Color|Color`
+    sequence.
+  - Avoid using a UIGradient on any object that applies a text stroke
+    (`Class.TextLabel.TextStrokeColor3|TextStrokeColor3`): the gradient will try
+    to blend with strokes and borders, and may cause performance issues.
+  - Avoid setting `Class.UIGradient.Color|Color` and
+    `Class.UIGradient.Transparency|Transparency` frequently: this causes the
+    sequence of colors to rebuild often, which is expensive. If possible, set
+    these properties only once and try to animate the
+    `Class.UIGradient.Offset|Offset` or `Class.UIGradient.Rotation|Rotation`
+    properties to achieve a similar effect. Alternatively, you can change the
+    color of the parent `Class.GuiObject` using such properties as
+    `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
+    `Class.ImageLabel.ImageColor3|ImageColor3`, or
+    `Class.TextLabel.TextColor3|TextColor3`.
+  - When applying an unchanging gradient on a UI element whose state changes a
+    lot, there is a trade-off between using a UIGradient (processing time) and a
+    static gradient image (memory).
+
+  #### See Also
+
+  - [UI Layout and Appearance](../../../ui/layout-and-appearance.md) for more
+    information on creating UIGradient objects and how they work.
+code_samples:
+inherits:
+  - UIComponent
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIGradient.Color
+    summary: |
+      Determines the color blended with the parent GuiObject along the length of
+      the gradient.
+    description: |
+      The **Color** of a `Class.UIGradient` describes the color to blend with
+      the parent UI element along the provided `Datatype.ColorSequence`. This
+      property works in a similar manner to `Class.Beam.Color` or
+      `Class.Trail.Color`, except that it applies over an on-screen distance
+      determined by the `Class.UIGradient.Offset|Offset` and
+      `Class.UIGradient.Rotation|Rotation` of the UIGradient. The image below
+      shows the linear interpolation of four color values:
+
+      ![How the UIGradient Color ColorSequence applies color to a GuiObject](/assets/legacy/UIGradient.Color.2.jpg)
+    code_samples:
+    type: ColorSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGradient.Enabled
+    summary: |
+      Whether the gradient is enabled or not.
+    description: |
+      Whether the gradient is enabled or not.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGradient.Offset
+    summary: |
+      Determines the scalar translation of the gradient from the center of the
+      parent GuiObject.
+    description: |
+      The **Offset** of a `Class.UIGradient` determines the scalar translation
+      of the gradient from the center of the parent `Class.GuiObject`. This
+      value is a scalar translation, meaning that the actual pixel offset is
+      determined by the `Class.GuiBase2d.AbsoluteSize|AbsoluteSize` of the
+      parent GuiObject. So, a value of (1, 0) would shift the gradient
+      horizontally to the right by a distance equal to the parent GuiObject's on
+      screen-size. Depending on the `Class.UIGradient.Rotation|Rotation`, this
+      may cause the gradient to be partially visible or not visible at all.
+
+      Also see `Class.UIGradient.Rotation`, which also affects the geometry of
+      the applied gradient.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGradient.Rotation
+    summary: |
+      Determines the clockwise rotation in degrees of the gradient starting from
+      left to right.
+    description: |
+      The **Rotation** determines the **clockwise** rotation in degrees of the
+      `Class.UIGradient` starting from left to right. The beginning and end
+      control points snap to the edges of the parent GuiObject, but maintain the
+      provided rotation.
+
+      Also see `Class.UIGradient.Offset` which also affects the geometry of the
+      applied gradient.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGradient.Transparency
+    summary: |
+      Determines how much the parent GuiObject can be seen through along the
+      length of the gradient.
+    description: |
+      The **Transparency** of a `Class.UIGradient` describes how "see-through"
+      the parent UI element will be along the provided NumberSequence. This
+      property works in a similar manner to `Class.Beam.Transparency` or
+      `Class.Trail.Transparency`, except that it applies over an on-screen
+      distance determined by the `Class.UIGradient.Offset|Offset` and
+      `Class.UIGradient.Rotation|Rotation` of the UIGradient. The image below
+      shows the linear interpolation of three transparency values:
+
+      ![How the UIGradient Transparency NumberSequence applies transparency to a GuiObject](/assets/legacy/UIGradient.Transparency.2.jpg)
+
+      Note: the envelope values of the
+      `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` are ignored.
+    code_samples:
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

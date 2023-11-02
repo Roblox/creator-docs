@@ -1,0 +1,66 @@
+name: Clothing
+type: class
+category:
+memory_category: Instances
+summary: |
+  Clothing is the base class for the `Class.Shirt` and `Class.Pants` clothing
+  objects.
+description: |
+  The base class for clothing objects.
+code_samples:
+inherits:
+  - CharacterAppearance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: Clothing.Color3
+    summary: |
+      Determines the colorization to be applied to the `Class.Clothing` texture.
+    description: |
+      This property determines the colorization to be applied to the
+      `Class.Clothing` texture. The default colorization value is
+      `Datatype.Color3|Color3.new(1,1,1)` (white). When set to white no
+      colorization occurs
+
+      It functions similarly to `Class.ImageLabel.ImageColor3` and
+      `Class.Decal.Color3` except that it is applied to Clothing textures.
+
+      It is useful for creating outfits that have many different color
+      variations, but share the same basic look, possibly for a character
+      creator in a roleplaying game or generating a lot of different varied
+      NPCs.
+
+      #### Examples
+
+      - Outfits that fade to different colors over time
+      - Outfits that have many different color variations, but share the same
+        basic look
+      - A targeting texture that changes from red to blue when you target a
+        specific type of object
+
+      The image below demonstrates the same shirt with two different
+      colorizations. The first shirt has a red colorization and the second shirt
+      has a blue colorization.
+
+      ![Color3 Property in Studio Explorer](/assets/legacy/ClothingColor3.png)
+
+      See also:
+
+      - `Class.ShirtGraphic.Color3`, determines the colorization to be applied
+        to the ShirtGraphic texture
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

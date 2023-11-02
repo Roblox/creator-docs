@@ -1,0 +1,21 @@
+name: ReflectionMetadataEnum
+type: class
+category:
+memory_category: Instances
+summary: |
+  Registers information about an `Datatype.Enum` and its EnumItems.
+description: |
+  The ReflectionMetadataEnum is the class that registers information about an
+  Enum, and its EnumItems. It should be parented to
+  `Class.ReflectionMetadataEnums`.
+
+  Since it is an internal object, it cannot be used by developers.
+code_samples:
+inherits:
+  - ReflectionMetadataItem
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

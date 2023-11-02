@@ -1,0 +1,43 @@
+name: DevComputerCameraMovementMode
+type: enum
+summary: |
+  Overwrites the player's camera movement mode setting on a computer.
+description: |
+  Overwrites the player's camera movement mode setting on a computer.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: UserChoice
+    summary: |
+      The camera will move based on the player's settings.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Classic
+    summary: |
+      Camera tracks the player but will not automatically rotate if the player
+      walks left or right.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Follow
+    summary: |
+      Camera tracks the player and automatically rotates if the player walks
+      left or right.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Orbital
+    summary: |
+      The camera has a fixed Y position, but can be rotated around the player.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CameraToggle
+    summary: |
+      The camera toggles between locked and free rotation with the right mouse
+      button.
+    value: 4
+    tags: []
+    deprecation_message: ''

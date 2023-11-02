@@ -1,0 +1,568 @@
+name: Tool
+type: class
+category: Gameplay
+memory_category: PhysicsParts
+summary: |
+  An object, such as a weapon, that can be equipped by a `Class.Humanoid`.
+description: |
+  Tools are objects that a `Class.Humanoid` object can equip. For players, they
+  are stored in a `Class.Backpack` object parented to a `Class.Player` object.
+  In-game, players may have multiple tools which appear as icons at the bottom
+  of the screen. Equipping a tool moves it from the Backpack and into a
+  `Class.Player.Character` model in the `Class.Workspace`. By default, tools are
+  held in the right hand and have a handle in them, which is a
+  `Class.BasePart|Part` named "Handle" inside (though one isn't required if
+  `Class.Tool.RequiresHandle` is off). Tools that are to be provided to
+  (re)spawning players ought to be stored in the `Class.StarterPack`.
+
+  On desktop, pressing a number key (1, 2, 3...) will equip a tool. Equipped
+  tools can be dropped into the Workspace by pressing Backspace. It's
+  recommended that you turn `Class.Tool.CanBeDropped` off so it isn't possible
+  to drop a tool, die, respawn and drop again to duplicate tools. On gamepads,
+  LB and RB buttons will equip tools. You can disable activation via left click
+  (or right trigger on gamepad) by setting `Class.Tool.ManualActivationOnly` on.
+  Doing so requires that you call Activate yourself through some sort of other
+  user input.
+
+  Tools aren't the only way to capture user input. You can also use
+  `Class.ContextActionService`, `Class.UserInputService` or
+  `Class.Player:GetMouse()`. If you need a Tool to have multiple actions, such
+  as pressing a key while the Tool is equipped, you should use
+  ContextActionService's `Class.ContextActionService:BindAction()|BindAction`
+  and `Class.ContextActionService:UnbindAction()|UnbindAction` in the
+  `Class.Tool.Equipped|Equipped` and `Class.Tool.Unequipped|Unequipped` events,
+  respectively. Use a `Class.LocalScript` send these actions to the server via a
+  `Class.RemoteFunction` inside the Tool.
+code_samples:
+  - Explode-Tool-Example
+  - Sword-Tool-Example
+inherits:
+  - BackpackItem
+tags: []
+deprecation_message: ''
+properties:
+  - name: Tool.CanBeDropped
+    summary: |
+      Controls whether the player can drop the tool.
+    description: |
+      The CanBeDropped property controls whether the player can drop the
+      `Class.Tool`.
+
+      If true, when the backspace button is pressed, the tool will be parented
+      to `Class.Workspace` and removed from the player's `Class.Backpack`. If
+      false, nothing will happen when backspace is pressed, and the tool will
+      remain equipped.
+    code_samples:
+      - meow-tool
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Tool.Enabled
+    summary: |
+      Relates to whether or not the tool can be used.
+    description: |
+      The **Enabled** property relates to whether or not the `Class.Tool` can be
+      used. This is useful if you want to prevent a player from using a tool,
+      but don't want to remove it from their `Class.Backpack`.
+
+      When set to `true`, the player can use the tool. When set to `false`, the
+      tool is disabled and the player cannot use it; this prevents the tool from
+      being activated or deactivated by the `Class.Tool:Activate()` and
+      `Class.Tool:Deactivate()` methods, and it prevents the
+      `Class.Tool.Activated` and `Class.Tool.Deactivated` events from firing.
+    code_samples:
+      - superjump-tool
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Tool.Grip
+    summary: |
+      Stores the tool's "grip" properties as one `Datatype.CFrame`.
+    description: |
+      The Grip property stores the tool's "grip" properties as a single
+      `Datatype.CFrame`. These properties position how the player holds the tool
+      and include `GripUp`, `GripRight`, `GripForward`, and `GripPos`.
+
+      Unlike the grip properties that it stores, this consolidated property
+      doesn't appear in the [Properties](../../../studio/properties.md) window
+      in Studio. Regardless, you can set and get it from a `Class.Script` or
+      `Class.LocalScript`.
+    code_samples:
+      - grip-stick
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Tool.GripForward
+    summary: |
+      One of the properties that specifies a Tool's orientation in a character's
+      hand. This represents the R02, R12, and R22 values of the Grip CFrame's
+      rotation matrix.
+    description: |
+      The GripForward properties is one of the properties that specifies a
+      Tool's orientation in a character's hand. This represents the R02, R12,
+      and R22 values of the Grip `Datatype.CFrame|CFrame's` rotation matrix.
+
+      Other tool properties that control how a player holds a tool include:
+      `Class.Tool.GripUp|Up`, `Class.Tool.GripRight|Right`, and
+      `Class.Tool.GripPos|Pos` properties. All of these properties are stored in
+      a single CFrame in the `Class.Tool.Grip` property.
+
+      In order to change a tool's grip properties, you must either use a
+      `Class.Script` or `Class.LocalScript` or a Studio plugin such as the [Tool
+      Grip Editor][1] example.
+
+      [1]: https://www.roblox.com/library/174577307/Tool-Grip-Editor-Plugin
+    code_samples:
+      - grip-stick
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Tool.GripPos
+    summary: |
+      The positional offset of a Tool weld matrix.
+    description: |
+      The GripPos property controls the positional offset of a `Class.Tool` weld
+      matrix. It is one of several properties used to position how the player
+      holds the tool.
+
+      Other tool properties that control how a player holds a tool include:
+      `Class.Tool.GripUp|Up`, `Class.Tool.GripRight|Right`, and
+      `Class.Tool.GripForward|Forward` properties. All of these properties are
+      stored in a single CFrame in the `Class.Tool.Grip` property.
+
+      In order to change a tool's grip properties, you must either use a
+      `Class.Script` or `Class.LocalScript` or a plugin such as the [Tool Grip
+      Editor][1] example.
+
+      [1]: https://www.roblox.com/library/174577307/Tool-Grip-Editor-Plugin
+    code_samples:
+      - grip-stick
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Tool.GripRight
+    summary: |
+      One of the properties that specifies a Tool's orientation in a character's
+      hand. This represents the R00, R10, and R20 values of the Grip CFrame's
+      rotation matrix.
+    description: |
+      The GripRight property is one of the properties that specifies a
+      `Class.Tool|Tool's` orientation in a character's hand. This represents the
+      R00, R10, and R20 values of the Grip `Datatype.CFrame|CFrame's` rotation
+      matrix.
+
+      Other tool properties that control how a player holds a tool include:
+      `Class.Tool.GripUp|Up`, `Class.Tool.GripRight|Right`, and
+      `Class.Tool.GripPos|Pos` properties. All of these properties are stored in
+      a single CFrame in the `Class.Tool.Grip` property.
+
+      In order to change a tool's grip properties, you must either use a
+      `Class.Script` or `Class.LocalScript` or a plugin such as the [Tool Grip
+      Editor][1] example.
+
+      [1]: https://www.roblox.com/library/174577307/Tool-Grip-Editor-Plugin
+    code_samples:
+      - grip-stick
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Tool.GripUp
+    summary: |
+      One of the properties that specifies a Tool's orientation in a character's
+      hand. This represents the R01, R11, and R21 values of the Grip CFrame's
+      rotation matrix.
+    description: |
+      The GripUp property is one of the properties that specifies a Tool's
+      orientation in a character's hand. This represents the R01, R11, and R21
+      values of the Grip `Datatype.CFrame|CFrame's` rotation matrix.
+
+      Other tool properties that control how a player holds a tool include:
+      `Class.Tool.GripRight|Right`, `Class.Tool.GripForward|Forward`, and
+      `Class.Tool.GripPos|Pos` properties. All of these properties are stored in
+      a single CFrame in the `Class.Tool.Grip` property.
+
+      In order to change a tool's grip properties, you must either use a
+      `Class.Script` or `Class.LocalScript` or a plugin such as the [Tool Grip
+      Editor][1] example.
+
+      [1]: https://www.roblox.com/library/174577307/Tool-Grip-Editor-Plugin
+    code_samples:
+      - grip-stick
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Tool.ManualActivationOnly
+    summary: |
+      The ManualActivationOnly property controls whether the `Class.Tool` can be
+      activated without executing `Class.Tool:Activate()`.
+    description: |
+      The ManualActivationOnly property controls whether the `Class.Tool` can be
+      activated without explicitly executing `Class.Tool:Activate()` in a
+      script.
+
+      When set to true, the tool will only fire `Class.Tool.Activated` when
+      `Class.Tool:Activate()` is called. This also suppresses the
+      `Class.ContextActionService`'s `Class.ContextActionService:BindActivate()`
+      function.
+
+      When set to false, mouse clicks (when the tool is equipped) will also fire
+      `Class.Tool.Activated`.
+    code_samples:
+      - sprint-tool
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Tool.RequiresHandle
+    summary: |
+      Determines whether a `Class.Tool` functions without a handle.
+    description: |
+      This property determines whether a `Class.Tool` functions without a
+      handle.
+
+      A tool has a handle when it contains a child part named **Handle**. Tools
+      with handles typically require the player equipping them to hold an object
+      to use them, for instance weapons. Tools without handles typically don't
+      require the player equipping them to hold anything to use them, for
+      instance "fly" or "summon" tools.
+
+      When set to `true`, the tool will function only with a handle. When set to
+      `false`, the tool will function even without a handle.
+    code_samples:
+      - does-a-tool-requirehandle
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Tool.ToolTip
+    summary: |
+      Controls the message displayed when the player's mouse hovers over the
+      tool in their backpack.
+    description: |
+      The ToolTip property controls the message that will be displayed when the
+      player's `Class.Mouse` hovers over the `Class.Tool` in their
+      `Class.Backpack`.
+
+      Generally, the value of this property should describe the what the tool is
+      or its use. For instance, for a shovel tool, you may choose to set the
+      ToolTip to:
+
+      ```lua
+      	tool.ToolTip = "Shovel"
+      ```
+
+      or
+
+      ```lua
+      	tool.ToolTip = "Use to dig"
+      ```
+
+      or
+
+      ```lua
+      	tool.ToolTip = "Shovel - Use to dig"
+      ```
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Tool:Activate
+    summary: |
+      Simulates a click on a Tool.
+    description: |
+      The Activate function simulates a click on a `Class.Tool`. The Tool must
+      be equipped for this function to work.
+
+      Tools will normally trigger the `Class.Tool.Activated` event when the
+      player presses the left mouse button, while the tool is equipped.
+
+      The below code, when placed in a `Class.LocalScript`, would create a tool
+      in the `Class.Players.LocalPlayer|LocalPlayer's` `Class.Backpack`. It will
+      simulate the tool being activated and print "Tool activated" when the
+      player equips the tool.
+
+      ```lua
+      local tool = Instance.new("Tool")
+      tool.RequiresHandle = false
+      tool.Parent = game.Players.LocalPlayer.Backpack
+
+      tool.Equipped:Connect(function()
+      	tool:Activate()
+      end)
+
+      function toolActivated()
+          print("Tool activated")
+      end
+
+      tool.Activated:Connect(toolActivated)
+      ```
+    code_samples:
+      - invisibility-tool
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Tool:Deactivate
+    summary: |
+      Simulates the deactivation of a Tool.
+    description: |
+      The Deactivate function simulates the deactivation of a `Class.Tool`. The
+      Tool must be equipped for this function to work.
+
+      Tools will normally trigger the `Class.Tool.Deactivated` event when the
+      player releases the left mouse button, while the tool is equipped.
+
+      The below code, when placed in a `Class.LocalScript`, would create a tool
+      in the `Class.Players.LocalPlayer|LocalPlayer's` `Class.Backpack`. It will
+      simulate the tool being deactivated and print "Tool deactivated" when the
+      player equips the tool.
+
+      ```lua
+      local tool = Instance.new("Tool")
+      tool.RequiresHandle = false
+      tool.Parent = game.Players.LocalPlayer.Backpack
+
+      tool.Equipped:Connect(function()
+      	tool:Deactivate()
+      end)
+
+      function toolDeactivated()
+          print("Tool deactivated")
+      end
+
+      tool.Deactivated:Connect(toolDeactivated)
+      ```
+    code_samples:
+      - Tool-Deactivate1
+      - invisibility-tool
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Tool.Activated
+    summary: |
+      Fired when the player clicks while a tool is equipped.
+    description: |
+      Activated isn't called if the Ctrl key is pressed during a click.
+
+      The Activated event fires when the player clicks while a `Class.Tool` is
+      equipped.
+
+      This function is used to perform an action when the player uses the tool.
+      For instance, when the player clicks while a _Rocket Launcher_ tool is
+      equipped, the activated event executes the code to create and launch a
+      rocket.
+
+      The below code, when placed in a `Class.LocalScript`, would create a tool
+      in the `Class.Players.LocalPlayer|LocalPlayer's` `Class.Backpack`. It will
+      print "Tool activated" when the player clicks while the created tool is
+      equipped.
+
+      ```lua
+      local tool = Instance.new("Tool")
+      tool.RequiresHandle = false
+      tool.Parent = game.Players.LocalPlayer.Backpack
+
+      function onActivation()
+          print("Tool activated")
+      end
+
+      tool.Activated:Connect(onActivation)
+      ```
+    code_samples:
+      - how-to-spawn-colorful-bricks-on-click
+      - player-fly-tool
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Tool.Deactivated
+    summary: |
+      Fired when the left mouse button is released.
+    description: |
+      The Deactivated event fires when the left mouse button is released while a
+      `Class.Tool` is equipped.
+
+      This function is used to perform an action when the player stops using a
+      tool. For instance, a tool may make a player fly until they release their
+      left mouse button.
+
+      The below code, when placed in a `Class.LocalScript`, would create a tool
+      in the `Class.Players.LocalPlayer|LocalPlayer's` `Class.Backpack`. It will
+      print "Tool deactivated" when the player releases the left mouse button,
+      while the tool is equipped.
+
+      ````lua
+      local tool = Instance.new("Tool")
+      tool.RequiresHandle = false
+      tool.Parent = game.Players.LocalPlayer.Backpack
+
+      function toolDeactivated()
+          print("Tool deactivated")
+      end
+
+      tool.Deactivated:Connect(toolDeactivated)
+      ```"
+      ````
+    code_samples:
+      - player-fly-tool
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Tool.Equipped
+    summary: |
+      Fired when the tool is equipped.
+    description: |
+      The Equipped event fires when a player when a player takes a `Class.Tool`
+      out of their `Class.Backpack` to use. This event can be used to determine
+      when a player stops using and puts a tool away.
+
+      This event doesn't fire when `Class.Tool.RequiresHandle` is enabled and no
+      handle is present.
+
+      The opposite of this event, `Class.Tool.Unequipped`, can be used alongside
+      this event to determine unequips a `Class.Tool` by putting in back in
+      their backpack.
+    code_samples:
+      - Tool-Equipped1
+    parameters:
+      - name: mouse
+        type: Mouse
+        default:
+        summary: |
+          The player's mouse.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Tool.Unequipped
+    summary: |
+      Fired when the tool is unequipped.
+    description: |
+      The Unequipped event fires when a player unequips a `Class.Tool` by
+      putting in back in their `Class.Backpack`. This event can be used to
+      determine when a player stops using and puts a tool away.
+
+      This event doesn't fire when `Class.Tool.RequiresHandle` is enabled and no
+      handle is present.
+
+      The opposite of this event, `Class.Tool.Equipped`, can be used alongside
+      this event to determine when a player takes a tool out of their backpack
+      to use.
+
+      The example shown below will print "A tool was unequipped" each time the
+      tool is unequipped by the player. Please note that the below example
+      assumes that you've already defined what "Tool" is.
+
+      ```lua
+      Tool.Unequipped:Connect(function()
+          print("The tool was unequipped")
+      end)
+      ```
+    code_samples:
+      - player-fly-tool
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

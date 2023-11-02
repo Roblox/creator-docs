@@ -1,0 +1,18 @@
+name: ExperienceAuthScope
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: DefaultScope
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CreatorAssetsCreate
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,903 @@
+name: MaterialService
+type: class
+category:
+memory_category: Instances
+summary: |
+  The game service responsible for managing materials.
+description: |
+  MaterialService is the game service responsible for managing materials. It is
+  the container for global `Class.MaterialVariant` instances.
+  `Class.MaterialVariant` can be child or descendant of MaterialService. For
+  each base Material type, MaterialService internally keeps a set of
+  MaterialVariant references. `Class.MaterialVariant.Name` is the key to access
+  it. The `Class.MaterialVariant.Name` and `Class.MaterialVariant.BaseMaterial`
+  are combined to work as an identifier. If more than one MaterialVariant object
+  has the same name and BaseMaterial under MaterialService, only one of them can
+  be used.
+
+  MaterialService has some (Material)Name properties. Assigning a
+  MaterialVariant Name replaces the built-in material with the specified
+  MaterialVariant. If the MaterialService can't find a matching MaterialVariant,
+  it falls back to built-in material. Note BaseMaterial should also match, for
+  example, a MaterialVariant with BaseMaterial Grass can only be assigned to
+  MaterialService.GrassName, not AsphaltName or any other names. These
+  properties are not scriptable but can read and write using
+  `Class.MaterialService:GetBaseMaterialOverride()` and
+  `Class.MaterialService:SetBaseMaterialOverride()` function.
+
+  MaterialService has a `Class.MaterialService.Use2022Materials` property that
+  switches between legacy materials and new materials introduced in year 2022.
+  Because legacy and user-generated (new) terrain materials use different
+  encoding, using legacy terrain materials and MaterialVariant at the same time
+  has a performance penalty. If your game is using pre-2022 terrain materials,
+  avoid overriding any built-in materials. Migrate to 2022 materials if
+  possible.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: MaterialService.AsphaltName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Asphalt.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Asphalt. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Asphalt.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.BasaltName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Basalt.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Basalt. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Basalt.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.BrickName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Brick.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Brick. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Brick.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CardboardName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CarpetName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CeramicTilesName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.ClayRoofTilesName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CobblestoneName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Cobblestone.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Cobblestone. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Cobblestone.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.ConcreteName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Concrete.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Concrete. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Concrete.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CorrodedMetalName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in CorrodedMetal.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in CorrodedMetal.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to CorrodedMetal.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.CrackedLavaName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in CrackedLava.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in CrackedLava. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to CrackedLava.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.DiamondPlateName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in DiamondPlate.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in DiamondPlate.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to DiamondPlate.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.FabricName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Fabric.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Fabric. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Fabric.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.FoilName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Foil.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Foil. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Foil.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.GlacierName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Glacier.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Glacier. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Glacier.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.GraniteName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Granite.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Granite. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Granite.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.GrassName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Grass.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Grass. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Grass.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.GroundName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Ground.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Ground. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Ground.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.IceName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Ice.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Ice. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Ice.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.LeafyGrassName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in LeafyGrass.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in LeafyGrass. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to LeafyGrass.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.LeatherName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.LimestoneName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Limestone.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Limestone. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Limestone.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.MarbleName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Marble.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Marble. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Marble.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.MetalName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Metal.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Metal. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Metal.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.MudName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Mud.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Mud. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Mud.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.PavementName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Pavement.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Pavement. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Pavement.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.PebbleName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Pebble.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Pebble. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Pebble.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.PlasterName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.PlasticName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Plastic.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Plastic. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Plastic.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.RockName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Rock.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Rock. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Rock.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.RoofShinglesName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.RubberName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SaltName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Salt.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Salt. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Salt.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SandName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Sand.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Sand. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Sand.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SandstoneName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Sandstone.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Sandstone. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Sandstone.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SlateName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Slate.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Slate. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Slate.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SmoothPlasticName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in SmoothPlastic.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in SmoothPlastic.
+      The Specified MaterialVariant must have
+      `Class.MaterialVariant.BaseMaterial` set to SmoothPlastic.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.SnowName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Snow.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Snow. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Snow.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.Use2022Materials
+    summary: |
+      Switch built-in material pack.
+    description: |
+      When it's false, built-in materials use the material pack before 2022.
+      When it's true, built-in materials use the material pack released in 2022.
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Material Pack
+    serialization:
+      can_load: false
+      can_save: false
+  - name: MaterialService.WoodName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in Wood.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in Wood. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to Wood.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MaterialService.WoodPlanksName
+    summary: |
+      Specify `Class.MaterialVariant` name to override built-in WoodPlanks.
+    description: |
+      Specify `Class.MaterialVariant` name to override built-in WoodPlanks. The
+      Specified MaterialVariant must have `Class.MaterialVariant.BaseMaterial`
+      set to WoodPlanks.
+    code_samples: []
+    type: string
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Material Overrides
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: MaterialService:GetBaseMaterialOverride
+    summary: |
+      Get the override `Class.MaterialVariant` name of specified Material type.
+    description: |
+      Get the override `Class.MaterialVariant` name of specified Material type.
+    code_samples: []
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: |
+          Material type to be fetched.
+    returns:
+      - type: string
+        summary: |
+          MaterialVariant name currently set as override.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MaterialService:GetMaterialVariant
+    summary: |
+      Get the effective MaterialVariant reference given a name and Material.
+    description: |
+      Get the effective MaterialVariant reference given a MaterialVariant name
+      and BaseMaterial. This MaterialVariant must be a descendant of
+      MaterialService. Returns nil if no matching instance exists.
+    code_samples: []
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: |
+          BaseMaterial of MaterialVariant.
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of MaterialVariant.
+    returns:
+      - type: MaterialVariant
+        summary: |
+          A MaterialVariant instance that matches parameters.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MaterialService:SetBaseMaterialOverride
+    summary: |
+      Set a `Class.MaterialVariant` name that overrides a built-in material.
+    description: |
+      Set a `Class.MaterialVariant` name that overrides a built-in material.
+    code_samples: []
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: |
+          The Material type to be changed.
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the MaterialVariant object.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,36 @@
+name: BreakReason
+type: enum
+summary: |
+  Reason for the breakpoint hit.
+description: |
+  Value for the reason the `Class.ScriptDebugger.EncounteredBreak` signal fired.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Other
+    summary: |
+      Pausing for a reason not covered by other values, for example if the user
+      hit "Pause" button.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Error
+    summary: |
+      Pausing on error hit in the code.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SpecialBreakpoint
+    summary: |
+      Pausing on an internal breakpoint set by debugger command: e.g. step over,
+      step into, step out of.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: UserBreakpoint
+    summary: |
+      Pausing on a user breakpoint.
+    value: 3
+    tags: []
+    deprecation_message: ''

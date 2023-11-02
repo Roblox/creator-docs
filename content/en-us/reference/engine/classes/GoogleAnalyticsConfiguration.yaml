@@ -1,0 +1,21 @@
+name: GoogleAnalyticsConfiguration
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  GoogleAnalyticsConfiguration is a settings class that stores a unique
+  identifier for your game client.It is used by Roblox to persistently record
+  analytics from your game client.It is stored inside of the
+  `Class.AnalysticsSettings`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

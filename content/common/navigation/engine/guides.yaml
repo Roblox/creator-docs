@@ -581,8 +581,6 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
-      - title: Third-Party Analytics Services
-        path: /production/analytics/third-party-analytics
   - title: Community
     section:
       - title: Overview

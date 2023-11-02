@@ -1,0 +1,19 @@
+name: RunningAverageItemInt
+type: class
+category:
+memory_category: Instances
+summary: |
+  Measures the runtime average of an **integer** value.
+description: |
+  A special type of `Class.StatsItem` which measures the runtime average of an
+  internal integer value. As of right now, this StatsItem goes unused.
+code_samples:
+inherits:
+  - StatsItem
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

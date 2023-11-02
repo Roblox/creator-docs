@@ -1,0 +1,27 @@
+name: PathWaypointAction
+type: enum
+summary: |
+  Describes the action to take when a `Datatype.PathWaypoint` is reached.
+description: |
+  Describes the action to take when a `Datatype.PathWaypoint` is reached.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Walk
+    summary: |
+      Walk action needed to reach the next waypoint.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Jump
+    summary: |
+      Jump action needed to reach the next waypoint.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

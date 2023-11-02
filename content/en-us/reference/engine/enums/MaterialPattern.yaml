@@ -1,0 +1,22 @@
+name: MaterialPattern
+type: enum
+summary: |
+  Describes the pattern of material. Affects texture tiling method.
+description: |
+  Describes the pattern of material. Affects texture tiling method.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Regular
+    summary: |
+      Material has ordered pattern, usually man-made, like brick or wood planks.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Organic
+    summary: |
+      Material pattern has less repetition, like stone or dirt.
+    value: 1
+    tags: []
+    deprecation_message: ''

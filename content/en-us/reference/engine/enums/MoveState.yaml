@@ -1,0 +1,40 @@
+name: MoveState
+type: enum
+summary: |
+  Represents the state of a `Class.SkateboardPlatform`.
+description: |
+  Represents the state of a `Class.SkateboardPlatform`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Stopped
+    summary: |
+      Skateboard is stopped (not moving).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Coasting
+    summary: |
+      Skateboard is coasting (not actively speeding up / being pushed).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Pushing
+    summary: |
+      Skateboard is being pushed (speeding up).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Stopping
+    summary: |
+      Skateboard is stopping, but still moving.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: AirFree
+    summary: |
+      Skateboard is in the air.
+    value: 4
+    tags: []
+    deprecation_message: ''

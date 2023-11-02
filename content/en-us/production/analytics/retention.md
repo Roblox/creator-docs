@@ -58,11 +58,7 @@ You can also use analytics to improve your FTUE:
    - Train a pet.
    - Level up a pet.
 
-2. **Track the completion rate of each step**. You can either use:
-
-   - Custom events and queries with a [third party analytics tool](../../production/analytics/third-party-analytics.md).
-   - Special in-experience items to mark the completion of each step.
-     Track both positive and negative experiences. For example, if the FTUE includes a battle with an NPC, track both whether users win or lose more frequently.
+2. **Track the completion rate of each step**. Use special in-experience items to mark the completion of each step. Track both positive and negative experiences. For example, if the FTUE includes a battle with an NPC, track both whether users win or lose more frequently.
 
 3. **Identify and fix big drop-offs**. For example, if visiting the pet store has the highest drop-off rate, you can reduce friction in this step by making the pet store easier to find.
 

@@ -1,0 +1,68 @@
+name: CoreGui
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  The CoreGui is a service used to store Guis created in-game by Roblox for the
+  core user interface found in every game (such as the game menu, the
+  playerlist, the backpack, etc.). It can also be used by `Class.Plugin|Plugins`
+  in Roblox Studio.
+description: |
+  The CoreGui is a service used to store Guis created in-game by Roblox for the
+  core user interface found in every game (such as the game menu, the
+  playerlist, the backpack, etc.). It can also be used by `Class.Plugin|Plugins`
+  in Roblox Studio.
+
+  You can use the `Class.StarterGui:SetCoreGuiEnabled()` and
+  `Class.StarterGui:GetCoreGuiEnabled()` methods in a `Class.LocalScript` to
+  enable and disable most elements of the CoreGui. You can also use
+  `Class.PlayerGui:SetTopbarTransparency()` to set the transparency of the top
+  bar.
+code_samples:
+inherits:
+  - BasePlayerGui
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: CoreGui.SelectionImageObject
+    summary: ''
+    description: ''
+    code_samples: []
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CoreGui.Version
+    summary: |
+      The current version of the CoreGui. Everytime the CoreGui is majorly
+      changed, this number is increased.
+    description: |
+      The current version of the CoreGui. Everytime the CoreGui is majorly
+      changed, this number is increased.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

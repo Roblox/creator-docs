@@ -1,0 +1,352 @@
+name: ScrollingFrame
+type: class
+category: GUI
+memory_category: Gui
+summary: ''
+description: |
+  The ScrollingFrame is a special `Class.Frame` that handles all scrolling for
+  you, with a range of different ways to customize how the scrolling works.
+code_samples:
+inherits:
+  - GuiObject
+tags: []
+deprecation_message: ''
+properties:
+  - name: ScrollingFrame.AbsoluteCanvasSize
+    summary: |
+      The size in offsets of the area that is scrollable.
+    description: |
+      The size in offsets of the area that is scrollable.
+    code_samples:
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Scrolling
+    serialization:
+      can_load: false
+      can_save: true
+  - name: ScrollingFrame.AbsoluteWindowSize
+    summary: |
+      The size in offsets of the frame, without the scrollbars.
+    description: |
+      The size in offsets of the frame, without the scrollbars.
+    code_samples:
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Scrolling
+    serialization:
+      can_load: false
+      can_save: true
+  - name: ScrollingFrame.AutomaticCanvasSize
+    summary: |
+      Determines whether `Class.ScrollingFrame.CanvasSize` is resized based on
+      child content.
+    description: |
+      This property is used to automatically size parent UI objects based on the
+      size of its descendants. Developers can use this property to dynamically
+      add text and other content to a UI object at edit or run time, and the
+      size will adjust to fit that content.
+
+      When AutomaticCanvasSize is set to an
+      `Enum.AutomaticSize|Enum.AutomaticSize` value to anything other than None,
+      `Class.ScrollingFrame.CanvasSize` may resize depending on its child
+      content.
+    code_samples:
+    type: AutomaticSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.BottomImage
+    summary: |
+      The Down image on the vertical scrollbar. Size of this is always
+      ScrollBarThickness by ScrollBarThickness. This is also used as the image
+      on the horizontal scroll bar.
+    description: |
+      The Down image on the vertical scrollbar. Size of this is always
+      ScrollBarThickness by ScrollBarThickness. This is also used as the image
+      on the horizontal scroll bar.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.CanvasPosition
+    summary: |
+      The location within the canvas, in offsets, that should be drawn at the
+      top left of the scroll frame.
+    description: |
+      The location within the canvas, in offsets, that should be drawn at the
+      top left of the scroll frame
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.CanvasSize
+    summary: |
+      Determines the size of the area that is scrollable. The UDim2 is
+      calculated using the parent gui's size, similar to the regular Size
+      property on gui objects.
+    description: |
+      Determines the size of the area that is scrollable. The UDim2 is
+      calculated using the parent gui's size, similar to the regular Size
+      property on gui objects.
+    code_samples:
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ElasticBehavior
+    summary: |
+      Determines when elastic scrolling is allowed.
+    description: |
+      This property determines if and when the `Class.ScrollingFrame` canvas is
+      elastic. Defaults to `Enum.ElasticBehavior|WhenScrollable`.
+    code_samples:
+    type: ElasticBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.HorizontalScrollBarInset
+    summary: |
+      Indicates the inset behavior of the horizontal scrolling bar.
+    description: |
+      Indicates the inset behavior of the horizontal scrolling bar.
+    code_samples:
+    type: ScrollBarInset
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.MidImage
+    summary: |
+      The middle image on the vertical scrollbar. The size of this can vary in
+      the y direction, but is always set as
+      `Class.ScrollingFrame.ScrollBarThickness` in the x direction. This is also
+      used as the middle image on the horizontal scroll bar.
+    description: |
+      The middle image on the vertical scrollbar. The size of this can vary in
+      the y direction, but is always set as
+      `Class.ScrollingFrame.ScrollBarThickness` in the x direction. This is also
+      used as the middle image on the horizontal scroll bar.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ScrollBarImageColor3
+    summary: |
+      Determines how a rendered scroll bar image will be colorized.
+    description: |
+      Determines how a scrolling bar image is colorized. When set to white, no
+      colorization occurs. This property is very useful for reusing image
+      assets: If the source image is completely white with transparency, you can
+      set the entire color of the image at once with this property.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ScrollBarImageTransparency
+    summary: |
+      Determines the transparency of the rendered scroll bar image.
+    description: |
+      Determines the alpha of a scroll bar's rendered image. A value of 0 is
+      completely opaque, and a value of 1 is completely transparent (invisible).
+      This property behaves similarly to
+      `Class.GuiObject.BackgroundTransparency` or `Class.BasePart.Transparency`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ScrollBarThickness
+    summary: |
+      How thick the scroll bar appears. This applies to both the horizontal and
+      vertical scroll bars. If set to 0, no scroll bars are rendered.
+    description: |
+      How thick the scroll bar appears. This applies to both the horizontal and
+      vertical scroll bars. If set to 0, no scroll bars are rendered.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ScrollingDirection
+    summary: |
+      Determines the direction scrolling is allowed in this scrolling frame.
+    description: |
+      This property determines the direction scrolling is allowed. If scrolling
+      is disallowed in a direction, the scrollbar will not appear. Defaults to
+      `Enum.ScrollingDirection|XY`.
+    code_samples:
+    type: ScrollingDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.ScrollingEnabled
+    summary: |
+      Determines whether or not scrolling is allowed on the frame. If false, no
+      scroll bars will be rendered.
+    description: |
+      Determines whether or not scrolling is allowed on the frame. If false, no
+      scroll bars will be rendered.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.TopImage
+    summary: |
+      The Up image on the vertical scrollbar. The size of this is always
+      ScrollBarThickness by ScrollBarThickness. This is also used as the left
+      image on the horizontal scroll bar.
+    description: |
+      The Up image on the vertical scrollbar. The size of this is always
+      ScrollBarThickness by ScrollBarThickness. This is also used as the left
+      image on the horizontal scroll bar.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.VerticalScrollBarInset
+    summary: |
+      Indicates the inset behavior of the vertical scrolling bar.
+    description: |
+      Indicates the inset behavior of the vertical scrolling bar.
+    code_samples:
+    type: ScrollBarInset
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScrollingFrame.VerticalScrollBarPosition
+    summary: |
+      Indicates the side that the vertical scrollbar will be located at.
+    description: |
+      Indicates the side that the vertical scrollbar will be located at.
+    code_samples:
+    type: VerticalScrollBarPosition
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

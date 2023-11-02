@@ -1,0 +1,22 @@
+name: ListDisplayMode
+type: enum
+summary: |
+  Used to set the scrolling mode of the Advanced Objects tab.
+description: |
+  Used to set the scrolling mode of the Advanced Objects tab.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Horizontal
+    summary: |
+      Scrolling along the X-axis (fixed Y-Axis).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Vertical
+    summary: |
+      Scrolling along the Y-axis (fixed X-Axis).
+    value: 1
+    tags: []
+    deprecation_message: ''

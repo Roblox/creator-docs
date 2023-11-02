@@ -1,0 +1,690 @@
+name: DateTime
+type: datatype
+summary: |
+  A data type that represents a moment in time.
+description: |
+  The **DateTime** data type represents a moment in time using a Unix timestamp.
+  It can be used to easily format dates and times in specific locales. When
+  converted to a string, a string conversion of the stored timestamp integer is
+  returned. They don't store timezone values. Instead, timezones are considered
+  when constructing and using **DateTime** objects.
+
+  **DateTime** objects are equal if and only if their
+  `Datatype.DateTime.UnixTimestampMillis|UnixTimestampMillis` properties are
+  equal.
+
+  #### Time Value Table
+
+  The `Datatype.DateTime:ToUniversalTime()|ToUniversalTime()` and
+  `Datatype.DateTime:ToLocalTime()|ToLocalTime()` methods return a table of
+  time-related values, such as `Year`, `Month`, and `Day`. The format of the
+  table returned by these functions is described below, with each integer
+  element in descending size order.
+
+  <table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Range</td>
+      <td>Notes</td>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>Year</code></td><td>1400&ndash;9999</td><td>&mdash;</td>
+  </tr>
+  <tr>
+    <td><code>Month</code></td><td>1&ndash;12</td><td >&mdash;</td>
+  </tr>
+  <tr>
+    <td><code>Day</code></td><td>1&ndash;31</td><td >&mdash;</td>
+  </tr>
+  <tr>
+    <td><code>Hour</code></td><td>0&ndash;23</td><td >&mdash;</td>
+  </tr>
+  <tr>
+    <td><code>Minute</code></td><td>0&ndash;59</td><td >&mdash;</td>
+  </tr>
+  <tr>
+    <td><code>Second</code></td><td>0&ndash;60</td><td>Usually
+    0&ndash;59, sometimes 60 to accommodate leap seconds in certain
+    systems.</td>
+  </tr> <tr>
+    <td><code>Millisecond</code></td><td>0&ndash;999</td><td >&mdash;</td>
+  </tr>
+  </tbody>
+  </table>
+
+  #### String Format
+
+  The `Datatype.DateTime` object supports date/time conversion into a string
+  through the `Datatype.DateTime:FormatUniversalTime()|FormatUniversalTime()`
+  and `Datatype.DateTime:FormatLocalTime()|FormatLocalTime()` methods. They both
+  work the same except for which timezone the `Datatype.DateTime` should be
+  interpreted in.
+
+  The first argument passed to these methods must be a string representing one
+  of the tokens shown below. The tokens are then replaced with a specific value
+  depending on the provided locale.
+
+  ```lua
+  local dt = DateTime.now()
+
+  -- The "dddd" token is replaced with the full day of the week
+  print("Today is " .. dt:FormatLocalTime("dddd", "en-us"))
+
+  -- For the "en-us" locale, the "LL" token equals "MMMM D, YYYY"
+  print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
+  ```
+
+  ##### Composite Tokens
+
+  Depending on locale, these tokens replace to **specific combinations** of the
+  **elemental tokens** described in the next section. This produces a correct
+  date/time string depending on the locale. For example, in English, the date
+  has the "[month]&nbsp;[day]" as in "June&nbsp;11". In French, the date is in a
+  "[day]&nbsp;[month]" format as in "11&nbsp;juin". These special rules are
+  handled for you automatically through the following composite tokens, so use
+  these if you're displaying simple time and/or date information.
+
+  <table>
+    <thead>
+      <tr>
+        <th>Token(s)</th>
+        <th>Locale Examples (Format)</th>
+      </tr>
+    </thead>
+      <thead>
+      <tr>
+        <th colspan=2>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>LT</code></td>
+        <td>
+          <div><code>en-us</code> : <code>8:30 PM</code> (<code>h:mm A</code>)</div>
+          <div><code>zh-cn</code> : <code>20:30</code> (<code>HH:mm</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+      <thead>
+      <tr>
+        <th colspan=2>Time with Seconds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>LTS</code></td>
+        <td>
+          <div><code>en-us</code> : <code>8:30:25 PM</code> (<code>h:mm:ss A</code>)</div>
+          <div><code>zh-cn</code> : <code>20:30:25</code> (<code>HH:mm:ss</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+      <thead>
+      <tr>
+        <th colspan=2>Month (Number), Day, Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>L</code></td>
+        <td>
+          <div><code>en-us</code> : <code>09/04/1986</code> (<code>MM/DD/YYYY</code>)</div>
+          <div><code>zh-cn</code> : <code>1986/09/04</code> (<code>YYYY/MM/DD</code>)</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>l</code></td>
+        <td>
+          <div><code>en-us</code> : <code>9/4/1986</code> (<code>M/D/YYYY</code>)</div>
+          <div><code>zh-cn</code> : <code>1986/9/4</code> (<code>YYYY/M/D</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+      <thead>
+      <tr>
+        <th colspan=2>Month (Name), Day, Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>LL</code></td>
+        <td>
+          <div><code>en-us</code> : <code>September 4, 1986</code> (<code>MMMM D, YYYY</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日</code> (<code>YYYY年M月D日</code>)</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>ll</code></td>
+        <td>
+          <div><code>en-us</code> : <code>Sep 4, 1986</code> (<code>MMM D, YYYY</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日</code> (<code>YYYY年M月D日</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+      <thead>
+      <tr>
+        <th colspan=2>Month (Name), Day, Year, Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>LLL</code></td>
+        <td>
+          <div><code>en-us</code> : <code>September 4, 1986 8:30 PM</code> (<code>MMMM D, YYYY h:mm A</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日晚上8点30分</code> (<code>YYYY年M月D日Ah点mm分</code>)</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>lll</code></td>
+        <td>
+          <div><code>en-us</code> : <code>Sep 4, 1986 8:30 PM</code> (<code>MMM D, YYYY h:mm A</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日 20:30</code> (<code>YYYY年M月D日 HH:mm</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+      <thead>
+      <tr>
+        <th colspan=2>Day of Week, Month (Name), Day, Year, Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>LLLL</code></td>
+        <td>
+          <div><code>en-us</code> : <code>Thursday, September 4, 1986 8:30 PM</code> (<code>dddd, MMMM D, YYYY h:mm A</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日星期四晚上8点30分</code> (<code>YYYY年M月D日ddddAh点mm分</code>)</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>llll</code></td>
+        <td>
+          <div><code>en-us</code> : <code>Thu, Sep 4, 1986 8:30 PM</code> (<code>ddd, MMM D, YYYY h:mm A</code>)</div>
+          <div><code>zh-cn</code> : <code>1986年9月4日星期四 20:30</code> (<code>YYYY年M月D日dddd HH:mm</code>)</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  ##### Elemental Tokens
+
+  Each of these tokens replace to a **single value** and can be used as elements
+  of a larger time string. Avoid using these if you only need simple date and
+  time information, as the **composite tokens** are more appropriate for those
+  purposes.
+
+  <table>
+  <thead>
+    <tr>
+      <th>Token(s)</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+    <thead>
+    <tr>
+      <th colspan=2>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>YY</code></td>
+    <td><code>70</code>, <code>71</code>, &hellip;, <code>29</code>, <code>30</code></td>
+  </tr>
+  <tr>
+    <td><code>YYYY</code></td>
+    <td><code>1970</code>, <code>1971</code>, &hellip;, <code>2029</code>, <code>2030</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Month</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>M</code></td>
+    <td><code>1</code>, <code>2</code>, &hellip;, <code>11</code>, <code>12</code></td>
+  </tr>
+  <tr>
+    <td><code>MM</code></td>
+    <td><code>01</code>, <code>02</code>, &hellip;, <code>11</code>, <code>12</code></td>
+  </tr>
+  <tr>
+    <td><code>MMM</code></td>
+    <td><code>Jan</code>, <code>Feb</code>, &hellip;, <code>Nov</code>, <code>Dec</code></td>
+  </tr>
+  <tr>
+    <td><code>MMMM</code></td>
+    <td><code>January</code>, <code>February</code>, &hellip;, <code>November</code>, <code>December</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Day of Month</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>D</code></td>
+    <td><code>1</code>, <code>2</code>, &hellip;, <code>30</code>, <code>31</code></td>
+  </tr>
+  <tr>
+    <td><code>DD</code></td>
+    <td><code>01</code>, <code>02</code>, &hellip;, <code>30</code>, <code>31</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Day of Year</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>DDD</code></td>
+    <td><code>1</code>, <code>2</code>, &hellip;, <code>364</code>, <code>365</code></td>
+  </tr>
+  <tr>
+    <td><code>DDDD</code></td>
+    <td><code>001</code>, <code>002</code>, &hellip;, <code>364</code>, <code>365</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Day of Week</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>d</code></td>
+    <td><code>0</code>, <code>1</code>, &hellip;, <code>5</code>, <code>6</code></td>
+  </tr>
+  <tr>
+    <td><code>dd</code></td>
+    <td><code>Su</code>, <code>Mo</code>, &hellip;, <code>Fr</code>, <code>Sa</code></td>
+  </tr>
+  <tr>
+    <td><code>ddd</code></td>
+    <td><code>Sun</code>, <code>Mon</code>, &hellip;, <code>Fri</code>, <code>Sat</code></td>
+  </tr>
+  <tr>
+    <td><code>dddd</code></td>
+    <td><code>Sunday</code>, <code>Monday</code>, &hellip;, <code>Friday</code>, <code>Saturday</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Hour</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>H</code></td>
+    <td><code>0</code>, <code>1</code>, &hellip;, <code>22</code>, <code>23</code></td>
+  </tr>
+  <tr>
+    <td><code>HH</code></td>
+    <td><code>00</code>, <code>01</code>, &hellip;, <code>22</code>, <code>23</code></td>
+  </tr>
+  <tr>
+    <td><code>h</code></td>
+    <td><code>1</code>, <code>2</code>, &hellip;, <code>11</code>, <code>12</code></td>
+  </tr>
+  <tr>
+    <td><code>hh</code></td>
+    <td><code>01</code>, <code>02</code>, &hellip;, <code>11</code>, <code>12</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Minute</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>m</code></td>
+    <td><code>0</code>, <code>1</code>, &hellip;, <code>58</code>, <code>59</code></td>
+  </tr>
+  <tr>
+    <td><code>mm</code></td>
+    <td><code>00</code>, <code>01</code>, &hellip;, <code>58</code>, <code>59</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Second</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>s</code></td>
+    <td><code>0</code>, <code>1</code>, &hellip;, <code>58</code>, <code>59</code></td>
+  </tr>
+  <tr>
+    <td><code>ss</code></td>
+    <td><code>00</code>, <code>01</code>, &hellip;, <code>58</code>, <code>59</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>Fractional Second</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>S</code></td>
+    <td><code>0</code>, <code>1</code>, &hellip;, <code>8</code>, <code>9</code></td>
+  </tr>
+  <tr>
+    <td><code>SS</code></td>
+    <td><code>00</code>, <code>01</code>, &hellip;, <code>98</code>, <code>99</code></td>
+  </tr>
+  <tr>
+    <td><code>SSS</code></td>
+    <td><code>000</code>, <code>001</code>, &hellip;, <code>998</code>, <code>999</code></td>
+  </tr>
+  </tbody>
+    <thead>
+    <tr>
+      <th colspan=2>AM/PM</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>A</code></td>
+    <td><div><code>en-us</code> : <code>AM</code>, <code>PM</code></div>
+          <div><code>zh-cn</code> : <code>凌晨|早上|上午|中午|下午|晚上</code></div></td>
+  </tr>
+  <tr>
+    <td><code>a</code></td>
+    <td><div><code>en-us</code> : <code>am</code>, <code>pm</code></div>
+          <div><code>zh-cn</code> : <code>凌晨|早上|上午|中午|下午|晚上</code></div></td>
+  </tr>
+  </tbody>
+  </table>
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: DateTime.now
+    summary: Returns a `Datatype.DateTime` representing the current moment in time.
+    description: Returns a new `Datatype.DateTime` representing the current moment in time.
+    parameters:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.fromUnixTimestamp
+    summary: Returns a `Datatype.DateTime` representing the given Unix timestamp.
+    description: |-
+      Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
+      the number of **seconds** since January 1st, 1970 at 00:00 (UTC).
+    parameters:
+      - name: unixTimestamp
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.fromUnixTimestampMillis
+    summary: Returns a `Datatype.DateTime` representing the given Unix timestamp in milliseconds.
+    description: |-
+      Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
+      the number of **milliseconds** since January 1st, 1970 at 00:00 (UTC).
+    parameters:
+      - name: unixTimestampMillis
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.fromUniversalTime
+    summary: Returns a new `Datatype.DateTime` using the given units from a UTC time.
+    description: |-
+      Returns a new `Datatype.DateTime` using the given units from a UTC time. The values
+      accepted are similar to those found in the time value table returned by
+      `Datatype.DateTime:ToUniversalTime()|ToUniversalTime()`.
+
+      - Date units (year, month, day) that produce an invalid date will raise an error. For example, January 32nd or February 29th on a non-leap year.
+      - Time units (hour, minute, second, millisecond) that are outside their normal range are valid. For example, 90 minutes will cause the hour to roll over by 1; -10 seconds will cause the minute value to roll back by 1.
+      - Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
+      - Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
+    parameters:
+      - name: year
+        type: number
+        default: 1970
+        summary: ''
+      - name: month
+        type: number
+        default: 1
+        summary: ''
+      - name: day
+        type: number
+        default: 1
+        summary: ''
+      - name: hour
+        type: number
+        default: 0
+        summary: ''
+      - name: minute
+        type: number
+        default: 0
+        summary: ''
+      - name: second
+        type: number
+        default: 0
+        summary: ''
+      - name: millisecond
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.fromLocalTime
+    summary: Returns a new `Datatype.DateTime` using the given units from a local time.
+    description: |-
+      Returns a new `Datatype.DateTime` using the given units from a local time. The
+      values accepted are similar to those found in the time value table
+      returned by `Datatype.DateTime:ToLocalTime()|ToLocalTime()`.
+
+      - Date units (year, month, day) that produce an invalid date will raise an error. For example, January 32nd or February 29th on a non-leap year.
+      - Time units (hour, minute, second, millisecond) that are outside their normal range are valid. For example, 90 minutes will cause the hour to roll over by 1; -10 seconds will cause the minute value to roll back by 1.
+      - Non-integer values are rounded down. For example, providing 2.5 hours will be equivalent to providing 2 hours, not 2 hours 30 minutes.
+      - Omitted values are assumed to be their lowest value in their normal range, except for year which defaults to 1970.
+    parameters:
+      - name: year
+        type: number
+        default: 1970
+        summary: ''
+      - name: month
+        type: number
+        default: 1
+        summary: ''
+      - name: day
+        type: number
+        default: 1
+        summary: ''
+      - name: hour
+        type: number
+        default: 0
+        summary: ''
+      - name: minute
+        type: number
+        default: 0
+        summary: ''
+      - name: second
+        type: number
+        default: 0
+        summary: ''
+      - name: millisecond
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.fromIsoDate
+    summary: Returns a `Datatype.DateTime` from an ISO 8601 date-time string (in UTC).
+    description: |-
+      Returns a `Datatype.DateTime` from an ISO 8601 date-time string in UTC
+      time, such as those returned by `Datatype.DateTime:ToIsoDate()|ToIsoDate()`. If the string parsing fails,
+      the function returns `nil`.
+
+      An example ISO 8601 date-time string would be `2020-01-02T10:30:45Z`,
+      which represents January 2nd 2020 at 10:30 AM, 45 seconds.
+    parameters:
+      - name: isoDate
+        type: string
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: DateTime.UnixTimestamp
+    type: number
+    summary: |
+      The number of **seconds** between January 1st, 1970 at 00:00 UTC (the Unix
+      epoch).
+    description: |
+      The number of **seconds** since January 1st, 1970 at 00:00 UTC (the Unix
+      epoch). Range is -17,987,443,200 to 253,402,300,799, approximately years
+      1400&ndash;9999.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime.UnixTimestampMillis
+    type: number
+    summary: |
+      The number of **milliseconds** between January 1st, 1970 at 00:00 UTC (the
+      Unix epoch).
+    description: |
+      The number of **milliseconds** since January 1st, 1970 at 00:00 UTC (the
+      Unix epoch). Range is -17,987,443,200,000 to 253,402,300,799,999,
+      approximately years 1400&ndash;9999.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: DateTime:ToUniversalTime
+    summary: |
+      Returns the components of the `Datatype.DateTime` in UTC.
+    description: |
+      Converts the value of this `Datatype.DateTime` object to Universal
+      Coordinated Time (UTC). The returned table contains the following keys:
+      `Year`, `Month`, `Day`, `Hour`, `Minute`, `Second`, `Millisecond`. For
+      more details, see the time value table in this data type's description.
+      The values within this table could be passed to
+      `Datatype.DateTime.fromUniversalTime()|fromUniversalTime()` to produce the
+      original `Datatype.DateTime` object.
+    parameters:
+    returns:
+      - type: Dictionary
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime:ToLocalTime
+    summary: |
+      Returns the components of the `Datatype.DateTime` in local time.
+    description: |
+      Converts the value of this `Datatype.DateTime` object to local time. The
+      returned table contains the following keys: `Year`, `Month`, `Day`,
+      `Hour`, `Minute`, `Second`, `Millisecond`. For more details, see the time
+      value table in this data type's description. The values within this table
+      could be passed to `Datatype.DateTime.fromLocalTime()|fromLocalTime()` to
+      produce the original `Datatype.DateTime` object.
+    parameters:
+    returns:
+      - type: Dictionary
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime:ToIsoDate
+    summary: |
+      Returns the `Datatype.DateTime` as an ISO 8601 date-time string.
+    description: |
+      Formats a date as a ISO 8601 date-time string. The value returned by this
+      function could be passed to
+      `Datatype.DateTime.fromIsoDate()|fromIsoDate()` to produce the original
+      `Datatype.DateTime` object.
+
+      An example ISO 8601 date-time string would be `2020-01-02T10:30:45Z`,
+      which represents January 2nd 2020 at 10:30 AM, 45 seconds.
+    parameters:
+    returns:
+      - type: string
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime:FormatUniversalTime
+    summary: |
+      Returns the DateTime's value in UTC formatted into a string.
+    description: |
+      Generates a string from the `Datatype.DateTime` value interpreted as
+      Universal Coordinated Time (UTC) and a format string. The format string
+      should contain tokens, which will replace to certain date/time values
+      described by the `Datatype.DateTime` object. For more details, see the
+      **String Format** section in this data type's description.
+
+      ```lua
+      local dt = DateTime.now()
+      -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
+      print("The date is " .. dt:FormatUniversalTime("LL", "en-us"))
+      --> "The date is June 11, 2020"
+      ```
+    parameters:
+      - name: format
+        type: string
+        default:
+        summary: ''
+      - name: locale
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DateTime:FormatLocalTime
+    summary: |
+      Returns the `Datatype.DateTime` object's value in local time formatted
+      into a string.
+    description: |
+      Generates a string from the `Datatype.DateTime` value interpreted as
+      **local time** and a format string. The format string should contain
+      tokens, which will replace to certain date/time values described by the
+      `Datatype.DateTime` object. For more details, see the **String Format**
+      section in this data type's description.
+
+      ```lua
+      local dt = DateTime.now()
+      -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
+      print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
+      --> "The date is June 11, 2020"
+      ```
+    parameters:
+      - name: format
+        type: string
+        default:
+        summary: ''
+      - name: locale
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

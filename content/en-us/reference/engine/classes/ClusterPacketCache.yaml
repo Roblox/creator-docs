@@ -1,0 +1,21 @@
+name: ClusterPacketCache
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service meant to cache cluster packets.
+description: |
+  An internal service meant to cache cluster packets. This service will only be
+  present if a `Class.NetworkServer` is present.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

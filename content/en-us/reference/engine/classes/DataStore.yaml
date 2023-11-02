@@ -1,0 +1,186 @@
+name: DataStore
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  See [Data Stores](../../../cloud-services/datastores.md).
+code_samples:
+inherits:
+  - GlobalDataStore
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: DataStore:GetVersionAsync
+    summary: |
+      Retrieves the specified key version.
+    description: |
+      This function retrieves the specified key version as well as a
+      `Class.DataStoreKeyInfo` instance. A version identifier can be found
+      through `Class.DataStore:ListVersionsAsync()` or alternatively be the
+      identifier returned by `Class.GlobalDataStore:SetAsync()`.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the version info is requested. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: version
+        type: string
+        default:
+        summary: |
+          Version number of the key for which the version info is requested.
+    returns:
+      - type: Tuple
+        summary: |
+          The value of the key at the specified version and a
+          `Class.DataStoreKeyInfo` instance that includes the version number,
+          date and time the version was created, and functions to retrieve
+          `Class.Player.UserId|UserIds` and metadata.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStore:ListKeysAsync
+    summary: |
+      Returns a `Class.DataStoreKeyPages` object for enumerating through keys of
+      a data store.
+    description: |
+      This function returns a `Class.DataStoreKeyPages` object for enumerating
+      through keys of a data store. It accepts an optional `prefix` parameter to
+      only locate keys whose names start with the provided prefix.
+
+      If `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+      data store through `Class.DataStoreService:GetDataStore()`, keys will be
+      returned with all scopes as prefixes.
+    code_samples:
+    parameters:
+      - name: prefix
+        type: string
+        default: ''
+        summary: |
+          **(Optional)** Prefix to use for locating keys.
+      - name: pageSize
+        type: int
+        default: 0
+        summary: |
+          **(Optional)** Maximum possible number of items that can be returned.
+          By default is 50. There is no guarantee that the method returns the
+          same number of items as the specified pageSize. This parameter only
+          guarantees that the method never returns more than the specified
+          limit.
+      - name: cursor
+        type: string
+        default: ''
+        summary: |
+          **(Optional)** Cursor to continue iteration.
+      - name: excludeDeleted
+        type: bool
+        default: false
+        summary: |
+          **(Optional)** Exclude deleted keys from being returned.
+
+          When enabled ListKeys will check up to 512 keys. If all checked keys
+          are deleted then it will return an empty list with a cursor to
+          continue iteration.
+    returns:
+      - type: DataStoreKeyPages
+        summary: |
+          A `Class.DataStoreKeyPages` instance that enumerates the keys as
+          `Class.DataStoreKey` instances.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStore:ListVersionsAsync
+    summary: |
+      Enumerates all versions of a key.
+    description: |
+      This function enumerates versions of the specified key in either ascending
+      or descending order specified by a `Enum.SortDirection` parameter. It can
+      optionally filter the returned versions by minimum and maximum timestamp.
+    code_samples:
+      - retrieving-datastore-versions-with-a-date-filter
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for the versions to list. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: sortDirection
+        type: SortDirection
+        default: Ascending
+        summary: |
+          Enum specifying ascending or descending sort order.
+      - name: minDate
+        type: int64
+        default: 0
+        summary: |
+          Date after which the versions should be listed.
+      - name: maxDate
+        type: int64
+        default: 0
+        summary: |
+          Date up to which the versions should be listed.
+      - name: pageSize
+        type: int
+        default: 0
+        summary: |
+          Number of items to be returned in each page. By default is 1024.
+    returns:
+      - type: DataStoreVersionPages
+        summary: |
+          A `Class.DataStoreVersionPages` instance that enumerates all the
+          versions of the key as `Class.DataStoreObjectVersionInfo` instances.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStore:RemoveVersionAsync
+    summary: |
+      Permanently deletes the specified version of a key.
+    description: |
+      This function permanently deletes the specified version of a key. Version
+      identifiers can be found through `Class.DataStore:ListVersionsAsync()`.
+
+      Unlike `Class.GlobalDataStore:RemoveAsync()`, this function does not
+      create a new "tombstone" version and the removed value cannot be retrieved
+      later.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which a version is to be removed. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: version
+        type: string
+        default:
+        summary: |
+          Version number of the key to remove.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

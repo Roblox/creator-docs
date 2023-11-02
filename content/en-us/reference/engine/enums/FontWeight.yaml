@@ -1,0 +1,56 @@
+name: FontWeight
+type: enum
+summary: |
+  Describes how thick a `Datatype.Font` is.
+description: |
+  Describes how thick a `Datatype.Font` is. Used by `Datatype.Font.Weight`.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Thin
+    value: 100
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ExtraLight
+    value: 200
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Light
+    value: 300
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Regular
+    value: 400
+    summary: |
+      The default thickness for text.
+    tags: []
+    deprecation_message: ''
+  - name: Medium
+    value: 500
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: SemiBold
+    value: 600
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Bold
+    value: 700
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ExtraBold
+    value: 800
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Heavy
+    value: 900
+    summary: ''
+    tags: []
+    deprecation_message: ''

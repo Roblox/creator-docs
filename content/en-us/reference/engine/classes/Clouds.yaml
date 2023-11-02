@@ -1,0 +1,106 @@
+name: Clouds
+type: class
+category:
+memory_category: Instances
+summary: |
+  Renders realistic clouds that drift slowly across the sky.
+description: |
+  The **Clouds** object renders realistic clouds that drift slowly across the
+  sky. Both cloud cover and density can be adjusted, as well as cloud color to
+  achieve atmospheres like stormy skies, moody sunsets, alien worlds, etc.
+
+  See the <a href="../../../environment/clouds.md">Dynamic Clouds</a> article
+  for a summary of properties and expected results.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Clouds.Color
+    summary: |
+      Controls the material color of cloud particles.
+    description: |
+      This property controls the material color of cloud particles. However,
+      cloud color is influenced by several `Class.Lighting` and
+      `Class.Atmosphere` properties, so it is not intended as a dedicated
+      property to simulate colored sunsets, sunrises, etc.
+
+      See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
+      article for a summary of properties and expected results.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Clouds.Cover
+    summary: |
+      Defines the cloud cover within the overall skyscape layer.
+    description: |
+      This property defines the cloud cover within the overall skyscape layer.
+      Valid range is from 0 to 1 (sparse cloud cover to full cloud cover).
+
+      See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
+      article for a summary of properties and expected results.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Clouds.Density
+    summary: |
+      Controls the particulate density of clouds.
+    description: |
+      This property controls the particulate density of clouds (the proportion
+      of airborne water vapor particles at full cloud cover).
+
+      See the <a href="../../../environment/clouds.md">Dynamic Clouds</a>
+      article for a summary of properties and expected results.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Clouds.Enabled
+    summary: |
+      Toggles rendering of the `Class.Clouds` object.
+    description: |
+      This property toggles rendering of the `Class.Clouds` object. Useful for
+      toggling on/off different `Class.Clouds` objects that exist in the same
+      place.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

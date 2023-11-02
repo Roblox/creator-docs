@@ -1,0 +1,116 @@
+name: LayerCollector
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class of 2D UI containers which render `Class.GuiObject|GuiObjects`
+  in layers.
+description: |
+  LayerCollector is the base class of 2D UI containers which render
+  `Class.GuiObject` descendants, such as `Class.ScreenGui`.
+
+  ## Caching static UI for performance improvements
+
+  A Gui's appearance is cached until one of the following events occurs:
+
+  - A descendant is added to the Gui.
+  - A descendant is removed from the Gui.
+  - A property of a descendant of the Gui changes.
+  - A property of the Gui changes.
+
+  If any of these events occur, the Gui's appearance will be recomputed the next
+  frame it gets rendered.
+code_samples:
+inherits:
+  - GuiBase2d
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: LayerCollector.Enabled
+    summary: |
+      Toggles the visibility of the LayerCollector.
+    description: |
+      Toggles the visibility of the LayerCollector. When false, the UI contents
+      will not render, process user input, or update in response to changes.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LayerCollector.ResetOnSpawn
+    summary: |
+      Controls how this LayerCollector behaves when its associated
+      `Class.Player` respawns.
+    description: |
+      When set to false, this LayerCollector will only be cloned into each
+      `Class.Player|player's` `Class.PlayerGui` once, and the LayerCollector
+      will not be deleted when the player respawns.
+
+      When set to true, the LayerCollector will be cloned into each
+      `Class.Player|player's` `Class.PlayerGui` when they respawn, and it will
+      delete itself when the player respawns again.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LayerCollector.ZIndexBehavior
+    summary: |
+      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of the
+      LayerCollector.
+    description: |
+      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of the
+      LayerCollector.
+
+      `Enum.ZIndexBehavior.Global` sorts all descendants according to the
+      ZIndex, then breaks ties using the hierarchy order. As a result,
+      descendants of a `Class.GuiObject` need to have a ZIndex value that's at
+      least as high as the parent, or they will render underneath their parent.
+
+      With `Enum.ZIndexBehavior.Sibling`, children always render above their
+      parents, and the ZIndex is used to decide the order in which children of a
+      single UI object will render over each other.
+    code_samples:
+    type: ZIndexBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: LayerCollector:GetLayoutNodeTree
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,366 @@
+name: SharedTable
+type: datatype
+summary: |
+  Provides sharable, table-like storage for key/value pairs.
+description: |
+  Represents a table-like data structure that can be shared across execution
+  contexts. While it can be used for various sorts of general data storage, it
+  is designed especially for use with
+  [Parallel Luau](../../../scripting/multithreading.md), where it can be used to
+  share state across scripts parented under different `Class.Actor` instances.
+
+  Like a Luau table, a `Datatype.SharedTable` object stores a set of key-value
+  element pairs. Unlike a Luau table, only selected types of objects may be
+  stored in a SharedTable, similar to other restrictions you'll find elsewhere
+  in the Roblox engine.
+
+  Keys must either be (1) a string or (2) a nonnegative integer number less than
+  2<sup>32</sup>. Other kinds of keys are not supported.
+
+  Values must have one of the following types: Boolean, Number, Vector, String,
+  `Datatype.SharedTable`, or a serializable data type. The ability to store a
+  `Datatype.SharedTable` as a value in another `Datatype.SharedTable` permits
+  the construction of nested and recursive data structures.
+
+  `Datatype.SharedTable` objects are distinct and different
+  `Datatype.SharedTable` objects never compare equal, even if they have contents
+  that would compare equal.
+
+  Like a Luau table, a `Datatype.SharedTable` object may be frozen, in which
+  case it is read-only. An attempt to modify a frozen `Datatype.SharedTable`
+  will raise an error. A frozen `Datatype.SharedTable` can be created by first
+  creating a (non-frozen, modifiable) `Datatype.SharedTable` with the desired
+  contents, and then calling `Datatype.SharedTable.cloneAndFreeze()` to create a
+  frozen clone of it.
+code_samples:
+  - SharedTable-ElementAccess
+  - SharedTable-ElementIteration
+tags: []
+deprecation_message: ''
+constructors:
+  - name: SharedTable.new
+    summary: Returns a new, empty `Datatype.SharedTable`.
+    description: |
+      Returns a new, empty `Datatype.SharedTable`.
+
+      ```lua
+      local st = SharedTable.new()
+      ```
+    parameters: []
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.new
+    summary: |
+      Returns a new `Datatype.SharedTable` containing elements equivalent to
+      those in the provided Luau table.
+    description: |
+      Returns a new `Datatype.SharedTable` containing elements equivalent to
+      those in the provided Luau table.
+
+      If the provided Luau table contains any keys or values that cannot be
+      stored in a `Datatype.SharedTable`, construction of the
+      `Datatype.SharedTable` fails.  See the summary at the top of this page for
+      a list of types of objects that can be stored in a `Datatype.SharedTable`.
+      If the Luau table contains any table as a value, that table is converted
+      into a new `Datatype.SharedTable`.
+
+      ```lua
+      local t = {}
+      t.x = 1
+      t.y = 2
+      t.z = {"a", "b", "c"}
+
+      local st = SharedTable.new(t)
+      assert(st.x == 1)
+      assert(st.y == 2)
+      assert(st.z[1] == "a")
+      assert(st.z[2] == "b")
+      assert(st.z[3] == "c")
+      ```
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The Luau table whose elements are to be stored in the new
+          `Datatype.SharedTable`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties: []
+methods: []
+functions:
+  - name: SharedTable.clear
+    summary: |
+      Removes all of the elements from the `Datatype.SharedTable`.
+    description: |
+      Atomically removes all of the elements from a `Datatype.SharedTable`.
+
+      If the `Datatype.SharedTable` is frozen, the operation fails and an error
+      will be raised.
+
+      ```lua
+      local st = SharedTable.new({"a", "b", "c"})
+      assert(SharedTable.size(st) == 3)
+
+      SharedTable.clear(st)
+      assert(SharedTable.size(st) == 0)
+      ```
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` to clear.
+    returns:
+      - type: void
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.clone
+    summary: |
+      Creates and returns a clone of the provided `Datatype.SharedTable`.
+    description: |
+      Creates a clone of a `Datatype.SharedTable` and returns the clone.
+
+      If the optional `deep` argument is not present, or if it is present and
+      its value is `false`, then a shallow clone is created. A shallow clone
+      copies only the top-level `Datatype.SharedTable` object. If any value in
+      the `Datatype.SharedTable` itself is a `Datatype.SharedTable`, then both
+      the original `Datatype.SharedTable` and the clone `Datatype.SharedTable`
+      will refer to the same `Datatype.SharedTable`.
+
+      The shallow clone operation is atomic, so the clone `Datatype.SharedTable`
+      will contain a consistent snapshot of the state in the original
+      `Datatype.SharedTable`, even if it is being modified concurrently from
+      other scripts.
+
+      If the optional `deep` argument is present and its value is `true`, then a
+      deep clone is created. A deep clone recursively copies a structure of
+      `Datatype.SharedTable` objects, such that there is no state shared between
+      the original `Datatype.SharedTable` and the clone.
+
+      The clone of each `Datatype.SharedTable` within the graph of
+      `Datatype.SharedTable` objects is atomic, but the deep clone as a whole is
+      not atomic. Thus, the clone of each `Datatype.SharedTable` within the
+      graph will contain a consistent snapshot of the state of the original
+      `Datatype.SharedTable` object from which it was cloned, but the states of
+      different `Datatype.SharedTable` objects may be inconsistent if the graph
+      is being modified concurrently from other scripts.
+
+      The `Datatype.SharedTable` object(s) being cloned may be frozen
+      (read-only) or not. Regardless, the newly created clones are _not_ frozen
+      (and are thus modifiable). To create frozen clones, use the
+      `Datatype.SharedTable.cloneAndFreeze` function.
+
+      To illustrate the difference between a shallow clone and a deep clone,
+      consider the following samples. This first sample creates a shallow clone
+      and the second creates a deep clone.
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` object to clone.
+      - name: deep
+        type: boolean?
+        default: false
+        summary: |
+          Whether to create a deep clone (`true`) or a shallow clone (`false`).
+    returns:
+      - type: SharedTable
+        summary: ''
+    code_samples:
+      - SharedTable-ShallowClone
+      - SharedTable-DeepClone
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.cloneAndFreeze
+    summary: |
+      Creates and returns a frozen (read-only) clone of the provided
+      `Datatype.SharedTable`.
+    description: |
+      Creates a frozen (read-only) clone of a `Datatype.SharedTable` and returns
+      the clone. The behavior of this function is the same as the behavior of
+      clone, except that the clone is frozen.
+
+      If a deep clone is requested, then all of the cloned
+      `Datatype.SharedTable` objects are frozen.
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The SharedTable object to clone.
+      - name: deep
+        type: boolean?
+        default: false
+        summary: |
+          Whether to create a deep clone (`true`) or a shallow clone (`false`).
+    returns:
+      - type: SharedTable
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.increment
+    summary: |
+      Adds `delta` to the value with the provided key and returns the original
+      value.
+    description: |
+      Atomically increments the value of an element. An element with the
+      specified key must exist in the `Datatype.SharedTable`, and it must be of
+      type `number`. The specified `delta` is added to the value, and the
+      original value is returned.
+
+      The `SharedTable.update` function can also be used for this purpose; this
+      `increment` function exists for convenience and performance (in general,
+      `increment` is much faster than `update`, so it should be preferred where
+      possible). The following two function calls have the same effect:
+
+      ```lua
+      local st = SharedTable.new()
+      st["x"] = 1
+
+      local oldValue = SharedTable.increment(st, "x", 1)
+
+      SharedTable.update(st, "x", function(v)
+          oldValue = v
+          return v + 1
+      end)
+      ```
+
+      If the `Datatype.SharedTable` is frozen, the operation fails and an error
+      will be raised.
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` object to be updated.
+      - name: key
+        type: string | number
+        default:
+        summary: |
+          The key of the element in the `Datatype.SharedTable` object to be
+          updated.
+      - name: delta
+        type: number
+        default:
+        summary: |
+          The value to be added to the element in the `Datatype.SharedTable`.
+    returns:
+      - type: number
+        summary: |
+          The original value of the element, before `delta` was added to it.
+    code_samples:
+      - SharedTable-Increment
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.isFrozen
+    summary: |
+      Returns `true` if the `Datatype.SharedTable` is frozen (read-only).
+    description: |
+      Returns `true` if the `Datatype.SharedTable` is frozen (read-only).
+
+      ```lua
+      local st1 = SharedTable.new({"a", "b", "c"})
+      assert(not SharedTable.isFrozen(st1))
+
+      local st2 = SharedTable.cloneAndFreeze(st1)
+      assert(SharedTable.isFrozen(st2))
+      ```
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` object whose frozen state is to be queried.
+    returns:
+      - type: boolean
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.size
+    summary: |
+      Returns the number of elements stored in the `Datatype.SharedTable`.
+    description: |
+      Returns the number of elements stored in the SharedTable. Note that if
+      other scripts are concurrently modifying the SharedTable, the returned
+      size may no longer be correct after it is returned, since other scripts
+      may have added or removed elements from the SharedTable.
+
+      ```lua
+      local st = SharedTable.new({"a", "b", "c"})
+      assert(SharedTable.size(st) == 3)
+
+      st[2] = nil
+      assert(SharedTable.size(st) == 2)
+      ```
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` object whose size is to be queried.
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SharedTable.update
+    summary: |
+      Updates the value with the provided key via the provided update function.
+    description: |
+      Atomically updates the value of an element.
+
+      When a `Datatype.SharedTable` is accessed concurrently from scripts
+      running in different execution contexts, it is possible for their accesses
+      to interleave unpredictably. Because of this, code like the following is
+      generally incorrect, because the value may have changed between the read
+      on the first line and the update on the second line:
+
+      ```lua
+      local oldValue = st["x"]
+      st["x"] = oldValue .. ",x"
+      ```
+
+      The update function makes it possible to perform an atomic update to an
+      element. It takes a function that it will call with the current value of
+      the element. The function can then compute and return the new value. Note
+      that the function may be called multiple times if the
+      `Datatype.SharedTable` is being concurrently modified from other scripts.
+
+      If the `Datatype.SharedTable` is frozen, the operation fails and an error
+      will be raised.
+    parameters:
+      - name: st
+        type: SharedTable
+        default:
+        summary: |
+          The `Datatype.SharedTable` object to be updated.
+      - name: key
+        type: string | number
+        default:
+        summary: |
+          The key of the element in the `Datatype.SharedTable` object to be
+          updated.
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function that will be called to compute the new value for the
+          element.
+    returns:
+      - type: void
+        summary: ''
+    code_samples:
+      - SharedTable-Update
+    tags: []
+    deprecation_message: ''
+math_operations: []

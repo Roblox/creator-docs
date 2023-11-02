@@ -1,0 +1,320 @@
+name: ReflectionMetadataItem
+type: class
+category:
+memory_category: Instances
+summary: |
+  Acts as abstract properties for generic information about Classes, Members,
+  Enums, and EnumItems.
+description: |
+  Acts as abstract properties for generic information about Classes, Members,
+  Enums, and EnumItems.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: ReflectionMetadataItem.Browsable
+    summary: |
+      Whether or not this can be seen in studio.
+    description: |
+      When this value is true, it means that this property/class can be seen in
+      Studio, e.g. in the explorer.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.ClassCategory
+    summary: |
+      Describes the category of this class.
+    description: |
+      Describes the category of this class.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.ClientOnly
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.Constraint
+    summary: |
+      Describes a constraint for a single-argument function whose argument type
+      is a `Class.Instance.ClassName`.
+    description: |
+      Describes a constraint for a single-argument function whose argument type
+      is a `Class.Instance.ClassName`. Currently there are two constraints
+      available:
+
+      <table>
+      <tbody><tr>
+      <th>Constraint</th>
+      <th>Description</th>
+      </tr>
+      <tr>
+      <td>isScriptCreatable</td>
+      <td>The specified class must be creatable with Instance.new</td>
+      </tr>
+      <tr>
+      <td>isService</td>
+      <td>The specified class must be a service.</td>
+      </tr>
+      </tbody></table>
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.Deprecated
+    summary: |
+      Whether or not this item is deprecated.
+    description: |
+      When an object is deprecated, it should not be used anymore for new
+      scripts.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.EditingDisabled
+    summary: |
+      Toggles whether this property can be edited from the Properties window.
+    description: |
+      Toggles whether this property can be edited from the Properties window.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.EditorType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.FFlag
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.IsBackend
+    summary: |
+      Vague value for showing if this depends on backend stuff.
+    description: |
+      This should determine if a method needs to use stuff on the Roblox main
+      servers. This property isn't applied where it should be, though.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.PropertyOrder
+    summary: ''
+    description: ''
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.ScriptContext
+    summary: |
+      Describes the context where this member can be used. If set to "Server",
+      this member will not be available to auto fill when editing a
+      `Class.LocalScript`. If set to "Client", this member will not be available
+      to auto fill when editing a `Class.Script`.
+    description: |
+      Describes the context where this member can be used. If set to
+      <a href="../../../luau/strings.md">"Server"</a>, this member will not be
+      available to auto fill when editing a `Class.LocalScript`. If set to
+      <a href="../../../luau/strings.md">"Client"</a>, this member will not be
+      available to auto fill when editing a `Class.Script`.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.ServerOnly
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.SliderScaling
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.UIMaximum
+    summary: |
+      The maximum value of this property. Used with
+      `Class.ReflectionMetadataItem.UIMinimum` to control the slider bar of this
+      property in the `Properties` window.
+    description: |
+      The maximum value of this property. Used with
+      `Class.ReflectionMetadataItem.UIMinimum` to control the slider bar of this
+      property in the `Properties` window.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.UIMinimum
+    summary: |
+      The minimum value of this property. Used with
+      `Class.ReflectionMetadataItem.UIMaximum` to control the slider bar of this
+      property in the `Properties` window.
+    description: |
+      The minimum value of this property. Used with
+      `Class.ReflectionMetadataItem.UIMaximum` to control the slider bar of this
+      property in the `Properties` window.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReflectionMetadataItem.UINumTicks
+    summary: |
+      The number of potential values the property's slider bar can be set to,
+      `Class.ReflectionMetadataItem.UIMinimum` and
+      `Class.ReflectionMetadataItem.UIMaximum`.
+    description: |
+      The number of potential values the property's slider bar can be set to,
+      `Class.ReflectionMetadataItem.UIMinimum` and
+      `Class.ReflectionMetadataItem.UIMaximum`.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Reflection
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

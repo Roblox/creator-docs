@@ -1,0 +1,100 @@
+name: CellMaterial
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: |
+  This enum is deprecated. It used to work with the legacy `Class.Terrain`
+  engine to set the material of terrain cells.
+items:
+  - name: Empty
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Grass
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Sand
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Brick
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Granite
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Asphalt
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Iron
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Aluminum
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Gold
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: WoodPlank
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: WoodLog
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Gravel
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: CinderBlock
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: MossyStone
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Cement
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: RedPlastic
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: BluePlastic
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: Water
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''

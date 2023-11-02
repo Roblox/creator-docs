@@ -1,0 +1,65 @@
+name: CameraType
+type: enum
+summary: |
+  Describes the camera behavior mode if using the default PlayerScripts.
+description: |
+  The CameraType Enum is used in `Class.Camera.CameraType` to set the behavior
+  of the Camera object.
+
+  Attach, Watch, Track, and Follow all require a valid
+  `Class.Camera.CameraSubject` to work properly.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Fixed
+    summary: |
+      Camera is stationary.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Attach
+    summary: |
+      Camera moves with the subject at a fixed offset and will rotate as the
+      subject rotates.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Watch
+    summary: |
+      Camera is stationary but will rotate to keep the subject in the center of
+      the screen.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Track
+    summary: |
+      Camera moves with the subject but does not rotate automatically.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Follow
+    summary: |
+      Camera moves with the subject and rotates to keep the subject in the
+      center.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    summary: |
+      Default mode used by Roblox Core Scripts.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    summary: |
+      No default behavior. Used when developers need to script custom behavior.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Orbital
+    summary: |
+      The camera has a fixed Y position, but can be rotated around the player.
+    value: 7
+    tags: []
+    deprecation_message: ''
