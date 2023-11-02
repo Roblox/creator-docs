@@ -20,4 +20,4 @@ For examples of other schemas using the JSON Schema, see [schemastore.org](https
 
 To use the schemas while editing in VS Code, install [YAML extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) by Red Hat.
 
-Each schema is associated with file paths to `.yaml` files in [.vscode/settings.json](../../.vscode/settings.json). If you create a new schema, associate it with file paths by following the examples in the [README.md for vscode-yaml](https://github.com/redhat-developer/vscode-yaml#associating-schemas).
+Each schema is associated with file paths to `.yaml` files in [.vscode/settings.json](../../../.vscode/settings.json). If you create a new schema, associate it with file paths by following the examples in the [README.md for vscode-yaml](https://github.com/redhat-developer/vscode-yaml#associating-schemas).
