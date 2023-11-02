@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$comment": "Schema for libraries.",
+  "definitions": {
+    "code_samples": {
+      "type": ["array", "null"],
+      "description": "A list of code samples for the item. String list.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "returns": {
+      "type": ["array", "null"],
+      "description": "Returns of this item. Each entry has the same keys. Table list. Automated.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The data type of the return. String. Automated."
+          },
+          "summary": {
+            "type": "string",
+            "description": "A single sentence definition of the return. String."
+          }
+        },
+        "required": ["type", "summary"]
+      }
+    },
+    "tags": {
+      "type": ["array", "null"],
+      "description": "Tags for this item, such as Deprecated. String list. Automated.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Hidden",
+          "NotReplicated",
+          "Deprecated",
+          "ReadOnly",
+          "NotScriptable",
+          "NotBrowsable",
+          "NotCreatable",
+          "CanYield",
+          "Yields",
+          "Service",
+          "Settings",
+          "UserSettings",
+          "CustomLuaState",
+          "PlayerReplicated"
+        ]
+      }
+    }
+  },
+  "properties": {
+    "name": {
+      "$comment": "The name of the library.",
+      "type": "string",
+      "description": "The name of the library. Determines the name of the page. Used for automatic cross-linking. String. Automated."
+    },
+    "type": {
+      "type": "string",
+      "description": "the type of the API (class, datatype, enum, global, library). Automated.",
+      "enum": ["library"]
+    },
+    "summary": {
+      "type": "string",
+      "description": "A short description of the library."
+    },
+    "description": {
+      "$comment": "Full description of the library to appear on the website.",
+      "type": "string",
+      "description": "Longer description of how the library operates. Markdown."
+    },
+    "code_samples": {
+      "type": ["array", "null"],
+      "description": "List of code samples for library. String list.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "properties": {
+      "type": ["array", "null"],
+      "description": "List of properties. Each entry has the same keys. Table list. Automated.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the function. String. Automated."
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the property."
+          },
+          "summary": {
+            "type": "string",
+            "description": "A single sentence overview of the function. String."
+          },
+          "description": {
+            "type": "string",
+            "description": "Longer description of the function. String."
+          },
+          "tags": {
+            "$ref": "#/definitions/tags"
+          },
+          "code_samples": {
+            "$ref": "#/definitions/code_samples"
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "summary",
+          "description",
+          "tags",
+          "code_samples"
+        ]
+      }
+    },
+    "functions": {
+      "type": ["array", "null"],
+      "description": "List of functions. Each entry has the same keys. Table list. Automated.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the function. String. Automated."
+          },
+          "summary": {
+            "type": "string",
+            "description": "A single sentence overview of the function. String."
+          },
+          "description": {
+            "type": "string",
+            "description": "Longer description of the function. String."
+          },
+          "parameters": {
+            "type": ["array", "null"],
+            "description": "Parameters of the function. Table list. Automated.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Name of the parameter. String. Automated."
+                },
+                "type": {
+                  "type": "string",
+                  "description": "The data type of the parameter. String. Automated."
+                },
+                "default": {
+                  "type": ["boolean", "number", "null", "object", "string"],
+                  "description": "The default value of the parameter. Any. Automated."
+                },
+                "summary": {
+                  "type": "string",
+                  "description": "The single sentence definition of the parameter. String."
+                }
+              },
+              "required": ["name", "type", "default", "summary"]
+            }
+          },
+          "returns": {
+            "$ref": "#/definitions/returns"
+          },
+          "tags": {
+            "$ref": "#/definitions/tags"
+          },
+          "code_samples": {
+            "$ref": "#/definitions/code_samples"
+          }
+        },
+        "required": [
+          "name",
+          "summary",
+          "description",
+          "parameters",
+          "returns",
+          "tags",
+          "code_samples"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "summary",
+    "description",
+    "code_samples",
+    "functions",
+    "properties"
+  ]
+}

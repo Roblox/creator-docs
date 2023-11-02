@@ -1,0 +1,116 @@
+name: SampleDataType
+type: datatype
+summary: |-
+  Sample summary.
+description: |-
+  Sample description.
+code_samples:
+  - sample1
+tags: []
+deprecation_message: ''
+constructors:
+  - name: new
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    parameters:
+      - name: pos
+        type: Vector3
+        default:
+        summary: |-
+          Sample summary.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants:
+  - name: Constant1
+    type: undefined
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    code_samples:
+    tags: []
+    deprecation_message: ''
+  - name: Constant1
+    type: undefined
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    code_samples:
+    tags: ['Deprecated']
+    deprecation_message: 'Use Constant1 instead.'
+
+properties:
+  - name: Property1
+    type: undefined
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+
+methods:
+  - name: Method1
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    parameters:
+      - name: p1
+        type: DataType
+        default:
+        summary: |-
+          Sample summary.
+      - name: p2
+        type: number
+        default:
+        summary: |-
+          Sample summary.
+    returns:
+      - type: string
+        summary: Sample summary.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+
+functions:
+  - name: Function1
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    parameters:
+      - name: p1
+        type: DataType
+        default:
+        summary: |-
+          Sample summary.
+      - name: p2
+        type: number
+        default:
+        summary: |-
+          Sample summary.s
+    returns:
+      - type: string
+        summary: Sample summary.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+
+math_operations:
+  - operation: '*'
+    summary: |-
+      Sample summary.
+    description: |-
+      Sample description.
+    type_a: DataType
+    type_b: DataType
+    return_type: DataType
+    code_samples: []
+    tags: []
+    deprecation_message: ''
