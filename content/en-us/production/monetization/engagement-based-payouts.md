@@ -15,11 +15,8 @@ To encourage Premium subscriber growth and increase your potential to earn engag
 
 Payout data can provide vital feedback to help you understand what factors drive Premium subscribers to your experiences.
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Hover over the desired experience, click the <span style={{fontWeight:"800"}}>&ctdot;</span> icon, and select **Developer&nbsp;Stats**.
-
-   <img src="../../assets/creator-dashboard/Experience-Dropdown-Developer-Stats.png" width="400" alt="Developer Stats option in an experience's options menu on Creator Dashboard" />
-
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click the desired experience to view its details page.
+1. In the left column, under **Analytics**, select **Developer&nbsp;Stats**.
 1. In the top navigation, click the **ENGAGEMENT-BASED PAYOUTS** tab.
 
    <img src="../../assets/creator-dashboard/Developer-Stats-Tabs-Premium.png" width="780" alt="Engagement-based payouts tab on Developer Stats page of Creator Dashboard" />

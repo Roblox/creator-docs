@@ -1,0 +1,33 @@
+name: VRSessionState
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Undefined
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Idle
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Visible
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Focused
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Stopping
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''

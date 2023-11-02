@@ -1,16 +1,13 @@
 ---
 title: Open Cloud API Reference
 description: Get comprehensive API reference documentation for the entire Open Cloud platform.
-banner:
-  title: Open Cloud API Reference
-  subtitle: Manage Roblox resources from the web.
-  backgroundUrl: /assets/landing/cloud/banner.jpg
 ---
+
+**Manage Roblox resources from the web.**
 
 Open Cloud APIs are a set of resources and methods that let you build tools and
 apps to access Roblox resources with standard web APIs. Open Cloud APIs are
-RESTful, support HTTPS requests, and support [API
-Key](../open-cloud/api-keys.md) and
+RESTful, support HTTPS requests, and support [API Key](../open-cloud/api-keys.md) and
 [OAuth 2.0](../open-cloud/oauth2-overview.md) authentication.
 
 The **Common Components** section of the reference documentation describe

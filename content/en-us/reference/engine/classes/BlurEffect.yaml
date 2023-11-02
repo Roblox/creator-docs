@@ -1,0 +1,47 @@
+name: BlurEffect
+type: class
+category: Post Processing
+memory_category: Instances
+summary: |
+  Applies a blur to the entire game world.
+description: |
+  The **BlurEffect** applies a gaussian blur to the entire rendered game world.
+  The strength of the blur is controlled by the `Class.BlurEffect.Size`. Only
+  one **BlurEffect** can be applied at once (the instance with the greatest
+  `Class.BlurEffect.Size|Size` takes priority).
+
+  Like other post-processing effects, **BlurEffect** will only work while
+  `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting` or
+  `Class.Workspace.CurrentCamera`. Also, it may render differently on low-end
+  devices and/or depending on your Studio settings (see the **Quality Level**
+  settings in **Rendering** &rarr; **Performance**).
+
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+code_samples:
+inherits:
+  - PostEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: BlurEffect.Size
+    summary: |
+      Determines the blur radius.
+    description: |
+      Size controls the blur radius, measured in pixels. The larger the size,
+      the blurrier the screen will become.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

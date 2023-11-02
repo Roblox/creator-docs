@@ -1,0 +1,41 @@
+name: FriendStatus
+type: enum
+summary: ''
+description: |
+  Determines the friendship status between two players. This is used by the
+  in-game friend request system.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: |
+      The friendship status of two players is unknown.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: NotFriend
+    summary: |
+      Two players are not friends.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Friend
+    summary: |
+      Two players are friends.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: FriendRequestSent
+    summary: |
+      At least one of two players has sent a friend request to the other player.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: FriendRequestReceived
+    summary: |
+      At least one of two players has received a friend request sent by the
+      other player.
+    value: 4
+    tags: []
+    deprecation_message: ''

@@ -21,16 +21,13 @@ When you're creating an image to use for your Developer Product, consider the fo
 
 To create a new Developer Product:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the experience you want to create a Developer Product for. The experience's **Overview** page displays.
 1. Click on the experience you want to create a Developer Product for. The experience's **Overview** page displays.
 1. In the left-hand navigation, select **Associated Items**. The **Associated Items** page displays.
 
    <img src="../../assets/monetization/game-passes/Associated-Items.jpg" width="30%" />
 
 1. In the horizontal navigation, select **DEVELOPER PRODUCTS**. All Developer Products for that experience display.
-
-   <img src="../../assets/monetization/developer-products/Associated-Items-Developer-Products.jpg" width="50%" />
-
 1. Click the **CREATE A DEVELOPER PRODUCT** button. The **Create a Developer Product** page displays.
 1. Click the **UPLOAD IMAGE** button. A file browser displays.
 1. Select the image you want to display as the icon, then click the **Open** button.
@@ -55,7 +52,7 @@ A Developer Product ID is the unique identifier of a Developer Product. You need
 To locate a Developer Product ID:
 
 1. Navigate to the **Developer Product** section of an experience's **Associated Items** page.
-1. Hover over a Developer Product thumbnail and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+1. Hover over a Developer Product thumbnail and click the **&ctdot;** button. A contextual menu displays.
 1. Select **Copy Asset ID**. The Developer Product ID copies to your clipboard.
 
    <img src="../../assets/monetization/developer-products/Copy-AssetID-Developer-Products.jpg" width="50%" />
@@ -103,8 +100,11 @@ local productFunctions = {}
 
 -- ProductId 123123 brings the user back to full health
 productFunctions[123123] = function(receipt, player)
-	if player.Character and player.Character:FindFirstChild("Humanoid") then
-	player.Character.Humanoid.Health = player.Character.Humanoid.MaxHealth
+	local character = player.Character
+	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
+
+	if humanoid then
+		humanoid.Health = humanoid.MaxHealth
 		-- Indicate a successful purchase
 		return true
 	end
@@ -188,8 +188,8 @@ local success, developerProducts = pcall(function()
 end)
 
 if developerProducts then
-	for _, developerProduct in pairs(developerProducts) do
-		for field, value in pairs(developerProduct) do
+	for _, developerProduct in developerProducts do
+		for field, value in developerProduct do
 			print(field .. ": " .. value)
 		end
 		print(" ")

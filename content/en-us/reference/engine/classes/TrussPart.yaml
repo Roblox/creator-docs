@@ -1,0 +1,46 @@
+name: TrussPart
+type: class
+category: Building
+memory_category: Instances
+summary: |
+  Truss parts are the same as `Class.Part|Parts`, except that they have a
+  different visual style, resize differently and characters are able to climb
+  them.
+description: |
+  Truss parts are the same as `Class.Part|Parts`, except that they have a
+  different visual style, resize differently and characters are able to climb
+  them. The smallest size it can be is 2x2x2 studs.
+
+  ![A Truss beam as it appears in game](/assets/legacy/TrussPart.png)
+
+  The `Class.TrussPart.Style|style` of a truss beam can be set to change its
+  appearance.
+code_samples:
+inherits:
+  - BasePart
+tags: []
+deprecation_message: ''
+properties:
+  - name: TrussPart.Style
+    summary: |
+      Sets what the truss looks like. There are currently three different
+      styles.
+    description: |
+      Sets what the truss looks like. There are currently three different
+      styles.
+    code_samples:
+    type: Style
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Part
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

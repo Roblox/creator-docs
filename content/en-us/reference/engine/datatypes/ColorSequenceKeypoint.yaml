@@ -1,0 +1,48 @@
+name: ColorSequenceKeypoint
+type: datatype
+summary: |
+  A color and time value that represents a keypoint in a
+  `Datatype.ColorSequence`.
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: ColorSequenceKeypoint.new
+    summary: Returns a ColorSequenceKeypoint from the given time and color.
+    description: Creates a keypoint with a specified time and color.
+    parameters:
+      - name: time
+        type: number
+        default:
+        summary: ''
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: ColorSequenceKeypoint.Time
+    type: number
+    summary: |
+      The relative time at which the keypoint is located.
+    description: |
+      The relative time at which the keypoint is located.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: ColorSequenceKeypoint.Value
+    type: Color3
+    summary: |
+      The Color3 value of the keypoint.
+    description: |
+      The Color3 value of the keypoint.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

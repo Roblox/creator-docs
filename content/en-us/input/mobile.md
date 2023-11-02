@@ -1,9 +1,9 @@
 ---
-title: Mobile
+title: Mobile Input
 description: Explains Roblox support for mobile devices.
 ---
 
-Over half of all Roblox sessions are played on mobile devices so it is important to consider cross-platform accessibility when designing your experience for a wide audience. You should aim to create an ideal cross-platform experience that supports a variety of input devices, including [mouse and keyboard inputs](./mouse-and-keyboard.md) and [gamepad](./gamepad.md).
+Over half of all Roblox sessions are played on mobile devices, so it's important to consider cross-platform accessibility when designing an experience for a wide audience. You should aim to support a variety of input devices, including [mouse and keyboard inputs](../input/mouse-and-keyboard.md) and [gamepad](../input/gamepad.md).
 
 When designing a mobile experience, consider the [device orientation](#device-orientation) that you intend user's to use in your experience, then implement your inputs with `Class.ContextActionService` to perform the following mobile-related input tasks:
 
@@ -114,7 +114,7 @@ local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 print(playerGUI.CurrentScreenOrientation)
 ```
 
-## Movement Modes
+## Character Movement Modes
 
 Roblox offers several `Class.StarterPlayer` properties you can set to change how users on mobile devices can move through your experience.
 
@@ -267,7 +267,7 @@ Use the following sample code to set a button's position with the `Class.Context
 ContextActionService:SetPosition("Interact", UDim2.new(1, -70, 0, 10))
 ```
 
-## Context Dependent Inputs
+## Context-Dependent Inputs
 
 When developing for mobile devices you may often want to change what a single button does based on the context. Since screen space on mobile devices limited, use contextual buttons that perform different actions based on what the character is able to do.
 

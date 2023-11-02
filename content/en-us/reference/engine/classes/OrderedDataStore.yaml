@@ -1,0 +1,74 @@
+name: OrderedDataStore
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  A GlobalDataStore that also allows for ordered data store entries.
+description: |
+  A **OrderedDataStore** is essentially a `Class.GlobalDataStore` with the
+  exception that stored values must be **positive integers**. It exposes a
+  method `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()` which allows
+  inspection of the entries in sorted order using a `Class.DataStorePages`
+  object.
+
+  See [Data Stores](../../../cloud-services/datastores.md) for an overview on
+  using ordered data stores.
+code_samples:
+  - OrderedDataStore-Basics
+inherits:
+  - GlobalDataStore
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: OrderedDataStore:GetSortedAsync
+    summary: |
+      Returns a `Class.DataStorePages` object.
+    description: |
+      Returns a `Class.DataStorePages` object. The sort order is determined by
+      **ascending**, the length of each page by **pageSize**, and
+      **minValue**/**maxValue** are optional parameters which filter the
+      results.
+
+      See [Data Stores](../../../cloud-services/datastores.md) for request
+      limits and descriptions of the error codes.
+    code_samples:
+    parameters:
+      - name: ascending
+        type: bool
+        default:
+        summary: |
+          A boolean indicating whether the returned data pages are in ascending
+          order.
+      - name: pagesize
+        type: int
+        default:
+        summary: |
+          The length of each page. By default is 50. The max allowed value
+          is 100.
+      - name: minValue
+        type: Variant
+        default:
+        summary: |
+          Optional parameter. If set, data pages with a value less than than
+          **minValue** will be excluded.
+      - name: maxValue
+        type: Variant
+        default:
+        summary: |
+          Optional parameter. If set, data pages with a value greater than
+          **maxValue** will be excluded.
+    returns:
+      - type: Instance
+        summary: |
+          A sorted `Class.DataStorePages` object based on the provided
+          arguments.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

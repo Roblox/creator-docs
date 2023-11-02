@@ -84,7 +84,7 @@ To **unequip** any item, click it again in the selection column along the left s
 
 #### Layering Clothing
 
-For [layered clothing](../art/accessories/layered-clothing.md) items such as **Shirts** or **Jackets**, dragging them up or down in the "equipped" column changes their layering order. Layered clothing items are sorted to the top of the column.
+For layered accessory items such as **Shirts** or **Jackets**, dragging them up or down in the "equipped" column changes their layering order. Layered clothing items are sorted to the top of the column.
 
 <GridContainer numColumns="2">
 	<figure>

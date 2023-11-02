@@ -1,0 +1,325 @@
+name: UIPageLayout
+type: class
+category: GUI
+memory_category: Instances
+summary: ''
+description: |
+  Creates a paged viewing window, like the home screen of a mobile device. You
+  can use a UIPageLayout by parenting it to a GuiObject. The UIPageLayout will
+  then apply itself to all of its GuiObject siblings.
+code_samples:
+inherits:
+  - UIGridStyleLayout
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIPageLayout.Animated
+    summary: |
+      Whether or not to animate transitions between pages.
+    description: |
+      Whether or not to animate transitions between pages.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.Circular
+    summary: |
+      Whether or not the page layout wraps around at the ends.
+    description: |
+      Whether or not the page layout wraps around at the ends.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.CurrentPage
+    summary: |
+      The page that is either currently being displayed or is the target of the
+      current animation.
+    description: |
+      The page that is either currently being displayed or is the target of the
+      current animation.
+    code_samples:
+    type: GuiObject
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: UIPageLayout.EasingDirection
+    summary: |
+      The easing direction to use when performing an animation.
+    description: |
+      The easing direction to use when performing an animation.
+    code_samples:
+    type: EasingDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.EasingStyle
+    summary: |
+      The easing style to use when performing an animation.
+    description: |
+      The easing style to use when performing an animation.
+    code_samples:
+    type: EasingStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.GamepadInputEnabled
+    summary: |
+      Controls the overrides of `NextSelection{Up, Down, Left, Right}`. Defaults
+      to true.
+    description: |
+      Controls the overrides of `NextSelection{Up,Down,Left,Right}`. Defaults to
+      true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.Padding
+    summary: |
+      Determines the amount that pages are separated from each other by.
+    description: |
+      Determines the amount that pages are separated from each other by. Can be
+      set either using scale (Percentage of parent's size in the current
+      direction) or offset (a static spacing value, similar to pixel size).
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.ScrollWheelInputEnabled
+    summary: |
+      Controls the use of scroll wheel, in case that it is intended for
+      something else. Defaults to true.
+    description: |
+      Controls the use of scroll wheel, in case that it is intended for
+      something else. Defaults to true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.TouchInputEnabled
+    summary: |
+      Controls touch scrolling, in case this is a non-interactive layout.
+      Defaults to true.
+    description: |
+      Controls touch scrolling, in case this is a non-interactive layout.
+      Defaults to true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPageLayout.TweenTime
+    summary: |
+      The length of the animation.
+    description: |
+      The length of the animation.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: UIPageLayout:JumpTo
+    summary: |
+      If the `page` is in the UIPageLayout, then it sets
+      `Class.UIPageLayout.CurrentPage` to it and animates to it. If the circular
+      layout is enabled, it will take the shortest path to this page.
+    description: |
+      If the `page` is in the UIPageLayout, then it sets
+      `Class.UIPageLayout.CurrentPage` to it and animates to it. If the circular
+      layout is enabled, it will take the shortest path to this page.
+    code_samples:
+    parameters:
+      - name: page
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIPageLayout:JumpToIndex
+    summary: |
+      If the index is `>= 0` and less than the size of the layout, this method
+      acts like `Class.UIPageLayout:JumpTo()`. If it's out of bounds and
+      circular is set, it will animate the full distance between the in-bounds
+      index of `Class.UIPageLayout.CurrentPage` and the new index.
+    description: |
+      If the index is `>= 0` and less than the size of the layout, this method
+      acts like `Class.UIPageLayout:JumpTo()`. If it's out of bounds and
+      circular is set, it will animate the full distance between the in-bounds
+      index of `Class.UIPageLayout.CurrentPage` and the new index.
+    code_samples:
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIPageLayout:Next
+    summary: |
+      Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
+      and animates to it, or does nothing if there isn't a next page.
+    description: |
+      Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
+      and animates to it, or does nothing if there isn't a next page.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIPageLayout:Previous
+    summary: |
+      Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
+      and animates to it, or does nothing if there isn't a previous page.
+    description: |
+      Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
+      and animates to it, or does nothing if there isn't a previous page.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: UIPageLayout.PageEnter
+    summary: |
+      Fires when a page comes into view, and is going to be rendered.
+    description: |
+      Fires when a page comes into view, and is going to be rendered.
+    code_samples:
+    parameters:
+      - name: page
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIPageLayout.PageLeave
+    summary: |
+      Fires when a page leaves view, and will not be rendered.
+    description: |
+      Fires when a page leaves view, and will not be rendered.
+    code_samples:
+    parameters:
+      - name: page
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIPageLayout.Stopped
+    summary: |
+      Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
+      without being canceled, and the view stops scrolling.
+    description: |
+      Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
+      without being canceled, and the view stops scrolling.
+    code_samples:
+    parameters:
+      - name: currentPage
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

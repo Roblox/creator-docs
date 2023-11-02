@@ -1,0 +1,31 @@
+name: LeftRight
+type: enum
+summary: |
+  The LeftRight Enum is used to set where the object is on the side of its
+  parent.
+description: |
+  The LeftRight Enum is used to set where the object is on the side of its
+  parent.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Left
+    summary: |
+      The object is on the left side of it's parent (x-axis).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Center
+    summary: |
+      The object is centered on the center of it's parent (x-axis), expanding
+      equally to the left and right of the parent's center.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Right
+    summary: |
+      The object is on the right side of it's parent (x-axis).
+    value: 2
+    tags: []
+    deprecation_message: ''

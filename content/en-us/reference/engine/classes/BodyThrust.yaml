@@ -1,0 +1,105 @@
+name: BodyThrust
+type: class
+category: Body Movers
+memory_category: Instances
+summary: |
+  Applies a constant force to an object at a specific point.
+description: |
+  The BodyThrust object applies (or exerts) a force relative to the part to
+  which it is parented at a specific location. It behaves similar to a
+  `Class.BodyForce`, except that this object's force applies at a specific point
+  (`Class.BodyThrust.Location`), allowing you to exert a [torque][1] (rotational
+  force). To apply a force dynamically so that a part maintains a constant
+  angular velocity, use a `Class.BodyAngularVelocity` instead. To apply a force
+  dynamically so that a part maintains a constant orientation (angular
+  position), use a `Class.BodyGyro`.
+code_samples:
+inherits:
+  - BodyMover
+tags:
+  - Deprecated
+deprecation_message: |
+  This object is deprecated and should not be used for new work. Use
+  `Class.VectorForce` instead.
+properties:
+  - name: BodyThrust.Force
+    summary: |
+      Determines the amount of force exerted on each axis relative to the part.
+    description: |
+      The Force property determines the amount of force exerted on each axis
+      relative to the part. Unlike `Class.BodyForce.Force`, this property is
+      relative to the part and not the world. The force is exerted at the
+      `Class.BodyThrust.Location|Location`, which is also relative to the part.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyThrust.Location
+    summary: |
+      Determines the relative position where the `Class.BodyThrust.Force|Force`
+      is exerted.
+    description: |
+      The Location property determines the relative offset from the center part
+      at which the `Class.BodyThrust.Force` is exerted. This is the primary
+      means for turning force into torque.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyThrust.force
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyThrust.Force` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyThrust.location
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyThrust.Location` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

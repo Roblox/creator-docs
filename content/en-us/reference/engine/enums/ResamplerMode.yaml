@@ -1,0 +1,22 @@
+name: ResamplerMode
+type: enum
+summary: |
+  Determines the image filtering used.
+description: |
+  Determines the image filtering used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Bilinear filtering of the four near pixels in the image.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Pixelated
+    summary: |
+      Nearest neighbor filtering of the closest pixel in the image.
+    value: 1
+    tags: []
+    deprecation_message: ''

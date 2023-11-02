@@ -1,0 +1,394 @@
+name: Roblox Globals
+type: global
+summary: |
+  Built-in functions and constants unique to Roblox.
+description: |
+  Roblox has several unique built-in functions and variables in its Lua
+  implementation. These are only found on Roblox and are not packaged by default
+  with Lua.
+code_samples:
+properties:
+  - name: Enum
+    type: Enums
+    summary: |
+      Contains all Enum objects.
+    description: |
+      A reference to the Enums data type, which stores all of the available
+      enums that can be used on Roblox.
+    tags:
+    code_samples:
+  - name: game
+    type: DataModel
+    summary: |
+      Refers to the DataModel singleton, the root instance of a place's
+      hierarchy.
+    description: |
+      A reference to the `Class.DataModel`, which is the root Instance of
+      Roblox's parent/child hierarchy.
+    tags:
+    code_samples:
+  - name: plugin
+    type: Plugin
+    summary: |
+      Refers to a Plugin singleton when the code is run in the context of a
+      Studio plugin.
+    description: |
+      A reference to the `Class.Plugin` object that represents the plugin being
+      ran from this `Class.Script`. This reference only exists in the context
+      where a script is executed as a plugin.
+    tags:
+    code_samples:
+  - name: shared
+    type: Array
+    summary: |
+      A table shared between all code running at the same execution context
+      level.
+    description: |
+      A table that is shared across all scripts that share the same execution
+      context level. This serves the exact same purpose as `_G`.
+    tags:
+    code_samples:
+  - name: script
+    type: LuaSourceContainer
+    summary: |
+      A reference to the LuaSourceContainer object (Script, LocalScript, or
+      ModuleScript) that is executing this code.
+    description: |
+      A reference to the script object that is executing the code you are
+      writing. It can be either a `Class.Script`, a `Class.LocalScript`, or a
+      `Class.ModuleScript` (and sometimes a `Class.CoreScript`). This variable
+      is not available when executing code from Roblox Studio's command bar.
+    tags:
+    code_samples:
+  - name: workspace
+    type: Workspace
+    summary: |
+      A reference to the Workspace service, which contains all of the physical
+      components of a place.
+    description: |
+      A reference to the `Class.Workspace` service, which contains all of the
+      physical components of a Roblox world.
+    tags:
+    code_samples:
+functions:
+  - name: delay
+    summary: |
+      Schedules a function to be called on the next Heartbeat after the given
+      duration (in seconds) has passed, with throttling.
+    description: |
+      Schedules a function to be executed after `delayTime` seconds have passed,
+      without yielding the current thread. This function allows multiple Lua
+      threads to be executed in parallel from the same stack. The delay will
+      have a minimum duration of 29 milliseconds, but this minimum may be higher
+      depending on the target framerate and various throttling conditions. If
+      the `delayTime` parameter is not specified, the minimum duration will be
+      used.
+    parameters:
+      - name: delayTime
+        type: number
+        default:
+        summary: |
+          The amount of time that this function will be queued before being
+          executed.
+      - name: callback
+        type: function
+        default:
+        summary: |
+          The function that will be executed once `delayTime` seconds have
+          passed.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: DebuggerManager
+    summary: |
+      Refers to the DebuggerManager, which acts as an interface for the Lua
+      debugger feature.
+    description: |
+      Returns the `Class.DebuggerManager` class, which acts as an interface for
+      Roblox's Lua debugger feature.
+    parameters:
+    returns:
+      - type: DebuggerManager
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: elapsedTime
+    summary: |
+      Returns the amount of time in seconds that the current instance of Roblox
+      has been running for.
+    description: |
+      Returns how much time has elapsed since the current instance of Roblox was
+      started. In Roblox Studio, this begins counting up from the moment Roblox
+      Studio starts running, not just when opening a place.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: gcinfo
+    summary: |
+      Returns the total memory heap size in kilobytes.
+    description: |
+      Returns the total memory heap size in kilobytes. The number reflects the
+      current heap consumption from the operating system perspective, which
+      fluctuates over time as garbage collector frees objects.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: PluginManager
+    summary: |
+      Refers to the PluginManager, a deprecated singleton that was previously
+      required to create plugins.
+    description: |
+      Returns the `Class.PluginManager` which is a deprecated singleton that was
+      previously required to create plugins. It still has applicable uses, such
+      as if you need to create a Plugin object from Roblox Studio's command bar.
+    parameters:
+    returns:
+      - type: PluginManager
+        summary: ''
+    tags:
+    code_samples:
+  - name: printidentity
+    summary: |
+      Prints "Current identity is X", where X corresponds to the current
+      thread's security context level.
+    description: |
+      Prints `Current identity is [ID]` to the output, where [ID] corresponds to
+      the current thread's security context level.
+    parameters:
+      - name: prefix
+        type: string
+        default: Current identity is
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: require
+    summary: |
+      Returns the value that was returned by the given ModuleScript, running it
+      if it has not been run yet.
+    description: |
+      Runs the supplied `Class.ModuleScript` if it has not been run already, and
+      returns what the ModuleScript returned (in both cases).
+
+      If the ModuleScript the user wants to use has been uploaded to Roblox
+      (with the instance's name being 'MainModule'), it can be loaded by using
+      the require function on the asset ID of the ModuleScript, though only on
+      the server.
+    parameters:
+      - name: module
+        type: ModuleScript
+        default:
+        summary: |
+          The ModuleScript that will be executed to retrieve the return value it
+          provides.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: settings
+    summary: |
+      Returns the GlobalSettings object, which can be used to access settings
+      objects that configure Roblox Studio's behavior.
+    description: |
+      Returns the `Class.GlobalSettings` object, which can be used to access the
+      settings objects that are used in Roblox Studio's settings menu.
+    parameters:
+    returns:
+      - type: GlobalSettings
+        summary: ''
+    tags:
+    code_samples:
+  - name: spawn
+    summary: |
+      Calls a function immediately through the engine scheduler, with
+      throttling.
+    description: |
+      Runs the specified callback function in a separate thread, without
+      yielding the current thread.
+
+      The function will be executed the next time Roblox's Task Scheduler runs
+      an update cycle. This delay will take at least 29 milliseconds but can
+      arbitrarily take longer, depending on the target framerate and various
+      throttling conditions.
+
+      The callback function is invoked with two arguments:
+
+      1. The first being the amount of time which elapsed from when spawn was
+         called to when the function was invoked.
+      2. The second being equivalent to elapsedTime() or roughly how long the
+         engine has been running.
+
+      ```lua
+      spawn(print) -- 0.0079617658390703 451.55683163643
+      ```
+    parameters:
+      - name: callback
+        type: function
+        default:
+        summary: |
+          The function that will be executed.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: stats
+    summary: |
+      Returns the Stats service.
+    description: |
+      Returns the `Class.Stats` service. It is preferred that developers use
+      `Class.ServiceProvider:GetService()` to retrieve it instead.
+    parameters:
+    returns:
+      - type: Stats
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: tick
+    summary: |
+      Returns the amount of time in seconds since the Unix epoch according to
+      this device's time.
+    description: |
+      Returns how much time has elapsed, in seconds, since the UNIX epoch, on
+      the current local session's computer. The UNIX epoch is represented by the
+      date January 1st, 1970.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: time
+    summary: |
+      Returns the amount of time in seconds that has elapsed since the current
+      game instance started running.
+    description: |
+      Returns the amount of time, in seconds, that has elapsed since the current
+      game instance started running. If the current game instance is not
+      running, this will be `0`.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: typeof
+    summary: |
+      Returns the type of the given object as a string, also supporting
+      Roblox-specific types (e.g. Vector3).
+    description: |
+      Returns the type of the object specified, as a string. This function is
+      more accurate than Lua's native `type` function, as it does not denote
+      Roblox-specific types as `userdata`.
+    parameters:
+      - name: object
+        type: Variant
+        default:
+        summary: |
+          The Lua type that will have its type checked.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: UserSettings
+    summary: |
+      Returns the UserSettings object, which is used to read information from
+      the current user's game menu settings.
+    description: |
+      Returns the `Class.UserSettings` object, which is used to read information
+      from the current user's game menu settings.
+    parameters:
+    returns:
+      - type: UserSettings
+        summary: ''
+    tags:
+    code_samples:
+  - name: version
+    summary: |
+      Returns the current version of Roblox as a string, which includes the
+      generation, version, patch and commit.
+    description: |
+      Returns the current version of Roblox as a string. The integers in the
+      version string are separated by periods, and each integers represent the
+      following, in order:
+
+      - Generation - The current generation of the application shell that is
+        hosting the client.
+      - Version - The current release version of Roblox.
+      - Patch - The current patch number for this version of Roblox.
+      - Commit - The ID of the last internal commit that was accepted into this
+        version of the client.
+    parameters:
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: wait
+    summary: |
+      Yields the current thread until the specified amount of time in seconds
+      have elapsed, with throttling.
+    description: |
+      Yields the current thread until the specified amount of seconds have
+      elapsed.
+
+      The delay will have a minimum duration of 29 milliseconds, but this
+      minimum may be higher depending on the target framerate and various
+      throttling conditions. If the `seconds` parameter is not specified, the
+      minimum duration will be used. This function returns:
+
+      - Actual time yielded (in seconds).
+      - Total time since the software was initialized (in seconds).
+    parameters:
+      - name: seconds
+        type: number
+        default: 0.03
+        summary: |
+          Specifies how long the thread should yield for.
+    returns:
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
+  - name: warn
+    summary: |
+      Behaves similarly to print, except with more distinct formatting (yellow);
+      intended for messages which describe potential problems.
+    description: |
+      Behaves identically to Lua's print function, except the output is styled
+      as a warning, with yellow text and a timestamp. This function accepts any
+      number of arguments, and will attempt to convert them into strings which
+      will then be joined together with spaces between them.
+    parameters:
+      - name: params
+        type: Tuple
+        default:
+        summary: |
+          This function accepts any number of arguments, and will attempt to
+          convert them into strings which will then be joined together with
+          spaces between them.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:

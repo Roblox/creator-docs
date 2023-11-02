@@ -1,0 +1,45 @@
+name: BackpackItem
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  BackpackItem is an abstract class for backpack items such as HopperBins and
+  Tools.
+description: |
+  BackpackItem is an abstract class for backpack items such as HopperBins and
+  Tools.
+code_samples:
+inherits:
+  - Model
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: BackpackItem.TextureId
+    summary: |
+      The texture icon that is displayed for a tool in the `Class.Player`'s
+      backpack.
+    description: |
+      The texture icon that is displayed for a tool in the `Class.Player`'s
+      backpack.
+
+      This property should be set to the content ID of an image uploaded to the
+      Roblox website.
+
+      If this property is left blank, the `Class.Backpack` GUI will display the
+      name of the tool instead.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

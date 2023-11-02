@@ -1,0 +1,52 @@
+backTo:
+  title: Back to Avatar Tutorials
+  path: /avatar/tutorials/
+navigation:
+  - heading: Overview
+  - title: Avatar Creation
+    path: /art/characters/creating/
+  - heading: Project Setup
+  - title: Template Files
+    path: /art/characters/creating/template-files
+  - title: Extra Head Objects
+    path: /art/characters/creating/head-objects
+  - title: Blender Configurations
+    path: /art/characters/creating/blender-configurations
+
+  - heading: Modeling
+  - title: Best Practices
+    path: /art/characters/creating/modeling-best-practices
+  - title: Tips and Settings
+    path: /art/characters/creating/modeling-tips
+  - title: Sculpting
+    path: /art/characters/creating/sculpting
+
+  - heading: Texturing
+  - title: Texture Painting Setup
+    path: /art/characters/creating/texturing-setup
+  - title: Texturing Eyes
+    path: /art/characters/creating/texturing-eyes
+  - title: Texturing Face
+    path: /art/characters/creating/texturing-face
+  - title: PBR Textures (Optional)
+    path: /art/characters/creating/texturing-pbr
+
+  - heading: Caging
+  - title: Caging Character Head
+    path: /art/characters/creating/caging
+
+  - heading: Cleanup
+  - title: Combining Head Geometry
+    path: /art/characters/creating/combining-head-geometry
+  - title: Removing Extra Bones
+    path: /art/characters/creating/removing-extra-bones
+  - title: Verifying Attachments
+    path: /art/characters/creating/verifying-attachments
+  - title: Final Checks
+    path: /art/characters/creating/final-checks
+
+  - heading: Exporting
+  - title: Embedding and Exporting Textures
+    path: /art/characters/creating/exporting-textures
+  - title: Exporting Character Model
+    path: /art/characters/creating/exporting-character

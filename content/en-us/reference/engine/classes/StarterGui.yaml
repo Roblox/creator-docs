@@ -1,0 +1,1077 @@
+name: StarterGui
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  A container for `Class.LayerCollector|GUI objects` to be copied into the
+  `Class.PlayerGui` of `Class.Player|Players`. Also provides a range of
+  functions for interacting with the `Class.CoreGui`.
+description: |
+  The StarterGui service is a container object designed to hold
+  `Class.LayerCollector|GUI objects` such as `Class.ScreenGui|ScreenGuis`.
+
+  ## StarterGui as a container
+
+  When a `Class.Player.Character` respawns, the contents of their
+  `Class.PlayerGui` are emptied. Children of the `Class.StarterGui` are then
+  copied along with their descendants into the `Class.PlayerGui`.
+
+  `Class.LayerCollector|GUI objects` such as `Class.ScreenGui|ScreenGuis` with
+  their `Class.LayerCollector.ResetOnSpawn|ResetOnSpawn` property set to false
+  will only be placed into each `Class.Player|Player's` `Class.PlayerGui` once
+  and will not be deleted when the `Class.Player` respawns.
+
+  ## StarterGui as an interface
+
+  The StarterGui also includes a range of functions allowing you to interact
+  with the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()`
+  can be used to disable elements of the `Class.CoreGui`.
+  `Class.StarterGui:SetCore()` can perform a range of functions including
+  creating notifications and system messages.
+code_samples:
+inherits:
+  - BasePlayerGui
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: StarterGui.ProcessUserInput
+    summary: |
+      Allows the StarterGui service to process input like `Class.PlayerGui` and
+      `Class.CoreGui` do.
+    description: |
+      Allows the StarterGui service to process input like `Class.PlayerGui` and
+      `Class.CoreGui` do. The default value is false.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StarterGui.ResetPlayerGuiOnSpawn
+    summary: |
+      Determines whether each child parented to the StarterGui will be cloned
+      into a player's PlayerGui when that player's character is respawned.
+    description: |
+      If set to true, each child parented to the `Class.StarterGui` will be
+      cloned into a player's `Class.PlayerGui` when that player's character is
+      respawned.
+
+      If one of the children is a PlayerGui and it has its PlayerGui property
+      set to false, it will not be cloned.
+    code_samples:
+    type: bool
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated. Use `Class.LayerCollector.ResetOnSpawn` to
+      control the resetting behavior for individual
+      `Class.LayerCollector|GUI objects`.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterGui.RtlTextSupport
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RtlTextSupport
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterGui.ScreenOrientation
+    summary: |
+      Sets the default `Enum.ScreenOrientation|screen orientation mode` for
+      users with mobile devices.
+    description: |
+      This property sets the preferred orientation mode for users with mobile
+      devices. For the different modes available, see `Enum.ScreenOrientation`.
+
+      When a `Class.Player` joins the game, if they are using a mobile device,
+      this property will determine the device's starting orientation.
+      `Class.PlayerGui.ScreenOrientation` will be set to this value for
+      `Class.Player|Players` joining the game. For example, the following code
+      would set the default to _'Portrait'_:
+
+      ```lua
+      game:GetService("StarterGui").ScreenOrientation = Enum.ScreenOrientation.Portrait
+      ```
+
+      By default, this property is set to _'LandscapeSensor'_, meaning the
+      viewport will rotate so it is always right-side-up in landscape.
+
+      Changing this property will not change the `Enum.ScreenOrientation` for
+      `Class.Player|Players` already in the game. To change the orientation for
+      an existing player use their `Class.PlayerGui.ScreenOrientation` property.
+
+      You can also get the current screen orientation for a user's device using
+      `Class.PlayerGui.CurrentScreenOrientation`. This is useful when using the
+      'sensor' `Enum.ScreenOrientation` settings.
+    code_samples:
+    type: ScreenOrientation
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterGui.ShowDevelopmentGui
+    summary: |
+      Determines whether the contents of `Class.StarterGui` is visible in
+      studio.
+    description: |
+      This property determines whether the contents of `Class.StarterGui` is
+      visible in studio
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterGui.VirtualCursorMode
+    summary: ''
+    description: ''
+    code_samples:
+    type: VirtualCursorMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: StarterGui:GetCoreGuiEnabled
+    summary: |
+      Returns whether the given `Enum.CoreGuiType`is enabled or if it has been
+      disabled using `Class.StarterGui:SetCoreGuiEnabled()`.
+    description: |
+      This function returns whether the given `Enum.CoreGuiType` is enabled or
+      if it has been disabled using `Class.StarterGui:SetCoreGuiEnabled()`.
+
+      This function should be called on the client and is used by the core
+      scripts to help determine which core GUI elements to show.
+
+      GetCoreGuiEnabled only returns _false_ if the given `Enum.CoreGuiType` has
+      been disabled using `Class.StarterGui:SetCoreGuiEnabled()`. Setting
+      _TopbarEnabled_ to _false_ using `Class.StarterGui:SetCore()` hides all
+      `Enum.CoreGuiType|CoreGuiTypes` and does not affect the result of
+      function.
+    code_samples:
+      - StarterGui-GetCoreGuiEnabled1
+    parameters:
+      - name: coreGuiType
+        type: CoreGuiType
+        default:
+        summary: |
+          The given `Enum.CoreGuiType`.
+    returns:
+      - type: bool
+        summary: |
+          Whether the given `Enum.CoreGuiType` is enabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StarterGui:SetCore
+    summary: |
+      Allows you to perform certain interactions with Roblox's
+      `Class.CoreScript|CoreScripts`.
+    description: |
+      SetCore (not to be confused with
+      `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled`) exposes a
+      variety of functionality defined by Roblox's
+      `Class.CoreScript|CoreScripts`, such as sending notifications, toggling
+      notifications for badges/points, defining a callback for the reset button
+      or toggling the topbar. The first parameter to SetCore is a string that
+      selects the functionality with which the call will interact: a CoreScript
+      must have registered such a string already (if one hasn't, an error is
+      raised). It may be necessary to make multiple calls to SetCore using
+      `pcall` in case the respective CoreScript has yet to load (or if it has
+      been disabled entirely).
+
+      The following table describes the strings that may be accepted as the
+      first parameter in a call to SetCore. The parameters that should follow
+      are dependent on the functionality that will be used and are described in
+      sub-tables.
+
+      #### ChatActive
+
+      Controls whether the chat is active
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>	
+          </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+          <td><code>active</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the chat should be made active</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### PointsNotificationsActive
+
+      Controls whether notifications for earned player points will appear
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+          <td><code>active</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether notifications for earned player points will appear</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### BadgesNotificationsActive
+
+      Controls whether notifications for earned badges will appear
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+            </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+          <td><code>active</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether notifications for earned badges
+      will appear</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### ResetButtonCallback
+
+      Determines the behavior, if any, of the reset button given a bool or a
+      `Class.BindableEvent` to be `Class.BindableEvent:Fire()|fired` when a
+      player requests to reset.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      		</thead>
+          <tbody>
+      	<tr>
+          <td><code>enabled</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the reset button retains its default behavior</td>
+        </tr>
+      	<tr>
+          <td colspan="5">OR</td>
+        </tr>
+      	<tr>
+          <td><code>callback</code></td>
+          <td>BindableEvent</td>
+          <td>Required</td>
+          <td>A BindableEvent to be fired when the player confirms they want to reset</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### ChatMakeSystemMessage
+
+      Display a formatted message in the chat.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+            </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+          <td><code>configTable</code></td>
+          <td>dictionary</td>
+          <td>Required</td>
+          <td>A dictionary of information describing the message (see below)</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>Text</code></td>
+          <td>string</td>
+          <td>Required</td>
+          <td>The message to display</td>
+        </tr>
+      	<tr>
+          <td><code>Color</code></td>
+          <td>Color3</td>
+          <td><code>Color3.fromRGB(255, 255, 243)</code></td>
+          <td>The TextColor3 of the message</td>
+        </tr>
+      	<tr>
+          <td><code>Font</code></td>
+          <td><code>Enum.Font</code></td>
+          <td><code>SourceSansBold</code></td>
+          <td>The TextLabel/Font|Font of the message</td>
+        </tr>
+      	<tr>
+          <td><code>TextSize</code></td>
+          <td><code>Integer</code></td>
+          <td><code>18</code></td>
+          <td>The TextSize of the message</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### ChatWindowSize
+
+      Determines the `Class.GuiObject.Size|size` of the chat window.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>windowSize</code></td>
+          <td>UDim2</td>
+          <td>Required</td>
+          <td>Determines the size of the chat window</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### ChatWindowPosition
+
+      Determines the `Class.GuiObject.Position|position` of the chat window.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>windowPosition</code></td>
+          <td>UDim2</td>
+          <td>Required</td>
+          <td>Determines the position of the chat window</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### ChatBarDisabled
+
+      Determines whether the player is able to type a message into the chat.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>disabled</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the chat's TextBox input is visible.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### SendNotification
+
+      Causes a non-intrusive notification to appear at the bottom right of the
+      screen. The notification may have up to two buttons.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+        <tbody>
+      	<tr>
+          <td><code>configTable</code></td>
+          <td>dictionary</td>
+          <td>Required</td>
+          <td>A dictionary of information describing the notification (see below)</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>Title</code></td>
+          <td>string</td>
+          <td>Required</td>
+          <td>The title of the notification</td>
+        </tr>
+      	<tr>
+          <td><code>Text</code></td>
+          <td>string</td>
+          <td>Required</td>
+          <td>The main text of the notification</td>
+        </tr>
+      	<tr>
+          <td><code>Icon</code></td>
+          <td>string</td>
+          <td>Optional</td>
+          <td>The image to display with the notification</td>
+        </tr>
+      	<tr>
+          <td><code>Duration</code></td>
+          <td>number</td>
+          <td>5</td>
+          <td>Duration (in seconds) the notification should stay visible</td>
+        </tr>
+      	<tr>
+          <td><code>Callback</code></td>
+          <td>BindableFunction</td>
+          <td>Optional</td>
+          <td>A BindableFunction that should be invoked with the text of the button pressed by the player.</td>
+        </tr>
+      	<tr>
+          <td><code>Button1</code></td>
+          <td>string</td>
+          <td>Optional</td>
+          <td>The text to display on the first button</td>
+        </tr>
+      	<tr>
+          <td><code>Button2</code></td>
+          <td>string</td>
+          <td>Optional</td>
+          <td>The text to display on the second button</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### TopbarEnabled
+
+      Determines whether the topbar is displayed. Disabling the topbar will also
+      disable all CoreGuis, such as the chat, inventory and player list (i.e.
+      those set with `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled`).
+
+      When disabled, the region the topbar once occupied will still capture
+      mouse events; however, `Class.TextButton|buttons` placed there will not
+      respond to `Class.GuiButton.MouseButton1Click|clicks`. The origin of GUI
+      space will still be offset 36 pixels from the top of the screen.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>enabled</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the topbar should be visible</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### DevConsoleVisible
+
+      Determines whether the Developer Console is visible.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>visibility</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the developer console is visible</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### PromptSendFriendRequest
+
+      Prompts the current player to send a friend request to the given
+      `Class.Player`.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>player</code></td>
+          <td>Player</td>
+          <td>Required</td>
+          <td>The player to which the friend request should be sent</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### PromptUnfriend
+
+      Prompts the current player to remove a given `Class.Player` from their
+      friends list.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>player</code></td>
+          <td>Player</td>
+          <td>Required</td>
+          <td>The player who should be unfriended</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### PromptBlockPlayer
+
+      Prompts the current player to block the given `Class.Player`.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>player</code></td>
+          <td>Player</td>
+          <td>Required</td>
+          <td>The player who should be blocked</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### PromptUnblockPlayer
+
+      Prompts the current player to unblock the given `Class.Player`.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+       </thead>
+       <tbody>
+      	<tr>
+          <td><code>player</code></td>
+          <td>Player</td>
+          <td>Required</td>
+          <td>The player who should be unblocked</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### AvatarContextMenuEnabled
+
+      Determines whether the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md) is enabled.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>enabled</code></td>
+          <td>bool</td>
+          <td>Required</td>
+          <td>Determines whether the Avatar Context Menu is enabled</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### AvatarContextMenuTarget
+
+      Forcibly opens the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md).
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>player</code></td>
+          <td><code>Player</code></td>
+          <td>Required</td>
+          <td>The player on whom the ACM will be opened.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### AddAvatarContextMenuOption
+
+      Adds an option to the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md).
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>option</code></td>
+          <td><code>Enum.AvatarContextMenuOption</code></td>
+          <td>Required</td>
+          <td><code>Friend</code> (send friend request), <code>Chat</code> (start private chat), or <code>Emote</code> (wave)</td>
+        </tr>
+      	<tr>
+          <td colspan="5">OR</td>
+        </tr>
+      	<tr>
+          <td><code>option</code></td>
+          <td>table</td>
+          <td>Required</td>
+          <td>A two-element table, where the first is the name of the custom action, and the second is a BindableEvent which will be fired with a player was selected when the option was activated.</td>
+        </tr>
+      </tbody>
+      </table>
+
+      #### RemoveAvatarContextMenuOption
+
+      Removes an option to the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md). The
+      `option` argument must be the same as what was used with
+      **AddAvatarContextMenuOption** (see above).
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Type</th>
+      			<th>Default</th>
+      			<th>Description</th>
+          </tr>
+      </thead>
+      <tbody>
+      	<tr>
+          <td><code>option</code></td>
+          <td>Variant</td>
+          <td>Required</td>
+          <td>The same value provided to <b>AddAvatarContextMenuOption</b></td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### AvatarContextMenuTheme
+
+      Configures the customizable Avatar Context Menu (ACM) which is an opt-in
+      feature that allows easy player-to-player social interaction via custom
+      actions, such as initiating trades, battles, and more.
+
+      For more info on the ACM including how to customize its theme and use it
+      in your game, see the
+      [Avatar Context Menu](../../../players/avatar-context-menu.md) article.
+
+      #### CoreGuiChatConnections
+
+      Sets up a bindable gateway connection between the CoreGui topbar's chat
+      button and the Lua Chat System. The second parameter must be a table of
+      `Class.BindableEvent|BindableEvents` and
+      `Class.BindableFunction|BindableFunctions`. See the example below for more
+      clarification.
+
+      ```lua
+      -- Create the Bindable objects
+      local ChatConnections = {}
+
+      local function AddObjects(bindableClass,targetName,...)
+      	local target = ChatConnections[targetName]
+      	if not target then
+      		target = {}
+      		ChatConnections[targetName] = target
+      	end
+      	local names = {...}
+      	for _,name in pairs(names) do
+      		local signal = Instance.new(bindableClass)
+      		signal.Name = targetName .. "_" .. name
+      		signal.Parent = script
+      		target[name] = signal
+      	end
+      end
+
+      AddObjects("BindableEvent","ChatWindow",
+      	---------------------------
+      	-- Fired from the CoreGui
+      	---------------------------
+      	"ToggleVisibility", -- Fired when the CoreGui chat button is pressed.
+      	"SetVisible", -- Fired when the CoreGui wants to directly change the visiblity state of the chat window.
+      	"FocusChatBar", -- Fired when the CoreGui wants to capture the Chatbar's Focus.
+      	"TopbarEnabledChanged", -- Fired when the visibility of the Topbar is changed.
+      	"SpecialKeyPressed", -- Fired when the reserved ChatHotkey is pressed.
+      	"CoreGuiEnabled", -- Fired when a user changes the SetCoreGuiEnabled state of the Chat Gui.
+
+      	---------------------------
+      	-- Fired to the CoreGui
+      	---------------------------
+      	"ChatBarFocusChanged",
+      		-- ^ Fire this with 'true' when you want to assure the CoreGui that the ChatBar is being focused on.
+
+      	"VisibilityStateChanged",
+      		-- ^ Fire this with 'true' when the user shows or hides the chat.
+
+      	"MessagesChanged",
+      		-- ^ Fire this with a number to change the number of messages that have been recorded by the chat window.
+      		--   If the CoreGui thinks the chat window isn't visible, it will display the recorded difference between
+      		--   the number of messages that was displayed when it was visible, and the number you supply.
+
+      	"MessagePosted"
+      		-- ^ Fire this to make the player directly chat under Roblox's C++ API.
+      		--	 This will fire the LocalPlayer's Chatted event.
+      		--   Please only fire this on the player's behalf. If you attempt to spoof a player's chat
+      		--   to get them in trouble, you could face serious moderation action.
+      )
+
+      AddObjects("BindableFunction","ChatWindow",
+      	"IsFocused" -- This will be invoked by the CoreGui when it wants to check if the chat window is active.
+      )
+
+      -- The following events are fired if the user calls StarterGui:SetCore(string name, Variant data)
+      -- Note that you can only hook onto these ones specifically.
+      AddObjects("BindableEvent","SetCore",
+      	"ChatMakeSystemMessage",
+      	"ChatWindowPosition",
+      	"ChatWindowSize",
+      	"ChatBarDisabled"
+      )
+
+      -- The following functions are invoked if the user calls StarterGui:GetCore(string name)
+      -- Note that you can only hook onto these ones specifically.
+      AddObjects("BindableFunction","GetCore",
+      	"ChatWindowPosition", -- Should return a UDim2 representing the position of the chat window.
+      	"ChatWindowSize", -- Should return a UDim2 representing the size of the chat window.
+      	"ChatBarDisabled" -- Should return true if the chat bar is currently disabled.
+      )
+
+      -- Connect ChatConnections to the CoreGui.
+      local StarterGui = game:GetService("StarterGui")
+      local tries = 0
+      local maxAttempts = 10
+
+      while (tries < maxAttempts) do
+      	local success,result = pcall(function ()
+      		StarterGui:SetCore("CoreGuiChatConnections",ChatConnections)
+      	end)
+      	if success then
+      		break
+      	else
+      		tries = tries + 1
+      		if tries == maxAttempts then
+      			error("Error calling SetCore CoreGuiChatConnections: " .. result)
+      		else
+      			wait()
+      		end
+      	end
+      end
+
+      while wait(0.2) do
+      	local isVisible = (math.random() > 0.5)
+      	ChatConnections.ChatWindow.VisibilityStateChanged:Fire(isVisible)
+      	if not isVisible then
+      		local messageCount = math.random(1,120)
+      		ChatConnections.ChatWindow.MessagesChanged:Fire(messageCount)
+      	end
+      end
+      ```
+    code_samples:
+      - StarterGui-SetCore1
+    parameters:
+      - name: parameterName
+        type: string
+        default:
+        summary: |
+          Selects the functionality with which the call will interact: a
+          CoreScript must have registered such a string already (if one hasn't,
+          an error is raised).
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          A table of `Class.BindableEvent|BindableEvents` and
+          `Class.BindableFunction|BindableFunctions`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StarterGui:SetCoreGuiEnabled
+    summary: |
+      Sets whether the `Class.CoreGui` element associated with the given
+      `Enum.CoreGuiType` is enabled or disabled.
+    description: |
+      This function sets whether the `Class.CoreGui` element associated with the
+      given `Enum.CoreGuiType` is enabled or disabled.
+
+      The top bar can not be disabled using this function. To disable the top
+      bar, set _TopbarEnabled_ to _false_ using `Class.StarterGui:SetCore()`.
+      This will also disable the element associated with all
+      `Enum.CoreGuiType|CoreGuiTypes`.
+    code_samples:
+      - StarterGui-SetCoreGuiEnabled1
+    parameters:
+      - name: coreGuiType
+        type: CoreGuiType
+        default:
+        summary: |
+          The given `Enum.CoreGuiType`.
+      - name: enabled
+        type: bool
+        default:
+        summary: |
+          Whether to enable or disable the given `Enum.CoreGuiType`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StarterGui:GetCore
+    summary: |
+      Returns a variable that has been specified by a Roblox `Class.CoreScript`.
+    description: |
+      GetCore returns data set or made available by Roblox's
+      `Class.CoreScript|CoreScripts`. The first and only parameter is a string
+      that selects the information to be fetched. The following sections
+      describe the strings and the data they return by this function.
+
+      Each of these is registered by a CoreScript and calling this function may
+      yield. Many of these also register an equivalent
+      `Class.StarterGui:SetCore()|SetCore` function (these are marked with an
+      asterisk).
+
+      #### PointsNotificationsActive\*
+
+      Returns true if player point notifications are enabled.
+
+      #### BadgesNotificationsActive\*
+
+      Returns true if badge notifications are enabled.
+
+      #### AvatarContextMenuEnabled\*
+
+      Returns true if the Avatar Context Menu is enabled.
+
+      #### ChatActive\*
+
+      Returns whether the chat is active or not. This is indicated by the
+      selection state of the top bar's chat icon.
+
+      #### ChatWindowSize\*
+
+      Returns the size of the chat window as a UDim2.
+
+      #### ChatWindowPosition\*
+
+      Returns the size of the chat window as a UDim2.
+
+      #### ChatBarDisabled\*
+
+      Returns true if the chat bar is disabled.
+
+      #### GetBlockedUserIds
+
+      Returns a list of `Class.Player.UserId`s associated with users that have
+      been blocked by the local player.
+
+      #### PlayerBlockedEvent
+
+      Returns a BindableEvent that is fired whenever a player is blocked by the
+      local player.
+
+      #### PlayerUnblockedEvent
+
+      Returns a BindableEvent that is fired whenever a player is unblocked by
+      the local player.
+
+      #### PlayerMutedEvent
+
+      Returns a BindableEvent that is fired whenever a player is muted by the
+      local player.
+
+      #### PlayerUnmutedEvent
+
+      Returns a BindableEvent that is fired whenever a player is unmuted by the
+      local player.
+
+      #### PlayerFriendedEvent
+
+      Returns a BindableEvent that is fired whenever a player is friended by the
+      local player.
+
+      #### PlayerUnfriendedEvent
+
+      Returns a BindableEvent that is fired whenever a player is unfriended by
+      the local player.
+
+      #### DevConsoleVisible\*
+
+      Returns true if the developer console is visible.
+
+      #### VRRotationIntensity
+
+      Returns a string describing the camera rotation sensitivity in VR: `Low`,
+      `High` and `Smooth`. _This will not be available unless
+      `Class.VRService.VREnabled` is true._
+    code_samples:
+      - Using-GetCore-to-Check-ChatActive
+    parameters:
+      - name: parameterName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

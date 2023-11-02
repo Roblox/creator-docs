@@ -1,0 +1,47 @@
+name: BodyPart
+type: enum
+summary: |
+  The BodyPart Enum determines which BodyPart a `Class.CharacterMesh` affects.
+description: |
+  The BodyPart Enum determines which BodyPart a `Class.CharacterMesh` affects.
+  (the `Class.CharacterMesh` is used with R6 characters)
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Head
+    summary: |
+      The head BodyPart.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Torso
+    summary: |
+      The torso BodyPart.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LeftArm
+    summary: |
+      The left arm BodyPart.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RightArm
+    summary: |
+      The right arm BodyPart.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LeftLeg
+    summary: |
+      The left leg BodyPart.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RightLeg
+    summary: |
+      The right leg BodyPart.
+    value: 5
+    tags: []
+    deprecation_message: ''

@@ -11,6 +11,8 @@ inputs:
     description: Github token
   PULL_REQUEST_NUMBER:
     description: Pull request number
+  CHECK_PROTECTED_FIELDS:
+    description: Whether to check protected YAML fields
 
 runs:
   using: 'composite'
@@ -36,5 +38,6 @@ runs:
       env:
         GITHUB_PAT: ${{ inputs.GITHUB_PAT }}
         BASE_BRANCH: ${{ inputs.BASE_BRANCH }}
+        CHECK_PROTECTED_FIELDS: ${{ inputs.CHECK_PROTECTED_FIELDS }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
         PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}

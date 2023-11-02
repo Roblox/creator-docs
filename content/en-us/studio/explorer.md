@@ -49,18 +49,14 @@ Each method opens an **insertion window** which contains a list of objects, sort
 
 <img src="../assets/studio/explorer/Insert-Object-Popup-Searched.png" width="320" alt="Search query entered into search field to filter objects" />
 
-If desired, you can further customize the behavior of the insertion workflow as follows:
+You can further customize the behavior of the insertion workflow as follows:
 
 <img src="../assets/studio/explorer/Insert-Object-Popup-Options.png" width="320" alt="Additional customization buttons for insertion workflow" />
 
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Expand the insertion popup (wide view)</figcaption></p></Grid>
-</Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Additional settings for object insertion</figcaption></p></Grid>
-</Grid>
+- **Expanded View** shows a much wider window to select objects from.
+- **Insertion Settings** contains the following toggles:
+  - **Select object after insert** automatically selects new objects after you insert them.
+  - **Show only recommended objects** limits the list of objects to those which are logical or functional within the parent.
 
 ### Paste From Clipboard
 

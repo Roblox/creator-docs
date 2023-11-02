@@ -1,0 +1,42 @@
+name: PlayerActions
+type: enum
+summary: |
+  References a movement action taken by a player.
+description: |
+  References a movement action taken by a player.
+code_samples:
+tags: []
+deprecation_message: |
+  This enum has been deprecated in favor of `Enum.KeyCode` which is more
+  platform-agnostic and should be used in new work instead.
+items:
+  - name: CharacterForward
+    summary: |
+      The player moved forward.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: CharacterBackward
+    summary: |
+      The player moved backward.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CharacterLeft
+    summary: |
+      The player moved left.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: CharacterRight
+    summary: |
+      The player moved right.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CharacterJump
+    summary: |
+      The player jumped.
+    value: 4
+    tags: []
+    deprecation_message: ''

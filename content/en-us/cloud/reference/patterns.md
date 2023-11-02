@@ -64,7 +64,7 @@ either user or role in the following formats:
 - **Role filter**: `filter="role == 'groups/123/roles/7920705'"`
 
 If you specify the wildcard character for the group ID, you must filter
-memberships by user (up to 5) in the following format:
+memberships by user (up to 50) in the following format:
 
 - **User filter**: `filter="user in ['users/1', 'users/156', 'users/9876543210', ...]"`
 

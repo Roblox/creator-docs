@@ -1,9 +1,13 @@
 ---
 title: Classic Clothing
-description: Classic clothing are decals you can apply to a character's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
+description: Classic clothing are decals you can apply to a classic character model's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
 ---
 
-Classic clothing are a type of 2D cosmetic item that you can apply to the surface of an avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
+<Alert severity="warning">
+Modern user-generated avatars do not support classic clothing.
+</Alert>
+
+Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
 
 This guide covers the process of creating a classic clothes asset using the following steps:
 
@@ -145,8 +149,11 @@ After finalizing and testing your design, you can upload the clothing item to th
 
 To upload a custom clothing item:
 
-1. Navigate to the Roblox [Create](https://www.roblox.com/develop) page.
-2. Click on either **Shirts**, **Pants** or **T-shirts** in the left column, depending on your design.
-3. In the main panel, click **Choose File** to select your template file. Your shirt or pants image must be exactly 585 pixels wide and 559 pixels tall, or the upload will fail.
-4. Choose a name for your clothing.
-5. Click on the **Upload** button. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.
+1. Navigate to the [Upload Asset](https://create.roblox.com/dashboard/creations/upload?assetType=TShirt) page.
+1. Select either **T-Shirt**, **Shirt**, or **Pants** from the asset type selector menu.
+1. Click the small upload button to choose a valid image file from your computer.
+
+   <img src="../../assets/creator-dashboard/Upload-Classic-Clothing.png" width="720" />
+
+1. Enter a name and description for your clothing item.
+1. Click the **UPLOAD** button at the bottom of the page. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.

@@ -1,0 +1,136 @@
+name: AccessoryType
+type: enum
+summary: |
+  A subset of AssetTypes which are relevant to only accessories.
+description: |
+  AccessoryType is a subset of AssetTypes which are relevant to only
+  accessories.
+
+  To get the AccessoryType of an accessory, see the Type on the accessory's web
+  page. For example, see
+  [Yi the Art Teacher - Hair](https://www.roblox.com/catalog/5911063681/Yi-the-Art-Teacher-Hair).
+
+  AccessoryTypes are mainly used in the AccessoryBlob of HumanoidDescription,
+  and to specify the type in Accessory.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    value: 0
+    summary: |
+      If the accessory type is not known.
+    tags: []
+    deprecation_message: ''
+  - name: Hat
+    value: 1
+    summary: |
+      A hat accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Hair
+    value: 2
+    summary: |
+      A hair accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Face
+    value: 3
+    summary: |
+      A face accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Neck
+    value: 4
+    summary: |
+      A neck Accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Shoulder
+    value: 5
+    summary: |
+      A shoulder accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Front
+    value: 6
+    summary: |
+      A front accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Back
+    value: 7
+    summary: |
+      A back accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: Waist
+    value: 8
+    summary: |
+      A waist accessory (may be a rigid or layered accessory).
+    tags: []
+    deprecation_message: ''
+  - name: TShirt
+    value: 9
+    summary: |
+      A layered clothing T-Shirt accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Shirt
+    value: 10
+    summary: |
+      A layered clothing shirt accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Pants
+    value: 11
+    summary: |
+      A layered clothing pants accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Jacket
+    value: 12
+    summary: |
+      A layered clothing jacket accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Sweater
+    value: 13
+    summary: |
+      A layered clothing sweater accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Shorts
+    value: 14
+    summary: |
+      A layered clothing shorts accessory.
+    tags: []
+    deprecation_message: ''
+  - name: LeftShoe
+    value: 15
+    summary: |
+      A layered clothing left shoe accessory.
+    tags: []
+    deprecation_message: ''
+  - name: RightShoe
+    value: 16
+    summary: |
+      A layered clothing right shoe accessory.
+    tags: []
+    deprecation_message: ''
+  - name: DressSkirt
+    value: 17
+    summary: |
+      A layered clothing dress or skirt accessory.
+    tags: []
+    deprecation_message: ''
+  - name: Eyebrow
+    value: 18
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Eyelash
+    value: 19
+    summary: ''
+    tags: []
+    deprecation_message: ''

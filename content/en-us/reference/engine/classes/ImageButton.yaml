@@ -1,0 +1,347 @@
+name: ImageButton
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  A 2D user interface element that displays an interactive image.
+description: |
+  An ImageButton behaves similarly to an `Class.ImageLabel` in regards to
+  rendering with the additional behaviors of a `Class.GuiButton`. It defines the
+  same image-rendering properties as a `Class.ImageLabel` does.
+
+  You can disable image rendering by setting
+  `Class.ImageButton.ImageTransparency` to 1. This will leave you with a plain
+  rectangle that can be used as a button. However, it may be better to use a
+  blank `Class.TextButton` for this.
+code_samples:
+  - ImageButton-Press-Color
+inherits:
+  - GuiButton
+tags: []
+deprecation_message: ''
+properties:
+  - name: ImageButton.HoverImage
+    summary: |
+      A textureId that will be used when `Class.ImageButton` is being hovered.
+    description: |
+      A textureId that could be set on the `Class.ImageButton|ImageButton's`
+      properties. When the button is hovered, it will render HoverImage if
+      specified.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.Image
+    summary: |
+      The image content displayed by the UI element.
+    description: |
+      The Image property is a content-type property that should hold the asset
+      ID of a Decal or Image on the Roblox website. It functions identically to
+      `Class.Decal.Texture` with regards to loading the image from the Roblox
+      website. The rendered image will be colorized using
+      `Class.ImageButton.ImageColor3`. It is possible to make the image render
+      as tiled, scaled to fit, or 9-sliced, by adjusting the
+      `Class.ImageButton.ScaleType` property.
+    code_samples:
+      - Image-Hover-Lock
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ImageColor3
+    summary: |
+      Determines how a rendered image will be colorized.
+    description: |
+      The ImageColor3 property determines how an image is colorized. When set to
+      white, no colorization occurs. This property is very useful for reusing
+      image assets: If the source image is completely white with transparency,
+      you can set the entire color of the image at once with this property.
+    code_samples:
+      - Image-Hover-Lock
+      - Rainbow-Image
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ImageRectOffset
+    summary: |
+      The offset in pixels of the sub-area of an image to be displayed.
+    description: |
+      Allows the partial display of an image in conjunction with
+      `Class.ImageButton.ImageRectSize`. This property determines the pixel
+      offset (from the top-left) of the image area to be displayed.
+
+      This property behaves identically to `Class.ImageLabel.ImageRectSize`.
+    code_samples:
+      - Image-Animation-using-Spritesheet
+      - Image-ScaleType-Demo
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ImageRectSize
+    summary: |
+      Determines the size in pixels of the sub-area of an image to be displayed.
+    description: |
+      Allows the partial display of an image in conjunction with
+      `Class.ImageButton.ImageRectOffset`. This property determines the pixel
+      size of the image area to be displayed. If either dimension is set to 0,
+      the entire image is displayed instead.
+
+      This property behaves identically to `Class.ImageLabel.ImageRectOffset`.
+    code_samples:
+      - Image-Animation-using-Spritesheet
+      - Image-ScaleType-Demo
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ImageTransparency
+    summary: |
+      Determines the transparency of the rendered image.
+    description: |
+      ImageTransparency determines the alpha of a UI element's rendered image. A
+      value of 0 is completely opaque, and a value of 1 is completely
+      transparent (invisible). This property behaves similarly to
+      `Class.GuiObject.BackgroundTransparency` or `Class.BasePart.Transparency`.
+    code_samples:
+      - Oscillate-ImageTransparency
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.IsLoaded
+    summary: |
+      Indicates whether the Image has finished loading from the Roblox website.
+    description: |
+      The IsLoaded property indicates if the `Class.ImageButton.Image` property
+      finished loading from the Roblox website. Images declined by moderation
+      will never load.
+    code_samples:
+      - Image-Load-Time
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: false
+      can_save: false
+  - name: ImageButton.PressedImage
+    summary: |
+      A textureId that will be used when an `Class.ImageButton` is being
+      pressed.
+    description: |
+      A texture ID that can be set as an `Class.ImageButton` property. When the
+      button is pressed, it will render this image.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ResampleMode
+    summary: |
+      Selects the image resampling mode for the button.
+    description: |
+      Determines how the image looks when it is scaled.
+
+      By default, the image smooths out the texture when displayed either larger
+      or smaller than its size in texture memory. In contrast,
+      `Enum.ResamplerMode.Pixelated|Enum.ResamplerMode.Pixelated` preserves the
+      sharp edges of the image pixels.
+    code_samples:
+    type: ResamplerMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.ScaleType
+    summary: |
+      Determines how an image will scale if displayed in a UI element whose size
+      differs from the source image.
+    description: |
+      The ScaleType property determines in what way an `Class.ImageButton.Image`
+      is rendered when the UI element's absolute size differs from the source
+      image's size.
+
+      By default, this property is
+      `Enum.ScaleType.Stretch|Enum.ScaleType.Stretch`, which will simply
+      stretch/compact the image dimensions so it fits the UI element's space
+      exactly. Since transparent pixels are set to black when uploading to the
+      Roblox website, transparent images should apply alpha blending to avoid a
+      blackish outline around scaled images.
+
+      For `Enum.ScaleType.Slice|Enum.ScaleType.Slice`, the
+      `Class.ImageButton.SliceCenter` property will be revealed in the
+      Properties window. This is for 9-slice UI: when scaling up, the corners
+      will remain the source image size. The edges of the image will stretch to
+      the width/height of the image. Finally, the center of the image will
+      stretch to fill the center area of the image.
+
+      Finally, for `Enum.ScaleType.Tile|Enum.ScaleType.Tile`, the
+      `Class.ImageButton.TileSize` property will be revealed in the Properties
+      window. This is for tiled images, where the size of each image tile is
+      determined by the `Class.ImageButton.TileSize` property.
+    code_samples:
+      - Image-ScaleType-Demo
+    type: ScaleType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.SliceCenter
+    summary: |
+      Sets the slice boundaries of a 9-sliced image.
+    description: |
+      The SliceCenter property sets the slice boundaries of a 9-sliced image
+      when `Class.ImageButton.ScaleType` is set to
+      `Enum.ScaleType.Slice|Enum.ScaleType.Slice`. Please note that this
+      property is only visible in the Studio Properties Pane if
+      `Class.ImageButton.ScaleType` is set to
+      `Enum.ScaleType.Slice|Enum.ScaleType.Slice`. Select this property and
+      click the "..." button to open the 9-Slice Editor, a built-in visual
+      editor for setting the slice boundaries.
+
+      To learn more about 9-sliced images, check out this tutorial:
+      [UI 9 Slice Design](../../../ui/9-slice.md).
+    code_samples:
+      - Image-ScaleType-Demo
+    type: Rect
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.SliceScale
+    summary: |
+      Scales the 9-slice edges by the specified ratio.
+    description: |
+      Scales the 9-slice edges by the specified ratio. This means that the edges
+      around the 9-slice will grow as if you'd uploaded a new version of the
+      texture upscaled. Defaults to 1.0.
+
+      As a multiplier for the borders of a 9-slice, it is useful for reusing one
+      rounded corner image for multiple radii
+
+      ![Scaling example](/assets/legacy/image.png)
+
+      See also:
+
+      - `Class.ImageButton.ScaleType`, determines how an image will scale if
+        displayed in a UI element whose size differs from the source image
+      - `Class.ImageLabel.ScaleCenter`,determines the center of a 9-slice image
+      - `Class.ImageButton.SliceScale`, the same property in terms of
+        functionality but for `Class.ImageButton|ImageButtons`
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageButton.TileSize
+    summary: |
+      Sets the tiling scale of the ImageButton.
+    description: |
+      TileSize sets the tiling size of the ImageButton. The default
+      `Datatype.UDim2` values are 1,0,1,0. The scale component of the UDim2 will
+      scale the tile based on the size of the ImageButton. The offset is in raw
+      pixels. The tiling starts at the upper left-hand corner of the image. For
+      example a scale of 0.5 will mean the tile will be half the size of the
+      ImageButton (in the corresponding axis).
+
+      This property is only active if the ScaleType for the ImageButton is set
+      to Tile instead of Slice or Stretch.
+    code_samples:
+      - Image-ScaleType-Demo
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

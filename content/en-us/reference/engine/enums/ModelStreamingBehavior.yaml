@@ -1,0 +1,23 @@
+name: ModelStreamingBehavior
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Legacy
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Improved
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

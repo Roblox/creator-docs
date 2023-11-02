@@ -1,0 +1,26 @@
+name: ProximityPromptExclusivity
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OnePerButton
+    summary: |
+      One prompt will be shown per input `Enum.KeyCode`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: OneGlobally
+    summary: |
+      Only one prompt will be shown with this setting.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AlwaysShow
+    summary: |
+      This prompt will always show when in range and visible.
+    value: 2
+    tags: []
+    deprecation_message: ''

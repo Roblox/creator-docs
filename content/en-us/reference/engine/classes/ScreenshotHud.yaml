@@ -1,0 +1,171 @@
+name: ScreenshotHud
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  A 2D user interface that allows users to capture and save screenshots to their
+  local device.
+description: |
+  The `Class.ScreenshotHud` is a 2D user interface that allows users to capture
+  and save screenshots to their local device. It consists of the following UI
+  elements:
+
+  - An overlay containing the experience name and Roblox branding. These remain
+    on screen when a screenshot is taken, although the experience name can be
+    disabled through the `Class.ScreenshotHud.ExperienceNameOverlayEnabled`
+    property.
+  - A camera button that hides all UI except for the overlay and takes a
+    screenshot.
+  - A close button that closes the `Class.ScreenshotHud`.
+
+  <img src="/assets/engine-api/classes/ScreenshotHud/Diagram.jpg" width="100%" />
+code_samples:
+  - ScreenshotHud
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: ScreenshotHud.CameraButtonIcon
+    summary: |
+      Asset ID of the icon used for the camera button.
+    description: |
+      Asset ID of the icon used for the camera button.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.CameraButtonPosition
+    summary: |
+      Screen location of the camera button.
+    description: |
+      Screen location of the camera button.
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.CloseButtonPosition
+    summary: |
+      Screen location of the close button.
+    description: |
+      Screen location of the close button.
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.CloseWhenScreenshotTaken
+    summary: |
+      Whether the `Class.ScreenshotHud` closes automatically when a screenshot
+      is taken.
+    description: |
+      Determines whether the `Class.ScreenshotHud` closes automatically when a
+      screenshot is taken.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.ExperienceNameOverlayEnabled
+    summary: |
+      Whether the experience name in the overlay is enabled.
+    description: |
+      Determines whether the experience name in the overlay is enabled.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.OverlayFont
+    summary: |
+      `Datatype.Font` used for the experience name in the overlay.
+    description: |
+      The `Datatype.Font` used for the experience name in the overlay.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.UsernameOverlayEnabled
+    summary: |
+      Currently disabled with no effect.
+    description: |
+      Currently disabled with no effect.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.Visible
+    summary: |
+      Determines whether the `Class.ScreenshotHud` is visible.
+    description: |
+      Determines whether the `Class.ScreenshotHud` is visible.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

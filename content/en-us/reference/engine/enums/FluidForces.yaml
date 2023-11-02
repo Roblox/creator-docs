@@ -1,0 +1,30 @@
+name: FluidForces
+type: enum
+summary: |
+  Controls the enablement of aerodynamic forces on parts and assemblies in the
+  workspace.
+description: |
+  Used as an enum value for `Class.Workspace.FluidForces` to control the
+  enablement of aerodynamic forces on parts and assemblies in the workspace.
+  Note that this enum is not applicable in scripting and
+  `Class.Workspace.FluidForces` must be toggled in Studio.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Aerodynamic forces will not be calculated on any
+      `Class.BasePart|BaseParts`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Experimental
+    summary: |
+      Aerodynamic forces will be calculated on `Class.BasePart|BaseParts` with
+      `Class.BasePart.EnableFluidForces|EnableFluidForces` set to true. During
+      the beta phase, the behavior of the aerodynamic force model may change as
+      the model improves.
+    value: 1
+    tags: []
+    deprecation_message: ''

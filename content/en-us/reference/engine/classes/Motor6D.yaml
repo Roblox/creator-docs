@@ -1,0 +1,95 @@
+name: Motor6D
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: |
+  Creates an animatable joint between two `Class.BasePart|BaseParts`.
+description: |
+  **Motor6D** joins two `Class.BasePart|BaseParts`
+  (`Class.JointInstance.Part0|Part0` and `Class.JointInstance.Part1|Part1`)
+  together in an animatable way. The `Class.Motor6D.Transform|Transform`
+  property determines the offset between these parts. This can be set manually
+  using `Class.RunService.Stepped` or through an `Class.Animator`.
+
+  Models whose parts are joined by `Class.Motor6D` are usually referred to as
+  **rigs**, typically for `Class.Humanoid|Humanoids`.
+code_samples:
+inherits:
+  - Motor
+tags: []
+deprecation_message: ''
+properties:
+  - name: Motor6D.ChildName
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Animatable
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Motor6D.ParentName
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Animatable
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Motor6D.Transform
+    summary: |
+      Describes the current animation offset of the `Class.Motor6D` joint.
+    description: |
+      The internal `Datatype.CFrame` that is manipulated when a `Class.Motor6D`
+      is being animated. It is recommended to use this property for custom
+      animations rather than `Class.JointInstance.C0` and
+      `Class.JointInstance.C1`.
+
+      ##### Timing
+
+      `Class.Motor6D` transforms are not applied immediately, unlike updating
+      `Class.JointInstance.C0|C0` and `Class.JointInstance.C1|C1`, but rather as
+      a batch in a parallel job after `Class.RunService.Stepped`, immediately
+      before physics steps. The deferred batch update is much more efficient
+      than many immediate updates.
+
+      If the `Class.Motor6D` is part of an animated model with an
+      `Class.Animator`, then `Class.Motor6D.Transform` will usually be
+      overwritten every frame by the `Class.Animator` after
+      `Class.RunService.PreAnimation` and before `Class.RunService.Stepped`.
+    code_samples:
+    type: CFrame
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

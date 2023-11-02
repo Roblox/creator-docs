@@ -1,0 +1,42 @@
+name: AudioDeviceOutput
+type: class
+category:
+memory_category: Internal
+summary: |
+  Accepts audio streams to be rendered out to physical hardware devices such as
+  speakers or headphones.
+description: |
+  `Class.AudioDeviceOutput` accepts audio streams to be rendered out to physical
+  hardware devices such as speakers or headphones. It provides a single
+  **Input** pin that can be targeted by `Class.Wire|Wires`. Any audio streams
+  wired to an `Class.AudioDeviceOutput` are heard.
+code_samples:
+  - audio-wiring---device-output
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioDeviceOutput.Player
+    summary: |
+      A `Class.Player` who is intended to hear the connected audio streams.
+    description: |
+      An optional `Class.Player` who is intended to hear the connected audio
+      streams. If left unspecified, the streams wired to this
+      `Class.AudioDeviceOutput` are heard by everyone.
+    code_samples: []
+    type: Player
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

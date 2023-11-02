@@ -1,0 +1,58 @@
+name: DebuggerEndReason
+type: enum
+summary: |
+  Reason for the end of the debugger session.
+description: |
+  Reason for the end of the debugger session.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: ClientRequest
+    summary: |
+      Client requested connection termination.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    summary: |
+      Connection timed out.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: InvalidHost
+    summary: |
+      Invalid host:port combination.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Disconnected
+    summary: |
+      Connection was lost.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: ServerShutdown
+    summary: |
+      Server terminated the connection because it shut down.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ServerProtocolMismatch
+    summary: |
+      Server has wrong version of protocol.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: ConfigurationFailed
+    summary: |
+      Got a failure response when trying to configure the server.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: RpcError
+    summary: |
+      An error occurred in the RPC layer.
+    value: 7
+    tags: []
+    deprecation_message: ''

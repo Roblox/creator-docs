@@ -87,6 +87,10 @@ Here's the list of available metamethods:
 		  <td>The / division operator.</td>
 		</tr>
 	  <tr>
+		  <td>__idiv(table, value)</td>
+		  <td>The // floor division operator.</td>
+	 	</tr>
+	  <tr>
 		  <td>__mod(table, value)</td>
 		  <td>The % modulus operator.</td>
 		</tr>

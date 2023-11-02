@@ -1,0 +1,31 @@
+name: ChatStyle
+type: enum
+summary: |
+  The ChatStyle Enum is used to set the style of `Class.Chat` used in a game via
+  the `Class.Players:SetChatStyle()` method.
+description: |
+  The ChatStyle Enum is used to set the style of `Class.Chat` used in a game via
+  the `Class.Players:SetChatStyle()` method.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Classic
+    summary: |
+      Displays chats in the chat user interface at the top-left corner of the
+      screen.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Bubble
+    summary: |
+      Displays chats in a bubble above the sender's head.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ClassicAndBubble
+    summary: |
+      Has the effects of Classic and Bubble combined.
+    value: 2
+    tags: []
+    deprecation_message: ''

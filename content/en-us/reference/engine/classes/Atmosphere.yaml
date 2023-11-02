@@ -1,0 +1,170 @@
+name: Atmosphere
+type: class
+category: Lighting
+memory_category: Instances
+summary: |
+  The `Class.Atmosphere` object pushes Roblox closer toward realistic
+  environments where sunlight scatters in different ways depending on density
+  and other air particle properties.
+description: |
+  Fog properties are hidden when Lighting contains an Atmosphere object.
+
+  The **Atmosphere** object pushes Roblox closer toward realistic environments
+  where sunlight scatters in different ways depending on density and other air
+  particle properties. It simulates real-world "aerial perspective" and lets you
+  control light transmission from the background sky through distant objects.
+  Furthermore, it controls haze and glare conditions, letting you tune a perfect
+  sunset, foggy afternoon, and more.
+
+  See also:
+
+  - [Atmospheric Effects](../../../environment/atmosphere.md) for property
+    comparisons and example environments.
+  - [Skybox](../../../environment/skybox.md) for how to change the default
+    skybox for games and customize the lighting.
+  - [Post-Processing Effects](../../../environment/post-processing-effects.md)
+    for how post-processing effects can quickly improve a game's visuals with a
+    variety of customizable filters.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Atmosphere.Color
+    summary: |
+      Changes the `Class.Atmosphere` hue for subtle environmental moods.
+    description: |
+      A `Datatype.Color3` value which changes the `Class.Atmosphere` hue for
+      subtle environmental moods. This is best combined with increased
+      `Class.Atmosphere.Haze` to expand the visible effect.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Atmosphere.Decay
+    summary: |
+      When used with increased `Class.Atmosphere.Haze` and
+      `Class.Atmosphere.Glare`, defines the hue of the `Class.Atmosphere` away
+      from the sun, gradually falling off from `Class.Atmosphere.Color` towards
+      this value.
+    description: |
+      Defines the hue of the `Class.Atmosphere` away from the sun, gradually
+      falling off from `Class.Atmosphere.Color` towards this value. Must be used
+      with `Class.Atmosphere.Haze` and `Class.Atmosphere.Glare` levels higher
+      than 0 to see any effect.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Atmosphere.Density
+    summary: |
+      Defines the amount of particles in the `Class.Atmosphere` and essentially
+      controls how much in-game objects/terrain will be obscured by them.
+    description: |
+      Defines the amount of particles in the air. The higher the density, the
+      more particles and the more in-game objects/terrain will be obscured by
+      them. Note that density does not **directly** affect the skybox &mdash; it
+      merely affects in-game objects/terrain and visibility of the skybox
+      through them.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Atmosphere.Glare
+    summary: |
+      When used with increased `Class.Atmosphere.Haze`, specifies the glow/glare
+      of the `Class.Atmosphere` around the sun. More glare results in an
+      increased effect of sunlight cast onto the sky and world.
+    description: |
+      Specifies the glow/glare of the `Class.Atmosphere` around the sun. More
+      glare results in an increased effect of sunlight cast onto the sky and
+      world. Must be used with a `Class.Atmosphere.Haze` level higher than 0 to
+      see any effect.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Atmosphere.Haze
+    summary: |
+      Defines the haziness of the `Class.Atmosphere` with a visible effect both
+      above the horizon and into the distance.
+    description: |
+      Defines the haziness of the `Class.Atmosphere` with a visible effect both
+      above the horizon and into the distance. This can be combined with
+      `Class.Atmosphere.Color` to create environmental moods, like a grey tint
+      for a polluted alien planet.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Atmosphere.Offset
+    summary: |
+      Controls how light transmits between the camera and the sky background.
+    description: |
+      Controls how light transmits between the camera and the sky background.
+      Increase this value to create a horizon silhouette against the sky or
+      reduce it to blend distant objects into the sky for an endless and
+      seamless open world.
+
+      Offset should be balanced against `Class.Atmosphere.Density` and carefully
+      tested in your place. A low offset may cause "ghosting" where the skybox
+      can be seen through objects/terrain. This can be corrected by increasing
+      the offset, which more clearly silhouettes distant objects/terrain against
+      the sky, but too much offset may reveal level-of-detail "popping" for far
+      distant terrain and meshes.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

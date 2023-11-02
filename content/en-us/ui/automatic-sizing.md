@@ -6,7 +6,7 @@ description: Explains how to automatically resize a parent GuiObject to the size
 The `Class.GuiObject.AutomaticSize|AutomaticSize` property automatically resizes a parent `Class.GuiObject` to the size of its descendants. By applying this property, you can dynamically add text and image content to a `Class.GuiObject`, and its size actively adjusts to fit that content. You can use this property in a variety of use cases, including:
 
 - **Localized text** – Expanding a `Class.GuiObject` to fit text that has been [localized](../production/localization/index.md) in many languages.
-- **User input** – Allowing users to [input text](../ui/buttons.md#textboxes) within a `Class.TextBox`, automatically adjusting its size based on the amount of text entered.
+- **User input** – Allowing users to [input text](../ui/text-input.md) within a `Class.TextBox`, automatically adjusting its size based on the amount of text entered.
 - **Dynamic Layouts** – Utilizing UI [layouts](../ui/layout-and-appearance.md#layouts), such as `Class.UIListLayout|UIListLayouts` that automatically resize according to how many items are in their lists.
 - **Scrolling Frames** – Automatically resizing the canvas of a `Class.ScrollingFrame` according to its content.
 - **Rich Text** – Automatically adjusting the size of text objects using [rich text markup](../ui/rich-text.md), including font type and size.

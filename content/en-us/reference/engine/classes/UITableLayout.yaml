@@ -1,0 +1,153 @@
+name: UITableLayout
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Lays out sibling UI elements and their child UI elements as rows/columns and
+  cells in a table.
+description: |
+  A UITableLayout lays out sibling UI elements as rows in a table. Child UI
+  elements (the table cells) of these rows are then arranged in columns (within
+  rows). Each cell within a row has the same height, and each cell within a
+  column has the same width. The hierarchy in the explorer should look like this
+  (`Class.Frame`s are yellow rows, `Class.TextLabel`s are cells)
+
+  <img src="/assets/legacy/UITableLayout_Hierarchy.png" alt="Hierarchy of UI elements used with a UITableLayout" />
+  <img src="/assets/legacy/UITableLayout_Padding.png" alt="UITableLayout result" />
+
+  By changing the `Class.UIGridStyleLayout.FillDirection`, sibling UI elements
+  can act as columns instead.
+
+  When applied, a UITableLayout will take control of sibling and cell elements'
+  `Class.GuiObject.Size` and `Class.GuiObject.Position`. Changing these in the
+  Properties window is still possible will not produce any effect.
+
+  Dimensions of the cells in the resulting table are controlled by the parent UI
+  element's dimensions. Unless `Class.UITableLayout.FillEmptySpaceColumns` or
+  `Class.UITableLayout.FillEmptySpaceRows` is enabled, the cell dimensions will
+  be that of the parent UI element (and thus tables with more than one cell
+  extend outside of their parent).
+
+  Cells will continue to respect `Class.UISizeConstraint` objects within them.
+  In other words, setting `Class.UISizeConstraint.MinSize` on
+  `Class.UISizeConstraint`s within the header cells can determine the size of
+  the rest of the cells. If `Class.UISizeConstraint.MaxSize` restricts a cell's
+  size from filling the allotted space (i.e. another row/column is wider than
+  it), it will align to the top-left.
+code_samples:
+  - Build-UI-Table
+inherits:
+  - UIGridStyleLayout
+tags: []
+deprecation_message: ''
+properties:
+  - name: UITableLayout.FillEmptySpaceColumns
+    summary: |
+      Determines whether cells are sized such that they occupy the horizontal
+      space of the parent UI element.
+    description: |
+      FillEmptySpaceColumns determines whether cells' X size are set such that
+      the entire horizontal space of the parent UI element is used. Enabling
+      this is useful for making sure your table takes up a more easily
+      predictable amount of horizontal space (the X-axis size of the parent UI
+      element). It is still possible that a `Class.UISizeConstraint` applied to
+      cells will cause underflow/overflow.
+
+      When enabling this property, the column widths will be approximately equal
+      to the parent's `Class.GuiBase2d.AbsoluteSize`.X component divided by the
+      number of columns (not accounting for padding or other factors).
+    code_samples:
+      - Build-UI-Table
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UITableLayout.FillEmptySpaceRows
+    summary: |
+      Determines whether cells are sized such that they occupy the vertical
+      space of the parent UI element.
+    description: |
+      FillEmptySpaceRows determines whether cells' Y size are set such that the
+      entire vertical space of the parent UI element is used. Enabling this is
+      useful for making sure your table takes up a more easily predictable
+      amount of vertical space (the Y-axis size of the parent UI element). It is
+      still possible that a `Class.UISizeConstraint` applied to cells will cause
+      underflow/overflow.
+
+      When enabling this property, the row heights will be approximately equal
+      to the parent's `Class.GuiBase2d.AbsoluteSize`.Y component divided by the
+      number of rows (not accounting for padding or other factors).
+    code_samples:
+      - Build-UI-Table
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UITableLayout.MajorAxis
+    summary: |
+      Determines whether sibling UI elements are treated as rows or columns.
+    description: |
+      MajorAxis determines whether sibling UI elements are treated as rows or
+      columns. Below, the left uses a `Enum.TableMajorAxis` of RowMajor, and the
+      right uses ColumnMajor.
+
+      ![Row major](/assets/legacy/UITableLayout_Padding.png)
+
+      **Note: it seems that this property isn't making noticeable changes, and
+      rather its behavior is determined by
+      `Class.UIGridStyleLayout.FillDirection` instead.**
+    code_samples:
+      - Build-UI-Table
+    type: TableMajorAxis
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UITableLayout.Padding
+    summary: |
+      Determines the empty space between cells.
+    description: |
+      Padding will position elements with extra space between them. This can be
+      done using Scale or Offset components of UDim2. Negative values can bring
+      elements closer together. When non-zero, the sibling UI elements may be
+      visible between the cells contained within them. In the image below, you
+      can see the padding of 5 pixels applied between the cells (and the sibling
+      UI elements acting as rows in yellow).
+
+      ![UITableLayout with padding between cells](/assets/legacy/UITableLayout_Padding.png)
+    code_samples:
+      - Build-UI-Table
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

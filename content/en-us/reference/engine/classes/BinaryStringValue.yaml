@@ -1,0 +1,45 @@
+name: BinaryStringValue
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal type of `Class.StringValue` object, that stores a `BinaryString`
+  value.
+description: |
+  An internal type of `Class.StringValue` object, that stores a `BinaryString`
+  value.
+code_samples:
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events:
+  - name: BinaryStringValue.Changed
+    summary: |
+      Fires if the BinaryStringValue's value is changed.
+    description: |
+      Fires if the `Class.BinaryStringValue.Value` of the
+      `Class.BinaryStringValue` is changed by the engine.
+
+      In practice, this object is stored out of reach from normal scripts, so
+      this event cannot be connected to. If a BinaryStringValue is created by a
+      script, the engine will not do anything with it, so the event will never
+      fire.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+    parameters:
+      - name: value
+        type: BinaryString
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

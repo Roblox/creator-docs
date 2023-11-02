@@ -1,0 +1,97 @@
+name: Tween
+type: class
+category: Animations
+memory_category: Instances
+summary: |
+  Tweens are used to interpolate the properties of instances. The Tween object
+  itself controls the playback of the interpolation. Creating and configuring
+  tweens is done with the `Class.TweenService:Create()` function. This is the
+  only way to create tweens. Instance.new cannot be used for this particular
+  object.
+description: |
+  Tweens are used to interpolate the properties of instances. The Tween object
+  itself controls the playback of the interpolation. Creating and configuring
+  tweens is done with the `Class.TweenService:Create()` function. This is the
+  only way to create tweens. Instance.new cannot be used for this particular
+  object.
+
+  Note that while the configuration of a tween can be accessed after a tween has
+  been created, it can not be modified. If new goals are needed for
+  interpolation, a new tween must be created. Further information on how to
+  create Tweens can be found on the `Class.TweenService` page.
+
+  Multiple tweens can be played on the same object at the same time, but they
+  must not be animating the same property. If two tweens attempt to modify the
+  same property, the initial tween will be cancelled and overwritten by the most
+  recent tween (see examples).
+
+  Although other methods exist for tweening objects, such as
+  `Class.GuiObject:TweenSizeAndPosition()`, Tweens allows multiple properties to
+  be modified and for the animation to be paused and cancelled at any point.
+code_samples:
+  - Tween-Creation
+  - Tween-Conflict
+inherits:
+  - TweenBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: Tween.Instance
+    summary: |
+      The read-only Instance property of a `Class.Tween` points to the
+      `Class.Instance` whose properties are being interpolated by the tween.
+    description: |
+      The Instance property of a `Class.Tween` points to the `Class.Instance`
+      whose properties are being interpolated by the tween. As with all
+      `Class.Tween` properties, the Instance property is read only. If a
+      developer wants to tween a different instance they must create a new
+      `Class.Tween` using `Class.TweenService:Create()`.
+    code_samples:
+      - Tween-Instance
+    type: Instance
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Tween.TweenInfo
+    summary: |
+      Read-only property that includes information on how the interpolation of
+      the `Class.Tween` is to be carried out, using the `Datatype.TweenInfo`
+      data type.
+    description: |
+      Read-only property that includes information on how the interpolation of
+      the `Class.Tween` is to be carried out, using the `Datatype.TweenInfo`
+      data type. The TweenInfo data type includes a range of properties that can
+      be used to achieve various styles of animation, including reversing and
+      looping `Class.Tween`s (see examples).
+
+      As with all `Class.Tween` properties, the TweenInfo property is read only.
+      If a developer wants to modify the TweenInfo of a Tween they must create a
+      new `Class.Tween` using `Class.TweenService:Create()`.
+    code_samples:
+      - Looped-Tween
+      - TweenInfo
+    type: TweenInfo
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

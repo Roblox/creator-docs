@@ -85,12 +85,12 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
 
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -114,12 +114,12 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
    	10476359,  -- Paper Hat
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -143,12 +143,12 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
 
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -171,12 +171,12 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    	28521575,  -- Slime Shield
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId, Enum.InfoType.GamePass)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -196,12 +196,12 @@ Adding [developer products](../../production/monetization/developer-products.md)
 
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -224,12 +224,12 @@ Adding [developer products](../../production/monetization/developer-products.md)
    	1257880672,  -- Healing Potion
    }
 
-   for _, assetId in ipairs(items) do
+   for _, assetId in items do
    	local success, errorMessage = pcall(function()
    		MerchBooth.addItemAsync(assetId, Enum.InfoType.Product)
    	end)
    	if not success then
-   		print(errorMessage)
+   		warn(errorMessage)
    	end
    end
    ```
@@ -242,7 +242,7 @@ By default, a right-side **catalog button** lets users open the booth at any tim
 
 In some cases, it may be useful to [remove](#togglecatalogbutton) this button and connect your own:
 
-1. Create a new button as outlined in [Buttons and Text Input](../../ui/buttons.md).
+1. Create a new button as outlined in [Buttons](../../ui/buttons.md).
 1. Create a `Class.LocalScript` as a child of the button object.
 
    <img src="../../assets/studio/explorer/LocalScript-In-TextButton.png" width="320" />
@@ -307,7 +307,7 @@ To create a shoppable region:
    MerchBooth.toggleCatalogButton(false)
 
    -- Iterate through all tagged parts
-   for _, region in ipairs(CollectionService:GetTagged("ShopRegion")) do
+   for _, region in CollectionService:GetTagged("ShopRegion") do
    	region.Touched:Connect(function(otherPart)
    		local character = Players.LocalPlayer.Character
    		if character and character:FindFirstChild("HumanoidRootPart") == otherPart then
@@ -711,12 +711,12 @@ local items = {
 	10476359,  -- Paper Hat
 }
 
-for _, assetId in ipairs(items) do
+for _, assetId in items do
 	local success, errorMessage = pcall(function()
 		MerchBooth.addItemAsync(assetId)
 	end)
 	if not success then
-		print(errorMessage)
+		warn(errorMessage)
 	end
 end
 ```
@@ -731,12 +731,12 @@ local items = {
 	28521575,  -- Slime Shield
 }
 
-for _, assetId in ipairs(items) do
+for _, assetId in items do
 	local success, errorMessage = pcall(function()
 		MerchBooth.addItemAsync(assetId, Enum.InfoType.GamePass)
 	end)
 	if not success then
-		print(errorMessage)
+		warn(errorMessage)
 	end
 end
 ```
@@ -751,12 +751,12 @@ local items = {
 	1257880672,  -- Healing Potion
 }
 
-for _, assetId in ipairs(items) do
+for _, assetId in items do
 	local success, errorMessage = pcall(function()
 		MerchBooth.addItemAsync(assetId, Enum.InfoType.Product)
 	end)
 	if not success then
-		print(errorMessage)
+		warn(errorMessage)
 	end
 end
 ```
@@ -957,7 +957,7 @@ local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(assetId)
 end)
 if not success then
-	print(errorMessage)
+	warn(errorMessage)
 end
 
 MerchBooth.openMerchBooth()

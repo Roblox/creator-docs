@@ -1,0 +1,433 @@
+name: CylindricalConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Constrains two attachments on two parts to have a relative linear and
+  rotational motion.
+description: |
+  A **CylindricalConstraint** allows its attachments to slide along one axis and
+  rotate about another axis. It can be thought of like a combination of a
+  `Class.PrismaticConstraint` and a `Class.HingeConstraint`. The sliding axis is
+  determined by the **X** axis of the constraint's
+  `Class.Constraint.Attachment0|Attachment0`. The rotation axis is centered at
+  the constraint's `Class.Constraint.Attachment1|Attachment1` and is angled off
+  of the sliding constraint by the constraint's
+  `Class.CylindricalConstraint.InclinationAngle|InclinationAngle`.
+
+  This constraint, along with a `Class.SpringConstraint`, is ideal for building
+  vehicle suspension.
+
+  Note that if this constraint attaches one part (**A**) to another part (**B**)
+  that is anchored or connected to an anchored part (**Z**), part **A** will not
+  be locally simulated when interacting with a player.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Angular Power
+
+  If a cylindrical's
+  `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is set
+  to `Enum.ActuatorType|Motor`, it attempts to rotate the attachments with the
+  goal of reaching its
+  `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`. You can further
+  control this rotation through both
+  `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`
+  and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`. If a
+  cylindrical's
+  `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is set
+  to `Enum.ActuatorType|Servo`, it attempts to rotate to an angle specified by
+  `Class.CylindricalConstraint.TargetAngle|TargetAngle`. This rotation is
+  controlled by `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`,
+  `Class.CylindricalConstraint.AngularResponsiveness|AngularResponsiveness`, and
+  `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`.
+
+  #### Linear Power
+
+  If a cylindrical's `Class.CylindricalConstraint|ActuatorType` is set to
+  `Enum.ActuatorType|Motor`, it attempts to translate the attachments with the
+  goal of reaching `Class.CylindricalConstraint|Velocity`. You can further
+  control this translation through both
+  `Class.CylindricalConstraint|MotorMaxAcceleration` and
+  `Class.CylindricalConstraint|MotorMaxForce`. If a cylindrical's
+  `Class.CylindricalConstraint|ActuatorType` is set to
+  `Enum.ActuatorType|Servo`, it attempts to translate the attachments to a set
+  separation specified by `Class.CylindricalConstraint|TargetPosition`. This
+  translation is controlled by `Class.CylindricalConstraint|Speed`,
+  `Class.CylindricalConstraint|LinearResponsiveness`, and
+  `Class.CylindricalConstraint|ServoMaxForce`.
+
+  #### Limits
+
+  You can set limits to restrict both the **sliding range** and **rotation** of
+  a cylindrical constraint. Enabling the
+  `Class.CylindricalConstraint|LimitsEnabled` property exposes the
+  `Class.CylindricalConstraint|LowerLimit` and
+  `Class.CylindricalConstraint|UpperLimit` values, as well as
+  `Class.CylindricalConstraint|Restitution` which defines the elasticity of the
+  attachments when they reach either limit. Enabling the
+  `Class.CylindricalConstraint.AngularLimitsEnabled|AngularLimitsEnabled`
+  property exposes the `Class.CylindricalConstraint.LowerAngle|LowerAngle` and
+  `Class.CylindricalConstraint.UpperAngle|UpperAngle` limits, as well as
+  `Class.CylindricalConstraint.AngularRestitution|AngularRestitution` which
+  defines the elasticity of the attachments when they reach either limit.
+
+  #### Inclination Angle
+
+  `Class.CylindricalConstraint.InclinationAngle|InclinationAngle` defines the
+  direction of the rotation axis as an angle from the **X** axis in the **XY**
+  plane of `Class.Constraint.Attachment0|Attachment0`, from
+  -180&nbsp;to&nbsp;180. This lets you tilt the rotating element without
+  changing the sliding axis.
+code_samples:
+inherits:
+  - SlidingBallConstraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: CylindricalConstraint.AngularActuatorType
+    summary: |
+      Type of angular actuator.
+    description: |
+      If a cylindrical's
+      `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is
+      set to `Enum.ActuatorType|Motor`, it attempts to rotate the attachments
+      with the goal of reaching its
+      `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`. You can
+      further control this rotation through both
+      `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration`
+      and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`.
+
+      If a cylindrical's
+      `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is
+      set to `Enum.ActuatorType|Servo`, it attempts to rotate to an angle
+      specified by `Class.CylindricalConstraint.TargetAngle|TargetAngle`. This
+      rotation is controlled by
+      `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`,
+      `Class.CylindricalConstraint.AngularResponsiveness|AngularResponsiveness`,
+      and `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`.
+    code_samples:
+    type: ActuatorType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Cylinder
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.AngularLimitsEnabled
+    summary: |
+      Enables the angular limits around the rotation axis.
+    description: |
+      Enables the angular limits around the rotation axis.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Cylinder
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.AngularResponsiveness
+    summary: |
+      Specifies the sharpness of the angular servo motor in reaching the
+      `Class.CylindricalConstraint.TargetAngle|TargetAngle`.
+    description: |
+      This property specifies the sharpness of the angular servo motor in
+      reaching the `Class.CylindricalConstraint.TargetAngle|TargetAngle`, when
+      `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is
+      set to `Enum.ActuatorType|Servo`. Larger values correspond to a faster
+      response and smaller values results in more damping and a slower response.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularServo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.AngularRestitution
+    summary: |
+      Restitution of the two limits, or how elastic they are.
+    description: |
+      Restitution of the two limits, or how elastic they are. Constrained
+      between 0 and 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularLimits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.AngularSpeed
+    summary: |
+      Target angular speed. This value is unsigned as the servo will always move
+      toward its target. In radians per second.
+    description: |
+      Target angular speed. This value is unsigned as the servo will always move
+      toward its target. In radians per second.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularServo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.AngularVelocity
+    summary: |
+      The target angular velocity of the motor in radians per second around the
+      rotation axis.
+    description: |
+      The target angular velocity of the motor in radians per second around the
+      rotation axis.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularMotor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.CurrentAngle
+    summary: |
+      Signed angle (in degrees) between the reference axis and the secondary
+      axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
+      axis.
+    description: |
+      Signed angle (in degrees) between the reference axis and the secondary
+      axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
+      axis. Valid range between -180 and 180.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+  - name: CylindricalConstraint.InclinationAngle
+    summary: |
+      Direction of the rotation axis as an angle from the **X** axis in the
+      **XY** plane of `Class.Constraint.Attachment0|Attachment0`.
+    description: |
+      Direction of the rotation axis as an angle from the **X** axis in the
+      **XY** plane of `Class.Constraint.Attachment0|Attachment0`. Valid range
+      between -180 and 180.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Cylinder
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.LowerAngle
+    summary: |
+      Lower limit for the angle (in degrees) between the reference axis and the
+      SecondaryAxis of `Class.Constraint.Attachment1|Attachment1` around the
+      rotation axis.
+    description: |
+      Lower limit for the angle (in degrees) between the reference axis and the
+      SecondaryAxis of `Class.Constraint.Attachment1|Attachment1` around the
+      rotation axis. Valid range between -180 and 180.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularLimits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.MotorMaxAngularAcceleration
+    summary: |
+      The maximum angular acceleration of the motor in radians per second
+      squared.
+    description: |
+      The maximum angular acceleration of the motor in radians per second
+      squared.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularMotor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.MotorMaxTorque
+    summary: |
+      The maximum torque the motor can apply to achieve the target angular
+      velocity.
+    description: |
+      The maximum torque the motor can apply to achieve the target angular
+      velocity. Units are mass&nbsp;&times;&nbsp;studs&sup2;/second&sup2;.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularMotor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.RotationAxisVisible
+    summary: |
+      Enable the visibility of the rotation axis.
+    description: |
+      Enable the visibility of the rotation axis.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.ServoMaxTorque
+    summary: |
+      Maximum torque the servo motor can apply.
+    description: |
+      Maximum torque the servo motor can apply. Units are
+      mass&nbsp;&times;&nbsp;studs&sup2;/second&sup2;.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularServo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.SoftlockAngularServoUponReachingTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularServo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.TargetAngle
+    summary: |
+      Target angle (in degrees) between the reference axis and the secondary
+      axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
+      axis.
+    description: |
+      Target angle (in degrees) between the reference axis and the secondary
+      axis of `Class.Constraint.Attachment1|Attachment1` around the rotation
+      axis. Valid range between -180 and 180.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularServo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.UpperAngle
+    summary: |
+      Upper limit for the angle (in degrees) between the reference axis and the
+      secondary axis of `Class.Constraint.Attachment1|Attachment1` around the
+      rotation axis.
+    description: |
+      Upper limit for the angle (in degrees) between the reference axis and the
+      secondary axis of `Class.Constraint.Attachment1|Attachment1` around the
+      rotation axis. Valid range between -180 and 180.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AngularLimits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CylindricalConstraint.WorldRotationAxis
+    summary: |
+      The unit vector direction of the rotation axis in world coordinates.
+    description: |
+      The unit vector direction of the rotation axis in world coordinates.
+    code_samples:
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

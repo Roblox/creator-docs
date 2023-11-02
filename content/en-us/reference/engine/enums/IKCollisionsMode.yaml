@@ -1,0 +1,35 @@
+name: IKCollisionsMode
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NoCollisions
+    summary: |
+      Only the part and any parts directly joined to it via
+      joints/`Class.Constraint|constraints` be involved in the resolution,
+      everything else in the workspace will be treated as though it doesn't
+      exist.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: OtherMechanismsAnchored
+    summary: |
+      Only the part and any parts directly jointed to it via
+      joints/`Class.Constraint|constraints` will be moved during resolution, but
+      they will collide with other objects in the workspace.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: IncludeContactedMechanisms
+    summary: |
+      The part, any parts directly joined to it via
+      joints/`Class.Constraint|constraints`, and any parts which it comes into
+      contact with during the solve will be moved during the resolution. That
+      is, the moved parts will be allowed to "push" other unanchored parts in
+      the workspace out of the way in order to get to the target position.
+    value: 2
+    tags: []
+    deprecation_message: ''

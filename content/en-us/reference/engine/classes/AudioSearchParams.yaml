@@ -1,0 +1,176 @@
+name: AudioSearchParams
+type: class
+category:
+memory_category: Instances
+summary: |
+  Instance to be passed to `Class.AssetService:SearchAudio()` to search for
+  audio assets.
+description: |
+  Instance to be passed to `Class.AssetService:SearchAudio()` to search for
+  audio assets.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: AudioSearchParams.Album
+    summary: |
+      The album the audio asset belongs to.
+    description: |
+      Searches for audio which belongs to this album. Needs to be an exact
+      match.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.Artist
+    summary: |
+      The artist that created the audio asset.
+    description: |
+      Searches for audio which was created by this artist. Needs to be an exact
+      match.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.AudioSubType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioSubType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.AudioSubtype
+    summary: |
+      The subtype of the audio asset.
+    description: |
+      Searches for audio with this subtype, corresponding to the
+      `Enum.AudioSubType` enum. Defaults to `Enum.AudioSubType.Music`.
+    code_samples: []
+    type: AudioSubType
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: AudioSearchParams.MaxDuration
+    summary: |
+      The maximum duration of the audio asset.
+    description: |
+      Searches for audio with a duration less than or equal to this value.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.MinDuration
+    summary: |
+      The minimum duration of the audio asset.
+    description: |
+      Searches for audio with a duration greater than or equal to this value.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.SearchKeyword
+    summary: |
+      The keyword to search for.
+    description: |
+      Searches for audio relevant to this keyword.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.Tag
+    summary: |
+      The tag of the audio asset.
+    description: |
+      Searches for audio which has this tag. Needs to be an exact match.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioSearchParams.Title
+    summary: |
+      The title of the audio asset.
+    description: |
+      Searches for audio with this title. Needs to be an exact match.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,68 @@
+name: RaycastResult
+type: datatype
+summary: |
+  Stores results from a raycast operation.
+description: |
+  The `Datatype.RaycastResult` data type stores the result of a successful
+  raycasting operation performed by `Class.WorldRoot:Raycast()`. It contains the
+  properties listed below.
+
+  This object should not be confused with the similarly-named
+  `Datatype.RaycastParams` which is used to perform a raycast.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+constants: []
+properties:
+  - name: RaycastResult.Distance
+    type: number
+    summary: |
+      The distance between the ray origin and the intersection point.
+    description: |
+      The distance between the ray origin and the intersection point.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastResult.Instance
+    type: Instance
+    summary: |
+      The `Class.BasePart` or `Class.Terrain` cell that the ray intersected.
+    description: |
+      The `Class.BasePart` or `Class.Terrain` cell that the ray intersected.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastResult.Material
+    type: Material
+    summary: |
+      The `Enum.Material` at the intersection point.
+    description: |
+      The `Enum.Material` at the intersection point. For normal parts this is
+      the `Class.BasePart.Material`; for `Class.Terrain` this can vary depending
+      on terrain data.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastResult.Position
+    type: Vector3
+    summary: |
+      The position of the intersection between the ray and the part.
+    description: |
+      The world space point at which the intersection occurred, usually a point
+      directly on the surface of the instance.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastResult.Normal
+    type: Vector3
+    summary: |
+      The normal vector of the intersected face.
+    description: |
+      The normal vector of the intersected face.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

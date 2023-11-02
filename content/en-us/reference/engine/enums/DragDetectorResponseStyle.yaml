@@ -1,0 +1,40 @@
+name: DragDetectorResponseStyle
+type: enum
+summary: |
+  Describes how the clicked object will be treated once the desired motion has
+  been calculated.
+description: |
+  Describes how the clicked object will be treated once the desired motion has
+  been calculated.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Geometric
+    value: 0
+    summary: |
+      For an `Class.BasePart.Anchored|Anchored` object both inside the running
+      experience and in Studio edit mode, the position/orientation of the object
+      will be updated to exactly reflect the proposed motion. For an unanchored
+      object, behavior is the same as for an anchored object; however, in a
+      running experience, the object will be anchored at the start of the drag
+      and restored to unanchored upon drag release.
+    tags: []
+    deprecation_message: ''
+  - name: Physical
+    value: 1
+    summary: |
+      An `Class.BasePart.Anchored|Anchored` object will default to **Geometric**
+      behavior as it is not affected by forces. An unanchored object will be
+      moved by constraint forces that attempt to bring it to the desired
+      position and/or orientation given by the proposed motion.
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    value: 2
+    summary: |
+      The object will not move at all, but
+      `Class.DragDetector.DragFrame|DragFrame` will still be updated and you can
+      respond to drag manipulation however you'd like.
+    tags: []
+    deprecation_message: ''

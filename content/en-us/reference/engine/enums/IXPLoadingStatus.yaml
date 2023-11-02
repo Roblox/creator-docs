@@ -1,0 +1,43 @@
+name: IXPLoadingStatus
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Pending
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Initialized
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ErrorInvalidUser
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ErrorConnection
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ErrorJsonParse
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ErrorTimedOut
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''

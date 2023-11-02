@@ -1,0 +1,27 @@
+name: BevelMesh
+type: class
+category:
+memory_category: Instances
+summary: |
+  An abstract class that `Class.BlockMesh` and `Class.CylinderMesh` inherit
+  from.
+description: |
+  BevelMesh is an abstract class that `Class.BlockMesh` and `Class.CylinderMesh`
+  inherit from.
+code_samples:
+inherits:
+  - DataModelMesh
+tags:
+  - NotCreatable
+  - NotBrowsable
+  - Deprecated
+deprecation_message: |
+  This object serves no purpose other than being an abstract class that
+  `Class.BlockMesh` and `Class.CylinderMesh` inherit from. Note non-character
+  beveled parts were removed in 2013. Developers looking for beveled edges are
+  required to use either `Class.UnionOperation|UnionOperations` or
+  `Class.MeshPart|MeshParts`.
+properties: []
+methods: []
+events: []
+callbacks: []

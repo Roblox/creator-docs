@@ -1,0 +1,269 @@
+name: WrapLayer
+type: class
+category:
+memory_category: Instances
+summary: |
+  The WrapLayer object defines a 3D accessory's inner and outer surfaces and
+  other properties related to layering accessories. These surfaces, or the Inner
+  Cage and Outer Cage, are similar to collision boxes, and describe the surfaces
+  of which other 3D accessories can be placed without clipping or breaking.
+description: |
+  The WrapLayer object defines a 3D accessory's inner and outer surfaces and
+  other properties related to layering accessories. These surfaces, or the Inner
+  Cage and Outer Cage, are similar to collision boxes, and describe the surfaces
+  of which other 3D accessories can be placed without clipping or breaking.
+
+  Internally, WrapLayer also uses the UV layout of the Inner and Outer cages to
+  match coordinates to another 3D object's cage. This powers the deformation of
+  objects around differently shaped avatars and underlying accessories.
+code_samples:
+inherits:
+  - BaseWrap
+tags: []
+deprecation_message: ''
+properties:
+  - name: WrapLayer.AutoSkin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: WrapLayerAutoSkin
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.BindOffset
+    summary: |
+      `Datatype.CFrame` is used to adjust a binding point for clothing item
+      mesh. Could be used to move and rotate clothing items. This property is
+      intended for fine-tuning only and it is heavily optional.
+    description: |
+      This property is intended for fine-tuning purposes and is highly optional.
+
+      `Datatype.CFrame` to adjust a binding point for a clothing item mesh.
+      Allows for fine-tuning of clothing items (slight adjustment of
+      position/rotation to get a unique look) in contexts such as community-made
+      avatar editors.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tuning
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.Color
+    summary: |
+      Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`.
+    description: |
+      Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: false
+      can_save: false
+  - name: WrapLayer.DebugMode
+    summary: |
+      Allows switching between different debugging visualization modes for cage
+      meshes.
+    description: |
+      Allows switching between different debugging visualization modes for cage
+      meshes.
+    code_samples:
+    type: WrapLayerDebugMode
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: false
+      can_save: false
+  - name: WrapLayer.Enabled
+    summary: |
+      Allows for disabling of the `Class.WrapLayer` object as if it does not
+      exist.
+    description: |
+      Allows for disabling of the `Class.WrapLayer` object as if it does not
+      exist.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.Order
+    summary: |
+      Controls the composition order for layered clothing.
+    description: |
+      Controls the composition order for layered clothing. Clothing items with
+      higher order will appear on top of clothing items with lower order. If two
+      items have the same order, the deformer composition order is ambiguous and
+      depends on serialization order. Default value is 1.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.Puffiness
+    summary: |
+      Controls how much underlying clothing items inflate the current clothing
+      item.
+    description: |
+      Controls how much underlying clothing items inflate the current clothing
+      item.
+
+      Valid range is 0 to 1. A value of 0 makes the clothing item always fit the
+      body regardless of how many clothing layers are under it (all underlying
+      clothing layers will be compressed). A value of 1 (default) never
+      compresses anything and infinitely inflates over underlying clothing
+      items.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.ReferenceMeshId
+    summary: |
+      AssetID for reference mesh used to define Inner Cage of a 3D object.
+    description: |
+      AssetID for reference mesh used to define Inner Cage of a 3D object
+
+      Reference mesh is used to define standard topology and UV coordinates for
+      index matching. It is expected that for all catalog avatars, this will
+      point to one of 15 standard reference meshes provided by Roblox. But for
+      some NPCs or a custom avatar system, this might point to other meshes.
+
+      Note: this property is set up automatically by the FBX importer
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.ReferenceOrigin
+    summary: |
+      Reference mesh offset relative to parent MeshPart (in the parent MeshPart
+      space)
+
+      Note: this property is set up automatically by the FBX importer.
+    description: |
+      Reference mesh offset relative to parent MeshPart (in the parent MeshPart
+      space)
+
+      Note: this property is set up automatically by the FBX importer
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapLayer.ReferenceOriginWorld
+    summary: |
+      Reference mesh offset relative to parent MeshPart (in the world space)
+
+      Note: this property is set up automatically by the FBX importer.
+    description: |
+      Reference mesh offset relative to parent MeshPart (in the world space)
+
+      Note: this property is set up automatically by the FBX importer
+    code_samples:
+    type: CFrame
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: WrapLayer.ShrinkFactor
+    summary: |
+      Allows slight shrinking/expanding of the resulting render mesh, without
+      affecting any other layers.
+    description: |
+      This property is intended for fine-tuning purposes and is highly optional.
+
+      Allows slight shrinking/expanding of the resulting render mesh, without
+      affecting any other layers. This is useful in rare cases when the clothing
+      mesh does not precisely fit the underlying clothing layers (the cage is
+      usually slightly overestimated atop the real shape to avoid layer
+      interpenetration). Even slight overestimation has the tendency to
+      accumulate, especially when there are a lot of layers. While this is
+      usually not critical, some items like backpacks may be problematic.
+
+      Valid range is -1 to 1. A value of -1 will maximally expand while a value
+      of 1 will maximally shrink. A value of 0 (default) has no effect.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tuning
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

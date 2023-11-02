@@ -1,0 +1,29 @@
+name: PhysicsSteppingMethod
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The current default is Fixed.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Fixed
+    summary: |
+      All simulated assemblies inside the workspace will advance forward at 240
+      Hz. This option is best for optimal stability and simulation accuracy.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Adaptive
+    summary: |
+      The engine attempts to assign optimal simulation rates for individual
+      assemblies of either 240 Hz, 120 Hz, or 60 Hz. This setting is optimized
+      for performance.
+    value: 2
+    tags: []
+    deprecation_message: ''

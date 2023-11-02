@@ -48,6 +48,7 @@ import {
   summaryOfRequirements,
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
+import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -57,21 +58,32 @@ const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
   console.log('Checking only Markdown files...');
   if (config.files === FileOption.All) {
-    filesToCheck = getAllContentFileNamesWithExtension({
-      locale: Locale.EN_US,
-      fileExtension: FileExtension.MARKDOWN,
-    });
+    filesToCheck.push(
+      ...getAllContentFileNamesWithExtension({
+        locale: Locale.EN_US,
+        fileExtension: FileExtension.MARKDOWN,
+      }),
+      ...getAllContentFileNamesWithExtension({
+        locale: Locale.EN_US,
+        fileExtension: FileExtension.YAML,
+      })
+    );
     filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
-      fileExtensions: [FileExtension.MARKDOWN],
+      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML],
     });
   } else if (config.files === FileOption.LastCommit) {
     filesToCheck = await getFilesChangedInLastCommitByExtensions([
       FileExtension.MARKDOWN,
+      FileExtension.YAML,
     ]);
   }
+  const prefixesToIgnore = ['.github/', 'content/common/navigation/'];
+  filesToCheck = filesToCheck.filter((filePath) => {
+    return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
+  });
   console.log(`Files to check (${filesToCheck.length}):`, filesToCheck);
   console.log('::endgroup::');
 };
@@ -172,11 +184,13 @@ try {
       filePath,
       repositoryRoot
     );
+    const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
+    const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
-    const content = readFileSync(filePath);
+    const fileContent = readFileSync(filePath);
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
-        content
+        fileContent
       )) as unknown as VFile;
       if (config.debug) {
         console.log(retextVFile);
@@ -184,10 +198,25 @@ try {
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
     if (config.checkHttpLinks || config.checkRelativeLinks) {
-      checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
+      checkContentLinks({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
     }
-    if (config.checkMarkdownLint) {
-      checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });
+    if (isMarkdownFile && config.checkMarkdownLint) {
+      checkMarkdownLint({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
+    }
+    if (isYamlFile) {
+      await checkEngineReferenceContent({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
     }
     console.log('::endgroup::');
   }

@@ -1,0 +1,47 @@
+name: PluginMouse
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  The PluginMouse object gives `Class.Plugin`s access to the mouse. It works
+  like the `Class.Mouse` object and can be obtained using the plugin
+  `Class.Plugin:GetMouse()` method.
+description: |
+  The PluginMouse object gives `Class.Plugin`s access to the mouse. It works
+  like the `Class.Mouse` object and can be obtained using the plugin
+  `Class.Plugin:GetMouse()` method.
+
+  Note the PluginMouse can only be used when the plugin has been activated using
+  `Class.Plugin:Activate()`.
+
+  In addition to the functions from the `Class.Mouse` object, the PluginMouse
+  includes the `Class.PluginMouse.DragEnter` function which keeps track of items
+  being selected while the mouse is dragging.
+
+  For more information on how to use mouse objects, see the `Class.Mouse` page.
+code_samples:
+  - PluginMouse-Get
+inherits:
+  - Mouse
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events:
+  - name: PluginMouse.DragEnter
+    summary: |
+      Fired when Instances are being selected while the mouse is dragging.
+    description: |
+      Fired when Instances are being selected while the mouse is dragging.
+    code_samples:
+    parameters:
+      - name: instances
+        type: Objects
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

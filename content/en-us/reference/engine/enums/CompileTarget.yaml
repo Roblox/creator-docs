@@ -1,0 +1,28 @@
+name: CompileTarget
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Client
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CoreScript
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Studio
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CoreScriptRaw
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

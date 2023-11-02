@@ -1,0 +1,53 @@
+name: ButtonStyle
+type: enum
+summary: |
+  Used by `Class.GuiButton.Style` to set a special hardcoded appearance.
+description: |
+  Used by `Class.GuiButton.Style` to set a special hardcoded appearance.
+
+  These should generally be avoided in favor of setting other appearance
+  properties, but they can be useful for wireframing.
+
+  Despite the Roblox naming, these are not used by any official Roblox UI.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Custom
+    summary: |
+      The button will respect the `Class.GuiObject.BorderColor3` and
+      `Class.GuiObject.BackgroundColor3` properties.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: RobloxButtonDefault
+    summary: |
+      A black background with a red border, and rounded corners.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: RobloxButton
+    summary: |
+      A black background with a grey border, and rounded corners.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RobloxRoundButton
+    summary: |
+      A grey background with rounded corners, and a slight drop shadow.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: RobloxRoundDefaultButton
+    summary: |
+      A blue background with rounded corners, and a slight drop shadow.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RobloxRoundDropdownButton
+    summary: |
+      A white background with a thin grey border, rounded corners, and a slight
+      drop shadow.
+    value: 5
+    tags: []
+    deprecation_message: ''

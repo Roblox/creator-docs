@@ -1,0 +1,39 @@
+name: HoverAnimateSpeed
+type: enum
+summary: ''
+description: |
+  Specifies how frequently the hover animation flashes.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: VerySlow
+    summary: |
+      2 seconds per cycle.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Slow
+    summary: |
+      1 second per cycle.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Medium
+    summary: |
+      0.5 seconds per cycle.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Fast
+    summary: |
+      0.25 seconds per cycle.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: VeryFast
+    summary: |
+      0.1 seconds per cycle.
+    value: 4
+    tags: []
+    deprecation_message: ''

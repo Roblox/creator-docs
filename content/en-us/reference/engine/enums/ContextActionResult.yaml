@@ -1,0 +1,31 @@
+name: ContextActionResult
+type: enum
+summary: |
+  Describes whether a ContextAction should sink or pass input events.
+description: |
+  ContextActionResult controls the behavior of multiple bound actions. It gives
+  the option of controlling whether or not a bound action should sink or pass
+  the input event, meaning other things (including other bound actions) can
+  process it.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Sink
+    summary: |
+      If _functionToBind_ from `Class.ContextActionService:BindAction()` returns
+      Enum.ContextActionResult.Sink, the input event will stop at that function
+      and no other bound actions under it will be . This is the default behavior
+      if _functionToBind_ does not return anything or yields in any way.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Pass
+    summary: |
+      If _functionToBind_ from `Class.ContextActionService:BindAction()` returns
+      Enum.ContextActionResult.Pass, the input event is considered to have not
+      been handled by _functionToBind_ and will continue being passed to actions
+      bound to the same input type.
+    value: 1
+    tags: []
+    deprecation_message: ''

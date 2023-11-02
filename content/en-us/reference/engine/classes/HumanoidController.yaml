@@ -1,0 +1,25 @@
+name: HumanoidController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  A HumanoidController is an internal object responsible for translating
+  PlayerAction movements to the user's character (specifically, their
+  `Class.Humanoid`).
+
+  This object can be found inside of the `Class.ControllerService`, via:
+
+  ```lua
+  local ControllerService = game:GetService("ControllerService")
+  local HumanoidController = ControllerService:FindFirstChildOfClass("HumanoidController")
+  ```
+code_samples:
+inherits:
+  - Controller
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,290 @@
+name: Stats
+type: class
+category: Debugging
+memory_category: Instances
+summary: |
+  Performance metrics for a game.
+description: |
+  Stats is a service that provides real-time performance information about the
+  current running game instance. Its primary purpose is to provide developers
+  with an end point to measure where resources are being consumed, as well as
+  how much memory is being consumed overall.
+
+  The service also stores a tree of `Class.StatsItem`, which can have their
+  values read by plugins.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: Stats.ContactsCount
+    summary: |
+      A measurement of how many parts are currently in contact with one another.
+    description: |
+      ContactsCount describes how many parts are currently in contact with each
+      other, such that one of the two parts are being physically simulated, and
+      thus can be recognized by the `Class.BasePart:GetTouchingParts()` method.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.DataReceiveKbps
+    summary: |
+      In a networked game, this describes roughly how many kilobytes of data are
+      being received by the current instance, per second.
+    description: |
+      In a networked game, DataReceiveKbps describes roughly how many kilobytes
+      of data are being received by the current instance, per second. If from
+      the server's perspective, this represents the total amount of data being
+      received from the clients connected to the server.If from a client's
+      perspective, this represents the total amount of data being received from
+      the server.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.DataSendKbps
+    summary: |
+      In a networked game, this describes roughly how many kilobytes of data are
+      being sent by the current instance, per second.
+    description: |
+      In a networked game, DataSendKbps describes roughly how many kilobytes of
+      data are being sent by the current instance, per second. If from the
+      server's perspective, this represents the total amount of data being sent
+      to the clients connected to the server.If from a client's perspective,
+      this represents the total amount of data being sent to the server.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.HeartbeatTimeMs
+    summary: |
+      A measurement of the total amount of time it takes long it takes for
+      Roblox to update all of its Task Scheduler jobs, in milliseconds.
+    description: |
+      The HeartbeatTimeMs property is a a measurement of the total amount of
+      time it takes long it takes for Roblox to update all of its Task Scheduler
+      jobs, in milliseconds. If this value is high, then it means one of the
+      tasks are hogging up a lot of resources.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.InstanceCount
+    summary: |
+      A measurement of how many `Class.Instance` are currently in memory.
+    description: |
+      InstanceCount is a read-only measurement of how many `Class.Instance` are
+      currently in memory. This includes the `Class.DataModel`, its descendants,
+      as well as any object created with `Datatype.Instance.new()` which is
+      still present in memory.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.MovingPrimitivesCount
+    summary: |
+      A measurement of how many physically simulated components are currently
+      moving in the game world.
+    description: |
+      A measurement of how many physically simulated components are currently
+      moving in the game world.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.PhysicsReceiveKbps
+    summary: |
+      In a networked game, this describes roughly how many kilobytes of physics
+      data are being received by the current instance, per second.
+    description: |
+      PhysicsReceiveKbps is a measurement of roughly how many kilobytes of
+      physics data are being received by the current instance, per second.If
+      from the server's perspective, this represents the total amount of physics
+      data being received from the clients connected to the server.If from a
+      client's perspective, this represents the total amount of physics data
+      being received from the server.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.PhysicsSendKbps
+    summary: |
+      In a networked game, this describes roughly how many kilobytes of physics
+      data are being sent by the current instance, per second.
+    description: |
+      PhysicsSendKbps describes roughly how many kilobytes of physics data are
+      being sent by the current instance, per second.If from the server's
+      perspective, this represents the total amount of physics data being sent
+      to the clients connected to the server.If from a client's perspective,
+      this represents the total amount of physics data being sent to the server.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.PhysicsStepTimeMs
+    summary: |
+      A measurement of how long it takes for the physics engine to update its
+      current state, in milliseconds. If this value is high, then it means the
+      game instance is under stress from the physics simulations taking place.
+    description: |
+      A measurement of how long it takes for the physics engine to update its
+      current state, in milliseconds. If this value is high, then it means the
+      game instance is under stress from the physics simulations taking place.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Stats.PrimitivesCount
+    summary: |
+      A measurement of how many physically simulated components currently exist
+      in the game world.
+    description: |
+      A measurement of how many physically simulated components currently exist
+      in the game world.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: Stats:GetMemoryUsageMbForTag
+    summary: |
+      Returns the number of megabytes that are being consumed in the specified
+      `Enum.DeveloperMemoryTag` category.
+    description: |
+      Returns the number of megabytes that are being consumed in the specified
+      `Enum.DeveloperMemoryTag` category.
+    code_samples:
+    parameters:
+      - name: tag
+        type: DeveloperMemoryTag
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Stats:GetTotalMemoryUsageMb
+    summary: |
+      Returns the total amount of memory being consumed by the current game
+      session, in megabytes.
+    description: |
+      Returns the total amount of memory being consumed by the current game
+      session, in megabytes.
+    code_samples:
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

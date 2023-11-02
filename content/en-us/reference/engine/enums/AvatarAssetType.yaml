@@ -1,0 +1,247 @@
+name: AvatarAssetType
+type: enum
+summary: |
+  Describes the asset types that an avatar can equip.
+description: |
+  Describes the asset types that an avatar can equip. See `Enum.AssetType` for
+  all asset types.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: TShirt
+    value: 2
+    summary: |
+      A classic 2D TShirt.
+    tags: []
+    deprecation_message: ''
+  - name: Hat
+    value: 8
+    summary: |
+      A hat.
+    tags: []
+    deprecation_message: ''
+  - name: Shirt
+    value: 11
+    summary: |
+      A classic 2D shirt.
+    tags: []
+    deprecation_message: ''
+  - name: Pants
+    value: 12
+    summary: |
+      A classic 2D pants.
+    tags: []
+    deprecation_message: ''
+  - name: Head
+    value: 17
+    summary: |
+      A head.
+    tags: []
+    deprecation_message: ''
+  - name: Face
+    value: 18
+    summary: |
+      A face.
+    tags: []
+    deprecation_message: ''
+  - name: Gear
+    value: 19
+    summary: |
+      A gear.
+    tags: []
+    deprecation_message: ''
+  - name: Torso
+    value: 27
+    summary: |
+      A torso.
+    tags: []
+    deprecation_message: ''
+  - name: RightArm
+    value: 28
+    summary: |
+      A right arm.
+    tags: []
+    deprecation_message: ''
+  - name: LeftArm
+    value: 29
+    summary: |
+      A left arm.
+    tags: []
+    deprecation_message: ''
+  - name: LeftLeg
+    value: 30
+    summary: |
+      A left leg.
+    tags: []
+    deprecation_message: ''
+  - name: RightLeg
+    value: 31
+    summary: |
+      A right leg.
+    tags: []
+    deprecation_message: ''
+  - name: HairAccessory
+    value: 41
+    summary: |
+      A hair accessory.
+    tags: []
+    deprecation_message: ''
+  - name: FaceAccessory
+    value: 42
+    summary: |
+      A face accessory.
+    tags: []
+    deprecation_message: ''
+  - name: NeckAccessory
+    value: 43
+    summary: |
+      A neck accessory.
+    tags: []
+    deprecation_message: ''
+  - name: ShoulderAccessory
+    value: 44
+    summary: |
+      A shoulder accessory.
+    tags: []
+    deprecation_message: ''
+  - name: FrontAccessory
+    value: 45
+    summary: |
+      A front accessory.
+    tags: []
+    deprecation_message: ''
+  - name: BackAccessory
+    value: 46
+    summary: |
+      A back accessory.
+    tags: []
+    deprecation_message: ''
+  - name: WaistAccessory
+    value: 47
+    summary: |
+      A waist accessory.
+    tags: []
+    deprecation_message: ''
+  - name: ClimbAnimation
+    value: 48
+    summary: |
+      A climb animation.
+    tags: []
+    deprecation_message: ''
+  - name: FallAnimation
+    value: 50
+    summary: |
+      A fall animation.
+    tags: []
+    deprecation_message: ''
+  - name: IdleAnimation
+    value: 51
+    summary: |
+      An idle animation.
+    tags: []
+    deprecation_message: ''
+  - name: JumpAnimation
+    value: 52
+    summary: |
+      A jump animation.
+    tags: []
+    deprecation_message: ''
+  - name: RunAnimation
+    value: 53
+    summary: |
+      A run animation.
+    tags: []
+    deprecation_message: ''
+  - name: SwimAnimation
+    value: 54
+    summary: |
+      A swim animation.
+    tags: []
+    deprecation_message: ''
+  - name: WalkAnimation
+    value: 55
+    summary: |
+      A walk animation.
+    tags: []
+    deprecation_message: ''
+  - name: EmoteAnimation
+    value: 61
+    summary: |
+      A emote animation.
+    tags: []
+    deprecation_message: ''
+  - name: TShirtAccessory
+    value: 64
+    summary: |
+      A layered clothing TShirt.
+    tags: []
+    deprecation_message: ''
+  - name: ShirtAccessory
+    value: 65
+    summary: |
+      A layered clothing shirt.
+    tags: []
+    deprecation_message: ''
+  - name: PantsAccessory
+    value: 66
+    summary: |
+      A layered clothing pants.
+    tags: []
+    deprecation_message: ''
+  - name: JacketAccessory
+    value: 67
+    summary: |
+      A layered clothing jacket.
+    tags: []
+    deprecation_message: ''
+  - name: SweaterAccessory
+    value: 68
+    summary: |
+      A layered clothing sweater.
+    tags: []
+    deprecation_message: ''
+  - name: ShortsAccessory
+    value: 69
+    summary: |
+      A layered clothing shorts.
+    tags: []
+    deprecation_message: ''
+  - name: LeftShoeAccessory
+    value: 70
+    summary: |
+      A layered clothing left shoe.
+    tags: []
+    deprecation_message: ''
+  - name: RightShoeAccessory
+    value: 71
+    summary: |
+      A layered clothing right shoe.
+    tags: []
+    deprecation_message: ''
+  - name: DressSkirtAccessory
+    value: 72
+    summary: |
+      A layered clothing dress or skirt.
+    tags: []
+    deprecation_message: ''
+  - name: EyebrowAccessory
+    value: 76
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EyelashAccessory
+    value: 77
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: MoodAnimation
+    value: 78
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DynamicHead
+    value: 79
+    summary: ''
+    tags: []
+    deprecation_message: ''

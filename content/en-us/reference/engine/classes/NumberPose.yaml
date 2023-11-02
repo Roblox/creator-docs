@@ -1,0 +1,61 @@
+name: NumberPose
+type: class
+category:
+memory_category: Animation
+summary: |
+  A NumberPose holds the value applied to a specific FACS control. The control
+  which is affected depends on the name of the NumberPose.
+description: |
+  A NumberPose holds the value applied to a specific FACS control. The control
+  which is affected depends on the name of the NumberPose.
+
+  NumberPoses are the building blocks of facial animation and, with
+  `Class.Keyframe`s, make up `Class.KeyframeSequence`s.
+
+  ## NumberPoses and Facial Animation
+
+  Although a NumberPose is assigned to a single FACS control by name, that
+  control can in turn affect multiple bones of the face rig. FACS controls act
+  as an abstraction layer between facial muscle movements and how they are
+  defined in the rig.
+
+  ## NumberPose and hierarchy
+
+  Contrary to `Class.Pose` Instances, `Class.NumberPose`s cannot be parented
+  together. However, they all must be stored in a `Class.Folder` named
+  'FaceControls' that is a child of the 'Head' `Class.Pose`.
+
+  ## NumberPose value
+
+  The Roblox animation system applies `Class.NumberPose.Value`s to the
+  corresponding FACS controls. Because those controls only respond to values
+  between 0 and 1, the values calculated by the animation system are always
+  clamped to that range.
+code_samples:
+inherits:
+  - PoseBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: NumberPose.Value
+    summary: |
+      The value that will be applied to the FACS control corresponding to the
+      `Class.NumberPose`.
+    description: |
+      The value that will be applied to the FACS control corresponding with the
+      `Class.NumberPose`.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

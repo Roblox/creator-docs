@@ -1,0 +1,25 @@
+name: ProductPurchaseDecision
+type: enum
+summary: |
+  The `ProductPurchaseDecisionEnum` is used to work with
+  `Class.MarketplaceService`, and the sale of developer products.
+description: |
+  The `ProductPurchaseDecisionEnum` is used to work with
+  `Class.MarketplaceService`, and the sale of developer products.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NotProcessedYet
+    summary: |
+      The purchase request has been sent but not yet processed.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: PurchaseGranted
+    summary: |
+      The purchase has been processed and granted to the user who initiated the
+      purchase request.
+    value: 1
+    tags: []
+    deprecation_message: ''

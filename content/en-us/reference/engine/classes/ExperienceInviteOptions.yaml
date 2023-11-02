@@ -1,0 +1,107 @@
+name: ExperienceInviteOptions
+type: class
+category:
+memory_category: Instances
+summary: |
+  Used to customize a player invite prompt.
+description: |
+  Used to customize a
+  [player invite prompt](../../../production/promotion/invite-prompts.md), such
+  as to customize the prompt message, target a specific friend, or include
+  launch data in the invite.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: ExperienceInviteOptions.InviteMessageId
+    summary: |
+      Asset ID that maps to a **Notification** asset type.
+    description: |
+      Asset ID that maps to a **Notification** asset type. This asset is used to
+      store/localize a custom string for the invite notification that friends
+      receive. See
+      [Setting Notification Options](../../../production/promotion/invite-prompts.md#setting-notification-options)
+      for details.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ExperienceInviteOptions.InviteUser
+    summary: |
+      Roblox `Class.Player.UserId|UserId` of the specific friend to invite.
+    description: |
+      Roblox `Class.Player.UserId|UserId` of the specific friend to invite; if
+      not provided, the player will be prompted to pick from a list of friends.
+    code_samples: []
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ExperienceInviteOptions.LaunchData
+    summary: |
+      Used to set a parameter in `Class.Player:GetJoinData()` when a friend
+      joins from the invite notification.
+    description: |
+      Used to set a parameter in `Class.Player:GetJoinData()` when a friend
+      joins from the invite notification; maximum of 200 characters. See
+      [Including Launch Data](../../../production/promotion/invite-prompts.md#including-launch-data)
+      for a usage example.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ExperienceInviteOptions.PromptMessage
+    summary: |
+      Custom text shown on the invite prompt for the sending player.
+    description: |
+      Custom text shown on the invite prompt for the sending player, for example
+      "Ask your friends to join the adventure!" for a multi-friend invite
+      prompt, or "Invite this friend to join the adventure!" for a specific
+      friend invite prompt.
+
+      <img
+      src="/assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.jpg"
+      width="812" /> <img
+      src="/assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.jpg"
+      width="812" />
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

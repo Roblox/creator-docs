@@ -1,0 +1,1015 @@
+name: FaceControls
+type: class
+category:
+memory_category: Animation
+summary: |
+  The `Class.FaceControls` object defines a set of properties for controlling
+  the facial expressions of a Dynamic Head.
+description: |
+  The `Class.FaceControls` object defines a set of properties for controlling
+  the facial expressions of a character head capable of animation.
+
+  The FaceControls properties are based on the Facial Action Coding System
+  (FACS), a comprehensive system for describing all visually discernible facial
+  movement based on anatomy. `Class.FaceControls` properties can only be set
+  between 0 and 1. Different combinations of the `Class.FaceControls` property
+  values create different facial expressions. Recording multiple facial
+  expressions over time creates facial animation.
+
+  ## What is an Animatable Head?
+
+  An animatable head is a `Class.MeshPart` that implements a facial rig and is
+  capable of playing facial animations and triggering facial expressions. A
+  `Class.FaceControls` object that is a child of a head `Class.MeshPart` can
+  change the facial expressions of the head.
+
+  A head consists of the following three components:
+
+  - Skinned MeshPart instance for the head geometry with an internal rig that
+    deforms this skinned MeshPart
+  - FaceControls instance that drives the internal rig when properties such as
+    FaceControls.JawDrop are changed.
+  - Cage `Class.WrapTarget` instance for tight fitting facial accessories
+
+  In a third-party modeling tool, such as Blender or Maya, an artist can create
+  a joint-driven facial rig, pose the joints to match each of the individual
+  FACS controls, and save as an FBX. When a head `.FBX` is imported in Studio, a
+  facs-to-joint mapping is created. This mapping deforms the mesh geometry when
+  FaceControls properties are changed. The mapping and the facial rig (including
+  `Class.Bone` instances) are not exposed to developers and can only be accessed
+  through the FaceControls instance. The `Class.MeshPart` for a Dynamic Head
+  looks and behaves the same as a regular `Class.MeshPart` except when a
+  FaceControls instance is a child of the MeshPart. Editing the properties of
+  the FaceControls deforms the MeshPart's geometry. These properties are
+  available to animate in the Animation Editor.
+
+  See [Facial Animation](../../../art/characters/facial-animation/index.md) for
+  more information on usage and creation of a animatable head.
+
+  ## Animatable Heads in the Marketplace
+
+  If you are publishing your head to the Marketplace, your head asset must
+  include a minimum subset of face controls. Roblox's publishing validation
+  rejects assets without the following required poses:
+
+  - EyesLookDown
+  - EyesLookLeft
+  - EyesLookRight
+  - EyesLookUp
+  - JawDrop
+  - LeftEyeClosed
+  - LeftLipCornerPuller
+  - LeftLipStretcher
+  - LeftLowerLipDepressor
+  - LeftUpperLipRaiser
+  - LipsTogether
+  - Pucker
+  - RightEyeClosed
+  - RightLipCornerPuller
+  - RightLipStretcher
+  - RightLowerLipDepressor
+  - RightUpperLipRaiser
+
+  See
+  [FACS pose reference](../../../art/characters/facial-animation/facs-poses-reference.md)
+  for more information on usage and creation of a animatable head.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: FaceControls.ChinRaiser
+    summary: |
+      Raises the chin up; moves the lower lip upwards.
+    description: |
+      Raises the chin up; moves the lower lip upwards
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.ChinRaiserUpperLip
+    summary: |
+      Moves the upper lip when ChinRaiser is engaged and touching the upper lip.
+    description: |
+      Moves the upper lip when ChinRaiser is engaged and touching the upper lip
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.Corrugator
+    summary: |
+      Brings the left and right brows inward together.
+    description: |
+      Brings the left and right brows inward together
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.EyesLookDown
+    summary: |
+      Moves gaze down. This is a required pose for avatars.
+    description: |
+      Moves gaze down. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.EyesLookLeft
+    summary: |
+      Moves gaze left. This is a required pose for avatars.
+    description: |
+      Moves gaze left. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.EyesLookRight
+    summary: |
+      Moves gaze right. This is a required pose for avatars.
+    description: |
+      Moves gaze right. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.EyesLookUp
+    summary: |
+      Moves gaze up. This is a required pose for avatars.
+    description: |
+      Moves gaze up. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.FlatPucker
+    summary: |
+      Also known as lip tightener; brings the corners of the mouth inward and
+      pressing the lips back against the teeth.
+    description: |
+      Also known as lip tightener; brings the corners of the mouth inward and
+      pressing the lips back against the teeth
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.Funneler
+    summary: |
+      Makes a 'O' shape with the mouth.
+    description: |
+      Makes a 'O' shape with the mouth
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.JawDrop
+    summary: |
+      Lowers the jaw downward opening the mouth. This is a required pose for
+      avatars.
+    description: |
+      Lowers the jaw downward opening the mouth. This is a required pose for
+      avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Jaw
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.JawLeft
+    summary: |
+      Moves mouth and jaw to the left (character left).
+    description: ''
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Jaw
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.JawRight
+    summary: |
+      Moves mouth and jaw to the right (character right).
+    description: |
+      Moves mouth and jaw to the right (character right)
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Jaw
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftBrowLowerer
+    summary: |
+      Lowers the left brow down.
+    description: |
+      Lowers the left brow down
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftCheekPuff
+    summary: |
+      Puffs up the left cheek.
+    description: |
+      Puffs up the left cheek
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftCheekRaiser
+    summary: |
+      Squints the left eye.
+    description: |
+      Squints the left eye
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftDimpler
+    summary: |
+      Moves the corners of the mouth back in Z.
+    description: |
+      Moves the corners of the mouth back in Z
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftEyeClosed
+    summary: |
+      Closes the left eyelid. This is a required pose for avatars.
+    description: |
+      Closes the left eyelid. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftEyeUpperLidRaiser
+    summary: |
+      Raises the left eyelid upwards to reveal more of the eye white above the
+      iris.
+    description: |
+      Raises the left eyelid upwards to reveal more of the eye white above the
+      iris
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftInnerBrowRaiser
+    summary: |
+      Raises the interior half of the left brow upwards.
+    description: |
+      Raises the interior half of the left brow upwards
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftLipCornerDown
+    summary: |
+      Lowers the corners of the mouth downwards in a frown.
+    description: |
+      Lowers the corners of the mouth downwards in a frown
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftLipCornerPuller
+    summary: |
+      Raises the corners of the mouth upwards in a smile. This is a required
+      pose for avatars.
+    description: |
+      Raises the corners of the mouth upwards in a smile. This is a required
+      pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftLipStretcher
+    summary: |
+      Stretches the corners of the mouth apart. This is a required pose for
+      avatars.
+    description: |
+      Stretches the corners of the mouth apart. This is a required pose for
+      avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftLowerLipDepressor
+    summary: |
+      Lowers the lower lip down away from the upper lip revealing the lower
+      teeth. This is a required pose for avatars.
+    description: |
+      Lowers the lower lip down away from the upper lip revealing the lower
+      teeth. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftNoseWrinkler
+    summary: |
+      Raise the left nostril, pulls the brow down slightly, and wrinkles on the
+      side of the nose.
+    description: |
+      Raise the left nostril, pulls the brow down slightly, and wrinkles on the
+      side of the nose
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftOuterBrowRaiser
+    summary: |
+      Raises the outer part of the left brow upwards.
+    description: |
+      Raises the outer part of the left brow upwards
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LeftUpperLipRaiser
+    summary: |
+      Raises the left upper lip away from the lower lip revealing the upper
+      teeth. This is a required pose for avatars.
+    description: |
+      Raises the left upper lip away from the lower lip revealing the upper
+      teeth. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LipPresser
+    summary: |
+      Presses the lips together.
+    description: |
+      Presses the lips together
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LipsTogether
+    summary: |
+      Brings the lips together relative to JawDrop. This is a required pose for
+      avatars.
+    description: |
+      Brings the lips together relative to JawDrop. This is a required pose for
+      avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.LowerLipSuck
+    summary: |
+      Rolls the lower lip up over the teeth.
+    description: |
+      Rolls the lower lip up over the teeth
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.MouthLeft
+    summary: |
+      Moves the mouth left.
+    description: |
+      Moves the mouth left
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.MouthRight
+    summary: |
+      Moves the mouth right.
+    description: |
+      Moves the mouth right
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.Pucker
+    summary: |
+      Makes a kiss-like shape with the mouth. This is a required pose for
+      avatars.
+    description: |
+      Makes a kiss-like shape with the mouth. This is a required pose for
+      avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightBrowLowerer
+    summary: |
+      Lowers the right brow down.
+    description: |
+      Lowers the right brow down
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightCheekPuff
+    summary: |
+      Puffs up the right cheek.
+    description: |
+      Puffs up the right cheek
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightCheekRaiser
+    summary: |
+      Squints the right eye.
+    description: |
+      Squints the right eye
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightDimpler
+    summary: |
+      Moves the corners of the mouth back in Z.
+    description: |
+      Moves the corners of the mouth back in Z
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightEyeClosed
+    summary: |
+      Closes the right eyelid. This is a required pose for avatars.
+    description: |
+      Closes the right eyelid. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightEyeUpperLidRaiser
+    summary: |
+      Raises the right eyelid upwards to reveal more of the eye white above the
+      iris.
+    description: |
+      Raises the right eyelid upwards to reveal more of the eye white above the
+      iris
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Eyes
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightInnerBrowRaiser
+    summary: |
+      Raises the interior half of the right brow upwards.
+    description: |
+      Raises the interior half of the right brow upwards
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightLipCornerDown
+    summary: |
+      Lowers the corners of the mouth downwards in a frown.
+    description: |
+      Lowers the corners of the mouth downwards in a frown
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightLipCornerPuller
+    summary: |
+      Raises the corners of the mouth upwards in a smile. This is a required
+      pose for avatars.
+    description: |
+      Raises the corners of the mouth upwards in a smile. This is a required
+      pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightLipStretcher
+    summary: |
+      Stretches the corners of the mouth apart. This is a required pose for
+      avatars.
+    description: |
+      Stretches the corners of the mouth apart. This is a required pose for
+      avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightLowerLipDepressor
+    summary: |
+      Lowers the lower lip down away from the upper lip revealing the lower
+      teeth. This is a required pose for avatars.
+    description: |
+      Lowers the lower lip down away from the upper lip revealing the lower
+      teeth. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightNoseWrinkler
+    summary: |
+      Raises the right nostril, pulls the brow down slightly, and wrinkles on
+      the side of the nose.
+    description: |
+      Raises the right nostril, pulls the brow down slightly, and wrinkles on
+      the side of the nose
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightOuterBrowRaiser
+    summary: |
+      Raises the outer part of the right brow upwards.
+    description: |
+      Raises the outer part of the right brow upwards
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Brows
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.RightUpperLipRaiser
+    summary: |
+      Raises the right upper lip away from the lower lip revealing the upper
+      teeth. This is a required pose for avatars.
+    description: |
+      Raises the right upper lip away from the lower lip revealing the upper
+      teeth. This is a required pose for avatars.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.TongueDown
+    summary: |
+      Bends the tongue down.
+    description: |
+      Bends the tongue down
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tongue
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.TongueOut
+    summary: |
+      Extends the tip of the tongue out of the mouth.
+    description: |
+      Extends the tip of the tongue out of the mouth
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tongue
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.TongueUp
+    summary: |
+      Bends the tongue up.
+    description: |
+      Bends the tongue up
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tongue
+    serialization:
+      can_load: false
+      can_save: false
+  - name: FaceControls.UpperLipSuck
+    summary: |
+      Rolls the upper lip around the teeth.
+    description: |
+      Rolls the upper lip around the teeth
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Mouth
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

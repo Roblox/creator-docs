@@ -1,0 +1,180 @@
+name: FloorWire
+type: class
+category:
+memory_category: Instances
+summary: |
+  A FloorWire attempts to make a wire from two of its properties:
+  `Class.FloorWire.From` and `Class.FloorWire.From`, which both need to be set
+  to a `Class.BasePart`.
+description: |
+  A FloorWire attempts to make a wire from two of its properties:
+  `Class.FloorWire.From` and `Class.FloorWire.To`, which both need to be set to
+  a `Class.BasePart`. It sometimes goes through bricks but the majority of the
+  time it works fine. It starts at From's center and goes to To's center. Which
+  side of each one it goes into depends on the BaseParts's positions. It chooses
+  the fastest route.
+code_samples:
+inherits:
+  - GuiBase3d
+tags:
+  - Deprecated
+deprecation_message: |
+  The FloorWire object has been deprecated and should not be used in new work.
+properties:
+  - name: FloorWire.CycleOffset
+    summary: |
+      A decimal number between 0 and 1, through which you can control how far
+      all of the decals are along the wire.
+    description: |
+      A decimal number between 0 and 1, through which you can control how far
+      all of the decals are along the wire.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.From
+    summary: |
+      The object that the FloorWire travels from.
+    description: |
+      The object that the FloorWire travels from.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.StudsBetweenTextures
+    summary: |
+      The number of studs between each FloorWire segment.
+    description: |
+      The number of studs between each FloorWire segment.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.Texture
+    summary: |
+      Sets the texture to be displayed on the FloorWire.
+    description: |
+      Sets the texture to be displayed on the FloorWire.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.TextureSize
+    summary: |
+      Sets the size of the texture used with the FloorWire.
+    description: |
+      Sets the size of the texture used with the FloorWire.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.To
+    summary: |
+      The object that the FloorWire travels to.
+    description: |
+      The object that the FloorWire travels to.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.Velocity
+    summary: |
+      The speed that the textures flow along the wire.
+    description: |
+      The speed that the textures flow along the wire.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FloorWire.WireRadius
+    summary: |
+      The radius of the wire.
+    description: |
+      The radius of the wire.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: |
+      The FloorWire object has been deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

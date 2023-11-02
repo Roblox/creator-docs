@@ -1,0 +1,158 @@
+name: ReverbType
+type: enum
+summary: |
+  The ReverbType Enum allows you to make audio in your game sound different,
+  depending on what "area" the sounds are in.
+description: |
+  The ReverbType Enum allows you to make audio in your game sound different,
+  depending on what "area" the sounds are in.
+
+  Note that some of these do not appear to have any effect on the sound.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NoReverb
+    summary: |
+      No sound reverb. Audio is not changed from default.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: GenericReverb
+    summary: |
+      Sound reverb is changed to a generic reverb effect.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PaddedCell
+    summary: |
+      Sound reverb is changed to sound like the player is in a padded cell.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Room
+    summary: |
+      Sound reverb is changed to sound like the player is in a room.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Bathroom
+    summary: |
+      Sound reverb is changed to sound like the player is in a bathroom.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: LivingRoom
+    summary: |
+      Sound reverb is changed to sound like the player is in a living room.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: StoneRoom
+    summary: |
+      Sound reverb is changed to sound like the player is in a stone room.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Auditorium
+    summary: |
+      Sound reverb is changed to sound like the player is in an auditorium.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: ConcertHall
+    summary: |
+      Sound reverb is changed to sound like the player is in a concert hall.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Cave
+    summary: |
+      Sound reverb is changed to sound like the player is in a cave.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Arena
+    summary: |
+      Sound reverb is changed to sound like the player is in an arena.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Hangar
+    summary: |
+      Sound reverb is changed to sound like the player is in a hangar.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: CarpettedHallway
+    summary: |
+      Sound reverb is changed to sound like the player is in a carpeted hallway.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Hallway
+    summary: |
+      Sound reverb is changed to sound like the player is in a hallway.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: StoneCorridor
+    summary: |
+      Sound reverb is changed to sound like the player is a stone corridor.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Alley
+    summary: |
+      Sound reverb is changed to sound like the player is in an alley.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Forest
+    summary: |
+      Sound reverb is changed to sound like the player is in a forest.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: City
+    summary: |
+      Sound reverb is changed to sound like the player is in city.
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: Mountains
+    summary: |
+      Sound reverb is changed to sound like the player is in the mountains.
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: Quarry
+    summary: |
+      Sound reverb is changed to sound like the player is in a quarry.
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: Plain
+    summary: |
+      Sound reverb is changed to sound like the player is an open plain.
+    value: 20
+    tags: []
+    deprecation_message: ''
+  - name: ParkingLot
+    summary: |
+      Sound reverb is changed to sound like the player is in a parking lot.
+    value: 21
+    tags: []
+    deprecation_message: ''
+  - name: SewerPipe
+    summary: |
+      Sound reverb is changed to sound like the player is in a sewer pipe.
+    value: 22
+    tags: []
+    deprecation_message: ''
+  - name: UnderWater
+    summary: |
+      Sound reverb makes it sound like the player is under water.
+    value: 23
+    tags: []
+    deprecation_message: ''

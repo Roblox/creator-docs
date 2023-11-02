@@ -1,0 +1,100 @@
+name: SurfaceType
+type: enum
+summary: |
+  Used to determine how a surface should be displayed on a part and how
+  automatic surface joints should behave.
+description: |
+  Used to determine how a surface should be displayed on a part and how
+  automatic surface joints should behave.
+
+  ## Surface behavior
+
+  When surface joining is on, all planar touching flat sides of parts will weld
+  together, regardless of SurfaceType. This does not affect Hinge, Motor,
+  SteppingMotor.
+
+  - Glue, Studs, Inlets, Universal, Weld, and Smooth surfaces will all create
+    Weld instances
+  - Spheres will not surface-weld to anything. The rounded sides of cylinders
+    will not surface-weld, but the flat end sides will.
+
+  ## Surface appearance
+
+  Stud, Inlet, Universal, Weld, and Glue Surface textures only appear on plastic
+  material parts, both in-game and in Studio.
+
+  See also:
+
+  - `Class.Workspace:JoinToOutsiders()`, creates joints between the specified
+    parts and any touching parts depending on the parts' surfaces and the
+    specified joint creation mode
+  - `Enum.JointCreationMode`, the way joints are created between two surfaces
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Smooth
+    summary: |
+      Makes the side appear without any surface detail (except for _outlines_).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Glue
+    summary: |
+      Makes the side appear with thick diagonal "X"s.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Weld
+    summary: |
+      Makes the side appear with thick diagonal "X"s.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Studs
+    summary: |
+      Makes the side appear with square studs.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Inlet
+    summary: |
+      Makes the side appear with holes where studs would be.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Universal
+    summary: |
+      Makes the side appear with both Studs and Inlets in a checker pattern.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Hinge
+    summary: |
+      Makes the side appear with a yellow hinge. Any part connected to this
+      hinge will stick to the side and rotate using physics, however, using
+      `Class.HingeConstraint` to join parts is preferred.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Motor
+    summary: |
+      Acts the same as a Hinge, but has a grey ring around it and automatically
+      rotates any part connected to it, however, using `Class.HingeConstraint`
+      to join parts is preferred.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: SteppingMotor
+    summary: |
+      Functions identically to a motor. It may have functioned differently in
+      the past, but that functionality no longer seems to exist.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: SmoothNoOutlines
+    summary: |
+      Same as Smooth, but removes the _outlines_ of the surface.
+    value: 10
+    tags: []
+    deprecation_message: ''

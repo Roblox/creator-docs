@@ -27,7 +27,8 @@ This tutorial is intended for creators with moderate Blender experience and uses
 2. Texturing your mesh to change its surface appearance and color.
 3. Caging your clothing mesh using Roblox's template cages.
 4. Rigging your clothing mesh using Roblox's armature templates.
-5. Exporting your asset and importing into Studio.
+5. Exporting your asset from Blender
+6. Importing and converting the model to an accessory in Studio.
 
 <Alert severity ='info'>
 This tutorial covers a **basic workflow** for 3D clothing creation. There are many external resources for different techniques, processes, and refinements you can incorporate for creating clothing, such as using Blender's various sewing and cloth simulation tools and PBR textures.

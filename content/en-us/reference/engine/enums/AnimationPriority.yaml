@@ -1,0 +1,71 @@
+name: AnimationPriority
+type: enum
+summary: |
+  The AnimationPriority Enum determines how concurrently-playing AnimationTracks
+  contribute to the final animation.
+description: |
+  When multiple AnimationTracks are played concurrently by the same Animator and
+  affect the same animated joints, the tracks are evaluated in order from high
+  to low priority, per joint, while the total track weight sum remains less than
+  1.0. When the track weight sum reaches or exceeds 1.0 for a joint, evaluation
+  stops and no lower-priority tracks will be evaluated for that joint.
+  AnimationTracks with the same priority that are playing concurrently will
+  blend proportional to their track weights (normalized if the sum exceeds 1).
+
+  Higher priority animation will override lower priority ones per joint. The
+  priority order is: <br /> 1. Action4 (Highest Priority) <br /> 2. Action3
+  <br /> 3. Action2 <br /> 4. Action <br /> 5. Movement <br /> 6. Idle <br /> 7.
+  Core (Lowest Priority)
+
+  Roblox's default character animations, including catalog animation bundles,
+  play at Core priority. Idle through Action4 priority are for developer use.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Idle
+    value: 0
+    summary: |
+      (6) - Recommended priority for character idle animations.
+    tags: []
+    deprecation_message: ''
+  - name: Movement
+    value: 1
+    summary: |
+      (5) - Recommended priority for walk, run, swim, climb, and other
+      locomotion animations.
+    tags: []
+    deprecation_message: ''
+  - name: Action
+    value: 2
+    summary: |
+      (4) - Recommended priority for character actions that must override idle
+      and locomotion animations.
+    tags: []
+    deprecation_message: ''
+  - name: Action2
+    value: 3
+    summary: |
+      (3) - Action2 will override Action.
+    tags: []
+    deprecation_message: ''
+  - name: Action3
+    value: 4
+    summary: |
+      (2) - Action3 will override Action2.
+    tags: []
+    deprecation_message: ''
+  - name: Action4
+    value: 5
+    summary: |
+      (1) - Action4 is the highest priority available, overriding all other
+      priority values.
+    tags: []
+    deprecation_message: ''
+  - name: Core
+    value: 1000
+    summary: |
+      (7) - Lowest priority, intended for use by Roblox default animations and
+      catalog animation bundles.
+    tags: []
+    deprecation_message: ''

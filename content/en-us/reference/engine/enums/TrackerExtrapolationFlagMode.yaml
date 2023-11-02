@@ -1,0 +1,28 @@
+name: TrackerExtrapolationFlagMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: ForceDisabled
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ExtrapolateFacsAndPose
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ExtrapolateFacsOnly
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Auto
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

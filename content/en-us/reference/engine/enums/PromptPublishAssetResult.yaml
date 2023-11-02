@@ -1,0 +1,38 @@
+name: PromptPublishAssetResult
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PermissionDenied
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UploadFailed
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: NoUserInput
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UnknownFailure
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''

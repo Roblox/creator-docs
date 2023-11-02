@@ -1,0 +1,18 @@
+name: SensorMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Floor
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Ladder
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''

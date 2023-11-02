@@ -1,0 +1,38 @@
+name: FaceInstance
+type: class
+category:
+memory_category: Instances
+summary: |
+  The FaceInstance class is an abstract class from which the `Class.Decal` class
+  inherits.
+description: |
+  The FaceInstance class is an abstract class from which the `Class.Decal` class
+  inherits.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: FaceInstance.Face
+    summary: |
+      Sets what face of the brick the object appears on.
+    description: |
+      Sets what face of the brick the object appears on.
+    code_samples:
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

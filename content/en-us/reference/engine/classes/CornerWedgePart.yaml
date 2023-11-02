@@ -1,0 +1,16 @@
+name: CornerWedgePart
+type: class
+category: Building
+memory_category: Instances
+summary: ''
+description: |
+  This is a corner piece which has the same properties as a `Class.Part`.
+code_samples:
+inherits:
+  - BasePart
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,134 @@
+name: HumanoidStateType
+type: enum
+summary: |
+  Describes the physics control states within the Humanoid.
+description: |
+  Identifies, reads and sets the physics control state of a `Class.Humanoid`.
+  `Class.Humanoid:GetState()` and `Class.Humanoid:ChangeState()` methods, as
+  well as the `Class.Humanoid.StateChanged` event currently use this Enum.
+
+  Some states only allow manual setting, and allow a developer to make the
+  Humanoid relinquish control of its character.
+
+  When altering the Humanoid of a player, this should be done from a
+  `Class.LocalScript` ran by that player on their local client. Certain states
+  only work when set by the owner process (client or server). (Dead for example)
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: FallingDown
+    summary: |
+      The Humanoid has been tripped, and will attempt to get up in a few
+      moments.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Ragdoll
+    summary: |
+      The Humanoid has been hit by a fast moving object (uncontrolled falling).
+      _The Humanoid can recover from this._
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: GettingUp
+    summary: |
+      The Humanoid is getting back on their feet after Ragdoll.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Jumping
+    summary: |
+      The Humanoid just jumped. (Check `Class.Humanoid.Jump`). This state lasts
+      only briefly. This state normally transitions into either Standing, if on
+      the ground, or Freefall, if still in the air.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Swimming
+    summary: |
+      The Humanoid is currently swimming in `Class.Terrain` water.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Freefall
+    summary: |
+      The Humanoid is currently freefalling (jumped from a height).
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Flying
+    summary: |
+      When set, the Humanoid won't be animated, as with the
+      `Class.Humanoid.PlatformStand` property. This state lasts as long as the
+      player flies.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Landed
+    summary: |
+      The Humanoid touched the ground after a Freefall. This state lasts only
+      briefly.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Running
+    summary: |
+      Currently running while physics of parts in range are being calculated
+      (e.g. After a jump, close to other players, and others).
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: RunningNoPhysics
+    summary: |
+      Currently running and not near other physical objects. (deprecated).
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: StrafingNoPhysics
+    summary: |
+      Not currently used with default Humanoid. Cannot be set with
+      `Class.Humanoid:ChangeState()`.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: Climbing
+    summary: |
+      The Humanoid is climbing (e.g. up a `Class.TrussPart` or ladder).
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Seated
+    summary: |
+      The Humanoid is currently sitting in a Seat or VehicleSeat. Check the
+      `Class.Humanoid.Sit` property.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: PlatformStanding
+    summary: |
+      The Humanoid is platformstanding. Check the `Class.Humanoid.PlatformStand`
+      property.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Dead
+    summary: |
+      The Humanoid died. Changing a Humanoid's state to this one will kill it.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Physics
+    summary: |
+      The Humanoid doesn't apply any force on its own and will not automatically
+      transition to any other state. This state has to be set and unset manually
+      using `Class.Humanoid:ChangeState()`.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      Unusable placeholder in case an unknown state gets triggered internally.
+    value: 18
+    tags: []
+    deprecation_message: ''

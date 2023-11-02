@@ -1,0 +1,167 @@
+name: PlayerScripts
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  A container for LocalScripts to be run on the client.
+description: |
+  `Class.PlayerScripts` is a container object located inside `Class.Player`
+  objects within the `Class.Players` game service. It is created automatically
+  when a player joins the game. Its main purpose is to contain
+  `Class.LocalScript`s copied from the `Class.StarterPlayerScripts` container
+  within the `Class.StarterPlayer` game service, which happens once upon
+  creation. Descendant `LocalScripts` of `Class.PlayerScripts` will run code on
+  the client of the `Class.Player`.
+
+  Unlike the `Class.Backpack` and `Class.PlayerGui` containers, the
+  `Class.PlayerScripts` container is not accessible to the server. Server
+  `Class.Script` objects will not run when parented to `Class.PlayerScripts`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: PlayerScripts:ClearComputerCameraMovementModes
+    summary: |
+      Unregisters all ComputerCameraMovementMode enums from the game settings
+      menu.
+    description: |
+      Unregisters all ComputerCameraMovementMode enums from the game settings
+      menu.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:ClearComputerMovementModes
+    summary: |
+      Unregisters all ComputerMovementMode enums from the game settings menu.
+    description: |
+      Unregisters all ComputerMovementMode enums from the game settings menu.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:ClearTouchCameraMovementModes
+    summary: |
+      Unregisters all TouchCameraMovementMode enums from the game settings menu.
+    description: |
+      Unregisters all TouchCameraMovementMode enums from the game settings menu.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:ClearTouchMovementModes
+    summary: |
+      Unregisters all TouchMovementMode enums from the game settings menu.
+    description: |
+      Unregisters all TouchMovementMode enums from the game settings menu.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:RegisterComputerCameraMovementMode
+    summary: |
+      Registers that a computer camera movement mode is available to be selected
+      from the game menu.
+    description: |
+      Registers that a computer camera movement mode is available to be selected
+      from the game menu.
+    code_samples:
+    parameters:
+      - name: cameraMovementMode
+        type: ComputerCameraMovementMode
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:RegisterComputerMovementMode
+    summary: |
+      Registers that a computer movement mode is available to be selected from
+      the game menu.
+    description: |
+      Registers that a computer movement mode is available to be selected from
+      the game menu.
+    code_samples:
+    parameters:
+      - name: movementMode
+        type: ComputerMovementMode
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:RegisterTouchCameraMovementMode
+    summary: |
+      Registers that a touch camera movement mode is available to be selected
+      from the game menu.
+    description: |
+      Registers that a touch camera movement mode is available to be selected
+      from the game menu.
+    code_samples:
+    parameters:
+      - name: cameraMovementMode
+        type: TouchCameraMovementMode
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PlayerScripts:RegisterTouchMovementMode
+    summary: |
+      Registers that a touch movement mode is available to be selected from the
+      game menu.
+    description: |
+      Registers that a touch movement mode is available to be selected from the
+      game menu.
+    code_samples:
+    parameters:
+      - name: movementMode
+        type: TouchMovementMode
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

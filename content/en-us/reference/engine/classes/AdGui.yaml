@@ -1,0 +1,93 @@
+name: AdGui
+type: class
+category:
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - SurfaceGuiBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: AdGui.AdShape
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AdShape
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AdGui.EnableVideoAds
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AdGui.FallbackImage
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AdGui.Status
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AdUnitStatus
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks:
+  - name: AdGui.OnAdEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventInfo
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

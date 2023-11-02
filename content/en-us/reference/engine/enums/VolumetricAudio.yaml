@@ -1,0 +1,23 @@
+name: VolumetricAudio
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Disabled
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Automatic
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

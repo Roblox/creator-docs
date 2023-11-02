@@ -1,0 +1,20 @@
+name: UITheme
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Light
+    value: 0
+    summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Dark
+    value: 1
+    summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''

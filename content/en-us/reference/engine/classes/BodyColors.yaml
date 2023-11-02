@@ -1,0 +1,255 @@
+name: BodyColors
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  For a Humanoid character, the BodyColors will specify the colors for the
+  different body parts.
+description: |
+  BodyColors is a utility object used by Roblox to load avatar body colors from
+  the website. Avatars that are loaded from the website will automatically have
+  a BodyColors object corresponding to said avatar's body color configuration.
+  When parented inside of a character with a `Class.Humanoid`, it will apply the
+  colors to each specified limb.
+code_samples:
+inherits:
+  - CharacterAppearance
+tags: []
+deprecation_message: ''
+properties:
+  - name: BodyColors.HeadColor
+    summary: |
+      Sets the color of the head, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the head, as a `Datatype.BrickColor`.
+
+      Setting this will also set `Class.BodyColors.HeadColor3`.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.HeadColor3
+    summary: |
+      Sets the color of the head, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the head, as a `Datatype.Color3`.
+
+      Setting this will also set HeadColor to the closest `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyColors.LeftArmColor
+    summary: |
+      Sets the color of the left arm, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the left arm, as a `Datatype.BrickColor`.
+
+      Setting this will also set BodyColors.LeftArmColor3
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.LeftArmColor3
+    summary: |
+      Sets the color of the left arm, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the left arm, as a `Datatype.Color3`.
+
+      Setting this will also set LeftArmColor to the closest
+      `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyColors.LeftLegColor
+    summary: |
+      Sets the color of the left leg, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the left leg, as a `Datatype.BrickColor`.
+
+      Setting this will also set `Class.BodyColors.LeftLegColor3`.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.LeftLegColor3
+    summary: |
+      Sets the color of the left leg, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the left leg, as a `Datatype.Color3`.
+
+      Setting this will also set LeftLegColor to the closest
+      `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyColors.RightArmColor
+    summary: |
+      Sets the color of the right arm, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the right arm, as a `Datatype.BrickColor`.
+
+      Setting this will also set `Class.BodyColors.RightArmColor3`.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.RightArmColor3
+    summary: |
+      Sets the color of the right arm, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the right arm, as a `Datatype.Color3`.
+
+      Setting this will also set RightArmColor to the closest
+      `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyColors.RightLegColor
+    summary: |
+      Sets the color of the right leg, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the right leg, as a `Datatype.BrickColor`.
+
+      Setting this will also set `Class.BodyColors.RightLegColor3`.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.RightLegColor3
+    summary: |
+      Sets the color of the right leg, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the right leg, as a `Datatype.Color3`.
+
+      Setting this will also set RightLegColor to the closest
+      `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyColors.TorsoColor
+    summary: |
+      Sets the color of the torso, as a `Datatype.BrickColor`.
+    description: |
+      Sets the color of the torso, as a `Datatype.BrickColor`.
+
+      Setting this will also set `Class.BodyColors.TorsoColor3`.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyColors.TorsoColor3
+    summary: |
+      Sets the color of the torso, as a `Datatype.Color3`.
+    description: |
+      Sets the color of the torso, as a `Datatype.Color3`.
+
+      Setting this will also set TorsoColor to the closest
+      `Datatype.BrickColor`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

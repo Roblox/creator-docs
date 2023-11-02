@@ -1,0 +1,142 @@
+name: EulerRotationCurve
+type: class
+category:
+memory_category: Instances
+summary: |
+  Represents a 3D rotation curve, it groups 3 `Class.FloatCurve|FloatCurves`,
+  stored as 3 FloatCurve child instances.
+description: |
+  A EulerRotation Curve represents a 3D rotation curve, it groups 3
+  `Class.FloatCurve|FloatCurves`, stored as 3 FloatCurve child instances. The
+  rotation is decomposed in 3 Euler angles channels that can be accessed via
+  `Class.EulerRotationCurve:X()`, `Class.EulerRotationCurve:Y()`,
+  `Class.EulerRotationCurve:Z()` methods. The 3 axes can be sampled
+  simultaneously via the method `Class.EulerRotationCurve:GetAnglesAtTime()`
+  returning the 3 Euler angles as a Vector3. Similarly,
+  `Class.EulerRotationCurve:GetRotationAtTime()` samples all channels
+  simultaneously but returns a CFrame rotated by X, Y, and Z according to the
+  specified rotation order.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: EulerRotationCurve.RotationOrder
+    summary: |
+      Euler angles rotation order.
+    description: |
+      Euler angles rotation order
+    code_samples:
+    type: RotationOrder
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: EulerRotationCurve:GetAnglesAtTime
+    summary: |
+      Samples the 3 `FloatCurves|FloatCurve` (X, Y, Z) at the time passed as
+      argument. Returns the result as 3 Euler angles. If a channel curve is
+      missing or no key is found in the curve the channel is evaluated as nil.
+    description: |
+      Samples the 3 `FloatCurves|FloatCurve` (X, Y, Z) at the time passed as
+      argument. Returns the result as 3 Euler angles. If a channel curve is
+      missing or no key is found in the curve the channel is evaluated as nil.
+    code_samples:
+    parameters:
+      - name: time
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EulerRotationCurve:GetRotationAtTime
+    summary: |
+      Samples the `Class.EulerRotationCurve` at a given time and returns the
+      corresponding rotation. Empty Euler angles channels are interpreted as
+      zero.
+    description: |
+      Samples the `Class.EulerRotationCurve` at a given time and returns the
+      corresponding rotation. Empty Euler angles channels are interpreted as
+      zero.
+    code_samples:
+    parameters:
+      - name: time
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EulerRotationCurve:X
+    summary: |
+      Returns the `Class.FloatCurve` controlling the X Euler angle channel. It
+      is the first child instance of type `Class.FloatCurve` named `X`. If none
+      is found an empty `Class.FloatCurve` is created.
+    description: |
+      Returns the `Class.FloatCurve` controlling the X Euler angle channel. It
+      is the first child instance of type `Class.FloatCurve` named `X`. If none
+      is found an empty `Class.FloatCurve` is created.
+    code_samples:
+    parameters: []
+    returns:
+      - type: FloatCurve
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EulerRotationCurve:Y
+    summary: |
+      Returns the `Class.FloatCurve` controlling the Y channel. It is the first
+      child instance of type `Class.FloatCurve` named 'Y'. If none is found an
+      empty `Class.FloatCurve` is created.
+    description: |
+      Returns the `Class.FloatCurve` controlling the Y channel. It is the first
+      child instance of type `Class.FloatCurve` named 'Y'. If none is found an
+      empty `Class.FloatCurve` is created.
+    code_samples:
+    parameters: []
+    returns:
+      - type: FloatCurve
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EulerRotationCurve:Z
+    summary: |
+      Returns the `Class.FloatCurve` controlling the Z channel. It is the first
+      child instance of type `Class.FloatCurve` named `Z`. If none is found an
+      empty `Class.FloatCurve` is created.
+    description: |
+      Returns the `Class.FloatCurve` controlling the Z channel. It is the first
+      child instance of type `Class.FloatCurve` named `Z`. If none is found an
+      empty `Class.FloatCurve` is created.
+    code_samples:
+    parameters: []
+    returns:
+      - type: FloatCurve
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

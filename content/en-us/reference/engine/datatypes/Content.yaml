@@ -1,0 +1,67 @@
+name: Content
+type: datatype
+summary: |
+  A formatted string with a specific structure to reference some form of
+  content.
+description: |
+  Assets and other content are reflected through formatted strings, each of
+  which points to an online file or a file saved to the client's device. The
+  basic structure is a **protocol** followed by `://` and a **string** that
+  varies according to the protocol.
+
+  `[Protocol]://[String]`
+
+  <table>
+    <thead>
+          <tr>
+              <th>Protocol</th>
+              <th>String</th>
+              <th>Description</th>
+              <th>Example</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><b>rbxassetid</b></td>
+              <td>An existing asset ID</td>
+              <td>Fetches a user-created asset uploaded to Roblox.</td>
+              <td>rbxassetid://7229442422</td>
+          </tr>
+      <tr>
+              <td><b>rbxasset</b></td>
+              <td>A file path</td>
+              <td>Fetches a file from Roblox's content folders.</td>
+              <td>rbxasset://textures/face.png</td>
+          </tr>
+          <tr>
+              <td><b>rbxthumb</b></td>
+              <td>Parameters and values</td>
+              <td>Allows for easy loading of thumbnails.</td>
+              <td>rbxthumb://type=Asset&id=24813339&w=150&h=150</td>
+          </tr>
+      <tr>
+              <td><b>rbxhttp</b></td>
+              <td>A path on the Roblox website</td>
+              <td>Fetches content from the Roblox website.</td>
+              <td>rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png</td>
+          </tr>
+          <tr>
+              <td><b>https</b>/<b>http</b></td>
+              <td>A website URL</td>
+              <td>Fetches content from a website using a URL.</td>
+              <td>https://www.roblox.com/asset/?id=9723979220</td>
+          </tr>
+      </tbody>
+  </table>
+
+  For further guidance on using content, see
+  [Asset Format Strings](../../../projects/assets/index.md#asset-format-strings).
+code_samples:
+tags: []
+deprecation_message: ''
+constructors: []
+constants: []
+properties: []
+methods:
+functions:
+math_operations:

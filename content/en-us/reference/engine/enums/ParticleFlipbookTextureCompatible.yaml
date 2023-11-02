@@ -1,0 +1,23 @@
+name: ParticleFlipbookTextureCompatible
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: NotCompatible
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Compatible
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

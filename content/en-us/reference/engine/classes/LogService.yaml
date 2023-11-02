@@ -1,0 +1,81 @@
+name: LogService
+type: class
+category: Debugging
+memory_category: Instances
+summary: |
+  A service that allows you to read outputted text.
+description: |
+  **Important notes about this service:** This service might have unexpected or
+  unreliable behavior depending on how games and the game engine log things.
+  Content might also be truncated. Don't rely on contents of events and messages
+  emitted by this service for any important game logic.
+
+  A service that allows you to read outputted text.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: LogService:ClearOutput
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LogService:GetLogHistory
+    summary: |
+      Returns a table of tables, each with the message string, message type, and
+      timestamp of a message that the client displays in the output window.
+    description: |
+      **Unreliable Behavior** This may have changing, unexpected or unreliable
+      behavior depending on how the game engine logs things. It should not be
+      relied upon for any important game logic.
+
+      Returns a table of tables, each with the message string, message type, and
+      timestamp of a message that the client displays in the output window.
+
+      See also:
+
+      - `Class.LogService.MessageOut` - An event that fires when text is added
+        to the output from the client
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: LogService.MessageOut
+    summary: |
+      Fires when the client outputs text.
+    description: |
+      Fires when the client outputs text.
+    code_samples:
+      - LogService-MessageOut1
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: ''
+      - name: messageType
+        type: MessageType
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

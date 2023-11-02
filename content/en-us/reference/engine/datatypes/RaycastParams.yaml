@@ -1,0 +1,134 @@
+name: RaycastParams
+type: datatype
+summary: |
+  A container for parameters used in raycasting operations.
+description: |
+  The `Datatype.RaycastParams` data type stores parameters for
+  `Class.WorldRoot:Raycast()` operations. The
+  `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+  property stores an array of objects to use as either an inclusion or exclusion
+  list based on the `Datatype.RaycastParams.FilterType` enum. If desired, the
+  `Datatype.RaycastParams.IgnoreWater` property can be used to ignore
+  `Class.Terrain` water, and the `Datatype.RaycastParams.CollisionGroup`
+  property can specify a collision group for the raycasting operation.
+
+  This object is different from the similarly named `Datatype.RaycastResult`
+  which provides the results of a raycast.
+
+  Unlike most data types in Luau, you can change all of the members of
+  `Datatype.RaycastParams` without creating a new object, allowing you to reuse
+  the same object repeatedly.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: RaycastParams.new
+    summary: Returns a blank `Datatype.RaycastParams`.
+    description: |-
+      Returns a blank `Datatype.RaycastParams` object. Unlike other data type
+      constructors, this constructor does not have any parameters, so you should
+      set its properties appropriately.
+    parameters:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+methods:
+  - name: RaycastParams:AddToFilter
+    summary: |
+      Adds the instances provided to
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`.
+    description: |
+      For efficiency and simplicity, this method is the preferred way to add
+      instances to the filter. It has the additional advantage that it allows
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      to be updated from a parallel context.
+    parameters:
+      - name: instances
+        type: Instance | Array
+        default:
+        summary: |
+          An instance or an array containing instances to add.
+    returns:
+      - type: void
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+    thread_safety: Safe
+properties:
+  - name: RaycastParams.FilterDescendantsInstances
+    type: Array
+    summary: |
+      An array of objects whose descendants are used in filtering raycasting
+      candidates.
+    description: |
+      An array of objects whose descendants are used in filtering raycasting
+      candidates.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.FilterType
+    type: RaycastFilterType
+    summary: |
+      Determines how the
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      array is used.
+    description: |
+      Determines how the
+      `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      array is used, depending on the `Enum.RaycastFilterType` provided.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.IgnoreWater
+    type: bool
+    summary: |
+      Determines whether the water material is considered when raycasting
+      against `Class.Terrain`.
+    description: |
+      Determines whether the water material is considered when raycasting
+      against `Class.Terrain`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.CollisionGroup
+    type: string
+    summary: |
+      The collision group used for the operation.
+    description: |
+      Specifies a collision group for the raycasting operation. Parts in
+      collision groups that are set to **not** collide with this group are
+      ignored. If this property is omitted, the raycast assumes the **Default**
+      collision group.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.RespectCanCollide
+    type: bool
+    summary: |
+      Determines whether the raycast operation considers a part's
+      `Class.BasePart.CanCollide|CanCollide` property value over its
+      `Class.BasePart.CanQuery|CanQuery` value.
+    description: |
+      This property, if `true`, makes the raycast operation use an intersected
+      part's `Class.BasePart.CanCollide|CanCollide` value in favor of its
+      `Class.BasePart.CanQuery|CanQuery` value when determining whether that
+      part is included in the `Datatype.RaycastResult`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: RaycastParams.BruteForceAllSlow
+    type: bool
+    summary: |
+      When enabled, the query will ignore all part collision properties and
+      perform a brute-force check on every part.
+    description: |
+      When enabled, the query will ignore all part collision properties and
+      perform a brute-force check on every part. This will negatively impact
+      performance and should not be used in live experiences.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

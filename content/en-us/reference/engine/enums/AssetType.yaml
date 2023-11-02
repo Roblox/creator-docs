@@ -1,0 +1,350 @@
+name: AssetType
+type: enum
+summary: |
+  This Enum can be used to match the AssetTypeId from
+  `Class.MarketplaceService:GetProductInfo()` to an asset type.
+description: |
+  This Enum can be used to match the AssetTypeId from
+  `Class.MarketplaceService:GetProductInfo()` to an asset type.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Image
+    value: 1
+    summary: |
+      The asset is an image.
+    tags: []
+    deprecation_message: ''
+  - name: TShirt
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Audio
+    value: 3
+    summary: |
+      The asset is an audio clip.
+    tags: []
+    deprecation_message: ''
+  - name: Mesh
+    value: 4
+    summary: |
+      The asset is a mesh.
+    tags: []
+    deprecation_message: ''
+  - name: Lua
+    value: 5
+    summary: |
+      The asset is Lua code, for example a `Class.ModuleScript`.
+    tags: []
+    deprecation_message: ''
+  - name: Hat
+    value: 8
+    summary: |
+      The asset is a hat.
+    tags: []
+    deprecation_message: ''
+  - name: Place
+    value: 9
+    summary: |
+      The asset is a place.
+    tags: []
+    deprecation_message: ''
+  - name: Model
+    value: 10
+    summary: |
+      The asset is a model.
+    tags: []
+    deprecation_message: ''
+  - name: Shirt
+    value: 11
+    summary: |
+      The asset is a shirt.
+    tags: []
+    deprecation_message: ''
+  - name: Pants
+    value: 12
+    summary: |
+      The asset is a pants item.
+    tags: []
+    deprecation_message: ''
+  - name: Decal
+    value: 13
+    summary: |
+      The asset is a decal (image).
+    tags: []
+    deprecation_message: ''
+  - name: Head
+    value: 17
+    summary: |
+      The asset is a head.
+    tags: []
+    deprecation_message: ''
+  - name: Face
+    value: 18
+    summary: |
+      The asset is a face.
+    tags: []
+    deprecation_message: ''
+  - name: Gear
+    value: 19
+    summary: |
+      The asset is a gear item.
+    tags: []
+    deprecation_message: ''
+  - name: Badge
+    value: 21
+    summary: |
+      The asset is a badge.
+    tags: []
+    deprecation_message: ''
+  - name: Animation
+    value: 24
+    summary: |
+      The asset is an animation; also see the more specific animation type enums
+      below.
+    tags: []
+    deprecation_message: ''
+  - name: Torso
+    value: 27
+    summary: |
+      The asset is a torso.
+    tags: []
+    deprecation_message: ''
+  - name: RightArm
+    value: 28
+    summary: |
+      The asset is a right arm.
+    tags: []
+    deprecation_message: ''
+  - name: LeftArm
+    value: 29
+    summary: |
+      The asset is a left arm.
+    tags: []
+    deprecation_message: ''
+  - name: LeftLeg
+    value: 30
+    summary: |
+      The asset is a left leg.
+    tags: []
+    deprecation_message: ''
+  - name: RightLeg
+    value: 31
+    summary: |
+      The asset is a right leg.
+    tags: []
+    deprecation_message: ''
+  - name: Package
+    value: 32
+    summary: |
+      The asset is a pack, for example an animation package.
+    tags: []
+    deprecation_message: ''
+  - name: GamePass
+    value: 34
+    summary: |
+      The asset is a GamePass.
+    tags: []
+    deprecation_message: ''
+  - name: Plugin
+    value: 38
+    summary: |
+      The asset is a plugin.
+    tags: []
+    deprecation_message: ''
+  - name: MeshPart
+    value: 40
+    summary: |
+      The asset is a mesh part.
+    tags: []
+    deprecation_message: ''
+  - name: HairAccessory
+    value: 41
+    summary: |
+      The asset is a hair accessory.
+    tags: []
+    deprecation_message: ''
+  - name: FaceAccessory
+    value: 42
+    summary: |
+      The asset is a face accessory.
+    tags: []
+    deprecation_message: ''
+  - name: NeckAccessory
+    value: 43
+    summary: |
+      The asset is a neck accessory.
+    tags: []
+    deprecation_message: ''
+  - name: ShoulderAccessory
+    value: 44
+    summary: |
+      The asset is a shoulder accessory.
+    tags: []
+    deprecation_message: ''
+  - name: FrontAccessory
+    value: 45
+    summary: |
+      The asset is a front accessory.
+    tags: []
+    deprecation_message: ''
+  - name: BackAccessory
+    value: 46
+    summary: |
+      The asset is a back accessory.
+    tags: []
+    deprecation_message: ''
+  - name: WaistAccessory
+    value: 47
+    summary: |
+      The asset is a waist accessory.
+    tags: []
+    deprecation_message: ''
+  - name: ClimbAnimation
+    value: 48
+    summary: |
+      The asset is a climb animation.
+    tags: []
+    deprecation_message: ''
+  - name: DeathAnimation
+    value: 49
+    summary: |
+      The asset is a death animation.
+    tags: []
+    deprecation_message: ''
+  - name: FallAnimation
+    value: 50
+    summary: |
+      The asset is a fall animation.
+    tags: []
+    deprecation_message: ''
+  - name: IdleAnimation
+    value: 51
+    summary: |
+      The asset is an idle animation.
+    tags: []
+    deprecation_message: ''
+  - name: JumpAnimation
+    value: 52
+    summary: |
+      The asset is a jump animation.
+    tags: []
+    deprecation_message: ''
+  - name: RunAnimation
+    value: 53
+    summary: |
+      The asset is a run animation.
+    tags: []
+    deprecation_message: ''
+  - name: SwimAnimation
+    value: 54
+    summary: |
+      The asset is a swim animation.
+    tags: []
+    deprecation_message: ''
+  - name: WalkAnimation
+    value: 55
+    summary: |
+      The asset is a walk animation.
+    tags: []
+    deprecation_message: ''
+  - name: PoseAnimation
+    value: 56
+    summary: |
+      The asset is a pose animation.
+    tags: []
+    deprecation_message: ''
+  - name: EarAccessory
+    value: 57
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EyeAccessory
+    value: 58
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EmoteAnimation
+    value: 61
+    summary: |
+      The asset is an emote animation.
+    tags: []
+    deprecation_message: ''
+  - name: Video
+    value: 62
+    summary: |
+      The asset is a video.
+    tags: []
+    deprecation_message: ''
+  - name: TShirtAccessory
+    value: 64
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ShirtAccessory
+    value: 65
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PantsAccessory
+    value: 66
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: JacketAccessory
+    value: 67
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: SweaterAccessory
+    value: 68
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ShortsAccessory
+    value: 69
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: LeftShoeAccessory
+    value: 70
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: RightShoeAccessory
+    value: 71
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DressSkirtAccessory
+    value: 72
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FontFamily
+    value: 73
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EyebrowAccessory
+    value: 76
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EyelashAccessory
+    value: 77
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: MoodAnimation
+    value: 78
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DynamicHead
+    value: 79
+    summary: ''
+    tags: []
+    deprecation_message: ''

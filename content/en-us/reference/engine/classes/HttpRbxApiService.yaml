@@ -1,0 +1,49 @@
+name: HttpRbxApiService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service whose functionality is not available to developers.
+description: |
+  A version of the `Class.HttpService` used by the admins. Unlike the regular
+  service, this one can send GET/POST requests to roblox.com
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: HttpRbxApiService:RequestLimitedAsync
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: requestOptions
+        type: Dictionary
+        default:
+        summary: ''
+      - name: priority
+        type: ThrottlingPriority
+        default: Default
+        summary: ''
+      - name: content_type
+        type: HttpContentType
+        default: ApplicationJson
+        summary: ''
+      - name: httpRequestType
+        type: HttpRequestType
+        default: Default
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

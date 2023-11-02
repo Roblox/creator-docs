@@ -1,0 +1,92 @@
+name: MemoryStoreService
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  Exposes methods to access specific primitives within MemoryStore.
+description: |
+  A top-level singleton class which exposes methods to access specific
+  primitives within the MemoryStoreService. Use it for any data that rapidly
+  changes that other servers can restore, such as global leaderboards,
+  matchmaking queues, and auction houses.
+
+  For a more in-depth look, see
+  [Memory Stores](../../../cloud-services/memory-stores/index.md). For the
+  limits and quotas of the service, see
+  [Limits and Quotas](../../../cloud-services/memory-stores/index.md#limits-and-quotas).
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: MemoryStoreService:GetHashMap
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: MemoryStoreHashMap
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreService:GetQueue
+    summary: |
+      Returns a `Class.MemoryStoreQueue` instance for the provided name.
+    description: |
+      Returns a `Class.MemoryStoreQueue` instance for the provided name. The
+      name is global within the game, thus any place that uses the same name
+      will access the same queue.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the queue.
+      - name: invisibilityTimeout
+        type: int
+        default: 30
+        summary: |
+          **(Optional)** Invisibility timeout, in seconds, for read operations
+          through this queue instance. If not provided, defaults to 30 seconds.
+    returns:
+      - type: MemoryStoreQueue
+        summary: |
+          A `Class.MemoryStoreQueue` instance for the provided name.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreService:GetSortedMap
+    summary: |
+      Returns a `Class.MemoryStoreSortedMap` instance for the provided name.
+    description: |
+      Returns a `Class.MemoryStoreSortedMap` instance for the provided name. The
+      name is global within the game, so any place that uses the same name will
+      access the same sorted map.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the sorted map.
+    returns:
+      - type: MemoryStoreSortedMap
+        summary: |
+          A `Class.MemoryStoreSortedMap` instance for the provided name.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

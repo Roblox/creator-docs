@@ -1,0 +1,150 @@
+name: DeveloperMemoryTag
+type: enum
+summary: |
+  A memory tracking category.
+description: |
+  A list of memory categories, and a description of what they are allocated to.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Internal
+    value: 0
+    summary: |
+      General data that doesn't have any categorization. This could be due to
+      either internal reasons, or because it simply isn't being tracked
+      categorically.
+    tags: []
+    deprecation_message: ''
+  - name: HttpCache
+    value: 1
+    summary: |
+      A cache of HTTP responses.
+    tags: []
+    deprecation_message: ''
+  - name: Instances
+    value: 2
+    summary: |
+      All the Instances present in memory.
+    tags: []
+    deprecation_message: ''
+  - name: Signals
+    value: 3
+    summary: |
+      Events, signals, connections, etc.
+    tags: []
+    deprecation_message: ''
+  - name: LuaHeap
+    value: 4
+    summary: |
+      All of the data in Lua. this includes everything happening in CoreScripts,
+      the built-in data types, etc.
+    tags: []
+    deprecation_message: ''
+  - name: Script
+    value: 5
+    summary: |
+      All memory being manipulated and referenced by scripts.
+    tags: []
+    deprecation_message: ''
+  - name: PhysicsCollision
+    value: 6
+    summary: |
+      Collision detection in the Workspace.
+    tags: []
+    deprecation_message: ''
+  - name: PhysicsParts
+    value: 7
+    summary: |
+      Physics bodies and the components that control their behavior.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsSolidModels
+    value: 8
+    summary: |
+      Rendering solid models (stuff made with Union, Negate, etc.).
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsMeshParts
+    value: 10
+    summary: |
+      Rendering of mesh parts.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsParticles
+    value: 11
+    summary: |
+      Rendering of particles from ParticleEmitters.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsParts
+    value: 12
+    summary: |
+      Rendering of regular parts.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsSpatialHash
+    value: 13
+    summary: |
+      Spatial hash lookup tables of the game world that are used for rendering.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsTerrain
+    value: 14
+    summary: |
+      Rendering of terrain geometry.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsTexture
+    value: 15
+    summary: |
+      Rendering of textures in the game world.
+    tags: []
+    deprecation_message: ''
+  - name: GraphicsTextureCharacter
+    value: 16
+    summary: |
+      Rendering of texture composition maps that are generated for Humanoids.
+    tags: []
+    deprecation_message: ''
+  - name: Sounds
+    value: 17
+    summary: |
+      Data of sounds in-game.
+    tags: []
+    deprecation_message: ''
+  - name: StreamingSounds
+    value: 18
+    summary: |
+      Playback of sounds in-game.
+    tags: []
+    deprecation_message: ''
+  - name: TerrainVoxels
+    value: 19
+    summary: |
+      Occupancy/Material data of the Terrain.
+    tags: []
+    deprecation_message: ''
+  - name: Gui
+    value: 21
+    summary: |
+      Gui element data and rendering.
+    tags: []
+    deprecation_message: ''
+  - name: Animation
+    value: 22
+    summary: |
+      Playback of Animations on Humanoids and AnimationControllers.
+    tags: []
+    deprecation_message: ''
+  - name: Navigation
+    value: 23
+    summary: |
+      Pathfinding for Humanoids via the PathfindingService.
+    tags: []
+    deprecation_message: ''
+  - name: GeometryCSG
+    value: 24
+    summary: ''
+    tags: []
+    deprecation_message: ''

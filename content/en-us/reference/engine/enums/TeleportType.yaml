@@ -1,0 +1,36 @@
+name: TeleportType
+type: enum
+summary: |
+  Determines the type of teleport destination for a `Class.TeleportService`
+  teleport call.
+description: |
+  Determines the type of teleport destination for a `Class.TeleportService`
+  teleport call.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: ToPlace
+    summary: |
+      The teleport destination is a place (no specific instance).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ToInstance
+    summary: |
+      The teleport destination is an instance of a place.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ToReservedServer
+    summary: |
+      The destination of the teleport is a reserved server (a place instance
+      that is reserved for a select group of players).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ToVIPServer
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

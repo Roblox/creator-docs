@@ -1,0 +1,196 @@
+name: Smoke
+type: class
+category: Effects
+memory_category: Instances
+summary: |
+  A particle emitter with the visual aesthetic of smoke.
+description: |
+  Smoke is one of several particle-emitting classes. Like other particle
+  emitters of its kind, Smoke objects emit particles when parented to a
+  `Class.BasePart` (such as a `Class.Part`) or an `Class.Attachment` within such
+  a `Class.BasePart`. Compared to the `Class.ParticleEmitter` class, Smoke lacks
+  many different customization properties and special methods, such as
+  `Class.ParticleEmitter.Lifetime` or `Class.ParticleEmitter:Emit()`. It is
+  useful to create a quick special effect in a pinch; for more detailed work it
+  is preferable to use a `Class.ParticleEmitter` instead.
+
+  When `Class.Smoke.Enabled` is toggled off, particles emit by this object will
+  continue to render until their lifetime expires. When a Smoke object's
+  `Class.Instance.Parent` is set to nil (and/or `Class.Instance:Destroy()`ed),
+  all particles will instantly disappear. If this effect is not desired, try
+  hiding the parent object at a far away position, then removing the Smoke after
+  a few seconds using `Class.Debris` to give the last particles a chance to
+  expire. This object does not have a `Class.ParticleEmitter:Clear()` method,
+  but it is possible to set the `Class.Instance.Parent` to nil and back to the
+  exact same object for the same effect.
+
+  Smoke particles are only emitted from the center of `Class.BasePart` to which
+  they are parented. Parenting a Smoke object to an `Class.Attachment` instead
+  allows customization of the particles' start position.
+code_samples:
+  - Add-Smoke-to-Fire
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Smoke.Color
+    summary: |
+      Determines the color of the smoke particles.
+    description: |
+      The Color property determines the color of all the particles emit by a
+      `Class.Smoke` object (both existing and future particles). It behaves
+      similarly to `Class.ParticleEmitter.Color`, except that it is only one
+      color and not a `Datatype.ColorSequence`. A color of white with some
+      `Class.Smoke.Opacity` makes for a nice fog effect, and a very opaque black
+      color can compliment a `Class.Fire` object nicely.
+    code_samples:
+      - Add-Smoke-to-Fire
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Smoke.Enabled
+    summary: |
+      Determines whether smoke particles emit.
+    description: |
+      The Enabled property, much like `Class.ParticleEmitter.Enabled`,
+      determines whether smoke particles are emitted. Any particles already emit
+      will continue to render until their lifetime expires. This property is
+      useful for keeping pre-made smoke effects off until they are needed later.
+      Since smoke particles are destroyed when the `Class.Smoke` object's
+      `Class.Instance.Parent` is set to nil, this property is useful in allowing
+      existing particles the opportunity to expire before destroying the Fire
+      object altogether. See the function below.
+
+      ```
+      local Debris = game:GetService("Debris")
+      local part = script.Parent
+      function stopSmoke(smoke)
+      	smoke.Enabled = false -- No more new particles
+      	Debris:AddItem(smoke, 10) -- Remove the object after a delay (after existing particles have expired)
+      end
+      stopSmoke(part.Smoke)
+      ```
+    code_samples:
+      - Add-Smoke-to-Fire
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Smoke.Opacity
+    summary: |
+      Determines how opaque smoke particles render.
+    description: |
+      Opacity determines the opaqueness of the smoke particles. It must be in
+      the range [0, 1]. This property works **inversely** in comparison to a
+      part's `Class.BasePart.Transparency` or ParticleEmitter's
+      `Class.ParticleEmitter.Transparency`: a value of 0 is completely
+      invisible, 1 is completely visible.
+
+      The texture that Roblox uses for `Class.Smoke` particles is partially
+      transparent, so setting this property to 1 still yields transparency in
+      rendered smoke.
+    code_samples:
+      - Add-Smoke-to-Fire
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Smoke.RiseVelocity
+    summary: |
+      Determines the velocity of the smoke particles.
+    description: |
+      RiseVelocity behaves similarly to `Class.ParticleEmitter.Speed` and
+      `Class.Fire.Heat`: it determines how fast the smoke particles move during
+      their lifetime. It must be in the range [-25, 25]. Negative values will
+      cause particles to emit in the bottom (-Y) direction of the parent
+      `Class.BasePart`.
+
+      When using a `Class.Smoke` effect to create fog, set this property to 0.
+      For large smoke effects, make the rise subtle (2 to 8). For chimneys and
+      smokestacks, higher values are appropriate.
+    code_samples:
+      - Add-Smoke-to-Fire
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Smoke.Size
+    summary: |
+      Determines the size of newly emit smoke particles.
+    description: |
+      The Size property of `Class.Smoke` determines the size of the newly emit
+      smoke particles. Unlike `Class.Smoke.Color`, this property will not change
+      the size of existing particles. It must be in the range [0.1, 100]. Unlike
+      `Class.ParticleEmitter.Size`, this property is only a number (not a
+      `Datatype.NumberSequence`). Also note also that the size of the particles
+      is not 1-to-1 with studs; in fact, the size of the smoke particle is more
+      than twice as large. At the largest size, smoke particles can render
+      larger than 200 studs wide!
+    code_samples:
+      - Add-Smoke-to-Fire
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Smoke.TimeScale
+    summary: |
+      Value between 0-1 that controls the speed of the particle effect.
+    description: |
+      A value between 0-1 than controls the speed of the particle effect. At 1
+      it runs at normal speed, at 0.5 it runs at half speed, and at 0 it freezes
+      time.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

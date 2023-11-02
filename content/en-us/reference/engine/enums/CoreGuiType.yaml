@@ -1,0 +1,62 @@
+name: CoreGuiType
+type: enum
+summary: |
+  The CoreGuiType Enum represents all `Class.CoreGui` "types" which are
+  available, such as the `Class.Backpack` and Leaderboard.
+description: |
+  The CoreGuiType Enum represents all `Class.CoreGui` "types" which are
+  available, such as the `Class.Backpack` and Leaderboard.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: PlayerList
+    value: 0
+    summary: |
+      The CoreGui displaying the list of in-game players.
+    tags: []
+    deprecation_message: ''
+  - name: Health
+    value: 1
+    summary: |
+      The CoreGui displaying a player's health.
+    tags: []
+    deprecation_message: ''
+  - name: Backpack
+    value: 2
+    summary: |
+      The CoreGui displaying a player's backpack (containing a player's tools,
+      gear, etc.).
+    tags: []
+    deprecation_message: ''
+  - name: Chat
+    value: 3
+    summary: |
+      The CoreGui used to display and send in-game chat message with other
+      players.
+    tags: []
+    deprecation_message: ''
+  - name: All
+    value: 4
+    summary: |
+      Refers to all available CoreGuis.
+    tags: []
+    deprecation_message: ''
+  - name: EmotesMenu
+    value: 5
+    summary: |
+      Allows the Emotes Menu to be disabled using the existing
+      `Class.StarterGui:SetCoreGuiEnabled()` API. Disabling all CoreGui types
+      using `Enum.CoreGuiType.All` would also disable the Emotes Menu.
+    tags: []
+    deprecation_message: ''
+  - name: SelfView
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Captures
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''

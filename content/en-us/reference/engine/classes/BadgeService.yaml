@@ -1,0 +1,299 @@
+name: BadgeService
+type: class
+category: Gameplay
+memory_category: Instances
+summary: |
+  Provides information on badges and awards them.
+description: |
+  The **BadgeService** class provides information and functionality related to
+  [badges](../../../production/publishing/badges.md). Badges are used across the
+  platform to recognize a player's achievements and activity. Upon awarding a
+  badge to a player, it is added to their inventory and displayed on their
+  profile page.
+code_samples:
+  - badges---awarding-a-badge
+  - badges---checking-earned-badges
+  - getbadgeinfoasync
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: BadgeService:AwardBadge
+    summary: |
+      Award a badge to a player given the ID of each.
+    description: |
+      Grants a `Class.Player` a badge with the `Class.Player.UserId|UserId` and
+      the badge ID. Rate limit: **50 + 35 \* [number of users] per minute**. In
+      order to successfully award a badge:
+
+      - The player must be presently connected to the game.
+      - The player must not already have the badge (note that a player may
+        delete an awarded badge from their profile and be awarded the badge
+        again).
+      - The badge must be awarded from a server-side `Class.Script` or a
+        `Class.ModuleScript` eventually required by a `Class.Script`, not from a
+        `Class.LocalScript`.
+      - The badge must be awarded in a place that is part of the game associated
+        with the badge.
+      - The badge must be enabled; check this using the `IsEnabled` property of
+        the badge fetched through `Class.BadgeService:GetBadgeInfoAsync()`.
+
+      See also:
+
+      - `Class.BadgeService:GetBadgeInfoAsync()`
+      - `Class.BadgeService:UserHasBadgeAsync()`
+    code_samples:
+      - badges---awarding-a-badge
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the user the badge is to be awarded to.
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The ID of the badge to be awarded.
+    returns:
+      - type: bool
+        summary: |
+          Boolean of `true` if the badge was awarded successfully.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:GetBadgeInfoAsync
+    summary: |
+      Fetch information about a badge given its ID.
+    description: |
+      This function fetches information about a badge given its ID. It takes a
+      brief moment to load the information from the Roblox website; repeated
+      calls will cache for a short duration. It returns a dictionary with the
+      following fields:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Key</th>
+      			<th>Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td><b>Name</b></td>
+      			<td>string</td>
+      			<td>The name of the badge.</td>
+      		</tr>
+      		<tr>
+      			<td><b>Description</b></td>
+      			<td>string</td>
+      			<td>The description of the badge.</td>
+      		</tr>
+      		<tr>
+      			<td><b>IconImageId</b></td>
+      			<td>int64</td>
+      			<td>The asset ID of the image for the badge.</td>
+      		</tr>
+      		<tr>
+      			<td><b>IsEnabled</b></td>
+      			<td>bool</td>
+      			<td>Indicates whether the badge is available to be awarded.</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      See also:
+
+      - `Class.BadgeService:AwardBadge()`
+      - `Class.BadgeService:UserHasBadgeAsync()`
+    code_samples:
+      - getbadgeinfoasync
+    parameters:
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The badge ID of the badge whose information should be fetched.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary of information about the specified badge.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:IsDisabled
+    summary: |
+      Returns whether a given badge is disabled.
+    description: |
+      This function returns whether the badge with the given id is marked
+      **disabled** on the Roblox website. A badge can be disabled by its owner
+      on its page on the Roblox website, in the settings sub-menu. When a badge
+      is disabled, this function returns true and the badge can no longer be
+      awarded using `Class.BadgeService:AwardBadge()|AwardBadge`. A badge may be
+      quickly re-enabled through the same menu.
+
+      In Studio, a badge can only be tested if it is **disabled**. Calling this
+      function with an enabled badge in Studio will return **true** and produce
+      a warning "Sorry, badges can only be tested if they are disabled on Roblox
+      game servers".
+
+      Note that even if a badge is enabled it may not necessarily be awardable
+      (for example if it isn't associated with the current game). See
+      `Class.BadgeService:AwardBadge()|AwardBadge` for more information on the
+      criteria required for awarding badges.
+
+      Badges that are associated with special events are a common reason for a
+      badge to be disabled. Often, it is easier to simply disable a badge
+      instead of hard-coding a time check for when some event ends.
+    code_samples:
+      - BadgeService-IsDisabled1
+      - BadgeService-AwardBadge
+    parameters:
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The ID of the badge.
+    returns:
+      - type: bool
+        summary: |
+          True if the specified badge is not available to be awarded.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated. Do not use it for new work. Instead, it can
+      be checked by calling BadgeService:GetBadgeInfoAsync() and checking the
+      IsEnabled field.
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:IsLegal
+    summary: |
+      Determines if a given badge is associated with the current game.
+    description: |
+      This function determines if a given badge is associated with the current
+      game. It returns true if the badge is associated with the current game.
+
+      Badges can only be awarded from a place that is part of the game
+      associated with the badge. This means, for example, a developer cannot
+      award a badge associated with another developer's game.
+
+      Even if this returns true, a badge may still not be award-able. For
+      example, it may be disabled. For more information on the criteria for
+      awarding badges see `Class.BadgeService:AwardBadge()|AwardBadge`.
+    code_samples:
+      - BadgeService-AwardBadge
+    parameters:
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The badge ID of the badge.
+    returns:
+      - type: bool
+        summary: |
+          True if the badge is associated with the current game.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated and will always return true. Do not use it for
+      new work.
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:UserHasBadge
+    summary: |
+      Checks whether a user has the badge given the `Class.Player.UserId` and
+      the badge ID.
+    description: |
+      Checks and returns whether a `Class.Player` owns a badge given their
+      `Class.Player.UserId|UserId` and the badge ID. You can call the function
+      from the server in a `Class.Script` or `Class.ModuleScript` eventually
+      required by a `Class.Script`, and the user in question must be present in
+      the server for the query to run. When calling the method from the client
+      in a `Class.LocalScript`, it only works for the local user whose client is
+      running the script.
+
+      Any badge for any game can be queried, no matter who created the badge or
+      which experience it is used for.
+    code_samples:
+      - BadgeService-UserHasBadge1
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The user ID of the user.
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The badge ID of the badge.
+    returns:
+      - type: bool
+        summary: |
+          True if the user has the badge.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function has been superseded by
+      `Class.BadgeService:UserHasBadgeAsync()` which should be used for new
+      instead.
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:UserHasBadgeAsync
+    summary: |
+      Checks whether a player has the badge given the `Class.Player.UserId` and
+      the badge ID.
+    description: |
+      Checks and returns whether a `Class.Player` owns a badge given their
+      `Class.Player.UserId|UserId` and the badge ID. Rate limit: **50 + 35 \*
+      [number of players] per minute**. You can call the function from the
+      server in a `Class.Script` or `Class.ModuleScript` eventually required by
+      a `Class.Script`, and the user in question must be present in the server
+      for the query to run. When calling the method from the client in a
+      `Class.LocalScript`, it only works for the local user whose client is
+      running the script.
+
+      Any badge for any game can be queried, no matter who created the badge or
+      which experience it is used for.
+
+      See also:
+
+      - `Class.BadgeService:GetBadgeInfoAsync()`
+      - `Class.BadgeService:AwardBadge()`
+    code_samples:
+      - badges---checking-earned-badges
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the player to check for ownership of the
+          specified badge.
+      - name: badgeId
+        type: int64
+        default:
+        summary: |
+          The badge ID of the badge whose ownership will be checked.
+    returns:
+      - type: bool
+        summary: |
+          Indicates if the specified user has the specified badge.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

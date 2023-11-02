@@ -1,0 +1,28 @@
+name: RigType
+type: enum
+summary: |
+  The type of rig being imported with the 3D Importer.
+description: |
+  The type of rig being imported with the 3D Importer
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: R15
+    value: 0
+    summary: |
+      A rig type of R15.
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    value: 1
+    summary: |
+      A rig type of Custom.
+    tags: []
+    deprecation_message: ''
+  - name: None
+    value: 2
+    summary: |
+      A rig type of None.
+    tags: []
+    deprecation_message: ''

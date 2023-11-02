@@ -78,7 +78,7 @@ When called on a folder, the `GetChildren` function will return an array of the 
    local healthPickups = healthPickupsFolder:GetChildren()
 
    local function onTouchHealthPickup(otherPart, healthPickup)
-   local character = otherPart.Parent
+	local character = otherPart.Parent
    	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    	if humanoid then
    		humanoid.Health = MAX_HEALTH

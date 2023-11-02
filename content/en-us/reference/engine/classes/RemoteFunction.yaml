@@ -1,0 +1,219 @@
+name: RemoteFunction
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  An object which facilitates synchronous, two-way communication across the
+  client-server boundary. Scripts invoking a `Class.RemoteFunction` yield until
+  they receive a response from the recipient.
+description: |
+  The **RemoteFunction** object facilitates synchronous, two-way communication
+  across the [client-server](../../../projects/client-server.md) boundary. You
+  can use it to define a custom callback function and invoke it manually by
+  calling `Class.RemoteFunction:InvokeClient()` or
+  `Class.RemoteFunction:InvokeServer()`. The code invoking the function
+  **yields** until it receives a response from the recipient.
+
+  In order for both the server and clients to access a `Class.RemoteFunction`
+  instance, it must be in a place where both sides can see it, such as
+  `Class.ReplicatedStorage`, although in some cases it's appropriate to store it
+  in `Class.Workspace` or inside a `Class.Tool`.
+
+  If the result is **not** needed, it is recommended that you use a
+  `Class.RemoteEvent` instead, since its call is asynchronous and doesn't need
+  to wait for a response to continue execution. See
+  [Remote Events and Callbacks](../../../scripting/events/remote.md) for code
+  samples and further details on `Class.RemoteFunction`.
+
+  #### Streaming Precautions
+
+  Note that if an invoked `Class.RemoteFunction` creates an instance on the
+  server, there is no guarantee that it exists on the client when the function
+  returns. This is particularly important in places where instance
+  [streaming](../../../workspace/streaming.md) is enabled and when the created
+  instances are `Class.BasePart|BaseParts` or `Class.Model|Models`, since parts
+  that are far away from the player's character may not be streamed to the
+  client, and models that are `Enum.ModelStreamingMode|Atomic` depend on whether
+  their parts are streamed. Even if a model is
+  `Enum.ModelStreamingMode|Persistent`, there may be some delay between the
+  creation of the model and when it is replicated to the client.
+
+  #### Parameter Limitations
+
+  Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+  others can be passed as a parameter when a `Class.RemoteFunction` is invoked,
+  as well as Luau types such as numbers, strings, and booleans, although you
+  should carefully explore the
+  [limitations](../../../scripting/events/remote.md#argument-limitations).
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: RemoteFunction:InvokeClient
+    summary: |
+      Invokes the `Class.RemoteFunction` which in turn calls the
+      `Class.RemoteFunction.OnClientInvoke|OnClientInvoke` callback.
+    description: |
+      Invokes the `Class.RemoteFunction` which in turn calls the
+      `Class.RemoteFunction.OnClientInvoke|OnClientInvoke` callback. Since this
+      method is used to communicate from the server to a client, it will only
+      work when used in a `Class.Script`.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.RemoteFunction:InvokeClient()|InvokeClient()`, as well as Luau
+      types such as numbers, strings, and booleans, although you should
+      carefully explore the
+      [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on `Class.RemoteFunction`.
+
+      #### Warning
+
+      In practice, the server does not often invoke the client, as clients
+      typically do not have information that the server doesn't have, and
+      actions that only a client can take, such as displaying a GUI, typically
+      do not require a callback. As such, `Class.RemoteEvent:FireClient()` is
+      recommended as an asynchronous method that doesn't need to wait for a
+      response to continue execution.
+
+      If you legitimately need to invoke a client from the server, note the
+      following risks:
+
+      - If the client throws an error, the server throws the error too.
+      - If the client disconnects while it's being invoked,
+        `Class.RemoteFunction:InvokeClient()|InvokeClient()` throws an error.
+      - If the client doesn't return a value, the server yields forever.
+    code_samples:
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` associated with the client to invoke.
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to the
+          `Class.RemoteFunction.OnClientInvoke|OnClientInvoke` callback.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned from the
+          `Class.RemoteFunction.OnClientInvoke|OnClientInvoke` callback.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RemoteFunction:InvokeServer
+    summary: |
+      Invokes the `Class.RemoteFunction` which in turn calls the
+      `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback.
+    description: |
+      Invokes the `Class.RemoteFunction` which in turn calls the
+      `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback. Since this
+      method is used to communicate from a client to the server, it will only
+      work when used in a `Class.LocalScript`.
+
+      If a returned result is not needed, it's recommended to use
+      `Class.RemoteEvent:FireServer()` instead, as its call is asynchronous and
+      doesn't need to wait for a response to continue execution.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.RemoteFunction:InvokeServer()|InvokeServer()`, as well as Luau
+      types such as numbers, strings, and booleans, although you should
+      carefully explore the
+      [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on `Class.RemoteFunction`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to the
+          `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned from the
+          `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks:
+  - name: RemoteFunction.OnClientInvoke
+    summary: |
+      Callback for when the `Class.RemoteFunction` is invoked with
+      `Class.RemoteFunction:InvokeClient()|InvokeClient()`.
+    description: |
+      This callback is called when the `Class.RemoteFunction` is invoked with
+      `Class.RemoteFunction:InvokeClient()|InvokeClient()`. When the bound
+      function returns, the returned values are sent back to the calling server.
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on
+      `Class.RemoteFunction.OnClientInvoke|OnClientInvoke`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          The parameters sent through
+          `Class.RemoteFunction:InvokeClient()|InvokeClient()`.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned by the callback function.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RemoteFunction.OnServerInvoke
+    summary: |
+      Callback for when the `Class.RemoteFunction` is invoked with
+      `Class.RemoteFunction:InvokeServer()|InvokeServer()`.
+    description: |
+      This callback is called when the `Class.RemoteFunction` is invoked with
+      `Class.RemoteFunction:InvokeServer()|InvokeServer()`. When the bound
+      function returns, the returned values are sent back to the calling client.
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on
+      `Class.RemoteFunction.OnServerInvoke|OnServerInvoke`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` associated with the client that the
+          `Class.RemoteFunction:InvokeServer()|InvokeServer()` call originates
+          from.
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          The parameters sent through
+          `Class.RemoteFunction:InvokeServer()|InvokeServer()`.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned by the callback function.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

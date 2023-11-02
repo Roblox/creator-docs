@@ -215,7 +215,7 @@ When your experience triggers two types of alerts at the same time, the dashboar
 
 Currently, the system has four built-in alerts for memory usage and API requests.  If your experience exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance. All notification emails share the same format as the following example:
 
-<img src="../../assets/memory-stores/alert-email.png" width="100%" />
+<img src="../../assets/data/memory-store/Alert-Email.png" width="100%" />
 
 ### Memory Usage Alerts
 
@@ -223,10 +223,10 @@ The system sends the following memory usage alerts:
 
 - A **Warning** alert when your experience's memory usage has exceeded 70% of the total quota within the past hour.
 
-   <img src="../../assets/memory-stores/memory-usage-warning.png" width="100%" />
+   <img src="../../assets/data/memory-store/Memory-Usage-Warning.png" width="100%" />
 - A **Critical** alert when your experience exceeded the memory size quota for the past hour.
 
-   <img src="../../assets/memory-stores/memory-usage-critical.png" width="100%" />
+   <img src="../../assets/data/memory-store/Memory-Usage-Critical.png" width="100%" />
 
 These issues usually occur when you overpopulate a memory store data structure with too much data, which can consume the quota quickly even if you only send requests on a few keys. For example, if you set a long expiration time on keys or don't clean up processed data, extra data can fill up your memory quota.
 
@@ -238,12 +238,12 @@ The system sends the following API request alerts:
 
 - A **Critical** alert when the number of your memory store request failures has exceeded 20% within the past hour.
 
-   <img src="../../assets/memory-stores/request-failure-critical.png" width="100%" />
+   <img src="../../assets/data/memory-store/Request-Failure-Critical.png" width="100%" />
 - A **Critical** alert when more than 10% of your memory store requests are being throttled for the past hour.
   - This alert is based on the number of **DataStructureRequestsOverLimit** + **TotalRequestsOverLimit**, which are error responses indicating that your experience is throttled because it sends too many requests.
   - This alert isn't related to the request size, only quantity.
 
-   <img src="../../assets/memory-stores/request-throttled-critical.png" width="100%" />
+   <img src="../../assets/data/memory-store/Request-Throttled-Critical.png" width="100%" />
   
   All API requests have corresponding [response status codes](#response-status-codes), so you can view the ratio of **Success** responses to all error responses using the **Request Count by Status** chart for [troubleshooting](#troubleshooting).
   

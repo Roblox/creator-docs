@@ -1,0 +1,28 @@
+name: ModifierKey
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Shift
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Ctrl
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Alt
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Meta
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

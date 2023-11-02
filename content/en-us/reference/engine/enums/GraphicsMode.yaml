@@ -1,0 +1,48 @@
+name: GraphicsMode
+type: enum
+summary: |
+  Used to set the graphics API that Roblox uses to render the game.
+description: |
+  Used to set the graphics API that Roblox uses to render the game.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      Roblox will automatically decide what graphics mode to use, depending on
+      what best suits your device's specifications.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Direct3D11
+    summary: |
+      Direct3D Version 11 (Microsoft).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: OpenGL
+    summary: |
+      OpenGL (Khronos Group).
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Metal
+    summary: |
+      Metal (Apple).
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Vulkan
+    summary: |
+      Vulkan (Khronos Group).
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: NoGraphics
+    summary: |
+      Game will not be rendered, and instead a _Diagnostics_ window is rendered
+      on screen.
+    value: 9
+    tags: []
+    deprecation_message: ''

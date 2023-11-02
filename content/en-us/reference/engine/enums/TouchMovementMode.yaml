@@ -1,0 +1,47 @@
+name: TouchMovementMode
+type: enum
+summary: |
+  The movement mode used by a client with a TouchEnabled device.
+description: |
+  The TouchMovementMode Enum is used to change the movement controller on Roblox
+  Mobile.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default movement controller.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick
+    summary: |
+      Change the movement controller to the classic thumbstick.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: DPad
+    summary: |
+      Change the movement controller to the DPad.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Thumbpad
+    summary: |
+      Change the movement controller to the thumbpad.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: ClickToMove
+    summary: |
+      Change the movement controller to click to move.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: DynamicThumbstick
+    summary: |
+      Change the movement controller to the dynamic thumbstick.
+    value: 5
+    tags: []
+    deprecation_message: ''

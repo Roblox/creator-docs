@@ -1,0 +1,51 @@
+name: PackagePermission
+type: enum
+summary: |
+  Indicates the current user's or group roleset's permission to the package.
+description: |
+  The `Enum.PackagePermission` indicates the current user's or group roleset's
+  permission to the package.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      Permission data is not available for the current user or group roleset.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: NoAccess
+    summary: |
+      The current user or group roleset doesn't have access.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Revoked
+    summary: |
+      The current user's or group roleset's permission is revoked.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: UseView
+    summary: |
+      The current user or group roleset can download a copy of the package from
+      Roblox.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Edit
+    summary: |
+      The current user or group roleset can download a copy of the package from
+      Roblox and publish package changes to Roblox.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Own
+    summary: |
+      The current user or group roleset can download a copy of the page from
+      Roblox, publish package changes to Roblox, and manage who has access to
+      the package.
+    value: 5
+    tags: []
+    deprecation_message: ''

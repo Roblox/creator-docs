@@ -1,0 +1,20 @@
+name: StandardPages
+type: class
+category: Data
+memory_category: Instances
+summary: ''
+description: |
+  A generic version of the Pages class, which may contain variable data,
+  depending on what method it was returned from. See the `Class.Pages` class for
+  more information.
+code_samples:
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

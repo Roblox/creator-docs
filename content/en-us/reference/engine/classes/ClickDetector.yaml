@@ -1,0 +1,233 @@
+name: ClickDetector
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  An object that provides user input on in-experience `Class.BasePart|BaseParts`
+  and `Class.Model|Models`.
+description: |
+  **ClickDetector** allows `Class.Script|Scripts` and
+  `Class.LocalScript|LocalScripts` to receive pointer input on 3D objects
+  through their `Class.ClickDetector.MouseClick|MouseClick` event. They work
+  when parented to `Class.BasePart`, `Class.Model`, or `Class.Folder` objects.
+  They detect basic mouse events: enter, leave, left click and right click.
+  Touch input on `Class.UserInputService.TouchEnabled|TouchEnabled` devices also
+  fires click events.
+
+  The default control scripts bind `Enum.KeyCode|ButtonR2` to interact with
+  `Class.ClickDetector|ClickDetectors` using
+  `Class.ContextActionService:BindActivate()`, which can also be used to
+  override this. When using gamepads, the center dot triggers
+  `Class.ClickDetector.MouseHoverEnter|MouseHoverEnter` and
+  `Class.ClickDetector.MouseHoverLeave|MouseHoverLeave`. The bound activation
+  button fires `Class.ClickDetector.MouseClick|MouseClick`.
+
+  `Class.ClickDetector.MaxActivationDistance|MaxActivationDistance` can be used
+  to limit the distance a player may be from a click detector before it is no
+  longer clickable.
+
+  `Class.ClickDetector` events fire on both the client and the server. Since a
+  `Class.LocalScript` will only run if it descends from a `Class.Player` or
+  player `Class.Player.Character|Character`, it's usually not useful to put a
+  `Class.LocalScript` inside a `Class.ClickDetector`, since the script won't run
+  or the object won't be clickable. If you need a `Class.LocalScript` to detect
+  `Class.ClickDetector` events, `Class.StarterPlayerScripts` may be a better
+  place instead.
+
+  #### Input Priority
+
+  If multiple `Class.ClickDetector|ClickDetectors` may detect user input, only
+  the deepest will fire events. If two `Class.ClickDetector|ClickDetectors` are
+  siblings, the first will take priority.
+
+  If an action bound with `Class.ContextActionService` uses the same input as a
+  `Class.ClickDetector`, the action bound with `Class.ContextActionService` will
+  take priority over the click detector's events.
+
+  `Class.UserInputService.InputBegan` will fire before `Class.ClickDetector`
+  events.
+code_samples:
+  - ClickDetector-Example
+  - Part-Anchored-Toggle
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: ClickDetector.CursorIcon
+    summary: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.ClickDetector` or `Class.DragDetector`.
+    description: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.ClickDetector` or `Class.DragDetector`. If this property is
+      left blank, the detector will use the default icon.
+
+      To change the cursor icon, set this property to the asset ID of the image
+      you'd like to use.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ClickDetector.MaxActivationDistance
+    summary: |
+      Maximum distance between a character and the `Class.ClickDetector` or
+      `Class.DragDetector` for the player to be able to interact with it.
+    description: |
+      This property controls the maximum distance, in studs, between a
+      `Class.Player.Character|Character` and the `Class.ClickDetector` or
+      `Class.DragDetector` for the player to be able to interact with it. For
+      instance, a character within 10 studs of a `Class.ClickDetector` or
+      `Class.DragDetector` with a max activation distance of 5 would not be able
+      to use the detector because they are out of range.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: ClickDetector.MouseClick
+    summary: |
+      Fires when a player interacts with the parent of a `Class.ClickDetector`
+      or `Class.DragDetector`.
+    description: |
+      This event fires from either a `Class.Script` or `Class.LocalScript` when
+      a player interacts with a `Class.ClickDetector` or `Class.DragDetector`
+      via the following inputs:
+
+      - On platforms with a mouse, when the player left mouse clicks.
+      - On `Class.UserInputService.TouchEnabled|TouchEnabled` platforms, when
+        the player taps.
+      - On `Class.UserInputService.GamepadEnabled|GamepadEnabled` platforms,
+        when the center dot is over the same model and the **A** button is
+        pressed and released.
+
+      Note that the player's `Class.Player.Character|Character` must be within
+      the `Class.ClickDetector.MaxActivationDistance|MaxActivationDistance` of
+      the detector.
+    code_samples:
+    parameters:
+      - name: playerWhoClicked
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who clicked on the parent of a
+          `Class.ClickDetector` or `Class.DragDetector`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ClickDetector.MouseHoverEnter
+    summary: |
+      Fires when the parent of a `Class.ClickDetector` or `Class.DragDetector`
+      is hovered over by a player.
+    description: |
+      This event fires from either a `Class.Script` or `Class.LocalScript` when
+      the parent of a `Class.ClickDetector` or `Class.DragDetector` is hovered
+      over by a player. This does not entail explicit interaction with the
+      detector, for which you can listen to either
+      `Class.ClickDetector.MouseClick|MouseClick` and
+      `Class.ClickDetector.RightMouseClick|RightMouseClick` events.
+
+      Due to the nature of user input, you should not depend on all
+      `Class.ClickDetector.MouseHoverEnter|MouseHoverEnter` events firing a
+      corresponding `Class.ClickDetector.MouseHoverLeave|MouseHoverLeave` event.
+    code_samples:
+      - ClickDetector-MouseHoverLeave1
+    parameters:
+      - name: playerWhoHovered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who started hovering over the parent of a
+          `Class.ClickDetector` or `Class.DragDetector`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ClickDetector.MouseHoverLeave
+    summary: |
+      Fires when a player's cursor hovers off the parent of a
+      `Class.ClickDetector` or `Class.DragDetector`.
+    description: |
+      This event fires from either a `Class.Script` or `Class.LocalScript` when
+      a player's cursor hovers off the parent of a `Class.ClickDetector` or
+      `Class.DragDetector`. This does not entail explicit interaction with the
+      detector, for which you can listen to either
+      `Class.ClickDetector.MouseClick|MouseClick` and
+      `Class.ClickDetector.RightMouseClick|RightMouseClick` events.
+
+      Due to the nature of user input, you should not depend on all
+      `Class.ClickDetector.MouseHoverLeave|MouseHoverLeave` events firing after
+      a corresponding `Class.ClickDetector.MouseHoverEnter|MouseHoverEnter`
+      event.
+    code_samples:
+      - ClickDetector-MouseHoverLeave1
+    parameters:
+      - name: playerWhoHovered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` whose cursor hovered off the parent of a
+          `Class.ClickDetector` or `Class.DragDetector`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ClickDetector.RightMouseClick
+    summary: |
+      Fires when a player right clicks their mouse cursor on a
+      `Class.ClickDetector` or `Class.DragDetector`.
+    description: |
+      This event fires from either a `Class.Script` or `Class.LocalScript` when
+      a player right clicks their mouse cursor on a `Class.ClickDetector` or
+      `Class.DragDetector`. Note that the player's
+      `Class.Player.Character|Character` must be within the
+      `Class.ClickDetector.MaxActivationDistance|MaxActivationDistance` of the
+      detector.
+    code_samples:
+    parameters:
+      - name: playerWhoClicked
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who right clicked their mouse cursor on the parent
+          of a `Class.ClickDetector` or `Class.DragDetector`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ClickDetector.mouseClick
+    summary: |
+      Deprecated in favor of `Class.ClickDetector.MouseClick`.
+    description: ''
+    code_samples:
+    parameters:
+      - name: playerWhoClicked
+        type: Player
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.ClickDetector.MouseClick`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

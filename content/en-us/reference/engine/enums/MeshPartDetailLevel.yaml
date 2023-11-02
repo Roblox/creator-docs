@@ -1,0 +1,47 @@
+name: MeshPartDetailLevel
+type: enum
+summary: |
+  The level of detail of `MeshParts` displayed in Studio.
+description: |
+  The level of detail of `MeshParts` displayed in Studio. Used to visually
+  verify the quality of MeshParts at lower level of detail at close range.
+  Level01 being the highest detail and Level04 being the lowest detail.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: DistanceBased
+    value: 0
+    summary: |
+      Select level of detail based on distance (default behavior as in game).
+    tags: []
+    deprecation_message: ''
+  - name: Level00
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Level01
+    value: 2
+    summary: |
+      Highest level of detail.
+    tags: []
+    deprecation_message: ''
+  - name: Level02
+    value: 3
+    summary: |
+      Second highest level of detail.
+    tags: []
+    deprecation_message: ''
+  - name: Level03
+    value: 4
+    summary: |
+      Third highest level of detail.
+    tags: []
+    deprecation_message: ''
+  - name: Level04
+    value: 5
+    summary: |
+      Lowest level of detail.
+    tags: []
+    deprecation_message: ''

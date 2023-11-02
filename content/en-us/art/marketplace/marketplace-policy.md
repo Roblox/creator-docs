@@ -49,7 +49,8 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 left leg
 - Heads
   - Head (includes baked-in eyes, nose, and mouth, if applicable)
-    - All heads should have some movement capability enabled by [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).
+    - All heads must include the 17 minimum [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).
+    - It's recommended to include more poses to increase facial animation quality and fidelity.
   - Eyebrows (optional)
   - Eyelashes (optional)
 

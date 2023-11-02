@@ -1,0 +1,37 @@
+name: BundleType
+type: enum
+summary: |
+  The type of a bundle of assets.
+description: |
+  The type of a bundle of assets.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: BodyParts
+    value: 1
+    summary: |
+      A bundle of body parts and accessories.
+    tags: []
+    deprecation_message: ''
+  - name: Animations
+    value: 2
+    summary: |
+      A bundle of just animations.
+    tags: []
+    deprecation_message: ''
+  - name: Shoes
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DynamicHead
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DynamicHeadAvatar
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,207 @@
+name: RopeConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Simulates rope dynamics, preventing two attachments from separating further
+  than a defined length.
+description: |
+  A **RopeConstraint** prevents two attachments from separating further than a
+  defined `Class.RopeConstraint.Length|Length`. The attachments can move closer
+  together than this length and both can freely rotate. This constraint can also
+  be powered to behave as a motorized winch.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Winch
+
+  If a rope's `Class.RopeConstraint.WinchEnabled|WinchEnabled` property is
+  enabled, it attempts to translate the attachments to a set separation
+  specified by `Class.RopeConstraint.WinchTarget|WinchTarget`, effectively the
+  target length of the rope in studs. This translation is controlled by
+  `Class.RopeConstraint.WinchSpeed|WinchSpeed`,
+  `Class.RopeConstraint.WinchResponsiveness|WinchResponsiveness`, and
+  `Class.RopeConstraint.WinchForce|WinchForce`.
+
+  Note that `Class.RopeConstraint.WinchSpeed|WinchSpeed` must be a **positive**
+  value, used to either contract or extend the rope length to
+  `Class.RopeConstraint.WinchTarget|WinchTarget`. Setting a negative speed will
+  revert to 0, not reverse the winch servo direction.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: RopeConstraint.CurrentDistance
+    summary: |
+      The current distance between the constraint's
+      `Class.Attachment|Attachments`.
+    description: |
+      The current distance between the constraint's
+      `Class.Attachment|Attachments`.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+  - name: RopeConstraint.Length
+    summary: |
+      The maximum distance apart the two `Class.Attachment|Attachments` can be.
+    description: |
+      The maximum distance apart the two `Class.Attachment|Attachments` can be.
+      Measured in studs.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Rope
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.Restitution
+    summary: |
+      Elasticity of the `Class.Attachment|Attachments` connected by the
+      constraint when reaching the maximum defined
+      `Class.RopeConstraint.Length|Length`. Constrained between 0 and 1.
+    description: |
+      Elasticity of the `Class.Attachment|Attachments` connected by the
+      constraint when reaching the maximum defined
+      `Class.RopeConstraint.Length|Length`. Constrained between 0 and 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Rope
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.Thickness
+    summary: |
+      The visualized thickness of the `Class.RopeConstraint`.
+    description: |
+      The visualized thickness of the `Class.RopeConstraint`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.WinchEnabled
+    summary: |
+      Enables the winch motor.
+    description: |
+      Enables the winch motor which has the effect or reeling in/out the length
+      of the rope to `Class.RopeConstraint.WinchTarget|WinchTarget`.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Rope
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.WinchForce
+    summary: |
+      The maximum force that the winch motor can apply.
+    description: |
+      The maximum force that the winch motor can apply.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Winch
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.WinchResponsiveness
+    summary: |
+      The sharpness of the winch motor in reaching the
+      `Class.RopeConstraint.WinchTarget|WinchTarget`.
+    description: |
+      The sharpness of the winch motor in reaching the
+      `Class.RopeConstraint.WinchTarget|WinchTarget`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Winch
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.WinchSpeed
+    summary: |
+      A positive desired velocity at which the winch motor changes the rope
+      length.
+    description: |
+      A positive desired velocity at which the winch motor changes the rope
+      length.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Winch
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RopeConstraint.WinchTarget
+    summary: |
+      The target length for the winch motor.
+    description: |
+      The target length for the winch motor.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Winch
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

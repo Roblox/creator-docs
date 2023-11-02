@@ -1,0 +1,42 @@
+name: SelectionPartLasso
+type: class
+category:
+memory_category: Instances
+summary: |
+  An instance used to display a "lasso" between a `Class.Humanoid` Torso and a
+  `Class.BasePart`.
+description: |
+  An instance used to display a "lasso" between a `Class.Humanoid` Torso and a
+  `Class.BasePart`. It should be noted that the `Class.GuiBase3d.Transparency`
+  property doesn't currently work.
+code_samples:
+inherits:
+  - SelectionLasso
+tags:
+  - Deprecated
+deprecation_message: |
+  SelectionPartLasso has been deprecated. Developers are advised to use the
+  `Class.Beam` object instead.
+properties:
+  - name: SelectionPartLasso.Part
+    summary: |
+      Sets the target of the lasso object.
+    description: |
+      Sets the target of the lasso object.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: |
+      SelectionPartLasso has been deprecated. Developers are advised to use the
+      `Class.Beam` object instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

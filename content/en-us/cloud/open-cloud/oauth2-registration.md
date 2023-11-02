@@ -3,15 +3,14 @@ title: OAuth 2.0 App Registration
 description: Explains how to register an app and how the review workflow works.
 ---
 
-<Alert severity="info">
-  Currently, you can register apps for only individual accounts. Groups are not
-  supported.
-</Alert>
+Registering your OAuth 2.0 app allows it to access Roblox resources. After
+registration, Roblox assigns the app a unique client ID and secret that you can
+use to obtain authorization from users to access their Roblox information and
+resources.
 
-Registering your OAuth 2.0 app allows your app to access Roblox resources.
-When your app is registered, Roblox assigns it a unique client ID and
-secret that you can use to obtain authorization from the user to access its
-Roblox information and resources.
+<Alert severity="info">
+You can only register apps for individual accounts or groups that you own.
+</Alert>
 
 ## Registering Your App
 

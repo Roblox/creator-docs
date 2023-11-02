@@ -1,9 +1,9 @@
 ---
-title: Usage Guide for Messaging
+title: Messaging Usage Guide
 description: Explains how to use Open Cloud Messaging Service API to support cross-server messaging.
 ---
 
-[Messaging Service API](../../reference/cloud/messaging-service/v1.json) is the Open Cloud equivalent to Lua `Class.MessagingService`, which enables you to communicate across servers or client instances of your experience. As the Lua API only allows you to write and update a script manually in Studio for publishing messages, you can use the Open Cloud API to send messages to live servers from external tools to automate and improve your experience operation workflows.
+The [Messaging Service API](../../reference/cloud/messaging-service/v1.json) is the Open Cloud equivalent of the Lua `Class.MessagingService`, which enables you to communicate across servers or client instances of your experience. The Lua API only allows you to write and update a script manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your experience operation workflows.
 
 ## Usage
 
@@ -18,6 +18,14 @@ There are several helpful tools that you can build by supporting cross-server co
 <Alert severity="info">
 Currently, the API can only target live experience servers through HTTP.
 </Alert>
+
+## Limits
+
+Limit | Description
+--- | ---
+**Rate** | Roblox throttles message requests at 50 + 5<em>n</em> per minute, where <em>n</em> is the number of players in the experience. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
+**Topic size** | 80 characters
+**Message size** | 1,024 characters (1 KB)
 
 ## Setting up a Topic for Messaging
 
@@ -56,10 +64,11 @@ After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publi
 
 2. Get the **Universe ID**, the identifier of the experience in which you want to send your messages to.
 
-   1. Navigate to the [Creations](https://create.roblox.com/creations) page on the **Creator Dashboard**.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
-   1. Click the **...** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID** from the list.
-      <img src="../../assets/open-cloud/copy-universeid.png" width="60%" />
+   1. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID**.
+
+      <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
 
 3. Add the API Key in the `x-api-key` header of a `POST` request to the API like the following example:
 
