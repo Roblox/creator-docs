@@ -1,0 +1,29 @@
+name: MemStorageConnection
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: MemStorageConnection:Disconnect
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

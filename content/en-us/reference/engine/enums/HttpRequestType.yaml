@@ -1,0 +1,43 @@
+name: HttpRequestType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: MarketplaceService
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Players
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Chat
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Avatar
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: Analytics
+    summary: ''
+    value: 23
+    tags: []
+    deprecation_message: ''
+  - name: Localization
+    summary: ''
+    value: 25
+    tags: []
+    deprecation_message: ''

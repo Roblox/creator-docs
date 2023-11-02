@@ -1,0 +1,27 @@
+name: ProductLocationRestriction
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: AvatarShop
+    summary: |
+      Item is purchasable only in the Marketplace.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: AllowedGames
+    summary: |
+      Item is purchasable in the Marketplace and experiences owned by the item
+      creator.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AllGames
+    summary: |
+      (Default) Item is purchasable in the Marketplace and all experiences.
+    value: 2
+    tags: []
+    deprecation_message: ''

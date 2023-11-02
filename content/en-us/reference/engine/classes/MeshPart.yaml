@@ -1,0 +1,239 @@
+name: MeshPart
+type: class
+category: Meshes
+memory_category: PhysicsParts
+summary: |
+  A form of `Class.BasePart` that includes a physically simulated custom mesh.
+description: |
+  `Class.MeshPart` is a form of `Class.BasePart` that includes a physically
+  simulated custom mesh. Unlike with other mesh classes, such as
+  `Class.SpecialMesh` and `Class.BlockMesh`, they are not parented to a
+  `Class.BasePart` but rather behave as a `Class.BasePart` in their own right.
+
+  The mesh and texture of a `Class.MeshPart` are determined by the
+  `Class.MeshPart.MeshId|MeshId` and `Class.MeshPart.TextureID|TextureID`
+  properties. For more information, see [Meshes](../../../parts/meshes.md).
+code_samples:
+inherits:
+  - TriangleMeshPart
+tags: []
+deprecation_message: ''
+properties:
+  - name: MeshPart.DoubleSided
+    summary: |
+      Render both faces of polygons in the mesh.
+    description: |
+      This property determines whether to render both faces or polygons in the
+      mesh. It is only changeable in Studio. This is useful for meshes that are
+      typically modeled as cards such as a leaf, hair and cloth.
+
+      Example: The tree leaves are modeled with single sided cards.
+
+      ![Leaves as cards](/assets/legacy/MeshPartsAsCards.png)
+
+      With MeshPart.DoubleSided disabled some leaves are missing since they are
+      back facing the camera.
+
+      ![DoubleSided property disabled](/assets/legacy/DoubleSidedOff.png)
+
+      With MeshPart.DoubleSided enabled, both faces of the leaves are rendered.
+
+      ![DoubleSided property enabled](/assets/legacy/DoubleSidedOn.png)
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.HasJointOffset
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.HasSkinnedMesh
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.JointOffset
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.MeshId
+    summary: |
+      The **MeshId** is the content ID of the mesh that is to be displayed on
+      the `Class.MeshPart`.
+    description: |
+      The **MeshId** is the content ID of the mesh that is to be displayed on
+      the `Class.MeshPart`.
+
+      Note that this property currently cannot be changed by scripts as the
+      collision model of the mesh cannot be recomputed during runtime.
+      Developers should not rely on this behavior as it may change in the
+      future. Those looking for a custom mesh object that can be updated during
+      runtime should use `Class.SpecialMesh`.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.RenderFidelity
+    summary: |
+      The level of detail used to render the `Class.MeshPart`.
+    description: |
+      This property determines the level of detail that the `Class.MeshPart`
+      will be shown in. It can be set to the possible values of the
+      `Enum.RenderFidelity` enum.
+
+      By default, `Class.MeshPart|MeshParts` will always be shown in **precise
+      fidelity**, no matter how far they are from the camera. This improves
+      their appearance when viewed from any distance, but if a place has a large
+      number of detailed mesh parts, it may reduce overall performance.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Distance From Camera</th>
+                  <th>Render Fidelity</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Less than 250 studs</td>
+                  <td>Highest</td>
+              </tr>
+              <tr>
+                  <td>250-500 studs</td>
+                  <td>Medium</td>
+              </tr>
+              <tr>
+                  <td>500 or more studs</td>
+                  <td>Lowest</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples:
+    type: RenderFidelity
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: MeshPart.TextureID
+    summary: |
+      The texture applied to the `Class.MeshPart`.
+    description: |
+      The texture applied to the `Class.MeshPart`. When this property is set to
+      an empty string, no texture will be applied to the mesh.
+
+      ```
+      MeshPart.TextureID = "" -- no texture
+      ```
+
+      Note, although the `Class.MeshPart.MeshId` property cannot be changed
+      during runtime, the texture can.
+
+      #### How can I change the texture of a mesh?
+
+      Using the TextureId property, the texture of a mesh can be changed without
+      having to reupload the mesh. To do this, a new image will need to be
+      uploaded to Roblox with the desired texture. The original texture image
+      file can be obtained by exporting the mesh using the 'Export Selection'
+      option in Roblox Studio. The image file will be saved alongside the
+      exported .obj file.
+
+      The new texture can then be re-uploaded to Roblox as a Decal and its
+      content ID can be applied to the mesh using the TextureId property.
+
+      #### How can I make a textured mesh?
+
+      A mesh can only be textured if the mesh has been UV mapped. UV mapping
+      refers to the practice of projecting a texture map onto a mesh. This
+      cannot be done using Roblox Studio and has to be done using an external 3D
+      modelling application such as [Blender][1].
+
+      [1]: https://www.blender.org/
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: MeshPart:ApplyMesh
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: meshPart
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

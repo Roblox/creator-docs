@@ -1,0 +1,77 @@
+name: GearType
+type: enum
+summary: ''
+description: |
+  The GearType Enum is used as an argument in
+  `Class.DataModel:IsGearTypeAllowed()`. Gear may have more than one
+  type/attribute.
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: |
+  This enum is deprecated because it's used by deprecated properties. Don't use
+  it.
+items:
+  - name: MeleeWeapons
+    value: 0
+    summary: |
+      Gear with the 'Melee' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: RangedWeapons
+    value: 1
+    summary: |
+      Gear with the 'Ranged' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Explosives
+    value: 2
+    summary: |
+      Gear with the 'Explosive' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: PowerUps
+    value: 3
+    summary: |
+      Gear with the 'Power Up' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: NavigationEnhancers
+    value: 4
+    summary: |
+      Gear with the 'Navigation' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: MusicalInstruments
+    value: 5
+    summary: |
+      Gear with the 'Musical' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: SocialItems
+    value: 6
+    summary: |
+      Gear with the 'Social' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: BuildingTools
+    value: 7
+    summary: |
+      Gear with the 'Building' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Transport
+    value: 8
+    summary: |
+      Gear with the 'Transport' attribute.
+    tags:
+      - Deprecated
+    deprecation_message: ''

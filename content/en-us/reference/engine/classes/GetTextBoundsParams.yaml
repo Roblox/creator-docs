@@ -1,0 +1,95 @@
+name: GetTextBoundsParams
+type: class
+category:
+memory_category: Instances
+summary: |
+  Use with `Class.TextService:GetTextBoundsAsync()` to measure the size of text.
+description: |
+  Pass this instance to `Class.TextService:GetTextBoundsAsync()` to measure the
+  size of text.
+code_samples:
+  - TextService-GetTextBoundsAsync-1
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: GetTextBoundsParams.Font
+    summary: |
+      The `Datatype.Font` of the text being measured.
+    description: |
+      The `Datatype.Font` of the text being measured. Corresponds to the
+      `Class.TextLabel.FontFace` property on text objects.
+
+      Not to be confused with `Enum.Font`. This is an object that you can create
+      using `Datatype.Font.new()`.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GetTextBoundsParams.Size
+    summary: |
+      The size of the text being measured.
+    description: |
+      The size of the text that is being measured. Corresponds to the
+      `Class.TextLabel.TextSize` property.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GetTextBoundsParams.Text
+    summary: |
+      The text being measured.
+    description: |
+      The text being measured.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GetTextBoundsParams.Width
+    summary: |
+      The width of the container for line breaking.
+    description: |
+      The width of the container for line breaking. By default, the value is 0,
+      which means no line breaking will be performed. You can set it to the
+      width of the container that you'll be putting the text into.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

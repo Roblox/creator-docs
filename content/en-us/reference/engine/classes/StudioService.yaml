@@ -1,0 +1,436 @@
+name: StudioService
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  Provides access to configuration of Roblox Studio and allows importing files
+  from the user's file system.
+description: |
+  StudioService provides access to configuration of Roblox Studio, allows
+  importing files from the user's file system, and other miscellaneous
+  information. It is intended to be used by `Class.Plugin`s in order to provide
+  a consistent user experience.
+
+  - Plugins that allow the user to move objects may find
+    `Class.StudioService.GridSize|GridSize`,
+    `Class.StudioService.RotateIncrement|RotateIncrement` and
+    `Class.StudioService.UseLocalSpace|UseLocalSpace` useful.
+  - Plugins that require the user to import files should use
+    `Class.StudioService:PromptImportFile()|PromptImportFile` or
+    `Class.StudioService:PromptImportFiles()|PromptImportFiles` in order to
+    receive `Class.File` objects.
+  - Plugins that display icons of Instance classes can use
+    `Class.StudioService:GetClassIcon()|GetClassIcon`.
+  - Plugins that care about which script is currently being edited (if any) can
+    read this from `Class.StudioService.ActiveScript|ActiveScript`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: StudioService.ActiveScript
+    summary: |
+      Reflects the `Class.LuaSourceContainer` currently being edited (if any).
+    description: |
+      **ActiveScript** refers to the `Class.LuaSourceContainer` currently being
+      edited by the user. If the user is not editing a script, this will be
+      `nil`. Below is an example that shows how you can use this property to
+      measure for how long a script was active.
+
+      ```lua
+      local startTime = os.time()
+      local activeScript
+      local function onActiveScriptChanged(newActiveScript)
+      	if newActiveScript ~= activeScript then
+      		local deltaTime = os.time() - startTime
+      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, math.floor(deltaTime / 60), deltaTime % 60))
+      	end
+      	startTime = os.time()
+      	activeScript = newActiveScript
+      end
+      game:GetService("StudioService"):GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
+      ```
+    code_samples:
+    type: Instance
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.DraggerSolveConstraints
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.DrawConstraintsOnTop
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.GridSize
+    summary: |
+      Determines the distance in studs by which studio's drag and move tools
+      move objects each tick.
+    description: |
+      **GridSize** determines the distance in studs by which studio's drag and
+      move tools move objects each tick. This is set by the user Model tab under
+      the "Snap to Grid" section.
+
+      ![Studio "snap to grid" UI](/assets/legacy/SnapToGrid.jpg)
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.RotateIncrement
+    summary: |
+      Determines the degrees by which studio's rotation tool will rotate
+      selected objects each tick.
+    description: |
+      **RotateIncrement** determines the angle in degrees by which studio's
+      rotation tool will rotate selected objects each tick. This is set by the
+      user Model tab under the "Snap to Grid" section.
+
+      ![Studio "snap to grid" UI](/assets/legacy/SnapToGrid.jpg)
+
+      The table below shows how the rotation handles appear while dragging.
+      Notice how lower values render more axles. In these images,
+      `Class.StudioService.UseLocalSpace|UseLocalSpace` is `true`.
+
+      <table>
+      <thead>
+      <tr>
+        <td>RotateIncrement</td>
+        <td>Image</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>22.5</code></td>
+        <td><img src="/assets/legacy/StudioService.RotateIncrement.22.5.jpg" /></td>
+      </tr>
+      <tr>
+        <td><code>90.0</code></td>
+        <td><img src="/assets/legacy/StudioService.RotateIncrement.90.jpg" /></td>
+      </tr>
+      </tbody>
+      </table>
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.ShowConstraintDetails
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.StudioLocaleId
+    summary: |
+      The locale currently in-use by Studio, e.g. `en_US`.
+    description: |
+      The **StudioLocaleId** property contains the locale currently in-use by
+      Studio, e.g. `en_US`. It is useful when localizing plugins.
+
+      Below is a trivial example of localization based on the value returned by
+      this function.
+
+      ```lua
+      local locale = game:GetService("StudioService").StudioLocaleId
+      if locale == "en_US" then
+         print("Howdy, ya'll")
+      elseif locale == "en_GB" then
+         print("'Ello, gov'na")
+      elseif locale:sub(1, 2) == "en" then
+         print("Hello")
+      elseif locale == "fr_FR" then
+         print("Bonjour")
+      end
+      ```
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StudioService.UseLocalSpace
+    summary: |
+      Determines whether studio tools will use local space of an object or
+      global space.
+    description: |
+      **UseLocalSpace** determines whether the studio movement/rotation tools
+      will manipulate a part's `Class.BasePart.CFrame|CFrame` using the local
+      space of an object or global space. By default, this setting is toggled
+      with <kbd>Ctrl-L</kbd>. Plugins can read from this property if they
+      implement their own object movement tools.
+
+      The table below shows how movement/rotation tools change when working with
+      parts. Notice how when UseLocalSpace is false, the movement tools align
+      with the global axes, and when true the movement tools align with the
+      part's local axes.
+
+      <table>
+      <thead>
+      <tr>
+      <td>UseLocalSpace</td>
+      <td>Movement</td>
+      <td>Rotation</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><code>true</code></td>
+        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.jpg" /></td>
+        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.rotation.jpg" /></td>
+      </tr>
+      <tr>
+      <td><code>false</code></td>
+        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.jpg" /></td>
+        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.rotation.jpg" /></td>
+      </tr>
+      </tbody>
+      </table>
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: StudioService:GetClassIcon
+    summary: |
+      Provides a dictionary that allows the display of a class' Explorer window
+      icon.
+    description: |
+      **GetClassIcon** provides a dictionary that allows the display of a class'
+      Explorer window icon, e.g. calling this function with "Part" returns
+      property values that display the part icon from the Explorer window.
+
+      Below is a literal table representation of the value returned when this
+      function is called with `"Part"`.
+
+      ```
+      {
+      	Image = "rbxasset://textures/ClassImages.png",
+      	ImageRectOffset = Vector2.new(16, 0),
+      	ImageRectSize = Vector2.new(16, 16)
+      }
+      ```
+
+      The utility function below may prove useful when displaying class icons:
+
+      ```lua
+      local StudioService = game:GetService("StudioService")
+      local imageLabel = script.Parent
+      local function displayClassIcon(image, className)
+      	for k, v in pairs(StudioService:GetClassIcon(className)) do
+      		image[k] = v -- Set property
+      	end
+      end
+      displayClassIcon(imageLabel, "Part")
+      ```
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: StudioService:GetUserId
+    summary: |
+      Returns the studio user's userId if they're logged in, otherwise
+      returns 0.
+    description: |
+      Returns the studio user's userId if they're logged in, otherwise
+      returns 0.
+    code_samples:
+      - studioservice-getuserid
+    parameters: []
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: StudioService:GizmoRaycast
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: origin
+        type: Vector3
+        default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+      - name: raycastParams
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: StudioService:PromptImportFile
+    summary: |
+      Prompts the current Studio user to select one file to add as a
+      `Class.File`.
+    description: |
+      This function prompts the current Studio user to select one file, which
+      will then be loaded as a `Class.File`.
+
+      See also:
+
+      - `Class.StudioService:PromptImportFiles()`, the same function but for
+        loading a list of files instead of a single file
+    code_samples:
+    parameters:
+      - name: fileTypeFilter
+        type: Array
+        default: '{}'
+        summary: |
+          A list of file types that the user is allowed to select. File types
+          are formatted without a period. For example, {"jpg", "png"} would
+          allow only a JPG or PNG file to be selected. If no filter is provided,
+          the filter is nil and allows the user to select any file type.
+    returns:
+      - type: Instance
+        summary: |
+          The imported `Class.File`. Returns nil if no files were selected, or
+          if the selected file was too large (FileSize greater than 100
+          megabytes).
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: StudioService:PromptImportFiles
+    summary: |
+      Prompts the current Studio user to select files to add as
+      `Class.File|Files`.
+    description: |
+      This function prompts the current Studio user to select one or more files,
+      which will then be loaded as `Class.File|Files`.
+
+      Throws an error if the fileTypeFilter was an empty list.
+
+      See also:
+
+      - `Class.StudioService:PromptImportFile()`, the same function but for
+        loading a single file instead of a list of files
+    code_samples:
+    parameters:
+      - name: fileTypeFilter
+        type: Array
+        default: '{}'
+        summary: |
+          A list of file types that the user is allowed to select. File types
+          are formatted without a period. For example, {"jpg", "png"} would
+          allow only JPG and PNG files to be selected. If no filter is provided,
+          the filter is nil and allows the user to select any file type.
+    returns:
+      - type: Objects
+        summary: |
+          The imported `Class.File|Files`. Returns an empty list if no files
+          were selected. Returns nil if the user selected one or more files that
+          were too large (FileSize greater than 100 megabytes).
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

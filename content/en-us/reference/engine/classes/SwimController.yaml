@@ -1,0 +1,108 @@
+name: SwimController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - ControllerBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: SwimController.AccelerationTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SwimController.PitchMaxTorque
+    summary: |
+      The maximum torque used to rotate to the desired pitch.
+    description: |
+      The maximum torque used to rotate on the local **X** axis to the desired
+      pitch orientation. Has no effect if `Class.ControllerBase.RigidityEnabled`
+      is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SwimController.PitchSpeedFactor
+    summary: |
+      Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
+      maximum angular velocity for pitch.
+    description: |
+      Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
+      maximum angular velocity rotating on the local **X** axis. Has no effect
+      if `Class.ControllerBase.RigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SwimController.RollMaxTorque
+    summary: |
+      The maximum torque applied to rotate to the desired roll.
+    description: |
+      The maximum torque applied to rotate on the local **Z** axis to the
+      desired roll orientation. Has no effect if
+      `Class.ControllerBase.RigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SwimController.RollSpeedFactor
+    summary: |
+      Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
+      maximum angular velocity for roll.
+    description: |
+      Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
+      maximum angular velocity rotating on the local **Z** axis. Has no effect
+      if `Class.ControllerBase.RigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

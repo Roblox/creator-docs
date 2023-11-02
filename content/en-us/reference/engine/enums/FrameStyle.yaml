@@ -1,0 +1,75 @@
+name: FrameStyle
+type: enum
+summary: ''
+description: |
+  The FrameStyle Enum is used to set the style of a `Class.Frame`. Below is a
+  comparison of all seven frame styles. The TextLabels are positioned at the
+  top-left corner of the frame (at the `Datatype.UDim2` value of
+  `{{0, 0}, {0, 0}}`).
+
+  ## Example
+
+  Below is a screenshot containing all seven frame styles.
+
+  ![The seven frame styles](/assets/legacy/FrameStyle.png)
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Custom
+    summary: |
+      Uses the frame's `Class.GuiObject.BackgroundColor3`,
+      `Class.GuiObject.BorderColor3`, and
+      `Class.GuiObject.BackgroundTransparency` properties to determine the
+      frame's appearance. It has no padding; elements with the position
+      `{{0, 0}, {0, 0}}` will appear at the frame's top-left corner.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ChatBlue
+    summary: |
+      Causes the frame to appear similar to a `Class.Dialog` with its
+      `Class.Dialog.Tone` property set to `Enum.DialogTone` neutral. This has a
+      padding of fifteen pixels on all sides.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: RobloxSquare
+    summary: |
+      Causes the frame to appear as a translucent dark gray rectangle with a
+      padding of five pixels on all sides.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RobloxRound
+    summary: |
+      Causes the frame to appear as a translucent dark gray rectangle with
+      rounded edges. Like "RobloxSquare" this has a padding of five pixels on
+      all sides.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: ChatGreen
+    summary: |
+      Causes the frame to appear similar to a Dialog with its Tone property set
+      to "Friendly." Like "ChatBlue" this has a padding of fifteen pixels on all
+      sides.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ChatRed
+    summary: |
+      Causes the frame to appear similar to a Dialog with its Tone property set
+      to "Enemy." Like "ChatBlue" and "ChatGreen" this has a padding of fifteen
+      pixels on all sides.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: DropShadow
+    summary: |
+      Causes the frame to appear as a translucent gray rectangle with blurred
+      sides. The blur is more apparent on the bottom edge. It has a padding of
+      eight pixels on all sides.
+    value: 6
+    tags: []
+    deprecation_message: ''

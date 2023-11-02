@@ -1,0 +1,54 @@
+name: Part
+type: class
+category: Building
+memory_category: PhysicsParts
+summary: |
+  A common type of `Class.BasePart` that comes in different primitive shapes.
+description: |
+  The Part object is a type of `Class.BasePart`. It comes in five different
+  primitive shapes: Ball, Block, Cylinder, Wedge, and CornerWedge.
+code_samples:
+  - using-a-script-to-create-a-part
+inherits:
+  - FormFactorPart
+tags: []
+deprecation_message: ''
+properties:
+  - name: Part.Shape
+    summary: |
+      Sets the overall shape of the object.
+    description: |
+      The Shape property sets the overall shape of the object to one of a
+      predetermined list of built-in shapes.
+
+      The `Enum.PartType` enum controls the shape value, and has five possible
+      shapes:
+
+      | Shape/Value | Description                             |
+      | ----------- | --------------------------------------- |
+      | Ball        | A spherical shape, like a basketball.   |
+      | Cylinder    | A rod-like shape, like a tin can.       |
+      | Block       | The default, brick shape.               |
+      | Wedge       | A wedge shape with a slope on one side. |
+      | CornerWedge | A wedge shape with slopes on two sides. |
+
+      Note that `Class.MeshPart` and
+      [solid modeling](../../../parts/solid-modeling.md) can be used to obtain
+      completely custom part shapes.
+    code_samples:
+      - using-a-script-to-create-a-part
+    type: PartType
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Part
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

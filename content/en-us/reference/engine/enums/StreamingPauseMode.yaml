@@ -1,0 +1,53 @@
+name: StreamingPauseMode
+type: enum
+summary: |
+  Determines how a Players client should handle not having enough content
+  streamed in to continue playing properly.
+description: |
+  The StreamingPauseMode enum is used to control
+  `Class.Workspace.StreamingPauseMode` behavior.
+
+  Default behavior is currently equivalent to disabled, but may change in the
+  future.
+
+  The disabled mode indicates that gameplay continues unchanged even if player
+  does not have the minimum streaming radius available.
+
+  In ClientPhysicsPause mode client-side physics is paused when the player
+  doesn't have the minimum radius present, and resumed when the minimum radius
+  is available.
+
+  See also:
+
+  - `Class.Workspace.StreamingEnabled`, controls whether network streaming is
+    enabled for the place or not
+  - `Class.Workspace.StreamingMinRadius`, the minimum distance that parts will
+    be streamed to players with high priority
+  - `Class.Workspace.StreamingTargetRadius`, the maximum distance that parts
+    will be streamed to players
+code_samples:
+tags: []
+deprecation_message: |
+  Please use `Class.Workspace.StreamingIntegrityMode` instead.
+items:
+  - name: Default
+    value: 0
+    summary: |
+      Default behavior (currently no change to gameplay).
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Disabled
+    value: 1
+    summary: |
+      No change to gameplay due to streaming region availability.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: ClientPhysicsPause
+    value: 2
+    summary: |
+      Client owned physics is paused.
+    tags:
+      - Deprecated
+    deprecation_message: ''

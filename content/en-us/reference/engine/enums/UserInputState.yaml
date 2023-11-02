@@ -1,0 +1,80 @@
+name: UserInputState
+type: enum
+summary: |
+  The **UserInputState** enum describes the state of an input that is currently
+  or was recently performed.
+description: |
+  The **UserInputState** enum describes the state of an input that is currently
+  or was recently performed. It is used by the
+  `Class.InputObject.UserInputState` property of the same name, as well as
+  various `Class.UserInputService` and `Class.GuiObject` events.
+
+  Depending on the `Enum.UserInputType`, input may follow states differently.
+
+  - Simple button and key presses generally follow a simple **Begin** &rarr;
+    **End** flow.
+    - Gamepad trigger buttons are similar to button presses, but will use
+      **Change** as the state of the button changes.
+  - Mouse movement generally follows **Begin** (mouse-over) &rarr; **Change**
+    &rarr; **End** (mouse-leave).
+    - Touch input behaves somewhat similarly to mouse movement. **Begin** and
+      **End** occur when the user starts or ends touching the screen,
+      respectively. The same `Class.InputObject` is used for the same touch
+      point.
+  - Gamepad thumbstick controls will cause **Change** to occur each frame the
+    position changes.
+
+  ## Cancel
+
+  In the context of `Class.ContextActionService`, binding action-handling
+  functions using `Class.ContextActionService:BindAction()|BindAction` provides
+  a UserInputState to the action handler when a relevant input is performed. If
+  an in-progress input associated with a bound action is then
+  `Class.ContextActionService:UnbindAction()|unbound` or becomes relevant to a
+  different input, the **Cancel** UserInputState is passed, indicating that the
+  input is no longer relevant to the action.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Begin
+    summary: |
+      Occurs when an `Class.InputObject` starts to interact with the game. For
+      example, a mouse button down, or a key down, or when a touch begins
+      touching the screen.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Change
+    summary: |
+      Occurs each frame an `Class.InputObject` has already begun interacting
+      with the game and part of its state is changing. For example, a movement
+      of the mouse position, a gamepad thumbstick, gamepad trigger button, or
+      screen touch point.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: End
+    summary: |
+      When an `Class.InputObject` finishes interacting with the game. For
+      example, a mouse button up, or a key up, or when a touch stops touching
+      the screen.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Cancel
+    summary: |
+      A special circumstance state that indicates this input is no longer
+      relevant, particularly with `Class.ContextActionService`. For example,
+      binding two action-handling functions will cause the first to Cancel if an
+      input was already in-progress when the second was bound.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      A state that should never be seen in a game, essentially just marks the
+      end of the enum.
+    value: 4
+    tags: []
+    deprecation_message: ''

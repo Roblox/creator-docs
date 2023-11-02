@@ -1,0 +1,23 @@
+name: VoiceControlPath
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Publish
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Subscribe
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Join
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

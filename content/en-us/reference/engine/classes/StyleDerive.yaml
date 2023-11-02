@@ -1,0 +1,30 @@
+name: StyleDerive
+type: class
+category:
+memory_category: Gui
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: StyleDerive.StyleSheet
+    summary: ''
+    description: ''
+    code_samples: []
+    type: StyleSheet
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,91 @@
+name: HopperBin
+type: class
+category:
+memory_category: PhysicsParts
+summary: ''
+description: |
+  HopperBins are an outdated system for creating tools that can be used by a
+  player. In place of HopperBins, please use `Class.Tool` instead.
+
+  Historically, only HopperBins worked without a 'Handle' `Class.Part`, but this
+  is no longer the case thanks to the `Class.Tool.RequiresHandle` property of
+  Tools.
+
+  For capturing user input (from the Mouse for example), it is no longer
+  necessary to use HopperBins or Tools. Instead, please use these alternatives:
+
+  - `Class.ContextActionService`
+  - `Class.UserInputService`
+  - `Class.Player:GetMouse()`
+code_samples:
+inherits:
+  - BackpackItem
+tags:
+  - Deprecated
+deprecation_message: |
+  This deprecated class has been replaced by `Class.Tool`. Please use Tool for
+  new work instead.
+properties:
+  - name: HopperBin.Active
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: |
+      The `Class.HopperBin` object has been superseded by the `Class.Tool`
+      object which should be used for all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: HopperBin.BinType
+    summary: ''
+    description: ''
+    code_samples:
+    type: BinType
+    tags: []
+    deprecation_message: |
+      The `Class.HopperBin` object has been superseded by the `Class.Tool`
+      object which should be used for all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: HopperBin.Deselected
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: |
+      The `Class.HopperBin` object has been superseded by the `Class.Tool`
+      object which should be used for all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: HopperBin.Selected
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: mouse
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      The `Class.HopperBin` object has been superseded by the `Class.Tool`
+      object which should be used for all new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

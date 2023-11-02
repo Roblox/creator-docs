@@ -1,0 +1,148 @@
+name: Actor
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  An `Class.Actor` is a container for code that can be safely split into its own
+  thread.
+description: |
+  An `Class.Actor` is a container for code that can be safely split into its own
+  thread using `Library.task.desynchronize()`. It should also contain the
+  instances used by its scripts.
+
+  To learn more about using multiple Actors to optimize script performance, see
+  [Parallel Luau](../../../scripting/multithreading.md).
+code_samples:
+inherits:
+  - Model
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: Actor:BindToMessage
+    summary: |
+      Binds a Luau callback to a message with the specified topic.
+    description: |
+      This method is used to bind a Luau callback to a message with the
+      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      topic specified the provided callback will be called in a _serial_
+      execution context.
+
+      Multiple Luau callbacks may be bound to a single actor and even to a
+      single message topic.
+
+      Note: Only the scripts which are descendants of an Actor may bind to its
+      messages.
+
+      ```lua
+      local actor = script:GetActor()
+
+      -- Print out a message when a greeting message is sent to the Actor
+      -- this script is a descendant of.
+      local connection = actor:BindToMessage("Greeting", function(message)
+        print("Received Greeting Message:", message)
+      end)
+      ```
+    code_samples:
+    parameters:
+      - name: topic
+        type: string
+        default:
+        summary: |
+          The topic used to identify the type of message.
+      - name: function
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          This connection object may be used to disconnect the Luau callback
+          from receiving messages.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Actor:BindToMessageParallel
+    summary: |
+      Binds a Luau callback to a message with the specified topic.
+    description: |
+      This method is used to bind a Luau callback to a message with the
+      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      topic specified the provided callback will be called in a _parallel_
+      execution context.
+
+      Multiple Luau callbacks may be bound to a single actor and even to a
+      single message topic.
+
+      Note: Only the scripts which are descendants of an Actor may bind to its
+      messages.
+
+      ```lua
+      local actor = script:GetActor()
+
+      -- Print out a message when a greeting message is sent to the Actor
+      -- this script is a descendant of.
+      local connection = actor:BindToMessageParallel("Greeting", function(message)
+        print("Received Greeting Message:", message)
+      end)
+      ```
+    code_samples:
+    parameters:
+      - name: topic
+        type: string
+        default:
+        summary: |
+          The topic used to identify the type of message.
+      - name: function
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          This connection object may be used to disconnect the Luau callback
+          from receiving messages.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Actor:SendMessage
+    summary: |
+      Sends a message to an Actor.
+    description: |
+      Sends a message to an Actor. Messages are sent asynchronously, so the
+      sender will not block or yield when calling the `Actor/SendMessage`
+      method.
+
+      Since a single Actor may receive different kinds of messages, a `topic`
+      parameter is used to distinguish between various kinds of messages.
+
+      See `Actor/BindToMessage` for details on receiving a message sent using
+      `Actor/SendMessage`.
+
+      ```lua
+      -- Assume `actor` is a local variable referring to an Actor instance
+      actor:SendMessage("Greeting", "Hello World")
+      ```
+    code_samples:
+    parameters:
+      - name: topic
+        type: string
+        default:
+        summary: |
+          The topic used to identify the message being sent.
+      - name: message
+        type: Tuple
+        default:
+        summary: |
+          The contents of the message to send to the Actor.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+events: []
+callbacks: []

@@ -1,0 +1,63 @@
+name: RenderFidelity
+type: enum
+summary: |
+  Determines the level of detail that solid modeled and mesh parts will be shown
+  in.
+description: |
+  This enum determines the level of detail that solid modeled and mesh parts
+  will be shown in.
+
+  By default, solid modeled and mesh parts will always be shown in precise
+  fidelity, no matter how far they are from the game camera. This improves their
+  appearance when viewed from any distance, but if a place has a large number of
+  detailed solid modeled or mesh parts, it may reduce overall game performance.
+
+  <table>
+      <thead>
+          <tr>
+              <th>Distance From Camera</th>
+              <th>Render Fidelity</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Less than 250 studs</td>
+              <td>Highest</td>
+          </tr>
+          <tr>
+              <td>250 to 500 studs</td>
+              <td>Medium</td>
+          </tr>
+          <tr>
+              <td>500 or more studs</td>
+              <td>Lowest</td>
+          </tr>
+      </tbody>
+  </table>
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      Dynamically control a solid modeled and mesh part's level of detail
+      depending on its distance from the camera (see table above).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Precise
+    summary: |
+      Specifically set a solid modeled and mesh part's level of detail
+      regardless of its distance from the camera (lowest, medium, or highest).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Performance
+    summary: |
+      Push performance as much as possible, trying to maintain quality if
+      possible, and discarding appearance if that's necessary to reach
+      performance. This means that the performance will always be excellent, but
+      mesh visuals may be affected negatively.
+    value: 2
+    tags: []
+    deprecation_message: ''

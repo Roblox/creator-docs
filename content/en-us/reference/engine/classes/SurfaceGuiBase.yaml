@@ -1,0 +1,61 @@
+name: SurfaceGuiBase
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - LayerCollector
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: SurfaceGuiBase.Active
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGuiBase.Adornee
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGuiBase.Face
+    summary: ''
+    description: ''
+    code_samples: []
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

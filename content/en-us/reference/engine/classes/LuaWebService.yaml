@@ -1,0 +1,25 @@
+name: LuaWebService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service, which is responsible for retrieving HTTP data from
+  websites. Used by a range of services, including `Class.MarketplaceService`,
+  `Class.InsertService` and `Class.HttpService`. Its functions cannot be
+  accessed by developers.
+description: |
+  An internal service, which is responsible for retrieving HTTP data from
+  websites. Used by a range of services, including `Class.MarketplaceService`,
+  `Class.InsertService` and `Class.HttpService`. Its functions cannot be
+  accessed by developers.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

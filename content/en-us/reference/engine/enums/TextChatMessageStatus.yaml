@@ -1,0 +1,60 @@
+name: TextChatMessageStatus
+type: enum
+summary: |
+  Indicates the status of a `Class.TextChatMessage`.
+description: |
+  Indicates the status of a `Class.TextChatMessage`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    value: 1
+    summary: |
+      Generic failed status for any other `Class.TextChannel:SendAsync()`
+      failures.
+    tags: []
+    deprecation_message: ''
+  - name: Success
+    value: 2
+    summary: |
+      Message has no issues.
+    tags: []
+    deprecation_message: ''
+  - name: Sending
+    value: 3
+    summary: |
+      Message is sending.
+    tags: []
+    deprecation_message: ''
+  - name: TextFilterFailed
+    value: 4
+    summary: |
+      Text filter failed to process the message.
+    tags: []
+    deprecation_message: ''
+  - name: Floodchecked
+    value: 5
+    summary: |
+      Message is from a user sending messages too frequently.
+    tags: []
+    deprecation_message: ''
+  - name: InvalidPrivacySettings
+    value: 6
+    summary: |
+      Message can't be sent because of the user's chat privacy settings.
+    tags: []
+    deprecation_message: ''
+  - name: InvalidTextChannelPermissions
+    value: 7
+    summary: |
+      Message's `Class.TextSource` is either not in the intended
+      `Class.TextChannel` or `Class.TextSource.CanSend` is `false`.
+    tags: []
+    deprecation_message: ''
+  - name: MessageTooLong
+    value: 8
+    summary: |
+      Message is too long.
+    tags: []
+    deprecation_message: ''

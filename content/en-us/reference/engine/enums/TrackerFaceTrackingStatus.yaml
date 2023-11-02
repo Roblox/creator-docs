@@ -1,0 +1,43 @@
+name: TrackerFaceTrackingStatus
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: FaceTrackingSuccess
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingNoFaceFound
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingUnknown
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingLost
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingHasTrackingError
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingIsOccluded
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: FaceTrackingUninitialized
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,95 @@
+name: RayValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single Ray.
+description: |
+  A RayValue is an object whose purpose is to store a single Ray. Similar to
+  CFrameValue, a RayValue's stored ray cannot be viewed or edited within the
+  Properties window within studio. Instead, use the Command bar to get and set
+  the value of these objects. For example, you can use a line like the one below
+  to create a new RayValue named "Value" within the `Class.Workspace`. It
+  creates a ray at (0, 50, 0) and it faces in the positive-X direction.
+
+  `Instance.new("RayValue").Value = Ray.new(Vector3.new(0, 50, 0), Vector3.new(10, 0, 0))`
+
+  Since there is no trivial way to edit rays within Studio, sometimes it is
+  better to use a CFrameValue instead (which can be changed through a part or
+  the camera). You can reconstruct a ray from a CFrame using
+  `Ray.new(cf.p, cf.lookVector * dist)`, where `cf` is a given CFrame and `dist`
+  is the length of the Ray you want to construct.
+
+  Like all "-Value" objects, this single value is stored in the Value property.
+  The Changed event for this (and other objects like it) will fire with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
+code_samples:
+  - Rays-RayValue-and-Raycasting
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: RayValue.Value
+    summary: |
+      The stored Ray.
+    description: |
+      The stored Ray.
+    code_samples:
+    type: Ray
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: RayValue.Changed
+    summary: |
+      Fired when `Class.RayValue.Value` is changed.
+    description: |
+      This event fires whenever the `Class.RayValue.Value` property is changed.
+      It will run with the new value being stored in the argument object,
+      instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      RayValue changes and to track the different values that it may change to.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - how-to-use-rayvalue-changed
+    parameters:
+      - name: value
+        type: Ray
+        default:
+        summary: |
+          The value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RayValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: Ray
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of `Class.RayValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

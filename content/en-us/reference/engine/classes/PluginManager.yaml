@@ -1,0 +1,84 @@
+name: PluginManager
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  A singleton class used to create `Class.Plugin|Plugins`. This has been
+  superseded by the [Plugins](../../../studio/plugins.md) but it can be used to
+  create plugins with the command bar.
+
+  The PluginManager object can be retrieved using the deprecated
+  `Class.PluginManager|PluginManager()` function.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: PluginManager:CreatePlugin
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+      - CustomLuaState
+    deprecation_message: |
+      The steps to create a plugin have changed. To learn more, see
+      `Class.Plugin`.
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginManager:ExportPlace
+    summary: |
+      Exports the place to an .OBJ file that is saved to the path chosen by the
+      user in a file save dialogue (the `filePath` argument is ignored).
+    description: |
+      ExportPlace will export all geometry in the place to an .OBJ file. The
+      file is saved to the path chosen by the user in a file save dialogue (the
+      `filePath` argument is ignored). This function does the same thing as the
+      **File &gt; Advanced &gt; Export as Obj** menu option.
+    code_samples:
+    parameters:
+      - name: filePath
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginManager:ExportSelection
+    summary: |
+      Exports the current `Class.Selection` to an .OBJ file that is saved to the
+      path chosen by the user in a file save dialogue (the `filePath` argument
+      is ignored).
+    description: |
+      ExportSelection will export all geometry in the current `Class.Selection`
+      to an .OBJ file. The file is saved to the path chosen by the user in a
+      file save dialogue (the `filePath` argument is ignored). This function
+      does the same thing as the **Export Selection...** right-click menu option
+      in the Explorer.
+    code_samples:
+    parameters:
+      - name: filePath
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

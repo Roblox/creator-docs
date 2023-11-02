@@ -1,0 +1,31 @@
+name: MouseBehavior
+type: enum
+summary: |
+  Sets the user's mouse behavior.
+description: |
+  Used with the `Class.UserInputService.MouseBehavior` property of
+  `Class.UserInputService` to set how the user's mouse behaves.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The mouse moves freely around the user's screen.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: LockCenter
+    summary: |
+      The mouse is locked, and cannot move from, the center of the user's
+      screen.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LockCurrentPosition
+    summary: |
+      The mouse is locked, and cannot move from, it's current position on the
+      user's screen at the time of locking.
+    value: 2
+    tags: []
+    deprecation_message: ''

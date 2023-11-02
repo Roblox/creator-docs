@@ -1,0 +1,28 @@
+name: TrackerMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Audio
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Video
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AudioVideo
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

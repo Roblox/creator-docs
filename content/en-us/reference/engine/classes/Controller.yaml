@@ -1,0 +1,140 @@
+name: Controller
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class for controller objects, such as the `Class.HumanoidController`
+  object.
+description: |
+  The base class for controller objects, such as the `Class.HumanoidController`
+  object.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: Controller:BindButton
+    summary: |
+      Activates an overriding bind on the specified button.
+    description: |
+      Activates an overriding bind on the specified button.
+    code_samples:
+      - Controller-BindButton1
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+      - name: caption
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Controller:GetButton
+    summary: |
+      Returns whether or not Button is being pressed.
+    description: |
+      Returns whether or not Button is being pressed.
+    code_samples:
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Controller:UnbindButton
+    summary: |
+      Removes the bind on button.
+    description: |
+      Removes the bind on button.
+    code_samples:
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Controller:bindButton
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+      - name: caption
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Controller:BindButton()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Controller:getButton
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.Controller:GetButton()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Controller.ButtonChanged
+    summary: |
+      Fired when the pressed state of a bound button is changed. This event can
+      be used in conjunction with `Class.Controller:GetButton()` to see whether
+      a bound button is being pressed down or not.
+    description: |
+      Fired when the pressed state of a bound button is changed. This event can
+      be used in conjunction with `Class.Controller:GetButton()` to see whether
+      a bound button is being pressed down or not.
+    code_samples:
+    parameters:
+      - name: button
+        type: Button
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

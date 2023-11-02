@@ -1,0 +1,90 @@
+name: Motor
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: |
+  Makes a movable `Class.JointInstance` between two parts.
+description: |
+  An object used to make movable `Class.JointInstance` between two Parts.
+code_samples:
+inherits:
+  - JointInstance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Motor.CurrentAngle
+    summary: |
+      Displays the current rotation of the motor in radians.
+    description: |
+      Displays the current rotation of the motor in radians.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Motor.DesiredAngle
+    summary: |
+      The desired angle to turn the motor to in radians.
+    description: |
+      The desired angle to turn the motor to in radians. The motor will attempt
+      to reach this angle (provided `Class.Motor.MaxVelocity` is greater than 0.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Motor.MaxVelocity
+    summary: |
+      The maximum velocity the motor can use to reach `Class.Motor.DesiredAngle`
+      measured in radians per physics frame (1/60th of a second).
+    description: |
+      The maximum velocity the motor can use to reach `Class.Motor.DesiredAngle`
+      measured in radians per physics frame (1/60th of a second).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Motor:SetDesiredAngle
+    summary: |
+      Sets `Class.Motor.DesiredAngle` of the motor.
+    description: |
+      Sets `Class.Motor.DesiredAngle` of the motor.
+    code_samples:
+    parameters:
+      - name: value
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,20 @@
+name: ManualGlue
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: |
+  ManualGlue is a joint created in a similar manner to the `Class.ManualWeld`
+  class. It functions identically to the `Class.Glue` class.
+description: |
+  **ManualGlue** is a joint created in a similar manner to the
+  `Class.ManualWeld` class. It functions identically to the `Class.Glue` class.
+code_samples:
+inherits:
+  - ManualSurfaceJointInstance
+tags:
+  - Deprecated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

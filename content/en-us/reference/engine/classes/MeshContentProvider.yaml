@@ -1,0 +1,22 @@
+name: MeshContentProvider
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal Roblox service that is responsible for fetching, parsing and
+  caching meshes. This service cannot be used by developers.
+description: |
+  A service that is internally responsible for fetching, parsing, and caching
+  meshes.
+code_samples:
+inherits:
+  - CacheableContentProvider
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

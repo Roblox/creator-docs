@@ -1,0 +1,26 @@
+name: CameraPanMode
+type: enum
+summary: |
+  The CameraPanMode Enum represents the available pan modes for
+  `Class.Camera:SetCameraPanMode()`.
+description: |
+  The CameraPanMode Enum represents the available pan modes for
+  `Class.Camera:SetCameraPanMode()`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Classic
+    summary: |
+      Enables swipe and pan on mobile devices, and disables edge bump camera
+      controls. Default.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: EdgeBump
+    summary: |
+      Disables swipe to pan on mobile devices, and enables edge bump camera
+      controls. It does not affect PC or Mac users.
+    value: 1
+    tags: []
+    deprecation_message: ''

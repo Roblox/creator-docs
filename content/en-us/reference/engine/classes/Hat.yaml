@@ -1,0 +1,19 @@
+name: Hat
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+  - Hat1
+inherits:
+  - Accoutrement
+tags:
+  - Deprecated
+deprecation_message: |
+  This class has been superseded by the `Class.Accessory` class. Do not use it
+  for new work.
+properties: []
+methods: []
+events: []
+callbacks: []

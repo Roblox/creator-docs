@@ -1,0 +1,156 @@
+name: ColorSequence
+type: datatype
+summary: |
+  A gradient of color values comprised of `Datatype.ColorSequenceKeypoint`s.
+description: |
+  The `Datatype.ColorSequence` data type represents a gradient of color values
+  from `0` to `1`. The color values are expressed using the
+  `Datatype.ColorSequenceKeypoint` type. This type is used in various properties
+  of `Class.ParticleEmitter`, `Class.Trail`, `Class.Beam`, and other objects
+  that use color gradients.
+
+  #### Equality
+
+  Two `Datatype.ColorSequence` objects are equivalent only if the values of
+  their `Datatype.ColorSequenceKeypoint` are equivalent, even if both would
+  result in similar gradients.
+
+  #### Evaluation
+
+  The `Datatype.ColorSequence` type does not have a built-in method for getting
+  the value at a certain time/point. However, you can use the following function
+  to evaluate at a specific time.
+
+  ```lua
+  local function evalColorSequence(sequence: ColorSequence, time: number)
+      -- If time is 0 or 1, return the first or last value respectively
+      if time == 0 then
+          return sequence.Keypoints[1].Value
+      elseif time == 1 then
+          return sequence.Keypoints[#sequence.Keypoints].Value
+      end
+
+      -- Otherwise, step through each sequential pair of keypoints
+      for i = 1, #sequence.Keypoints - 1 do
+          local thisKeypoint = sequence.Keypoints[i]
+          local nextKeypoint = sequence.Keypoints[i + 1]
+          if time >= thisKeypoint.Time and time < nextKeypoint.Time then
+              -- Calculate how far alpha lies between the points
+              local alpha = (time - thisKeypoint.Time) / (nextKeypoint.Time - thisKeypoint.Time)
+              -- Evaluate the real value between the points using alpha
+              return Color3.new(
+                  (nextKeypoint.Value.R - thisKeypoint.Value.R) * alpha + thisKeypoint.Value.R,
+                  (nextKeypoint.Value.G - thisKeypoint.Value.G) * alpha + thisKeypoint.Value.G,
+                  (nextKeypoint.Value.B - thisKeypoint.Value.B) * alpha + thisKeypoint.Value.B
+              )
+          end
+      end
+  end
+
+  local colorSequence = ColorSequence.new{
+      ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+      ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 190, 200)),
+      ColorSequenceKeypoint.new(1, Color3.fromRGB(190, 0, 255))
+  }
+
+  print(evalColorSequence(colorSequence, 0.75))  --> 0.372549, 0.372549, 0.892157
+  ```
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: ColorSequence.new
+    summary: Returns a new `Datatype.ColorSequence` that is entirely the specified color.
+    description: |-
+      Returns a sequence of two keypoints with `c` for both the start and end
+      values.
+
+        ```lua
+        local colorSequence = ColorSequence.new(c)
+        -- Equivalent to
+        local colorSequence = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, c),
+            ColorSequenceKeypoint.new(1, c)
+        }
+        ```
+    parameters:
+      - name: c
+        type: Color3
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: ColorSequence.new
+    summary: |-
+      Returns a new `Datatype.ColorSequence` with `c0` as the start value and `c1` as the
+      end value.
+    description: |-
+      Returns a new `Datatype.ColorSequence` with `c0` as the start value and `c1` as the
+      end value.
+
+        ```lua
+        local colorSequence = ColorSequence.new(c0, c1)
+        -- Equivalent to
+        local colorSequence = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, c0),
+            ColorSequenceKeypoint.new(1, c1)
+        }
+        ```
+    parameters:
+      - name: c0
+        type: Color3
+        default:
+        summary: ''
+      - name: c1
+        type: Color3
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: ColorSequence.new
+    summary: |-
+      Returns a new `Datatype.ColorSequence` from an array of
+      `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints`.
+    description: |-
+      Returns a new `Datatype.ColorSequence` from an array of
+      `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints`. The keypoints
+      must be in a non-descending time value order. At least two keypoints must
+      be provided, and they must have a time value of `0` (first) and `1`
+      (last).
+
+        ```lua
+        local red = Color3.fromRGB(255, 0, 0)
+        local cyan = Color3.fromRGB(0, 190, 200)
+        local purple = Color3.fromRGB(190, 0, 255)
+
+        local colorSequence = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, red),
+            ColorSequenceKeypoint.new(0.5, cyan),
+            ColorSequenceKeypoint.new(1, purple)
+        }
+        ```
+    parameters:
+      - name: keypoints
+        type: Array
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: ColorSequence.Keypoints
+    type: Array
+    summary: |
+      An array of `Datatype.ColorSequenceKeypoint` values in ascending order.
+    description: |
+      An array containing `Datatype.ColorSequenceKeypoint` values for the
+      `Datatype.ColorSequence`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

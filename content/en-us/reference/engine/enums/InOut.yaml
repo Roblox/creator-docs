@@ -1,0 +1,28 @@
+name: InOut
+type: enum
+summary: |
+  The InOut Enum is used to set where the object is on the side of its parent.
+description: |
+  The InOut Enum is used to set where the object is on the side of its parent.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Edge
+    summary: |
+      The object is located along an edge of its parent.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Inset
+    summary: |
+      The object's located is inset from its parent's location.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Center
+    summary: |
+      The object's location is centered on it's parent.
+    value: 2
+    tags: []
+    deprecation_message: ''

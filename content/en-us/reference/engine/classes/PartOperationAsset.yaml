@@ -1,0 +1,19 @@
+name: PartOperationAsset
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service which cannot be used by developers.
+description: |
+  An internal instance used to save/load
+  <a href="../../../parts/solid-modeling.md">solid models</a> onto the Roblox
+  cloud.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

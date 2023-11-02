@@ -1,0 +1,30 @@
+name: JointCreationMode
+type: enum
+summary: |
+  The way joints are created between two surfaces.
+description: |
+  The way joints are created between two surfaces.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: All
+    summary: |
+      Joints are created between any kind of surface. Functions identically to
+      Surface.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Surface
+    summary: |
+      Joints are created between any kind of surface. Functions identically to
+      All.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      Joints are never created, no matter what.
+    value: 2
+    tags: []
+    deprecation_message: ''

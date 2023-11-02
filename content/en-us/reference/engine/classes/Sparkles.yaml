@@ -1,0 +1,151 @@
+name: Sparkles
+type: class
+category: Effects
+memory_category: Instances
+summary: |
+  A particle emitter with the visual aesthetic of sparkles.
+description: |
+  Sparkles is one of several particle-emitting classes. Like other particle
+  emitters of its kind, Sparkles objects emit particles when parented to a
+  `Class.BasePart` (such as a `Class.Part`) or an `Class.Attachment` within such
+  a `Class.BasePart`. Compared to the `Class.ParticleEmitter` class, Sparkles
+  lacks many different customization properties and special methods, such as
+  `Class.ParticleEmitter.Lifetime` or `Class.ParticleEmitter:Emit()`. It is
+  useful to create a quick special effect in a pinch; for more detailed work it
+  is preferable to use a `Class.ParticleEmitter` instead.
+
+  When `Class.Sparkles.Enabled` is toggled off, particles emit by this object
+  will continue to render until their lifetime expires. When a Sparkles object's
+  `Class.Instance.Parent` is set to nil (and/or `Class.Instance:Destroy()`ed),
+  all particles will instantly disappear. If this effect is not desired, try
+  hiding the parent object at a far away position, then removing the Sparkles
+  after a few seconds using `Class.Debris` to give the last particles a chance
+  to expire. This object does not have a `Class.ParticleEmitter:Clear()` method,
+  but it is possible to set the `Class.Instance.Parent` to nil and back to the
+  exact same object for the same effect.
+
+  Sparkles particles are only emitted from the center of `Class.BasePart` to
+  which they are parented. Parenting a Sparkles object to an `Class.Attachment`
+  instead allows customization of the particles' start position.
+code_samples:
+  - Give-Sparkles
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Sparkles.Color
+    summary: |
+      Determines the color of the sparkle particles.
+    description: |
+      The Color property determines the color of all the particles emit by a
+      `Class.Sparkles` object (both existing and future particles). It behaves
+      similarly to `Class.ParticleEmitter.Color`, except that it is only one
+      color and not a `Datatype.ColorSequence`. Sparkles have a natural color
+      sequence applied which is most apparent when this property is set to
+      white; sparkles very faintly animate between a subtle green and red.
+
+      It should be noted that sparkles have a partial
+      `Class.ParticleEmitter.LightEmission` effect, so dark colors tend to
+      render more transparent and white colors look very bright.
+
+      This property functions identically to `Class.Sparkles.SparkleColor`.
+    code_samples:
+      - Give-Sparkles
+    type: Color3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: |
+      This property is deprecated in favor of `Class.Sparkles.SparkleColor`,
+      which does the exact same thing.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Sparkles.Enabled
+    summary: |
+      Determines whether sparkles are emit.
+    description: |
+      The Enabled property, much like `Class.ParticleEmitter.Enabled`,
+      determines whether sparkle particles are emit. Any particles already emit
+      will continue to render until their lifetime expires. This property is
+      useful for keeping pre-made sparkle effects off until they are needed
+      later. Since sparkle particles are destroyed when the `Sparkle` object's
+      `Class.Instance.Parent` is set to nil, this property is useful in allowing
+      existing particles the opportunity to expire before destroying the Fire
+      object altogether. See the function below.
+
+      ```
+      local Debris = game:GetService("Debris")
+      local part = script.Parent
+      function stopSparkling(sparkles)
+      	sparkles.Enabled = false -- No more new particles
+      	Debris:AddItem(sparkles, 4) -- Remove the object after a delay (after existing particles have expired)
+      end
+      stopSparkling(part.Sparkles)
+      ```
+    code_samples:
+      - Give-Sparkles
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sparkles.SparkleColor
+    summary: |
+      Determines the color of the sparkle particles.
+    description: |
+      This property functions identically to `Class.Sparkles.Color`.
+
+      The SparkleColor property determines the color of all the particles emit
+      by a `Class.Sparkles` object (both existing and future particles). It
+      behaves similarly to `Class.ParticleEmitter.Color`, except that it is only
+      one color and not a `Datatype.ColorSequence`. Sparkles have a natural
+      color sequence applied which is most apparent when this property is set to
+      white; sparkles very faintly animate between a subtle green and red.
+
+      It should be noted that sparkles have a partial
+      `Class.ParticleEmitter.LightEmission` effect, so dark colors tend to
+      render more transparent and white colors look very bright.
+    code_samples:
+      - Give-Sparkles
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sparkles.TimeScale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

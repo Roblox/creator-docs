@@ -1,0 +1,30 @@
+name: OverrideMouseIconBehavior
+type: enum
+summary: |
+  Overrides the behavior of the mouse icon to either force that it is always
+  shown or force that it is always hidden.
+description: |
+  Overrides the behavior of the mouse icon to either force that it is always
+  shown or force that it is always hidden.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      The mouse icon behavior is not overridden - default behavior is used.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ForceShow
+    summary: |
+      The mouse icon is forced to always remain shown/visible.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ForceHide
+    summary: |
+      The mouse icon is forced to always remain hidden/invisible.
+    value: 2
+    tags: []
+    deprecation_message: ''

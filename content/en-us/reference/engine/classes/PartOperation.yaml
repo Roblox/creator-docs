@@ -1,0 +1,186 @@
+name: PartOperation
+type: class
+category:
+memory_category: Instances
+summary: |
+  An abstract class that all parts based on solid modeling inherit from.
+description: |
+  An abstract class that all parts based on
+  [solid modeling](../../../parts/solid-modeling.md) inherit from.
+code_samples:
+inherits:
+  - TriangleMeshPart
+tags: []
+deprecation_message: ''
+properties:
+  - name: PartOperation.RenderFidelity
+    summary: |
+      The level of detail used to render the solid modeled part.
+    description: |
+      This property determines the level of detail that the solid modeled part
+      will be shown in. It can be set to the possible values of the
+      `Enum.RenderFidelity` enum.
+
+      By default, solid modeled parts will always be shown in **precise
+      fidelity**, no matter how far they are from the camera. This improves
+      their appearance when viewed from any distance, but if a place has a large
+      number of detailed solid modeled parts, it may reduce overall performance.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Distance From Camera</th>
+                  <th>Render Fidelity</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Less than 250 studs</td>
+                  <td>Highest</td>
+              </tr>
+              <tr>
+                  <td>250-500 studs</td>
+                  <td>Medium</td>
+              </tr>
+              <tr>
+                  <td>500 or more studs</td>
+                  <td>Lowest</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples:
+    type: RenderFidelity
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PartOperation.SmoothingAngle
+    summary: |
+      An angle in degrees which affects the smooth shading of a solid modeled
+      part.
+    description: |
+      This property represents an angle in degrees for a threshold value between
+      face normals on a [solid modeled](../../../parts/solid-modeling.md) part.
+      If the normal difference is less than the value, normals will be adjusted
+      to smooth the difference. While a value between 30 and 70 degrees usually
+      produces a good result, values between 90 and 180 are not recommended as
+      they may cause a "shadowing" effect on unions with sharp edges.
+
+      Note that smoothing does not affect the normals between different
+      materials or different colors.
+
+      <figure>
+      <img
+      src="/assets/modeling/solid-modeling/CSG-SmoothingAngle-0.jpg" width="400"
+      alt="Solid modeled part with SmoothingAngle of 0" />
+      <figcaption><code>Class.PartOperation.SmoothingAngle|SmoothingAngle</code>
+      = 0</figcaption>
+      </figure>
+      <figure>
+      <img
+      src="/assets/modeling/solid-modeling/CSG-SmoothingAngle-50.jpg"
+      width="400" alt="Solid modeled part with SmoothingAngle of 50" />
+      <figcaption><code>Class.PartOperation.SmoothingAngle|SmoothingAngle</code>
+      = 50</figcaption>
+      </figure>
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PartOperation.TriangleCount
+    summary: |
+      The number of polygons in this solid model.
+    description: |
+      The number of polygons in this solid model.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: PartOperation.UsePartColor
+    summary: |
+      Sets whether the `Class.PartOperation` can be recolored using inherited
+      color properties.
+    description: |
+      Sets whether the `Class.PartOperation` can be recolored using the
+      `Class.BasePart.Color` or `Class.BasePart.BrickColor` properties. When
+      true, the entire union will be colored as per `Class.BasePart.Color|Color`
+      or `Class.BasePart.BrickColor|BrickColor`. When false, the parts in the
+      union will maintain their original colors from before the onion operation
+      was performed.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: PartOperation:SubstituteGeometry
+    summary: |
+      Substitutes the geometry of this `Class.PartOperation` with the geometry
+      of another `Class.PartOperation`.
+    description: |
+      Substitutes the geometry of this `Class.PartOperation` with the geometry
+      of another `Class.PartOperation`. This makes it easier to utilize the
+      geometry of a solid modeling operation like
+      `Class.GeometryService:UnionAsync()|UnionAsync()`,
+      `Class.GeometryService:SubtractAsync()|SubtractAsync()`, or
+      `Class.GeometryService:IntersectAsync()|IntersectAsync()` but maintain
+      properties, attributes, tags, and children of the main part such as
+      `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
+      `Class.ParticleEmitter|ParticleEmitters`, light objects, decals, and more.
+      This approach also circumvents the potential "flicker" of completely
+      replacing the original `Class.PartOperation` with another.
+
+      Note that if you're calling this method on a `Class.PartOperation` with
+      child `Class.Attachment|Attachments` or `Class.Constraint|Constraints`,
+      you should calculate the affected instances with
+      `Class.GeometryService:CalculateConstraintsToPreserve()|CalculateConstraintsToPreserve()`,
+      then drop those whose recommended parent is `nil`.
+    code_samples:
+      - PartOperation-SubstituteGeometry
+    parameters:
+      - name: source
+        type: Instance
+        default:
+        summary: |
+          The `Class.PartOperation` whose geometry will substitute the geometry
+          of this `Class.PartOperation`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

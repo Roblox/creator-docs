@@ -1,0 +1,93 @@
+name: IncrementalPatchBuilder
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: IncrementalPatchBuilder.AddPathsToBundle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IncrementalPatchBuilder.BuildDebouncePeriod
+    summary: ''
+    description: ''
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IncrementalPatchBuilder.HighCompression
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IncrementalPatchBuilder.SerializePatch
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IncrementalPatchBuilder.ZstdCompression
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

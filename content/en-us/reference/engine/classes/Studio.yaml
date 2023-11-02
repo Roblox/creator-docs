@@ -1,0 +1,2426 @@
+name: Studio
+type: class
+category: Settings
+memory_category: Instances
+summary: ''
+description: |
+  The Studio object is a settings object that is exclusive to Roblox Studio. It
+  can be found in Roblox Studio's settings under the Studio tab.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: Studio."TODO" Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio."function" Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio."local" Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio."nil" Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio."self" Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Active Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Active Hover Over Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Always Save Script Changes
+    summary: |
+      If set to true, Roblox Studio will attempt to transfer script changes that
+      were made during a Play Solo session to the opened place.
+    description: |
+      If set to true, Roblox Studio will attempt to transfer script changes that
+      were made during a Play Solo session to the opened place.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Animate Hover Over
+    summary: |
+      If set to true, the hover selection box that is shown when mousing over
+      selectable objects in the `Class.Workspace` will flash between
+      `Hover Over Color` and `Select Color` based on the `Hover Animate Speed`.
+    description: |
+      If set to true, the hover selection box that is shown when mousing over
+      selectable objects in the `Class.Workspace` will flash between
+      `Hover Over Color` and `Select Color` based on the `Hover Animate Speed`.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto Clean Empty Line
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto Closing Brackets
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto Closing Quotes
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto Delete Closing Brackets and Quotes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto Indent Rule
+    summary: ''
+    description: ''
+    code_samples:
+    type: AutoIndentRule
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto-Recovery Enabled
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Auto-Recovery
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto-Recovery Interval (Minutes)
+    summary: ''
+    description: ''
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Auto-Recovery
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Auto-Recovery Path
+    summary: ''
+    description: ''
+    code_samples:
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Auto-Recovery
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Automatically commit locked scripts when you save or publish to Roblox
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Automatically trigger AI Code Completion
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Background Color
+    summary: |
+      Specifies the background color of Roblox Studio's script editor.
+    description: |
+      Specifies the background color of Roblox Studio's script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Basic Objects Display Mode
+    summary: |
+      Sets the scrolling mode of the `Advanced Objects` tab in Roblox Studio.
+    description: |
+      Sets the scrolling mode of the `Advanced Objects` tab in Roblox Studio.
+    code_samples:
+    type: ListDisplayMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Bool Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Bracket Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Built-in Function Color
+    summary: |
+      Sets the color of built-in functions and keywords in the script editor.
+    description: |
+      Sets the color of built-in functions and keywords in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Camera Mouse Wheel Speed
+    summary: |
+      Sets how many studs the camera will move forward or backwards when using
+      the mouse wheel.
+    description: |
+      Sets how many studs the camera will move forward or backwards when using
+      the mouse wheel.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Camera Pan Speed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Camera Shift Speed
+    summary: |
+      Sets the speed in studs/sec that the camera moves while holding down Shift
+      with the movement keys.
+    description: |
+      Sets the speed in studs/sec that the camera moves while holding down Shift
+      with the movement keys.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Camera Speed
+    summary: |
+      Sets the speed in studs/sec that the camera moves when movement keys are
+      pressed.
+    description: |
+      Sets the speed in studs/sec that the camera moves when movement keys are
+      pressed.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Camera Speed Adjust Binding
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CameraSpeedAdjustBinding
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Camera Zoom to Mouse Position
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.CameraAdaptiveSpeed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.CameraTweenFocus
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Clear Output On Start
+    summary: |
+      If set to true, the output will be automatically cleared when game
+      sessions are switched.
+    description: |
+      If set to true, the output will be automatically cleared when game
+      sessions are switched.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.CommandBarLocalState
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Lua Debugger
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Comment Color
+    summary: |
+      Specifies the color of comments in Roblox Studio's script editor.
+    description: |
+      Specifies the color of comments in Roblox Studio's script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Current Line Highlight Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Debugger Current Line Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Debugger Error Line Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.DefaultScriptFileDir
+    summary: |
+      Specifies the default prompt directory that will be opened when the user
+      activates the `Execute Script` button in Roblox Studio.
+    description: |
+      Specifies the default prompt directory that will be opened when the user
+      activates the `Execute Script` button in Roblox Studio.
+    code_samples:
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.DeprecatedObjectsShown
+    summary: |
+      If set to true, deprecated objects will be shown in the Advanced Objects
+      window, as well as the Object Browser.
+    description: |
+      If set to true, deprecated objects will be shown in the Advanced Objects
+      window, as well as the Object Browser.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Browsing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.DisplayLanguage
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Autocomplete
+    summary: |
+      When set to true, the script editor and command bar will show an
+      autocomplete menu while writing.
+    description: |
+      When set to true, the script editor and command bar will show an
+      autocomplete menu while writing.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Autocomplete Doc View
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable CoreScript Debugger
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Http Sandboxing
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Internal Beta Features
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Internal Features
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Script Analysis
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Scrollbar Markers
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Signature Help
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Signature Help Doc View
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Temporary Tabs
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Temporary Tabs In Explorer
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Enable Type Hover
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.EnableIndentationRulers
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Error Color
+    summary: |
+      Specifies the color of the wavy underline shown when malformed code is
+      detected in the script editor.
+    description: |
+      Specifies the color of the wavy underline shown when malformed code is
+      detected in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Find Selection Background Color
+    summary: |
+      Sets the highlight color of matches in the script editor's Find Selection
+      operation (Ctrl+F).
+    description: |
+      Sets the highlight color of matches in the script editor's Find Selection
+      operation (Ctrl+F).
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Font
+    summary: |
+      Specifies the font used in the script editor.
+    description: |
+      Specifies the font used in the script editor.
+    code_samples:
+    type: QFont
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Format On Paste
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Format On Type
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.FreeCameraSpeedScroll
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Function Name Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Highlight Current Line
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Highlight Occurances
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.HintColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Hover Animate Speed
+    summary: |
+      Specifies how frequently the hover animation flashes when the mouse is
+      hovering over a selectable object in the `Class.Workspace`.
+    description: |
+      Specifies how frequently the hover animation flashes when the mouse is
+      hovering over a selectable object in the `Class.Workspace`.
+    code_samples:
+    type: HoverAnimateSpeed
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Hover Box Thickness
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Hover Line Thickness
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Hover Over Color
+    summary: |
+      Specifies the color that the hover selection box uses.
+    description: |
+      Specifies the color that the hover selection box uses.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.IconOverrideDir
+    summary: ''
+    description: ''
+    code_samples: []
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Indent Using Spaces
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.IndentationRulerColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.InformationColor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Keyword Color
+    summary: |
+      Sets the text color of built-in Lua keywords.
+    description: |
+      Sets the text color of built-in Lua keywords.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.LargeFileLineCountThreshold
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.LargeFileThreshold
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Line Thickness
+    summary: |
+      Sets the thickness of the `Class.Model.PrimaryPart` selection adornee.
+      This value is constrained between 0 and 0.05.
+    description: |
+      Sets the thickness of the `Class.Model.PrimaryPart` selection adornee.
+      This value is constrained between 0 and 0.05.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Primary Part
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.LocalAssetsFolder
+    summary: ''
+    description: ''
+    code_samples:
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.LuaDebuggerEnabled
+    summary: |
+      Specifies whether or not the Lua Debugger feature is enabled.
+    description: |
+      Specifies whether or not the Lua Debugger feature is enabled.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Lua Debugger
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.LuaDebuggerEnabledAtStartup
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Lua Debugger
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Luau Keyword Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Main Volume
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Audio
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Matching Word Background Color
+    summary: |
+      Sets the highlight color of double-clicked variables in the script editor.
+    description: |
+      Sets the highlight color of double-clicked variables in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Maximum Output Lines
+    summary: |
+      The maximum number of lines that can be displayed in the output.
+    description: |
+      The maximum number of lines that can be displayed in the output.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Menu Item Background Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Method Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Number Color
+    summary: |
+      Specifies the color of numbers in Roblox Studio's script editor.
+    description: |
+      Specifies the color of numbers in Roblox Studio's script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Only Play Audio from Window in Focus
+    summary: |
+      If set to true, audio being played will only be heard if the game window
+      is being focused on.
+    description: |
+      If set to true, audio being played will only be heard if the game window
+      is being focused on.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Audio
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Operator Color
+    summary: |
+      Sets the text color of operator characters in the script editor.
+    description: |
+      Sets the text color of operator characters in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Output Font
+    summary: |
+      Specifies the font used by the output.
+    description: |
+      Specifies the font used by the output.
+    code_samples:
+    type: QFont
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Output Layout Mode
+    summary: |
+      Sets the layout mode of the output.
+    description: |
+      Sets the layout mode of the output.
+    code_samples:
+    type: OutputLayoutMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.PermissionLevelShown
+    summary: |
+      Sets the highest permission level that APIs have to have in order to be
+      shown in the Object Browser. See `Enum.PermissionLevelShown` for more
+      info.
+    description: |
+      Sets the highest permission level that APIs have to have in order to be
+      shown in the Object Browser. See `Enum.PermissionLevelShown` for more
+      info.
+    code_samples:
+    type: PermissionLevelShown
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Browsing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Physical Draggers Select Scope By Default
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Pivot Snap To Geometry Color
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.PluginDebuggingEnabled
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Lua Debugger
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.PluginsDir
+    summary: |
+      The directory where local plugins are stored.
+    description: |
+      The directory where local plugins are stored.
+    code_samples:
+    type: QDir
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Primary Text Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Property Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.ReloadBuiltinPluginsOnChange
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.ReloadLocalPluginsOnChange
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Respect Studio shortcuts when game has focus
+    summary: |
+      When set to true, Roblox Studio shortcuts will take priority over inputs
+      being captured in the game window.
+    description: |
+      When set to true, Roblox Studio shortcuts will take priority over inputs
+      being captured in the game window.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Ruler Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Rulers
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.RuntimeUndoBehavior
+    summary: ''
+    description: ''
+    code_samples:
+    type: RuntimeUndoBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Undo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Script Editor Color Preset
+    summary: ''
+    description: ''
+    code_samples:
+    type: StudioScriptEditorColorPresets
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Script Editor Scrollbar Background Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Script Editor Scrollbar Handle Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.ScriptTimeoutLength
+    summary: |
+      The time (in seconds) a script can wait to be resumed before timing out.
+    description: |
+      The time (in seconds) a script can wait to be resumed before timing out.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Lua Debugger
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Scroll Past Last Line
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Secondary Text Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Select Color
+    summary: |
+      The color of the selection box used with object selections in the
+      `Class.Workspace`.
+    description: |
+      The color of the selection box used with object selections in the
+      `Class.Workspace`
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Select/Hover Color
+    summary: |
+      Sets the color of the `Class.Model.PrimaryPart` selection box.
+    description: |
+      Sets the color of the `Class.Model.PrimaryPart` selection box.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Primary Part
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Selected Menu Item Background Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Selected Text Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Selection Background Color
+    summary: |
+      Sets the background color of selected text in the script editor.
+    description: |
+      Sets the background color of selected text in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Selection Box Thickness
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Selection Color
+    summary: |
+      Sets the text color of selected text in the script editor.
+    description: |
+      Sets the text color of selected text in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Selection Line Thickness
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Server Audio Behavior
+    summary: |
+      An unused Roblox Studio setting that does not appear to have any
+      functionality.
+    description: |
+      An unused Roblox Studio setting that does not appear to have any
+      functionality.
+    code_samples:
+    type: ServerAudioBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Audio
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Set Pivot of Imported Parts
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Core GUI in Explorer while Playing
+    summary: |
+      If set to true, the `Class.CoreGui` will be visible in the Explorer while
+      the game is running.
+    description: |
+      If set to true, the `Class.CoreGui` will be visible in the Explorer while
+      the game is running.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Diagnostics Bar
+    summary: |
+      If set to true, basic diagnostic information is shown in the bottom right.
+    description: |
+      If set to true, basic diagnostic information is shown in the bottom right.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show FileSyncService
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Hidden Objects in Explorer
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Hover Over
+    summary: |
+      If set to true, hovering over an object in the `Class.Workspace` will show
+      a selection box.
+    description: |
+      If set to true, hovering over an object in the `Class.Workspace` will show
+      a selection box.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Light Guides
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Visualization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Navigation Labels
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Visualization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Navigation Mesh
+    summary: |
+      When set to true, the navigation mesh used by the
+      `Class.PathfindingService` will be visualized.
+    description: |
+      When set to true, the navigation mesh used by the
+      `Class.PathfindingService` will be visualized.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Visualization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Pathfinding Links
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Visualization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Plugin GUI Service in Explorer
+    summary: |
+      When set to true, the `Class.PluginGuiService` will be shown in Roblox
+      Studio's explorer.
+    description: |
+      When set to true, the `Class.PluginGuiService` will be shown in Roblox
+      Studio's explorer.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Singly Selected Attachment Parent Frame
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Visualization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show Whitespace
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Show plus button on hover in Explorer
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.ShowCorePackagesInExplorer
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Explorer
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Skip Closing Brackets and Quotes
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.String Color
+    summary: |
+      Specifies the color of strings in the script editor.
+    description: |
+      Specifies the color of strings in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Tab Width
+    summary: |
+      Specifies how many spaces are used to represent a tab in the script
+      editor.
+    description: |
+      Specifies how many spaces are used to represent a tab in the script
+      editor.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Text Color
+    summary: |
+      Specifies the color of normal text in the script editor.
+    description: |
+      Specifies the color of normal text in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Text Wrapping
+    summary: |
+      If set to true, text in the script editor will be wrapped.
+    description: |
+      If set to true, text in the script editor will be wrapped.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Theme
+    summary: |
+      Used to get/set current `Class.StudioTheme|theme` used by Studio.
+    description: |
+      The Theme property is used to get/set the current `Class.StudioTheme` used
+      by `Class.Studio`.
+
+      This is intended for use within `Class.Plugin|Plugins`, but will also
+      execute in the Command Line. You can access the function via:
+
+      ```lua
+      settings().Studio.Theme
+      ```
+
+      For instance, if you would like to print the current Studio theme:
+
+      ```lua
+      print("The current Studio theme is:", settings().Studio.Theme)
+      ```
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.UI Theme
+    summary: |
+      Specifies the color scheme of Roblox Studio.
+    description: |
+      Specifies the color scheme of Roblox Studio.
+    code_samples:
+    type: UITheme
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: false
+      can_save: true
+  - name: Studio.Use Bounding Box Move Handles
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Tools
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.Warning Color
+    summary: |
+      Specifies the color of the wavy underline shown when the script analyzer
+      picks up a problem that should be addressed in the script editor.
+    description: |
+      Specifies the color of the wavy underline shown when the script analyzer
+      picks up a problem that should be addressed in the script editor.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Studio.Whitespace Color
+    summary: ''
+    description: ''
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Script Editor Colors
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: Studio:GetAvailableThemes
+    summary: |
+      Returns a list of `Class.StudioTheme|themes` available in Studio.
+    description: |
+      The **GetAvailableThemes()** function returns a list of
+      `Class.StudioTheme|StudioThemes` available in `Class.Studio`. You can
+      access the function via:
+
+      ```
+      settings().Studio:GetAvailableThemes()
+      ```
+    code_samples:
+      - getavailablethemes
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          A list of themes available in Studio.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: Studio.ThemeChanged
+    summary: |
+      Event called when Studio's `Class.StudioTheme|theme` changes.
+    description: |
+      The **ThemeChanged** event fires when Studio's `Class.Studio.Theme|Theme`
+      changes. The best use of this event is to get the colors from the theme
+      that changed and update your plugin's UI accordingly.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

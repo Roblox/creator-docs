@@ -1,0 +1,34 @@
+name: HorizontalAlignment
+type: enum
+summary: |
+  Used by `Class.UIGridStyleLayout.HorizontalAlignment` to align the layout
+  within its parent.
+description: |
+  Used by `Class.UIGridStyleLayout.HorizontalAlignment` to align the layout
+  within its parent.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Center
+    summary: |
+      The grid is placed at the center of its parent (x-direction), extending
+      equally to the left and right of the center according to the size of the
+      grid relative to the x-axis.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      The grid is placed starting along the left edge of the parent, extending
+      to the right according to the size of the grid relative to the x-axis.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Right
+    summary: |
+      The grid is placed starting along the left edge of the parent, extending
+      to the left according to the size of the grid relative to the x-axis.
+    value: 2
+    tags: []
+    deprecation_message: ''

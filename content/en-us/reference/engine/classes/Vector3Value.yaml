@@ -1,0 +1,83 @@
+name: Vector3Value
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single Vector3 value.
+description: |
+  A Vector3Value simply holds a Vector3 as a value. This value can be used for
+  scripts to communicate, for objects to move to a preset location, etc.
+code_samples:
+  - Teleporter-Part
+  - Storing-Vector2-inside-Vector3Value
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: Vector3Value.Value
+    summary: |
+      The stored `Datatype.Vector3`.
+    description: |
+      The stored `Datatype.Vector3`.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: Vector3Value.Changed
+    summary: |
+      Fired whenever `Class.Vector3Value.Value` is changed.
+    description: |
+      Fired whenever the `Class.Vector3Value.Value` of the `Class.Vector3Value`
+      is changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      Vector3Value changes and to track the different values that it may change
+      to.
+
+      For instance, this may be useful in games that rely on Vector3Values to
+      track positions in the game world.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - how-to-use-vector3value-changed
+    parameters:
+      - name: value
+        type: Vector3
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Vector3Value.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: Vector3
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.Vector3Value.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

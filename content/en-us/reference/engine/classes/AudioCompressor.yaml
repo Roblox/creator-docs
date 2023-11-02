@@ -1,0 +1,133 @@
+name: AudioCompressor
+type: class
+category:
+memory_category: Internal
+summary: |
+  Adjusts the dynamic range of input streams.
+description: |
+  `Class.AudioCompressor` adjusts the dynamic range of audio streams. Any
+  momentary bursts of loudness will be clamped down according to the
+  compressor's properties.
+
+  `Class.AudioCompressor` provides **Input** and **Sidechain** pins that can be
+  targeted by `Class.Wire.TargetName`, and an **Output** pin that can be used by
+  `Class.Wire.SourceName`.
+code_samples:
+  - audio-wiring---sidechain-compression
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioCompressor.Attack
+    summary: |
+      Controls how quickly the compressor will clamp down on volume after it
+      surpasses `Class.AudioCompressor.Threshold|Threshold`.
+    description: |
+      Time, in seconds, denoting how quickly the compressor will clamp down on
+      volume after it surpasses `Class.AudioCompressor.Threshold|Threshold`.
+      Ranges from 0.001 to 0.5.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioCompressor.MakeupGain
+    summary: |
+      A gain value to be applied after compression.
+    description: |
+      Gain value to be applied after compression, in decibels. After limiting
+      the dynamic range, the resulting stream may be very quiet and this
+      property can be used to compensate. Ranges from -30 to 30.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioCompressor.Ratio
+    summary: |
+      Ratio of input volume to output volume, to be applied when surpassing
+      `Class.AudioCompressor.Threshold|Threshold`.
+    description: |
+      Ratio of input volume to output volume, to be applied when surpassing
+      `Class.AudioCompressor.Threshold|Threshold`. For example, a value of 2
+      will cut the amount by which the input stream exceeds the threshold in
+      half whenever the input stream does so. Ranges from 1 to 50.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioCompressor.Release
+    summary: |
+      Controls how quickly the compressor will unclamp after the stream volume
+      dips back below `Class.AudioCompressor.Threshold|Threshold`.
+    description: |
+      Time, in seconds, denoting how quickly the compressor will unclamp after
+      its stream volume dips back below
+      `Class.AudioCompressor.Threshold|Threshold`. Ranges from 0.01 to 0.5.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioCompressor.Threshold
+    summary: |
+      Gain value at which the compressor will start to modify the input stream.
+    description: |
+      Gain value at which the compressor will start to modify the input stream,
+      in decibels, with a range of -60 to 0. When the input stream's volume
+      surpasses `Class.AudioCompressor.Threshold|Threshold`, the compressor will
+      take `Class.AudioCompressor.Attack|Attack` seconds to kick in. When the
+      input stream's volume recedes below
+      `Class.AudioCompressor.Threshold|Threshold`, the compressor will take
+      `Class.AudioCompressor.Release|Release` seconds to stop acting.
+
+      If any `Class.Wire|Wires` are connected to the **Sidechain** pin of the
+      compressor, this threshold analyzes those streams instead of the **Input**
+      streams; this can be used to duck the volume of one stream in response to
+      another.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

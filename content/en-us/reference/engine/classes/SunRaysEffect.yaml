@@ -1,0 +1,65 @@
+name: SunRaysEffect
+type: class
+category: Post Processing
+memory_category: Instances
+summary: |
+  Renders dynamic rays from the sun.
+description: |
+  The **SunRaysEffect** renders a halo of light around sun. The halo is
+  shaped/blocked by world objects between the `Class.Workspace.CurrentCamera`
+  and the sun.
+
+  Like other post-processing effects, **SunRaysEffect** will only work while
+  `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting` or
+  `Class.Workspace.CurrentCamera`. Also, it may not render on low-end devices,
+  and it may render differently depending on your Studio settings (see the
+  **Quality Level** settings in **Rendering** &rarr; **Performance**).
+
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+code_samples:
+inherits:
+  - PostEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: SunRaysEffect.Intensity
+    summary: |
+      Determines the opacity of the sun rays.
+    description: |
+      Intensity determines the opacity of the sun rays. Values closer to 0 are
+      less visible, while values closer to 1 become more visible.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SunRaysEffect.Spread
+    summary: |
+      Determines how wide the sun rays will spread out.
+    description: |
+      Spread determines how wide the sun rays will spread across the sky. Its
+      value should be set between 0 and 1 as values outside that range have
+      undefined behavior.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

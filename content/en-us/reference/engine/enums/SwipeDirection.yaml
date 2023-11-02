@@ -1,0 +1,44 @@
+name: SwipeDirection
+type: enum
+summary: |
+  The direction that a user is swiping on their touch screen.
+description: |
+  The SwipeDirection Enum represents the direction in which a user swipes on a
+  `Class.UserInputService.TouchEnabled` device.
+
+  The `Class.GuiObject.TouchSwipe` and `Class.UserInputService.TouchSwipe`
+  events pass this enum as an argument.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Right
+    summary: |
+      The user swiped right.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      The user swiped left.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Up
+    summary: |
+      The user swiped up.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Down
+    summary: |
+      The user swiped down.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      The user did not swipe in a certain direction.
+    value: 4
+    tags: []
+    deprecation_message: ''

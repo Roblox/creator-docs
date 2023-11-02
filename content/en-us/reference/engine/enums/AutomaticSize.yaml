@@ -1,0 +1,46 @@
+name: AutomaticSize
+type: enum
+summary: |
+  UI objects with `Class.GuiObject.AutomaticSize|AutomaticSize` enabled will
+  increase in size up to maximum size allowed by the parent (if there is one)
+  and no smaller than the `Class.GuiObject.Size|Size` property bounds.
+description: |
+  UI objects with `Class.GuiObject.AutomaticSize|AutomaticSize` enabled will
+  increase in size up to maximum size allowed by the parent (if there is one)
+  and no smaller than the `Class.GuiObject.Size|Size` property bounds. To enable
+  `Enum.AutomaticSize`, set the value to an enum value other than `None`.
+
+  This enum is used by `Class.GuiObject.AutomaticSize` and
+  `Class.ScrollingFrame.AutomaticCanvasSize` to determine whether and how
+  resizing occurs based on child content.
+
+  For more information, see [Automatic Sizing](../../../ui/automatic-sizing.md).
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      Default sizing behavior.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: X
+    summary: |
+      Automatically resize element along X-axis to fit child contents.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: 'Y'
+    summary: |
+      Automatically resize element along Y-axis to fit child contents. Text
+      Objects will only resize along the Y-axis if TextWrapped is enabled.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: XY
+    summary: |
+      Automatically resize element along X and Y axes to fit child contents.
+    value: 3
+    tags: []
+    deprecation_message: ''

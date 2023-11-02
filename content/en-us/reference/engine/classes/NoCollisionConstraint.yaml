@@ -1,0 +1,111 @@
+name: NoCollisionConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  An instance used to prevent collisions between two specific parts.
+description: |
+  The **NoCollisionConstraint** prevents collisions between two specific parts,
+  but those parts may still register collisions with the rest of the world.
+  Compared to
+  [collision groups](../../../workspace/collisions.md#collision-filtering), it
+  provides a direct way to disable specific collisions, such as the wheel of a
+  car scraping against the car's body.
+
+  The most common way to create this constraint is by selecting
+  **No&nbsp;Collision** through Studio's **Create** menu in the
+  [Model](../../../studio/model-tab.md) tab.
+
+  <img
+  src="/assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
+  width="740" alt="Constraint picker indicated in Studio toolbar" />
+
+  Unlike most constraints, `Class.NoCollisionConstraint` does not utilize any
+  `Class.Attachment|Attachments`. Note that the tool acts differently based on
+  how many parts are selected when the tool is activated:
+
+  <table>
+  <thead>
+    <tr>
+      <td>Option</td>
+      <td>Tool Behavior</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No parts selected</td>
+      <td>The next two parts that are clicked will be linked together. If the same part is clicked twice, no link will be created.</td>
+    </tr>
+    <tr>
+      <td>One part selected</td>
+      <td>The next part that is clicked will be linked to the selected part.</td>
+    </tr>
+    <tr>
+      <td>Two parts selected</td>
+      <td>Both selected parts will be linked together.</td>
+    </tr>
+  </tbody>
+  </table>
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: NoCollisionConstraint.Enabled
+    summary: |
+      Determines whether the two linked `Class.BasePart|BaseParts` will collide
+      with each other.
+    description: |
+      This property determines whether the two linked parts,
+      `Class.NoCollisionConstraint.Part0|Part0` and
+      `Class.NoCollisionConstraint.Part1|Part1`, will collide with each other.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NoCollisionConstraint.Part0
+    summary: |
+      The second `Class.BasePart` that the constraint connects.
+    description: |
+      The second `Class.BasePart` that the constraint connects.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Parts
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NoCollisionConstraint.Part1
+    summary: |
+      The first `Class.BasePart` that the constraint connects.
+    description: |
+      The first `Class.BasePart` that the constraint connects.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Parts
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

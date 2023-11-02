@@ -1,0 +1,105 @@
+name: UserService
+type: class
+category:
+memory_category: Instances
+summary: |
+  A service that handles queries regarding users on the Roblox platform.
+description: |
+  A service that handles queries regarding users on the Roblox platform.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: UserService:GetUserInfosByUserIdsAsync
+    summary: |
+      Returns an array of user information including user name and display name.
+    description: |
+      This function enables developers to request information about users
+      outside of the current `Class.DataModel` in bulk, which is why both the
+      input and output values are arrays.
+
+      - The order of the user info objects in the return value's array may not
+        match the order of the `Class.Player.UserId|UserIds` sent in the input
+        parameter's array. Use the `Id` field of the user info object to
+        identify your input array with the output array.
+      - It's possible to receive fewer user info objects than requested if one
+        or more of the `Class.Player.UserId|UserIds` in the request array are
+        invalid, such as negative numbers or user IDs that don't have accounts
+        associated with them. It's possible to receive a response with zero
+        results if all `Class.Player.UserId|UserIds` are invalid.
+      - If a Roblox user does not have a `Class.Player.DisplayName|DisplayName`
+        associated with their account, this function will instead return the
+        same string as the user's username in their info object's `DisplayName`
+        field. While a user's `Class.Player.UserId|UserId` will never change,
+        they may change their username or display name, so the same input
+        `Class.Player.UserId|UserIds` may return a different string for these
+        fields from one day to another.
+      - Since
+        `Class.UserService:GetUserInfosByUserIdsAsync()|GetUserInfosByUserIdsAsync()`
+        makes an external web request, it will yield and may fail if the backend
+        service is experiencing interruptions. Ensure you can handle downtime
+        appropriately by wrapping this method with a
+        `Global.LuaGlobals.pcall()`.
+
+      The signature of a singular user info object is:
+
+      <table>
+      <thead>
+      <tr>
+        <th>Key</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><code>Id</code></td>
+        <td>number</td>
+        <td>The
+        <code>Class.Player.UserId|UserId</code> associated with the user.</td>
+      </tr>
+      <tr>
+        <td><code>Username</code></td>
+        <td>string</td>
+        <td>The username associated with the user.</td>
+      </tr>
+      <tr>
+        <td><code>DisplayName</code></td>
+        <td>string</td>
+        <td>The
+        <code>Class.Player.DisplayName|DisplayName</code> associated with the
+        user.</td>
+      </tr>
+      <tr>
+        <td><code>HasVerifiedBadge</code></td>
+        <td>boolean</td>
+        <td>The
+        <code>Class.Player.HasVerifiedBadge|HasVerifiedBadge</code> value
+        associated with the user.</td>
+      </tr>
+      </tbody>
+      </table>
+    code_samples:
+      - userservice-getuserinfosbyuseridsasync-example
+    parameters:
+      - name: userIds
+        type: Array
+        default:
+        summary: |
+          An array of `Class.Player.UserId|UserIds` requested.
+    returns:
+      - type: Array
+        summary: |
+          An array of dictionary objects that contain user information.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

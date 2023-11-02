@@ -1,0 +1,97 @@
+name: Genre
+type: enum
+summary: |
+  Used to represent the type of game.
+description: |
+  Used to represent the type of game. This can be changed in the "Basic
+  Settings" tab when configuring a place on the website.
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: ''
+items:
+  - name: All
+    summary: |
+      The game's genre is set to All. The game will be listed as all possible
+      genres.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: TownAndCity
+    summary: |
+      The game's genre is set to Town and City.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Fantasy
+    summary: |
+      The game's genre is set to Fantasy.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: SciFi
+    summary: |
+      The game's genre is set to SciFi (Science Fiction).
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Ninja
+    summary: |
+      The game's genre is set to Ninja.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Scary
+    summary: |
+      The game's genre is set to Scary.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Pirate
+    summary: |
+      The game's genre is set to Pirate.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Adventure
+    summary: |
+      The game's genre is set to Adventure.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Sports
+    summary: |
+      The game's genre is set to Sports.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Funny
+    summary: |
+      The game's genre is set to Funny.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: WildWest
+    summary: |
+      The game's genre is set to Wild West.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: War
+    summary: |
+      The game's genre is set to War.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: SkatePark
+    summary: |
+      The game's genre is set to Skate Park.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Tutorial
+    summary: |
+      The game's genre is set to Tutorial.
+    value: 13
+    tags: []
+    deprecation_message: ''

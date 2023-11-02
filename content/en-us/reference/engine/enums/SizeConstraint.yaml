@@ -1,0 +1,28 @@
+name: SizeConstraint
+type: enum
+summary: |
+  Used to constrain the scale of a GUI object.
+description: |
+  Used to constrain the scale of a GUI object.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: RelativeXY
+    summary: |
+      The scale of X and Y are independent.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: RelativeXX
+    summary: |
+      The scale of X is shared with Y.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: RelativeYY
+    summary: |
+      The scale of Y is shared with X.
+    value: 2
+    tags: []
+    deprecation_message: ''

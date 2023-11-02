@@ -1,0 +1,31 @@
+name: Enum
+type: datatype
+summary: |
+  A data type that represents an individual enum.
+description: |
+  The `Datatype.Enum` data type represents an individual enum in Roblox. An
+  individual enum can be indexed through the `Datatype.Enums` type, via the name
+  of the enum itself.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+constants: []
+properties:
+methods:
+  - name: Enum:GetEnumItems
+    summary: |
+      Returns an array of all `Datatype.EnumItem` options available for this
+      enum.
+    description: |
+      Returns an array of all the `Datatype.EnumItem` options available for this
+      enum.
+    parameters:
+    returns:
+      - type: Array
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

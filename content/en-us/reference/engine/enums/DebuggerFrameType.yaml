@@ -1,0 +1,22 @@
+name: DebuggerFrameType
+type: enum
+summary: |
+  Call stack frame type.
+description: |
+  Call stack frame type.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: C
+    summary: |
+      Call stack frame belongs to a C (native) function.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Lua
+    summary: |
+      Call stack frame belongs to a Lua function.
+    value: 1
+    tags: []
+    deprecation_message: ''

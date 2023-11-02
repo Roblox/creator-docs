@@ -1,0 +1,23 @@
+name: AudioPages
+type: class
+category:
+memory_category: Instances
+summary: |
+  A special version of the `Class.Pages` class returned by
+  `Class.AssetService:SearchAudio()`.
+description: |
+  A special version of the `Class.Pages` class returned by
+  `Class.AssetService:SearchAudio()`. See the following code sample for
+  reference on the returned data format.
+code_samples:
+  - printing-search-audio-result-titles
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

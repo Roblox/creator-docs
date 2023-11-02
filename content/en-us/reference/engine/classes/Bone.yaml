@@ -1,0 +1,137 @@
+name: Bone
+type: class
+category:
+memory_category: Instances
+summary: |
+  Bones are non-rendered objects that drive the movement of one or more parts
+  for the purposes of animation, or creating clothing and characters.
+description: |
+  Bones are non-rendered objects that drive the movement of one or more parts
+  for the purposes of animation, or creating clothing and characters. Bones are
+  part of a `Class.Model` or `Class.MeshPart` object's skeletal **rig** that you
+  typically access and animate through the
+  [Animation Editor](../../../animation/editor.md).
+
+  Rigs are created during the modeling process in third-party software such as
+  Blender or Maya. After importing the rigged model into Studio, you can add the
+  model directly to your experience, or save and share the model as an asset.
+  See [Rigging](../../../art/modeling/rigging.md) for more details on creating
+  and using rigged models.
+
+  Note that you can parent `Class.Bone|Bones` under other `Class.Bone|Bones` and
+  parts. When parenting a bone to another bone, the child bone's world position
+  will be relative to the parent bone's position, and the hierarchy of parented
+  `Class.Bone` objects can change the behavior of affected parts during posing
+  or animation.
+
+  ##### Relationship with Motor6D
+
+  To support animations with older rigs using joints, such as `Class.Motor6D`,
+  you can use the `Class.Bone.Transform` property in the same way as
+  `Class.Motor6D.Transform`. Roblox uses the offset of the bones from the
+  default pose to drive an animation, and bones are not replicated or
+  serialized.
+
+  ##### Bone.CFrame
+
+  Bones inherit the `Class.Attachment.CFrame|CFrame` property of
+  `Class.Attachment|Attachments` which Roblox uses as the bone's reference
+  position. The inherited `Class.Attachment.WorldCFrame|WorldCFrame` and other
+  world properties return the initial un-transformed position.
+code_samples:
+inherits:
+  - Attachment
+tags: []
+deprecation_message: ''
+properties:
+  - name: Bone.Transform
+    summary: |
+      Determines the current animated offset of the bone in its local space.
+    description: |
+      **Transform** determines the current animated offset of the bone relative
+      to its `Class.Attachment.CFrame|CFrame`. This property is set by Roblox
+      when animations on skinned meshes are played, although it can be
+      manipulated manually in a manner similar to `Class.Motor6D.Transform`.
+
+      See also:
+
+      - `Class.Motor6D.Transform`, a property which plays a similar role in
+        character rig animation
+      - `Class.Bone.TransformedCFrame|TransformedCFrame` and
+        `Class.Bone.TransformedWorldCFrame|TransformedWorldCFrame`, whose values
+        are partially determined by this property
+    code_samples:
+    type: CFrame
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Bone.TransformedCFrame
+    summary: |
+      Describes the combined `Class.Attachment.CFrame|CFrame` offset of the bone
+      and the current animation offset in the bone local space.
+    description: |
+      **TransformedCFrame** describes the combined
+      `Class.Attachment.CFrame|CFrame` offset of the bone and the current
+      animation offset (`Class.Bone.Transform|Transform`) in the bone's local
+      space.
+
+      See also:
+
+      - `Class.Bone.Transform|Transform`, a property which partially determines
+        this property's value
+      - `Class.Bone.TransformedWorldCFrame`, a world-space variant of this
+        property
+    code_samples:
+    type: CFrame
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Bone.TransformedWorldCFrame
+    summary: |
+      Describes the combined `Class.Attachment.CFrame|CFrame` offset of the bone
+      and the current animation offset in world space.
+    description: |
+      **TransformedWorldCFrame** describes the combined
+      `Class.Attachment.CFrame|CFrame` offset of the bone and the current
+      animation offset (`Class.Bone.Transform|Transform`) in world space.
+
+      See also:
+
+      - `Class.Bone.Transform|Transform`, a property which partially determines
+        this property's value
+      - `Class.Bone.TransformedCFrame`, a local-space variant of this property
+    code_samples:
+    type: CFrame
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Derived World Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

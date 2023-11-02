@@ -1,0 +1,162 @@
+name: TweenService
+type: class
+category: Animations
+memory_category: Instances
+summary: |
+  TweenService is used to create `Class.Tween`s, which are used to interpolate,
+  or tween, the properties of instances. `Class.Tween`s can be used on any
+  object with compatible property types.
+description: |
+  Tweens are used to interpolate the properties of instances. These can be used
+  to create animations for various Roblox objects. Almost any numeric property
+  can be tweened using TweenService. Note that only specific types of properties
+  can be used with TweenService. The types of properties that can be tweened
+  are:
+
+  - number
+  - bool
+  - `Datatype.CFrame`
+  - `Datatype.Rect`
+  - `Datatype.Color3`
+  - `Datatype.UDim`
+  - `Datatype.UDim2`
+  - `Datatype.Vector2`
+  - `Datatype.Vector2int16`
+  - `Datatype.Vector3`
+  - `Datatype.EnumItem`
+
+  TweenService's constructor function, `Class.TweenService:Create()`, takes
+  information about the animation and generates the `Class.Tween` object which
+  can be used to play the animation. Note that `Tweens` can animate multiple
+  properties at the same time.
+
+  Details on how the interpolation of the tween is to be carried out are given
+  in the tweenInfo parameter of TweenService:Create(). The `Datatype.TweenInfo`
+  data type includes a range of properties that can be used to achieve various
+  styles of animation, including reversing and looping `Tweens` (see examples).
+
+  Multiple tweens can be played on the same object at the same time, but they
+  must not be animating the same property. If two tweens attempt to modify the
+  same property, the initial tween will be cancelled and overwritten by the most
+  recent tween (see examples).
+
+  Although other methods exist for tweening objects, such as
+  `Class.GuiObject:TweenSizeAndPosition()`, TweenService allows multiple
+  properties to be modified and for the animation to be paused and cancelled at
+  any point.
+code_samples:
+  - Tween-Creation
+  - Tween-Conflict
+  - Looped-Tween
+  - Tween-Pausing
+  - tween-an-enumitem
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: TweenService:Create
+    summary: |
+      Creates a new `Class.Tween` given the object whose properties are to be
+      tweened, a `Datatype.TweenInfo` and a dictionary of goal property values.
+    description: |
+      The Create function of `Class.TweenService` creates a new `Class.Tween`.
+      The function takes three arguments: the object to tween, the
+      `Datatype.TweenInfo` to use, and a table containing the properties to
+      tween and the values to tween to.
+
+      Tweens are used to interpolate the properties of instances. These can be
+      used to create animations for various Roblox objects. Almost any numeric
+      property can be tweened using `Class.TweenService`.
+
+      The propertyTable parameter that is passed in needs to be a dictionary
+      where the keys are the string names of the property (e.g. "Position",
+      "Transparency", "Color", etc), and the value is the value the property
+      needs to be at the end of the tween. Note that only specific types of
+      properties can be used with `Class.TweenService`, but multiple properties
+      can be animated in the same tween. The types of properties that can be
+      tweened are:
+
+      - number
+      - bool
+      - `Datatype.CFrame`
+      - `Datatype.Rect`
+      - `Datatype.Color3`
+      - `Datatype.UDim`
+      - `Datatype.UDim2`
+      - `Datatype.Vector2`
+      - `Datatype.Vector2int16`
+      - `Datatype.Vector3`
+
+      The `Class.Tween` created using this function is unique to the object
+      given as the instance parameter. To apply the same tween to another
+      object, call this function again with the new object.
+
+      Details on how the interpolation of the tween is to be carried out are
+      given in the `Datatype.TweenInfo` parameter, such as reversing, looping
+      and easing.
+    code_samples:
+      - Tween-Creation
+      - Looped-Tween
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` whose properties are to be tweened.
+      - name: tweenInfo
+        type: TweenInfo
+        default:
+        summary: |
+          The `Datatype.TweenInfo` to be used.
+      - name: propertyTable
+        type: Dictionary
+        default:
+        summary: |
+          A dictionary of properties, and their target values, to be tweened.
+    returns:
+      - type: Tween
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TweenService:GetValue
+    summary: |
+      Calculates a new alpha given an `Enum.EasingStyle` and
+      `Enum.EasingDirection`.
+    description: |
+      Returns a new alpha value for interpolating using the given alpha value,
+      `Enum.EasingStyle`, and `Enum.EasingDirection`.
+
+      The provided alpha value is clamped between 0 and 1.
+    code_samples:
+    parameters:
+      - name: alpha
+        type: float
+        default:
+        summary: |
+          An interpolation value between 0 and 1.
+      - name: easingStyle
+        type: EasingStyle
+        default:
+        summary: |
+          The easing style to use.
+      - name: easingDirection
+        type: EasingDirection
+        default:
+        summary: |
+          The easing direction to use.
+    returns:
+      - type: float
+        summary: |
+          A new alpha value generated from the given easing style and direction.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

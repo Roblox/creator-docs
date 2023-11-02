@@ -1,0 +1,551 @@
+name: Vector3
+type: datatype
+summary: |
+  Represents a 3D value with a direction and magnitude.
+description: |
+  The `Datatype.Vector3` data type represents a vector in 3D space, typically
+  usually used as a point in 3D space or the dimensions of a rectangular prism.
+  `Datatype.Vector3` supports basic component-based arithmetic operations (sum,
+  difference, product, and quotient) and these operations can be applied on the
+  left or right hand side to either another `Datatype.Vector3` or a number. It
+  also features methods for common vector operations, such as
+  `Datatype.Vector3:Cross()|Cross()` and `Datatype.Vector3:Dot()|Dot()`.
+
+  Some example usages of `Datatype.Vector3` are the
+  `Class.BasePart.Position|Position`, `Class.BasePart.Rotation|Rotation`, and
+  `Class.BasePart.Size|Size` of parts, for example:
+
+  ```lua
+  local part = workspace.Part
+  part.Position = part.Position + Vector3.new(5, 2, 10)  -- Move part by (5, 2, 10)
+  ```
+
+  `Datatype.Vector3` is also commonly used when constructing more complex 3D
+  data types such as `Datatype.CFrame`. Many of these data types' methods will
+  use a `Datatype.Vector3` within their parameters, such as
+  `Datatype.CFrame:PointToObjectSpace()`.
+
+  #### Math Operations
+
+  The following math operations are valid for the `Datatype.Vector3` data type:
+
+  <table>
+    <thead>
+      <tr>
+        <td>Operation</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>+</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the second added to the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>-</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the second subtracted from the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the second multiplied by the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the first divided by the corresponding component of the second.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component multiplied by the number.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component divided by the number.</td>
+      </tr>
+    </tbody>
+  </table>
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Vector3.new
+    summary: Returns a new `Datatype.Vector3` from the given x, y, and z components.
+    description: Returns a new `Datatype.Vector3` using the given x, y, and z components.
+    parameters:
+      - name: x
+        type: number
+        default: 0
+        summary: ''
+      - name: 'y'
+        type: number
+        default: 0
+        summary: ''
+      - name: z
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.FromNormalId
+    summary: Returns a new `Datatype.Vector3` in the given direction.
+    description: Returns a new `Datatype.Vector3` in the given direction.
+    parameters:
+      - name: normal
+        type: NormalId
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.FromAxis
+    summary: Returns a new `Datatype.Vector3` for the given axis.
+    description: Returns a new `Datatype.Vector3` for the given axis.
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants:
+  - name: Vector3.zero
+    type: Vector3
+    summary: A `Datatype.Vector3` with a magnitude of zero.
+    description: |-
+      A `Datatype.Vector3` with a magnitude of zero.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+
+      ```lua
+      print(Vector3.zero)  --> 0, 0, 0
+      ```
+    code_samples:
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.one
+    type: Vector3
+    summary: A `Datatype.Vector3` with a value of 1 on every axis.
+    description: |-
+      A `Datatype.Vector3` with a value of 1 on every axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+
+      ```lua
+      print(Vector3.one)  --> 1, 1, 1
+      ```
+    code_samples:
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.xAxis
+    type: Vector3
+    summary: A `Datatype.Vector3` with a value of 1 on the X axis.
+    description: |-
+      A `Datatype.Vector3` with a value of 1 on the X axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+
+      ```lua
+      print(Vector3.xAxis)  --> 1, 0, 0
+      ```
+    code_samples:
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.yAxis
+    type: Vector3
+    summary: A `Datatype.Vector3` with a value of 1 on the Y axis.
+    description: |-
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+
+      ```lua
+      print(Vector3.yAxis)  --> 0, 1, 0
+      ```
+    code_samples:
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.zAxis
+    type: Vector3
+    summary: A `Datatype.Vector3` with a value of 1 on the Z axis.
+    description: |-
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3` object.
+
+      ```lua
+      print(Vector3.zAxis)  --> 0, 0, 1
+      ```
+    code_samples:
+    tags: []
+    deprecation_message: ''
+properties:
+  - name: Vector3.zero
+    type: Vector3
+    summary: |
+      A `Datatype.Vector3` with a magnitude of zero.
+    description: |
+      A `Datatype.Vector3` with a magnitude of zero.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
+
+      ```lua
+      print(Vector3.zero) --> 0, 0, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.one
+    type: Vector3
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on every axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on every axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
+
+      ```lua
+      print(Vector3.one)  --> 1, 1, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.xAxis
+    type: Vector3
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the X axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the X axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
+
+      ```lua
+      print(Vector3.xAxis)  --> 1, 0, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.yAxis
+    type: Vector3
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the Y axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
+
+      ```lua
+      print(Vector3.yAxis)  --> 0, 1, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.zAxis
+    type: Vector3
+    summary: |
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
+    description: |
+      A `Datatype.Vector3` with a value of 1 on the Z axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector3` global as opposed to an individual `Datatype.Vector3`
+      object.
+
+      ```lua
+      print(Vector3.zAxis)  --> 0, 0, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.X
+    type: number
+    summary: |
+      The x-coordinate of the Vector3.
+    description: |
+      The x-coordinate of the Vector3.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.Y
+    type: number
+    summary: |
+      The y-coordinate of the Vector3.
+    description: |
+      The y-coordinate of the Vector3.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.Z
+    type: number
+    summary: |
+      The z-coordinate of the Vector3.
+    description: |
+      The z-coordinate of the Vector3.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.Magnitude
+    type: number
+    summary: |
+      The length of the Vector3.
+    description: |
+      The length of the Vector3.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3.Unit
+    type: Vector3
+    summary: |
+      A normalized copy of the `Datatype.Vector3` - one that has the same
+      direction as the original but a magnitude of 1.
+    description: |
+      A normalized copy of the `Datatype.Vector3` - one that has the same
+      direction as the original but a magnitude of 1.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: Vector3:Cross
+    summary: |
+      Returns the cross product of the two vectors.
+    description: |
+      Returns the cross product of the two vectors.
+    parameters:
+      - name: other
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Angle
+    summary: |
+      Returns the angle in radians between the two vectors. If an axis is
+      provided, it determines the sign of the angle.
+    description: |
+      Returns the angle in radians between the two vectors. If an axis is
+      provided, it determines the sign of the angle.
+    parameters:
+      - name: other
+        type: Vector3
+        default:
+        summary: ''
+      - name: axis
+        type: Vector3
+        default: nil
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Dot
+    summary: |
+      Returns a scalar dot product of the two vectors.
+    description: |
+      Returns a scalar dot product of the two vectors.
+    parameters:
+      - name: other
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:FuzzyEq
+    summary: |
+      Returns `true` if the X, Y, and Z components of the other
+      `Datatype.Vector3` are within epsilon units of each corresponding
+      component of this `Datatype.Vector3`.
+    description: |
+      Returns `true` if the X, Y, and Z components of the other
+      `Datatype.Vector3` are within epsilon units of each corresponding
+      component of this `Datatype.Vector3`.
+    parameters:
+      - name: other
+        type: Vector3
+        default:
+        summary: ''
+      - name: epsilon
+        type: number
+        default: 0.00001 aka 1e-5
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Lerp
+    summary: |
+      Returns a `Datatype.Vector3` linearly interpolated between this
+      `Datatype.Vector3` and the given goal by the given alpha.
+    description: |
+      Returns a `Datatype.Vector3` linearly interpolated between this
+      `Datatype.Vector3` and the given `goal` `Datatype.Vector3` by the fraction
+      `alpha`.
+
+      Note: the `alpha` value is **not** limited to the range [0, 1].
+    parameters:
+      - name: goal
+        type: Vector3
+        default:
+        summary: ''
+      - name: alpha
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Max
+    summary: |
+      Returns a `Datatype.Vector3` with each component as the highest among the
+      respective components of both provided `Datatype.Vector3` objects.
+    description: |
+      Returns a `Datatype.Vector3` with each component as the highest among the
+      respective components of both provided `Datatype.Vector3` objects.
+
+      ```lua
+      local a = Vector3.new(1, 2, 1)
+      local b = Vector3.new(2, 1, 2)
+
+      print(a:Max(b))  --> Vector3.new(2, 2, 2)
+      ```
+    parameters:
+      - name: vector
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Min
+    summary: |
+      Returns a `Datatype.Vector3` with each component as the lowest among the
+      respective components of both provided `Datatype.Vector3` objects.
+    description: |
+      Returns a `Datatype.Vector3` with each component as the lowest among the
+      respective components of both provided `Datatype.Vector3` objects.
+
+      ```lua
+      local a = Vector3.new(1, 2, 1)
+      local b = Vector3.new(2, 1, 2)
+
+      print(a:Min(b))  --> Vector3.new(1, 1, 1)
+      ```
+    parameters:
+      - name: vector
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:
+  - operation: +
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the second added to
+      the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the second added to
+      the corresponding component of the first.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '-'
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the second subtracted
+      from the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the second subtracted
+      from the corresponding component of the first.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '*'
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the second multiplied
+      by the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the second multiplied
+      by the corresponding component of the first.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: /
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the first divided by
+      the corresponding component of the second.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the first divided by
+      the corresponding component of the second.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '*'
+    summary: |
+      Produces a `Datatype.Vector3` with each component multiplied by the
+      number.
+    description: |
+      Produces a `Datatype.Vector3` with each component multiplied by the
+      number.
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: /
+    summary: |
+      Produces a `Datatype.Vector3` with each component divided by the number.
+    description: |
+      Produces a `Datatype.Vector3` with each component divided by the number.
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,30 @@
+name: CustomCameraMode
+type: enum
+summary: |
+  Changes the player's camera mode in Roblox's Game settings.
+description: |
+  Changes the player's camera mode in Roblox's Game settings.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default camera mode is classic.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Classic
+    summary: |
+      Camera tracks the player but will not automatically rotate if the player
+      walks left or right.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Follow
+    summary: |
+      Camera tracks the player and automatically rotates if the player walks
+      left or right.
+    value: 2
+    tags: []
+    deprecation_message: ''

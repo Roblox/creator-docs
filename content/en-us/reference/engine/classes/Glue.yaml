@@ -1,0 +1,91 @@
+name: Glue
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: |
+  Glue is a type of joint that can break when enough force is applied.
+description: |
+  Glue is a type of joint that can break when enough force is applied.
+code_samples:
+inherits:
+  - JointInstance
+tags:
+  - Deprecated
+deprecation_message: |
+  This joint type has been deprecated and should not be used in new work
+properties:
+  - name: Glue.F0
+    summary: |
+      Determines the face of a `Class.Glue`.
+    description: |
+      F0 helps determining the Glue face of a `Class.Glue`, which determines the
+      amount of force needed to break the joint.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Glue.F1
+    summary: |
+      Determines the face of a `Class.Glue`.
+    description: |
+      F1 helps determining the Glue face of a `Class.Glue`, which determines the
+      amount of force needed to break the joint.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Glue.F2
+    summary: |
+      Determines the face of a `Class.Glue`.
+    description: |
+      F2 helps determining the Glue face of a `Class.Glue`, which determines the
+      amount of force needed to break the joint.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Glue.F3
+    summary: |
+      Determines the face of a `Class.Glue`.
+    description: |
+      F3 helps determining the Glue face of a `Class.Glue`, which determines the
+      amount of force needed to break the joint.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,30 @@
+name: ScrollingDirection
+type: enum
+summary: |
+  This enum is used by `Class.ScrollingFrame.ScrollingDirection` to specify the
+  direction scrolling is allowed.
+description: |
+  This enum is used by `Class.ScrollingFrame.ScrollingDirection` to specify the
+  direction scrolling is allowed.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: X
+    summary: |
+      Canvas can only be scrolled along the X axis.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: 'Y'
+    summary: |
+      Canvas can only be scrolled along the Y axis.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: XY
+    summary: |
+      Canvas can be scrolled along both X and Y axes.
+    value: 4
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,193 @@
+name: PointsService
+type: class
+category: Gameplay
+memory_category: Instances
+summary: |
+  This service controls the points award system used to showcase a player's
+  achievements and participation throughout Roblox.
+description: |
+  The PointsService class controls points.
+
+  Points are an award system used to showcase a player's achievements and
+  participation throughout Roblox. How points are awarded through this service
+  is at the discretion of the game's developer.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - Deprecated
+deprecation_message: |
+  This class was once used to control an ancient achievement system since
+  removed and deprecated. It and its members should not be used in new work.
+properties: []
+methods:
+  - name: PointsService:GetAwardablePoints
+    summary: |
+      Returns the number of points the current game has available to award to
+      players.
+    description: |
+      This function returns the number of points the current game has available
+      to award to players.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function was once part of the `PointService` class used to control an
+      ancient achievement system since removed and deprecated. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PointsService:AwardPoints
+    summary: |
+      Attempts to award the user with the specified `Class.Player.UserId` the
+      specified number of points.
+    description: |
+      This function attempts to award the user with the specified
+      `Class.Player.UserId` the specified number of points.
+
+      If successful, this function will return the UserId of the user the points
+      were awarded to, the number of points awarded, the new total number of
+      points the user has in the game and another value which appears to always
+      be 0.
+
+      This function will cause an error if the specified UserId is not positive
+      or if the number of points specified is 0.
+
+      The function can be used to award a negative number of points to a user
+      however.
+
+      ```lua
+      local userId, amount, total = game:GetService("PointsService"):AwardPoints(1, 5)
+      print("The user was awarded " ..amount.. " points. They have now have a total of " ..total.. " points in this game.")
+      ```
+    code_samples:
+      - PointsService-AwardPoints1
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+      - name: amount
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function was once part of the `PointService` class used to control an
+      ancient achievement system since removed and deprecated. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PointsService:GetGamePointBalance
+    summary: |
+      Returns the total number of points a player has in the current game.
+    description: |
+      This function returns the total number of points a player has in the
+      current game.
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function was once part of the `PointService` class used to control an
+      ancient achievement system since removed and deprecated. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PointsService:GetPointBalance
+    summary: |
+      Returns the total number of points the given player has across all games.
+    description: |
+      This function returns the total number of points the given player has
+      across **_all_** games.
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function was once part of the `PointService` class used to control an
+      ancient achievement system since removed and deprecated. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: PointsService.PointsAwarded
+    summary: |
+      Fires when points have been successfully awarded to a player, while also
+      passing along the updated balance of points the player has in the current
+      game and all games.
+    description: |
+      This event fires when points have been successfully awarded to a player,
+      while also passing along the updated balance of points the player has in
+      the current game and all games.
+
+      When a player is awarded points successfully the below example would print
+      the userId and their new point balance. If, for example, the Roblox
+      account was awarded thirty points (and had none to begin with)
+
+      > User: 1 has now earned 30 (+30) points in the current game, now making
+      > their total balance
+
+      would be printed.
+
+      ```lua
+      local function pointsAwarded(userId, pointsAwarded, userBalanceInGame, userTotalBalance)
+      	print("User: " .. userId .. " has now earned " .. userBalanceInGame .. " (+" .. pointsAwarded ..") points in the current game, now making their total balance " .. userTotalBalance)
+      end
+
+      game:GetService("PointsService").PointsAwarded:Connect(pointsAwarded)
+      ```
+    code_samples:
+      - PointsService-PointsAwarded1
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+      - name: pointsAwarded
+        type: int
+        default:
+        summary: ''
+      - name: userBalanceInGame
+        type: int
+        default:
+        summary: ''
+      - name: userTotalBalance
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      This function was once part of the `PointService` class used to control an
+      ancient achievement system since removed and deprecated. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

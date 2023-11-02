@@ -1,0 +1,80 @@
+name: BoolValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single boolean value.
+description: |
+  An instance which is used to hold a boolean value. The value can be used for
+  many things, including to communicate between scripts.
+code_samples:
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: BoolValue.Value
+    summary: |
+      Used to hold a boolean value.
+    description: |
+      Used to hold a boolean value.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: BoolValue.Changed
+    summary: |
+      Fired whenever the `Class.BoolValue.Value` of the BoolValue is changed.
+    description: |
+      Fired whenever the `Class.BoolValue.Value` of the `Class.BoolValue` is
+      changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      BoolValue changes and to track the different values that it may change to.
+
+      For instance, this may be useful in games that rely on BoolValues to track
+      game states and values, such as switch or enabled states.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - BoolValue-Changed1
+    parameters:
+      - name: value
+        type: bool
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BoolValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: bool
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of `Class.BoolValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

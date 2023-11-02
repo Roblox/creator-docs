@@ -1,0 +1,207 @@
+name: PluginMenu
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  A context menu that can be shown in Studio. Displays a list of PluginActions
+  and supports submenus.
+description: |
+  A context menu that can be shown in Studio. It displays a list of
+  PluginActions and supports submenus.
+
+  PluginMenus must be created using the `Class.Plugin:CreatePluginMenu()`
+  function in order to work as expected.
+
+  See also:
+
+  - `Class.PluginAction`, an object that represents a generic performable action
+    in Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`.
+  - `Class.Plugin:CreatePluginAction()`, creates a PluginAction.
+  - `Class.PluginMenu.Title`, the text to be displayed when used as a sub menu.
+  - `Class.PluginMenu.Icon`, the icon to be displayed when used as a sub menu.
+  - `Class.PluginMenu:AddAction()`, adds the given action to the menu.
+  - `Class.PluginMenu:AddNewAction()`, creates a temporary action that is hidden
+    from Studio's customize shortcuts window.
+  - `Class.PluginMenu:AddMenu()`, adds the given menu as a separator.
+  - `Class.PluginMenu:AddSeparator()`, adds a separator between items in the
+    menu
+  - `Class.PluginMenu:Clear()`, clears the menu.
+  - `Class.PluginMenu:ShowAsync()`, shows the menu at the mouse cursor. Yields
+    until either an item is selected or the menu is closed. The selected action
+    fires its Triggered event.
+code_samples:
+  - creating-a-pluginaction-and-pluginmenu
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PluginMenu.Icon
+    summary: |
+      The icon to be displayed when used as a sub menu.
+    description: |
+      This property determines the icon to be displayed when used as a sub menu.
+      It defaults to an empty string `""`.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    type: string
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: PluginMenu.Title
+    summary: |
+      The text to be displayed when used as a sub menu.
+    description: |
+      This property determines the text to be displayed when a
+      `Class.PluginMenu` is used as a sub menu. It defaults to an empty string
+      `""`.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    type: string
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: PluginMenu:AddAction
+    summary: |
+      Adds the given action to the menu.
+    description: |
+      Adds the given action to the menu.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters:
+      - name: action
+        type: Instance
+        default:
+        summary: |
+          The action to add.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginMenu:AddMenu
+    summary: |
+      Adds the given menu as a separator.
+    description: |
+      Adds the given menu as a separator.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters:
+      - name: menu
+        type: Instance
+        default:
+        summary: |
+          The menu to add as a sub menu. Uses its `Class.PluginMenu.Title` and
+          `Class.PluginMenu.Icon` to display.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginMenu:AddNewAction
+    summary: |
+      Creates a temporary action that is hidden from Studio's customize
+      shortcuts window.
+    description: |
+      Creates a temporary action that is hidden from Studio's customize
+      shortcuts window.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters:
+      - name: actionId
+        type: string
+        default:
+        summary: |
+          Must be a unique string that identifies this PluginAction from others.
+      - name: text
+        type: string
+        default:
+        summary: |
+          The text to be displayed.
+      - name: icon
+        type: string
+        default: ''
+        summary: |
+          The icon to be displayed.
+    returns:
+      - type: Instance
+        summary: |
+          The created `Class.PluginAction`.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginMenu:AddSeparator
+    summary: |
+      Adds a separator between items in the menu.
+    description: |
+      Adds a separator between items in the menu.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginMenu:Clear
+    summary: |
+      Clears the menu.
+    description: |
+      Clears the menu.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginMenu:ShowAsync
+    summary: |
+      Shows the menu at the mouse cursor. Yields until either an item is
+      selected or the menu is closed.
+    description: |
+      Shows the menu at the mouse cursor. It yields until either an item is
+      selected or the menu is closed. The selected action fires its
+      `Class.PluginAction.Triggered` event.
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters: []
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.PluginAction` item that was selected or nil.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

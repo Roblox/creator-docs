@@ -1,0 +1,23 @@
+name: ServerAudioBehavior
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Enabled
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Muted
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: OnlineGame
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

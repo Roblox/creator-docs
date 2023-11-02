@@ -1,0 +1,23 @@
+name: TrackerLodFlagMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: ForceFalse
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ForceTrue
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Auto
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

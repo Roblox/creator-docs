@@ -1,0 +1,27 @@
+name: LocalScript
+type: class
+category: Scripting
+memory_category: Script
+summary: |
+  An object that contains and runs Lua code on the client (player's device)
+  instead of the server.
+description: |
+  A `Class.LocalScript` is a Lua code container that runs its contents on the
+  client (player's device) instead of the server. It is used to access
+  client-only objects such as the player's `Class.Camera`.
+
+  For code run through `Class.LocalScript|LocalScripts`, the
+  `Class.Players.LocalPlayer|LocalPlayer` property of the `Class.Players`
+  service will return the player whose client is running the script.
+
+  See [here](../../../projects/data-model.md#client) for a table of valid
+  container services from which `Class.LocalScript|LocalScripts` will execute.
+code_samples:
+inherits:
+  - Script
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

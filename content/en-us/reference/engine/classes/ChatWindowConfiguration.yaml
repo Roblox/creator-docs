@@ -1,0 +1,294 @@
+name: ChatWindowConfiguration
+type: class
+category:
+memory_category: Instances
+summary: |
+  Configures properties of the default chat window.
+description: |
+  Configures properties of the default chat window.
+
+  It is parented to `Class.TextChatService`.
+code_samples: []
+inherits:
+  - TextChatConfigurations
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: ChatWindowConfiguration.AbsolutePosition
+    summary: |
+      Describes the actual screen position of the default chat window, in
+      pixels.
+    description: |
+      Read-only property that provides the screen position of the default chat
+      window in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
+    code_samples: []
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: ChatWindowConfiguration.AbsoluteSize
+    summary: |
+      Describes the actual screen size of the default chat window, in pixels.
+    description: |
+      Read-only property that provides the screen size of the default chat
+      window in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
+    code_samples: []
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: ChatWindowConfiguration.BackgroundColor3
+    summary: |
+      Determines the background color of the default chat window.
+    description: |
+      Determines the background color of the default chat window. If the
+      background color is not overridden, this value will respect the user's
+      `Class.GuiService.PreferredTransparency` by making the menu more gray as
+      the transparency of the menu decreases. Default value is
+      `Datatype.Color3|Color3.new(25,27,29)`.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.BackgroundTransparency
+    summary: |
+      Determines the background transparency of the default chat window.
+    description: |
+      Determines the background transparency of the default chat window in a
+      number between 0 and 1. This value is multiplied with the user's
+      `Class.GuiService.PreferredTransparency` to create the effective
+      background transparency used by the chat window, which may be more opaque
+      than this value set here. Default value is 0.3.
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.Enabled
+    summary: |
+      Determines whether to show the default chat window.
+    description: |
+      Determines whether to show the default chat window.
+
+      Set to `false` to hide the default chat window.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.FontFace
+    summary: |
+      Determines the font used to render text in the default chat window.
+    description: |
+      Determines the font used to render text in the default chat window.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.HeightScale
+    summary: |
+      Determines by what factor the height of the default chat window should be
+      scaled.
+    description: |
+      Determines by what factor the height of the default chat window should be
+      scaled. Must be a value between 0.5 and 2. Defining a value outside of
+      range clamps the actual value to the closest bound.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.HorizontalAlignment
+    summary: |
+      Determines the horizontal alignment of the chat window.
+    description: |
+      Determines the horizontal alignment of the chat window. Behaves similarly
+      to `Class.UIGridStyleLayout.HorizontalAlignment`. Setting to `Left` or
+      `Right` adding a small padding away from touching the corresponding
+      horizontal edge of the screen. Setting to `Center` aligns the window in
+      the horizontal middle of the screen. Default value is `Left`.
+    code_samples: []
+    type: HorizontalAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.TextColor3
+    summary: |
+      Determines the color of the text in default chat window.
+    description: |
+      Determines the color of the text in default chat window. Default value is
+      `Datatype.Color3|Color3.new(255, 255, 255)` (white).
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.TextSize
+    summary: |
+      Determines the size of the text in default chat window.
+    description: |
+      Determines the size of the text in default chat window. Default value
+      is 14.
+    code_samples: []
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.TextStrokeColor3
+    summary: |
+      Determines the color of the text stroke of text in default chat window.
+    description: |
+      Determines the color of the text stroke of text in default chat window.
+      Default value is `Datatype.Color3|Color3.new(0, 0, 0)` (black).
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.TextStrokeTransparency
+    summary: |
+      Determines the transparency of the text stroke of text in default chat
+      window.
+    description: |
+      Determines the color of the text stroke of text in default chat window.
+      Default value is 0.5.
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.VerticalAlignment
+    summary: |
+      Determines the vertical alignment of the chat window.
+    description: |
+      Determines the vertical alignment of the chat window. Behaves similarly to
+      `Class.UIGridStyleLayout.VerticalAlignment`. Setting to `Top` or `Bottom`
+      adds a small padding away from touching the corresponding edge of the
+      screen. Setting to Center aligns the window in the vertical middle of the
+      screen. Default value is `Top`.
+    code_samples: []
+    type: VerticalAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChatWindowConfiguration.WidthScale
+    summary: |
+      Determines by what factor the width of the default chat window should be
+      scaled.
+    description: |
+      Determines by what factor the width of the default chat window should be
+      scaled. Must be a value between 0.5 and 2. Defining a value outside of
+      range clamps the actual value to the closest bound.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

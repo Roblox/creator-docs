@@ -1,0 +1,68 @@
+name: AnimationClipFromVideoStatus
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Initializing
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Pending
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Processing
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ErrorGeneric
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Success
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: ErrorVideoTooLong
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: ErrorNoPersonDetected
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: ErrorVideoUnstable
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Cancelled
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: ErrorMultiplePeople
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: ErrorUploadingVideo
+    summary: ''
+    value: 2001
+    tags: []
+    deprecation_message: ''

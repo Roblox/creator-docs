@@ -1,0 +1,95 @@
+name: TaskScheduler
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  Collection of settings for the _Task Scheduler_ feature.
+description: |
+  TaskScheduler is a read-only settings class responsible for the Task Scheduler
+  feature. Can be found in Roblox Studio's settings with the name _Task
+  Scheduler_.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: TaskScheduler.SchedulerDutyCycle
+    summary: |
+      The average time divided by the average interval of the duty cycle.
+    description: |
+      The average time divided by the average interval of the duty cycle.
+    code_samples:
+    type: double
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TaskScheduler.SchedulerRate
+    summary: |
+      The current average rate of the task scheduler.
+    description: |
+      The current average rate of the task scheduler.
+    code_samples:
+    type: double
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TaskScheduler.ThreadPoolConfig
+    summary: |
+      The specified thread pooling configuration for the task scheduler.
+    description: |
+      The specified thread pooling configuration for the task scheduler.
+    code_samples:
+    type: ThreadPoolConfig
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Configuration
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TaskScheduler.ThreadPoolSize
+    summary: |
+      The current size of the thread pool.
+    description: |
+      The current size of the thread pool.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

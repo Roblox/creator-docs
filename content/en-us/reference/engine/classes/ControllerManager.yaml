@@ -1,0 +1,193 @@
+name: ControllerManager
+type: class
+category:
+memory_category: Instances
+summary: |
+  Manages simulated motion control for its assigned
+  `Class.ControllerManager.RootPart` .
+description: |
+  The `Class.ControllerManager` instance manages simulated motion control for
+  its assigned `Class.ControllerManager.RootPart`. It can be used to build a
+  physics-based character controller.
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: ControllerManager.ActiveController
+    summary: |
+      The `Class.ControllerBase` that is set to be activated on the character.
+    description: |
+      The `Class.ControllerBase` that is set to be activated on the character.
+      It does not guarantee that the specified `Class.ControllerBase` is, in
+      fact, active. If the `Class.ControllerBase` cannot be activated for
+      whatever reason, such as being outside of the character's
+      `Class.WorldRoot` or no `Class.Part` being found to use as the floor for a
+      `Class.GroundController`, it will remain set and the
+      `Class.ControllerManager` will attempt to activate it in the next frame.
+    code_samples: []
+    type: ControllerBase
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.BaseMoveSpeed
+    summary: |
+      The base linear movement speed used by all controllers.
+    description: |
+      The base linear movement speed used by all controllers. Controllers
+      individually customize speed by setting the
+      `Class.ControllerBase.MoveSpeedFactor` property.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.BaseTurnSpeed
+    summary: |
+      The base angular turning speed used by all controllers.
+    description: |
+      The base angular turning speed used by all controllers to align the
+      character to face the desired direction.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.ClimbSensor
+    summary: |
+      A reference to the sensor data used while a `Class.ClimbController` is
+      active.
+    description: |
+      A reference to the sensor data used while a `Class.ClimbController` is
+      active. A `Class.ClimbController` will use the
+      `Class.ControllerPartSensor.HitPart`,
+      `Class.ControllerPartSensor.HitFrame`, and
+      `Class.ControllerPartSensor.HitNormal` for climb movement computations.
+      Typically a `Class.ControllerPartSensor` set to `Enum.SensorMode.Ladder`
+      is used here. Otherwise, you can override the sensor's outputs to direct
+      what sensor data you want the `Class.ClimbController` to use.
+    code_samples: []
+    type: ControllerSensor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.FacingDirection
+    summary: |
+      The unit vector describing the desired direction to face.
+    description: |
+      The unit vector describing the desired direction to face. Aligns the
+      `Datatype.CFrame.LookVector|LookVector` of the
+      `Class.ControllerManager.RootPart` to this. Any `Datatype.Vector3`
+      assigned will be automatically unitized.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.GroundSensor
+    summary: |
+      A reference to the sensor data used while a `Class.GroundController` is
+      active.
+    description: |
+      A reference to the sensor data used while a `Class.GroundController` is
+      active. A `Class.GroundController` will use the
+      `Class.ControllerPartSensor.HitPart`,
+      `Class.ControllerPartSensor.HitFrame`, and
+      `Class.ControllerPartSensor.HitNormal` for ground movement computations.
+      Typically a `Class.ControllerPartSensor` set to `Enum.SensorMode.Floor` is
+      used here. Otherwise, you can override the sensor's outputs to direct what
+      sensor data you want the `Class.GroundController` to use.
+    code_samples: []
+    type: ControllerSensor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.MovingDirection
+    summary: |
+      The vector describing the desired direction to move in.
+    description: |
+      The vector describing the desired direction to move in, with a magnitude
+      between 0 and 1. This is multiplied by
+      `Class.ControllerManager.BaseMoveSpeed|BaseMoveSpeed` to determine a final
+      target move velocity. The `Class.ControllerManager.RootPart|RootPart` will
+      attempt to move in this direction based on the rules defined by the
+      `Class.ControllerManager.ActiveController|ActiveController`.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerManager.RootPart
+    summary: |
+      The `Class.BasePart` where the controller's forces and torques are
+      applied.
+    description: |
+      The `Class.BasePart` where the controller's forces and torques are
+      applied. With a typical `Class.Humanoid`-based character, the
+      `Class.Humanoid.RootPart` is assigned as the
+      `Class.ControllerManager.RootPart`.
+    code_samples: []
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

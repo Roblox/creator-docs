@@ -1,0 +1,22 @@
+name: FriendService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service which is used to send, cancel, accept and decline friend
+  requests in-game.
+description: |
+  A service which is used to send, cancel, accept and decline friend requests
+  in-game. It is primarily used by the PlayerListScript to send friend requests
+  with the leaderboard.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

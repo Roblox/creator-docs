@@ -1,0 +1,283 @@
+name: NetworkSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  Settings related to networked engine behaviors.
+description: |
+  NetworkSettings is a settings class that allow you to debug a lot of features
+  with Roblox's server/client networking. It can be found in Roblox Studio's
+  settings, under the **Network** tab.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: NetworkSettings.EmulatedTotalMemoryInMB
+    summary: ''
+    description: ''
+    code_samples:
+    type: int
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: NetworkSettings.FreeMemoryMBytes
+    summary: |
+      Describes how much free memory is available, in MBs.
+    description: |
+      FreeMemoryMBytes is a read-only property that describes how much free
+      memory is available, in MBs. It is stored as a floating point number, so
+      it can be be read down at the level of available bytes by multiplying its
+      value by `1024 * 1024`.
+    code_samples:
+    type: float
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: NetworkSettings.HttpProxyEnabled
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Proxy Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.HttpProxyURL
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Proxy Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.IncomingReplicationLag
+    summary: |
+      Simulate additional network latency in the network receiving path.
+    description: |
+      Instruct the engine to simulate additional lag by delaying all incoming
+      messages. Units are seconds.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.PrintJoinSizeBreakdown
+    summary: |
+      Print diagnostic information about data sent on connect.
+    description: |
+      Print diagnostic information to the Output window after connecting. The
+      data will indicate the largest individual Instances sent, as well as
+      aggregate data about data sent by Instance type. The data sent for initial
+      loading is compressed so the contributions are approximate.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.PrintPhysicsErrors
+    summary: |
+      When set to true, debug messages will be printed into the output
+      pertaining to physics replication errors.
+    description: |
+      When set to true, debug messages will be printed into the output,
+      pertaining to physics replication errors. Note that this property is
+      intended for Roblox engineers who are debugging network replication. The
+      following are debug outputs that are made available when this property is
+      set to true.
+
+      - `Physics-in old packet` prints if the PhysicsReceiver receives a
+        mechanism update packet for a part that has been updated ahead of the
+        packet's submission time. This happens if the packet is received late,
+        and a newer packet has already been processed.
+      - `Physics-in of unidentified {GUID}` prints if the PhysicsReceiver cannot
+        find the part that is trying to be updated because the provided Instance
+        identifier was invalid, where `{GUID}` is the unknown
+        `Class.Instance:GetDebugId()` identifier that is supposed to be
+        targeting the part. This typically happens if a part is removed before
+        the physics update packet is received.
+      - `Physics-in of part not in workspace {GUID}` prints if the
+        PhysicsReceiver receives a request to update the physics of a part that
+        is not a descendant of the Workspace, where `{GUID}` is the
+        `Class.Instance:GetDebugId()` identifier of the target part. This
+        happens if the part was just moved out of the Workspace, and was
+        previously being simulated.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.PrintStreamInstanceQuota
+    summary: |
+      When set to true, debug information is printed to the output regarding the
+      replication of instances when `Class.Workspace.StreamingEnabled` is set to
+      true.
+    description: |
+      When set to true, debug information is printed to the output regarding the
+      replication of instances when `Class.Workspace.StreamingEnabled` is set to
+      true. There are several debug outputs that are made available when this
+      property is set to true, as listed below.
+
+      Note that this property is intended for Roblox engineers who are debugging
+      network replication. This documentation may become outdated in the future,
+      as Roblox's network code is always changing behind the scenes.
+
+      #### Streaming Capacity Update
+
+      When the client's streaming capacity is updated, the following debug
+      message will be printed:
+      `clientInstanceQuota {1}, packet in queue {2}, predictedTotalInstanceProcessTime {3}, avgStreamDataReadTime {4}, avgInstancesPerStreamData {5}`
+
+      **The numbers in curly braces are substituted, and can be described as:**
+
+      - `{1}` – The id of the client instance quota.
+      - `{2}` – The current number of incoming packets that have been queued.
+      - `{3}` – A prediction for how long it will take to update the quota.
+      - `{4}` – The current average time it takes to read the stream data.
+      - `{5}` – The average number of instances in the stream data.
+
+      #### Instance Quota Update
+
+      When the client receives an instance quota update, the following debug
+      message will be printed:
+      `Received new client instance quota: {1}, max region radius: {2}`
+
+      **The numbers in curly braces are substituted, and can be described as:**
+
+      - `{1}` – The id of the client instance quota.
+      - `{2}` – The maximum radius of space around the client's
+        `Class.Player.ReplicationFocus` that can have physical instances
+        streamed in.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Diagnostics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.RandomizeJoinInstanceOrder
+    summary: |
+      Special facility to help catch bugs related to how your experience loads.
+    description: |
+      Emulate the behavior of a server that has been online a long time by
+      randomizing the order that instances initially arrive on clients. It is
+      recommended to keep this setting enabled to help discover potential bugs
+      while testing in Studio.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Advanced
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.RenderStreamedRegions
+    summary: |
+      When set to true, regions of space that are being streamed to the client
+      will be outlined in red.
+    description: |
+      When set to true, regions of space that are being streamed to the client
+      will be outlined in red. This will only be shown if
+      `Class.Workspace.StreamingEnabled` is set to true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: NetworkSettings.ShowActiveAnimationAsset
+    summary: |
+      When set to true, a label will be shown above each `Class.Player`'s head,
+      showing the current animation being played by the Player's
+      `Class.Humanoid`, if any.
+    description: |
+      When set to true, a label will be shown above each `Class.Player`'s head,
+      showing the current animation being played by the Player's
+      `Class.Humanoid`, if any.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

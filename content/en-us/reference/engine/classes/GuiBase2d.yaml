@@ -1,0 +1,319 @@
+name: GuiBase2d
+type: class
+category:
+memory_category: Instances
+summary: |
+  GuiBase2d is an abstract class inherited by 2D GUI Objects.
+description: |
+  GuiBase2d is an abstract class inherited by 2D GUI Objects.
+code_samples:
+inherits:
+  - GuiBase
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: GuiBase2d.AbsolutePosition
+    summary: |
+      Describes the actual screen position of a UI element, in pixels.
+    description: |
+      AbsolutePosition is a read-only property that provides the screen position
+      of a UI element in pixels. This represents the actual pixel position at
+      which an element renders as a result of its ancestors' sizes and
+      positions. The `Class.GuiObject.AnchorPoint` also influences the
+      AbsolutePosition. This property, `Class.GuiBase2d.AbsoluteSize` and
+      `Class.GuiBase2d.AbsoluteRotation` are a group of properties that all
+      describe the final rendered orientation of a UI element.
+
+      For example, on a 1920 by 1080 screen, a `Class.Frame` with position {0.5,
+      0}, {0.5, 0} would have an AbsolutePosition of (960, 540). If you were to
+      place another Frame with position {0, 50}, {0, 50} inside that one, its
+      AbsolutePosition would be (1010, 590). This example assumes each Frame has
+      the default `Class.GuiObject.AnchorPoint` of (0, 0), the top left corner.
+    code_samples:
+      - Copycat-Frame
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiBase2d.AbsoluteRotation
+    summary: |
+      Describes the actual screen rotation of a UI element, in degrees.
+    description: |
+      AbsoluteRotation is a read-only property that describes the actual screen
+      rotation of a UI element, in degrees. This property,
+      `Class.GuiBase2d.AbsoluteSize` and `Class.GuiBase2d.AbsolutePosition` are
+      a group of properties that all describe the final rendered orientation of
+      a UI element. It composes (sums) each of the UI element's ancestors'
+      `Class.GuiObject.Rotation` into one value. It does **not** perform bounds
+      checking, so its value may not be in the range 0 ≤ x &lt; 360 degrees.
+
+      For example, if FrameA has a rotation of 40 degrees, and FrameB within it
+      has a `Class.GuiObject.Rotation` of 50 degrees, then FrameB's
+      AbsoluteRotation would be 90 degrees.
+    code_samples:
+      - Copycat-Frame
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiBase2d.AbsoluteSize
+    summary: |
+      Describes the actual screen size of a UI element, in pixels.
+    description: |
+      AbsoluteSize is a read-only property that provides the screen size of a UI
+      element in pixels. This represents the actual pixel size at which an
+      element renders as a result of its ancestors' sizes. This property,
+      `Class.GuiBase2d.AbsolutePosition` and `Class.GuiBase2d.AbsoluteRotation`
+      are a group of properties that all describe the final rendered orientation
+      of a UI element.
+
+      For example, on a 1920 by 1080 screen, if FrameA exists within FrameB, and
+      they both have a Size of {.5, 0}, {.5, 0}, then the AbsoluteSize of FrameA
+      (the inner frame) would be (480, 270) as the `Class.GuiObject.Size`
+      property determines the size of a child UI element relative to its parent.
+      Both of the frames are set to 50% of the parent size. Since 50% of 50% is
+      25%, and 25% of our screen size, 1920 by 1080, is (480, 270), this would
+      be the resultant AbsoluteSize of the inner frame.
+    code_samples:
+      - Copycat-Frame
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiBase2d.AutoLocalize
+    summary: |
+      When set to true, localization will be applied to this GuiBase2d and its
+      descendants based on the `Class.GuiBase2d.RootLocalizationTable` specified
+      for this GuiBase2d.
+    description: |
+      When set to true, localization will be applied to this GuiBase2d and its
+      descendants based on the `Class.GuiBase2d.RootLocalizationTable` specified
+      for this GuiBase2d.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.Localize
+    summary: |
+      Automatically set to true when a LocalizationTable's Root targets this
+      object, or an ancestor of this object.
+    description: |
+      This property is automatically set to true when a LocalizationTable's Root
+      targets this object, or an ancestor of this object.
+      `Class.LocalizationTable.LocalizationTable`s, with their
+      `Class.LocalizationTable.Root` property pointed at an instance, will
+      localize all `Class.TextLabel.TextButton` that are descendants of the root
+      instance.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: false
+  - name: GuiBase2d.RootLocalizationTable
+    summary: |
+      A reference to a `Class.LocalizationTable` to be used to apply automated
+      localization to this GuiBase2d and its descendants.
+    description: |
+      A reference to a `Class.LocalizationTable` to be used to apply automated
+      localization to this GuiBase2d and its descendants.
+
+      The `Class.GuiBase2d.AutoLocalize` property must be set to true on this
+      object and its ancestors for automated localization to be applied. You can
+      set this to reference a LocalizationTable anywhere in the DataModel. It is
+      not required to be a child of LocalizationService. When
+      RootLocalizationTable is set on a GUI object then that object and all of
+      its children will use that specific LocalizationTable and its parents for
+      automatic text replacement, instead of using the tables under
+      LocalizationService in an undefined order.
+
+      If there is no translation available in the referenced table it will look
+      for a translation in the parent of that table, if it is also a
+      LocalizationTable, and so on.
+    code_samples:
+    type: LocalizationTable
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.SelectionBehaviorDown
+    summary: |
+      Customizes gamepad selection behavior in the down direction.
+    description: |
+      Customizes gamepad selection behavior in the down direction.
+    code_samples: []
+    type: SelectionBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.SelectionBehaviorLeft
+    summary: |
+      Customizes gamepad selection behavior in the left direction.
+    description: |
+      Customizes gamepad selection behavior in the left direction.
+    code_samples: []
+    type: SelectionBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.SelectionBehaviorRight
+    summary: |
+      Customizes gamepad selection behavior in the right direction.
+    description: |
+      Customizes gamepad selection behavior in the right direction.
+    code_samples: []
+    type: SelectionBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.SelectionBehaviorUp
+    summary: |
+      Customizes gamepad selection behavior in the up direction.
+    description: |
+      Customizes gamepad selection behavior in the up direction.
+    code_samples: []
+    type: SelectionBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase2d.SelectionGroup
+    summary: |
+      Allows customization of gamepad selection movement.
+    description: |
+      Toggling SelectionGroup on for a GUI allows customization of how gamepad
+      selection can move between buttons, which are descendants of the
+      SelectionGroup, leaves the group, and selects other buttons. Setting
+      SelectionGroup to true exposes the SelectionBehaviorUp/Down/Left/ Right
+      properties, which can be set to `Enum.SelectionBehavior.Escape` or
+      `Enum.SelectionBehavior.Stop`. Escape is the default behavior. When set to
+      Escape, the gamepad selection tries to first find a selection within the
+      SelectionGroup and only moves outside if it does not find a suitable
+      button. When set to Stop, gamepad selection only looks within the
+      SelectionGroup and does not move outside of the group from the
+      SelectionBehavior direction.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: GuiBase2d.SelectionChanged
+    summary: |
+      Fires when the gamepad selection moves to, leaves, or changes within the
+      connected GuiBase2d or any descendent GuiObjects.
+    description: |
+      This event fires when the selection changes within any descendants of the
+      connected GuiBase2d. When the selection highlight moves to a GuiObject,
+      the event bubbles from that GuiObject to all of its ancestors, informing
+      them that the selection has changed/entered/exited to a GuiObject in their
+      descendant tree.
+    code_samples:
+      - gamepad-ui-selectionchanged-colorchange
+    parameters:
+      - name: amISelected
+        type: bool
+        default:
+        summary: |
+          True if the new selection matches the attached GuiBase2d.
+      - name: previousSelection
+        type: GuiObject
+        default:
+        summary: ''
+      - name: newSelection
+        type: GuiObject
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

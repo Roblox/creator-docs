@@ -1,0 +1,28 @@
+name: ActuatorRelativeTo
+type: enum
+summary: |
+  The CFrame value in which the body mover constraint is expressed.
+description: |
+  The CFrame value in which the body mover constraint is expressed.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Attachment0
+    summary: |
+      The constraint is expressed relative to Attatchment0.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Attachment1
+    summary: |
+      The constraint is expressed relative to Attatchment1.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: World
+    summary: |
+      The constraint is expressed relative to the game world.
+    value: 2
+    tags: []
+    deprecation_message: ''

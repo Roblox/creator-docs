@@ -1,0 +1,169 @@
+name: BodyGyro
+type: class
+category: Body Movers
+memory_category: Instances
+summary: |
+  Applies a torque to maintain a constant orientation.
+description: |
+  The **BodyGyro** object applies a torque (rotational force) on a
+  `Class.BasePart` such that it maintains a constant angular displacement, or
+  orientation. This allows for the creation of parts that point in a certain
+  direction, as if a real gyroscope were acting upon it. Essentially, it's the
+  rotational counterpart to a `Class.BodyPosition`.
+
+  If you would like to maintain a constant angular velocity, use a
+  `Class.BodyAngularVelocity` instead.
+
+  The `Class.BodyGyro.CFrame|CFrame` property controls the goal orientation.
+  Only the angular components of the `Datatype.CFrame` are used; position will
+  make no difference. `Class.BodyGyro.MaxTorque|MaxTorque` limits the amount of
+  angular force that may be applied, `Class.BodyGyro.P|P` controls the power
+  used in achieving the goal orientation, and `Class.BodyGyro.D|D` controls
+  dampening behavior.
+code_samples:
+  - BodyGyro1
+inherits:
+  - BodyMover
+tags:
+  - Deprecated
+deprecation_message: |
+  This object is deprecated and should not be used for new work. Use
+  `Class.AlignOrientation` instead.
+properties:
+  - name: BodyGyro.CFrame
+    summary: |
+      Determines the target orientation (translational component ignored).
+    description: |
+      The CFrame property (not to be confused with `Class.BasePart.CFrame`)
+      determines the target orientation towards which torque will be exerted.
+      Since `Class.BodyGyro` does not apply translational force, the
+      translational/positional component of the `Datatype.CFrame`,
+      `Datatype.CFrame.p`, is ignored. Consider using one of the following
+      CFrame constructors in setting this property:
+      `Datatype.CFrame.fromAxisAngle()`, `Datatype.CFrame.fromEulerAnglesXYZ()`
+      or `Datatype.CFrame.fromEulerAnglesYXZ()`. Beware of
+      [gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock) as you choose
+      which of these methods and what angles (in radians). Additionally, you
+      could use `CFrame.new(gyro.Parent.Position, targetPosition)` in order to
+      have the BodyGyro "look at" a targetPosition (`Datatype.Vector3`).
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyGyro.D
+    summary: |
+      Determines the amount of dampening to use in reaching the goal
+      `Class.BodyGyro.CFrame|CFrame`.
+    description: |
+      The D property is how much **dampening** will be applied to the torque
+      used to reach the goal `Class.BodyGyro.CFrame|CFrame`. When the part
+      approaches the goal orientation it needs to decelerate, otherwise it will
+      rotate past the goal and have to stop and re-accelerate back toward the
+      goal. This is often creates undesirable **rubber-banding** effect, so
+      applying dampening using this property is how that effect is avoided. The
+      higher this value is set, the greater the dampening curve becomes, or the
+      slower the part will approach the goal orientation.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyGyro.MaxTorque
+    summary: |
+      Determines the limit on how much torque that may be applied to each axis.
+    description: |
+      The MaxTorque property determines the limit on the amount of torque that
+      may be applied on each axis in reaching the goal orientation
+      (`Class.BodyGyro.CFrame|CFrame`). If a part isn't moving, consider
+      increasing this value (also check that it is not
+      `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyGyro.P
+    summary: |
+      Determines how aggressive of a torque is applied in reaching the goal
+      orientation.
+    description: |
+      The P property determines how much
+      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
+      applying torque in order to reach the goal `Class.BodyGyro.CFrame|CFrame`.
+      The higher this value, the more power will be used and the faster it will
+      be used.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyGyro.cframe
+    summary: ''
+    description: ''
+    code_samples:
+    type: CFrame
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyGyro.CFrame` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyGyro.maxTorque
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyGyro.MaxTorque` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

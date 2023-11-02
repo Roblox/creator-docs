@@ -1,0 +1,29 @@
+name: WeldConstraintPreserve
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: All
+    value: 0
+    summary: |
+      All `Class.WeldConstraint|WeldConstraints` will be returned in the
+      recommended table.
+    tags: []
+    deprecation_message: ''
+  - name: None
+    value: 1
+    summary: |
+      `Class.WeldConstraint|WeldConstraints` will be ignored and not returned in
+      the recommended table.
+    tags: []
+    deprecation_message: ''
+  - name: Touching
+    value: 2
+    summary: |
+      Only `Class.WeldConstraint|WeldConstraints` that connect touching parts in
+      the performed operation will be returned in the recommended table.
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,40 @@
+name: MembershipType
+type: enum
+summary: |
+  The membership type of a Player.
+description: |
+  The membership type of a Player.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      The player does not have an active paid membership.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: BuildersClub
+    summary: |
+      (no longer available).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: TurboBuildersClub
+    summary: |
+      (no longer available).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: OutrageousBuildersClub
+    summary: |
+      (no longer available).
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Premium
+    summary: |
+      The player has an active Premium membership.
+    value: 4
+    tags: []
+    deprecation_message: ''

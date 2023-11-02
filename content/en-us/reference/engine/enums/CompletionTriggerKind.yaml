@@ -1,0 +1,23 @@
+name: CompletionTriggerKind
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Invoked
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TriggerCharacter
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TriggerForIncompleteCompletions
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

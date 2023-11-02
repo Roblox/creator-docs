@@ -1,0 +1,103 @@
+name: UserNotificationPayload
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: UserNotificationPayload.AnalyticsData
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UserNotificationPayloadAnalyticsData
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserNotificationPayload.JoinExperience
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UserNotificationPayloadJoinExperience
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserNotificationPayload.MessageId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserNotificationPayload.Type
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: UserNotificationPayload:GetParameters
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserNotificationPayload:SetParameters
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: parameters
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,70 @@
+name: RollOffMode
+type: enum
+summary: |
+  How 3D `Class.Sound|Sounds` attenuate (fade out) as the distance between the
+  listener and the Sound's parent increases.
+description: |
+  How 3D `Class.Sound|Sounds` attenuate (fade out) as the distance between the
+  listener and the Sound's parent increases.
+
+  ## What is Attenuation?
+
+  Acoustic attenuation refers to how sound diminishes as it travels through a
+  medium or across increasing distances.
+
+  ## Inverse vs Linear Distance Attenuation
+
+  Inverse distance attenuation (Enum.RollOffMode.Inverse) mirrors how sounds
+  attenuate in the real world. Under inverse distance attenuation, sounds will
+  begin to attenuate once the distance between the listener and the Sound's
+  parent exceeds `Class.Sound.EmitterSize`. The rate of attenuation depends on
+  the emitter size, as sounds with larger EmitterSize's will attenuate at a
+  slower rate. Inverse rate of inverse distance attenuation is further
+  influenced by `Class.SoundService.RolloffScale`.
+
+  Note, `Class.Sound.MaxDistance` will not effect attenuation under the inverse
+  model but will cause the sound to cut off completely once this distance is
+  reached. This can be particularly abrupt when using low values for max
+  distance.
+
+  Linear distance attenuation works differently. Under linear distance
+  attenuation the sound will attenuate between EmitterSize and MaxDistance,
+  falling silent once MaxDistance is reached. EmitterSize still denotes the
+  point at which the sound will begin attenuating. However, the audible volume
+  at any point now depends on the point the listener is at between EmitterSize
+  and MaxDistance. This means, in contrast to the inverse distance attenuation
+  model, the audible volume of the sound will approach silence at MaxDistance
+  point. This is less realistic, but may be more desirable in some cases.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Inverse
+    summary: |
+      Volume attenuates from `Class.Sound.RollOffMinDistance` in an inverse
+      manner.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Linear
+    summary: |
+      Volume attenuates between `Class.Sound.RollOffMinDistance` and
+      `Class.Sound.RollOffMaxDistance` with a linear relationship.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LinearSquare
+    summary: |
+      Volume attenuates between `Class.Sound.RollOffMinDistance` and
+      `Class.Sound.RollOffMaxDistance` with a linear squared relationship.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: InverseTapered
+    summary: |
+      A hybrid model. Follows the Inverse model when close to
+      `Class.Sound.RollOffMinDistance` and the Linear Square model when close to
+      `Class.Sound.RollOffMaxDistance`.
+    value: 3
+    tags: []
+    deprecation_message: ''

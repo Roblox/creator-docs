@@ -1,0 +1,101 @@
+name: Ray
+type: datatype
+summary: |
+  Represents a line with a starting point that casts infinitely in a specific
+  direction.
+description: |
+  The `Datatype.Ray` data type represents a half-line, finite in one direction
+  but infinite in the other. It can be defined by a 3D point, where the line
+  originates from, and a direction vector, which is the direction it goes in.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Ray.new
+    summary: Returns a `Datatype.Ray` with the given `Origin` and `Direction`.
+    description: Returns a new `Datatype.Ray` with given `Origin` and `Direction`.
+    parameters:
+      - name: Origin
+        type: Vector3
+        default:
+        summary: ''
+      - name: Direction
+        type: Vector3
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: Ray.Unit
+    type: Ray
+    summary: |
+      The `Datatype.Ray` with a normalized direction (the direction has a
+      magnitude of `1`).
+    description: |
+      The `Datatype.Ray` with a normalized direction (the direction has a
+      magnitude of `1`).
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Ray.Origin
+    type: Vector3
+    summary: |
+      The position of the origin.
+    description: |
+      The position of the origin.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Ray.Direction
+    type: Vector3
+    summary: |
+      The direction vector of the `Datatype.Ray`.
+    description: |
+      The direction vector of the `Datatype.Ray`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: Ray:ClosestPoint
+    summary: |
+      Returns a `Datatype.Vector3` projected onto the ray so that it is within
+      the `Datatype.Ray`'s line of sight.
+    description: |
+      Returns a `Datatype.Vector3` projected onto the ray so that it is within
+      the `Datatype.Ray`'s line of sight.
+
+      **Note:** the `Datatype.Ray` **must** be a unit ray for this method to
+      behave as expected!
+    parameters:
+      - name: point
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Ray:Distance
+    summary: |
+      Returns the distance between the given point and the closest point on the
+      `Datatype.Ray`.
+    description: |
+      Returns the distance between the given point and the point on the ray
+      nearest to the given point (`Datatype.Ray.ClosestPoint(point)`).
+    parameters:
+      - name: point
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

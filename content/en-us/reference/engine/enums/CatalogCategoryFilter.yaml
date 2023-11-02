@@ -1,0 +1,38 @@
+name: CatalogCategoryFilter
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Featured
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Collectibles
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CommunityCreations
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Premium
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Recommended
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
