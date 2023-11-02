@@ -32,7 +32,6 @@ The default mode for the type checker is `--!nonstrict`. To use a different mode
 
 A type annotation can be defined using the `:` operator after a local variable, followed by a type definition. By default, in `nonstrict` mode, all variables are assigned the type `any`.
 
-
 ```lua
 local foo: string = "bar"
 local x: number = 5
@@ -160,12 +159,17 @@ type Car = {
 	Speed: number,
 	Drive: (Car) -> ()
 }
+
+local taxi: Car = {Speed = 30, Drive = drive}
+
+function drive(car)
+	-- always go the speed limit
+end
 ```
 
 ## Variadics
 
 Here's a function that calculates the sum of an arbitrary amount of numbers:
-
 
 ```lua
 local function addLotsOfNumbers(...)
@@ -200,7 +204,7 @@ print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- TypeError: Type `string` could not
 
 ```
 
-However, with a type definition, the following statement does not work:
+However, this does not work when writing a functional type definition:
 
 ```lua
 type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
@@ -231,10 +235,10 @@ local numString2: type1and2 = {foo = "hello", bar = 1}
 You can use the `typeof` function in a type definition for inferred types:
 
 ```lua
-type Car = typeof {
+type Car = typeof({
 	Speed = 0,
 	Wheels = 4
-} --> Car: {Speed: number, Wheels: number}
+}) --> Car: {Speed: number, Wheels: number}
 ```
 
 One way to use `typeof` is to define a metatable type using `setmetatable` inside the `typeof` function:
@@ -316,34 +320,6 @@ end
 
 local Activated = State("Activated", false) -- State<boolean>
 local TimesClicked = State("TimesClicked", 0) -- State<number>
-```
-
-### Type Packs
-
-Type packs are an extension to variadics that allow the definition of generic variadics inside functions.
-
-```lua
-type Event<A...> = {
-	Fire: (Event<A...>, A...)
-	Connect: (Event<A...>, func: (A...) -> ())
-}
-
--- the event can be defined with as many types as you want
-local ChangedSignal: Event<string, any>
-
-ChangedSignal:Connect(function(changedName, changedValue)
-	-- changedName will be defined as a string
-	-- changedValue will be defined as any
-end)
-
-ChangedSignal:Fire("Size", Vector2.new(100, 50)) --> ok
-ChangedSignal:Fire(20, 100) --> not ok, number cannot be converted to string
-```
-
-To define a type pack, add `...` to the right side of a generic:
-
-```lua
-local function Signal<A...>(f: (A...) -> (), ...: A...)
 ```
 
 ## Type Exports
