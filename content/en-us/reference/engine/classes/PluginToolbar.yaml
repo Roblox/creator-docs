@@ -51,7 +51,7 @@ methods:
         type: string
         default:
         summary: |
-          A unique button Id.
+          A unique button ID.
       - name: tooltip
         type: string
         default:
@@ -62,14 +62,14 @@ methods:
         type: string
         default:
         summary: |
-          The asset Id (e.g. rbxassetid://1507949215) of the icon displayed in
+          The asset ID (e.g. rbxassetid://1507949215) of the icon displayed in
           the button.
       - name: text
         type: string
         default: ''
         summary: |
           Text displayed under the button icon. Optional. If this field is not
-          provided, the **Id** will be used instead.
+          provided, the **ID** will be used instead.
     returns:
       - type: Instance
         summary: |

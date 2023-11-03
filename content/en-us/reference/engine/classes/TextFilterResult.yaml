@@ -56,7 +56,7 @@ methods:
         type: int64
         default:
         summary: |
-          Id of the user being chatted.
+          ID of the user being chatted.
     returns:
       - type: string
         summary: |

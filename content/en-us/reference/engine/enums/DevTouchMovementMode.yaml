@@ -16,26 +16,25 @@ items:
     deprecation_message: ''
   - name: Thumbstick
     summary: |
-      The player's character is controlled with a virtual thumbstick that moves
-      with the player's finger. Jumping is controlled with a separate button.
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbstick applications.
     value: 1
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
   - name: DPad
     summary: |
-      The player's character is controlled with a virtual dpad. The dpad
-      consists of directional buttons with a jump button in the middle.
+      This item is deprecated. Use `DynamicThumbstick` for virtual DPad applications.
     value: 2
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
   - name: Thumbpad
     summary: |
-      The player's character is controlled with a virtual thumbpad that stays
-      stationary as the player's finger moves. Jumping is controlled with a
-      separate button.
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbpad applications.
     value: 3
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
   - name: ClickToMove
     summary: |
       The player's character will attempt to move to a location in the world

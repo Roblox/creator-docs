@@ -133,7 +133,7 @@ methods:
     summary: |
       Returns details of the contents of specified bundle.
     description: |
-      If the bundle Id does not exist, it throws HTTP 400 (HTTP/1.1 400 Bad
+      If the bundle ID does not exist, it throws HTTP 400 (HTTP/1.1 400 Bad
       Request). If bundleId is not convertible to int, throws "Unable to cast
       string to int64". If param type is string, it implicitly tries to convert
       to int.
@@ -157,7 +157,7 @@ methods:
       		<tr>
       			<td>Id number</td>
       			<td>int</td>
-      			<td>Bundle Id (passed in as an argument)</td>
+      			<td>Bundle ID (passed in as an argument)</td>
       		</tr>
       		<tr>
       			<td>Name</td>

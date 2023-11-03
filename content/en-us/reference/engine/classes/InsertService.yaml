@@ -454,7 +454,7 @@ methods:
       The LoadAsset function fetches an asset given its ID and returns a
       `Class.Model` containing the asset. For example, to load this public
       [Doge](https://www.roblox.com/library/257489726/Doge) `Class.Model`, which
-      has the asset Id **_257489726_**, you can use:
+      has the asset ID **_257489726_**, you can use:
 
       ```lua
       local assetId = 257489726
@@ -498,7 +498,7 @@ methods:
         type: int64
         default:
         summary: |
-          The asset Id of the asset being loaded.
+          The asset ID of the asset being loaded.
     returns:
       - type: Instance
         summary: |
