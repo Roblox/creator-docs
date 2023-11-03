@@ -1,4 +1,6 @@
----
+-7681
+8719
+--
 title: Character Appearance
 description: Customize your in-experience character appearance and properties with the Avatar Game Settings and HumanoidDescription.
 ---
