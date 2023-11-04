@@ -1236,7 +1236,7 @@ methods:
     summary: |
       Returns the isolated network latency in seconds.
     description: |
-      **GetNetworkPing** returns the isolated network latency latency of the
+      **GetNetworkPing** returns the isolated network latency of the
       `Class.Player` in seconds. "Ping" is a measurement of the time taken for
       data to be sent from the client to the server, then back again. It doesn't
       involve data deserialization or processing.
