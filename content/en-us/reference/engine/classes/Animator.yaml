@@ -141,7 +141,7 @@ methods:
       or otherwise remove the rigid joints from the assembly before calling this
       method.
 
-      The given `Motor6Ds` are not required to be descendants of the the
+      The given `Motor6Ds` are not required to be descendants of the
       `Class.DataModel`. Removing the joints from the `Class.DataModel` before
       calling this method is supported.
     code_samples:
