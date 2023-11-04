@@ -20,7 +20,7 @@ description: |
   ## Whether to load an Animation on the client or server
 
   In order for AnimationTracks to replicate correctly, it's important to know
-  when they should be loaded on the client (via a`Class.LocalScript`) or on the
+  when they should be loaded on the client (via a `Class.LocalScript`) or on the
   server (via a `Class.Script`).
 
   If an `Class.Animator` is a descendant of a Humanoid or AnimationController in
@@ -194,7 +194,7 @@ methods:
       #### Should I load an Animation on the client or server?
 
       In order for AnimationTracks to replicate correctly, it's important to
-      know when they should be loaded on the client (via a`Class.LocalScript`)
+      know when they should be loaded on the client (via a `Class.LocalScript`)
       or on the server (via a `Class.Script`).
 
       If an `Class.Animator` is a descendant of a Humanoid or
@@ -269,8 +269,8 @@ methods:
       This function is used to simulate playback of `Class.Animation`s when the
       game isn't running. This allows animations to be previewed without the
       consequences of running the game, such as scripts executing. If the
-      function is called while the game is running, or by `Class.Script`s or
-      `Class.LocalScript`s, it will return an error.
+      function is called while the game is running, or by `Class.Script|Scripts` or
+      `Class.LocalScript|LocalScripts`, it will return an error.
 
       Developers designing their own custom animation editors are advised to use
       this function to preview animations, as it is the method the official
