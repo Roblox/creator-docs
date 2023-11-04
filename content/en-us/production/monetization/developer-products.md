@@ -112,8 +112,8 @@ end
 
 -- ProductId 456456 awards 100 gold to the user
 productFunctions[456456] = function(receipt, player)
-	local stats = player:FindFirstChild("leaderstats")
-	local gold = stats and stats:FindFirstChild("Gold")
+	local leaderstats = player:FindFirstChild("leaderstats")
+	local gold = leaderstats and leaderstats:FindFirstChild("Gold")
 
 	if gold then
 		gold.Value += 100
@@ -132,15 +132,15 @@ local function processReceipt(receiptInfo)
 		local success, result = pcall(handler, receiptInfo, player)
 		if success then
 			-- The user has received their benefits!
-			-- return PurchaseGranted to confirm the transaction.
+			-- Return PurchaseGranted to confirm the transaction.
 			return Enum.ProductPurchaseDecision.PurchaseGranted
 		else
 			warn("Failed to process receipt:", receiptInfo, result)
 		end
 	end
 
-	-- the user's benefits couldn't be awarded.
-	-- return NotProcessedYet to try again next time the user joins.
+	-- The user's benefits couldn't be awarded.
+	-- Return NotProcessedYet to try again next time the user joins.
 	return Enum.ProductPurchaseDecision.NotProcessedYet
 end
 
