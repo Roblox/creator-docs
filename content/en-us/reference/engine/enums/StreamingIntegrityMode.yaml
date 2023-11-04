@@ -1,0 +1,52 @@
+name: StreamingIntegrityMode
+type: enum
+summary: |
+  Determines how a user's client should handle not having enough content
+  streamed in.
+description: |
+  This enum is used to control `Class.Workspace.StreamingIntegrityMode`
+  behavior. The default behavior is currently equivalent to **Disabled** but may
+  change in the future. For all modes, the replication focus defaults to be the
+  local character model unless explicitly set via
+  `Class.Player.ReplicationFocus`.
+
+  Most experiences should use **PauseOutsideLoadedArea**, however if your
+  experience relies on raycasts, or otherwise requires a certain amount of
+  content to be loaded in, then **MinimumRadiusPause** might be a better choice.
+
+  Note that **MinimumRadiusPause** and **PauseOutsideLoadedArea** both set the
+  `Class.Player.GameplayPaused` property when their respective pause logic is
+  triggered, and a default message is displayed on the client. The default pause
+  UI can be overridden as outlined in
+  [Instance Streaming](../../../workspace/streaming.md).
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: |
+      Default behavior (currently equivalent to **Disabled**).
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    value: 1
+    summary: |
+      Simulation of the replication focus is never paused, regardless of the
+      amount of content streamed in on the client.
+    tags: []
+    deprecation_message: ''
+  - name: MinimumRadiusPause
+    value: 2
+    summary: |
+      All client-side simulation is paused when content is not streamed in up to
+      the minimum radius.
+    tags: []
+    deprecation_message: ''
+  - name: PauseOutsideLoadedArea
+    value: 3
+    summary: |
+      Simulation of the replication focus is paused when any part of its
+      bounding box is not in a streamed-in area.
+    tags: []
+    deprecation_message: ''

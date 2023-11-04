@@ -1,0 +1,40 @@
+name: PartType
+type: enum
+summary: |
+  Controls the `Class.Part.Shape` of an object.
+description: |
+  The **PartType** enum controls the `Class.Part.Shape|Shape` of a `Class.Part`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Ball
+    summary: |
+      A spherical shape.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Block
+    summary: |
+      A block shape.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Cylinder
+    summary: |
+      A cylinder shape oriented along the **X** axis.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Wedge
+    summary: |
+      A wedge shape with a slope on one side.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CornerWedge
+    summary: |
+      A wedge shape with slopes on two sides.
+    value: 4
+    tags: []
+    deprecation_message: ''

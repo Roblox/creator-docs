@@ -1,0 +1,48 @@
+name: ScreenOrientation
+type: enum
+summary: |
+  The preference of in-game screen orientation on hand-held devices.
+description: |
+  Indicates what orientation the game prefers to be played on mobile devices.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: LandscapeLeft
+    summary: |
+      A preference where the game is displayed landscape (horizontally) with the
+      bottom of the device on the left side of the screen.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: LandscapeRight
+    summary: |
+      A preference where the game is displayed landscape (horizontally) with the
+      bottom of the device on the right side of the screen.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LandscapeSensor
+    summary: |
+      A preference where the game is displayed landscape (horizontally) with the
+      bottom of the device on the left of right side of the screen depending on
+      the device's orientation (the sensor determines which side allows for the
+      game to be displayed right-side-up).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Portrait
+    summary: |
+      A preference where the game is displayed portrait (vertically) with the
+      bottom of the device on the bottom of the screen.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Sensor
+    summary: |
+      A preference where the game is displayed depending on the best match to
+      the device's current orientation - either landscape (left/right) or
+      portrait.
+    value: 4
+    tags: []
+    deprecation_message: ''

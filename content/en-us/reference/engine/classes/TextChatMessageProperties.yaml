@@ -1,0 +1,78 @@
+name: TextChatMessageProperties
+type: class
+category:
+memory_category: Instances
+summary: |
+  Overrides `Class.TextChatMessage` properties when returned by callbacks
+  defined in `Class.TextChatService.OnIncomingMessage` or
+  `Class.TextChannel.OnIncomingMessage`.
+description: |
+  Overrides `Class.TextChatMessage` properties when returned by callbacks
+  defined in `Class.TextChatService.OnIncomingMessage` or
+  `Class.TextChannel.OnIncomingMessage`.
+
+  `Class.TextChatMessageProperties` overrides the matching properties of the
+  corresponding `Class.TextChatMessage`.
+
+  This can be used to add rich text tags to a message.
+
+  To learn more about using TextChatMessageProperties, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: TextChatMessageProperties.PrefixText
+    summary: |
+      The `Class.TextChatMessage.PrefixText` to override.
+    description: |
+      The `Class.TextChatMessage.PrefixText` to override.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessageProperties.Text
+    summary: |
+      The `Class.TextChatMessage.Text` to override.
+    description: |
+      The `Class.TextChatMessage.Text` to override.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatMessageProperties.Translation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

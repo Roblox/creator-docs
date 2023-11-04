@@ -1,0 +1,23 @@
+name: SolverConvergenceVisualizationMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Disabled
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PerIsland
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PerEdge
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

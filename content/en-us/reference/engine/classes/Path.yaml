@@ -1,0 +1,202 @@
+name: Path
+type: class
+category: Pathfinding
+memory_category: Instances
+summary: |
+  Stores the result of paths created by `Class.PathfindingService:CreatePath()`.
+description: |
+  **Path** objects store the result of paths created by
+  `Class.PathfindingService:CreatePath()`.
+
+  Once a path object is created, you can call `Class.Path:ComputeAsync()` with a
+  starting point and ending point. This will attempt to compute a valid path for
+  a character to move along, based on default or custom parameters passed to
+  `Class.PathfindingService:CreatePath()|CreatePath()`. If
+  `Class.Path:ComputeAsync()|ComputeAsync()` successfully finds a path, the
+  `Class.Path` object will have a `Class.Path.Status` value of
+  `Enum.PathStatus.Success`. Otherwise the status will be
+  `Enum.PathStatus.NoPath` which can occur if there are obstacles between the
+  two points (and no way around) or if the points are inside of solid objects.
+
+  In addition to `Class.Path:ComputeAsync()|ComputeAsync()`, `Class.Path`
+  objects have the `Class.Path:GetWaypoints()|GetWaypoints()` method which
+  returns a list of waypoints representing the points a character should follow
+  in sequence to get from the beginning to the end of the path.
+
+  Finally, `Class.Path` objects can be **connected** to the `Class.Path.Blocked`
+  event. This event will fire if, at any time during the path's existence, the
+  path is blocked. Note that this can occur **behind** a character moving along
+  the path, not just in front of it.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: Path.Status
+    summary: |
+      The success of the generated `Class.Path`.
+    description: |
+      The success of the generated `Class.Path`.
+    code_samples:
+    type: PathStatus
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: Path:GetPointCoordinates
+    summary: |
+      Returns a table of `Class.Path` instances.
+    description: |
+      This function returns a table of `Class.Path` instances.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Path:GetWaypoints()` which should
+      be used in all new work instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Path:GetWaypoints
+    summary: |
+      Returns an array of points in the path.
+    description: |
+      This function returns an array of all the
+      `Datatype.PathWaypoint|PathWaypoints` in a `Class.Path`, as computed by
+      `Class.Path:ComputeAsync()`.
+
+      Each waypoint in the array specifies a `Datatype.Vector3` position and
+      `Enum.PathWaypointAction|action` to take when this PathWaypoint is
+      reached. The array is arranged in the order of waypoints from the path
+      start to path end.
+
+      If a path could not be computed, this function will return an empty array.
+    code_samples:
+      - Path-GetWaypoints1
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of `Datatype.PathWaypoint|PathWaypoints` ordered from path
+          start to path end.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path:CheckOcclusionAsync
+    summary: |
+      Checks if a path is blocked starting at a specific waypoint.
+    description: |
+      This function checks if a path is blocked starting at the waypoint
+      indicated by **start**.
+
+      It returns the first waypoint of occlusion if blocked, -1 if not. it
+      returns an error if **start** is less than 0 or greater than the number of
+      waypoints in the `Class.Path`.
+    code_samples:
+    parameters:
+      - name: start
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: |
+      This function has been superseded by the `Class.Path.Blocked` event which
+      you can connect to a `Class.Path` object and should be used instead. This
+      lets you detect if the path becomes blocked at any time during its
+      existence.
+    security: None
+    thread_safety: Unsafe
+  - name: Path:ComputeAsync
+    summary: |
+      Computes a `Class.Path` from a start position to an end position.
+    description: |
+      This function computes a `Class.Path` from a start position to an end
+      position. This function is not automatically called when a path is created
+      and must be invoked each time the path needs to be updated.
+
+      Once the Path is computed, it will have a series of waypoints that, when
+      followed, can lead a character along the path. These points are gathered
+      with the `Class.Path:GetWaypoints()` function.
+    code_samples:
+      - using-the-pathfinding-service
+    parameters:
+      - name: start
+        type: Vector3
+        default:
+        summary: |
+          The world position where the computed path begins.
+      - name: finish
+        type: Vector3
+        default:
+        summary: |
+          The world position where the computed path finishes.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Path.Blocked
+    summary: |
+      Fires when the computed path becomes blocked.
+    description: |
+      Fires when the computed path becomes blocked. Note that paths may become
+      blocked somewhere **behind** the agent, such as a pile of rubble falling
+      on a path as the agent runs away. See
+      [Handling Blocked Paths](../../../characters/pathfinding.md#handling-blocked-paths)
+      for details on checking the forward waypoint progress of an agent along a
+      path.
+    code_samples:
+    parameters:
+      - name: blockedWaypointIdx
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path.Unblocked
+    summary: |
+      Fires when a computed path that was blocked becomes unblocked.
+    description: |
+      Fires when a computed path that was blocked becomes unblocked. Note that a
+      blocked path may become unblocked somewhere **behind** the agent,
+      effectively making reaction to this event unnecessary. See
+      [Handling Blocked Paths](../../../characters/pathfinding.md#handling-blocked-paths)
+      for details on checking the forward waypoint progress of an agent along a
+      path.
+    code_samples:
+    parameters:
+      - name: unblockedWaypointIdx
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

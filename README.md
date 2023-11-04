@@ -77,7 +77,7 @@ The Roblox documentation has three main document types:
 
   Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
 
-- (Coming soon) API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
+- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
 
   APIs are entirely reference content and should use functional descriptions, linking to guides where appropriate. More than other content types, reference content should be terse and direct; summaries for properties, methods, events, and callbacks don't need to be full sentences.
 

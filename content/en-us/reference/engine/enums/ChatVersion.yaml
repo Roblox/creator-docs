@@ -1,0 +1,28 @@
+name: ChatVersion
+type: enum
+summary: |
+  Determines whether `Class.TextChatService` should be fully enabled or to allow
+  the legacy system.
+description: |
+  Determines whether `Class.TextChatService` should be fully enabled or to allow
+  the legacy system.
+
+  `Class.TextChatService.ChatVersion` is not scriptable and must be set in
+  Studio.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: LegacyChatService
+    value: 0
+    summary: |
+      Enables the legacy chat system.
+    tags: []
+    deprecation_message: ''
+  - name: TextChatService
+    value: 1
+    summary: |
+      Enables `Class.TextChatService` chat and prevents legacy chat system
+      behavior.
+    tags: []
+    deprecation_message: ''

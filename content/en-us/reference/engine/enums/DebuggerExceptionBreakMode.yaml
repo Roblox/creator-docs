@@ -1,0 +1,23 @@
+name: DebuggerExceptionBreakMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Never
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Always
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Unhandled
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

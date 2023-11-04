@@ -1,0 +1,25 @@
+name: ApplyStrokeMode
+type: enum
+summary: |
+  Used by `Class.UIStroke.ApplyStrokeMode` to determine where to apply the
+  stroke.
+description: |
+  This enum is used by `Class.UIStroke.ApplyStrokeMode` to determine whether to
+  apply the stroke to the object's border or of the text itself. For a more
+  detailed walkthrough of the UIStroke object, see Applying Strokes.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Contextual
+    summary: |
+      The stroke is applied to the parent UI element's text.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Border
+    summary: |
+      The stroke is applied to the parent UI element's border.
+    value: 1
+    tags: []
+    deprecation_message: ''

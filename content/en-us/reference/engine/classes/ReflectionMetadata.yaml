@@ -1,0 +1,19 @@
+name: ReflectionMetadata
+type: class
+category:
+memory_category: Instances
+summary: |
+  A currently unused object whose functionality was split into
+  `Class.ReflectionMetadataClasses` and `Class.ReflectionMetadataEnums`.
+description: |
+  A currently unused object whose functionality was split into
+  `Class.ReflectionMetadataClasses` and `Class.ReflectionMetadataEnums`.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

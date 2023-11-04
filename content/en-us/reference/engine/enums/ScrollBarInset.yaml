@@ -1,0 +1,31 @@
+name: ScrollBarInset
+type: enum
+summary: |
+  Indicates when the `Class.ScrollingFrame` should be insetted by the space
+  needed to show the scroll bar.
+description: |
+  Indicates when the `Class.ScrollingFrame` should be insetted by the space
+  needed to show the scroll bar.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      The ScrollingFrame will never be insetted for this scrolling bar.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ScrollBar
+    summary: |
+      The ScrollingFrame will only be insetted if this scrollbar is being shown.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Always
+    summary: |
+      The ScrollingFrame will always be insetted regardless if the scrollbar is
+      being shown or not.
+    value: 2
+    tags: []
+    deprecation_message: ''

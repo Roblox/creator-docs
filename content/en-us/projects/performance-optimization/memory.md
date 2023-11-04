@@ -131,7 +131,7 @@ The following memory values in the **Developer console** can indicate a problem 
   no longer needed causes unnecessary memory consumption, especially for tables
   that track user data when they join. For example, the following code sample creates a table adding user information each time a user joins:
 
-   ```Lua title="Example"
+   ```lua title="Example"
    local playerInfo = {}
    Players.PlayerAdded:Connect(function(player)
 	   playerInfo[player] = {} -- some info
@@ -153,7 +153,7 @@ To clean up all used values for preventing memory leaks:
 - **Remove player objects and characters after leaving** - Implement code to
   ensure no connections persist after a user leaves, like in the following example:
 
-   ```Lua title="Example"
+   ```lua title="Example"
    Players.PlayerAdded:Connect(function(player)
      player.CharacterRemoving:Connect(function(character)
          task.wait()

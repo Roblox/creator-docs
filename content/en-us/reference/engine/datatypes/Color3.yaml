@@ -1,0 +1,271 @@
+name: Color3
+type: datatype
+summary: |
+  A color value comprised of red, green, and blue components.
+description: |
+  The `Datatype.Color3` data type describes a color using red, green, and blue
+  components in the range of 0 to 1. Unlike the `Datatype.BrickColor` data type
+  which describes named colors, `Datatype.Color3` is used for precise coloring
+  of objects on screen through properties like `Class.BasePart.Color` and
+  `Class.GuiObject.BackgroundColor3`.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Color3.new
+    summary: |
+      Returns a `Datatype.Color3` with the given red, green, and blue values.
+    description: |-
+      Returns a `Datatype.Color3` with the given red, green, and blue values.
+      The parameters should be within the range of 0 to 1.
+
+      ```lua
+      local red = Color3.new(1, 0, 0)
+      local green = Color3.new(0, 1, 0)
+      local blue = Color3.new(0, 0, 1)
+      ```
+    parameters:
+      - name: red
+        type: number
+        default: 0
+        summary: ''
+      - name: green
+        type: number
+        default: 0
+        summary: ''
+      - name: blue
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3.fromRGB
+    summary: |
+      Returns a `Datatype.Color3` from given components within the range of 0 to
+      255.
+    description: |-
+      Creates a `Datatype.Color3` with the given red, green, and blue
+      components. Unlike most other `Datatype.Color3` functions, the parameters
+      for this function should be within the range of 0 to 255.
+
+      ```lua
+      local red = Color3.fromRGB(255, 0, 0)
+      local green = Color3.fromRGB(0, 255, 0)
+      local blue = Color3.fromRGB(0, 0, 255)
+      ```
+    parameters:
+      - name: red
+        type: number
+        default: 0
+        summary: ''
+      - name: green
+        type: number
+        default: 0
+        summary: ''
+      - name: blue
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3.fromHSV
+    summary: |
+      Returns a `Datatype.Color3` from the given hue, saturation, and value
+      components.
+    description: |-
+      Creates a `Datatype.Color3` with the given hue, saturation, and value. The
+      parameters should be within the range of 0 to 1.
+
+      ```lua
+      local red = Color3.fromHSV(1, 1, 1)
+      local green = Color3.fromHSV(0.3333333, 1, 1)
+      local white = Color3.fromHSV(0, 0, 1)
+      ```
+    parameters:
+      - name: hue
+        type: number
+        default:
+        summary: ''
+      - name: saturation
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3.fromHex
+    summary: Returns a `Datatype.Color3` from a given hex value.
+    description: |-
+      Returns a new `Datatype.Color3` from a six- or three-character hexadecimal
+      format, case insensitive. A preceding hashtag (`#`) is ignored, if
+      present. This function interprets the given string as a typical web hex
+      color in the format `RRGGBB` or `RGB` (shorthand for `RRGGBB`). For
+      example, `#FFAA00` produces an orange color and is the same as `#FA0`.
+
+      ```lua
+      local red = Color3.fromHex("FF0000")
+      local magenta = Color3.fromHex("ec008c")
+      local black = Color3.fromHex("000")
+      local white = Color3.fromHex("#FFF")
+      ```
+    parameters:
+      - name: hex
+        type: string
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: Color3.R
+    type: number
+    summary: |
+      The red value of the color.
+    description: |
+      The red value of the color.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3.G
+    type: number
+    summary: |
+      The green value of the color.
+    description: |
+      The green value of the color.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3.B
+    type: number
+    summary: |
+      The blue value of the color.
+    description: |
+      The blue value of the color.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: Color3:Lerp
+    summary: |
+      Returns a `Datatype.Color3` interpolated between two colors.
+    description: |
+      Returns a `Datatype.Color3` interpolated between two colors. The `alpha`
+      value should be within the range of 0 to 1.
+
+      ```lua
+      local white = Color3.new(1, 1, 1)
+      local black = Color3.new(0, 0, 0)
+
+      local gray10 = white:Lerp(black, 0.1)
+      print(gray10)  --> 0.9, 0.9, 0.9
+
+      local gray50 = white:Lerp(black, 0.5)
+      print(gray50)  --> 0.5, 0.5, 0.5
+
+      local gray85 = white:Lerp(black, 0.85)
+      print(gray85)  --> 0.15, 0.15, 0.15
+      ```
+    parameters:
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+      - name: alpha
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: Color3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3:ToHSV
+    summary: |
+      Returns the hue, saturation, and value of a `Datatype.Color3`.
+    description: |
+      Returns the hue, saturation, and value of a `Datatype.Color3`. This
+      function is the inverse operation of the `Datatype.Color3.fromHSV()`
+      constructor.
+
+      ```lua
+      local red = Color3.fromRGB(255, 0, 0)
+      local green = Color3.fromRGB(0, 255, 0)
+
+      local redH, redS, redV = red:ToHSV()
+      print(redH, redS, redV)  --> 1 1 1
+
+      local greenH, greenS, greenV = green:ToHSV()
+      print(greenH, greenS, greenV)  --> 0.3333333 1 1
+      ```
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Color3:ToHex
+    summary: |
+      Returns the hex code of a `Datatype.Color3`.
+    description: |
+      Converts the color to a six-character hexadecimal string representing the
+      color in the format `RRGGBB`. It is not prefixed with an octothorpe (`#`).
+
+      The returned string can be provided to `Datatype.Color3.fromHex()` to
+      produce the original color.
+
+      ```lua
+      local red = Color3.fromRGB(255, 0, 0)
+      local magenta = Color3.fromRGB(236, 0, 140)
+
+      local redHex = red:ToHex()
+      print(redHex)  --> ff0000
+
+      local magentaHex = magenta:ToHex()
+      print(magentaHex)  --> ec008c
+      ```
+    parameters:
+    returns:
+      - type: string
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+  - name: Color3.toHSV
+    summary: |
+      Returns the hue, saturation, and value of a `Datatype.Color3`.
+    description: |
+      Returns the hue, saturation, and value of a `Datatype.Color3`. This
+      function is the inverse operation of the `Datatype.Color3.fromHSV()`
+      constructor.
+    parameters:
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+    code_samples: []
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is functionally equivalent to `Datatype.Color3:ToHSV()`.
+math_operations:

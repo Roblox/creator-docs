@@ -1,0 +1,179 @@
+name: DataModelMesh
+type: class
+category:
+memory_category: Instances
+summary: |
+  The DataModelMesh is an abstract class from which mesh classes descend.
+description: |
+  The DataModelMesh is an abstract class from which mesh classes descend.
+
+  Mesh classes are objects that, when parented to `Class.BasePart`s alter the
+  appearance of the part to that of a predefined mesh. Note, they only alter the
+  appearance of the part and not the physics/collision boundaries of the part.
+  Developers looking to apply a mesh to a part that alters the part's collision
+  should use `Class.MeshPart`s.
+
+  Note the `Class.MeshPart` and `Class.CharacterMesh` classes do not descend
+  from DataModelMesh.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: DataModelMesh.Offset
+    summary: |
+      The Offset of a mesh determines the relative position from the
+      `Class.BasePart.Position` of a `Class.BasePart` that the mesh will be
+      displayed at.
+    description: |
+      The Offset of a mesh determines the distance from the
+      `Class.BasePart.Position` of a `Class.BasePart` that the mesh will be
+      displayed.
+
+      #### How to use mesh offset
+
+      The Offset property changes the relative position the mesh will be
+      rendered at. For example, an offset of 0, 5, 0 will cause the mesh to be
+      displayed 5 studs above the position of the `Class.BasePart`.
+
+      The position of the `Class.BasePart` remains unchanged, meaning the
+      physics collision box of the part will remain in the same location. This
+      is demonstrated in the image below where the green outline (a
+      `Class.SelectionBox`) shows the extents of the `Class.BasePart`.
+
+      #### Other uses for mesh offset
+
+      There are a number of interesting uses for the mesh offset property.
+
+      - Offset and `Class.DataModelMesh.Scale` can be animated using
+        `Class.TweenService` relatively inexpensively as the engine does not
+        need to make any physics/collision calculations as the `Class.BasePart`
+        is not moved.
+      - Changing the relationship between the mesh and its collision extents
+        (determined by the `Class.BasePart`)
+    code_samples:
+      - Mesh-Offset-and-Scale
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DataModelMesh.Scale
+    summary: |
+      The Scale of a mesh determines the size of the mesh relative to its
+      original dimensions.
+    description: |
+      The Scale of a mesh determines the size of the mesh relative to its
+      original dimensions.
+
+      #### How to use mesh scale
+
+      The scale property works slightly differently depending on the type of
+      mesh being used. Note the size of the `Class.BasePart` remains unchanged,
+      meaning the physics collision box of the part will remain the same.
+
+      - `Class.SpecialMesh` objects with `Class.SpecialMesh.FileType` set to
+        'FileMesh' scale relative to the original dimensions of the mesh when it
+        was uploaded to Roblox
+      - `Class.BlockMesh` objects or `Class.SpecialMesh` objects with
+        `Class.SpecialMesh.FileType` set to 'Brick', 'Wedge' or 'Sphere' scale
+        uniformly relative to the `Class.BasePart.Size` of their parent
+      - `Class.CylinderMesh` objects or `Class.SpecialMesh` objects with
+        `Class.SpecialMesh.FileType` set to 'Cylinder' scale relative to the
+        `Class.BasePart.Size` of their parent. Uniformly for the cylinders
+        height axis and maintaining a 1:1 ratio for the length and width of the
+        cylinder, using the lowest value.
+      - `Class.SpecialMesh` objects with `Class.SpecialMesh.FileType` set to
+        'Head' currently scale in a non standard manner. Developers should not
+        rely on this as their are plans to change this behavior
+      - `Class.SpecialMesh` objects with `Class.SpecialMesh.FileType` set to
+        'Torso' scale in a non standard manner. Developers should not rely on
+        this as their are plans to deprecate this mesh type.
+
+      #### Mesh scale demonstration
+
+      The above behavior can be seen in the following demonstration images.
+
+      Linear scaling relative to part size for 'Brick', 'Wedge' and 'Sphere'
+      meshes.
+
+      Linear scaling relative to original uploaded mesh for 'FileMesh' meshes
+
+      Non-uniform constrained scaling for 'Cylinder' meshes
+
+      #### Other uses for mesh scale
+
+      There are a number of interesting uses for the mesh offset property.
+
+      - `Class.DataModelMesh.Offset` and Scale can be animated using
+        `Class.TweenService` relatively inexpensively as the engine does not
+        need to make any physics/collision calculations as the `Class.BasePart`
+        is not changed.
+      - Changing the relationship between the mesh and its collision extents
+        (determined by the `Class.BasePart`)
+    code_samples:
+      - Mesh-Offset-and-Scale
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DataModelMesh.VertexColor
+    summary: |
+      Changes the hue of a mesh's texture, used with `Class.FileMesh.TextureId`.
+    description: |
+      **VertexColor** determines the hue change of the
+      `Class.FileMesh.TextureId|Texture` of a `Class.FileMesh`.
+
+      The image below shows two versions of the hat
+      ["Ozzy's Formal Top Hat"](https://www.roblox.com/catalog/3690516671/Ozzys-Formal-Top-Hat).
+      The left has a default VertexColor of (1, 1, 1), or white. The right has a
+      VertexColor of (0, 0, 1), or blue. The RGB colors on the texture of the
+      red and white hat are multiplied with that of the VertexColor's XYZ
+      components.
+
+      <img src="/assets/legacy/DataModelMesh.VertexColor.jpg" />
+
+      It should be noted that this property is a `Datatype.Vector3` rather than
+      a `Datatype.Color3`. To convert, use the following function:
+
+      ```lua
+      local function color3ToVector3(c3)
+         return Vector3.new(c3.r, c3.g, c3.b)
+      end
+      ```
+
+      Although this property allows basic modification of a texture, changing a
+      texture entirely provides more control. See `Class.MeshPart` for more
+      details.
+    code_samples:
+      - Mesh-VertexColor
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,306 @@
+name: GroupService
+type: class
+category: Social
+memory_category: Instances
+summary: |
+  GroupService is a service that allows developers to fetch information about a
+  Roblox group from within a game.
+description: |
+  GroupService is a service that allows developers to fetch information about a
+  Roblox group from within a game.
+
+  Basic information on the group, including it's name, description, owner, roles
+  and emblem can be fetched using `Class.GroupService:GetGroupInfoAsync()`.
+  Lists of a group's allies and enemies can be fetched using
+  `Class.GroupService:GetAlliesAsync()` and
+  `Class.GroupService:GetEnemiesAsync()`.
+
+  GroupService can also be used to fetch a list of group's a player is a member
+  of, using `Class.GroupService:GetGroupsAsync()`. Note, developers wishing to
+  verify if a player is in a group should use the `Class.Player`
+  `Class.Player:IsInGroup()` function rather than
+  `Class.GroupService:GetGroupsAsync()`.
+
+  The service has a number of useful applications, such as detecting if a player
+  is an ally or enemy upon joining the game.
+code_samples:
+  - Group-Ally-Enemy-Checker
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: GroupService:GetAlliesAsync
+    summary: |
+      Returns a `Class.StandardPages` object including information on all of the
+      specified group's allies.
+    description: |
+      Returns a `Class.StandardPages` object including information on all of the
+      specified group's allies.
+
+      This pages does not include a list of group IDs but instead a list of
+      group information tables, mirroring the format of those returned by
+      `Class.GroupService:GetGroupInfoAsync()`. See below for the structure of
+      these tables.
+
+      ```lua
+      group = {
+          Name = "Knights of the Seventh Sanctum",
+          Id = 377251,
+          Owner = {
+              Name = "Vilicus",
+              Id = 23415609
+          },
+          EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
+          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Roles = {
+              [1] = {
+                  Name = "Apprentice",
+                  Rank = 1
+              },
+              [2] = {
+                  Name = "Warrior",
+                  Rank = 2
+              },
+              [3] = {
+                  Name = "Earth Walker",
+                  Rank = 255
+              }
+          }
+      }
+      ```
+
+      Note, as this function returns a `Class.StandardPages` object rather than
+      an array, developers may wish to convert it to an array for ease of use
+      (see examples).
+
+      This function has a number of useful applications, including detecting if
+      a player is a member of an allied group.
+
+      For enemies, use `Class.GroupService:GetEnemiesAsync()`.
+    code_samples:
+      - GroupService-GetAlliesAsync1
+      - Group-Ally-Enemy-Checker
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The group's ID.
+    returns:
+      - type: StandardPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GroupService:GetEnemiesAsync
+    summary: |
+      Returns a `Class.StandardPages` object including information on all of the
+      specified group's enemies.
+    description: |
+      Returns a `Class.StandardPages` object including information on all of the
+      specified group's enemies.
+
+      This pages does not include a list of group IDs but instead a list of
+      group information tables, mirroring the format of those returned by
+      `Class.GroupService:GetGroupInfoAsync()`. See below for the structure of
+      these tables.
+
+      ```lua
+      group = {
+          Name = "Knights of the Seventh Sanctum",
+          Id = 377251,
+          Owner = {
+              Name = "Vilicus",
+              Id = 23415609
+          },
+          EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
+          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Roles = {
+              [1] = {
+                  Name = "Apprentice",
+                  Rank = 1
+              },
+              [2] = {
+                  Name = "Warrior",
+                  Rank = 2
+              },
+              [3] = {
+                  Name = "Earth Walker",
+                  Rank = 255
+              }
+          }
+      }
+      ```
+
+      Note, as this function returns a `Class.StandardPages` object rather than
+      an array, developers may wish to convert it to an array for ease of use
+      (see examples).
+
+      This function has a number of useful applications, including detecting if
+      a player is a member of an enemy group.
+
+      For allies, use `Class.GroupService:GetAlliesAsync()`.
+    code_samples:
+      - GroupService-GetEnemiesAsync1
+      - Group-Ally-Enemy-Checker
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The group's ID.
+    returns:
+      - type: StandardPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GroupService:GetGroupInfoAsync
+    summary: |
+      Returns a table containing information about the given group.
+    description: |
+      Returns a table containing information about the given group.
+
+      The table returned is the same format as that returned in
+      `Class.GroupService:GetAlliesAsync()` and
+      `Class.GroupService:GetEnemiesAsync()`. This format can be seen below.
+
+      ```lua
+      group = {
+          Name = "Knights of the Seventh Sanctum",
+          Id = 377251,
+          Owner = {
+              Name = "Vilicus",
+              Id = 23415609
+          },
+          EmblemUrl = "http://www.roblox.com/asset/?id=60428602",
+          Description = "We fight alongside the balance to make sure no one becomes to powerful",
+          Roles = {
+              [1] = {
+                  Name = "Apprentice",
+                  Rank = 1
+              },
+              [2] = {
+                  Name = "Warrior",
+                  Rank = 2
+              },
+              [3] = {
+                  Name = "Earth Walker",
+                  Rank = 255
+              }
+          }
+      }
+      ```
+
+      Note, if a group has no owner the Owner field will be set to nil.
+
+      This function has a number of useful applications, including loading the
+      latest description and logo of a group for display in a group base.
+    code_samples:
+      - GroupService-GetGroupInfoAsync1
+      - Load-Group-Emblem
+    parameters:
+      - name: groupId
+        type: int64
+        default:
+        summary: |
+          The group ID of the group.
+    returns:
+      - type: Variant
+        summary: |
+          A dictionary of information about the group.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GroupService:GetGroupsAsync
+    summary: |
+      Returns a list of tables containing information on all of the groups a
+      given player is a member of.
+    description: |
+      **Warning:** The **IsInClan** property in the returned table will always
+      return **false** and exists for backwards compatibility. The Clans feature
+      was sunset from the Roblox platform in 2016.
+
+      This function returns a list of tables containing information on all of
+      the groups a given `Class.Player` is a member of.
+
+      The list returned will include an entry for every group the player is a
+      member of. These entries are tables with the following fields.
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      <tr>
+        <td><b>Name</b></td>
+        <td>The group's name</td>
+      </tr> 
+      <tr>
+        <td><b>Id</b></td>
+        <td>The group ID</td>
+      </tr>
+      <tr>
+        <td><b>EmblemUrl</b></td>
+        <td>An asset url linking to the group's thumbnail (for example: http://www.roblox.com/asset/?id=276165514)</td>
+      </tr>
+      <tr>
+        <td><b>EmblemId</b></td>
+        <td>The assetId of the emblem, the same which is used in the EmblemUrl</td>
+      </tr>
+      <tr>
+        <td><b>Rank</b></td>
+        <td>The rankId the player has (for example: 255 for the owner)</td>
+      </tr>
+      <tr>
+        <td><b>Role</b></td>
+        <td>The name of the player's grouprank (for example: Group Owner)</td>
+      </tr>
+      <tr>
+        <td><b>IsPrimary</b></td>
+        <td>A boolean indicating if this is the player's primary group</td>
+      </tr>
+      <tr>
+        <td><b>IsInClan</b></td>
+        <td>A boolean indicating if the player is in this group's clan</td>
+      </tr>
+      </tbody>
+      </table>
+
+      Note unlike `Class.GroupService:GetAlliesAsync()` and
+      `Class.GroupService:GetEnemiesAsync()`, GetGroupsAsync returns a table
+      rather than a `Class.StandardPages` object.
+    code_samples:
+      - GetGroupsAsync
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId` of the user.
+    returns:
+      - type: Array
+        summary: |
+          An array of dictionaries containing information on the group's the
+          `Class.Player` is a member of.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

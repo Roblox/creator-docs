@@ -1,0 +1,87 @@
+name: DataStoreObjectVersionInfo
+type: class
+category:
+memory_category: Instances
+summary: |
+  An instance describing version information for a key.
+description: |
+  An instance describing version information for a key, including the version
+  string, created time, and whether it has been marked as deleted.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreObjectVersionInfo.CreatedTime
+    summary: |
+      Indicates when the version was created in milliseconds since epoch.
+    description: |
+      This property indicates when the version was created in milliseconds since
+      epoch.
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreObjectVersionInfo.IsDeleted
+    summary: |
+      Whether the version has been marked as deleted.
+    description: |
+      This property describes whether the version has been marked as deleted.
+      Deleted versions will be permanently deleted after 30 days.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreObjectVersionInfo.Version
+    summary: |
+      Uniquely identifies a particular version of the key.
+    description: |
+      This property uniquely identifies a particular version of the key. It can
+      be passed to `Class.DataStore:GetVersionAsync()` or
+      `Class.DataStore:RemoveVersionAsync()` to get or remove the version
+      respectively.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

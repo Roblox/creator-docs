@@ -1,0 +1,41 @@
+name: NetworkServer
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  The `Class.NetworkServer` stores all the `Class.NetworkReplicator` in the game
+  and handles all connections. `Class.NetworkPeer:SetOutgoingKBPSLimit()` can be
+  used to imitate latency while using Start Server.
+code_samples:
+inherits:
+  - NetworkPeer
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: NetworkServer:EncryptStringForPlayerId
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: toEncrypt
+        type: string
+        default:
+        summary: ''
+      - name: playerId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

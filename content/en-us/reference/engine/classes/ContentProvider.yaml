@@ -1,0 +1,333 @@
+name: ContentProvider
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  Service that is used to load content, or assets, into a game.
+description: |
+  Service that is used to load content, or assets, into a game.
+
+  The service's main use is to preload assets into a game. When a new asset such
+  as a `Class.Decal` or `Class.Sound` is used in a game, Roblox will load the
+  content associated with it from Roblox servers. In some cases, this can be
+  undesirable for developers as it can lead to a delay before the content loads
+  into the game.
+
+  With ContentProvider, developers can preload assets using the
+  `Class.ContentProvider:PreloadAsync()` function. Another useful property is
+  `Class.ContentProvider.RequestQueueSize`, which can be used to measure what
+  proportion of assets in the request queue have been downloaded.
+code_samples:
+  - ContentProvider1
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: ContentProvider.BaseUrl
+    summary: |
+      Used by the `Class.ContentProvider` to download assets from the Roblox
+      website.
+    description: |
+      Used by the `Class.ContentProvider` to download assets from the Roblox
+      website.
+
+      This URL points to a Roblox hosted website from which assets are
+      downloaded and is pulled from the AppSettings.xml file, located in the
+      version-hash folder.
+
+      It is possible to overwrite this property using the
+      `Class.ContentProvider:SetBaseUrl()` function in the command bar; however,
+      this is not recommended and may cause asset loading issues.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: ContentProvider.RequestQueueSize
+    summary: |
+      Gives the number of items in `Class.ContentProvider`'s request queue that
+      need to be downloaded.
+    description: |
+      Gives the number of items in `Class.ContentProvider`'s request queue that
+      need to be downloaded.
+
+      Items are added to the client's request queue when an asset is used for
+      the first time or `Class.ContentProvider:PreloadAsync()` is called.
+
+      Developers are advised not to use RequestQueueSize to create loading bars.
+      This is because the queue size can both increase and decrease over time as
+      new assets are added and downloaded. Developers looking to display loading
+      progress should load assets one at a time (see example below).
+    code_samples:
+      - ContentProvider-Loading-Bar
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: ContentProvider:GetAssetFetchStatus
+    summary: |
+      Gets the current `Enum.AssetFetchStatus` of the `contentId` provided.
+    description: |
+      Gets the current `Enum.AssetFetchStatus` of the `contentId` provided. Use
+      `Class.ContentProvider:GetAssetFetchStatusChangedSignal()|GetAssetFetchStatusChangedSignal()`
+      to listen for changes to this value.
+    code_samples:
+      - ContentProvider-GetAssetFetchStatus1
+    parameters:
+      - name: contentId
+        type: Content
+        default:
+        summary: |
+          The ID of the content to fetch the status for.
+    returns:
+      - type: AssetFetchStatus
+        summary: |
+          The `Enum.AssetFetchStatus` of the content.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:GetAssetFetchStatusChangedSignal
+    summary: |
+      A signal that fires when the `Enum.AssetFetchStatus` of the provided
+      content changes.
+    description: |
+      A signal that fires when the `Enum.AssetFetchStatus` of the provided
+      content changes. Connect to this signal by using a callback with one
+      argument of type `Enum.AssetFetchStatus`. This is particularly useful for
+      assets that might update themselves automatically like the thumbnail of a
+      user when they change clothes.
+    code_samples:
+      - ContentProvider-GetAssetFetchStatus1
+    parameters:
+      - name: contentId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptSignal
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:ListEncryptedAssets
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:Preload
+    summary: |
+      Queues an asset to be downloaded by the `Class.ContentProvider`.
+    description: |
+      Usually, content is loaded only when it starts being used. That explains
+      why it often takes a moment for an image to appear in a
+      `Class.GuiObject|GUI`, or a `Mesh|mesh` to appear in a
+      `Class.BasePart|part`, or why a `Class.Sound|sound` doesn't play for the
+      first time. All because the asset has not yet finished loading. Preload is
+      used to load this content beforehand, so that it works instantly.
+    code_samples:
+      - ContentProvider-Preload1
+    parameters:
+      - name: contentId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.ContentProvider:PreloadAsync()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:RegisterDefaultEncryptionKey
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: encryptionKey
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:RegisterDefaultSessionKey
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: sessionKey
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:RegisterEncryptedAsset
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetId
+        type: Content
+        default:
+        summary: ''
+      - name: encryptionKey
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:RegisterSessionEncryptedAsset
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: contentId
+        type: Content
+        default:
+        summary: ''
+      - name: sessionKey
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:UnregisterDefaultEncryptionKey
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:UnregisterEncryptedAsset
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContentProvider:PreloadAsync
+    summary: |
+      Yields until all of the assets associated with the given
+      `Class.Instance|Instances` have loaded.
+    description: |
+      Yields until all of the assets associated with the given
+      `Class.Instance|Instances` have loaded. This can be used to pause a script
+      and not use content until it is certain that the content has been loaded
+      into the experience.
+
+      When called, the engine identifies links to content for each item in the
+      list. For any of the `Class.Instance|Instances` which have properties that
+      define links to content, such as a `Class.Decal|Decal` or a
+      `Class.Sound|Sound`, the engine attempts to load these assets from Roblox.
+      For each requested asset, the callback function runs, indicating the
+      asset's final `Enum.AssetFetchStatus`.
+
+      If any of the assets fail to load, an error message appears in the output.
+      The method itself will not error and it will continue executing until it
+      has processed each requested instance or asset ID.
+    code_samples:
+      - ContentProvider-PreloadAsync1
+    parameters:
+      - name: contentIdList
+        type: Array
+        default:
+        summary: |
+          An array of items to load.
+      - name: callbackFunction
+        type: Function
+        default: nil
+        summary: |
+          The function called when each asset request completes. Returns the
+          `Datatype.Content|content` string and the asset's final
+          `Enum.AssetFetchStatus`.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: ContentProvider.AssetFetchFailed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetId
+        type: Content
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

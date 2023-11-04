@@ -1,0 +1,113 @@
+name: Axes
+type: datatype
+summary: |
+  The `Datatype.Axes` data type is for the `Class.ArcHandles` class to control
+  which rotation axes are currently enabled.
+description: |
+  The `Datatype.Axes` data type is for the `Class.ArcHandles` class to control
+  which rotation axes are currently enabled.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Axes.new
+    summary: |-
+      Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
+      converted to the corresponding axes.
+    description: |-
+      Creates a new Axes using list of axes and/or faces. NormalIds (faces) are
+      converted to the corresponding axes.
+    parameters:
+      - name: axes
+        type: Tuple
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: Axes.X
+    type: bool
+    summary: |
+      Whether the X axis is enabled.
+    description: |
+      Whether the X axis is enabled.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Y
+    type: bool
+    summary: |
+      Whether the Y axis is enabled.
+    description: |
+      Whether the Y axis is enabled.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Z
+    type: bool
+    summary: |
+      Whether the Z axis is enabled.
+    description: |
+      Whether the Z axis is enabled.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Top
+    type: bool
+    summary: |
+      Whether the top face is included.
+    description: |
+      Whether the top face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Bottom
+    type: bool
+    summary: |
+      Whether the bottom face is included.
+    description: |
+      Whether the bottom face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Left
+    type: bool
+    summary: |
+      Whether the left face is included.
+    description: |
+      Whether the left face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Right
+    type: bool
+    summary: |
+      Whether the right face is included.
+    description: |
+      Whether the right face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Back
+    type: bool
+    summary: |
+      Whether the back face is included.
+    description: |
+      Whether the back face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Axes.Front
+    type: bool
+    summary: |
+      Whether the front face is included.
+    description: |
+      Whether the front face is included.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

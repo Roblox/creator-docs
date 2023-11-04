@@ -1,0 +1,33 @@
+name: HumanoidHealthDisplayType
+type: enum
+summary: |
+  Controls under what circumstances the `Class.Humanoid`'s health bar is
+  displayed.
+description: |
+  Controls when the `Class.Humanoid`'s health bar is displayed. This works in
+  conjunction with the `Class.Humanoid`'s `MaxHealth` property, which must have
+  a value higher than zero or the health bar doesn't display.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: DisplayWhenDamaged
+    summary: |
+      The humanoid's health bar is only visible when the humanoid is not at full
+      health (assuming `MaxHealth` is greater than zero).
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: AlwaysOn
+    summary: |
+      The humanoid's health bar is always visible (assuming `MaxHealth` is
+      greater than zero).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AlwaysOff
+    summary: |
+      The humanoid's health bar is never visible.
+    value: 2
+    tags: []
+    deprecation_message: ''

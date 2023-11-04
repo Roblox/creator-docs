@@ -32,7 +32,7 @@ A volcano with an orange neon part will be used to emit particles. This part is 
 
 ## Particle Texture
 
-A `Class.ParticleEmitter` has a property called **Texture** that determines the image which will be repeated in the effect. If you want to use your own image, you'll need to upload it to Roblox and get the **Asset ID** to paste into that property. Check out the [Applying Surface Images](../../../tutorials/building/modeling/applying-surface-images.md) course to learn how.
+A `Class.ParticleEmitter` has a property called **Texture** that determines the image which will be repeated in the effect. If you want to use your own image, you'll need to upload it to Roblox and get the **Asset ID** to paste into that property. See [Textures and Decals](../../../parts/textures-decals.md) for more details.
 
 <Alert severity="info">
 

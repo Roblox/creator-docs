@@ -1,0 +1,82 @@
+name: CFrameValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single CFrame value.
+description: |
+  A container object for a single `Datatype.CFrame` value.
+code_samples:
+  - Store-the-Camera-s-CFrame
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: CFrameValue.Value
+    summary: |
+      Used to hold a `Datatype.CFrame` value.
+    description: |
+      Used to hold a `Datatype.CFrame` value.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: CFrameValue.Changed
+    summary: |
+      Fired whenever the `Class.CFrameValue.Value` of the CFrameValue is
+      changed.
+    description: |
+      Fired whenever the `Class.CFrameValue.Value` of the `Class.CFrameValue` is
+      changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      CFrameValue changes and to track the different values that it may change
+      to.
+
+      For instance, this even may be useful in games that rely on CFrameValues
+      to track game object `Datatype.CFrame` positions and movements.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - CFrameValue-Changed1
+    parameters:
+      - name: value
+        type: CFrame
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CFrameValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: CFrame
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of `Class.CFrameValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

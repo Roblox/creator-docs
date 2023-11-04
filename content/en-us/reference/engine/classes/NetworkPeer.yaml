@@ -1,0 +1,38 @@
+name: NetworkPeer
+type: class
+category:
+memory_category: Instances
+summary: |
+  The NetworkPeer object is the most basic class of the network objects.
+description: |
+  The NetworkPeer object is the most basic class of the network objects.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties: []
+methods:
+  - name: NetworkPeer:SetOutgoingKBPSLimit
+    summary: |
+      Sets the maximum outgoing bandwidth that Roblox can use.
+    description: |
+      Sets the maximum outgoing bandwidth that Roblox can use.
+    code_samples:
+      - NetworkPeer-SetOutgoingKBPSLimit1
+    parameters:
+      - name: limit
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

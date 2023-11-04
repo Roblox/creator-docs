@@ -1,0 +1,67 @@
+name: FormFactorPart
+type: class
+category:
+memory_category: Instances
+summary: |
+  The FormFactorPart class is an abstract class. It inherits from the BasePart
+  class and adds the FormFactor property to classes that inherit from it.
+description: |
+  The FormFactorPart class is an abstract class. It inherits from the
+  `Class.BasePart` class and adds the `Class.FormFactorPart.FormFactor` property
+  to classes that inherit from it.
+
+  The FormFactor property has been deprecated, so this class has been deprecated
+  as well.
+code_samples:
+inherits:
+  - BasePart
+tags:
+  - NotCreatable
+deprecation_message: |
+  This class has been deprecated along with the
+  `Class.FormFactorPart.FormFactor` property.
+properties:
+  - name: FormFactorPart.FormFactor
+    summary: ''
+    description: |
+      This used to specify a grid constraint of the part's size. No longer does
+      anything.
+    code_samples:
+    type: FormFactor
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated and should not be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Part
+    serialization:
+      can_load: true
+      can_save: false
+  - name: FormFactorPart.formFactor
+    summary: ''
+    description: |
+      Determines how a part acts when resized and the values that which its size
+      can take.
+    code_samples:
+    type: FormFactor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated and should not be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Part
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,28 @@
+name: FlagStandService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service responsible for handling the now deprecated
+  `Class.FlagStand` and `Class.Flag` objects.
+description: |
+  This class was an internal service responsible for handling the now deprecated
+  `Class.FlagStand` and `Class.Flag` objects.
+
+  The `Class.Flag` and `Class.FlagStand` objects were created to allow
+  developers to make 'Capture the Flag' style games quickly. However they have
+  been deprecated and developers are advised to design their own systems which
+  will be more flexible and reliable.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: |
+  This internal service was once responsible for handling the now deprecated
+  `Class.FlagStand` and `Class.Flag` objects, and is now deprecated.
+properties: []
+methods: []
+events: []
+callbacks: []

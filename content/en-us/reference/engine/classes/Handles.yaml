@@ -1,0 +1,141 @@
+name: Handles
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  The Handles object places 3D handles around any object that its Adornee is set
+  to.
+description: |
+  For handles to be interactive, they must be parented to a player's PlayerGui
+  or the CoreGui.
+
+  The **Handles** object places 3D handles around any object that its Adornee is
+  set to. The Adornee property must be set to a 3D object for the handles to
+  appear. The color can be changed, and the shape of the handles can be set to
+  either arrows or spheres.
+code_samples:
+inherits:
+  - HandlesBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: Handles.Faces
+    summary: |
+      Sets which sides the GUI handles will appear.
+    description: |
+      Sets which sides the GUI handles will appear.
+    code_samples:
+    type: Faces
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Handles.Style
+    summary: |
+      Sets the GUI style of the handles. Currently there are only two types;
+      Resize and Movement.
+    description: |
+      Sets the GUI style of the handles. Currently there are only two types;
+      Resize and Movement.
+    code_samples:
+    type: HandlesStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: Handles.MouseButton1Down
+    summary: |
+      Fired when the left mouse button goes down on one of the GUI handles.
+    description: |
+      Fired when the left mouse button goes down on one of the GUI handles.
+    code_samples:
+    parameters:
+      - name: face
+        type: NormalId
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Handles.MouseButton1Up
+    summary: |
+      Fired when the left mouse button is released on one of the GUI handles.
+    description: |
+      Fired when the left mouse button is released on one of the GUI handles.
+    code_samples:
+    parameters:
+      - name: face
+        type: NormalId
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Handles.MouseDrag
+    summary: |
+      Fired when the mouse moves while the MouseButton1Down event has fired, but
+      the left mouse button has not been released yet.
+    description: |
+      Fired when the mouse moves while the MouseButton1Down event has fired, but
+      the left mouse button has not been released yet.
+    code_samples:
+    parameters:
+      - name: face
+        type: NormalId
+        default:
+        summary: ''
+      - name: distance
+        type: float
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Handles.MouseEnter
+    summary: |
+      Fired when a mouse "enters" the GUI handle.
+    description: |
+      Fired when a mouse "enters" the GUI handle.
+    code_samples:
+    parameters:
+      - name: face
+        type: NormalId
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Handles.MouseLeave
+    summary: |
+      Fired when the mouse leaves the GUI handle.
+    description: |
+      Fired when the mouse leaves the GUI handle.
+    code_samples:
+    parameters:
+      - name: face
+        type: NormalId
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

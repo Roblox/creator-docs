@@ -1,0 +1,68 @@
+name: TerrainAcquisitionMethod
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Legacy
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Template
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Generate
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Import
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Convert
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: EditAddTool
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: EditSeaLevelTool
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: EditReplaceTool
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: RegionFillTool
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: RegionPasteTool
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Other
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''

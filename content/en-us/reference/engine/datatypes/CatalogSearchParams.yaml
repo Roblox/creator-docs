@@ -1,0 +1,152 @@
+name: CatalogSearchParams
+type: datatype
+summary: |
+  Stores parameters used in catalog searches via
+  `Class.AvatarEditorService:SearchCatalog()`.
+description: |
+  The `Datatype.CatalogSearchParams` data type stores the parameters of a
+  catalog search via `Class.AvatarEditorService:SearchCatalog()`.
+
+  When accessing the value of the `Datatype.CatalogSearchParams.BundleTypes` or
+  `Datatype.CatalogSearchParams.AssetTypes` property the returned table will be
+  read-only to avoid confusion when not directly accessing the
+  `Datatype.CatalogSearchParams` instance.
+
+  For example, you can use these properties as follows:
+
+  ```lua
+  local params = CatalogSearchParams.new()
+  params.SearchKeyword = "Test"
+  params.MinPrice = 5000
+  params.MaxPrice = 10000
+  params.BundleTypes = {Enum.BundleType.Animations, Enum.BundleType.BodyParts}
+
+  local types = params.BundleTypes
+  for _, val in ipairs(types) do
+    print(val)
+  end
+  -- table.insert(types, Enum.BundleType.Animations) -- This would not work because the table is read only
+  ```
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+constants: []
+properties:
+  - name: CatalogSearchParams.SearchKeyword
+    type: string
+    summary: |
+      The keyword to search for catalog results with.
+    default: ''
+    description: |
+      The keyword to search for catalog results with.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.MinPrice
+    type: number
+    summary: |
+      The minimum item price to search for.
+    default: 0
+    description: |
+      The minimum item price to search for.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.MaxPrice
+    type: number
+    summary: |
+      The maximum item price to search for.
+    default: 2147483647
+    description: |
+      The maximum item price to search for.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.SortType
+    type: CatalogSortType
+    summary: |
+      The order in which to sort the results.
+    default: Enum.CatalogSortType.Relevance
+    description: |
+      The order in which to sort the results, represented by a
+      `Enum.CatalogSortType`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.SortAggregation
+    type: Enum.CatalogSortAggregation
+    summary: |
+      The time period to use to aggregate the sort results.
+    default: Enum.CatalogSortAggregation.AllTime
+    description: |
+      The time period to use to aggregate the sort results by, represented by a
+      `Enum.CatalogCategoryFilter`. This only applies when the sort type is
+      Enum.CatalogSortType.MostFavorited or Enum.CatalogSortType.BestSelling. It
+      does not apply for other sort types.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.CategoryFilter
+    type: CatalogCategoryFilter
+    summary: |
+      The category to filter the search by.
+    default: Enum.CatalogCategoryFilter.None
+    description: |
+      The category to filter the search by, represented by a
+      `Enum.CatalogCategoryFilter`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.SalesTypeFilter
+    type: Enum.SalesTypeFilter
+    summary: |
+      The sales type filter the search by.
+    default: Enum.SalesTypeFilter.All
+    description: |
+      The sales type the search by, represented by a `Enum.SalesTypeFilter`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.BundleTypes
+    type: Array<BundleType>
+    summary: |
+      An array containing `Enum.BundleType` values to filter the search by.
+    default: '{}'
+    description: |
+      An array containing `Enum.BundleType` values to filter the search by.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.AssetTypes
+    type: Array<AvatarAssetType>
+    summary: |
+      An array containing `Enum.AvatarAssetType` values to filter the search by.
+    description: |
+      An array containing `Enum.AvatarAssetType` values to filter the search by.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.IncludeOffSale
+    type: bool
+    summary: |
+      Whether off sale items should be included in the results.
+    default: false
+    description: |
+      Whether off sale items should be included in the results.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.CreatorName
+    type: string
+    summary: |
+      Search for items with the given creator.
+    default: ''
+    description: |
+      Search for items with the given creator.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

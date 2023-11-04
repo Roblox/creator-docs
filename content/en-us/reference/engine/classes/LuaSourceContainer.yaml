@@ -1,0 +1,60 @@
+name: LuaSourceContainer
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class for all objects which contain Lua code. `Class.Script`,
+  `Class.LocalScript`, `Class.ModuleScript` and `Class.CoreScript` all inherit
+  from LuaSourceContainer.
+description: |
+  The base class for all objects which contain Lua code. `Class.Script`,
+  `Class.LocalScript`, `Class.ModuleScript` and `Class.CoreScript` all inherit
+  from LuaSourceContainer.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: LuaSourceContainer.CurrentEditor
+    summary: |
+      The `Class.Player` who is currently editing this script. This property is
+      only used when in Team Create mode.
+    description: |
+      The `Class.Player` who is currently editing this script. This property is
+      only used when in
+      [Team Create](../../../projects/collaboration.md#team-create) mode.
+    code_samples:
+    type: Instance
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: LuaSourceContainer.RuntimeSource
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

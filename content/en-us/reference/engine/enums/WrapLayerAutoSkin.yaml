@@ -1,0 +1,23 @@
+name: WrapLayerAutoSkin
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Disabled
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EnabledPreserve
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EnabledOverride
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

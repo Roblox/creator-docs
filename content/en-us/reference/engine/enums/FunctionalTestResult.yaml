@@ -1,0 +1,28 @@
+name: FunctionalTestResult
+type: enum
+summary: |
+  Status of a single functional test run.
+description: |
+  Represents the outcome of a single functional test run.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Passed
+    summary: |
+      The test run was successful.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Warning
+    summary: |
+      The test run is potentially unstable.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Error
+    summary: |
+      The test run failed.
+    value: 2
+    tags: []
+    deprecation_message: ''

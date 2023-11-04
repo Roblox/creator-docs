@@ -1,0 +1,39 @@
+name: PVAdornment
+type: class
+category:
+memory_category: Instances
+summary: |
+  The PVAdornment class is an abstract class of which the inheritors can be
+  adorned to objects of the PVInstance class.
+description: |
+  The PVAdornment class is an abstract class of which the inheritors can be
+  adorned to objects of the PVInstance class.
+code_samples:
+inherits:
+  - GuiBase3d
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: PVAdornment.Adornee
+    summary: |
+      The `Class.PVInstance` the PVAdornment is attached to.
+    description: |
+      The `Class.PVInstance` the PVAdornment is attached to. An adornment will
+      stay positioned and rotated relative to its adornee, even if the adornee
+      moves.
+    code_samples:
+    type: PVInstance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

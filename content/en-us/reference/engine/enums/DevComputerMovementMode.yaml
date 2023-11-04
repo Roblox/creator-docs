@@ -1,0 +1,36 @@
+name: DevComputerMovementMode
+type: enum
+summary: |
+  Sets the movement mode of players who are playing on computers.
+description: |
+  Sets the movement mode of players who are playing on computers.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: UserChoice
+    summary: |
+      The player's character will moved based on the user's settings.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: KeyboardMouse
+    summary: |
+      The player's character will be controlled using the keyboard and mouse.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ClickToMove
+    summary: |
+      The player can right click in the game world and the character will move
+      there. Player can also control character with mouse and keyboard.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    summary: |
+      The player will not respond to default controls. You must define any
+      character movement in custom scripts.
+    value: 3
+    tags: []
+    deprecation_message: ''

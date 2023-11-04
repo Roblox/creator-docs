@@ -1,0 +1,13 @@
+name: AdShape
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: HorizontalRectangle
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,13 @@
+name: SubscriptionPeriod
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Month
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''

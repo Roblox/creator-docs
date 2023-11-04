@@ -1,0 +1,154 @@
+name: QualityLevel
+type: enum
+summary: |
+  Controls the rendering quality of the game.
+description: |
+  Controls the rendering quality of the game. Higher levels correspond to higher
+  quality graphics.
+
+  As QualityLevel increases, Roblox rendering engine increases the rendering
+  distance, shading quality, apparent geometry and texture resolution, limits on
+  particles that are being rendered, fidelity of trail effects, post-effect
+  quality and more. On low quality levels some post effects may be completely
+  disabled and objects that are far away will not be rendered.
+
+  The specific effects of quality level on the individual elements of the scene
+  or individual rendering features are platform- and device- specific and can
+  not be relied upon.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      The quality level of graphics is determined automatically depending on the
+      client's setting for either game performance or graphic quality.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Level01
+    summary: |
+      Graphic quality level 1 - the lowest quality level.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Level02
+    summary: |
+      Graphic quality level 2.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Level03
+    summary: |
+      Graphic quality level 3.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Level04
+    summary: |
+      Graphic quality level 4.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Level05
+    summary: |
+      Graphic quality level 5.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Level06
+    summary: |
+      Graphic quality level 6.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Level07
+    summary: |
+      Graphic quality level 7.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Level08
+    summary: |
+      Graphic quality level 8.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Level09
+    summary: |
+      Graphic quality level 9.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Level10
+    summary: |
+      Graphic quality level 10.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Level11
+    summary: |
+      Graphic quality level 11.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: Level12
+    summary: |
+      Graphic quality level 12.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Level13
+    summary: |
+      Graphic quality level 13.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Level14
+    summary: |
+      Graphic quality level 14.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Level15
+    summary: |
+      Graphic quality level 15.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Level16
+    summary: |
+      Graphic quality level 16.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: Level17
+    summary: |
+      Graphic quality level 17.
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: Level18
+    summary: |
+      Graphic quality level 18.
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: Level19
+    summary: |
+      Graphic quality level 19.
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: Level20
+    summary: |
+      Graphic quality level 20.
+    value: 20
+    tags: []
+    deprecation_message: ''
+  - name: Level21
+    summary: |
+      Graphic quality level 21, the highest quality level.
+    value: 21
+    tags: []
+    deprecation_message: ''

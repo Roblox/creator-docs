@@ -1,0 +1,672 @@
+name: StudioStyleGuideColor
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: MainBackground
+    value: 0
+    summary: |
+      The primary background color used by the ribbon bar and windows.
+    tags: []
+    deprecation_message: ''
+  - name: Titlebar
+    value: 1
+    summary: |
+      The color of windows' title bars.
+    tags: []
+    deprecation_message: ''
+  - name: Dropdown
+    value: 2
+    summary: |
+      The color of dropdown menus, like those found in the Properties window.
+    tags: []
+    deprecation_message: ''
+  - name: Tooltip
+    value: 3
+    summary: |
+      The background color of tooltips, like those seen when hovering over
+      buttons on the ribbon bar or properties in the Properties window.
+    tags: []
+    deprecation_message: ''
+  - name: Notification
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScrollBar
+    value: 5
+    summary: |
+      The color of scrollbar handles, like those seen in the Explorer window.
+    tags: []
+    deprecation_message: ''
+  - name: ScrollBarBackground
+    value: 6
+    summary: |
+      The background color of scrollbars, like those seen in the Explorer
+      window.
+    tags: []
+    deprecation_message: ''
+  - name: TabBar
+    value: 7
+    summary: |
+      The background color of the tab bar, like the one where the script editor
+      is opened.
+    tags: []
+    deprecation_message: ''
+  - name: Tab
+    value: 8
+    summary: |
+      The color of tabs on the tab bar, like the ones opened when the script
+      editor is opened.
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonDefault
+    value: 9
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonHover
+    value: 10
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonChecked
+    value: 11
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonAccent
+    value: 12
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonBorder
+    value: 13
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: FilterButtonBorderAlt
+    value: 14
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: RibbonTab
+    value: 15
+    summary: |
+      The color of a tab on the ribbon menu (e.g. Home, Model, Test).
+    tags: []
+    deprecation_message: ''
+  - name: RibbonTabTopBar
+    value: 16
+    summary: |
+      The background color of the ribbon menu.
+    tags: []
+    deprecation_message: ''
+  - name: Button
+    value: 17
+    summary: |
+      The background color of clickable buttons.
+    tags: []
+    deprecation_message: ''
+  - name: MainButton
+    value: 18
+    summary: |
+      The background color of clickable buttons that are the primary action.
+    tags: []
+    deprecation_message: ''
+  - name: RibbonButton
+    value: 19
+    summary: |
+      The background color of buttons on the ribbon menu.
+    tags: []
+    deprecation_message: ''
+  - name: ViewPortBackground
+    value: 20
+    summary: |
+      The background color of the game viewport.
+    tags: []
+    deprecation_message: ''
+  - name: InputFieldBackground
+    value: 21
+    summary: |
+      The background color of input fields, like those found in the Explorer
+      window.
+    tags: []
+    deprecation_message: ''
+  - name: Item
+    value: 22
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TableItem
+    value: 23
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CategoryItem
+    value: 24
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: GameSettingsTableItem
+    value: 25
+    summary: |
+      The color of items within tables in the game settings window.
+    tags: []
+    deprecation_message: ''
+  - name: GameSettingsTooltip
+    value: 26
+    summary: |
+      The color of tooltips in the game settings window.
+    tags: []
+    deprecation_message: ''
+  - name: EmulatorBar
+    value: 27
+    summary: |
+      The color of the bar shown when the mobile emulator is active.
+    tags: []
+    deprecation_message: ''
+  - name: EmulatorDropDown
+    value: 28
+    summary: |
+      The color of the device and physical size dropdowns in the emulator bar.
+    tags: []
+    deprecation_message: ''
+  - name: ColorPickerFrame
+    value: 29
+    summary: |
+      The background color of the color picker.
+    tags: []
+    deprecation_message: ''
+  - name: CurrentMarker
+    value: 30
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Border
+    value: 31
+    summary: |
+      The color of borders, like those found in the Properties window.
+    tags: []
+    deprecation_message: ''
+  - name: DropShadow
+    value: 32
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Shadow
+    value: 33
+    summary: |
+      The color of shadows rendered under floating items like dropdowns.
+    tags: []
+    deprecation_message: ''
+  - name: Light
+    value: 34
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Dark
+    value: 35
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Mid
+    value: 36
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: MainText
+    value: 37
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: SubText
+    value: 38
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TitlebarText
+    value: 39
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BrightText
+    value: 40
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DimmedText
+    value: 41
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: LinkText
+    value: 42
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: WarningText
+    value: 43
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ErrorText
+    value: 44
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InfoText
+    value: 45
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: SensitiveText
+    value: 46
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptSideWidget
+    value: 47
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptBackground
+    value: 48
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptText
+    value: 49
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptSelectionText
+    value: 50
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptSelectionBackground
+    value: 51
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptFindSelectionBackground
+    value: 52
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptMatchingWordSelectionBackground
+    value: 53
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptOperator
+    value: 54
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptNumber
+    value: 55
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptString
+    value: 56
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptComment
+    value: 57
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptKeyword
+    value: 58
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptBuiltInFunction
+    value: 59
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptWarning
+    value: 60
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptError
+    value: 61
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptInformation
+    value: 62
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptHint
+    value: 63
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptWhitespace
+    value: 64
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptRuler
+    value: 65
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DocViewCodeBackground
+    value: 66
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DebuggerCurrentLine
+    value: 67
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DebuggerErrorLine
+    value: 68
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffFilePathText
+    value: 69
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextHunkInfo
+    value: 70
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextNoChange
+    value: 71
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextAddition
+    value: 72
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextDeletion
+    value: 73
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextSeparatorBackground
+    value: 74
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextNoChangeBackground
+    value: 75
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextAdditionBackground
+    value: 76
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffTextDeletionBackground
+    value: 77
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNum
+    value: 78
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumSeparatorBackground
+    value: 79
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumNoChangeBackground
+    value: 80
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumAdditionBackground
+    value: 81
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumDeletionBackground
+    value: 82
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffFilePathBackground
+    value: 83
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DiffFilePathBorder
+    value: 84
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ChatIncomingBgColor
+    value: 85
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ChatIncomingTextColor
+    value: 86
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ChatOutgoingBgColor
+    value: 87
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ChatOutgoingTextColor
+    value: 88
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ChatModeratedMessageColor
+    value: 89
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Separator
+    value: 90
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ButtonBorder
+    value: 91
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ButtonText
+    value: 92
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InputFieldBorder
+    value: 93
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CheckedFieldBackground
+    value: 94
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CheckedFieldBorder
+    value: 95
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CheckedFieldIndicator
+    value: 96
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: HeaderSection
+    value: 97
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Midlight
+    value: 98
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: StatusBar
+    value: 99
+    summary: |
+      The color of the status bar shown at the bottom of Studio, if it is
+      visible.
+    tags: []
+    deprecation_message: ''
+  - name: DialogButton
+    value: 100
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DialogButtonText
+    value: 101
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DialogButtonBorder
+    value: 102
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DialogMainButton
+    value: 103
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: DialogMainButtonText
+    value: 104
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InfoBarWarningBackground
+    value: 105
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InfoBarWarningText
+    value: 106
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptEditorCurrentLine
+    value: 107
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptMethod
+    value: 108
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptProperty
+    value: 109
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptNil
+    value: 110
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptBool
+    value: 111
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptFunction
+    value: 112
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptLocal
+    value: 113
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptSelf
+    value: 114
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptLuauKeyword
+    value: 115
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptFunctionName
+    value: 116
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptTodo
+    value: 117
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ScriptBracket
+    value: 118
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AttributeCog
+    value: 119
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AICOOverlayText
+    value: 128
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AICOOverlayButtonBackground
+    value: 129
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AICOOverlayButtonBackgroundHover
+    value: 130
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AICOOverlayButtonBackgroundPressed
+    value: 131
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: OnboardingCover
+    summary: ''
+    value: 132
+    tags: []
+    deprecation_message: ''
+  - name: OnboardingHighlight
+    summary: ''
+    value: 133
+    tags: []
+    deprecation_message: ''
+  - name: OnboardingShadow
+    summary: ''
+    value: 134
+    tags: []
+    deprecation_message: ''

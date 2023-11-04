@@ -1,0 +1,78 @@
+name: ThreadPoolConfig
+type: enum
+summary: |
+  Thread pooling scheme for the task scheduler.
+description: |
+  Controls the thread pooling scheme of the underlying 'TaskScheduler'.
+
+  See TaskScheduler for details.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Auto
+    summary: |
+      Let task scheduler make a decision internally.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Threads1
+    summary: |
+      Utilize 1 worker thread, ignore the physical CPU core count.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Threads2
+    summary: |
+      Utilize 2 worker threads, ignore the physical CPU core count.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Threads3
+    summary: |
+      Utilize 3 worker threads, ignore the physical CPU core count.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Threads4
+    summary: |
+      Utilize 4 worker threads, ignore the physical CPU core count.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Threads8
+    summary: |
+      Utilize 8 worker threads, ignore the physical CPU core count.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Threads16
+    summary: |
+      Utilize 16 worker threads, ignore the physical CPU core count.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: PerCore1
+    summary: |
+      Utilize 1 worker thread per available physical CPU core.
+    value: 101
+    tags: []
+    deprecation_message: ''
+  - name: PerCore2
+    summary: |
+      Utilize 2 worker threads per available physical CPU core.
+    value: 102
+    tags: []
+    deprecation_message: ''
+  - name: PerCore3
+    summary: |
+      Utilize 3 worker threads per available physical CPU core.
+    value: 103
+    tags: []
+    deprecation_message: ''
+  - name: PerCore4
+    summary: |
+      Utilize 4 worker threads per available physical CPU core.
+    value: 104
+    tags: []
+    deprecation_message: ''

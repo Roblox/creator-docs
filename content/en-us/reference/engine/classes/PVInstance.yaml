@@ -1,0 +1,123 @@
+name: PVInstance
+type: class
+category:
+memory_category: Instances
+summary: |
+  Abstract class for all objects that have a physical location in the world,
+  specifically `Class.BasePart|BaseParts` and `Class.Model|Models`.
+description: |
+  A `Class.PVInstance` ("Position Velocity Instance") is an abstract class that
+  cannot be created. It is the base for all objects that have a physical
+  location in the world, specifically `Class.BasePart|BaseParts` and
+  `Class.Model|Models`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: PVInstance.Origin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PVInstance.Pivot Offset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Pivot
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: PVInstance:GetPivot
+    summary: |
+      Gets the pivot of a `Class.PVInstance`.
+    description: |
+      This function gets the pivot of a `Class.PVInstance`. This is often used
+      with `Class.PVInstance:PivotTo()` to move a model.
+
+      `Class.Model|Models` and `Class.BasePart|BaseParts` are both
+      `Class.PVInstance|PVInstances` ("Position Velocity Instances") and so both
+      have this function.
+    code_samples:
+      - simple-character-teleportation
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: PVInstance:PivotTo
+    summary: |
+      Transforms the `Class.PVInstance` along with all of its descendant
+      `Class.PVInstance|PVInstances` such that the pivot is now located at the
+      specified `Datatype.CFrame`.
+    description: |
+      Transforms the `Class.PVInstance` along with all of its descendant
+      `Class.PVInstance|PVInstances` such that the pivot is now located at the
+      specified `Datatype.CFrame`. This is the primary function that should be
+      used to move `Class.Model|Models` via scripting.
+
+      `Class.BasePart|BaseParts` are moved in this way by having their
+      `Datatype.CFrame` transformed by the necessary offset.
+      `Class.Model|Models` are moved in this way by having their
+      `Class.Model.WorldPivot` transformed by the necessary offset.
+
+      Note that for efficiency purposes, `Class.Instance.Changed` events are not
+      fired for `Class.BasePart.Position|Position` and
+      `Class.BasePart.Orientation|Orientation` of `Class.BasePart|BaseParts`
+      moved in this way; they are only fired for `Datatype.CFrame`.
+
+      When calling `Class.PVInstance:PivotTo()|PivotTo` on `Class.Model|Models`,
+      the offsets of the descendant parts and models are cached, such that
+      subsequent calls to `Class.PVInstance:PivotTo()|PivotTo` on the same model
+      do not accumulate floating point drift between the parts making up the
+      model.
+
+      `Class.Model|Models` and `Class.BasePart|BaseParts` are both
+      `Class.PVInstance|PVInstances` ("Position Velocity Instances") and so both
+      have this function.
+    code_samples:
+      - simple-character-teleportation
+    parameters:
+      - name: targetCFrame
+        type: CFrame
+        default:
+        summary: |
+          The `Datatype.CFrame` that the `Class.PVInstance` pivot should equal
+          after moving it.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

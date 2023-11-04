@@ -1,0 +1,21 @@
+name: VRScaling
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: World
+    value: 0
+    summary: |
+      Adjusts `Class.Camera.HeadScale' so that the world in VR is seen from the
+      avatar's perspective.
+    tags: []
+    deprecation_message: ''
+  - name: 'Off'
+    value: 1
+    summary: |
+      Disable VR AutomaticScaling .
+    tags: []
+    deprecation_message: ''

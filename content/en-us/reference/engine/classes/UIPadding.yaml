@@ -1,0 +1,90 @@
+name: UIPadding
+type: class
+category: GUI
+memory_category: Instances
+summary: ''
+description: |
+  Applies padding to the borders of the GuiObject that this is parented to.
+code_samples:
+inherits:
+  - UIComponent
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIPadding.PaddingBottom
+    summary: |
+      The padding to apply on the bottom side relative to the parent's normal
+      size.
+    description: |
+      The padding to apply on the bottom side relative to the parent's normal
+      size.
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPadding.PaddingLeft
+    summary: |
+      The padding to apply on the left side relative to the parent's normal
+      size.
+    description: |
+      The padding to apply on the left side relative to the parent's normal
+      size.
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPadding.PaddingRight
+    summary: |
+      The padding to apply on the right side relative to the parent's normal
+      size.
+    description: |
+      The padding to apply on the right side relative to the parent's normal
+      size.
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIPadding.PaddingTop
+    summary: |
+      The padding to apply on the top side relative to the parent's normal size.
+    description: |
+      The padding to apply on the top side relative to the parent's normal size.
+    code_samples:
+    type: UDim
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

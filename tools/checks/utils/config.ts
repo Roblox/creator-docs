@@ -40,6 +40,7 @@ export interface IConfig {
   commitHash: string;
   checkHttpLinks: boolean;
   checkMarkdownLint: boolean;
+  checkProtectedFields: boolean;
   checkRelativeLinks: boolean;
   checkRetextAnalysis: boolean;
   debug: boolean;
@@ -181,6 +182,11 @@ export const getConfig = async (): Promise<IConfig> => {
       type: 'boolean',
       description: 'Whether to check markdownlint',
       default: getEnvVar('CHECK_MARKDOWN_LINT', DataType.Boolean),
+    })
+    .option('checkProtectedFields', {
+      type: 'boolean',
+      description: 'Whether to check protected fields in YAML',
+      default: getEnvVar('CHECK_PROTECTED_FIELDS', DataType.Boolean),
     })
     .option('checkRelativeLinks', {
       type: 'boolean',

@@ -1,0 +1,392 @@
+name: SlidingBallConstraint
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  The base class for constraints that allow their attachments to slide along an
+  axis but not rotate.
+description: |
+  **SlidingBallConstraint** is the base class for constraints that allow their
+  attachments to slide along an axis but not rotate, including
+  `Class.PrismaticConstraint` and `Class.CylindricalConstraint`. This constrains
+  the attachments so that their **X** axes are collinear but pointing in
+  opposite directions. It also constrains the attachments so that their **Y**
+  axes are parallel.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Linear Power
+
+  If this constraint's `Class.SlidingBallConstraint|ActuatorType` is set to
+  `Enum.ActuatorType|Motor`, it attempts to translate the attachments with the
+  goal of reaching `Class.SlidingBallConstraint|Velocity`. You can further
+  control this translation through both
+  `Class.SlidingBallConstraint|MotorMaxAcceleration` and
+  `Class.SlidingBallConstraint|MotorMaxForce`.
+
+  If this constraint's `Class.SlidingBallConstraint|ActuatorType` is set to
+  `Enum.ActuatorType|Servo`, it attempts to translate the attachments to a set
+  separation specified by `Class.SlidingBallConstraint|TargetPosition`. This
+  translation is controlled by `Class.SlidingBallConstraint|Speed`,
+  `Class.SlidingBallConstraint|LinearResponsiveness`, and
+  `Class.SlidingBallConstraint|ServoMaxForce`.
+
+  #### Limits
+
+  You can set **limits** to restrict this constraint's sliding range. Enabling
+  the `Class.SlidingBallConstraint|LimitsEnabled` property exposes the
+  `Class.SlidingBallConstraint|LowerLimit` and
+  `Class.SlidingBallConstraint|UpperLimit` values, as well as
+  `Class.SlidingBallConstraint|Restitution` which defines the elasticity of the
+  attachments when they reach either limit.
+code_samples:
+inherits:
+  - Constraint
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: SlidingBallConstraint.ActuatorType
+    summary: |
+      Sets whether the translation of the `Class.SlidingBallConstraint` is
+      actuated and, if so, what kind of actuation.
+    description: |
+      Sets whether the translation of the `Class.SlidingBallConstraint` is
+      actuated and, if so, what kind of actuation.
+
+      - If `Class.SlidingBallConstraint|ActuatorType` is set to
+        `Enum.ActuatorType|None`, the joint can slide freely.
+
+      - If `Class.SlidingBallConstraint|ActuatorType` is set to
+        `Enum.ActuatorType|Motor`, it attempts to translate the attachments with
+        the goal of reaching `Class.SlidingBallConstraint|Velocity`. You can
+        further control this translation through both
+        `Class.SlidingBallConstraint|MotorMaxAcceleration` and
+        `Class.SlidingBallConstraint|MotorMaxForce`.
+
+      - If this constraint's `Class.SlidingBallConstraint|ActuatorType` is set
+        to `Enum.ActuatorType|Servo`, it attempts to translate the attachments
+        to a set separation specified by
+        `Class.SlidingBallConstraint|TargetPosition`. This translation is
+        controlled by `Class.SlidingBallConstraint|Speed`,
+        `Class.SlidingBallConstraint|LinearResponsiveness`, and
+        `Class.SlidingBallConstraint|ServoMaxForce`.
+    code_samples:
+    type: ActuatorType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Slider
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.CurrentPosition
+    summary: |
+      The current offset between the constraint's
+      `Class.Attachment|Attachments`.
+    description: |
+      The current offset between the constraint's
+      `Class.Attachment|Attachments`.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+  - name: SlidingBallConstraint.LimitsEnabled
+    summary: |
+      Sets whether the `Class.SlidingBallConstraint` will limit the range of
+      translation.
+    description: |
+      Sets whether the `Class.SlidingBallConstraint` will limit the range of
+      translation. If true, this property exposes the
+      `Class.SlidingBallConstraint|LowerLimit` and
+      `Class.SlidingBallConstraint|UpperLimit` values, as well as
+      `Class.SlidingBallConstraint|Restitution` which defines the elasticity of
+      the attachments when they reach either limit.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Slider
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.LinearResponsiveness
+    summary: |
+      Specifies the "sharpness" of the linear servo motor in reaching the
+      `Class.SlidingBallConstraint.TargetPosition|TargetPosition`.
+    description: |
+      Specifies the "sharpness" of the linear servo motor in reaching the
+      `Class.SlidingBallConstraint.TargetPosition|TargetPosition` when the
+      derived classes' actuator type is set to `Enum.ActuatorType|Servo`. Larger
+      values correspond to faster a response and smaller values results in more
+      damping and a slower response.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Servo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.LowerLimit
+    summary: |
+      The lower positional limit along the **X** axis of
+      `Class.Constraint.Attachment0|Attachment0` if
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
+    description: |
+      The lower positional limit along the **X** axis of
+      `Class.Constraint.Attachment0|Attachment0` if
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.MotorMaxAcceleration
+    summary: |
+      The constraint's maximum acceleration when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor` as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Velocity|Velocity`.
+    description: |
+      The constraint's maximum acceleration when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor`, as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Velocity|Velocity`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Motor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.MotorMaxForce
+    summary: |
+      The constraint's maximum force when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor`, as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Velocity|Velocity`.
+    description: |
+      The constraint's maximum force when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor`, as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Velocity|Velocity`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Motor
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.Restitution
+    summary: |
+      The elasticity of the constraint's `Class.Attachment|Attachments` when
+      they reach the end of the range specified by
+      `Class.SlidingBallConstraint.UpperLimit|UpperLimit` and
+      `Class.SlidingBallConstraint.LowerLimit|LowerLimit`, assuming
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is set to true.
+    description: |
+      The elasticity of the constraint's `Class.Attachment|Attachments` when
+      they reach the end of the range specified by
+      `Class.SlidingBallConstraint.UpperLimit|UpperLimit` and
+      `Class.SlidingBallConstraint.LowerLimit|LowerLimit`, assuming
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is set to true.
+      The valid range is between 0&ndash;1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.ServoMaxForce
+    summary: |
+      The constraint's maximum force when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo`, as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Speed|Speed`.
+    description: |
+      The constraint's maximum force when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo`, as the constraint attempts to reach its desired
+      `Class.SlidingBallConstraint.Speed|Speed`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Servo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.Size
+    summary: |
+      The constraint's visualized size.
+    description: |
+      The constraint's visualized size.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.SoftlockServoUponReachingTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Servo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.Speed
+    summary: |
+      The constraint's desired speed when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo`, as the constraint translates towards its
+      `Class.SlidingBallConstraint.TargetPosition|TargetPosition`. Measured in
+      studs per second.
+    description: |
+      The constraint's desired speed when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo`, as the constraint translates towards its
+      `Class.SlidingBallConstraint.TargetPosition|TargetPosition`. Measured in
+      studs per second.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Servo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.TargetPosition
+    summary: |
+      The constraint's attempted target position when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo`. Measured in studs.
+    description: |
+      The constraint's attempted target position when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Servo` Measured in studs.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Servo
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.UpperLimit
+    summary: |
+      The upper positional limit along the **X** axis of
+      `Class.Constraint.Attachment0|Attachment0` if
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
+    description: |
+      The upper positional limit along the **X** axis of
+      `Class.Constraint.Attachment0|Attachment0` if
+      `Class.SlidingBallConstraint.LimitsEnabled|LimitsEnabled` is true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SlidingBallConstraint.Velocity
+    summary: |
+      The constraint's attempted velocity when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor`. Measured in studs per second.
+    description: |
+      The constraint's attempted velocity when
+      `Class.SlidingBallConstraint.ActuatorType|ActuatorType` is set to
+      `Enum.ActuatorType|Motor`. Measured in studs per second.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Motor
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

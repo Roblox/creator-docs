@@ -332,15 +332,15 @@ ${requiredCheckMessage}`;
 };
 
 export const checkContentLinks = ({
-  content,
+  fileContent,
   filePath,
   config,
 }: {
-  content: string;
+  fileContent: string;
   filePath: string;
   config: IConfig;
 }) => {
-  const { httpLinks, relativeLinks } = getNonRobloxLinks(content);
+  const { httpLinks, relativeLinks } = getNonRobloxLinks(fileContent);
   if (config.checkHttpLinks) {
     httpLinks.forEach((link) => {
       processHttpLink({ config, filePath, link });

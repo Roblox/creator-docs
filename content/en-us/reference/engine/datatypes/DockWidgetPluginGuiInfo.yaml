@@ -1,0 +1,129 @@
+name: DockWidgetPluginGuiInfo
+type: datatype
+summary: |
+  Describes details for a `Class.DockWidgetPluginGui`.
+description: |
+  The `Datatype.DockWidgetPluginGuiInfo` data type describes details for a
+  `Class.DockWidgetPluginGui`. This data type is used when constructing a
+  `Class.PluginGui` via the plugin's `Class.Plugin:CreateDockWidgetPluginGui()`
+  method.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: DockWidgetPluginGuiInfo.new
+    summary: Returns a new DockWidgetPuginGuiInfo object.
+    description: The main constructor function for the `Datatype.DockWidgetPluginGuiInfo`.
+    parameters:
+      - name: initDockState
+        type: InitialDockState
+        default: Enum.InitialDockState.Right
+        summary: ''
+      - name: initEnabled
+        type: bool
+        default: false
+        summary: ''
+      - name: overrideEnabledRestore
+        type: bool
+        default: false
+        summary: ''
+      - name: floatXSize
+        type: number
+        default: 0
+        summary: ''
+      - name: floatYSize
+        type: number
+        default: 0
+        summary: ''
+      - name: minWidth
+        type: number
+        default: 0
+        summary: ''
+      - name: minHeight
+        type: number
+        default: 0
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: DockWidgetPluginGuiInfo.InitialEnabled
+    type: bool
+    summary: |
+      The enabled state of the `Class.PluginGui` if it does not have a saved
+      state from a previous session.
+    description: |
+      The initial enabled state of a `Class.PluginGui` created using this
+      `Datatype.DockWidgetPluginGuiInfo`. If a `Class.PluginGui` with the same
+      ''pluginGuiId'' has previously been created in an earlier session of
+      Roblox Studio, then it will reload that saved enabled state (unless
+      `InitialEnabledShouldOverrideRestore` is true).
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DockWidgetPluginGuiInfo.InitialEnabledShouldOverrideRestore
+    type: bool
+    summary: |
+      If true, will override any saved enabled state with the `InitialEnabled`
+      value.
+    description: |
+      If true, the value of `InitialEnabled` will override the previously saved
+      enabled state of a `Class.PluginGui` being created with this
+      `Datatype.DockWidgetPluginGuiInfo`. The previously saved enabled state is
+      loaded based on the `pluginGuiId` argument of
+      `Class.Plugin:CreateDockWidgetPluginGui()`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DockWidgetPluginGuiInfo.FloatingXSize
+    type: number
+    summary: |
+      The initial pixel width of the PluginGui when floating.
+    description: |
+      The initial pixel width of a `Class.PluginGui` created using this
+      `Datatype.DockWidgetPluginGuiInfo`, when the `Enum.InitialDockState` is
+      set to `Float`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DockWidgetPluginGuiInfo.FloatingYSize
+    type: number
+    summary: |
+      The initial pixel height of the PluginGui when floating.
+    description: |
+      The initial pixel height of a `Class.PluginGui` created using this
+      `Datatype.DockWidgetPluginGuiInfo`, when the `Enum.InitialDockState` is
+      set to `Float`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DockWidgetPluginGuiInfo.MinWidth
+    type: number
+    summary: |
+      The minimum pixel width of the PluginGui.
+    description: |
+      The minimum width of a `Class.PluginGui` created using this
+      `Datatype.DockWidgetPluginGuiInfo`, in pixels.
+
+      Each platform has its own absolute minimum that Roblox will enforce. These
+      variations exist to account for the contents of the title bar (which
+      varies by platform) when the widget is floating. For example, on a Mac,
+      the width can never be less than ~80 pixels to accommodate the
+      close/minimize/maximize buttons.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: DockWidgetPluginGuiInfo.MinHeight
+    type: number
+    summary: |
+      The minimum pixel height of the PluginGui.
+    description: |
+      The minimum height of a `Class.PluginGui` created using this
+      `Datatype.DockWidgetPluginGuiInfo`, in pixels.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

@@ -1,0 +1,38 @@
+name: TouchCameraMovementMode
+type: enum
+summary: |
+  Changes the touch camera movement mode currently in-use by the client using a
+  TouchEnabled device.
+description: |
+  Changes the touch camera movement mode currently in-use by the client using a
+  TouchEnabled device.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Default mode used by Roblox Core Scripts.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Classic
+    summary: |
+      Default mode used by Roblox Core Scripts.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Follow
+    summary: |
+      Camera moves with the subject and rotates to keep the subject in the
+      center.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Orbital
+    summary: |
+      The camera locks at a certain angle. Once it's set, players can rotate the
+      camera, but it will always maintain a consistent angle to the ground.
+    value: 3
+    tags: []
+    deprecation_message: ''

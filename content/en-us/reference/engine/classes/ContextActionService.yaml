@@ -1,0 +1,823 @@
+name: ContextActionService
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  A service used to bind user input to contextual actions.
+description: |
+  Allows an experience to bind user input to contextual actions, or actions that
+  are only enabled under some condition or period of time. For example, allowing
+  a player to open a door only while close by. In code, an action is simply a
+  string (the name of the action) used by the service to differentiate between
+  unique actions. The action string is provided to
+  `Class.ContextActionService:BindAction()|BindAction` and
+  `Class.ContextActionService:UnbindAction()|UnbindAction`, among other member
+  functions. If two actions are bound to the same input, the most recently bound
+  will take priority. When the most recent action is unbound, the one bound
+  before that takes control again. Since this service deals with user input, you
+  can only use it in client-side `Class.LocalScript|LocalScripts`.
+
+  ## What is a context?
+
+  A **context** is simply a condition during which a player may perform some
+  action. Some examples include holding a `Class.Tool`, being
+  `Class.Seat|seated` in a car or standing near a door. Whatever the case may
+  be, it is up to your `Class.LocalScript|LocalScripts` to call
+  `Class.ContextActionService:BindAction()|BindAction` when the context is
+  entered and `Class.ContextActionService:UnbindAction()|UnbindAction` when the
+  context is left.
+
+  ## What is an action?
+
+  An **action** is simply some input that can be performed by the player while
+  in that context. Such an action could open/close some menu, trigger a
+  secondary tool action or send a request to the server using
+  `Class.RemoteFunction:InvokeServer()`. An action is identified by a unique
+  string as the first parameter of both
+  `Class.ContextActionService:BindAction()|BindAction` and
+  `Class.ContextActionService:UnbindAction()|UnbindAction`. The string can be
+  anything, but it should reflect the **action being performed, not the input
+  being used**. For example, don't use "KeyH" as an action name - use "CarHorn"
+  instead. It is best to define your actions as a constant at the top of your
+  script since you will use it in at least three different places in your code.
+
+  ## Why bind actions contextually?
+
+  It's better to use ContextActionService's
+  `Class.ContextActionService:BindAction()|BindAction` than
+  `Class.UserInputService.InputBegan` for most cases. For
+  `Class.UserInputService.InputBegan`, your connected function would have to
+  check if the player is in the context of the action being performed. In most
+  cases, this is harder than just calling a function when a context is entered/
+  left. For example, if you want to have the `H` key trigger a car horn sound
+  while the player is sitting in it, the player might type "hello" in chat or
+  otherwise use the `H` key for something else. It is harder to determine if
+  something else is using the H key (like chat) - the car might honk when the
+  player didn't mean to. If you instead use
+  `Class.ContextActionService:BindAction()|BindAction` and
+  `Class.ContextActionService:UnbindAction()|UnbindAction` when the player
+  enters/leaves the car, `Class.ContextActionService` will make sure that `H`
+  key presses trigger the honk action only when it is the most recently bound
+  action. If something else (like chat) takes control, you won't have to worry
+  about checking that.
+
+  ## Inspecting Bound Actions
+
+  To see a list of actions and their bound inputs, you can inspect the "Action
+  Bindings" tab in the Developer Console (F9 while in game). This shows all
+  bindings - including those bound by Roblox CoreScripts and default
+  camera/control scripts too. This is useful for debugging: check if your
+  actions are being bound/unbound at the correct times, or if some other action
+  is stealing input from your actions. For example, if you are attempting to
+  bind WASD, it may be the case that default character movement scripts are
+  binding over those same keys. Similarly, the camera control script can steal
+  right-click input if the script runs after yours.
+
+  ## Keyboardless Input
+
+  This service is especially useful for supporting gamepad and touch input. For
+  gamepad input, you might choose to bind the B button to an action that returns
+  the user to the previous menu when they entire another menu. For touch,
+  on-screen touch buttons can be used in place of key presses: these buttons
+  display only while the action is bound, and the position, text and/or images
+  of these buttons can be configured through this service. They're somewhat
+  limited in the amount of customization provided by this service; it's usually
+  a better idea to make your own on-screen buttons using `Class.ImageButton` or
+  `Class.TextButton`.
+code_samples:
+  - ContextActionService-Tool-Reload
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: ContextActionService:BindAction
+    summary: |
+      Bind user input to an action given an action handling function.
+    description: |
+      Bind an action to user input given an action handling function. Upon a
+      matching input being performed, the action handler function will be called
+      with the arguments listed below. Valid input enum items include those
+      within the following: `Enum.KeyCode`, `Enum.UserInputType` or
+      `Enum.PlayerActions` . Call this function when a player **enters the
+      context** in which an action can be performed. When the player leaves the
+      context, call `Class.ContextActionService:UnbindAction()|UnbindAction`
+      with the same `actionName`. You can manually call the action handling
+      function of an action by using
+      `Class.ContextActionService:CallFunction()|CallFunction`.
+
+      The code sample below shows how a `Class.Sound` can be
+      `Class.Sound:Play()|played` while a key (<kbd>H</kbd>), game pad button,
+      or touch screen button is pressed.
+
+      ```lua
+      local ContextActionService = game:GetService("ContextActionService")
+
+      -- A car horn sound
+      local honkSound = Instance.new("Sound", workspace)
+      honkSound.Looped = true
+      honkSound.SoundId = "rbxassetid://9120386436"
+
+      local function handleAction(actionName, inputState, inputObject)
+      	if actionName == "HonkHorn" then
+      		if inputState == Enum.UserInputState.Begin then
+      			honkSound:Play()
+      		else
+      			honkSound:Pause()
+      		end
+      	end
+      end
+
+      -- When the player sits in the vehicle:
+      ContextActionService:BindAction("HonkHorn", handleAction, true, Enum.KeyCode.H, Enum.KeyCode.ButtonY)
+
+      -- When the player gets out:
+      ContextActionService:UnbindAction("HonkHorn")
+      ```
+
+      #### Action Handler Parameters
+
+      The action handler functions are called with the following parameters:
+
+      <table>
+      <tr>
+        <th>#</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><code>string</code></td>
+        <td>The same string that was originally passed to BindAction†</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><code>Enum.UserInputState</code></td>
+        <td>The state of the input (Begin, Change, End or Cancel)*</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><code>InputObject</code></td>
+        <td>An object that contains information about the input (varies based on UserInputType)</td>
+      </tr>
+      </table>
+
+      † This allows one function to handle multiple actions at once, if
+      necessary. \*Cancel is sent if some input was in-progress and another
+      action bound over the in-progress input, or if the in-progress bound
+      action was `Class.ContextActionService:UnbindAction()|unbound`.
+
+      #### Action Bindings Stack
+
+      Action bindings behave like a stack: if two actions are bound to the same
+      user input, the **most recently bound** action handler will be used. If an
+      action handler returns `Enum.ContextActionResult.Pass`, the next most
+      recently bound action handler will be called, and so on until a handler
+      sinks the input (by returning `nil` or `Enum.ContextActionResult.Sink`).
+      When `Class.ContextActionService:UnbindAction()|UnbindAction` is called,
+      the action handler is removed from the stack. This stack behavior can be
+      overridden using
+      `Class.ContextActionService:BindActionAtPriority()|BindActionAtPriority`,
+      where an additional priority parameter after `createTouchButton` may
+      override the order in which actions are bound (higher before lower).
+
+      #### Touch Buttons
+
+      In addition to input types, this function's third parameter controls
+      whether a button is created for
+      `Class.UserInputService.TouchEnabled|TouchEnabled` devices. Upon the first
+      touch button's creation, a `Class.ScreenGui` named "ContextActionGui" is
+      added to the `Class.PlayerGui`. Inside the ScreenGui is a `Class.Frame`
+      called "ContextButtonFrame" is added. It is in this frame in which
+      `Class.ImageButton|ImageButtons` for bound actions are parented; you can
+      use `Class.ContextActionService:GetButton()|GetButton` to retrieve such
+      buttons for customization.
+    code_samples:
+      - ContextActionService-Tool-Reload
+      - General-Action-Handler
+      - Stacked-Action-Handlers
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          A string representing the action being performed (e.g. "HonkHorn" or
+          "OpenDoor").
+      - name: functionToBind
+        type: Function
+        default:
+        summary: |
+          The action-handling function, called with the following parameters
+          when the bound inputs are triggered: string (actionName),
+          `Enum.UserInputState` and an InputObject.
+      - name: createTouchButton
+        type: bool
+        default:
+        summary: |
+          Whether a GUI button should be created for the action on touch input
+          devices.
+      - name: inputTypes
+        type: Tuple
+        default:
+        summary: |
+          Any number of `Enum.KeyCode` or `Enum.UserInputType` representing the
+          inputs to bind to the action.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:BindActionAtPriority
+    summary: |
+      Behaves like `Class.ContextActionService:BindAction()|BindAction` but also
+      allows a priority to be assigned to the bound action for overlapping input
+      types (higher before lower).
+    description: |
+      BindActionAtPriority behaves like
+      `Class.ContextActionService:BindAction()|BindAction` but also allows a
+      priority to be assigned to the bound action. If multiple actions are bound
+      to the same input, the higher priority function is called regardless of
+      the order in which the actions were bound. In other words, this function
+      overrides the normal "stack" behavior of BindAction.
+    code_samples:
+      - contextactionservice-bindaction-priorities
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          A string representing the action being performed (e.g. "HonkHorn" or
+          "OpenDoor").
+      - name: functionToBind
+        type: Function
+        default:
+        summary: |
+          The action-handling function, called with the following parameters
+          when the bound inputs are triggered: string (actionName),
+          `Enum.UserInputState` and an InputObject.
+      - name: createTouchButton
+        type: bool
+        default:
+        summary: |
+          Whether a GUI button should be created for the action on touch input
+          devices.
+      - name: priorityLevel
+        type: int
+        default:
+        summary: |
+          The priority level at which the action should be bound (higher
+          considered before lower).
+      - name: inputTypes
+        type: Tuple
+        default:
+        summary: |
+          Any number of Enum.KeyCode or Enum.UserInputType representing the
+          inputs to bind to the action.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:BindActionToInputTypes
+    summary: |
+      Binds _functionToBind_ to input events such as key presses, mouse
+      movement, or controller input.
+    description: |
+      This function binds _functionToBind_ to input events such as key presses,
+      mouse movement, or controller input. The specific input types the engine
+      listens for are listed as parameters of BindAction. Whenever a player uses
+      any of these input types, the Roblox engine calls "functionToBind".
+      BindAction sets the priorityLevel via `Enum.ContextActionPriority` to
+      Default.Value, which is 2000. Use `Class.ContextActionService:GetButton()`
+      to control the priority of bound events.
+
+      In addition to input types, BindAction has a createTouchButton parameter.
+      When this is set to true it creates an `Class.ImageButton` on any device
+      with a touchscreen. A `Class.ScreenGui` is also created to put the context
+      buttons into named ContextActionGui and is parented to `Class.PlayerGui`.
+      The created ImageButton is parented to this ContextActionGui. GetButton
+      can be used to retrieve the button that was created.
+
+      If an input has more than one function bound to it, each function will be
+      placed on a stack. A stack obeys the principle of last in first out. So
+      the first object placed on the stack will be on the top. The next object
+      placed on the stack becomes the top and the previous object moves one
+      position down (like a stack of books). When the input is triggered, the
+      function at the top of the stack is called. If the function returns
+      `Enum.ContextActionResult`.Pass this will continue down the stack. To
+      remove a function from being called by all input that it was bound by use
+      `Class.ContextActionService:UnbindAction()`.
+
+      BindAction allows control over whether or not a bound action should be
+      processed by other actions on the stack using `Enum.ContextActionResult`.
+      If `Enum.ContextActionResult.Pass` is returned in the callback function,
+      every action below it in the stack (last function called gets executed
+      first) will get a chance to process it. Anything other than Pass will be
+      treated as `Enum.ContextActionResult.Sink`, including nil. It will also
+      sink if the callback is yielded.
+    code_samples:
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: ''
+      - name: functionToBind
+        type: Function
+        default:
+        summary: ''
+      - name: createTouchButton
+        type: bool
+        default:
+        summary: ''
+      - name: inputTypes
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.ContextActionService:BindAction()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:BindActivate
+    summary: |
+      Bind a `Enum.KeyCode` with a specific `Enum.UserInputType` to trigger
+      `Class.Tool.Activation` and `Class.ClickDetector` events.
+    description: |
+      Bind an `Enum.KeyCode` that can be used with a `Enum.UserInputType` to
+      activate `Class.ClickDetector` events and `Class.Tool` objects. When the
+      given key/button is pressed, it fires the `Class.Mouse.Button1Down` event
+      on the mouse sent to `Class.Tool.Equipped`. This in turn fires the
+      `Class.Tool.Activated` event if `Class.Tool.ManualActivationOnly` is not
+      set to true. For gamepad input, this function is called by the default
+      control scripts in order to bind the ButtonR2 `Enum.KeyCode`.
+
+      Note that the `Enum.UserInputType` specified must be `Keyboard` or
+      `Gamepad1` through `Gamepad8` in order to be valid.
+    code_samples:
+    parameters:
+      - name: userInputTypeForActivation
+        type: UserInputType
+        default:
+        summary: |
+          Must be Keyboard or Gamepad1 through Gamepad8.
+      - name: keyCodesForActivation
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:GetAllBoundActionInfo
+    summary: |
+      Get a table of information about all bound actions (key is the name passed
+      to `Class.ContextActionService:BindAction()|BindAction`, value is a table
+      from `Class.ContextActionService:GetBoundActionInfo()|GetBoundActionInfo`
+      when called with the key).
+    description: |
+      GetAllBoundActioninfo returns a table which maps all actions' names (those
+      originally passed to `Class.ContextActionService:BindAction()|BindAction`)
+      to a table returned by
+      `Class.ContextActionService:GetBoundActionInfo()|GetBoundActionInfo` when
+      called with the action name itself. Using this function, you can inspect
+      all presently bound actions. This is useful when debugging their priority
+      levels or stack orders.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:GetBoundActionInfo
+    summary: |
+      Get a table of information about a bound action given its name originally
+      passed to `Class.ContextActionService:BindAction()|BindAction`.
+    description: |
+      GetBoundActionInfo returns a table with the following keys describing a
+      bound action given its name. To get the same information for all actions
+      at once, use
+      `Class.ContextActionService:GetAllBoundActionInfo()|GetAllBoundActionInfo`.
+
+      <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>stackOrder</code></td>
+        <td>number</td>
+        <td>
+
+      Describes the index of the action on the stack (increasing)
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>priorityLevel</code>*</td>
+        <td>number</td>
+        <td>
+
+      Describes the
+      <code>Class.ContextActionService:BindActionAtPriority()|priority</code>
+      level of the action
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>createTouchButton</code></td>
+        <td>bool</td>
+        <td>
+
+      Describes whether a touch button should be created on
+      <code>Class.UserInputService.TouchEnabled|TouchEnabled</code> devices
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>inputTypes</code></td>
+        <td>table</td>
+        <td>
+
+      The input types passed to
+      <code>Class.ContextActionService:BindAction()|BindAction</code> for which
+      this action will trigger
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>description</code>†</td>
+        <td>string</td>
+        <td>
+
+      The description of action set by
+      <code>Class.ContextActionService:SetDescription()|SetDescription</code>
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>title</code>†</td>
+        <td>string</td>
+        <td>
+
+      The title of the action set by
+      <code>Class.ContextActionService:SetTitle()|SetTitle</code>
+
+      </td>
+      </tr>
+      <tr>
+        <td><code>image</code>†</td>
+        <td>string</td>
+        <td>
+
+      The image of the action's touch button set by
+      <code>Class.ContextActionService:SetImage()|SetImage</code>
+
+      </td>
+      </tr>
+      </table>
+
+      \* Priority level will still be included even if
+      `Class.ContextActionService:BindActionAtPriority()|BindActionAtPriority`
+      wasn't used - by default it will be 2000.
+
+      † Indicates that this field will be `nil` if the associated method was not
+      called for the given action.
+    code_samples:
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:GetCurrentLocalToolIcon
+    summary: |
+      Return the `Class.BackpackItem.TextureId` of a `Class.Tool` currently
+      `Class.Tool.Equipped|equipped` by the `Class.Player`.
+    description: |
+      GetCurrentLocalToolIcon will return the `Class.BackpackItem.TextureId` of
+      a `Class.Tool` currently `Class.Tool.Equipped|equipped` by the
+      `Class.Player`, or `nil` if there is no such Tool or if the player lacks a
+      `Class.Player.Character|Character`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: string
+        summary: |
+          A content string from the Tool's TextureId, or nil if one could not be
+          found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:SetDescription
+    summary: |
+      Given the name of a bound action with a touch button, sets the description
+      of the action.
+    description: |
+      SetDescription will set the description of an action bound by
+      `Class.ContextActionService:BindAction()|BindAction`. In a list of
+      available actions, this would be text that describes the given action.
+
+      Although the name may suggest that this method is related to the family of
+      functions that customize a touch button for actions that create them
+      (`Class.ContextActionService:SetTitle()|SetTitle`,
+      `Class.ContextActionService:SetImage()|SetImage` and
+      `Class.ContextActionService:SetPosition()|SetPosition`), this method does
+      not affect such a button. This method merely sets a text description of an
+      action, and nothing more.
+    code_samples:
+      - contextactionservice-touch-button
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+      - name: description
+        type: string
+        default:
+        summary: |
+          A text description of the action, such as "Honk the car's horn" or
+          "Open the inventory".
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:SetImage
+    summary: |
+      If `actionName` key contains a bound action, then `image` is set as the
+      image of the touch button.
+    description: |
+      SetPosition will set the text shown on a touch button created by
+      `Class.ContextActionService:BindAction()|BindAction`. Specifically, this
+      sets the `Class.ImageLabel.Image` property of the `Class.ImageLabel`
+      within the `Class.ImageButton` that would be returned by
+      `Class.ContextActionService:GetButton()|GetButton`. If no such bound
+      action exists (e.g. nothing is returned by GetButton), this function does
+      nothing and throws no error.
+
+      This function is part of a family of methods that customize the touch
+      button of an action. Others in this family include
+      `Class.ContextActionService:SetPosition()|SetPosition` and
+      `Class.ContextActionService:SetTitle()|SetTitle`.
+    code_samples:
+      - contextactionservice-touch-button
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+      - name: image
+        type: string
+        default:
+        summary: |
+          The value to which the Image property should be set.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:SetPosition
+    summary: |
+      Given the name of a bound action with a touch button, sets the position of
+      the button within the ContextButtonFrame.
+    description: |
+      SetPosition sets the position of a touch button created by
+      `Class.ContextActionService:BindAction()|BindAction`. Specifically, this
+      sets the `Class.GuiObject.Position` property of the `Class.ImageButton`
+      that would be returned by
+      `Class.ContextActionService:GetButton()|GetButton`. If no such bound
+      action exists (e.g. nothing is returned by GetButton), this function does
+      nothing and throws no error.
+
+      This function is part of a family of methods that customize the touch
+      button of an action. Others in this family include
+      `Class.ContextActionService:SetImage()|SetImage` and
+      `Class.ContextActionService:SetTitle()|SetTitle`.
+    code_samples:
+      - contextactionservice-touch-button
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+      - name: position
+        type: UDim2
+        default:
+        summary: |
+          The position within the ContextButtonFrame.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:SetTitle
+    summary: |
+      Given the name of a bound action with a touch button, sets the text shown
+      on the button.
+    description: |
+      SetTitle will set the text shown on a touch button created by
+      `Class.ContextActionService:BindAction()|BindAction`. Specifically, this
+      sets the `Class.TextLabel.Text` property of a `Class.TextLabel` within the
+      `Class.ImageButton` that would be returned by
+      `Class.ContextActionService:GetButton()|GetButton`. If no such bound
+      action exists (e.g. nothing is returned by GetButton), this function does
+      nothing and throws no error.
+
+      This function is part of a family of methods that customize the touch
+      button of an action. Others in this family include
+      `Class.ContextActionService:SetImage()|SetImage` and
+      `Class.ContextActionService:SetPosition()|SetPosition`.
+    code_samples:
+      - contextactionservice-touch-button
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+      - name: title
+        type: string
+        default:
+        summary: |
+          The text to display on the button.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:UnbindAction
+    summary: |
+      Unbind an action from input given its name.
+    description: |
+      UnbindAction will unbind an action by name from user inputs so that the
+      action handler function will no longer be called. Call this function when
+      the context for some action is no longer applicable, such as closing a
+      user interface, exiting a car or `Class.Tool.Unequipped|unequipping` a
+      `Class.Tool`. See `Class.ContextActionService:BindAction()|BindAction` for
+      more information on how bound actions operate.
+
+      This function **will not** throw an error if there is no such action bound
+      with the given string. Using
+      `Class.ContextActionService:GetAllBoundActionInfo()|GetAllBoundActionInfo`
+      or the Developer Console's "Action Bindings" tab, you can find out what
+      actions are presently bound.
+    code_samples:
+      - ContextActionService-Tool-Reload
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:UnbindActivate
+    summary: |
+      Unbind a `Enum.KeyCode` with a specific `Enum.UserInputType` from
+      triggering `Class.Tool.Activation` when bound with
+      `Class.ContextActionService:BindActivate()`.
+    description: |
+      UnbindActivate unbinds an `Enum.KeyCode` used with an `Enum.UserInputType`
+      for activating a `Class.Tool` (or a `Class.HopperBin`) using
+      `Class.ContextActionService:BindActivate()|BindActivate`. This function
+      essentially undoes the action performed by that function.
+    code_samples:
+    parameters:
+      - name: userInputTypeForActivation
+        type: UserInputType
+        default:
+        summary: |
+          The same UserInputType originally sent to BindActivate.
+      - name: keyCodeForActivation
+        type: KeyCode
+        default: Unknown
+        summary: |
+          The same KeyCode originally sent to BindActivate.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:UnbindAllActions
+    summary: |
+      Removes all functions bound. No actionNames will remain. All touch buttons
+      will be removed.
+    description: |
+      Removes all functions bound. No actionNames will remain. All touch buttons
+      will be removed. If a button was manipulated manually there is no
+      guarantee it will be cleaned up.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService:GetButton
+    summary: |
+      Retrieves a `Class.ImageButton` of a
+      `Class.ContextActionService:BindAction()|bound` action that had a touch
+      input button created.
+    description: |
+      GetButton returns the `Class.ImageButton` created by
+      `Class.ContextActionService:BindAction()|BindAction` if its third
+      parameter was true and the device is
+      `Class.UserInputService.TouchEnabled|TouchEnabled`. The only parameter to
+      this function must match exactly the name of the action originally sent to
+      BindAction.
+
+      If no such action was bound or if a button was not created, this function
+      returns `nil`.
+    code_samples:
+    parameters:
+      - name: actionName
+        type: string
+        default:
+        summary: |
+          The name of the action originally passed to BindAction.
+    returns:
+      - type: Instance
+        summary: |
+          An ImageButton created by BindAction.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: ContextActionService.LocalToolEquipped
+    summary: |
+      Fires when the current player equips a `Class.Tool`.
+    description: |
+      Fires when the current player equips a `Class.Tool`.
+    code_samples:
+    parameters:
+      - name: toolEquipped
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ContextActionService.LocalToolUnequipped
+    summary: |
+      Fires when the current player unequips a `Class.Tool`.
+    description: |
+      Fires when the current player unequips a `Class.Tool`.
+    code_samples:
+    parameters:
+      - name: toolUnequipped
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

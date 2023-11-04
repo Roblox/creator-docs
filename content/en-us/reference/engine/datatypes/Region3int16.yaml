@@ -1,0 +1,91 @@
+name: Region3int16
+type: datatype
+summary: |
+  Represents a Region3 stored as two boundaries as opposed to position and size
+  components.
+description: |
+  Not to be confused with `Datatype.Region3`, a separate class that fulfills a
+  different purpose.
+
+  The `Datatype.Region3int16` data type represents a volume in 3D space similar
+  to an **axis-aligned rectangular prism**. It uses two `Datatype.Vector3int16`
+  to store the volume's bounds in the `Min` and `Max` properties. It is
+  constructed using `Region3int16.new(Min, Max)`, given the two
+  `Datatype.Vector3int16` bounds. This data type features no functions or
+  operations.
+
+  ## Calculating Center and Size
+
+  This data type differs from `Datatype.Region3` in that it stores its bounds
+  directly, rather than through a center and size combination. Nonetheless, it
+  is possible to calculate these dimensions using `Min` and `Max`:
+
+  ```lua
+  local region = Region3int16.new(Vector3int16.new(0, 0, -3), Vector3int16.new(4, 4, 4))
+  local size = region.Max - region.Min
+  local center = (region.Max + region.Min) / 2
+  ```
+
+  ## Conversion to Region3
+
+  The following function can be used to convert a Region3int16 into a similar
+  `Datatype.Region3`. It does this by converting the `Min` and `Max` properties,
+  which are Vector3int16, into `Datatype.Vector3` used with
+  `Datatype.Region3.new()`.
+
+  ```lua
+  local function Region3int16toRegion3(region16)
+  	return Region3.new(
+  		Vector3.new(region16.Min.X, region16.Min.Y, region16.Min.Z),
+  		Vector3.new(region16.Max.X, region16.Max.Y, region16.Max.Z)
+  	)
+  end
+  ```
+
+  See also:
+
+  - `Datatype.Region3`, a similar data type
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Region3int16.new
+    summary: Returns a new Region3int16 from the provided boundaries.
+    description: Returns a new Region3int16 from the provided boundaries.
+    parameters:
+      - name: min
+        type: Vector3int16
+        default:
+        summary: ''
+      - name: max
+        type: Vector3int16
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: Region3int16.Min
+    type: Vector3int16
+    summary: |
+      The lower bound of the `Datatype.Region3int16`.
+    description: |
+      The lower bound of the `Datatype.Region3int16`, as passed to
+      `Datatype.Region3int16.new()`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Region3int16.Max
+    type: Vector3int16
+    summary: |
+      The upper bound of the `Datatype.Region3int16`.
+    description: |
+      The upper bound of the `Datatype.Region3int16`, as passed to
+      `Datatype.Region3int16.new()`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

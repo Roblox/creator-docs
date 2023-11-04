@@ -1,0 +1,22 @@
+name: VerticalScrollBarPosition
+type: enum
+summary: |
+  Indicates the side that the vertical scrollbar will be located at.
+description: |
+  Indicates the side that the vertical scrollbar will be located at.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Right
+    summary: |
+      Right side of the `Class.ScrollingFrame`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      Left side of the `Class.ScrollingFrame`.
+    value: 1
+    tags: []
+    deprecation_message: ''

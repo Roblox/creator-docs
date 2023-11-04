@@ -1,0 +1,66 @@
+name: CanvasGroup
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  Blends descendants as a group with color/transparency.
+description: |
+  CanvasGroup renders descendants as a group with color and transparency applied
+  to the render result. GuiEffect (`Class.UICorner` and `Class.UIGradient`)
+  under CanvasGroup will also apply to the whole group. CanvasGroup always has
+  `Class.GuiObject.ClipsDescendants` set to true and all descendants will render
+  within CanvasGroup's viewport.
+
+  ### Important notes:
+
+  - Descendants of CanvasGroup will be rendered as a flattened texture only when
+    the ancestor `Class.LayerCollector` has its
+    `Class.LayerCollector.ZIndexBehavior` set to `Enum.ZIndexBehavior.Sibling`.
+  - CanvasGroup consumes extra texture memory. The quality of the texture and
+    total memory usage is limited by the `Enum.QualityLevel` of the client. When
+    exceeding the memory cap, CanvasGroup will render as a blank texture.
+  - We recommend using CanvasGroup with static sizes, otherwise a new texture
+    would need to be created to accommodate new sizes.
+code_samples:
+inherits:
+  - GuiObject
+tags: []
+deprecation_message: ''
+properties:
+  - name: CanvasGroup.GroupColor3
+    summary: |
+      Color tint that applies to all descendants.
+    description: |
+      Color tint that applies to all descendants.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: CanvasGroup.GroupTransparency
+    summary: |
+      Transparency that applies to all descendants.
+    description: |
+      Transparency that applies to all descendants.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

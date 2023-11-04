@@ -1,0 +1,125 @@
+name: ArcHandles
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  The `Class.ArcHandles` object places 3D arc handles around any 3D object that
+  its `Class.PartAdornment.Adornee|Adornee` is set to.
+description: |
+  The **ArcHandles** object places 3D arc handles around any 3D object that its
+  `Class.PartAdornment.Adornee|Adornee` is set to. For handles to be
+  interactive, it must be parented to a player's `Class.PlayerGui` or the
+  `Class.CoreGui`.
+
+  <img src="/assets/engine-api/classes/ArcHandles/ArcHandles-Example.jpg"  alt="ArcHandles example" />
+code_samples:
+inherits:
+  - HandlesBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: ArcHandles.Axes
+    summary: |
+      Sets the current Axes ArcHandles will show.
+    description: |
+      Sets the current Axes ArcHandles will show.
+    code_samples:
+    type: Axes
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: ArcHandles.MouseButton1Down
+    summary: |
+      Fired when the left mouse button goes down on one of the GUI handles.
+    description: |
+      Fired when the left mouse button goes down on one of the GUI handles.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ArcHandles.MouseButton1Up
+    summary: |
+      Fired when the left mouse button is released on one of the GUI handles.
+    description: |
+      Fired when the left mouse button is released on one of the GUI handles.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ArcHandles.MouseDrag
+    summary: |
+      Fired when the mouse moves while the MouseButton1Down event has fired, but
+      the left mouse button has not been released yet.
+    description: |
+      Fired when the mouse moves while the MouseButton1Down event has fired, but
+      the left mouse button has not been released yet.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+      - name: relativeAngle
+        type: float
+        default:
+        summary: ''
+      - name: deltaRadius
+        type: float
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ArcHandles.MouseEnter
+    summary: |
+      Fired when a mouse "enters" the GUI handle.
+    description: |
+      Fired when a mouse "enters" the GUI handle.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ArcHandles.MouseLeave
+    summary: |
+      Fired when the mouse leaves the GUI handle.
+    description: |
+      Fired when the mouse leaves the GUI handle.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

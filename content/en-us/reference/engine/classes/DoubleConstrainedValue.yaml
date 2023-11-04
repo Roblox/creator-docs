@@ -1,0 +1,149 @@
+name: DoubleConstrainedValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  An instance which is used to create a number value which can never be less
+  than the MinValue or more than the MaxValue.
+description: |
+  An instance which is used to create a number value which can never be less
+  than the MinValue or more than the MaxValue.
+code_samples:
+inherits:
+  - ValueBase
+tags:
+  - Deprecated
+deprecation_message: |
+  The DoubleConstrainedValue object has been deprecated as developers can now
+  use the `Library.math.clamp()` function to constrain values.
+properties:
+  - name: DoubleConstrainedValue.ConstrainedValue
+    summary: ''
+    description: ''
+    code_samples:
+    type: double
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: |
+      The `Class.DoubleConstrainedValue` object has been deprecated as
+      developers can now use the `Library.math.clamp()` function to constrain
+      values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: DoubleConstrainedValue.MaxValue
+    summary: |
+      The highest number that the `Class.DoubleConstrainedValue.Value` property
+      can be.
+    description: |
+      The highest number that the `Class.DoubleConstrainedValue.Value` property
+      can be.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: |
+      The `Class.DoubleConstrainedValue` object has been deprecated as
+      developers can now use the `Library.math.clamp()` function to constrain
+      values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DoubleConstrainedValue.MinValue
+    summary: |
+      The lowest number that the `Class.DoubleConstrainedValue.Value` property
+      can be.
+    description: |
+      The lowest number that the `Class.DoubleConstrainedValue.Value` property
+      can be.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: |
+      The `Class.DoubleConstrainedValue` object has been deprecated as
+      developers can now use the `Library.math.clamp()` function to constrain
+      values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DoubleConstrainedValue.Value
+    summary: |
+      Used to hold a number value between
+      `Class.DoubleConstrainedValue.MinValue` and
+      `Class.DoubleConstrainedValue.MaxValue`.
+    description: |
+      Used to hold a number value between
+      `Class.DoubleConstrainedValue.MinValue` and
+      `Class.DoubleConstrainedValue.MaxValue`.
+    code_samples:
+    type: double
+    tags:
+      - NotReplicated
+    deprecation_message: |
+      The `Class.DoubleConstrainedValue` object has been deprecated as
+      developers can now use the `Library.math.clamp()` function to constrain
+      values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events:
+  - name: DoubleConstrainedValue.Changed
+    summary: |
+      Fired whenever the `Class.DoubleConstrainedValue.Value` of the
+      `Class.DoubleConstrainedValue` is changed.
+    description: |
+      Fired whenever the `Class.DoubleConstrainedValue.Value` of the
+      `Class.DoubleConstrainedValue` is changed.
+    code_samples:
+      - DoubleConstrainedValue-Changed1
+    parameters:
+      - name: value
+        type: double
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      The `Class.DoubleConstrainedValue` object has been deprecated as
+      developers can now use the `Library.math.clamp()` function to constrain
+      values.
+    security: None
+    thread_safety: Unsafe
+  - name: DoubleConstrainedValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: double
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of
+      `Class.DoubleConstrainedValue.Changed` which has also been deprecated.
+      Neither event should be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

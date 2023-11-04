@@ -1,0 +1,309 @@
+name: BubbleChatConfiguration
+type: class
+category:
+memory_category: Instances
+summary: |
+  Allows for customization of text chat bubbles through `Class.TextChatService`.
+description: |
+  Allows for customization of text chat bubbles through `Class.TextChatService`.
+  See [Bubble Chat](../../../chat/bubble-chat.md) for implementation details.
+code_samples: []
+inherits:
+  - TextChatConfigurations
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: BubbleChatConfiguration.AdorneeName
+    summary: |
+      Body part or `Class.Attachment` that bubbles will attach to.
+    description: |
+      String name of the body part or `Class.Attachment` that bubbles attach to;
+      if multiple instances of the same name exist, the system attaches to the
+      first instance found. Default is `"HumanoidRootPart"`.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.BackgroundColor3
+    summary: |
+      Background color of bubbles.
+    description: |
+      `Datatype.Color3` background color of bubbles. Default is
+      `Datatype.Color3|Color3.fromRGB(250, 250, 250)`.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.BackgroundTransparency
+    summary: |
+      Determines the background transparency of the default bubble chat as a
+      number between 0 and 1.
+    description: |
+      Determines the background transparency of the default bubble chat as a
+      number between 0 and 1. This value is multiplied with the user's
+      `Class.GuiService.PreferredTransparency` to create the effective
+      background transparency used by the bubble chat, which may be more opaque
+      than this value set here. Default value is 0.1.
+    code_samples: []
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.BubbleDuration
+    summary: |
+      Time before a bubble fades out, in seconds.
+    description: |
+      Time before a bubble fades out, in seconds. Default is `30`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.BubblesSpacing
+    summary: |
+      Vertical space between stacked bubbles, in pixels.
+    description: |
+      Vertical space between stacked bubbles, in pixels. Default is `6`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.Enabled
+    summary: |
+      Whether text chat bubbles are enabled.
+    description: |
+      Whether text chat bubbles are enabled. Default is `false`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.Font
+    summary: |
+      `Datatype.Font` of the bubble text.
+    description: |
+      `Datatype.Font` of the bubble text. Default is `Enum.Font.GothamMedium`.
+    code_samples: []
+    type: Font
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.FontFace
+    summary: |
+      `Datatype.Font` of the bubble text.
+    description: |
+      `Datatype.Font` of the bubble text. Similar to
+      `Class.BubbleChatConfiguration.Font` but allows setting fonts that don't
+      exist in `Enum.Font`.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.LocalPlayerStudsOffset
+    summary: |
+      Offset of bubbles from their adornee, in studs.
+    description: |
+      If adorned to the local player, `Datatype.Vector3` offset of bubbles from
+      their adornee, in studs, relative to the camera orientation.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.MaxBubbles
+    summary: |
+      Maximum number of text chat bubbles shown per user.
+    description: |
+      Maximum number of text chat bubbles shown per user. If the number of
+      bubbles exceeds this maximum, the system removes bubbles from the oldest
+      one. Default is `3`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.MaxDistance
+    summary: |
+      Maximum distance from the camera that bubbles are shown.
+    description: |
+      Maximum distance from the camera that bubbles are shown. Default is `100`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.MinimizeDistance
+    summary: |
+      Distance from the camera when bubbles turn into a single bubble with an
+      ellipsis to indicate chatter.
+    description: |
+      Distance from the camera when bubbles turn into a single bubble with an
+      ellipsis (**&ctdot;**) to indicate chatter.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.TailVisible
+    summary: |
+      Determines if the tail at the bottom of the text chat bubbles is visible.
+    description: |
+      Determines if the tail at the bottom of the text chat bubbles is visible.
+      Default is `True`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.TextColor3
+    summary: |
+      Color of bubble text.
+    description: |
+      `Datatype.Color3` color of bubble text. Default is
+      `Datatype.Color3|Color3.fromRGB(57, 59, 61)`.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.TextSize
+    summary: |
+      Size of bubble text.
+    description: |
+      Size of bubble text. Default is `16`.
+    code_samples: []
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BubbleChatConfiguration.VerticalStudsOffset
+    summary: |
+      Extra space between bubbles and their adornee, in studs.
+    description: |
+      Extra space between bubbles and their adornee, in studs. Default is `0`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

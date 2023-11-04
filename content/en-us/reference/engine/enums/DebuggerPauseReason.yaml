@@ -1,0 +1,47 @@
+name: DebuggerPauseReason
+type: enum
+summary: |
+  Reason that the DataModel was paused.
+description: |
+  Reason that the DataModel was paused.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: |
+      Pausing for a reason not covered by other values.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Requested
+    summary: |
+      Pause was requested by user.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Breakpoint
+    summary: |
+      Pausing on a user breakpoint.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Exception
+    summary: |
+      Pausing on error hit in the code.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: SingleStep
+    summary: |
+      Pausing on an internal breakpoint set by debugger command: e.g. step over,
+      step into, step out of.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Entrypoint
+    summary: |
+      Pausing at the entry on the script.
+    value: 5
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,94 @@
+name: VelocityMotor
+type: class
+category:
+memory_category: PhysicsParts
+summary: ''
+description: |
+  The VelocityMotor is a special type of joint that works similarly to a
+  `Class.Motor`, but it uses a `Class.MotorFeature` and a `Class.Hole` to create
+  the connection. In order for this object to work correctly:
+
+  - The VelocityMotor must be parented inside of a `Class.MotorFeature`
+  - The `Class.MotorFeature` needs to be parented inside of a `Class.BasePart`
+  - A `Class.Hole` needs to be parented inside of another `Class.BasePart`
+  - The VelocityMotor's `Class.VelocityMotor.Hole` property should be assigned
+    to the hole you parented inside of the other part.
+code_samples:
+inherits:
+  - JointInstance
+tags: []
+deprecation_message: ''
+properties:
+  - name: VelocityMotor.CurrentAngle
+    summary: |
+      Displays the angle that the motor is at in radians.
+    description: |
+      Displays the angle that the motor is at in radians.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VelocityMotor.DesiredAngle
+    summary: |
+      The desired angle to be reached. The motor will attempt to reach this
+      angle.
+    description: |
+      The desired angle to be reached. The motor will attempt to reach this
+      angle.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VelocityMotor.Hole
+    summary: |
+      The `Class.Hole` linked to this VelocityMotor.
+    description: |
+      The `Class.Hole` linked to this VelocityMotor.
+    code_samples:
+    type: Hole
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VelocityMotor.MaxVelocity
+    summary: |
+      The maximum amount of velocity able to be reached.
+    description: |
+      The maximum amount of velocity able to be reached.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

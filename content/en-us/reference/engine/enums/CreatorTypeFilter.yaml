@@ -1,0 +1,23 @@
+name: CreatorTypeFilter
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: User
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Group
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: All
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,88 @@
+name: CompletionItemTag
+type: enum
+summary: |
+  Determines the tags for completion items in
+  `Class.ScriptEditorService:RegisterAutocompleteCallback()`.
+description: |
+  Determines the tags for completion items in
+  `Class.ScriptEditorService:RegisterAutocompleteCallback()`.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Deprecated
+    summary: |
+      Indicates that the completion is deprecated, applying a penalty towards
+      its score and crossing it out in the completion list.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: IncorrectIndexType
+    summary: |
+      Indicates that the completion is a member and being accessed with the
+      wrong index type (e.g. using `:` to access a property), hiding it from the
+      completion list.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PluginPermissions
+    summary: |
+      Indicates that the completion requires Plugin security level to access,
+      hiding it if the client lacks this level.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CommandLinePermissions
+    summary: |
+      Indicates that the completion requires Command line security level to
+      access, hiding it if the client lacks this level.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RobloxPermissions
+    summary: |
+      Indicates that the completion requires Core Script security level to
+      access, hiding it if the client lacks this level.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: AddParens
+    summary: |
+      Instructs the editor to add parentheses before the cursor after inserting
+      the given completion, if accepted.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: PutCursorInParens
+    summary: |
+      Instructs the editor to add parentheses before the cursor and move the
+      cursor into the parentheses after inserting the given completion, if
+      accepted.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: TypeCorrect
+    summary: |
+      Indicates that the completion is type correct in the current context,
+      granting a bonus to its score.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: ClientServerBoundaryViolation
+    summary: |
+      Indicates that the completion is being accessed from the wrong side of the
+      client/server boundary (e.g. Players.LocalPlayer in a server script),
+      hiding it from the completion list.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Invalidated
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: PutCursorBeforeEnd
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''

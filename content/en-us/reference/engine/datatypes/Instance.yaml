@@ -1,0 +1,42 @@
+name: Instance
+type: datatype
+summary: |
+  Holds the constructor for Instances.
+description: |
+  The `Class.Instance` data type holds the constructor for `Class.Instance`
+  objects.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Instance.new
+    summary: Returns an instance of the specified class.
+    description: |-
+      Creates an new object of type val. The parent argument is optional; If it
+      is supplied, the object will be parented to that object.
+
+      **Performance note:** When the `Class.Instance.Parent|Parent` of an object is
+      set, Luau listens to a variety of different property changes
+      for replication, rendering and physics. Therefore, it is recommended to
+      **set the Parent property last** when creating new objects. As such, you
+      should avoid using the second argument (`parent`) of this function. You
+      can read [this thread on the developer
+      forum](https://devforum.roblox.com/t/psa-dont-use-instance-new-with-parent-argument/30296)
+      for more information.
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+      - name: parent
+        type: Instance
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+methods:
+functions:
+math_operations:

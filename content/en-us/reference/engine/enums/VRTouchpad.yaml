@@ -1,0 +1,24 @@
+name: VRTouchpad
+type: enum
+summary: |
+  Used to universally identify a VR touchpad that is used by either the left, or
+  right hand.
+description: |
+  Used to universally identify a VR touchpad that is used by either the left, or
+  right hand.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Left
+    summary: |
+      Left hand touchpad.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Right
+    summary: |
+      Right hand touchpad.
+    value: 1
+    tags: []
+    deprecation_message: ''

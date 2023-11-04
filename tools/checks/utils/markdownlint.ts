@@ -5,42 +5,43 @@ import { IConfig } from './config.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { Emoji } from './utils.js';
 
-export const lintMarkdownContent = ({ content }: { content: string }) => {
+export const getMarkdownLintErrors = ({
+  fileContent,
+}: {
+  fileContent: string;
+}) => {
   const options = {
     config: markdownLintConfig,
     strings: {
-      content,
+      fileContent,
     },
     handleRuleFailures: true,
   };
 
-  const result = markdownlint.sync(options);
-  if (result && result.content) {
-    return result.content;
-  }
-  return null;
+  const {fileContent: fileErrors } = markdownlint.sync(options);
+  return fileErrors
 };
 
-export const processMarkdownLintResult = ({
+export const processMarkdownLintError = ({
   config,
   filePath,
-  result,
+  lintError,
 }: {
   config: IConfig;
   filePath: string;
-  result: LintError;
+  lintError: LintError;
 }) => {
-  const errorNames = result.ruleNames.join('/');
-  const column = result.errorRange ? `${result.errorRange[0]}` : '';
+  const errorNames = lintError.ruleNames.join('/');
+  const column = lintError.errorRange ? `${lintError.errorRange[0]}` : '';
 
   /** Console */
   const consoleMessage = `${Emoji.NoEntry} Requirement: In ${filePath}, line ${
-    result.lineNumber
+    lintError.lineNumber
   },${
     column ? `column ${column},` : ''
-  } markdownlint detected error ${errorNames}: ${result.ruleDescription}. ${
-    result.errorDetail ? `${result.errorDetail}. ` : ''
-  }For more info, see ${result.ruleInformation}.`;
+  } markdownlint detected error ${errorNames}: ${lintError.ruleDescription}. ${
+    lintError.errorDetail ? `${lintError.errorDetail}. ` : ''
+  }For more info, see ${lintError.ruleInformation}.`;
   console.log(consoleMessage);
 
   addToSummaryOfRequirements(consoleMessage);
@@ -49,13 +50,13 @@ export const processMarkdownLintResult = ({
   if (config.postPullRequestComments) {
     const body = `The content quality library [markdownlint](https://github.com/DavidAnson/markdownlint) says: 
 
-- ${result.ruleDescription} (${errorNames})
-${result.errorDetail ? `- ${result.errorDetail}.` : ''}
+- ${lintError.ruleDescription} (${errorNames})
+${lintError.errorDetail ? `- ${lintError.errorDetail}.` : ''}
 
 For more information, see the Markdownlint docs for [${errorNames}](${
-      result.ruleInformation
+      lintError.ruleInformation
     }). ${
-      result.fixInfo
+      lintError.fixInfo
         ? `You might be able to fix this by using [markdownlint for VS Code](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) or by running \`npm ci && npm run markdownlint\`.`
         : ''
     }
@@ -64,7 +65,7 @@ ${requiredCheckMessage}`;
     createNewPullRequestComment({
       body,
       commit_id: config.commitHash,
-      line: result.lineNumber,
+      line: lintError.lineNumber,
       path: filePath,
       pull_number: config.pullRequestNumber,
       repository: config.repository,
@@ -74,22 +75,22 @@ ${requiredCheckMessage}`;
 
 export const checkMarkdownLint = ({
   config,
-  content,
+  fileContent,
   filePath: filePath,
 }: {
   config: IConfig;
-  content: string;
+  fileContent: string;
   filePath: string;
 }) => {
-  const lintResults = lintMarkdownContent({ content });
+  const lintErrors = getMarkdownLintErrors({ fileContent });
   if (config.debug) {
-    console.log(`MarkdownLint errors for ${filePath}:`, lintResults);
+    console.log(`MarkdownLint errors for ${filePath}:`, lintErrors);
   }
-  if (!lintResults) {
+  if (lintErrors.length === 0) {
     console.log('No linting errors found.');
     return;
   }
-  for (const result of lintResults) {
-    processMarkdownLintResult({ config, filePath, result });
+  for (const error of lintErrors) {
+    processMarkdownLintError({ config, filePath, lintError: error });
   }
 };

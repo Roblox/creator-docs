@@ -1,0 +1,39 @@
+name: BoxHandleAdornment
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  A box that can be adorned to a `Class.BasePart`.
+description: |
+  For handles to be interactive, they must be parented to a player's PlayerGui
+  or the CoreGui.
+
+  The **BoxHandleAdornment** is a rectangular prism that can be adorned to a
+  `Class.BasePart`. This adornment can listen to input events and is commonly
+  used to make dragger tools.
+code_samples:
+inherits:
+  - HandleAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: BoxHandleAdornment.Size
+    summary: |
+      The size of the adornment.
+    description: |
+      The size of the adornment.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,28 @@
+name: CenterDialogType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: UnsolicitedDialog
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PlayerInitiatedDialog
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ModalDialog
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: QuitDialog
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

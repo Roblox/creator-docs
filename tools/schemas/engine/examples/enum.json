@@ -1,0 +1,25 @@
+{
+  "name": "SampleEnum",
+  "type": "enum",
+  "summary": "Sample summary.",
+  "description": "Sample description.",
+  "code_samples": ["sample1"],
+  "tags": ["Deprecated"],
+  "deprecation_message": "Some deprecation_message.",
+  "items": [
+    {
+      "name": "Automatic",
+      "value": 0,
+      "summary": "Sample summary.",
+      "tags": [],
+      "deprecation_message": ""
+    },
+    {
+      "name": "Never",
+      "value": 1,
+      "summary": "Sample summary.",
+      "tags": [],
+      "deprecation_message": ""
+    }
+  ]
+}

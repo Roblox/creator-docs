@@ -1,0 +1,28 @@
+name: ClientAnimatorThrottlingMode
+type: enum
+summary: |
+  An Enum describing various animation throttling modes on clients.
+description: |
+  An Enum describing various animation throttling modes on clients.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default animation throttling mode defined by Roblox.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      Disables animation throttling.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    summary: |
+      Enables animation throttling.
+    value: 2
+    tags: []
+    deprecation_message: ''

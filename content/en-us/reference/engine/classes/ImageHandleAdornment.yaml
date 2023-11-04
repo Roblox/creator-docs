@@ -1,0 +1,56 @@
+name: ImageHandleAdornment
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  An image that can be adorned to a `Class.BasePart`.
+description: |
+  For handles to be interactive, they must be parented to a player's PlayerGui
+  or the CoreGui.
+
+  The **ImageHandleAdornment** is an image that can be adorned to a
+  `Class.BasePart`. This adornment can listen to input events and is commonly
+  used to make dragger tools.
+code_samples:
+inherits:
+  - HandleAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: ImageHandleAdornment.Image
+    summary: |
+      The image to draw for the adornment.
+    description: |
+      The image to draw for the adornment.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ImageHandleAdornment.Size
+    summary: |
+      The size in studs of the image.
+    description: |
+      The size in studs of the image.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

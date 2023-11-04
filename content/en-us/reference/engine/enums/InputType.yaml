@@ -1,0 +1,34 @@
+name: InputType
+type: enum
+summary: |
+  The InputType Enum controls the SurfaceInputs of `Class.Part`.
+description: |
+  The InputType Enum controls the SurfaceInputs of `Class.Part`. Several
+  parameters here are left-overs from 2005, before Roblox was a multiplayer
+  game, and have no known functionality.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NoInput
+    summary: |
+      Behaves like a weld and does nothing.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Constant
+    summary: |
+      Rotate at a constant velocity of `Class.BasePart` `ParamB`.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Sin
+    summary: |
+      Rotate at a velocity of:
+      `ParamA * math.sin(game.Workspace.DistributedGameTime * ParamB)`, where
+      `Class.BasePart` `ParamA` determines the maximum speed at which the part
+      spins, and `Class.BasePart` `ParamB` determines how frequently it changes
+      direction.
+    value: 13
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,35 @@
+name: ParticleFlipbookLayout
+type: enum
+summary: |
+  Determines the layout of the flipbook texture.
+description: |
+  Determines the layout of the flipbook texture.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      Disable flipbook features and use the texture as a single static texture
+      over the particle's lifetime.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Grid2x2
+    summary: |
+      2&times;2 frames for a 4-frame animation.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Grid4x4
+    summary: |
+      4&times;4 frames for a 16-frame animation.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Grid8x8
+    summary: |
+      8&times;8 frames for a 64-frame animation.
+    value: 3
+    tags: []
+    deprecation_message: ''

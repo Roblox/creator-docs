@@ -1,0 +1,29 @@
+name: VirtualCursorMode
+type: enum
+summary: |
+  Enables Virtual Cursor mode within an experience.
+description: |
+  Enables Virtual Cursor mode within an experience. By default, this property is
+  disabled.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The Virtual Cursor is in the default state.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      The Virtual Cursor is disabled.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    summary: |
+      The Virtual Cursor is enabled.
+    value: 2
+    tags: []
+    deprecation_message: ''

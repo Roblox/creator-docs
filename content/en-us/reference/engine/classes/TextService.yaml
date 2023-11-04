@@ -1,0 +1,299 @@
+name: TextService
+type: class
+category: Utility
+memory_category: Instances
+summary: |
+  The TextService is a service internally responsible for handling the display
+  of text in the game.
+description: |
+  The TextService is a service internally responsible for handling the display
+  of text in the game.
+
+  This class has two member functions:
+
+  The `Class.TextService:GetTextSize()` function gives developers the ability to
+  calculate the space required for a specific text string with specified
+  formatting, returning a `Datatype.Vector2` pixel size.
+
+  The `Class.TextService:FilterStringAsync()` function is required to properly
+  filter user specified text (such as chat messages or other inputs) in the
+  interests of user safety. Developers not using the Roblox default
+  `Class.Chat`, or allowing users to otherwise input text must use this
+  function.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: TextService:GetTextSize
+    summary: |
+      Computes the `Datatype.Vector2` dimensions (in pixels) that will be taken
+      up with text when using the specified formatting parameters and size
+      constraints.
+    description: |
+      Computes the `Datatype.Vector2` dimensions (in pixels) that will be taken
+      up with text when using the specified formatting parameters and size
+      constraints.
+
+      Note, the fontSize parameter will not accept the `Enum.FontSize` Enum.
+      Instead the integer size corresponding with the `Enum.FontSize` Enum
+      should be used. This is not equal to the value of the `Enum.FontSize`
+      Enum. For example, for _Size11_ font, the integer _11_ should be used.
+
+      This function is a useful alternative to the `Class.TextLabel.TextBounds`
+      property of the `Class.TextLabel` and `Class.TextButton` objects. Using
+      the `Class.TextLabel.TextBounds` property to calculate the dimensions text
+      requires is often impractical as it requires a `Class.TextLabel` object to
+      be created.
+
+      With GetTextSize, the dimensions required by a particular text string in a
+      particular `Class.TextLabel` or `Class.TextButton` can be calculated
+      before any object is created or text property set.
+
+      Developers are recommended to add a pixel of padding to the result to
+      ensure no text is cut off.
+
+      This method is limited to only fonts that are listed in `Enum.Font`. To
+      get access to more fonts, you can use
+      `Class.TextService:GetTextBoundsAsync()` instead.
+    code_samples:
+      - textservice-getting-the-text-size
+    parameters:
+      - name: string
+        type: string
+        default:
+        summary: |
+          The string for which the text size is to be calculated.
+      - name: fontSize
+        type: int
+        default:
+        summary: |
+          The integer representing the font size used.
+      - name: font
+        type: Font
+        default:
+        summary: |
+          The font used.
+      - name: frameSize
+        type: Vector2
+        default:
+        summary: |
+          The `Class.TextLabel.AbsoluteSize` of the text object to be used.
+          Required to compute how the text will wrap.
+    returns:
+      - type: Vector2
+        summary: |
+          The size of the space required, in pixels, by the string with the
+          specified formatting.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextService:FilterAndTranslateStringAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: stringToFilter
+        type: string
+        default:
+        summary: ''
+      - name: fromUserId
+        type: int64
+        default:
+        summary: ''
+      - name: targetLocales
+        type: Array
+        default:
+        summary: ''
+      - name: textContext
+        type: TextFilterContext
+        default: PrivateChat
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextService:FilterStringAsync
+    summary: |
+      Filters a string being received from a user, and returns a
+      `Class.TextFilterResult` which can be used to distribute the correctly
+      filtered text accordingly.
+    description: |
+      The FilterStringAsync function filters a string being received from a
+      user, using the `Class.TextService`, and returns a
+      `Class.TextFilterResult` which can be used to distribute the correctly
+      filtered text accordingly.
+
+      #### Usage
+
+      This method should be called once each time a user submits a message. Do
+      not cache the results of this function and re-use them for separate
+      messages. If a user submits the same text multiple times this method must
+      be called again each time the message is sent. If the results are cached
+      and reused spam detection and many forms of context-aware filtering will
+      be broken and potentially put user safety at risk. Games that improperly
+      use cached results may face moderation.
+
+      However, it is encouraged to keep these result objects to display the same
+      message to users who join the server later. For example: this can be used
+      to safely and efficiently implement a server chat log that always uses the
+      least restrictive filtering for users who join later, or for efficiently
+      displaying text like a pet name to a user who joins the game after the pet
+      was first spawned and name filtered.
+
+      The optional `Enum.TextFilterContext` parameter will not impact the
+      filtered result of the query. This value will be used to improve Roblox's
+      text filtering.
+
+      Private text is anything that is seen only by specific players, rather
+      than every player. For example, if the chat is seen by a single player, or
+      by a selected group of players, then the chat is considered private. Chat
+      for teams or chat that is potentially visible to a wider group, such as
+      the server, is considered public. If you are unsure what your text
+      qualifies as, leave the optional field blank.
+
+      Note:
+
+      - This method always yields to make a text filtering service call
+      - This method may throw if there is a service error that can not be
+        resolved. If this function throws an error please do not retry the
+        request; this method implements it's own retry logic internally. If this
+        method fails do not display the text to any user.
+      - This method currently throws if _fromUserId_ is not online on the
+        current server. We plan to support users who are offline or on a
+        different server in the future.
+    code_samples:
+      - pet-name-filter-example
+    parameters:
+      - name: stringToFilter
+        type: string
+        default:
+        summary: |
+          The text to be filtered.
+      - name: fromUserId
+        type: int64
+        default:
+        summary: |
+          The userId of the player filtering the text.
+      - name: textContext
+        type: TextFilterContext
+        default: PrivateChat
+        summary: |
+          The context that the filtered message will be used in. The default is
+          PrivateChat.
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextService:GetFamilyInfoAsync
+    summary: |
+      Returns a table containing the name and faces of a font family.
+    description: |
+      Returns a table containing the name and faces of a font family.
+
+      The returned table is structured like this:
+
+      ```lua
+      type FaceInfo = {
+        Name: string, -- Examples: "Regular", "Book", "Italic", "Thin Italic"
+        Weight: Enum.FontWeight,
+        Style: Enum.FontStyle, -- Either Normal or Italic
+      }
+
+      type FamilyInfo = {
+        Name: string, -- Examples: "Source Sans Pro", "Grenze Gotisch"
+        Faces: {FaceInfo} -- There's always at least 1 but there can be up to 18.
+      }
+      ```
+
+      If the font family has already been loaded by a previous call to
+      `GetFamilyInfoAsync`, `Class.ContentProvider:PreloadAsync()`, or a text
+      object with the `Class.TextLabel.FontFace` property set, then the method
+      returns without yielding.
+
+      #### Errors
+
+      This method can fail because of network errors. You should always wrap it
+      in a `pcall` for error handling.
+
+      Throws an error in these scenarios:
+
+      - The passed family is an empty string.
+      - Downloading the family failed.
+      - The asset ID is invalid or points to an asset that doesn't exist.
+    code_samples:
+      - TextService-GetFamilyInfoAsync-1
+    parameters:
+      - name: assetId
+        type: Content
+        default:
+        summary: |
+          Asset ID of the font family to look up.
+    returns:
+      - type: Dictionary
+        summary: |
+          The information about the font family.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextService:GetTextBoundsAsync
+    summary: |
+      Calculates the width and height of text given parameters.
+    description: |
+      This method is similar to `Class.TextService:GetTextSize()`, but uses the
+      `Datatype.Font` object instead of `Enum.Font`, which has access to more
+      fonts.
+
+      Used to measure how big some text will be given a set of properties like
+      the string, size, and font.
+
+      This is a yield function because some fonts may need to be loaded in order
+      to measure them. If the font is already loaded, then it will not yield.
+      `Class.ContentProvider:PreloadAsync()` can be used to make sure a font is
+      loaded.
+
+      #### Errors
+
+      This method can fail because of network errors. You should always wrap it
+      in a `pcall` for error handling.
+
+      Throws an error in these scenarios:
+
+      - The `Class.GetTextBoundsParams.Font` has a blank family.
+      - The `params` argument was nil.
+      - The font family or font face failed to download.
+    code_samples:
+      - TextService-GetTextBoundsAsync-1
+    parameters:
+      - name: params
+        type: GetTextBoundsParams
+        default:
+        summary: |
+          A reference to a `Class.GetTextBoundsParams` object.
+    returns:
+      - type: Vector2
+        summary: |
+          The size of the text as a `Datatype.Vector2`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

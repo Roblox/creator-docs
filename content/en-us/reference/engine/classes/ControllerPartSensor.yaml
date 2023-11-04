@@ -1,0 +1,122 @@
+name: ControllerPartSensor
+type: class
+category:
+memory_category: Instances
+summary: |
+  A `Class.SensorBase` that outputs data about another `Class.BasePart` based on
+  `Class.Humanoid` floor and ladder detection logic.
+description: |
+  A `Class.SensorBase` that outputs data about another `Class.BasePart` based on
+  `Class.Humanoid` floor and ladder detection logic. It is primarily used for
+  sending data to a character controller. Using a `Class.ControllerPartSensor`
+  allows you to detect `Class.BasePart|BaseParts` in the same manner as the
+  `Class.Humanoid` uses for detecting floors and ladders.
+code_samples: []
+inherits:
+  - ControllerSensor
+tags: []
+deprecation_message: ''
+properties:
+  - name: ControllerPartSensor.HitFrame
+    summary: |
+      The position in world space where the sensor hit the
+      `Class.ControllerPartSensor.SensedPart`.
+    description: |
+      The position in world space where the sensor hit the
+      `Class.ControllerPartSensor.SensedPart`.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerPartSensor.HitNormal
+    summary: |
+      The surface normal at the position where the sensor hit the
+      `Class.ControllerPartSensor.SensedPart`.
+    description: |
+      The surface normal at the position where the sensor hit the SensedPart.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerPartSensor.SearchDistance
+    summary: |
+      The distance from the sensor's parent `Class.BasePart` to use when sensing
+      other parts.
+    description: |
+      The distance from the sensor's parent `Class.BasePart` to use when sensing
+      other parts.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerPartSensor.SensedPart
+    summary: |
+      A reference to the `Class.BasePart` hit by the sensor.
+    description: |
+      A reference to the `Class.BasePart` hit by the sensor.
+    code_samples: []
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ControllerPartSensor.SensorMode
+    summary: |
+      Determines what behavior this `Class.SensorBase` uses when sensing other
+      parts.
+    description: |
+      Determines what behavior this `Class.SensorBase` uses when sensing other
+      parts.
+
+      A setting of `Enum.SensorMode.Ladder` performs the same ladder detection
+      logic used by a `Class.Humanoid` to populate sensor output. It currently
+      always senses along the forward vector of its parent `Class.BasePart`.
+
+      A setting of `Enum.SensorMode.Floor` performs the same floor detection
+      logic used by a `Class.Humanoid` to populate sensor output. It currently
+      always senses along the negative up vector of the world.
+    code_samples: []
+    type: SensorMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Input
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

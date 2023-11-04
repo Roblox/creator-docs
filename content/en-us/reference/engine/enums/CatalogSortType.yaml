@@ -1,0 +1,38 @@
+name: CatalogSortType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Relevance
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PriceHighToLow
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PriceLowToHigh
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: MostFavorited
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: RecentlyCreated
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Bestselling
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''

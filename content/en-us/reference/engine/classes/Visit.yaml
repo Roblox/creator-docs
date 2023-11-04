@@ -1,0 +1,22 @@
+name: Visit
+type: class
+category:
+memory_category: Instances
+summary: |
+  The Visit service is a backend service used by Roblox. Its functions are not
+  accessible to developers in any form.
+description: |
+  The Visit service is a backend service used by Roblox. Its functions are not
+  accessible to developers in any form.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

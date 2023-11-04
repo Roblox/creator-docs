@@ -1,0 +1,38 @@
+name: CatalogSortAggregation
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Past12Hours
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PastDay
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Past3Days
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PastWeek
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PastMonth
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AllTime
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''

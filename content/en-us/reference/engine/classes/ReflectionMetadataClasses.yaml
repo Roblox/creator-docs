@@ -1,0 +1,17 @@
+name: ReflectionMetadataClasses
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal object which cannot be used by developers.
+description: |
+  Acts as a `Class.Folder` for `Class.ReflectionMetadataClass` objects.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,18 @@
+name: ReflectionMetadataMember
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal object which cannot be used by developers.
+description: |
+  ReflectionMetadataMember represents either a `Function`, `YieldFunction`, or
+  `Property` in Roblox's ReflectionMetadata.
+code_samples:
+inherits:
+  - ReflectionMetadataItem
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

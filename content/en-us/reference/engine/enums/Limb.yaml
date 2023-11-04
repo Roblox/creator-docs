@@ -1,0 +1,62 @@
+name: Limb
+type: enum
+summary: |
+  Describes which limb a particular Instance belongs to (assuming the Instance
+  is part of a Humanoid).
+description: |
+  Describes which limb a particular Instance belongs to (assuming the Instance
+  is part of a Humanoid). Passing an Instance to the Humanoid:GetLimb() function
+  will return the Limb for the Instance.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Head
+    summary: |
+      If the limb is a part of the Humanoid's Head.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Torso
+    summary: |
+      If the limb is a part of the Humanoid's Torso. This includes UpperTorso
+      and LowerTorso for R15 rigs.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LeftArm
+    summary: |
+      If the limb is a part of the Humanoid's Left Arm. This includes
+      UpperLeftArm, LowerLeftArm, and LeftHand for R15 rigs.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RightArm
+    summary: |
+      If the limb is a part of the Humanoid's Right Arm. This includes
+      UpperRightArm, LowerRightArm and RightHand for R15 rigs.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LeftLeg
+    summary: |
+      If the limb is a part of the Humanoid's Left Leg. This includes
+      UpperLeftLeg, LowerLeftLeg and LeftFoot for R15 rigs.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RightLeg
+    summary: |
+      If the limb is a part of the Humanoid's Right Leg. This includes
+      UpperRightLeg, LowerRightLeg, and RightFoot for R15 rigs.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    summary: |
+      If a part is not a limb (e.g. running the `Class.Humanoid:GetLimb()`
+      function and passing it an accessory which is a sibling of the Humanoid
+      will return this value).
+    value: 6
+    tags: []
+    deprecation_message: ''

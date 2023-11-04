@@ -1,0 +1,38 @@
+name: SurfaceConstraint
+type: enum
+summary: |
+  This item is deprecated and is replaced by the `Enum.SurfaceType` enum.
+description: |
+  This item is deprecated and is replaced by the `Enum.SurfaceType` enum.
+code_samples:
+tags: []
+deprecation_message: |
+  This item is deprecated and is replaced by the `Enum.SurfaceType` enum.
+items:
+  - name: None
+    summary: |
+      No surface constraint.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Hinge
+    summary: |
+      Makes the side appear with a yellow hinge. Any part connected to this
+      hinge will stick to the side and rotate using physics.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SteppingMotor
+    summary: |
+      Functions identically to a motor. It may have functioned differently in
+      the past, but that functionality no longer seems to exist.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Motor
+    summary: |
+      Acts the same as a Hinge, but has a grey ring around it and automatically
+      rotates any part connected to it.
+    value: 3
+    tags: []
+    deprecation_message: ''

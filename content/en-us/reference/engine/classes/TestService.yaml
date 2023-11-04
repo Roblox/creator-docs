@@ -1,0 +1,761 @@
+name: TestService
+type: class
+category: Debugging
+memory_category: Instances
+summary: |
+  A service used by Roblox to run controlled tests of the engine. It is
+  available for developers to use, to a limited degree.
+description: |
+  The TestService is a service used by Roblox internally to run analytical tests
+  on their engine. It makes it possible to write sophisticated tests right
+  inside a game.
+
+  ## Macros
+
+  Scripts that are executed inside of the TestService (via
+  `Class.TestService:Run()`) have access to special macros that directly invoke
+  functions under the TestService. Macros are essentially substitutions for
+  large blocks of code that shouldn't need to be rewritten each time you want to
+  call them.
+
+  ### RBX_CHECK
+
+  This macro does tests with calls to the `Class.TestService:Check()` function.
+
+  <table>
+  	<tr>
+  		<th>Macro</th>
+  		<th>Test Condition</th>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK(cond)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_MESSAGE(cond, failMsg)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == false</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_NO_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_EQUAL(a,b)</td>
+  		<td>a == b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_NE(a,b)</td>
+  		<td>a ~= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_GE(a,b)</td>
+  		<td>a &gt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_LE(a,b)</td>
+  		<td>a &lt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_GT(a,b)</td>
+  		<td>a &gt; b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_CHECK_LT(a,b)</td>
+  		<td>a &lt; b</td>
+  	</tr>
+  </table>
+
+  ### RBX_REQUIRE
+
+  This macro does tests with calls to the `Class.TestService:Require()`
+  function.
+
+  <table>
+  	<tr>
+  		<th>Macro</th>
+  		<th>Test Condition</th>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE(cond)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_MESSAGE(cond, failMsg)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == false</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_NO_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_EQUAL(a,b)</td>
+  		<td>a == b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_NE(a,b)</td>
+  		<td>a ~= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_GE(a,b)</td>
+  		<td>a &gt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_LE(a,b)</td>
+  		<td>a &lt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_GT(a,b)</td>
+  		<td>a &gt; b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_REQUIRE_LT(a,b)</td>
+  		<td>a &lt; b</td>
+  	</tr>
+  </table>
+
+  ### RBX_WARN
+
+  This macro does tests with calls to the `Class.TestService:Warn()` function.
+
+  <table>
+  	<tr>
+  		<th>Macro</th>
+  		<th>Test Condition</th>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN(cond)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_MESSAGE(cond, failMsg)</td>
+  		<td>cond == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == false</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_NO_THROW(CODE)</td>
+  		<td>pcall(function () CODE end) == true</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_EQUAL(a,b)</td>
+  		<td>a == b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_NE(a,b)</td>
+  		<td>a ~= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_GE(a,b)</td>
+  		<td>a &gt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_LE(a,b)</td>
+  		<td>a &lt;= b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_GT(a,b)</td>
+  		<td>a &gt; b</td>
+  	</tr>
+  	<tr>
+  		<td>RBX_WARN_LT(a,b)</td>
+  		<td>a &lt; b</td>
+  	</tr>
+  </table>
+
+  ### Additional Macros
+
+  <table>
+  <tr>
+  <th>Macro</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <td>RBX_ERROR(msg)</td>
+  <td>Directly calls the <code>Class.TestService:Error()</code> function.</td>
+  </tr>
+  <tr>
+  <td>RBX_FAIL(msg)</td>
+  <td>Directly calls the <code>Class.TestService:Fail()</code> function.</td>
+  </tr>
+  <tr>
+  <td>RBX_MESSAGE(msg)</td>
+  <td>Directly calls the <code>Class.TestService:Message()</code> function.</td>
+  </tr>
+  </table>
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Service
+deprecation_message: ''
+properties:
+  - name: TestService.AutoRuns
+    summary: |
+      If set to true, the game will start running when the TestService's
+      `Class.TestService:Run()` method is called.
+    description: |
+      If set to true, the game will start running when the TestService's
+      `Class.TestService:Run()` method is called.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.Description
+    summary: |
+      A description of the test being executed.
+    description: |
+      A description of the test being executed.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.ErrorCount
+    summary: |
+      Measures how many errors have been recorded in the test session.
+    description: |
+      Measures how many errors have been recorded in the test session.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Results
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TestService.ExecuteWithStudioRun
+    summary: |
+      When set to true, the TestService will be executed when using the _Run_
+      action in Roblox Studio.
+    description: |
+      When set to true, the TestService will be executed when using the _Run_
+      action in Roblox Studio.
+
+      Note:
+
+      - If the `Class.TestService.NumberOfPlayers` property is set to a value
+        above 0, running the game will open `NumberOfPlayers + 1` studio
+        windows, where one window is a server, and the rest are players
+        connected to that server.
+      - Try to keep this value within a rational range (1 to 8 players at most),
+        or else your computer's CPU will get overloaded.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.Is30FpsThrottleEnabled
+    summary: |
+      Sets whether or not the physics engine should be throttled to 30 FPS while
+      the test is being ran.
+    description: |
+      Sets whether or not the physics engine should be throttled to 30 FPS while
+      the test is being ran.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TestService.IsPhysicsEnvironmentalThrottled
+    summary: |
+      Sets whether or not the physics environment should be throttled while
+      running this test.
+    description: |
+      Sets whether or not the physics environment should be throttled while
+      running this test.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TestService.IsSleepAllowed
+    summary: |
+      Sets whether or not physics objects will be allowed to fall asleep while
+      the test simulation is running.
+    description: |
+      Sets whether or not physics objects will be allowed to fall asleep while
+      the test simulation is running.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.NumberOfPlayers
+    summary: |
+      The number of players expected in this test, if any.
+    description: |
+      The number of players expected in this test, if any.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.SimulateSecondsLag
+    summary: |
+      Sets a specific amount of additional latency experienced by players during
+      the test session.
+    description: |
+      Sets a specific amount of additional latency experienced by players during
+      the test session.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.TestCount
+    summary: |
+      Measures how many test calls have been recorded in the test session.
+    description: |
+      Measures how many test calls have been recorded in the test session.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Results
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TestService.Timeout
+    summary: |
+      The maximum amount of time that tests are allowed to run for.
+    description: |
+      The maximum amount of time that tests are allowed to run for.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TestService.WarnCount
+    summary: |
+      Measures how many warning calls have been recorded in the test session.
+    description: |
+      Measures how many warning calls have been recorded in the test session.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Results
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: TestService:Check
+    summary: |
+      Prints result of condition to output.
+    description: |
+      If condition is true, prints "Check passed: ", followed by description to
+      the output, in blue text. Otherwise, prints "Check failed: ", again,
+      followed by description, but in red text.
+    code_samples:
+      - TestService-Check1
+    parameters:
+      - name: condition
+        type: bool
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Checkpoint
+    summary: |
+      Prints "Test checkpoint: ", followed by text, to the output, in blue text.
+    description: |
+      Prints "<samp>Test checkpoint: </samp>", followed by <var>text</var>, to
+      the output, in blue text.
+    code_samples:
+      - TestService-Checkpoint1
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Done
+    summary: |
+      Prints Testing Done to the output, in blue text.
+    description: |
+      Prints <samp>Testing Done</samp> to the output, in blue text.
+    code_samples:
+      - TestService-Done1
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Error
+    summary: |
+      Prints a red message to the output, prefixed by `TestService: `.
+    description: |
+      Prints a red message to the output, prefixed by `TestService: `.
+    code_samples:
+      - TestService-Error1
+    parameters:
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Fail
+    summary: |
+      Indicates a fatal error in a TestService run. If this is called inside of
+      a script running inside of the TestService, this will initiate a
+      breakpoint on the line that invoked the error.
+    description: |
+      Indicates a fatal error in a TestService run. If this is called inside of
+      a script running inside of the TestService, this will initiate a
+      breakpoint on the line that invoked the error.
+    code_samples:
+    parameters:
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Message
+    summary: |
+      Prints Test message, followed by text to the output, in blue text.
+    description: |
+      Prints <samp>Test message</samp>, followed by <var>text</var> to the
+      output, in blue text.
+    code_samples:
+      - TestService-Message1
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Require
+    summary: |
+      Prints whether a condition is true along with description text.
+    description: |
+      If `condition` is true, prints `Require passed: `, followed by
+      `description`, to the output in blue text. Otherwise, prints
+      `Require failed. Test ended: `, followed by `description`, to the output
+      in red text.
+    code_samples:
+      - TestService-Require1
+    parameters:
+      - name: condition
+        type: bool
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:ScopeTime
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Warn
+    summary: |
+      Prints if a condition is true, otherwise prints a warning.
+    description: |
+      If <var>condition</var> is true, prints <samp>Warning passed: </samp>,
+      followed by <var>description</var>, to the output, in blue text.
+      Otherwise, prints <samp>Warning: </samp>, followed by
+      <var>description</var>, to the output, in yellow text.
+    code_samples:
+      - TestService-Warn1
+    parameters:
+      - name: condition
+        type: bool
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: Instance
+        default: nil
+        summary: ''
+      - name: line
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:isFeatureEnabled
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService:Run
+    summary: |
+      Runs scripts which are parented to TestService.
+    description: |
+      Runs scripts which are parented to TestService.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: TestService.ServerCollectConditionalResult
+    summary: |
+      Fired when the server should collect a conditional test result.
+    description: |
+      Fired when the server should collect a conditional test result.
+    code_samples:
+    parameters:
+      - name: condition
+        type: bool
+        default:
+        summary: ''
+      - name: text
+        type: string
+        default:
+        summary: ''
+      - name: script
+        type: Instance
+        default:
+        summary: ''
+      - name: line
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TestService.ServerCollectResult
+    summary: |
+      Fired when the server should collect a test result.
+    description: |
+      Fired when the server should collect a test result.
+    code_samples:
+    parameters:
+      - name: text
+        type: string
+        default:
+        summary: ''
+      - name: script
+        type: Instance
+        default:
+        summary: ''
+      - name: line
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

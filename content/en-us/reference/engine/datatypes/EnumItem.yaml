@@ -1,0 +1,43 @@
+name: EnumItem
+type: datatype
+summary: |
+  An individual item in an enum.
+description: |
+  The `Datatype.EnumItem` data type represents an individual item in a Roblox
+  enum.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+constants: []
+properties:
+  - name: EnumItem.Name
+    type: string
+    summary: |
+      The name of the EnumItem.
+    description: |
+      The name of the EnumItem.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: EnumItem.Value
+    type: number
+    summary: |
+      The integral value assigned to the EnumItem.
+    description: |
+      The integral value assigned to the EnumItem.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: EnumItem.EnumType
+    type: Enum
+    summary: |
+      A reference to the parent `Datatype.Enum` of the EnumItem.
+    description: |
+      A reference to the parent `Datatype.Enum` of the EnumItem.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

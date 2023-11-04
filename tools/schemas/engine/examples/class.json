@@ -1,0 +1,88 @@
+{
+  "name": "SampleClass",
+  "type": "class",
+  "category": null,
+  "memory_category": "Instances",
+  "summary": "Sample summary.",
+  "description": "Sample description.",
+  "code_samples": ["sample1"],
+  "inherits": null,
+  "tags": ["Deprecated"],
+  "deprecation_message": "",
+  "properties": [
+    {
+      "name": "SampleClass.Property",
+      "summary": "Sample summary.",
+      "description": "Sample description.",
+      "code_samples": null,
+      "type": "bool",
+      "tags": null,
+      "deprecation_message": "",
+      "security": { "read": "None", "write": "None" },
+      "thread_safety": "Safe",
+      "category": "Data",
+      "serialization": { "can_load": false, "can_save": true }
+    }
+  ],
+  "methods": [
+    {
+      "name": "SampleClass:Function",
+      "summary": "Sample summary.",
+      "description": "Long description.",
+      "code_samples": ["Sample1"],
+      "parameters": null,
+      "returns": [{ "type": "void", "summary": "" }],
+      "tags": null,
+      "deprecation_message": "",
+      "security": "None",
+      "thread_safety": "Safe"
+    }
+  ],
+  "events": [
+    {
+      "name": "SampleClass.Event",
+      "summary": "Sample summary.",
+      "description": "Sample description.",
+      "code_samples": ["Sample1"],
+      "parameters": [
+        {
+          "name": "child",
+          "type": "Instance",
+          "default": null,
+          "summary": "Sample summary."
+        },
+        {
+          "name": "parent",
+          "type": "Instance",
+          "default": null,
+          "summary": "Sample summary."
+        }
+      ],
+      "tags": null,
+      "deprecation_message": "",
+      "security": "None",
+      "thread_safety": "Unsafe"
+    }
+  ],
+  "callbacks": [
+    {
+      "name": "SampleClass.OnInvoke",
+      "summary": "Sample summary.",
+      "description": "Sample description.",
+      "code_samples": ["Sample1", "Sample2"],
+      "parameters": [
+        {
+          "name": "arguments",
+          "type": "Tuple",
+          "default": null,
+          "summary": "Sample summary."
+        }
+      ],
+      "returns": [{ "type": "Tuple", "summary": "" }],
+      "tags": null,
+      "deprecation_message": "",
+      "security": "None",
+      "thread_safety": "ReadSafe"
+    }
+  ]
+}

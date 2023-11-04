@@ -1,0 +1,26 @@
+name: ZIndexBehavior
+type: enum
+summary: |
+  Used by `Class.LayerCollector.ZIndexBehavior` to control how the
+  `Class.GuiObject.ZIndex` property behaves for descendants.
+description: |
+  Used by `Class.LayerCollector.ZIndexBehavior` to control how the
+  `Class.GuiObject.ZIndex` property behaves for descendants.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Global
+    summary: |
+      The ZIndex property overrides the default value computed from the depth in
+      the hierarchy.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Sibling
+    summary: |
+      The ZIndex property controls the order in which the GuiObject renders
+      relative to its siblings.
+    value: 1
+    tags: []
+    deprecation_message: ''

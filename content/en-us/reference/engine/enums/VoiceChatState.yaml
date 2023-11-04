@@ -1,0 +1,43 @@
+name: VoiceChatState
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Idle
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Joining
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: JoiningRetry
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Joined
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Leaving
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Ended
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Failed
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''

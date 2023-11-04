@@ -1,0 +1,21 @@
+name: TimerService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service responsible for scheduling timed events. It is used by the
+  `Class.Debris` class. Its functionality can not be accessed by developers.
+description: |
+  An internal service responsible for scheduling timed events. It is used by the
+  `Class.Debris` class. Its functionality can not be accessed by developers.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

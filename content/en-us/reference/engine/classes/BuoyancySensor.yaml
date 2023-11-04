@@ -1,0 +1,60 @@
+name: BuoyancySensor
+type: class
+category:
+memory_category: Instances
+summary: |
+  A `Class.SensorBase` that outputs data about how its `Class.BasePart` is
+  interacting with `Class.Terrain` water.
+description: |
+  A `Class.SensorBase` that outputs data about how its `Class.BasePart` is
+  interacting with `Class.Terrain` water, allowing you to determine if the part
+  is or is not in water.
+code_samples: []
+inherits:
+  - SensorBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: BuoyancySensor.FullySubmerged
+    summary: |
+      True when the entirety of the `Class.BasePart` is submerged in
+      `Class.Terrain` water with at least one voxel of water above it.
+    description: |
+      This property is true when the entirety of the `Class.BasePart` is
+      submerged in `Class.Terrain` water with at least one voxel of water above
+      it.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BuoyancySensor.TouchingSurface
+    summary: |
+      True when any position on the `Class.BasePart` is touching `Class.Terrain`
+      water.
+    description: |
+      This property is true when any position on the `Class.BasePart` is
+      touching `Class.Terrain` water. The detection measurements are not exact
+      and may use the bounding box of the part instead of its exact geometry.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

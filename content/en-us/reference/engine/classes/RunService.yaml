@@ -1,0 +1,794 @@
+name: RunService
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  Game service responsible for all run-time activity and progression of time.
+description: |
+  **RunService** contains methods and events for time-management as well as for
+  managing the context in which a game or script is running. Methods like
+  `Class.RunService:IsClient()|IsClient`,
+  `Class.RunService:IsServer()|IsServer`,
+  `Class.RunService:IsStudio()|IsStudio`, can help you determine under what
+  context code is running. These methods are useful for ModuleScripts that may
+  be required by both client and server scripts. Furthermore,
+  `Class.RunService:IsStudio()|IsStudio` can be used to add special behaviors
+  for in-studio testing.
+
+  RunService also houses events that allow your code to adhere to Roblox's
+  frame-by-frame loop, such as `Class.RunService.Stepped|Stepped`,
+  `Class.RunService.Heartbeat|Heartbeat` and
+  `Class.RunService.RenderStepped|RenderStepped`. Selecting the proper event to
+  use for any case is important, so you should read
+  [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
+  informed decision.
+code_samples:
+  - RunService-Stepped
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: RunService.ClientGitHash
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: RunService:BindToRenderStep
+    summary: |
+      Given a string name of a function and a priority, this method binds the
+      function to `Class.RunService.RenderStepped`.
+    description: |
+      The `BindToRenderStep` function binds a custom function to be called at a
+      specific time during the render step. There are three main arguments for
+      BindToRenderStep: `name`, `priority`, and what `function` to call.
+
+      As it is linked to the client's rendering process, BindToRenderStep can
+      only be called on the client.
+
+      #### Name
+
+      The `name` parameter is a label for the binding, and can be used with
+      `Class.RunService:UnbindFromRenderStep()` if the binding is no longer
+      needed.
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local function functionToBind() end
+
+      -- Bind the function above to the binding named "tempBinding"
+      RunService:BindToRenderStep("tempBinding", 1, functionToBind)
+      -- Unbind the function bound to "tempBinding"
+      RunService:UnbindFromRenderStep("tempBinding")
+      ```
+
+      #### Priority
+
+      The `priority` of the binding is an integer, and determines when during
+      the render step to call the custom function. The lower this number, the
+      sooner the custom function will be called. If two bindings have the same
+      priority the Roblox engine will randomly pick one to run first. The
+      default Roblox control scripts run with these specific priorities:
+
+      - Player Input: 100
+      - Camera Controls: 200 For convenience, the `Enum.RenderPriority` enum can
+        be used to determine the integer value to set a binding. For example, to
+        make a binding right before the default camera update, simply subtract 1
+        from the camera priority level.
+
+      When using Enum.RenderPriority, remember to use **_InlineCode.Value_** at
+      the end of the desired enum. BindToRenderStep will not work if just the
+      enum on its own is used.
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local function beforeCamera(delta)
+      	-- Code in here will run before the default Roblox camera script
+      end
+
+      RunService:BindToRenderStep("Before camera", Enum.RenderPriority.Camera.Value - 1, beforeCamera)
+      ```
+
+      #### Custom Function and Delta Time
+
+      The last argument of BindToRenderStep is the `custom function` to call.
+      This function will be passed one parameter called deltaTime.
+      **_DeltaTime_** shows how much time passed between the beginning of the
+      previous render step and the beginning of the current render step.
+
+      All rendering updates will wait until the code in the render step
+      finishes. Make sure that any code called by BindToRenderStep runs quickly
+      and efficiently. If code in BindToRenderStep takes too long, then the game
+      visuals will be choppy.
+    code_samples:
+      - RunService-BindToRenderStep
+      - runservice-custom-function
+      - runservice-unbindfromrenderstep
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The **name** parameter is a label for the binding, and can be used
+          with `Class.RunService.Unbind` if the binding is no longer needed.
+      - name: priority
+        type: int
+        default:
+        summary: |
+          The _priority_ of the binding is an integer, and determines when
+          during the render step to call the custom function. The lower this
+          number, the sooner the custom function will be called. If two bindings
+          have the same priority the Roblox engine will randomly pick one to run
+          first. The default Roblox control scripts run with these specific
+          priorities:
+
+          - Player Input: 100
+          - Camera Controls: 200
+
+          For convenience, the `Enum.RenderPriority` enum can be used to
+          determine the integer value to set a binding. For example, to make a
+          binding right before the default camera update, simply subtract 1 from
+          the camera priority level.
+      - name: function
+        type: Function
+        default:
+        summary: |
+          The custom function being bound.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService:IsClient
+    summary: |
+      Returns whether the current environment is running on the client.
+    description: |
+      This function returns whether the current environment is running on the
+      client.
+
+      If the code that invoked this method is running in a client context (in a
+      `Class.LocalScript` or a `Class.ModuleScript` required by a
+      `Class.LocalScript`) then this method will return _true_. In all other
+      cases, this function will return _false_.
+
+      If this function returns true, then the current environment can access
+      client-only features like `Class.RunService.RenderStepped` or
+      `Class.Players.LocalPlayer`.
+
+      #### RunService test function results
+
+      <table>
+        <thead>
+          <tr>
+            <th>Environment</th>
+            <th>IsStudio</th>
+            <th>IsClient</th>
+            <th>IsServer</th>
+            <th>IsEdit</th>
+            <th>IsRunning</th>
+            <th>IsRunMode</th>
+          </tr>
+        </thead>
+      <tbody>
+          <tr>
+            <td>Live Player</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Live Server</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>Edit Mode</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Edit Mode (Team Create)</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Run Mode</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>Play Mode (Client)</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Play Mode (Server)</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>Team Test Player</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Team Test Server</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>Legacy Play Mode &dagger;</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+      &dagger; 'Legacy Play Mode' refers to Play Mode with Accurate Play Solo
+      disabled
+
+      See also:
+
+      - `Class.RunService:IsServer()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsEdit()`
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:IsRunMode()`
+    code_samples:
+      - RunService-Run-Context
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the current environment is running the client.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: RunService:IsEdit
+    summary: |
+      Returns whether the current environment is in `Edit` mode.
+    description: |
+      This function returns whether the current environment is in 'Edit' mode.
+      For example, Roblox Studio is in 'Edit Mode' when the game is not running.
+
+      IsEdit will return the inverse of `Class.RunService:IsRunning()` with one
+      exception, if the simulation has been 'paused' then both IsEdit and
+      `Class.RunService:IsRunning()` will return false.
+
+      See also:
+
+      - `Class.RunService:IsClient()`
+      - `Class.RunService:IsServer()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:IsRunMode()`
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the current environment is in `Edit` mode.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Safe
+  - name: RunService:IsRunMode
+    summary: |
+      Returns whether the 'Run' button has been pressed to run the simulation in
+      Roblox Studio.
+    description: |
+      This function returns whether the 'Run' button has been pressed to run the
+      simulation in Roblox Studio.
+
+      If the user has pressed 'Run', then this function will return _true_. This
+      function will continue to return _true_ if the simulation has been paused
+      using the 'Pause' button. However, once it has been stopped using the
+      'Stop' button it will revert to returning _false_.
+
+      Roblox Studio only enters run mode when the 'Run' button is pressed, not
+      the 'Play' button. This function will also return false if the simulation
+      was started using `Class.RunService:Run()` rather than the 'Run' button.
+
+      #### RunService test function results
+
+      See also:
+
+      - `Class.RunService:IsClient()`
+      - `Class.RunService:IsServer()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:IsEdit()`
+    code_samples:
+      - RunService-Run-Context
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the 'Run' button has been pressed to run the simulation in
+          Roblox Studio.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: RunService:IsRunning
+    summary: |
+      Returns whether the game is currently running.
+    description: |
+      Returns whether the game is currently running
+
+      The game is considered running when it is not in edit mode in Roblox
+      Studio. This means, if the simulation has been run using the 'Run' or
+      'Play' buttons the game is running.
+
+      IsRunning will always return the inverse of `Class.RunService:IsEdit()`
+      with one exception, if the simulation has been 'paused' then both
+      `Class.RunService:IsEdit()` and IsRunning will return false.
+
+      #### RunService test function results
+
+      See also:
+
+      - `Class.RunService:IsClient()`
+      - `Class.RunService:IsServer()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsEdit()`
+      - `Class.RunService:IsRunMode()`
+    code_samples:
+      - RunService-Run-Context
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the game is currently running.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService:IsServer
+    summary: |
+      Returns whether the current environment is running on the server.
+    description: |
+      This function returns whether the current environment is running on the
+      server.
+
+      If the code that invoked this method is running in a server context (in a
+      `Class.Script` or a `Class.ModuleScript` required by a `Class.Script`)
+      then this method will return _true_. In all other cases, this function
+      will return _false_.
+
+      If this function returns true, then the current environment can access
+      server-only features like `Class.ServerStorage` or
+      `Class.ServerScriptService`.
+
+      See also:
+
+      - `Class.RunService:IsClient()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsEdit()`
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:IsRunMode()`
+    code_samples:
+      - RunService-Run-Context
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the current environment is running on the server.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: RunService:IsStudio
+    summary: |
+      Returns whether the current environment is running in Roblox Studio.
+    description: |
+      This function returns whether the current environment is running in Roblox
+      Studio.
+
+      This function will only return _true_ when using Roblox Studio and can be
+      used to add code to test your game within Studio.
+
+      See also:
+
+      - `Class.RunService:IsClient()`
+      - `Class.RunService:IsServer()`
+      - `Class.RunService:IsStudio()`
+      - `Class.RunService:IsEdit()`
+      - `Class.RunService:IsRunMode()`
+    code_samples:
+      - RunService-Run-Context
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the current environment is running in Roblox Studio.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: RunService:Pause
+    summary: |
+      Pauses the game's simulation if it is running, suspending physics and
+      scripts.
+    description: |
+      This function pauses the games' simulation if it is running, suspending
+      physics and scripts.
+
+      The simulation can be started using `Class.RunService:Run()` or the 'Run'
+      button in Roblox Studio. When the simulation is paused,
+      `Class.RunService:IsRunning()` will return _false_.
+
+      Pausing the simulation can be used to assist with debugging in Roblox
+      Studio, it cannot be used in real game sessions.
+
+      See also:
+
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:Run()`
+      - `Class.RunService:Stop()`
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: RunService:Reset
+    summary: |
+      Resets the current game to a waypoint set when `Class.RunService:Run()`
+      was called.
+    description: |
+      The Reset function resets the current game to a waypoint set when Run was
+      called. This method should only be used after Run was called.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated and should not be used in new work.
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: RunService:Run
+    summary: |
+      Runs the game's simulation, running physics and scripts.
+    description: |
+      This function runs the game's simulation, running physics and scripts.
+
+      When the simulation is running, `Class.RunService:IsRunning()` will return
+      _true_. However, `Class.RunService:IsRunMode()` will only return _true_ if
+      the simulation was started using the 'Run' button in Roblox Studio. This
+      means when this function is used to start the simulation, IsRunMode will
+      return _false_ even though the simulation is running.
+
+      The simulation can be paused using `Class.RunService:Pause()` or the
+      'Pause' button in Roblox Studio. It can also be ended using
+      `Class.RunService:Stop()`.
+
+      Running the simulation can be used to assist with debugging in Roblox
+      Studio. Currently it is not possible to restore the game to the state it
+      was in prior to running the simulation if the simulation was started using
+      this function. If this is a problem, instead use the 'Run' button in
+      Roblox Studio.
+
+      See also:
+
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:Pause()`
+      - `Class.RunService:Stop()`
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: RunService:Stop
+    summary: |
+      Ends the game's simulation if it is running.
+    description: |
+      This function ends the game's simulation if it is running.
+
+      The simulation can be started using `Class.RunService:Run()` or the 'Run'
+      button in Roblox Studio. When the simulation is stopped,
+      `Class.RunService:IsRunning()` will return _false_ and
+      `Class.RunService:IsEdit()` will return _true_.
+
+      In contrast to the 'Stop' button in Roblox Studio, calling this function
+      will not restore the game to the state it was in prior to the simulation
+      being run. This means any changes made to the game by the physics
+      simulation and scripts will persist after the simulation has ended.
+
+      See also:
+
+      - `Class.RunService:IsRunning()`
+      - `Class.RunService:Run()`
+      - `Class.RunService:Pause()`
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: RunService:UnbindFromRenderStep
+    summary: |
+      Unbinds a function that was bound to the render loop using
+      `Class.RunService:BindToRenderStep()`.
+    description: |
+      Given a name of a function sent to
+      `Class.RunService:BindToRenderStep()|BindToRenderStep`, this method will
+      unbind the function from being called during RenderStepped. This is used
+      to unbind bound functions once they are no longer needed, or when they no
+      longer need to fire every _step_.
+
+      If there is no bound function by the given name, this method takes no
+      action and continues without raising an error.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the function being unbound.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: RunService.Heartbeat
+    summary: |
+      Fires every _frame_ after the physics simulation has completed.
+    description: |
+      The Heartbeat event fires every _frame_, after the physics simulation has
+      completed. The _step_ argument indicates the time that has elapsed since
+      the previous frame.
+
+      As Heartbeat fires every frame, it runs on a **variable frequency**. This
+      means the rate will vary depending on the performance of the machine. If
+      the game is running at 40 FPS, then Heartbeat will fire 40 times per
+      second and the _step_ argument will be roughly 1/40th of a second.
+
+      The _step_ argument can be used to account for the variable frequency of
+      this event, for example:
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local RATE_PER_SECOND = 2
+
+      RunService.Heartbeat:Connect(function(step)
+      	local increment = RATE_PER_SECOND * step
+      end)
+      ```
+
+      There is no guarantee that functions connected to this event will fire at
+      the exact same time, or in any specific order. For an alternative where
+      the priority can be specified, see `Class.RunService:BindToRenderStep()`.
+    code_samples:
+      - RunService-Heartbeat1
+    parameters:
+      - name: deltaTime
+        type: double
+        default:
+        summary: |
+          The time (in seconds) that has elapsed since the previous frame.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.PostSimulation
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: deltaTimeSim
+        type: double
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.PreAnimation
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: deltaTimeSim
+        type: double
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.PreRender
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: deltaTimeRender
+        type: double
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.PreSimulation
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: deltaTimeSim
+        type: double
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.RenderStepped
+    summary: |
+      Fires every _frame_ prior to the frame being rendered.
+    description: |
+      The RenderStepped event fires every _frame_, prior to the frame being
+      rendered. The _step_ argument indicates the time that has elapsed since
+      the previous frame.
+
+      RenderStepped does not run in parallel to Roblox's rendering tasks and
+      code connected to RenderStepped must be executed prior to the frame being
+      rendered. This can lead to significant performance issues if RenderStepped
+      is used inappropriately. To avoid this, only use RenderStepped for code
+      that works with the `Class.Workspace.CurrentCamera|camera` or
+      `Class.Player.Character|character`. Otherwise,
+      `Class.RunService.Heartbeat` should be used.
+
+      As RenderStepped fires every frame, it runs on a **variable frequency**.
+      This means the rate will vary depending on the performance of the machine.
+      If the game is running at 40 FPS, then RenderStepped will fire 40 times
+      per second and the _step_ argument will be roughly 1/40th of a second.
+
+      The _step_ argument can be used to account for the variable frequency of
+      this event, for example:
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local RATE_PER_SECOND = 2
+
+      RunService.RenderStepped:Connect(function(step)
+      	local increment = RATE_PER_SECOND * step
+      end)
+      ```
+
+      There is no guarantee that functions connected to this event will fire at
+      the exact same time, or in any specific order. For an alternative where
+      the priority can be specified, see `Class.RunService:BindToRenderStep()`.
+
+      As RenderStepped is client-side only, it can be used in a
+      `Class.LocalScript` or a `Class.ModuleScript` required by a LocalScript.
+    code_samples:
+      - Spin-GuiObject
+    parameters:
+      - name: deltaTime
+        type: double
+        default:
+        summary: |
+          The time (in seconds) that has elapsed since the previous frame.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RunService.Stepped
+    summary: |
+      Fires every _frame_ prior to the physics simulation.
+    description: |
+      The Stepped event fires every _frame_ prior to the physics simulation. The
+      _step_ argument indicates the time that has elapsed since the previous
+      frame.
+
+      As Stepped fires every frame, it runs on a **variable frequency**. This
+      means the rate will vary depending on the performance of the machine. If
+      the game is running at 40 FPS, then Stepped will fire 40 times per second
+      and the _step_ argument will be roughly 1/40th of a second.
+
+      The _step_ argument can be used to account for the variable frequency of
+      this event, for example:
+
+      ```lua
+      local RunService = game:GetService("RunService")
+
+      local RATE_PER_SECOND = 2
+
+      RunService.Stepped:Connect(function(time, step)
+      	local increment = RATE_PER_SECOND * step
+      end)
+      ```
+
+      There is no guarantee that functions connected to this event will fire at
+      the exact same time, or in any specific order. For an alternative where
+      the priority can be specified, see `Class.RunService:BindToRenderStep()`.
+    code_samples:
+      - RunService-Stepped1
+    parameters:
+      - name: time
+        type: double
+        default:
+        summary: |
+          The duration (in seconds) that RunService has been running for.
+      - name: deltaTime
+        type: double
+        default:
+        summary: |
+          The time (in seconds) that has elapsed since the previous frame.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

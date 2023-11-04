@@ -1,0 +1,44 @@
+name: DataStoreListingPages
+type: class
+category:
+memory_category: Instances
+summary: |
+  A special type of `Class.Pages` object whose pages contain
+  `Class.DataStoreInfo` instances.
+description: |
+  A special type of `Class.Pages` object whose pages contain
+  `Class.DataStoreInfo` instances. `Class.Pages:GetCurrentPage()` can be used to
+  retrieve an array of the `Class.DataStoreInfo` instances.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreListingPages.Cursor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,22 @@
+name: GuiLabel
+type: class
+category:
+memory_category: Gui
+summary: |
+  An abstract class for non-interactive 2D user interface elements.
+description: |
+  GuiLabel is an abstract class that inherits from `Class.GuiObject`. It is the
+  base class for `Class.ImageLabel` and `Class.TextLabel`. Unlike
+  `Class.GuiButton`, objects of this type will not register click events, but
+  instead serve as non-interactive labels. It does not implement any further
+  properties, events or methods.
+code_samples:
+inherits:
+  - GuiObject
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

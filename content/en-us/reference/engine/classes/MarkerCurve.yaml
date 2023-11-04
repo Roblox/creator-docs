@@ -1,0 +1,130 @@
+name: MarkerCurve
+type: class
+category:
+memory_category: Instances
+summary: |
+  Represents a list of strings markers in chronological order.
+description: |
+  The MarkerCurve instance lets you place markers as string values at certain
+  times on a timeline. The string at each marker cannot exceed 64 characters and
+  must only contain printable characters.
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: MarkerCurve.Length
+    summary: |
+      Returns the number of markers in the MarkerCurve.
+    description: |
+      Returns the number of markers in the MarkerCurve.
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: MarkerCurve:GetMarkerAtIndex
+    summary: |
+      Returns the time and string value of the marker at the provided index.
+    description: |
+      Returns the time and string value of the marker at the provided index.
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: |
+          A table containing the time and value of the marker at the provided
+          index.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarkerCurve:GetMarkers
+    summary: |
+      Returns the time and string value of all markers in the MarkerCurve.
+    description: |
+      Returns the time and string value of all markers in the MarkerCurve.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of tables containing the time and value of all markers in the
+          MarkerCurve.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarkerCurve:InsertMarkerAtTime
+    summary: |
+      Inserts a marker with the provided string value at the provided time.
+    description: |
+      Inserts a marker with the provided string value at the provided time. The
+      provided string cannot exceed 64 characters and must only contain
+      printable characters.
+    code_samples: []
+    parameters:
+      - name: time
+        type: float
+        default:
+        summary: |
+          Time at which the marker should be added.
+      - name: marker
+        type: string
+        default:
+        summary: |
+          String value associated with this marker.
+    returns:
+      - type: Array
+        summary: |
+          A table containing a boolean and a number. The boolean is `true` if
+          the call adds a new marker and `false` if it modifies an existing
+          marker at the provided time. The number is the index of the added
+          marker.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarkerCurve:RemoveMarkerAtIndex
+    summary: |
+      Remove several markers in the MarkerCurve starting at the provided index.
+    description: |
+      Remove several markers in the MarkerCurve starting at the provided index.
+    code_samples: []
+    parameters:
+      - name: startingIndex
+        type: int
+        default:
+        summary: |
+          Index of the first marker to be removed in the MarkerCurve.
+      - name: count
+        type: int
+        default: 1
+        summary: |
+          How many markers to remove starting from the startingIndex.
+    returns:
+      - type: int
+        summary: |
+          How many markers were actually removed (can be less than count if the
+          MarkerCurve was too few markers).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

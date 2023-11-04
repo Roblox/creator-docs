@@ -1,0 +1,94 @@
+name: GuiBase3d
+type: class
+category:
+memory_category: Instances
+summary: |
+  An abstract class for 3D GUI elements that are rendered in the world.
+description: |
+  An abstract class for 3D GUI elements that are rendered in the world.
+code_samples:
+inherits:
+  - GuiBase
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: GuiBase3d.Color
+    summary: |
+      Sets the color of a GUI object.
+    description: |
+      Sets the color of a GUI object.
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated in favor of `Class.GuiBase3d.Color3`,
+      which allows for greater color customization and should be used in new
+      work instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: GuiBase3d.Color3
+    summary: |
+      Sets the color of a GUI object.
+    description: |
+      Sets the color of a GUI object.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase3d.Transparency
+    summary: |
+      Sets the transparency of a GUI object, where 1 is invisible and 0 is
+      completely visible.
+    description: |
+      Sets the transparency of a GUI object, where 1 is invisible and 0 is
+      completely visible.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiBase3d.Visible
+    summary: |
+      Determines whether the object and its descendants will be displayed.
+    description: |
+      Determines whether the object and its descendants will be displayed.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []
