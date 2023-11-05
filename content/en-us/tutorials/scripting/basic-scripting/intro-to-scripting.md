@@ -119,7 +119,7 @@ Just like `script.Parent`, properties are accessed using a **dot**. Values are a
    ```
 
 <Alert severity="info">
-You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends that makes your code more readable.
+You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends which makes your code more readable.
 </Alert>
 
 ## Calling the Function
@@ -143,7 +143,7 @@ Once you've declared a function, you can run it by writing its name with parenth
 
 ## Appear Function
 
-You can easily make the platform reappear by writing a function which does the exact opposite of the `disappear` function.
+You can easily make the platform reappear by writing a function that does the exact opposite of the `disappear` function.
 
 1. Delete the `disappear()` line from the script.
 2. Declare a new function called `appear`.
@@ -217,7 +217,7 @@ end
 
 The code for the platform is now complete! Test your code now and you should find that the platform disappears after three seconds and reappears three seconds later in a loop.
 
-You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script, otherwise the platforms will all disappear at the same time and users will never be able to cross.
+You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script, otherwise, the platforms will all disappear at the same time and users will never be able to cross.
 
 <video controls loop muted>
     <source src="../../../assets/tutorials/intro-to-scripting/alternatingPlatforms.mp4" />
