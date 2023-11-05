@@ -153,6 +153,10 @@ The `receiptInfo` table passed to the `processReceipt()` callback function conta
 </Alert>
 
 <Alert severity="warning">
+The functions for handling each product ID <strong>must return true</strong> for it to successfully process the transaction, if not, the product will not be awarded.
+</Alert>
+
+<Alert severity="warning">
 Roblox itself does <strong>not</strong> record the purchase history of Developer Products by specific users, although you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/datastores.md).
 </Alert>
 
