@@ -311,24 +311,24 @@ To further improve in-experience cooperation or to incentivize player invites, y
    local RETRY_DELAY = 1
 
    local function onPlayerAdded(player)
-    local launchData
+   	local launchData
 
-    for i = 1, ATTEMPT_LIMIT do
-      task.wait(RETRY_DELAY)
-      local joinData = player:GetJoinData()
-      if joinData.LaunchData ~= "" then
-        launchData = joinData.LaunchData
-        break
-      end
-    end
+   	for i = 1, ATTEMPT_LIMIT do
+   		task.wait(RETRY_DELAY)
+   		local joinData = player:GetJoinData()
+   		if joinData.LaunchData ~= "" then
+   			launchData = joinData.LaunchData
+   			break
+   		end
+   	end
 
-    if launchData then
-      local data = HttpService:JSONDecode(launchData)
-      print(data.senderUserID)
-      print(data.spawnLocation)
-    else
-      warn("No launch data received!")
-    end
+   	if launchData then
+   		local data = HttpService:JSONDecode(launchData)
+   		print(data.senderUserID)
+   		print(data.spawnLocation)
+   	else
+   		warn("No launch data received!")
+   	end
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
