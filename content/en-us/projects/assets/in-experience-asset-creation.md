@@ -37,6 +37,7 @@ local function CreateAsset(player, instance)
 	local complete, result, assetId = pcall(function()
 		return AssetService:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
 	end)
+
 	if complete then
 		if result == Enum.PromptCreateAssetResult.Success then
 			print("successfully uploaded, AssetId: ", assetId)
@@ -54,10 +55,10 @@ end
 -- Add an event handler
 local function onUserPublish(player, promptObject)
 	-- User saves the car instance with the experience's default color
-	if promptObject.name == "car" then
+	if promptObject.Name == "car" then
 		CreateAsset(player, car)
-	elseif promptObject.name == "CarPaintYellow" or promptObject.name == "CarPaintBlue" or promptObject.name == "CarPaintBlack" or promptObject.name == "CarPaintRed" then
-		PaintCarColor(promptObject.name)
+	elseif promptObject.Name == "CarPaintYellow" or promptObject.Name == "CarPaintBlue" or promptObject.Name == "CarPaintBlack" or promptObject.Name == "CarPaintRed" then
+		PaintCarColor(promptObject.Name)
 	end
 end
 
