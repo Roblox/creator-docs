@@ -27,7 +27,7 @@ items:
     deprecation_message: ''
   - name: Tile
     summary: |
-      The image is is tiled to fit within the element. For example, if the
+      The image is tiled to fit within the element. For example, if the
       element is twice the X dimension of the image, the image will appear twice
       (2 tiles).
     value: 2
