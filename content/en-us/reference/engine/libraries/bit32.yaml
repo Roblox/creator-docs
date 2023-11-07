@@ -3,9 +3,13 @@ type: library
 summary: |
   A library of functions to perform bitwise operations.
 description: |
-  This library is a back-ported feature from
-  [Lua 5.2](https://www.lua.org/manual/5.2/manual.html#6.7) that provides
-  functions to perform bitwise operations.
+  This library provides functions to perform bitwise operations.
+
+  ### Number Limitations
+
+  This library treats numbers as unsigned 32-bit integers, numbers will be converted to this before being used (see image below). Numbers with decimal numbers are rounded to the nearest whole number.
+
+  <img src="/assets/engine-api/libraries/bit32/32bit_restriction.png" alt="32-bit integer conversion (in hexadecimal)">
 code_samples:
 properties:
 functions:
@@ -17,6 +21,8 @@ functions:
       Returns the number `x` shifted `disp` bits to the right. The number `disp`
       may be any representable integer. Negative displacements shift to the
       left.
+
+      <img src="/assets/engine-api/libraries/bit32/rsh.png alt="Number shifted 3 to the right">
 
       This shift operation is what is called arithmetic shift. Vacant bits on
       the left are filled with copies of the higher bit of `x`; vacant bits on
@@ -41,9 +47,45 @@ functions:
     code_samples:
   - name: bit32.band
     summary: |
-      Returns the bitwise _and_ of its operands.
+      Returns the bitwise AND of all provided numbers.
     description: |
-      Returns the bitwise _and_ of its operands.
+      Returns the bitwise AND of all provided numbers.
+
+      Each bit is tested against the following truth table:
+
+      <table>
+        <thead>
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <img src="/assets/engine-api/libraries/bit32/band.png alt="Bitwise AND of 3 numbers">
     parameters:
       - name: numbers
         type: Tuple
@@ -58,7 +100,11 @@ functions:
     summary: |
       Returns the bitwise negation of a given number.
     description: |
-      Returns the bitwise negation of `x`. For any integer `x`, the following
+      Returns the bitwise negation of `x`.
+      
+      <img src="/assets/engine-api/libraries/bit32/bnot.png alt="Negation of a provided number">
+      
+      For any integer `x`, the following
       identity holds:
 
       ```lua
@@ -76,9 +122,45 @@ functions:
     code_samples:
   - name: bit32.bor
     summary: |
-      Returns the bitwise or of its operands.
+      Returns the bitwise OR of all provided numbers.
     description: |
-      Returns the bitwise _or_ of its operands.
+      Returns the bitwise OR of all provided numbers.
+
+      Each bit is tested against the following truth table:
+
+      <table>
+        <thead>
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <img src="/assets/engine-api/libraries/bit32/bor.png alt="Bitwise OR of 3 numbers">
     parameters:
       - name: numbers
         type: Tuple
@@ -108,9 +190,45 @@ functions:
     code_samples:
   - name: bit32.bxor
     summary: |
-      Returns the bitwise exclusive or of its operands.
+      Returns the bitwise XOR of its numbers.
     description: |
-      Returns the bitwise _exclusive or_ of its operands.
+      Returns the bitwise XOR of its numbers.
+
+      Each bit is tested against the following truth table:
+
+      <table>
+        <thead>
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <img src="/assets/engine-api/libraries/bit32/bxor.png alt="Bitwise XOR of 3 numbers">
     parameters:
       - name: numbers
         type: Tuple
@@ -253,6 +371,8 @@ functions:
       displacements with absolute values higher than 31 result in zero (all bits
       are shifted out).
 
+      <img src="/assets/engine-api/libraries/bit32/lsh.png alt="Number shifted 3 to the left">
+
       For positive displacements, the following equality holds:
 
       ```lua
@@ -311,6 +431,8 @@ functions:
       left. In any direction, vacant bits are filled with zeros. In particular,
       displacements with absolute values higher than 31 result in zero (all bits
       are shifted out).
+
+      <img src="/assets/engine-api/libraries/bit32/rsh.png alt="Number shifted 3 to the right">
 
       For positive displacements, the following equality holds:
 
