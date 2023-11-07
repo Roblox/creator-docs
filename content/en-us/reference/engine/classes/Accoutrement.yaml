@@ -5,23 +5,52 @@ memory_category: Instances
 summary: |
   An object that can attach to a player's character.
 description: |
-  An Accoutrement welds its child `Class.Part|part` called "Handle" to the
+  An Accoutrement welds its child `Class.BasePart|part` called "Handle" to the
   player's character. You can change the position and rotation of the Handle
-  part using the `Class.Accoutrement.AttachmentPos|AttachmentPos`,
-  `Class.Accoutrement.AttachmentRight|Right`,
-  `Class.Accoutrement.AttachmentForward|Forward`, and
-  `Class.Accoutrement.AttachmentUp|Up` properties.
+  part using either the `Class.Accoutrement.AttachmentPoint` property or
+  an `Class.Attachment` within the Handle.
+
+  When an accoutrement is attached to a character it will attach to the Head by default.
+  A `Class.Weld` named "HeadWeld" will be created in the head with its `Class.Weld.Part0|Part0`
+  set to the Head and its `Class.Weld.Part1|Part1` set to the Handle. Its `Class.Weld.C0|C0`
+  will be set to `0, 0.5, 0` and its `Class.Weld.C1|C1` will be set to the Accoutrement's.
+  `Class.Accoutrement.AttachmentPoint`. The `Class.Weld.C1` will update automatically when the
+  `Class.Accoutrement.AttachmentPoint` changes. The HeadWeld will automatically
+  be destroyed if the Accoutrement is removed from the character.
+
+  The default attachment ("HeadWeld" behavior) can be overridden using a child
+  `Class.Attachment|attachment` within the Handle. If the Handle contains an
+  `Class.Attachment|attachment` wth a name matching the name of an `Class.Attachment|attachment`
+  somewhere in the character, it will be attached there instead of
+  being attached to the Head. When this happens, a `Class.Weld` named "AccessoryWeld"
+  will be automatically created within the Handle. It's `Class.Weld.Part0|Part0` will
+  be set to the Handle and its `Class.Weld.Part1|Part1` will be set to the
+  attached `Class.BasePart|part`. The AccessoryWeld's `Class.Weld.C0|C0` will be
+  set to the `Class.Attachment.CFrame|CFrame` of the Handle's `Class.Attachment`
+  and the `Class.Weld.C1|C1` will be set to the `Class.Attachment.CFrame|CFrame` of
+  the character `Class.Attachment|attachment`. These `Class.Weld.C0|C0` and `Class.Weld.C1|C1`
+  values will automatically update when either `Class.Attachment|attachment` is updated.
+  Like the Headweld, the AccessoryWeld will be destroyed automatically when
+  the Accoutrement is removed from the character.
 
   Parts descending from an accoutrement are massless when attach to other parts
-  (e.g. with a Weld) as long as they are not the root part of the assembly that
+  (e.g. with a `Class.Weld`) as long as they are not the root part of the assembly that
   `Class.BasePart:GetRootPart()|GetRootPart()` returns.
   `Class.BasePart:GetMass()|GetMass()` returns 0 for parts in this case, and it
   doesn't add to the total mass or rotational inertia of the Assembly.
 
-  This doesn't apply to a part descending from an accoutrement when an
-  accoutrement welds to another part that is massless or one if its parts
-  otherwise becomes root. This also doesn't apply for the root part, and it has
-  mass like a normal part.
+  The size of the Handle `Class.BasePart|part` will update automatically when the
+  scale of its attached `Class.BasePart|part` is changed using `Class.Humanoid|humanoid`
+  scaling features. The size will **not** change when the accoutrement is equipped,
+  only when the scale changes. When this happens, a `Class.Vector3Value` named
+  "OriginalSize" will be created in the Handle with its value set to the Handle's
+  original size, if there isn't one already.
+
+  A `Class.TouchTransmitter` named "TouchInterest" will automatically be created
+  in the Handle if the Accoutrement isn't equipped. It will be destroyed automatically
+  whenever the Accoutrement becomes equipped. This is an artifact from a removed feature
+  allowing players to drop and equip hats. It has no effect on the Accoutrement's behavior
+  today.
 code_samples:
 inherits:
   - Instance
@@ -30,9 +59,9 @@ deprecation_message: ''
 properties:
   - name: Accoutrement.AttachmentForward
     summary: |
-      Sets the offset position of the object on the Player.
+      The forward vector of the `Class.Weld.C1|C1` of the HeadWeld.
     description: |
-      Sets the offset position of the object on the Player.
+      The forward vector of the `Class.Weld.C1|C1` of the HeadWeld.
     code_samples:
     type: Vector3
     tags:
@@ -49,9 +78,9 @@ properties:
       can_save: false
   - name: Accoutrement.AttachmentPoint
     summary: |
-      The exact CFrame of the Accoutrement.
+      The `Class.Weld.C1|C1` of the HeadWeld.
     description: |
-      The exact CFrame of the Accoutrement.
+      The `Class.Weld.C1|C1` of the HeadWeld.
     code_samples:
     type: CFrame
     tags: []
@@ -66,9 +95,9 @@ properties:
       can_save: true
   - name: Accoutrement.AttachmentPos
     summary: |
-      Sets the position of the object on the Player.
+      The position vector of the `Class.Weld.C1|C1` of the HeadWeld.
     description: |
-      Sets the position of the object on the Player.
+      The position vector of the `Class.Weld.C1|C1` of the HeadWeld.
     code_samples:
     type: Vector3
     tags:
@@ -85,9 +114,9 @@ properties:
       can_save: false
   - name: Accoutrement.AttachmentRight
     summary: |
-      Sets the offset position of the object on the Player.
+      The right vector of the `Class.Weld.C1|C1` of the HeadWeld.
     description: |
-      Sets the offset position of the object on the Player.
+      The right vector of the `Class.Weld.C1|C1` of the HeadWeld.
     code_samples:
     type: Vector3
     tags:
@@ -104,9 +133,9 @@ properties:
       can_save: false
   - name: Accoutrement.AttachmentUp
     summary: |
-      Sets the offset position of the object on the Player.
+      The up vector of the `Class.Weld.C1|C1` of the HeadWeld.
     description: |
-      Sets the offset position of the object on the Player.
+      The up vector of the `Class.Weld.C1|C1` of the HeadWeld.
     code_samples:
     type: Vector3
     tags:
