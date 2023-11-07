@@ -141,4 +141,4 @@ To further improve the sparkle effect, try the following property values.
   <source src="../../../assets/tutorials/basic-particle-effects/basicParticleNoLight.mp4" />
 </video>
 
-With that, your sparkling part is complete. You can try complimenting the sparkling effect with a gentle glow by adding a `Class.PointLight` to the part, as shown at the start of the course — check out the [Lighting with Props](../../../tutorials/building/environments/lighting-with-props.md) course to learn more about light objects.
+With that, your sparkling part is complete. You can try complementing the sparkling effect with a gentle glow by adding a `Class.PointLight` to the part, as shown at the start of the course — check out the [Lighting with Props](../../../tutorials/building/environments/lighting-with-props.md) course to learn more about light objects.

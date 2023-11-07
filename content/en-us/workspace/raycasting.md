@@ -72,7 +72,7 @@ local raycastResult = workspace:Raycast(rayOrigin, rayDirection, raycastParams)
 
 When applicable, you can calculate an unknown directional vector (`rayDirection`) using a known **origin** and **destination**. This is useful when casting a ray between two points that can change, such as from one player character to another.
 
-1. The origin plus a directional vector indicates the ray's destination:
+1. The origin plus a directional vector indicate the ray's destination:
 
    <i>rayOrigin</i> + <i>rayDirection</i> = <i>rayDestination</i>
 
