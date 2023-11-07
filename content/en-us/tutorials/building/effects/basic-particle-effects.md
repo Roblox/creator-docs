@@ -1,10 +1,10 @@
 ---
 title: Basic Particle Effects
-description: The process for creating particles to elevate the visual effects in your experience.
+description: The process of creating particles to elevate the visual effects in your experience.
 next: /tutorials/building/effects/custom-particle-effects
 ---
 
-**Particles** are used to create a wide range of effects in games, from smoke and fire to splashing water. They can help bring your game world to life, and can provide valuable visual feedback for your players.
+**Particles** are used to create a wide range of effects in games, from smoke and fire to splashing water. They can help bring your game world to life and can provide valuable visual feedback for your players.
 
 In this tutorial, you will use a `Class.ParticleEmitter` object to create a sparkling effect around a part.
 
@@ -99,7 +99,7 @@ A sparkle effect should be nice and slow — a range of 2 to 3 seconds works nic
 
 The particles are currently emitting straight up from the part. To get an even spread of particles in all directions, change the **SpreadAngle** property.
 
-SpreadAngle has an **X** and a **Y** value which determine the range of angles that a particle can be emitted. This is calculated from both sides around the axes. A value of **180, 0** would emit particles in a flat circle across the X axis; a value of **180, 180** would emit particles in every direction around the part. Change the **SpreadAngle** property of the emitter to **180, 180**.
+SpreadAngle has an **X** and a **Y** value which determine the range of angles that a particle can be emitted. This is calculated from both sides around the axes. A value of **180, 0** would emit particles in a flat circle across the X-axis; a value of **180, 180** would emit particles in every direction around the part. Change the **SpreadAngle** property of the emitter to **180, 180**.
 
 <GridContainer numColumns="2">
   <img src="../../../assets/tutorials/basic-particle-effects/particleSpreadAngleGame.jpg" />
