@@ -2546,7 +2546,7 @@ events:
       This event fires when the `Class.Humanoid` enters and leaves the _Jumping_
       `Enum.HumanoidStateType`.
 
-      When a `Class.Humanoid` jumps this will fire with a _active_ parameter of
+      When a `Class.Humanoid` jumps this will fire with an _active_ parameter of
       _true_ before shortly afterwards firing again with an active parameter of
       _false_. This does not correspond with when a `Class.Humanoid` has landed.
       For that, developers should listen for the _Landed_
