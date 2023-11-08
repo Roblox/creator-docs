@@ -12,17 +12,6 @@ To avoid validation errors, you must [join](../../../art/characters/creating/com
 The extra head mesh objects are the following:
 <GridContainer numColumns="2">
 
-  <figure>
-   - Head_Geo
-   - UpperTeeth_Geo
-   - LowerTeeth_Geo
-   - Tongue_Geo
-   - RightLash_Geo
-   - RightEye_Geo
-   - LeftLash_Geo
-   - LeftEye_Geo
-</figure>
-
   <figure><img
   alt="Head-Related Meshes"
   src="../../../assets/art/blender-ui/Face-Objects.png"
@@ -34,13 +23,6 @@ The extra head mesh objects are the following:
 The extra head bone children are the following and may differ between templates:
 
 <GridContainer numColumns="2">
-
-  <figure>
-   - Tongue
-   - LowerTeeth
-   - UpperTeeth
-   - LeftEye
-   - RightEye
 </figure>
 
   <figure><img
