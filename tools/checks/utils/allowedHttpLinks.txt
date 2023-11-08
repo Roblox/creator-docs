@@ -105,6 +105,15 @@ https://github.com/Roblox/creator-docs
 https://github.com/Roblox/roact/
 https://github.com/osyrisrblx/t
 https://github.com/Roblox/roblox-blender-plugin
+https://github.com/Roblox/cryo
+https://github.com/Roblox/dash
+https://github.com/Roblox/luau-regexp
+https://github.com/Roblox/luau-polyfill
+https://github.com/roblox/luau-tag-utils
+https://github.com/Roblox/picomatch-lua
+https://github.com/roblox/symbol-luau
+https://github.com/roblox/signal-lua
+https://github.com/roblox/zen-observable-lua
 https://grandtraining.co.nz/
 https://greece.alg.academy/
 https://helpx.adobe.com/uk/photoshop/using/whats-new.html
