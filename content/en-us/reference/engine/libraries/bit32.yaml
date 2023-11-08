@@ -190,9 +190,9 @@ functions:
     code_samples:
   - name: bit32.bxor
     summary: |
-      Returns the bitwise XOR of its numbers.
+      Returns the bitwise XOR of all provided numbers.
     description: |
-      Returns the bitwise XOR of its numbers.
+      Returns the bitwise XOR of all provided numbers.
 
       Each bit is tested against the following truth table:
 
