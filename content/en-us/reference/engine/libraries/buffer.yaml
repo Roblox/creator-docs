@@ -1,0 +1,669 @@
+name: buffer
+type: library
+summary: |
+  A library of buffer functions.
+description: |
+  Buffer is a type that represents a fixed-size block of memory.
+  Buffer library provides functions for creation and manipulation of buffer
+  objects, providing all its functions inside the global `Library.buffer`
+  variable.
+
+  Note: buffer library is currently a Beta Feature and is only available in
+  Studio.
+
+  Buffer is intended to be used a low-level binary data storage structure,
+  replacing the uses of `string.pack` and `string.unpack`.
+  Use cases for it include reading and writing existing binary formats, working
+  with data in a more compact form, serialization to custom binary format and
+  general work with native memory types like fixed-length integers and floats.
+
+  When passed through Roblox APIs, including sending a buffer through custom
+  events, the identity of the buffer object is not preserved, target will
+  receive a copy.
+  Similar to other limitations, the same buffer object cannot be used from
+  multiple Actor scripts (Parallel Luau).
+code_samples:
+properties:
+functions:
+  - name: buffer.create
+    summary: |
+      Create a buffer.
+    description: |
+      Creates a fixed size buffer of the requested size.
+      All bytes in the buffer are initialized to 0.
+      Size should be an integer number and cannot be negative.
+      Size limit is 1GB or 1,073,741,824 bytes.
+    parameters:
+      - name: size
+        type: number
+        default:
+        summary: |
+          Size of the buffer.
+    returns:
+      - type: buffer
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.fromstring
+    summary: |
+      Create a buffer from a string.
+    description: |
+      Creates a buffer initialized to the contents of the string.
+      The size of the buffer is fixed and equals to the length of the string.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: buffer
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.tostring
+    summary: |
+      Convert buffer to string.
+    description: |
+      Returns the buffer data as a string.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.len
+    summary: |
+      Return the size of the buffer.
+    description: |
+      Returns the size of the buffer.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi8
+    summary: |
+      Read an 8-bit signed integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as an 8-bit signed integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu8
+    summary: |
+      Read an 8-bit unsigned integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as an 8-bit unsigned integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi16
+    summary: |
+      Read a 16-bit signed integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 16-bit signed integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu16
+    summary: |
+      Read a 16-bit unsigned integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 16-bit unsigned integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi32
+    summary: |
+      Read a 32-bit signed integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 32-bit signed integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu32
+    summary: |
+      Read a 32-bit unsigned integer from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 32-bit unsigned integer and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readf32
+    summary: |
+      Read a 32-bit floating-point value from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 32-bit floating-point value and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      If floating-point value matches any of bit patterns that represent a NaN
+      (not a number), returned value might be converted to a different quiet
+      NaN representation.
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readf64
+    summary: |
+      Read a 64-bit floating-point value from the buffer.
+    description: |
+      Used to read the data from the buffer by reinterpreting bytes at the
+      offset as a 64-bit floating-point value and converting it into a number.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      If floating-point value matches any of bit patterns that represent a NaN
+      (not a number), returned value might be converted to a different quiet
+      NaN representation.
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writei8
+    summary: |
+      Write an 8-bit signed integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into an 8-bit
+      signed integer and writing a single byte.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [-128, 127].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writeu8
+    summary: |
+      Write an 8-bit unsigned integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into an 8-bit
+      unsigned integer and writing a single byte.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [0, 255].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writei16
+    summary: |
+      Write a 16-bit signed integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 16-bit
+      signed integer and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [-32,768, 32,767].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writeu16
+    summary: |
+      Write a 16-bit unsigned integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 16-bit
+      unsigned integer and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [0, 65,536].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writei32
+    summary: |
+      Write a 32-bit signed integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 32-bit
+      signed integer and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [-2,147,483,648, 2,147,483,
+      647].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writeu32
+    summary: |
+      Write a 32-bit unsigned integer to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 32-bit
+      unsigned integer and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [0, 4,294,967,295].
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writef32
+    summary: |
+      Write a 32-bit floating-point value to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 32-bit
+      floating-point value and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+  - name: buffer.writef64
+    summary: |
+      Write a 64-bit floating-point value to the buffer.
+    description: |
+      Used to write data to the buffer by converting the number into a 64-bit
+      floating-point value and reinterpreting it as individual bytes.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readstring
+    summary: |
+      Read a string from the buffer.
+    description: |
+      Used to read a string of length 'count' from the buffer at specified
+      offset.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      If the bytes that are accessed by the read are outside the buffer memory,
+      an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: count
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writestring
+    summary: |
+      Write a string to the buffer.
+    description: |
+      Used to write data from a string into the buffer at specified offset.
+      If an optional 'count' is specified, only 'count' bytes are taken from
+      the string.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Count cannot be larger than the string length.
+      If the bytes that are accessed by the write are outside the buffer
+      memory, an error is thrown.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: string
+        default:
+        summary: ''
+      - name: count
+        type: number?
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.copy
+    summary: |
+      Copy bytes between buffers.
+    description: |
+      Copy 'count' bytes from 'source' starting at offset 'sourceOffset' into
+      the 'target' at 'targetOffset'.
+      It is possible for 'source' and 'target' to be the same. Copying an
+      overlapping region inside the same buffer acts as if the source region is
+      copied into a temporary buffer and then that buffer is copied over to the
+      target.
+      If 'sourceOffset' is nil or is omitted, it defaults to 0. If 'count' is
+      'nil' or is omitted, the whole 'source' data starting from 'sourceOffset'
+      is taken.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offsets should be positive integer numbers.
+      Count should be a positive integer number.
+      If the bytes that are accessed by the read or write are outside the
+      corresponding buffer memory, an error is thrown.
+    parameters:
+      - name: target
+        type: buffer
+        default:
+        summary: ''
+      - name: targetOffset
+        type: number
+        default:
+        summary: ''
+      - name: source
+        type: buffer
+        default:
+        summary: ''
+      - name: sourceOffset
+        type: number?
+        default:
+        summary: ''
+      - name: count
+        type: number?
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.fill
+    summary: |
+      Set region of the buffer memory to some 8-bit unsigned integer value.
+    description: |
+      Sets the 'count' bytes in the buffer starting at the specified 'offset'
+      to the 'value'.
+      'value' is converted to a 32-bit unsigned integer using `Library.bit32`
+      library semantics, lower 8 bits are taken from the resulting integer to
+      use as the byte value.
+      If 'count' is 'nil' or is omitted, all bytes after the specified offset
+      are set.
+      Offset starts at 0 (not to be confused with indices that start at 1 in
+      Luau tables).
+      Offset should be a positive integer number.
+      Value should be an integer number in range [0, 255].
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+      - name: count
+        type: number?
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
