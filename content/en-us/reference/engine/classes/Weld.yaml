@@ -11,9 +11,11 @@ description: |
   `Datatype.CFrame|CFrames`, `Class.JointInstance.C0|C0` and
   `Class.JointInstance.C1|C1`, then determine how the parts should be placed.
 
-  See also `Class.WeldConstraint` for a newer alternative using the constraints
+  See also `Class.RigidConstraint` for a newer alternative using the constraints
   system that does not require `Class.JointInstance.C0|C0` or
-  `Class.JointInstance.C1|C1` properties to be manually set.
+  `Class.JointInstance.C1|C1`, but instead uses `Class.Attachment` to control
+  offsets, through `Class.Constraint.Attachment0` and
+  `Class.Constraint.Attachment1`.
 
   While the weld is `Class.JointInstance.Active|Active`, it maintains the part
   positions such that: `part1.CFrame * C1 == Part0.CFrame * C0`
