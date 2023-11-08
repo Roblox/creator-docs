@@ -194,7 +194,8 @@ properties:
     code_samples:
       - Walking-Camera-Bobble-Effect
     type: Vector3
-    tags: []
+    tags: 
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
