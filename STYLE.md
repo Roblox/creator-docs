@@ -245,19 +245,19 @@ Data types, globals, and libraries do _not_ have a generated structure. If you i
     </tr>
     <tr>
       <td>properties</td>
-      <td>The array of properties for the API.</td>
+      <td>The array of properties for the API. Each must contain name, summary, description, code_samples, type, tags, deprecation_message, security, thread_safety, category, and serialization.</td>
     </tr>
     <tr>
       <td>methods</td>
-      <td>The array of methods for the API.</td>
+      <td>The array of methods for the API. Each must contain name, summary, description, code_samples, parameters, returns, tags, deprecation_message, security, and thread_safety.</td>
     </tr>
     <tr>
       <td>events</td>
-      <td>The array of events for the API.</td>
+      <td>The array of events for the API. Each must contain name, summary, description, code_samples, parameters, tags, deprecation_message, security, thread_safety.</td>
     </tr>
     <tr>
       <td>callbacks</td>
-      <td>The array of callbacks for the API.</td>
+      <td>The array of callbacks for the API. Each must contain name, summary, description, code_samples, parameters, returns, tags, deprecation_message, security, and thread_safety.</td>
     </tr>
   </tbody>
 </table>
