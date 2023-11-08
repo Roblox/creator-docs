@@ -1,0 +1,25 @@
+name: SurfaceGuiSizingMode
+type: enum
+summary: |
+  Used by `Class.SurfaceGui.SizingMode` to control the sizing behavior of a
+  `Class.SurfaceGui`.
+description: |
+  Used by `Class.SurfaceGui.SizingMode` to control the sizing behavior of a
+  `Class.SurfaceGui`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: FixedSize
+    summary: |
+      Renders with a fixed size set using `Class.SurfaceGui.CanvasSize`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: PixelsPerStud
+    summary: |
+      Renders with a variable size based on `Class.SurfaceGui.PixelsPerStud` and
+      the SurfaceGui's size in studs.
+    value: 1
+    tags: []
+    deprecation_message: ''

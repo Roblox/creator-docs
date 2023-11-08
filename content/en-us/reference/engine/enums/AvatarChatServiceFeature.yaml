@@ -1,0 +1,58 @@
+name: AvatarChatServiceFeature
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UniverseAudio
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UniverseVideo
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PlaceAudio
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PlaceVideo
+    value: 8
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UserAudioEligible
+    value: 16
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UserAudio
+    value: 32
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UserVideoEligible
+    value: 64
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UserVideo
+    value: 128
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UserBanned
+    value: 256
+    summary: ''
+    tags: []
+    deprecation_message: ''

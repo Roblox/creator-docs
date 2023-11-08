@@ -1,0 +1,33 @@
+name: TextYAlignment
+type: enum
+summary: |
+  Determines vertical alignment of text.
+description: |
+  Determines vertical alignment of text.
+
+  Used by `Class.TextLabel.TextYAlignment|TextLabel`,
+  `Class.TextButton.TextYAlignment|TextButton`, and
+  `Class.TextBox.TextYAlignment|TextBox`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Top
+    summary: |
+      Alignment starts at the top of the GUI object.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Center
+    summary: |
+      Aligned starts at the center of the GUI object and spreads equally toward
+      the top and bottom.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Bottom
+    summary: |
+      Alignment starts at the bottom of the GUI object.
+    value: 2
+    tags: []
+    deprecation_message: ''

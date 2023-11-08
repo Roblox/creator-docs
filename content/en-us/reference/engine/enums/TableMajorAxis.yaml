@@ -1,0 +1,25 @@
+name: TableMajorAxis
+type: enum
+summary: |
+  Used by `Class.UITableLayout.MajorAxis` to decide whether direct siblings are
+  rows or columns.
+description: |
+  Used to indicate whether the direct siblings of a `Class.UITableLayout` are
+  considered the rows or the columns. The children of the direct siblings are
+  the columns or rows, respectively.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: RowMajor
+    summary: |
+      The direct siblings are considered rows.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ColumnMajor
+    summary: |
+      The direct siblings are considered columns.
+    value: 1
+    tags: []
+    deprecation_message: ''

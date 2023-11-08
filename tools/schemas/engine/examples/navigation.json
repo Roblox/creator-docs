@@ -1,0 +1,31 @@
+{
+  "​​navigation": [
+    { "title": "Title Case", "path": "relative/path/to/file" },
+    { "heading": "Heading" },
+    {
+      "title": "Title Case",
+      "path": "relative/path/to/file",
+      "section": [
+        { "title": "Title Case", "path": "relative/path/to/file" },
+        {
+          "title": "Title Case",
+          "path": "relative/path/to/file",
+          "section": [
+            { "title": "Title Case", "path": "relative/path/to/file" },
+            {
+              "title": "Title Case",
+              "path": "relative/path/to/file",
+              "section": [
+                { "title": "Title Case", "path": "relative/path/to/file" },
+                { "title": "Title Case", "path": "relative/path/to/file" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "include": "relative/path/to/file" },
+    { "title": "Title Case" },
+    { "heading": "Heading" }
+  ]
+}

@@ -1,0 +1,121 @@
+name: AudioDeviceInput
+type: class
+category:
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioDeviceInput.AccessType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AccessModifierType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Permissions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioDeviceInput.Active
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Recording
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioDeviceInput.IsReady
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Recording
+    serialization:
+      can_load: false
+      can_save: true
+  - name: AudioDeviceInput.Muted
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Recording
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioDeviceInput.Player
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Player
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Recording
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: AudioDeviceInput:GetUserIdAccessList
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AudioDeviceInput:SetUserIdAccessList
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userIds
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,35 @@
+name: DynamicRotate
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  The base class for classic motor joints.
+description: |
+  The base class for classic motor joints.
+code_samples:
+inherits:
+  - JointInstance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: DynamicRotate.BaseAngle
+    summary: |
+      The base angle of the DynamicRotate object, in radians.
+    description: |
+      The base angle of the DynamicRotate object, in radians.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

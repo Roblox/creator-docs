@@ -1,0 +1,31 @@
+name: ElasticBehavior
+type: enum
+summary: |
+  This enum is used by `Class.ScrollingFrame.ElasticBehavior` to specifies how
+  elastic scrolling behaves for a `Class.ScrollingFrame`.
+description: |
+  This enum is used by `Class.ScrollingFrame.ElasticBehavior` to control when
+  elastic scrolling is active for a `Class.ScrollingFrame`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: WhenScrollable
+    summary: |
+      The scrollbar will be elastic when there is content to be scrolled to.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Always
+    summary: |
+      The scrollbar will always have elastic scrolling available, even when
+      there isn't content available to scroll to.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Never
+    summary: |
+      The scrollbar will never have elastic scrolling available.
+    value: 2
+    tags: []
+    deprecation_message: ''

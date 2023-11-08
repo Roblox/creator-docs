@@ -1,0 +1,28 @@
+name: DeathStyle
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ClassicBreakApart
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: NonGraphic
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

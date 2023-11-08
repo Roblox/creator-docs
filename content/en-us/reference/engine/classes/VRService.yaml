@@ -1,0 +1,501 @@
+name: VRService
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  The VRService is a service that is responsible for handling interactions
+  between Roblox and Virtual Reality.
+description: |
+  **VRService** is responsible for handling interactions between Roblox and
+  Virtual Reality (VR). Its methods, properties, and events help you provide the
+  best experience for end users seeking to experience Roblox on VR devices.
+
+  Since this service is client-side only, it will only work when used in a
+  `Class.LocalScript` or a `Class.Script` with
+  `Class.Script.RunContext|RunContext` of `Enum.RunContext|Client`.
+
+  See [VR Guidelines](../../../production/publishing/vr-guidelines.md) for more
+  information on publishing an experience for VR devices.
+code_samples:
+  - VRService
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: VRService.AutomaticScaling
+    summary: |
+      Automatically adjusts scaling in VR to align the player with their avatar.
+    description: |
+      When `Class.VRService.AutomaticScaling` is set to `World`,
+      `Class.Camera.HeadScale` adjusts so that the scale of the world is seen
+      from the avatar's perspective. A player with a small avatar will perceive
+      the objects around them as larger than a player with a large avatar will.
+    code_samples: []
+    type: VRScaling
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VRService.FadeOutViewOnCollision
+    summary: |
+      When true, a VR player's view will fade to black when their head collides
+      with an object.
+    description: |
+      When true, a VR player's view fades to black when their head collides with
+      an object. This property prevents players from being able to see through
+      walls while in VR. The default value is true.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VRService.GuiInputUserCFrame
+    summary: |
+      Describes what UserCFrame is responsible for input in VR.
+    description: |
+      The GuiInputUserCFrame property describes what `Enum.UserCFrame` is
+      responsible for input in VR. For instance, if a VR headset is responsible,
+      the value of this property will be UserCFrame.Head.
+
+      To check if Roblox detects any VR devices, which would be responsible for
+      input in VR, you can check the `Class.VRService.VREnabled` property.
+
+      Since `Class.VRService` only runs client-side, this property will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-GuiInputUserCFrame
+    type: UserCFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VRService.ThirdPersonFollowCamEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VRService.VREnabled
+    summary: |
+      Describes whether the user is using a virtual reality device.
+    description: |
+      This property describes whether the user is using a virtual reality (VR)
+      device.
+
+      If a VR device is enabled, you can interact with its location and movement
+      through functions such as `Class.UserInputService:GetUserCFrame()`. You
+      can also react to VR device movement using the
+      `Class.UserInputService.UserCFrameChanged` event.
+
+      ```lua
+      local userInputService = game:GetService("UserInputService")
+
+      local isUsingVR = userInputService.VREnabled
+      if (isUsingVR) then
+          print("User is using a VR headset!")
+      else
+          print("User is not using a VR headset!")
+      end
+      ```
+
+      As `Class.UserInputService` is client-side only, this property can only be
+      used in a `Class.LocalScript`.
+
+      See also:
+
+      - `Class.VRService`
+      - `Class.Camera.HeadLocked`
+      - `Class.UserInputService:GetUserCFrame()`
+      - `Class.UserInputService.UserCFrameChanged`
+    code_samples:
+      - UserInputService-UserCFrameChanged
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: VRService:GetTouchpadMode
+    summary: |
+      Returns the VRTouchpadMode indicating the mode of a specified VRTouchpad.
+    description: |
+      The GetTouchpadMode function returns the `Enum.VRTouchpadMode` indicating
+      the mode of a specified `Enum.VRTouchpad`.
+
+      The returned mode indicates how the user interacts with their touchpad to
+      play the game. For more information about the different types of modes,
+      see the `Enum.VRTouchpadMode` page.
+
+      This can also be used alongside the several `Class.UserInputService` VR
+      functions and events.
+
+      Since `Class.VRService` only runs client-side, this function will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-GetTouchpadMode
+    parameters:
+      - name: pad
+        type: VRTouchpad
+        default:
+        summary: |
+          The specified VRTouchpad.
+    returns:
+      - type: VRTouchpadMode
+        summary: |
+          The mode of the specified VRTouchpad.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService:GetUserCFrame
+    summary: |
+      Returns a CFrame describing the position &amp; orientation of a specified
+      virtual reality device as an offset from a point in real world space.
+    description: |
+      The GetUserCFrame function returns a `Datatype.CFrame` describing the
+      position &amp; orientation of a specified virtual reality (VR) device as
+      an offset from a point in real world space.
+
+      This function should be used when implementing VR compatibility into a
+      game to obtain and track the movement of a connected VR device.
+
+      By using the function, players can implement features such as
+      re-positioning the user's in-game character corresponding to the location
+      of a connected VR device. This can be done by changing the _CFrame_ of the
+      user's in-game character to match the _CFrame_ of the specified VR device
+      using the UserCFrame enum and _CFrame_ value arguments passed by the
+      event.
+
+      The `Class.VRService` service also provides an event
+      `Class.VRService.UserCFrameChanged` that automatically fires when the
+      _CFrame_ of connected VR device changes - so long it is used in a
+      LocalScript.
+
+      Since `Class.VRService` only runs client-side, this function will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-GetUserCFrame
+    parameters:
+      - name: type
+        type: UserCFrame
+        default:
+        summary: |
+          The specified UserCFrame.
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService:GetUserCFrameEnabled
+    summary: |
+      Returns true if the specified UserCFrame is available to be listened to.
+    description: |
+      The GetUserCFrameEnabled function returns true if the specified
+      `Enum.UserCFrame` virtual reality device (VR) is available to be listened
+      to.
+
+      This can be used to determine whether a specified VR device, _(e.g.
+      UserCFrame.Head)_, is connected to the user's game. If the specified VR
+      device is connected, is it enabled (_true_). Otherwise, it is disabled
+      (_false_).
+
+      This can also be used alongside the several `Class.UserInputService` VR
+      functions and events.
+
+      Since `Class.VRService` only runs client-side, this function will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-GetUserCFrameEnabled
+    parameters:
+      - name: type
+        type: UserCFrame
+        default:
+        summary: |
+          The specified type of VR device.
+    returns:
+      - type: bool
+        summary: |
+          A boolean indicating whether the specified VR device is enabled
+          (_true_) or disabled (_false_).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService:RecenterUserHeadCFrame
+    summary: |
+      Recenters the CFrame to the current location of the VR headset being worn
+      by the user.
+    description: |
+      The RecentUserHeadCFrame function recenters the `Datatype.CFrame` of the
+      user's head to the current location of the VR headset being worn by the
+      user.
+
+      This function can be used to ensure that the user's in-game head is
+      positioned according to the location of the user's VR headset.
+
+      This is similar to the `Class.UserInputService` function,
+      `Class.UserInputService:RecenterUserHeadCFrame()`.
+
+      Since `VRServiceService` only runs client-side, this function will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-RecenterUserHeadCFrame
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService:RequestNavigation
+    summary: |
+      Requests navigation to the specified `Datatype.CFrame`, using the
+      specified `Enum.UserCFrame` as the origin for the visualizer parabola.
+    description: |
+      The RequestNavigation function requests navigation to the specified
+      `Datatype.CFrame`, using the specified `Enum.UserCFrame` as the origin for
+      the visualizer parabola.
+
+      This can be used to incorporate virtual reality (VR) into your game by
+      providing a means to visualize a navigation path from the user's VR device
+      to a destination.
+
+      The `Class.VRService` has a similar event,
+      `Class.VRService.NavigationRequested`, used to detect such requests. This
+      can also be used alongside the several `Class.UserInputService` VR
+      functions and events.
+
+      Since VRService only runs client-side, this function will only work when
+      used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-RequestNavigation
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The specified CFrame coordinates.
+      - name: inputUserCFrame
+        type: UserCFrame
+        default:
+        summary: |
+          The VR device for which the navigation is requested.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService:SetTouchpadMode
+    summary: |
+      Sets the mode of the specified VRTouchpad to the specified VRTouchpadMode.
+    description: |
+      The SetTouchpadMode function sets the mode of the specified
+      `Enum.VRTouchpad` to the specified `Enum.VRTouchpadMode`.
+
+      This can be used to change the user's virtual reality (VR) touchpad mode
+      so that the user interacts with the game different using the touchpad. For
+      more information about the different types of modes, see the
+      `Enum.VRTouchpadMode` page.
+
+      This can also be used alongside the several `Class.UserInputService` VR
+      functions and events.
+
+      Since `Class.VRService` only runs client-side, this function will only
+      work when used in a `Class.LocalScript`.
+    code_samples:
+      - VRService-SetTouchpadMode
+    parameters:
+      - name: pad
+        type: VRTouchpad
+        default:
+        summary: |
+          The specified VRTouchpad you want to set the mode of.
+      - name: mode
+        type: VRTouchpadMode
+        default:
+        summary: |
+          The mode you want to set the specified VRTouchpad to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: VRService.NavigationRequested
+    summary: |
+      Fired when navigation is requested from the VRService.
+    description: |
+      The NavigationRequested event fires when navigation is requested from the
+      VRService for a specified `Enum.UserCFrame` VR device.
+
+      This is fired with a `Datatype.CFrame` coordinate and specified UserCFrame
+      indicating the device requesting the navigation.
+
+      This `Class.VRService` event can be used alongside
+      `Class.UserInputService` service events and functions.
+
+      Since the event fires locally, it can only be used in a
+      `Class.LocalScript`.
+    code_samples:
+      - VRService-NavigationRequested
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The requested CFrame coordinates.
+      - name: inputUserCFrame
+        type: UserCFrame
+        default:
+        summary: |
+          Indicates the VR device for which navigation is requested.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService.TouchpadModeChanged
+    summary: |
+      Fires if the VRTouchpadMode of a VRTouchpad is changed.
+    description: |
+      The TouchpadModeChanged event fires if the `Enum.VRTouchpadMode` of a
+      `Enum.VRTouchpad` is changed. This event indicates the VRTouchpad that
+      changes, and its new state.
+
+      You can use this event to track the states of VRTouchpads connected via
+      the user's client.
+
+      This `Class.VRService` event can be used alongside
+      `Class.UserInputService` service events and functions.
+
+      Since the event fires locally, it can only be used in a
+      `Class.LocalScript`.
+    code_samples:
+      - VRService-TouchpadModeChanged
+    parameters:
+      - name: pad
+        type: VRTouchpad
+        default:
+        summary: |
+          The touchpad that changed mode.
+      - name: mode
+        type: VRTouchpadMode
+        default:
+        summary: |
+          The new mode.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService.UserCFrameChanged
+    summary: |
+      Fired when a UserCFrame is changed.
+    description: |
+      The UserCFrameChanged even fires when a `Enum.UserCFrame` is changed. For
+      instance, this event fires when the user moves a connected VR device.
+
+      This can be used alongside `Class.VRService:GetUserCFrame()` to track the
+      `Datatype.CFrame` coordinates of a VR devices, and when it changes/moves.
+      It can also be used alongside `Class.UserInputService` service events and
+      functions.
+
+      Since the event fires locally, it can only be used in a
+      `Class.LocalScript`.
+    code_samples:
+      - VRService-UserCFrameChanged
+    parameters:
+      - name: type
+        type: UserCFrame
+        default:
+        summary: |
+          The type of VR device that changed.
+      - name: value
+        type: CFrame
+        default:
+        summary: |
+          The updated CFrame coordinates of the VR device after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: VRService.UserCFrameEnabled
+    summary: |
+      Fires when a UserCFrame gets enabled or disabled.
+    description: |
+      The UserCFrameEnabled event fires when a `Enum.UserCFrame` gets enabled or
+      disabled.
+
+      This can be used alongside `Class.VRService:GetUserCFrameEnabled()` to
+      track whether a specified UserCFrame is enabled, and when its state
+      changes. It can also be used alongside `Class.UserInputService` service
+      events and functions.
+
+      Since the event fires locally, it can only be used in a
+      `Class.LocalScript`.
+    code_samples:
+      - VRService-UserCFrameEnabled
+    parameters:
+      - name: type
+        type: UserCFrame
+        default:
+        summary: |
+          The UserCFrame getting enabled or disabled.
+      - name: enabled
+        type: bool
+        default:
+        summary: |
+          A boolean indicating whether the UserCFrame is enabled (_true_) or
+          disabled (_false_).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

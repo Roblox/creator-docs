@@ -1,0 +1,42 @@
+name: UIScale
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  An object that acts as a multiplier for the size of the parent UI element's
+  scale.
+description: |
+  A UIScale object simply contains a number that is used to multiply the
+  `Class.GuiBase2d.AbsoluteSize` of the parent UI element. This number is stored
+  in `Class.UIScale.Scale`.
+code_samples:
+  - UI-Scale-Demo
+inherits:
+  - UIComponent
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIScale.Scale
+    summary: |
+      Determines the multiplier to apply to the parent UI element's size.
+    description: |
+      The Scale property determines the multiplier used on the parent UI
+      element's `Class.GuiBase2d.AbsoluteSize`. When set to 0.5, an AbsoluteSize
+      of {0, 200}, {0, 50} becomes {0, 100}, {0, 25}. Similarly, when set to 2,
+      such an AbsoluteSize would become {0, 400}, {0, 100}.
+    code_samples:
+      - UI-Scale-Demo
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

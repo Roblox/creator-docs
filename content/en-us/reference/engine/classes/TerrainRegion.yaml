@@ -1,0 +1,82 @@
+name: TerrainRegion
+type: class
+category: Data
+memory_category: Instances
+summary: ''
+description: |
+  A TerrainRegion is a snapshot of `Class.Terrain` retrieved from the
+  `Class.Terrain:CopyRegion()` method. Can be later pasted into the Terrain
+  using `Class.Terrain:PasteRegion()`.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: TerrainRegion.IsSmooth
+    summary: |
+      The state of this property shows whether or not this `Class.TerrainRegion`
+      contains _smooth terrain_.
+    description: |
+      The state of this property shows whether or not this `Class.TerrainRegion`
+      contains _smooth terrain_.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TerrainRegion.SizeInCells
+    summary: |
+      The size of this TerrainRegion in cells.
+    description: |
+      The size of this TerrainRegion in cells.
+    code_samples:
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: TerrainRegion:ConvertToSmooth
+    summary: |
+      Transforms the TerrainRegion so it can be used with smooth terrain.
+    description: |
+      Calling this method transforms the TerrainRegion into a
+      `Class.TerrainRegion` usable for `Class.Terrain`. This can only be done
+      from a plugin, when in edit mode.
+
+      The game can't be running, nor can it have a `Class.NetworkServer`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

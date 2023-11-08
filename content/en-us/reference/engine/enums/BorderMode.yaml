@@ -1,0 +1,35 @@
+name: BorderMode
+type: enum
+summary: |
+  Used by `Class.GuiObject.BorderMode` to determine where borders are placed.
+description: |
+  Determines in what matter the border of a `Class.GuiObject` is laid out
+  relative to its actual dimensions. It is used by the property of the same
+  name, `Class.GuiObject.BorderMode`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Outline
+    summary: |
+      As `Class.GuiObject.BorderSizePixel` increases, the border grows outward.
+      The dimensions of the GuiObject's contents do not change.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Middle
+    summary: |
+      As `Class.GuiObject.BorderSizePixel` increases, the border grows evenly
+      inward and outward. The dimensions of the GuiObject's contents are reduced
+      at a 1:1 ratio.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Inset
+    summary: |
+      As `Class.GuiObject.BorderSizePixel` increases, the border grows evenly
+      inward only. The dimensions of the GuiObject's contents are reduced at a
+      1:2 ratio.
+    value: 2
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,18 @@
+name: RenderingTestComparisonMethod
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: psnr
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: diff
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''

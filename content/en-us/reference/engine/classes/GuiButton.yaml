@@ -1,0 +1,335 @@
+name: GuiButton
+type: class
+category:
+memory_category: Gui
+summary: |
+  An abstract class for interactive 2D user interface elements.
+description: |
+  GuiButton is an abstract class that inherits from `Class.GuiObject`. It is the
+  base class for `Class.ImageButton` and `Class.TextButton`. Objects of this
+  type serve to be interactive, clickable user interface elements. It defines
+  several properties for interaction behavior, namely
+  `Class.GuiButton.AutoButtonColor` and `Class.GuiButton.Modal`, as well as a
+  handful of events for mouse buttons (`Class.GuiButton.MouseButton1Click`,
+  `Class.GuiButton.MouseButton1Down`, etc).
+
+  The most important event of a GuiButton is `Class.GuiButton.Activated`, a
+  **multi-platform event** that fires when the button is activated. When using a
+  mouse, this means clicking the button and releasing with the cursor still over
+  the UI object. For touch, the same applies but with a touch instead of button
+  press. Finally, for gamepads, `Class.GuiButton.Activated` fires if a GuiButton
+  is selected when the A-button is pressed and released. In short, this event is
+  very useful for multi-platform user interface programming as it provides a
+  nice general interface for a single user input.
+code_samples:
+inherits:
+  - GuiObject
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: GuiButton.AutoButtonColor
+    summary: |
+      Determines whether the button automatically changes color when the mouse
+      hovers over or clicks on it.
+    description: |
+      The AutoButtonColor determines whether the button automatically changes
+      color when the user's `Class.Mouse` hovers over or clicks on it.
+
+      If true, the button will automatically change color when the mouse hovers
+      over or clicks on it. If false, the button will not change.
+
+      If you would like to customize how a button changes when the user's mouse
+      hovers over or clicks on it, consider using an `Class.ImageButton` GUI and
+      changing the element's `Class.ImageButton.HoverImage` and
+      `Class.ImageButton.PressedImage`.
+
+      Please note that this property will not have an effect on an
+      `Class.ImageButton` if it's `Class.ImageButton.Image` property is set to
+      an image and is not null. Additionally, the property will not affect an
+      ImageButton element on mouse hover when its `Class.ImageButton.HoverImage`
+      is not null nor on mouse click if `Class.ImageButton.PressedImage` is not
+      null.
+    code_samples:
+      - changing-a-gui-button-s-color-on-hover-and-click
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiButton.Modal
+    summary: |
+      If true while the GUI element is visible, the mouse will not be locked
+      unless the right mouse button is down.
+    description: |
+      If true while the GUI element is visible, the mouse will not be locked
+      unless the right mouse button is down.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiButton.Selected
+    summary: |
+      A boolean property which indicates whether the object has been selected.
+    description: |
+      A boolean property which indicates whether the object has been selected.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiButton.Style
+    summary: |
+      Sets the style of the GuiButton based on a list of pre-determined styles.
+    description: |
+      Sets the style of the GuiButton based on a list of pre-determined styles.
+    code_samples:
+    type: ButtonStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: GuiButton.Activated
+    summary: |
+      Fires when the button is activated.
+    description: |
+      Fires when the button is activated.
+    code_samples:
+    parameters:
+      - name: inputObject
+        type: InputObject
+        default:
+        summary: ''
+      - name: clickCount
+        type: int
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton1Click
+    summary: |
+      Fired when the mouse has fully left clicked the GUI button.
+    description: |
+      The MouseButton1Click event fires when the user's `Class.Mouse` fully left
+      clicks the GUI button.
+
+      By clicking, the mouse has to be in bounds of the button and has to be
+      pressed down and up again before this event fires. If the mouse leaves the
+      bounds of the button and is released, the event will not fire. If you
+      would like to avoid this limitation, you can use
+      `Class.GuiButton.MouseButton1Down` and `MouseButton1Up`. These events are
+      similar, but will fire whenever the user pressed their left mouse down or
+      up, respectively.
+
+      This event is similar to `Class.GuiButton.MouseButton2Click`, which
+      behaves identically except that it is connected to the user's right mouse
+      button.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton1Click1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton1Down
+    summary: |
+      Fired when the mouse is in the left mouse down state on the GUI object.
+    description: |
+      The MouseButton1Down event fires when the user presses their left
+      `Class.Mouse` button down on the GUI object.
+
+      This event is similar to `Class.GuiButton.MouseButton2Down`, which behaves
+      identically except that it is connected to the user's right mouse button.
+
+      If you are looking for an event requiring the user to press and release
+      their left mouse on a GUI in order for the event to fire, consider using
+      `Class.GuiButton.MouseButton1Click`.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton1Up1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton1Up
+    summary: |
+      Fired when the left mouse has released the GUI object.
+    description: |
+      The MouseButton1Up event fires when the user releases their left
+      `Class.Mouse` up off of the GUI object.
+
+      This event is similar to `Class.GuiButton.MouseButton2Up`, which behaves
+      identically except that it is connected to the user's right mouse button.
+
+      If you are looking for an event requiring the user to press and release
+      their left mouse on a GUI in order for the event to fire, consider using
+      `Class.GuiButton.MouseButton1Click`.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton1Up1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton2Click
+    summary: |
+      Fired when the mouse has fully right clicked the GUI button.
+    description: |
+      The MouseButton2Click event fires when the user's `Class.Mouse` fully
+      right clicks the GUI button.
+
+      By clicking, the mouse has to be in bounds of the button and has to be
+      pressed down and up again before this event fires. If the mouse leaves the
+      bounds of the button and is released, the event will not fire. If you
+      would like to avoid this limitation, you can use
+      `Class.GuiButton.MouseButton2Down` and `MouseButton2Up`. These events are
+      similar, but will fire whenever the user pressed their left mouse down or
+      up, respectively.
+
+      This event is similar to `Class.GuiButton.MouseButton1Click`, which
+      behaves identically except that it is connected to the user's left mouse
+      button.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton2Click1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton2Down
+    summary: |
+      Fired when the mouse is in the right mouse down state on the GUI object.
+    description: |
+      The MouseButton2Down event fires when the user presses their left
+      `Class.Mouse` button down on the GUI object.
+
+      This event is similar to `Class.GuiButton.MouseButton1Down`, which behaves
+      identically except that it is connected to the user's left mouse button.
+
+      If you are looking for an event requiring the user to press and release
+      their right mouse on a GUI in order for the event to fire, consider using
+      `Class.GuiButton.MouseButton2Click`.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton2Up1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiButton.MouseButton2Up
+    summary: |
+      Fired when the right mouse button has been released on a GUI Object.
+    description: |
+      The MouseButton2Up event fires when the user releases their right
+      `Class.Mouse` up off of the GUI object.
+
+      This event is similar to `Class.GuiButton.MouseButton1Up`, which behaves
+      identically except that it is connected to the user's left mouse button.
+
+      If you are looking for an event requiring the user to press and release
+      their right mouse on a GUI in order for the event to fire, consider using
+      `Class.GuiButton.MouseButton2Click`.
+
+      Note that this event will only fire for GUI buttons, including
+      `Class.TextButton|TextButtons` and `Class.ImageButton`. It will not fire
+      for other `Class.GuiObject|GuiObjects`.
+    code_samples:
+      - GuiButton-MouseButton2Up1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

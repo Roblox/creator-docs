@@ -1,0 +1,33 @@
+name: PoseEasingStyle
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Linear
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Constant
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Elastic
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Cubic
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Bounce
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

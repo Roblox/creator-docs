@@ -1,0 +1,24 @@
+name: Hopper
+type: class
+category:
+memory_category: Instances
+summary: |
+  Deprecated. Hopper has been replaced by StarterPack and should not be used.
+description: |
+  Hopper is the original name of the StarterPack service. If this service is
+  ever instantiated, it moves all of its children into the StarterPack, and then
+  deletes itself.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - Deprecated
+deprecation_message: |
+  Hopper has been replaced by `Class.StarterPack` and should not be used in new
+  work.
+properties: []
+methods: []
+events: []
+callbacks: []

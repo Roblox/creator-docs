@@ -1,0 +1,40 @@
+name: AudioPitchShifter
+type: class
+category:
+memory_category: Internal
+summary: |
+  Adjusts the perceived pitch of audio streams.
+description: |
+  `Class.AudioPitchShifter` adjusts the perceived pitch of audio streams. It
+  provides one **Input** pin and one **Output** pin which can be connected
+  to/from by `Class.Wire|Wires`. `Class.AudioPitchShifter` performs its
+  modifications in the frequency domain and may introduce artifacts with extreme
+  pitch changes.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioPitchShifter.Pitch
+    summary: |
+      Pitch modification to be multiplied by the pitch of the input stream.
+    description: |
+      Pitch modification to be multiplied by the pitch of the input stream.
+      Ranges from 0.5 to 2.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,76 @@
+name: DragDetectorDragStyle
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: TranslateLine
+    value: 0
+    summary: |
+      1D motion along the detector's `Class.DragDetector.Axis|Axis`, by default
+      the world **Y** axis.
+    tags: []
+    deprecation_message: ''
+  - name: TranslatePlane
+    value: 1
+    summary: |
+      2D motion in the plane **perpendicular** to the detector's
+      `Class.DragDetector.Axis|Axis`, by default the world **XZ** plane.
+    tags: []
+    deprecation_message: ''
+  - name: TranslatePlaneOrLine
+    value: 2
+    summary: |
+      2D motion in the plane **perpendicular** to the detector's
+      `Class.DragDetector.Axis|Axis` and, when the modifier is active, 1D motion
+      along the detector's `Class.DragDetector.Axis|Axis`.
+    tags: []
+    deprecation_message: ''
+  - name: TranslateLineOrPlane
+    value: 3
+    summary: |
+      1D motion along the detector's `Class.DragDetector.Axis|Axis` and, when
+      the modifier is active, 2D motion in the plane **perpendicular** to the
+      detector's `Class.DragDetector.Axis|Axis`.
+    tags: []
+    deprecation_message: ''
+  - name: TranslateViewPlane
+    value: 4
+    summary: |
+      2D motion in the plane perpendicular to the camera's view. In this mode,
+      the plane is constantly updated, even while dragging, and will always face
+      the camera's current view.
+    tags: []
+    deprecation_message: ''
+  - name: RotateAxis
+    value: 5
+    summary: |
+      Rotation about the detector's `Class.DragDetector.Axis|Axis`, by default
+      the world **Y** axis.
+    tags: []
+    deprecation_message: ''
+  - name: RotateTrackball
+    value: 6
+    summary: |
+      Trackball rotation, further customized through the
+      `Class.DragDetector.TrackballRadialPullFactor|TrackballRadialPullFactor`
+      and `Class.DragDetector.TrackballRollFactor|TrackballRollFactor`
+      properties.
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    value: 7
+    summary: |
+      Calculates desired motion via a custom function provided through
+      `Class.DragDetector:SetDragStyleFunction()|SetDragStyleFunction()`.
+    tags: []
+    deprecation_message: ''
+  - name: BestForDevice
+    value: 8
+    summary: |
+      **TranslatePlaneOrLine** for mouse and gamepad; **TranslatePlane** for
+      touch; **6DOF** for VR.
+    tags: []
+    deprecation_message: ''

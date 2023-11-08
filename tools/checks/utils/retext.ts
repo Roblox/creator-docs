@@ -237,6 +237,21 @@ const isNestingQuotesIssue = (message: VFileMessage): boolean => {
   );
 };
 
+/**
+Filter function that filters out stuff like this:
+  - name: type
+    type: UserCFrame
+ */
+export const filterRepeatedWords = (message: VFileMessage) => {
+  if (message.source === RETEXT_REPEATED_WORDS) {
+    const actualText = message.actual;
+    if (actualText === 'type\ntype') {
+      return false;
+    }
+  }
+  return true;
+};
+
 // Filter function that filters out messages which are nesting quotes issues
 const filterRetextQuotes = (message: VFileMessage) => {
   return !isNestingQuotesIssue(message);
@@ -299,6 +314,7 @@ export const getReTextAnalysis = async (text: string) => {
   file.messages = file.messages
     .map(replaceRetextSpellMessageReason)
     .filter(filterRetextQuotes)
-    .filter(filterRetextSpell);
+    .filter(filterRetextSpell)
+    .filter(filterRepeatedWords);
   return file;
 };

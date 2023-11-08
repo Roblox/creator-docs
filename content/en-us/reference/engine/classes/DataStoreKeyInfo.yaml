@@ -1,0 +1,123 @@
+name: DataStoreKeyInfo
+type: class
+category:
+memory_category: Instances
+summary: |
+  An object specifying information about a particular version of the key.
+description: |
+  An object describing information about a particular version of the key. This
+  is returned as the second return value by `Class.GlobalDataStore:GetAsync()`,
+  `Class.GlobalDataStore:UpdateAsync()`,
+  `Class.GlobalDataStore:IncrementAsync()`,
+  `Class.GlobalDataStore:RemoveAsync()`, and
+  `Class.DataStore:GetVersionAsync()`.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreKeyInfo.CreatedTime
+    summary: |
+      The date and time the object was created.
+    description: |
+      This property indicates the date and time the object was created,
+      formatted as the number of milliseconds since epoch.
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreKeyInfo.UpdatedTime
+    summary: |
+      The date and time the object was last updated.
+    description: |
+      This property indicates the date and time the object was last updated,
+      formatted as the number of milliseconds since epoch.
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataStoreKeyInfo.Version
+    summary: |
+      Uniquely identifies the version of the object.
+    description: |
+      This property uniquely identifies the version of the object. It can be
+      passed to `Class.DataStore:GetVersionAsync()` or
+      `Class.DataStore:RemoveVersionAsync()` to get or remove the version
+      respectively.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: DataStoreKeyInfo:GetMetadata
+    summary: |
+      Returns the metadata associated with the object.
+    description: |
+      This function returns the metadata associated with the latest version of
+      the object.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: |
+          Metadata associated with the key.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStoreKeyInfo:GetUserIds
+    summary: |
+      An array of `Class.Player.UserId|UserIds` tagged with a key.
+    description: |
+      This function returns an array of `Class.Player.UserId|UserIds` tagged
+      with the object.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of `Class.Player.UserId|UserIds` associated with the object.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

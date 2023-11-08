@@ -1,0 +1,120 @@
+name: BindableFunction
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  An object which allows for synchronous two-way communication between scripts
+  on the same side of the client-server boundary. Scripts invoking a
+  `Class.BindableFunction` yield until the corresponding callback is found.
+description: |
+  The **BindableFunction** object allows for synchronous two-way communication
+  between scripts on the same side of the
+  [client-server](../../../projects/client-server.md) boundary. You can use it
+  to define a custom callback function and invoke it manually by calling
+  `Class.BindableFunction:Invoke()`. The code invoking the function **yields**
+  until the corresponding callback is found, and the callback receives the
+  arguments that you passed to `Class.BindableFunction:Invoke()|Invoke()`. If
+  the callback was never set, the script that invokes it will not resume
+  execution.
+
+  As an alternative for one-way communication between two scripts on the same
+  side of the client-server boundary, consider `Class.BindableEvent` which does
+  **not** yield for a return.
+
+  As stated, `Class.BindableFunction|BindableFunctions` do not allow for
+  communication between the server and clients. If you are looking for this
+  functionality, use a `Class.RemoteFunction` as outlined in
+  [Remote Events and Callbacks](../../../scripting/events/remote.md).
+
+  See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
+  code samples and further details on `Class.BindableFunction`.
+
+  #### Parameter Limitations
+
+  Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+  others can be passed as a parameter when a `Class.BindableFunction` is
+  invoked, as well as Luau types such as numbers, strings, and booleans,
+  although you should carefully explore the
+  [limitations](../../../scripting/events/custom.md#argument-limitations).
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: BindableFunction:Invoke
+    summary: |
+      Invokes the `Class.BindableFunction` which in turn calls the
+      `Class.BindableFunction.OnInvoke|OnInvoke` callback, returning any values
+      returned by the callback.
+    description: |
+      Invokes the `Class.BindableFunction` which in turn calls the
+      `Class.BindableFunction.OnInvoke|OnInvoke` callback, returning any values
+      returned by the callback. Invocations yield until the corresponding
+      callback is found, and if the callback was never set, the script that
+      invokes it will not resume execution.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.BindableFunction:Invoke()|Invoke()`, as well as Luau types such as
+      numbers, strings, and booleans, although you should carefully explore the
+      [limitations](../../../scripting/events/custom.md#argument-limitations).
+
+      Only one function can be bound to
+      `Class.BindableFunction:Invoke()|Invoke()` at a time. If you assign
+      multiple functions, only the last one assigned will be used.
+
+      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
+      code samples and further details on
+      `Class.BindableFunction:Invoke()|Invoke()`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to the `Class.BindableFunction.OnInvoke|OnInvoke`
+          callback.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned from the `Class.BindableFunction.OnInvoke|OnInvoke`
+          callback.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks:
+  - name: BindableFunction.OnInvoke
+    summary: |
+      Callback for when the `Class.BindableFunction` is invoked with
+      `Class.BindableFunction:Invoke()|Invoke()`.
+    description: |
+      This callback is called when the `Class.BindableFunction` is invoked with
+      `Class.BindableFunction:Invoke()|Invoke()`. It can be set multiple times
+      but cannot be called directly. Invocations will yield until this callback
+      is found and, if it is never set, the script that invoked it will not
+      resume execution.
+
+      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
+      code samples and further details on
+      `Class.BindableFunction.OnInvoke|OnInvoke`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          The parameters sent through
+          `Class.BindableFunction:Invoke()|Invoke()`.
+    returns:
+      - type: Tuple
+        summary: |
+          Values returned by the callback function.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

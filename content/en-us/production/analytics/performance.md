@@ -18,17 +18,50 @@ You can view analytics for individual or group owned experience. To view the lat
 
 The dashboard includes the following metrics, with version update annotations in each chart:
 
-| Metric              | Description                                                                           |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Concurrent users    | Number of users in your experience at any given time.                                 |
-| Session time        | Length of time users spend in your experience per session.                            |
-| Server frame rate   | Frames per second processed by the server.                                            |
-| Server memory usage | Memory consumed by the server.                                                        |
-| Client frame rate   | Frames per second processed by each client. Large drops may signal issues.            |
-| Client crash rate   | Sessions that crash as a percent of overall sessions. Large spikes may signal issues. |
-| Client memory usage | Memory consumed by each client. Large spikes may signal issues.                       |
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Concurrent users</td>
+            <td>Number of users in your experience at any given time.</td>
+        </tr>
+        <tr>
+            <td>Session time</td>
+            <td>Length of time users spend in your experience per session.</td>
+        </tr>
+        <tr>
+            <td>Server frame rate</td>
+            <td>Frames per second processed by the server.</td>
+        </tr>
+        <tr>
+            <td>Server memory usage</td>
+            <td>Memory consumed by the server.</td>
+        </tr>
+        <tr>
+            <td>Client frame rate</td>
+            <td>Frames per second processed by each client. Large drops may signal issues.</td>
+        </tr>
+        <tr>
+            <td>Client crash rate</td>
+            <td>Sessions that crash as a percent of overall sessions. Large spikes may signal issues.</td>
+        </tr>
+        <tr>
+            <td>Client memory usage</td>
+            <td>Memory consumed by each client. Large spikes may signal issues.</td>
+        </tr>
+        <tr>
+            <td>Compute efficiency</td>
+            <td>Efficiency of server resource utilization. Above 100% is more efficient.</td>
+        </tr>
+    </tbody>
+</table>
 
-Note that data in these charts can be difficult to parse for experiences with low user counts. Your experience needs around 100 daily active users or 10 concurrent users to see server and client charts clearly. Consider troubleshooting for performance issues when seeing the following chart behaviors over a short period of time:
+Data in these charts can be difficult to parse for experiences with low user counts, so your experience needs around 100 daily active users or 10 concurrent users to see server and client charts clearly. Consider troubleshooting for performance issues when seeing the following chart behaviors over a short period of time:
 
 1. Drop of concurrent users or session time.
 2. Decrease of server frame rate.
@@ -60,3 +93,5 @@ If you identify a performance issue, use the following steps to debug and fix it
    - [MicroProfiler](../../studio/microprofiler/using-microprofiler.md) for viewing unoptimized portions of your experience visually.
 
 3. **Gather user feedback** from your community.
+
+For more information on optimizing performance for different areas of your experience, see [Performance Optimization](../../projects/performance-optimization/index.md).

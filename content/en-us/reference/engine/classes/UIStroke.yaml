@@ -1,0 +1,266 @@
+name: UIStroke
+type: class
+category:
+memory_category: Instances
+summary: |
+  Applies an outline to text or a UI border.
+description: |
+  For more details on the **UIStroke** object, see
+  [here](../../../ui/layout-and-appearance.md#uistroke).
+
+  An instance that applies an outline to text or a UI border. Key features
+  include:
+
+  - Adjust the color and thickness of the stroke outline.
+  - Change the stroke transparency independently from the text or UI object.
+  - Choose the corner style of the stroke (round, bevel, or miter).
+  - Add a gradient to the stroke via the `Class.UIGradient` instance.
+  - Use rich text tags to add stroke to inline text segments.
+
+  ## Rich Text
+
+  If your text object has [rich text](../../../ui/rich-text.md) enabled, you can
+  control stroke properties on segments of the string via the `<stroke>` tag.
+
+  <table>
+      <thead>
+          <tr>
+              <th>Property</th>
+              <th>Description</th>
+              <th>Default</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><code>color</code></td>
+              <td>Sets the stroke <a href="#color-gradient">color</a>.</td>
+              <td><code>rgb(0, 0, 0)</code></td>
+          </tr>
+          <tr>
+              <td><code>joins</code></td> 
+              <td>Sets the <a href="#corner-style">corner style</a>. Can be set to <code>round</code>, <code>bevel</code>, or
+              <code>miter</code>.</td> 
+              <td><code>round</code></td>
+          </tr>
+          <tr>
+              <td><code>thickness</code></td>
+              <td>Sets the stroke <a href="#thickness">thickness</a>.</td>
+              <td><code>1</code></td>
+          </tr>
+          <tr>
+              <td><code>transparency</code></td>
+              <td>Sets the stroke <a href="#transparency">transparency</a>.</td>
+              <td><code>0</code></td>
+          </tr>
+      </tbody>
+  </table>
+
+  ```html
+  The &lt;font color="#c80032"&gt;<mark
+    >&lt;stroke color="#fcc633" thickness="4"&gt;dragon&lt;/stroke&gt;</mark
+  >&lt;/font&gt; is hungry.
+  ```
+
+  <img src="/assets/legacy/Stroke-RichText.png" />
+code_samples:
+inherits:
+  - UIComponent
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIStroke.ApplyStrokeMode
+    summary: |
+      Determines whether to apply the stroke to the object's border instead of
+      the text itself.
+    description: |
+      When a `Class.UIStroke` instance is applied to a text object, this
+      property determines whether to apply the stroke to the object's border
+      instead of the text itself.
+
+      <figure>
+      <img src="/assets/legacy/Text-Outline-Slim.png" />
+      <figcaption>Contextual</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Text-Border.png" />
+      <figcaption>Border</figcaption>
+      </figure>
+            
+      For more details on the **UIStroke** object, see [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: ApplyStrokeMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIStroke.Color
+    summary: |
+      Determines the stroke color.
+    description: |
+      Determines the `Class.UIStroke` stroke color. You can also insert a
+      `Class.UIGradient` instance as a child of the UIStroke to create gradient
+      strokes.
+
+      <figure>
+      <img src="/assets/legacy/Outline-Color-Solid.png" />
+      <figcaption>Stroke <code>UIStroke/Color|Color</code> of **0**, **95**, **225**</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Outline-Color-Gradient.png" />
+      <figcaption><code>UIStroke</code> with <code>UIGradient</code> child</figcaption>
+      </figure>
+
+      Note that both the parent object and UIStroke can have child UIGradients,
+      letting you set gradients on both the stroke and fill independently.
+
+      For more details on the **UIStroke** object, see
+      [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIStroke.Enabled
+    summary: |
+      Determines whether the stroke in visible.
+    description: |
+      This property determines whether the `Class.UIStroke` is visible. When set
+      to false, the stroke will not be rendered. The value defaults to true.
+
+      For more details on the **UIStroke** object, see
+      [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIStroke.LineJoinMode
+    summary: |
+      Determines how corners are interpreted.
+    description: |
+      This property determines how corners are interpreted. It accepts a value
+      of either **Round**, **Bevel**, or **Miter**. Default is **Round**.
+
+      <figure>
+      <img src="/assets/legacy/Outline-Corner-Round.png" />
+      <figcaption>Round</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Outline-Corner-Bevel.png" />
+      <figcaption>Bevel</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Outline-Corner-Miter.png" />
+      <figcaption>Miter</figcaption>
+      </figure>
+            
+      For more details on the **UIStroke** object, see [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: LineJoinMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIStroke.Thickness
+    summary: |
+      Determines the stroke's thickness.
+    description: |
+      This property determines the stroke's thickness, measured in pixels from
+      the parent's outer edges.
+
+      <figure>
+      <img src="/assets/legacy/Outline-Thickness-4.png" />
+      <figcaption>4</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Outline-Thickness-12.png" />
+      <figcaption>12</figcaption>
+      </figure>
+
+      Be mindful of tweening the Thickness property of a <code>UIStroke</code>
+      applied to text objects. This renders and stores many glyph sizes each
+      frame, potentially causing performance issues or text flickering.
+
+      For more details on the **UIStroke** object, see
+      [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIStroke.Transparency
+    summary: |
+      Sets the stroke opacity independently of the parent object's
+      `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
+      `Class.TextLabel.TextTransparency|TextTransparency`.
+    description: |
+      The `Class.UIStroke.Transparency|Transparency` property sets the stroke
+      opacity independently of the parent object's
+      `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
+      `Class.TextLabel.TextTransparency|TextTransparency`. This allows you to
+      render text and borders that are "hollow" (consisting of only an outline).
+
+      <figure>
+      <img src="/assets/legacy/Outline-Transparency-A.png" />
+      <figcaption>Stroke <code>UIStroke/Transparency|Transparency</code> of **0.5**Object <code>TextLabel/TextTransparency|TextTransparency</code> of **0**</figcaption>
+      </figure>
+
+      <figure>
+      <img src="/assets/legacy/Outline-Transparency-B.png" />
+      <figcaption>Stroke <code>UIStroke/Transparency|Transparency</code> of **0**Object <code>TextLabel/TextTransparency|TextTransparency</code> of **1**</figcaption>
+      </figure>
+            
+      For more details on the **UIStroke** object, see [here](../../../ui/layout-and-appearance.md#uistroke).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

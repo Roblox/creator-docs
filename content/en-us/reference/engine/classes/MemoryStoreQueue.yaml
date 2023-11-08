@@ -1,0 +1,136 @@
+name: MemoryStoreQueue
+type: class
+category:
+memory_category: Instances
+summary: |
+  Provides access to a queue within MemoryStore.
+description: |
+  Provides access to a queue within MemoryStore. A queue is a data structure
+  that provides temporary storage for arbitrary items (up to the maximum item
+  size; see
+  [MemoryStore Limits](../../../cloud-services/memory-stores/index.md#limits-and-quotas).
+  Each queue item has a numeric priority: MemoryStore retrieves items with
+  higher priority from the queue first, and it retrieves Items with the same
+  priority in order of addition.
+
+  Items in the queue can optionally be set to expire after a certain amount of
+  time. Expired items simply disappear from the queue as if they were never
+  added.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: MemoryStoreQueue:AddAsync
+    summary: |
+      Adds an item to the queue.
+    description: |
+      Adds an item to the queue.
+    code_samples:
+    parameters:
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value of the item to add to the queue.
+      - name: expiration
+        type: int64
+        default:
+        summary: |
+          Item expiration time, in seconds, after which the item will be
+          automatically removed from the queue.
+      - name: priority
+        type: double
+        default: 0
+        summary: |
+          Item priority. Items with higher priority are retrieved from the queue
+          before items with lower priority.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreQueue:ReadAsync
+    summary: |
+      Reads one or more items from the queue.
+    description: |
+      Reads one or more items from the queue as a single atomic operation.
+
+      This method does not automatically delete the returned items from the
+      queue but makes them invisible to other ReadAsync calls for the period of
+      the invisibility timeout. The items must be explicitly removed from the
+      queue with `Class.MemoryStoreQueue:RemoveAsync()` before the invisibility
+      timeout expires. The invisibility timeout defaults to 30 seconds unless a
+      different value was provided in `Class.MemoryStoreService:GetQueue()`.
+    code_samples:
+      - using-a-memorystorequeue
+    parameters:
+      - name: count
+        type: int
+        default:
+        summary: |
+          Number of items to read. The maximum allowed value of this parameter
+          is 100.
+      - name: allOrNothing
+        type: bool
+        default: false
+        summary: |
+          Controls the behavior of the method in the case the queue has fewer
+          than `count` items: if set to false the method returns all available
+          items; if set to true, it returns no items. The default value is
+          false.
+      - name: waitTimeout
+        type: double
+        default: -1
+        summary: |
+          The duration, in seconds, for which the method will wait if the
+          required number of items is not immediately available in the queue.
+          Reads are attempted every two seconds during this period. This
+          parameter can be set to zero to indicate no wait. If this parameter is
+          not provided or set to -1, the method will wait indefinitely.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple of two elements. The first element is an array of item values
+          read from the queue. The second element is a string identifier that
+          should be passed to `Class.MemoryStoreQueue:RemoveAsync()` to
+          permanently remove these items from the queue.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreQueue:RemoveAsync
+    summary: |
+      Removes an item or items previously read from the queue.
+    description: |
+      Removes an item or items previously read from the queue. This method uses
+      the identifier returned by `Class.MemoryStoreQueue:ReadAsync()` to
+      identify the items to remove. If called after the invisibility timeout has
+      expired, the call has no effect.
+    code_samples:
+      - using-a-memorystorequeue
+    parameters:
+      - name: id
+        type: string
+        default:
+        summary: |
+          Identifies the items to delete. Use the value returned by
+          `Class.MemoryStoreQueue:ReadAsync()`.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

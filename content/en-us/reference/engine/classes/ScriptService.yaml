@@ -1,0 +1,21 @@
+name: ScriptService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An unimplemented service that has zero functionality, in a similar manner to
+  the `LocalWorkspace` service.
+description: |
+  An unimplemented service that has zero functionality, in a similar manner to
+  the `LocalWorkspace` service.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

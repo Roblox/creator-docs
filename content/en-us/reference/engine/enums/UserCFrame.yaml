@@ -1,0 +1,35 @@
+name: UserCFrame
+type: enum
+summary: |
+  Determines what body part is being tracked by a VR device, and what its CFrame
+  actually is.
+description: |
+  Determines what body part is being tracked by a VR device, and what its CFrame
+  actually is.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Head
+    value: 0
+    summary: |
+      The CFrame of the user's head.
+    tags: []
+    deprecation_message: ''
+  - name: LeftHand
+    value: 1
+    summary: |
+      The CFrame of the user's left hand.
+    tags: []
+    deprecation_message: ''
+  - name: RightHand
+    value: 2
+    summary: |
+      The CFrame of the user's right hand.
+    tags: []
+    deprecation_message: ''
+  - name: Floor
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

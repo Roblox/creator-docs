@@ -1,0 +1,186 @@
+name: FloatCurve
+type: class
+category:
+memory_category: Instances
+summary: |
+  A sorted list of time-value pairs (`Datatype.FloatCurveKey|FloatCurveKeys`)
+  that define a curve. Used to animate a single numerical value.
+description: |
+  An instance representing a 1D float curve encoded via a sorted list of
+  `Datatype.FloatCurveKey|FloatCurveKeys`.
+
+  `Datatype.FloatCurveKey|FloatCurveKeys` are value-time points that represent
+  the changes in value over time. The changes of a single value over time are
+  represented by a curve. Animators can edit keys to modify a curve. The shape
+  of the curve is dictated by the `Enum.KeyInterpolationMode` chosen at each
+  key.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: FloatCurve.Length
+    summary: |
+      Number of keys in the float curve.
+    description: |
+      Number of keys in the float curve.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: FloatCurve:GetKeyAtIndex
+    summary: |
+      Returns a copy of a key at a given index.
+    description: |
+      Returns a copy of a key at a given index.
+    code_samples:
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: FloatCurveKey
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:GetKeyIndicesAtTime
+    summary: |
+      Returns key indices before and after time.
+    description: |
+      The first returned value is the index of the last key with
+      `key.time <= time` (or `min(1,length)` if no key was found). The second
+      returned value is the index of the first key with `key.time >= time` or
+      the length of the curve if no key was found satisfying the inequality.
+    code_samples:
+    parameters:
+      - name: time
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:GetKeys
+    summary: |
+      Returns a copy of all the keys in the FloatCurve as a Lua array of
+      FloatCurveKey.
+    description: |
+      Returns a copy of all the keys in the FloatCurve as a Lua array of
+      FloatCurveKey.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:GetValueAtTime
+    summary: |
+      Samples the float curve at a given time passed as argument.
+    description: |
+      Samples the float curve at a given time passed as argument.
+    code_samples:
+    parameters:
+      - name: time
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: float?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:InsertKey
+    summary: |
+      Adds the key passed as argument to this curve.
+    description: |
+      Adds the key passed as argument to this curve. If a key exists at the same
+      time it will be replaced. First return value is true if a key was added,
+      false if a previous key was replaced. Second return value is the index at
+      which the marker was added.
+    code_samples:
+    parameters:
+      - name: key
+        type: FloatCurveKey
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:RemoveKeyAtIndex
+    summary: |
+      Removes a given number of Keys starting from a given index. Returns the
+      number of keys that were removed.
+    description: |
+      Removes a given number of Keys starting from a given index. Returns the
+      number of keys that were removed.
+    code_samples:
+    parameters:
+      - name: startingIndex
+        type: int
+        default:
+        summary: ''
+      - name: count
+        type: int
+        default: 1
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: FloatCurve:SetKeys
+    summary: |
+      Resets this curve's keys using the FloatCurveKey array passed as argument.
+    description: |
+      Resets this curve's keys using the FloatCurveKey array passed as argument.
+      Keys in the keysArray are sorted in ascending time order before insertion.
+      Keys at duplicated times are removed in a stable manner. Returns the
+      number of keys actually inserted.
+
+      Keys previously stored in this curve are removed before the keys passed as
+      arguments are added.
+    code_samples:
+    parameters:
+      - name: keys
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

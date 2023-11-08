@@ -1,0 +1,59 @@
+name: VelocityConstraintMode
+type: enum
+summary: |
+  The velocity constraint mode property controls how the linear velocity of the
+  attachment(s) is constrained.
+description: |
+  The velocity constraint mode sets how the attachment velocity is constrained.
+  The velocity can be constrained to a line, a plane or a vector. See each mode
+  for more details.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Line
+    summary: |
+      The velocity component in the direction of the line is constrained to the
+      specified value. The line direction is based on the
+      `Class.LinearVelocity.RelativeTo|RelativeTo` property:
+
+      - `Enum.ActuatorRelativeTo|Attachment0` - The line direction is the
+        primary axis of `Class.Constraint.Attachment0|Attachment0`.
+      - `Enum.ActuatorRelativeTo|Attachment1` - The line direction is the
+        primary axis of `Class.Constraint.Attachment1|Attachment1`.
+      - `Enum.ActuatorRelativeTo|World` - The line direction must be specified.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Plane
+    summary: |
+      The velocity components in the plane are constrained to the specified
+      values. The plane tangents are based on the
+      `Class.LinearVelocity.RelativeTo|RelativeTo` property:
+
+      - `Enum.ActuatorRelativeTo|Attachment0` - The plane tangents are the two
+        axes of `Class.Constraint.Attachment0|Attachment0`.
+      - `Enum.ActuatorRelativeTo|Attachment1` - The plane tangents are the two
+        axes of `Class.Constraint.Attachment1|Attachment1`.
+      - `Enum.ActuatorRelativeTo|World` - The two plane tangents must be
+        specified
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Vector
+    summary: |
+      The velocity components must be equal to the vector components specified.
+      The coordinate system of the vector is based on the
+      `Class.LinearVelocity.RelativeTo|RelativeTo` property:
+
+      - `Enum.ActuatorRelativeTo|Attachment0` - The vector components are in the
+        coordinate system defined by the axes of
+        `Class.Constraint.Attachment0|Attachment0`.
+      - `Enum.ActuatorRelativeTo|Attachment1` - The vector components are in the
+        coordinate system defined by the axes of
+        `Class.Constraint.Attachment1|Attachment1`.
+      - `Enum.ActuatorRelativeTo|World` - The coordinate system is in the world
+        and the vector components must be specified.
+    value: 2
+    tags: []
+    deprecation_message: ''

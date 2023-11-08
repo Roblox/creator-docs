@@ -1,0 +1,22 @@
+name: FilterResult
+type: enum
+summary: |
+  Used to determine the result of a text filter request.
+description: |
+  Used to determine the result of a text filter request.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Accepted
+    summary: |
+      Text accepted by filter.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Rejected
+    summary: |
+      Text rejected by filter.
+    value: 1
+    tags: []
+    deprecation_message: ''

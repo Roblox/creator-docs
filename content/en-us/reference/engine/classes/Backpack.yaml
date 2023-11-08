@@ -1,0 +1,47 @@
+name: Backpack
+type: class
+category: Gameplay
+memory_category: Instances
+summary: |
+  A container object that holds a `Class.Player`'s inventory. Any `Class.Tool`
+  in a player's Backpack will be displayed in their inventory at the bottom of
+  their screen.
+description: |
+  A container object that holds a `Class.Player`'s inventory. Any `Class.Tool`
+  in a player's Backpack will be displayed in their inventory at the bottom of
+  their screen. Selecting `Class.Tool`s from the inventory will equip the
+  `Class.Tool`, moving it from the Backpack to the player's character.
+
+  The Backpack can also store `Class.Script|Scripts` and
+  `Class.LocalScript|LocalScripts`, which run when placed in a player's
+  Backpack.
+
+  When a player's character spawns, the contents of the `Class.StarterPack` and
+  their `Class.StarterGear` are copied into their Backpack. Once a character
+  dies, the Backpack is removed and a new one will be created -- populating it
+  with the contents of `Class.StarterPack` and `Class.StarterGear`.
+
+  Roblox provides an interface for a player to access their backpack and
+  inventory by default at the bottom of the screen. If a developer wishes to
+  disable the default Roblox backpack GUI and replace it with their own, they
+  may do so using `Class.StarterGui:SetCoreGuiEnabled()`.
+
+  The Backpack can be accessed from both the client and the server.
+
+  ```lua
+  -- Accessing Backpack from a Server Script:
+  game.Players.PlayerName.Backpack
+
+  -- Accessing Backpack from a LocalScript:
+  game.Players.LocalPlayer.Backpack
+  ```
+code_samples:
+  - Backpack-Give-Tool
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

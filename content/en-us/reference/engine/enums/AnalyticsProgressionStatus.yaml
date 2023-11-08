@@ -1,0 +1,44 @@
+name: AnalyticsProgressionStatus
+type: enum
+summary: |
+  This enum is used as an argument in
+  `Class.AnalyticsService:FirePlayerProgressionEvent()` to describe the status
+  of progression.
+description: |
+  This enum is used as an argument in
+  `Class.AnalyticsService:FirePlayerProgressionEvent()` to describe the status
+  of progression.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Default status. Used for an undefined status.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Begin
+    summary: |
+      Indicates the beginning of progression.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Complete
+    summary: |
+      Indicates the progression completed.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Abandon
+    summary: |
+      Indicates the progression abandoned.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Fail
+    summary: |
+      Indicates the progression failed.
+    value: 4
+    tags: []
+    deprecation_message: ''

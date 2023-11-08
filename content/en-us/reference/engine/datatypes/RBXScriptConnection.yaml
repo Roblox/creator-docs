@@ -1,0 +1,40 @@
+name: RBXScriptConnection
+type: datatype
+summary: |
+  A connection between an `Datatype.RBXScriptSignal` and a function.
+description: |
+  The `Datatype.RBXScriptConnection` data type, also known as a Connection, is a
+  special object returned by the Connect method of an Event
+  (`Datatype.RBXScriptSignal`). This is used primarily to disconnect a listener
+  from an `Datatype.RBXScriptSignal`.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+constants: []
+properties:
+  - name: RBXScriptConnection.Connected
+    type: bool
+    summary: |
+      The state of the RBXScriptConnection.
+    description: |
+      Describes whether or not the connection is still alive. This becomes false
+      if `connection:Disconnect()` is called.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: RBXScriptConnection:Disconnect
+    summary: |
+      Disconnects the connection from the event.
+    description: |
+      Disconnects the connection from the event.
+    parameters:
+    returns:
+      - type: void
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

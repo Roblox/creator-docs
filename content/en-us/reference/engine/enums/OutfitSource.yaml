@@ -1,0 +1,23 @@
+name: OutfitSource
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: All
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Created
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Purchased
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

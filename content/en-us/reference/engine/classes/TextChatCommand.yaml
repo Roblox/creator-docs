@@ -1,0 +1,133 @@
+name: TextChatCommand
+type: class
+category:
+memory_category: Instances
+summary: |
+  Represents a text chat command.
+description: |
+  Represents a text chat command. Can be used to create custom text chat
+  commands when parented to `Class.TextChatService`. Custom commands can have up
+  to two aliases, and the Triggered event fires when a user types
+  "/{PrimaryAlias}" or "/{SecondaryAlias}" into the chat.
+
+  To learn more about using `Class.TextChatService`, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: TextChatCommand.AutocompleteVisible
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatCommand.Enabled
+    summary: |
+      Determines whether the `Class.TextChatCommand` is enabled.
+    description: |
+      Determines whether the `Class.TextChatCommand` is enabled.
+
+      When disabled, messages that match "/{PrimaryAlias}" or
+      "/{SecondaryAlias}" is not sunk and is sent to other users.
+
+      Use this to disable default commands on a case-by-case basis.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatCommand.PrimaryAlias
+    summary: |
+      A primary alias used to trigger the `Class.TextChatCommand`.
+    description: |
+      A primary alias used to trigger the `Class.TextChatCommand`.
+
+      If a user sends a message with `Class.TextChannel:SendAsync()` that
+      matches "/{`Class.TextChatCommand.PrimaryAlias`}", then the message is not
+      sent and instead `Class.TextChatCommand.Triggered` is fired.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatCommand.SecondaryAlias
+    summary: |
+      A secondary alias used to trigger the `Class.TextChatCommand`.
+    description: |
+      A secondary alias used to trigger the `Class.TextChatCommand`.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: TextChatCommand.Triggered
+    summary: |
+      An event that developers can bind to execute commands.
+    description: |
+      An event that developers can bind to execute commands.
+
+      When a user sends a message to the server via
+      `Class.TextChannel:SendAsync()`, the message is intercepted by the
+      `Class.TextChatCommand` and not replicated to other users if the content
+      of the message matches "/{`Class.TextChatCommand.PrimaryAlias`}" or
+      "/{`Class.TextChatCommand.SecondaryAlias`}".
+
+      For example, for a `Class.TextChatCommand` with
+      `Class.TextChatCommand.PrimaryAlias` as "mute", if a user sends "/mute
+      SomeUserName", then the relevant `Class.TextChatCommand` for mute will
+      fire its `Class.TextChatCommand.Triggered`. The message "/mute
+      SomeUserName" is not replicated to other users.
+    code_samples: []
+    parameters:
+      - name: originTextSource
+        type: TextSource
+        default:
+        summary: |
+          A reference to the `Class.TextSource` responsible for triggering the
+          command via `Class.TextChannel:SendAsync()`.
+      - name: unfilteredText
+        type: string
+        default:
+        summary: |
+          The full, unfiltered text used to trigger the command that can be used
+          to dissect parameters from the command message.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

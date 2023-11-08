@@ -1,0 +1,37 @@
+name: DeviceType
+type: enum
+summary: |
+  Device category of the client.
+description: |
+  The DeviceType Enum is used to determine the category of devices that a client
+  belongs to.
+
+  Currently this can only be used in `Class.CoreScript`s.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: |
+      The client is an unknown device.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Desktop
+    summary: |
+      The client is a desktop device.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Tablet
+    summary: |
+      The client is a tablet device.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Phone
+    summary: |
+      The client is a phone device.
+    value: 3
+    tags: []
+    deprecation_message: ''

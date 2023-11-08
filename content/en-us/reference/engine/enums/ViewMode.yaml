@@ -1,0 +1,28 @@
+name: ViewMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: GeometryComplexity
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Transparent
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Decal
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

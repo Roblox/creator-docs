@@ -1,0 +1,30 @@
+name: ForceLimitMode
+type: enum
+summary: |
+  The **ForceLimitMode** enum determines how the maximum force for a constraint
+  is specified and how that limit is enforced by the constraint.  
+  .
+description: |
+  This enum is used to determine how the maximum force for a constraint is
+  specified and how that limit will be enforced by the constraint.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Magnitude
+    value: 0
+    summary: |
+      A single number is used to specify the magnitude of the maximum constraint
+      force. The constraint will ensure that the force it applies will have a
+      magnitude that is less than this limit.
+    tags: []
+    deprecation_message: ''
+  - name: PerAxis
+    value: 1
+    summary: |
+      A vector is used to specify the maximum force value along each axis of a
+      given reference frame. The constraint will ensure that each component of
+      the force will have an absolute value that's less than the corresponding
+      vector entry.
+    tags: []
+    deprecation_message: ''

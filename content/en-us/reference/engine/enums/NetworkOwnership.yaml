@@ -1,0 +1,32 @@
+name: NetworkOwnership
+type: enum
+summary: |
+  Defines how simulation authority is determined for the Network Ownership
+  Unit/Mechanism this part is attached to.
+description: |
+  Defines how to determine which client has ownership of a part for a server
+  (network).
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      Network ownership is determined automatically by the server.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Manual
+    summary: |
+      Network ownership is set manually by the developer.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: OnContact
+    summary: |
+      The first player to touch a part is given ownership of that part for the
+      server (network). Ownership will not change if another player touches that
+      part unless network ownership has been released by the owner.
+    value: 2
+    tags: []
+    deprecation_message: ''

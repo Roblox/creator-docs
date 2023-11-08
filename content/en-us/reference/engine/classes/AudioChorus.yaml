@@ -1,0 +1,82 @@
+name: AudioChorus
+type: class
+category:
+memory_category: Internal
+summary: |
+  Makes an audio stream sound more voluminous. If applied to a single voice, it
+  may sound like multiple voices.
+description: |
+  `Class.AudioChorus` makes an audio stream sound more voluminous. It provides
+  one **Input** pin and one **Output** pin which can be connected to/from by
+  `Class.Wire|Wires`.
+
+  `Class.AudioChorus` is implemented by duplicating the input stream and
+  modulating the pitch of several delayed copies so that the overall result
+  sounds like a cloud of streams. If applied to a single voice, it may sound
+  like multiple voices.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioChorus.Depth
+    summary: |
+      Controls the maximum delay time of the copied streams in the chorus
+      effect.
+    description: |
+      Controls how strong the chorus effect is by changing the maximum delay
+      time of the copy streams. Ranges from 0 to 1 which corresponds to 0 to 100
+      milliseconds of maximum delay.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioChorus.Mix
+    summary: |
+      Controls the balance of plain input stream to modified output stream.
+    description: |
+      Controls the balance of plain input stream to modified output stream.
+      Ranges from 0 to 1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioChorus.Rate
+    summary: |
+      Controls the rate of pitch modulations.
+    description: |
+      Frequency controlling the rate of pitch modulations, in hertz. Ranges from
+      0 to 20.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

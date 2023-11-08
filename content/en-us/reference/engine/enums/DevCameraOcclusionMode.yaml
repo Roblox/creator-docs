@@ -1,0 +1,24 @@
+name: DevCameraOcclusionMode
+type: enum
+summary: |
+  Determines how the default camera handles objects that are in-between the
+  camera and the camera subject.
+description: |
+  Determines how the default camera handles objects that are in-between the
+  camera and the camera subject.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Zoom
+    value: 0
+    summary: |
+      The camera zooms in until there is nothing between it and its subject.
+    tags: []
+    deprecation_message: ''
+  - name: Invisicam
+    value: 1
+    summary: |
+      Any objects between the camera and its subject become translucent locally.
+    tags: []
+    deprecation_message: ''

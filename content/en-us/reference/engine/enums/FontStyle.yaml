@@ -1,0 +1,23 @@
+name: FontStyle
+type: enum
+summary: |
+  Describes whether a `Datatype.Font` is italic or not.
+description: |
+  Describes whether a `Datatype.Font` is italic or not. Italic is when text is
+  slanted slightly, <i>like this</i>. Used by `Datatype.Font.Style`.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Normal
+    value: 0
+    summary: |
+      The text renders normally with this font.
+    tags: []
+    deprecation_message: ''
+  - name: Italic
+    value: 1
+    summary: |
+      The text renders italic with this font.
+    tags: []
+    deprecation_message: ''

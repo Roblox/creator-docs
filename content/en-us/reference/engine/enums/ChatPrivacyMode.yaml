@@ -1,0 +1,28 @@
+name: ChatPrivacyMode
+type: enum
+summary: ''
+description: |
+  Internally controls the user's chat privacy settings.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: AllUsers
+    summary: |
+      A player can chat with all users in a game.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: NoOne
+    summary: |
+      A player cannot chat with any other users in a game.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Friends
+    summary: |
+      A player can only chat with users in a game that are on their friends
+      list.
+    value: 2
+    tags: []
+    deprecation_message: ''

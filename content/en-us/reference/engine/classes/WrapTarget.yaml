@@ -1,0 +1,91 @@
+name: WrapTarget
+type: class
+category:
+memory_category: Instances
+summary: |
+  The WrapTarget object defines a target. A target is the 3D body with only an
+  outer surface, or an Outer Cage.
+description: |
+  The WrapTarget object defines a target. A target is the 3D body with only an
+  outer surface, or an Outer Cage.
+
+  This target, often an Avatar, is what 3D accessories (using WrapLayer) will be
+  applied to, allowing multiple accessories items to naturally layer over the
+  source target.
+code_samples:
+inherits:
+  - BaseWrap
+tags: []
+deprecation_message: ''
+properties:
+  - name: WrapTarget.Color
+    summary: |
+      Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`.
+    description: |
+      Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: false
+      can_save: false
+  - name: WrapTarget.DebugMode
+    summary: |
+      Allows switching between different debugging visualization modes for cage
+      meshes.
+    description: |
+      Allows switching between different debugging visualization modes for cage
+      meshes.
+    code_samples:
+    type: WrapTargetDebugMode
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: false
+      can_save: false
+  - name: WrapTarget.Stiffness
+    summary: |
+      Defines how much the body mesh can be compressed by clothing.
+    description: |
+      Defines how much the body mesh can be compressed by clothing. Super tight
+      clothing may lead to an intersection between the clothing mesh and body
+      mesh. To solve this visual artifact, the deformer can compress the body
+      mesh slightly to solve possible intersections.
+
+      Valid range is 0 to 1. A value of 0 will compress the body mesh as much as
+      necessary to ensure that the intersections are eliminated (visible body
+      parts might look a little bit deformed). A value of 1 will prevent the
+      body mesh from being compressed (may lead to visible intersections or
+      Z-fighting). A value of 0.9 (default) is a reasonable default that solves
+      most of the intersections without introducing any significant body
+      deformation.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

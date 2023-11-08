@@ -1,0 +1,140 @@
+name: TweenBase
+type: class
+category:
+memory_category: Instances
+summary: |
+  Abstract base class for in-between interpolation handlers. `Class.Tween`
+  inherits from `Class.TweenBase`.
+description: |
+  Abstract base class for in-between interpolation handlers; parent class of
+  `Class.Tween`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: TweenBase.PlaybackState
+    summary: |
+      Read-only property that shows the current state for the `Class.Tween`
+      animation.
+    description: |
+      Read-only property that shows the current stage for the `Class.Tween`
+      animation. See `Enum.PlaybackState` for descriptions of each state. Change
+      using functions like `Class.Tween:Play()`.
+    code_samples:
+      - Tween-PlaybackState
+    type: PlaybackState
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: TweenBase:Cancel
+    summary: |
+      Halts playback and resets the tween variables. If you then call
+      `Class.TweenBase:Play()`, the properties of the tween resume interpolating
+      towards their destination, but take the full length of the animation to do
+      so.
+    description: |
+      Halts playback of a `Class.Tween` and resets the tween variables.
+
+      Only resets the tween variables, not the properties being changed by the
+      tween. If you cancel a tween halfway through its animation, the properties
+      do not reset to their original values. Differs from
+      `Class.TweenBase:Pause()` in that once resumed, it takes the full duration
+      of the tween to complete the animation.
+    code_samples:
+      - Tween-Cancel
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TweenBase:Pause
+    summary: |
+      Halts playback of the tween. Doesn't reset its progress variables, meaning
+      that if you call `Class.TweenBase:Play()`, the tween resumes playback from
+      the moment it was paused.
+    description: |
+      Halts playback of the tween. Doesn't reset its progress variables, meaning
+      that if you call `Class.TweenBase:Play()`, the tween resumes playback from
+      the moment it was paused.
+
+      If you want to reset the progress variables of the tween, use
+      `Class.TweenBase:Cancel()`.
+    code_samples:
+      - Tween-Pausing
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TweenBase:Play
+    summary: |
+      Starts playback of a tween. Note that if playback has already started,
+      calling `Play()` has no effect unless the tween has finished or is stopped
+      (either by `Class.TweenBase:Cancel()` or `Class.TweenBase:Pause()`).
+    description: |
+      Starts playback of a tween. Note that if playback has already started,
+      calling `Play()` has no effect unless the tween has finished or is stopped
+      (either by `Class.TweenBase:Cancel()` or `Class.TweenBase:Pause()`).
+
+      Multiple tweens can be played on the same object at the same time, but
+      they must not animate the same property. If two tweens attempt to modify
+      the same property, the initial tween is cancelled and overwritten by the
+      most recent tween (see examples).
+    code_samples:
+      - Tween-Creation
+      - Tween-Conflict
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: TweenBase.Completed
+    summary: |
+      Fires when the tween finishes playing or when stopped with
+      `Class.TweenBase:Cancel()`.
+    description: |
+      Fires when the tween finishes playing or when stopped with
+      `Class.TweenBase:Cancel()`.
+
+      Passes the `Enum.PlaybackState` of the tween to any connected functions to
+      give an indication of why the tween ended. Note that calling
+      `Class.TweenBase:Pause()` does not fire the `Completed` event.
+    code_samples:
+      - Tween-Completed
+      - Tween-Conflict
+      - Tween-Completed-2
+    parameters:
+      - name: playbackState
+        type: PlaybackState
+        default:
+        summary: |
+          The `Enum.PlaybackState` of the tween upon completion.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

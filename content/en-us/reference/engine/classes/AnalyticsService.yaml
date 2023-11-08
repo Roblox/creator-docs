@@ -1,0 +1,531 @@
+name: AnalyticsService
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  An internal service used by Roblox to collect analytics from `CoreScripts`.
+description: |
+  **Note** This service should only be used by developers who are enrolled in
+  the PlayFab program.
+
+  The AnalyticsService provides developers with out-of-the-box analytics so they
+  can improve their games.
+
+  Developers can report events and see visual analysis results on the PlayFab
+  webpage.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Service
+  - Deprecated
+deprecation_message: ''
+properties:
+  - name: AnalyticsService.ApiKey
+    summary: |
+      PlayFab API key. Must be set in order to use
+      `Class.AnalyticsService:FireEvent()|FireEvent`.
+    description: |
+      The **ApiKey** property contains the game's PlayFab API key. It must be
+      set and valid in order to use
+      `Class.AnalyticsService:FireEvent()|FireEvent`. It can be set by pasting
+      and editing the following line of code into the Command bar:
+
+      ```lua
+      game:GetService("AnalyticsService").ApiKey = "API_KEY"
+      ```
+    code_samples:
+    type: string
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: LocalUserSecurity
+      write: LocalUserSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: AnalyticsService:FireCustomEvent
+    summary: |
+      Fires a custom event with a custom event name and data.
+    description: |
+      This function triggers a custom event with a custom event name data.
+
+      #### Limits of events
+
+      Each game server is allowed a certain number of standard events API calls
+      based on the number of players present (more players means more events
+      will be needed). The events that exceed the limit will be dropped and log
+      an error to the developer console. - Per minute limit: 120 + numPlayers \*
+      20, all events shared this limit. - Cooldown: refresh every 10 seconds
+
+      #### Limits of parameters
+
+      Limit the size of parameters. The event that exceeds the limit will be
+      dropped and log an error to the developer console.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Parameters</th>
+                  <th>Maximum Number of Characters</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>customData Variant</td>
+                  <td>500 after serialized</td>
+              </tr>
+              <tr>
+                  <td>other string types</td>
+                  <td>50</td>
+              </tr>
+          </tbody>
+      </table>
+
+      See also:
+
+      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
+        used to track player progression through the game
+      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
+        used to track player actions pertaining to the in-game economy
+      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
+        errors and warnings experienced by players
+    code_samples:
+      - analytics-event---custom
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player who triggered the custom event. nil if not player related.
+      - name: eventCategory
+        type: string
+        default:
+        summary: |
+          User defined category. This should be the name of the event.
+      - name: customData
+        type: Variant
+        default:
+        summary: |
+          Optional. User defined data, could be a string, a number or a table.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:FireEvent
+    summary: |
+      Report a custom event to PlayFab.
+    description: |
+      **FireEvent** reports a custom event to PlayFab. The event is reported
+      using a **category** and **value**, where the category is a string and the
+      value can be a string or table. In order to use PlayFab, you must have a
+      valid `Class.AnalyticsService.ApiKey|ApiKey` set.
+
+      #### Possible Errors
+
+      - **"AnalyticsService can only be executed by game server."** – Tracking
+        can only be done on the server through a `Class.Script` or
+        `Class.ModuleScript` required by a script. See
+        `Class.RunService:IsServer()`.
+      - **"The ApiKey is invalid."** – The
+        `Class.AnalyticsService.ApiKey|ApiKey` has been set, but it's invalid.
+        Check that it is set to the correct value.
+      - **"AnalyticsService can only accept valid UTF-8 characters."** – Thrown
+        when the value can't be serialized as UTF-8 characters. This can happen
+        if you pass a value which has unicode characters, like emojis.
+      - **"AnalyticsService failed in parse event value. Error: ..."** – Thrown
+        when there is an issue when serializing the provided value into a
+        string.
+      - **"AnalyticsService: , " and \r\n are not allowed in category."** – The
+        comma `,`, the double quote `"`, and newline characters `\r\n` cannot be
+        used in the **category** parameter.
+      - **"AnalyticsService: The event value you fired is too long."** – Thrown
+        if the **value** parameter was too long after serialization. The length
+        limit is 1 KB, or 1024 bytes.
+    code_samples:
+    parameters:
+      - name: category
+        type: string
+        default:
+        summary: |
+          'The category of event to report. Cannot contain the following
+          characters: comma `,`, double quote `"` or newline characters `\r\n`'.
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          A value to be serialized and reported. Serialized length must not
+          exceed 1 KB, or 1024 bytes.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated in favor of more descriptive methods,
+      including:
+
+      - `Class.AnalyticsService:FireCustomEvent()`
+      - `Class.AnalyticsService:FireInGameEconomyEvent()`
+      - `Class.AnalyticsService:FireLogEvent()`
+      - `Class.AnalyticsService:FirePlayerProgressionEvent()`
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:FireInGameEconomyEvent
+    summary: |
+      Fire an event used to track player actions pertaining to the in-game
+      economy.
+    description: |
+      This function triggers an event used to track player actions pertaining to
+      the in-game economy.
+
+      For example, it should be called to track when players acquire or spend
+      virtual items within the economy like currency.
+
+      #### Limits of events
+
+      Each game server is allowed a certain number of standard events API calls
+      based on the number of players present (more players means more events
+      will be needed). The events that exceed the limit will be dropped and log
+      an error to the developer console. - Per minute limit: 120 + numPlayers \*
+      20, all events shared this limit. - Cooldown: refresh every 10 seconds
+
+      #### Limits of parameters
+
+      Limit the size of parameters. The event that exceeds the limit will be
+      dropped and log an error to the developer console.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Parameters</th>
+                  <th>Maximum Number of Characters</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>customData Variant</td>
+                  <td>500 after serialized</td>
+              </tr>
+              <tr>
+                  <td>other string types</td>
+                  <td>50</td>
+              </tr>
+          </tbody>
+      </table>
+
+      See also:
+
+      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
+        used to track player progression through the game
+      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
+        errors and warnings experienced by players
+      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
+        emit a custom event
+    code_samples:
+      - analytics-event---economy
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player who triggered the economy event.
+      - name: itemName
+        type: string
+        default:
+        summary: |
+          The name of the item.
+      - name: economyAction
+        type: AnalyticsEconomyAction
+        default:
+        summary: |
+          Indicates the acquisition or spending of an in game resource.
+      - name: itemCategory
+        type: string
+        default:
+        summary: |
+          A user defined category for items such as "Vehicle," "Weapon.".
+      - name: amount
+        type: int
+        default:
+        summary: |
+          The amount of the currency.
+      - name: currency
+        type: string
+        default:
+        summary: |
+          The currency used. Examples: 'gold', 'gems', 'life.'.
+      - name: location
+        type: Variant
+        default:
+        summary: |
+          The event location. A dictionary that each key-value represents an
+          entry of location data. The key-value is a string-string pair. With
+          this you can query which are the most popular "stores" then maybe you
+          want to increase/lower the price for the stores.
+
+          See the example below:
+
+          ```lua
+          local location = {
+              ["placeDesc"] = "Dungeon1",
+              ["levelDesc"] = "level2",
+              ["mapDesc"] = "LeftChamberMap",
+              ["storeName"] = "DarkSmith",
+              ["userDefindKey"] = "0005"
+          }
+          ```
+      - name: customData
+        type: Variant
+        default:
+        summary: |
+          Optional. User defined data, could be a string, a number or a table.
+    returns:
+      - type: void
+        summary: |
+          No return.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:FireLogEvent
+    summary: |
+      Fire a log event used to track errors and warnings experienced by players.
+    description: |
+      This function triggers an event used to track errors and warnings
+      experienced by players.
+
+      For example, it could be called to indicate when a function call fails -
+      such as a datastore save or `Class.TeleportService:Teleport()`. See the
+      example below.
+
+      #### Limits of events
+
+      Each game server is allowed a certain number of standard events API calls
+      based on the number of players present (more players means more events
+      will be needed). The events that exceed the limit will be dropped and log
+      an error to the developer console. - Per minute limit: 120 + numPlayers \*
+      20, all events shared this limit. - Cooldown: refresh every 10 seconds
+
+      #### Limits of parameters
+
+      Limit the size of parameters. The event that exceeds the limit will be
+      dropped and log an error to the developer console.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Parameters</th>
+                  <th>Maximum Number of Characters</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>FireLogEvent stackTrace</td>
+                  <td>1000</td>
+              </tr>
+              <tr>
+                  <td>FireLogEvent message</td>
+                  <td>500</td>
+              </tr>
+              <tr>
+                  <td>customData Variant</td>
+                  <td>500 after serialized</td>
+              </tr>
+              <tr>
+                  <td>other string types</td>
+                  <td>50</td>
+              </tr>
+          </tbody>
+      </table>
+
+      See also:
+
+      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
+        used to track player actions pertaining to the in-game economy
+      - `Class.AnalyticsService:FirePlayerProgressionEvent()`, triggers an event
+        used to track player progression through the game
+      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
+        emit a custom event
+    code_samples:
+      - analytics-event---log
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player who triggered the error event, nil if not player related.
+      - name: logLevel
+        type: AnalyticsLogLevel
+        default:
+        summary: |
+          The specified log level (e.g. Debug, Error).
+      - name: message
+        type: string
+        default:
+        summary: |
+          User defined message.
+      - name: debugInfo
+        type: Variant
+        default:
+        summary: |
+          Optional. A dictionary which contains predefined keys including
+          "errorCode" and "stackTrace". Both keys values are strings. stackTrace
+          is a traceback of the current function call stack.
+
+          ```lua
+          local debugInfo = {
+                      errorCode = '123',
+                      stackTrace = debug.traceback()
+                }
+          ```
+      - name: customData
+        type: Variant
+        default:
+        summary: |
+          Optional. User defined data, could be a string, a number or a table.
+    returns:
+      - type: void
+        summary: |
+          No return.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:FirePlayerProgressionEvent
+    summary: |
+      Fire an event used to track player progression through the game.
+    description: |
+      This function triggers an event used to track player progression through
+      the game.
+
+      For example, it should be called when a player starts an in-game tutorial
+      and again that player finishes the tutorial. Another example (see below)
+      includes tracking when a player gains experience, collects objects, and
+      levels up.
+
+      #### Limits of events
+
+      Each game server is allowed a certain number of standard events API calls
+      based on the number of players present (more players means more events
+      will be needed). The events that exceed the limit will be dropped and log
+      an error to the developer console. - Per minute limit: 120 + numPlayers \*
+      20, all events shared this limit. - Cooldown: refresh every 10 seconds
+
+      #### Limits of parameters
+
+      Limit the size of parameters. The event that exceeds the limit will be
+      dropped and log an error to the developer console.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Parameters</th>
+                  <th>Maximum Number of Characters</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>FirePlayerProgressionEvent location</td>
+                  <td>5 pairs of Key and Value, each Key and Value are 50</td>
+              </tr>
+              <tr>
+                  <td>FirePlayerProgressionEvent statistics</td>
+                  <td>5 pairs of Key and Value, each Key and Value are 50</td>
+              </tr>
+              <tr>
+                  <td>customData Variant</td>
+                  <td>500 after serialized</td>
+              </tr>
+              <tr>
+                  <td>other string types</td>
+                  <td>50</td>
+              </tr>
+          </tbody>
+      </table>
+
+      See also:
+
+      - `Class.AnalyticsService:FireInGameEconomyEvent()`, triggers an event
+        used to track player actions pertaining to the in-game economy
+      - `Class.AnalyticsService:FireLogEvent()`, triggers an event used to track
+        errors and warnings experienced by players
+      - `Class.AnalyticsService:FireCustomEvent()`, triggers an event used to
+        emit a custom event
+    code_samples:
+      - analytics-event---progression
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player who triggered the event.
+      - name: category
+        type: string
+        default:
+        summary: |
+          A user defined category for progression.
+      - name: progressionStatus
+        type: AnalyticsProgressionStatus
+        default:
+        summary: |
+          Indicates the status of the progression.
+      - name: location
+        type: Variant
+        default:
+        summary: |
+          The event location. A dictionary that each key-value represents an
+          entry of location data. The key-value is a string-string pair. With
+          this developers can query where is the most frequent location for a
+          specific progression event category. For example, the category could
+          be "LevelUp".
+
+          ```lua
+          local location = {
+              ["placeDesc"] = "Dungeon1",
+              ["levelDesc"] = "level2",
+              ["mapDesc"] = "LeftChamberMap",
+              ["ProgresionType"] = "LevelUp",
+              ["userDefindKey5"] = "0005"
+          }
+          ```
+      - name: statistics
+        type: Variant
+        default:
+        summary: |
+          Optional. A dictionary that each key-value represents an entry of
+          statistics data that allows developers to track any specific data that
+          they want to collect as players progress through their game. Key-Value
+          is a string-number pair.
+
+          ```lua
+          local statistics = {
+              ["numberOfKills"] = 111,
+              ["numberOfExp"] = 222,
+              ["userDefindKey3"] = number,
+              ["userDefindKey4"] = number,
+              ["userDefindKey5"] = number
+          }
+          ```
+      - name: customData
+        type: Variant
+        default:
+        summary: |
+          Optional. User defined data, could be a string, a number or a table.
+    returns:
+      - type: void
+        summary: |
+          No return.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

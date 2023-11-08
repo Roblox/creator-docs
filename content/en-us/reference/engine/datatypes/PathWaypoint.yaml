@@ -1,0 +1,119 @@
+name: PathWaypoint
+type: datatype
+summary: |
+  A description of the steps required to reach the next waypoint in a path.
+description: |
+  The `Datatype.PathWaypoint` data type constructed by a
+  `Enum.PathWaypointAction` action, `Datatype.Vector3` position, and
+  `Library.string` label which is used by the `Class.PathfindingService` to
+  create points along a generated path.
+
+  The code block below constructs a `Datatype.PathWaypoint` variable with
+  `Vector3.new(10, 10, 10)` as its position, `Enum.PathWaypointAction.Walk` as
+  its action, and `Custom Label` as its label:
+
+  ```lua
+  local pos = Vector3.new(10, 10, 10)
+  local waypoint = PathWaypoint.new(pos, Enum.PathWaypointAction.Walk, "Custom Label")
+  ```
+
+  PathWaypoint can also be constructed by passing position and action. Label
+  property will be set to default as empty string.
+
+  ```lua
+  local pos = Vector3.new(10, 10, 10)
+  local waypoint = PathWaypoint.new(pos, Enum.PathWaypointAction.Walk)
+  ```
+
+  ## Action
+
+  The `Enum.PathWaypointAction|Action` describes the action to take in order to
+  reach this PathWaypoint. It can be set to one of the following enum values:
+
+  <table>
+  	<thead>
+  		<tr>
+  			<th>Name</th>
+  			<th>Value</th>
+  			<th>Description</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>
+  				Walk
+  			</td>
+  			<td>0</td>
+  			<td>
+  				Walk action needed to reach this waypoint from the previous one.
+  			</td>
+  		</tr>
+  		<tr>
+  			<td>
+  				Jump
+  			</td>
+  			<td>1</td>
+  			<td>
+  				Jump action needed to reach this waypoint from the previous one.
+  			</td>
+  		</tr>
+  	</tbody>
+  </table>
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: PathWaypoint.new
+    summary: Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3` position, `Enum.PathWaypointAction` action, and optional string label.
+    description: Returns a `Datatype.PathWaypoint` object from the given `Datatype.Vector3` position, `Enum.PathWaypointAction` action, and optional string label.
+    parameters:
+      - name: position
+        type: Vector3
+        default: Vector3.new(0, 0, 0)
+        summary: The 3D position of the waypoint.
+      - name: action
+        type: PathWaypointAction
+        default: Enum.PathWaypointAction.Walk
+        summary: The action to perform at the waypoint.
+      - name: label
+        type: string
+        default: ''
+        summary: The name of the navigation area that generates the waypoint.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: PathWaypoint.Action
+    type: PathWaypointAction
+    summary: |
+      The action to perform at this waypoint.
+    description: |
+      The action to perform at this waypoint.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PathWaypoint.Position
+    type: Vector3
+    summary: |
+      The 3D position of this waypoint.
+    description: |
+      The 3D position of this waypoint.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PathWaypoint.Label
+    type: string
+    summary: |
+      The name of the navigation area that generates this waypoint.
+    description: |
+      The name of the navigation area that generates this waypoint. You can use
+      PathwayPoint.Label to decide the custom action to take to reach the
+      waypoint. PathfindingModifier and Material each have a Label. Automatic
+      jump links have "Jump" as their Label.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

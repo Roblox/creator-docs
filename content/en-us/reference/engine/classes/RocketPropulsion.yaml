@@ -1,0 +1,352 @@
+name: RocketPropulsion
+type: class
+category: Body Movers
+memory_category: Instances
+summary: |
+  Applies a force so that a part follows and faces another part.
+description: |
+  The RocketPropulsion object applies a force on a part so that it both
+  **follows** and **faces** a target part. It acts like a hybrid of
+  `Class.BodyPosition` and `Class.BodyGyro`. Unlike other `Class.BodyMover`s, a
+  RocketPropulsion must be instructed to begin applying a force: call
+  `Class.RocketPropulsion:Fire()|Fire` to start, or call
+  `Class.RocketPropulsion:Abort()|Abort` to stop.
+
+  You can detect when the part reaches its target using the
+  `Class.RocketPropulsion.ReachedTarget|ReachedTarget` event, which fires once
+  the part is within the `Class.RocketPropulsion.TargetRadius|TargetRadius` of
+  the `Class.RocketPropulsion.Target|Target`.
+
+  RocketPropulsion has the most physics-related properties out of all the
+  BodyMovers. It is helpful to separate the properties out into categories based
+  on what they control:
+
+  - **Goal:** `Class.RocketPropulsion.Target|Target`,
+    `Class.RocketPropulsion.TargetOffset|TargetOffset` and
+    `Class.RocketPropulsion.TargetRadius|TargetRadius`
+  - **Position (Thrust):** `Class.RocketPropulsion.MaxSpeed|MaxSpeed`,
+    `Class.RocketPropulsion.MaxThrust|MaxThrust`,
+    `Class.RocketPropulsion.ThrustD|ThrustD` and
+    `Class.RocketPropulsion.ThrustP|ThrustP`
+  - **Rotation (Turn):** - `Class.RocketPropulsion.CartoonFactor|CartoonFactor`,
+    `Class.RocketPropulsion.MaxTorque|MaxTorque`,
+    `Class.RocketPropulsion.TurnD|TurnD` and
+    `Class.RocketPropulsion.TurnP|TurnP`
+
+  Remember, you don't need to use both the translational and rotational force
+  features of a RocketPropulsion: by setting
+  `Class.RocketPropulsion.MaxThrust|MaxThrust` to 0, you can make a part just
+  face the target **without** having it follow the target around (consider also
+  using a `Class.BodyPosition` in addition). Similarly, by setting
+  `Class.RocketPropulsion.MaxTorque|MaxTorque` to `(0, 0, 0)`, you can have a
+  part simply follow another object without facing it (use a `Class.BodyGyro` if
+  you want the object to maintain a specific orientation).
+code_samples:
+inherits:
+  - BodyMover
+tags:
+  - Deprecated
+deprecation_message: |
+  This object is deprecated and should not be used for new work. Use
+  `Class.LineForce` instead.
+properties:
+  - name: RocketPropulsion.CartoonFactor
+    summary: |
+      Determines the tendency of the part to face the
+      `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The CartoonFactor property determines the tendency of the part to face the
+      `Class.RocketPropulsion.Target|Target`. By default, this property is set
+      to `0.7`. If set to `0`, the part will make no effort to face the target.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.MaxSpeed
+    summary: |
+      Determines the maximum speed at which the part will move toward the
+      `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The MaxSpeed property determines the upper limit of the velocity at which
+      the part will move toward the `Class.RocketPropulsion.Target|Target`. A
+      `Class.RocketPropulsion` will apply a force to decelerate a part if it
+      exceeds this speed limit.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Thrust
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.MaxThrust
+    summary: |
+      Determines the maximum amount of thrust that will be exerted to move the
+      part.
+    description: |
+      The MaxThrust property determines the upper limit of the thrust that may
+      be exerted to move the part. Parts or assemblies that have high
+      `Class.BasePart:GetMass()|mass` will require more thrust in order to to
+      remain airborne, and thus track the
+      `Class.RocketPropulsion.Target|Target`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Thrust
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.MaxTorque
+    summary: |
+      Determines the maximum amount of torque that may be exerted to rotate the
+      part towards the `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The MaxTorque property determines the upper limit on the amount of torque
+      that may be exerted in order to rotate the part towards the
+      `Class.RocketPropulsion.Target|Target`. It functions similarly to
+      `Class.BodyGyro.MaxTorque`.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.Target
+    summary: |
+      Determines the object towards which the part should follow/face.
+    description: |
+      The Target property determines the object towards which the
+      `Class.RocketPropulsion` will exert force/torque. If set to `nil`, the the
+      `Class.RocketPropulsion.TargetOffset|TargetOffset` will be used instead.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.TargetOffset
+    summary: |
+      Determines the world offset from the
+      `Class.RocketPropulsion.Target|Target` toward which the force/torque is
+      exerted.
+    description: |
+      The TargetOffset property determines the world offset from the
+      `Class.RocketPropulsion.Target|Target`. Basically, it makes the
+      `Class.RocketPropulsion` behave as if the target were really offset by
+      this property. It is especially useful when Target is set to nil, since
+      this property then acts as the target position.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.TargetRadius
+    summary: |
+      Determines the maximum distance from the
+      `Class.RocketPropulsion.Target|Target` the part must be in order for
+      `Class.RocketPropulsion.ReachedTarget|ReachedTarget` to be fired.
+    description: |
+      The TargetRadius property determines the maximum distance from the
+      `Class.RocketPropulsion.Target` the part must be in order for the
+      `Class.RocketPropulsion.ReachedTarget` event to be fired. It does not
+      affect the exerted forces in any way.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.ThrustD
+    summary: |
+      Determines the dampening applied to the part in order to prevent it from
+      overshooting the `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The D property is used to dampen the velocity of the part in order to
+      prevent it from overshooting the `Class.RocketPropulsion.Target|Target`
+      and causing a **rubber-banding** effect. It behaves similarly to
+      `Class.BodyPosition.D`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Thrust
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.ThrustP
+    summary: |
+      Determines how aggressive of a force is applied in reaching the
+      `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The P property determines how much
+      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
+      applying force in order to reach the
+      `Class.RocketPropulsion.Target|Target` position. The higher this value,
+      the more power will be used and the faster it will be used. This property
+      works similarly to `Class.BodyPosition.P`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Thrust
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.TurnD
+    summary: |
+      Determines the amount of dampening that to use in reaching the
+      `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The D property is how much **dampening** will be applied to the torque
+      used to face the `Class.RocketPropulsion.Target|Target`. When the part
+      approaches the goal orientation it needs to decelerate, otherwise it will
+      rotate past the goal and have to stop and re-accelerate back toward the
+      goal. This is often creates undesirable **rubber-banding** effect, so
+      applying dampening using this property is how that effect is avoided. The
+      higher this value is set, the greater the dampening curve becomes, or the
+      slower the part will approach the goal orientation.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RocketPropulsion.TurnP
+    summary: |
+      Determines how aggressive of a torque is applied in facing the
+      `Class.RocketPropulsion.Target|Target`.
+    description: |
+      The P property determines how much
+      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
+      applying torque in order to face the
+      `Class.RocketPropulsion.Target|Target`. The higher this value, the more
+      power will be used and the faster it will be used.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: RocketPropulsion:Abort
+    summary: |
+      Causes the Rocket to stop moving towards its target, making it fall.
+    description: |
+      Causes the Rocket to stop moving towards its target, making it fall.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RocketPropulsion:Fire
+    summary: |
+      Causes the rocket to fly towards Target.
+    description: |
+      Causes the rocket to fly towards Target.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RocketPropulsion:fire
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.RocketPropulsion:Fire()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: RocketPropulsion.ReachedTarget
+    summary: |
+      Fired when the Rocket comes within TargetRadius of the Target. This is
+      used to make the rocket work, such as make an explosion when it flies near
+      the Target.
+    description: |
+      Fired when the Rocket comes within TargetRadius of the Target. This is
+      used to make the rocket work, such as make an explosion when it flies near
+      the Target.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

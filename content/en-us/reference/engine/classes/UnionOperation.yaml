@@ -1,0 +1,26 @@
+name: UnionOperation
+type: class
+category: Building
+memory_category: Instances
+summary: |
+  Result of parts that have been joined together into a single solid model.
+description: |
+  A **UnionOperation** is the result of individual parts that have been joined
+  together into a single solid model through Studio's solid modeling **Union**
+  tool, or through `Class.BasePart:UnionAsync()` or
+  `Class.BasePart:SubtractAsync()`.
+
+  <img src="/assets/studio/general/Model-Tab-Union.png" alt="Union tool
+  indicated in Model tab" width="630" />
+
+  See [Solid Modeling](../../../parts/solid-modeling.md) to learn more about
+  Studio's solid modeling tools and methods.
+code_samples:
+inherits:
+  - PartOperation
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

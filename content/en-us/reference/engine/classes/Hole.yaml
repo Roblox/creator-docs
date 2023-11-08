@@ -1,0 +1,19 @@
+name: Hole
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  A Hole is an unused type of surface joint. It can be connected to a
+  `Class.MotorFeature` object by using a `Class.VelocityMotor`.
+code_samples:
+inherits:
+  - Feature
+tags:
+  - Deprecated
+deprecation_message: |
+  A Hole is an unused type of surface joint. It should not be used in new work.
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,126 @@
+name: AngularVelocity
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Applies torque on an assembly to maintain a **constant** angular velocity.
+description: |
+  The **AngularVelocity** constraint applies torque on an assembly to maintain a
+  **constant** angular velocity. Alternatively:
+
+  - If you want to control the amount of torque applied, use a `Class.Torque`
+    constraint.
+  - If you only need **initial** angular velocity, set the
+    `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity` method
+    directly on the assembly.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Relativity
+
+  Application of velocity can be controlled through the constraint's
+  `Class.AngularVelocity.RelativeTo|RelativeTo` property. If set to
+  `Enum.ActuatorRelativeTo|World`, the angular velocity vector is used as is. If
+  set to `Enum.ActuatorRelativeTo|Attachment1` and the constraint's
+  `Class.Constraint.Attachment1|Attachment1` property is set to another
+  attachment, the angular velocity will be affected by that of the other
+  attachment. Setting `Class.AngularVelocity.RelativeTo|RelativeTo` to
+  `Enum.ActuatorRelativeTo|Attachment1` also exposes the
+  `Class.AngularVelocity.ReactionTorqueEnabled|ReactionTorqueEnabled` property.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: AngularVelocity.AngularVelocity
+    summary: |
+      A `Datatype.Vector3` that gives the desired or target angular velocity.
+    description: |
+      A `Datatype.Vector3` that gives the desired or target angular velocity.
+      This vector is set in the `Datatype.CFrame` expressed by the
+      `Class.AngularVelocity.RelativeTo|RelativeTo` property.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Torque
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AngularVelocity.MaxTorque
+    summary: |
+      Magnitude of the maximum torque the constraint can apply.
+    description: |
+      Magnitude of the maximum torque the constraint can apply.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Torque
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AngularVelocity.ReactionTorqueEnabled
+    summary: |
+      Causes the constraint to apply equal and opposite reaction forces.
+    description: |
+      This property, when enabled, causes the constraint to apply equal and
+      opposite reaction forces. This is important if the two attached parts can
+      collide, since without reaction forces collisions can create energy that
+      would otherwise be disregarded.
+
+      When enabled, the reaction forces cause the constraint to act like an
+      angular motor between the two attachments.
+
+      Only meaningful when `Class.AngularVelocity.RelativeTo|RelativeTo` is set
+      to `Enum.ActuatorRelativeTo|Attachment1`.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Torque
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AngularVelocity.RelativeTo
+    summary: ''
+    description: |
+      The `Datatype.CFrame` in which the `Class.AngularVelocity` force is
+      specified. If set to `Enum.ActuatorRelativeTo|World`, the angular velocity
+      vector is used as is. If set to `Enum.ActuatorRelativeTo|Attachment1`, the
+      angular velocity is transformed by the `Datatype.CFrame` of the assigned
+      attachment.
+
+      `Class.AngularVelocity.RelativeTo|RelativeTo` can also be set to
+      `Enum.ActuatorRelativeTo|Attachment0`, but it makes no physical sense and
+      will lead to unpredictable behaviors.
+    code_samples:
+    type: ActuatorRelativeTo
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Torque
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

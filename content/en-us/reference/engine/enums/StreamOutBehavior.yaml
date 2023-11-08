@@ -1,0 +1,32 @@
+name: StreamOutBehavior
+type: enum
+summary: |
+  Determines how content is streamed away from Players.
+description: |
+  Determines how content is streamed out from Player clients. This is a
+  temporary rollout API. In the future, streaming will always run on
+  Opportunistic mode.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Currently equivalent to LowMemory. This will eventually change to
+      Opportunistic.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: LowMemory
+    summary: |
+      Only stream out when memory is low.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Opportunistic
+    summary: |
+      Stream out content that is significantly outside of the current
+      StreamingRadius.
+    value: 2
+    tags: []
+    deprecation_message: ''

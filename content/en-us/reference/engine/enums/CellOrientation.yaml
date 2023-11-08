@@ -1,0 +1,30 @@
+name: CellOrientation
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: |
+  This enum is deprecated. It used to work with the legacy `Class.Terrain`
+  engine to set the orientation of terrain cells.
+items:
+  - name: NegZ
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: X
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Z
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: NegX
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

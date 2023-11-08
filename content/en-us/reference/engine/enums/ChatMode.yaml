@@ -1,0 +1,21 @@
+name: ChatMode
+type: enum
+summary: ''
+description: |
+  Controls the methods of communication available to a player.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Menu
+    summary: |
+      The player is restricted to chatting via a menu of chat messages.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: TextAndMenu
+    summary: |
+      A player can chat via custom text messages and a menu of chat messages.
+    value: 1
+    tags: []
+    deprecation_message: ''

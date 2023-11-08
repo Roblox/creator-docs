@@ -1,0 +1,494 @@
+name: table
+type: library
+summary: |
+  A library of table functions.
+description: |
+  This library provides generic functions for table/array manipulation,
+  providing all its functions inside the global `Library.table` variable. Most
+  functions in the `Library.table` library assume that the table represents an
+  array or a list. For these functions, the "length" of a table means the result
+  of the length operator.
+code_samples:
+properties:
+functions:
+  - name: table.clear
+    summary: |
+      Sets all keys in the given table to nil.
+    description: |
+      Sets the value for all keys within the given table to nil. This causes the
+      `#` operator to return `0` for the given table. The allocated capacity of
+      the table's array portion is maintained, which allows for efficient re-use
+      of the space.
+
+      ```lua
+      local grades = {95, 82, 71, 92, 100, 60}
+      print(grades[4], #grades) --> 92, 6
+      table.clear(grades)
+      print(grades[4], #grades) --> nil, 0
+      -- If grades is filled again with the same number of entries,
+      -- no potentially expensive array resizing will occur
+      -- because the capacity was maintained by table.clear.
+      ```
+
+      This function does not delete/destroy the table provided to it. This
+      function is meant to be used specifically for tables that are to be
+      re-used.
+    parameters:
+      - name: table
+        type: table
+        default:
+        summary: |
+          The table whose keys will be cleared.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.clone
+    summary: |
+      Returns a shallow copy of the provided table.
+    description: |
+      Returns an unfrozen shallow copy of the provided table.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be cloned.
+    returns:
+      - type: table
+        summary: |
+          The clone of the provided table.
+    tags:
+    code_samples:
+  - name: table.concat
+    summary: |
+      Returns the given range of table elements as a string where each element
+      is separated by the given separator.
+    description: |
+      Given an array where all elements are strings or numbers, returns the
+      string `t[i] ... sep ... t[i+1] ... sep ... t[j]`. The default value for
+      sep is an empty string, the default for `i` is 1, and the default for `j`
+      is #t. If i is greater than `j`, returns the empty string.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table that will be converted into a string.
+      - name: sep
+        type: string
+        default: ''
+        summary: |
+          The string that will be concatenated between each entry in the table.
+      - name: i
+        type: int
+        default: 1
+        summary: |
+          The starting index of the table concatenation.
+      - name: j
+        type: int
+        default:
+        summary: |
+          The ending index of the table concatenation.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.create
+    summary: |
+      Returns a new table populated with many instances of the specified value.
+    description: |
+      Creates a table with the array portion allocated to the given `number` of
+      elements, optionally filled with the given `value`.
+
+      ```lua
+      local t = table.create(3, "Roblox")
+      print(table.concat(t)) --> RobloxRobloxRoblox
+      ```
+
+      If you are inserting into large array-like tables and are certain of a
+      reasonable upper limit to the number of elements, it's recommended to use
+      this function to initialize the table. This ensures the table's array
+      portion of its memory is sufficiently sized, as resizing it can be
+      expensive. For small quantities this is typically not noticeable.
+    parameters:
+      - name: count
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.find
+    summary: |
+      Returns the index of the first occurrence of `needle` within `haystack`
+      starting from `init`.
+    description: |
+      Within the given array-like table `haystack`, find the first occurrence of
+      value `needle`, starting from index `init` or the beginning if not
+      provided. If the value is not found, `nil` is returned.
+
+      A [linear search](https://en.wikipedia.org/wiki/Linear_search) algorithm
+      is performed.
+
+      ```lua
+      local t = {"a", "b", "c", "d", "e"}
+      print(table.find(t, "d")) --> 4
+      print(table.find(t, "z")) --> nil, because z is not in the table
+      print(table.find(t, "b", 3)) --> nil, because b appears before index 3
+      ```
+    parameters:
+      - name: haystack
+        type: table
+        default:
+        summary: ''
+      - name: needle
+        type: Variant
+        default:
+        summary: ''
+      - name: init
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.foreach
+    summary: |
+      Iterates over the provided table, passing the key and value of each
+      iteration over to the provided function.
+    description: |
+      Iterates over the provided table, passing the key and value of each
+      iteration over to the provided function.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be iterated over.
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function that will be used for the iteration. This function will
+          receive 2 arguments for each iteration, where the 1st argument is the
+          key, and the 2nd argument is the value.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.foreachi
+    summary: |
+      Similar to table.foreach() except index-value pairs are passed instead of
+      key-value pairs.
+    description: |
+      This is similar to table.foreach() except that index-value pairs are
+      passed, not key-value pairs.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table to be iterated over.
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function that will be used for the iteration. This function will
+          receive 2 arguments for each iteration, where the 1st argument is the
+          index, and the 2nd argument is the value.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.freeze
+    summary: |
+      Makes the given table read-only.
+    description: |
+      This function makes the given table read-only, effectively "freezing" it
+      in its current state. Attempting to modify a frozen table throws an error.
+
+      This freezing effect is shallow, which means that you can write to a table
+      within a frozen table. To deep freeze a table, call this function
+      recursively on all of the descending tables.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be frozen.
+    returns:
+      - type: table
+        summary: |
+          The frozen table.
+    tags:
+    code_samples:
+  - name: table.getn
+    summary: |
+      Returns the number of elements in the table passed.
+    description: |
+      Returns the number of elements in the table passed.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table whose size is being measured.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.insert
+    summary: |
+      Inserts the provided value to the target position of the array.
+    description: |
+      Inserts the provided value to the target position of the array.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table that is being appended to.
+      - name: pos
+        type: number
+        default:
+        summary: |
+          The position at which the value will be inserted.
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value that will be appended to the table.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.insert
+    summary: |
+      Appends the provided value to the end of the array.
+    description: |
+      Appends the provided value to the end of the array.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table that is being appended to.
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value that will be appended to the table.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.isfrozen
+    summary: |
+      Returns `true` if the given table is frozen and `false` if it isn't
+      frozen.
+    description: |
+      This function returns `true` if the given table is frozen and `false` if
+      it isn't frozen. You can freeze tables using `Library.table.freeze()`.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to check.
+    returns:
+      - type: bool
+        summary: |
+          Whether the table is frozen from `Library.table.freeze()`.
+    tags:
+    code_samples:
+  - name: table.maxn
+    summary: |
+      Returns the maximum numeric key of the provided table, or zero if the
+      table has no numeric keys.
+    description: |
+      Returns the maximum numeric key of the provided table, or zero if the
+      table has no numeric keys. Gaps in the table are ignored.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.move
+    summary: |
+      Copies the specified range of elements from one table to another.
+    description: |
+      Copies elements from table `src` into table `dst`. Is equivalent to the
+      multiple assignment statement: `dst[t], ... = src[a], ..., src[b]`.
+
+      The default for `dst` is `src`. The destination range may overlap with the
+      source range.
+
+      Returns `dst` for convenience.
+    parameters:
+      - name: src
+        type: table
+        default:
+        summary: |
+          Source table.
+      - name: a
+        type: number
+        default:
+        summary: |
+          Start copying at `src[a]`.
+      - name: b
+        type: number
+        default:
+        summary: |
+          Copy up to and including `src[b]`.
+      - name: t
+        type: number
+        default:
+        summary: |
+          Copy into `dst[t], ...`.
+      - name: dst
+        type: table
+        default: src
+        summary: |
+          Destination table.
+    returns:
+      - type: table
+        summary: |
+          `dst`, for convenience.
+    tags:
+    code_samples:
+      - table-move-example
+  - name: table.pack
+    summary: |
+      Returns a new table containing the provided values.
+    description: |
+      Returns a new table with all arguments stored into keys 1, 2, etc. and
+      with a field "n" with the total number of arguments. Note that the
+      resulting table may not be a sequence.
+
+      ```lua
+      local t = table.pack(1, 2, 3)
+      print(table.concat(t, ", ")) --> 1, 2, 3
+      ```
+    parameters:
+      - name: values...
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.remove
+    summary: |
+      Removes the specified element from the array, shifting later elements down
+      to fill in the empty space if possible.
+    description: |
+      Removes from array t the element at position pos, returning the value of
+      the removed element. When pos is an integer between `1` and `#t`, it
+      shifts down the elements `t[pos+1], t[pos+2], ..., t[#t]` and erases
+      element `t[#t]`. The index `pos` can also be `0` when `#t` is `0` or
+      `#t+1`; in those cases, the function erases the element `t[pos]``.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          The table that is having an element removed.
+      - name: pos
+        type: number
+        default:
+        summary: |
+          The index of the element being removed.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.sort
+    summary: |
+      Sorts table elements using the provided comparison function or the `<`
+      operator.
+    description: |
+      Sorts elements of array t in a given order, from `t[1]` to `t[#t]`. If
+      `comp` is given, then it must be a function that receives two elements and
+      returns true when the first element must come before the second in the
+      final order (so that not `comp(t[i+1],t[i])` will be true after the sort).
+      If `comp` is not given, then the standard Lua operator `<` is used
+      instead.
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: ''
+      - name: comp
+        type: function
+        default: nil
+        summary: |
+          An optional comparison function to be used when comparing elements in
+          the table. This function receives two elements, `a` and `b`, and
+          should return true if `a < b`.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: table.unpack
+    summary: |
+      Returns all elements from the given list as a tuple.
+    description: |
+      Returns the elements from the given list. This function is equivalent to:
+
+      ```lua
+      return list[i], list[i+1], ..., list[j]
+      ```
+
+      By default, `i` is 1 and `j` is the length of `list`.
+
+      ```lua
+      local t = {1, 2, 3}
+      local one, two, three = table.unpack(t)
+      print(one, two, three) -- 1 2 3
+      ```
+
+      This same functionality is also provided by the built-in `unpack`
+      function.
+    parameters:
+      - name: list
+        type: table
+        default:
+        summary: ''
+      - name: i
+        type: number
+        default: 1
+        summary: ''
+      - name: j
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+    code_samples:

@@ -1,0 +1,35 @@
+name: ChatColor
+type: enum
+summary: |
+  Describes the chat color.
+description: |
+  The **ChatColor** enum is used to change the color of a chat using
+  `Class.Chat`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Blue
+    summary: |
+      Blue chat color.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Green
+    summary: |
+      Green chat color.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Red
+    summary: |
+      Red chat color.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: White
+    summary: |
+      White chat color.
+    value: 3
+    tags: []
+    deprecation_message: ''

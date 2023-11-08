@@ -1,0 +1,81 @@
+name: WrapTargetDebugMode
+type: enum
+summary: |
+  The Studio-only property for quickly visualizing and debugging meshes with
+  only outer cages.
+description: |
+  The Studio-only property for quickly visualizing and debugging meshes with
+  only outer cages.
+
+  This debug visualization only works when the WrapTarget is active and does not
+  work if WrapTarget is not active or incorrectly configured.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: |
+      This debug rendering mode does nothing, and this is the default value.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: TargetCageOriginal
+    summary: |
+      This debug mode shows the original cage mesh as it was created.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: TargetCageCompressed
+    summary: |
+      This debug mode shows corresponding cage mesh compressed by clothing
+      layers above it. This debug mode is intended to validate that the
+      compression algorithm and corresponding cages work as intended.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: TargetCageInterface
+    summary: |
+      This debug mode shows the resulting cage mesh for the corresponding Wrap
+      Instance. This debug mode is intended to validate that the final deformed
+      cage looks as intended.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: TargetLayerCageOriginal
+    summary: |
+      The same as TargetCageOriginal but affects all WrapTargets that belong to
+      the Wrap Deformer simultaneously. It doesn't matter which particular
+      WrapTarget you enable this debug visualization option.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: TargetLayerCageCompressed
+    summary: |
+      The same as TargetCageCompressed but affects all WrapTargets that belong
+      to the Wrap Deformer simultaneously. It doesn't matter which particular
+      WrapTarget you enable this debug visualization option.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: TargetLayerInterface
+    summary: |
+      The same as TargetCageInterface but affects all WrapTargets that belong to
+      the Wrap Deformer simultaneously. It doesn't matter which particular
+      WrapTarget you enable this debug visualization option.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Rbf
+    summary: |
+      This debug mode visualizes the internal RBF solver state. You can estimate
+      the wrap deformer expected behavior by looking at this state. All
+      renderable mesh vertices move from a "big sphere" to a "small sphere"
+      along a corresponding line connecting two spheres.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: OuterCageDetail
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''

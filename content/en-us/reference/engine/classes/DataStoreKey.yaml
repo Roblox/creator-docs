@@ -1,0 +1,52 @@
+name: DataStoreKey
+type: class
+category:
+memory_category: Instances
+summary: |
+  Object representing a key on a `Class.DataStoreKeyPages` object.
+description: |
+  Object representing a key on a `Class.DataStoreKeyPages` object. It contains
+  the key name as `Class.DataStoreKey.KeyName`. This object is a member of the
+  `Class.DataStoreKeyPages` object returned by
+  `Class.DataStore:ListKeysAsync()`.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreKey.KeyName
+    summary: |
+      The name of the key.
+    description: |
+      This property indicates the name of the key. This name can then be used in
+      other operations such as `Class.GlobalDataStore:GetAsync()` and
+      `Class.GlobalDataStore:SetAsync()`.
+
+      If `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+      data store through `Class.DataStoreService:GetDataStore()`, the name will
+      include its scope as a prefix.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

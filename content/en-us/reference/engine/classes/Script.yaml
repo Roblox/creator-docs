@@ -1,0 +1,63 @@
+name: Script
+type: class
+category: Scripting
+memory_category: Script
+summary: |
+  An object that contains and runs Lua code on the server.
+description: |
+  A `Class.Script` is a Lua code container that can access server-side objects,
+  properties, and events, such as to award badges to players using
+  `Class.BadgeService`, while `Class.LocalScript|LocalScripts` on the client
+  cannot.
+
+  The instant that the following conditions are met, a script's code is run in a
+  new thread:
+
+  - Its `Class.Script.Enabled|Enabled` property is `true`.
+  - The `Class.Script` object is a descendant of the `Class.Workspace` or
+    `Class.ServerScriptService`.
+
+  The script will continue to run until the above conditions are **not** met, it
+  terminates, or it raises an error (unless that error is raised by a function
+  connected to some event that is firing). Additionally, the thread will be
+  stopped if the script or one of its ancestors is destroyed. A script will
+  continue to run even if the `Class.Instance.Parent|Parent` property is set to
+  `nil` and the `Class.Script` is not destroyed.
+code_samples:
+inherits:
+  - BaseScript
+tags: []
+deprecation_message: ''
+properties:
+  - name: Script.Source
+    summary: |
+      The code to be executed.
+    description: |
+      Represents the code to be executed. It's protected and discouraged for
+      editing directly. Attempting to access this property in a `Class.Script`
+      or `Class.LocalScript` causes errors.
+
+      If you want to read or modify the source of a script that a user has open,
+      use `Class.ScriptEditorService` to interact with the
+      [Script Editor](../../../studio/script-editor.md) rather than directly
+      modifying this property. Both
+      `Class.ScriptEditorService:UpdateSourceAsync()` and
+      `Class.ScriptEditorService:GetEditorSource()` can read or modify script
+      content from the script editor if the script is opened. You can also read
+      the source from the
+      [command line](../../../studio/ui-overview.md#command-bar).
+    code_samples:
+    type: ProtectedString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

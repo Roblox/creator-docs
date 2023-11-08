@@ -1,0 +1,31 @@
+name: ModelLevelOfDetail
+type: enum
+summary: |
+  Controls the level of detail for `Class.Model|Models` in experiences with
+  instance streaming enabled.
+description: |
+  Controls the level of detail for `Class.Model|Models` in experiences with
+  instance [streaming](../../../workspace/streaming.md) enabled.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      Default behavior, currently equivalent to **Disabled**.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: StreamingMesh
+    summary: |
+      A lower resolution "imposter" mesh (colored, coarse mesh that wraps around
+      all child parts of the model) renders outside the streaming radius.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      A lower resolution mesh will not be displayed.
+    value: 2
+    tags: []
+    deprecation_message: ''

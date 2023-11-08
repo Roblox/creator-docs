@@ -1,0 +1,81 @@
+name: Color3Value
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single Color3 value.
+description: |
+  A container object for a single `Datatype.Color3` value.
+code_samples:
+  - Set-Color3Value
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: Color3Value.Value
+    summary: |
+      The stored `Datatype.Color3`.
+    description: |
+      The stored `Datatype.Color3`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: Color3Value.Changed
+    summary: |
+      Fired whenever the `Class.Color3Value.Value` is changed.
+    description: |
+      Fired whenever the `Class.Color3Value.Value` of the `Class.Color3Value` is
+      changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      Color3Value changes and to track the different values that it may change
+      to.
+
+      For instance, this may be useful in games that rely on Color3Values to
+      track values such as colors for games using customizable outfits or items.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - how-to-use-color3value-changed
+    parameters:
+      - name: value
+        type: Color3
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Color3Value.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: Color3
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.Color3Value.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

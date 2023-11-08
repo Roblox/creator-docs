@@ -1,0 +1,28 @@
+name: BreakpointRemoveReason
+type: enum
+summary: |
+  Reason that a breakpoint was removed.
+description: |
+  Reason reason that a breakpoint was removed.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Requested
+    summary: |
+      Breakpoint removal was requested by user or a command.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ScriptChanged
+    summary: |
+      Script that contained the breakpoint has changed.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ScriptRemoved
+    summary: |
+      Script that contained the breakpoint was removed.
+    value: 2
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,244 @@
+name: AudioReverb
+type: class
+category:
+memory_category: Internal
+summary: |
+  Reverberates audio streams.
+description: |
+  `Class.AudioReverb` reverberates audio streams, modeling the natural echoes of
+  a room or enclosed space. It provides one **Input** pin and one **Output** pin
+  which can be connected to/from by `Class.Wire|Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioReverb.DecayRatio
+    summary: |
+      Controls how quickly high frequency sound decays compared to the overall
+      reverb.
+    description: |
+      A ratio of high frequency decay time to total decay time, where high
+      frequencies are determined to be anything above
+      `Class.AudioReverb.ReferenceFrequency|ReferenceFrequency`, in hertz.
+      Ranges from 0.1 to 1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.DecayTime
+    summary: |
+      Controls how long it takes for the reverb to dissipate.
+    description: |
+      Time, in seconds, that it will take for the reverb to fully decay. Ranges
+      from 0.1 to 20.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.Density
+    summary: |
+      Controls how many reflections are generated.
+    description: |
+      A number controlling how many reflections are generated. Ranges from 0
+      to 1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.Diffusion
+    summary: |
+      Controls how smooth and reflective the simulated surfaces are.
+    description: |
+      A number controlling how smooth and reflective the reverb's simulated
+      surfaces are. Ranges from 0 to 1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.DryLevel
+    summary: |
+      Gain level determining how loud the original, unaltered audio stream will
+      be.
+    description: |
+      Gain level, in decibels, determining how loud the original, unaltered
+      audio stream will be. Ranges from -80 to 20.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.EarlyDelayTime
+    summary: |
+      Controls the amount of time before reverberation begins .
+    description: |
+      Time, in seconds, before any reverberation begins. Ranges from 0 to 0.3.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.HighCutFrequency
+    summary: |
+      Frequency above which sound is filtered out of the reverb.
+    description: |
+      Frequency, in hertz, which acts as a cutoff for a low-pass filter. Any
+      audio that has a higher frequency than this is excluded from the reverb.
+      Ranges from 20 to 20,000.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.LateDelayTime
+    summary: |
+      Time, following early delays, before diffuse reverberations begin.
+    description: |
+      Time in seconds, following early delays, before diffuse reverberations
+      begin. Ranges from 0 to 0.1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.LowShelfFrequency
+    summary: |
+      Frequency below which audio can be boosted or reduced in the reverb.
+    description: |
+      Frequency, in hertz, below which audio can be boosted or reduced in the
+      reverb via `Class.AudioReverb.LowShelfGain|LowShelfGain`. Ranges from 20
+      to 20,000.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.LowShelfGain
+    summary: |
+      Controls the presence of low frequency content in the reverb.
+    description: |
+      Gain level, in decibels, that controls the presence of low frequency
+      content in the reverb. Ranges from -36 to 12.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.ReferenceFrequency
+    summary: |
+      Frequency that separates low frequency decay speeds from high frequency
+      decay speeds.
+    description: |
+      Frequency, in hertz, that separates low frequency decay speeds from high
+      frequency decay speeds. This is used by
+      `Class.AudioReverb.DecayRatio|DecayRatio` to determine whether low or high
+      frequencies decay faster. Ranges from 20 to 20,000.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioReverb.WetLevel
+    summary: |
+      Gain level determining how loud the reverberated stream will be.
+    description: |
+      Gain level, in decibels, determining how loud the reverberated stream will
+      be. Ranges from -80 to 20.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

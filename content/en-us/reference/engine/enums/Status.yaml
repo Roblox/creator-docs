@@ -1,0 +1,28 @@
+name: Status
+type: enum
+summary: |
+  The purpose of this Enum is unknown.
+description: |
+  The purpose of this Enum is unknown. It may have been used with the unfinished
+  RbxStatus library which would have allowed you to add conditions to a
+  Humanoid.
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: |
+  The purpose of this Enum is unknown. It may have been used with the unfinished
+  RbxStatus library which would have allowed you to add conditions to a
+  Humanoid.
+items:
+  - name: Poison
+    value: 0
+    summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Confusion
+    value: 1
+    summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''

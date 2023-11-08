@@ -1,0 +1,149 @@
+name: SelectionBox
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  Renders a 3D box around its `Class.PVAdornment.Adornee|Adornee`.
+description: |
+  **SelectionBox** is an object which renders a 3D box around its
+  `Class.PVAdornment.Adornee|Adornee` when it is a descendant of the
+  `Class.Workspace` or anywhere where GUI objects are rendered. The box's
+  geometry consists of rectangular prisms forming an outline/wireframe in
+  addition to a surface for each of its faces. By default, only the outline is
+  visible.
+
+  <img src="/assets/legacy/SelectionBox.jpg" alt="A default SelectionBox adorned to a default Part"  />
+  There are several properties available to configure the appearance of the
+  cube. The outline can modified through the
+  `Class.GuiBase3d.Color3|Color3`&dagger;,
+  `Class.GuiBase3d.Transparency|Transparency`&dagger; and
+  `Class.SelectionBox.LineThickness|LineThickness` properties. The faces can be
+  modified through the `Class.SelectionBox.SurfaceColor3|SurfaceColor3` and
+  `Class.SelectionBox.SurfaceTransparency|SurfaceTransparency` properties.
+  Finally, rendering of the box can be toggled with the
+  `Class.GuiBase3d.Visible|Visible`&dagger; property.
+
+  &dagger; These properties come from this object's superclass,
+  `Class.GuiBase3d`.
+
+  The SelectionBox object does not capture any form of input; it is solely a
+  visual effect. To capture simple pointer input on the adornee, consider using
+  a `Class.ClickDetector`.
+code_samples:
+inherits:
+  - InstanceAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: SelectionBox.LineThickness
+    summary: |
+      Determines the thickness of the boxes outlines, in studs.
+    description: |
+      **LineThickness** determines the thickness of the box's outlines. It is
+      measured in studs, the same unit for `Class.BasePart.Size`. If set to 0,
+      the outline will not be visible at all.
+
+      <img src="/assets/legacy/SelectionBox.LineThickness.jpg" alt="Three SelectionBoxes with LineThickness values of 0.075, 0.15 (default) and 0.3" />
+
+      Pictured above are three default `Class.Part`s with default SelectionBoxes
+      applied to them. Their thicknesses from left-to-right are 0.075, 0.15
+      (default) and 0.3.
+
+      See also:
+
+      - `Class.GuiBase3d.Color`, a property of the superclass `Class.GuiBase3d`
+        which controls the outline's color
+      - `Class.GuiBase3d.Transparency`, a property of the superclass
+        `Class.GuiBase3d` which controls the outline's transparency
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SelectionBox.SurfaceColor
+    summary: ''
+    description: |
+      A `Datatype.BrickColor` version of
+      `Class.SelectionBox.SurfaceColor3|SurfaceColor3`..
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated in favor of
+      `Class.SelectionBox.SurfaceColor3|SurfaceColor3`, which uses the more
+      precise `Datatype.Color3` data type instead of a `Datatype.BrickColor`
+      used by this property.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: SelectionBox.SurfaceColor3
+    summary: |
+      Determines the color of the box's surfaces.
+    description: |
+      **SurfaceColor3** determines the color of the SelectionBox's surfaces.
+
+      See also:
+
+      - `Class.SelectionBox.SurfaceTransparency|SurfaceTransparency`, which
+        controls the transparency of the surfaces. You may need to adjust this
+        property in order to see changes to SurfaceColor.
+      - `Class.GuiBase3d.Color`, a property of the superclass `Class.GuiBase3d`
+        which controls the color of the outline rather than the surface faces
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SelectionBox.SurfaceTransparency
+    summary: |
+      Determines the transparency of the box's surfaces, similar to
+      `Class.BasePart.Transparency`.
+    description: |
+      **SurfaceTransparency** determines the transparency of the SelectionBox's
+      surfaces, similar to the way `Class.BasePart.Transparency` works. By
+      default, this property is 1, which causes the surfaces to not be visible.
+
+      See also:
+
+      - `Class.SelectionBox.SurfaceColor3|SurfaceColor3`, which controls the
+        color of the surface.
+      - `Class.GuiBase3d.Transparency`, a property of the superclass
+        `Class.GuiBase3d` which controls the transparency of the outline rather
+        than the surface faces
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

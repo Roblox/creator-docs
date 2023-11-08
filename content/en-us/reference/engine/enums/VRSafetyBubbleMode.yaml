@@ -1,0 +1,23 @@
+name: VRSafetyBubbleMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: NoOne
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: OnlyFriends
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Anyone
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

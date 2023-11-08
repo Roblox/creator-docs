@@ -1,0 +1,259 @@
+name: Decal
+type: class
+category: Building
+memory_category: GraphicsTexture
+summary: |
+  The Decal object is an object which applies an image to a face of a
+  `Class.BasePart`.
+description: |
+  The Decal object is an object which applies an image to a face of a
+  `Class.BasePart`.
+
+  ## How does a Decal work?
+
+  A Decal will apply an image to the `Class.BasePart` it is parented to. The
+  surface this image is applied to is dependent on the `Class.FaceInstance.Face`
+  property. The size of the decal is dependent on the size of the face, meaning
+  the size and aspect ratio of a decal can be changed by changing its parent's
+  `Class.BasePart.Size`.
+
+  The image a Decal applies is determined by its `Class.Decal.Texture` property.
+  Images can be uploaded to Roblox provided they adhere to the community
+  guidelines.For information on how to upload images, see
+  [Textures and Decals](../../../parts/textures-decals.md).
+
+  ## Alternatives to Decals
+
+  Although Decals have a wide variety of applications, in some cases developers
+  may wish to pick one of the following classes instead.
+
+  - For repeated tiled textures, the `Class.Texture` object should be used
+  - To apply GUI elements, the `Class.SurfaceGui` object should be used
+  - If the effect of lighting on the image needs to be altered, the
+    `Class.SurfaceGui` object should be used
+code_samples:
+  - Changing-Decal-Texture
+inherits:
+  - FaceInstance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Decal.Color3
+    summary: |
+      The `Datatype.Color3` tint of the `Class.Decal`.
+    description: |
+      The `Datatype.Color3` tint of the `Class.Decal`.
+
+      Developers should note that this property only sets the tint of the decal,
+      rather than the color. This means, unless the image associated with the
+      `Class.Decal` was originally white (RGB = 1,1,1) then the color cannot be
+      freely changed using this property.
+
+      By reducing the RGB properties of `Datatype.Color3` in union, developers
+      can make a decal darker.
+    code_samples:
+      - Decal-Color3
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Decal.LocalTransparencyModifier
+    summary: |
+      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
+      property. The effects are only visible to the local player.
+    description: |
+      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
+      property. The effects are only visible to the `Class.Players.LocalPlayer`.
+
+      This property should be used in situations where
+      `Class.Decal.Transparency` is being set by a different script. The benefit
+      of LocalTransparencyModifier is that it can be changed without concern for
+      the original `Class.Decal.Transparency` of the `Class.Decal`
+
+      When LocalTransparencyModifier is set to 1, the `Class.Decal` will be
+      completely invisible regardless of its original transparency. When it is
+      set to 0, the `Class.Decal`s rendered transparency will match the
+      `Class.Decal.Transparency` value. The formula for this is:
+
+      ```
+      Displayed Transparency = Transparency + ((1 - Transparency) * LocalTransparencyModifier)
+      ```
+
+      Note, this property should be used on the client only and will not
+      replicate to the server.
+
+      For a variant of this property for `Class.BasePart`s, see
+      `Class.BasePart.LocalTransparencyModifier`.
+    code_samples:
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Decal.Shiny
+    summary: ''
+    description: |
+      This property dictates how shiny the decal is. It takes a value between 0
+      and 1, where 1 is "full shininess".
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This non-functional property is deprecated and should not be used in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Decal.Specular
+    summary: ''
+    description: |
+      Sets the specularity, which is how the surface responds to light being
+      shined on it.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property no longer functions correctly and is deprecated. It should
+      not be used in new work.
+
+      Developers looking to alter how light interacts with images applied to
+      parts should use `Class.SurfaceGui|SurfaceGuis`.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Decal.Texture
+    summary: |
+      The ContentId of the image to be applied by the `Class.Decal`.
+    description: |
+      The Content ID of the image to be applied by the `Class.Decal`.
+
+      #### How can I upload a Decal?
+
+      Images can be uploaded to Roblox provided they adhere to the community
+      guidelines. For information on how to upload images, see
+      [Textures and Decals](../../../parts/textures-decals.md).
+
+      #### How to find do I find a Decal's Content ID?
+
+      Unlike with `Class.Sound` and `Class.Animation` objects, the Content ID of
+      a Decal is not the same as the number in the URL. There are two main ways
+      of finding the Content ID of a Decal:
+
+      - Paste the URL into the Texture property in Roblox Studio. Roblox will
+        automatically update the property to the correct Content ID. Note this
+        only works in Roblox Studio and cannot be done from Scripts or while the
+        game is running.
+      - Insert the Decal into the game, this is generally done through the
+        Toolbox under 'My Decals'. The Content ID can be found in the decal that
+        is inserted. Note, `Class.InsertService:LoadAsset()` can also be used if
+        developers wish to automate this method.
+    code_samples:
+      - Changing-Decal-Texture
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Decal.Transparency
+    summary: |
+      Determines the transparency of the `Class.Decal` with 0 being completely
+      opaque and 1 completely transparent.
+    description: |
+      Determines the transparency of the `Class.Decal` with 0 being completely
+      opaque and 1 completely transparent.
+
+      Note, `Class.Decal`s also respect the transparency of the original image
+      file uploaded to Roblox. This means transparency can be changed prior to
+      uploading to Roblox, and without the need to use the Transparency
+      property.
+
+      `Class.Decal.LocalTransparencyModifier` acts as a multiplier for the
+      Decal's transparency and should be used when the transparency of the decal
+      is likely to be changed by another script, as is the case with player
+      Characters.
+
+      For `Class.BasePart`s, see `Class.BasePart.Transparency`.
+    code_samples:
+      - Fading-Decal
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Decal.ZIndex
+    summary: |
+      Determines the rendering order when multiple Decals are assigned the same
+      face.
+    description: |
+      **ZIndex** determines the order in which decals on the same
+      `Class.Decal.Face|Face` of a `Class.BasePart` are rendered. Decals are
+      rendered in **ascending** priority order, where lower values are rendered
+      first. Therefore, a decal with a higher ZIndex renders later (and on top
+      of) other Decals with lower ZIndex.
+
+      The range of valid values is -MAX_INT to MAX_INT, inclusive (2,147,483,647
+      or (2^31 - 1)). If you are unsure if you will need to layer an decal
+      between two already-existing decals in the future, it can be a good idea
+      to use multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
+      ZIndex values you can use for elements rendered in-between other elements.
+
+      See also:
+
+      - `Class.GuiObject.ZIndex`, a property which behaves similarly, but for
+        GUI elements
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

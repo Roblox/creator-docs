@@ -1,0 +1,91 @@
+name: StringValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single string.
+description: |
+  A StringValue is an object whose purpose is to store a single
+  [Lua string](https://www.lua.org/pil/2.4.html). The length of the string can't
+  be more than 200,000 characters (this will cause a "String too long" error).
+  Like all "-Value" objects, this single value is stored in the Value property.
+  The Changed event for this (and other objects like it) will fire with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
+
+  If the string is too long to be displayed in the Value field within Properties
+  window, it will partially show the string contents followed by an ellipsis
+  (...).
+code_samples:
+  - Changed-Event
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: StringValue.Value
+    summary: |
+      The stored string.
+    description: |
+      The stored <a href="../../../luau/strings.md">string</a>.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: StringValue.Changed
+    summary: |
+      Fired whenever `Class.StringValue.Value` is changed.
+    description: |
+      Fired whenever the `Class.StringValue.Value` of the `Class.StringValue` is
+      changed. It will run with the new value being stored in the argument
+      object, instead of a string representing the property being changed.
+
+      This event, like other changed events, can be used to track when an
+      StringValue changes and to track the different values that it may change
+      to.
+
+      For instance, this may be useful in games that rely on StringValues to
+      track values such as NPC or item names.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.BoolValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - how-to-use-stringvalue-changed
+    parameters:
+      - name: value
+        type: string
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StringValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: string
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.StringValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

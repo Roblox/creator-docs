@@ -1,0 +1,125 @@
+name: PluginAction
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  PluginAction is an object that represents a generic performable action in
+  Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`. In
+  Roblox Studio, they can be assigned a keyboard shortcut under
+  `File → Advanced → Customize Shortcuts...`, and they can also be added to the
+  Quick Access Toolbar.
+
+  PluginActions must be created using the `Class.Plugin:CreatePluginAction()`
+  function in order to work as expected.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PluginAction.ActionId
+    summary: |
+      A string that uniquely identifies this action.
+    description: |
+      A string that uniquely identifies this action. This string is the key used
+      when saving and loading the action's state in Roblox Studio.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PluginAction.AllowBinding
+    summary: |
+      Whether the `Class.PluginAction` will be hidden from Studio's shortcuts
+      view.
+    description: |
+      This property determines whether the `Class.PluginAction` will be hidden
+      from Studio's shortcuts view. Useful for contextual actions. It defaults
+      to true.
+
+      See also:
+
+      - `Class.Plugin.CreatePluginAction`, creates a PluginAction
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PluginAction.StatusTip
+    summary: |
+      The description of the action, when viewing it from the keyboard shortcuts
+      window in Roblox Studio.
+    description: |
+      The description of the action, when viewing it from the keyboard shortcuts
+      window in Roblox Studio.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PluginAction.Text
+    summary: |
+      The text that is displayed when viewing this action in Roblox Studio.
+    description: |
+      The text that is displayed when viewing this action in Roblox Studio.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events:
+  - name: PluginAction.Triggered
+    summary: |
+      Fires when the action is triggered. This can be done by either activating
+      the action from the Quick Access Toolbar, or by using the keyboard
+      shortcut that was bound to it.
+    description: |
+      Fires when the action is triggered. This can be done by either activating
+      the action from the Quick Access Toolbar, or by using the keyboard
+      shortcut that was bound to it.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

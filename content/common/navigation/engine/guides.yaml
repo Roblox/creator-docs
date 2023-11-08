@@ -45,6 +45,16 @@ navigation:
             path: /projects/collaboration
           - title: Groups
             path: /projects/groups
+      - title: Performance Optimization
+        section:
+          - title: Overview
+            path: /projects/performance-optimization/
+          - title: Computation
+            path: /projects/performance-optimization/computation
+          - title: Memory
+            path: /projects/performance-optimization/memory
+          - title: Load Times
+            path: /projects/performance-optimization/load-times
   - title: Assets
     section:
       - title: Overview
@@ -247,6 +257,8 @@ navigation:
                 path: /luau/functions
               - title: Type Coercion
                 path: /luau/type-coercion
+              - title: Luau Type Checking
+                path: /luau/type-checking
   - title: Environment
     section:
       - title: Overview
@@ -507,10 +519,12 @@ navigation:
             path: /production/monetization/immersive-ads
           - title: Subscriptions
             path: /production/monetization/subscriptions
-          - title: Developer Products
-            path: /production/monetization/developer-products
           - title: Passes
             path: /production/monetization/game-passes
+          - title: Developer Products
+            path: /production/monetization/developer-products
+          - title: Avatar Items
+            path: /production/monetization/avatar-items
           - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
           - title: Paid Access
@@ -569,8 +583,6 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
-      - title: Third-Party Analytics Services
-        path: /production/analytics/third-party-analytics
   - title: Community
     section:
       - title: Overview

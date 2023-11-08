@@ -1,0 +1,32 @@
+name: CurrencyType
+type: enum
+summary: |
+  The CurrencyType Enum is used with `Class.MarketplaceService` to set the
+  currency used.
+description: |
+  The CurrencyType Enum is used with `Class.MarketplaceService` to set the
+  currency used. As tickets no longer exist on the Roblox platform, this enum is
+  **ignored** in most API that previously used it, such as
+  `Class.MarketplaceService:PromptPurchase()|PromptPurchase`.
+code_samples:
+tags: []
+deprecation_message: |
+  Tickets have been removed, so this Enum shouldn't need to be used.
+items:
+  - name: Default
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Robux
+    summary: |
+      Use Robux.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Tix
+    summary: |
+      Use Tickets.
+    value: 2
+    tags: []
+    deprecation_message: ''

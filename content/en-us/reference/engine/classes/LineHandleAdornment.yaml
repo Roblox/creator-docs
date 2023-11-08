@@ -1,0 +1,57 @@
+name: LineHandleAdornment
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  A line that can be adorned to a `Class.BasePart`.
+description: |
+  For handles to be interactive, they must be parented to a player's PlayerGui
+  or the CoreGui. The **LineHandleAdornment** is a line that can be adorned to a
+  `Class.BasePart`. This line starts at the center of the adornment's
+  `Class.HandleAdornment.CFrame` (offset by the adornment's
+  `Class.HandleAdornment.SizeRelativeOffset`) and will be oriented along its
+  CFrame. This adornment can listen to input events and is commonly used to make
+  dragger tools.
+code_samples:
+inherits:
+  - HandleAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: LineHandleAdornment.Length
+    summary: |
+      The length of the line.
+    description: |
+      The length of the line.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LineHandleAdornment.Thickness
+    summary: |
+      The thickness of the line in pixels.
+    description: |
+      The thickness of the line in pixels.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,93 @@
+name: AudioEcho
+type: class
+category:
+memory_category: Internal
+summary: |
+  Overlays delayed copies of audio streams.
+description: |
+  `Class.AudioEcho` overlays delayed copies of audio streams. It provides one
+  **Input** pin and one **Output** pin which can be connected to/from by
+  `Class.Wire|Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioEcho.DelayTime
+    summary: |
+      The amount of time between echoes.
+    description: |
+      The amount of time between echoes, in seconds. Ranges from 0.001 to 5.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEcho.DryLevel
+    summary: |
+      Gain level determining how loud the original, unaltered audio stream will
+      be.
+    description: |
+      Gain level, in decibels, determining how loud the original, unaltered
+      audio stream will be. Ranges from -80 to 10.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEcho.Feedback
+    summary: |
+      How slowly echoes fade away.
+    description: |
+      Determines how slowly echoes fade away, with a range of 0 to 1. A value of
+      0 means that only a single echo is heard, whereas a value of 1 means that
+      old echoes never fully disappear.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEcho.WetLevel
+    summary: |
+      Gain level determining how loud the echoed stream will be.
+    description: |
+      Gain level, in decibels, determining how loud the echoed stream will be.
+      Ranges from -80 to 10.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,41 @@
+{
+  "name": "SampleLibrary",
+  "type": "library",
+  "summary": "Sample summary.",
+  "description": "Sample description.",
+  "code_samples": ["sample1"],
+  "properties": [
+    {
+      "name": "Enum",
+      "type": "undefined",
+      "summary": "Sample summary.",
+      "description": "Sample description.",
+      "tags": null,
+      "code_samples": null
+    }
+  ],
+  "functions": [
+    {
+      "name": "delay",
+      "summary": "Sample summary.",
+      "description": "Sample description.",
+      "parameters": [
+        {
+          "name": "parameter1",
+          "type": "number",
+          "default": null,
+          "summary": "Sample summary."
+        },
+        {
+          "name": "parameter2",
+          "type": "function",
+          "default": null,
+          "summary": "Sample summary."
+        }
+      ],
+      "returns": [{ "type": "void", "summary": "Sample summary." }],
+      "tags": null,
+      "code_samples": null
+    }
+  ]
+}

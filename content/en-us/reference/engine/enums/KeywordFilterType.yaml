@@ -1,0 +1,22 @@
+name: KeywordFilterType
+type: enum
+summary: |
+  Determines if a filter is 'inclusive' or 'exclusive'.
+description: |
+  Determines if a filter is 'inclusive' or 'exclusive'.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Include
+    summary: |
+      Include the matched content.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Exclude
+    summary: |
+      Exclude the matched content.
+    value: 1
+    tags: []
+    deprecation_message: ''

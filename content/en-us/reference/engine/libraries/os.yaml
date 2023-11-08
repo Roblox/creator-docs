@@ -1,0 +1,217 @@
+name: os
+type: library
+summary: |
+  This library provides functions related to time and date.
+description: |
+  This library currently serves the purpose of providing information about the
+  system time under the UTC format. It has been heavily sandboxed from the
+  standard Lua `Library.os` library and does not allow you to perform any
+  system-altering operations.
+code_samples:
+properties:
+functions:
+  - name: os.time
+    summary: |
+      Returns how many seconds have passed since the Unix epoch (1 January 1970,
+      00:00:00) under current UTC time.
+    description: |
+      Returns how many seconds have passed since the Unix epoch (1 January 1970,
+      00:00:00), under current UTC time. If provided a table formatted similarly
+      to that returned by `Library.os.date()`, it will return the number of
+      seconds since that time instead.
+
+      ```lua
+      print(os.time())  --> 1586982482 (ran at approx. April 15th, 2020 at 1:28 PM PST)
+      print(os.time{
+          year=2020, month=4, day=15,  -- Date components
+          hour=16, min=28, sec=0  -- Time components
+      })  --> 1586968080
+      ```
+    parameters:
+      - name: time
+        type: table
+        default: UTC time
+        summary: |
+          A dictionary table describing a specific time, similar to that
+          returned by `Library.os.date()`. If not provided, uses the current UTC
+          time.
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: os.difftime
+    summary: |
+      Returns the number of seconds from t1 to t2, assuming the arguments are
+      correctly casted to the time_t format.
+    description: |
+      Returns the number of seconds from t1 to t2. The difference is computed
+      assuming that t1 and t2 are correctly casted to the
+      [time_t](http://en.cppreference.com/w/cpp/chrono/c/time_t) format.
+    parameters:
+      - name: t2
+        type: int
+        default:
+        summary: ''
+      - name: t1
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: os.date
+    summary: |
+      Formats the given string with date/time information based on the given
+      time (or if not provided, the value returned by os.time).
+    description: |
+      Formats the given `formatString` with date/time information based on the
+      given time, or if not provided, the value returned by `Library.os.time()`.
+      The following specifiers (based on the C function strftime) are supported:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Specifier</th>
+            <th>Meaning</th>
+            <th>Example<sup>&dagger;</sup></th>
+           </tr>
+        </thead>
+      <tbody>
+      <tr><td>%a</td><td>Abbreviated weekday name *</td> <td>Wed</td></tr>
+      <tr><td>%A</td><td>Full weekday name *</td>        <td>Wednesday</td></tr>
+      <tr><td>%b</td><td>Abbreviated month name *</td>   <td>Sep</td></tr>
+      <tr><td>%B</td><td>Full month name *</td>          <td>September</td></tr>
+      <tr><td>%c</td><td>Date and time *</td>            <td>09/16/98 23:48:10</td></tr>
+      <tr><td>%d</td><td>Day of the month</td>         <td>16</td></tr>
+      <tr><td>%H</td><td>Hour, using 24-hour clock</td><td>23</td></tr>
+      <tr><td>%I</td><td>Hour, using 12-hour clock</td><td>11</td></tr>
+      <tr><td>%j</td><td>Day of year</td>              <td>259</td></tr>
+      <tr><td>%m</td><td>Month</td>                    <td>09</td></tr>
+      <tr><td>%M</td><td>Minute</td>                   <td>48</td></tr>
+      <tr><td>%p</td><td>Either "AM" or "PM"</td>      <td>pm</td></tr>
+      <tr><td>%S</td><td>Second</td>                   <td>10</td></tr>
+      <tr><td>%U</td><td>Week number (first Sunday as the first day of week one)</td><td>37</td></tr>
+      <tr><td>%w</td><td>Weekday</td>                  <td>3</td></tr>
+      <tr><td>%W</td><td>Week number (first Monday as the first day of week one)</td><td>37</td></tr>
+      <tr><td>%x</td><td>Date *</td>                     <td>09/16/98</td></tr>
+      <tr><td>%X</td><td>Time *</td>                     <td>23:48:10</td></tr>
+      <tr><td>%y</td><td>Two-digit year</td>           <td>98</td></tr>
+      <tr><td>%Y</td><td>Full year</td>                <td>1998</td></tr>
+      <tr><td>%z</td><td>ISO 8601 offset from UTC in timezone (1 minute = 1, 1 hour = 100)</td><td>-0400</td></tr>
+      <tr><td>%Z</td><td>Timezone name or abbreviation *</td><td>Eastern Daylight Time</td></tr>
+      <tr><td>%%</td><td>The % character</td>          <td>%</td></tr>
+      </tbody>
+      </table>
+
+      \* This value can vary depending on the current locale.
+
+      &dagger; The example provided is for September 16th, 1998 (a Wednesday) at
+      11:48:10 PM (23:48:10), ran using locale "en-us" in Eastern Time (ET).
+
+      If the provided `formatString` is exactly `"*t"` (local time) or `"!*t"`
+      (UTC time), this function instead returns a dictionary containing the
+      following components, which are normally available in the specifiers
+      above.
+
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr>
+          <td>year</td>
+          <td>int</td>
+          <td>An integer that describes the current year of the Current Era (ex. 2017)</td>
+        </tr>
+        <tr>
+          <td>month</td>
+          <td>int</td>
+          <td>An integer between 1 and 12 (starting from January) that describes the current month.</td>
+        </tr>
+        <tr>
+          <td>wday</td>
+          <td>int</td>
+          <td>An integer between 1 and 7 (starting from Sunday) that describes the current week day.</td>
+        </tr>
+        <tr>
+          <td>yday</td>
+          <td>int</td>
+          <td>An integer between 1 and 366 describing how many days we are into the year.<br />There can be 366 days if it is a leap year.</td>
+        </tr>
+        <tr>
+          <td>day</td>
+          <td>int</td>
+          <td>An integer between 1 and 31 describing the current day of the month.</td>
+        </tr>
+        <tr>
+          <td>hour</td>
+          <td>int</td>
+          <td>An integer between 1 and 24 describing the current hour of the day.</td>
+        </tr>
+        <tr>
+          <td>min</td>
+          <td>int</td>
+          <td>An integer between 0 and 59 describing the current minute of the hour.</td>
+        </tr>
+        <tr>
+          <td>sec</td>
+          <td>int</td>
+          <td>An integer between 0 and 60 describing the current second of the hour.<br />(60 because the function is described to indicate leap seconds, but in practice it probably doesn't).</td>
+        </tr>
+        <tr>
+          <td>isdst</td>
+          <td>bool</td>
+          <td>A boolean describing if daylight savings time is currently active.</td>
+        </tr>
+      </tbody>
+      </table>
+    parameters:
+      - name: formatString
+        type: string
+        default:
+        summary: |
+          Must be either `"*t"` or `"!*t"`.
+      - name: time
+        type: int
+        default:
+        summary: |
+          The time value to format.
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+    code_samples:
+  - name: os.clock
+    summary: |
+      Returns a high-precision amount of CPU time used by Lua in seconds,
+      intended for use in benchmarking.
+    description: |
+      Returns the amount of CPU time used by Lua in seconds. This value has high
+      precision, about 1 microsecond, and is intended for use in benchmarking.
+
+      ```lua
+      -- Record the initial time:
+      local startTime = os.clock()
+      -- Do something you want to measure the performance of:
+      local a, b = 0, 1
+      for i = 1, 5000000 do
+          a, b = b, a
+      end
+      -- Measure amount of time this took:
+      local deltaTime = os.clock() - startTime
+      print("Elapsed time: " .. deltaTime)
+      -->  Elapsed time: 0.044425600033719 (actual number may vary)
+      ```
+    parameters:
+    returns:
+      - type: double
+        summary: ''
+    tags:
+    code_samples:

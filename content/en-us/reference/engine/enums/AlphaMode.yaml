@@ -1,0 +1,32 @@
+name: AlphaMode
+type: enum
+summary: |
+  Used by `Class.SurfaceAppearance.AlphaMode` to determine how the alpha channel
+  of the `Class.SurfaceAppearance.ColorMap` of a `Class.SurfaceAppearance` is
+  used.
+description: |
+  Used by `Class.SurfaceAppearance.AlphaMode` to determine how the alpha channel
+  of the `Class.SurfaceAppearance.ColorMap` of a `Class.SurfaceAppearance` is
+  used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Overlay
+    summary: |
+      Overlays the `Class.SurfaceAppearance.ColorMap` on top of the underlying
+      part color based on the map's alpha channel.
+
+      ![AlphaMode OverLay](/assets/legacy/fern-overlay.png)
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Transparency
+    summary: |
+      Uses the `Class.SurfaceAppearance.ColorMap|ColorMap` alpha channel to
+      control the transparency of the surface.
+
+      ![AlphaMode Transparency](/assets/legacy/fern-cutout.png).
+    value: 1
+    tags: []
+    deprecation_message: ''

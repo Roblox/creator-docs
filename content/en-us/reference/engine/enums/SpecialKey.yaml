@@ -1,0 +1,38 @@
+name: SpecialKey
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Insert
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Home
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: End
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PageUp
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: PageDown
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ChatHotkey
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

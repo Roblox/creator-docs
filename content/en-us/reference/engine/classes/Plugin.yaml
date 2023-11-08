@@ -1,0 +1,843 @@
+name: Plugin
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  Plugin is the main object responsible for creating basic studio widgets. It is
+  a custom add-on to Studio which adds new behavior and features that are not
+  normally included.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: Plugin.CollisionEnabled
+    summary: |
+      Returns whether the user enabled `Collisions` in studio under the Model
+      tab.
+    description: |
+      Returns whether the user enabled `Collisions` in studio under the Model
+      tab.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Plugin.GridSize
+    summary: |
+      Returns the grid size the user has set in studio under the Model tab.
+    description: |
+      Returns the grid size the user has set in studio under the Model tab. This
+      can be 1, 0.2 or 0.01, but has rounding errors. The 1/5th option should
+      return 0.2, but could return 0.20000000298023 instead. This code can be
+      used to get the real gridsize:
+
+      ```lua
+      local gridsize = plugin.GridSize
+      if math.abs(gridsize-0.2) &lt; 0.005 then -- Check if the gridsize is between 0.195 and 0.205
+      	gridsize = 0.2
+      elseif math.abs(gridsize-0.01) &lt; 0.005 then -- Between 0.005 and 0.015
+      	gridsize = 0.01
+      else -- Assume it's 1
+      	gridsize = 1
+      end
+      ```
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: Plugin:Activate
+    summary: |
+      Sets the state of the calling plugin to activated.
+    description: |
+      This function sets the state of the calling plugin to activated.
+      Activating the plugin allows mouse control through the
+      `Class.Plugin:GetMouse()` method.
+
+      At any given time there are either 0 or 1 Activated Plugins. Activating a
+      plugin will deactivate all other plugins (they will receive a
+      `Class.Plugin.Deactivation` event).
+
+      See also:
+
+      - `Class.Plugin:IsActivatedWithExclusiveMouse()`, returns true if this
+        plugin is currently active with an exclusive mouse, after having been
+        activated via this function
+      - `Class.Plugin.Unloading`, fires immediately before the plugin is
+        unloaded or reloaded via uninstallation, deactivation, or updating
+    code_samples:
+    parameters:
+      - name: exclusiveMouse
+        type: bool
+        default:
+        summary: |
+          A boolean specifying whether to activate the plugin with exclusive
+          mouse. If true, a `Class.PluginMouse` can be retrieved via
+          `Class.Plugin:GetMouse()`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:CreatePluginAction
+    summary: |
+      Creates a `Class.PluginAction` which is an object that represents a
+      generic performable action in Roblox Studio, with no directly associated
+      `Toolbar` or `Enum.Button`.
+    description: |
+      This function creates a `Class.PluginAction` which is an object that
+      represents a generic performable action in Roblox Studio, with no directly
+      associated `Toolbar` or `Enum.Button`. In Roblox Studio, they can be
+      assigned a keyboard shortcut under
+      `File → Advanced → Customize Shortcuts…`, and they can also be added to
+      the Quick Access Toolbar.
+
+      When an action is triggered, the `Class.PluginAction.Triggered` event is
+      signaled.
+
+      In order for PluginActions work as expected, they must be created using
+      this function.
+
+      See also:
+
+      - `Class.PluginMenu`, a context menu that can be shown in Studio which
+        displays a list of PluginActions and supports submenus
+      - `Class.Plugin:CreatePluginMenu()`, creates a PluginMenu
+    code_samples:
+      - creating-a-pluginaction
+    parameters:
+      - name: actionId
+        type: string
+        default:
+        summary: |
+          Must be a unique string that identifies this PluginAction from others.
+      - name: text
+        type: string
+        default:
+        summary: |
+          The displayed name of the action.
+      - name: statusTip
+        type: string
+        default:
+        summary: |
+          The displayed description of the action.
+      - name: iconName
+        type: string
+        default: ''
+        summary: |
+          The name of the icon used to display the plugin.
+      - name: allowBinding
+        type: bool
+        default: true
+        summary: |
+          Whether the `Class.PluginAction` will be hidden from Studio's
+          shortcuts view. Useful for contextual actions. Defaults to true.
+    returns:
+      - type: PluginAction
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:CreatePluginMenu
+    summary: |
+      Creates a new plugin menu.
+    description: |
+      This function creates a new `Class.PluginMenu`, which is a context menu
+      that can be shown in Studio that displays a list of
+      `Class.PluginAction|PluginActions` and supports submenus.
+
+      In order for PluginMenus to work as expected, they must be created using
+      this function.
+
+      See also:
+
+      - `Class.PluginAction`, an object that represents a generic performable
+        action in Roblox Studio, with no directly associated `Toolbar` or
+        `Enum.Button`.
+      - `Class.Plugin:CreatePluginAction()`, creates a PluginAction
+      - `Class.PluginMenu.Title`, the text to be displayed when used as a sub
+        menu
+      - `Class.PluginMenu.Icon`, the icon to be displayed when used as a sub
+        menu
+      - `Class.PluginMenu:AddAction()`, adds the given action to the menu
+      - `Class.PluginMenu:AddNewAction()`, creates a temporary action that is
+        hidden from Studio's customize shortcuts window
+      - `Class.PluginMenu:AddMenu()`, adds the given menu as a separator
+      - `Class.PluginMenu:AddSeparator()`, adds a separator between items in the
+        menu
+      - `Class.PluginMenu:Clear()`, clears the menu
+      - `Class.PluginMenu:ShowAsync()`, shows the menu at the mouse cursor.
+        Yields until either an item is selected or the menu is closed. The
+        selected action fires its Triggered event
+    code_samples:
+      - creating-a-pluginaction-and-pluginmenu
+    parameters:
+      - name: id
+        type: string
+        default:
+        summary: |
+          Unique ID for the menu.
+      - name: title
+        type: string
+        default: ''
+        summary: |
+          The text to be displayed when used as a sub menu.
+      - name: icon
+        type: string
+        default: ''
+        summary: |
+          The icon to be displayed when used as a sub menu.
+    returns:
+      - type: PluginMenu
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:CreateToolbar
+    summary: |
+      Creates a new `Class.PluginToolbar` with the given name.
+    description: |
+      The **CreateToolbar** function creates a new `Class.PluginToolbar` with
+      the given name. The toolbar can then be used to create plugin buttons.
+
+      <img src="/assets/legacy/PluginToolbar-light.png" />
+    code_samples:
+      - Plugin-CreateToolbar1
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The visible text on the toolbar, labeling the group of buttons
+          contained within.
+    returns:
+      - type: PluginToolbar
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:Deactivate
+    summary: |
+      Deactivates the plugin.
+    description: |
+      Deactivates the plugin. This will disengage the associated
+      `Class.PluginMouse` if it has been activated
+
+      See also:
+
+      - `Class.Plugin:Activate()`, sets the state of the calling plugin to
+        activated
+      - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
+      - `Class.Plugin.Unloading`, fires immediately before the plugin is
+        unloaded or reloaded via uninstallation, deactivation, or updating
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:GetJoinMode
+    summary: |
+      Returns the `Enum.JointCreationMode` the user has set in studio under the
+      Model tab.
+    description: |
+      Returns the `Enum.JointCreationMode` the user has set in studio under the
+      Model tab.
+    code_samples:
+    parameters: []
+    returns:
+      - type: JointCreationMode
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:GetMouse
+    summary: |
+      Returns a `Class.Mouse` that can be used while the plugin is active.
+    description: |
+      **GetMouse** returns a `Class.PluginMouse` that can be used while the
+      plugin is active through `Class.Plugin:Activate()`.
+    code_samples:
+      - Plugin-GetMouse1
+    parameters: []
+    returns:
+      - type: PluginMouse
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:GetSelectedRibbonTool
+    summary: |
+      Returns the currently selected `Enum.RibbonTool`.
+    description: |
+      GetSelectedRibbonTool return the currently selected `Enum.RibbonTool`. It
+      returns an Enum that corresponds to a particular tool. This will return
+      whether the tool is selected manually or programmatically via
+      `Class.Plugin:SelectRibbonTool()`.
+    code_samples:
+      - Plugin-GetSelectedRibbonTool1
+    parameters: []
+    returns:
+      - type: RibbonTool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:GetSetting
+    summary: |
+      Retrieves a previously stored value with the given key, or nil if the
+      given key doesn't exist.
+    description: |
+      Retrieves a previously stored value with the given key, or nil if the
+      given key doesn't exist.
+    code_samples:
+      - Plugin-GetSetting1
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:GetStudioUserId
+    summary: |
+      Returns the studio user's userId if they're logged in, otherwise
+      returns 0.
+    description: |
+      Returns the studio user's userId if they're logged in, otherwise
+      returns 0.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:Intersect
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:IsActivated
+    summary: |
+      Returns true if this plugin is currently active, after having been
+      activated via the `Class.Plugin:Activate()` function.
+    description: |
+      This function returns true if this plugin is currently active, after
+      having been activated via the `Class.Plugin:Activate()` function.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          A boolean indicating whether the plugin is currently active.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:IsActivatedWithExclusiveMouse
+    summary: |
+      Returns true if this plugin is currently active with an exclusive mouse,
+      after having been activated via the `Class.Plugin:Activate()` function.
+    description: |
+      This function returns true if this plugin is currently active with an
+      exclusive mouse, after having been activated via the
+      `Class.Plugin:Activate()` function. If this returns true, a
+      `Class.PluginMouse` can be retrieved via `Class.Plugin:GetMouse()`.
+
+      See also:
+
+      - `Class.Plugin.Deactivation`, fires when the plugin is deactivated
+      - `Class.Plugin.Unloading`, fires immediately before the plugin is
+        unloaded or reloaded via uninstallation, deactivation, or updating
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether this plugin is currently active with an exclusive mouse.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:Negate
+    summary: |
+      Negates the given parts and returns the resulting NegateOperations.
+    description: |
+      Negates the given parts and returns the resulting NegateOperations.
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:OpenScript
+    summary: |
+      Used to open the given script instance in an editor window, in Roblox
+      studio, at the given line. If no line is given as an argument it will
+      default to 1.
+    description: |
+      Used to open the given script instance in an editor window, in Roblox
+      studio, at the given line. If no line is given as an argument it will
+      default to 1.
+    code_samples:
+      - Plugin-OpenScript1
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: ''
+      - name: lineNumber
+        type: int
+        default: 1
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:OpenWikiPage
+    summary: |
+      Opens the context help window to the wiki page that `url` links to.
+    description: |
+      Opens the context help window to the wiki page that `url` links to.
+    code_samples:
+      - Plugin-OpenWikiPage1
+    parameters:
+      - name: url
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:SaveSelectedToRoblox
+    summary: |
+      Opens an upload window for the user's current selection.
+    description: |
+      Opens an upload window for the user's current selection.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:SelectRibbonTool
+    summary: |
+      Activates the specified Roblox Studio tool.
+    description: |
+      Activates the specified Roblox Studio tool. If the tool opens a window,
+      the position parameter specifies where it should be shown on the screen.
+
+      Note:
+
+      - An object must be selected in order for this to work correctly.
+      - Altering the scale fields of the `position` property will not affect the
+        dialog popups.
+    code_samples:
+    parameters:
+      - name: tool
+        type: RibbonTool
+        default:
+        summary: ''
+      - name: position
+        type: UDim2
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:Separate
+    summary: |
+      Separates the given UnionOperations and returns the resulting parts.
+    description: |
+      Separates the given UnionOperations and returns the resulting parts.
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:SetSetting
+    summary: |
+      Stores a given value for later use under the given key. The value will
+      persist even after studio is closed.
+    description: |
+      Stores a given value for later use under the given key. The value will
+      persist even after studio is closed.
+    code_samples:
+      - Plugin-SetSetting1
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:StartDrag
+    summary: |
+      Starts a drag action given a dictionary of parameters.
+    description: |
+      **StartDrag** initiates a drag action using a dictionary of parameters.
+      The parameters are as follows:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sender</td>
+              <td>string</td>
+              <td><code>""</code></td>
+              <td>
+                  Identifies the source of the drag action to the drop target
+              </td>
+              </tr>
+              <tr>
+              <td>MimeType</td>
+              <td>string</td>
+              <td><code>""</code></td>
+              <td>
+                  The [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of Data.
+              </td>
+              </tr>
+              <tr>
+              <td>Data</td>
+              <td>string</td>
+              <td><code>""</code></td>
+              <td>
+                  Information about the drag action (eg. what is being dragged). Should be used by the drop target.
+              </td>
+              </tr>
+              <tr>
+              <td>MouseIcon</td>
+              <td>Content</td>
+              <td><code>""</code></td>
+              <td>
+                  The icon to use for the mouse cursor during the drag. If empty, uses the default cursor.
+              </td>
+              </tr>
+              <tr>
+              <td>DragIcon</td>
+              <td>Content</td>
+              <td><code>""</code></td>
+              <td>
+              	An image to render under the mouse cursor during the drag. This should represent the item being dragged.
+              </td>
+              </tr>
+              <tr>
+              <td>HotSpot</td>
+              <td>Vector2</td>
+              <td><code>Vector2.new(0, 0)</code></td>
+              <td>
+              	The pixel offset from the top-left where the cursor should "hold" the DragIcon.
+              </td>
+              </tr>
+          </tbody>
+      </table>
+
+      See also:
+
+      - `Class.PluginGui.PluginDragEntered`
+      - `Class.PluginGui.PluginDragMoved`
+      - `Class.PluginGui.PluginDragDropped`
+      - `Class.PluginGui.PluginDragLeft`
+    code_samples:
+      - plugin-drag-and-drop
+    parameters:
+      - name: dragData
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:Union
+    summary: |
+      Unions the given parts and returns the resulting UnionOperation.
+    description: |
+      Unions the given parts and returns the resulting UnionOperation.
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:CreateDockWidgetPluginGui
+    summary: |
+      Creates a `Class.DockWidgetPluginGui` given a
+      `Datatype.DockWidgetPluginGuiInfo`.
+    description: |
+      **CreateDockWidgetPluginGui** creates a new `Class.DockWidgetPluginGui`
+      from the given `Datatype.DockWidgetPluginGuiInfo`. The first parameter,
+      `pluginGuiId`, should be a unique and consistent string. It is used to
+      save the state of the widget's dock state and other internal details.
+    code_samples:
+      - DockWidgetPluginGui-Hello-World-Example
+    parameters:
+      - name: pluginGuiId
+        type: string
+        default:
+        summary: |
+          A unique and consistent identifier used to storing the widget's dock
+          state and other internal details.
+      - name: dockWidgetPluginGuiInfo
+        type: DockWidgetPluginGuiInfo
+        default:
+        summary: |
+          Describes the `Class.DockWidgetPluginGui` to create (initial state,
+          size, etc).
+    returns:
+      - type: DockWidgetPluginGui
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:ImportFbxAnimation
+    summary: |
+      Prompts the user to open a .fbx animation file that can be loaded onto the
+      `rigModel`, then proceeds to insert the animation as a
+      `Class.KeyframeSequence` in the `Class.Workspace`.
+    description: |
+      This function prompts the user to open a .fbx animation file that can be
+      loaded onto the `rigModel`, then proceeds to insert the animation as a
+      `Class.KeyframeSequence` in the `Class.Workspace`.
+    code_samples:
+    parameters:
+      - name: rigModel
+        type: Instance
+        default:
+        summary: ''
+      - name: isR15
+        type: bool
+        default: true
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:ImportFbxRig
+    summary: |
+      Prompts the user to open a .fbx file, uploads the individual components of
+      the model as meshes, and generates a character rig for use in animation,
+      which is loaded into the `Class.Workspace`.
+    description: |
+      Prompts the user to open a .fbx file, uploads the individual components of
+      the model as meshes, and generates a character rig for use in animation,
+      which is loaded into the `Class.Workspace`.
+    code_samples:
+    parameters:
+      - name: isR15
+        type: bool
+        default: true
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:PromptForExistingAssetId
+    summary: |
+      Opens a window in Roblox Studio, which prompts the user to select an asset
+      based on the `assetType` specified. Returns what assetId was selected, or
+      -1 if the window was closed.
+    description: |
+      Opens a window in Roblox Studio, which prompts the user to select an asset
+      based on the `assetType` specified. Returns what assetId was selected, or
+      -1 if the window was closed.
+    code_samples:
+    parameters:
+      - name: assetType
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin:PromptSaveSelection
+    summary: |
+      Prompts the user to save their current selection with the specified file
+      name. Returns true if the user did save the file.
+    description: |
+      Prompts the user to save their current selection with the specified file
+      name. Returns true if the user did save the file.
+    code_samples:
+    parameters:
+      - name: suggestedFileName
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: Plugin.Deactivation
+    summary: |
+      Fired when the plugin is deactivated.
+    description: |
+      Fired when the `Class.Plugin` is deactivated. This occurs when either the
+      plugin code calls `Class.Plugin:Deactivate()`, or because some other
+      plugin called `Class.Plugin:Activate()`, which forces all other plugins to
+      lose their active state.
+
+      See also:
+
+      - `Class.Plugin.Unloading`, fires immediately before the plugin is
+        unloaded or reloaded via uninstallation, deactivation, or updating
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Plugin.Unloading
+    summary: |
+      Fires immediately before the `Class.Plugin` stops running.
+    description: |
+      This event fires immediately before the `Class.Plugin` stops running.
+      Plugins are unloaded when disabled, uninstalled, about to be updated, or
+      when the place is closing.
+
+      It enables a plugin to clean up after itself before its scripts stop
+      running, e.g. to remove unnecessary instances from the `Class.DataModel`.
+      If a plugin does not clean up properly, the old copies will remain. When
+      this occurs, users may be forced to close and reopen the place which is a
+      bad user experience.
+
+      Plugin-related instances such as
+      `Class.PluginToolbarButton|PluginToolbarButtons`,
+      `Class.DockWidgetPluginGui|DockWidgetPluginGuis`, and
+      `Class.PluginGui|PluginGuis` are automatically cleaned up when the plugin
+      is unloaded so there is no need to remove them.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

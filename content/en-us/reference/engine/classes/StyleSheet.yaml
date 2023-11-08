@@ -1,0 +1,43 @@
+name: StyleSheet
+type: class
+category:
+memory_category: Gui
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - StyleBase
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: StyleSheet:GetDerives
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StyleSheet:SetDerives
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: derives
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

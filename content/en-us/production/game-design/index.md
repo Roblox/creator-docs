@@ -13,7 +13,7 @@ A game designer's role is to create an engaging experience for players, retain t
 
 <GridContainer numColumns="2">
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube.com/embed/kumeLD2TtRM?si=rilfp5gIRQQ1mbv-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <figcaption>Sketch Series: Subscription Design</figcaption>
   </figure>
   <figure>

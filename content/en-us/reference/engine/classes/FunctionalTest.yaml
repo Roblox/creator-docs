@@ -1,0 +1,133 @@
+name: FunctionalTest
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  Deprecated. Use TestService instead
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Deprecated
+deprecation_message: |
+  FunctionalTest has been deprecated, developers are advised to use
+  `Class.TestService` instead.
+properties:
+  - name: FunctionalTest.Description
+    summary: |
+      The description of the FunctionalTest.
+    description: |
+      The description of the FunctionalTest.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: FunctionalTest:Error
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: message
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security: None
+    thread_safety: Unsafe
+  - name: FunctionalTest:Failed
+    summary: |
+      Prints a red message to the output, prefixed by _"TestService: "_.
+    description: |
+      Prints a red message to the output, prefixed by _"TestService: "_.
+    code_samples:
+    parameters:
+      - name: message
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security: None
+    thread_safety: Unsafe
+  - name: FunctionalTest:Pass
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: message
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security: None
+    thread_safety: Unsafe
+  - name: FunctionalTest:Passed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: message
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security: None
+    thread_safety: Unsafe
+  - name: FunctionalTest:Warn
+    summary: |
+      Prints if a condition is true, otherwise prints a warning.
+    description: |
+      Prints if a condition is true, otherwise prints a warning.
+    code_samples:
+      - FunctionalTest-Warn1
+    parameters:
+      - name: message
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      FunctionalTest has been deprecated, developers are advised to use
+      `Class.TestService` instead.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

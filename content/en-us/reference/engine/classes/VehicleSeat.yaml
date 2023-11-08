@@ -1,0 +1,268 @@
+name: VehicleSeat
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  A seat object that can be used to control a vehicle.
+description: |
+  The VehicleSeat objects welds a player to the seat when the player touches the
+  seat. It then forwards the movement keys to any connected motor joints,
+  allowing control of a vehicle.
+
+  While VehicleSeats are great for making simple vehicles they do have some
+  limitations. Movement control will only detect motors connected directly to
+  the vehicle seat, or through another rigid connection. This means that if you
+  have a wheel connected to a beam which is then welded to the seat it will work
+  fine, however if you have the wheel connected to a part, which is connected by
+  a hinge to the rest of the car, it will not work.
+code_samples:
+inherits:
+  - BasePart
+tags: []
+deprecation_message: ''
+properties:
+  - name: VehicleSeat.AreHingesDetected
+    summary: |
+      Displays how many hinges are detected by the VehicleSeat. Useful for
+      debugging vehicle designs.
+    description: |
+      Displays how many hinges are detected by the VehicleSeat. Useful for
+      debugging vehicle designs.
+    code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VehicleSeat.Disabled
+    summary: |
+      Toggles whether the `Class.VehicleSeat` is active or not.
+    description: |
+      Toggles whether the `Class.VehicleSeat` is active or not. If the seat is
+      disabled then it will not automatically weld a character to it on
+      collision and will not allow a character to control the connected vehicle.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.HeadsUpDisplay
+    summary: |
+      If true, a fancy speed bar will be displayed speed on screen that tells
+      you what speed the Vehicle is moving at.
+    description: |
+      If true, a fancy speed bar will be displayed speed on screen that tells
+      you what speed the Vehicle is moving at.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.MaxSpeed
+    summary: |
+      The maximum speed that can be attained.
+    description: |
+      The maximum speed that can be attained.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.Occupant
+    summary: |
+      The humanoid that is sitting in the seat.
+    description: |
+      The humanoid that is sitting in the seat
+    code_samples:
+    type: Humanoid
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: VehicleSeat.Steer
+    summary: |
+      The direction of movement, tied to the keys A and D. Must be one of 1
+      (right), 0 (straight), or -1 (left). Will refresh back to 0 unless
+      constantly set.
+    description: |
+      The direction of movement, tied to the keys A and D. Must be one of 1
+      (right), 0 (straight), or -1 (left). Will refresh back to 0 unless
+      constantly set.
+    code_samples:
+    type: int
+    tags:
+      - NotReplicated
+    deprecation_message: |
+      This property is no longer replicated and has been deprecated in favor of
+      `Class.VehicleSeat.SteerFloat`, which is a float variant and should be
+      used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.SteerFloat
+    summary: |
+      Functions identically to `Class.VehicleSeat.Steer`, but the value is not
+      an integer.
+    description: |
+      Functions identically to `Class.VehicleSeat.Steer`, but the value is not
+      an integer.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.Throttle
+    summary: |
+      The direction of movement, tied to the keys W and S. Must be an integer 1
+      (forward) 0 (null) or -1 (reverse). Will refresh back to 0 unless
+      constantly set.
+    description: |
+      The direction of movement, tied to the keys W and S. Must be an integer 1
+      (forward) 0 (null) or -1 (reverse). Will refresh back to 0 unless
+      constantly set.
+    code_samples:
+    type: int
+    tags:
+      - NotReplicated
+    deprecation_message: |
+      This property is not longer replicated and has been deprecated in favor of
+      `Class.VehicleSeat.ThrottleFloat`, which is a float variant and should be
+      used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.ThrottleFloat
+    summary: |
+      Functions identically to `Class.VehicleSeat.Throttle`, but the value is
+      not an integer.
+    description: |
+      Functions identically to `Class.VehicleSeat.Throttle`, but the value is
+      not an integer.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.Torque
+    summary: |
+      How fast the vehicles will be able to attain `Class.VehicleSeat.MaxSpeed`.
+      The greater the number, the faster it will reach the maximum speed.
+    description: |
+      How fast the vehicles will be able to attain `Class.VehicleSeat.MaxSpeed`.
+      The greater the number, the faster it will reach the maximum speed.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VehicleSeat.TurnSpeed
+    summary: |
+      The speed at which the vehicle will turn. Higher numbers can cause
+      problems and are not necessarily better.
+    description: |
+      The speed at which the vehicle will turn. Higher numbers can cause
+      problems and are not necessarily better.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: VehicleSeat:Sit
+    summary: |
+      Forces the character with the specified `Class.Humanoid` to sit in the
+      VehicleSeat.
+    description: |
+      Forces the character with the specified `Class.Humanoid` to sit in the
+      VehicleSeat.
+    code_samples:
+    parameters:
+      - name: humanoid
+        type: Instance
+        default:
+        summary: |
+          The humanoid being forced to sit in the VehicleSeat.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

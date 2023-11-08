@@ -1,0 +1,49 @@
+name: PostEffect
+type: class
+category:
+memory_category: Instances
+summary: |
+  Abstract base class for post-processing effects.
+description: |
+  PostEffect is an abstract base class for post-processing effects, such as
+  `Class.BloomEffect` and `Class.ColorCorrectionEffect`. They change how the
+  world looks **after** it has been rendered. They do not affect
+  `Class.GuiObject`s. Objects of this kind should be parented to the
+  `Class.Lighting` or the `Class.Workspace.CurrentCamera` in order to work.
+
+  It should also be noted that some post-processing effects will work
+  differently or **not at all** when Roblox is set to a low
+  `Class.RenderSettings.QualityLevel|QualityLevel` (or
+  `Class.RenderSettings.EditQualityLevel|EditQualityLevel` in Studio). On some
+  low-end devices, faster rendering algorithms may be used. By default, these
+  quality settings are set to Automatic, so if you aren't seeing post-processing
+  effects you should check Roblox's settings under the "Rendering" section. It
+  may be necessary to override the automatic behavior temporarily in order to
+  preview post-processing effects.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: PostEffect.Enabled
+    summary: |
+      Toggles whether or not the PostEffect is enabled.
+    description: |
+      Toggles whether or not the PostEffect is enabled.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

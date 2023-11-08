@@ -1,0 +1,21 @@
+name: CreatorType
+type: enum
+summary: ''
+description: |
+  The ownership type of the open place.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: User
+    summary: |
+      The place is owned by a single user.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Group
+    summary: |
+      The place is owned by a group.
+    value: 1
+    tags: []
+    deprecation_message: ''

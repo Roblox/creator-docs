@@ -1,0 +1,42 @@
+name: IKControlType
+type: enum
+summary: |
+  Used on `Class.IKControl` to specify their `Class.IKControl.Type|Type`, to
+  change their behavior.
+description: |
+  Used on `Class.IKControl` to specify their `Class.IKControl.Type|Type`, to
+  change their behavior.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Transform
+    value: 0
+    summary: |
+      It is a full 6-DoF constraint. Aligns the
+      `Class.IKControl.EndEffector|EndEffector` `Datatype.CFrame` to that of the
+      `Class.IKControl.Target|Target`. It is the default value.
+    tags: []
+    deprecation_message: ''
+  - name: Position
+    value: 1
+    summary: |
+      Aligns the `Class.IKControl.EndEffector|EndEffector` position to that of
+      the `Class.IKControl.Target|Target` .
+    tags: []
+    deprecation_message: ''
+  - name: Rotation
+    value: 2
+    summary: |
+      Aligns the `Class.IKControl.EndEffector|EndEffector` rotation to that of
+      the `Class.IKControl.Target|Target`.
+    tags: []
+    deprecation_message: ''
+  - name: LookAt
+    value: 3
+    summary: |
+      Moves and orients the whole chain to make the forward axis on the
+      `Class.IKControl.EndEffector|EndEffector` point at a position in the world
+      specified by `Class.IKControl.Target|Target`.
+    tags: []
+    deprecation_message: ''

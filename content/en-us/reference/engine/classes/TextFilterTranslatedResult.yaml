@@ -1,0 +1,79 @@
+name: TextFilterTranslatedResult
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: TextFilterTranslatedResult.SourceLanguage
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextFilterTranslatedResult.SourceText
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TextFilterResult
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: TextFilterTranslatedResult:GetTranslationForLocale
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: locale
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: TextFilterResult
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextFilterTranslatedResult:GetTranslations
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

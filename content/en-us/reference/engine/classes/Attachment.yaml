@@ -1,0 +1,396 @@
+name: Attachment
+type: class
+category: Constraints
+memory_category: Instances
+summary: |
+  Defines a point and orientation relative to a parent `Class.BasePart`,
+  `Class.Bone`, or another `Class.Attachment`.
+description: |
+  An `Class.Attachment` defines a point and orientation relative to a parent
+  `Class.BasePart`, `Class.Bone`, or another `Class.Attachment`. The offset is
+  stored in the `Class.Attachment.CFrame|CFrame` property. The offset can also
+  be set through other properties, such as
+  `Class.Attachment.WorldCFrame|WorldCFrame`.
+
+  Attachments are used by several kinds of `Class.Constraint|Constraints` and
+  are also valid alternatives to `Class.BasePart` as a parent for objects such
+  as:
+
+  - `Class.ParticleEmitter|ParticleEmitters` which will emit particles from the
+    attachment's specific position/orientation instead of the `Class.BasePart`
+    bounds.
+  - Light-emitting objects like `Class.PointLight` and `Class.SpotLight` which
+    will shine from the attachment's position/orientation instead of the
+    `Class.BasePart` center.
+  - `Class.Sound` which will use the attachment's position as the sound's focal
+    point, instead of the `Class.BasePart` center.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Attachment.Axis
+    summary: |
+      Direction of the **X** axis of the attachment, represented as a unit
+      `Datatype.Vector3`.
+    description: |
+      Direction of the **X** axis of the attachment, represented as a unit
+      `Datatype.Vector3`.
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Attachment.CFrame
+    summary: |
+      `Datatype.CFrame` offset of the attachment.
+    description: |
+      The `Datatype.CFrame` offset of the attachment. Changes to this property
+      will reflect onto the `Class.Attachment.Position` and
+      `Class.Attachment.Rotation` properties of this object. Similarly, a change
+      to either of those properties will reflect onto this property.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Attachment.Orientation
+    summary: |
+      Orientation of the attachment relative to the orientation of its parent.
+    description: |
+      Orientation of the attachment relative to the orientation of its parent.
+      Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.Position
+    summary: |
+      Positional offset of the attachment, relative to the position and
+      orientation of its parent.
+    description: |
+      Positional offset of the attachment, relative to the position and
+      orientation of its parent.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.Rotation
+    summary: |
+      Rotation of the attachment relative to the rotation of its parent.
+    description: |
+      Rotation of the attachment relative to the rotation of its parent.
+      Rotations are in **Z**,&nbsp;**Y**,&nbsp;**X** order.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated and should not be used in new work. See
+      `Class.Attachment.Orientation` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.SecondaryAxis
+    summary: |
+      Direction of the **Y** axis of the attachment, represented as a unit
+      `Datatype.Vector3`.
+    description: |
+      Direction of the **Y** axis of the attachment, represented as a unit
+      `Datatype.Vector3`.
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Attachment.Visible
+    summary: |
+      Toggles the in-experience visibility of the attachment.
+    description: |
+      Toggles the in-experience visibility of the attachment.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Attachment.WorldAxis
+    summary: |
+      Direction of the **X** axis of the attachment relative to the world,
+      represented as a unit `Datatype.Vector3` with a length of 1.
+    description: |
+      Direction of the **X** axis of the attachment relative to the world,
+      represented as a unit `Datatype.Vector3` with a length of 1.
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Attachment.WorldCFrame
+    summary: |
+      The exact `Datatype.CFrame` of the attachment in world space coordinates.
+    description: |
+      The exact `Datatype.CFrame` of the attachment in world space coordinates,
+      independent of its parent. The value of this property is equivalent to
+      multiplying the `Datatype.CFrame` of the attachment's parent by its own
+      `Datatype.CFrame`.
+    code_samples:
+    type: CFrame
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Attachment.WorldOrientation
+    summary: |
+      Orientation of the attachment relative to the world rather than its own
+      parent.
+    description: |
+      Orientation of the attachment relative to the world rather than its own
+      parent. Rotations are in **Z**,&nbsp;**X**,&nbsp;**Y** order.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.WorldPosition
+    summary: |
+      Position of the attachment relative to the world rather than its own
+      parent.
+    description: |
+      Position of the attachment relative to the world rather than its own
+      parent.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.WorldRotation
+    summary: |
+      Rotation of the attachment relative to the world rather than its own
+      parent.
+    description: |
+      Rotation of the attachment relative to the world rather than its own
+      parent.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Attachment.WorldOrientation` which
+      should be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Attachment.WorldSecondaryAxis
+    summary: |
+      Direction of the **Y** axis of the attachment relative to the world,
+      represented as a unit `Datatype.Vector3` with a length of 1.
+    description: |
+      Direction of the **Y** axis of the attachment relative to the world,
+      represented as a unit `Datatype.Vector3` with a length of 1.
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived World Data
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: Attachment:GetAxis
+    summary: |
+      Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
+    description: |
+      Returns the value of the attachment's `Class.Attachment.Axis|Axis`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Attachment:GetConstraints
+    summary: |
+      Returns a list of `Class.Constraint|Constraints` connected to the
+      attachment.
+    description: |
+      Returns a list of `Class.Constraint|Constraints` connected to the
+      attachment.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Attachment:GetSecondaryAxis
+    summary: |
+      Returns the value of the attachment's
+      `Class.Attachment.SecondaryAxis|SecondaryAxis`.
+    description: |
+      Returns the value of the attachment's
+      `Class.Attachment.SecondaryAxis|SecondaryAxis`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Attachment:SetAxis
+    summary: |
+      Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
+    description: |
+      Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Attachment:SetSecondaryAxis
+    summary: |
+      Sets the value of the attachment's
+      `Class.Attachment.SecondaryAxis|SecondaryAxis`.
+    description: |
+      Sets the value of the attachment's
+      `Class.Attachment.SecondaryAxis|SecondaryAxis`.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

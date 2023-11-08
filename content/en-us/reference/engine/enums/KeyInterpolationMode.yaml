@@ -1,0 +1,33 @@
+name: KeyInterpolationMode
+type: enum
+summary: |
+  Describes the interpolation method between two keys.
+description: |
+  Describes the interpolation method for a FloatCurve or RotationCurve segment
+  between the key for which this mode is set and the next key in the curve.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Constant
+    summary: |
+      The segment starting at this key will constantly evaluate to the value set
+      at this key.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Linear
+    summary: |
+      The segment starting at this key will evaluate using a linear
+      interpolation at this key and the value at the next key.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Cubic
+    summary: |
+      The segment starting at this key will evaluate using cubic interpolation
+      of this key value using its right tangent and the next key value and its
+      left tangent.
+    value: 2
+    tags: []
+    deprecation_message: ''

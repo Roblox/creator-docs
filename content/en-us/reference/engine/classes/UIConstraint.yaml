@@ -1,0 +1,18 @@
+name: UIConstraint
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class for UI constraint classes.
+description: |
+  The base class for UI constraint classes.
+code_samples:
+inherits:
+  - UIComponent
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

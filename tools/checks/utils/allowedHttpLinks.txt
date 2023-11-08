@@ -438,4 +438,6 @@ https://json.schemastore.org/github-action.json
 https://json.schemastore.org/github-workflow.json
 https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 https://www.schemastore.org/json/
-https://www.youtube.com/embed/kumeLD2TtRM?si=rilfp5gIRQQ1mbv-
+https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa
+https://en.wikipedia.org/wiki/Type_introspection
+https://en.wikipedia.org/wiki/Don%27t_repeat_yourself

@@ -1,0 +1,110 @@
+name: ColorCorrectionEffect
+type: class
+category: Post Processing
+memory_category: Instances
+summary: |
+  Adjusts color-related properties of the rendered world like saturation, tint,
+  brightness, and contrast.
+description: |
+  The **ColorCorrectionEffect** can be used to adjust several color-related
+  properties at once: `Class.ColorCorrectionEffect.Saturation|Saturation`,
+  `Class.ColorCorrectionEffect.TintColor|TintColor`,
+  `Class.ColorCorrectionEffect.Brightness|Brightness` and
+  `Class.ColorCorrectionEffect.Contrast|Contrast`. It's useful for fine-tuning
+  the visual aesthetic of a world or communicating status effects to the player.
+  Multiple **ColorCorrectionEffect** objects can be applied at once and they
+  will compose their effects together.
+
+  Like other post-processing effects, **ColorCorrectionEffect** will only work
+  while `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting`
+  or `Class.Workspace.CurrentCamera`. Also, it may render differently depending
+  on your Studio settings (see the **Quality Level** settings in **Rendering**
+  &rarr; **Performance**).
+
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+code_samples:
+inherits:
+  - PostEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: ColorCorrectionEffect.Brightness
+    summary: |
+      Determines by how much the brightness of pixel colors will be shifted.
+    description: |
+      Brightness determines by how much the colors of pixels will be shifted. A
+      value of -1 will cause all pixels to be completely black while a value of
+      1 will cause them to be white.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ColorCorrectionEffect.Contrast
+    summary: |
+      Determines the change in separation between the dark and light colors.
+    description: |
+      Contrast determines the separation between the dark and light colors.
+      Values less than 0 have reduced contrast while values greater than 0 have
+      increased contrast.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ColorCorrectionEffect.Saturation
+    summary: |
+      Determines the change in intensity of colors.
+    description: |
+      Saturation determines the change in intensity of pixel colors. Values
+      above 1 will cause colors to be more vivid while values below 0 will make
+      colors more dull, eventually reaching full desaturation at -1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ColorCorrectionEffect.TintColor
+    summary: |
+      Determines by how much the RGB channels of pixels are scaled.
+    description: |
+      Determines by what factors the RGB channels of pixel colors are scaled.
+      The effect is multiplicative, so changing this to `[255, 0, 0]` (red)
+      would cause the green and blue channels to be multiplied by 0.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

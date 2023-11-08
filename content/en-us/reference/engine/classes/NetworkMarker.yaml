@@ -1,0 +1,32 @@
+name: NetworkMarker
+type: class
+category:
+memory_category: Instances
+summary: |
+  The NetworkMarker is used to tell the client when the server has finished
+  loading the world for the client.
+description: |
+  The NetworkMarker is used to tell the client when the server has finished
+  loading the world for the client.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties: []
+methods: []
+events:
+  - name: NetworkMarker.Received
+    summary: |
+      Fired when the server has finished replicating the world to the client.
+    description: |
+      Fired when the server has finished replicating the world to the client.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

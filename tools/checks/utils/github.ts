@@ -19,6 +19,7 @@ export type PullRequestComment = {
   position: number;
   pull_number: number;
   repository: string;
+  subject_type?: 'line' | 'file';
 };
 
 export interface PulLRequestReplyComment extends PullRequestComment {
@@ -81,6 +82,7 @@ export const postNewReviewComment = async ({
   position,
   pull_number,
   repository,
+  subject_type = 'line',
 }: PullRequestComment) => {
   return await octokit.rest.pulls.createReviewComment({
     body,
@@ -92,8 +94,8 @@ export const postNewReviewComment = async ({
     pull_number,
     repo: repository,
     side: 'RIGHT',
-    // @ts-ignore TypeScript wants "LINE", but that gives an error
-    subject_type: 'line',
+    // @ts-ignore TypeScript wants "LINE" or "FILE", but that gives an error
+    subject_type,
   });
 };
 
@@ -126,6 +128,7 @@ export const createNewPullRequestComment = ({
   path,
   pull_number,
   repository,
+  subject_type,
 }: {
   body: string;
   commit_id: string;
@@ -133,6 +136,7 @@ export const createNewPullRequestComment = ({
   path: string;
   pull_number: number;
   repository: string;
+  subject_type?: 'line' | 'file';
 }) => {
   const comment: PullRequestComment = {
     body,
@@ -143,6 +147,7 @@ export const createNewPullRequestComment = ({
     position: line,
     pull_number,
     repository,
+    subject_type,
   };
   pullRequestReviewComments.push(comment);
 };

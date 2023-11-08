@@ -1,0 +1,66 @@
+name: GlobalSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  Collection of menu settings for Roblox Studio.
+description: |
+  The base object used for Roblox Studio's settings menu. Can be accessed by
+  using the `settings()` function.
+
+  ## Settings classes under the GlobalSettings
+
+  - `Class.DebugSettings`
+  - `Class.GameSettings`
+  - `Class.LuaSettings`
+  - `Class.NetworkSettings`
+  - `Class.PhysicsSettings`
+  - `Class.RenderSettings`
+  - `Class.Studio`
+code_samples:
+inherits:
+  - GenericSettings
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties: []
+methods:
+  - name: GlobalSettings:GetFFlag
+    summary: |
+      Returns the value of an FFlag if it exists.
+    description: |
+      Returns the value of an FFlag if it exists.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalSettings:GetFVariable
+    summary: |
+      Returns the value of an FVariable, if it exists.
+    description: |
+      Returns the value of an FVariable, if it exists.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

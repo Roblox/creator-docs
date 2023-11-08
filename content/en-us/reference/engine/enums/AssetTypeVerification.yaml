@@ -1,0 +1,34 @@
+name: AssetTypeVerification
+type: enum
+summary: |
+  Determines the asset type verification mode.
+description: |
+  Determines the asset type verification mode used when calling
+  `Class.Humanoid:ApplyDescription()`. Asset type verification determines if
+  ApplyDescription will load models or not. Loading models can be insecure if
+  it's possible for malicious users to trick your game into loading unexpected
+  models that you own which may include malicious scripts. You should set this
+  to Always unless you want to load non-catalog assets.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Use the default behavior for asset type verification.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ClientOnly
+    summary: |
+      Only verify asset types on the client. Asset type verification can not be
+      turned off on the client.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Always
+    summary: |
+      Always verify the asset types to be loaded and disallow loading models.
+    value: 3
+    tags: []
+    deprecation_message: ''

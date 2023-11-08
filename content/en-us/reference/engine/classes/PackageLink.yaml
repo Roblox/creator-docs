@@ -1,0 +1,205 @@
+name: PackageLink
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  Links a `Class.DataModel` instance to a corresponding asset in the cloud.
+description: |
+  The purpose of the PackageLink object is to link a `Class.DataModel` instance
+  to a corresponding asset in the cloud. This improves flows for collaboration,
+  version control and sharing for models. The PackageLink instance will be a
+  child of the root of the entire package hierarchy.
+
+  ![PackageLink in Studio Explorer](/assets/legacy/PackageLink.jpg)
+
+  In this case PackageLink designates `Class.Model` to be the root of the
+  Package hierarchy.
+
+  They not creatable through `Class.Script|scripts`. They can only be added
+  through interaction with Studio and can only be parented to
+  `Class.Instance|Instances` that can be published independently of DataModel
+  publish. The PackageLink instance will always be the first child shown in the
+  tree view, regardless of sorting.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: PackageLink.AutoUpdate
+    summary: |
+      When this property is set to true, the package associated with the given
+      `Class.PackageLink` automatically updates to the latest version.
+    description: |
+      When this property is set to true, the package associated with the given
+      `Class.PackageLink` will be automatically updated to the latest version.
+      By default this property will be false upon creation of a package.
+
+      This property would allows you to decide if a given package should be
+      automatically updated to the latest version when entering a given place.
+      The game will periodically check for new updates while a place is open.
+    code_samples:
+    type: bool
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PackageLink.Creator
+    summary: |
+      The creator of the package asset.
+    description: |
+      The creator of the package asset.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PackageLink.DefaultName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PackageLink.PackageAssetName
+    summary: |
+      The asset name of the package.
+    description: |
+      The asset name of the package.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PackageLink.PackageId
+    summary: |
+      The id of the asset this package corresponds to.
+    description: |
+      The id of the asset this package corresponds to.
+    code_samples:
+    type: Content
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: false
+      can_save: true
+  - name: PackageLink.PermissionLevel
+    summary: |
+      The package permission for the current studio user.
+    description: |
+      The package permission for the current Studio user.
+    code_samples:
+    type: PackagePermission
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PackageLink.SerializedDefaultAttributes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BinaryString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PackageLink.Status
+    summary: |
+      The status of the package.
+    description: |
+      The status of the package. It can be one of the following statuses: Up To
+      Date, Changed, New Version Available, Changed + New Version Available.
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: false
+      can_save: false
+  - name: PackageLink.VersionNumber
+    summary: |
+      Refers to a revision of a specific package.
+    description: |
+      This property refers to a revision of a specific package
+    code_samples:
+    type: int64
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Link
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

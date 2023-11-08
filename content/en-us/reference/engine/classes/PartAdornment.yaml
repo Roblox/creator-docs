@@ -1,0 +1,37 @@
+name: PartAdornment
+type: class
+category:
+memory_category: Instances
+summary: |
+  An abstract class for GUI elements that are adorned to (displayed as attached
+  to) objects deriving from `Class.BasePart`.
+description: |
+  An abstract class for GUI elements that are adorned to (displayed as attached
+  to) objects deriving from `Class.BasePart`.
+code_samples:
+inherits:
+  - GuiBase3d
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: PartAdornment.Adornee
+    summary: |
+      Sets the object to adorn to.
+    description: |
+      Sets the object to adorn to.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,152 @@
+name: RodConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Keeps two attachments separated by its defined
+  `Class.RodConstraint.Length|Length`.
+description: |
+  A **RodConstraint** keeps two attachments separated by its defined
+  `Class.RodConstraint.Length|Length`. By default, both attachments can rotate
+  freely, although you can enable limits to restrict rotational tilt.
+
+  Note that if this constraint attaches one part (**A**) to another part (**B**)
+  that is anchored or connected to an anchored part (**Z**), part **A** will not
+  be locally simulated when interacting with a player.
+
+  #### Limits
+
+  You can limit rotation of the attachments within a cone, independently of each
+  other, by enabling the `Class.RodConstraint.LimitsEnabled|LimitsEnabled`
+  property and setting `Class.RodConstraint.LimitAngle0|LimitAngle0` and
+  `Class.RodConstraint.LimitAngle1|LimitAngle1` respectively.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: RodConstraint.CurrentDistance
+    summary: |
+      The current distance between the constraint's
+      `Class.Attachment|Attachments`.
+    description: |
+      The current distance between the constraint's
+      `Class.Attachment|Attachments`.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+  - name: RodConstraint.Length
+    summary: |
+      The distance apart at which the constraint attempts to keep its
+      `Class.Attachment|Attachments`.
+    description: |
+      The distance apart at which the constraint attempts to keep its
+      `Class.Attachment|Attachments`. Measured in studs.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Rod
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RodConstraint.LimitAngle0
+    summary: |
+      The maximum angle between the rod and
+      `Class.Constraint.Attachment0|Attachment0` when
+      `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
+    description: |
+      This property determines the maximum angle between the rod and
+      `Class.Constraint.Attachment0|Attachment0` when
+      `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RodConstraint.LimitAngle1
+    summary: |
+      The maximum angle between the rod and
+      `Class.Constraint.Attachment1|Attachment1` when
+      `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
+    description: |
+      This property determines the maximum angle between the rod and
+      `Class.Constraint.Attachment1|Attachment1` when
+      `Class.RodConstraint.LimitsEnabled|LimitsEnabled` is true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RodConstraint.LimitsEnabled
+    summary: |
+      Determines whether `Class.RodConstraint.LimitAngle0|LimitAngle0` and
+      `Class.RodConstraint.LimitAngle1|LimitAngle1` control the angles between
+      the rod and the respective attachments.
+    description: |
+      This property determines whether the
+      `Class.RodConstraint.LimitAngle0|LimitAngle0` and
+      `Class.RodConstraint.LimitAngle1|LimitAngle1` properties control the
+      angles between the rod and the respective attachments.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Rod
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RodConstraint.Thickness
+    summary: |
+      The visualized thickness of the `Class.RodConstraint`.
+    description: |
+      The visualized thickness of the `Class.RodConstraint`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

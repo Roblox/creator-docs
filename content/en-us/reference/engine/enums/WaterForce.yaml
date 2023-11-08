@@ -1,0 +1,37 @@
+name: WaterForce
+type: enum
+summary: |
+  The WaterForce Enum is used to work with `Class.Terrain` water cells.
+description: |
+  The WaterForce Enum is used to work with `Class.Terrain` water cells.
+code_samples:
+tags: []
+deprecation_message: |
+  This item is deprecated. Do not use it for new work. Please see
+  `Class.Terrain` for a list of current function, events, and properties.
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Small
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Medium
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Strong
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Max
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

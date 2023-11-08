@@ -48,6 +48,7 @@ import {
   summaryOfRequirements,
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
+import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -79,6 +80,10 @@ const getFilesToCheck = async () => {
       FileExtension.YAML,
     ]);
   }
+  const prefixesToIgnore = ['.github/', 'content/common/navigation/'];
+  filesToCheck = filesToCheck.filter((filePath) => {
+    return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
+  });
   console.log(`Files to check (${filesToCheck.length}):`, filesToCheck);
   console.log('::endgroup::');
 };
@@ -182,10 +187,10 @@ try {
     const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
-    const content = readFileSync(filePath);
+    const fileContent = readFileSync(filePath);
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
-        content
+        fileContent
       )) as unknown as VFile;
       if (config.debug) {
         console.log(retextVFile);
@@ -193,10 +198,25 @@ try {
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
     }
     if (config.checkHttpLinks || config.checkRelativeLinks) {
-      checkContentLinks({ fileName: filePathFromRepoRoot, config, content });
+      checkContentLinks({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
     }
     if (isMarkdownFile && config.checkMarkdownLint) {
-      checkMarkdownLint({ fileName: filePathFromRepoRoot, config, content });
+      checkMarkdownLint({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
+    }
+    if (isYamlFile) {
+      await checkEngineReferenceContent({
+        config,
+        fileContent,
+        filePath: filePathFromRepoRoot,
+      });
     }
     console.log('::endgroup::');
   }

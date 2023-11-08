@@ -1,0 +1,30 @@
+name: DialogTone
+type: enum
+summary: |
+  Sets the `Class.Dialog.Tone` of a `Class.Dialog` object, which influences how
+  the dialog appears.
+description: |
+  Sets the `Class.Dialog.Tone` of a `Class.Dialog` object, which influences how
+  the dialog appears.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Neutral
+    summary: |
+      Causes the dialog to have a blue bar on its left-hand side.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Friendly
+    summary: |
+      Causes the dialog to have a green bar on its left-hand side.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enemy
+    summary: |
+      Causes the dialog to have a red bar on its left-hand side.
+    value: 2
+    tags: []
+    deprecation_message: ''

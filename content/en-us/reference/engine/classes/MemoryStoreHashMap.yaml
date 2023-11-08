@@ -1,0 +1,101 @@
+name: MemoryStoreHashMap
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: MemoryStoreHashMap:GetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreHashMap:RemoveAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreHashMap:SetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+      - name: expiration
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MemoryStoreHashMap:UpdateAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: transformFunction
+        type: Function
+        default:
+        summary: ''
+      - name: expiration
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

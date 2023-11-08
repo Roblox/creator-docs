@@ -1,0 +1,29 @@
+name: ContextActionPriority
+type: enum
+summary: |
+  Describes the priority of a context action.
+description: |
+  The ContextActionPriority is used to set the priority of a context action.
+  This priority is used to determine context action order.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Low
+    value: 1000
+    summary: |
+      Low priority.
+    tags: []
+    deprecation_message: ''
+  - name: Medium
+    value: 2000
+    summary: |
+      Medium priority.
+    tags: []
+    deprecation_message: ''
+  - name: High
+    value: 3000
+    summary: |
+      High priority.
+    tags: []
+    deprecation_message: ''

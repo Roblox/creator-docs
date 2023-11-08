@@ -1,0 +1,68 @@
+name: SensorBase
+type: class
+category:
+memory_category: Instances
+summary: |
+  An abstract class for various sensor instance types.
+description: |
+  A `Class.SensorBase` is an instance that, when parented to a `Class.BasePart`,
+  outputs additional data about the world around that part. This data is
+  presented in the sensor's "output" property category. Often, other systems
+  will consume the sensor's output data.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: SensorBase.UpdateType
+    summary: |
+      Determines how the sensor will update its output data.
+    description: |
+      Determines how the sensor will update its output data.
+
+      With `Enum.SensorUpdateType.OnRead`, internal sensor logic is run so that
+      the output properties are always up to date. In this mode, the sensor will
+      only run if you read the properties and they are currently outdated.
+
+      With `Enum.SensorUpdateType.Manual`, the output properties will never
+      change. Instead, you can write your own scripts to set the output
+      properties as you like.
+    code_samples: []
+    type: SensorUpdateType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Settings
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: SensorBase:Sense
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: SensorBase.OnSensorOutputChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

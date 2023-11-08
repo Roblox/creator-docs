@@ -1,0 +1,92 @@
+name: NumberValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single double-precision floating point number.
+description: |
+  A NumberValue is an object whose purpose is to store a single
+  [Lua number](https://www.lua.org/pil/2.3.html), defined to be
+  [double-precision floating point number](https://en.wikipedia.org/wiki/Double-precision_floating-point_format),
+  or more commonly known as a **double**. This stores a number in 64 bits (8
+  bytes) using the IEEE 754 representation (1 sign bit, 11 exponent bits and 52
+  fractional bits). The maximum numerical value that may be stored is 2^53, or
+  9,007,199,254,740,992, and the minimum is -9,007,199,254,740,992. It stores up
+  to 15 digits of precision.
+
+  Like all "-Value" objects, this single value is stored in the Value property.
+  The Changed event for this (and other objects like it) will fire with the new
+  value being stored in the object, instead of a string representing the
+  property being changed.
+code_samples:
+  - Changed-Event
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: NumberValue.Value
+    summary: |
+      Used to hold a double value.
+    description: |
+      Used to hold a double value.
+    code_samples:
+    type: double
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: NumberValue.Changed
+    summary: |
+      Fired whenever the `Class.NumberValue.Value` is changed.
+    description: |
+      This event fires whenever the `Class.NumberValue.Value` property is
+      changed.
+
+      This event, like other changed events, can be used to track when an
+      NumberValue changes and to track the different values that it may change
+      to.
+
+      For instance, this even may be useful in games that rely on NumberValues
+      to track game states and values, such as item IDs.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.ObjectValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - NumberValue-Changed1
+    parameters:
+      - name: value
+        type: double
+        default:
+        summary: |
+          The value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: NumberValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: double
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event is a deprecated variant of `Class.NumberValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

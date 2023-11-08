@@ -1,0 +1,22 @@
+name: ExplosionType
+type: enum
+summary: ''
+description: |
+  The ExplosionType Enum is used to set the `Class.Explosion.ExplosionType`
+  property.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NoCraters
+    summary: |
+      Explosion does not generate craters.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Craters
+    summary: |
+      Explosion generates craters.
+    value: 1
+    tags: []
+    deprecation_message: ''

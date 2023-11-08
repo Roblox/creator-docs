@@ -1,0 +1,22 @@
+name: UiMessageType
+type: enum
+summary: |
+  Controls the UI message under the `Class.GuiService`.
+description: |
+  Controls the UI message under the `Class.GuiService`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: UiMessageError
+    summary: |
+      The message error.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: UiMessageInfo
+    summary: |
+      The message info.
+    value: 1
+    tags: []
+    deprecation_message: ''
