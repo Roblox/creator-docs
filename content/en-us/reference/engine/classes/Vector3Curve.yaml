@@ -35,7 +35,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Array
+      - type: Tuple
         summary: ''
     tags: []
     deprecation_message: ''
