@@ -231,6 +231,11 @@ items:
     value: 300
     tags: []
     deprecation_message: ''
+  - name: ReplacementReady
+    summary: ''
+    value: 301
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512
