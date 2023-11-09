@@ -618,7 +618,7 @@ methods:
       **Translate stiffness** is a number between 0 and 1 specifying how
       agressively to match the part's position to the position part of the
       target CFrame. **Rotate stiffness** is a number between 0 and 1 specifying
-      how agresively to match the part's rotation to to the rotation part of the
+      how agresively to match the part's rotation to the rotation part of the
       target CFrame.
 
       For example:
@@ -655,8 +655,7 @@ methods:
         default: 0.5
         summary: |
           A number between 0 and 1 specifying how aggresively to match the
-          part's rotation to to the rotation part of the target
-          `Datatype.CFrame`.
+          part's rotation to the rotation part of the target `Datatype.CFrame`.
       - name: collisionsMode
         type: IKCollisionsMode
         default: OtherMechanismsAnchored
