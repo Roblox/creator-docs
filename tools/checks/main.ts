@@ -32,6 +32,7 @@ import {
   RETEXT_INAPPROPRIATE,
   RETEXT_PROFANITIES,
   RETEXT_SPELL,
+  compileMdx,
   getReTextAnalysis,
 } from './utils/retext.js';
 import { Emoji, Locale } from './utils/utils.js';
@@ -196,6 +197,15 @@ try {
         console.log(retextVFile);
       }
       processRetextVFileMessages({ retextVFile, filePathFromRepoRoot });
+    }
+    if (isMarkdownFile) {
+      const mdxVFileMessage = (await compileMdx(fileContent)) as VFileMessage;
+      if (mdxVFileMessage) {
+        processRetextVFileMessage({
+          message: mdxVFileMessage,
+          filePathFromRepoRoot,
+        });
+      }
     }
     if (config.checkHttpLinks || config.checkRelativeLinks) {
       checkContentLinks({
