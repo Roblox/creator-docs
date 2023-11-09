@@ -146,7 +146,7 @@ At the bottom of the window, you can define custom [attributes](../studio/instan
 
 The [Asset Manager](../projects/assets/manager.md) lets you manage places, images, meshes, packages, audio, and models in your experience. It also provides a mechanism to bulk import large groups of assets.
 
-<img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
 <img src="../assets/studio/asset-manager/Grid-View.png" width="360" alt="Asset Manager window in Studio" />
 
