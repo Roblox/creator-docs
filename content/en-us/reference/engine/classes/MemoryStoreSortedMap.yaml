@@ -7,12 +7,12 @@ summary: |
 description: |
   Provides access to a sorted map within MemoryStore. A sorted map is a
   collection of items where string keys are associated with arbitrary values (up
-  to the maximum allowed size -- see [Memory
-  Stores](../../../cloud-services/memory-stores/sorted-map.md)). Each item can
-  also have an optional sort key, which can be a number or a string. In the
-  ordering of items, the sort key takes precedence if provided. Numeric sort keys
-  are sorted before string sort keys. After sorting by sort key, the rest of the
-  items are arranged in alphabetical order by key.
+  to the maximum allowed size -- see
+  [Memory Stores](../../../cloud-services/memory-stores/sorted-map.md)). Each
+  item can also have an optional sort key, which can be a number or a string. In
+  the ordering of items, the sort key takes precedence if provided. Numeric sort
+  keys are sorted before string sort keys. After sorting by sort key, the rest
+  of the items are arranged in alphabetical order by key.
 code_samples:
 inherits:
   - Instance
@@ -38,8 +38,10 @@ methods:
       - type: Tuple
         summary: |
           A tuple of two values:
-            - Key value, or nil -- if there's no item with the specified key.
-            - Sort key, or nil -- if there's no sort key associated with the specified key.
+
+          - Key value, or nil -- if there's no item with the specified key.
+          - Sort key, or nil -- if there's no sort key associated with the
+            specified key.
     tags:
       - Yields
     deprecation_message: ''
@@ -70,20 +72,14 @@ methods:
         summary: |
           **(Optional)** Lower bound, exclusive, for the returned keys. This is
           provided as a table where one or both of Key and sort key can be
-          specified:
-          {
-            key: string, sortKey: Variant
-          }
+          specified: { key: string, sortKey: Variant } .
       - name: exclusiveUpperBound
         type: Variant
         default:
         summary: |
           **(Optional)** Upper bound, exclusive, for the returned keys. This is
           provided as a table where one or both of Key and sort key can be
-          specified:
-          {
-            key: string, sortKey: Variant
-          }
+          specified: { key: string, sortKey: Variant } .
     returns:
       - type: Array
         summary: |
@@ -168,16 +164,15 @@ methods:
       with these exceptions:
 
       - If the key does not exist, the old value and old sort key passed to the
-      function will be nil.
-      - If the function returns nil, the update is
-      canceled.
+        function will be nil.
+      - If the function returns nil, the update is canceled.
 
       The new value and new sort key is saved only if the key was not updated
       (e.g. by a different game server) since the moment it was read. If the
       value or sort key did change, the transform function is invoked again with
-      the most recent item value and sort key. This cycle repeats until the value
-      and sort key are saved successfully or the transform function returns nil
-      to abort the operation.
+      the most recent item value and sort key. This cycle repeats until the
+      value and sort key are saved successfully or the transform function
+      returns nil to abort the operation.
     code_samples:
       - updating-a-memorystore
     parameters:
@@ -191,8 +186,8 @@ methods:
         default:
         summary: |
           A function which you need to provide. The function takes the key's old
-          value and old sort key as input and returns the new value and new
-          sort key.
+          value and old sort key as input and returns the new value and new sort
+          key.
       - name: expiration
         type: int64
         default:
