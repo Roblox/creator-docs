@@ -63,7 +63,7 @@ The following table has Luau's reserved keywords mapped to their C# equivalent. 
         </tr>
         <tr>
             <td>`for`</td>
-            <td>`for` / `foreach`</td>
+            <td>`for` or `foreach`</td>
         </tr>
         <tr>
             <td>`function`</td>
@@ -355,7 +355,7 @@ string variableName;
 
 ## Scope
 
-In Luau, you can write variables and logic in a tighter scope than their function or class by nesting the logic within `do` and `end` keywords, similar to curly brackets `{}` in C#. For more details on scope in Luau, please see the [Scope](./scope.md).
+In Luau, you can write variables and logic in a tighter scope than their function or class by nesting the logic within `do` and `end` keywords, similar to curly brackets `{}` in C#. For more details, see [Scope](./scope.md).
 
 ```lua title='Scoping in Luau'
 local example = "Example text"
@@ -511,6 +511,8 @@ foreach (KeyValuePair<string, int> entry in abcDictionary) {
 }
 ```
 
+Luau also supports [generalized iteration](./control-structures.md#generalized-iteration), which further simplifies working with tables.
+
 ## Functions
 
 To learn more about functions in Luau, see [Functions](./functions.md).
@@ -569,7 +571,7 @@ string namedArguments(string name, string dob) {
 namedArguments(name: "Bob", dob: "4/1/2000");
 ```
 
-## Try/Catch Structures
+## Try-Catch Structures
 
 ```lua title='Try/Catch Structures in Luau'
 local function fireWeapon()
