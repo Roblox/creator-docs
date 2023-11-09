@@ -19,7 +19,6 @@ When users experience VR, movement of their camera/position can cause some disco
 When users experience VR, movement of their camera/position can cause some discomfort due to the disconnect between what they see and the lack of motion detected by their body and inner ear. Roblox provides multiple settings to help users of all sensitivity levels, so everyone can enjoy an immersive and comfortable VR experience while playing. In addition to Comfort, Default, and Expert modes, the user may choose Custom to individually turn the following settings on and off:
 
 - **Vignette** — An overlay is displayed during motion which restricts the user's peripheral vision during motion and conceals camera teleports.
-- **Smooth Rotation** — The camera uses smooth rotation for 1st and 3rd person camera modes, versus the default stepped rotation (teleporting to the next rotated position) when rotating the camera with the controller.
 - **Stepped Rotation** — The camera uses stepped rotation (teleporting to the next rotated position) for 1st and 3rd person camera modes, versus the smooth rotation mode when rotating the camera with the controller.
 - **3rd Person Fixed Camera** - The camera is fixed in space and does not closely follow the player. The camera will teleport in order to keep the player in view.
 
