@@ -193,9 +193,7 @@ The reference documentation files come in five types:
 - Globals — Lua and Roblox globals.
 - Libraries — Lua libraries such as `math`, `string`, and `table`.
 
-Internal tooling generates the structure of class and enum YAML files. Don't add new constructors, properties, methods, or events to these files—just fill in the details.
-
-Data types, globals, and libraries do _not_ have a generated structure. If you identify a missing constructor, property, method, etc., feel free to add it. Use an existing item as a template for the missing one.
+Internal tooling generates the structure of most files. Don't add new constructors, properties, methods, or events—just fill in the details. In most situations, you should only edit `summary`, `description`, and `deprecation_message`.
 
 <table>
   <thead>
@@ -261,8 +259,6 @@ Data types, globals, and libraries do _not_ have a generated structure. If you i
     </tr>
   </tbody>
 </table>
-
-In most situations, you should only edit `summary`, `description`, and `deprecation_message`.
 
 ## Images
 
