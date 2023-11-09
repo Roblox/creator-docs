@@ -1,0 +1,73 @@
+name: StyleBase
+type: class
+category:
+memory_category: Gui
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: StyleBase:GetStyleRules
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StyleBase:InsertStyleRule
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: rule
+        type: StyleRule
+        default:
+        summary: ''
+      - name: index
+        type: int?
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: StyleBase:SetStyleRules
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: rules
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: StyleBase.StyleRulesChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

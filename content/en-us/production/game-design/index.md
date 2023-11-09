@@ -3,18 +3,22 @@ title: Designing Experiences on Roblox
 description: Designing Experiences on Roblox
 ---
 
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/EvikDSBtaCc?si=HCklWoO6H61NVa9x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 A game designer's role is to create an engaging experience for players, retain those players over time, and devise a sustainable monetization model to fund further development. Whether you are a novice game designer or a veteran, Roblox offers a variety of game design resources to help you through the design process.
 
 ## What's New
 
 <GridContainer numColumns="2">
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Studio Prototyping</figcaption>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Subscription Design</figcaption>
   </figure>
   <figure>
-  <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Paper Prototyping</figcaption>
+  <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Monetization Metrics</figcaption>
   </figure>
 </GridContainer>
 
@@ -23,12 +27,12 @@ A game designer's role is to create an engaging experience for players, retain t
 <GridContainer numColumns="2">
 
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/wN4-AERPU9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Prototyping</figcaption>
+      <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Retention Metrics</figcaption>
   </figure>
   <figure>
-   <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Core Loops</figcaption>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Engagement Metrics</figcaption>
   </figure>
 </GridContainer>
 
@@ -48,6 +52,7 @@ A game designer's role is to create an engaging experience for players, retain t
 
 - [Monetization Foundations:](../../production/game-design/monetization-foundations.md) Learn monetization best practices and shop design to maximize your experience's monetary growth potential.
 - [Season Pass Design:](../../production/game-design/season-pass-design.md) Learn how to design season passes for your experiences to deliver new content, promote player retention, and generate revenue.
+- [Subscription Design:](../../production/game-design/subscription-design.md) Learn how to design recurring purchases that your players look forward to each month.
 - [Contextual Purchases:](../../production/game-design/contextual-purchases.md) Learn how to design compelling and unintrusive purchase opportunities that occur outside an experience's shop.
 - [Balancing Virtual Economies:](../../production/game-design/balancing-virtual-economies.md) Learn best practices to balance virtual economies when introducing new events.
 

@@ -39,7 +39,9 @@ When crossing the bridge, players will need to see how many seconds are left bef
 2. Select the Surface GUI. In the Properties, make the following changes:
 
    - Change the **Face** so you can see the text label on the front of the timer where the player is looking.
-   - Set **CanvasSize** to `{1, 0},{1, 0}`.
+
+3. Select the TextLabel. In the Properties, make the following changes:
+   - Set **Size** to `{1, 0},{1, 0}`.
    - Set **TextScaled** to true.
    - Set **Text** to be blank. Text will be updated using the script.
 
@@ -51,8 +53,8 @@ Now that the timer is in place, create a script to control the bridge and displa
 
    ```lua
    local bridge = script.Parent
-   local button = game.Workspace.ButtonBridge
-   local timerText = game.Workspace.TimerDisplay.SurfaceGui.TextLabel
+   local button = workspace.ButtonBridge
+   local timerText = workspace.TimerDisplay.SurfaceGui.TextLabel
 
    -- How long the bridge will stay solid
    local timerDuration = 5
@@ -176,12 +178,12 @@ To start, the script will need to make the bridge solid, or collidable and then 
    end
    ```
 
-4. Use a wait function to make the for loop run only once a second.
+4. Use a task.wait function to make the for loop run only once a second.
 
    ```lua
    for count = timerDuration, 0, -1 do
       timerText.Text = count
-      wait(1)
+      task.wait(1)
    end
    ```
 
@@ -241,7 +243,7 @@ This is because the for loop is being called each time you touch the button and 
       -- For loop that counts down from timerDuration
       for count = timerDuration, 0, -1 do
          timerText.Text = count
-         wait(1)
+         task.wait(1)
       end
 
       -- Make the bridge not walkable
@@ -268,10 +270,10 @@ This is because the for loop is being called each time you touch the button and 
 ```lua
 local bridge = script.Parent
 -- Gets the button as it's typed in the Explorer
-local button = game.Workspace.ButtonBridge
+local button = workspace.ButtonBridge
 
 -- Gets the part for the display
-local timerPart = game.Workspace.TimerDisplay
+local timerPart = workspace.TimerDisplay
 -- Gets the Text that will display the timer
 local timerText = timerPart.SurfaceGui.TextLabel
 
@@ -288,7 +290,7 @@ local function startTimer()
 	-- For loop that counts down from timerDuration
 	for count = timerDuration, 0, -1 do
 		timerText.Text = count
-		wait(1)
+		task.wait(1)
 	end
 
 	-- Make the bridge not walkable

@@ -1,0 +1,22 @@
+name: Button
+type: enum
+summary: |
+  One of the buttons used by `Class.Controller`.
+description: |
+  Used for accessing buttons for use by the `Class.Controller`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Dismount
+    summary: |
+      The Dismount button.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Jump
+    summary: |
+      The Jump button.
+    value: 32
+    tags: []
+    deprecation_message: ''

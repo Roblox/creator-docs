@@ -1,9 +1,9 @@
 ---
-title: Mobile
+title: Mobile Input
 description: Explains Roblox support for mobile devices.
 ---
 
-Over half of all Roblox sessions are played on mobile devices so it is important to consider cross-platform accessibility when designing your experience for a wide audience. You should aim to create an ideal cross-platform experience that supports a variety of input devices, including [mouse and keyboard inputs](./mouse-and-keyboard.md) and [gamepad](./gamepad.md).
+Over half of all Roblox sessions are played on mobile devices, so it's important to consider cross-platform accessibility when designing an experience for a wide audience. You should aim to support a variety of input devices, including [mouse and keyboard inputs](../input/mouse-and-keyboard.md) and [gamepad](../input/gamepad.md).
 
 When designing a mobile experience, consider the [device orientation](#device-orientation) that you intend user's to use in your experience, then implement your inputs with `Class.ContextActionService` to perform the following mobile-related input tasks:
 
@@ -84,7 +84,7 @@ Because this property affects all new users who join the experience, you can set
 
 #### In-Experience Orientation
 
-`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when a experience needs to provide a particular experience like locking the view to portrait for a minigame.
+`Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when an experience needs to provide a particular experience like locking the view to portrait for a minigame.
 
 The following code sample in a `Class.LocalScript` sets the screen orientation to portrait:
 
@@ -92,7 +92,7 @@ The following code sample in a `Class.LocalScript` sets the screen orientation t
 local Players = game:GetService("Players")
 local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 
-wait(2)
+task.wait(2)
 
 playerGUI.ScreenOrientation = Enum.ScreenOrientation.Portrait
 ```
@@ -114,7 +114,7 @@ local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 print(playerGUI.CurrentScreenOrientation)
 ```
 
-## Movement Modes
+## Character Movement Modes
 
 Roblox offers several `Class.StarterPlayer` properties you can set to change how users on mobile devices can move through your experience.
 
@@ -161,9 +161,9 @@ You can set mobile movement control schemes for Roblox experiences by changing t
 
 ### Automatic Jumping
 
-When `StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
+When `Class.StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `Class.StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
 
-Disable `StarterPlayer.AutoJumpEnabled` to disable this feature and force users to jump only using their key bindings.
+Disable `Class.StarterPlayer.AutoJumpEnabled` to disable this feature and force users to jump only using their key bindings.
 
 ## Adding Mobile Buttons
 
@@ -267,7 +267,7 @@ Use the following sample code to set a button's position with the `Class.Context
 ContextActionService:SetPosition("Interact", UDim2.new(1, -70, 0, 10))
 ```
 
-## Context Dependent Inputs
+## Context-Dependent Inputs
 
 When developing for mobile devices you may often want to change what a single button does based on the context. Since screen space on mobile devices limited, use contextual buttons that perform different actions based on what the character is able to do.
 

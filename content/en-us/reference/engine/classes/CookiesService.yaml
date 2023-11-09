@@ -1,0 +1,23 @@
+name: CookiesService
+type: class
+category:
+memory_category: Instances
+summary: |
+  A backend service used by Roblox to control HTTP cookies. Its functions are
+  not available to developers.
+description: |
+  Used by Roblox to control HTTP cookies for analytical purposes.
+
+  Can only be used by Roblox's backend servers, and therefore is not available
+  to developers in any shape or form.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

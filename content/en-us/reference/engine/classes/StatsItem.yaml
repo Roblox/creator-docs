@@ -1,0 +1,67 @@
+name: StatsItem
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  A single performance metric.
+description: |
+  A StatsItem is an internal measurement item that is created by the engine to
+  benchmark many of the backend components of Roblox. It cannot be created using
+  `Datatype.Instance.new()`, but its value can be read by plugins. They can be
+  found stored inside of the `Class.Stats` service.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: StatsItem.DisplayName
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: StatsItem:GetValue
+    summary: |
+      Returns the StatsItem's value.
+    description: |
+      Returns the StatsItem's value.
+    code_samples:
+    parameters: []
+    returns:
+      - type: double
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: StatsItem:GetValueString
+    summary: |
+      Returns the StatsItem's value as a formatted string.
+    description: |
+      Returns the StatsItem's value as a formatted string.
+    code_samples:
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

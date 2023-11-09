@@ -1,0 +1,171 @@
+name: BaseWrap
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  The base class for `Class.WrapTarget` and `Class.WrapLayer` objects. Note that
+  `Class.MeshPart` is the only valid parent type for `Class.BaseWrap` and that
+  it behaves more like a component of `Class.MeshPart` than an independent
+  object.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: BaseWrap.CageMeshId
+    summary: |
+      Asset ID for cage mesh.
+    description: |
+      This property is set up automatically by the 3D Importer.
+
+      Asset ID for cage mesh.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseWrap.CageOrigin
+    summary: |
+      Cage mesh offset relative to parent `Class.MeshPart`.
+    description: |
+      This property is set up automatically by the 3D Importer.
+
+      Cage mesh offset relative to parent `Class.MeshPart`.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseWrap.CageOriginWorld
+    summary: |
+      Cage mesh offset in world space.
+    description: |
+      Cage mesh offset in world space.
+    code_samples:
+    type: CFrame
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: BaseWrap.HSRAssetId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseWrap.ImportOrigin
+    summary: |
+      Describes where a global zero was while authoring the cage mesh in an
+      asset creation tool.
+    description: |
+      This property is set up automatically by the 3D Importer.
+
+      Describes where a global zero was while authoring the cage mesh in an
+      asset creation tool such as Blender or Maya. This property is not used by
+      the deformer but it is useful for tools/aligning scripts, for example
+      aligning two parts by matching their pivots as follows:
+
+      ```lua
+      local function alignWraps()
+      	local selectionService = game:GetService("Selection")
+      	local selectedObjects = selectionService:Get()
+      	local alignObjects = {}
+      	for _, obj in pairs(selectedObjects) do
+      		if obj:IsA("BaseWrap") then
+      			--print("Wrap: " .. obj.Name)
+      			table.insert(alignObjects, obj)
+      		else
+      			print("Ignore: " .. obj.Name)
+      		end
+      	end
+
+      	if #alignObjects < 2 then
+      		warn("You need to select at least two wraps")
+      		return
+      	end
+
+      	local anchorWrap = alignObjects[1]
+      	local worldA_from_Wrap = anchorWrap.ImportOriginWorld
+      	print("Anchor: " .. anchorWrap.Name)
+      	for i = 2, #alignObjects do
+      		local wrapToAlign = alignObjects[i]
+      		print("Align: " .. wrapToAlign.Name)
+      		local wrap_from_WorldB = wrapToAlign.ImportOriginWorld:Inverse()
+      		local worldA_from_WorldB = worldA_from_Wrap * wrap_from_WorldB
+      		local worldB = wrapToAlign.Parent.CFrame
+      		-- Note: adjust CFrame of the parent part
+      		wrapToAlign.Parent.CFrame = (worldB_from_WorldB * worldB)
+      	end
+      end
+      ```
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BaseWrap.ImportOriginWorld
+    summary: |
+      Describes where the origin (in world space) was while authoring the cage
+      mesh in an asset creation tool.
+    description: |
+      Describes where the origin (in world space) was while authoring the cage
+      mesh in an asset creation tool such as Blender or Maya.
+    code_samples:
+    type: CFrame
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,126 @@
+name: Accoutrement
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  An object that can attach to a player's character.
+description: |
+  An Accoutrement welds its child `Class.Part|part` called "Handle" to the
+  player's character. You can change the position and rotation of the Handle
+  part using the `Class.Accoutrement.AttachmentPos|AttachmentPos`,
+  `Class.Accoutrement.AttachmentRight|Right`,
+  `Class.Accoutrement.AttachmentForward|Forward`, and
+  `Class.Accoutrement.AttachmentUp|Up` properties.
+
+  Parts descending from an accoutrement are massless when attach to other parts
+  (e.g. with a Weld) as long as they are not the root part of the assembly that
+  `Class.BasePart:GetRootPart()|GetRootPart()` returns.
+  `Class.BasePart:GetMass()|GetMass()` returns 0 for parts in this case, and it
+  doesn't add to the total mass or rotational inertia of the Assembly.
+
+  This doesn't apply to a part descending from an accoutrement when an
+  accoutrement welds to another part that is massless or one if its parts
+  otherwise becomes root. This also doesn't apply for the root part, and it has
+  mass like a normal part.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Accoutrement.AttachmentForward
+    summary: |
+      Sets the offset position of the object on the Player.
+    description: |
+      Sets the offset position of the object on the Player.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Accoutrement.AttachmentPoint
+    summary: |
+      The exact CFrame of the Accoutrement.
+    description: |
+      The exact CFrame of the Accoutrement.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Accoutrement.AttachmentPos
+    summary: |
+      Sets the position of the object on the Player.
+    description: |
+      Sets the position of the object on the Player.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Accoutrement.AttachmentRight
+    summary: |
+      Sets the offset position of the object on the Player.
+    description: |
+      Sets the offset position of the object on the Player.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Accoutrement.AttachmentUp
+    summary: |
+      Sets the offset position of the object on the Player.
+    description: |
+      Sets the offset position of the object on the Player.
+    code_samples:
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Transform
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

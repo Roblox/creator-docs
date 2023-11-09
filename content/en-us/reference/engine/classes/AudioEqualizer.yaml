@@ -1,0 +1,102 @@
+name: AudioEqualizer
+type: class
+category:
+memory_category: Internal
+summary: |
+  Adjusts the frequency content of audio streams.
+description: |
+  `Class.AudioEqualizer` adjusts the frequency content of audio streams. It
+  provides one **Input** pin and one **Output** pin which can be connected
+  to/from by `Class.Wire|Wires`. `Class.AudioEqualizer` has 3 frequency bands
+  whose gain values can be controlled, and the crossover points between bands
+  can be moved.
+code_samples:
+  - audio-wiring---listener-equalization
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioEqualizer.HighGain
+    summary: |
+      Gain value to be applied to the frequency content of the highest band in
+      the equalizer.
+    description: |
+      Gain value, in decibels, to be applied to the frequency content of the
+      highest band in the equalizer. Ranges from -80 to 10.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEqualizer.LowGain
+    summary: |
+      Gain value to be applied to the frequency content of the lowest band in
+      the equalizer.
+    description: |
+      Gain value, in decibels, to be applied to the frequency content of the
+      lowest band in the equalizer. Ranges from -80 to 10.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEqualizer.MidGain
+    summary: |
+      Gain value to be applied to the frequency content of the middle band in
+      the equalizer.
+    description: |
+      Gain value, in decibels, to be applied to the frequency content of the
+      middle band in the equalizer. Ranges from -80 to 10.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioEqualizer.MidRange
+    summary: |
+      The frequency range of the band influenced by
+      `Class.AudioEqualizer.MidGain|MidGain`.
+    description: |
+      The frequency range in hertz of the band influenced by
+      `Class.AudioEqualizer.MidGain|MidGain`. The lower value of the range
+      determines the crossover frequency between the low and mid bands. The
+      higher value of the range determines the crossover frequency between the
+      mid and high bands. Both crossover frequencies range from 200 to 20,000.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

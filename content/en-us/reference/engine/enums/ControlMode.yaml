@@ -1,0 +1,29 @@
+name: ControlMode
+type: enum
+summary: |
+  The ControlMode Enum sets how the player is controlled.
+description: |
+  The ControlMode Enum sets how the player is controlled.
+
+  Note that shift-lock related APIs are in the process of being deprecated, so
+  it's recommended to use `Class.UserInputService.MouseBehavior` instead to lock
+  the mouse.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Classic
+    summary: |
+      Allows the camera to be moved by clicking and dragging with the right
+      mouse button.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: MouseLockSwitch
+    summary: |
+      Similar to classic, but allows the player to toggle mouse locking, causing
+      the camera to rotate as the player moves the mouse (without holding down a
+      button).
+    value: 1
+    tags: []
+    deprecation_message: ''

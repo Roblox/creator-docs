@@ -3,6 +3,10 @@ title: Promotion
 description: An overview of promotional tools you can use to promote your experiences, avatar items, and social media.
 ---
 
+<Alert severity="warning">
+  Sponsored Experiences has moved to Ads Manager and User Ads are being deprecated. You can learn about the future of advertising on Roblox [here](https://devforum.roblox.com/t/upcoming-ads-roadmap-and-changes/2660524).
+</Alert>
+
 **Promotion** on Roblox allows you to engage a global audience to drive traffic and awareness to your experiences, avatar items, and social media. There are several ways you can market your content to users when and where they're most likely to engage with it:
 
 - **Promote your experiences** – Engage users in special sort categories or search results when they're browsing the Discover page, in immersive portal ads in an experience they're already accessing, through time-based events, or in a highlight as they're watching a Roblox-owned channel.
@@ -20,29 +24,24 @@ The following table details all promotional methods for experiences on the platf
         <tr>
             <th>Promotion Method</th>
             <th>Description</th>
-            <th>Example</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Sponsor Experiences</td>
-            <td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Sponsoring Experiences](../../production/promotion/sponsoring-experiences.md).</td>
-            <td><img src="../../assets/promotion/Sponsored-Sort.jpg" width="100%" /></td>
+            <td>Sponsored Experiences</td>
+            <td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
         </tr>
         <tr>
-            <td>Run Immersive Portal Ad Campaigns</td>
+            <td>Immersive Portal Ad Campaigns</td>
             <td>Advertise experiences through the immersive portal ad format that transports users from other creators' experiences directly into your own.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
-            <td><img src="../../assets/promotion/portal-immersive-ad.png" width="100%" /></td>
         </tr>
         <tr>
             <td>Create Time-Based Events</td>
             <td>Invite users back into your experiences with engaging time-based events that display on your experience's main details page. You can schedule up to 10 events at a time through the Events Platform, and users have the ability to opt-in to notifications for each event.<br /><br />For more information, see [Events Platform](../../production/promotion/events-platform.md).</td>
-            <td><img src="../../assets/promotion/Event-Page-Small.jpg" width="100%" /></td>
         </tr>
         <tr>
             <td>Feature Experiences on Special Sort Categories or Roblox's Channels</td>
             <td>Apply for Roblox to feature your experiences within the **Learn & Explore**, **Free Private Servers**, and **Xbox Featured** sort categories on the [Discover](https://www.roblox.com/discover) Page, or in highlights on Roblox-owned channels.<br /><br />For more information, see [Nominating for the Discover Page](../../production/promotion/nominating-for-the-discover-page.md).</td>
-            <td><img src="../../assets/promotion/Free-Private-Servers-Sort.jpg" width="100%" /></td>
         </tr>
     </tbody>
 </table>
@@ -56,14 +55,12 @@ The following table details all promotional methods for avatar items on the plat
         <tr>
             <th>Promotional Method</th>
             <th>Description</th>
-            <th>Example</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Sponsor Items</td>
-            <td>Advertise avatar accessories and clothing within the **Sponsored** category on any item's main details page on the Roblox website, or the **Recommended Items for You** page of the [Marketplace](https://www.roblox.com/catalog) on the Roblox app. Like sponsored experiences, each sponsored item ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Sponsoring Items](../../production/promotion/sponsoring-items.md).</td>
-            <td><img src="../../assets/promotion/Sponsored-Items-Overview.png" width="100%" /></td>
+            <td>Advertise avatar accessories and clothing within the **Sponsored** category on any item's main details page on the Roblox website, or the **Recommended Items for You** page of the [Marketplace](https://www.roblox.com/catalog) on the Roblox app. Each sponsored item ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Sponsoring Items](../../production/promotion/sponsoring-items.md).</td>
         </tr>
     </tbody>
 </table>

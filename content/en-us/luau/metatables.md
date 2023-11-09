@@ -87,6 +87,10 @@ Here's the list of available metamethods:
 		  <td>The / division operator.</td>
 		</tr>
 	  <tr>
+		  <td>__idiv(table, value)</td>
+		  <td>The // floor division operator.</td>
+	 	</tr>
+	  <tr>
 		  <td>__mod(table, value)</td>
 		  <td>The % modulus operator.</td>
 		</tr>
@@ -126,11 +130,15 @@ Here's the list of available metamethods:
 		  <td>__len(table)</td>
 		  <td>Fired when the # length operator is used on the Object.</td>
 		</tr>
+	  <tr>
+		  <td>__iter(table)</td>
+		  <td>Used to denote a custom iterator when using generalized iteration.</td>
+	  </tr>
 	</tbody>
 </table>
 
 <Alert severity = 'info'>
-¹ Requires two values with the _same_ metatable and basic type
+¹ Requires two values with the _same_ metamethod function and basic type
 (table/userdata/etc.); does not work with a table and another random table, or
 with a userdata and a table.
 
@@ -260,7 +268,7 @@ local metatable = {
 
     	for key, value in pairs(t2) do
     		if sum[key] then
-    			sum[key] = sum[key] + value
+    			sum[key] += value
    		else
    			sum[key] = value
    		end
@@ -289,7 +297,7 @@ local function mathProblem(num)
     	num = math.floor(num * 10 + 65)
     end
     for i = 1, 10 do
-    	num = num + i - 1
+    	num += i - 1
     end
     return num
 end

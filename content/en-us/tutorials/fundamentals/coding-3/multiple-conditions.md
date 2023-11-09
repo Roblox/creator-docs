@@ -36,7 +36,7 @@ if finishTime >= 5 and <= 10 then
 end
 
 if finishTime > 10 and <= 15 then
-   get a bronze medal
+   -- Get a bronze medal
 end
 ```
 
@@ -184,7 +184,7 @@ Like an if statement, a while loop can also use a condition to see if it should 
    finishLine.Touched:Connect(partTouched)
 
    while raceActive == true do
-      wait(1)
+      task.wait(1)
       timePassed = timePassed + 1
       print(timePassed)
    end
@@ -350,7 +350,7 @@ finishLine.Touched:Connect(partTouched)
 
 -- Keeps track of race time while the race is active. Needs to be at script bottom.
 while raceActive == true do
-   wait(1)
+   task.wait(1)
    timePassed = timePassed + 1
    print(timePassed)
 end

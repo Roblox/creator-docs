@@ -1,0 +1,25 @@
+name: SaveFilter
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: |
+  This Enum has no known usage and its purpose is currently unknown.
+items:
+  - name: SaveWorld
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: SaveGame
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SaveAll
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

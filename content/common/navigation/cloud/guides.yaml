@@ -1,49 +1,38 @@
 navigation:
   - heading: Open Cloud
   - title: Overview
-    type: markdown
     path: /cloud/open-cloud/
-  - title: Managing API Keys
-    type: markdown
-    path: /cloud/open-cloud/managing-api-keys
-  - title: Data Types
-    type: markdown
-    path: /cloud/open-cloud/open-cloud-data-types
-  - title: Error Handling
-    type: markdown
-    path: /cloud/open-cloud/open-cloud-error-handling
-  - heading: API Usage
+  - heading: Authentication
+  - title: OAuth 2.0
+    section:
+      - title: Overview
+        path: /cloud/open-cloud/oauth2-overview
+      - title: Registration
+        path: /cloud/open-cloud/oauth2-registration
+      - title: Implementation
+        path: /cloud/open-cloud/oauth2-develop
+      - title: Sample App
+        path: /cloud/open-cloud/oauth2-sample
+  - title: API Keys
+    path: /cloud/open-cloud/api-keys
+  - heading: V2 Resources (Beta)
+  - title: Inventory
+    path: /cloud/open-cloud/inventory
+  - heading: V1 Resources
   - title: Assets
-    type: markdown
     path: /cloud/open-cloud/usage-assets
   - title: Data Stores
     section:
-      - title: Usage Guide
-        type: markdown
+      - title: Overview
         path: /cloud/open-cloud/usage-data-stores
       - title: Handling Requests
-        type: markdown
         path: /cloud/open-cloud/data-store-api-handling
   - title: Messaging
-    type: markdown
     path: /cloud/open-cloud/usage-messaging
   - title: Place Publishing
-    type: markdown
     path: /cloud/open-cloud/usage-place-publishing
-  - heading: OAuth 2.0 3rd Party Apps
-  - title: Overview
-    type: markdown
-    path: /cloud/open-cloud/oauth2-overview
-  - title: App Development
-    type: markdown
-    path: /cloud/open-cloud/oauth2-develop
-  - title: Registration and Review
-    type: markdown
-    path: /cloud/open-cloud/app-registration
   - heading: Webhooks
   - title: Webhook Notifications
-    type: markdown
     path: /cloud/webhooks/webhook-notifications
   - title: Right to Erasure Requests
-    type: markdown
     path: /cloud/webhooks/automate-right-to-erasure

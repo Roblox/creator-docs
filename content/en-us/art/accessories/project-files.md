@@ -3,25 +3,53 @@ title: Accessory Project Files and References
 description: Download various accessory-related project files and reference files.
 ---
 
-The following `.fbx`, `.blend`, and `.ma` files project files are available to use as templates or as reference:
+<Alert severity = 'info'>
+See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
+</Alert>
+
+The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
-  <TabItem label="Clothing">
+  <TabItem label="Clothing and Mannequins">
   <table>
 <thead>
   <tr>
-    <th>Filename</th>
-    <th>Description</th>
+    <th><b>File</b></th>
+    <th><b>Description</b></th>
   </tr>
 </thead>
 <tbody>
     <tr>
     <td><a href="../../assets/accessories/reference-files/Tshirt-model.fbx" download>Tshirt-model.fbx</a></td>
-    <td>Uncaged example clothing from [Creating Layered Clothing](../../art/accessories/creating-in-blender.md) ready for caging in a 3D modeling software.</td>
+    <td>Uncaged example clothing ready for caging in a 3D modeling software.</td>
   </tr>
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>
     <td>Caged 3D accessory models ready for import into Studio or in a modeling tool.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
+    <td>A [Classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" download>ClassicMannequin_With-Cages</a></td>
+    <td>A [Classic](../../art/characters/specifications.md#classic) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin.fbx" download>RthroMannequin.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroMannequin_With-Cages.fbx" download>RthroMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin with **body cages** to use in Studio or your modeling application to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin.fbx" download>RthroSlenderMannequin.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin to use in Studio or your modeling application.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/art/reference-files/RthroSlenderMannequin_With-Cages.fbx" download>RthroSlenderMannequin_With-Cages.fbx</a></td>
+    <td>An [Rthro Slender](../../art/characters/specifications.md#slender) body type blank mannequin with **body cages** to use in Studio or your modeling application to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
   </tr>
 </tbody>
 </table>
@@ -41,7 +69,7 @@ The following `.fbx`, `.blend`, and `.ma` files project files are available to u
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" download>Clothing_Cage_Template.blend</a></td>
-    <td>Starting template for Blender, includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
+    <td>Starting template for Blender that includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/modeling/meshes/reference-files/Combined-Template.blend" download>Combined-Template.blend</a></td>

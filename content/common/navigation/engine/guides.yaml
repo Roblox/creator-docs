@@ -10,6 +10,8 @@ navigation:
   - title: Coding Fundamentals
     path: /tutorials/fundamentals/coding-1/coding-fundamentals
     navigation: /engine/tutorials-fundamentals.yaml
+  - title: Assistant for Documentation
+    path: /assistant/guide
     #section:
     #  - title: Setting Up Roblox Studio
     #    path: /docs/getting-started/setting-up-roblox-studio
@@ -43,6 +45,16 @@ navigation:
             path: /projects/collaboration
           - title: Groups
             path: /projects/groups
+      - title: Performance Optimization
+        section:
+          - title: Overview
+            path: /projects/performance-optimization/
+          - title: Computation
+            path: /projects/performance-optimization/computation
+          - title: Memory
+            path: /projects/performance-optimization/memory
+          - title: Load Times
+            path: /projects/performance-optimization/load-times
   - title: Assets
     section:
       - title: Overview
@@ -55,10 +67,8 @@ navigation:
             path: /projects/assets/manager
           - title: Toolbox
             path: /projects/assets/toolbox
-          - title: Asset Catalog API
+          - title: External Catalog Queries
             path: /projects/assets/api
-      - title: Archiving
-        path: /projects/assets/archiving
       - title: In-Experience Asset Creation
         path: /projects/assets/in-experience-asset-creation
   - title: 3D Workspace
@@ -91,6 +101,8 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
+          - title: Character Controllers
+            path: /physics/character-controllers
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -245,6 +257,8 @@ navigation:
                 path: /luau/functions
               - title: Type Coercion
                 path: /luau/type-coercion
+              - title: Luau Type Checking
+                path: /luau/type-checking
   - title: Environment
     section:
       - title: Overview
@@ -300,12 +314,8 @@ navigation:
       - title: Overview
         path: /input/
       - title: Mouse and Keyboard
-        section:
-          - title: Overview
-            path: /input/mouse-and-keyboard
-          - title: Customizing Mouse Icons
-            path: /input/customizing-mouse-icons
-      - title: Mobile Input
+        path: /input/mouse-and-keyboard
+      - title: Mobile
         path: /input/mobile
       - title: Gamepad
         path: /input/gamepad
@@ -340,7 +350,13 @@ navigation:
           - title: Buttons
             path: /ui/buttons
           - title: Text Input
-            path: /ui/text
+            path: /ui/text-input
+          - title: Proximity Prompts
+            path: /ui/proximity-prompts
+          - title: Drag Detectors
+            path: /ui/drag-detectors
+          - title: Video Assets
+            path: /ui/video-assets
       - title: Layout and Design
         section:
           - title: Layout and Appearance
@@ -357,10 +373,6 @@ navigation:
             path: /ui/cross-platform-design
       - title: UI Animation
         path: /ui/animation
-      - title: Proximity Prompts
-        path: /ui/proximity-prompts
-      - title: Drag Detectors
-        path: /ui/drag-detectors
       - title: Text Filtering
         path: /ui/text-filtering
       - title: Loading Screens
@@ -383,7 +395,6 @@ navigation:
             path: /animation/inverse-kinematics
       - title: Using Animations
         path: /animation/using
-
   - title: Chat
     section:
       - title: Spatial Voice
@@ -398,7 +409,6 @@ navigation:
             path: /chat/bubble-chat
           - title: Migrating to In-Experience Text Chat
             path: /chat/migrate-to-in-experience-text-chat
-
   - title: Cloud Services
     section:
       - title: Data Stores
@@ -461,8 +471,8 @@ navigation:
             path: /production/publishing/dmca-guidelines
           - title: Accessibility Guidelines
             path: /production/publishing/accessibility
-          - title: Xbox Guidelines
-            path: /production/publishing/xbox-guidelines
+          - title: Console Guidelines
+            path: /production/publishing/console-guidelines
           - title: VR Guidelines
             path: /production/publishing/vr-guidelines
       - title: Account Verification
@@ -483,8 +493,6 @@ navigation:
             path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
-          - title: Sponsoring Experiences
-            path: /production/promotion/sponsoring-experiences
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
           - title: User Advertisements
@@ -507,10 +515,14 @@ navigation:
         section:
           - title: Immersive Ads
             path: /production/monetization/immersive-ads
-          - title: Developer Products
-            path: /production/monetization/developer-products
+          - title: Subscriptions
+            path: /production/monetization/subscriptions
           - title: Passes
             path: /production/monetization/game-passes
+          - title: Developer Products
+            path: /production/monetization/developer-products
+          - title: Avatar Items
+            path: /production/monetization/avatar-items
           - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
           - title: Paid Access
@@ -569,8 +581,6 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
-      - title: Third-Party Analytics Services
-        path: /production/analytics/third-party-analytics
   - title: Community
     section:
       - title: Overview

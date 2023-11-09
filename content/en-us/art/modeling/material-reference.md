@@ -107,7 +107,7 @@ You can use the following material reference values as a baseline for creating y
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/023_WornMetals.png" />
-<figcaption><center><b>Worn Metals</b><br />Roughness: 0.2-.04 <br /> Metalness: 1.0 </center></figcaption>
+<figcaption><center><b>Worn Metals</b><br />Roughness: 0.2-0.4 <br /> Metalness: 1.0 </center></figcaption>
 </figure>
 <figure>
 <img src="../../assets/modeling/surface-appearance/024_GlassMirror.png" />
@@ -117,7 +117,7 @@ You can use the following material reference values as a baseline for creating y
 
 ## Clothing Examples
 
-[Layered clothing](../../art/accessories/layered-clothing.md) can take advantage of PBR textures to achieve realistic and visually popping cosmetics for avatar characters. Use the following reference examples to compare how various material values are used to achieve a certain cosmetic effect and its comparable real-time rendering in Substance Painter and Roblox Studio:
+Layered clothing can take advantage of PBR textures to achieve realistic and visually popping cosmetics for avatar characters. Use the following reference examples to compare how various material values are used to achieve a certain cosmetic effect and its comparable real-time rendering in Substance Painter and Roblox Studio:
 
 <table>
 <thead>

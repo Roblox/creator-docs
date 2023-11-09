@@ -1,0 +1,32 @@
+navigation:
+  - heading: Curriculum Paths
+  - title: Overview
+    path: /avatar/tutorials
+  - title: Rigid Accessories
+    path: /art/accessories/creating-rigid/
+    navigation: /avatar/tutorials-accessories.yaml
+  - title: Clothing
+    path: /art/accessories/creating
+    navigation: /avatar/tutorials-clothing.yaml
+  - title: Bodies
+    path: /art/characters/creating
+    navigation: /avatar/tutorials-bodies.yaml
+  - heading: Use Cases
+  - title: Rigging a Humanoid Model
+    path: /art/modeling/rigging-a-humanoid-model
+  - title: Skinning a Humanoid Model
+    path: /art/modeling/skinning-a-humanoid-model
+  - title: Creating Basic Heads
+    path: /art/characters/facial-animation/creating-basic-heads
+  - title: Creating Face Accessories
+    path: /art/characters/facial-animation/creating-face-accessories
+  - title: Publishing Eyebrows and Eyelashes
+    path: /art/accessories/publishing-eyebrows-eyelashes
+  - title: Testing Characters
+    section:
+      - title: Overview
+        path: /art/characters/testing/
+      - title: In Blender
+        path: /art/characters/testing/blender
+      - title: In Studio
+        path: /art/characters/testing/studio

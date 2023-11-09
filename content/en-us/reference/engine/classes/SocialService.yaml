@@ -1,0 +1,241 @@
+name: SocialService
+type: class
+category:
+memory_category: Instances
+summary: |
+  Facilitates social functions that impact relationships made on the Roblox
+  platform.
+description: |
+  **SocialService** facilitates social functions that impact relationships made
+  on the Roblox platform. Its primary usage is to show
+  [invite prompts](../../../production/promotion/invite-prompts.md) to players
+  which allow them to send invitation requests to their friends through
+  `Class.SocialService:PromptGameInvite()` and leverage signals when such
+  requests are made.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: SocialService:HideSelfView
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:PromptGameInvite
+    summary: |
+      Prompts the given `Class.Player` with the invite screen.
+    description: |
+      `Class.SocialService:PromptGameInvite()|PromptGameInvite()` displays an
+      invite prompt to the local player through which they may invite their
+      friends to the current experience. Before calling this method, you should
+      use
+      `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()` to
+      determine whether the player can send an invite, as this ability may vary
+      depending on the platform or player.
+
+      <img
+      src="/assets/promotion/invite-prompts/Prompt-Multiple-Friends.jpg"
+      width="812" />
+
+      See
+      [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
+      for more details on implementing invite prompts, customizing prompts and
+      notifications, and using launch data.
+    code_samples:
+      - sending-a-game-invite
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` to prompt with the invite popup.
+      - name: experienceInviteOptions
+        type: Instance
+        default: nil
+        summary: |
+          Optional `Class.ExperienceInviteOptions` object for customizing the
+          prompt.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:PromptPhoneBook
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:ShowSelfView
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: selfViewPosition
+        type: SelfViewPosition
+        default: LastPosition
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:CanSendCallInviteAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:CanSendGameInviteAsync
+    summary: |
+      Indicates whether the given `Class.Player` can invite other players.
+    description: |
+      `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()`
+      returns `true` if the given `Class.Player` can invite other players to the
+      current experience. You should always use the result of this function
+      before calling `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
+      since the ability to invite players may vary depending on the platform or
+      player.
+
+      See
+      [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
+      for more details on implementing player invite prompts, customizing
+      prompts and notifications, and using launch data.
+    code_samples:
+      - sending-a-game-invite
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the user potentially sending an invite.
+      - name: recipientId
+        type: int64
+        default: 0
+        summary: |
+          Optional `Class.Player.UserId` of the potential **recipient**, used to
+          check whether the sender can invite that specific recipient.
+    returns:
+      - type: bool
+        summary: |
+          Whether the specified player can send an invite.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: SocialService.CallInviteStateChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: inviteState
+        type: InviteState
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService.GameInvitePromptClosed
+    summary: |
+      Fires when a player closes an invite prompt.
+    description: |
+      This event fires when a player closes an invite prompt.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the user who closed the prompt.
+      - name: recipientIds
+        type: Array
+        default:
+        summary: |
+          No longer populated; an empty array.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService.PhoneBookPromptClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: SocialService.OnCallInviteInvoked
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+      - name: callParticipantIds
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

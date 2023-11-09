@@ -260,7 +260,7 @@ rename the module script to **Leaderboard**.
    creates stat values for a specified player or the leaderboard itself if it
    doesn't already exist.
 
-   `Class.Instance.FindFirstChild|FindFirstChild()` takes the name of an object
+   `Class.Instance:FindFirstChild()|FindFirstChild()` takes the name of an object
    and returns the object if it exists, or `nil` if it doesn't. It's a common,
    safe method of finding out if an object exists before you use it.
 
@@ -356,7 +356,7 @@ data. To update **CoinService**:
       The changes to the original **CoinService** script include:
 
     - Importing the **PlayerData** and **Leaderboard** modules with the
-      `require()` function.
+      `Global.RobloxGlobals.require()` function.
     - Declaring `COIN_AMOUNT_TO_ADD` as the number of
       coins to add when a player collects a coin, and `COIN_KEY_NAME` as the key
       name defined in **PlayerData**.

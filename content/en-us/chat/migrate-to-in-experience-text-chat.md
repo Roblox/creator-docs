@@ -15,7 +15,7 @@ When creating a new experience, the in-experience text chat system is automatica
 
 1. In the [Properties](../studio/properties.md) window, find the **ChatVersion** dropdown and select **TextChatService**.
 
-   <img src="../assets/ui/in-experience-text-chat/TextChatService-ChatVersion.png" width="40%" />
+   <img src="../assets/players/in-experience-text-chat/TextChatService-ChatVersion.png" width="40%" />
 
 ## Basic Chat Functionalities
 

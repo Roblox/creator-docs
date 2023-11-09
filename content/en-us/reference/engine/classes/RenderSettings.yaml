@@ -1,0 +1,317 @@
+name: RenderSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: ''
+description: |
+  The RenderSettings is a singleton class, which lets developers debug
+  components of Roblox's graphics engine.
+
+  It can be found under the `Rendering` tab in Roblox Studio's settings menu.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: RenderSettings.AutoFRMLevel
+    summary: |
+      Sets the starting quality level of the framerate manager, when
+      `Class.RenderSettings.EnableFRM` is set to true.
+    description: |
+      Sets the starting quality level of the framerate manager, when
+      `Class.RenderSettings.EnableFRM` is set to true.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.EagerBulkExecution
+    summary: |
+      When set to true, all scene updates will be given an unlimited budget,
+      regardless of how computationally expensive it may be.
+    description: |
+      When set to true, all scene updates will be given an unlimited budget,
+      regardless of how computationally expensive it may be. This ensures each
+      frame will look as it should, at the cost of a more unstable frame rate.
+
+      This is used when rendering game thumbnails.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.EditQualityLevel
+    summary: |
+      Sets the graphics quality level in Roblox Studio, when
+      `Class.RenderSettings.EnableFRM` is set to false.
+    description: |
+      Sets the graphics quality level in Roblox Studio, when
+      `Class.RenderSettings.EnableFRM` is set to false.
+    code_samples:
+    type: QualityLevel
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.Enable VR Mode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.EnableFRM
+    summary: |
+      Toggles the enabled state of the framerate manager.
+    description: |
+      Toggles the enabled state of the framerate manager.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: false
+  - name: RenderSettings.ExportMergeByMaterial
+    summary: |
+      Sets whether materials should be generated per part, or per unique
+      appearance in Roblox's obj exporter.
+    description: |
+      Sets whether materials should be generated per part, or per unique
+      appearance in Roblox's obj exporter.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.FrameRateManager
+    summary: |
+      Specifies the behavior of the framerate manager.
+    description: |
+      Specifies the behavior of the framerate manager.
+    code_samples:
+    type: FramerateManagerMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.GraphicsMode
+    summary: |
+      The graphics API that Roblox will use on startup.
+    description: |
+      The graphics API that Roblox will use on startup.
+    code_samples:
+    type: GraphicsMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: General
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.MeshCacheSize
+    summary: |
+      The size in bytes of the mesh cache. Defaults to 32 MBs.
+    description: |
+      The size in bytes of the mesh cache. Defaults to 32 MBs.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Cache
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.MeshPartDetailLevel
+    summary: |
+      Studio only. Used to visually verify the quality of MeshParts at lower
+      level of detail at close range.
+    description: |
+      Determines the mode for the selection of detail levels for mesh parts. For
+      a good balance between performance and fidelity this should be set to
+      `MeshPartDetail.DistanceBased` (default), which is what the client uses.
+
+      Note that the `Class.MeshPart.RenderFidelity` needs to be set to
+      `Enum.RenderFidelity.Automatic` for this to work. If you set it to
+      `Enum.RenderFidelity.Precise` you will always see the higher resolution
+      version and the `Enum.MeshPartDetailLevel` will be ignored for that
+      `Class.MeshPart`.
+    code_samples:
+    type: MeshPartDetailLevel
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.QualityLevel
+    summary: |
+      If `Class.RenderSettings.EnableFRM` is set to true, this property controls
+      the quality level in Roblox Studio.
+    description: |
+      If `Class.RenderSettings.EnableFRM` is set to true, this property controls
+      the quality level in Roblox Studio.
+    code_samples:
+    type: QualityLevel
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.ReloadAssets
+    summary: |
+      When set to true, Roblox Studio will automatically reload changes that are
+      made to files in Roblox's `content` folder.
+    description: |
+      When set to true, Roblox Studio will automatically reload changes that are
+      made to files in Roblox's `content` folder.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.RenderCSGTrianglesDebug
+    summary: |
+      When set to true, a wireframe of polygons will be shown on all
+      `Class.PartOperation` objects.
+    description: |
+      When set to true, a wireframe of polygons will be shown on all
+      `Class.PartOperation` objects.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.ShowBoundingBoxes
+    summary: |
+      If set to true, renders bounding boxes around each individual rendered
+      entity in the scene.
+    description: |
+      If set to true, renders bounding boxes around each individual rendered
+      entity in the scene.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderSettings.ViewMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ViewMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Debug
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: RenderSettings:GetMaxQualityLevel
+    summary: |
+      Returns the maximum quality level.
+    description: |
+      Returns the maximum quality level.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

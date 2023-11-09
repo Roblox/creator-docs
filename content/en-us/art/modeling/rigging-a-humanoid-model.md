@@ -29,7 +29,7 @@ To begin creating a humanoid rigged mesh, first set up the following in your Ble
 
 ### Importing Model
 
-When rigging a model, make sure the character model you are using follows Studio's [Avatar Character Specifications](../../art/avatar/specifications.md). For this guide, import a [Lola reference model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx) into the mannequin template project.
+When rigging a model, make sure the character model you are using follows Studio's [Avatar Character Specifications](../../art/characters/specifications.md). For this guide, import a [Lola reference model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx) into the mannequin template project.
 
 To import your model:
 
@@ -57,7 +57,7 @@ At any point during the skinning process, you can also toggle one of the various
 In this guide, set up X-Axis Mirroring to make symmetrical changes to the left and right bones before repositioning the bones to the imported model. Try to maintain symmetry whenever possible when rigging a model.
 
 <Alert severity="warning">
-If modifying bones or creating a new bone structure, keep in mind the <a href="../../art/avatar/specifications.md#humanoid-rigs">specific bone hierarchy and naming requirements</a> for R15 character models.
+If modifying bones or creating a new bone structure, keep in mind the <a href="../../art/characters/specifications.md#humanoid-rigs">specific bone hierarchy and naming requirements</a> for R15 character models.
 </Alert>
 
 ### Enable X-Axis Mirror
@@ -109,8 +109,7 @@ To parent the model to the armature:
 
 ## Assigning Meshes to Bones
 
-Now that you connect your armature to the mesh object, you can assign the vertices of your individual limbs to be fully influenced by one corresponding
-bones. After this process is completed, the model will be ready for skinning. See [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md) for instructions on applying multiple bone influences to a mesh.
+Now that you have connected your armature to the mesh object, you can assign the vertices of your individual limbs to be fully influenced by one corresponding bone. After this process is completed, the model will be ready for skinning. See [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md) for instructions on applying multiple bone influences to a mesh.
 
 <Alert severity="warning">
 The **Root** and **HumanoidRootNode** parent bones in a humanoid rig should not have any influences applied to them. Any added influences are dropped when importing into Studio.

@@ -470,7 +470,7 @@ Now that you know where to create a laser beam, you need to add the beam itself.
        laserPart.Parent = workspace
 
        -- Add laser beam to the Debris service to be removed & cleaned up
-       game.Debris:AddItem(laserPart, SHOT_DURATION)
+       Debris:AddItem(laserPart, SHOT_DURATION)
    end
    ```
 
@@ -804,7 +804,7 @@ The shooting sound effect currently only plays on the client that's shooting the
        laserPart.Parent = workspace
 
        -- Add laser beam to the Debris service to be removed & cleaned up
-       game.Debris:AddItem(laserPart, SHOT_DURATION)
+       Debris:AddItem(laserPart, SHOT_DURATION)
 
        -- Play the weapon's shooting sound
        local shootingSound = toolHandle:FindFirstChild("Activate")
@@ -1052,6 +1052,8 @@ tool.Activated:Connect(toolActivated)
 ```lua
 local LaserRenderer = {}
 
+local Debris = game:GetService("Debris")
+
 local SHOT_DURATION = 0.15 -- Time that the laser is visible for
 
 -- Create a laser beam from a start position towards an end position
@@ -1071,7 +1073,7 @@ function LaserRenderer.createLaser(toolHandle, endPosition)
 	laserPart.Parent = workspace
 
 	-- Add laser beam to the Debris service to be removed & cleaned up
-	game.Debris:AddItem(laserPart, SHOT_DURATION)
+	Debris:AddItem(laserPart, SHOT_DURATION)
 
 	-- Play the weapon's shooting sound
 	local shootingSound = toolHandle:FindFirstChild("Activate")

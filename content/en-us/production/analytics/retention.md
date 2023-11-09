@@ -3,6 +3,10 @@ title: Retention
 description: Explains how to improve retention metrics for your experience.
 ---
 
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
 **Retention** measures how many users return to your experience after their first visit in 1 day, 7 days, and 30 days.
 
 ## Viewing Retention Metrics
@@ -32,7 +36,11 @@ The following example is one path to improve your core loop:
 2. **Balance the challenge** of your core loop to avoid user frustration and boredom.
 3. **Reward users** for completing your core loop with feedback, currency, items, and achievements.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bROouMt1b3g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/gkFKF9A-snY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br />
+
+To learn more on how to design core loops, see [Core Loops](../../production/game-design/core-loops.md).
 
 ### First-time User Experience
 
@@ -50,17 +58,17 @@ You can also use analytics to improve your FTUE:
    - Train a pet.
    - Level up a pet.
 
-2. **Track the completion rate of each step**. You can either use:
-
-   - Custom events and queries with a [third party analytics tool](../../production/analytics/third-party-analytics.md).
-   - Special in-experience items to mark the completion of each step.
-     Track both positive and negative experiences. For example, if the FTUE includes a battle with an NPC, track both whether users win or lose more frequently.
+2. **Track the completion rate of each step**. Use special in-experience items to mark the completion of each step. Track both positive and negative experiences. For example, if the FTUE includes a battle with an NPC, track both whether users win or lose more frequently.
 
 3. **Identify and fix big drop-offs**. For example, if visiting the pet store has the highest drop-off rate, you can reduce friction in this step by making the pet store easier to find.
 
 Avoid a complex or time consuming FTUE, as you want to get users to the fun as quickly as possible, ideally in 5 minutes or less after entering your experience.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XfxbdKtSbOI" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+To learn more on how to design your FTUE, see [Onboarding](../../production/game-design/onboarding.md).
 
 ### Performance
 

@@ -1,0 +1,23 @@
+name: SelectionRenderMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Outlines
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BoundingBoxes
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Both
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

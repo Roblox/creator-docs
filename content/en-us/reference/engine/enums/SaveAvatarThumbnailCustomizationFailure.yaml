@@ -1,0 +1,38 @@
+name: SaveAvatarThumbnailCustomizationFailure
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: BadThumbnailType
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BadYRotDeg
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BadFieldOfViewDeg
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BadDistanceScale
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Other
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Throttled
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''

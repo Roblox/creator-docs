@@ -314,7 +314,7 @@ Users can change their language settings at any time using their in-experience S
   </figure>
 </GridContainer>
 
-To ensure that your scripted localized assets update correctly, listen to the `Class.Instance.GetPropertyChangedSignal|GetPropertyChangedSignal` event for changes in the LocaleID property of the `Class.Translator` instance returned by `Class.LocalizationService.GetTranslatorForPlayerAsync`. When using `Class.LocalizationService.GetTranslatorForPlayerAsync`, wrap the function within a `pcall` in case of errors.
+To ensure that your scripted localized assets update correctly, listen to the `Class.Instance.GetPropertyChangedSignal|GetPropertyChangedSignal` event for changes in the LocaleID property of the `Class.Translator` instance returned by `Class.LocalizationService.GetTranslatorForPlayerAsync`. When using `Class.LocalizationService.GetTranslatorForPlayerAsync`, wrap the function within a `Global.LuaGlobals.pcall()` in case of errors.
 
 The following code sample prints the Locale ID of the user and the Locale ID of the Translator instance for the user when the user switches languages:
 
@@ -391,8 +391,6 @@ function TranslationHelper.translate(text, object)
 	if not object then
 		object = game
 	end
-	local translation = ""
-	local foundTranslation = false
 	if foundPlayerTranslator then
 		return playerTranslator:Translate(object, text)
 	end

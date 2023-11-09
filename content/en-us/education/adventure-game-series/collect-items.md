@@ -213,12 +213,12 @@ Now that the tool script has the playerItems and playerSpaces variables created,
    To access the contents of any value object, type .Value at the end of it. If you just do the object itself, you'll just get it's name.
    </Alert>
 
-2. In the if statement itself, add to the player's items by typing `playerItems.Value = playerItems.Value + 1`.
+2. In the if statement itself, add to the player's items by typing `playerItems.Value += 1`.
 
    ```lua
    if canHarvest then
      if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-         playerItems.Value = playerItems.Value + 1
+         playerItems.Value += 1
 
      end
    end
@@ -246,7 +246,7 @@ The item will then go back to normal after a short time. This way, players only 
    ```lua
    if canHarvest then
      if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-       playerItems.Value = playerItems.Value + 1
+       playerItems.Value += 1
        canHarvest.Value = false
      end
    end
@@ -256,29 +256,29 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value = playerItems.Value + 1
+     playerItems.Value += 1
      canHarvest.Value = false
      partTouched.Transparency = 1
      partTouched.CanCollide = false
    end
    ```
 
-3. Type `wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your experience.
+3. Type `task.wait(5)` to give time for the item to reset. 5 is a suggested number, and maybe differ for how long you'd like for your experience.
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value = playerItems.Value + 1
+     playerItems.Value += 1
      canHarvest.Value = false
      partTouched.Transparency = 1
      partTouched.CanCollide = false
-     wait(5)
+     task.wait(5)
    end
    ```
 
 4. After the wait, do the opposite of previous code, by setting the CanHarvest to true, and resetting the Transparency and CanCollide to their original values.
 
    ```lua
-     wait(5)
+     task.wait(5)
      canHarvest.Value = true
      partTouched.Transparency = 0
      partTouched.CanCollide = true
@@ -287,7 +287,7 @@ The item will then go back to normal after a short time. This way, players only 
 
 5. Play the project and check:
 
-   - The player only gets 1 item for harvesting a item.
+   - The player only gets 1 item for harvesting an item.
    - The item disappears and then reappears after five seconds.
 
    <video controls src="../../assets/education/adventure-game-series/adventure-harvestItemFull.mp4" width="100%"></video>
@@ -317,13 +317,13 @@ local function onTouch(partTouched)
 	local canHarvest = partTouched:FindFirstChild("CanHarvest")
 	if canHarvest then
 		if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-			playerItems.Value = playerItems.Value + 1
+			playerItems.Value += 1
 			canHarvest.Value = false
 			-- Reset partTouched, the harvested item
 			partTouched.Transparency = 1
 			partTouched.CanCollide = false
 
-			wait(5)
+			task.wait(5)
 			-- Make the harvested item reappear and usable again
 			canHarvest.Value = true
 			partTouched.Transparency = 0

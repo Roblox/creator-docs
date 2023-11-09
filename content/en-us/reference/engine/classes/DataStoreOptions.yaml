@@ -1,0 +1,58 @@
+name: DataStoreOptions
+type: class
+category:
+memory_category: Instances
+summary: |
+  Object used to provide additional parameters to
+  `Class.DataStoreService:GetDataStore()`.
+description: |
+  Any object containing additional parameters that are used by
+  `Class.DataStoreService:GetDataStore()`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreOptions.AllScopes
+    summary: |
+      Whether the `Class.GlobalDataStore` should work with all scopes.
+    description: |
+      This property specifies whether the `Class.GlobalDataStore` should work
+      with all scopes.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: DataStoreOptions:SetExperimentalFeatures
+    summary: ''
+    description: |
+      This function currently has no effect.
+    code_samples:
+    parameters:
+      - name: experimentalFeatures
+        type: Dictionary
+        default:
+        summary: |
+          Lua table in `key = value` format where the key is the experimental
+          feature name and the value is a boolean which specifies whether to
+          enable.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

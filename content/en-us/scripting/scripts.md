@@ -19,7 +19,7 @@ Roblox has three types of scripts:
 
 - `Class.Script` for scripts that can run on the server.
 - `Class.LocalScript` for scripts that can run on a client.
-- `Class.ModuleScript` for reusable modules that can be included in server or
+- `Class.ModuleScript` for reusable modules that can be included in server and
   client scripts.
 
 To control where scripts run, see the [server](../projects/data-model.md#server),
@@ -46,9 +46,9 @@ examples.
 ## Module Scripts
 
 `Class.ModuleScript` objects are reusable scripts that other script objects
-load by calling the `require()` function. Module scripts must return exactly one
+load by calling the `Global.RobloxGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
-per Lua environment. As a result, subsequent calls to `require()` return a
+per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
 cached value.
 
 Multiple scripts can require
@@ -108,14 +108,14 @@ print(bonus)  --> 125
 
 ### Requiring
 
-A `Class.ModuleScript` runs only when another script imports it using the `require()` function. If a `Class.ModuleScript` requires another `Class.ModuleScript`, a `Class.Script` or `Class.LocalScript` must require the first `Class.ModuleScript` in the chain for any of them to run.
+A `Class.ModuleScript` runs only when another script imports it using the `Global.RobloxGlobals.require()` function. If a `Class.ModuleScript` requires another `Class.ModuleScript`, a `Class.Script` or `Class.LocalScript` must require the first `Class.ModuleScript` in the chain for any of them to run.
 
 <Alert severity="warning">
 Don't require `Class.ModuleScript|ModuleScripts` in a recursive or circular manner,
 otherwise Studio throws an error: <InlineCode>Requested module was required recursively</InlineCode>.
 </Alert>
 
-To access a `Class.ModuleScript` from another script using the `require()`
+To access a `Class.ModuleScript` from another script using the `Global.RobloxGlobals.require()`
 function:
 
 ```lua
@@ -127,15 +127,15 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 ```
 
-When you call `require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `require()` calls return that modified reference. The module itself doesn't run multiple times.
+When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
-If you `require()` a `Class.ModuleScript` from both sides of the client-server-boundary, such as in a `Class.Script` and a `Class.LocalScript`, then the `Class.ModuleScript` returns a unique reference for each side.
+If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, such as in a `Class.Script` and a `Class.LocalScript`, then the `Class.ModuleScript` returns a unique reference for each side.
 
 ### Patterns
 
 Module scripts have some common patterns that you can use to simplify your code and provide more flexibility over the features Roblox Studio provides. By incorporating these patterns into your development, you can avoid common pitfalls as your Roblox experience grows in size and complexity.
 
-<h5>Data Sharing</h5>
+#### Data Sharing
 
 To associate data with individual objects, you can assign attributes to them or create `Class.Configuration` folders with value objects such as `Class.StringValue` or `Class.IntValue`. However, both approaches are troublesome if you want to add or modify dozens of objects or data values. They also don't store tables or functions.
 
@@ -143,7 +143,7 @@ If you want to modify the same data for multiple copies of the same
 object or reuse the same data for different objects, store the data in
 `Class.ModuleScript|ModuleScripts`. It's an easier way for you to reuse the data in other scripts, and you can store tables and functions.
 
-The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` stores the configuration values for a generic gun:
+The following example `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` stores the configuration values for a generic gun:
 
 ```lua title="Weapon Stats"
 -- ModuleScript in ReplicatedStorage named GunConfig
@@ -169,7 +169,7 @@ You can use `Class.ModuleScript|ModuleScripts` to store
 `Class.BindableEvent|BindableEvents` and provide
 custom event handlers that are directly tied to the methods of `Class.ModuleScript`.
 
-The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicateStorage` has a custom event that fires when the switch changes state:
+The following `Class.ModuleScript` in `Class.ReplicatedStorage|ReplicatedStorage` has a custom event that fires when the switch changes state:
 
 ```lua title="Switch Module"
 -- ModuleScript in ReplicatedStorage named Switch
@@ -192,16 +192,18 @@ The following `Class.LocalScript` in `Class.ReplicatedFirst` connects a function
 
 ```lua
 -- LocalScript in ReplicatedFirst
-local Switch = require(game.ReplicatedStorage:WaitForChild("Switch"))
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Switch = require(ReplicatedStorage:WaitForChild("Switch"))
 
 Switch.Changed:Connect(function(newState)
 	print("Switch state is now", newState)
 end
 
 -- Test the flipping a few times
-wait(1)
+task.wait(1)
 Switch.flip()
-wait(1)
+task.wait(1)
 Switch.flip()
 ```
 
@@ -225,7 +227,9 @@ The following `Class.ModuleScript` in `Class.ReplicatedFirst` provides an encaps
 -- ModuleScript in ReplicatedFirst named NetworkManagerClient
 local NetworkManagerClient = {}
 
-local remoteEvent = game.ReplicatedStorage:WaitForChild("RemoteEvent")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 
 -- Encapsulating the remote object's FireServer function
 function NetworkManagerClient.FireServer(id, ...)
@@ -254,7 +258,9 @@ function NetworkManagerServer.GetServerEventSignal(id)
 end
 
 -- Connecting to
-local remoteEvent = game.ReplicatedStorage:WaitForChild("RemoteEvent")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
 	-- Finding every bindable event that matches the id of the received remote event
 	for _, signal in next, networkSignalList do
@@ -271,7 +277,9 @@ The following `Class.LocalScript` sends a message with the id "RequestA" with an
 
 ```lua
 -- LocalScript in ReplicatedFirst
-local NetworkManagerClient = require(game.ReplicatedFirst:WaitForChild("NetworkManagerClient"))
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+
+local NetworkManagerClient = require(ReplicatedFirst:WaitForChild("NetworkManagerClient"))
 NetworkManagerClient.FireServer("RequestA", "Hello")
 ```
 
@@ -279,7 +287,9 @@ The following `Class.Script` connects to the network message id "RequestA" and p
 
 ```lua
 -- Script in ServerScriptService
-local NetworkManagerServer = require(game.ServerScriptService:WaitForChild("NetworkManagerServer"))
+local ServerScriptService = game:GetService("ServerScriptService")
+
+local NetworkManagerServer = require(ServerScriptService:WaitForChild("NetworkManagerServer"))
 NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, ...)
 	print("Received RequestA from", player, ...)
 end)

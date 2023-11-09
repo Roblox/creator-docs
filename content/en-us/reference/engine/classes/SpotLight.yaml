@@ -1,0 +1,93 @@
+name: SpotLight
+type: class
+category: Lighting
+memory_category: Instances
+summary: |
+  A light source that emits light directionally in the shape of a cone with a
+  spherical base.
+description: |
+  A spotlight emits light of a specified `Class.Light.Color|Color` and
+  `Class.Light.Brightness|Brightness` in the shape of a cone with a spherical
+  base. This object is ideal for **directional** light sources like flashlights
+  and headlights.
+
+  `Class.SpotLight.Range|Range` controls the distance of illumination and
+  `Class.SpotLight.Angle|Angle` defines the angle of light emission from the
+  cone's apex as illustrated below.
+
+  A spotlight must be a direct child of a `Class.BasePart` or `Class.Attachment`
+  and will exhibit the following behavior:
+
+  - When the spotlight is parented to a `Class.BasePart`, the
+    `Class.SpotLight.Face` property determines the face of the part from which
+    light emanates.
+  - Although `Class.Attachment|Attachments` don't have faces, the
+    `Class.SpotLight.Face` property determines the axis of the attachment from
+    which light emanates; **-Z** is front, **+X** is right, **+Y** is top, etc.
+
+  <img src="/assets/legacy/LightingDiagram-SpotLight.jpg" />
+
+  See also:
+
+  - `Class.SurfaceLight`
+  - `Class.PointLight`
+code_samples:
+inherits:
+  - Light
+tags: []
+deprecation_message: ''
+properties:
+  - name: SpotLight.Angle
+    summary: |
+      The angle of which the light is shone from the SpotLight.
+    description: |
+      The angle of which the light is shone from the SpotLight.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpotLight.Face
+    summary: |
+      Sets the side of the parent that the SpotLight comes from.
+    description: |
+      Sets the side of the parent that the SpotLight comes from.
+    code_samples:
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpotLight.Range
+    summary: |
+      The size of the area that the SpotLight will illuminate.
+    description: |
+      The size of the area that the SpotLight will illuminate.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

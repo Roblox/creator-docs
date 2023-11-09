@@ -1,0 +1,40 @@
+name: FormFactor
+type: enum
+summary: ''
+description: |
+  The FormFactor Enum for `Class.FormFactorPart.FormFactor`.
+
+  Minimum size along a given axis is 1 \* RateOfIncrease for that axis, except
+  in the case of the "Custom" FormFactor, which has a minimum size of 0.2 along
+  all axes.
+code_samples:
+tags: []
+deprecation_message: |
+  This item is deprecated as parts no longer contain a FormFactor to determine
+  their minimum size. The minimum size of all parts now behaves like "Custom" by
+  default.
+items:
+  - name: Symmetric
+    summary: |
+      Increases by a rate of 1 along all axes.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Brick
+    summary: |
+      Increases by a rate of 1 along the x- and z- axes, 1.2 along the y-axis.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Plate
+    summary: |
+      Increases by a rate of 1 along the x- and z- axes, 0.4 along the y-axis.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    summary: |
+      Increases by a rate as low as .001 along all axes.
+    value: 3
+    tags: []
+    deprecation_message: ''

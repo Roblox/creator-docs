@@ -1,0 +1,30 @@
+name: MeshPartHeadsAndAccessories
+type: enum
+summary: |
+  Controls the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
+description: |
+  Controls the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default option to control the
+      `Class.Workspace.MeshPartHeadsAndAccessories` feature. This currently has
+      the same meaning as "Enabled".
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      Disables the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    summary: |
+      Enables the `Class.Workspace.MeshPartHeadsAndAccessories` feature.
+    value: 2
+    tags: []
+    deprecation_message: ''

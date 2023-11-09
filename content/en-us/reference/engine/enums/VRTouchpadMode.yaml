@@ -1,0 +1,30 @@
+name: VRTouchpadMode
+type: enum
+summary: |
+  Used to identify the behavior of a specified VR touchpad.
+description: |
+  Used to identify the behavior of a specified VR touchpad.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Touch
+    summary: |
+      The touchpad is treated as ButtonB if it is the left touchpad, or ButtonA
+      if it is the right touchpad.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: VirtualThumbstick
+    summary: |
+      The touchpad will function as a gamepad joystick.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ABXY
+    summary: |
+      The touchpad will function as a means of inputting the standard ABXY
+      gamepad input, dividing it up into 4 diagonal pie slices.
+    value: 2
+    tags: []
+    deprecation_message: ''

@@ -1,6 +1,6 @@
 ---
 title: Making Changes to Arrays
-description: Learn how to add, remove, and find values in a array in Roblox Lua using tables.
+description: Learn how to add, remove, and find values in an array in Roblox Lua using tables.
 next: /tutorials/fundamentals/coding-5/intro-to-dictionaries
 prev: /tutorials/fundamentals/coding-5/loops-and-arrays
 ---

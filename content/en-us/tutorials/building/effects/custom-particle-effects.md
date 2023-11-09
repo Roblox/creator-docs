@@ -5,7 +5,7 @@ next: /tutorials/building/effects/laser-traps-with-beams
 prev: /tutorials/building/effects/basic-particle-effects
 ---
 
-Time to look at a more complex example of particle effects. You'll be making a multicolored plume of smoke pouring out of an active volcano.
+Time to look at a more complex example of particle effects. You'll make a multicolored plume of smoke pouring out of an active volcano.
 
 <video controls loop muted>
    <source src="../../../assets/tutorials/custom-particle-effects/finishedVolcanoClose.mp4" />
@@ -32,13 +32,13 @@ A volcano with an orange neon part will be used to emit particles. This part is 
 
 ## Particle Texture
 
-A `Class.ParticleEmitter` has a property called **Texture** that determines the image which will be repeated in the effect. If you want to use your own image, you'll need to upload it to Roblox and get the **Asset ID** to paste into that property. Check out the [Applying Surface Images](../../../tutorials/building/modeling/applying-surface-images.md) course to learn how.
+A `Class.ParticleEmitter` has a property called **Texture** that determines the image that will be repeated in the effect. If you want to use your own image, you'll need to upload it to Roblox and get the **Asset ID** to paste into that property. See [Textures and Decals](../../../parts/textures-decals.md) for more details.
 
 <Alert severity="info">
 
 If you want to make your own texture using image editing software, consider these best practices:
 
-- Make your image **grayscale**. This allows you full control over the final color of the particle with the Color property.
+- Make your image **grayscale**. This allows you complete control over the final color of the particle with the Color property.
 - Ensure the **background** is **transparent**.
 - **Blur** the **edges** of your image to get a more polished, continuous effect.
 
@@ -54,13 +54,13 @@ For a smoke effect, a circle with faded edges works well. A pre-made example of 
 
 Despite the change of texture, the volcano effect still doesn't look much like smoke. It would look better if the particles faded out over time in the same way that smoke dissipates in the air.
 
-Some emitter properties can be set up to change over time with a **sequence**. Start off with **Transparency** which can be used to create a fading effect.
+Some emitter properties can be set up to change over time with a **sequence**. Start with **Transparency** which can be used to create a fading effect.
 
 1. Open the sequence window for the emitter's **Transparency** by clicking the three dots next to the property.
 
    <img src="../../../assets/tutorials/custom-particle-effects/openTransparencySequence.jpg" width="60%" />
 
-   The sequence window is a graph, with the **time** on the X axis and the **property value** on the Y axis. By default, the transparency value is a flat line, with starting and ending **keypoints** at 0, meaning the particles will be opaque for their entire lifetime.
+   The sequence window is a graph, with the **time** on the X-axis and the **property value** on the Y-axis. By default, the transparency value is a flat line, with starting and ending **keypoints** at 0, meaning the particles will be opaque for their entire lifetime.
 
    ![](../../../assets/tutorials/custom-particle-effects/transparencyDefault.jpg)
 
@@ -99,7 +99,7 @@ The window for **color sequences** is slightly different: it shows the color as 
 
 ![](../../../assets/tutorials/custom-particle-effects/colorSequenceDefault.jpg)
 
-If you start your sequence at orange to reflect the lava, then move to darker grey, then finish at white, you can get a really immersive effect for your smoke.
+If you start your sequence at orange to reflect the lava, then move to darker grey, and then finish at white, you can get a really immersive effect for your smoke.
 
 1. Open the sequence window for the emitter's **Color** property.
 2. Click the small square next to **Color** to open a color picker for the keypoint at the start of the sequence. Set the color to **orange**.
@@ -112,9 +112,9 @@ If you start your sequence at orange to reflect the lava, then move to darker gr
 
 ## Acceleration
 
-For a final touch, you can make the smoke drift away from the volcano, as if the wind were blowing it away.
+For a final touch, you can make the smoke drift away from the volcano as if the wind were blowing it away.
 
-The **Acceleration** property determines how the speed of particles changes over time, measured on the **X**, **Y** and **Z** axes. Set the **Acceleration** property of the emitter to **2, 2, 0** to achieve a drifting effect.
+The **Acceleration** property determines how the speed of particles changes over time, measured on the **X**, **Y**, and **Z** axes. Set the **Acceleration** property of the emitter to **2, 2, 0** to achieve a drifting effect.
 
 ![](../../../assets/tutorials/custom-particle-effects/accelerationParticles.jpg)
 

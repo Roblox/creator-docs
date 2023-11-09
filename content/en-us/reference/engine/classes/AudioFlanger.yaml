@@ -1,0 +1,77 @@
+name: AudioFlanger
+type: class
+category:
+memory_category: Internal
+summary: |
+  Imparts a whooshing or sweeping sound on audio streams.
+description: |
+  `Class.AudioFlanger` imparts a whooshing or sweeping sound on audio streams by
+  overlaying a delayed copy of the input stream and modulating the pitch of the
+  copy. It provides one **Input** pin and one **Output** pin which can be
+  connected to/from by `Class.Wire|Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioFlanger.Depth
+    summary: |
+      Controls how strong the pitch modulation of the flanger is.
+    description: |
+      Controls how strong the pitch modulation of the flanger is. Ranges from 0
+      to 1 which determines the maximum delay time of the modulated signal. A
+      value of 1 corresponds to 10 milliseconds of maximum delay; beyond this,
+      the modulated signal would begin to sound more like an echo than a flange.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioFlanger.Mix
+    summary: |
+      Controls the balance of plain input stream to modified output stream.
+    description: |
+      Controls the balance of plain input stream to modified output stream.
+      Ranges from 0 to 1.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioFlanger.Rate
+    summary: |
+      Controls the rate of pitch modulations.
+    description: |
+      Frequency controlling the rate of pitch modulations, in hertz. Ranges from
+      0 to 20.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

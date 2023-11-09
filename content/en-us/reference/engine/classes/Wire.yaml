@@ -1,0 +1,150 @@
+name: Wire
+type: class
+category:
+memory_category: Instances
+summary: |
+  Connects one or more `Class.Instance|Instances` to form a processing graph of
+  their streams. At the moment, only audio streams are supported, but this may
+  expand in the future.
+description: |
+  `Class.Wire` connects one or more `Class.Instance|Instances` to form a
+  processing graph of their streams. Each `Class.Wire` connects a source and
+  target instance, and a source and target "pin" within each of those instances.
+  Pins are string identifiers that select which stream is to be carried by the
+  wire.
+
+  At the moment, only audio streams are supported, but this may expand in the
+  future.
+
+  The following instances may be connected by `Class.Wire|Wires`:
+
+  - `Class.AudioAnalyzer`
+  - `Class.AudioCompressor`
+  - `Class.AudioDeviceInput`
+  - `Class.AudioDeviceOutput`
+  - `Class.AudioDistortion`
+  - `Class.AudioEcho`
+  - `Class.AudioEmitter`
+  - `Class.AudioEqualizer`
+  - `Class.AudioFader`
+  - `Class.AudioFlanger`
+  - `Class.AudioListener`
+  - `Class.AudioPitchShifter`
+  - `Class.AudioPlayer`
+  - `Class.AudioReverb`
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: Wire.Connected
+    summary: |
+      Denotes whether the `Class.Wire` is carrying a stream of data.
+    description: |
+      Denotes whether the `Class.Wire` is connected, meaning its
+      `Class.Wire.SourceInstance|SourceInstance`,
+      `Class.Wire.TargetInstance|TargetInstance`,
+      `Class.Wire.SourceName|SourceName`, and `Class.Wire.TargetName|TargetName`
+      properties are all assigned, the connection is valid, and the connection
+      does not result in a cyclic processing graph. Cyclic processing graphs are
+      invalid since they can result in infinite computation; attempting to
+      create one will log an error.
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Connections
+    serialization:
+      can_load: false
+      can_save: true
+  - name: Wire.SourceInstance
+    summary: |
+      The `Class.Instance` producing a stream to be carried over the wire.
+    description: |
+      The `Class.Instance` producing a stream to be carried over the wire. At
+      the moment, only audio streams are wirable.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Connections
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Wire.SourceName
+    summary: |
+      The name of the pin on `Class.Wire.SourceInstance|SourceInstance` that is
+      producing a stream.
+    description: |
+      The name of the pin on `Class.Wire.SourceInstance|SourceInstance` that is
+      producing a stream. At the moment, various audio instances only have an
+      **Output** pin, but this may expand in the future. The default value of
+      this property is **Output** so it is not yet necessary to change.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Connections
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Wire.TargetInstance
+    summary: |
+      The `Class.Instance` to receive a stream from
+      `Class.Wire.SourceInstance|SourceInstance`.
+    description: |
+      The `Class.Instance` intended to receive a stream from
+      `Class.Wire.SourceInstance|SourceInstance`. Currently, only audio streams
+      are wirable.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Connections
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Wire.TargetName
+    summary: |
+      The name of the pin on `Class.Wire.TargetInstance|TargetInstance` that is
+      receiving a stream.
+    description: |
+      The name of the pin on `Class.Wire.TargetInstance|TargetInstance` that is
+      receiving a stream. At the moment, audio instances typically have an
+      **Input** pin, but `Class.AudioCompressor` has an additional **Sidechain**
+      pin. This may expand in the future.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Connections
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

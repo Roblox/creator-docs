@@ -1,0 +1,82 @@
+name: PluginToolbar
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  A PluginToolbar is an object created by using the
+  `Class.Plugin:CreateToolbar()` method. It is used to create
+  `Class.PluginToolbarButton`s using the
+  `Class.PluginToolbar:CreateButton()|CreateButton` function. In general, it is
+  good practice for a plugin to use **one and only one** uniquely named toolbar
+  for all of its buttons. In Roblox Studio, toolbars are rendered under the
+  Plugins tab.
+
+  ![A screenshot of Roblox Studio's Plugins tab, rendering several PluginToolbars](/assets/legacy/PluginToolbar-light.png)
+
+  Pictured above are three PluginToolbars in Roblox Studio: Animations, Three
+  Wise Monkeys and Localization. The center toolbar is a custom toolbar created
+  by a plugin; the other toolbars are created by built-in Roblox Studio plugins.
+
+  ## Example
+
+  The following code sample creates a basic toolbar with one button. It should
+  be run as a Roblox Studio plugin, and not run as a `Class.Script`.
+
+  ```
+  local toolbar = plugin:CreateToolbar("Three Wise Monkeys")
+  local button = toolbar:CreateButton("Mizaru", "See No Evil", "rbxassetid://2778270261")
+  ```
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: PluginToolbar:CreateButton
+    summary: |
+      Creates ` PluginToolbarButton` that allows the user to initiate a single,
+      one-off action in Roblox Studio through the
+      `Class.PluginToolbarButton.Click|Click` event.
+    description: |
+      Creates ` PluginToolbarButton` that allows the user to initiate a single,
+      one-off action in Roblox Studio through the
+      `Class.PluginToolbarButton.Click|Click` event.
+    code_samples:
+      - adding-a-plugin-toolbar-button
+    parameters:
+      - name: buttonId
+        type: string
+        default:
+        summary: |
+          A unique button ID.
+      - name: tooltip
+        type: string
+        default:
+        summary: |
+          The text displayed in the tooltip shown when a user hovers over the
+          button.
+      - name: iconname
+        type: string
+        default:
+        summary: |
+          The asset ID (e.g. rbxassetid://1507949215) of the icon displayed in
+          the button.
+      - name: text
+        type: string
+        default: ''
+        summary: |
+          Text displayed under the button icon. Optional. If this field is not
+          provided, the **ID** will be used instead.
+    returns:
+      - type: Instance
+        summary: |
+          The created `Class.PluginToolbarButton` instance.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

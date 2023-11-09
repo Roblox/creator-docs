@@ -62,49 +62,49 @@ The three scripts below will look for the particle emitter and beam objects crea
 
    -- Note Goal parts must be ordered in the table, or else Goal order may be different in-game
    local goalParts = {
-   workspace.TutorialGoals.GoalPart1,
-   workspace.TutorialGoals.GoalPart2
+    workspace.TutorialGoals.GoalPart1,
+    workspace.TutorialGoals.GoalPart2
    }
 
    local function checkTutorialEnd(player, goalParts)
-   local currentIndex = player:WaitForChild("GoalProgress")
-   return currentIndex.Value >= #goalParts
+    local currentIndex = player:WaitForChild("GoalProgress")
+    return currentIndex.Value >= #goalParts
    end
 
    local function finishTutorial(player)
-   local playerBeam = player.Character.HumanoidRootPart:FindFirstChildOfClass("Beam")
-   playerBeam:Destroy()
+    local playerBeam = player.Character.HumanoidRootPart:FindFirstChildOfClass("Beam")
+    playerBeam:Destroy()
 
-         print(player.Name .. " finished the tutorial")
+    print(player.Name .. " finished the tutorial")
 
-         -- Placeholder for further code. E.g. if you wanted to send messages to the server to do other tasks
+    -- Placeholder for further code. E.g. if you wanted to send messages to the server to do other tasks
 
    end
 
    function TutorialManager.interactGoal(player)
-   NextGoalEvent:FireServer()
+    NextGoalEvent:FireServer()
    end
 
    function TutorialManager.getTutorialGoals()
-   return goalParts
+    return goalParts
    end
 
    function TutorialManager.nextGoal(player, goalParts)
-   if checkTutorialEnd(player, goalParts) then
-   finishTutorial(player)
-   else
-   -- Increment the player's Goal tracker
-   local currentGoalIndex = player:WaitForChild("GoalProgress")
-   currentGoalIndex.Value += 1
-   end
+    if checkTutorialEnd(player, goalParts) then
+      finishTutorial(player)
+    else
+      -- Increment the player's Goal tracker
+      local currentGoalIndex = player:WaitForChild("GoalProgress")
+      currentGoalIndex.Value += 1
+    end
    end
 
    -- Creates an int value to locally track player's progress through the tutorial Goals
    function TutorialManager.setupPlayerProgress(player)
-   local currentGoalProgress = Instance.new("IntValue")
-   currentGoalProgress.Name = "GoalProgress"
-   currentGoalProgress.Value = 1
-   currentGoalProgress.Parent = player
+    local currentGoalProgress = Instance.new("IntValue")
+    currentGoalProgress.Name = "GoalProgress"
+    currentGoalProgress.Value = 1
+    currentGoalProgress.Parent = player
    end
 
    return TutorialManager
@@ -133,7 +133,7 @@ The three scripts below will look for the particle emitter and beam objects crea
      local particleAttachment = humanoidRootPart:WaitForChild("ParticleAttachment")
 
      -- Go through particles on the attachment and play them according to the type of particle
-     for _, particle in pairs(particleAttachment:GetChildren()) do
+     for _, particle in particleAttachment:GetChildren() do
        if particle:IsA("ParticleEmitter") then
          particle:Emit(EMIT_RATE)
        end
@@ -148,7 +148,7 @@ The three scripts below will look for the particle emitter and beam objects crea
        playerParticleAttachment.Parent = humanoidRootPart
 
        -- Clone particles in the folder, even if there are more than one and attach to player
-       for _, emitter in ipairs(ServerStorage.TutorialParticles:GetChildren()) do
+       for _, emitter in ServerStorage.TutorialParticles:GetChildren() do
          emitter:Clone().Parent = playerParticleAttachment
        end
      end)
@@ -182,7 +182,7 @@ The three scripts below will look for the particle emitter and beam objects crea
    local function getTargetAttachment()
      local currentTarget = goalParts[goalIndex.Value]
      local interactionPart = currentTarget:FindFirstChild("InteractionPart")
-     local attachment = interactionPart:FindFirstChildOfClass("Attachment")
+     local attachment = interactionPart and interactionPart:FindFirstChildOfClass("Attachment")
 
      if not attachment then
        attachment = Instance.new("Attachment")
@@ -206,9 +206,9 @@ The three scripts below will look for the particle emitter and beam objects crea
    end
 
    local function setupGoals()
-     for _, part in ipairs(goalParts) do
+     for _, part in goalParts do
        local interactionPart = part:FindFirstChild("InteractionPart")
-       local proximityPrompt = interactionPart:FindFirstChild("ProximityPrompt")
+       local proximityPrompt = interactionPart and interactionPart:FindFirstChild("ProximityPrompt")
 
        if proximityPrompt then
          proximityPrompt.Triggered:Connect(function(player)

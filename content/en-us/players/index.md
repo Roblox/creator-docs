@@ -30,10 +30,11 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 
 	-- Read data store key
 	local getSuccess, currentData = pcall(function()
-return playerDataStore:GetAsync(userId)
+		return playerDataStore:GetAsync(userId)
 	end)
+
 	if getSuccess then
-print(currentData)
+		print(currentData)
 	end
 
 	-- Do further actions with currentData
@@ -66,8 +67,9 @@ game:GetService("Players").PlayerRemoving:Connect(function(player)
 
 	-- Save to data store
 	local setSuccess, errorMessage = pcall(function()
-	    playerDataStore:SetAsync(userId, playerDataStore)
+	    playerDataStore:SetAsync(userId, currentData)
 	end)
+
 	if not setSuccess then
 	    warn(errorMessage)
 	end
@@ -96,7 +98,7 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(character)
 		local humanoid = character:WaitForChild("Humanoid")
 		humanoid.Died:Connect(function()
-			deaths = deaths + 1
+			deaths += 1
 			print(player.Name .. " death count: " .. deaths)
 		end)
 	end)

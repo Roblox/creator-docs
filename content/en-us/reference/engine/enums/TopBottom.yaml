@@ -1,0 +1,28 @@
+name: TopBottom
+type: enum
+summary: |
+  Sets where the object is on the side of its parent.
+description: |
+  Sets where the object is on the side of its parent.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Top
+    summary: |
+      The object is above its parent.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Center
+    summary: |
+      The object is centered around the center of its parent.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Bottom
+    summary: |
+      The object is below its parent.
+    value: 2
+    tags: []
+    deprecation_message: ''

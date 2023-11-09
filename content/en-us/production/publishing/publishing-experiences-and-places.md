@@ -10,11 +10,6 @@ description: Explains how to publish the places in your experience.
 
 While an experience can consist of many places, each experience can only have one **starting place** that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
 
-<figure>
-  <img src="../../assets/studio/asset-manager/Starting-Place-Icon.png" width="360" />
-  <figcaption>Starting place marked by a "spawn" icon in the [Asset Manager](../../projects/assets/manager.md)</figcaption>
-</figure>
-
 ## Publishing a Starting Place
 
 By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions. When appropriate, you can [release the experience](#releasing-to-the-public) to the public.
@@ -45,21 +40,20 @@ Once an experience is published, you can access the [Game Settings](../../studio
 
 After you have [published a starting place](#publishing-a-starting-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
 
-1. From the **View** tab, open the **Asset Manager**.
+1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
-1. In its window, click the &#9776; icon in the upper-left and select **Places** from the contextual menu. The starting place appears, marked by the "spawn" icon.
+2. In its window, click the &#9776; icon in the upper-left and select **Places** from the menu.
 
-   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" /><br />
-   <img src="../../assets/publishing/experiences-places-assets/Places-Folder-Selected.png" width="360" />
+   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" />
 
-1. Avoiding the thumbnail/name of your starting place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name of **[New Place]**.
+3. Avoiding the thumbnail/name of your starting place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name.
 
-   <img src="../../assets/publishing/experiences-places-assets/New-Place-Created.png" width="360" />
+   <img src="../../assets/studio/asset-manager/Places-New-Place-Created.png" width="360" />
 
-1. Right-click the new place, select **Rename**, and enter a more descriptive name.
-1. When you double-click the new place, a new Studio session opens for editing the new place.
+4. Right-click the new place, select **Rename**, and enter a more descriptive name.
+5. When you double-click the new place, a new Studio session opens for editing the new place.
 
 ## Releasing to the Public
 
@@ -70,21 +64,21 @@ New experiences begin as **private** and are only accessible to you and members 
 
    <img src="../../assets/creator-dashboard/Creator-Selector-Group.png" width="800" />
 
-1. Click the <span style={{fontWeight:"800"}}>&ctdot;</span> in the corner of the experience's thumbnail and select **Make Public**.
+1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Make&nbsp;Public**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Make-Public.png" width="494" />
+   <img src="../../assets/creator-dashboard/Experience-Menu-Make-Public.png" width="420" />
 
 1. Explore how to provide [Experience Guidelines](#experience-guidelines) for the experience.
 
 ### Linking to Experiences
 
-Once an experience is [public](#releasing-to-the-public), you can copy its link from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and share it with others via social media or similar.
+Once an experience is [public](#releasing-to-the-public), you can copy its link from the [Creator Dashboard][creatordashboard] and share it with others via social media or similar.
 
-1. Click the <span style={{fontWeight:"800"}}>&ctdot;</span> in the corner of the experience's thumbnail and select **Copy URL**.
+1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Copy&nbsp;URL**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Copy-URL.png" width="494" />
+   <img src="../../assets/creator-dashboard/Experience-Menu-Copy-URL.png" width="420" />
 
-1. Share the copied URL with others as a direct link to the experience's landing page featuring a **play** button.
+2. Share the copied URL with others as a direct link to the experience's landing page featuring a **play** button.
 
    <img src="../../assets/misc/Experience-Page-Default.jpg" width="100%" />
 
@@ -92,7 +86,7 @@ You can also share an experience directly from the Roblox app:
 
 1. Open the Roblox app on your mobile device.
 1. Locate the experience, typically under the **Continue** header on the home screen, and tap its tile to open the info screen.
-1. In the lower-left corner of the screen, click the <span style={{fontWeight:"800"}}>&ctdot;</span> button and select **Share** to open your device's sharing options.
+1. In the lower-left corner of the screen, click the **&ctdot;** button and select **Share** to open your device's sharing options.
 
    <GridContainer numColumns="2">
      <img src="../../assets/misc/Experience-Info-Mobile-Menu-Button.jpg" />
@@ -110,13 +104,38 @@ Each Experience Guideline has two components:
 
 See [Experience Guidelines](../../production/promotion/experience-guidelines.md) for instructions on supplying the necessary guidelines.
 
+### Allowing Copying
+
+By default, all private and public experiences are locked so that you or your group are the only creators who have access to edit its place files. However, if you want to allow other creators to be able to download an editable copy of your experience for their own creator process, you can **uncopylock** the experience. This is particularly helpful when you create templates or reference files for open use.
+
+To allow users to download an editable copy of your experience:
+
+1. Navigate to the [Creator Dashboard][creatordashboard].
+1. Select the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
+1. In the left-hand navigation, select **Places**. The **Places** page displays with place thumbnails for that specific experience.
+
+   <img src="../../assets/publishing/experiences-places-assets/Places-Menu.jpg" width="40%" />
+
+1. Select the starting place for the experience. The **Basic Settings** page displays.
+1. In the left-hand navigation, select **Permissions**. The **Permissions** page displays.
+
+   <img src="../../assets/publishing/experiences-places-assets/Permissions-Menu.jpg" width="40%" />
+
+1. Under the **Basic Settings** section, enable **Allow users to download a copy of this Place**.
+
+   <img src="../../assets/publishing/experiences-places-assets/Permissions-Page.jpg" width="70%" />
+
+1. Click the **SAVE CHANGES** button. Your experience is now uncopylocked, and creators can download an editable copy of it from the experience's main page.
+
+   <img src="../../assets/publishing/experiences-places-assets/Uncopylocked-Experience.jpg" width="100%" />
+
 ## Reverting to Previous Versions
 
 Roblox automatically retains saved versions of each place for version control and backup purposes. If you need to revert to a previously saved version:
 
-1. From the **View** tab, open the **Asset Manager**.
+1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
 1. In its window, click the &#9776; icon in the upper-left and select **Places** from the contextual menu.
 
@@ -128,22 +147,44 @@ Roblox automatically retains saved versions of each place for version control an
 
 1. Locate and select the version to revert to, then click the **Open** button to launch a new Studio session for the selected version.
 
-## Restarting Servers
+## Updating Experiences
 
-When you make updates to a place that you want users to immediately be aware of, it's recommended to restart all servers, as your changes might not affect servers currently running your experience.
+After you publish an updated version of an experience to Roblox, players aren't immediately removed from the old version of the experience. Instead, you have a few options for how quickly you transition players to the new version. All options have advantages and are appropriate in certain situations.
 
-<Alert severity="warning">
-You should restart servers only when necessary, such as upon publishing a significant update, as doing so will instantly kick all players from the experience and may discourage them from rejoining afterwards.
+The first option is to do nothing. If you take no action, players transition to the new version of the experience as the servers running the old version eventually empty and shut down. This option is nondisruptive, but your player base might be playing different versions of the experience for a prolonged period of time. If you recently published a major update, having players on the old version can be undesirable. This approach is best for minor updates.
+
+### Restarting Servers for Updates
+
+The **Restart Servers for Updates** option is the best choice for most updates. When you choose this option, Roblox performs the following actions:
+
+- Stops matchmaking to servers running the old version of the experience. Servers running the latest version are unaffected.
+- Starts replacement servers.
+- Shuts down old servers as their replacements become ready.
+- Prompts players to rejoin the new version of the experience. If they choose to rejoin, all players on an existing server connect to the same replacement server.
+
+Depending on the number of servers to replace, this process can take up to six minutes. Most experiences update in less than one minute.
+
+To restart all servers for updates:
+
+1. Navigate to the [Creator Dashboard][creatordashboard].
+1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Restart&nbsp;Servers&nbsp;for&nbsp;Updates**.
+
+### Shutting Down All Servers
+
+The **Shut Down All Servers** option immediately shuts down all servers and removes players from the experience. This option is highly disruptive: if players rejoin the experience, matchmaking does not keep them together. As such, **Shut Down All Servers** is best for after you've fixed a game-breaking bug or other situations in which you don't want players on the old version for even a short duration.
+
+<Alert severity="info">
+A comparable option is to make your experience private, which shuts down its servers just as quickly. This option has the added benefit of preventing players from rejoining the experience while you fix an issue.
 </Alert>
 
-To restart all servers:
+To shut down all servers:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click the <span style={{fontWeight:"800"}}>&ctdot;</span> in the corner of the experience's thumbnail and select **Shut Down All Servers**.
+2. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Shut&nbsp;Down&nbsp;All&nbsp;Servers**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Shutdown-Servers.png" width="494" />
+   <img src="../../assets/creator-dashboard/Experience-Menu-Shutdown-Servers.png" width="420" />
 
-1. Confirm shutdown by clicking the **OK** button.
+3. Confirm shutdown by clicking the **OK** button.
 
 ## Metadata Best Practices
 
@@ -224,3 +265,5 @@ Open your own <u>restaurant</u>, make delicious <u>food</u>, get lots of <u>cust
 <Alert severity="error">
 Play our fun granny obby game. Obby obby obby obby obby obby obby adopt me bloxburg arsenal ninja legends parkour tycoon battle disaster survival super hero simulator run jump gun rpg pokemon wild west space alien piggy baldi granny murder mystery prison life jail break mario zelda dungeon quest.
 </Alert>
+
+[creatordashboard]: https://create.roblox.com/dashboard/creations

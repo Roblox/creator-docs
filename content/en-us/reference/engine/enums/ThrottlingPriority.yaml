@@ -1,0 +1,28 @@
+name: ThrottlingPriority
+type: enum
+summary: |
+  Amount of throttling to apply.
+description: |
+  Controls the amount of throttling under the `Class.HttpRbxApiService`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Standard throttling.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ElevatedOnServer
+    summary: |
+      Less throttling if on the server.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Extreme
+    summary: |
+      No throttling, absolutely no exceptions.
+    value: 2
+    tags: []
+    deprecation_message: ''

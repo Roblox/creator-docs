@@ -7,7 +7,7 @@ A **debounce** pattern is a coding technique that prevents a function from runni
 
 ## Detecting Collisions
 
-Assume you want to build a hazardous trap part that causes 10 damage when touched. A basic `Class.BasePart.Touched|Touched` connection and `damagePlayer` function may look like this:
+Suppose you want to create a hazardous trap part that inflicts 10 damage when touched. An initial implementation might use a basic `Class.BasePart.Touched` connection and a `damagePlayer` function like this:
 
 ```lua title='Script - Damage Player'
 local part = script.Parent
@@ -17,7 +17,7 @@ local function damagePlayer(otherPart)
 
 	local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then
-		humanoid.Health = humanoid.Health - 10  -- Reduce player health
+		humanoid.Health -= 10  -- Reduce player health
 	end
 end
 
@@ -42,7 +42,7 @@ local function damagePlayer(otherPart)
 	if humanoid then
 		if not part:GetAttribute("Touched") then
 			part:SetAttribute("Touched", true)  -- Set attribute to true
-			humanoid.Health = humanoid.Health - 10  -- Reduce player health
+			humanoid.Health -= 10  -- Reduce player health
 			task.wait(RESET_TIME)  -- Wait for reset duration
 			part:SetAttribute("Touched", false)  -- Reset attribute
 		end
@@ -106,7 +106,7 @@ local function healPlayer(otherPart)
 	if humanoid then
 		if not part:GetAttribute("CoolingDown") then
 			part:SetAttribute("CoolingDown", true)  -- Set attribute to true
-			humanoid.Health = humanoid.Health + 25  -- Increase player health
+			humanoid.Health += 25  -- Increase player health
 			part.Transparency = 0.75  -- Make part semi-transparent to indicate cooldown state
 			task.wait(COOLDOWN_TIME)  -- Wait for cooldown duration
 			part.Transparency = 0  -- Reset part to fully opaque

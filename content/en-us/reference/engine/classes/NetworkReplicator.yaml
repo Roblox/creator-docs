@@ -1,0 +1,35 @@
+name: NetworkReplicator
+type: class
+category:
+memory_category: Instances
+summary: |
+  An object which handles the replication of other objects either from the
+  server to the client, or from the client to the server.
+description: |
+  An object which handles the replication of other objects either from the
+  server to the client, or from the client to the server.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: NetworkReplicator:GetPlayer
+    summary: |
+      Returns the player that is connected to the NetworkReplicator.
+    description: |
+      Returns the player that is connected to the NetworkReplicator.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

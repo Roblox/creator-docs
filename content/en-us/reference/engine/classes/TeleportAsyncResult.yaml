@@ -1,0 +1,75 @@
+name: TeleportAsyncResult
+type: class
+category:
+memory_category: Instances
+summary: |
+  The return structure of the `TeleportAsync` function call.
+description: |
+  This class is an instance that is returned by the `TeleportAsync` function
+  with information about the teleport.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: TeleportAsyncResult.PrivateServerId
+    summary: |
+      The private server ID of the reserved server that the players are being
+      teleported to.
+    description: |
+      The private server ID of the reserved server that the players are being
+      teleported to. This field is populated only if the teleport is to a
+      reserved server.
+
+      This field is not the same as the private server ID of the server that
+      initiated the teleport, please see: `Class.DataModel.PrivateServerId`
+
+      See also:
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TeleportAsyncResult.ReservedServerAccessCode
+    summary: |
+      The access code of the reserved server that the players are being
+      teleported to.
+    description: |
+      The access code of the reserved server that the players are being
+      teleported to. This field is populated only if the teleport is to a
+      reserved server. This allows developers to perform subsequent teleports to
+      this same reserved server.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
+events: []
+callbacks: []

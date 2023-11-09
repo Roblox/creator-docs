@@ -32,6 +32,18 @@ print(string1)
 --> Hello 'world'!
 ```
 
+If necessary, you can nest multiple brackets inside a string using the same number of equal signs in both the beginning and ending bracket:
+
+```lua
+local string1 = [=[Hello
+[[world!]]
+]=]
+
+print(string1)
+--> Hello
+--> [[world!]]
+```
+
 ## Combining Strings
 
 To combine strings, **concatenate** them with two dots (`..`). Concatenating strings doesn't insert a space between them, so you'll need to include space(s) at the end/beginning of a preceding/subsequent string, or concatenate a space between the two strings.
@@ -102,6 +114,38 @@ print(string1)
 
 local string2 = "Hello\tworld!"
 print(string2)  --> Hello	world!
+```
+
+## String Interpolation
+
+Luau supports string interpolation, a feature that lets you insert expressions into strings. Use backticks (`` ` ``) to declare an interpolated string. Then add expressions inside of curly brackets:
+
+```lua
+local world = "world"
+local string1 = `Hello {world}!`
+print(string1)  --> Hello world!
+```
+
+Although variables are the most common usage, you can use any expression, including math:
+
+```lua
+local world = "world"
+local number = 1
+local string1 = `Hello {world}, {number} time!`
+local string2 = `Hello {world}, {number + 1} times!`
+local letters = {"w", "o", "r", "l", "d"}
+local string3 = `Hello {table.concat(letters)} a third time!`
+
+print(string1)  --> Hello world, 1 time!
+print(string2)  --> Hello world, 2 times!
+print(string3)  --> Hello world a third time!
+```
+
+Standard escape rules apply for backticks, curly brackets, and backslashes:
+
+```lua
+local string1 = `Hello \`\{world\}\`!`
+print(string1)  --> Hello `{world}`!
 ```
 
 ## Math Conversion

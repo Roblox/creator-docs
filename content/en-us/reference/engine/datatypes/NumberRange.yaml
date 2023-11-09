@@ -1,0 +1,67 @@
+name: NumberRange
+type: datatype
+summary: |
+  Represents a range of numbers.
+description: |
+  The `Datatype.NumberRange` represents a range of numbers.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: NumberRange.new
+    summary: |-
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
+      `value`.
+    description: |-
+      Returns a new `Datatype.NumberRange` with the minimum and maximum set to the
+      `value`.
+    parameters:
+      - name: value
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: NumberRange.new
+    summary: Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`.
+    description: |-
+      Returns a new `Datatype.NumberRange` with the provided `minimum` and `maximum`. The
+      `minimum` must be less than or equal to `maximum`.
+    parameters:
+      - name: minimum
+        type: number
+        default:
+        summary: ''
+      - name: maximum
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: NumberRange.Min
+    type: number
+    summary: |
+      The minimum value of the `Datatype.NumberRange`.
+    description: |
+      The minimum value of the `Datatype.NumberRange`, always less than or equal
+      to the maximum.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: NumberRange.Max
+    type: number
+    summary: |
+      The maximum value of the `Datatype.NumberRange`.
+    description: |
+      The maximum value of the `Datatype.NumberRange`, always greater than or
+      equal to the minimum.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

@@ -11,15 +11,11 @@ Only creators participating in the [UGC program](https://devforum.roblox.com/t/u
 
 If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../art/marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
-<Alert severity = 'info'>
-This article covers 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
-</Alert>
+## General Guidelines
 
-## UGC Program Guidelines
+When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/moderation.md) and item removal.
 
-When designing and creating your assets, follow these UGC Program Guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/publishing-to-marketplace.md#moderation) and item removal.
-
-Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following UGC Program Guidelines:
+Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following program guidelines:
 
 - Follow the [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). For instance, do not create items that are political, religious, gory, violent, self-harm-related, drug-related, sexual/wedding/dating-related, or items that are likely to be used for these types of roleplay. These are some examples of items that violate the Community Standards.
 - Do not use any Roblox-created assets or official [Roblox branding or iconography](https://en.help.roblox.com/hc/en-us/articles/115001708126) as part of your items.
@@ -31,7 +27,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 - Be especially careful when submitting items in or near the mouth or waist of the avatar. Make sure to frequently test your assets on multiple types of characters to avoid design issues.
 - Do not create items that intentionally disrupt a user's experience, such as:
   - Obscuring the majority of the user's avatar.
-  - Obscure the user's in-experience UI.
+  - Obscuring the user's in-experience UI.
   - Obscuring other users' avatars or in-experience view.
   - Making a user's avatar disappear (completely or partially).
 - Do not create items that depend on issues or glitches on the Roblox platform.
@@ -39,7 +35,28 @@ Whether or not you are the original creator of the asset, you must ensure that y
 
 ## Avatar Body Guidelines
 
-Submissions of avatar bodies to the Marketplace include additional policy guidelines along with the general [UGC Program Guidelines](#ugc-program-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+Submissions of avatar bodies to the Marketplace must follow additional policy guidelines, along with the [general guidelines](#general-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+
+### Body Part Requirements
+
+Each body can only include the following parts, and cannot have additional appendages:
+
+- Body Parts
+  - 1 right arm
+  - 1 left arm
+  - 1 torso
+  - 1 right leg
+  - 1 left leg
+- Heads
+  - Head (includes baked-in eyes, nose, and mouth, if applicable)
+    - All heads must include the 17 minimum [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).
+    - It's recommended to include more poses to increase facial animation quality and fidelity.
+  - Eyebrows (optional)
+  - Eyelashes (optional)
+
+Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-types) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
+
+Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
 ### Modesty Layers
 
@@ -59,7 +76,7 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
 For all modesty layers, the following applies:
 
 - All modesty layers must be fully opaque. While they can include artistic highlights, shadows, or textures, modesty layers that are sheer or partially transparent are not permitted.
-- The modesty layer should be a different color from the avatar's skin tone.
+- The modesty layer must be a different color from the avatar's skin tone.
 - Modesty layers designed to be sexually suggestive, such as lingerie, are not permitted.
 - Both upper and lower torso modesty layers are required if your avatar character resembles a minor.
 
@@ -67,6 +84,8 @@ For all modesty layers, the following applies:
   <center><img src="../../assets/art/avatar/Modesty-Layer-Variations.png" width = "60%"/></center>
   <figcaption><center>Examples of appropriate modesty layers</center></figcaption>
   </figure>
+
+Roblox moderates avatars that do not follow the modesty layers requirements under the [Romantic and Sexual Content Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
 #### Lower Torso
 
@@ -79,7 +98,7 @@ You must add an **upper torso** modesty layer if your avatar uses a skin-like te
 For upper torso modesty layers, the following applies:
 
 - For characters that resemble minors, the upper torso modesty layer must provide full coverage of the entire breast and stomach area, such as a tank top.
-- For character's that don't resemble minors, the upper torso modesty layer must provide full coverage of the entire breast area.
+- For characters that don't resemble minors, the upper torso modesty layer must provide full coverage of the entire breast area.
   - Cleavage can be depicted using outlines but must be completely covered by the modesty layer.
   - Full coverage of the back is not required, but it must be clear that the avatar character is not naked if seen from the back.
 
@@ -94,9 +113,98 @@ Upper torso modesty layers can include strapless bras, racerback bras, balconett
 
 Avatar bodies must not be sexually suggestive or depict or suggest nudity in genital areas. This includes depicting pubic hair, genitalia, or nipples. This includes any visible depiction through or around the [modesty layers](#modesty-layers).
 
+Roblox moderates avatars that do not follow the modesty layers requirements under the [Romantic and Sexual Content Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
+
 ### Accessories and Clothing
 
-Avatar bodies cannot include any accessories or clothing. These items, such as equipable tails, wings, glasses, clothing, tattoos, and makeup, must be uploaded and sold separately. Heads can include hair, eyelashes, and eyebrows, but these must also be separate items.
+Avatar bodies cannot include any accessories or clothing. Accessories are items that you can find separately in the Marketplace that are not part of the body part requirements, such as equipable tails, wings, glasses, clothing, [tattoos](#tattoos), and [makeup](#makeup). You must upload and sell these items separately. Heads can include hair, eyelashes, and eyebrows, but these must also be separate items.
+
+<GridContainer numColumns='2'>
+<figure>
+    <img src="../../assets/art/avatar/Acc-Antenna.png" />
+    <figcaption>Antennas are an example of an accessory you can find in the Marketplace and must be sold separately.</figcaption>
+</figure>
+<figure>
+    <img src="../../assets/art/avatar/Acc-Robot-Arms.png" />
+    <figcaption>Robot tentacles are an example of an accessory you can find in the Marketplace and must be sold separately.</figcaption>
+</figure>
+</GridContainer>
+
+The following are examples of assets you can find on the Marketplace and cannot be included with a submitted avatar body:
+
+<table>
+<tbody>
+  <tr>
+    <td>
+      <GridContainer numColumns='2'>
+        <img src="../../assets/art/avatar/Acc-Wings-A.png" />
+        <img src="../../assets/art/avatar/Acc-Wings-B.png" />
+      </GridContainer>
+          <center>Wings</center>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <GridContainer numColumns='2'>
+        <img src="../../assets/art/avatar/Acc-Horn-A.png" />
+        <img src="../../assets/art/avatar/Acc-Horn-B.png" />
+      </GridContainer>
+      <center>Horns</center>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <GridContainer numColumns='2'>
+        <img src="../../assets/art/avatar/Acc-Antlers-A.png" />
+        <img src="../../assets/art/avatar/Acc-Antlers-B.png" />
+      </GridContainer>
+      <center>Antlers</center>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <GridContainer numColumns='2'>
+        <img src="../../assets/art/avatar/Acc-Tail-A.png"/>
+        <img src="../../assets/art/avatar/Acc-Tail-B.png"/>
+      </GridContainer>
+      <center>Tails</center>
+    </td>
+
+  </tr>
+  <tr>
+    <td>
+      <center><img src="../../assets/art/avatar/Acc-Feathers.png"/></center>
+      <center>Tail Feathers</center>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+Roblox moderates avatars with accessories or clothing under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
+
+#### Tattoos
+
+Tattoos are drawings, patterns, or shapes that are distinct from the body's texture and differ in color from the rest of the body, You must upload and sell tattoos separately. Avatars can have textures, but not tattoos. Textures are a repeating pattern that looks like a tangible/physical object and covers at least 50% of the avatar. Examples of textures include: scales, feathers, rocks, and fur.
+
+<GridContainer numColumns='2'>
+<figure>
+    <img src="../../assets/art/avatar/Acc-Tattoos.png" />
+    <figcaption>Tattoo markings on the upper arm</figcaption>
+</figure>
+<figure>
+    <img src="../../assets/art/avatar/Acc-Skin-Example.png" />
+    <figcaption>Texture that makes up natural lizard skin</figcaption>
+</figure>
+</GridContainer>
+
+#### Makeup
+
+Avatar heads can use shading and shadowing to show dimension and definition. This includes shading of the eyelids in a tone similar to skin tone, single color lips, eyeliner, eyelashes, and eyebrows, or cheeks shaded to look flushed, rosy, healthy, or warm.
+
+Your avatar head cannot include any additional color, shading, or outlining not solely used to show dimension and definition of the face. You must upload and sell these features separately. This includes facial painting, multicolor eyelashes, eyeliner, and lips, and eyeshadow that goes beyond shading and is not related to the skin tone of the rest of the body.
 
 <GridContainer numColumns="2">
   <figure>
@@ -108,12 +216,6 @@ Avatar bodies cannot include any accessories or clothing. These items, such as e
   </figure>
 </GridContainer>
 
-#### Makeup
-
-Avatar heads can use shading and shadowing to show dimension and definition. This includes shading of the eyelids in a tone similar to skin tone, single color lips, eyeliner, eyelashes, and eyebrows, or cheeks shaded to look flushed, rosy, healthy, or warm.
-
-Your avatar head cannot include any additional color, shading, or outlining not solely used to show dimension and definition of the face. These features must be uploaded and sold separately. This includes facial painting, multicolor eyelashes, eyeliner, and lips, and eyeshadow that goes beyond shading and is not related to the skin tone of the rest of the body.
-
 ### Customizable Skin Tones
 
-Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/avatar/specifications.md#custom-skin-tone).
+Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../../art/characters/specifications.md#custom-skin-tone).

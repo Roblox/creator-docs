@@ -1,0 +1,29 @@
+name: TweenStatus
+type: enum
+summary: |
+  The completion status of a `Class.GuiObject` tween function.
+description: |
+  Describes the completion status of a `Class.GuiObject` tween function.
+
+  Passed as an argument to the callback function provided to
+  `Class.GuiObject:TweenPosition()`, `Class.GuiObject:TweenSize()`, and
+  `Class.GuiObject:TweenSizeAndPosition()`.
+
+  Not to be confused for `Enum.PlaybackState` which is used with
+  `Class.TweenService`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Canceled
+    summary: |
+      The tween was cancelled before completion.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Completed
+    summary: |
+      The Tween has successfully completed.
+    value: 1
+    tags: []
+    deprecation_message: ''

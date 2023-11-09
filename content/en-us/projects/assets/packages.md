@@ -8,13 +8,13 @@ To optimize asset management across your entire team or across multiple projects
 
 ## Creating Packages
 
-A package can be created from any single node or sub-tree root node in the data model.
+You can create a package from any single object or any single parent and children branch of objects. When you create a package for a single object, it's recommended to add that object to a `Class.Model` grouping first so that you can add, remove, or scale objects within the package later without breaking the package.
 
-1. In the [Explorer](../../studio/explorer.md) window, right-click the desired object/node and select **Convert to Package** from the contextual menu.
+1. In the **Explorer** window, right-click the desired object or parent of object, then select **Convert to Package** from the contextual menu.
 
    <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" width="300" />
 
-1. In the dialog window, fill in the requested details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the desired group in which you have permission to create/edit group experiences.
+1. In the contextual window, fill in the requested details. In particular, if you're working in a [group](../../projects/groups.md), set **Ownership** to the desired group in which you have permission to create/edit group experiences.
 
    <Alert severity="warning">
    Ownership transfers are **not** supported by the asset system, so carefully consider the owner when creating a package.
@@ -45,28 +45,20 @@ A package can be created from any single node or sub-tree root node in the data 
 
 ## Inserting Packages
 
-To insert a package which doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md) under these guidelines:
+To insert a package which doesn't already exist in the current place, you must **initially** insert it from the **Inventory**&nbsp;&rarr; **My&nbsp;Packages** sort.
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
-- From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/studio/packages/Toolbox-My-Packages.png" width="360" />
-    <figcaption>Toolbox &rarr; Inventory &rarr; My Packages</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/studio/packages/Toolbox-Group-Packages.png" width="360" />
-    <figcaption>Toolbox &rarr; Creations &rarr; Group Packages</figcaption>
-  </figure>
-</GridContainer>
+<img src="../../assets/studio/toolbox/Inventory-My-Packages.png" width="360" />
 
 Once you've inserted a package into a place's data model, it appears in the **Packages** folder of the [Asset Manager](../../projects/assets/manager.md) and remains there even if you later delete all copies of it. However, when you publish the place, the folder will update to reflect only packages used within the place.
 
 <figure>
-  <img src="../../assets/studio/packages/Asset-Manager-Packages.png" width="360" />
-  <figcaption>Asset Manager &rarr; Packages</figcaption>
+  <img src="../../assets/studio/asset-manager/Packages-Example.png" width="360" />
+  <figcaption>Packages in Asset Manager</figcaption>
 </figure>
+
+<Alert severity="warning">
+Take caution when inserting packages that you didn't create into your experiences, as they may contain malicious scripts that can impact your experience's performance. Malicious packages can be difficult to troubleshoot without reverting to an older version of your experience, so it's recommended to always save your experience and investigate any scripts within unfamiliar packages before bringing them into your place file.
+</Alert>
 
 ## Modifying Packages
 
@@ -304,21 +296,55 @@ To revert any [configuration](#adding-or-updating-configurations) attribute to i
 
 <img src="../../assets/studio/packages/Package-Configured-Attributes-Reset.png" width="346" />
 
-## Comparing Script Changes
+## Comparing Package Versions
 
-When a package object contains scripts, or the script itself is a package, you can compare differences line-by-line using the built-in diff tool. This can help you decide whether to update as well as explore what else in the experience may need edits to make the update compatible.
+When a package has multiple versions, you can compare changes between versions using the diff viewer, which is helpful for reviewing package updates, comparing your local changes against the latest version, and checking the content of past versions before restoring.
 
-To compare script changes:
+The tool has a package hierarchy menu that indicates all added, removed, or modified instances between versions using corresponding icons, with the following tabs available:
 
-1. In the [Explorer](../../studio/explorer.md) window, right-click a modified or outdated package. Remember that the package must either be a script or contain scripts.
-1. Select **View Script Changes** from the context menu.
+- **Visual Overview** shows the visual differences of the 3D rendering under different camera positions. It's the default view for packages with a 3D object (models, parts) as the root object, and it's currently only available for the root object.
 
-   <img src="../../assets/studio/packages/Contextual-Menu-View-Script-Changes.png" width="300" />
+   <img src="../../assets/studio/packages/visual-diff.png" width="100%" />
 
-1. In the **Diff Result** tab that opens, compare all of the changes between the current package copy and the latest published or local version, similar to source control applications.
+- **Properties** shows changes of properties and attributes. It's the default view for packages with a non-3D object (scripts, lights, 2D objects) as the root object, and it's available for all instances in a package.
 
-   <img src="../../assets/studio/packages/Package-Compare-Scripts.png" width="600" />
+   <img src="../../assets/studio/packages/properties-diff.png" width="100%" />
 
-   <Alert severity="info">
-   In this example comparison, the `print()` command on line&nbsp;1 was modified. The line highlighted in red shows line&nbsp;1 as it exists in the outdated script copy, while the green line immediately following shows line&nbsp;1 as it exists in the published script package. In addition, two new lines were added to the published script package: an empty break on line&nbsp;2 and a new `print()` command on line&nbsp;3.
+- **Script** shows line-by-line script differences. It's available for packages containing scripts, regardless of whether the script is the root object or not.
+
+   <img src="../../assets/studio/packages/script-diff.png" width="100%" />
+
+To compare package versions:
+
+1. In the [Explorer](../../studio/explorer.md) window, right-click the target package.
+1. Select **Compare Package Versions** from the context menu.
+1. On the **Diff Viewer** window, by default, you can compare changes between your local copy and the latest version. You can also select any two versions to compare using the dropdown menu.
+
+   <img src="../../assets/studio/packages/version-selector.png" width="80%" />
+
+   <Alert severity="warning">
+   Some older versions might be incompatible with the package diff tool. When detecting an incompatible version selected, the system prompts you to select another version.
    </Alert>
+
+1. After selecting versions:
+
+   - To compare the visual renderings of the root model, if applicable, select the **Visual Overview** tab and adjust the camera control for your desired angle. Controls are synchronized across views:
+
+     - Pan the camera using left mouse clicks.
+     - Rotate the camera using right mouse clicks.
+     - Zoom in and out the camera with the mouse wheel.
+     - Recenter using the keyboard shortcut `-F`.
+
+   - To compare properties and attributes of an instance, select the instance and the **Properties** tab.
+
+   - To compare script differences, if applicable, select any script to open the **Script** tab for line-by-line changes between your selected versions, similar to source control applications.
+
+Alternatively, you can open the script diff tool directly in the [Explorer](../../studio/explorer.md) window.
+
+<Alert severity="warning">
+This only allows you to compare script changes between the current version and the latest published or local version, without indicating the collaborators who made the change.
+</Alert>
+
+1. Right-click the target package, which must either be a script or contain scripts.
+1. Select **View Script Changes** from the context menu.
+1. In the **Diff Result** tab that opens, compare all changes of the selected script between the current package copy and the latest published or local version.

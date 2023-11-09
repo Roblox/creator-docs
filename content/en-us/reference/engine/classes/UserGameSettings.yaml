@@ -1,0 +1,677 @@
+name: UserGameSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  The UserGameSettings is a singleton class found inside of the
+  `Class.UserSettings` singleton. It holds various persistent settings relating
+  to how the user wants to control their camera, and their character.
+description: |
+  The UserGameSettings is a singleton class found inside of the
+  `Class.UserSettings` singleton. It holds various persistent settings relating
+  to how the user wants to control their camera, and their character.
+
+  You can access this object from a `Class.LocalScript` via:
+
+  ```lua
+  UserSettings():GetService("UserGameSettings")
+  ```
+
+  This object is intended to be used on the client only, as it serves no purpose
+  on the server. It will also reflect your own settings when testing in Roblox
+  Studio.
+code_samples:
+  - UserGameSettings-Listener
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - UserSettings
+deprecation_message: ''
+properties:
+  - name: UserGameSettings.AllTutorialsDisabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.CameraMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CustomCameraMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ChatVisible
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ComputerCameraMovementMode
+    summary: |
+      The camera movement mode currently in-use by the client on desktop.
+    description: |
+      The camera movement mode currently in-use by the client on desktop.
+    code_samples:
+    type: ComputerCameraMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ComputerMovementMode
+    summary: |
+      The type of controls being used by the client on desktop.
+    description: |
+      The type of controls being used by the client on desktop.
+    code_samples:
+    type: ComputerMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ControlMode
+    summary: |
+      Toggles whether or not the client can use the Mouse Lock Switch mode.
+    description: |
+      Toggles whether or not the client can use the Mouse Lock Switch mode.
+    code_samples:
+    type: ControlMode
+    tags: []
+    deprecation_message: |
+      This property has been deprecated. You can enable mouse-locked
+      third-person control, or "Shift Lock Mode", through the
+      `Enum.MouseBehavior` in
+      `Class.PlayerScripts:RegisterTouchCameraMovementMode()` and
+      `Class.PlayerScripts:RegisterComputerCameraMovementMode()`.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.Fullscreen
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.GamepadCameraSensitivity
+    summary: |
+      Describes how sensitive the camera is when using a gamepad.
+    description: |
+      Describes how sensitive the camera is when using a gamepad.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.GraphicsQualityLevel
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.HasEverUsedVR
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.MasterVolume
+    summary: |
+      A float between 0 and 1 representing the volume of the game's client.
+    description: |
+      A <a href="../../../luau/numbers.md">float</a> between 0 and 1
+      representing the volume of the game's client.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.MouseSensitivity
+    summary: |
+      A float between 0 and 4 representing the sensitivity of the client's
+      camera sensitivity.
+    description: |
+      A float between 0 and 4 representing the sensitivity of the client's
+      camera sensitivity.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.OnboardingsCompleted
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: UserGameSettings.RCCProfilerRecordFrameRate
+    summary: ''
+    description: ''
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.RCCProfilerRecordTimeFrame
+    summary: ''
+    description: ''
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.RotationType
+    summary: |
+      Controls how the client's character is rotated.
+    description: |
+      Controls how the client's character is rotated.
+    code_samples:
+    type: RotationType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: UserGameSettings.SavedQualityLevel
+    summary: |
+      The graphics quality level set by the client.
+    description: |
+      The graphics quality level set by the client.
+    code_samples:
+    type: SavedQualitySetting
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.StartMaximized
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.StartScreenPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.StartScreenSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.TouchCameraMovementMode
+    summary: |
+      The camera type in-use by the client while on a mobile device.
+    description: |
+      The camera type in-use by the client while on a mobile device.
+    code_samples:
+    type: TouchCameraMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.TouchMovementMode
+    summary: |
+      The type of controls being used by the client on a mobile device.
+    description: |
+      The type of controls being used by the client on a mobile device.
+    code_samples:
+    type: TouchMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.UsedCoreGuiIsVisibleToggle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.UsedCustomGuiIsVisibleToggle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.UsedHideHudShortcut
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.VREnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.VRRotationIntensity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.VRSmoothRotationEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.VignetteEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: UserGameSettings:GetCameraYInvertValue
+    summary: |
+      Returns the camera's Y-invert value.
+    description: |
+      Returns the camera's Y-invert value.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:GetOnboardingCompleted
+    summary: |
+      Checks if onboarding has been completed.
+    description: |
+      Checks whether or not the given onboarding has been completed yet, which
+      is useful for avoiding showing the onboarding animation again.
+
+      If onboardingId is not one of the accepted IDs, an error is thrown.
+
+      The onboarding process is one-way. This means that, as a developer, you
+      can force the onboarding process to completion but cannot reset it.
+
+      See also:
+
+      - `Class.UserGameSettings:SetOnboardingCompleted()`, sets onboarding as
+        completed
+    code_samples:
+    parameters:
+      - name: onboardingId
+        type: string
+        default:
+        summary: |
+          The onboarding ID to inquire about.
+    returns:
+      - type: bool
+        summary: |
+          Whether or not the onboarding in particular has been completed yet.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:InFullScreen
+    summary: |
+      Returns true if the user's Roblox window is in full screen mode.
+    description: |
+      Returns true if the user's Roblox window is in full screen mode.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:InStudioMode
+    summary: |
+      Returns true if the client's game session is in Roblox Studio.
+    description: |
+      Returns true if the client's game session is in Roblox Studio.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:SetCameraYInvertVisible
+    summary: |
+      If called, Roblox toggles the menu option to invert the user's camera y
+      axis.
+    description: |
+      If called, Roblox toggles the menu option to invert the user's camera y
+      axis.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:SetGamepadCameraSensitivityVisible
+    summary: |
+      If called, Roblox toggles the menu option to control the camera
+      sensitivity with gamepads.
+    description: |
+      If called, Roblox toggles the menu option to control the camera
+      sensitivity with gamepads.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings:SetOnboardingCompleted
+    summary: |
+      Sets onboarding as completed.
+    description: |
+      Sets the given onboarding as completed, so it won't be shown again to the
+      user the next time they play.
+
+      Currently, this function only accepts
+      [DynamicThumbstick](../../../luau/strings.md), and it is used to
+      persistently track whether or not the player has finished the tutorial for
+      the Dynamic Thumbstick control scheme. If onboardingId is not one of the
+      accepted IDs, an error is thrown.
+
+      The onboarding process is one-way. This means that, as a developer, you
+      can force the onboarding process to completion but cannot reset it.
+
+      See also:
+
+      - `Class.UserGameSettings:GetOnboardingCompleted()`, checks if onboarding
+        has been completed
+    code_samples:
+    parameters:
+      - name: onboardingId
+        type: string
+        default:
+        summary: |
+          The onboarding ID to set as completed.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: UserGameSettings.FullscreenChanged
+    summary: |
+      Fires if the user's full screen mode is changed.
+    description: |
+      Fires if the user's full screen mode is changed. The event will only fire
+      on desktop devices that can toggle full screen mode. The game will always
+      be in full screen on mobile devices and consoles.
+    code_samples:
+      - Full-Screen-Mode-Detection
+    parameters:
+      - name: isFullscreen
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserGameSettings.StudioModeChanged
+    summary: |
+      Fired when the user's client switches between studio mode and in-game
+      mode. This gets fired periodically in Roblox Studio when a session starts.
+    description: |
+      Fired when the user's client switches between studio mode and in-game
+      mode. This gets fired periodically in Roblox Studio when a session starts.
+    code_samples:
+    parameters:
+      - name: isStudioMode
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

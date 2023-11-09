@@ -1,0 +1,103 @@
+name: Dragger
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  A helper object used to create tools that can drag parts.
+description: |
+  The **Dragger** object is a helper object used to create tools that can drag
+  parts. It is expected (but not required) to be used with `Class.Mouse` events.
+
+  Its implementation is primarily used in the RbxStamper library.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: |
+  This class has been deprecated, as it does not work well with
+  `Class.Workspace.FilteringEnabled|FilteringEnabled`, and should not be used in
+  new work.
+properties: []
+methods:
+  - name: Dragger:AxisRotate
+    summary: |
+      Rotates the currently dragged part(s) by 90 degrees on the given axis.
+    description: |
+      Rotates the currently dragged part(s) by 90 degrees on the given axis.
+    code_samples:
+    parameters:
+      - name: axis
+        type: Axis
+        default: X
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Dragger:MouseDown
+    summary: |
+      Initializes a dragging action, specifying which parts to use when
+      dragging.
+    description: |
+      Initializes a dragging action, specifying which parts to use when
+      dragging.
+    code_samples:
+    parameters:
+      - name: mousePart
+        type: Instance
+        default:
+        summary: ''
+      - name: pointOnMousePart
+        type: Vector3
+        default:
+        summary: ''
+      - name: parts
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Dragger:MouseMove
+    summary: |
+      Tries to move the currently dragged part to the point where MouseRay hits
+      another part.
+    description: |
+      Tries to move the currently dragged part to the point where MouseRay hits
+      another part.
+    code_samples:
+    parameters:
+      - name: mouseRay
+        type: Ray
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Dragger:MouseUp
+    summary: |
+      Stops the current dragging action (made by `Class.Dragger:MouseDown()`).
+    description: |
+      Stops the current dragging action (made by `Class.Dragger:MouseDown()`)
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

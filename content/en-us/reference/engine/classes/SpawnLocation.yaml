@@ -1,0 +1,215 @@
+name: SpawnLocation
+type: class
+category: Gameplay
+memory_category: PhysicsParts
+summary: |
+  `Class.SpawnLocation|SpawnLocations`, or "spawns" determine where a
+  `Class.Player` respawns when they die. They can be configured to allow only
+  certain players to use each spawn, using `Class.Team|Teams`. They also control
+  how `Class.ForceField|ForceFields` are set up for newly-spawned players.
+description: |
+  SpawnLocations, or "spawns" determine where a `Class.Player` respawns when
+  they die. They can be configured to allow only certain players to use each
+  spawn, using `Class.Team|Teams`. They also control how
+  `Class.ForceField|ForceFields` are set up for newly-spawned players.
+
+  SpawnLocations can be used as checkpoints, such as in an obstacle course,
+  using the `Class.SpawnLocation.AllowTeamChangeOnTouch` property, so that when
+  a player touches it, they will change teams to the SpawnLocation's team. In
+  this case, only the first `Class.Team` should have `Class.Team.AutoAssignable`
+  set to true, else players will not start at the first checkpoint.
+
+  Note if a SpawnLocation is added to the `Class.Workspace` in Studio with
+  `Class.SpawnLocation.Neutral` set to false a Team will be created
+  corresponding to `Class.SpawnLocation.TeamColor` if it does not already exist.
+  This behavior does not occur when spawns are created in-game using a
+  `Class.Script` or if the properties of the SpawnLocation are changed after
+  already being added. It is recommended that developers always set up their
+  teams manually and not rely on this behavior.
+
+  ## Spawning Rules
+
+  There are several rules that come into play for a given SpawnLocation when a
+  player respawns:
+
+  - When `Class.SpawnLocation.Neutral` is set to false only
+    `Class.Player|Players` with `Class.Player.TeamColor` matching
+    `Class.SpawnLocation.TeamColor` will respawn above it
+  - When `Class.SpawnLocation.Neutral` is set to true any Player can spawn above
+    it regardless of `Class.SpawnLocation.TeamColor`
+  - If multiple eligible spawns are available to a `Class.Player`, a random one
+    will be chosen
+  - Players will spawn at different points on top of a SpawnLocation, but
+    currently, they may still spawn on top of each other if they spawn right
+    after one and other
+
+  See also:
+
+  - If you'd like to configure how long it takes for a player to respawn, take a
+    look at the `Class.Players.RespawnTime|RespawnTime` property
+code_samples:
+  - SpawnLocation-Checkpoints
+inherits:
+  - Part
+tags: []
+deprecation_message: ''
+properties:
+  - name: SpawnLocation.AllowTeamChangeOnTouch
+    summary: |
+      Allows a `Class.Player` to join the team by touching the
+      `Class.SpawnLocation`. When set to true, if a `Class.Player` character
+      comes into contact with the `Class.SpawnLocation`, the player's
+      `Class.Player.TeamColor` will be set to `Class.SpawnLocation.TeamColor`.
+    description: |
+      Allows a `Class.Player` to join the team by touching the
+      `Class.SpawnLocation`. When set to true, if a `Class.Player` character
+      comes into contact with the `Class.SpawnLocation`, the player's
+      `Class.Player.TeamColor` will be set to `Class.SpawnLocation.TeamColor`.
+      `Class.Player.Neutral` will also be set to `Class.SpawnLocation.Neutral`
+      upon contact, meaning a player can also become neutral by touching a spawn
+      location.
+
+      This will not function when `Class.SpawnLocation.Enabled` is set to false.
+
+      #### Making Checkpoints
+
+      This feature is often used to make checkpoints in obstacle courses or
+      similar games.
+    code_samples:
+      - SpawnLocation-Checkpoints
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Teams
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpawnLocation.Duration
+    summary: |
+      The length of time, in seconds, that a `Class.ForceField` will be applied
+      to a `Class.Player` character spawning at this `Class.SpawnLocation`. If
+      Duration is zero, the `Class.ForceField` is never created, and it will not
+      trigger the `Class.Instance.DescendantAdded` or
+      `Class.Instance.ChildAdded` events.
+    description: |
+      The length of time, in seconds, that a `Class.ForceField` will be applied
+      to a `Class.Player` character spawning at this `Class.SpawnLocation`. If
+      Duration is zero, the `Class.ForceField` is never created, and it will not
+      trigger the `Class.Instance.DescendantAdded` or
+      `Class.Instance.ChildAdded` events.
+
+      This default value of this property is 10 seconds.
+
+      The duration feature allows developers to easily give `Class.Player`s
+      protection from 'spawn killing' which can be a frustrating experience for
+      players. Note, `Class.ForceField`s will only protect users from
+      `Class.Explosion`s and Weapons that use `Class.Humanoid:TakeDamage()` to
+      deal damage or otherwise check for a `Class.ForceField`.
+    code_samples:
+      - SpawnLocation-ForceField
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Forcefield
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpawnLocation.Enabled
+    summary: |
+      Sets whether or not the `Class.SpawnLocation` is enabled. When disabled
+      players cannot spawn at the `Class.SpawnLocation` and the
+      AllowTeamChangeOnTouch functionality is disabled.
+    description: |
+      Sets whether or not the `Class.SpawnLocation` is enabled. When disabled
+      players cannot spawn at the `Class.SpawnLocation` and the
+      `Class.SpawnLocation.AllowTeamChangeOnTouch` functionality is disabled.
+
+      This property provides the most convenient way of preventing
+      `Class.Player`s from spawning at a spawn.
+
+      Note, although team changing on touch using
+      `Class.SpawnLocation.AllowTeamChangeOnTouch` is disabled when Enabled is
+      set to false, other touched events using `Class.BasePart.Touched` will
+      still fire.
+    code_samples:
+      - SpawnLocation-Enabled
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpawnLocation.Neutral
+    summary: |
+      Whether or not a `Class.SpawnLocation` is affiliated with a specific team.
+      This means that any `Class.Player`, of any `Class.Team`, can spawn on it
+      if this property is set to true.
+    description: |
+      Whether or not a spawn is affiliated with a specific team. This means that
+      any `Class.Player`, of any `Class.Team`, can spawn on it if this property
+      is set to true.
+
+      If Neutral is set to false, only players whose `Class.Player.TeamColor` is
+      equal to `Class.SpawnLocation.TeamColor` can use the
+      `Class.SpawnLocation`.
+
+      If `Class.SpawnLocation.AllowTeamChangeOnTouch` is true
+      `Class.Player.Neutral` will be set to this property upon contact with the
+      spawn.
+    code_samples:
+      - SpawnLocation-Checkpoints
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Teams
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SpawnLocation.TeamColor
+    summary: |
+      Sets what team the `Class.SpawnLocation` is affiliated to. If
+      `Class.SpawnLocation.Neutral` property is false, only `Class.Player`s with
+      the same `Class.Player.TeamColor` as the spawn's TeamColor will be able to
+      spawn there.
+    description: |
+      The TeamColor property sets what team the `Class.SpawnLocation` is
+      affiliated to. If `Class.SpawnLocation.Neutral` property is false, only
+      `Class.Player`s with the same `Class.Player.TeamColor` as the spawn's
+      TeamColor will be able to spawn there.
+
+      If `Class.SpawnLocation.AllowTeamChangeOnTouch` is true
+      `Class.Player.Neutral` will be set to this property upon contact with the
+      spawn.
+    code_samples:
+      - SpawnLocation-Checkpoints
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Teams
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

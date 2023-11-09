@@ -1,0 +1,42 @@
+name: HttpContentType
+type: enum
+summary: |
+  Specifies the value of the HTTP Content-Type header which describes the HTTP
+  request data type.
+description: |
+  Specifies the value of the HTTP Content-Type header which describes the HTTP
+  request data type.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: ApplicationJson
+    summary: |
+      Represents the "application/json" Content-Type.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: ApplicationXml
+    summary: |
+      Represents the "application/xml" Content-Type.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ApplicationUrlEncoded
+    summary: |
+      Represents the "application/x-www-form-urlencoded" Content-Type.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: TextPlain
+    summary: |
+      Represents the "text/plain" Content-Type.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: TextXml
+    summary: |
+      Represents the "text/xml" Content-Type.
+    value: 4
+    tags: []
+    deprecation_message: ''

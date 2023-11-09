@@ -1,0 +1,40 @@
+name: BlockMesh
+type: class
+category: Meshes
+memory_category: PhysicsParts
+summary: |
+  The BlockMesh object applies a 'brick' mesh to the `Class.BasePart` it is
+  parented to. It behaves identically to a `Class.SpecialMesh` with
+  `Class.SpecialMesh.MeshType` set to 'Brick'.
+description: |
+  The BlockMesh object applies a 'brick' mesh to the `Class.BasePart` it is
+  parented to. It behaves identically to a `Class.SpecialMesh` with
+  `Class.SpecialMesh.MeshType` set to 'brick'.
+
+  ## What does a BlockMesh do?
+
+  A BlockMesh gives the `Class.BasePart` it was applied to a brick shaped mesh.
+  It is identical in appearance to a standard Roblox `Class.Part`.
+
+  The dimensions of the mesh will scale linearly in all directions with
+  `Class.BasePart.Size`, this means a part containing a BlockMesh can be resized
+  the same way as any other part.
+
+  The additional functionality a BlockMesh brings however, is the ability to set
+  the `Class.DataModelMesh.Scale` and `Class.DataModelMesh.Offset` properties.
+  These allow the position and dimensions of the mesh that is displayed to be
+  changed without changing the `Class.BasePart.Position` or
+  `Class.BasePart.Size` of the `Class.BasePart` the mesh is parented to.
+
+  Note as the `Class.BlockMesh` object does not include a texture the
+  `Class.DataModelMesh.VertexColor` property does not do anything.
+code_samples:
+  - BlockMesh-Instantiation
+inherits:
+  - BevelMesh
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

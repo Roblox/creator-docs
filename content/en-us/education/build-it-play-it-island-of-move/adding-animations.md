@@ -14,7 +14,7 @@ Animations are triggered using **scripts**. One approach is to use events to pla
 
 For this project, you'll create parts that when touched, trigger an animation for that player.
 
-1. To organize all parts that will play the animation, add a folder in Workspace (hover over Workspace and click ). named TouchPartFolder.
+1. To organize all parts that will play the animation, add a folder in Workspace (hover over Workspace and click +) named TouchPartFolder.
 
 2. In TouchPartFolder, add a part.
 
@@ -65,8 +65,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    local touchPartFolder = workspace:WaitForChild("TouchPartFolder")
    local touchParts = touchPartFolder:GetChildren()
 
-   for objectIndex = 1, #touchParts do
-     local touchPart = touchParts[objectIndex]
+   for i, touchPart in touchParts do
      touchPart.Touched:Connect(onPartTouch)
    end
    ```
@@ -91,7 +90,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    function PlayerAnimationFeedback:LoadAnimation(humanoid)
      local feedbackAnimation = Instance.new("Animation")
      feedbackAnimation.AnimationId = ANIMATION_ID
-     feedbackAnimationTrack = humanoid:LoadAnimation(feedbackAnimation)
+     feedbackAnimationTrack = humanoid.Animator:LoadAnimation(feedbackAnimation)
      feedbackAnimationTrack.Priority = Enum.AnimationPriority.Action
      feedbackAnimationTrack.Looped = false
    end
@@ -99,7 +98,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    -- Function to play the animation
    function PlayerAnimationFeedback:PlayAnimation()
      feedbackAnimationTrack:Play(ANIMATION_FADE)
-     wait(feedbackAnimationTrack.Length)
+     task.wait(feedbackAnimationTrack.Length)
    end
 
    return PlayerAnimationFeedback

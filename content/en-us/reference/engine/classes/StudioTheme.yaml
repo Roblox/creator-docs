@@ -1,0 +1,52 @@
+name: StudioTheme
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: StudioTheme:GetColor
+    summary: |
+      Returns the color corresponding to the arguments provided.
+    description: |
+      The **GetColor()** function returns the `Datatype.Color3` corresponding to
+      the arguments provided. For instance, if you would like to get the
+      `Datatype.Color3` of the Studio "MainButton" when it's **disabled**, you
+      can use the following code:
+
+      ````lua
+      settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainButton, Enum.StudioStyleGuideModifier.Disabled)
+      ```lua
+
+      See the `Enum.StudioStyleGuideColor` reference for a list of Studio elements and `Enum.StudioStyleGuideModifier` for a list of modifiers.
+      ````
+    code_samples:
+    parameters:
+      - name: styleguideitem
+        type: StudioStyleGuideColor
+        default:
+        summary: |
+          The element you want to get the theme color for.
+      - name: modifier
+        type: StudioStyleGuideModifier
+        default: Default
+        summary: |
+          The modifier you want to place on the `StyleGuideColor` element.
+    returns:
+      - type: Color3
+        summary: |
+          The corresponding Color3 theme value.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

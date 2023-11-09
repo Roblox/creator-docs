@@ -56,6 +56,7 @@ export const ALLOWED_PROFANE_WORDS_LIST = [
   'knobs',
   'flange',
   'poop',
+  'sex',
 ];
 const ALLOWED_PROFANE_WORDS_SET = new Set(ALLOWED_PROFANE_WORDS_LIST);
 

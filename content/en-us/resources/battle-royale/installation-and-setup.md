@@ -112,7 +112,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
    src="../../assets/resources/battle-royale/installation-and-setup/Battle-Royale-Place-MainConfiguration.png"
    width="80%" />
 
-4. Locate the `\_places` table and paste the copied ID from step #1 as the value of the `lobby` key.
+4. Locate the `_places` table and paste the copied ID from step #1 as the value of the `lobby` key.
 
    ```lua title='Lobby-MainConfiguration'
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -123,25 +123,25 @@ Each place must be cross-associated so that players can teleport from the lobby 
    local isServer = RunService:IsServer()
    local ConfigEvent = nil
 
-   local \_placeOverrides = {}
-   local \_overrides = {}
+   local _placeOverrides = {}
+   local _overrides = {}
 
    ---
 
    -- List of named places in the game
-   local \_places = {
-   lobby = 0123456789,
-   gameplay_development = 0,
-   queue_default = 0,
-   queue_deathmatch = 0,
-   queue_teamDeathmatch = 0,
-   queue_freePlay = 0
+   local _places = {
+    lobby = 0123456789,
+    gameplay_development = 0,
+    queue_default = 0,
+    queue_deathmatch = 0,
+    queue_teamDeathmatch = 0,
+    queue_freePlay = 0
    }
 
    ---
    ```
 
-5. Repeat the **Copy ID to Clipboard** process for the other five places and paste them into the associated `\_places` table key value.
+5. Repeat the **Copy ID to Clipboard** process for the other five places and paste them into the associated `_places` table key value.
 
     <table>
    <thead>
@@ -180,13 +180,13 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
    ```lua
    -- List of named places in the game
-   local \_places = {
-   lobby = 0123456789,
-   gameplay_development = 0987654321,
-   queue_default = 0123459876,
-   queue_deathmatch = 0987651234,
-   queue_teamDeathmatch = 0132457689,
-   queue_freePlay = 0678912345
+   local _places = {
+    lobby = 0123456789,
+    gameplay_development = 0987654321,
+    queue_default = 0123459876,
+    queue_deathmatch = 0987651234,
+    queue_teamDeathmatch = 0132457689,
+    queue_freePlay = 0678912345
    }
    ```
 
@@ -222,11 +222,11 @@ By default, Roblox balances players/servers for an optimal social gameplay exper
 
 ## Publish Additional Places
 
-Now you'll need to open the remaining `.rbxl` files from the downloaded bundle, modify their `\_places` tables, and publish them.
+Now you'll need to open the remaining `.rbxl` files from the downloaded bundle, modify their `_places` tables, and publish them.
 
 ### Copy Places Table
 
-1. Refer to the `\_places` table in the lobby's **MainConfiguration** script:
+1. Refer to the `_places` table in the lobby's **MainConfiguration** script:
 
 ```lua
 --------------------------------------
@@ -260,7 +260,7 @@ local _places = {
    src="../../assets/resources/battle-royale/installation-and-setup//Battle-Royale-Place-MainConfiguration.png"
    width="80%" />
 
-3. Paste the `\_places` table you copied above over the existing `\_places` table (<kbd>Ctrl</kbd>+<kbd>V</kbd> or <kbd>Command ⌘</kbd>+<kbd>V</kbd>) so that each place's tables are identical.
+3. Paste the `_places` table you copied above over the existing `_places` table (<kbd>Ctrl</kbd>+<kbd>V</kbd> or <kbd>Command ⌘</kbd>+<kbd>V</kbd>) so that each place's tables are identical.
 
    ```lua
    --------------------------------------

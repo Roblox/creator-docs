@@ -3,11 +3,11 @@ title: Handling API Requests for Data Stores
 description: Explains how to properly handle parameters of Open Cloud API requests for data stores.
 ---
 
-Before sending requests to Open Cloud APIs for [standard data stores](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json), you need to understand how to handle them properly. For information on the usage of the API, see the [Usage Guide](../../cloud/open-cloud/usage-data-stores.md).
+Before sending requests to Open Cloud APIs for [standard data stores](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json), you need to understand how to handle them properly. For information on the usage of the API, see the [Usage Guide](./usage-data-stores.md).
 
 ## Authorization
 
-Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Managing API Keys](../../cloud/open-cloud/managing-api-keys.md).
+Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Managing API Keys](api-keys.md).
 
 ## Throttling
 
@@ -210,10 +210,11 @@ The **Universe ID** is the unique identifier of the experience in which you want
 
 You can obtain the **Universe ID** of an experience with the following steps:
 
-1. Navigate to the [Creations](https://create.roblox.com/creations) page on the **Creator Dashboard**.
-1. Find the experience with data stores that you want to access.
-1. Click the **...** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID** from the list.
-   <img src="../../assets/open-cloud/copy-universeid.png" width="60%" />
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+2. Find the experience with data stores that you want to access.
+3. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID**.
+
+   <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
 
 ### Scopes
 

@@ -1,0 +1,52 @@
+name: CameraMode
+type: enum
+summary: |
+  The CameraMode Enum is used to set `Class.Player.CameraMode` in
+  `Class.Player`, and determines when first person and third person cameras
+  should be used.
+description: |
+  The CameraMode Enum is used to set `Class.Player.CameraMode` in
+  `Class.Player`, and determines when first person and third person cameras
+  should be used.
+
+  ## First-person
+
+  In first-person mode, the player's camera is zoomed all the way in. Unless
+  there is a visible GUI present with the `Class.GuiButton.Modal` property set
+  to _true_, the mouse will be locked and the user's camera will turn as the
+  mouse moves.
+
+  ![First Person CameraMode](/assets/legacy/CameraMode-LockFirstPerson.jpg)
+
+  ## Third-person
+
+  In third-person mode, the character can be seen in the camera. While in
+  third-person mode on Roblox:
+
+  - You may right-click and drag to rotate your camera, or use the arrow keys at
+    the bottom right-hand corner of the screen.
+  - When you move your mouse, your camera does not change (unless you move the
+    mouse to the end of the screen).
+  - When you press any of the arrow keys, the user's character will face in the
+    corresponding arrow key's direction.
+  - You can zoom in and out freely.
+
+  Third-person is the default camera setting.
+
+  ![Third Person CameraMode](/assets/legacy/CameraMode-Classic.jpg)
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Classic
+    summary: |
+      Third-person camera which can be zoomed into first-person.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: LockFirstPerson
+    summary: |
+      Exclusively first-person camera.
+    value: 1
+    tags: []
+    deprecation_message: ''

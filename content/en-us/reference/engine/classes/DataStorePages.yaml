@@ -1,0 +1,25 @@
+name: DataStorePages
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  A `Class.Pages` object that allows iteration through `Class.OrderedDataStore`
+  key/value pairs.
+description: |
+  A special type of `Class.Pages` object whose pages contain key/value pairs
+  from an `Class.OrderedDataStore`. For this object,
+  `Class.Pages:GetCurrentPage()|GetCurrentPage()` returns an array of tables,
+  each containing keys named **key** and **value**; these reflect the key/value
+  pair data.
+code_samples:
+  - OrderedDataStore-Basics
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

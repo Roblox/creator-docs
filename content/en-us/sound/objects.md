@@ -108,11 +108,11 @@ To create a `Class.Sound` object for background audio:
 
 `Class.Sound` object properties work together to influence how users experience your audio, such as:
 
-- How loud they hear specific audio individually and in relation to one another ([`Volume`](#volume)).
-- How they perceive volume when they move away from the audio source ([`RollOffMinDistance`](#rolloffmindistance-and-rolloffmaxdistance), [`RollOffMaxDistance`](#rolloffmindistance-and-rolloffmaxdistance), and [`Enum.RollOffMode`](#rolloffmode))
-- What part of the audio they can listen to ([`TimePosition`](#timeposition)).
-- How fast and at what pitch they hear it ([`PlaybackSpeed`](#playbackspeed)).
-- If the audio automatically replays upon completion ([`Looped`](#looped)).
+- How loud they hear specific audio individually and in relation to one another ([Volume](#volume)).
+- How they perceive volume when they move away from the audio source ([RollOffMinDistance](#rolloffmindistance-and-rolloffmaxdistance), [RollOffMaxDistance](#rolloffmindistance-and-rolloffmaxdistance), and [RollOffMode](#rolloffmode))
+- What part of the audio they can listen to ([TimePosition](#timeposition)).
+- How fast and at what pitch they hear it ([PlaybackSpeed](#playbackspeed)).
+- If the audio automatically replays upon completion ([Looped](#looped)).
 
 ### Volume
 
@@ -274,7 +274,7 @@ end
 
 ### Playing Interface Audio
 
-You can play interface audio for `Class.GuiObject|GuiObjects`, such as [buttons](../ui/buttons.md#buttons) and [labels](../ui/labels.md), by hooking up a `Class.Sound` object to the `Activated` event listener of the `Class.GuiObject`. This lets you provide auditory feedback to users, such as when they hover over a `Class.GuiObject` or select it.
+You can play interface audio for `Class.GuiObject|GuiObjects`, such as [buttons](../ui/buttons.md) and [labels](../ui/labels.md), by hooking up a `Class.Sound` object to the `Activated` event listener of the `Class.GuiObject`. This lets you provide auditory feedback to users, such as when they hover over a `Class.GuiObject` or select it.
 
 To play a `Class.Sound` object's audio when a user activates a `Class.GuiObject`:
 

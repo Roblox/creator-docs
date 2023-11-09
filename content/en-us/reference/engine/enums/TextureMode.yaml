@@ -1,0 +1,31 @@
+name: TextureMode
+type: enum
+summary: |
+  Describes how the texture of a `Class.Trail` or `Class.Beam` behaves.
+description: |
+  Describes how the texture of a `Class.Trail` or `Class.Beam` behaves.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Stretch
+    summary: |
+      The texture will be stretched out based on the lifetime of the trail, and
+      will shrink inwards if the trail stops moving.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Wrap
+    summary: |
+      The texture will be tiled as the length of the trail changes, but the
+      textures will remain stationary relative to their attachments.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Static
+    summary: |
+      The texture will be rolled out as the attachments move, and they will
+      remain in place until their lifetime is met.
+    value: 2
+    tags: []
+    deprecation_message: ''

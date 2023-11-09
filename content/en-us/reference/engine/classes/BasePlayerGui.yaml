@@ -1,0 +1,64 @@
+name: BasePlayerGui
+type: class
+category:
+memory_category: Instances
+summary: |
+  The BasePlayerGui is an abstract class which the GUI drawing storage classes
+  inherit from.
+description: |
+  The BasePlayerGui is an abstract class that all GUI drawing storage classes
+  inherit from.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: BasePlayerGui:GetGuiObjectsAtPosition
+    summary: |
+      Returns a list of all `Class.GuiObject` instances occupying the given
+      point on the screen.
+    description: |
+      Takes a screen position and returns a list of all the `Class.GuiObject`
+      instances that are occupying that screen position, sorted in the order
+      they appear on-screen from top to bottom as the first and last index,
+      respectively.
+
+      The main use case is to get GUI objects under the player's mouse or touch
+      inputs to do things like allow selection or highlighting. These effects
+      can already be achieved using `Class.GuiObject.MouseEnter` and
+      `Class.GuiObject.MouseLeave` but this requires the developer to track
+      these events for their UI objects all the time even if they only need this
+      functionality in specific circumstances.
+
+      Since the child classes of `Class.BasePlayerGui` inherit this function, it
+      can be fired by class objects such as the `Class.PlayerGui` and
+      `Class.StarterGui` folders.
+    code_samples:
+      - selecting-guis-at-a-position
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The x position on the screen relative to the top left corner after the
+          `Class.GuiService:GetGuiInset()|GuiInset` is applied.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The y position on the screen relative to the top left corner after the
+          `Class.GuiService:GetGuiInset()|GuiInset` is applied.
+    returns:
+      - type: Objects
+        summary: |
+          A table of the `Class.GuiObject` instances that occupy the given
+          screen space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

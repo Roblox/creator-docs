@@ -1,0 +1,22 @@
+name: ConnectionState
+type: enum
+summary: |
+  Used to determine the connection state of the client to the game server.
+description: |
+  Used to determine the connection state of the client to the game server.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Connected
+    summary: |
+      The client is connected.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disconnected
+    summary: |
+      The client is disconnected.
+    value: 1
+    tags: []
+    deprecation_message: ''

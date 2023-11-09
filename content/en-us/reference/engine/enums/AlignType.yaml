@@ -1,0 +1,46 @@
+name: AlignType
+type: enum
+summary: |
+  An enum that specifies the relationship between two axes. It's either parallel
+  or perpendicular.
+description: |
+  An enum that specifies the relationship between two axes. It's either parallel
+  or perpendicular.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Parallel
+    value: 0
+    summary: |
+      Two parallel axes.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Perpendicular
+    value: 1
+    summary: |
+      Two perpendicular axes.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: PrimaryAxisParallel
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PrimaryAxisPerpendicular
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: PrimaryAxisLookAt
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: AllAxes
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

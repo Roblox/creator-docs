@@ -1,0 +1,25 @@
+name: HumanoidRigType
+type: enum
+summary: |
+  Describes whether or not a character is using the new R15 rig, or the legacy
+  R6 rig.
+description: |
+  Describes whether or not a character is using the new R15 rig, or the legacy
+  R6 rig. This is the type returned by Humanoid's RigType property, which
+  indicates whether the Humanoid is R6 or R15.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: R6
+    summary: |
+      Indicates that a character is using the legacy R6 rig.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: R15
+    summary: |
+      Indicates that a character is using the new R15 rig.
+    value: 1
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,244 @@
+name: Translator
+type: class
+category: Localization
+memory_category: Instances
+summary: |
+  The role of a Translator is to manufacture/return strings localized for the
+  viewing player.
+description: |
+  The role of a Translator is to manufacture/return strings localized for the
+  viewing player. it can be used to retrieve display-ready localized text from a
+  `Class.LocalizationTable`. The source of the `Class.Translator.LocaleId`
+  property, the set of tables it will search, and the order it will search them
+  in depends on which method was used to create the Translator instance.
+
+  The input for a Translator is the original development language string and a
+  context, where all or part of the context can be used to find a more
+  precise/situational translation for the source string.
+
+  The Translator can also be used to manufacture translated strings with inserts
+  (data replacements) which may change order based on the target language.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: Translator.LocaleId
+    summary: |
+      The locale of translated strings.
+    description: |
+      The Roblox locale of the output translated strings from this table, for
+      example "en-us" or "es-es." Defaults to "en-us".
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: Translator:FormatByKey
+    summary: |
+      Returns the localized text string in a `Class.LocalizationTable` based on
+      its `Class.Translator` locale, by key.
+    description: |
+      Returns the localized text string in a `Class.LocalizationTable` based on
+      its `Class.Translator` locale, by key. The optional **args** table is used
+      for filling format parameters in the matching text entry.
+
+      Note that this method will throw an error in the following cases:
+
+      - If none of the `Class.LocalizationTable|LocalizationTables` available to
+        this `Class.Translator` include a value for the given key.
+      - If the
+        [format string](../../../production/localization/translating-dynamic-content.md)
+        for the key uses numbered parameters and **args** is not an array.
+      - If the
+        [format string](../../../production/localization/translating-dynamic-content.md)
+        uses named parameters and **args** is not a table of key-value pairs.
+      - If **args** is missing values for parameters that are used in the
+        matching
+        [format string](../../../production/localization/translating-dynamic-content.md).
+
+      See
+      [Localizing with Scripting](../../../production/localization/localizing-with-scripting.md)
+      for more details and usage examples of this function.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          The **Key** value to look up and translate.
+      - name: args
+        type: Variant
+        default:
+        summary: |
+          To be provided if the **Source** text and translations contain format
+          strings. Will be a Lua table of values **or** key-value pairs,
+          depending on whether the format strings are numbered or named.
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Translator:Translate
+    summary: |
+      Returns the localized text string in a `Class.LocalizationTable` based on
+      its `Class.Translator` locale, by source lookup.
+    description: |
+      Returns the localized text string in a `Class.LocalizationTable` based on
+      its `Class.Translator` locale. This string will be in the context of the
+      provided object, given the provided **Source** text.
+
+      See
+      [Localizing with Scripting](../../../production/localization/localizing-with-scripting.md)
+      for more details and usage examples of this function.
+
+      #### Context Overrides
+
+      In some cases, duplicate **Source** strings may have completely different
+      translations in other languages. For example, the English noun "Screen"
+      can indicate both a computer screen and a window screen, but the Spanish
+      translations are completely different:
+
+      <table>
+      <tbody>
+          <tr>
+            <td width="12%">A</td>
+            <td width="16%">B</td>
+            <td width="18%">C</td>
+            <td width="12%">D</td>
+            <td width="18%">E</td>
+          </tr>
+          <tr>
+            <td>Key</td>
+            <td>Context</td>
+            <td><b>Source</b></td>
+            <td>Example</td>
+            <td><b>es</b></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Screen</td>
+            <td></td>
+            <td>Pantalla</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Screen</td>
+            <td></td>
+            <td>Mosquitero</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      In these cases, the first argument to this function &mdash; a valid
+      in-game `Class.Instance` &mdash; can be used as a "tie breaker" when
+      multiple GUI objects use the same source string. To implement this,
+      specify the "path" to the `Class.Instance` you'd like to override as the
+      **Context** value of the translation data:
+
+      <table>
+      <tbody>
+          <tr>
+            <td width="12%">A</td>
+            <td width="36%">B</td>
+            <td width="18%">C</td>
+            <td width="12%">D</td>
+            <td width="18%">E</td>
+          </tr>
+          <tr>
+            <td>Key</td>
+            <td><b>Context</b></td>
+            <td>Source</td>
+            <td>Example</td>
+            <td>es</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>workspace.ComputerScreen.SurfaceGui.TextLabel</td>
+            <td>Screen</td>
+            <td></td>
+            <td>Pantalla</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Screen</td>
+            <td></td>
+            <td>Mosquitero</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      Then, when calling this function in a script, pass the same
+      `Class.Instance` as the first argument, followed by the **Source** lookup
+      text as the second argument:
+
+      ```lua
+      local LocalizationService = game:GetService("LocalizationService")
+
+      local success, translator = pcall(function()
+      	return LocalizationService:GetTranslatorForPlayerAsync(game.Players.LocalPlayer)
+      end)
+
+      if success then
+      	local trans = translator:Translate(workspace.ComputerScreen.SurfaceGui.TextLabel, "Screen")
+      	print(trans)
+      else
+      	warn("Cannot load translator for player!")
+      end
+      ```
+    code_samples:
+    parameters:
+      - name: context
+        type: Instance
+        default:
+        summary: |
+          A valid in-game `Class.Instance` to use for context override as
+          outlined above. Note that this argument can be arbitrary, for example
+          `game`, if you don't require a context override.
+      - name: text
+        type: string
+        default:
+        summary: |
+          The **Source** text to look up and translate.
+    returns:
+      - type: string
+        summary: |
+          The translated text.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

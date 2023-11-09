@@ -7,13 +7,13 @@ Roblox supports a wide variety of mesh configurations created from third-party s
 
 Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
-- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/avatar/specifications.md).
+- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/characters/specifications.md).
 - If you are creating an accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
 
 When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
 
 <Alert severity='info'>
-If you are part of the UGC program, you can sell your custom meshes as accessories on the Marketplace. See [Clothing and Accessories](../../art/accessories/index.md) for an overview on the creation process for these types of accessories.
+If you meet certain account requirements, you can sell your custom meshes as accessories on the Marketplace. See [Clothing and Accessories](../../art/accessories/index.md) for an overview on the creation process for these types of accessories.
 </Alert>
 
 ## Geometry
@@ -23,31 +23,29 @@ See the following specifications for general geometry:
 - **Budgets** - Humanoid characters must be within 10k triangles, not including accessories. Less detailed meshes, such as accessories, must be within 4k triangles.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - **No N-gons** - Models must be in quads where possible.
-- **Scale** - Your scene units in Maya or Blender should be set to Centimeters to closely match with Studio's scale.
 
 ## Rigging and Skinning
 
-Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character Rigs](../../art/avatar/specifications.md#rigging) for specific standards for an R15 character rig.
+Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character Rigs](../../art/characters/specifications.md#rigging) for specific standards for an R15 character rig.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Custom-Puffer-Blender.png" />
-    <figcaption>Generic rig model</figcaption>
+    <figcaption>Generic rig model.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Hierarchy-Custom-Blender-Bones.png" width="75%" />
-    <figcaption>Generic rig bone structure (Blender)</figcaption>
+    <figcaption>Generic rig bone structure (Blender).</figcaption>
   </figure>
 </GridContainer>
 
 See the following requirements for general rigging and skinning:
 
 - **Transformations** - All bones (Blender) or joints (Maya) must be frozen and have scale values set to `1`, `1`, `1` and rotation values set to `0`, `0`, `0`.
-- **Symmetry** - When possible, maintain symmetry in your rig.
+- **Symmetry** - When possible, maintain symmetry when applying influences to a rig
 - **Root Joint** - The root bone or joint should always be set to `0`, `0`, `0`.
 - **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
-- **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
 
 ## Textures
 
@@ -242,7 +240,7 @@ See the following requirements for SurfaceAppearance assets:
 
 ## Animations
 
-An animation can be included on any `.fbx` mesh export. For information on prepping a character animation from a modeling software for export, see [Exporting Animations from Maya](../../art/avatar/exporting-avatar-animations-from-maya.md).
+An animation can be included on any `.fbx` mesh export. For information on prepping a character animation from a modeling software for export, see [Exporting Animations from Maya](../../art/characters/exporting-avatar-animations-from-maya.md).
 
 See the following requirements for assets with animation:
 
@@ -253,7 +251,7 @@ See the following requirements for assets with animation:
 Inner and Outer cages are non-rendered meshes that Roblox uses to define the inner and outer surfaces of a mesh using a `Class.WrapLayer` or `Class.WrapTarget` instance. These cages are most often used with characters and accessories, though you can use cage meshes for any mesh object.
 
 <Alert severity="warning">
-Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character Specifications](../../art/avatar/specifications.md) for additional information.
+Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character Specifications](../../art/characters/specifications.md) for additional information.
 </Alert>
 
 For general use, see the following requirements for adding inner and outer cage meshes to your model:

@@ -1,0 +1,73 @@
+name: HttpError
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OK
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: InvalidUrl
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: DnsResolve
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ConnectFail
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: OutOfMemory
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: TimedOut
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: TooManyRedirects
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: InvalidRedirect
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: NetFail
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Aborted
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: SslConnectFail
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: SslVerificationFail
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''

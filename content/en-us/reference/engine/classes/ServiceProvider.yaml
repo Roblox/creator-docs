@@ -1,0 +1,159 @@
+name: ServiceProvider
+type: class
+category:
+memory_category: Instances
+summary: |
+  A ServiceProvider is an abstract class, which stores, and provides certain
+  singleton classes, depending on what inherited class you are using its members
+  with.
+description: |
+  A ServiceProvider is an abstract class, which stores, and provides certain
+  singleton classes, depending on what inherited class you are using its members
+  with.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties: []
+methods:
+  - name: ServiceProvider:FindService
+    summary: |
+      Returns the service specified by the given className if it's already
+      created, errors for an invalid name.
+    description: |
+      Returns the service specified by the given className if it's already
+      created, errors for an invalid name.
+    code_samples:
+      - ServiceProvider-FindService1
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: ServiceProvider:GetService
+    summary: |
+      Returns the service with the requested class name, creating it if it does
+      not exist.
+    description: |
+      Returns a service with the class name requested. When called with the name
+      of a service (such as `Class.Debris`) it will return the instance of that
+      service. If the service does not yet exist it will be created and the new
+      service is returned. This is the only way to create some services, and can
+      also be used for services that have unusual names, e.g. RunService's name
+      is "Run Service".
+
+      Note:
+
+      - This function will return nil if the className parameter is an existing
+        class, but the class is not a service.
+      - If you attempt to fetch a service that is present under another Object,
+        an error will be thrown stating that the "singleton serviceName already
+        exists".
+    code_samples:
+      - ServiceProvider-GetService1
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The class name of the requested service.
+    returns:
+      - type: Instance
+        summary: |
+          An instance of the requested service.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ServiceProvider:getService
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.ServiceProvider:GetService()` which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: ServiceProvider:service
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.ServiceProvider:GetService()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: ServiceProvider.Close
+    summary: |
+      Fires when the current place is exited.
+    description: |
+      Fires when the current place is exited.
+    code_samples:
+      - ServiceProvider-Close1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ServiceProvider.ServiceAdded
+    summary: |
+      Fired when a service is created.
+    description: |
+      Fired when a service is created.
+    code_samples:
+    parameters:
+      - name: service
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ServiceProvider.ServiceRemoving
+    summary: |
+      Fired when a service is about to be removed.
+    description: |
+      Fired when a service is about to be removed.
+    code_samples:
+    parameters:
+      - name: service
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -1,0 +1,41 @@
+name: InitialDockState
+type: enum
+summary: |
+  Describes the initial docking state of a `Class.DockWidgetPluginGui`.
+description: |
+  Describes the initial docking state of a `Class.DockWidgetPluginGui`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Top
+    summary: |
+      The widget will appear docked above the game screen.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Bottom
+    summary: |
+      The widget will appear docked below the game screen.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      The widget will appear docked to the left of the game screen.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Right
+    summary: |
+      The widget will appear docked to the right of the game screen.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Float
+    summary: |
+      The widget will not be docked to any side of the game screen, and instead
+      can be freely dragged around.
+    value: 4
+    tags: []
+    deprecation_message: ''

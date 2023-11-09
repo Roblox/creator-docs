@@ -1,0 +1,74 @@
+name: FlagStand
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  The FlagStand and `Class.Flag` are deprecated objects that were used to make
+  capture the flag games.
+description: |
+  The `Class.Flag` and `Class.FlagStand` objects were created to allow
+  developers to make 'Capture the Flag' style games quickly. However they have
+  been deprecated and developers are advised to design their own systems which
+  will be more flexible and reliable.
+code_samples:
+inherits:
+  - Part
+tags:
+  - Deprecated
+deprecation_message: |
+  The FlagStand and Flag are deprecated objects that were used to make capture
+  the flag games.
+properties:
+  - name: FlagStand.TeamColor
+    summary: |
+      The Team that owns the `Class.FlagStand`. Corresponds with the TeamColors
+      in the `Class.Teams` service.
+    description: |
+      The Team that owns the `Class.FlagStand`. Corresponds with the TeamColors
+      in the `Class.Teams` service.
+
+      The `Class.Flag` and `Class.FlagStand` objects were created to allow
+      developers to make 'Capture the Flag' style games quickly. However they
+      have been deprecated and developers are advised to design their own
+      systems which will be more flexible and reliable.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: |
+      This property was a part of the now deprecated `Class.Flag` service. It
+      should not be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: FlagStand.FlagCaptured
+    summary: |
+      Fires when a player bearing an opposing flag, and having the same
+      `Class.Player.TeamColor` as the stand, touches the `Class.FlagStand`.
+    description: |
+      This event fires when a player bearing an opposing flag, and having the
+      same `Class.Player.TeamColor` as the stand, touches the `Class.FlagStand`.
+
+      The `Class.Flag` and `Class.FlagStand` objects were created to allow
+      developers to make 'Capture the Flag' style games quickly. However they
+      have been deprecated and developers are advised to design their own
+      systems which will be more flexible and reliable.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      This event was a part of the now deprecated `Class.Flag` service. It
+      should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

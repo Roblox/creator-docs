@@ -204,9 +204,6 @@ The remainder of this tutorial uses a pre-made model that includes a [ProximityP
    1. In a browser, open the model page, click the **Get** button. This adds the model into your inventory.
    2. In Studio, go to the **View** tab and click on the **Toolbox**.
    3. In the Toolbox window, click on the **Inventory** button. Then, make sure the dropdown is on **My Models**.
-
-      ![alt](../../../assets/tutorials/shared/interface/Interface-Toolbox-MyModels.png)
-
    4. Select the **Shock Button** model to add it into the game.
 
     </Alert>
@@ -221,10 +218,7 @@ The remainder of this tutorial uses a pre-made model that includes a [ProximityP
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-    character = player.CharacterAdded:Wait()
-end
+local character = player.Character or player.CharacterAdded:Wait()
 
 local humanoid = character:WaitForChild("Humanoid")
 local Animator = humanoid:WaitForChild("Animator")
@@ -235,7 +229,6 @@ local shockParticle = shockButton.ExplosionParticle
 
 local function onShockTrigger(player)
     shockParticle:Emit(100)
-
 end
 
 proximityPrompt.Triggered:Connect(onShockTrigger)
@@ -252,7 +245,7 @@ Animations that the player uses are stored on the player's `Class.Animator` obje
 1. Above `onShockTrigger`, create a new **Animation** instance named `shockAnimation`. Then, set the `AnimationID` of that to the desired animation. Use the ID in the code box if needed.
 
    ```lua
-   local shockButton = game.Workspace.ShockButton.Button
+   local shockButton = workspace.ShockButton.Button
    local proximityPrompt = shockButton.ProximityPrompt
    local shockParticle = shockButton.ExplosionParticle
 

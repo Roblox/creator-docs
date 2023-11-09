@@ -7,16 +7,15 @@ When creating accessories and clothing for Roblox, it's important to meet specif
 
 Although rigid accessories and layerable accessories share many technical requirements, layerable accessories must include additional components to ensure the accessories deform and stretch appropriately on different body types. If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../art/marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
 
-When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
+When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
 
 ## Geometry and Budgets
 
+- **Single Mesh** - Accessories must be a single mesh.
 - **Budgets** - Accessories can't exceed **4k** triangles.
 - **Texture Budget** - Texture maps can't exceed **1024x1024px**. Assets using additional maps with `Class.SurfaceAppearance` can use smaller **256x256px** maps to optimize performance with virtually no loss in detail.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
-- **No N-gons** - Models must be in quads where possible.
-- **Scale** - Your scene units in Maya or Blender should be set to Centimeters to closely match with Studio's scale.
-
+- Use **quads** whenever possible. Avoid faces with 5 or more sides.
 - **Mesh Size** - Meshes must follow a standard size (in studs, centered on attachment point) depending on its type:
 
 <table>
@@ -72,12 +71,6 @@ When ready to export, see [Export Requirements](../../art/modeling/export-requir
     <td>3</td>
   </tr>
   <tr>
-    <td>Shoulder</td>
-    <td>3</td>
-    <td>3</td>
-    <td>3</td>
-  </tr>
-  <tr>
     <td>Front</td>
     <td>3</td>
     <td>3</td>
@@ -104,9 +97,11 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
 
 ### Attachment Points
 
-Attachments are points on the accessory model that connect to another attachment of the same name on a character model. It is important that these are correctly applied so rigid accessories can attach to your models. Layered accessories also use attachment points to correctly associate with various body parts. See the following specifications for attachments:
+Attachments are points on the accessory model that connect to another attachment of the same name on a character model. When creating rigid accessories, accessory points are automatically created when using the Accessory Fitting Tool. Studio only recognizes third-party attachment objects when importing meshes with caging data, such as clothing or bodies.
 
-- **One attachment** - Each accessory, including layered accessories, require at least one attachment point to it's associated body part.
+See the following specifications for attachments:
+
+- **One attachment** - Each accessory, including layered accessories, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
 
   If setting attachment names manually, use the following `Class.Attachment` name for each accessory type:
@@ -174,12 +169,12 @@ To achieve the layering effect, your clothing must meet the following requiremen
 
 - Asset must be [weighted and bound](#rigging-and-skinning) to an R15 skeleton (Maya) or armature (Blender).
 - Asset must contain an [inner mesh cage](#inner-cage) and an [outer mesh cage](#outer-cage).
-- Asset must continue to follow any applicable [custom mesh requirements](../../art/avatar/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
+- Asset must continue to follow any applicable [custom mesh requirements](../../art/characters/specifications.md), such as best practices on watertightness, textures, and polycount budgets.
 
-See [Creating Layered Models](./creating-in-blender.md) for a basic guide on applying these requirements on a reference asset in Blender. Once the `.fbx` file is [exported](../../art/modeling/export-requirements.md), see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on creating an accessory from your model.
+See [Creating Layered Models](../../art/accessories/creating/index.md) for a basic guide on applying these requirements on a reference asset in Blender. Once the `.fbx` file is [exported](../../art/accessories/export-settings.md), see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on creating an accessory from your model.
 
 <Alert severity='info'>
-If you are part of the UGC program, you can sell your layered accessories on the Marketplace. See [Selling 3D Accessories](../../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
+If you meet certain account requirements, you can sell your layered accessories on the Marketplace. See [Selling 3D Accessories](../../art/accessories/index.md#selling-3d-accessories) for an overview of the uploading and selling process.
 </Alert>
 
 ### Rigging and Skinning
@@ -188,7 +183,7 @@ Rigging and skinning a layered accessory allows the accessory to move naturally 
 
 If using modeling software to skin your accessories, keep in mind that **Joint Influences** (Maya) or **Bone Assignments** (Blender) per vertex should be limited to **4**.
 
-For more information basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
+For more information on basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
 
 ### Cage Meshes
 
@@ -217,7 +212,7 @@ The outer cage mesh object must have the same name as the accessory model append
 <img src="../../assets/accessories/lc-requirements-outercage-outliner.png" width="60%" />
 
 <Alert severity="warning">
-The vertexes and UVs of the inner and outer cage meshes shouldn't be altered, as they are used to match coordinates between other cages.
+The vertexes and UVs of the inner and outer cage meshes should not be altered, as they are used to match coordinates between other cages.
 You can complete the UV texturing of the actual accessory mesh layer (not the \_InnerCage or \_OuterCage objects) at your discretion.
 </Alert>
 
@@ -227,28 +222,9 @@ Your items must meet the following requirements before you upload them to the Ma
 
 - Ensure that your items adhere to the [Marketplace Program Guidelines](../../art/marketplace/marketplace-policy.md).
 - Whenever possible, ensure that your items adhere to the following modeling requirements:
-  - [Custom mesh specifications](../../art/modeling/specifications.md)
-  - Any applicable [accessory specifications](../../art/accessories/project-files.md)
+  - [Custom mesh specifications](../../art/modeling/specifications.md).
+  - Any applicable [accessory specifications](../../art/accessories/project-files.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.
 - Object `Class.MeshPart.VertexColor|VertexColor` is the default `1, 1, 1`.
-- Your `Class.Accessory` instance doesn't contain extraneous objects, like `Class.Script` or additional `Class.Part` instances. Your `Class.Accessory` hierarchy must closely resemble one of the following examples:
-
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../../assets/accessories/Rigid-Accessory-Example.png" />
-    <figcaption>Rigid accessory hierarchy</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/accessories/Rigid-Accessory-With-Thumbnail-Example.png" />
-    <figcaption>Rigid accessory hierarchy with [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md)</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/accessories/Layered-Accessory-Example.png" />
-    <figcaption>Layered accessory hierarchy with [SurfaceAppearance](../../art/modeling/surface-appearance.md) and [Custom Thumbnail](../../art/marketplace/custom-thumbnails.md)</figcaption>
-  </figure>
-</GridContainer>
-
-<Alert severity ='info'>
-Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support `Class.SurfaceAppearance`.
-</Alert>
+- Your `Class.Accessory` instance does not contain extraneous objects, like `Class.Script` or additional `Class.Part` instances.

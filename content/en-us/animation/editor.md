@@ -71,7 +71,7 @@ rigs.
   <tr>
     <td><img src="../assets/animation/animation-editor/Controls-Next-Key.png"
    width="100%" /></td>
-    <td>Moves the scrubber to the next key</td>
+    <td>Moves the scrubber to the next key.</td>
   </tr>
     <tr>
     <td><img src="../assets/animation/animation-editor/Controls-Last-Key.png"
@@ -173,7 +173,7 @@ Animation Editor.
 To open the Animation Editor:
 
 1. In the menu bar, navigate to the **Avatar** tab.
-1. In the **Animations** section, click on the **Animation Editor**.
+2. In the **Animations** section, click on the **Animation Editor**.
    The **Animation Editor** window displays.
 
    <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
@@ -286,7 +286,7 @@ To add a keyframe for a single part of the rig:
 1. Navigate to the **timeline**, then move the **scrubber** to a new
    position.
 2. In the **track list**, navigate to the part's **track** and click
-   the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A contextual menu displays.
+   the **&ctdot;** button. A contextual menu displays.
 
    <img
    src="../assets/animation/animation-editor/Track-List-Track-Options.png"
@@ -347,10 +347,10 @@ To duplicate one or more keyframes:
 
 1. Navigate to the **timeline** and select one or more keyframes. Every
    selected keyframe is now surrounded by a blue border.
-1. Press **Control+C** (**Command ⌘+C** on Mac). Every selected
+1. Press **Ctrl+C** (**Command ⌘+C** on Mac). Every selected
    keyframe copies to your clipboard.
 1. Move the **scrubber** to a new frame position.
-1. Press **Control+V** (**Command ⌘+V** on Mac). The keyframe(s) paste
+1. Press **Ctrl+V** (**Command ⌘+V** on Mac). The keyframe(s) paste
    into the new frame position.
 
 ### Deleting Keyframes
@@ -364,7 +364,7 @@ Animators can often generate many keyframes during the course of animation, espe
 
 #### Automatic Optimization
 
-The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/avatar/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
+The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
 
 If 3 or more consecutive keyframes have the same value in a track, the animation editor removes the intermediary keyframes and keeps only the first and last keyframes.
 
@@ -377,13 +377,13 @@ If the track only contains keyframes with default values, such as an `Datatype.C
     src="../assets/animation/animation-editor/Optimization-Preview.png"
     width="90%" />
 
-During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first and the number of keyframes can be adjusted using a slider.
+During animating, you can use the Animation Editor's **Keyframe Optimization** tool to quickly reduce the number of unnecessary keyframes. Keyframe Optimization prioritizes the least impactful keyframes first. You can adjust the number of keyframes using the slider.
 
 While using the slider, you can preview the animation and scrub through the timeline to check your animation but you can not perform editing operations, such as changing keyframe values or adding tracks.
 
-To access the Optimize Keyframes tool:
+To access the **Optimize Keyframes** tool:
 
-1. In the **Animation Editor**, click **...** button and select **Optimize Keyframes**. A dialog box with a slider displays.
+1. In the **Animation Editor**, click ****&ctdot;**** button and select **Optimize Keyframes**. A dialog box with a slider displays.
 
    <img
     alt="Optimize Keyframes"
@@ -534,7 +534,7 @@ Roblox uses seven levels of priority, ordered here from highest to lowest:
 To set an animation to a different priority:
 
 1. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A
+   and click the **&ctdot;** button. A
    contextual menu displays.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
@@ -546,32 +546,59 @@ To set an animation to a different priority:
 ## Saving an Animation
 
 When you save an animation, Studio saves it as a
-`Class.KeyframeSequence`
-object. This object contains all keyframes for an animation, determines
-if the animation is looped, and notes its priority against other
-animations.
+`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#exporting-an-animation) before referencing the published animation in your experience.
 
 To save an animation:
 
 1. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button. A
+   and click the **&ctdot;** button. A
    contextual menu displays.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
    width="330" />
 
-2. Select **Save** or **Save As** to save the animation as a child of
-   the **AnimSaves** object (itself a child of the rig).
+2. Select **Save** or **Save As** to save the animation with a reference added to the **AnimSaves** object.
 
    <img src="../assets/animation/animation-editor/Saved-Animation.png"
    width="320" />
 
-<Alert severity="info" variant="standard">
-  The saved `Class.KeyframeSequence`
-  is <b>not</b> used to load the animation in an experience. For details on
-  exporting an animation for use in an experience, see
-  <a href="#exporting-an-animation">Exporting an Animation</a>.
+### Accessing Local Data
+
+Roblox saves animation data locally to `Class.ServerStorage` to preserve your animation work. In most cases, your experience shouldn't directly access this local data and instead should reference a published animation.
+
+In the rare cases that your experience requires accessing local data, reference the value of the `Class.ObjectValue` in your rig's AnimSaves folder rather than directly accessing the `Class.ServerStorage`. See the following examples:
+
+```lua title="Access local animation data"
+local myAnim = myRig.AnimSaves.Value.myAnimation
+-- Accesses your local animation data with the value reference in your rig
+```
+
+```lua title="Incorrectly access local data"
+local myAnim = ServerStorage.RBX_ANIMSAVES.myRig.myAnimation
+-- Can conflict with other rigs sharing the same name
+```
+
+<Alert severity = 'warning'>
+Since local data is stored in `Class.ServerStorage`, it doesn't replicate and isn't available from clients. If your clients need access to that data, you must move the `Class.KeyframeSequence` or `Class.CurveAnimation` objects and their descendants to `Class.ReplicatedStorage`.
 </Alert>
+
+### Migrating Legacy Data
+
+The Animation Editor previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#accessing-local-data) in the same way.
+
+To migrate your legacy animation data:
+
+1. With the Animation Editor, select a rig with older animations that aren't saved in `Class.ServerStorage`. A migration window displays.
+
+   <img src="../assets/animation/animation-editor/Migrate-Animations.png" width = "65%" />
+
+2. Select **Delete**, **Migrate**, or **Ignore** for each detected animation.
+
+   - **Delete**: Delete animations that are already published or no longer being used.
+   - **Migrate**: Migrate animations that are still in progress or that haven't yet been published.
+   - **Ignore**: Ignore animations if you have yet to update your experience's code to [access local data](#accessing-local-data) from `Class.ServerStorage`. Once updated, migrate these animations.
+
+3. Press **OK** when complete.
 
 ## Exporting an Animation
 
@@ -596,7 +623,7 @@ To export an animation:
    3. Click the **Save** button.
 
 2. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
-   and click the <span style={{fontWeight:"800"}}>&ctdot;</span> button.
+   and click the **&ctdot;** button.
 
    <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
    width="330" />
@@ -609,10 +636,9 @@ To export an animation:
 Once the upload is complete, you can copy the animation's asset ID
 from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Using Animations](../animation/using.md).
 
-1. Click the **Creations** tab and select **Animations** from the dropdown menu.
+1. Click the **Inventory** tab and select **My Animations** from the dropdown menu.
 
-   <img src="../assets/studio/toolbox/Creations-Animations.png"
-   width="360" />
+   <img src="../assets/studio/toolbox/Inventory-My-Animations.png" width="360" />
 
 2. Right-click the desired animation and select **Copy Asset ID** from the contextual menu.
 3. See [Using Animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.

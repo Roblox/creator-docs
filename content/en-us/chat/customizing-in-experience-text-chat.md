@@ -13,10 +13,10 @@ You can toggle appearance of the **chat window** and **input bar** in one of two
 
    <Grid container spacing={3}>
    <Grid item>
-   <img src="../assets/ui/in-experience-text-chat/TextChatService-Configuration-Objects.png" width="320" />
+   <img src="../assets/players/in-experience-text-chat/TextChatService-Configuration-Objects.png" width="320" />
    </Grid>
    <Grid item>
-   <img src="../assets/ui/in-experience-text-chat/ChatWindowConfiguration-Enabled.png" width="400" /><br /><img src="../assets/ui/in-experience-text-chat/ChatInputBarConfiguration-Enabled.png" width="400" />
+   <img src="../assets/players/in-experience-text-chat/ChatWindowConfiguration-Enabled.png" width="400" /><br /><img src="../assets/players/in-experience-text-chat/ChatInputBarConfiguration-Enabled.png" width="400" />
    </Grid>
    </Grid>
 
@@ -103,6 +103,15 @@ You can customize the default chat window to match your experience's UI layout, 
 </tbody>
 </table>
 
+### Emoji and Command Autocomplete
+
+By default, the text chat system shows autocomplete options for emojis and [commands](../chat/in-experience-text-chat.md#creating-custom-commands):
+
+- Emojis are autocompleted by typing `:` followed by non-whitespace characters.
+- Commands are autocompleted by typing `/`.
+
+If you want to disable the autocomplete behavior, set the **AutocompleteEnabled** property to false through Studio UI or scripting.
+
 ## Customizing Message Appearance
 
 You can customize the appearance of chat message bodies and prefixes using [rich text](../ui/rich-text.md) tags and `Class.TextChatService.OnIncomingMessage` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your experience's theme, and you can also sort or highlight messages from different user groups by [adding chat tags](#adding-chat-tags) and [coloring usernames](#coloring-usernames).
@@ -135,7 +144,7 @@ end
 
 <img
   alt="VIP users' chat tags"
-  src="../assets/ui/in-experience-text-chat/Chat-Tag-VIP.jpg"
+  src="../assets/players/in-experience-text-chat/Chat-Tag-VIP.jpg"
   width="90%" />
 
 ### Coloring Usernames

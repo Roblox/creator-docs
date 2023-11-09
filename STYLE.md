@@ -90,19 +90,24 @@ To link to the Roblox Engine API, use the following syntax. The parser detects t
 - `` `Class.Name` ``
 - `` `Class.Name.Property` ``
 - `` `Class.Name:Method()` ``
+- `` `Class.Name.Event` ``
+- `` `Class.Name.Callback` ``
+
 - `` `Datatype.Name` ``
+- `` `Datatype.Name:Method()` ``
 - `` `Datatype.Name.constructor()` ``
+
 - `` `Enum.Name` ``
-- `` `Enum.Name.Item` ``
+
 - `` `Global.LuaGlobals.Name` ``
 - `` `Global.RobloxGlobals.Name` ``
 - `` `Library.Name` ``
 - `` `Library.Name.function()` ``
 
-If necessary, override the default link text using a `|` character:
+If desired, override the default link text using a `|` character:
 
-- `` `Class.ClassName.Property|NewLinkText` ``
-- `` `Global.LuaGlobals.Name|or even use multiple words` ``
+- `` `Class.Name.Property|PropertyName` ``
+- `` `Enum.Name|EnumItemName` ``
 
 The following table contains some examples and how they render in the documentation.
 
@@ -126,26 +131,36 @@ The following table contains some examples and how they render in the documentat
       <td><code>`Class.MarketplaceService:GetProductInfo()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#GetProductInfo">MarketplaceService:GetProductInfo()</a></code></td>
     </tr>
+   <tr>
+      <td><code>`Datatype.Color3`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3">Color3</a></code></td>
+    </tr>
     <tr>
-      <td><code>`Enum.CameraType`</code></td>
-      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/CameraType">CameraType</a></code></td>
+      <td><code>`Enum.Font`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">Font</a></code></td>
+    </tr>
+    <tr>
+      <td><code>`Enum.Font|GothamMedium`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/enums/Font">GothamMedium</a></code></td>
     </tr>
     <tr>
       <td><code>`Global.RobloxGlobals.tick()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/globals/RobloxGlobals#tick">tick()</a></code></td>
     </tr>
     <tr>
-      <td><code>`Library.coroutine|coroutines`</code></td>
-      <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutines</a></code></td>
+      <td><code>`Library.coroutine.create()`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutine.create()</a></code></td>
     </tr>
   </tbody>
 </table>
 
 ## Referencing the API
 
-When referencing a term from the API in prose, use [automatic API links](#links) whenever possible. The examples in this section demonstrate the API link syntax.
+When referencing a term from the API in prose, use [automatic API links](#links) whenever it makes sense. The examples in this section demonstrate the API link syntax.
 
-If you must refer to a term without linking to it, maintain the same capitalization and wrap it in backticks. For example, refer to a `BasePart`, not a "base part."
+Not every mention of a class, method, or property needs an auto-link. Particularly in an ordered list, overuse of links can distract readers and pull them out of the task flow. In those situations, use your best judgment on whether a link is necessary and helpful. In other situations, such as the API documentation or a reference table, auto-links are almost always a good idea.
+
+If you refer to a term without linking to it, maintain the same capitalization and wrap it in backticks. For example, refer to a `BasePart`, not a "base part."
 
 Never frame API names in the possessive:
 
@@ -185,7 +200,7 @@ We have the following guidelines for images:
 
 Alerts are a great way to call attention to important information or offset blocks of prose, but use them sparingly and keep them short. When everything is an alert, nothing is:
 
-```
+```md
 <Alert severity="warning">
 This is a beta feature and is subject to change in future releases.
 </Alert>

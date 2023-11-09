@@ -1,0 +1,33 @@
+name: StudioDataModelType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Edit
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PlayClient
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: PlayServer
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Standalone
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: None
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''

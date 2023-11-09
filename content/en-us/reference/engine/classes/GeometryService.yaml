@@ -1,0 +1,558 @@
+name: GeometryService
+type: class
+category:
+memory_category: Instances
+summary: |
+  Service containing geometric operations.
+description: |
+  Service containing geometric operations not directly related to specific
+  objects.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: GeometryService:CalculateConstraintsToPreserve
+    summary: |
+      Returns a table of `Class.Constraint|Constraints` and
+      `Class.Attachment|Attachments` which you may choose to preserve, along
+      with their respective parents.
+    description: |
+      Returns a table of `Class.Constraint|Constraints` and
+      `Class.Attachment|Attachments` which you may choose to preserve, along
+      with their respective parents. Iterating over this table lets you decide
+      whether to reparent recommended constraints and attachments to their
+      respective parents.
+
+      Note that the `options` table can contain a `tolerance` value (number)
+      and/or a `WeldConstraintPreserve` value (`Enum.WeldConstraintPreserve`).
+
+      - `tolerance` – The distance tolerance, in regards to `Class.Attachment`
+        preservation, between the attachment and the closest point on the
+        original part's surface versus the closest point on the resulting part's
+        surface. If the resulting distance following the solid modeling
+        operation is greater than this value, the `Class.Instance.Parent|Parent`
+        of attachments and their associated constraints will be `nil` in the
+        returned recommendation table.
+      - `weldConstraintPreserve` – A `Enum.WeldConstraintPreserve` enum value
+        describing how `Class.WeldConstraint|WeldConstraints` are preserved in
+        the resulting recommendation table.
+    code_samples:
+      - GeometryService-CalculateConstraintsToPreserve
+    parameters:
+      - name: source
+        type: Instance
+        default:
+        summary: |
+          An original object that the solid modeling operation was performed on,
+          for example `part` in
+          `Class.GeometryService:UnionAsync()|UnionAsync()`.
+      - name: destination
+        type: Array
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table for the method:
+
+          - `tolerance` – The distance tolerance, in regards to
+            `Class.Attachment` preservation, between the attachment and the
+            closest point on the original part's surface versus the closest
+            point on the resulting part's surface. If the resulting distance
+            following the solid modeling operation is greater than this value,
+            the `Class.Instance.Parent|Parent` of attachments and their
+            associated constraints will be `nil` in the returned recommendation
+            table.
+          - `weldConstraintPreserve` – A `Enum.WeldConstraintPreserve` enum
+            value describing how `Class.WeldConstraint|WeldConstraints` are
+            preserved in the resulting recommendation table.
+    returns:
+      - type: Array
+        summary: |
+          Table containing information for general case
+          `Class.Constraint|Constraints`,
+          `Class.NoCollisionConstraint|NoCollisionConstraints`, and
+          `Class.WeldConstraint|WeldConstraints`. In cases where an
+          `Class.Attachment` or `Class.Constraint` should be dropped, its
+          respective parent will be `nil`.
+
+          For general case `Class.Constraint|Constraints` such as
+          `Class.HingeConstraint`:
+
+          <table size="small">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Attachment</td>
+              <td><code>Class.Attachment</code></td>
+            </tr>
+            <tr>
+              <td>Constraint</td>
+              <td><code>Class.Constraint</code></td>
+            </tr>
+            <tr>
+              <td>AttachmentParent</td>
+              <td><code>Class.BasePart</code> or <code>nil</code></td>
+            </tr>
+            <tr>
+              <td>ConstraintParent</td>
+              <td><code>Class.BasePart</code> or <code>nil</code></td>
+            </tr>
+          </tbody>
+          </table>
+
+          For `Class.WeldConstraint|WeldConstraints`:
+
+          <table size="small">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WeldConstraint</td>
+              <td><code>Class.WeldConstraint</code></td>
+            </tr>
+            <tr>
+              <td>WeldConstraintParent</td>
+              <td><code>Class.BasePart</code> or <code>nil</code></td>
+            </tr>
+            <tr>
+              <td>WeldConstraintPart0</td>
+              <td><code>Class.BasePart</code></td>
+            </tr>
+            <tr>
+              <td>WeldConstraintPart1</td>
+              <td><code>Class.BasePart</code></td>
+            </tr>
+          </tbody>
+          </table>
+
+          For `Class.NoCollisionConstraint|NoCollisionConstraints`:
+
+          <table size="small">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NoCollisionConstraint</td>
+              <td><code>Class.NoCollisionConstraint</code></td>
+            </tr>
+            <tr>
+              <td>NoCollisionConstraintParent</td>
+              <td><code>Class.BasePart</code> or <code>nil</code></td>
+            </tr>
+            <tr>
+              <td>NoCollisionConstraintPart0</td>
+              <td><code>Class.BasePart</code></td>
+            </tr>
+            <tr>
+              <td>NoCollisionConstraintPart1</td>
+              <td><code>Class.BasePart</code></td>
+            </tr>
+          </tbody>
+          </table>
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GeometryService:IntersectAsync
+    summary: |
+      Creates one or more `Class.PartOperation|PartOperations` from the
+      intersecting geometry of one part and other parts.
+    description: |
+      Creates one or more `Class.PartOperation|PartOperations` from the
+      intersecting geometry of the main part and other parts in the given array.
+      Only primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations`
+      are supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar
+      to `Class.Instance:Clone()|Clone()`, the returned parts have no set
+      `Class.Instance.Parent|Parent`.
+
+      The following properties from the main part (`part`) are applied to the
+      resulting `Class.PartOperation|PartOperations`:
+
+      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
+        `Class.BasePart.MaterialVariant|MaterialVariant`,
+        `Class.BasePart.Reflectance|Reflectance`,
+        `Class.BasePart.Transparency|Transparency`
+      - `Class.BasePart.CanCollide|CanCollide`
+      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
+        `Class.BasePart.Elasticity|Elasticity`,
+        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
+        `Class.BasePart.Friction|Friction`,
+        `Class.BasePart.FrictionWeight|FrictionWeight`
+
+      In the following image comparison,
+      `Class.GeometryService:IntersectAsync()|IntersectAsync()` is called using
+      the purple block and an array containing the blue block. The resulting
+      `Class.PartOperation` resolves into a shape of the intersecting geometry
+      of both parts.
+
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Intersect.jpg"
+      width="720" alt="Two block parts overlapping" />
+      <figcaption>Separate parts</figcaption>
+      </figure>
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Intersect-Result.jpg"
+      width="720" alt="Parts intersected into a new solid model" />
+      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
+      </figure>
+
+      #### Notes
+
+      - Compared to `Class.BasePart:IntersectAsync()`, this method differs as
+        follows:
+
+        - The input parts do not need to be parented to the scene, allowing for
+          background operations.
+        - When the `SplitApart` option is set to `true` (default), each distinct
+          body will be returned in its own `Class.PartOperation`.
+        - Each of the returned parts are in the coordinate space of the main
+          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          not necessarily at the center of its body.
+        - It's possible to call this method on the client, but with some
+          limitations. First, it currently must be done with objects **created**
+          on the client. Secondly, there is no replication available from client
+          to the server.
+
+      - The original parts remain intact following a successful operation. In
+        most cases, you should parent the returned
+        `Class.PartOperation|PartOperations` to the same place as the main part,
+        then `Class.Instance.Destroy|Destroy()` all of the original parts.
+
+      - By default, the face colors of the resulting
+        `Class.PartOperation|PartOperations` are borrowed from the
+        `Class.BasePart.Color|Color` property of the original parts, although
+        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
+        property to change them to a specific color.
+
+      - If an intersect operation would result in any
+        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
+        they will be simplified to 20,000. This will result in an error with
+        code `-14`.
+
+      - If the main part is moving during the calculation of the operation, you
+        can set the resulting parts to the updated `Datatype.CFrame` of the main
+        part, since the returned parts are in the same coordinate space as the
+        main part.
+
+      - If using this method with a `Class.PartOperation` as the main part, you
+        can substitute the geometry of another `Class.PartOperation` via
+        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
+        it easier to utilize the geometry of the operation but maintain
+        properties, attributes, tags, and children of the main part such as
+        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
+        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
+        This approach also circumvents the potential "flicker" of completely
+        replacing the original `Class.PartOperation` with another.
+    code_samples:
+      - GeometryService-IntersectAsync
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: |
+          Main `Class.Part` or `Class.PartOperation` to operate on.
+      - name: parts
+        type: Array
+        default:
+        summary: |
+          Array of parts to intersect with the main part.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` – The value of
+            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            resulting parts.
+          - `RenderFidelity` – The value of
+            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `SplitApart` – Boolean controlling whether the objects should all be
+            kept together or properly split apart. Default is `true` (split).
+    returns:
+      - type: Array
+        summary: |
+          One or more `Class.PartOperation|PartOperations` from the intersecting
+          geometry of the main part (`part`) and the other parts.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GeometryService:SubtractAsync
+    summary: |
+      Creates one or more `Class.PartOperation|PartOperations` from one part
+      minus the geometry occupied by other parts.
+    description: |
+      Creates one or more `Class.PartOperation|PartOperations` from the main
+      part minus the geometry occupied by other parts in the given array. Only
+      primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations` are
+      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
+      `Class.Instance:Clone()|Clone()`, the returned parts have no set
+      `Class.Instance.Parent|Parent`.
+
+      The following properties from the main part (`part`) are applied to the
+      resulting `Class.PartOperation|PartOperations`:
+
+      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
+        `Class.BasePart.MaterialVariant|MaterialVariant`,
+        `Class.BasePart.Reflectance|Reflectance`,
+        `Class.BasePart.Transparency|Transparency`
+      - `Class.BasePart.CanCollide|CanCollide`
+      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
+        `Class.BasePart.Elasticity|Elasticity`,
+        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
+        `Class.BasePart.Friction|Friction`,
+        `Class.BasePart.FrictionWeight|FrictionWeight`
+
+      In the following image comparison,
+      `Class.BasePart:SubtractAsync()|SubtractAsync()` is called using the blue
+      cylinder and an array containing the purple block. The resulting
+      `Class.PartOperation` resolves into a shape that omits the block's
+      geometry from that of the cylinder.
+
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Subtract.jpg"
+      width="720" alt="Longer block overlapping a cylinder" />
+      <figcaption>Separate parts</figcaption>
+      </figure>
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Negate-Result.jpg" width="720"
+      alt="Block part subtracted from cylinder" />
+      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
+      </figure>
+
+      #### Notes
+
+      - Compared to `Class.BasePart:SubtractAsync()`, this method differs as
+        follows:
+
+        - The input parts do not need to be parented to the scene, allowing for
+          background operations.
+        - When the `SplitApart` option is set to `true` (default), each distinct
+          body will be returned in its own `Class.PartOperation`.
+        - Each of the returned parts are in the coordinate space of the main
+          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          not necessarily at the center of its body.
+        - It's possible to call this method on the client, but with some
+          limitations. First, it currently must be done with objects **created**
+          on the client. Secondly, there is no replication available from client
+          to the server.
+
+      - The original parts remain intact following a successful operation. In
+        most cases, you should parent the returned
+        `Class.PartOperation|PartOperations` to the same place as the main part,
+        then `Class.Instance.Destroy|Destroy()` all of the original parts.
+
+      - By default, the face colors of the resulting
+        `Class.PartOperation|PartOperations` are borrowed from the
+        `Class.BasePart.Color|Color` property of the original parts, although
+        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
+        property to change them to a specific color.
+
+      - If a subtract operation would result in any
+        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
+        they will be simplified to 20,000. This will result in an error with
+        code `-14`.
+
+      - If the main part is moving during the calculation of the operation, you
+        can set the resulting parts to the updated `Datatype.CFrame` of the main
+        part, since the returned parts are in the same coordinate space as the
+        main part.
+
+      - If using this method with a `Class.PartOperation` as the main part, you
+        can substitute the geometry of another `Class.PartOperation` via
+        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
+        it easier to utilize the geometry of the operation but maintain
+        properties, attributes, tags, and children of the main part such as
+        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
+        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
+        This approach also circumvents the potential "flicker" of completely
+        replacing the original `Class.PartOperation` with another.
+    code_samples:
+      - GeometryService-SubtractAsync
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: |
+          Main `Class.Part` or `Class.PartOperation` to operate on.
+      - name: parts
+        type: Array
+        default:
+        summary: |
+          Array of parts to subtract from the main part.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` – The value of
+            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            resulting parts.
+          - `RenderFidelity` – The value of
+            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `SplitApart` – Boolean controlling whether the objects should all be
+            kept together or properly split apart. Default is `true` (split).
+    returns:
+      - type: Array
+        summary: |
+          One or more `Class.PartOperation|PartOperations` from the geometry of
+          the main part (`part`) minus the geometry occupied by the other parts.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GeometryService:UnionAsync
+    summary: |
+      Creates one or more `Class.PartOperation|PartOperations` from one part
+      plus the geometry occupied by other parts.
+    description: |
+      Creates one or more `Class.PartOperation|PartOperations` from the main
+      part plus the geometry occupied by other parts in the given array. Only
+      primitive `Class.Part|Parts` and `Class.PartOperation|PartOperations` are
+      supported, not `Class.Terrain` or `Class.MeshPart|MeshParts`. Similar to
+      `Class.Instance:Clone()|Clone()`, the returned parts have no set
+      `Class.Instance.Parent|Parent`.
+
+      The following properties from the main part (`part`) are applied to the
+      resulting `Class.PartOperation|PartOperations`:
+
+      - `Class.BasePart.Color|Color`, `Class.BasePart.Material|Material`,
+        `Class.BasePart.MaterialVariant|MaterialVariant`,
+        `Class.BasePart.Reflectance|Reflectance`,
+        `Class.BasePart.Transparency|Transparency`
+      - `Class.BasePart.CanCollide|CanCollide`
+      - `Class.BasePart.Anchored|Anchored`, `Class.BasePart.Density|Density`,
+        `Class.BasePart.Elasticity|Elasticity`,
+        `Class.BasePart.ElasticityWeight|ElasticityWeight`,
+        `Class.BasePart.Friction|Friction`,
+        `Class.BasePart.FrictionWeight|FrictionWeight`
+
+      In the following image comparison,
+      `Class.GeometryService:UnionAsync()|UnionAsync()` is called using the blue
+      block and an array containing the purple cylinder. The resulting
+      `Class.PartOperation` resolves into a shape of the combined geometry of
+      both parts.
+
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Union.jpg"
+      width="720" alt="Block and cylinder parts overlapping" />
+      <figcaption>Separate parts</figcaption>
+      </figure>
+      <figure>
+      <img src="/assets/modeling/solid-modeling/Union-Result.jpg" width="720"
+      alt="Parts joined together into a single solid union" />
+      <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
+      </figure>
+
+      #### Notes
+
+      - Compared to `Class.BasePart:UnionAsync()`, this method differs as
+        follows:
+
+        - The input parts do not need to be parented to the scene, allowing for
+          background operations.
+        - When the `SplitApart` option is set to `true` (default), each distinct
+          body will be returned in its own `Class.PartOperation`.
+        - Each of the returned parts are in the coordinate space of the main
+          part. This means that the (0,&nbsp;0,&nbsp;0) of any returned part is
+          not necessarily at the center of its body.
+        - It's possible to call this method on the client, but with some
+          limitations. First, it currently must be done with objects **created**
+          on the client. Secondly, there is no replication available from client
+          to the server.
+
+      - The original parts remain intact following a successful operation. In
+        most cases, you should parent the returned
+        `Class.PartOperation|PartOperations` to the same place as the main part,
+        then `Class.Instance.Destroy|Destroy()` all of the original parts.
+
+      - By default, the colors of the resulting
+        `Class.PartOperation|PartOperations` are borrowed from the
+        `Class.BasePart.Color|Color` property of the original parts, although
+        you can enable their `Class.PartOperation.UsePartColor|UsePartColor`
+        property to change them to a specific color.
+
+      - If a union operation would result in any
+        `Class.PartOperation|PartOperations` with more than 20,000 triangles,
+        they will be simplified to 20,000. This will result in an error with
+        code `-14`.
+
+      - If the main part is moving during the calculation of the operation, you
+        can set the resulting parts to the updated `Datatype.CFrame` of the main
+        part, since the returned parts are in the same coordinate space as the
+        main part.
+
+      - If using this method with a `Class.PartOperation` as the main part, you
+        can substitute the geometry of another `Class.PartOperation` via
+        `Class.PartOperation:SubstituteGeometry()|SubstituteGeometry()`, making
+        it easier to utilize the geometry of the operation but maintain
+        properties, attributes, tags, and children of the main part such as
+        `Class.Attachment|Attachments`, `Class.Constraint|Constraints`,
+        `Class.ParticleEmitter|ParticleEmitters`, light objects, and decals.
+        This approach also circumvents the potential "flicker" of completely
+        replacing the original `Class.PartOperation` with another.
+    code_samples:
+      - GeometryService-UnionAsync
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: |
+          Main `Class.Part` or `Class.PartOperation` to operate on.
+      - name: parts
+        type: Array
+        default:
+        summary: |
+          Array of parts to union with the main part.
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing all the controls for the method:
+
+          - `CollisionFidelity` – The value of
+            `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
+            resulting parts.
+          - `RenderFidelity` – The value of
+            `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `SplitApart` – Boolean controlling whether the objects should all be
+            kept together or properly split apart. Default is `true` (split).
+    returns:
+      - type: Array
+        summary: |
+          One or more `Class.PartOperation|PartOperations` from the geometry of
+          the main part (`part`) plus the geometry occupied by the other parts.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

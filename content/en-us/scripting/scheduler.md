@@ -7,22 +7,22 @@ Scheduling code is useful in many situations, such as ensuring code executes aft
 
 ### Common Methods
 
-The following are the most common `Library.task` methods used to schedule code. You should use the task methods over legacy scheduling methods, such as `Global.RobloxGlobals.wait()|wait()`, to ensure that your code runs optimally.
+The following are the most common `Library.task` methods used to schedule code. You should use the task methods over legacy scheduling methods, such as `Global.RobloxGlobals.wait()`, to ensure that your code runs optimally.
 
 <Alert severity="warning">
-Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()|spawn()`, `Global.RobloxGlobals.delay()|delay()`, and `Global.RobloxGlobals.wait()|wait()`) can provide similar code scheduling results but are less optimized and configurable as their `Library.task` alternatives. If your experience uses these legacy methods, you should use `Library.task` instead to ensure your experience's code remains efficient and up-to-date.
+Certain legacy global methods, such as (`Global.RobloxGlobals.spawn()`, `Global.RobloxGlobals.delay()`, and `Global.RobloxGlobals.wait()`) can provide similar code scheduling results but are less optimized and configurable as their `Library.task` alternatives. If your experience uses these legacy methods, you should use `Library.task` instead to ensure your experience's code remains efficient and up-to-date.
 </Alert>
 
 The following table lists the relevant legacy global methods and their preferred, more optimized counterparts:
 
-| Legacy Global Methods                   | Task Methods                 | Additional Alternative Methods |
-| :-------------------------------------- | :--------------------------- | :----------------------------- |
-| `wait()`                                | `Library.task.wait()`        | `RunService.Heartbeat:Wait()`  |
-| `wait(n)`                               | `Library.task.wait(n)`       |                                |
-| `spawn(f)`                              | `Library.task.defer(f)`      | `task.delay(0, f)`             |
-| `delay(n, f)`                           | `task.delay(n, f)`           |                                |
-| `spawn(function () f(uv1, ...) end)`    | `task.defer(f, uv1, ...)`    | `task.delay(0, f, uv1, ...)`   |
-| `delay(n, function () f(uv1, ...) end)` | `task.delay(n, f, uv1, ...)` |                                |
+| Legacy Global Methods                   | Task Methods                                       | Additional Alternatives                            |
+| :-------------------------------------- | :------------------------------------------------- | :------------------------------------------------- |
+| `wait()`                                | `Library.task.wait()`                              | `Class.RunService.Heartbeat`                       |
+| `wait(n)`                               | `Library.task.wait()\|task.wait(n)`                |                                                    |
+| `spawn(f)`                              | `Library.task.defer()\|task.defer(f)`              | `Library.task.delay()\|task.delay(0, f)`           |
+| `delay(n, f)`                           | `Library.task.delay()\|task.delay(n, f)`           |                                                    |
+| `spawn(function () f(uv1, ...) end)`    | `Library.task.defer()\|task.defer(f, uv1, ...)`    | `Library.task.delay()\|task.delay(0, f, uv1, ...)` |
+| `delay(n, function () f(uv1, ...) end)` | `Library.task.delay()\|task.delay(n, f, uv1, ...)` |                                                    |
 
 #### task.spawn
 
@@ -45,7 +45,7 @@ end
 
 `Library.task.defer()` takes a thread or function and defers it until the next [resumption cycle](https://devforum.roblox.com/t/beta-deferred-lua-event-handling) at which point it is resumed with the engine's scheduler. Additional arguments are passed to the thread or function resuming.
 
-You should typically use this when you want similar behavior to `Library.task.spawn()` but don't care about the thread running immediately. The following code sample illustrates how the `print` statement for `"A"` will defer until after the `print` statement for `"B"` executes:
+You should typically use this when you want similar behavior to `Library.task.spawn()` but don't care about the thread running immediately. The following code sample illustrates how the `print()` statement for `"A"` will defer until after the `print()` statement for `"B"` executes:
 
 ```lua
 task.defer(print, "A")
@@ -55,7 +55,7 @@ print("B")
 ```
 
 <Alert severity="info">
-`Library.task.spawn()|task.defer()` is an optimized version of `Global.RobloxGlobals.spawn()|spawn()` which schedules a thread to resume as soon as possible (but not immediately) without any throttling.
+`Library.task.defer()` is an optimized version of `spawn()` that schedules a thread to resume as soon as possible (but not immediately) without any throttling.
 </Alert>
 
 #### task.delay
@@ -73,7 +73,7 @@ end, os.clock())
 A duration of zero will result in the thread or function resuming on the next step.
 
 <Alert severity="info">
-`Library.task.delay()` is an optimized version of `Global.RobloxGlobals.delay()|delay()` which schedules a thread to resume after some time elapses without throttling.
+`Library.task.delay()` is an optimized version of `delay()` that schedules a thread to resume after some time elapses without throttling.
 </Alert>
 
 #### task.wait
@@ -92,5 +92,5 @@ print(elapsedTime) --> 2.0792941
 If no duration is given the duration will default to zero meaning the thread will automatically resume on the next step. This means `Library.task.wait()` is equivalent in behavior to `Class.RunService.Heartbeat`.
 
 <Alert severity="info">
-`Library.task.wait()` is an optimized version of `Global.RobloxGlobals.wait()|wait()` which schedules the current thread to resume after some time elapses without throttling.
+`Library.task.wait()` is an optimized version of `wait()` that schedules the current thread to resume after some time elapses without throttling.
 </Alert>

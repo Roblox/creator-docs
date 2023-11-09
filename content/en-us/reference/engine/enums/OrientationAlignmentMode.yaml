@@ -1,0 +1,24 @@
+name: OrientationAlignmentMode
+type: enum
+summary: |
+  The OrientationAlignmentMode Enum is used to select the number of
+  `Class.Attachment`s used in an alignment.
+description: |
+  The OrientationAlignmentMode Enum is used to select the number of
+  `Class.Attachment`s used in an alignment.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OneAttachment
+    summary: |
+      Use one attachment.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: TwoAttachment
+    summary: |
+      Use two attachments.
+    value: 1
+    tags: []
+    deprecation_message: ''

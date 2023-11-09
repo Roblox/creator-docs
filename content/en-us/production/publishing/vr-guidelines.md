@@ -3,7 +3,7 @@ title: VR Guidelines
 description: Guidelines on publishing an experience for VR devices.
 ---
 
-Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing experiences to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest&nbsp;2.
+Roblox VR uses [OpenXR](https://www.khronos.org/openxr/) as a backend for all VR devices. That means the implementation is platform agnostic, allowing experiences to work interchangeably on Quest and PC VR headsets. Testing on a PC VR headset should be valid for the Quest&nbsp;2. At minimum, Oculus drivers require an NVidia GTX1060 graphics card or equivalent.
 
 ## Graphics Quality Mode
 
@@ -45,7 +45,7 @@ Untethered mobile VR devices like the Quest&nbsp;2 target a high frame rate and 
 
 The following best practices may help you reach 72 frames per second with a higher graphic setting:
 
-- Enable [content streaming](../../workspace/streaming.md) so that content is streamed in and out dynamically on the device.
+- Enable [instance streaming](../../workspace/streaming.md) so that content is streamed in and out dynamically on the device.
 - Be careful to not overuse CPU-heavy computations like [raycasting](../../workspace/raycasting.md).
 - Avoid the usage of `Library.task.wait()` over `Class.RunService` frame updates. `Library.task.wait()` will not give you precise results compared to connecting to `Class.RunService.Stepped`.
 - Mobile VR is sensitive to a high number of draw calls. Build your environments efficiently, adding high detail where it really matters and lower detail elsewhere while being conservative with the number of objects used in the scene.

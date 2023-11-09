@@ -39,44 +39,48 @@ To use the platform, the script needs a function to check if any players touch i
 1. Create a function named `onTouch()` that checks if a player is touching the platform.
 
    ```lua
-       local function onTouch (partTouched)
+   local function onTouch(partTouched)
      local character = partTouched.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-
-     if humanoid then
-
-     end
    end
    ```
 
-2. To change any of the stats on the leaderboard, the script needs to know what player is controlling the humanoid. In the if statement, use the `GetPlayerFromCharacter()` function to find a player.
+2. To change any of the stats on the leaderboard, the script needs to know what player is controlling the character. In the if statement, use the `GetPlayerFromCharacter()` function to find a player.
 
    ```lua
-   if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
-   end
+   local Players = game:GetService("Players")
+
+   local player = Players:GetPlayerFromCharacter(character)
    ```
 
 3. On the next line, get that player's leaderstats container.
 
    ```lua
-   if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
-     -- Gets the player's leaderboard. Needed to get items and money
-     local playerStats = player:FindFirstChild("leaderstats")
+   local Players = game:GetService("Players")
+
+   local player = Players:GetPlayerFromCharacter(character)
+   
+   if player then
+      -- Gets the player's leaderboard. Needed to get items and money
+      local playerStats = player:FindFirstChild("leaderstats")
    end
    ```
 
 4. On the next line, create variables to get the player's money and items.
 
    ```lua
-   if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
-     -- Gets the player's leaderboard. Needed to get items and money
-     local playerStats = player:FindFirstChild("leaderstats")
-     -- Gets the player's items and money
-     local playerItems = playerStats:FindFirstChild("Items")
-     local playerGold = playerStats:FindFirstChild("Gold")
+   local Players = game:GetService("Players")
+
+   local player = Players:GetPlayerFromCharacter(character)
+   
+   if player then
+      -- Gets the player's leaderboard. Needed to get items and money
+      local playerStats = player:FindFirstChild("leaderstats")
+
+      if playerStats then
+         -- Gets the player's items and money
+         local playerItems = playerStats:FindFirstChild("Items")
+         local playerGold = playerStats:FindFirstChild("Gold")
+      end
    end
    ```
 
@@ -95,17 +99,22 @@ To use the platform, the script needs a function to check if any players touch i
 6. At the bottom of the script, connect the `onTouch()` to sellPart's Touched event.
 
    ```lua
+   local Players = game:GetService("Players")
+
    local function onTouch (partTouched)
      local character = partTouched.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-     if humanoid then
-       local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+     local player = Players:GetPlayerFromCharacter(character)
+     if player then
        -- Gets the player's leaderboard. Needed to get items and money
        local playerStats = player:FindFirstChild("leaderstats")
-       -- Gets the player's items and money
-       local playerItems = playerStats:FindFirstChild("Items")
-       local playerGold = playerStats:FindFirstChild("Gold")
-           print("A player touched sellPart")
+       
+       if playerStats then
+         -- Gets the player's items and money
+         local playerItems = playerStats:FindFirstChild("Items")
+         local playerGold = playerStats:FindFirstChild("Gold")
+
+         print("A player touched sellPart")
+       end
      end
    end
 
@@ -130,7 +139,7 @@ In this experience, a player will get 100 Gold for each item. After getting mone
 
    end
 
-   local function onTouch (partTouched)
+   local function onTouch(partTouched)
    ```
 
 2. To give players the right amount of gold, take the value of the `playerItems` and multiply it by the amount of gold they should receive per item. This example gives one hundred gold pieces per item.
@@ -144,13 +153,13 @@ In this experience, a player will get 100 Gold for each item. After getting mone
    end
    ```
 
-3. Type `playerGold.Value = playerGold.Value + totalSell` to add the gold for the items to their current gold.
+3. Type `playerGold.Value += totalSell` to add the gold for the items to their current gold.
 
    ```lua
    local function sellItems(playerItems, playerGold)
      local totalSell = playerItems.Value * 100
      -- Add how much the player earns to their money
-     playerGold.Value = playerGold.Value + totalSell
+     playerGold.Value += totalSell
    end
    ```
 
@@ -159,7 +168,7 @@ In this experience, a player will get 100 Gold for each item. After getting mone
    ```lua
    local function sellItems(playerItems, playerGold)
      local totalSell = playerItems.Value * 100
-     playerGold.Value = playerGold.Value + totalSell
+     playerGold.Value += totalSell
      playerItems.Value = 0
    end
    ```
@@ -167,14 +176,23 @@ In this experience, a player will get 100 Gold for each item. After getting mone
 5. In the `onTouch()` function, **under the second if statement**, call the `sellItems()` function. Pass in the parameters, `playerItems` and `playerGold` so they can be changed.
 
    ```lua
-   if humanoid then
-     local player = game.Players:GetPlayerFromCharacter(humanoid.Parent)
+   local Players = game:GetService("Players")
+
+   local player = Players:GetPlayerFromCharacter(character)
+
+   if player then
      -- Gets the player's leaderboard. Needed to get items and money
      local playerStats = player:FindFirstChild("leaderstats")
-     -- Gets the player's items and money
-     local playerItems = playerStats:FindFirstChild("Items")
-     local playerGold = playerStats:FindFirstChild("Gold")
-     sellItems(playerItems, playerGold)
+
+     if playerStats then
+      -- Gets the player's items and money
+      local playerItems = playerStats:FindFirstChild("Items")
+      local playerGold = playerStats:FindFirstChild("Gold")
+
+      if playerItems and playerGold then
+         sellItems(playerItems, playerGold)
+      end
+     end
    end
    ```
 

@@ -1,0 +1,64 @@
+name: ScriptContext
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: |
+  This service controls all `Class.BaseScript` objects. Most of the properties
+  and methods of this service are locked for internal use, however you may use
+  the `Class.ScriptContext.ScriptsDisabled` property to disable all scripts from
+  a thread with normal security access.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: ScriptContext:SetTimeout
+    summary: |
+      Limits how long a script is allowed to run without yielding.
+    description: |
+      Limits how long a script is allowed to run without yielding.
+    code_samples:
+    parameters:
+      - name: seconds
+        type: double
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: ScriptContext.Error
+    summary: |
+      Fired when an error occurs.
+    description: |
+      Fired when an error occurs.
+    code_samples:
+      - ScriptContext-Error1
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: ''
+      - name: stackTrace
+        type: string
+        default:
+        summary: ''
+      - name: script
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

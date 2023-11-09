@@ -8,9 +8,10 @@ description: On-screen UI containers hold GuiObjects that you want to display on
 that you want to display on a user's screen. All on-screen UI objects and code
 are stored and changed on the client.
 
+<figure>
 <img src="../assets/ui/container-frames/Frame-Example.jpg" width="80%" />
-
-This example screen has a ScreenGui with a [frame](./frames.md) container that holds a `Class.TextLabel`, `Class.TextBox` input field, and [ImageButton](../ui/buttons.md).
+<figcaption>This example screen has a `Class.ScreenGui` with a [Frame](../ui/frames.md) container that holds a [Label](../ui/labels.md) (`Class.TextLabel`), [Text Input](../ui/text-input.md) field (`Class.TextBox`), and [Button](../ui/buttons.md) (`Class.ImageButton`).</figcaption>
+</figure>
 
 <Alert severity="info">
     For UI container objects that hold `Class.GuiObject|GuiObjects` that you want to display within an experience, such as on the face of a part, see <a href="../ui/in-experience-containers.md">In-Experience UI Containers</a>.
@@ -23,9 +24,13 @@ You do not need to create a `Class.StarterGui` object as it is always present in
 
 <img src="../assets/studio/explorer/StarterGui.png" width="320" />
 
+<Alert severity="info">
+    If `Class.Players.CharacterAutoLoads` is disabled, the `Class.GuiObject|GuiObjects` held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
+</Alert>
+
 ## PlayerGui
 
-A `Class.Player`'s `Class.PlayerGui` is a container for that specific player's on-screen UI objects. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the [`Class.StarterGui`](#startergui) service clones all of its contents into the `Class.PlayerGui` container.
+`Class.PlayerGui` is a container for on-screen UI objects for a specific `Class.Player`. When a user first joins an experience, the `Class.PlayerGui` automatically inserts into their `Class.Player` object within the `Class.Players` service. Then, when the user's avatar spawns for the first time, the `Class.StarterGui` service clones all of its contents into the `Class.PlayerGui` container.
 
 ## ScreenGui
 
@@ -39,8 +44,7 @@ Unlike `Class.StarterGui` and `Class.PlayerGui`, you have to manually create a `
 
 2. Insert a **ScreenGui**.
 
-   <img src="../assets/studio/explorer/ScreenGui-In-StarterGui.png"
-   width="320" />
+   <img src="../assets/studio/explorer/StarterGui-ScreenGui.png" width="320" />
 
 ### Parenting a ScreenGui
 

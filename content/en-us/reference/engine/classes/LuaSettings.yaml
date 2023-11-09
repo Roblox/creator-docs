@@ -1,0 +1,20 @@
+name: LuaSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: ''
+description: |
+  The LuaSettings allows you to change certain properties, in regards to how
+  Roblox handles Lua. It is labeled as **Lua** in the Roblox Studio Settings
+  menu.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Settings
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

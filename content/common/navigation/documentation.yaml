@@ -1,0 +1,45 @@
+columns:
+  - - title: Overview
+      path: /
+    - title: Engine
+      path: /platform
+      items:
+        - title: Guides
+          navigation: /engine/guides.yaml
+          path: /platform
+        - title: Tutorials
+          navigation: /engine/tutorials.yaml
+          path: /tutorials/
+        - title: Reference
+          navigation: /engine/reference.yaml
+          path: /reference/engine
+        - title: Resources
+          navigation: /engine/resources.yaml
+          path: /samples/
+        - title: Art
+          navigation: /engine/art.yaml
+          path: /art/modeling/
+        - title: Design
+          navigation: /engine/design.yaml
+          path: /production/game-design/
+    - title: Avatar
+      path: /avatar/
+      items:
+        - title: Guides
+          navigation: /avatar/guides.yaml
+          path: /avatar/
+        - title: Tutorials
+          navigation: /avatar/tutorials.yaml
+          path: /avatar/tutorials
+        - title: Resources
+          navigation: /avatar/resources.yaml
+          path: /avatar/resources
+    - title: Cloud
+      path: /cloud/open-cloud/
+      items:
+        - title: Guides
+          navigation: /cloud/guides.yaml
+          path: /cloud/open-cloud/
+        - title: Reference
+          navigation: /cloud/reference.yaml
+          path: /cloud/reference/

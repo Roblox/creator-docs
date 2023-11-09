@@ -34,7 +34,7 @@ It's best to put scripts which set up experience state into **ServerScriptServic
 
 In Roblox, a **service** is an object which performs a range of useful functions. The `Class.Players` service has an event called `Class.Players.PlayerAdded|PlayerAdded` that you can use to set up points for each user who joins the experience.
 
-You can access services with the `Class.ServiceProvider:GetService()|GetService` function in the `game` object. `game` is a variable accessible from anywhere which contains everything in your experience.
+You can access services with the `Class.ServiceProvider:GetService()|GetService` function in the `Class.DataModel|game` object. `Class.DataModel|game` is a variable accessible from anywhere which contains everything in your experience.
 
 1. Create a variable for the Players service using `game:GetService("Players")`.
 2. Create a function called `onPlayerAdded` with a parameter for the incoming player.
@@ -52,7 +52,7 @@ You can access services with the `Class.ServiceProvider:GetService()|GetService`
 
 <Alert severity="info">
 
-When declaring a variable to contain a service, it's best to name it with the exact name of the service (`Class.Players`), even though this means breaking usual naming conventions for variables.
+When declaring a variable to contain a service, it's best to name it with the exact name of the service (`"Players"`), even though this means breaking usual naming conventions for variables.
 
 </Alert>
 
@@ -60,7 +60,7 @@ When declaring a variable to contain a service, it's best to name it with the ex
 
 To make a user's points display in the leaderboard, all you need to do is create a new `Class.Folder` in their `Class.Player` object called `"leaderstats"` and put their points in there. New objects can be created from within a script via the `Datatype.Instance.new()` function.
 
-1. Create a new **Folder** object using `Class.Instance.new("Folder"),` storing the result in a new variable called `leaderstats`.
+1. Create a new `Folder` object using `Instance.new("Folder")`, storing the result in a new variable called `leaderstats`.
 
    ```lua
    local function onPlayerAdded(player)
@@ -93,11 +93,11 @@ Make sure you name the folder **exactly** as it is shown here (`"leaderstats"`) 
 
 The leaderboard system reads any values in the `leaderstats` folder and displays whatever it finds.
 
-To add a stat which will track a player's points, a new **IntValue** object can be parented to the `leaderstats` folder. The name of the value object will be displayed alongside its current value.
+To add a stat which will track a player's points, a new `IntValue` object can be parented to the `leaderstats` folder. The name of the value object will be displayed alongside its current value.
 
-1. Use a variable named `points` to create a new **IntValue** object using `Datatype.Instance.new()`.
-2. Set the **Name** to `"Points"`.
-3. Set the **Value** to **0**; this is what the leaderboard will initially display for the player.
+1. Use a variable named `points` to create a new `IntValue` object using `Datatype.Instance.new()`.
+2. Set the `Name` to `"Points"`.
+3. Set the `Value` to **0**; this is what the leaderboard will initially display for the player.
 4. Parent the `points` object to the `leaderstats` folder.
 
 ```lua
@@ -121,16 +121,16 @@ Test your experience and you should see the leaderboard appear in the top right 
 
 ## Counting Time
 
-Each user should earn a point for each second they are alive. A `while` loop and the `wait` function can be used to update the value of points every second.
+Each user should earn a point for each second they are alive. A `while` loop and the `Library.task.wait()` function can be used to update the value of points every second.
 
 1. At the end of the script, create a `while` loop with `true` as the condition.
-2. In the loop, `wait` for 1 second.
+2. In the loop, `Library.task.wait()` for 1 second.
 
 ```lua
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  wait(1)
+  task.wait(1)
 end
 ```
 
@@ -145,7 +145,7 @@ An array is a list of items stored in order. Each item can be accessed by its **
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for currentPlayer = 1, #playerList do
     -- Add your logic here for each player in the playerList
@@ -161,11 +161,11 @@ Objects stored in an array are accessed using **square brackets** - for instance
 
 1. Store the user at `playerList[currentPlayer]` in a variable called `player`.
 2. Store the user's **Points** object in a variable called `points`.
-3. Set the `Value` property of `points` to `points.Value + 1`.
+3. Set the `Class.IntValue.Value|Value` property of `points` to `points.Value + 1`.
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for currentPlayer = 1, #playerList do
     local player = playerList[currentPlayer]
@@ -198,7 +198,7 @@ local function onPlayerAdded(player)
   local leaderstats = Instance.new("Folder")
 ```
 
-Although you included user in the `onCharacterAdded` function's parameters, the actual `CharacterAdded` event only returns the character, not the associated user. To pass the `player` object as well, use an [anonymous function](../../../luau/functions.md#anonymous-functions) for the event connection.
+Although you included user in the `onCharacterAdded` function's parameters, the actual `Class.Player.CharacterAdded|CharacterAdded` event only returns the character, not the associated user. To pass the `player` object as well, use an [anonymous function](../../../luau/functions.md#anonymous-functions) for the event connection.
 
 ```lua
 local function onPlayerAdded(player)
@@ -221,7 +221,7 @@ end
 
 When a user dies, their `Class.Humanoid` automatically fires a `Class.Humanoid.Died|Died` event. You can use this event to find out when to reset their points.
 
-The Humanoid is found inside the Character model, but the contents of that model are only assembled as the user spawns. To make your code safely wait for the Humanoid object to load, use the `Class.Instance:WaitForChild()|WaitForChild` function. You can call it on any parent object, passing the string name of the child you're waiting for. Create a variable to wait for the Humanoid using `character:WaitForChild("Humanoid")`.
+The Humanoid is found inside the Character model, but the contents of that model are only assembled as the user spawns. To make your code safely wait for the Humanoid object to load, use the `Class.Instance:WaitForChild()|WaitForChild()` function. You can call it on any parent object, passing the string name of the child you're waiting for. Create a variable to wait for the Humanoid using `character:WaitForChild("Humanoid")`.
 
 ```lua
 local Players = game:GetService("Players")
@@ -235,7 +235,7 @@ The function you need to connect to the Died event is very short and will only e
 
 1. Connect a new anonymous function to the Humanoid's **Died** event.
 2. In the anonymous function, create a variable called `points` for the player's **Points** object.
-3. Set the `Value` property of `points` to **0**.
+3. Set the `Class.IntValue.Value|Value` property of `points` to **0**.
 
 ```lua
 local Players = game:GetService("Players")
@@ -258,7 +258,7 @@ If users keep earning points even when dead, it's hardly in the spirit of the ex
 
 You need to start by defining an **attribute** in the `onPlayerAdded` function which can be used to check whether the user is alive. At this point, the user is not yet alive and spawned, as their character model still needs to be added.
 
-Attributes allow you to customize objects in Roblox with your own data. An attribute consists of a name and a value. You can create one on any object using the `Class.Instance:SetAttribute()|SetAttribute` function. Call `SetAttribute` on `player` to create a new **attribute** called `"IsAlive"` with the value `false`.
+Attributes allow you to customize objects in Roblox with your own data. An attribute consists of a name and a value. You can create one on any object using the `Class.Instance:SetAttribute()|SetAttribute` function. Call `Class.Instance:SetAttribute()|SetAttribute` on `player` to create a new **attribute** called `"IsAlive"` with the value `false`.
 
 ```lua
 local function onPlayerAdded(player)
@@ -304,7 +304,7 @@ Finally, `IsAlive` should be **checked** before any point is awarded in the `whi
 
 ```lua
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
 
   for currentPlayer = 1, #playerList do
@@ -362,7 +362,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  wait(1)
+  task.wait(1)
   local playerList = Players:GetPlayers()
   for i = 1, #playerList do
     local player = playerList[i]

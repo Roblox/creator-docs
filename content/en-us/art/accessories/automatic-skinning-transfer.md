@@ -3,7 +3,7 @@ title: Automatic Skinning Transfer
 description: Automatic skinning transfer can create deformation data for character accessories without manual skinning.
 ---
 
-**Automatic skinning transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [skinning](../../art/modeling/skinning.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using automatic skinning transfer, the Roblox engine creates and applies skinning at runtime.
+**Automatic skinning transfer** allows layered clothing and facial accessories to deform accurately along with the character model it's attached to without having to skin the accessory itself. Instead of the complex task of manually [rigging and skinning](../../art/modeling/rigging.md) models in 3D modeling software, you can use this feature to transfer or generate skinning data to the accessory. When using automatic skinning transfer, the Roblox engine creates and applies skinning at runtime.
 
 **No skinning of accessory geometry is required to use automatic skinning transfer**. In fact, auto-skinned accessories work well with most characters they're attached to, even if those characters have a different number of joints, bones, or use a different kind of skinning, and the accessories move accurately with characters as they animate.
 
@@ -20,7 +20,7 @@ Because the skinning transfer process uses a character's outer cage to help calc
 To enable the automatic skinning transfer process, you must enable the `Class.WrapLayer.AutoSkin|AutoSkin` property within the `Class.WrapLayer` instance of the layered `Class.Accessory` you want to automatically skin, then set it to one of the following values:
 
 - `Disabled`: Disables the automatic skinning transfer process. This is the default value.
-- `EnabledOverride`: Enables the automatic skinning transfer process, and allows it to override any existing skinning information found on the accessory at run time.
+- `EnabledOverride`: Enables the automatic skinning transfer process, and allows it to override any existing skinning information found on the accessory at runtime.
 - `EnabledPreserve`: Enables the automatic skinning transfer process, but doesn't allow it to override any existing skinning information found on the accessory at runtime. If there isn't any skinning to maintain, the automatic skinning transfer process automatically creates new skinning data.
 
 When there isn't any skinning data on the accessory, or if you choose to override any existing skinning data associated with the accessory, the Roblox engine calculates skinning data from the character's geometry and cages, then the new skinning data and rig associated with the accessory drives the accessory's deformations and motions in sync with the source geometry itself.

@@ -63,7 +63,7 @@ Inside the function, parameters can be used similar to variables. In this exampl
 
 2. Destroy whatever is passed in through the trash parameter the same as if trash were any other variable.
 
-   ```Lua
+   ```lua
    local function sortGarbage(trash,recyclable)
        local sparkle = Instance.new("ParticleEmitter")
 
@@ -76,7 +76,7 @@ Inside the function, parameters can be used similar to variables. In this exampl
 
 3. Parent the Particle Emitter to the recyclable.
 
-   ```Lua
+   ```lua
    local function sortGarbage(trash,recyclable)
        local sparkle = Instance.new("ParticleEmitter")
 
@@ -96,17 +96,17 @@ Time to take out the trash! With the parameters set up, the functions are ready 
 
 2. At the top of the script, add variables for the objects you created. These will be your arguments.
 
-   ```Lua
-   local cementBlock = game.Workspace.Cement
-   local glassBottle = game.Workspace.GlassBottle
+   ```lua
+   local cementBlock = workspace.Cement
+   local glassBottle = workspace.GlassBottle
    ```
 
 3. At the bottom of the script, where `sortGarbage()` is called, pass in each argument.
 
    ```lua
    -- Objects to use as arguments
-   local cementBlock = game.Workspace.CementBlock
-   local glassBottle = game.Workspace.GlassBottle
+   local cementBlock = workspace.CementBlock
+   local glassBottle = workspace.GlassBottle
 
    --Destroys trash and cleans up recyclables
    local function sortGarbage(trash,recyclable)
@@ -129,7 +129,7 @@ Typically, arguments are matched to parameters based on the order they're passed
 
 In our example, there are two parameters. Whatever gets passed in first will always be trash, and the second will always be recyclable.
 
-```Lua
+```lua
 
 --Destroys trash and cleans up recyclables
 local function sortGarbage(trash,recyclable)

@@ -84,7 +84,7 @@ When the platform disappears, it needs to be invisible and users need to fall th
 
 Parts have various **properties** that can be used here. Remember that you can see a part's properties if you select it and look at the **Properties** window.
 
-A part can be made invisible by changing the **Transparency** property. Transparency can be a value between 0 and 1, where 1 is fully transparent and therefore invisible.
+A part can be made invisible by changing the `Class.BasePart.Transparency|Transparency` property. Transparency can be a value between 0 and 1, where 1 is fully transparent and therefore invisible.
 
 <figure>
 <video controls loop muted>
@@ -94,7 +94,7 @@ A part can be made invisible by changing the **Transparency** property. Transpar
 <figcaption>Changing the Transparency property of the cube</figcaption>
 </figure>
 
-The **CanCollide** property determines if other parts (and users) can pass right through the part. If you set it to **false**, users will fall through the platform.
+The `CanCollide` property determines if other parts (and users) can pass right through the part. If you set it to **false**, users will fall through the platform.
 
 <figure>
 <video controls loop muted>
@@ -106,8 +106,8 @@ The **CanCollide** property determines if other parts (and users) can pass right
 
 Just like `script.Parent`, properties are accessed using a **dot**. Values are assigned using an equals sign.
 
-1. In the `disappear` function, set the CanCollide property of the platform to **false**.
-2. On the line following, set the Transparency property to **1**.
+1. In the `disappear` function, set the `CanCollide` property of the platform to **false**.
+2. On the line following, set the `Transparency` property to **1**.
 
    ```lua
    local platform = script.Parent
@@ -119,7 +119,7 @@ Just like `script.Parent`, properties are accessed using a **dot**. Values are a
    ```
 
 <Alert severity="info">
-You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends that makes your code more readable.
+You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends, which makes your code more readable.
 </Alert>
 
 ## Calling the Function
@@ -143,11 +143,11 @@ Once you've declared a function, you can run it by writing its name with parenth
 
 ## Appear Function
 
-You can easily make the platform reappear by writing a function which does the exact opposite of the `disappear` function.
+You can easily make the platform reappear by writing a function that does the exact opposite of the `disappear` function.
 
 1. Delete the `disappear()` line from the script.
 2. Declare a new function called `appear`.
-3. In the function body, set the CanCollide property to **true** and the Transparency property to **0**.
+3. In the function body, set the `CanCollide` property to **true** and the `Transparency` property to **0**.
 
    ```lua
    local platform = script.Parent
@@ -191,33 +191,33 @@ end
 
 In the while loop, you need to write code to wait a few seconds between the platform disappearing and reappearing.
 
-The built-in function `wait` can be used for this. In the parentheses the number of seconds to wait is needed: for example `wait(3)`.
+The built-in function `Library.task.wait()` can be used for this. In the parentheses the number of seconds to wait is needed: for example `task.wait(3)`.
 
 <Alert severity="error">
 
-Whatever you do, never make a `while true` loop without including a `wait` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
+Whatever you do, never make a `while true` loop without including a `task.wait()` — and don't test your code before you've put one in! If you don't wait, your game will **freeze** because Studio will never have a chance to leave the loop and do anything else.
 
 </Alert>
 
 Three seconds is a sensible starting point for the length of time between each platform state.
 
-1. In the while loop, call the `wait` function with **3** in the parentheses.
+1. In the while loop, call the `task.wait()` function with **3** in the parentheses.
 2. Call the `disappear` function.
-3. Call the `wait` function again with **3** in the parentheses.
+3. Call the `task.wait()` function again with **3** in the parentheses.
 4. Call the `appear` function.
 
 ```lua
 while true do
-   wait(3)
+   task.wait(3)
    disappear()
-   wait(3)
+   task.wait(3)
    appear()
 end
 ```
 
 The code for the platform is now complete! Test your code now and you should find that the platform disappears after three seconds and reappears three seconds later in a loop.
 
-You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script, otherwise the platforms will all disappear at the same time and users will never be able to cross.
+You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script. Otherwise, the platforms will all disappear at the same time and users will never be able to cross.
 
 <video controls loop muted>
     <source src="../../../assets/tutorials/intro-to-scripting/alternatingPlatforms.mp4" />
@@ -239,9 +239,9 @@ local function appear()
 end
 
 while true do
-   wait(3)
+   task.wait(3)
    disappear()
-   wait(3)
+   task.wait(3)
    appear()
 end
 ```

@@ -30,7 +30,7 @@ When a **Sound** object is parented to a part or attachment, it becomes position
    ![alt](../../../assets/tutorials/in-game-sounds/ingameSounds-soundID.png)
 
    <Alert severity="info">
-   Custom sounds can be imported using the [Asset Manager](../../../projects/assets/manager.md#audio). Additionally, free sounds uploaded by Roblox and the community can be found using the [Toolbox](../../../projects/assets/toolbox.md).
+   Custom sounds can be imported using the [Asset Manager](../../../projects/assets/manager.md). Additionally, free sounds uploaded by Roblox and the community can be found using the [Toolbox](../../../projects/assets/toolbox.md).
    </Alert>
 
 3. For continuous playback when the game starts, toggle **Playing** and **Looped** to be **on**.
@@ -99,7 +99,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 2. The code below will run the `partTouched` function whenever the player touches a collectable. Copy the code into your script.
 
    ```lua
-   local pickupObjects = game.Workspace.Collectables.Objects
+   local pickupObjects = workspace.Collectables.Objects
    local objectsArray = pickupObjects:GetChildren()
 
    local function partTouched(otherPart, objectPart)
@@ -125,7 +125,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 1. Create a variable for **SoundService**, then another variable to store the **feedback sound**.
 
    ```lua
-   local pickupObjects = game.Workspace.Collectables.Objects
+   local pickupObjects = workspace.Collectables.Objects
    local objectsArray = pickupObjects:GetChildren()
 
    local SoundService = game:GetService("SoundService")

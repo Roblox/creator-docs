@@ -1,0 +1,414 @@
+name: CollectionService
+type: class
+category: Utility
+memory_category: Instances
+summary: |
+  A service which manages object collections using assigned tags.
+description: |
+  The `Class.CollectionService` manages groups (collections) of instances with
+  tags. Tags are sets of strings applied to objects that replicate from the
+  server to the client and in Team Create. They are also serialized when places
+  are saved. At the moment, tags are not visible within Roblox Studio except
+  with the use of a tag-editing plugin.
+
+  The primary use of `Class.CollectionService` is to register instances with
+  specific tags that you can use to extend their behavior. If you find yourself
+  adding the same script to many different objects, perhaps a script that uses
+  CollectionService would be better. Here are a couple examples:
+
+  - In an obstacle course with many bricks that kill players, don't paste the
+    same script in all your kill bricks! Instead, tag them with "KillBrick".
+    Then, have any brick tagged as such kill the player.
+  - Players with a VIP game pass could have their `Class.Humanoid` tagged "VIP",
+    and be allowed through doors that only allow VIPs.
+  - When creating a freeze-tag game, you could tag frozen players'
+    `Class.Humanoid` objects with a "Frozen" tag. Then, use a
+    `Class.LocalScript` to listen for the "Frozen" tag and create client-side
+    visual effects to reduce the number of objects replicated from server to
+    client.
+
+  When working with collections and tags, it's a good idea to use an
+  [object-oriented programming style](https://www.lua.org/pil/16.html). In
+  almost all situations, tagged objects have their own identity, state and
+  behavior. The pattern goes like this: when a tag is found
+  (`Class.CollectionService:GetTagged()` and
+  `Class.CollectionService:GetInstanceAddedSignal()`), create a Lua object with
+  the Roblox instance. When it is removed
+  (`Class.CollectionService:GetInstanceRemovedSignal()`), call a cleanup/destroy
+  method within the Lua object. See the code samples for a better idea of how
+  this can be done.
+
+  ## Replication
+
+  When tags replicate, **all tags on an object replicate at the same time**.
+  Therefore, if you set a tag on an object from the client then add/remove a
+  **different** tag on the same object from the server, the client's local tags
+  on the object are overwritten. In
+  `Class.Workspace.StreamingEnabled|StreamingEnabled` places, instances can be
+  unloaded as they leave the client's streamed area. If such an instance
+  re-enters the streamed area, properties and tags will be re-synchronized from
+  the server. This can cause changes made by `Class.LocalScript`s to be
+  overwritten/removed.
+code_samples:
+  - CollectionService-Door
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: CollectionService:AddTag
+    summary: |
+      Applies a tag to an `Class.Instance`.
+    description: |
+      AddTag will apply a tag to an `Class.Instance`, doing nothing if the tag
+      is already applied to the instance. Successfully adding a tag will fire a
+      signal created by `Class.CollectionService:GetInstanceAddedSignal()` with
+      the given tag.
+
+      **Warning:** When tagging an instance, it is common that some resources
+      are used to give the tag its functionality, e.g. event connections or
+      tables. To prevent memory leaks, it is a good idea to clean these up
+      (disconnect, set to nil, etc) when no longer needed for a tag. Do this
+      when calling `Class.CollectionService:RemoveTag()`, calling
+      `Class.Instance:Destroy()` or in a function connected to a signal returned
+      by `Class.CollectionService:GetInstanceRemovedSignal()`.
+    code_samples:
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService:GetAllTags
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: CollectionService:GetCollection
+    summary: |
+      Returns all instances of a given class which are in the `Class.DataModel`.
+    description: |
+      This function returns all instances of a given class which are in the
+      `Class.DataModel`. Only works for `Class.Configuration`,
+      `Class.CustomEvent`, `Class.CustomEventReceiver`, `Class.Dialog`, and
+      `Class.VehicleSeat`.
+    code_samples:
+      - CollectionService-GetCollection1
+    parameters:
+      - name: class
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by a `Class.CollectionService` tagging
+      method. The equivalent function using the new method is
+      `Class.CollectionService:GetTagged()` which should be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService:GetInstanceAddedSignal
+    summary: |
+      Returns a signal that fires when a given tag is added to an object.
+    description: |
+      GetInstanceAdded is given a tag (a string) and returns a signal which
+      fires under two conditions:
+
+      - The tag is assigned to an instance within the `Class.DataModel` (game)
+        using `Class.CollectionService:AddTag()`.
+      - An instance with the given tag is added as a descendant of the
+        `Class.DataModel`, e.g. by setting `Class.Instance.Parent` or similar.
+
+      Subsequent calls to this method with the same tag return the same signal
+      object. Consider also calling `Class.CollectionService:GetTagged()` to get
+      a list of objects that already have a tag (and thus won't fire the event
+      if they already are in the `Class.DataModel`).
+
+      See also `Class.CollectionService:GetInstanceRemovedSignal()`, which
+      returns an event that fires under similar conditions.
+    code_samples:
+      - Deadly-Bricks-using-CollectionService
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The tag to watch for.
+    returns:
+      - type: RBXScriptSignal
+        summary: |
+          An event that fires when you add the tag to an instance.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService:GetInstanceRemovedSignal
+    summary: |
+      Returns a signal that fires when a given tag is removed from an instance.
+    description: |
+      GetInstanceRemoved is given a tag (a string) and returns a signal which
+      fires under two conditions:
+
+      - The tag is removed from an instance within the `Class.DataModel` (game)
+        using `Class.CollectionService:RemoveTag()`.
+      - An instance with the given tag is removed as a descendant of the
+        `Class.DataModel`, e.g. by un-setting `Class.Instance.Parent` or
+        similar.
+
+      Subsequent calls to this method with the same tag return the same signal
+      object. The signal is useful for cleaning up resources used by objects
+      that once had tags, such as disconnecting connections.
+
+      See also `Class.CollectionService:GetInstanceAddedSignal()`, which returns
+      an event that fires under similar conditions.
+    code_samples:
+      - Deadly-Bricks-using-CollectionService
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The tag to watch for.
+    returns:
+      - type: RBXScriptSignal
+        summary: |
+          An event that fires when you remove the tag from an instance.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService:GetTagged
+    summary: |
+      Returns an array of objects in the game with a given tag.
+    description: |
+      GetTagged returns an array of objects with a given tag which are
+      descendants of the `Class.DataModel` (`game`). Such tags have been added
+      using `Class.CollectionService:AddTag()`, and removing a tag using
+      `Class.CollectionService:RemoveTag()` will ensure this method does not
+      return them. Although the name of this method is past-tense, this method
+      only returns objects **presently** tagged with the given tag. It will not
+      return objects that once had a tag but no longer have it.
+
+      If you want to detect all objects with a tag, both present and future, use
+      this method to iterate over objects while also making a connection to a
+      signal returned by `Class.CollectionService.GetinstanceAddedSignal`.
+
+      This method does not guarantee any ordering of the returned objects.
+      Additionally, it is possible that objects can have the given tag assigned
+      to them, but not be a descendant of the `Class.DataModel`, i.e. its parent
+      is nil. This method will not return such objects.
+    code_samples:
+      - Deadly-Bricks-using-CollectionService
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The tag to search for.
+    returns:
+      - type: Objects
+        summary: |
+          An array of all instances with the tag.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: CollectionService:GetTags
+    summary: |
+      Gets an array of all tags applied to a given object.
+    description: |
+      GetTags is given an instance and returns an array of strings, which are
+      the tags applied to the given object.
+
+      ```
+      local CollectionService = game:GetService("CollectionService")
+      local object = workspace.Model
+      local tags = CollectionService:GetTags(object)
+      print("The object " .. object:GetFullName() .. " has tags: " .. table.concat(tags, ", "))
+      ```
+
+      This method is useful when you want to do something with multiple tags at
+      once on an object. However, it would be inefficient to use this method to
+      check for the existence of a single tag. For this, use
+      `Class.CollectionService:HasTag()` to check for a single tag.
+    code_samples:
+      - Using-Tags-and-CollectionService
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The object whose tags should be returned.
+    returns:
+      - type: Array
+        summary: |
+          An array of strings which are the tags applied to the given object.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: CollectionService:HasTag
+    summary: |
+      Check whether an object has a given tag.
+    description: |
+      HasTag returns whether a given object has a tag.
+
+      - Using `Class.CollectionService:AddTag()` to add the tag will cause this
+        method to return true.
+      - Using `Class.CollectionService:RemoveTag()` to remove the tag will cause
+        this method to return false.
+
+      By extension, any tags returned by a call to
+      `Class.CollectionService:GetTags()` on an object will return true when
+      used with this method.
+    code_samples:
+      - Using-Tags-and-CollectionService
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The instance to check for the presence of a tag.
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The tag to check for.
+    returns:
+      - type: bool
+        summary: |
+          Whether the instance has the tag.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: CollectionService:RemoveTag
+    summary: |
+      Removes a tag from an instance.
+    description: |
+      RemoveTag will remove a tag from an instance. This method will not throw
+      an error if the object did not have the tag in the first place.
+      Successfully removing a tag will fire a signal created by
+      `Class.CollectionService:GetInstanceRemovedSignal()` with the given tag.
+
+      When removing a tag, it is common that some resources are used to give the
+      tag its functionality, e.g. event connections or tables. To prevent memory
+      leaks, it is a good idea to clean these up (disconnect, set to nil, etc)
+      when no longer needed for a tag.
+    code_samples:
+      - Using-Tags-and-CollectionService
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The instance to remove the tag from.
+      - name: tag
+        type: string
+        default:
+        summary: |
+          The tag to remove from the instance.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: CollectionService.ItemAdded
+    summary: |
+      Fires when a `Class.Configuration`, `Class.CustomEvent`,
+      `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
+      added to the `Class.DataModel`.
+    description: |
+      This function fires when a `Class.Configuration`, `Class.CustomEvent`,
+      `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
+      added to the `Class.DataModel`.
+    code_samples:
+      - CollectionService-ItemAdded1
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by a `Class.CollectionService` tagging
+      method. There is currently no means of checking when a tag is added.
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService.ItemRemoved
+    summary: |
+      Fires when a `Class.Configuration`, `Class.CustomEvent`,
+      `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
+      removed from the `Class.DataModel`.
+    description: |
+      This function fires when a `Class.Configuration`, `Class.CustomEvent`,
+      `Class.CustomEventReceiver`, `Class.Dialog`, or `Class.VehicleSeat` is
+      removed from the `Class.DataModel`.
+    code_samples:
+      - CollectionService-ItemRemoved1
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by a `Class.CollectionService` tagging
+      method. There is currently no means of checking when a tag is removed.
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService.TagAdded
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CollectionService.TagRemoved
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

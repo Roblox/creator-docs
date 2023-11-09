@@ -5,7 +5,7 @@ description: Explains the process for skinning a humanoid R15 model in Blender.
 
 A humanoid skinned mesh is a character model that, when posed or animated, bends and stretches naturally at its joints. You can create a skinned mesh using a third party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
 
-This is an advanced guide on skinning a humanoid model into an S15 model in Blender using the humanoid model completed in [Rigging a Humanoid Model](./rigging-a-humanoid-model.md). Before skinning a humanoid model, you should also familiarize yourself with the basic concepts in [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md).
+This is an advanced guide on skinning a humanoid model into an R15 model in Blender using the humanoid model completed in [Rigging a Humanoid Model](./rigging-a-humanoid-model.md). Before skinning a humanoid model, you should also familiarize yourself with the basic concepts in [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md).
 
 To skin a humanoid model in Blender, you need to:
 
@@ -20,7 +20,7 @@ settings.
 
 ## Setting Up Blender
 
-This guide uses the rigged model completed in [Rigging a Humanoid Model](./rigging-a-humanoid-model.md). You can also download rigged model [Blender project](../../assets/modeling/meshes/reference-files/lola-rigged-r15.blend) to follow along with this guide.
+This guide uses the rigged model completed in [Rigging a Humanoid Model](./rigging-a-humanoid-model.md). You can also download the rigged model [Blender project](../../assets/modeling/meshes/reference-files/lola-rigged-r15.blend) to follow along with this guide.
 
 To optimize the process of skinning a rigid character, first set up the following in your Blender project:
 
@@ -64,7 +64,7 @@ To enable Auto Normalize:
 1. In **Object Mode**, select the **armature**.
 2. Hold <kbd>Shift</kbd> and select **any mesh object** on your model.
 3. At the top of the 3D viewport, click on the Mode dropdown and switch to **Weight Paint** mode.
-4. On the right side fo the viewport, expand the **Tool** tab.
+4. On the right side of the viewport, expand the **Tool** tab.
 5. Under **Options**, enable **Auto Normalize**.
 
 <video controls src="../../assets/modeling/meshes/skinning-humanoid/2-auto-normalize.mp4" width="100%"></video>
@@ -104,7 +104,7 @@ To begin weight painting the Head mesh object:
 
 7. If additional painting is required, hold <kbd>Shift</kbd> and select the bone you want to add or remove influence from, and use the Brush tool to apply.
 
-The final result of weight painting the head of the model should balance the head mesh influences between the Head bone and the Upper Torso bone:
+The final result of weight painting the head of the model should balance the head mesh influences with the Head bone and the Upper Torso bone:
 
 <GridContainer numColumns="2">
   <figure>
@@ -220,5 +220,5 @@ To weight paint a partial strength influence to the upper torso:
 You can continue to weight paint the rest of the limbs of your model using these processes. When completed, you can [export](../../art/modeling/export-requirements.md) your skinned model as a `.fbx` using the Blender export settings for use in Studio. For reference, you can download a [Blender project](../../assets/modeling/meshes/reference-files/lola-skinned-s15.blend) with the model fully skinned.
 
 <Alert severity="warning">
-Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/avatar/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
 </Alert>

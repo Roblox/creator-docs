@@ -1,0 +1,28 @@
+name: SignalBehavior
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Immediate
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Deferred
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AncestryDeferred
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''

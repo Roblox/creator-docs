@@ -1,0 +1,52 @@
+name: ThumbnailSize
+type: enum
+summary: ''
+description: |
+  Describes the resolution of a user thumbnail being returned by
+  GetUserThumbnailAsync.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Size48x48
+    summary: |
+      Thumbnail resolution is 48 pixels x 48 pixels.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Size180x180
+    summary: |
+      Thumbnail resolution is 180 pixels x 180 pixels.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Size420x420
+    summary: |
+      Thumbnail resolution is 420 pixels x 420 pixels.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Size60x60
+    summary: |
+      Thumbnail resolution is 60 pixels x 60 pixels.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Size100x100
+    summary: |
+      Thumbnail resolution is 100 pixels x 100 pixels.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Size150x150
+    summary: |
+      Thumbnail resolution is 150 pixels x 150 pixels.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Size352x352
+    summary: |
+      Thumbnail resolution is 352 pixels x 352 pixels.
+    value: 6
+    tags: []
+    deprecation_message: ''

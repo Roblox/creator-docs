@@ -1,0 +1,19 @@
+name: StandalonePluginScripts
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  **StandalonePluginScripts** is a container of `Class.Script|Scripts` to be run
+  in a standalone plugin `Class.DataModel` when Roblox Studio starts (it is not
+  useful outside the context of plugins). When a place to be edited is loaded in
+  Roblox Studio, scripts inside this container are not run.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

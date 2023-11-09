@@ -41,7 +41,7 @@ To begin with, the script needs to restore a player's health. This pattern shoul
    end
    ```
 
-4. In the function, get the character model from the parent of `otherPart`. Next, check to see if it has a `Class.Humanoid` using `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA`.
+4. In the function, get the character model from the parent of `otherPart`. Next, check to see if it has a `Class.Humanoid` using `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA()`.
 5. If it has a humanoid, set their **Health** property to `MAX_HEALTH`.
 
    ```lua
@@ -58,7 +58,7 @@ To begin with, the script needs to restore a player's health. This pattern shoul
 
 <Alert severity="info">
 
-The code here calls `Class.BasePart.FindFirstChildWhichIsA|FindFirstChildWhichIsA` – which takes the **type** of the object desired – instead of `Class.BasePart.FindFirstChild|FindFirstChild` which only takes the name. This is a safer option as it can only ever return a Humanoid instead of something which just happens to be called "Humanoid".
+The code here calls `Class.Instance:FindFirstChildWhichIsA()|FindFirstChildWhichIsA()` – which takes the **type** of the object desired – instead of `Class.Instance:FindFirstChild()|FindFirstChild()` which only takes the name. This is a safer option as it can only ever return a Humanoid instead of something which just happens to be called "Humanoid".
 
 </Alert>
 
@@ -78,7 +78,7 @@ When called on a folder, the `GetChildren` function will return an array of the 
    local healthPickups = healthPickupsFolder:GetChildren()
 
    local function onTouchHealthPickup(otherPart, healthPickup)
-   local character = otherPart.Parent
+	local character = otherPart.Parent
    	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    	if humanoid then
    		humanoid.Health = MAX_HEALTH
@@ -200,7 +200,7 @@ The pickup should provide visual feedback that it is disabled - a common way to 
    end
    ```
 
-3. Call the `Global.RobloxGlobals.wait()|task.wait` function, passing `COOLDOWN` as the amount to wait.
+3. Call the `Library.task.wait()` function, passing `COOLDOWN` as the amount to wait.
 4. Set `Transparency` back to `ENABLED_TRANSPARENCY` and `Enabled` back to `true`.
 
    ```lua

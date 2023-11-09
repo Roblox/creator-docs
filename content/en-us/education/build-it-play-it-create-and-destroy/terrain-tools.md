@@ -30,8 +30,6 @@ Right now, the island may look a bit jagged. Next, you'll smooth out the terrain
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/ccs2019_terrainSmooth.png" />
 
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_showTerrainSmooth_optimized.gif" />
-
     <Alert severity="warning">
     To better see what your terrain looks like, remember to rotate your camera and see terrain from multiple angles, not just always from the top.
     </Alert>
@@ -39,8 +37,6 @@ Right now, the island may look a bit jagged. Next, you'll smooth out the terrain
 2. Remove unwanted terrain with the **Subtract** tool. This can be useful to quickly delete terrain that's overtaken the city.
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/ccs2019_terrainTools_subtract.png" />
-
-   <img src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_showTerrainSubtract_optimized.gif" />
 
 3. **Paint** sand and mud on the edges to create beaches. Paint changes the texture without changing the shape.
 

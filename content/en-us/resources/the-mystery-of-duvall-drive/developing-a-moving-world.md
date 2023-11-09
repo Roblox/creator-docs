@@ -112,7 +112,7 @@ else
 	parentTransform = parentObj.CFrame
 end
 
-curObjInfo.curAngle = curObjInfo.curAngle + dT * curObjInfo.timeToAngle
+curObjInfo.curAngle += dT * curObjInfo.timeToAngle
 local rotatedLocalCFrame = curObjInfo.origLocalCFrame * CFrame.Angles( curObjInfo.axisMask.X * curObjInfo.curAngle, curObjInfo.axisMask.Y * curObjInfo.curAngle, curObjInfo.axisMask.Z * curObjInfo.curAngle )
 
 if(obj:IsA("Model")) then
@@ -167,7 +167,7 @@ local function LightningFunc(info)
 	…
 ```
 
-In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use wait(number). Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
+In addition, we run the sequence to set textures, positions, and brightness, run tweens, and use `Library.task.wait()|task.wait(number)`. Randomized parameters are from the info structure that we received from the server, and some numbers are fixed.
 
 ```lua
 beam.Texture = textures[info.textIdx]
@@ -193,7 +193,7 @@ if(audioFolder and audioPart) then
 	end
 end
 
-wait(info.waitTillFlashes)
+task.wait(info.waitTillFlashes)
 
 -- and so on
 
@@ -223,7 +223,7 @@ After we had the clouds and the lightning working the way we wanted it to, we th
 We knew to really sell the effect of the wind and rain, we needed the trees themselves to move. There are a few ways you can do this within the engine, including moving parts using [plugins](../../studio/plugins.md) that are publicly available, using `Class.TweenService`, or animating models directly. For our purposes, animations gave us the ability to control the motion we wanted out of our trees, and it allowed us to use a single animation we could share among all trees within the experience.
 
 <Alert severity="warning">
-There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your experience, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the official [skinned meshes documentation](../../art/modeling/skinning.md) for the most up-to-date information.
+There are pros and cons with any of these systems, and one of the cons for animations specifically skinned meshes are not currently instanced. This means that the more skinned meshes you use in your experience, the greater the impact on performance because of the memory cost, so we used them sparingly for the effect we wanted. At some point this will be resolved, so be sure to check the [rigging and skinning documentation](../../art/modeling/rigging.md) for the most up-to-date information.
 </Alert>
 
 We started by skinning several trees from the [Endorse Model Pack - Forest Assets](https://www.roblox.com/library/6432306802/Forest-Pack). Since these trees already existed, and our experience took place in the Pacific Northwest, it saved us some time early on from having to create each tree model.
@@ -233,7 +233,7 @@ We started by skinning several trees from the [Endorse Model Pack - Forest Asset
   <figcaption>The Forest pack contains several tree types, which can save you time in your own experiences.</figcaption>
 </figure>
 
-After we picked our trees, we knew we needed to skin them. **[Skinning a mesh](../../art/modeling/skinning.md)** is the act of adding joints (or bones) to a mesh in another 3D modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), then applying influence to those joints/bones to move the mesh. This is most commonly used in [humanoid characters](../../art/modeling/skinning-a-humanoid-model.md), but with [custom characters](../../art/modeling/skinning-a-simple-mesh.md), you can skin pretty much anything.
+After we picked our trees, we knew we needed to skin them. [Skinning a mesh](../../art/modeling/rigging.md) is the act of adding joints (or bones) to a mesh in another 3D modeling application, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), then applying influence to those joints/bones to move the mesh. This is most commonly used in [humanoid characters](../../art/modeling/skinning-a-humanoid-model.md), but with [custom characters](../../art/modeling/skinning-a-simple-mesh.md), you can skin pretty much anything.
 
 We knew we wanted to save time and reuse the same animation, so we built our first tree rig and made sure the joint names were generic because we wanted to use these same names in the rigs for the other trees. We also knew we needed to include primary, secondary, and tertiary joints/bones for the trunks to bend with the wind, the branches to swing, and the leaves to seem like they were shaking in response. For this process, we needed to create a **secondary motion**, which is an animation concept where any action causes other parts of the object to react to that action and appear to catch up with the initial movement.
 
@@ -263,7 +263,7 @@ To do this, we took the Beechwood tree from that Forest Pack and built a similar
   <figcaption>The Beechwood tree has the same exact naming for its joints, just not the same amount. This is fine since the animation system will only apply animation to those specific joints that match the name in it! For this reason, we could apply the same animations to anything that matched the joint names!</figcaption>
 </figure>
 
-After we [rigged](../../art/modeling/rigging.md) and [skinned](../../art/modeling/skinning.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the experience.
+After we [rig and skin](../../art/modeling/rigging.md) the Beechwood tree, we could then import it and apply the exact same animation. This meant iterating and editing only needed to be done on one file, and it also saved on performance with fewer animations when running the experience.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/redwood-tree-animation.png" width="80%" />
@@ -370,7 +370,7 @@ In order to add a supernatural feeling to the eye and to emphasize its presence,
   <figcaption>The vertex painting on the inner sphere. We created a gradient that was lightest around the eye in order to give a greater sense of depth and visual interest.</figcaption>
 </figure>
 
-Another challenge we ran into when creating the eye was imposed by our use of [Streaming Enabled](../../workspace/streaming.md) combined with the eye's distance from the player. Given the centrality of this structure, we wanted it to always be visible despite its distance but, without any hacks to its mesh, players were not able to see the eye unless they were in the solarium. We were able to force the eye's constant presence in the scene by adding some geometry to the eye and its rings. This geometry sits right below the terrain's surface, and this is enough to trick the engine into thinking the sphere is closer to the player than it is and always streaming it in. This should be done pretty sparingly though as forcing too many large objects to be streamed in could negate the benefits of streaming enabled and negatively impact game performance.
+Another challenge we ran into when creating the eye was imposed by our use of [streaming](../../workspace/streaming.md) combined with the eye's distance from the player. Given the centrality of this structure, we wanted it to always be visible despite its distance but, without any hacks to its mesh, players were not able to see the eye unless they were in the solarium. We were able to force the eye's constant presence in the scene by adding some geometry to the eye and its rings. This geometry sits right below the terrain's surface, and this is enough to trick the engine into thinking the sphere is closer to the player than it is and always streaming it in. This should be done pretty sparingly though as forcing too many large objects to be streamed in could negate the benefits of streaming enabled and negatively impact game performance.
 
 We were able to add movement to the eye and its rings thanks to the same script we used to [rotate the cloud meshes](#rotating-cloud-meshes). For a final touch, we decided to add a hint to the presence of another world beyond the clouds, but we had to take a creative approach in order to avoid adding more geometry to the scene and additionally having to deal with the previously mentioned hurdles posed by streaming enabled. We created a scene that had a lot of depth due to the relative size and distance of objects, rendered an image of this scene, then used said image as a [decal](../../parts/textures-decals.md) on a part placed just behind the eye of the storm. We used the same method for rotating this part as we used for the eye and its rings.
 
@@ -421,6 +421,7 @@ Because `Class.TweenService` is such a general system, all our wall data model h
 That same script, with some modifications in the following code sample, also triggered audio for the pantry moving. This added a lot to the movement!
 
 ```lua
+local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 
 local model = script.Parent
@@ -492,7 +493,7 @@ tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
 	if(otherPart.Name == "HumanoidRootPart" ) then
-		local player = game.Players:FindFirstChild(otherPart.Parent.Name)
+		local player = Players:FindFirstChild(otherPart.Parent.Name)
 		if(player) then
 			--print("touch")
 			playersNear[player] = 1
@@ -537,7 +538,7 @@ To do this, we needed to first use assets from our current kit and add any new c
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/base-piece.png" width="100%" />
 
-We knew that since we were using constraints, we wouldn't be able to anchor these meshes because they wouldn't move even with the presence of a constraint/motor driving them. The constraint needed to be a child of something that was anchored in order for the platform to not just fall out of the world. We solved this through an part we named **Motor_Anchor** that had a [hinge constraint](../../physics/mechanical-constraints.md#hingeconstraint) to drive the overall movement of the platform. After that, we needed the two meshes to move as one, so we created a part we named **Motor_Turn**, then we welded the two meshes to it. This way the constraint would be able to work on a single part, as opposed to multiple hinges working with multiple parts.
+We knew that since we were using constraints, we wouldn't be able to anchor these meshes because they wouldn't move even with the presence of a constraint/motor driving them. The constraint needed to be a child of something that was anchored in order for the platform to not just fall out of the world. We solved this through a part we named **Motor_Anchor** that had a [hinge constraint](../../physics/mechanical-constraints.md#hingeconstraint) to drive the overall movement of the platform. After that, we needed the two meshes to move as one, so we created a part we named **Motor_Turn**, then we welded the two meshes to it. This way the constraint would be able to work on a single part, as opposed to multiple hinges working with multiple parts.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/unanchored-platform.png" width="100%" />
 

@@ -1,0 +1,288 @@
+name: PluginGui
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  PluginGui is an abstract class for GUIs that allow the display of
+  `Class.GuiObject|GuiObjects` in various Roblox Studio widgets. As of right
+  now, the only available PluginGui type is `Class.DockWidgetPluginGui`, but
+  there may be more in the future!
+code_samples:
+inherits:
+  - LayerCollector
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PluginGui.Title
+    summary: |
+      The title that is displayed above the contents of the `Class.PluginGui`.
+    description: |
+      The title that is displayed above the contents of the `Class.PluginGui`.
+      Defaults to empty string.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: PluginGui:BindToClose
+    summary: |
+      Binds a function to the `Class.PluginGui|PluginGui's` close button,
+      overriding the default behavior.
+    description: |
+      This function binds a function to the `Class.PluginGui|PluginGui's` close
+      button, overriding the default behavior.
+
+      By default, when the user clicks the 'x' button in the top right corner of
+      the `Class.PluginGui` the `Class.LayerCollector.Enabled|Enabled` property
+      is set to _false_, closing the window. When a custom function is bound
+      using BindToClose this behavior is overwritten, allowing you to check if
+      the user really wants to close the window or give them an opportunity to
+      save their work.
+
+      As the default closing behavior is overwritten by this function, you'll
+      need to configure the `Class.PluginGui` to close manually by setting
+      `Class.LayerCollector.Enabled|PluginGui.Enabled` to _false_. For example,
+      in the below snippet users are required to click a confirm button to close
+      the GUI:
+
+      ```lua
+      local closing = false
+      pluginGui:BindToClose(function()
+      	-- make sure we haven't already made a button
+      	if closing then
+      		return
+      	end
+      	closing = true
+
+      	-- create confirm button
+      	local confirmButton = Instance.new("TextButton")
+      	confirmButton.AnchorPoint = Vector2.new(0.5, 0.5)
+      	confirmButton.Size = UDim2.new(0.5, 0, 0.5, 0)
+      	confirmButton.Position = UDim2.new(0.5, 0, 0.5, 0)
+      	confirmButton.BackgroundColor3 = Color3.new(1, 0, 0)
+      	confirmButton.Text = "Close?"
+      	confirmButton.Parent = pluginGui
+
+      	-- listen for click
+      	confirmButton.Activated:Connect(function()
+      		-- close the gui
+      		pluginGui.Enabled = false
+
+      		-- remove confirm button
+      		confirmButton:Destroy()
+      	end)
+      end)
+      ```
+
+      You can call BindToClose with no argument to 'unbind' and revert to the
+      default behavior described above. For example:
+
+      ```lua
+      pluginGui:BindToClose()
+      ```
+
+      See also:
+
+      - `Class.Plugin:CreateDockWidgetPluginGui()` to create a `Class.PluginGui`
+      - `Class.DataModel:BindToClose()`, which can be used to bind a function to
+        the game ending and should not be confused with this function
+    code_samples:
+    parameters:
+      - name: function
+        type: Function
+        default: nil
+        summary: |
+          The function to bind the close button to. If no function is specified
+          then any previously specified function will be unbound.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PluginGui:GetRelativeMousePosition
+    summary: |
+      Returns the position of the mouse relative to the PluginGui.
+    description: |
+      GetRelativeMousePosition returns the position of the mouse relative to the
+      top-left corner of the `Class.PluginGui`. The returned value changes only
+      if a mouse input began on the PluginGui, or if the mouse is presently
+      hovering over the window.
+    code_samples:
+      - plugingui-getrelativemouseposition
+    parameters: []
+    returns:
+      - type: Vector2
+        summary: |
+          The screen position of the mouse relative to the PluginGui in pixels.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: PluginGui.PluginDragDropped
+    summary: |
+      Fires when the user releases their mouse when hovering over a PluginGui
+      during a drag operation started by `Class.Plugin:StartDrag()`.
+    description: |
+      **PluginDragDropped** fires when the user releases their mouse over a
+      `Class.PluginGui` during a drag operation started by
+      `Class.Plugin:StartDrag()`.
+
+      See also:
+
+      - `Class.PluginGui.PluginDragEntered`
+      - `Class.PluginGui.PluginDragLeft`
+      - `Class.PluginGui.PluginDragMoved`
+    code_samples:
+      - plugin-drag-and-drop
+    parameters:
+      - name: dragData
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginGui.PluginDragEntered
+    summary: |
+      Fires when the user's mouse enters a PluginGui during a drag operation
+      started by `Class.Plugin:StartDrag()`.
+    description: |
+      **PluginDragEntered** fires when the user's mouse enters the
+      `Class.PluginGui` during a drag operation started by
+      `Class.Plugin:StartDrag()`.
+
+      This event is useful for displaying a "Drop Here" UI on PluginGuis where a
+      drag operation can be dropped. Such a UI should be hidden when either
+      `Class.PluginGui.PluginDragLeft|PluginDragLeft` or
+      `Class.PluginGui.PluginDragDropped|PluginDragDropped` fire.
+
+      See also:
+
+      - `Class.PluginGui.PluginDragLeft`
+      - `Class.PluginGui.PluginDragMoved`
+      - `Class.PluginGui.PluginDragDropped`
+    code_samples:
+      - plugin-drag-and-drop
+    parameters:
+      - name: dragData
+        type: Dictionary
+        default:
+        summary: |
+          A copy of the data originally passed to `Class.Plugin:StartDrag()`.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginGui.PluginDragLeft
+    summary: |
+      Fires when the user's mouse leaves a PluginGui during a drag operation
+      started by `Class.Plugin:StartDrag()`.
+    description: |
+      **PluginDragLeft** fires when the user's mouse leaves a `Class.PluginGui`
+      during a drag operation started by `Class.Plugin:StartDrag()`.
+
+      This event and `Class.PluginGui.PluginDragDropped|PluginDragDropped` are
+      useful for hiding a "Drop Here" UI on PluginGuis where a drag operation
+      can be dropped. Such a UI should be shown when either
+      `Class.PluginGui.PluginDragEntered|PluginDragEntered` fires.
+
+      See also:
+
+      - `Class.PluginGui.PluginDragEntered`
+      - `Class.PluginGui.PluginDragMoved`
+      - `Class.PluginGui.PluginDragDropped`
+    code_samples:
+      - plugin-drag-and-drop
+    parameters:
+      - name: dragData
+        type: Dictionary
+        default:
+        summary: |
+          A copy of the data originally passed to `Class.Plugin:StartDrag()`.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginGui.PluginDragMoved
+    summary: |
+      Fires when the user's mouse moves within a PluginGui during a drag
+      operation started by `Class.Plugin:StartDrag()`.
+    description: |
+      **PluginDragMoved** fires when the user's mouse moves within a
+      `Class.PluginGui` during a drag operation started by
+      `Class.Plugin:StartDrag()`.
+
+      See also:
+
+      - `Class.PluginGui.PluginDragEntered`
+      - `Class.PluginGui.PluginDragLeft`
+      - `Class.PluginGui.PluginDragDropped`
+    code_samples:
+    parameters:
+      - name: dragData
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginGui.WindowFocusReleased
+    summary: |
+      Fires when the user stops interacting with the window of the PluginGui.
+    description: |
+      **WindowFocusReleased** fires immediately when the user stops interacting
+      with the PluginGui's window, usually by clicking on something not in the
+      window. This functions works similarly to the similarly-named
+      `Class.UserInputService.WindowFocusReleased` event.
+
+      If focus is moving to another `Class.PluginGui` while the user had this
+      PluginGui in focus, then this event fires before the other's
+      `Class.PluginGui.WindowFocused|WindowFocused` event. However, if the main
+      game window is being put in focus, this event fires **after**
+      `Class.UserInputService.WindowFocused`.
+    code_samples:
+      - plugingui-focus
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: PluginGui.WindowFocused
+    summary: |
+      Fires when the user begins interacting with the window of the PluginGui.
+    description: |
+      **WindowFocused** fires immediately when the user starts interacting with
+      the PluginGui's window, usually by clicking on it. This functions works
+      similarly to the similarly-named `Class.UserInputService.WindowFocused`
+      event. It fires before any `Class.GuiObject.InputBegan` events related to
+      mouse buttons.
+
+      If another `Class.PluginGui` is in focus and the user focuses this
+      PluginGui, then this event fires after the other's
+      `Class.PluginGui.WindowFocusReleased|WindowFocusReleased` event. However,
+      if the main game window was in focus, this event fires **after**
+      `Class.UserInputService.WindowFocusReleased`.
+    code_samples:
+      - plugingui-focus
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

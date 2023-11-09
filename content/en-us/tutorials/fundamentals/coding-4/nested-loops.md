@@ -64,12 +64,12 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
        print("Inner loop: part " .. partNumber)
        -- Track parts baked
        partsMade = partsMade + 1
-       wait(.5)
+       task.wait(.5)
      end
 
      print("Bottom outer loop: " .. partsMade .. " parts made so far.")
 
-     wait(2)
+     task.wait(2)
    end
    ```
 
@@ -234,7 +234,7 @@ The script will have three loops total, one each for the length, width, and heig
            for widthIndex = 1, TOWER_SIZE do
          local spawnZ = widthIndex * CUBE_SIZE
          makecube(spawnX, spawnY, spawnZ)
-         wait(0.25)
+         task.wait(0.25)
      end
        end
    end
@@ -251,7 +251,7 @@ The script will have three loops total, one each for the length, width, and heig
            for widthIndex = 1, TOWER_SIZE do
                local spawnZ = widthIndex * CUBE_SIZE
                makecube(spawnX, spawnY, spawnZ)
-               wait(0.25)
+               task.wait(0.25)
            end
        end
    end
@@ -300,7 +300,7 @@ for heightIndex = 1, TOWER_SIZE do
         for widthIndex = 1, TOWER_SIZE do
             local spawnZ = widthIndex * CUBE_SIZE
             makecube(spawnX, spawnY, spawnZ)
-            wait(0.05)
+            task.wait(0.05)
         end
     end
 end
@@ -353,7 +353,7 @@ for cupcakeBatch = 1, numberOfBatches do
 		print("Inner loop: cupcake " .. cupcakeNumber)
 	 -- Track muffins baked
 		cupcakesBaked = cupcakesBaked + 1
-		wait(.5)
+		task.wait(.5)
 end
 
 print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")

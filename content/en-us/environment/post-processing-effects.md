@@ -144,6 +144,8 @@ parts of your experience, such as an item in a shop.
   </figure>
 </GridContainer>
 
+<img src="../assets/legacy/DepthOfField-Diagram.svg" width="80%" />
+
 ## Sun Rays
 
 The

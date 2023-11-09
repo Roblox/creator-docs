@@ -32,8 +32,7 @@ design:
 engine guides:
   - any:
       [
-        'content/en-us/**/*.md',
-        'content/common/navigation/engine/guides.yaml',
+        'content/en-us/**/*',
         '!content/en-us/art/**/*',
         '!content/en-us/assets/**/*',
         '!content/en-us/cloud/**/*',
@@ -44,9 +43,11 @@ engine guides:
         '!content/en-us/studio/**/*',
         '!content/en-us/tutorials/**/*',
       ]
+  - 'content/common/navigation/engine/guides.yaml'
 
 engine reference:
-  - 'content/en-us/reference/**/*.yaml'
+  - 'content/en-us/reference/engine/**/*'
+  - 'content/common/navigation/engine/reference.yaml'
 
 navigation:
   - 'content/common/navigation/**/*'

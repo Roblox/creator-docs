@@ -1,0 +1,28 @@
+name: AvatarPromptResult
+type: enum
+summary: |
+  The result of prompt operations of `Class.AvatarEditorService`.
+description: |
+  The result of prompt operations of `Class.AvatarEditorService`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: |
+      The prompted action was completed.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PermissionDenied
+    summary: |
+      Denied permission to take the prompted action.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Failed
+    summary: |
+      Failure while trying to take the prompted action.
+    value: 3
+    tags: []
+    deprecation_message: ''

@@ -90,7 +90,7 @@ Currently, Assets API supports the following types of assets:
 
 ## Uploading an Asset
 
-For both creating a new asset and updating an existing asset to a new version using Assets API, you need to [Create an API key](../../cloud/open-cloud/managing-api-keys.md#creating-api-keys) on [Creator Dashboard](https://create.roblox.com/credentials). If you want to use the API key to manage your individually-owned assets, create the API key under your account. If you want to use the API key to manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-Owned API Key Permissions](../../cloud/open-cloud/managing-api-keys.md#group-owned-api-key-permissions).
+For both creating a new asset and updating an existing asset to a new version using Assets API, you need to [Create an API key](./api-keys.md#creating-api-keys) on [Creator Dashboard](https://create.roblox.com/credentials). If you want to use the API key to manage your individually-owned assets, create the API key under your account. If you want to use the API key to manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-Owned API Key Permissions](./api-keys.md#group-owned-api-key-permissions).
 
 Once you create an API key, you can't switch its ownership between individuals or groups. If you create an API key under your own account, you can't use it for managing group assets.
 
@@ -147,7 +147,7 @@ Currently, you can only update models. Audio and decals don't have version contr
    1. Navigate to the [Creation](https://create.roblox.com/creations) page of **Creator Dashboard**.
    1. Select the **DEVELOPMENT ITEMS** category.
    1. Select the category of your asset and find the target asset.
-   1. Hover over the thumbnail of the target asset and click the **...** button to display a list of options, then select **Copy Asset ID** from the list.
+   1. Hover over the thumbnail of the target asset and click the **&ctdot;** button to display a list of options, then select **Copy Asset ID** from the list.
       <img src="../../assets/open-cloud/copy-asset-id.png" width="50%" />
 1. Add the file path and content type of your asset in your request.
 
@@ -215,7 +215,7 @@ Third-Party app support through OAuth 2.0 is a Beta feature that might be subjec
 
 To use Assets API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](../../cloud/open-cloud/app-registration.md#registering-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
+1. When [registering your application](./oauth2-registration.md#registering-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
 
 1. When [implementing the authorization flow](../../cloud/open-cloud/oauth2-overview.md#implementing-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
 

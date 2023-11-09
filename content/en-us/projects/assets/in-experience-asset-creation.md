@@ -29,11 +29,15 @@ The following example server-side script prompts users to save a car that they p
 
 ```lua title="Example Script for In-Experience Asset Creation"
 
+-- Define the AssetService variable
+local AssetService = game:GetService("AssetService")
+
 -- Set up PromptCreateAssetAsync() for prompting the submission dialog
 local function CreateAsset(player, instance)
 	local complete, result, assetId = pcall(function()
-		return assetservice:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
+		return AssetService:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
 	end)
+
 	if complete then
 		if result == Enum.PromptCreateAssetResult.Success then
 			print("successfully uploaded, AssetId: ", assetId)
@@ -50,19 +54,20 @@ end
 
 -- Add an event handler
 local function onUserPublish(player, promptObject)
-	-- User save the car instance with the experience default color
-	if promptObject.name == "car" then
-		createAsset(player, car)
-	elseif promptObject.name == "CarPaintYellow" or promptObject.name == "CarPaintBlue" or promptObject.name == "CarPaintBlack" or promptObject.name == "CarPaintRed" then
-		PaintCarColor(promptObject.name)
+	-- User saves the car instance with the experience's default color
+	if promptObject.Name == "car" then
+		CreateAsset(player, car)
+	elseif promptObject.Name == "CarPaintYellow" or promptObject.Name == "CarPaintBlue" or promptObject.Name == "CarPaintBlack" or promptObject.Name == "CarPaintRed" then
+		PaintCarColor(promptObject.Name)
 	end
 end
 
 PublishEvent.OnServerEvent:Connect(onUserPublish)
 ```
 
-[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit in Studio** option to reference the design.
-<img src="../../assets/in-experience-creation/edit-in-studio.jpg" width="90%" alt="A screenshot shows where to find the Edit in Studio option"/>
+[In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit&nbsp;in&nbsp;Studio** option to reference the design.
+
+<img src="../../assets/misc/In-Experience-Creation-Place.jpg" width="90%" alt="Edit in Studio option from the demo experience's main page" />
 
 ## Post-Creation and Attribution
 
@@ -71,11 +76,11 @@ After users create and save an asset from your experience, they can find it in t
 - Their [My Inventory](https://en.help.roblox.com/hc/en-us/articles/360000463726-How-to-View-or-Hide-Your-Inventory-in-a-Browser) page.
 - The **Creations** tab of their [Profile](https://en.help.roblox.com/hc/en-us/articles/203313660-All-About-Profiles-Blurbs-and-Profile-Customization) page.
 - The **Development Items** tab under their Creator Dashboard [Creations](https://create.roblox.com/dashboard/creations?activeTab=Model) page.
-- Their [Inventory Toolbox](../../projects/assets/toolbox.md#inventory) in Studio.
+- The **Inventory** tab of their [Toolbox](../../projects/assets/toolbox.md) in Studio.
 
 When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
 
-<img src="../../assets/in-experience-creation/example-attribution.png" width="24%" alt="A screenshot shows the attribution of an in-experience creation"/>
+<img src="../../assets/creator-dashboard/In-Experience-Creation-Attribution.png" width="24%" alt="A screenshot shows the attribution of an in-experience creation"/>
 
 <Alert severity="warning">
 Attribution is currently tied to a specific version of the created asset. If a user saves a package from an experience and further edits in Studio to create a new version, attribution no longer displays for the new version.

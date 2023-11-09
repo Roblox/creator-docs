@@ -1,0 +1,23 @@
+name: FramerateManagerMode
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: 'On'
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: 'Off'
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

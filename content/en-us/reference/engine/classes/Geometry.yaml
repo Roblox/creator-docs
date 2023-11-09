@@ -1,0 +1,20 @@
+name: Geometry
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal Roblox service which cannot be used by developers.
+description: |
+  An ancient internal Roblox service, which appears to be responsible for all
+  raw geometry shown in the game.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,33 @@
+name: SelfViewPosition
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: LastPosition
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TopLeft
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TopRight
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BottomLeft
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BottomRight
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''

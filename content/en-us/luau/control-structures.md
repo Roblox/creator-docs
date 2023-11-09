@@ -16,7 +16,7 @@ The condition for `if` statements, `while` loops, and `repeat` loops can be any 
 
 The basic `if` statement tests its condition. If the condition is true, then Luau executes the code between `then` and `end`.
 
-Ypu can use an `elseif` statements to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
+You can use an `elseif` statement to test for additional conditions if the `if` condition is false. You can use an `else` statement to execute code if all `if` and `elseif` conditions fail. The `elseif` and `else` parts are both optional, but you can't use either without an initial `if` statement.
 
 In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from top to bottom, stops at the first `true` condition, and executes the code that follows it.
 
@@ -24,13 +24,9 @@ In a chain of `if`, `elseif`, and `else` conditions, Luau tests conditions from 
 if 2 + 2 == 5 then
 	print("Two plus two is five") -- Doesn't print because the condition is false
 elseif 2 + 3 == 5 then
-	print("Two plus three is five") -- Doesn't print because the condition is false
-else
-	print("What is two plus two?") -- What is two plus two?
-end
-
-if 2 + 3 == 5 then
 	print("Two plus three is five") -- Two plus three is five
+else
+	print("All conditions failed") -- Doesn't print because the previous condition is true
 end
 ```
 
@@ -43,7 +39,7 @@ local timeRemaining = 10
 
 while timeRemaining > 0 do
 	print("Seconds remaining: " .. timeRemaining)
-	wait(1)
+	task.wait(1)
 	timeRemaining = timeRemaining - 1
 end
 
@@ -70,7 +66,7 @@ You can use a `while`—`do` loop to write infinite game loops by setting `true`
 ```lua
 while true do
 	print("Looping...")
-	wait(0.5)
+	task.wait(0.5)
 end
 
 --[[ Resulting output:
@@ -83,7 +79,7 @@ Looping...
 ```
 
 <Alert severity="error">
-Always include a delay such as <InlineCode>wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
+Always include a delay such as <InlineCode>task.wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
 </Alert>
 
 ## Repeat Loops
@@ -128,7 +124,7 @@ The optional increment defaults to `1`. It doesn't need to be a whole number.
 
 ```lua
 for counter = 1, 3 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -138,7 +134,7 @@ end
 ]]
 
 for counter = 1, 6, 2 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -148,7 +144,7 @@ end
 ]]
 
 for counter = 2, 0, -0.5 do
-	print(count)
+	print(counter)
 end
 
 --[[ Resulting output:
@@ -165,6 +161,46 @@ end
 The generic `for` loop iterates over items in a collection rather than a sequence of numbers. With generic `for` loops, you can execute code for each item in the collection, and can easily use each item in the code.
 
 For loops need a function, or iterator, to iterate over different types of collections. The global `ipairs()` returns an iterator for arrays, and the global `pairs()` returns an iterator for dictionaries. The `Library.string` library provides `Library.string.gmatch()` to iterate over strings.
+
+### Generalized Iteration
+
+In Luau, you can iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
+
+```lua
+for i, v in {1, 2, 3, 4, 5} do
+	print(i, v)
+end
+```
+
+Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function. This contrived example iterates over an array in reverse order, from its last element to its first:
+
+```lua
+local myTable = {1, 2, 3, 4, 5}
+
+myMetatable = {
+	__iter = function(self)
+		local i = #self
+		local firstRun = true
+		return function()
+			if firstRun then
+				firstRun = false
+				return i, self[i]
+			else
+				i -= 1
+				if i > 0 then
+					return i, self[i]
+				end
+			end
+		end
+	end
+}
+
+setmetatable(myTable, myMetatable)
+
+for i, v in myTable do
+	print(i, v)
+end
+```
 
 #### Arrays
 
@@ -221,9 +257,9 @@ local secondsElapsed = 0
 local timeout = 5
 
 while true do
-	print("Seconds elapsed:", secondsElapsed)
-	wait(1)
+	task.wait(1)
 	secondsElapsed = secondsElapsed + 1
+	print("Seconds elapsed:", secondsElapsed)
 
 	if secondsElapsed == timeout then
 		break
@@ -233,7 +269,7 @@ end
 print("Five seconds elapsed. Time to move on!")
 
 --[[ Resulting output:
-0
+1
 2
 3
 4

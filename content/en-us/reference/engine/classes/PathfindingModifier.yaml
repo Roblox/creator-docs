@@ -1,0 +1,77 @@
+name: PathfindingModifier
+type: class
+category:
+memory_category: Instances
+summary: |
+  Modifiers used to represent space that has a higher or lower cost to be
+  traversed when creating paths using the `Class.PathfindingService`.
+description: |
+  Pathfinding modifiers can be used to represent space that has a higher or
+  lower cost to be traversed. When added as a child to a `Class.Part`, it takes
+  that Part's volume to annotate areas of the navmesh that are inside and on top
+  of it.
+
+  You can include pathfinding modifiers in the
+  `Class.PathfindingService:CreatePath()` parameters and compute smarter paths
+  across various materials or around defined regions.
+
+  Note that when adding a `Class.PathfindingModifier` to a part, **either**:
+
+  - The part is `Class.BasePart.CanCollide|collidable` and we are interested in
+    modifying pathfinding costs of paths on top of this part, which we call
+    **area**.
+  - The part is `Class.BasePart.CanCollide|non-collidable` (and usually
+    invisible in game) and we are interested in modifying pathfinding costs of
+    paths inside the part, which we call **volume**.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: PathfindingModifier.Label
+    summary: |
+      The name of the navigation area inside or on top of the
+      `Class.Part|Part's` volume.
+    description: |
+      The name of the navigation area inside or on top of the
+      `Class.Part|Part's` volume.
+
+      For a more detailed overview of `Class.PathfindingService` and
+      `Class.PathfindingModifier`, see
+      [Character Pathfinding](../../../characters/pathfinding.md).
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PathfindingModifier.PassThrough
+    summary: |
+      Determines if the parts enclosed by the modifier are traversable, even if
+      they would normally be collided with.
+    description: |
+      Determines if the parts enclosed by the modifier are traversable, even if
+      they would normally be collided with. See
+      [Character Pathfinding](../../../characters/pathfinding.md) for details.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -35,7 +35,7 @@ local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 ### Scopes
 
 <Alert severity="warning">
-  If you aren't currently using the legacy scopes feature, use <a href="#listing-and-prefixes">listing and prefixes</a> to organize keys in your data store.
+  For new experiences, it is not recommended to use the legacy scopes feature. Instead, use [listing and prefixes](#listing-and-prefixes) to organize keys in your data store. If you have an existing experience that uses scopes, you can continue using them.
 </Alert>
 
 Every key in a data store has a default "global" scope, but you can further organize keys by setting a unique string as a scope for the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()`. This automatically prepends the scope to all keys in all operations done on the data store.
@@ -159,7 +159,7 @@ end
 ```
 
 <Alert severity="warning">
-  Functions like `Class.GlobalDataStore:SetAsync()|SetAsync()` that access a data store's contents are network calls that may occasionally fail. As shown above, it's recommended that these calls be wrapped in <InlineCode>pcall()</InlineCode> to catch and handle errors.
+  Functions like `Class.GlobalDataStore:SetAsync()|SetAsync()` that access a data store's contents are network calls that may occasionally fail. As shown above, it's recommended that these calls be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.
 </Alert>
 
 ### Reading Data
@@ -180,7 +180,7 @@ end
 ```
 
 <Alert severity="warning">
-  `Class.GlobalDataStore:GetAsync()|GetAsync()` caches the data for 4 seconds, so the returned value is not guaranteed to be the one saved on Roblox servers.
+  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](#caching) behavior. To opt out of caching, see [Disabling caching](#disabling-caching).
 </Alert>
 
 ### Incrementing Data
@@ -205,7 +205,7 @@ end
 `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` changes any stored value in a data store. This function requires the key name of the entry plus a **callback function** which defines how the entry should be updated. This callback takes the current value and returns the new value, based on whatever logic you define. If the callback returns `nil`, the write operation is cancelled and the value remains unchanged.
 
 <Alert severity="warning">
-  The callback function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` is <b>not</b> permitted to yield, so it cannot contain any yielding function like <InlineCode>task.wait()</InlineCode>.
+  The callback function passed into `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` is <b>not</b> permitted to yield, so it cannot contain any yielding function like `Library.task.wait()`.
 </Alert>
 
 ```lua
@@ -294,7 +294,7 @@ if success then
 		-- Get the current (first) page
 		local entries = pages:GetCurrentPage()
 		-- Iterate through all key-value pairs on page
-		for _, entry in pairs(data) do
+		for _, entry in pairs(entries) do
 			print(entry.key .. " : " .. tostring(entry.value))
 		end
 		-- Check if last page has been reached
@@ -539,7 +539,7 @@ Consider the following data set:
 
 ## Error Codes
 
-Requests to data stores may occasionally fail due to poor connectivity or other issues. Wrapping data store functions in `pcall()` can handle any errors and return a message with an error code.
+Requests to data stores may occasionally fail due to poor connectivity or other issues. Wrapping data store functions in `Global.LuaGlobals.pcall()` can handle any errors and return a message with an error code.
 
 ### Error Code Reference
 
@@ -818,7 +818,7 @@ Along with request frequency, data stores limit how much data can be used per en
 </table>
 
 <Alert severity="info">
-  Since the data store name, key name, and scope are strings, their length can be checked with <InlineCode>string.len()</InlineCode>. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
+  Since the data store name, key name, and scope are strings, their length can be checked with `Library.string.len()`. The data (key value) is also stored as a string, regardless of its initial type. The size of data can be checked with the `Class.HttpService:JSONEncode()|JSONEncode()` function that converts Lua data into a serialized JSON table.
 </Alert>
 
 ### Throughput Limits
@@ -853,13 +853,21 @@ performance on Roblox servers.
 
 ## Caching
 
-Keys cache locally for 4 seconds after the first read. A `Class.GlobalDataStore:GetAsync()|GetAsync()` call within these 4 seconds returns a value from the cache. Modifications to the key by `Class.GlobalDataStore:SetAsync()|SetAsync()` or `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` apply to the cache immediately and restart the 4 second timer.
+By default, the engine stores values that you retrieve from the backend using `Class.GlobalDataStore:GetAsync()|GetAsync()` in a local cache for 4 seconds, and `Class.GlobalDataStore:GetAsync()|GetAsync()` requests for cached keys return the cached value instead of continuing to the backend. This way, your `Class.GlobalDataStore:GetAsync()|GetAsync()` requests returning a cached value don't count towards your [throughput](#throughput-limits) and [server](#server-limits) limits.
 
-`Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, and `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` don't implement caching and always fetch the latest data from the service.
+Caching also applies to modifications to keys using `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, and `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`. Additionally, all `Class.GlobalDataStore:GetAsync()|GetAsync()` calls that retrieve a value not being cached from the backend update the cache immediately and restart the 4 second timer.
+
+`Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, and `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` don't implement caching and always fetch the latest data from the service backend.
 
 <Alert severity="warning">
   Caching is local to a particular data store instance, so different data stores can have their caches in different states. For example, if you access a key twice through two different data store instances, such as getting a data store with a specified scope and another through with the `Class.DataStoreOptions.AllScopes|AllScopes` property enabled, each data store instance will have its own cache. If you change the value of that key in one data store instance and not the other, you will have inconsistent data.
 </Alert>
+
+### Disabling Caching
+
+To opt out of using the cache to retrieve the most up-to-date value from the servers, add the `Class.DataStoreGetOptions` parameter to your `Class.GlobalDataStore:GetAsync()|GetAsync()` call and set its `Class.DataStoreGetOptions.UseCache|UseCache` property to `false` to make your request ignore any keys in the cache.
+
+Disabling caching is useful if you have multiple servers writing to a key with high frequency and need to get the latest value from servers. However, it can cause you to consume more of your [data stores limits and quotas](#limits), since `Class.GlobalDataStore:GetAsync()|GetAsync()` requests bypassing caching always count towards your throughput and server limits.
 
 ## Best Practices
 

@@ -20,7 +20,7 @@ Before driving too many new users to your experience, grow the following metrics
       3.  **Payer conversion rate** and **ARPPU (average revenue per paying user)** measure the effectiveness of your user monetization. It's important to be thoughtful about monetization from the start. For more information on improving this metric, see [Monetization](../../production/analytics/monetization.md).
 
 <figure>
-    <img src="../../assets/analytics/overview/step1.png" width="60%"/>
+    <img src="../../assets/analytics/overview/step1.png" width="80%"/>
     <figcaption>Comparing D1 retention to similar experiences.</figcaption>
   </figure>
 
@@ -34,7 +34,7 @@ After you have optimized your retention, engagement, and monetization, use your 
 You can use the following chart to track your conversion rates from Roblox **Home** and **Search**. Test different experience icons, titles, and descriptions to see how they impact your conversion rate.
 
 <figure>
-    <img src="../../assets/analytics/overview/step2.png" width="60%"/>
+    <img src="../../assets/analytics/overview/step2.png" width="80%"/>
     <figcaption>Comparing conversion rates.</figcaption>
   </figure>
 
@@ -48,6 +48,53 @@ After you update your experience, visit analytics to understand how the update i
 2. [Engagement](../../production/analytics/engagement.md): Average session time.
 3. [Monetization](../../production/analytics/monetization.md): Payer conversion, ARPPU, and revenue.
 4. [Acquisition](../../production/analytics/acquisition.md): New users and conversion rates by source.
+
+## Analytics Home
+
+[Analytics Home](https://create.roblox.com/dashboard/analytics) is the highest-level entry point for creator analytics and is located in the left navigation of [Creator Hub](https://create.roblox.com/). Analytics Home enables you to:
+
+- Monitor the analytics of multiple experiences at once
+- Track avatar item sales and revenue
+
+### Monitoring Experiences
+
+You can monitor the analytics of up to nine Roblox experiences by putting them into a **watchlist**. If you have analytics permissions for the experience, your watchlist provides the following analytics at a glance:
+
+- **Daily Active Users (DAU)**: Number of unique players who joined the game at least once in the given day.
+- **New Users**: Number of DAUs who are first-time users.
+- **Session Time**: Total play time divided by number of individual sessions each day.
+- **Day 1 Retention**: Percentage of new users who played again after their first session ended.
+- **Daily Revenue**: Total amount of Robux earned by the experience in a day.
+
+If you add an experience to your watchlist that you don't have analytics permissions for, the card only populates publicly viewable stats. These include:
+
+- Like Ratio
+- CCU
+- Updated Date
+- Title
+- Owner
+
+Watchlists are applied on the account level, are private, and persist when toggling between groups. To add an experience to your watchlist, paste the **Experience URL** or add it from your **Experience Table**, which is a list view of all the experiences owned by your account or selected group.
+
+<figure>
+    <img src="../../assets/analytics/overview/watchlist.png" width="720%"/>
+    <figcaption>Experience watchlist on Analytics Home.</figcaption>
+</figure>
+
+Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [Analytics Insights](#analytics-insights) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
+
+### Tracking Avatar Sales and Revenue
+
+Avatar items you've sold automatically appear within the **Avatar Items** tab. Here, you can:
+
+- **View top performing items**: See your top selling and grossing avatar items over a selected time period.
+- **Analyze overall sales and revenue**: Showcase up to eight top items on a time-series graph.
+- **Monitor your catalog**: Examine a table with up to 200 items, filterable by item category and sales types, and sortable by sales and total revenue.
+
+<figure>
+    <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="720%"/>
+    <figcaption>Avatar Items on Analytics Home.</figcaption>
+</figure>
 
 ## Analytics Insights
 

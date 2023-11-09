@@ -18,7 +18,7 @@ To open the Creator Marketplace:
 1. Navigate to the **View** tab of the menu bar in Studio.
 2. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -26,12 +26,12 @@ To open the Creator Marketplace:
 
 With millions of assets available, it's helpful to narrow the search results to find exactly what you are looking for. To find a specific asset:
 
-1. In the top-left corner within the **Marketplace** tab, select the filter dropdown and choose from the following asset filter categories: **Models**, **Images**, **Meshes**, **Audio**, **Fonts**, **Videos**, and **Plugins**.
+1. In the top-left corner within the **Marketplace** tab, select the filter dropdown and choose an asset filter category.
 
 2. **(Optional)** In the top-right corner, select the filter icon. The **All Views** and **Creator** filter display.
 
    1. To view an individual creator's assets, enter a specific creator's username within the **Search for users** field.
-   1. Click the **Apply** button.
+   2. Click the **Apply** button.
 
 3. In the **Search** field, type what you want to find and select the search icon.
 
@@ -48,6 +48,13 @@ In addition to the Creator Marketplace's filters, you can view an asset's commun
 - **Yellow** - The asset has moderate community confidence.
 - **Green** - The asset has high community confidence.
 
+### Trusted Reviews
+
+Users can now leave reviews on Creator Marketplace assets in addition to the currently available thumbs up or down ratings. To improve reliability and ensure authentic feedback, only users that acquire the asset are able to submit reviews. After submitting a review:
+
+- Asset creators can respond to reviews, closing the feedback loop.
+- The community can mark reviews as helpful for future users.
+
 ## Adding Assets to Experiences
 
 To add assets to your experience from the Creator Marketplace:
@@ -59,7 +66,7 @@ To add assets to your experience from the Creator Marketplace:
    - If your asset is a model or mesh, it displays both in the viewport and the **Explorer** window.
    - If your asset is an image, video, or audio file, it displays in the **Explorer** window.
    - If your asset is a plugin, it displays in the **Plugins** tab of the menu bar.
-   - If your asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [text input objects](../../ui/buttons.md), as well as the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
+   - If your asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [buttons](../../ui/buttons.md), as well as the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
 
 ### Disabling Scripts
 

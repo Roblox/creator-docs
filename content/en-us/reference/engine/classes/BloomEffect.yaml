@@ -1,0 +1,87 @@
+name: BloomEffect
+type: class
+category: Post Processing
+memory_category: Instances
+summary: |
+  Simulates the camera viewing a very bright light.
+description: |
+  The **BloomEffect** simulates the camera viewing a very bright light. It
+  causes brighter colors to glow, similar to applying the neon
+  `Class.BasePart.Material|Material` to everything, including the `Class.Sky`.
+  Multiple **BloomEffect** objects can be applied at once and they will compose
+  their effects together.
+
+  Like other post-processing effects, **BloomEffect** will only work while
+  `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting` or
+  `Class.Workspace.CurrentCamera`. Also, it may render differently depending on
+  your Studio settings (see the **Quality Level** settings in **Rendering**
+  &rarr; **Performance**).
+
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+code_samples:
+inherits:
+  - PostEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: BloomEffect.Intensity
+    summary: |
+      Determines the additive blending intensity.
+    description: |
+      Intensity determines how intensely the colors that bloom (determined by
+      the `Class.BloomEffect.Threshold|Threshold`) will additively blend with
+      themselves. Higher values will produce brighter colors.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BloomEffect.Size
+    summary: |
+      Determines the radius of the bloom in pixels.
+    description: |
+      Size determines the radius of the bloom effect in pixels in a similar
+      manner to `Class.BlurEffect.Size`. Larger values create a wider bloom
+      effect, and a value of 0 will disable the bleed (but not the color
+      adjustment).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BloomEffect.Threshold
+    summary: |
+      Determines how bright a color must be before it blooms.
+    description: |
+      Threshold determines how bright a color can be before it blooms. If set to
+      1, only pure white colors will bloom. If set to 0, all colors will bloom.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

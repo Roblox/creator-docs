@@ -9,11 +9,11 @@ description: 3D Importer imports third-party .fbx and .obj 3D model assets into 
 The 3D Importer allows you to import `.fbx` or `.obj` 3D models into Studio as a custom `Class.Model`. This tool supports a wide variety of 3D models, including:
 
 - Meshes with basic or PBR ([Surface Appearance](../../art/modeling/surface-appearance.md)) textures.
-- Meshes with [rigging](../../art/modeling/rigging.md) or [skinning](../../art/modeling/skinning.md) data.
+- Meshes with [rigging and skinning data](../../art/modeling/rigging.md)
 - Meshes with animation data.
-- Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/avatar/facial-animation/index.md).
+- Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
-The 3D Importer is divided in three sections:
+The 3D Importer is divided into three sections:
 
 <img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" />
 
@@ -31,7 +31,7 @@ C. The **inspector panel**, located on the right, allows you to apply various se
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCsYZe3LoDM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-Before importing a 3D object, ensure that the `.fbx` or `.obj` meets Studio's [Mesh Requirements](../../art/avatar/specifications.md) to reduce errors or unexpected behavior.
+Before importing a 3D object, ensure that the `.fbx` or `.obj` meets Studio's [Mesh Requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
 
 To import a 3D object:
 
@@ -170,7 +170,7 @@ File geometry includes information on the file dimensions and polycount of the e
   </tr>
   <tr>
     <td>Invert Negative Faces</td>
-    <td>Flip negative faces. By default, this is **disabled**.</td>
+    <td>Inverts the orientation of negative faces in the mesh. By default, this is **disabled**.</td>
   </tr>
 </tbody>
 </table>

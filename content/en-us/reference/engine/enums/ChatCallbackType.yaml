@@ -1,0 +1,28 @@
+name: ChatCallbackType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OnCreatingChatWindow
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: OnClientSendingMessage
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: OnClientFormattingMessage
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: OnServerReceivingMessage
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''

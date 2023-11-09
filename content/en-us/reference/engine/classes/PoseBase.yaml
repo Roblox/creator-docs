@@ -1,0 +1,69 @@
+name: PoseBase
+type: class
+category:
+memory_category: Instances
+summary: |
+  Base class of all 'Pose Instance' objects.
+description: |
+  Base class of all 'Pose Instance' objects.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: PoseBase.EasingDirection
+    summary: |
+      The easing direction to use to reach the next Pose's value.
+    description: |
+      The easing direction to use to reach the next Pose's value.
+    code_samples:
+    type: PoseEasingDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PoseBase.EasingStyle
+    summary: |
+      The easing style to use to reach the next Pose's value.
+    description: |
+      The easing style to use to reach the next Pose's value.
+    code_samples:
+    type: PoseEasingStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PoseBase.Weight
+    summary: ''
+    description: ''
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: |
+      This property is deprecated. Use the `Class.AnimationTrack:AdjustWeight()`
+      function when blending multiple animations.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

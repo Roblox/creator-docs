@@ -1,0 +1,44 @@
+name: SurfaceSelection
+type: class
+category: Adornments
+memory_category: Instances
+summary: |
+  Highlights a face of a surface in a configurable color.
+description: |
+  A **SurfaceSelection** highlights a particular face, the
+  `Class.SurfaceSelection.TargetSurface|TargetSurface`, of its
+  `Class.PartAdornment.Adornee|Adornee`. The highlight's color is configurable
+  using the `Class.GuiBase3d.Color3|Color3` property.
+
+  <img src="/assets/legacy/SurfaceSelection.jpg" alt="A screenshot of a SurfaceSelection" width="302" height="153" />
+
+  The SurfaceSelection object is typically used by `Class.Plugin` when the user
+  is selecting the face of a Part. However, it is not limited to plugin use.
+code_samples:
+inherits:
+  - PartAdornment
+tags: []
+deprecation_message: ''
+properties:
+  - name: SurfaceSelection.TargetSurface
+    summary: |
+      Sets which side the SurfaceSelection will appear on, on the adorned
+      `Class.BasePart`.
+    description: |
+      Sets which side the SurfaceSelection will appear on, on the adorned
+      `Class.BasePart`.
+    code_samples:
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,133 @@
+name: CompletionItemKind
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Text
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Method
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Function
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Constructor
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Field
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Variable
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Class
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Interface
+    value: 8
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Module
+    value: 9
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Property
+    value: 10
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Unit
+    value: 11
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Value
+    value: 12
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Enum
+    value: 13
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Keyword
+    value: 14
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Snippet
+    value: 15
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Color
+    value: 16
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: File
+    value: 17
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Reference
+    value: 18
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Folder
+    value: 19
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: EnumMember
+    value: 20
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Constant
+    value: 21
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Struct
+    value: 22
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Event
+    value: 23
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Operator
+    value: 24
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: TypeParameter
+    value: 25
+    summary: ''
+    tags: []
+    deprecation_message: ''

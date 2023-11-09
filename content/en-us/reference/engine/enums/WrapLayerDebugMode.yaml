@@ -1,0 +1,103 @@
+name: WrapLayerDebugMode
+type: enum
+summary: |
+  The Studio-only property for quickly visualizing and debugging meshes with
+  inner cage and outer cages.
+description: |
+  The Studio-only property for quickly visualizing and debugging meshes with
+  inner and outer cages.
+
+  This debug visualization only works when the WrapLayer is active and does not
+  work if WrapLayer is not active or incorrectly configured.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    value: 0
+    summary: |
+      This debug rendering mode does nothing. This is the default value.
+    tags: []
+    deprecation_message: ''
+  - name: BoundCage
+    value: 1
+    summary: |
+      This debug mode visualizes corresponding cage mesh vertices bound to an
+      underlying `Class.WrapTarget`. In order to find corresponding vertices
+      between different cages, the Wrap Deformer algorithm uses UV matching. As
+      long as your `Class.WrapLayer` cage mesh share the same UV layout as
+      `Class.WrapTarget`, its vertices will be marked as "bound".
+    tags: []
+    deprecation_message: ''
+  - name: LayerCage
+    value: 2
+    summary: |
+      This debug mode shows the resulting layer mesh as a whole. The deformer
+      will use vertex locations from the previous layer for all unbound
+      vertices.
+    tags: []
+    deprecation_message: ''
+  - name: BoundCageAndLinks
+    value: 3
+    summary: |
+      The same as BoundCage but also visualizes how bound vertices were moved.
+      You can use this mode to identify where they belong on a previous layer
+      and where they are located on the current layer.
+    tags: []
+    deprecation_message: ''
+  - name: Reference
+    value: 4
+    summary: |
+      This debug mode shows the original inner cage mesh as it was created.
+    tags: []
+    deprecation_message: ''
+  - name: Rbf
+    value: 5
+    summary: |
+      This debug mode visualizes the internal RBF solver state. You can estimate
+      the wrap deformer's expected behavior by looking at this state. All
+      renderable mesh vertices move from a "big sphere" to a "small sphere"
+      along a corresponding line connecting two spheres.
+    tags: []
+    deprecation_message: ''
+  - name: OuterCage
+    value: 6
+    summary: |
+      This debug mode shows the original outer cage mesh as it was created.
+    tags: []
+    deprecation_message: ''
+  - name: ReferenceMeshAfterMorph
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: HSROuterDetail
+    value: 8
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: HSROuter
+    value: 9
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: HSRInner
+    value: 10
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: HSRInnerReverse
+    value: 11
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: LayerCageFittedToBase
+    value: 12
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: LayerCageFittedToPrev
+    value: 13
+    summary: ''
+    tags: []
+    deprecation_message: ''

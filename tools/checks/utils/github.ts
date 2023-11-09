@@ -6,7 +6,9 @@ import fetch from 'node-fetch';
 import { VFileMessage } from 'vfile-message';
 
 import { OWNER } from './git.js';
-import { serializeTuple } from './utils.js';
+import { Emoji, serializeTuple } from './utils.js';
+
+export const pullRequestReviewComments: PullRequestComment[] = [];
 
 export type PullRequestComment = {
   body: string;
@@ -17,6 +19,7 @@ export type PullRequestComment = {
   position: number;
   pull_number: number;
   repository: string;
+  subject_type?: 'line' | 'file';
 };
 
 export interface PulLRequestReplyComment extends PullRequestComment {
@@ -79,6 +82,7 @@ export const postNewReviewComment = async ({
   position,
   pull_number,
   repository,
+  subject_type = 'line',
 }: PullRequestComment) => {
   return await octokit.rest.pulls.createReviewComment({
     body,
@@ -90,8 +94,8 @@ export const postNewReviewComment = async ({
     pull_number,
     repo: repository,
     side: 'RIGHT',
-    // @ts-ignore TypeScript wants "LINE", but that gives an error
-    subject_type: 'line',
+    // @ts-ignore TypeScript wants "LINE" or "FILE", but that gives an error
+    subject_type,
   });
 };
 
@@ -113,6 +117,46 @@ export const addLabelToIssue = async ({
     labels,
   });
 };
+
+/**
+ * Construct a new pull request comment and push it to the list
+ */
+export const createNewPullRequestComment = ({
+  body,
+  commit_id,
+  line,
+  path,
+  pull_number,
+  repository,
+  subject_type,
+}: {
+  body: string;
+  commit_id: string;
+  line: number;
+  path: string;
+  pull_number: number;
+  repository: string;
+  subject_type?: 'line' | 'file';
+}) => {
+  const comment: PullRequestComment = {
+    body,
+    commit_id,
+    column: line,
+    line,
+    path,
+    position: line,
+    pull_number,
+    repository,
+    subject_type,
+  };
+  pullRequestReviewComments.push(comment);
+};
+
+export const requiredCheckMessage = `${Emoji.NoEntry} This change is a requirement. Please fix it before merging.`;
+
+export const suggestedCheckMessage = `${Emoji.Bulb} This change is a suggestion but not a requirement.`;
+
+export const automatedMessageDisclaimer = `${Emoji.RobotFace} The feedback in this comment is automated and might be incorrect.`;
 
 /**
  * Construct a new pull request comment for a given VFileMessage and
@@ -139,12 +183,8 @@ export const getNewPullRequestCommentForVFileMessage = ({
       : `The content quality check says: `
   }${message.reason ? message.reason + '\n' : ''}
 ${message.note ? message.note.split(' (source: ')[0] + '\n' : ''}
-${
-  isRequiredCheck
-    ? `⛔️ This change is a requirement.`
-    : `💡 This change is a suggestion but not a requirement.`
-}
-🤖 The feedback in this comment is automated and might be incorrect.`;
+${isRequiredCheck ? requiredCheckMessage : suggestedCheckMessage}
+${automatedMessageDisclaimer}`;
   const comment = {
     body: commentBody,
     commit_id,
@@ -233,7 +273,7 @@ export const postPullRequestComments = async ({
         });
         console.log(replyResponse);
         console.log(
-          `✅ Posted reply to ${replyResponse.data.path}, line ${replyResponse.data.line}. Comment id: ${replyResponse.data.id}`
+          `${Emoji.WhiteCheckMark} Posted reply to ${replyResponse.data.path}, line ${replyResponse.data.line}. Comment id: ${replyResponse.data.id}`
         );
       } else {
         console.log('🗣️ Posting new review comment');
@@ -241,7 +281,7 @@ export const postPullRequestComments = async ({
         console.log(newResponse);
         commentIdMap.set(commentKey, newResponse.data.id);
         console.log(
-          `✅ Posted new comment to ${newResponse.data.path}, line ${newResponse.data.line}. Comment id: ${newResponse.data.id}`
+          `${Emoji.WhiteCheckMark} Posted new comment to ${newResponse.data.path}, line ${newResponse.data.line}. Comment id: ${newResponse.data.id}`
         );
       }
     } catch (e) {

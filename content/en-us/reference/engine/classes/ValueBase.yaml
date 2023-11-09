@@ -1,0 +1,18 @@
+name: ValueBase
+type: class
+category:
+memory_category: Instances
+summary: |
+  Base class of all 'Value Instance' objects.
+description: |
+  Base class of all 'Value Instance' objects.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

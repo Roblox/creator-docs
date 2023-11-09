@@ -1,0 +1,20 @@
+name: ReflectionMetadataEnums
+type: class
+category:
+memory_category: Instances
+summary: |
+  Acts as a `Class.Folder` for `Class.ReflectionMetadataEnum` objects.
+description: |
+  The ReflectionMetadataEnums is the class that acts as a `Class.Folder` for
+  `Class.ReflectionMetadataEnum` objects.
+
+  Since it is an internal object, it cannot be used by developers.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

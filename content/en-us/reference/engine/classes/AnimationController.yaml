@@ -1,0 +1,176 @@
+name: AnimationController
+type: class
+category: Animations
+memory_category: Animation
+summary: |
+  Allows animations to be loaded and applied to a character or model in place of
+  a `Class.Humanoid` when a Humanoid is not needed.
+description: |
+  An object which allows animations to be loaded and applied to a character or
+  model in place of a `Class.Humanoid` when a Humanoid is not needed. Creates an
+  `Class.Animator` and loads animations to update `Class.Motor6D|Motor6Ds` of
+  said character to react in the way that is described within the animation
+  asset referenced by an `Class.Animation` object.
+
+  ## Should I load an Animation on the client or server?
+
+  In order for `Class.AnimationTrack|AnimationTracks` to replicate correctly,
+  it's important to know when they should be loaded on the client (via
+  a`Class.LocalScript`) or on the server (via a `Class.Script`).
+
+  If an Animator is a descendant of a Humanoid or AnimationController in a
+  Player's `Class.Player.Character|Character` then animations started on that
+  Player's client will be replicated to the server and other clients.
+
+  If the Animator is not a descendant of a player character, its animations must
+  be loaded and started on the server to replicate.
+
+  The Animator object must be initially created on the server and replicated to
+  clients for animation replication to work at all. If an Animator is created
+  locally, then AnimationTracks loaded with that Animator will not replicate.
+
+  Both `Class.Humanoid:LoadAnimation()` and
+  `Class.AnimationController:LoadAnimation()` will create an Animator if one
+  does not already exist. When calling LoadAnimation from LocalScripts you need
+  to be careful to wait for the Animator to replicate from the server before
+  calling LoadAnimation if you want character animations to replicate. You can
+  do this with WaitForChild("Animator").
+
+  See also:
+
+  - [Animation Editor](../../../animation/editor.md) to explore this powerful
+    built-in plugin for creating custom animations
+  - [Using Animations](../../../animation/using.md) to learn how to add
+    pre-built and custom animations to your game
+code_samples:
+  - AnimationController
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: AnimationController:GetPlayingAnimationTracks
+    summary: |
+      Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
+      currently being played by the `Class.AnimationController`.
+    description: |
+      Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
+      currently being played by the `Class.AnimationController`.
+
+      A typical use for this function is stopping currently playing tracks using
+      `Class.AnimationTrack:Stop()`.
+
+      Note this function will not return `Class.AnimationTrack|AnimationTracks`
+      that have loaded but are not playing. If the developer wishes to track
+      these they will need to index them manually. See below for one example of
+      how this could be achieved:
+
+      ```
+      local animationTracks = {}
+      local track = animationController:LoadTrack(animation)
+      table.insert(animationTracks, track)
+      ```
+    code_samples:
+      - GetPlayingAnimationTracks
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of playing `Class.AnimationTrack`s.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationController:LoadAnimation
+    summary: |
+      Loads an `Class.Animation` onto an `Class.AnimationController`, returning
+      an `Class.AnimationTrack` that can be used for playback.
+    description: |
+      This function loads an `Class.Animation` onto an
+      `Class.AnimationController`, returning an `Class.AnimationTrack` that can
+      be used for playback.
+
+      #### How to load an Animation
+
+      The following code can be used to load an `Class.Animation` onto an
+      `Class.AnimationController`.
+
+          local animationTrack = animationController:LoadAnimation(animation)
+          animationTrack:Play()
+
+      #### Should I load an Animation on the client or server?
+
+      In order for AnimationTracks to replicate correctly, it's important to
+      know when they should be loaded on the client (via a`Class.LocalScript`)
+      or on the server (via a `Class.Script`).
+
+      If an `Class.Animator` is a descendant of a Humanoid or
+      AnimationController in a Player's `Class.Player.Character|Character` then
+      animations started on that Player's client will be replicated to the
+      server and other clients.
+
+      If the Animator is not a descendant of a player character, its animations
+      must be loaded and started on the server to replicate.
+
+      The Animator object must be initially created on the server and replicated
+      to clients for animation replication to work at all. If an Animator is
+      created locally, then AnimationTracks loaded with that Animator will not
+      replicate.
+
+      Both `Class.Humanoid:LoadAnimation()` and
+      `Class.AnimationController:LoadAnimation()` will create an Animator if one
+      does not already exist. When calling LoadAnimation from LocalScripts you
+      need to be careful to wait for the Animator to replicate from the server
+      before calling LoadAnimation if you want character animations to
+      replicate. You can do this with WaitForChild("Animator").
+    code_samples:
+      - AnimationController
+    parameters:
+      - name: animation
+        type: Animation
+        default:
+        summary: |
+          The `Class.Animation` to be used.
+    returns:
+      - type: AnimationTrack
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated in favor of using
+      `Class.Animator:LoadAnimation()` directly (the `Class.Animator` may be
+      created while editing or at runtime). For more information, see this
+      [announcement](https://devforum.roblox.com/t/deprecating-loadanimation-on-humanoid-and-animationcontroller/857129).
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: AnimationController.AnimationPlayed
+    summary: |
+      Fires whenever the `Class.AnimationController` begins playing an
+      animation. It returns the `Class.AnimationTrack` playing.
+    description: |
+      This event fires whenever the `Class.AnimationController` begins playing
+      an animation. It returns the `Class.AnimationTrack` playing.
+
+      The `Class.AnimationTrack` can be used to access the animation's playback
+      functions and events. It will only fire for animations playing on the
+      specific `Class.AnimationController`.
+
+      See `Class.Humanoid.AnimationPlayed` for the `Class.Humanoid` variant of
+      this function.
+    code_samples:
+      - AnimationTrack-KeyframeReached-2
+    parameters:
+      - name: animationTrack
+        type: AnimationTrack
+        default:
+        summary: |
+          The `Class.AnimationTrack` that was played.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

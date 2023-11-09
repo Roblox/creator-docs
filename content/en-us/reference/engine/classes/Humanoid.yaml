@@ -1,0 +1,2967 @@
+name: Humanoid
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  A special object that gives models the functionality of a character.
+description: |
+  The Humanoid is a special object that gives models the functionality of a
+  character. It grants the model with the ability to physically walk around and
+  interact with various components of a Roblox level. Humanoids are always
+  parented inside of a `Class.Model`, and the model is expected to be an
+  assembly of `Class.BasePart` and `Class.Motor6D`; the root part of the
+  assembly is expected to be named `HumanoidRootPart`. It also expects a part
+  named `Head` to be connected to the character's torso part, either directly or
+  indirectly. By default, there are two official types of character rigs
+  supplied by Roblox, each with their own set of rules:
+
+  ## R6
+
+  - A basic character rig that uses 6 parts for limbs.
+  - The `Head` part must be attached to a part named `Torso`, or the Humanoid
+    will die immediately.
+  - BodyPart appearances are applied using `Class.CharacterMesh` objects.
+  - Certain properties, such as `Class.Humanoid.LeftLeg` and
+    `Class.Humanoid.RightLeg`, only work with R6.
+
+  ## R15
+
+  - More complex than R6, but also far more flexible and robust.
+  - Uses 15 parts for limbs.
+  - The `Head` part must be attached to a part named `UpperTorso` or the
+    Humanoid will die immediately.
+  - BodyPart appearances have to be assembled directly.
+  - Can be dynamically rescaled by using special `Class.NumberValue` objects
+    parented inside of the Humanoid.
+  - The Humanoid will automatically create `Class.Vector3Value` objects named
+    `OriginalSize` inside of each limb.
+  - If a NumberValue is parented inside of the Humanoid and is named one of the
+    following, it will be used to control the scaling functionality:
+    - BodyDepthScale
+    - BodyHeightScale
+    - BodyWidthScale
+    - HeadScale
+code_samples:
+  - Walking-Camera-Bobble-Effect
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Humanoid.AutoJumpEnabled
+    summary: |
+      Sets whether the character will automatically jump when they hit an
+      obstacle as a player on a mobile device.
+    description: |
+      AutoJumpEnabled sets whether or not the `Class.Humanoid` will attempt to
+      automatically jump over an obstacle it is walking towards.
+
+      Currently, this property only works when the following conditions are
+      true:
+
+      - The Humanoid's character model is the `Class.Player.Character` of a
+        `Class.Player`.
+      - The Player in question is using touch controls.
+
+      When a player's character spawns, the property's value matches the
+      player's `Class.Player.AutoJumpEnabled` property - which in turn matches
+      the `Class.StarterPlayer.AutoJumpEnabled` property.
+    code_samples:
+      - Auto-Jump-Toggle
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.AutoRotate
+    summary: |
+      AutoRotate sets whether or not the Humanoid will automatically rotate to
+      face in the direction they are moving in.
+    description: |
+      The AutoRotate property describes whether or not the Humanoid will
+      automatically rotate to face in the direction they are moving. When set to
+      true, the character model will gradually turn to face their movement
+      direction as the Humanoid walks around. When set to false, the character
+      model will remain fixated in its current rotation, unless a rotating force
+      is applied to the _HumanoidRootPart_.
+
+      If the character model happens to be the character of a player, then the
+      behavior of the Humanoid's rotation is influenced by the UserGameSetting's
+      RotateType property.
+
+      When the AutoRotate property is set to true, the RotateType property has
+      the following effects on the Humanoid's rotation:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>RotationType</th>
+      			<th>Behavior</th>
+      			<th>Context</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>MovementRelative</td>
+      			<td></td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td>CameraRelative</td>
+      			<td>Character will rotate to face in the direction of the camera.</td>
+      			<td>Player has their camera zoomed into first-person, or they are in shift-lock mode.</td>
+      		</tr>
+      	</tbody>
+      </table>
+    code_samples:
+      - AutoRotate
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.AutomaticScalingEnabled
+    summary: |
+      When Enabled, AutomaticScalingEnabled causes the size of the character to
+      change in response to the values in the `Class.Humanoid`'s child scale
+      values changing.
+    description: |
+      The Humanoid has six child scale values including `BodyDepthScale`,
+      `BodyHeightScale`, `BodyProportionScale`, `BodyTypeScale`,
+      `BodyWidthScale`, `HeadScale`. Changing the value of any of these causes
+      the character's body parts and accessories to change size, but only if
+      `AutomaticScalingEnabled` is true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.BreakJointsOnDeath
+    summary: |
+      Determines whether a `Class.Humanoid|Humanoid's` joints break when in the
+      Dead state.
+    description: |
+      Determines whether a `Class.Humanoid|Humanoid's` joints break when in the
+      Dead state. Defaults to true.
+
+      If it is set to false, BreakJoints will not be called on death or after
+      death. If it is set to true, the existing break-joints-every-frame
+      behavior will be used.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.CameraOffset
+    summary: |
+      An offset applied to the Camera's subject position when its CameraSubject
+      is set to this Humanoid.
+    description: |
+      The CameraOffset property specifies an offset to the `Class.Camera`'s
+      subject position when its `Class.Camera.CameraSubject` is set to this
+      `Class.Humanoid`.
+
+      The offset is applied in object-space, relative to the orientation of the
+      Humanoid's _HumanoidRootPart_. For example, an offset `Datatype.Vector3`
+      value of _(0, 10, 0)_ offsets the player's camera to 10 studs above the
+      player's humanoid.
+    code_samples:
+      - Walking-Camera-Bobble-Effect
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.CollisionType
+    summary: |
+      Selects the `Enum.HumanoidCollisionType` for R15 and Rthro non-player
+      characters.
+    description: |
+      This property selects the `Enum.HumanoidCollisionType` for R15 and Rthro
+      non-player characters.
+
+      The collision geometry for the InnerBox type is calculated at run-time and
+      will not be applied in Studio when the simulation is not running.
+
+      For player `Class.Player.Character|Characters` the CollisionType property
+      will be decided by the Avatar Collision Option in Game Settings.
+
+      ![Collision Options in Game Settings](/assets/legacy/HumanoidCollisionType.jpg)
+
+      This property is writable by `Class.Plugin|Plugins` and can be read by all
+      scripts.
+
+      #### Enums
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Name</th>
+      			<th>Value</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      		<tr>
+      			<td>
+      				<b>OuterBox</b>
+      			</td>
+      			<td>0</td>
+      			<td>Dynamically sized collision boxes based on mesh sizes</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				<b>Innerbox</b>
+      			</td>
+      			<td>1</td>
+      			<td>Fixed size collision boxes, similar to the classic avatar collision</td>
+      		</tr>
+      </table>
+    code_samples:
+    type: HumanoidCollisionType
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.DisplayDistanceType
+    summary: |
+      Controls the distance behavior of the humanoid's name and health display.
+    description: |
+      The **DisplayDistanceType** property controls the distance behavior of the
+      humanoid's name and health display. This property is set using the
+      `Enum.HumanoidDisplayDistanceType` enum with three available values, each
+      with their own set of rules:
+
+      - When set to `Enum.HumanoidDisplayDistanceType|Viewer`, the humanoid sees
+        the name/health of other humanoids within range of its own
+        `NameDisplayDistance` and `HealthDisplayDistance`.
+      - When set to `Enum.HumanoidDisplayDistanceType|Subject`, the humanoid
+        takes **full control** over its own name and health display through its
+        `NameDisplayDistance` and `HealthDisplayDistance` values.
+      - When set to `Enum.HumanoidDisplayDistanceType|None`, the humanoid's name
+        and health bar do not appear under any circumstances.
+
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
+    code_samples:
+      - displaying-a-humanoid-s-health-and-name
+    type: HumanoidDisplayDistanceType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.DisplayName
+    summary: |
+      Sets the text of a Humanoid, displayed above their head.
+    description: |
+      `DisplayName` is a property that determines the Humanoid's name display
+      when visible. By default, a new Humanoid will have the value of an empty
+      string. If `DisplayName` is an empty string, the humanoid's name display
+      will default to the humanoid's parent's name property.
+
+      **Player Character Loading** When players load their character, either
+      automatically or through the use of
+      `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
+      created by the engine will have its `DisplayName` property set to the
+      player's `DisplayName` property.
+
+      **StarterCharacter and StarterHumanoid** When a Humanoid named
+      `StarterHumanoid` is parented to `Class.StarterPlayer`, or when a Humanoid
+      is present in a Model named `StarterCharacter`, the DisplayName property
+      will be respected when Characters are loaded by Players in the game. The
+      engine will only override the `DisplayName` property of the Humanoid with
+      the `DisplayName` property of the player if the `StarterHumanoid`'s
+      `DisplayName` property is an empty string.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.EvaluateStateMachine
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.FloorMaterial
+    summary: |
+      Describes the `Enum.Material` that the `Class.Humanoid` is currently
+      standing on. If the `Class.Humanoid` isn't standing on anything, the value
+      of this property will be _Air_.
+    description: |
+      This is a read-only property that describes the `Enum.Material` the
+      `Class.Humanoid` is currently standing on. It works with both regular
+      `Class.BasePart|Parts` and `Class.Terrain` voxels.
+
+      The code sample below demonstrates how to listen to when this property
+      changes using `Class.Instance:GetPropertyChangedSignal()`. When the
+      material the humanoid is standing on changes, it will print a message
+      indicating the new material being stood on.
+
+      ```lua
+      local Humanoid = route.to.humanoid
+
+      Humanoid:GetPropertyChangedSignal("FloorMaterial"):Connect(function()
+          print("New value for FloorMaterial: " .. tostring(Humanoid.FloorMaterial))
+      end)
+      ```
+
+      #### Caveats
+
+      - When the `Class.Humanoid` is not standing on a floor, the value of this
+        property will be set to _Air_.
+        - This occurs because Enum properties cannot have an empty value.
+        - This can cause some confusion if a part has its material is set to
+          Air, though in practice, parts are not supposed to use that material
+          in the first place.
+      - The character model of the `Class.Humanoid` must be able to collide with
+        the floor, or else it will not be detected.
+        - You cannot test if the `Class.Humanoid` is swimming with this
+          property. You should instead use its `Class.Humanoid:GetState()`
+          function.
+    code_samples:
+    type: Material
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.Health
+    summary: |
+      Describes the current health of the Humanoid on the range [0,
+      `Class.Humanoid.MaxHealth`].
+    description: |
+      **Health** is a property that represents the current health of the
+      `Class.Humanoid`. The value is restricted to the range [0,
+      `Class.Humanoid.MaxHealth`]. If the Humanoid is dead, Health is
+      continually set to 0.
+
+      #### Dealing Damage
+
+      The `Class.Humanoid:TakeDamage()|TakeDamage` function should be used to
+      subtract from Health. If a Humanoid has a `Class.ForceField` as a sibling,
+      the function will **not** lower Health.
+
+      #### Regeneration
+
+      If there is no `Class.Script` named "Health" within
+      `Class.StarterCharacterScripts`, a passive health regeneration script is
+      automatically inserted. This causes players' characters to spawn with the
+      same health regeneration script, which adds 1% of
+      `Class.Humanoid.MaxHealth|MaxHealth` to Health each second, while the
+      Humanoid is not dead. To disable this health regeneration behavior, add an
+      empty Script named "Health" to `Class.StarterCharacterScripts`.
+
+      #### Health Bar Display
+
+      When Health is less than `Class.Humanoid.MaxHealth|MaxHealth`, a health
+      bar is displayed under the Humanoid's name in-game. The display behavior
+      of the health bar is dependent on the
+      `Class.Humanoid.HealthDisplayDistance|HealthDisplayDistance` and
+      `Class.Humanoid.HealthDisplayType|HealthDisplayType`.
+
+      A `Class.Player` will not see their own name and health bar above their
+      `Class.Player.Character|Character`. Instead, it is displayed in the top
+      right corner of the screen on the top bar. The health bar is visible when
+      Health is less than `Class.Humanoid.MaxHealth|MaxHealth`.
+
+      #### Death
+
+      When the value of the character's health reaches 0, the `Class.Humanoid`
+      automatically transitions to the _Dead_ `Enum.HumanoidStateType`. In this
+      state, Health is locked to 0; however, there is no error or warning for
+      setting the Health of a dead Humanoid to a positive nonzero value.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Humanoid.HealthDisplayDistance
+    summary: |
+      Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
+      to control the distance from which a humanoid's health bar can be seen.
+    description: |
+      The **HealthDisplayDistance** property is a number used in conjunction
+      with the `Class.Humanoid.DisplayDistanceType` property to control the
+      distance from which a humanoid's health bar can be seen.
+
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
+    code_samples:
+      - displaying-a-humanoid-s-health-and-name
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.HealthDisplayType
+    summary: |
+      Controls when the humanoid's health bar is allowed to be displayed.
+    description: |
+      **HealthDisplayType** controls when a humanoid's health bar is allowed to
+      be displayed. By default, this property is set to
+      `Enum.HumanoidHealthDisplayType|DisplayWhenDamaged`, which makes the
+      health bar only display when a humanoid's `Class.Humanoid.Health` is less
+      than its `Class.Humanoid.MaxHealth`. It can also be set to
+      `Enum.HumanoidHealthDisplayType|AlwaysOn`, which makes the health bar
+      always display, or `Enum.HumanoidHealthDisplayType|AlwaysOff`, which
+      prevents it from ever displaying.
+
+      This property functions independently of the humanoid's
+      `HealthDisplayDistance` property, which is responsible for making the
+      health bar fade out at certain distances. If **HealthDisplayType** is set
+      to `Enum.HumanoidHealthDisplayType|AlwaysOn`, it will still fade out
+      depending the how `Class.Humanoid.HealthDisplayDistance` is configured.
+
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
+    code_samples:
+    type: HumanoidHealthDisplayType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.HipHeight
+    summary: |
+      Determines the distance off the ground the `Class.Humanoid.RootPart`
+      should be.
+    description: |
+      HipHeight determines the distance (in studs) off the ground the
+      `Class.Humanoid.RootPart` should be when the Humanoid is standing. The
+      `Class.Humanoid.RigType|RigType` influences the way this property behaves:
+
+      #### HipHeight for R15 Humanoids
+
+      With R15 rigs, a suitable HipHeight is preset to ensure the height of the
+      `Class.Humanoid.RootPart` is correct. The height of the legs is not used.
+      The overall height of the Humanoid can be described in the following
+      formula:
+
+      ```lua
+      Height = (0.5 * RootPart.Size.Y) + HipHeight
+      ```
+
+      #### HipHeight for R6 Humanoids
+
+      For R6 rigs, the `Class.Humanoid.RootPart|RootPart's` height is determined
+      by the height of the character's legs and `Class.Humanoid.RootPart`.
+      HipHeight instead describes a relative offset. The overall height of the
+      Humanoid can be described in the following formula:
+
+      ```lua
+      Height = LeftLeg.Size.Y + (0.5 * RootPart.Size.Y) + HipHeight
+      ```
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.Jump
+    summary: |
+      If true, the `Class.Humanoid` jumps with an upwards force equal to the
+      value of its `Class.Humanoid.JumpPower` property or the height of
+      `Class.Humanoid.JumpHeight`, depending on the value of
+      `Class.Humanoid.UseJumpPower`.
+    description: |
+      If true, the `Class.Humanoid` jumps with an upwards force equal to the
+      value of its `Class.Humanoid.JumpPower` property or the height of
+      `Class.Humanoid.JumpHeight`, depending on the value of
+      `Class.Humanoid.UseJumpPower`.
+
+      If `Class.Humanoid.UseJumpPower` is set to true,
+      `Class.Humanoid|Humanoids` are able to jump roughly 7.2 studs high by
+      default, depending on both the `Class.Workspace|Workspace's`
+      `Class.Workspace.Gravity`, and the `Class.Humanoid.JumpPower` of the
+      humanoid itself.
+
+      If `Class.Humanoid.UseJumpPower` is set to false, the height of the jump
+      can be set explicitly with `Class.Humanoid.JumpHeight`.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Humanoid.JumpHeight
+    summary: |
+      Provides control over the height that the `Class.Humanoid` jumps to.
+    description: |
+      Provides control over the height a `Class.Humanoid` jumps in studs. The
+      starting value of this property is determined by the value of
+      `Class.StarterPlayer.CharacterJumpHeight`, which defaults to 7.2.
+
+      This property is only visible in the Properties window if
+      `Class.Humanoid.UseJumpPower` is set to **false**, as it would not be
+      relevant otherwise.
+
+      This property can be used to adjust the height that a humanoid can jump,
+      allowing developers to remove jumping, allow dynamically adjustable jump
+      height based on character stats or raise the jump height (as if on the
+      moon or such).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.JumpPower
+    summary: |
+      Determines how much upwards force is applied to the `Class.Humanoid` when
+      jumping.
+    description: |
+      Determines how much upwards force is applied to the `Class.Humanoid` when
+      jumping. The starting value of this property is determined by the value of
+      `Class.StarterPlayer.CharacterJumpPower`, which defaults to 50 and is
+      constrained between 0 and 1000.
+
+      This property is only visible in the Properties window if
+      `Class.Humanoid.UseJumpPower`` is set to **true**, as it would not be
+      relevant otherwise.
+
+      Note:
+
+      - Jumps are also influenced by the `Class.Workspace.Gravity` property
+        which determines the acceleration due to gravity.
+      - Although setting this property to 0 will prevent the `Class.Humanoid`
+        from jumping, developers are advised to disable the "Jumping" state
+        using the `Class.Humanoid:SetStateEnabled()` function.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.LeftLeg
+    summary: |
+      A reference to the humanoid's _Left Leg_ part.
+    description: |
+      A reference to the humanoid's _Left Leg_ part. The value of this property
+      will always be nil if the humanoid's `Enum.RigType` is set to R15.
+    code_samples:
+    type: BasePart
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This instance only works with the old R6 rig. It will not work with the
+      R15 rig and should not be used in new work not using the R6 rig.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Humanoid.MaxHealth
+    summary: |
+      The maximum value of a `Class.Humanoid|Humanoid's`
+      `Class.Humanoid.Health`.
+    description: |
+      The maximum value of a `Class.Humanoid|Humanoid's`
+      `Class.Humanoid.Health`. The value of this property is used with the value
+      of the `Class.Humanoid.Health` property to size the default health bar
+      display.
+
+      When a `Class.Humanoid|Humanoid's` `Class.Humanoid.Health` reaches its
+      maximum value, its health bar may not be displayed anymore, depending on
+      its `Class.Humanoid.HealthDisplayType` property, as seen below:
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.MaxSlopeAngle
+    summary: |
+      The maximum slope angle that a humanoid can walk on without slipping.
+    description: |
+      This property determines the maximum slope angle that a humanoid can
+      climb. If the angle of a slope is greater than a humanoid's MaxSlopeAngle,
+      they will slide down the slope.
+
+      When a character spawns, this property is set according to the value of
+      `Class.StarterPlayer.CharacterMaxSlopeAngle`.
+
+      The value of this property is constrained to values between 0° and 89°. It
+      defaults to 89°, so humanoids can climb pretty much any slope they want by
+      default.
+    code_samples:
+      - limiting-the-slope-a-humanoid-can-walk-up
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.MoveDirection
+    summary: |
+      Describes the direction that the `Class.Humanoid` is walking in.
+    description: |
+      **MoveDirection** is a read-only property that describes the direction a
+      `Class.Humanoid` is walking in, as a unit vector or zero length vector.
+      The direction is described in world space.
+
+      Because this property is read-only, it cannot be set by a `Class.Script`
+      or `Class.LocalScript`.
+    code_samples:
+      - Walking-Camera-Bobble-Effect
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.NameDisplayDistance
+    summary: |
+      Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
+      to control the distance from which a humanoid's name can be seen.
+    description: |
+      The **NameDisplayDistance** property is a number used in conjunction with
+      the `Class.Humanoid.DisplayDistanceType` property to control the distance
+      from which a humanoid's name can be seen.
+
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.NameOcclusion
+    summary: |
+      Controls whether a humanoid's name and health bar can be seen behind walls
+      or other objects.
+    description: |
+      Controls whether a humanoid's name and health bar can be seen behind walls
+      or other objects. This property is a `Enum.NameOcclusion` value and can be
+      configured to occlude all names, enemy names, or disable occlusion
+      entirely.
+
+      In cases where the `Class.Players.LocalPlayer|LocalPlayer` has no
+      `Class.Humanoid` associated with it, this property instead applies to the
+      subject `Class.Humanoid`.
+
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
+    code_samples:
+      - occlude-player-names
+    type: NameOcclusion
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.PlatformStand
+    summary: |
+      Determines whether the `Class.Humanoid` is currently in the
+      _PlatformStanding_ `Enum.HumanoidStateType`.
+    description: |
+      PlatformStand describes whether the `Class.Humanoid` is currently in the
+      _PlatformStanding_ `Enum.HumanoidStateType`. When true, the Humanoid is in
+      a state where it is free-falling and cannot move. This state behaves
+      similar to sitting, except that jumping does not free the humanoid from
+      the state.
+
+      The now-deprecated `Class.SkateboardPlatform` puts the Humanoid into this
+      state, much like how a `Class.Seat` causes a sitting state.
+    code_samples:
+      - putting-a-player-into-the-platformstand-state
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.RequiresNeck
+    summary: |
+      Allows developers to disable the behavior where a player
+      `Character|character` dies if the Neck `Class.Motor6D` is removed or
+      disconnected even momentarily.
+    description: |
+      Allows developers to disable the behavior where a player
+      `Character|character` dies if the Neck `Class.Motor6D` is removed or
+      disconnected even momentarily. This property defaults to true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.RigType
+    summary: |
+      Describes whether this `Class.Humanoid` is utilizing the legacy R6
+      character rig, or the new R15 character rig.
+    description: |
+      **RigType** describes whether a `Class.Humanoid` is utilizing the legacy
+      R6 character rig, or the newer R15 character rig.
+
+      The R6 rig uses 6 visible `Class.Part|Parts` while the R15 rig uses 15
+      visible `Class.Part|Parts`. R15 rigs have more joints than R6 rigs, making
+      them much more versatile when being animated.
+
+      Note that if this property is set incorrectly, the `Class.Humanoid` will
+      not function correctly. For example, if a R15 humanoid's **RigType** is
+      set to R6, the `Class.Humanoid` will die as there is no `Class.BasePart`
+      called **Torso** connected to a `Class.BasePart` called **Head**.
+    code_samples:
+    type: HumanoidRigType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.RightLeg
+    summary: |
+      A reference to the humanoid's _Right Leg_ part.
+    description: |
+      A reference to the humanoid's _Right Leg_ part. The value of this property
+      will always be nil if the humanoid's RigType is set to R15.
+    code_samples:
+    type: BasePart
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This instance only works with the old R6 rig. It will not work with the
+      R15 rig and should not be used in new work not using the R6 rig.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Humanoid.RootPart
+    summary: |
+      A reference to the humanoid's **HumanoidRootPart** object.
+    description: |
+      A reference to the humanoid's **HumanoidRootPart** object, the root
+      driving part of the `Class.Humanoid` that controls a humanoid's movement
+      through the 3D world. This part is normally invisible.
+
+      ![HumanoidRootPart made visible](/assets/engine-api/classes/Humanoid/Character-HumanoidRootPart.jpg)
+
+      Note that in the case of player characters, **RootPart** is the same as
+      the `Class.Model.PrimaryPart` of the `Class.Player.Character` model.
+    code_samples:
+    type: BasePart
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: Humanoid.SeatPart
+    summary: |
+      A reference to the seat that a `Class.Humanoid` is currently sitting in,
+      if any.
+    description: |
+      SeatPart is a reference to the seat that a `Class.Humanoid` is currently
+      sitting in, if any. The value of this property can be either a
+      `Class.Seat`, or a `Class.VehicleSeat`. It will be _nil_ if the Humanoid
+      is not currently sitting in a seat.
+
+      Note:
+
+      - For a bool describing if the `Class.Humanoid` is currently sitting or
+        not, see `Class.Humanoid.Sit`
+    code_samples:
+    type: BasePart
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.Sit
+    summary: |
+      Describes whether the `Class.Humanoid` is currently sitting.
+    description: |
+      The Sit property is a boolean that indicates whether the `Class.Humanoid`
+      is currently sitting. `Class.Humanoid|Humanoids` can be forced into a
+      sitting state by setting this property's value to true. If the
+      `Class.Humanoid` isn't attached to a seat while in its sitting state, it
+      will trip over with no collision in its legs. A `Class.Humanoid` can
+      escape from the sitting state by jumping.
+
+      Note:
+
+      - The `Class.Seat` or `Class.VehicleSeat` the `Class.Humanoid` is sitting
+        on can be obtained using the `Class.Humanoid.SeatPart` property
+      - It is possible to detect when a Humanoid sits by connecting to the
+        `Class.Humanoid.Seated` event.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.TargetPoint
+    summary: |
+      Describes the 3D position where the `Class.Player` controlling the
+      `Class.Humanoid` last clicked in the world while using a `Class.Tool`.
+    description: |
+      **Do not use** This property only works with Experimental Mode enabled,
+      which has been entirely discontinued.
+
+      This property describes a 3D position in space where the `Class.Player`
+      controlling this `Class.Humanoid` last clicked with a `Class.Tool`
+      equipped.
+
+      This property is primarily used by classic tools to determine what a
+      humanoid is targeting when they activate a tool. If you give an NPC a
+      classic rocket launcher, set their **TargetPoint**, and then call the
+      tool's `Class.Tool:Activate()` function, you can make the NPC fire a
+      rocket at the target point.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.Torso
+    summary: |
+      A reference to a humanoid's root driving part.
+    description: |
+      A reference to a humanoid's root driving part. Contrary to the name of
+      this property, it will only point to the Torso part if a humanoid doesn't
+      have a HumanoidRootPart.
+    code_samples:
+    type: BasePart
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This instance only works with the old R6 rig. It will not work with the
+      R15 rig and should not be used in new work not using the R6 rig.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Humanoid.UseJumpPower
+    summary: |
+      Determines whether the `Class.Humanoid.JumpHeight|JumpHeight` (false) or
+      `Class.Humanoid.JumpPower` (true) property is used.
+    description: |
+      When a character spawns, this property is set according to the value of
+      `Class.StarterPlayer.CharacterUseJumpPower` which defaults to true.
+
+      When a character spawns, this property is set according to the value of
+      `Class.StarterPlayer.CharacterUseJumpPower` which defaults to true.
+
+      When jumping, with this set to true, the `Class.Humanoid.JumpHeight` value
+      is used to ensure the humanoid jumps to that height. With this set to
+      false, the `Class.Humanoid.JumpPower` value is used to apply an upward
+      force.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.WalkSpeed
+    summary: |
+      Describes the `Class.Humanoid|Humanoid's` maximum movement speed in
+      studs/sec.
+    description: |
+      WalkSpeed is a property that describes how quickly this `Class.Humanoid`
+      is able to walk, in studs per second. This property defaults to the value
+      of `Class.StarterPlayer.CharacterWalkSpeed`, which defaults to 16, meaning
+      a Roblox `Class.Player.Character` can move 16 studs in any direction each
+      second by default.
+
+      Note:
+
+      - When controlled on a mobile device or a gamepad, a humanoid can walk
+        slower than their WalkSpeed if the controlling joystick is moved closer
+        to its center
+      - Roblox's default animation script scales a humanoid's movement
+        animations based on how fast it is moving relative to the default speed
+        of 16 studs/sec
+      - The speed the `Class.Humanoid` is currently walking at can be obtained
+        using the `Class.Humanoid.Running` event
+      - Movement speed is reduced to _87.5%_ WalkSpeed when swimming and _70%_
+        WalkSpeed when climbing
+    code_samples:
+      - freeze-a-player
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Humanoid.WalkToPart
+    summary: |
+      A reference to a part whose position is trying to be reached by a
+      humanoid.
+    description: |
+      WalkToPart is a reference to a part that the Humanoid is trying to reach.
+      This property is normally set when a part is passed as the 2nd argument of
+      the Humanoid's `Class.Humanoid:MoveTo()` function.
+
+      When WalkToPart is set and a humanoid is actively trying to reach the
+      part, it will keep updating its Vector3 goal to be the position of the
+      part, plus the `Class.Humanoid.WalkToPoint` translated in object space
+      relative to the rotation of the part.
+
+      This can be described in Lua as:
+
+      ```lua
+      goal = humanoid.WalkToPart.CFrame:pointToObjectSpace(humanoid.WalkToPoint)
+      ```
+
+      #### Caveats
+
+      - Setting the value of WalkToPart isn't sufficient enough to make a
+        humanoid start following a part.
+      - The Humanoid is prompted to start attempting to reach a goal when the
+        value of WalkToPoint is changed.
+      - This may be changed in the future.
+      - The _reach goal_ state of a humanoid will timeout after 8 seconds if it
+        doesn't reach its goal.
+      - This is done so that NPCs won't get stuck waiting for
+        `Class.Humanoid.MoveToFinished` to fire.
+      - If you don't want this to happen, you should repeatedly call MoveTo so
+        that the timeout will keep resetting.
+    code_samples:
+    type: BasePart
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.WalkToPoint
+    summary: |
+      The position that a humanoid is trying to reach, after a call to
+      `Class.Humanoid:MoveTo()` is made.
+    description: |
+      WalkToPoint describes the 3D position in space that a humanoid is trying
+      to reach, after having been prompted to do so by the Humanoid's
+      `Class.Humanoid:MoveTo()` function.
+
+      If a humanoid's `Class.Humanoid.WalkToPart` is set, the goal is set by
+      transforming WalkToPoint relative to the parts position and rotation. If
+      WalkToPart is not set, then the humanoid will try to reach the 3D position
+      specified by WalkToPoint directly.
+
+      #### Caveats
+
+      - The value of WalkToPoint must be changed to a different value in order
+        for the humanoid to start walking towards it.
+      - If you want to make a humanoid walk to `0,0,0`, you should use the
+        Humanoid's MoveTo function.
+      - This may be changed in the future.
+      - The _reach goal_ state of a humanoid will timeout after 8 seconds if it
+        doesn't reach its goal.
+      - This is done so that NPCs won't get stuck waiting for
+        `Class.Humanoid.MoveToFinished` to fire.
+      - If you don't want this to happen, you should repeatedly call MoveTo so
+        that the timeout will keep resetting.
+    code_samples:
+      - humanoid-moveto-without-time-out
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Humanoid.maxHealth
+    summary: ''
+    description: ''
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Humanoid.MaxHealth` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Game
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: Humanoid:AddAccessory
+    summary: |
+      Attaches the specified `Class.Accessory` to the
+      `Class.Humanoid|Humanoid's` parent.
+    description: |
+      The AddAccessory function attaches the specified `Class.Accessory` to the
+      `Class.Humanoid|Humanoid's` parent.
+
+      #### How are Accessories attached to Humanoids?
+
+      When this function is called, the `Class.Accessory` is parented to the
+      `Class.Humanoid|Humanoid's` parent and then attached.
+
+      An `Class.Accessory` is attached to the character by searching for an
+      `Class.Attachment` in the `Class.Humanoid|Humanoid's` parent that shares
+      the same name as an `Class.Attachment` in the accessory's _Handle_
+      `Class.Part`. If one is found, the _Handle_ part will be connected to the
+      parent of the `Class.Attachment` using a `Class.Weld`. This weld will be
+      configured so the `Class.Attachment|Attachments` occupy the same space.
+
+      If the required `Class.Attachment` can not be found, then the
+      `Class.Accessory` will remain parented to the `Class.Humanoid|Humanoid's`
+      parent but it will be unattached.
+
+      Typically accessory welds are created on the server. Under certain
+      circumstances, they can be created on the client. In these situations,
+      client-sided calls to `Class.Humanoid.AddAccessory` may not always produce
+      the desired behavior and you can use
+      `Class.Humanoid.BuildRigFromAttachments` to force the expected weld
+      creation.
+    code_samples:
+      - Humanoid-AddAccessory-Example
+    parameters:
+      - name: accessory
+        type: Instance
+        default:
+        summary: |
+          The `Class.Accessory` to be attached.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:AddCustomStatus
+    summary: |
+      Adds a custom status to the Humanoid.
+    description: |
+      Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
+      the string passed as the _status_ argument. If the status already exists,
+      a new BoolValue will not be created.
+    code_samples:
+    parameters:
+      - name: status
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:AddStatus
+    summary: |
+      Adds a BoolValue to the Humanoid's _Status_ object.
+    description: |
+      Adds a BoolValue to the Humanoid's _Status_ object, whose name is equal to
+      the name of the _Status_ enum passed as the _status_ argument. If the
+      status already exists, a new BoolValue will not be created.
+    code_samples:
+    parameters:
+      - name: status
+        type: Status
+        default: Poison
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:BuildRigFromAttachments
+    summary: |
+      Assembles a tree of `Class.Motor6D` joints by attaching together
+      `Class.Attachment` objects in a `Class.Humanoid|Humanoid's` character.
+    description: |
+      BuildRigFromAttachments assembles a tree of `Class.Motor6D` joints for a
+      `Class.Humanoid`. Motor6D joints are required for the playback of
+      `Class.Animation|Animations`
+
+      Starting from the humanoid's `Class.Humanoid.RootPart`, the function
+      collects all `Class.Attachment`s parented in the current part, whose name
+      ends with "RigAttachment". It then searches for a matching attachment in
+      the character that shares the same name as the attachment. Using those two
+      attachments, a Motor6D joint is generated based on the parts associated
+      with the two attachments, and the `Class.Attachment.CFrame`s of the
+      attachments.
+
+      BuildRigFromAttachments also scales the character and sets body colors.
+
+      See the provided code sample below to see how this function works.
+    code_samples:
+      - Humanoid-BuildRigFromAttachments-Port
+      - R15-Package-Importer
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:ChangeState
+    summary: |
+      Set the `Class.Humanoid` to enter the given `Enum.HumanoidStateType`.
+    description: |
+      This function causes the `Class.Humanoid` to enter the given
+      `Enum.HumanoidStateType`.
+
+      The humanoid state describes the activity the `Class.Humanoid` is
+      currently doing.
+
+      You should check the page for `Enum.HumanoidStateType` for more
+      information on what particular states do as some have unintuitive names.
+      For example, running describes a state where the
+      `Class.Humanoid|Humanoid's` legs are on the ground, including when
+      stationary
+
+      Due to the default behavior of the `Class.Humanoid` some states will
+      automatically be changed when set to. For example:
+
+      - Setting the state to _'Swimming_' when the `Class.Humanoid` is not in
+        the water will lead to it being automatically set to _'GettingUp'_
+      - As it is unused, setting the state to _'PlatformStanding'_ will lead to
+        it being automatically set to _'Running'_
+
+      See also:
+
+      - To enable or disable a particular state use
+        `Class.Humanoid:SetStateEnabled()`
+      - To get the current state use `Class.Humanoid:GetState()`
+    code_samples:
+      - double-jump
+    parameters:
+      - name: state
+        type: HumanoidStateType
+        default: None
+        summary: |
+          The `Enum.HumanoidStateType` that the `Class.Humanoid` is to perform.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:EquipTool
+    summary: |
+      Makes the `Class.Humanoid` equip the given `Class.Tool`.
+    description: |
+      This function makes the `Class.Humanoid` equip the given `Class.Tool`.
+
+      The below example would cause a `Class.Player` to equip a tool in
+      `Class.Workspace` named _'Tool'_.
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      local player = Players:FindFirstChildOfClass("Player")
+      if player and player.Character then
+      	local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+      	if humanoid then
+      		local tool = workspace:FindFirstChild("Tool")
+      		if tool then
+      			humanoid:EquipTool(tool)
+      		end
+      	end
+      end
+      ```
+
+      When this function is called, the humanoid will automatically unequip any
+      `Class.Tool|Tools` that it currently has equipped
+
+      Although they will be equipped, `Class.Tool|Tools` for which
+      `Class.Tool.RequiresHandle` is _true_ will not function if they have no
+      handle, regardless if this function is used to equip them or not
+
+      See also:
+
+      - To unequip tools, use `Class.Humanoid:UnequipTools()`
+    code_samples:
+      - how-to-spawn-colorful-bricks-on-click
+    parameters:
+      - name: tool
+        type: Instance
+        default:
+        summary: |
+          The `Class.Tool` to equip.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetAccessories
+    summary: |
+      Returns an array of `Class.Accessory|Accessories` that the
+      `Class.Humanoid|Humanoid's` parent is currently wearing.
+    description: |
+      This function returns an array of `Class.Accessory|Accessories` that the
+      `Class.Humanoid|Humanoid's` parent is currently wearing. All
+      `Class.Accessory` objects parented to the `Class.Humanoid|Humanoid's`
+      parent will be included, regardless of if they are attached or not. If the
+      humanoid is not wearing any accessories, the array will be empty.
+
+      If the `Class.Humanoid` has no `Class.Accessory|Accessories` an empty
+      array will be returned
+
+      See also:
+
+      - Use `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory` to a
+        `Class.Humanoid|Humanoid's` parent
+    code_samples:
+      - remove-accessories-after-loading
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of `Class.Accessory|Accessories` that are parented to the
+          `Class.Humanoid|Humanoid's` parent.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetAppliedDescription
+    summary: |
+      Returns back a copy of the `Class.Humanoid|Humanoid's` cached
+      `Class.HumanoidDescription`, which describes its current look.
+    description: |
+      This blocking function returns back a copy of the
+      `Class.Humanoid|Humanoid's` cached `Class.HumanoidDescription`, which
+      describes its current look.
+
+      This can be used to quickly determine a player's look and to assign their
+      look to other players using the `Class.Humanoid:ApplyDescription()`
+      function.
+
+      See also:
+
+      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
+        HumanoidDescription which describes the Avatar for the passed in user
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
+        HumanoidDescription whose parameters are initialized to match that of
+        the passed in server-side outfit asset
+      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
+        with the look from the HumanoidDescription Instance passed in
+    code_samples:
+    parameters: []
+    returns:
+      - type: HumanoidDescription
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetBodyPartR15
+    summary: |
+      Pass a body part to this function (the body part should be a sibling of
+      Humanoid, and a child of a Model) to get the `Enum.BodyPartR15` of the
+      `Class.Part`.
+    description: |
+      This function returns what `Enum.BodyPartR15` a `Class.Part` is, or
+      `Enum.BodyPartR15.Unknown` if the part is not an R15 body part. This
+      function allows developers to retrieve player body parts independent of
+      what the actual body part names are, instead returning an Enum.
+
+      It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
+      For example, if a `Class.Player|player's` body part touches something,
+      this function will return get a part instance. Developers can then look up
+      what part of the body that was, like head or arm. Then depending on what
+      that part was, developers can either perform some gameplay action or
+      replace that part with some other part - perhaps showing damage.
+
+      This function can be useful for games where hit location is important. For
+      example, it can be used to determine if a player is hit in the leg and
+      then slow them down based on the injury.
+    code_samples:
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: |
+          The specified part being checked to see if it is an R15 body part.
+    returns:
+      - type: BodyPartR15
+        summary: |
+          The specified part's R15 body part type or unknown if the part is not
+          a body part.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetLimb
+    summary: |
+      Returns the `Enum.Limb` enum that is associated with the given
+      `Class.Part`.
+    description: |
+      This function returns the `Enum.Limb` enum that is associated with the
+      given `Class.Part`
+
+      This function works for both R15 and R6 rigs, for example:
+
+      ```lua
+      -- For R15
+      print(humanoid:GetLimb(character.LeftUpperLeg)) -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character.LeftLowerLeg)) -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character.LeftFoot)) -- Enum.Limb.LeftLeg
+
+      -- For R6
+      print(humanoid:GetLimb(character:FindFirstChild("Left Leg"))) -- Enum.Limb.LeftLeg
+      ```
+
+      GetLimb will throw an error if the `Class.Part|Part's` parent is not set
+      to the `Class.Humanoid|Humanoid's` parent.
+    code_samples:
+      - Humanoid-GetLimb1
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: |
+          The `Class.Part` for which the `Enum.Limb|Enum.Limb` is to be
+          retrieved.
+    returns:
+      - type: Limb
+        summary: |
+          The `Enum.Limb` the part corresponds with.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetMoveVelocity
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetPlayingAnimationTracks
+    summary: |
+      Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
+      currently being played on the `Class.Humanoid`.
+    description: |
+      This function returns an array of all
+      `Class.AnimationTrack|AnimationTracks` that are currently being played on
+      the `Class.Humanoid`.
+
+      A typical use for this function is stopping currently playing tracks using
+      `Class.AnimationTrack:Stop()`.
+
+      Beware that this function will not return
+      `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
+      playing**. If you want to track these you will need to index them
+      manually. See below for one example of how this could be achieved:
+
+      ```
+      local animationTracks = {}
+      local track = humanoid:LoadAnimation(animation)
+      table.insert(animationTracks, track)
+      ```
+    code_samples:
+      - printing-a-list-of-playing-animations
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of currently playing `Class.AnimationTrack|AnimationTracks`.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:GetState
+    summary: |
+      Returns the `Class.Humanoid|Humanoid's` current `Enum.HumanoidStateType`.
+    description: |
+      This function returns the `Class.Humanoid|Humanoid's` current
+      `Enum.HumanoidStateType`.
+
+      The humanoid state describes the activity the `Class.Humanoid` is
+      currently doing, such as jumping or freefalling.
+
+      See also:
+
+      - To change the `Class.Humanoid|Humanoid's` state use
+        `Class.Humanoid:ChangeState()`
+      - To enable or disable a particular state use
+        `Class.Humanoid:SetStateEnabled()`
+      - For more information on the different states available, see
+        `Enum.HumanoidStateType`
+    code_samples:
+      - double-jump
+    parameters: []
+    returns:
+      - type: HumanoidStateType
+        summary: |
+          The current `Enum.HumanoidStateType` of the `Class.Humanoid`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Humanoid:GetStateEnabled
+    summary: |
+      Returns whether a `Enum.HumanoidStateType` is enabled for the
+      `Class.Humanoid`.
+    description: |
+      The GetStateEnabled function returns whether a `Enum.HumanoidStateType` is
+      enabled for the `Class.Humanoid`.
+
+      The humanoid state describes the activity the humanoid is currently doing.
+
+      When a particular `Enum.HumanoidStateType` is disabled, the humanoid can
+      never enter that state. This is true regardless if the attempt to change
+      state is made using `Class.Humanoid:ChangeState()` or Roblox internal
+      humanoid code.
+
+      See also:
+
+      - For an event that fires when a humanoid state is enabled or disabled see
+        `Class.Humanoid.StateEnabledChanged`
+      - To enable or disable a `Class.Humanoid` state use
+        `Class.Humanoid:SetStateEnabled()`
+    code_samples:
+      - setting-and-getting-humanoid-states
+    parameters:
+      - name: state
+        type: HumanoidStateType
+        default:
+        summary: |
+          The given `Enum.HumanoidStateType`.
+    returns:
+      - type: bool
+        summary: |
+          Whether the given `Enum.HumanoidStateType` is enabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Humanoid:GetStatuses
+    summary: |
+      Returns a table of the Humanoid's statuses, and custom statuses.
+    description: |
+      The GetStatuses function returns a table of the Humanoid's statuses, and
+      custom statuses.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:HasCustomStatus
+    summary: |
+      Returns boolean based on if custom statuses exist.
+    description: |
+      The HasCustomStatus function returns boolean based on if custom statuses
+      exist.
+    code_samples:
+    parameters:
+      - name: status
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:HasStatus
+    summary: |
+      Returns a boolean based on if a status exists.
+    description: |
+      The HasStatus function returns a boolean based on if a status exists.
+    code_samples:
+    parameters:
+      - name: status
+        type: Status
+        default: Poison
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:LoadAnimation
+    summary: |
+      Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
+      `Class.AnimationTrack` that can be used for playback.
+    description: |
+      This function loads an `Class.Animation` onto a `Class.Humanoid`,
+      returning an `Class.AnimationTrack` that can be used for playback.
+
+      The following code can be used to load an `Class.Animation` onto a
+      `Class.Humanoid`.
+
+      ```lua
+      local animationTrack = humanoid:LoadAnimation(animation)
+      animationTrack:Play()
+      ```
+
+      #### Should I load an Animation on the client or server?
+
+      If the `Class.Humanoid` is controlled by a particular client, as is the
+      case with `Class.Player` `Class.Player.Character|Characters` then
+      `Class.Animation|Animations` should be loaded and played from that client.
+
+      If the `Class.Humanoid` belongs to a NPC (Non Player Character) which the
+      server has [network ownership](../../../physics/network-ownership.md) of
+      then the `Class.Animation|Animations` should be loaded and played from the
+      server.
+
+      Although generally it is not advisable to do so, these rules can be
+      bypassed using the `Class.Animator` object.
+    code_samples:
+      - Humanoid-LoadAnimation1
+    parameters:
+      - name: animation
+        type: Animation
+        default:
+        summary: |
+          The `Class.Animation` to load.
+    returns:
+      - type: AnimationTrack
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated in favor of using
+      `Class.Animator:LoadAnimation()` directly (the `Class.Animator` may be
+      created while editing or at runtime). For more information, see this
+      [announcement](https://devforum.roblox.com/t/deprecating-loadanimation-on-humanoid-and-animationcontroller/857129).
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:Move
+    summary: |
+      Causes the `Class.Humanoid` to walk in the given direction.
+    description: |
+      This function causes the `Class.Humanoid` to walk in the given
+      `Datatype.Vector3` _direction_.
+
+      By default, the _direction_ given is in world terms. If the
+      _relativeToCamera_ parameter is _true_ however the _direction_ given is
+      relative to the `Class.Workspace.CurrentCamera|CurrentCamera's`
+      `Datatype.CFrame`. As the negative Z direction is considered 'forwards' in
+      Roblox, the following code would make the `Class.Humanoid` walk in the
+      direction of the `Class.Workspace.CurrentCamera`.
+
+      ```lua
+      humanoid:Move(Vector3.new(0, 0, -1), true)
+      ```
+
+      When this function is called, the `Class.Humanoid` will move until the
+      function is called again. However, if the default control scripts are
+      being used this function will be overwritten when called on `Class.Player`
+      `Class.Player.Character|Characters`. This can be avoided by either not
+      using the default control scripts, or calling this function every frame
+      using `Class.RunService:BindToRenderStep()` (see example).
+
+      This function can be called on the server, but this should only be done
+      when the server has
+      [network ownership](../../../physics/network-ownership.md) of the
+      `Class.Humanoid|Humanoid's` assembly.
+
+      See also:
+
+      - To make a`Class.Humanoid` walk to a point, use the
+        `Class.Humanoid:MoveTo()` function
+      - For `Class.Player|Players` the `Class.Player:Move()` function exists
+        that calls this function
+    code_samples:
+      - moving-a-humanoid-forwards
+    parameters:
+      - name: moveDirection
+        type: Vector3
+        default:
+        summary: |
+          The direction to walk in.
+      - name: relativeToCamera
+        type: bool
+        default: false
+        summary: |
+          _True_ if the _direction_ parameter should be taken as relative to the
+          `Class.Workspace.CurrentCamera`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:MoveTo
+    summary: |
+      Causes the `Class.Humanoid` to attempt to walk to the given location by
+      setting the `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart`
+      properties.
+    description: |
+      This function causes the `Class.Humanoid` to attempt to walk to the given
+      location by setting the `Class.Humanoid.WalkToPoint` and
+      `Class.Humanoid.WalkToPart` properties.
+
+      The _location_ and _part_ parameters correspond with what
+      `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart` will be set
+      to.
+
+      If the _part_ parameter is specified, the `Class.Humanoid` will still
+      attempt to walk to the point. However, if the part moves then the point
+      the `Class.Humanoid` is walking to will move to be at the same position
+      **relative to the part**. If the _part_ parameter is not specified, then
+      the position the `Class.Humanoid` is walking to will not change.
+
+      The _reach goal_ state of a humanoid will timeout after 8 seconds if it
+      doesn't reach its goal. This is done so that NPCs won't get stuck waiting
+      for `Class.Humanoid.MoveToFinished` to fire. If you don't want this to
+      happen, you should repeatedly call MoveTo so that the timeout will keep
+      resetting.
+    code_samples:
+      - humanoid-moveto-without-time-out
+    parameters:
+      - name: location
+        type: Vector3
+        default:
+        summary: |
+          The position to set `Class.Humanoid.WalkToPoint` to.
+      - name: part
+        type: Instance
+        default: nil
+        summary: |
+          The `Class.BasePart` to set `Class.Humanoid.WalkToPart` to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:RemoveAccessories
+    summary: |
+      Removes all `Class.Accessory|Accessories` worn by the
+      `Class.Humanoid|Humanoid's` parent.
+    description: |
+      This function removes all `Class.Accessory|Accessories` worn by the
+      `Class.Humanoid|Humanoid's` parent. When this function is called, all
+      `Class.Accessory|Accessories` sharing an `Class.Instance.Parent` with the
+      `Class.Humanoid` will be removed. For `Class.Player`
+      `Class.Player.Character|Characters` this will remove all hats and other
+      accessories.
+
+      This function removes `Class.Accessory|Accessories` by calling
+      `Class.Instance:Destroy()` on them. This means the
+      `Class.Instance.Parent|Parents` of the accessories are set to _nil_ and
+      locked.
+
+      See also:
+
+      - To attach an `Class.Accessory` use the `Class.Humanoid:AddAccessory()`
+        function
+      - To get all `Class.Accessory|Accessories` belonging to a `Class.Humanoid`
+        use the `Class.Humanoid:GetAccessories()` function
+    code_samples:
+      - remove-accessories-after-loading
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:RemoveCustomStatus
+    summary: |
+      Removes the defined custom status from the Status model in the Humanoid..
+    description: |
+      The RemoveCustomStatus function removes the defined custom status from the
+      Status model in the Humanoid..
+    code_samples:
+    parameters:
+      - name: status
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:RemoveStatus
+    summary: |
+      Removes the defined status from the Status model in the Humanoid.
+    description: |
+      The RemoveStatus function removes the defined status from the Status model
+      in the Humanoid.
+    code_samples:
+    parameters:
+      - name: status
+        type: Status
+        default: Poison
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:ReplaceBodyPartR15
+    summary: |
+      Dynamically replaces a Humanoid body part with a different part.
+    description: |
+      ReplaceBodyPartR15 dynamically replaces a R15/Rthro limb part in a
+      Humanoid with a different part. The part is automatically scaled as
+      normal. In the image below, a R15 avatar has had their right hand replaced
+      with a slightly larger version (also pictured).
+
+      ![An image of a Roblox avatar with a large right hand, replaced using ReplaceBodyPartR15. How handy](/assets/legacy/Humanoid.ReplaceBodyPartR15.png)
+
+      This function is useful for modifying characters during gameplay or
+      building characters from a base rig. The related function
+      `Class.Humanoid:GetBodyPartR15()|GetBodyPartR15` can come in handy when
+      using this function.
+
+      The name of the part passed in should match with the name of the
+      BodyPartR15 Enum passed in.
+    code_samples:
+    parameters:
+      - name: bodyPart
+        type: BodyPartR15
+        default:
+        summary: |
+          The body part to replace. `Enum.BodyPartR15.Unknown` will fail.
+      - name: part
+        type: BasePart
+        default:
+        summary: |
+          The `Class.Part` `Class.Instance` which will be parented to the
+          character.
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:SetStateEnabled
+    summary: |
+      Sets whether a given `Enum.HumanoidStateType` is enabled for the
+      `Class.Humanoid`.
+    description: |
+      This function sets whether a given `Enum.HumanoidStateType` is enabled for
+      the `Class.Humanoid`.
+
+      The humanoid state describes the activity the `Class.Humanoid` is
+      currently doing.
+
+      When a particular `Enum.HumanoidStateType` is disabled, the
+      `Class.Humanoid` can never enter that state. This is true regardless if
+      the attempt to change state is made using `Class.Humanoid:ChangeState()`
+      or Roblox internal `Class.Humanoid` code.
+    code_samples:
+      - jump-cooldown
+    parameters:
+      - name: state
+        type: HumanoidStateType
+        default:
+        summary: |
+          The `Enum.HumanoidStateType` to be enabled or disabled.
+      - name: enabled
+        type: bool
+        default:
+        summary: |
+          _True_ if this state is to be enabled, _false_ if it is to be
+          disabled.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:TakeDamage
+    summary: |
+      Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given
+      _amount_ if it is not protected by a `Class.ForceField`.
+    description: |
+      This function lowers the `Class.Humanoid.Health` of the `Class.Humanoid`
+      by the given _amount_ if it is not protected by a `Class.ForceField`
+
+      This function accepts negative values for the _amount_ parameter. This
+      will increase the humanoid's `Class.Humanoid.Health`. However this will
+      only have an effect if no `Class.ForceField` is present.
+
+      #### How do ForceFields protect against TakeDamage
+
+      A `Class.Humanoid` is considered protected by a `Class.ForceField` if a
+      `Class.ForceField` meets one of the following criteria:
+
+      - The `Class.ForceField` shares the same `Class.Instance.Parent` as the
+        `Class.Humanoid`
+      - The `Class.ForceField` is parented to the `Class.Humanoid.RootPart` of
+        the `Class.Humanoid`
+      - The `Class.ForceField` is parented to an ancestor of the
+        `Class.Humanoid` other than the `Class.Workspace`
+
+      To do damage to a `Class.Humanoid` irrespective of any
+      `Class.ForceField|ForceFields` present, set `Class.Humanoid.Health`
+      directly.
+
+      For more information on how `Class.ForceField|ForceFields` protect
+      `Class.Humanoid|Humanoids` see the `Class.ForceField` page
+    code_samples:
+      - Humanoid-TakeDamage1
+    parameters:
+      - name: amount
+        type: float
+        default:
+        summary: |
+          The damage, or amount to be deduced from the `Class.Humanoid.Health`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:UnequipTools
+    summary: |
+      Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
+    description: |
+      This function unequips any `Class.Tool` currently equipped by the
+      `Class.Humanoid`
+
+      The unequipped `Class.Tool` will be parented to the `Class.Backpack` of
+      the `Class.Player` associated with the `Class.Humanoid`.
+
+      If no `Class.Tool` is equipped, this function will do nothing.
+
+      Although `Class.Tool|Tools` can be equipped by NPCs (Non Player
+      Characters), this function only works on `Class.Humanoid|Humanoids` with a
+      corresponding `Class.Player`. This is because a `Class.Backpack` object is
+      required to parent the unequipped `Class.Tool` to.
+
+      See also:
+
+      - To instead equip a `Class.Tool`, use `Class.Humanoid:EquipTool()`
+    code_samples:
+      - unequip-tool-keybind
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:loadAnimation
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: animation
+        type: Animation
+        default:
+        summary: ''
+    returns:
+      - type: AnimationTrack
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Humanoid:LoadAnimation()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:takeDamage
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: amount
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Humanoid:TakeDamage()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:ApplyDescription
+    summary: |
+      Makes the `Class.Player.Character|character's` look match that of the
+      passed in `Class.HumanoidDescription`.
+    description: |
+      This yield function makes the `Class.Player.Character|character's`
+      appearance match the specification of the passed in
+      `Class.HumanoidDescription`. A copy of the passed
+      `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
+      for the `Class.Humanoid`.
+
+      It allows you to quickly set a character's appearance and store the
+      specification of that appearance.
+
+      This function is optimized through making the assumption that only this
+      function is used to change the appearance of the character, and no changes
+      are made through other means between calls. If changes are made to the
+      character between calls. Then this function may not make the character
+      reflect the passed in `Class.HumanoidDescription` accurately. If you want
+      to use this function in conjunction with other means of updating the
+      character, `Class.Humanoid:ApplyDescriptionReset()` will always ensure the
+      character reflects the passed in `Class.HumanoidDescription`.
+
+      See also:
+
+      - `Class.Humanoid:ApplyDescriptionReset()`, Makes the
+        `Class.Player.Character|character's` look match that of the passed in
+        `Class.HumanoidDescription` (even after external changes)
+      - `Class.Humanoid:GetAppliedDescription()`, returns the
+        HumanoidDescription currently applied to the Humanoid
+      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
+        HumanoidDescription which describes the Avatar for the passed in user
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
+        HumanoidDescription whose parameters are initialized to match that of
+        the passed in server-side outfit asset
+      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
+        with the look from the HumanoidDescription Instance passed in
+    code_samples:
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Class.HumanoidDescription` Instance which you want to set the
+          character to match.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:ApplyDescriptionReset
+    summary: |
+      Makes the `Class.Player.Character|character's` look match that of the
+      passed in `Class.HumanoidDescription` (even after external changes).
+    description: |
+      This yield function makes the `Class.Player.Character|character's`
+      appearance match the specification of the passed in
+      `Class.HumanoidDescription`. A copy of the passed
+      `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
+      for the `Class.Humanoid`.
+
+      It allows you to quickly set a character's appearance and store the
+      specification of that appearance.
+
+      This function will always ensure the character reflects the passed in
+      `Class.HumanoidDescription`, even if changes have been made to the
+      character not using the `Class.HumanoidDescription` system (i.e not using
+      `Class.Humanoid:ApplyDescriptionReset()` or
+      `Class.Humanoid:ApplyDescription()`). This is in contrast to
+      `Class.Humanoid:ApplyDescription()`, which is optimized and may
+      incorrectly apply a `Class.HumanoidDescription` if the character has been
+      changed by means other than through the `Class.HumanoidDescription`
+      system.
+
+      See also:
+
+      - `Class.Humanoid:ApplyDescription()`, Makes the
+        `Class.Player.Character|character's` look match that of the passed in
+        `Class.HumanoidDescription`.
+      - `Class.Humanoid:GetAppliedDescription()`, returns the
+        HumanoidDescription currently applied to the Humanoid
+      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
+        HumanoidDescription which describes the Avatar for the passed in user
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
+        HumanoidDescription whose parameters are initialized to match that of
+        the passed in server-side outfit asset
+      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
+        with the look from the HumanoidDescription Instance passed in
+    code_samples:
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Class.HumanoidDescription` Instance which you want to set the
+          character to match.
+      - name: assetTypeVerification
+        type: AssetTypeVerification
+        default: Default
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid:PlayEmote
+    summary: |
+      Plays emotes and returns if was successfully ran.
+    description: |
+      If the emote could not be played because the emoteName is not found in the
+      HumanoidDescription this API will give an error. The API will return true
+      to indicate that the emote was played successfully.
+    code_samples:
+    parameters:
+      - name: emoteName
+        type: string
+        default:
+        summary: |
+          name of the emote to play.
+    returns:
+      - type: bool
+        summary: |
+          successfully played.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Humanoid.AnimationPlayed
+    summary: |
+      Fires when an `Class.AnimationTrack` begins playing on the
+      `Class.Humanoid`.
+    description: |
+      The AnimationPlayed event fires when an `Class.AnimationTrack` begins
+      playing on the `Class.Humanoid`.
+
+      A common use for this function is to connect the
+      `Class.AnimationTrack.KeyframeReached` event for the playing
+      AnimationTrack, so additional effects can be added to the animation (for
+      example `Class.Sound|Sounds` and
+      `Class.ParticleEmitter|ParticleEmitters`).
+
+      This event can be used for any `Class.Humanoid` regardless if it belongs
+      to the local player's client or not.
+
+      See also:
+
+      - For the `Class.AnimationController` equivalent of this event, please see
+        `Class.AnimationController.AnimationPlayed`
+    code_samples:
+      - pausing-an-animation-when-a-keyframe-is-reached
+    parameters:
+      - name: animationTrack
+        type: AnimationTrack
+        default:
+        summary: |
+          The `Class.AnimationTrack` that has begun playing.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Climbing
+    summary: |
+      Fires when the speed at which a `Class.Humanoid` is climbing changes.
+    description: |
+      Fires when the speed at which a `Class.Humanoid` is climbing changes.
+
+      `Class.Humanoid|Humanoids` can climb up ladders made out of
+      `Class.BasePart|Parts` or `Class.TrussPart|TrussParts`.
+
+      `Class.Humanoid|Humanoids` climb at 70% of their
+      `Class.Humanoid.WalkSpeed`.
+
+      This event will not always fire with a speed of 0 when the
+      `Class.Humanoid` stops climbing.
+
+      See also:
+
+      - For swimming and running see the `Class.Humanoid.Swimming` and
+        `Class.Humanoid.Running` events
+      - You can also detect when a `Class.Humanoid` is climbing using the
+        `Class.Humanoid.StateChanged` event
+      - You can disable climbing using the `Class.Humanoid:SetStateEnabled()`
+        function
+    code_samples:
+      - Humanoid-Climbing1
+    parameters:
+      - name: speed
+        type: float
+        default:
+        summary: |
+          The speed at which the `Class.Humanoid` is currently climbing.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.CustomStatusAdded
+    summary: |
+      Fired when a status is added to the Humanoid.
+    description: |
+      The CustomStatusAdded event fires when a status is added to the Humanoid
+      via the `Class.Humanoid:AddCustomStatus()` method.
+    code_samples:
+    parameters:
+      - name: status
+        type: string
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.CustomStatusRemoved
+    summary: |
+      Fired when a status is removed from the Humanoid.
+    description: |
+      The CustomStatusRemoved event fires when a status is removed from the
+      Humanoid via the `Class.Humanoid:RemoveCustomStatus()` method.
+    code_samples:
+    parameters:
+      - name: status
+        type: string
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Died
+    summary: |
+      Fires when the `Class.Humanoid` dies.
+    description: |
+      This event fires when the `Class.Humanoid` dies, usually when
+      `Class.Humanoid.Health` reaches 0. This could be caused either by
+      disconnecting their head from their `Class.Humanoid.Torso`, or directly
+      setting the health property.
+
+      This event only fires if the `Class.Humanoid` is a descendant of the
+      `Class.Workspace`. If the _Dead_ `Enum.HumanoidStateType` is disabled it
+      will not fire.
+    code_samples:
+      - Humanoid-Died1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.FallingDown
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _FallingDown_
+      `Enum.HumanoidStateType`.
+    description: |
+      The FallingDown event fires when the `Class.Humanoid` enters and leaves
+      the _FallingDown_ `Enum.HumanoidStateType`.
+
+      The `Class.Humanoid` will enter the _GettingUp_ state 3 seconds after the
+      _FallingDown_ state is enabled. When this happens this event will fire
+      with an _active_ value of _false_, and `Class.Humanoid.GettingUp` will
+      fire with an _active_ value of _true_.
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Describes whether the `Class.Humanoid` is entering or leaving the
+          _FallingDown_ `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.FreeFalling
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _Freefall_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event fires when the `Class.Humanoid` enters or leaves the _Freefall_
+      `Enum.HumanoidStateType`.
+
+      The _active_ parameter represents whether the `Class.Humanoid` is entering
+      or leaving the _Freefall_ state.
+
+      Although the _Freefall_ state generally ends when the `Class.Humanoid`
+      reaches the ground, this event may fire with _active_ equal to _false_ if
+      the state is changed while the `Class.Humanoid` is falling. For this
+      reason, you should use `Class.Humanoid.StateChanged` and listen for the
+      _Landed_ state to work out when a `Class.Humanoid` has landed.
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the _Freefall_
+          `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.GettingUp
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _GettingUp_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event fires when the `Class.Humanoid` enters or leaves the
+      _GettingUp_ `Enum.HumanoidStateType`.
+
+      The _GettingUp_ `Enum.HumanoidStateType` is a transition state that is
+      activated shortly after the `Class.Humanoid` enters the _FallingDown_ (3
+      seconds) or _Ragdoll_ (1 second)
+      `Enum.HumanoidStateType|HumanoidStateTypes`.
+
+      When a `Class.Humanoid` attempts to get back up, this event will first
+      fire with an _active_ parameter of _true_ before shortly after firing
+      again with an _active_ parameter of _false_.
+
+      See also:
+
+      - To force a `Class.Humanoid` to fall over, use the
+        `Class.Humanoid:ChangeState()` function to change the
+        `Class.Humanoid|Humanoid's` state to _FallingDown_
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the _GettingUp_
+          `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.HealthChanged
+    summary: |
+      Fires when the `Class.Humanoid.Health` changes (or when the
+      `Class.Humanoid.MaxHealth` is set).
+    description: |
+      This event fires when the `Class.Humanoid.Health` changes. However, it
+      will not fire if the health is increasing from a value equal to or greater
+      than the `Class.Humanoid.MaxHealth`.
+
+      When `Class.Humanoid.Health` reaches zero, the `Class.Humanoid` will die
+      and the `Class.Humanoid.Died` event will fire. This event will fire with a
+      value of zero.
+    code_samples:
+      - Humanoid-HealthChanged1
+      - Health-Bar
+    parameters:
+      - name: health
+        type: float
+        default:
+        summary: |
+          The new value of `Class.Humanoid.Health`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Jumping
+    summary: |
+      Fires when the `Class.Humanoid` enters and leaves the _Jumping_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event fires when the `Class.Humanoid` enters and leaves the _Jumping_
+      `Enum.HumanoidStateType`.
+
+      When a `Class.Humanoid` jumps this will fire with a _active_ parameter of
+      _true_ before shortly afterwards firing again with an active parameter of
+      _false_. This does not correspond with when a `Class.Humanoid` has landed.
+      For that, developers should listen for the _Landed_
+      `Enum.HumanoidStateType` using `Class.Humanoid.StateChanged`.
+
+      You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
+      function.
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the _Jumping_
+          `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.MoveToFinished
+    summary: |
+      Fires when the `Class.Humanoid` finishes walking to a goal declared by
+      `Class.Humanoid:MoveTo()`.
+    description: |
+      This event fires when the `Class.Humanoid` finishes walking to a goal
+      declared by the `Class.Humanoid.WalkToPoint` and
+      `Class.Humanoid.WalkToPart` properties.
+
+      The `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart`
+      properties can be set individually, or using the `Class.Humanoid:MoveTo()`
+      function.
+
+      If the `Class.Humanoid` reaches its goal within 8 seconds, this event will
+      return with _reached_ as true. If the goal is not reached within 8 seconds
+      the `Class.Humanoid` will stop walking and _reached_ will be false. This
+      timeout can be reset be calling `Class.Humanoid:MoveTo()` again within the
+      timeout period.
+    code_samples:
+      - humanoid-moveto-without-time-out
+    parameters:
+      - name: reached
+        type: bool
+        default:
+        summary: |
+          A boolean indicating whether the `Class.Humanoid` reached is goal.
+          _True_ if the `Class.Humanoid` is reached its goal, _false_ if the
+          walk timed out before the goal could be reached.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.PlatformStanding
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _PlatformStanding_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event fires when the `Class.Humanoid` enters or leaves the
+      _PlatformStanding_ `Enum.HumanoidStateType`.
+
+      Whilst the `Class.Humanoid` is in the _PlatformStanding_ state, the
+      `Class.Humanoid.PlatformStand` property will be _true_.
+
+      Whilst `Class.Humanoid.PlatformStand` is set to _true_, the
+      `Class.Humanoid` will be unable to move. For more information please see
+      the page for `Class.Humanoid.PlatformStand`.
+
+      The PlatformStand `Enum.HumanoidStateType` was associated with the now
+      disabled `Class.Platform` part. Despite this, it can still be used by
+      developers.
+    code_samples:
+      - Humanoid-PlatformStanding1
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the
+          _PlatformStanding_ `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Ragdoll
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _Ragdoll_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event fires when the `Class.Humanoid` enters or leaves the _Ragdoll_
+      `Enum.HumanoidStateType`.
+
+      The `active` parameter will have the value `true` or `false` to indicate
+      entering or leaving.
+
+      Use `Class.Humanoid:SetStateEnabled()` to disable the GettingUp state to
+      stay in the Ragdoll state.
+
+      See also:
+
+      - `Class.Humanoid.FallingDown` for the `Class.Humanoid` event connected
+        with the _FallingDown_ state, which behaves similarly to _Ragdoll_
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the _Ragdoll_
+          `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Running
+    summary: |
+      Fires when the speed at which a `Class.Humanoid` is running changes.
+    description: |
+      This event fires when the speed at which a `Class.Humanoid` is running
+      changes.
+
+      While running `Class.Humanoid|Humanoids` cover, on average, their
+      `Class.Humanoid.WalkSpeed` in studs per second.
+
+      When the `Class.Humanoid` stops running this event will fire with a speed
+      of 0.
+
+      See also:
+
+      - For swimming and climbing see the `Class.Humanoid.Swimming` and
+        `Class.Humanoid.Climbing` events
+      - You can also detect when a `Class.Humanoid` is running using the
+        `Class.Humanoid.StateChanged` event
+    code_samples:
+      - Humanoid-Running1
+      - humanoid-action-events
+    parameters:
+      - name: speed
+        type: float
+        default:
+        summary: |
+          The speed at which the `Class.Humanoid` is running.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Seated
+    summary: |
+      Fired when a `Class.Humanoid` either sits in a `Class.Seat` or
+      `Class.VehicleSeat` or gets up.
+    description: |
+      This event fires when a `Class.Humanoid` either sits in or gets up from a
+      `Class.Seat` or `Class.VehicleSeat`.
+
+      When a character comes into contact with a seat, they are attached to the
+      seat and a sitting animation plays. For more information on this, see the
+      `Class.Seat` page.
+
+      - If the character is sitting down, the `active` parameter will be
+        **true** and `currentSeatPart` will be the seat they are currently
+        sitting in.
+      - If the character got up from a seat, the `active` parameter will be
+        **false** and `currentSeatPart` will be nil.
+
+      See also:
+
+      - `Class.Humanoid.Sit`, which indicates if a Humanoid is currently sitting
+      - `Class.Humanoid.SeatPart`, which indicates the seat a Humanoid is
+        currently sitting in, if any.
+    code_samples:
+      - finding-a-player-s-seat
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          True if the `Class.Humanoid` is sitting down.
+      - name: currentSeatPart
+        type: BasePart
+        default:
+        summary: |
+          The seat the `Class.Humanoid` is sat in if it is sitting down.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.StateChanged
+    summary: |
+      Fired when the state of the `Class.Humanoid` is changed.
+    description: |
+      This event fires when the state of the `Class.Humanoid` is changed.
+
+      The humanoid state describes the activity the `Class.Humanoid` is
+      currently doing. It takes the form of a `Enum.HumanoidStateType` value.
+
+      See also:
+
+      - To get and set the state use `Class.Humanoid:GetState()` and
+        `Class.Humanoid:ChangeState()`
+      - Individual states can be disabled using
+        `Class.Humanoid:SetStateEnabled()`
+      - As there is no idle humanoid state, you should instead use the
+        `Class.Humanoid.Running` event or listen to the
+        `Class.Humanoid.RootPart|RootPart's` `Class.BasePart.Velocity` to work
+        out when the `Class.Humanoid` is standing still
+    code_samples:
+      - jumping-particles
+      - jump-cooldown
+    parameters:
+      - name: old
+        type: HumanoidStateType
+        default:
+        summary: |
+          The `Class.Humanoid|Humanoid's` previous state type.
+      - name: new
+        type: HumanoidStateType
+        default:
+        summary: |
+          The `Class.Humanoid|Humanoid's` current state type.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.StateEnabledChanged
+    summary: |
+      Fires when `Class.Humanoid:SetStateEnabled()` is called on the
+      `Class.Humanoid`.
+    description: |
+      The StateEnableChanged event fires when `Class.Humanoid:SetStateEnabled()`
+      is called on the `Class.Humanoid`.
+
+      Parameters include the `Enum.HumanoidStateType` in question along with a
+      bool indicating if this state is now enabled.
+
+      See also:
+
+      - To find if a state is currently enabled, use
+        `Class.Humanoid:GetStateEnabled()`
+      - To listen to `Class.Humanoid` state changes use
+        `Class.Humanoid.StateChanged`
+    code_samples:
+      - humanoid-state-change-detector
+    parameters:
+      - name: state
+        type: HumanoidStateType
+        default:
+        summary: |
+          The `Enum.HumanoidStateType` for which the enabled state has been
+          changed.
+      - name: isEnabled
+        type: bool
+        default:
+        summary: |
+          True if the state is now enabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.StatusAdded
+    summary: |
+      Fired when a status is added to the Humanoid.
+    description: |
+      The StatusAdded event fires when a status is added to the Humanoid.
+    code_samples:
+      - Humanoid-StatusAdded1
+    parameters:
+      - name: status
+        type: Status
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.StatusRemoved
+    summary: |
+      Fired when a status is removed from the Humanoid.
+    description: |
+      The StatusRemoved event fires when a status is removed from the Humanoid.
+    code_samples:
+      - Humanoid-StatusRemoved1
+    parameters:
+      - name: status
+        type: Status
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was a part of the unfinished RbxStatus
+      library which would have allowed you to add conditions to a Humanoid. Do
+      not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Strafing
+    summary: |
+      Fires when the `Class.Humanoid` enters or leaves the _StrafingNoPhysics_
+      `Enum.HumanoidStateType`.
+    description: |
+      This event does not fire when the `Class.Humanoid` is strafing and should
+      not be used by developers
+
+      This event is fired when the `Class.Humanoid` enters or leaves the
+      _StrafingNoPhysics_ `Enum.HumanoidStateType`.
+
+      When the `Class.Humanoid` enters the _StrafingNoPhysics_ state this event
+      will fire with an _active_ parameter of _true_. The event will fire again
+      with _active_ equal to _false_ when the `Class.Humanoid` leaves the
+      _StrafingNoPhysics_ state.
+
+      This event is associated with the _StrafingNoPhysics_ `Class.Humanoid`
+      state and does **not** fire when the `Class.Humanoid` is moving
+      perpendicular to the direction it is facing. This state is currently
+      unused, if it is set using `Class.Humanoid:ChangeState()` the state will
+      revert to _RunningNoPhysics_.
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: |
+          Whether the `Class.Humanoid` is entering or leaving the
+          _StrafingNoPhysics_ `Enum.HumanoidStateType`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Swimming
+    summary: |
+      Fires when the speed at which a `Class.Humanoid` is swimming in
+      `Class.Terrain` water changes.
+    description: |
+      This event fires when the speed at which a `Class.Humanoid` is swimming in
+      `Class.Terrain` water changes.
+
+      `Class.Humanoid|Humanoids` swim at 87.5% of their
+      `Class.Humanoid.WalkSpeed`.
+
+      This event will not always fire with a speed of 0 when the
+      `Class.Humanoid` stops swimming.
+
+      See also:
+
+      - For running and climbing see the `Class.Humanoid.Running` and
+        `Class.Humanoid.Climbing` events
+      - You can also detect when a `Class.Humanoid` is swimming using the
+        `Class.Humanoid.StateChanged` event
+      - You can disable swimming using the `Class.Humanoid:SetStateEnabled()`
+        function
+    code_samples:
+      - humanoid-action-events
+    parameters:
+      - name: speed
+        type: float
+        default:
+        summary: |
+          The speed the `Class.Humanoid` is currently swimming at.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.Touched
+    summary: |
+      Fires when one of the `Class.Humanoid|Humanoid's` limbs come in contact
+      with another `Class.BasePart`.
+    description: |
+      This event fires when one of the `Class.Humanoid|Humanoid's` limbs come in
+      contact with another `Class.BasePart`.
+
+      The `Class.BasePart` the `Class.Humanoid|Humanoid's` limb is touching
+      along with the limb itself is given.
+
+      This event will not fire when limbs belonging to the `Class.Humanoid` come
+      into contact with themselves.
+
+      #### Alternatives to the Humanoid Touched event
+
+      Although the Humanoid.Touched event is useful, developers should consider
+      if there are alternatives that suit their needs better before using it.
+
+      - In most cases it is advised to connect a `Class.BasePart.Touched` event
+        for `Class.BasePart|BaseParts` of interest instead. This is because the
+        Humanoid Touched event will constantly fire when the humanoid is moving.
+        For example, in a dodgeball game it would be more practical to connect a
+        touched event for the balls rather than the humanoid
+      - For developers trying to work out when the `Class.Humanoid` has landed
+        on the ground, the `Class.Humanoid.StateChanged` event is more suitable.
+        Alternatively, developers can use `Class.Humanoid.FloorMaterial` to see
+        if the `Class.Humanoid` is standing on anything
+
+      Note:
+
+      - Connecting to this event will cause a `Class.TouchTransmitter` to be
+        created in every limb
+      - There is currently no equivalent of `Class.BasePart.TouchEnded` for
+        `Class.Humanoid|Humanoids`"
+    code_samples:
+      - midas-touch-2
+    parameters:
+      - name: touchingPart
+        type: BasePart
+        default:
+        summary: |
+          The `Class.BasePart` the `Class.Humanoid` has come in contact with.
+      - name: humanoidPart
+        type: BasePart
+        default:
+        summary: |
+          The limb of the `Class.Humanoid` that has been touched.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

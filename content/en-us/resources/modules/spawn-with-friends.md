@@ -20,7 +20,7 @@ To use the **SpawnWithFriends** module in an experience:
 
 1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="876" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -84,7 +84,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
 
 #### configure
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -100,27 +100,27 @@ Overrides default configuration options through the following keys/values in the
 	<tr>
 		<td>`teleportToFriendOnRespawn`</td>
 		<td>If set to `false`, teleportation to a friend will only happen manually via [teleportToRandomFriend](#teleporttorandomfriend).</td>
-		<td>`true`</td>
+		<td>true</td>
 	</tr>
 	<tr>
 		<td>`teleportDistance`</td>
 		<td>How far away players should spawn from each other, measured in studs.</td>
-		<td>`5`</td>
+		<td>5</td>
 	</tr>
 	<tr>
 		<td>`maxCharacterVelocity`</td>
 		<td>Characters moving faster than this value won't be picked as teleportation candidates, for instance those in moving vehicles.</td>
-		<td>`48`</td>
+		<td>48</td>
 	</tr>
 	<tr>
 		<td>`bypassFriendshipCheck`</td>
 		<td>If set to true, **all** players will be candidates for teleportation, not just friends.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 	<tr>
 		<td>`showLogs`</td>
 		<td>Whether or not to display log messages in the output.</td>
-		<td>`false`</td>
+		<td>false</td>
 	</tr>
 </tbody>
 </table>
@@ -141,13 +141,13 @@ SpawnWithFriends.configure({
 
 #### teleportToRandomFriend
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>teleportToRandomFriend(playerToTeleport:</InlineCode>`Class.Player`<InlineCode>):</InlineCode>`boolean`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>teleportToRandomFriend(playerToTeleport:</InlineCode>`Class.Player`<InlineCode>):</InlineCode>`boolean`</Typography>
 
 Manually triggers teleportation of a player to one of their friends in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
 
 #### setTeleportationValidator
 
-<p style={{borderRadius:"4px;",backgroundColor:"#3b3b3b;"}}><InlineCode>setTeleportationValidator(validator:</InlineCode>`function`<InlineCode>):</InlineCode>`nil`</p>
+<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTeleportationValidator(validator:</InlineCode>`function`<InlineCode>):</InlineCode>`nil`</Typography>
 
 Allows you to perform custom pre-teleportation checks by hooking up a validator callback function. The callback receives three parameters:
 

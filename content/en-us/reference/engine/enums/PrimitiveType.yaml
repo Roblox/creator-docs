@@ -1,0 +1,38 @@
+name: PrimitiveType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: 'Null'
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Ball
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Cylinder
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Block
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Wedge
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: CornerWedge
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

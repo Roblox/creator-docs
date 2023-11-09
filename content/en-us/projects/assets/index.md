@@ -22,17 +22,6 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
 
 This cloud-based asset system allows you to store assets through Roblox so you don't need to maintain local copies as part of a saved Studio experience, and that you can reuse assets across the platform in various contexts for your projects, such as in different objects, places, or character bodies. You can find millions of free-to-use assets for projects on the [Creator Marketplace](https://create.roblox.com/marketplace), purchase assets for avatars on the [Marketplace](https://www.roblox.com/catalog), or create your own assets and import them directly into Studio through asset management tools.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../assets/publishing/publishing-assets/creator-marketplace-example.jpg" width="90%" />
-    <figcaption>Creator Marketplace</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/publishing/publishing-assets/marketplace-example.jpg" width="100%" />
-    <figcaption>Marketplace</figcaption>
-  </figure>
-</GridContainer>
-
 When you import assets, they must pass a moderation check to ensure they meet Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846) before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain sole ownership of their usage on the platform, assign them to group ownership, or publish them to the Creator Marketplace in order to make them publicly available for all users to use within their own projects. Every asset you import is accessible within the [Toolbox](../../projects/assets/toolbox.md), allowing you to reuse them across all of your projects.
 
 ## Asset Types
@@ -51,7 +40,7 @@ There are three asset types that map to project-level items:
 
 - **Places** - Every experience has one or more places, or individual 3D worlds. Each place is represented by a data model that describes the place's 3D world and logic.
 - **Badges** - A badge is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
-- **Passes** - A pass is a monetization product that allows you to charge a one-time Robux feel in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+- **Passes** - A pass is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects. For more information on these asset types, see [Projects - Places](../../projects/index.md#places), [Badges](../../production/publishing/badges.md), and [Passes](../../production/monetization/game-passes.md).
 
@@ -76,7 +65,7 @@ For more information on both types of these assets for places, such as where and
     <tbody>
         <tr>
             <td>**Models**</td>
-            <td>A `Class.Model` is a container object for geometric groupings, such as `Class.BasePart`, `Class.MeshPart`, `Class.Motor6D`, and other `Class.Model` objects. Whenever you group object together in Studio, they automatically become a `Class.Model` object.<br /><br />For more information, see [Models](../../parts/models.md).</td>
+            <td>A `Class.Model` is a container object for geometric groupings, such as `Class.BasePart`, `Class.MeshPart`, `Class.Motor6D`, and other `Class.Model` objects. Whenever you group objects together in Studio, they automatically become a `Class.Model` object.<br /><br />For more information, see [Models](../../parts/models.md).</td>
         </tr>
         <tr>
             <td>**Meshes**</td>
@@ -84,7 +73,7 @@ For more information on both types of these assets for places, such as where and
         </tr>
         <tr>
             <td>**Audio**</td>
-            <td>A `Class.Sound` object is an an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes where the sound emits and how its volume changes in relation to each user's position within the experience.<br /><br />You can import audio assets in either `.mp3` or `.ogg` format. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+            <td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes where the sound emits and how its volume changes in relation to each user's position within the experience.<br /><br />You can import audio assets in either `.mp3` or `.ogg` format. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
         </tr>
         <tr>
             <td>**Images**</td>
@@ -304,3 +293,7 @@ Roblox offers several tools to import, store, and publish your assets:
         </tr>
     </tbody>
 </table>
+
+To further help with asset organization, you can archive audio, decals, images, and meshes in the **DEVELOPMENT ITEMS** section of the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model).
+
+After you archive an asset, it is no longer usable in Roblox experiences. The asset fails to load and disappears from the website.

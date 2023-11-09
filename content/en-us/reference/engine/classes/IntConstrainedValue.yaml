@@ -1,0 +1,145 @@
+name: IntConstrainedValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  An IntConstrainedValue is used to store a value which can never be less than
+  MinValue and can never be more than MaxValue.
+description: |
+  An IntConstrainedValue is used to store a value which can never be less than
+  MinValue and can never be more than MaxValue.
+code_samples:
+inherits:
+  - ValueBase
+tags:
+  - Deprecated
+deprecation_message: |
+  The IntConstrainedValue object has been deprecated as developers can now use
+  the `Library.math.clamp()` function to constrain values.
+properties:
+  - name: IntConstrainedValue.ConstrainedValue
+    summary: |
+      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      `Class.IntConstrainedValue.MaxValue`. Replaced by
+      `Class.IntConstrainedValue.Value`, but still functional.
+    description: |
+      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      `Class.IntConstrainedValue.MaxValue`. Replaced by
+      `Class.IntConstrainedValue.Value`, but still functional.
+    code_samples:
+    type: int64
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: |
+      The IntConstrainedValue object has been deprecated as developers can now
+      use the `Library.math.clamp()` function to constrain values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: IntConstrainedValue.MaxValue
+    summary: |
+      The highest number that the `Class.IntConstrainedValue.Value` property can
+      be.
+    description: |
+      The highest number that the `Class.IntConstrainedValue.Value` property can
+      be.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: |
+      The IntConstrainedValue object has been deprecated as developers can now
+      use the `Library.math.clamp()` function to constrain values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IntConstrainedValue.MinValue
+    summary: |
+      The lowest number that the `Class.IntConstrainedValue.Value` property can
+      be.
+    description: |
+      The lowest number that the `Class.IntConstrainedValue.Value` property can
+      be.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: |
+      The IntConstrainedValue object has been deprecated as developers can now
+      use the `Library.math.clamp()` function to constrain values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IntConstrainedValue.Value
+    summary: |
+      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      and `Class.IntConstrainedValue.MaxValue`.
+    description: |
+      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      and `Class.IntConstrainedValue.MaxValue`.
+    code_samples:
+    type: int64
+    tags:
+      - NotReplicated
+    deprecation_message: |
+      The IntConstrainedValue object has been deprecated as developers can now
+      use the `Library.math.clamp()` function to constrain values.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events:
+  - name: IntConstrainedValue.Changed
+    summary: |
+      Fired whenever the Value of the IntConstrainedValue is changed.
+    description: |
+      Fired whenever the Value of the IntConstrainedValue is changed.
+    code_samples:
+      - IntConstrainedValue-Changed1
+    parameters:
+      - name: value
+        type: int64
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      The IntConstrainedValue object has been deprecated as developers can now
+      use the `Library.math.clamp()` function to constrain values.
+    security: None
+    thread_safety: Unsafe
+  - name: IntConstrainedValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: int64
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.IntConstrainedValue.Changed`
+      which has also been deprecated. Neither event should be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

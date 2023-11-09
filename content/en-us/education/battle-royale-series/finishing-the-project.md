@@ -8,7 +8,7 @@ Congrats! You've just created a multiplayer battle royale! Over this series, you
 
 - Created modular scripts that handled different game functions like teleporting players.
 - Learned how to code custom events for the start and end of matches
-- Used arrays to manage players ars they start, win, or leave games.
+- Used arrays to manage players as they join, win, or leave games.
 
 But, your game is almost ready for others to play. Attract players to your game by making your arena unique and creating an eye-catching thumbnail.
 
@@ -59,7 +59,7 @@ Playtest your game with peers and check for the following:
 
 Test, evaluate, and modify variables to improve gameplay. Some examples:
 
-- Change `Class.GameSettings.matchDuration` to make matches longer in a larger map.
+- Change `GameSettings.matchDuration` to make matches longer in a larger map.
 - Make the intermission duration longer if players feel it's too sudden.
 
 ### Make the Lobby Social

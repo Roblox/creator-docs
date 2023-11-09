@@ -1,0 +1,482 @@
+name: ScriptEditorService
+type: class
+category:
+memory_category: Instances
+summary: |
+  This service is used for interacting with `Class.ScriptDocument` instances.
+description: |
+  This service is used for interacting with `Class.ScriptDocument` instances.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: ScriptEditorService:DeregisterAutocompleteCallback
+    summary: |
+      Removes a previously registered callback with the name `name`.
+    description: |
+      Removes a previously registered callback with the name `name`.
+    code_samples:
+      - ScriptEditorService-DeregisterAutocompleteCallback
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:DeregisterScriptAnalysisCallback
+    summary: |
+      Removes a previously registered callback with the name `name`.
+    description: |
+      Removes a previously registered callback with the name `name`.
+    code_samples:
+      - ScriptEditorService-DeregisterScriptAnalysisCallback
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:FindScriptDocument
+    summary: |
+      Returns the open `Class.ScriptDocument` corresponding to the given
+      `Class.LuaSourceContainer`, or nil if the given script is not open.
+    description: |
+      Returns the open `Class.ScriptDocument` corresponding to the given
+      `Class.LuaSourceContainer`, or nil if the given script is not open.
+    code_samples:
+      - ScriptDocument-CloseAsync
+      - ScriptDocument-ViewportChanged
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: ''
+    returns:
+      - type: ScriptDocument
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:GetEditorSource
+    summary: |
+      Returns the edit-time source for the given script.
+    description: |
+      Returns the edit-time source for the given script.
+
+      If the script is open in the
+      [Script Editor](../../../studio/script-editor.md), this method returns the
+      text currently being displayed in the editor. If the script is not open in
+      the editor, the method returns the text that the editor would display if
+      it's opened. The edit-time source is not always be consistent with the
+      `Class.Script.Source` property.
+
+      For example, in
+      [Team Create Drafts](../../../projects/collaboration.md#scripting-using-drafts-mode)
+      mode, this method returns the contents of a local draft created from the
+      script, if one exists.
+    code_samples: []
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:GetScriptDocuments
+    summary: |
+      Returns an array of the currently open script documents, including the
+      command bar.
+    description: |
+      Returns an array of the currently open script documents, including the
+      command bar.
+    code_samples:
+      - ScriptEditorService-GetScriptDocuments
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:RegisterAutocompleteCallback
+    summary: |
+      Registers an Autocomplete callback `callbackFunction` named `name` with
+      priority `priority`.
+    description: |
+      Registers an Autocomplete callback `callbackFunction` named `name` with
+      priority `priority`.
+
+      When the Script Editor invokes Autocomplete, all registered autocomplete
+      callbacks call in order of ascending priority with the autocomplete
+      request and response. Multiple callbacks may share a priority, but then
+      their calling order is unpredictable. Each callback is intended to return
+      a response table with the same format as the response input table.
+      Callbacks shouldn't yield. The first callback invoked receives the
+      internal Autocomplete's response as its response table, and subsequent
+      callbacks receive the previous callback's output as their response table.
+      Callbacks may either modify the passed table or return a new table of the
+      same format.
+
+      The `callbackFunction` must have the following type:
+      `(Request: table, Response: table) -> table`
+
+      The Request table has the following format:
+
+      ```lua
+      type Request = {
+        position: {
+          line: number,
+          character: number
+        },
+        textDocument: {
+          document: ScriptDocument?,
+          script: LuaSourceContainer?
+        }
+      }
+      ```
+
+      - `position` is the one-indexed cursor position where you are
+        autocompleting.
+      - `textDocument.document` is the open `Class.ScriptDocument` you are
+        completing in, if it exists.
+      - `textDocument.script` is the `Class.LuaSourceContainer` you are
+        completing in, if it exists.
+
+      If both `textDocument.document` and `textDocument.script` are present,
+      then they correspond to each other:
+      `req.textDocument.document:GetScript() == req.textDocument.script`
+
+      The Response table has the following format:
+
+      ```
+      type Response = {
+        items: {
+          {
+            label: string, -- The label
+            kind: Enum.CompletionItemKind?,
+            tags: {Enum.CompletionItemTag}?,
+            detail: string?,
+            documentation: {
+              value: string,
+            }?,
+            overloads: number?,
+            learnMoreLink: string?,
+            codeSample: string?,
+            preselect: boolean?,
+            textEdit: {
+              newText: string,
+              replace: { start: { line: number, character: number }, ["end"]: { line: number, character: number } },
+            }?
+          }
+        }
+      }
+      ```
+
+      - `Response.items` is an array of the completion items. The order of this
+        array is insignificant, and it resorts in the editor as the user types.
+      - `Response.items[n].label` is the label of the item which display in the
+        Autocomplete menu.
+      - `Response.items[n].kind` specifies what type of Autocomplete item this
+        is. Primarily this controls the icon given to the item in the editor.
+        Not all kinds have a unique icon. If not specified, the editor uses the
+        "Text" icon. Unsupported kinds default to displaying the "Property"
+        icon.
+      - `Response.items[n].tags` specifies an array of tags describing this
+        completion item. See the `Enum.CompletionItemTag` for details on their
+        function.
+      - `Response.items[n].details` specifies a string describing details about
+        the completion item. For default items, this is a string representation
+        of their type. Note that, in order for the documentation widget to
+        display, `documentation` must be present, but `documentation.value` may
+        be empty.
+      - `Response.items[n].documentation` specifies the main body of the
+        documentation in its `value` field. `documentation` is present, even if
+        value is empty, so the documentation window displays if either details
+        or overloads are specified.
+      - `Response.items[n].overloads` specifies the number of overloads of a
+        function autocompletion.
+      - `Response.items[n].learnMoreLink` links to a relevant page on the
+        creator docs. This URL must be an https request to create.roblox.com, no
+        other URLs display in the editor.
+      - `Response.items[n].codeSample` specifies a sample use of the completion
+        item. `documentation` must be non-empty to display this field.
+      - `Response.items[n].preselect` If true, the editor sorts this completion
+        item ahead of all others and selects it for the user by default. No
+        effect if false or missing.
+      - `Response.items[n].textEdit` If present, accepting the completion
+        applies this text edit - replacing the span between the positions start
+        and end with newText.
+
+      If a callback returns a malformed result or encounters an error, the
+      editor discards the modified Response table and uses the built-in
+      Autocomplete result list.
+    code_samples:
+      - ScriptEditorService-RegisterAutocompleteCallback
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: priority
+        type: int
+        default:
+        summary: ''
+      - name: callbackFunction
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:RegisterScriptAnalysisCallback
+    summary: |
+      Registers a Script Analysis callback `callbackFunction` named `name` with
+      `priority`.
+    description: |
+      Registers a Script Analysis callback `callbackFunction` named `name` with
+      `priority`. When Script Analysis in Studio runs, all registered callbacks
+      call in order of ascending priority. Each callback is intended to return a
+      response table matching the format specified below. Callbacks should not
+      yield.
+
+      The request table has the following format, where `script` is the
+      `LuaSourceContainer` that is going to be analyzed.
+
+      ```
+      type Request = {
+        script: LuaSourceContainer?
+      }
+      ```
+
+      The response table has the following format, where `diagnostics` is an
+      array of diagnostic tables. Each diagnostic table has the entries listed
+      below.
+
+      ```
+      type Response = {
+        diagnostics: {
+          {
+            range: {
+              start: {
+                line: number,
+                character: number,
+              },
+              ["end"]: {
+                line: number,
+                character: number,
+              }
+            },
+            code: string?
+            message: string
+            severity: Enum.Severity?
+            codeDescription: { href: string }?
+          },
+        }
+      }
+      ```
+
+      - `range` represents a text range that should be highlighted by the
+        linter, providing what line/character to start highlighting and what
+        line/character to stop highlighting.
+      - `code` is a label for the message.
+      - `message` is a warning message to be displayed for the line. This will
+        also appear on a tooltip when the user hovers their cursor over the line
+        in the Script Editor.
+      - `severity` is a `Enum.Severity` value for the diagnostics. This
+        determines how the diagnostic is categorized in the Script Analysis tool
+        in Studio, as well as how text is highlighted in the Script Editor.
+      - `codeDescription` links to a relevant page on the creator docs. This URL
+        must be an `https` request to `create.roblox.com`; no other URLs display
+        in the editor.
+    code_samples:
+      - ScriptEditorService-RegisterScriptAnalysisCallback
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: priority
+        type: int
+        default:
+        summary: ''
+      - name: callbackFunction
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:OpenScriptDocumentAsync
+    summary: |
+      Requests that a Script Editor open the specified script. Returns (true,
+      nil) if the request succeeds. Returns (false, string) if the request
+      fails, with a string that describes the problem.
+    description: |
+      Requests that a Script Editor open the specified script. Returns (true,
+      nil) if the request succeeds. Returns (false, string) if the request
+      fails, with a string that describes the problem.
+
+      If the script is already open, this function succeeds and switches tabs to
+      the associated editor.
+    code_samples:
+      - ScriptEditorService-OpenScriptDocumentAsync
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:UpdateSourceAsync
+    summary: |
+      Generates new content from the old script and updates the script editor if
+      it's open, or the `Class.Script` instance if the script editor is closed.
+    description: |
+      Returns the edit-time `Class.Script.Source` for the given script.
+
+      This function calls the passed callback using the old contents of the
+      script to calculate the new contents of the script.
+
+      If the script is open in the
+      [Script Editor](../../../studio/script-editor.md), then it issues a
+      request to the editor to update its source. The editor may reject this
+      update if the `Class.Script.Source` property was out of date with the
+      user's version of the script when this function was called, in which case
+      the callback will be re-invoked and the attempt will be repeated.
+
+      The callback may not yield. If the callback returns `nil`, the operation
+      is cancelled. This function yields until the operation is cancelled or
+      succeeds.
+
+      If the script is not open in the editor, the new content updates to the
+      script source, which is the text the editor would display if it is opened.
+
+      ```lua
+      local ses = game:GetService('ScriptEditorService')
+      ses:UpdateSourceAsync(Workspace.Script, function(oldContent)
+        return oldContent .. " World!"
+      end)
+      ```
+    code_samples: []
+    parameters:
+      - name: script
+        type: LuaSourceContainer
+        default:
+        summary: |
+          Script instance to be updated.
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          The function to return new script content.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: ScriptEditorService.TextDocumentDidChange
+    summary: |
+      Fires just after a `Class.ScriptDocument` changes.
+    description: |
+      Fires just after a `Class.ScriptDocument` changes. The `textChanged` is an
+      array of change structures of the format:
+
+      `{ range : { start : { line : number, character : number }, end : { line : number, character : number } }, text: string }`
+    code_samples:
+      - ScriptEditorService-TextDocumentDidChange
+    parameters:
+      - name: document
+        type: ScriptDocument
+        default:
+        summary: ''
+      - name: changesArray
+        type: Variant
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService.TextDocumentDidClose
+    summary: |
+      Fires just before a `Class.ScriptDocument` object is destroyed, which
+      happens right after the script editor closes.
+    description: |
+      Fires just before a `Class.ScriptDocument` object is destroyed, which
+      happens right after the script editor closes. After this event fires, the
+      `Class.ScriptDocument` enters a "Closed" state, and trying to call its
+      methods throws an error. `Class.ScriptDocument` objects aren't reusable,
+      even if the script editor reopens the same script.
+    code_samples:
+      - ScriptEditorService-TextDocumentDidClose
+    parameters:
+      - name: oldDocument
+        type: ScriptDocument
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService.TextDocumentDidOpen
+    summary: |
+      Fires just after a `Class.ScriptDocument` object is created and parented
+      to the service, which happens right after the script editor opens.
+    description: |
+      Fires just after a `Class.ScriptDocument` object is created and parented
+      to the service, which happens right after the script editor opens.
+    code_samples:
+      - ScriptEditorService-TextDocumentDidOpen
+    parameters:
+      - name: newDocument
+        type: ScriptDocument
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

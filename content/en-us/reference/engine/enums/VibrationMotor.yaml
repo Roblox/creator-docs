@@ -1,0 +1,47 @@
+name: VibrationMotor
+type: enum
+summary: |
+  Describes the vibration motor size or triggers.
+description: |
+  Describes various types of motor size (Small and Large), with various triggers
+  (LeftTrigger, RightTrigger, LeftHand, RightHand).
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Large
+    summary: |
+      Large motor.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Small
+    summary: |
+      Small motor.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LeftTrigger
+    summary: |
+      Left motor trigger.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RightTrigger
+    summary: |
+      Right motor trigger.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LeftHand
+    summary: |
+      Left hand.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RightHand
+    summary: |
+      Right hand.
+    value: 5
+    tags: []
+    deprecation_message: ''

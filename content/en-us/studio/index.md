@@ -1,11 +1,8 @@
 ---
 title: Welcome to Roblox Studio
 description: Learn how Roblox Studio is an all-in-one IDE that lets you create experiences that run on the Roblox Engine.
-banner:
-  title: Welcome to Roblox Studio
-  subtitle: Build anything you can imagine with the all-in-one IDE for Roblox.
-  backgroundUrl: /assets/studio/overview/Studio-Banner.jpg
 ---
+**Build anything you can imagine with the all-in-one IDE for Roblox.**
 
 Roblox Studio is an all-in-one IDE that lets you create experiences that run on
 Roblox. It's free to use and lets you reach millions of users using
@@ -42,6 +39,10 @@ Finally, you can test directly in Studio through multiple [testing and emulation
 
 <img src="../assets/studio/overview/Script-Editor.png" alt="Example code in Studio's integrated script editor"/>
 </figure>
+
+<Alert severity="success">
+Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+</Alert>
 
 ## Fast Publishing and Updating
 

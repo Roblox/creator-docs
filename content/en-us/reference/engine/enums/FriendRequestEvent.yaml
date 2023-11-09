@@ -1,0 +1,34 @@
+name: FriendRequestEvent
+type: enum
+summary: ''
+description: |
+  Describes the event when a player sends or responds to a friend request. This
+  is used by the in-game friend request system.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Issue
+    summary: |
+      A player invokes (sends) a friend request.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Revoke
+    summary: |
+      A player revokes (cancels) a previously invoked (sent) friend request.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Accept
+    summary: |
+      A player accepts a friend request.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Deny
+    summary: |
+      A player denies a friend request.
+    value: 3
+    tags: []
+    deprecation_message: ''

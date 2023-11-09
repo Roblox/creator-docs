@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-2/multiple-parameters-and-arguments
 prev: /tutorials/fundamentals/coding-2/using-parameters-and-events
 ---
 
-Buttons can be used by players to unlock new areas, give points, and reveal treasure. Whenever a player touches a button, it should give some feedback to let know players it's being interacted with, like change colors or make sounds.
+Buttons can be used by players to unlock new areas, give points, and reveal treasure. Whenever a player touches a button, it should give some feedback to let players know it's being interacted with, like change colors or make sounds.
 
 In this example, the button will be used to activate a bridge. When the button has been pressed, it'll turn green and players will be able to use the bridge. If the player hasn't pressed the button, they'll fall through the bridge when they try to walk on it.
 
@@ -26,7 +26,7 @@ Start off by setting up the bridge.
 
 ## Create the Button
 
-Now that the bridge is setup, create the button.
+Now that the bridge is set up, create the button.
 
 1. Create a new part named _Button_.
 2. Change the button color to red.
@@ -54,12 +54,12 @@ Try to figure it out yourself before looking at the code solution.
 Code Solution
 Below is one possible code solution
 
-```Lua
+```lua
 -- Insert this script into button
 -- Turns the button green when something touches the button.
 
 local button = script.Parent
-local bridge = game.Workspace.Bridge
+local bridge = workspace.Bridge
 
 local function buttonPressed()
     print("button touched")
@@ -75,7 +75,7 @@ button.Touched:Connect(buttonPressed)
 ### Troubleshooting Your Code
 
 **Issue: The bridge is already solid when the game starts.**
-Make sure that the part are Anchored and not touching anything. The parts might touch something, like terrain or another part, and cause the buttonPressed() function to fire accidentally.
+Make sure that the parts are Anchored and not touching anything. The parts might touch something, like terrain or another part, and cause the buttonPressed() function to fire accidentally.
 
 **Issue: You get an error in the Output Window saying: "Bridge is not a valid member of Workspace"**
 Check the following:
@@ -96,7 +96,7 @@ Your version might look something like this:
 ```lua
 local button = script.Parent
 -- Reminder: Replace the name of the part, Gate, with the one in your project
-local gate = game.Workspace.Gate
+local gate = workspace.Gate
 
 local function buttonPressed()
     print("button touched")

@@ -49,7 +49,7 @@ One particular operator to be aware of is `==`. It stands for "is equal to." So 
 
    ```
 
-2. After the keyword `if`, type a true statement such as `3 = 3 == 6`.
+2. After the keyword `if`, type a true statement such as `3 + 3 == 6`.
 
    ```lua
      if 3 + 3 == 6 then
@@ -130,7 +130,7 @@ The table below lists some common Lua operators. More information about operator
 
 Conditional statements are also used to evaluate the status of properties and variables. The following steps check whether a variable was successfully assigned a value.
 
-1. Delete all of the code and copy the following snippet into the script. Test it, and a new error appear in Output.
+1. Delete all of the code and copy the following snippet into the script. Test it, and a new error appears in Output.
 
    ```lua
    local mysteryPart = workspace.MysteryPart

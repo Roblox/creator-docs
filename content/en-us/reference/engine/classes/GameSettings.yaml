@@ -1,0 +1,54 @@
+name: GameSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  A container for miscellaneous in-game options.
+description: |
+  Various miscellaneous options for in-game. Can be accessed from Roblox
+  Studio's settings menu under the **Game** tab.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Settings
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: GameSettings.VideoCaptureEnabled
+    summary: |
+      Toggles whether or not video capture is enabled.
+    description: |
+      Toggles whether or not video capture is enabled.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GameSettings.VideoRecording
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Video
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

@@ -1,17 +1,15 @@
 ---
 title: Get Started with Roblox Education
 description: Learn how to get started using Roblox in the classroom. Find teacher training, get lessons, and discover experiences to play.
-banner:
-  title: Education on Roblox
-  subtitle: Discover resources, best practices, and lesson plans to incorporate Roblox experiences into your classroom.
-  backgroundUrl: ../../../assets/landing/education/banner.jpg
 ---
+<img src="../../assets/landing/education/banner.jpg" alt="Get Started with Roblox Education" width="100%" />
+**Discover resources, best practices, and lesson plans to incorporate Roblox experiences into your classroom.**
 
 <h2>Get Started with Roblox Education</h2>
 Roblox is more than an online entertainment platform, it's an educational tool where the opportunities for creativity and imagination are limitless. We offer free software and curriculum to teach students of all ages computer science, digital citizenship, entrepreneurship, and more.
 
 <Grid container direction='column' style={{gap: 16}}>
-<Grid item container direction='row' style={{background: '#171717'}}>
+<Grid item container direction='row'>
 <img src="../../assets/education/stock-graphics/thumbnail-teacherInClassroom.jpg" style={{width:253, height: 158, margin: 12}}/>
 <Grid item container direction='column' xs={12} sm={6} md={8} style={{flex: 1, margin: 12, minWidth: 200}}>
 
@@ -23,7 +21,7 @@ Roblox is more than an online entertainment platform, it's an educational tool w
 </Grid>
 </Grid>
 
-<Grid item container direction='row' style={{background: '#171717'}}>
+<Grid item container direction='row'>
 <img src="../../assets/education/stock-graphics/thumbnail-studentTeaching.jpg" style={{width:253, height: 158, margin: 12}}/>
 <Grid item container direction='column' xs={12} sm={6} md={8} style={{flex: 1, margin: 12, minWidth: 200}}>
 
@@ -35,7 +33,7 @@ Roblox is more than an online entertainment platform, it's an educational tool w
 </Grid>
 </Grid>
 
-<Grid item container direction='row' style={{background: '#171717'}}>
+<Grid item container direction='row'>
 <img src="../../assets/education/edu-landingPages/newGettingStartedThumbnails-develop.jpg" style={{width:253, height: 158, margin: 12}}/>
 <Grid item container direction='column' xs={12} sm={6} md={8} style={{flex: 1, margin: 12, minWidth: 200}}>
 
@@ -47,7 +45,7 @@ Roblox is more than an online entertainment platform, it's an educational tool w
 </Grid>
 </Grid>
 
-<Grid item container direction='row' style={{background: '#171717'}}>
+<Grid item container direction='row'>
 <img src="../../assets/education/edu-landingPages/newGettingStartedThumbnails-games.jpg" style={{width:253, height: 158, margin: 12}}/>
 <Grid item container direction='column' xs={12} sm={6} md={8} style={{flex: 1, margin: 12, minWidth: 200}}>
 
@@ -59,7 +57,7 @@ Roblox is more than an online entertainment platform, it's an educational tool w
 </Grid>
 </Grid>
 
-<Grid item container direction='row' style={{background: '#171717'}}>
+<Grid item container direction='row'>
 <img src="../../assets/education/edu-landingPages/thumbnail_remoteLearning.jpg" style={{width:253, height: 158, margin: 12}}/>
 <Grid item container direction='column' xs={12} sm={6} md={8} style={{flex: 1, margin: 12, minWidth: 200}}>
 

@@ -2,11 +2,9 @@
 title: Platform Overview
 description: Learn about the unique value propositions on Roblox.
 next: /creation
-banner:
-  title: Platform Overview
-  subtitle: Learn about the unique value propositions on Roblox.
-  backgroundUrl: ../../assets/landing/guides/banner.jpg
 ---
+
+**Learn about the unique value propositions on Roblox.**
 
 Roblox's vision is to reimagine how people come together. As a **User-Generated Content** (UGC) platform, we provide the technology for creators to bring that vision to life. Whether you're an individual creator, a professional development studio, or something in between, we're committed to supporting and growing our community so we can make Roblox better and empower you to create all you can imagine.
 
@@ -36,7 +34,7 @@ In addition, with our streaming architecture people can instantly access your ex
 
 <img src="assets/getting-started/platform-overview/Instant-Global-Access.jpg" width="100%" />
 
-As of the quarter ending December 31, 2021, there were more than 49.5 million average DAUs on Roblox, the majority of whom joined through word of mouth to engage with their friends. Users discover content and experiences through personalized and social recommendations or through search, and can join experiences seamlessly without downloading another app. This combination of a large audience, a social graph, recommendations, and seamless teleportation between experiences drives meaningful organic growth. You can further boost growth through our low-cost ad engine.
+As of the quarter ending June 30, 2023, there were more than 65.5 million average DAUs on Roblox, the majority of whom joined through word of mouth to engage with their friends. Users discover content and experiences through personalized and social recommendations or through search, and can join experiences seamlessly without downloading another app. This combination of a large audience, a social graph, recommendations, and seamless teleportation between experiences drives meaningful organic growth. You can further boost growth through our low-cost ad engine.
 
 ## Committed to Our Community
 

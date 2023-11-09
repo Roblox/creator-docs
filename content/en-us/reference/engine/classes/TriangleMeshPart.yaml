@@ -1,0 +1,83 @@
+name: TriangleMeshPart
+type: class
+category:
+memory_category: Instances
+summary: |
+  Abstract intermediate class that manages physical geometry properties for
+  PartOperations and MeshParts.
+description: |
+  TriangleMeshPart is an abstract intermediate class from which `Class.MeshPart`
+  and `Class.PartOperation` inherit. It was created to consolidate the
+  management of physical geometry properties between the two sub-classes. It
+  implements the read-only
+  `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity`.
+code_samples:
+inherits:
+  - BasePart
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: TriangleMeshPart.CollisionFidelity
+    summary: |
+      Determines the level of detail the part's physics will adhere to its mesh.
+    description: |
+      This property determines how the collision model of the
+      `Class.TriangleMeshPart` relates to the actual geometry of the mesh. This
+      property cannot be read or manipulated by scripts during runtime.
+
+      See [here](../../../workspace/collisions.md#collision-fidelity) for a
+      visual representation of the various options.
+    code_samples:
+    type: CollisionFidelity
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Collision
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TriangleMeshPart.FluidFidelity
+    summary: |
+      Determines the geometric representation used to compute aerodynamic forces
+      and torques.
+    description: |
+      Determines the geometric representation used to compute aerodynamic forces
+      and torques.
+    code_samples: []
+    type: FluidFidelity
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TriangleMeshPart.MeshSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods: []
+events: []
+callbacks: []

@@ -1,10 +1,10 @@
 ---
 title: Detecting User Input
-description: Explains how to customize and connect user inputs to actions.
+description: Explains how to customize and connect user input to actions.
 prev: /tutorials/scripting/input-and-camera/controlling-the-users-camera
 ---
 
-Connecting user's input to actions gives users much better and more intuitive control over your experience's features. In this tutorial, you will bind a reloading action to a specific key.
+Connecting user input to actions gives users much better and more intuitive control over your experience's features. In this tutorial, you will bind a reloading action to a specific key.
 
 <video controls loop muted>
 	<source src="../../../assets/tutorials/detecting-user-input/ReloadingSymbol.mp4" />
@@ -80,7 +80,7 @@ First, you'll need a function to handle when user input is detected.
    local function onAction(actionName, inputState, inputObject)
    if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
    		tool.TextureId = "rbxassetid://6593020923"
-   		wait(2)
+   		task.wait(2)
    		tool.TextureId = "rbxassetid://92628145"
    	end
    end
@@ -120,7 +120,7 @@ KeyCodes are values that represent different input buttons, such as keyboard key
    local function onAction(actionName, inputState, inputObject)
    	if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
    		tool.TextureId = "rbxassetid://6593020923"
-   		wait(2)
+   		task.wait(2)
    		tool.TextureId = "rbxassetid://92628145"
    	end
    end
@@ -173,7 +173,7 @@ When the user unequips the tool, the action needs to be **unbound** so they can'
    local function onAction(actionName, inputState, inputObject)
    	if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
    		tool.TextureId = "rbxassetid://6593020923"
-   		wait(2)
+   		task.wait(2)
    		tool.TextureId = "rbxassetid://92628145"
    	end
    end
