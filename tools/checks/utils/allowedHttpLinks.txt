@@ -313,7 +313,6 @@ https://www.logiscool.com/
 https://www.loyaltyfoundation.org/
 https://www.lua.org/manual/5.1/manual.html
 https://www.lua.org/pil/16.1.html
-https://www.lua.org/pil/23.1.html
 https://www.lua.org/pil/28.1.html
 https://www.lua.org/pil/5.1.html
 https://www.makersmuse.in/
