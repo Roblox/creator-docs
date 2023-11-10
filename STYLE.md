@@ -183,7 +183,7 @@ For words that are both concepts and API terms (for example, a `Touched` event o
 
 The reference documentation in `content/en-us/reference/engine/` uses YAML rather than Markdown. YAML is a structured format that has stricter whitespace requirements than Markdown. Pay attention to the amount of leading whitespace before an element; even a single missing space can result in invalid YAML. If you're not familiar with the format, consider using an online YAML linter to check your work.
 
-The documentation makes heavy use of the `|` character, which allows for multi-line strings. It preserves line breaks and lets you include multiple paragraphs, lists, tables, etc.
+The documentation makes heavy use of the `|` character, which allows for multi-line strings. It preserves line breaks and lets you include multiple paragraphs, lists, tables, multi-line code blocks, etc.
 
 The reference documentation files come in five types:
 
