@@ -29,6 +29,6 @@ items:
   - name: DynamicHead
     value: 4
     summary: |
-      A bundle of dynamicHead and/or eyebrowAccessory and/or moodAnimation
+      A bundle consisting of dynamicHead and moodAnimation assets, optionally with eyebrowAccessory and eyelashAccessory
     tags: []
     deprecation_message: ''
