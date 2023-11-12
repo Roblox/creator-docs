@@ -2841,7 +2841,7 @@ events:
     summary: |
       Fired when a user drags at least one finger on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a device.
+      screen of a mobile device.
     description: |
       The TouchPan event fires when a user drags at least one finger on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
