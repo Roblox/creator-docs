@@ -233,12 +233,15 @@ properties:
       `Class.UserInputService.TouchSwipe` can still be used to process other
       forms of user input on mobile devices with an enabled touch screen (see
       the main UserInputService class page for a full list).
+
+      Deprecated in favor of `Class.GuiService.TouchControlsEnabled`.
     code_samples:
       - UserInputService-ModalEnabled
     type: bool
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This item has been superseded by `Class.GuiService.TouchControlsEnabled` which should be used in all new work.
     security:
       read: None
       write: None
