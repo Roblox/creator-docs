@@ -148,7 +148,7 @@ properties:
     description: |
       This property describes whether the user's device has a gyroscope.
 
-      A gyroscope is an component found in most mobile devices that detects
+      A gyroscope is a component found in most mobile devices that detects
       orientation and rotational speed.
 
       If a user's device has a gyroscope, you can use incorporate it into your
@@ -1016,8 +1016,7 @@ methods:
     description: |
       This method takes the requested `Enum.KeyCode` and returns the associated
       image for the currently connected gamepad device (limited to Xbox,
-      PlayStation and Windows). This means that if the connected controller is a
-      Xbox&nbsp;One controller, the user sees Xbox assets. Similarly, if the
+      PlayStation and Windows). This means that if the connected controller is an Xbox&nbsp;One controller, the user sees Xbox assets. Similarly, if the
       connected device is a PlayStation controller, the user sees PlayStation
       assets. If you want to use custom assets, see
       `Class.UserInputService.GetStringForKeyCode()|GetStringForKeyCode()`.
@@ -1984,7 +1983,7 @@ methods:
       current orientation of the headset worn by the user. This means that the
       headset's current orientation is set to `Datatype.CFrame.new()`.
 
-      Use this function to to move the headset CFrame to the center of the play
+      Use this function to move the headset CFrame to the center of the play
       area if it seems to be at a weird offset.
 
       This behaves identically to the `Class.VRService` function,
@@ -2149,7 +2148,7 @@ events:
       The DeviceRotationChanged event fires when a user rotates a device that
       has a gyroscope.
 
-      A gyroscope is an component found in most mobile devices that detects
+      A gyroscope is a component found in most mobile devices that detects
       orientation and rotational speed.
 
       The event is useful when tracking the orientation of the device and how
@@ -2699,7 +2698,7 @@ events:
       an in-game `Class.GuiObject|GUI` or element.
 
       The example below prints the `Enum.UserInputState|state` of the long press
-      when the user user holds at least one finger for a short amount of time on
+      when the user holds at least one finger for a short amount of time on
       the same screen position. Possible states include: _Begin_, _Change_,
       _End_, _Cancel_, and _None_.
 
@@ -2842,7 +2841,7 @@ events:
     summary: |
       Fired when a user drags at least one finger on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of an mobile device.
+      screen of a device.
     description: |
       The TouchPan event fires when a user drags at least one finger on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
