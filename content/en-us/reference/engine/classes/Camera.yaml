@@ -94,8 +94,7 @@ properties:
       and an orientation.
 
       The most intuitive way to position and orientate the `Class.Camera` is by
-      using the _new_ `Datatype.CFrame.lookAt()` constructor with the _at_ and _lookAt_ parameters,
-      for example:
+      using the `Datatype.CFrame.lookAt()` constructor:
 
       ```lua
       local pos = Vector3.new(0, 10, 0)
