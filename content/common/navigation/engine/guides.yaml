@@ -35,8 +35,8 @@ navigation:
             path: /projects/client-server
       - title: Managing
         path: /projects/managing
-      - title: Teleporting
-        path: /projects/teleporting
+      - title: Instance Streaming
+        path: /workspace/streaming
       - title: Working in Teams # needs some work with naming
         section:
           - title: Setting Up a Team
@@ -91,8 +91,6 @@ navigation:
         path: /parts/materials
       - title: Terrain
         path: /parts/terrain
-      - title: Streaming
-        path: /workspace/streaming
       - title: Physics
         section:
           - title: Overview
@@ -295,6 +293,8 @@ navigation:
     section:
       - title: Overview
         path: /players/
+      - title: Teleporting
+        path: /projects/teleporting
       - title: Teams
         path: /players/teams
       - title: Leaderboards
