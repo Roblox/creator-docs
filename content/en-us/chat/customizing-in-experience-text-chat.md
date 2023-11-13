@@ -36,6 +36,13 @@ You can toggle appearance of the **chat window** and **input bar** in one of two
   end
   ```
 
+By default, when enabling both the chat window and the chat bar, the chat bar attaches to the chat window on the UI. You can obtain their read-only properties on their positions and sizes and use them to calculate the total size of the combination:
+
+- `Class.ChatWindowConfiguration.AbsolutePosition`
+- `Class.ChatWindowConfiguration.AbsoluteSize`
+- `Class.ChatInputBarConfiguration.AbsolutePosition`
+- `Class.ChatInputBarConfiguration.AbsoluteSize`
+
 ### Chat Window Customization
 
 You can customize the default chat window to match your experience's UI layout, design, and style by using the following properties in Studio:
