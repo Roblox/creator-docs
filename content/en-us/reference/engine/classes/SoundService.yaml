@@ -391,18 +391,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events:
-  - name: SoundService.AudioInstanceAdded
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: instance
-        type: Instance
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []

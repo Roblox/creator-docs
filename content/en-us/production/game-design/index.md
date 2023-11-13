@@ -59,5 +59,6 @@ A game designer's role is to create an engaging experience for players, retain t
 ## Support Your Experience
 
 - [LiveOps Essentials:](../../production/game-design/liveops-essentials.md) Learn how to design content that keeps players coming back and enjoying your experience after launch.
+- [LiveOps Planning:](../../production/game-design/liveops-essentials.md) Learn how to maintain a dynamic and captivating experience through interweaving the release of two types of content.
 - [Analytics Essentials:](../../production/game-design/analytics-essentials.md) Learn how to leverage key performance indicators (KPIs) to identify the health of your experience and potential growth opportunities.
 - [Content Updates:](../../production/game-design/content-updates.md) Learn how to design content cadences to keep players engaged between larger experience updates.
