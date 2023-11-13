@@ -48,7 +48,7 @@ Also note that the server **always** owns anchored `Class.BasePart|BaseParts` an
 
 Consider a vehicle that has a `Class.VehicleSeat` object for the driver and a `Class.Seat` object for a passenger, with both included in the vehicle assembly. With the default ownership rules, if a player character sits in the `Class.Seat` (passenger) and then another player jumps into the `Class.VehicleSeat` (driver), the **passenger** gains physical ownership of the entire vehicle because they entered first. The driver will have to wait several network cycles before their input is recognized and the vehicle will feel less responsive.
 
-The following `Class.Script` fixes this by manually assigning network ownership to the driver. In it, the `Class.VehicleSeat` sets its `Class.VehicleSeat.Occupant|Occupant` to the `Class.Humanoid` sitting on it, so the script listens for the seat's `Class.Instance.Changed|Changed` event to catch when a player sits in the seat. When the driver leaves the seat, the vehicle's network ownership is reverted to automatic with `Class.BasePart:SetNetworkOwner()`.
+The following `Class.Script` fixes this by manually assigning network ownership to the driver. In it, the `Class.VehicleSeat` sets its `Class.VehicleSeat.Occupant|Occupant` to the `Class.Humanoid` sitting on it, so the script listens for the seat's `Class.Instance.Changed|Changed` event to catch when a player sits in the seat. When the driver leaves the seat, the vehicle's network ownership is reverted to automatic with `Class.BasePart:SetNetworkOwnershipAuto()`.
 
 ```lua
 local Players = game:GetService("Players")

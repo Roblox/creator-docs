@@ -137,5 +137,5 @@ To publish a plugin:
 1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md).
 
    <Alert severity="info">
-   If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md#inventory). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
+   If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
    </Alert>

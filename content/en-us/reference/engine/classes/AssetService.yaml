@@ -19,17 +19,17 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AssetService:CreateDynamicMeshAsync
+  - name: AssetService:CreateEditableMeshFromPartAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: meshId
-        type: Content
+      - name: meshPart
+        type: Instance
         default:
         summary: ''
     returns:
-      - type: DynamicMesh
+      - type: EditableMesh
         summary: ''
     tags:
       - Yields
@@ -386,23 +386,6 @@ methods:
         summary: ''
     returns:
       - type: AudioPages
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: AssetService:createDynamicMeshFromPartAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: meshPart
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: DynamicMesh
         summary: ''
     tags:
       - Yields

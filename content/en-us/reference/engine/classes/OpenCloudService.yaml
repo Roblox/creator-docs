@@ -26,18 +26,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: OpenCloudService:RegistrationComplete
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: OpenCloudService:InvokeAsync
     summary: ''
     description: ''

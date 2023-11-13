@@ -550,7 +550,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          The `Datatype.Position` the `Class.Model` is to be moved to.
+          The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
       - type: void
         summary: ''
@@ -714,7 +714,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          The `Datatype.Vector3` to translate the `Class.Model` by,.
+          The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
       - type: void
         summary: ''
