@@ -1,6 +1,8 @@
+import { VFileMessage } from 'vfile-message';
 import {
   RETEXT_INAPPROPRIATE,
   RETEXT_PROFANITIES,
+  compileMdx,
   getReTextAnalysis,
   replaceProfanityPatterns,
 } from './retext.js';
@@ -10,6 +12,7 @@ import {
   ALLOWED_PROFANE_WORDS_LIST,
   RETEXT_SIMPLIFY_ALLOW_LIST,
 } from './words.js';
+import { VFile } from 'vfile';
 
 describe('replaceProfanityPatterns', () => {
   it('should replace ! with i', () => {
@@ -465,5 +468,110 @@ describe('getReTextAnalysis', () => {
     const text = 'This is a test sentence.';
     const result = await getReTextAnalysis(text);
     expect(result.messages.length).toBe(0);
+  });
+});
+
+describe('compileMdx', () => {
+  it('should detect missing full closing tags', async () => {
+    const text = `
+<Grid
+    alignItems="stretch"
+    container
+    direction="row">
+
+<Grid item md={7} xs={12}
+    direction="column"  >
+
+<div class="container"
+style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
+</div>
+
+<Grid item md={5} xs={12} direction='column'>
+
+Hello World
+
+Hello
+
+World.
+</Grid>
+
+</Grid>`;
+    const result = (await compileMdx(text)) as VFileMessage;
+    expect(result.message).toBe(
+      'Expected a closing tag for `</Grid>` (2:1-5:21)'
+    );
+    expect(result.source).toBe('mdast-util-mdx-jsx');
+  });
+
+  it('should detect missing closing tag characters', async () => {
+    const text = `
+Learn how to create Roblox experiences with a full suite of structured learning
+that walks you through how to build, script, and polish your experiences with
+amazing art and visuals.
+
+<br /> <br
+
+Hello
+
+<br />
+
+World`;
+    const result = (await compileMdx(text)) as VFileMessage;
+    expect(result.message).toBe(
+      'Unexpected character `<` (U+003C) after attribute name, expected a character that can start an attribute name, such as a letter, `$`, or `_`; `=` to initialize a value; or the end of the tag'
+    );
+    expect(result.source).toBe('micromark-extension-mdx-jsx');
+  });
+  it('should not flag good MDX tables', async () => {
+    const text = `## Moving the Camera
+
+With the new place open in Studio, click inside the 3D viewport and use the following keyboard/mouse controls to look around.
+
+<table>
+<thead>
+  <tr>
+    <th>Key/Shortcut</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
+    <td>Moves the camera forward, left, back, or right</td>
+  </tr>
+  <tr>
+    <td><kbd>Q</kbd> <kbd>E</kbd></td>
+    <td>Moves the camera down or up</td>
+  </tr>
+  <tr>
+    <td><kbd>Shift</kbd></td>
+    <td>In combination with any movement key, changes the camera speed</td>
+  </tr>
+  <tr>
+    <td><kbd>F</kbd></td>
+    <td>Focuses the camera on a selected part</td>
+  </tr>
+  <tr>
+    <td>**Right Mouse Button**</td>
+    <td>When pressed, dragging the mouse moves the camera view around</td>
+  </tr>
+  <tr>
+    <td>**Mouse Scroll Wheel**</td>
+    <td>Zooms the camera in or out</td>
+  </tr>
+  <tr>
+    <td>**Middle Mouse Button**</td>
+    <td>When pressed, dragging the mouse pans the camera</td>
+  </tr>
+</tbody>
+</table>
+
+## Building Your Experience
+
+When you're comfortable navigating the viewport with the camera, you can begin building your experience by adding platforms of different shapes and colors for players to jump between.
+`;
+    const result = await compileMdx(text);
+    expect(result).toStrictEqual(undefined);
   });
 });

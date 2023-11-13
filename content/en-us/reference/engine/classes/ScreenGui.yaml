@@ -63,8 +63,7 @@ properties:
       implies that you intentionally want to disregard the device's safe insets.
     code_samples: []
     type: bool
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -152,8 +151,7 @@ properties:
       `true`.
     code_samples: []
     type: SafeAreaCompatibility
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
