@@ -795,11 +795,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/DraggerService.yaml
         ignoreTranslation: true
-      - title: DynamicMesh
-        path: /reference/engine/classes/DynamicMesh
-        type: engineapi
-        source: /reference/engine/classes/DynamicMesh.yaml
-        ignoreTranslation: true
       - title: DynamicRotate
         path: /reference/engine/classes/DynamicRotate
         type: engineapi
@@ -814,11 +809,6 @@ navigation:
         path: /reference/engine/classes/EmotesPages
         type: engineapi
         source: /reference/engine/classes/EmotesPages.yaml
-        ignoreTranslation: true
-      - title: EngineAPICloudProcessingService
-        path: /reference/engine/classes/EngineAPICloudProcessingService
-        type: engineapi
-        source: /reference/engine/classes/EngineAPICloudProcessingService.yaml
         ignoreTranslation: true
       - title: EqualizerSoundEffect
         path: /reference/engine/classes/EqualizerSoundEffect
@@ -1589,11 +1579,6 @@ navigation:
         path: /reference/engine/classes/Path
         type: engineapi
         source: /reference/engine/classes/Path.yaml
-        ignoreTranslation: true
-      - title: Path2D
-        path: /reference/engine/classes/Path2D
-        type: engineapi
-        source: /reference/engine/classes/Path2D.yaml
         ignoreTranslation: true
       - title: PathfindingLink
         path: /reference/engine/classes/PathfindingLink
@@ -2694,6 +2679,11 @@ navigation:
         path: /reference/engine/classes/UniversalConstraint
         type: engineapi
         source: /reference/engine/classes/UniversalConstraint.yaml
+        ignoreTranslation: true
+      - title: UnreliableRemoteEvent
+        path: /reference/engine/classes/UnreliableRemoteEvent
+        type: engineapi
+        source: /reference/engine/classes/UnreliableRemoteEvent.yaml
         ignoreTranslation: true
       - title: UserGameSettings
         path: /reference/engine/classes/UserGameSettings
@@ -4278,6 +4268,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PromptCreateAssetResult.yaml
         ignoreTranslation: true
+      - title: PromptCreateAvatarResult
+        path: /reference/engine/enums/PromptCreateAvatarResult
+        type: engineapi
+        source: /reference/engine/enums/PromptCreateAvatarResult.yaml
+        ignoreTranslation: true
       - title: PromptPublishAssetResult
         path: /reference/engine/enums/PromptPublishAssetResult
         type: engineapi
@@ -4582,6 +4577,11 @@ navigation:
         path: /reference/engine/enums/StudioDataModelType
         type: engineapi
         source: /reference/engine/enums/StudioDataModelType.yaml
+        ignoreTranslation: true
+      - title: StudioPlaceUpdateFailureReason
+        path: /reference/engine/enums/StudioPlaceUpdateFailureReason
+        type: engineapi
+        source: /reference/engine/enums/StudioPlaceUpdateFailureReason.yaml
         ignoreTranslation: true
       - title: StudioScriptEditorColorCategories
         path: /reference/engine/enums/StudioScriptEditorColorCategories

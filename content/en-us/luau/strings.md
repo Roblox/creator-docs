@@ -57,8 +57,8 @@ local string1 = hello .. world
 local string2 = helloWithSpace .. world
 local string3 = hello .. " " .. world
 
-print(string1)  --> Hello
-print(string2)  --> world!
+print(string1)  --> Helloworld!
+print(string2)  --> Hello world!
 print(string3)  --> Hello world!
 ```
 

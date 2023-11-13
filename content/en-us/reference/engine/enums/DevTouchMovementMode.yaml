@@ -16,21 +16,24 @@ items:
     deprecation_message: ''
   - name: Thumbstick
     summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual thumbstick applications.
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbstick
+      applications.
     value: 1
     tags: []
     deprecation_message: |
       This item is deprecated. Do not use it for new work.
   - name: DPad
     summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual DPad applications.
+      This item is deprecated. Use `DynamicThumbstick` for virtual DPad
+      applications.
     value: 2
     tags: []
     deprecation_message: |
       This item is deprecated. Do not use it for new work.
   - name: Thumbpad
     summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual thumbpad applications.
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbpad
+      applications.
     value: 3
     tags: []
     deprecation_message: |
