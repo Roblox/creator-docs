@@ -64,19 +64,19 @@ constructors:
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: ''
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []
@@ -112,11 +112,11 @@ constructors:
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []
@@ -133,11 +133,11 @@ constructors:
     parameters:
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []
