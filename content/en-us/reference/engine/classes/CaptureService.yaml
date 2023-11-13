@@ -13,6 +13,22 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: CaptureService:SaveCaptureToExternalStorage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: capturePath
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

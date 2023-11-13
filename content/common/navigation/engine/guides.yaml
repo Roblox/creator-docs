@@ -497,6 +497,8 @@ navigation:
             path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
+          - title: Sponsoring Experiences
+            path: /production/promotion/sponsoring-experiences
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
           - title: User Advertisements

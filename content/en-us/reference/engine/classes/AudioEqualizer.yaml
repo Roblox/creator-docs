@@ -10,8 +10,7 @@ description: |
   to/from by `Class.Wire|Wires`. `Class.AudioEqualizer` has 3 frequency bands
   whose gain values can be controlled, and the crossover points between bands
   can be moved.
-code_samples:
-  - audio-wiring---listener-equalization
+code_samples: []
 inherits:
   - Instance
 tags:

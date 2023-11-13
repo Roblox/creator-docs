@@ -7,25 +7,40 @@ You can [find](#finding-audio-assets) a variety of free-to-use audio assets on t
 
 ## Finding Audio Assets
 
-In the [Creator Marketplace](../production/publishing/creator-marketplace.md), you can find all audio assets that are made by Roblox and the Roblox community for creators to use within their experiences, including more than 100,000 endorsed, professionally-produced sound effects from top audio and music partners.
+The [Creator Marketplace](../production/publishing/creator-marketplace.md) is where you can find all audio assets that are made by Roblox and the Roblox community for the Roblox community to use within their experiences, including more than 100,000 endorsed, professionally-produced sound effects from top audio and music partners, such as APM, Monstercat, Pro Sound Effects, Nettwerk Music Group, and Position Music.
 
 To find audio assets:
 
 1. Navigate to the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md), then use the category selector dropdown to select **Audio**.
 
-   <img src="../assets/studio/toolbox/Marketplace-Audio.png" width="360" alt="Audio section of Marketplace in Studio's Toolbox" />
+   <img src="../assets/studio/toolbox/Marketplace-Audio.png" width="360" />
 
-2. Use the keyword search, quick filter options, and/or advanced filters to narrow down the results.
+1. **(Optional)** Use the **advanced filter** popup to sort by endorsed audio.
 
-   <img src="../assets/studio/toolbox/Marketplace-Audio-Discovery.png" width="580" alt="Audio discovery options in Studio's Toolbox" />
+   1. On the right side of the search bar, click the **advanced filter** button.
 
-3. Click any audio asset to insert it as a new `Class.Sound` instance into the [Explorer](../studio/explorer.md) hierarchy. You can also click the small **play** button to begin previewing it and to view more info.
+      <img src="../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="360" />
 
-   <img src="../assets/studio/toolbox/Audio-List-Preview.png" width="360" alt="Audio asset preview button in Studio's Toolbox" />
+   1. In the **Creator** field, enter **Roblox**, **Monstercat**, or **APM**.
 
-	<Alert severity="info">
-	See [Sound Objects](../sound/objects.md) for details on how to use `Class.Sound` instances in an experience.
-	</Alert>
+   1. Click the **Apply** button.
+
+1. To sort results by sound effects or music tracks, click either the **Sound&nbsp;Effect** or **Music** button. Then, optionally, filter by sound category or music genre from the dropdown lists.
+
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../assets/studio/toolbox/Marketplace-Audio-Sound-Effects-Category.png" width="360" />
+       <figcaption>Sound effects by category</figcaption>
+     </figure>
+     <figure>
+       <img src="../assets/studio/toolbox/Marketplace-Audio-Music-Genre.png" width="360" />
+       <figcaption>Music tracks by genre</figcaption>
+     </figure>
+   </GridContainer>
+
+1. In the **Search** field, type keywords for the audio you want to find and select the search icon. Results populate according to your set filters.
+
+1. Right-click the desired audio and select **Copy&nbsp;Asset&nbsp;ID** to get its asset ID for [playing the audio](../sound/objects.md) through a `Class.Sound` object.
 
 ## Importing Custom Audio
 
@@ -38,31 +53,32 @@ You can import custom audio as long as it meets the following requirements:
 - Its sample rate is less than or equal to 48 kHz.
 - Its channels are set to mono or stereo 2.0, 3.0, or 5.1 surround.
 
-If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can upload 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
+If you're [ID-verified](https://blog.roblox.com/2021/09/introducing-age-verification/), you can import 100 free audio assets per 30 days; if you're unverified, you can upload 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
 To import one or more audio files:
 
-1. In the [View](../studio/view-tab.md) tab, click **Asset Manager**. The [Asset Manager](../projects/assets/manager.md) displays.
+1. In the **View** tab, click **Asset Manager**. The [Asset Manager](../projects/assets/manager.md) displays.
 
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
+   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
 
 2. Click the **Bulk Import** button.
 
    <img src="../assets/studio/asset-manager/Import-Button.png" width="360" />
 
-3. Select and then confirm the audio files you want to import from your local system.
+3. Select the audio files you want to import from your local machine, then click the **Open** button.
 
-4. Back in Studio, click the **Confirm** button. After a moment, the files display with a green checkmark and a completed status, and the bottom of the **Bulk Import** dialog displays how many audio uploads you have left before you reach your 30 day limit.
+4. Click the **Confirm** button. After a moment, the files display with a green checkmark and a
+   completed status, and the bottom of the **Bulk Import** dialog displays how many audio uploads you have left before you reach your 30 day limit.
 
    <img src="../assets/studio/asset-manager/Audio-Import.png" width="360" />
 
-   <Alert severity="info">
-   To standardize the playback format and check for corrupt or invalid files, Studio transcodes imported audio before saving it as an asset. If you receive an error while importing audio, Studio is likely rejecting it during the transcode process. In addition, some older audio tools generate invalid file headers or frames when exporting.
+Your audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the [Asset Manager](../projects/assets/manager.md) and in the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view, use, and download your private audio asset, the audio asset privacy system allows you to view and grant permissions to specific experiences to use your assets.
 
-   If Studio continues to reject the audio you're trying to import, ensure your audio tools are updated, then verify that the audio files meet the import requirements.
-	 </Alert>
+### Troubleshooting
 
-Your audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the [Asset Manager](../projects/assets/manager.md) and in the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view, use, and download your private audio asset, the [audio asset privacy system](#audio-asset-privacy-system) allows you to view and grant permissions to specific experiences to use your assets.
+To standardize the playback format and check for corrupt or invalid files, Studio transcodes the audio you import before saving it as an asset. If you receive an error while you are importing audio, Studio is likely rejecting it during the transcode process. In addition, some older versions of audio tools generate invalid file headers or frames when exporting audio.
+
+If Studio continues to reject the audio you are trying to import, ensure you're using the latest version of your audio tools, then verify that your audio meets the import requirements.
 
 ## Audio Asset Privacy System
 

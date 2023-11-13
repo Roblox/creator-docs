@@ -59,6 +59,57 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: UserGameSettings.ChatTranslationEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ChatTranslationFTUXShown
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.ChatTranslationToggleEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: UserGameSettings.ChatVisible
     summary: ''
     description: ''

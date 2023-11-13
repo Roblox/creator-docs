@@ -247,8 +247,8 @@ events:
       Fires when the user stops interacting with the window of the PluginGui.
     description: |
       **WindowFocusReleased** fires immediately when the user stops interacting
-      with the PluginGui's window, usually by clicking on something not in the
-      window. This functions works similarly to the similarly-named
+      with the PluginGui's window, usually by clicking on something not in
+      the window. This functions works similarly to the similarly-named
       `Class.UserInputService.WindowFocusReleased` event.
 
       If focus is moving to another `Class.PluginGui` while the user had this

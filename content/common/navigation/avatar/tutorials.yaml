@@ -20,8 +20,6 @@ navigation:
     path: /art/characters/facial-animation/creating-basic-heads
   - title: Creating Face Accessories
     path: /art/characters/facial-animation/creating-face-accessories
-  - title: Publishing Eyebrows and Eyelashes
-    path: /art/accessories/publishing-eyebrows-eyelashes
   - title: Testing Characters
     section:
       - title: Overview

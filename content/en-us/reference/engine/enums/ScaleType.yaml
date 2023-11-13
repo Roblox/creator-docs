@@ -20,14 +20,14 @@ items:
     summary: |
       9-Slice scaling: slice the image into 9 regions and apply different
       scaling rules to each region. The slice boundaries are determined by
-      `Class.ImageLabel.SliceCenter` or `Class.ImageButton.SliceCenter`. See UI
-      9 Slice Design for more information.
+      `Class.ImageLabel.SliceCenter` or `Class.ImageButton.SliceCenter`. See
+      [UI 9 Slice Design](../../../ui/9-slice.md) for more information. 
     value: 1
     tags: []
     deprecation_message: ''
   - name: Tile
     summary: |
-      The image is is tiled to fit within the element. For example, if the
+      The image is tiled to fit within the element. For example, if the
       element is twice the X dimension of the image, the image will appear twice
       (2 tiles).
     value: 2

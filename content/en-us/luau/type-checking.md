@@ -148,8 +148,8 @@ local numberList: {[string]: number} = {
 	Foo = 1,
 	Baz = 10
 }
-
 numberList["bar"] = true -- type error, boolean can't convert to number
+}
 ```
 
 Tables can also have explicit string indices defined in a type.

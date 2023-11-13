@@ -42,12 +42,8 @@ properties:
       can_load: true
       can_save: false
   - name: TriangleMeshPart.FluidFidelity
-    summary: |
-      Determines the geometric representation used to compute aerodynamic forces
-      and torques.
-    description: |
-      Determines the geometric representation used to compute aerodynamic forces
-      and torques.
+    summary: ''
+    description: ''
     code_samples: []
     type: FluidFidelity
     tags:

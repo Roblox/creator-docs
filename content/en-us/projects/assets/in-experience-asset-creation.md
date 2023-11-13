@@ -76,7 +76,7 @@ After users create and save an asset from your experience, they can find it in t
 - Their [My Inventory](https://en.help.roblox.com/hc/en-us/articles/360000463726-How-to-View-or-Hide-Your-Inventory-in-a-Browser) page.
 - The **Creations** tab of their [Profile](https://en.help.roblox.com/hc/en-us/articles/203313660-All-About-Profiles-Blurbs-and-Profile-Customization) page.
 - The **Development Items** tab under their Creator Dashboard [Creations](https://create.roblox.com/dashboard/creations?activeTab=Model) page.
-- The **Inventory** tab of their [Toolbox](../../projects/assets/toolbox.md) in Studio.
+- Their [Inventory Toolbox](../../projects/assets/toolbox.md#inventory) in Studio.
 
 When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
 

@@ -50,7 +50,7 @@ properties:
 
       See also:
 
-      - `Class.Plugin.CreatePluginAction`, creates a PluginAction
+      - `Class.Plugin.CreationPluginAction`, creates a PluginAction
     code_samples:
     type: bool
     tags:

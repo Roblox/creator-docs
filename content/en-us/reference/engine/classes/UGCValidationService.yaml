@@ -13,6 +13,69 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:GetDynamicHeadMeshInactiveControls
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: string
+        default:
+        summary: ''
+      - name: controlNames
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: UGCValidationService:ValidateImageTransparencyThresholdByteString
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: image
+        type: string
+        default:
+        summary: ''
+      - name: threshold
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: UGCValidationService:ValidateImageTransparencyThresholdTextureID
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: string
+        default:
+        summary: ''
+      - name: threshold
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

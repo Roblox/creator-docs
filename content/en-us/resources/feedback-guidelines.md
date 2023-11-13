@@ -7,7 +7,7 @@ If you want to provide feedback on the documentation, first off, thank you! We r
 
 ## Include Key Details
 
-- If some element of the site isn't working properly, list the steps that cause the problem and any relevant browser extensions.
+- If some element of the site isn't working properly, list the steps that cause the problem, your operating system, your web browser, and any relevant browser extensions.
 
   If the behavior occurs inconsistently, note how often it occurs and the situations in which it seems to occur most often.
 
