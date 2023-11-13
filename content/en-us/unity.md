@@ -31,7 +31,7 @@ You can see the difference immediately if you create a `GameObject` and a `Part`
 
 In that sense, you might consider Unity development as additive and Roblox development as subtractive. `GameObjects` are generic containers for any number of components. You mix and match components as necessary to achieve your desired appearance and behavior. Roblox handles things like physics and lighting by default, so modifying its systems means removing or overwriting functionality rather than just adding it where it didn't previously exist.
 
-Another useful comparison is the Unity `GameObject`to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that you might establish a parent-child relationship between many `GameObjects` in Unity. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
+Another useful comparison is the Unity `GameObject`to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that you might establish a parent-child relationship between many `GameObjects` in Unity. You specify one of the model's parts as its [primary part](parts/models.md#setting-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
 
 For example, a Unity `GameObject` might have components for `ParticleSystem`, `Physics3D`, `SpringConstraint`, and a script. In the Hierarchy window, you see a single `GameObject` named `SpringyFireball`. The Inspector window shows the collection of components and properties.
 
@@ -58,7 +58,7 @@ Workspace | Represents the game world and contains all parts, models, and other 
 ReplicatedStorage | Contains objects that are replicated to both the client and the server, including scripts. This location is ideal for scripts that share data or functionality between the two, such as game settings, player data, and events.
 ServerScriptService | Contains server scripts, including module scripts. This location is ideal for scripts that need to access server-side functionality or objects, such as game logic, data storage, and AI behaviors.
 ServerStorage | Contains server-side objects and settings. This location is ideal for large objects that don't need to be immediately replicated to clients when they join an experience.
-StarterPlayer | Contains player-related objects and settings. This location is primarily used for setting up player properties and initializations. Client scripts can run from this location, including module scripts. This location is ideal for scripts that set up player-specific features, such as player models, starting inventory, and camera settings.
+StarterPlayer | Contains player-related objects and settings. This location is primarily used for setting up player properties and initializations. Client scripts can run from this location, including module scripts. This location is ideal for scripts that set up player-specific features, such as player models, starting inventory, and camera settings. Of particular note, `StarterCharacterScripts` and `StarterPlayerScripts` are subtly different. For more information, see [Client](projects/data-model.md#client).
 StarterGui | Contains GUI elements that display when the game is loaded. Client scripts can run from this location, including module scripts. This location is ideal for scripts that modify the game's user interface, such as adding buttons, menus, and pop-ups.
 
 ## Scripting
