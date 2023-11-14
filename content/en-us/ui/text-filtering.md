@@ -68,23 +68,23 @@ local playerGui = player:WaitForChild("PlayerGui")
 local screen = playerGui:WaitForChild("MessageScreen")
 
 -- GUI elements for dialog
-local frame = screen:WaitForChild("Frame")
-local messageInput = frame:WaitForChild("Message")
-local sendButton = frame:WaitForChild("Send")
+local frame = screen.Frame
+local messageInput = frame.Message
+local sendButton = frame.Send
 
 -- RemoteEvent to send text to server for filtering and display
-local setSignText = ReplicatedStorage:WaitForChild("SetSignText")
+local setSignText = ReplicatedStorage.SetSignText
 
 -- Called when button is clicked
 local function onClick()
 	local message = messageInput.Text
 	if message ~= "" then
-		setSignText:FireServer(message)
 		frame.Visible = false
+		setSignText:FireServer(message)
 	end
 end
 
-sendButton.MouseButton1Click:Connect(onClick)
+sendButton.Activated:Connect(onClick)
 ```
 
 ```lua title='Script'
@@ -105,9 +105,8 @@ local function getTextObject(message, fromPlayerId)
 	end)
 	if success then
 		return textObject
-	elseif errorMessage then
-		print("Error generating TextFilterResult:", errorMessage)
 	end
+	print("Error generating TextFilterResult: ", errorMessage)
 	return false
 end
 
@@ -118,9 +117,8 @@ local function getFilteredMessage(textObject)
 	end)
 	if success then
 		return filteredMessage
-	elseif errorMessage then
-		print("Error filtering message:", errorMessage)
 	end
+	print("Error filtering message: ", errorMessage)
 	return false
 end
 

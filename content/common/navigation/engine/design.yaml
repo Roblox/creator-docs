@@ -30,6 +30,8 @@ navigation:
   - heading: Support Your Experience
   - title: LiveOps Essentials
     path: /production/game-design/liveops-essentials
+  - title: LiveOps Planning
+    path: /production/game-design/liveops-planning
   - title: Analytics Essentials
     path: /production/game-design/analytics-essentials
   - title: Content Updates
