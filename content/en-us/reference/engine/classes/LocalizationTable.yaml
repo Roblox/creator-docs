@@ -190,7 +190,7 @@ methods:
                   <td>
                       <b>Values</b>
                   </td>
-                  <td><code>Library.Dictionary</code></td>
+                  <td><code>Dictionary</code></td>
                   <td>A dictionary of language translations for this localization entry. The keys of this dictionary are locale ids, and the values are strings that are used to apply localization for the language corresponding to the locale id.</td>
               </tr>
           </tbody>
