@@ -1,0 +1,58 @@
+name: PromptCreateAvatarResult
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PermissionDenied
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: UploadFailed
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: NoUserInput
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: InvalidHumanoidDescription
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: UGCValidationFailed
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: ModeratedName
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: MaxOutfits
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: UnknownFailure
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''

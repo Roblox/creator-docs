@@ -425,7 +425,7 @@ For example:
 
 ### Ad Credits
 
-Campaigns using ad credit are settled at the end of the campaign at the end date. Any unused ad credits will be refunded to their ad credit balance. Ad credits will never be refunded to Robux. There is no daily spend limit when using ad credits.
+Campaigns using ad credit are settled at the end of the campaign at the end date. Any unused ad credits will be refunded to their ad credit balance within 24-48 hours after the campaign ends. Ad credits will never be refunded to Robux. There is no daily spend limit when using ad credits.
 
 For example:
 
@@ -445,7 +445,7 @@ Ad credit-related activities are categorized as follows:
 
 ## Ad Fraud Protection
 
-Roblox diligently combats ad fraud using advanced detection methods for bots and other fraudulent activities, ensuring advertisers don't pay for fraudulent traffic and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
+Roblox diligently combats ad fraud using advanced detection methods for bots and other fraudulent activities, ensuring advertisers don't pay for fraudulent traffic and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
 
 Roblox may suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. To avoid fraudulent behavior and maintain advertising integrity, advertisers should follow these best practices:
 
