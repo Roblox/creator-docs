@@ -15,7 +15,6 @@ If you test an experience on the Quest&nbsp;2 and are not pleased with the visua
 
 ## Comfort Settings
 
-When users experience VR, movement of their camera/position can cause some discomfort due to the disconnect between what they see and the lack of motion detected by their body and inner ear. Roblox provides multiple settings to help users of all sensitivity levels, so everyone can enjoy an immersive and comfortable VR experience while playing.
 When users experience VR, movement of their camera/position can cause some discomfort due to the disconnect between what they see and the lack of motion detected by their body and inner ear. Roblox provides multiple settings to help users of all sensitivity levels, so everyone can enjoy an immersive and comfortable VR experience while playing. In addition to Comfort, Default, and Expert modes, the user may choose Custom to individually turn the following settings on and off:
 
 - **Vignette** — An overlay is displayed during motion which restricts the user's peripheral vision during motion and conceals camera teleports.
