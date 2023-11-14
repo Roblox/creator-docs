@@ -173,23 +173,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: GeometryService:HashMeshAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: meshId
-        type: Content
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: GeometryService:IntersectAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from the
@@ -316,23 +299,6 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: GeometryService:StitchMeshesAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: meshParts
-        type: Array
-        default:
-        summary: ''
-    returns:
-      - type: Content
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: GeometryService:SubtractAsync
     summary: |

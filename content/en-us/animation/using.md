@@ -26,10 +26,7 @@ For example, the following `Class.LocalScript`, when placed in
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-	character = player.CharacterAdded:Wait()
-end
+local character = player.Character or player.CharacterAdded:Wait()
 
 -- Ensure that the character's humanoid contains an "Animator" object
 local humanoid = character:WaitForChild("Humanoid")
@@ -65,6 +62,7 @@ kickAnimation.AnimationId = "rbxassetid://2515090838"
 -- Create a new "AnimationController" and "Animator"
 local animationController = Instance.new("AnimationController")
 animationController.Parent = rig
+
 local animator = Instance.new("Animator")
 animator.Parent = animationController
 
@@ -106,7 +104,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	local animator = humanoid:WaitForChild("Animator")
 
    	-- Stop all animation tracks
-   	for _, playingTrack in pairs(animator:GetPlayingAnimationTracks()) do
+   	for _, playingTrack in animator:GetPlayingAnimationTracks() do
    		playingTrack:Stop(0)
    	end
 
@@ -140,7 +138,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	local animator = humanoid:WaitForChild("Animator")
 
    	-- Stop all animation tracks
-   	for _, playingTrack in pairs(animator:GetPlayingAnimationTracks()) do
+   	for _, playingTrack in animator:GetPlayingAnimationTracks() do
    		playingTrack:Stop(0)
    	end
 
