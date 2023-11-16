@@ -48,7 +48,7 @@ properties:
       The face this TerrainDetail overrides.
     description: |
       Face that this TerrainDetail overrides. When more than one TerrainDetail
-      objects with the same face exsit under a MaterialVariant, only one of them
+      objects with the same face exist under a MaterialVariant, only one of them
       works.
     code_samples: []
     type: TerrainFace

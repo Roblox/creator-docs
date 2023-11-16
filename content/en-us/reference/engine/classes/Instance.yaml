@@ -764,7 +764,7 @@ methods:
       name. If no attribute has been assigned then nil is returned.
 
       For example, the following code snippet will set the value of the
-      instance's `InitialPostion` attribute. Note that this code sample does not
+      instance's `InitialPosition` attribute. Note that this code sample does not
       define `Class.Instance`:
 
       ```lua
