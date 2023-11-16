@@ -279,6 +279,7 @@ callbacks:
       `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()`. Only one
       callback can be set.
     code_samples:
+      - SocialService-OnCallInviteInvoked
     parameters:
       - name: tag
         type: string
