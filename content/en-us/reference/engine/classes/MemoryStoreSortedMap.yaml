@@ -140,7 +140,7 @@ methods:
           **(Optional)** Sort key to set for this key. Accepted types are a
           number (integer or decimal) or a string.
     returns:
-      - type: void
+      - type: bool
         summary: ''
     tags:
       - Yields

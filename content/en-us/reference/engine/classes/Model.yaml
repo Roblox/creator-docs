@@ -622,7 +622,7 @@ methods:
         `Class.Rope|Ropes`
       - Physical velocities and forces like `Hinge.MaxServoTorque`
       - Visual properties like sizes of particle emitters
-      - Other length properties like `Sound.RolloffMinDistance`
+      - Other length properties like `Sound.RollOffMinDistance`
     code_samples:
     parameters:
       - name: newScaleFactor

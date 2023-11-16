@@ -3,7 +3,8 @@ type: enum
 summary: |
   Describes a player's call invite state.
 description: |
-  This enum describes a player's call invite state. See `Class.SocialService.CallInviteStateChanged` for details.
+  This enum describes a player's call invite state. See
+  `Class.SocialService.CallInviteStateChanged` for details.
 code_samples: []
 tags: []
 deprecation_message: ''

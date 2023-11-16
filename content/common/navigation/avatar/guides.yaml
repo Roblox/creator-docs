@@ -60,7 +60,8 @@ navigation:
     path: /art/accessories/automatic-skinning-transfer
 
   - heading: Third Party Add-ons
-
+  - title: Roblox Blender Plugin
+    path: /art/modeling/roblox-blender-plugin
   - title: Calisthenics Tool
     path: /art/modeling/calisthenics-tool
   - title: Validation Tool
