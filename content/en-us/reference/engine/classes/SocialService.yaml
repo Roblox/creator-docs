@@ -7,11 +7,11 @@ summary: |
   platform.
 description: |
   **SocialService** facilitates social functions that impact relationships made
-  on the Roblox platform. Its primary usage is to show [invite
-  prompts](../../../production/promotion/invite-prompts.md) and the phone book
-  to players, allowing them to send invitation requests to their friends through
-  `Class.SocialService:PromptGameInvite()|PromptGameInvite()` and
-  `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
+  on the Roblox platform. Its primary usage is to show
+  [invite prompts](../../../production/promotion/invite-prompts.md) and the
+  phone book to players, allowing them to send invitation requests to their
+  friends through `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
+  and `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
   You may leverage signals when such requests are made.
 code_samples:
 inherits:
@@ -94,7 +94,8 @@ methods:
       If a player is not eligible to open the phone book, an error dialog is
       shown.
 
-      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample implementation of this method.
+      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
+      implementation of this method.
     code_samples:
       - SocialService-PromptPhoneBook
     parameters:
@@ -129,7 +130,7 @@ methods:
         type: SelfViewPosition
         default: LastPosition
         summary: |
-          The position to place the self view
+          The position to place the self view .
     returns:
       - type: void
         summary: ''
@@ -139,14 +140,16 @@ methods:
     thread_safety: Unsafe
   - name: SocialService:CanSendCallInviteAsync
     summary: |
-      Indicates whether the given `Class.Player` can invite other players to a call.
+      Indicates whether the given `Class.Player` can invite other players to a
+      call.
     description: |
       Returns `true` if the given `Class.Player` can send a call invite to a
       friend. You should always use the result of this method before calling
       `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` since the
       ability to open the phone book may vary depending on the player.
 
-      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample implementation of this method.
+      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
+      implementation of this method.
     code_samples:
       - SocialService-PromptPhoneBook
     parameters:
@@ -154,7 +157,8 @@ methods:
         type: Instance
         default:
         summary: |
-          The `Class.Player` instance of the player potentially sending a call invite.
+          The `Class.Player` instance of the player potentially sending a call
+          invite.
     returns:
       - type: bool
         summary: |
@@ -170,9 +174,9 @@ methods:
     description: |
       `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()`
       returns `true` if the given `Class.Player` can invite other players to the
-      current experience. You should always use the result of this method
-      before calling `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
-      since the ability to invite players may vary depending on the platform or
+      current experience. You should always use the result of this method before
+      calling `Class.SocialService:PromptGameInvite()|PromptGameInvite()` since
+      the ability to invite players may vary depending on the platform or
       player.
 
       See
@@ -216,7 +220,8 @@ events:
         type: Instance
         default:
         summary: |
-          The `Class.Player` instance of the player who had a call invite state change.
+          The `Class.Player` instance of the player who had a call invite state
+          change.
       - name: inviteState
         type: InviteState
         default:
@@ -274,6 +279,7 @@ callbacks:
       `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()`. Only one
       callback can be set.
     code_samples:
+      - SocialService-OnCallInviteInvoked
     parameters:
       - name: tag
         type: string
@@ -287,9 +293,12 @@ callbacks:
           Array containing all of the players involved in the call. The caller
           will always be the first player in the array.
     returns:
-      - type: Dictionary
+      - type: Instance
         summary: |
-          Table including the `PlaceId` and `ReservedServerAccessCode` keys whose values are the `Class.DataModel.PlaceId` and the server access code returned by `Class.TeleportService:ReserveServer()`, respectively.
+          Table including the `PlaceId` and `ReservedServerAccessCode` keys
+          whose values are the `Class.DataModel.PlaceId` and the server access
+          code returned by `Class.TeleportService:ReserveServer()`,
+          respectively.
     tags: []
     deprecation_message: ''
     security: None

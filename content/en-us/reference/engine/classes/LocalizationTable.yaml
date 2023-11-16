@@ -21,7 +21,7 @@ description: |
 
   - **Key** is an optional unique key for fast hash lookups in code. If it is
     non-empty it must be unique in the table.
-  - **Source** is the orignal text in the source language that will be used by
+  - **Source** is the original text in the source language that will be used by
     the `Class.LocalizationService` automatic text replacement system to match
     GUI text and render a translation instead. The Source field can be filled by
     the text capture tools, or can be set manually. For key-based lookups the
