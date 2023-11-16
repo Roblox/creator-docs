@@ -702,12 +702,12 @@ methods:
 
       `CFrame * cf`
     parameters:
-      - name: cf
+      - name: ...
         type: CFrame
         default:
         summary: ''
     returns:
-      - type: CFrame
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
@@ -722,12 +722,12 @@ methods:
 
       `CFrame:Inverse() * cf`
     parameters:
-      - name: cf
+      - name: ...
         type: CFrame
         default:
         summary: ''
     returns:
-      - type: CFrame
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
@@ -742,12 +742,12 @@ methods:
 
       `CFrame * v3`
     parameters:
-      - name: v3
+      - name: ...
         type: Vector3
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
@@ -762,12 +762,12 @@ methods:
 
       `CFrame:Inverse() * v3`
     parameters:
-      - name: v3
+      - name: ...
         type: Vector3
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
@@ -782,12 +782,12 @@ methods:
 
       `(CFrame - CFrame.Position) * v3`
     parameters:
-      - name: v3
+      - name: ...
         type: Vector3
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
@@ -802,12 +802,12 @@ methods:
 
       `(CFrame:Inverse() - CFrame:Inverse().Position) * v3`
     parameters:
-      - name: v3
+      - name: ...
         type: Vector3
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple
         summary: ''
     code_samples: []
     tags: []
