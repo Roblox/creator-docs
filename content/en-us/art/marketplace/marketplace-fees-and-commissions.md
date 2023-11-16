@@ -60,7 +60,7 @@ You cannot take your Limited item off-sale. If your item is moderated your payme
 
 ### Reselling
 
-While any user can buy a Limited item, only users that are [Premium](https://www.roblox.com/premium/membership) members can resell them. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
+If reselling is enabled by the original creator, [Premium](https://www.roblox.com/premium/membership) members can resell purchased Limited items. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
 
 **Selling Limiteds**: As a reminder, when selling anything on Roblox, the item creator, the seller, and Roblox receive a split of every transaction as follows:
 

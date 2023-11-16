@@ -39,7 +39,7 @@ properties:
       and (optionally) Puffiness as key-value pairs.
     description: |
       A JSON formatted array of Layered Accessories where each table in the
-      entry in the array describes an acccessory's AssetId, AccessoryType,
+      entry in the array describes an accessory's AssetId, AccessoryType,
       Order, and (optionally) Puffiness as key-value pairs. This can be edited
       in the properties windows for the `Class.HumanoidDescription`.
 

@@ -291,7 +291,7 @@ properties:
       This property serves as a reference to the `Class.LocalizationTable` used
       to apply automated localization to the `Class.ProximityPrompt`'s
       `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`.
-      In order for this to appy, `Class.ProximityPrompt.AutoLocalize` must be
+      In order for this to apply, `Class.ProximityPrompt.AutoLocalize` must be
       set.
 
       Developers can set this to reference a LocalizationTable anywhere in the

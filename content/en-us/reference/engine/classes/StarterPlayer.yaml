@@ -685,6 +685,22 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: StarterPlayer.LuaCharacterController
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CharacterControlMode
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
   - name: StarterPlayer.NameDisplayDistance
     summary: |
       Sets the distance at which this player will see other Humanoid's names. If

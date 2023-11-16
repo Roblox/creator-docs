@@ -616,7 +616,7 @@ properties:
     summary: |
       Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
     description: |
-      The Shape property sets the shape of the pemitter to either a box, sphere,
+      The Shape property sets the shape of the emitter to either a box, sphere,
       cylinder, or disc. After you make a selection, you can adjust the
       `Class.ParticleEmitter.ShapeStyle`, `Class.ParticleEmitter.ShapeInOut`,
       and `Class.ParticleEmitter.ShapePartial` properties to further customize
