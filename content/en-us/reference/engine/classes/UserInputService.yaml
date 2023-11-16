@@ -241,7 +241,8 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      This item has been superseded by `Class.GuiService.TouchControlsEnabled` which should be used in all new work.
+      This item has been superseded by `Class.GuiService.TouchControlsEnabled`
+      which should be used in all new work.
     security:
       read: None
       write: None
@@ -1016,7 +1017,8 @@ methods:
     description: |
       This method takes the requested `Enum.KeyCode` and returns the associated
       image for the currently connected gamepad device (limited to Xbox,
-      PlayStation and Windows). This means that if the connected controller is an Xbox&nbsp;One controller, the user sees Xbox assets. Similarly, if the
+      PlayStation and Windows). This means that if the connected controller is
+      an Xbox&nbsp;One controller, the user sees Xbox assets. Similarly, if the
       connected device is a PlayStation controller, the user sees PlayStation
       assets. If you want to use custom assets, see
       `Class.UserInputService.GetStringForKeyCode()|GetStringForKeyCode()`.
@@ -2698,9 +2700,9 @@ events:
       an in-game `Class.GuiObject|GUI` or element.
 
       The example below prints the `Enum.UserInputState|state` of the long press
-      when the user holds at least one finger for a short amount of time on
-      the same screen position. Possible states include: _Begin_, _Change_,
-      _End_, _Cancel_, and _None_.
+      when the user holds at least one finger for a short amount of time on the
+      same screen position. Possible states include: _Begin_, _Change_, _End_,
+      _Cancel_, and _None_.
 
       ```lua
       local userInputService = game:GetService("UserInputService")
