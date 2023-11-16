@@ -65,7 +65,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: bool
         summary: ''
     tags:
       - Yields
