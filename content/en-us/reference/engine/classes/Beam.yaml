@@ -407,7 +407,7 @@ properties:
       #### Beam Segments and curvature
 
       Rather than being a perfect curve, a beam is made up of straight segments.
-      The more segments, the higher the resoloution of the curve. See the image
+      The more segments, the higher the resolution of the curve. See the image
       below for a demonstration of this:
 
       ![Beam Segments](/assets/legacy/Beam.Segments.jpg)

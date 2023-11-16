@@ -517,7 +517,7 @@ Open-source Blender Studio add-on that allows you to upload assets directly from
 
 </CardContent>
 <CardActions style={{bottom: 0, width: '100%'}}>
-  <Button href="https://github.com/Roblox/roblox-blender-plugin" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Github</Button>
+  <Button href="../art/modeling/roblox-blender-plugin.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Instructions</Button>
 </CardActions>
 </Card>
 

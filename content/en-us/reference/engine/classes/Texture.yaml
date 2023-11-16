@@ -150,7 +150,7 @@ properties:
       Note:
 
       - This property can be set to very low values, but not zero
-      - The horisontal / vertical distinction is relative to the
+      - The horizontal / vertical distinction is relative to the
         `Class.BasePart`s axis. Therefore, the `Class.Texture` will rotate along
         with the `Class.BasePart`.
     code_samples:
@@ -193,7 +193,7 @@ properties:
       Note:
 
       - This property can be set to very low values, but not zero
-      - The horisontal / vertical distinction is relative to the
+      - The horizontal / vertical distinction is relative to the
         `Class.BasePart`s axis. Therefore, the `Class.Texture` will rotate along
         with the `Class.BasePart`.
     code_samples:

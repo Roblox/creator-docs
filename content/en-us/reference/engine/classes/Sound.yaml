@@ -296,7 +296,7 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      MinDistance has been superceded by `Class.Sound.EmitterSize`, whose name
+      MinDistance has been superseded by `Class.Sound.EmitterSize`, whose name
       better describes this properties behavior.
     security:
       read: None
