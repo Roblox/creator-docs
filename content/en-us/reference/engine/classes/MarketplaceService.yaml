@@ -854,7 +854,7 @@ events:
       or "OK" at the success/error message.
 
       To avoid duplicate item grants, store the purchase in a
-      [data store.](../../../cloud-services/datastores.md) If multiple attemps
+      [data store.](../../../cloud-services/datastores.md) If multiple attempts
       are made, check if the item has been already granted. For repeatable
       purchases use
       [developer products](../../../production/monetization/developer-products.md).
