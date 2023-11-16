@@ -624,11 +624,11 @@ methods:
   - name: GuiService:Select
     summary: |
       Set GuiService.SelectedObject to a child of provided instance
-      selectionParent that is PlayerGui or its descendents.
+      selectionParent that is PlayerGui or its descendants.
     description: |
       When Select is called on an instance selectionParent that is PlayerGui or
-      a descendent of PlayerGui, the engine searches all available selectable,
-      visible and on-screen GuiObjects that are descendents of selectionParent
+      a descendant of PlayerGui, the engine searches all available selectable,
+      visible and on-screen GuiObjects that are descendants of selectionParent
       and sets the `Class.GuiService.SelectedObject` to the GuiObject with the
       smallest `Class.GuiService.SelectionOrder`.
     code_samples:
@@ -638,7 +638,7 @@ methods:
         type: Instance
         default:
         summary: |
-          The parent of selection whose descendents are searched.
+          The parent of selection whose descendants are searched.
     returns:
       - type: void
         summary: ''
