@@ -148,8 +148,8 @@ local numberList: {[string]: number} = {
 	Foo = 1,
 	Baz = 10
 }
+
 numberList["bar"] = true -- type error, boolean can't convert to number
-}
 ```
 
 Tables can also have explicit string indices defined in a type.
@@ -334,7 +334,6 @@ export type Cat = {
 ```
 
 ```lua title="Script that uses the Types module"
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Types = require(ReplicatedStorage.Types)
 

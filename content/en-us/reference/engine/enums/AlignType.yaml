@@ -14,11 +14,33 @@ items:
     value: 0
     summary: |
       Two parallel axes.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: Perpendicular
     value: 1
     summary: |
       Two perpendicular axes.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: PrimaryAxisParallel
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PrimaryAxisPerpendicular
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: PrimaryAxisLookAt
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: AllAxes
+    summary: ''
+    value: 5
     tags: []
     deprecation_message: ''

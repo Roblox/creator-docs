@@ -795,11 +795,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/DraggerService.yaml
         ignoreTranslation: true
-      - title: DynamicMesh
-        path: /reference/engine/classes/DynamicMesh
-        type: engineapi
-        source: /reference/engine/classes/DynamicMesh.yaml
-        ignoreTranslation: true
       - title: DynamicRotate
         path: /reference/engine/classes/DynamicRotate
         type: engineapi
@@ -814,11 +809,6 @@ navigation:
         path: /reference/engine/classes/EmotesPages
         type: engineapi
         source: /reference/engine/classes/EmotesPages.yaml
-        ignoreTranslation: true
-      - title: EngineAPICloudProcessingService
-        path: /reference/engine/classes/EngineAPICloudProcessingService
-        type: engineapi
-        source: /reference/engine/classes/EngineAPICloudProcessingService.yaml
         ignoreTranslation: true
       - title: EqualizerSoundEffect
         path: /reference/engine/classes/EqualizerSoundEffect
@@ -1589,11 +1579,6 @@ navigation:
         path: /reference/engine/classes/Path
         type: engineapi
         source: /reference/engine/classes/Path.yaml
-        ignoreTranslation: true
-      - title: Path2D
-        path: /reference/engine/classes/Path2D
-        type: engineapi
-        source: /reference/engine/classes/Path2D.yaml
         ignoreTranslation: true
       - title: PathfindingLink
         path: /reference/engine/classes/PathfindingLink
@@ -2695,6 +2680,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/UniversalConstraint.yaml
         ignoreTranslation: true
+      - title: UnreliableRemoteEvent
+        path: /reference/engine/classes/UnreliableRemoteEvent
+        type: engineapi
+        source: /reference/engine/classes/UnreliableRemoteEvent.yaml
+        ignoreTranslation: true
       - title: UserGameSettings
         path: /reference/engine/classes/UserGameSettings
         type: engineapi
@@ -3407,6 +3397,11 @@ navigation:
         path: /reference/engine/enums/CenterDialogType
         type: engineapi
         source: /reference/engine/enums/CenterDialogType.yaml
+        ignoreTranslation: true
+      - title: CharacterControlMode
+        path: /reference/engine/enums/CharacterControlMode
+        type: engineapi
+        source: /reference/engine/enums/CharacterControlMode.yaml
         ignoreTranslation: true
       - title: ChatCallbackType
         path: /reference/engine/enums/ChatCallbackType
@@ -4228,6 +4223,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerActions.yaml
         ignoreTranslation: true
+      - title: PlayerCharacterDestroyBehavior
+        path: /reference/engine/enums/PlayerCharacterDestroyBehavior
+        type: engineapi
+        source: /reference/engine/enums/PlayerCharacterDestroyBehavior.yaml
+        ignoreTranslation: true
       - title: PlayerChatType
         path: /reference/engine/enums/PlayerChatType
         type: engineapi
@@ -4277,6 +4277,11 @@ navigation:
         path: /reference/engine/enums/PromptCreateAssetResult
         type: engineapi
         source: /reference/engine/enums/PromptCreateAssetResult.yaml
+        ignoreTranslation: true
+      - title: PromptCreateAvatarResult
+        path: /reference/engine/enums/PromptCreateAvatarResult
+        type: engineapi
+        source: /reference/engine/enums/PromptCreateAvatarResult.yaml
         ignoreTranslation: true
       - title: PromptPublishAssetResult
         path: /reference/engine/enums/PromptPublishAssetResult
@@ -4583,6 +4588,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/StudioDataModelType.yaml
         ignoreTranslation: true
+      - title: StudioPlaceUpdateFailureReason
+        path: /reference/engine/enums/StudioPlaceUpdateFailureReason
+        type: engineapi
+        source: /reference/engine/enums/StudioPlaceUpdateFailureReason.yaml
+        ignoreTranslation: true
       - title: StudioScriptEditorColorCategories
         path: /reference/engine/enums/StudioScriptEditorColorCategories
         type: engineapi
@@ -4707,6 +4717,11 @@ navigation:
         path: /reference/engine/enums/TextTruncate
         type: engineapi
         source: /reference/engine/enums/TextTruncate.yaml
+        ignoreTranslation: true
+      - title: TextureGenerationMeshHandlerUnwrapMode
+        path: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode
+        type: engineapi
+        source: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode.yaml
         ignoreTranslation: true
       - title: TextureMode
         path: /reference/engine/enums/TextureMode
@@ -4990,6 +5005,11 @@ navigation:
         path: /reference/engine/libraries/bit32
         type: engineapi
         source: /reference/engine/libraries/bit32.yaml
+        ignoreTranslation: true
+      - title: buffer
+        path: /reference/engine/libraries/buffer
+        type: engineapi
+        source: /reference/engine/libraries/buffer.yaml
         ignoreTranslation: true
       - title: coroutine
         path: /reference/engine/libraries/coroutine

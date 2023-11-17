@@ -136,7 +136,7 @@ properties:
 methods:
   - name: UIGridStyleLayout:ApplyLayout
     summary: |
-      Force re-layout of subling UI elements.
+      Force re-layout of sibling UI elements.
     description: |
       The ApplyLayout method forces sibling UI elements to be re-laid out in
       case the sorting criteria may have changed (such as when

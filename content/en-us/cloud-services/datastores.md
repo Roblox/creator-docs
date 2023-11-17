@@ -294,7 +294,7 @@ if success then
 		-- Get the current (first) page
 		local entries = pages:GetCurrentPage()
 		-- Iterate through all key-value pairs on page
-		for _, entry in pairs(data) do
+		for _, entry in pairs(entries) do
 			print(entry.key .. " : " .. tostring(entry.value))
 		end
 		-- Check if last page has been reached
