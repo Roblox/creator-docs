@@ -153,7 +153,7 @@ The `receiptInfo` table passed to the `processReceipt()` callback function conta
 </Alert>
 
 <Alert severity="warning">
-The functions for handling each product ID <strong>must return true</strong> for it to successfully process the transaction, if not, the product will not be awarded.
+The functions for handling each product ID **must** return `true` for it to successfully process the transaction. If not, the product will not be awarded.
 </Alert>
 
 <Alert severity="warning">
