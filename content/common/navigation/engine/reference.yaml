@@ -5006,6 +5006,11 @@ navigation:
         type: engineapi
         source: /reference/engine/libraries/bit32.yaml
         ignoreTranslation: true
+      - title: buffer
+        path: /reference/engine/libraries/buffer
+        type: engineapi
+        source: /reference/engine/libraries/buffer.yaml
+        ignoreTranslation: true
       - title: coroutine
         path: /reference/engine/libraries/coroutine
         type: engineapi
