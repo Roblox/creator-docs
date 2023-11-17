@@ -98,8 +98,8 @@ To edit more than a subscription's image, delete and re-create the subscriptions
 
 Subscriptions have two possible states:
 
-- **Active:** Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
-- **Inactive:** Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
+- **Active** — Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
+- **Inactive** — Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
 
 <Alert severity="warning">
 Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, make it inactive first and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
@@ -360,7 +360,7 @@ Payouts are found in **Robux Balance** > **My Transactions**:
 
 <img src="../../assets/monetization/subscriptions/subscriptions-pay-out.png" width="100%"/>
 
-To view refunding information of individual users, use `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`
+To view refunding information of individual users, use `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`.
 
 ## Subscription Analytics
 
@@ -379,6 +379,7 @@ Subscription analytics track the following metrics:
   - **Renewed**: The number of renewing subscriptions purchased in a prior period.
   - **Resurrected**: The number of new subscriptions purchased by users who had previously canceled.
 - **Cancellations**: The number of subscriptions that were not renewed. This includes all cancellations regardless of trigger, be it user cancellation, subscription deactivation by the creator, or by other means.
+  - Cancellations are different from refunds. Cancelled subscriptions are subscriptions that will no longer renew but are paid in full for the remainder of the billing cycle, whereas refunds return the paid subscription amount to the user.  
 - **Subscriptions by Platform**: The number of subscriptions purchased on each platform.
 - **Platform Earnings**: The net revenue earned through subscriptions purchased on each platform.
 
