@@ -4,13 +4,13 @@ category:
 memory_category: Instances
 summary: |
   Historically changed the colors of body parts to match the
-  `Class.Skin.SkinColor` property. Superceded by the `Class.BodyColors` class.
+  `Class.Skin.SkinColor` property. Superseded by the `Class.BodyColors` class.
 description: |
   The Skin object, when placed into a humanoid model, will change the colors all
   body parts of the torso, head, etc, to value of the `Class.Skin.SkinColor`
   property.
 
-  Superceded by the `Class.BodyColors` class.
+  Superseded by the `Class.BodyColors` class.
 code_samples:
 inherits:
   - CharacterAppearance

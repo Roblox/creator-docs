@@ -185,19 +185,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods:
-  - name: ViewportFrame:CaptureSnapshotAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Content
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+methods: []
 events: []
 callbacks: []
