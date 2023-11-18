@@ -494,7 +494,7 @@ properties:
   - name: DragDetector.TrackballRollFactor
     summary: |
       If `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateTrackball`, multipler for adding roll
+      `Enum.DragDetectorDragStyle|RotateTrackball`, multiplier for adding roll
       rotation to the total.
     description: |
       When the cursor is outside the trackball, the `Class.DragDetector` can

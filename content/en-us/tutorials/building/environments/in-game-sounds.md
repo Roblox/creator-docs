@@ -30,7 +30,7 @@ When a **Sound** object is parented to a part or attachment, it becomes position
    ![alt](../../../assets/tutorials/in-game-sounds/ingameSounds-soundID.png)
 
    <Alert severity="info">
-   Custom sounds can be imported using the [Asset Manager](../../../projects/assets/manager.md#audio). Additionally, free sounds uploaded by Roblox and the community can be found using the [Toolbox](../../../projects/assets/toolbox.md).
+   Custom sounds can be imported using the [Asset Manager](../../../projects/assets/manager.md). Additionally, free sounds uploaded by Roblox and the community can be found using the [Toolbox](../../../projects/assets/toolbox.md).
    </Alert>
 
 3. For continuous playback when the game starts, toggle **Playing** and **Looped** to be **on**.

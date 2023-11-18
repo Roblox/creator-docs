@@ -10,11 +10,6 @@ description: Explains how to publish the places in your experience.
 
 While an experience can consist of many places, each experience can only have one **starting place** that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
 
-<figure>
-  <img src="../../assets/studio/asset-manager/Starting-Place-Icon.png" width="360" />
-  <figcaption>Starting place marked by a "spawn" icon in the [Asset Manager](../../projects/assets/manager.md)</figcaption>
-</figure>
-
 ## Publishing a Starting Place
 
 By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions. When appropriate, you can [release the experience](#releasing-to-the-public) to the public.
@@ -47,19 +42,18 @@ After you have [published a starting place](#publishing-a-starting-place) to cre
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
-1. In its window, click the &#9776; icon in the upper-left and select **Places** from the contextual menu. The starting place appears, marked by the "spawn" icon.
+2. In its window, click the &#9776; icon in the upper-left and select **Places** from the menu.
 
-   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" /><br />
-   <img src="../../assets/publishing/experiences-places-assets/Places-Folder-Selected.png" width="360" />
+   <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" />
 
-1. Avoiding the thumbnail/name of your starting place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name of **[New Place]**.
+3. Avoiding the thumbnail/name of your starting place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name.
 
-   <img src="../../assets/publishing/experiences-places-assets/New-Place-Created.png" width="360" />
+   <img src="../../assets/studio/asset-manager/Places-New-Place-Created.png" width="360" />
 
-1. Right-click the new place, select **Rename**, and enter a more descriptive name.
-1. When you double-click the new place, a new Studio session opens for editing the new place.
+4. Right-click the new place, select **Rename**, and enter a more descriptive name.
+5. When you double-click the new place, a new Studio session opens for editing the new place.
 
 ## Releasing to the Public
 
@@ -141,7 +135,7 @@ Roblox automatically retains saved versions of each place for version control an
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
-   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
 1. In its window, click the &#9776; icon in the upper-left and select **Places** from the contextual menu.
 
