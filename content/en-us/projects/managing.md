@@ -46,7 +46,7 @@ and their association in Roblox.
 ## Testing
 
 Your team can instantly test the experience on PC, mobile, and other devices you
-wish to support through the Roblox app — no need to compile builds, deploy to
+wish to support through the Roblox app; no need to compile builds, deploy to
 app stores, or await app store approval.
 
 Studio offers a suite of options for testing an experience before releasing it
