@@ -342,7 +342,7 @@ methods:
       Sets the listener used by the client.
 
       The first parameter is the `Enum.ListenerType` of the listener, the second
-      paramater is dependent on the listener type.
+      parameter is dependent on the listener type.
 
       - Camera ListenerType - Does not return a listener object as
         `Class.Workspace.CurrentCamera` is always used

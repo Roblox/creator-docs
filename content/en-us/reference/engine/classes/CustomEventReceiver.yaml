@@ -36,10 +36,10 @@ properties:
 methods:
   - name: CustomEventReceiver:GetCurrentValue
     summary: |
-      Returns the current value of the reciever's
+      Returns the current value of the receiver's
       `Class.CustomEventReceiver.Source` property.
     description: |
-      This function returns the current value of the reciever's
+      This function returns the current value of the receiver's
       `Class.CustomEventReceiver.Source` property.
     code_samples:
     parameters: []

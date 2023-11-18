@@ -8,7 +8,7 @@ description: |
   `Datatype.PhysicalProperties.Density|Density`,
   `Datatype.PhysicalProperties.Elasticity|Elasticity`, and
   `Datatype.PhysicalProperties.Friction|Friction`. It is used in the
-  similarly-named `Class.BasePart.CustomPhysicalProperties|` property.
+  similarly-named `Class.BasePart.CustomPhysicalProperties` property.
 
   #### Weighting Behavior
 

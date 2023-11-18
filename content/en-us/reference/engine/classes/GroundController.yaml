@@ -207,7 +207,7 @@ properties:
       The value multiplied by the `Class.ControllerManager.BaseTurnSpeed`.
     description: |
       The value multiplied by the `Class.ControllerManager.BaseTurnSpeed` to
-      determine the final target angular velocity while this contorller is
+      determine the final target angular velocity while this controller is
       active. The angular velocity is applied when turning towards the
       `Class.ControllerManager.FacingDirection.`
     code_samples: []
