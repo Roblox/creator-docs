@@ -110,7 +110,7 @@ properties:
   - name: PluginToolbarButton.Icon
     summary: 'Determines what icon should represent the button.'
     description: |
-      **Icon** determines what `Content|icon` should be shown for the button in the plugin toolbar. When this property is not set, the button will instead use the button's text given by `Class.PluginToolbar.CreateButton`.
+      **Icon** determines what `Datatype.Content|icon` should be shown for the button in the plugin toolbar. When this property is not set, the button will instead use the button's text given by `Class.PluginToolbar:CreateButton()`.
     code_samples:
     type: Content
     tags:
@@ -128,7 +128,7 @@ methods:
   - name: PluginToolbarButton:SetActive
     summary: 'Sets the state of the plugin button.'
     description: |
-      **SetActive** can be used to manually set the active state of the plugin button.
+      This method can be used to manually set the active state of the plugin button.
     code_samples:
     parameters:
       - name: active
