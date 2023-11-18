@@ -62,7 +62,7 @@ to the public:
   [team](../projects/setting-up-a-team.md).
 
 For more information on each testing option, see [Studio Testing
-Modes](/studio/testing-modes).
+Modes](../studio/testing-modes.md).
 
 ## Publishing Projects
 
