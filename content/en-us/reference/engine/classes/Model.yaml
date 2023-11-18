@@ -550,7 +550,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          The `Datatype.Position` the `Class.Model` is to be moved to.
+          The `Datatype.Vector3` the `Class.Model` is moved to.
     returns:
       - type: void
         summary: ''
@@ -622,7 +622,7 @@ methods:
         `Class.Rope|Ropes`
       - Physical velocities and forces like `Hinge.MaxServoTorque`
       - Visual properties like sizes of particle emitters
-      - Other length properties like `Sound.RolloffMinDistance`
+      - Other length properties like `Sound.RollOffMinDistance`
     code_samples:
     parameters:
       - name: newScaleFactor
@@ -714,7 +714,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          The `Datatype.Vector3` to translate the `Class.Model` by,.
+          The `Datatype.Vector3` to translate the `Class.Model` by.
     returns:
       - type: void
         summary: ''

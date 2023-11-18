@@ -33,7 +33,7 @@ Meshes that you've personally [imported](#importing-meshes) or those which were 
 
 1. Navigate to the **View** tab and select **Asset Manager**.
 
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="876" alt="Asset Manager toggle button in Studio" />
+   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
 
 1. Open the **Meshes** folder, then either:
 
@@ -69,9 +69,7 @@ You can bulk import custom meshes directly to your Toolbox or Asset Manager inve
    If any child mesh contains more than 10,000 polygons, Studio rejects the parent mesh. If a parent mesh contains more than 50 child meshes, Studio rejects all of its children meshes.
    </Alert>
 
-After a moment, the meshes display with a status icon. Successfully imported meshes enter the moderation queue and are only visible to you within the **Meshes** folder of the [Asset&nbsp;Manager](../projects/assets/manager.md) and in the **Creations** tab of the [Toolbox](../projects/assets/toolbox.md).
-
-<img src="../assets/studio/asset-manager/Mesh-Import.png" width="360" />
+After a moment, the meshes display with a status icon. Successfully imported meshes enter the moderation queue and are only visible to you within the **Meshes** folder of the [Asset Manager](../projects/assets/manager.md) and in the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
 
 ## Adding Textures
 

@@ -270,7 +270,7 @@ events:
         default:
         summary: |
           The identifier for the recording.
-      - name: operationn
+      - name: operation
         type: FinishRecordingOperation
         default:
         summary: |
