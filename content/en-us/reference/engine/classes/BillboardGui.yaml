@@ -400,7 +400,7 @@ properties:
       -- Set up label
       label.Size = UDim2.new(1, 0, 1, 0)
 
-      -- Set partents of objects
+      -- Set parents of objects
       label.Parent = billboard
       billboard.Parent = part
       part.Parent = game.Workspace

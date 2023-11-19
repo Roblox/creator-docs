@@ -39,7 +39,7 @@ properties:
       and (optionally) Puffiness as key-value pairs.
     description: |
       A JSON formatted array of Layered Accessories where each table in the
-      entry in the array describes an acccessory's AssetId, AccessoryType,
+      entry in the array describes an accessory's AssetId, AccessoryType,
       Order, and (optionally) Puffiness as key-value pairs. This can be edited
       in the properties windows for the `Class.HumanoidDescription`.
 
@@ -506,7 +506,7 @@ properties:
       - `Class.HumanoidDescription.HatAccessory|HatAccessory`,
         `Class.HumanoidDescription.HairAccessory|HairAccessory` and
         `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which all can
-        apply `Class.Accessory` objects which are joined to to the head
+        apply `Class.Accessory` objects which are joined to the head
     code_samples:
     type: int64
     tags: []

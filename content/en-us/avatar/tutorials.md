@@ -8,7 +8,7 @@ hideBreadcrumbs: true
 Learn how to create assets with structured tutorials that walks through each creation step from modeling in a third-party tool to importing in Studio.
 
 <br /> <br />
-<a href="" id="prereqs"> </a>
+<a href="../art/accessories/creating-rigid/texturing.md" id="prereqs"> </a>
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Prerequisites</Typography>
@@ -61,47 +61,52 @@ style={{position: "relative"}}>
 <Stepper activeStep={6} orientation="vertical">
 
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Set up your custom asset in Blender.">
+<a href="../art/accessories/creating-rigid/index.md"><StepLabel optional="Set up your custom asset in Blender.">
 
 <h5 style={{marginTop: 36}}>Model</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating-rigid/texturing.md">
 <StepLabel
  optional="Connect your asset with PBR textures.">
 
 <h5 style={{marginTop: 36}}>Texture</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating-rigid/clean-up.md">
 <StepLabel optional="Clean up and export your model." >
 <h5 style={{marginTop: 36}}>Export from Blender</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating-rigid/importing.md">
 <StepLabel optional="Use the 3D Importer to bring in your custom asset.">
 
 <h5 style={{marginTop: 36}}>Import into Studio</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating-rigid/converting.md">
 <StepLabel optional="Use the Accessory Fitting Tool to create the accessory.">
 
 <h5 style={{marginTop: 36}}>Fit and Convert</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating-rigid/validation.md">
 <StepLabel optional="Upload and publish your accessory to the Marketplace">
 
 <h5 style={{marginTop: 36}}>Publish</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
@@ -113,7 +118,7 @@ style={{position: "relative"}}>
 </Grid>
 </>
 
-<a href="../art/accessories/creating-rigid">
+<a href="../art/accessories/creating-rigid/index.md">
   <Button
     variant="contained"
     size="large">
@@ -153,42 +158,56 @@ style={{position: "relative"}}>
 <Grid item md={6} xs={12} direction='column'>
 
 <>
-<Stepper activeStep={5} orientation="vertical">
+<Stepper activeStep={6} orientation="vertical">
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating/modeling-setup.md">
 <StepLabel optional="Create and sculpt the shape of your clothing item.">
 
 <h5 style={{marginTop: 36}}>Model</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating/unwrapping.md">
 <StepLabel
  optional="Add your own surface texture and patterns to your asset.">
 
 <h5 style={{marginTop: 36}}>Texture</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating/armature-setup.md">
 <StepLabel optional="Attach your clothing model to an R15 rig." >
 <h5 style={{marginTop: 36}}>Rig</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating/caging-setup.md">
 <StepLabel optional="Set the inner and outer surfaces of your clothing.">
 
 <h5 style={{marginTop: 36}}>Cage</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Export your model and import it in Studio.">
+<a href="../art/accessories/creating/exporting.md">
+<StepLabel optional="Export your model from Blender.">
 
 <h5 style={{marginTop: 36}}>Export</h5>
-</StepLabel>
+</StepLabel></a>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<a href="../art/accessories/creating/importing.md">
+<StepLabel optional="Import your model into Studio and convert it to an Accessory.">
+
+<h5 style={{marginTop: 36}}>Import</h5>
+</StepLabel></a>
 
 </Step>
 
@@ -200,7 +219,7 @@ style={{position: "relative"}}>
 </Grid>
 </>
 
-<a href="../art/accessories/creating">
+<a href="../art/accessories/creating/index.md">
   <Button
     variant="contained"
     size="large">
@@ -240,42 +259,56 @@ style={{position: "relative"}}>
 <Grid item md={6} xs={12} direction='column'>
 
 <>
-<Stepper activeStep={5} orientation="vertical">
+<Stepper activeStep={6} orientation="vertical">
 
 <Step style={{marginTop: -36}}>
-<StepLabel optional="Create your unique character shape out of a template.">
+<a href="../art/characters/creating/template-files.md">
+<StepLabel optional="Pick a starting body shape from a collection of templates.">
 
-<h5 style={{marginTop: 36}}>Model</h5>
-</StepLabel>
+<h5 style={{marginTop: 36}}>Pick a Template</h5>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/characters/creating/modeling-best-practices.md">
+<StepLabel optional="Create your unique character shape out of a template.">
+
+<h5 style={{marginTop: 36}}>Model</h5>
+</StepLabel></a>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<a href="../art/characters/creating/texturing-setup.md">
 <StepLabel
  optional="Apply a custom texture to any and all parts of your character.">
 
 <h5 style={{marginTop: 36}}>Texture</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 <Step style={{marginTop: -36}}>
+<a href="../art/characters/creating/caging.md">
 <StepLabel optional="Set the outer surface of your character." >
 <h5 style={{marginTop: 36}}>Caging</h5>
-</StepLabel>
+</StepLabel></a>
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/characters/creating/combining-head-geometry.md">
 <StepLabel optional="Clean up your project and model to make it Studio-ready.">
 
 <h5 style={{marginTop: 36}}>Cleanup</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
 <Step style={{marginTop: -36}}>
+<a href="../art/characters/creating/exporting-textures.md">
 <StepLabel optional="Export your project from Blender and bring it into Studio.">
 
 <h5 style={{marginTop: 36}}>Export</h5>
-</StepLabel>
+</StepLabel></a>
 
 </Step>
 
