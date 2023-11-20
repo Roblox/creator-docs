@@ -10,14 +10,15 @@ deprecation_message: ''
 items:
   - name: GetAsync
     summary: |
-      Refers to `Class.GlobalDataStore:GetAsync()|GetAsync()`.
+      Refers to `Class.GlobalDataStore:GetAsync()|GetAsync()` and `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`'s read.
     value: 0
     tags: []
     deprecation_message: ''
   - name: SetIncrementAsync
     summary: |
-      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()` and
-      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`.
+      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()`, 
+      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, 
+      `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` and `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`'s write (when it returns a non nil value).
     value: 1
     tags: []
     deprecation_message: ''
@@ -29,8 +30,7 @@ items:
     deprecation_message: ''
   - name: GetSortedAsync
     summary: |
-      Refers to `Class.GlobalDataStore:GetAsync()|GetAsync()` while using an
-      `Class.OrderedDataStore`.
+      Refers to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`.
     value: 3
     tags: []
     deprecation_message: ''
@@ -49,17 +49,20 @@ items:
     tags: []
     deprecation_message: ''
   - name: ListAsync
-    summary: ''
+    summary: |
+      Refers to `Class.DataStore:ListKeysAsync()|ListKeysAsync()``Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`.
     value: 6
     tags: []
     deprecation_message: ''
   - name: GetVersionAsync
-    summary: ''
+    summary: |
+      Refers to `Class.DataStore:GetVersionAsync()|GetVersionAsync()`.
     value: 7
     tags: []
     deprecation_message: ''
   - name: RemoveVersionAsync
-    summary: ''
+    summary: |
+      Refers to `Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`.
     value: 8
     tags: []
     deprecation_message: ''
