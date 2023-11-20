@@ -926,9 +926,6 @@ events:
       Unlike the similarly-named events above, this event fires with a
       `Class.Player.UserId` and not a reference to the `Class.Player` object.
 
-      Despite this event's deprecation, it is currently the only way to detect
-      when a developer product's purchase dialog is closed.
-
       - For [passes](../../../production/monetization/game-passes.md), use
         `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
