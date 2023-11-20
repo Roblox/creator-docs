@@ -1,33 +1,45 @@
 name: SelfViewPosition
 type: enum
-summary: ''
-description: ''
+summary: |
+  Defines the screen location of the current player's self view.
+description: |
+  This enum defines the screen location of the current player's self view, used
+  in conjunction with `Class.SocialService:ShowSelfView()` for example.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: LastPosition
     value: 0
-    summary: ''
+    summary: |
+      The position of the self view when it was last closed.
     tags: []
     deprecation_message: ''
   - name: TopLeft
     value: 1
-    summary: ''
+    summary: |
+      Top-left corner of the screen, with slight padding from the top and left
+      edges.
     tags: []
     deprecation_message: ''
   - name: TopRight
     value: 2
-    summary: ''
+    summary: |
+      Top-right corner of the screen, with slight padding from the top and right
+      edges.
     tags: []
     deprecation_message: ''
   - name: BottomLeft
     value: 3
-    summary: ''
+    summary: |
+      Bottom-left corner of the screen, with slight padding from the bottom and
+      left edges.
     tags: []
     deprecation_message: ''
   - name: BottomRight
     value: 4
-    summary: ''
+    summary: |
+      Bottom-right corner of the screen, with slight padding from the bottom and
+      right edges.
     tags: []
     deprecation_message: ''
