@@ -481,7 +481,7 @@ methods:
       	<tr>
       	  <td><code>DisplayPrice</code></td>
       	  <td>string</td>
-          <td>Localized price with the appropriate currency symbol for display (for example, <code>$4.99</code>).</td>
+          <td>Localized price with the appropriate currency symbol for display (for example, <code>$4.99</code>). For users in unsupported countries, <code>DisplayPrice</code> returns a string without specific price information.</td>
         </tr>
       	<tr>
       	  <td><code>DisplaySubscriptionPeriod</code></td>
@@ -574,13 +574,13 @@ methods:
 
       #### Grace Period
 
-      User payments for subscriptions can have some processing time. Payment
+      Subscription renewal payments can have some processing time. Payment
       history doesn't return a table for this period. However, in order to
       preserve a user's subscription experience during the processing period,
       `Class.MarketplaceService.GetUserSubscriptionStatusAsync()|GetUserSubscriptionStatusAsync()`
-      returns `IsSubscribed: true` for the given user. Don't grant consumable or
-      currency type subscription benefits to the user until after payment has
-      been confirmed.
+      returns `IsSubscribed: true` for the given user. Don't grant durable items
+      or currency type subscription benefits to the user until after payment has
+      been confirmed for the current cycle.
 
       For example, on August 31, 2023, User A's Subscription B is up for
       renewal. On September 1, 2023, the payment has yet to be processed. If you
@@ -611,6 +611,11 @@ methods:
         </tr>
         </tbody>
       </table>
+
+      Note that since the user is within the grace period, the cycle they have
+      yet to pay for (September 1, 2023) does not appear in the return value at
+      all. This field only populates after the payment has been received and
+      processed.
 
       At the same time,
       `Class.MarketplaceService.GetUserSubscriptionStatusAsync()|GetUserSubscriptionStatusAsync`
@@ -687,6 +692,14 @@ methods:
         </tr>
         </tbody>
       </table>
+
+      Note that `IsSubscribed: true` is only reflected when a user has
+      purchased the subscription and the payment has been successfully
+      processed. If the payment is still processing or has failed,
+      `IsSubscribed` returns false. To understand when a user's subscription
+      status has changed, see the `Class.Players.UserSubscriptionStatusChanged`
+      event.
+
     code_samples:
       - MarketplaceService-GetUserSubscriptionStatusAsync1
     parameters:
