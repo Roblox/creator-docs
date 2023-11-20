@@ -259,7 +259,7 @@ methods:
       applying the offsets to the model associated with the `Class.Animator`.
       For use in the command bar or by plugins only.
 
-      The deltaTime paramater determines the number of seconds to increment on
+      The deltaTime parameter determines the number of seconds to increment on
       the animation's progress. Typically this function will be called in a loop
       to preview the length of an animation (see example).
 

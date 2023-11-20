@@ -12,6 +12,8 @@ navigation:
     path: /art/modeling/export-requirements
   - title: 3D Importer
     path: /art/modeling/3d-importer
+  - title: Roblox Blender Plugin
+    path: /art/modeling/roblox-blender-plugin
 
   - heading: Texturing
   - title: Physically-based Rendering (PBR)

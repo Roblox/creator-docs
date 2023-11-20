@@ -64,7 +64,7 @@ properties:
       The `Datatype.CFrame` of the `Class.Camera`, defining its position and
       orientation in the 3D world.
     description: |
-      This property is the `Datatype.CFrame` of the `Class.Camera` and definies
+      This property is the `Datatype.CFrame` of the `Class.Camera` and defines
       its position and orientation in the 3D world.
 
       Some transformations, such as the rotation of the head when using VR
