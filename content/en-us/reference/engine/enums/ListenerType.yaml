@@ -12,7 +12,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: CFrame
-    summary: 'Uses a separately specified world CFrame.'
+    summary: 'Uses a specified world CFrame.'
     value: 1
     tags: []
     deprecation_message: ''
