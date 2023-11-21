@@ -1,7 +1,7 @@
 name: ListenerType
 type: enum
 summary: 'Defines where and how the listener is positioned when picking up spatial audio.'
-description: ''
+description: 'Defines where and how the listener is positioned when picking up spatial audio. Used in `SoundService.SetListener` and `SoundService.GetListener`.'
 code_samples:
 tags: []
 deprecation_message: ''
