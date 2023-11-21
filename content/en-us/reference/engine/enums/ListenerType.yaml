@@ -17,7 +17,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: ObjectPosition
-    summary: 'Uses the world position of an instance and the world orientation of `workspace.CurrentCamera`.'
+    summary: 'Uses the world position of an instance and the rotation of `workspace.CurrentCamera`.'
     value: 2
     tags: []
     deprecation_message: ''
