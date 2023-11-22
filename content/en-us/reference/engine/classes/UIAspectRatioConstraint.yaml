@@ -17,7 +17,7 @@ description: |
   `Class.UIAspectRatioConstraint.AspectRatio`. The
   `Class.UIAspectRatioConstraint.AspectType` sets what determines the maximum
   size of the object. When set to
-  `Class.UIAspectRatioConstraint.FitWithinMaxSize`, the constraint will make the
+  `Enum.AspectType.FitWithinMaxSize`, the constraint will make the
   object the maximum size it can be within the `Class.GuiObject` of the element.
   When set to ScaleWithParentSize, the elements maximum size will be the size of
   the parent while still maintaining the aspect ratio. Finally, the

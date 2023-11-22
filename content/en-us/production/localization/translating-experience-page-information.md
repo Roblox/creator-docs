@@ -35,18 +35,20 @@ At this time, Roblox doesn't fully support all available languages in experience
 
 For experience page information, Roblox currently fully supports the following languages:
 
+- Chinese (Simplified)
+- Chinese (Traditional)
 - English
-- Spanish
-- Portuguese
 - French
 - German
 - Indonesian
 - Italian
-- Korean
 - Japanese
+- Korean
+- Portuguese
 - Russian
-- Simplified Chinese
-- Traditional Chinese
+- Spanish
+- Thai
+- Vietnamese
 
 </Alert>
 

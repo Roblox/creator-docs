@@ -196,13 +196,13 @@ You can carry out the following tasks to help mitigate computation issues:
     invisible parts when possible.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
-  - You can render collision geometry for debug purposes in Studio using
-    **Settings**>**Studio**>**Show Decomposition**.
+  - You can render collision geometry for debug purposes in Studio using **File** > **Studio Settings** > **Studio** > **Visualization** > **Show Decomposition Geometry**
 
     Alternatively, you can apply
     the `CollisionFidelity=Precise` filter to the Explorer, which shows a count
     of all mesh parts with the precise fidelity and allows you to easily select
     them.
+  - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
 <h4>MicroProfiler Timing Scopes Associated</h4>
 
