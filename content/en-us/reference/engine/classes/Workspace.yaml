@@ -917,7 +917,7 @@ methods:
       while true do
       	i = i + 1
       	if i % 5 == 0 then
-      		wait()
+      		task.wait()
       	end
       	local part = Instance.new("Part", workspace)
       end
