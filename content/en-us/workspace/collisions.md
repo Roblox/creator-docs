@@ -3,7 +3,7 @@ title: Collisions
 description: Explains methods to detect physical collisions, handle collision events, and fine-tune which objects collide with others.
 ---
 
-Collision [events](#collision-events) automatically occur when two `Class.BasePart|BaseParts` touch or stop touching in the 3D world. Through [collision filtering](#collision-filtering) techniques, you can control which physical assemblies collide with others.
+A collision occurs when two 3D objects come into contact within the 3D world. For customized collision handling, `Class.BasePart` has a set of [collision events](#collision-events) and [collision filtering](#collision-filtering) techniques, so you can control which physical assemblies collide with others.
 
 ## Collision Events
 
@@ -13,6 +13,10 @@ Collision **events** occur when two `Class.BasePart|BaseParts` touch or stop tou
 - A part's `Class.BasePart.CanCollide|CanCollide` property affects whether it will **physically** collide with other parts and cause forces to act upon them. Even if `Class.BasePart.CanCollide|CanCollide` is disabled for a part, you can detect touch and non‑touch through `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events.
 - The `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events only fire as a result of **physical** movement, not from a `Class.BasePart.Position|Position` or `Class.BasePart.CFrame|CFrame` changes that cause a part to intersect or stop intersecting another part.
 - The top-level `Class.Terrain` class inherits from `Class.BasePart`, so you can assign a [collision group](#collision-groups) to `Class.Terrain` to determine whether other `Class.BasePart|BaseParts` collide with [Terrain](../parts/terrain.md) voxels.
+
+<Alert severity="info">
+For performance optimization, set `Class.BasePart.CanTouch|CanTouch` to `false` for objects that don't require collisions.
+</Alert>
 
 ### Touched
 
@@ -66,70 +70,6 @@ end
 
 part.TouchEnded:Connect(onTouchEnded)
 ```
-
-### Model Collisions
-
-`Class.Model|Models` such as player characters contain multiple
-parts. Since a `Class.Model` object as a whole cannot be connected to the `Class.BasePart.Touched|Touched` or `Class.BasePart.TouchEnded|TouchEnded` events, you'll need to loop through its children and connect the custom `onTouched()` and `onTouchEnded()` functions to each child `Class.BasePart`.
-
-The following code sample connects all `Class.BasePart|BaseParts` of a multi‑part model to collision events and tracks the total number of collisions with other parts.
-
-```lua title='Model Collision'
-local model = script.Parent
-
-local numTouchingParts = 0
-
-local function onTouched(otherPart)
-	-- Ignore instances of the model intersecting with itself
-	if otherPart:IsDescendantOf(model) then return end
-	-- Increase count of model parts touching
-	numTouchingParts += 1
-
-	print(model.Name, "intersected with ", otherPart.Name, "| Model parts touching:", numTouchingParts)
-end
-
-local function onTouchEnded(otherPart)
-	-- Ignore instances of the model un-intersecting with itself
-	if otherPart:IsDescendantOf(model) then return end
-	-- Decrease count of model parts touching
-	numTouchingParts -= 1
-
-	print(model.Name, "un-intersected from", otherPart.Name, "| Model parts touching:", numTouchingParts)
-end
-
-for _, child in pairs(model:GetChildren()) do
-	if child:IsA("BasePart") then
-		child.Touched:Connect(onTouched)
-		child.TouchEnded:Connect(onTouchEnded)
-	end
-end
-```
-
-### Collision Fidelity
-
-The `Class.MeshPart.CollisionFidelity|CollisionFidelity` property for a `Class.MeshPart`, also available for `Class.PartOperation` instances, determines how closely the part's physical hitbox matches its visual representation. In most cases, the `Enum.CollisionFidelity|Default` setting is suitable, but other settings can be selected for best performance (`Enum.CollisionFidelity|Hull`/`Enum.CollisionFidelity|Box`) versus accuracy (`Enum.CollisionFidelity|PreciseConvexDecomposition`).
-
-<Tabs>
-  <TabItem label="Original Mesh">
-    <img src="../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="600" height="500" alt="Original mesh of castle tower" />
-  </TabItem>
-	<TabItem label="Default">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="600" height="500" alt="Collision fidelity of Default shown for mesh" />
-  </TabItem>
-  <TabItem label="Box">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="600" height="500" alt="Collision fidelity of Box shown for mesh"/>
-  </TabItem>
-	<TabItem label="Hull">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="600" height="500" alt="Collision fidelity of Hull shown for mesh" />
-  </TabItem>
-	<TabItem label="Precise">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
-  </TabItem>
-</Tabs>
-
-<Alert severity="info">
-To visualize collision fidelity in Studio, open **Studio Settings** from the **File** menu, then enable **Show Decomposition Geometry** at the bottom of the **Studio** section.
-</Alert>
 
 ## Collision Filtering
 
@@ -320,3 +260,79 @@ Players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(onCharacterAdded)
 end)
 ```
+
+## Model Collisions
+
+`Class.Model` objects are containers for parts rather than inheriting from `Class.BasePart`, so they can't directly connect to `Class.BasePart.Touched` or `Class.BasePart.TouchEnded` events. To determine whether a model triggers a collision events, you need to loop through its children and connect the custom `onTouched()` and `onTouchEnded()` functions to each child `Class.BasePart`.
+
+<Alert severity='info'>
+For joined parts by [solid modeling](../parts/solid-modeling.md) instead of `Class.Model` objects, see [Mesh and Solid Modeling Collisions](#mesh-and-solid-model-collisions).
+</Alert>
+
+The following code sample connects all `Class.BasePart|BaseParts` of a multi‑part model to collision events and tracks the total number of collisions with other parts.
+
+```lua title='Model Collision'
+local model = script.Parent
+
+local numTouchingParts = 0
+
+local function onTouched(otherPart)
+	-- Ignore instances of the model intersecting with itself
+	if otherPart:IsDescendantOf(model) then return end
+	-- Increase count of model parts touching
+	numTouchingParts += 1
+
+	print(model.Name, "intersected with ", otherPart.Name, "| Model parts touching:", numTouchingParts)
+end
+
+local function onTouchEnded(otherPart)
+	-- Ignore instances of the model un-intersecting with itself
+	if otherPart:IsDescendantOf(model) then return end
+	-- Decrease count of model parts touching
+	numTouchingParts -= 1
+
+	print(model.Name, "un-intersected from", otherPart.Name, "| Model parts touching:", numTouchingParts)
+end
+
+for _, child in pairs(model:GetChildren()) do
+	if child:IsA("BasePart") then
+		child.Touched:Connect(onTouched)
+		child.TouchEnded:Connect(onTouchEnded)
+	end
+end
+```
+
+## Mesh and Solid Model Collisions
+
+`Class.MeshPart` and `Class.PartOperation` (parts joined by solid modeling) are subclasses of `Class.BasePart`, so meshes and solid modeled parts inherit the same [collision events](#collision-events) and [collision filtering](#collision-filtering) options as regular parts. However, since meshes and solid modeled parts usually have more complex geometries, they have a distinctive `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property which determines how precisely the physical bounds align with the visual representation for collision handling.
+
+The collision fidelity property has the following options, in order of fidelity and performance impact from lowest to highest:
+
+- **Box** — Creates a bounding collision box, ideal for small or non-interactive objects.
+- **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
+- **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
+- **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
+
+<Tabs>
+  <TabItem label="Original Mesh">
+    <img src="../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="600" height="500" alt="Original mesh of castle tower" />
+  </TabItem>
+	<TabItem label="Default">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="600" height="500" alt="Collision fidelity of Default shown for mesh" />
+  </TabItem>
+  <TabItem label="Box">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="600" height="500" alt="Collision fidelity of Box shown for mesh"/>
+  </TabItem>
+	<TabItem label="Hull">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="600" height="500" alt="Collision fidelity of Hull shown for mesh" />
+  </TabItem>
+	<TabItem label="Precise">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
+  </TabItem>
+</Tabs>
+
+<Alert severity="info">
+To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
+</Alert>
+
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).

@@ -278,23 +278,41 @@ the environment and metal appears more realistic.
 ## Technology
 
 The `Class.Lighting.Technology|Technology`
-property determines which lighting system Studio uses to render the 3D
-environment. There are four available lighting systems:
+property determines the lighting system for rendering the 3D
+environment. There are four available lighting systems, in order of fidelity and performance impact from highest to lowest:
 
-- **Future** - This system features the most advanced lighting technology with
-high fidelity. It extends support for detailed shadows to all lights in the
-experience.
+- **Future**: Features the most advanced technology for high-fidelity lighting and shadows.
+  - Extends detailed shadow support to all types of lights, with complex shadow technology for sun shadows and a more realistic lighting and shadow technology for point lights.
+  - This is the most realistic lighting mode, but its high fidelity might result in a negative performance impact, especially on low-end devices.
 
-   <Alert severity="warning">
-    Because of its high fidelity, this lighting system may have an impact
-    on the performance of Studio if you're running it on a low-spec
-    machine.
-   </Alert>
+- **ShadowMap**: Features shadow mapping that produces more realistic and sharper shadows from sunlight or directional light sources. For any other types of light, such as point lights, it uses voxel grids with less precision and performance impact.
 
-- **ShadowMap** - This system features future lighting technology with more crisp shadows.
+- **Voxel**: Divides the 3D world into a 4x4x4 voxel grid for light and shadow calculation.
+  - Each voxel represents a small cubic volume of space.
+  - The grid contains information on light presence in each voxel and helps determine how light interacts with your 3D environment and objects.
+  - Voxel provides less precise lighting and softer shadows compared to more advanced shadow mapping techniques.
+  - Only recommended for low-end devices.
 
-- **Compatibility** - This system features a combination between
-  future and legacy technology.
+- (Not Recommended) **Compatibility**: Simulates the deprecated legacy technology using the **Voxel** system.
 
-- **Voxel** - This system features future lighting technology with
-  softer shadows that are created using a 4x4x4 voxel map.
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/lighting-and-effects/lighting-properties/future.png" />
+    <figcaption>Future</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/lighting-and-effects/lighting-properties/shadowmaps.png" />
+    <figcaption>ShadowMaps</figcaption>
+  </figure>
+</GridContainer>
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../assets/lighting-and-effects/lighting-properties/voxel.png" />
+    <figcaption>Voxel</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/lighting-and-effects/lighting-properties/compatibility.png" />
+    <figcaption>Compatibility</figcaption>
+  </figure>
+</GridContainer>
