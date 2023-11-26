@@ -902,12 +902,12 @@ methods:
       		if tries == maxAttempts then
       			error("Error calling SetCore CoreGuiChatConnections: " .. result)
       		else
-      			wait()
+      			task.wait()
       		end
       	end
       end
 
-      while wait(0.2) do
+      while task.wait(0.2) do
       	local isVisible = (math.random() > 0.5)
       	ChatConnections.ChatWindow.VisibilityStateChanged:Fire(isVisible)
       	if not isVisible then
