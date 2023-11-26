@@ -898,7 +898,7 @@ methods:
       	if success then
       		break
       	else
-      		tries = tries + 1
+      		tries += 1
       		if tries == maxAttempts then
       			error("Error calling SetCore CoreGuiChatConnections: " .. result)
       		else
