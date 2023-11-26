@@ -27,6 +27,9 @@ description: |
   All offsets, counts and sizes should be non-negative integer numbers. If the
   bytes that are accessed by any read or write operation are outside the buffer
   memory, an error is thrown.
+
+  The `read` and `write` methods that work with integers and floats use
+  [little-endian](https://en.wikipedia.org/wiki/Endianness) encoding.
 code_samples:
 properties:
 functions:
