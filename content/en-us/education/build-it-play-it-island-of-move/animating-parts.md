@@ -73,7 +73,7 @@ For this project, a tween will move an object from a starting position to a goal
    	tweenButton.Completed:Connect(function()
    		inTween = false
    		-- Invert the button state
-   		buttonState = buttonState * -1
+   		buttonState *= -1
    	end)
 
    end
