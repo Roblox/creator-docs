@@ -379,7 +379,7 @@ properties:
       wait(5)
 
       -- Declare and initialize objects
-      local camera = game.Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
       local part = Instance.new("Part")
       local billboard = Instance.new("BillboardGui")
       local label = Instance.new("TextLabel")
@@ -403,7 +403,7 @@ properties:
       -- Set parents of objects
       label.Parent = billboard
       billboard.Parent = part
-      part.Parent = game.Workspace
+      part.Parent = workspace
 
       -- Move camera next to part. Wait a bit and then move camera
       local cameraPosition0 = part.Position + Vector3.new(0, 0, 10)
