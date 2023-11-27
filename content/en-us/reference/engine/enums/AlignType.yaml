@@ -1,11 +1,9 @@
 name: AlignType
 type: enum
 summary: |
-  An enum that specifies the relationship between two axes. It's either parallel
-  or perpendicular.
+  An enum that specifies how the constraint will attempt to align the body associated with the constraint.
 description: |
-  An enum that specifies the relationship between two axes. It's either parallel
-  or perpendicular.
+  An enum that specifies how the constraint will attempt to align the body associated with the constraint and attachment. Depending on the configuration, it can be used to align specific axes to be parallel, perpendicular, or to look at a specific point.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -16,31 +14,37 @@ items:
       Two parallel axes.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message:
+      Deprecated. Use PrimaryAxisParallel instead.
   - name: Perpendicular
     value: 1
     summary: |
       Two perpendicular axes.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message:
+      Deprecated. Use PrimaryAxisPerpendicular instead.
   - name: PrimaryAxisParallel
-    summary: ''
+    summary:
+      Aligns the Primary Axis to be parallel to the axis given by `Attachment1` or the `TargetOrientation`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PrimaryAxisPerpendicular
-    summary: ''
+    summary:
+      Aligns the Primary Axis to be perpendicular to the axis given by `Attachment1` or the `TargetOrientation`.
     value: 3
     tags: []
     deprecation_message: ''
   - name: PrimaryAxisLookAt
-    summary: ''
+    summary:
+      Aligns the Primary Axis to look at the point given by `Attachment1` or the `LookAtPosition`.
     value: 4
     tags: []
     deprecation_message: ''
   - name: AllAxes
-    summary: ''
+    summary:
+      Aligns all of the axes of `Attachment0`` to the axes given by `Attachment1`` or to the `TargetOrientation`s provided by PrimaryAxis and SecondaryAxis.
     value: 5
     tags: []
     deprecation_message: ''
