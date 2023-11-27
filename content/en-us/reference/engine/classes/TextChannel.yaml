@@ -191,7 +191,7 @@ callbacks:
       "hello") to deliver the message to said client. If the callback returns
       anything else (including nil), the message wont be delivered to that client. The sender will still see the message regardless.
       
-      The sender can be refrenced by 'Class.TextChatMessage.TextSource'.
+      The sender can be referenced by 'Class.TextChatMessage.TextSource'.
     code_samples: []
     parameters:
       - name: message
