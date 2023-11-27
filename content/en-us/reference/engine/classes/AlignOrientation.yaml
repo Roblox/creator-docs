@@ -22,9 +22,9 @@ description: |
   #### Affected Axes
 
   The axes affected by torque are controlled through the constraint's `Enum.AlignType`
-  property. When set to `PrimaryAxisParallel` and `PrimaryAxisPerpendicular`, 
-  torque will only occur when the primary axes become misaligned. Otherwise,
-  the constraint will apply torque about all 3&nbsp;axes to achieve alignment.
+  property. When set to `PrimaryAxisParallel`, `PrimaryAxisPerpendicular` or 
+  `PrimaryAxisLookAt`, torque will only occur when the primary axes become misaligned.
+  Otherwise, the constraint will apply torque about all 3&nbsp;axes to achieve alignment.
 
   #### Reactionary Torque
 
