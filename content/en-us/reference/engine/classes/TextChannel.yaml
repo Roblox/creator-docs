@@ -183,24 +183,22 @@ callbacks:
     thread_safety: Unsafe
   - name: TextChannel.ShouldDeliverCallback
     summary: |
-      Called when `Class.TextChannel` is receiving an incoming message to
-      determine whether or not it should be delivered to other clients.
+      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client.
     description: |
-      Called when `Class.TextChannel` is receiving an incoming message to
-      determine whether or not to deliver the message to other clients. Can only
-      be defined on the server.
+      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client. Can only be defined on the server.
 
       Once defined, this callback needs to return a truthy value (true, 1,
-      "hello") to deliver the message to other clients. If the callback returns
-      anything else (including nil), the message can't be delivered. The sender
-      will still see the message even if the message can't be delivered.
+      "hello") to deliver the message to said client. If the callback returns
+      anything else (including nil), the message wont be delivered to that client. The sender will still see the message regardless.
+      
+      The sender can be refrenced by 'Class.TextChatMessage.TextSource'.
     code_samples: []
     parameters:
       - name: message
         type: TextChatMessage
         default:
         summary: ''
-      - name: textSource
+      - name: targetTextSource
         type: TextSource
         default:
         summary: ''
