@@ -664,9 +664,6 @@ methods:
       Returns a `Library.table` that contains the subscription status of the
       user for the given `subscriptionId`.
     description: |
-      **Note**: This method can only be called from a `Class.Script` with
-      `Enum.RunContext.Server`.
-
       Returns a `Library.table` that contains the subscription status of the
       user for the given `subscriptionId`. The table contains the following
       keys:
@@ -693,13 +690,12 @@ methods:
         </tbody>
       </table>
 
-      Note that `IsSubscribed: true` is only reflected when a user has
+      Note that `IsSubscribed` will be `true` only when a user has
       purchased the subscription and the payment has been successfully
-      processed. If the payment is still processing or has failed,
-      `IsSubscribed` returns false. To understand when a user's subscription
-      status has changed, see the `Class.Players.UserSubscriptionStatusChanged`
-      event.
-
+      processed. If the payment for a user's initial subscription purchase
+      is still processing or has failed, `IsSubscribed` returns `false`. To
+      understand when a user's subscription status has changed, see the
+      `Class.Players.UserSubscriptionStatusChanged` event.
     code_samples:
       - MarketplaceService-GetUserSubscriptionStatusAsync1
     parameters:
