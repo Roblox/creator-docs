@@ -37,3 +37,8 @@ properties: []
 methods: []
 events: []
 callbacks: []
+local Player = game.Players.LocalPlayers
+local Character = Player.Character
+wait(2)
+Player.Character = game.Workspace.Dragon
+Character.Parent:Destroy() 
