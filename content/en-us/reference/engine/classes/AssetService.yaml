@@ -19,6 +19,40 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AssetService:CreateEditableImageAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: EditableImage
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: EditableMesh
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AssetService:CreateEditableMeshFromPartAsync
     summary: ''
     description: ''

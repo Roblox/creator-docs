@@ -693,13 +693,11 @@ methods:
         </tbody>
       </table>
 
-      Note that `IsSubscribed: true` is only reflected when a user has
-      purchased the subscription and the payment has been successfully
-      processed. If the payment is still processing or has failed,
-      `IsSubscribed` returns false. To understand when a user's subscription
-      status has changed, see the `Class.Players.UserSubscriptionStatusChanged`
-      event.
-
+      Note that `IsSubscribed: true` is only reflected when a user has purchased
+      the subscription and the payment has been successfully processed. If the
+      payment is still processing or has failed, `IsSubscribed` returns false.
+      To understand when a user's subscription status has changed, see the
+      `Class.Players.UserSubscriptionStatusChanged` event.
     code_samples:
       - MarketplaceService-GetUserSubscriptionStatusAsync1
     parameters:

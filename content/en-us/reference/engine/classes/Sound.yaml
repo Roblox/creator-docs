@@ -89,11 +89,11 @@ properties:
       can_save: true
   - name: Sound.IsLoaded
     summary: |
-      This property will be true when the `Class.Sound` has loaded from
-      Roblox servers and is ready to play.
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
     description: |
-      This property will be true when the `Class.Sound` has loaded from
-      Roblox servers and is ready to play.
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
 
       In Roblox, audio files are not stored in games themselves but hosted on
       the Roblox servers and referenced by the `Class.Sound.SoundId` property.
