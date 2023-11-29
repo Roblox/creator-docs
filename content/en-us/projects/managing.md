@@ -8,7 +8,7 @@ description: An overview of managing projects with Roblox Studio.
 To create a project:
 
 1. Open [Roblox Studio](../studio/setting-up-roblox-studio.md).
-2. Click a template from the Studio start screen. It's highly recommended to select a [streaming](../workspace/streaming.md) template, which improves performance by dynamically loading and unloading 3D content and related instances in regions of the world.
+2. Click a template from the Studio start screen.
 3. After making any change, you can save the project from the **File** menu:
    - **Save to File** - Saves the place you are currently working on to disk as
      an `.rbxl` file.
@@ -32,6 +32,37 @@ define project settings:
 2. Fill in the required fields for the **Basic Info** tab and click **Save**.
    This unlocks more tabs to define other project settings as
    described in [Game Settings](../studio/game-settings.md).
+
+## Cloud-Based Assets
+
+In Roblox, assets such as images, meshes, and audio are stored as **cloud-based
+assets**, so you don't need to bundle local copies into a saved Studio
+experience. Each asset in the cloud is assigned a unique **asset ID** from which
+multiple experiences can utilize them.
+
+See [Assets](../projects/assets/index.md) for details on instances, assets,
+and their association in Roblox.
+
+## Testing
+
+Your team can instantly test the experience on PC, mobile, and other devices you
+wish to support through the Roblox app; no need to compile builds, deploy to
+app stores, or await app store approval.
+
+Studio offers a suite of options for testing an experience before releasing it
+to the public:
+
+- **Rapid playtesting** that provides a close simulation of the experience
+  running on the Roblox application.
+- **Multi-client simulation** for comparing how each client "sees" other clients
+  within the experience.
+- **Device emulation** that provides insight on how controls operate on a mobile
+  device or how on-screen UI displays on different screens and aspect ratios.
+- **Collaborative playtesting** with members of your
+  [team](../projects/setting-up-a-team.md).
+
+For more information on each testing option, see [Studio Testing
+Modes](../studio/testing-modes.md).
 
 ## Publishing Projects
 
@@ -72,37 +103,6 @@ experience [icons](../production/publishing/experience-icons.md), and [promotion
 thumbnails](/production/promotion/promotional-thumbnails).
 
 <img src="../assets/misc/Experience-Page-Default.jpg" width="100%" />
-
-## Testing
-
-Your team can instantly test the experience on PC, mobile, and other devices you
-wish to support through the Roblox app — no need to compile builds, deploy to
-app stores, or await app store approval.
-
-Studio offers a suite of options for testing an experience before releasing it
-to the public:
-
-- **Rapid playtesting** that provides a close simulation of the experience
-  running on the Roblox application.
-- **Multi-client simulation** for comparing how each client "sees" other clients
-  within the experience.
-- **Device emulation** that provides insight on how controls operate on a mobile
-  device or how on-screen UI displays on different screens and aspect ratios.
-- **Collaborative playtesting** with members of your
-  [team](../projects/setting-up-a-team.md).
-
-For more information on each testing option, see [Studio Testing
-Modes](/studio/testing-modes).
-
-## Cloud-Based Assets
-
-In Roblox, assets such as images, meshes, and audio are stored as **cloud-based
-assets**, so you don't need to bundle local copies into a saved Studio
-experience. Each asset in the cloud is assigned a unique **asset ID** from which
-multiple experiences can utilize them.
-
-See [Assets](../projects/assets/index.md) for details on instances, assets,
-and their association in Roblox.
 
 ## World Building Practices
 
@@ -149,12 +149,10 @@ Drive](/resources/the-mystery-of-duvall-drive).
 </GridContainer>
 
 <Alert severity='info'>
-
 Roblox provides a variety of free high quality [art
 kits](https://devforum.roblox.com/t/free-synty-asset-packs-released-in-the-marketplace/1283755)
 on the Marketplace which can be used in your experience, inclusive of a range of
 different environments.
-
 </Alert>
 
 ### Parts and Meshes
@@ -179,7 +177,7 @@ Modeling](/art/modeling).
 
 <img src="../assets/misc/Building-Best-Practices-Example-Parts.jpg" />
 
-### Default Materials
+### Applying Materials
 
 For greater visual polish, it's recommended to change the default **Plastic**
 material of parts. Even a simple switch to **Concrete** adds a minor level of visual
@@ -228,49 +226,6 @@ implemented. For instance, [Beyond the Dark
 Showcase](/resources/beyond-the-dark) and [The Mystery of Duvall Drive](../resources/the-mystery-of-duvall-drive/index.md) outline best practices such as asset packages, modular building, and more.
 
 <img src="../assets/resources/beyond-the-dark/building-architecture/Architecture-Overview.jpeg" />
-
-## Optimization and Performance
-
-While Studio can automatically adjust client device settings for performance,
-there are some proactive steps developers can take to optimize experiences.
-
-### General Tips
-
-If you're struggling with performance in an experience, try the following:
-
-- Reduce polycounts and texture count on imported assets.
-- Limit the amount of objects in range of custom light sources. A large light on
-  a large object is fine. A large light touching many small objects can impact
-  performance.
-- Limit overlapping transparent objects (such as glass, particles or beams).
-- Use fewer [decals](../parts/textures-decals.md).
-- Enable [instance streaming](../workspace/streaming.md).
-
-### Physics
-
-If collisions do not need to be precise for a given object, set the
-CollisionFidelity property to **Box**. Note that parts and MeshParts can have
-the `CanCollide` and `CanQuery` properties set to false to disable all physics
-interactions.
-
-Unless a part or MeshPart needs to be moved by the physics engine, **you should
-anchor it**. By default, all parts and MeshParts have the `Anchored` property set
-to false, so ensure you set it to **true** for all immovable objects. Anchoring
-parts improves performance, as large unanchored parts can cause framerate dips.
-
-### Rendering
-
-If you want to optimize rendering performance for your environment, consider the
-following tips:
-
-- Use the **Performance** setting of the `RenderFidelity` property on small and
-  medium MeshParts, where the finer details are less important at a distance.
-- If users have their `QualityLevel` set to Automatic, the engine will degrade
-  visuals gracefully to maintain framerate. See how graphic settings can change
-  for users by changing the **Editor Quality Level** setting in Studio Settings,
-  under the Rendering section.
-- Shadows, dynamic reflections, and ambient occlusion render more accurately
-  with Parts than MeshParts.
 
 ## Using Plugins
 
