@@ -249,8 +249,8 @@ properties:
       If you set a UI element's border and background colors to the same color,
       you will be unable to distinguish the two.
 
-      Other properties that determine the visual properties of the
-      border include `Class.GuiObject.BorderSizePixel` and
+      Other properties that determine the visual properties of the border
+      include `Class.GuiObject.BorderSizePixel` and
       `Class.GuiObject.BackgroundTransparency`.
 
       Note that you will not be able to see an element's border if its
