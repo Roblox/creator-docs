@@ -1548,7 +1548,7 @@ events:
       element, you can use the `Class.GuiObject.SelectionLost` event.
 
       When a GUI gains selection focus, the value of the
-      `Class.GuiService.SelectionObject|SelectionObject` property also changes
+      `Class.GuiService.SelectedObject|SelectedObject` property also changes
       to the that gains selection. To determine which GUI gained selection,
       check the value of this property.
     code_samples:
