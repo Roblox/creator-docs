@@ -19,7 +19,24 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AssetService:CreateDynamicMeshAsync
+  - name: AssetService:CreateEditableImageAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: EditableImage
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshAsync
     summary: ''
     description: ''
     code_samples: []
@@ -29,7 +46,24 @@ methods:
         default:
         summary: ''
     returns:
-      - type: DynamicMesh
+      - type: EditableMesh
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshFromPartAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshPart
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: EditableMesh
         summary: ''
     tags:
       - Yields
@@ -386,23 +420,6 @@ methods:
         summary: ''
     returns:
       - type: AudioPages
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: AssetService:createDynamicMeshFromPartAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: meshPart
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: DynamicMesh
         summary: ''
     tags:
       - Yields

@@ -85,7 +85,7 @@ For more information on both types of these assets for places, such as where and
         </tr>
         <tr>
             <td>**Videos**</td>
-            <td>A `Class.VideoFrame` object is an object that displays a video when you apply a video asset ID within the `Class.VideoFrame.Video` property.<br /><br />Some creators can import videos in `.webm` format, otherwise the Creator Marketplace offers many curated videos you can use in your projects. </td>
+            <td>A `Class.VideoFrame` object is an object that displays a video when you apply a video asset ID within the `Class.VideoFrame.Video` property.<br /><br />You can import videos in either `.mp4` or `.mov` format. For more information, see [Video Assets](../../ui/video-assets.md).</td>
         </tr>
     </tbody>
 </table>

@@ -1,28 +1,35 @@
 name: InviteState
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes a player's call invite state.
+description: |
+  This enum describes a player's call invite state. See
+  `Class.SocialService.CallInviteStateChanged` for details.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Placed
-    summary: ''
+    summary: |
+      Call invite was placed.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Accepted
-    summary: ''
+    summary: |
+      Call invite was accepted.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Declined
-    summary: ''
+    summary: |
+      Call invite was declined.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Missed
-    summary: ''
+    summary: |
+      Call invite was missed.
     value: 3
     tags: []
     deprecation_message: ''

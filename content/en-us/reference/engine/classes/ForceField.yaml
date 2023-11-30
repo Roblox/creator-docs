@@ -16,7 +16,7 @@ description: |
   ForceFields are created when a character spawns on a `Class.SpawnLocation` and
   the `Class.SpawnLocation.Duration` property is greater than zero.
 
-  ForeFields influence the instance they are parented to. When parented to a
+  ForceFields influence the instance they are parented to. When parented to a
   `Class.Model` they will protect all of the `Class.BasePart`s descending from
   that model. They may be parented to a `Class.BasePart`, but the part's joints
   will only be protected if both the part and the part it is connected to also
@@ -76,11 +76,11 @@ properties:
       determine where this effect will be emitted from.
 
       When parented to a `Class.Model`, if the model includes a `Class.Humanoid`
-      named "Humanoiod" with `Class.Humanoid.RigType` set to R15, the effect
-      will be emitted from the part named "UpperTorso". Otherwise, the effect
-      will be emitted from the part named "Torso". The part must have the same
-      parent as the ForceField, if it does not exist then the effect is emitted
-      at 0, 0, 0.
+      named "Humanoid" with `Class.Humanoid.RigType` set to R15, the effect will
+      be emitted from the part named "UpperTorso". Otherwise, the effect will be
+      emitted from the part named "Torso". The part must have the same parent as
+      the ForceField, if it does not exist then the effect is emitted at 0,
+      0, 0.
 
       When parented to a `Class.BasePart` the effect will be emitted from the
       part's `Class.BasePart.Position`.

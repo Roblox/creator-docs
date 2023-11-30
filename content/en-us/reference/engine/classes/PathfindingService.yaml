@@ -33,10 +33,10 @@ properties:
       When the `Class.PathfindingService` computes a path using
       `Class.PathfindingService:ComputeRawPathAsync()` or
       `Class.PathfindingService:ComputeRawPathAsync()` it uses the voxel
-      representation of the world. A voxel is one cube in a grid overlayed on
-      the world. In this case the voxels being used are 4x4x4. This property
-      sets the percent of a voxel has to be occupied to be considered empty.
-      Defaults to 0.16.
+      representation of the world. A voxel is one cube in a grid overlaid on the
+      world. In this case the voxels being used are 4x4x4. This property sets
+      the percent of a voxel has to be occupied to be considered empty. Defaults
+      to 0.16.
     code_samples:
     type: float
     tags:

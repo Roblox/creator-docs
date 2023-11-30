@@ -42,8 +42,8 @@ properties:
       effects.
     description: |
       Determines the order the effect will be applied in relation to other
-      effects. Highger priority effects will be applied earlier. The exception
-      is when Priority equals 0 (which is the default). In this case, the base
+      effects. Higher priority effects will be applied earlier. The exception is
+      when Priority equals 0 (which is the default). In this case, the base
       priority for the effect will be used. If the priority of two effects are
       equal, then the order is undetermined.
     code_samples:

@@ -41,7 +41,7 @@ properties:
     description: |
       Determines how the constraint force will be limited. When set to
       `Enum.ForceLimitMode|Magnitude`, the constraint force will have a
-      magntiude less than `Class.LinearVelocity.MaxForce|MaxForce`. When set to
+      magnitude less than `Class.LinearVelocity.MaxForce|MaxForce`. When set to
       `Enum.ForceLimitMode|PerAxis`, the force along each axis will be less than
       the corresponding value in
       `Class.LinearVelocity.MaxAxesForce|MaxAxesForce` when

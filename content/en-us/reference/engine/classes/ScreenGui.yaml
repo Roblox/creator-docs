@@ -63,8 +63,7 @@ properties:
       implies that you intentionally want to disregard the device's safe insets.
     code_samples: []
     type: bool
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -152,8 +151,7 @@ properties:
       `true`.
     code_samples: []
     type: SafeAreaCompatibility
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -188,8 +186,8 @@ properties:
       images.
 
       If you set this property to `Enum.ScreenInsets|TopbarSafeInsets`, all
-      descendant `Class.GuiObject|GuiObjects` will be kept between Roblox
-      left-most controls and right-most controls within the top bar space. This
+      descendant `Class.GuiObject|GuiObjects` will be kept between the Roblox
+      left-most controls and the edge of the device safe area. This
       `Class.ScreenGui` will then automatically adjust its size and position
       based on control visibility/size to avoid UI collisions.
 
