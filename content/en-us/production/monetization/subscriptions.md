@@ -16,7 +16,7 @@ Subscriptions will be rolled out to more regions in the future.
 **Unavailable regions include:** Argentina, Canada, Chile, Colombia, India, Indonesia, Israel, Japan, Malaysia, Mexico, Peru, Philippines, Russia, Saudi Arabia, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, and Vietnam.
 
 <Alert severity="info">
-To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md).
+To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md). For a reference on how to implement subscriptions into your experience's monetization strategy, see this [implementation example](https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072).
 </Alert>
 
 ## Subscription Guidelines
@@ -247,6 +247,10 @@ When you prompt a subscription purchase, `Players.UserSubscriptionStatusChanged`
 
 Although you can prompt a subscription purchase from the client, checking if a user already has a subscription via `MarketplaceService.GetUserSubscriptionStatusAsync` must be done from the server.
 
+<Alert severity="warning">
+When adding subscriptions to your experience, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms can view the offering, but are unable to complete the purchase.
+</Alert>
+
 This example creates a `RemoteFunction` that the client can use to request the status of a subscription:
 
 ```lua
@@ -342,9 +346,11 @@ For example, if a user subscribes on desktop at the base price of US $9.99:
 
 If a different user subscribes to the same plan, but on mobile, the creator receives 699 Robux per month until the user cancels.
 
-Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund or does a chargeback for subscription charge within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
+Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund for a subscription through their bank or app store within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
 
 Refunds received outside the hold window will result in the payout amount for the refunded transaction being deducted from your Robux balance. If your experience is owned by a Group and the Group's balance is less than the amount to be deducted, the remainder will be deducted from the Group Owner's Robux balance.
+
+Users cancelling an active subscription and failing to renew it does not automatically result in a refund. User have to manually request refunds, which are handled on a case-by-case basis. For more information on the user subscription refund process, check out the [help center](https://en.help.roblox.com/hc/en-us/articles/20292383332500-Subscription-Billing-and-Refunds).
 
 <Alert severity="warning">
 Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees. This additional opportunity will be supported at a later date.
