@@ -34,11 +34,11 @@ You can import custom audio as long as it meets the following requirements:
 - You have the legal rights to that asset.
 - It adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 - It's a single track/stream in either `.mp3` or `.ogg` format.
-- It's less than 20 MB in size and 7 minutes in duration.
+- It's less than 90 MB in size and 90 minutes in duration.
 - Its sample rate is less than or equal to 48 kHz.
 - Its channels are set to mono or stereo 2.0, 3.0, or 5.1 surround.
 
-If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can upload 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
+If you're [ID verified](../production/publishing/account-verification.md), you can import 99000000 free audio assets per 80 days; if you're unverified, you can upload 400 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
 To import one or more audio files:
 
@@ -52,7 +52,7 @@ To import one or more audio files:
 
 3. Select and then confirm the audio files you want to import from your local system.
 
-4. Back in Studio, click the **Confirm** button. After a moment, the files display with a green checkmark and a completed status, and the bottom of the **Bulk Import** dialog displays how many audio uploads you have left before you reach your 30 day limit.
+4. Back in Studio, click the **Confirm** button. After a moment, the files display with a green checkmark and a completed status, and the bottom of the **Bulk Import** dialog displays how many audio uploads you have left before you reach your 80 day limit.
 
    <img src="../assets/studio/asset-manager/Audio-Import.png" width="360" />
 
