@@ -20,7 +20,7 @@ Each part of the game loop is a different game mechanic, or action, players can 
 
 Before professional developers start a new project, they plan out what things will look like in a process called **pre-production**. They'll often create a game design document that includes how the experience works.
 
-While **game design documents** (GDD's) can often be long, for this series, you'll start with a vision of what players will do and sketches of the world they'll explore. Having a clear vision helps speed up development and also make it easier to communicate your ideas to get feedback from others.
+While **game design documents** (GDDs) can often be long, for this series, you'll start with a vision of what players will do and sketches of the world they'll explore. Having a clear vision helps speed up development and also make it easier to communicate your ideas to get feedback from others.
 
 ### Creating a Game Design Document
 
@@ -93,13 +93,13 @@ The environment will be created using the **Terrain Editor**. This tool in Roblo
 You'll use the tools in the Terrain Editor to create the world you drew in your game vision document.
 
 1. Open Studio and create a new **Flat Terrain** project.
-2. In the **Home** tab, click on the **Editor** icon. This opens the **Terrain Editor** on the left of the screen.
+2. In the **Home** tab, click the **Editor** button. This opens the **Terrain Editor** on the left of the screen.
 
-   <img src="../../assets/education/adventure-game-series/terrainEditorButton.png" />
+   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Home tab" />
 
-3. In the Terrain Editor, go to the **Edit** tab. Then, use the **Paint** tool to change the material of the landscape. Depending on your vision, paint in roads, water, or even lava.
+3. In the Terrain Editor, go to the **Edit** tab. Then use the **Paint** tool to change the material of the landscape. Depending on your vision, paint in roads, water, or even lava.
 
-   <img src="../../assets/education/adventure-game-series/terrainPainttool.png" />
+   <img src="../../assets/studio/terrain-editor/Edit-Tab-Paint.png" width="360" alt="Paint tool indicated in Edit tab of Terrain Editor" />
 
    <img src="../../assets/education/adventure-game-series/paintToolOptimized.gif" width="50%" />
 
@@ -107,17 +107,17 @@ You'll use the tools in the Terrain Editor to create the world you drew in your 
    While using the terrain editor, rotate the camera as you build. Terrain might look differently from different angles.
    </Alert>
 
-4. Use the **Add** tools to draw the setting you created in your vision doc. This can be used to create mountains, hills, and break up grasslands.
+4. Use the **Draw** tool to draw the setting you created in your vision document. Use the **Brush Mode** toggle to switch between adding and subtracting terrain.
 
-   <img src="../../assets/education/adventure-game-series/terrainToolAdd.jpg" />
+   <img src="../../assets/studio/terrain-editor/Edit-Tab-Draw.png" width="360" alt="Draw tool indicated in Edit tab of Terrain Editor" />
 
-   <img src="../../assets/education/adventure-game-series/addToolExample.gif" width="80%" />
+   - Add terrain to create mountains, hills, and break up grasslands.
 
-5. Use the **Subtract** tools to draw the setting you created in your vision doc. This can be used to sculpt mountains, create sharper features like cliffs, or carve rivers.
+     <img src="../../assets/education/adventure-game-series/addToolExample.gif" width="80%" />
 
-   <img src="../../assets/education/adventure-game-series/terrainSubtractButton.png" />
+   - Subtract terrain to sculpt mountains, create sharper features like cliffs, or carve rivers.
 
-   <img src="../../assets/education/adventure-game-series/subtractToolExample.gif" width="50%" />
+     <img src="../../assets/education/adventure-game-series/subtractToolExample.gif" width="50%" />
 
 ## Finished Map Sample
 

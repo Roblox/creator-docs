@@ -159,15 +159,16 @@ properties:
       indicates how much more opaque they want the background of UI elements to
       be. Defaults to 1.
 
-      This returns the value of a setting which can be set from the user's side
-      in either the app settings, under Accessibility, or in the in-game
-      settings menu (which is called “Background Transparency”). The default
-      value is 1, indicating that the user prefers the default background
-      transparency. The lowest value is 0, indicating that the user prefers
-      backgrounds to be completely opaque, improving readability and contrast
-      for affected UI. Multiplying an element's BackgroundTransparency with the
-      value returned from PreferredTransparency is the recommended way to use
-      this setting; backgrounds will become more opaque as PreferredTransparency
+      This return value reflects a setting which can be set from the user's side
+      in either the app settings or within the in-experience settings menu via
+      **Background Transparency**. The default value is 1, indicating that the
+      user prefers the default background transparency. The lowest value is 0,
+      indicating that the user prefers backgrounds to be completely opaque,
+      improving readability and contrast for affected UI. Multiplying an
+      element's `Class.GuiObject.BackgroundTransparency` with the value returned
+      from `Class.GuiService.PreferredTransparency|PreferredTransparency` is the
+      recommended way to use this setting; backgrounds will become more opaque
+      as `Class.GuiService.PreferredTransparency|PreferredTransparency`
       approaches 0. This should be used with
       `Class.Instance:GetPropertyChangedSignal()` so that it automatically
       updates when the user changes their preferred transparency.
@@ -189,15 +190,16 @@ properties:
       can_save: false
   - name: GuiService.ReducedMotionEnabled
     summary: |
-      Returns true if the user has enabled reduced motion. Defaults to false.
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
     description: |
-      Returns true if the user has enabled reduced motion. Defaults to false.
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
 
-      This returns the value of a setting which can be set from the user's side
-      in either the app settings, under Accessibility, or in the in-game
-      settings menu (which is called “Reduce Motion”). If the value is true,
-      this indicates that the user wants motion effects and animations to be
-      reduced or completely removed.
+      This return value reflects a setting which can be set from the user's side
+      in either the app settings or within the in-experience settings menu via
+      **Reduce Motion**. A value of `true` indicates that the user wants motion
+      effects and animations to be reduced or completely removed.
     code_samples:
       - GuiService-ReducedMotionEnabled
     type: bool
@@ -247,8 +249,7 @@ properties:
       within top bar space.
     description: |
       Returns a `Datatype.Rect` object representing the unoccupied area between
-      Roblox left-most control and Roblox right-most control within the top bar
-      space.
+      the Roblox left-most controls and the edge of the device safe area.
 
       The value is dynamic and can be expected to change based on the visibility
       of UI controls such as changing the local player's
@@ -624,11 +625,11 @@ methods:
   - name: GuiService:Select
     summary: |
       Set GuiService.SelectedObject to a child of provided instance
-      selectionParent that is PlayerGui or its descendents.
+      selectionParent that is PlayerGui or its descendants.
     description: |
       When Select is called on an instance selectionParent that is PlayerGui or
-      a descendent of PlayerGui, the engine searches all available selectable,
-      visible and on-screen GuiObjects that are descendents of selectionParent
+      a descendant of PlayerGui, the engine searches all available selectable,
+      visible and on-screen GuiObjects that are descendants of selectionParent
       and sets the `Class.GuiService.SelectedObject` to the GuiObject with the
       smallest `Class.GuiService.SelectionOrder`.
     code_samples:
@@ -638,7 +639,7 @@ methods:
         type: Instance
         default:
         summary: |
-          The parent of selection whose descendents are searched.
+          The parent of selection whose descendants are searched.
     returns:
       - type: void
         summary: ''

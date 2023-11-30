@@ -27,7 +27,12 @@ navigation:
     path: /resources/modules/social-interactions
   - title: Event Sequencer
     path: /resources/modules/event-sequencer
+  - heading: Scripting Libraries
+  - title: Overview
+    path: /resources/scripting-libraries
   - heading: Projects and Kits
+  - title: Roblox Connect Project
+    path: /resources/roblox-connect
   - title: Plant Reference Project
     path: /resources/plant-reference-project
   - title: Battle Royale

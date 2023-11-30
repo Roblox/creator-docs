@@ -21,16 +21,16 @@ This page provides information about different ways to earn on Roblox and how to
 
 ## Economy Powered by Creators
 
-We are building one of the world's largest immersive platforms with 65.5M global daily active users (DAUs) in 15 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2022, more than 50% of our daily active users were over the age of 13 and users over the age of 17 accounted for 38% of our daily active users. In 2022, our community visited over 15 million experiences, and in the second quarter of 2023 alone, users spent 14 billion hours on our platform.
+We are building one of the world's largest immersive platforms with 70.2M global daily active users (DAUs) in 15 languages across 180 countries, available across platforms including mobile, desktop, consoles, and VR headsets. In 2022, more than 50% of our daily active users were over the age of 13 and users over the age of 17 accounted for 38% of our daily active users. In 2022, our community visited over 15 million experiences, and in the third quarter of 2023 alone, users spent 16 billion hours on our platform.
 
 <figure>
 <img src="../assets/monetization/earning/Economy-Stats.png" width="800" alt="Roblox economy stats" />
-<figcaption>From left to right: (1) As of June&nbsp;30,&nbsp;2023; (2) Based on the year ended December&nbsp;31,&nbsp;2022 (3) Represents number of unique creators earning Robux during June&nbsp;2023; (4) $1.1B developer earnings by 11,000 creators registered for our [Developer Exchange](https://create.roblox.com/dashboard/devex) program during 2021 and 2022, up 164% from the previous two-year period.</figcaption>
+<figcaption>From left to right: (1) As of September&nbsp;30,&nbsp;2023; (2) Based on the year ended December&nbsp;31,&nbsp;2022 (3) Represents number of unique creators earning Robux during September&nbsp;2023; (4) $1.1B developer earnings by 11,000 creators registered for our [Developer Exchange](https://create.roblox.com/dashboard/devex) program during 2021 and 2022, up 164% from the previous two-year period.</figcaption>
 </figure>
 
 <h4>We are one of the biggest virtual economies&sup1;</h4>
 
-In 2022 alone, we had more than 3.2 billion virtual transactions, and another 875 million during the second quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the quarter ending June&nbsp;2023, over 4.8M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.
+In 2022 alone, we had more than 3.2 billion virtual transactions, and over 1 billion during the third quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the quarter ending September&nbsp;2023, over 5.6M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.
 
 <h4>We exist to serve and not compete with our community</h4>
 
@@ -61,7 +61,7 @@ Unlike other platforms where you wait days or weeks for approvals, you can modif
 
 <h4>Platform-driven discovery and rapid viral growth</h4>
 
-Our platform, with 65.5 million daily active users (DAUs) as of Q2&nbsp;2023 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [on&#8209;platform&nbsp;ads](../production/promotion/advertising-on-roblox.md).
+Our platform, with 70.2 million daily active users (DAUs) as of Q3&nbsp;2023 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [on&#8209;platform&nbsp;ads](../production/promotion/advertising-on-roblox.md).
 
 <h4>Rapid iteration and scaling with no upfront costs</h4>
 
@@ -75,16 +75,16 @@ On other platforms, you can incur expenses such as storage, hosting, and infrast
 
 Our goal is to drive as much money to our creators as possible while maintaining reasonable margins for our company to develop, maintain, and improve the tools and technology that support our community.
 
-On average, 76% of all spending in experiences supports or goes to developers:
+On average, 75% of all spending in experiences supports or goes to developers:
 
-- We pay out 47% to cover costs supporting experiences&nbsp;&mdash; like infrastructure hosting, storage, customer support, localization, payment processing, and moderation&nbsp;&mdash; which other platforms generally pass on to developers.
+- We pay out 46% to cover costs supporting experiences&nbsp;&mdash; like infrastructure hosting, storage, customer support, localization, payment processing, and moderation&nbsp;&mdash; which other platforms generally pass on to developers.
 - This enables us to return 29%\* directly to the developers.
-- That leaves 24% to cover Roblox's ongoing services and operating costs, future-looking investments in the platform, and margins.
+- That leaves 25% to cover Roblox's ongoing services and operating costs, future-looking investments in the platform, and margins.
 
 This chart illustrates the estimated utilization of each dollar spent in an experience on Roblox. Note that the chart doesn't reflect our expenses as disclosed in our GAAP financial statements.
 
 <figure>
-<img src="../assets/monetization/earning/Average-Cash-Payouts.png" width="75%" alt="Pie chart illustrating the estimated utilization of each dollar spent in an experience on Roblox" />
+<img src="../assets/monetization/earning/Average-Cash-Payouts.svg" width="80%" alt="Pie chart illustrating the estimated utilization of each dollar spent in an experience on Roblox" />
 </figure>
 
 <figure>
@@ -100,7 +100,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#00a2ff;",fontSize:"120%;",color:"white;"}}>
-		<b>4.6%</b>
+		<b>4.4%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -122,7 +122,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#00a2ff;",fontSize:"120%;",color:"white;"}}>
-		<b>24.3%</b>
+		<b>23.8%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -131,7 +131,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#004F80;",fontSize:"120%;",color:"white;"}}>
-		<b>18.0%</b>
+		<b>18.3%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -140,7 +140,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </Grid>
 <Grid item xs={2}>
 	<Button fullWidth disabled variant='contained' color='primary' style={{backgroundColor:"#004F80;",fontSize:"120%;",color:"white;"}}>
-		<b>6.2%</b>
+		<b>6.8%</b>
 	</Button>
 </Grid>
 <Grid item xs={10}>
@@ -151,7 +151,7 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <figure>
-<figcaption>\* 29% returned directly to the developers of experiences cents per dollar spent in experience assumes the full amount of Robux earned are exchanged through the DevEx program, and not spent on the platform. Figures are as of June&nbsp;30,&nbsp;2023.</figcaption>
+<figcaption>\* 29% returned directly to the developers of experiences cents per dollar spent in experience assumes the full amount of Robux earned are exchanged through the DevEx program, and not spent on the platform. Figures are as of September&nbsp;30,&nbsp;2023.</figcaption>
 </figure>
 
 ### Experience Monetization
@@ -160,7 +160,7 @@ Once you've developed an experience, you can earn through the following methods:
 
 #### In-Experience Purchases
 
-- [Subscriptions](./monetization/subscriptions.md) offer you the ability to earn from your experience through subscription-based offerings and business models.
+- [Subscriptions](./monetization/subscriptions.md) within experiences offer you the ability to earn from your experience through subscription-based offerings and business models.
 - [Developer Products](../production/monetization/developer-products.md) which are items or abilities that a user can purchase, such as in-experience currency.
 - [Passes](../production/monetization/game-passes.md) for access to special privileges within an experience, such as entry to a restricted area or a permanent power‑up. When you sell your own passes in your experience, you earn 70% of the Robux spent. You can also sell passes within your experience that were made by other creators; in this case, you earn a 10% affiliate fee on the Robux spent within your experience, and the original creator of the pass earns 60%.
 - [Private Servers](../production/monetization/private-servers.md) for users to play with just friends (subscription-based access fees).
@@ -179,7 +179,7 @@ In 2022 alone, 1.8 billion total avatar items were sold on the platform, making 
 
 Creators can [create](../art/marketplace/publishing-to-marketplace.md) and sell accessories, clothes, bodies, and heads for avatars in the [Marketplace][link_marketplace] or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
 
-After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. If you're participating in the [UGC](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) program, you can upload and sell [clothing and 3D accessories](../art/accessories/index.md) and [avatar bodies and heads](../art/characters/index.md). It costs 750&nbsp;Robux per asset to upload for accessories and clothing.
+After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. If you're participating in the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990), you can upload and sell 3D [clothing](../art/accessories/index.md), [accessories](../art/accessories/index.md), and [avatar bodies and heads](../art/characters/index.md). It costs 750&nbsp;Robux to upload each asset.
 
 You receive a commission every time a user purchases your item. When community items are sold in the marketplace, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience who we refer to as an "affiliate." An affiliate earns commission for marketing another user's creations.
 
@@ -202,7 +202,7 @@ As follows is an overview of our commission structure. To learn more about fees 
 These commissions also apply to the original sale of [Limiteds](../art/marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../art/marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../art/marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
 </Grid>
 <Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Clothes-Accessories.png" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
+<img src="../assets/monetization/earning/Percentages-Clothes-Accessories.svg" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
 </Grid>
 </Grid>
 </TabItem>
@@ -219,7 +219,7 @@ While anyone can buy a Limited item, only Roblox [Premium][link_premium_membersh
 After purchasing a Limited, there is up to a 30‑day holding period when the item cannot be resold. Robux acquired from trading or selling items that you didn't create are not considered earned and are ineligible for the [Developer Exchange][link_developer_exchange] program.
 </Grid>
 <Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Reselling-Limiteds.png" alt="Pie chart illustrating the commission structure for community-created Limiteds" />
+<img src="../assets/monetization/earning/Percentages-Reselling-Limiteds.svg" alt="Pie chart illustrating the commission structure for community-created Limiteds" />
 </Grid>
 </Grid>
 </TabItem>
@@ -235,7 +235,7 @@ You can create and sell Studio [plugins](../studio/plugins.md) to the community 
 - Platform receives **30%**
 </Grid>
 <Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Studio-Plugins.png" alt="Pie chart illustrating the commission structure for creating and selling Studio plugins" />
+<img src="../assets/monetization/earning/Percentages-Studio-Plugins.svg" alt="Pie chart illustrating the commission structure for creating and selling Studio plugins" />
 </Grid>
 </Grid>
 

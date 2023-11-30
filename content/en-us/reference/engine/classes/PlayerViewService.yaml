@@ -2,8 +2,11 @@ name: PlayerViewService
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Provides a way to get additional information about a player's view.
+description: |
+  `Class.PlayerViewService` provides a way to get additional information about a
+  player's view.
 code_samples: []
 inherits:
   - Instance
@@ -15,17 +18,33 @@ deprecation_message: ''
 properties: []
 methods:
   - name: PlayerViewService:GetDeviceCameraCFrame
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns a world space `Datatype.CFrame` looking at the player's character.
+    description: |
+      Returns a world space `Datatype.CFrame` looking at the player's character,
+      such that setting the current camera's `Datatype.CFrame` will view that
+      character from the perspective of their device.
+
+      This method leverages the device's camera and it only functions on mobile
+      devices. If no information is available, for example the user is not on a
+      mobile device or they don't have their camera turned on, this method
+      returns a `Datatype.CFrame.identity`.
+
+      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
+      implementation of this method.
+    code_samples:
+      - PlayerViewService-GetDeviceCameraCFrame
     parameters:
       - name: player
         type: Player
         default: nil
-        summary: ''
+        summary: |
+          The player for which to get the device camera `Datatype.CFrame`.
     returns:
       - type: CFrame
-        summary: ''
+        summary: |
+          The world space `Datatype.CFrame` looking at the player's character,
+          or a `Datatype.CFrame.identity` (see description).
     tags: []
     deprecation_message: ''
     security: None

@@ -36,11 +36,11 @@ methods:
     summary: |
       Sets the value of the `Class.CustomEvent` and fires the
       `Class.CustomEventReceiver.SourceValueChanged` event for all connected
-      `CustomEventReciever|recievers`.
+      `CustomEventReceiver|receivers`.
     description: |
       This function sets the value of the `Class.CustomEvent` and fires the
       `Class.CustomEventReceiver.SourceValueChanged` event for all connected
-      `CustomEventReciever|recievers`.
+      `CustomEventReceiver|receivers`.
     code_samples:
     parameters:
       - name: newValue

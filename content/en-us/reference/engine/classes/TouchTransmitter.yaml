@@ -14,10 +14,9 @@ description: |
   `Class.BasePart.TouchEnded` events are listened (connected) to.
 
   Removing the TouchTransmitter will prevent the touched events from working.
-  The TouchTransmitter object can also be removed exclusively on the client
-  (when `Class.Workspace.FilteringEnabled` is set to true). This will prevent
-  collisions from models the client has network ownership of (such as the
-  player's character) from registering.
+  The TouchTransmitter object can also be removed exclusively on the client.
+  This will prevent collisions from models the client has network ownership of
+  (such as the player's character) from registering.
 
   Note, in almost all circumstances developers should disconnect the connection
   using `Datatype.RBXScriptConnection:Disconnect()` method rather than removing
