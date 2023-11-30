@@ -580,9 +580,9 @@ properties:
 
       ```
       -- Count backwards from 1 to 0, decrementing by 0.1
-      for i = 1, 0, -.1 do
+      for i = 1, 0, -0.1 do
          textLabel.TextTransparency = i
-         wait(.1)
+         task.wait(0.1)
       end
       ```
     code_samples:

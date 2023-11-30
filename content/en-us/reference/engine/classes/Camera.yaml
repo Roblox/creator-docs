@@ -64,7 +64,7 @@ properties:
       The `Datatype.CFrame` of the `Class.Camera`, defining its position and
       orientation in the 3D world.
     description: |
-      This property is the `Datatype.CFrame` of the `Class.Camera` and definies
+      This property is the `Datatype.CFrame` of the `Class.Camera` and defines
       its position and orientation in the 3D world.
 
       Some transformations, such as the rotation of the head when using VR
@@ -94,13 +94,12 @@ properties:
       and an orientation.
 
       The most intuitive way to position and orientate the `Class.Camera` is by
-      using the _new_ CFrame constructor with the _pos_ and _lookAt_ parameters,
-      for example:
+      using the `Datatype.CFrame.lookAt()` constructor:
 
       ```lua
       local pos = Vector3.new(0, 10, 0)
-      local lookAt = Vector3.new(10, 0, 0)
-      local cameraCFrame = CFrame.new(pos, lookAt)
+      local lookAtPos = Vector3.new(10, 0, 0)
+      local cameraCFrame = CFrame.lookAt(pos, lookAtPos)
       workspace.CurrentCamera.CFrame = cameraCFrame
       ```
 
@@ -725,9 +724,9 @@ methods:
       obscuring the lines of sight between `Class.Camera`'s
       `Class.Camera.CFrame` and the _castPoints_.
 
-      GetPartsObscuringTarget is used by the 'Invisicam' in in the default
-      camera scripts to hide parts between the `Class.Camera`'s
-      `Class.Camera.CFrame` and `Class.Camera.Focus`.
+      GetPartsObscuringTarget is used by the 'Invisicam' in the default camera
+      scripts to hide parts between the `Class.Camera`'s `Class.Camera.CFrame`
+      and `Class.Camera.Focus`.
 
       Any `Class.Instance|Instances` included in the _ignoreList_ array will,
       along with their descendants, be ignored.
@@ -1121,8 +1120,8 @@ methods:
 
       SetRoll has no effect on any roll applied using the `Class.Camera.CFrame`
       property. Roll applied using SetRoll is not reflected in the
-      `Class.Camera.CFrame` property but is reflected in in the
-      `Datatype.CFrame` returned by`Class.Camera:GetRenderCFrame()`.
+      `Class.Camera.CFrame` property but is reflected in the `Datatype.CFrame`
+      returned by`Class.Camera:GetRenderCFrame()`.
 
       This function can only be used when the `Class.Camera.CameraType` is set
       to _'Scriptable'_, regardless of whether the default camera scripts are
@@ -1190,7 +1189,7 @@ methods:
         type: int
         default:
         summary: |
-          The number of 10 degree units by which to to tilt the `Class.Camera`.
+          The number of 10 degree units by which to tilt the `Class.Camera`.
     returns:
       - type: bool
         summary: |

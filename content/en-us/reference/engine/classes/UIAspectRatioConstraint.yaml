@@ -16,13 +16,12 @@ description: |
   the objects ratio is maintained by the value defined in
   `Class.UIAspectRatioConstraint.AspectRatio`. The
   `Class.UIAspectRatioConstraint.AspectType` sets what determines the maximum
-  size of the object. When set to
-  `Class.UIAspectRatioConstraint.FitWithinMaxSize`, the constraint will make the
-  object the maximum size it can be within the `Class.GuiObject` of the element.
-  When set to ScaleWithParentSize, the elements maximum size will be the size of
-  the parent while still maintaining the aspect ratio. Finally, the
-  `Class.UIAspectRatioConstraint.DominantAxis` will determine which axis to use
-  when setting the new size of the element.
+  size of the object. When set to `Enum.AspectType.FitWithinMaxSize`, the
+  constraint will make the object the maximum size it can be within the
+  `Class.GuiObject` of the element. When set to ScaleWithParentSize, the
+  elements maximum size will be the size of the parent while still maintaining
+  the aspect ratio. Finally, the `Class.UIAspectRatioConstraint.DominantAxis`
+  will determine which axis to use when setting the new size of the element.
 code_samples:
 inherits:
   - UIConstraint

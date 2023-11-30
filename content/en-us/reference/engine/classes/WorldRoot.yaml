@@ -617,9 +617,9 @@ methods:
       physics of a running game.
 
       **Translate stiffness** is a number between 0 and 1 specifying how
-      agressively to match the part's position to the position part of the
+      aggressively to match the part's position to the position part of the
       target CFrame. **Rotate stiffness** is a number between 0 and 1 specifying
-      how agresively to match the part's rotation to to the rotation part of the
+      how aggressively to match the part's rotation to the rotation part of the
       target CFrame.
 
       For example:
@@ -655,9 +655,8 @@ methods:
         type: float
         default: 0.5
         summary: |
-          A number between 0 and 1 specifying how aggresively to match the
-          part's rotation to to the rotation part of the target
-          `Datatype.CFrame`.
+          A number between 0 and 1 specifying how aggressively to match the
+          part's rotation to the rotation part of the target `Datatype.CFrame`.
       - name: collisionsMode
         type: IKCollisionsMode
         default: OtherMechanismsAnchored
@@ -845,6 +844,30 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+  - name: WorldRoot:Shapecast
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+      - name: params
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: WorldRoot:Spherecast
     summary: |
       Casts a spherical shape in a given direction and returns a

@@ -56,8 +56,9 @@ properties:
 
       This property can be used by developers to check if an animation is
       already playing before playing it (as that would cause it to restart). If
-      a developer wishes to obtain all playing `Class.AnimationTrack`s on a
-      `Class.Humanoid` or `Class.AnimationController` they should use
+      a developer wishes to obtain all playing
+      `Class.AnimationTrack|AnimationTracks` on a `Class.Humanoid` or
+      `Class.AnimationController` they should use
       `Class.Humanoid:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying
@@ -139,12 +140,12 @@ properties:
     summary: |
       Sets the priority of an `Class.AnimationTrack`. Depending on what this is
       set to, playing multiple animations at once will look to this property to
-      figure out which `Class.Keyframe` `Class.Pose`s should be played over one
-      another.
+      figure out which `Class.Keyframe` `Class.Pose|Poses` should be played over
+      one another.
     description: |
       This property sets the priority of an `Class.AnimationTrack`. Depending on
       what this is set to, playing multiple animations at once will look to this
-      property to figure out which `Class.Keyframe` `Class.Pose`s should be
+      property to figure out which `Class.Keyframe` `Class.Pose|Poses` should be
       played over one another.
 
       The Priority property for `Class.AnimationTrack` defaults to how it was
@@ -268,13 +269,13 @@ properties:
       sufficiently small (see code sample below).
 
       The animation weighting system is used to determine how
-      `Class.AnimationTrack`s playing at the same priority are blended together.
-      The default weight is one, and no movement will be visible on an
-      `Class.AnimationTrack` with a weight of zero. The pose that is shown at
-      any point in time is determined by the weighted average of all the
-      `Class.Pose`s and the WeightCurrent of each `Class.AnimationTrack`. In
-      most cases blending animations is not required and using
-      `Class.AnimationTrack.Priority` is more suitable.
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. In most cases blending animations is not required
+      and using `Class.AnimationTrack.Priority` is more suitable.
     code_samples:
       - AnimationWeight
     type: float
@@ -312,13 +313,13 @@ properties:
       sufficiently small (see code sample below).
 
       The animation weighting system is used to determine how
-      `Class.AnimationTrack`s playing at the same priority are blended together.
-      The default weight is one, and no movement will be visible on an
-      `Class.AnimationTrack` with a weight of zero. The pose that is shown at
-      any point in time is determined by the weighted average of all the
-      `Class.Pose`s and the WeightCurrent of each `Class.AnimationTrack`. In
-      most cases blending animations is not required and using
-      `Class.AnimationTrack.Priority` is more suitable.
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. In most cases blending animations is not required
+      and using `Class.AnimationTrack.Priority` is more suitable.
     code_samples:
       - AnimationWeight
     type: float
@@ -399,13 +400,13 @@ methods:
       sufficiently small (see code sample below).
 
       The animation weighting system is used to determine how
-      `Class.AnimationTrack`s playing at the same priority are blended together.
-      The default weight is one, and no movement will be visible on an
-      `Class.AnimationTrack` with a weight of zero. The pose that is shown at
-      any point in time is determined by the weighted average of all the
-      `Class.Pose`s and the WeightCurrent of each `Class.AnimationTrack`. See
-      below for an example of animation blending in practice. In most cases
-      blending animations is not required and using
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. See below for an example of animation blending in
+      practice. In most cases blending animations is not required and using
       `Class.AnimationTrack.Priority` is more suitable.
     code_samples:
       - AnimationTrack-Change-Weight
@@ -487,8 +488,8 @@ methods:
       in an `Class.AnimationTrack`.
     description: |
       Returns the time position of the first `Class.Keyframe` of the given name
-      in an `Class.AnimationTrack`. If multiple `Class.Keyframe`s share the same
-      name, it will return the earliest one in the animation.
+      in an `Class.AnimationTrack`. If multiple `Class.Keyframe|Keyframes` share
+      the same name, it will return the earliest one in the animation.
 
       This function will return an error if it is uses with an invalid keyframe
       name (one that does not exist for example) or if the underlying
@@ -654,7 +655,8 @@ events:
       This event allows a developer to run code at predefined points in an
       animation (set by `Class.Keyframe` names). This allows the default
       functionality of Roblox animations to be expanded upon by adding
-      `Class.Sound`s or `ParticleEffect`s at different points in an animation.
+      `Class.Sound|Sounds` or `ParticleEffects` at different points in an
+      animation.
 
       `Class.Keyframe` names do not need to be unique. For example, if an
       Animation has three keyframes named "Particles" the KeyframeReached event
@@ -692,8 +694,8 @@ events:
       This event has a number of uses. It can be used to wait until an
       `Class.AnimationTrack` has stopped before continuing (for example, if
       chaining a series of animations to play after each other). It can also be
-      used to clean up any `Class.Instance`s created during the animation
-      playback.
+      used to clean up any `Class.Instance|Instances` created during the
+      animation playback.
     code_samples:
       - AnimationTrack-Stopped
     parameters: []
