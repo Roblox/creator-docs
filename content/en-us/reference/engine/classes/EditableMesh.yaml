@@ -43,23 +43,7 @@ inherits:
   - DataModelMesh
 tags: []
 deprecation_message: ''
-properties:
-  - name: EditableMesh.MeshVersion
-    summary: ''
-    description: ''
-    code_samples: []
-    type: int
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: None
-      write: NotAccessibleSecurity
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
+properties: []
 methods:
   - name: EditableMesh:AddTriangle
     summary: |

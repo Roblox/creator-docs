@@ -2,7 +2,8 @@ name: DistortionSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: 'Distorts audio, making it sound fuzzier and overdriven.'
+summary: |
+  Distorts audio, making it sound fuzzier and overdriven.
 description: |
   A distortion effect is used to simulate the effect that would occur when
   overdriving older style audio equipment (such as vacuum tubes). This effect
