@@ -1,0 +1,444 @@
+name: EditableMesh
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - DataModelMesh
+tags: []
+deprecation_message: ''
+properties:
+  - name: EditableMesh.MeshVersion
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: EditableMesh:AddTriangle
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId0
+        type: int
+        default:
+        summary: ''
+      - name: vertexId1
+        type: int
+        default:
+        summary: ''
+      - name: vertexId2
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:AddVertex
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: p
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindClosestPointOnSurface
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: point
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindClosestVertex
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: toThisPoint
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindVerticesWithinSphere
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: center
+        type: Vector3
+        default:
+        summary: ''
+      - name: radius
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetAdjacentTriangles
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetAdjacentVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetTriangleVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetTriangles
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector2
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Color3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexColorAlpha
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:Raycast
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: origin
+        type: Vector3
+        default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RemoveTriangle
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RemoveVertex
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+      - name: p
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+      - name: uv
+        type: Vector2
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexColorAlpha
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+      - name: alpha
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int
+        default:
+        summary: ''
+      - name: vnormal
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:CreateMeshPartAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: collisionFidelity
+        type: CollisionFidelity
+        default:
+        summary: ''
+    returns:
+      - type: MeshPart
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []
