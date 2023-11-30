@@ -34,7 +34,7 @@ To publish a place as the starting place of an entirely new experience:
 
 3. Click the **Create** button.
 
-Once you publish your experience, you can [configure more settings](#configuring-experiences) and also add more places to your experience.
+Once an experience is published, you can access the [Game Settings](../../studio/game-settings.md) menu which contains Studio-level settings and customization options for [monetization](../../production/monetization/index.md), [character appearance](../../characters/appearance.md), and more.
 
 ## Creating Additional Places
 
@@ -102,7 +102,7 @@ Each Experience Guideline has two components:
 - **Age Recommendations** – Indicates which age group an experience is suitable for based on child development research and industry standards. For more information, see [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604).
 - **Content Descriptors** – Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
-Roblox strongly recommends that you fill out the guidelines questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without guidelines to users under 13 years old, and if your experience has no guidelines but contains [17+ content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), it will be moderated. For more information, see [Experience Guidelines](../promotion/experience-guidelines.md).
+See [Experience Guidelines](../../production/promotion/experience-guidelines.md) for instructions on supplying the necessary guidelines.
 
 ### Allowing Copying
 
@@ -185,35 +185,6 @@ To shut down all servers:
    <img src="../../assets/creator-dashboard/Experience-Menu-Shutdown-Servers.png" width="420" />
 
 3. Confirm shutdown by clicking the **OK** button.
-
-## Configuring Experiences
-
-You can customize your experience's settings from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or within Studio's [Game Settings](../../studio/game-settings.md). Some settings are only configurable within Studio while others are only configurable on the dashboard.
-
-### Creator Dashboard
-
-Most experience settings are configurable from the [Creator Dashboard](https://create.roblox.com/dashboard/creations), including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [Questionnaire](../promotion/experience-guidelines.md#questionnaire-categories) required for generating [experience guidelines](#experience-guidelines). To configure an experience:
-
-1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
-2. Click on the category you wish to configure from the left-hand navigation.
-
-The **Communication Settings** category allows you to enable **strong language** if your experience is rated 17+. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
-
-<img src="../../assets/publishing/experiences-places-assets/Strong-Language-Pill.png" width="375" alt="Pill indicating the experience contains strong language" />
-
-Regardless of whether or not you activate the toggle, players do not face moderation consequences just for using strong language in chat or voice in 17+ games, but they cannot violate [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) and [Terms of Use](https://www.roblox.com/info/terms). For example, players can type an expletive if they are scared by a monster, but they cannot abuse another player using strong language or otherwise.
-
-<Alert severity="warning">
-
-In-experience assets and experience metadata cannot contain strong language, even if the toggle is on and your experience is rated 17+. If you include strong language in your assets or experience page, your experience will be moderated.
-
-</Alert>
-
-### Game Settings
-
-Once an experience is published, the [Game Settings](../../studio/game-settings.md) window contains many Studio-level settings and customization options. To open it, click the **Game Settings** button in the [Home](../../studio/home-tab.md) tab of the ribbon menu.
-
-<img src="../../assets/studio/general/Home-Tab-Game-Settings.png" width="800" alt="Game Settings button indicated in Home tab" />
 
 ## Metadata Best Practices
 
