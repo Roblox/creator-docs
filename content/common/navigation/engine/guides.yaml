@@ -52,8 +52,6 @@ navigation:
     section:
       - title: Overview
         path: /projects/assets/
-      - title: Packages
-        path: /projects/assets/packages
       - title: Managing
         section:
           - title: Asset Manager
@@ -62,6 +60,10 @@ navigation:
             path: /projects/assets/toolbox
           - title: External Catalog Queries
             path: /projects/assets/api
+      - title: Packages
+        path: /projects/assets/packages
+      - title: Asset Privacy
+        path: /projects/assets/privacy
       - title: In-Experience Asset Creation
         path: /projects/assets/in-experience-asset-creation
   - title: 3D Workspace
@@ -324,7 +326,7 @@ navigation:
         path: /sound/objects
       - title: Groups
         path: /sound/groups
-      - title: Effects
+      - title: Dynamic Effects
         path: /sound/dynamic-effects
   - title: User Interface
     section:
@@ -350,8 +352,8 @@ navigation:
             path: /ui/proximity-prompts
           - title: Drag Detectors
             path: /ui/drag-detectors
-          - title: Video Assets
-            path: /ui/video-assets
+          - title: Video Frames
+            path: /ui/video-frames
       - title: Layout and Design
         section:
           - title: Layout and Appearance
