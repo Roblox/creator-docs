@@ -21,11 +21,13 @@ Unlike traditional APIs, which require you to set up a client application to sen
 
 ## Configuring Webhooks on Creator Dashboard
 
-To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. You can set up a webhook on Creator Dashboard with the following steps:
+To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned experiences, only group owners can configure and receive webhook notifications.
 
 <Alert severity="info">
 If you're setting up webhooks and handling personal data, ensure they comply with the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/).
 </Alert>
+
+To set up a webhook on the Creator Dashboard:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
 1. Click the dropdown menu on your account and select **Settings** from the list.
@@ -41,7 +43,7 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
    1. **Webhook URL**: Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
    1. **Name**: Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
    1. **Secret** (optional): Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verifying Webhook Security](#verifying-webhook-security).
-   1. **Triggers**: Choose one or more options from the list of supported triggers of events for which you want to receive notifications. Currently, the only supported event to trigger is **Right To Erasure Request** that occurs when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
+   1. **Triggers**: Choose one or more options from the list of supported triggers of events for which you want to receive notifications. Currently, the only supported event is **Right To Erasure Request** that occurs when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
 1. Click the **SAVE CHANGES** button.
 
 <Alert severity="info">
