@@ -118,8 +118,9 @@ methods:
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
     description: |
       Sets the vibration intensity of the specified
-      `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`. Note that
-       almost all use cases specify `Gamepad1` as the `Class.InputObject.UserInputType|UserInputType`.
+      `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
+      Note that almost all use cases specify `Gamepad1` as the
+      `Class.InputObject.UserInputType|UserInputType`.
     code_samples:
       - HapticService-SetMotor1
     parameters:
