@@ -82,6 +82,7 @@ https://en.wikipedia.org/wiki/Creative_Commons
 https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 https://en.wikipedia.org/wiki/Double-precision_floating-point_format
 https://en.wikipedia.org/wiki/Ducking
+https://en.wikipedia.org/wiki/Endianness
 https://en.wikipedia.org/wiki/Euler_angles
 https://en.wikipedia.org/wiki/Exponential_backoff
 https://en.wikipedia.org/wiki/Facial_Action_Coding_System
