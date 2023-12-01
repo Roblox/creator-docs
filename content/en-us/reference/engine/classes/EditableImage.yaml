@@ -52,7 +52,8 @@ description: |
 code_samples: []
 inherits:
   - Instance
-tags: []
+tags:
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: EditableImage.Size
@@ -65,8 +66,8 @@ properties:
 
       Setting this property changes the **canvas** size of the editable image
       but does not resize the contents. If changing to a larger size, new pixels
-      will be set to an RGBA value of `[0, 0, 0, 0]`. If changing
-      to a smaller size, existing pixels will be cropped. Consider using
+      will be set to an RGBA value of `[0, 0, 0, 0]`. If changing to a smaller
+      size, existing pixels will be cropped. Consider using
       `Class.EditableImage:Resize()|Resize()` to update the contents while
       changing the size.
     code_samples: []
@@ -101,8 +102,8 @@ methods:
         type: Vector2
         default:
         summary: |
-          Bottom-right corner of the region to copy, exclusive. For example,
-          a max of `Class.EditableImage.Size` would end the subregion at the
+          Bottom-right corner of the region to copy, exclusive. For example, a
+          max of `Class.EditableImage.Size` would end the subregion at the
           bottom and right edges of the source image.
     returns:
       - type: EditableImage
@@ -153,7 +154,8 @@ methods:
         default:
         summary: |
           Center of the circle, relative to the top-left corner of the
-          `Class.EditableImage`. Positions outside the canvas bounds are allowed.
+          `Class.EditableImage`. Positions outside the canvas bounds are
+          allowed.
       - name: radius
         type: int
         default:
@@ -202,8 +204,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image should be blended
-          with the pixels of the added image.
+          How the pixels of the source image should be blended with the pixels
+          of the added image.
     returns:
       - type: void
         summary: ''

@@ -22,26 +22,34 @@ description: |
 
   #### Stable Vertex/Face IDs
 
-  Many `Class.EditableMesh` methods take **vertex** and **face** IDs. These
-  are represented as integers in Luau but they require some special handling.
-  The main difference is that IDs are stable and they remain the same even
-  if other parts of the mesh change. For example, if an `Class.EditableMesh`
-  has five vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`, the new
-  vertices will be `{1, 2, 3, 5}`.
+  Many `Class.EditableMesh` methods take **vertex** and **face** IDs. These are
+  represented as integers in Luau but they require some special handling. The
+  main difference is that IDs are stable and they remain the same even if other
+  parts of the mesh change. For example, if an `Class.EditableMesh` has five
+  vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`, the new vertices will be
+  `{1, 2, 3, 5}`.
 
-  Note that the IDs are not guaranteed to be in order and there may be holes in the numbering, so when iterating through vertices or faces, you should iterate through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()` or `Class.EditableMesh:GetTriangles()|GetTriangles()`.
+  Note that the IDs are not guaranteed to be in order and there may be holes in
+  the numbering, so when iterating through vertices or faces, you should iterate
+  through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
+  or `Class.EditableMesh:GetTriangles()|GetTriangles()`.
 
   #### Winding
 
-  Mesh faces have a front side and a back side. When drawing meshes, only the front of the faces are drawn by default, although you can change this by setting the mesh' `Class.MeshPart.DoubleSided|DoubleSided` property to `true`.
+  Mesh faces have a front side and a back side. When drawing meshes, only the
+  front of the faces are drawn by default, although you can change this by
+  setting the mesh' `Class.MeshPart.DoubleSided|DoubleSided` property to `true`.
 
-  The order of the vertices around the face determines whether you are looking at the front or the back. The front of the face is visible when the vertices go counterclockwise around it.
+  The order of the vertices around the face determines whether you are looking
+  at the front or the back. The front of the face is visible when the vertices
+  go counterclockwise around it.
 
   <img src="/assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 code_samples: []
 inherits:
   - DataModelMesh
-tags: []
+tags:
+  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
@@ -53,22 +61,22 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId0
-        type: int
+        type: int64
         default:
         summary: |
           ID of the first vertex of the triangle.
       - name: vertexId1
-        type: int
+        type: int64
         default:
         summary: |
           ID of the second vertex of the triangle.
       - name: vertexId2
-        type: int
+        type: int64
         default:
         summary: |
           ID of the third vertex of the triangle.
     returns:
-      - type: int
+      - type: int64
         summary: ''
     tags: []
     deprecation_message: ''
@@ -87,7 +95,7 @@ methods:
         summary: |
           Position in the mesh's local object space.
     returns:
-      - type: int
+      - type: int64
         summary: |
           Stable ID of the new vertex.
     tags: []
@@ -133,7 +141,7 @@ methods:
         summary: |
           Point position in the mesh's local object space.
     returns:
-      - type: int
+      - type: int64
         summary: |
           Closest stable vertex ID to the specified point in space.
     tags: []
@@ -144,7 +152,8 @@ methods:
     summary: |
       Finds all vertices within a specific sphere.
     description: |
-      Finds all vertices within a specific sphere and returns a list of stable vertex IDs.
+      Finds all vertices within a specific sphere and returns a list of stable
+      vertex IDs.
     code_samples: []
     parameters:
       - name: center
@@ -175,7 +184,7 @@ methods:
     code_samples: []
     parameters:
       - name: triangleId
-        type: int
+        type: int64
         default:
         summary: |
           Triangle ID around which to get adjacent triangles.
@@ -197,7 +206,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Vertex ID around which to get adjacent vertices.
@@ -217,7 +226,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable vertex ID for which to get the position.
@@ -237,7 +246,7 @@ methods:
     code_samples: []
     parameters:
       - name: triangleId
-        type: int
+        type: int64
         default:
         summary: |
           Stable triangle ID for which to get vertices.
@@ -272,7 +281,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Vertex for which to get UV coordinates.
@@ -292,7 +301,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Vertex for which to get the color.
@@ -312,7 +321,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Vertex for which to get the color alpha.
@@ -332,7 +341,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Vertex for which to get the normal.
@@ -362,9 +371,14 @@ methods:
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
-      Casts a ray and returns a point of intersection, triangle ID, and barycentric coordinates. The inputs and outputs of this method are in the mesh's local object space.
+      Casts a ray and returns a point of intersection, triangle ID, and
+      barycentric coordinates. The inputs and outputs of this method are in the
+      mesh's local object space.
 
-      A **barycentric coordinate** is a way of specifying a point within a triangle as a weighted combination of the 3 vertices of the triangle. This is useful as a general way of blending vertex attributes. See this method's code sample as an illustration.
+      A **barycentric coordinate** is a way of specifying a point within a
+      triangle as a weighted combination of the 3 vertices of the triangle. This
+      is useful as a general way of blending vertex attributes. See this
+      method's code sample as an illustration.
     code_samples:
       - EditableMesh-RaycastLocal
     parameters:
@@ -381,7 +395,8 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the point of intersection, triangle ID, and barycentric coordinates.
+          Tuple of the point of intersection, triangle ID, and barycentric
+          coordinates.
     tags: []
     deprecation_message: ''
     security: None
@@ -394,7 +409,7 @@ methods:
     code_samples: []
     parameters:
       - name: triangleId
-        type: int
+        type: int64
         default:
         summary: |
           ID of the triangle to remove.
@@ -413,7 +428,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           ID of the vertex to remove.
@@ -432,7 +447,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable ID of the vertex to position.
@@ -456,7 +471,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable ID of the vertex for which to set UV coordinates.
@@ -480,7 +495,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable ID of the vertex for which to set the color.
@@ -504,7 +519,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable ID of the vertex for which to set the color alpha.
@@ -528,7 +543,7 @@ methods:
     code_samples: []
     parameters:
       - name: vertexId
-        type: int
+        type: int64
         default:
         summary: |
           Stable ID of the vertex for which to set the normal.

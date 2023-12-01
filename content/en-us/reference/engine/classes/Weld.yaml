@@ -19,7 +19,7 @@ description: |
 
   While the weld is `Class.JointInstance.Active|Active`, it maintains the part
   positions such that:
-  
+
   `part1.CFrame * C1 == Part0.CFrame * C0`
 
   #### Root Part
@@ -30,10 +30,9 @@ description: |
 
   #### Directionality
 
-  Welds do not have any directionality. Imagine rigid joints forming
-  a tree, branching up from the root part such that all the parts up
-  the tree from the root will move and their welded "children" will
-  move with them.
+  Welds do not have any directionality. Imagine rigid joints forming a tree,
+  branching up from the root part such that all the parts up the tree from the
+  root will move and their welded "children" will move with them.
 code_samples:
 inherits:
   - JointInstance

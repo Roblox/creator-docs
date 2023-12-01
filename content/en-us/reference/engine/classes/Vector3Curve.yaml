@@ -3,14 +3,13 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Represents a 3D vector curve, grouping three `Class.FloatCurve`
-  instances.
+  Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.
 description: |
-  Represents a 3D vector curve, grouping three `Class.FloatCurve`
-  instances. Each child `Class.FloatCurve` can be accessed via the
-  `Class.Vector3Curve:X()`, `Class.Vector3Curve:Y()`, and `Class.Vector3Curve:Z()`
-  methods. The three axes can be sampled simultaneously via the method
-  `Class.Vector3Curve:GetValueAtTime()`.
+  Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.
+  Each child `Class.FloatCurve` can be accessed via the
+  `Class.Vector3Curve:X()`, `Class.Vector3Curve:Y()`, and
+  `Class.Vector3Curve:Z()` methods. The three axes can be sampled simultaneously
+  via the method `Class.Vector3Curve:GetValueAtTime()`.
 code_samples:
   - creating-a-vector3curve
 inherits:
@@ -21,12 +20,12 @@ properties: []
 methods:
   - name: Vector3Curve:GetValueAtTime
     summary: |
-      Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed time
-      argument.
+      Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
+      time argument.
     description: |
       Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
-      time argument as an array of three numbers. If a channel curve is
-      missing or no key is found in the curve, the channel is evaluated as `nil`.
+      time argument as an array of three numbers. If a channel curve is missing
+      or no key is found in the curve, the channel is evaluated as `nil`.
     code_samples:
     parameters:
       - name: time
