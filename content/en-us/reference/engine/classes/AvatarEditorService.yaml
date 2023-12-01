@@ -449,10 +449,10 @@ methods:
       ```lua
       [
           {
-            "AssetName": "string",
             "AssetId": 0,
-            "SerialNumber": 0,
             "AssetType" : "string",
+            "Created": "string",
+            "Name": "string",
           }
       ]
       ```

@@ -54,6 +54,10 @@ The following steps show how to set up the server using Guilded or Discord.
 
 After obtaining the third-party server URL, use it to [configure a webhook](../../cloud/webhooks/webhook-notifications.md#configuring-webhooks-on-creator-dashboard) on Creator Dashboard. make sure you perform the following settings:
 
+<Alert severity="info">
+Currently, only group owners can receive Right to Erasure requests for group-owned experiences. To implement the automation solution for a group-owned experience, make sure that the group owner configures the webhook.
+</Alert>
+
 - Add the Guilded or Discord server URL as the **Webhook URL**.
 - Include a custom **Secret**. Though a secret is optional for completing the configuration, you should include one to prevent bad actors from impersonating Roblox and deleting your data. For more information on the usage of a secret, see [Verifying Webhook Security](../../cloud/webhooks/webhook-notifications.md#verifying-webhook-security).
 - Select **Right to Erasure Request** under **Triggers**.
