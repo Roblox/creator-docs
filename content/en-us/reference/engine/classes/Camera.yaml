@@ -580,10 +580,10 @@ properties:
   - name: Camera.VRTiltAndRollEnabled
     summary: |
       Toggles whether to apply tilt and roll from the `Class.Camera.CFrame`
-      property, while the player is using a VR device.
+      property while the player is using a VR device.
     description: |
-      The VRTiltAndRollEnabled property toggles whether to apply tilt and
-      roll from the `Class.Camera.CFrame` property, while the player is
+      This property toggles whether to apply tilt and
+      roll from the `Class.Camera.CFrame` property while the player is
       using a VR device.
       
       To prevent motion sickness, the horizon should remain level. Tilting
