@@ -30,7 +30,7 @@ Remember that setting a part's Anchored property to **true** makes it stay in pl
 
 ## Inserting a Script
 
-Code in Roblox is written in a language called **[Luau](../../../luau/index.md)**, and it's stored and ran from scripts. You can put scripts in various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the code in the script when the part is loaded into the game.
+Code in Roblox is written in a language called [Luau](../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the game.
 
 1. Hover over the `DisappearingPlatform` part in the **Explorer** window and click the **+** button to insert a new script into the platform. Rename your new script as **Disappear**.
 
