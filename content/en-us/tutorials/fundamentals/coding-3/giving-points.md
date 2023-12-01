@@ -189,7 +189,7 @@ To loop through colors, the script will use a while =loop that changes the part'
    If the while true do loop is not at the bottom of the script, any code below it will never be run. Since the while loop doesn't stop, it'll keep running the loop instead of any code below it.
    </Alert>
 
-2. On your own, code a while true do loop that changes pointPart to the color variables you've created. Don't forget to use `wait()` between colors. When finished, check your code against the version below.
+2. On your own, code a while true do loop that changes pointPart to the color variables you've created. Don't forget to use `Library.task.wait()` between colors. When finished, check your code against the version below.
 
    ```lua
    -- Loops through 3 colors, waiting between each color
@@ -350,7 +350,7 @@ The particle effect will be the same color as the part when touched. Since the c
    particle.Parent = playerCharacter:WaitForChild("Head")
    ```
 
-4. Use `task.wait()` for a quick second, then destroy the particles.
+4. Use `Library.task.wait()` for a quick second, then destroy the particles.
 
    ```lua
    local particle = Instance.new("ParticleEmitter")

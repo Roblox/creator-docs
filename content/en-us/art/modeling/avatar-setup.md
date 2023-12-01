@@ -1,41 +1,43 @@
 ---
-title: Avatar Preview
-description: The Avatar Preview tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
+title: Avatar Setup
+description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-The **Avatar Preview** tool, accessible from the [Avatar](../studio/avatar-tab.md) tab, previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
+The **Avatar Setup** tool, accessible from the [Avatar](../studio/avatar-tab.md) tab, previews animations, clothing, accessories, and bodies, directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
 
-<img src="../assets/studio/general/Avatar-Tab-Avatar-Preview.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
+<img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
 <Alert severity="success">
 This feature is currently in beta and changes/upgrades should be anticipated. To use it, go to **Beta Features** and enable **UGC Bodies & Heads**.
 </Alert>
 
-## Selecting Avatar Rigs
+## Adding Avatars
 
-To select an existing avatar rig inside the place, such as one created through the [Rig Builder](../studio/rig-builder.md) tool:
+When importing your avatar assets into Studio using the [3D Importer](../../art/modeling/3d-importer.md) and selecting **Validate UGC Body**, the Avatar Setup tool opens automatically with your imported avatar character and any accompanying clothing and accessories.
+
+If you have an existing avatar rig inside the place, such as one created through the [Rig Builder](../studio/rig-builder.md) tool:
 
 1. Open the **Avatar Preview** tool.
 
-   <img src="../assets/studio/general/Avatar-Tab-Avatar-Preview.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
+   <img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
-1. Choose a rig in either of the following ways:
+2. Choose a rig in either of the following ways:
 
    1. Select an existing avatar rig in the 3D workspace or [Explorer](../studio/explorer.md) hierarchy.
 
       <Grid container spacing={2}>
       <Grid item>
-      <img src="../assets/studio/avatar-preview/Rig-Selected-3D-Workspace.jpg" width="350" alt="Rig selection panel in Avatar Preview tool" />
+      <img src="../assets/studio/avatar-setup/Rig-Selected-3D-Workspace.jpg" width="350" alt="Rig selection panel in Avatar Preview tool" />
       </Grid>
       <Grid item>
-      <img src="../assets/studio/avatar-preview/Rig-Selected-Explorer.png" width="320" alt="Rig selected in Explorer hierarchy" />
+      <img src="../assets/studio/avatar-setup/Rig-Selected-Explorer.png" width="320" alt="Rig selected in Explorer hierarchy" />
       </Grid>
       </Grid>
 
    2. Click the **Current Place** button inside the tool's window to view a selection panel of all rigs in the place.
 
       <figure>
-      <img src="../assets/studio/avatar-preview/Current-Place-Rigs.png" width="700" alt="Rig selection panel in Avatar Preview tool" />
+      <img src="../assets/studio/avatar-setup/Current-Place-Rigs.png" width="700" alt="Rig selection panel in Avatar Preview tool" />
       <figcaption>Rig selection panel in Avatar Preview tool</figcaption>
       </figure>
 
@@ -44,7 +46,7 @@ To select an existing avatar rig inside the place, such as one created through t
 Once an avatar is selected, four tabs appear on the left side of the window: [Check&nbsp;Body](#check-body), [Check&nbsp;Face](#check-face), [Test&nbsp;in&nbsp;Experience](#test-in-experience), and [Publish](#publish).
 
 <figure>
-<img src="../assets/studio/avatar-preview/General-Interface-Labeled.png" width="700" alt="Interface selector buttons labeled in Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/General-Interface-Labeled.png" width="700" alt="Interface selector buttons labeled in Avatar Preview tool" />
 </figure>
 
 ### Check Body
@@ -52,7 +54,7 @@ Once an avatar is selected, four tabs appear on the left side of the window: [Ch
 The **Check Body** interface contains tabs for testing **Animations**, **Clothing**, **Accessories**, and **Body**.&sup1; Clicking a subtab like **Shirts** or **Waist** reveals a selection column along the left side of the window for [equipping items](#equipping-items).
 
 <figure>
-<img src="../assets/studio/avatar-preview/Interface-Check-Body.jpg" width="700" alt="Accessories selector in Check Body interface of Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/Interface-Check-Body.jpg" width="700" alt="Accessories selector in Check Body interface of Avatar Preview tool" />
 </figure>
 
 <Alert severity="info">
@@ -69,11 +71,11 @@ Selected items are equipped on the avatar and are added to the "equipped" column
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/studio/avatar-preview/Equipped-Items.jpg" width="514" alt="List of equipped items in Avatar Preview tool" />
+    <img src="../assets/studio/avatar-setup/Equipped-Items.jpg" width="514" alt="List of equipped items in Avatar Preview tool" />
     <figcaption>Equipped items</figcaption>
   </figure>
   <figure>
-    <video controls src="../assets/studio/avatar-preview/Animation-Video.mp4" width="100%" alt="Video of avatar animating with various animations"></video>
+    <video controls src="../assets/studio/avatar-setup/Animation-Video.mp4" width="100%" alt="Video of avatar animating with various animations"></video>
     <figcaption>Animations playing on rig</figcaption>
   </figure>
 </GridContainer>
@@ -88,11 +90,11 @@ For layered accessory items such as **Shirts** or **Jackets**, dragging them up 
 
 <GridContainer numColumns="2">
 	<figure>
-    <img src="../assets/studio/avatar-preview/Layered-Clothing-Order-A.jpg" width="514" alt="Layered clothing ordered so that pants are over the jacket (jacket tucked into pants)" />
+    <img src="../assets/studio/avatar-setup/Layered-Clothing-Order-A.jpg" width="514" alt="Layered clothing ordered so that pants are over the jacket (jacket tucked into pants)" />
     <figcaption>Pants over jacket</figcaption>
   </figure>
 	<figure>
-    <img src="../assets/studio/avatar-preview/Layered-Clothing-Order-B.jpg" width="514" alt="Layered clothing ordered so that the jacket is over the pants" />
+    <img src="../assets/studio/avatar-setup/Layered-Clothing-Order-B.jpg" width="514" alt="Layered clothing ordered so that the jacket is over the pants" />
     <figcaption>Jacket over pants</figcaption>
   </figure>
 </GridContainer>
@@ -102,7 +104,7 @@ For layered accessory items such as **Shirts** or **Jackets**, dragging them up 
 The **Check Face** interface zooms into the face and allows you to animate between various facial poses. This interface only works for character heads which support [facial animation](../art/characters/facial-animation/index.md).
 
 <figure>
-<img src="../assets/studio/avatar-preview/Interface-Check-Face.jpg" width="700" alt="Check Face interface of Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/Interface-Check-Face.jpg" width="700" alt="Check Face interface of Avatar Preview tool" />
 </figure>
 
 <table>
@@ -146,18 +148,18 @@ From this interface, you can right‑click anywhere over the head preview and se
 
 ### Test in Experience
 
-The **Test in Experience** button starts playtesting the experience with the previewed avatar. It currently does not have any of the clothing you applied onto it, but eventually will.
+The **Test in Experience** button starts playtesting the experience with the previewed avatar.
 
 <figure>
-<img src="../assets/studio/avatar-preview/Interface-Test-In-Experience.jpg" width="700" alt="Test in Experience button indicated in Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/Interface-Test-In-Experience.jpg" width="700" alt="Test in Experience button indicated in Avatar Preview tool" />
 </figure>
 
 ### Publish
 
-The **Publish** button opens the publish asset dialog, with an option to distribute the avatar to the [Creator Marketplace](../production/publishing/creator-marketplace.md).
+The **Publish** button opens the publish asset dialog, with an option to upload the avatar and any accessory items to the [Creator Marketplace](../production/publishing/creator-marketplace.md).
 
 <figure>
-<img src="../assets/studio/avatar-preview/Interface-Publish.jpg" width="700" alt="Publish button indicated in Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/Interface-Publish.jpg" width="700" alt="Publish button indicated in Avatar Preview tool" />
 </figure>
 
 ## Adding Items
@@ -165,7 +167,7 @@ The **Publish** button opens the publish asset dialog, with an option to distrib
 The **add item** button allows you to add custom assets to the tool's palette. For example, you can select a hair [accessory](../art/accessories/index.md) in the [Explorer](../studio/explorer.md) or 3D workspace, click the button, and the accessory will be added to the **Hair** subsection of **Accessories**, as well as be equipped on the avatar.
 
 <figure>
-<img src="../assets/studio/avatar-preview/Add-Item-Button.jpg" width="700" alt="Add Item button indicated in Avatar Preview tool" />
+<img src="../assets/studio/avatar-setup/Add-Item-Button.jpg" width="700" alt="Add Item button indicated in Avatar Preview tool" />
 </figure>
 
 <Alert severity="info">
@@ -180,12 +182,12 @@ To add an item to the palette:
 
 1. Select a valid instance from the [Explorer](../studio/explorer.md) or 3D workspace.
 
-   <img src="../assets/studio/avatar-preview/Accessory-In-Explorer.png" width="320" alt="Accessory instance selected in Explorer hierarchy" />
+   <img src="../assets/studio/avatar-setup/Accessory-In-Explorer.png" width="320" alt="Accessory instance selected in Explorer hierarchy" />
 
 1. Click the **add item** button at the bottom of the selection column along the left side of the window.
 
-   <img src="../assets/studio/avatar-preview/Add-Item-Button.jpg" width="700" alt="Add Item button indicated in Avatar Preview tool" />
+   <img src="../assets/studio/avatar-setup/Add-Item-Button.jpg" width="700" alt="Add Item button indicated in Avatar Preview tool" />
 
    The item appears in the appropriate section and subsection of the [Check&nbsp;Body](#check-body) interface, for example **Accessories**&nbsp;&rarr; **Hair**, and is equipped on the avatar.
 
-   <img src="../assets/studio/avatar-preview/Accessory-In-Palette.jpg" width="700" alt="Accessory added to palette in Avatar Preview tool" />
+   <img src="../assets/studio/avatar-setup/Accessory-In-Palette.jpg" width="700" alt="Accessory added to palette in Avatar Preview tool" />

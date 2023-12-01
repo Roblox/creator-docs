@@ -1,45 +1,39 @@
 ---
 title: UI
-description: User Interfaces are graphical elements in your experience that users interact with.
+description: User interfaces are graphical elements in your experience that users interact with.
 ---
 
-You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in GUI [objects](#objects) and their [containers](#containers).
+You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in UI [objects](#objects). Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or within an [experience's 3D world](#in-experience-ui).
 
-## Containers
+## On-Screen UI
 
-Container objects such as [frames](#frames) hold and display UI elements. Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or within an [experience's 3D world](#in-experience-ui).
+[On-screen containers](../ui/on-screen-containers.md) hold UI [objects](#objects) that you want to display on a user's screen. All on-screen UI objects and code are stored and changed on the client.
 
-### Frames
+<img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
 
-Frames act as containers for other `Class.GuiObject|GuiObjects` such as [Labels](../ui/labels.md) or [Buttons](../ui/buttons.md). When you manipulate frames, you also manipulate the objects they contain.
+## In-Experience UI
 
-<img src="../assets/ui/container-frames/Frame-Example.jpg" width="80%" />
+[In-experience containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI [objects](#objects) that you want to display within your experience's 3D world.
 
-### On-Screen UI
-
-[On-screen UI container objects](../ui/on-screen-containers.md), such as [StarterGuis](../ui/on-screen-containers.md#startergui), [ScreenGuis](../ui/on-screen-containers.md#screengui), and [PlayerGuis](../ui/on-screen-containers.md#playergui), `Class.GuiObject|GuiObjects` that you want to display on a user's screen.
-
-<img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="80%" />
-
-### In-Experience UI
-
-[In-experience UI container objects](../ui/in-experience-containers.md), such as [SurfaceGuis](../ui/in-experience-containers.md#surfacegui) and [BillboardGuis](../ui/in-experience-containers.md#billboardgui), hold `Class.GuiObject|GuiObjects` that you want to display within an experience's 3D world.
-
-<img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="80%" />
+<img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="800" />
 
 ## Objects
 
-Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common `Class.GuiObject|GuiObjects` are [frames](#frames), [labels](#labels), [buttons](#buttons-and-text-input), and [text input](#buttons-and-text-input) objects.
+Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common are [frames](#frames), [labels](#labels), [buttons](#buttons-and-text-input), and [text input](#buttons-and-text-input) objects.
 
-<img width="80%" src="../assets/ui/container-frames/Frame-Example.jpg" />
+Using the `Class.GuiObject.Position|Position`, `Class.GuiObject.Size|Size`, `Class.GuiObject.AnchorPoint|AnchorPoint`, and `Class.GuiObject.ZIndex|ZIndex` properties, you have complete control on how to [position](../ui/positioning-and-sizing.md#position), [size](../ui/positioning-and-sizing.md#size), and [layer](../ui/positioning-and-sizing.md#zindex) `Class.GuiObject|GuiObjects`. You can also use [tweening](../ui/animation.md) to transition a `Class.GuiObject` smoothly from one state to another and provide dynamic visual feedback.
 
-Using the `Class.GuiObject.Position|Position`, `Class.GuiObject.Size|Size`, `Class.GuiObject.AnchorPoint|AnchorPoint`, and `Class.GuiObject.ZIndex|ZIndex` properties, you have complete control on how to [position](../ui/positioning-and-sizing.md#position), [size](../ui/positioning-and-sizing.md#size), and [order](../ui/positioning-and-sizing.md#zindex) `Class.GuiObject|GuiObjects`. You can also use [tweening](../ui/animation.md) to transition a `Class.GuiObject` smoothly from one state to another and provide dynamic visual feedback.
+### Frames
+
+[Frames](../ui/frames.md) act as containers for other `Class.GuiObject|GuiObjects` such as [Labels](../ui/labels.md) or [Buttons](../ui/buttons.md). When you manipulate frames, you also manipulate the objects they contain.
+
+<img src="../assets/ui/container-frames/Frame-Example.jpg" width="800" />
 
 ### Labels
 
 Labels allow you to display customizable [text](../ui/labels.md) and [images](../ui/labels.md).
 
-<img src="../assets/ui/labels/Labels-Example.jpg" width="80%" />
+<img src="../assets/ui/labels/Labels-Example.jpg" width="800" />
 
 ### Buttons and Text Input
 
