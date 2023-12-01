@@ -805,6 +805,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/EchoSoundEffect.yaml
         ignoreTranslation: true
+      - title: EditableImage
+        path: /reference/engine/classes/EditableImage
+        type: engineapi
+        source: /reference/engine/classes/EditableImage.yaml
+        ignoreTranslation: true
+      - title: EditableMesh
+        path: /reference/engine/classes/EditableMesh
+        type: engineapi
+        source: /reference/engine/classes/EditableMesh.yaml
+        ignoreTranslation: true
       - title: EmotesPages
         path: /reference/engine/classes/EmotesPages
         type: engineapi
@@ -3223,6 +3233,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AssetTypeVerification.yaml
         ignoreTranslation: true
+      - title: AudioApiRollout
+        path: /reference/engine/enums/AudioApiRollout
+        type: engineapi
+        source: /reference/engine/enums/AudioApiRollout.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi
@@ -3397,6 +3412,11 @@ navigation:
         path: /reference/engine/enums/CenterDialogType
         type: engineapi
         source: /reference/engine/enums/CenterDialogType.yaml
+        ignoreTranslation: true
+      - title: CharacterControlMode
+        path: /reference/engine/enums/CharacterControlMode
+        type: engineapi
+        source: /reference/engine/enums/CharacterControlMode.yaml
         ignoreTranslation: true
       - title: ChatCallbackType
         path: /reference/engine/enums/ChatCallbackType
@@ -4218,6 +4238,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerActions.yaml
         ignoreTranslation: true
+      - title: PlayerCharacterDestroyBehavior
+        path: /reference/engine/enums/PlayerCharacterDestroyBehavior
+        type: engineapi
+        source: /reference/engine/enums/PlayerCharacterDestroyBehavior.yaml
+        ignoreTranslation: true
       - title: PlayerChatType
         path: /reference/engine/enums/PlayerChatType
         type: engineapi
@@ -4708,6 +4733,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/TextTruncate.yaml
         ignoreTranslation: true
+      - title: TextureGenerationMeshHandlerUnwrapMode
+        path: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode
+        type: engineapi
+        source: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode.yaml
+        ignoreTranslation: true
       - title: TextureMode
         path: /reference/engine/enums/TextureMode
         type: engineapi
@@ -4990,6 +5020,11 @@ navigation:
         path: /reference/engine/libraries/bit32
         type: engineapi
         source: /reference/engine/libraries/bit32.yaml
+        ignoreTranslation: true
+      - title: buffer
+        path: /reference/engine/libraries/buffer
+        type: engineapi
+        source: /reference/engine/libraries/buffer.yaml
         ignoreTranslation: true
       - title: coroutine
         path: /reference/engine/libraries/coroutine

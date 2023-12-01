@@ -838,7 +838,7 @@ methods:
       	-- Fired from the CoreGui
       	---------------------------
       	"ToggleVisibility", -- Fired when the CoreGui chat button is pressed.
-      	"SetVisible", -- Fired when the CoreGui wants to directly change the visiblity state of the chat window.
+      	"SetVisible", -- Fired when the CoreGui wants to directly change the visibility state of the chat window.
       	"FocusChatBar", -- Fired when the CoreGui wants to capture the Chatbar's Focus.
       	"TopbarEnabledChanged", -- Fired when the visibility of the Topbar is changed.
       	"SpecialKeyPressed", -- Fired when the reserved ChatHotkey is pressed.
@@ -902,7 +902,7 @@ methods:
       		if tries == maxAttempts then
       			error("Error calling SetCore CoreGuiChatConnections: " .. result)
       		else
-      			wait()
+      			task.wait()
       		end
       	end
       end

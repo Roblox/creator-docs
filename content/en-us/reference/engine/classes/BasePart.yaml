@@ -675,6 +675,8 @@ properties:
       name of the part's collision group (maximum of 100 characters). Parts
       start off in the default group whose name is `"Default"`. This value
       cannot be empty.
+
+      Although this property itself is non-replicated, the engine internally replicates the value through another private property to solve backward compatibility issues.
     code_samples:
       - PhysicsService-RegisterCollisionGroup
     type: string
@@ -2078,7 +2080,7 @@ properties:
       `Class.Workspace.Gravity` (by default, -196.2 studs per second per
       second).
 
-      Setting the Velocity of an part that is `Class.BasePart.Anchored` will
+      Setting the Velocity of a part that is `Class.BasePart.Anchored` will
       cause it to act like a conveyor belt. Any object that touches the part
       will begin to move in accordance with the Velocity.
 
@@ -2123,6 +2125,26 @@ properties:
       can_load: true
       can_save: false
 methods:
+  - name: BasePart:AngularAccelerationToTorque
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: angAcceleration
+        type: Vector3
+        default:
+        summary: ''
+      - name: angVelocity
+        type: Vector3
+        default: 0, 0, 0
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: BasePart:ApplyAngularImpulse
     summary: |
       Apply an angular impulse to the assembly.
@@ -2643,6 +2665,26 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: BasePart:TorqueToAngularAcceleration
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: torque
+        type: Vector3
+        default:
+        summary: ''
+      - name: angVelocity
+        type: Vector3
+        default: 0, 0, 0
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: BasePart:breakJoints
     summary: ''
     description: ''
@@ -2905,7 +2947,7 @@ methods:
         `Class.BasePart.Color|Color` property of each of its parts. To change
         the entire union to a specific color, set its
         `Class.PartOperation.UsePartColor|UsePartColor` property to `true`.
-      - If an union operation would result in a part with more than 20,000
+      - If a union operation would result in a part with more than 20,000
         triangles, it will be simplified to 20,000 triangles.
     code_samples:
       - PartOperation-UnionAsync

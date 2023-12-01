@@ -2,7 +2,9 @@ name: ChorusSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Makes audio more voluminous by simulating multiple voices playing the same
+  part.
 description: |
   A ChorusSoundEffect simulates the effect of multiple vocals or instruments
   playing the same part. It does this by taking the original sound and

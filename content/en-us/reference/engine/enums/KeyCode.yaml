@@ -1125,7 +1125,7 @@ items:
     deprecation_message: ''
   - name: KeypadDivide
     summary: |
-      The `` key on the keypad cluster.
+      The `/` key on the keypad cluster.
     value: 267
     tags: []
     deprecation_message: ''

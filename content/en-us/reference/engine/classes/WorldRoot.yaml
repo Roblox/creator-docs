@@ -107,25 +107,25 @@ methods:
     thread_safety: Safe
   - name: WorldRoot:BulkMoveTo
     summary: |
-      Moves a table of `Class.Part|parts` to `Datatype.CFrame|CFrames` in a
-      table of CFrames, without firing property changed events.
+      Moves a table of `Class.BasePart|BaseParts` to a table of `Datatype.CFrame|CFrames`.
     description: |
-      **Warning:** You should only use this function if you are sure that part
-      movement is a bottleneck in your code, simply setting the CFrame property
-      of the individual parts / welded models you want to move will be fast
-      enough in the vast majority of cases.
+      This function moves a table of `Class.BasePart|BaseParts` to a table of
+      `Datatype.CFrame|CFrames` without necessarily firing the default property
+      `Class.Instance.Changed|Changed` events. This provides a very fast way to move
+      large numbers of parts, as you don't have to pay the cost of separate property sets
+      for each individual part.
 
-      This function moves a table of parts to the location specified in a table
-      of `Datatype.CFrame|CFrames`. This makes it a very fast way to move large
-      numbers of parts, as you don't have to pay the cost of separate property
-      sets for each individual part.
+      The third argument allows you to further optimize the movement
+      operation. By default, the `Class.Instance.Changed|Changed` event of each part
+      fires for `Class.BasePart.Position|Position`, `Class.BasePart.Orientation|Orientation`,
+      and `Class.BasePart.CFrame|CFrame`. However, if you specify
+      `Enum.BulkMoveMode|FireCFrameChanged` as the third argument, only the
+      `Class.Instance.Changed|Changed` event for the `Class.BasePart.CFrame|CFrame` property
+      will fire.
 
-      The third argument of BulkMoveTo allows you to further speed up movement
-      of the parts by specifying the `Class.BasePart.Position|Position` and
-      `Class.BasePart.Orientation|Orientation`. Changed events should not be
-      fired on the parts. If you specify FireCFrameChanged as the BulkMoveMode
-      then only CFrame.Changed be fire, rather than changed firing for Position,
-      Orientation, and CFrame like it normally does.
+      Note that you should only use this function if you're sure that part
+      movement is a bottleneck in your code. Simply setting the `Class.BasePart.CFrame|CFrame`
+      property of individual parts and welded models is fast enough in the majority of cases.
     code_samples:
     parameters:
       - name: partList
@@ -617,9 +617,9 @@ methods:
       physics of a running game.
 
       **Translate stiffness** is a number between 0 and 1 specifying how
-      agressively to match the part's position to the position part of the
+      aggressively to match the part's position to the position part of the
       target CFrame. **Rotate stiffness** is a number between 0 and 1 specifying
-      how agresively to match the part's rotation to to the rotation part of the
+      how aggressively to match the part's rotation to the rotation part of the
       target CFrame.
 
       For example:
@@ -655,9 +655,8 @@ methods:
         type: float
         default: 0.5
         summary: |
-          A number between 0 and 1 specifying how aggresively to match the
-          part's rotation to to the rotation part of the target
-          `Datatype.CFrame`.
+          A number between 0 and 1 specifying how aggressively to match the
+          part's rotation to the rotation part of the target `Datatype.CFrame`.
       - name: collisionsMode
         type: IKCollisionsMode
         default: OtherMechanismsAnchored
@@ -845,6 +844,30 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+  - name: WorldRoot:Shapecast
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+      - name: params
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: WorldRoot:Spherecast
     summary: |
       Casts a spherical shape in a given direction and returns a

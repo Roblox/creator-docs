@@ -1,0 +1,404 @@
+name: EditableImage
+type: class
+category:
+memory_category: Instances
+summary: |
+  Instance which allows for the runtime creation and manipulation of images.
+description: |
+  `Class.EditableImage` allows for the runtime creation and manipulation of
+  images. It can be created from an existing image using
+  `Class.AssetService:CreateEditableImageAsync()`, or a blank
+  `Class.EditableImage` can be created with `Datatype.Instance.new()`.
+  `Class.EditableImage` overrides the image/texture displayed when parented to
+  certain objects as follows:
+
+  <table size="small">
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Overridden</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Class.MeshPart</code></td>
+      <td><code>Class.MeshPart.TextureID</code></td>
+    </tr>
+    <tr>
+      <td><code>Class.ImageLabel</code></td>
+      <td><code>Class.ImageLabel.Image</code></td>
+    </tr>
+    <tr>
+      <td><code>Class.ImageButton</code></td>
+      <td><code>Class.ImageButton.Image</code></td>
+    </tr>
+    <tr>
+      <td><code>Class.Decal</code></td>
+      <td><code>Class.Decal.Texture</code></td>
+    </tr>
+  </tbody>
+  </table>
+
+  The `Class.EditableImage` coordinate system is relative to the top left of the
+  image:
+
+  - Top-left: `(0, 0)`
+  - Bottom-right: `(Size.X - 1, Size.Y - 1)`
+
+  When publishing an object via `Class.AssetService:PromptCreateAssetAsync()`
+  that has a property overridden by a child `Class.EditableImage`, the editable
+  image will be published as an image and the overridden property will be set to
+  the new asset ID.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: EditableImage.Size
+    summary: |
+      Size of the `Class.EditableImage` in pixels.
+    description: |
+      Size of the `Class.EditableImage` in pixels. The maximum size is
+      1024&times;1024 and attempting to set this property to a larger size will
+      cause it to be clamped at 1024.
+
+      Setting this property changes the **canvas** size of the editable image
+      but does not resize the contents. If changing to a larger size, new pixels
+      will be set to an RGBA value of `[0, 0, 0, 0]`. If changing to a smaller
+      size, existing pixels will be cropped. Consider using
+      `Class.EditableImage:Resize()|Resize()` to update the contents while
+      changing the size.
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: EditableImage:Copy
+    summary: |
+      Copies a subregion of the `Class.EditableImage` to a new
+      `Class.EditableImage`.
+    description: |
+      Copies a subregion of the `Class.EditableImage` to a new
+      `Class.EditableImage`.
+    code_samples: []
+    parameters:
+      - name: min
+        type: Vector2
+        default:
+        summary: |
+          Top-left corner of the region to copy, with `(0, 0)` being the
+          top-left corner of the source image.
+      - name: max
+        type: Vector2
+        default:
+        summary: |
+          Bottom-right corner of the region to copy, exclusive. For example, a
+          max of `Class.EditableImage.Size` would end the subregion at the
+          bottom and right edges of the source image.
+    returns:
+      - type: EditableImage
+        summary: |
+          A new `Class.EditableImage` containing the specified subregion.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:Crop
+    summary: |
+      Crops the `Class.EditableImage` to the specified subregion.
+    description: |
+      Crops the `Class.EditableImage` to the specified subregion.
+    code_samples: []
+    parameters:
+      - name: min
+        type: Vector2
+        default:
+        summary: |
+          Top-left corner of the region to crop to, with `(0, 0)` being the
+          top-left corner of the source image.
+      - name: max
+        type: Vector2
+        default:
+        summary: |
+          Bottom-right corner of the region to crop to, exclusive. For example,
+          a max of `Class.EditableImage.Size` would end the subregion at the
+          bottom and right edges of the source image.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:DrawCircle
+    summary: |
+      Draws a circle at the specified point.
+    description: |
+      Draws a circle at the specified point on the `Class.EditableImage`. If the
+      circle is semi-transparent, it will be blended with the pixels behind it
+      using source over blending.
+    code_samples: []
+    parameters:
+      - name: center
+        type: Vector2
+        default:
+        summary: |
+          Center of the circle, relative to the top-left corner of the
+          `Class.EditableImage`. Positions outside the canvas bounds are
+          allowed.
+      - name: radius
+        type: int
+        default:
+        summary: |
+          Radius of the circle in pixels.
+      - name: color
+        type: Color3
+        default:
+        summary: |
+          Color of the circle.
+      - name: transparency
+        type: float
+        default:
+        summary: |
+          Transparency of the circle with 0 being fully opaque and 1 being fully
+          transparent.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:DrawImage
+    summary: |
+      Draws another `Class.EditableImage` into this `Class.EditableImage` at the
+      given position.
+    description: |
+      Draws another `Class.EditableImage` into this `Class.EditableImage` at the
+      given position. Positions outside the canvas bounds are allowed such that
+      only part of the new image is drawn.
+    code_samples: []
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: |
+          Position at which the top-left corner of the added image will be
+          drawn.
+      - name: image
+        type: EditableImage
+        default:
+        summary: |
+          The `Class.EditableImage` to draw into this `Class.EditableImage`.
+      - name: combineType
+        type: ImageCombineType
+        default:
+        summary: |
+          How the pixels of the source image should be blended with the pixels
+          of the added image.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:DrawLine
+    summary: |
+      Draws a line between two provided points.
+    description: |
+      Draws an anti-aliased line on the `Class.EditableImage` one pixel thick
+      between the two provided points.
+    code_samples: []
+    parameters:
+      - name: p1
+        type: Vector2
+        default:
+        summary: |
+          Start point of the line.
+      - name: p2
+        type: Vector2
+        default:
+        summary: |
+          End point of the line.
+      - name: color
+        type: Color3
+        default:
+        summary: |
+          Color of the line.
+      - name: transparency
+        type: float
+        default:
+        summary: |
+          Transparency of the line.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:DrawRectangle
+    summary: |
+      Draws a rectangle of the given size at the given top-left position.
+    description: |
+      Draws a rectangle on the `Class.EditableImage` of the given size at the
+      given top-left position.
+    code_samples: []
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: |
+          Position of the top-left of the rectangle. Unlike other drawing
+          methods, this cannot be outside the canvas bounds of the
+          `Class.EditableImage`.
+      - name: size
+        type: Vector2
+        default:
+        summary: |
+          Size of the rectangle to draw, in pixels.
+      - name: color
+        type: Color3
+        default:
+        summary: |
+          Color of the rectangle.
+      - name: transparency
+        type: float
+        default:
+        summary: |
+          Transparency of the rectangle.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:ReadPixels
+    summary: |
+      Reads a rectangular region of pixels.
+    description: |
+      Reads a rectangular region of pixels. The pixels will be returned as a
+      flat array where each pixel is represented by four numbers between 0 and 1
+      (red, green, blue, and alpha respectively). Note that this method uses
+      alpha instead of transparency, unlike the `Class.EditableImage` drawing
+      methods.
+    code_samples:
+      - EditableImage-ReadPixels1
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: |
+          Top-left corner of the rectangular region of pixels to read.
+      - name: size
+        type: Vector2
+        default:
+        summary: |
+          Size of the rectangular region of pixels to read.
+    returns:
+      - type: Array
+        summary: |
+          Flat array where each pixel is represented by four numbers between 0
+          and 1 (red, green, blue, and alpha respectively). The length of the
+          array can be calculated as `Size.X * Size.Y * 4`.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: EditableImage:Resize
+    summary: |
+      Resizes the contents and canvas.
+    description: |
+      Resizes the contents and canvas of the `Class.EditableImage` using
+      bilinear interpolation. Max allowed size is 1024&times;1024.
+    code_samples: []
+    parameters:
+      - name: size
+        type: Vector2
+        default:
+        summary: |
+          New size of the `Class.EditableImage`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:Rotate
+    summary: |
+      Rotates the image around its center.
+    description: |
+      Rotates the `Class.EditableImage` around its center using bilinear
+      interpolation.
+    code_samples: []
+    parameters:
+      - name: degrees
+        type: float
+        default:
+        summary: |
+          Degrees to rotate the image.
+      - name: changeSize
+        type: bool
+        default:
+        summary: |
+          Whether the size of the canvas should be updated.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableImage:WritePixels
+    summary: |
+      Writes a rectangular region of pixels into the image.
+    description: |
+      Writes a rectangular region of pixels into the `Class.EditableImage`. The
+      pixels are provided as a flat array where each pixel is represented by
+      four numbers between 0 and 1 (red, green, blue, and alpha respectively).
+      Note that this method uses alpha instead of transparency, unlike other
+      `Class.EditableImage` drawing methods.
+    code_samples:
+      - EditableImage-ReadPixelsWritePixels1
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: |
+          Top-left corner of the rectangular region to draw the pixels into.
+      - name: size
+        type: Vector2
+        default:
+        summary: |
+          Size of the rectangular region of pixels to write.
+      - name: pixels
+        type: Array
+        default:
+        summary: |
+          Flat array where each pixel is represented by four numbers between 0
+          and 1 (red, green, blue, and alpha respectively). The length of the
+          array should be `Size.X * Size.Y * 4`.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

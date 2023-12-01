@@ -71,8 +71,8 @@ properties:
       aerodynamic force if `Class.Workspace.FluidForces` is
       `Enum.FluidForces|Experimental`. The default corresponds to realistic sea
       level air density at standard temperature and pressure. Air density decays
-      as the **Y** altitude increases, reaching 5% of of its ground level value
-      at 100,000 studs. Below **Y** of 0, the air density is fixed at the input
+      as the **Y** altitude increases, reaching 5% of its ground level value at
+      100,000 studs. Below **Y** of 0, the air density is fixed at the input
       value.
     code_samples: []
     type: float
@@ -392,8 +392,13 @@ properties:
       can_load: true
       can_save: true
   - name: Workspace.IKControlConstraintSupport
-    summary: ''
-    description: ''
+    summary: |
+      Enables support for constraints for IKControls. If disabled, IKControls
+      ignore physics constraints.
+    description: |
+      Enables support for constraints for IKControls. The `Default` value is the
+      same as `Enabled`. If disabled, IKControls ignore physics constraints. See
+      `Class.IKControl` for additional details.
     code_samples: []
     type: IKControlConstraintSupport
     tags:
@@ -428,7 +433,7 @@ properties:
       MeshParts.
     description: |
       Sets whether character Heads and Accessories should be downloaded as
-      `Class.MeshPart`s. The "Default" value is the same as "Enabled". If this
+      `Class.MeshPart`s. The `Default` value is the same as `Enabled`. If this
       feature is enabled, built-in avatars will use `Class.MeshPart`s for the
       character's Head and Accessories.
     code_samples:
@@ -498,6 +503,22 @@ properties:
       will default to the highest simulation rate for stability.
     code_samples:
     type: PhysicsSteppingMethod
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.PlayerCharacterDestroyBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PlayerCharacterDestroyBehavior
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -845,7 +866,7 @@ methods:
       In order to ensure good performance, Roblox sets `BaseParts` in which
       physics are not being applied to a 'sleeping' state. `Class.BasePart`s
       with `Class.BasePart.Anchored` set to true, for example, will always be
-      sleeping as physics does not apply to them. When a force is applied to an
+      sleeping as physics doesn't apply to them. When a force is applied to a
       non anchored `Class.BasePart`, an 'awake' state will be applied. Whilst a
       `Class.BasePart` is awake the Roblox physics engine will perform
       continuous calculations to ensure physical forces interact correctly with
@@ -899,7 +920,7 @@ methods:
       while true do
       	i = i + 1
       	if i % 5 == 0 then
-      		wait()
+      		task.wait()
       	end
       	local part = Instance.new("Part", workspace)
       end

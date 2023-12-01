@@ -376,10 +376,10 @@ properties:
 
       ```lua
       -- Wait for default camera/control scripts to load
-      wait(5)
+      task.wait(5)
 
       -- Declare and initialize objects
-      local camera = game.Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
       local part = Instance.new("Part")
       local billboard = Instance.new("BillboardGui")
       local label = Instance.new("TextLabel")
@@ -395,23 +395,24 @@ properties:
       billboard.MaxDistance = 10
       billboard.Adornee = part
       billboard.AlwaysOnTop = true
-      billboard.Size = UDim2.new(0, 50, 0, 50)
+      billboard.Size = UDim2.fromOffset(50, 50)
 
       -- Set up label
-      label.Size = UDim2.new(1, 0, 1, 0)
+      label.Size = UDim2.fromScale(1, 1)
 
-      -- Set partents of objects
+      -- Set parents of objects
       label.Parent = billboard
       billboard.Parent = part
-      part.Parent = game.Workspace
+      part.Parent = workspace
 
       -- Move camera next to part. Wait a bit and then move camera
       local cameraPosition0 = part.Position + Vector3.new(0, 0, 10)
       local cameraPosition1 = part.Position + Vector3.new(0, 0, 20)
-      camera.CFrame = CFrame.new(cameraPosition0, part.Position)
+      camera.CFrame = CFrame.lookAt(cameraPosition0, part.Position)
+
       -- Contents of billboard will be visible here
-      wait(2)
-      camera.CFrame = CFrame.new(cameraPosition1, part.Position)
+      task.wait(2)
+      camera.CFrame = CFrame.lookAt(cameraPosition1, part.Position)
       -- Contents of billboard will no longer be visible (outside MaxDistance)
       ```
     code_samples:

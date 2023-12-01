@@ -38,6 +38,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: VoiceChatService.UseAudioApi
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioApiRollout
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
@@ -45,9 +61,8 @@ methods:
     description: |
       Returns whether or not the given user has voice enabled. On the
       client-side, this can only be used to check the voice status of the local
-      player.
-
-      This function is not yet implemented server-side.
+      player. On the server-side, this can only check the voice status for
+      players in that server.
 
       This function can throw an error if the HTTP call fails.
 

@@ -135,7 +135,7 @@ methods:
     summary: |
       Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
     description: |
-      Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
+      Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
       not yield. The result can be retrieved by listening to the
       `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
     code_samples:
@@ -449,10 +449,10 @@ methods:
       ```lua
       [
           {
-            "AssetName": "string",
             "AssetId": 0,
-            "SerialNumber": 0,
             "AssetType" : "string",
+            "Created": "string",
+            "Name": "string",
           }
       ]
       ```

@@ -5,17 +5,17 @@ memory_category: Instances
 summary: |
   Provides haptic feedback to some gamepad controllers.
 description: |
-  Modern controllers have motors built in to provide haptic feedback. Adding
-  rumbles and vibrations can greatly enhance a game's experience and provide
-  subtle feedback that is hard to convey through visuals or audio.
+  Modern controllers and devices have motors built in to provide haptic
+  feedback. Adding rumbles and vibrations can provide subtle feedback that is
+  hard to convey through visuals or audio.
 
-  We support haptics for the following devices:
+  Roblox supports haptics for the following devices:
 
   - Android and iOS phones supporting haptics including most iPhone, Pixel, and
     Samsung Galaxy devices
-  - Playstation gamepads
-  - Quest Touch controller
+  - PlayStation gamepads
   - Xbox gamepads
+  - Quest Touch controller
 code_samples:
 inherits:
   - Instance
@@ -119,6 +119,8 @@ methods:
     description: |
       Sets the vibration intensity of the specified
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
+      Note that almost all use cases specify `Gamepad1` as the
+      `Class.InputObject.UserInputType|UserInputType`.
     code_samples:
       - HapticService-SetMotor1
     parameters:
