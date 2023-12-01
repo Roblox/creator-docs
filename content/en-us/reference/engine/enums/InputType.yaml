@@ -5,10 +5,15 @@ summary: |
 description: |
   The InputType Enum controls the SurfaceInputs of `Class.Part`. Several
   parameters here are left-overs from 2005, before Roblox was a multiplayer
-  game, and have no known functionality.
+  game, and are used by `Class.Part.BackSurfaceInput`,
+  `Class.Part.BottomSurfaceInput`, `Class.Part.FrontSurfaceInput`,
+  `Class.Part.LeftSurfaceInput`, `Class.Part.RightSurfaceInput`,
+  `Class.Part.TopSurfaceInput`.
 code_samples:
 tags: []
-deprecation_message: ''
+deprecation_message: |
+  This enum is deprecated as it is used by deprecated methods. It should not
+  be used in new work.
 items:
   - name: NoInput
     summary: |
