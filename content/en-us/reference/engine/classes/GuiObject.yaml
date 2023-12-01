@@ -249,8 +249,8 @@ properties:
       If you set a UI element's border and background colors to the same color,
       you will be unable to distinguish the two.
 
-      Other properties that determine the visual properties of the
-      border include `Class.GuiObject.BorderSizePixel` and
+      Other properties that determine the visual properties of the border
+      include `Class.GuiObject.BorderSizePixel` and
       `Class.GuiObject.BackgroundTransparency`.
 
       Note that you will not be able to see an element's border if its
@@ -1548,7 +1548,7 @@ events:
       element, you can use the `Class.GuiObject.SelectionLost` event.
 
       When a GUI gains selection focus, the value of the
-      `Class.GuiService.SelectionObject|SelectionObject` property also changes
+      `Class.GuiService.SelectedObject|SelectedObject` property also changes
       to the that gains selection. To determine which GUI gained selection,
       check the value of this property.
     code_samples:
