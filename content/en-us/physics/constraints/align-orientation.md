@@ -17,22 +17,18 @@ By default, the constraint only applies torque to `Class.Constraint.Attachment0|
 
 ## Affected Axes
 
-The axes affected by torque are controlled through the constraint's `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` property. If false (default), the constraint will apply torque about all 3&nbsp;axes to achieve alignment. If true, torque will only occur when the primary axes (visually represented by the upward-pointing arrows) become misaligned.
+The axes affected by torque are controlled through the constraint's `Class.AlignOrientation.AlignType|AlignType` property. When set to `Enum.AlignType|PrimaryAxisParallel`, `Enum.AlignType|PrimaryAxisPerpendicular` or `Enum.AlignType|PrimaryAxisLookAt`, torque will only occur when the primary axes become misaligned. Otherwise, the constraint will apply torque about all 3 axes to achieve alignment.
 
 <GridContainer numColumns="2">
   <figure>
-    <video controls src="../../assets/physics/constraints/AlignOrientation-PrimaryAxisOnly-False.mp4" alt="Video showing PrimaryAxisOnly set to false"></video>
-    <figcaption>PrimaryAxisOnly = **false**</figcaption>
+    <video controls src="../../assets/physics/constraints/AlignOrientation-AlignType-AllAxes.mp4" alt="Video showing AlignType set to AllAxes"></video>
+    <figcaption>AlignType = **AllAxes**</figcaption>
   </figure>
   <figure>
-    <video controls src="../../assets/physics/constraints/AlignOrientation-PrimaryAxisOnly-True.mp4" alt="Video showing PrimaryAxisOnly set to true"></video>
-    <figcaption>PrimaryAxisOnly = **true**</figcaption>
+    <video controls src="../../assets/physics/constraints/AlignOrientation-AlignType-PrimaryAxisParallel.mp4" alt="Video showing AlignType set to PrimaryAxisParallel"></video>
+    <figcaption>AlignType = **PrimaryAxisParallel**</figcaption>
   </figure>
 </GridContainer>
-
-<Alert severity="info">
-Enabling `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` also enables the `Class.AlignOrientation.AlignType|AlignType` property which specifies the desired relationship between the primary axes of `Class.Constraint.Attachment0|Attachment0` and the goal. Options are either **Parallel** or **Perpendicular** and the constraint will attempt to maintain the specified relationship by applying forces within two parallel or perpendicular axes, respectively.
-</Alert>
 
 ## Reactionary Torque
 

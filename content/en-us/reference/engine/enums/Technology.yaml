@@ -7,46 +7,44 @@ summary: |
 description: |
   The Technology enum represents the different lighting systems available for
   rendering the 3D world. It is used by the `Class.Lighting.Technology`
-  property.
+  property. See
+  [Lighting Technology](../../../environment/lighting.md#technology) for
+  detailed descriptions and visual effects of each option.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: Legacy
     summary: |
-      Lighting technology that predates Future-Is-Bright. It is no longer
-      available.
+      Legacy lighting technology that is no longer available. Don't use.
     value: 0
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Voxel
     summary: |
-      Future-Is-Bright lighting features. Shadows are created using a 4x4x4
-      voxel map.
-
-      ![Voxel](/assets/legacy/Technology.Voxel.jpg)
+      Uses a 4x4x4 voxel map for light and shadow calculation.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Compatibility
     summary: |
-      An approximation of Legacy rendering using newer Future is Bright
-      technology.
+      Simulates the deprecated legacy technology using the Voxel system. Not
+      recommended.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ShadowMap
     summary: |
-      Future-Is-Bright lighting features. Features crisp shadows.
-
-      ![ShadowMap](/assets/legacy/Technology.ShadowMap.jpg)
+      Features shadow mapping that produces more realistic and crisp shadows
+      from sunlight or directional light sources.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Future
     summary: |
-      Latest Future-Is-Bright lighting features.
+      Features the most advanced technology for high-fidelity lighting and
+      shadows.
     value: 4
     tags: []
     deprecation_message: ''

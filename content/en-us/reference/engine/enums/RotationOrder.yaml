@@ -9,7 +9,7 @@ description: |
 
   To help visualize the many rotation orders, you can test them manually in
   Studio with the [Rotate](../../../parts#rotating-parts) tool or by inserting
-  `task.wait()` statements between individual rotations of a cube with a unique
+  `Library.task.wait()` statements between individual rotations of a cube with a unique
   face:
 
   ```lua

@@ -656,8 +656,7 @@ methods:
         default: 0.5
         summary: |
           A number between 0 and 1 specifying how aggressively to match the
-          part's rotation to the rotation part of the target
-          `Datatype.CFrame`.
+          part's rotation to the rotation part of the target `Datatype.CFrame`.
       - name: collisionsMode
         type: IKCollisionsMode
         default: OtherMechanismsAnchored

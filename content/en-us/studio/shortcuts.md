@@ -3,72 +3,84 @@ title: Studio Shortcuts
 description: Explains Studio default shortcuts and key commands that make development quicker and easier.
 ---
 
-Studio has many default shortcuts and key commands that make development quicker and easier. All of the shortcuts can be customized, and many actions without defaults can be bound to whatever you want through **File**&rarr;**Advanced**&rarr;**Customize&nbsp;Shortcuts**.
+Studio has many default shortcuts and key commands that make development quicker and easier. You can customize every shortcut and bind many actions without defaults to any key through **File**&nbsp;&rarr; **Advanced**&nbsp;&rarr; **Customize&nbsp;Shortcuts**.
 
 ## Files and Publishing
 
-<table>
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
    </thead>
    <tbody>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>N</kbd></td>
       <td>**New**</td>
+			<td><kbd>Ctrl</kbd><kbd>N</kbd></td>
+			<td><kbd>⌘</kbd><kbd>N</kbd></td>
       <td>Create a new place.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>O</kbd></td>
       <td>**Open from File...**</td>
+			<td><kbd>Ctrl</kbd><kbd>O</kbd></td>
+			<td><kbd>⌘</kbd><kbd>O</kbd></td>
       <td>Open an existing local file.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>O</kbd></td>
       <td>**Open from Roblox...**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>O</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>O</kbd></td>
       <td>Open a recent experience from Roblox.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>S</kbd></td>
       <td>**Save**</td>
+			<td><kbd>Ctrl</kbd><kbd>S</kbd></td>
+			<td><kbd>⌘</kbd><kbd>S</kbd></td>
       <td>Save the active place to the location currently open in Studio.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>S</kbd></td>
       <td>**Save to File As...**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>S</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>S</kbd></td>
       <td>Save the active local file with a new name.</td>
     </tr>
 	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>P</kbd></td>
       <td>**Publish to Roblox**</td>
+			<td><kbd>Alt</kbd><kbd>P</kbd></td>
+			<td><kbd>⌥</kbd><kbd>P</kbd></td>
       <td>Publish the active place to Roblox.</td>
     </tr>
 	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></td>
       <td>**Publish to Roblox As...**</td>
+			<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
+			<td><kbd>⌥</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
       <td>Publish the active place to Roblox as new version.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F4</kbd></td>
       <td>**Close Place**</td>
+			<td><kbd>Ctrl</kbd><kbd>F4</kbd></td>
+			<td><kbd>⌘</kbd><kbd>F4</kbd></td>
       <td>Close the open place.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>W</kbd></td>
       <td>**Close Tab**</td>
+			<td><kbd>Ctrl</kbd><kbd>W</kbd></td>
+			<td><kbd>⌘</kbd><kbd>W</kbd></td>
       <td>Close the active tab.</td>
     </tr>
 	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>T</kbd></td>
       <td>**Open Previous Tab**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>T</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>T</kbd></td>
       <td>Open the previous tab.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Q</kbd></td>
       <td>**Exit**</td>
+			<td><kbd>Ctrl</kbd><kbd>Q</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Q</kbd></td>
       <td>Quit the application (Studio prompts to save documents).</td>
     </tr>
   </tbody>
@@ -76,48 +88,56 @@ Studio has many default shortcuts and key commands that make development quicker
 
 ## Camera Controls
 
-<table>
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>F</kbd></td>
       <td>**Zoom To**</td>
+			<td><kbd>F</kbd></td>
+			<td><kbd>F</kbd></td>
       <td>Focus the camera on the selected part/model.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>=</kbd><br /><kbd>I</kbd></td>
       <td>**Zoom In**</td>
+			<td><kbd>Ctrl</kbd><kbd>=</kbd></td>
+			<td><kbd>⌘</kbd><kbd>=</kbd></td>
       <td>Zoom the camera in.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>-</kbd><br /><kbd>O</kbd></td>
       <td>**Zoom Out**</td>
+			<td><p><kbd>Ctrl</kbd><kbd>-</kbd></p><kbd>O</kbd></td>
+			<td><p><kbd>⌘</kbd><kbd>-</kbd></p><kbd>O</kbd></td>
       <td>Zoom the camera out.</td>
     </tr>
     <tr>
-      <td><kbd>,</kbd></td>
       <td>**Pan Left**</td>
+			<td><kbd>,</kbd></td>
+			<td><kbd>,</kbd></td>
       <td>Rotate the camera left. If a part/model is in focus, rotate counterclockwise around it.</td>
     </tr>
     <tr>
-      <td><kbd>.</kbd></td>
       <td>**Pan Right**</td>
+			<td><kbd>.</kbd></td>
+			<td><kbd>.</kbd></td>
       <td>Rotate the camera right. If a part/model is in focus, rotate clockwise around it.</td>
     </tr>
     <tr>
-      <td><kbd>Page Up</kbd></td>
       <td>**Tilt Down**</td>
+			<td><kbd>PageUp</kbd></td>
+			<td><kbd>PageUp</kbd></td>
       <td>Tilt the camera down. If a part/model is in focus, tilt camera down about it.</td>
     </tr>
     <tr>
-      <td><kbd>Page Down</kbd></td>
       <td>**Tilt Up**</td>
+			<td><kbd>PageDown</kbd></td>
+			<td><kbd>PageDown</kbd></td>
       <td>Tilt the camera up. If a part/model is in focus, tilt camera up about it.</td>
     </tr>
   </tbody>
@@ -125,324 +145,382 @@ Studio has many default shortcuts and key commands that make development quicker
 
 ## Selecting and Editing
 
-### General
-
-<table>
+<Tabs>
+<TabItem label="General">
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>D</kbd></td>
       <td>**Duplicate**</td>
+			<td><kbd>Ctrl</kbd><kbd>D</kbd></td>
+			<td><kbd>⌘</kbd><kbd>D</kbd></td>
       <td>Duplicate the current selections at the same level in the hierarchy.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>C</kbd></td>
       <td>**Copy**</td>
+			<td><kbd>Ctrl</kbd><kbd>C</kbd></td>
+			<td><kbd>⌘</kbd><kbd>C</kbd></td>
       <td>Copy the current selections to the clipboard.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>V</kbd><br /><kbd>⌃</kbd> + <kbd>Y</kbd></td>
       <td>**Paste**</td>
+			<td><p><kbd>Ctrl</kbd><kbd>V</kbd></p><kbd>⌃</kbd><kbd>Y</kbd></td>
+			<td><p><kbd>⌘</kbd><kbd>V</kbd></p><kbd>⌃</kbd><kbd>Y</kbd></td>
       <td>Insert the clipboard contents.</td>
     </tr>
 	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>V</kbd></td>
       <td>**Paste Into**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>V</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>V</kbd></td>
       <td>Paste the objects currently on the clipboard as children of the selected object.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>X</kbd><br /><kbd>⌃</kbd> + <kbd>K</kbd></td>
       <td>**Cut**</td>
+			<td><p><kbd>Ctrl</kbd><kbd>X</kbd></p><kbd>⌃</kbd><kbd>K</kbd></td>
+			<td><p><kbd>⌘</kbd><kbd>X</kbd></p><kbd>⌃</kbd><kbd>K</kbd></td>
       <td>Cut the current selections and put on the clipboard.</td>
     </tr>
 	<tr>
-      <td><kbd>Delete</kbd><br /><kbd>Backspace</kbd><br /><kbd>⌃</kbd> + <kbd>D</kbd></td>
       <td>**Delete**</td>
+			<td><p><kbd>Delete</kbd></p><p><kbd>Backspace</kbd></p><kbd>⌃</kbd><kbd>D</kbd></td>
+			<td><p><kbd>Delete</kbd></p><p><kbd>Backspace</kbd></p><kbd>⌃</kbd><kbd>D</kbd></td>
       <td>Delete the selections.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>A</kbd></td>
       <td>**Select All**</td>
+			<td><kbd>Ctrl</kbd><kbd>A</kbd></td>
+			<td><kbd>⌘</kbd><kbd>A</kbd></td>
       <td>Select all objects in the workspace or all lines in a script.</td>
     </tr>
 	<tr>
-      <td><kbd>Esc</kbd></td>
       <td>**Clear Selection**</td>
+			<td><kbd>Esc</kbd></td>
+			<td><kbd>Esc</kbd></td>
       <td>Clear the current selection.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>G</kbd></td>
       <td>**Group**</td>
+			<td><kbd>Ctrl</kbd><kbd>G</kbd></td>
+			<td><kbd>⌘</kbd><kbd>G</kbd></td>
       <td>Group the selected objects into a new `Class.Model`.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>U</kbd></td>
       <td>**Ungroup**</td>
+			<td><kbd>Ctrl</kbd><kbd>U</kbd></td>
+			<td><kbd>⌘</kbd><kbd>U</kbd></td>
       <td>Ungroup the selected `Class.Model` into individual objects.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Z</kbd></td>
       <td>**Undo**</td>
+			<td><kbd>Ctrl</kbd><kbd>Z</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Z</kbd></td>
       <td>Undo the last action.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Z</kbd></td>
       <td>**Redo**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>Z</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
       <td>Redo the previously undone action.</td>
     </tr>
   </tbody>
 </table>
-
-### 3D Objects
-
-<table>
+</TabItem>
+<TabItem label="3D Objects">
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>1</kbd></td>
       <td>**Select**</td>
+			<td><kbd>Ctrl</kbd><kbd>1</kbd></td>
+			<td><kbd>⌘</kbd><kbd>1</kbd></td>
       <td>Activate the **Select** tool to select parts/models.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>2</kbd></td>
       <td>**Move**</td>
+			<td><kbd>Ctrl</kbd><kbd>2</kbd></td>
+			<td><kbd>⌘</kbd><kbd>2</kbd></td>
       <td>Activate the **Move** tool to move parts/models along an axis.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>3</kbd></td>
       <td>**Scale**</td>
+			<td><kbd>Ctrl</kbd><kbd>3</kbd></td>
+			<td><kbd>⌘</kbd><kbd>3</kbd></td>
       <td>Activate the **Scale** tool to resize parts/models.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>4</kbd></td>
       <td>**Rotate**</td>
+			<td><kbd>Ctrl</kbd><kbd>4</kbd></td>
+			<td><kbd>⌘</kbd><kbd>4</kbd></td>
       <td>Activate the **Rotate** tool to rotate parts/models.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>5</kbd></td>
       <td>**Transform**</td>
+			<td><kbd>Ctrl</kbd><kbd>5</kbd></td>
+			<td><kbd>⌘</kbd><kbd>5</kbd></td>
       <td>Activate the **Transform** tool to precisely manipulate a part/model.</td>
     </tr>
     <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>A</kbd></td>
       <td>**Anchor**</td>
+			<td><kbd>Alt</kbd><kbd>A</kbd></td>
+			<td><kbd>⌥</kbd><kbd>A</kbd></td>
       <td>Anchor or un-anchor the selected parts/models.</td>
     </tr>
 	<tr>
-      <td><kbd>Shift</kbd> + <kbd>2</kbd></td>
       <td>**Jump to Move Increment**</td>
+			<td><kbd>Shift</kbd><kbd>2</kbd></td>
+			<td><kbd>Shift</kbd><kbd>2</kbd></td>
       <td>Jump to the **Move** increment input field in the [Model](../studio/model-tab.md) tab.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>4</kbd><br /><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>R</kbd></td>
       <td>**Jump to Rotate Increment**</td>
+			<td><p><kbd>Shift</kbd><kbd>4</kbd></p><kbd>Alt</kbd><kbd>R</kbd></td>
+			<td><p><kbd>Shift</kbd><kbd>4</kbd></p><kbd>⌥</kbd><kbd>R</kbd></td>
       <td>Jump to the **Rotate** increment input field in the [Model](../studio/model-tab.md) tab.</td>
     </tr>
 	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>L</kbd></td>
       <td>**Toggle Local Space**</td>
+			<td><kbd>Ctrl</kbd><kbd>L</kbd></td>
+			<td><kbd>⌘</kbd><kbd>L</kbd></td>
       <td>Toggle the **Move** and **Rotate** tools between [local and world coordinates](../studio/model-tab.md#transform-coordinates).</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>T</kbd></td>
       <td>**Tilt**</td>
+			<td><kbd>Ctrl</kbd><kbd>T</kbd></td>
+			<td><kbd>⌘</kbd><kbd>T</kbd></td>
       <td>Rotate selections 90&deg; about their **X** axis.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>R</kbd></td>
       <td>**Rotate**</td>
+			<td><kbd>Ctrl</kbd><kbd>R</kbd></td>
+			<td><kbd>⌘</kbd><kbd>R</kbd></td>
       <td>Rotate selections 90&deg; about their **Y** axis.</td>
     </tr>
     <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>L</kbd></td>
       <td>**Lock Tool**</td>
+			<td><kbd>Alt</kbd><kbd>L</kbd></td>
+			<td><kbd>⌥</kbd><kbd>L</kbd></td>
       <td>Activate the **Lock** tool to lock/unlock objects.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>G</kbd></td>
       <td>**Union**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd></td>
       <td>Join two or more parts together to form a single solid union; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
 	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>I</kbd></td>
       <td>**Intersect**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd></td>
       <td>Intersect overlapping parts into a single solid intersection; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>N</kbd></td>
       <td>**Negate**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd></td>
       <td>Negate parts, useful for making holes and indentations; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>U</kbd></td>
       <td>**Separate**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd></td>
       <td>Separate the union or intersection back into its individual parts; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
   </tbody>
 </table>
-
-### Constraints
-
-<table>
+</TabItem>
+<TabItem label="Constraints">
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>D</kbd></td>
       <td>**Constraint Details**</td>
+			<td><kbd>Alt</kbd><kbd>D</kbd></td>
+			<td><kbd>⌥</kbd><kbd>D</kbd></td>
       <td>Visualize `Class.Constraint` objects in the 3D space.</td>
     </tr>
-    <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>T</kbd></td>
-      <td>**Draw on Top**</td>
-      <td>Visualize `Class.Constraint` objects on top of other objects in the 3D space.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>W</kbd></td>
+		<tr>
       <td>**Show Welds**</td>
+			<td><kbd>Alt</kbd><kbd>W</kbd></td>
+			<td><kbd>⌥</kbd><kbd>W</kbd></td>
       <td>Visualize `Class.WeldConstraint` objects in the 3D space.</td>
     </tr>
   </tbody>
 </table>
+</TabItem>
+</Tabs>
 
 ## Interface Controls
 
-<table>
-<tbody>
+<table size="small">
+	<thead>
     <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>G</kbd></td>
+      <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+	<tbody>
+    <tr>
       <td>**Show Grid**</td>
+			<td><kbd>Alt</kbd><kbd>G</kbd></td>
+			<td><kbd>⌥</kbd><kbd>G</kbd></td>
       <td>Show or hide the 3D grid on the **Y** plane.</td>
     </tr>
     <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>X</kbd></td>
       <td>**Explorer**</td>
+			<td><kbd>Alt</kbd><kbd>X</kbd></td>
+			<td><kbd>⌥</kbd><kbd>X</kbd></td>
       <td>Show or hide the [Explorer](../studio/explorer.md) window.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>X</kbd></td>
       <td>**Explorer Filter**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>X</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>X</kbd></td>
       <td>Jump to the [Explorer](../studio/explorer.md) window filter input field.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>P</kbd></td>
       <td>**Properties Filter**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>P</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>P</kbd></td>
       <td>Jump to the [Properties](../studio/properties.md) window filter input field.</td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>I</kbd></td>
       <td>**Insert Object**</td>
+			<td><kbd>Ctrl</kbd><kbd>I</kbd></td>
+			<td><kbd>⌘</kbd><kbd>I</kbd></td>
       <td>Open the **Insert Object** popup for quick insertion of objects. Once open, the popup can be closed with <kbd>Esc</kbd>.</td>
     </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>P</kbd></td>
+		<tr>
       <td>**Quick Open**</td>
+			<td><kbd>Ctrl</kbd><kbd>P</kbd></td>
+			<td><kbd>⌘</kbd><kbd>P</kbd></td>
       <td>Show the **Quick Open** window to quickly find any instance in the hierarchy.</td>
     </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>P</kbd></td>
+		<tr>
       <td>**Quick Open Actions**</td>
+			<td><kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>P</kbd></td>
+			<td><kbd>⌥</kbd><kbd>⌘</kbd><kbd>P</kbd></td>
       <td>Show the **Quick Open Actions** window to quickly find any Studio action.</td>
     </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>S</kbd></td>
+		<tr>
       <td>**Studio Settings**</td>
+			<td><kbd>Alt</kbd><kbd>S</kbd></td>
+			<td><kbd>⌥</kbd><kbd>S</kbd></td>
       <td>Open the Studio settings window.</td>
     </tr>
-	<tr>
-      <td><kbd>F11</kbd><br /><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>F11</kbd></td>
+		<tr>
       <td>**Full Screen**</td>
+			<td><p><kbd>F11</kbd></p><kbd>Alt</kbd><kbd>F11</kbd></td>
+			<td><p><kbd>F11</kbd></p><kbd>⌥</kbd><kbd>F11</kbd></td>
       <td>Toggle between full screen and windowed view.</td>
     </tr>
     <tr>
-      <td><kbd>F12</kbd></td>
       <td>**Video Record**</td>
+			<td><kbd>F12</kbd></td>
+			<td></td>
       <td>Record a video; not functional on macOS.</td>
     </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>9</kbd></td>
+		<tr>
       <td>**Focus on Command Bar**</td>
+			<td><kbd>Ctrl</kbd><kbd>9</kbd></td>
+			<td><kbd>⌘</kbd><kbd>9</kbd></td>
       <td>Set keyboard focus to the **Command Bar** used to execute Luau code outside of scripts.</td>
     </tr>
- </tbody>
+	</tbody>
 </table>
 
 ## Testing and Diagnostics
 
-<table>
-  <thead>
+<table size="small">
+	<thead>
     <tr>
-      <th>Shortcut(s)</th>
       <th>Action</th>
+			<th>Windows</th>
+			<th>macOS</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>F5</kbd></td>
-      <td>**Play**<br />**Pause**<br />**Resume**</td>
+      <td>**Play** /<br />**Pause** /<br />**Resume**</td>
+			<td><kbd>F5</kbd></td>
+			<td><kbd>F5</kbd></td>
       <td>Start simulating the experience in Studio. Press again to pause a running simulation or resume a paused simulation.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>F5</kbd></td>
       <td>**Stop**</td>
+			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
+			<td><kbd>Shift</kbd><kbd>F5</kbd></td>
       <td>Stop the current simulation.</td>
     </tr>
 	<tr>
-      <td><kbd>F8</kbd></td>
       <td>**Run**</td>
+			<td><kbd>F8</kbd></td>
+			<td><kbd>F8</kbd></td>
       <td>Start simulating the experience without your avatar from the current camera position.</td>
     </tr>
     <tr>
-      <td><kbd>F7</kbd></td>
       <td>**Start**</td>
+			<td><kbd>F7</kbd></td>
+			<td><kbd>F7</kbd></td>
       <td>Simulate the Roblox environment by starting multiple new sessions of Studio.</td>
     </tr>
 	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>L</kbd></td>
       <td>**Save and Reload Plugins in Debugger**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>L</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>L</kbd></td>
       <td>Save all plugins in debugger back to disk, stop execution of those plugins, and reload them from disk.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F1</kbd></td>
       <td>**Stats**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F1</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F1</kbd></td>
       <td>Show detailed experience stats.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F2</kbd></td>
       <td>**Render**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F2</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F2</kbd></td>
       <td>Show detailed graphics and performance data.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F3</kbd></td>
       <td>**Network**</td>
-      <td>Show detailed network stats.</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd></td>
+      <td>Show detailed network stats. Once open, pressing <kbd>Shift</kbd><kbd>1</kbd> cycles through additional panels of data.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F4</kbd></td>
       <td>**Physics**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F4</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F4</kbd></td>
       <td>Show detailed physics data.</td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F5</kbd></td>
       <td>**Summary**</td>
+			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F5</kbd></td>
+			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F5</kbd></td>
       <td>Show a summary of stats data.</td>
     </tr>
   </tbody>
@@ -450,209 +528,208 @@ Studio has many default shortcuts and key commands that make development quicker
 
 ## Script Editor
 
-<table>
+<Tabs>
+<TabItem label="File & Display">
+<table size="small">
   <thead>
     <tr>
-      <th>Shortcut(s)</th>
-      <th>Action</th>
-      <th>Description</th>
+      <th>Command</th>
+      <th>Windows</th>
+      <th>macOS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><kbd>Tab</kbd><br /><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>]</kbd></td>
-      <td>**Indent**</td>
-      <td>Indent the selected line(s).</td>
+      <td>**Close Script**</td>
+      <td><kbd>Ctrl</kbd><kbd>W</kbd></td>
+      <td><kbd>⌘</kbd><kbd>W</kbd></td>
     </tr>
     <tr>
-      <td><kbd>Shift</kbd> + <kbd>Tab</kbd><br /><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>[</kbd></td>
-      <td>**Unindent**</td>
-      <td>Unindent the selected line(s).</td>
+      <td>**Reopen Last Closed Script**</td>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F</kbd></td>
-      <td>**Find**</td>
-      <td>Find a specified string within the script being viewed.</td>
+      <td>**Quick Open**</td>
+      <td><kbd>Ctrl</kbd><kbd>P</kbd></td>
+      <td><kbd>⌘</kbd><kbd>P</kbd></td>
     </tr>
     <tr>
-      <td><kbd>F3</kbd></td>
-      <td>**Find Next**</td>
-      <td>Find next instance of the specified string within the script being viewed.</td>
+      <td>**Show Script in Explorer**</td>
+      <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>K</kbd></td>
+      <td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>K</kbd></td>
     </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>F3</kbd></td>
-      <td>**Find Previous**</td>
-      <td>Find previous instance of the specified string within the script being viewed.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F</kbd></td>
-      <td>**Find All**</td>
-      <td>Find a specified string within all scripts in the currently open place.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F</kbd></td>
-      <td>**Replace**</td>
-      <td>Find a specified string in the script being viewed and optionally replace it with a replacement string.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>F</kbd></td>
-      <td>**Open Script Function Filter**</td>
-      <td>Find a specific function within the script being viewed.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd></td>
-      <td>**Show in Explorer**</td>
-      <td>Select the script being viewed within the [Explorer](../studio/explorer.md) window.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>D</kbd></td>
-      <td>**Select Word**</td>
-      <td>Select the word under the current cursor position.</td>
+		<tr>
+      <td>**Zoom In**</td>
+      <td><kbd>Ctrl</kbd><kbd>=</kbd></td>
+      <td><kbd>⌘</kbd><kbd>=</kbd></td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F3</kbd></td>
-      <td>**Find Current Word**</td>
-      <td>Find the word under the current cursor position or the currently selected string, seeking forwards.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F3</kbd></td>
-      <td>**Find Current Word Backwards**</td>
-      <td>Find the word under the current cursor position or the currently selected string, seeking backwards.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>D</kbd></td>
-      <td>**Duplicate Selection**</td>
-      <td>Duplicate the current line or selection.</td>
+      <td>**Zoom Out**</td>
+      <td><kbd>Ctrl</kbd><kbd>-</kbd></td>
+      <td><kbd>⌘</kbd><kbd>-</kbd></td>
     </tr>
     <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>G</kbd></td>
-      <td>**Go to Line**</td>
-      <td>Move the cursor to the specified line number in the script being viewed.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F12</kbd></td>
-      <td>**Go to Declaration**</td>
-      <td>Go to the declaration of the selected variable.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>.</kbd></td>
-      <td>**Invoke Autocomplete**</td>
-      <td>Invoke the autocomplete tooltip.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>&Backslash;</kbd></td>
-      <td>**Invoke AI-assisted Scripting**</td>
-      <td>Attempt to generate autocompleted code using machine learning through [Code&nbsp;Assist](../studio/script-editor.md#code-assist).</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>/</kbd></td>
-      <td>**Toggle Comment**</td>
-      <td>Toggle commenting on the selected line(s).</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd></td>
-      <td>**Clear Output Window**</td>
-      <td>Clear the [Output](../studio/output.md) window.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>↓</kbd></td>
-      <td>**Move Lines Down**</td>
-      <td>Move the selected line(s) downwards.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>↑</kbd></td>
-      <td>**Move Lines Up**</td>
-      <td>Move the selected line(s) upwards.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Enter</kbd></td>
-      <td>**Insert Newline Below**</td>
-      <td>Insert a newline below the current line.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Enter</kbd></td>
-      <td>**Insert Newline Above**</td>
-      <td>Insert a newline above the current line.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Backspace</kbd></td>
-      <td>**Delete to Start of Line**</td>
-      <td>Delete to the start of the current or selected line(s).</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd></td>
-      <td>**Delete Lines**</td>
-      <td>Delete the selected line(s).</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd></td>
-      <td>**Format Selection**</td>
-      <td>Format the currently selected portion of the script with proper layout and indentation.</td>
-    </tr>
-    <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>=</kbd></td>
-      <td>**Zoom Script In**</td>
-      <td>Zoom the script view in.</td>
-    </tr>
-    <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>-</kbd></td>
-      <td>**Zoom Script Out**</td>
-      <td>Zoom the script view out.</td>
-    </tr>
-    <tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>0</kbd></td>
       <td>**Reset Script Zoom**</td>
-      <td>Reset the script zoom.</td>
-    </tr>
-	<tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>[</kbd></td>
-      <td>**Fold Code Block**</td>
-      <td>Fold a block of code in the script.</td>
-    </tr>
-    <tr>
-      <td><kbd>Alt</kbd>/<kbd>⌥</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>]</kbd></td>
-      <td>**Unfold Code Block**</td>
-      <td>Unfold a block of code in the script.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>E</kbd></td>
-      <td>**Expand All Folds**</td>
-      <td>Expand all collapsed folds in the script being viewed.</td>
-    </tr>
-    <tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>E</kbd></td>
-      <td>**Collapse All Folds**</td>
-      <td>Collapse all foldable sections of the script being viewed.</td>
-    </tr>
-	<tr>
-      <td><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>R</kbd></td>
-      <td>**Reload Script**</td>
-      <td>Apply any changes that have been made to a script to the active playtest. The changes are not saved to the script outside of the playtest unless your Studio settings are set to auto-save runtime script changes or you confirm to save the changes upon stopping the playtest. This action is only available while playtesting.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>=</kbd></td>
-      <td>**Fwd**</td>
-      <td>Navigate to the next open script.</td>
-    </tr>
-	<tr>
-      <td><kbd>Shift</kbd> + <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>-</kbd></td>
-      <td>**Back**</td>
-      <td>Navigate to the previous open script.</td>
-    </tr>
-	<tr>
-      <td><kbd>F10</kbd></td>
-      <td>**Step Over**</td>
-      <td>Move the debugger to the next line of code, not moving into functions.</td>
-    </tr>
-    <tr>
-      <td><kbd>F11</kbd></td>
-      <td>**Step Into**</td>
-      <td>Move the debugger into the function on the current line. If there is no function on the current line, the debugger moves to the next line.</td>
-    </tr>
-    <tr>
-      <td><kbd>Shift</kbd> + <kbd>F11</kbd></td>
-      <td>**Step Out**</td>
-      <td>Move the debugger out of the current function and to the next line of code after the function was initially called. If the current line is not inside a function, the debugger moves to the next line.</td>
+      <td><kbd>Ctrl</kbd><kbd>0</kbd></td>
+      <td><kbd>⌘</kbd><kbd>0</kbd></td>
     </tr>
   </tbody>
 </table>
+</TabItem>
+<TabItem label="Basic Editing">
+<table size="small">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Windows</th>
+      <th>macOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Cut**</td>
+      <td><kbd>Ctrl</kbd><kbd>X</kbd></td>
+      <td><kbd>⌘</kbd><kbd>X</kbd></td>
+    </tr>
+    <tr>
+      <td>**Copy**</td>
+      <td><kbd>Ctrl</kbd><kbd>C</kbd></td>
+      <td><kbd>⌘</kbd><kbd>C</kbd></td>
+    </tr>
+    <tr>
+      <td>**Paste**</td>
+      <td><kbd>Ctrl</kbd><kbd>V</kbd></td>
+      <td><kbd>⌘</kbd><kbd>V</kbd></td>
+    </tr>
+		<tr>
+      <td>**Undo**</td>
+      <td><kbd>Ctrl</kbd><kbd>Z</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Z</kbd></td>
+    </tr>
+    <tr>
+      <td>**Redo**</td>
+      <td><kbd>Ctrl</kbd><kbd>Y</kbd></td>
+      <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
+    </tr>
+    <tr>
+      <td>**Select All**</td>
+      <td><kbd>Ctrl</kbd><kbd>A</kbd></td>
+      <td><kbd>⌘</kbd><kbd>A</kbd></td>
+    </tr>
+		<tr>
+      <td>**Find** / **Replace**</td>
+      <td><kbd>Ctrl</kbd><kbd>F</kbd></td>
+      <td><kbd>⌘</kbd><kbd>F</kbd></td>
+    </tr>
+    <tr>
+      <td>**Find&nbsp;All** / **Replace&nbsp;All**</td>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
+    </tr>
+    <tr>
+      <td>**Indent** / **Unindent**</td>
+      <td><kbd>Ctrl</kbd><kbd>\]</kbd>&nbsp;/ <kbd>Ctrl</kbd><kbd>\[</kbd></td>
+      <td><kbd>⌘</kbd><kbd>\]</kbd>&nbsp;/ <kbd>⌘</kbd><kbd>\[</kbd></td>
+    </tr>
+    <tr>
+      <td>**Toggle Comment**</td>
+      <td><kbd>Ctrl</kbd><kbd>/</kbd></td>
+      <td><kbd>⌘</kbd><kbd>/</kbd></td>
+    </tr>
+    <tr>
+      <td>**Expand All Folds**</td>
+      <td><kbd>Ctrl</kbd><kbd>E</kbd></td>
+      <td><kbd>⌘</kbd><kbd>E</kbd></td>
+    </tr>
+    <tr>
+      <td>**Collapse All Folds**</td>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>E</kbd></td>
+    </tr>
+    <tr>
+      <td>**Delete Line**</td>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>K</kbd></td>
+    </tr>
+    <tr>
+      <td>**Delete to Start of Line**</td>
+      <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Backspace</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Delete</kbd></td>
+    </tr><tr>
+      <td>**Move Line Up/Down**</td>
+      <td><kbd>Alt</kbd><kbd>↑</kbd>&nbsp;/ <kbd>Alt</kbd><kbd>↓</kbd></td>
+      <td><kbd>⌥</kbd><kbd>↑</kbd>&nbsp;/ <kbd>⌥</kbd><kbd>↓</kbd></td>
+    </tr>
+    <tr>
+      <td>**Go to Declaration**</td>
+      <td><kbd>Ctrl</kbd><kbd>F12</kbd></td>
+      <td><kbd>⌘</kbd><kbd>F12</kbd></td>
+    </tr>
+    <tr>
+      <td>**Open Script Function Filter**</td>
+      <td><kbd>Alt</kbd><kbd>F</kbd></td>
+      <td><kbd>⌥</kbd><kbd>F</kbd></td>
+    </tr>
+		<tr>
+      <td>**Format Selection**</td>
+      <td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
+      <td><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
+    </tr>
+  </tbody>
+</table>
+</TabItem>
+<TabItem label="Multi-Cursor">
+<table size="small">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Windows</th>
+      <th>macOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Add/Remove Cursor at Mouse Location**</td>
+      <td><kbd>Alt</kbd>&nbsp;+ click</td>
+      <td><kbd>⌥</kbd>&nbsp;+ click</td>
+    </tr>
+    <tr>
+      <td>**Remove Most Recently Added Cursor**</td>
+      <td><kbd>Ctrl</kbd><kbd>U</kbd></td>
+      <td><kbd>⌘</kbd><kbd>U</kbd></td>
+    </tr>
+		<tr>
+      <td>**Add/Modify Cursor on Mouse Drag**</td>
+      <td><kbd>Alt</kbd>&nbsp;+ drag</td>
+      <td><kbd>⌥</kbd>&nbsp;+ drag</td>
+    </tr>
+		<tr>
+      <td>**Add Cursor Above/Below**</td>
+      <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↑</kbd>&nbsp;/ <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↓</kbd></td>
+      <td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↑</kbd>&nbsp;/ <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↓</kbd></td>
+    </tr>
+		<tr>
+      <td>**Add Cursor to Next Matching Selection**</td>
+      <td><kbd>Ctrl</kbd><kbd>D</kbd></td>
+      <td><kbd>⌘</kbd><kbd>D</kbd></td>
+    </tr>
+		<tr>
+      <td>**Add Cursor to Every Matching Selection**</td>
+      <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>L</kbd></td>
+      <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>L</kbd></td>
+    </tr>
+		<tr>
+      <td>**Column/Block Select**</td>
+      <td><kbd>Shift</kbd><kbd>Alt</kbd>&nbsp;+ drag</td>
+      <td><kbd>Shift</kbd><kbd>⌥</kbd>&nbsp;+ drag</td>
+    </tr>
+		<tr>
+      <td>**Split Selections Into Lines**</td>
+      <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd></td>
+      <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd></td>
+    </tr>
+  </tbody>
+</table>
+</TabItem>
+</Tabs>

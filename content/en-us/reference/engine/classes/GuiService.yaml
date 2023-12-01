@@ -164,9 +164,9 @@ properties:
       **Background Transparency**. The default value is 1, indicating that the
       user prefers the default background transparency. The lowest value is 0,
       indicating that the user prefers backgrounds to be completely opaque,
-      improving readability and contrast for affected UI. Multiplying an element's
-      `Class.GuiObject.BackgroundTransparency` with the value returned from
-      `Class.GuiService.PreferredTransparency|PreferredTransparency` is the
+      improving readability and contrast for affected UI. Multiplying an
+      element's `Class.GuiObject.BackgroundTransparency` with the value returned
+      from `Class.GuiService.PreferredTransparency|PreferredTransparency` is the
       recommended way to use this setting; backgrounds will become more opaque
       as `Class.GuiService.PreferredTransparency|PreferredTransparency`
       approaches 0. This should be used with
@@ -190,9 +190,11 @@ properties:
       can_save: false
   - name: GuiService.ReducedMotionEnabled
     summary: |
-      Returns `true` if the user has enabled reduced motion. Defaults to `false`.
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
     description: |
-      Returns `true` if the user has enabled reduced motion. Defaults to `false`.
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
 
       This return value reflects a setting which can be set from the user's side
       in either the app settings or within the in-experience settings menu via
