@@ -9,7 +9,7 @@ code_samples:
 tags:
   - Deprecated
 deprecation_message: |
-  This deprecated Enum is used by `Class.DataModel.SavePlace` which has also
+  This deprecated enum is used by `Class.DataModel.SavePlace` which has also
   been deprecated. Neither should be used in new work.
 items:
   - name: SaveWorld

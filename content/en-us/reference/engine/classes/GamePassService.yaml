@@ -34,7 +34,7 @@ methods:
       The result of this function may be cached, meaning it should not be relied
       on to give an up to date result.
 
-      For more information about game passes, please see [this article](../../../production/monetization/game-passes.md).
+      See [Passes](../../../production/monetization/game-passes.md) for further information.
 
       #### Legacy Game Passes
 

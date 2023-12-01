@@ -21,7 +21,7 @@ items:
       9-Slice scaling: slice the image into 9 regions and apply different
       scaling rules to each region. The slice boundaries are determined by
       `Class.ImageLabel.SliceCenter` or `Class.ImageButton.SliceCenter`. See
-      [UI 9 Slice Design](../../../ui/9-slice.md) for more information. 
+      [UI 9-Slice Design](../../../ui/9-slice.md) for more information. 
     value: 1
     tags: []
     deprecation_message: ''
