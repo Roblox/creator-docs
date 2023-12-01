@@ -79,7 +79,7 @@ After you submit the questionnaire, your experience receives an age recommendati
   </tr>
   <tr>
     <td>**17+**</td>
-    <td>Content is only suitable for ages 17 and up. May contain strong violence, heavy realistic blood, moderate crude humor, romantic themes, unplayable gambling content and/or the presence of alcohol.</td>
+    <td>Content is only suitable for ages 17 and up. May contain strong violence, heavy realistic blood, moderate crude humor, romantic themes, unplayable gambling content, strong language, and/or the presence of alcohol.</td>
   </tr>
 </tbody>
 </table>
@@ -133,6 +133,16 @@ Alcohol is an intoxicating adult beverage. If your experience includes, depicts,
 ### Romantic Themes
 
 Romantic themes are the non-sexual expression of love or affection. If your experience includes romantic themes, such as a quick kiss on the mouth, you must disclose it within the Experience Questionnaire. Experiences that include romantic themes are only available to verified users that are at least 17 years old.
+
+### Strong Language
+
+Strong language is vulgar and obscene language that is not used to harass, discriminate, incite violence, or threaten others, or used in a sexual context. 
+
+For example, strong language content could be depictions of a non-playable character (NPC) using obscenity like the “f-word” that is not directed towards another character or group of people (e.g. “f* off”).
+
+If your experience includes strong language, you must disclose it within the Experience Questionnaire. Experiences that include strong language are only available to verified users that are at least 17 years old.
+
+**Note**: If you want to enable strong language in user communication aside from content for your 17+ experiences, check out the [how-to here](https://create.roblox.com/docs/production/publishing/publishing-experiences-and-places#creator-dashboard).
 
 ## Experience Guidelines Moderation
 
