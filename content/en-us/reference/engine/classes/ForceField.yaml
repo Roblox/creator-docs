@@ -76,11 +76,11 @@ properties:
       determine where this effect will be emitted from.
 
       When parented to a `Class.Model`, if the model includes a `Class.Humanoid`
-      named "Humanoiod" with `Class.Humanoid.RigType` set to R15, the effect
-      will be emitted from the part named "UpperTorso". Otherwise, the effect
-      will be emitted from the part named "Torso". The part must have the same
-      parent as the ForceField, if it does not exist then the effect is emitted
-      at 0, 0, 0.
+      named "Humanoid" with `Class.Humanoid.RigType` set to R15, the effect will
+      be emitted from the part named "UpperTorso". Otherwise, the effect will be
+      emitted from the part named "Torso". The part must have the same parent as
+      the ForceField, if it does not exist then the effect is emitted at 0,
+      0, 0.
 
       When parented to a `Class.BasePart` the effect will be emitted from the
       part's `Class.BasePart.Position`.

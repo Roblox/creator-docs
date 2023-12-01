@@ -1,28 +1,38 @@
 name: ListenerType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Defines where and how the listener is positioned when picking up spatial
+  audio.
+description: |
+  Defines where and how the listener is positioned when picking up spatial
+  audio. Used in `Class.SoundService.SetListener` and
+  `Class.SoundService.GetListener`.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: Camera
-    summary: ''
+    summary: |
+      Uses the world CFrame of `workspace.CurrentCamera`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: CFrame
-    summary: ''
+    summary: |
+      Uses a specified world CFrame.
     value: 1
     tags: []
     deprecation_message: ''
   - name: ObjectPosition
-    summary: ''
+    summary: |
+      Uses the world position of an instance and the rotation of
+      `workspace.CurrentCamera`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ObjectCFrame
-    summary: ''
+    summary: |
+      Uses the world CFrame from an instance.
     value: 3
     tags: []
     deprecation_message: ''

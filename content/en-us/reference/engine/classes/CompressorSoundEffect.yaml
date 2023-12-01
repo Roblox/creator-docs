@@ -2,7 +2,8 @@ name: CompressorSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Adjusts the dynamic range of audio.
 description: |
   A compressor is used to reduce the dynamic range of audio by moving the highs
   and lows of a signal closer together. It does this by lowering the volume of
