@@ -17,7 +17,8 @@ description: |
   `Class.Chat:FilterStringAsync()|FilterStringAsync()` and
   `Class.Chat:FilterStringForBroadcast()|FilterStringForBroadcast()`. Note that
   games which implement custom chat systems must use these functions to filter
-  chat properly. See Text and Chat Filtering for more information.
+  chat properly. See [Text and Chat Filtering](../../../ui/text-filtering.md)
+  for more information.
 code_samples:
 inherits:
   - Instance
