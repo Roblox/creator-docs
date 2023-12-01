@@ -1,12 +1,12 @@
 ---
 title: 3D Importer
-description: 3D Importer imports third-party .fbx and .obj 3D model assets into Studio.
+description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model assets into Studio.
 ---
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/4RonlfpKzHA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-The 3D Importer allows you to import `.fbx` or `.obj` 3D models into Studio as a custom `Class.Model`. This tool supports a wide variety of 3D models, including:
+The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`. This tool supports a wide variety of 3D models, including:
 
 - Meshes with basic or PBR ([Surface Appearance](../../art/modeling/surface-appearance.md)) textures.
 - Meshes with [rigging and skinning data](../../art/modeling/rigging.md)
@@ -31,7 +31,7 @@ C. The **inspector panel**, located on the right, allows you to apply various se
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCsYZe3LoDM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-Before importing a 3D object, ensure that the `.fbx` or `.obj` meets Studio's [Mesh Requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
+Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [Mesh Requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
 
 To import a 3D object:
 
@@ -39,7 +39,7 @@ To import a 3D object:
 
    <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Import 3D button indicated in Avatar tab" />
 
-2. Select the `.fbx` or `.obj` you intend to import. The importer window displays.
+2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
 4. Verify any [warning or error messages](#warnings-and-errors).
 5. Click **Import**.
@@ -49,7 +49,7 @@ To import a 3D object:
 Depending on the object selected in the hierarchy panel, the inspector panel displays the following groups of settings:
 
 - **File General**: Affects the entire imported file.
-- **Avatar General**: Affects the selected mesh object if rigging data is present.
+- **Rig General**: Affects the selected mesh object if rigging data is present.
 - **File Transform**: Affects the transform properties of the imported file.
 - **File Geometry**: Affects the geometry properties of the imported file.
 - **Object General**: Affects the selected child object.
@@ -102,7 +102,7 @@ The 3D Importer provides the following settings for all meshes:
 </tbody>
 </table>
 
-#### Avatar General
+#### Rig General
 
 The 3D Importer provides the following settings for meshes with rigging data:
 
@@ -119,8 +119,12 @@ The 3D Importer provides the following settings for meshes with rigging data:
     <td>Sets the type of rig the mesh should be associated with. The options are:<br />- **R15**<br />- **Custom**<br />- **No Rig**<br /><br />By default, the 3D Importer attempts to select the most appropriate setting based on the detected rigging and skinning data of the mesh. </td>
   </tr>
   <tr>
+    <td>Validate UGC Body</td>
+    <td>After importing, the [Avatar Setup](../../art/modeling/avatar-setup.md) tool automatically opens with the imported assets, allowing you to quickly test and begin uploading the assets to the Marketplace</td>
+  </tr>
+  <tr>
     <td>Rig Scale</td>
-    <td>If Rig Type is set to R15, the importer provides further options to specify scaling. The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
+    <td>If Rig Type is set to R15, the importer provides further options to specify [body type scaling](../../art/characters/specifications.md#body-types). The options are:<br />- **Default**<br />- **Rthro**<br />- **Rthro Narrow**</td>
   </tr>
 </tbody>
 </table>

@@ -141,9 +141,7 @@ methods:
           number (integer or decimal) or a string.
     returns:
       - type: bool
-        summary: |
-          True if a new item was added, false -- if an existing item was
-          updated.
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

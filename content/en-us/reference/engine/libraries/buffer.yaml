@@ -1,0 +1,613 @@
+name: buffer
+type: library
+summary: |
+  A library of buffer functions.
+description: |
+  **NOTE:** The buffer library is currently a beta feature and is only available
+  in Studio.
+
+  A buffer is an object that represents a fixed-size mutable block of memory.
+  The buffer library provides functions for creation and manipulation of buffer
+  objects, providing all its functions inside the global `Library.buffer`
+  variable.
+
+  Buffer is intended to be used a low-level binary data storage structure,
+  replacing the uses of `Library.string.pack()` and `Library.string.unpack()`.
+  Use cases include reading and writing existing binary formats, working with
+  data in a more compact form, serialization to custom binary formats, and
+  general work with native memory types like fixed-length integers and floats.
+
+  When passed through Roblox APIs, including sending a buffer through custom
+  events, the identity of the buffer object is not preserved and the target will
+  receive a copy. Similar to other limitations, the same buffer object cannot be
+  used from multiple `Class.Actor` scripts (Parallel Luau).
+
+  Many of the functions accept an offset in bytes from the start of the buffer.
+  Offset of 0 from the start of the buffer memory block accesses the first byte.
+  All offsets, counts and sizes should be non-negative integer numbers. If the
+  bytes that are accessed by any read or write operation are outside the buffer
+  memory, an error is thrown.
+code_samples:
+properties:
+functions:
+  - name: buffer.create
+    summary: |
+      Creates a buffer.
+    description: |
+      Creates a buffer of the requested size with all bytes initialized to 0.
+      Size limit is 1 GB, or 1,073,741,824 bytes. Keep in mind that larger
+      buffers might fail to allocate if device is running low on memory.
+    parameters:
+      - name: size
+        type: number
+        default:
+        summary: |
+          Size of the buffer.
+    returns:
+      - type: buffer
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.fromstring
+    summary: |
+      Creates a buffer from a string.
+    description: |
+      Creates a buffer initialized to the contents of the string. The size of
+      the buffer equals the length of the string.
+    parameters:
+      - name: str
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: buffer
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.tostring
+    summary: |
+      Converts a buffer to a string.
+    description: |
+      Returns the buffer data as a string.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.len
+    summary: |
+      Returns the size of the buffer in bytes.
+    description: |
+      Returns the size of the buffer in bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi8
+    summary: |
+      Reads an 8-bit signed integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as an
+      8-bit signed integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu8
+    summary: |
+      Reads an 8-bit unsigned integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as an
+      8-bit unsigned integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi16
+    summary: |
+      Reads a 16-bit signed integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      16-bit signed integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu16
+    summary: |
+      Reads a 16-bit unsigned integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      16-bit unsigned integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readi32
+    summary: |
+      Reads a 32-bit signed integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      32-bit signed integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readu32
+    summary: |
+      Reads a 32-bit unsigned integer from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      32-bit unsigned integer and converting it into a number.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readf32
+    summary: |
+      Reads a 32-bit floating-point value from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      32-bit floating-point value and converting it into a number. If the
+      floating-point value matches any bit patterns that represent `NaN` (not a
+      number), the returned value may be converted to a different quiet `NaN`
+      representation.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readf64
+    summary: |
+      Reads a 64-bit floating-point value from the buffer.
+    description: |
+      Reads the data from the buffer by reinterpreting bytes at the offset as a
+      64-bit floating-point value and converting it into a number. If the
+      floating-point value matches any bit patterns that represent `NaN` (not a
+      number), the returned value may be converted to a different quiet `NaN`
+      representation.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writei8
+    summary: |
+      Writes an 8-bit signed integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into an 8-bit signed
+      integer and writing a single byte.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [-128, 127].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writeu8
+    summary: |
+      Writes an 8-bit unsigned integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into an 8-bit unsigned
+      integer and writing a single byte.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [0, 255].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writei16
+    summary: |
+      Writes a 16-bit signed integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 16-bit signed
+      integer and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [-32,768, 32,767].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writeu16
+    summary: |
+      Writes a 16-bit unsigned integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 16-bit unsigned
+      integer and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [0, 65,536].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writei32
+    summary: |
+      Writes a 32-bit signed integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 32-bit signed
+      integer and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [-2,147,483,648, 2,147,483,647].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writeu32
+    summary: |
+      Writes a 32-bit unsigned integer to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 32-bit unsigned
+      integer and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [0, 4,294,967,295].
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writef32
+    summary: |
+      Writes a 32-bit floating-point value to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 32-bit
+      floating-point value and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          A single-precision floating-point number.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writef64
+    summary: |
+      Writes a 64-bit floating-point value to the buffer.
+    description: |
+      Writes data to the buffer by converting the number into a 64-bit
+      floating-point value and reinterpreting it as individual bytes.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          A double-precision floating-point number.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.readstring
+    summary: |
+      Reads a string from the buffer.
+    description: |
+      Reads a string of length `count` from the buffer at the specified
+      `offset`.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: count
+        type: number
+        default:
+        summary: |
+          Length to read.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.writestring
+    summary: |
+      Writes a string to the buffer.
+    description: |
+      Writes data from a string into the buffer at the specified `offset`. If an
+      optional `count` is specified, only `count` bytes are taken from the
+      string.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: ''
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: string
+        default:
+        summary: |
+          Data to write.
+      - name: count
+        type: number?
+        default:
+        summary: |
+          Number of bytes to take from the string. This value cannot be larger
+          than the string length.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.copy
+    summary: |
+      Copies bytes between buffers.
+    description: |
+      Copies `count` bytes from `source` starting at offset `sourceOffset` into
+      the `target` at `targetOffset`.
+
+      It's possible for `source` and `target` to be the same. Copying an
+      overlapping region inside the same buffer acts as if the source region is
+      copied into a temporary buffer and then that buffer is copied over to the
+      target.
+    parameters:
+      - name: target
+        type: buffer
+        default:
+        summary: |
+          Buffer to copy data into.
+      - name: targetOffset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: source
+        type: buffer
+        default:
+        summary: |
+          Buffer to take the data from.
+      - name: sourceOffset
+        type: number?
+        default: 0
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: count
+        type: number?
+        default:
+        summary: |
+          Number of bytes to copy. If omitted, the whole `source` data starting
+          from `sourceOffset` is taken.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: buffer.fill
+    summary: |
+      Sets a region of the buffer memory to some 8-bit unsigned integer value.
+    description: |
+      Sets `count` bytes in the buffer starting at the specified `offset` to
+      `value`.
+    parameters:
+      - name: b
+        type: buffer
+        default:
+        summary: |
+          Buffer to write the data into.
+      - name: offset
+        type: number
+        default:
+        summary: |
+          Offset from the beginning of the buffer memory, starting from 0.
+      - name: value
+        type: number
+        default:
+        summary: |
+          An integer number in range [0, 255].
+      - name: count
+        type: number?
+        default:
+        summary: |
+          Number of bytes to write. If omitted, all bytes after the specified
+          offset are set.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:

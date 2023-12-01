@@ -89,11 +89,11 @@ properties:
       can_save: true
   - name: Sound.IsLoaded
     summary: |
-      This property will be true when the `Class.Sound` has loaded loaded from
-      Roblox servers and is ready to play.
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
     description: |
-      This property will be true when the `Class.Sound` has loaded loaded from
-      Roblox servers and is ready to play.
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
 
       In Roblox, audio files are not stored in games themselves but hosted on
       the Roblox servers and referenced by the `Class.Sound.SoundId` property.
@@ -296,7 +296,7 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      MinDistance has been superceded by `Class.Sound.EmitterSize`, whose name
+      MinDistance has been superseded by `Class.Sound.EmitterSize`, whose name
       better describes this properties behavior.
     security:
       read: None
@@ -424,11 +424,11 @@ properties:
       can_save: true
   - name: Sound.PlaybackRegionsEnabled
     summary: |
-      If **true**, this property gives your `Class.Sound` access to to the
+      If **true**, this property gives your `Class.Sound` access to the
       `Class.Sound.PlaybackRegion` and `Class.Sound.LoopRegion` properties,
       which can more-accurately control its playback.
     description: |
-      If **true**, this property gives your `Class.Sound` access to to the
+      If **true**, this property gives your `Class.Sound` access to the
       `Class.Sound.PlaybackRegion` and `Class.Sound.LoopRegion` properties,
       which can more-accurately control its playback.
     code_samples: []

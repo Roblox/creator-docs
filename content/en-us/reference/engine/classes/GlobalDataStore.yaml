@@ -347,7 +347,7 @@ methods:
         be cleared.
 
       The callback function cannot yield, so do **not** include calls like
-      `wait()`.
+      `Library.task.wait()`.
     code_samples:
     parameters:
       - name: key

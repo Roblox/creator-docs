@@ -90,15 +90,13 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
 
-local setSuccess, isNewKey = pcall(function()
+local setSuccess, _ = pcall(function()
 	return sortedMap:SetAsync("User_1234", 1000, 30, 3.14152)
 end)
 if setSuccess then
-	print(isNewKey)
+	print("Set succeeded.")
 end
 ```
-
-The function returns `true` for adding a new item and `false` for updating an existing item.
 
 ## Getting Data
 
@@ -113,11 +111,11 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
 
-local setSuccess, isNewKey = pcall(function()
+local setSuccess, _ = pcall(function()
 	return sortedMap:SetAsync("User_1234", 1000, 30, 3.14152)
 end)
 if setSuccess then
-	print(isNewKey)
+	print("Set succeeded.")
 end
 
 local getSuccess, getError = pcall(function()
@@ -209,11 +207,11 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 
 local sortedMap = MemoryStoreService:GetSortedMap("SortedMap1")
 
-local setSuccess, isNewKey = pcall(function()
+local setSuccess, _ = pcall(function()
 	return sortedMap:SetAsync("User_1234", 1000, 30, "someStringSortKey")
 end)
 if setSuccess then
-	print(isNewKey)
+	print("Set succeeded.")
 end
 
 local removeSuccess, removeError = pcall(function()

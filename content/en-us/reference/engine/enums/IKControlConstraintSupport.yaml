@@ -1,23 +1,33 @@
 name: IKControlConstraintSupport
 type: enum
-summary: ''
-description: ''
+summary: |
+  Values for `Class.Workspace.IKControlConstraintSupport`. Sets the support for
+  constraints for `Class.IKControl|IKControls` in your experience.
+description: |
+  Values for `Class.Workspace.IKControlConstraintSupport`. Sets the support for
+  constraints for `Class.IKControl|IKControls` in your experience.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      The default option for `Class.IKControl|IKControls`. The default is
+      currently set to `Enabled`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      Disables support for constraints for `Class.IKControl|IKControls`. When
+      disabled, `Class.IKControl|IKControls` still work, but ignore physics
+      constraints.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Enables support for constraints for `Class.IKControl|IKControls`.
     value: 2
     tags: []
     deprecation_message: ''

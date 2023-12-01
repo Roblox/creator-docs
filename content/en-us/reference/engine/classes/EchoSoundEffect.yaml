@@ -2,7 +2,8 @@ name: EchoSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Adds delayed repetitions of a sound with diminishing volume.
 description: |
   An echo effect causes a sound to repeat on a delay with diminishing volume,
   simulating the real effect of an echo. This effect can be applied to either an
