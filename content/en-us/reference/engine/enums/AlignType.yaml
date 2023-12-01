@@ -1,11 +1,13 @@
 name: AlignType
 type: enum
 summary: |
-  An enum that specifies the relationship between two axes. It's either parallel
-  or perpendicular.
+  An enum that specifies how the constraint will attempt to align the body
+  associated with the constraint.
 description: |
-  An enum that specifies the relationship between two axes. It's either parallel
-  or perpendicular.
+  An enum that specifies how the constraint will attempt to align the body
+  associated with the constraint and attachment. Depending on the configuration,
+  it can be used to align specific axes to be parallel, perpendicular, or to
+  look at a specific point.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -13,34 +15,47 @@ items:
   - name: Parallel
     value: 0
     summary: |
-      Two parallel axes.
+      Deprecated. Use **PrimaryAxisParallel** instead.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Deprecated. Use **PrimaryAxisParallel** instead.
   - name: Perpendicular
     value: 1
     summary: |
-      Two perpendicular axes.
+      Deprecated. Use **PrimaryAxisPerpendicular** instead.
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      Deprecated. Use **PrimaryAxisPerpendicular** instead.
   - name: PrimaryAxisParallel
-    summary: ''
+    summary: |
+      Aligns the primary axis to be parallel to the axis given by
+      `Class.Constraint.Attachment1`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: PrimaryAxisPerpendicular
-    summary: ''
+    summary: |
+      Aligns the primary axis to be perpendicular to the axis given by
+      `Class.Constraint.Attachment1`.
     value: 3
     tags: []
     deprecation_message: ''
   - name: PrimaryAxisLookAt
-    summary: ''
+    summary: |
+      Aligns the primary axis to look at the point given by
+      `Class.Constraint.Attachment1` or the
+      `Class.AlignOrientation.LookAtPosition`.
     value: 4
     tags: []
     deprecation_message: ''
   - name: AllAxes
-    summary: ''
+    summary: |
+      Aligns all of the axes of `Class.Constraint.Attachment0` to the axes given
+      by `Class.Constraint.Attachment1` or to the target orientation provided by
+      `Class.AlignOrientation.PrimaryAxis` and
+      `Class.AlignOrientation.SecondaryAxis`.
     value: 5
     tags: []
     deprecation_message: ''

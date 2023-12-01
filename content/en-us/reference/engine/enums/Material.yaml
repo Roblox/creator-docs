@@ -212,7 +212,13 @@ items:
     deprecation_message: ''
   - name: ForceField
     summary: |
-      Applies to `Class.BasePart` only.
+      Must be used on a `Class.MeshPart` with UVs laid out to cover much of the
+      0:1 UV space or more (larger is better). The `Class.MeshPart` must also
+      have a texture applied to its `Class.MeshPart.TextureID|TextureID`, and
+      that texture image must have a wide value range since the material
+      displays the range from dark/black to light/white values. Obtain [this
+      model](https://create.roblox.com/marketplace/asset/15507769146/ForceFieldMesh)
+      for a functional example of the **ForceField** material.
     value: 1584
     tags: []
     deprecation_message: ''

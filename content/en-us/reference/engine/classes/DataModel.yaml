@@ -247,10 +247,9 @@ properties:
       This property describes the version of the place the server is running on.
 
       This version number corresponds with the version number shown under the
-      _Version History_ section of the place's settings. It is not the current
-      version of the Roblox client.
-
-      In Roblox Studio, this property is set to _0_.
+      **Version History** section of the place's settings. It is not the current
+      version of the Roblox client. This property is 0 for all unpublished
+      experiences.
 
       When a server instance is created for a place, it uses the place's current
       version. If the place is later updated while this server is running, the

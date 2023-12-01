@@ -326,10 +326,12 @@ https://www.loyaltyfoundation.org/
 https://www.lua.org/manual/5.1/
 https://www.lua.org/manual/5.1/manual.html
 https://www.lua.org/manual/5.2/manual.html
+https://www.lua.org/manual/5.3/manual.html
 https://www.lua.org/pil/16.1.html
 https://www.lua.org/pil/16.html
 https://www.lua.org/pil/2.3.html
 https://www.lua.org/pil/2.4.html
+https://www.lua.org/pil/23.1.html
 https://www.lua.org/pil/28.1.html
 https://www.lua.org/pil/5.1.html
 https://www.lua.org/pil/9.1.html

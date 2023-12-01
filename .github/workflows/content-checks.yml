@@ -72,7 +72,8 @@ jobs:
         uses: Roblox/creator-docs/.github/actions/quality-checks@main
         with:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: origin/${{ github.event.pull_request.base.ref }}
+          BASE_BRANCH: origin/main
+          CHECK_PROTECTED_FIELDS: true
           COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
           EVENT_NAME: ${{ github.event_name }}
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
