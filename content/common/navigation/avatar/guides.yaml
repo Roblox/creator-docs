@@ -56,6 +56,8 @@ navigation:
     path: /art/modeling/3d-importer
   - title: Accessory Fitting Tool
     path: /art/accessories/accessory-fitting-tool
+  - title: Avatar Setup
+    path: /art/modeling/avatar-setup
   - title: Automatic Skinning
     path: /art/accessories/automatic-skinning-transfer
 
