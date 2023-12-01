@@ -5,16 +5,15 @@ summary: |
   relative scale and an absolute offset.
 description: |
   The `Datatype.UDim2` data type represents a two-dimensional value where each
-  dimension is composed of a relative scale and an absolute offset. for a
-  coordinate used in building user interfaces. It is a combination of two
-  `Datatype.UDim` representing the x and y dimensions. The most common usages of
-  `Datatype.UDim2` objects are setting the `Class.GuiObject.Size|Size` and
-  `Class.GuiObject.Position|Position` of `Class.GuiObject|GuiObjects`.
+  dimension is composed of a relative scale and an absolute offset. It is a
+  combination of two `Datatype.UDim` representing the X and Y dimensions. The
+  most common usages of `Datatype.UDim2` objects are setting the `Class.GuiObject.Size|Size`
+  and `Class.GuiObject.Position|Position` of `Class.GuiObject|GuiObjects`.
 
   ```lua
   local guiObject = script.Parent
-  guiObject.Size = UDim2.new(0, 300, 1, 0) -- 300 px wide, full height of parent
-  guiObject.Position = UDim2.new(0, 50, 0, 0) -- 50 px from the left
+  guiObject.Size = UDim2.new(0, 300, 1, 0)  -- 300 pixels wide; full height of parent
+  guiObject.Position = UDim2.new(0, 50, 0, 0)  -- 50 pixels from the left
   ```
 
   #### Math Operations
@@ -65,35 +64,39 @@ constructors:
       - name: xScale
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The X dimension scale.
       - name: xOffset
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The X dimension offset.
       - name: yScale
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The Y dimension scale.
       - name: yOffset
         type: number
         default: 0
-        summary: ''
+        summary: |
+          The Y dimension offset.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.new
     summary: |-
       Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the x and y dimensions, respectively.
+      the X and Y dimensions, respectively.
     description: |-
       Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
-      the x and y dimensions, respectively.
+      the X and Y dimensions, respectively.
     parameters:
       - name: x
         type: UDim
         default:
         summary: ''
-      - name: 'y'
+      - name: y
         type: UDim
         default:
         summary: ''
@@ -103,9 +106,8 @@ constructors:
   - name: UDim2.fromScale
     summary: Returns a new `Datatype.UDim2` with the given scale components and no offsets.
     description: |-
-      Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets.
-      Equivalent to:
-
+      Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets. Equivalent to:
+      
       ```lua
       UDim2.fromScale(xScale, yScale) == UDim2.new(xScale, 0, yScale, 0)
       ```
@@ -124,8 +126,7 @@ constructors:
   - name: UDim2.fromOffset
     summary: Returns a new `Datatype.UDim2` with the given offset components and no scales.
     description: |-
-      Returns a new `Datatype.UDim2` with the given offset coordinates and no scales.
-      Equivalent to:
+      Returns a new `Datatype.UDim2` with the given offset coordinates and no scales. Equivalent to:
 
       ```lua
       UDim2.fromOffset(xOffset, yOffset) == UDim2.new(0, xOffset, 0, yOffset)
@@ -147,36 +148,36 @@ properties:
   - name: UDim2.X
     type: UDim
     summary: |
-      The x dimension scale and offset of the `Datatype.UDim2`.
+      The X dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The x dimension scale and offset of the `Datatype.UDim2`.
+      The X dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Y
     type: UDim
     summary: |
-      The y dimension scale and offset of the `Datatype.UDim2`.
+      The Y dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The y dimension scale and offset of the `Datatype.UDim2`.
+      The Y dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Width
     type: UDim
     summary: |
-      The x dimension scale and offset of the `Datatype.UDim2`.
+      The X dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The x dimension scale and offset of the `Datatype.UDim2`.
+      The X dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Height
     type: UDim
     summary: |
-      The y dimension scale and offset of the `Datatype.UDim2`.
+      The Y dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The y dimension scale and offset of the `Datatype.UDim2`.
+      The Y dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
