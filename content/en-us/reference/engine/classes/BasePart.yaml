@@ -675,6 +675,8 @@ properties:
       name of the part's collision group (maximum of 100 characters). Parts
       start off in the default group whose name is `"Default"`. This value
       cannot be empty.
+
+      Although this property itself is non-replicated, the engine internally replicates the value through another private property to solve backward compatibility issues.
     code_samples:
       - PhysicsService-RegisterCollisionGroup
     type: string

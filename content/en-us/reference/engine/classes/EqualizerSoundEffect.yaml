@@ -2,7 +2,8 @@ name: EqualizerSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Controls the volume of incoming audio across three frequency ranges.
 description: |
   An equalizer allows for control of the volume of various frequency ranges for
   the `Class.Sound` or `Class.SoundGroup` the effect is parented to. This can be

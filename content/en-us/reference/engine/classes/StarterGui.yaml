@@ -902,7 +902,7 @@ methods:
       		if tries == maxAttempts then
       			error("Error calling SetCore CoreGuiChatConnections: " .. result)
       		else
-      			wait()
+      			task.wait()
       		end
       	end
       end

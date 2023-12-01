@@ -87,7 +87,7 @@ Roblox scripts are more event-driven. You access similar functionality by subscr
 
 For scripting, Unity uses C#. Roblox uses Luau, a scripting language derived from [Lua 5.1](https://www.lua.org/manual/5.1/).
 
-Compared to C#, Luau is gradually typed and generally has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C# avoid, so consider enabling strict type checking in Roblox Studio.
+Compared to C#, Luau is gradually typed and generally has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C# avoid, so consider enabling `--!strict` [type checking](luau/type-checking.md#inference-modes) in Roblox scripts.
 
 For basic syntax differences between the scripting languages, see [Luau and C# Comparison](luau/luau-csharp-comparison.md).
 

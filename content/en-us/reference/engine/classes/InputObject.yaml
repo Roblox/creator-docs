@@ -1905,8 +1905,9 @@ properties:
       For the mouse wheel input, the z component describes whether the wheel was
       moved forward (1), backwards (-1), or not at all (0).
 
-      For `Enum.KeyCode` input, this indicate's the position of the player's
-      `Class.Mouse`.
+      For `Enum.KeyCode` input, this indicates the position of the player's
+      `Class.Mouse`. The inset applied to GUI elements (such as from the top
+      bar) is accounted for in the position.
 
       See also
 
