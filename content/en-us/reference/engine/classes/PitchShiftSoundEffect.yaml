@@ -2,7 +2,8 @@ name: PitchShiftSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Adjusts the pitch of a sound without changing its playback speed.
 description: |
   The PitchShiftSoundEffect raises or lowers the pitch of the associated Sound
   or SoundGroup without changing the playback speed of the audio. This effect
