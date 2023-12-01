@@ -742,9 +742,9 @@ methods:
       obscuring the lines of sight between `Class.Camera`'s
       `Class.Camera.CFrame` and the _castPoints_.
 
-      GetPartsObscuringTarget is used by the 'Invisicam' in the default
-      camera scripts to hide parts between the `Class.Camera`'s
-      `Class.Camera.CFrame` and `Class.Camera.Focus`.
+      GetPartsObscuringTarget is used by the 'Invisicam' in the default camera
+      scripts to hide parts between the `Class.Camera`'s `Class.Camera.CFrame`
+      and `Class.Camera.Focus`.
 
       Any `Class.Instance|Instances` included in the _ignoreList_ array will,
       along with their descendants, be ignored.
@@ -1138,8 +1138,8 @@ methods:
 
       SetRoll has no effect on any roll applied using the `Class.Camera.CFrame`
       property. Roll applied using SetRoll is not reflected in the
-      `Class.Camera.CFrame` property but is reflected in the
-      `Datatype.CFrame` returned by`Class.Camera:GetRenderCFrame()`.
+      `Class.Camera.CFrame` property but is reflected in the `Datatype.CFrame`
+      returned by`Class.Camera:GetRenderCFrame()`.
 
       This function can only be used when the `Class.Camera.CameraType` is set
       to _'Scriptable'_, regardless of whether the default camera scripts are
