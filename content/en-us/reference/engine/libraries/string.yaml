@@ -128,69 +128,69 @@ functions:
         </thead>
         <tbody>
           <tr>
-            <td><b>c</b></td>
+            <td><code>c</code></td>
             <td>integer</td>
             <td></td>
             <td>3</td>
           </tr>
           <tr>
-            <td><b>d</b> or <b>i</b></td>
+            <td><code>d</code> or <code>i</code></td>
             <td>integer</td>
             <td>Decimal representation.</td>
             <td> 321 </td>
           </tr>
           <tr>
-            <td><b>e</b> or <b>E</b></td>
+            <td><code>e</code> or <code>E</code></td>
             <td>float</td>
-            <td>Scientific notation using <b>e</b> or <b>E</b>.</td>
+            <td>Scientific notation using <code>e</code> or <code>E</code>.</td>
             <td>3.296e2<br>3.296E2</td>
           </tr>
           <tr>
-            <td><b>f</b></td>
+            <td><code>f</code></td>
             <td>float</td>
             <td></td>
             <td>3231.1231</td>
           </tr>
           <tr>
-            <td><b>g</b> or <b>G</b></td>
+            <td><code>g</code> or <code>G</code></td>
             <td>float</td>
-            <td>The shorter of <b>e</b>/<b>E</b> and <b>f</b>.</td>
+            <td>The shorter of <code>e</code>/<code>E</code> and <code>f</code>.</td>
             <td>3E14<br>3e14</td>
           </tr>
           <tr>
-            <td><b>o</b></td>
+            <td><code>o</code></td>
             <td>integer</td>
             <td>Octal representation.</td>
             <td>610</td>
           </tr>
           <tr>
-            <td><b>q</b></td>
+            <td><code>q</code></td>
             <td>string</td>
             <td>String in a form suitable to be safely read back by the Lua interpreter. The string is written between double quotes and all double quotes, new lines, embedded zeros, and backslashes are correctly escaped.</td>
             <td>"print(\"Hi\")"</td>
           </tr>
           <tr>
-            <td><b>s</b></td>
+            <td><code>s</code></td>
             <td>string</td>
             <td></td>
             <td>Hello world!</td>
           </tr>
           <tr>
-            <td><b>u</b></td>
+            <td><code>u</code></td>
             <td>integer</td>
             <td>Decimal representation.</td>
             <td>3131</td>
           </tr>
           <tr>
-            <td><b>x</b> or <b>X</b></td>
+            <td><code>x</code> or <code>X</code></td>
             <td>integer</td>
             <td>Hexadecimal representation.</td>
             <td>7fa<br>7FA</td>
           </tr>
           <tr>
-            <td><b>%</b></td>
+            <td><code>%</code></td>
             <td></td>
-            <td><b>%</b> followed by another <b>%</b> will return the <b>%</b> sign itself.</td>
+            <td><code>%</code> followed by another <code>%</code> will return the <code>%</code> sign itself.</td>
             <td>%</td>
           </tr>
         </tbody>
@@ -225,11 +225,11 @@ functions:
       </thead>
       <tbody>
         <tr>
-          <td><b>-</b></td>
-          <td>Left-justify the given field width (see <b>Width</b> below). Right justification is the default.</td>
+          <td><code>-</code></td>
+          <td>Left-justify the given field width (see <code>Width</code> below). Right justification is the default.</td>
         </tr>
         <tr>
-          <td><b>+</b></td>
+          <td><code>+</code></td>
           <td>Forces a "+" sign to precede a number. Has no effect on negative numbers.</td>
         </tr>
         <tr>
@@ -237,12 +237,12 @@ functions:
           <td>One blank space is inserted before a positive number, while negative numbers are unaffected. This is useful for making positive and negative numbers vertically align in a visual stacked list.</td>
         </tr>
         <tr>
-          <td><b>#</b></td>
-          <td>When used with <b>o</b> and <b>x</b>/<b>X</b>, writes a 0 (octal) or 0x/0X (hex) before values other than zero.<br>When used with <b>e</b>/<b>E</b> and <b>f</b>, forces the output to contain a decimal point, even if no digits would follow (by default, no decimal point is written if no digits follow).<br>When used with <b>g</b> or <b>G</b>, the result is the same as with <b>e</b> or <b>E</b> but trailing zeros are not removed.</td>
+          <td><code>#</code></td>
+          <td>When used with <code>o</code> and <code>x</code>/<code>X</code>, writes a 0 (octal) or 0x/0X (hex) before values other than zero.<br>When used with <code>e</code>/<code>E</code> and <code>f</code>, forces the output to contain a decimal point, even if no digits would follow (by default, no decimal point is written if no digits follow).<br>When used with <code>g</code> or <code>G</code>, the result is the same as with <code>e</code> or <code>E</code> but trailing zeros are not removed.</td>
         </tr>
         <tr>
-          <td><b>0</b></td>
-          <td>Left-pads the number with zeros instead of empty spaces (see <b>Width</b> below).</td>
+          <td><code>0</code></td>
+          <td>Left-pads the number with zeros instead of empty spaces (see <code>Width</code> below).</td>
         </tr>
       </tbody>
       </table>
@@ -299,8 +299,8 @@ functions:
         </thead>
         <tbody>
           <tr>
-            <td><b>.</b>(number)</td>
-            <td>For integer specifiers (<b>d</b>, <b>i</b>, <b>o</b>, <b>u</b>, <b>x</b>/<b>X</b>), precision specifies the minimum number of digits to be returned. If the value to be formatted is shorter than this number, the result is padded with leading zeros. A precision of 0 means that no character is written for the value 0.<br>For <b>e</b>/<b>E</b> and <b>f</b> specifiers, this is the number of digits to be printed after the decimal point.<br>For <b>g</b>/<b>G</b> specifiers, this is the maximum number of digits (before the <b>e</b>/<b>E</b>, if present).<br>For <b>s</b>, this is the maximum number of characters to be returned.<br>For <b>c</b> and <b>q</b>, this has no effect.</td>
+            <td><code>.</code>(number)</td>
+            <td>For integer specifiers (<code>d</code>, <code>i</code>, <code>o</code>, <code>u</code>, <code>x</code>/<code>X</code>), precision specifies the minimum number of digits to be returned. If the value to be formatted is shorter than this number, the result is padded with leading zeros. A precision of 0 means that no character is written for the value 0.<br>For <code>e</code>/<code>E</code> and <code>f</code> specifiers, this is the number of digits to be printed after the decimal point.<br>For <code>g</code>/<code>G</code> specifiers, this is the maximum number of digits (before the <code>e</code>/<code>E</code>, if present).<br>For <code>s</code>, this is the maximum number of characters to be returned.<br>For <code>c</code> and <code>q</code>, this has no effect.</td>
           </tr>
         </tbody>
       </table>
@@ -482,9 +482,9 @@ functions:
     summary: |
       Returns a binary string containing the provided arguments.
     description: |
-      Returns a binary string containing the provided arguments. The description
-      in the first argument, which must be a string, determines the way the
-      remaining arguments are packed.
+      Returns a binary string containing the provided arguments. The first
+      argument, `format`, determines the way the remaining arguments are packed;
+      see [here](https://www.lua.org/manual/5.3/manual.html#6.4.2) for options.
     parameters:
       - name: format
         type: string
@@ -504,7 +504,10 @@ functions:
       Returns the size in bytes of any string packed with a given description.
     description: |
       Returns the size in bytes of any string packed with a given description.
-      You can't use `s` and `z` because they have variable lengths.
+      The sole argument, `format`, determines the way the remaining arguments
+      are packed, but you cannot use `s` and `z` because they have variable
+      lengths. See [here](https://www.lua.org/manual/5.3/manual.html#6.4.2) for
+      options.
     parameters:
       - name: format
         type: string
@@ -659,8 +662,8 @@ functions:
       Extracts the values packed in the provided binary string.
     description: |
       Extracts the values packed in the provided binary string based on the
-      description in the first argument. The description should match the one
-      originally used to pack the string. The optional third parameter
+      first argument, `format`, which should match the one
+      originally used to `Library.string.pack|pack()` the string; see [here](https://www.lua.org/manual/5.3/manual.html#6.4.2) for options. The optional third parameter
       determines the byte at which the reading starts.
     parameters:
       - name: format

@@ -31,8 +31,6 @@ navigation:
     path: /studio/testing-modes
   - title: Output Window
     path: /studio/output
-  - title: Avatar Preview
-    path: /studio/avatar-preview
   - title: Developer Console
     path: /studio/developer-console
   #- title: ScriptProfiler # If this is part of the dev console, figure out if it can just be added to that article

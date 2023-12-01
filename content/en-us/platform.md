@@ -14,8 +14,6 @@ Our platform provides you with unparalleled opportunities to create content like
 - Our tools let you rapidly iterate and test your experiences.
 - You have instant global access to a large audience.
 
-<img src="assets/getting-started/platform-overview/Banner.png" width="100%" />
-
 ## Everything You Need
 
 <img src="assets/getting-started/platform-overview/Everything-You-Need.jpg" width="100%" />
