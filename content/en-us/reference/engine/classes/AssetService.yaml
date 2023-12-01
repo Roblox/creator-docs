@@ -19,18 +19,75 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AssetService:CreateEditableImageAsync
+    summary: |
+      Creates a new `Class.EditableImage` instance populated with the given
+      image.
+    description: |
+      Creates a new `Class.EditableImage` instance populated with the given
+      texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
+      using an image asset, it must be associated with and/or owned by a creator
+      of the experience, or it must have been created inside the experience.
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: Content
+        default:
+        summary: |
+          Texture ID of the image to populate the `Class.EditableImage`.
+    returns:
+      - type: EditableImage
+        summary: |
+          A new `Class.EditableImage` containing the provided image.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshAsync
+    summary: |
+      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      content ID.
+    description: |
+      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      content ID.
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: |
+          Content ID of the mesh from which to create an `Class.EditableMesh`
+          instance.
+    returns:
+      - type: EditableMesh
+        summary: |
+          The new `Class.EditableMesh` instance.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AssetService:CreateEditableMeshFromPartAsync
-    summary: ''
-    description: ''
+    summary: |
+      Returns a new `Class.EditableMesh` instance created from an existing
+      `Class.MeshPart`.
+    description: |
+      Returns a new `Class.EditableMesh` instance created from the
+      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
     code_samples: []
     parameters:
       - name: meshPart
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The `Class.MeshPart` from which to create an `Class.EditableMesh`
+          instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
+          for this method to operate.
     returns:
       - type: EditableMesh
-        summary: ''
+        summary: |
+          The new `Class.EditableMesh` instance.
     tags:
       - Yields
     deprecation_message: ''

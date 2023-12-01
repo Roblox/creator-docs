@@ -62,7 +62,7 @@ Use a for loop to go through the array and control how fast the parts should dis
     end
    ```
 
-3. So there's a delay before a part disappears, in the loop, add a `task.wait()` using `VANISH_RATE`.
+3. So there's a delay before a part disappears, in the loop, add a `Library.task.wait()` using `VANISH_RATE`.
 
    ```lua
    for partIndex = 1, #pathArray  do
@@ -97,7 +97,7 @@ If the bridge doesn't disappear, check the possible issues below:
 
 Right now, the parts disappear forever. To make them reappear, create a second for loop that will go through each part and instantly make each piece walkable.
 
-1. After the first loop, add a `task.wait()` to create a short delay before the path reappears.
+1. After the first loop, add a `Library.task.wait()` to create a short delay before the path reappears.
 
    ```lua
     for partIndex = 1, #pathArray  do

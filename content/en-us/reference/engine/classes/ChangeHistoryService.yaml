@@ -270,11 +270,10 @@ events:
         default:
         summary: |
           The identifier for the recording.
-      - name: operation
+      - name: operationn
         type: FinishRecordingOperation
         default:
-        summary: |
-          The operation performed.
+        summary: ''
       - name: finalOptions
         type: Dictionary?
         default:
