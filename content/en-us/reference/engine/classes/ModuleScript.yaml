@@ -30,7 +30,7 @@ description: |
   Studio.
 
   Note that the first call to `require` on a ModuleScript will not yield (halt)
-  unless the ModuleScript yields (e.g. calls `wait`). The current thread that
+  unless the ModuleScript yields (e.g. calls `Library.task.wait()`). The current thread that
   called `require` will yield until a ModuleScript returns a value. A run time
   error is generated if this doesn't happen. If a ModuleScript is attempting to
   `require` another ModuleScript that in turn tries to `require` it, the
