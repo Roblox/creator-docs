@@ -347,7 +347,7 @@ methods:
         existing metadata is being changed; otherwise all existing metadata will
         be cleared.
 
-      If the callback returns `nil` instead, then the current game server will
+      If the callback returns `nil` instead, the current server will
       stop attempting to update the key.
 
       The callback function cannot yield, so do **not** include calls like
