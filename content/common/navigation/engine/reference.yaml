@@ -3233,6 +3233,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AssetTypeVerification.yaml
         ignoreTranslation: true
+      - title: AudioApiRollout
+        path: /reference/engine/enums/AudioApiRollout
+        type: engineapi
+        source: /reference/engine/enums/AudioApiRollout.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi

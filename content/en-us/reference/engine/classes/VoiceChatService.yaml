@@ -38,6 +38,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: VoiceChatService.UseAudioApi
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioApiRollout
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
