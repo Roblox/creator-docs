@@ -159,7 +159,7 @@ properties:
       local UserInputService = game:GetService("UserInputService")
 
       local gyroIsEnabled = UserInputService.GyroscopeEnabled
-      if (gyroIsEnabled) then
+      if gyroIsEnabled then
           print("Gyroscope is enabled!")
       else
           print("Gyroscope is not enabled!")
@@ -352,7 +352,7 @@ properties:
       ```lua
       local UserInputService = game:GetService("UserInputService")
 
-      if (UserInputService.MouseEnabled) then
+      if UserInputService.MouseEnabled then
           print("The user's device has an available mouse!")
       else
           print("The user's device does not have an available mouse!")
@@ -534,7 +534,7 @@ properties:
       local userInputService = game:GetService("UserInputService")
 
       local keyboardIsVisible = userInputService.OnScreenKeyboardIsVisible
-      if (keyboardIsVisible) then
+      if keyboardIsVisible then
       	print("On-screen keyboard is visible!")
       else
       	print("On-screen keyboard is not visible!")
@@ -658,7 +658,7 @@ properties:
       local userInputService = game:GetService("UserInputService")
 
       local isUsingVR = userInputService.VREnabled
-      if (isUsingVR) then
+      if isUsingVR then
           print("User is using a VR headset!")
       else
           print("User is not using a VR headset!")
@@ -1934,7 +1934,7 @@ methods:
       ```lua
       local userInputService = game:GetService("UserInputService")
 
-      if (userInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
+      if userInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
       	print("Gamepad is a navigation gamepad!")
       else
       	print("Gamepad is not a navigation gamepad!")

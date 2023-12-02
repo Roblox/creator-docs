@@ -125,7 +125,7 @@ properties:
       local userInputService = game:GetService("UserInputService")
 
       local isUsingVR = userInputService.VREnabled
-      if (isUsingVR) then
+      if isUsingVR then
           print("User is using a VR headset!")
       else
           print("User is not using a VR headset!")
