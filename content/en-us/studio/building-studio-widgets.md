@@ -322,7 +322,7 @@ local function onButton1Down()
 		Sender = "SomeDragSource",  -- Describes from where the data originated
 		MouseIcon = "",             -- Image content to use for the cursor
 		DragIcon = "",              -- Image content to render under the cursor during drag
-		HotSpot = Vector2.new(0, 0) -- Where on the DragIcon to center the cursor
+		HotSpot = Vector2.zero -- Where on the DragIcon to center the cursor
 	}
 	plugin:StartDrag(dragInfo)
 end

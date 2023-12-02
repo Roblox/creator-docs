@@ -57,7 +57,7 @@ When casting a ray, the distance between the origin and directional `Datatype.Ve
 </table>
 
 ```lua title='Raycast Filtering' highlight='4-7,9'
-local rayOrigin = Vector3.new(0, 0, 0)
+local rayOrigin = Vector3.zero
 local rayDirection = Vector3.new(0, -100, 0)
 
 local raycastParams = RaycastParams.new()
@@ -137,7 +137,7 @@ You can exempt any `Class.BasePart` from hit detection by setting its `Class.Bas
 </Alert>
 
 ```lua title='Raycast Hit Detection' highlight='7-11'
-local rayOrigin = Vector3.new(0, 0, 0)
+local rayOrigin = Vector3.zero
 local rayDirection = Vector3.new(0, -100, 0)
 
 local raycastResult = workspace:Raycast(rayOrigin, rayDirection)

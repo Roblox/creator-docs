@@ -578,8 +578,26 @@ properties:
       can_load: false
       can_save: true
   - name: Camera.VRTiltAndRollEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Toggles whether to apply tilt and roll from the `Class.Camera.CFrame`
+      property while the player is using a VR device.
+    description: |
+      This property toggles whether to apply tilt and
+      roll from the `Class.Camera.CFrame` property while the player is
+      using a VR device.
+      
+      To prevent motion sickness, the horizon should remain level. Tilting
+      and rolling the player's view while using a VR device can cause a
+      disconnect between the player's physical space and the virtual
+      space they are viewing. Changing the apparent downwards direction can
+      cause players to lose balance or experience dizziness.
+
+      For these reasons, it is generally advisable to leave this property
+      disabled, unless you have extensively tested your experience for
+      these effects. Even with tilt and roll enabled, you may want to
+      ensure the player always has a stable reference frame, such as the
+      interior of a vehicle or a floor that can help the player ground
+      themselves in their physical space.
     code_samples: []
     type: bool
     tags: []
