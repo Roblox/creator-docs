@@ -13,6 +13,47 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
-events: []
+methods:
+  - name: CaptureService:PromptShareCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: contentId
+        type: Content
+        default:
+        summary: ''
+      - name: launchData
+        type: Dictionary
+        default:
+        summary: ''
+      - name: onAcceptedCallback
+        type: Function
+        default:
+        summary: ''
+      - name: onDeniedCallback
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: CaptureService.UserCaptureSaved
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: captureContentId
+        type: Content
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 callbacks: []

@@ -3,14 +3,13 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Represents a 3D vector curve, it groups 3 `Class.FloatCurve|FloatCurves`,
-  stored as 3 `Class.FloatCurve` children instances.
+  Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.
 description: |
-  Represents a 3D vector curve containing 3 `Class.FloatCurve|FloatCurves`,
-  stored as 3 FloatCurve children instances. Each FloatCurve can be accessed via
-  `Class.Vector3Curve:X()`, `Class.Vector3Curve:Y()`, `Class.Vector3Curve:Z()`
-  methods. The 3 axes can be sampled simultaneously via the method
-  `Class.Vector3Curve:GetValueAtTime()`.
+  Represents a 3D vector curve, grouping three `Class.FloatCurve` instances.
+  Each child `Class.FloatCurve` can be accessed via the
+  `Class.Vector3Curve:X()`, `Class.Vector3Curve:Y()`, and
+  `Class.Vector3Curve:Z()` methods. The three axes can be sampled simultaneously
+  via the method `Class.Vector3Curve:GetValueAtTime()`.
 code_samples:
   - creating-a-vector3curve
 inherits:
@@ -21,35 +20,36 @@ properties: []
 methods:
   - name: Vector3Curve:GetValueAtTime
     summary: |
-      Samples the 3 FloatCurves (X, Y, Z) at the time passed as argument.
-      Returns the 3 samples as a tuple of 3 numbers. If a channel curve is
-      missing or no key is found in the curve the channel is evaluated as nil.
+      Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
+      time argument.
     description: |
-      Samples the 3 FloatCurves (X, Y, Z) at the time passed as argument.
-      Returns the 3 samples as a tuple of 3 numbers. If a channel curve is
-      missing or no key is found in the curve the channel is evaluated as nil.
+      Returns the three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed
+      time argument as an array of three numbers. If a channel curve is missing
+      or no key is found in the curve, the channel is evaluated as `nil`.
     code_samples:
     parameters:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          Time at which to get the value.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          The three `Class.FloatCurve|FloatCurves` (X, Y, Z) at the passed time
+          argument.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: Vector3Curve:X
     summary: |
-      Returns the FloatCurve controlling the X channel. It is the first child
-      instance of type FloatCurve named `X`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the X channel (the first child
+      instance of type `Class.FloatCurve` named `X`).
     description: |
-      Returns the FloatCurve controlling the X channel. It is the first child
-      instance of type FloatCurve named `X`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the X channel (the first child
+      instance of type `Class.FloatCurve` named `X`). If none is found, an empty
+      `Class.FloatCurve` is created.
     code_samples:
     parameters: []
     returns:
@@ -61,13 +61,12 @@ methods:
     thread_safety: Unsafe
   - name: Vector3Curve:Y
     summary: |
-      Returns the FloatCurve controlling the Y channel. It is the first child
-      instance of type FloatCurve named `Y`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the Y channel (the first child
+      instance of type `Class.FloatCurve` named `Y`).
     description: |
-      Returns the FloatCurve controlling the Y channel. It is the first child
-      instance of type FloatCurve named `Y`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the Y channel (the first child
+      instance of type `Class.FloatCurve` named `Y`). If none is found, an empty
+      `Class.FloatCurve` is created.
     code_samples:
     parameters: []
     returns:
@@ -79,13 +78,12 @@ methods:
     thread_safety: Unsafe
   - name: Vector3Curve:Z
     summary: |
-      Returns the FloatCurve controlling the Z channel. It is the first child
-      instance of type FloatCurve named `Z`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the Z channel (the first child
+      instance of type `Class.FloatCurve` named `Z`).
     description: |
-      Returns the FloatCurve controlling the Z channel. It is the first child
-      instance of type FloatCurve named `Z`. If none is found an empty
-      FloatCurve is created.
+      Returns the `Class.FloatCurve` controlling the Z channel (the first child
+      instance of type `Class.FloatCurve` named `Z`). If none is found, an empty
+      `Class.FloatCurve` is created.
     code_samples:
     parameters: []
     returns:

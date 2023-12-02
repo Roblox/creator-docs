@@ -8,7 +8,7 @@ description: |
   performing work on a subroutine when solving a larger problem. A task doesn't
   even need to have a defined ending point, but it does need to define
   particular times at which it **yields** (pause) to let other things be worked
-  on. See [Coroutine basics](https://www.lua.org/pil/9.1.html) to learn more.
+  on.
 
   ## Using Coroutines
 

@@ -40,7 +40,7 @@ local timeRemaining = 10
 while timeRemaining > 0 do
 	print("Seconds remaining: " .. timeRemaining)
 	task.wait(1)
-	timeRemaining = timeRemaining - 1
+	timeRemaining -= 1
 end
 
 print("Timer reached zero!")
@@ -92,7 +92,7 @@ local currentGoblinCount = 18
 -- Spawn goblins up to a maximum of 25 in the game
 repeat
 	spawnGoblin()
-	currentGoblinCount = currentGoblinCount + 1
+	currentGoblinCount += 1
 	print("Current goblin count: " .. currentGoblinCount)
 until currentGoblinCount == 25
 
@@ -258,7 +258,7 @@ local timeout = 5
 
 while true do
 	task.wait(1)
-	secondsElapsed = secondsElapsed + 1
+	secondsElapsed += 1
 	print("Seconds elapsed:", secondsElapsed)
 
 	if secondsElapsed == timeout then

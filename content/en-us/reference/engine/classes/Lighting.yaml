@@ -134,7 +134,7 @@ properties:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -155,7 +155,7 @@ properties:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -169,7 +169,7 @@ properties:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:
@@ -695,13 +695,13 @@ properties:
       can_save: true
   - name: Lighting.Technology
     summary: |
-      Determines the lighting system for rendering the 3D world. 
-      Non-scriptable. 
+      Determines the lighting system for rendering the 3D world. Non-scriptable.
+      .
     description: |
-      Determines the lighting system for rendering the 3D world. Non-scriptable 
-      and only modifiable in Studio. See `Enum.Technology` for available 
-      options and [Lighting Technology](../../../environment/lighting.md#technology) for detailed descriptions and visual effects of
-      each option.
+      Determines the lighting system for rendering the 3D world. Non-scriptable
+      and only modifiable in Studio. See `Enum.Technology` for available options
+      and [Lighting Technology](../../../environment/lighting.md#technology) for
+      detailed descriptions and visual effects of each option.
     code_samples:
     type: Technology
     tags:
@@ -746,7 +746,7 @@ properties:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -762,7 +762,7 @@ properties:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -776,7 +776,7 @@ properties:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:
@@ -930,7 +930,7 @@ methods:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -946,7 +946,7 @@ methods:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -960,7 +960,7 @@ methods:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:
