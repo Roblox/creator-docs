@@ -2,7 +2,8 @@ name: FlangeSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Creates a sweeping or swooshing effect on a sound.
 description: |
   The FlangeSoundEffect creates a sweeping or swooshing effect on the Sound or
   SoundGroup it is applied to. It does this by copying the original audio signal

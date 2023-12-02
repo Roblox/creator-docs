@@ -3,7 +3,7 @@ title: Remote Events and Callbacks
 description: Remote network events and callbacks allow for back-and-forth communication across the client-server boundary.
 ---
 
-All experiences inherently communicate between the [server](../../projects/client-server.md) and the players' [clients](../../projects/client-server.md). For example, when a player presses `W` to move forward, the keyboard input is received on their **client**. The client then communicates it to the **server** which responds by moving the position of the player's character forward.
+All experiences inherently communicate between the [server](../../projects/client-server.md) and the players' [clients](../../projects/client-server.md). For example, as a player maneuvers their character on their **client**, certain `Class.Humanoid` properties, such as states, are communicated to the **server**, which passes this information to the other connected **clients**.
 
 `Class.RemoteEvent` and `Class.RemoteFunction` objects allow you to create your own events and callback functions to communicate custom behavior across the client-server boundary, with `Class.RemoteEvent|RemoteEvents` facilitating one-way communication and `Class.RemoteFunction|RemoteFunctions` facilitating two-way communication (sending a request across the boundary and yielding until a response is received from the recipient).
 
@@ -371,7 +371,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(typeof(k))  --> string
 	end
 end
@@ -440,7 +440,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 local function onEventFire(player, passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(k .. " = " .. v)
 		--> 1 = Sword
 		--> 2 = Bow

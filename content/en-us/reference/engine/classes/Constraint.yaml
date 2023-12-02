@@ -125,6 +125,40 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods: []
+methods:
+  - name: Constraint:GetDebugAppliedForce
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: bodyId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Constraint:GetDebugAppliedTorque
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: bodyId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

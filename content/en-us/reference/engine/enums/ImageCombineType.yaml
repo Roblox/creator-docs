@@ -1,18 +1,24 @@
 name: ImageCombineType
 type: enum
-summary: ''
-description: ''
+summary: |
+  An enum determining how two images should be combined together.
+description: |
+  An enum determining how two images should be combined together.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: BlendSourceOver
-    summary: ''
+    summary: |
+      Blend pixels from the source with the pixels from the destination using
+      source over alpha blending.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Overwrite
-    summary: ''
+    summary: |
+      Overwrite all pixels in the destination image with the pixels from the
+      source image.
     value: 2
     tags: []
     deprecation_message: ''

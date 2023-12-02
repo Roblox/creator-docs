@@ -74,7 +74,7 @@ The speed boost will make avatars walk faster every time the speed boost is touc
       local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
       if humanoid then
-   	   humanoid.WalkSpeed = humanoid.WalkSpeed + 10
+   	   humanoid.WalkSpeed += 10
       end
    end
 
@@ -85,7 +85,7 @@ The speed boost will make avatars walk faster every time the speed boost is touc
 
    ```lua title="Checks if current WalkSpeed is 50 or less"
    if humanoid and humanoid.WalkSpeed <= 50 then
-    humanoid.WalkSpeed = humanoid.WalkSpeed + 10
+    humanoid.WalkSpeed += 10
    end
 
    ```
@@ -104,7 +104,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
      if humanoid and humanoid.WalkSpeed <= 50 then
-       humanoid.WalkSpeed = humanoid.WalkSpeed + 10
+       humanoid.WalkSpeed += 10
        speedBoost.CanTouch = false
      end
    end
@@ -123,7 +123,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
      if humanoid and humanoid.WalkSpeed <= 50 then
-       humanoid.WalkSpeed = humanoid.WalkSpeed + 10
+       humanoid.WalkSpeed += 10
        speedBoost.CanTouch = false
        task.wait(1)
        speedBoost.CanTouch = true

@@ -93,6 +93,8 @@ Try to limit your edits to one class or feature so that the pull request is easi
 
 To avoid formatting issues, we recommend text editors like github.dev that let you preview Markdown as you write it. For prose, try to follow the guidelines in [STYLE.md](STYLE.md). For code samples, use the [Lua Style Guide](https://roblox.github.io/lua-style-guide/).
 
+To view a page fully formatted per what we see on the `main` branch, replace the entire URL from `content/` and before. Files with the basename `index` should have that name removed. For example, the page for "https://github.com/Roblox/creator-docs/blob/main/content/en-us/avatar/index.md" is rendered at "https://create.roblox.com/docs/en-us/avatar".
+
 ## Licenses
 
 - For prose, this project uses the Creative Commons Attribution 4.0 International Public License. For full license text, see [LICENSE](LICENSE).
