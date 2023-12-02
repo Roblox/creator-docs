@@ -192,7 +192,7 @@ callbacks:
       anything else (including `nil`), the message won't be delivered to that client, although the
       sender will see the message regardless.
       
-      The sender can be referenced by 'Class.TextChatMessage.TextSource'.
+      The sender can be referenced by `Class.TextChatMessage.TextSource`.
     code_samples: []
     parameters:
       - name: message
