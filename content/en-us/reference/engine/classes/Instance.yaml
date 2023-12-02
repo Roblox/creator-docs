@@ -1311,7 +1311,7 @@ methods:
       Note that this code sample does not define `Class.Instance`:
 
       ```lua
-      instance:SetAttribute("InitialPosition", Vector3.new(0, 0, 0))
+      instance:SetAttribute("InitialPosition", Vector3.zero)
       ```
 
       #### Limitations

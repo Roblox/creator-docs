@@ -918,7 +918,7 @@ methods:
       ```
       local i = 0
       while true do
-      	i = i + 1
+      	i += 1
       	if i % 5 == 0 then
       		task.wait()
       	end
