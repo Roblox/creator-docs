@@ -46,7 +46,7 @@ In the following code, the global variable `x` starts at `0`, increments by `1` 
 x = 0  -- Global variable "x"
 
 for i = 1, 4 do
-	x = x + 1
+	x += 1
 	print("Global 'x' = " .. x)
 end
 

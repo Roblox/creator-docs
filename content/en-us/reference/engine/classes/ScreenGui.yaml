@@ -187,9 +187,9 @@ properties:
 
       If you set this property to `Enum.ScreenInsets|TopbarSafeInsets`, all
       descendant `Class.GuiObject|GuiObjects` will be kept between the Roblox
-      left-most controls and the edge of the device safe area.
-      This `Class.ScreenGui` will then automatically adjust its size and
-      position based on control visibility/size to avoid UI collisions.
+      left-most controls and the edge of the device safe area. This
+      `Class.ScreenGui` will then automatically adjust its size and position
+      based on control visibility/size to avoid UI collisions.
 
       <img
       src="/assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Collapsed.png"

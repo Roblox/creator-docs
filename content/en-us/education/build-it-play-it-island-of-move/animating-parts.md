@@ -73,7 +73,7 @@ For this project, a tween will move an object from a starting position to a goal
    	tweenButton.Completed:Connect(function()
    		inTween = false
    		-- Invert the button state
-   		buttonState = buttonState * -1
+   		buttonState *= -1
    	end)
 
    end
@@ -206,7 +206,7 @@ local inTween = false
 
 -- Customizable variables
 local TWEEN_TIME = 1
-local TWEEN_SCALE = Vector3.new(0, 0, 0)
+local TWEEN_SCALE = Vector3.zero
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(

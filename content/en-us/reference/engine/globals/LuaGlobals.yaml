@@ -525,7 +525,7 @@ functions:
       Level 1 is the function calling `setfenv()`. `setfenv()` returns the given
       function.
 
-      If `f` is ` 0``, then  `setfenv()` changes the environment of the running
+      If `f` is `0`, then `setfenv()` changes the environment of the running
       thread and returns no values.
     parameters:
       - name: f

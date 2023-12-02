@@ -2,7 +2,8 @@ name: ReverbSoundEffect
 type: class
 category: Sounds
 memory_category: Instances
-summary: ''
+summary: |
+  Reverberates audio, simulating the effect of bouncing off walls in a room.
 description: |
   The ReverbSoundEffect simulates the effect of sounds bouncing off of several
   surfaces (such as walls in a room), which causes several overlapping echoes

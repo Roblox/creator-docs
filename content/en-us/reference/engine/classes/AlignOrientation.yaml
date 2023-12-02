@@ -22,10 +22,12 @@ description: |
   #### Affected Axes
 
   The axes affected by torque are controlled through the constraint's
-  `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` property. If false
-  (default), the constraint will apply torque about all 3&nbsp;axes to achieve
-  alignment. If true, torque will only occur when the primary axes become
-  misaligned.
+  `Class.AlignOrientation.AlignType|AlignType` property. When set to
+  `Enum.AlignType|PrimaryAxisParallel`,
+  `Enum.AlignType|PrimaryAxisPerpendicular` or
+  `Enum.AlignType|PrimaryAxisLookAt`, torque will only occur when the primary
+  axes become misaligned. Otherwise, the constraint will apply torque about all
+  3 axes to achieve alignment.
 
   #### Reactionary Torque
 
@@ -58,15 +60,15 @@ deprecation_message: ''
 properties:
   - name: AlignOrientation.AlignType
     summary: |
-      The constraint's axis alignment type (parallel or perpendicular).
+      The constraint's axis alignment type.
     description: |
       Specifies the desired relationship between the primary axes of
-      `Class.Constraint.Attachment0|Attachment0` and the goal. Options are
-      either `Enum.AlignType|Parallel` or `Enum.AlignType|Perpendicular` and the
-      constraint will attempt to maintain the specified relationship by applying
-      forces within two parallel or perpendicular axes, respectively. Only
-      meaningful if `Class.AlignOrientation.PrimaryAxisOnly|PrimaryAxisOnly` is
-      true.
+      `Class.Constraint.Attachment0|Attachment0` and the goal. Available options
+      are `Enum.AlignType|AllAxes`, `Enum.AlignType|PrimaryAxisParallel`,
+      `Enum.AlignType|PrimaryAxisPerpendicular`, and
+      `Enum.AlignType|PrimaryAxisLookAt`. The constraint will attempt to
+      maintain the specified relationship, as given by the `Enum.AlignType`, by
+      applying torques onto the relevant axes.
     code_samples:
     type: AlignType
     tags: []
@@ -102,8 +104,15 @@ properties:
       can_load: true
       can_save: true
   - name: AlignOrientation.LookAtPosition
-    summary: ''
-    description: ''
+    summary: |
+      A `Datatype.Vector3` world space location toward which the primary axis
+      will attempt to align.
+    description: |
+      A `Datatype.Vector3` world space location toward which the primary axis
+      will attempt to align. This is only active when
+      `Class.AlignOrientation.AlignType|AlignType` is set to
+      `Enum.AlignType|PrimaryAxisLookAt` and `Class.AlignOrientation.Mode|Mode`
+      is set to `Enum.OrientationAlignmentMode|OneAttachment`.
     code_samples: []
     type: Vector3
     tags:
@@ -234,7 +243,12 @@ properties:
     code_samples:
     type: bool
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This property is deprecated. Depending on your usage case, set
+      `Class.AlignOrientation.AlignType|AlignType` directly to
+      `Enum.AlignType|PrimaryAxisParallel`,
+      `Enum.AlignType|PrimaryAxisPerpendicular` or
+      `Enum.AlignType|PrimaryAxisLookAt` instead.
     security:
       read: None
       write: None
