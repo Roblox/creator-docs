@@ -187,9 +187,10 @@ callbacks:
     description: |
       Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client. Can only be defined on the server.
 
-      Once defined, this callback needs to return a truthy value (true, 1,
-      "hello") to deliver the message to said client. If the callback returns
-      anything else (including nil), the message won't be delivered to that client. The sender will still see the message regardless.
+      Once defined, this callback needs to return a truthy value such as `true`, `1`,
+      or `"hello"` to deliver the message to said client. If the callback returns
+      anything else (including `nil`), the message won't be delivered to that client, although the
+      sender will see the message regardless.
       
       The sender can be referenced by 'Class.TextChatMessage.TextSource'.
     code_samples: []
