@@ -265,7 +265,7 @@ Next, you'll use if and elseif to give or subtract points depending on the color
    	local playerPoints= playerStats:WaitForChild("Points")
 
    	if currentColor == blue then
-   		playerPoints.Value = playerPoints.Value + smallPoints
+   		playerPoints.Value += smallPoints
    	end
    end
    ```
@@ -274,9 +274,9 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-   	playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value += smallPoints
    elseif currentColor == green then
-   	playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value += largePoints
    end
    ```
 
@@ -284,11 +284,11 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-   	playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value += smallPoints
    elseif currentColor == green then
-   	playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value += largePoints
    else
-   	playerPoints.Value = playerPoints.Value - losePoints
+   	playerPoints.Value -= losePoints
    end
    ```
 
@@ -296,11 +296,11 @@ Next, you'll use if and elseif to give or subtract points depending on the color
 
    ```lua
    if currentColor == blue then
-   	playerPoints.Value = playerPoints.Value + smallPoints
+   	playerPoints.Value += smallPoints
    elseif currentColor == green then
-   	playerPoints.Value = playerPoints.Value + largePoints
+   	playerPoints.Value += largePoints
    else
-   	playerPoints.Value = playerPoints.Value - losePoints
+   	playerPoints.Value -= losePoints
    end
 
    pointPart:Destroy()
@@ -404,11 +404,11 @@ local function givePoints(player)
 	
 	-- Gives player gold based on the color of the part
 	if currentColor == blue then
-		playerPoints.Value = playerPoints.Value + smallPoints
+		playerPoints.Value += smallPoints
 	elseif currentColor == green then
-		playerPoints.Value = playerPoints.Value + largePoints
+		playerPoints.Value += largePoints
 	else
-		playerPoints.Value = playerPoints.Value - losePoints
+		playerPoints.Value -= losePoints
 	end
 
 	-- Destroy the part, wait a second, and thne destroy the particle
