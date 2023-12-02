@@ -199,7 +199,7 @@ callbacks:
         type: TextChatMessage
         default:
         summary: ''
-      - name: targetTextSource
+      - name: textSource
         type: TextSource
         default:
         summary: ''
