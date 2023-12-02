@@ -22,7 +22,7 @@ description: |
   params.BundleTypes = {Enum.BundleType.Animations, Enum.BundleType.BodyParts}
 
   local types = params.BundleTypes
-  for _, val in ipairs(types) do
+  for _, val in types do
     print(val)
   end
   -- table.insert(types, Enum.BundleType.Animations) -- This would not work because the table is read only

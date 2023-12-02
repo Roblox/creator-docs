@@ -148,7 +148,7 @@ local getSuccess, items = pcall(function()
 		Enum.SortDirection.Ascending, 20, lowerBound, upperBound)
 end)
 if getSuccess then
-	for _, item in ipairs(items) do
+	for _, item in items do
 		print(item.key)
 		print(item.sortKey)
 	end
@@ -243,7 +243,7 @@ while true do
 		local removeSuccess = true
 		local removeError = nil
 
-		for _, item in ipairs(items) do
+		for _, item in items do
 			removeSuccess, removeError = pcall(function()
 				sortedMap:RemoveAsync(item.key)
 			end)

@@ -190,7 +190,7 @@ specialLabel.Parent = specialGuiInstance
 ScavengerHunt.hideOtherGuis(function()
 	-- Hide all developer-defined screen GUIs
 	local instances = playerGui:GetChildren()
-	for _, instance in pairs(instances) do
+	for _, instance in instances do
 		if instance:IsA("ScreenGui") and not instance.Name == "ScavengerHunt" and instance.Enabled then
 			instance.Enabled = false
 			table.insert(hiddenInstances, instance)
@@ -202,7 +202,7 @@ end)
 
 ScavengerHunt.showOtherGuis(function()
 	-- Show all developer-defined screen GUIs that were hidden
-	for _, instance in pairs(hiddenInstances) do
+	for _, instance in hiddenInstances do
 		instance.Enabled = true
 	end
 	hiddenInstances = {}

@@ -103,7 +103,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local bindableEvent = ServerScriptService:FindFirstChildOfClass("BindableEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(typeof(k))  --> string
 	end
 end
@@ -137,7 +137,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local bindableEvent = ServerScriptService:FindFirstChildOfClass("BindableEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(k .. " = " .. v)
 		--> 1 = Sword
 		--> 2 = Bow

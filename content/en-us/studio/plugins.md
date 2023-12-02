@@ -83,7 +83,7 @@ local button = toolbar:CreateButton("Neon it up", "", "")
 -- Connect a function to the click event
 button.Click:Connect(function()
     local parts = {}
-    for _, part in pairs(Selection:Get()) do
+    for _, part in Selection:Get() do
         if part:IsA("BasePart") then
             parts[#parts + 1] = part
         end
@@ -105,7 +105,7 @@ button.Click:Connect(function()
     end
 
     -- Iterate through the selected parts
-    for _, part in pairs(parts) do
+    for _, part in parts do
         part.Material = Enum.Material.Neon -- Set the material of the part to Neon
     end
 

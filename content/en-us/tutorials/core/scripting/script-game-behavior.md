@@ -96,7 +96,7 @@ which tells the engine to run the script on the server, and prevents clients fro
    end
 
    -- Setting up event listeners
-   for _, coin in ipairs(coins) do
+   for _, coin in coins do
    	coin:SetAttribute("Enabled", true)
    	coin.Touched:Connect(function(otherPart)
    		onCoinTouched(otherPart, coin)
@@ -198,11 +198,7 @@ which tells the engine to run the script on the server, and prevents clients fro
    `onTouchedEvent()` handler to every coin's touch event by doing the
    following:
 
-   - **Loop through all the coins** - `Global.LuaGlobals.ipairs()` is a global
-     function that lets you iterate an array in order. The two parameters after the
-     `for` keyword denote the index (`_`) and the value of the indexed position
-     (`coin`) in the array. The index isn't relevant here, so the `_` placeholder is
-     used.
+   - **Loop through all the coins** - We will loop through each of the coins using [general iteration](https://luau-lang.org/performance#optimized-table-iteration).
    - **Connect the handler to the event** - In each iteration of the loop, the
      coin is enabled by default, so it's visible in the 3D world during the
      initial start of the experience. The `onCoinTouched()` handler method is also
@@ -211,7 +207,7 @@ which tells the engine to run the script on the server, and prevents clients fro
      object that touched the object, `otherPart`.
 
      ```lua title="Connecting the Event Handler"
-     for _, coin in ipairs(coins) do
+     for _, coin in coins do
         coin:SetAttribute("Enabled", true)
         coin.Touched:Connect(function(otherPart)
            onCoinTouched(otherPart, coin)

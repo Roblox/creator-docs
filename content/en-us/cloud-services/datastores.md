@@ -276,7 +276,7 @@ local characters = {
 	Venus = 25,
 	Neptune = 62
 }
-for char, age in pairs(characters) do
+for char, age in characters do
 	local success, errorMessage = pcall(function()
 		characterAgeStore:SetAsync(char, age)
 	end)
@@ -294,7 +294,7 @@ if success then
 		-- Get the current (first) page
 		local entries = pages:GetCurrentPage()
 		-- Iterate through all key-value pairs on page
-		for _, entry in pairs(entries) do
+		for _, entry in entries do
 			print(entry.key .. " : " .. tostring(entry.value))
 		end
 		-- Check if last page has been reached

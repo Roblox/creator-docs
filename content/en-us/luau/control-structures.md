@@ -164,7 +164,7 @@ For loops need a function, or iterator, to iterate over different types of colle
 
 ### Generalized Iteration
 
-In Luau, you can iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
+In Luau, you can use [general iteration](https://luau-lang.org/performance#optimized-table-iteration) to iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
 
 ```lua
 for i, v in {1, 2, 3, 4, 5} do

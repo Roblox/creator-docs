@@ -304,7 +304,7 @@ methods:
       local StudioService = game:GetService("StudioService")
       local imageLabel = script.Parent
       local function displayClassIcon(image, className)
-      	for k, v in pairs(StudioService:GetClassIcon(className)) do
+      	for k, v in StudioService:GetClassIcon(className) do
       		image[k] = v -- Set property
       	end
       end

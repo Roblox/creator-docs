@@ -105,7 +105,7 @@ properties:
       	local selectionService = game:GetService("Selection")
       	local selectedObjects = selectionService:Get()
       	local alignObjects = {}
-      	for _, obj in pairs(selectedObjects) do
+      	for _, obj in selectedObjects do
       		if obj:IsA("BaseWrap") then
       			--print("Wrap: " .. obj.Name)
       			table.insert(alignObjects, obj)
