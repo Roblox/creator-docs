@@ -30,7 +30,7 @@ items:
   - name: Sin
     summary: |
       Rotate at a velocity of:
-      `ParamA * math.sin(game.Workspace.DistributedGameTime * ParamB)`, where
+      `ParamA * math.sin(workspace.DistributedGameTime * ParamB)`, where
       `Class.BasePart` `ParamA` determines the maximum speed at which the part
       spins, and `Class.BasePart` `ParamB` determines how frequently it changes
       direction.

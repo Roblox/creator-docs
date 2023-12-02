@@ -71,7 +71,7 @@ properties:
       belongs to a specific class ignoring class inheritance. For example:
 
       ```
-      for _, child in ipairs(game.Workspace:GetChildren()) do
+      for _, child in ipairs(workspace:GetChildren()) do
           if child.ClassName == "Part" then
               print("Found a Part")
               -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
@@ -991,7 +991,7 @@ methods:
       and E) before A and B.
 
       ```lua
-      local descendants = game.Workspace.Model:GetDescendants()
+      local descendants = workspace.Model:GetDescendants()
 
       -- Loop through all of the descendants of the model and
       -- print out their name
