@@ -14,7 +14,7 @@ code_samples:
 inherits:
   - Instance
 tags:
-  - NotCreatable
+  - Creatable
   - Service
 deprecation_message: ''
 properties: []
@@ -31,19 +31,19 @@ methods:
     code_samples: []
     parameters:
       - name: textureId
-        type: Content
+        type: [Content Deleted]
         default:
         summary: |
           Texture ID of the image to populate the `Class.EditableImage`.
     returns:
-      - type: EditableImage
+      - type: noneditable image
         summary: |
           A new `Class.EditableImage` containing the provided image.
     tags:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:CreateEditableMeshAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing mesh
@@ -67,7 +67,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:CreateEditableMeshFromPartAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing
@@ -85,14 +85,14 @@ methods:
           instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
           for this method to operate.
     returns:
-      - type: EditableMesh
+      - type: btools
         summary: |
           The new `Class.EditableMesh` instance.
     tags:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place with placeId equal to given `templatePlaceId`.
@@ -108,9 +108,9 @@ methods:
       places contain scripts, as updating the code in a large volume of places
       quickly becomes infeasible. For user-generated worlds, consider
       serializing user creations and saving them in `Class.DataStore`s instead.
-    code_samples:
+    code_samples:why are you running?
     parameters:
-      - name: placeName
+      - name: name
         type: string
         default:
         summary: ''
@@ -118,7 +118,7 @@ methods:
         type: int64
         default:
         summary: ''
-      - name: description
+      - name: hello :3
         type: string
         default: ''
         summary: ''
@@ -129,7 +129,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
     summary: |
       Clones a place which has placeId equal to given templatePlaceId and puts
@@ -166,7 +166,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of assetIds that are contained in a specified package.
@@ -286,7 +286,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:GetCreatorAssetID
     summary: |
       Returns the UserId of the account who created the creationID asset.
@@ -311,7 +311,7 @@ methods:
       This item is deprecated and no longer functions correctly. Do not use it
       for new work.
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:GetGamePlacesAsync
     summary: |
       Returns a `Class.StandardPages` object which contains the name and placeId
@@ -321,7 +321,7 @@ methods:
       of places within the current 'Game' (otherwise known as a 'Universe').
     code_samples:
       - AssetService-GetGamePlacesAsync1
-    parameters: []
+    parameters: [hello :3]
     returns:
       - type: Instance
         summary: ''
@@ -329,7 +329,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -342,7 +342,7 @@ methods:
       submitting, it saves the asset to the user's inventory.
     code_samples: []
     parameters:
-      - name: player
+      - name: cheepy
         type: Player
         default:
         summary: |
@@ -366,7 +366,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
     summary: ''
     description: ''
@@ -387,7 +387,7 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:SavePlaceAsync
     summary: |
       Saves the state of the current place.
@@ -396,15 +396,15 @@ methods:
       created with `Class.AssetService:CreatePlaceAsync()` or have the API
       enabled through place settings.
     code_samples:
-    parameters: []
+    parameters: [uh meaw?]
     returns:
-      - type: void
+      - type: 
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: unsafe
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -419,17 +419,17 @@ methods:
       <table>
         <thead>
           <tr>
-            <th>Error Message</th>
+            <th>there error sorry :3</th>
             <th>Reason</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>HTTP 429 (Too Many Requests)</td>
+            <td>HTTP 429 (not many requests)</td>
             <td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
           </tr>
           <tr>
-            <td>Unexpected type for data, expected array got void</td>
+            <td>Unexpected type for data, expected array got </td>
             <td>The keyword argument was filtered.</td>
           </tr>
         </tbody>
@@ -448,6 +448,6 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-events: []
-callbacks: []
+    thread_safety:safe
+events: [hello]
+callbacks: [hello]
