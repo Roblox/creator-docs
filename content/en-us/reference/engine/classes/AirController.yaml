@@ -1,0 +1,184 @@
+name: AirController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - ControllerBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: AirController.BalanceMaxTorque
+    summary: |
+      The maximum torque the character can use to remain balanced upright.
+    description: |
+      The maximum torque the character can use to remain balanced upright. When
+      misaligned, this amount of torque is applied to reach the
+      `Class.AirController.BalanceSpeed|BalanceSpeed` and realign the character.
+      A higher torque means more force is required to cause the character to
+      tilt. A lower torque means it's easer for the character to flip in the
+      air. This property is hidden and has no effect when
+      `Class.ControllerBase.BalanceRigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.BalanceSpeed
+    summary: |
+      The maximum angular speed used to align the character upright.
+    description: |
+      The maximum angular speed used to align the character upright. A lower
+      value means it takes longer for the character to recover to the upright
+      position when misaligned. A higher value results in a quicker recovery.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.LinearImpulse
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AirController.MaintainAngularMomentum
+    summary: |
+      Determines whether angular momentum is preserved when input has stopped.
+    description: |
+      Determines whether angular momentum is preserved when input has stopped.
+      If false, the character will apply
+      `Class.AirController.TurningMaxTorque|TurningMaxTorque` to bring the
+      angular velocity toward 0 when there is no input.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.MaintainLinearMomentum
+    summary: |
+      Determines whether linear momentum is preserved when input has stopped.
+    description: |
+      Determines whether linear momentum is preserved when input has stopped. If
+      false, the character will apply
+      `Class.AirController.MoveMaxForce|MoveMaxForce` to bring the linear
+      velocity towards 0 when there is no input.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.MoveMaxForce
+    summary: |
+      The maximum force that can be applied on the
+      `Class.ControllerManager.RootPart` for moving in the
+      `Class.ControllerManager.MovingDirection`.
+    description: |
+      The maximum force that can be applied on the
+      `Class.ControllerManager.RootPart` for moving in the
+      `Class.ControllerManager.MovingDirection`. This affects how quickly
+      different target linear velocities are reached and how quick the linear
+      acceleration is if
+      `Class.AirController.MaintainLinearMomentum|MaintainLinearMomentum` is
+      off.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.TurnMaxTorque
+    summary: |
+      The maximum torque that can be applied on the
+      `Class.ControllerManager.RootPart` for turning towards the
+      `Class.ControllerManager.FacingDirection`.
+    description: |
+      The maximum torque that can be applied on the
+      `Class.ControllerManager.RootPart` for turning towards the
+      `Class.ControllerManager.FacingDirection`. This effects how quickly
+      different target angular velocities are reached and how quick angular
+      deceleration is if
+      `Class.AirController.MaintainAngularMomentum|MaintainAngularMomentum` is
+      off.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AirController.TurnSpeedFactor
+    summary: |
+      The value multiplied by the `Class.ControllerManager.BaseTurnSpeed`.
+    description: |
+      The value multiplied by the `Class.ControllerManager.BaseTurnSpeed` to
+      determine the final target angular velocity while this controller is
+      active. The angular velocity is applied when turning towards the
+      `Class.ControllerManager.FacingDirection`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Turn
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,508 @@
+name: ProximityPrompt
+type: class
+category:
+memory_category: Instances
+summary: |
+  An object that lets you prompt players to interact with an object in the 3D
+  world.
+description: |
+  The **ProximityPrompt** instance lets you prompt players to interact with an
+  object in the 3D world, such as opening a door or picking up an item. A
+  `Class.ProximityPrompt` object works when parented to a `Class.BasePart`,
+  `Class.Model`, or `Class.Attachment` in the workspace. When the player's
+  character approaches, a UI appears to prompt them for input.
+
+  Prompts consist of three primary elements, each of which can be controlled by
+  the noted properties. The default UI can be swapped out for your own custom
+  appearance as outlined in `Class.ProximityPrompt.Style|Style`.
+
+  <img src="/assets/ui/proximity-prompt/Prompt-Diagram.png" width="600" />
+
+  <table>
+  <thead>
+    <tr>
+      <td>Property</td>
+      <td>Description</td>
+      <td>Default</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Class.ProximityPrompt.ObjectText|ObjectText</code></td>
+      <td>An optional name for the object being interacted with.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>Class.ProximityPrompt.ActionText|ActionText</code></td>
+      <td>An optional action name shown to the player.</td>
+      <td>Interact</td>
+    </tr>
+    <tr>
+      <td><code>Class.ProximityPrompt.KeyboardKeyCode|KeyboardKeyCode</code></td>
+      <td>The keyboard key which will trigger the prompt.</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td><code>Class.ProximityPrompt.GamepadKeyCode|GamepadKeyCode</code></td>
+      <td>The gamepad button which will trigger the prompt.</td>
+      <td>ButtonX</td>
+    </tr>
+  </tbody>
+  </table>
+
+  You can connect to proximity prompt events either on the
+  `Class.ProximityPrompt` object itself or globally through
+  `Class.ProximityPromptService`. The `Class.ProximityPromptService` allows you
+  to manage all proximity prompt behavior from one location, preventing any need
+  for duplicate code in your experience.
+
+  For more information regarding proximity prompts, see the
+  [Proximity Prompts](../../../ui/proximity-prompts.md) guide.
+code_samples:
+  - using-a-proximity-prompt-with-a-seat
+  - generating-a-custom-proximity-prompt
+  - healing-proximity-prompt
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: ProximityPrompt.ActionText
+    summary: |
+      The action text shown to the user.
+    description: |
+      This property determines the action text shown to the user.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.AutoLocalize
+    summary: |
+      Whether the prompt's `Class.ProximityPrompt.ActionText` and
+      `Class.ProximityPrompt.ObjectText` will be localized according to the
+      `Class.ProximityPrompt.RootLocalizationTable`.
+    description: |
+      This property determines whether the prompt's
+      `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`
+      will be localized according to the
+      `Class.ProximityPrompt.RootLocalizationTable`. When set to true,
+      localization will be applied.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.ClickablePrompt
+    summary: |
+      Whether the prompt can be activated by clicking/tapping on the prompt UI.
+    description: |
+      This property determines whether the prompt can be activated by
+      clicking/tapping on the prompt's UI. When set to false, the prompt cannot
+      be activated by click/tap except on mobile.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.Enabled
+    summary: |
+      Whether this prompt should be shown.
+    description: |
+      This property indicates whether or this `Class.ProximityPrompt` should be
+      shown.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.Exclusivity
+    summary: |
+      Used to customize which prompts can be shown at the same time.
+    description: |
+      This property is used to customize which prompts can be shown at the same
+      time.
+    code_samples:
+    type: ProximityPromptExclusivity
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.GamepadKeyCode
+    summary: |
+      The gamepad button the player should press to trigger the prompt.
+    description: |
+      This property determines the gamepad button the player should press to
+      trigger the `Class.ProximityPrompt|ProximityPrompt`. Default is
+      **ButtonX**.
+    code_samples:
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.HoldDuration
+    summary: |
+      The duration, in seconds, that the player must hold the button/key down to
+      trigger the prompt.
+    description: |
+      This property indicates the duration, in seconds, that the player must
+      hold the button/key down to trigger the prompt.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.KeyboardKeyCode
+    summary: |
+      The key the player should press to trigger the prompt.
+    description: |
+      This property determines the key the player should press to trigger the
+      `Class.ProximityPrompt|ProximityPrompt`. Default is <kbd>E</kbd>.
+    code_samples:
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.MaxActivationDistance
+    summary: |
+      The maximum distance a Player's `Class.Player.Character|character` can be
+      from the `Class.ProximityPrompt` for the prompt to appear.
+    description: |
+      This property determines the maximum distance a Player's
+      `Class.Player.Character|character` can be from the `Class.ProximityPrompt`
+      for the prompt to appear.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.ObjectText
+    summary: |
+      An optional property that determines the object name text shown to the
+      user.
+    description: |
+      This optional property determines the optional object name text shown to
+      the user.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.RequiresLineOfSight
+    summary: |
+      Whether the prompt is hidden if the path between the player's
+      `Class.Camera` and object parented to the `Class.ProximityPrompt` is
+      obstructed.
+    description: |
+      This property indicates whether the prompt is hidden if the path between
+      the player's `Class.Camera` and object parented to the
+      `Class.ProximityPrompt` is obstructed. If true, this prompt will only be
+      shown if there is a clear path from the camera to the object.
+
+      The parent `Class.Part` or `Class.Model` of the prompt will be excluded
+      from this check.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.RootLocalizationTable
+    summary: |
+      A reference to a `Class.LocalizationTable` to be used to apply automated
+      localization to this `Class.ProximityPrompt`'s
+      `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`.
+    description: |
+      This property serves as a reference to the `Class.LocalizationTable` used
+      to apply automated localization to the `Class.ProximityPrompt`'s
+      `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`.
+      In order for this to apply, `Class.ProximityPrompt.AutoLocalize` must be
+      set.
+
+      Developers can set this to reference a LocalizationTable anywhere in the
+      `Class.DataModel`. It is not required to be a child of
+      `Class.LocalizationService`. If there is no translation available in the
+      referenced table it will look for a translation in the parent of that
+      table, if it is also a LocalizationTable, and so on.
+    code_samples:
+    type: LocalizationTable
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.Style
+    summary: |
+      The style of the prompt's UI.
+    description: |
+      This property indicates the `Class.ProximityPrompt`'s style. When set to
+      Custom, no default UI will be provided.
+
+      The provided UI can be swapped out for a custom UI. In order to do this,
+      set Style to Custom. Then, listen to the
+      `Class.ProximityPrompt.PromptShown` and
+      `Class.ProximityPrompt.PromptHidden` events in a `Class.LocalScript`,
+      where developers should create and tear down the UI.
+
+      Developers may also use `Class.ProximityPrompt.PromptButtonHoldBegan` and
+      `Class.ProximityPrompt.PromptButtonHoldEnded` in order to utilize the
+      `Class.ProximityPrompt.HoldDuration` progress animation feature.
+    code_samples:
+    type: ProximityPromptStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ProximityPrompt.UIOffset
+    summary: |
+      The pixel offset applied to the prompt's UI.
+    description: |
+      This property indicates the pixel offset applied to the prompt's UI.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: ProximityPrompt:InputHoldBegin
+    summary: |
+      Fires a signal indicating that the user began pressing the prompt GUI
+      button.
+    description: |
+      This function triggers a signal indicating that the user began pressing
+      the `Class.ProximityPrompt` prompt button. It should be used by developers
+      who wish to customize the prompt and trigger it from a prompt GUI button
+      press.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt:InputHoldEnd
+    summary: |
+      Fires a signal indicating that the user ended pressing the prompt GUI
+      button.
+    description: |
+      A counterpoint to `Class.ProximityPrompt:InputHoldBegin()`, this signals
+      that the user ended pressing the prompt GUI button.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: ProximityPrompt.PromptButtonHoldBegan
+    summary: |
+      Triggered when a player begins holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button connected to a prompt
+      with a non-zero `Class.ProximityPrompt.HoldDuration`.
+    description: |
+      This event triggers when a player begins holding down the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`. One possible usage includes
+      to animate a hold progress bar.
+    code_samples:
+    parameters:
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who begins holding down the prompt button.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt.PromptButtonHoldEnded
+    summary: |
+      Triggers when the player ends holding down the button on a prompt with a
+      non-zero `Class.ProximityPrompt.HoldDuration`.
+    description: |
+      This event triggers when the player ends holding down the button on a
+      prompt with a non-zero `Class.ProximityPrompt.HoldDuration`. One possible
+      usage includes to animate a hold progress bar.
+    code_samples:
+    parameters:
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The player who ended the input hold.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt.PromptHidden
+    summary: |
+      Triggers when the prompt becomes hidden.
+    description: |
+      This event triggers when the `Class.ProximityPrompt|prompt` becomes
+      hidden. This event is triggered client-side for `LocalScripts`.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt.PromptShown
+    summary: |
+      Triggers when the `Class.ProximityPrompt|prompt` becomes visible.
+    description: |
+      This event triggers when the `Class.ProximityPrompt|prompt` becomes
+      visible. This event is triggered client-side for `LocalScripts`.
+    code_samples:
+    parameters:
+      - name: inputType
+        type: ProximityPromptInputType
+        default:
+        summary: |
+          The input that triggers the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt.TriggerEnded
+    summary: |
+      Triggers when `Class.ProximityPrompt.KeyboardKeyCode|key`/button is
+      released, for longer events where the user is required to hold down the
+      button.
+    description: |
+      This event is triggered when the
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button is released, for longer
+      events where the user is required to hold down the button (e.g. heal
+      another player over time.)
+    code_samples:
+    parameters:
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who released the key/button, ending the trigger
+          event.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ProximityPrompt.Triggered
+    summary: |
+      Triggered when the prompt
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button is pressed, or after a
+      specified amount of time holding the button, if
+      `Class.ProximityPrompt.HoldDuration` is used.
+    description: |
+      This event is triggered when the prompt
+      `Class.ProximityPrompt.KeyboardKeyCode|key`/button is pressed, or after a
+      specified amount of time holding the button, if
+      `Class.ProximityPrompt.HoldDuration` is used.
+    code_samples:
+    parameters:
+      - name: playerWhoTriggered
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who triggered the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

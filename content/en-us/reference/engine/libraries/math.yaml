@@ -1,0 +1,602 @@
+name: math
+type: library
+summary: |
+  A library of math functions.
+description: |
+  This library is an interface to the standard C math library, providing all of
+  its functions inside the `Library.math` table.
+code_samples:
+properties:
+  - name: math.huge
+    type: number
+    summary: |
+      Returns the value HUGE_VAL, a value larger than or equal to any other
+      numerical value (about 2<sup>1024</sup>).
+    description: |
+      Returns the value HUGE_VAL, a value larger than or equal to any other
+      numerical value (about 2<sup>1024</sup>).
+    tags:
+    code_samples:
+  - name: math.pi
+    type: number
+    summary: |
+      The value of pi.
+    description: |
+      The value of pi.
+    tags:
+    code_samples:
+functions:
+  - name: math.abs
+    summary: |
+      Returns the absolute value of x.
+    description: |
+      Returns the absolute value of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.acos
+    summary: |
+      Returns the arc cosine of x.
+    description: |
+      Returns the arc cosine of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.asin
+    summary: |
+      Returns the arc sine of x.
+    description: |
+      Returns the arc sine of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.atan
+    summary: |
+      Returns the arc tangent of x (in radians).
+    description: |
+      Returns the arc tangent of x (in radians).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.atan2
+    summary: |
+      Returns the arc tangent of y/x (in radians) while using the signs of both
+      parameters to find the quadrant of the result.
+    description: |
+      Returns the arc tangent of y/x (in radians), but uses the signs of both
+      parameters to find the quadrant of the result. It also handles correctly
+      the case of x being zero.
+    parameters:
+      - name: 'y'
+        type: number
+        default:
+        summary: ''
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.ceil
+    summary: |
+      Returns the smallest integer larger than or equal to x.
+    description: |
+      Returns the smallest integer larger than or equal to x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.clamp
+    summary: |
+      Returns a number between [min, max].
+    description: |
+      Returns a number between min and max, inclusive.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: min
+        type: number
+        default:
+        summary: ''
+      - name: max
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.cos
+    summary: |
+      Returns the cosine of x (assumed to be in radians).
+    description: |
+      Returns the cosine of x (assumed to be in radians).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.cosh
+    summary: |
+      Returns the hyperbolic cosine of x.
+    description: |
+      Returns the hyperbolic cosine of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.deg
+    summary: |
+      Returns the angle x (given in radians) in degrees.
+    description: |
+      Returns the angle x (given in radians) in degrees.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.exp
+    summary: |
+      Returns the value e^x.
+    description: |
+      Returns the value e^x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.floor
+    summary: |
+      Returns the largest integer smaller than or equal to x.
+    description: |
+      Returns the largest integer smaller than or equal to x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.fmod
+    summary: |
+      Returns the remainder of the division of x by y that rounds the quotient
+      towards zero.
+    description: |
+      Returns the remainder of the division of x by y that rounds the quotient
+      towards zero.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: 'y'
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.frexp
+    summary: |
+      Returns m and e such that x = m\*2^e.
+    description: |
+      Returns m and e such that x = m\*2^e, e is an integer and the absolute
+      value of m is in the range [0.5, 1) (or zero when x is zero).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.ldexp
+    summary: |
+      Returns x\*2^e (e should be an integer).
+    description: |
+      Returns x\*2^e (e should be an integer).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: e
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.log
+    summary: |
+      Returns the logarithm of x using the given base.
+    description: |
+      Returns the logarithm of x using the given base, or the mathematical
+      constant e if no base is provided (natural logarithm).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: base
+        type: number
+        default: 2.7182818
+        summary: |
+          The base of the logarithm, the constant e by default.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.log10
+    summary: |
+      Returns the base-10 logarithm of x.
+    description: |
+      Returns the base-10 logarithm of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.max
+    summary: |
+      Returns the maximum value among the numbers passed to the function.
+    description: |
+      Returns the maximum value among the numbers passed to the function.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: ...
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.min
+    summary: |
+      Returns the minimum value among the numbers passed to the function.
+    description: |
+      Returns the minimum value among the numbers passed to the function.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: ...
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.modf
+    summary: |
+      Returns two numbers, the integral part of x and the fractional part of x.
+    description: |
+      Returns two numbers, the integral part of x and the fractional part of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.noise
+    summary: |
+      Returns a perlin noise value.
+    description: |
+      Returns a perlin noise value. The returned value is most often between the
+      range [-1, 1].
+
+      The returned value is sometimes will be outside of the range [-1,1], so if
+      the interval is critical to you, you should use `math.clamp(noise, -1, 1)`
+      on the output.
+
+      If you leave arguments out, they will be interpreted as zero, so
+      `math.noise(1.158)` is equivalent to `math.noise(1.158, 0, 0)` and
+      `math.noise(1.158, 5.723)` is equivalent to `math.noise(1.158, 5.723, 0)`.
+
+      The function uses a perlin noise algorithm to assign fixed values to
+      coordinates. For example, `math.noise(1.158, 5.723)` will always return
+      `0.48397532105446` and `math.noise(1.158, 6)` will always return
+      `0.15315161645412`.
+
+      If x, y and z are all integers, the return value will be 0. For fractional
+      values of x, y and z, the return value will gradually fluctuate between
+      -0.5 and 0.5. For coordinates that are close to each other, the return
+      values will also be close to each other.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: 'y'
+        type: number
+        default: 0
+        summary: ''
+      - name: z
+        type: number
+        default: 0
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.pow
+    summary: |
+      Returns x^y.
+    description: |
+      Returns x^y. (You can also use the expression x^y to compute this value.)
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: 'y'
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.rad
+    summary: |
+      Returns the angle x (given in degrees) in radians.
+    description: |
+      Returns the angle x (given in degrees) in radians.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.random
+    summary: |
+      Returns a random number within the range provided.
+    description: |
+      An interface to the simple pseudo-random generator function rand provided
+      by ANSI C. (No guarantees can be given for its statistical properties.)
+      When called without arguments, returns a uniform pseudo-random real number
+      in the range [0,1). When called with an integer number m, math.random
+      returns a uniform pseudo-random integer in the range [1, m]. When called
+      with two integer numbers m and n, math.random returns a uniform
+      pseudo-random integer in the range [m, n].
+    parameters:
+      - name: m
+        type: number
+        default: 0
+        summary: ''
+      - name: 'n'
+        type: number
+        default: 1
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.randomseed
+    summary: |
+      Sets x as the seed for the pseudo-random generator.
+    description: |
+      Sets x as the seed for the pseudo-random generator: equal seeds produce
+      equal sequences of numbers.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.round
+    summary: |
+      Returns the integer with the smallest difference between it and the given
+      number.
+    description: |
+      Returns the integer with the smallest difference between it and the given
+      number. For example, the value 5.8 returns 6.
+
+      For values like 0.5 that are equidistant to two integers, the value with
+      the greater difference between it and zero is chosen. In other words, the
+      function **rounds away from zero**: 0.5 rounds to 1; -0.5 rounds to -1.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: |
+          The value to be rounded.
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.sign
+    summary: |
+      Returns -1 if x < 0, 0 if x == 0, or 1 if x > 0.
+    description: |
+      Returns -1 if x < 0, 0 if x == 0, or 1 if x > 0.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.sin
+    summary: |
+      Returns the sine of x (assumed to be in radians).
+    description: |
+      Returns the sine of x (assumed to be in radians).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.sinh
+    summary: |
+      Returns the hyperbolic sine of x.
+    description: |
+      Returns the hyperbolic sine of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.sqrt
+    summary: |
+      Returns the square root of x.
+    description: |
+      Returns the square root of x. (You can also use the expression x^0.5 to
+      compute this value.)
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.tan
+    summary: |
+      Returns the tangent of x (assumed to be in radians).
+    description: |
+      Returns the tangent of x (assumed to be in radians).
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: math.tanh
+    summary: |
+      Returns the hyperbolic tangent of x.
+    description: |
+      Returns the hyperbolic tangent of x.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:

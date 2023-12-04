@@ -1,0 +1,112 @@
+name: Random
+type: datatype
+summary: |
+  Generates pseudorandom numbers and directions.
+description: |
+  The `Datatype.Random` data type generates pseudorandom numbers and directions.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Random.new
+    summary: Returns a new pseudorandom generator using an optional seed.
+    description: |-
+      Returns a new `Datatype.Random` object. If you don't provide the seed
+      parameter, `Datatype.Random` uses a seed from an internal entropy source.
+
+      If you provide a seed, `Datatype.Random` rounds it down to the nearest
+      integer, so seeds of 0, 0.99, and `Library.math.random()` all produce
+      identical generators. If you need to generate a seed and store it for
+      later retrieval, use `Library.math.random()|math.random(max)`.
+    parameters:
+      - name: seed
+        type: number
+        default:
+        summary: ''
+    code_samples:
+      - generating-random-seed
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+methods:
+  - name: Random:NextInteger
+    summary: |
+      Returns a pseudorandom integer uniformly distributed over `[min, max]`.
+    description: |
+      Returns a pseudorandom integer uniformly distributed over `[min, max]`.
+    parameters:
+      - name: min
+        type: number
+        default:
+        summary: ''
+      - name: max
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Random:NextNumber
+    summary: |
+      Returns a pseudorandom number uniformly distributed over `[0, 1)`.
+    description: |
+      Returns a pseudorandom number uniformly distributed over `[0, 1)`.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Random:NextNumber
+    summary: |
+      Returns a pseudorandom number uniformly distributed over `[min, max)`.
+    description: |
+      Returns a pseudorandom number uniformly distributed over `[min, max)`.
+    parameters:
+      - name: min
+        type: number
+        default:
+        summary: ''
+      - name: max
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Random:NextUnitVector
+    summary: |
+      Returns a unit vector with a pseudorandom direction.
+    description: |
+      Returns a unit vector with a pseudorandom direction. Vectors returned from
+      this function are uniformly distributed over the unit sphere.
+    parameters:
+    returns:
+      - type: Vector3
+        summary: |
+          A unit vector with a pseudorandom direction.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Random:Clone
+    summary: |
+      Returns a new Random object with the same state as the original.
+    description: |
+      Returns a new Random object with the same state as the original.
+    parameters:
+    returns:
+      - type: Random
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:

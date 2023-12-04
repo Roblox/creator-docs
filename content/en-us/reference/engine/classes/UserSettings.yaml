@@ -1,0 +1,70 @@
+name: UserSettings
+type: class
+category: Settings
+memory_category: Instances
+summary: |
+  A singleton object that houses basic user settings, which persist across all
+  games on Roblox.
+description: |
+  UserSettings is a singleton object that is used to house basic user settings,
+  which persist across all games. Currently, it only stores the
+  `Class.UserGameSettings` object.
+
+  You can retrieve a reference to this object via the
+  `Class.UserSettings|UserSettings()` function, which returns it.
+code_samples:
+  - IsUserFeatureEnabled-Sample
+  - Full-Screen-Mode-Detection
+  - UserGameSettings-Listener
+inherits:
+  - GenericSettings
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: UserSettings:IsUserFeatureEnabled
+    summary: |
+      Returns true if the specified user feature is enabled. This will throw an
+      error if the user feature does not exist.
+    description: |
+      Returns true if the specified user feature is enabled. This will throw an
+      error if the user feature does not exist.
+
+      This function checks against a list of FFlags, whose name starts with
+      "User". The function is intended to be used by Roblox-created scripts, and
+      functions similarly to `Class.GlobalSettings:GetFFlag()`.
+    code_samples:
+      - IsUserFeatureEnabled-Sample
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UserSettings:Reset
+    summary: |
+      Erases the saved state of the UserSettings, and restores its default
+      values.
+    description: |
+      Erases the saved state of the UserSettings, and restores its values back
+      to default. This function will fail to run correctly from a LocalScript,
+      as it does not have permission to restore all of the properties in the
+      `Class.UserGameSettings` class.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

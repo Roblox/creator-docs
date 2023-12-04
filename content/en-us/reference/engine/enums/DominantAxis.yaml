@@ -1,0 +1,24 @@
+name: DominantAxis
+type: enum
+summary: |
+  Used by `Class.UIAspectRatioConstraint.DominantAxis` for resizing the object
+  to maintain the aspect ratio.
+description: |
+  Used by `Class.UIAspectRatioConstraint.DominantAxis` to specify which axis is
+  used when setting the new size of the GUI element.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Width
+    summary: |
+      The X axis.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Height
+    summary: |
+      The Y axis.
+    value: 1
+    tags: []
+    deprecation_message: ''

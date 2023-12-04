@@ -1,0 +1,78 @@
+name: NumberSequenceKeypoint
+type: datatype
+summary: |
+  Represents keypoint within a `Datatype.NumberSequence` with a particular time,
+  value, and envelope size.
+description: |
+  The `Datatype.NumberSequenceKeypoint` data type represents keypoints within a
+  NumberSequence with a particular time, value, and envelope size.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: NumberSequenceKeypoint.new
+    summary: Returns a keypoint with the specified time and value.
+    description: Returns a keypoint with a specified time and value.
+    parameters:
+      - name: time
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: NumberSequenceKeypoint.new
+    summary: Returns a keypoint with the specified time, value, and envelope.
+    description: Returns a keypoint with a specified time, value, and envelope.
+    parameters:
+      - name: time
+        type: number
+        default:
+        summary: ''
+      - name: value
+        type: number
+        default:
+        summary: ''
+      - name: envelope
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: NumberSequenceKeypoint.Envelope
+    type: number
+    summary: |
+      The amount of variance allowed from the value.
+    description: |
+      The amount of variance allowed from the value. A computed value.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: NumberSequenceKeypoint.Time
+    type: number
+    summary: |
+      The relative time at which the keypoint is positioned.
+    description: |
+      The relative time at which the keypoint is positioned.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: NumberSequenceKeypoint.Value
+    type: number
+    summary: |
+      The base value of the keypoint.
+    description: |
+      The base value of this keypoint.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

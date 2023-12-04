@@ -1,0 +1,30 @@
+name: VerticalAlignment
+type: enum
+summary: |
+  Determines how grid is placed within it's parent's container in the y
+  direction.
+description: |
+  Determines how grid is placed within it's parent's container in the y
+  direction.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Center
+    summary: |
+      Center of the grid.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Top
+    summary: |
+      Top of the grid.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Bottom
+    summary: |
+      Bottom of the grid.
+    value: 2
+    tags: []
+    deprecation_message: ''

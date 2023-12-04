@@ -1,0 +1,33 @@
+name: FacialAnimationStreamingState
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Audio
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Video
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Place
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Server
+    value: 8
+    summary: ''
+    tags: []
+    deprecation_message: ''

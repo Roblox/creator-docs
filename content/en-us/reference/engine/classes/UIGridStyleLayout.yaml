@@ -1,0 +1,193 @@
+name: UIGridStyleLayout
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class for grid style UI layouts.
+description: |
+  The base class for grid style UI layouts.
+code_samples:
+inherits:
+  - UILayout
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: UIGridStyleLayout.AbsoluteContentSize
+    summary: |
+      The absolute size of space being taken up by the grid layout.
+    description: |
+      The AbsoluteContentSize property of a `Class.UIGridStyleLayout` shows how
+      much space the elements of the grid are taking up, including any padding
+      created by the grid. This property is particularly useful to size
+      containers of grids such as `Class.Frame`s and Frame to make sure they
+      aren't any larger than the grid itself.
+
+      It updates as soon as it's read. It won't fire a changed event immediately
+      after the UI has changed, but if the value is read it will be up to date.
+      A `Class.Instance.Changed` event should fire on the next render step.
+    code_samples:
+      - UIGridStyleLayout-AbsoluteContentSize
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: UIGridStyleLayout.FillDirection
+    summary: |
+      Determines the axis in which UI elements are laid out.
+    description: |
+      The FillDirection property determines the axis in which UI elements are
+      laid out. Horizontal will arrange elements from left to right, while
+      Vertical will arrange from top to bottom. To reverse elements (for
+      instance, arrange right to left) you will need to reverse the sorting.
+      This can be done by negating the child UI elements'
+      `Class.GuiObject.LayoutOrder` values when
+      `Class.UIGridStyleLayout.SortOrder` is set to LayoutOrder.
+    code_samples:
+      - UIGridLayout-Fill-Directions-and-Alignments
+    type: FillDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridStyleLayout.HorizontalAlignment
+    summary: |
+      Determines the horizontal alignment of UI elements within the parent
+      element.
+    description: |
+      The HorizontalAlignment property determines the X-axis alignment of the
+      laid-out grid of UI elements, much like `Class.TextLabel.TextXAlignment`
+      does with `Class.TextLabel.Text`.
+    code_samples:
+      - UIGridLayout-Fill-Directions-and-Alignments
+    type: HorizontalAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridStyleLayout.SortOrder
+    summary: |
+      Determines the manner in which the next UI element is chosen when being
+      laid out.
+    description: |
+      The SortOrder property determines the next UI element to be placed in a
+      layout. For Name, a simple alphabetic sort is used on the Name property of
+      the child UI elements. For LayoutOrder, a low-to-high sort is used on the
+      `Class.GuiObject.LayoutOrder` property of child UI elements. If two share
+      the same `Class.GuiObject.LayoutOrder`, whichever was added sooner to the
+      parent object takes precedence. An easy way to reverse the sorting order
+      is to negate LayoutOrder.
+    code_samples:
+      - UI-Sort-Order
+    type: SortOrder
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIGridStyleLayout.VerticalAlignment
+    summary: |
+      Determines the vertical alignment of UI elements within the parent
+      element.
+    description: |
+      The VerticalAlignment property determines the Y-axis alignment of the
+      laid-out grid of UI elements, much like `Class.TextLabel.TextYAlignment`
+      does with `Class.TextLabel.Text`.
+    code_samples:
+      - UIGridLayout-Fill-Directions-and-Alignments
+    type: VerticalAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: UIGridStyleLayout:ApplyLayout
+    summary: |
+      Force re-layout of sibling UI elements.
+    description: |
+      The ApplyLayout method forces sibling UI elements to be re-laid out in
+      case the sorting criteria may have changed (such as when
+      `Class.UIGridStyleLayout.SortOrder` is set to Custom, and the
+      `Class.UIGridStyleLayout:SetCustomSortFunction()` behavior changed).
+      Re-layouts automatically happen when UI elements are added/removed, or
+      their `Class.Instance.Name` or `Class.GuiObject.LayoutOrder` change.
+
+      The manner in which sibling UI elements are laid out is dependent on the
+      implementation of this abstract class. In other words, a concrete class
+      like `Class.UIListLayout` or `Class.UIGridLayout` is responsible for the
+      actual element positioning.
+    code_samples:
+      - UI-Sort-Order
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIGridStyleLayout:SetCustomSortFunction
+    summary: |
+      Sets the function used to determine the order of elements when SortOrder
+      is set to Custom.
+    description: |
+      This method is deprecated. Use `Class.UIGridStyleLayout.SortOrder`
+      instead.
+
+      The function should take two arguments (each will be an
+      `Class.Instance` child to compare), and return true if a comes before b, otherwise
+      return false. In other words, use this function the same way you would use
+      a ' function. The sorting should be deterministic, otherwise sort will
+      fail and fall back to name order.
+    code_samples:
+    parameters:
+      - name: function
+        type: Function
+        default: nil
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method is deprecated in favor of using other SortOrder means, such as
+      by Name or LayoutOrder.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

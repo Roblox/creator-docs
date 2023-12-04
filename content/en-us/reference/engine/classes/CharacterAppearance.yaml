@@ -1,0 +1,20 @@
+name: CharacterAppearance
+type: class
+category:
+memory_category: Instances
+summary: |
+  The base class for objects that change the character's appearance, such as the
+  `Class.BodyColors`, `Class.CharacterMesh`, `Class.ShirtGraphic`, `Class.Pants`
+  and `Class.Shirt` objects.
+description: |
+  Base class for objects that change a character's appearance.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

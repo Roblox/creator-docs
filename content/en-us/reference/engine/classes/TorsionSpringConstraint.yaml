@@ -1,0 +1,255 @@
+name: TorsionSpringConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  A rotational spring that opposes the angular motion between two axes.
+description: |
+  A **TorsionSpringConstraint** applies a torque based on a relative angle and a
+  relative angular velocity. Specifically, torsion springs try to bring two axes
+  from two parts together in a compliant way.
+
+  Correct orientation of a torsion spring's attachments is important. The
+  constraint will attempt to bring the
+  `Class.Attachment.SecondaryAxis|SecondaryAxis` of each attachment into
+  alignment. When building mechanisms like swinging doors, ensure that the
+  secondary axes are **perpendicular** to the intended axis of rotation.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Damping
+
+  The `Class.TorsionSpringConstraint.Damping|Damping` value controls how fast
+  the spring's oscillation dies down. A value of 0 allows the spring to
+  oscillate endlessly, while higher values bring the spring to a rest more
+  quickly.
+
+  #### Stiffness
+
+  `Class.TorsionSpringConstraint.Stiffness|Stiffness` sets the torsional
+  strength of the spring. Higher values create a spring that responds with more
+  force.
+
+  #### Limits
+
+  Enabling the `Class.TorsionSpringConstraint.LimitsEnabled|LimitsEnabled`
+  property exposes the `Class.TorsionSpringConstraint.MaxAngle|MaxAngle` value
+  to restrict the spring's range within a cone; it also exposes the
+  `Class.TorsionSpringConstraint.Restitution|Restitution` value which defines
+  the elasticity of the attachments when they reach their limit.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: TorsionSpringConstraint.Coils
+    summary: |
+      The number of coils visualized for the constraint.
+    description: |
+      This property indicates the number of spring coils for visualization.
+      Default value is 8.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.CurrentAngle
+    summary: |
+      The current angle, in degrees, of the limiting cone.
+    description: |
+      The current angle, in degrees, of the torsion spring's limiting cone. The
+      limiting cone is formed at the position of the constraint's
+      `Class.Constraint.Attachment0|Attachment0` around its secondary axis with
+      an angle equal to `Class.TorsionSpringConstraint.MaxAngle|MaxAngle`.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Derived
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TorsionSpringConstraint.Damping
+    summary: |
+      Damping constant for the `Class.TorsionSpringConstraint`. Multiplied to
+      the velocity of the constraint's `Class.Attachment|Attachments` to reduce
+      the spring force applied.
+    description: |
+      Damping constant for the `Class.TorsionSpringConstraint`. Multiplied to
+      the velocity of the constraint's `Class.Attachment|Attachments` to reduce
+      the spring force applied.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Spring
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.LimitEnabled
+    summary: |
+      Deprecated duplicate of `Class.TorsionSpringConstraint.LimitsEnabled`.
+    description: |
+      Deprecated duplicate of `Class.TorsionSpringConstraint.LimitsEnabled`; use
+      that instead.
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated. Use
+      `Class.TorsionSpringConstraint.LimitsEnabled|LimitsEnabled` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Spring
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.LimitsEnabled
+    summary: |
+      Limits the relative angular motion of the secondary axes of attachments
+      through a cone constraint.
+    description: |
+      This property, when enabled, limits the relative angular motion of the
+      secondary axes of attachments through a cone constraint. The default value
+      is false.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Spring
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.MaxAngle
+    summary: |
+      The maximum angle of the constraint's limiting cone.
+    description: |
+      This property determines the maximum angle (in degrees) of the torsion
+      spring's limiting cone. The limiting cone is formed at the position of the
+      constraint's `Class.Constraint.Attachment0|Attachment0` around its
+      secondary axis with an angle equal to
+      `Class.TorsionSpringConstraint.MaxAngle|MaxAngle`. Default value is 45
+      degrees.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.MaxTorque
+    summary: |
+      The maximum allowable torque provided by the torsion spring.
+    description: |
+      This property determines the maximum torque supported by the torsion
+      spring. Defaults to 1000.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Spring
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.Radius
+    summary: |
+      The visualization radius of the spring.
+    description: |
+      This property indicates the visualization radius of the spring, in studs.
+      Default value is 0.4.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.Restitution
+    summary: |
+      The restitution coefficient of the cone constraint.
+    description: |
+      This property defines how elastic `Class.Attachment|Attachments` connected
+      by a `Class.TorsionSpringConstraint` are when they reach the end of the
+      range specified by `Class.TorsionSpringConstraint.MaxAngle|MaxAngle`, when
+      `Class.TorsionSpringConstraint.LimitEnabled|LimitEnabled` is true. The
+      value defaults to 0 and can be any floating number within the range of 0
+      and 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TorsionSpringConstraint.Stiffness
+    summary: |
+      The torsional stiffness of the spring.
+    description: |
+      In the absence of damping, this property is proportional to the opposing
+      torque of the spring. For instance, higher stiffness results in a larger
+      opposing torque, and smaller stiffness results in a smaller opposing
+      torque. The larger the torque value, the faster the axes are pushed
+      together when the relative angle is positive (or away from each other if
+      the relative angle is negative). The value defaults to 100.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Spring
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,29 @@
+name: ComputerMovementMode
+type: enum
+summary: |
+  The computer movement type in-use by the client.
+description: |
+  The computer movement type in-use by the client.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      The default is KeyboardMouse.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: KeyboardMouse
+    summary: |
+      The player's character is controlled using the keyboard and mouse.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: ClickToMove
+    summary: |
+      The player can right click in the game world and the character will move
+      there. Player can also control character with mouse and keyboard.
+    value: 2
+    tags: []
+    deprecation_message: ''

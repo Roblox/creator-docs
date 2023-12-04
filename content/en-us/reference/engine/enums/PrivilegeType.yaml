@@ -1,0 +1,34 @@
+name: PrivilegeType
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: ''
+items:
+  - name: Banned
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Visitor
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Member
+    summary: ''
+    value: 128
+    tags: []
+    deprecation_message: ''
+  - name: Admin
+    summary: ''
+    value: 240
+    tags: []
+    deprecation_message: ''
+  - name: Owner
+    summary: ''
+    value: 255
+    tags: []
+    deprecation_message: ''

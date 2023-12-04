@@ -1,0 +1,227 @@
+name: GroundController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - ControllerBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: GroundController.AccelerationLean
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.AccelerationTime
+    summary: |
+      Estimated time taken to reach the desired speed.
+    description: |
+      Estimated time (in seconds) taken to reach the desired speed after walking
+      input begins. The character will accelerate linearly at the computed rate,
+      impacted by friction, so a given time may be less accurate with lower
+      friction.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.BalanceMaxTorque
+    summary: |
+      The maximum torque used to keep the `Class.ControllerManager.RootPart`
+      aligned upright.
+    description: |
+      The maximum torque used to keep the `Class.ControllerManager.RootPart`
+      aligned upright. When misaligned, this amount of torque is applied to
+      reach the `Class.GroundController.BalanceSpeed|BalanceSpeed` and realign
+      the root part. A higher torque means more force is required to cause the
+      root part to tilt. A lower torque means it's easer for the root part to
+      get knocked over when running into things. This property is hidden and has
+      no effect when `Class.ControllerBase.BalanceRigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.BalanceSpeed
+    summary: |
+      The maximum angular speed used to align the
+      `Class.ControllerManager.RootPart` upright.
+    description: |
+      The maximum angular speed used to align the
+      `Class.ControllerManager.RootPart` upright. A lower value means it takes
+      longer for the root part to recover to the upright position when
+      misaligned. A higher value results in a quicker recovery.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.DecelerationTime
+    summary: |
+      Estimated time taken to reach a complete stop from full speed.
+    description: |
+      Estimated time (in seconds) taken to reach a complete stop from full speed
+      after walking input ends. The character will decelerate linearly at the
+      computed rate, impacted by friction, so a given time may be less accurate
+      with lower friction.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.Friction
+    summary: |
+      The coefficient of friction of the character on the ground.
+    description: |
+      The coefficient of friction for the character at the point between it and
+      the ground. Determines how much force is available for locomotion or to
+      keep the character stationary on slopes.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.FrictionWeight
+    summary: |
+      Amount the character's friction is weighed against the ground friction.
+    description: |
+      Amount the character's friction is weighed against the ground friction,
+      equal in behavior to the
+      `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight` data type of
+      `Class.BasePart.CustomPhysicalProperties`. Higher values mean more of a
+      part's `Datatype.PhysicalProperties.Friction|Friction` will be used.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.GroundOffset
+    summary: |
+      The target distance above the ground to keep the
+      `Class.ControllerManager.RootPart` at.
+    description: |
+      The target distance above the
+      `Class.ControllerManager.GroundSensor.HitPosition` to keep the
+      `Class.ControllerManager.RootPart` at. If the root part is below this
+      offset from the ground, a force is applied to raise up to this height. If
+      it's above, nothing happens.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.StandForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.StandSpeed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GroundController.TurnSpeedFactor
+    summary: |
+      The value multiplied by the `Class.ControllerManager.BaseTurnSpeed`.
+    description: |
+      The value multiplied by the `Class.ControllerManager.BaseTurnSpeed` to
+      determine the final target angular velocity while this controller is
+      active. The angular velocity is applied when turning towards the
+      `Class.ControllerManager.FacingDirection.`
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

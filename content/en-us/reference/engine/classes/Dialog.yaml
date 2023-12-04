@@ -1,0 +1,286 @@
+name: Dialog
+type: class
+category: Social
+memory_category: Instances
+summary: |
+  Creates NPC billboard-style dialog bubbles.
+description: |
+  The Dialog object allows users to create non-player characters (NPCs) that
+  players can talk to using a list of choices. The Dialog object can be inserted
+  into a part such as a Humanoid's head, and then a player will see a speech
+  bubble above the part that they can click on to start a conversation. The
+  creator of a place can choose what choices the player can say by inserting
+  `Class.DialogChoice` objects into the dialog.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Dialog.BehaviorType
+    summary: |
+      Sets whether the Dialog can be used by multiple players at once.
+    description: |
+      The BehaviorType of a Dialog determines whether multiple players can
+      interact with a dialog at once. The default value for this property is
+      SinglePlayer.
+
+      #### SinglePlayer
+
+      When a Dialog is configured to SinglePlayer, only one player can interact
+      with it at a time. As soon as a player engages with a dialog, other
+      players will not be able to initiate the dialog until the first player is
+      finished.
+
+      While a player is engaged with a dialog, the other players will see the
+      dialog choices of the player who started the dialog, along with the
+      responses.
+
+      #### MultiplePlayers
+
+      When a Dialog is set to MultiplePlayers, any player can initiate a dialog
+      at any time, even if another player has already initiated the dialog.
+      Unlike SinglePlayer however, Dialogs set to MultiplePlayers will not show
+      the dialog choices and responses to anyone but the player in the
+      conversation.
+
+      ```lua
+      local singlePlayerDialog = Instance.new("Dialog")
+      local singlePlayerPart = workspace.SinglePlayerPart
+      singlePlayerDialog.BehaviorType = Enum.DialogBehaviorType.SinglePlayer
+      singlePlayerDialog.InitialPrompt = "Only one person can interact with me at once."
+      singlePlayerDialog.Parent = singlePlayerPart
+
+      local multiplePlayersDialog = Instance.new("Dialog")
+      local multiplePlayersPart = workspace.MultiplePlayersPart
+      multiplePlayersDialog.BehaviorType = Enum.DialogBehaviorType.MultiplePlayers
+      multiplePlayersDialog.InitialPrompt = "Any number of players can interact with me at once."
+      multiplePlayersDialog.Parent = multiplePlayersPart
+      ```
+    code_samples:
+    type: DialogBehaviorType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.ConversationDistance
+    summary: |
+      The furthest distance that I player can be from the Dialog's parent to
+      start a conversation.
+    description: |
+      The furthest distance that I player can be from the Dialog's parent to
+      start a conversation.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.GoodbyeChoiceActive
+    summary: |
+      Toggles whether the goodbye option will be displayed.
+    description: |
+      Toggles whether the goodbye option will be displayed. If true, the dialog
+      will display the content of `Class.Dialog.GoodbyeDialog` as the last
+      option after other dialog choices. Clicking on the goodbye option will
+      exit the dialog.
+
+      #### GoodbyeChoiceActive = true
+
+      ![Active](/assets/legacy/GoodbyeChoiceActive.png)
+
+      #### GoodbyeChoiceActive = false
+
+      ![Inactive](/assets/legacy/GoodbyeChoiceInactive.png)
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.GoodbyeDialog
+    summary: |
+      Sets the sentence that the dialog will show to the player when the chat
+      ends.
+    description: |
+      Sets the sentence that the dialog will show to the player when the chat
+      ends
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.InUse
+    summary: |
+      If true, this dialog is being used by at least one player.
+    description: |
+      If true, this dialog is being used by at least one player.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Dialog.InitialPrompt
+    summary: |
+      Sets the first sentence that the dialog will show to the player, once a
+      chat is commenced.
+    description: |
+      Sets the first sentence that the dialog will show to the player, once a
+      chat is commenced.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.Purpose
+    summary: |
+      Sets the icon that the initial dialog displays.
+    description: |
+      Sets the icon that the initial dialog displays.
+    code_samples:
+    type: DialogPurpose
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.Tone
+    summary: |
+      Sets the color of the NPC's speech bubble.
+    description: |
+      Sets the color of the NPC's speech bubble.
+    code_samples:
+    type: DialogTone
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.TriggerDistance
+    summary: |
+      Sets the maximum distance that a dialog can be triggered from.
+    description: |
+      Sets the maximum distance that a dialog can be triggered from.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Dialog.TriggerOffset
+    summary: |
+      Sets the offset of the dialog relative to the dialog's parent.
+    description: |
+      Sets the offset of the dialog relative to the dialog's parent.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Dialog:GetCurrentPlayers
+    summary: |
+      Returns a list of players currently using the Dialog.
+    description: |
+      The GetCurrentPlayers function of a Dialog will return a list of
+      `Class.Player` currently using the Dialog. If there are no players using
+      the dialog then the returned list will be empty.
+    code_samples:
+      - Dialog-GetCurrentPlayers1
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Dialog.DialogChoiceSelected
+    summary: |
+      Fired when a player chooses something to say, through a `Class.Dialog`
+      instance.
+    description: |
+      Fired when a player chooses something to say, through a `Class.Dialog`
+      instance.
+
+      This event is client-side only and will not fire on the server. It should
+      be connected to in either a `Class.LocalScript` or a `Class.ModuleScript`
+      required by a `Class.LocalScript`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: dialogChoice
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

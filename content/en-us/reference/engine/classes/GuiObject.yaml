@@ -1,0 +1,1837 @@
+name: GuiObject
+type: class
+category:
+memory_category: Gui
+summary: |
+  An abstract class for all 2D user interface objects.
+description: |
+  GuiObject is an abstract class (much like `Class.BasePart`) for a 2D user
+  interface object. It defines all the properties relating to the display of a
+  graphical user interface (GUI) object such as `Class.GuiObject.Size` and
+  `Class.GuiObject.Position`. It also has some useful read-only properties like
+  `Class.GuiObject.AbsolutePosition`, `Class.GuiObject.AbsoluteSize`, and
+  `Class.GuiObject.AbsoluteRotation`. It should be noted that `Class.GuiObject`
+  can have negative sizes and render normally, though
+  `Class.GuiObject.AnchorPoint` ought to be used to better control rendering.
+
+  To manipulate the layout of a GuiObject in special ways, you can use a
+  `Class.UIComponent` class such as `Class.UIListLayout`, `Class.UIPadding` or
+  `Class.UIScale`.
+
+  This class defines very simple animation methods:
+  `Class.GuiObject:TweenPosition()`, `Class.GuiObject:TweenSize()` and
+  `Class.GuiObject:TweenSizeAndPosition()` are good alternatives to
+  `Class.TweenService` for beginners.
+
+  GuiObject also defines events for user input like
+  `Class.GuiObject.MouseEnter`, `Class.GuiObject.TouchTap`,
+  `Class.GuiObject.InputBegan`, `Class.GuiObject.InputChanged` and
+  `Class.GuiObject.InputEnded`. The last three of these mimic the events of
+  `UserInputService` of the same name. Although it is possible to detect mouse
+  button events on any GuiObject using `Class.GuiObject.InputBegan`, only
+  `Class.ImageButton` and `Class.TextButton` have dedicated events for these
+  (e.g. `Class.TextButton.MouseButton1Down`). This event ought not be used for
+  general button activation since not all platforms use a mouse; see
+  `Class.TextButton.Activated`.
+code_samples:
+inherits:
+  - GuiBase2d
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: GuiObject.Active
+    summary: |
+      Determines whether a UI element sinks input.
+    description: |
+      This property determines whether a `Class.GuiObject` will sink input to 3D
+      space, such as underlying models with a `Class.ClickDetector`. In other
+      words, if the player attempts to click a ClickDetector with the mouse
+      hovering over an Active UI element, the UI will block the input from
+      reaching the ClickDetector.
+
+      For `Class.GuiButton` objects (`Class.ImageButton` and
+      `Class.TextButton`), this property determines whether
+      `Class.GuiButton.Activated` fires (`Class.GuiButton.AutoButtonColor` will
+      still work for those as well). The events
+      `Class.GuiObject.InputBegan|InputBegan`,
+      `Class.GuiObject.InputChanged|InputChanged`, and
+      `Class.GuiObject.InputEnded|InputEnded` work as normal no matter the value
+      of this property.
+    code_samples:
+      - TextButton-Active-Debounce
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.AnchorPoint
+    summary: |
+      Determines the origin point of a `Class.GuiObject`, relative to its
+      absolute size.
+    description: |
+      The **AnchorPoint** property determines the origin point of a
+      `Class.GuiObject`, relative to its absolute size. The origin point
+      determines from where the element is positioned (through
+      `Class.GuiObject.Position`) and from which the rendered
+      `Class.GuiObject.Size` expands.
+
+      See [here](../../../ui/positioning-and-sizing.md#anchorpoint) for
+      illustrated diagrams and details.
+    code_samples:
+      - AnchorPoint-Demo
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.AutomaticSize
+    summary: |
+      Determines whether resizing occurs based on child content.
+    description: |
+      This property is used to automatically size parent UI objects based on the
+      size of its descendants. Developers can use this property to dynamically
+      add text and other content to a UI object at edit or run time, and the
+      size will adjust to fit that content.
+
+      When AutomaticSize is set to an `Enum.AutomaticSize|Enum.AutomaticSize`
+      value to anything other than None, this UI object may resize depending on
+      its child content.
+
+      For more information on how to use this property and how it works, please
+      see [here](../../../ui/automatic-sizing.md).
+    code_samples:
+      - automaticsize-uilistlayout
+    type: AutomaticSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.BackgroundColor
+    summary: |
+      Determines the color of a `Class.GuiObject|GUI's` background.
+    description: |
+      This property used to determine the color of a `Class.GuiObject|GUI's`
+      background but is deprecated in favor of
+      `Class.GuiObject.BackgroundColor3|BackgroundColor3`, which should be used
+      in new work instead.
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated in favor of the `Datatype.Color3` property
+      `Class.GuiObject.BackgroundColor3`, which should be used in new work
+      instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: GuiObject.BackgroundColor3
+    summary: |
+      Determines a`Class.GuiObject|GUI's` background color.
+    description: |
+      This property determines the color of a `Class.GuiObject|UI` background
+      (the fill color).
+
+      Another property that determines the visual properties of the background
+      is `Class.GuiObject.BackgroundTransparency`. If an element's
+      BackgroundTransparency is set to 1, neither the background nor the border
+      will render and the element will be transparent.
+
+      If your element contains text, such as a `Class.TextBox`,
+      `Class.TextButton`, or `Class.TextLabel`, make sure the color of your
+      background contrasts the text's color.
+
+      See also:
+
+      - `Class.GuiObject.BorderColor3`
+    code_samples:
+      - Rainbow-Frame
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.BackgroundTransparency
+    summary: |
+      Determines the transparency of the `Class.GuiObject|GUI's` background and
+      border.
+    description: |
+      This property determines the transparency of the `Class.GuiObject|GUI's`
+      background and border.
+
+      It does not, however, determine the transparency of text if the GUI is a
+      `Textbox`, `Class.TextButton`, or `Class.TextLabel`. Text transparency is
+      determined `Class.TextBox.TextTransparency`,
+      `Class.TextButton.TextTransparency`, and
+      `Class.TextLabel.TextTransparency` respectively.
+
+      If the property is set to 1, neither the background nor the border will
+      render and the GUI will be completely transparent.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.BorderColor
+    summary: |
+      Determines the color of a `Class.GuiObject|GUI's` border.
+    description: |
+      This property used to determine the color of a `Class.GuiObject|GUI's`
+      border but is deprecated in favor of the `Datatype.Color3` property
+      BorderColor3, which should be used in new work instead.
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated in favor of the `Datatype.Color3` property
+      BorderColor3, which should be used in new work instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: GuiObject.BorderColor3
+    summary: |
+      Determines the color of a `Class.GuiObject|GUI's` border.
+    description: |
+      The `Class.UIStroke` component allows for more advanced border effects.
+
+      BorderColor3 determines the color of a `Class.GuiObject|UI` element's
+      rectangular border (also known as the stroke color).
+
+      This is separate from the UI element's `Class.GuiObject.BackgroundColor3`.
+      If you set a UI element's border and background colors to the same color,
+      you will be unable to distinguish the two.
+
+      Other properties that determine the visual properties of the border
+      include `Class.GuiObject.BorderSizePixel` and
+      `Class.GuiObject.BackgroundTransparency`.
+
+      Note that you will not be able to see an element's border if its
+      BorderSizePixel property is set to 0.
+    code_samples:
+      - Rainbow-Frame
+      - Button-Highlight
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.BorderMode
+    summary: |
+      Determines in what manner the `Class.GuiObject` border is laid out
+      relative to its dimensions.
+    description: |
+      This property determines in what manner a `Class.GuiObject` border is laid
+      out relative to its dimensions using the enum of the same name,
+      `Enum.BorderMode`.
+
+      Note that `Class.UIStroke` can override this property and allow for more
+      advanced border effects.
+    code_samples:
+    type: BorderMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.BorderSizePixel
+    summary: |
+      Determines the pixel width of a `Class.GuiObject` border.
+    description: |
+      This property determines how wide a `Class.GuiObject` border renders, in
+      pixels. Setting this to 0 disables the border altogether.
+
+      Note that `Class.UIStroke` can override this property and allow for more
+      advanced border effects.
+    code_samples:
+      - Button-Highlight
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.ClipsDescendants
+    summary: |
+      Determines if descendant `Class.GuiObject|GUIs` outside of the bounds of a
+      parent GUI element should render.
+    description: |
+      This property determines if the `Class.GuiObject` will clip (make
+      invisible) any portion of descendant GUI elements that would otherwise
+      render outside the bounds of the rectangle. The behavior is similar to a
+      `Class.ScrollingFrame`.
+
+      Note that `Class.GuiObject.Rotation` isn't supported by this property. If
+      this or any ancestor GUI has a **non-zero** `Class.GuiObject.Rotation`,
+      this property is **ignored** and descendant GUI elements will be rendered
+      regardless of this property's value.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Draggable
+    summary: |
+      Determines whether a `Class.GuiObject|GUI` (and its descendants) can be
+      dragged around the screen.
+    description: |
+      This indicates whether a `Class.GuiObject|GUI` (and its descendants) can
+      be dragged around the screen.
+    code_samples:
+    type: bool
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event, as well as its counterparts, `Class.GuiObject.DragBegin` and
+      `Class.GuiObject.Stopped`, have all been deprecated. None should be used
+      for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.GuiState
+    summary: ''
+    description: ''
+    code_samples: []
+    type: GuiState
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: true
+  - name: GuiObject.Interactable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.LayoutOrder
+    summary: |
+      Controls the sort order of a `Class.GuiObject|GUI` when used with a
+      `Class.UIGridStyleLayout`.
+    description: |
+      This property controls the sorting order of a `Class.GuiObject|GUI` when
+      using a `Class.UIGridStyleLayout` (such as `Class.UIListLayout` or
+      `Class.UIPageLayout`) with `Class.UIGridStyleLayout.SortOrder` set to
+      `Enum.SortOrder|Enum.SortOrder.LayoutOrder`. It has no functionality if
+      the GUI does not have a sibling UI Layout.
+
+      It is a signed 32-bit int, so it can be set to any value from
+      -2,147,483,648 to 2,147,483,647 (inclusive). GUIs are placed in ascending
+      order where lower values take more priority over, and are ordered before,
+      higher values. Values that are equal will fall back to the order they were
+      added in.
+
+      If you are unsure if you will need to add an element between two
+      already-existing elements in the future, it can be a good idea to use
+      multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
+      LayoutOrder values you can use for elements ordered in-between other
+      elements.
+
+      See also:
+
+      - `Class.GuiObject.ZIndex`, which determines the GUI render order instead
+        of placement order.
+    code_samples:
+      - UI-Sort-Order
+      - GuiObject-LayoutOrder1
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.NextSelectionDown
+    summary: |
+      Sets the GuiObject which will be selected when the Gamepad selector is
+      moved in this direction.
+    description: |
+      This property sets the `Class.GuiObject|GUI` selected when the user moves
+      the Gamepad selector downward. If this property is left blank, the moving
+      the Gamepad downward will not change which selected GUI.
+
+      Moving the Gamepad selector downward sets the
+      `Class.GuiService.SelectedObject` to this object unless the GUI is not
+      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
+      selectable, it will not be selected when the gamepad selected moves
+      upward.
+
+      Note that since this property can be set to a GUI element even if it is
+      not Selectable, you should ensure that the value of a GUI's selectable
+      property matching your expected behavior.
+
+      See also:
+
+      - `Class.GuiObject.NextSelectionUp`
+      - `Class.GuiObject.NextSelectionLeft`
+      - `Class.GuiObject.NextSelectionRight`
+    code_samples:
+      - creating-a-gamepad-selection-grid
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.NextSelectionLeft
+    summary: |
+      Sets the GuiObject which will be selected when the Gamepad selector is
+      moved in this direction.
+    description: |
+      This property sets the `Class.GuiObject|GUI` selected when the user moves
+      the Gamepad selector to the left. If this property is left blank, the
+      moving the Gamepad left will not change which selected GUI.
+
+      Moving the Gamepad selector left sets the
+      `Class.GuiService.SelectedObject` to this object unless the GUI is not
+      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
+      selectable, it will not be selected when the gamepad selected moves
+      upward.
+
+      Note that since this property can be set to a GUI element even if it is
+      not Selectable, you should ensure that the value of a GUI's selectable
+      property matching your expected behavior.
+
+      See also:
+
+      - `Class.GuiObject.NextSelectionUp`
+      - `Class.GuiObject.NextSelectionDown`
+      - `Class.GuiObject.NextSelectionRight`
+    code_samples:
+      - creating-a-gamepad-selection-grid
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.NextSelectionRight
+    summary: |
+      Sets the `Class.GuiObject|GUI` which will be selected when the
+      `Enum.Gamepad` selector is moved in this direction.
+    description: |
+      This property sets the `Class.GuiObject|GUI` selected when the user moves
+      the Gamepad selector to the right. If this property is left blank, the
+      moving the Gamepad right will not change which selected GUI.
+
+      Moving the Gamepad selector right sets the
+      `Class.GuiService.SelectedObject` to this object unless the GUI is not
+      `Class.GuiObject.Selectable|Selectable`. If the GUI is not selectable, it
+      will not be selected when the gamepad selected moves right.
+
+      Note that since this property can be set to a GUI element even if it is
+      not Selectable, you should ensure that the value of a GUI's selectable
+      property matching your expected behavior.
+
+      See also:
+
+      - `Class.GuiObject.NextSelectionUp`
+      - `Class.GuiObject.NextSelectionDown`
+      - `Class.GuiObject.NextSelectionLeft`
+    code_samples:
+      - creating-a-gamepad-selection-grid
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.NextSelectionUp
+    summary: |
+      Sets the GuiObject which will be selected when the Gamepad selector is
+      moved in this direction.
+    description: |
+      This property sets the `Class.GuiObject|GUI` selected when the user moves
+      the Gamepad selector upward. If this property is left blank, the moving
+      the Gamepad upward will not change the selected GUI.
+
+      Moving the Gamepad selector upward sets the
+      `Class.GuiService.SelectedObject` to this object unless the GUI is not
+      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
+      selectable, it will not be selected when the gamepad selected moves
+      upward.
+
+      Note that since this property can be set to a GUI element even if it is
+      not Selectable, you should ensure that the value of a GUI's selectable
+      property matching your expected behavior.
+
+      See also:
+
+      - `Class.GuiObject.NextSelectionDown`
+      - `Class.GuiObject.NextSelectionLeft`
+      - `Class.GuiObject.NextSelectionRight`
+    code_samples:
+      - creating-a-gamepad-selection-grid
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Position
+    summary: |
+      Determines the pixel and scalar position of a `GUI`.
+    description: |
+      This property determines a `Class.GuiObject|GUI's` pixel and scalar size
+      using a `Datatype.UDim2`. Its value can be expressed as
+      `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
+      `({ScalarX, PixelX}, {ScalarY, PixelY})`. Position is centered around a
+      GUI's `Class.GuiObject.AnchorPoint`.
+
+      An element's position can also be set by modifying both its scalar and
+      pixel positions at the same time. For instance, its position can be set to
+      `({0.25, 100}, {0.25, 100})`.
+
+      The scalar position is relative to the size of the parent GUI element. For
+      example, if AnchorPoint is set to `0, 0` and Position is set to
+      `{0, 0}, {0, 0}`, the element's top left corner renders at the top left
+      corner of the parent element. Similarly, if AnchorPoint is set to `0, 0`
+      and Position is set to `{0.5, 0}, {0.5, 0}`, the element's top left corner
+      will render at the direct center of the parent element.
+
+      The pixel portions of the `Datatype.UDim2` value are the same regardless
+      of the parent GUI's size. The values represent the position of the object
+      in pixels. For example, if set to `{0, 100}, {0, 150}` the element's
+      AnchorPoint will render with on the screen 100 pixels from the left and
+      150 pixels from the top.
+
+      An object's actual pixel position can be read from the
+      `Class.GuiBase2d.AbsolutePosition` property.
+    code_samples:
+      - AnchorPoint-Demo
+      - RunService-BindToRenderStep
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Rotation
+    summary: |
+      Determines the number of degrees by which a UI element is rotated.
+    description: |
+      This property determines the number of degrees by which a
+      `Class.GuiObject|GUI` is rotated. Rotation is relative to the **center**
+      of its parent GUI.
+
+      A GUI's `Class.GuiObject.AnchorPoint` does not influence it's rotation.
+      This means that you cannot change the center of rotation since it will
+      always be in the center of the object.
+
+      Additionally, this property is **not compatible** with
+      `Class.GuiObject.ClipsDescendants`. If an ancestor (parent) object has
+      ClipsDescendants enabled and this property is nonzero, then descendant GUI
+      elements will not be clipped.
+    code_samples:
+      - Copycat-Frame
+      - Spin-GuiObject
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Selectable
+    summary: |
+      Determine whether the `Class.GuiObject|GUI` can be selected by a gamepad.
+    description: |
+      This property determines whether a ~GuiObject|GUI` can be selected when
+      navigating GUIs using a gamepad.
+
+      If this property is true, a GUI can be selected. Selecting a GUI also sets
+      the `Class.GuiService.SelectedObject` property to that object.
+
+      When this is false, the GUI cannot be selected. However, setting this to
+      false when a GUI is selected will not deselect it nor change the value of
+      the GuiService's SelectedObject property.
+
+      Add `Class.GuiObject.SelectionGained` and `Class.GuiObject.SelectionLost`
+      will not fire for the element. To deselect a GuiObject, you must change
+      `Class.GuiService|GuiService's` SelectedObject property.
+
+      This property is useful if a GUI is connected to several GUIs via
+      properties such as this `Class.GuiObject.NextSelectionUp`,
+      `Class.GuiObject.NextSelectionDown`, `Class.GuiObject|NextSelectionRight`,
+      or `Class.GuiObject|NextSelectionLeft`. Rather than change all of the
+      properties so that the Gamepad cannot select the GUI, you can disable its
+      Selectable property to temporarily prevent it from being selected. Then,
+      when you want the gamepad selector to be able to select the GUI, simply
+      re-enable its selectable property.
+    code_samples:
+      - limiting-textbox-selection
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.SelectionImageObject
+    summary: |
+      Overrides the default selection adornment (used for gamepads).
+    description: |
+      This property overrides the default selection adornment (used for
+      gamepads). For best results, this should point to a `Class.GuiObject|GUI`.
+
+      Note that the SelectionImageObject overlays the selected GUI with the
+      `Class.GuiObject.Size` of the image. For best results when using a
+      non-default SelectionImageObject, you should size the SelectionImageObject
+      via the scale `Datatype.UDim2` values. This helps ensure that the object
+      scales properly over the selected element.
+
+      The default SelectionImageObject is a blue and white square outline around
+      the selected GUI element. In the image below, the selected GUI is a white
+      `Class.Frame`.
+
+      ![Default SelectionImageObject](/assets/legacy/Screen_Shot_2018-09-13_at_9.57.14_PM.png)
+
+      For instance, changing the SelectionImageObject to a `Class.ImageLabel`
+      with red and white square outline
+      [image](https://www.roblox.com/library/2347505468/SelectionImage-Red),
+      `Class.GuiObject.BackgroundTransparency` of 1, `Class.GuiObject.Size` of
+      _UDim2(1.1, 0, 1.1, 0)_, and `Class.GuiObject.Position` of _UDim2(-0.05,
+      0, -0.05, 0)_ results in the image below:
+
+      ![Custom SelectionImageObject](/assets/legacy/Screen_Shot_2018-09-13_at_9.53.54_PM.png)
+
+      Changing the SelectionImageObject for a GUI element only affects that
+      element. To change the SelectionImageObject for all of a user's GUI
+      elements, you can set the `Class.PlayerGui.SelectionImageObject` property.
+
+      To determine or set which GUI element is selected by the user, you can use
+      the `Class.GuiService.SelectedObject` property. The user uses the gamepad
+      to select different GUI elements, invoking the
+      `Class.GuiObject.NextSelectionUp`, `Class.GuiObject.NextSelectionDown`,
+      `Class.GuiObject.NextSelectionLeft`, and
+      `Class.GuiObject.NextSelectionRight` events.
+    code_samples:
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.SelectionOrder
+    summary: |
+      The order of GuiObjects selected by the gamepad UI selection.
+    description: |
+      GuiObjects with a lower SelectionOrder are selected earlier than
+      GuiObjects with a higher SelectionOrder when starting the gamepad
+      selection or calling `Class.GuiService:Select()` on an ancestor. This
+      property does not affect directional navigation. Default value is 0.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Selection
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Size
+    summary: |
+      Determine the pixel and scalar size of a `Class.GuiObject|GUI`.
+    description: |
+      This property determines a `Class.GuiObject|GUI's` scalar and pixel size
+      using a `Datatype.UDim2`. Its value can be expressed as
+      `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
+      `({ScalarX, PixelX}, {ScalarY, PixelY})`.
+
+      The scalar size is relative to the scalar size of parent GUI elements, if
+      any. For example, if the GUI's scalar size is `UDim2.new(0.5, 0, 0.5, 0)`
+      and it is not the descendant of a GUI, then it will occupy half of the
+      screen horizontally and vertically. However, if the GUI is the child of a
+      GUI with a scalar size of `UDim2.new(0.5, 0, 0.5, 0)`, then the GUI's
+      scalar size will render to be half the scalar size of its parent both
+      horizontally and vertically and will occupy a quarter of the screen in
+      both dimensions.
+
+      The pixel portions of the `Datatype.UDim2` value are the same regardless
+      of the parent GUI's size. The values represent the size of the object in
+      pixels. For example, if Position is set to `{0, 100}, {0, 150}` the
+      element will render with a width of 100 pixels and height of 150 pixels.
+
+      If the GUI has a parent, its size of each axis is also influenced by the
+      parent's `Class.GuiObject.SizeConstraint|SizeConstraint`.
+
+      Using negative sizes may result in undefined behavior in some cases, such
+      as with `Class.UIConstraint`. It is preferable to change
+      `Class.GuiObject.AnchorPoint|AnchorPoint` instead of using negative sizes.
+
+      An object's actual pixel size can be read from the
+      `Class.GuiBase2d.AbsoluteSize` property.
+    code_samples:
+      - Health-Bar
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.SizeConstraint
+    summary: |
+      Selects the `Class.GuiObject.Size` axes that a `Class.GuiObject|GUI` will
+      be based relative to the size of its parent.
+    description: |
+      This property works in conjunction with the `Class.GuiObject.Size|Size`
+      property to determine the screen size of a GUI element.
+
+      The `Enum.SizeConstraint` enum will determine the axes that influence the
+      scalar size of an object.
+
+      This property is useful for creating onscreen controls that are meant to
+      scale with either the width or height of a parent object, but not both.
+      This preserves the aspect ratio of the GUI element in question. For
+      example, setting to RelativeYY with a Size of `{1, 0}, {1, 0}` will make
+      the UI element square, with both the X and Y sizes equal to the parent
+      element's Y size.
+    code_samples:
+      - SizeConstraint
+    type: SizeConstraint
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.Transparency
+    summary: |
+      A mixed property of BackgroundTransparency and TextTransparency.
+    description: |
+      This property is deprecated, and a mix of
+      `Class.GuiObject.BackgroundTransparency` and
+      `Class.TextLabel.TextTransparency`.
+
+      When indexing, this will return the BackgroundTransparency.
+
+      When setting, this will change the BackgroundTransparency **and**
+      TextTransparency of a `Class.GuiObject|GUI` element.
+    code_samples:
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: |
+      This property is deprecated, and a mix of
+      `Class.GuiObject.BackgroundTransparency` and
+      `Class.TextLabel.TextTransparency`.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: GuiObject.Visible
+    summary: |
+      Determines whether a `Class.GuiObject.GUI` and its descendants will be
+      rendered.
+    description: |
+      This property determines whether a `Class.GuiObject|GUI` will render
+      shapes, images and/or text on screen. If set to false, the GUI and all of
+      its descendants (children) will not render.
+
+      The rendering of individual components of a GUI can be controlled
+      individually through transparency properties such as
+      `Class.GuiObject.BackgroundTransparency`,
+      `Class.TextLabel.TextTransparency` and
+      `Class.ImageLabel.ImageTransparency`.
+
+      When this property is true, the GUI will be ignored by
+      `Class.UIGridStyleLayout` objects (such as `Class.UIGridLayout`,
+      `Class.UIListLayout` and `Class.UITableLayout`). In other words, the space
+      that the element would otherwise occupy in the layout is used by other
+      elements instead.
+    code_samples:
+      - Blink-UI-Element
+      - UI-Window
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiObject.ZIndex
+    summary: |
+      Determines the order in which a `Class.GuiObject|GUI` renders relative to
+      other GUIs.
+    description: |
+      This property determines the order in which a `Class.GuiObject|GUI`
+      renders to the screen relative to other GUIs.
+
+      By default, GUIs render in ascending priority order where lower values are
+      rendered first. As a result, GUIs with lower ZIndex values appear under
+      higher values. You can change the render order by changing the value of
+      `Class.ScreenGui.ZIndexBehavior`.
+
+      The range of valid values is -MAX_INT to MAX_INT, inclusive (2,147,483,647
+      or (2^31 - 1)). If you are unsure if you will need to layer an element
+      between two already-existing elements in the future, it can be a good idea
+      to use multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
+      ZIndex values you can use for elements rendered in-between other elements.
+
+      See also:
+
+      - `Class.GuiObject.LayoutOrder`, which controls the sort order of a GUI
+        when used with a `Class.UIGridStyleLayout` instead of render order.
+    code_samples:
+      - ZIndex-Alternate
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: GuiObject:TweenPosition
+    summary: |
+      Smoothly moves a GUI to a new `Datatype.UDim2`.
+    description: |
+      Smoothly moves a GUI to a new `Datatype.UDim2` position in the specified
+      time using the specified `Enum.EasingDirection` and `Enum.EasingStyle`.
+
+      This function will return whether the tween will play. It will not play if
+      another tween is acting on the `Class.GuiObject` and the override
+      parameter is false.
+
+      See also:
+
+      - `Class.GuiObject:TweenSize()`, tweens a GUI's size
+      - `Class.GuiObject:TweenSizeAndPosition()`, tweens a GUI's size and
+        position synchronously
+    code_samples:
+      - GuiObject-TweenPosition1
+    parameters:
+      - name: endPosition
+        type: UDim2
+        default:
+        summary: |
+          Where the GUI should move to.
+      - name: easingDirection
+        type: EasingDirection
+        default: Out
+        summary: |
+          The direction in which to ease the GUI to the _endPosition_.
+      - name: easingStyle
+        type: EasingStyle
+        default: Quad
+        summary: |
+          The style in which to ease the GUI to the _endPosition_.
+      - name: time
+        type: float
+        default: 1
+        summary: |
+          How long, in seconds, the tween should take to complete.
+      - name: override
+        type: bool
+        default: false
+        summary: |
+          Whether the tween will override an in-progress tween.
+      - name: callback
+        type: Function
+        default: nil
+        summary: |
+          A callback function to execute when the tween completes.
+    returns:
+      - type: bool
+        summary: |
+          Whether the tween will play.
+    tags: []
+    deprecation_message: |
+      This function is deprecated in favor of using `Class.TweenService`, which
+      allows for better customization using an object-oriented and event-based
+      approach.
+
+      - The `easingDirection`, `easingStyle`, and `time` parameters are handled
+        by a `Datatype.TweenInfo`
+      - The `override` parameter is no longer relevant; tweens always override
+        previous tweens on the same property.
+      - The `callback` parameter is better suited by the `Class.Tween.Completed`
+        event. The `Enum.PlaybackState` enum passed by that event provides a
+        more detailed description of the tween's completion state.
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject:TweenSize
+    summary: |
+      Smoothly resizes a GUI to a new `Datatype.UDim2`.
+    description: |
+      Smoothly resizes a GUI to a new `Datatype.UDim2` in the specified time
+      using the specified `Enum.EasingDirection` and `Enum.EasingStyle`.
+
+      This function will return whether the tween will play. Normally this will
+      always return true, but it will return false if another tween is active
+      and override is set to false.
+
+      See also:
+
+      - `Class.GuiObject:TweenPosition()`, tweens a GUI's position
+      - `Class.GuiObject:TweenSizeAndPosition()`, tweens a GUI's size and
+        position synchronously
+    code_samples:
+      - tween-a-gui-s-size
+    parameters:
+      - name: endSize
+        type: UDim2
+        default:
+        summary: |
+          The size that the GUI should resize.
+      - name: easingDirection
+        type: EasingDirection
+        default: Out
+        summary: |
+          The direction in which to ease the GUI to the _endSize_.
+      - name: easingStyle
+        type: EasingStyle
+        default: Quad
+        summary: |
+          The style in which to ease the GUI to the _endSize_.
+      - name: time
+        type: float
+        default: 1
+        summary: |
+          How long, in seconds, the tween should take to complete.
+      - name: override
+        type: bool
+        default: false
+        summary: |
+          Whether the tween will override an in-progress tween.
+      - name: callback
+        type: Function
+        default: nil
+        summary: |
+          A callback function to execute when the tween completes.
+    returns:
+      - type: bool
+        summary: |
+          Whether the tween will play.
+    tags: []
+    deprecation_message: |
+      This function is deprecated in favor of using `Class.TweenService`, which
+      allows for better customization using an object-oriented and event-based
+      approach.
+
+      - The `easingDirection`, `easingStyle`, and `time` parameters are handled
+        by a `Datatype.TweenInfo`
+      - The `override` parameter is no longer relevant; tweens always override
+        previous tweens on the same property.
+      - The `callback` parameter is better suited by the `Class.Tween.Completed`
+        event. The `Enum.PlaybackState` enum passed by that event provides a
+        more detailed description of the tween's completion state.
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject:TweenSizeAndPosition
+    summary: |
+      Smoothly moves a GUI to a new size and position.
+    description: |
+      Smoothly resizes and moves a GUI to a new `Datatype.UDim2` size and
+      position in the specified time using the specified `Enum.EasingDirection`
+      and `Enum.EasingStyle`.
+
+      This function will return whether the tween will play. Normally this will
+      always return true, but it will return false if another tween is active
+      and override is set to false.
+
+      See also:
+
+      - `Class.GuiObject:TweenSize()`, tweens a GUI's size
+      - `Class.GuiObject:TweenPosition()`, tweens a GUI's position
+    code_samples:
+      - GuiObject-TweenSizeAndPosition1
+    parameters:
+      - name: endSize
+        type: UDim2
+        default:
+        summary: |
+          The size that the GUI should resize.
+      - name: endPosition
+        type: UDim2
+        default:
+        summary: |
+          Where the GUI should move to.
+      - name: easingDirection
+        type: EasingDirection
+        default: Out
+        summary: |
+          The direction in which to ease the GUI to the _endSize_ and
+          _endPosition_.
+      - name: easingStyle
+        type: EasingStyle
+        default: Quad
+        summary: |
+          The style in which to ease the GUI to the _endSize_ and _endPosition_.
+      - name: time
+        type: float
+        default: 1
+        summary: |
+          How long, in seconds, the tween should take to complete.
+      - name: override
+        type: bool
+        default: false
+        summary: |
+          Whether the tween will override an in-progress tween.
+      - name: callback
+        type: Function
+        default: nil
+        summary: |
+          A callback function to execute when the tween completes.
+    returns:
+      - type: bool
+        summary: |
+          Whether the tween will play.
+    tags: []
+    deprecation_message: |
+      This function is deprecated in favor of using `Class.TweenService`, which
+      allows for better customization using an object-oriented and event-based
+      approach.
+
+      - The `easingDirection`, `easingStyle`, and `time` parameters are handled
+        by a `Datatype.TweenInfo`
+      - The `override` parameter is no longer relevant; tweens always override
+        previous tweens on the same property.
+      - The `callback` parameter is better suited by the `Class.Tween.Completed`
+        event. The `Enum.PlaybackState` enum passed by that event provides a
+        more detailed description of the tween's completion state.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: GuiObject.DragBegin
+    summary: |
+      Fired when a player begins dragging the object.
+    description: |
+      This event fires when a player begins dragging the object.
+
+      See also:
+
+      - `Class.GuiObject.DragStopped`
+    code_samples:
+      - GuiObject-DragBegin1
+    parameters:
+      - name: initialPosition
+        type: UDim2
+        default:
+        summary: |
+          A `Datatype.UDim2` value of the position of the `Class.GuiObject`
+          before any drag operation began.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event, as well as its counterparts, `Class.GuiObject.DragStopped` and
+      `Class.GuiObject.Draggable`, have all been deprecated. None should be used
+      for new work
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.DragStopped
+    summary: |
+      Fired when a player stops dragging the object.
+    description: |
+      This event fires when a player stops dragging the object.
+
+      See also:
+
+      - `Class.GuiObject.DragBegin`
+    code_samples:
+      - GuiObject-DragStopped1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen location in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen location in pixels, relative to the top left
+          corner of the screen.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This event, as well as its counterparts, `Class.GuiObject.DragBegin` and
+      `Class.GuiObject.Draggable`, have all been deprecated. None should be used
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.InputBegan
+    summary: |
+      Fired when a user begins interacting via a Human-Computer Interface device
+      (Mouse button down, touch begin, keyboard button down, etc).
+    description: |
+      This event fires when a user begins interacting with the `Class.GuiObject`
+      via a Human-Computer Interface device (Mouse button down, touch begin,
+      keyboard button down, etc).
+
+      The `Class.UserInputService` has a similarly named event that is not
+      restricted to a specific UI element: `Class.UserInputService.InputBegan`.
+
+      This event will always fire regardless of game state.
+
+      See also:
+
+      - `Class.GuiObject.InputEnded`
+      - `Class.GuiObject.InputChanged`
+    code_samples:
+      - tracking-the-beginning-of-input-on-a-guiobject
+    parameters:
+      - name: input
+        type: InputObject
+        default:
+        summary: |
+          An `Class.InputObject`, which contains useful data for querying user
+          input such as the`Enum.UserInputType|type of input`,
+          `Enum.UserInputState|state of input`, and
+          `Class.InputObject.Position|screen coordinates of the input`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.InputChanged
+    summary: |
+      Fired when a user changes how they're interacting via a Human-Computer
+      Interface device (Mouse button down, touch begin, keyboard button down,
+      etc).
+    description: |
+      This event fires when a user changes how they're interacting via a
+      Human-Computer Interface device (Mouse button down, touch begin, keyboard
+      button down, etc).
+
+      The `Class.UserInputService` has a similarly named event that is not
+      restricted to a specific UI element:
+      `Class.UserInputService.InputChanged`.
+
+      This event will always fire regardless of game state.
+
+      See also:
+
+      - `Class.GuiObject.InputBegan`
+      - `Class.GuiObject.InputEnded`
+    code_samples:
+      - guiobject-inputchanged-demo
+    parameters:
+      - name: input
+        type: InputObject
+        default:
+        summary: |
+          An `Class.InputObject`, which contains useful data for querying user
+          input such as the`Enum.UserInputType|type of input`,
+          `Enum.UserInputState|state of input`, and
+          `Class.InputObject.Position|screen coordinates of the input`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.InputEnded
+    summary: |
+      Fired when a user stops interacting via a Human-Computer Interface device
+      (Mouse button down, touch begin, keyboard button down, etc).
+    description: |
+      The InputEnded event fires when a user stops interacting via a
+      Human-Computer Interface device (Mouse button down, touch begin, keyboard
+      button down, etc).
+
+      The `Class.UserInputService` has a similarly named event that is not
+      restricted to a specific UI element: `Class.UserInputService.InputEnded`.
+
+      This event will always fire regardless of game state.
+
+      See also:
+
+      - `Class.GuiObject.InputBegan`
+      - `Class.GuiObject.InputChanged`
+    code_samples:
+      - tracking-the-end-of-input-on-a-guiobject
+    parameters:
+      - name: input
+        type: InputObject
+        default:
+        summary: |
+          An `Class.InputObject`, which contains useful data for querying user
+          input such as the`Enum.UserInputType|type of input`,
+          `Enum.UserInputState|state of input`, and
+          `Class.InputObject.Position|screen coordinates of the input`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.MouseEnter
+    summary: |
+      Fires when a user moves their mouse into a GUI element.
+    description: |
+      The MouseEnter event fires when a user moves their mouse into a
+      `Class.GuiObject|GUI` element.
+
+      Please do not rely on the `x` and `y` arguments passed by this event as a
+      fool-proof way to determine where the user's mouse is when it enters a
+      GUI. These coordinates may vary even when the mouse enters the GUI via the
+      same edge - particularly when the mouse enters the element quickly. This
+      is due to the fact the coordinates indicate the position of the mouse when
+      the event fires rather than the exact moment the mouse enters the GUI.
+
+      This event fires even when the GUI element renders beneath another
+      element.
+
+      If you would like to track when a user's mouse leaves a GUI element, you
+      can use the `Class.GuiObject.MouseLeave` event.
+
+      See also:
+
+      - `Class.GuiObject.MouseLeave`
+      - `Class.GuiObject.MouseMoved`
+      - `Class.GuiObject.MouseWheelForward`
+      - `Class.GuiObject.MouseWheelBackward`
+    code_samples:
+      - GuiObject-MouseEnter1
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels, relative to the top left
+          corner of the screen.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.MouseLeave
+    summary: |
+      Fires when a user moves their mouse out of a GUI element.
+    description: |
+      The MouseLeave event fires when a user moves their mouse out of a
+      `Class.GuiObject|GUI` element.
+
+      Please do not rely on the `x` and `y` arguments passed by this event as a
+      fool-proof way to determine where the user's mouse is when it leaves a
+      GUI. These coordinates may vary even when the mouse leaves the GUI via the
+      same edge - particularly when the mouse leaves the element quickly. This
+      is due to the fact the coordinates indicate the position of the mouse when
+      the event fires rather than the exact moment the mouse leaves the GUI.
+
+      This event fires even when the GUI element renders beneath another
+      element.
+
+      See also:
+
+      - `Class.GuiObject.MouseEnter`
+      - `Class.GuiObject.MouseMoved`
+      - `Class.GuiObject.MouseWheelForward`
+      - `Class.GuiObject.MouseWheelBackward`
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels, relative to the top left
+          corner of the screen.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.MouseMoved
+    summary: |
+      Fires whenever a user moves their mouse while it is inside a GUI element.
+    description: |
+      Fires whenever a user moves their mouse while it is inside a
+      `Class.GuiObject|GUI` element. It is similar to `Class.Mouse.Move`, which
+      fires regardless whether the user's mouse is over a GUI element.
+
+      Note, this event fires when the mouse's position is updated, therefore it
+      will fire repeatedly while being moved.
+
+      The `x` and `y` arguments indicate the updated screen coordinates of the
+      user's mouse in pixels. These can be useful to determine the mouse's
+      location on the GUI, screen, and delta since the mouse's previous position
+      if it is being tracked in a global variable.
+
+      The code below demonstrates how to determine the `Datatype.Vector2` offset
+      of the user's mouse relative to a GUI element:
+
+      ```lua
+      local CustomScrollingFrame = script.Parent
+      local SubFrame = CustomScrollingFrame:FindFirstChild("SubFrame")
+
+      local mouse = game.Players.LocalPlayer:GetMouse()
+      function getPosition(X, Y)
+      	local gui_X = CustomScrollingFrame.AbsolutePosition.X
+      	local gui_Y = CustomScrollingFrame.AbsolutePosition.Y
+
+
+      	local pos = Vector2.new(math.abs(X - gui_X), math.abs(Y - gui_Y - 36))
+      	print(pos)
+      end
+
+      CustomScrollingFrame.MouseMoved:Connect(getPosition)
+      ```
+
+      Note that this event may not fire exactly when the user's mouse enters or
+      exits a GUI element. Therefore, the `x` and `y` arguments may not match up
+      perfectly to the coordinates of the GUI's edges.
+
+      See also:
+
+      - `Class.GuiObject.MouseEnter`
+      - `Class.GuiObject.MouseLeave`
+      - `Class.GuiObject.MouseWheelForward`
+      - `Class.GuiObject.MouseWheelBackward`
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels, relative to the top left
+          corner of the screen.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.MouseWheelBackward
+    summary: |
+      Fires when a user scrolls their mouse wheel back when the mouse is over a
+      GUI element.
+    description: |
+      The WheelBackward event fires when a user scrolls their mouse wheel back
+      when the mouse is over a `Class.GuiObject|GUI` element. It is similar to
+      `Class.Mouse.WheelBackward`, which fires regardless whether the user's
+      mouse is over a GUI element.
+
+      This event fires merely as an indicator of the wheel's backward movement.
+      This means that the x and y mouse coordinate arguments don't change as a
+      result of this event. These coordinates only change when the mouse moves,
+      which can be tracked by the `Class.GuiObject.MouseMoved` event.
+
+      See also:
+
+      - `Class.GuiObject.MouseEnter`
+      - `Class.GuiObject.MouseLeave`
+      - `Class.GuiObject.MouseMoved`
+      - `Class.GuiObject.MouseWheelForward`
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The mouse's y screen coordinate in pixels, relative to the top left
+          corner of the screen.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.MouseWheelForward
+    summary: |
+      Fires when a user scrolls their mouse wheel forward when the mouse is over
+      a GUI element.
+    description: |
+      The WheelForward event fires when a user scrolls their mouse wheel forward
+      when the mouse is over a `Class.GuiObject|GUI` element. It is similar to
+      `Class.Mouse.WheelForward`, which fires regardless whether the user's
+      mouse is over a GUI element.
+
+      This event fires merely as an indicator of the wheel's forward movement.
+      This means that the x and y mouse coordinate arguments do not change as a
+      result of this event. These coordinates only change when the mouse moves,
+      which can be tracked by the `Class.GuiObject.MouseMoved` event.
+
+      See also:
+
+      - `Class.GuiObject.MouseEnter`
+      - `Class.GuiObject.MouseLeave`
+      - `Class.GuiObject.MouseMoved`
+      - `Class.GuiObject.MouseWheelBackward`
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: |
+          The mouse's x screen coordinate in pixels, relative to the top left
+          corner of the screen.
+      - name: 'y'
+        type: int
+        default:
+        summary: |
+          The y coordinate of the user's mouse.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.SelectionGained
+    summary: |
+      Fired when the GuiObject is being focused on with the Gamepad selector.
+    description: |
+      This event fires when the Gamepad selector starts focusing on the
+      `Class.GuiObject`.
+
+      If you want to check from the Gamepad select stops focusing on the GUI
+      element, you can use the `Class.GuiObject.SelectionLost` event.
+
+      When a GUI gains selection focus, the value of the
+      `Class.GuiService.SelectedObject|SelectedObject` property also changes to
+      the that gains selection. To determine which GUI gained selection, check
+      the value of this property.
+    code_samples:
+      - GuiObject-SelectionGained1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.SelectionLost
+    summary: |
+      Fired when the Gamepad selector stops focusing on the GuiObject.
+    description: |
+      This event fires when the Gamepad selector stops focusing on the
+      `Class.GuiObject|GUI`.
+
+      If you want to check from the Gamepad select starts focusing on the GUI
+      element, you can use the `Class.GuiObject.SelectionGained` event.
+
+      When a GUI loses selection focus, the value of the
+      `Class.GuiService.SelectionObject|SelectionObject` property changes either
+      to nil or to the GUI element that gains selection focus. To determine
+      which GUI gained selection, or if no GUI is selected, check the value of
+      this property.
+    code_samples:
+      - GuiObject-SelectionLost1
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchLongPress
+    summary: |
+      Fires when the player starts, continues and stops long-pressing the UI
+      element.
+    description: |
+      The TouchLongPress event fires after a brief moment when the player holds
+      their finger on the UI element using a touch-enabled device. It fires with
+      a table of `Datatype.Vector2` that describe the relative screen positions
+      of the fingers involved in the gesture. In addition, it fires multiple
+      times with multiple `Enum.UserInputState`s: Begin after a brief delay,
+      Change if the player moves their finger during the gesture and finally
+      with End. The delay is platform dependent; in Studio it is a little longer
+      than one second.
+
+      Since this event only requires one finger, this event can be simulated in
+      Studio using the emulator and a mouse.
+    code_samples:
+      - Move-UI-Element-with-TouchLongPress
+    parameters:
+      - name: touchPositions
+        type: Array
+        default:
+        summary: |
+          An array of `Datatype.Vector2` that describe the **relative**
+          positions of the fingers involved in the gesture.
+      - name: state
+        type: UserInputState
+        default:
+        summary: |
+          A `Enum.UserInputState` that describes the state of the gesture:
+
+          - Begin fires once at the beginning of the gesture (after the brief
+            delay)
+          - Change fires if the player moves their finger while pressing down
+          - End fires once at the end of the gesture when they release their
+            finger.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchPan
+    summary: |
+      Fires when the player moves their finger on the UI element.
+    description: |
+      This event fires when the player moves their finger on the UI element
+      using a touch-enabled device. It fires shortly before
+      `Class.GuiObject.TouchSwipe` would, and does not fire with
+      `Class.GuiObject.TouchTap`. This event is useful for allowing the player
+      to manipulate the position of UI elements on the screen.
+
+      This event fires with a table of `Datatype.Vector2` that describe the
+      relative screen positions of the fingers involved in the gesture. In
+      addition, it fires several times with multiple `Enum.UserInputState`s:
+      Begin after a brief delay, Change when the player moves their finger
+      during the gesture and finally once more with End.
+
+      This event cannot be simulated in Studio using the emulator and a mouse;
+      you must have a real touch enabled device to fire this event.
+    code_samples:
+      - Panning-UI-Element
+    parameters:
+      - name: touchPositions
+        type: Array
+        default:
+        summary: |
+          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          all the fingers involved in the gesture.
+      - name: totalTranslation
+        type: Vector2
+        default:
+        summary: |
+          Indicates how far the pan gesture has gone from its starting point.
+      - name: velocity
+        type: Vector2
+        default:
+        summary: |
+          Indicates how quickly the gesture is being performed in each
+          dimension.
+      - name: state
+        type: UserInputState
+        default:
+        summary: |
+          Indicates the `Enum.UserInputState` of the gesture.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchPinch
+    summary: |
+      Fires when the player performs a pinch or pull gesture using two fingers
+      on the UI element.
+    description: |
+      The TouchPinch event fires when the player uses two fingers to make a
+      pinch or pull gesture on the UI element using a touch-enabled device. A
+      **pinch** happens when two or more fingers move closer together, and a
+      **pull** happens when they move apart. This event fires in conjunction
+      with `Class.GuiObject.TouchPan`. This event is useful for allowing the
+      player to manipulate the scale (size) of UI elements on the screen, and is
+      most often used for zooming features.
+
+      This event fires with a table of `Datatype.Vector2` that describe the
+      relative screen positions of the fingers involved in the gesture. In
+      addition, it fires several times with multiple `Enum.UserInputState`s:
+      Begin after a brief delay, Change when the player moves a finger during
+      the gesture and finally once more with End. It should be noted that the
+      scale should be used **multiplicatively**.
+
+      Since this event requires at least two fingers, it is not possible to be
+      simulated in Studio using the emulator and a mouse; you must have a real
+      touch-enabled device.
+    code_samples:
+      - Pinch-Pull-Scaling
+    parameters:
+      - name: touchPositions
+        type: Array
+        default:
+        summary: |
+          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          all the fingers involved in the pinch gesture.
+      - name: scale
+        type: float
+        default:
+        summary: |
+          A float that indicates the difference from the beginning of the pinch
+          gesture.
+      - name: velocity
+        type: float
+        default:
+        summary: |
+          A float indicating how quickly the pinch gesture is happening.
+      - name: state
+        type: UserInputState
+        default:
+        summary: |
+          Indicates the `Enum.UserInputState` of the gesture.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchRotate
+    summary: |
+      Fires when the player performs a rotation gesture using two fingers on the
+      UI element.
+    description: |
+      The TouchRotate event fires when the player uses two fingers to make a
+      pinch or pull gesture on the UI element using a touch-enabled device.
+      Rotation occurs when the angle of the line between two fingers changes.
+      This event fires in conjunction with `Class.GuiObject.TouchPan`. This
+      event is useful for allowing the player to manipulate the rotation of UI
+      elements on the screen.
+
+      This event fires with a table of `Datatype.Vector2` that describe the
+      relative screen positions of the fingers involved in the gesture. In
+      addition, it fires several times with multiple `Enum.UserInputState`s:
+      Begin after a brief delay, Change when the player moves a finger during
+      the gesture and finally once more with End.
+
+      Since this event requires at least two fingers, it is not possible to be
+      simulated in Studio using the emulator and a mouse; you must have a real
+      touch-enabled device (and also least two fingers, try asking a friend).
+
+      See also:
+
+      - `Class.GuiObject.TouchPan`
+      - `Class.GuiObject.TouchPinch`
+      - `Class.GuiObject.TouchTap`
+      - `Class.GuiObject.TouchSwipe`
+      - `Class.GuiObject.TouchLongPress`
+    code_samples:
+      - Touch-Rotation
+    parameters:
+      - name: touchPositions
+        type: Array
+        default:
+        summary: |
+          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          all the fingers involved in the gesture.
+      - name: rotation
+        type: float
+        default:
+        summary: |
+          A float indicating how much the rotation has gone from the start of
+          the gesture.
+      - name: velocity
+        type: float
+        default:
+        summary: |
+          A float that indicates how quickly the gesture is being performed.
+      - name: state
+        type: UserInputState
+        default:
+        summary: |
+          Indicates the `Enum.UserInputState` of the gesture.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchSwipe
+    summary: |
+      Fires when the player performs a swipe gesture on the UI element.
+    description: |
+      The TouchSwipe event fires when the player performs a swipe gesture on the
+      UI element using a touch-enabled device. It fires with the direction of
+      the gesture (Up, Down, Left or Right) and the number of touch points
+      involved in the gesture. Swipe gestures are often used to change tabs in
+      mobile UIs.
+
+      Since this event only requires one finger, it can be simulated in Studio
+      using the emulator and a mouse.
+    code_samples:
+      - Bouncing-Color-Picker
+    parameters:
+      - name: swipeDirection
+        type: SwipeDirection
+        default:
+        summary: |
+          A `Enum.SwipeDirection` indicating the direction of the swipe gesture
+          (Up, Down, Left or Right).
+      - name: numberOfTouches
+        type: int
+        default:
+        summary: |
+          The number of touch points involved in the gesture (usually 1).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiObject.TouchTap
+    summary: |
+      Fires when the player performs a tap gesture on the UI element.
+    description: |
+      The TouchTap event fires when the player performs a tap gesture on the UI
+      element using a touch-enabled device. A tap is a quick single touch
+      without any movement involved (a longer press would fire
+      `Class.GuiObject.TouchLongPress`, and moving during the touch would fire
+      `Class.GuiObject.TouchPan` and/or `Class.GuiObject.TouchSwipe`). It fires
+      with a table of `Datatype.Vector2`s that describe the relative positions
+      of the fingers involved in the gesture.
+
+      Since this event only requires one finger, it can be simulated in Studio
+      using the emulator and a mouse.
+    code_samples:
+      - Tap-Transparency-Toggle
+    parameters:
+      - name: touchPositions
+        type: Array
+        default:
+        summary: |
+          An array of `Datatype.Vector2` that describe the **relative**
+          positions of the fingers involved in the gesture.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

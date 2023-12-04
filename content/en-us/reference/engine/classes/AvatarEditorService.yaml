@@ -1,0 +1,1016 @@
+name: AvatarEditorService
+type: class
+category:
+memory_category: Instances
+summary: |
+  A service to support developer Avatar Editors.
+description: |
+  AvatarEditorService is a service to support developer Avatar Editors. It
+  provides methods to modify the player's platform avatar, request information
+  about a user's inventory, and request information about the catalog.
+
+  For more information regarding the Avatar Editor, see
+  [Avatar Editor Service](../../../players/avatar-editor.md).
+
+  #### Throttling
+
+  The following endpoints on `AvatarEditorService` have experience-level
+  throttling:
+
+  - `Class.AvatarEditorService.GetItemDetails`
+  - `Class.AvatarEditorService.GetBatchItemDetails`
+  - `Class.AvatarEditorService.GetRecommendedAssets`
+  - `Class.AvatarEditorService.GetRecommendedBundles`
+  - `Class.AvatarEditorService.SearchCatalog`
+  - `Class.AvatarEditorService.PromptSetFavorite`
+  - `Class.AvatarEditorService.GetFavorite`
+
+  For each experience, this throttling allows you to send up to 100 requests per
+  second to these `AvatarEditorService` endpoints, regardless of the number of
+  servers or user count. Exceeding these limits returns a
+  `429 Too Many Requests` error.
+
+  If you find that your experience requires an adjustment to this throttling,
+  you can submit a
+  [feature request](https://devforum.roblox.com/t/how-to-post-a-feature-request/37232).
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: AvatarEditorService:GetAccessoryType
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: avatarAssetType
+        type: AvatarAssetType
+        default:
+        summary: ''
+    returns:
+      - type: AccessoryType
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptAllowInventoryReadAccess
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
+      what items the user has in their inventory and other avatar editor related
+      information.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to allow the developer to read
+      what items the user has in their inventory and other avatar editor related
+      information. The prompt needs to be confirmed by the user for the
+      developer to use `Class.AvatarEditorService:GetInventory()`,
+      `Class.AvatarEditorService:GetOutfits()` and
+      `Class.AvatarEditorService:GetFavorite()`. Permission does not persist
+      between sessions.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptCreateOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to save the given
+      `Class.HumanoidDescription` as an outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to save the given
+      `Class.HumanoidDescription` as an outfit. Does not yield. The result can
+      be retrieved by listening to the
+      `Class.AvatarEditorService.PromptCreateOutfitCompleted` event.
+    code_samples:
+    parameters:
+      - name: outfit
+        type: HumanoidDescription
+        default:
+        summary: |
+          The `Outfit` that the player will be prompted to created.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The `Enum.RigType` that the outfit will be created for if the player
+          confirms the prompt.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptDeleteOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to delete the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to delete the given outfit. Does
+      not yield. The result can be retrieved by listening to the
+      `Class.AvatarEditorService.PromptDeleteOutfitCompleted` event.
+    code_samples:
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to delete.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptRenameOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to rename the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to rename the given outfit. Does
+      not yield. The result can be retrieved by listening to the
+      `Class.AvatarEditorService.PromptRenameOutfitCompleted` event.
+    code_samples:
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to rename.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptSaveAvatar
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to update their avatar based on
+      the given `Class.HumanoidDescription` and `Enum.RigType` of R6 or R15.
+    description: |
+      This function prompts the `Class.Players.LocalPlayer` to update their
+      avatar based on the given `Class.HumanoidDescription` and `Enum.RigType`
+      (R6 or R15). Does not yield and can get the result by listening to the
+      PromptSaveAvatarCompleted event. This is similar to how other prompts such
+      as PromptPurchase work.
+    code_samples:
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The given `Class.HumanoidDescription` being prompted to save.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The `Enum.RigType` that the avatar will be saved for if the player
+          confirms the prompt.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptSetFavorite
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to favorite or unfavorite the
+      given asset or bundle.
+    description: |
+      This function prompts the `Class.Players.LocalPlayer` to favorite or
+      unfavorite the given asset or bundle.
+    code_samples:
+    parameters:
+      - name: itemId
+        type: int64
+        default:
+        summary: |
+          The ItemId of the item being prompted to favorite.
+      - name: itemType
+        type: AvatarItemType
+        default:
+        summary: |
+          The type of item being prompted to favorite.
+      - name: shouldFavorite
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:PromptUpdateOutfit
+    summary: |
+      Prompts the `Class.Players.LocalPlayer` to update the given outfit.
+    description: |
+      Prompts the `Class.Players.LocalPlayer` to update the given outfit with
+      the given HumanoidDescription.
+    code_samples:
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The outfitId of the outfit to update.
+      - name: updatedOutfit
+        type: HumanoidDescription
+        default:
+        summary: |
+          A HumanoidDescription that represents the new outfit data.
+      - name: rigType
+        type: HumanoidRigType
+        default:
+        summary: |
+          The HumanoidRigType to update the outfit to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:CheckApplyDefaultClothing
+    summary: |
+      Used to apply default clothing to the `Class.HumanoidDescription` if
+      necessary.
+    description: |
+      Returns a new `Class.HumanoidDescription` with the Shirt and Pants
+      properties updated if necessary. Returns nil if default clothing was not
+      needed.
+
+      Default clothing is necessary if the HumanoidDescription does not
+      currently have Shirt and Pants equipped and the body colors are too
+      similar.
+    code_samples:
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: |
+          The HumanoidDescription to check if default clothing is required.
+    returns:
+      - type: HumanoidDescription
+        summary: |
+          Returns a HumanoidDescription if default clothing was necessary.
+          Otherwise returns nil.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:ConformToAvatarRules
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: ''
+    returns:
+      - type: HumanoidDescription
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetAvatarRules
+    summary: |
+      Returns the platform Avatar rules for things such as scaling, default
+      shirts and pants, number of wearable assets.
+    description: |
+      This function returns the platform Avatar rules for things like scaling,
+      default shirts and pants, number of wearable assets, ect.
+
+      The returned table includes the following fields:
+
+      ```lua
+      {
+        "PlayerAvatarTypes": [
+          "R6"
+        ],
+        "Scales": {},
+        "WearableAssetTypes": [
+          {
+            "MaxNumber": 0,
+            "Id": 0,
+            "Name": "string"
+          }
+        ],
+        "BodyColorsPalette": [
+          {
+            "BrickColorId": 0,
+            "NexColor": "string",
+            "Name": "string"
+          }
+        ],
+        "BasicBodyColorsPalette": [
+          {
+            "BrickColorId": 0,
+            "HexColor": "string",
+            "Name": "string"
+          }
+        ],
+        "MinimumDeltaEBodyColorDifference": 0,
+        "ProportionsAndBodyTypeEnabledForUser": true,
+        "DefaultClothingAssetLists": {
+          "DefaultShirtAssetIds": [
+            0
+          ],
+          "DefaultPantAssetIds": [
+            0
+          ]
+        },
+        "BundlesEnabledForUser": true,
+        "EmotesEnabledForUser": true
+      }
+      ```
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing the platform Avatar rules for things like
+          scaling, default shirts and pants, number of wearable assets, ect. See
+          the example return in the main description above.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetBatchItemDetails
+    summary: |
+      Gets the item details for a list of items at once.
+    description: |
+      Gets the item details for a list of items at once. More efficient than
+      AvatarEditorService:GetItemDetails if you need to get all the item details
+      of a list.
+    code_samples:
+    parameters:
+      - name: itemIds
+        type: Array
+        default:
+        summary: |
+          The list of item ids to get details of.
+      - name: itemType
+        type: AvatarItemType
+        default:
+        summary: |
+          The type of the item ids provided.
+    returns:
+      - type: Array
+        summary: |
+          Returns an array of item details with the following fields:
+
+          ````lua
+            {
+              "AssetType" = "string",
+              "CreatorName" = "string",
+              "CreatorTargetId" = 0,
+              "CreatorType" = "string",
+              "Description" = "string",
+              "FavoriteCount" = 0,
+              "Genres" = [
+                "All"
+              ],
+              "Id" = 0,
+              "ItemRestrictions" = [
+                "Limited"
+              ],
+              "ItemStatus": [
+                "New"
+              ],
+              "ItemType" = "string",
+              "LowestPrice" = 0,
+              "Name" = "string",
+              "Price" = 0,
+              "ProductId" = 0
+            }
+          ```.
+          ````
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetFavorite
+    summary: |
+      Returns if the `Class.Players.LocalPlayer` has favorited the given bundle
+      or asset.
+    description: |
+      This function returns if the `Class.Players.LocalPlayer` has favorited the
+      given bundle or asset.
+    code_samples:
+    parameters:
+      - name: itemId
+        type: int64
+        default:
+        summary: |
+          The id of the specified asset or bundle.
+      - name: itemType
+        type: AvatarItemType
+        default:
+        summary: |
+          The `Enum.AvatarItemType` of the specified asset or bundle.
+    returns:
+      - type: bool
+        summary: |
+          Whether the `LocalPlayer` has favorited the given bundle or asset.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetInventory
+    summary: |
+      Returns an `Class.InventoryPages` object with information about owned
+      items in the users inventory with the given AvatarAssetTypes.
+    description: |
+      Returns an `Class.InventoryPages` object with information about owned
+      items in the users inventory with the given
+      `Enum.AvatarAssetType|AvatarAssetTypes`.
+
+      The returned table includes the following fields:
+
+      ```lua
+      [
+          {
+            "AssetId": 0,
+            "AssetType" : "string",
+            "Created": "string",
+            "Name": "string",
+          }
+      ]
+      ```
+    code_samples:
+    parameters:
+      - name: assetTypes
+        type: Array
+        default:
+        summary: |
+          The `Enum.AvatarAssetType` that can will be checked for in the
+          player's inventory.
+    returns:
+      - type: InventoryPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetItemDetails
+    summary: |
+      Returns the item details for the given item.
+    description: |
+      This function returns the item details for the given item. It accepts two
+      parameters - the first indicating the ID of the item being retrieved and
+      the second indicating its `Enum.ItemType`.
+
+      Data returned in the format:
+
+      ```lua
+      {
+        "IsForRent": true,
+        "ExpectedSellerId": 0,
+        "Owned": true,
+        "IsPurchasable": true,
+        "Id": 0,
+        "ItemType": "Asset",
+        "AssetType": "Image",
+        "BundleType": "BodyParts",
+        "Name": "string",
+        "Description": "string",
+        "ProductId": 0,
+        "Genres": [
+          "All"
+        ],
+        "BundledItems": [
+          {
+            "Owned": true,
+            "Id": 0,
+            "Name": "string",
+            "Type": "string"
+          }
+        ],
+        "ItemStatus": [
+          "New"
+        ],
+        "ItemRestrictions": [
+          "ThirteenPlus"
+        ],
+        "CreatorType": "User",
+        "CreatorTargetId": 0,
+        "CreatorName": "string",
+        "Price": 0,
+        "PremiumPricing": {
+          "PremiumDiscountPercentage": 0,
+          "PremiumPriceInRobux": 0
+        },
+        "LowestPrice": 0,
+        "PriceStatus": "string",
+        "UnitsAvailableForConsumption": 0,
+        "PurchaseCount": 0,
+        "FavoriteCount": 0
+      }
+      ```
+    code_samples:
+    parameters:
+      - name: itemId
+        type: int64
+        default:
+        summary: |
+          The ID of the item whose details are being retrieved.
+      - name: itemType
+        type: AvatarItemType
+        default:
+        summary: |
+          An enum value indicating the type of item whose details are being
+          retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A table containing the item info for the retrieved item. See above for
+          a sample table.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetOutfitDetails
+    summary: |
+      Returns the outfit details for the given outfit.
+    description: |
+      This function returns the outfit details for the given outfit. It accepts
+      one parameter: the ID of the outfit.
+
+      Data returns in the following format:
+
+      ```lua
+      {
+        "Assets": [
+          {
+            "AssetType": {
+              "Id": 31,
+              "Name": "RightLeg"
+            }
+            "CurrentVersionId": 16447385805,
+            "Id": 11584239464,
+            "Name": "Anime Female - Right Leg"
+          }
+        ],
+        "BodyColors": {
+          "HeadColor": Color3(204, 142, 105),
+          "LeftArmColor": Color3(204, 142, 105),
+          "LeftLegColor": Color3(204, 142, 105),
+          "RightArmColor": Color3(204, 142, 105),
+          "RightLegColor": Color3(204, 142, 105),
+          "TorsoColor": Color3(204, 142, 105)
+        },
+        "Id": 14703770624,
+        "IsEditable": true,
+        "Name": "Your Costume",
+        "OutfitType": "Avatar",
+        "PlayerAvatarType": "R15",
+        "Scale": {
+          "BodyType": 0,
+          "Depth": 1,
+          "Head": 1,
+          "Height": 1,
+          "Proportion": 0,
+          "Width": 1
+        },
+      }
+      ```
+    code_samples:
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: |
+          The ID of the outfit whose details are being retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A table containing the outfit info for the retrieved outfit. See above
+          for a sample table.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetOutfits
+    summary: |
+      Returns outfit data for the `Class.Players.LocalPlayer`.
+    description: |
+      This function returns outfit data for the `Class.Players.LocalPlayer`.
+      This would be used with
+      `Class.Players:GetHumanoidDescriptionFromOutfitId()` to update the players
+      character to the outfit. Access to this would also depend on
+      `Class.AvatarEditorService:PromptAllowInventoryReadAccess()` being
+      accepted by the user.
+
+      The returned table includes the following fields:
+
+      ```lua
+      [
+          {
+            "Id": 0,
+            "Name": "string",
+            "IsEditable": true
+          }
+      ]
+      ```
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>type</th>
+      	<th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>id</td>
+                  <td>int</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>name</td>
+                  <td>string</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>isEditable</td>
+                  <td>boolean</td>
+                  <td></td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples:
+    parameters:
+      - name: outfitSource
+        type: OutfitSource
+        default: All
+        summary: ''
+      - name: outfitType
+        type: OutfitType
+        default: All
+        summary: ''
+    returns:
+      - type: OutfitPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetRecommendedAssets
+    summary: |
+      Returns a list of recommended assets based on a given `Enum.AssetType` and
+      asset id.
+    description: |
+      This function returns a list of recommended assets based on a given
+      `Enum.AssetType` and asset id. Use this to gather a list of similar assets
+      to the asset provided. Take a look at the code sample below for more
+      information on possible usages for this function.
+
+      Data is in the format:
+
+      ```lua
+      [
+          {
+            "Item": {
+              "AssetId": 0,
+              "Name": "string",
+              "Price": 0,
+              "PremiumPrice": 0,
+            },
+            "Creator": {
+              "CreatorId": 0,
+              "CreatorType": "string",
+              "Name": "string",
+            },
+            "Product": {
+              "Id": 0,
+              "PriceInRobux": 0,
+              "IsForSale": true,
+              "IsResellable": true,
+              "IsLimited": true,
+              "IsLimitedUnique": true,
+              "TotalPrivateSales": 0,
+              "OffsaleDeadline": "string",
+              "IsFree": true
+            }
+          }
+      ]
+      ```
+    code_samples:
+      - getting-a-hat-recommendation
+    parameters:
+      - name: assetType
+        type: AvatarAssetType
+        default:
+        summary: |
+          The type of asset recommendations to retrieve recommendations for.
+      - name: contextAssetId
+        type: int64
+        default: 0
+        summary: |
+          The id of an asset with a type matching the provided assetType used
+          for context when retrieving recommendations.
+    returns:
+      - type: Array
+        summary: |
+          A list of recommendations based on the given `Enum.AssetType`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:GetRecommendedBundles
+    summary: |
+      Returns a list of recommended bundles for a given bundle id.
+    description: |
+      This function returns a list of recommended bundles for a given bundle id.
+
+      Data is in the format:
+
+      ```lua
+      [
+          {
+            "Id": 0,
+            "Name": "string",
+            "Description": "string",
+            "BundleType": "string",
+            "Items": [
+              {
+                "Owned": true,
+                "Id": 0,
+                "Name": "string",
+                "Type": "string"
+              }
+            ],
+            "Creator": {
+              "Id": 0,
+              "Name": "string",
+              "Type": "string"
+            },
+            "Product": {
+              "Id": 0,
+              "Type": "string",
+              "IsPublicDomain": true,
+              "IsForSale": true,
+              "PriceInRobux": 0,
+              "PremiumPricing": {
+                "PremiumDiscountPercentage": 0,
+                "PremiumPriceInRobux": 0
+              }
+            }
+          }
+      ]
+      ```
+    code_samples:
+    parameters:
+      - name: bundleId
+        type: int64
+        default:
+        summary: |
+          A list of recommended bundles.
+    returns:
+      - type: Array
+        summary: |
+          The bundle ID that the recommended bundles will be returned for.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService:SearchCatalog
+    summary: |
+      Returns a `Class.CatalogPages` object containing the result of the given
+      search.
+    description: |
+      This function returns a `Class.CatalogPages` object containing the result
+      of the given search.
+
+      The returned data has the format:
+
+      ```lua
+      [
+          {
+            "Id": 0,
+            "ItemType": "Asset",
+            "AssetType": "Image",
+            "BundleType": "BodyParts",
+            "Name": "string",
+            "Description": "string",
+            "ProductId": 0,
+            "Genres": [
+              "All"
+            ],
+            "BundledItems": [
+              {
+                "Owned": true,
+                "Id": 0,
+                "Name": "string",
+                "Type": "string"
+              }
+            ],
+            "ItemStatus": [
+              "New"
+            ],
+            "ItemRestrictions": [
+              "ThirteenPlus"
+            ],
+            "CreatorType": "User",
+            "CreatorTargetId": 0,
+            "CreatorName": "string",
+            "Price": 0,
+            "PremiumPricing": {
+              "PremiumDiscountPercentage": 0,
+              "PremiumPriceInRobux": 0
+            },
+            "LowestPrice": 0,
+            "PriceStatus": "string",
+            "UnitsAvailableForConsumption": 0,
+            "PurchaseCount": 0,
+            "FavoriteCount": 0
+          }
+      ]
+      ```
+    code_samples:
+    parameters:
+      - name: searchParameters
+        type: CatalogSearchParams
+        default:
+        summary: |
+          An object containing the parameters used for the search.
+    returns:
+      - type: CatalogPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: AvatarEditorService.PromptAllowInventoryReadAccessCompleted
+    summary: |
+      Fires when the
+      `Class.AvatarEditorService:PromptAllowInventoryReadAccess()` prompt is
+      responded to by the user.
+    description: |
+      This event fires when the
+      `Class.AvatarEditorService:PromptAllowInventoryReadAccess()` prompt is
+      responded to by the user. It can only return the Success or
+      PermissionDenied `Enum.AvatarPromptResult|enum` statuses as it does not
+      perform any web requests which could fail.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptCreateOutfitCompleted
+    summary: |
+      Fires when the PromptSaveOutfit operation is completed.
+    description: |
+      This event fires when the PromptSaveOutfit operation is completed. It
+      gives a status `Enum.AvatarPromptResult|enum` indicating whether the
+      prompt succeeded, failed or permission was not granted by the user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+      - name: failureType
+        type: Variant
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptDeleteOutfitCompleted
+    summary: |
+      Fires when the PromptDeleteOutfit operation is completed.
+    description: |
+      Fires when the PromptDeleteOutfit operation is completed. It gives a
+      status `Enum.AvatarPromptResult|enum` indicating whether the prompt
+      succeeded, failed or permission was not granted by the user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptRenameOutfitCompleted
+    summary: |
+      Fires when the PromptRenameOutfit operation is completed.
+    description: |
+      Fires when the PromptRenameOutfit operation is completed. It gives a
+      status `Enum.AvatarPromptResult|enum` indicating whether the prompt
+      succeeded, failed or permission was not granted by the user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptSaveAvatarCompleted
+    summary: |
+      Fires when the `Class.AvatarEditorService:PromptSaveAvatar()` operation is
+      completed.
+    description: |
+      This event fires when the `Class.AvatarEditorService:PromptSaveAvatar()`
+      operation is completed. It gives a status `Enum.AvatarPromptResult|enum`
+      indicating whether the prompt succeeded, failed or permission was not
+      granted by the user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptSetFavoriteCompleted
+    summary: |
+      Fires when the `Class.AvatarEditorService:PromptSetFavorite()` operation
+      is completed.
+    description: |
+      Fires when the `Class.AvatarEditorService:PromptSetFavorite()` operation
+      is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
+      whether the prompt succeeded, failed or permission was not granted by the
+      user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarEditorService.PromptUpdateOutfitCompleted
+    summary: |
+      Fires when the `Class.AvatarEditorService:PromptUpdateOutfit()` operation
+      is completed.
+    description: |
+      Fires when the `Class.AvatarEditorService:PromptUpdateOutfit()` operation
+      is completed. It gives a status `Enum.AvatarPromptResult|enum` indicating
+      whether the prompt succeeded, failed or permission was not granted by the
+      user.
+    code_samples:
+    parameters:
+      - name: result
+        type: AvatarPromptResult
+        default:
+        summary: |
+          The result of the prompt.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

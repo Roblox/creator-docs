@@ -1,0 +1,999 @@
+name: DataModel
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  The DataModel (commonly known as **game** after the global variable used to
+  access it) is the root of Roblox's parent-child hierarchy. Its direct children
+  are services (such as the `Class.Workspace` and `Class.Lighting`) that act as
+  the fundamental components of a Roblox game.
+description: |
+  The DataModel (commonly known as **game** after the global variable used to
+  access it) is the root of Roblox's parent-child hierarchy. Its direct children
+  are services (such as the `Class.Workspace` and `Class.Lighting`) that act as
+  the fundamental components of a Roblox game.
+code_samples:
+  - DataModel1
+inherits:
+  - ServiceProvider
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: DataModel.CreatorId
+    summary: |
+      Describes the ID of the user or group that owns the place.
+    description: |
+      This property describes the ID of the user or group that owns the place.
+      If the `Class.DataModel.CreatorType` property is _'User'_ then CreatorId
+      will be the `Class.Player.UserId` of the place's owner. If the
+      `Class.DataModel.CreatorType` is _'Group'_ then CreatorId will be the ID
+      of the group that owns the place.
+    code_samples:
+      - detect-when-the-place-owner-joins-the-game
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.CreatorType
+    summary: |
+      Describes the `Enum.CreatorType` of the place, whether the place is owned
+      by a user or a group.
+    description: |
+      This property describes the `Enum.CreatorType` of the place, whether the
+      place is owned by a user or a group.
+
+      If the `Enum.CreatorType` is _'User'_, then the
+      `Class.DataModel.CreatorId` property will describe the
+      `Class.Player.UserId|UserId` of the account that owns the game. If the
+      CreatorType is _'Group'_, then it will describe the group ID.
+    code_samples:
+      - detect-when-the-place-owner-joins-the-game
+    type: CreatorType
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.GameId
+    summary: |
+      Describes the ID of the experience that the place running on the server
+      belongs to.
+    description: |
+      This property describes the ID of the experience that the place running on
+      the server belongs to.
+
+      This ID can be found in the top right corner of the
+      [Asset Manager](../../../projects/assets/manager.md) in Roblox Studio.
+      When using Roblox Studio, if the place has not been published to Roblox
+      then the GameId will correspond with the template being used.
+
+      See also:
+
+      - `Class.DataModel.PlaceId`, which describes the ID of the place running
+        on the server
+      - `Class.DataModel.JobId`, which is a unique identifier for the server
+        game instance running
+      - `Class.TeleportService`, which is a service that can be used to
+        transport `Class.Player|Players` between games
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.GearGenreSetting
+    summary: |
+      Not functional. Historically described the gear permissions of the place
+      as set on the Roblox website.
+    description: |
+      This property is broken and should not be used.
+
+      This property historically described the `Enum.GearGenreSetting` of the
+      place, reflecting the gear permissions configured in the place settings.
+      These settings determine what gear could be added to a
+      `Class.Player|Player's` `Class.StarterGear`.
+
+      This property, along with `Class.DataModel.Genre`, no longer functions
+      correctly and attempting to read it may throw an error.
+    code_samples:
+    type: GearGenreSetting
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated and is no longer functional. It should not be
+      used.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.Genre
+    summary: |
+      Not functional. Historically described the `Enum.Genre` of the place as
+      set on the Roblox website.
+    description: |
+      This property is broken and should not be used.
+
+      This property historically described the `Enum.Genre` of the place as set
+      on the Roblox website.
+
+      This property, along with `Class.DataModel.GearGenreSetting`, no longer
+      functions correctly due to genres existing on the Roblox website that are
+      not reflected in the `Enum.Genre` enum. As a result, attempting to read
+      this property may throw an error.
+    code_samples:
+    type: Genre
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: |
+      This property is deprecated and is no longer functional. It should not be
+      used.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.JobId
+    summary: |
+      A unique identifier for the running game server instance.
+    description: |
+      This property is a unique identifier for the running game server instance.
+
+      The JobId is a [universally unique identifier (UUID)][1] meaning that no
+      two servers, past or present, will ever have the same JobId.
+
+      JobId defaults to an empty string in Roblox Studio.
+
+      See also:
+
+      - `Class.TeleportService:GetPlayerPlaceInstanceAsync()` which can be used
+        to retrieve the JobId of a `Class.Player|Player's` current server
+      - `Class.TeleportService:TeleportToPlaceInstance()` which can be used to
+        teleport a `Class.Player` to a specific server
+      - `Class.DataModel.PrivateServerId` describes the ID of the private server
+        the game server instance belongs to
+      - `Class.HttpService:GenerateGUID()`, a function that can be used to
+        generate your own UUIDs
+
+      [1]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: JobInfo
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.PlaceId
+    summary: |
+      Describes the ID of the place running on the server.
+    description: |
+      This property describes the ID of the place running on the server.
+
+      If the place has been published to Roblox, this ID can be found in
+      Studio's [Asset Manager](../../../projects/assets/manager.md) by
+      right-clicking the place inside of the **Places** folder and selecting
+      **Copy ID to Clipboard**.
+
+      If the place has not been published to Roblox, this ID will correspond
+      with the template being used.
+
+      #### See Also
+
+      - `Class.DataModel.GameId`, which describes the ID of the experience that
+        the current place belongs to
+      - `Class.DataModel.JobId`, which is a unique identifier for the server
+        game instance running
+      - `Class.TeleportService`, which is a service that can be used to
+        transport `Class.Player|Players` between places
+    code_samples:
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.PlaceVersion
+    summary: |
+      Describes the version of the place the server is running on.
+    description: |
+      This property describes the version of the place the server is running on.
+
+      This version number corresponds with the version number shown under the
+      **Version History** section of the place's settings. It is not the current
+      version of the Roblox client. This property is 0 for all unpublished
+      experiences.
+
+      When a server instance is created for a place, it uses the place's current
+      version. If the place is later updated while this server is running, the
+      server will remain at its current version.
+
+      This property can be used to display a `Class.ScreenGui` showing the
+      current version of the game to `Class.Player|Players` to assist with
+      debugging.
+    code_samples:
+      - server-version-number-gui
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.PrivateServerId
+    summary: |
+      Describes the private server ID of the server, if the server is a private
+      server or a `Class.TeleportService:ReserveServer()|reserved server`.
+    description: |
+      This property describes the private server ID of the server, if the server
+      is a private server.
+
+      If the server is not a private server, then this property will be an empty
+      string.
+
+      #### Private servers
+
+      Private servers refer to the following:
+
+      - [Private servers](../../../production/monetization/private-servers.md)
+        that users can purchase from the games page
+      - Reserved servers, private servers created by the developer using
+        `Class.TeleportService:ReserveServer()`
+
+      #### PrivateServerId vs JobId
+
+      The PrivateServerId of a server is different from the
+      `Class.DataModel.JobId`. The `Class.DataModel.JobId|JobId` is the unique
+      identifier of the current server instance.
+
+      Private servers (private or reserved servers) can have multiple server
+      instances associated with them over time. This is because, although only
+      one server instance can be running at once for a private server, new
+      server instances can open and close as players join and leave the game.
+      For example, no server instance is running when nobody is playing in the
+      server. The PrivateServerId will be consistent across all of these server
+      instances, and the `Class.DataModel.JobId` will be unique for each one.
+
+      See also:
+
+      - `Class.DataModel.PrivateServerOwnerId`, a property describing the owner
+        of a private server
+      - `Class.TeleportService:ReserveServer()`, a function which creates a
+        reserved server
+    code_samples:
+      - detecting-private-servers
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataModel.PrivateServerOwnerId
+    summary: |
+      Describes the `Class.Player.UserId|UserId` of the `Class.Player` that owns
+      the private server if the server is private.
+    description: |
+      This property describes the `Class.Player.UserId|UserId` of the
+      `Class.Player` that owns the
+      [private server](../../../production/monetization/private-servers.md) if
+      the server is private.
+
+      If the server is a standard or reserved server then this property will be
+      set to _0_.
+
+      This property could be used to identify if a `Class.Player` is the owner
+      of the private server, for example:
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      -- is this a private server?
+      if game.PrivateServerId ~= "" and game.PrivateServerOwnerId ~= 0 then
+
+          -- listen for new players being added
+          Players.PlayerAdded:Connect(function(player)
+
+              -- check if the player is the server owner
+              if player.UserId == game.PrivateServerOwnerId then
+                  print("The private server owner has joined the game")
+              end
+          end)
+      end
+      ```
+
+      See also:
+
+      - `Class.DataModel.PrivateServerId`, a property describing the unique ID
+        of private and `Class.TeleportService:ReserveServer()|reserved servers`
+    code_samples:
+      - detecting-private-servers
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataModel.VIPServerId
+    summary: |
+      A string that could identify the current server as a private server.
+    description: |
+      This property was string that could identify the current server as a
+      private server.
+    code_samples:
+    type: string
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated. Use `Class.DataModel.PrivateServerId`
+      instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataModel.VIPServerOwnerId
+    summary: |
+      The `Class.Player.UserId|UserId` of the account who owns the private
+      server.
+    description: |
+      This property indicates the `Class.Player.UserId|UserId` of the account
+      who owns the private server.
+    code_samples:
+    type: int64
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated. Use
+      `Class.DataModel.PrivateServerOwnerId` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: DataModel.Workspace
+    summary: |
+      A reference to the `Class.Workspace` service.
+    description: |
+      The Workspace property is a reference to the `Class.Workspace` service.
+
+      This property will always point to the `Class.Workspace` and will never be
+      _nil_.
+
+      The `Class.Workspace` can also be accessed using the global variable
+      `workspace` and the `Class.ServiceProvider:GetService()` function. For
+      example:
+
+      ```lua
+      workspace -- a global variable
+      game.Workspace -- a property of the DataModel (game)
+      game:GetService("Workspace") -- workspace is a service
+      ```
+    code_samples:
+    type: Workspace
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.lighting
+    summary: |
+      Refers to the game's `Class.Lighting` service.
+    description: |
+      This property was once used to get the game's `Class.Lighting` service.
+    code_samples:
+    type: Instance
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by
+      `Class.ServiceProvider:GetService()|game:GetService("Lighting")`, which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: DataModel.workspace
+    summary: ''
+    description: ''
+    code_samples:
+    type: Workspace
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.DataModel.Workspace` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: DataModel:BindToClose
+    summary: |
+      Binds a function to be called before the game shuts down.
+    description: |
+      This function binds a function to be called prior to the game shutting
+      down.
+
+      Multiple functions can be bound using BindToClose if it is called
+      repeatedly. The game will wait a maximum of 30 seconds for all bound
+      functions to complete running before shutting down. After 30 seconds, the
+      game will shut down regardless if all bound functions have completed or
+      not.
+
+      Bound functions will be called in parallel, meaning they will run at the
+      same time.
+
+      You are advised to use `Class.RunService:IsStudio()` to verify the current
+      session is not Roblox Studio. If this is not done, all bound functions
+      will be required to complete in offline testing sessions.
+
+      When using the `Class.DataStoreService`, best practice is to bind a
+      function saving all unsaved data to `Class.GlobalDataStore|DataStores`
+      using BindToClose. Otherwise, data may be lost if the game shuts down
+      unexpectedly. For an example of this, refer to the code samples.
+
+      See also:
+
+      - `Class.PluginGui:BindToClose()`, which is used to bind a function to a
+        `Class.PluginGui` close button and should not be confused with this
+        function
+    code_samples:
+      - saving-player-data-before-shutting-down
+      - DataModel-BindToClose1
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          A function to be called prior to the game shutting down.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel:GetJobsInfo
+    summary: |
+      Returns a table containing basic information about the jobs performed by
+      the task scheduler.
+    description: |
+      Returns a table containing basic information about the jobs performed by
+      the task scheduler.
+
+      In computing, a task scheduler is a system responsible for executing key
+      tasks at the appropriate intervals.
+
+      You can also find live task scheduler statistics in the Task Scheduler
+      window in Roblox Studio.
+
+      The first entry in the table returned is a reference dictionary containing
+      the statistics (or headings) available. It is in the following format:
+
+      ```lua
+      {
+          ["name"] = "name",
+          ["averageDutyCycle"] = "averageDutyCycle",
+          ["averageStepsPerSecond"] = "averageStepsPerSecond",
+          ["averageStepTime"] = "averageStepTime",
+          ["averageError"] = "averageError",
+          ["isRunning"] = "isRunning",
+      }
+      ```
+
+      The subsequent entries in the table returned are dictionaries containing
+      the above statistics for jobs performed by the task scheduler. For
+      example:
+
+      ```lua
+      {
+          ["name"] = "Heartbeat",
+          ["averageDutyCycle"] = 0,
+          ["averageStepsPerSecond"] = 0,
+          ["averageStepTime"] = 0,
+          ["averageError"] = 0,
+          ["isRunning"] = false,
+      }
+      ```
+
+      See also:
+
+      - `Class.TaskScheduler`
+    code_samples:
+      - DataModel-GetJobsInfo1
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          A table containing information about the jobs performed by the task
+          scheduler, see above for the format.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: DataModel:GetMessage
+    summary: |
+      **_[OBSOLETE]:_** This function will always return a blank string.
+    description: |
+      This function will always return a blank string. It was originally used to
+      set the message displayed on screen while the game was loading.
+
+      This system was phased out a very long time ago, and recently the APIs for
+      setting this message were removed.
+    code_samples:
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated since the system was phased out a very long time
+      ago, and recently the APIs for setting this message were removed.
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel:GetObjects
+    summary: |
+      Returns an array of `Class.Instance|Instances` associated with the given
+      content URL.
+    description: |
+      This method returns an array of `Class.Instance|Instances` associated with
+      the given content URL. It can be used to insert content from the Roblox
+      library. It's not possible to insert `Class.Sound|Sounds` using this
+      method as they do not have an `Class.Instance` associated with them and
+      have only a content URL.
+
+      Unlike `Class.InsertService:LoadAsset()`, `DataModel:GetObjects()` does
+      not require an asset to be "trusted," meaning that an asset doesn't need
+      to be owned by the logged in user, or created by Roblox, to be inserted.
+      However, if the asset is not owned by the logged in user it must be freely
+      available.
+
+      Due to this function's security context it can only be used by plugins or
+      the command bar. For an alternative that can be used in
+      `Class.Script|Scripts` and `Class.LocalScript|LocalScripts`, see
+      `Class.InsertService:LoadAsset()`.
+    code_samples:
+      - view-a-plugin-s-source-code
+      - batch-convert-decal-web-urls-to-image-content-ids
+    parameters:
+      - name: url
+        type: Content
+        default:
+        summary: |
+          The given content URL.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.Instance|Instances` associated with the content
+          URL.
+    tags: []
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: DataModel:GetRemoteBuildMode
+    summary: |
+      This method is no longer useful and will always return false.
+    description: |
+      This method is no longer useful and will always return false. Use
+      `Class.RunService:IsServer()` to see if your code is running on the
+      server.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Use `Class.RunService:IsServer()` to see if your
+      code is running on the server.
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel:IsGearTypeAllowed
+    summary: |
+      Returns whether gear of the given `Enum.GearType` is permitted to be added
+      to `Class.Player|Players'` `Class.StarterGear|StarterGears`.
+    description: |
+      Currently this function only returns the correct value on the client
+
+      This function returns whether gear of the given `Enum.GearType` is
+      permitted to be added to `Class.Player|Players'`
+      `Class.StarterGear|StarterGears`. For example:
+
+      ```lua
+      local meleeWeaponsAllowed = game:IsGearTypeAllowed(Enum.GearType.MeleeWeapons)
+      ```
+
+      Whether gear of a specific `Enum.GearType` is permitted in the game is
+      determined in a place's settings page under 'Permissions'. Note, all of a
+      gear's associated `Enum.GearType|GearTypes` must be enabled for it to be
+      permitted in a place.
+    code_samples:
+    parameters:
+      - name: gearType
+        type: GearType
+        default:
+        summary: |
+          The given `Enum.GearType`.
+    returns:
+      - type: bool
+        summary: |
+          Whether gear of the given `Enum.GearType` is permitted in the game.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated and is no longer functional. It should not be
+      used.
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel:IsLoaded
+    summary: |
+      Returns true if the client has finished loading the game for the first
+      time.
+    description: |
+      This function returns true if the client has finished loading the game for
+      the first time.
+
+      When all initial `Class.Instance|Instances` in the game have finished
+      replicating to the client, this function will return true.
+
+      Unless they are parented to `Class.ReplicatedFirst`,
+      `Class.LocalScript|LocalScripts` will not run while the game has not
+      loaded. The following snippet, ran from a `Class.LocalScript` in
+      `Class.ReplicatedFirst` will yield until the game has loaded:
+
+      ```lua
+      if not game:IsLoaded() then
+          game.Loaded:Wait()
+      end
+      ```
+
+      See also:
+
+      - `Class.DataModel.Loaded`, an event that fires when the game has loaded
+      - `Class.Instance:WaitForChild()`, a function which can be used to wait
+        for an individual `Class.Instance` to replicate without having to wait
+        for the whole game to
+    code_samples:
+      - Custom-Loading-Screen
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether the client has finished loading the game for the first time.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel:SetPlaceId
+    summary: |
+      Sets the `Class.DataModel.PlaceId` of the current game instance to the
+      given _placeId_.
+    description: |
+      This function sets the `Class.DataModel.PlaceId` of the game instance to
+      the given _placeId_.
+
+      Setting the `Class.DataModel.PlaceId` is required to access the
+      `Class.DataStoreService` when the place is unpublished (for example a
+      local .rbxl file). See below for an example. This will only work when the
+      _'Enable Studio Access to API Services`_ option is enabled under game
+      settings.
+
+      ```lua
+      local DataStoreService = game:GetService("DataStoreService")
+
+      -- access DataStore 'Data' as place placeId
+      game:SetPlaceId(placeId)
+      local dataStore = DataStoreService:GetDataStore("Data")
+      ```
+
+      You can use `Class.DataModel:SetUniverseId()` to set the
+      `Class.DataModel.GameId` of the game instance. However, it is the
+      `Class.DataModel.PlaceId` that must be set to access the
+      `Class.DataStoreService`.
+    code_samples:
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: |
+          The ID to set the `Class.DataModel.PlaceId` to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: DataModel:SetUniverseId
+    summary: |
+      Sets the `Class.DataModel.GameId` of the current game instance to the
+      given _universeId_.
+    description: |
+      This function sets the `Class.DataModel.GameId` of the current game
+      instance to the given _universeId_. This is useful when testing local
+      .rbxl files that have not been published to Roblox.
+
+      If you want to access the `Class.DataStoreService` in an unpublished
+      place, you should use `Class.DataModel:SetPlaceId()` instead.
+    code_samples:
+    parameters:
+      - name: universeId
+        type: int64
+        default:
+        summary: |
+          The ID to set the `Class.DataModel.GameId` to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: DataModel:SavePlace
+    summary: |
+      Saves the current place.
+    description: |
+      This function was used by an ancient data persistence method to save the
+      current place.
+
+      Note:
+
+      - In order for this method to work the save place API has to be enabled
+        for the current place.
+    code_samples: []
+    parameters:
+      - name: saveFilter
+        type: SaveFilter
+        default: SaveAll
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: DataModel.AllowedGearTypeChanged
+    summary: |
+      Fires when SetGearSettings is called with a different value for
+      _allowedGenres_.
+    description: |
+      This event fires when SetGearSettings is called with a different value for
+      _allowedGenres_.
+    code_samples:
+    parameters: []
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated . Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel.GraphicsQualityChangeRequest
+    summary: |
+      Fires when the user prompts and increase or decrease in graphics quality
+      using the hotkeys.
+    description: |
+      Fires when the user prompts an increase or decrease in graphics quality
+      using the hotkeys.
+
+      This event fires under the following conditions:
+
+      - If the user presses F10, this event fires with a _betterQuality_
+        argument of _true_
+      - If the user presses Shift + F10, this event fires with a _betterQuality_
+        argument of _false_
+
+      GraphicsQualityChangeRequest does not provide the current graphics quality
+      level or cover all updates to the graphics quality. For example, changes
+      made in the core GUI escape menu are not registered. This event is
+      intended to be used by Roblox `Class.CoreScript|Core Scripts` to update
+      the graphics quality and display notifications.
+
+      You can retrieve a user's `Enum.SavedQualitySetting` using
+      `Class.UserGameSettings` with the following snippet:
+
+      ```
+      UserSettings():GetService("UserGameSettings").SavedQualityLevel
+      ```
+
+      If the user's graphics settings are set to automatic then the
+      `Enum.SavedQualitySetting` will be _'Automatic'_. There is currently no
+      way for developers to reliably get the current graphics quality level of a
+      user's machine.
+    code_samples:
+      - DataModel-GraphicsQualityChangeRequest1
+    parameters:
+      - name: betterQuality
+        type: bool
+        default:
+        summary: |
+          Whether the user has prompted an increase (_true_) or a decrease
+          (_false_) in graphics quality.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel.ItemChanged
+    summary: |
+      Fires when a property of any object in the `Class.DataModel` is changed.
+    description: |
+      This event fires when a property of any object in the `Class.DataModel` is
+      changed.
+    code_samples:
+      - DataModel-ItemChanged1
+    parameters:
+      - name: object
+        type: Instance
+        default:
+        summary: ''
+      - name: descriptor
+        type: string
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been superseded by `Class.Instance.Changed`, which
+      should be used in new work instead.
+    security: None
+    thread_safety: Unsafe
+  - name: DataModel.Loaded
+    summary: |
+      Fires on the client when the game finishes loading for the first time.
+    description: |
+      This event fires on the client when the game finishes loading for the
+      first time.
+
+      The Loaded event fires when all initial `Class.Instance|Instances` in the
+      game have finished replicating to the client.
+
+      Unless they are parented to `Class.ReplicatedFirst`,
+      `Class.LocalScript|LocalScripts` will not run prior to this event firing.
+      The following snippet, ran from a `Class.LocalScript` in
+      `Class.ReplicatedFirst`, will yield until the game has loaded:
+
+      ```
+      if not game:IsLoaded() then
+          game.Loaded:Wait()
+      end
+      ```
+
+      See also:
+
+      - `Class.DataModel:IsLoaded()`, a function that returns if the game is
+        loaded or not
+      - `Class.Instance:WaitForChild()`, a function which can be used to wait
+        for an individual `Class.Instance` to replicate without having to wait
+        for the whole game to load.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: DataModel.OnClose
+    summary: |
+      Invoked before the game is shut down. When this callback returns, or the
+      timeout period is hit, the game finishes shutting down.
+    description: |
+      Invoked before the game is shut down. When this callback returns, or the
+      timeout period is hit, the game finishes shutting down.
+    code_samples:
+      - DataModel-OnClose1
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is deprecated. It is recommended to use
+      `Class.DataModel:BindToClose()` instead.
+    security: None
+    thread_safety: Unsafe

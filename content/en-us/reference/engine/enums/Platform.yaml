@@ -1,0 +1,136 @@
+name: Platform
+type: enum
+summary: |
+  Host operating system of the client.
+description: |
+  The Platform Enum is used to determine the operating system of the client.
+  Currently this can only be used in `Class.CoreScript`s.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Windows
+    summary: |
+      The client is running on a Windows Operating System.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: OSX
+    summary: |
+      The client is running on OSX (Apple desktop).
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: IOS
+    summary: |
+      The client is running on IOS (Apple mobile).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Android
+    summary: |
+      The client is running on Android (Google mobile).
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: XBoxOne
+    summary: |
+      The client is running on an XBox One (console).
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: PS4
+    summary: |
+      The client is running on a PS4 (console).
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: PS3
+    summary: |
+      The client is running on a PS3 (console).
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: XBox360
+    summary: |
+      The client is running on an XBox 360 (console).
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: WiiU
+    summary: |
+      The client is running on a Wii U (console).
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: NX
+    summary: |
+      The client is running on an NX Operating System (Cisco Nexus).
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Ouya
+    summary: |
+      The client is running on an Ouya Operating System (Android-Based).
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: AndroidTV
+    summary: |
+      The client is running on an Android TV.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: Chromecast
+    summary: |
+      The client is running on Chromecast.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Linux
+    summary: |
+      The client is running on a Linux Operating System (desktop).
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: SteamOS
+    summary: |
+      The client is running on Steam.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: WebOS
+    summary: |
+      The client is running on WebOS.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: DOS
+    summary: |
+      The client is running on DOS.
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: BeOS
+    summary: |
+      The client is running on BeOS.
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: UWP
+    summary: |
+      The client is running on UWP.
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: PS5
+    summary: ''
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: None
+    summary: |
+      The client's operating system is unknown.
+    value: 20
+    tags: []
+    deprecation_message: ''

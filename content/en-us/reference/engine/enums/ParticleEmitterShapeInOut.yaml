@@ -1,0 +1,23 @@
+name: ParticleEmitterShapeInOut
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Outward
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Inward
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: InAndOut
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

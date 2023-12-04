@@ -1,0 +1,74 @@
+name: RotationOrder
+type: enum
+summary: |
+  The order of rotation axes used for Euler angles encoding of rotations.
+description: |
+  Euler angles encode a rotation in 3D space via a sequence of three rotations
+  along the X, Y, and Z axes. The `RotationOrder` enum specifies the order in
+  which the engine performs these rotations.
+
+  To help visualize the many rotation orders, you can test them manually in
+  Studio with the [Rotate](../../../parts#rotating-parts) tool or by inserting
+  `Library.task.wait()` statements between individual rotations of a cube with a unique
+  face:
+
+  ```lua
+  local cube = workspace.Cube
+  local rx, ry, rz = math.rad(90), math.rad(90), math.rad(90)
+
+  task.wait(5)
+  cube.CFrame *= CFrame.fromEulerAngles(rx, 0, 0)  -- X
+  task.wait(5)
+  cube.CFrame *= CFrame.fromEulerAngles(0, ry, 0)  -- Y
+  task.wait(5)
+  cube.CFrame *= CFrame.fromEulerAngles(0, 0, rz)  -- Z
+  ```
+
+  An equivalent operation is:
+
+  ```lua
+  local cube = workspace.Cube
+  local rx, ry, rz = math.rad(90), math.rad(90), math.rad(90)
+
+  cube.CFrame = CFrame.fromEulerAngles(rx, ry, rz, Enum.RotationOrder.XYZ)
+  ```
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: XYZ
+    summary: |
+      X, Y, Z order.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: XZY
+    summary: |
+      X, Z, Y order.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: YZX
+    summary: |
+      Y, Z, X order.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: YXZ
+    summary: |
+      Y, X, Z order.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: ZXY
+    summary: |
+      Z, X, Y order.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ZYX
+    summary: |
+      Z, Y, X order.
+    value: 5
+    tags: []
+    deprecation_message: ''

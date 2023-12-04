@@ -1,0 +1,99 @@
+name: ClimbController
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - ControllerBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: ClimbController.AccelerationTime
+    summary: |
+      The amount of time taken to reach the desired climb velocity from 0.
+    description: |
+      The amount of time taken to reach the desired climb velocity from 0. May
+      be inaccurate depending on max force and gravity.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ClimbController.BalanceMaxTorque
+    summary: |
+      The maximum torque used to keep the `Class.ControllerManager.RootPart`
+      aligned upright and aligned to the climbed surface.
+    description: |
+      The maximum torque used to keep the `Class.ControllerManager.RootPart`
+      aligned upright and aligned to the
+      `Class.ControllerManager.ClimbSensor.HitNormal`. When misaligned, this
+      amount of torque is applied to reach the
+      `Class.ClimbController.BalanceSpeed|BalanceSpeed` and realign the root
+      part. A higher torque means more force is required to cause the root part
+      to tilt. This property is hidden and has no effect when
+      `Class.ControllerBase.BalanceRigidityEnabled` is true.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ClimbController.BalanceSpeed
+    summary: |
+      The maximum angular speed used to align the
+      `Class.ControllerManager.RootPart` upright and with the climbed surface.
+    description: |
+      The maximum angular speed used to align the
+      `Class.ControllerManager.RootPart` upright and aligned to the
+      `Class.ControllerManager.ClimbSensor.HitNormal`. A lower value means it
+      takes longer for the root part to recover to the align position when
+      misaligned. A higher value results in a quicker recovery.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Balance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ClimbController.MoveMaxForce
+    summary: |
+      The maximum force used by the climbing "motor" to move the
+      `Class.ControllerManager.RootPart` or keep it stationary.
+    description: |
+      The maximum force used by the climbing "motor" to move the
+      `Class.ControllerManager.RootPart` or keep it stationary.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Movement
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

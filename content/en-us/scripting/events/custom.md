@@ -11,7 +11,7 @@ Bindable events do not allow for communication between the server and clients. I
 
 ## Custom Events
 
-The `Class.BindableEvent` object enables **custom events** through asynchronous one-way communication between scripts. When you fire a `Class.BindableEvent` through the `Class.BindableEvent:Fire()|Fire()` method, the firing script does **not** yield and the target function receives the passed arguments with certain [limitations](#argument-limitations). Like all events, `Class.BindableEvent|BindableEvents` create threads of each connected function, so even if one firing errors, others continue.
+The `Class.BindableEvent` object enables **custom events** through asynchronous one-way communication between scripts. When you fire a `Class.BindableEvent` through the `Class.BindableEvent:Fire()|Fire()` method, the firing script does **not** yield and the target function receives the passed arguments with certain [limitations](#argument-limitations). Like all events, `Class.BindableEvent|BindableEvents` create threads of each connected function, so even if one errors, others continue.
 
 To create a new `Class.BindableEvent` using the [Explorer](../../studio/explorer.md) window in Studio:
 
@@ -103,7 +103,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local bindableEvent = ServerScriptService:FindFirstChildOfClass("BindableEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(typeof(k))  --> string
 	end
 end
@@ -137,7 +137,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local bindableEvent = ServerScriptService:FindFirstChildOfClass("BindableEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(k .. " = " .. v)
 		--> 1 = Sword
 		--> 2 = Bow

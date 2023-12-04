@@ -1,0 +1,95 @@
+name: CustomEvent
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Deprecated
+deprecation_message: |
+  `Class.CustomEvent|CustomEvents` have been superseded by
+  `Class.BindableEvent|BindableEvents` and should not be used in new work.
+properties: []
+methods:
+  - name: CustomEvent:GetAttachedReceivers
+    summary: |
+      Returns the `Class.CustomEventReceiver|CustomEventReceivers` that are
+      connected to the `Class.CustomEvent`.
+    description: |
+      This function returns the `Class.CustomEventReceiver|CustomEventReceivers`
+      that are connected to the `Class.CustomEvent`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: |
+      CustomEvents have been superseded by `Class.BindableEvent`s and should not
+      be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: CustomEvent:SetValue
+    summary: |
+      Sets the value of the `Class.CustomEvent` and fires the
+      `Class.CustomEventReceiver.SourceValueChanged` event for all connected
+      `CustomEventReceiver|receivers`.
+    description: |
+      This function sets the value of the `Class.CustomEvent` and fires the
+      `Class.CustomEventReceiver.SourceValueChanged` event for all connected
+      `CustomEventReceiver|receivers`.
+    code_samples:
+    parameters:
+      - name: newValue
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: CustomEvent.ReceiverConnected
+    summary: |
+      Fires when a receiver is connected to the `Class.CustomEvent`.
+    description: |
+      This event fires when a receiver is connected to the `Class.CustomEvent`
+    code_samples:
+    parameters:
+      - name: receiver
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: CustomEvent.ReceiverDisconnected
+    summary: |
+      Fires when a receiver is disconnected from the `Class.CustomEvent`.
+    description: |
+      This event fires when a receiver is disconnected from the
+      `Class.CustomEvent`.
+    code_samples:
+    parameters:
+      - name: receiver
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

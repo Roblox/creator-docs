@@ -1,0 +1,212 @@
+name: TextChannel
+type: class
+category:
+memory_category: Instances
+summary: |
+  Represents a text chat channel.
+description: |
+  Represents a text chat channel.
+
+  Contains `Class.TextSource`s as descendants.
+
+  To send a chat message to the `Class.TextChannel`, call
+  `Class.TextChannel:SendAsync()` from a `Class.LocalScript`. The corresponding
+  `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
+  that channel.
+
+  To learn more about using TextChannels, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: TextChannel:DisplaySystemMessage
+    summary: |
+      Displays a system message to the user.
+    description: |
+      Displays a system message to user. Can only be used in a
+      `Class.LocalScript`. Messages are only visible to that user and aren't
+      automatically filtered or localized.
+    code_samples: []
+    parameters:
+      - name: systemMessage
+        type: string
+        default:
+        summary: |
+          The system message sent to the `Class.TextChannel`.
+      - name: metadata
+        type: string
+        default: ''
+        summary: |
+          Use to identify system message types, such as the default system
+          messages.
+    returns:
+      - type: TextChatMessage
+        summary: |
+          A `Class.TextChatMessage` with `Class.TextChatMessage.Status` property
+          that indicates the condition of the message.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChannel:AddUserAsync
+    summary: |
+      Adds a `Class.TextSource` to the `Class.TextChannel` given userId of a
+      `Class.Player`.
+    description: |
+      Adds a `Class.TextSource` to the `Class.TextChannel` given userId of the
+      user (with `Class.Player.UserId`). Can only be used in a `Class.Script`.
+
+      If a `Class.TextSource` representing the user does not exist, this adds a
+      `Class.TextSource`.
+
+      If a `Class.TextSource` representing the user does exist, this returns the
+      `Class.TextSource`.
+
+      If the user has chat off or isn't in the server, this returns a tuple
+      `nil`, `false`.
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The userId of the `Class.Player`.
+    returns:
+      - type: Tuple
+        summary: |
+          Returns `Class.TextSource` and `true` if a new `Class.TextSource` is
+          created for the user, `Class.TextSource` and `false` if there is an
+          existing `Class.TextSource`, or `nil` and `false` if the user has chat
+          off or is not in this server.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChannel:SendAsync
+    summary: |
+      Sends a `Class.TextChatMessage` to the server.
+    description: |
+      Sends a `Class.TextChatMessage` to the server. Can only be used in a
+      `Class.LocalScript`.
+    code_samples: []
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message to send to the `Class.TextChannel`.
+      - name: metadata
+        type: string
+        default: ''
+        summary: |
+          Custom metadata to attach to the message.
+    returns:
+      - type: TextChatMessage
+        summary: |
+          A `Class.TextChatMessage` with `Class.TextChatMessage.Status` property
+          that indicates the condition of the message.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: TextChannel.MessageReceived
+    summary: |
+      Fires when the server receives a `Class.TextChannel:SendAsync()` response
+      or invokes `Class.TextChannel:DisplaySystemMessage()`.
+    description: |
+      Only fired on the receiving client when the server receives a
+      `Class.TextChannel:SendAsync()` response or invokes
+      `Class.TextChannel:DisplaySystemMessage()`.
+
+      Use `Class.TextChatMessage` parameter to get the `Class.TextSource` and
+      the text of the message (with `Class.TextChatMessage.Text`).
+
+      The `Class.TextChatMessage` parameter can be mutated by any functions
+      bound to `Class.TextChatMessage.OnIncomingMessage` and
+      `Class.TextChannel.OnIncomingMessage`.
+    code_samples: []
+    parameters:
+      - name: incomingMessage
+        type: TextChatMessage
+        default:
+        summary: |
+          The received `Class.TextChatMessage`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: TextChannel.OnIncomingMessage
+    summary: |
+      Called when `Class.TextChannel` is receiving an incoming message.
+    description: |
+      Called when `Class.TextChannel` is receiving an incoming message. Can only
+      be implemented on the client.
+
+      Use this to decorate `Class.TextChatMessage`s. If this callback returns a
+      `Class.TextChatMessageProperties`, those properties are merged with the
+      `Class.TextChatMessage` parameter to create a new `Class.TextChatMessage`
+      with those properties.
+
+      When bound to the client sending a message, this event can be fired twice,
+      first when the message is initially sent and received by the same client
+      locally, and then when the client receives the result of the filtered
+      message from the server. `Class.TextChannel.OnIncomingMessage` callbacks
+      always run **after** `Class.TextChatService.OnIncomingMessage` callback.
+
+      This should be defined only once per TextChannel in the source code.
+      Multiple bindings to the same TextChannel will override one another in a
+      nondeterministic manner.
+    code_samples: []
+    parameters:
+      - name: message
+        type: TextChatMessage
+        default:
+        summary: |
+          The incoming `Class.TextChatMessage`.
+    returns:
+      - type: Tuple
+        summary: |
+          If a `Class.TextChatMessageProperties` is returned, those properties
+          are merged with the `Class.TextChatMessage` parameter to create a new
+          `Class.TextChatMessage` with those properties.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChannel.ShouldDeliverCallback
+    summary: |
+      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client.
+    description: |
+      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client. Can only be defined on the server.
+
+      Once defined, this callback needs to return a truthy value such as `true`, `1`,
+      or `"hello"` to deliver the message to said client. If the callback returns
+      anything else (including `nil`), the message won't be delivered to that client, although the
+      sender will see the message regardless.
+      
+      The sender can be referenced by `Class.TextChatMessage.TextSource`.
+    code_samples: []
+    parameters:
+      - name: message
+        type: TextChatMessage
+        default:
+        summary: ''
+      - name: textSource
+        type: TextSource
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

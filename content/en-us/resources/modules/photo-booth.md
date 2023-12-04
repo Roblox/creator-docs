@@ -129,7 +129,7 @@ specialLabel.Parent = specialGuiInstance
 PhotoBooth.hideOtherGuis(function()
 	-- Hide all developer-defined screen GUIs except those marked with attribute
 	local instances = playerGui:GetChildren()
-	for _, instance in pairs(instances) do
+	for _, instance in instances do
 		if instance:IsA("ScreenGui") and not instance:GetAttribute("ShowInPhotoBooth") and instance.Enabled then
 			instance.Enabled = false
 			table.insert(hiddenInstances, instance)
@@ -141,7 +141,7 @@ end)
 
 PhotoBooth.showOtherGuis(function()
 	-- Show all developer-defined screen GUIs that were hidden
-	for _, instance in pairs(hiddenInstances) do
+	for _, instance in hiddenInstances do
 		instance.Enabled = true
 	end
 	hiddenInstances = {}

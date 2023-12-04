@@ -1,0 +1,46 @@
+name: Skin
+type: class
+category:
+memory_category: Instances
+summary: |
+  Historically changed the colors of body parts to match the
+  `Class.Skin.SkinColor` property. Superseded by the `Class.BodyColors` class.
+description: |
+  The Skin object, when placed into a humanoid model, will change the colors all
+  body parts of the torso, head, etc, to value of the `Class.Skin.SkinColor`
+  property.
+
+  Superseded by the `Class.BodyColors` class.
+code_samples:
+inherits:
+  - CharacterAppearance
+tags:
+  - Deprecated
+deprecation_message: |
+  This object has been deprecated and superseded by `Class.BodyColors`. The Skin
+  object does not function on R15 characters and should not be used for new
+  work. `Class.BodyColors` functions with R15 characters and allows the colors
+  of each limb to be set individually.
+properties:
+  - name: Skin.SkinColor
+    summary: ''
+    description: ''
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: |
+      This object has been deprecated and superseded by `Class.BodyColors`. The
+      Skin object does not function on R15 characters and should not be used for
+      new work. `Class.BodyColors` functions with R15 characters and allows the
+      colors of each limb to be set individually.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

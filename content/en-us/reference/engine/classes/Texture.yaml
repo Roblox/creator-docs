@@ -1,0 +1,213 @@
+name: Texture
+type: class
+category: Building
+memory_category: GraphicsTexture
+summary: |
+  A Texture object applies a repeating texture to the face of a
+  `Class.BasePart`.
+description: |
+  A Texture object applies a repeating texture to the face of a
+  `Class.BasePart`.
+
+  ## How does a Texture work?
+
+  A Texture will apply an image to the `Class.BasePart` it is parented to. The
+  surface this image is applied to is dependent on the `Class.FaceInstance.Face`
+  property. When the `Class.BasePart` is resized, the image will repeat. The
+  size of the repeating textures is determined by the
+  `Class.Texture.StudsPerTileU` and `StudsPerTileV` properties.
+
+  ```
+  local texture = Instance.new("Texture")
+  texture.Texture = "http://www.roblox.com/asset/?id=732339893" -- roblox logo
+  -- 1x1 studs repeating texture
+  texture.StudsPerTileU = 1
+  texture.StudsPerTileV = 1
+  ```
+
+  The image a Texture applies is determined by its `Class.Decal.Texture`
+  property. Images can be uploaded to Roblox provided they adhere to the
+  community guidelines. For information on how to upload images, see
+  [Textures and Decals](../../../parts/textures-decals.md).
+
+  ## What is the difference between Textures and Decals?
+
+  The texture object is very similar to the `Class.Decal` object. However,
+  whereas the image applied by a `Class.Decal` scales when the `Class.BasePart`
+  is resized, the image applied by a Texture repeats.
+
+  Repeating textures have a wide range of applications such as floor tiles and
+  wall textures.
+
+  ## Alternatives to Textures
+
+  Although Decals have a wide variety of applications, in some cases developers
+  may wish to pick one of the following classes instead.
+
+  - For non repeating images `Class.Decal` object should be used
+  - To apply GUI elements, the `Class.SurfaceGui` object should be used
+  - If the effect of lighting on the image needs to be altered, the
+    `Class.SurfaceGui` object should be used
+code_samples:
+inherits:
+  - Decal
+tags: []
+deprecation_message: ''
+properties:
+  - name: Texture.OffsetStudsU
+    summary: |
+      Determines the offset in studs of the rendered texture's horizontal
+      coordinate.
+    description: |
+      **OffsetStudsU** determines how far the rendered texture is offset on the
+      horizontal axis in studs.
+
+      #### Example
+
+      <img src="/assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
+      <img src="/assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
+
+      In the screenshots above, a Part with a Texture is visible. On the left,
+      OffsetStudsU/OffsetStudsV are both 0, so the rendered texture tiling
+      aligns with the top-left corner of the part. On the right, both properties
+      are set to 1 which causes the tiling to start in the center of the
+      texture.
+
+      See also:
+
+      - `Class.Texture.OffsetStudsV|OffsetStudsV`
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Texture.OffsetStudsV
+    summary: |
+      Determines the offset in studs of the rendered texture's vertical
+      coordinate.
+    description: |
+      **OffsetStudsV** determines how far the rendered texture is offset on the
+      horizontal axis in studs.
+
+      #### Example
+
+      <img src="/assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
+      <img src="/assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
+
+      In the screenshots above, a Part with a Texture is visible. On the left,
+      OffsetStudsU/OffsetStudsV are both 0, so the rendered texture tiling
+      aligns with the top-left corner of the part. On the right, both properties
+      are set to 1 which causes the tiling to start in the center of the
+      texture.
+
+      See also:
+
+      - `Class.Texture.OffsetStudsU|OffsetStudsU`
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Texture.StudsPerTileU
+    summary: |
+      Sets the horizontal size, in studs, of the tiled image applied by the
+      `Class.Texture`.
+    description: |
+      Sets the horizontal size, in studs, of the tiled image applied by the
+      `Class.Texture`.
+
+      Larger values for this property will lead to the `Class.Texture` appearing
+      larger, and repeating less frequently. Unlike with `Class.Decal`s, the
+      size of the repeated image is unaffected by the dimensions of the
+      `Class.BasePart`. Instead, resizing the `Class.BasePart` only increases
+      the number of times the texture repeats.
+
+      See the code snippet below for an example of how this property can be
+      used.
+
+      ```
+      local texture = Instance.new("Texture")
+      texture.Texture = "http://www.roblox.com/asset/?id=732339893" -- roblox logo
+      -- 1x1 studs repeating texture
+      texture.StudsPerTileU = 1
+      texture.StudsPerTileV = 1
+      ```
+
+      Note:
+
+      - This property can be set to very low values, but not zero
+      - The horizontal / vertical distinction is relative to the
+        `Class.BasePart`s axis. Therefore, the `Class.Texture` will rotate along
+        with the `Class.BasePart`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Texture.StudsPerTileV
+    summary: |
+      Sets the vertical size, in studs, of the tiled image applied by the
+      `Class.Texture`.
+    description: |
+      Sets the vertical size, in studs, of the tiled image applied by the
+      `Class.Texture`.
+
+      Larger values for this property will lead to the `Class.Texture` appearing
+      larger, and repeating less frequently. Unlike with `Class.Decal`s, the
+      size of the repeated image is unaffected by the dimensions of the
+      `Class.BasePart`. Instead, resizing the `Class.BasePart` only increases
+      the number of times the texture repeats.
+
+      See the code snippet below for an example of how this property can be
+      used.
+
+      ```
+      local texture = Instance.new("Texture")
+      texture.Texture = "http://www.roblox.com/asset/?id=732339893" -- roblox logo
+      -- 1x1 studs repeating texture
+      texture.StudsPerTileU = 1
+      texture.StudsPerTileV = 1
+      ```
+
+      Note:
+
+      - This property can be set to very low values, but not zero
+      - The horizontal / vertical distinction is relative to the
+        `Class.BasePart`s axis. Therefore, the `Class.Texture` will rotate along
+        with the `Class.BasePart`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

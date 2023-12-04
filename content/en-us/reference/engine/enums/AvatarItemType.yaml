@@ -1,0 +1,22 @@
+name: AvatarItemType
+type: enum
+summary: |
+  The type (Asset or Bundle) of avatar items.
+description: |
+  The type (Asset or Bundle) of avatar items.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Asset
+    summary: |
+      Avatar assets.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Bundle
+    summary: |
+      Avatar bundles.
+    value: 2
+    tags: []
+    deprecation_message: ''

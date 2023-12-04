@@ -1,0 +1,30 @@
+name: Style
+type: enum
+summary: |
+  The Style Enum is used to set what style of supports the `Class.TrussPart`
+  has.
+description: |
+  The Style Enum is used to set what style of supports the `Class.TrussPart`
+  has.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: AlternatingSupports
+    summary: |
+      Truss beams contain alternating supports.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: BridgeStyleSupports
+    summary: |
+      Truss beams contain bridge style supports.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: NoSupports
+    summary: |
+      Truss beams do not contain supports.
+    value: 2
+    tags: []
+    deprecation_message: ''

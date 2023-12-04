@@ -1,0 +1,422 @@
+name: Vector2
+type: datatype
+summary: |
+  Represents a 2D value with direction and magnitude.
+description: |
+  The `Datatype.Vector2` data type represents a 2D value with direction and
+  magnitude. Some applications include GUI elements and 2D mouse positions.
+
+  #### Math Operations
+
+  The following math operations are valid for the `Datatype.Vector2` data type:
+
+  <table>
+    <thead>
+      <tr>
+        <td>Operation</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>+</code>&nbsp;<code>Datatype.Vector2</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component of the second added to the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>-</code>&nbsp;<code>Datatype.Vector2</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component of the second subtracted from the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>*</code>&nbsp;<code>Datatype.Vector2</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component of the second multiplied by the corresponding component of the first.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>/</code>&nbsp;<code>Datatype.Vector2</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component of the first divided by the corresponding component of the second.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>*</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component multiplied by the number.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector2</code>&nbsp;<code>/</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector2</code> with each component divided by the number.</td>
+      </tr>
+    </tbody>
+  </table>
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: Vector2.new
+    summary: Returns a `Datatype.Vector2` from the given x and y components.
+    description: Returns a `Datatype.Vector2` from the given x and y components.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: 'y'
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants:
+  - name: Vector2.zero
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a magnitude of zero.
+    description: |
+      A `Datatype.Vector2` with a magnitude of zero.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.zero)  --> 0, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.one
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on every axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on every axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.one)  --> 1, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.xAxis
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the X axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on the X axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.xAxis)  --> 1, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.yAxis
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the Y axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on the Y axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.yAxis)  --> 0, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+properties:
+  - name: Vector2.zero
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a magnitude of zero.
+    description: |
+      A `Datatype.Vector2` with a magnitude of zero.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.zero)  --> 0, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.one
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on every axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on every axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.one)  --> 1, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.xAxis
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the X axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on the X axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.xAxis)  --> 1, 0
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.yAxis
+    type: Vector2
+    summary: |
+      A `Datatype.Vector2` with a value of 1 on the y axis.
+    description: |
+      A `Datatype.Vector2` with a value of 1 on the Y axis.
+
+      This API member is a **constant**, and must be accessed through the
+      `Datatype.Vector2` global as opposed to an individual `Datatype.Vector2`
+      object.
+
+      ```lua
+      print(Vector2.yAxis)  --> 0, 1
+      ```
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.X
+    type: number
+    summary: |
+      The x-coordinate of the `Datatype.Vector2`.
+    description: |
+      The x-coordinate of the `Datatype.Vector2`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.Y
+    type: number
+    summary: |
+      The y-coordinate of the `Datatype.Vector2`.
+    description: |
+      The y-coordinate of the `Datatype.Vector2`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.Magnitude
+    type: number
+    summary: |
+      The length of the `Datatype.Vector2`.
+    description: |
+      The length of the `Datatype.Vector2`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2.Unit
+    type: Vector2
+    summary: |
+      A normalized copy of the `Datatype.Vector2`.
+    description: |
+      A normalized copy of the `Datatype.Vector2`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: Vector2:Cross
+    summary: |
+      Returns the cross product of the two vectors.
+    description: |
+      Returns the cross product of the two vectors.
+    parameters:
+      - name: other
+        type: Vector2
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Dot
+    summary: |
+      Returns a scalar dot product of the two vectors.
+    description: |
+      Returns a scalar dot product of the two vectors.
+    parameters:
+      - name: v
+        type: Vector2
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Lerp
+    summary: |
+      Returns a `Datatype.Vector2` linearly interpolated between this
+      `Datatype.Vector2` and the given goal by the given alpha.
+    description: |
+      Returns a `Datatype.Vector2` linearly interpolated between this
+      `Datatype.Vector2` and the given goal by the given alpha.
+    parameters:
+      - name: v
+        type: Vector2
+        default:
+        summary: ''
+      - name: alpha
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Max
+    summary: |
+      Returns a `Datatype.Vector2` with each component as the highest among the
+      respective components of the provided `Datatype.Vector2` objects.
+    description: |
+      Returns a `Datatype.Vector2` with each component as the highest among the
+      respective components of the provided `Datatype.Vector2` objects.
+
+      ```lua
+      local a = Vector2.new(1, 2)
+      local b = Vector2.new(2, 1)
+
+      print(a:Max(b)) -- Vector2.new(2, 2)
+      ```
+    parameters:
+      - name: others...
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Min
+    summary: |
+      Returns a `Datatype.Vector2` with each component as the lowest among the
+      respective components of the provided `Datatype.Vector2` objects.
+    description: |
+      Returns a `Datatype.Vector2` with each component as the lowest among the
+      respective components of the provided `Datatype.Vector2` objects.
+
+      ```lua
+      local a = Vector2.new(1, 2)
+      local b = Vector2.new(2, 1)
+
+      print(a:Min(b)) -- Vector2.new(1, 1)
+      ```
+    parameters:
+      - name: others...
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+functions:
+math_operations:
+  - operation: +
+    summary: |
+      Produces a `Datatype.Vector2` with each component of the second added to
+      the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector2` with each component of the second added to
+      the corresponding component of the first.
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '-'
+    summary: |
+      Produces a `Datatype.Vector2` with each component of the second subtracted
+      from the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector2` with each component of the second subtracted
+      from the corresponding component of the first.
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '*'
+    summary: |
+      Produces a `Datatype.Vector2` with each component of the second multiplied
+      by the corresponding component of the first.
+    description: |
+      Produces a `Datatype.Vector2` with each component of the second multiplied
+      by the corresponding component of the first.
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: /
+    summary: |
+      Produces a `Datatype.Vector2` with each component of the first divided by
+      the corresponding component of the second.
+    description: |
+      Produces a `Datatype.Vector2` with each component of the first divided by
+      the corresponding component of the second.
+    type_a: Vector2
+    type_b: Vector2
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: '*'
+    summary: |
+      Produces a `Datatype.Vector2` with each component multiplied by the
+      number.
+    description: |
+      Produces a `Datatype.Vector2` with each component multiplied by the
+      number.
+    type_a: Vector2
+    type_b: number
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: /
+    summary: |
+      Produces a `Datatype.Vector2` with each component divided by the number.
+    description: |
+      Produces a `Datatype.Vector2` with each component divided by the number.
+    type_a: Vector2
+    type_b: number
+    return_type: Vector2
+    code_samples: []
+    tags: []
+    deprecation_message: ''

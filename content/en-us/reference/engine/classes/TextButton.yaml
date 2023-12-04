@@ -1,0 +1,697 @@
+name: TextButton
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  A 2D user interface element that displays interactive text.
+description: |
+  A TextButton behaves similarly to `Class.TextLabel` in regards to rendering
+  with the additional behaviors of a `Class.GuiButton`. It defines the same
+  text-rendering properties as a `Class.TextLabel` does.
+
+  You can disable text rendering by setting `Class.TextButton.TextTransparency`
+  to 1. This will leave you with a plain rectangle that can be used as a button.
+code_samples:
+  - Click-Counter
+inherits:
+  - GuiButton
+tags: []
+deprecation_message: ''
+properties:
+  - name: TextButton.ContentText
+    summary: |
+      A copy of `Class.TextButton.Text` that contains exactly what is being
+      rendered by the `Class.TextButton`.
+    description: |
+      This property provides a copy of `Class.TextButton.Text` that contains
+      exactly what is being rendered by the `Class.TextButton`. This is useful
+      for eliminating style tags used for rich text.
+
+      #### Example
+
+      When `Class.TextButton.RichText` is enabled, the
+      `Class.TextButton.ContentText` property shows the text as it appears to
+      the player.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>RichText</th>
+                  <th>Text</th>
+                  <th>ContentText</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>false</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+              </tr>
+              <tr>
+                  <td>true</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>Hello,<br/> world!</td>
+              </tr>
+          </tbody>
+        </table>
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextButton.Font
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The Font property selects one of several pre-defined fonts with which the
+      UI element will render its text. Some fonts have bold, italic and/or light
+      variants (as there is no font-weight or font-style properties).
+
+      With the exception of the "Legacy" font, each font will render text with
+      the line height equal to the `Class.TextButton.TextSize` property. The
+      "Code" font is the only monospace font. It has the unique property that
+      each character has the exact same width and height ratio of 1:2. The width
+      of each character is approximately half the `Class.TextButton.TextSize`
+      property.
+
+      This property is kept in sync with the `Class.TextButton.FontFace`
+      property. When setting Font, the FontFace is set to
+      `Datatype.Font.fromEnum(value)`.
+    code_samples:
+      - Cycle-Font
+      - Show-All-Fonts
+    type: Font
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextButton.FontFace
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The FontFace property is similar to the Font property, but allows setting
+      fonts that don't exist in the Font enum.
+
+      This property is kept in sync with the `Class.TextButton.Font` property.
+      When setting FontFace, the Font is set to the corresponding enum value, or
+      to `Enum.Font.Unknown` if there are no matches.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.FontSize
+    summary: |
+      Determines the font size to be used.
+    description: |
+      This property determines the font size to be used.
+    code_samples:
+    type: FontSize
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextButton.TextSize` which should
+      be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextButton.LineHeight
+    summary: |
+      Scales the spacing between lines of text in the `Class.TextButton`.
+    description: |
+      Controls the height of lines, as a multiple of the font's em square size,
+      by scaling the spacing between lines of text in the `Class.TextButton`.
+      Valid values range from 1.0 to 3.0, defaulting to 1.0.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.LocalizedText
+    summary: |
+      Sets whether a `Class.TextButton` should be `Class.GuiBase2d.Localize` or
+      not.
+    description: |
+      This property sets whether a `Class.TextButton` should be
+      `Class.GuiBase2d.Localize` or not.
+    code_samples:
+    type: string
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TextButton.MaxVisibleGraphemes
+    summary: |
+      The maximum number of graphemes the `Class.TextButton` can show.
+    description: |
+      This property controls the maximum number of graphemes (or units of text)
+      that are shown on the `Class.TextButton`. It is primarily provided as an
+      easy way to create a "typewriter effect" where the characters appear one
+      at a time.
+
+      Changing the property does not change the position or size of the visible
+      graphemes - the layout will be calculated as if all graphemes are visible.
+
+      Setting the property to -1 disables the limit and shows the entirety of
+      the `Class.TextButton.Text`.
+    code_samples:
+      - MaxVisibleGraphemes-typewriter
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.RichText
+    summary: |
+      Determines whether the TextButton renders the `Class.TextButton.Text`
+      string using rich text formatting.
+    description: |
+      This property determines whether the `Class.TextButton` renders the
+      `Class.TextButton.Text` string using rich text formatting. Rich text uses
+      simple markup tags to style sections of the string in bold, italics,
+      specific colors, and more.
+
+      To use rich text, simply include formatting tags in the
+      `Class.TextButton.Text` string.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.Text
+    summary: |
+      Determines the string rendered by the UI element.
+    description: |
+      The Text property determines the content rendered by the UI element. The
+      visual properties of the string rendered to the screen is determined by
+      `Class.TextButton.TextColor3`, `Class.TextButton.TextTransparency`,
+      `Class.TextButton.TextSize`, `Class.TextButton.Font`,
+      `Class.TextButton.TextScaled`, `Class.TextButton.TextWrapped`,
+      `Class.TextButton.TextXAlignment` and `Class.TextButton.TextYAlignment`.
+
+      It is possible to render emoji (for example, 😃) and other symbols. These
+      special symbols aren't affected by the `Class.TextButton.TextColor3`
+      property. These can be pasted into `Class.Script` and `Class.LocalScript`
+      objects, as well as the field within the Properties window.
+
+      This property may contain newline characters, however, it is not possible
+      to type newline characters within the Properties window. Similarly, this
+      property may contain a tab character, but it will render as a space
+      instead.
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+      - Show-All-Fonts
+      - Long-Text-Wrapping
+      - Emoji-in-Text
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextBounds
+    summary: |
+      The size of a UI element's text in offsets.
+    description: |
+      The read-only property TextBounds reflects the absolute size of rendered
+      text in offsets. In other words, if you were to try to fit text into a
+      rectangle, this property would reflect the minimum dimensions of the
+      rectangle you would need in order to fit the text.
+
+      Using `Class.TextService:GetTextSize()`, you can predict what TextBounds
+      will be on a TextLabel given a string, `Class.TextButton.Font`,
+      `Class.TextButton.TextSize` and frame size.
+    code_samples:
+      - Dynamic-TextBox-Size
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextButton.TextColor
+    summary: |
+      Determines the color of text.
+    description: |
+      This property determines the color of text.
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextButton.TextColor3` which
+      should be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextButton.TextColor3
+    summary: |
+      Determines the color of rendered text.
+    description: |
+      This property determines the color of all the text rendered by a
+      `Class.TextButton|GUI` element. This property along with
+      `Class.TextButton.Font`, `Class.TextButton.TextSize` and
+      `Class.TextButton.TextTransparency` will determine the visual properties
+      of text. Text is rendered after the text stroke
+      (`Class.TextButton.TextStrokeColor3`).
+
+      It's important that text is easily read by players! Be sure to choose
+      colors with little-to-no saturation, like white, grey, or black. Make sure
+      the color of your text is contrasted by the
+      `Class.TextButton.BackgroundColor3` of the UI element. If the element has
+      a transparent background, try applying a black
+      `Class.TextButton.TextStrokeColor3` to help contrast the text with the 3D
+      world behind it.
+    code_samples:
+      - Vowel-Detector
+      - TextBox-Secret-Word
+      - Countdown-Text
+      - Game-State-Text
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextDirection
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TextDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextFits
+    summary: |
+      A boolean representation of whether the TextButton's text fits within the
+      size of it.
+    description: |
+      A boolean representation of whether the TextButton's text fits within the
+      size of it.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextButton.TextScaled
+    summary: |
+      Changes whether text is resized to fit within the TextButton.
+    description: |
+      Rather than using TextScaled, we recommend you consider using
+      `Class.GuiObject.AutomaticSize|AutomaticSize`, a new method to dynamically
+      size UI that will give you the best visual result possible.
+
+      The TextScaled property determines whether text is scaled so that it fills
+      the entire UI element's space. When this is enabled,
+      `Class.TextButton.TextSize` is ignored and `Class.TextButton.TextWrapped`
+      is automatically enabled. This property is useful for text-rendering UI
+      elements within `Class.BillboardGui|BillboardGuis`.
+
+      When this property is used for screen-space UI, it may be desirable to use
+      a `Class.UITextSizeConstraint` to restrict the range of possible text
+      sizes.
+
+      #### TextScaled and AutomaticSize
+
+      It's recommended that developers avoid usage of TextScaled and adjust UI
+      to take advantage of the AutomaticSize property instead. Here are the core
+      differences between the two properties:
+
+      - TextScaled scales the content (text) to accommodate the UI. Without
+        careful consideration, some text may become unreadable if scaled too
+        small.
+      - AutomaticSize resizes the UI to accommodate content.
+
+      With AutomaticSize, you're able to adjust your UI to accommodate the
+      content (text) while maintaining a consistent font size. For more
+      information on how to use automatic sizing, see the UI Automatic Size
+      article.
+
+      We suggest that you don't apply both TextScaled and AutomaticSize on the
+      same UI object. If you apply both properties:
+
+      - AutomaticSize determines the maximum amount of available space that a
+        `Class.GuiObject` can use (in this case, text)
+      - TextScaled uses the available space determined by AutomaticSize, to
+        scale the font size to fit the available space, which will expand up to
+        the maximum font size (100), if there are no size constraints
+      - The end result will be: text goes to 100 font size and the UI object
+        will expand to fit that text
+
+      Using both AutomaticSize and TextScaled at the same time can result in
+      significant scaling differences than when AutomaticSize is off.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextSize
+    summary: |
+      Determine the line height of text in offsets.
+    description: |
+      The TextSize property determines the height in offsets of one line of
+      rendered text. The unit is in offsets, not points (which is used in most
+      document editing programs). The "Legacy" font does not hold this property.
+    code_samples:
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextStrokeColor3
+    summary: |
+      Determines the color of the text stroke (outline).
+    description: |
+      The TextStrokeColor3 property sets the color of the stroke, or outline, of
+      rendered text. This property and `Class.TextButton.TextStrokeTransparency`
+      determine the visual properties of the text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextButton.TextColor3` and `Class.TextButton.TextTransparency`.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextStrokeTransparency
+    summary: |
+      Determines the transparency of the text stroke (outline).
+    description: |
+      The TextStrokeTransparency property sets the transparency of the stroke,
+      or outline, of rendered text. This property and
+      `Class.TextButton.TextStrokeColor3` determine the visual properties of the
+      text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextButton.TextColor3` and `Class.TextButton.TextTransparency`.
+      Since text stroke is simply multiple renderings of the same transparency,
+      this property is essentially multiplicative on itself four times over
+      (e.g. a TextStrokeTransparency of 0.5 appears about the same as
+      TextTransparency of 0.0625, or 0.5^4). Therefore, it's recommended to set
+      TextStrokeTransparency to a value in the range of 0.75 to 1 for more a
+      more subtle effect.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextTransparency
+    summary: |
+      Determines the transparency of rendered text.
+    description: |
+      The TextColor3 property determines the transparency of all the text
+      rendered by a UI element. This property along with
+      `Class.TextButton.Font`, `Class.TextButton.TextSize` and
+      `Class.TextButton.TextColor3` will determine the visual properties of
+      text. Text is rendered after the text stroke
+      (`Class.TextButton.TextStrokeTransparency`).
+
+      Fading text in using a numeric for-loop is a fantastic way to draw a
+      player's attention to text appearing on screen.
+
+      ```
+      -- Count backwards from 1 to 0, decrementing by 0.1
+      for i = 1, 0, -0.1 do
+         textLabel.TextTransparency = i
+         task.wait(0.1)
+      end
+      ```
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextTruncate
+    summary: |
+      Controls the truncation of the text displayed in this TextButton.
+    description: |
+      Controls the truncation of the text displayed in this TextButton.
+    code_samples:
+    type: TextTruncate
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextWrap
+    summary: |
+      Determines whether or not text should wrap at the edges of the object.
+    description: |
+      This property determines whether or not text should wrap at the edges of
+      the object.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextButton.TextWrapped` which
+      should be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextButton.TextWrapped
+    summary: |
+      Determines if text wraps to multiple lines within the
+      `Class.TextButton|GUI` element space, truncating excess text.
+    description: |
+      When enabled, this property will render text on multiple lines within a
+      `Class.TextButton|GUI` element's space so that
+      `Class.TextButton.TextBounds` will never exceed the
+      `Class.GuiBase2d.AbsoluteSize` of the UI element.
+
+      This is achieved by breaking long lines of text into multiple lines. Line
+      breaks will prefer whitespace; should a long unbroken word exceed the
+      width of the element, that word will be broken into multiple lines.
+
+      If further line breaks would cause the vertical height of the text (the Y
+      component of `Class.TextButton.TextBounds`) to exceed the vertical height
+      of the element (the Y component of `Class.GuiBase2d.AbsoluteSize`), then
+      that line will not be rendered at all.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextXAlignment
+    summary: |
+      Determines the horizontal alignment of rendered text.
+    description: |
+      TextXAlignment determines the horizontal alignment (X-axis) of text
+      rendered within a UI element's space. It functions similarly to the CSS
+      text-align property, with left, right and center values (there is no
+      justify option). For Left and Right, text is rendered such that the
+      left/right text bounds just touch the edge of the UI element rectangle.
+      For Center, each line of text is centered on the very center of the UI
+      element rectangle.
+
+      This property is used in conjunction with
+      `Class.TextButton.TextYAlignment` to fully determine text alignment on
+      both axes. This property won't affect the read-only properties
+      `Class.TextButton.TextBounds` and `Class.TextButton.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextXAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.TextYAlignment
+    summary: |
+      Determines the vertical alignment of rendered text.
+    description: |
+      TextYAlignment determines the vertical alignment (Y-axis) of text rendered
+      within a UI element's space. For Top and Bottom, text is rendered such
+      that the top/bottom text bounds just touch the edge of the UI element
+      rectangle. For Center, text is rendered such that there is an equal space
+      from the top bounds of the text to the top of the element and the bottom
+      bounds of the text to the bottom of the element.
+
+      This property is used in conjunction with
+      `Class.TextButton.TextXAlignment` to fully determine text alignment on
+      both axes. This property won't affect the read-only properties
+      `Class.TextButton.TextBounds` and `Class.TextButton.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextYAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,91 @@
+name: IntValue
+type: class
+category: Values
+memory_category: Instances
+summary: |
+  A container object for a single integer.
+description: |
+  An IntValue is an object that stores a single signed 64-bit integer. Integers
+  do not include decimal points. The highest value that can be stored is 2^63-1,
+  or around 9.2 quintillion. Attempting to store numbers larger than this may
+  cause [integer overflow][1]. The lowest value that can be stored is -2^63, or
+  about negative 9.2 quintillion. For values outside of this range, use a
+  NumberValue instead. Like all "-Value" objects, this single value is stored in
+  the Value property. The `Class.IntValue.Changed` event for this (and other
+  objects like it) will run with the new value being stored in the object,
+  instead of a string representing the property being changed.
+
+  [1]: https://en.wikipedia.org/wiki/Integer_overflow
+code_samples:
+  - IntValue-Limits-and-Integer-Overflow
+inherits:
+  - ValueBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: IntValue.Value
+    summary: |
+      Used to hold an integer.
+    description: |
+      Used to hold an integer.
+    code_samples:
+    type: int64
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: IntValue.Changed
+    summary: |
+      Fired whenever the `Class.IntValue.Value` of the IntValue is changed.
+    description: |
+      The Changed event fires whenever the `Class.IntValue.Value` of the
+      `Class.IntValue` is changed. It will run with the new value being stored
+      in the argument object, instead of a string representing the property
+      being changed.
+
+      This event, like other changed events, can be used to track when an
+      IntValue changes and to track the different values that it may change to.
+
+      For instance, this may be useful in games that rely on IntValues to track
+      game states and values, such as item IDs.
+
+      Equivalent changed events exist for similar objects, such as
+      `Class.NumberValue` and `Class.StringValue`, depending on what object type
+      best suits the need.
+    code_samples:
+      - IntValue-Changed1
+    parameters:
+      - name: value
+        type: int64
+        default:
+        summary: |
+          The new value after the change.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IntValue.changed
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: value
+        type: int64
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.IntValue.Changed` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

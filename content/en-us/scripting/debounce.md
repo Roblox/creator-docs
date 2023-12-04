@@ -7,7 +7,7 @@ A **debounce** pattern is a coding technique that prevents a function from runni
 
 ## Detecting Collisions
 
-Assume you want to build a hazardous trap part that causes 10 damage when touched. A basic `Class.BasePart.Touched|Touched` connection and `damagePlayer` function may look like this:
+Suppose you want to create a hazardous trap part that inflicts 10 damage when touched. An initial implementation might use a basic `Class.BasePart.Touched` connection and a `damagePlayer` function like this:
 
 ```lua title='Script - Damage Player'
 local part = script.Parent

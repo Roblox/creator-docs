@@ -1,0 +1,984 @@
+name: WorldRoot
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  Base class for handling physics simulation and 3D spatial queries.
+description: |
+  This base class provides an API for any instance intended for handling 3D
+  spatial queries and simulation, such as `Class.Workspace` and
+  `Class.WorldModel`.
+code_samples:
+inherits:
+  - Model
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties: []
+methods:
+  - name: WorldRoot:ArePartsTouchingOthers
+    summary: |
+      Returns true if any of the given `Class.BasePart` are touching any other
+      parts.
+    description: |
+      **ArePartsTouchingOthers** returns true if at least one of the given
+      `Class.BasePart` are touching any other parts. Two parts are considered
+      "touching" if they are within the distance threshold, `overlapIgnored`.
+
+      If no parts are provided, false is returned.
+    code_samples:
+      - checking-for-touching-parts
+    parameters:
+      - name: partList
+        type: Objects
+        default:
+        summary: |
+          A list of parts checks to see if any parts in the list are touching
+          any parts not in the list.
+      - name: overlapIgnored
+        type: float
+        default: 0.000199999995
+        summary: |
+          The part overlap threshold in studs that is ignored before parts are
+          considered to be touching.
+    returns:
+      - type: bool
+        summary: |
+          True if and only if any of the `Class.Part|parts` in `partList` are
+          touching any other parts (parts not in the partList). False if no
+          parts are passed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:Blockcast
+    summary: |
+      Casts a block shape in a given direction and returns a
+      `Datatype.RaycastResult` if the shape hits a `Class.BasePart` or
+      `Class.Terrain` cell.
+    description: |
+      Casts a block shape in a given direction and returns the first collision
+      with a `Class.BasePart` or `Class.Terrain` cell. This is analogous to how
+      `Class.WorldRoot:Raycast()` casts a linear ray in a direction to find a
+      collision, but it uses a 3D shape instead of a ray.
+
+      Unlike `Class.WorldRoot:GetPartsInPart()`, this method does not detect
+      `Class.BasePart|BaseParts` that **initially** intersect the shape.
+
+      If a hit is detected, a `Datatype.RaycastResult` is returned containing
+      the hit information. The `Datatype.RaycastResult.Distance|Distance`
+      property represents the distance the shape has to travel to find a hit,
+      and the `Datatype.RaycastResult.Position|Position` property represents the
+      intersection point that causes the hit.
+
+      This method throws an error if it is passed invalid `Datatype.CFrame`,
+      size, or direction inputs.
+    code_samples:
+      - worldroot---blockcast
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The initial position and rotation of the cast block shape.
+      - name: size
+        type: Vector3
+        default:
+        summary: |
+          The size of the cast block shape.
+      - name: direction
+        type: Vector3
+        default:
+        summary: |
+          Direction of the shapecast, with the magnitude representing the
+          maximum distance the shape can travel.
+      - name: params
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: |
+          Contains the result of the shapecast operation, or `nil` if no
+          eligible `Class.BasePart` or `Class.Terrain` cell was hit.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:BulkMoveTo
+    summary: |
+      Moves a table of `Class.BasePart|BaseParts` to a table of `Datatype.CFrame|CFrames`.
+    description: |
+      This function moves a table of `Class.BasePart|BaseParts` to a table of
+      `Datatype.CFrame|CFrames` without necessarily firing the default property
+      `Class.Instance.Changed|Changed` events. This provides a very fast way to move
+      large numbers of parts, as you don't have to pay the cost of separate property sets
+      for each individual part.
+
+      The third argument allows you to further optimize the movement
+      operation. By default, the `Class.Instance.Changed|Changed` event of each part
+      fires for `Class.BasePart.Position|Position`, `Class.BasePart.Orientation|Orientation`,
+      and `Class.BasePart.CFrame|CFrame`. However, if you specify
+      `Enum.BulkMoveMode|FireCFrameChanged` as the third argument, only the
+      `Class.Instance.Changed|Changed` event for the `Class.BasePart.CFrame|CFrame` property
+      will fire.
+
+      Note that you should only use this function if you're sure that part
+      movement is a bottleneck in your code. Simply setting the `Class.BasePart.CFrame|CFrame`
+      property of individual parts and welded models is fast enough in the majority of cases.
+    code_samples:
+    parameters:
+      - name: partList
+        type: Objects
+        default:
+        summary: ''
+      - name: cframeList
+        type: Array
+        default:
+        summary: ''
+      - name: eventMode
+        type: BulkMoveMode
+        default: FireAllEvents
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartOnRay
+    summary: |
+      Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
+      with the given `Datatype.Ray`.
+    description: |
+      **FindPartOnRay** uses [raycasting](../../../workspace/raycasting.md) to
+      find the first `Class.BasePart` or `Class.Terrain` cell intersecting with
+      a given `Datatype.Ray`. This function returns the `Class.BasePart` or
+      terrain cell hit, the point of intersection, the surface normal at the
+      point of intersection, and the associated `Enum.Material` hit.
+
+      If the `ignoreDescendantsInstance` parameter is provided, the raycasting
+      calculation will ignore the given object and all of its descendants. It
+      behaves similar to the `Class.Mouse.TargetFilter` property.
+
+      The `terrainCellsAreCubes` and `ignoreWater` parameters determine whether
+      `Class.Terrain` cells should be treated as cubes or not, and whether water
+      should be ignored or not.
+
+      In order to include or exclude multiple objects and their descendants, use
+      the `Class.WorldRoot:FindPartOnRayWithWhitelist()` and
+      `Class.WorldRoot:FindPartOnRayWithIgnoreList()` variants.
+
+      #### Notes
+
+      - Theoretically, a ray extends infinitely in one direction. However, the
+        max length of the direction vector on Roblox is 15000 studs.
+      - The length (magnitude) of the directional vector is important, as parts
+        further away than its length will not be tested.
+      - If the ray does not intersect anything, the return values will be `nil`
+        and the point at the end of the ray, respectively.
+      - Parts that are in a
+        [collision group](../../../workspace/collisions.md#collision-filtering)
+        that does not collide with the "Default" collision group are ignored
+        implicitly.
+    code_samples:
+    parameters:
+      - name: ray
+        type: Ray
+        default:
+        summary: ''
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: ''
+      - name: terrainCellsAreCubes
+        type: bool
+        default: false
+        summary: ''
+      - name: ignoreWater
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: |
+          The `Class.BasePart` or `Class.Terrain` cell hit, the
+          `Datatype.Vector3` point of intersection, the `Datatype.Vector3`
+          surface normal at the point of intersection, and the `Enum.Material`
+          of the `Class.BasePart` or terrain cell hit.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use `Class.WorldRoot:Raycast()` along
+      with `Datatype.RaycastParams` for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartOnRayWithIgnoreList
+    summary: |
+      Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
+      with the given `Datatype.Ray` that isn't in, nor is a descendant of an
+      object in, the given ignore list.
+    description: |
+      This function is a variant of `Class.WorldRoot:FindPartOnRay()` with the
+      addition of an ignore list. This lets you ignore certain parts or
+      `Class.Model|Models`.
+
+      Those looking to **include** a specific group of objects should instead
+      use `Class.WorldRoot:FindPartOnRayWithWhitelist()`.
+    code_samples:
+    parameters:
+      - name: ray
+        type: Ray
+        default:
+        summary: ''
+      - name: ignoreDescendantsTable
+        type: Objects
+        default:
+        summary: ''
+      - name: terrainCellsAreCubes
+        type: bool
+        default: false
+        summary: ''
+      - name: ignoreWater
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: |
+          The `Class.BasePart` or `Class.Terrain` cell hit, the
+          `Datatype.Vector3` point of intersection, the `Datatype.Vector3`
+          surface normal at the point of intersection, and the `Enum.Material`
+          of the `Class.BasePart` or terrain cell hit.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use `Class.WorldRoot:Raycast()` along
+      with `Datatype.RaycastParams` for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartOnRayWithWhitelist
+    summary: |
+      Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
+      with the given `Datatype.Ray` that is in, or is a descendant of an object
+      in, the given inclusion list.
+    description: |
+      This function is a variant of `Class.WorldRoot:FindPartOnRay()` with the
+      addition of an inclusion list. This lets you detect only certain parts or
+      `Class.Model|Models` and is particularly useful when, for example, looking
+      for points of intersection between a ray and a single part.
+
+      If a `nil` value is given in the inclusion list, instances after it will
+      be disregarded.
+
+      Those looking to **exclude** a specific group of objects should instead
+      use `Class.WorldRoot:FindPartOnRayWithIgnoreList()`.
+    code_samples:
+    parameters:
+      - name: ray
+        type: Ray
+        default:
+        summary: ''
+      - name: whitelistDescendantsTable
+        type: Objects
+        default:
+        summary: ''
+      - name: ignoreWater
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: |
+          The `Class.BasePart` or `Class.Terrain` cell hit, the
+          `Datatype.Vector3` point of intersection, the `Datatype.Vector3`
+          surface normal at the point of intersection, and the `Enum.Material`
+          of the `Class.BasePart` or terrain cell hit.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use `Class.WorldRoot:Raycast()` along
+      with `Datatype.RaycastParams` for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartsInRegion3
+    summary: |
+      Returns an array of `Class.BasePart`s in the given `Datatype.Region3`.
+    description: |
+      Returns an array of `Class.BasePart`s in the given `Datatype.Region3`.
+
+      This function takes an optional maxParts parameter (default 20) which
+      limits the number of `Class.BasePart`s that can be returned. Once this
+      number has been reached, the search for `Class.BasePart`s will stop. This
+      means some `Class.BasePart`s may not be returned even if they are within
+      the `Datatype.Region3`
+
+      The optional ignoreDescendentsInstance parameter can be used to specify a
+      specific instance for whom itself and all of its descendants should be
+      ignored by this function. This can be useful when, for example, looking to
+      see if any `Class.BasePart`s are inside a `Class.BasePart` other than the
+      `Class.BasePart` itself.
+
+      ```
+      local min = part.Position - (0.5 * part.Size)
+      local max = part.Position + (0.5 * part.Size)
+      local region = Region3.new(min, max)
+      local parts = worldroot:FindPartsInRegion3(region, part)  -- Ignore part
+      ```
+
+      The `Class.WorldRoot:FindPartsInRegion3WithIgnoreList()` and
+      `Class.WorldRoot:FindPartsInRegion3WithWhiteList()` variants of this
+      method exist to provide specific exclusion and inclusion functionality.
+
+      If no `Class.BasePart`s are found, an empty array will be returned.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The `Datatype.Region3` to be checked.
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: |
+          An `Class.Instance` to be ignored.
+      - name: maxParts
+        type: int
+        default: 20
+        summary: |
+          The maximum amount of `Class.BasePart`s to be returned.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart`s within the `Datatype.Region3`.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use
+      `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartsInRegion3WithIgnoreList
+    summary: |
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3` that aren't in, or a descendant of an entry in, the
+      given ignore list.
+    description: |
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3` that aren't in, or a descendant of an entry in, the
+      given ignore list.
+
+      If a `nil` value is given in the ignore list, instances after this value
+      will not be ignored. If no `Class.BasePart|BaseParts` are found, an empty
+      array will be returned.
+
+      This function is a variant of `Class.WorldRoot:FindPartsInRegion3()` with
+      the addition of an ignore list. This allows the developer to exclude
+      certain `Class.BasePart|BaseParts` or `Class.Model|Models` from the
+      search. Those looking to find `Class.BasePart|BaseParts` in a
+      `Datatype.Region3` using an inclusion list should use
+      `Class.WorldRoot:FindPartsInRegion3WithWhiteList()`.
+    code_samples: []
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The `Datatype.Region3` to be checked.
+      - name: ignoreDescendantsTable
+        type: Objects
+        default:
+        summary: |
+          An array of objects to be ignored.
+      - name: maxParts
+        type: int
+        default: 20
+        summary: |
+          The maximum number of `Class.BasePart`s to be returned.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart`s found within the `Datatype.Region3`.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use
+      `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:FindPartsInRegion3WithWhiteList
+    summary: |
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3` that are in, or descendant of an entry in, the given
+      inclusion list.
+    description: |
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3` that are in, or descendant of an entry in, the given
+      inclusion list.
+
+      If a `nil` value is given in the inclusion list, instances after this
+      value will not be ignored. If no `Class.BasePart|BaseParts` are found, an
+      empty array will be returned.
+
+      This function is a variant of `Class.WorldRoot:FindPartsInRegion3()` with
+      the addition of an inclusion list. This allows the developer to include
+      only certain `Class.BasePart|BaseParts` or `Class.Model|Models` in the
+      search. Those looking to find `Class.BasePart|BaseParts` in a
+      `Datatype.Region3` using an exclusion list should use
+      `Class.WorldRoot:FindPartsInRegion3WithIgnoreList()`.
+    code_samples: []
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The `Datatype.Region3` to be checked.
+      - name: whitelistDescendantsTable
+        type: Objects
+        default:
+        summary: |
+          An array of objects to check.
+      - name: maxParts
+        type: int
+        default: 20
+        summary: |
+          The maximum number of `Class.BasePart`s to be returned.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart`s within the `Datatype.Region3`.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use
+      `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:GetPartBoundsInBox
+    summary: |
+      Returns an array of parts whose **bounding boxes** overlap a given box.
+    description: |
+      `Class.WorldRoot:GetPartBoundsInBox()` returns an array of parts whose
+      **bounding boxes** overlap a box whose volume is described using the given
+      center (`Datatype.CFrame`) and size (`Datatype.Vector3`).
+
+      As emphasized, this spatial query method efficiently considers the volume
+      of parts' bounding boxes rather than their actual occupied volume. This
+      may be important when considering cylinders, spheres, unions, and
+      `Class.MeshPart|MeshParts` which have non-block shapes. For cases where
+      accuracy especially matters, use `Class.WorldRoot:GetPartsInPart()`
+      instead, or further filter the results of this method yourself.
+
+      This method uses a `Datatype.OverlapParams` object to describe reusable
+      portions of the spatial query, such as an inclusion or exclusion list, the
+      maximum number of parts to query, what
+      [collision group](../../../workspace/collisions.md#collision-filtering) to
+      use, and whether the query favors an intersected part's
+      `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
+      value.
+    code_samples:
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The location of the center of the given box volume to be queried.
+      - name: size
+        type: Vector3
+        default:
+        summary: |
+          The size of the given box volume to be queried.
+      - name: overlapParams
+        type: OverlapParams
+        default: OverlapParams{MaxParts=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: |
+          Contains reusable portions of the spatial query parameters.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart|BaseParts` which matched the spatial
+          query.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:GetPartBoundsInRadius
+    summary: |
+      Returns an array of parts whose **bounding boxes** overlap a given sphere.
+    description: |
+      `Class.WorldRoot:GetPartBoundsInRadius()` returns an array of parts whose
+      **bounding boxes** overlap a sphere whose volume is described using the
+      given center (`Datatype.Vector3`) and radius (number).
+
+      As emphasized, this spatial query method efficiently considers the volume
+      of parts' bounding boxes rather than their actual occupied volume. This
+      may be important when considering cylinders, spheres, unions, and
+      `Class.MeshPart|MeshParts` which have non-block shapes. For cases where
+      accuracy especially matters, use `Class.WorldRoot:GetPartsInPart()`
+      instead, or further filter the results of this method yourself.
+
+      This method uses a `Datatype.OverlapParams` object to describe reusable
+      portions of the spatial query, such as an inclusion or exclusion list, the
+      maximum number of parts to query, what
+      [collision group](../../../workspace/collisions.md#collision-filtering) to
+      use, and whether the query favors an intersected part's
+      `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
+      value.
+    code_samples:
+    parameters:
+      - name: position
+        type: Vector3
+        default:
+        summary: |
+          The location of the center of the given sphere volume to be queried.
+      - name: radius
+        type: float
+        default:
+        summary: |
+          The radius of the given sphere volume to be queried.
+      - name: overlapParams
+        type: OverlapParams
+        default: OverlapParams{MaxParts=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: |
+          Contains reusable portions of the spatial query parameters.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart|BaseParts` which matched the spatial
+          query.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:GetPartsInPart
+    summary: |
+      Returns an array of parts whose occupied space is shared with the given
+      part.
+    description: |
+      `Class.WorldRoot:GetPartsInPart()` returns an array of parts whose
+      occupied space is shared with the given part (which must exist in the same
+      `Class.WorldRoot` as the parts to be queried). This method can be used in
+      place of `Class.BasePart:GetTouchingParts()` and is generally a better
+      choice.
+
+      As noted, this spatial query method considers the **exact volume**
+      occupied by the given part using a full geometric collision check. As an
+      example, a concave/hollow part won't match queried parts within it unless
+      they actually overlap/touch such a part. For simpler volumes, consider
+      using `Class.WorldRoot:GetPartBoundsInBox()` or
+      `Class.WorldRoot:GetPartBoundsInRadius()`, as they are less accurate but
+      perform more efficiently.
+
+      This method uses a `Datatype.OverlapParams` object to describe reusable
+      portions of the spatial query, such as an inclusion or exclusion list, the
+      maximum number of parts to query, what
+      [collision group](../../../workspace/collisions.md#collision-filtering) to
+      use, and whether the query favors an intersected part's
+      `Class.BasePart.CanCollide` value over its `Class.BasePart.CanQuery`
+      value.
+    code_samples:
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: |
+          The part whose volume is to be checked against other parts.
+      - name: overlapParams
+        type: OverlapParams
+        default: OverlapParams{MaxParts=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: |
+          Contains reusable portions of the spatial query parameters.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart|BaseParts` which matched the spatial
+          query.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:IKMoveTo
+    summary: |
+      Moves the specified part to the specified location via inverse kinematics
+      rather than moving it there directly, to ensure any joints, constraints,
+      or collisions that part is participating in remain physically satisfied.
+    description: |
+      This function moves the specified part to the specified location via
+      [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics)
+      rather than moving it there directly, to ensure any joints,
+      `Class.Constraint|constraints`, or collisions that part is participating
+      in remain physically satisfied. Currently this function is only available
+      in Studio to `Class.Plugin|plugins`, as it currently conflicts with the
+      physics of a running game.
+
+      **Translate stiffness** is a number between 0 and 1 specifying how
+      aggressively to match the part's position to the position part of the
+      target CFrame. **Rotate stiffness** is a number between 0 and 1 specifying
+      how aggressively to match the part's rotation to the rotation part of the
+      target CFrame.
+
+      For example:
+
+      - If translate stiffness and rotate stiffness are both equal to 1, then
+        the part will be moved exactly to the target CFrame regardless of what
+        physical constraints there are on it.
+      - If translate stiffness and rotate stiffness are both equal to 0.5, then
+        the part will try to move to exactly the target CFrame, but may be
+        pushed out of the way by physical constraints on it.
+      - If translate stiffness and rotate stiffness are both equal to 0, then
+        the target CFrame will be ignored and physical constraints will be
+        solved for the object at the position where it was.
+    code_samples:
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: |
+          The part being moved.
+      - name: target
+        type: CFrame
+        default:
+        summary: |
+          The location to move the specified part.
+      - name: translateStiffness
+        type: float
+        default: 0.5
+        summary: |
+          A number between 0 and 1 specifying how aggressively to match the
+          part's position to the position part of the target `Datatype.CFrame`.
+      - name: rotateStiffness
+        type: float
+        default: 0.5
+        summary: |
+          A number between 0 and 1 specifying how aggressively to match the
+          part's rotation to the rotation part of the target `Datatype.CFrame`.
+      - name: collisionsMode
+        type: IKCollisionsMode
+        default: OtherMechanismsAnchored
+        summary: |
+          Allows you to specify what objects should be effected by the physical
+          resolution.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: WorldRoot:IsRegion3Empty
+    summary: |
+      Returns a bool indicating whether there are no `Class.BasePart`s within
+      the given `Datatype.Region3`.
+    description: |
+      **IsRegion3Empty** returns a bool indicating whether there are no
+      `Class.BasePart`s within the given `Datatype.Region3`.
+
+      The optional ignoreDescendentsInstance parameter can be used to specify a
+      specific instance for whom itself and all of its descendants should be
+      ignored by this function. This can be useful when, for example, looking to
+      see if any `Class.BasePart`s are inside a `Class.BasePart` other than the
+      `Class.BasePart` itself.
+
+      ```
+      local min = part.Position - (0.5 * part.Size)
+      local max = part.Position + (0.5 * part.Size)
+      local region = Region3.new(min, max)
+      local isPartEmpty = worldroot:IsRegion3Empty(region, part)  -- Ignore part
+      ```
+
+      If more than one object and its descendants need to be excluded from the
+      search, developers should use
+      `Class.WorldRoot:IsRegion3EmptyWithIgnoreList()`.
+
+      This function only returns if a region is empty or not. Developers looking
+      to find `Class.BasePart`s in a region should use
+      `Class.WorldRoot:FindPartsInRegion3()`.
+
+      #### How do Region3 checks work?
+
+      Checking if a part overlaps a `Datatype.Region3` is not a simple process.
+      It actually is time consuming and complicated. Instead it checks if parts
+      are roughly in the same area. When this function is called, it figures out
+      which voxels contain the `Datatype.Region3`. It then figures out which
+      parts might be in those voxels. It does this by comparing the axis-aligned
+      bounding box (sometimes called the AABB) of the part with the voxels. The
+      axis-aligned bounding box can be seen in Roblox Studio when a part is
+      selected.
+
+      This means that the area that is inspected by the function may be larger
+      than the `Datatype.Region3`. For this reason it is recommended to make
+      sure that the `Datatype.Region3` is on the voxel grid. The best way to do
+      this is by setting the coordinates of the `Datatype.Region3` to multiples
+      of 4 (since voxels are 4 x 4 x 4 studs).
+
+      This method is a fairly quick and easy way to see if any parts are in a
+      general area. If a game needs to know if parts are exactly in an area,
+      then `Class.BasePart:GetTouchingParts()` should be used. There is a higher
+      cost to using `Class.BasePart:GetTouchingParts()` since a part is needed
+      in the `Class.WorldRoot` and the function takes more time to run.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The `Datatype.Region3` to be checked.
+      - name: ignoreDescendentsInstance
+        type: Instance
+        default: nil
+        summary: |
+          An `Class.Instance` to be ignored.
+    returns:
+      - type: bool
+        summary: |
+          True if the `Datatype.Region3` is empty.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use
+      `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:IsRegion3EmptyWithIgnoreList
+    summary: |
+      Returns a boolean indicating whether there are no
+      `Class.BasePart|BaseParts` within the given `Datatype.Region3`, ignoring
+      any `Class.BasePart|BaseParts` that are descendants of the objects within
+      the given ignore list.
+    description: |
+      Returns a boolean indicating whether there are no
+      `Class.BasePart|BaseParts` within the given `Datatype.Region3`, ignoring
+      any `Class.BasePart|BaseParts` that are descendants of the objects within
+      the given ignore list. If a `nil` value is given in the ignore list,
+      instances after this value will not be ignored.
+
+      This function only returns if a region is empty or not. Developers looking
+      to find specific `Class.BasePart|BaseParts` in a region should use
+      `Class.WorldRoot:FindPartsInRegion3WithIgnoreList()`.
+
+      This function is a variant of `Class.WorldRoot:IsRegion3Empty()` with the
+      addition of an ignore list. In cases where an inclusion list is required
+      instead, developers should check to see if any parts are returned by
+      `Class.WorldRoot:FindPartsinRegion3WithWhitelist()`.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The `Datatype.Region3` to be checked.
+      - name: ignoreDescendentsTable
+        type: Objects
+        default:
+        summary: |
+          An array of objects to be ignored.
+    returns:
+      - type: bool
+        summary: |
+          True if the `Datatype.Region3` is empty.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Use
+      `Class.WorldRoot:GetPartBoundsInBox()` along with `Datatype.OverlapParams`
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:Raycast
+    summary: |
+      Casts a ray using an origin, direction, and optional
+      `Datatype.RaycastParams`, then returns a `Datatype.RaycastResult` if an
+      eligible object or terrain intersects the ray.
+    description: |
+      Casts a ray using an origin, direction, and optional
+      `Datatype.RaycastParams`. If it finds an eligible `Class.BasePart` or
+      `Class.Terrain` cell, a `Datatype.RaycastResult` is returned containing
+      the results of the operation. If no `Datatype.RaycastParams` object is
+      provided, the defaults are used (all parts are considered and
+      `Class.Terrain` water is not ignored).
+
+      Note that the length (magnitude) of the directional vector is important,
+      as objects/terrain further away than its length will not be tested. If
+      you're using a `Datatype.CFrame` to help create the ray components,
+      consider using `Datatype.CFrame.LookVector` as the directional vector and
+      multiply it by the desired length as shown in the example below. The
+      maximum length of the direction vector is 5,000 studs.
+
+      This method does **not** use a `Datatype.Ray` object, but its origin and
+      direction components can be borrowed from `Datatype.Ray.Origin` and
+      `Datatype.Ray.Direction`.
+    code_samples:
+      - worldroot---raycast
+    parameters:
+      - name: origin
+        type: Vector3
+        default:
+        summary: |
+          The origin point of the ray.
+      - name: direction
+        type: Vector3
+        default:
+        summary: |
+          The directional vector of the ray. Note that the length of this vector
+          matters, as parts/terrain further away than its length will not be
+          tested.
+      - name: raycastParams
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: |
+          An object used to specify hit eligibility in the raycast operation. If
+          not provided, default values are used where all parts are considered
+          and `Class.Terrain` water is not ignored.
+    returns:
+      - type: RaycastResult
+        summary: |
+          Contains the results of a raycast operation, or `nil` if no eligible
+          `Class.BasePart` or `Class.Terrain` cell was hit.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:Shapecast
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+      - name: params
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:Spherecast
+    summary: |
+      Casts a spherical shape in a given direction and returns a
+      `Datatype.RaycastResult` if the shape hits a `Class.BasePart` or
+      `Class.Terrain` cell.
+    description: |
+      Casts a spherical shape in a given direction and returns the first
+      collision with a `Class.BasePart` or `Class.Terrain` cell. This is
+      analogous to how `Class.WorldRoot:Raycast()` casts a linear ray in a
+      direction to find a collision, but it uses a 3D shape instead of a ray.
+
+      Unlike `Class.WorldRoot:GetPartsInPart()`, this method does not detect
+      `Class.BasePart|BaseParts` that **initially** intersect the shape.
+
+      If a hit is detected, a `Datatype.RaycastResult` is returned containing
+      the hit information. The `Datatype.RaycastResult.Distance|Distance`
+      property represents the distance the shape has to travel to find a hit,
+      and the `Datatype.RaycastResult.Position|Position` property represents the
+      intersection point that causes the hit.
+
+      This method throws an error if it is passed invalid `Datatype.CFrame`,
+      size, or direction inputs.
+    code_samples:
+      - worldroot---spherecast
+    parameters:
+      - name: position
+        type: Vector3
+        default:
+        summary: |
+          The initial position of the cast spherical shape.
+      - name: radius
+        type: float
+        default:
+        summary: |
+          The radius of the cast spherical shape in studs.
+      - name: direction
+        type: Vector3
+        default:
+        summary: |
+          Direction of the shapecast, with the magnitude representing the
+          maximum distance the shape can travel.
+      - name: params
+        type: RaycastParams
+        default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        summary: ''
+    returns:
+      - type: RaycastResult
+        summary: |
+          Contains the result of the shapecast operation, or `nil` if no
+          eligible `Class.BasePart` or `Class.Terrain` cell was hit.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: WorldRoot:findPartOnRay
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: ray
+        type: Ray
+        default:
+        summary: ''
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: ''
+      - name: terrainCellsAreCubes
+        type: bool
+        default: false
+        summary: ''
+      - name: ignoreWater
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.WorldRoot:FindPartOnRay()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: WorldRoot:findPartsInRegion3
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: ''
+      - name: ignoreDescendantsInstance
+        type: Instance
+        default: nil
+        summary: ''
+      - name: maxParts
+        type: int
+        default: 20
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of
+      `Class.WorldRoot:FindPartsInRegion3()` which should be used instead.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

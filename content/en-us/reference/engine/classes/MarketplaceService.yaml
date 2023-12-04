@@ -1,0 +1,1155 @@
+name: MarketplaceService
+type: class
+category: Monetization
+memory_category: Instances
+summary: |
+  The service responsible for in-experience transactions.
+description: |
+  `Class.MarketplaceService` is responsible for in-experience transactions. The
+  most notable methods are
+  `Class.MarketplaceService:PromptProductPurchase()|PromptProductPurchase` and
+  `Class.MarketplaceService:PromptPurchase()|PromptPurchase`, as well as the
+  callback `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` which must
+  be defined so that transactions do not fail.
+
+  `Class.MarketplaceService` also has methods that fetch information about
+  [developer products](../../../production/monetization/developer-products.md)
+  (`Class.MarketplaceService:GetProductInfo()|GetProductInfo` and
+  `Class.MarketplaceService:GetDeveloperProductsAsync()|GetDeveloperProductsAsync`),
+  [passes](../../../production/monetization/game-passes.md)
+  (`Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync`),
+  and other assets
+  (`Class.MarketplaceService:PlayerOwnsAsset()|PlayerOwnsAsset`,
+  `Class.MarketplaceService:PlayerOwnsBundle()|PlayerOwnsBundle`).
+
+  Understanding `Class.MarketplaceService` is the first step towards learning to
+  [monetize](../../../production/monetization/index.md) an experience on Roblox,
+  as well as `Class.DataStoreService` which is responsible for saving and
+  loading data related to purchases.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: MarketplaceService:PromptBundlePurchase
+    summary: |
+      Prompts a user to purchase a bundle with the given `bundleId`.
+    description: |
+      Prompts a user to purchase a bundle with the given `bundleId`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: bundleId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PromptGamePassPurchase
+    summary: |
+      Prompts a user to purchase a pass with the given `gamePassId`.
+    description: |
+      Prompts a user to purchase a
+      [pass](../../../production/monetization/game-passes.md) with the given
+      `gamePassId`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: gamePassId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PromptPremiumPurchase
+    summary: |
+      Prompts a user to purchase Roblox Premium.
+    description: |
+      Prompts a user to purchase
+      [Roblox Premium](https://www.roblox.com/premium/membership). To learn more
+      about and incorporating Premium incentives into your experience, see
+      [Engagement-Based Payouts](../../../production/monetization/engagement-based-payouts.md).
+
+      #### See Also
+
+      - `Class.MarketplaceService.PromptPremiumPurchaseFinished` which fires
+        when the Premium purchase UI closes.
+      - `Class.Players.PlayerMembershipChanged` which fires when the server
+        recognizes that a player's membership has changed.
+    code_samples:
+      - prompt-premium-upsell
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player being prompted to purchase Premium.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PromptProductPurchase
+    summary: |
+      Prompts a user to purchase a developer product with the given `productId`.
+    description: |
+      Prompts a user to purchase a
+      [developer product](../../../production/monetization/developer-products.md)
+      with the given `productId`.
+    code_samples:
+      - MarketplaceService-PromptProductPurchase1
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: productId
+        type: int64
+        default:
+        summary: ''
+      - name: equipIfPurchased
+        type: bool
+        default: true
+        summary: ''
+      - name: currencyType
+        type: CurrencyType
+        default: Default
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PromptPurchase
+    summary: |
+      Prompts a user to purchase an item with the given `assetId`.
+    description: |
+      Prompts a user to purchase an item with the given `assetId`. If prompting
+      a purchase of a
+      [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
+      item, the request must come from the server or the purchase fails.
+    code_samples:
+      - MarketplaceService-PromptPurchase1
+      - market
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+      - name: equipIfPurchased
+        type: bool
+        default: true
+        summary: ''
+      - name: currencyType
+        type: CurrencyType
+        default: Default
+        summary: |
+          Ignored.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PromptSubscriptionPurchase
+    summary: |
+      Prompts a user to purchase a subscription for the given `subscriptionId`.
+    description: |
+      Prompts a user to purchase a subscription for the given `subscriptionId`.
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` object to be prompted to subscribe.
+      - name: subscriptionId
+        type: string
+        default:
+        summary: |
+          The ID of the subscription to subscribe to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetDeveloperProductsAsync
+    summary: |
+      Returns a `Class.Pages` object which contains information for all of the
+      current experience's developer products.
+    description: |
+      Returns a `Class.Pages` object which contains information for all of the
+      current experience's
+      [developer products](../../../production/monetization/developer-products.md).
+    code_samples:
+      - MarketplaceService-GetDeveloperProductsAsync1
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetProductInfo
+    summary: |
+      Returns the product information of an asset using its asset ID.
+    description: |
+      This method provides information about an asset,
+      [developer product](../../../production/monetization/developer-products.md),
+      or [pass](../../../production/monetization/game-passes.md) given its asset
+      ID and the `Enum.InfoType`. If no such item exists with the given ID, this
+      method will throw an error. Information about the queried item is provided
+      in a dictionary with the following keys. Note that not all information is
+      provided or necessarily relevant for the kind of product you're querying.
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>Name</code></td>
+      	  <td>string</td>
+      	  <td>The name shown on the asset's page.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Description</code></td>
+      	  <td>string</td>
+      	  <td>The description as shown on the asset's page; can be <code>nil</code> if blank.</td>
+        </tr>
+      	<tr>
+      	  <td><code>PriceInRobux</code></td>
+      	  <td>number</td>
+      	  <td>The cost of purchasing the asset using Robux.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Created</code></td>
+      	  <td>string</td>
+      	  <td>Timestamp of when the asset was created, for example <code>2022-01-02T10:30:45Z</code>. Formatted using ISO 8601.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Updated</code></td>
+      	  <td>string</td>
+      	  <td>Timestamp of when the asset was last updated by its creator, for example <code>2022-02-12T11:22:15Z</code>. Formatted using ISO 8601.</td>
+        </tr>
+      	<tr>
+      	  <td><code>ContentRatingTypeId</code></td>
+      	  <td>number</td>
+      	  <td>Indicates whether the item is marked as 13+ in catalog.</td>
+        </tr>
+      	<tr>
+      	  <td><code>MinimumMembershipLevel</code></td>
+      	  <td>number</td>
+      	  <td>The minimum subscription level necessary to purchase the item.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsPublicDomain</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset can be taken for free.</td>
+        </tr>
+        </tbody>
+      </table>
+      	
+      #### Creator Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>Creator</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing the creator of the asset (see following lines).</td>
+        </tr>
+      	<tr>
+      	  <td><code>Creator.CreatorType</code></td>
+      	  <td>string</td>
+      	  <td>Either <code>User</code> or <code>Group</code>.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Creator.CreatorTargetId</code></td>
+      	  <td>number</td>
+      	  <td>The ID of the creator user or group.</td>
+        </tr>
+        <tr>
+      	  <td><code>Creator.HasVerifiedBadge</code></td>
+      	  <td>boolean</td>
+      	  <td>Whether the creator has a verified badge.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Creator.Name</code></td>
+      	  <td>string</td>
+      	  <td>The name/username of the creator.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Creator.Id</code></td>
+      	  <td>number</td>
+      	  <td>Use <b>Creator.CreatorTargetId</b> instead.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### Asset Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>AssetId</code></td>
+      	  <td>number</td>
+      	  <td>If <code>Enum.InfoType</code> was <b>Asset</b>, the ID of the given asset.</td>
+        </tr>
+      	<tr>
+      	  <td><code>AssetTypeId</code></td>
+      	  <td>number</td>
+      	  <td>The type of asset. See <code>Enum.AssetType</code> for the asset type ID numbers.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsForSale</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsLimited</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is a "limited item" that is no longer (if ever) sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsLimitedUnique</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is a "limited unique" ("Limited&nbsp;U") item that only has a fixed number sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsNew</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is marked as "new" in the catalog.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Remaining</code></td>
+      	  <td>number</td>
+      	  <td>The remaining number of items a limited unique item may be sold.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Sales</code></td>
+      	  <td>number</td>
+      	  <td>The number of items the asset has been sold.</td>
+        </tr>
+        <tr>
+      	  <td><code>SaleAvailabilityLocations</code></td>
+      	  <td>table</td>
+      	  <td>The item's <code>Enum.ProductLocationRestriction|ProductLocationRestriction</code> or sale location setting.</td>
+        </tr>
+        <tr>
+      	  <td><code>CanBeSoldInThisGame</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable in the current experience.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### Developer Products and Passes
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>ProductId</code></td>
+      	  <td>number</td>
+      	  <td>If <code>Enum.InfoType</code> was <b>Product</b>, the product ID.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IconImageAssetId</code></td>
+      	  <td>number</td>
+      	  <td>The asset ID of the product/pass icon, or <code>0</code> if there isn't one.</td>
+        </tr>
+      </table>
+    code_samples:
+      - MarketplaceService-GetProductInfo1
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the specified product.
+      - name: infoType
+        type: InfoType
+        default: Asset
+        summary: |
+          An `Enum.InfoType` enum value specifying the type of information being
+          retrieved.
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary containing information about the queried item, described
+          in the previous tables.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetSubscriptionProductInfoAsync
+    summary: |
+      Returns the product information of a subscription for the given
+      `subscriptionId`.
+    description: |
+      Returns the product information of a subscription for the given
+      `subscriptionId`.
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>Name</code></td>
+      	  <td>string</td>
+      	  <td>The name of the subscription product.</td>
+        </tr>
+      	<tr>
+      	  <td><code>Description</code></td>
+      	  <td>string</td>
+      	  <td>The description of the subscription product.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IconImageAssetId</code></td>
+      	  <td>number</td>
+          <td>The asset ID of the subscription product icon.</td>
+        </tr>
+      	<tr>
+      	  <td><code>SubscriptionPeriod</code></td>
+      	  <td><code>Enum.SubscriptionPeriod</code></td>
+          <td>The duration of the subscription (for example, <code>Month</code>, <code>Year</code>, etc.).</td>
+        </tr>
+      	<tr>
+      	  <td><code>DisplayPrice</code></td>
+      	  <td>string</td>
+          <td>Localized price with the appropriate currency symbol for display (for example, <code>$4.99</code>). For users in unsupported countries, <code>DisplayPrice</code> returns a string without specific price information.</td>
+        </tr>
+      	<tr>
+      	  <td><code>DisplaySubscriptionPeriod</code></td>
+      	  <td>number</td>
+          <td>Localized subscription period text for display (for example, <code>/month</code>). Can be used together with <code>DisplayPrice</code>.</td>
+        </tr>
+      	<tr>
+      	  <td><code>SubscriptionProviderName</code></td>
+      	  <td>string</td>
+          <td>Name of the subscription benefit provider (for example, the name of the associated experience).</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsForSale</code></td>
+      	  <td>boolean</td>
+      	  <td>True if the subscription product is available for sale.</td>
+        </tr>
+        <tr>
+      	  <td><code>PriceTier</code></td>
+      	  <td>number</td>
+      	  <td>A number that can be used to compare the price of different subscription products. This is not the actual price of the subscription (for example, 499).</td>
+        </tr>
+        </tbody>
+      </table>
+    code_samples: []
+    parameters:
+      - name: subscriptionId
+        type: string
+        default:
+        summary: |
+          The ID of the subscription to check.
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
+    summary: |
+      Returns an `Library.table|Array` that contains up to one year of the
+      user's subscription payment history for the given `subscriptionId`.
+    description: |
+      **Note**: This method can only be called from a `Class.Script` with
+      `Enum.RunContext.Server`.
+
+      Returns an `Library.table|Array` that contains up to one year of the
+      user's subscription payment history for the given `subscriptionId`, sorted
+      from the most recent status to the least recent.
+
+      Each entry in the payment history `Library.table|Array` contains the
+      following keys:
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>CycleStartTime</code></td>
+      	  <td><code>Datatype.DateTime</code></td>
+      	  <td><code>Datatype.DateTime</code> at the start of this particular subscription period.</td>
+        </tr>
+      	<tr>
+      	  <td><code>CycleEndTime</code></td>
+      	  <td><code>Datatype.DateTime</code></td>
+      	  <td><code>Datatype.DateTime</code> at the end of this particular subscription period.</td>
+        </tr>
+        <tr>
+      	  <td><code>PaymentStatus</code></td>
+      	  <td><code>Enum.SubscriptionPaymentStatus</code></td>
+      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code> if the user paid for this particular subscription period. 
+          <code>Enum.SubscriptionPaymentStatus.Refunded</code> if the user refunded this particular subscription period. 
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### Payment History Length
+
+      Only creators affiliated with the subscription product can access up to
+      **one year** worth of the user's subscription payment history.
+      Non-associated creators can only get the user's **current** subscription
+      payment status or an empty `Library.table|Array` if the user has no active
+      subscription.
+
+      #### Grace Period
+
+      Subscription renewal payments can have some processing time. Payment
+      history doesn't return a table for this period. However, in order to
+      preserve a user's subscription experience during the processing period,
+      `Class.MarketplaceService.GetUserSubscriptionStatusAsync()|GetUserSubscriptionStatusAsync()`
+      returns `IsSubscribed: true` for the given user. Don't grant durable items
+      or currency type subscription benefits to the user until after payment has
+      been confirmed for the current cycle.
+
+      For example, on August 31, 2023, User A's Subscription B is up for
+      renewal. On September 1, 2023, the payment has yet to be processed. If you
+      call
+      `Class.MarketplaceService.GetUserSubscriptionPaymentHistoryAsync()|GetUserSubscriptionPaymentHistoryAsync()`
+      on September 1, 2023 on User A for Subscription B, the first entry of the
+      return value is:
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Value</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>CycleStartTime</code></td>
+      	  <td>...</td>
+        </tr>
+      	<tr>
+      	  <td><code>CycleEndTime</code></td>
+      	  <td>August 31, 2023</td>
+        </tr>
+        <tr>
+      	  <td><code>PaymentStatus</code></td>
+      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code></td>
+        </tr>
+        </tbody>
+      </table>
+
+      Note that since the user is within the grace period, the cycle they have
+      yet to pay for (September 1, 2023) does not appear in the return value at
+      all. This field only populates after the payment has been received and
+      processed.
+
+      At the same time,
+      `Class.MarketplaceService.GetUserSubscriptionStatusAsync()|GetUserSubscriptionStatusAsync`
+      returns the following result until the renewal payment process fails or
+      the user cancels:
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Return</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>IsSubscribed</code></td>
+      	  <td>True</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsRenewing</code></td>
+      	  <td>True</td>
+        </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - MarketplaceService-GetUserSubscriptionPaymentHistoryAsync1
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: ''
+      - name: subscriptionId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetUserSubscriptionStatusAsync
+    summary: |
+      Returns a `Library.table` that contains the subscription status of the
+      user for the given `subscriptionId`.
+    description: |
+      Returns a `Library.table` that contains the subscription status of the
+      user for the given `subscriptionId`. The table contains the following
+      keys:
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>IsSubscribed</code></td>
+      	  <td>boolean</td>
+      	  <td>True if the user's subscription is active.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsRenewing</code></td>
+      	  <td>boolean</td>
+      	  <td>True if the user is set to renew this subscription after the current subscription period ends.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      Note that `IsSubscribed` will be `true` only when a user has purchased the
+      subscription and the payment has been successfully processed. If the
+      payment for a user's initial subscription purchase is still processing or
+      has failed, `IsSubscribed` returns `false`. To understand when a user's
+      subscription status has changed, see the
+      `Class.Players.UserSubscriptionStatusChanged` event.
+    code_samples:
+      - MarketplaceService-GetUserSubscriptionStatusAsync1
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` object whose subscription status you want to check.
+      - name: subscriptionId
+        type: string
+        default:
+        summary: |
+          The ID of the subscription to check for.
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PlayerOwnsAsset
+    summary: |
+      Returns whether the given player has the given asset.
+    description: |
+      Returns whether the inventory of the given player contains an asset, given
+      its ID. In the case that a query fails, this method will throw an error,
+      so it's recommended to wrap calls to this method in `pcall()`.
+
+      - This method should **not** be used for
+        [passes](../../../production/monetization/game-passes.md) since they use
+        a separate ID system. Legacy passes that still depend on an asset ID
+        should use
+        `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync()`
+        instead of this method.
+      - This method cannot be used to check for
+        [developer products](../../../production/monetization/developer-products.md)
+        since they can be purchased multiple times but not owned themselves.
+        Instead, use a [data store](../../../cloud-services/datastores.md) to
+        save when a player has bought a developer product.
+    code_samples:
+      - MarketplaceService-PlayerOwnsAsset1
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          A `Class.Player` object whose inventory shall be tested for the
+          ownership of the given asset.
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID for which the given player's inventory shall be tested.
+    returns:
+      - type: bool
+        summary: |
+          Indicates whether the given player's inventory contains the given
+          asset.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:PlayerOwnsBundle
+    summary: |
+      Returns whether the given player owns the given bundle.
+    description: |
+      Returns whether the inventory of given `Class.Player` contains a bundle,
+      given its ID. In the case that a query fails, this method will throw an
+      error, so it's recommended to wrap calls to this method in `pcall()`.
+    code_samples:
+      - MarketplaceService-PlayerOwnsBundle1
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          A `Class.Player` object whose inventory shall be tested for the
+          ownership of the given bundle.
+      - name: bundleId
+        type: int64
+        default:
+        summary: |
+          The bundle ID for which the given player's inventory shall be tested.
+    returns:
+      - type: bool
+        summary: |
+          Indicates whether the given player's inventory contains the given
+          bundle.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:UserOwnsGamePassAsync
+    summary: |
+      Returns true if the player with the given `Class.Player.UserId|UserId`
+      owns the pass with the given `gamePassId`.
+    description: |
+      Returns true if the player with the given `Class.Player.UserId|UserId`
+      owns the [pass](../../../production/monetization/game-passes.md) with the
+      given `gamePassId`, not to be confused with an asset ID.
+
+      #### Caching Behavior
+
+      Results of this function are remembered so that repeated calls will return
+      quicker. This function will always return true if the player owns the pass
+      upon first entering a server after having purchased the pass. If the pass
+      is purchased in-experience through
+      `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase()`,
+      this function may return false due to the caching behavior. Conversely, if
+      the player deletes the pass from their inventory, this function may return
+      true despite the player not owning the pass.
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId|UserId` of the `Class.Player` whose inventory
+          shall be queried.
+      - name: gamePassId
+        type: int64
+        default:
+        summary: |
+          Pass ID to check, not to be confused with an asset ID.
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: MarketplaceService.PromptBundlePurchaseFinished
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: bundleId
+        type: int64
+        default:
+        summary: ''
+      - name: wasPurchased
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptGamePassPurchaseFinished
+    summary: |
+      Fires when a purchase prompt for a pass is closed.
+    description: |
+      This event fires when a purchase dialog for a
+      [pass](../../../production/monetization/game-passes.md) is closed. It
+      fires as the dialog closes, when the player presses "Cancel" at the prompt
+      or "OK" at the success/error message.
+
+      To avoid duplicate item grants, store the purchase in a
+      [data store.](../../../cloud-services/datastores.md) If multiple attempts
+      are made, check if the item has been already granted. For repeatable
+      purchases use
+      [developer products](../../../production/monetization/developer-products.md).
+
+      #### See Also
+
+      - For **developer product** purchase prompts, connect to
+        `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`.
+      - For **affiliate gear sales** or other assets, use
+        `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished`.
+    code_samples:
+      - handling-gamepass
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` object for whom the prompt was shown.
+      - name: gamePassId
+        type: int64
+        default:
+        summary: |
+          The ID number of the pass shown in the prompt, not to be confused with
+          an asset ID.
+      - name: wasPurchased
+        type: bool
+        default:
+        summary: |
+          Whether the item was successfully purchased (false for errors and
+          cancellations).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptPremiumPurchaseFinished
+    summary: |
+      Fires when the Roblox Premium purchase modal closes.
+    description: |
+      This event fires when the
+      [Roblox Premium](https://www.roblox.com/premium/membership) purchase modal
+      closes, specifically when the player presses "Cancel" at the prompt, "OK"
+      at the error message, or after the payment UI closes.
+
+      #### See Also
+
+      - `Class.MarketplaceService:PromptPremiumPurchase()|PromptPremiumPurchase()`
+        to prompt a user to purchase Premium.
+      - `Class.Players.PlayerMembershipChanged` which fires when the server
+        recognizes that a player's membership has changed.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptProductPurchaseFinished
+    summary: |
+      Fires when a purchase prompt closes for a developer product. You can use
+      this event to detect when a purchase prompt is closed, but it should
+      **not** be used to process purchases; instead use
+      `Class.MarketplaceService.ProcessReceipt`.
+    description: |
+      Fires when a purchase prompt closes for a developer product, right as the
+      dialog closes when the player presses "Cancel" at the prompt or "OK" at
+      the success/error message. You can use this event to detect when a
+      purchase prompt is closed, but it should **not** be used to process
+      purchases; instead use `Class.MarketplaceService.ProcessReceipt`.
+
+      Unlike the similarly-named events above, this event fires with a
+      `Class.Player.UserId` and not a reference to the `Class.Player` object.
+
+      - For [passes](../../../production/monetization/game-passes.md), use
+        `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
+      - For **affiliate gear sales** or other assets, use
+        `Class.MarketplaceService.PromptPurchaseFinished`.
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId|UserId` of the player for whom the prompt was
+          shown.
+      - name: productId
+        type: int64
+        default:
+        summary: |
+          The ID number of the developer product shown in the prompt (not to be
+          confused with an asset ID).
+      - name: isPurchased
+        type: bool
+        default:
+        summary: |
+          Whether the item was successfully purchased (false for errors and
+          cancellations).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptPurchaseFinished
+    summary: |
+      Fires when a purchase prompt for an affiliate gear sale or other asset is
+      closed. Does **not** fire for developer product or pass prompts.
+    description: |
+      Fires when a purchase prompt for an affiliate gear sale or other asset is
+      closed. This fires right as the dialog closes, when the player presses
+      "Cancel" at the prompt or "OK" at the success/error message. Does **not**
+      fire for
+      [developer product](../../../production/monetization/developer-products.md)
+      or [pass](../../../production/monetization/game-passes.md) prompts.
+
+      #### See Also
+
+      - For [pass](../../../production/monetization/game-passes.md) prompts, use
+        `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
+      - For
+        [developer product](../../../production/monetization/developer-products.md)
+        prompts, connect to
+        `Class.MarketplaceService.PromptProductPurchaseFinished`.
+    code_samples:
+      - MarketplaceService-PromptPurchaseFinished1
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` object for whom the prompt was shown.
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the item shown in the prompt.
+      - name: isPurchased
+        type: bool
+        default:
+        summary: |
+          Whether the item was successfully purchased (false for errors and
+          cancellations).
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptSubscriptionPurchaseFinished
+    summary: |
+      Fires when the subscription purchase modal closes.
+    description: |
+      This event fires when the subscription purchase modal closes, specifically
+      when the users presses **Cancel**, **OK** at the error message, or after
+      the payment UI closes.
+
+      #### See Also
+
+      - `Class.MarketplaceService:PromptSubscriptionPurchase()|PromptSubscriptionPurchase()`
+        to prompt a user to purchase a subscription.
+      - `Class.Players.UserSubscriptionStatusChanged`, which fires when the game
+        server recognizes that the user's status for a certain subscription has
+        changed.
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          User whose subscription status has changed.
+      - name: subscriptionId
+        type: string
+        default:
+        summary: |
+          The ID of the subscription with a status change.
+      - name: didTryPurchasing
+        type: bool
+        default:
+        summary: |
+          Whether the user attempted to purchase the subscription.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: MarketplaceService.ProcessReceipt
+    summary: |
+      A callback to process receipts of developer product purchases.
+    description: |
+      A callback to process receipts of
+      [developer product](../../../production/monetization/developer-products.md)
+      purchases. This callback should be set once and only once by a single
+      `Class.Script`. If you're selling multiple products in your experience,
+      this callback should handle receipts for all of them.
+
+      #### Guarantees
+
+      On any given server, the
+      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback is
+      called for all of a player's unresolved
+      [developer product](../../../production/monetization/developer-products.md)
+      purchases when:
+
+      - The player successfully initiates a product purchase (same product or
+        another product) on this server.
+      - The player joins the server.
+
+      Once a developer product purchase is requested, it is considered
+      "successfully initiated" when processed on Roblox's backend and once the
+      funds have been placed in escrow. Subsequently, the purchase is considered
+      "resolved" if a `Class.MarketplaceService.ProcessReceipt|ProcessReceipt`
+      callback returns a `Enum.ProductPurchaseDecision` enum of
+      `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted` and this is
+      successfully recorded on the backend.
+
+      An exception to the above rules is when a callback for the given
+      unresolved purchase has been called on the same server but has not yet
+      returned (it has yielded and not returned). In this case, the callback
+      will not be invoked.
+
+      #### Unresolved Purchases
+
+      Unresolved developer product purchases are **not** removed or refunded
+      after the escrow period has expired. Instead,
+      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callbacks will
+      indefinitely be invoked for unresolved purchases in the manner described
+      above.
+
+      #### Retries / Timeout
+
+      There is no time-based "retry" mechanism, meaning that if a
+      `Enum.ProductPurchaseDecision` enum of
+      `Enum.ProductPurchaseDecision.NotProcessedYet|NotProcessedYet` is returned
+      for a purchase, it will not try again on the same server unless the player
+      successfully initiates another developer product purchase (same product or
+      another product) or re-joins the server. There is also no "timeout" for
+      yielded callbacks; a callback can yield for as long as the server is
+      running and its result will still be accepted when it does return.
+
+      #### Notes
+
+      - Where there are multiple purchases pending for the player,
+        `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callbacks are
+        called in a non-deterministic order.
+      - The player needs to be in the server for the callback to be invoked, but
+        does not need to be in the server for the result of the callback to be
+        recorded on the backend.
+
+      - The callback for a given purchase may run on two different servers at
+        the same time, if the player joins another server before the callback in
+        the previous server returns.
+
+      - Even if a `Enum.ProductPurchaseDecision` enum of
+        `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted` is
+        returned in the callback function, it's possible that it will fail to be
+        recorded on the backend. In this case, the purchase will remain
+        unresolved and `Class.MarketplaceService.ProcessReceipt|ProcessReceipt`
+        will continue to be invoked in the manner described above.
+    code_samples:
+      - ProcessReceipt-Example
+    parameters:
+      - name: receiptInfo
+        type: Dictionary
+        default:
+        summary: |
+          The `receiptInfo` table passed to this callback will contain the
+          following data:
+
+          - `PurchaseId` &mdash; A unique identifier for the specific purchase.
+          - `PlayerId` &mdash; The user ID of the player who made the purchase.
+          - `ProductId` &mdash; The ID of the purchased product.
+          - `PlaceIdWherePurchased` &mdash; The place ID in which the purchase
+            was made; not necessarily the same as the current place's ID.
+          - `CurrencySpent` &mdash; The amount of currency spent in the
+            transaction.
+          - `CurrencyType` &mdash; The type of currency spent in the purchase;
+            always `Enum.CurrencyType.Robux`.
+    returns:
+      - type: ProductPurchaseDecision
+        summary: |
+          An enum representing in what manner the developer product receipt was
+          processed:
+
+          - `PurchaseGranted` indicates that the experience successfully granted
+            the player the benefit the developer product is meant to provide,
+            such as a currency boost, gameplay bonus, item, etc. This indicates
+            to Roblox that the sale was performed successfully.
+          - `NotProcessedYet` indicates the developer product's benefit could
+            not be granted, such as a product the player is not eligible to
+            purchase, is no longer relevant to the current experience state,
+            etc.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

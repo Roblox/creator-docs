@@ -145,14 +145,15 @@ export const isRelativeLink = (link: string): boolean => {
   return link.startsWith('./') || link.startsWith('../');
 };
 
-export const isRobloxUrl = (url: string): boolean => {
+export const isAllowedWebsite = (url: string): boolean => {
   try {
     // check the end of hostnames
     const urlHost = new URL(url).hostname.toLowerCase();
     const isRobloxLink =
       urlHost.endsWith('.roblox.com') ||
+      urlHost === 'roblox.com' ||
       urlHost === 'luau-lang.org' ||
-      urlHost === 'roblox.com';
+      urlHost === 'www.lua.org';
     return isRobloxLink;
   } catch {
     return false;
@@ -177,7 +178,7 @@ const removeUrlHash = (url: string): string => {
 
 export const isAllowedHttpLink = (link: string) => {
   const sanitizedUrl = removeUrlHash(link);
-  if (isRobloxUrl(sanitizedUrl)) {
+  if (isAllowedWebsite(sanitizedUrl)) {
     return true;
   } else {
     let isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl);
@@ -199,7 +200,7 @@ export const getNonRobloxLinks = (content: string) => {
   const assetLinks = getLinksOfTypeFromContentString(content, LinkType.Asset);
   const pageLinks = getLinksOfTypeFromContentString(content, LinkType.Page);
   assetLinks.forEach((link) => {
-    if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
+    if (link.ref && isHttpLink(link.ref) && !isAllowedWebsite(link.ref)) {
       httpLinks.push(link);
     }
     if (link.ref && isRelativeLink(link.ref)) {
@@ -207,7 +208,7 @@ export const getNonRobloxLinks = (content: string) => {
     }
   });
   pageLinks.forEach((link) => {
-    if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
+    if (link.ref && isHttpLink(link.ref) && !isAllowedWebsite(link.ref)) {
       httpLinks.push(link);
     }
     if (link.ref && isRelativeLink(link.ref)) {
@@ -218,12 +219,12 @@ export const getNonRobloxLinks = (content: string) => {
 };
 
 const processHttpLink = ({
-  fileName,
+  filePath,
   config,
   link,
 }: {
   config: IConfig;
-  fileName: string;
+  filePath: string;
   link: LinkInfo;
 }) => {
   const urlNoHash = removeUrlHash(link.ref);
@@ -236,8 +237,8 @@ const processHttpLink = ({
   }
 
   // Create messages
-  const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
-  const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
+  const shortIntro = `${Emoji.NoEntry} Requirement: In line ${link.lineNumber}, the `;
+  const fullIntro = `${Emoji.NoEntry} Requirement: In ${filePath}, line ${link.lineNumber}, the `;
   const allowedListFilePath =
     allowedHttpLinksTextFileFullPath.split(repositoryRoot)[1];
   const message = `page ${urlNoHash} isn't in the list of allowed HTTP links. Please explain why you are using it and add it to ${allowedListFilePath}.`;
@@ -257,7 +258,7 @@ ${requiredCheckMessage}`;
       body,
       commit_id: config.commitHash,
       line: link.lineNumber,
-      path: fileName,
+      path: filePath,
       pull_number: config.pullRequestNumber,
       repository: config.repository,
     });
@@ -283,17 +284,17 @@ const closedSourceFiles = [
 const closedSourceFilesSet = new Set(closedSourceFiles);
 
 const processRelativeLink = ({
-  fileName,
+  filePath,
   config,
   link,
 }: {
   config: IConfig;
-  fileName: string;
+  filePath: string;
   link: LinkInfo;
 }) => {
   // Remove ../../path/to/page.md#section-1
   const urlNoHash = link.ref.split('#')[0];
-  const fileDir = path.dirname(fileName);
+  const fileDir = path.dirname(filePath);
   const newFilePathFromRoot = path.join(fileDir, urlNoHash);
   const newFilePathFull = path.join(repositoryRoot, fileDir, urlNoHash);
   const doesFileExist = fs.existsSync(newFilePathFull);
@@ -307,8 +308,8 @@ const processRelativeLink = ({
   }
 
   // Create messages
-  const shortIntro = `${Emoji.NoEntry} In line ${link.lineNumber}, the `;
-  const fullIntro = `${Emoji.NoEntry} In ${fileName}, line ${link.lineNumber}, the `;
+  const shortIntro = `${Emoji.NoEntry} Requirement: In line ${link.lineNumber}, the `;
+  const fullIntro = `${Emoji.NoEntry} Requirement: In ${filePath}, line ${link.lineNumber}, the `;
   const message = `check for relative links couldn't find the file \`${urlNoHash}\`. Please double-check and fix the link to this file. Relative links are case-sensitive.`;
 
   // Log messages
@@ -324,7 +325,7 @@ ${requiredCheckMessage}`;
       body,
       commit_id: config.commitHash,
       line: link.lineNumber,
-      path: fileName,
+      path: filePath,
       pull_number: config.pullRequestNumber,
       repository: config.repository,
     });
@@ -332,23 +333,23 @@ ${requiredCheckMessage}`;
 };
 
 export const checkContentLinks = ({
-  content,
-  fileName,
+  fileContent,
+  filePath,
   config,
 }: {
-  content: string;
-  fileName: string;
+  fileContent: string;
+  filePath: string;
   config: IConfig;
 }) => {
-  const { httpLinks, relativeLinks } = getNonRobloxLinks(content);
+  const { httpLinks, relativeLinks } = getNonRobloxLinks(fileContent);
   if (config.checkHttpLinks) {
     httpLinks.forEach((link) => {
-      processHttpLink({ config, fileName, link });
+      processHttpLink({ config, filePath, link });
     });
   }
   if (config.checkRelativeLinks) {
     relativeLinks.forEach((link) => {
-      processRelativeLink({ config, fileName, link });
+      processRelativeLink({ config, filePath, link });
     });
   }
 };

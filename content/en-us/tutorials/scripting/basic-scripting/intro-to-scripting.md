@@ -30,7 +30,7 @@ Remember that setting a part's Anchored property to **true** makes it stay in pl
 
 ## Inserting a Script
 
-Code in Roblox is written in a language called **Lua**, and it's stored and run from scripts. You can put scripts in various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the code in the script when the part is loaded into the game.
+Code in Roblox is written in a language called [Luau](../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the game.
 
 1. Hover over the `DisappearingPlatform` part in the **Explorer** window and click the **+** button to insert a new script into the platform. Rename your new script as **Disappear**.
 
@@ -48,7 +48,7 @@ Remember to **rename** parts and scripts as soon as you create them so you don't
 
 It's a good idea to start off your script by making a **variable** for the platform. A variable is a **name** associated with a **value**. Once a variable is created, it can be used again and again. You can change the value as needed.
 
-In Lua, a variable is created as follows: `local variableName = variableValue`.
+In Luau, a variable is created as follows: `local variableName = variableValue`.
 
 The term `local` means that the variable is only going to be used in the block of the script where it's declared. The `=` sign is used to set the value of the variable. Names for variables are typically written in **camel case**. This is lowercase with every word following the first being capitalized, `justLikeThis`.
 
@@ -119,7 +119,7 @@ Just like `script.Parent`, properties are accessed using a **dot**. Values are a
    ```
 
 <Alert severity="info">
-You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends that makes your code more readable.
+You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends, which makes your code more readable.
 </Alert>
 
 ## Calling the Function
@@ -143,7 +143,7 @@ Once you've declared a function, you can run it by writing its name with parenth
 
 ## Appear Function
 
-You can easily make the platform reappear by writing a function which does the exact opposite of the `disappear` function.
+You can easily make the platform reappear by writing a function that does the exact opposite of the `disappear` function.
 
 1. Delete the `disappear()` line from the script.
 2. Declare a new function called `appear`.
@@ -217,7 +217,7 @@ end
 
 The code for the platform is now complete! Test your code now and you should find that the platform disappears after three seconds and reappears three seconds later in a loop.
 
-You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script, otherwise the platforms will all disappear at the same time and users will never be able to cross.
+You could duplicate this platform to cover a wider gap, but you need to change the wait times in each script. Otherwise, the platforms will all disappear at the same time and users will never be able to cross.
 
 <video controls loop muted>
     <source src="../../../assets/tutorials/intro-to-scripting/alternatingPlatforms.mp4" />

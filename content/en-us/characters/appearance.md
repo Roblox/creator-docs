@@ -256,7 +256,7 @@ Use the following sample code to apply a `Class.HumanoidDescription` to all curr
 ```lua
 local Players = game:GetService("Players")
 
-for _, player in pairs(Players:GetPlayers()) do
+for _, player in Players:GetPlayers() do
   local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
   if humanoid then
     -- Create a HumanoidDescription

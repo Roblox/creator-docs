@@ -1,0 +1,78 @@
+name: TremoloSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Creates a trembling effect on a sound by varying the volume of the sound up
+  and down.
+description: |
+  The TremoloSoundEffect creates a trembling effect on a sound by varying the
+  volume of the sound up and down.
+
+  Like all other `Class.SoundEffect`s, a TremoloSoundEffect can be applied
+  either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: TremoloSoundEffect.Depth
+    summary: |
+      Controls how much the volume will raise and lower.
+    description: |
+      Range: 0 to 1 (default 1) Controls how much the volume will raise and
+      lower. This value ranges between 0 (minimum volume) and 1 (maximum
+      volume). If set to its minimum, the volume will not oscillate at all.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TremoloSoundEffect.Duty
+    summary: |
+      Controls how long during one volume oscillation the effect will be active.
+    description: |
+      Range: 0 to 1 (default 0.5) Controls how long during one volume
+      oscillation the effect will be active, specifically what percentage
+      between 0 (0%) and 1 (100%).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TremoloSoundEffect.Frequency
+    summary: |
+      Sets how often the effect will oscillate the volume.
+    description: |
+      Range: 0.1 to 20 (default 5) Sets how often the effect will oscillate the
+      volume. Measured in Hz.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

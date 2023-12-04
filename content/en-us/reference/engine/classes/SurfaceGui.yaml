@@ -1,0 +1,283 @@
+name: SurfaceGui
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Container for GuiObjects that are rendered on the surface of a part.
+description: |
+  Allows for the rendering of GUI elements onto a part's surface in the 3D
+  world, while allowing for basic user interaction to occur. SurfaceGuis must be
+  descendants of PlayerGui in order to know which player is interacting with it.
+
+  ##### Caching static UI for performance improvements
+
+  A Gui's appearance is cached until one of the following events occurs:
+
+  - A descendant is added to the Gui.
+  - A descendant is removed from the Gui.
+  - A property of a descendant of the Gui changes.
+  - A property of the Gui changes.
+
+  If any of these events occur, the Gui's appearance will be recomputed the next
+  frame it gets rendered.
+code_samples:
+inherits:
+  - SurfaceGuiBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: SurfaceGui.AlwaysOnTop
+    summary: |
+      Determines whether the SurfaceGui will always be rendered on top of other
+      3D objects.
+    description: |
+      Determines whether the SurfaceGui will render over top of 3D content, or
+      be occluded by it.
+
+      When set to false, the SurfaceGui will render like other 3D content, and
+      will be occluded by other 3D objects.
+
+      When set to true, it always renders on top of 3D content, and the
+      appearance changes significantly:
+
+      - Colors match how they appear inside a `Class.ScreenGui`.
+      - Text may appear sharper on high DPI devices.
+      - `Class.SurfaceGui.LightInfluence` is treated as though it was 0.
+      - `Class.SurfaceGui.Brightness` has no effect.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.Brightness
+    summary: |
+      Determines the factor by which the GUI's light is scaled when
+      `Class.SurfaceGui.LightInfluence|LightInfluence` is 0.
+    description: |
+      **Brightness** determines the factor by which the GUI's emitted light is
+      scaled. By default, this property is 1 and can be set to any number on the
+      range [0, 1000].
+
+      By modifying this property, the apparent brightness of a GUI can be better
+      matched to its environment. For instance, a video billboard like those
+      found in Times Square can be made brighter to be clearly visible on a
+      bright day.
+
+      This property won't produce any effect in the following scenarios wherein
+      the GUI does not emit light.:
+
+      - When `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` is true, the color of
+        each pixel is the color shown on-screen.
+      - When `Class.SurfaceGui.LightInfluence|LightInfluence` is 1, all light
+        from the GUI is reflected from the environment instead of being emit.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.CanvasSize
+    summary: |
+      The size of a 'virtual screen', in 'virtual pixels', which makes
+      SurfaceGuis pixel-to-pixel compatible with ScreenGuis.
+    description: |
+      The size of a 'virtual screen', in 'virtual pixels', which makes
+      SurfaceGuis pixel-to-pixel compatible with ScreenGuis.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Sizing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.ClipsDescendants
+    summary: |
+      When set to true, portions of GuiObjects that fall outside of the
+      SurfaceGui's canvas borders will not be drawn.
+    description: |
+      When set to true, portions of GuiObjects that fall outside of the
+      SurfaceGui's canvas borders will not be drawn.
+
+      Even when this property is false, objects that are completely outside of
+      the canvas of the SurfaceGui will not render.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.LightInfluence
+    summary: |
+      Controls how much the SurfaceGui is influenced by the lighting in the game
+      world.
+    description: |
+      Controls how much the SurfaceGui is influenced by the lighting in the game
+      world.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.MaxDistance
+    summary: |
+      Controls how far away the SurfaceGui can be displayed before it stops
+      rendering.
+    description: |
+      Controls how far away the SurfaceGui can be displayed before it stops
+      rendering. A value of 0 means there is no limit, and it will render
+      infinitely far away.
+
+      For experiences with many SurfaceGuis, it's recommended to set this to an
+      appropriate value for each SurfaceGui. The default value when inserting a
+      SurfaceGui in Studio is 1000, which should be fine for most usages.
+
+      For UIs that are outdoors, you should set the MaxDistance far enough away
+      so that the UI is small on the screen when it pops out, around 10 pixels
+      across. This makes it less noticeable when it pops in or out.
+
+      You can reduce the pop in effect even more by adding a similar looking
+      decal underneath the SurfaceGui, or by changing the part color to match
+      the background color of your UI.
+
+      For indoor spaces, the MaxDistance should be set slightly larger than the
+      size of the room, so that the UI won't render when the player is in a
+      different room.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.PixelsPerStud
+    summary: |
+      Determines the number of screen-space pixels per world-space stud used to
+      render the contents of the SurfaceGui.
+    description: |
+      **PixelsPerStud** determines the density of pixels used for each
+      world-space stud to render the contents of the SurfaceGui.
+
+      Higher values will cause the various `Class.GuiObject` within to appear
+      smaller if they are kept the same size. Conversely, lower values will
+      cause objects to appear larger. However, if the GuiObjects are scaled
+      proportionally (either by using a `Class.UIScale` or modifying
+      `Class.GuiObject.Size|Size` or `Class.TextLabel.TextSize` etc.), this
+      property allows for higher definition to be used. It's important to select
+      a value based on how far away you expect a player to view the SurfaceGui.
+      Be mindful that a large pixel density could negatively affect performance
+      if the face of the adorned part is large enough.
+
+      ![Three parts with SurfaceGuis, each including a 200x50 TextLabel within them. From left-to-right, their PixelsPerStud values are 25, 50 and 75. These values cause the apparent size of each TextLabel to change.](/assets/legacy/SurfaceGui.PixelsPerStud.jpg)
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Sizing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.SizingMode
+    summary: |
+      Determines whether SurfaceGui will render at fixed size or scale with its
+      size in studs.
+    description: |
+      When set to `Enum.SurfaceGuiSizingMode.FixedSize`, SurfaceGui renders with
+      a fixed size set using `Class.SurfaceGui.CanvasSize`.
+
+      When set to `Enum.SurfaceGuiSizingMode.PixelsPerStud`, SurfaceGui renders
+      with a variable size based on `Class.SurfaceGui.PixelsPerStud` and the
+      SurfaceGui's size in studs.
+    code_samples:
+    type: SurfaceGuiSizingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Sizing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.ToolPunchThroughDistance
+    summary: |
+      Sets the distance left clicking starts acting on the surface gui instead
+      of the held tool.
+    description: |
+      Sets the distance left clicking starts acting on the surface gui instead
+      of the held tool. If a character is within this distance of the surface
+      gui, then the tool will not activate on click.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceGui.ZOffset
+    summary: |
+      Offsets the SurfaceGui relative to the normal of the surface it is
+      attached to.
+    description: |
+      Offsets the SurfaceGui relative to the normal of the surface it is
+      attached to.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

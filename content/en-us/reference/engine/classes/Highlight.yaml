@@ -1,0 +1,314 @@
+name: Highlight
+type: class
+category:
+memory_category: Instances
+summary: |
+  `Class.Highlight` is a visual effect you can use to call attention to a
+  specific object within your experience.
+description: |
+  `Class.Highlight` is a visual effect you can use to call attention to a
+  specific object within your experience. Every highlight effect has a
+  silhouette **outline** that surrounds the object and a solid overlay
+  **interior** that displays over the object's interior. You can customize both
+  of these components independently to modify the highlight's visual appearance.
+
+  <table>
+    <thead>
+      <tr>
+        <th>Original Object</th>
+        <th>Black Outline, Yellow Interior</th>
+        <th>Yellow Outline, Black Interior</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="/assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="70%" />
+        </td>
+        <td>
+          <img src="/assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" width="70%" />
+        </td>
+        <td>
+          <img src="/assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" width="70%" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  Useful applications of the highlight effect include:
+
+  - Providing visual feedback that an object is important and/or interactable.
+  - Making distant objects visible through objects that are closer to the user.
+  - Indicating the current position and status of other characters.
+
+  **IMPORTANT:** As a performance limit, Studio only displays 31 simultaneous
+  Highlight instances on the client at a time. If you exceed this limit, the
+  additional instances are silently ignored. While a disabled `Class.Highlight`
+  doesn't display, it still takes one of the 31 available `Class.Highlight`
+  slots. If you plan to permanently disable a `Class.Highlight` instance, it's
+  best to delete the highlight rather than disable it.
+
+  For low-end devices, Studio uses a fallback version that doesn't have high
+  performance overheads. This version doesn't have the outline effect; instead,
+  it creates an interior fill with a checker pattern to emulate the
+  `Class.Highlight.FillTransparency|FillTransparency` property.
+
+  <img src="/assets/ui/highlighting-objects/Fallback-Version-On-Trees.jpg" width="70%" />
+
+  <img src="/assets/ui/highlighting-objects/Low-End-Interior-Fill.jpg" width="70%" />
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Highlight.Adornee
+    summary: |
+      The `Class.Instance` that the Highlight is applied to.
+    description: |
+      The `Class.Instance` for which to apply the Highlight, to insert a
+      Highlight for an `Class.Instance` outside of a child/parent relationship.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.DepthMode
+    summary: ''
+    description: |
+      Controls how the Highlight effect displays with respect to other objects
+      in the world. You can set this property to one of the following options:
+
+      - `Enum.HighlightDepthMode.AlwaysOnTop|AlwaysOnTop` - Allows the highlight
+        to display regardless if there are objects between the camera and the
+        highlighted object. This means the user is always able to see the
+        highlight regardless of what is between the highlighted object and the
+        camera.
+
+      - `Enum.HighlightDepthMode.Occluded|Occluded` - Hides the highlight if
+        there are objects between the camera and the highlighted object. This
+        means the user is only able to see the object if there are no
+        obstructing objects between the highlighted object and the camera's
+        view.
+
+      <table>
+        <thead>
+          <tr>
+            <th>DepthMode = AlwaysOnTop</th>
+            <th>DepthMode = Occluded</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" width="50%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/DepthMode-Occluded.jpg" width="50%" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    type: HighlightDepthMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.Enabled
+    summary: |
+      Sets whether or not the highlight is enabled.
+    description: |
+      Sets whether or not the highlight is enabled. This does not impact
+      performance, however if disabled the `Class.Highlight` instance will still
+      take one of the 31 available slots. If you plan to permanently disable a
+      `Class.Highlight` instance, it's recommended to delete it rather than
+      disable it.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.FillColor
+    summary: |
+      Sets the `Class.Color3` value of the highlight's interior.
+    description: |
+      Sets the `Class.Color3` value of the highlight's interior
+
+      <table>
+        <thead>
+          <tr>
+            <th>FillColor = [255, 100, 50]</th>
+            <th>FillColor = [0, 255, 125]</th>
+            <th>FillColor = [75, 150, 255]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillColor-Red.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillColor-Green.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillColor-Blue.jpg" width="70%" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.FillTransparency
+    summary: |
+      Sets the transparency of the highlight's interior.
+    description: |
+      Sets the visibility of the highlight's interior to any value between the
+      default value of 0 (opaque) and 1 (transparent). You can use this property
+      to determine how much of the object's existing color you want users to
+      see.
+
+      <table>
+        <thead>
+          <tr>
+            <th>FillTransparency = 0</th>
+            <th>FillTransparency = 0.5</th>
+            <th>FillTransparency = 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillTransparency-0.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillTransparency-Half.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/FillTransparency-1.jpg" width="70%" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.OutlineColor
+    summary: |
+      Sets the `Datatype.Color3` value of the highlight's outline.
+    description: |
+      Sets the `Datatype.Color3` value of the highlight's outline.
+
+      <table>
+        <thead>
+          <tr>
+            <th>OutlineColor = [255, 100, 50]</th>
+            <th>OutlineColor = [0, 255, 125]</th>
+            <th>OutlineColor = [75, 150, 255]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/assets/ui/highlighting-objects/OutlineColor-Red.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/OutlineColor-Green.jpg" width="70%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/OutlineColor-Blue.jpg" width="70%" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Highlight.OutlineTransparency
+    summary: |
+      Sets the transparency of the highlight's outline.
+    description: |
+      Sets the visibility of the highlight's outline to a value between `0`
+      (opaque) and `1` (transparent).
+
+      <table>
+        <thead>
+          <tr>
+            <th>OutlineTransparency = 0</th>
+            <th>OutlineTransparency = 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="/assets/ui/highlighting-objects/OutlineTransparency-0.jpg" width="50%" />
+            </td>
+            <td>
+              <img src="/assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="50%" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

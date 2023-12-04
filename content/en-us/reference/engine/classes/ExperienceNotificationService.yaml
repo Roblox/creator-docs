@@ -1,0 +1,39 @@
+name: ExperienceNotificationService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: ExperienceNotificationService:CreateUserNotificationAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: string
+        default:
+        summary: ''
+      - name: userNotification
+        type: UserNotification
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

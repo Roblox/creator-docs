@@ -1,0 +1,34 @@
+name: EasingDirection
+type: enum
+summary: |
+  Pass to `Datatype.TweenInfo.new()` to control the direction
+  `Class.Tween|Tweens` play in.
+description: |
+  Pass to `Datatype.TweenInfo.new()` to control the direction
+  `Class.Tween|Tweens` play in.
+
+  For a video demonstration of each easing direction, see
+  [UI Animations - Direction](../../../ui/animation.md#direction).
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: In
+    summary: |
+      The easing style is applied in a forward direction.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Out
+    summary: |
+      The easing style is applied in a reverse direction.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: InOut
+    summary: |
+      The easing style is applied forward for the first half and in reverse for
+      the second half.
+    value: 2
+    tags: []
+    deprecation_message: ''

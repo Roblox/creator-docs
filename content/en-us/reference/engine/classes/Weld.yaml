@@ -1,0 +1,44 @@
+name: Weld
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: ''
+description: |
+  An object used to hold two objects together in a relative position, regardless
+  of whether they're touching. This object is placed inside of a
+  `Class.BasePart` and the `Class.JointInstance.Part1|Part1` property determines
+  which other part should be welded to the original part. Two
+  `Datatype.CFrame|CFrames`, `Class.JointInstance.C0|C0` and
+  `Class.JointInstance.C1|C1`, then determine how the parts should be placed.
+
+  See also `Class.RigidConstraint` for a newer alternative using the constraints
+  system that does not require `Class.JointInstance.C0|C0` or
+  `Class.JointInstance.C1|C1`, but instead uses `Class.Attachment|Attachments`
+  to control offsets through `Class.Constraint.Attachment0` and
+  `Class.Constraint.Attachment1`.
+
+  While the weld is `Class.JointInstance.Active|Active`, it maintains the part
+  positions such that:
+
+  `part1.CFrame * C1 == Part0.CFrame * C0`
+
+  #### Root Part
+
+  Every assembly has a root part (see `Class.BasePart:GetRootPart()`). When a
+  weld's `Class.JointInstance.C0|C0`/`Class.JointInstance.C1|C1` is modified,
+  the root part will stay where it was.
+
+  #### Directionality
+
+  Welds do not have any directionality. Imagine rigid joints forming a tree,
+  branching up from the root part such that all the parts up the tree from the
+  root will move and their welded "children" will move with them.
+code_samples:
+inherits:
+  - JointInstance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

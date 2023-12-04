@@ -1,0 +1,48 @@
+name: ScaleType
+type: enum
+summary: |
+  Determines how an image (of a `Class.ImageLabel` or `Class.ImageButton`) is
+  scaled.
+description: |
+  Determines how an image (of a `Class.ImageLabel` or `Class.ImageButton`) is
+  scaled.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Stretch
+    summary: |
+      The image is stretched to fit within the element.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Slice
+    summary: |
+      9-Slice scaling: slice the image into 9 regions and apply different
+      scaling rules to each region. The slice boundaries are determined by
+      `Class.ImageLabel.SliceCenter` or `Class.ImageButton.SliceCenter`. See
+      [UI 9-Slice Design](../../../ui/9-slice.md) for more information. 
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Tile
+    summary: |
+      The image is tiled to fit within the element. For example, if the
+      element is twice the X dimension of the image, the image will appear twice
+      (2 tiles).
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Fit
+    summary: |
+      The image is scaled fit within the element X or Y dimension (whichever
+      fits first).
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Crop
+    summary: |
+      The image is cropped to fit within the element.
+    value: 4
+    tags: []
+    deprecation_message: ''

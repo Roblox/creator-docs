@@ -1,0 +1,44 @@
+name: CollisionFidelity
+type: enum
+summary: |
+  Determines behavior of the collision hitbox for `Class.MeshPart` and
+  `Class.PartOperation` instances.
+description: |
+  Determines behavior of the collision hitbox for `Class.MeshPart` and
+  `Class.PartOperation` instances. See
+  [here](../../../workspace/collisions.md#collision-fidelity) for a visual
+  representation of the various options.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: |
+      Collision model uses a voxel-based convex-hull decomposition that is
+      relatively fast but may not be highly accurate, especially for holes,
+      doorways, and cavities in general.
+    tags: []
+    deprecation_message: ''
+  - name: Hull
+    value: 1
+    summary: |
+      Collision model uses the convex hull of the visual mesh.
+    tags: []
+    deprecation_message: ''
+  - name: Box
+    value: 2
+    summary: |
+      Collision model uses a bounding box that encompasses the visual mesh.
+    tags: []
+    deprecation_message: ''
+  - name: PreciseConvexDecomposition
+    value: 3
+    summary: |
+      Collison model uses a convex-hull decomposition of the visual mesh which
+      is computed by a variation of an algorithm called HACD. This option is the
+      most accurate representation of collision geometry for complex objects
+      with built-in tolerances to reduce the total number of convex-hulls by
+      compromising on accuracy when justified.
+    tags: []
+    deprecation_message: ''

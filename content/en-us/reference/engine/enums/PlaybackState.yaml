@@ -1,0 +1,50 @@
+name: PlaybackState
+type: enum
+summary: |
+  Describes the current state of a `Class.Tween` in its
+  `Class.Tween.PlaybackState` property.
+description: |
+  Describes the current state of a `Class.Tween` in its
+  `Class.Tween.PlaybackState` property.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Begin
+    summary: |
+      The tween has been created, but has yet to be played. After exiting this
+      state, the tween never enters it again.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Delayed
+    summary: |
+      The tween is waiting for the duration specified in its
+      `Datatype.TweenInfo.DelayTime`. After the delay elapses, the tween plays.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Playing
+    summary: |
+      The tween is currently in progress.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Paused
+    summary: |
+      The tween is paused in the middle of playing.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Completed
+    summary: |
+      The tween completed successfully.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Cancelled
+    summary: |
+      The tween was cancelled before completion.
+    value: 5
+    tags: []
+    deprecation_message: ''

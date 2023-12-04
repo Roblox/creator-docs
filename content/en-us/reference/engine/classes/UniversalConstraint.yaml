@@ -1,0 +1,118 @@
+name: UniversalConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Ensures two axes on two bodies remain perpendicular.
+description: |
+  A **UniversalConstraint** ensures two axes on two bodies remain perpendicular.
+  Contextually, this constraint is more restrictive than a
+  `Class.BallSocketConstraint` but less restrictive than a
+  `Class.HingeConstraint` by one degree of freedom.
+
+  Example applications of this constraint include transmitting power between the
+  transmission and drive shafts of cars, robotics, and more.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Limits
+
+  Enabling the `Class.UniversalConstraint.LimitsEnabled|LimitsEnabled` property
+  exposes the `Class.UniversalConstraint.MaxAngle|MaxAngle` limit to restrict
+  tilt within a cone, as well as
+  `Class.UniversalConstraint.Restitution|Restitution` which defines the
+  elasticity of the attachments when they reach the limit.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: UniversalConstraint.LimitsEnabled
+    summary: |
+      Determines whether the angular motion of attachments' primary axes is
+      limited.
+    description: |
+      This property, when enabled, limits the relative angular motion of the
+      primary axes of attachments through a cone constraint. The default value
+      is false.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Universal
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UniversalConstraint.MaxAngle
+    summary: |
+      The max angle, in degrees, of the constraint's limiting cone.
+    description: |
+      This property determines the max angle, in degrees, of the constraint's
+      limiting cone, formed from `Class.Constraint.Attachment0|Attachment0` and
+      its primary axis. The default value is 45 degrees.
+
+      In order for this property to take affect, the constraint's
+      `Class.UniversalConstraint.LimitsEnabled|LimitsEnabled` property must be
+      set to true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UniversalConstraint.Radius
+    summary: |
+      The constraint's visualization radius.
+    description: |
+      This property indicates the constraint's visualization radius, in studs.
+      Default value is 0.2.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UniversalConstraint.Restitution
+    summary: |
+      The restitution coefficient of the cone constraint.
+    description: |
+      This property determines the restitution of the two
+      `Class.Attachment|Attachments` connected by the
+      `Class.UniversalConstraint` when they reach the end of the range specified
+      by `Class.UniversalConstraint.MaxAngle|MaxAngle`. The value defaults to 0
+      and can be any floating number in the range of 0 to 1. Only applies when
+      `Class.UniversalConstraint.LimitsEnabled|LimitsEnabled` is set to true.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

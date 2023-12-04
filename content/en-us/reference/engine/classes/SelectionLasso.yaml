@@ -1,0 +1,38 @@
+name: SelectionLasso
+type: class
+category:
+memory_category: Instances
+summary: |
+  Abstract class for `Class.SelectionPartLasso` and `Class.SelectionPartLasso`.
+description: |
+  The SelectionLasso class is an abstract class of which the inheritors are able
+  to be attached to an object of the `Class.Humanoid` class or the
+  `Class.BasePart` class. They can also be attached to a point in the
+  tridimensional space indicated by a Vector3 value.
+code_samples:
+inherits:
+  - GuiBase3d
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: SelectionLasso.Humanoid
+    summary: |
+      The Humanoid that the Lasso belongs to, and will come from.
+    description: |
+      The Humanoid that the Lasso belongs to, and will come from.
+    code_samples:
+    type: Humanoid
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

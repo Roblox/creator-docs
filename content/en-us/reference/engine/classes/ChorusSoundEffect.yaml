@@ -1,0 +1,81 @@
+name: ChorusSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Makes audio more voluminous by simulating multiple voices playing the same
+  part.
+description: |
+  A ChorusSoundEffect simulates the effect of multiple vocals or instruments
+  playing the same part. It does this by taking the original sound and
+  overlaying copies of that sound. These copies are not exact matches to the
+  original but instead vary in pitch slightly. This simulates a real chorus, as
+  different singers or instruments will have slight variations. This effect can
+  be applied to either an individual sound or to a sound group by parenting it
+  to the desired instance.
+
+  Like all other `Class.SoundEffect`, a ChorusSoundEffect can be applied either
+  to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: ChorusSoundEffect.Depth
+    summary: |
+      Controls how intense the effect is.
+    description: |
+      Range: 0 to 1 (default 0.15) Controls how intense the effect is.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChorusSoundEffect.Mix
+    summary: |
+      Percentage of the original sound that will be applied to the filter.
+    description: |
+      Range: 0 to 1 (default 0.5) Percentage of the original sound that will be
+      applied to the filter. Raising this value will make the effect sound
+      louder and be more apparent.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ChorusSoundEffect.Rate
+    summary: |
+      How frequently the pitch variation changes.
+    description: |
+      Range: 0 to 20 (default 0.5) How frequently the pitch variation changes.
+      Measured in Hz.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

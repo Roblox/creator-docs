@@ -1,0 +1,48 @@
+name: ScopeCheckResult
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: ConsentAccepted
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InvalidScopes
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Timeout
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: NoUserInput
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: BackendError
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UnexpectedError
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InvalidArgument
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: ConsentDenied
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''

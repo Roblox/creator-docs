@@ -1,0 +1,19 @@
+name: GuidRegistryService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service, whose functionality is not accessible to developers.
+description: |
+  An internal service, whose functionality is not accessible to developers.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

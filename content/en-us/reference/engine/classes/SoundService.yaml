@@ -1,0 +1,395 @@
+name: SoundService
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  A service that determines various aspects of how `Class.Sound`s play in the
+  game.
+description: |
+  A service that determines various aspects of how `Class.Sound`s play in the
+  game. SoundService is also often used to store `Class.SoundGroup`s although
+  this is not mandatory for `Class.SoundGroup`s to work.
+
+  ## What can SoundService do?
+
+  SoundService properties such as `Class.SoundService.AmbientReverb`,
+  `Class.SoundService.DistanceFactor`, `Class.SoundService.DopplerScale` and
+  `Class.SoundService.RolloffScale` can be used to change how all `Class.Sound`s
+  play in the game.
+
+  The `Class.SoundService:SetListener()` function allows developers to set the
+  position where sounds are heard from.
+
+  `Class.SoundService:PlayLocalSound()` can be used to play a sound locally
+  regardless of where it is parented to.
+
+  Developers looking to find out more about how sound works in Roblox should
+  consult the documentation provided for the
+  [FMOD sound engine](https://www.fmod.com/docs/api/content/generated/overview/3dsound.html).
+code_samples:
+  - SoundService-Reverb-System
+  - SoundService-PlayLocalSound
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: SoundService.AmbientReverb
+    summary: |
+      The ambient sound environment preset used by `Class.SoundService`.
+    description: |
+      The ambient sound environment preset used by `Class.SoundService`.
+
+      The `Enum.ReverbType` this property simulates a range of different
+      environment's impact on sound. Each different option corresponds with a
+      preset available in the FMOD sound engine. For example, when AmbientReverb
+      is set to Hangar, the sound will reverberate differently to simulate being
+      in a large enclosed space.
+
+      Changing the AmbientReverb effects the following properties used by
+      Roblox's sound engine.
+
+      - Reverberation decay time
+      - Initial reflection delay time
+      - Late reverberation delay time relative to initial reflection
+      - Reference high frequency
+      - High-frequency to mid-frequency decay time ratio
+      - Value that controls the echo density in the late reverberation decay
+      - Value that controls the modal density in the late reverberation decay
+      - Reference low frequency
+      - Relative room effect level at low frequencies
+      - Relative room effect level at high frequencies
+      - Early reflections level relative to room effect
+      - Room effect level at mid frequencies
+
+      Those interested in finding more out about ambient reverb presets should
+      see the
+      [FMOD documentation on the topic](https://www.fmod.com/docs/api/content/generated/FMOD_REVERB_PRESETS.html).
+      For most developers however, the `Enum.ReverbType` names are descriptive
+      enough to be able to use this setting without advanced knowledge.
+    code_samples:
+      - SoundService-Reverb-System
+    type: ReverbType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundService.DistanceFactor
+    summary: |
+      The number of studs to be considered a meter by `Class.SoundService` when
+      calculating 3D `Class.Sound` volume attenuation.
+    description: |
+      The number of studs to be considered a meter by `Class.SoundService` when
+      calculating 3D `Class.Sound` volume attenuation.
+
+      By default, the DistanceFactor is 3.33. This means, for the purposes of
+      volume attenuation, a meter is considered 3.33 studs. The greater the
+      DistanceFactor, the more gradually sound will attenuate.
+
+      ```
+      local SoundService = game:GetService("SoundService")
+      SoundService.DistanceFactor = 1 -- 1 meter = 1 stud
+      SoundService.DistanceFactor = 10 -- 1 meter = 10 studs
+      ```
+
+      Developers are advised to only change this property if their game uses a
+      different scale. For example, when using larger custom characters,
+      developers may want to reduce the DistanceFactor. In all other cases,
+      `Class.Sound` settings such as `Class.Sound.RollOffMode` should be used
+      instead.
+
+      Those looking to find out more about how 3D sound in Roblox works, should
+      consult the
+      [FMOD documentation](https://www.fmod.com/docs/api/content/generated/overview/3dsound.html).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundService.DopplerScale
+    summary: |
+      This property determines the degree to which a 3D `Class.Sound` object's
+      pitch varies due to the Doppler effect.
+    description: |
+      This property determines the degree to which a 3D `Class.Sound` object's
+      pitch varies due to the Doppler effect.
+
+      The Doppler effect describes a phenomenon whereby the pitch of a sound
+      changes as the source and observer of the sound move further away, or
+      closer together. The Doppler effect can often be seen in real life, such
+      as when a car with a siren drives past.
+
+      Increasing this value exaggerates the impact of the Doppler effect,
+      whereas decreasing it minimizes it. By default, the value of this property
+      is 1.
+
+      ```
+      local SoundService = game:GetService("SoundService")
+      SoundService.DopplerScale = 1 -- default
+      SoundService.DopplerScale = 2 -- exaggerated Doppler effect
+      SoundService.DopplerEffect = 0.5 -- subdued Doppler effect
+      ```
+
+      Note the Doppler effect has no impact on 2D `Class.Sound`s,
+      (`Class.Sound`s not parented to a `Class.BasePart` or `Class.Attachment`).
+
+      Developers wishing to learn more about the different settings Roblox's
+      sound engine uses should consult the
+      [FMOD documentation](https://www.fmod.com/docs/api/content/generated/overview/3dsound.html).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundService.RespectFilteringEnabled
+    summary: |
+      Sets whether `Class.Sound` playback from a client will replicate to the
+      server.
+    description: |
+      The **RespectFilteringEnabled** property determines whether `Class.Sound`
+      playback is replicated from the client to the server, and therefore from
+      server. In other words, when a `Class.LocalScript` calls
+      `Class.Sound:Play()` and this property is **true**, the sound will only
+      play on the respective client. If the property is false, other clients
+      will also hear the sound.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundService.RolloffScale
+    summary: |
+      Sets how fast 3D `Class.Sound` volume attenuates, or 'rolls off'.
+    description: |
+      Sets how fast 3D `Class.Sound` volume attenuates, or 'rolls off'.
+
+      Note, this property only applies to `Class.Sound`s whose
+      `Class.Sound.RollOffMode` property is set to 'Inverse' or
+      'InverseTapered'. 'Linear' and 'LinearSquare' `Enum.RollOffMode`s use a
+      different attenuation model which is not influenced by this property. This
+      property also has no impact on 2D sounds (`Class.Sound`s not parented to a
+      `Class.BasePart` or `Class.Attachment`).
+
+      The higher the RolloffScale, the more rapidly a 3D sound's volume will
+      attenuate as the distance between the listener and the sound increases.
+
+      By default the roll off scale is set to 1, which simulates the real world.
+
+      ```
+      local SoundService = game:GetService("SoundService")
+      SoundService.RolloffScale = 1 -- attenuation simulates real world
+      SoundService.RolloffScale = 2 -- sound attenuates twice as fast as the real world
+      ```
+
+      Developers wishing to learn more about the different settings Roblox's
+      sound engine uses should consult the
+      [FMOD documentation](https://www.fmod.com/docs/api/content/generated/overview/3dsound.html).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundService.VolumetricAudio
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VolumetricAudio
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: SoundService:GetListener
+    summary: |
+      GetListener returns `Class.SoundService`s current listener type and what
+      is set as listener.
+    description: |
+      This function returns `Class.SoundService|SoundService's` current listener
+      type and what is set as listener.
+
+      The first result returned is the `Enum.ListenerType` of the listener, the
+      second result is dependent on the ListenerType:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>ListenerType</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><code>Enum.ListenerType.Camera</code></td>
+                  <td>Does not return a listener object as <code>Workspace/CurrentCamera</code> is always used</td>
+              </tr>
+              <tr>
+                  <td><code>Enum.ListenerType.CFrame</code></td>
+                  <td>Returns the <code>Datatype.CFrame</code> used in <code>Class.SoundService:SetListener()</code></td>
+              </tr>
+              <tr>
+                  <td><code>Enum.ListenerType.ObjectPosition</code></td>
+                  <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()</code></td>
+              </tr>
+              <tr>
+                  <td><code>Enum.ListenerType.ObjectCFrame</code></td>
+                  <td>Returns the <code>Class.BasePart</code> used in <code>Class.SoundService:SetListener()</code></td>
+              </tr>
+          </tbody>
+      </table>
+
+      The listener can be changed using `Class.SoundService:SetListener()`.
+
+      ```lua
+      local SoundService = game:GetService("SoundService")
+      SoundService:SetListener(Enum.ListenerType.CFrame, CFrame.new(0, 0, 0))
+      local listenerType, listener = SoundService:GetListener()
+      print(listenerType, listener)
+      ```
+
+      #### What is a listener?
+
+      The listener determines the point from which audio in the game is being
+      'heard' by the player. For 3D `Class.Sound|Sounds` (Sounds parented to a
+      BasePart or `Class.Attachment`) the listener influences the volume and
+      left/right balance of a playing sound. Listeners have no influence on the
+      playback of 2D sounds as they have no position of emission.
+
+      By default, the listener is set to the CurrentCamera. However, a range of
+      different types of listeners can be used.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: |
+          The current `Enum.ListenerType` and what the listener has been set to.
+          Dependent on `Enum.ListenerType` the listener could be a
+          `Class.BasePart`, a `Datatype.CFrame` or nil.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SoundService:PlayLocalSound
+    summary: |
+      Plays a `Class.Sound` locally, meaning the sound will only be heard by the
+      client calling this function, regardless of where it's parented to.
+    description: |
+      Plays a `Class.Sound` locally, meaning the sound will only be heard by the
+      client calling this function, regardless of where it's parented to. This
+      function is most useful for playing a `Class.Sound` locally in the Studio
+      client, for instance in a `Class.Script` for a `Class.Plugin`.
+    code_samples:
+      - SoundService-PlayLocalSound
+    parameters:
+      - name: sound
+        type: Instance
+        default:
+        summary: |
+          The `Class.Sound` to be played.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SoundService:SetListener
+    summary: |
+      Sets the listener for the `Class.SoundService`.
+    description: |
+      Sets the listener used by the client.
+
+      The first parameter is the `Enum.ListenerType` of the listener, the second
+      parameter is dependent on the listener type.
+
+      - Camera ListenerType - Does not return a listener object as
+        `Class.Workspace.CurrentCamera` is always used
+      - CFrame ListenerType - The `Datatype.CFrame` to be used
+      - ObjectPosition ListenerType - The `Class.BasePart` to be used
+      - ObjectCFrame ListenerType - The BasePart to be used
+
+      The listener can be retrieved using `Class.SoundService:GetListener()`:
+
+      ```lua
+      local SoundService = game:GetService("SoundService")
+      SoundService:SetListener(Enum.ListenerType.CFrame, CFrame.new(0, 0, 0))
+      local listenerType, listener = SoundService:GetListener()
+      print(listenerType, listener)
+      ```
+
+      #### What is a listener?
+
+      The `Class.SoundService`'s listener determines the point from which audio
+      in the game is being 'heard' by the player. For 3D `Sounds` (sounds
+      parented to a BasePart or `Class.Attachment`) the listener influences the
+      volume and left/right balance of a playing sound. Listeners have no
+      influence on the playback of 2D sounds as they have no position of
+      emission.
+
+      By default, the listener is set to the CurrentCamera. However, a range of
+      different types of listeners can be used.
+    code_samples:
+    parameters:
+      - name: listenerType
+        type: ListenerType
+        default:
+        summary: |
+          The `Enum.ListenerType` of the listener.
+      - name: listener
+        type: Tuple
+        default:
+        summary: |
+          Dependent on the `Enum.ListenerType`. `Class.BasePart` for
+          'ObjectPosition' or 'ObjectCFrame', `Datatype.CFrame` for 'CFrame',
+          nil for 'Camera'.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

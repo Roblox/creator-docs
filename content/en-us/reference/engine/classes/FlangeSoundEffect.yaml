@@ -1,0 +1,78 @@
+name: FlangeSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Creates a sweeping or swooshing effect on a sound.
+description: |
+  The FlangeSoundEffect creates a sweeping or swooshing effect on the Sound or
+  SoundGroup it is applied to. It does this by copying the original audio signal
+  and playing on top of the original but slightly offset and modulated.
+
+  Like all other `Class.SoundEffect`, a FlangeSoundEffect can be applied either
+  to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: FlangeSoundEffect.Depth
+    summary: |
+      The intensity of the effect.
+    description: |
+      Range: 0.01 to 1 (default 0.45) The intensity of the effect. This value
+      determines how offset the duplicated signal will be from the original.
+      This value is the percentage of the max offset (40ms).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FlangeSoundEffect.Mix
+    summary: |
+      Percentage of the original sound that will be applied to the filter.
+    description: |
+      Range: 0 to 1 (default 0.85) Percentage of the original sound that will be
+      applied to the filter. Raising this value will make the effect sound
+      louder and be more apparent.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: FlangeSoundEffect.Rate
+    summary: |
+      The frequency that the effect oscillates at.
+    description: |
+      Range: 0 to 20 (default 5) The frequency that the effect oscillates at.
+      Measured in Hz.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

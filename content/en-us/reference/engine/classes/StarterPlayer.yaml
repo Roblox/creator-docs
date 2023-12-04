@@ -1,0 +1,765 @@
+name: StarterPlayer
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  A service which allows the defaults of properties in the `Class.Player` object
+  to be set.
+description: |
+  A service which allows the defaults of properties in the `Class.Player` object
+  to be set. When a player enters the server, each property of the player object
+  is set to the current value of the corresponding property in StarterPlayer.
+
+  Additionally, you may add four objects to this service:
+
+  - A `Class.StarterPlayerScripts` instance, with scripts that run once for each
+    player.
+  - A `Class.StarterCharacterScripts` instance, with scripts to add to each
+    player's character every time they spawn.
+  - A `Class.Humanoid` instance named **StarterHumanoid**, which will be used as
+    the default humanoid for each player's character.
+  - A `Class.Model` instance named **StarterCharacter**, which will be used as
+    the character model for all players
+
+  A typical structure may look something like this:
+
+  ![StarterPlayer Tree](/assets/legacy/StarterPlayerTree.png)
+code_samples:
+  - setting-a-player-s-replication-focus
+  - displaying-a-humanoid-s-health-and-name
+  - setting-camera-zoom-distance
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: StarterPlayer.AllowCustomAnimations
+    summary: |
+      Describes the current game's permission levels regarding custom avatar
+      animations from the website.
+    description: |
+      The AllowCustomAnimations `Class.StarterPlayer` property describes the
+      current game's permission levels regarding custom avatar
+      `Class.Animation`s from the website.
+
+      As such, this value cannot be changed from within the game. It can only be
+      changed by changing the game's permission levels within the game's
+      setting's page on the website.
+
+      This property is not intended for use in the game.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.AnimationCompositorMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AnimationCompositorMode
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.AutoJumpEnabled
+    summary: |
+      Sets whether the character will automatically jump when hitting an
+      obstacle on a mobile device.
+    description: |
+      The AutoJumpEnabled property sets whether the character will automatically
+      jump when hitting an obstacle on a mobile device.
+
+      This property is copied from the `Class.StarterPlayer` to a `Class.Player`
+      when they join the game. Following that. the value of this property is
+      copied to `Class.Humanoid.AutoJumpEnabled` property of the
+      `Class.Player.Character`s `Class.Humanoid` on spawn. In other words, it is
+      possible to set the auto-jump behavior on a per-character, per-player and
+      per-game basis using these three properties.
+    code_samples:
+      - Auto-Jump-Toggle
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mobile
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.AvatarJointUpgrade
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AvatarJointUpgrade
+    tags:
+      - NotReplicated
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StarterPlayer.CameraMaxZoomDistance
+    summary: |
+      The maximum distance the player's default camera is allowed to zoom out in
+      studs.
+    description: |
+      The CameraMaxZoomDistance `Class.StarterPlayer` property sets the maximum
+      distance in studs the camera can be from the character with the default
+      cameras.
+
+      This property sets the default value of
+      `Class.Player.CameraMaxZoomDistance` for each player who joins the game.
+      If this value is set to a lower value than
+      `Class.StarterPlayer.CameraMinZoomDistance` it will be increased to
+      CameraMinZoomDistance.
+    code_samples:
+      - setting-camera-zoom-distance
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CameraMinZoomDistance
+    summary: |
+      The minimum distance in studs the player's default camera is allowed to
+      zoom in.
+    description: |
+      The CameraMinZoonDistance `Class.StarterPlayer` property sets the minimum
+      distance in studs the camera can be from the character with the default
+      cameras.
+
+      This property sets the default value of
+      `Class.Player.CameraMinZoomDistance` for each player who joins the game.
+      If this value is set to a higher value than
+      `Class.StarterPlayer.CameraMaxZoomDistance` it will be decreased to
+      CameraMaxZoomDistance.
+    code_samples:
+      - setting-camera-zoom-distance
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CameraMode
+    summary: |
+      Changes the default camera's mode to either first or third person.
+    description: |
+      The CameraMode `Class.StarterPlayer` property sets whether cameras will be
+      locked to first person or not when a player joins the game.
+
+      Sets the default value for `Class.Player.CameraMode` for each player in
+      the game.
+
+      The camera has two modes:
+
+      1. First person
+      2. Third person
+
+      The `Enum.CameraMode` Enum is used to set CameraMode, and determines when
+      first and third person cameras should be used.
+
+      #### First-person
+
+      In first-person mode, the player's camera is zoomed all the way in. Unless
+      there is a visible GUI present with the `Class.GuiButton.Modal` property
+      set to _true_, the mouse will be locked and the user's camera will turn as
+      the mouse moves.
+
+      #### Third-person
+
+      In third-person mode, the character can be seen in the camera. While in
+      third-person mode on Roblox:
+
+      - You may right-click and drag to rotate your camera, or use the arrow
+        keys at the bottom right-hand corner of the screen.
+      - When you move your mouse, your camera does not change (unless you move
+        the mouse to the end of the screen).
+      - When you press any of the arrow keys, the user's character will face in
+        the corresponding arrow key's direction.
+      - You can zoom in and out freely.
+
+      Third-person is the default camera setting.
+    code_samples:
+      - untitled
+      - playing-in-first-person
+    type: CameraMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CharacterJumpHeight
+    summary: |
+      Determines the starting value of `Class.Humanoid.JumpHeight` for
+      `Class.Player.Character`.
+    description: |
+      **CharacterJumpHeight** determines the starting value of
+      `Class.Humanoid.JumpHeight` for a `Class.Player`'s
+      `Class.Player.Character|Character`. The value of this property defaults to
+      7.2 studs.
+
+      This property is only visible in the Properties window If
+      `Class.StarterPlayer.CharacterUseJumpPower` is set to **false**, as it
+      would not be relevant otherwise.
+
+      Since this property is only relevant for characters being spawned in the
+      future, changing it will not change any existing player characters.
+      Changes to this property will only take effect when a player respawns.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CharacterJumpPower
+    summary: |
+      Determines the starting value of `Class.Humanoid.JumpPower` for
+      `Class.Player.Character`.
+    description: |
+      **CharacterJumpPower** determines the starting value of
+      `Class.Humanoid.JumpPower` for a `Class.Player`'s
+      `Class.Player.Character|Character`. The value of this property defaults to
+      50 and when applied to the `Class.Player`s `Class.Humanoid` it will be
+      constrained between 0 and 1000.
+
+      This property is only visible in the Properties window If
+      `Class.StarterPlayer.CharacterUseJumpPower` is set to **true**, as it
+      would not be relevant otherwise.
+
+      Since this property is only relevant for characters being spawned in the
+      future, changing it will not change any existing player characters.
+      Changes to this property will only take effect when a player respawns.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CharacterMaxSlopeAngle
+    summary: |
+      Determines the starting value of `Class.Humanoid.MaxSlopeAngle` for
+      `Class.Player.Character`.
+    description: |
+      **CharacterMaxSlopeAngle** determines the starting value of
+      `Class.Humanoid.MaxSlopeAngle` for a `Class.Player`'s
+      `Class.Player.Character|Character`. It defaults to 89°, so humanoids can
+      climb pretty much any slope they want by default. When applied to the
+      `Class.Player`'s `Class.Humanoid` it will be constrained between 0 and 89.
+
+      Since this property is only relevant for characters being spawned in the
+      future, changing it will not change any existing player characters.
+      Changes to this property will only take effect when a player respawns.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CharacterUseJumpPower
+    summary: |
+      Determines the starting state of `Class.Humanoid.UseJumpPower` for
+      `Class.Player.Character`.
+    description: |
+      **CharacterUseJumpPower** determines the starting value of
+      `Class.Humanoid.UseJumpPower` for a `Class.Player`'s
+      `Class.Player.Character|Character`. Toggling it will change which property
+      is visible in the properties window:
+      `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight` (false) or
+      `Class.StarterPlayer.CharacterJumpPower` (true). Defaults to true.
+
+      Since this property is only relevant for characters being spawned in the
+      future, changing it will not change any existing player characters.
+      Changes to this property will only take effect when a player respawns.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character Jump Settings
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.CharacterWalkSpeed
+    summary: |
+      Determines the starting value of `Class.Humanoid.WalkSpeed` for
+      `Class.Player.Character`.
+    description: |
+      **CharacterWalkSpeed** determines the starting value of
+      `Class.Humanoid.WalkSpeed` for a `Class.Player`'s
+      `Class.Player.Character|Character`. This property defaults to 16.
+
+      Since this property is only relevant for characters being spawned in the
+      future, changing it will not change any existing player characters.
+      Changes to this property will only take effect when a player respawns.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DeathStyle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DeathStyle
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DevCameraOcclusionMode
+    summary: |
+      Sets how the default camera handles objects between the camera and the
+      player.
+    description: |
+      Defines how the default camera scripts handle objects between the camera
+      and the camera subject. Applies to all players as they join the experience
+      and can't be changed for individual players.
+
+      The default value is `Enum.DevCameraOcclusionMode|Zoom` (0). See
+      `Enum.DevCameraOcclusionMode` for a list of available modes.
+    code_samples: []
+    type: DevCameraOcclusionMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DevComputerCameraMovementMode
+    summary: |
+      Lets developer overwrite the default camera mode for each player if the
+      player is on a computer.
+    description: |
+      The DevComputerCameraMovementMode `Class.StarterPlayer` property lets the
+      developer overwrite the player's camera mode if the player is on a
+      computer.
+
+      This is the default property for players joining the game. It can be
+      changed for individual players by settings the
+      `Class.Player.DevComputerCameraMode`.
+
+      If set to **UserChoice** then the player's camera movement mode will be
+      determined by whatever the player set in the game settings. Otherwise, the
+      mode will be set based on this property.
+
+      See `Enum.DevComputerCameraMovementMode` for the different camera modes
+      available.
+
+      This property has no affect on players not on a computer.
+    code_samples:
+      - setting-a-player-s-camera-movement-mode-desktop-
+    type: DevComputerCameraMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DevComputerMovementMode
+    summary: |
+      Lets developer overwrite the player's movement mode if the player is on a
+      computer.
+    description: |
+      The DevComputerMovementMove `Class.StarterPlayer` property lets the
+      developer overwrite the player's movement mode if the player is on a
+      computer.
+
+      This is the default property for players joining the game. It can be
+      changed for individual players by settings the
+      `Class.Player.DevComputerMovementMode`.
+
+      If set to **UserChoice** then the player's movement mode will be
+      determined by whatever the player set in the game settings. Otherwise, the
+      mode will be set based on this property.
+
+      See `Enum.DevComputerMovementMode` for the different movement modes
+      available. Lets developer overwrite the player's movement mode if the
+      player is on a computer.
+
+      This property has no affect on players not on a computer.
+    code_samples:
+      - setting-a-player-s-movement-mode-desktop-
+    type: DevComputerMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DevTouchCameraMovementMode
+    summary: |
+      Lets developer overwrite the default camera movement mode for each player
+      if the player is on a mobile device.
+    description: |
+      The DevTouchCameraMovementMode `Class.StarterPlayer` property lets the
+      developer overwrite the player's camera mode if the player is on a touch
+      device.
+
+      This is the default property for players joining the game. It can be
+      changed for individual players by settings the
+      `Class.Player.DevTouchCameraMode`.
+
+      If set to **UserChoice** then the player's camera movement mode will be
+      determined by whatever the player set in the game settings. Otherwise, the
+      mode will be set based on this property.
+
+      See `Enum.DevTouchCameraMovementMode` for the different camera modes
+      available.
+
+      This property has no affect players not on a mobile device.
+    code_samples:
+      - setting-a-player-s-camera-movement-mode
+    type: DevTouchCameraMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.DevTouchMovementMode
+    summary: |
+      Lets developer overwrite the player's movement mode if the player is on a
+      touch device.
+    description: |
+      The DevTouchMovementMode `Class.StarterPlayer` property lets the developer
+      overwrite the player's movement mode if the player is on a touch device.
+
+      This is the default property for players joining the game. It can be
+      changed for individual players by settings the
+      `Class.Player.DevTouchMovementMode`.
+
+      If set to **UserChoice** then the player's movement mode will be
+      determined by whatever the player set in the game settings. Otherwise, the
+      mode will be set based on this property.
+
+      See `Enum.DevTouchMovementMode` for the different movement modes
+      available. Lets developer overwrite the player's movement mode if the
+      player is on a touch device.
+
+      This property has no affect on players not on a touch-enabled device.
+    code_samples:
+      - overriding-a-player-s-movement-mode
+    type: DevTouchMovementMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.EnableDynamicHeads
+    summary: ''
+    description: ''
+    code_samples: []
+    type: LoadDynamicHeads
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.EnableMouseLockOption
+    summary: |
+      Determines if a player can toggle mouse lock by default.
+    description: |
+      The EnableMouseLockOption `Class.StarterPlayer` property determines if a
+      player can toggle mouse lock by default.
+
+      Mouselock will lock the player's cursor to the center of the screen.
+      Moving the mouse will rotate the `Class.Camera` and `Class.Player` will
+      move relative to the current rotation of the camera.
+
+      This property sets the value of `Class.Player.DevEnableMouseLock`.
+
+      Note that shift-lock related APIs are in the process of being deprecated,
+      so it's recommended to use `Class.UserInputService.MouseBehavior` instead
+      to lock the mouse.
+    code_samples:
+      - enabling-a-player-s-mouse-lock
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.HealthDisplayDistance
+    summary: |
+      Sets the distance at which this player will see other Humanoid's health
+      bars. If set to 0, the health bars will not be displayed.
+    description: |
+      The HealthDisplayDistance `Class.StarterPlayer` property sets the distance
+      in studs at which this player will see other `Class.Humanoid`'s health
+      bars. If set to 0, the health bars will not be displayed. This property is
+      set to 100 studs by default.
+
+      To change the display distance for a player once they join the game, you
+      can set the `Class.Player.HealthDisplayDistance` property.
+
+      If a Humanoid's health bar is visible, you can set the display type using
+      `Class.Humanoid.DisplayDistanceType`.
+    code_samples:
+      - hiding-player-health-and-names
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.HumanoidStateMachineMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: HumanoidStateMachineMode
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.LoadCharacterAppearance
+    summary: |
+      Whether or not the appearance of a player's character should be loaded.
+    description: |
+      The LoadCharacterAppearance `Class.StarterPlayer` property sets whether or
+      not the appearance of a player's character should be loaded.
+
+      Setting this to _false_ results in the player having no clothes (including
+      hats), body colors, body packages or anything else related to the
+      appearance of the player's avatar. By default, this property is set to
+      _true_.
+
+      Setting this to _true_ results in the player loading the appearance
+      corresponding to the player's `Class.Player.CharacterAppearanceId`.
+
+      If `Class.Player:LoadCharacterWithHumanoidDescription()` is used, it can
+      be advantageous to set `Class.StarterPlayer.LoadCharacterAppearance` to
+      false as the player's avatar is not required as all asset IDs to equip on
+      the character will come from the passed in `Class.HumanoidDescription`.
+    code_samples:
+      - disabling-a-player-s-appearance
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+  - name: 'StarterPlayer.LoadCharacterLayeredClothing '
+    summary: |
+      Indicates whether characters spawning into an experience will have layered
+      clothing accessories equipped on them.
+    description: |
+      Indicates whether characters spawning into an experience will have layered
+      clothing accessories equipped on them (Although
+      `Class.Workspace.MeshPartHeadsAndAccessories` also need to be enabled in
+      the `Class.Workspace`).
+    code_samples: []
+    type: LoadCharacterLayeredClothing
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: false
+      can_save: false
+  - name: StarterPlayer.LuaCharacterController
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CharacterControlMode
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Controls
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.NameDisplayDistance
+    summary: |
+      Sets the distance at which this player will see other Humanoid's names. If
+      set to 0, names are hidden.
+    description: |
+      Sets the distance at which this player will see other Humanoid's names. If
+      set to 0, names are hidden.
+
+      The NameDisplayDistance `Class.StarterPlayer` property sets the distance
+      in studs at which this player will see other `Class.Humanoid`'s names. If
+      set to 0, names are hidden. This property is set to 100 studs by default.
+
+      To change the display distance for a player once they join the game, you
+      can set the `Class.Player.NameDisplayDistance` property.
+
+      If a Humanoid's name is visible, you can set the display type using
+      `Class.Humanoid.DisplayDistanceType`.
+    code_samples:
+      - hiding-player-health-and-names
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: StarterPlayer.UserEmotesEnabled
+    summary: |
+      Determines if user-owned emotes are loaded when loading avatars.
+    description: |
+      This property determines if user-owned emotes are loaded when loading
+      avatars. Setting this property to false disables loading. Developers can
+      set the property in Studio directly or through the
+      [Game Settings menu](../../../studio/game-settings.md).
+
+      When emote loading is disabled, the emotes UI will still work as long as
+      developers choose to use the emotes feature by adding emotes within their
+      game.
+
+      See also:
+
+      - [Avatar Emotes](../../../characters/emotes.md), an article detailing how
+        to control, customize, and play avatar emotes
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Character
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

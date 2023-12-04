@@ -1,0 +1,343 @@
+name: ChangeHistoryService
+type: class
+category: Plugins
+memory_category: Instances
+summary: |
+  **Must** be used by plugins to communicate to Studio how to undo and redo the
+  changes which they make to the experience.
+description: |
+  Plugin developers **must** use `Class.ChangeHistoryService` to tell Studio how
+  to undo and redo changes that their plugins make to experiences by recording.
+  Before making changes, a plugin calls
+  `Class.ChangeHistoryService:TryBeginRecording()`, remembering the identifier
+  it assigns, then after making changes, the Plugin calls
+  `Class.ChangeHistoryService:FinishRecording()` to complete the recording.
+
+  Plugins may also programmatically invoke an undo or redo through
+  `Class.ChangeHistoryService:Undo()` or `Class.ChangeHistoryService:Redo()`.
+
+  `Class.ChangeHistoryService` is not enabled at runtime, so calling its methods
+  in a running experience has no effect.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: ChangeHistoryService:FinishRecording
+    summary: |
+      Communicates to Studio that the identified recording is finished and to
+      take the final operation to complete the recording.
+    description: ''
+    code_samples:
+      - ChangeHistoryService-TryBeginRecording1
+    parameters:
+      - name: identifier
+        type: string
+        default:
+        summary: |
+          Identifies the recording from the previous call to
+          `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
+          If the operation is
+          `Enum.ChangeHistoryService.FinishRecordingOperation.Cancel`, this
+          value is ignored, and the recording is determined by context.
+      - name: operation
+        type: FinishRecordingOperation
+        default:
+        summary: |
+          Specifies the operation to take.
+      - name: finalOptions
+        type: Dictionary?
+        default:
+        summary: |
+          Optional table of values to pass to
+          `Class.ChangeHistoryService.OnFinishRecording|OnFinishRecording`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:GetCanRedo
+    summary: |
+      Returns whether there are actions that can be redone, and, if there are,
+      returns the last of them.
+    description: |
+      Returns whether there are actions that can be redone, and, if there are,
+      returns the last of them.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:GetCanUndo
+    summary: |
+      Returns whether there are actions that can be undone, and, if there are,
+      returns the last of them.
+    description: |
+      Returns whether there are actions that can be undone, and, if there are,
+      returns the last of them.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:IsRecordingInProgress
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: identifier
+        type: string?
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:Redo
+    summary: |
+      Executes the last action that was undone.
+    description: |
+      Executes the last action that was undone.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:ResetWaypoints
+    summary: |
+      Clears the history, causing all undo/redo waypoints to be removed.
+    description: |
+      Clears the history, causing all undo/redo waypoints to be removed.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:SetEnabled
+    summary: |
+      Sets whether or not the ChangeHistoryService is enabled.
+    description: |
+      Sets whether or not the ChangeHistoryService is enabled. When set to
+      false, the undo/redo list is cleared, and does not repopulate. When set to
+      true again, the original list is not restored, but further operations
+      append to the list once more
+    code_samples:
+    parameters:
+      - name: state
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:SetWaypoint
+    summary: |
+      Sets a new waypoint which can be used as an undo or redo point.
+    description: |
+      This method will be **deprecated soon** in favor of
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
+
+      `Class.ChangeHistoryService` tracks plugin history as a stream of property
+      changes. `Class.ChangeHistoryService:SetWaypoint()|SetWaypoint()` creates
+      a cut in that stream of property changes so that the undo and redo actions
+      know where to stop.
+
+      By convention, user-invoked actions in Studio **must** call
+      `Class.ChangeHistoryService:SetWaypoint()|SetWaypoint()` _after_
+      completing their set of changes to the experience. Calling it **before** a
+      set of changes may clean up another misbehaving plugin which failed to set
+      a waypoint, but it's a poor reason to justify such usage in your own
+      plugin.
+    code_samples:
+      - ChangeHistoryService-SetWaypoint1
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:TryBeginRecording
+    summary: |
+      Begins tracking changes made to the data model into a recording.
+    description: |
+      This method begins a recording to track changes to the data model. You
+      **must** call it prior to making changes to avoid future warnings or
+      errors.
+
+      When the recording is completed, you call
+      `Class.ChangeHistoryService.FinishRecording()|FinishRecording()` with the
+      returned recording identifier to complete the recording and update the
+      undo/redo stack.
+
+      If the plugin already has a recording in progress, this method will fail
+      and return `nil`.
+
+      You may use
+      `Class.ChangeHistoryService.IsRecordingInProgress()|IsRecordingInProgress()`
+      to check the recording status of the plugin.
+    code_samples:
+      - ChangeHistoryService-TryBeginRecording1
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the action being performed suitable for logging and coding
+          purposes.
+      - name: displayName
+        type: string?
+        default:
+        summary: |
+          Name of the action being performed to display to the user.
+    returns:
+      - type: string?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService:Undo
+    summary: |
+      Undos the last action taken, for which there exists a waypoint.
+    description: |
+      Undos the last action taken, for which there exists a waypoint.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: ChangeHistoryService.OnRecordingFinished
+    summary: |
+      Fired when the user completes an action. Parameters come from
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()` and
+      `Class.ChangeHistoryService:FinishRecording()|FinishRecording()`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the action being performed suitable for logging and coding
+          purposes.
+      - name: displayName
+        type: string?
+        default:
+        summary: |
+          Name of the action being performed to display to the user.
+      - name: identifier
+        type: string?
+        default:
+        summary: |
+          The identifier for the recording.
+      - name: operationn
+        type: FinishRecordingOperation
+        default:
+        summary: ''
+      - name: finalOptions
+        type: Dictionary?
+        default:
+        summary: |
+          Optional table from
+          `Class.ChangeHistoryService.FinishOperation()| FinishOperation()`.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService.OnRecordingStarted
+    summary: |
+      Fired when the user begins an action. Parameters come from
+      `Class.ChangeHistoryService:TryBeginRecording()|TryBeginRecording()`.
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the action being performed suitable for logging and coding
+          purposes.
+      - name: displayName
+        type: string?
+        default:
+        summary: |
+          Name of the action being performed to display to the user.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService.OnRedo
+    summary: |
+      Fired when the user reverses the undo command. Waypoint describes the type
+      action that has been redone.
+    description: |
+      Fired when the user reverses the undo command. Waypoint describes the type
+      action that has been redone.
+    code_samples:
+    parameters:
+      - name: waypoint
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ChangeHistoryService.OnUndo
+    summary: |
+      Fired when the user undoes an action in studio. Waypoint describes the
+      type action that has been undone.
+    description: |
+      Fired when the user undoes an action in studio. Waypoint describes the
+      type action that has been undone.
+    code_samples:
+    parameters:
+      - name: waypoint
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

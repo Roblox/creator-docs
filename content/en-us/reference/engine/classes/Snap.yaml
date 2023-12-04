@@ -1,0 +1,41 @@
+name: Snap
+type: class
+category: Joints
+memory_category: PhysicsParts
+summary: |
+  Holds two parts together and functions identically to `Class.Weld`.
+description: |
+  An object that holds two objects rigidly together. Most commonly created when
+  `Class.BasePart:MakeJoints()` is called on parts where Inlet and Stud
+  `Enum.SurfaceType` are touching.
+
+  Functionally identical to `Class.Weld`.
+
+  See also `Class.WeldConstraint` for a newer alternative using the
+  [constraints](../../../physics/mechanical-constraints.md) system that does not
+  require `Class.JointInstance.C0|C0` or `Class.JointInstance.C1|C1` properties
+  to be manually set.
+
+  ## Root part
+
+  Every Assembly has a root part, see `Class.BasePart:GetRootPart()`. When a
+  Snap's `Class.JointInstance.C0|C0`/`Class.JointInstance.C1|C1` is modified the
+  root part will stay where it was.
+
+  ## Directionality
+
+  Snaps do not have any directionality. `Class.JointInstance.Part0|Part0` or
+  `Class.JointInstance.Part1|Part1`, doesn't matter. You can imagine rigid
+  joints forming a tree branching down from the root part. All the parts down
+  the tree from root will move, and their welded "children" in this tree will
+  move with them.
+code_samples:
+inherits:
+  - JointInstance
+tags:
+  - Deprecated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

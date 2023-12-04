@@ -1,0 +1,362 @@
+name: LinearVelocity
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  Applies force on an assembly to maintain a **constant** linear velocity.
+description: |
+  The **LinearVelocity** constraint applies force on an assembly to maintain a
+  **constant** linear velocity. It can be set to apply force along a
+  `Datatype.Vector3`, line, or 2D&nbsp;plane. Alternatively:
+
+  - If you want to control the amount of force applied, use a
+    `Class.VectorForce` constraint.
+  - If you only need **initial** linear velocity, set the
+    `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity` property
+    directly on the assembly.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Relativity
+
+  Application of velocity can be controlled through the constraint's
+  `Class.LinearVelocity.RelativeTo|RelativeTo` property. If set to
+  `Enum.ActuatorRelativeTo|World`, force will be applied in world coordinates,
+  independent of the parent or attachment orientations. If set to
+  `Enum.ActuatorRelativeTo|Attachment0` or
+  `Enum.ActuatorRelativeTo|Attachment1`, force will be applied relative to
+  `Class.Constraint.Attachment0|Attachment0` or
+  `Class.Constraint.Attachment1|Attachment1` respectively.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: LinearVelocity.ForceLimitMode
+    summary: |
+      Determines how the constraint force will be limited.
+    description: |
+      Determines how the constraint force will be limited. When set to
+      `Enum.ForceLimitMode|Magnitude`, the constraint force will have a
+      magnitude less than `Class.LinearVelocity.MaxForce|MaxForce`. When set to
+      `Enum.ForceLimitMode|PerAxis`, the force along each axis will be less than
+      the corresponding value in
+      `Class.LinearVelocity.MaxAxesForce|MaxAxesForce` when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Vector` or the corresponding value in
+      `Class.LinearVelocity.MaxPlanarAxesForce|MaxPlanarAxesForce` when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Plane`. Only used when
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true.
+    code_samples: []
+    type: ForceLimitMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.ForceLimitsEnabled
+    summary: |
+      Determines if the constraint force will be limited or if the physics
+      solver can apply an unlimited force to achieve the target velocity.
+    description: |
+      Determines if the constraint force will be limited or if the physics
+      solver can apply an unlimited force to achieve the target velocity. When
+      enabled, the constraint force is limited based on
+      `Class.LinearVelocity.ForceLimitMode|ForceLimitMode`. When disabled, the
+      physics solver will always apply a force that is large enough to achieve
+      the target velocity.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.LineDirection
+    summary: |
+      The normalized `Datatype.Vector3` direction for constraining the velocity
+      along a line.
+    description: |
+      The normalized `Datatype.Vector3` direction for constraining the velocity
+      along a line, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Line`.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Line
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.LineVelocity
+    summary: |
+      Float value of the velocity when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Line`.
+    description: |
+      Float value of the velocity when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Line`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Line
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.MaxAxesForce
+    summary: |
+      Maximum force along each axis that the constraint can apply to achieve the
+      vector velocity. Only used if
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
+      `Enum.ForceLimitMode|PerAxis`, and
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Vector`.
+    description: |
+      Maximum force along each axis that the constraint can apply to achieve the
+      target velocity. Only used if
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
+      `Enum.ForceLimitMode|PerAxis`, and
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Vector`. The axes used to apply the limit
+      correspond to the `Class.LinearVelocity.RelativeTo|RelativeTo` property.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.MaxForce
+    summary: |
+      Maximum magnitude of the force vector the constraint can apply.
+    description: |
+      Maximum magnitude of the force vector the constraint can apply. Only used
+      if `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true
+      and `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
+      `Enum.ForceLimitMode|Magnitude`.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.MaxPlanarAxesForce
+    summary: |
+      Maximum force along each axis that the constraint can apply to achieve the
+      plane velocity. Only used if
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
+      `Enum.ForceLimitMode|PerAxis`, and
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Plane`.
+    description: |
+      Maximum force along each axis that the constraint can apply to achieve the
+      plane velocity. Only used if
+      `Class.LinearVelocity.ForceLimitsEnabled|ForceLimitsEnabled` is true,
+      `Class.LinearVelocity.ForceLimitMode|ForceLimitMode` is
+      `Enum.ForceLimitMode|PerAxis`, and
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      `Enum.VelocityConstraintMode|Plane`. The axes used to apply the limit
+      correspond to the `Class.LinearVelocity.RelativeTo|RelativeTo` property.
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.PlaneVelocity
+    summary: |
+      `Datatype.Vector2` value of the velocity in each tangent direction of the
+      plane.
+    description: |
+      `Datatype.Vector2` value of the velocity in each tangent direction of the
+      plane, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Plane`.
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Plane
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.PrimaryTangentAxis
+    summary: |
+      The primary axis in the plane, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Plane`.
+    description: |
+      The primary axis in the plane, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Plane`. Value depends on the value of
+      `Class.LinearVelocity.RelativeTo|RelativeTo` as follows:
+
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|Attachment0`, this axis is the
+        `Class.Attachment.Axis|Axis` of
+        `Class.Constraint.Attachment0|Attachment0`.
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|Attachment1`, this axis is the
+        `Class.Attachment.Axis|Axis` of
+        `Class.Constraint.Attachment1|Attachment1`.
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|World`, this value must be specified in the
+        world space.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Plane
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.RelativeTo
+    summary: |
+      Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`
+      constraint.
+    description: |
+      Sets the `Enum.ActuatorRelativeTo` property for the `Class.LinearVelocity`
+      constraint.
+    code_samples:
+    type: ActuatorRelativeTo
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.SecondaryTangentAxis
+    summary: |
+      The secondary axis in the plane, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Plane`.
+    description: |
+      The secondary axis in the plane, when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Plane`. Value depends on the value of
+      `Class.LinearVelocity.RelativeTo|RelativeTo` as follows:
+
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|Attachment0`, this axis is the
+        `Class.Attachment.SecondaryAxis|SecondaryAxis` of
+        `Class.Constraint.Attachment0|Attachment0`.
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|Attachment1`, this axis is the
+        `Class.Attachment.SecondaryAxis|SecondaryAxis` of
+        `Class.Constraint.Attachment1|Attachment1`.
+      - If `Class.LinearVelocity.RelativeTo|RelativeTo` is set to
+        `Enum.ActuatorRelativeTo|World`, this value must be specified in the
+        world space.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Plane
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.VectorVelocity
+    summary: |
+      `Datatype.Vector3` velocity value when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Vector`.
+    description: |
+      `Datatype.Vector3` velocity value when
+      `Class.LinearVelocity.VelocityConstraintMode|VelocityConstraintMode` is
+      set to `Enum.VelocityConstraintMode|Vector`.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Vector
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LinearVelocity.VelocityConstraintMode
+    summary: |
+      The mode of the `Class.LinearVelocity` constraint.
+    description: |
+      The mode of the `Class.LinearVelocity` constraint:
+      `Enum.VelocityConstraintMode|Line`, `Enum.VelocityConstraintMode|Plane`,
+      or `Enum.VelocityConstraintMode|Vector`. Default is
+      `Enum.VelocityConstraintMode|Vector`.
+    code_samples:
+    type: VelocityConstraintMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

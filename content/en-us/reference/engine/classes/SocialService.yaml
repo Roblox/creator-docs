@@ -1,0 +1,305 @@
+name: SocialService
+type: class
+category:
+memory_category: Instances
+summary: |
+  Facilitates social functions that impact relationships made on the Roblox
+  platform.
+description: |
+  **SocialService** facilitates social functions that impact relationships made
+  on the Roblox platform. Its primary usage is to show
+  [invite prompts](../../../production/promotion/invite-prompts.md) and the
+  phone book to players, allowing them to send invitation requests to their
+  friends through `Class.SocialService:PromptGameInvite()|PromptGameInvite()`
+  and `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` respectively.
+  You may leverage signals when such requests are made.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: SocialService:HideSelfView
+    summary: |
+      Hides the calling player's self view.
+    description: |
+      Hides the calling player's self view. If this method is called while the
+      self view is already hidden, it does nothing.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:PromptGameInvite
+    summary: |
+      Prompts the given `Class.Player` with the invite screen.
+    description: |
+      `Class.SocialService:PromptGameInvite()|PromptGameInvite()` displays an
+      invite prompt to the local player through which they may invite their
+      friends to the current experience. Before calling this method, you should
+      use
+      `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()` to
+      determine whether the player can send an invite, as this ability may vary
+      depending on the platform or player.
+
+      <img
+      src="/assets/promotion/invite-prompts/Prompt-Multiple-Friends.jpg"
+      width="812" />
+
+      See
+      [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
+      for more details on implementing invite prompts, customizing prompts and
+      notifications, and using launch data.
+    code_samples:
+      - sending-a-game-invite
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` to prompt with the invite popup.
+      - name: experienceInviteOptions
+        type: Instance
+        default: nil
+        summary: |
+          Optional `Class.ExperienceInviteOptions` object for customizing the
+          prompt.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:PromptPhoneBook
+    summary: |
+      Prompts the given `Class.Player` with the phone book.
+    description: |
+      Prompts the given `Class.Player` with the phone book. If the player
+      chooses to call someone, the
+      `Class.SocialService.CallInviteStateChanged|CallInviteStateChanged` event
+      fires. You should use
+      `Class.SocialService:CanSendCallInviteAsync()|CanSendCallInviteAsync()`
+      prior to calling `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()`
+      since the ability to see the phone book may vary depending on the player.
+
+      If a player is not eligible to open the phone book, an error dialog is
+      shown.
+
+      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
+      implementation of this method.
+    code_samples:
+      - SocialService-PromptPhoneBook
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player to prompt with the phone book.
+      - name: tag
+        type: string
+        default:
+        summary: |
+          String to help differentiate between various phone book "entry points"
+          or similar. For example, you can pass a string defining what region of
+          an experience the calling player's character is currently in.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:ShowSelfView
+    summary: |
+      Shows the calling player's self view.
+    description: |
+      Shows the calling player's self view. If this method is called while the
+      self view is already visible, it does nothing.
+    code_samples:
+    parameters:
+      - name: selfViewPosition
+        type: SelfViewPosition
+        default: LastPosition
+        summary: |
+          The position to place the self view .
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:CanSendCallInviteAsync
+    summary: |
+      Indicates whether the given `Class.Player` can invite other players to a
+      call.
+    description: |
+      Returns `true` if the given `Class.Player` can send a call invite to a
+      friend. You should always use the result of this method before calling
+      `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()` since the
+      ability to open the phone book may vary depending on the player.
+
+      See [Roblox Connect](../../../resources/roblox-connect.md) for a sample
+      implementation of this method.
+    code_samples:
+      - SocialService-PromptPhoneBook
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the player potentially sending a call
+          invite.
+    returns:
+      - type: bool
+        summary: |
+          Whether the specified player can send a call invite.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService:CanSendGameInviteAsync
+    summary: |
+      Indicates whether the given `Class.Player` can invite other players.
+    description: |
+      `Class.SocialService:CanSendGameInviteAsync()|CanSendGameInviteAsync()`
+      returns `true` if the given `Class.Player` can invite other players to the
+      current experience. You should always use the result of this method before
+      calling `Class.SocialService:PromptGameInvite()|PromptGameInvite()` since
+      the ability to invite players may vary depending on the platform or
+      player.
+
+      See
+      [Player Invite Prompts](../../../production/promotion/invite-prompts.md)
+      for more details on implementing player invite prompts, customizing
+      prompts and notifications, and using launch data.
+    code_samples:
+      - sending-a-game-invite
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the player potentially sending an
+          invite.
+      - name: recipientId
+        type: int64
+        default: 0
+        summary: |
+          Optional `Class.Player.UserId` of the potential **recipient**, used to
+          check whether the sender can invite that specific recipient.
+    returns:
+      - type: bool
+        summary: |
+          Whether the specified player can send an invite.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: SocialService.CallInviteStateChanged
+    summary: |
+      Fires when a player's call invite state changes.
+    description: |
+      This event fires when a player's call invite state changes.
+    code_samples:
+      - SocialService-CallInviteStateChanged
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the player who had a call invite state
+          change.
+      - name: inviteState
+        type: InviteState
+        default:
+        summary: |
+          The new call invite state.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService.GameInvitePromptClosed
+    summary: |
+      Fires when a player closes an invite prompt.
+    description: |
+      This event fires when a player closes an invite prompt.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the player who closed the prompt.
+      - name: recipientIds
+        type: Array
+        default:
+        summary: |
+          No longer populated; an empty array.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: SocialService.PhoneBookPromptClosed
+    summary: |
+      Fires when a player closes the phone book prompt.
+    description: |
+      Fires when a player closes the phone book prompt.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` instance of the player who closed the phone book.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: SocialService.OnCallInviteInvoked
+    summary: |
+      Callback for when a call is placed from the phone book.
+    description: |
+      A callback to process when a call is placed from the phone book. The `tag`
+      parameter can be used to differentiate between different "entry points" or
+      similar, as described in
+      `Class.SocialService:PromptPhoneBook()|PromptPhoneBook()`. Only one
+      callback can be set.
+    code_samples:
+      - SocialService-OnCallInviteInvoked
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: |
+          String to help differentiate between various phone book entry points.
+      - name: callParticipantIds
+        type: Array
+        default:
+        summary: |
+          Array containing all of the players involved in the call. The caller
+          will always be the first player in the array.
+    returns:
+      - type: Instance
+        summary: |
+          Table including the `PlaceId` and `ReservedServerAccessCode` keys
+          whose values are the `Class.DataModel.PlaceId` and the server access
+          code returned by `Class.TeleportService:ReserveServer()`,
+          respectively.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

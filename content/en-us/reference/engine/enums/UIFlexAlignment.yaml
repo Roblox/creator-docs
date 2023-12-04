@@ -1,0 +1,33 @@
+name: UIFlexAlignment
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Fill
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SpaceAround
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: SpaceBetween
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: SpaceEvenly
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

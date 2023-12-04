@@ -1,0 +1,358 @@
+name: ConnectionError
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: OK
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectErrors
+    summary: ''
+    value: 256
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectBadhash
+    summary: ''
+    value: 257
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectSecurityKeyMismatch
+    summary: ''
+    value: 258
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectProtocolMismatch
+    summary: ''
+    value: 259
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectReceivePacketError
+    summary: ''
+    value: 260
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectReceivePacketStreamError
+    summary: ''
+    value: 261
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectSendPacketError
+    summary: ''
+    value: 262
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectIllegalTeleport
+    summary: ''
+    value: 263
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectDuplicatePlayer
+    summary: ''
+    value: 264
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectDuplicateTicket
+    summary: ''
+    value: 265
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectTimeout
+    summary: ''
+    value: 266
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectLuaKick
+    summary: ''
+    value: 267
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectOnRemoteSysStats
+    summary: ''
+    value: 268
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectHashTimeout
+    summary: ''
+    value: 269
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCloudEditKick
+    summary: ''
+    value: 270
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectPlayerless
+    summary: ''
+    value: 271
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectNewSecurityKeyMismatch
+    summary: ''
+    value: 272
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectEvicted
+    summary: ''
+    value: 273
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectDevMaintenance
+    summary: ''
+    value: 274
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectRobloxMaintenance
+    summary: ''
+    value: 275
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectRejoin
+    summary: ''
+    value: 276
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectConnectionLost
+    summary: ''
+    value: 277
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectIdle
+    summary: ''
+    value: 278
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectRaknetErrors
+    summary: ''
+    value: 279
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectWrongVersion
+    summary: ''
+    value: 280
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectBySecurityPolicy
+    summary: ''
+    value: 281
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectBlockedIP
+    summary: ''
+    value: 282
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectClientFailure
+    summary: ''
+    value: 284
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectClientRequest
+    summary: ''
+    value: 285
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectPrivateServerKickout
+    summary: ''
+    value: 286
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectModeratedGame
+    summary: ''
+    value: 287
+    tags: []
+    deprecation_message: ''
+  - name: ServerShutdown
+    summary: ''
+    value: 288
+    tags: []
+    deprecation_message: ''
+  - name: ReplicatorTimeout
+    summary: ''
+    value: 290
+    tags: []
+    deprecation_message: ''
+  - name: PlayerRemoved
+    summary: ''
+    value: 291
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectOutOfMemoryKeepPlayingLeave
+    summary: ''
+    value: 292
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectRomarkEndOfTest
+    summary: ''
+    value: 293
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorPermissionRevoked
+    summary: ''
+    value: 294
+    tags: []
+    deprecation_message: ''
+  - name: DisconnectCollaboratorUnderage
+    summary: ''
+    value: 295
+    tags: []
+    deprecation_message: ''
+  - name: NetworkInternal
+    summary: ''
+    value: 296
+    tags: []
+    deprecation_message: ''
+  - name: NetworkSend
+    summary: ''
+    value: 297
+    tags: []
+    deprecation_message: ''
+  - name: NetworkTimeout
+    summary: ''
+    value: 298
+    tags: []
+    deprecation_message: ''
+  - name: NetworkMisbehavior
+    summary: ''
+    value: 299
+    tags: []
+    deprecation_message: ''
+  - name: NetworkSecurity
+    summary: ''
+    value: 300
+    tags: []
+    deprecation_message: ''
+  - name: ReplacementReady
+    summary: ''
+    value: 301
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchErrors
+    summary: ''
+    value: 512
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchDisabled
+    summary: ''
+    value: 515
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchError
+    summary: ''
+    value: 516
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchGameEnded
+    summary: ''
+    value: 517
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchGameFull
+    summary: ''
+    value: 518
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchUserLeft
+    summary: ''
+    value: 522
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchRestricted
+    summary: ''
+    value: 523
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchUnauthorized
+    summary: ''
+    value: 524
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchFlooded
+    summary: ''
+    value: 525
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchHashExpired
+    summary: ''
+    value: 526
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchHashException
+    summary: ''
+    value: 527
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchPartyCannotFit
+    summary: ''
+    value: 528
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchHttpError
+    summary: ''
+    value: 529
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchUserPrivacyUnauthorized
+    summary: ''
+    value: 533
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchCustomMessage
+    summary: ''
+    value: 610
+    tags: []
+    deprecation_message: ''
+  - name: PlacelaunchOtherError
+    summary: ''
+    value: 611
+    tags: []
+    deprecation_message: ''
+  - name: TeleportErrors
+    summary: ''
+    value: 768
+    tags: []
+    deprecation_message: ''
+  - name: TeleportFailure
+    summary: ''
+    value: 769
+    tags: []
+    deprecation_message: ''
+  - name: TeleportGameNotFound
+    summary: ''
+    value: 770
+    tags: []
+    deprecation_message: ''
+  - name: TeleportGameEnded
+    summary: ''
+    value: 771
+    tags: []
+    deprecation_message: ''
+  - name: TeleportGameFull
+    summary: ''
+    value: 772
+    tags: []
+    deprecation_message: ''
+  - name: TeleportUnauthorized
+    summary: ''
+    value: 773
+    tags: []
+    deprecation_message: ''
+  - name: TeleportFlooded
+    summary: ''
+    value: 774
+    tags: []
+    deprecation_message: ''
+  - name: TeleportIsTeleporting
+    summary: ''
+    value: 775
+    tags: []
+    deprecation_message: ''

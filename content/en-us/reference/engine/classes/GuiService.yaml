@@ -1,0 +1,769 @@
+name: GuiService
+type: class
+category: Input
+memory_category: Instances
+summary: |
+  The GuiService is a service which currently allows developers to control what
+  `Class.GuiObject` is currently being selected by the gamepad navigator. It
+  also allows clients to check if Roblox's main menu is currently open.
+
+  This service has a lot of hidden members, which are mainly used internally by
+  Roblox's `Class.CoreScript|CoreScripts`.
+description: |
+  The GuiService is a service which currently allows developers to control what
+  `Class.GuiObject` is currently being selected by the gamepad navigator. It
+  also allows clients to check if Roblox's main menu is currently open.
+
+  This service has a lot of hidden members, which are mainly used internally by
+  Roblox's `Class.CoreScript|CoreScripts`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: GuiService.AutoSelectGuiEnabled
+    summary: |
+      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      will automatically set a GUI as the selected object.
+    description: |
+      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      will automatically set a GUI as the selected object. Turning this off will
+      mean that Gui navigation will still work if
+      `Class.GuiService.GuiNavigationEnabled` is enabled but you will have to
+      set `Class.GuiService.SelectedObject` manually to start Gui navigation.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiService.CoreGuiNavigationEnabled
+    summary: |
+      Toggles whether or not objects in the `Class.CoreGui` can be navigated
+      using a Gamepad.
+    description: |
+      Toggles whether or not objects in the `Class.CoreGui` can be navigated
+      using a Gamepad.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.GuiNavigationEnabled
+    summary: |
+      Used to enable and disable the default controller GUI navigation.
+    description: |
+      Used to enable and disable the default controller GUI navigation.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiService.IsModalDialog
+    summary: |
+      Indicates whether a modal dialog is visible.
+    description: |
+      This property tells whether or not a modal dialog is visible, such as the
+      game menu or a purchase prompt.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.IsWindows
+    summary: |
+      Indicates whether the user is playing on a computer running Windows.
+    description: |
+      The IsWindows property defines if the user is playing on a computer
+      running Windows.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.MenuIsOpen
+    summary: |
+      Returns true if any menu of CoreGui is open.
+    description: |
+      Returns true if any menu of `Class.CoreGui` is open.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: GuiService.PreferredTransparency
+    summary: |
+      Gets the user's preferred transparency as a number between 0 and 1, which
+      indicates how opaque they want the backgrounds of certain UI elements to
+      be. The recommended usage is as a multiplier of an element's
+      BackgroundTransparency. Defaults to 1.
+    description: |
+      Gets the user's preferred transparency as a number between 0 and 1, which
+      indicates how much more opaque they want the background of UI elements to
+      be. Defaults to 1.
+
+      This return value reflects a setting which can be set from the user's side
+      in either the app settings or within the in-experience settings menu via
+      **Background Transparency**. The default value is 1, indicating that the
+      user prefers the default background transparency. The lowest value is 0,
+      indicating that the user prefers backgrounds to be completely opaque,
+      improving readability and contrast for affected UI. Multiplying an
+      element's `Class.GuiObject.BackgroundTransparency` with the value returned
+      from `Class.GuiService.PreferredTransparency|PreferredTransparency` is the
+      recommended way to use this setting; backgrounds will become more opaque
+      as `Class.GuiService.PreferredTransparency|PreferredTransparency`
+      approaches 0. This should be used with
+      `Class.Instance:GetPropertyChangedSignal()` so that it automatically
+      updates when the user changes their preferred transparency.
+    code_samples:
+      - GuiService-PreferredTransparency
+    type: float
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.ReducedMotionEnabled
+    summary: |
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
+    description: |
+      Returns `true` if the user has enabled reduced motion. Defaults to
+      `false`.
+
+      This return value reflects a setting which can be set from the user's side
+      in either the app settings or within the in-experience settings menu via
+      **Reduce Motion**. A value of `true` indicates that the user wants motion
+      effects and animations to be reduced or completely removed.
+    code_samples:
+      - GuiService-ReducedMotionEnabled
+    type: bool
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.SelectedObject
+    summary: |
+      Sets the GuiObject currently being focused on by the GUI Navigator (used
+      for Gamepads).
+    description: |
+      Sets the `Class.GuiObject` currently being focused on by the GUI Navigator
+      (used for Gamepads). This may reset to nil if the object is off-screen.
+
+      This property is changed by the `Class.GuiObject.SelectionGained` and
+      `Class.GuiObject.SelectionLost` events.
+
+      If you would like to determine when this property changes without tracking
+      the SelectionGained and SelectionLost events for all GUI elements, you can
+      use the `Class.Instance.Changed|Changed` event.
+    code_samples:
+      - printing-when-gamepad-selection-changes
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: GuiService.TopbarInset
+    summary: |
+      Used to determine the absolute size and position of unobstructed area
+      within top bar space.
+    description: |
+      Returns a `Datatype.Rect` object representing the unoccupied area between
+      the Roblox left-most controls and the edge of the device safe area.
+
+      The value is dynamic and can be expected to change based on the visibility
+      of UI controls such as changing the local player's
+      `Class.Humanoid.Health|Health` property, usage of
+      `Class.StarterGui:SetCoreGuiEnabled()`, changing the size and position of
+      Roblox UI Controls, and/or others. For this reason, it's recommend that
+      you detect and react to changes of this property with
+      `Class.Instance:GetPropertyChangedSignal()`.
+    code_samples:
+      - GuiService-TopbarInset
+    type: Rect
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: GuiService.TouchControlsEnabled
+    summary: |
+      Used to enable and disable touch controls and touch control display UI.
+      Defaults to true.
+    description: |
+      Used to enable and disable touch controls and touch control display UI.
+      Defaults to true.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: GuiService:AddSelectionParent
+    summary: |
+      Creates a gui selection group where gamepad gui navigation will only
+      consider selectable gui objects that are within the group (children of
+      selectionParent).
+    description: |
+      Creates a gui selection group where gamepad gui navigation will only
+      consider selectable gui objects that are within the group (children of
+      selectionParent). A use case is you have a menu pop open, but there are
+      other selectable objects on the screen (maybe from previous menus), but
+      you want to the user to only be able to select gui objects in the new
+      menu.
+    code_samples:
+    parameters:
+      - name: selectionName
+        type: string
+        default:
+        summary: ''
+      - name: selectionParent
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:AddSelectionTuple
+    summary: |
+      **AddSelectionTuple** works similarly to
+      `Class.GuiService:AddSelectionParent()`, but you can give it a tuple of
+      `Class.GuiObject` that you want to be contained in the group.
+
+      Beware that the second argument is _not_ a table, but rather the first of
+      several `Class.GuiObject` in the tuple. To pass the contents of a table,
+      use `unpack`/`table.unpack`:
+
+      ```lua
+      local frame = script.Parent
+      -- Passing various GuiObject individually
+      GuiService:AddSelectionTuple("InventoryButtons", frame.Sort, frame.Trash, frame.Drop)
+      -- Unpacking a table of GuiObject (unpack/table.unpack are equivalent)
+      local inventoryButtons = { frame.Sort, frame.Trash, frame.Drop }
+      GuiService:AddSelectionTuple("InventoryButtons", unpack(inventoryButtons))
+      ```
+    description: |
+      Functions similarly to `Class.GuiService:AddSelectionParent()`, but you
+      can give it a tuple of `Class.GuiObject` that you want to be contained in
+      the group.
+    code_samples:
+    parameters:
+      - name: selectionName
+        type: string
+        default:
+        summary: |
+          The name of the added selection.
+      - name: selections
+        type: Tuple
+        default:
+        summary: |
+          The selection(s) added.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:CloseInspectMenu
+    summary: |
+      Closes the Inspect Menu, if open.
+    description: |
+      This function closes the Inspect Menu, if open, when run from a
+      `Class.LocalScript`.
+
+      See also:
+
+      - [Avatar Inspect Menu](../../../players/avatar-inspect-menu.md), an
+        article providing a more detailed explanation of the Inspect and Buy
+        feature and how it works
+      - `Class.GuiService:InspectPlayerFromHumanoidDescription()`, allows a
+        developer to bring up the Inspect menu showing the assets listed in this
+        `Class.HumanoidDescription` object. This is especially useful when what
+        is being worn on a player's avatar on the Roblox platform is not
+        necessarily the same as their in-game appearance
+      - `Class.GuiService:InspectPlayerFromUserId()`, allows the Inspect Menu to
+        appear showing the user that has the given `Class.Player.UserId|UserId`.
+        This is especially useful when you want to inspect players who aren't in
+        the current game
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:GetEmotesMenuOpen
+    summary: |
+      Checks if the player Emotes menu is open.
+    description: |
+      Returns a boolean indicating whether or not the player Emotes menu is
+      open.
+
+      Developers can open or close the Emotes menu by calling the
+      `Class.GuiService:SetEmotesMenuOpen()` function.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Indicates whether the Emotes menu is open.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:GetGameplayPausedNotificationEnabled
+    summary: |
+      Returns whether or not the `Class.Player.GameplayPaused|gameplay paused`
+      notification has been disabled by the developer.
+    description: |
+      This function returns whether or not the
+      `Class.Player.GameplayPaused|gameplay paused` notification has been
+      disabled by the developer.
+
+      Developers can enable or disable the notification by calling the
+      `Class.GuiService:SetGameplayPausedNotificationEnabled()` function.
+
+      See also:
+
+      - `Class.Workspace.StreamingIntegrityMode` and
+        `Enum.StreamingIntegrityMode` for more details on when gameplay is
+        paused.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          Whether or not the `Class.Player.GameplayPaused|gameplay paused`
+          notification has been disabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:GetGuiInset
+    summary: |
+      Returns two `Datatype.Vector2` values representing the inset of user GUIs
+      in pixels, from the top left corner of the screen and the bottom right
+      corner of the screen respectively.
+    description: |
+      Returns two `Datatype.Vector2` values representing the inset of user GUIs
+      in pixels, from the top left corner of the screen and the bottom right
+      corner of the screen respectively.
+
+      The inset values supplied by this function only take effect on
+      `Class.ScreenGui|ScreenGuis` that have their
+      `Class.ScreenGui.IgnoreGuiInset|IgnoreGuiInset` property set to false.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple of two Vector2 values describing the current specified Gui
+          Inset.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:GetInspectMenuEnabled
+    summary: |
+      Returns whether the Inspect and Buy menu functionality is enabled.
+    description: |
+      This function returns whether the Inspect and Buy menu functionality is
+      currently enabled. The feature is enabled by default and can be set using
+      the `Class.GuiService:SetInspectMenuEnabled()` function.
+
+      See also:
+
+      - [Avatar Inspect Menu](../../../players/avatar-inspect-menu.md), an
+        article providing a more detailed explanation of the Inspect and Buy
+        feature and how it works
+      - `Class.GuiService:InspectPlayerFromHumanoidDescription()`, allows a
+        developer to bring up the Inspect menu showing the assets listed in this
+        `Class.HumanoidDescription` object. This is especially useful when what
+        is being worn on a player's avatar on the Roblox platform is not
+        necessarily the same as their in-game appearance
+      - `Class.GuiService:InspectPlayerFromUserId()`, allows the Inspect Menu to
+        appear showing the user that has the given `Class.Player.UserId|UserId`.
+        This is especially useful when you want to inspect players who aren't in
+        the current game
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          A boolean indicating whether the Inspect Menu feature is enabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:InspectPlayerFromHumanoidDescription
+    summary: |
+      Allows a developer to bring up the Inspect menu showing the assets listed
+      in this `Class.HumanoidDescription` object.
+    description: |
+      This function allows a developer to bring up the Inspect menu showing the
+      assets listed in this `Class.HumanoidDescription` object.
+
+      This allows further customization with what is shown in the Inspect Menu
+      when players inspect other players in your game. If your game modifies
+      what the players are wearing, you can instead give the Inspect Menu a
+      HumanoidDescription object that represents what a player is wearing and
+      those items will be shown. You should pass a name as well to represent the
+      name of the player that will be inspected.
+
+      See also:
+
+      - [Avatar Inspect Menu](../../../players/avatar-inspect-menu.md), an
+        article providing a more detailed explanation of the Inspect and Buy
+        feature and how it works
+      - `Class.GuiService:SetInspectMenuEnabled()`, allows developers to enable
+        or disable default Inspect and Buy functionality
+      - `Class.GuiService:InspectPlayerFromUserId()`, allows the Inspect Menu to
+        appear showing the user that has the given `Class.Player.UserId|UserId`.
+        This is especially useful when you want to inspect players who aren't in
+        the current game.
+    code_samples:
+      - opening-an-inspect-menu-with-a-humanoiddescription
+    parameters:
+      - name: humanoidDescription
+        type: Instance
+        default:
+        summary: |
+          A `Class.HumanoidDescription` object that contains the assets to show
+          in the Inspect menu.
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the player being Inspected to show in the Inspect menu.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:InspectPlayerFromUserId
+    summary: |
+      Allows the Inspect Menu to appear showing the user that has the given
+      `Class.Player.UserId|UserId`.
+    description: |
+      This function allows the Inspect Menu to appear showing the user that has
+      the given `Class.Player.UserId|UserId`. This is especially useful when you
+      want to inspect players who aren't in the current game.
+
+      This shows the same information as the "Currently Wearing" tab on the
+      specified user's profile.
+
+      See also:
+
+      - [Avatar Inspect Menu](../../../players/avatar-inspect-menu.md), an
+        article providing a more detailed explanation of the Inspect and Buy
+        feature and how it works
+      - `Class.GuiService:SetInspectMenuEnabled()`, allows developers to enable
+        or disable default Inspect and Buy functionality. This is especially
+        useful when what is being worn on a player's avatar on the Roblox
+        platform is not necessarily the same as their in-game appearance
+      - `Class.GuiService:InspectPlayerFromHumanoidDescription()`, allows a
+        developer to bring up the Inspect menu showing the assets listed in this
+        `Class.HumanoidDescription` object
+    code_samples:
+      - opening-the-inspect-menu-for-a-userid
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId|UserId` of the player to inspect.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:IsTenFootInterface
+    summary: |
+      Returns true if the client is using the ten foot interface, which is a
+      special version of Roblox's UI, exclusive to consoles. This is the only
+      guaranteed way to verify if the user is on a console or not.
+    description: |
+      Returns true if the client is using the ten foot interface, which is a
+      special version of Roblox's UI, exclusive to consoles. This is the only
+      guaranteed way to verify if the user is on a console or not.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:RemoveSelectionGroup
+    summary: |
+      Removes a group that was created with
+      `Class.GuiService:AddSelectionParent()` or
+      `Class.GuiService:AddSelectionTuple()`.
+    description: |
+      Removes a group that was created with
+      `Class.GuiService:AddSelectionParent()` or
+      `Class.GuiService:AddSelectionTuple()`.
+    code_samples:
+    parameters:
+      - name: selectionName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:Select
+    summary: |
+      Set GuiService.SelectedObject to a child of provided instance
+      selectionParent that is PlayerGui or its descendants.
+    description: |
+      When Select is called on an instance selectionParent that is PlayerGui or
+      a descendant of PlayerGui, the engine searches all available selectable,
+      visible and on-screen GuiObjects that are descendants of selectionParent
+      and sets the `Class.GuiService.SelectedObject` to the GuiObject with the
+      smallest `Class.GuiService.SelectionOrder`.
+    code_samples:
+      - GuiService-PreferredTransparency
+    parameters:
+      - name: selectionParent
+        type: Instance
+        default:
+        summary: |
+          The parent of selection whose descendants are searched.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:SetEmotesMenuOpen
+    summary: |
+      Opens or closes the player Emotes menu.
+    description: |
+      Opens or closes the player Emotes menu.
+    code_samples:
+    parameters:
+      - name: isOpen
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:SetGameplayPausedNotificationEnabled
+    summary: |
+      Allows developers to disable the built-in notification when a players
+      gameplay is paused.
+    description: |
+      This method allows developers to disable the built-in notification when a
+      players gameplay is paused. They can then add in their own UI if they wish
+      to customize it.
+
+      Developers can query whether the notification is enabled by calling the
+      `Class.GuiService:GetGameplayPausedNotificationEnabled()` function.
+
+      See also:
+
+      - `Class.Workspace.StreamingIntegrityMode` and
+        `Enum.StreamingIntegrityMode` for more details on when gameplay is
+        paused.
+    code_samples:
+    parameters:
+      - name: enabled
+        type: bool
+        default:
+        summary: |
+          Whether or not the built-in notification GUI is disabled.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:SetInspectMenuEnabled
+    summary: |
+      Allows developers to enable or disable default Inspect and Buy
+      functionality.
+    description: |
+      This function allows developers to enable or disable default Inspect and
+      Buy functionality. This is useful when you want to disable the feature in
+      your game, entirely or during certain parts of your game (such as a
+      cutscene). The feature is enabled by default.
+
+      The code sample below demonstrates how to disable the Inspect Menu for
+      your game:
+
+      ```lua
+      local GuiService = game:GetService("GuiService")
+      GuiService:SetInspectMenuEnabled(false)
+      ```
+
+      See also:
+
+      - [Avatar Inspect Menu](../../../players/avatar-inspect-menu.md), an
+        article providing a more detailed explanation of the Inspect and Buy
+        feature and how it works
+      - `Class.GuiService:InspectPlayerFromHumanoidDescription()`, allows a
+        developer to bring up the Inspect menu showing the assets listed in this
+        `Class.HumanoidDescription` object. This is especially useful when what
+        is being worn on a player's avatar on the Roblox platform is not
+        necessarily the same as their in-game appearance
+      - `Class.GuiService:InspectPlayerFromUserId()`, allows the Inspect Menu to
+        appear showing the user that has the given `Class.Player.UserId|UserId`.
+        This is especially useful when you want to inspect players who aren't in
+        the current game
+    code_samples:
+    parameters:
+      - name: enabled
+        type: bool
+        default:
+        summary: |
+          A boolean indicating whether to enable or disable the Inspect Menu
+          feature.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: GuiService.MenuClosed
+    summary: |
+      Fires when the user **closes** the Roblox coregui escape menu.
+    description: |
+      Fires when the user **closes** the Roblox coregui escape menu.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService.MenuOpened
+    summary: |
+      Fires when the user **opens** the Roblox coregui escape menu.
+    description: |
+      Fires when the user **opens** the Roblox coregui escape menu.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

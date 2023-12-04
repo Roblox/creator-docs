@@ -1,0 +1,28 @@
+name: RaycastFilterType
+type: enum
+summary: |
+  Used in a `Datatype.RaycastParams` object to determine how its
+  `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+  list will be used.
+description: |
+  Used in a `Datatype.RaycastParams` object to determine how its
+  `Datatype.RaycastParams.FilterDescendantsInstances|FilterDescendantsInstances`
+  list will be used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Exclude
+    value: 0
+    summary: |
+      Every `Class.BasePart` in the raycast operation will be considered
+      **except** those that are descendants of objects in the filter list.
+    tags: []
+    deprecation_message: ''
+  - name: Include
+    value: 1
+    summary: |
+      Only `Class.BasePart|BaseParts` which are descendants of objects in the
+      filter list will be considered in the raycast operation.
+    tags: []
+    deprecation_message: ''

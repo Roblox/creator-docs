@@ -1,0 +1,31 @@
+name: GameAvatarType
+type: enum
+summary: |
+  Value indicating which type of avatar an experience uses.
+description: |
+  The value of this Enum indicates which type of avatar an experience uses. Some
+  experiences may specify explicitly R6/R15, while some will allow the player's
+  choice of avatar to be used.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: R6
+    summary: |
+      The R6 character rig.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: R15
+    summary: |
+      The R15 character rig.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: PlayerChoice
+    summary: |
+      The rig (either R6 or R15) determined by a player's character settings set
+      on the website in the 'Edit Avatar' page.
+    value: 2
+    tags: []
+    deprecation_message: ''

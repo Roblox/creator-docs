@@ -1,0 +1,35 @@
+name: FluidFidelity
+type: enum
+summary: |
+  Determines the geometric representation used to compute aerodynamic forces.
+description: |
+  Determines the geometric representation used to compute aerodynamic forces and
+  torques for `Class.MeshPart` and `Class.PartOperation` instances.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    value: 0
+    summary: |
+      Let the physics engine select the geometric representation for aerodynamic
+      force and torque calculations.  
+      .
+    tags: []
+    deprecation_message: ''
+  - name: UseCollisionGeometry
+    value: 1
+    summary: |
+      Use the current collision geometry specified by
+      `Class.TriangleMeshPart.CollisionFidelity` for aerodynamic force and
+      torque calculations .
+    tags: []
+    deprecation_message: ''
+  - name: UsePreciseGeometry
+    value: 2
+    summary: |
+      Force the engine to compute aerodynamic forces and torques using a more
+      precise geometry representation based on the original mesh. This option
+      may increase join and replication time if used on a large scale.
+    tags: []
+    deprecation_message: ''

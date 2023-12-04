@@ -82,7 +82,7 @@ To upload your asset:
 
 6. Click **Submit** to pay any applicable upload fee and submit your asset for moderation approval.
 
-After uploading the asset, you can find it in the **Creations tab** of Toolbox where you can view the current moderation status or edit the title and description.
+After uploading the asset, you can find it in the **Marketplace** tab of the [Toolbox](../../projects/assets/toolbox.md) where you can view the current moderation status or edit the title and description.
 
 ### Troubleshooting
 
@@ -189,9 +189,7 @@ Limited assets on the Marketplace before the release of this setting don't inclu
 
 The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain experiences, or only the Marketplace.
 
-<Alert severity = 'info'>
 Experiences that sell Marketplace items receive an additional [commission](../../art/marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../../players/avatar-inspect-menu.md) or [through the API](../../players/avatar-editor.md) within an experience.
-</Alert>
 
 The following location options are available for **non-Limited** items:
 
@@ -234,7 +232,7 @@ The following location options are available for **Limiteds**:
   </tr>
   <tr>
     <td>Experience By Place ID (API Only)</td>
-    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time.</td>
+    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../../production/monetization/avatar-items.md) for their experience.</td>
   </tr>
 </tbody>
 </table>

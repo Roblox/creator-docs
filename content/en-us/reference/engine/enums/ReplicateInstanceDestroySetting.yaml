@@ -1,0 +1,23 @@
+name: ReplicateInstanceDestroySetting
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,164 @@
+name: Constraint
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  The base class for constraint-based objects.
+description: |
+  The base class for constraint-based objects. See
+  [Mover Constraints](../../../physics/mover-constraints.md) and
+  [Mechanical Constraints](../../../physics/mechanical-constraints.md) for more
+  details.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: Constraint.Active
+    summary: |
+      Indicates if the constraint is currently active in the world.
+    description: |
+      True if the constraint is currently active in the world.
+
+      True if the constraint and both of its parts are in the `Class.Workspace`
+      and the constraint's `Class.Constraint.Enabled` property is true.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Constraint.Attachment0
+    summary: |
+      The `Class.Attachment` that is connected to
+      `Class.Constraint.Attachment1`.
+    description: |
+      The `Class.Attachment` that is connected to `Class.Constraint.Attachment1`
+    code_samples:
+    type: Attachment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Attachments
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Constraint.Attachment1
+    summary: |
+      The `Class.Attachment` that is connected to
+      `Class.Constraint.Attachment0`.
+    description: |
+      The `Class.Attachment` that is connected to `Class.Constraint.Attachment0`
+    code_samples:
+    type: Attachment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Attachments
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Constraint.Color
+    summary: |
+      The color of the constraint.
+    description: |
+      The color of the constraint.
+    code_samples:
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Constraint.Enabled
+    summary: |
+      Toggles whether or not the constraint is enabled.
+    description: |
+      Toggles whether or not the constraint is enabled.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Constraint.Visible
+    summary: |
+      Toggles the constraint's visibility.
+    description: |
+      Toggles the constraint's visibility.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Constraint:GetDebugAppliedForce
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: bodyId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Constraint:GetDebugAppliedTorque
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: bodyId
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

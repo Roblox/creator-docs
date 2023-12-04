@@ -1,0 +1,214 @@
+name: RemoteEvent
+type: class
+category: Scripting
+memory_category: Instances
+summary: |
+  An object which facilitates asynchronous, one-way communication across the
+  client-server boundary. Scripts firing a `Class.RemoteEvent` do not yield.
+description: |
+  The **RemoteEvent** object facilitates asynchronous, one-way communication
+  across the [client-server](../../../projects/client-server.md) boundary
+  without yielding for a response. This communication can be directed from one
+  client to the server, from the server to a specific client, or from the server
+  to all clients.
+
+  In order for both the server and clients to access a `Class.RemoteEvent`
+  instance, it must be in a place where both sides can see it, such as
+  `Class.ReplicatedStorage`, although in some cases it's appropriate to store it
+  in `Class.Workspace` or inside a `Class.Tool`.
+
+  If you need the result of the call, you should use a `Class.RemoteFunction`
+  instead. Otherwise a remote event is recommended since it will minimize
+  network traffic/latency and won't yield the script to wait for a response.
+
+  See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+  code samples and further details on `Class.RemoteEvent`.
+
+  #### Parameter Limitations
+
+  Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+  others can be passed as a parameter when a `Class.RemoteEvent` is fired, as
+  well as Luau types such as numbers, strings, and booleans, although you should
+  carefully explore the
+  [limitations](../../../scripting/events/remote.md#argument-limitations).
+code_samples:
+inherits:
+  - BaseRemoteEvent
+tags: []
+deprecation_message: ''
+properties: []
+methods:
+  - name: RemoteEvent:FireAllClients
+    summary: |
+      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for each
+      client connected to the same `Class.RemoteEvent`.
+    description: |
+      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for each
+      client connected to the same `Class.RemoteEvent`. Unlike
+      `Class.RemoteEvent:FireClient()|FireClient()`, this event does not take a
+      target `Class.Player` as the first argument, since it fires to multiple
+      clients. Since this method is used to communicate from the server to
+      clients, it will only work when used in a `Class.Script`.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.RemoteEvent:FireAllClients()|FireAllClients()`, as well as Luau
+      types such as numbers, strings, and booleans, although you should
+      carefully explore the
+      [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on `Class.RemoteEvent`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to all `Class.RemoteEvent.OnClientEvent|OnClientEvent`
+          events connected to the same `Class.RemoteEvent`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RemoteEvent:FireClient
+    summary: |
+      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for a
+      specific client connected to the same `Class.RemoteEvent`.
+    description: |
+      Fires the `Class.RemoteEvent.OnClientEvent|OnClientEvent` event for one
+      connected client specified by the required `Class.Player` argument. Since
+      this method is used to communicate from the server to a client, it will
+      only work when used in a `Class.Script`.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.RemoteEvent:FireClient()|FireClient()`, as well as Luau types such
+      as numbers, strings, and booleans, although you should carefully explore
+      the
+      [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on `Class.RemoteEvent`. See also
+      `Class.RemoteEvent:FireAllClients()|FireAllClients()` which works
+      similarly but fires the event for each client connected to the same
+      `Class.RemoteEvent`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The client of the `Class.Player` to fire the event to.
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to `Class.RemoteEvent.OnClientEvent|OnClientEvent`
+          events connected to the same `Class.RemoteEvent`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RemoteEvent:FireServer
+    summary: |
+      Fires the `Class.RemoteEvent.OnServerEvent|OnServerEvent` event on the
+      server from one client connected to the same `Class.RemoteEvent`.
+    description: |
+      Fires the `Class.RemoteEvent.OnServerEvent|OnServerEvent` event on the
+      server from one client. Connected events receive the `Class.Player`
+      argument of the firing client. Since this method is used to communicate
+      from a client to the server, it will only work when used in a
+      `Class.LocalScript`.
+
+      Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
+      others can be passed as a parameter to
+      `Class.RemoteEvent:FireServer()|FireServer()`, as well as Luau types such
+      as numbers, strings, and booleans, although you should carefully explore
+      the
+      [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on `Class.RemoteEvent`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          Values to pass to `Class.RemoteEvent.OnServerEvent|OnServerEvent`
+          events connected to the same `Class.RemoteEvent`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: RemoteEvent.OnClientEvent
+    summary: |
+      Fires from a `Class.LocalScript` when either
+      `Class.RemoteEvent:FireClient()|FireClient()` or
+      `Class.RemoteEvent:FireAllClients()|FireAllClients()` is called on the
+      same `Class.RemoteEvent` instance from a `Class.Script`.
+    description: |
+      Fires from a `Class.LocalScript` when either
+      `Class.RemoteEvent:FireClient()|FireClient()` or
+      `Class.RemoteEvent:FireAllClients()|FireAllClients()` is called on the
+      same `Class.RemoteEvent` instance from a `Class.Script`.
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on
+      `Class.RemoteEvent.OnClientEvent|OnClientEvent`.
+    code_samples:
+    parameters:
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          The parameters sent through
+          `Class.RemoteEvent:FireClient()|FireClient()` or
+          `Class.RemoteEvent:FireAllClients()|FireAllClients()`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: RemoteEvent.OnServerEvent
+    summary: |
+      Fires from a `Class.Script` when
+      `Class.RemoteEvent:FireServer()|FireServer()` is called on the same
+      `Class.RemoteEvent` instance from a `Class.LocalScript`.
+    description: |
+      Fires from a `Class.Script` when
+      `Class.RemoteEvent:FireServer()|FireServer()` is called on the same
+      `Class.RemoteEvent` instance from a `Class.LocalScript`.
+
+      See [Remote Events and Callbacks](../../../scripting/events/remote.md) for
+      code samples and further details on
+      `Class.RemoteEvent.OnServerEvent|OnServerEvent`.
+    code_samples:
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` associated with the client that the
+          `Class.RemoteEvent:FireServer()|FireServer()` call originates from.
+      - name: arguments
+        type: Tuple
+        default:
+        summary: |
+          The parameters sent through
+          `Class.RemoteEvent:FireServer()|FireServer()`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

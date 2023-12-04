@@ -1,0 +1,615 @@
+name: LocalizationTable
+type: class
+category: Localization
+memory_category: Instances
+summary: |
+  A LocalizationTable is a database of translations. It contains source strings
+  and translations for various languages.
+description: |
+  A LocalizationTable is a database of translations. It contains source strings
+  and translations for various languages. It is used with the `Class.Translator`
+  and `Class.LocalizationService` auto-translator system to control text
+  translations in the game. LocalizationTables are designed to be treated as
+  resources, like a texture or a script. They are not optimized to be modified
+  at runtime. Changing the contents of a table will cause the entire contents of
+  the table to be replicated to all players.
+
+  ## LocalizationTable Entries
+
+  Each LocalizationTable contains a set of entries. Each entry contains the
+  translations of the text, along with some special fields:
+
+  - **Key** is an optional unique key for fast hash lookups in code. If it is
+    non-empty it must be unique in the table.
+  - **Source** is the original text in the source language that will be used by
+    the `Class.LocalizationService` automatic text replacement system to match
+    GUI text and render a translation instead. The Source field can be filled by
+    the text capture tools, or can be set manually. For key-based lookups the
+    Source value can be used as a translation for
+    `Class.LocalizationTable.SourceLocaleId` if the entry doesn't have a
+    translation for that locale. If Source is empty then the entry will not be
+    used by the automatic replacement system.
+  - **Context** is the full Instance name for the object that the text appeared
+    on. Context is used for disambiguation by the automatic text replacement
+    system. When multiple matches for the Source are found, the system will pick
+    the best match by matching backwards from the end of the Context string.
+    There are other more robust ways to handle disambiguation available as well,
+    like using multiple tables with `Class.GuiBase2d.RootLocalizationTable`.
+  - **Example** is whatever you want it to be. If the text capture tool guessed
+    some parameters for a string the Example field will contain an example of
+    them used in context.
+
+  All of these fields are optional, but at least either Key or Source must be
+  non-empty. No two entries can have the same Key, Source, and Context.
+
+  See
+  [Translating Dynamic Content](../../../production/localization/translating-dynamic-content.md)
+  for more information.
+code_samples:
+  - LocalizationTable1
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: LocalizationTable.DevelopmentLanguage
+    summary: |
+      The default IETF tag to use if the ''languageKey'' parameter is excluded
+      from the `Class.LocalizationTable:GetString()` method.
+    description: |
+      The default IETF tag to use if the ''languageKey'' parameter is excluded
+      from the `Class.LocalizationTable:GetString()` method.
+    code_samples:
+    type: string
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable.SourceLocaleId`
+      which should be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: false
+  - name: LocalizationTable.Root
+    summary: |
+      The object that is being targeted for localization by this table.
+      Localization is applied to it and all of it's descendants.
+    description: |
+      The object that is being targeted for localization by this table.
+      Localization is applied to it and all of it's descendants.
+    code_samples:
+    type: Instance
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: LocalizationTable.SourceLocaleId
+    summary: |
+      The locale of source strings.
+    description: |
+      The Roblox locale of the input key strings for this table, for example
+      "en-us" or "es-es." This is typically the "development language" of the
+      game. For a Translator that merges multiple LocalizationTable objects,
+      it's the LocaleId of the Default LocalizationTable. Defaults to "en-us".
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: LocalizationTable:GetContents
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable:GetEntries()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:GetEntries
+    summary: |
+      Returns an array of dictionaries, where each dictionary represents an
+      entry of localization data.
+    description: |
+      The GetEntries function returns an array of dictionaries contained in a
+      given `Class.LocalizationTable`, where each dictionary represents an entry
+      of localization data.
+
+      To set the entries of a LocalizationTable, you can use
+      `Class.LocalizationTable:SetEntries()`.
+
+      Each dictionary in the array contains the following fields:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Index</th>
+                  <th>Type</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                      <b>Key</b>
+                  </td>
+                  <td><code>Library.string</code></td>
+                  <td>A lookup key for this specific entry in the LocalizationTable.</td>
+              </tr>
+              <tr>
+                  <td>
+                      <b>Source</b>
+                  </td>
+                  <td><code>Library.string</code></td>
+                  <td>The string used to format the localized string. Used as a lookup if a key is not provided.</td>
+              </tr>
+              <tr>
+                  <td>
+                      <b>Context</b>
+                  </td>
+                  <td><code>Library.string</code></td>
+                  <td>An <code>Class.Instance:GetFullName()</code> path to the object that was used to generate the LocalizationTable. Used as a lookup if a key is not provided.</td>
+              </tr>
+              <tr>
+                  <td>
+                      <b>Example</b>
+                  </td>
+                  <td><code>Library.string</code></td>
+                  <td>The string used to format the localization. Optional.</td>
+              </tr>
+              <tr>
+                  <td>
+                      <b>Values</b>
+                  </td>
+                  <td><code>Dictionary</code></td>
+                  <td>A dictionary of language translations for this localization entry. The keys of this dictionary are locale ids, and the values are strings that are used to apply localization for the language corresponding to the locale id.</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples:
+      - LocalizationTable-GetEntries
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array of dictionaries, where each dictionary represents an entry of
+          localization data.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:GetString
+    summary: |
+      Returns a translation based on the specified language and key.
+    description: |
+      The GetString function returns a translation based on the specified
+      language and key.
+    code_samples:
+    parameters:
+      - name: targetLocaleId
+        type: string
+        default:
+        summary: |
+          Specified language.
+      - name: key
+        type: string
+        default:
+        summary: |
+          An optional unique key for fast hash lookups in code. If it is
+          non-empty it must be unique in the table.
+    returns:
+      - type: string
+        summary: |
+          Translated string.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable:GetTranslator()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:GetTranslator
+    summary: |
+      Returns a `Class.Translator` for entries in this LocalizationTable, in the
+      specified language.
+    description: |
+      Returns a `Class.Translator` for entries in this LocalizationTable, in the
+      specified language. The translator will first search in this table and
+      then look in ancestor tables.
+    code_samples:
+    parameters:
+      - name: localeId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:RemoveEntry
+    summary: |
+      Removes an entry from the LocalizationTable, using the specified `key`,
+      `source`, and `context` to narrow down the specific entry to be removed.
+    description: |
+      Removes an entry from the LocalizationTable, using the specified `key`,
+      `source`, and `context` to narrow down the specific entry to be removed.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:RemoveEntryValue
+    summary: |
+      Removes a single language translation from the LocalizationTable, using
+      the provided `key`, `source`, `context`, and `localeId` to narrow down the
+      specific entry to be removed.
+    description: |
+      Removes a single language translation from the LocalizationTable, using
+      the provided `key`, `source`, `context`, and `localeId` to narrow down the
+      specific entry to be removed.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: localeId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:RemoveKey
+    summary: |
+      Deprecated in favor of `Class.LocalizationTable:RemoveEntry()`.
+    description: |
+      Deprecated in favor of `Class.LocalizationTable:RemoveEntry()`. Calling
+      RemoveKey is the same as making the following call to RemoveEntry:
+
+      ```lua
+      LocalizationTable:RemoveEntry(key,"","")
+      ```
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable:RemoveEntry()`
+      which should be used in all new work
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:RemoveTargetLocale
+    summary: |
+      Removes all translations from the LocalizationTable with the specified
+      localeId.
+    description: |
+      Removes all translations from the LocalizationTable with the specified
+      localeId.
+    code_samples:
+    parameters:
+      - name: localeId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetContents
+    summary: |
+      Sets the contents of the LocalizationTable, via the legacy JSON format.
+    description: |
+      The SetContents function sets the contents of the LocalizationTable, via
+      the legacy JSON format.
+    code_samples:
+    parameters:
+      - name: contents
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable:SetEntries()`
+      which should be used in all new work
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntries
+    summary: |
+      Sets the contents of the LocalizationTable.
+    description: |
+      Sets the contents of the LocalizationTable.
+
+      The entries parameter should be an array of dictionaries in the same
+      format as the one returned from the `Class.LocalizationTable:GetEntries()`
+      function.
+    code_samples:
+    parameters:
+      - name: entries
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntry
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: targetLocaleId
+        type: string
+        default:
+        summary: ''
+      - name: text
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.LocalizationTable:SetEntries()`
+      which should be used in all new work
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntryContext
+    summary: |
+      Sets the **Context** field of a LocalizationTable entry to `newContext`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    description: |
+      Sets the **Context** field of a LocalizationTable entry to `newContext`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: newContext
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntryExample
+    summary: |
+      Sets the **Example** field of a LocalizationTable entry to `example`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    description: |
+      Sets the **Example** field of a LocalizationTable entry to `example`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: example
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntryKey
+    summary: |
+      Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
+      specified `key`, `source`, and `context` to narrow down the entry that
+      will have this change applied.
+    description: |
+      Sets the **Key** field of a LocalizationTable entry to `newKey`, using the
+      specified `key`, `source`, and `context` to narrow down the entry that
+      will have this change applied.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: newKey
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntrySource
+    summary: |
+      Sets the **Source** field of a LocalizationTable entry to `newSource`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    description: |
+      Sets the **Source** field of a LocalizationTable entry to `newSource`,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: newSource
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationTable:SetEntryValue
+    summary: |
+      Sets the text of the specified localeId in a LocalizationTable entry,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    description: |
+      Sets the text of the specified localeId in a LocalizationTable entry,
+      using the specified `key`, `source`, and `context` to narrow down the
+      entry that will have this change applied.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: source
+        type: string
+        default:
+        summary: ''
+      - name: context
+        type: string
+        default:
+        summary: ''
+      - name: localeId
+        type: string
+        default:
+        summary: ''
+      - name: text
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,46 @@
+name: AnalyticsLogLevel
+type: enum
+summary: ''
+description: |
+  This enum is used as an argument in `Class.AnalyticsService.LogEvent` to
+  describe the error severity level.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Trace
+    summary: |
+      Trace is the noisiest level, rarely (if ever) enabled for a production
+      app.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Debug
+    summary: |
+      Used for debugging.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Information
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Warning
+    summary: |
+      Used for warning.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Error
+    summary: |
+      When functionality is unavailable or expectations broken.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Fatal
+    summary: |
+      The most critical level, Fatal events demand immediate attention.
+    value: 5
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,1281 @@
+name: Sound
+type: class
+category: Sounds
+memory_category: Internal
+summary: |
+  A `Class.Sound` is an object that emits sound. Sounds can be placed within a
+  `Class.BasePart` or `Class.Attachment` to emit a sound from a particular
+  position within a place or world, or it can be attached elsewhere to play the
+  sound at a constant volume throughout the entire place.
+description: |
+  A `Class.Sound` is an object that emits sound.
+
+  ## 2D and 3D Sound
+
+  A sound placed in a `Class.BasePart` or an `Class.Attachment` will emit its
+  sound from that part's `Class.BasePart.Position` or the attachment's
+  `Class.Attachment.WorldPosition`. A sound exhibits the Doppler effect, meaning
+  its frequency and pitch varies with the relative motion of whatever attachment
+  or part it is attached to. The volume of the sound will be determined by the
+  distance between the client's sound listener (by default the `Class.Camera`
+  position) and the position of the sound's parent. For more information on this
+  see `Class.Sound.RollOffMode`.
+
+  A sound is considered "global" if it is not parented to a `Class.BasePart` or
+  an `Class.Attachment`. In this case, the sound will play at the same volume
+  throughout the entire place.
+code_samples:
+  - Sound-3D-Parent
+  - Sound-Global-Parent
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Sound.ChannelCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.EmitterSize
+    summary: |
+      The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
+      of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
+      (decrease in volume).
+    description: |
+      The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
+      of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
+      (decrease in volume).
+
+      Sounds parented to a `Class.BasePart` or `Class.Attachment` that are
+      descendants of the `Class.Workspace` are considered 3D sounds and their
+      volume while playing is dependent on the distance between the client's
+      sound listener (`Class.Camera` position by default) and the Sound's
+      parent. Two properties influence this behavior EmitterSize and
+      `Class.Sound.RollOffMode`.
+
+      The way the `Class.Sound` attenuates (fades out) after the distance
+      between the listener and the sound exceeds the EmitterSize is determined
+      by RollOffMode.
+    code_samples:
+      - Sound-3D-Parent
+    type: float
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property has deprecated in favor of `Class.Sound.RollOffMinDistance`
+      and `Class.Sound.RollOffMaxDistance` which should be used instead in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.IsLoaded
+    summary: |
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
+    description: |
+      This property will be true when the `Class.Sound` has loaded from Roblox
+      servers and is ready to play.
+
+      In Roblox, audio files are not stored in games themselves but hosted on
+      the Roblox servers and referenced by the `Class.Sound.SoundId` property.
+      This means that they need to be downloaded to a client's device before
+      they can be played. This can take a while depending on the user's internet
+      connection, the length of the sound and the number of other objects that
+      need to be loaded.
+
+      Developers can use the `Class.Sound.IsLoaded` property and the
+      `Class.Sound.Loaded` event if they wish to verify a sound has loaded
+      before playing it.
+    code_samples:
+      - Sound-Loaded
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.IsPaused
+    summary: |
+      This read-only property will return true when the `Class.Sound` is not
+      playing.
+    description: |
+      This read-only property will return true when the `Class.Sound` is not
+      playing. Note that this property will not only return true once a sound
+      has been paused using the `Class.Sound:Pause()` function but also if it
+      has been stopped using the `Class.Sound:Stop()` function or never been
+      played.
+
+      This property will only be true when `Class.Sound.IsPlaying` is false.
+
+      As IsPaused is read only it can not be used to stop the sound,
+      `Class.Sound:Stop()` and `Class.Sound:Pause()` should be used instead.
+    code_samples:
+      - Sound-IsPlaying-IsPaused
+    type: bool
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.IsPlaying
+    summary: |
+      This read-only property will return true when the `Class.Sound` is
+      playing.
+    description: |
+      This read-only property will return true when the `Class.Sound` is
+      playing.
+
+      This property can only be true when `Class.Sound.IsPaused` is false.
+
+      As IsPlaying is read only it can not be used to play the sound,
+      `Class.Sound:Play()` should be used instead.
+    code_samples:
+      - Sound-IsPlaying-IsPaused
+    type: bool
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.LoopRegion
+    summary: |
+      A range denoting a desired loop-start and loop-end within the
+      `Class.Sound.PlaybackRegion`, in seconds.
+    description: |
+      A range denoting a desired loop-start and loop-end within the Sound's
+      `Class.Sound.PlaybackRegion` in seconds.
+
+      - If `LoopRegion.Min` > `Class.Sound.PlaybackRegion|PlaybackRegion.Min`,
+        the loop starts from the `LoopRegion.Min`.
+
+      - If `LoopRegion.Min` < `Class.Sound.PlaybackRegion|PlaybackRegion.Min`,
+        the loop starts from the
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Min`.
+
+      - If `LoopRegion.Max` > `Class.Sound.PlaybackRegion|PlaybackRegion.Max`,
+        the loop starts at `Class.Sound.PlaybackRegion|PlaybackRegion.Max`.
+
+      - If `LoopRegion.Max` < `Class.Sound.PlaybackRegion|PlaybackRegion.Max`,
+        the loop starts at _exactly_ that time.
+
+      - If `LoopRegion.Min` == `LoopRegion.Max`, the `Class.Sound` uses the
+        `Class.Sound.PlaybackRegion` property instead.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Regions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.Looped
+    summary: |
+      This sets whether or not the `Class.Sound` repeats once it has finished
+      when it is playing.
+    description: |
+      This sets whether or not the `Class.Sound` repeats once it has finished
+      when it is playing.
+
+      Looped sounds are suitable for a range of applications including music and
+      background ambient sounds. The `Class.Sound.DidLoop` event can be used to
+      track the number of times as sound has looped.
+    code_samples:
+      - Sound-Looping
+      - Sound-Looping-2
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.MaxDistance
+    summary: |
+      The maximum distance, in studs, a client's listener can be from the
+      `Class.Sound|Sound\s` origin and still hear it. Only applies to Sounds
+      parented to a `Class.Part` or `Class.Attachment` (3D sounds).
+    description: |
+      The maximum distance, in studs, a client's listener can be from the
+      `Class.Sound|Sound's` origin and still hear it. Only applies to Sounds
+      parented to a `Class.Part` or `Class.Attachment` (3D sounds).
+
+      How MaxDistance impacts the attenuation of a sound (manner in which it
+      fades out) is dependent on the `Class.Sound.RollOffMode` property. When
+      RollOffMode is set to use an inverse type distance model (Inverse or
+      InverseTapered) the MaxDistance will not effect the attenuation of the
+      sound. This means that low values for MaxDistance will cause the sound to
+      abruptly cut off when the listener reaches the MaxDistance. In most cases
+      this is not desirable and developers are advised not to use low
+      MaxDistance values.
+
+      When RollOffMode is set to a linear type distance model (Linear or
+      LinearSquared) the sound will attenuate between `Class.Sound.EmitterSize`
+      and MaxDistance (with playback volume reaching zero at MaxDistance). This
+      is less realistic, but in some cases allows attenuation to be handled in a
+      more intuitive way.
+    code_samples:
+      - Sound-MaxDistance
+    type: float
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property has deprecated in favor of `Class.Sound.RollOffMinDistance`
+      and `Class.Sound.RollOffMaxDistance` which should be used instead in new
+      work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.MinDistance
+    summary: |
+      The minimum distance at which a 3D `Class.Sound` (direct child of a
+      `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
+      Effectively, the emitter size.
+    description: |
+      The minimum distance at which a 3D `Class.Sound` (direct child of a
+      `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
+      Effectively, the emitter size.
+
+      Deprecated in favor of Sound.EmitterSize.
+    code_samples:
+    type: float
+    tags:
+      - Deprecated
+    deprecation_message: |
+      MinDistance has been superseded by `Class.Sound.EmitterSize`, whose name
+      better describes this properties behavior.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Sound.Pitch
+    summary: |
+      Deprecated. Sets how high pitched and fast a `Class.Sound` is when it is
+      played. The greater the integer, the higher and faster the `Class.Sound`
+      is.
+    description: |
+      Sets how high pitched and fast a `Class.Sound` is when it is played. The
+      greater the integer, the higher and faster the sound is.
+
+      This property has been deprecated in favor of `Class.Sound.PlaybackSpeed`
+      whose name suits the behavior better.
+    code_samples:
+    type: float
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated in favor of `Class.Sound.PlaybackSpeed`
+      whose name suits the behavior better.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Sound.PlayOnRemove
+    summary: |
+      When true, the `Class.Sound` will play when it is removed from the game,
+      by parenting the `Class.Sound` or one if its ancestors to nil.
+    description: |
+      When true, the `Class.Sound` will play when it is removed from the game.
+
+      Note the sound will play when the `Class.Instance.Parent` property of the
+      `Class.Sound` or one of its ancestors is set to nil. This means all of the
+      following will cause the sound to play when PlayOnRemove is true. Note,
+      this includes `Class.Instance:Destroy()` as the destroy function sets the
+      parent to nil.
+
+          sound:Destroy()
+          sound.Parent = nil
+          sound.Parent.Parent = nil
+    code_samples:
+      - Sound-PlayOnRemove
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.PlaybackLoudness
+    summary: |
+      A number between 0 and 1000 indicating how loud the `Class.Sound` is
+      currently playing back.
+    description: |
+      A number between 0 and 1000 indicating how loud the `Class.Sound` is
+      currently playing back.
+
+      This property reflects the amplitude of the `Class.Sound`'s playback in
+      the instance of time it is read. Therefore, for most sounds it will
+      fluctuate constantly. Due to this it can appear in the Roblox Studio
+      properties window as 0, however when read by code in the command bar or
+      `Class.Script`s it will return the correct value.
+    code_samples:
+      - Sound-PlaybackLoudness
+    type: double
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.PlaybackRegion
+    summary: |
+      A range denoting a desired start (min) and stop (max) time within the
+      `Class.Sound.TimeLength`, in seconds.
+    description: |
+      A range denoting a desired start (min) and stop (max) time within the
+      `Class.Sound.TimeLength`, in seconds.
+
+      - If PlaybackRegion.Min > 0, the sound begins to play from the
+        PlaybackRegion.Min time.
+
+      - If PlaybackRegion.Min < 0, the sound begins to play from 0.
+
+      - If PlaybackRegion.Max > `Class.Sound.TimeLength`, the sound stops at
+        `Class.Sound.TimeLength`.
+
+      - If PlaybackRegion.Max < `Class.Sound.TimeLength`, the sound stops at
+        _exactly_ that time.
+
+      - If PlaybackRegion.Min == PlaybackRegion.Max, the PlayBackRegion is
+        inactive.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Regions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.PlaybackRegionsEnabled
+    summary: |
+      If **true**, this property gives your `Class.Sound` access to the
+      `Class.Sound.PlaybackRegion` and `Class.Sound.LoopRegion` properties,
+      which can more-accurately control its playback.
+    description: |
+      If **true**, this property gives your `Class.Sound` access to the
+      `Class.Sound.PlaybackRegion` and `Class.Sound.LoopRegion` properties,
+      which can more-accurately control its playback.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.PlaybackSpeed
+    summary: |
+      Determines the speed at which a `Class.Sound` will play, with higher
+      values causing the sound to play faster and at a higher pitch.
+    description: |
+      Determines the speed at which a `Class.Sound` will play. The greater the
+      value the faster the sound will play back.
+
+      For example, a value of 2 will cause the `Class.Sound` to play 2x faster,
+      whereas a value of 0.5 will cause it to play 2x slower. When PlaybackSpeed
+      is equal to 1, the sound will take `Class.Sound.TimeLength` (in seconds)
+      to complete.
+
+      Note that increasing the PlaybackSpeed of a sound will cause it to play at
+      a higher pitch.
+    code_samples:
+      - Sound-PlaybackSpeed
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.Playing
+    summary: |
+      Indicates whether the `Class.Sound` is currently playing.
+    description: |
+      Indicates whether the `Class.Sound` is currently playing. This can be
+      toggled, and this property will always replicate.
+
+      In the studio editor, `Class.Sound|Sounds` are not playable because time
+      is halted. Setting `Class.Sound.Playing` to true in edit mode doesn't do
+      anything. However, you can play audio from within plugins by setting the
+      `Class.Sound|Sounds` as descendants of a `Class.PluginGui`.
+
+      This property should not be confused with `Class.Sound.IsPlaying` which is
+      a read-only property. Playing can be set to true or false to start or stop
+      the playback of a sound.
+
+      Note that when Playing is set to false, the `Class.Sound.TimePosition`
+      property of the sound will not reset. This means when the Playing is set
+      to true again the audio will continue from the time position it was at
+      when it was stopped. However, if the `Class.Sound:Play()` function is used
+      to resume the sound the time position will reset to 0.
+    code_samples:
+      - Sound-Playing
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.RollOffMaxDistance
+    summary: |
+      The maximum distance, in studs, a client's listener can be from the
+      `Class.Sound|Sound\s` origin and still hear it. Only applies to Sounds
+      parented to a `Class.Part` or `Class.Attachment` (3D sounds).
+    description: |
+      The maximum distance, in studs, a client's listener can be from the
+      `Class.Sound|Sound's` origin and still hear it. Only applies to Sounds
+      parented to a `Class.Part` or `Class.Attachment` (3D sounds).
+
+      How RollOffMaxDistance impacts the attenuation of a sound (manner in which
+      it fades out) is dependent on the `Class.Sound.RollOffMode` property. When
+      RollOffMode is set to use an inverse type distance model (Inverse or
+      InverseTapered) the RollOffMaxDistance will not effect the attenuation of
+      the sound. This means that low values for RollOffMaxDistance will cause
+      the sound to abruptly cut off when the listener reaches the
+      RollOffMaxDistance. In most cases this is not desirable and developers are
+      advised not to use low RollOffMaxDistance values.
+
+      When RollOffMode is set to a linear type distance model (Linear or
+      LinearSquared) the sound will attenuate between `Class.Sound.EmitterSize`
+      and MaxDistance (with playback volume reaching zero at
+      RollOffMaxDistance). This is less realistic, but in some cases allows
+      attenuation to be handled in a more intuitive way.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emitter
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.RollOffMinDistance
+    summary: |
+      The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
+      of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
+      (decrease in volume).
+    description: |
+      The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
+      of a `Class.BasePart` or `Class.Attachment`) will begin to attenuate
+      (decrease in volume).
+
+      Sounds parented to a `Class.BasePart` or `Class.Attachment` that are
+      descendants of the `Class.Workspace` are considered 3D sounds and their
+      volume while playing is dependent on the distance between the client's
+      sound listener (`Class.Camera` position by default) and the Sound's
+      parent. Three properties influence this behavior RollOffMinDistance,
+      `Class.Sound.RollOffMaxDistance`, and `Class.Sound.RollOffMode`.
+
+      The way the `Class.Sound` attenuates (fades out) after the distance
+      between the listener and the sound exceeds the RollOffMinDistance is
+      determined by the RollOffMode.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emitter
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.RollOffMode
+    summary: |
+      Controls how the volume of a 3D `Class.Sound` (parented to a
+      `Class.BasePart` or `Class.Attachment`) behaves as the distance between
+      the listener and sound's parent changes.
+    description: |
+      This property sets how 3D `Class.Sound|Sounds` attenuate (fade out) as the
+      distance between the listener and the sound's parent increase. It can be
+      set to one of the values of the `Enum.RollOffMode` enum.
+
+      The following code will set RollOffMode to Linear:
+
+      ```lua
+      sound.RollOffMode = Enum.RollOffMode.Linear
+      ```
+
+      #### The different modes
+
+      The following options are available:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Mode</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Inverse</td>
+                  <td>Volume attenuates from <code>Sound/RollOffMinDistance</code> in an inverse manner.</td>
+              </tr>
+              <tr>
+                  <td>InverseTapered</td>
+                  <td>A hybrid model. Follows the Inverse model when close to <code>RollOffMinDistance</code> and the Linear Square model when close to <code>Sound/RollOffMaxDistance</code>.</td>
+              </tr>
+              <tr>
+                  <td>Linear</td>
+                  <td>Volume attenuates between <code>RollOffMinDistance</code> and <code>Sound/RollOffMaxDistance</code> with a linear relationship.</td>
+              </tr>
+              <tr>
+                  <td>LinearSquare</td>
+                  <td>Volume attenuates between <code>RollOffMinDistance</code> and <code>Sound/RollOffMaxDistance</code> with a linear squared relationship.</td>
+              </tr>
+          </tbody>
+      </table>
+
+      #### Inverse vs Linear Distance Attenuation
+
+      By default sounds are set to use inverse distance attenuation
+      (Enum.RollOffMode.Inverse) which mirrors how sounds attenuate in the real
+      world. Under inverse distance attenuation, sounds will begin to attenuate
+      once the distance between the listener and the Sound's parent exceeds
+      RollOffMinDistance. The rate of attenuation depends on the emitter size,
+      as sounds with larger EmitterSize's will attenuate at a slower rate.
+      Inverse rate of inverse distance attenuation is further influenced by
+      `Class.SoundService.RolloffScale`.
+
+      RollOffMaxDistance will not effect attenuation under the inverse model but
+      will cause the sound to cut off completely once this distance is reached.
+      This can be particularly abrupt when using low values for max distance.
+
+      Linear distance attenuation works differently. Under linear distance
+      attenuation the sound will attenuate between RollOffMinDistance and
+      RollOffMaxDistance, falling silent once MaxDistance is reached.
+      RollOffMinDistance still denotes the point at which the sound will begin
+      attenuating. However, the audible volume at any point now depends on the
+      point the listener is at between EmitterSize and MaxDistance. This means,
+      in contrast to the inverse distance attenuation model, the audible volume
+      of the sound will approach silence at MaxDistance point. This is less
+      realistic, but may be more desirable in some cases.
+    code_samples:
+    type: RollOffMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emitter
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.SoundGroup
+    summary: |
+      The `Class.SoundGroup` that is linked to this `Class.Sound`. Volume and
+      SoundEffects applied to this sound group will pass onto the sound. A sound
+      can only be in one sound group at a time.
+    description: |
+      The `Class.SoundGroup` that is linked to this `Class.Sound`.
+      `Class.SoundGroup.Volume` and `Class.SoundEffect`s applied to this sound
+      group will pass onto the sound. A sound can only be in one sound group at
+      a time.
+
+      `Class.SoundGroup`s are used to manage the volume and effects of multiple
+      `Class.Sound`s at once. A `Class.Sound` is added to a `Class.SoundGroup`
+      by setting the SoundGroup property of the sound.
+    code_samples:
+      - Sound-SoundGroup
+    type: SoundGroup
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Routing
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.SoundId
+    summary: |
+      This property is the content ID of the sound file a `Class.Sound` object
+      is associated with. Once a sound has been uploaded to Roblox the content
+      ID can be found in the uploaded sound's URL.
+    description: |
+      This property is the content ID of the sound file a `Class.Sound` object
+      is associated with. Once a sound has been uploaded to Roblox the content
+      ID can be found in the uploaded sound's URL.
+
+      It's important to remember the URL is not the same as the content ID. It
+      will work when pasted directly into the SoundId property of a
+      `Class.Sound` in Roblox studio, as Studio will automatically correct it,
+      however if it is being set from a `Class.Script` then the correct content
+      ID will need to be used, using the number from the URL. For example:
+
+      ```lua
+      "https://www.roblox.com/catalog/9120386436" -- Web URL (will not work)
+      "http://www.roblox.com/asset/?id=9120386436" -- Content ID (will work)
+      "rbxassetid://9120386436" -- Content ID (alternative version, will work)
+      ```
+    code_samples:
+      - Sound-Global-Parent
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.TimeLength
+    summary: |
+      The length of the `Class.Sound` in seconds. If the `Class.Sound` is not
+      loaded, this value will be 0.
+    description: |
+      The length of the `Class.Sound` in seconds. If the `Class.Sound` is not
+      loaded, this value will be 0.
+
+      This property is often used in conjunction with
+      `Class.Sound.PlaybackSpeed` to adjust the speed of a sound so it lasts for
+      a specific duration (see examples). When `Class.Sound.PlaybackSpeed` is
+      equal to 1, the sound will take TimeLength seconds to complete.
+    code_samples:
+      - Sound-PlaybackSpeed-TimeLength
+    type: double
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Sound.TimePosition
+    summary: |
+      Shows the progress in seconds of the `Class.Sound`. Can be changed to move
+      the playback position of the `Class.Sound` both before and during
+      playback.
+    description: |
+      Shows the progress in seconds of the `Class.Sound`. Can be changed to move
+      the playback position of the sound. If the sound is already playing then
+      playback will snap to the specified position. If it is not playing the
+      `Class.Sound` will begin playback at the set position when the sound is
+      next played.
+
+      As a `Class.Sound` is played, TimePosition increases at a rate of
+      `Class.Sound.PlaybackSpeed` per second. Once TimePosition reaches
+      `Class.Sound.TimeLength` the Sound will stop unless it is looped. This
+      means, unless `Class.Sound.Looped` is set to true setting TimePosition to
+      a value equal or greater to `Class.Sound.TimeLength` will stop the sound.
+
+      Note that setting `TimePosition` to a value greater than the length in a
+      looped track will not cause it to wrap around. If that behavior is desired
+      the developer should do the following.
+
+          if newPosition >= sound.TimeLength then
+          	newPosition = newPosition - sound.TimeLength
+          end
+          sound.TimePosition = newPosition
+
+      Setting TimePosition to a value less than zero currently does not
+      influence playback, but this behavior should not be relied upon.
+    code_samples:
+      - Sound-TimePosition
+    type: double
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.Volume
+    summary: |
+      The volume of the `Class.Sound`. Can be set between 0 and 10. Defaults to
+      0.5.
+    description: |
+      The volume of the `Class.Sound`. Can be set between 0 and 10. Defaults to
+      0.5
+
+      Note that if the `Class.Sound` is a member of a `Class.SoundGroup` its
+      playback volume (but not the Volume property) will be influenced by the
+      `Class.SoundGroup.Volume` property of that `Class.SoundGroup`. The effect
+      of this is multiplicative, meaning that a sound will play at the same
+      volume if its Volume is 0.1 and its `Class.SoundGroup`'s volume is 5 and
+      vice-versa.
+    code_samples:
+      - Sound-Volume
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Playback
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sound.isPlaying
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Sound.IsPlaying` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: Sound:Pause
+    summary: |
+      Sets `Class.Sound.Playing` to false. This pauses the playback of the
+      `Class.Sound` if the sound is playing. As `Class.Sound.TimePosition` is
+      not reset ,when the `Class.Sound` is resumed it will continue from its
+      previous position.
+    description: |
+      Sets `Class.Sound.Playing` to false. This pauses the playback of the
+      `Class.Sound` if the sound is playing. Unlike `Class.Sound:Stop()` it does
+      not reset `Class.Sound.TimePosition` meaning the sound can be resumed
+      using `Class.Sound:Resume()`.
+
+      The impact of the different Sound functions on `Class.Sound.Playing` and
+      `Class.Sound.TimePosition` are shown below.
+
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Sound.Playing</th>
+              <th>Sound.TimePosition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sound:Play()</td>
+              <td>True</td>
+              <td>Last value set in Lua (default 0)</td>
+            </tr>
+            <tr>
+              <td>Sound:Pause()</td>
+              <td>False</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Resume()</td>
+              <td>True</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Stop()</td>
+              <td>False</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+    code_samples:
+      - Sound-Functions
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:Play
+    summary: |
+      Plays the `Class.Sound`. Sets `Class.Sound.TimePosition` to the last value
+      set by a `Class.Script` (or 0 if it has not been set), and then sets
+      `Class.Sound.Playing` to true.
+    description: |
+      Plays the `Class.Sound`. Sets `Class.Sound.TimePosition` to the last value
+      set by a `Class.Script` (or 0 if it has not been set), and then sets
+      `Class.Sound.Playing` to true.
+
+      The impact of the different `Class.Sound` functions on
+      `Class.Sound.Playing` and `Class.Sound.TimePosition` are shown below.
+
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Sound.Playing</th>
+              <th>Sound.TimePosition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sound:Play()</td>
+              <td>True</td>
+              <td>Last value set in Lua (default 0)</td>
+            </tr>
+            <tr>
+              <td>Sound:Pause()</td>
+              <td>False</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Resume()</td>
+              <td>True</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Stop()</td>
+              <td>False</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+    code_samples:
+      - Sound-Functions
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:Resume
+    summary: |
+      Resumes the `Class.Sound`. Sets `Class.Sound.Playing` to true. Does not
+      alter `Class.Sound.TimePosition` and thus can be used to resume the
+      playback of a sound stopped using `Class.Sound:Pause()`.
+    description: |
+      Resumes the `Class.Sound`. Sets `Class.Sound.Playing` to true. Does not
+      alter `Class.Sound.TimePosition` and thus can be used to resume the
+      playback of a sound stopped using `Class.Sound:Pause()`.
+
+      The impact of the different sound functions on `Class.Sound.Playing` and
+      `Class.Sound.TimePosition` are shown below.
+
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Sound.Playing</th>
+              <th>Sound.TimePosition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sound:Play()</td>
+              <td>True</td>
+              <td>Last value set in Lua (default 0)</td>
+            </tr>
+            <tr>
+              <td>Sound:Pause()</td>
+              <td>False</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Resume()</td>
+              <td>True</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Stop()</td>
+              <td>False</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+    code_samples:
+      - Sound-Functions
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:Stop
+    summary: |
+      Stops the `Class.Sound`. Sets `Class.Sound.Playing` to false then sets
+      `Class.Sound.TimePosition` to 0.
+    description: |
+      Stops the `Class.Sound`. Sets `Class.Sound.Playing` to false then sets
+      `Class.Sound.TimePosition` to 0.
+
+      The impact of the different sound functions on `Class.Sound.Playing` and
+      `Class.Sound.TimePosition` are shown below.
+
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Sound.Playing</th>
+              <th>Sound.TimePosition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sound:Play()</td>
+              <td>True</td>
+              <td>Last value set in Lua (default 0)</td>
+            </tr>
+            <tr>
+              <td>Sound:Pause()</td>
+              <td>False</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Resume()</td>
+              <td>True</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Sound:Stop()</td>
+              <td>False</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+    code_samples:
+      - Sound-Functions
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:pause
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Sound:Pause()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:play
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Sound:Play()` which should
+      be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Sound:stop
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Sound:Stop()` which should
+      be used instead.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Sound.DidLoop
+    summary: |
+      Event that fires whenever the `Class.Sound` loops. Returns soundId and
+      numOfTimesLooped, giving the contentID of the sound and the number of
+      times looped respectively.
+    description: |
+      Event that fires whenever the `Class.Sound` loops. Returns soundId and
+      numOfTimesLooped, giving the contentID of the sound and the number of
+      times looped respectively.
+
+      When the `Class.Sound` is stopped the looped counter resets meaning the
+      next DidLoop event will return 1 for numOfTimesLooped.
+    code_samples:
+      - Sound-Looping-2
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that looped.
+      - name: numOfTimesLooped
+        type: int
+        default:
+        summary: |
+          The number of times the `Class.Sound` has looped.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Ended
+    summary: |
+      Fires when the `Class.Sound` has completed playback and stopped.
+    description: |
+      Fires when the `Class.Sound` has completed playback and stopped. Note this
+      event will not fire for sounds with `Class.Sound.Looped` set to true as
+      they continue playing upon reaching their end.
+
+      This event is often used to destroy a sound when it has completed
+      playback.
+
+      ```
+      sound:Play()
+      sound.Ended:Wait()
+      sound:Destroy()
+      ```
+
+      This event only fires if the sound has reached its end. This means it will
+      also not fire when the sound is stopped before playback has completed, for
+      this use `Class.Sound.Stopped`.
+    code_samples:
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that has ended.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Loaded
+    summary: |
+      Fires when the `Class.Sound` is loaded.
+    description: |
+      The Sound.Loaded event fires when the `Class.Sound` is loaded.
+
+      Note this event will only fire at the time the sound is loaded. This means
+      if it is listened for when the sound is already loaded it will not return.
+      Therefore it is recommended to check `Class.Sound.IsLoaded` prior to
+      connecting to this event.
+    code_samples:
+      - Sound-Loaded
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that loaded.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Paused
+    summary: |
+      Fires whenever the `Class.Sound` is paused using `Class.Sound:Pause()`.
+    description: |
+      Fires whenever the `Class.Sound` is paused using `Class.Sound:Pause()`.
+
+      As with `Class.Sound.Played`, `Class.Sound.Resumed` and
+      `Class.Sound.Stopped` only the respective sound function will cause the
+      event to fire. This means that Pause will only fire when
+      `Class.Sound:Pause()` is called.
+    code_samples:
+      - Sound-Functions
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that was paused.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Played
+    summary: |
+      Fires whenever the `Class.Sound` is played using the `Class.Sound:Play()`
+      function.
+    description: |
+      Fires whenever the `Class.Sound` is played using the `Class.Sound:Play()`
+      function.
+
+      As with `Class.Sound.Stopped`, `Class.Sound.Paused` and
+      `Class.Sound.Resumed` only the respective sound function will cause the
+      event to fire. This means that Played will only fire when
+      `Class.Sound:Play()` is called. This event will not fire if the
+      `Class.Sound` is played due to the sound being destroyed and
+      `Class.Sound.PlayOnRemove` being set to true.
+    code_samples:
+      - Sound-Functions
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that was played.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Resumed
+    summary: |
+      Fires when the `Class.Sound` is resumed using `Class.Sound:Resume()`.
+    description: |
+      Fires when the `Class.Sound` is resumed using `Class.Sound:Resume()`.
+
+      As with `Class.Sound.Played`, `Class.Sound.Paused` and
+      `Class.Sound.Stopped` only the respective sound function will cause the
+      event to fire. This means that Resumed will only fire when
+      `Class.Sound:Resume()` is called.
+    code_samples:
+      - Sound-Functions
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` being resumed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Sound.Stopped
+    summary: |
+      Fires when the `Class.Sound` is stopped due to the `Class.Sound:Stop()`
+      function.
+    description: |
+      Fires when the `Class.Sound` is stopped due to the `Class.Sound:Stop()`
+      function.
+
+      As with `Class.Sound.Played`, `Class.Sound.Paused` and
+      `Class.Sound.Resumed` only the respective sound function will cause the
+      event to fire. This means that Stopped will only fire when
+      `Class.Sound:Stop()` is called. Destroying a sound while it is playing
+      will not cause this event to fire.
+    code_samples:
+      - Sound-Functions
+    parameters:
+      - name: soundId
+        type: string
+        default:
+        summary: |
+          The `Class.Sound.SoundId` of the `Class.Sound` that stopped.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

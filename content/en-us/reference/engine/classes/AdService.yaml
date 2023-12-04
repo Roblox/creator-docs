@@ -1,0 +1,61 @@
+name: AdService
+type: class
+category:
+memory_category: Instances
+summary: |
+  A decommissioned service that is no longer operational. Historically used to
+  display mobile video ads.
+description: |
+  This **AdService** class was historically a service for displaying mobile
+  video ads as a form of monetization. This service has been decommissioned and
+  is no longer operational.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: |
+  This service has been decommissioned and is no longer operational.
+properties: []
+methods:
+  - name: AdService:ShowVideoAd
+    summary: |
+      Historically used to show mobile video advertisements.
+    description: |
+      Historically used to show mobile video advertisements. No longer
+      operational as `Class.AdService` has been decommissioned.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      `Class.AdService` has been decommissioned and is no longer operational.
+      There is no replacement service and this event should not be used in new
+      work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: AdService.VideoAdClosed
+    summary: |
+      Historically fired when an `Class.AdService` video closed.
+    description: |
+      No longer fires because `Class.AdService` has been decommissioned.
+    code_samples:
+    parameters:
+      - name: adShown
+        type: bool
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      `Class.AdService` has been decommissioned and is no longer operational.
+      There is no replacement service and this event should not be used in new
+      work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

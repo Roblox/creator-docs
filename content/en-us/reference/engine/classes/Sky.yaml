@@ -1,0 +1,231 @@
+name: Sky
+type: class
+category: Lighting
+memory_category: Instances
+summary: ''
+description: |
+  The Sky object is an object that, when placed inside `Class.Lighting`, will
+  change the appearance of the game's sky. This allows for a custom sky to be
+  used as opposed to the Roblox default sky. The Skybox is composed of six
+  sides, much like that of a cube. If the skybox is changed/customized, the Sun
+  and other objects in the sky will remain visible, unless you turn off the Sky
+  object's `Class.Sky.CelestialBodiesShown` property, which will remove the Sun,
+  Moon, and stars from the sky. The recommended picture dimensions for a Skybox
+  side are 256x256 pixels. By adjusting the `Class.Sky.StarCount` property of
+  the Sky object, you can change how many stars will appear in the sky at night.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Sky.CelestialBodiesShown
+    summary: |
+      Sets whether the Sun, Moon, and stars will show.
+    description: |
+      Sets whether the Sun, Moon, and stars will show.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.MoonAngularSize
+    summary: |
+      The perceived angular size of the moon while using this skybox, in
+      degrees.
+    description: |
+      The perceived angular size of the moon while using this skybox, in
+      degrees.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.MoonTextureId
+    summary: |
+      The texture of the moon while using this skybox.
+    description: |
+      The texture of the moon while using this skybox.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxBk
+    summary: |
+      The URL link to a picture for the back surface of the sky.
+    description: |
+      The URL link to a picture for the back surface of the sky.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxDn
+    summary: |
+      The URL asset link to a picture for the Bottom surface of the sky.
+    description: |
+      The URL asset link to a picture for the Bottom surface of the sky.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxFt
+    summary: |
+      The URL link to a picture for the front surface of the skybox.
+    description: |
+      The URL link to a picture for the front surface of the skybox.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxLf
+    summary: |
+      The URL link to a picture for the left surface of the sky.
+    description: |
+      The URL link to a picture for the left surface of the sky.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxRt
+    summary: |
+      The URL link to a picture for the right surface of the sky.
+    description: |
+      The URL link to a picture for the right surface of the sky.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SkyboxUp
+    summary: |
+      The URL link to a picture for the top surface of the sky.
+    description: |
+      The URL link to a picture for the top surface of the sky.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.StarCount
+    summary: |
+      How many stars are shown in the skybox.
+    description: |
+      How many stars are shown in the skybox. Note that too many stars may cause
+      severe lag. Only works if `Class.Sky.CelestialBodiesShown` is true.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SunAngularSize
+    summary: |
+      The perceived angular size of the sun while using this skybox, in degrees.
+    description: |
+      The perceived angular size of the sun while using this skybox, in degrees.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Sky.SunTextureId
+    summary: |
+      The texture of the sun while using this skybox.
+    description: |
+      The texture of the sun while using this skybox.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,28 @@
+name: LiveEditingAtomicUpdateResponse
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: FailureGuidNotFound
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: FailureHashMismatch
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: FailureOperationIllegal
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

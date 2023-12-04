@@ -1,0 +1,1075 @@
+name: ParticleEmitter
+type: class
+category: Effects
+memory_category: Instances
+summary: |
+  A special object that emits customizable 2D billboard particles into the
+  world.
+description: |
+  A **ParticleEmitter** is a special object that emits customizable 2D billboard
+  particles into the world. To emit and render particles, it must be parented to
+  a `Class.BasePart` or an `Class.Attachment` within such a part. When parented
+  to a `Class.BasePart`, particles spawn randomly within the part's **bounding
+  box** or [shape](../../../effects/particle-emitters.md#shape); when parented
+  to an `Class.Attachment`, particles spawn from the attachment's position.
+
+  Particles emit automatically when the emitter is
+  `Class.ParticleEmitter.Enabled|Enabled` with a non-zero
+  `Class.ParticleEmitter.Rate|Rate`, or manually when the
+  `Class.ParticleEmitter:Emit()|Emit` method is called. With a non-zero
+  `Class.ParticleEmitter.Speed|Speed`, particles are set in motion outwards
+  and/or inwards, depending on the `Class.ParticleEmitter.ShapeInOut|ShapeInOut`
+  property.
+
+  By default, particles face the camera, but the
+  `Class.ParticleEmitter.Orientation|Orientation` can be modified to respect the
+  particle velocity instead.
+
+  During the `Class.ParticleEmitter.Lifetime|Lifetime` of the particles, they
+  can change appearance according to the `Class.ParticleEmitter.Color|Color` and
+  `Class.ParticleEmitter.Size|Size`. Their motion can change over time according
+  to the `Class.ParticleEmitter.Drag|Drag` and
+  `Class.ParticleEmitter.Acceleration|Acceleration` properties, and they can
+  also move as their parent moves when they are
+  `Class.ParticleEmitter.LockedToPart|LockedToPart` or have a non-zero
+  `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance`.
+
+  Roblox provides several pre-made particle effect objects of `Class.Fire`,
+  `Class.Smoke` and `Class.Sparkles`. They behave similarly to a
+  **ParticleEmitter** but lack the control methods of
+  `Class.ParticleEmitter:Emit()|Emit` and `Class.ParticleEmitter:Clear()|Clear`.
+  An `Class.Explosion` also creates particles, but provides minimal control with
+  regards to how the effect looks.
+
+  To learn more about creating and customizing particle emitters, see
+  [Particle Emitters](../../../effects/particle-emitters.md).
+code_samples:
+  - Creating-A-ParticleEmitter-from-Scratch
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: ParticleEmitter.Acceleration
+    summary: |
+      Determines the global-axis acceleration of all alive particles, measured
+      in studs per second squared.
+    description: |
+      The Acceleration property determines how particles
+      `Class.ParticleEmitter.Speed` changes over the particle's lifetime. It is
+      defined using a `Datatype.Vector3` to determine the acceleration on the
+      global X/Y/Z axes. It is measured in studs per second squared. When
+      changed, this property affects all particles emit by the emitter, both
+      current and future particles.
+
+      Acceleration will slow particles down if the vector points in the opposite
+      `Class.ParticleEmitter.EmissionDirection` in which particles are emitted.
+      Otherwise, it will speed them up. You can use `Class.ParticleEmitter.Drag`
+      to slow particles down no matter what direction they travel.
+
+      Acceleration is most often used to apply a gravity effect to particles
+      (try a value of (0, -3, 0) for this). You can also use small values on the
+      X/Z axes to make it look like particles are being blown away by wind. If
+      you emit a bubble particle downwards, you could use an acceleration of (0,
+      5, 0) to cause the bubbles to decelerate and then float back upwards.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Motion
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Brightness
+    summary: |
+      Scales the light emitted from the emitter when
+      `Class.ParticleEmitter.LightInfluence` is 0.
+    description: |
+      Scales the light emitted from the emitter when
+      `Class.ParticleEmitter.LightInfluence` is 0.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Color
+    summary: |
+      Determines the color of all active particles over their individual
+      lifetimes.
+    description: |
+      The Color property determines the color of all active particles over their
+      individual lifetimes. The color applies to the
+      `Class.ParticleEmitter.Texture` when rendering, and it uses the texture
+      alpha along with the `Class.ParticleEmitter.Transparency`. If a particle
+      has a `Class.ParticleEmitter.LightEmission` value that's greater than 0,
+      darker colors make particles appear more transparent.
+
+      Note that the default `Class.ParticleEmitter.Lifetime` is 5 to 10 seconds,
+      so some particles next to each other have small variations in color due to
+      the variations in individual particle lifetime.
+
+      A particle's present color is determined by linearly interpolating on this
+      ColorSequence using the particle's age and the particle's total lifetime.
+      For example, if a particle spawned 2 seconds ago and has a 4 second
+      lifetime, the color will be whatever is 50% of the way through the
+      `Datatype.ColorSequence`.
+
+      Changing this property applies changes to all particles present in the
+      system. This is because the color of a particle is determined using its
+      present lifetime and this ColorSequence (the ColorSequence when the
+      particle was emit is not stored on a per-particle basis).
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: ColorSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Drag
+    summary: |
+      Determines the rate at which particles will lose half their speed through
+      exponential decay.
+    description: |
+      The Drag property determines the rate in seconds at which individual
+      particles will lose half their speed via exponential decay.
+
+      Drag is applied by scaling the expected velocity (from
+      `Class.ParticleEmitter.Speed` and any velocity inherited from the parent
+      from `Class.ParticleEmitter.VelocityInheritance`) by the following
+      formula: `2 ^ (elapsedTime * -drag)`, where `elapsedTime` is the time
+      since the particle was emit. Consequently, setting Drag to a negative
+      value will cause particles' velocities to grow exponentially.
+
+      Warning: if Drag is set to a sufficiently negative value, this can cause
+      all particles emit by the emitter to completely disappear. Be careful when
+      setting this property lower than -100.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Particles
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.EmissionDirection
+    summary: |
+      Determines the face of the object that particles emit from.
+    description: |
+      The EmissionDirection property determines the face (`Enum.NormalId`) of
+      the parent object that particles emit from. By default, this is the top
+      (+Y) direction. A negative `Class.ParticleEmitter.Speed` means particles
+      emit in the opposite direction. `Class.ParticleEmitter.SpreadAngle`
+      further varies the emission direction. If you add a
+      `Class.ParticleEmitter` to an `Class.Attachment`, which has a direction,
+      you can rotate the Attachment itself (`Class.Attachment.Orientation`)
+      instead of using this property.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Enabled
+    summary: |
+      Determines if particles emit from the emitter.
+    description: |
+      The Enabled property determines if particles emit from the emitter
+      according to its `Class.ParticleEmitter.Rate`. Setting Enabled to false
+      stops further particles from spawning, and any existing particles remain
+      active until they expire. This property is useful when you have a pre-made
+      particle effect that you want to remain disabled until you need it to emit
+      particles.
+
+      If you want no particles to render, you should call
+      `Class.ParticleEmitter:Clear()` to clear any existing particles. You can
+      use `Class.ParticleEmitter:Emit()` on disabled `Class.ParticleEmitter`s
+      and they will still emit and render particles.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.FlipbookFramerate
+    summary: |
+      Determines how fast the flipbook texture animates in frames per second.
+    description: |
+      The `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property
+      determines how fast the flipbook texture animates in frames per second.
+      Like `Class.ParticleEmitter.Lifetime|Lifetime`, you can set a minimum and
+      maximum range to randomize the framerate of the flip book, with a maximum
+      of 30 frames per second.
+    code_samples: []
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.FlipbookIncompatible
+    summary: |
+      The error message to display if the `Class.Texture` is incompatible for a
+      flipbook. The texture must be a 1024&times;1024 image.
+    description: |
+      The error message to display if the `Class.Texture` is incompatible for a
+      flipbook. The texture must be a 1024&times;1024 image.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.FlipbookLayout
+    summary: |
+      Determines the layout of the flipbook texture. Must be None, Grid2x2,
+      Grid4x4, or Grid8x8.
+    description: |
+      The `Class.ParticleEmitter.FlipbookLayout|FlipbookLayout` property
+      determines the layout of the texture. It can be any value of the
+      `Enum.ParticleFlipbookLayout` enum:
+
+      - **None** &ndash; Disable flipbook features and use the texture as a
+        single static texture over the particle's lifetime.
+      - **Grid2x2** &ndash; 2&times;2 frames for a 4-frame animation.
+      - **Grid4x4** &ndash; 4&times;4 frames for a 16-frame animation.
+      - **Grid8x8** &ndash; 8&times;8 frames for a 64-frame animation.
+    code_samples: []
+    type: ParticleFlipbookLayout
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.FlipbookMode
+    summary: |
+      Determines the type of the flipbook animation. Must be Loop, OneShot,
+      PingPong, or Random.
+    description: |
+      The `Class.ParticleEmitter.FlipbookMode|FlipbookMode` property determines
+      the type of the flipbook animation. The property can be any value of the
+      `Enum.ParticleFlipbookMode` enum:
+
+      - **Loop** &ndash; Continuously play through all frames, starting back at
+        the first frame after playing the last.
+      - **OneShot** &ndash; Play through the animation only once across the
+        particle's lifetime. With this setting, the
+        `Class.ParticleEmitter.FlipbookFramerate` property doesn't apply;
+        instead, the framerate is determined by the particle's
+        `Class.ParticleEmitter.Lifetime` divided evenly by the number of frames
+        in the animation. **OneShot** animations are useful for clear
+        non-repeating animations, such as an explosion that creates a puff of
+        smoke and then fades out.
+      - **PingPong** &ndash; Play from the first to the last frame, then in
+        reverse from the last to the first, repeating throughout the
+        `Class.ParticleEmitter.Lifetime|Lifetime` of the particle.
+      - **Random** &ndash; Play the frames in a random order,
+        blending/crossfading from one frame to the next. This can be useful for
+        organic particle textures at low framerates, such as stars slowly
+        twinkling between subtly different shapes.
+    code_samples: []
+    type: ParticleFlipbookMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.FlipbookStartRandom
+    summary: |
+      Determines whether the animation starts at a random frame chosen per
+      particle instead of always starting at frame zero.
+    description: |
+      The `Class.ParticleEmitter.FlipbookStartRandom|FlipbookStartRandom`
+      property determines whether each particle begins at a random frame of the
+      animation instead of always starting at the first frame. One use case is
+      to enable this property and also set
+      `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` to zero,
+      causing each emitted particle to be a static frame chosen randomly from
+      the flipbook texture.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Flipbook
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Lifetime
+    summary: |
+      Defines a random range of ages for newly emitted particles.
+    description: |
+      The Lifetime property defines the maximum and minimum ages for newly
+      emitted particles. When a particle emits, a random lifetime is chosen
+      uniformly. Lifetimes are stored on a per-particle basis, so if this value
+      is changed, existing particles will stay active until their randomly
+      chosen lifetime is lived. The bounds for this property should be in the
+      range [0, 20]. By default, `Class.ParticleEmitter|ParticleEmitters` will
+      have a lifetime of 5 to 10 seconds. A lifetime of 0 will prevent particles
+      from emitting at all.
+
+      It's important to pick a sensible Lifetime and
+      `Class.ParticleEmitter.Rate` so that you don't have too many particles
+      being rendered at once. Long lifetimes and high emission rates are a quick
+      way to cause performance issues. If you need many particles, pick a
+      balance of lifetime and rate. To instantly remove any presently emit
+      particles (perhaps ones with absurdly long lifetimes), you can call
+      `Class.ParticleEmitter:Clear()`.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.LightEmission
+    summary: |
+      Determines how much particles' colors are blended with the colors behind
+      them.
+    description: |
+      The LightEmission property determines the blending of the
+      `Class.ParticleEmitter.Texture`'s colors with the colors behind them. It
+      should be set on the range [0, 1]. A value of 0 uses normal blending
+      modes, and a value of 1 will use additive blending. The value of the
+      additive blending is determined by this property. When changed, this
+      property instantly affects all particles owned by the emitter, both
+      current and future particles.
+
+      When set to 1, only additive blending is used. As such, choosing a
+      suitable `Class.ParticleEmitter.Texture` is necessary. Below is an example
+      texture that is suitable for such a ParticleEmitter.
+
+      This property should not be confused with
+      `Class.ParticleEmitter.LightInfluence`, which determines how particles are
+      affected by environment light. This property does not cause particles to
+      light the environment around them. To do that, consider using a
+      `Class.PointLight`.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.LightInfluence
+    summary: |
+      Determines how much particles are influenced by the environment light.
+    description: |
+      The LightInfluence property determines how much environment light affects
+      the color of individual particles when they render. It must be in the
+      range [0, 1]; behavior of values outside of this range are not defined. At
+      0, particles are not influenced by light at all (they retain full
+      brightness), and at 1 particles are fully influenced by light (in complete
+      darkness, particles will be black).
+
+      By default, this value is 1 if inserted with Studio tools. If inserted
+      using `Datatype.Instance.new()`, it is 0.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.LockedToPart
+    summary: |
+      Determines whether the particles rigidly move with the part they're being
+      emitted from.
+    description: |
+      The LockedToPart property determines if particles will "stick" to the
+      emission source (the `Class.Attachment` or `Class.BasePart` to which the
+      `Class.ParticleEmitter` is parented).
+
+      Below is an animation of two `Class.Part|Parts` being moved simultaneously
+      in Studio. Inside each is a default `Class.ParticleEmitter`; the
+      background/left emitter has LockedToPart enabled so the column of
+      particles moves as the part is moved. Contrast with the foreground/right
+      emitter particles which stay in their world position.
+
+      Also consider using the `Class.ParticleEmitter.VelocityInheritance`
+      property set to 1, which may be more appropriate for some effects.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Particles
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Orientation
+    summary: |
+      Specifies how to orient particles.
+    description: |
+      This property determines which orientation mode to use for an emitter's
+      particle geometry.
+
+      <table>
+      <thead>
+      <tr>
+        <td>Orientation</td>
+        <td>Particle Behavior</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><b>FacingCamera</b></td>
+        <td>Standard camera-facing billboard quad; default behavior.</td>
+      </tr>
+      <tr>
+        <td><b>FacingCameraWorldUp</b></td>
+        <td>Facing the camera, but rotating only on the vertical upward world Y axis.</td>
+      </tr>
+      <tr>
+        <td><b>VelocityParallel</b></td>
+        <td>Aligned parallel to their direction of movement.</td>
+      </tr>
+      <tr>
+        <td><b>VelocityPerpendicular</b></td>
+        <td>Aligned perpendicular to their direction movement.</td>
+      </tr>
+      </tbody>
+      </table>
+    code_samples:
+    type: ParticleOrientation
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Rate
+    summary: |
+      Determines the number of particles emitted per second.
+    description: |
+      The Rate property determines how many particles are
+      `Class.ParticleEmitter:Emit()` emitted per second while the
+      `Class.ParticleEmitter` is `Class.ParticleEmitter.Enabled`. It's the
+      inverse of frequency - a Rate of 5 means that a particle will emit every
+      `1/5 = 0.2` seconds. When changed, this property has no affect on any
+      active particles.
+
+      It's important to pick a sensible `Class.ParticleEmitter.Lifetime` and
+      Rate so that you don't have too many particles being rendered at once.
+      Long lifetimes and high emission rates are a quick way to cause
+      performance issues. If you need many particles, pick a balance of lifetime
+      and rate. To instantly remove any presently emit particles (perhaps ones
+      with absurdly long lifetimes), you can call
+      `Class.ParticleEmitter:Clear()`.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.RotSpeed
+    summary: |
+      Determines the range of angular speeds of emitted particles, measured in
+      degrees per second.
+    description: |
+      The RotSpeed property determines a random range of angular speeds for
+      newly emitted particles. A random angular speed is chosen upon emission,
+      so changing this property doesn't affect already active particles. This
+      property, along with `Class.ParticleEmitter.Rotation`, affect the angle of
+      the rendered particle image. This property is a `Datatype.NumberRange`
+      measured in degrees per second.
+
+      Particles with very high angular speeds can appear to rotate slower or not
+      at all - this is because the angle of rotation is synchronized with the
+      software render speed. In other words, if the particle is rotating at
+      exactly 360 degrees every frame, there will be no apparent change in
+      rotation.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Rotation
+    summary: |
+      Determines the range of rotations in degrees for newly emitted particles.
+    description: |
+      The Rotation property determines the range of rotations in degrees for
+      newly emitted particles. It is a `Datatype.NumberRange` measured in
+      degrees. Positive values are in the clockwise direction. This property is
+      often set to [0, 360] to provide a completely random rotation to new
+      particles. `Class.ParticleEmitter.RotSpeed` also influences the rotation
+      of a particle over its lifetime. This property is useful for correcting
+      any `Class.ParticleEmitter.Texture` that isn't at the desired orientation.
+
+      Changes to this value only affect new particles; existing particles
+      maintain the rotation at which they were originally emitted.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Shape
+    summary: |
+      Sets the shape of the emitter to either a box, sphere, cylinder, or disc.
+    description: |
+      The Shape property sets the shape of the emitter to either a box, sphere,
+      cylinder, or disc. After you make a selection, you can adjust the
+      `Class.ParticleEmitter.ShapeStyle`, `Class.ParticleEmitter.ShapeInOut`,
+      and `Class.ParticleEmitter.ShapePartial` properties to further customize
+      particle emission. For visual examples, see
+      [Particle Emitters - Shapes](../../../effects/particle-emitters.md#shape).
+    code_samples:
+    type: ParticleEmitterShape
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: EmitterShape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.ShapeInOut
+    summary: |
+      Sets whether particles emit outward only, inward only, or in both
+      directions.
+    description: |
+      Sets whether particles emit outward only, inward only, or in both
+      directions. For visual examples, see
+      [Particle Emitters - ShapeInOut](../../../effects/particle-emitters.md#shapeinout).
+    code_samples:
+    type: ParticleEmitterShapeInOut
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: EmitterShape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.ShapePartial
+    summary: |
+      Influences particle emission from cylinder, disc, sphere, and box shapes.
+    description: |
+      Depending on the `Class.ParticleEmitter.Shape` value, this property
+      performs a different action:
+
+      - For cylinders, ShapePartial specifies the top radius proportion. A value
+        of 0 means the top of the cylinder has a zero radius, making it a
+        Christmas tree, and particles only emit from that single point. A value
+        of 1 means the cylinder has no deformation and is regular cylinder.
+      - For discs, ShapePartial specifies the inner radius proportion. A value
+        of 0 means the disc is fully closed (a circle/ellipse), a value of 1
+        means emission only occurs on the outer most rim of the disc, and values
+        in-between emit from an annulus with a certain thickness.
+      - For spheres, ShapePartial specifies the hemispherical angle that
+        particles emit over. A value of 1 means particles emit from entire
+        sphere, a value of 0.5 means particles emit from a half-dome, and a
+        value of 0 means particles only emit from a single point at the north
+        pole.
+      - For boxes, ShapePartial specifies the extent to which the box becomes a
+        frustum from its center point. For example, when the value is 1 it's a
+        pyramidical shape from the box's center point.
+
+      For visual examples, see
+      [Particle Emitters - ShapePartial](../../../effects/particle-emitters.md#shapepartial).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: EmitterShape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.ShapeStyle
+    summary: |
+      Sets particle emission to either volumetric or surface-only emission.
+    description: |
+      Sets particle emission to either volumetric or surface-only emission. For
+      visual examples, see
+      [Particle Emitters - ShapeStyle](../../../effects/particle-emitters.md#shapestyle).
+    code_samples:
+    type: ParticleEmitterShapeStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: EmitterShape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Size
+    summary: |
+      Determines the world size over individual particles' lifetimes.
+    description: |
+      The Size property determines the world size in studs of all active
+      particles over their individual lifetimes. This property represents the
+      dimensions of the square `Class.ParticleEmitter.Texture` for each
+      particle. It is a `Datatype.NumberSequence` that works similar to
+      `Class.ParticleEmitter.Transparency` and `Class.ParticleEmitter.Color`.
+
+      A particle's present size is determined by linearly interpolating on this
+      NumberSequence using the particle's age and the particle's total lifetime.
+      For example, if a particle spawned 2 seconds ago and has a 4 second
+      lifetime, the size will be whatever is 50% of the way through the
+      `Datatype.NumberSequence`. For any `Datatype.NumberSequenceKeypoint` with
+      a nonzero envelope value, a random value in the envelope range is chosen
+      for each keypoint for each particle when it spawns.
+
+      Changing this property applies changes to all particles present in the
+      system. This is because the size of a particle is determined using its
+      present lifetime and this NumberSequence (the Size at the time the
+      particle was emit is not stored on a per-particle basis).
+
+      #### Design Note
+
+      When designing particle effects, size is probably the most important of
+      all properties. Too large or too subtle can ruin a particle effect! The
+      first thing you should do is decide how you want particles to enter and
+      exit view - fade in/out, or grow/shrink from size 0? The choice is yours -
+      start with a size NumberSequence from 0 to 3 or the reverse and go from
+      there.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Speed
+    summary: |
+      Determines a random range of speeds a new particle can have upon emission,
+      measured in studs per second.
+    description: |
+      The Speed property determines a random range of speeds a new particle can
+      have upon emission. It's measured in studs per second using a
+      `Datatype.NumberRange`. The velocity is chosen upon emission, and applies
+      in the `Class.ParticleEmitter.EmissionDirection`. Negative speed values
+      cause particles to travel in reverse.
+
+      `Class.ParticleEmitter.VelocityInheritance`,
+      `Class.ParticleEmitter.Acceleration` and `Class.ParticleEmitter.Drag`
+      affect a particle's speed over its lifetime. Changing Speed doesn't affect
+      active particles, and they retain whatever speed they have already.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberRange
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.SpreadAngle
+    summary: |
+      Determines the angles at which particles may be randomly emit, measured in
+      degrees.
+    description: |
+      The SpreadAngle property determines the random angles that a particle may
+      be emit. On emission, a random angle is selected uniformly using the range
+      defined by SpreadAngle. For example, if the
+      `Class.ParticleEmitter.EmissionDirection` is Top (+Y), then this
+      `Datatype.Vector2` describes the size of the random angle spread on the
+      X/Z axes, in degrees. The particle is given a velocity based on the
+      `Class.ParticleEmitter.Speed` in the chosen direction.
+
+      Setting one axis to 360 will cause particles to emit in all direction in a
+      **circle**. Setting both to 360 will cause particles to emit in all
+      directions in a **sphere**.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Squash
+    summary: |
+      Allows for non-uniform scaling of a particle, curve-controlled over the
+      particle's lifetime.
+    description: |
+      Allows for non-uniform scaling of a particle, curve-controlled over the
+      particle's lifetime.
+
+      - 1 < Squash: The particle grows vertically
+      - 0 < Squash < 1: The particle shrinks vertically
+      - -1 < Squash < 0: The particle shrinks horizontally
+      - Squash < -1: The particle grows horizontally
+    code_samples:
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Texture
+    summary: |
+      Determines the image rendered on particle billboards.
+    description: |
+      The Texture property determines the image rendered on particle billboards.
+      The rendered image is influenced by `Class.ParticleEmitter.Color`,
+      `Class.ParticleEmitter.Transparency`,
+      `Class.ParticleEmitter.LightInfluence`, and
+      `Class.ParticleEmitter.LightEmission`. Transparent textures work best for
+      particles
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.TimeScale
+    summary: |
+      Value between 0-1 that controls the speed of the particle effect.
+    description: |
+      A value between 0-1 than controls the speed of the particle effect. At 1
+      it runs at normal speed, at 0.5 it runs at half speed, and at 0 it freezes
+      time.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Particles
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.Transparency
+    summary: |
+      Determines the transparency of particles over their individual lifetimes.
+    description: |
+      The Transparency property determines the transparency of all active
+      particles over their individual lifetimes. It works similar to
+      `Class.ParticleEmitter.Size` in how it affects particles over time. In
+      terms of rendering, it works like the `Class.BasePart.Transparency` of a
+      part on a scale of 0 to 1, where 0 is completely visible (opaque), and a
+      value of 1 is completely invisible (not rendered at all).
+
+      A particle's present transparency is determined by linearly interpolating
+      on this NumberSequence using the particle's age and the particle's total
+      lifetime. For example, if a particle spawned 2 seconds ago and has a 4
+      second lifetime, the transparency will be whatever is 50% of the way
+      through the `Datatype.NumberSequence`. For any
+      `Datatype.NumberSequenceKeypoint` with a nonzero envelope value, a random
+      value in the envelope range is chosen for each keypoint for each particle
+      when it spawns.
+
+      Changing this property applies changes to all particles present in the
+      system. This is because the transparency of a particle is determined using
+      its present lifetime and this `Datatype.NumberSequence` (the Transparency
+      at the time the particle was emit is not stored on a per-particle basis).
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.VelocityInheritance
+    summary: |
+      Determines how much of the parent's velocity is inherited by particles
+      when emitted.
+    description: |
+      The VelocityInheritance property determines how much of the parent part's
+      `Class.BasePart.Velocity` is inherited by particles when they are emitted.
+      A value of 0 means that no velocity is inherited, and a value of 1 means
+      the particle will have the exact same speed as the parent
+      `Class.BasePart`.
+
+      When used in conjunction with `Class.ParticleEmitter.Drag`, a particle
+      emitter can make appear to be "shedding" particles from a moving part.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Particles
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.VelocitySpread
+    summary: |
+      Determines how offset a particle can be fired from the local emitter
+      direction of its parent.
+    description: |
+      This property determines how offset a particle can be fired from the local
+      emitter direction of its parent. When a particle is created its offset is
+      picked randomly between 0 and VelocitySpread. This value is measured in
+      degrees.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been superseded by `Class.ParticleEmitter.SpreadAngle`
+      which should be used in all new work
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: false
+  - name: ParticleEmitter.WindAffectsDrag
+    summary: |
+      Whether emitted particles follow the `Class.Workspace.GlobalWind` vector.
+    description: |
+      If true, emitted particles follow the `Class.Workspace.GlobalWind` vector.
+      Only applies if the `Class.ParticleEmitter.Drag|Drag` property is greater
+      than 0.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Particles
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ParticleEmitter.ZOffset
+    summary: |
+      Determines the forward-backward render position of particles; used to
+      control what particles render on top/bottom.
+    description: |
+      The ZOffset property determines the forward-backward (Z) render position
+      of particles, in studs. they render at a modified
+      `Class.ParticleEmitter.Size` such that this property will not affect the
+      screen size of particles. When changed, this property will affects all
+      particles, both current and future particles. Note that this property
+      accepts fractional values; it is not like `Class.GuiObject.ZIndex` (an
+      integer)
+
+      A practical use of ZOffset is for `ParticleEmitters` placed in players'
+      characters: use it to define if particles should appear in front of or
+      behind the character (use a value of +/- 2).
+
+      Positive values will move particles closer to the camera, and negative
+      values move particles away. Sufficiently negative values can cause
+      particles to render inside or behind the parent part.
+    code_samples:
+      - Creating-A-ParticleEmitter-from-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: ParticleEmitter:Clear
+    summary: |
+      Clears all particles that have been emitted.
+    description: |
+      The Clear method instantly clears any existing particles that have been
+      emitted by the `Class.ParticleEmitter` through its natural emission
+      (nonzero `Class.ParticleEmitter.Rate` on an
+      `Class.ParticleEmitter.Enabled` emitter) or via
+      `Class.ParticleEmitter:Emit()`. It's not possible to clear individual
+      particles, so all particles clear at once.
+
+      Sometimes it is desirable to clear particles before teleporting a
+      character so that there are no lingering effects that might follow due to
+      `Class.ParticleEmitter.LockedToPart`.
+    code_samples:
+      - ParticleEmitter-Burst
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ParticleEmitter:Emit
+    summary: |
+      Emits a given number of particles.
+    description: |
+      The Emit method will cause the `Class.ParticleEmitter` to emit the given
+      number of particles similar to how `Class.ParticleEmitter.Rate` does on
+      `Class.ParticleEmitter.Enabled` emitters. Be warned - this always emits
+      exactly the number of particles even if Roblox' graphics settings are
+      lower. Emitting too many particles can cause performance issues on
+      lower-end hardware.
+
+      To clear any emit particles, use `Class.ParticleEmitter:Clear()`.
+    code_samples:
+      - Emit-Particles-Over-Distance
+      - ParticleEmitter-Burst
+    parameters:
+      - name: particleCount
+        type: int
+        default: 16
+        summary: |
+          The number of particles to emit.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

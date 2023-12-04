@@ -1,0 +1,172 @@
+name: PhysicalProperties
+type: datatype
+summary: |
+  Describes properties that affect the physical behavior of a `Class.BasePart`.
+description: |
+  The `Datatype.PhysicalProperties` data type describes several physical
+  properties of a `Class.BasePart`:
+  `Datatype.PhysicalProperties.Density|Density`,
+  `Datatype.PhysicalProperties.Elasticity|Elasticity`, and
+  `Datatype.PhysicalProperties.Friction|Friction`. It is used in the
+  similarly-named `Class.BasePart.CustomPhysicalProperties` property.
+
+  #### Weighting Behavior
+
+  `Datatype.PhysicalProperties` also provides weightings properties,
+  `Datatype.PhysicalProperties.ElasticityWeight|ElasticityWeight` and
+  `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight`. When two parts
+  interact, the friction and elasticity between them are determined in the same
+  way by the following pairwise weighted average function:
+
+  ![(Friction_a * FrictionWeight_a + Friction_b * FrictionWeight_b) / (FrictionWeight_a + FrictionWeight_b)](/assets/legacy/FrictionWeight.png)
+
+  Although the formula above refers to the
+  `Datatype.PhysicalProperties.Friction|Friction` and
+  `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight` of two parts,
+  **A** and **B**, the formula is used in the same manner when determining
+  `Datatype.PhysicalProperties.Elasticity|Elasticity`. Generally, when the
+  weight of **A** is much greater than that of **B**, the actual value will be
+  closer to **A**. If the weights are similar, the actual value will be close to
+  the midpoint between their individual values.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: PhysicalProperties.new
+    summary: Returns a `Datatype.PhysicalProperties` with the default properties for the given material.
+    description: Returns a `Datatype.PhysicalProperties` container, with the density, friction, and elasticity specified for this Material.
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.new
+    summary: |-
+      Returns a `Datatype.PhysicalProperties` with the specified density, friction, and
+      elasticity.
+    description: |-
+      Returns a `Datatype.PhysicalProperties` container, with the specified density,
+      friction, and elasticity.
+    parameters:
+      - name: density
+        type: number
+        default:
+        summary: ''
+      - name: friction
+        type: number
+        default:
+        summary: ''
+      - name: elasticity
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.new
+    summary: |-
+      Creates a `Datatype.PhysicalProperties` container with the specified density,
+      friction, elasticity, weight of friction, and weight of elasticity.
+    description: |-
+      Creates a `Datatype.PhysicalProperties` container with the specified density,
+      friction, elasticity, weight of friction, and weight of elasticity.
+    parameters:
+      - name: density
+        type: number
+        default:
+        summary: ''
+      - name: friction
+        type: number
+        default:
+        summary: ''
+      - name: elasticity
+        type: number
+        default:
+        summary: ''
+      - name: frictionWeight
+        type: number
+        default:
+        summary: ''
+      - name: elasticityWeight
+        type: number
+        default:
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: PhysicalProperties.Density
+    type: number
+    summary: |
+      The mass per unit volume of the part.
+    description: |
+      Density is defined as the amount of mass per unit volume. The more dense a
+      part is, the more force it takes to accelerate it. Acceptable range is
+      0.01 to 100.0 and values outside this range will be clamped.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.Friction
+    type: number
+    summary: |
+      The deceleration of the part when rubbing against another part.
+    description: |
+      Friction is defined as the force that opposes the relative lateral motion
+      of two solid surfaces in contact. The greater the friction on a part, the
+      quicker it will decelerate when it rubs against another part with
+      friction. Acceptable range is 0.0 to 2.0 and values outside this range
+      will be clamped.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.Elasticity
+    type: number
+    summary: |
+      The amount of energy retained when colliding with another part.
+    description: |
+      Elasticity refers to a part's tendency to retain energy when colliding
+      with another part. An `Datatype.PhysicalProperties.Elasticity|Elasticity`
+      of 1 indicates that the part bounces with the same energy it had before a
+      collision. Acceptable range is 0.0 to 1.0 and values outside this range
+      will be clamped.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.FrictionWeight
+    type: number
+    summary: |
+      The importance of the part's
+      `Datatype.PhysicalProperties.Friction|Friction` property when calculating
+      the friction with the colliding part.
+    description: |
+      The friction weight of two parts rubbing together creates a ratio used to
+      calculate the actual friction between the two parts. The higher a part's
+      `Datatype.PhysicalProperties.FrictionWeight|FrictionWeight`, the more its
+      `Datatype.PhysicalProperties.Friction|Friction` is used. Acceptable range
+      is 0.0 to 100.0 and values outside this range will be clamped.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: PhysicalProperties.ElasticityWeight
+    type: number
+    summary: |
+      The importance of the part's
+      `Datatype.PhysicalProperties.Elasticity|Elasticity` property when
+      calculating the elasticity with the colliding part.
+    description: |
+      The elasticity weight of two parts colliding creates a ratio used to
+      calculate the actual elasticity between the two parts. The higher a part's
+      `Datatype.PhysicalProperties.ElasticityWeight|ElasticityWeight`, the more
+      its `Datatype.PhysicalProperties.Elasticity|Elasticity` is used.
+      Acceptable range is 0.0 to 100.0 and values outside this range will be
+      clamped.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+functions:
+math_operations:

@@ -1,0 +1,22 @@
+name: OutfitPages
+type: class
+category:
+memory_category: Instances
+summary: |
+  The `OutfitPages` class is used in the case of iterating over a user's
+  outfits.
+description: |
+  The `OutfitPages` class is used in the case of iterating over a user's
+  outfits. It's a special version of the `Class.Pages` class returned by
+  `Class.AvatarEditorService:GetOutfits()`.
+code_samples:
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

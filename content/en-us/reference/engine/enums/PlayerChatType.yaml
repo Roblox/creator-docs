@@ -1,0 +1,29 @@
+name: PlayerChatType
+type: enum
+summary: |
+  Determines the style of a chat message.
+description: |
+  Used by Roblox's Chat to determine the style of a chat message. If you want to
+  check for this kind of stuff, see `Class.Player.Chatted`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: All
+    summary: |
+      A global message that everyone can receive.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Team
+    summary: |
+      A team message only players in the same team can receive.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Whisper
+    summary: |
+      A whispered message only the person it's whispered to can receive.
+    value: 2
+    tags: []
+    deprecation_message: ''

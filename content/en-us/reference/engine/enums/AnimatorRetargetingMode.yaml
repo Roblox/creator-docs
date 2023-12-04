@@ -1,0 +1,30 @@
+name: AnimatorRetargetingMode
+type: enum
+summary: |
+  Animation Retargeting setting.
+description: |
+  The AnimatorRetargetingMode Enum describes the setting for Animation
+  Retargeting. Retargeting adapts animations to various character rigs based on
+  their proportions.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: |
+      Retargeting in default state, opt-in initially but subject to change.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Disabled
+    summary: |
+      Retargeting disabled.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Enabled
+    summary: |
+      Retargeting enabled.
+    value: 2
+    tags: []
+    deprecation_message: ''

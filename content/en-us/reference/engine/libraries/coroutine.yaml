@@ -1,0 +1,286 @@
+name: coroutine
+type: library
+summary: |
+  A function that executes alongside the main thread.
+description: |
+  A **coroutine** is used to perform multiple tasks at the same time from within
+  the same script. Such tasks might include producing values from inputs or
+  performing work on a subroutine when solving a larger problem. A task doesn't
+  even need to have a defined ending point, but it does need to define
+  particular times at which it **yields** (pause) to let other things be worked
+  on.
+
+  ## Using Coroutines
+
+  A new coroutine can be created by providing a function to
+  `Library.coroutine.create()`. Once created, a coroutine doesn't begin running
+  until the first call to `Library.coroutine.resume()` which passes the
+  arguments to the function. This call returns when the function either halts or
+  calls `Library.coroutine.yield()` and, when this happens,
+  `Library.coroutine.resume()` returns either the values returned by the
+  function, the values sent to `Library.coroutine.yield()`, or an error message.
+  If it does error, the second return value is the thrown error.
+
+  ```lua
+  local function task(...)
+  	-- This function might do some work for a bit then yield some value
+  	coroutine.yield("first")  -- To be returned by coroutine.resume()
+  	-- The function continues once it is resumed again
+  	return "second"
+  end
+
+  local taskCoro = coroutine.create(task)
+  -- Call resume for the first time, which runs the function from the beginning
+  local success, result = coroutine.resume(taskCoro, ...)
+  print(success, result)  --> true, first (task called coroutine.yield())
+  -- Continue running the function until it yields or halts
+  success, result = coroutine.resume(taskCoro)
+  print(success, result)  --> true, second (task halted because it returned "second")
+  ```
+
+  During the lifetime of the coroutine, you can call
+  `Library.coroutine.status()` to inspect its status:
+
+  <table>
+      <thead>
+          <tr>
+              <th>Status</th>
+              <th>Meaning</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><b>suspended</b></td> <td>The coroutine is waiting to be
+              resumed. Coroutines begin in this state and enter it when their
+              function calls <code>coroutine.yield()</code>.</td>
+          </tr>
+          <tr>
+              <td><b>running</b></td>
+              <td>The coroutine is running right now.</td>
+          </tr>
+          <tr>
+              <td><b>normal</b></td> <td>The coroutine is awaiting the yield of
+              another coroutine; in other words, it has resumed another
+              coroutine.</td>
+          </tr>
+          <tr>
+              <td><b>dead</b></td> <td>The function has halted (returned or
+              thrown an&nbsp;error). The coroutine cannot be used further.</td>
+          </tr>
+      </tbody>
+  </table>
+
+  ### Wrapping Coroutines
+
+  When working with coroutines, you can also forgo the use of the coroutine
+  object and instead use a wrapper function. Such a wrapper function will resume
+  a particular coroutine when it is called and will return only the yielded
+  values. You can do this using `Library.coroutine.wrap()`:
+
+  ```lua
+  -- Create coroutine and return a wrapper function that resumes it
+  local f = coroutine.wrap(task)
+  -- Resume the coroutine as if we called coroutine.resume()
+  local result = f()
+  -- If an error occurs it will be raised here!
+  -- This differs from coroutine.resume() which acts similar to pcall()
+  ```
+
+  The first value returned from `Library.coroutine.resume()` describes whether a
+  coroutine ran without errors. However, functions returned by
+  `Library.coroutine.wrap()` will not do this: instead they directly return the
+  values returned or passed to `Library.coroutine.yield()`, if any. Should an
+  error have occurred while running the coroutine function, the error is raised
+  on the call of the returned function.
+
+  ### Producer Pattern Example
+
+  Imagine a task that produces repetitions of a word: each time it produces a
+  repetition, the next one will produce one more. For example, providing `Hello`
+  will produce `Hello`, `HelloHello`, `HelloHelloHello`, etc. To do this, you
+  can define `repeatThis()`:
+
+  ```lua
+  -- This function repeats a word every time its coroutine is resumed
+  local function repeatThis(word)
+  	local repetition = ""
+  	while true do
+  		-- Do one repetition then yield the result
+  		repetition = repetition .. word
+  		coroutine.yield(repetition)
+  	end
+  end
+  ```
+
+  To run this function as a coroutine, you can use `Library.coroutine.create()`
+  followed by multiple calls to `Library.coroutine.resume()`:
+
+  ```lua
+  local repetitionCoro = coroutine.create(repeatThis)
+  print(coroutine.resume(repetitionCoro, "Hello"))  -- true, Hello
+  print(coroutine.resume(repetitionCoro))           -- true, HelloHello
+  print(coroutine.resume(repetitionCoro))           -- true, HelloHelloHello
+  ```
+
+  For this producer function, you can also use `Library.coroutine.wrap()` to get
+  a function that produces values:
+
+  ```lua
+  local f = coroutine.wrap(repeatThis)
+  print(f("Hello"))  -- Hello
+  print(f())         -- HelloHello
+  print(f())         -- HelloHelloHello
+  ```
+code_samples:
+properties:
+functions:
+  - name: coroutine.close
+    summary: |
+      Closes and puts the provided coroutine in a dead state.
+    description: |
+      Closes and puts the provided coroutine in a dead state. This function
+      returns `true` unless the coroutine is in an error state, in which case it
+      returns `false` and the error message. A coroutine that is currently
+      running cannot be closed. A coroutine cannot be resumed after it is
+      closed.
+    parameters:
+      - name: co
+        type: thread
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: |
+          `true` unless the coroutine being closed is in an error state.
+      - type: Variant<string, void>
+        summary: |
+          The error message, if any.
+    tags:
+    code_samples:
+  - name: coroutine.create
+    summary: |
+      Creates a new coroutine, with body f. f must be a Lua function.
+    description: |
+      Creates a new coroutine, with body f. f must be a Lua function.
+    parameters:
+      - name: f
+        type: function
+        default:
+        summary: ''
+    returns:
+      - type: thread
+        summary: ''
+    tags:
+    code_samples:
+  - name: coroutine.isyieldable
+    summary: |
+      Returns `true` if the coroutine this function is called within can safely
+      yield.
+    description: |
+      Returns `true` if the coroutine this function is called within can safely
+      yield. Yielding a coroutine inside metamethods or C functions is
+      prohibited, with the exception of `pcall` and `xpcall`.
+    parameters:
+    returns:
+      - type: bool
+        summary: |
+          Whether or not the coroutine can safely yield at this point.
+    tags:
+    code_samples:
+  - name: coroutine.resume
+    summary: |
+      Starts or continues the execution of coroutine `co`.
+    description: |
+      Starts or continues the execution of coroutine `co`. The first time you
+      resume a coroutine, it starts running its body. The values `...` are
+      passed as the arguments to the body function. If the coroutine has
+      yielded, resume restarts it; the values `...` are passed as the results
+      from the yield. If the coroutine runs without any errors, resume returns
+      true plus any values passed to yield (if the coroutine yields) or any
+      values returned by the body function (if the coroutine terminates). If
+      there is any error, resume returns false plus the error message.
+    parameters:
+      - name: co
+        type: thread
+        default:
+        summary: ''
+      - name: ...
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+      - type: Variant<Tuple, string>
+        summary: ''
+    tags:
+    code_samples:
+  - name: coroutine.running
+    summary: |
+      Returns the running coroutine.
+    description: |
+      Returns the running coroutine.
+    parameters:
+    returns:
+      - type: thread
+        summary: ''
+    tags:
+    code_samples:
+  - name: coroutine.status
+    summary: |
+      Returns the status of coroutine co as a string.
+    description: |
+      Returns the status of coroutine co, as a string: 'running', if the
+      coroutine is running (that is, it called status); 'suspended', if the
+      coroutine is suspended in a call to yield, or if it has not started
+      running yet; 'normal' if the coroutine is active but not running (that is,
+      it has resumed another coroutine); and 'dead' if the coroutine has
+      finished its body function, or if it has stopped with an error.
+    parameters:
+      - name: co
+        type: thread
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: coroutine.wrap
+    summary: |
+      Creates a new coroutine and returns a function that, when called, resumes
+      the coroutine.
+    description: |
+      Creates a new coroutine, with body f. f must be a Lua function. Returns a
+      function that resumes the coroutine each time it is called. Any arguments
+      passed to the function behave as the extra arguments to resume. Returns
+      the same values returned by resume, except the first boolean. In case of
+      error, propagates the error.
+    parameters:
+      - name: f
+        type: function
+        default:
+        summary: ''
+    returns:
+      - type: function
+        summary: ''
+    tags:
+    code_samples:
+  - name: coroutine.yield
+    summary: |
+      Suspends execution of the coroutine.
+    description: |
+      Suspends the execution of the calling coroutine. Any arguments to yield
+      are passed as extra results to resume. Yielding a coroutine inside
+      metamethods or C functions is prohibited, with the exception of `pcall`
+      and `xpcall`.
+    parameters:
+      - name: ...
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: Tuple<Variant>
+        summary: ''
+    tags:
+    code_samples:

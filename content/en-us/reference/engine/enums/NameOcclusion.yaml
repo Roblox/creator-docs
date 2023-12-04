@@ -1,0 +1,30 @@
+name: NameOcclusion
+type: enum
+summary: |
+  The NameOcclusion Enum is used to set the `Class.Humanoid.NameOcclusion`
+  property.
+description: |
+  The NameOcclusion Enum is used to set the `Class.Humanoid.NameOcclusion`
+  property.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NoOcclusion
+    summary: |
+      Do not occlude (hide) any humanoid names.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: EnemyOcclusion
+    summary: |
+      Occlude (hide) all enemy humanoid names.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: OccludeAll
+    summary: |
+      Occlude (hide) all humanoid names.
+    value: 2
+    tags: []
+    deprecation_message: ''

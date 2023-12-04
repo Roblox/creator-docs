@@ -1,0 +1,447 @@
+name: IKControl
+type: class
+category: Animations
+memory_category: Animation
+summary: |
+  Specifies a control to generate a procedural animation pose using Inverse
+  Kinematics.
+description: |
+  **IKControl** instances generate procedural animation poses using Inverse
+  Kinematics (IK). They allow you to make characters respond realistically to
+  their environment.
+
+  For example, you can make a character place its hand on a door handle exactly,
+  and the character will do so independently of its position. IKControls provide
+  the advantage of needing to create much fewer animations for your game while
+  giving your experience a more realistic and polished feel.
+
+  `Class.IKControl`s must be a child of a `Class.Humanoid` or
+  `Class.AnimationController` with an `Class.Animator` and have all of their
+  required properties set properly, otherwise they don't have any effect. The
+  required properties are `Class.IKControl.Type|Type`,
+  `Class.IKControl.EndEffector|EndEffector`, `Class.IKControl.Target|Target`,
+  `Class.IKControl.ChainRoot|ChainRoot`. As soon as those are set, the IkControl
+  modifies the pose of your character as you specify. The following code sample
+  demonstrates how to set up your first `Class.IKControl` and get started with
+  creating more realistic animations for your game.
+
+  You can use IKControls to make a character:
+
+  - Rotate its head and torso to look at a point of interest in the world.
+  - Modify its feet positions to respond to dynamic terrain. Adjust its legs and
+    feet to place them accordingly on terrain with rocks and slopes.
+  - Hold a gun and place its hands appropriately on the grip without needing to
+    create animations for each gun in the game.
+  - Aim at a point in the world, so that the tip of the gun point exactly at
+    what you want to shoot. Especially useful in third person shooters.
+  - Place its hands on the steering wheel of a car and follow it when it
+    rotates.
+  - Much more!
+
+  `Class.IKControl` will override the animation for all the parts between the
+  `Class.IKControl.ChainRoot|ChainRoot` and the
+  `Class.IKControl.EndEffector|EndEffector`. You can enable/disable it using
+  `Class.IKControl.Enabled|Enabled` or change how much they have an effect over
+  the underlying animation using the `Class.IKControl.Weight|Weight`. Be
+  careful: if you do not set up your `Class.IKControl`s correctly, you might
+  generate bad and unrealistic poses!
+code_samples:
+  - IKControl-Setup
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: IKControl.ChainRoot
+    summary: |
+      The last part that you are interested in moving your character. For
+      example, the upper arm. Must be an ancestor of
+      `Class.IKControl.EndEffector|EndEffector` and be a `Class.BasePart` or a
+      `Class.Bone` in your character.
+    description: |
+      By specifying a `Class.IKControl.ChainRoot|ChainRoot` and an
+      `Class.IKControl.EndEffector|EndEffector`, you instruct the
+      `Class.IKControl` that it's allowed to move and rotate all parts between
+      the two to move the `Class.IKControl.EndEffector|EndEffector` to the
+      `Class.IKControl.Target|Target`. For example, if you specify the LeftHand
+      as `Class.IKControl.EndEffector|EndEffector` and LeftUpperArm as the
+      `Class.IKControl.ChainRoot|ChainRoot`, the control moves 3 parts: the
+      LeftHand, the LeftLowerArm, and the LeftUpperArm. Avoid setting
+      `Class.IKControl.ChainRoot|ChainRoot` as the actual root of the character
+      because that produces unrealistic results.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Enabled
+    summary: |
+      Toggles the control on and off. True by default.
+    description: |
+      This property allows you to toggle the IK control on and off. It's on by
+      default. When `Class.IKControl.Enabled|Enabled` is false, the IK control
+      is off and isn't resolved by the underlying solver.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.EndEffector
+    summary: |
+      The part that you are interested in moving to reach the
+      `Class.IKControl.Target|Target`. For example, the hand of your character.
+      Must be a descendant of `Class.IKControl.ChainRoot|ChainRoot` and be a
+      `Class.BasePart` or a `Class.Bone` in your character.
+    description: |
+      The `Class.IKControl.EndEffector|EndEffector` describes the last part in
+      the chain of your character that you want to affect. For example, it could
+      be the hand when you want to move the whole arm to reach a point. It can
+      be a `Class.BasePart` on a character, that has a `Class.Motor6D` as its
+      child, a `Class.Motor6D` directly, a `Class.Bone`, or a
+      `Class.Attachment`. The pivot of the selected
+      `Class.IKControl.EndEffector|EndEffector` moves to the
+      `Class.IKControl.Target|Target`, so you can use `Class.Attachment`s to
+      modify which point of a `Class.BasePart` should reach the
+      `Class.IKControl.Target|Target`.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.EndEffectorOffset
+    summary: |
+      An additional offset applied on top of the
+      `Class.IKControl.EndEffector|EndEffector` in its local space to change
+      where it moves.
+    description: |
+      The end-effector offset is an additional `Datatype.CFrame` applied on top
+      of the `Class.IKControl.Target|Target`'s `Datatype.CFrame` that produces
+      the final `Datatype.CFrame` used to place the
+      `Class.IKControl.EndEffector|EndEffector`. By default, it's the identity
+      CFrame, so if you don't set it, it has no effect and the
+      `Class.IKControl.EndEffector|EndEffector` uses the
+      `Class.IKControl.Target|Target`'s `Datatype.CFrame` directly, which is
+      specified in the local space of the
+      `Class.IKControl.EndEffector|EndEffector`.
+
+      Alternatively, you can use Attachments by setting an Attachment as
+      `Class.IKControl.EndEffector|EndEffector`, which moves it to the
+      `Class.IKControl.Target|Target` instead of the parts it's attached to,
+      effectively obtaining the same result.
+
+      You can also use `Class.IKControl.EndEffectorOffset|EndEffectorOffset` to
+      modify which axis of the `Class.IKControl.EndEffector|EndEffector` should
+      point at the `Class.IKControl.Target|Target` when using `LookAt` as
+      `Class.IKControl.Type|Type`.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Offset
+    summary: |
+      An additional offset applied on top of the `Class.IKControl.Target|Target`
+      to change where the `Class.IKControl.EndEffector|EndEffector` moves.
+    description: |
+      The offset is an additional `Datatype.CFrame` applied on top of the
+      `Class.IKControl.Target|Target`'s `Datatype.CFrame` that produces the
+      final `Datatype.CFrame` used to place the
+      `Class.IKControl.EndEffector|EndEffector`. It's identity by default, so if
+      you don't set it, it has no effect and the
+      `Class.IKControl.EndEffector|EndEffector` will use the
+      `Class.IKControl.Target|Target`'s `Datatype.CFrame` directly. You can
+      animate it to create procedural animations such as typing on a keyboard.
+      It's useful when the `Class.IKControl.Target|Target` and
+      `Class.IKControl.EndEffector|EndEffector` aren't aligned and you need to
+      fix it with an additional rotation or translation.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Pole
+    summary: |
+      An optional instance that determines which way the chain bends. You can
+      use this to specify which way an elbow or knee bends.
+    description: |
+      The `Class.IKControl.Pole|Pole` is an optional `Class.Instance` that gives
+      you control over how intermediate parts in your character should bend. It
+      can be anything that has a position in the world, such as
+      `Class.BasePart`, `Class.Attachment`, `Class.Bone`, `Class.Motor6D`. It is
+      by default nil. When you specify it, the underlying solver will make the
+      parts bend towards it. When it is nil, the solver will try to make elbows
+      and knees bend appropriately based on the limb of the character. The limb
+      will be "Arm" when you select as `Class.IKControl.EndEffector|EndEffector`
+      either the _LeftHand_ or _RightHand_ and as
+      `Class.IKControl.ChainRoot|ChainRoot` the corresponding _LeftUpperArm_ or
+      _RightUpperArm_, and it will be "Leg" when you select as
+      `Class.IKControl.EndEffector|EndEffector` either the _LeftFoot_ or
+      _RightFoot_ and as `Class.IKControl.ChainRoot|ChainRoot` the corresponding
+      _LeftUpperLeg_ or _RightUpperLeg_. In all other cases, if you don't
+      specify a pole, the chain might not bend as you expect.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Priority
+    summary: |
+      Specifies the order in which controls are solved. Higher values have
+      higher priority.
+    description: |
+      When multiple controls are active on a character, the order in which they
+      are solved by the underlying system affects the final generated pose. By
+      changing this value, you specify the ordering in which controls are
+      satisfied. Higher values have higher priority, and higher-priority
+      controls are resolved later because their result might override the
+      previous result of other controls. If you have multiple IK controls on a
+      character and one is more important than the other, specify a lower
+      priority for it. It is 0 by default, meaning all controls have the same
+      priority.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.SmoothTime
+    summary: |
+      Specifies the average number of seconds that it takes for the
+      `Class.IKControl.EndEffector|EndEffector` to smoothly reach the
+      `Class.IKControl.Target|Target`.
+    description: |
+      This value specifies the average number of seconds that it takes for the
+      `Class.IKControl.EndEffector|EndEffector` to reach the
+      `Class.IKControl.Target|Target`. The behavior is that of a
+      critically-damped spring, where the rate of change is proportional to the
+      distance to the target and no oscillations are present when approaching
+      the target. Smaller values create a quicker convergence, and larger values
+      create a slower convergence. A value of 0 disables smoothing. The default
+      value is 0.05 to provide a very slight smoothing that makes the motion
+      feel realistic.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Target
+    summary: |
+      The object that the `Class.IKControl.EndEffector|EndEffector` reaches for
+      or points at. It can be anything that has a position in the world, such as
+      `Class.BasePart`, `Class.Attachment`, `Class.Bone`, or `Class.Motor6D`.
+    description: |
+      The `Class.IKControl.Target|Target` represents a point (`Datatype.CFrame`)
+      in the world that you want your `Class.IKControl.EndEffector|EndEffector`
+      to reach. The exact behavior of reaching can be set via the
+      `Class.IKControl.Type|Type` property, and an additional
+      `Class.IKControl.Offset|Offset` can be applied on top of it to modify it.
+      If you set a `Class.IKControl.Target|Target` that will be moved either by
+      physics or a script, at each frame the `Class.IKControl` will try to
+      satisfy it, automatically updating the point to reach.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Type
+    summary: |
+      Specifies how the solver satisfies this control.
+    description: |
+      By changing the `Class.IKControl.Type|Type`, you can change the behavior
+      of the control. These are the available options:
+
+      - Transform: it's a full 6-DoF constraint. Aligns the
+        `Class.IKControl.EndEffector|EndEffector` `Datatype.CFrame` to that of
+        the `Class.IKControl.Target|Target`.
+      - Position: aligns the `Class.IKControl.EndEffector|EndEffector` position
+        to that of the `Class.IKControl.Target|Target`.
+      - Rotation: aligns the `Class.IKControl.EndEffector|EndEffector` rotation
+        to that of the `Class.IKControl.Target|Target`.
+      - LookAt: moves and orients the whole chain to make an axis (by default
+        the forward axis) on the `Class.IKControl.EndEffector|EndEffector` point
+        at a position in the world specified by `Class.IKControl.Target|Target`.
+    code_samples: []
+    type: IKControlType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: IKControl.Weight
+    summary: |
+      Specifies the weight of the IK control target. Should be in the [0, 1]
+      range.
+    description: |
+      You can control how much a given control affects the character pose by
+      using this property. Values should be in the [0, 1] range. 0 means no
+      effect, and 1 means full effect of the IK control. Values outside this
+      range are truncated. Smoothly varying this value allows you to blend in or
+      out a specific control to avoid jarring motion. It is 1 by default.
+
+      The weight determines the interpolation factor between the End-Effector
+      and the IK target. Setting the weight to 0 doesn't disable the IK Control
+      because other factors, including the SmoothTime smoothing factor and Pole,
+      can still change the pose. To truly disable the IK Control, turn the
+      `Class.IKControl.Enabled|Enabled` property to false.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: IKControl:GetChainCount
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IKControl:GetChainLength
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IKControl:GetNodeLocalCFrame
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IKControl:GetNodeWorldCFrame
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IKControl:GetRawFinalTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: IKControl:GetSmoothedFinalTarget
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

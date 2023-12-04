@@ -1,0 +1,190 @@
+name: ViewportFrame
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  `Class.GuiObject|GUI` that can display children 3D objects.
+description: |
+  A **ViewportFrame** is a type of `Class.GuiObject|GUI` that can render 3D
+  objects inside its bounds. This is a great way to display 3D objects/models in
+  a 2D GUI space like a `Class.ScreenGui`. At the moment, no shadow or post
+  effects are available. Neon and Glass `Enum.Material|materials` will be
+  rendered on lowest quality. Nested GUIs aren't supported, which means
+  GuiObjects don't work as expected under ViewportFrame.
+
+  For a step-by-step walkthrough, see the [Frames](../../../ui/frames.md).
+code_samples:
+  - viewportframe---create-gui
+  - viewportframe---control-camera
+inherits:
+  - GuiObject
+tags: []
+deprecation_message: ''
+properties:
+  - name: ViewportFrame.Ambient
+    summary: |
+      The lighting hue applied to the area within the `Class.ViewportFrame`.
+    description: |
+      This property determines the lighting hue applied to the area within the
+      `Class.ViewportFrame`. This property defaults to 200, 200, 200 (ghost
+      grey).
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ViewportFrame.CurrentCamera
+    summary: |
+      `Class.Camera` that is used to render children objects.
+    description: |
+      This property is a `Class.Camera` instance that is used to render children
+      objects. Defaults to _nil_.
+
+      The `Class.Camera` object will not replicate so the
+      `Class.ViewportFrame.CurrentCamera` won't replicate either. If you save a
+      Camera in the server, it will not appear in the client. When you set this
+      property, `Class.Camera.CFrame` and `Class.Camera.FieldOfView` will be
+      saved and replicate with `Class.ViewportFrame` internally so the client
+      can render ViewportFrame without a Camera object. If you want to change
+      the client's Camera, you have to create a new Camera using a
+      `Class.LocalScript` at runtime.
+    code_samples:
+      - viewportframe---create-gui
+      - viewportframe---control-camera
+    type: Camera
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: ViewportFrame.ImageColor3
+    summary: |
+      Determines how a rendered image will be colorized.
+    description: |
+      This property determines how a rendered image will be colorized. It allows
+      you to change the image color without directly modifying the rendered
+      object.The default colorization value is
+      `Datatype.Color3|Color3.new(1,1,1)` (white). When set to white no
+      colorization occurs.
+
+      It functions similarly to `Class.ImageLabel.ImageColor3` and
+      `Class.Decal.Color3`except that it is applied to the rendered image.
+
+      The image below demonstrates the same ViewportFrame with two different
+      colorizations. The first image has the default (white) colorization and
+      the second image has a `Color3.new(255, 255, 102)` (yellow) colorization.
+
+      ![ViewportFrame with the default white colorization](/assets/legacy/Screen_Shot_2019-02-09_at_8.03.48_PM.png)
+
+      ![ViewportFrame with a yellow colorization](/assets/legacy/Screen_Shot_2019-02-09_at_8.08.58_PM.png)
+
+      See also:
+
+      - `Class.ViewportFrame.ImageTransparency`, determines the transparency of
+        the rendered image
+      - `Class.ViewportFrame.CurrentCamera`, the `Class.Camera` that is used to
+        render children objects
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ViewportFrame.ImageTransparency
+    summary: |
+      Determines the transparency of the rendered image.
+    description: |
+      This property determines the transparency of the rendered image. It allows
+      you to change the image transparency without directly modifying the
+      rendered object. A value of 0 is completely opaque, and a value of 1 is
+      completely transparent (invisible). The default transparency is 0.
+
+      This property behaves similarly to
+      `Class.GuiObject.BackgroundTransparency` or `Class.BasePart.Transparency`
+      except that it is applied to the rendered image.
+
+      The image below demonstrates the same ViewportFrame with two different
+      transparency. The first image has a transparency of 0 and the second image
+      has a transparency of 0.5.
+
+      ![ViewportFrame with default 0 transparency](/assets/legacy/Screen_Shot_2019-02-09_at_8.03.48_PM.png)
+
+      ![ViewportFrame with 0.5 transparencu](/assets/legacy/Screen_Shot_2019-02-09_at_8.23.38_PM.png)
+
+      See also:
+
+      - `Class.ViewportFrame.ImageColor3`, determines how a rendered image will
+        be colorized
+      - `Class.ViewportFrame.CurrentCamera`, the `Class.Camera` that is used to
+        render children objects
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ViewportFrame.LightColor
+    summary: |
+      The color of the emitted light.
+    description: |
+      The color of the emitted light. This property defaults to 140, 140, 140
+      (silver flip/flop).
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ViewportFrame.LightDirection
+    summary: |
+      A `Datatype.Vector3` representing the direction of the light source from
+      the position 0, 0, 0.
+    description: |
+      A `Datatype.Vector3` representing the direction of the light source from
+      the position 0, 0, 0. This property defaults to -1, -1, -1.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

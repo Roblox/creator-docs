@@ -1,0 +1,75 @@
+name: Shirt
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  Displays a Shirt texture from the Roblox website to display on a
+  `Class.Humanoid` rig.
+description: |
+  <img src="/assets/legacy/Shirt.jpg" alt="A default rig wearing a very dapper Shirt (rbxassetid://86896487)"  />
+
+  The **Shirt** object displays a Shirt texture from the Roblox website on a
+  `Class.Humanoid` rig. Shirts cover the torso and arms, and will take priority
+  over a `Class.Pants` on the torso. To be visible, a Shirt must be a sibling of
+  a Humanoid and have its `Class.Shirt.ShirtTemplate|ShirtTemplate` property set
+  to an appropriate texture (such as `rbxassetid://86896487`, pictured to the
+  right). The shirt texture may be colorized using the `Class.Clothing.Color3`
+  property.
+
+  Shirts are automatically loaded on `Class.Player` characters if their avatar
+  is wearing one.
+
+  See also:
+
+  - `Class.Pants`, an object which works similarly with the torso and legs
+code_samples:
+  - Shirt-Pants
+inherits:
+  - Clothing
+tags: []
+deprecation_message: ''
+properties:
+  - name: Shirt.ShirtTemplate
+    summary: |
+      Determines the texture of the `Class.Shirt`. The content ID link pointing
+      to the shirt template hosted on the Roblox website.
+    description: |
+      The content ID link pointing to the shirt template hosted on the Roblox
+      website. Determines the texture of the `Class.Shirt`.
+
+      See also `Class.ShirtGraphic.Graphic` for the image applied to T-shirts.
+
+      #### Finding the ShirtTemplate ID
+
+      This content ID is different than the website URL of the shirt. It can be
+      found by pasting the website URL of the shirt into the **ShirtTemplate**
+      property in Studio, as Studio will correct it. Alternatively
+      `Class.InsertService:LoadAsset()` can be used to insert the shirt into the
+      workspace, for example:
+
+      ```
+      local webURL = "https://www.roblox.com/catalog/1804747/White-Shirt"
+      local assetId = tonumber(string.match(webURL, "%d+") or 0)  -- Extract the number
+      local success, model = pcall(function()
+      	return game:GetService("InsertService"):LoadAsset(assetId)
+      end)
+      if success then
+      	model.Parent = workspace
+      end
+      ```
+    code_samples:
+      - Shirt-Pants
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

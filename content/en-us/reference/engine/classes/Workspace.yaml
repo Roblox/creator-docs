@@ -1,0 +1,1245 @@
+name: Workspace
+type: class
+category: Gameplay
+memory_category: PhysicsParts
+summary: |
+  **Workspace** houses 3D objects which are rendered to the 3D world. Objects
+  not descending from it will not be rendered or physically interact with the
+  world.
+description: |
+  The core job of `Class.Workspace` is to hold objects that exist in the 3D
+  world, effectively `Class.BasePart|BaseParts` and
+  `Class.Attachment|Attachments`. While such objects are descendant of
+  `Class.Workspace`, they will be active. For `Class.BasePart|BaseParts`, this
+  means they will be rendered, and physically interact with other parts and the
+  world. For `Class.Attachment|Attachments`, this means that objects adorned to
+  them, such as `Class.ParticleEmitter|ParticleEmitters`, `Class.Beam|Beams`,
+  and `Class.BillboardGui|BillboardGuis`, will render.
+
+  Understanding this behavior is important, as it means objects can be removed
+  from **Workspace** when they are not needed. For example, map
+  `Class.Model|Models` can be removed from the `Class.Workspace` when a
+  different map is being played on. Objects that are not immediately needed in
+  the 3D world are generally stored in `Class.ReplicatedStorage` or
+  `Class.ServerStorage`.
+
+  In its role as the holder of active 3D objects, `Class.Workspace` includes a
+  number of useful functions related to parts, their positions, and joints
+  between them.
+
+  #### Accessing the Workspace
+
+  `Class.Workspace` can be accessed several ways, all of which are valid.
+
+  - `workspace`
+  - `game.Workspace`
+  - `game:GetService("Workspace")`
+
+  #### Notes
+
+  - Objects that require adornment, such as
+    `Class.ParticleEmitter|ParticleEmitters` and
+    `Class.BillboardGui|BillboardGuis`, will be at the 0,&nbsp;0,&nbsp;0
+    position when parented to `Class.Workspace` without an adornee otherwise
+    being set.
+  - The `Class.Model:MakeJoints()` and `Class.Model:BreakJoints()` methods
+    inherited from the `Class.Model` class are overridden by
+    `Class.Workspace:MakeJoints()` and `Class.Workspace:BreakJoints()` which can
+    only be used in plugins.
+  - It is impossible to delete `Class.Workspace`.
+  - `Class.Workspace` automatically cleans up `Class.BasePart|BaseParts` that
+    fall beneath
+    `Class.Workspace.FallenPartsDestroyHeight|FallenPartsDestroyHeight`.
+  - A client's current `Class.Camera` object can be accessed using the
+    `Class.Workspace.CurrentCamera` property.
+  - The `Class.Terrain` object can be accessed using the
+    `Class.Workspace.Terrain` property.
+code_samples:
+inherits:
+  - WorldRoot
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: Workspace.AirDensity
+    summary: |
+      The air density at ground level, used in the aerodynamic force model.
+    description: |
+      The ground level (**Y** of 0) air density in RMU/stud&sup3; units (see
+      [Roblox Units](../../../physics/units.md)), used to calculate the
+      aerodynamic force if `Class.Workspace.FluidForces` is
+      `Enum.FluidForces|Experimental`. The default corresponds to realistic sea
+      level air density at standard temperature and pressure. Air density decays
+      as the **Y** altitude increases, reaching 5% of its ground level value at
+      100,000 studs. Below **Y** of 0, the air density is fixed at the input
+      value.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: AirProperties
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.AllowThirdPartySales
+    summary: |
+      Determines whether assets created by other users can be sold in the game.
+    description: |
+      This `Class.Workspace` property determines whether assets created by other
+      uses can be sold in the game.
+
+      #### What are third party sales?
+
+      When this value is false, as it is by default, only assets created by the
+      place creator (be it a player or a group) and Roblox can be sold using
+      `Class.MarketplaceService`.
+
+      In most cases, games do not need to sell third party assets. However, some
+      games such as trade hangouts require this feature and therefore it exists
+      as an opt-in option.
+
+      #### What third party products can I sell?
+
+      Note,
+      [developer products](../../../production/monetization/developer-products.md)
+      can only be sold in the game they are associated with, regardless of what
+      AllowThirdPartySales is set to. This property affects
+      [Game Passes](../../../production/monetization/game-passes.md) and
+      [clothing](../../../art/accessories/classic-clothing.md).
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.AvatarUnificationMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AvatarUnificationMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.ClientAnimatorThrottling
+    summary: |
+      Specifies the animation throttling mode for the local client.
+    description: |
+      Specifies the `Enum.ClientAnimatorThrottlingMode` to use for the local
+      client.
+
+      When enabled, animations on remotely-simulated `Class.Model` instances
+      will begin to throttle. The throttler calculates throttling intensity
+      using:
+
+      - Visibility of a `Class.Model` in relation to the `Class.Camera`
+      - In-game FPS
+      - Number of active animations
+    code_samples:
+    type: ClientAnimatorThrottlingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.CurrentCamera
+    summary: |
+      The `Class.Camera` object being used by the local player.
+    description: |
+      The `Class.Camera` object being used by the local player.
+
+      #### How to use CurrentCamera
+
+      This property can be set. When it is set, all other `Class.Camera` objects
+      in the `Class.Workspace` are destroyed, including the previous
+      CurrentCamera. If this property is set to nil, or the CurrentCamera is
+      otherwise destroyed, a new `Class.Camera` will be created and assigned.
+      Developers should avoid setting this property to nil or destroying the
+      CurrentCamera however as it can have unintended consequences.
+
+      When looking for a client's `Class.Camera` object, developers should use
+      this property rather than looking for a child of `Class.Workspace` named
+      'Camera'.
+
+      #### What can be done with CurrentCamera
+
+      Accessing a client's current `Class.Camera` object brings a range of uses.
+
+      - Manipulating the viewport using the `Class.Camera` functions
+      - Objects parented to the `Class.Camera` will not replicate to the server,
+        regardless of what `Class.Workspace.FilteringEnabled` is set to. Prior
+        to `Class.Workspace.FilteringEnabled`, this was the main way to render
+        `Class.BasePart`s on one client only.
+
+      Below is an example of how this property can be used to access the
+      `Class.Camera` object and increase its `Class.Camera.FieldOfView`.
+
+      ```
+      workspace.CurrentCamera.FieldOfView = 100
+      ```
+    code_samples:
+    type: Camera
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.DistributedGameTime
+    summary: |
+      The amount of time, in seconds, that the game has been running.
+    description: |
+      The amount of time, in seconds, that the game has been running.
+
+      Despite the title, this value is currently not 'Distributed' across the
+      client and the server. Instead, on the server it represents how long the
+      server has been running. On the client, it represents how long the client
+      has been connected to the server.
+
+      Developers should not rely on the above behavior, and it is possible this
+      property will be synchronized across clients and the server in the future.
+
+      Those looking for the time since the program started running should use
+      the 'time' function instead. See below for a comparison between
+      DistributedGameTime and its alternatives.
+
+      ```
+      print(workspace.DistributedGameTime)  --> Time the game started running
+      print(os.time())  --> Time since epoch (1 January 1970, 00:00:00) UTC
+      print(tick())  --> Time since epoch (1 January 1970, 00:00:00) system time
+      print(time())  --> Time the game started running
+      print(elapsedTime())  --> Time since Roblox started running
+      ```
+    code_samples:
+    type: double
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.EditorLiveScripting
+    summary: ''
+    description: ''
+    code_samples: []
+    type: EditorLiveScripting
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Scripting
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.FallenPartsDestroyHeight
+    summary: |
+      Determines the height at which falling `Class.BasePart|BaseParts` and
+      their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
+    description: |
+      This property determines the height at which the Roblox engine
+      automatically removes falling `Class.BasePart|BaseParts` and their
+      ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
+      `nil`. This is to prevent parts that have fallen off the map from
+      continuing to fall forever.
+
+      If a part removed due to this behavior is the last part in a
+      `Class.Model`, that model will also be removed. This applies to all model
+      ancestors of the part.
+
+      This property is clamped between -50,000 and 50,000 because
+      `Class.BasePart|BaseParts` do not simulate or render properly at a great
+      distance from the origin due to floating point inaccuracies.
+
+      This property can be read by scripts, but can only be set by plugins, the
+      command bar, or the properties window in Studio.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.FilteringEnabled
+    summary: |
+      Determines whether changes made from the client will replicate to the
+      server or not.
+    description: |
+      This property is discontinued and no longer takes effect.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Workspace.FluidForces
+    summary: |
+      Determines whether the physics engine computes aerodynamic forces on
+      `Class.BasePart|BaseParts` whose
+      `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true.
+    description: |
+      With this property enabled, the physics engine computes aerodynamic forces
+      on `Class.BasePart|BaseParts` whose
+      `Class.BasePart.EnableFluidForces|EnableFluidForces` property is true. The
+      default, `Enum.FluidForces|Default`, disables aerodynamic forces. Note
+      that this property cannot be set through scripting and instead must be
+      toggled in Studio.
+    code_samples: []
+    type: FluidForces
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.GlobalWind
+    summary: |
+      Specifies the global wind vector for animated terrain grass, dynamic
+      clouds, and particles.
+    description: |
+      This property specifies the direction and strength that wind blows through
+      the experience, affecting terrain grass, dynamic clouds, and particles.
+      See the [Global Wind](../../../environment/global-wind.md) article for
+      details.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.Gravity
+    summary: |
+      Determines the acceleration due to gravity applied to falling
+      `Class.BasePart`s.
+    description: |
+      Determines the acceleration due to gravity applied to falling
+      `Class.BasePart|BaseParts`. This value is measured in studs per second
+      squared and by default is set to 196.2 studs/second<sup>2</sup>. By
+      changing this value, developers can simulate the effects of lower or
+      higher gravity in game.
+    code_samples:
+      - Low-Gravity-Button
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.IKControlConstraintSupport
+    summary: |
+      Enables support for constraints for IKControls. If disabled, IKControls
+      ignore physics constraints.
+    description: |
+      Enables support for constraints for IKControls. The `Default` value is the
+      same as `Enabled`. If disabled, IKControls ignore physics constraints. See
+      `Class.IKControl` for additional details.
+    code_samples: []
+    type: IKControlConstraintSupport
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.InterpolationThrottling
+    summary: ''
+    description: ''
+    code_samples:
+    type: InterpolationThrottlingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.MeshPartHeadsAndAccessories
+    summary: |
+      Sets whether character Heads and Accessories should be downloaded as
+      MeshParts.
+    description: |
+      Sets whether character Heads and Accessories should be downloaded as
+      `Class.MeshPart`s. The `Default` value is the same as `Enabled`. If this
+      feature is enabled, built-in avatars will use `Class.MeshPart`s for the
+      character's Head and Accessories.
+    code_samples:
+    type: MeshPartHeadsAndAccessories
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.ModelStreamingBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ModelStreamingBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.PhysicsSteppingMethod
+    summary: |
+      Sets how the solver will advance the physics simulation forward in time.
+    description: |
+      Sets how the solver will advance the physics simulation forward in time.
+      This option is not scriptable and must be set from the
+      **PhysicsSteppingMethod** property of **Workspace** within Studio. See
+      [Adaptive Timestepping](../../../physics/adaptive-timestepping.md) for
+      details.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Option</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>Adaptive</b></td>
+                  <td>The engine attempts to assign optimal simulation rates for individual assemblies of either 240 Hz, 120 Hz, or 60 Hz. This setting is optimized for performance.</td>
+              </tr>
+              <tr>
+                  <td><b>Fixed</b></td>
+                  <td>All simulated assemblies inside the workspace will advance forward at 240 Hz. This option is best for optimal stability and simulation accuracy.</td>
+              </tr>
+              <tr>
+                  <td><b>Default</b></td>
+                  <td>The current default is <b>Fixed</b>.</td>
+              </tr>
+          </tbody>
+      </table>
+
+      Note that when assemblies of different simulation rates become connected
+      via `Class.Constraint|Constraints` or collisions, the combined mechanism
+      will default to the highest simulation rate for stability.
+    code_samples:
+    type: PhysicsSteppingMethod
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.PlayerCharacterDestroyBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PlayerCharacterDestroyBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.PrimalPhysicsSolver
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PrimalPhysicsSolver
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.RejectCharacterDeletions
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RejectCharacterDeletions
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Networking
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.ReplicateInstanceDestroySetting
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ReplicateInstanceDestroySetting
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.Retargeting
+    summary: ''
+    description: ''
+    code_samples:
+    type: AnimatorRetargetingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.SignalBehavior
+    summary: ''
+    description: ''
+    code_samples:
+    type: SignalBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Workspace.StreamOutBehavior
+    summary: |
+      Configures how the engine decides when to Stream content away from
+      players.
+    description: |
+      The **StreamOutBehavior** controls where content will be unloaded from the
+      `Class.Player.ReplicationFocus|ReplicationFocus` based on device Memory
+      Conditions, or based on Streaming Radius.
+
+      See also:
+
+      - `Class.Workspace.StreamingEnabled` which controls whether content
+        streaming is enabled
+      - `Class.Workspace.StreamingMinRadius`
+      - `Class.Workspace.StreamingTargetRadius`
+      - `Class.Workspace.StreamingIntegrityMode`
+    code_samples:
+    type: StreamOutBehavior
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.StreamingEnabled
+    summary: |
+      Whether content streaming is enabled for the place.
+    description: |
+      The **StreamingEnabled** property determines whether game content
+      streaming is enabled for the place. This property is not scriptable and
+      therefore must be set on the **Workspace** object in Studio.
+
+      See also:
+
+      - `Class.Workspace.StreamingMinRadius`
+      - `Class.Workspace.StreamingTargetRadius`
+      - `Class.Workspace.StreamingIntegrityMode`
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.StreamingIntegrityMode
+    summary: |
+      Determines whether StreamingIntegrityMode is active.
+    description: |
+      If instance [streaming](../../../workspace/streaming.md) is enabled, an
+      experience may behave in unintended ways if a player's character moves
+      into a region of the world that has not been streamed to their client. The
+      streaming integrity feature offers a way to avoid those potentially
+      problematic situations.
+    code_samples: []
+    type: StreamingIntegrityMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.StreamingMinRadius
+    summary: |
+      Minimum distance that content will be streamed to players with high
+      priority.
+    description: |
+      The **StreamingMinRadius** property indicates the radius around the
+      player's character or the current
+      `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
+      streamed in at the highest priority. Defaults to 64 studs.
+
+      Care should be taken when increasing the default minimum radius since
+      doing so will require more memory and more server bandwidth at the expense
+      of other components.
+
+      See also:
+
+      - `Class.Workspace.StreamingEnabled` which controls whether content
+        streaming is enabled
+      - `Class.Workspace.StreamingTargetRadius`
+      - `Class.Workspace.StreamingIntegrityMode`
+    code_samples:
+    type: int
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.StreamingTargetRadius
+    summary: |
+      Maximum distance that content will be streamed to players.
+    description: |
+      The **StreamingTargetRadius** property controls the maximum distance away
+      from the player's character or the current
+      `Class.Player.ReplicationFocus|ReplicationFocus` in which content will be
+      streamed in. Defaults to 1024 studs.
+
+      Note that the engine is allowed to retain previously loaded content beyond
+      the target radius, memory permitting.
+
+      See also:
+
+      - `Class.Workspace.StreamingEnabled` which controls whether content
+        streaming is enabled
+      - `Class.Workspace.StreamingMinRadius`
+      - `Class.Workspace.StreamingIntegrityMode`
+    code_samples:
+    type: int
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.Terrain
+    summary: |
+      A reference to the `Class.Terrain` object parented to the
+      `Class.Workspace`.
+    description: |
+      This property is a reference to the `Class.Terrain` object parented to the
+      `Class.Workspace`.
+
+      ![An example of Roblox terrain](/assets/legacy/Terrain.png)
+
+      This property, like `Class.Workspace.CurrentCamera`, ensures that
+      developers to not inadvertently index a descendant of `Class.Workspace`
+      named 'Terrain' when looking for a game's `Class.Terrain` object. Without
+      this property, developers would need to use the
+      `Class.Instance:FindFirstChildOfClass()` function.
+
+      ```lua
+      workspace.Terrain.WaterColor = Color3.new(0, 1, 0) -- make the water green
+      ```
+    code_samples:
+    type: Terrain
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Workspace.TouchesUseCollisionGroups
+    summary: |
+      Determines whether `Class.BasePart|parts` in different groups set to not
+      collide will ignore collisions and touch events.
+    description: |
+      This property determines whether `Class.BasePart|parts` in different
+      groups set to not collide will ignore collisions and touch events. By
+      default, the value of this property is set to `false`.
+
+      When this property is enabled, parts in different groups set to not
+      collide will also ignore the `Class.BasePart.CanTouch|CanTouch` property,
+      similar to how `Class.BasePart.CanCollide` is ignored. For more
+      information on the behavior of CanTouch, please visit its property page.
+    code_samples:
+    type: bool
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Workspace:BreakJoints
+    summary: |
+      Goes through all `Class.BasePart`s given, breaking any joints connected to
+      these parts.
+    description: |
+      Goes through all `Class.BasePart`s given, breaking any joints connected to
+      these parts.
+
+      This function will break any of the following types of joints:
+
+      - `Class.JointInstance`s such as `Connectors`, `Welds` and `Snaps`
+      - `Class.WeldConstraint`s
+
+      Unlike `Class.Model.MakeJoints`, this function requires an array of
+      `Class.BasePart`s as a parameter. This array is given as follows:
+
+      ```
+      workspace:BreakJoints({part1, part2, part3})
+      ```
+
+      Note, this function cannot be used by scripts and will only function in
+      plugins.
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.BasePart`s for whom joints are to be broken.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Workspace:GetNumAwakeParts
+    summary: |
+      Returns the number of `Class.BasePart`s that are deemed physically active,
+      due to being recently under the influence of physics.
+    description: |
+      Returns the number of `Class.BasePart`s that are deemed physically active,
+      due to being recently under the influence of physics.
+
+      This function provides a measure of how many `Class.BasePart`s are being
+      influenced by, or recently under the influence of, physical forces.
+
+      ```
+      print(workspace:GetNumAwakeParts()) -- prints the number of 'awake' parts
+      ```
+
+      #### Sleeping vs Awake Parts
+
+      In order to ensure good performance, Roblox sets `BaseParts` in which
+      physics are not being applied to a 'sleeping' state. `Class.BasePart`s
+      with `Class.BasePart.Anchored` set to true, for example, will always be
+      sleeping as physics doesn't apply to them. When a force is applied to a
+      non anchored `Class.BasePart`, an 'awake' state will be applied. Whilst a
+      `Class.BasePart` is awake the Roblox physics engine will perform
+      continuous calculations to ensure physical forces interact correctly with
+      the part. Once the `Class.BasePart` is no longer subject to physical
+      forces, it will revert to a 'sleeping' state.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: |
+          The number of awake parts.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Workspace:GetPhysicsThrottling
+    summary: |
+      Returns an integer, between 0 and 100, representing the percentage of
+      real-time that physics simulation is currently being throttled to.
+    description: |
+      Returns an integer, between 0 and 100, representing the percentage of
+      real-time that physics simulation is currently being throttled to.
+
+      This function can be used to determine whether, and to what degree,
+      physics throttling is occurring.
+
+      #### What is physics throttling?
+
+      Physics throttling occurs when the physics engine detects it cannot keep
+      up with the game in realtime. When physics is being throttled, it will
+      update less frequently causing `Class.BasePart`s to appear to move slower.
+
+      Without throttling, the physics simulation would fall further behind out
+      of sync with the game. This can lead to lower frame rates and other
+      undesirable behavior.
+
+      Objects associated with `Class.Humanoid`s are exempt from physics
+      throttling.
+
+      See also `Class.Workspace:SetPhysicsThrottleEnabled()`.
+
+      #### Demonstrating physics throttling
+
+      Developers should always avoid creating places that overload the physics
+      engine, as it leads to sub-par experience for players. Those wishing to
+      simulate physics throttling for research purposes however, need only
+      create a lot of `Class.Part`s very quickly.
+
+      ```
+      local i = 0
+      while true do
+      	i += 1
+      	if i % 5 == 0 then
+      		task.wait()
+      	end
+      	local part = Instance.new("Part", workspace)
+      end
+      ```
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: |
+          The percentage of real-time that physics simulation is currently being
+          throttled to.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Workspace:GetRealPhysicsFPS
+    summary: |
+      Returns the number of frames per second that physics is currently being
+      simulated at.
+    description: |
+      Returns the number of frames per second that physics is currently being
+      simulated at.
+
+      #### Using GetRealPhysicsFPS to combat exploiters
+
+      A common use of this function is to detect if exploiters are increasing
+      their local physics frame rate to move faster. This is generally done by
+      comparing the result returned by a client's GetRealPhysicsFPS to a maximum
+      that will not be breached in normal circumstances (usually 65 or 70). If
+      this limit is breached, developers can use the `Class.Player:Kick()`
+      function to remove that `Class.Player` from the game. It is important to
+      remember that, although this practice may be effective sometimes,
+      client-side anti-exploiter measures are never 100% reliable.
+    code_samples:
+      - Workspace-GetRealPhysicsFPS1
+    parameters: []
+    returns:
+      - type: double
+        summary: |
+          Returns the number of frames per second that physics is currently
+          being simulated at.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Workspace:GetServerTimeNow
+    summary: |
+      Returns the server epoch time in seconds.
+    description: |
+      **GetServerTimeNow** returns the epoch time on the server with microsecond
+      precision. The time is adjusted for drift and smoothed monotonically (it
+      is guaranteed to be non-decreasing). The server clock progresses no faster
+      than 1.006&times; speed and no slower than 0.994&times; speed.
+
+      This function is useful for creating synchronized experiences, as it has
+      three properties necessary for doing so: it's a real-world time clock,
+      it's monotonic, and it has decent precision.
+
+      This function relies on the server, so calling it from a client that isn't
+      connected will throw an error.
+
+      See also:
+
+      - `Class.Workspace.DistributedGameTime|DistributedGameTime`, a game-time
+        clock
+      - `Library.os|os.time()`
+      - `Datatype.DateTime`
+    code_samples:
+    parameters: []
+    returns:
+      - type: double
+        summary: |
+          The estimated epoch time on the server.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Workspace:JoinToOutsiders
+    summary: |
+      Creates joints between the specified `Class.BasePart|Parts` and any
+      touching parts depending on the parts' surfaces and the specified joint
+      creation mode.
+    description: |
+      This function creates joints between the specified `Class.BasePart|Parts`
+      and any touching parts depending on the parts' surfaces and the specified
+      joint creation mode.
+
+      This function creates joints between the specified Parts and any planar
+      touching surfaces, depending on the parts' surfaces and the specified
+      joint creation mode.
+
+      - Glue, Studs, Inlets, Universal, Weld, and Smooth surfaces will all
+        create Weld instances.
+      - Spheres will not surface-weld to anything. The rounded sides of
+        cylinders will not surface-weld, but the flat end sides will.
+      - Hinge and Motor surfaces will still create `Class.Rotate` and
+        `Class.RotateP` joint instances, regardless of part shape.
+
+      The first parameter is an array of `Class.BasePart|BaseParts`. Joints will
+      only be created between the parts in the array and not in the array.
+      Joints will not be created between the parts in the array.
+
+      The second parameter is a `Enum.JointCreationMode` that determines how
+      joints will be created. Passing in either enum value,
+      `Enum.JointCreationMode|Enum.JointCreationMode.All` or
+      `Enum.JointCreationMode|Enum.JointCreationMode.Surface`, has the same
+      behavior which equates to Join Always
+
+      This function is used by the Roblox Studio Move tool when the user
+      finishes moving a selection. In conjunction with
+      `Class.Plugin:GetJoinMode()` and `Class.Workspace:UnjoinFromOutsiders()`
+      it can be used to retain join functionality when developing custom studio
+      build tools. See the snippets below for an example.
+
+      ```lua
+      -- finished moving a selection, make joints
+      local function finishedMovingParts(parts)
+      	local joinMode = Plugin:GetJoinMode()
+      	workspace:JoinToOutsiders(parts, joinMode)
+      end
+      ```
+
+      ```lua
+      -- started moving a selection, break joints
+      local function startMovingParts(parts)
+      	workspace:UnjoinFromOutsiders(parts)
+      end
+      ```
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.BasePart`s for whom joints are to be made.
+      - name: jointType
+        type: JointCreationMode
+        default:
+        summary: |
+          The `Enum.JointCreationMode` to be used. Passing in
+          `Enum.JointCreationMode|Enum.JointCreationMode.All` or
+          `Enum.JointCreationMode|Enum.JointCreationMode.Surface` has the same
+          behavior which equates to Join Always.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Workspace:MakeJoints
+    summary: |
+      Goes through all `Class.BasePart`s given. If any part's side has a
+      `Enum.SurfaceType` that can make a joint it will create a joint with any
+      adjacent parts.
+    description: |
+      **Deprecated**
+
+      SurfaceType based joining is deprecated, do not use MakeJoints for new
+      projects. `Class.WeldConstraint|WeldConstraints` and
+      `Class.HingeConstraint|HingeConstraints` should be used instead.
+
+      Goes through all `Class.BasePart|Parts` given. If any part's side has a
+      `Enum.SurfaceType` that can make a joint it will create a joint with any
+      adjacent parts.
+
+      Joints will be created between the specified Parts and any planar touching
+      surfaces, depending on the parts' surfaces.
+
+      - Smooth surfaces will not create joints
+      - Glue surfaces will create a `Class.Glue` joint
+      - Weld will create a `Class.Weld` joint with any surface except for
+        Unjoinable
+      - Studs, Inlet, or Universal will each create a `Class.Snap` joint with
+        either of other the other two surfaces (e.g. Studs with Inlet and
+        Universal)
+      - Hinge and Motor surfaces create `Class.Rotate` and `Class.RotateV` joint
+        instances
+
+      Unlike `Class.Model:MakeJoints()`, this function requires an array of
+      parts as a parameter. This array is given as follows:
+
+      ```
+      workspace:MakeJoints({part1, part2, part3})
+      ```
+
+      Joints are broken if enough force is applied to them due to an
+      `Class.Explosion`, unless a `Class.ForceField` object is parented to the
+      `Class.BasePart` or ancestor `Class.Model`. For this reason, they are
+      often used to make simple destructible buildings and other models.
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.BasePart|parts` for whom joints are to be made.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Workspace:PGSIsEnabled
+    summary: |
+      Returns true if the game has the PGS Physics solver enabled.
+    description: |
+      Returns true if the game has the PGS Physics solver enabled.
+
+      As `Class.Workspace.PGSPhysicsSolverEnabled` cannot be accessed by
+      scripts, the PGSIsEnabled function allows developers to tell which physics
+      solver the game is using.
+
+      ```
+      print(workspace:PGSIsEnabled()) -- true = PGS solver enabled
+      print(workspace:PGSIsEnabled()) -- false = Legacy solver enabled
+      ```
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: |
+          True if the PGS solver is enabled.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Workspace:UnjoinFromOutsiders
+    summary: |
+      Breaks all joints between the specified `Class.BasePart`s and other
+      `Class.BasePart`s.
+    description: |
+      Breaks all joints between the specified `Class.BasePart`s and other
+      `Class.BasePart`s.
+
+      This function requires an array of `Class.BasePart`s. Note, joints will
+      not be broken between these `Class.BasePart`s (each other), only between
+      these `Class.BasePart`s and other `Class.BasePart`s not in the array.
+
+      This function is used by the Roblox Studio Move tool when the user starts
+      moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
+      `Class.Workspace:JoinToOutsiders()` it can be used to retain join
+      functionality when developing custom studio build tools. See the snippets
+      below for an example.
+
+      ```
+      -- finished moving a selection, make joints
+      local function finishedMovingParts(parts)
+      	local joinMode = Plugin:GetJoinMode()
+      	workspace:JoinToOutsiders(parts, joinMode)
+      end
+      ```
+
+      ```
+      -- started moving a selection, break joints
+      local function startMovingParts(parts)
+      	workspace:UnjoinFromOutsiders(parts)
+      end
+      ```
+    code_samples:
+    parameters:
+      - name: objects
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.BasePart`s for whom joints are to be broken.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Workspace:ZoomToExtents
+    summary: |
+      Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
+      of `Class.BasePart`s currently in the `Class.Workspace`.
+    description: |
+      Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
+      of `Class.BasePart`s currently in the `Class.Workspace`.
+
+      This function was used in the, now removed, 'Zoom To Extents' button in
+      Roblox Studio. It exhibits similar behavior to the 'Zoom To' (F shortcut)
+      feature, however it shows the extents of the `Class.Workspace` rather than
+      the currently selected object.
+
+      This function cannot be used in scripts but will function in the command
+      bar or plugins.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: Workspace.PersistentLoaded
+    summary: |
+      Fires when persistent models have been sent to the specified player.
+    description: |
+      This event fires every time a player has been sent all current persistent
+      models and part-less atomic models. The `player` parameter indicates which
+      player has received all applicable instances.
+
+      Note that experience loading happens before persistent loading, and firing
+      of the `Class.DataModel.Loaded` event does not indicate that all
+      persistent models are present.
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

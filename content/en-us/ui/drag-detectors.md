@@ -291,7 +291,7 @@ end)
 
 ### Scripted DragStyle
 
-If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable**, you can provide your own function that takes in a `Class.Ray` and returns a world space `Datatype.CFrame`. The detector will move the motion so that the dragged object goes to that custom location/orientation.
+If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable**, you can provide your own function that takes in a `Datatype.Ray` and returns a world space `Datatype.CFrame`. The detector will move the motion so that the dragged object goes to that custom location/orientation.
 
 ```lua title='DragDetector - Scripted DragStyle' highlight='2,7,31,32,34'
 local dragDetector = script.Parent.DragDetector
@@ -353,7 +353,7 @@ local function snapToWorldGrid(proposedMotion)
 		return proposedMotion
 	end
 	local snapIncrement = math.floor(SNAP_INCREMENT)
-	if (snapIncrement < 1) then
+	if snapIncrement < 1 then
 		return proposedMotion
 	end
 	local newWorldPosition = startPartPosition + proposedMotion.Position

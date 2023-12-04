@@ -17,7 +17,7 @@ local waitingShips = {"Battle Sun", "Void Racer", "The Big Slow"}
 
 -- Get place in line
 local function getPlaceInLine(shipName)
-	for placeInLine,ship in pairs(waitingShips) do
+	for placeInLine,ship in ipairs(waitingShips) do
 		if ship == shipName then
 			return placeInLine
 		end

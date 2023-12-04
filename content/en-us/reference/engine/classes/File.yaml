@@ -1,0 +1,85 @@
+name: File
+type: class
+category:
+memory_category: Instances
+summary: |
+  An asset loaded from a file on disk.
+description: |
+  An object that represents an Asset loaded from a file on a local disk.
+
+  Files generate a temporary asset id in the form _"rbxtemp://####"_, which can
+  be used in Studio without uploading the asset, but will be destroyed when the
+  File is destroyed or when the Studio session ends. Temporary asset ids are not
+  shared across [Team Create](../../../projects/collaboration.md).
+
+  The default `Class.Instance.Name|Name` of a File instance will be the filename
+  on disk, excluding path, including extension.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: File.Size
+    summary: |
+      The size of the file on disk, in bytes.
+    description: |
+      The file size (in bytes) of the local file associated with this
+      `Class.File`.
+    code_samples:
+    type: int64
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: File:GetBinaryContents
+    summary: |
+      Reads the contents of the `Class.File` as a string.
+    description: |
+      This function is used to read the contents of the `Class.File` as a raw
+      binary string. This allows the file to be uploaded to web endpoints, or to
+      be processed by plugins.
+    code_samples:
+    parameters: []
+    returns:
+      - type: string
+        summary: |
+          A raw binary string representation of the `Class.File|File's`
+          contents.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: File:GetTemporaryId
+    summary: |
+      Gets a _rbxtemp_ asset id for this `Class.File`.
+    description: |
+      This function is used to retrieve a temporary asset id associated with
+      this `Class.File`. This id can be used like an _rbxassetid_ - for example,
+      it can be assigned to the Image property of an `Class.ImageLabel`.
+
+      Throws an error if the file does not exist on disk.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Content
+        summary: |
+          The temporary asset id.
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

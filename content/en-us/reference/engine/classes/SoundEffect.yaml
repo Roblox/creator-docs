@@ -1,0 +1,63 @@
+name: SoundEffect
+type: class
+category:
+memory_category: Instances
+summary: |
+  SoundEffect is the base class that all other sound effects derive from. A
+  SoundEffect can be applied to either a `Class.Sound` or `Class.SoundGroup` by
+  being parented to either.
+description: |
+  SoundEffect is the base class that all other sound effects derive from. A
+  SoundEffect can be applied to either a `Class.Sound` or `Class.SoundGroup` by
+  being parented to either. Multiple effects can be applied to the same Sound or
+  SoundGroup. The order the effects will be applied in is determined by that
+  effect's Priority.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: SoundEffect.Enabled
+    summary: |
+      Toggles the effect on and off.
+    description: |
+      Toggles the effect on and off. True by default.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SoundEffect.Priority
+    summary: |
+      Determines the order the effect will be applied in relation to other
+      effects.
+    description: |
+      Determines the order the effect will be applied in relation to other
+      effects. Higher priority effects will be applied earlier. The exception is
+      when Priority equals 0 (which is the default). In this case, the base
+      priority for the effect will be used. If the priority of two effects are
+      equal, then the order is undetermined.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

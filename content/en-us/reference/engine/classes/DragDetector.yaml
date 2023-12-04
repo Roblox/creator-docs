@@ -1,0 +1,805 @@
+name: DragDetector
+type: class
+category:
+memory_category: Instances
+summary: |
+  `Class.DragDetector` instances encourage physical interaction with objects in
+  an experience.
+description: |
+  `Class.DragDetector` instances encourage physical interaction with objects in
+  an experience, such as opening doors and drawers, sliding a part around, and
+  much more. Key features include:
+
+  - Place a `Class.DragDetector` under any part or model to make it draggable
+    via all inputs (mouse, touch, gamepad, and VR), all without a single line of
+    code.
+  - Choose from many `Class.DragDetector.DragStyle|DragStyle` options, define
+    how the object responds to motion via
+    `Class.DragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis
+    or movement limits.
+  - Scripts can respond to manipulation of dragged objects to drive UI or make
+    logical decisions, such as adjusting the light level in a room based on a
+    sliding wall switch dimmer.
+  - Players can manipulate anchored parts or models and they'll stay exactly
+    where you put them upon release.
+  - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not**
+    using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it
+    easier to test and adjust draggable objects while editing.
+
+  See the [Drag Detectors](../../../ui/drag-detectors.md) article for details
+  and usage examples.
+code_samples: []
+inherits:
+  - ClickDetector
+tags: []
+deprecation_message: ''
+properties:
+  - name: DragDetector.ActivatedCursorIcon
+    summary: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.DragDetector`.
+    description: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.DragDetector`. If this property is left blank, the
+      detector will use the default icon.
+
+      To change the activated cursor icon, set this property to the asset ID of
+      the image you'd like to use.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.ApplyAtCenterOfMass
+    summary: |
+      Whether constraint force is applied to the object's center of mass.
+    description: |
+      When false (default), constraint force is applied at the point the user
+      clicks on. When true, force is applied at the object's center of mass.
+      Only relevant if `Class.DragDetector.ResponseStyle|ResponseStyle` is
+      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      unanchored.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics Response
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.Axis
+    summary: |
+      The primary axis of motion, expressed relative to the reference frame.
+    description: |
+      The primary axis of motion, expressed relative to the reference frame. For
+      a `Class.DragDetector.DragStyle|DragStyle` of
+      `Enum.DragDetectorDragStyle|TranslateLine`, the direction of translation;
+      for `Enum.DragDetectorDragStyle|TranslatePlane`, the normal to the plane
+      of motion; for `Enum.DragDetectorDragStyle|RotateAxis`, the axis of 1D
+      rotation. Changing this value automatically updates
+      `Class.DragDetector.Orientation|Orientation` and vice versa.
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: false
+  - name: DragDetector.DragFrame
+    summary: |
+      The `Datatype.CFrame` of the pivot, dependent on the drag detector's
+      `Class.DragDetector.ReferenceInstance|ReferenceInstance`.
+    description: |
+      If `Class.DragDetector.ReferenceInstance|ReferenceInstance` is set, the
+      `Datatype.CFrame` of the pivot relative to the reference frame; otherwise,
+      the `Datatype.CFrame` of the pivot relative to its frame at the beginning
+      of the drag.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Dragged Amount
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.DragStyle
+    summary: |
+      The paradigm used to generate proposed motion.
+    description: |
+      The paradigm used to generate proposed motion, given a stream of cursor
+      rays. See `Enum.DragDetectorDragStyle` for options.
+    code_samples: []
+    type: DragDetectorDragStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.Enabled
+    summary: |
+      Whether the `Class.DragDetector` responds to user input.
+    description: |
+      If true, the `Class.DragDetector` responds to user input; if false, it
+      does not.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.GamepadModeSwitchKeyCode
+    summary: |
+      During gamepad input, the modifier `Enum.KeyCode` for the secondary mode
+      of motion.
+    description: |
+      During gamepad input, the `Enum.KeyCode` for toggling the secondary mode
+      of motion. Only applies if the drag detector's
+      `Class.DragDetector.DragStyle|DragStyle` has both primary and secondary
+      modes of motion.
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode Switching
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.KeyboardModeSwitchKeyCode
+    summary: |
+      During keyboard input, the modifier `Enum.KeyCode` for the secondary mode
+      of motion.
+    description: |
+      During keyboard input, the `Enum.KeyCode` for toggling the secondary mode
+      of motion. Only applies if the drag detector's
+      `Class.DragDetector.DragStyle|DragStyle` has both primary and secondary
+      modes of motion.
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode Switching
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MaxDragAngle
+    summary: |
+      Along with `Class.DragDetector.MinDragAngle|MinDragAngle`, impedes the
+      drag detector's attempts to generate motion.
+    description: |
+      If this is greater than `Class.DragDetector.MinDragAngle|MinDragAngle`,
+      translation will be clamped within that range. This is not a constraint;
+      it merely impedes the drag detector's attempts to generate motion in order
+      to remain within limits. Only relevant if
+      `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateAxis`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MaxDragTranslation
+    summary: |
+      Along with `Class.DragDetector.MinDragTranslation|MinDragTranslation`,
+      impedes the drag detector's attempts to generate motion.
+    description: |
+      In any dimension, if this is greater than
+      `Class.DragDetector.MinDragTranslation|MinDragTranslation`, translation
+      will be clamped within that range. This is not a constraint; it merely
+      impedes the drag detector's attempts to generate motion in order to remain
+      within limits.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MaxForce
+    summary: |
+      Maximum force applied for the object to reach its goal.
+    description: |
+      Maximum force applied for the object to reach its goal. Only relevant if
+      `Class.DragDetector.ResponseStyle|ResponseStyle` is
+      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      unanchored.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics Response
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MaxTorque
+    summary: |
+      Maximum torque applied for the object to reach its goal.
+    description: |
+      Maximum torque applied for the object to reach its goal. Only relevant if
+      `Class.DragDetector.ResponseStyle|ResponseStyle` is
+      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      unanchored.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics Response
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MinDragAngle
+    summary: |
+      Along with `Class.DragDetector.MaxDragAngle|MaxDragAngle`, impedes the
+      drag detector's attempts to generate motion.
+    description: |
+      If this is less than `Class.DragDetector.MaxDragAngle|MaxDragAngle`,
+      translation will be clamped within that range. This is not a constraint;
+      it merely impedes the drag detector's attempts to generate motion in order
+      to remain within limits. Only relevant if
+      `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateAxis`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.MinDragTranslation
+    summary: |
+      Along with `Class.DragDetector.MaxDragTranslation|MaxDragTranslation`,
+      impedes the drag detector's attempts to generate motion.
+    description: |
+      In any dimension, if this is less than
+      `Class.DragDetector.MaxDragTranslation|MaxDragTranslation`, translation
+      will be clamped within that range. This is not a constraint; it merely
+      impedes the drag detector's attempts to generate motion in order to remain
+      within limits.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.Orientation
+    summary: |
+      Specifies the **YXZ** rotation of axes of motion relative to the reference
+      frame.
+    description: |
+      Specifies the **YXZ** rotation of axes of motion relative to the reference
+      frame (does not change the orientation of the reference frame itself).
+      Linear translation and axial rotation will be on this reoriented **Y**
+      axis, and planar translation in the **XZ** plane. Changing this value
+      automatically updates `Class.DragDetector.Axis|Axis` and vice versa.
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.ReferenceInstance
+    summary: |
+      An instance whose `Datatype.CFrame` is the reference frame for the drag
+      detector.
+    description: |
+      An instance whose `Datatype.CFrame` is the reference frame for the drag
+      detector. The `Class.DragDetector.DragFrame|DragFrame` is expressed
+      relative to this `Datatype.CFrame` which may be retrieved via the
+      `Class.DragDetector:GetReferenceFrame()|GetReferenceFrame()` method.
+
+      If this instance is a `Class.PVInstance`, the reference frame will be its
+      pivot; if an `Class.Attachment`, then its world `Datatype.CFrame`. If it
+      is `nil` or neither of the former, the reference frame will be based on
+      the pivot of the drag detector's parent `Class.BasePart` or `Class.Model`.
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.ResponseStyle
+    summary: |
+      The paradigm used to move, or not move, the objects affected by the drag
+      detector.
+    description: |
+      Once the proposed motion has been computed and potentially constrained,
+      this is the paradigm used to move, or not move, the objects affected by
+      the `Class.DragDetector`. See `Enum.DragDetectorResponseStyle` for
+      options.
+    code_samples: []
+    type: DragDetectorResponseStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.Responsiveness
+    summary: |
+      Higher values cause the object to reach its goal more rapidly.
+    description: |
+      Higher values cause the object to reach its goal more rapidly. Only
+      relevant if `Class.DragDetector.ResponseStyle|ResponseStyle` is
+      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      unanchored.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics Response
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.RunLocally
+    summary: |
+      Whether user input on a `Class.DragDetector` replicates to the server or
+      remains local to the specific client.
+    description: |
+      If false (default), the client sends replicated signals
+      (`Class.DragDetector.DragStart|DragStart`,
+      `Class.DragDetector.DragContinue|DragContinue`,
+      `Class.DragDetector.DragEnd|DragEnd`) to the server which processes cursor
+      rays, makes changes to the data model, and replicates them onwards to
+      clients.
+
+      If true, the client processes those signals itself and does not replicate
+      them to the server. Client `Class.LocalScript|LocalScripts` may be used to
+      respond to these events and `Class.RemoteEvent|RemoteEvents` may be used
+      to send any resulting changes that should be replicated to the server.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.SecondaryAxis
+    summary: |
+      The secondary axis of the motion.
+    description: |
+      The secondary axis of the motion. Relates to orientation using the same
+      paradigm as `Class.Attachment|Attachments`.
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: false
+  - name: DragDetector.TrackballRadialPullFactor
+    summary: |
+      If `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateTrackball`, multiplier for adding a
+      radial pull rotation as a contribution to the total.
+    description: |
+      When the cursor is outside the trackball, the `Class.DragDetector` can
+      apply a radial pull rotation that turns the ball as if it were trying to
+      roll out toward the cursor. This property is a 0 to 1 multiplier for
+      adding that rotation as a contribution to the total. Only relevant if
+      `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateTrackball`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.TrackballRollFactor
+    summary: |
+      If `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateTrackball`, multiplier for adding roll
+      rotation to the total.
+    description: |
+      When the cursor is outside the trackball, the `Class.DragDetector` can
+      apply a roll rotation that turns the ball as if it were mounted on a vinyl
+      record facing the viewer. This property is a 0 to 1 multiplier for adding
+      that roll rotation to the total. Only relevant if
+      `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle|RotateTrackball`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.VRSwitchKeyCode
+    summary: |
+      During VR input, the modifier `Enum.KeyCode` for the secondary mode of
+      motion.
+    description: |
+      During VR input, the `Enum.KeyCode` for toggling the secondary mode of
+      motion. Only applies if the drag detector's
+      `Class.DragDetector.DragStyle|DragStyle` has both primary and secondary
+      modes of motion.
+    code_samples: []
+    type: KeyCode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mode Switching
+    serialization:
+      can_load: true
+      can_save: true
+  - name: DragDetector.WorldAxis
+    summary: |
+      The `Class.DragDetector.Axis|Axis` expressed in world space.
+    description: |
+      The `Class.DragDetector.Axis|Axis` expressed in world space. Relates to
+      orientation using the same paradigm as `Class.Attachment|Attachments`.
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: false
+  - name: DragDetector.WorldSecondaryAxis
+    summary: |
+      The `Class.DragDetector.SecondaryAxis|SecondaryAxis` expressed in world
+      space.
+    description: |
+      The `Class.DragDetector.SecondaryAxis|SecondaryAxis` expressed in world
+      space. Relates to orientation using the same paradigm as
+      `Class.Attachment|Attachments`.
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: DragDetector:AddConstraintFunction
+    summary: |
+      Adds a function to modify or constrain proposed motion.
+    description: |
+      Adds a function to modify or constrain proposed motion. The function takes
+      an input `Datatype.CFrame` of **proposed** motion and returns a
+      `Datatype.CFrame` of **modified** or unmodified motion. Both the input and
+      output are expressed relative to the reference frame. You can add multiple
+      functions which will be called in order by `priority`, passing the results
+      along in a chain.
+
+      To remove the added constraint function, call
+      `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` on the returned
+      connection object.
+    code_samples: []
+    parameters:
+      - name: priority
+        type: int
+        default:
+        summary: |
+          The order of priority for functions added via this method. Higher
+          values take precedence over lower values.
+      - name: function
+        type: Function
+        default:
+        summary: |
+          Function for modifying or constraining proposed motion. This function
+          takes an input `Datatype.CFrame` of **proposed** motion and returns a
+          `Datatype.CFrame` of **modified** or unmodified motion, both relative
+          to the reference frame.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          Use this connection object to remove the constraint function.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DragDetector:GetReferenceFrame
+    summary: |
+      Returns the reference `Datatype.CFrame` in which motion is expressed.
+    description: |
+      Returns the reference `Datatype.CFrame` in which motion is expressed; see
+      the `Class.DragDetector.ReferenceInstance|ReferenceInstance` property for
+      more details.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: |
+          The reference `Datatype.CFrame` in which motion is expressed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DragDetector:RestartDrag
+    summary: |
+      May be invoked from a script to restart the drag using new parameters.
+    description: |
+      May be invoked from a script to restart the drag using new parameters, if
+      parameters such as `Class.DragDetector.DragStyle|DragStyle`,
+      `Class.DragDetector.Axis|Axis`, or
+      `Class.DragDetector.SecondaryAxis|SecondaryAxis` change.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DragDetector:SetDragStyleFunction
+    summary: |
+      Passes a function to be used if and only if
+      `Class.DragDetector.DragStyle|DragStyle` is set to
+      `Enum.DragDetectorDragStyle|Scriptable`.
+    description: |
+      Passes a function to be used if and only if
+      `Class.DragDetector.DragStyle|DragStyle` is set to
+      `Enum.DragDetectorDragStyle|Scriptable`. The given function is called when
+      responding to a `Class.DragDetector.DragContinue|DragContinue` signal, it
+      receives the signal's world space cursor ray with type `Datatype.Ray`, and
+      it returns a `Datatype.CFrame` containing the desired location and
+      orientation of the pivot in world space.
+
+      If the function returns `nil`, the object will not be moved. This is
+      useful if the script has not yet collected all the information it needs to
+      give the correct answer, or in temporary cases where you want the object
+      to stay where it is.
+    code_samples: []
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: |
+          Function for monitoring `Class.DragDetector.DragContinue|DragContinue`
+          signals. This function receives the signal's world space cursor ray
+          and it returns a `Datatype.CFrame` containing the desired location and
+          orientation of the pivot in world space. If the function returns
+          `nil`, the object will not be moved.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: DragDetector.DragContinue
+    summary: |
+      Fires when a user continues dragging the object after
+      `Class.DragDetector.DragStart|DragStart` has been initiated.
+    description: |
+      Fires when a user continues dragging the object after
+      `Class.DragDetector.DragStart|DragStart` has been initiated.
+    code_samples: []
+    parameters:
+      - name: playerWhoDragged
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who initiated the drag through
+          `Class.DragDetector.DragStart|DragStart` and is now continuing the
+          drag.
+      - name: cursorRay
+        type: Ray
+        default:
+        summary: |
+          A `Datatype.Ray` emanating from the cursor, aimed into the scene.
+      - name: viewFrame
+        type: CFrame
+        default:
+        summary: |
+          The `Datatype.CFrame` of the user's `Class.Camera`.
+      - name: vrInputFrame
+        type: OptionalCoordinateFrame
+        default:
+        summary: |
+          If using a VR input device, the `Datatype.CFrame` of the hand holding
+          the cursor/pointer/controller.
+      - name: isModeSwitchKeyDown
+        type: bool
+        default:
+        summary: |
+          If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has
+          both primary and secondary modes of motion, this parameter indicates
+          whether the user is pressing the modifier input defined through
+          `Class.DragDetector.KeyboardModeSwitchKeyCode|KeyboardModeSwitchKeyCode`,
+          `Class.DragDetector.GamepadModeSwitchKeyCode|GamepadModeSwitchKeyCode`,
+          or `Class.DragDetector.VRSwitchKeyCode|VRSwitchKeyCode`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DragDetector.DragEnd
+    summary: |
+      Fires when a user stops dragging the object.
+    description: |
+      Fires when a user stops dragging the object.
+    code_samples: []
+    parameters:
+      - name: playerWhoDragged
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who initiated the drag through
+          `Class.DragDetector.DragStart|DragStart` and has now ended (released)
+          the drag.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DragDetector.DragStart
+    summary: |
+      Fires when a user starts dragging the object.
+    description: |
+      Fires when a user starts dragging the object.
+    code_samples: []
+    parameters:
+      - name: playerWhoDragged
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` who initiated the drag.
+      - name: cursorRay
+        type: Ray
+        default:
+        summary: |
+          A `Datatype.Ray` emanating from the cursor, aimed into the scene.
+      - name: viewFrame
+        type: CFrame
+        default:
+        summary: |
+          The `Datatype.CFrame` of the user's `Class.Camera`.
+      - name: hitFrame
+        type: CFrame
+        default:
+        summary: |
+          The hit frame of the cursor raycast that initiated the drag.
+      - name: clickedPart
+        type: BasePart
+        default:
+        summary: |
+          The part that was hit by the cursor raycast that initiated the drag.
+      - name: vrInputFrame
+        type: OptionalCoordinateFrame
+        default:
+        summary: |
+          If using a VR input device, the `Datatype.CFrame` of the hand holding
+          the cursor/pointer/controller.
+      - name: isModeSwitchKeyDown
+        type: bool
+        default:
+        summary: |
+          If the drag detector's `Class.DragDetector.DragStyle|DragStyle` has
+          both primary and secondary modes of motion, this parameter indicates
+          whether the user is pressing the modifier input defined through
+          `Class.DragDetector.KeyboardModeSwitchKeyCode|KeyboardModeSwitchKeyCode`,
+          `Class.DragDetector.GamepadModeSwitchKeyCode|GamepadModeSwitchKeyCode`,
+          or `Class.DragDetector.VRSwitchKeyCode|VRSwitchKeyCode`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

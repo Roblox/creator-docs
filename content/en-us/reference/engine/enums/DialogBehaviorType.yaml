@@ -1,0 +1,27 @@
+name: DialogBehaviorType
+type: enum
+summary: |
+  Controls whether multiple people can use this dialog, or only one person at a
+  time can use it.
+description: |
+  Controls whether multiple people can use this dialog, or only one person at a
+  time can use it.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: SinglePlayer
+    summary: |
+      Only one player can interact with this dialog at a time. The conversation
+      between the player and dialog can be seen by all players.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: MultiplePlayers
+    summary: |
+      Multiple players can simultaneously interact with this dialog. The
+      conversation between the player and the dialog cannot be seen by other
+      players.
+    value: 1
+    tags: []
+    deprecation_message: ''

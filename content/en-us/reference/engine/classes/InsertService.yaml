@@ -1,0 +1,555 @@
+name: InsertService
+type: class
+category: Utility
+memory_category: Instances
+summary: |
+  Used to insert assets from the Roblox website.
+description: |
+  InsertService is used to insert assets from the Roblox website, typically the
+  `Class.InsertService:LoadAsset()|LoadAsset` function.
+
+  To load an asset, the asset must be accessible by the creator of the game
+  loading it, which can be either a user or group. Due to these restrictions,
+  InsertService is useful for loading sensitive data, typically API or secret
+  keys to be used with `Class.HttpService`. Should a game be uploaded by a
+  different creator, the sensitive data would not be accessible. See the
+  `Class.InsertService:LoadAsset()|LoadAsset` function for more details on this
+  security check.
+
+  See also:
+
+  - `Class.AssetService`, which can provide information about assets you might
+    want to load using InsertService
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: InsertService.AllowClientInsertModels
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: InsertService.AllowInsertFreeModels
+    summary: |
+      Indicates whether ''Free Models'' can be inserted into the game.
+    description: |
+      The AllowInsertFreeModels property toggles whether ''Free Models'' can be
+      inserted into the game, regardless of whether the place owner owns the
+      asset.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+      - NotBrowsable
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated, as it was never released, likely due to security
+      concerns. Do not use it in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: InsertService:ApproveAssetId
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:ApproveAssetVersionId
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetVersionId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:Insert
+    summary: |
+      Inserts `Class.Instance` into Workspace.
+    description: |
+      The Insert function is an ancient method used to insert an
+      `Class.Instance` into Workspace.
+    code_samples:
+      - InsertService-Insert1
+    parameters:
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been superseded by `Class.InsertService:LoadAsset()`
+      which should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:CreateMeshPartAsync
+    summary: |
+      Create a new MeshPart with specified meshId and fidelity values.
+    description: |
+      CreateMeshPartAsync can create a MeshPart with specified CollisionFidelity
+      and RenderFidelity. Because MeshPart.MeshId is read only, this is the way
+      of creating MeshPart with any MeshId through scripts, without having to
+      clone an existing MeshPart. It throws errors if creation fails.
+    code_samples:
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: |
+          Mesh asset id.
+      - name: collisionFidelity
+        type: CollisionFidelity
+        default:
+        summary: |
+          Set MeshPart.CollisionFidelity.
+      - name: renderFidelity
+        type: RenderFidelity
+        default:
+        summary: |
+          Set MeshPart.RenderFidelity.
+    returns:
+      - type: MeshPart
+        summary: |
+          New MeshPart instance.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: InsertService:GetBaseCategories
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetBaseSets
+    summary: |
+      Returns an array of dictionaries, containing information about various
+      Roblox approved sets.
+    description: |
+      Returns an array of dictionaries, containing information about various
+      Roblox approved sets.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
+      from Roblox.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetCollection
+    summary: |
+      Returns the most recently uploaded models in the specified category.
+    description: |
+      Returns the most recently uploaded models in the specified category.
+    code_samples:
+      - InsertService-GetCollection1
+    parameters:
+      - name: categoryId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetFreeDecals
+    summary: |
+      Retrieves a list of Free Decals from the Catalog.
+    description: |
+      The GetFreeDecals function retrieves a list of Free `Class.Decal`s from
+      the Catalog. The return type for this method is very odd, as it returns a
+      single table wrapped in a table.
+
+      The best way to explain it is to show a visual of the array returned:
+
+      ```lua
+      [1] = {
+      	CurrentStartIndex = 1, -- This can vary depending on the page you input.
+      	TotalCount = 21, -- Always 21.
+      	Results = {
+      		-- All parameters here are pseudo. They can vary depending on the asset.
+      		[1] = {
+      			Name = "Asset Name",
+      			AssetId = 0000000,
+      			AssetVersionId = 0000000,
+      			CreatorName = "Roblox",
+      		},
+      		-- [2], [3], and so on... up to [21]
+      	},
+      }
+      ```
+
+      Yikes! That quite confusing. Unfortunately this method was added in the
+      earlier days of Roblox, where easy to understand return-types weren't a
+      priority.
+
+      Thankfully, an example for iterating over this list has been provided at
+      the bottom of this page.
+
+      Additionally, if you want to insert `Class.Model|Models` instead, you can
+      use the `Class.InsertService:GetFreeModels()` function.
+
+      _Note:_ The page argument starts at 0. So Page 1 = 0, Page 2 = 1, etc.
+    code_samples:
+      - InsertService-GetFreeDecals1
+    parameters:
+      - name: searchText
+        type: string
+        default:
+        summary: |
+          String used to search for free decals in the Catalog.
+      - name: pageNum
+        type: int
+        default:
+        summary: |
+          The page number in the Catalog to return.
+    returns:
+      - type: Array
+        summary: |
+          A single table (of returned free decals) wrapped in a table.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetFreeModels
+    summary: |
+      Retrieves a list of Free Models from the Catalog.
+    description: |
+      The GetFreeModels function retrieves a list of Free `Class.Model|Models`
+      from the Catalog. The return type for this method is very odd, as it
+      returns a single table wrapped in a table.
+
+      The best way to explain it is to show a visual of the array returned:
+
+      ```lua
+      [1] = {
+      	CurrentStartIndex = 1, -- This can vary depending on the page you input.
+      	TotalCount = 21, -- Always 21.
+      	Results = {
+      		-- All parameters here are pseudo. They can vary depending on the asset.
+      		[1] = {
+      			Name = "Asset Name",
+      			AssetId = 0000000,
+      			AssetVersionId = 0000000,
+      			CreatorName = "Roblox",
+          		}
+          		-- [2], [3], and so on... up to [21]
+          	}
+      }
+      ```
+
+      An example for iterating over this list has been provided at the bottom of
+      this page.
+
+      Additionally, if you would like to insert free `Class.Decal|Decals`, you
+      can use the `Class.InsertService:GetFreeDecals()` function.
+    code_samples:
+      - InsertService-GetFreeModels1
+    parameters:
+      - name: searchText
+        type: string
+        default:
+        summary: |
+          String used to search for free decals in the Catalog.
+      - name: pageNum
+        type: int
+        default:
+        summary: |
+          The page number in the Catalog to return.
+    returns:
+      - type: Array
+        summary: |
+          A single table (of returned free models) wrapped in a table.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetLatestAssetVersionAsync
+    summary: |
+      Returns the latest AssetVersionId of an asset for assets created by the
+      place creator. Can be used in combination with
+      `Class.InsertService:LoadAssetVersion()` to load the latest version of a
+      model, even if it gets updated while the game is running.
+    description: |
+      Returns the latest AssetVersionId of an asset for assets created by the
+      place creator. Can be used in combination with
+      `Class.InsertService:LoadAssetVersion()` to load the latest version of a
+      model, even if it gets updated while the game is running.
+    code_samples:
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetUserCategories
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:GetUserSets
+    summary: |
+      Returns an array of dictionaries, containing information about sets owned
+      by the user.
+    description: |
+      Returns an array of dictionaries, containing information about sets owned
+      by the user. This includes
+
+      - Sets the user is subscribed to.
+      - Sets that the user created.
+      - A single set containing the models created by the user.
+      - A single set containing the decals created by the user.
+
+      Note:
+
+      - All values in the dictionaries are
+        <a href="../../../luau/strings.md">strings</a>, even if they are a
+        number.
+
+      <table>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Name</td>
+          <td>The name of the set.</td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>The description of the set.</td>
+        </tr>
+        <tr>
+          <td>ImageAssetId</td>
+          <td>An assetId for the icon of the set.</td>
+        </tr>
+        <tr>
+          <td>CreatorName</td>
+          <td>The creator of the set.</td>
+        </tr>
+        <tr>
+          <td>AssetSetId</td>
+          <td>The set's unique ID on the website.</td>
+        </tr>
+        <tr>
+          <td>CategoryId</td>
+          <td>Identical to AssetSetId</td>
+        </tr>
+        <tr>
+          <td>SetType</td>
+          <td>The type of set that this set is.</td>
+        </tr>
+        </tbody>
+      </table>
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: |
+      [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
+      from Roblox.
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:LoadAsset
+    summary: |
+      Returns a `Class.Model` containing the asset.
+    description: |
+      The LoadAsset function fetches an asset given its ID and returns a
+      `Class.Model` containing the asset. For example, to load this public
+      [Doge](https://www.roblox.com/library/257489726/Doge) `Class.Model`, which
+      has the asset ID **_257489726_**, you can use:
+
+      ```lua
+      local assetId = 257489726
+      local InsertService = game:GetService("InsertService")
+      local model = InsertService:LoadAsset(assetId)
+      model.Parent = workspace
+      ```
+
+      Calls to this function may fail if a server providing a model is having
+      problems. As such, it's generally a good idea to wrap calls to this
+      function in `pcall` to catch these kinds of errors.
+
+      ```lua
+      local assetId = 257489726
+      local InsertService = game:GetService("InsertService")
+      local success, model = pcall(InsertService.LoadAsset, InsertService, assetId)
+      if success and model then
+         print("Model loaded successfully")
+         model.Parent = workspace
+      else
+         print("Model failed to load!")
+      end
+      ```
+
+      #### Security Check
+
+      An asset loaded by this function must be **created or owned** by either
+      the game creator or Roblox. Additionally, benign asset types such as
+      t-shirts, shirts, pants and avatar accessories are loadable from any game
+      as they are public.
+
+      See also:
+
+      - `Class.AssetService:GetBundleDetailsAsync()`, to find out which assets
+        are associated with a bundle.
+      - For plugins, see `Class.DataModel:GetObjects()`
+    code_samples:
+      - InsertService-LoadAsset1
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The asset ID of the asset being loaded.
+    returns:
+      - type: Instance
+        summary: |
+          An instance of the loaded asset.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:LoadAssetVersion
+    summary: |
+      Returns a model inserted into `Class.InsertService` containing the asset
+      with the given assetVersionId.
+    description: |
+      Returns a model inserted into `Class.InsertService` containing the asset
+      with the given assetVersionId.
+    code_samples:
+      - InsertService-LoadAssetVersion1
+    parameters:
+      - name: assetVersionId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: InsertService:loadAsset
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of `Class.InsertService:LoadAsset()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

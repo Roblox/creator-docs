@@ -1,0 +1,34 @@
+name: TextureQueryType
+type: enum
+summary: |
+  Used to get memory information about textures.
+description: |
+  Used to get memory information about textures.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: NonHumanoid
+    summary: |
+      Texture memory for objects other than `Class.Humanoid`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: NonHumanoidOrphaned
+    summary: |
+      Unreferenced texture memory for objects other than `Class.Humanoid`.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Humanoid
+    summary: |
+      Texture memory for `Class.Humanoid`.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: HumanoidOrphaned
+    summary: |
+      Unreferenced texture memory for `Class.Humanoid`.
+    value: 3
+    tags: []
+    deprecation_message: ''

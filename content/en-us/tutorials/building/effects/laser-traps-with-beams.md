@@ -170,7 +170,7 @@ The script for the trap will check if an invisible part is touches a player. The
 
    ```lua
    local laserTrap = script.Parent
-   local collisionBox = laserTrap:FindFirstChild("CollisionBox")
+   local collisionBox = laserTrap.CollisionBox
 
    -- Hide the collision box
    collisionBox.Transparency = 1

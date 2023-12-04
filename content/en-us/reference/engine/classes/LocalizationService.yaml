@@ -1,0 +1,1090 @@
+name: LocalizationService
+type: class
+category: Localization
+memory_category: Instances
+summary: |
+  Handles automated translation.
+description: |
+  LocalizationService is the service responsible for handling automated
+  translation.
+
+  It is used as a storage for `Class.LocalizationTable` objects used by
+  automatic text replacement.
+
+  LocalizationService will only use its child LocalizationTables for automatic
+  text replacement unless `Class.GuiBase2d.RootLocalizationTable` is specified
+  on a GUI object or its ancestors.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: LocalizationService.RobloxLocaleId
+    summary: |
+      The locale id used for localizing core and internal features such as core
+      scripts and GUI.
+    description: |
+      This property shows the locale id used for the localization of core and
+      internal features such as `Class.CoreGui` and
+      `Class.CoreScript|CoreScripts`.
+
+      This will return a string with the two letter code (for example, "en-us")
+      for the locale.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: false
+      can_save: false
+  - name: LocalizationService.SystemLocaleId
+    summary: |
+      The locale id that the local player has set for their operating system.
+    description: |
+      This property shows the locale id that the local player has set for their
+      operating system.
+
+      This will return a string with the two letter code (for example, "en-us")
+      for the locale.
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Localization
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: LocalizationService:GetCorescriptLocalizations
+    summary: |
+      Returns a list of `Class.LocalizationTable` objects used for localizing
+      CoreScripts.
+    description: |
+      Returns a list of `Class.LocalizationTable` objects used for localizing
+      CoreScripts.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationService:GetTableEntries
+    summary: |
+      Gets all entries used for autotranslation.
+    description: |
+      Returns an `Array`, where each element of the returned `Array` is itself
+      an `Array` of entries in the same format as described in
+      `Class.LocalizationTable:GetEntries()`. The order of the elements in the
+      returned `Array` is the same order that the
+      `Class.LocalizationTable|LocalizationTables` will be searched through to
+      attempt autotranslation for the provided `Class.Instance`. The entry
+      elements within a particular `Class.LocalizationTable` are returned in an
+      unspecified order.
+
+      This function returns entries regardless of whether the object is a
+      `Class.GuiBase2d` with `Class.GuiBase2d.AutoLocalize` enabled. An object
+      that is a `Class.GuiBase2d` will not actually be autotranslated unless
+      `Class.GuiBase2d.AutoLocalize` is enabled.
+
+      The ordering of the tables is as follows:
+
+      - First, it looks for the earliest `Class.GuiBase2d` ancestor of the
+        object (including the provided object) that has a
+        `Class.GuiBase2d.RootLocalizationTable`. Tables then append in the same
+        order as described in `Class.GuiBase2d.RootLocalizationTable` by going
+        up through the `Class.LocalizationTable` ancestors of that
+        `Class.GuiBase2d.RootLocalizationTable`. If no such
+        `Class.GuiBase2d.RootLocalizationTable` is found, no tables append in
+        this step. If `instance` is `nil`, no tables append in this step.
+      - Next, tables from the `Class.LocalizationTable` hierarchy under
+        `Class.LocalizationService` append. For each child
+        `Class.LocalizationTable` of `Class.LocalizationService`, it appends
+        tables going up from the lowest descendant `Class.LocalizationTable` of
+        the tables parented to the service, all the way up to the children of
+        the service. If there are no children of `Class.LocalizationService`
+        that are `Class.LocalizationTable|LocalizationTables`, then no tables
+        append in this step.
+      - Finally, the cloud `Class.LocalizationTable` appends to the array. If
+        there is no cloud `Class.LocalizationTable`, or the cloud
+        `Class.LocalizationTable` has not yet loaded, then no table appends in
+        this step.
+
+      This function does not yield. It will not wait until the cloud
+      `Class.LocalizationTable` has loaded.
+    code_samples:
+    parameters:
+      - name: instance
+        type: Instance
+        default: nil
+        summary: ''
+    returns:
+      - type: Array
+        summary: |
+          An array of arrays, where each array is in the same format as
+          described in `Class.LocalizationTable:GetEntries()`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationService:GetTranslatorForPlayer
+    summary: |
+      Returns a `Class.Translator` to be used for translations using the locale
+      data loaded.
+    description: |
+      This function takes a player as an argument and returns a
+      `Class.Translator` instance which can be used to perform translations for
+      that locale if any are available. The entries used for localization are
+      the entries provided by the `Class.LocalizationTable` hierarchy under
+      `Class.LocalizationService` as well as the cloud
+      `Class.LocalizationTable`, if it is available and already loaded. This
+      will be the same set of entries returned by
+      `Class.LocalizationService.GetTableEntries(nil)`.
+
+      This function does not yield. It will not wait until the cloud
+      `Class.LocalizationTable` has loaded.
+
+      See also:
+
+      - `Class.LocalizationService:GetTranslatorForPlayerAsync()` has the same
+        functionality as this function, except that it yields until the cloud
+        `Class.LocalizationTable` has been loaded.
+      - `Class.LocalizationService:GetTranslatorForLocaleAsync()`, returns a
+        Translator to be used for translations using the provided locale.
+    code_samples:
+      - getting-and-using-a-translator-for-a-player
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` that you are getting the `Class.Translator` for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Translator` instance for the specified locale.
+    tags: []
+    deprecation_message: |
+      This function has been deprecated by
+      `Class.LocalizationService:GetTranslatorForPlayerAsync()`, which functions
+      similarly except that it yields until the cloud table has loaded. Please
+      use it in new work instead.
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationService:GetCountryRegionForPlayerAsync
+    summary: |
+      Returns country/region code string according to player's client IP
+      geolocation.
+    description: |
+      Returns a country/region code string according to player's client IP
+      geolocation. The supported country/region codes are as follows:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Country/Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>US</td><td>United States</td>
+          </tr>
+          <tr>
+            <td>GB</td><td>United Kingdom</td>
+          </tr>
+          <tr>
+            <td>CA</td><td>Canada</td>
+          </tr>
+          <tr>
+            <td>AF</td><td>Afghanistan</td>
+          </tr>
+          <tr>
+            <td>AX</td><td>Aland Islands</td>
+          </tr>
+          <tr>
+            <td>AL</td><td>Albania</td>
+          </tr>
+          <tr>
+            <td>DZ</td><td>Algeria</td>
+          </tr>
+          <tr>
+            <td>AS</td><td>American Samoa</td>
+          </tr>
+          <tr>
+            <td>AD</td><td>Andorra</td>
+          </tr>
+          <tr>
+            <td>AO</td><td>Angola</td>
+          </tr>
+          <tr>
+            <td>AI</td><td>Anguilla</td>
+          </tr>
+          <tr>
+            <td>AQ</td><td>Antarctica</td>
+          </tr>
+          <tr>
+            <td>AG</td><td>Antigua and Barbuda</td>
+          </tr>
+          <tr>
+            <td>AR</td><td>Argentina</td>
+          </tr>
+          <tr>
+            <td>AM</td><td>Armenia</td>
+          </tr>
+          <tr>
+            <td>AW</td><td>Aruba</td>
+          </tr>
+          <tr>
+            <td>AU</td><td>Australia</td>
+          </tr>
+          <tr>
+            <td>AT</td><td>Austria</td>
+          </tr>
+          <tr>
+            <td>AZ</td><td>Azerbaijan</td>
+          </tr>
+          <tr>
+            <td>BS</td><td>Bahamas</td>
+          </tr>
+          <tr>
+            <td>BH</td><td>Bahrain</td>
+          </tr>
+          <tr>
+            <td>BD</td><td>Bangladesh</td>
+          </tr>
+          <tr>
+            <td>BB</td><td>Barbados</td>
+          </tr>
+          <tr>
+            <td>BY</td><td>Belarus</td>
+          </tr>
+          <tr>
+            <td>BE</td><td>Belgium</td>
+          </tr>
+          <tr>
+            <td>BZ</td><td>Belize</td>
+          </tr>
+          <tr>
+            <td>BJ</td><td>Benin</td>
+          </tr>
+          <tr>
+            <td>BM</td><td>Bermuda</td>
+          </tr>
+          <tr>
+            <td>BT</td><td>Bhutan</td>
+          </tr>
+          <tr>
+            <td>BO</td><td>Bolivia</td>
+          </tr>
+          <tr>
+            <td>BQ</td><td>Bonaire, Saint Eustatius and Saba</td>
+          </tr>
+          <tr>
+            <td>BA</td><td>Bosnia and Herzegovina</td>
+          </tr>
+          <tr>
+            <td>BW</td><td>Botswana</td>
+          </tr>
+          <tr>
+            <td>BV</td><td>Bouvet Island</td>
+          </tr>
+          <tr>
+            <td>BR</td><td>Brazil</td>
+          </tr>
+          <tr>
+            <td>IO</td><td>British Indian Ocean Territory</td>
+          </tr>
+          <tr>
+            <td>BN</td><td>Brunei Darussalam</td>
+          </tr>
+          <tr>
+            <td>BG</td><td>Bulgaria</td>
+          </tr>
+          <tr>
+            <td>BF</td><td>Burkina Faso</td>
+          </tr>
+          <tr>
+            <td>BI</td><td>Burundi</td>
+          </tr>
+          <tr>
+            <td>KH</td><td>Cambodia</td>
+          </tr>
+          <tr>
+            <td>CM</td><td>Cameroon</td>
+          </tr>
+          <tr>
+            <td>CV</td><td>Cape Verde</td>
+          </tr>
+          <tr>
+            <td>KY</td><td>Cayman Islands</td>
+          </tr>
+          <tr>
+            <td>CF</td><td>Central African Republic</td>
+          </tr>
+          <tr>
+            <td>TD</td><td>Chad</td>
+          </tr>
+          <tr>
+            <td>CL</td><td>Chile</td>
+          </tr>
+          <tr>
+            <td>CN</td><td>China</td>
+          </tr>
+          <tr>
+            <td>CX</td><td>Christmas Island</td>
+          </tr>
+          <tr>
+            <td>CC</td><td>Cocos Islands</td>
+          </tr>
+          <tr>
+            <td>CO</td><td>Colombia</td>
+          </tr>
+          <tr>
+            <td>KM</td><td>Comoros</td>
+          </tr>
+          <tr>
+            <td>CG</td><td>Congo</td>
+          </tr>
+          <tr>
+            <td>CD</td><td>Congo (DRC)</td>
+          </tr>
+          <tr>
+            <td>CK</td><td>Cook Islands</td>
+          </tr>
+          <tr>
+            <td>CR</td><td>Costa Rica</td>
+          </tr>
+          <tr>
+            <td>CI</td><td>Ivory Coast</td>
+          </tr>
+          <tr>
+            <td>HR</td><td>Croatia</td>
+          </tr>
+          <tr>
+            <td>CW</td><td>Curaçao</td>
+          </tr>
+          <tr>
+            <td>CY</td><td>Cyprus</td>
+          </tr>
+          <tr>
+            <td>CZ</td><td>Czech Republic</td>
+          </tr>
+          <tr>
+            <td>DK</td><td>Denmark</td>
+          </tr>
+          <tr>
+            <td>DJ</td><td>Djibouti</td>
+          </tr>
+          <tr>
+            <td>DM</td><td>Dominica</td>
+          </tr>
+          <tr>
+            <td>DO</td><td>Dominican Republic</td>
+          </tr>
+          <tr>
+            <td>EC</td><td>Ecuador</td>
+          </tr>
+          <tr>
+            <td>EG</td><td>Egypt</td>
+          </tr>
+          <tr>
+            <td>SV</td><td>El Salvador</td>
+          </tr>
+          <tr>
+            <td>GQ</td><td>Equatorial Guinea</td>
+          </tr>
+          <tr>
+            <td>ER</td><td>Eritrea</td>
+          </tr>
+          <tr>
+            <td>EE</td><td>Estonia</td>
+          </tr>
+          <tr>
+            <td>ET</td><td>Ethiopia</td>
+          </tr>
+          <tr>
+            <td>FK</td><td>Falkland Islands (Malvinas)</td>
+          </tr>
+          <tr>
+            <td>FO</td><td>Faroe Islands</td>
+          </tr>
+          <tr>
+            <td>FJ</td><td>Fiji</td>
+          </tr>
+          <tr>
+            <td>FI</td><td>Finland</td>
+          </tr>
+          <tr>
+            <td>FR</td><td>France</td>
+          </tr>
+          <tr>
+            <td>GF</td><td>French Guiana</td>
+          </tr>
+          <tr>
+            <td>PF</td><td>French Polynesia</td>
+          </tr>
+          <tr>
+            <td>TF</td><td>French Southern Territories</td>
+          </tr>
+          <tr>
+            <td>GA</td><td>Gabon</td>
+          </tr>
+          <tr>
+            <td>GM</td><td>Gambia</td>
+          </tr>
+          <tr>
+            <td>GE</td><td>Georgia</td>
+          </tr>
+          <tr>
+            <td>DE</td><td>Germany</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Country/Region</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GH</td><td>Ghana</td>
+          </tr>
+          <tr>
+            <td>GI</td><td>Gibraltar</td>
+          </tr>
+          <tr>
+            <td>GR</td><td>Greece</td>
+          </tr>
+          <tr>
+            <td>GL</td><td>Greenland</td>
+          </tr>
+          <tr>
+            <td>GD</td><td>Grenada</td>
+          </tr>
+          <tr>
+            <td>GP</td><td>Guadeloupe</td>
+          </tr>
+          <tr>
+            <td>GU</td><td>Guam</td>
+          </tr>
+          <tr>
+            <td>GT</td><td>Guatemala</td>
+          </tr>
+          <tr>
+            <td>GG</td><td>Guernsey</td>
+          </tr>
+          <tr>
+            <td>GN</td><td>Guinea</td>
+          </tr>
+          <tr>
+            <td>GW</td><td>Guinea-Bissau</td>
+          </tr>
+          <tr>
+            <td>GY</td><td>Guyana</td>
+          </tr>
+          <tr>
+            <td>HT</td><td>Haiti</td>
+          </tr>
+          <tr>
+            <td>HM</td><td>Heard Island and the McDonald Islands</td>
+          </tr>
+          <tr>
+            <td>VA</td><td>Holy See</td>
+          </tr>
+          <tr>
+            <td>HN</td><td>Honduras</td>
+          </tr>
+          <tr>
+            <td>HK</td><td>Hong Kong</td>
+          </tr>
+          <tr>
+            <td>HU</td><td>Hungary</td>
+          </tr>
+          <tr>
+            <td>IS</td><td>Iceland</td>
+          </tr>
+          <tr>
+            <td>IN</td><td>India</td>
+          </tr>
+          <tr>
+            <td>ID</td><td>Indonesia</td>
+          </tr>
+          <tr>
+            <td>IQ</td><td>Iraq</td>
+          </tr>
+          <tr>
+            <td>IE</td><td>Ireland</td>
+          </tr>
+          <tr>
+            <td>IM</td><td>Isle of Man</td>
+          </tr>
+          <tr>
+            <td>IL</td><td>Israel</td>
+          </tr>
+          <tr>
+            <td>IT</td><td>Italy</td>
+          </tr>
+          <tr>
+            <td>JM</td><td>Jamaica</td>
+          </tr>
+          <tr>
+            <td>JP</td><td>Japan</td>
+          </tr>
+          <tr>
+            <td>JE</td><td>Jersey</td>
+          </tr>
+          <tr>
+            <td>JO</td><td>Jordan</td>
+          </tr>
+          <tr>
+            <td>KZ</td><td>Kazakhstan</td>
+          </tr>
+          <tr>
+            <td>KE</td><td>Kenya</td>
+          </tr>
+          <tr>
+            <td>KI</td><td>Kiribati</td>
+          </tr>
+          <tr>
+            <td>KR</td><td>Korea</td>
+          </tr>
+          <tr>
+            <td>KW</td><td>Kuwait</td>
+          </tr>
+          <tr>
+            <td>KG</td><td>Kyrgyzstan</td>
+          </tr>
+          <tr>
+            <td>LA</td><td>Laos</td>
+          </tr>
+          <tr>
+            <td>LV</td><td>Latvia</td>
+          </tr>
+          <tr>
+            <td>LB</td><td>Lebanon</td>
+          </tr>
+          <tr>
+            <td>LS</td><td>Lesotho</td>
+          </tr>
+          <tr>
+            <td>LR</td><td>Liberia</td>
+          </tr>
+          <tr>
+            <td>LY</td><td>Libya</td>
+          </tr>
+          <tr>
+            <td>LI</td><td>Liechtenstein</td>
+          </tr>
+          <tr>
+            <td>LT</td><td>Lithuania</td>
+          </tr>
+          <tr>
+            <td>LU</td><td>Luxembourg</td>
+          </tr>
+          <tr>
+            <td>MO</td><td>Macao</td>
+          </tr>
+          <tr>
+            <td>MK</td><td>Macedonia</td>
+          </tr>
+          <tr>
+            <td>MG</td><td>Madagascar</td>
+          </tr>
+          <tr>
+            <td>MW</td><td>Malawi</td>
+          </tr>
+          <tr>
+            <td>MY</td><td>Malaysia</td>
+          </tr>
+          <tr>
+            <td>MV</td><td>Maldives</td>
+          </tr>
+          <tr>
+            <td>ML</td><td>Mali</td>
+          </tr>
+          <tr>
+            <td>MT</td><td>Malta</td>
+          </tr>
+          <tr>
+            <td>MH</td><td>Marshall Islands</td>
+          </tr>
+          <tr>
+            <td>MQ</td><td>Martinique</td>
+          </tr>
+          <tr>
+            <td>MR</td><td>Mauritania</td>
+          </tr>
+          <tr>
+            <td>MU</td><td>Mauritius</td>
+          </tr>
+          <tr>
+            <td>YT</td><td>Mayotte</td>
+          </tr>
+          <tr>
+            <td>MX</td><td>Mexico</td>
+          </tr>
+          <tr>
+            <td>FM</td><td>Micronesia</td>
+          </tr>
+          <tr>
+            <td>MD</td><td>Moldova</td>
+          </tr>
+          <tr>
+            <td>MC</td><td>Monaco</td>
+          </tr>
+          <tr>
+            <td>MN</td><td>Mongolia</td>
+          </tr>
+          <tr>
+            <td>ME</td><td>Montenegro</td>
+          </tr>
+          <tr>
+            <td>MS</td><td>Montserrat</td>
+          </tr>
+          <tr>
+            <td>MA</td><td>Morocco</td>
+          </tr>
+          <tr>
+            <td>MZ</td><td>Mozambique</td>
+          </tr>
+          <tr>
+            <td>MM</td><td>Myanmar</td>
+          </tr>
+          <tr>
+            <td>NA</td><td>Namibia</td>
+          </tr>
+          <tr>
+            <td>NR</td><td>Nauru</td>
+          </tr>
+          <tr>
+            <td>NP</td><td>Nepal</td>
+          </tr>
+          <tr>
+            <td>NL</td><td>Netherlands</td>
+          </tr>
+          <tr>
+            <td>AN</td><td>Netherlands Antilles</td>
+          </tr>
+          <tr>
+            <td>NC</td><td>New Caledonia</td>
+          </tr>
+          <tr>
+            <td>NZ</td><td>New Zealand</td>
+          </tr>
+          <tr>
+            <td>NI</td><td>Nicaragua</td>
+          </tr>
+          <tr>
+            <td>NE</td><td>Niger</td>
+          </tr>
+          <tr>
+            <td>NG</td><td>Nigeria</td>
+          </tr>
+          <tr>
+            <td>NU</td><td>Niue</td>
+          </tr>
+          <tr>
+            <td>NF</td><td>Norfolk Island</td>
+          </tr>
+          <tr>
+            <td>MP</td><td>Northern Mariana Islands</td>
+          </tr>
+          <tr>
+            <td>NO</td><td>Norway</td>
+          </tr>
+          <tr>
+            <td>OM</td><td>Oman</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Country/Region</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PK</td><td>Pakistan</td>
+          </tr>
+          <tr>
+            <td>PW</td><td>Palau</td>
+          </tr>
+          <tr>
+            <td>PS</td><td>Palestine</td>
+          </tr>
+          <tr>
+            <td>PA</td><td>Panama</td>
+          </tr>
+          <tr>
+            <td>PG</td><td>Papua New Guinea</td>
+          </tr>
+          <tr>
+            <td>PY</td><td>Paraguay</td>
+          </tr>
+          <tr>
+            <td>PE</td><td>Peru</td>
+          </tr>
+          <tr>
+            <td>PH</td><td>Philippines</td>
+          </tr>
+          <tr>
+            <td>PN</td><td>Pitcairn Islands</td>
+          </tr>
+          <tr>
+            <td>PL</td><td>Poland</td>
+          </tr>
+          <tr>
+            <td>PT</td><td>Portugal</td>
+          </tr>
+          <tr>
+            <td>PR</td><td>Puerto Rico</td>
+          </tr>
+          <tr>
+            <td>QA</td><td>Qatar</td>
+          </tr>
+          <tr>
+            <td>RE</td><td>Reunion</td>
+          </tr>
+          <tr>
+            <td>RO</td><td>Romania</td>
+          </tr>
+          <tr>
+            <td>RU</td><td>Russian Federation</td>
+          </tr>
+          <tr>
+            <td>RW</td><td>Rwanda</td>
+          </tr>
+          <tr>
+            <td>BL</td><td>Saint Barthelemy</td>
+          </tr>
+          <tr>
+            <td>SH</td><td>Saint Helena, Ascension and Tristan da Cunha</td>
+          </tr>
+          <tr>
+            <td>KN</td><td>Saint Kitts and Nevis</td>
+          </tr>
+          <tr>
+            <td>LC</td><td>Saint Lucia</td>
+          </tr>
+          <tr>
+            <td>MF</td><td>Saint Martin</td>
+          </tr>
+          <tr>
+            <td>PM</td><td>Saint Pierre and Miquelon</td>
+          </tr>
+          <tr>
+            <td>VC</td><td>Saint Vincent and the Grenadines</td>
+          </tr>
+          <tr>
+            <td>WS</td><td>Samoa</td>
+          </tr>
+          <tr>
+            <td>SM</td><td>San Marino</td>
+          </tr>
+          <tr>
+            <td>ST</td><td>Sao Tome and Principe</td>
+          </tr>
+          <tr>
+            <td>SA</td><td>Saudi Arabia</td>
+          </tr>
+          <tr>
+            <td>SN</td><td>Senegal</td>
+          </tr>
+          <tr>
+            <td>RS</td><td>Serbia</td>
+          </tr>
+          <tr>
+            <td>SC</td><td>Seychelles</td>
+          </tr>
+          <tr>
+            <td>SL</td><td>Sierra Leone</td>
+          </tr>
+          <tr>
+            <td>SG</td><td>Singapore</td>
+          </tr>
+          <tr>
+            <td>SX</td><td>Sint Maarten</td>
+          </tr>
+          <tr>
+            <td>SK</td><td>Slovakia</td>
+          </tr>
+          <tr>
+            <td>SI</td><td>Slovenia</td>
+          </tr>
+          <tr>
+            <td>SB</td><td>Solomon Islands</td>
+          </tr>
+          <tr>
+            <td>SO</td><td>Somalia</td>
+          </tr>
+          <tr>
+            <td>ZA</td><td>South Africa</td>
+          </tr>
+          <tr>
+            <td>GS</td><td>South Georgia and the South Sandwich Islands</td>
+          </tr>
+          <tr>
+            <td>SS</td><td>South Sudan</td>
+          </tr>
+          <tr>
+            <td>ES</td><td>Spain</td>
+          </tr>
+          <tr>
+            <td>LK</td><td>Sri Lanka</td>
+          </tr>
+          <tr>
+            <td>SR</td><td>Suriname</td>
+          </tr>
+          <tr>
+            <td>SJ</td><td>Svalbard and Jan Mayen</td>
+          </tr>
+          <tr>
+            <td>SZ</td><td>Swaziland</td>
+          </tr>
+          <tr>
+            <td>SE</td><td>Sweden</td>
+          </tr>
+          <tr>
+            <td>CH</td><td>Switzerland</td>
+          </tr>
+          <tr>
+            <td>TW</td><td>Taiwan</td>
+          </tr>
+          <tr>
+            <td>TJ</td><td>Tajikistan</td>
+          </tr>
+          <tr>
+            <td>TZ</td><td>Tanzania</td>
+          </tr>
+          <tr>
+            <td>TH</td><td>Thailand</td>
+          </tr>
+          <tr>
+            <td>TL</td><td>Timor-Leste</td>
+          </tr>
+          <tr>
+            <td>TG</td><td>Togo</td>
+          </tr>
+          <tr>
+            <td>TK</td><td>Tokelau</td>
+          </tr>
+          <tr>
+            <td>TO</td><td>Tonga</td>
+          </tr>
+          <tr>
+            <td>TT</td><td>Trinidad and Tobago</td>
+          </tr>
+          <tr>
+            <td>TN</td><td>Tunisia</td>
+          </tr>
+          <tr>
+            <td>TR</td><td>Turkey</td>
+          </tr>
+          <tr>
+            <td>TM</td><td>Turkmenistan</td>
+          </tr>
+          <tr>
+            <td>TC</td><td>Turks and Caicos Islands</td>
+          </tr>
+          <tr>
+            <td>TV</td><td>Tuvalu</td>
+          </tr>
+          <tr>
+            <td>UG</td><td>Uganda</td>
+          </tr>
+          <tr>
+            <td>UA</td><td>Ukraine</td>
+          </tr>
+          <tr>
+            <td>AE</td><td>United Arab Emirates</td>
+          </tr>
+          <tr>
+            <td>UM</td><td>United States Minor Outlying Islands</td>
+          </tr>
+          <tr>
+            <td>UY</td><td>Uruguay</td>
+          </tr>
+          <tr>
+            <td>UZ</td><td>Uzbekistan</td>
+          </tr>
+          <tr>
+            <td>VU</td><td>Vanuatu</td>
+          </tr>
+          <tr>
+            <td>VE</td><td>Venezuela</td>
+          </tr>
+          <tr>
+            <td>VN</td><td>Vietnam</td>
+          </tr>
+          <tr>
+            <td>VG</td><td>Virgin Islands (British)</td>
+          </tr>
+          <tr>
+            <td>VI</td><td>Virgin Islands (US)</td>
+          </tr>
+          <tr>
+            <td>WF</td><td>Wallis and Futuna</td>
+          </tr>
+          <tr>
+            <td>EH</td><td>Western Sahara</td>
+          </tr>
+          <tr>
+            <td>YE</td><td>Yemen</td>
+          </tr>
+          <tr>
+            <td>ZM</td><td>Zambia</td>
+          </tr>
+          <tr>
+            <td>ZW</td><td>Zimbabwe</td>
+          </tr>
+          <tr>
+            <td>CU</td><td>Cuba</td>
+          </tr>
+          <tr>
+            <td>IR</td><td>Iran</td>
+          </tr>
+          <tr>
+            <td>SY</td><td>Syria</td>
+          </tr>
+          <tr>
+            <td>KP</td><td>North Korea</td>
+          </tr>
+        </tbody>
+      </table>
+
+      See also:
+
+      - `Class.PolicyService:GetPolicyInfoForPlayerAsync()`, returns policy
+        information about a player which is based on geolocation, age group and
+        platform
+    code_samples:
+      - getting-country-region-code-for-a-player
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The player that you are getting country/region information for.
+    returns:
+      - type: string
+        summary: |
+          A string indicating the country/region code of a player.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationService:GetTranslatorForLocaleAsync
+    summary: |
+      Yields until the cloud `Class.LocalizationTable` for the argument locale
+      has been loaded - if available. Returns a `Class.Translator` instance to
+      be used for translations for the provided locale.
+    description: |
+      This function takes a locale code as an argument and yields until the
+      cloud `Class.LocalizationTable` for that locale has been loaded, if
+      available. It then returns a `Class.Translator` object which can be used
+      to perform translations for that locale if any are available. The entries
+      used for localization are the entries provided by the
+      `Class.LocalizationTable` hierarchy under `Class.LocalizationService` as
+      well as the cloud table (if available). This will be the same set of
+      entries returned by `Class.LocalizationService.GetTableEntries(nil)`.
+
+      This function can error and thus should be wrapped in a `pcall()`.
+
+      See also:
+
+      - `Class.LocalizationService:GetTranslatorForPlayer()` gets the translator
+        corresponding to the locale of the provided player. This function is
+        deprecated and should not be used in new work.
+      - `Class.LocalizationService:GetTranslatorForPlayerAsync()` yields until
+        the cloud `Class.LocalizationTable` for the locale of the provided
+        player has loaded and then gets the translator corresponding to the
+        locale of the provided player.
+    code_samples:
+      - getting-and-using-a-translator-for-a-locale
+    parameters:
+      - name: locale
+        type: string
+        default:
+        summary: |
+          A Roblox supported language or locale code.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Translator` instance for the specified locale.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: LocalizationService:GetTranslatorForPlayerAsync
+    summary: |
+      Yields until the cloud `Class.LocalizationTable` for the player's locale
+      has been loaded - if available. Returns a `Class.Translator` instance to
+      be used for translations for the provided locale.
+    description: |
+      This function takes a player as an argument and yields until the cloud
+      `Class.LocalizationTable` for that player's locale has been loaded, if
+      available. It then returns a `Class.Translator` object which can be used
+      to perform translations for that locale if any are available. The entries
+      used for localization are the entries provided by the
+      `Class.LocalizationTable` hierarchy under `Class.LocalizationService` as
+      well as the cloud table (if available). This will be the same set of
+      entries returned by
+      `Class.LocalizationService:GetTableEntries()|GetTableEntries(nil)`.
+
+      This function can error and thus should be wrapped in a `pcall()`.
+
+      See also:
+
+      - `Class.LocalizationService:GetTranslatorForPlayer()`, same functionality
+        as this function except that it does not yield and does not wait until
+        the cloud `Class.LocalizationTable` for the player's locale has been
+        loaded. This function is deprecated and should not be used in new work.
+      - `Class.LocalizationService:GetTranslatorForLocaleAsync()`, returns a
+        Translator to be used for translations using the provided locale.
+    code_samples:
+      - getting-and-using-a-translator-for-a-player
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: |
+          The `Class.Player` that you are getting the `Class.Translator` for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Translator` instance for the specified locale.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

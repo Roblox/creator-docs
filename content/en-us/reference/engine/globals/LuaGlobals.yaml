@@ -1,0 +1,731 @@
+name: Lua Globals
+type: global
+summary: |
+  A list of functions and variables that are native to Lua.
+description: |
+  The following is a list of functions and variables that are native to Lua.
+  These functions can be used in a standard installation of
+  [Lua 5.1.4](https://www.lua.org/manual/5.1/), though there are some
+  differences in how some of these work on Roblox.
+code_samples:
+properties:
+  - name: _G
+    type: Array
+    summary: |
+      A table that is shared between all scripts of the same context level.
+    description: |
+      A table that is shared between all scripts of the same context level.
+    tags:
+    code_samples:
+  - name: _VERSION
+    type: string
+    summary: |
+      A global variable that holds a string containing the current interpreter
+      version.
+    description: |
+      A global variable (not a function) that holds a string containing the
+      current interpreter version.
+    tags:
+    code_samples:
+functions:
+  - name: assert
+    summary: |
+      Throws an error if the provided `value` resolves to `false` or `nil`.
+    description: |
+      Throws an error if the provided `value` is `false` or `nil`. If the
+      assertion passes, it returns all values passed to it.
+
+      ```lua
+      local product = 90 * 4
+      assert(product == 360, "Oh dear, multiplication is broken")
+      -- The line above does nothing, because 90 times 4 is 360
+      ```
+    parameters:
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value that will be asserted against.
+      - name: errorMessage
+        type: string
+        default: assertion failed!
+        summary: |
+          The text that will be shown in the error if the assertion fails.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: collectgarbage
+    summary: |
+      Performs the specified operation of the garbage collector.
+    description: |
+      Performs an operation on the Lua garbage collector based on the specified
+      option.
+
+      Roblox's Lua sandbox only allows the "count" option to be used, so none of
+      the other standard options are available.
+
+      The "count" option returns the total memory in use by Lua (in kilobytes).
+    parameters:
+      - name: operation
+        type: string
+        default:
+        summary: |
+          The name of the operation that should be performed by the garbage
+          collector.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: error
+    summary: |
+      Halts thread execution and throws an error.
+    description: |
+      Terminates the last protected function called and outputs `message` as an
+      error message. If the function containing the error is not called in a
+      protected function such as `pcall()`, then the script which called the
+      function will terminate. The error function itself never returns and acts
+      like a script error.
+
+      The `level` argument specifies how to get the error position. With level
+      `1` (the default), the error position is where the error function was
+      called. Level 2 points the error to where the function that called error
+      was called; and so on. Passing a level `0` avoids the addition of error
+      position information to the message.
+    parameters:
+      - name: message
+        type: string
+        default:
+        summary: |
+          The error message to display.
+      - name: level
+        type: int
+        default: 1
+        summary: |
+          The level of information that should be printed. Defaults to 1.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: getfenv
+    summary: |
+      Returns the current environment in use by the caller, as a dictionary.
+    description: |
+      Returns the current environment in use by the caller, as a dictionary.
+
+      - If provided with a function, the environment of the function will be
+        returned.
+      - If provided with an integer, `getfenv()` will provide the environment of
+        the function at the provided stack level: Level 1 is the function
+        calling `getfenv()`. If `stack` is `0`, `getfenv()` returns the global
+        environment of the current script. When using `getfenv()` to get the
+        current environment of a script, it will return the same table every
+        time within the specific thread.
+
+      ```lua
+      -- Get the current environment
+
+      myVariable = "Hello, environments"  -- A global variable (non-local)
+      local env = getfenv()
+      print(env["myVariable"])  --> Hello, environments
+      ```
+
+      ```lua
+      -- Get the environment of a function
+
+      local function printMessage()
+          print(message)
+      end
+      local env = getfenv(printMessage)
+      env.message = "Hello, function environments"
+      printMessage()  --> Hello, function environments
+      ```
+
+      ```lua
+      -- Get the environment based on stack
+
+      local function whatIsThePassword(password)
+          local env = getfenv(1)  -- Get the environment 1 level up, or whatever called this function
+          print(env.password)  -- Get the password from the environment one level up
+          print(password)  --> nil
+      end
+
+      local function openSesame()
+          local password = "secret"  -- A variable local to openSesame()
+          whatIsThePassword(password)
+      end
+
+      openSesame()
+      ```
+    parameters:
+      - name: stack
+        type: Variant
+        default: 1
+        summary: |
+          The stack level (int) of the environment to be returned; or the
+          function whose environment will be returned.
+    returns:
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: getmetatable
+    summary: |
+      Returns the metatable of the given table.
+    description: |
+      Returns the metatable of the given table `t` if it has one, otherwise
+      returns nil. If `t` does have a metatable, and the `__metatable`
+      metamethod is set, it returns that value instead.
+
+      ```lua
+      -- Demonstrate getmetatable:
+      local meta = {}
+      local t = setmetatable({}, meta)
+      print(getmetatable(t) == meta) --> true
+      -- Make the original metatable unrecoverable by setting the __metatable metamethod:
+      meta.__metatable = "protected"
+      print(getmetatable(t)) --> protected
+      ```
+    parameters:
+      - name: t
+        type: Variant
+        default:
+        summary: |
+          The object to fetch the metatable of.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: ipairs
+    summary: |
+      Returns an iterator function and the table for use in a for loop.
+    description: |
+      Returns three values: an iterator function, the table `t` and the number
+      `0`. Each time the iterator function is called, it returns the next
+      numerical index-value pair in the table. When used in a generic for-loop,
+      the return values can be used to iterate over each numerical index in the
+      table:
+
+      ```lua
+      local fruits = {"apples", "oranges", "kiwi"}
+      for index, fruit in ipairs(fruits) do
+         print(index, fruit) --> 1 apples, 2 oranges, 3 kiwi, etc...
+      end
+      ```
+    parameters:
+      - name: t
+        type: Array
+        default:
+        summary: |
+          A table whose elements are to be iterated over.
+    returns:
+      - type: function
+        summary: ''
+      - type: Array
+        summary: ''
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: loadstring
+    summary: |
+      Returns the provided code as a function that can be executed.
+    description: |
+      Loads Lua code from a string and returns it as a function.
+
+      Unlike standard Lua 5.1, Roblox's Lua cannot load the binary version of
+      Lua using `loadstring()`.
+
+      `loadstring()` is disabled by default. For guidance around enabling it,
+      see `Class.ServerScriptService`.
+    parameters:
+      - name: contents
+        type: string
+        default:
+        summary: |
+          The specified string to be loaded as Lua code.
+      - name: chunkname
+        type: string
+        default:
+        summary: |
+          An optional chunk name for error messages and debug information. If
+          unspecified, Lua uses the `contents` string.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: newproxy
+    summary: |
+      Creates a blank `userdata`, with the option for it to have a metatable.
+    description: |
+      Creates a blank `userdata`, with the option for it to have a metatable.
+    parameters:
+      - name: addMetatable
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: userdata
+        summary: ''
+    tags:
+    code_samples:
+  - name: next
+    summary: |
+      An iterator function for use in for loops.
+    description: |
+      Returns the first key/value pair in the array. If a `lastKey` argument was
+      specified then returns the next element in the array based on the key that
+      provided. The order in which the indices are enumerated is not specified,
+      even for numeric indices. To traverse a table in numeric order, use a
+      numerical for loop or `ipairs`.
+
+      The behavior of next is undefined if, during the traversal, you assign any
+      value to a non-existent field in the table. You may, however, modify
+      existing fields. In particular, you may clear existing fields.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The array to be traversed.
+      - name: lastKey
+        type: Variant
+        default: nil
+        summary: |
+          The last key that was previously retrieved from a call to next.
+    returns:
+      - type: Variant
+        summary: ''
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: pairs
+    summary: |
+      Returns an iterator function and the provided table for use in a `for`
+      loop.
+    description: |
+      Returns an iterator function, the passed table `t`, and `nil`, so that the
+      construction will iterate over all key/value pairs of that table when used
+      in a generic `for` loop:
+
+      ```lua
+      local scores = {
+          ["John"] = 5,
+          ["Sally"] = 10
+      }
+
+      for name, score in pairs(scores) do
+          print(name .. " has score: " .. score)
+      end
+      ```
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          An array or dictionary table to iterate over.
+    returns:
+      - type: function
+        summary: ''
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: pcall
+    summary: |
+      Runs the provided function and catches any error it throws, returning the
+      function's success and its results.
+    description: |
+      Calls the function `func` with the given arguments in protected mode. This
+      means that any error inside `func` is not propagated; instead, `pcall()`
+      catches the error and returns a status code. Its first result is the
+      status code (a boolean), which is true if the call succeeds without
+      errors. In such case, `pcall()` also returns all results from the call,
+      after this first result. In case of any error, `pcall()` returns false
+      plus the error message.
+    parameters:
+      - name: func
+        type: function
+        default:
+        summary: |
+          The function to be called in protected mode.
+      - name: args
+        type: Tuple
+        default:
+        summary: |
+          The arguments to send to `func` when executing.
+    returns:
+      - type: bool
+        summary: ''
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: print
+    summary: |
+      Prints all provided values to the output.
+    description: |
+      Receives any number of arguments, and prints their values to the output.
+      `print` is not intended for formatted output, but only as a quick way to
+      show a value, typically for debugging. For a formatted output, use
+      `Library.string.format()`. On Roblox, `print` does not call `tostring`,
+      but the `__tostring` metamethod still fires if the table has one.
+    parameters:
+      - name: params
+        type: Tuple
+        default:
+        summary: |
+          Any number of arguments to be outputted.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: rawequal
+    summary: |
+      Returns whether `v1` is equal to `v2`, bypassing their metamethods.
+    description: |
+      Checks whether `v1` is equal to `v2`, without invoking any metamethods.
+    parameters:
+      - name: v1
+        type: Variant
+        default:
+        summary: |
+          The first variable to compare.
+      - name: v2
+        type: Variant
+        default:
+        summary: |
+          The second variable to compare.
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+    code_samples:
+  - name: rawget
+    summary: |
+      Gets the real value of `table[index]`, bypassing any metamethods.
+    description: |
+      Gets the real value of `table[index]`, without invoking any metamethods.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be referenced.
+      - name: index
+        type: Variant
+        default:
+        summary: |
+          The index to get from `t`.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: rawlen
+    summary: |
+      Returns the length of the string or table, bypassing any metamethods.
+    description: |
+      Returns the length of the string or table, without invoking any
+      metamethods.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be referenced.
+    returns:
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: rawset
+    summary: |
+      Sets the real value of `table[index]`, bypassing any metamethods.
+    description: |
+      Sets the real value of `table[index]` to a given `value`, without invoking
+      any metamethod.
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to be referenced.
+      - name: index
+        type: Variant
+        default:
+        summary: |
+          The index to set in `t` to a specified `value`. Must be different from
+          nil.
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value to be set to a specified `index` in table `t`.
+    returns:
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: select
+    summary: |
+      Returns all arguments after the given index.
+    description: |
+      Returns all arguments after argument number `index`. If negative, it will
+      return from the end of the argument list.
+
+      ```lua
+      print(select(2, "A", "B", "C")) --> B C
+      print(select(-1, "A", "B", "C")) --> C
+      ```
+
+      Returns the total number of arguments that were passed after the `cmd`
+      argument, which must be `"#"` to use `select` in this fashion.
+
+      ```lua
+      print(select("#", "A", "B", "C")) --> 3
+      ```
+
+      If `cmd` is a number, the function will return all values after that
+      index.
+
+      ```lua
+      print(select(2, "A", "B", "C")) --> B C
+      ```
+    parameters:
+      - name: index
+        type: Variant
+        default:
+        summary: |
+          The index of the argument to return all arguments after in `args`. or
+          must be "#".
+      - name: args
+        type: Tuple
+        default:
+        summary: |
+          A tuple of arguments.
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+    code_samples:
+  - name: setfenv
+    summary: |
+      Sets the given function's environment.
+    description: |
+      Sets the environment to be used by the given function. `f` can be a
+      function or a number that specifies the function at that stack level:
+      Level 1 is the function calling `setfenv()`. `setfenv()` returns the given
+      function.
+
+      If `f` is `0`, then `setfenv()` changes the environment of the running
+      thread and returns no values.
+    parameters:
+      - name: f
+        type: Variant
+        default:
+        summary: |
+          Either a function or a number that specifies the function at that
+          stack level.
+      - name: fenv
+        type: table
+        default:
+        summary: |
+          The function environment table to set for the specified function.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: setmetatable
+    summary: |
+      Sets the given table's metatable.
+    description: |
+      Sets the metatable for the given table `t` to `newMeta`. If `newMeta` is
+      nil, the metatable of `t` is removed. Finally, this function returns the
+      table `t` which was passed to it. If `t` already has a metatable whose
+      `__metatable` metamethod is set, calling this on `t` raises an error.
+
+      ```lua
+      local meta = {__metatable = "protected"}
+      local t = {}
+      setmetatable(t, meta) -- This sets the metatable of t
+      -- We now have a table, t, with a metatable. If we try to change it...
+      setmetatable(t, {}) --> Error: cannot change a protected metatable
+      ```
+    parameters:
+      - name: t
+        type: table
+        default:
+        summary: |
+          The table to set the metatable of.
+      - name: newMeta
+        type: Variant
+        default:
+        summary: |
+          If nil, the metatable of the given table `t` is removed. Otherwise,
+          the metatable to set for the given table `t`.
+    returns:
+      - type: table
+        summary: ''
+    tags:
+    code_samples:
+  - name: tonumber
+    summary: |
+      Returns the provided value converted to a number, or nil if impossible.
+    description: |
+      Attempts to convert the arg into a number with a specified base to
+      interpret the value in. If it cannot be converted, this function returns
+      nil.
+
+      The base may be any integer between 2 and 36, inclusive. In bases above
+      10, the letter 'A' (in either upper or lower case) represents 10, 'B'
+      represents 11, and so forth, with 'Z' representing 35. In base 10 (the
+      default), the number may have a decimal part, as well as an optional
+      exponent part. In other bases, only unsigned integers are accepted.
+
+      If a string begins with `0x` and a base is not provided, the `0x` is
+      trimmed and the base is assumed to be 16, or hexadecimal.
+
+      ```lua
+      print(tonumber("1337")) --> 1337 (assumes base 10, decimal)
+      print(tonumber("1.25")) --> 1.25 (base 10 may have decimal portions)
+      print(tonumber("3e2")) --> 300 (base 10 may have exponent portion, 3 &times; 10 ^ 2)
+      print(tonumber("25", 8)) --> 21 (base 8, octal)
+      print(tonumber("0x100")) --> 256 (assumes base 16, hexadecimal)
+      print(tonumber("roblox")) --> nil (does not raise an error)
+      -- Tip: use with assert if you would like unconvertable numbers to raise an error
+      print(assert(tonumber("roblox"))) --> Error: assertion failed
+      ```
+    parameters:
+      - name: arg
+        type: Variant
+        default:
+        summary: |
+          The object to be converted into a number.
+      - name: base
+        type: int
+        default: 10
+        summary: |
+          The numerical base to convert _arg_ into.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: tostring
+    summary: |
+      Returns the provided value converted to a string, or nil if impossible.
+    description: |
+      Receives an argument of any type and converts it to a string in a
+      reasonable format. For complete control of how numbers are converted, use
+      string.format. If the metatable of `e` has a `__tostring` metamethod, then
+      it will be called with `e` as the only argument and will return the
+      result.
+
+      ```lua
+      local isRobloxCool = true
+      -- Convert the boolean to a string then concatenate:
+      print("Roblox is cool: " .. tostring(isRobloxCool)) --> Roblox is cool: true
+      ```
+    parameters:
+      - name: e
+        type: Variant
+        default:
+        summary: |
+          The object to be converted into a string.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: type
+    summary: |
+      Returns the basic type of the provided object.
+    description: |
+      Returns the type of its only argument, coded as a string. The possible
+      results of this function are "nil" (a string, not the value nil),
+      "number", "string", "boolean", "table", "vector", "function", "thread",
+      and "userdata".
+    parameters:
+      - name: v
+        type: Variant
+        default:
+        summary: |
+          The object to return the type of.
+    returns:
+      - type: string
+        summary: ''
+    tags:
+    code_samples:
+  - name: unpack
+    summary: |
+      Returns all elements from the given list as a tuple.
+    description: |
+      Returns the elements from the given table. By default, _i_ is 1 and _j_ is
+      the length of _list_, as defined by the length operator.
+    parameters:
+      - name: list
+        type: table
+        default:
+        summary: |
+          The list of elements to be unpacked.
+      - name: i
+        type: int
+        default: 1
+        summary: |
+          The starting index to unpack from.
+      - name: j
+        type: int
+        default: '#list'
+        summary: |
+          The number of elements to unpack.
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:
+  - name: xpcall
+    summary: |
+      Similar to `pcall()` except it uses a custom error handler.
+    description: |
+      This function is similar to pcall, except that you can set a new error
+      handler.
+
+      `xpcall()` calls function `f` in protected mode, using `err` as the error
+      handler, and passes a list of arguments. Any error inside `f` is not
+      propagated; instead, `xpcall()` catches the error, calls the `err`
+      function with the original error object, and returns a status code. Its
+      first result is the status code (a boolean), which is true if the call
+      succeeds without errors. In this case, `xpcall()` also returns all results
+      from the call, after this first result. In case of any error, `xpcall()`
+      returns false plus the result from `err`.
+    parameters:
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function to be called in protected mode.
+      - name: err
+        type: function
+        default:
+        summary: |
+          The function to be used as an error handle if xpcall catches an error.
+      - name: args
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+      - type: Variant
+        summary: ''
+    tags:
+    code_samples:

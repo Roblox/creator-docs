@@ -1,0 +1,39 @@
+name: AvatarCreationService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: AvatarCreationService:PromptCreateAvatarAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

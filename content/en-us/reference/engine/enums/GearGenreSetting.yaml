@@ -1,0 +1,27 @@
+name: GearGenreSetting
+type: enum
+summary: ''
+description: |
+  The GearGenreSetting Enum sets what types of gear are allowed in a place.
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: |
+  This enum is deprecated as it is used by deprecated properties that are no
+  longer functional. It should not be used.
+items:
+  - name: AllGenres
+    value: 0
+    summary: |
+      All gear genres are allowed.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: MatchingGenreOnly
+    value: 1
+    summary: |
+      Only gear genres matching the allowed genres specified in a place's
+      configuration settings.
+    tags:
+      - Deprecated
+    deprecation_message: ''

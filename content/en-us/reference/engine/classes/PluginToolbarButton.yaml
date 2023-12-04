@@ -1,0 +1,169 @@
+name: PluginToolbarButton
+type: class
+category: Plugins
+memory_category: Instances
+summary: ''
+description: |
+  A PluginToolbarButton is an object created by the
+  `Class.PluginToolbar:CreateButton()` function. It allows the user to initiate
+  a single, one-off action in Roblox Studio through the
+  `Class.PluginToolbarButton.Click|Click` event. Pictured below are three
+  PluginToolbarButtons. From left to right: the default, hover and pressed
+  states. The hovered button in the center shows tooltip text, which is the 2nd
+  argument passed to `Class.PluginToolbar:CreateButton()`.
+
+  ![Three PluginToolbarButtons rendered on a PluginToolbar titled "Three Wise Monkeys"](/assets/legacy/PluginToolbarButton-light.png)
+
+  ## Behavior
+
+  When pressed, the `Class.PluginToolbarButton.Click|Click` event fires. A
+  button will also remain in the pressed state, which may be set manually using
+  `Class.PluginToolbarButton:SetActive()|SetActive`. Upon plugin activation
+  (`Class.Plugin:Activate()`), buttons in all other `Class.PluginToolbar`s will
+  be toggled off. If all buttons in a toolbar are off, the toolbar's plugin is
+  deactivated (`Class.Plugin:Deactivate()`).
+
+  When the game viewport is not visible, buttons will be disabled as if their
+  `Class.PluginToolbarButton.Enabled|Enabled` property were false. Disabled
+  buttons are desaturated and do not respond to user clicks. By setting
+  `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`
+  to true, you can allow plugin buttons to remain clickable (such as during
+  script editing).
+
+  ## History
+
+  - Prior to an update released in January 2019, this class was simply known as
+    "Button". This was changed to reduce confusion with similarly named in-game
+    UI element classes, such as `Class.TextButton`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: PluginToolbarButton.ClickableWhenViewportHidden
+    summary: |
+      Determines whether the button can be clicked when the game viewport is
+      hidden, such as while editing a script in a different Studio tab.
+    description: |
+      **ClickableWhenViewportHidden** determines whether a PluginToolbarButton
+      may be clicked while the game viewport is hidden, such as when a
+      `Class.Script` is being edited in another tab. In the image below, various
+      plugin toolbar buttons are visible. Some are enabled as a result of this
+      property being true, such as the Localization Tools button.
+
+      <img src="/assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
+
+      Typically, this property is good to enable if an action triggered by a
+      plugin button's `Class.PluginToolbarButton.Click|Click` event doesn't
+      occur in the game world (Workspace). For example, a button that opens a
+      widget should have this property be true, as showing a widget is visible
+      to the user even if the game view isn't visible.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: PluginToolbarButton.Enabled
+    summary: |
+      Determines whether the button is clickable in general.
+    description: |
+      **Enabled** determines whether a button is clickable in general. When this
+      property is false, the button will be greyed out and unclickable,
+      preventing the user from firing the
+      `Class.PluginToolbarButton.Click|Click` event. Buttons are enabled by
+      default.
+
+      Plugins should disable their buttons when the button action isn't relevant
+      in the current context. For example, a plugin button that assigns random
+      colors to selected should not be enabled when the selection contains no
+      parts. See the code samples for more information.
+
+      See also:
+
+      - `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`,
+        which determines whether a button is clickable when the game view is
+        hidden (and not just in general)
+    code_samples:
+      - brickcolor-randomizer-plugin
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: PluginToolbarButton.Icon
+    summary: |
+      Determines what icon should represent the button.
+    description: |
+      **Icon** determines what `Datatype.Content|icon` should be shown for the
+      button in the plugin toolbar. When this property is not set, the button
+      will instead use the button's text given by
+      `Class.PluginToolbar:CreateButton()`.
+    code_samples:
+    type: Content
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: PluginToolbarButton:SetActive
+    summary: |
+      Sets the state of the plugin button.
+    description: |
+      This method can be used to manually set the active state of the plugin
+      button.
+    code_samples:
+    parameters:
+      - name: active
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+events:
+  - name: PluginToolbarButton.Click
+    summary: |
+      Fires when the user presses and releases their cursor on the button.
+    description: |
+      **Click** fires when the PluginToolbarButton is pressed and released by
+      the user.
+
+      Clicking a PluginToolbarButton causes the state of the button to toggle.
+      Call `Class.PluginToolbarButton:SetActive()|SetActive` to manually set the
+      state of the button.
+    code_samples:
+      - plugintoolbarbutton-click
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+callbacks: []

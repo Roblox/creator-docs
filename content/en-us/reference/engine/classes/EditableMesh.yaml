@@ -1,0 +1,563 @@
+name: EditableMesh
+type: class
+category:
+memory_category: Instances
+summary: |
+  Instance which allows for the runtime creation and manipulation of meshes.
+description: |
+  `Class.EditableMesh` changes the applied visual mesh when parented to a
+  `Class.MeshPart`, allowing for querying and modification of the mesh both in
+  Studio and in experience.
+
+  An `Class.EditableMesh` can be created from an existing mesh ID using
+  `Class.AssetService:CreateEditableMeshAsync()`, or a blank
+  `Class.EditableMesh` can be created with `Datatype.Instance.new()`. It can
+  then be displayed, modified, and its collision model updated. Not all of the
+  steps are necessary; for example, you might want to create an
+  `Class.EditableMesh` just to raycast without ever displaying it.
+
+  An `Class.EditableMesh` is displayed when it's parented to a `Class.MeshPart`,
+  but only the part's appearance changes while the collision model remains the
+  same.
+
+  #### Stable Vertex/Face IDs
+
+  Many `Class.EditableMesh` methods take **vertex** and **face** IDs. These are
+  represented as integers in Luau but they require some special handling. The
+  main difference is that IDs are stable and they remain the same even if other
+  parts of the mesh change. For example, if an `Class.EditableMesh` has five
+  vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`, the new vertices will be
+  `{1, 2, 3, 5}`.
+
+  Note that the IDs are not guaranteed to be in order and there may be holes in
+  the numbering, so when iterating through vertices or faces, you should iterate
+  through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
+  or `Class.EditableMesh:GetTriangles()|GetTriangles()`.
+
+  #### Winding
+
+  Mesh faces have a front side and a back side. When drawing meshes, only the
+  front of the faces are drawn by default, although you can change this by
+  setting the mesh' `Class.MeshPart.DoubleSided|DoubleSided` property to `true`.
+
+  The order of the vertices around the face determines whether you are looking
+  at the front or the back. The front of the face is visible when the vertices
+  go counterclockwise around it.
+
+  <img src="/assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
+code_samples: []
+inherits:
+  - DataModelMesh
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: EditableMesh:AddTriangle
+    summary: |
+      Adds a new triangle to the mesh and returns a stable triangle ID.
+    description: |
+      Adds a new triangle to the mesh and returns a stable triangle ID.
+    code_samples: []
+    parameters:
+      - name: vertexId0
+        type: int64
+        default:
+        summary: |
+          ID of the first vertex of the triangle.
+      - name: vertexId1
+        type: int64
+        default:
+        summary: |
+          ID of the second vertex of the triangle.
+      - name: vertexId2
+        type: int64
+        default:
+        summary: |
+          ID of the third vertex of the triangle.
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:AddVertex
+    summary: |
+      Adds a new vertex to the geometry and returns a stable vertex ID.
+    description: |
+      Adds a new vertex to the geometry and returns a stable vertex ID.
+    code_samples: []
+    parameters:
+      - name: p
+        type: Vector3
+        default:
+        summary: |
+          Position in the mesh's local object space.
+    returns:
+      - type: int64
+        summary: |
+          Stable ID of the new vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindClosestPointOnSurface
+    summary: |
+      Finds the closest point on the mesh's surface.
+    description: |
+      Finds the closest point on the mesh's surface. Returns the triangle ID,
+      point on the mesh in local object space, and the barycentric coordinate of
+      the position within the triangle. See
+      `Class.EditableMesh:RaycastLocal()|RaycastLocal()` for more information on
+      barycentric coordinates.
+    code_samples: []
+    parameters:
+      - name: point
+        type: Vector3
+        default:
+        summary: |
+          Point position in the mesh's local object space.
+    returns:
+      - type: Tuple
+        summary: |
+          Tuple of the triangle ID, point on the mesh in local object space, and
+          the barycentric coordinate of the position within the triangle.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindClosestVertex
+    summary: |
+      Finds the closest vertex to a specific point in space.
+    description: |
+      Finds the closest vertex to a specific point in space and returns a stable
+      vertex ID.
+    code_samples: []
+    parameters:
+      - name: toThisPoint
+        type: Vector3
+        default:
+        summary: |
+          Point position in the mesh's local object space.
+    returns:
+      - type: int64
+        summary: |
+          Closest stable vertex ID to the specified point in space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:FindVerticesWithinSphere
+    summary: |
+      Finds all vertices within a specific sphere.
+    description: |
+      Finds all vertices within a specific sphere and returns a list of stable
+      vertex IDs.
+    code_samples: []
+    parameters:
+      - name: center
+        type: Vector3
+        default:
+        summary: |
+          Center of the sphere in the mesh's local object space.
+      - name: radius
+        type: float
+        default:
+        summary: |
+          Radius of the sphere.
+    returns:
+      - type: Array
+        summary: |
+          List of stable vertex IDs within the requested sphere.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetAdjacentTriangles
+    summary: |
+      Returns a list of triangles adjacent to a given triangle.
+    description: |
+      Given a stable triangle ID, returns a list of adjacent triangles.
+
+      <img src="/assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int64
+        default:
+        summary: |
+          Triangle ID around which to get adjacent triangles.
+    returns:
+      - type: Array
+        summary: |
+          List of adjacent triangles around the given triangle ID.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetAdjacentVertices
+    summary: |
+      Returns a list of vertices adjacent to a given vertex.
+    description: |
+      Given a stable vertex ID, returns a list of adjacent vertices.
+
+      <img src="/assets/engine-api/classes/EditableMesh/GetAdjacentVertices.png" alt="Adjacent vertices indicated around requested vertex" width="120" />
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex ID around which to get adjacent vertices.
+    returns:
+      - type: Array
+        summary: |
+          List of IDs of adjacent vertices around the given vertex ID.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetPosition
+    summary: |
+      Gets the position of a vertex.
+    description: |
+      Gets the position of a vertex in the mesh's local object space.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable vertex ID for which to get the position.
+    returns:
+      - type: Vector3
+        summary: |
+          Position of a vertex in the mesh's local object space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetTriangleVertices
+    summary: |
+      Returns a triangle's three vertex IDs.
+    description: |
+      Returns a triangle's three vertex IDs.
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int64
+        default:
+        summary: |
+          Stable triangle ID for which to get vertices.
+    returns:
+      - type: Tuple
+        summary: |
+          The specified triangle's three vertex IDs.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetTriangles
+    summary: |
+      Returns all triangles of the mesh.
+    description: |
+      Returns all triangles of the mesh as a list of stable triangle IDs.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          List of stable triangle IDs.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetUV
+    summary: |
+      Returns UV coordinates at the given vertex.
+    description: |
+      Returns UV coordinates at the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex for which to get UV coordinates.
+    returns:
+      - type: Vector2
+        summary: |
+          UV coordinates at the requested vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexColor
+    summary: |
+      Returns the color at the given vertex.
+    description: |
+      Returns the color at the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex for which to get the color.
+    returns:
+      - type: Color3
+        summary: |
+          Color at the requested vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexColorAlpha
+    summary: |
+      Returns the color alpha (transparency) at the given vertex.
+    description: |
+      Returns the color alpha (transparency) at the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex for which to get the color alpha.
+    returns:
+      - type: float
+        summary: |
+          Color alpha at the requested vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertexNormal
+    summary: |
+      Returns the normal at the given vertex.
+    description: |
+      Returns the normal at the given vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Vertex for which to get the normal.
+    returns:
+      - type: Vector3
+        summary: |
+          Normal at the requested vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVertices
+    summary: |
+      Returns all vertices as a list of stable vertex IDs.
+    description: |
+      Returns all vertices as a list of stable vertex IDs.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          List of stable vertex IDs.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RaycastLocal
+    summary: ''
+    description: |
+      Casts a ray and returns a point of intersection, triangle ID, and
+      barycentric coordinates. The inputs and outputs of this method are in the
+      mesh's local object space.
+
+      A **barycentric coordinate** is a way of specifying a point within a
+      triangle as a weighted combination of the 3 vertices of the triangle. This
+      is useful as a general way of blending vertex attributes. See this
+      method's code sample as an illustration.
+    code_samples:
+      - EditableMesh-RaycastLocal
+    parameters:
+      - name: origin
+        type: Vector3
+        default:
+        summary: |
+          Origin of the ray in the mesh's local object space.
+      - name: direction
+        type: Vector3
+        default:
+        summary: |
+          Direction of the ray.
+    returns:
+      - type: Tuple
+        summary: |
+          Tuple of the point of intersection, triangle ID, and barycentric
+          coordinates.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RemoveTriangle
+    summary: |
+      Removes a triangle using its stable triangle ID.
+    description: |
+      Removes a triangle using its stable triangle ID.
+    code_samples: []
+    parameters:
+      - name: triangleId
+        type: int64
+        default:
+        summary: |
+          ID of the triangle to remove.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RemoveVertex
+    summary: |
+      Removes a vertex using its stable vertex ID.
+    description: |
+      Removes a vertex using its stable vertex ID.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          ID of the vertex to remove.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetPosition
+    summary: |
+      Sets a vertex position in the mesh's local object space.
+    description: |
+      Sets a vertex position in the mesh's local object space.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable ID of the vertex to position.
+      - name: p
+        type: Vector3
+        default:
+        summary: |
+          Position in the mesh's local object space.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetUV
+    summary: |
+      Sets UV coordinates for a vertex.
+    description: |
+      Sets UV coordinates for a vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable ID of the vertex for which to set UV coordinates.
+      - name: uv
+        type: Vector2
+        default:
+        summary: |
+          UV coordinates.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexColor
+    summary: |
+      Sets the color for a vertex.
+    description: |
+      Sets the color for a vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable ID of the vertex for which to set the color.
+      - name: color
+        type: Color3
+        default:
+        summary: |
+          Color to set.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexColorAlpha
+    summary: |
+      Sets the color alpha (transparency) for a vertex.
+    description: |
+      Sets the color alpha (transparency) for a vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable ID of the vertex for which to set the color alpha.
+      - name: alpha
+        type: float
+        default:
+        summary: |
+          Alpha to set.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetVertexNormal
+    summary: |
+      Sets the normal for a vertex.
+    description: |
+      Sets the normal for a vertex.
+    code_samples: []
+    parameters:
+      - name: vertexId
+        type: int64
+        default:
+        summary: |
+          Stable ID of the vertex for which to set the normal.
+      - name: vnormal
+        type: Vector3
+        default:
+        summary: |
+          Normal to set.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

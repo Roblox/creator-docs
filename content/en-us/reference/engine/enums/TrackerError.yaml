@@ -1,0 +1,63 @@
+name: TrackerError
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Ok
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: NoService
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: InitFailed
+    value: 2
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: NoVideo
+    value: 3
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: VideoError
+    value: 4
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: VideoNoPermission
+    value: 5
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: VideoUnsupported
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: NoAudio
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AudioError
+    value: 8
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: AudioNoPermission
+    value: 9
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: UnsupportedDevice
+    value: 10
+    summary: ''
+    tags: []
+    deprecation_message: ''

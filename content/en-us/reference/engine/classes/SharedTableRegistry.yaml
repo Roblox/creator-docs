@@ -1,0 +1,86 @@
+name: SharedTableRegistry
+type: class
+category:
+memory_category: Instances
+summary: |
+  Provides a global registry of named `Datatype.SharedTable` objects.
+description: |
+  Provides a global registry of named `Datatype.SharedTable` objects. It can be
+  used to store `Datatype.SharedTable` objects that are used by multiple
+  scripts.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: SharedTableRegistry:GetSharedTable
+    summary: |
+      Gets the registered `Datatype.SharedTable` with the specified name.
+    description: |
+      Gets the registered `Datatype.SharedTable` with the specified name. If no
+      `Datatype.SharedTable` with that name exists, a new `Datatype.SharedTable`
+      is created with that name and is returned.
+
+      ```lua
+      local SharedTableRegistry = game:GetService("SharedTableRegistry")
+      local st = SharedTableRegistry:GetSharedTable("MyData")
+      ```
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the registered `Datatype.SharedTable`.
+    returns:
+      - type: SharedTable
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: SharedTableRegistry:SetSharedTable
+    summary: |
+      Registers the provided `Datatype.SharedTable` with the specified name.
+    description: |
+      Registers the provided `Datatype.SharedTable` with the specified name. If
+      the provided `Datatype.SharedTable` is `nil`, any existing
+      `Datatype.SharedTable` with the specified name is unregistered.
+
+      ```lua
+      local SharedTableRegistry = game:GetService("SharedTableRegistry")
+
+      -- Register a SharedTable with the name "MyData":
+      local st = SharedTable.new({1, 2, 3})
+      SharedTableRegistry:SetSharedTable("MyData", st)
+
+      -- Unregister the SharedTable with the name "MyData":
+      SharedTableRegistry:SetSharedTable("MyData", nil)
+      ```
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the registered `Datatype.SharedTable`.
+      - name: st
+        type: SharedTable?
+        default:
+        summary: |
+          The `Datatype.SharedTable` object to register, or `nil` to unregister
+          any previously registered `Datatype.SharedTable` object.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+events: []
+callbacks: []

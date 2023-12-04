@@ -1,0 +1,28 @@
+name: DataStoreVersionPages
+type: class
+category:
+memory_category: Instances
+summary: |
+  A special type of `Class.Pages` object whose pages contain
+  `Class.DataStoreObjectVersionInfo` instances.
+description: |
+  A special type of `Class.Pages` object whose pages contain
+  `Class.DataStoreObjectVersionInfo` instances from a `Class.GlobalDataStore`.
+  `Class.Pages:GetCurrentPage()` can be used to retrieve an array of the
+  `Class.DataStoreObjectVersionInfo` instances.
+
+  See also:
+
+  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+    data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Pages
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

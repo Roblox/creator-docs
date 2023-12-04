@@ -1,0 +1,46 @@
+name: AudioListener
+type: class
+category:
+memory_category: Internal
+summary: |
+  Records an audio stream from its surrounding
+  `Class.AudioEmitter|AudioEmitters` in the 3D world.
+description: |
+  `Class.AudioListener` records an audio stream from its surrounding
+  `Class.AudioEmitter|AudioEmitters` in the 3D world. It provides a single
+  **Output** pin which can be connected to other pins via `Class.Wire|Wires`. If
+  the parent is an `Class.Attachment`, `Class.Camera`, or `Class.PVInstance`,
+  the parent's world `Datatype.CFrame` will be used for listening. If the parent
+  is not one of these classes, the `Class.AudioListener` effectively hears
+  nothing.
+code_samples:
+  - audio-wiring---camera-listener
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioListener.AudioInteractionGroup
+    summary: |
+      Controls which `Class.AudioEmitter|AudioEmitters` are audible to this
+      `Class.AudioListener`.
+    description: |
+      Controls which `Class.AudioEmitter|AudioEmitters` are audible to this
+      `Class.AudioListener`. Emitters that share an interaction group can be
+      heard by this Listener.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Interactions
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

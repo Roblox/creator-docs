@@ -1,0 +1,1055 @@
+name: Terrain
+type: class
+category: Building
+memory_category: Instances
+summary: |
+  Terrain lets you to create dynamically morphable environments.
+description: |
+  Terrain lets you create dynamically morphable environments with little to no
+  lag. It is currently based on a 4&times;4&times;4 grid of cells, where each
+  cell has a number between 0 and 1 representing how much the geometry should
+  occupy the cell, and the material of the cell. The occupancy determines how
+  the cell will morph together with surrounding cells, and the result is the
+  illusion of having no grid constraint.
+
+  For more information, see [Terrain](../../../parts/terrain.md).
+code_samples:
+inherits:
+  - BasePart
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: Terrain.Decoration
+    summary: |
+      Enables or disables terrain decoration.
+    description: |
+      Currently enables or disables animated grass on the **Grass** terrain
+      material, although future modifications of this property may control
+      additional decorative features.
+    code_samples:
+    type: bool
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.GrassLength
+    summary: |
+      Specifies the length of animated grass.
+    description: |
+      Specifies the length of animated grass on the **Grass** terrain material,
+      assuming `Class.Terrain.Decoration|Decoration` is enabled. Valid values
+      are between 0.1 and 1.
+    code_samples: []
+    type: float
+    tags:
+      - NotScriptable
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.IsSmooth
+    summary: |
+      Returns true if the current game is using the smooth terrain system.
+    description: |
+      Returns true if the current game is using the smooth terrain system. The
+      legacy terrain engine has been removed, so this property will always be
+      true.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      Sets the specified terrain voxel's material to ''Water'' and sets its
+      occupancy to 1.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Terrain.MaterialColors
+    summary: |
+      MaterialColors represents the editor for the Material Color feature, and
+      **cannot be edited by scripts**.
+
+      To get the color of a material, use: `Class.Terrain:GetMaterialColor()` To
+      set the color of a material, use: `Class.Terrain:SetMaterialColor()`
+    description: |
+      MaterialColors represents the editor for the Material Color feature, and
+      **cannot be edited by scripts**.
+
+      To get the color of a material, use: `Class.Terrain:GetMaterialColor()`
+
+      To set the color of a material, use: `Class.Terrain:SetMaterialColor()`
+    code_samples:
+    type: BinaryString
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.MaxExtents
+    summary: |
+      Displays the boundaries of the largest possible editable region.
+    description: |
+      Displays the boundaries of the largest possible editable region.
+    code_samples:
+    type: Region3int16
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Terrain.WaterColor
+    summary: |
+      The tint of the Terrain water.
+    description: |
+      The tint of the Terrain water.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.WaterReflectance
+    summary: |
+      Controls how opaque the Terrain's water reflections are.
+    description: |
+      Controls how opaque the Terrain's water reflections are.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.WaterTransparency
+    summary: |
+      The transparency of the Terrain water.
+    description: |
+      The transparency of the Terrain water.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.WaterWaveSize
+    summary: |
+      Sets the maximum height of the Terrain water waves in studs.
+    description: |
+      Sets the maximum height of the Terrain water waves in studs. This is
+      currently constrained to between 0 and 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Terrain.WaterWaveSpeed
+    summary: |
+      Sets how many times the Terrain water waves will move up and down per
+      minute.
+    description: |
+      Sets how many times the Terrain water waves will move up and down per
+      minute. This is currently constrained to between 0 and 100.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Terrain:AutowedgeCell
+    summary: |
+      _(OBSOLETE)_ No longer does anything.
+    description: |
+      _(OBSOLETE)_ No longer does anything.
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:AutowedgeCells
+    summary: |
+      _(OBSOLETE)_ No longer does anything.
+    description: |
+      _(OBSOLETE)_ No longer does anything.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3int16
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:CellCenterToWorld
+    summary: |
+      Returns the world position of the center of the terrain cell (x, y, z).
+    description: |
+      Returns the world position of the center of the terrain cell (x, y, z).
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:CellCornerToWorld
+    summary: |
+      Returns the position of the lower-left-forward corner of the grid cell (x,
+      y, z).
+    description: |
+      Returns the position of the lower-left-forward corner of the grid cell (x,
+      y, z).
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:Clear
+    summary: |
+      Clears the terrain.
+    description: |
+      Clears the terrain.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:ConvertToSmooth
+    summary: |
+      Transforms the legacy terrain engine into the new terrain engine.
+    description: |
+      Transforms the legacy terrain engine into the new terrain engine.
+
+      All places now automatically use the new terrain engine, so this method is
+      obsolete.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      Since all places now automatically use the new terrain engine, this method
+      is obsolete. Do not use it for new work.
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Terrain:CopyRegion
+    summary: |
+      Stores a chunk of terrain into a `Class.TerrainRegion` object so it can be
+      loaded back later. Note: `Class.TerrainRegion` data does not replicate
+      between server and client.
+    description: |
+      Stores a chunk of terrain into a `Class.TerrainRegion` object so it can be
+      loaded back later. Note: `Class.TerrainRegion` data does not replicate
+      between server and client.
+    code_samples:
+      - Terrain-CopyRegion1
+    parameters:
+      - name: region
+        type: Region3int16
+        default:
+        summary: ''
+    returns:
+      - type: TerrainRegion
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:CountCells
+    summary: |
+      Returns the number of non-empty cells in the Terrain.
+    description: |
+      Returns the number of non-empty cells in the Terrain.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:FillBall
+    summary: |
+      Fills a ball of smooth terrain in a given space.
+    description: |
+      Fills a ball of smooth terrain in a given space.
+    code_samples:
+      - Terrain-FillBall1
+    parameters:
+      - name: center
+        type: Vector3
+        default:
+        summary: |
+          The position of the center of the terrain ball.
+      - name: radius
+        type: float
+        default:
+        summary: |
+          The radius in studs of the terrain ball.
+      - name: material
+        type: Material
+        default:
+        summary: |
+          The `Enum.Material` of the terrain ball.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:FillBlock
+    summary: |
+      Fills a block of smooth terrain with a given location, rotation, size, and
+      material.
+    description: |
+      Fills a block of smooth terrain with a given location, rotation, size, and
+      material.
+    code_samples:
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The cframe (position and orientation) of the terrain block.
+      - name: size
+        type: Vector3
+        default:
+        summary: |
+          The size in studs of the square block - both the height and width.
+      - name: material
+        type: Material
+        default:
+        summary: |
+          The `Enum.Material` of the terrain block.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:FillCylinder
+    summary: |
+      Fills a cylinder of smooth terrain in a given space.
+    description: |
+      Fills a cylinder of smooth terrain in a given space. The space is defined
+      using a CFrame, height, and radius.
+
+      #### Usage
+
+      ```lua
+      workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
+      ```
+    code_samples:
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The CFrame (position and orientation) of the terrain cylinder.
+      - name: height
+        type: float
+        default:
+        summary: |
+          The height in studs of the terrain cylinder.
+      - name: radius
+        type: float
+        default:
+        summary: |
+          The radius in studs of the terrain cylinder.
+      - name: material
+        type: Material
+        default:
+        summary: |
+          The `Enum.Material` of the terrain cylinder.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:FillRegion
+    summary: |
+      Fills a `Datatype.Region3` space with smooth terrain.
+    description: |
+      Fills a `Datatype.Region3` space with smooth terrain.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: ''
+      - name: resolution
+        type: float
+        default:
+        summary: ''
+      - name: material
+        type: Material
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:FillWedge
+    summary: |
+      Fills a wedge-shaped volume of Terrain with the given `Enum.Material` and
+      the area's CFrame and Size.
+    description: |
+      **FillWedge** fills a wedge-shaped volume of Terrain with the given
+      `Enum.Material` and the area's CFrame and Size. The orientation of the
+      wedge is the same as an equivalent `Class.WedgePart`.
+
+      <img src="/assets/legacy/Terrain.FillWedge.jpg" alt="The results of a call to Terrain:FillWedge with CFrame (0, 50, 0), Size (20, 20, 20), and Material Asphalt" width="537" height="415" />
+
+      In the image above, a floating chunk of Terrain was created by calling
+      this function as in the following code. A transparent, pink part with the
+      Front surface marked with a Motor indicates the provided CFrame and Size.
+
+      ```lua
+      workspace.Terrain:FillWedge(CFrame.new(0, 50, 0), Vector3.new(20, 20, 20), Enum.Material.Asphalt)
+      ```
+    code_samples:
+    parameters:
+      - name: cframe
+        type: CFrame
+        default:
+        summary: |
+          The position and orientation of the wedge to fill.
+      - name: size
+        type: Vector3
+        default:
+        summary: |
+          The size of the wedge to fill.
+      - name: material
+        type: Material
+        default:
+        summary: |
+          The material with which the wedge will be filled.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:GetCell
+    summary: |
+      Returns the closest CellMaterial from the legacy terrain engine that
+      matches the smooth terrain voxel specified.
+    description: |
+      Returns the closest CellMaterial from the legacy terrain engine that
+      matches the smooth terrain voxel specified. CellBlock will always be
+      ''Solid'' and CellOrientation will always be ''NegZ''.
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:GetMaterialColor
+    summary: |
+      Returns current terrain material color for specified terrain material.
+    description: |
+      Returns the current terrain material color for the specified terrain
+      material.
+    code_samples:
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: ''
+    returns:
+      - type: Color3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Terrain:GetWaterCell
+    summary: |
+      Returns if the cell is a water cell.
+    description: |
+      Returns if the cell is a water cell. The WaterForce parameter will always
+      be _None_ and the WaterDirection will always be _NegX_.
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:PasteRegion
+    summary: |
+      Applies a chunk of terrain to the Terrain object. Note:
+      `Class.TerrainRegion` data does not replicate between server and client.
+    description: |
+      Applies a chunk of terrain to the Terrain object. Note:
+      `Class.TerrainRegion` data does not replicate between server and client.
+    code_samples:
+      - Terrain-PasteRegion1
+    parameters:
+      - name: region
+        type: TerrainRegion
+        default:
+        summary: ''
+      - name: corner
+        type: Vector3int16
+        default:
+        summary: ''
+      - name: pasteEmptyCells
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:ReadVoxelChannels
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: ''
+      - name: resolution
+        type: float
+        default:
+        summary: ''
+      - name: channelIds
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Terrain:ReadVoxels
+    summary: |
+      Returns a certain region of smooth terrain in table format.
+    description: |
+      Returns a certain region of smooth terrain in table format.
+    code_samples:
+      - terrain-readvoxels-code-example
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          Target region to read from. Must be aligned to the voxel grid. Will
+          throw an error if region is too large. The limit is currently 4194304
+          voxels^3.
+      - name: resolution
+        type: float
+        default:
+        summary: |
+          Voxel resolution. Must be 4.
+    returns:
+      - type: Tuple
+        summary: |
+          Returns raw voxel data as two 3D arrays.
+
+          - `materials` - 3D array of `Enum.Material` from the target area. Also
+            contains a Size field, equal to the dimensions of the nested arrays.
+          - `occupancies` - 3D array of occupancy values from the target area.
+            Also contains a Size field, equal to the dimensions of the nested
+            arrays.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Terrain:ReplaceMaterial
+    summary: |
+      Replaces the terrain of a material within a region with another material.
+    description: |
+      ReplaceMaterial replaces terrain of a certain `Enum.Material` within a
+      `Datatype.Region3` with another material. Essentially, it is a
+      find-and-replace operation on `Class.Terrain` materials.
+
+      #### Constraints
+
+      When calling this method, the `resolution` parameter must be exactly 4.
+      Additionally, the Region3 must be aligned to the terrain materials grid,
+      i.e. the components of the Region3's minimum and maximum points must be
+      divisible by 4. Use `Datatype.Region3:ExpandToGrid()` to make a region
+      compatible with this function.
+    code_samples:
+      - terrain-replacematerial
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          The region in which the replacement operation will occur.
+      - name: resolution
+        type: float
+        default:
+        summary: |
+          The resolution at which the replacement operation will take place; at
+          the moment this must be exactly 4.
+      - name: sourceMaterial
+        type: Material
+        default:
+        summary: |
+          The old material that shall be replaced.
+      - name: targetMaterial
+        type: Material
+        default:
+        summary: |
+          The new material.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:SetCell
+    summary: |
+      Sets the occupancy and material of a specific terrain voxel.
+    description: |
+      Sets the occupancy of the specified terrain voxel to 1, and sets it's
+      material to the closest smooth terrain material that matches the
+      CellMaterial.
+
+      CellBlock and CellOrientation have no effect.
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+      - name: material
+        type: CellMaterial
+        default:
+        summary: ''
+      - name: block
+        type: CellBlock
+        default:
+        summary: ''
+      - name: orientation
+        type: CellOrientation
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:SetCells
+    summary: |
+      Sets the occupancy and material of all terrain voxels in a specific
+      region.
+    description: |
+      Sets the occupancy of all terrain voxels in the specified region to 1, and
+      sets their materials to the closest smooth terrain material that matches
+      the CellMaterial.
+
+      CellBlock and CellOrientation have no effect.
+    code_samples:
+    parameters:
+      - name: region
+        type: Region3int16
+        default:
+        summary: ''
+      - name: material
+        type: CellMaterial
+        default:
+        summary: ''
+      - name: block
+        type: CellBlock
+        default:
+        summary: ''
+      - name: orientation
+        type: CellOrientation
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:SetMaterialColor
+    summary: |
+      Sets current terrain material color for specified terrain material.
+    description: |
+      Sets current terrain material color for specified terrain material.
+      Terrain material will shift its base color toward specified color.
+    code_samples:
+    parameters:
+      - name: material
+        type: Material
+        default:
+        summary: ''
+      - name: value
+        type: Color3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:SetWaterCell
+    summary: |
+      Sets the specified terrain voxel's material to ''Water'' and sets its
+      occupancy to 1.
+    description: |
+      Sets the specified terrain voxel's material to ''Water'' and sets its
+      occupancy to 1. _WaterDirection_ and _WaterForce_ no longer have any
+      effect.
+
+      _Note:_ This API was intended for Roblox's old terrain system, which has
+      since been removed from the engine.
+    code_samples:
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+      - name: z
+        type: int
+        default:
+        summary: ''
+      - name: force
+        type: WaterForce
+        default:
+        summary: ''
+      - name: direction
+        type: WaterDirection
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is a deprecated function of a legacy `Class.Terrain` engine that
+      has been removed. Do not use it for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:WorldToCell
+    summary: |
+      Returns the grid cell location that contains the point **position**.
+    description: |
+      Returns the grid cell location that contains the point **position**.
+    code_samples:
+    parameters:
+      - name: position
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:WorldToCellPreferEmpty
+    summary: |
+      Returns the grid cell location that contains the point position,
+      preferring empty grid cells when position is on a grid edge.
+    description: |
+      Returns the grid cell location that contains the point position,
+      preferring empty grid cells when position is on a grid edge.
+    code_samples:
+    parameters:
+      - name: position
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:WorldToCellPreferSolid
+    summary: |
+      Returns the grid cell location that contains the point position,
+      preferring non-empty grid cells when position is on a grid edge.
+    description: |
+      Returns the grid cell location that contains the point position,
+      preferring non-empty grid cells when position is on a grid edge.
+    code_samples:
+    parameters:
+      - name: position
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:WriteVoxelChannels
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: ''
+      - name: resolution
+        type: float
+        default:
+        summary: ''
+      - name: channels
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Terrain:WriteVoxels
+    summary: |
+      Sets a certain region of smooth terrain using table format.
+    description: |
+      Sets a certain region of smooth terrain using table format.
+    code_samples:
+      - terrain-writevoxels-example
+      - terrain-writevoxels-max-region
+    parameters:
+      - name: region
+        type: Region3
+        default:
+        summary: |
+          Target region to write to. Must be aligned to the voxel grid. Will
+          throw an error if region is too large.
+      - name: resolution
+        type: float
+        default:
+        summary: |
+          Voxel resolution. Must be 4.
+      - name: materials
+        type: Array
+        default:
+        summary: |
+          3D array of Enum.Material. Dimensions must exactly match the size of
+          the target region in voxels.
+      - name: occupancy
+        type: Array
+        default:
+        summary: |
+          3D array of voxel occupancies (number between 0 and 1). Dimensions
+          must exactly match the size of the target region in voxels.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

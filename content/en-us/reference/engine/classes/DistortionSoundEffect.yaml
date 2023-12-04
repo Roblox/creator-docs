@@ -1,0 +1,40 @@
+name: DistortionSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Distorts audio, making it sound fuzzier and overdriven.
+description: |
+  A distortion effect is used to simulate the effect that would occur when
+  overdriving older style audio equipment (such as vacuum tubes). This effect
+  causes clipping in the sound and adds a general "fuzziness".
+
+  Like all other `Class.SoundEffect`, a DistortionSoundEffect can be applied
+  either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: DistortionSoundEffect.Level
+    summary: |
+      The intensity of the effect.
+    description: |
+      Range: 0 to 1 (default 0.5) The intensity of the effect. Setting this
+      property to its minimum (0) will cause no distortion at all.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

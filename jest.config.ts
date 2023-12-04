@@ -23,6 +23,7 @@ const defaultConfig: JestConfigWithTsJest = {
     '^(\\.{1,2}/.*)\\.mjs$': '$1.mts', //resolve .mjs to .mts
   },
   automock: false,
+  testPathIgnorePatterns: ['/node_modules/', '.github/'],
 };
 
 export default defaultConfig;

@@ -1,0 +1,48 @@
+name: VibrationMotor
+type: enum
+summary: |
+  Describes various types of haptic motor sizes and locations.
+description: |
+  Describes various types of haptic motor sizes and locations. Most devices have
+  two motors, one that's small and another that's large. For devices with a
+  single motor, such as mobile devices, only the large motor is implemented.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Large
+    summary: |
+      Large motor.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Small
+    summary: |
+      Small motor.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LeftTrigger
+    summary: |
+      Left trigger motor.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: RightTrigger
+    summary: |
+      Right trigger motor.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LeftHand
+    summary: |
+      Left hand motor for VR devices.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RightHand
+    summary: |
+      Right hand motor for VR devices.
+    value: 5
+    tags: []
+    deprecation_message: ''

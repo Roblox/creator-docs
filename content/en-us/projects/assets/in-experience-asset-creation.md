@@ -37,6 +37,7 @@ local function CreateAsset(player, instance)
 	local complete, result, assetId = pcall(function()
 		return AssetService:PromptCreateAssetAsync(player, instance, Enum.AssetType.Model)
 	end)
+
 	if complete then
 		if result == Enum.PromptCreateAssetResult.Success then
 			print("successfully uploaded, AssetId: ", assetId)
@@ -54,10 +55,10 @@ end
 -- Add an event handler
 local function onUserPublish(player, promptObject)
 	-- User saves the car instance with the experience's default color
-	if promptObject.name == "car" then
+	if promptObject.Name == "car" then
 		CreateAsset(player, car)
-	elseif promptObject.name == "CarPaintYellow" or promptObject.name == "CarPaintBlue" or promptObject.name == "CarPaintBlack" or promptObject.name == "CarPaintRed" then
-		PaintCarColor(promptObject.name)
+	elseif promptObject.Name == "CarPaintYellow" or promptObject.Name == "CarPaintBlue" or promptObject.Name == "CarPaintBlack" or promptObject.Name == "CarPaintRed" then
+		PaintCarColor(promptObject.Name)
 	end
 end
 
@@ -75,7 +76,7 @@ After users create and save an asset from your experience, they can find it in t
 - Their [My Inventory](https://en.help.roblox.com/hc/en-us/articles/360000463726-How-to-View-or-Hide-Your-Inventory-in-a-Browser) page.
 - The **Creations** tab of their [Profile](https://en.help.roblox.com/hc/en-us/articles/203313660-All-About-Profiles-Blurbs-and-Profile-Customization) page.
 - The **Development Items** tab under their Creator Dashboard [Creations](https://create.roblox.com/dashboard/creations?activeTab=Model) page.
-- Their [Inventory Toolbox](../../projects/assets/toolbox.md#inventory) in Studio.
+- The **Inventory** tab of their [Toolbox](../../projects/assets/toolbox.md) in Studio.
 
 When users see in-experience creations on their friends' profiles or inventories, they see attribution to the original experience in which the asset was created. Users can click on the attribution link to redirect to the experience page, so they can join the experience and create their own.
 

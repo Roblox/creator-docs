@@ -1,0 +1,32 @@
+name: SaveFilter
+type: enum
+summary: |
+  Used by `Class.DataModel.SavePlace` to determine the type of save operation
+  This enum determines which aspects of the current place are saved, based on
+  the following options:
+description: ''
+code_samples:
+tags:
+  - Deprecated
+deprecation_message: |
+  This deprecated enum is used by `Class.DataModel.SavePlace` which has also
+  been deprecated. Neither should be used in new work.
+items:
+  - name: SaveWorld
+    summary: |
+      Saves only the world-related data.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: SaveGame
+    summary: |
+      Saves only the game-related data.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SaveAll
+    summary: |
+      Saves all data, including both world and game-related information.
+    value: 2
+    tags: []
+    deprecation_message: ''

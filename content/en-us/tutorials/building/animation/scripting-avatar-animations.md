@@ -218,10 +218,7 @@ The remainder of this tutorial uses a pre-made model that includes a [ProximityP
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character
-if not character or not character.Parent then
-    character = player.CharacterAdded:Wait()
-end
+local character = player.Character or player.CharacterAdded:Wait()
 
 local humanoid = character:WaitForChild("Humanoid")
 local Animator = humanoid:WaitForChild("Animator")
@@ -232,7 +229,6 @@ local shockParticle = shockButton.ExplosionParticle
 
 local function onShockTrigger(player)
     shockParticle:Emit(100)
-
 end
 
 proximityPrompt.Triggered:Connect(onShockTrigger)

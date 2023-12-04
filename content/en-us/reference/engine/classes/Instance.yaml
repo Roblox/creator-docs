@@ -1,0 +1,1880 @@
+name: Instance
+type: class
+category:
+memory_category: Instances
+summary: |
+  Instance is the base class for all classes in the Roblox class hierarchy.
+description: |
+  Instance is the base class for all classes in the Roblox class hierarchy.
+  Every other class that the Roblox engine defines inherits all of the members
+  of Instance. It is not possible to directly create Instance objects.
+
+  Instance has a special function called `Datatype.Instance.new()` which is used
+  to create objects via code. This function takes the name of the class as a
+  parameter and returns the created object. Abstract classes and services cannot
+  be created with the Instance.new function.
+code_samples:
+inherits: []
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: Instance.Archivable
+    summary: |
+      Determines if an `Class.Instance` can be cloned using
+      `Class.Instance:Clone()` or saved to file.
+    description: |
+      This property determines whether an `Class.Instance|object` should be
+      included when the game is published or saved, or when
+      `Class.Instance:Clone()` is called on one of the object's ancestors.
+      Calling Clone directly on an object will return nil if the cloned object
+      is not archivable. Copying an object in Studio (using the 'Duplicate' or
+      'Copy' options) will ignore the Archivable property and set Archivable to
+      true for the copy.
+
+      ```
+      local part = Instance.new("Part")
+      print(part:Clone())  --> Part
+      part.Archivable = false
+      print(part:Clone())  --> nil
+      ```
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Instance.ClassName
+    summary: |
+      A read-only string representing the class this `Class.Instance` belongs
+      to.
+    description: |
+      A read-only string representing the class this `Class.Instance` belongs
+      to.
+
+      This property can be used with various other functions of Instance that
+      are used to identify objects by type, such as `Class.Instance:IsA()` or
+      `Class.Instance:FindFirstChildOfClass()`.
+
+      Note this property is read only and cannot be altered by scripts.
+      Developers wishing to change an `Class.Instance`'s class will instead have
+      to create a new `Class.Instance`.
+
+      Unlike `Class.Instance:IsA()`, ClassName can be used to check if an object
+      belongs to a specific class ignoring class inheritance. For example:
+
+      ```
+      for _, child in workspace:GetChildren() do
+          if child.ClassName == "Part" then
+              print("Found a Part")
+              -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
+          end
+      end
+      ```
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Instance.Name
+    summary: |
+      A non-unique identifier of the `Class.Instance`.
+    description: |
+      A non-unique identifier of the `Class.Instance`.
+
+      This property is an identifier that describes an object. Names are not
+      necessarily unique identifiers however; multiple children of an object may
+      share the same name. Names are used to keep the object hierarchy
+      organized, along with allowing scripts to access specific objects.
+
+      The name of an object is often used to access the object through the data
+      model hierarchy using the following methods:
+
+      ```
+      local baseplate = workspace.Baseplate
+      local baseplate = workspace["Baseplate"]
+      local baseplate = workspace:FindFirstChild("BasePlate")
+      ```
+
+      In order to make an object accessible using the dot operator, an object's
+      Name must follow a certain syntax. The objects name must start with an
+      underscore or letter. The rest of the name can only contain letters,
+      numbers, or underscores (no other special characters). If an objects name
+      does not follow this syntax it will not be accessible using the dot
+      operator and Lua will not interpret its name as an identifier.
+
+      If more than one object with the same name are siblings then any attempt
+      to index an object by that name will return the only one of the objects
+      found similar to `Class.Instance:FindFirstChild()`, but not always the
+      desired object. If a specific object needs to be accessed through code, it
+      is recommended to give it a unique name, or guarantee that none of its
+      siblings share the same name as it.
+
+      Note, a full name showing the instance's hierarchy can be obtained using
+      `Class.Instance:GetFullName()`.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Instance.Parent
+    summary: |
+      Determines the hierarchical parent of the `Class.Instance`.
+    description: |
+      The Parent property determines the hierarchical parent of the
+      `Class.Instance`. The following terminology is commonly used when talking
+      about how this property is set:
+
+      - An object is a **child** (**parented to**) another object when its
+        Parent is set to that object.
+      - The **descendants** of an `Class.Instance` are the children of that
+        object, plus the descendants of the children as well.
+      - The **ancestors** of an `Class.Instance` are all the objects that the
+        Instance is a descendant of.
+
+      It is from this property that many other API members get their name, such
+      as `Class.Instance:GetChildren()|GetChildren` and
+      `Class.Instance:FindFirstChild()|FindFirstChild`.
+
+      The `Class.Instance:Remove()|Remove` function sets this property to nil.
+      Calling `Class.Instance:Destroy()|Destroy` will set the Parent of an
+      `Class.Instance` and all of its descendants to `nil`, and also **lock**
+      the Parent property. An error is raised when setting the Parent of a
+      destroyed object.
+
+      This property is also used to manage whether an object exists in the game
+      or needs removed. As long as an objects parent is in the
+      `Class.DataModel`, is stored in a variable, or is referenced by another
+      objects property, then the object remains in the game. Otherwise, the
+      object will automatically be removed. The top level `Class.DataModel`
+      object (the one referred to as the `game` by scripts) has no parent, but
+      always has a reference held to it by the game engine, and exists for the
+      duration of a session.
+
+      Newly created objects using `Datatype.Instance.new()` will not have a
+      parent, and usually will not be visible or function until one is set. The
+      most elementary creation of an object has two steps: creating the object,
+      then setting its parent.
+
+      ```
+      -- Create a part and parent it to the workspace
+      local part = Instance.new("Part")
+      part.Parent = workspace
+      -- Instance new can also take Parent as a second parameter
+      Instance.new("NumberValue", workspace)
+      ```
+
+      #### Object Replication
+
+      An object created by server will not replicate to clients until it is
+      parented to some object that is replicated. When creating an object then
+      setting many properties, it's recommended to **set Parent last**. This
+      ensures the object replicates once, instead of replicating many property
+      changes.
+
+      ```lua
+      local part = Instance.new("Part") -- Avoid using the second parameter here
+      part.Anchored = true
+      part.BrickColor = BrickColor.new("Really red")
+      -- Potentially many other property changes could go here here...
+      -- Always set parent last!
+      part.Parent = workspace
+      ```
+
+      However, if you were parenting your parts to a `Class.Model` whose parent
+      hasn't been set yet, then setting the parent first would not matter as the
+      model would not have replicated yet.
+    code_samples:
+    type: Instance
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Instance.RobloxLocked
+    summary: |
+      A deprecated property that used to protect `Class.CoreGui` objects.
+    description: |
+      This property used to protect objects in the `Class.CoreGui` service from
+      being altered by users in an unauthorized manner. It has been deprecated
+      and does not do anything.
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: |
+      This property is deprecated and does not do anything.
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Instance.archivable
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Instance.Archivable` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Instance.className
+    summary: ''
+    description: ''
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This deprecated property is a variant of `Class.Instance.ClassName` which
+      should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: Instance:AddTag
+    summary: |
+      Applies a tag to the instance.
+    description: |
+      This method applies a tag to the instance, with no effect if the tag is
+      already applied. Successfully adding a tag will fire a signal created by
+      `Class.CollectionService:GetInstanceAddedSignal()` with the given tag.
+
+      Note that when tagging an instance, it's common that some resources are
+      used to give the tag its functionality, for example event connections or
+      tables. To prevent memory leaks, it's a good idea to clean these up
+      (disconnect, set to `nil`, etc.) when no longer needed for a tag. Do this
+      when calling `Class.Instance:RemoveTag()`, calling
+      `Class.Instance:Destroy()`, or in a function connected to a signal
+      returned by `Class.CollectionService:GetInstanceRemovedSignal()`.
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:ClearAllChildren
+    summary: |
+      This function destroys all of an `Class.Instance`'s children.
+    description: |
+      This function destroys all of an `Class.Instance`'s children.
+
+      As `Class.Instance:Destroy()` also calls itself on the children of an
+      object it is used on, this function will destroy all descendants.
+
+      #### Alternatives to ClearAllChildren
+
+      If the developer does not wish to destroy all descendants, they should use
+      `Class.Instance:GetChildren()` or `Class.Instance:GetDescendants()` to
+      loop through an object and select what to destroy. For example, the
+      following code sample will destroy all parts in an object.
+
+      ```
+      for _, instance in object:GetDescendants() do
+      	if instance:IsA("BasePart") then
+      		instance:Destroy()
+      	end
+      end
+      ```
+    code_samples:
+      - Instance-ClearAllChildren1
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:Clone
+    summary: |
+      Create a copy of an object and all its descendants, ignoring objects that
+      are not `Class.Instance.Archivable|Archivable`.
+    description: |
+      **Clone** creates a copy of an object and all of its descendants, ignoring
+      all objects that are not `Class.Instance.Archivable|Archivable`. The copy
+      of the root object is returned by this function and its
+      `Class.Instance.Parent|Parent` is set to nil.
+
+      If a reference property such as `Class.ObjectValue.Value` is set in a
+      cloned object, the value of the copy's property depends on original's
+      value:
+
+      - If a reference property refers to an object that was **also** cloned, an
+        _internal reference_, the copy will refer to the copy.
+      - If a reference property refers to an object that was **not** cloned, an
+        _external reference_, the same value is maintained in the copy.
+
+      This function is typically used to create models that can be regenerated.
+      First, get a reference to the original object. Then, make a copy of the
+      object and insert the copy by setting its `Class.Instance.Parent|Parent`
+      to the `Class.Workspace` or one of its descendants. Finally, when it's
+      time to regenerate the model, `Class.Instance:Destroy()|Destroy` the copy
+      and clone a new one from the original like before.
+    code_samples:
+      - Clone-Example
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:Destroy
+    summary: |
+      Sets the `Class.Instance.Parent` property to nil, locks the
+      `Class.Instance.Parent` property, disconnects all connections, and calls
+      Destroy on all children.
+    description: |
+      Sets the `Class.Instance.Parent` property to nil, locks the
+      `Class.Instance.Parent` property, disconnects all connections, and calls
+      Destroy on all children. This function is the correct way to dispose of
+      objects that are no longer required. Disposing of unneeded objects is
+      important, since unnecessary objects and connections in a place use up
+      memory (this is called a **memory leak**) which can lead to serious
+      performance issues over time.
+
+      **Tip:** After calling Destroy on an object, set any variables referencing
+      the object (or its descendants) to nil. This prevents your code from
+      accessing anything to do with the object.
+
+      ```lua
+      local part = Instance.new("Part")
+      part.Name = "Hello, world"
+      part:Destroy()
+      -- Don't do this:
+      print(part.Name) --> "Hello, world"
+      -- Do this to prevent the above line from working:
+      part = nil
+      ```
+
+      Once an `Class.Instance` has been destroyed by this method it cannot be
+      reused because the `Class.Instance.Parent` property is locked. To
+      temporarily remove an object, set `Class.Instance.Parent|Parent` it to nil
+      instead. For example:
+
+      ```
+      object.Parent = nil
+      wait(2)
+      object.Parent = workspace
+      ```
+
+      To Destroy an object after a set amount of time, use
+      `Class.Debris:AddItem()`.
+    code_samples:
+      - Instance-Destroy1
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:FindFirstAncestor
+    summary: |
+      Returns the first ancestor of the `Class.Instance` whose
+      `Class.Instance.Name` is equal to the given name.
+    description: |
+      Returns the first ancestor of the `Class.Instance` whose
+      `Class.Instance.Name` is equal to the given name.
+
+      This function works upwards, meaning it starts at the `Class.Instance`'s
+      immediate `Class.Instance.Parent` and works up towards the
+      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+
+      The following code snippet would find the first ancestor of the object
+      named 'Car'.
+
+      ```
+      local car = object:FindFirstAncestor("Car")
+      ```
+
+      For variants of this function that find ancestors of a specific class,
+      please see `Class.Instance:FindFirstAncestorOfClass()` and
+      `Class.Instance:FindFirstAncestorWhichIsA()`.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.Name` to be looked for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstAncestorOfClass
+    summary: |
+      Returns the first ancestor of the `Class.Instance` whose
+      `Class.Instance.ClassName` is equal to the given className.
+    description: |
+      Returns the first ancestor of the `Class.Instance` whose
+      `Class.Instance.ClassName` is equal to the given className.
+
+      This function works upwards, meaning it starts at the `Class.Instance`'s
+      immediate `Class.Instance.Parent` and works up towards the
+      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+
+      A common use of this function is finding the `Class.Model` a
+      `Class.BasePart` belongs to. For example:
+
+      ```
+      local model = part:FindFirstAncestorOfClass("Model")
+      ```
+
+      This function is a variant of `Class.Instance:FindFirstAncestor()` which
+      checks the `Class.Instance.ClassName` property rather than
+      `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
+      exists, using the `Class.Instance:IsA()` method instead to respect class
+      inheritance.
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.ClassName` to be looked for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstAncestorWhichIsA
+    summary: |
+      Returns the first ancestor of the `Class.Instance` for whom
+      `Class.Instance:IsA()` returns true for the given className.
+    description: |
+      Returns the first ancestor of the `Class.Instance` for whom
+      `Class.Instance:IsA()` returns true for the given className.
+
+      This function works upwards, meaning it starts at the `Class.Instance`'s
+      immediate `Class.Instance.Parent` and works up towards the
+      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+
+      Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
+      `Class.Instance:IsA()` which respects class inheritance. For example:
+
+      ```
+      print(part:IsA("Part"))  --> true
+      print(part:IsA("BasePart"))  --> true
+      print(part:IsA("Instance"))  --> true
+      ```
+
+      Therefore, the following code sample will return the first
+      `Class.BasePart` ancestor, regardless of if it is a `Class.WedgePart`,
+      `Class.MeshPart` or `Class.Part`.
+
+      ```
+      local part = object:FindFirstAncestorWhichIsA("BasePart")
+      ```
+
+      See also, `Class.Instance:FindFirstAncestor()`.
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.ClassName` to be looked for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstChild
+    summary: |
+      Returns the first child of the `Class.Instance` found with the given name.
+    description: |
+      Returns the first child of the `Class.Instance` with the given name,
+
+      or `nil` if no such child exists. If the optional `recursive` argument is
+      true, this function searches all descendants rather than only the
+      immediate children of the `Class.Instance`.
+
+      #### Checking the Existence of an Object
+
+      FindFirstChild is necessary if you need to verify an object exists before
+      continuing. Attempting to index a child by name using the dot operator
+      throws an error if the child doesn't exist.
+
+      ```lua
+      -- The following line errors if Part doesn't exist in the Workspace:
+      workspace.Part.Transparency = 0.5
+      ```
+
+      Use FindFirstChild to first check for Part, then use an if-statement to
+      run code that needs it.
+
+      ```lua
+      local part = workspace:FindFirstChild("Part")
+      if part then
+      	part.Transparency = 0.5
+      end
+      ```
+
+      #### Finding a Child Whose Name Matches a Property
+
+      Sometimes the `Class.Instance.Name|Name` of an object is the same as that
+      of a property of its `Class.Instance.Parent|Parent`. When using the dot
+      operator, properties take precedence over children if they share a name.
+
+      In the following example, a `Class.Folder` called "Color" is added to a
+      `Class.Part`, which also has the `Class.Part.Color` property.
+      `Class.Part.Color` refers to the `Datatype.Color3`, not the Folder.
+
+      ```lua
+      local part = Instance.new("Part")
+      local folder = Instance.new("Folder")
+      folder.Name = "Color"
+      folder.Parent = part
+      local c = part.Color --> A Color3
+      local c2 = part:FindFirstChild("Color") --> The Folder
+      ```
+
+      A benefit of using `Class.Instance:FindFirstChild()|FindFirstChild()` in
+      this way is that the introduction of new properties does not impose a risk
+      on your code.
+
+      #### Performance Note
+
+      `Class.Instance:FindFirstChild()|FindFirstChild()` takes about 20% longer
+      than using the dot operator and almost 8 times longer than simply storing
+      a reference to an object. Therefore, you should avoid calling it in
+      performance-dependent code such as in tight loops or functions connected
+      to `Class.RunService.Heartbeat` and `Class.RunService.RenderStepped`.
+      Instead, store the result in a variable, or consider using
+      `Class.Instance.ChildAdded|ChildAdded` or
+      `Class.Instance:WaitForChild()|WaitForChild()` to detect when a child of a
+      given name becomes available.
+    code_samples:
+      - Instance-FindFirstChild1
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.Name` to be searched for.
+      - name: recursive
+        type: bool
+        default: false
+        summary: |
+          Whether or not the search should be conducted recursively.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstChildOfClass
+    summary: |
+      Returns the first child of the `Class.Instance` whose
+      `Class.Instance.ClassName|ClassName` is equal to the given className.
+    description: |
+      Returns the first child of the `Class.Instance` whose
+      `Class.Instance.ClassName|ClassName` is equal to the given className.
+
+      If no matching child is found, this function returns nil.
+
+      Unlike `Class.Instance:FindFirstChildWhichIsA()` this function uses only
+      returns objects whose class matches the given className, ignoring class
+      inheritance.
+
+      Developers looking for a child by name should use
+      `Class.Instance:FindFirstChild()` instead.
+    code_samples:
+      - Instance-FindFirstChildOfClass1
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.ClassName` to be looked for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstChildWhichIsA
+    summary: |
+      Returns the first child of the `Class.Instance` for whom
+      `Class.Instance:IsA()` returns true for the given className.
+    description: |
+      Returns the first child of the `Class.Instance` for whom
+      `Class.Instance:IsA()` returns true for the given className.
+
+      If no matching child is found, this function returns nil. If the optional
+      recursive argument is true, this function searches all descendants rather
+      than only the immediate children of the `Class.Instance`.
+
+      Unlike `Class.Instance:FindFirstChildOfClass()`, this function uses
+      `Class.Instance:IsA()` which respects class inheritance. For example:
+
+      ```lua
+      print(part:IsA("Part")) --> true
+      print(part:IsA("BasePart")) --> true
+      print(part:IsA("Instance")) --> true
+      ```
+
+      Therefore, the following code sample will return the first
+      `Class.BasePart` child, regardless of if it is a `Class.WedgePart`,
+      `Class.MeshPart` or `Class.Part`.
+
+      ```
+      local part = object:FindFirstChildWhichIsA("BasePart")
+      ```
+
+      Developers looking for a child by name, should use
+      `Class.Instance:FindFirstChild()` instead.
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.ClassName` to be searched for.
+      - name: recursive
+        type: bool
+        default: false
+        summary: |
+          Whether or not the search should be conducted recursively.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:FindFirstDescendant
+    summary: |
+      Returns the first descendant found with the given `Class.Instance.Name`.
+    description: |
+      Returns the first descendant found with the given `Class.Instance.Name`.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.Name` to search for.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetActor
+    summary: |
+      Returns the `Class.Actor` associated with the Instance, if any.
+    description: |
+      If the `Class.Instance` is an `Class.Actor`, the `Class.Actor` itself is
+      returned. Otherwise, its closest ancestor `Class.Actor` is returned. If no
+      ancestor is an `Class.Actor`, the result is `nil`.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Actor
+        summary: |
+          The `Class.Actor` found.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetAttribute
+    summary: |
+      Returns the attribute which has been assigned to the given name.
+    description: |
+      This function returns the attribute which has been assigned to the given
+      name. If no attribute has been assigned then nil is returned.
+
+      For example, the following code snippet will set the value of the
+      instance's `InitialPosition` attribute. Note that this code sample does
+      not define `Class.Instance`:
+
+      ```lua
+      local initialPosition = instance:GetAttribute("InitialPosition")
+      ```
+
+      See also:
+
+      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
+        to the given value
+      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
+        variant pairs for each of the instance's attributes
+      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
+        changed on the instance
+      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
+        fires when the given attribute changes
+    code_samples:
+    parameters:
+      - name: attribute
+        type: string
+        default:
+        summary: |
+          The name of the attribute being retrieved.
+    returns:
+      - type: Variant
+        summary: |
+          The attribute which has been assigned to the given name. If no
+          attribute has been assigned then nil is returned.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetAttributeChangedSignal
+    summary: |
+      Returns an event that fires when the given attribute changes.
+    description: |
+      This function returns an event that behaves exactly like the `Changed`
+      event, except that the event only fires when the given attribute changes.
+      It's generally a good idea to use this method instead of a connection to
+      Changed with a function that checks the attribute name. Subsequent calls
+      to this method on the same object with the same attribute name return the
+      same event.
+
+      It is similar to `Class.Instance:GetPropertyChangedSignal()` but for
+      attributes.
+
+      For example, the following code snippet will return a signal that fires
+      the function `Class.Instance.AttributeChanged` when the instance's
+      `InitialPosition` attribute changes. Note that this code sample does not
+      define `Class.Instance`:
+
+      ```lua
+      local function attributeChanged()
+          print("Attribute changed")
+      end
+
+      instance:GetAttributeChangedSignal("InitialPosition"):Connect(attributeChanged)
+      ```
+
+      See also:
+
+      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
+        to the given value
+      - `Class.Instance:GetAttribute()`, returns the attribute which has been
+        assigned to the given name
+      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
+        variant pairs for each of the instance's attributes
+      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
+        changed on the instance
+    code_samples:
+    parameters:
+      - name: attribute
+        type: string
+        default:
+        summary: |
+          The name of the specified attribute for which the change signal is
+          being returned.
+    returns:
+      - type: RBXScriptSignal
+        summary: |
+          An event that fires when the given attribute changes.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:GetAttributes
+    summary: |
+      Returns a dictionary of string → variant pairs for each of the
+      `Class.Instance`'s attributes.
+    description: |
+      This function returns a dictionary of string → variant pairs for each
+      attribute where the string is the name of the attribute and the variant is
+      a non-nil value.
+
+      For example, the following code snippet will print an instance's
+      attributes and values. Note that this code sample does not define
+      `Class.Instance`:
+
+      ```lua
+      local attributes = instance:GetAttributes()
+      for name, value in attributes do
+          print(name .. " " .. value)
+      end
+      ```
+
+      See also:
+
+      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
+        to the given value
+      - `Class.Instance:GetAttribute()`, returns the attribute which has been
+        assigned to the given name
+      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
+        changed on the instance
+      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
+        fires when the given attribute changes
+    code_samples:
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: |
+          A dictionary of string → variant pairs for each attribute where the
+          string is the name of the attribute and the variant is a non-nil
+          value.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetChildren
+    summary: |
+      Returns an array containing all of the `Class.Instance`'s children.
+    description: |
+      Returns an array (a numerically indexed table) containing all of the
+      `Class.Instance`'s direct children, or every `Class.Instance` whose
+      `Class.Instance.Parent|Parent` is equal to the object. The array can be
+      iterated upon using either a numeric or generic for-loop:
+
+      ```lua
+      -- Numeric for-loop example
+      local children = workspace:GetChildren()
+      for i = 1, #children do
+      	local child = children[i]
+      	print(child.Name .. " is child number " .. i)
+      end
+      ```
+
+      ```lua
+      -- Generic for-loop example
+      local children = workspace:GetChildren()
+      for i, child in children do
+      	print(child.Name .. " is child number " .. i)
+      end
+      ```
+
+      The children are sorted by the order in which their
+      `Class.Instance.Parent|Parent` property was set to the object.
+
+      See also the `Class.Instance:GetDescendants()|GetDescendants` function.
+    code_samples:
+      - Instance-GetChildren1
+    parameters: []
+    returns:
+      - type: Objects
+        summary: |
+          An array containing the `Class.Instance`'s children.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetDebugId
+    summary: |
+      Returns a coded string of the `Class.Instance`s DebugId used internally by
+      Roblox.
+    description: |
+      Returns a coded string of the `Class.Instance`s DebugId used internally by
+      Roblox.
+
+      Note:
+
+      - This item is protected. Attempting to use it in a `Class.Script` or
+        `Class.LocalScript` will cause an error
+      - A debug ID is an ID used in debugging processes. It allows a debugger to
+        read each instruction before an application processes it. All objects in
+        Roblox act like processes and each run instructions (or 'code') that can
+        be debugged if needed
+      - This can be helpful for plugins which need to distinguish similar
+        objects from one-another (such as objects that share the same name)
+    code_samples:
+      - Instance-GetDebugId1
+    parameters:
+      - name: scopeLength
+        type: int
+        default: 4
+        summary: |
+          The scope length.
+    returns:
+      - type: string
+        summary: |
+          The Debug ID string.
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Instance:GetDescendants
+    summary: |
+      Returns an array containing all of the descendants of the instance.
+    description: |
+      The **GetDescendants** function of an object returns an array that
+      contains all of the descendants of that object. Unlike
+      `Class.Instance:GetChildren()`, which only returns the immediate children
+      of an object, GetDescendants will find every child of the object, every
+      child of those children, and so on.
+
+      The arrays returned by GetDescendants are arranged so that parents come
+      earlier than their children. Refer to the following example of a
+      `Class.Model` in the `Class.Workspace`:
+
+      ![Workspace Descendants](/assets/legacy/GetDescendantsExample.png)
+
+      Inside this model are three parts (C, D, and E) and another model
+      (InnerModel). Inside the inner model are two more parts (A and B). Calling
+      GetDescendants on the first model and printing the contents of the
+      returned array would print the first level of children (InnerModel, C, D,
+      and E) before A and B.
+
+      ```lua
+      local descendants = workspace.Model:GetDescendants()
+
+      -- Loop through all of the descendants of the model and
+      -- print out their name
+      for index, descendant in descendants do
+      	print(descendant.Name)
+      end
+
+      -- Prints:
+      -- C
+      -- D
+      -- E
+      -- InnerModel
+      -- A
+      -- B
+      ```
+    code_samples:
+      - Instance-GetDescendants1
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          An array containing the `Class.Instance`'s descendants.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetFullName
+    summary: |
+      Returns a string describing the `Class.Instance`'s ancestry.
+    description: |
+      Returns a string describing the `Class.Instance`'s ancestry. The string is
+      a concatenation of the `Class.Instance.Name|Name` of the object and its
+      ancestors, separated by periods. The `Class.DataModel` (`game`) is not
+      considered. For example, a `Class.Part` in the `Class.Workspace` may
+      return `Class.Workspace.Part`.
+
+      When called on an `Class.Instance` that is not a descendant of the
+      `Class.DataModel`, this function considers all ancestors up to and
+      including the topmost one without a `Class.Instance.Parent|Parent`.
+
+      This function is useful for logging and debugging. You shouldn't attempt
+      to parse the returned string for any useful operation; this function does
+      not escape periods (or any other symbol) in object names. In other words,
+      although its output often appears to be a valid Lua identifier, it is not
+      guaranteed.
+    code_samples:
+      - Instance-GetFullName1
+      - instance-getfullname-lua-implementation
+    parameters: []
+    returns:
+      - type: string
+        summary: |
+          The full name of the `Class.Instance`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:GetPropertyChangedSignal
+    summary: |
+      Get an event that fires when a given property of an object changes.
+    description: |
+      This method returns an event that behaves exactly like the `Changed`
+      event, except that the event only fires when the given property changes.
+      It's generally a good idea to use this method instead of a connection to
+      `Changed` with a function that checks the property name. Subsequent calls
+      to this method on the same object with the same property name return the
+      same event.
+
+      `print(object:GetPropertyChangedSignal("Name") == object:GetPropertyChangedSignal("Name")) --> always true`
+
+      `Class.ValueBase` objects, such as `Class.IntValue` and
+      `Class.StringValue`, use a modified `Changed` event that fires with the
+      contents of the `Value` property. As such, this method provides a way to
+      detect changes in other properties of those objects. For example, to
+      detect changes in the `Name` property of an `Class.IntValue`, use
+      `IntValue:GetPropertyChangedSignal("Name"):Connect(someFunc)` since the
+      `Changed` event of `Class.IntValue` objects only detect changes on the
+      `Value` property.
+    code_samples:
+      - Changed-Old-to-New
+      - Changed-and-GetPropertyChangedSignal
+    parameters:
+      - name: property
+        type: string
+        default:
+        summary: |
+          The property to connect to.
+    returns:
+      - type: RBXScriptSignal
+        summary: |
+          A signal that fires whenever the property changes.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:GetTags
+    summary: |
+      Gets an array of all tags applied to the instance.
+    description: |
+      This method returns an array of the tags applied to the given instance, as
+      strings. You can add tags either in Studio in the
+      [Properties](../../../studio/properties.md) window or at runtime with
+      `Class.Instance:AddTag()|AddTag()`.
+
+      This method is useful when you want to do something with multiple tags on
+      an instance at once. However, it is inefficient to use this method to
+      check for the existence of a single tag; instead, use
+      `Class.Instance:HasTag()|HasTag()` to check for a specific tag.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:HasTag
+    summary: |
+      Check whether the instance has a given tag.
+    description: |
+      This method returns `true` if the provided tag has been added to the
+      object. You can add tags either in Studio in the
+      [Properties](../../../studio/properties.md) window or at runtime with
+      `Class.Instance:AddTag()|AddTag()`.
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:IsA
+    summary: |
+      Returns true if an `Class.Instance`'s class matches or inherits from a
+      given class.
+    description: |
+      IsA returns true if the `Class.Instance`'s class is **equivalent to** or a
+      **subclass** of a given class. This function is similar to the
+      **instanceof** operators in other languages, and is a form of
+      [type introspection](https://en.wikipedia.org/wiki/Type_introspection). To
+      ignore class inheritance, test the `Class.Instance.ClassName|ClassName`
+      property directly instead. For checking native Lua data types (number,
+      string, etc) use the functions `type` and `typeof`.
+
+      Most commonly, this function is used to test if an object is some kind of
+      part, such as `Class.Part` or `Class.WedgePart`, which inherits from
+      `Class.BasePart` (an abstract class). For example, if your goal is to
+      change all of a `Class.Player.Character|Character`'s limbs to the same
+      color, you might use `Class.Instance:GetChildren()|GetChildren` to iterate
+      over the children, then use IsA to filter non-`Class.BasePart` objects
+      which lack the `Datatype.BrickColor` property:
+
+      ```lua
+      local function paintFigure(character, color)
+      	-- Iterate over the child objects of the character
+      	for _, child in character:GetChildren() do
+      		-- Filter out non-part objects, such as Shirt, Pants and Humanoid
+      		-- R15 use MeshPart and R6 use Part, so we use BasePart here to detect both:
+      		if child:IsA("BasePart") then
+      			child.BrickColor = color
+      		end
+      	end
+      end
+      paintFigure(game.Players.Player.Character, BrickColor.new("Bright blue"))
+      ```
+
+      Since all classes inherit from `Class.Instance`, calling
+      `object:IsA("Instance")` will always return true.
+    code_samples:
+      - Instance-IsA1
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: |
+          The class against which the Instance's class will be checked.
+          Case-sensitive.
+    returns:
+      - type: bool
+        summary: |
+          Describes whether the Instance's class matched or is a subclass of the
+          given class.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:IsAncestorOf
+    summary: |
+      Returns true if an `Class.Instance` is an ancestor of the given
+      descendant.
+    description: |
+      Returns true if an `Class.Instance` is an ancestor of the given
+      descendant.
+
+      An `Class.Instance` is considered the ancestor of an object if the
+      object's `Class.Instance.Parent` or one of it's parent's
+      `Class.Instance.Parent` is set to the `Class.Instance`.
+
+      See also, `Class.Instance:IsDescendantOf()`.
+    code_samples:
+      - Instance-IsAncestorOf1
+    parameters:
+      - name: descendant
+        type: Instance
+        default:
+        summary: |
+          The descendant `Class.Instance`.
+    returns:
+      - type: bool
+        summary: |
+          True if the `Class.Instance` is an ancestor of the given descendant.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:IsDescendantOf
+    summary: |
+      Returns true if an `Class.Instance` is a descendant of the given ancestor.
+    description: |
+      Returns true if an `Class.Instance` is a descendant of the given ancestor.
+
+      An `Class.Instance` is considered the descendant of an object if the
+      `Class.Instance`'s parent or one of its parent's parent is set to the
+      object.
+
+      Note, `Class.DataModel` is a descendant of nil. This means IsDescendantOf
+      cannot be used with a parameter of nil to check if an object has been
+      removed.
+
+      See also, `Class.Instance:IsAncestorOf()`.
+    code_samples:
+      - Instance-IsDescendantOf1
+    parameters:
+      - name: ancestor
+        type: Instance
+        default:
+        summary: |
+          The ancestor `Class.Instance`.
+    returns:
+      - type: bool
+        summary: |
+          True if the `Class.Instance` is a descendant of the given ancestor.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Instance:Remove
+    summary: |
+      Sets the object's Parent to nil, and does the same for all its
+      descendants.
+    description: |
+      The Remove function sets the object's `Class.Instance.Parent` to nil, and
+      does the same for all its descendants.
+
+      If the object is referenced before being removed it is possible to
+      retrieve the object at a later point.
+    code_samples:
+      - Instance-Remove1
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated in favor of `Class.Instance:Destroy()` and
+      `Class.Instance:ClearAllChildren()`. If you must remove an object from the
+      game, and wish to use the object later, set its Parent property to nil
+      instead of using this method.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:RemoveTag
+    summary: |
+      Removes a tag from the instance.
+    description: |
+      This method removes a tag from an instance. It will not throw an error if
+      the object does not have the tag. Successfully removing a tag will fire a
+      signal created by `Class.CollectionService:GetInstanceRemovedSignal()`
+      with the given tag.
+
+      Note that when tagging an instance, it's common that some resources are
+      used to give the tag its functionality, for example event connections or
+      tables. To prevent memory leaks, it's a good idea to clean these up
+      (disconnect, set to `nil`, etc.) when no longer needed for a tag.
+    code_samples: []
+    parameters:
+      - name: tag
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:SetAttribute
+    summary: |
+      Sets the attribute with the given name to the given value.
+    description: |
+      This function sets the attribute with the given name to the given value.
+      If the value given is nil, then the attribute will be removed (since nil
+      is returned by default).
+
+      For example, the following code snippet will set the instance's
+      `InitialPosition` attribute to `Datatype.Vector3|Vector3.new(0, 0, 0)`.
+      Note that this code sample does not define `Class.Instance`:
+
+      ```lua
+      instance:SetAttribute("InitialPosition", Vector3.zero)
+      ```
+
+      #### Limitations
+
+      Naming requirements and restrictions:
+
+      - Names must only use alphanumeric characters and underscore
+      - No spaces or unique symbols are allowed
+      - Strings must be 100 characters or less
+      - Names are not allowed to start with RBX unless the caller is a Roblox
+        core-script (reserved for Roblox)
+
+      When attempting to set an attribute to an unsupported type, an error will
+      be thrown.
+
+      See also:
+
+      - `Class.Instance:GetAttribute()`, returns the attribute which has been
+        assigned to the given name
+      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
+        variant pairs for each of the instance's attributes
+      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
+        changed on the instance
+      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
+        fires when the given attribute changes
+    code_samples:
+    parameters:
+      - name: attribute
+        type: string
+        default:
+        summary: |
+          The name of the attribute being set.
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value that the specified attribute is being set to.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:WaitForChild
+    summary: |
+      Returns the child of the `Class.Instance` with the given name. If the
+      child does not exist, it will yield the current thread until it does.
+    description: |
+      Returns the child of the `Class.Instance` with the given name. If the
+      child does not exist, it will yield the current thread until it does. If
+      the `timeOut` parameter is specified, this method will time out after the
+      specified number of seconds and return `nil`.
+
+      #### Primary Usage
+
+      `Class.Instance:WaitForChild()|WaitForChild()` is extremely important when
+      working on code run by the client in a `Class.LocalScript`. The Roblox
+      engine does not guarantee the time or order in which objects are
+      replicated from the server to the client. Additionally, if an experience
+      has `Class.Workspace.StreamingEnabled` set to true,
+      `Class.BasePart|BaseParts` that are far away from the player's character
+      may not be streamed to the client, potentially causing scripts to break
+      when indexing objects that do not yet exist on the client.
+
+      #### Notes
+
+      - This function does not yield if a child with the given name exists when
+        the call is made.
+      - `Class.Instance:FindFirstChild()` is a more efficient alternative to
+        `Class.Instance:WaitForChild()|WaitForChild()` for objects that are
+        assumed to exist.
+      - If a call to this method exceeds 5 seconds without returning, and no
+        `timeOut` parameter has been specified, a warning will be printed to the
+        output that the thread may yield indefinitely. This warning takes the
+        following form where `X` is the parent's name and `Y` is the child's
+        name:
+
+        `Infinite yield possible on 'X:WaitForChild("Y")'`
+    code_samples:
+      - Instance-WaitForChild1
+    parameters:
+      - name: childName
+        type: string
+        default:
+        summary: |
+          The `Class.Instance.Name` to be looked for.
+      - name: timeOut
+        type: double
+        default:
+        summary: |
+          An optional time out parameter.
+    returns:
+      - type: Instance
+        summary: |
+          The `Class.Instance` found.
+    tags:
+      - CustomLuaState
+      - CanYield
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:children
+    summary: |
+      Returns an array of the object's children.
+    description: |
+      The children function returns an array of the object's children.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Objects
+        summary: |
+          Array of child objects/instances.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Instance:GetChildren()` which
+      should be used in all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:clone
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Clone()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:destroy
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Destroy()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:findFirstChild
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: recursive
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:FindFirstChild()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:getChildren
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:GetChildren()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:isA
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: className
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+      - CustomLuaState
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:IsA()` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:isDescendantOf
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: ancestor
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:IsDescendantOf()`
+      which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Instance:remove
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated function is a variant of `Class.Instance:Remove()` which
+      has also been deprecated. Neither function should be used in new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Instance.AncestryChanged
+    summary: |
+      Fires when the `Class.Instance.Parent` property of the object or one of
+      its ancestors is changed.
+    description: |
+      Fires when the `Class.Instance.Parent` property of the object or one of
+      its ancestors is changed.
+
+      This event includes two parameters, _child_ and _parent_. _Child_ refers
+      to the `Class.Instance` whose `Class.Instance.Parent` was actually
+      changed. _Parent_ refers to this `Class.Instance`'s new
+      `Class.Instance.Parent`.
+
+      You can use this event to track the deletion of an instance in Studio,
+      such as manual deletion in the Explorer or through a plugin. If you need
+      to detect when an instance is destroyed using `Class.Instance:Destroy()`,
+      use the `Class.Instance.Destroying` event instead.
+    code_samples:
+      - Instance-AncestryChanged1
+    parameters:
+      - name: child
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` whose `Class.Instance.Parent` has been changed.
+      - name: parent
+        type: Instance
+        default:
+        summary: |
+          The new `Class.Instance.Parent` of the `Class.Instance` whose
+          `Class.Instance.Parent` was changed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.AttributeChanged
+    summary: |
+      Fires whenever an attribute is changed on the `Class.Instance`.
+    description: |
+      This event fires whenever an attribute is changed on the instance. This
+      includes when an attribute is set to nil. The name of the attribute that
+      has been changed is passed to the connected function.
+
+      For example, the following code snippet will connect the
+      `AttributeChanged` function to fire whenever one of `Class.Instance`'s
+      attributes changes. Note that this code sample does not define
+      `Class.Instance`:
+
+      ```lua
+      local function attributeChanged(attributeName)
+          print(attributeName, "changed")
+      end
+
+      instance.AttributeChanged:Connect(attributeChanged)
+      ```
+
+      See also:
+
+      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
+        to the given value
+      - `Class.Instance:GetAttribute()`, returns the attribute which has been
+        assigned to the given name
+      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
+        variant pairs for each of the instance's attributes
+      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
+        fires when the given attribute changes
+    code_samples:
+    parameters:
+      - name: attribute
+        type: string
+        default:
+        summary: |
+          The name of the attribute that has been changed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.Changed
+    summary: |
+      Fired immediately after a property of an object changes.
+    description: |
+      The Changed event fires right after most properties change on objects. It
+      is possible to find the present value of a changed property by using
+      `object[property]`. To get the value of a property before it changes, you
+      must have stored the value of the property before it changed.
+
+      If you are only interested in listening to the change of a specific
+      property, consider using the `GetPropertyChangedSignal` method instead to
+      get an event that only fires when a given property changes.
+
+      This event does not fire for physics-related changes, like when the
+      `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
+      and `Datatype.CFrame` properties of a `Class.BasePart` change due to
+      gravity. To detect changes in these properties, consider using a
+      physics-based event like `Class.RunService.Stepped` or
+      `Class.BasePart.Touched`. A while-true-do loop can also work.
+
+      For "-Value" objects, this event behaves differently: it only fires when
+      the `Value` property changes. See individual pages for `Class.IntValue`,
+      `Class.StringValue`, etc for more information. To detect other changes in
+      these objects, you must use `GetPropertyChangedSignal` instead.
+    code_samples:
+      - Changed-Event
+      - Change-Detector
+    parameters:
+      - name: property
+        type: string
+        default:
+        summary: |
+          The name of the property that changed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.ChildAdded
+    summary: |
+      Fires after an object is parented to this `Class.Instance`.
+    description: |
+      Fires after an object is parented to this `Class.Instance`.
+
+      Note, when using this function on a client to detect objects created by
+      the server it is necessary to use `Class.Instance:WaitForChild()` when
+      indexing these object's descendants. This is because the object and its
+      descendants are not guaranteed to replicate from the server to the client
+      simultaneously. For example:
+
+      ```
+      workspace.ChildAdded:Connect(function(child)
+      	-- need to use WaitForChild as descendants may not have replicated yet
+      	local head = child:WaitForChild("Head")
+      end)
+      ```
+
+      Note, this function only works for immediate children of the
+      `Class.Instance`. For a function that captures all descendants, use
+      `Class.Instance.DescendantAdded`.
+
+      See also, `Class.Instance.ChildRemoved`.
+    code_samples:
+      - Instance-ChildAdded1
+    parameters:
+      - name: child
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` that has been added.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.ChildRemoved
+    summary: |
+      Fires after a child is removed from this `Class.Instance`.
+    description: |
+      Fires after a child is removed from this `Class.Instance`.
+
+      Removed refers to when an object's parent is changed from this
+      `Class.Instance` to something other than this `Class.Instance`. Note, this
+      event will also fire when a child is destroyed (using
+      `Class.Instance:Destroy()`) as the destroy function sets an object's
+      parent to nil.
+
+      This function only works for immediate children of the `Class.Instance`.
+      For a function that captures all descendants, use
+      `Class.Instance.DescendantRemoving`.
+
+      See also `Class.Instance.ChildAdded`.
+    code_samples:
+      - Instance-ChildRemoved1
+    parameters:
+      - name: child
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` that has been removed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.DescendantAdded
+    summary: |
+      Fires after a descendant is added to the `Class.Instance`.
+    description: |
+      The DescendantAdded event fires after a descendant is added to the
+      `Class.Instance`.
+
+      As DescendantAdded fires for every descendant, parenting an object to the
+      `Class.Instance` will fire the event for this object and all of its
+      descendants individually.
+
+      Developers only concerned with the immediate children of the
+      `Class.Instance` should use `Class.Instance.ChildAdded` instead.
+
+      See also `Class.Instance.DescendantRemoving`.
+    code_samples:
+      - Instance-DescendantAdded1
+    parameters:
+      - name: descendant
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` that has been added.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.DescendantRemoving
+    summary: |
+      Fires immediately before a descendant of the `Class.Instance` is removed.
+    description: |
+      DescendantRemoving fires **immediately before** the
+      `Class.Instance.Parent|Parent` of a descendant of the `Class.Instance`
+      changes such that the object is no longer a descendant of the Instance.
+      `Class.Instance:Destroy()|Destroy` and `Class.Instance:Remove()|Remove`
+      change an object's Parent to nil, so calling these on a descendant of an
+      object will therefore cause this event to fire.
+
+      Since this event fires before the descendant's removal, the Parent of the
+      descendant will be unchanged, i.e., it will still be a descendant at the
+      time of this event firing. If the descendant is also a child of the
+      object, It will also fire before ChildRemoved. There is no similar event
+      called "DescendantRemoved".
+
+      If a descendant has children, this event fires with the descendant first
+      followed by its descendants.
+
+      #### Example
+
+      The example below should help clarify how DescendantRemoving fires when
+      there are several objects involved.
+
+      ![A cropped screenshot of the Explorer window. A Model contains ModelA and ModelB, which each contain a Part, PartA and PartB respectively. PartA contains a Fire object named FireA.](/assets/legacy/DescendantRemoving2.png)
+
+      - Calling `Class.Instance:Remove()|Remove` on **PartA** would cause
+        DescendantRemoving to fire on both **ModelA** and **Model**, in that
+        order.
+      - Setting the `Class.Instance.Parent|Parent` of **PartA** to **ModelB**
+        would cause DescendantRemoving to fire on **ModelA** but not **Model**
+        (as Model would still be an ancestor of PartA).
+      - Calling `Class.Instance:Destroy()|Destroy` on **ModelA** would cause
+        DescendantRemoving to fire multiple times on several objects:
+        1. On **Model** with **ModelA**, **PartA** then **FireA**.
+        2. On **ModelA**, with **PartA** then **FireA**.
+        3. On **PartA** with **FireA**.
+
+      #### Warning
+
+      This event fires with the descendant object that is being removed.
+      Attempting to set the `Class.Instance.Parent|Parent` of the descendant
+      being removed to something else **will fail** with the following warning:
+      "Something unexpectedly tried to set the parent of X to Y while trying to
+      set the parent of X. Current parent is Z", where X is the removing
+      descendant, Y is the ignored parent setting, and Z is the original parent
+      of X. Below is an example that demonstrates this:
+
+      ```
+      workspace.DescendantRemoving:Connect(function(descendant)
+      	-- Don't manipulate the parent of descendant in this function!
+      	-- This event fires BECAUSE the parent of descendant was manipulated,
+      	-- and the change hasn't happened yet, i.e. this function fires before that happens.
+      	-- Therefore, it is problematic to change the parent like this:
+      	descendant.Parent = game
+      end)
+      local part = Instance.new("Part")
+      part.Parent = workspace
+      part.Parent = nil -- This triggers DescendantRemoving on Workspace:
+      --> Something unexpectedly tried to set the parent of Part to NULL while trying to set the parent of Part. Current parent is Workspace.
+      ```
+
+      See also `Class.Instance.DescendantAdded|DescendantAdded`.
+    code_samples:
+      - Instance-DescendantRemoving1
+    parameters:
+      - name: descendant
+        type: Instance
+        default:
+        summary: |
+          The `Class.Instance` that is being removed.
+    tags: []
+    deprecation_message: |
+      Deprecation Message
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.Destroying
+    summary: |
+      Fires immediately before the instance is destroyed via
+      `Class.Instance:Destroy()`.
+    description: |
+      The Destroying event fires immediately before the Instance or one of its
+      ancestors is destroyed with `Instance.Destroy()`.
+
+      The Instance will never be deleted from memory while a connected function
+      is still using it. However, if the function yields at any point, the
+      Instance and its descendants will be parented to `nil`.
+
+      When deleting an instance in Studio, such as manually deleting through the
+      Explorer or through a plugin, the instance isn't destroyed. Instead, the
+      parent is set to `nil` which you can track with
+      `Class.Instance.AncestryChanged`.
+    code_samples:
+      - Instance-Destroying
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Instance.childAdded
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: child
+        type: Instance
+        default:
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This deprecated event is a variant of `Class.Instance.ChildAdded` which
+      should be used instead.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -121,7 +121,7 @@ function listCommand(commandData)
 
 	-- Iterate through the every command and print it out
 
-	for id, command in pairs(PublicAPI:GetCommands()) do
+	for id, command in PublicAPI:GetCommands() do
 
 		Utilities:SendSystemMessage(commandData, string.format("'/s' requires permission s.", id, command.Permission))
 

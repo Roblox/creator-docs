@@ -1,0 +1,999 @@
+name: TextBox
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  A 2D user interface element that displays player-editable text.
+description: |
+  A **TextBox** allows the player to provide text input. It behaves similarly to
+  a `Class.TextButton`, except that a single TextBox can be put in focus by
+  clicking, tapping or gamepad selection. While in focus, the player can use a
+  keyboard to change the `Class.TextBox.Text|Text` property.
+
+  - If there is no text, the `Class.TextBox.PlaceholderText|PlaceholderText`
+    will be visible. This is useful prompting players of the kind or format of
+    data they should input.
+  - By default, the `Class.TextBox.ClearTextOnFocus|ClearTextOnFocus` property
+    is enabled and ensures there is no existing text when a TextBox is focused.
+    This may not be desirable for text that should be editable by the player.
+  - The `Class.TextBox.MultiLine|MultiLine` property allows players to enter
+    multiple lines of text with newline characters (`\n`).
+
+  The `Class.ContextActionService` honors TextBox keybinds and will
+  automatically prevent key press events from being passed to actions bound with
+  `Class.ContextActionService:BindAction()`. `Class.UserInputService.InputBegan`
+  and related events will still fire while a TextBox is in focus.
+
+  #### Focus State
+
+  It is possible to detect and change the focus state of a TextBox:
+
+  - You can use `Class.TextBox:CaptureFocus()|CaptureFocus` when a dialogue
+    appears so that the player doesn't have to click on a TextBox when it
+    becomes available; you can use `Class.ContextActionService:BindAction()` to
+    bind a certain key to focus a TextBox using this function. When a TextBox
+    comes into focus, the `Class.TextBox.Focused|Focused` event fires.
+  - You can detect if a certain TextBox is in focus by using
+    `Class.TextBox:IsFocused()|IsFocused`. Alternatively,
+    `Class.UserInputService:GetFocusedTextBox()` can be used to check if any
+    TextBox is in focus.
+  - When the player is done inputting text, the
+    `Class.TextBox.FocusLost|FocusLost` event fires, indicating if the user
+    pressed <kbd>Enter</kbd> to submit text along with the `Class.InputObject`
+    that caused the loss of focus. When using on screen keyboards on mobile and
+    console,
+    `Class.TextBox.ReturnPressedFromOnScreenKeyboard|ReturnPressedFromOnScreenKeyboard`
+    may also fire.
+  - If some more important matter comes up during gameplay, you can
+    `Class.TextBox:ReleaseFocus()|ReleaseFocus` of the TextBox so that a
+    player's keyboard input returns to your game.
+
+  #### Text Editing
+
+  A TextBox supports text selection through its
+  `Class.TextBox.CursorPosition|CursorPosition` and
+  `Class.TextBox.SelectionStart|SelectionStart` properties. Using
+  `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
+  detect when a selection changes. Additionally, it is possible for players to
+  copy and paste text within a TextBox, enabling basic clipboard support.
+
+  **Text Filtering Notice** Games that facilitate player-to-player communication
+  using text, such as custom chat or nametags, must properly filter such text
+  using `Class.TextService:FilterStringAsync()` or
+  `Class.Chat:FilterStringAsync()`. If this is not properly done, your game may
+  receive moderation action.
+code_samples:
+  - TextBox-Secret-Word
+inherits:
+  - GuiObject
+tags: []
+deprecation_message: ''
+properties:
+  - name: TextBox.ClearTextOnFocus
+    summary: |
+      Determines whether clicking on the TextBox will clear its
+      `Class.TextBox.Text` property.
+    description: |
+      Determines whether clicking on the TextBox will clear its
+      `Class.TextBox.Text` property
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.ContentText
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextBox.CursorPosition
+    summary: |
+      Determines the offset of the text cursor in bytes, or -1 if there is no
+      cursor.
+    description: |
+      **CursorPosition** determines the offset of the text cursor in bytes, or
+      -1 if the TextBox is not currently being edited. A value of 1 represents
+      the beginning, the position before the first byte in the
+      `Class.TextBox.Text|Text` property. When used in conjunction with the
+      `Class.TextBox.SelectionStart|SelectionStart` property, it is possible to
+      both get and set selected text within a TextBox.
+
+      ![A visual explanation of how CursorPosition works](/assets/legacy/TextBox.CursorPosition.jpg)
+
+      It should be noted that the units of this property is **bytes** and that
+      many unicode characters such as emoji are **longer than 1 byte**. For
+      instance, if a player types into the TextBox "Hello👋" &ndash; "Hello"
+      immediately followed by the waving hand sign &ndash; the cursor position
+      would be 10, not 7, since the emoji uses 4 bytes.
+    code_samples:
+      - textbox-selections
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextBox.Font
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The Font property selects one of several pre-defined `Enum.Font|fonts`
+      with which the UI element will render its text. Some fonts have bold,
+      italic and/or light variants (as there is no font-weight or font-style
+      properties).
+
+      With the exception of the "Legacy" font, each font will render text with
+      the line height equal to the `Class.TextBox.TextSize` property. The "Code"
+      font is the only monospace font. It has the unique property that each
+      character has the exact same width and height ratio of 1:2. The width of
+      each character is approximately half the `Class.TextBox.TextSize`
+      property.
+
+      This property is kept in sync with the `Class.TextBox.FontFace` property.
+      When setting Font, the FontFace will be set to
+      `Datatype.Font.fromEnum(value)`.
+    code_samples:
+      - Cycle-Font
+      - Show-All-Fonts
+    type: Font
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextBox.FontFace
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The FontFace property is similar to the Font property, but allows setting
+      fonts that don't exist in the Font enum.
+
+      This property is kept in sync with the `Class.TextBox.Font` property. When
+      setting FontFace, the Font is set to the corresponding enum value, or to
+      `Enum.Font.Unknown` if there are no matches.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.FontSize
+    summary: |
+      Determines the font size of a `Class.TextBox|GUI` object.
+    description: |
+      This property determines the font size of a `Class.TextBox|GUI` object.
+    code_samples:
+    type: FontSize
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextBox.TextSize` which should be
+      used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextBox.LineHeight
+    summary: |
+      Scales the spacing between lines of text in the `Class.TextBox`.
+    description: |
+      Controls the height of lines, as a multiple of the font's em square size,
+      by scaling the spacing between lines of text in the `Class.TextBox`. Valid
+      values range from 1.0 to 3.0, defaulting to 1.0.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.MaxVisibleGraphemes
+    summary: |
+      The maximum number of graphemes the `Class.TextBox` can show.
+    description: |
+      This property controls the maximum number of graphemes (or units of text)
+      that are shown on the `Class.TextBox`, regardless of whether it's showing
+      the `Class.TextBox.PlaceholderText` or `Class.TextBox.Text`.
+
+      Changing the property does not change the position or size of the visible
+      graphemes - the layout will be calculated as if all graphemes are visible.
+
+      Setting the property to -1 disables the limit and shows the entirety of
+      the `Class.TextBox.Text`.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.MultiLine
+    summary: |
+      When set to true, text inside a TextBox is able to move onto multiple
+      lines. This also enables players to use the enter key to move onto a new
+      line.
+    description: |
+      When set to true, text inside a TextBox is able to move onto multiple
+      lines. This also enables players to use the enter key to move onto a new
+      line.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.PlaceholderColor3
+    summary: |
+      Sets the text color that gets used when no text has been entered into the
+      TextBox yet.
+    description: |
+      Sets the text color that gets used when no text has been entered into the
+      TextBox yet.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.PlaceholderText
+    summary: |
+      Sets the text that gets displayed when no text has been entered into the
+      TextBox yet.
+    description: |
+      Sets the text that gets displayed when no text has been entered into the
+      TextBox yet.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.RichText
+    summary: |
+      Determines whether the TextBox renders the `Class.TextBox.Text` string
+      using rich text formatting.
+    description: |
+      This property determines whether the `Class.TextBox` renders the
+      `Class.TextBox.Text` string using rich text formatting. Rich text uses
+      simple markup tags to style sections of the string in bold, italics,
+      specific colors, and more.
+
+      To use rich text, simply include formatting tags in the
+      `Class.TextBox.Text` string.
+
+      Note that when the `Class.TextBox` has this property enabled and the box
+      gains focus, the user will be able to edit and interact with the complete
+      XML string, including all of the formatting tags. When focus is lost, the
+      text will automatically parse and render the tags as rich text.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.SelectionStart
+    summary: |
+      Determines the starting position of a text selection, or -1 if no text is
+      selected.
+    description: |
+      Determines the starting position of a text selection, or -1 if the TextBox
+      has no range of selected text. If the value is -1 or equivalent to
+      `Class.TextBox.CursorPosition|CursorPosition`, there is no range of text
+      selected. This property uses the same positioning logic as CursorPosition.
+      SelectionStart will be greater than CursorPosition if the cursor is at the
+      beginning of a selection, and less than CursorPosition if the cursor is at
+      the end.
+    code_samples:
+      - textbox-selections
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextBox.ShowNativeInput
+    summary: |
+      If set to true, input native to the platform is used instead of Roblox's
+      built-in keyboard.
+    description: |
+      If set to true, input native to the platform is used instead of Roblox's
+      built-in keyboard.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.Text
+    summary: |
+      Determines the string rendered by the UI element.
+    description: |
+      The Text property determines the content rendered by the UI element. The
+      visual properties of the string rendered to the screen is determined by
+      `Class.TextBox.TextColor3`, `Class.TextBox.TextTransparency`,
+      `Class.TextBox.TextSize`, `Class.TextBox.Font`,
+      `Class.TextBox.TextScaled`, `Class.TextBox.TextWrapped`,
+      `Class.TextBox.TextXAlignment` and `Class.TextBox.TextYAlignment`.
+
+      It is possible to render emoji (for example, 😃) and other symbols. These
+      special symbols aren't affected by the `Class.TextBox.TextColor3`
+      property. These can be pasted into `Class.Script` and `Class.LocalScript`
+      objects, as well as the field within the Properties window.
+
+      This property may contain newline characters, however, it is not possible
+      to type newline characters within the Properties window. Similarly, this
+      property may contain a tab character, but it will render as a space
+      instead.
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+      - Show-All-Fonts
+      - Long-Text-Wrapping
+      - Emoji-in-Text
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextBounds
+    summary: |
+      The size of a UI element's text in offsets.
+    description: |
+      The read-only property TextBounds reflects the absolute size of rendered
+      text in offsets. In other words, if you were to try to fit text into a
+      rectangle, this property would reflect the minimum dimensions of the
+      rectangle you would need in order to fit the text.
+
+      Using `Class.TextService:GetTextSize()`, you can predict what TextBounds
+      will be on a TextLabel given a string, `Class.TextBox.Font`,
+      `Class.TextBox.TextSize` and frame size.
+    code_samples:
+      - Dynamic-TextBox-Size
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextBox.TextColor
+    summary: ''
+    description: ''
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextBox.TextColor3` which should
+      be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextBox.TextColor3
+    summary: |
+      Determines the color of rendered text.
+    description: |
+      This property determines the color of all the text rendered by a
+      `Class.GuiObject|GUI` element. This property along with
+      `Class.TextBox.Font`, `Class.TextBox.TextSize` and
+      `Class.TextBox.TextTransparency` will determine the visual properties of
+      text. Text is rendered after the text stroke
+      (`Class.TextBox.TextStrokeColor3`).
+
+      It's important that text is easily read by players! Be sure to choose
+      colors with little-to-no saturation, like white, grey, or black. Make sure
+      the color of your text is contrasted by the
+      `Class.TextBox.BackgroundColor3` of the UI element. If the element has a
+      transparent background, try applying a black
+      `Class.TextBox.TextStrokeColor3` to help contrast the text with the 3D
+      world behind it.
+    code_samples:
+      - Vowel-Detector
+      - TextBox-Secret-Word
+      - Countdown-Text
+      - Game-State-Text
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextDirection
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TextDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextEditable
+    summary: |
+      Determines whether the user can change the `Class.TextBox.Text|Text`.
+    description: |
+      **TextEditable** determines whether the user can change the
+      `Class.TextBox.Text|Text` through input. It is recommended to disable
+      `Class.TextBox.ClearTextOnFocus|ClearTextOnFocus` when this property is
+      disabled, otherwise the Text could be cleared on-focus. This property is
+      useful to make read-only TextBoxes from which content can be copied
+      in-game.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextFits
+    summary: |
+      Whether the text fits within the constraints of the TextBox.
+    description: |
+      Whether the text fits within the constraints of the TextBox.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextBox.TextScaled
+    summary: |
+      Changes whether text is resized to fit the GUI object that renders it.
+    description: |
+      Rather than using TextScaled, we recommend you consider using
+      `Class.GuiObject.AutomaticSize|AutomaticSize`, a new method to dynamically
+      size UI that will give you the best visual result possible.
+
+      The TextScaled property determines whether text is scaled so that it fills
+      the entire UI element's space. When this is enabled,
+      `Class.TextBox.TextSize` is ignored and `Class.TextBox.TextWrapped` is
+      automatically enabled. This property is useful for text-rendering UI
+      elements within `Class.BillboardGui|BillboardGuis`.
+
+      When this property is used for screen-space UI, it may be desirable to use
+      a `Class.UITextSizeConstraint` to restrict the range of possible text
+      sizes.
+
+      #### TextScaled and AutomaticSize
+
+      It's recommended that developers avoid usage of TextScaled and adjust UI
+      to take advantage of the AutomaticSize property instead. Here are the core
+      differences between the two properties:
+
+      - TextScaled scales the content (text) to accommodate the UI. Without
+        careful consideration, some text may become unreadable if scaled too
+        small.
+      - AutomaticSize resizes the UI to accommodate content.
+
+      With AutomaticSize, you're able to adjust your UI to accommodate the
+      content (text) while maintaining a consistent font size. For more
+      information on how to use automatic sizing, see the UI Automatic Size
+      article.
+
+      We suggest that you don't apply both TextScaled and AutomaticSize on the
+      same UI object. If you apply both properties:
+
+      - AutomaticSize determines the maximum amount of available space that a
+        `Class.GuiObject` can use (in this case, text)
+      - TextScaled uses the available space determined by AutomaticSize, to
+        scale the font size to fit the available space, which will expand up to
+        the maximum font size (100), if there are no size constraints
+      - The end result will be: text goes to 100 font size and the UI object
+        will expand to fit that text
+
+      Using both AutomaticSize and TextScaled at the same time can result in
+      significant scaling differences than when AutomaticSize is off.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextSize
+    summary: |
+      Determine the line height of text in offsets.
+    description: |
+      The TextSize property determines the height in offsets of one line of
+      rendered text. The unit is in offsets, not points (which is used in most
+      document editing programs). The "Legacy" font does not hold this property.
+    code_samples:
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextStrokeColor3
+    summary: |
+      Determines the color of the text stroke (outline).
+    description: |
+      The TextStrokeColor3 property sets the color of the stroke, or outline, of
+      rendered text. This property and `Class.TextBox.TextStrokeTransparency`
+      determine the visual properties of the text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextBox.TextColor3` and `Class.TextBox.TextTransparency`.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextStrokeTransparency
+    summary: |
+      Determines the transparency of the text stroke (outline).
+    description: |
+      The TextStrokeTransparency property sets the transparency of the stroke,
+      or outline, of rendered text. This property and
+      `Class.TextBox.TextStrokeColor3` determine the visual properties of the
+      text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextBox.TextColor3` and `Class.TextBox.TextTransparency`. Since
+      text stroke is simply multiple renderings of the same transparency, this
+      property is essentially multiplicative on itself four times over (e.g. a
+      TextStrokeTransparency of 0.5 appears about the same as TextTransparency
+      of 0.0625, or 0.5^4). Therefore, it's recommended to set
+      TextStrokeTransparency to a value in the range of 0.75 to 1 for more a
+      more subtle effect.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextTransparency
+    summary: |
+      Determines the transparency of rendered text.
+    description: |
+      The TextColor3 property determines the transparency of all the text
+      rendered by a UI element. This property along with `Class.TextBox.Font`,
+      `Class.TextBox.TextSize` and `Class.TextBox.TextColor3` will determine the
+      visual properties of text. Text is rendered after the text stroke
+      (`Class.TextBox.TextStrokeTransparency`).
+
+      Fading text in using a numeric for-loop is a fantastic way to draw a
+      player's attention to text appearing on screen.
+
+      ```
+      -- Count backwards from 1 to 0, decrementing by 0.1
+      for i = 1, 0, -0.1 do
+         textLabel.TextTransparency = i
+         task.wait(0.1)
+      end
+      ```
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextTruncate
+    summary: |
+      Controls the truncation of the text displayed in this TextBox.
+    description: |
+      Controls the truncation of the text displayed in this TextBox.
+    code_samples:
+    type: TextTruncate
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextWrap
+    summary: ''
+    description: ''
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.TextBox.TextWrapped` which should
+      be used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextBox.TextWrapped
+    summary: |
+      Determines if text wraps to multiple lines within the
+      `Class.GuiObject|GUI` element space, truncating excess text.
+    description: |
+      When enabled, this property will render text on multiple lines within a
+      `Class.TextBox|GUI` element's space so that `Class.TextBox.TextBounds`
+      will never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
+
+      This is achieved by breaking long lines of text into multiple lines. Line
+      breaks will prefer whitespace; should a long unbroken word exceed the
+      width of the element, that word will be broken into multiple lines.
+
+      If further line breaks would cause the vertical height of the text (the Y
+      component of `Class.TextBox.TextBounds`) to exceed the vertical height of
+      the element (the Y component of `Class.GuiBase2d.AbsoluteSize`), then that
+      line will not be rendered at all.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextXAlignment
+    summary: |
+      Determines the horizontal alignment of rendered text.
+    description: |
+      TextXAlignment determines the horizontal alignment (X-axis) of text
+      rendered within a UI element's space. It functions similarly to the CSS
+      text-align property, with left, right and center values (there is no
+      justify option). For Left and Right, text is rendered such that the
+      left/right text bounds just touch the edge of the UI element rectangle.
+      For Center, each line of text is centered on the very center of the UI
+      element rectangle.
+
+      This property is used in conjunction with `Class.TextBox.TextYAlignment`
+      to fully determine text alignment on both axes. This property won't affect
+      the read-only properties `Class.TextBox.TextBounds` and
+      `Class.TextBox.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextXAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.TextYAlignment
+    summary: |
+      Determines the vertical alignment of rendered text.
+    description: |
+      TextYAlignment determines the vertical alignment (Y-axis) of text rendered
+      within a UI element's space. For Top and Bottom, text is rendered such
+      that the top/bottom text bounds just touch the edge of the UI element
+      rectangle. For Center, text is rendered such that there is an equal space
+      from the top bounds of the text to the top of the element and the bottom
+      bounds of the text to the bottom of the element.
+
+      This property is used in conjunction with `Class.TextBox.TextXAlignment`
+      to fully determine text alignment on both axes. This property won't affect
+      the read-only properties `Class.TextBox.TextBounds` and
+      `Class.TextBox.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextYAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: TextBox:CaptureFocus
+    summary: |
+      Forces the client to focus on the TextBox.
+    description: |
+      Forces the client to focus on the TextBox.
+    code_samples:
+      - TextBox-CaptureFocus1
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextBox:IsFocused
+    summary: |
+      Returns true if the textbox is focused, or false if it is not.
+    description: |
+      Returns true if the textbox is focused, or false if it is not.
+    code_samples:
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextBox:ReleaseFocus
+    summary: |
+      Forces the client to unfocus the TextBox.
+    description: |
+      Forces the client to unfocus the TextBox. The `submitted` parameter allows
+      you to over-ride the `enterPressed` parameter in the
+      `Class.TextBox.FocusLost` event.
+
+      This item should be used with a `Class.LocalScript` in order to work as
+      expected in online mode.
+
+      The code shown below will force the client to unfocus the 'TextBox' 5
+      seconds after it's selected:
+
+      ```lua
+      local TextBox = script.Parent
+      TextBox.Focused:Connect(function()
+      	wait(5)
+      	TextBox:ReleaseFocus()
+      end)
+      ```
+
+      Please be aware that the above example assumes that it's in a LocalScript,
+      as a child of a TextBox.
+    code_samples:
+      - TextBox-ReleaseFocus1
+    parameters:
+      - name: submitted
+        type: bool
+        default: false
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: TextBox.FocusLost
+    summary: |
+      Fires when the client lets their focus leave the `Class.TextBox`.
+    description: |
+      Fires when the client lets their focus leave the TextBox - typically when
+      a client clicks/taps outside of the TextBox. This also fires if a TextBox
+      forces focus on the user.
+
+      It can be used alongside `Class.TextBox.Focused` to track when a TextBox
+      gains and loses focus.
+
+      See also the `Class.UserInputService.TextBoxFocused` and
+      `Class.UserInputService.TextBoxFocusReleased` for similar functions that
+      rely on the UserInputService service.
+
+      This event will only fire when used in a `Class.LocalScript`.
+    code_samples:
+      - TextBox-FocusLost1
+      - TextBox-FocusLost
+    parameters:
+      - name: enterPressed
+        type: bool
+        default:
+        summary: |
+          A boolean indicating whether the client pressed Enter to lose focus
+          (_true_) or not (_false_).
+      - name: inputThatCausedFocusLoss
+        type: InputObject
+        default:
+        summary: |
+          An `Class.InputObject` instance indicating the type of input that
+          caused the TextBox to lose focus.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextBox.Focused
+    summary: |
+      Fires when the `Class.TextBox` gains focus.
+    description: |
+      Fires when the `Class.TextBox` gains focus - typically when a client
+      clicks/taps on a TextBox to begin text entry. This also fires if a TextBox
+      forces focus on the user.
+
+      It can be used alongside `Class.TextBox.FocusLost` to track when a TextBox
+      gains and loses focus.
+
+      See also the `Class.UserInputService.TextBoxFocused` and
+      `Class.UserInputService.TextBoxFocusReleased` for similar functions that
+      rely on the UserInputService service.
+
+      This event will only fire when used in a `Class.LocalScript`.
+    code_samples:
+      - TextBox-Focus
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextBox.ReturnPressedFromOnScreenKeyboard
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

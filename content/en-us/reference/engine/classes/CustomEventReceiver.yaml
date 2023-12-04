@@ -1,0 +1,115 @@
+name: CustomEventReceiver
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples:
+inherits:
+  - Instance
+tags:
+  - Deprecated
+deprecation_message: |
+  `Class.CustomEvent|CustomEvents` have been superseded by
+  `Class.BindableEvent|BindableEvents` and should not be used in new work.
+properties:
+  - name: CustomEventReceiver.Source
+    summary: |
+      Attaches the `Class.CustomEventReceiver` object to a `Class.CustomEvent`.
+    description: |
+      This property attaches the `Class.CustomEventReceiver` object to a
+      `Class.CustomEvent`.
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvent's` and should not be used in new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: CustomEventReceiver:GetCurrentValue
+    summary: |
+      Returns the current value of the receiver's
+      `Class.CustomEventReceiver.Source` property.
+    description: |
+      This function returns the current value of the receiver's
+      `Class.CustomEventReceiver.Source` property.
+    code_samples:
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: CustomEventReceiver.EventConnected
+    summary: |
+      Fires when the receiver is attached to a different `Class.CustomEvent`,
+      when the `Class.CustomEventReceiver.Source` property is changed.
+    description: |
+      This event fires when the receiver is attached to a different
+      `Class.CustomEvent`, when the `Class.CustomEventReceiver.Source` property
+      is changed.
+    code_samples:
+    parameters:
+      - name: event
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: CustomEventReceiver.EventDisconnected
+    summary: |
+      Fires when the receiver is attached to a different `Class.CustomEvent`
+      instance when the `Class.CustomEventReceiver.Source` property is changed.
+    description: |
+      This event fires when the receiver is attached to a different
+      `Class.CustomEvent`, when the `Class.CustomEventReceiver.Source` property
+      is changed.
+    code_samples:
+    parameters:
+      - name: event
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: CustomEventReceiver.SourceValueChanged
+    summary: |
+      Fires when the value of the CustomEvent's source is changed, passing the
+      CustomEvent's new value.
+    description: |
+      Fires when the value of the CustomEvent's source is changed, passing the
+      CustomEvent's new value.
+    code_samples:
+    parameters:
+      - name: newValue
+        type: float
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: |
+      `Class.CustomEvent|CustomEvents` have been superseded by
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -1,0 +1,115 @@
+name: BodyPartR15
+type: enum
+summary: |
+  BodyPartR15 is an enum with entries for each of the 15 body parts of an R15
+  character (plus an entry for the HumanoidRootPart).
+description: |
+  BodyPartR15 is an enum used with both `Class.Humanoid:GetBodyPartR15()` and
+  `Class.Humanoid:ReplaceBodyPartR15()` to find and replace specific body parts
+  of R15 characters.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Head
+    summary: |
+      Reference to a Humanoid's Head.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: UpperTorso
+    summary: |
+      Reference to a Humanoid's UpperTorso.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LowerTorso
+    summary: |
+      Reference to a Humanoid's LowerTorso.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: LeftFoot
+    summary: |
+      Reference to a Humanoid's LeftFoot.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LeftLowerLeg
+    summary: |
+      Reference to a Humanoid's LeftLowerLeg.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: LeftUpperLeg
+    summary: |
+      Reference to a Humanoid's LeftUpperLeg.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: RightFoot
+    summary: |
+      Reference to a Humanoid's RightFoot.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: RightLowerLeg
+    summary: |
+      Reference to a Humanoid's RightLowerLeg.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: RightUpperLeg
+    summary: |
+      Reference to a Humanoid's RightUpperLeg.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: LeftHand
+    summary: |
+      Reference to a Humanoid's LeftHand.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: LeftLowerArm
+    summary: |
+      Reference to a Humanoid's LeftLowerArm.
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: LeftUpperArm
+    summary: |
+      Reference to a Humanoid's LeftUpperArm.
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: RightHand
+    summary: |
+      Reference to a Humanoid's RightHand.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: RightLowerArm
+    summary: |
+      Reference to a Humanoid's RightLowerArm.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: RightUpperArm
+    summary: |
+      Reference to a Humanoid's RightUpperArm.
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: RootPart
+    summary: |
+      Reference to a Humanoid's HumanoidRootPart.
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    summary: |
+      Unknown R15 Humanoid body part!.
+    value: 17
+    tags: []
+    deprecation_message: ''

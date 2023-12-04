@@ -1,0 +1,211 @@
+name: TerrainDetail
+type: class
+category:
+memory_category: Instances
+summary: |
+  Determines appearance of a certain terrain face direction.
+description: |
+  TerrainDetail has to be a child of a `Class.MaterialVariant` object. The
+  `Class.MaterialVariant.BaseMaterial` property of the parent MaterialVariant
+  object need to be one of the supported terrain Material, for example, it can
+  be Basalt but not Plastic.
+
+  Terrain renders with different textures for it's top(+y), bottom(-y), and
+  side(horizontal to y axis) faces. If a MaterialVariant has no TerrainDetail
+  children, all faces are rendered as MaterialVariant specified. At most 3
+  TerrainDetail objects can be added to MaterialVariant, one for each face.
+  TerrainDetail overrides the terrain appearance of a certain face.
+
+  For example, it can achieve this kind of effect: the top surface of Grass has
+  lots of grass. On side surfaces, there are less grass. On bottom surfaces
+  there are no grass.
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: TerrainDetail.ColorMap
+    summary: |
+      Determines the color of the surface.
+    description: |
+      This property determines the color of the surface. This texture is
+      sometimes called the albedo texture. The alpha channel is not used.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.Face
+    summary: |
+      The face this TerrainDetail overrides.
+    description: |
+      Face that this TerrainDetail overrides. When more than one TerrainDetail
+      objects with the same face exist under a MaterialVariant, only one of them
+      works.
+    code_samples: []
+    type: TerrainFace
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.MaterialPattern
+    summary: |
+      Determines texture tiling method.
+    description: |
+      Determines texture tiling method.
+    code_samples: []
+    type: MaterialPattern
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.MetalnessMap
+    summary: |
+      Determines which parts of the surface are metal and are non-metal.
+    description: |
+      This property determines which parts of the surface are metal and are
+      non-metal. A metalness map is a grayscale image where black pixels
+      correspond to non-metals and white pixels correspond to metals.
+
+      Metals only reflect light the same color as the metal, and they reflect
+      much more light than non-metals. Most materials in the real world can be
+      categorized either metals or non-metals. For this reason, most pixels in a
+      metalness map will be either pure black or pure white. Values in between
+      are typically used to simulate dirt or grunge on top of an underlying
+      metal area.
+
+      When `Class.Lighting.EnvironmentSpecularScale` is 0, metalness has no
+      effect. For the most realistic reflections, setting
+      EnvironmentSpecularScale and `Class.Lighting.EnvironmentDiffuseScale` to
+      1, and `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` to
+      (0,0,0) is recommended.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.NormalMap
+    summary: |
+      Modifies the lighting of the surface by adding bumps, dents, cracks, and
+      curves without adding more polygons.
+    description: |
+      This property modifies the lighting of the surface by adding bumps, dents,
+      cracks, and curves without adding more polygons.
+
+      Normal maps are RGB images that modify the surface's normal vector used
+      for lighting calculations. The R, G, and B channels of the NormalMap
+      correspond to the X, Y, and Z components of the local surface vector
+      respectively, and byte values of 0 and 255 for each channel correspond
+      linearly to normal vector components of -1 and 1.016 respectively. This
+      range is stretched slightly from -1 to 1 so that a byte value of 127 maps
+      to exactly 0. The normal vector's Z axis is always defined as the
+      direction of the underlying mesh's normal. A uniform (127,127,255) image
+      translates to a completely flat normal map where the normal is everywhere
+      perpendicular to the mesh surface. This format is called "tangent space"
+      normal maps. Roblox does not support world space or object space normal
+      maps.
+
+      Incorrectly flipped normal components can make bumps appear like indents.
+      If you import a normal map and notice the lighting looks off, you may need
+      to invert the G channel of the image. The X and Y axes of the tangent
+      space frame correspond to the X and Y directions in the image after it's
+      transformed by the mesh UVs. If you view your normal map in an image
+      editor as if it were displayed on a surface, normals pointing towards the
+      right side of the screen should appear more red, and normals pointing
+      towards the top side of your screen should appear more green.
+
+      ![Bread normal map](/assets/legacy/bread-nmap.png)
+
+      The terms "DirectX format" and "OpenGL format" are sometimes used to
+      describe whether the G channel of the normal map is inverted or not.
+      Roblox expects the OpenGL format.
+
+      Roblox expects imported meshes to include tangents. Modeling software may
+      also refer to this as "tangent space" information. If you apply a normal
+      map and it does not seem to make any visual difference, you may need to
+      re-export your mesh along with its tangent information from modeling
+      software.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.RoughnessMap
+    summary: |
+      Determines the apparent roughness across the surface.
+    description: |
+      This property determines the apparent roughness across the surface. A
+      roughness map is a grayscale image where black pixels correspond to a
+      maximally smooth surface, and white pixels correspond to a maximally rough
+      surface.
+
+      Roughness refers to how much variation the surface has on a very small
+      scale. Reflections on smooth surfaces are sharp and concentrated.
+      Reflections on rough surfaces are more blurry and dispersed.
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TerrainDetail.StudsPerTile
+    summary: |
+      Determines the scale of textures.
+    description: |
+      Determines the scale of textures. Larger values for this property will
+      lead to the textures appearing larger, and repeating less frequently.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

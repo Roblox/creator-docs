@@ -1,0 +1,185 @@
+name: TeleportOptions
+type: class
+category:
+memory_category: Instances
+summary: |
+  Optional input arguments to the `Class.TeleportService:TeleportAsync()`
+  function.
+description: |
+  This class is an optional parameter to the
+  `Class.TeleportService:TeleportAsync()` function that allows developers to
+  provide arguments for the teleport call.
+
+  Certain arguments in this class are not compatible with each other and cause
+  an error when passed to `Class.TeleportService:TeleportAsync()`:
+
+  - ReservedServerAccessCode + ServerInstanceId
+  - ShouldReserveServer + ServerInstanceId
+  - ShouldReserveServer + ReservedServerAccessCode
+
+  For more information on how to teleport players between servers, see
+  [Teleporting Between Places](../../../projects/teleporting.md).
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: TeleportOptions.ReservedServerAccessCode
+    summary: |
+      The reserved server access code that indicates the reserved server that
+      the teleport should be to.
+    description: |
+      This property indicates the reserved server access code for the reserved
+      server that the user(s) should be teleported to.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TeleportOptions.ServerInstanceId
+    summary: |
+      The `Class.DataModel.JobId` of the server instance to teleport to.
+    description: |
+      This property indicates the `Class.DataModel.JobId` of the server instance
+      the user(s) should be teleported to.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TeleportOptions.ShouldReserveServer
+    summary: |
+      A flag to indicate if a reserved server should be allocated and the
+      players should then be teleported to this allocation.
+    description: |
+      This property indicates whether the teleport call should create a new
+      reserved server. When set to true, a reserved server will be created and
+      the player(s) will be teleported to the new server.
+
+      If set to false, the player(s) will be teleported to the public server
+      with the specified `Class.TeleportOptions.ServerInstanceId` if provided.
+      When `Class.TeleportOptions.ServerInstanceId` is blank or no matching
+      server is found, a new public server will be created to teleport the
+      player(s) to.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: TeleportOptions:GetTeleportData
+    summary: |
+      Returns the teleport data stored in the `Class.TeleportOptions` instance
+      by `Class.TeleportOptions:SetTeleportData()`.
+    description: |
+      This function returns the teleport data stored in the
+      `Class.TeleportOptions` instance by
+      `Class.TeleportOptions:SetTeleportData()`.
+
+      Once a player has teleported, teleport data can be retrieved using the
+      `Class.Player:GetJoinData()` and
+      `Class.TeleportService:GetLocalPlayerTeleportData()` functions.
+
+      For more information on how to teleport players between servers, see
+      [Teleporting Between Places](../../../projects/teleporting.md).
+    code_samples:
+    parameters: []
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TeleportOptions:SetTeleportData
+    summary: |
+      Setter function for data to be passed to the destination place.
+    description: |
+      This is a setter function for data to be passed to the destination place.
+      On the destination place, this data can be retrieved using
+      `Class.Player:GetJoinData()` or
+      `Class.TeleportService:GetLocalPlayerTeleportData()`.
+
+      For example, the following snippet would send the
+      `Class.DataModel.PlaceId` and `Class.DataModel.JobId` in a dictionary
+      passing the teleport data in a `Class.TeleportOptions` instance using
+      `Class.TeleportOptions:SetTeleportData()`:
+
+      ```lua
+      -- Server
+      local teleportOptions = Instance.new("TeleportOptions")
+      local teleportData = {
+          placeId = game.PlaceId,
+          jobId = game.JobId
+      }
+      teleportOptions:SetTeleportData(teleportData)
+      TeleportService:TeleportAsync(game.PlaceId, {player}, teleportOptions)
+      ```
+
+      This data could then be retrieved upon arrival using the
+      GetLocalPlayerTeleportData() function as follows:
+
+      ```lua
+      -- Client
+      local TeleportService = game:GetService("TeleportService")
+
+      local teleportData = TeleportService:GetLocalPlayerTeleportData()
+      if teleportData then
+          local placeId = teleportData.placeId
+          local jobId = teleportData.JobId
+      end
+      ```
+
+      If no `teleportData` was set in the teleportation function this
+      GetLocalPlayerTeleportData() will return `nil`.
+
+      For more information on how to send and receive user data along with
+      teleports, see, see
+      [Teleporting Between Places](../../../projects/teleporting.md#sending-user-data-along-with-teleports).
+    code_samples:
+    parameters:
+      - name: teleportData
+        type: Variant
+        default:
+        summary: |
+          Data to be passed to the destination place.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

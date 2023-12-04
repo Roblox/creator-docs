@@ -1,0 +1,47 @@
+name: AudioEmitter
+type: class
+category:
+memory_category: Internal
+summary: |
+  Emits audio streams into the world.
+description: |
+  `Class.AudioEmitter` emits audio streams into the world. It provides a single
+  **Input** pin that can be connected to by one or more `Class.Wire|Wires`. Any
+  streams wired to an `Class.AudioEmitter` get broadcasted into the world from
+  the emitter's parent's position. If the parent is an `Class.Attachment`,
+  `Class.Camera`, or `Class.PVInstance`, the parent's world-position will be
+  used. If the parent is not one of these classes, the `Class.AudioEmitter` is
+  effectively silent.
+
+  `Class.AudioEmitter|AudioEmitters` are heard by
+  `Class.AudioListener|AudioListeners` in order to implement 3D spatialization.
+code_samples:
+  - audio-wiring---multi-emission
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioEmitter.AudioInteractionGroup
+    summary: |
+      Controls which `Class.AudioListener|AudioListeners` are capable of hearing
+      this `Class.AudioEmitter`.
+    description: |
+      If an `Class.AudioEmitter` and an `Class.AudioListener` share an
+      interaction group, then the listener is capable of hearing the emitter.
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Interactions
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

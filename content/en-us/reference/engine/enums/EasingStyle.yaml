@@ -1,0 +1,94 @@
+name: EasingStyle
+type: enum
+summary: |
+  Pass to `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
+  `Class.Tween`.
+description: |
+  Passed to `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
+  `Class.Tween`. Each easing style is described in a graph below. The X axis is
+  a value passed to `Class.TweenService:GetValue()` and the Y axis is the value
+  returned.
+
+  This diagram reflects the various styles with
+  `Enum.EasingDirection|Enum.EasingDirection.In`. Note that for
+  `Enum.EasingDirection|Enum.EasingDirection.Out`, the easing style is applied
+  in a reverse direction.
+
+  For a video demonstration of each easing style, see
+  [UI Animations - Style](../../../ui/animation.md#style).
+
+  ![Easing style graphs](/assets/legacy/EasingStyles.jpg)
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Linear
+    summary: |
+      Moves at a constant speed.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Sine
+    summary: |
+      Speed is determined by a sine wave.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Back
+    summary: |
+      Slightly overshoots the target, then backs into place.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Quad
+    summary: |
+      Speed is determined by quadratic interpolation.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Quart
+    summary: |
+      Similar to **Quad**, but starts at a higher speed determined by quartic
+      interpolation.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Quint
+    summary: |
+      Similar to **Quart**, but starts at a higher speed determined by quintic
+      interpolation.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Bounce
+    summary: |
+      Bounces backwards multiple times after reaching the target, before
+      eventually settling.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Elastic
+    summary: |
+      Moves as if attached to a rubber band, overshooting the target several
+      times.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Exponential
+    summary: |
+      Speed reduces very quickly as tween approaches the target.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Circular
+    summary: |
+      Follows a circular arc, slowing down as tween approaches the target.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Cubic
+    summary: |
+      Similar to **Quad**, but starts at a lower speed.
+    value: 10
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,128 @@
+name: OverlapParams
+type: datatype
+summary: |
+  Stores parameters used in boundary-querying functions.
+description: |
+  The `Datatype.OverlapParams` data type stores parameters for use with
+  `Class.WorldRoot` boundary-querying functions, in particular
+  `Class.WorldRoot:GetPartBoundsInBox()`,
+  `Class.WorldRoot:GetPartBoundsInRadius()` and
+  `Class.WorldRoot:GetPartsInPart()`. The
+  `Datatype.OverlapParams.FilterDescendantsInstances` property stores an array
+  of objects to use as either an inclusion or exclusion list based on the
+  `Datatype.OverlapParams.FilterType` enum, and the
+  `Datatype.OverlapParams.CollisionGroup` property can specify a collision group
+  for the boundary query operation.
+
+  Unlike most data types in Luau, you can change all of the members of
+  `Datatype.OverlapParams` without creating a new object, allowing you to reuse
+  the same object repeatedly.
+code_samples:
+tags: []
+deprecation_message: ''
+constructors:
+  - name: OverlapParams.new
+    summary: Returns a blank `Datatype.OverlapParams` object.
+    description: |-
+      Returns a blank `Datatype.OverlapParams` object. Unlike other data type
+      constructors, this constructor does not have any parameters, so you should
+      set its properties appropriately.
+    parameters:
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants: []
+properties:
+  - name: OverlapParams.FilterDescendantsInstances
+    type: Array
+    summary: |
+      An array of objects whose descendants is used in filtering candidates.
+    description: |
+      An array of objects whose descendants is used in filtering candidates.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.FilterType
+    type: RaycastFilterType
+    summary: |
+      Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
+      list is used.
+    description: |
+      Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
+      array is used, depending on the `Enum.RaycastFilterType` provided.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.MaxParts
+    type: number
+    summary: |
+      The maximum amount of parts to be returned by the query.
+    description: |
+      The maximum amount of parts to be returned by the query. The default value
+      of zero (`0`) represents no limit.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.CollisionGroup
+    type: string
+    summary: |
+      The collision group used for the operation.
+    description: |
+      Specifies a collision group for the operation. Parts in collision groups
+      that are set to **not** collide with this group are ignored. If this
+      property is omitted, the operation assumes the **Default** collision
+      group.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.RespectCanCollide
+    type: bool
+    summary: |
+      Determines whether the boundary-querying operation considers a part's
+      `Class.BasePart.CanCollide` property value over its
+      `Class.BasePart.CanQuery` value.
+    description: |
+      This property, if `true`, makes the boundary-querying operation use an
+      intersected part's `Class.BasePart.CanCollide` value in favor of its
+      `Class.BasePart.CanQuery` value when determining whether that part is
+      included in the array of spatial query results.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: OverlapParams.BruteForceAllSlow
+    type: bool
+    summary: |
+      When enabled, the query will ignore all part collision properties and
+      perform a brute-force check on every part.
+    description: |
+      When enabled, the query will ignore all part collision properties and
+      perform a brute-force check on every part. This will negatively impact
+      performance and should not be used in live experiences.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+methods:
+  - name: OverlapParams:AddToFilter
+    summary: |
+      Adds the instances provided to
+      `Datatype.OverlapParams.FilterDescendantsInstances|FilterDescendantsInstances`.
+    description: |
+      For efficiency and simplicity, this method is the preferred way to add
+      instances to the filter. It has the additional advantage that it allows
+      `Datatype.OverlapParams.FilterDescendantsInstances|FilterDescendantsInstances`
+      to be updated from a parallel context.
+    parameters:
+      - name: instances
+        type: Instance | Array
+        default:
+        summary: |
+          An instance or an array containing instances to add.
+    returns:
+      - type: void
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+    thread_safety: Safe
+functions:
+math_operations:

@@ -1,0 +1,1551 @@
+name: KeyCode
+type: enum
+summary: |
+  A physical button that a user is pressing.
+description: |
+  The KeyCode Enum contains a list of Byte keycodes that represent the button
+  used in a user input.
+
+  Note, KeyCode keyboard values refer to the physical position of buttons on a
+  standard QWERTY keyboard. This means that, provided the user's system is
+  configured correctly, the location of keys (such as `WASD`) will remain the
+  same on other keyboard types, such as Dvorak keyboards (where it would map to
+  `,AOE`).
+
+  This enum also includes buttons and axes present on gamepads, and 96 `World``
+  values for non-standard buttons.
+
+  The keypad is a cluster of keys that is present on many desktop keyboards, but
+  is rare for laptops to have.
+
+  See also:
+
+  - `Class.InputObject` - used for keyboard and gamepad input.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: |
+      Blank value that represents no key being pressed.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Backspace
+    summary: |
+      The `Backspace` key.
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Tab
+    summary: |
+      The `Tab` key.
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Clear
+    summary: |
+      Only present on certain keyboards.
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: Return
+    summary: |
+      Better known as enter.
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Pause
+    summary: |
+      Only present on certain keyboards.
+    value: 19
+    tags: []
+    deprecation_message: ''
+  - name: Escape
+    summary: |
+      The `Escape` key.
+    value: 27
+    tags: []
+    deprecation_message: ''
+  - name: Space
+    summary: |
+      The `Space` key.
+    value: 32
+    tags: []
+    deprecation_message: ''
+  - name: QuotedDouble
+    summary: |
+      The `"` key.
+    value: 34
+    tags: []
+    deprecation_message: ''
+  - name: Hash
+    summary: |
+      The `#` key.
+    value: 35
+    tags: []
+    deprecation_message: ''
+  - name: Dollar
+    summary: |
+      The `$` key.
+    value: 36
+    tags: []
+    deprecation_message: ''
+  - name: Percent
+    summary: |
+      The `%` key.
+    value: 37
+    tags: []
+    deprecation_message: ''
+  - name: Ampersand
+    summary: |
+      The `&` key.
+    value: 38
+    tags: []
+    deprecation_message: ''
+  - name: Quote
+    summary: |
+      The `'` key.
+    value: 39
+    tags: []
+    deprecation_message: ''
+  - name: LeftParenthesis
+    summary: |
+      The `(` key.
+    value: 40
+    tags: []
+    deprecation_message: ''
+  - name: RightParenthesis
+    summary: |
+      The `)` key.
+    value: 41
+    tags: []
+    deprecation_message: ''
+  - name: Asterisk
+    summary: |
+      The `*` key.
+    value: 42
+    tags: []
+    deprecation_message: ''
+  - name: Plus
+    summary: |
+      The `+` key.
+    value: 43
+    tags: []
+    deprecation_message: ''
+  - name: Comma
+    summary: |
+      The `,` key.
+    value: 44
+    tags: []
+    deprecation_message: ''
+  - name: Minus
+    summary: |
+      The `-` key.
+    value: 45
+    tags: []
+    deprecation_message: ''
+  - name: Period
+    summary: |
+      The `.` key.
+    value: 46
+    tags: []
+    deprecation_message: ''
+  - name: Slash
+    summary: |
+      The `` key.
+    value: 47
+    tags: []
+    deprecation_message: ''
+  - name: Zero
+    summary: |
+      The `0` key.
+    value: 48
+    tags: []
+    deprecation_message: ''
+  - name: One
+    summary: |
+      The `1` key.
+    value: 49
+    tags: []
+    deprecation_message: ''
+  - name: Two
+    summary: |
+      The `2` key.
+    value: 50
+    tags: []
+    deprecation_message: ''
+  - name: Three
+    summary: |
+      The `3` key.
+    value: 51
+    tags: []
+    deprecation_message: ''
+  - name: Four
+    summary: |
+      The `4` key.
+    value: 52
+    tags: []
+    deprecation_message: ''
+  - name: Five
+    summary: |
+      The `5` key.
+    value: 53
+    tags: []
+    deprecation_message: ''
+  - name: Six
+    summary: |
+      The `6` key.
+    value: 54
+    tags: []
+    deprecation_message: ''
+  - name: Seven
+    summary: |
+      The `7` key.
+    value: 55
+    tags: []
+    deprecation_message: ''
+  - name: Eight
+    summary: |
+      The `8` key.
+    value: 56
+    tags: []
+    deprecation_message: ''
+  - name: Nine
+    summary: |
+      The `9` key.
+    value: 57
+    tags: []
+    deprecation_message: ''
+  - name: Colon
+    summary: |
+      The `:` key.
+    value: 58
+    tags: []
+    deprecation_message: ''
+  - name: Semicolon
+    summary: |
+      The `;` key.
+    value: 59
+    tags: []
+    deprecation_message: ''
+  - name: LessThan
+    summary: |
+      The `<` key.
+    value: 60
+    tags: []
+    deprecation_message: ''
+  - name: Equals
+    summary: |
+      The `=` key.
+    value: 61
+    tags: []
+    deprecation_message: ''
+  - name: GreaterThan
+    summary: |
+      The `>` key.
+    value: 62
+    tags: []
+    deprecation_message: ''
+  - name: Question
+    summary: |
+      The `?` key.
+    value: 63
+    tags: []
+    deprecation_message: ''
+  - name: At
+    summary: |
+      The `@` key.
+    value: 64
+    tags: []
+    deprecation_message: ''
+  - name: LeftBracket
+    summary: |
+      The `[` key.
+    value: 91
+    tags: []
+    deprecation_message: ''
+  - name: BackSlash
+    summary: |
+      The `\` key.
+    value: 92
+    tags: []
+    deprecation_message: ''
+  - name: RightBracket
+    summary: |
+      The `]` key.
+    value: 93
+    tags: []
+    deprecation_message: ''
+  - name: Caret
+    summary: |
+      The `^` key.
+    value: 94
+    tags: []
+    deprecation_message: ''
+  - name: Underscore
+    summary: |
+      The `_` key.
+    value: 95
+    tags: []
+    deprecation_message: ''
+  - name: Backquote
+    summary: |
+      The `` ` `` key.
+    value: 96
+    tags: []
+    deprecation_message: ''
+  - name: A
+    summary: |
+      The `A` key.
+    value: 97
+    tags: []
+    deprecation_message: ''
+  - name: B
+    summary: |
+      The `B` key.
+    value: 98
+    tags: []
+    deprecation_message: ''
+  - name: C
+    summary: |
+      The `C` key.
+    value: 99
+    tags: []
+    deprecation_message: ''
+  - name: D
+    summary: |
+      The `D` key.
+    value: 100
+    tags: []
+    deprecation_message: ''
+  - name: E
+    summary: |
+      The `E` key.
+    value: 101
+    tags: []
+    deprecation_message: ''
+  - name: F
+    summary: |
+      The `F` key.
+    value: 102
+    tags: []
+    deprecation_message: ''
+  - name: G
+    summary: |
+      The `G` key.
+    value: 103
+    tags: []
+    deprecation_message: ''
+  - name: H
+    summary: |
+      The `H` key.
+    value: 104
+    tags: []
+    deprecation_message: ''
+  - name: I
+    summary: |
+      The `I` key.
+    value: 105
+    tags: []
+    deprecation_message: ''
+  - name: J
+    summary: |
+      The `J` key.
+    value: 106
+    tags: []
+    deprecation_message: ''
+  - name: K
+    summary: |
+      The `K` key.
+    value: 107
+    tags: []
+    deprecation_message: ''
+  - name: L
+    summary: |
+      The `L` key.
+    value: 108
+    tags: []
+    deprecation_message: ''
+  - name: M
+    summary: |
+      The `M` key.
+    value: 109
+    tags: []
+    deprecation_message: ''
+  - name: 'N'
+    summary: |
+      The `N` key.
+    value: 110
+    tags: []
+    deprecation_message: ''
+  - name: O
+    summary: |
+      The `O` key.
+    value: 111
+    tags: []
+    deprecation_message: ''
+  - name: P
+    summary: |
+      The `P` key.
+    value: 112
+    tags: []
+    deprecation_message: ''
+  - name: Q
+    summary: |
+      The `Q` key.
+    value: 113
+    tags: []
+    deprecation_message: ''
+  - name: R
+    summary: |
+      The `R` key.
+    value: 114
+    tags: []
+    deprecation_message: ''
+  - name: S
+    summary: |
+      The `S` key.
+    value: 115
+    tags: []
+    deprecation_message: ''
+  - name: T
+    summary: |
+      The `T` key.
+    value: 116
+    tags: []
+    deprecation_message: ''
+  - name: U
+    summary: |
+      The `U` key.
+    value: 117
+    tags: []
+    deprecation_message: ''
+  - name: V
+    summary: |
+      The `V` key.
+    value: 118
+    tags: []
+    deprecation_message: ''
+  - name: W
+    summary: |
+      The `W` key.
+    value: 119
+    tags: []
+    deprecation_message: ''
+  - name: X
+    summary: |
+      The `X` key.
+    value: 120
+    tags: []
+    deprecation_message: ''
+  - name: 'Y'
+    summary: |
+      The `Y` key.
+    value: 121
+    tags: []
+    deprecation_message: ''
+  - name: Z
+    summary: |
+      The `Z` key.
+    value: 122
+    tags: []
+    deprecation_message: ''
+  - name: LeftCurly
+    summary: |
+      The `{` key.
+    value: 123
+    tags: []
+    deprecation_message: ''
+  - name: Pipe
+    summary: |
+      The `|` key.
+    value: 124
+    tags: []
+    deprecation_message: ''
+  - name: RightCurly
+    summary: |
+      The `}` key.
+    value: 125
+    tags: []
+    deprecation_message: ''
+  - name: Tilde
+    summary: |
+      The `~` key.
+    value: 126
+    tags: []
+    deprecation_message: ''
+  - name: Delete
+    summary: |
+      The `Del` key.
+    value: 127
+    tags: []
+    deprecation_message: ''
+  - name: World0
+    summary: |
+      Generally not used.
+    value: 160
+    tags: []
+    deprecation_message: ''
+  - name: World1
+    summary: |
+      Generally not used.
+    value: 161
+    tags: []
+    deprecation_message: ''
+  - name: World2
+    summary: |
+      Generally not used.
+    value: 162
+    tags: []
+    deprecation_message: ''
+  - name: World3
+    summary: |
+      Generally not used.
+    value: 163
+    tags: []
+    deprecation_message: ''
+  - name: World4
+    summary: |
+      Generally not used.
+    value: 164
+    tags: []
+    deprecation_message: ''
+  - name: World5
+    summary: |
+      Generally not used.
+    value: 165
+    tags: []
+    deprecation_message: ''
+  - name: World6
+    summary: |
+      Generally not used.
+    value: 166
+    tags: []
+    deprecation_message: ''
+  - name: World7
+    summary: |
+      Generally not used.
+    value: 167
+    tags: []
+    deprecation_message: ''
+  - name: World8
+    summary: |
+      Generally not used.
+    value: 168
+    tags: []
+    deprecation_message: ''
+  - name: World9
+    summary: |
+      Generally not used.
+    value: 169
+    tags: []
+    deprecation_message: ''
+  - name: World10
+    summary: |
+      Generally not used.
+    value: 170
+    tags: []
+    deprecation_message: ''
+  - name: World11
+    summary: |
+      Generally not used.
+    value: 171
+    tags: []
+    deprecation_message: ''
+  - name: World12
+    summary: |
+      Generally not used.
+    value: 172
+    tags: []
+    deprecation_message: ''
+  - name: World13
+    summary: |
+      Generally not used.
+    value: 173
+    tags: []
+    deprecation_message: ''
+  - name: World14
+    summary: |
+      Generally not used.
+    value: 174
+    tags: []
+    deprecation_message: ''
+  - name: World15
+    summary: |
+      Generally not used.
+    value: 175
+    tags: []
+    deprecation_message: ''
+  - name: World16
+    summary: |
+      Generally not used.
+    value: 176
+    tags: []
+    deprecation_message: ''
+  - name: World17
+    summary: |
+      Generally not used.
+    value: 177
+    tags: []
+    deprecation_message: ''
+  - name: World18
+    summary: |
+      Generally not used.
+    value: 178
+    tags: []
+    deprecation_message: ''
+  - name: World19
+    summary: |
+      Generally not used.
+    value: 179
+    tags: []
+    deprecation_message: ''
+  - name: World20
+    summary: |
+      Generally not used.
+    value: 180
+    tags: []
+    deprecation_message: ''
+  - name: World21
+    summary: |
+      Generally not used.
+    value: 181
+    tags: []
+    deprecation_message: ''
+  - name: World22
+    summary: |
+      Generally not used.
+    value: 182
+    tags: []
+    deprecation_message: ''
+  - name: World23
+    summary: |
+      Generally not used.
+    value: 183
+    tags: []
+    deprecation_message: ''
+  - name: World24
+    summary: |
+      Generally not used.
+    value: 184
+    tags: []
+    deprecation_message: ''
+  - name: World25
+    summary: |
+      Generally not used.
+    value: 185
+    tags: []
+    deprecation_message: ''
+  - name: World26
+    summary: |
+      Generally not used.
+    value: 186
+    tags: []
+    deprecation_message: ''
+  - name: World27
+    summary: |
+      Generally not used.
+    value: 187
+    tags: []
+    deprecation_message: ''
+  - name: World28
+    summary: |
+      Generally not used.
+    value: 188
+    tags: []
+    deprecation_message: ''
+  - name: World29
+    summary: |
+      Generally not used.
+    value: 189
+    tags: []
+    deprecation_message: ''
+  - name: World30
+    summary: |
+      Generally not used.
+    value: 190
+    tags: []
+    deprecation_message: ''
+  - name: World31
+    summary: |
+      Generally not used.
+    value: 191
+    tags: []
+    deprecation_message: ''
+  - name: World32
+    summary: |
+      Generally not used.
+    value: 192
+    tags: []
+    deprecation_message: ''
+  - name: World33
+    summary: |
+      Generally not used.
+    value: 193
+    tags: []
+    deprecation_message: ''
+  - name: World34
+    summary: |
+      Generally not used.
+    value: 194
+    tags: []
+    deprecation_message: ''
+  - name: World35
+    summary: |
+      Generally not used.
+    value: 195
+    tags: []
+    deprecation_message: ''
+  - name: World36
+    summary: |
+      Generally not used.
+    value: 196
+    tags: []
+    deprecation_message: ''
+  - name: World37
+    summary: |
+      Generally not used.
+    value: 197
+    tags: []
+    deprecation_message: ''
+  - name: World38
+    summary: |
+      Generally not used.
+    value: 198
+    tags: []
+    deprecation_message: ''
+  - name: World39
+    summary: |
+      Generally not used.
+    value: 199
+    tags: []
+    deprecation_message: ''
+  - name: World40
+    summary: |
+      Generally not used.
+    value: 200
+    tags: []
+    deprecation_message: ''
+  - name: World41
+    summary: |
+      Generally not used.
+    value: 201
+    tags: []
+    deprecation_message: ''
+  - name: World42
+    summary: |
+      Generally not used.
+    value: 202
+    tags: []
+    deprecation_message: ''
+  - name: World43
+    summary: |
+      Generally not used.
+    value: 203
+    tags: []
+    deprecation_message: ''
+  - name: World44
+    summary: |
+      Generally not used.
+    value: 204
+    tags: []
+    deprecation_message: ''
+  - name: World45
+    summary: |
+      Generally not used.
+    value: 205
+    tags: []
+    deprecation_message: ''
+  - name: World46
+    summary: |
+      Generally not used.
+    value: 206
+    tags: []
+    deprecation_message: ''
+  - name: World47
+    summary: |
+      Generally not used.
+    value: 207
+    tags: []
+    deprecation_message: ''
+  - name: World48
+    summary: |
+      Generally not used.
+    value: 208
+    tags: []
+    deprecation_message: ''
+  - name: World49
+    summary: |
+      Generally not used.
+    value: 209
+    tags: []
+    deprecation_message: ''
+  - name: World50
+    summary: |
+      Generally not used.
+    value: 210
+    tags: []
+    deprecation_message: ''
+  - name: World51
+    summary: |
+      Generally not used.
+    value: 211
+    tags: []
+    deprecation_message: ''
+  - name: World52
+    summary: |
+      Generally not used.
+    value: 212
+    tags: []
+    deprecation_message: ''
+  - name: World53
+    summary: |
+      Generally not used.
+    value: 213
+    tags: []
+    deprecation_message: ''
+  - name: World54
+    summary: |
+      Generally not used.
+    value: 214
+    tags: []
+    deprecation_message: ''
+  - name: World55
+    summary: |
+      Generally not used.
+    value: 215
+    tags: []
+    deprecation_message: ''
+  - name: World56
+    summary: |
+      Generally not used.
+    value: 216
+    tags: []
+    deprecation_message: ''
+  - name: World57
+    summary: |
+      Generally not used.
+    value: 217
+    tags: []
+    deprecation_message: ''
+  - name: World58
+    summary: |
+      Generally not used.
+    value: 218
+    tags: []
+    deprecation_message: ''
+  - name: World59
+    summary: |
+      Generally not used.
+    value: 219
+    tags: []
+    deprecation_message: ''
+  - name: World60
+    summary: |
+      Generally not used.
+    value: 220
+    tags: []
+    deprecation_message: ''
+  - name: World61
+    summary: |
+      Generally not used.
+    value: 221
+    tags: []
+    deprecation_message: ''
+  - name: World62
+    summary: |
+      Generally not used.
+    value: 222
+    tags: []
+    deprecation_message: ''
+  - name: World63
+    summary: |
+      Generally not used.
+    value: 223
+    tags: []
+    deprecation_message: ''
+  - name: World64
+    summary: |
+      Generally not used.
+    value: 224
+    tags: []
+    deprecation_message: ''
+  - name: World65
+    summary: |
+      Generally not used.
+    value: 225
+    tags: []
+    deprecation_message: ''
+  - name: World66
+    summary: |
+      Generally not used.
+    value: 226
+    tags: []
+    deprecation_message: ''
+  - name: World67
+    summary: |
+      Generally not used.
+    value: 227
+    tags: []
+    deprecation_message: ''
+  - name: World68
+    summary: |
+      Generally not used.
+    value: 228
+    tags: []
+    deprecation_message: ''
+  - name: World69
+    summary: |
+      Generally not used.
+    value: 229
+    tags: []
+    deprecation_message: ''
+  - name: World70
+    summary: |
+      Generally not used.
+    value: 230
+    tags: []
+    deprecation_message: ''
+  - name: World71
+    summary: |
+      Generally not used.
+    value: 231
+    tags: []
+    deprecation_message: ''
+  - name: World72
+    summary: |
+      Generally not used.
+    value: 232
+    tags: []
+    deprecation_message: ''
+  - name: World73
+    summary: |
+      Generally not used.
+    value: 233
+    tags: []
+    deprecation_message: ''
+  - name: World74
+    summary: |
+      Generally not used.
+    value: 234
+    tags: []
+    deprecation_message: ''
+  - name: World75
+    summary: |
+      Generally not used.
+    value: 235
+    tags: []
+    deprecation_message: ''
+  - name: World76
+    summary: |
+      Generally not used.
+    value: 236
+    tags: []
+    deprecation_message: ''
+  - name: World77
+    summary: |
+      Generally not used.
+    value: 237
+    tags: []
+    deprecation_message: ''
+  - name: World78
+    summary: |
+      Generally not used.
+    value: 238
+    tags: []
+    deprecation_message: ''
+  - name: World79
+    summary: |
+      Generally not used.
+    value: 239
+    tags: []
+    deprecation_message: ''
+  - name: World80
+    summary: |
+      Generally not used.
+    value: 240
+    tags: []
+    deprecation_message: ''
+  - name: World81
+    summary: |
+      Generally not used.
+    value: 241
+    tags: []
+    deprecation_message: ''
+  - name: World82
+    summary: |
+      Generally not used.
+    value: 242
+    tags: []
+    deprecation_message: ''
+  - name: World83
+    summary: |
+      Generally not used.
+    value: 243
+    tags: []
+    deprecation_message: ''
+  - name: World84
+    summary: |
+      Generally not used.
+    value: 244
+    tags: []
+    deprecation_message: ''
+  - name: World85
+    summary: |
+      Generally not used.
+    value: 245
+    tags: []
+    deprecation_message: ''
+  - name: World86
+    summary: |
+      Generally not used.
+    value: 246
+    tags: []
+    deprecation_message: ''
+  - name: World87
+    summary: |
+      Generally not used.
+    value: 247
+    tags: []
+    deprecation_message: ''
+  - name: World88
+    summary: |
+      Generally not used.
+    value: 248
+    tags: []
+    deprecation_message: ''
+  - name: World89
+    summary: |
+      Generally not used.
+    value: 249
+    tags: []
+    deprecation_message: ''
+  - name: World90
+    summary: |
+      Generally not used.
+    value: 250
+    tags: []
+    deprecation_message: ''
+  - name: World91
+    summary: |
+      Generally not used.
+    value: 251
+    tags: []
+    deprecation_message: ''
+  - name: World92
+    summary: |
+      Generally not used.
+    value: 252
+    tags: []
+    deprecation_message: ''
+  - name: World93
+    summary: |
+      Generally not used.
+    value: 253
+    tags: []
+    deprecation_message: ''
+  - name: World94
+    summary: |
+      Generally not used.
+    value: 254
+    tags: []
+    deprecation_message: ''
+  - name: World95
+    summary: |
+      Generally not used.
+    value: 255
+    tags: []
+    deprecation_message: ''
+  - name: KeypadZero
+    summary: |
+      The `0` key on the keypad cluster.
+    value: 256
+    tags: []
+    deprecation_message: ''
+  - name: KeypadOne
+    summary: |
+      The `1` key on the keypad cluster.
+    value: 257
+    tags: []
+    deprecation_message: ''
+  - name: KeypadTwo
+    summary: |
+      The `2` key on the keypad cluster.
+    value: 258
+    tags: []
+    deprecation_message: ''
+  - name: KeypadThree
+    summary: |
+      The `3` key on the keypad cluster.
+    value: 259
+    tags: []
+    deprecation_message: ''
+  - name: KeypadFour
+    summary: |
+      The `4` key on the keypad cluster.
+    value: 260
+    tags: []
+    deprecation_message: ''
+  - name: KeypadFive
+    summary: |
+      The `5` key on the keypad cluster.
+    value: 261
+    tags: []
+    deprecation_message: ''
+  - name: KeypadSix
+    summary: |
+      The `6` key on the keypad cluster.
+    value: 262
+    tags: []
+    deprecation_message: ''
+  - name: KeypadSeven
+    summary: |
+      The `7` key on the keypad cluster.
+    value: 263
+    tags: []
+    deprecation_message: ''
+  - name: KeypadEight
+    summary: |
+      The `8` key on the keypad cluster.
+    value: 264
+    tags: []
+    deprecation_message: ''
+  - name: KeypadNine
+    summary: |
+      The `9` key on the keypad cluster.
+    value: 265
+    tags: []
+    deprecation_message: ''
+  - name: KeypadPeriod
+    summary: |
+      The `.` key on the keypad cluster.
+    value: 266
+    tags: []
+    deprecation_message: ''
+  - name: KeypadDivide
+    summary: |
+      The `/` key on the keypad cluster.
+    value: 267
+    tags: []
+    deprecation_message: ''
+  - name: KeypadMultiply
+    summary: |
+      The `*` key on the keypad cluster.
+    value: 268
+    tags: []
+    deprecation_message: ''
+  - name: KeypadMinus
+    summary: |
+      The `-` key on the keypad cluster.
+    value: 269
+    tags: []
+    deprecation_message: ''
+  - name: KeypadPlus
+    summary: |
+      The `+` key on the keypad cluster.
+    value: 270
+    tags: []
+    deprecation_message: ''
+  - name: KeypadEnter
+    summary: |
+      The `Enter` key on the keypad cluster.
+    value: 271
+    tags: []
+    deprecation_message: ''
+  - name: KeypadEquals
+    summary: |
+      The `=` key on the keypad cluster.
+    value: 272
+    tags: []
+    deprecation_message: ''
+  - name: Up
+    summary: |
+      The `↑` arrow key.
+    value: 273
+    tags: []
+    deprecation_message: ''
+  - name: Down
+    summary: |
+      The `↓` arrow key.
+    value: 274
+    tags: []
+    deprecation_message: ''
+  - name: Right
+    summary: |
+      The `→` arrow key.
+    value: 275
+    tags: []
+    deprecation_message: ''
+  - name: Left
+    summary: |
+      The `←` arrow key.
+    value: 276
+    tags: []
+    deprecation_message: ''
+  - name: Insert
+    summary: |
+      The `Insert` key.
+    value: 277
+    tags: []
+    deprecation_message: ''
+  - name: Home
+    summary: |
+      The `Home` key.
+    value: 278
+    tags: []
+    deprecation_message: ''
+  - name: End
+    summary: |
+      The `End` key.
+    value: 279
+    tags: []
+    deprecation_message: ''
+  - name: PageUp
+    summary: |
+      The `PgUp` key.
+    value: 280
+    tags: []
+    deprecation_message: ''
+  - name: PageDown
+    summary: |
+      The `PgDown` key.
+    value: 281
+    tags: []
+    deprecation_message: ''
+  - name: F1
+    summary: |
+      The `F1` key.
+    value: 282
+    tags: []
+    deprecation_message: ''
+  - name: F2
+    summary: |
+      The `F2` key.
+    value: 283
+    tags: []
+    deprecation_message: ''
+  - name: F3
+    summary: |
+      The `F3` key.
+    value: 284
+    tags: []
+    deprecation_message: ''
+  - name: F4
+    summary: |
+      The `F4` key.
+    value: 285
+    tags: []
+    deprecation_message: ''
+  - name: F5
+    summary: |
+      The `F5` key.
+    value: 286
+    tags: []
+    deprecation_message: ''
+  - name: F6
+    summary: |
+      The `F6` key.
+    value: 287
+    tags: []
+    deprecation_message: ''
+  - name: F7
+    summary: |
+      The `F7` key.
+    value: 288
+    tags: []
+    deprecation_message: ''
+  - name: F8
+    summary: |
+      The `F8` key.
+    value: 289
+    tags: []
+    deprecation_message: ''
+  - name: F9
+    summary: |
+      The `F9` key.
+    value: 290
+    tags: []
+    deprecation_message: ''
+  - name: F10
+    summary: |
+      The `F10` key.
+    value: 291
+    tags: []
+    deprecation_message: ''
+  - name: F11
+    summary: |
+      The `F11` key.
+    value: 292
+    tags: []
+    deprecation_message: ''
+  - name: F12
+    summary: |
+      The `F12` key.
+    value: 293
+    tags: []
+    deprecation_message: ''
+  - name: F13
+    summary: |
+      The `F13` key. Only present on certain keyboards.
+    value: 294
+    tags: []
+    deprecation_message: ''
+  - name: F14
+    summary: |
+      The `F14` key. Only present on certain keyboards.
+    value: 295
+    tags: []
+    deprecation_message: ''
+  - name: F15
+    summary: |
+      The `F15` key. Only present on certain keyboards.
+    value: 296
+    tags: []
+    deprecation_message: ''
+  - name: NumLock
+    summary: |
+      The `Num Lock` key on the keypad cluster.
+    value: 300
+    tags: []
+    deprecation_message: ''
+  - name: CapsLock
+    summary: |
+      The `Caps Lock` key.
+    value: 301
+    tags: []
+    deprecation_message: ''
+  - name: ScrollLock
+    summary: |
+      The `Scr Lock` key.
+    value: 302
+    tags: []
+    deprecation_message: ''
+  - name: RightShift
+    summary: |
+      The right side `Shift` key.
+    value: 303
+    tags: []
+    deprecation_message: ''
+  - name: LeftShift
+    summary: |
+      The left side `Shift` key.
+    value: 304
+    tags: []
+    deprecation_message: ''
+  - name: RightControl
+    summary: |
+      The right side `Ctrl` key.
+    value: 305
+    tags: []
+    deprecation_message: ''
+  - name: LeftControl
+    summary: |
+      The left side `Ctrl` key.
+    value: 306
+    tags: []
+    deprecation_message: ''
+  - name: RightAlt
+    summary: |
+      The right side `Alt` key.
+    value: 307
+    tags: []
+    deprecation_message: ''
+  - name: LeftAlt
+    summary: |
+      The left side `Alt` key.
+    value: 308
+    tags: []
+    deprecation_message: ''
+  - name: RightMeta
+    summary: |
+      The right side `Meta` key.
+    value: 309
+    tags: []
+    deprecation_message: ''
+  - name: LeftMeta
+    summary: |
+      The left side `Meta` key.
+    value: 310
+    tags: []
+    deprecation_message: ''
+  - name: LeftSuper
+    summary: |
+      The left side `Super` key. Better known as the Windows key or Cmd key.
+    value: 311
+    tags: []
+    deprecation_message: ''
+  - name: RightSuper
+    summary: |
+      The right side `Super` key. Better known as the Windows key or Cmd key.
+    value: 312
+    tags: []
+    deprecation_message: ''
+  - name: Mode
+    summary: |
+      Only present on certain keyboards.
+    value: 313
+    tags: []
+    deprecation_message: ''
+  - name: Compose
+    summary: |
+      Only present on certain keyboards.
+    value: 314
+    tags: []
+    deprecation_message: ''
+  - name: Help
+    summary: |
+      Only present on certain keyboards.
+    value: 315
+    tags: []
+    deprecation_message: ''
+  - name: Print
+    summary: |
+      Only present on certain keyboards.
+    value: 316
+    tags: []
+    deprecation_message: ''
+  - name: SysReq
+    summary: |
+      Only present on certain keyboards.
+    value: 317
+    tags: []
+    deprecation_message: ''
+  - name: Break
+    summary: |
+      Only present on certain keyboards.
+    value: 318
+    tags: []
+    deprecation_message: ''
+  - name: Menu
+    summary: |
+      The `Menu` key.
+    value: 319
+    tags: []
+    deprecation_message: ''
+  - name: Power
+    summary: |
+      Only present on certain keyboards.
+    value: 320
+    tags: []
+    deprecation_message: ''
+  - name: Euro
+    summary: |
+      The `€` key. Only present on certain keyboards.
+    value: 321
+    tags: []
+    deprecation_message: ''
+  - name: Undo
+    summary: |
+      Only present on certain keyboards.
+    value: 322
+    tags: []
+    deprecation_message: ''
+  - name: ButtonX
+    summary: |
+      Gamepad X button.
+    value: 1000
+    tags: []
+    deprecation_message: ''
+  - name: ButtonY
+    summary: |
+      Gamepad Y button.
+    value: 1001
+    tags: []
+    deprecation_message: ''
+  - name: ButtonA
+    summary: |
+      Gamepad A button.
+    value: 1002
+    tags: []
+    deprecation_message: ''
+  - name: ButtonB
+    summary: |
+      Gamepad B button.
+    value: 1003
+    tags: []
+    deprecation_message: ''
+  - name: ButtonR1
+    summary: |
+      Gamepad R1 button.
+    value: 1004
+    tags: []
+    deprecation_message: ''
+  - name: ButtonL1
+    summary: |
+      Gamepad L1 button.
+    value: 1005
+    tags: []
+    deprecation_message: ''
+  - name: ButtonR2
+    summary: |
+      Gamepad R2 button.
+    value: 1006
+    tags: []
+    deprecation_message: ''
+  - name: ButtonL2
+    summary: |
+      Gamepad L2 button.
+    value: 1007
+    tags: []
+    deprecation_message: ''
+  - name: ButtonR3
+    summary: |
+      Gamepad R3 button.
+    value: 1008
+    tags: []
+    deprecation_message: ''
+  - name: ButtonL3
+    summary: |
+      Gamepad L3 button.
+    value: 1009
+    tags: []
+    deprecation_message: ''
+  - name: ButtonStart
+    summary: |
+      Gamepad Start button.
+    value: 1010
+    tags: []
+    deprecation_message: ''
+  - name: ButtonSelect
+    summary: |
+      Gamepad Select button.
+    value: 1011
+    tags: []
+    deprecation_message: ''
+  - name: DPadLeft
+    summary: |
+      Left arrow on a gamepad D-pad.
+    value: 1012
+    tags: []
+    deprecation_message: ''
+  - name: DPadRight
+    summary: |
+      Right arrow on a gamepad D-pad.
+    value: 1013
+    tags: []
+    deprecation_message: ''
+  - name: DPadUp
+    summary: |
+      Up arrow on a gamepad D-pad.
+    value: 1014
+    tags: []
+    deprecation_message: ''
+  - name: DPadDown
+    summary: |
+      Down arrow on a gamepad D-pad.
+    value: 1015
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick1
+    summary: |
+      Gamepad primary thumbstick.
+    value: 1016
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick2
+    summary: |
+      Gamepad secondary thumbstick.
+    value: 1017
+    tags: []
+    deprecation_message: ''

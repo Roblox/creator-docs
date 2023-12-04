@@ -1,0 +1,29 @@
+name: Axis
+type: enum
+summary: |
+  One of the 3D axes.
+description: |
+  The Axis Enum represents the X, Y and Z axes. Primarily this Enum is used with
+  `Class.ArcHandles` and `Class.Handles`.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: X
+    summary: |
+      The X axis.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: 'Y'
+    summary: |
+      The Y axis.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Z
+    summary: |
+      The Z axis.
+    value: 2
+    tags: []
+    deprecation_message: ''

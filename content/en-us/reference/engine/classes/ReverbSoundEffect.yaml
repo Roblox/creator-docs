@@ -1,0 +1,112 @@
+name: ReverbSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Reverberates audio, simulating the effect of bouncing off walls in a room.
+description: |
+  The ReverbSoundEffect simulates the effect of sounds bouncing off of several
+  surfaces (such as walls in a room), which causes several overlapping echoes
+  that arrive at the listener at slightly offset times.
+
+  Like all other `Class.SoundEffect`s, a ReverbSoundEffect can be applied either
+  to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: ReverbSoundEffect.DecayTime
+    summary: |
+      Sets how long it takes for the reverberating echoes to fade out
+      completely.
+    description: |
+      Range: 0.1 to 20 (default 1.5) Sets how long it takes for the
+      reverberating echoes to fade out completely. Larger decay times simulate
+      larger (empty) spaces
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReverbSoundEffect.Density
+    summary: |
+      Controls how many reflections are generated.
+    description: |
+      Range: 0 to 1 (default 1) Controls how many reflections are generated.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReverbSoundEffect.Diffusion
+    summary: |
+      Controls how smooth and reflective the simulated surfaces are.
+    description: |
+      Range: 0 to 1 (default 1) Controls how smooth and reflective the simulated
+      surfaces are. The lower this value, the more discrete the echoes are. At
+      higher levels the echos will blend more.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReverbSoundEffect.DryLevel
+    summary: |
+      The output volume of the original sound.
+    description: |
+      Range: -80 to 10 (default -6) The output volume of the original sound.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ReverbSoundEffect.WetLevel
+    summary: |
+      The output volume of the echoed effect.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of the echoed effect.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,102 @@
+name: VoiceChatService
+type: class
+category:
+memory_category: Instances
+summary: |
+  **VoiceChatService** holds voice functions not tied to other instances.
+description: |
+  **VoiceChatService** holds voice functions not tied to other instances.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: VoiceChatService.EnableDefaultVoice
+    summary: |
+      Indicates whether or not the place uses the default voice manager.
+    description: |
+      Indicates whether or not the place uses the default voice manager. This is
+      on by default.
+
+      When enabled, the default voice manager adds all voice-eligible users to
+      chat with spatial voice as they join the place.
+
+      When disabled, the place doesn't use the default voice manager, and users
+      are not added to chat with spatial voice when they join the place.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VoiceChatService.UseAudioApi
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioApiRollout
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
+    summary: |
+      Returns whether or not the given user has voice enabled.
+    description: |
+      Returns whether or not the given user has voice enabled. On the
+      client-side, this can only be used to check the voice status of the local
+      player. On the server-side, this can only check the voice status for
+      players in that server.
+
+      This function can throw an error if the HTTP call fails.
+
+      The following code sample enables a UI layer only for voice enabled
+      players.
+
+      ```lua
+      local Players = game:GetService("Players")
+      local VoiceChatService = game:GetService("VoiceChatService")
+
+      local localPlayer = Players.LocalPlayer
+      local success, enabled = pcall(function()
+          return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
+      end)
+      if success and enabled then
+          localPlayer.PlayerGui.MyVoiceGui.Enabled = true
+      end
+
+      ```
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `UserId` to check.
+    returns:
+      - type: bool
+        summary: |
+          If that user has voice enabled.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

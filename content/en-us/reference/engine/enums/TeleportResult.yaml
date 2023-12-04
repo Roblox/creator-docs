@@ -1,0 +1,58 @@
+name: TeleportResult
+type: enum
+summary: |
+  Describes the result of a teleport.
+description: |
+  Describes the result of a teleport.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Success
+    summary: |
+      The teleport was successful!.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Failure
+    summary: |
+      The teleport failed for an unknown reason!.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: GameNotFound
+    summary: |
+      The game that this player attempted to teleport to could not be found.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: GameEnded
+    summary: |
+      The game that this player attempted to teleport to has ended.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: GameFull
+    summary: |
+      The game that this player attempted to teleport to is full.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Unauthorized
+    summary: |
+      The player is not authorized to complete this teleport.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Flooded
+    summary: |
+      Too many teleport requests have been made recently.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: IsTeleporting
+    summary: |
+      The player is currently being teleported.
+    value: 7
+    tags: []
+    deprecation_message: ''

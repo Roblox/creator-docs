@@ -1,0 +1,20 @@
+name: LoginService
+type: class
+category:
+memory_category: Instances
+summary: |
+  An internal service whose functionality is not available to developers.
+description: |
+  An unfinished service which apparently would have allowed a user to login from
+  within a place.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

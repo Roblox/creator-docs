@@ -1,0 +1,168 @@
+name: Pose
+type: class
+category: Animations
+memory_category: Animation
+summary: |
+  Holds the `Datatype.CFrame` applied to the `Class.Motor6D` connected to its
+  associated `Class.BasePart`. The part which is controlled depends on the name
+  of the Pose.
+description: |
+  A Pose holds the `Datatype.CFrame` applied to the `Class.Motor6D` connected to
+  its associated `Class.BasePart`. The part which is controlled depends on the
+  name of the Pose.
+
+  Poses are the fundamental building blocks of animations and, with `Keyframes`,
+  make up `KeyframeSequences`.
+
+  ## Poses, joints and hierarchy
+
+  Although a Pose is assigned to a `Class.BasePart` by name, the object
+  manipulated during animation playback is actually the `Class.Motor6D`
+  connected to this part. Animation rigs branch out from the model's root part
+  through such joints.
+
+  In a R15 character rig, the root part is the HumanoidRootPart. The LowerTorso
+  is connected to the HumanoidRootPart by the a motor named 'Root'. Therefore,
+  the `Datatype.CFrame` of a Pose named 'LowerTorso' in a `Class.Keyframe` would
+  be applied to the motor named 'Root', and not the LowerTorso itself.
+
+  Poses are arranged in a `Class.Keyframe` based on joint hierarchy. This means,
+  the Pose's `Datatype.CFrame` is applied to the motor connecting the part
+  associated with the pose to the part associated with the pose's parent. See
+  below for a visual example of the structure of Poses on a R15 character.
+
+  ## Pose CFrame
+
+  The Roblox animation system applies `Class.Pose.CFrame` to the corresponding
+  `Class.Motor6D` by manipulating the relative transformation of the motor, the
+  `Class.Motor6D.Transform` property. The original `Class.JointInstance.C1|C0`
+  and `Class.JointInstance.C1|C1` values are not changed.
+code_samples:
+  - Keyframe-Generate-Poses
+  - Keyframe-Reset-Poses
+inherits:
+  - PoseBase
+tags: []
+deprecation_message: ''
+properties:
+  - name: Pose.CFrame
+    summary: |
+      This `Datatype.CFrame` applies to the `Class.Motor6D` corresponding with
+      the `Class.Pose` when the `Class.Motor6D.Transform` is changed.
+    description: |
+      This `Datatype.CFrame` applies to the `Class.Motor6D` corresponding with
+      the `Class.Pose` when the `Class.Motor6D.Transform` is changed. The
+      original `Class.Motor6D.C0` and `Class.Motor6D.C1` values are not changed.
+
+      `Class.Pose` objects are arranged in a `Class.Keyframe` based on joint
+      hierarchy. This means, that the `Class.Pose.CFrame` is applied to the
+      motor connecting the part associated with the pose to the part associated
+      with the pose's parent.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Pose.MaskWeight
+    summary: ''
+    description: ''
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated. Use the `Class.AnimationTrack:AdjustWeight()`
+      function when blending multiple animations.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: Pose:AddSubPose
+    summary: |
+      Adds a sub `Class.Pose` to the `Class.Pose` by parenting it.
+    description: |
+      Adds a sub `Class.Pose` to the `Class.Pose` by parenting it to it. It is
+      functionally identical to setting the new pose's `Class.Instance.Parent`
+      to the pose.
+
+      Note, this function will not error when an instance other than a
+      `Class.Pose` is given as the pose parameter and will parent it
+      successfully.
+    code_samples:
+      - Keyframe-Add-Remove-Pose
+    parameters:
+      - name: pose
+        type: Instance
+        default:
+        summary: |
+          The `Class.Pose` to be added.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Pose:GetSubPoses
+    summary: |
+      Returns an array containing all sub `Class.Pose`s that have been added to
+      a `Class.Pose`.
+    description: |
+      Returns an array containing all sub `Class.Pose`s that have been added to
+      a `Class.Pose`. This is functionally the same as using the
+      `Class.Instance:GetChildren()` function on the `Class.Pose`.
+
+      Note: this function returns all children of the `Class.Pose`, including
+      non `Class.Pose` `Class.Instance`s if any are present.
+    code_samples:
+      - Keyframe-Reset-Poses
+    parameters: []
+    returns:
+      - type: Objects
+        summary: |
+          An array of sub `Class.Pose`s.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Pose:RemoveSubPose
+    summary: |
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+    description: |
+      Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
+      This is functionally identical to setting the new pose's
+      `Class.Instance.Parent` to nil.
+
+      Note: If an `Class.Instance` other than `Class.Pose` is used as a
+      `Class.Pose` parameter, this function removes that `Class.Instance` and
+      does not provide an error.
+    code_samples:
+      - Keyframe-Add-Remove-Pose
+    parameters:
+      - name: pose
+        type: Instance
+        default:
+        summary: |
+          The `Class.Pose` to be removed.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

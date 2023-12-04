@@ -1,0 +1,576 @@
+name: BillboardGui
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  A container for `Class.GuiObject|GuiObjects` that renders in 3D space facing
+  the camera.
+description: |
+  BillboardGuis are containers for `Class.GuiObject|GuiObjects` that appear in
+  the 3D space. BillboardGuis always face the camera, and can either change size
+  with distance or remain the same size on the screen based on the
+  `Class.BillboardGui.Size` property.
+
+  Their position is relative to the `Class.BillboardGui.Adornee`. If no Adornee
+  is set, then the parent of the BillboardGui will be used as the adornee. For
+  `Class.BasePart|BaseParts`, the `Class.BasePart.Position|Position` property
+  will be used. For `Class.Attachment|Attachments`, the
+  `Class.Attachment.WorldPosition|WorldPosition` property will be used.
+
+  The `Class.BillboardGui.Size|Size` property of a BillboardGui works slightly
+  differently than `Class.GuiObject.Size`. The Offset portion works the same,
+  but the Scale portion is used as a size in studs in 3D space.
+
+  A size of `UDim2.fromScale(4, 5)` is 4x5 studs, and scales the UI larger and
+  smaller depending on distance from the camera. A size of
+  `UDim2.fromOffset(200, 100)` is always 200x100 on the screen, and does not
+  change size with distance. Scale and Offset values can also be combined
+  together, like with `Class.GuiObject.Size`.
+
+  When creating size-scaled BillboardGuis, it's important to make sure all the
+  UI objects within are using Scale sizing and all text has
+  `Class.TextLabel.TextScaled` enabled, to ensure correct scaling.
+
+  The AbsolutePosition property of a BillboardGui and all of its descendants is
+  relative to the top left corner of its canvas, and so is always `0, 0` for the
+  BillboardGui instance.
+
+  ## Caching Static UI for Performance
+
+  A Gui's appearance is cached until one of the following events occurs:
+
+  - A descendant is added to the Gui.
+  - A descendant is removed from the Gui.
+  - A property of a descendant of the Gui changes.
+  - A property of the Gui changes.
+
+  If any of these events occur, the Gui's appearance will be recomputed the next
+  frame it gets rendered.
+code_samples:
+inherits:
+  - LayerCollector
+tags: []
+deprecation_message: ''
+properties:
+  - name: BillboardGui.Active
+    summary: |
+      Controls whether the descendants will receive input events.
+    description: |
+      Controls whether the descendants will receive input events. If the UI
+      contains a `Class.GuiButton` then that button will become clickable only
+      if Active is set to true on both the BillboardGui and the button.
+
+      BillboardGuis will only receive user input if they are parented to the
+      PlayerGui. The `Class.BillboardGui.Adornee` property can be used to target
+      a Part in the workspace while the UI itself is in the `Class.PlayerGui`.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.Adornee
+    summary: |
+      Sets the target part or attachment that the BillboardGui is positioned
+      relative to.
+    description: |
+      Sets the target part or attachment that the BillboardGui is positioned
+      relative to. If no Adornee is set, then the `Class.Instance.Parent|Parent`
+      is used instead.
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.AlwaysOnTop
+    summary: |
+      Determines whether the BillboardGui will render in front of 3D content or
+      behind it.
+    description: |
+      Determines whether the BillboardGui will render over top of 3D content, or
+      be occluded by it.
+
+      When set to false, the BillboardGui will render like other 3D content, and
+      will be occluded by other 3D objects.
+
+      When set to true, it always renders on top of 3D content, and the
+      appearance changes significantly:
+
+      - Colors match how they appear inside a `Class.ScreenGui`.
+      - Text may appear sharper on high DPI devices.
+      - `Class.BillboardGui.LightInfluence` is treated as though it was 0.
+      - `Class.BillboardGui.Brightness` has no effect.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.Brightness
+    summary: |
+      Determines the factor by which the GUI's light is scaled when
+      `Class.BillboardGui.LightInfluence|LightInfluence` is 0.
+    description: |
+      **Brightness** determines the factor by which the GUI's emitted light is
+      scaled. By default, this property is 1 and can be set to any number on the
+      range [0, 1000].
+
+      By modifying this property, the apparent brightness of a GUI can be better
+      matched to its environment. For instance, a video billboard like those
+      found in Times Square can be made brighter to be clearly visible on a
+      bright day.
+
+      This property won't produce any effect in the following scenarios wherein
+      the GUI does not emit light.:
+
+      - When `Class.BillboardGui.AlwaysOnTop|AlwaysOnTop` is true, the color of
+        each pixel is the color shown on-screen.
+      - When `Class.BillboardGui.LightInfluence|LightInfluence` is 1, all light
+        from the GUI is reflected from the environment instead of being emit.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.ClipsDescendants
+    summary: |
+      When set to true, portions of GuiObjects that fall outside of the
+      BillboardGui's canvas borders will not be drawn.
+    description: |
+      When set to true, portions of GuiObjects that fall outside of the
+      BillboardGui's canvas borders will not be drawn.
+
+      Even when this property is false, objects that are completely outside of
+      the canvas of the BillboardGui will not render.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.CurrentDistance
+    summary: |
+      The current distance in studs that the `Class.BillboardGui` is from the
+      player's camera.
+    description: |
+      The current distance in studs that the `Class.BillboardGui` is from the
+      player's camera. A changed event does not fire for this property unless
+      the gui's `Class.BillboardGui.DistanceStep` is more than 0.
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: BillboardGui.DistanceLowerLimit
+    summary: |
+      Determines the distance in studs that a `Class.BillboardGui` will stop
+      scaling larger in size at.
+    description: |
+      Determines the distance in studs that a `Class.BillboardGui` will stop
+      scaling larger in size at relative to the player's current camera. If the
+      distance of the gui is below this value, it will not be scaled any larger
+      than it would be at this distance. The value of this property defaults to
+      0 studs.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.DistanceStep
+    summary: |
+      Distance will be rounded to increments of this value.
+    description: |
+      Determines the size `Class.BillboardGui.CurrentDistance` increments and
+      decrements in studs as the player's camera moves closer and further from
+      the `Class.BillboardGui`. The property defaults to 0 and rounds up
+      starting from `Class.BillboardGui.DistanceLowerLimit`.
+
+      For example, if this property is set to 0.5 and the player's camera is
+      moving away from the gui starting from 0 then CurrentDistance will
+      increase 0 -> 0.5 -> 1 -> 1.5 -> ... and so forth.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.DistanceUpperLimit
+    summary: |
+      Determines the distance in studs that a `Class.BillboardGui` will stop
+      scaling smaller in size at.
+    description: |
+      Determines the distance in studs that a `Class.BillboardGui` will stop
+      scaling smaller in size at relative to the player's current camera. If the
+      distance of the gui is above this value, it will not be scaled any smaller
+      than it would be at this distance.
+
+      This property is ignored if the value is less than 0. The default value is
+      -1, meaning the property is ignored by default.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.ExtentsOffset
+    summary: |
+      Determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the `Class.Camera`
+      orientation and units are half the dimensions of the model's
+      `Class.Camera`-aligned bounding box.
+    description: |
+      **ExtentsOffset** determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the `Class.Camera`
+      orientation and units are half the dimensions of the model's
+      `Class.Camera`-aligned bounding box.
+
+      See also:
+
+      - `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace`,
+        which works similarly except the offset orientation is relative to the
+        global axes
+      - `Class.BillboardGui.StudsOffset|StudsOffset`, which works similarly
+        except the units are studs
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.ExtentsOffsetWorldSpace
+    summary: |
+      Determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the global axes and
+      units are half the dimensions of the model's axis-aligned bounding box.
+    description: |
+      **ExtentsOffsetWorldSpace** determines how the BillboardGui is offset from
+      its `Class.BillboardGui.Adornee|Adornee`, relative to the global axes and
+      units are half the dimensions of the model's axis-aligned bounding box.
+
+      See also:
+
+      - `Class.BillboardGui.ExtentsOffset|ExtentsOffset`, which works similarly
+        except the offset orientation is relative to the `Class.Camera`
+      - `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`, which
+        works similarly except the units are studs
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.LightInfluence
+    summary: |
+      Controls how much the BillboardGui is influenced by the lighting in the
+      environment.
+    description: |
+      Controls how much the BillboardGui is influenced by the lighting in the
+      environment.
+
+      When set to 0, the UI behaves similarly to an LCD screen, acting as its
+      own light source and appearing the same regardless of the surrounding
+      lighting.
+
+      When set to 1, the UI behaves similarly to a piece of paper, only
+      reflecting the light from another source.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.MaxDistance
+    summary: |
+      Sets the maximum distance a billboard can be from the camera and still be
+      drawn.
+    description: |
+      The MaxDistance property of a `Class.BillboardGui` sets how far away in
+      studs that billboard can be from the camera and still be drawn. If the
+      camera and billboard are moved further apart than the maximum distance,
+      then the billboard will not be visible regardless of any other properties
+      of the billboard or any GUI objects it contains. The default value of this
+      property is infinity
+
+      If this value is set to less than or equal to 0 then the maximum distance
+      will be treated as infinite and the billboard will always be drawable.
+
+      #### Example
+
+      ```lua
+      -- Wait for default camera/control scripts to load
+      task.wait(5)
+
+      -- Declare and initialize objects
+      local camera = workspace.CurrentCamera
+      local part = Instance.new("Part")
+      local billboard = Instance.new("BillboardGui")
+      local label = Instance.new("TextLabel")
+
+      -- Set up camera type
+      camera.CameraType = Enum.CameraType.Scriptable
+
+      -- Set part's position and lock in place
+      part.CFrame = CFrame.new(0, 10, 0)
+      part.Anchored = true
+
+      -- Set up billboard
+      billboard.MaxDistance = 10
+      billboard.Adornee = part
+      billboard.AlwaysOnTop = true
+      billboard.Size = UDim2.fromOffset(50, 50)
+
+      -- Set up label
+      label.Size = UDim2.fromScale(1, 1)
+
+      -- Set parents of objects
+      label.Parent = billboard
+      billboard.Parent = part
+      part.Parent = workspace
+
+      -- Move camera next to part. Wait a bit and then move camera
+      local cameraPosition0 = part.Position + Vector3.new(0, 0, 10)
+      local cameraPosition1 = part.Position + Vector3.new(0, 0, 20)
+      camera.CFrame = CFrame.lookAt(cameraPosition0, part.Position)
+
+      -- Contents of billboard will be visible here
+      task.wait(2)
+      camera.CFrame = CFrame.lookAt(cameraPosition1, part.Position)
+      -- Contents of billboard will no longer be visible (outside MaxDistance)
+      ```
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.PlayerToHideFrom
+    summary: |
+      Used by scripts to hide the BillboardGui from a specific player.
+    description: |
+      Used by scripts to hide the BillboardGui from a specific player.
+
+      To hide the UI from more than one player, place the BillboardGui into
+      `Class.StarterGui` and use a script to set the
+      `Class.BillboardGui.Enabled` property according to whether the
+      `Class.Players.LocalPlayer` should be able to see it. The
+      `Class.BillboardGui.Adornee` property can be used to attach the
+      BillboardGui to a `Class.Part` or `Class.Attachment` in the
+      `Class.Workspace`, instead of parenting it.
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.Size
+    summary: |
+      Controls the size that the BillboardGui will have on screen.
+    description: |
+      Controls the size that the BillboardGui will have on screen.
+
+      The Scale component of the Size is interpreted as a size in studs, and the
+      UI will automatically scale with distance if Scale values are used.
+
+      The Scale and Offset portions of the size are added together, and can be
+      used at the same time.
+    code_samples:
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.SizeOffset
+    summary: |
+      A 2D offset in size-relative units that acts like an anchor point.
+    description: |
+      A 2D offset in size-relative units that acts like an anchor point. This
+      can be used similarly to the `Class.GuiObject.AnchorPoint` property, but
+      the values are different.
+
+      #### Common Values
+
+      | SizeOffset | Explanation                                         |
+      | ---------: | --------------------------------------------------- |
+      |   0.0, 0.0 | The default. The UI will be anchored at its center. |
+      |   0.5, 0.5 | The UI will anchor at the bottom left.              |
+      |  0.5, -0.5 | The UI will anchor at the top left.                 |
+      |  -0.5, 0.5 | The UI will anchor at the top right.                |
+      | -0.5, -0.5 | The UI will anchor at the bottom right.             |
+
+      See also:
+
+      - `Class.BillboardGui.StudsOffset|StudsOffset`,
+        `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`,
+        `Class.BillboardGui.ExtentsOffset|ExtentsOffset`,
+        `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace`,
+        which are all other offset properties that work in 3D space instead
+    code_samples:
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.StudsOffset
+    summary: |
+      Determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the `Class.Camera`
+      orientation and units in studs.
+    description: |
+      **StudsOffset** determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the `Class.Camera`
+      orientation with units in studs.
+
+      See also:
+
+      - `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`, which
+        works similarly except the offset orientation is relative to the global
+        axes
+      - `Class.BillboardGui.ExtentsOffset|ExtentsOffset`, which works similarly
+        except the units are half the dimensions of the model's Camera-aligned
+        bounding box
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BillboardGui.StudsOffsetWorldSpace
+    summary: |
+      Determines how the BillboardGui is offset from its
+      `Class.BillboardGui.Adornee|Adornee`, relative to the global axes and
+      units in studs.
+    description: |
+      **StudsOffsetWorldSpace** determines how the BillboardGui is offset from
+      its `Class.BillboardGui.Adornee|Adornee`, relative to the global axes with
+      units in studs.
+
+      See also:
+
+      - `Class.BillboardGui.StudsOffset|StudsOffset`, which works similarly
+        except the offset orientation is relative to the `Class.Camera`
+      - `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace`,
+        which works similarly except the units are half the dimensions of the
+        model's axis-aligned bounding box
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

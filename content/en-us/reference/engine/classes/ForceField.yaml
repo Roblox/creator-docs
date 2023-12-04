@@ -1,0 +1,105 @@
+name: ForceField
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
+  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart`s from
+  having their joints broken due to an `Class.Explosion`.
+description: |
+  A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
+  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart`s from
+  having their joints broken due to an `Class.Explosion`.
+
+  ## ForceField Creation
+
+  ForceFields are created when a character spawns on a `Class.SpawnLocation` and
+  the `Class.SpawnLocation.Duration` property is greater than zero.
+
+  ForceFields influence the instance they are parented to. When parented to a
+  `Class.Model` they will protect all of the `Class.BasePart`s descending from
+  that model. They may be parented to a `Class.BasePart`, but the part's joints
+  will only be protected if both the part and the part it is connected to also
+  contain ForceField.
+
+  ## Forcefields and Joints
+
+  When a ForceField is parented to a character `Class.Model` the neck joint will
+  be protected and thus the character can not be killed by `Explosions`.
+  Developers can protect joints from Explosions without the need for a
+  `Class.ForceField` object by setting
+  `Class.Explosion.DestroyJointRadiusPercent` to 0.
+
+  **ForceFields and Damage**
+
+  ForceFields only protect `Class.Humanoid`s from damage using the
+  `Class.Humanoid:TakeDamage()` function. Humanoids can still be damaged by
+  setting `Class.Humanoid.Health` directly. For this reason, it is advised that
+  developers use `Class.Humanoid:TakeDamage()`. Bearing in mind of course, that
+  it is still possible to check if a `Class.ForceField` exists before manually
+  setting the humanoid's health as shown below:
+
+      if not characterModel:FindFirstChildOfClass("ForceField") then
+      	humanoid.Health = humanoid.Health - 10
+      end
+
+  ## ForceField Visuals
+
+  When `Class.ForceField.Visible` is set to true, a particle effect is created.
+  A number of rules determine where this effect will be emitted from.
+
+  When parented to a `Class.Model`, if the model includes a `Class.Humanoid`
+  named "Humanoid" with `Class.Humanoid.RigType` set to R15, the effect will be
+  emitted from the part named "UpperTorso". Otherwise, the effect will be
+  emitted from the part named "Torso". The part must have the same parent as the
+  ForceField, if it does not exist then the effect is emitted at 0, 0, 0.
+
+  When parented to a `Class.BasePart` the effect will be emitted from the part's
+  `Class.BasePart.Position`.
+code_samples:
+  - SpawnLocation-ForceField
+  - ForceField-Instantiation
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: ForceField.Visible
+    summary: |
+      Determines whether or not the `Class.ForceField`'s particle effect is
+      visible.
+    description: |
+      Determines whether or not the `Class.ForceField`'s particle effect is
+      visible.
+
+      When is set to true, a particle effect is created, a number of rules
+      determine where this effect will be emitted from.
+
+      When parented to a `Class.Model`, if the model includes a `Class.Humanoid`
+      named "Humanoid" with `Class.Humanoid.RigType` set to R15, the effect will
+      be emitted from the part named "UpperTorso". Otherwise, the effect will be
+      emitted from the part named "Torso". The part must have the same parent as
+      the ForceField, if it does not exist then the effect is emitted at 0,
+      0, 0.
+
+      When parented to a `Class.BasePart` the effect will be emitted from the
+      part's `Class.BasePart.Position`.
+
+      One use for this property is replacing the default particle effect with a
+      custom effect using `Class.ParticleEmitter`s.
+    code_samples:
+      - Custom-ForceField
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

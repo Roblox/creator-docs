@@ -1,0 +1,253 @@
+name: PathfindingService
+type: class
+category: Pathfinding
+memory_category: Instances
+summary: |
+  Used to find logical paths between two points.
+description: |
+  **PathfindingService** is used to find logical paths between two points,
+  ensuring that characters can move between the points without running into
+  walls or other obstacles. By default, the shortest path is calculated, but you
+  can implement pathfinding modifiers to compute smarter paths across various
+  materials, around defined regions, or through obstacles.
+
+  See [Character Pathfinding](../../../characters/pathfinding.md) for usage
+  details.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PathfindingService.EmptyCutoff
+    summary: |
+      Sets the percent of a voxel has to be occupied to be considered empty.
+      Defaults to 0.16.
+    description: |
+      This function worked with the legacy pathfinding system. The pathfinding
+      system currently uses a navigation grid and the EmptyCutoff is unused.
+
+      When the `Class.PathfindingService` computes a path using
+      `Class.PathfindingService:ComputeRawPathAsync()` or
+      `Class.PathfindingService:ComputeRawPathAsync()` it uses the voxel
+      representation of the world. A voxel is one cube in a grid overlaid on the
+      world. In this case the voxels being used are 4x4x4. This property sets
+      the percent of a voxel has to be occupied to be considered empty. Defaults
+      to 0.16.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated, since the legacy pathfinding system using it
+      has since been removed. Do not use it for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: PathfindingService:CreatePath
+    summary: ''
+    description: |
+      Creates a `Class.Path` object based on various agent parameters. Valid
+      keys and values in the `agentParameters` table are as follows:
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Key</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>AgentRadius</b></td>
+                  <td>integer</td>
+                  <td>2</td>
+                  <td>Determines the minimum amount of horizontal space required
+                  for empty space to be considered traversable.</td>
+              </tr>
+              <tr>
+                  <td><b>AgentHeight</b></td>
+                  <td>integer</td>
+                  <td>5</td>
+                  <td>Determines the minimum amount of vertical space required
+                  for empty space to be considered traversable.</td>
+              </tr>
+              <tr>
+                  <td><b>AgentCanJump</b></td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Determines whether jumping during pathfinding is
+                  allowed.</td>
+              </tr>
+              <tr>
+                  <td><b>AgentCanClimb</b></td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>Determines whether climbing <code>Class.TrussPart|TrussParts</code>
+                  during pathfinding is allowed.</td>
+              </tr>
+              <tr>
+                  <td><b>WaypointSpacing</b></td>
+                  <td>number</td>
+                  <td>4</td>
+                  <td>Determines the spacing between intermediate waypoints in
+                  path.</td>
+              </tr>
+              <tr>
+                  <td><b>Costs</b></td>
+                  <td>table</td>
+                  <td>{}</td>
+                  <td>Table of materials or defined
+                  <code>Class.PathfindingModifier|PathfindingModifiers</code> and their
+                  "cost" for traversal. Useful for making the agent prefer
+                  certain materials/regions over others. See <a
+                  href="../../../characters/pathfinding.md#pathfinding-modifiers">here</a> for details.</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples:
+      - pathfinding---creating-path-with-params
+    parameters:
+      - name: agentParameters
+        type: Dictionary
+        default: nil
+        summary: |
+          Lua table which lets you fine-tune the path for the size of the agent
+          (the humanoid that will move along the path). See above for valid
+          keys, types, and descriptions.
+    returns:
+      - type: Instance
+        summary: |
+          A `Class.Path` object.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PathfindingService:ComputeRawPathAsync
+    summary: |
+      Computes and returns a `Class.Path` between two
+      `Datatype.Vector3|Vector3s`. If the given MaxDistance is greater than 512,
+      an error will be thrown. (MaxDistance is too large).
+    description: |
+      This function computes and returns a `Class.Path` between two
+      `Datatype.Vector3|Vector3s`. If the given MaxDistance is greater than 512,
+      an error will be thrown. (MaxDistance is too large).
+    code_samples:
+    parameters:
+      - name: start
+        type: Vector3
+        default:
+        summary: ''
+      - name: finish
+        type: Vector3
+        default:
+        summary: ''
+      - name: maxDistance
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: |
+          A `Class.Path` object.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by
+      `Class.PathfindingService:FindPathAsync()` which should be used in all new
+      work instead.
+    security: None
+    thread_safety: Unsafe
+  - name: PathfindingService:ComputeSmoothPathAsync
+    summary: |
+      Computes and returns a smooth `Class.Path` between two
+      `Datatype.Vector3|Vector3s`.
+    description: |
+      This function computes and returns a smooth `Class.Path` between two
+      `Datatype.Vector3|Vector3s`. This function fulfills the same purpose as
+      `Class.PathfindingService:ComputeRawPathAsync()`, but creates a much
+      smoother path for an NPC to follow in comparison.
+    code_samples:
+    parameters:
+      - name: start
+        type: Vector3
+        default:
+        summary: ''
+      - name: finish
+        type: Vector3
+        default:
+        summary: ''
+      - name: maxDistance
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by
+      `Class.PathfindingService:FindPathAsync()` which should be used in all new
+      work instead.
+    security: None
+    thread_safety: Unsafe
+  - name: PathfindingService:FindPathAsync
+    summary: |
+      Finds a `Class.Path` between the two provided points.
+    description: |
+      This function is used to find a `Class.Path` between two provided points.
+      This path uses the navigation grid created by `Class.PathfindingService`
+      and makes sure that the path can be followed by a regular-sized Roblox
+      character.
+
+      This function returns a `Class.Path` object which contains the coordinates
+      of the path. If no path is found between the two points, this function
+      will still return a `Class.Path` object, but that object's
+      `Class.Path.Status` will be `Enum.PathStatus.NoPath`.
+
+      To get the waypoints of a `Class.Path` object, you can use the
+      `Class.Path:GetWaypoints()` function.
+    code_samples:
+    parameters:
+      - name: start
+        type: Vector3
+        default:
+        summary: |
+          Path start coordinates.
+      - name: finish
+        type: Vector3
+        default:
+        summary: |
+          Path finish coordinates.
+    returns:
+      - type: Instance
+        summary: |
+          A `Class.Path` object.
+    tags:
+      - Yields
+    deprecation_message: |
+      This function has been superseded by the sequential method of calling
+      `Class.PathfindingService:CreatePath()` followed by
+      `Class.Path:ComputeAsync()|Path`. This lets you create a `Class.Path`
+      object using various custom parameters and then compute or re-compute a
+      path on the same object if any dynamic changes within the place block the
+      path.
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,150 @@
+name: LineForce
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Applies a force along the theoretical line connecting its two
+  `Class.Attachment|Attachments`.
+description: |
+  The **LineForce** constraint applies a force along the theoretical line
+  connecting its two `Class.Attachment|Attachments`. As the end points
+  (attachments) move, the direction of force will change accordingly.
+
+  When configuring this constraint, it may be helpful to study
+  [Roblox Units](../../../physics/units.md) to understand how Roblox units
+  compare to metric units.
+
+  #### Force Location
+
+  By default, force is applied to either parent at its attachment location. If
+  desired, force can be focused at each parent's center of mass by enabling
+  `Class.LineForce.ApplyAtCenterOfMass|ApplyAtCenterOfMass`.
+
+  #### Inverse Square Law
+
+  When `Class.LineForce.InverseSquareLaw|InverseSquareLaw` is true, the force
+  magnitude is multiplied by the inverse square of the distance, meaning the
+  force will increase exponentially as the two attachments get closer together,
+  like magnets. When using this setting, it's recommended that you set a
+  `Class.LineForce.MaxForce|MaxForce` threshold to prevent infinite force if the
+  attachments align precisely.
+
+  #### Reactionary Force
+
+  By default, the constraint only applies force to
+  `Class.Constraint.Attachment0|Attachment0`, while
+  `Class.Constraint.Attachment1|Attachment1` remains unaffected. However, force
+  can be applied to both attachments in **equal and opposite directions** by
+  enabling `Class.LineForce.ReactionForceEnabled|ReactionForceEnabled`.
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: LineForce.ApplyAtCenterOfMass
+    summary: |
+      Whether force is applied at the center of mass of the parent assembly.
+    description: |
+      When true, force is applied at the center of mass of the parent assembly
+      of `Class.LineForce.Attachment0|Attachment0`, and the line determining the
+      direction of the force will start at the said center of mass. When false,
+      force is applied at `Class.LineForce.Attachment0|Attachment0` and the line
+      determining the direction will also start at
+      `Class.LineForce.Attachment0|Attachment0`.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: LineForce
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LineForce.InverseSquareLaw
+    summary: |
+      When true, the force magnitude is multiplied by the inverse square of the
+      distance.
+    description: |
+      When true, the force magnitude is multiplied by the inverse square of the
+      distance.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: LineForce
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LineForce.Magnitude
+    summary: |
+      The magnitude of the force.
+    description: |
+      The magnitude of the force.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: LineForce
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LineForce.MaxForce
+    summary: |
+      Maximum absolute force that can be applied.
+    description: |
+      The maximum absolute force that can be applied. This property is enabled
+      only when `Class.LineForce.InverseSquareLaw|InverseSquareLaw` is also
+      enabled. This property is mainly used to address the issue that the force
+      of the body mover becomes infinite the closer the two attachments are,
+      causing explosions that can't be prevented by scripts. This property
+      bounds the force's absolute value.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: LineForce
+    serialization:
+      can_load: true
+      can_save: true
+  - name: LineForce.ReactionForceEnabled
+    summary: |
+      Enables an equal and opposite reaction force on the parent of
+      `Class.Constraint.Attachment1|Attachment1`.
+    description: |
+      Enables a reaction force (equal an opposite) to be applied to the parent
+      of `Class.Constraint.Attachment1|Attachment1`. By default line force only
+      applies a force on the parent of
+      `Class.Constraint.Attachment0|Attachment0` and uses
+      `Class.Constraint.Attachment1|Attachment1` as the target direction without
+      any dynamic relationship.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: LineForce
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

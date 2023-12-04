@@ -1,0 +1,138 @@
+name: GamepadService
+type: class
+category:
+memory_category: Instances
+summary: |
+  The GamepadService is internally responsible for handling inputs from various
+  controllers, such as Xbox One or PlayStation DualShock controllers.
+description: |
+  The GamepadService is internally responsible for handling inputs from various
+  controllers, such as Xbox One or PlayStation DualShock controllers. It also
+  handles APIs used with the gamepad virtual cursor. You can enable the gamepad
+  cursor for your experience by setting `Enum.VirtualCursorMode` under
+  `Class.StarterGui|StarterGui` to `Enabled`.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: GamepadService.GamepadCursorEnabled
+    summary: |
+      The state of the gamepad virtual cursor.
+    description: |
+      This boolean is a read only variable that maintains the state of the
+      gamepad virtual cursor.
+    code_samples:
+      - GamepadService-GamepadCursorEnabled
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: GamepadService:DisableGamepadCursor
+    summary: |
+      Disables the gamepad cursor, if currently enabled.
+    description: |
+      This function disables the gamepad cursor, if it's currently enabled.
+    code_samples:
+      - GamepadService-DisableGamepadCursor
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GamepadService:EnableGamepadCursor
+    summary: |
+      Enables the gamepad cursor or updates its position.
+    description: |
+      This function enables the gamepad cursor if it's currently disabled. If
+      the cursor is already enabled, calling the API updates the cursor's
+      position. The function accepts a `Class.GuiObject|GuiObject` parameter,
+      but there are some invalid cases.
+
+      <table>
+        <thread>
+          <tr>
+            <th>Input GuiObject</th>
+            <th>Cursor Starting Position</th>
+          </tr>
+        </thread>
+        <tbody>
+          <tr>
+            <td><code>Nil</code></td>
+            <td>Default position</td>
+          </tr>
+          <tr>
+            <td>Not a GuiObject</td>
+            <td>Cursor does not appear, errors<td>
+          </tr>
+          <tr>
+            <td>Not a child of BasePlayerGui</td>
+            <td>Cursor does not appear, errors</td>
+          </tr>
+          <tr>
+            <td>GuiObject has Visible 2 set to false or any parent visible set 
+                to false</td>
+            <td>Default position with warning</td>
+          </tr>
+          <tr>
+            <td>Child of ScreenGui 1 with Enabled 1 set to false</td>
+            <td>Default position with warning</td>
+          </tr>
+          <tr>
+            <td>Child of BillboardGui 4 or SurfaceGui</td>
+            <td>Default position with warning</td>
+          </tr>
+          <tr>
+            <td>GuiObject outside the viewport (Or, any part of the gui object 
+              that is off screen)</td>
+            <td>Default position with warning</td>
+          </tr>
+          <tr>
+            <td>Child of ScrollingFrame with clipping set to false: GuiObject 
+              outside of scrolling frame (Object child of scrolling frame and 
+              not visible on screen)</td>
+            <td>Default position with warning</td>
+          </tr>
+          <tr>
+            <td>Child of ScrollingFrame with clipping set to true: GuiObject 
+              outside scrolling frame window but inside viewport</td>
+            <td>GuiObject moves into the scrolling frame and starts the cursor 
+              centered over the object</td>
+          </tr>
+          <tr>
+            <td>GuiObject inside the frame and visible</td>
+            <td>Cursor starts centered on the GuiObject</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - GamepadService-EnableGamepadCursor
+    parameters:
+      - name: guiObject
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

@@ -1,0 +1,41 @@
+name: TeleportState
+type: enum
+summary: |
+  Determines the current teleportation state of a player.
+description: |
+  Determines the current teleportation state of a player.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: RequestedFromServer
+    summary: |
+      The server has requested that the client teleport.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Started
+    summary: |
+      The client has started attempting to teleport.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: WaitingForServer
+    summary: |
+      The client is waiting for the server to respond to the teleport request.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Failed
+    summary: |
+      The teleport failed.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: InProgress
+    summary: |
+      The teleport is currently in progress. The player usually disconnects and
+      teleports to the destination after this.
+    value: 4
+    tags: []
+    deprecation_message: ''

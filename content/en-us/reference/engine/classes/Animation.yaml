@@ -1,0 +1,93 @@
+name: Animation
+type: class
+category: Animations
+memory_category: Animation
+summary: |
+  References an animation asset (`AnimationId`) which can be loaded by a
+  `Class.Humanoid` or `Class.AnimationController`.
+description: |
+  An object that references an animation asset (`AnimationId`) which can be
+  loaded by a `Class.Humanoid` or `Class.AnimationController`.
+
+  ## Load an Animation on the client or server
+
+  In order for `Class.AnimationTrack|AnimationTracks` to replicate correctly,
+  it's important to know when they should be loaded on the client (via
+  a`Class.LocalScript`) or on the server (via a `Class.Script`).
+
+  If an `Class.Animator` is a descendant of a Humanoid or AnimationController in
+  a Player's `Class.Player.Character|Character` then animations started on that
+  Player's client will be replicated to the server and other clients.
+
+  If the Animator is not a descendant of a player character, its animations must
+  be loaded and started on the server to replicate.
+
+  The Animator object must be initially created on the server and replicated to
+  clients for animation replication to work at all. If an Animator is created
+  locally, then AnimationTracks loaded with that Animator will not replicate.
+
+  Both `Class.Humanoid:LoadAnimation()` and
+  `Class.AnimationController:LoadAnimation()` will create an Animator if one
+  does not already exist. When calling LoadAnimation from LocalScripts you need
+  to be careful to wait for the Animator to replicate from the server before
+  calling LoadAnimation if you want character animations to replicate. You can
+  do this with WaitForChild("Animator").
+
+  See also:
+
+  - [Animation Editor](../../../animation/editor.md) to explore this powerful
+    built-in plugin for creating custom animations
+  - [Using Animations](../../../animation/using.md) to learn how to add
+    pre-built and custom animations to your game
+code_samples:
+  - Animation-Creation
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Animation.AnimationId
+    summary: |
+      Content ID of the animation an `Class.Animation` object is referencing.
+      Once an animation has been created and uploaded to Roblox the content ID
+      can be found in the uploaded animation's URL.
+    description: |
+      This property is the content ID of the animation an `Class.Animation`
+      object is referencing. Once an animation has been created and uploaded to
+      Roblox the content ID can be found in the uploaded animation's URL.
+
+      This URL is presented immediately after an animation has been uploaded to
+      Roblox, in the Animation Editor export window. It can also be found in the
+      Develop tab on the Roblox site, under 'Animations'.
+
+      It's important to remember the URL is not the same as the content ID. It
+      will work when pasted directly into the AnimationId property of an
+      `Class.Animation` in Roblox studio, as Studio will automatically correct
+      it, however if it is being set from a `Class.Script` then the correct
+      content ID will need to be used, using the number from the URL. For
+      example:
+
+      ```lua
+      "https://www.roblox.com/catalog/507771019" -- Web URL (will not work)
+      "http://www.roblox.com/asset/?id=507771019" -- Content ID (will work)
+      "rbxassetid://507771019" -- Content ID (alternative version, will work)
+      ```
+
+      Note, the animation will need to be loaded onto an `Class.AnimationTrack`
+      in order to play it.
+    code_samples:
+      - Animation-Creation
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

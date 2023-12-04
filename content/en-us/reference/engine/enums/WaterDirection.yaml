@@ -1,0 +1,42 @@
+name: WaterDirection
+type: enum
+summary: |
+  This Enum was once used to set the direction of `Class.Terrain` water.
+description: |
+  This Enum was once used to set the direction of `Class.Terrain` water.
+code_samples:
+tags: []
+deprecation_message: |
+  This item is deprecated. Do not use it for new work. Please see
+  `Class.Terrain` for a list of current function, events, and properties.
+items:
+  - name: NegX
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: X
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: NegY
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: 'Y'
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: NegZ
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Z
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

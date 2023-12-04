@@ -1,0 +1,69 @@
+name: DataStoreRequestType
+type: enum
+summary: |
+  Indicates the type of data store request being made.
+description: |
+  Indicates the type of data store request being made.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: GetAsync
+    summary: |
+      Refers to `Class.GlobalDataStore:GetAsync()|GetAsync()` and the read of `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: SetIncrementAsync
+    summary: |
+      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()`, 
+      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, 
+      `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`, and the write of `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
+      when it returns a non-`nil` value.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: UpdateAsync
+    summary: |
+      Refers to `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: GetSortedAsync
+    summary: |
+      Refers to `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: SetIncrementSortedAsync
+    summary: |
+      Refers to `Class.GlobalDataStore:SetAsync()|SetAsync()` and
+      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` while using an
+      `Class.OrderedDataStore`.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: OnUpdate
+    summary: |
+      Refers to `Class.GlobalDataStore:OnUpdate()|OnUpdate()`.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: ListAsync
+    summary: |
+      Refers to `Class.DataStore:ListKeysAsync()|ListKeysAsync()` and `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`.
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: GetVersionAsync
+    summary: |
+      Refers to `Class.DataStore:GetVersionAsync()|GetVersionAsync()`.
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: RemoveVersionAsync
+    summary: |
+      Refers to `Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`.
+    value: 8
+    tags: []
+    deprecation_message: ''

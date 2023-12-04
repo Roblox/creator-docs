@@ -1,0 +1,87 @@
+name: MeshType
+type: enum
+summary: |
+  The MeshType Enum is used to set what type of mesh the `Class.SpecialMesh` is.
+description: |
+  The MeshType Enum is used to set what type of mesh the `Class.SpecialMesh` is.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Head
+    value: 0
+    summary: |
+      The mesh is the default `Class.Humanoid` head mesh.
+    tags: []
+    deprecation_message: ''
+  - name: Torso
+    value: 1
+    summary: |
+      The mesh is the default Humanoid torso mesh.
+    tags: []
+    deprecation_message: ''
+  - name: Wedge
+    value: 2
+    summary: |
+      The mesh is a wedge.
+    tags: []
+    deprecation_message: ''
+  - name: Sphere
+    value: 3
+    summary: |
+      The mesh is a sphere.
+    tags: []
+    deprecation_message: ''
+  - name: Cylinder
+    value: 4
+    summary: |
+      The mesh is a cylinder.
+    tags: []
+    deprecation_message: ''
+  - name: FileMesh
+    value: 5
+    summary: |
+      The mesh is determined by the Roblox mesh asset id provided.
+    tags: []
+    deprecation_message: ''
+  - name: Brick
+    value: 6
+    summary: |
+      The mesh is a brick (just like the shape of a default `Class.BasePart`).
+    tags: []
+    deprecation_message: ''
+  - name: Prism
+    value: 7
+    summary: |
+      The mesh is a prism.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Pyramid
+    value: 8
+    summary: |
+      The mesh is a pyramid.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: ParallelRamp
+    value: 9
+    summary: |
+      The mesh is a parallel ramp.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: RightAngleRamp
+    value: 10
+    summary: |
+      The mesh is a right angle ramp.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: CornerWedge
+    value: 11
+    summary: |
+      The mesh is a corner wedge.
+    tags:
+      - Deprecated
+    deprecation_message: ''

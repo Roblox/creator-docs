@@ -1,0 +1,97 @@
+name: ModuleScript
+type: class
+category: Scripting
+memory_category: Script
+summary: |
+  A type of script object that runs once when `require` is called with it.
+  Returns exactly one value, usually a table of functions, to used by other
+  scripts. Useful for compartmentalizing code.
+description: |
+  A ModuleScript is a type of Lua source container that runs once and must
+  return exactly one value. This value is then returned by a call to `require`
+  given the ModuleScript as the only argument. ModuleScripts run once and only
+  once per Lua environment and return the exact same value for subsequent calls
+  to `require`.
+
+  ModuleScripts are essential objects for adhering to the don't-repeat-yourself
+  (DRY) principle. When you write a function, write it only once and use it
+  everywhere. Having multiple copies of a function is disastrous when you need
+  to change that behavior. So, you should define functions or groups of
+  functions in ModuleScripts and have your Scripts and LocalScripts call
+  `require` on your ModuleScripts. Keep your code organized!
+
+  It's important to know that return values from ModuleScripts are independent
+  with regards to LocalScripts and Scripts, and other environments like the
+  Command Bar. Using `require` on a ModuleScript in a LocalScript will run the
+  code on the client, even if a Script did so already on the server. Similarly,
+  in Roblox Studio, using `require` on a ModuleScript in the hierarchy with the
+  Command Bar will give a similar behavior. So, be careful if you are using a
+  ModuleScript on the client and server at the same time, or debugging it within
+  Studio.
+
+  Note that the first call to `require` on a ModuleScript will not yield (halt)
+  unless the ModuleScript yields (e.g. calls `Library.task.wait()`). The current thread that
+  called `require` will yield until a ModuleScript returns a value. A run time
+  error is generated if this doesn't happen. If a ModuleScript is attempting to
+  `require` another ModuleScript that in turn tries to `require` it, the
+  **thread will hang and never halt (cyclic `require` calls do not generate
+  errors).** Be mindful of your module dependencies in large projects!
+
+  If a ModuleScript object has its Name property set to 'MainModule' and is
+  uploaded to Roblox as a model to your account, Scripts can use `require` with
+  the uploaded model's AssetId instead. This allows you to create private
+  modules on your Roblox account!
+code_samples:
+  - Simple-ModuleScript-Example
+  - Simple-ModuleScript-Usage
+inherits:
+  - LuaSourceContainer
+tags: []
+deprecation_message: ''
+properties:
+  - name: ModuleScript.LinkedSource
+    summary: |
+      Used to store a URL that points to an online script source. Binds the
+      online code to the script's `Class.Script.Source`.
+    description: |
+      Used to store a URL that points to an online script source. Binds the
+      online code to the script's `Class.Script.Source`.
+    code_samples:
+    type: Content
+    tags: []
+    deprecation_message: |
+      This property is now replaced by
+      [packages](../../../projects/assets/packages.md) which has greater
+      functionality.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ModuleScript.Source
+    summary: |
+      The code to be executed.
+    description: |
+      The code to be executed.
+
+      If you want to read or modify a script that the user has open, consider
+      using the `Class.ScriptEditorService` to interact with the Script Editor
+      instead.
+    code_samples:
+    type: ProtectedString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

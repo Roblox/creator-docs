@@ -1,0 +1,75 @@
+name: Pants
+type: class
+category: Avatar
+memory_category: Instances
+summary: |
+  Displays a Pants texture from the Roblox website to display on a
+  `Class.Humanoid` rig.
+description: |
+  <img src="/assets/legacy/Pants.jpg" alt="A default rig wearing a very dapper pair of pants (rbxassetid://86896501)"  />
+
+  The **Pants** object displays a Pants texture from the Roblox website on a
+  `Class.Humanoid` rig. Pants cover the torso and legs, and will be covered by a
+  `Class.Shirt` on the torso. To be visible, a Pants must be a sibling of a
+  Humanoid and have its `Class.Pants.PantsTemplate|PantsTemplate` property set
+  to an appropriate texture (such as `rbxassetid://86896501`, pictured to the
+  right). The pants texture may be colorized using the `Class.Clothing.Color3`
+  property.
+
+  Pants are automatically loaded on `Class.Player` characters if their avatar is
+  wearing one.
+
+  See also:
+
+  - `Class.Shirt`, an object which works similarly with the torso and arms
+  - [Classic Clothing](../../../art/accessories/classic-clothing.md) which goes
+    into detail about creating shirts and pants
+code_samples:
+  - Shirt-Pants
+inherits:
+  - Clothing
+tags: []
+deprecation_message: ''
+properties:
+  - name: Pants.PantsTemplate
+    summary: |
+      Determines the texture of the `Class.Pants`. The content ID link pointing
+      to the pants template hosted on the Roblox website.
+    description: |
+      Determines the texture of the `Class.Pants`. The content ID link pointing
+      to the pants template hosted on the Roblox website.
+
+      #### How do I find the PantsTemplate?
+
+      This content ID is different to the website URL of the pants. The content
+      ID can be found by pasting the website URL of the pants into the
+      PantsTemplate property in Roblox Studio, as studio will correct it.
+      Alternatively `Class.InsertService:LoadAsset()` can be used to insert the
+      pants into the workspace, for example:
+
+          local webURL = "https://www.roblox.com/catalog/1804739/Jeans"
+          local assetId = tonumber(string.match(webURL, "%d+") or 0) -- extract the number
+          local success, model = pcall(function()
+          	return game:GetService("InsertService"):LoadAsset(assetId)
+          end)
+          if success then
+          	model.Parent = workspace
+          end
+
+      For a `Class.Shirt` object's template, see `Class.Shirt.ShirtTemplate`.
+    code_samples:
+      - Shirt-Pants
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

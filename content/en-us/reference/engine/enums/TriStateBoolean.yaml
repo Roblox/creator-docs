@@ -1,0 +1,23 @@
+name: TriStateBoolean
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: 'True'
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: 'False'
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

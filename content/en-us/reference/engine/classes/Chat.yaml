@@ -1,0 +1,460 @@
+name: Chat
+type: class
+category: Social
+memory_category: Instances
+summary: |
+  This class is being deprecated. Use `Class.TextChatService` instead.
+description: |
+  **This class is being deprecated. Use `Class.TextChatService` instead.**
+
+  The **Chat** service houses the Lua code responsible for running the Lua Chat
+  System. Similar to `Class.StarterPlayerScripts`, default objects like
+  `Class.Script|Scripts` and `Class.ModuleScript|ModuleScripts` are inserted
+  into the service.
+
+  In addition to housing the Lua Chat System, this service also exposes
+  functions used to filter text:
+  `Class.Chat:FilterStringAsync()|FilterStringAsync()` and
+  `Class.Chat:FilterStringForBroadcast()|FilterStringForBroadcast()`. Note that
+  games which implement custom chat systems must use these functions to filter
+  chat properly. See [Text and Chat Filtering](../../../ui/text-filtering.md)
+  for more information.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: Chat.BubbleChatEnabled
+    summary: |
+      Determines whether player's chat messages will appear above their in-game
+      avatar.
+    description: |
+      If true, entering a message in the chat will result in a chat bubble
+      popping up above the player's `Class.Player.Character`. This behavior can
+      either be enabled by directly ticking this checkbox in Studio, or by using
+      a `Class.LocalScript`:
+
+      ```lua
+      local ChatService = game:GetService("Chat")
+      ChatService.BubbleChatEnabled = true
+      ```
+
+      This must be done on the client, toggling this value in a server-side
+      `Class.Script` will have no effect.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Chat.LoadDefaultChat
+    summary: |
+      Toggles whether the default chat framework should be automatically loaded
+      when the game runs.
+    description: |
+      Toggles whether the default chat framework should be automatically loaded
+      when the game runs.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Chat:Chat
+    summary: |
+      Fires the `Class.Chat.Chatted` event with the parameters specified in this
+      method.
+    description: |
+      The Chat function fires the `Class.Chat.Chatted` event with the parameters
+      specified in this method.
+
+      By default, there is a `Class.LocalScript` inside of each player's
+      `Class.PlayerScripts` object named _BubbleChat_, which causes a
+      dialog-like billboard to appear above the _partOrCharacter_ when the
+      chatted event is fired.
+
+      _Note:_ Since dialogs are controlled by a LocalScript, you will not be
+      able to see any dialogs created from this method unless you are running in
+      _Play Solo_ mode.
+    code_samples:
+      - Chat-Chat1
+    parameters:
+      - name: partOrCharacter
+        type: Instance
+        default:
+        summary: |
+          An instance that is the part or character which the _BubbleChat_
+          dialog should appear above.
+      - name: message
+        type: string
+        default:
+        summary: |
+          The message string being chatted.
+      - name: color
+        type: ChatColor
+        default: Blue
+        summary: |
+          An `Enum.ChatColor` specifying the color of the chatted message.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:InvokeChatCallback
+    summary: |
+      Invoke a chat callback function registered by
+      `Class.Chat:RegisterChatCallback()|RegisterChatCallback`. Used by the Lua
+      Chat System.
+    description: |
+      InvokeChatCallback will call a function registered by
+      `Class.Chat:RegisterChatCallback()|RegisterChatCallback`, given the
+      ChatCallbackType enum and the arguments to send the function. It will
+      return the result of the registered function, or raise an error if no
+      function has been registered.
+
+      This function is called by the Lua Chat System so that chat callbacks may
+      be registered to change the behavior of certain features. Unless you are
+      replacing the default Lua Chat System with your own, you should not need
+      to call this function. You can read about the different callback functions
+      at `Class.Chat:RegisterChatCallback()`.
+    code_samples:
+    parameters:
+      - name: callbackType
+        type: ChatCallbackType
+        default:
+        summary: |
+          The type of callback to invoke.
+      - name: callbackArguments
+        type: Tuple
+        default:
+        summary: |
+          The arguments that will be sent to the registered callback function.
+    returns:
+      - type: Tuple
+        summary: |
+          The values returned by the function registered to the given
+          ChatCallbackType.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:RegisterChatCallback
+    summary: |
+      Register a function to be called upon the invocation of some chat system
+      event (`Class.Chat:InvokeChatCallback()|InvokeChatCallback`).
+    description: |
+      RegisterChatCallback binds a function to some chat system event in order
+      to affect the behavior of the Lua chat system. The first argument
+      determines the event (using the `Enum.ChatCallbackType` enum) to which the
+      second argument, the function, shall be bound. The default Lua chat system
+      uses `Class.Chat:InvokeChatCallback()|InvokeChatCallback` to invoke
+      registered functions. Attempting to register a server- or client- only
+      callback on a peer that isn't a server or client respectively will raise
+      an error. The following sections describe in what ways registered
+      functions will be used.
+
+      #### OnCreatingChatWindow
+
+      Client-only. Invoked before the client constructs the chat window. Must
+      return a table of settings to be merged into the information returned by
+      the ChatSettings module.
+
+      #### OnClientFormattingMessage
+
+      Client-only. Invoked before the client displays a message (whether it is a
+      player chat message, system message, or /me command). This function is
+      invoked with the message object and may (or may not) return a table to be
+      merged into `message.ExtraData`.
+
+      #### OnClientSendingMessage
+
+      Not invoked at this time.
+
+      #### OnServerReceivingMessage
+
+      Server-only. Invoked when the server receives a message from a speaker
+      (note that speakers may not necessarily be a `Class.Player` chatting).
+      This callback is called with the Message object. The function can make
+      changes to the Message object to change the manner in which the message is
+      processed. **The Message object must be returned for this callback to do
+      anything.** Setting this callback can allow the server to, for example:
+
+      - Set `message.ShouldDeliver` to false in order to cancel delivery of the
+        message to players (useful for implementing a chat exclusion list)
+      - Get/set the speaker's name color (`message.ExtraData.NameColor`, a
+        Color3) on a message-by-message basis
+    code_samples:
+    parameters:
+      - name: callbackType
+        type: ChatCallbackType
+        default:
+        summary: |
+          The callback to which the function shall be registered (this
+          determines in what way the function is called).
+      - name: callbackFunction
+        type: Function
+        default:
+        summary: |
+          The function to call when the callback is invoked using
+          Chat:InvokeChatCallback.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:SetBubbleChatSettings
+    summary: |
+      Customizes various settings of the in-game bubble chat.
+    description: |
+      This function customizes various settings of the in-game bubble chat.
+
+      Before using this, make sure that bubble chat is enabled by setting
+      `Class.Chat.BubbleChatEnabled` to true.
+
+      The settings argument is a table where the keys are the names of the
+      settings you want to edit and the values are what you want to change these
+      settings to. Note that you don't have to include all of them in the
+      settings argument, omitting some will result in them keeping their default
+      value.
+
+      This function is client-side only, attempting to call it on the server
+      will trigger an error.
+    code_samples:
+      - customize-visual-aspects
+      - restore-default-settings
+    parameters:
+      - name: settings
+        type: Variant
+        default:
+        summary: |
+          A settings table.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:CanUserChatAsync
+    summary: |
+      Will return false if the player with the specified `Class.Player.UserId`
+      is not allowed to chat because of their account settings.
+    description: |
+      Will return false if the player with the specified `Class.Player.UserId`
+      is not allowed to chat because of their account settings.
+    code_samples:
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:CanUsersChatAsync
+    summary: |
+      Will return false if the two users cannot communicate because their
+      account settings do not allow it.
+    description: |
+      Will return false if the two users cannot communicate because their
+      account settings do not allow it.
+    code_samples:
+    parameters:
+      - name: userIdFrom
+        type: int64
+        default:
+        summary: ''
+      - name: userIdTo
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:FilterStringAsync
+    summary: |
+      Filters a string sent from a player to another player using filtering that
+      is appropriate to the players' account settings.
+    description: |
+      **Partial Deprecation Warning**: Calling this function from the client
+      using a `Class.LocalScript` is deprecated, and will be disabled in the
+      future. Text filtering should be done from a `Class.Script` on the server
+      using the similarly-named `Class.TextService:FilterStringAsync()`, which
+      uses a different set of parameters and return type.
+
+      Games that do not properly filter player-generated text might be subject
+      to moderation action. Please be sure a game properly filters text before
+      publishing it.
+
+      **FilterStringAsync** filters a string using filtering that is appropriate
+      for the sending and receiving player. If the filtered string is to be used
+      for a persistent message, such as the name of a shop, writing on a plaque,
+      etc, then the function should be called with the author as both the sender
+      and receiver.
+
+      This function should be used **every time** a player can enter custom text
+      in **any context**, most commonly using a `Class.TextBox`. Some examples
+      of text to be filtered:
+
+      - Custom chat messages
+      - Custom character names
+      - Names for a shop in a tycoon-style game
+    code_samples:
+    parameters:
+      - name: stringToFilter
+        type: string
+        default:
+        summary: |
+          The raw string to be filtered, exactly as entered by the player.
+      - name: playerFrom
+        type: Player
+        default:
+        summary: |
+          The author of the text.
+      - name: playerTo
+        type: Player
+        default:
+        summary: |
+          The intended recipient of the provided text; use the author if the
+          text is persistent (see description).
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:FilterStringForBroadcast
+    summary: |
+      Filters a string sent from a player meant for broadcast to no particular
+      target. More restrictive than `Class.Chat:FilterStringAsync()`.
+    description: |
+      Filters a string sent from _playerFrom_ for broadcast to no particular
+      target. The filtered message has more restrictions than
+      `Class.Chat:FilterStringAsync()`.
+
+      Some examples of where this method could be used:
+
+      - Message walls
+      - Cross-server shouts
+      - User-created signs
+
+      Calling FilterString from `Class.LocalScript`s is deprecated and will be
+      disabled in the future. Text filtering should be done from server-side
+      `Class.Script`s using FilterStringAsync.
+
+      _Note:_ A game not using this filter function for custom chat or other
+      user generated text may be subjected to moderation action.
+    code_samples:
+      - Chat-FilterStringForBroadcast
+    parameters:
+      - name: stringToFilter
+        type: string
+        default:
+        summary: |
+          Message string being filtered.
+      - name: playerFrom
+        type: Player
+        default:
+        summary: |
+          Instance of the player sending the message.
+    returns:
+      - type: string
+        summary: |
+          Filtered message string.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Chat:FilterStringForPlayerAsync
+    summary: |
+      Filters a string appropriate to the given player's age settings, so they
+      see what is appropriate to them.
+    description: |
+      The FilterStringForPlayerAsync function filters a string appropriate to
+      the given player's age settings, so they see what is appropriate to them.
+      This function will only work if called from a `Class.Script` on the
+      server. If called on a client it will fail.
+    code_samples:
+    parameters:
+      - name: stringToFilter
+        type: string
+        default:
+        summary: |
+          String being filtered.
+      - name: playerToFilterFor
+        type: Player
+        default:
+        summary: |
+          Player that the string is being filtered for.
+    returns:
+      - type: string
+        summary: |
+          Filtered string result.
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Chat:FilterStringAsync()` and
+      `Class.Chat:FilterStringForBroadcast()` which should be used in all new
+      work
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Chat.Chatted
+    summary: |
+      Fires when `Class.Chat:Chat()` is called.
+    description: |
+      Fires when `Class.Chat:Chat()` is called.
+    code_samples:
+    parameters:
+      - name: part
+        type: Instance
+        default:
+        summary: ''
+      - name: message
+        type: string
+        default:
+        summary: ''
+      - name: color
+        type: ChatColor
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

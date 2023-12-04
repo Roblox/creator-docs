@@ -1,0 +1,18 @@
+name: SurfaceGuiShape
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Flat
+    value: 0
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CurvedHorizontally
+    value: 1
+    summary: ''
+    tags: []
+    deprecation_message: ''

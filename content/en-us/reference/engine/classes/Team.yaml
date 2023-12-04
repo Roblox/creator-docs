@@ -1,0 +1,269 @@
+name: Team
+type: class
+category: Gameplay
+memory_category: Instances
+summary: |
+  The `Class.Team` class represents a faction in a Roblox place. The only valid
+  parent for a Team is in the `Class.Teams` service.
+description: |
+  The `Class.Team` class represents a faction in a Roblox place. The only valid
+  parent for a Team is in the `Class.Teams` service. Teams offer a range of
+  features that are useful to developers that can be divided into two rough
+  groups:
+
+  - Features that work 'out of the box'
+  - Features developers can program into their game.
+
+  **Built-in Team Behavior**
+
+  The following functionality of Teams exists by default and does not require
+  the developer to program any custom behavior.
+
+  - When part of a Team, the name above a `Class.Player`'s character
+    `Class.Model` will be colored to the `Class.Team.TeamColor`
+  - Changing `Class.Player.TeamColor` will cause `Class.Player.Team` to switch
+    to the Team with the corresponding `Class.Team.TeamColor`
+  - When using the default player list users will be grouped and displayed
+    together as a team
+  - Setting `Class.Player.Neutral` to true will cause the `Class.Player` to be
+    disassociated with the team, however, it will not change `Class.Player.Team`
+    or `Class.Player.TeamColor`
+  - When a `Class.Player` joins a game, they will be allocated to the team with
+    `Class.Team.AutoAssignable` set to true that has the fewest players. If no
+    auto assignable team is available, `Class.Player.Neutral` will be set to
+    true
+  - When `Class.SpawnLocation.Neutral` is set to false, only players whose
+    `Class.Player.TeamColor` matches `Class.SpawnLocation.TeamColor` can spawn
+    on that `Class.SpawnLocation`
+  - When `Class.SpawnLocation.AllowTeamChangeOnTouch` is set to true, a
+    `Class.Player`'s `Class.Player.TeamColor` will change to
+    `Class.SpawnLocation.TeamColor` when their character touches the
+    `Class.SpawnLocation`
+
+  **Optional Extended Team Behaviors**
+
+  Many developers chose to add the following features to teams in their own
+  code.
+
+  - Implement checks in weapon code to prevent friendly fire.
+  - Implement checks in doors or other features that allow only certain teams to
+    use them
+  - Periodically reassign teams to maintain team balance
+code_samples:
+  - Team-Rebalance
+  - Team-Kill-Check
+  - Team-Only-Door
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Team.AutoAssignable
+    summary: |
+      This property determines whether `Class.Player`s will be automatically
+      placed onto the `Class.Team` when joining. If multiple teams have this
+      property set to true, Roblox will attempt to even the teams out when
+      `Class.Player`s are added.
+    description: |
+      This property determines whether `Class.Player`s will be automatically
+      placed onto the `Class.Team` when joining. If multiple teams have this
+      property set to true, Roblox will attempt to even the teams out when
+      `Class.Player`s are added.
+
+      When a `Class.Player` joins a game they will be assigned to the
+      `Class.Team` with `Class.Team.AutoAssignable` set to true that has the
+      fewest players. If no such team is available, `Class.Player.Neutral` will
+      be set to true.
+
+      Note while using this property will help even out teams when players are
+      added, it will not do anything when players are removed. For this reason
+      developers may wish to implement their own team balancing system.
+    code_samples:
+      - Team-Rebalance
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Team.AutoColorCharacters
+    summary: |
+      Deprecated and no longer functional. Historically set whether or not
+      `Class.Player` character models on a team would be colored to
+      `Class.Team.TeamColor`.
+    description: |
+      Historically set whether or not `Class.Player` character models on a team
+      would be colored to `Class.Team.TeamColor`.
+
+      Developers are advised not to use this property as the script which
+      changed the team colors has since been removed from the default character.
+      This property is deprecated and should not be used for new work.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated and no longer functions, it should not be used
+      for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Team.Score
+    summary: |
+      Deprecated. This property can be used to store an integer value associated
+      with the team. This property offers no additional functionality and is not
+      used by any game services.
+    description: |
+      This property can be used to store an integer value associated with the
+      team. This property offers no additional functionality and is not used by
+      any game services.
+
+      This property is deprecated and should not be used by developers for new
+      work.
+    code_samples:
+    type: int
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated and should not be used in new work. For more
+      information on how to handle leaderboards and scoring please see
+      [this tutorial](../../../players/leaderboards.md).
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Team.TeamColor
+    summary: |
+      This property sets the color of the `Class.Team`. Determines the
+      `Class.Player.TeamColor` property of players who are a member of the team.
+      Also determines the color displayed on the player list and above player's
+      heads.
+    description: |
+      This property sets the color of the `Class.Team`. Determines the
+      `Class.Player.TeamColor` property of players who are a member of the team.
+
+      A lot of Roblox's default team functionality is based on the team color,
+      rather than the name or object. For example, `Class.SpawnLocation`s can be
+      assigned to a team via `Class.SpawnLocation.TeamColor`. For this reason it
+      is recommended that developers ensure each `Class.Team` has a unique
+      TeamColor.
+
+      Any player which is a part of a team will have their name color changed to
+      the team's TeamColor property. They will also be put underneath the team
+      heading on the player list.
+    code_samples:
+      - Team-Only-Door
+    type: BrickColor
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Team:GetPlayers
+    summary: |
+      Returns a list of `Class.Player`s who are assigned to the `Class.Team`. A
+      `Class.Player` is considered assigned if their `Class.Player.Team`
+      property is equal to the `Class.Team` and `Class.Player.Neutral` is false.
+    description: |
+      Returns a list of `Class.Player`s who are assigned to the `Class.Team`. A
+      `Class.Player` is considered assigned if their `Class.Player.Team`
+      property is equal to the `Class.Team` and `Class.Player.Neutral` is false.
+
+      This function has a number of potential uses, including counting the
+      number of players on a `Class.Team` or giving every `Class.Player` on a
+      `Class.Team` a `Class.Tool`.
+    code_samples:
+      - Teams-GetTeams
+    parameters: []
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.Player`s in the `Class.Team`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+events:
+  - name: Team.PlayerAdded
+    summary: |
+      Fires whenever a `Class.Player` is assigned to the `Class.Team`. A player
+      is considered assigned if their `Class.Player.Team` property is equal to
+      the `Class.Team` and `Class.Player.Neutral` is false.
+    description: |
+      Fires whenever a `Class.Player` is assigned to the `Class.Team`. A player
+      is considered assigned if their `Class.Player.Team` property is equal to
+      the `Class.Team` and `Class.Player.Neutral` is false.
+
+      This event is team specific and will only fire when a `Class.Player`
+      joints the specific `Class.Team`. Any function connected to this event
+      will be passed the `Class.Player` object of the player who joined the
+      team. For example:
+
+          Team.PlayerAdded:Connect(function(player)
+          	print(player.Name.." has joined the team")
+          end)
+    code_samples:
+      - Team-Rebalance
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` that was added.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Team.PlayerRemoved
+    summary: |
+      Fires whenever a `Class.Player` is removed from a `Class.Team`. This can
+      be due to the `Class.Player` leaving the game, `Class.Player.Neutral`
+      being set to true or the `Class.Player` joining a different team.
+    description: |
+      Fires whenever a `Class.Player` is removed from a `Class.Team`. This can
+      be due to the `Class.Player` leaving the game, `Class.Player.Neutral`
+      being set to true or the `Class.Player` joining a different team.
+
+      This event is team specific and will only fire when a `Class.Player`
+      leaves the specific `Class.Team`. Any function connected to this event
+      will be passed the `Class.Player` object of the player who left the team.
+      For example:
+
+          Team.PlayerRemoved:Connect(function(player)
+          	print(player.Name.." has left the team")
+          end)
+    code_samples:
+      - Team-Rebalance
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` removed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -1,0 +1,209 @@
+name: BodyPosition
+type: class
+category: Body Movers
+memory_category: Instances
+summary: |
+  Applies a force to maintain a constant position.
+description: |
+  The **BodyPosition** object applies a force on a `Class.BasePart` such that it
+  will maintain a constant position in the world. The
+  `Class.BodyPosition.Position|Position` property, not to be confused with
+  `Class.BasePart.Position`, controls the target world position. This is the
+  translational counterpart to a `Class.BodyGyro`. If you need further control
+  on a force applied to an object, consider using a `Class.BodyForce` or
+  `Class.BodyThrust` instead.
+
+  The strength of the force applied by this object is controlled by several
+  factors, namely the distance to the goal position: the force is stronger when
+  farther away from the goal. This is amplified by `Class.BodyPosition.P|P`
+  (power). The present velocity will also dampen the force applied by this
+  object, and this is amplified by `Class.BodyPosition.D|D` (dampening). The
+  resulting force is then capped by `Class.BodyPosition.MaxForce|MaxForce`. Note
+  the force applied on the part to achieve the goal position may vary on a
+  per-axis basis.
+code_samples:
+inherits:
+  - BodyMover
+tags:
+  - Deprecated
+deprecation_message: |
+  This object is deprecated and should not be used for new work. Use
+  `Class.AlignOrientation` instead.
+properties:
+  - name: BodyPosition.D
+    summary: |
+      Determines the amount of dampening to use in reaching the goal
+      `Class.BodyPosition.Position|Position`.
+    description: |
+      The D property determines how much **dampening** will be applied to the
+      force used toward reaching the goal
+      `Class.BodyPosition.Position|Position`. When the part approaches the goal
+      position it needs to decelerate, otherwise it will move past the goal and
+      have to stop and re-accelerate back toward the goal. This is often creates
+      undesirable **rubber-banding** effect, so applying dampening using this
+      property is how that effect is avoided. The higher this value is set, the
+      greater the dampening curve becomes, or the slower the part will approach
+      the goal position.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyPosition.MaxForce
+    summary: |
+      Determines the limit on how much force that may be applied to each axis.
+    description: |
+      The MaxForce property determines the limit on the amount of force that may
+      be applied on each axis in reaching the goal
+      `Class.BodyPosition.Position|Position`. If a part isn't moving, consider
+      increasing this value (also check that it is not
+      `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyPosition.P
+    summary: |
+      Determines how aggressive of a force is applied in reaching the goal
+      position.
+    description: |
+      The P property determines how much
+      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
+      applying force in order to reach the goal
+      `Class.BodyPosition.Position|Position`. The higher this value, the more
+      power will be used and the faster it will be used. The force the
+      `Class.BodyPosition` exerts increases as the difference between the part's
+      current position and the goal position increases. This property is
+      multiplied to this force to either amplify or diminish it.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyPosition.Position
+    summary: |
+      Determines the goal position towards which force will be applied.
+    description: |
+      The Position property determines the goal position towards which the
+      `Class.BodyPosition` will apply force.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyPosition.maxForce
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyPosition.MaxForce`
+      which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyPosition.position
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This is a deprecated variant of `Class.BodyPosition.Position` which should
+      be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: BodyPosition:GetLastForce
+    summary: |
+      Returns the last force in the object.
+    description: |
+      This function returns the last force in the object.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BodyPosition:lastForce
+    summary: |
+      Returns the last force in the object.
+    description: |
+      The lastForce function returns the last force in the object.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This property has been superseded by `Class.BodyPosition:GetLastForce()`
+      which should be used in new work instead,
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: BodyPosition.ReachedTarget
+    summary: |
+      Fired when the Parent of the BodyPosition reaches the desired
+      `Class.BodyPosition.Position` (within .1 studs). Once this event fires it
+      will not fire again until `Class.BodyPosition.Position` is updated.
+    description: |
+      Fired when the Parent of the BodyPosition reaches the desired
+      `Class.BodyPosition.Position` (within .1 studs). Once this event fires it
+      will not fire again until `Class.BodyPosition.Position` is updated.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

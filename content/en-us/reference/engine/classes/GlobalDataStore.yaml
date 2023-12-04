@@ -1,0 +1,385 @@
+name: GlobalDataStore
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  An object that exposes methods to access a single data store.
+description: |
+  A **GlobalDataStore** exposes functions for saving and loading data for the
+  `Class.DataStoreService`.
+
+  See [Data Stores](../../../cloud-services/datastores.md) for an in-depth guide
+  on data structure, management, error handling, etc.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: GlobalDataStore:OnUpdate
+    summary: |
+      Sets callback as a function to be executed any time the value associated
+      with key is changed.
+    description: |
+      This function sets **callback** as the function to be run any time the
+      value associated with the `Class.GlobalDataStore|data store's` key
+      changes. Once every minute, OnUpdate polls for changes by other servers.
+      Changes made on the same server will run the function immediately. In
+      other words, functions like
+      `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`,
+      `Class.GlobalDataStore:SetAsync()|SetAsync()`, and
+      `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` change the key's value
+      in the data store and will cause the function to run.
+
+      It's recommended that you **disconnect** the connection when the
+      subscription to the key is no longer needed.
+    code_samples:
+      - GlobalDataStore-OnUpdate1
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          The key identifying the entry being retrieved from the data store.
+      - name: callback
+        type: Function
+        default:
+        summary: |
+          The function to be executed any time the value associated with **key**
+          is changed.
+    returns:
+      - type: RBXScriptConnection
+        summary: |
+          The connection to the key being tracked for updates.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated and should not be used in new work. You
+      can use the `Class.MessagingService|Cross Server Messaging Service` to
+      publish and subscribe to topics to receive near real-time updates,
+      completely replacing the need for this function.
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalDataStore:GetAsync
+    summary: |
+      Returns the value of a key in a specified data store and a
+      `Class.DataStoreKeyInfo` instance.
+    description: |
+      This function returns the latest value of the provided key and a
+      `Class.DataStoreKeyInfo` instance. If the key does not exist or if the
+      latest version has been marked as deleted, both return values will be
+      `nil`.
+
+      `Class.OrderedDataStore` does not support versioning and metadata, so
+      `Class.DataStoreKeyInfo` will always be `nil` for keys in an
+      `Class.OrderedDataStore`.
+
+      Keys are cached locally for 4 seconds after the first read. A
+      `Class.GlobalDataStore:GetAsync()` call within these 4 seconds returns a
+      value from the cache. Modifications to the key by
+      `Class.GlobalDataStore:SetAsync()` or
+      `Class.GlobalDataStore:UpdateAsync()` apply to the cache immediately and
+      restart the 4 second timer.
+
+      To get a specific version, such as a version before the latest, use
+      `Class.DataStore:GetVersionAsync()`.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          The key name for which the value is requested. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: options
+        type: DataStoreGetOptions
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: |
+          The value of the entry in the data store with the given key and a
+          `Class.DataStoreKeyInfo` instance that includes the version number,
+          date and time the version was created, and functions to retrieve
+          `Class.Player.UserId|UserIds` and metadata.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalDataStore:IncrementAsync
+    summary: |
+      Increments the value of a key by the provided amount (both must be
+      integers).
+    description: |
+      This function increments the value of a key by the provided amount (both
+      must be integers).
+
+      `Class.OrderedDataStore` does not support versioning, so calling this
+      method on an `Class.OrderedDataStore` key will overwrite the current value
+      with the incremented value and make previous versions inaccessible.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the value should be updated. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: delta
+        type: int
+        default: 1
+        summary: |
+          Amount to increment the current value by.
+      - name: userIds
+        type: Array
+        default: '{}'
+        summary: |
+          **(Optional)** A table of `Class.Player.UserId|UserIds` to associate
+          with the key.
+      - name: options
+        type: DataStoreIncrementOptions
+        default: nil
+        summary: |
+          **(Optional)** `Class.DataStoreIncrementOptions` instance that
+          combines multiple additional parameters as custom metadata and allows
+          for future extensibility.
+    returns:
+      - type: Variant
+        summary: |
+          The updated value of the entry in the data store with the given key.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalDataStore:RemoveAsync
+    summary: |
+      Removes the specified key while also retaining an accessible version.
+    description: |
+      This function marks the specified key as deleted by creating a new
+      "tombstone" version of the key. Prior to this, it returns the latest
+      version prior to the remove call.
+
+      After a key is removed via this function,
+      `Class.GlobalDataStore:GetAsync()` calls for the key will return `nil`.
+      Older versions of the key remain accessible through
+      `Class.DataStore:ListVersionsAsync()` and
+      `Class.DataStore:GetVersionAsync()`, assuming they have not expired.
+
+      `Class.OrderedDataStore` does not support versioning, so calling
+      `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` on an
+      `Class.OrderedDataStore` key will permanently delete it.
+
+      Removed objects will be deleted permanently after 30 days.
+
+      If the previous values were already deleted via
+      `Class.GlobalDataStore:RemoveAsync()` or
+      `Class.DataStore:RemoveVersionAsync()`, the function will return `nil`,
+      `nil` for value and `Class.DataStoreKeyInfo` respectively.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name to be removed. If `Class.DataStoreOptions.AllScopes` was set
+          to true when accessing the data store through
+          `Class.DataStoreService:GetDataStore()`, this key name must be
+          prepended with the original scope as in "scope/key".
+    returns:
+      - type: Tuple
+        summary: |
+          The value of the data store prior to deletion and a
+          `Class.DataStoreKeyInfo` instance that includes the version number,
+          date and time the version was created, and functions to retrieve
+          `Class.Player.UserId|UserIds` and metadata.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalDataStore:SetAsync
+    summary: |
+      Sets the value of the data store for the given key.
+    description: |
+      This function sets the latest value, `Class.Player.UserId|UserIds`, and
+      metadata for the given key.
+
+      Values in data stores are versioned, meaning
+      `Class.GlobalDataStore:SetAsync()` will create a new version every time it
+      is called. Prior versions can be accessed through
+      `Class.DataStore:ListVersionsAsync()`/`Class.DataStore:GetVersionAsync()`
+      for up to 30 days at which point they are permanently deleted.
+
+      `Class.OrderedDataStore` does not support versioning, so calling this
+      method on an `Class.OrderedDataStore` key will overwrite the current value
+      and make previous versions inaccessible.
+
+      Metadata definitions must always be updated with a value, even if there
+      are no changes to the current value; otherwise the current value will be
+      lost.
+
+      Any string being stored in a data store must be valid
+      `Library.utf8|UTF-8`. In UTF-8, values greater than 127 are used
+      exclusively for encoding multi-byte codepoints, so a single byte greater
+      than 127 will not be valid UTF-8 and the
+      `Class.GlobalDataStore:SetAsync()` attempt will fail.
+
+      #### Set vs. Update
+
+      `Class.GlobalDataStore:SetAsync()` is best for a quick update of a
+      specific key, and it only counts against the write limit. However, it may
+      cause data inconsistency if two servers attempt to set the same key at the
+      same time. `Class.GlobalDataStore:UpdateAsync()` is safer for handling
+      multi-server attempts because it reads the current key value (from
+      whatever server last updated it) before making any changes. However, it's
+      somewhat slower because it reads before it writes, and it also counts
+      against both the read and write limit.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the value should be set. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: value
+        type: Variant
+        default:
+        summary: |
+          The value that the data store key will be set to.
+      - name: userIds
+        type: Array
+        default: '{}'
+        summary: |
+          Table of `Class.Player.UserId|UserIds`, highly recommended to assist
+          with GDPR tracking/removal.
+      - name: options
+        type: DataStoreSetOptions
+        default: nil
+        summary: |
+          **(Optional)** `Class.DataStoreSetOptions` instance that allows for
+          metadata specification on the key.
+    returns:
+      - type: Variant
+        summary: |
+          The version identifier of the newly created version. It can be used to
+          retrieve key info using
+          `Class.DataStore:GetVersionAsync()|GetVersionAsync()` or to remove it
+          using `Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()`.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GlobalDataStore:UpdateAsync
+    summary: |
+      Updates a key's value with a new value from the specified callback
+      function.
+    description: |
+      This function retrieves the value and metadata of a key from the data
+      store and updates it with a new value determined by the callback function
+      specified through the second parameter. If the callback returns `nil`, the
+      write operation is cancelled and the value remains unchanged.
+
+      If the update succeeds, a new version of the value will be created and
+      prior versions will remain accessible through
+      `Class.DataStore:ListVersionsAsync()` and
+      `Class.DataStore:GetVersionAsync()`.
+
+      `Class.OrderedDataStore` does not support versioning, so calling this
+      function on an `Class.OrderedDataStore` key will overwrite the current
+      value and make previous versions inaccessible.
+
+      In cases where another game server updated the key in the short timespan
+      between retrieving the key's current value and setting the key's value,
+      `Class.GlobalDataStore:UpdateAsync()` will call the function again,
+      discarding the result of the previous call. The function will be called as
+      many times as needed until the data is saved **or** until the callback
+      function returns `nil`. This can be used to ensure that no data is
+      overwritten.
+
+      Any string being stored in a data store must be valid
+      `Library.utf8|UTF-8`. In UTF-8, values greater than 127 are used
+      exclusively for encoding multi-byte codepoints, so a single byte greater
+      than 127 will not be valid UTF-8 and the
+      `Class.GlobalDataStore:UpdateAsync()` attempt will fail.
+
+      #### Set vs. Update
+
+      `Class.GlobalDataStore:SetAsync()` is best for a quick update of a
+      specific key, and it only counts against the write limit. However, it may
+      cause data inconsistency if two servers attempt to set the same key at the
+      same time. `Class.GlobalDataStore:UpdateAsync()` is safer for handling
+      multi-server attempts because it reads the current key value (from
+      whatever server last updated it) before making any changes. However, it's
+      somewhat slower because it reads before it writes, and it also counts
+      against both the read and write limit.
+
+      #### Callback Function
+
+      The callback function accepts two arguments:
+
+      - Current value of the key prior to the update.
+      - `Class.DataStoreKeyInfo` instance that contains the latest version
+        information (this argument can be ignored if metadata is not being
+        used).
+
+      In turn, the callback function returns up to three values:
+
+      - The new value to set for the key.
+      - An array of `Class.Player.UserId|UserIds` to associate with the key.
+        `Class.DataStoreKeyInfo:GetUserIds()` should be returned unless the
+        existing IDs are being changed; otherwise all existing IDs will be
+        cleared.
+      - A Lua table containing metadata to associate with the key.
+        `Class.DataStoreKeyInfo:GetMetadata()` should be returned unless the
+        existing metadata is being changed; otherwise all existing metadata will
+        be cleared.
+
+      If the callback returns `nil` instead, the current server will
+      stop attempting to update the key.
+
+      The callback function cannot yield, so do **not** include calls like
+      `Library.task.wait()`.
+    code_samples:
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the value should be updated. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: transformFunction
+        type: Function
+        default:
+        summary: |
+          Transform function that takes the current value and
+          `Class.DataStoreKeyInfo` as parameters and returns the new value along
+          with optional `Class.Player.UserId|UserIds` and metadata.
+    returns:
+      - type: Tuple
+        summary: |
+          The updated value of the entry in the data store with the given key
+          and a `Class.DataStoreKeyInfo` instance that includes the version
+          number, date and time the version was created, and functions to
+          retrieve `Class.Player.UserId|UserIds` and metadata.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

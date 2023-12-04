@@ -33,7 +33,7 @@ Limited assets follow a different payout structure. See [Limiteds](#limiteds) fo
 
 ## Limiteds
 
-When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset. Limiteds require a [per-unit fee](#per-unit-fee) and can be [resold](#reselling) by Premium members.
+When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset. Limiteds require a [per-unit fee](#per-unit-fee) and can be [resold](#reselling) by Premium members unless the item creator disables reselling.
 
 At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
 
@@ -60,7 +60,7 @@ You cannot take your Limited item off-sale. If your item is moderated your payme
 
 ### Reselling
 
-While any user can buy a Limited item, only users that are [Premium](https://www.roblox.com/premium/membership) members can resell them. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
+If reselling is enabled by the original creator, [Premium](https://www.roblox.com/premium/membership) members can resell purchased Limited items. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
 
 **Selling Limiteds**: As a reminder, when selling anything on Roblox, the item creator, the seller, and Roblox receive a split of every transaction as follows:
 
@@ -183,12 +183,12 @@ The following are the current Marketplace price ranges (in Robux):
   </tr>
   <tr>
     <td>Body</td>
-    <td>0 - 10,000</td>
+    <td>75 - 10,000</td>
     <td>N/A</td>
   </tr>
   <tr>
     <td>Head</td>
-    <td>0 - 10,000</td>
+    <td>75 - 10,000</td>
     <td>N/A</td>
   </tr>
 </tbody>

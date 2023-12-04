@@ -1,0 +1,63 @@
+name: DevTouchMovementMode
+type: enum
+summary: |
+  Overrides the movement mode of players who are playing on touch devices.
+description: |
+  Overrides the movement mode of players who are playing on touch devices.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: UserChoice
+    summary: |
+      The player's character will moved based on the user's settings.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Thumbstick
+    summary: |
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbstick
+      applications.
+    value: 1
+    tags: []
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+  - name: DPad
+    summary: |
+      This item is deprecated. Use `DynamicThumbstick` for virtual DPad
+      applications.
+    value: 2
+    tags: []
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+  - name: Thumbpad
+    summary: |
+      This item is deprecated. Use `DynamicThumbstick` for virtual thumbpad
+      applications.
+    value: 3
+    tags: []
+    deprecation_message: |
+      This item is deprecated. Do not use it for new work.
+  - name: ClickToMove
+    summary: |
+      The player's character will attempt to move to a location in the world
+      when the player taps a location.
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    summary: |
+      The player will not respond to default controls; any character movement
+      must be defined in custom scripts.
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: DynamicThumbstick
+    summary: |
+      The player's character is controlled with a virtual thumbstick that
+      appears when they touch the lower portion of the screen. Jumping is
+      controlled with a separate button. Good for portrait mode and one handed
+      play.
+    value: 6
+    tags: []
+    deprecation_message: ''

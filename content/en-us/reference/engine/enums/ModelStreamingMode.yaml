@@ -1,0 +1,51 @@
+name: ModelStreamingMode
+type: enum
+summary: |
+  Controls stream in and out behavior of a model.
+description: |
+  Controls how model is streamed in and out when used in an experience that is
+  streaming enabled. Has no effect when experience is not streaming enabled.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    value: 0
+    summary: |
+      Engine determines best behavior. Currently equivalent to **Nonatomic**.
+    tags: []
+    deprecation_message: ''
+  - name: Atomic
+    value: 1
+    summary: |
+      The `Class.Model` and all of its descendants are streamed in/out together.
+      For streaming in, this applies when **any** descendant `Class.BasePart` is
+      eligible for streaming in. For streaming out, this applies when **all**
+      descendant `Class.BasePart|BaseParts` are eligible for streaming out.
+    tags: []
+    deprecation_message: ''
+  - name: Persistent
+    value: 2
+    summary: |
+      Persistent models are sent as a complete atomic unit soon after the player
+      joins and before the `Class.Workspace.PersistentLoaded` event fires.
+      Persistent models and their descendants are never streamed out.
+    tags: []
+    deprecation_message: ''
+  - name: PersistentPerPlayer
+    value: 3
+    summary: |
+      Behaves as a persistent model for players that have been added using
+      `Class.Model:AddPersistentPlayer()`. For other players, behavior is the
+      same as **Atomic**. You can revert a model from player persistence via
+      `Class.Model:RemovePersistentPlayer()`.
+    tags: []
+    deprecation_message: ''
+  - name: Nonatomic
+    value: 4
+    summary: |
+      When a nonatomic model is streamed, descendants are also sent, except for
+      part descendants. Nonatomic models that are not descendants of parts are
+      sent during experience loading.
+    tags: []
+    deprecation_message: ''

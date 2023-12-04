@@ -1,0 +1,116 @@
+name: EchoSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Adds delayed repetitions of a sound with diminishing volume.
+description: |
+  An echo effect causes a sound to repeat on a delay with diminishing volume,
+  simulating the real effect of an echo. This effect can be applied to either an
+  individual sound or to a sound group by parenting it to the desired instance.
+
+  The effect is controlled by several properties. First, the Delay is how long
+  the effect will wait to play the echoed sound. Feedback determines how much
+  the original signal is diminished to play as the echoed sound. Note that this
+  echoed sound also goes through the echo effect which will wait another delay
+  and play another echo. This process will repeat until the volume of the echoed
+  sound is negligible.
+
+  You can also adjust the wet/dry mix of the effect. The dry component of the
+  sound is the original sound that the effect is being applied to. You can
+  adjust the volume of the dry sound by adjusting the DryLevel. The wet sound is
+  the echoed effect itself, and its volume can be adjusted with WetLevel.
+
+  It is recommended to only use the EchoSoundEffect with sound groups. If an
+  echo effect is applied to a regular Sound, once that sound stops playing the
+  echo effect will also be cut off. When applied to a SoundGroup, the echo
+  effect will continue playing even if the original source sound has
+  stopped.Like all other `Class.SoundEffect`, a EchoSoundEffect can be applied
+  either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: EchoSoundEffect.Delay
+    summary: |
+      The amount of time between echoes.
+    description: |
+      Range: 0.01 to 5 (default 1) The amount of time between echoes. Measured
+      in seconds.
+
+      If a EchoSoundEffect is applied to a singular sound instead of a sound
+      group, if the sound stops playing before the delay causes an echo, the
+      echo will not play. Because of this, it is recommended to apply echo
+      effects to SoundGroups and not Sounds.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: EchoSoundEffect.DryLevel
+    summary: |
+      The output volume of the original sound.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of the original sound.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: EchoSoundEffect.Feedback
+    summary: |
+      The echo decay every time the echo plays.
+    description: |
+      Range: 0 to 1 (default 0.5) The echo decay every time the echo plays.
+      Setting this at it's minimum (0) will cause no feedback, meaning the echo
+      won't be audible at all. Setting this at the maximum (1) will have no
+      decay, meaning the echoed sound will play at the level of the original and
+      will not diminish over time.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: EchoSoundEffect.WetLevel
+    summary: |
+      The output volume of the echoed effect.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of the echoed effect.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

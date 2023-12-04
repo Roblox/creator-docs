@@ -1,0 +1,201 @@
+name: DataStoreService
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  A game service that gives access to persistent data storage across places in a
+  game.
+description: |
+  **DataStoreService** exposes methods for getting `Class.GlobalDataStore` and
+  `Class.OrderedDataStore` objects. Data stores can only be accessed by game
+  servers, so you can only use `Class.DataStoreService` within a `Class.Script`
+  or a `Class.ModuleScript` that is used by a `Class.Script`.
+
+  See [Data Stores](../../../cloud-services/datastores.md) for an in-depth guide
+  on data structure, management, error handling, etc.
+code_samples:
+  - DataStore-Budget
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: DataStoreService.AutomaticRetry
+    summary: |
+      Sets whether data store functions should automatically retry or not.
+      DataStoreService does not respect this property because automatic retry
+      has been disabled due to technical reasons. Therefore, you must implement
+      systems for retrying operations yourself.
+    description: |
+      Sets whether data store functions should automatically retry or not.
+
+      DataStoreService does not respect this property because automatic retry
+      has been disabled due to technical reasons. Therefore, you must implement
+      systems for retrying operations yourself. It is possible that automatic
+      retry will be enabled again in the future.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: LocalUserSecurity
+      write: LocalUserSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: DataStoreService:GetDataStore
+    summary: |
+      Creates a `Class.DataStore` instance with the provided name and scope.
+    description: |
+      This function creates a `Class.DataStore` instance with the provided name
+      and scope. Subsequent calls to this method with the same name/scope will
+      return the same object.
+
+      Using the `scope` parameter will restrict operations to that scope by
+      automatically prepending the scope to keys in all operations done on the
+      data store. This function also accepts an optional
+      `Class.DataStoreOptions` instance which includes options for enabling
+      `Class.DataStoreOptions.AllScopes|AllScopes`. See
+      [Data Stores](../../../cloud-services/datastores.md) for details on scope.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          Name of the data store.
+      - name: scope
+        type: string
+        default: global
+        summary: |
+          **(Optional)** A string specifying the scope.
+      - name: options
+        type: Instance
+        default: nil
+        summary: |
+          **(Optional)** A `Class.DataStoreOptions` instance to enable
+          experimental features and v2 API features.
+    returns:
+      - type: GlobalDataStore
+        summary: |
+          A `Class.DataStore` instance with provided name and optional scope.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStoreService:GetGlobalDataStore
+    summary: |
+      Returns the default data store.
+    description: |
+      This function returns the default `Class.GlobalDataStore`. If you want to
+      access a specific **named** data store instead, you should use the
+      `Class.DataStoreService:GetDataStore()|GetDataStore()` function.
+    code_samples:
+      - get-a-globaldatastore-instance
+    parameters: []
+    returns:
+      - type: GlobalDataStore
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStoreService:GetOrderedDataStore
+    summary: |
+      Get an `Class.OrderedDataStore` given a name and optional scope.
+    description: |
+      This method returns an `Class.OrderedDataStore`, similar to the way
+      `Class.DataStoreService:GetDataStore()|GetDataStore()` does with
+      `Class.GlobalDataStore|GlobalDataStores`. Subsequent calls to this method
+      with the same name/scope will return the same object.
+    code_samples:
+      - OrderedDataStore-Basics
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: scope
+        type: string
+        default: global
+        summary: ''
+    returns:
+      - type: OrderedDataStore
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStoreService:GetRequestBudgetForRequestType
+    summary: |
+      Returns the number of requests that can be made by the given request type.
+    description: |
+      This function returns the number of data store requests that the current
+      place can make based on the given `Enum.DataStoreRequestType`. Any
+      requests made that exceed this budget are subject to throttling.
+      Monitoring and adjusting the frequency of data store requests using this
+      function is recommended.
+    code_samples:
+      - DataStoreService-GetRequestBudgetForRequestType1
+    parameters:
+      - name: requestType
+        type: DataStoreRequestType
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: DataStoreService:ListDataStoresAsync
+    summary: |
+      Returns a `Class.DataStoreListingPages` object for enumerating through all
+      of the experience's data stores.
+    description: |
+      Returns a `Class.DataStoreListingPages` object for enumerating through all
+      of the experience's data stores. It accepts an optional `prefix` parameter
+      to only locate data stores whose names start with the provided prefix.
+
+      Only data stores containing at least one object will be listed via this
+      function.
+    code_samples:
+    parameters:
+      - name: prefix
+        type: string
+        default: ''
+        summary: |
+          **(Optional)** Prefix to enumerate data stores that start with the
+          given prefix.
+      - name: pageSize
+        type: int
+        default: 0
+        summary: |
+          **(Optional)** Number of items to be returned in each page. By default
+          is 32.
+      - name: cursor
+        type: string
+        default: ''
+        summary: |
+          **(Optional)** Cursor to continue iteration.
+    returns:
+      - type: DataStoreListingPages
+        summary: |
+          `Class.DataStoreListingPages` instance containing
+          `Class.DataStoreInfo` instances that provide details such as name,
+          creation time, and time last updated.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

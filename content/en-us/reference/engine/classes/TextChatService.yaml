@@ -1,0 +1,350 @@
+name: TextChatService
+type: class
+category:
+memory_category: Instances
+summary: |
+  A service handling in-experience text chat.
+description: |
+  A service handling in-experience text chat. TextChatService handles various
+  text chat related tasks, such as managing channels, decorating messages,
+  filtering text, creating commands, and developing custom chats interfaces.
+
+  To learn more about using TextChatService, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: TextChatService.ChatTranslationEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextChatService.ChatVersion
+    summary: |
+      Determines whether to fully enable `Class.TextChatService` or revert to
+      the legacy chat system.
+    description: |
+      Determines whether `Class.TextChatService` should be fully enabled or to
+      allow the legacy chat system. Setting to this property to
+      `Enum.ChatVersion.LegacyChatService` effectively disables
+      `Class.TextChatService`.
+    code_samples: []
+    type: ChatVersion
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatService.CreateDefaultCommands
+    summary: |
+      Determines whether `Class.TextChatService` should create default
+      `Class.TextChatCommand`s.
+    description: |
+      Determines whether `Class.TextChatService` should create default
+      `Class.TextChatCommand`s.
+
+      If true, the following `Class.TextChatCommand`s are created and put in a
+      `Class.Folder` named **TextChatCommands** inside `Class.TextChatService`:
+
+      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                             | Usage Example  |
+      | :---------------- | :----------- | :------------- | :------------------------------------------------------------------------------------------------------ | :------------- |
+      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                            | `\console`     |
+      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                     | `\e dance`     |
+      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                          | `\help`        |
+      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel`s.   | `\m Username`  |
+      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel`s. | `\um Username` |
+      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                                 | `\version`     |
+
+      Developers can edit, create, and remove `Class.TextChatCommand`s as even
+      if `Class.TextChatService.CreateDefaultCommands` is `true`.
+
+      Mute and unmute commands apply to all TextChannels.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextChatService.CreateDefaultTextChannels
+    summary: |
+      Determines whether `Class.TextChatService` should create default
+      `Class.TextChannel`s.
+    description: |
+      Determines whether `Class.TextChatService` should create default
+      `Class.TextChannel`s.
+
+      If true, `Class.Team` based `Class.TextChannel`s are automatically created
+      (and removed when `Class.Team`s are removed), along with the following
+      `Class.TextChannel`s in a `Class.Folder` named **TextChannels** inside
+      `Class.TextChatService`:
+
+      | Name                                | Description                                                                                                                                                                                            |
+      | :---------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | RBXGeneral                          | For all messages.                                                                                                                                                                                      |
+      | RBXSystem                           | For system messages.                                                                                                                                                                                   |
+      | RBXTeam<`Datatype.BrickColor.Name`> | For team messages. Name of the `Class.TextChannel` is the string "RBXTeam" followed by the name of `Class.Team.BrickColor`. (Ex: "RBXTeamNavy blue" for a team with "Navy blue" `Datatype.BrickColor`) |
+
+      If false, `Class.Team` based `Class.TextChannel`s are **not**
+      automatically created and destroyed.
+
+      Developers can edit, create, and remove `Class.TextChannel`s even if
+      `Class.TextChatService.CreateDefaultTextChannels` is `true`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: TextChatService:DisplayBubble
+    summary: |
+      Displays a chat bubble above the provided part or character.
+    description: |
+      Displays a chat bubble above the provided _partOrCharacter_. Can display
+      bubbles for non-player characters (NPCs).
+
+      Fires the `Class.TextChatService.BubbleDisplayed` event with the
+      parameters specified in this method.
+    code_samples: []
+    parameters:
+      - name: partOrCharacter
+        type: Instance
+        default:
+        summary: |
+          The part or character that the bubble to be displayed above.
+      - name: message
+        type: string
+        default:
+        summary: |
+          The text to be displayed in the chat bubble.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChatService:CanUserChatAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChatService:CanUsersChatAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userIdFrom
+        type: int64
+        default:
+        summary: ''
+      - name: userIdTo
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: TextChatService.BubbleDisplayed
+    summary: |
+      Fires when `Class.TextChatService:DisplayBubble()` is called.
+    description: |
+      Fires when `Class.TextChatService:DisplayBubble()` is called.
+    code_samples: []
+    parameters:
+      - name: partOrCharacter
+        type: Instance
+        default:
+        summary: ''
+      - name: textChatMessage
+        type: TextChatMessage
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChatService.MessageReceived
+    summary: |
+      Fires when a `Class.TextChannel:SendAsync()` response is received by the
+      server or `Class.TextChannel:DisplaySystemMessage()` is invoked.
+    description: |
+      Only fired on the receiving client. when `Class.TextChannel:SendAsync()`
+      response is received by the server or
+      `Class.TextChannel:DisplaySystemMessage()` is invoked.
+
+      Use `Class.TextChatMessage` parameter to get the `Class.TextSource` and
+      the text of the message (with `Class.TextChatMessage.Text`).
+
+      The `Class.TextChatMessage` parameter is the final result of any functions
+      bound to `Class.TextChatMessage.OnIncomingMessage`.
+    code_samples: []
+    parameters:
+      - name: textChatMessage
+        type: TextChatMessage
+        default:
+        summary: |
+          The received `Class.TextChatMessage`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChatService.SendingMessage
+    summary: |
+      Fires when `Class.TextChannel:SendAsync()` is called by the sending
+      client.
+    description: |
+      Only fired on the sending client when `Class.TextChannel:SendAsync()` is
+      called by the sending client.
+
+      Use this to allow placeholder messages to be shown to the user while
+      waiting for server response to `Class.TextChannel:SendAsync()`.
+    code_samples: []
+    parameters:
+      - name: textChatMessage
+        type: TextChatMessage
+        default:
+        summary: |
+          The `Class.TextChatMessage` from the `Class.TextChannel:SendAsync()`
+          call.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks:
+  - name: TextChatService.OnBubbleAdded
+    summary: |
+      Called when a bubble chat is about to be displayed.
+    description: |
+      Called when a bubble chat is about to be displayed.
+
+      This can only be implemented on the client.
+
+      Use this to customize individual bubble chat messages. If this callback
+      returns a 'Class.BubbleChatMessageProperties', those properties will be
+      applied to the associated bubble, overriding
+      `Class.BubbleChatConfiguration` properties. If a `Class.UICorner`,
+      `Class.UIGradient`, or `Class.ImageLabel` is parented under
+      `BubbleChatMessageProperties`, they will also override their respective
+      counterparts defined in `Class.BubbleChatConfiguration`
+
+      If the chat message is sent by a player, `message.TextSource` will
+      correspond to that player, and `adornee` will be `nil`.
+
+      If the chat message is sent via `Class.TextChatService:DisplayBubble`, the
+      `adornee` will be the `partOrCharacter` provided, and `message.TextSource`
+      will be `nil`.
+    code_samples: []
+    parameters:
+      - name: message
+        type: TextChatMessage
+        default:
+        summary: |
+          The incoming `Class.TextChatMessage`.
+      - name: adornee
+        type: Instance
+        default:
+        summary: |
+          The _partOrCharacter_ the bubble chat message is attached to.
+    returns:
+      - type: Tuple
+        summary: |
+          If a
+          `Class.TextChatMessagethose properties will be applied to the associated bubble, overriding `Class.BubbleChatConfiguration`
+          properties.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: TextChatService.OnIncomingMessage
+    summary: |
+      Called when `Class.TextChatService` is receiving an incoming message.
+    description: |
+      Called when `Class.TextChatService` is receiving an incoming message.
+
+      This can only be implemented on the client.
+
+      Use this to decorate `Class.TextChatMessage` instances. If this callback
+      returns a `Class.TextChatMessageProperties`, those properties are merged
+      with the `Class.TextChatMessage` parameter to create a new
+      `Class.TextChatMessage` with those properties.
+
+      When bound to the client sending a message, this event can be fired twice,
+      first when the message is initially sent and received locally by the same
+      client, and then when the result of the filtered message is received by
+      that client from the server.
+
+      `Class.TextChatService.OnIncomingMessage` callback runs **before** any
+      `Class.TextChannel.OnIncomingMessage` callbacks.
+
+      This should be defined only once in the source code. Multiple bindings
+      will override one another in a nondeterministic manner.
+    code_samples: []
+    parameters:
+      - name: message
+        type: TextChatMessage
+        default:
+        summary: |
+          The incoming `Class.TextChatMessage`.
+    returns:
+      - type: Tuple
+        summary: |
+          If a `Class.TextChatMessageProperties` is returned, those properties
+          are merged with the `Class.TextChatMessage` parameter to create a new
+          `Class.TextChatMessage` with those properties, otherwise, if `nil` is
+          returned, then `Class.TextChatMessage` is not changed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe

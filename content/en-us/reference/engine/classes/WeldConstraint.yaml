@@ -1,0 +1,194 @@
+name: WeldConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  Connects two `Class.BasePart|BaseParts` together such that their relative
+  position and orientation remain the same.
+description: |
+  **WeldConstraint** connects two `Class.BasePart|BaseParts` and ensures they
+  stay in the same relative position/orientation to each other, meaning that if
+  one part moves, the other moves the same amount. Even if the two parts are not
+  touching, they can be welded together.
+
+  The most common way to create a weld constraint is by selecting **Weld**
+  through Studio's **Create** menu in the [Model](../../../studio/model-tab.md)
+  tab.
+
+  <img
+  src="/assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
+  width="740" alt="Constraint picker indicated in Studio toolbar" />
+
+  Note that this tool behaves differently depending on how many
+  `Class.BasePart|BaseParts` are selected when the tool is activated:
+
+  - If no `Class.BasePart|BaseParts` are selected, the next two
+    `Class.BasePart|BaseParts` clicked will be connected by a new
+    `Class.WeldConstraint`. If the same `Class.BasePart` is clicked twice, no
+    constraint will be created.
+  - If one `Class.BasePart` is already selected, the next `Class.BasePart`
+    clicked will be connected to the selected one with a new
+    `Class.WeldConstraint`.
+  - If multiple `Class.BasePart|BaseParts` are selected, those which are
+    touching or overlapping will be automatically welded together by new
+    `Class.WeldConstraint|WeldConstraints`.
+
+  #### Repositioning Behavior
+
+  Moving a welded `Class.BasePart` behaves differently depending on whether the
+  part was moved through its `Class.BasePart.Position|Position` or through its
+  `Datatype.CFrame`.
+
+  - If a welded part's `Class.BasePart.Position|Position` is updated, that part
+    will move but none of the connected parts will move with it. The weld will
+    recalculate the offset from the other parts based on the moved part's new
+    position.
+
+  - If a welded part's `Datatype.CFrame` is updated, that part will move **and**
+    all of the connected parts will also move, ensuring they maintain the same
+    offset as when the weld was created.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: WeldConstraint.Active
+    summary: |
+      Indicates if the WeldConstraint is currently active in the world.
+    description: |
+      True if the WeldConstraint is currently active in the world.
+
+      If the WeldConstraint or one of its parts is not in `Class.Workspace` the
+      weld will be inactive.
+
+      Rigid joints like `Class.Weld`, `Class.Snap`, `Class.WeldConstraint`,
+      `Class.Motor`, or `Class.Motor6D` may also be disabled due to conflicts
+      with other rigid joints, such as joints between the same two parts or
+      indirect cycles in the weld graph. Joints disabled this way may be
+      re-enabled later when another joint or part is added or removed.
+
+      Duplicate WeldConstraints do not conflict because WeldConstraints derive
+      their internal CFrames from the relative positions of their parts when
+      they are enabled and all update when `Class.BasePart.Position` or
+      `Class.BasePart.Orientation` is set on a part. The spanning tree may still
+      disable them if they are redundant or form a cycle.
+    code_samples:
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: true
+  - name: WeldConstraint.Enabled
+    summary: |
+      Toggles the constraint on and off.
+    description: |
+      The **Enabled** property of a `Class.WeldConstraint` sets whether the
+      constraint is active or not. When this property is set to true, if the
+      constraint's `Class.WeldConstraint.Part0` and `Class.WeldConstraint.Part1`
+      properties are set, then the constraint will ensure that its two connected
+      parts will be locked together.
+    code_samples:
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: false
+  - name: WeldConstraint.Part0
+    summary: |
+      The first part connected by the constraint.
+    description: |
+      The **Part0** and `Class.WeldConstraint.Part1` properties of a
+      `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
+      As soon as both properties are set and the weld is
+      `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
+
+      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
+      instantly link the new part. The old part will no longer be constrained.
+
+      ```lua
+      local partA = Instance.new("Part")
+      local partB = Instance.new("Part")
+
+      partA.Position = Vector3.new(0, 10, 0)
+      partA.Parent = workspace
+
+      partB.Position = Vector3.new(0, 10, 10)
+      partB.Parent = workspace
+
+      local weld = Instance.new("WeldConstraint")
+      weld.Parent = partA
+      weld.Part0 = partA
+      weld.Part1 = partB
+      ```
+    code_samples:
+    type: BasePart
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Parts
+    serialization:
+      can_load: true
+      can_save: false
+  - name: WeldConstraint.Part1
+    summary: |
+      The second part connected by the constraint.
+    description: |
+      The `Class.WeldConstraint.Part0` and **Part1** properties of a
+      `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
+      As soon as both properties are set and the weld is
+      `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
+
+      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
+      instantly link the new part. The old part will no longer be constrained.
+
+      ```lua
+      local partA = Instance.new("Part")
+      local partB = Instance.new("Part")
+
+      partA.Position = Vector3.new(0, 10, 0)
+      partA.Parent = game.Workspace
+
+      partB.Position = Vector3.new(0, 10, 10)
+      partB.Parent = game.Workspace
+
+      local weld = Instance.new("WeldConstraint")
+      weld.Parent = partA
+      weld.Part0 = partA
+      weld.Part1 = partB
+      ```
+    code_samples:
+    type: BasePart
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Parts
+    serialization:
+      can_load: true
+      can_save: false
+methods: []
+events: []
+callbacks: []

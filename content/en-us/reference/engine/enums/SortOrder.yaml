@@ -1,0 +1,34 @@
+name: SortOrder
+type: enum
+summary: |
+  Used by `Class.UIGridStyleLayout.SortOrder` to order the elements in the
+  layout.
+description: |
+  Used by `Class.UIGridStyleLayout.SortOrder` to order the elements in the
+  layout.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Name
+    value: 0
+    summary: |
+      Elements will be ordered by their `Class.Instance.Name` in alphabetical
+      order (e.g. Apple will be placed before Banana).
+    tags: []
+    deprecation_message: ''
+  - name: Custom
+    value: 1
+    summary: |
+      Deprecated. Elements are ordered by the function passed to
+      `Class.UIGridStyleLayout:SetCustomSortFunction()`.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: LayoutOrder
+    value: 2
+    summary: |
+      Elements will be ordered by `Class.GuiObject.LayoutOrder` in ascending
+      order (e.g. 0 will be placed before 1).
+    tags: []
+    deprecation_message: ''

@@ -1,0 +1,479 @@
+name: PhysicsService
+type: class
+category: Building
+memory_category: Instances
+summary: ''
+description: |
+  `Class.PhysicsService` primarily contains methods for working with **collision
+  groups** which define whether a set of parts may or may not collide with parts
+  in other collision groups. You can register a collision group through
+  `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()` and
+  assign parts to it by setting those parts'
+  `Class.BasePart.CollisionGroup|CollisionGroup` property to the **name** of the
+  collision group.
+
+  Creating, deleting, and modifying collision relationships between collision
+  groups is limited to server-side `Class.Script|Scripts`.
+
+  See
+  [Collision Filtering](../../../workspace/collisions.md#collision-filtering)
+  for usage details in Studio and within scripts.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: PhysicsService:CollisionGroupContainsPart
+    summary: |
+      Returns whether the part is in the collision group.
+    description: |
+      Returns whether the specified part is in the specified collision group.
+      This method will throw a runtime error in the following circumstances:
+
+      - The specified group does not exist.
+      - The specified part is not a `Class.BasePart`.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been deprecated. It's recommended that you query a part's
+      collision group through its `Class.BasePart.CollisionGroup|CollisionGroup`
+      property.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:CollisionGroupSetCollidable
+    summary: |
+      Sets the collision status between two groups.
+    description: |
+      Sets the collision status between two groups. This method will throw an
+      error if either of the groups is unregistered, so it's recommended that
+      you confirm each group's registration through
+      `Class.PhysicsService:IsCollisionGroupRegistered()` before making this
+      call.
+    code_samples:
+    parameters:
+      - name: name1
+        type: string
+        default:
+        summary: ''
+      - name: name2
+        type: string
+        default:
+        summary: ''
+      - name: collidable
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:CollisionGroupsAreCollidable
+    summary: |
+      Returns whether the two groups will collide.
+    description: |
+      Returns whether the two specified collision groups will collide. This
+      method will also return true if either of the groups are unregistered, as
+      the default collision mask collides with all groups.
+    code_samples:
+    parameters:
+      - name: name1
+        type: string
+        default:
+        summary: ''
+      - name: name2
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:CreateCollisionGroup
+    summary: |
+      Creates a new collision group with the given name, and returns the ID of
+      the created group.
+    description: |
+      Creates a new collision group with the given name, and returns the ID of
+      the created group.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: int
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`
+      which should be used for all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:GetCollisionGroupId
+    summary: |
+      Returns the ID of the collision group with the specified name.
+    description: |
+      This method returns the ID of the collision group with the specified name.
+      It will throw an error if no group with the given name exists.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the collision group being retrieved.
+    returns:
+      - type: int
+        summary: |
+          The ID of the retrieved collision group, or `nil` if no such group
+          exists.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been deprecated. It's recommended that you query collision
+      groups by **name** through a part's
+      `Class.BasePart.CollisionGroup|CollisionGroup` property.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:GetCollisionGroupName
+    summary: |
+      Returns the name of the group with the corresponding ID.
+    description: |
+      Returns the name of the collision group with the corresponding ID. This
+      method will return `nil` if the group with the corresponding ID has not
+      been named.
+    code_samples:
+    parameters:
+      - name: name
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been deprecated. It's recommended that you query collision
+      groups by **name** through a part's
+      `Class.BasePart.CollisionGroup|CollisionGroup` property.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:GetCollisionGroups
+    summary: |
+      Returns a table with info on all of the place's collision groups.
+    description: |
+      Returns a table with info on all of the place's collision groups. Each
+      value in the returned table is itself a table containing three members:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>integer</td>
+            <td>The ID of the group.</td>
+          </tr>
+          <tr>
+            <td>mask</td>
+            <td>integer</td>
+            <td>The collision group's mask; only for internal use.</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>The name of the collision group.</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.PhysicsService:GetRegisteredCollisionGroups()|GetRegisteredCollisionGroups()`
+      which should be used for all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:GetMaxCollisionGroups
+    summary: |
+      Returns the maximum number of collision groups.
+    description: |
+      Returns the maximum number of collision groups the engine supports. This
+      value is currently 32.
+    code_samples:
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:GetRegisteredCollisionGroups
+    summary: |
+      Returns a table with info on all of the place's collision groups.
+    description: |
+      Returns a table with info on all of the place's collision groups. Each
+      value in the returned table is itself a table and containing two members:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mask</td>
+            <td>integer</td>
+            <td>The collision group's mask; only for internal use.</td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>Name of the collision group.</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:IsCollisionGroupRegistered
+    summary: |
+      Checks if a collision group is registered.
+    description: |
+      Checks if a collision group is registered. It's recommended that you call
+      this method before calling methods that throw errors for unregistered
+      collision groups, such as
+      `Class.PhysicsService:CollisionGroupSetCollidable()`.
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:RegisterCollisionGroup
+    summary: |
+      Registers a new collision group with the given name.
+    description: |
+      Registers a new collision group with the given name. The name cannot be
+      `"Default"`.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the workspace, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and call
+      `Class.PhysicsService:UnregisterCollisionGroup()|UnregisterCollisionGroup()`
+      and `Class.PhysicsService:RenameCollisionGroup()|RenameCollisionGroup()`
+      as infrequently as possible.
+    code_samples:
+      - PhysicsService-RegisterCollisionGroup
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:RemoveCollisionGroup
+    summary: |
+      Removes the collision group with the given name.
+    description: |
+      Removes the collision group with the given name. If an invalid name is
+      provided, this method will not do anything, although if the reserved name
+      `"Default"` is provided, it will throw an error. If there are any parts in
+      the collision group when it is removed, these parts will still maintain
+      the same collision group ID. The physical behavior of parts in a removed
+      group is undefined, so it is recommended to move any parts in a removed
+      group to another group. This method will throw a runtime error in the
+      following circumstances:
+
+      - The name `"Default"` is provided.
+      - The method is called from a client.
+    code_samples:
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been superseded by
+      `Class.PhysicsService:UnregisterCollisionGroup()|UnregisterCollisionGroup()`
+      which should be used for all new work.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:RenameCollisionGroup
+    summary: |
+      Renames specified collision group.
+    description: |
+      Renames the specified registered collision group, but does **not** rename
+      the `Class.BasePart.CollisionGroup|CollisionGroup` property of parts that
+      utilize the group. The first argument of this method is the name of the
+      group to rename, the second argument is the new name for the group. If the
+      specified group does not exist, this method will not do anything. The
+      naming conventions for the new name follow the same rules as if the group
+      was being created with
+      `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`.
+
+      This method will throw a runtime error in the following circumstances:
+
+      - Invalid or empty name provided for either argument.
+      - The method is called from a client.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the workspace, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and rename
+      them as infrequently as possible.
+    code_samples:
+    parameters:
+      - name: from
+        type: string
+        default:
+        summary: ''
+      - name: to
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:SetPartCollisionGroup
+    summary: |
+      Sets the collision group of a part.
+    description: |
+      This method sets the collision group of the specified part to the group
+      with the specified name. It is equivalent to setting the
+      `Class.BasePart.CollisionGroupId`, although calling this method is the
+      recommended approach.
+
+      This method will throw a runtime error in the following circumstances:
+
+      - The part parameter is not a `Class.BasePart` instance.
+      - The specified group does not exist.
+    code_samples:
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: |
+          The part being set.
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of collision group that the part's collision group is being
+          set to.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This method has been deprecated. It's recommended that you set a part's
+      collision group by **name** through its
+      `Class.BasePart.CollisionGroup|CollisionGroup` property.
+    security: None
+    thread_safety: Unsafe
+  - name: PhysicsService:UnregisterCollisionGroup
+    summary: |
+      Unregisters the collision group for the given name.
+    description: |
+      Unregisters the collision group for the given name, with the following
+      behaviors:
+
+      - If an invalid name is provided, the method will not do anything.
+      - If the reserved name `"Default"` is provided **or** if the method is
+        called from a client, it will throw an error.
+      - If there are any parts in the collision group when it is removed, those
+        parts will still maintain the same collision group name. The physical
+        behavior of parts in a removed group is undefined, so it's recommended
+        to move any parts in a removed group to another group, such as the
+        `"Default"` group.
+
+      Note that this method has a slight performance overhead based on the
+      number of `Class.BasePart|BaseParts` in the workspace, so it's recommended
+      that you register all collision groups at edit time through the Studio
+      [editor](../../../workspace/collisions.md#collision-groups) and call this
+      method as infrequently as possible.
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

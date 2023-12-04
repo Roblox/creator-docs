@@ -1,0 +1,20 @@
+name: Folder
+type: class
+category: Utility
+memory_category: Instances
+summary: |
+  A simple container used to hold and organize Roblox instances.
+description: |
+  A simple container used to hold and organize Roblox instances. Unlike other
+  container classes like `Class.Model`, a folder offers no additional
+  functionality. Folders behave the same way as folders in a computer file
+  system, meaning they can also be parented to each other.
+code_samples:
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

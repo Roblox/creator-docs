@@ -1,0 +1,746 @@
+name: Beam
+type: class
+category: Effects
+memory_category: Instances
+summary: |
+  Connects two `Class.Attachment`s by drawing a texture between them.
+description: |
+  A **Beam** object connects two `Class.Attachment|Attachments` by drawing a
+  texture between them.
+
+  To display, a beam must be a descendant of the `Class.Workspace` with its
+  `Class.Beam.Attachment0|Attachment0` and `Class.Beam.Attachment1|Attachment1`
+  properties set to `Class.Attachment|Attachments` also descending from the
+  `Class.Workspace`.
+
+  The beam's appearance can be customized using the range of properties outlined
+  below. Also see the [Beams](../../../effects/beams.md) guide for visual
+  examples.
+
+  #### Beam Curvature
+
+  Beams are configured to use a cubic Bézier curve formed by four control
+  points. This means they are not constrained to straight lines, and the curve
+  of the beam can be modified by changing `Class.Beam.CurveSize0|CurveSize0`,
+  `Class.Beam.CurveSize1|CurveSize1`, and the orientation of the beam's
+  `Class.Attachment|Attachments`.
+
+  - **P0**: The start of the beam; position of `Class.Beam.Attachment0`.
+  - **P1**: `Class.Beam.CurveSize0` studs away from `Class.Beam.Attachment0`, in
+    `Class.Beam.Attachment0`'s positive X direction.
+  - **P2**: `Class.Beam.CurveSize1` studs away from `Class.Beam.Attachment1`, in
+    `Class.Beam.Attachment1`'s negative X direction.
+  - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
+
+  ![Beam Curve](/assets/legacy/BeamCurve1.png)
+code_samples:
+  - Creating-a-Beam-From-Scratch
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: Beam.Attachment0
+    summary: |
+      The `Class.Attachment` the `Class.Beam` originates from.
+    description: |
+      The `Class.Attachment` the `Class.Beam` originates from.
+
+      A `Class.Beam`'s Attachment0 is the first control point on the
+      `Class.Beam`'s cubic Bézier curve. The orientation of Attachment0,
+      alongside the `Class.Beam`'s `Class.Beam.CurveSize0`, property determine
+      the position of the second control point.
+
+      For the `Class.Attachment` where the `Class.Beam` ends see
+      `Class.Beam.Attachment1`.
+
+      For more information how a `Class.Beam` curves, see
+      `Class.Beam.CurveSize0`.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: Attachment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Attachment1
+    summary: |
+      The `Class.Attachment` the `Class.Beam` ends at.
+    description: |
+      The `Class.Attachment` the `Class.Beam` ends at.
+
+      A `Class.Beam`'s Attachment1 is the fourth and final control point on the
+      `Class.Beam`'s cubic Bézier curve. The orientation of Attachment1,
+      alongside the `Class.Beam`'s `Class.Beam.CurveSize1` property, determine
+      the position of the third control point.
+
+      For the `Class.Attachment` where the `Class.Beam` starts see
+      `Class.Beam.Attachment0`.
+
+      For more information how a `Class.Beam` curves, see
+      `Class.Beam.CurveSize1`.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: Attachment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Brightness
+    summary: |
+      Scales the light emitted from Beam when
+      `Class.Beam.LightInfluence|LightInfluence` is 0.
+    description: |
+      Scales the light emitted from `Class.Beam`. By default, this property is 1
+      and can set to any number within the range [0, 10000]. Increasing the
+      value of `Class.Beam.LightInfluence|LightInfluence` decreases the effect
+      of **Brightness**. **Brightness** doesn't have any effect when
+      `Class.Beam.LightInfluence|LightInfluence` is 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Color
+    summary: |
+      Determines the color of the `Class.Beam` across its segments.
+    description: |
+      Determines the color of the `Class.Beam`.
+
+      If the `Class.Beam`'s `Class.Beam.Texture` is set, this color will be
+      applied to the `Class.Beam`'s texture. If no `Class.Beam.Texture` has been
+      set then the `Class.Beam` will appear as a solid bar colored in accordance
+      with this property.
+
+      #### Beams and ColorSequences
+
+      This property is a `Datatype.ColorSequence`, allowing the color to be
+      configured to vary across the length of the `Class.Beam`. Take for example
+      the following `Datatype.ColorSequence`.
+
+      ```lua
+      local colorSequence = ColorSequence.new({
+      	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- red
+      	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)), -- green
+      	ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 255)), -- blue
+      	}
+      )
+      ```
+
+      Applying this `Datatype.ColorSequence` to a `Class.Beam` would yield the
+      following result:
+
+      ![enter image description here](/assets/legacy/BeamColor.png)
+
+      Note the `Class.Beam`'s coloration also depends on the number of
+      `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
+      only show a transition between two colors. Therefore a `Class.Beam` will
+      need to have at least n-1 segments in order for the color to display
+      correctly, where n is the number of `Datatype.ColorSequenceKeypoint`s in
+      the `Datatype.ColorSequence`
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: ColorSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.CurveSize0
+    summary: |
+      Determines, along with `Class.Beam.Attachment0` the position of the first
+      control point in the `Class.Beam`'s Bézier curve.
+    description: |
+      Determines, along with `Class.Beam.Attachment0` the position of the first
+      control point in the Beam's Bézier curve.
+
+      The position of this point can be determined by the following equation:
+
+      ```lua
+      local controlPoint1 = Beam.Attachment0.WorldPosition + (Beam.Attachment0.CFrame.rightVector * Beam.CurveSize0)
+      ```
+
+      #### Beam Curvature
+
+      Beams are configured to use a cubic
+      [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). This
+      means they are not constrained to straight lines, and the curve of the
+      beam can be modified by changing CurveSize0, `Class.Beam.CurveSize1` and
+      the orientation of the beam's `Class.Attachment`s.
+
+      Cubic Bézier curves are formed of four control points. They are determined
+      as follows:
+
+      - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
+      - **P1**: CurveSize0 studs away from `Class.Beam.Attachment0`, in
+        `Class.Beam.Attachment0`'s positive X direction.
+      - **P2**: `Class.Beam.CurveSize1` studs away from
+        `Class.Beam.Attachment1`, in `Class.Beam.Attachment1`'s negative X
+        direction.
+      - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
+
+      The beam starts at P0, goes towards P1, and arrives at P3, from the
+      direction of P2. The beam will not necessarily pass through P1 and P2.
+
+      See the images below for a visual demonstration.
+
+      ![BeamCurve1](/assets/legacy/BeamCurve1.png)
+
+      ![BeamCurve2](/assets/legacy/BeamCurve2.png)
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.CurveSize1
+    summary: |
+      Determines, along with `Class.Beam.Attachment1` the position of the second
+      control point in the `Class.Beam`'s Bézier curve.
+    description: |
+      Determines, along with `Class.Beam.Attachment0` the position of the first
+      control point in the Beam's Bézier curve.
+
+      The position of this point can be determined by the following equation:
+
+      ```lua
+      local controlPoint2 = Beam.Attachment1.WorldPosition - (Beam.Attachment1.CFrame.rightVector * Beam.CurveSize1)
+      ```
+
+      #### Beam Curvature
+
+      Beams are configured to use a cubic
+      [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). This
+      means they are not constrained to straight lines, and the curve of the
+      beam can be modified by changing `Class.Beam.CurveSize0`, CurveSize1 and
+      the orientation of the beam's `Class.Attachment`s.
+
+      Cubic Bézier curves are formed of four control points. They are determined
+      as follows:
+
+      - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
+      - **P1**: `Class.Beam.CurveSize0` studs away from
+        `Class.Beam.Attachment0`, in `Class.Beam.Attachment0`'s positive X
+        direction.
+      - **P2**: CurveSize1 studs away from `Class.Beam.Attachment1`, in
+        `Class.Beam.Attachment1`'s negative X direction.
+      - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
+
+      The beam starts at P0, goes towards P1, and arrives at P3, from the
+      direction of P2. The beam will not necessarily pass through P1 and P2.
+
+      See the images below for a visual demonstration.
+
+      ![enter image description here](/assets/legacy/BeamCurve1.png)
+
+      ![enter image description here](/assets/legacy/BeamCurve2.png)
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Enabled
+    summary: |
+      Determines whether the `Class.Beam` is visible or not.
+    description: |
+      Determines whether the `Class.Beam` is visible or not.
+
+      When this property is set to false, the `Class.Beam`'s
+      `Class.Beam.Segments` will not be displayed.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.FaceCamera
+    summary: |
+      Determines whether the `Class.Beam.Segments` of the `Class.Beam` will
+      always face the camera regardless of its orientation.
+    description: |
+      Determines whether the `Class.Beam.Segments` of the `Class.Beam` will
+      always face the `Class.Workspace.CurrentCamera` regardless of its
+      orientation.
+
+      A `Class.Beam` has no depth, and is hence a two dimensional projection
+      existing in three dimensional space. This means that, by default, a
+      `Class.Beam` is not visible from every angle.
+
+      When FaceCamera is set to true, the `Class.Beam` will always be orientated
+      towards the `Class.Workspace.CurrentCamera`.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.LightEmission
+    summary: |
+      Determines to what degree the colors of the `Class.Beam` are blended with
+      the colors behind it.
+    description: |
+      Determines to what degree the colors of the `Class.Beam` are blended with
+      the colors behind it.
+
+      The LightEmission property determines the blending of the `Class.Beam`
+      with the colors behind it. It should be set in the range [0, 1]. A value
+      of 0 uses normal blending modes, and a value of 1 will use additive
+      blending. The value of the additive blending is determined by this
+      property.
+
+      Pictured below are two sets of overlapping `Class.Beam`s. The right one
+      has its LightEmission set to 1, so the texture appears brighter due to the
+      additive blending on the overlaps.
+
+      ![](/assets/legacy/BeamLightEmission.png)
+
+      This property should not be confused with `Class.Beam.LightInfluence`,
+      which determines how particles are affected by environment light. This
+      property does not cause the `Class.Beam` to light the environment. To do
+      that, consider using a `Class.SurfaceLight`.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.LightInfluence
+    summary: |
+      Determines the degree to which the `Class.Beam` is influenced by the
+      environment's lighting.
+    description: |
+      Determines the degree to which the `Class.Beam` is influenced by the
+      environment's lighting.
+
+      LightInfluence is clamped between 0 and 1. When LightInfluence is 0, the
+      `Class.Beam` will be unaffected by the environment's lighting. When
+      LightInfluence is 1 however, it will be fully affected by lighting (as a
+      `Class.BasePart` would be).
+
+      For an example of this, and a demonstration of how this property interacts
+      with `Class.Beam.LightEmission`, please see the images below.
+
+      ![Beam light](/assets/legacy/BeamLight1.png)
+
+      ![Beam light](/assets/legacy/BeamLight2.png)
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Segments
+    summary: |
+      Sets how many straight segments the `Class.Beam` is made up of.
+    description: |
+      Sets how many straight segments the `Class.Beam` is made up of.
+
+      This value can be any integer greater than 0. The default value is 10.
+
+      #### Beam Segments and curvature
+
+      Rather than being a perfect curve, a beam is made up of straight segments.
+      The more segments, the higher the resolution of the curve. See the image
+      below for a demonstration of this:
+
+      ![Beam Segments](/assets/legacy/Beam.Segments.jpg)
+
+      For more information on how a `Class.Beam` is configured to curve, see the
+      page for `Class.Beam.CurveSize0`.
+
+      #### Beam Segments with Color and Transparency
+
+      The `Class.Beam.Color` and `Class.Beam.Transparency` properties require a
+      certain number of segments to display correctly. This is because each
+      segment can only show a transition between two colors or transparencies.
+      Therefore a `Class.Beam` requires at least n-1 segments to display
+      correctly, where n is the number of keypoint associated with the
+      `Class.Beam`'s `Class.Beam.Color` and `Class.Beam.Transparency`.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Texture
+    summary: |
+      The content ID of the texture to be displayed on the `Class.Beam`.
+    description: |
+      The content ID of the texture to be displayed on the `Class.Beam`.
+
+      If the Texture property of the beam is not set the beam will be displayed
+      as a solid line. This also occurs when the texture is set to an invalid
+      content ID or the image associated with the texture has not yet loaded.
+
+      The appearance of the texture can be further modified by other
+      `Class.Beam` properties including `Class.Beam.Color` and
+      `Class.Beam.Transparency`.
+
+      The scaling of the texture is determined by the `Class.Beam.TextureMode`,
+      `Class.Beam.TextureLength`, `Class.Beam.Width0` and `Class.Beam.Width1`
+      properties.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.TextureLength
+    summary: |
+      Sets the length of the `Class.Beam`s texture if `Class.Beam.TextureMode`
+      is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
+      determines the size of the texture relative to the `Class.Beam|Beam's`
+      length.
+    description: |
+      Sets the length of the `Class.Beam`s texture if `Class.Beam.TextureMode`
+      is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
+      determines the size of the texture relative to the `Class.Beam`'s length.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.TextureMode
+    summary: |
+      Determines the manner in which the `Class.Beam.Texture` scales and
+      repeats.
+    description: |
+      Determines the manner in which the `Class.Beam.Texture` scales and
+      repeats.
+
+      #### Beam Texture Behavior
+
+      How a `Class.Beam`'s texture scales or repeats is dependent on the
+      TextureMode property.
+
+      When TextureMode is 'Wrap' the size of the repeating texture corresponds
+      to `Class.Beam.TextureLength` in studs. For an example of this see the
+      image below:
+
+      <img src="/assets/legacy/textureMode_wrap.jpg" class = "half-sized" />
+
+      Note, the 'Static' `Enum.TextureMode` type is not used for `Class.Beam`s
+      and therefore behaves identically to 'Wrap'.
+
+      When `Class.Beam.TextureMode` is set to 'Stretch' however the texture will
+      be stretched relative to the beam's length. The size of the texture
+      relative to the `Class.Beam`'s length will be one over the
+      `Class.Beam.TextureLength`. In practice, this means the texture will
+      repeat `Class.Beam.TextureLength` times. For an example of this see the
+      image below:
+
+      <img src="/assets/legacy/textureMode_strech.jpg" class = "half-sized" />
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: TextureMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.TextureSpeed
+    summary: |
+      Determines the speed at which the `Class.Beam.Texture` image moves along
+      the `Class.Beam`.
+    description: |
+      Determines the speed at which the `Class.Beam.Texture` image moves along
+      the `Class.Beam`.
+
+      When TextureSpeed is positive, the beam's texture will move from
+      `Class.Beam.Attachment0` to `Class.Beam.Attachment1`. This direction can
+      be inverted by setting TextureSpeed to a negative number.
+
+      Note the speed at which the texture moves is relative to the length of the
+      texture. Meaning the more stretched the beam's `Class.Beam.Texture` is,
+      the faster it will move at the same TextureSpeed.
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Transparency
+    summary: |
+      Determines the transparency of the `Class.Beam` across its segments.
+    description: |
+      Determines the transparency of the `Class.Beam` across its segments.
+
+      #### Beams and Transparency
+
+      This property is a `Datatype.NumberSequence`, allowing the transparency to
+      be configured to vary across the length of the `Class.Beam`. Take for
+      example the following `Datatype.NumberSequence`.
+
+      ```lua
+      local numberSequence = NumberSequence.new({
+      	NumberSequenceKeypoint.new(0, 1), -- transparent
+      	NumberSequenceKeypoint.new(0.5, 0), -- opaque
+      	NumberSequenceKeypoint.new(1, 1), -- transparent
+      	}
+      )
+      ```
+
+      Applying this `Datatype.NumberSequence` to a `Class.Beam` would yield the
+      following result:
+
+      ![enter image description here](/assets/legacy/BeamTransparency.png)
+
+      Note the `Class.Beam|Beam's` transparency also depends on the number of
+      `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
+      only show a transition between two transparencies. Therefore a
+      `Class.Beam` will need to have at least n-1 segments in order to display
+      correctly, where n is the number of `Datatype.NumberSequenceKeypoint`s in
+      the `Datatype.NumberSequence`
+    code_samples:
+      - Creating-a-Beam-From-Scratch
+    type: NumberSequence
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Width0
+    summary: |
+      The width in studs of the `Class.Beam` at its base.
+    description: |
+      The width in studs of the `Class.Beam` at its base.
+
+      The beam will be Width0 studs wide at `Class.Beam.Attachment0` and the
+      width will change linearly to `Class.Beam.Width1` studs at
+      `Class.Beam.Attachment1`.
+
+      The width properties should not be confused with `Class.Beam.CurveSize0`
+      and `Class.Beam.CurveSize1` which control the curvature of the beam.
+    code_samples:
+      - Beam-ZOffset
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.Width1
+    summary: |
+      The width in studs of the `Class.Beam` at its end.
+    description: |
+      The width in studs of the `Class.Beam` at its end.
+
+      The beam will be `Class.Beam.Width0` studs wide at
+      `Class.Beam.Attachment0` and the width will change linearly to Width1
+      studs at `Class.Beam.Attachment1`.
+
+      The width properties should not be confused with `Class.Beam.CurveSize0`
+      and `Class.Beam.CurveSize1` which control the curvature of the beam.
+    code_samples:
+      - Beam-ZOffset
+      - Creating-a-Beam-From-Scratch
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Shape
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Beam.ZOffset
+    summary: |
+      The distance, in studs, the `Class.Beam`s display is offset by relative to
+      the `Class.Workspace.CurrentCamera`.
+    description: |
+      The distance, in studs, the `Class.Beam`s display is offset by relative to
+      the `Class.Workspace.CurrentCamera`.
+
+      When ZOffset is 0, the `Class.Beam` will be displayed in its standard
+      position between `Class.Beam.Attachment0` and `Class.Beam.Attachment1`.
+      ZOffset can be both positive and negative.
+
+      This property can be particularly useful when using multiple
+      `Class.Beam|Beams` between the same `Class.Attachment`s. It can be used to
+      layer the `Class.Beam`s and avoid
+      [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting).
+    code_samples:
+      - Beam-ZOffset
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Beam:SetTextureOffset
+    summary: |
+      Sets the current offset of the `Class.Beam`'s texture cycle.
+    description: |
+      Sets the current offset of the `Class.Beam`'s texture cycle.
+
+      The offset of a `Class.Beam`s texture cycle represents the progress of the
+      `Class.Beam`s texture animation. Hence, a `Class.Beam`'s texture cycle can
+      be reset as follows:
+
+      ```lua
+      beam:SetTextureOffset(0)
+      ```
+
+      Where manual control is not required over the `Class.Beam`'s texture
+      cycle, `Class.Beam.TextureSpeed` can be used instead to animate the
+      `Class.Beam`. Although, for illustrative purposes, a similar function can
+      be achieved with SetTextureOffset.
+
+      ```lua
+      local RunService = game:GetService("RunService")
+      while true do
+      	for i = 1, 0, -0.01 do
+      		RunService.RenderStepped:Wait()
+      		beam:SetTextureOffset(i)
+      	end
+      end
+      ```
+
+      Note:
+
+      - The given offset parameter is expected to be a value between 0 and 1,
+        but greater values can still be used
+      - The texture cycle wraps at 0 and 1, meaning the texture is in the same
+        position when the offset is 0 or at 1
+      - If the `Class.Beam.Texture` property is not set, this function will do
+        nothing
+      - Increasing the offset will act in the inverse direction to the
+        `Class.Beam.TextureSpeed` property. Meaning, it will move the texture in
+        the opposite direction to the direction the texture animates when
+        `Class.Beam.TextureSpeed` is more than 0
+    code_samples:
+    parameters:
+      - name: offset
+        type: float
+        default: 0
+        summary: |
+          The desired offset of the texture cycle.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

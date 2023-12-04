@@ -1,0 +1,169 @@
+name: BodyVelocity
+type: class
+category: Body Movers
+memory_category: Instances
+summary: |
+  Applies a force to maintain a constant velocity.
+description: |
+  The `Class.BodyVelocity` object applies a force on a `Class.BasePart` such
+  that it will maintain a constant velocity. The `Class.BodyVelocity.Velocity`
+  property, not to be confused with `Class.BasePart.AssemblyLinearVelocity`,
+  controls the goal velocity.
+
+  `Class.BodyVelocity` is the linear counterpart to `Class.BodyAngularVelocity`.
+  If you need the part to move toward a goal position, use `Class.BodyPosition`
+  instead. If you need further control on a force applied to an object, consider
+  using a `Class.BodyForce` or `Class.BodyThrust` instead.
+
+  The strength of the force applied by this object is controlled by several
+  factors, namely the difference between the part's current velocity and the
+  goal velocity. This is multiplied by `Class.BodyVelocity.P|P` (power) to
+  either amplify or diminish it. The resulting force is then capped by
+  `Class.BodyVelocity.MaxForce|MaxForce`.
+code_samples:
+inherits:
+  - BodyMover
+tags:
+  - Deprecated
+deprecation_message: |
+  This object is deprecated and should not be used for new work. Use
+  `Class.LinearVelocity` instead.
+properties:
+  - name: BodyVelocity.MaxForce
+    summary: |
+      Determines the limit on how much force that may be applied to each axis.
+    description: |
+      The MaxForce property determines the limit on the amount of force that may
+      be applied on each axis in reaching the goal
+      `Class.BodyVelocity.Velocity|Velocity`. If a part isn't moving, consider
+      increasing this value (also check that it is not
+      `Class.BasePart.Anchored|Anchored` or attached to any anchored parts).
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyVelocity.P
+    summary: |
+      Determines how aggressive of a force is applied in reaching the goal
+      velocity.
+    description: |
+      his property is ignored if PGS is enabled via
+      Workspace.PGSPhysicsSolverEnabled, which is enabled by default.
+
+      The P property determines how much
+      [power](<https://en.wikipedia.org/wiki/Power_(physics)>) is used while
+      applying force in order to reach the goal
+      `Class.BodyVelocity.Velocity|Velocity`. The higher this value, the more
+      power will be used and the faster it will be used. The force the
+      `Class.BodyVelocity` exerts increases as the difference between the part's
+      current velocity and the goal velocity increases. This property is
+      multiplied to this force to either amplify or diminish it.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyVelocity.Velocity
+    summary: |
+      Determines the goal velocity.
+    description: |
+      The Velocity property (not to be confused with `Class.BasePart.Velocity`)
+      determines the target velocity towards which force will be exerted. It is
+      specified relative to the world, not the part.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: true
+  - name: BodyVelocity.maxForce
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyVelocity.MaxForce`
+      which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+  - name: BodyVelocity.velocity
+    summary: ''
+    description: ''
+    code_samples:
+    type: Vector3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.BodyVelocity.Velocity`
+      which should be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Goals
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: BodyVelocity:GetLastForce
+    summary: |
+      Not implemented and will always return the 0 vector.
+    description: |
+      **GetLastForce** is not implemented. It will always return the 0 vector.
+      Developers are advised to use `Class.AlignPosition` instead
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BodyVelocity:lastForce
+    summary: |
+      Returns the last force in the object.
+    description: |
+      Returns the last force in the object.
+    code_samples:
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

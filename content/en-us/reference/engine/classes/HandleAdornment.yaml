@@ -1,0 +1,186 @@
+name: HandleAdornment
+type: class
+category:
+memory_category: Instances
+summary: |
+  HandleAdornment is an abstract class inherited by 3D handle adornments.
+description: |
+  **Note:** For handles to be interactive, they must be parented to a player's
+  `Class.PlayerGui` or the `Class.CoreGui`. **HandleAdornment** is an abstract
+  class inherited by 3D handle adornments.
+code_samples:
+inherits:
+  - PVAdornment
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: HandleAdornment.AdornCullingMode
+    summary: |
+      Determines whether to automatically cull the adornment.
+    description: ''
+    code_samples:
+    type: AdornCullingMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: HandleAdornment.AlwaysOnTop
+    summary: |
+      Forces this object to render on top of all 3d objects in the Workspace.
+    description: |
+      Forces this object to render on top of all 3d objects in the Workspace.
+      Even if the adornment is behind a part based on its
+      `Class.HandleAdornment.CFrame`, if **AlwaysOnTop** is true then the
+      adornment will still draw on top. The one exception to this behavior is if
+      the `Class.HandleAdornment.ZIndex` of the adornment is set to -1. If this
+      is the case, the adornment will always draw behind 3d geometry.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: HandleAdornment.CFrame
+    summary: |
+      The position and rotation of the object relative to its
+      `Class.PVAdornment.Adornee`.
+    description: |
+      The position and rotation relative to its `Class.PVAdornment.Adornee`.
+      This CFrame is in the local space of the adornee, so forward (0,0,-1) will
+      be forward relative to the adornee. The offset and rotation of this CFrame
+      is applied after any translations due to
+      `Class.HandleAdornment.SizeRelativeOffset`.
+    code_samples:
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: HandleAdornment.SizeRelativeOffset
+    summary: |
+      The positional offset of the adornment based on the adornee's
+      `Class.BasePart.Size`.
+    description: |
+      The positional offset of the adornment based on the adornee's
+      `Class.BasePart.Size`. By default, an adornment draws in the center of its
+      adornee. By using this property, the position of the adornment can be
+      shifted relative to the center of the adornee. The units of
+      **SizeRelativeOffset** are a scale based on the size of the adornee
+      itself. This scale is such that a value of 1 will move the adornment to
+      the corresponding edge of the adornee. This property is intended to allow
+      adornments to easily be moved to the edges of a parts.
+
+      For example, if the **SizeRelativeOffset** is set to (0,1,0), the
+      adornment will be drawn with its center at the exact top of the adornee.
+      If set to (1,1,1), the adornment will be drawn in the upper corner of the
+      adornee.
+    code_samples:
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: HandleAdornment.ZIndex
+    summary: |
+      The ZIndex property determines the draw order of the HandleAdornment.
+    description: |
+      The **ZIndex** property determines the draw order of the
+      `Class.HandleAdornment`. This **ZIndex** only refers to how the adornment
+      will draw relative to other adornments or 3d objects in the workspace.
+      This does not relate to the `Class.GuiObject.ZIndex` of GuiObjects.
+
+      The valid values for ZIndex are from -1 to 10. If two HandleAdornments are
+      drawn over one another, the one with the higher ZIndex will be drawn. This
+      order of drawing will be respected even if the adornment with higher
+      ZIndex is behind the other adornment in terms of its position in 3d space.
+      If set to -1, ZIndex will force the adornment to draw behind other
+      adornments and objects in the Workspace, even if the
+      `Class.HandleAdornment.AlwaysOnTop` property for the adornment is true.
+    code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events:
+  - name: HandleAdornment.MouseButton1Down
+    summary: |
+      Fires when a user presses down on their left mouse button while hovering
+      over the adornment.
+    description: |
+      Fires when a user presses down on their left mouse button while hovering
+      over the adornment.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: HandleAdornment.MouseButton1Up
+    summary: |
+      Fires when a user releases their left mouse button while hovering over the
+      adornment.
+    description: |
+      Fires when a user releases their left mouse button while hovering over the
+      adornment.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: HandleAdornment.MouseEnter
+    summary: |
+      Fires when a user moves their mouse over the adornment.
+    description: |
+      Fires when a user moves their mouse over the adornment.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: HandleAdornment.MouseLeave
+    summary: |
+      Fires when a user moves their mouse out of the adornment.
+    description: |
+      Fires when a user moves their mouse out of the adornment.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

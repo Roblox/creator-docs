@@ -1,0 +1,50 @@
+name: Technology
+type: enum
+summary: |
+  The Technology enum represents the different lighting systems available for
+  rendering the 3D world. It is used by the `Class.Lighting.Technology`
+  property.
+description: |
+  The Technology enum represents the different lighting systems available for
+  rendering the 3D world. It is used by the `Class.Lighting.Technology`
+  property. See
+  [Lighting Technology](../../../environment/lighting.md#technology) for
+  detailed descriptions and visual effects of each option.
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Legacy
+    summary: |
+      Legacy lighting technology that is no longer available. Don't use.
+    value: 0
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: Voxel
+    summary: |
+      Uses a 4x4x4 voxel map for light and shadow calculation.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Compatibility
+    summary: |
+      Simulates the deprecated legacy technology using the Voxel system. Not
+      recommended.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: ShadowMap
+    summary: |
+      Features shadow mapping that produces more realistic and crisp shadows
+      from sunlight or directional light sources.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Future
+    summary: |
+      Features the most advanced technology for high-fidelity lighting and
+      shadows.
+    value: 4
+    tags: []
+    deprecation_message: ''

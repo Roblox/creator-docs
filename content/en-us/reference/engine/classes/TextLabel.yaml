@@ -1,0 +1,732 @@
+name: TextLabel
+type: class
+category: GUI
+memory_category: Gui
+summary: |
+  A 2D user interface element that displays non-interactive text.
+description: |
+  A TextLabel renders a rectangle, like a `Class.Frame`, with styled text. The
+  rectangle can be used to define text boundaries, text scaling
+  (`Class.TextLabel.TextScaled`) and wrapping (`Class.TextLabel.TextWrapped`,
+  `Class.TextLabel.TextXAlignment`, `Class.TextLabel.TextYAlignment`).
+
+  This class contains properties that control the display of the text, such as
+  `Class.TextLabel.Font` and `Class.TextLabel.TextColor3`. All text rendered by
+  a single text label will have the same visual properties; multiple TextLabel
+  objects must be used in order to render multiple styles of text. To display
+  only text and hide the rectangle, set `Class.GuiObject.BackgroundTransparency`
+  to 1.
+
+  `Class.TextService:GetTextSize()` can be used to get the size (bounds) of text
+  that would be rendered in a TextLabel given a font size, font, and frame size.
+
+  A `Class.UITextSizeConstraint` object can be used to constrain the size of
+  text with `Class.TextLabel.TextScaled` enabled. It is recommended that the
+  size of text is no lower than 9, otherwise it may not be visible to most
+  users.
+code_samples:
+  - Countdown-Text
+  - Game-State-Text
+inherits:
+  - GuiLabel
+tags: []
+deprecation_message: ''
+properties:
+  - name: TextLabel.ContentText
+    summary: |
+      A copy of `Class.TextLabel.Text` that contains exactly what is being
+      rendered by the `Class.TextLabel`.
+    description: |
+      This property provides a copy of `Class.TextLabel.Text` that contains
+      exactly what is being rendered by the `Class.TextLabel`. This is useful
+      for eliminating style tags used for rich text.
+
+      #### Example
+
+      When `Class.TextLabel.RichText` is enabled, the
+      `Class.TextLabel.ContentText` property shows the text as it appears to the
+      player.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>RichText</th>
+                  <th>Text</th>
+                  <th>ContentText</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>false</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+              </tr>
+              <tr>
+                  <td>true</td>
+                  <td>&lt;b&gt;Hello,&lt;br/&gt; world!&lt;/b&gt;</td>
+                  <td>Hello,<br/> world!</td>
+              </tr>
+          </tbody>
+      </table>
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextLabel.Font
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The Font property selects one of several pre-defined fonts with which the
+      UI element will render its text. Some fonts have bold, italic and/or light
+      variants (as there is no font-weight or font-style properties).
+
+      With the exception of the "Legacy" font, each font will render text with
+      the line height equal to the `Class.TextLabel.TextSize` property. The
+      "Code" font is the only monospace font. It has the unique property that
+      each character has the exact same width and height ratio of 1:2. The width
+      of each character is approximately half the `Class.TextLabel.TextSize`
+      property.
+
+      This property is kept in sync with the `Class.TextLabel.FontFace`
+      property. When setting Font, the FontFace will be set to
+      `Datatype.Font.fromEnum(value)`.
+    code_samples:
+      - Cycle-Font
+      - Show-All-Fonts
+    type: Font
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextLabel.FontFace
+    summary: |
+      Determines the font used to render text.
+    description: |
+      The FontFace property is similar to the Font property, but allows setting
+      fonts that don't exist in the Font enum.
+
+      This property is kept in sync with the `Class.TextLabel.Font` property.
+      When setting FontFace, the Font is set to the corresponding enum value, or
+      to `Enum.Font.Unknown` if there are no matches.
+    code_samples: []
+    type: Font
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.FontSize
+    summary: |
+      Determines the height in offsets of one line of text.
+    description: |
+      This property determines the height in offsets of one line of text.
+    code_samples:
+    type: FontSize
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated in favor of `Class.TextLabel|TextSize`. Since
+      TextSize is an integer and not an enum, there are far more options for
+      sizes.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextLabel.LineHeight
+    summary: |
+      Scales the spacing between lines of text in the `Class.TextLabel`.
+    description: |
+      Controls the height of lines, as a multiple of the font's em square size,
+      by scaling the spacing between lines of text in the `Class.TextLabel`.
+      Valid values range from 1.0 to 3.0, defaulting to 1.0.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.LocalizedText
+    summary: |
+      Sets whether a `Class.TextLabel` should be `Class.GuiBase2d.Localize` or
+      not.
+    description: |
+      This property sets whether a `Class.TextLabel` should be
+      `Class.GuiBase2d.Localize` or not.
+    code_samples:
+    type: string
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: TextLabel.MaxVisibleGraphemes
+    summary: |
+      The maximum number of graphemes the `Class.TextLabel` can show.
+    description: |
+      This property controls the maximum number of graphemes (or units of text)
+      that are shown on the `Class.TextLabel`. It is primarily provided as an
+      easy way to create a "typewriter effect" where the characters appear one
+      at a time.
+
+      Changing the property does not change the position or size of the visible
+      graphemes - the layout will be calculated as if all graphemes are visible.
+
+      Setting the property to -1 disables the limit and shows the entirety of
+      the `Class.TextLabel.Text`.
+    code_samples:
+      - MaxVisibleGraphemes-typewriter
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.RichText
+    summary: |
+      Determines whether the TextLabel renders the `Class.TextLabel.Text` string
+      using rich text formatting.
+    description: |
+      This property determines whether the `Class.TextLabel` renders the
+      `Class.TextLabel.Text` string using rich text formatting. Rich text uses
+      simple markup tags to style sections of the string in bold, italics,
+      specific colors, and more.
+
+      To use rich text, simply include formatting tags in the
+      `Class.TextLabel.Text` string.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.Text
+    summary: |
+      Determines the string rendered by the UI element.
+    description: |
+      The Text property determines the content rendered by the UI element. The
+      visual properties of the string rendered to the screen is determined by
+      `Class.TextLabel.TextColor3`, `Class.TextLabel.TextTransparency`,
+      `Class.TextLabel.TextSize`, `Class.TextLabel.Font`,
+      `Class.TextLabel.TextScaled`, `Class.TextLabel.TextWrapped`,
+      `Class.TextLabel.TextXAlignment` and `Class.TextLabel.TextYAlignment`.
+
+      It is possible to render emoji (for example, 😃) and other symbols. These
+      special symbols aren't affected by the `Class.TextLabel.TextColor3`
+      property. These can be pasted into `Class.Script` and `Class.LocalScript`
+      objects, as well as the field within the Properties window.
+
+      This property may contain newline characters, however, it is not possible
+      to type newline characters within the Properties window. Similarly, this
+      property may contain a tab character, but it will render as a space
+      instead.
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+      - Show-All-Fonts
+      - Long-Text-Wrapping
+      - Emoji-in-Text
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextBounds
+    summary: |
+      The size of a UI element's text in offsets.
+    description: |
+      The read-only property TextBounds reflects the absolute size of rendered
+      text in offsets. In other words, if you were to try to fit text into a
+      rectangle, this property would reflect the minimum dimensions of the
+      rectangle you would need in order to fit the text.
+
+      Using `Class.TextService:GetTextSize()`, you can predict what TextBounds
+      will be on a TextLabel given a string, `Class.TextLabel.Font`,
+      `Class.TextLabel.TextSize` and frame size.
+    code_samples:
+      - Dynamic-TextBox-Size
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextLabel.TextColor
+    summary: ''
+    description: ''
+    code_samples:
+    type: BrickColor
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property has been deprecated in favor of
+      `Class.TextLabel.TextColor3`, which should be used instead. This property
+      is a BrickColor and the TextColor3 property is a Color3, so it has many
+      more color options.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextLabel.TextColor3
+    summary: |
+      This property determines the color of rendered text.
+    description: |
+      This property determines the color of all the text rendered by a
+      `Class.TextLabel|GUI` element. This property along with
+      `Class.TextLabel.Font`, `Class.TextLabel.TextSize` and
+      `Class.TextLabel.TextTransparency` will determine the visual properties of
+      text. Text is rendered after the text stroke
+      (`Class.TextLabel.TextStrokeColor3`).
+
+      It's important that text is easily read by players! Be sure to choose
+      colors with little-to-no saturation, like white, grey, or black. Make sure
+      the color of your text is contrasted by the
+      `Class.TextLabel.BackgroundColor3` of the GUI element. If the element has
+      a transparent background, try applying a black
+      `Class.TextLabel.TextStrokeColor3` to help contrast the text with the 3D
+      world behind it.
+    code_samples:
+      - Vowel-Detector
+      - TextBox-Secret-Word
+      - Countdown-Text
+      - Game-State-Text
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextDirection
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TextDirection
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextFits
+    summary: |
+      Enables when rendered text content does not fit within the UI element's
+      space.
+    description: |
+      The TextFits is a read-only property that is false if
+      `Class.TextLabel.Text` content does not fit within the
+      `Class.GuiBase2d.AbsoluteSize` when rendered. If
+      `Class.TextLabel.TextWrapped` is true, a false value indicates that some
+      text is truncated and not rendering. Otherwise, it indicates if the line
+      of text is rendering outside the UI element's rectangle. If
+      `Class.TextLabel.TextScaled` is enabled, this property will be disabled
+      when text must be scaled down in order to fit.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: false
+  - name: TextLabel.TextScaled
+    summary: |
+      Determines whether text in a UI element is scaled to fill the UI element.
+    description: |
+      Rather than using TextScaled, we recommend you consider using
+      `Class.GuiObject.AutomaticSize|AutomaticSize`, a new method to dynamically
+      size UI that will give you the best visual result possible.
+
+      The TextScaled property determines whether text is scaled so that it fills
+      the entire UI element's space. When this is enabled,
+      `Class.TextLabel.TextSize` is ignored and `Class.TextLabel.TextWrapped` is
+      automatically enabled. This property is useful for text-rendering UI
+      elements within `Class.BillboardGui|BillboardGuis`.
+
+      When this property is used for screen-space UI, it may be desirable to use
+      a `Class.UITextSizeConstraint` to restrict the range of possible text
+      sizes.
+
+      #### TextScaled and AutomaticSize
+
+      It's recommended that developers avoid usage of TextScaled and adjust UI
+      to take advantage of the AutomaticSize property instead. Here are the core
+      differences between the two properties:
+
+      - TextScaled scales the content (text) to accommodate the UI. Without
+        careful consideration, some text may become unreadable if scaled too
+        small.
+      - AutomaticSize resizes the UI to accommodate content.
+
+      With AutomaticSize, you're able to adjust your UI to accommodate the
+      content (text) while maintaining a consistent font size. For more
+      information on how to use automatic sizing, see the UI Automatic Size
+      article.
+
+      We suggest that you don't apply both TextScaled and AutomaticSize on the
+      same UI object. If you apply both properties:
+
+      - AutomaticSize determines the maximum amount of available space that a
+        `Class.GuiObject` can use (in this case, text)
+      - TextScaled uses the available space determined by AutomaticSize, to
+        scale the font size to fit the available space, which will expand up to
+        the maximum font size (100), if there are no size constraints
+      - The end result will be: text goes to 100 font size and the UI object
+        will expand to fit that text
+
+      Using both AutomaticSize and TextScaled at the same time can result in
+      significant scaling differences than when AutomaticSize is off.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextSize
+    summary: |
+      Determine the line height of text in offsets.
+    description: |
+      The TextSize property determines the height in offsets of one line of
+      rendered text. The unit is in offsets, not points (which is used in most
+      document editing programs). It's worth noting that the "Legacy" font's
+      line height behaves differently, and won't match this property exactly.
+
+      This property and `Class.TextLabel.TextColor3`,
+      `Class.TextLabel.TextTransparency`, `Class.TextLabel.TextStrokeColor3` and
+      `Class.TextLabel.TextStrokeTransparency` each influence the way text is
+      rendered.
+
+      This property supersedes `Class.TextLabel.FontSize` since it is a number
+      and not an enum. Internally, Roblox uses several sets of pre-rendered
+      character images for each size of each font. It chooses the closest size
+      to TextSize, then scales that set of character images to render text.
+      Before the introduction of this property, you could only pick from the
+      pre-rendered sizes, which were listed by the `Enum.FontSize` enum.
+    code_samples:
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextStrokeColor3
+    summary: |
+      Determines the color of the text stroke (outline).
+    description: |
+      The TextStrokeColor3 property sets the color of the stroke, or outline, of
+      rendered text. This property and `Class.TextLabel.TextStrokeTransparency`
+      determine the visual properties of the text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextLabel.TextColor3` and `Class.TextLabel.TextTransparency`.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextStrokeTransparency
+    summary: |
+      Determines the transparency of the text stroke (outline).
+    description: |
+      The TextStrokeTransparency property sets the transparency of the stroke,
+      or outline, of rendered text. This property and
+      `Class.TextLabel.TextStrokeColor3` determine the visual properties of the
+      text stroke.
+
+      Text stroke is rendered before normal text and is simply 4 renderings of
+      the same text in +/- 1 pixel offsets in each direction. Text stroke
+      rendering works independently and identically to
+      `Class.TextLabel.TextColor3` and `Class.TextLabel.TextTransparency`. Since
+      text stroke is simply multiple renderings of the same transparency, this
+      property is essentially multiplicative on itself four times over (e.g. a
+      TextStrokeTransparency of 0.5 appears about the same as TextTransparency
+      of 0.0625, or 0.5^4). Therefore, it's recommended to set
+      TextStrokeTransparency to a value in the range of 0.75 to 1 for more a
+      more subtle effect.
+    code_samples:
+      - Text-Highlight-Oscillation
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextTransparency
+    summary: |
+      Determines the transparency of rendered text.
+    description: |
+      The TextColor3 property determines the transparency of all the text
+      rendered by a UI element. This property along with `Class.TextLabel.Font`,
+      `Class.TextLabel.TextSize` and `Class.TextLabel.TextColor3` will determine
+      the visual properties of text. Text is rendered after the text stroke
+      (`Class.TextLabel.TextStrokeTransparency`).
+
+      Fading text in using a numeric for-loop is a fantastic way to draw a
+      player's attention to text appearing on screen.
+
+      ```
+      -- Count backwards from 1 to 0, decrementing by 0.1
+      for i = 1, 0, -0.1 do
+         textLabel.TextTransparency = i
+         task.wait(0.1)
+      end
+      ```
+    code_samples:
+      - Fading-Banner
+      - Kaboom-Text
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextTruncate
+    summary: |
+      Controls the truncation of the text displayed in this TextLabel.
+    description: |
+      Controls the truncation of the text displayed in this TextLabel.
+    code_samples:
+    type: TextTruncate
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextWrap
+    summary: |
+      Determines if text wraps to multiple lines within the UI element space,
+      truncating excess text.
+    description: |
+      This property determines if text wraps to multiple lines within the
+      `Class.TextLabel|GUI` element space, truncating excess text.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is simply an alias for `Class.TextLabel|TextWrapped`. Used
+      the past-tense version instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: false
+  - name: TextLabel.TextWrapped
+    summary: |
+      Determines if text wraps to multiple lines within the
+      `Class.TextLabel|GUI` element space, truncating excess text.
+    description: |
+      When enabled, this property will render text on multiple lines within a
+      `Class.TextLabel|GUI` element's space so that `Class.TextLabel.TextBounds`
+      will never exceed the `Class.GuiBase2d.AbsoluteSize` of the UI element.
+
+      This is achieved by breaking long lines of text into multiple lines. Line
+      breaks will prefer whitespace; should a long unbroken word exceed the
+      width of the element, that word will be broken into multiple lines.
+
+      If further line breaks would cause the vertical height of the text (the Y
+      component of `Class.TextLabel.TextBounds`) to exceed the vertical height
+      of the element (the Y component of `Class.GuiBase2d.AbsoluteSize`), then
+      that line will not be rendered at all.
+    code_samples:
+      - Long-Text-Wrapping
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextXAlignment
+    summary: |
+      Determines the horizontal alignment of rendered text.
+    description: |
+      TextXAlignment determines the horizontal alignment (X-axis) of text
+      rendered within a UI element's space. It functions similarly to the CSS
+      text-align property, with left, right and center values (there is no
+      justify option). For Left and Right, text is rendered such that the
+      left/right text bounds just touch the edge of the UI element rectangle.
+      For Center, each line of text is centered on the very center of the UI
+      element rectangle.
+
+      This property is used in conjunction with `Class.TextLabel.TextYAlignment`
+      to fully determine text alignment on both axes. This property won't affect
+      the read-only properties `Class.TextLabel.TextBounds` and
+      `Class.TextLabel.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextXAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.TextYAlignment
+    summary: |
+      Determines the vertical alignment of rendered text.
+    description: |
+      TextYAlignment determines the vertical alignment (Y-axis) of text rendered
+      within a UI element's space. For Top and Bottom, text is rendered such
+      that the top/bottom text bounds just touch the edge of the UI element
+      rectangle. For Center, text is rendered such that there is an equal space
+      from the top bounds of the text to the top of the element and the bottom
+      bounds of the text to the bottom of the element.
+
+      This property is used in conjunction with `Class.TextLabel.TextXAlignment`
+      to fully determine text alignment on both axes. This property won't affect
+      the read-only properties `Class.TextLabel.TextBounds` and
+      `Class.TextLabel.TextFits`.
+    code_samples:
+      - Text-Alignment
+    type: TextYAlignment
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

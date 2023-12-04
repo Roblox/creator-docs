@@ -1,0 +1,1044 @@
+name: Lighting
+type: class
+category: Lighting
+memory_category: Instances
+summary: |
+  The **Lighting** service controls global lighting in an experience. It
+  includes a range of adjustable properties that you can use to change how
+  lighting appears and interacts with other objects.
+description: |
+  The **Lighting** service controls global lighting in an experience. It
+  includes a range of adjustable properties that you can use to change how
+  lighting appears and interacts with other objects, as summarized in
+  [Lighting Properties](../../../environment/lighting.md).
+
+  **Lighting** may also contain an `Class.Atmosphere` object to render realistic
+  atmospheric effects, including particle density, haze, glare, and color. See
+  [Atmospheric Effects](../../../environment/atmosphere.md) for details.
+
+  <img src="/assets/lighting-and-effects/atmosphere/Offset-A.jpg" />
+
+  In addition, **Lighting** (along with `Class.Workspace.CurrentCamera`) may
+  contain post-processing effects such as `Class.SunRaysEffect` and
+  `Class.BlurEffect`. See
+  [Post-Processing Effects](../../../environment/post-processing-effects.md) for
+  more information.
+
+  <video src="/assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4"
+  controls width="100%"></video>
+code_samples:
+  - Day-Night-Cycle
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties:
+  - name: Lighting.Ambient
+    summary: |
+      The lighting hue applied to areas that are occluded from the sky, such as
+      indoor areas.
+    description: |
+      The lighting hue applied to areas that are occluded from the sky, such as
+      indoor areas.
+
+      This property defaults to 0, 0, 0 (black).
+
+      As long as the red, green and blue channels of this property do not exceed
+      the corresponding channels in `Class.Lighting.OutdoorAmbient` the change
+      in hue will be reserved for areas occluded from the sun/moon. The
+      effective `Class.Lighting.OutdoorAmbient` value is clamped to be greater
+      than or equal to Ambient in all channels. This means, if a channel of
+      Ambient exceeds its corresponding `Class.Lighting.OutdoorAmbient` channel
+      then the hue will begin to apply to outdoor areas.
+
+      Note, when `Class.Lighting.GlobalShadows` is disabled there is no
+      distinction between areas occluded and areas that are not. In this case
+      `Class.Lighting.OutdoorAmbient` will be ignored and the hue from the
+      Ambient property will be applied everywhere.
+
+      For more properties that influence the color of lighting, please see
+      `Class.Lighting.ColorShiftBottom` and `Class.Lighting.ColorShiftTop`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.Brightness
+    summary: |
+      The intensity of illumination in the place.
+    description: |
+      The intensity of illumination in the place.
+
+      Changing this value will influence the impact of the light source (sun or
+      moon) on the map's lighting. When brightness is set to 0, there will be no
+      effect due to `Class.Lighting.ColorShift_Top` or
+      `Class.Lighting.ColorShift_Bottom` as the light source is having no
+      effect. Note, it will not influence the shadows created by the
+      `Class.Lighting.GlobalShadows` property.
+
+      Whilst this property is not clamped, the effect is clamped between 0
+      and 2. Meaning setting Brightness to 10 will be no different to setting it
+      to 2.
+
+      Note, `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` can
+      also be used to influence how bright a place appears. For example, setting
+      `Class.Lighting.OutdoorAmbient` to 255, 255, 255 will make the place
+      appear brighter than its default value of 127, 127, 127 (as it is more
+      white).
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.ClockTime
+    summary: |
+      A numerical representation (in hours) of the current time of day used by
+      `Class.Lighting`.
+    description: |
+      A numerical representation (in hours) of the current time of day used by
+      `Class.Lighting`.
+
+      Note, this property does not correspond with the actual time of day and
+      will not change during the game unless it has been changed by a script.
+
+      For a measure of `Class.Lighting`'s time formatted as a 24 hour string use
+      `Class.Lighting.CurrentTime`. Changing `Class.Lighting.CurrentTime` or
+      using `Class.Lighting:SetMinutesAfterMidnight()` will also change this
+      property.
+
+      Using ClockTime requires the time to be normalized:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local hours = minutesNormalised / 60
+
+      	Lighting.ClockTime = hours
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting.TimeOfDay` requires the time to be normalized and a
+      string formatted:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local seconds = minutesNormalised * 60
+      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
+      	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
+      	local timeString = hours..":"..mins..":"..secs
+
+      	Lighting.TimeOfDay = timeString
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting:SetMinutesAfterMidnight()` requires no extra
+      processing:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
+
+      	task.wait()
+      end
+      ```
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Lighting.ColorShift_Bottom
+    summary: |
+      The hue represented in light reflected in the opposite surfaces to those
+      facing the sun or moon.
+    description: |
+      The hue represented in light reflected in the opposite surfaces to those
+      facing the sun or moon.
+
+      The surfaces of a `Class.BasePart` influenced by ColorShift_Bottom depends
+      on the position and orientation of the `Class.BasePart` relative to the
+      sun or moon's position. Where the sun is directly overhead a
+      `Class.BasePart`, the shift in color will only apply to the bottom
+      surface.
+
+      This effect can be increased or reduced by altering
+      `Class.Lighting.Brightness`.
+
+      ColorShift_Bottom influences the opposite surfaces to
+      `Class.Lighting.ColorShift_Top`
+
+      Note, `Class.Lighting.ColorShift_Top` and ColorShift_Bottom will interact
+      with the `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient`
+      properties if they are greater than 0, 0, 0. Also, the influence of
+      ColorShift_Bottom can be very hard to identify when
+      `Class.Lighting.GlobalShadows` is enabled (as it is by default).
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.ColorShift_Top
+    summary: |
+      The hue represented in light reflected from surfaces facing the sun or
+      moon.
+    description: |
+      The hue represented in light reflected from surfaces facing the sun or
+      moon.
+
+      The surfaces of a `Class.BasePart` influenced by ColorShift_Top depends on
+      the position and orientation of the `Class.BasePart` relative to the sun
+      or moon's position. Where the sun is directly overhead a `Class.BasePart`,
+      the shift in color will only apply to the top surface.
+
+      This effect can be increased or reduced by altering
+      `Class.Lighting.Brightness`.
+
+      Whilst ColorShift_Top influences surfaces exposed to light,
+      `Class.Lighting.ColorShiftBottom|Lighting.ColorShift_Bottom` influences
+      surfaces sheltered from light.
+
+      Note, ColorShift_Top and ColorShift_Bottom will interact with the
+      `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` properties if
+      they are greater than 0, 0, 0.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.EnvironmentDiffuseScale
+    summary: |
+      Ambient light that is derived from the environment.
+    description: |
+      Ambient light that is derived from the environment. The value of this
+      property defaults to 0.
+
+      It is similar to `Class.Lighting.Ambient` and
+      `Class.Lighting.OutdoorAmbient` property but it's dynamic and can change
+      according sky and time of day. It is recommended when this property is
+      increased, Ambient and OutdoorAmbient are decreased accordingly.
+
+      It also makes skybox appear at night.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.EnvironmentSpecularScale
+    summary: |
+      Specular light derived from environment.
+    description: |
+      Specular light derived from environment. The value of this property
+      defaults to 0.
+
+      It will make smooth objects reflect the environment. Especially important
+      to make metal more realistic.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.ExposureCompensation
+    summary: |
+      The exposure compensation value.
+    description: |
+      This property determines the exposure compensation amount which applies a
+      bias to the exposure level of the scene prior to the tonemap step.
+      Defaults to 0.
+
+      - A value of +1 indicates twice as much exposure and -1 means half as much
+        exposure.
+      - A value of 0 indicates no exposure compensation will be done.
+      - Range: -5 to 5
+
+      This property is replicated and can be set from scripts or `Class.Studio`.
+
+      ```lua
+      local Lighting = game:GetService("Lighting")
+      Lighting.ExposureCompensation = 5
+      ```
+
+      You can use this property to adjust the exposure amount prior to the
+      tonemap step to show more detail either in lighter or darker areas. This
+      is needed as we move to a HDR pipeline.
+
+      When `Class.Lighting.Technology` is set to `Enum.Technology|Legacy`, this
+      property has no effect.
+
+      ```lua
+      local Lighting = game:GetService("Lighting")
+
+      -- ExposureCompensation has no effect because Lighting's Technology is Legacy
+      Lighting.Technology = Enum.Technology.Legacy
+      Lighting.ExposureCompensation = 5
+      ```
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Exposure
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.FogColor
+    summary: |
+      A `Datatype.Color3` value giving the hue of `Class.Lighting`'s fog.
+    description: |
+      Fog properties are hidden when Lighting contains an `Class.Atmosphere`
+      object.
+
+      A `Datatype.Color3` value giving the hue of `Class.Lighting`'s fog.
+
+      #### How does fog work?
+
+      Fog in Roblox is displayed in a plane perpendicular to the
+      `Class.Workspace.CurrentCamera`s direction. It fades between the
+      `Class.Lighting.FogStart` property where it is not visible, to the
+      `Class.Lighting.FogEnd` property where it is fully opaque. The effect of
+      fog is it blends color with the FogColor.
+
+      At distances greater than `Class.Lighting.FogEnd`, color will be
+      determined entirely by the FogColor. However at distances between
+      `Class.Lighting.FogStart` and `Class.Lighting.FogEnd` the degree to which
+      the color is blended depends on the position.
+
+      Roblox's fog uses linear interpolation between `Class.Lighting.FogStart`
+      and `Class.Lighting.FogEnd`. This means if `Class.Lighting.FogStart` is 10
+      and `Class.Lighting.FogEnd` is 20, at a distance of 15 studs the fog will
+      be at 50%. That means the color of a pixel at 15 studs will be 50% its
+      normal color blended with 50% of the fog color.
+
+      ```
+      local Lighting = game:GetService("Lighting")
+      -- fog will fade between 25 and 200 studs
+      Lighting.FogStart = 25
+      Lighting.FogEnd = 200
+      ```
+
+      Note, fog does not obscure the skybox.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Fog
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.FogEnd
+    summary: |
+      The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
+      will be completely opaque.
+    description: |
+      Fog properties are hidden when Lighting contains an `Class.Atmosphere`
+      object.
+
+      The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
+      will be completely opaque.
+
+      #### How does fog work?
+
+      Fog in Roblox is displayed in a plane perpendicular to the
+      `Class.Workspace.CurrentCamera`s look direction. It fades between the
+      `Class.Lighting.FogStart` property where it is not visible, to the FogEnd
+      property where it is fully opaque. The effect of fog is it blends color
+      with the `Class.Lighting.FogColor`.
+
+      At distances greater than FogEnd, color will be determined entirely by the
+      `Class.Lighting.FogColor`. However at distances between
+      `Class.Lighting.FogStart` and FogEnd the degree to which the color is
+      blended depends on the position.
+
+      Roblox's fog uses linear interpolation between `Class.Lighting.FogStart`
+      and FogEnd. This means if `Class.Lighting.FogStart` is 10 and FogEnd is
+      20, at a distance of 15 studs the fog will be at 50%. That means the color
+      of a pixel at 15 studs will be 50% its normal color blended with 50% of
+      the fog color.
+
+      ```
+      local Lighting = game:GetService("Lighting")
+      -- fog will fade between 25 and 200 studs
+      Lighting.FogStart = 25
+      Lighting.FogEnd = 200
+      ```
+
+      The color of the fog can be adjusted using `Class.Lighting.FogColor`.
+
+      Note, fog does not obscure the skybox.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Fog
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.FogStart
+    summary: |
+      The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
+      begins to show.
+    description: |
+      Fog properties are hidden when Lighting contains an `Class.Atmosphere`
+      object.
+
+      The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
+      begins to show.
+
+      #### How does fog work?
+
+      Fog in Roblox is displayed in a plane perpendicular to the
+      `Class.Workspace.CurrentCamera`s look direction. It fades between the
+      FogStart property where it is not visible, to the `Class.Lighting.FogEnd`
+      property where it is fully opaque. The effect of fog is it blends color
+      with the `Class.Lighting.FogColor`.
+
+      At distances greater than `Class.Lighting.FogEnd`, color will be
+      determined entirely by the `Class.Lighting.FogColor`. However at distances
+      between FogStart and `Class.Lighting.FogEnd` the degree to which the color
+      is blended depends on the position.
+
+      Roblox's fog uses linear interpolation between FogStart and
+      `Class.Lighting.FogEnd`. This means if FogStart is 10 and
+      `Class.Lighting.FogEnd` is 20, at a distance of 15 studs the fog will be
+      at 50%. That means the color of a pixel at 15 studs will be 50% its normal
+      color blended with 50% of the fog color.
+
+      ```
+      local Lighting = game:GetService("Lighting")
+      -- fog will fade between 25 and 200 studs
+      Lighting.FogStart = 25
+      Lighting.FogEnd = 200
+      ```
+
+      The color of the fog can be adjusted using `Class.Lighting.FogColor`.
+
+      Note, fog does not obscure the skybox.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Fog
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.GeographicLatitude
+    summary: |
+      The geographic latitude, in degrees, of the scene, influencing the result
+      of `Class.Lighting`s time on the position of the sun and moon.
+    description: |
+      The geographic latitude, in degrees, of the scene, influencing the result
+      of `Class.Lighting`s time on the position of the sun and moon.
+
+      When calculating the position of the sun, the earth's tilt is also taken
+      into account.
+
+      Changing GeographicLatitude will alter the position of the sun at every
+      `Class.Lighting.TimeOfDay`. Developers looking to obtain the sun or moon's
+      position should use `Class.Lighting:GetSunDirection()` or
+      `Class.Lighting:GetMoonDirection()`.
+    code_samples:
+      - Lighting-GeographicLatitude
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.GlobalShadows
+    summary: |
+      Toggles voxel-based dynamic lighting for the game.
+    description: |
+      Toggles voxel-based dynamic lighting in the game
+
+      #### What does GlobalShadows do?
+
+      When set to true, shadows are rendered in sheltered areas depending on the
+      position of the sun and moon. The lighting hue applied to these areas is
+      determined by the `Class.Lighting.Ambient` property. The lighting hue in
+      all other areas is determined by the `Class.Lighting.OutdoorAmbient`
+      property.
+
+      When disabled, shadows are not drawn and no distinction is made between
+      indoor and outdoor areas. As a result, the `Class.Lighting.Ambient`
+      property determines the lighting hue and `Class.Lighting.OutdoorAmbient`
+      will do nothing.
+
+      Shadows are calculated using a voxel system, and each lighting voxel is
+      4x4x4 studs. This means objects need to be larger than 4x4x4 studs to
+      display a realistic shadow. Shadows are also recalculated when
+      `Class.BasePart`s are moving.
+
+      Note, this property is unrelated to shadows from characters which are
+      displayed regardless of what GlobalShadows is set to.
+
+      For more information about Roblox's dynamic lighting, please see this
+      [blog post](https://blog.roblox.com/2013/02/dynamic-lighting-and-shadows-the-voxel-solution/).
+
+      #### Toggling GlobalShadows
+
+      Developers toggling the GlobalShadows setting will notice that disabling
+      it makes the place considerably darker. This is because when GlobalShadows
+      is disabled `Class.Lighting.Ambient` is used to calculate the lighting hue
+      in both indoor and outdoor spaces. This darkness can be resolved by
+      setting `Class.Lighting.Ambient` to a higher value such as
+      `Class.Lighting.OutdoorAmbient`'s default value of 127, 127, 127.
+
+      In most cases developers are recommended to leave GlobalShadows enabled
+      due to the superior visual appearance. See
+      [Lighting Properties guide](../../../environment/lighting.md#shadows) for
+      a comparison.
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.OutdoorAmbient
+    summary: |
+      The lighting hue applied to outdoor areas.
+    description: |
+      The lighting hue applied to outdoor areas.
+
+      This property defaults to 127, 127, 127.
+
+      As long as the red, green and blue channels of `Class.Lighting.Ambient` do
+      not exceed the corresponding channels in this property, the hue of the
+      lighting in outdoor areas will be determined by this property. The
+      effective OutdoorAmbient value is clamped to be greater than or equal to
+      `Class.Lighting.Ambient` in all channels. This means, if a channel of
+      `Class.Lighting.Ambient` exceeds its corresponding OutdoorAmbient channel
+      then the hue of `Class.Lighting.Ambient` will begin to apply to outdoor
+      areas.
+
+      Note, when `Class.Lighting.GlobalShadows` is disabled there is no
+      distinction between areas occluded from the sky and areas that are not. In
+      this case OutdoorAmbient will be ignored and the hue from the
+      `Class.Lighting.Ambient` property will be applied everywhere.
+
+      For more properties that influence the color of lighting, please see
+      `Class.Lighting.ColorShift_Bottom` and `Class.Lighting.ColorShift_Top`.
+    code_samples:
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.Outlines
+    summary: |
+      Determines whether outlines are enabled or disabled in a place.
+    description: |
+      This property determines whether outlines are enabled or disabled in a
+      place.
+
+      Outlines can be disabled on a global basis, using this `Class.Lighting`
+      property, or alternatively on a surface-by-surface basis for
+      `Class.BasePart`s using `Enum.SurfaceType`.
+
+      Although this property can be set by scripts, it recommended this property
+      is set in Roblox Studio prior to publishing the place.
+    code_samples:
+    type: bool
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated and is no longer supported. The outlines feature
+      was removed from the Roblox platform
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.ShadowColor
+    summary: |
+      This is supposed to change the color of player shadows, but currently
+      doesn't do anything.
+    description: |
+      This is supposed to change the color of player shadows, but currently
+      doesn't do anything.
+    code_samples:
+    type: Color3
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated and has no current functionality. Do not use it
+      for new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Lighting.ShadowSoftness
+    summary: |
+      Controls how blurry the shadows are.
+    description: |
+      Controls how blurry the shadows are. The value of this property defaults
+      to 0.2.
+
+      This property only works when `Class.Lighting.Technology` mode is
+      `Enum.Technology|ShadowMap` or `Enum.Technology|Future` and the device is
+      capable of ShadowMap.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.Technology
+    summary: |
+      Determines the lighting system for rendering the 3D world. Non-scriptable.
+      .
+    description: |
+      Determines the lighting system for rendering the 3D world. Non-scriptable
+      and only modifiable in Studio. See `Enum.Technology` for available options
+      and [Lighting Technology](../../../environment/lighting.md#technology) for
+      detailed descriptions and visual effects of each option.
+    code_samples:
+    type: Technology
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.TimeOfDay
+    summary: |
+      A 24 hour string representation of the current time of day used by
+      `Class.Lighting`.
+    description: |
+      A 24 hour string representation of the current time of day used by
+      `Class.Lighting`.
+
+      Note, this property does not correspond with the actual time of day and
+      will not change during the game unless it has been changed by a script.
+
+      For a numeric measure of `Class.Lighting`'s time use
+      `Class.Lighting.ClockTime`. Changing `Class.Lighting.ClockTime` or using
+      `Class.Lighting:SetMinutesAfterMidnight()` will also change this property.
+
+      Using TimeOfDay requires the time to be normalized and a string formatted:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local seconds = minutesNormalised * 60
+      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
+      	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
+      	local timeString = hours..":"..mins..":"..secs
+
+      	Lighting.TimeOfDay = timeString
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting.ClockTime` requires the time to be normalized:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local hours = minutesNormalised / 60
+
+      	Lighting.ClockTime = hours
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting:SetMinutesAfterMidnight()` requires no extra
+      processing:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
+
+      	task.wait()
+      end
+      ```
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Lighting:GetMinutesAfterMidnight
+    summary: |
+      Returns the number of minutes that have passed after midnight for the
+      purposes of lighting.
+    description: |
+      Returns the number of minutes that have passed after midnight for the
+      purposes of lighting.
+
+      This number will be nearly identical to `Class.Lighting.ClockTime`
+      multiplied by 60.
+
+      This number will not always be equal to the value given in
+      `Class.Lighting:SetMinutesAfterMidnight()` as it returns minutes after
+      midnight in the current day.
+
+      For `Class.Lighting`s time formatted as a string, see
+      `Class.Lighting.TimeOfDay`.
+    code_samples:
+      - Lighting-GetMinutesAfterMidnight1
+    parameters: []
+    returns:
+      - type: double
+        summary: |
+          The number of minutes after midnight.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:GetMoonDirection
+    summary: |
+      Returns a `Datatype.Vector3` representing the direction of the moon from
+      the position 0, 0, 0.
+    description: |
+      Returns a `Datatype.Vector3` representing the direction of the moon from
+      the position 0, 0, 0.
+
+      Note, when the moon has 'set' and is no longer visible, the
+      `Datatype.Vector3` returned by this function will continue to point
+      towards the moon below the map.
+
+      Developers looking to change the positioning of the moon should use the
+      `Class.Lighting.ClockTime` or `Class.Lighting.GeographicLatitude`
+      properties.
+
+      A variant of this function exists for obtaining the direction of the sun,
+      `Class.Lighting:GetSunDirection()`.
+    code_samples:
+      - Lighting-GetMoonDirection1
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: |
+          `Datatype.Vector3` representing the direction of the moon from the
+          position 0, 0, 0.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:GetMoonPhase
+    summary: |
+      Returns the moon's current phase.
+    description: |
+      Returns the moon's current phase. There is no way to change the moon's
+      phase so this will always return 0.75
+    code_samples:
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: |
+      There is currently no way to change the moon's phase, and thus this
+      function should not be used.
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:GetSunDirection
+    summary: |
+      Returns a `Datatype.Vector3` representing the direction of the sun from
+      the position 0, 0, 0.
+    description: |
+      Returns a `Datatype.Vector3` representing the direction of the sun from
+      the position 0, 0, 0.
+
+      Note, when the sun has set and is no longer visible, the
+      `Datatype.Vector3` returned by this function will continue to point
+      towards the sun below the map.
+
+      Developers looking to change the positioning of the sun should use the
+      `Class.Lighting.ClockTime` or `Class.Lighting.GeographicLatitude`
+      properties.
+
+      A variant of this function exists for obtaining the direction of the moon,
+      `Class.Lighting:GetMoonDirection()`.
+    code_samples:
+      - Lighting-GetSunDirection1
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: |
+          `Datatype.Vector3` representing the direction of the sun from the
+          position 0, 0, 0.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:SetMinutesAfterMidnight
+    summary: |
+      Sets `Class.Lighting.TimeOfDay` and `Class.Lighting.ClockTime` to the
+      given number of minutes after midnight.
+    description: |
+      Sets `Class.Lighting.TimeOfDay` and `Class.Lighting.ClockTime` to the
+      given number of minutes after midnight.
+
+      #### How can I make a day / night script?
+
+      SetMinutesAfterMidnight allows a numerical value to be used, for example
+      in a day/night cycle `Class.Script`, without the need to convert to a
+      string in the format required by `Class.Lighting.TimeOfDay`. It also
+      allows values greater than 24 hours to be given that correspond to times
+      in the next day. See the code snippets below for an example.
+
+      Using `Class.Lighting.TimeOfDay` requires the time to be normalized and a
+      string formatted:
+
+      ```lua
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local seconds = minutesNormalised * 60
+      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
+      	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
+      	local timeString = hours..":"..mins..":"..secs
+
+      	Lighting.TimeOfDay = timeString
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting.ClockTime` requires the time to be normalized:
+
+      ```lua
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	local minutesNormalised = minutesAfterMidnight % (60 * 24)
+      	local hours = minutesNormalised / 60
+
+      	Lighting.ClockTime = hours
+
+      	task.wait()
+      end
+      ```
+
+      Using `Class.Lighting:SetMinutesAfterMidnight()` requires no extra
+      processing:
+
+      ```
+      minutesAfterMidnight = 0
+      while true do
+      	minutesAfterMidnight = minutesAfterMidnight + 1
+
+      	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
+
+      	task.wait()
+      end
+      ```
+    code_samples:
+      - Lighting-SetMinutesAfterMidnight1
+    parameters:
+      - name: minutes
+        type: double
+        default:
+        summary: |
+          The number of minutes after midnight.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:getMinutesAfterMidnight
+    summary: ''
+    description: ''
+    code_samples:
+    parameters: []
+    returns:
+      - type: double
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of
+      `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
+    security: None
+    thread_safety: Unsafe
+  - name: Lighting:setMinutesAfterMidnight
+    summary: ''
+    description: ''
+    code_samples:
+    parameters:
+      - name: minutes
+        type: double
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is a deprecated variant of
+      `Class.Lighting:SetMinutesAfterMidnight()` which should be used instead.
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Lighting.LightingChanged
+    summary: |
+      This event fires when a `Class.Lighting` property is changed or a
+      `Class.Sky` is added or removed from `Class.Lighting`.
+    description: |
+      This event fires when a `Class.Lighting` property is changed or a
+      `Class.Sky` is added or removed from `Class.Lighting`.
+
+      Although this event fires when most properties of `Class.Lighting` are
+      changed, developers should be aware of the few exceptions:
+
+      - Changing `Class.Lighting.GlobalShadows` will not fire this event
+      - The fog properties, `Class.Lighting.FogColor`, `Class.Lighting.FogStart`
+        and `Class.Lighting.FogEnd` will not fire this event
+
+      In cases where this behavior is not desired, the `Class.Instance.Changed`
+      event or `Class.Instance:GetPropertyChangedSignal()` function can be used.
+    code_samples:
+      - Lighting-LightingChanged1
+    parameters:
+      - name: skyChanged
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

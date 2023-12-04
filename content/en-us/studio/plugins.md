@@ -83,7 +83,7 @@ local button = toolbar:CreateButton("Neon it up", "", "")
 -- Connect a function to the click event
 button.Click:Connect(function()
     local parts = {}
-    for _, part in pairs(Selection:Get()) do
+    for _, part in Selection:Get() do
         if part:IsA("BasePart") then
             parts[#parts + 1] = part
         end
@@ -105,7 +105,7 @@ button.Click:Connect(function()
     end
 
     -- Iterate through the selected parts
-    for _, part in pairs(parts) do
+    for _, part in parts do
         part.Material = Enum.Material.Neon -- Set the material of the part to Neon
     end
 
@@ -137,5 +137,5 @@ To publish a plugin:
 1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md).
 
    <Alert severity="info">
-   If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md#inventory). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
+   If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
    </Alert>

@@ -1,0 +1,21 @@
+name: TextChatConfigurations
+type: class
+category:
+memory_category: Instances
+summary: |
+  The parental class of all text chat configurations.
+description: |
+  The parental class of all text chat configuration settings, including
+  `Class.BubbleChatConfiguration`, `Class.ChatInputBarConfiguration`, and
+  `Class.ChatWindowConfiguration`.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

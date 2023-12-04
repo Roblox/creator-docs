@@ -1,0 +1,278 @@
+name: Material
+type: enum
+summary: ''
+description: ''
+code_samples:
+tags: []
+deprecation_message: ''
+items:
+  - name: Plastic
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 256
+    tags: []
+    deprecation_message: ''
+  - name: SmoothPlastic
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 272
+    tags: []
+    deprecation_message: ''
+  - name: Neon
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 288
+    tags: []
+    deprecation_message: ''
+  - name: Wood
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 512
+    tags: []
+    deprecation_message: ''
+  - name: WoodPlanks
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 528
+    tags: []
+    deprecation_message: ''
+  - name: Marble
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 784
+    tags: []
+    deprecation_message: ''
+  - name: Basalt
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 788
+    tags: []
+    deprecation_message: ''
+  - name: Slate
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 800
+    tags: []
+    deprecation_message: ''
+  - name: CrackedLava
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 804
+    tags: []
+    deprecation_message: ''
+  - name: Concrete
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 816
+    tags: []
+    deprecation_message: ''
+  - name: Limestone
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 820
+    tags: []
+    deprecation_message: ''
+  - name: Granite
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 832
+    tags: []
+    deprecation_message: ''
+  - name: Pavement
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 836
+    tags: []
+    deprecation_message: ''
+  - name: Brick
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 848
+    tags: []
+    deprecation_message: ''
+  - name: Pebble
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 864
+    tags: []
+    deprecation_message: ''
+  - name: Cobblestone
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 880
+    tags: []
+    deprecation_message: ''
+  - name: Rock
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 896
+    tags: []
+    deprecation_message: ''
+  - name: Sandstone
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 912
+    tags: []
+    deprecation_message: ''
+  - name: CorrodedMetal
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1040
+    tags: []
+    deprecation_message: ''
+  - name: DiamondPlate
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1056
+    tags: []
+    deprecation_message: ''
+  - name: Foil
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1072
+    tags: []
+    deprecation_message: ''
+  - name: Metal
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1088
+    tags: []
+    deprecation_message: ''
+  - name: Grass
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 1280
+    tags: []
+    deprecation_message: ''
+  - name: LeafyGrass
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1284
+    tags: []
+    deprecation_message: ''
+  - name: Sand
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 1296
+    tags: []
+    deprecation_message: ''
+  - name: Fabric
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1312
+    tags: []
+    deprecation_message: ''
+  - name: Snow
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1328
+    tags: []
+    deprecation_message: ''
+  - name: Mud
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1344
+    tags: []
+    deprecation_message: ''
+  - name: Ground
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1360
+    tags: []
+    deprecation_message: ''
+  - name: Asphalt
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1376
+    tags: []
+    deprecation_message: ''
+  - name: Salt
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1392
+    tags: []
+    deprecation_message: ''
+  - name: Ice
+    summary: |
+      Applies to `Class.BasePart` and `Class.Terrain`.
+    value: 1536
+    tags: []
+    deprecation_message: ''
+  - name: Glacier
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1552
+    tags: []
+    deprecation_message: ''
+  - name: Glass
+    summary: |
+      Applies to `Class.BasePart` only.
+    value: 1568
+    tags: []
+    deprecation_message: ''
+  - name: ForceField
+    summary: |
+      Must be used on a `Class.MeshPart` with UVs laid out to cover much of the
+      0:1 UV space or more (larger is better). The `Class.MeshPart` must also
+      have a texture applied to its `Class.MeshPart.TextureID|TextureID`, and
+      that texture image must have a wide value range since the material
+      displays the range from dark/black to light/white values. Obtain [this
+      model](https://create.roblox.com/marketplace/asset/15507769146/ForceFieldMesh)
+      for a functional example of the **ForceField** material.
+    value: 1584
+    tags: []
+    deprecation_message: ''
+  - name: Air
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 1792
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+  - name: Water
+    summary: |
+      Applies to `Class.Terrain` only.
+    value: 2048
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+  - name: Cardboard
+    summary: ''
+    value: 2304
+    tags: []
+    deprecation_message: ''
+  - name: Carpet
+    summary: ''
+    value: 2305
+    tags: []
+    deprecation_message: ''
+  - name: CeramicTiles
+    summary: ''
+    value: 2306
+    tags: []
+    deprecation_message: ''
+  - name: ClayRoofTiles
+    summary: ''
+    value: 2307
+    tags: []
+    deprecation_message: ''
+  - name: RoofShingles
+    summary: ''
+    value: 2308
+    tags: []
+    deprecation_message: ''
+  - name: Leather
+    summary: ''
+    value: 2309
+    tags: []
+    deprecation_message: ''
+  - name: Plaster
+    summary: ''
+    value: 2310
+    tags: []
+    deprecation_message: ''
+  - name: Rubber
+    summary: ''
+    value: 2311
+    tags: []
+    deprecation_message: ''

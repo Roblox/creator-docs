@@ -1,0 +1,706 @@
+name: AnimationTrack
+type: class
+category: Animations
+memory_category: Animation
+summary: |
+  Controls the playback of an animation on a `Class.Humanoid` or
+  `Class.AnimationController`. This object cannot be created, instead it is
+  returned by the `Class.Humanoid:LoadAnimation()` method.
+description: |
+  Controls the playback of an animation on a `Class.Humanoid` or
+  `Class.AnimationController`. This object cannot be created, instead it is
+  returned by the `Class.Humanoid:LoadAnimation()` method.
+code_samples:
+  - Animation-Creation
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+deprecation_message: ''
+properties:
+  - name: AnimationTrack.Animation
+    summary: |
+      The `Class.Animation` object that was used to create this
+      `Class.AnimationTrack`.
+    description: |
+      The `Class.Animation` object that was used to create this
+      `Class.AnimationTrack`. To create an `Class.AnimationTrack` the developer
+      must load an `Class.Animation` object onto a `Class.Humanoid` or
+      `Class.AnimationController` using the `Class.Humanoid:LoadAnimation()`
+      method.
+
+      The Animation property is used to identify the underlying
+      `Class.Animation` of an `Class.AnimationTrack`.
+    code_samples:
+      - AnimationPlayed
+    type: Animation
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.IsPlaying
+    summary: |
+      A read only property that returns true when the `Class.AnimationTrack` is
+      playing.
+    description: |
+      A read only property that returns true when the `Class.AnimationTrack` is
+      playing.
+
+      This property can be used by developers to check if an animation is
+      already playing before playing it (as that would cause it to restart). If
+      a developer wishes to obtain all playing
+      `Class.AnimationTrack|AnimationTracks` on a `Class.Humanoid` or
+      `Class.AnimationController` they should use
+      `Class.Humanoid:GetPlayingAnimationTracks()`
+    code_samples:
+      - AnimationTrack-IsPlaying
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.Length
+    summary: |
+      A read only property that returns the length (in seconds) of an
+      `Class.AnimationTrack`. This will return 0 until the animation has fully
+      loaded and thus may not be immediately available.
+    description: |
+      A read only property that returns the length (in seconds) of an
+      `Class.AnimationTrack`. This will return 0 until the animation has fully
+      loaded and thus may not be immediately available.
+
+      When the `Class.AnimationTrack.Speed` of an `Class.AnimationTrack` is
+      equal to 1, the animation will take `Class.AnimationTrack.Length` (in
+      seconds) to complete.
+    code_samples:
+      - Animation-Speed-2
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.Looped
+    summary: |
+      Sets whether the animation will repeat after finishing. If it is changed
+      while playing the result will take effect after the animation finishes.
+    description: |
+      This property sets whether the animation will repeat after finishing. If
+      it is changed while playing the result will take effect after the
+      animation finishes.
+
+      The Looped property for `Class.AnimationTrack` defaults to how it was set
+      in the animation editor. However this property can be changed, allowing
+      control over the `Class.AnimationTrack` while the game is running. Looped
+      also correctly handles animations played in reverse (negative
+      `Class.AnimationTrack.Speed`). After the first keyframe is reached, it
+      will restart at the last keyframe.
+
+      This property allows the developer to have a looping and non looping
+      variant of the same animation, without needing to upload two versions to
+      Roblox.
+    code_samples:
+      - Animation-Looping
+      - AnimationTrack-DidLoop
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.Priority
+    summary: |
+      Sets the priority of an `Class.AnimationTrack`. Depending on what this is
+      set to, playing multiple animations at once will look to this property to
+      figure out which `Class.Keyframe` `Class.Pose|Poses` should be played over
+      one another.
+    description: |
+      This property sets the priority of an `Class.AnimationTrack`. Depending on
+      what this is set to, playing multiple animations at once will look to this
+      property to figure out which `Class.Keyframe` `Class.Pose|Poses` should be
+      played over one another.
+
+      The Priority property for `Class.AnimationTrack` defaults to how it was
+      set and published from Studio's Animation Editor. It uses the
+      AnimationPriority Enum, which has 7 priority levels.
+
+      1. Core (lowest priority)
+      2. Idle
+      3. Movement
+      4. Action
+      5. Action2
+      6. Action3
+      7. Action4 (highest priority)
+
+      Correctly set animation priorities, either through the editor or through
+      this property allow multiple animations to be played without them
+      clashing. Where two playing animations direct the target to move the same
+      limb in different ways, the `Class.AnimationTrack` with the highest
+      priority will show. If both animations have the same priority, the weights
+      of the tracks will be used to combine the animations.
+
+      This property also allows the developer to play the same animation at
+      different priorities, without needing to upload additional versions to
+      Roblox.
+    code_samples:
+    type: AnimationPriority
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AnimationTrack.Speed
+    summary: |
+      The Speed of an `Class.AnimationTrack` is a read only property that gives
+      the current playback speed of the `Class.AnimationTrack`. This has a
+      default value of 1. When speed is equal to 1, the amount of time an
+      animation takes to complete is equal to `Class.AnimationTrack.Length` (in
+      seconds).
+    description: |
+      The Speed of an `Class.AnimationTrack` is a read only property that gives
+      the current playback speed of the `Class.AnimationTrack`. This has a
+      default value of 1. When speed is equal to 1, the amount of time an
+      animation takes to complete is equal to `Class.AnimationTrack.Length` (in
+      seconds).
+
+      If the speed is adjusted, then the actual time it will take a track to
+      play can be computed by dividing the length by the speed. Speed is a
+      unitless quantity.
+
+      Speed can be used to link the length of an animation to different game
+      events (for example recharging an ability) without having to upload
+      different variants of the same animation.
+
+      This property is read only, and you can change it using
+      `Class.AnimationTrack:AdjustSpeed()`.
+    code_samples:
+      - Animation-Speed
+      - Animation-Speed-2
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.TimePosition
+    summary: |
+      Returns the position in time in seconds that an `Class.AnimationTrack` is
+      through playing its source animation. Can be set to make the track jump to
+      a specific moment in the animation.
+    description: |
+      Returns the position in time in seconds that an `Class.AnimationTrack` is
+      through playing its source animation. Can be set to make the track jump to
+      a specific moment in the animation.
+
+      TimePosition can be set to go to a specific point in the animation, but
+      the `Class.AnimationTrack` must be playing to do so. It can also be used
+      in combination with `Class.AnimationTrack:AdjustSpeed()` to freeze the
+      animation at a desired point (by setting speed to 0).
+    code_samples:
+      - Animation-TimePosition
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: AnimationTrack.WeightCurrent
+    summary: |
+      Read-only property that gives the current weight of the
+      `Class.AnimationTrack`. It has a default value of 1.
+    description: |
+      When weight is set in an `Class.AnimationTrack` it does not change
+      instantaneously but moves from WeightCurrent to
+      `Class.AnimationTrack.WeightTarget`. The time it takes to do this is
+      determined by the fadeTime parameter given when the animation is played,
+      or the weight is adjusted.
+
+      WeightCurrent can be checked against `Class.AnimationTrack.WeightTarget`
+      to see if the desired weight has been reached. Note that these values
+      should not be checked for equality with the == operator, as both of these
+      values are floats. To see if WeightCurrent has reached the target weight,
+      it is recommended to see if the distance between those values is
+      sufficiently small (see code sample below).
+
+      The animation weighting system is used to determine how
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. In most cases blending animations is not required
+      and using `Class.AnimationTrack.Priority` is more suitable.
+    code_samples:
+      - AnimationWeight
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: AnimationTrack.WeightTarget
+    summary: |
+      Read-only property that gives the current weight of the
+      `Class.AnimationTrack`.
+    description: |
+      AnimationTrack.WeightTarget is a read-only property that gives the current
+      weight of the `Class.AnimationTrack`. It has a default value of 1 and is
+      set when `Class.AnimationTrack:Play()`, `Class.AnimationTrack:Stop()` or
+      `Class.AnimationTrack:AdjustWeight()` is called. When weight is set in an
+      `Class.AnimationTrack` it does not change instantaneously but moves from
+      WeightCurrent to `Class.AnimationTrack.WeightTarget`. The time it takes to
+      do this is determined by the fadeTime parameter given when the animation
+      is played, or the weight is adjusted.
+
+      WeightCurrent can be checked against `Class.AnimationTrack.WeightTarget`
+      to see if the desired weight has been reached. Note that these values
+      should not be checked for equality with the == operator, as both of these
+      values are floats. To see if WeightCurrent has reached the target weight,
+      it is recommended to see if the distance between those values is
+      sufficiently small (see code sample below).
+
+      The animation weighting system is used to determine how
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. In most cases blending animations is not required
+      and using `Class.AnimationTrack.Priority` is more suitable.
+    code_samples:
+      - AnimationWeight
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+methods:
+  - name: AnimationTrack:AdjustSpeed
+    summary: |
+      Changes the `Class.AnimationTrack.Speed` of an animation. A positive value
+      for speed plays the animation forward, a negative one plays it backwards,
+      and 0 pauses it.
+    description: |
+      This function changes the `Class.AnimationTrack.Speed` of an animation. A
+      positive value for speed plays the animation forward, a negative one plays
+      it backwards, and 0 pauses it.
+
+      An AnimationTrack's initial speed is set as a parameter in
+      `Class.AnimationTrack:Play()`. However a track's Speed can be changed
+      during playback, using AdjustSpeed. When speed is equal to 1, the amount
+      of time an animation takes to complete is equal to
+      `Class.AnimationTrack.Length` (in seconds).
+
+      When is adjusted, then the actual time it will take a track to play can be
+      computed by dividing the length by the speed. Speed is a unitless
+      quantity.
+
+      Speed can be used to link the length of an animation to different gameplay
+      events (for example recharging an ability) without having to upload
+      different variants of the same animation.
+    code_samples:
+      - Animation-Speed-2
+      - Animation-Speed
+    parameters:
+      - name: speed
+        type: float
+        default: 1
+        summary: |
+          The playback speed the animation is to be changed to.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack:AdjustWeight
+    summary: |
+      Changes the weight of an animation, with the optional fadeTime parameter
+      determining how long it takes for `Class.AnimationTrack.WeightCurrent` to
+      reach `Class.AnimationTrack.WeightTarget`.
+    description: |
+      Changes the weight of an animation, with the optional fadeTime parameter
+      determining how long it takes for `Class.AnimationTrack.WeightCurrent` to
+      reach `Class.AnimationTrack.WeightTarget`.
+
+      When weight is set in an `Class.AnimationTrack` it does not change
+      instantaneously but moves from WeightCurrent to
+      `Class.AnimationTrack.WeightTarget`. The time it takes to do this is
+      determined by the fadeTime parameter given when the animation is played,
+      or the weight is adjusted.
+
+      WeightCurrent can be checked against `Class.AnimationTrack.WeightTarget`
+      to see if the desired weight has been reached. Note that these values
+      should not be checked for equality with the == operator, as both of these
+      values are floats. To see if WeightCurrent has reached the target weight,
+      it is recommended to see if the distance between those values is
+      sufficiently small (see code sample below).
+
+      The animation weighting system is used to determine how
+      `Class.AnimationTrack|AnimationTracks` playing at the same priority are
+      blended together. The default weight is one, and no movement will be
+      visible on an `Class.AnimationTrack` with a weight of zero. The pose that
+      is shown at any point in time is determined by the weighted average of all
+      the `Class.Pose|Poses` and the WeightCurrent of each
+      `Class.AnimationTrack`. See below for an example of animation blending in
+      practice. In most cases blending animations is not required and using
+      `Class.AnimationTrack.Priority` is more suitable.
+    code_samples:
+      - AnimationTrack-Change-Weight
+    parameters:
+      - name: weight
+        type: float
+        default: 1
+        summary: |
+          The weight the animation is to be changed to.
+      - name: fadeTime
+        type: float
+        default: 0.100000001
+        summary: |
+          The duration of time that the animation will fade between the old
+          weight and the new weight for.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack:GetMarkerReachedSignal
+    summary: |
+      Returns an `Datatype.RBXScriptSignal|event` that fires when a specified
+      `Class.KeyframeMarker` has been hit in an `Class.Animation|animation`.
+    description: |
+      This function returns an `Datatype.RBXScriptSignal|event` similar to the
+      `Class.AnimationTrack.KeyframeReached` event, except it only fires when a
+      specified `Class.KeyframeMarker` has been hit in an
+      `Class.Animation|animation`. The difference allows for greater control of
+      when the event will fire.
+
+      To learn more about using this function, see **Animation Events** in the
+      [Animation Editor](../../../animation/editor.md) article.
+
+      #### More About Keyframes
+
+      `Class.Keyframe` names can be set in the Roblox
+      [Animation Editor](../../../animation/editor.md) when creating or editing
+      an animation. They cannot, however, be set by a `Class.Script` on an
+      existing animation prior to playing it.
+
+      `Class.Keyframe` names do not need to be unique. For example, if an
+      `Class.Animation` has three keyframes named "EmitParticles," the connected
+      event returned by this function will fire each time one of these keyframes
+      is reached.
+
+      See also:
+
+      - `Class.AnimationTrack`, controls the playback of an animation on a
+        `Class.Humanoid` or `Class.AnimationController`
+      - `Class.Keyframe`, holds the `Class.Pose|Poses` applied to joints in a
+        `Class.Model` at a given point of time in an animation
+      - `Class.Keyframe:AddMarker()`
+      - `Class.Keyframe:RemoveMarker()`
+      - `Class.Keyframe:GetMarkers()`
+    code_samples:
+      - listening-to-keyframemarkers
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: |
+          The name of the `KeyFrameMarker` the signal is being created for.
+    returns:
+      - type: RBXScriptSignal
+        summary: |
+          The signal created and fired when the animation reaches the created
+          `KeyFrameMarker`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack:GetTimeOfKeyframe
+    summary: |
+      Returns the time position of the first `Class.Keyframe` of the given name
+      in an `Class.AnimationTrack`.
+    description: |
+      Returns the time position of the first `Class.Keyframe` of the given name
+      in an `Class.AnimationTrack`. If multiple `Class.Keyframe|Keyframes` share
+      the same name, it will return the earliest one in the animation.
+
+      This function will return an error if it is uses with an invalid keyframe
+      name (one that does not exist for example) or if the underlying
+      `Class.Animation` has not yet loaded. To address this make sure only
+      correct keyframe names are used and the animation has loaded before
+      calling this function.
+
+      To check if the animation has loaded, verify that the
+      `Class.AnimationTrack`'s `Class.AnimationTrack.Length` is greater than
+      zero.
+    code_samples:
+      - Animation-GetTimeOfKeyframe
+    parameters:
+      - name: keyframeName
+        type: string
+        default:
+        summary: |
+          The name associated with the `Class.Keyframe` to be found.
+    returns:
+      - type: double
+        summary: |
+          The time, in seconds, the `Class.Keyframe` occurs at normal playback
+          speed.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack:Play
+    summary: |
+      Plays the `Class.AnimationTrack`. Once called an `Class.AnimationTrack`
+      will play with the specified fadeTime, weight and speed.
+    description: |
+      When `Class.AnimationTrack:Play()` is called the track's animation will
+      begin playing and the weight of the animation will increase from 0 to the
+      specified weight (defaults to 1) over the specified fadeTime (defaults to
+      0.1).
+
+      The speed the `Class.AnimationTrack` will play at is determined by the
+      speed parameter (defaults to 1). When the speed is equal to 1 the number
+      of seconds the track will take to complete is equal to the track's
+      `Class.AnimationTrack.Length` property. For example, a speed of 2 will
+      cause the track to play twice as fast.
+
+      The weight and speed of the animation can also be changed after the
+      animation has begun playing by using the
+      `Class.AnimationTrack:AdjustWeight()` and
+      `Class.AnimationTrack:AdjustSpeed()` methods.
+
+      If the developer wants to start the animation at a specific point using
+      `Class.AnimationTrack.TimePosition`, it is important the animation is
+      played before this is done.
+    code_samples:
+      - Animation-Speed-2
+      - Animation-TimePosition
+    parameters:
+      - name: fadeTime
+        type: float
+        default: 0.100000001
+        summary: |
+          The duration of time that the animation's weight should be faded in
+          for.
+      - name: weight
+        type: float
+        default: 1
+        summary: |
+          The weight the animation is to be played at.
+      - name: speed
+        type: float
+        default: 1
+        summary: |
+          The playback speed of the animation.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack:Stop
+    summary: |
+      Stops the `Class.AnimationTrack`. Once called playback of the
+      `Class.AnimationTrack` will stop and the weight of the animation will move
+      towards zero over a length of time specified by the optional fadeTime
+      parameter.
+    description: |
+      Stops the `Class.AnimationTrack`. Once called playback of the
+      `Class.AnimationTrack` will stop and the weight of the animation will move
+      towards zero over a length of time specified by the optional fadeTime
+      parameter.
+
+      For example, if Stop is called with a fadeTime of 2 seconds it will take
+      two seconds for the weight of the `Class.AnimationTrack` to reach zero and
+      its effects completely end. Please note this will be the case regardless
+      of the initial weight of the animation.
+
+      It is not recommended to use a fadeTime of 0 seconds to try to override
+      this effect and end the animation immediately as presently, this causes
+      the `Class.AnimationTrack` poses to freeze.
+    code_samples:
+      - AnimationTrack-Stop
+    parameters:
+      - name: fadeTime
+        type: float
+        default: 0.100000001
+        summary: |
+          The time, in seconds, for which animation weight is to be faded out
+          over.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: AnimationTrack.DidLoop
+    summary: |
+      Fires when an `Class.AnimationTrack` loops on the next update following
+      the end of the previous animation loop.
+    description: |
+      This event fires whenever a looped `Class.AnimationTrack` completes a
+      loop, on the next update.
+
+      Currently it may also fire at the exact end of a non looped animation
+      track but this behavior should not be relied upon.
+    code_samples:
+      - AnimationTrack-DidLoop
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack.Ended
+    summary: |
+      Fires when the `Class.AnimationTrack` is completely done moving anything
+      in the world. The animation has finished playing, the "fade out" is
+      finished, and the subject is in a neutral pose.
+    description: |
+      Fires when the `Class.AnimationTrack` is completely done moving anything
+      in the world. The animation has finished playing, the "fade out" is
+      finished, and the subject is in a neutral pose.
+
+      You can use this to take action when the animation track's subject is back
+      in a neutral pose that's unaffected by the `Class.AnimationTrack` or to
+      clean up the `Class.AnimationTrack`. or any associated Connections.
+    code_samples:
+      - AnimationTrack-Ended
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack.KeyframeReached
+    summary: |
+      Fires every time playback of an `Class.AnimationTrack` reaches a
+      `Class.Keyframe` that does not have the default name - "Keyframe.".
+    description: |
+      Fires every time playback of an `Class.AnimationTrack` reaches a
+      `Class.Keyframe` that does not have the default name - "Keyframe."
+
+      This event allows a developer to run code at predefined points in an
+      animation (set by `Class.Keyframe` names). This allows the default
+      functionality of Roblox animations to be expanded upon by adding
+      `Class.Sound|Sounds` or `ParticleEffects` at different points in an
+      animation.
+
+      `Class.Keyframe` names do not need to be unique. For example, if an
+      Animation has three keyframes named "Particles" the KeyframeReached event
+      will fire each time one of these keyframes is reached.
+
+      `Class.Keyframe` names can be set in the Roblox Animation Editor when
+      creating or editing an animation. They cannot however be set by a
+      `Class.Script` on an existing animation prior to playing it.
+    code_samples:
+      - AnimationTrack-KeyframeReached
+      - AnimationTrack-KeyframeReached-2
+    parameters:
+      - name: keyframeName
+        type: string
+        default:
+        summary: |
+          The name of the `Class.Keyframe` reached.
+    tags: []
+    deprecation_message: |
+      This event has been superseded by the
+      `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal`
+      function. For more details, see **Animation Events** in
+      [Animation Editor](../../../animation/editor.md).
+    security: None
+    thread_safety: Unsafe
+  - name: AnimationTrack.Stopped
+    summary: |
+      Fires when the `Class.AnimationTrack` finishes playing. The AnimationTrack
+      might still animate the subject while the animation "fades out". To catch
+      when the AnimationTrack is completely done moving anything in the world,
+      use the `Class.AnimationTrack.Ended` event.
+    description: |
+      Fires whenever the `Class.AnimationTrack` finishes playing.
+
+      This event has a number of uses. It can be used to wait until an
+      `Class.AnimationTrack` has stopped before continuing (for example, if
+      chaining a series of animations to play after each other). It can also be
+      used to clean up any `Class.Instance|Instances` created during the
+      animation playback.
+    code_samples:
+      - AnimationTrack-Stopped
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

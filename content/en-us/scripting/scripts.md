@@ -129,13 +129,13 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
-If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server-boundary, such as in a `Class.Script` and a `Class.LocalScript`, then the `Class.ModuleScript` returns a unique reference for each side.
+If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, such as in a `Class.Script` and a `Class.LocalScript`, then the `Class.ModuleScript` returns a unique reference for each side.
 
 ### Patterns
 
 Module scripts have some common patterns that you can use to simplify your code and provide more flexibility over the features Roblox Studio provides. By incorporating these patterns into your development, you can avoid common pitfalls as your Roblox experience grows in size and complexity.
 
-<h5>Data Sharing</h5>
+#### Data Sharing
 
 To associate data with individual objects, you can assign attributes to them or create `Class.Configuration` folders with value objects such as `Class.StringValue` or `Class.IntValue`. However, both approaches are troublesome if you want to add or modify dozens of objects or data values. They also don't store tables or functions.
 

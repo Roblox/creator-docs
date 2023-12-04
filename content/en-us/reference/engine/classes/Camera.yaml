@@ -1,0 +1,1448 @@
+name: Camera
+type: class
+category: Gameplay
+memory_category: Instances
+summary: |
+  A class which defines a view of the 3D game world.
+description: |
+  The Camera object defines a view of the 3D game world.
+
+  ## Where the Camera object is found
+
+  In an instance of the game, each client has its own Camera object associated
+  with it. Camera objects exist only upon the viewer's client, residing in that
+  user's local Workspace, and therefore cannot be edited directly from the
+  server.
+
+  Each client's particular Camera object can be accessed through the
+  `Class.Workspace.CurrentCamera` property of the `Class.Workspace` on that
+  client.
+
+  Note, `Class.Workspace.CurrentCamera` can also be used to find the Camera
+  object in Roblox Studio.
+
+  ## How the Camera object works
+
+  The Camera's properties define the current view of the 3D game world. The most
+  important of these being:
+
+  - The `Class.Camera.CFrame` property represents the position and orientation
+    of the camera.
+  - The `Class.Camera.Focus` property represents the point the camera is looking
+    at. It is important this property is set as it also represents where the
+    game thinks you are in the world. Certain visuals will be more detailed and
+    will update more frequently, depending on how close they are to the Focus.
+    Roblox's default camera scripts take care of this.
+  - The `Class.Camera.CameraType` property is read by the game's camera scripts
+    and determines how the Camera should update each frame.
+  - The `Class.Camera.CameraSubject` property is read by the game's camera
+    scripts and determines what object the Camera should follow.
+  - The `Class.Camera.FieldOfView` property represents the extent of the
+    observable world visible.
+
+  ## How to work with the Camera
+
+  Roblox's camera scripts update the Camera's properties every frame dependent
+  on the current `Class.Camera.CameraType`. This means developers looking to
+  control the Camera themselves have two options.
+
+  1. Setting the `Class.Camera.CameraType` property to _'Scriptable'_. When the
+     Camera is in _'Scriptable'_ mode the default camera scripts will not update
+     the camera. In most cases this is the easiest option.
+  2. Replacing or modifying the default camera scripts in
+     `Class.StarterPlayerScripts|StarterPlayer.StarterPlayerScripts`. This is
+     only recommended for advanced developers.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: Camera.CFrame
+    summary: |
+      The `Datatype.CFrame` of the `Class.Camera`, defining its position and
+      orientation in the 3D world.
+    description: |
+      This property is the `Datatype.CFrame` of the `Class.Camera` and defines
+      its position and orientation in the 3D world.
+
+      Some transformations, such as the rotation of the head when using VR
+      devices are not reflected in this property. For this reason, developers
+      should use `Class.Camera:GetRenderCFrame()` to obtain the 'true'
+      `Datatype.CFrame` of the camera.
+
+      #### How to set the camera's CFrame
+
+      You can move the camera by setting the CFrame property. However, the
+      default camera scripts also set the CFrame property. When manually setting
+      the CFrame property, it may be overwritten by the [camera scripts][1]
+      which update every frame. There are two options to address this:
+
+      1. Set the camera `Class.Camera.CameraType` to _'Scriptable'_. When the
+         camera is _'Scriptable'_ the default scripts will not update the
+         CFrame. This method is simplest and recommended in most cases
+
+      2. Replace the default camera scripts with an alternative that doesn't
+         interfere with the developer's desired implementation. This is only
+         recommended when developers do not need any default camera's
+         functionality
+
+      #### How the Camera CFrame works
+
+      Like all `Datatype.CFrame` data, the camera CFrame represents a position
+      and an orientation.
+
+      The most intuitive way to position and orientate the `Class.Camera` is by
+      using the `Datatype.CFrame.lookAt()` constructor:
+
+      ```lua
+      local pos = Vector3.new(0, 10, 0)
+      local lookAtPos = Vector3.new(10, 0, 0)
+      local cameraCFrame = CFrame.lookAt(pos, lookAtPos)
+      workspace.CurrentCamera.CFrame = cameraCFrame
+      ```
+
+      In the above example the `Class.Camera` is positioned at _Vector3.new(0,
+      10, 0)_ and oriented to be looking towards _Vector3.new(10, 0, 0)_.
+
+      #### Animating the Camera CFrame
+
+      Although the camera can be placed in the manner demonstrated above, you
+      may want to animate the Camera to smoothly move from one CFrame to
+      another. For this, there are a number of options:
+
+      1. Creating a `Class.Tween` using `Class.TweenService` that animates the
+         CFrame property of the camera. See the code sample below for an example
+         of this
+      2. Setting the camera CFrame every frame with
+         `Class.RunService:BindToRenderStep()` and the _lerp_ CFrame method
+    code_samples:
+      - basic-camera-cutscene
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.CameraSubject
+    summary: |
+      The `Class.Humanoid` or `Class.BasePart` that is the `Class.Camera`'s
+      subject.
+    description: |
+      When using the default camera scripts, the CameraSubject property has two
+      roles:
+
+      - Defining the object the `Class.Camera` is to follow, in the case of the
+        _'Follow'_, _'Attach'_, _'Track'_, _'Watch'_ and _'Custom'_
+        `Class.Camera.CameraType|CameraTypes`
+      - For all `Class.Camera.CameraType|CameraTypes` but _'Scriptable'_, the
+        object whose position the `Class.Camera`'s `Class.Camera.Focus` will be
+        set to
+
+      CameraSubject accepts a variety of `Class.Instance|Instances`. The default
+      camera scripts respond differently to different CameraSubject types:
+
+      - `Class.Humanoid`: By default the CameraSubject is set to the
+        `Class.Player.LocalPlayer|LocalPlayer`'s `Class.Humanoid`. The camera
+        scripts will follow the `Class.Humanoid` factoring in the
+        `Class.Humanoid`'s current state and `Class.Humanoid.CameraOffset`
+      - `Class.BasePart`: The camera scripts will follow the position of any
+        `Class.BasePart`, with a vertical offset in the case of
+        `Class.VehicleSeat|VehicleSeats`
+
+      You can configure the `Class.Camera` to follow a `Class.Model` by setting
+      the CameraSubject to the model's `Class.Model.PrimaryPart`.
+
+      The CameraSubject cannot be set to _nil_. If it is, it will revert to its
+      previous value.
+
+      To restore the CameraSubject to its default value, set it to the
+      `Class.Player.LocalPlayer|LocalPlayer`'s `Class.Humanoid` like so:
+
+      ```lua
+      local Players = game:GetService("Players")
+
+      local localPlayer = Players.LocalPlayer
+
+      local function resetCameraSubject()
+      	if workspace.CurrentCamera and localPlayer.Character then
+      		local humanoid = localPlayer.Character:FindFirstChildOfClass("Humanoid")
+      		if humanoid then
+      			workspace.CurrentCamera.CameraSubject = humanoid
+      		end
+      	end
+      end
+      ```
+    code_samples:
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.CameraType
+    summary: |
+      Specifies the `Enum.CameraType` to be read by the camera scripts.
+    description: |
+      The default Roblox camera scripts have several built in behaviors. Setting
+      the CameraType of a player's `Class.Camera` will toggle between these
+      behaviors. Note some CameraType's require a valid
+      `Class.Camera.CameraSubject` to work correctly.
+
+      - Fixed: `Class.Camera` is stationary
+      - Follow: `Class.Camera` moves with the `Class.Camera.CameraSubject` and
+        rotates to keep the subject in the center of view
+      - Attach: `Class.Camera` moves with the `Class.Camera.CameraSubject` at a
+        fixed offset and will rotate as the subject rotates
+      - Track: `Class.Camera` moves with the `Class.Camera.CameraSubject` but
+        does not rotate automatically
+      - Watch: `Class.Camera` is stationary but will rotate to keep the
+        `Class.Camera.CameraSubject` in the center of view
+      - Custom: Default
+      - Scriptable: No default behavior. Used by developers to script custom
+        behavior
+
+      The above only applies when you use the default Roblox [camera
+      scripts][1]. If you write your own camera scripts, you can choose to
+      listen to CameraType and implement your own behaviors or ignore the
+      property entirely.
+
+      #### Manually controlling the Camera
+
+      In some cases you may wish to manually control the `Class.Camera` (for
+      example during a cut-scene). The best way to do this is by setting the
+      CameraType to _'Scriptable'_. The default camera scripts will not move or
+      update the `Class.Camera` on its own if CameraType is set to
+      _'Scriptable'_. This means you can freely modify the `Class.Camera` using
+      its properties and functions. For more information on positioning and
+      orientating the `Class.Camera` manually see the `Class.Camera.CFrame`
+      page.
+
+      If you want complete control over the camera at all times, you may replace
+      the default camera scripts with your own.
+    code_samples:
+      - basic-camera-cutscene
+    type: CameraType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.CoordinateFrame
+    summary: |
+      The old version of the `Class.Camera.CFrame` property which functions
+      identically to it.
+
+      This item should be used in a `Class.LocalScript` in order to work as
+      expected online.
+    description: |
+      This property has been superseded by `Class.Camera.CFrame` which functions
+      identically and should be used instead.
+    code_samples:
+    type: CFrame
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This item has been superseded by `Class.Camera.CFrame` which should be
+      used in all new work.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Camera.DiagonalFieldOfView
+    summary: |
+      Sets the angle of the `Class.Camera`'s diagonal field of view.
+    description: |
+      Sets how many degrees in the diagonal direction (from one corner of the
+      viewport to its opposite corner) the camera can view.
+
+      See `Class.Camera.FieldOfView|FieldOfView` for a more general explanation
+      of FOV.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Camera.FieldOfView
+    summary: |
+      Sets the angle of the `Class.Camera`'s vertical field of view.
+    description: |
+      Field of view, often shortened to FOV, is the extent of the observable
+      game world that can be seen on screen at a given moment. The FieldOfView
+      property is clamped between 1 and 120 degrees and defaults at 70. Very low
+      or very high fields of view are not recommended as they can be
+      disorientating to players.
+
+      The FieldOfView property sets how many degrees in the vertical direction
+      (y-axis) the camera can view. Uniform scaling is enforced meaning the
+      vertical and horizontal field of view are always related by the
+      [aspect ratio](<https://en.wikipedia.org/wiki/Aspect_ratio_(image)>) of
+      the screen. This means the FieldOfView property also determines the
+      horizontal field of view.
+
+      See the images below for an example of how different FieldOfView settings
+      can impact the extent of the perceptive game world. At a FOV of 70, a
+      considerable portion of the game world is visible:
+
+      ![A demonstration of the default FOV of 70](/assets/legacy/Fov70.png)
+
+      However when the FOV is reduced to 30, although the `Class.Camera`'s
+      `Class.Camera.CFrame` has not changed, a much smaller portion of the game
+      world is rendered:
+
+      ![A demonstration of a reduced FOV of 30](/assets/legacy/Fov30.png)
+
+      #### Suggested uses for FieldOfView
+
+      Changing FOV can produce a variety of effects, such as:
+
+      - Reducing FOV to give the impression of magnification (for example when
+        using binoculars)
+      - Increasing FOV when the player is 'sprinting' to give the impression of
+        a lack of control
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.FieldOfViewMode
+    summary: |
+      Determines the FOV value of the `Class.Camera` that's invariant under
+      viewport size changes.
+    description: |
+      The `Class.Camera`'s FOV must be updated to reflect
+      `Class.Camera.ViewportSize|ViewportSize` changes. The value of the
+      FieldOfViewMode property determines which FOV value will be kept constant.
+
+      For example, when the value of FieldOfViewMode is set to
+      `Enum.FieldOfViewMode.Vertical`, the horizontal FOV is updated when the
+      viewport is resized, while the vertical FOV is kept constant. On the other
+      hand, if the value is set to `Enum.FieldOfViewMode.Diagonal`, both
+      horizontal and vertical FOV might be changed to keep the diagonal FOV
+      constant.
+    code_samples:
+    type: FieldOfViewMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.Focus
+    summary: |
+      Sets the area in 3D space that is prioritized by Roblox's graphical
+      systems.
+    description: |
+      The `Class.Camera` Focus is a `Datatype.CFrame` that determines the area
+      in 3D space the graphics engine will prioritize.
+
+      Certain graphical operations Roblox performs, such as updating lighting,
+      can take a lot of time or computational effort to complete. Focus tells
+      Roblox the area in 3D space to prioritize when performing such operations.
+      For example dynamic lighting from objects such as
+      `Class.PointLight|PointLights` may not render at distances far from the
+      Focus.
+
+      The default Roblox camera scripts automatically set the Focus to follow
+      the `Class.Camera.CameraSubject` (usually a `Class.Humanoid`). However,
+      Focus will not be automatically updated in the following cases:
+
+      - When the `Class.Camera.CameraType` is set to _'Scriptable'_
+      - When the default camera scripts are not being used
+
+      In these cases, you should update Focus every frame, using
+      `Class.RunService:BindToRenderStep()` function at the _'Camera'_
+      `Enum.RenderPriority`.
+
+      Focus has no bearing on the positioning or orientation of the
+      `Class.Camera` (see `Class.Camera.CFrame` for this).
+    code_samples:
+      - following-camera
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.HeadLocked
+    summary: |
+      Toggles whether the `Class.Camera` will automatically track the head
+      motion of a player using a VR device.
+    description: |
+      Un-linking the camera from a VR user's head motions can cause motion
+      sickness. This property should only be set to false after extensive
+      testing.
+
+      Toggles whether the `Class.Camera` will automatically track the head
+      motion of a player using a VR device.
+
+      When HeadLocked is _true_, the engine will combine `Class.Camera.CFrame`
+      with the `Enum.UserCFrame` of the user's head to render the player's view
+      with head tracking factored in. The view will be rendered at the following
+      `Datatype.CFrame`:
+
+      ```lua
+      local UserInputService = game:GetService("UserInputService")
+      local headCFrame = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
+      headCFrame = headCFrame.Rotation + headCFrame.Position * workspace.CurrentCamera.HeadScale
+      -- this will be equivalent to Camera:GetRenderCFrame()
+      local renderCFrame = workspace.CurrentCamera.CFrame * headCFrame
+      ```
+
+      #### Disabling HeadLocked
+
+      You are recommended not to disable HeadLocked for the following reasons:
+
+      - Players may experience motion sickness if an equivalent head tracking
+        solution is not added
+      - The Roblox engine performs latency optimizations when HeadLocked is true
+
+      See also:
+
+      - `Class.VRService`'s `Class.VRService:GetUserCFrame()` function, which
+        can be used to obtain the `Datatype.CFrame` of the head
+      - `Class.VRService`'s `Class.VRService:RecenterUserHeadCFrame()` which is
+        used to recenter the head to the current position and orientation of the
+        VR device
+      - The `Class.Camera:GetRenderCFrame()` function which returns the
+        `Class.Camera` `Class.Camera.CFrame` combined with the `Datatype.CFrame`
+        of the user's head
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.HeadScale
+    summary: |
+      Sets the scale of the user's perspective of the world when using VR.
+    description: |
+      HeadScale is the scale of the user's perspective of the world when using
+      VR.
+
+      The size of a stud in VR is:
+
+      _1 stud = 0.3 meters / HeadScale_
+
+      This means the larger the HeadScale value, the smaller the world will look
+      from the user's perspective when using VR devices and vice versa. For
+      example, a part that is 1 stud tall appears to be 0.6 meters tall to a VR
+      player with a HeadScale = 0.5.
+
+      This property is automatically controlled by
+      `Class.VRService.AutomaticScaling` to align the player's perspective with
+      the size of their avatar. If you intend to control HeadScale yourself or
+      use custom characters, toggle `Class.VRService.AutomaticScaling` =
+      `Enum.VRScaling.Off`.
+
+      When not using VR, this property has no effect.
+
+      This property should not be confused with `Class.Humanoid` HeadScale,
+      which is a `Class.NumberValue` parented to a `Class.Humanoid` to control
+      its scaling.
+
+      See also:
+
+      The following are also useful when developing for VR:
+
+      - `Class.VRService.AutomaticScaling`
+      - `Class.Camera:GetRenderCFrame()`
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.MaxAxisFieldOfView
+    summary: |
+      Sets the angle of the `Class.Camera`'s field of view along the longest
+      viewport axis.
+    description: |
+      The MaxAxisFieldOfView property sets how many degrees along the longest
+      viewport axis the camera can view.
+
+      When the longest axis is the vertical axis, this property will behave
+      similar to the `Class.Camera.FieldOfView|FieldOfView` property. This is
+      generally the case when a device is in a portrait orientation. In a
+      landscape orientation the longest axis will be the horizontal axis. In
+      this case, the property describes the horizontal FOV of the
+      `Class.Camera`.
+
+      See `Class.Camera.FieldOfView|FieldOfView` for a more general explanation
+      of FOV.
+    code_samples:
+    type: float
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Camera
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Camera.NearPlaneZ
+    summary: |
+      Describes the negative z-offset, in studs, of the `Class.Camera`'s near
+      clipping plane.
+    description: |
+      The NearPlaneZ property describes how far away the Camera's near clipping
+      plane is in studs. The near clipping plane is a geometric plane that sits
+      in-front of the `Class.Camera`'s `Class.Camera.CFrame`. Anything between
+      this plane and the camera will not render. This creates a cutaway view
+      when viewing objects at very short distances. See the images below for a
+      visual example of this:
+
+      ![A demonstration of how the near clipping plane resides in front of the camera's view](/assets/legacy/NearPlaneZ1.jpg)
+      ![A demonstration of how anything falling behind the clipping plane is not rendered](/assets/legacy/NearPlaneZ2.jpg)
+
+      The value of NearPlaneZ varies across different platforms, but is
+      currently always between _-0.1_ and _-0.5_.
+
+      - Most windows systems, all Xbox systems and most iOS systems support the
+        more precise value of _-0.1_
+      - Currently Mac and Android systems only support a NearPlaneZ of _-0.5_,
+        although this may change in the future
+    code_samples:
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: Camera.VRTiltAndRollEnabled
+    summary: |
+      Toggles whether to apply tilt and roll from the `Class.Camera.CFrame`
+      property while the player is using a VR device.
+    description: |
+      This property toggles whether to apply tilt and
+      roll from the `Class.Camera.CFrame` property while the player is
+      using a VR device.
+      
+      To prevent motion sickness, the horizon should remain level. Tilting
+      and rolling the player's view while using a VR device can cause a
+      disconnect between the player's physical space and the virtual
+      space they are viewing. Changing the apparent downwards direction can
+      cause players to lose balance or experience dizziness.
+
+      For these reasons, it is generally advisable to leave this property
+      disabled, unless you have extensively tested your experience for
+      these effects. Even with tilt and roll enabled, you may want to
+      ensure the player always has a stable reference frame, such as the
+      interior of a vehicle or a floor that can help the player ground
+      themselves in their physical space.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Camera.ViewportSize
+    summary: |
+      Describes the dimensions, in pixels, of the client's viewport.
+    description: |
+      ViewportSize describes the dimensions, in pixels, of the client's
+      viewport.
+
+      ![A visual demonstration of the ViewportSize](/assets/legacy/ViewportSize.png)
+
+      - This property ignores the GUI inset applied by the top bar, meaning the
+        center of the screen can be found at precisely at 50% of the
+        ViewportSize in both directions
+      - You can find the position of a `Datatype.Vector3` in the world on the
+        viewport using `Class.Camera:WorldToViewportPoint()`
+    code_samples:
+    type: Vector2
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+  - name: Camera.focus
+    summary: ''
+    description: ''
+    code_samples:
+    type: CFrame
+    tags:
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is a deprecated variant of `Class.Camera.Focus` which should
+      be used instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: false
+methods:
+  - name: Camera:GetLargestCutoffDistance
+    summary: |
+      Returns how much the `Class.Camera` needs to be pushed towards its
+      `Class.Camera.Focus|Focus` in order to make sure there is no obstructions
+      between the `Class.Camera.Focus` and `Class.Camera.CFrame`.
+    description: |
+      This function is used by _'PopperCam'_ in the default camera scripts to
+      ensure obstructions do not come between the `Class.Camera` and the
+      `Class.Camera`'s subject.
+
+      This function will check all `Class.BasePart|BaseParts` and
+      `Class.Terrain` in the `Class.Workspace` with the following exceptions:
+
+      - Any `Class.Instance` specified in the _ignoreList_ (including its
+        descendants) will be ignored
+      - `Class.BasePart|BaseParts` with `Class.BasePart.CanCollide` set to false
+        are ignored
+      - `Class.BasePart|BaseParts` with a `Class.BasePart.Transparency` greater
+        than 0.95 will be ignored Water `Class.Terrain` is ignored
+
+      Note, as this function requires an _ignoreList_ to run, you should pass an
+      empty table when none is required.
+    code_samples:
+    parameters:
+      - name: ignoreList
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.Instance|Instances` to ignore. Descendants of these
+          instances will also be ignored.
+    returns:
+      - type: float
+        summary: |
+          The distance, in studs, that the `Class.Camera` needs to be pushed
+          towards its `Class.Camera.Focus` to ensure there are no obstructions
+          between the `Class.Camera.Focus` and `Class.Camera.CFrame` of the
+          `Class.Camera`.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:GetPanSpeed
+    summary: |
+      Returns the current 'pan' speed of the `Class.Camera`.
+    description: |
+      This function is broken and should not be used This function returns the
+      current 'pan' speed of the `Class.Camera`.
+
+      The 'pan' speed of the `Class.Camera` describes the speed at which the
+      `Class.Camera` is rotating around its `Class.Camera.Focus` around the Y
+      axis.
+
+      See also:
+
+      - `Class.Camera:GetTiltSpeed()` for the speed at which the `Class.Camera`
+        is rotating around its `Class.Camera.Focus` on the `Class.Camera`'s X
+        axis
+      - `Class.Camera:PanUnits()` to 'pan' the camera
+      - `Class.Camera:TiltUnits()` to 'tilt' the camera
+    code_samples:
+    parameters: []
+    returns:
+      - type: float
+        summary: |
+          The speed at which the `Class.Camera` is rotating around its
+          `Class.Camera.Focus` on the Y axis.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated and no longer works. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:GetPartsObscuringTarget
+    summary: |
+      Returns an array of `Class.BasePart|BaseParts` that are obscuring the
+      lines of sight between the `Class.Camera`'s `Class.Camera.CFrame` and the
+      _castPoints_.
+    description: |
+      This function returns an array of `Class.BasePart|BaseParts` that are
+      obscuring the lines of sight between `Class.Camera`'s
+      `Class.Camera.CFrame` and the _castPoints_.
+
+      GetPartsObscuringTarget is used by the 'Invisicam' in the default camera
+      scripts to hide parts between the `Class.Camera`'s `Class.Camera.CFrame`
+      and `Class.Camera.Focus`.
+
+      Any `Class.Instance|Instances` included in the _ignoreList_ array will,
+      along with their descendants, be ignored.
+
+      See below for a visual example of this function. The `Class.Camera` is
+      represented by the grey camera model and the cast points are represented
+      by the colored dots. The `Class.Part|Parts` highlighted in red are the
+      ones that would be returned.
+
+      ![A visual demonstration of the function](/assets/legacy/GetPartsObscuringTarget.png)
+
+      The castPoints parameter is given as an array of
+      `Datatype.Vector3|Vector3s`, for example:
+
+      ```lua
+      local castPoints = {Vector3.new(0, 10, 0), Vector3.new(0, 15, 0)}
+      local ignoreList = {}
+      workspace.CurrentCamera:GetPartsObscuringTarget(castPoints, ignoreList)
+      ```
+
+      The array of `Class.BasePart|BaseParts` returned is in an arbitrary order,
+      and no additional raycast data is provided (for example hit position, hit
+      material and surface normal). If this information is required, you should
+      a `Class.Workspace` raycast function such as
+      `Class.Workspace.FindPartOnRayWithIgnoreList`.
+
+      If `Class.Terrain` obscures a cast point, `Class.BasePart|BaseParts`
+      obscuring the cast point between the obscuring `Class.Terrain` and the
+      cast point will not be returned.
+
+      Note, this function benefits from internal optimisations that make it more
+      performant than casting a ray for each cast point individually.
+    code_samples:
+      - x-ray-function
+    parameters:
+      - name: castPoints
+        type: Array
+        default:
+        summary: |
+          An array of `Datatype.Vector3` positions of cast points.
+      - name: ignoreList
+        type: Objects
+        default:
+        summary: |
+          An array of `Class.Instance|Instances` that, along with their
+          descendants, are to be ignored.
+    returns:
+      - type: Objects
+        summary: |
+          An array of `Class.BasePart|BaseParts` that obscure the lines of sight
+          between the `Class.Camera`'s `Class.Camera.CFrame` and the
+          _castPoints_.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:GetRenderCFrame
+    summary: |
+      Returns the actual `Datatype.CFrame`where the `Class.Camera` is being
+      rendered, accounting for any roll applied and the impact of VR devices.
+    description: |
+      This function returns the actual `Datatype.CFrame` of the `Class.Camera`
+      as it is rendered, including the impact of VR.
+
+      VR head transformations are not applied to the `Class.Camera.CFrame`
+      property. For this reason, it is best practice to use
+      `Class.Camera:GetRenderCFrame()` to obtain the 'true' `Datatype.CFrame` of
+      a player's view.
+
+      For example, when using VR the `Class.Camera` is actually rendered at the
+      following `Datatype.CFrame`:
+
+      ```lua
+      local UserInputService = game:GetService("UserInputService")
+
+      local headCFrame = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
+      headCFrame = headCFrame.Rotation + headCFrame.Position * workspace.CurrentCamera.HeadScale
+      renderCFrame = workspace.CurrentCamera.CFrame * headCFrame
+      ```
+
+      The `Class.Camera`'s render `Datatype.CFrame` will only be changed to
+      account for the head when the `Class.Camera.HeadLocked` property is true.
+    code_samples:
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: |
+          The `Datatype.CFrame` the `Class.Camera` is being rendered at.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:GetRoll
+    summary: |
+      Returns in radians the current roll, or rotation around the
+      `Class.Camera`'s Z-axis, applied to the `Class.Camera` using
+      `Class.Camera:SetRoll()`.
+    description: |
+      This function returns, in radians, the current roll applied to the
+      `Class.Camera` using `Class.Camera:SetRoll()`. Roll is defined as rotation
+      around the `Class.Camera`'s Z-axis.
+
+      This function only returns roll applied using the `Class.Camera:SetRoll()`
+      function. Roll manually applied to the `Class.Camera`'s
+      `Class.Camera.CFrame` is not accounted for. To obtain the actual roll of
+      the `Class.Camera`, including roll manually applied, you can use the
+      following snippet:
+
+      ```lua
+      local function getActualRoll()
+      	local camera = workspace.CurrentCamera
+
+      	local trueUp = Vector3.new(0, 1, 0)
+      	local cameraUp = camera:GetRenderCFrame().upVector
+
+      	return math.acos(trueUp:Dot(cameraUp))
+      end
+      ```
+    code_samples:
+      - Camera-GetRoll1
+    parameters: []
+    returns:
+      - type: float
+        summary: |
+          The current roll applied by `Class.Camera:SetRoll()`, in radians.
+    tags: []
+    deprecation_message: |
+      This function has been deprecated. See below for a code snippet
+      demonstrating how to calculate the roll of the `Class.Camera`.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:GetTiltSpeed
+    summary: |
+      Returns the current 'tilt' speed of the `Class.Camera`.
+    description: |
+      This function is broken and should not be used.
+
+      This function returns the current 'tilt' speed of the `Class.Camera`.
+
+      The 'tilt' speed of the `Class.Camera` describes the speed at which the
+      `Class.Camera` is rotating around its `Class.Camera.Focus` around the
+      `Class.Camera`'s X axis.
+
+      See also:
+
+      `Class.Camera:GetPanSpeed()` for the speed the `Class.Camera` is rotating
+      around the `Class.Camera.Focus` around the Y axis
+      `Class.Camera:PanUnits()` to 'pan' the camera `Class.Camera:TiltUnits()`
+      to 'tilt' the camera
+    code_samples:
+    parameters: []
+    returns:
+      - type: float
+        summary: |
+          The speed at which the `Class.Camera` is rotating around its
+          `Class.Camera.Focus` around the `Class.Camera`'s X axis.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated and no longer works. It should not be
+      used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:Interpolate
+    summary: |
+      Tweens the `Class.Camera` in a linear fashion towards a new
+      `Class.Camera.CFrame` and `Class.Camera.Focus` over a given duration.
+    description: |
+      This function tweens the `Class.Camera` in a linear fashion towards a new
+      `Class.Camera.CFrame` and `Class.Camera.Focus` over a given duration, for
+      example:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      camera.CameraType = Enum.CameraType.Scriptable
+
+      camera:Interpolate(
+      	CFrame.new(0, 10, 100),
+      	CFrame.new(0, 0, 100),
+      	5
+      )
+      ```
+
+      Throughout the tween, the `Class.Camera`'s `Class.Camera.CFrame` will be
+      orientated towards the `Class.Camera`'s `Class.Camera.Focus`.
+
+      When the tween has completed, the `Class.Camera`'s
+      `Class.Camera.InterpolationFinished` event will fire.
+
+      If this function is called while the `Class.Camera` is already tweening
+      the older tween will be stopped (without firing
+      `Class.Camera.InterpolationFinished`) and overridden by the new tween.
+
+      Interpolate can only be used if the current `Class.Camera.CameraType` is
+      _'Scriptable'_, regardless of whether the default camera scripts are being
+      used. If it is used with any other `Class.Camera.CameraType` an error will
+      be thrown.
+
+      You are advised to use `Class.TweenService` to tween the `Class.Camera`
+      instead as it is more reliable and offers a variety of easing styles. See
+      below for an example:
+
+      ```lua
+      local TweenService = game:GetService("TweenService")
+
+      local camera = workspace.CurrentCamera
+      camera.CameraType = Enum.CameraType.Scriptable
+
+      local tween = TweenService:Create(
+      	camera,
+      	TweenInfo.new(5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+      	{
+      		CFrame = CFrame.new(0, 10, 100),
+      		Focus = CFrame.new(0, 0, 100)
+      	}
+      )
+
+      tween:Play()
+      ```
+    code_samples:
+    parameters:
+      - name: endPos
+        type: CFrame
+        default:
+        summary: |
+          The `Datatype.CFrame` for the `Class.Camera` to tween to.
+      - name: endFocus
+        type: CFrame
+        default:
+        summary: |
+          The `Datatype.CFrame` for the `Class.Camera`'s `Class.Camera.Focus` to
+          tween to.
+      - name: duration
+        type: float
+        default:
+        summary: |
+          The duration, in seconds, of the tween.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated. Instead use `Class.TweenService` to
+      smoothly animate the `Class.Camera`, see the code snippets below for an
+      example.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:PanUnits
+    summary: |
+      Pans the `Class.Camera` around the `Class.Camera.Focus` in 45 degree
+      increments around the Y axis.
+    description: |
+      This function pans the `Class.Camera` around the `Class.Camera.Focus` in
+      45 degree increments around the Y axis.
+
+      The rotation is applied to the `Class.Camera`'s `Class.Camera.CFrame`
+      property.
+
+      This function pans the `Class.Camera` in 45 degree increments, for
+      example:
+
+      ```lua
+      workspace.CurrentCamera:PanUnits(1) -- 45 degrees
+      workspace.CurrentCamera:PanUnits(-2) -- -90 degrees
+      ```
+
+      PanUnits does not require the `Class.Camera.CameraType` to be
+      _'Scriptable'_.
+    code_samples:
+    parameters:
+      - name: units
+        type: int
+        default:
+        summary: |
+          The number of 45 degree increments by which to pan the `Class.Camera`.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function was used for legacy camera controls and has since been
+      deprecated. Do not use in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:ScreenPointToRay
+    summary: |
+      Creates a unit `Datatype.Ray` from a position on the screen (in pixels),
+      at a set depth from the `Class.Camera` orientated in the `Class.Camera`'s
+      direction. Accounts for the GUI inset.
+    description: |
+      This function creates a unit `Datatype.Ray` from a 2D position on the
+      screen (defined in pixels). This position accounts for the GUI inset. The
+      `Datatype.Ray` originates from the `Datatype.Vector3` equivalent of the 2D
+      position in the world at the given depth (in studs) away from the
+      `Class.Camera`.
+
+      As this function accounts for the GUI inset, the offset applied to GUI
+      elements (such as from the top bar) is accounted for. This means the
+      screen position specified will start in the top left corner below the top
+      bar. For an otherwise identical function that does not account for the GUI
+      offset, use `Class.Camera:ViewportPointToRay()`.
+
+      As the `Datatype.Ray` created is a unit ray it is only one stud long. To
+      create a longer ray, you can do the following:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      local length = 500
+      local unitRay = camera:ScreenPointToRay(100, 100)
+      local ray = Ray.new(unitRay.Origin, unitRay.Direction * length)
+      ```
+    code_samples:
+      - Camera-ScreenPointToRay1
+    parameters:
+      - name: x
+        type: float
+        default:
+        summary: |
+          The position on the X axis, in pixels, of the screen point at which to
+          originate the `Datatype.Ray`. This position accounts for the GUI
+          inset.
+      - name: 'y'
+        type: float
+        default:
+        summary: |
+          The position on the Y axis, in pixels, of the screen point at which to
+          originate the `Datatype.Ray`. This position accounts for the GUI
+          inset.
+      - name: depth
+        type: float
+        default: 0
+        summary: |
+          The depth from the `Class.Camera`, in studs, from which to offset the
+          origin of the `Datatype.Ray`.
+    returns:
+      - type: Ray
+        summary: |
+          A unit `Datatype.Ray`, originating from the equivalent
+          `Datatype.Vector3` world position of the given screen coordinates at
+          the given depth away from the `Class.Camera`. This ray is orientated
+          in the direction of the `Class.Camera`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Camera:SetCameraPanMode
+    summary: |
+      Sets the `Enum.CameraPanMode` to be used by the `Class.Camera` on mobile
+      devices.
+    description: |
+      This function sets the `Enum.CameraPanMode` to be used by the
+      `Class.Camera` on mobile devices.
+
+      When the \*'EdgeBump' `Enum.CameraPanMode` is used, swipe to pan is
+      disabled and the edge bump camera controls are enabled.
+
+      SetCameraPan mode has no effect on PC / Mac users.
+    code_samples:
+    parameters:
+      - name: mode
+        type: CameraPanMode
+        default: Classic
+        summary: |
+          The `Enum.CameraPanMode` to set the `Class.Camera` to.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function has been deprecated and should not be used in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:SetRoll
+    summary: |
+      Sets the current rotation applied around the `Class.Camera`'s Z-axis.
+    description: |
+      This function is outdated and no longer considered best practice.
+
+      This function sets the current roll, in radians, of the `Class.Camera`.
+      The roll is applied after the `Class.Camera.CFrame` and represents the
+      rotation around the `Class.Camera`'s Z-axis.
+
+      For example, the following would invert the `Class.Camera`:
+
+      ```lua
+      workspace.CurrentCamera:SetRoll(math.pi) -- math.pi radians = 180 degrees
+      ```
+
+      SetRoll has no effect on any roll applied using the `Class.Camera.CFrame`
+      property. Roll applied using SetRoll is not reflected in the
+      `Class.Camera.CFrame` property but is reflected in the `Datatype.CFrame`
+      returned by`Class.Camera:GetRenderCFrame()`.
+
+      This function can only be used when the `Class.Camera.CameraType` is set
+      to _'Scriptable'_, regardless of whether the default camera scripts are
+      being used. If it is used with any other `Class.Camera.CameraType` a
+      warning is given in the output.
+
+      Any roll applied using this function will be lost when the
+      `Class.Camera.CameraType` is changed from _'Scriptable'_.
+
+      To obtain the roll set using this function use `Class.Camera:GetRoll()`.
+
+      As this function is outdated, you are advised to instead apply roll to the
+      `Class.Camera` using the `Class.Camera.CFrame` property. For example:
+
+      ```lua
+      local currentCFrame = workspace.CurrentCamera.CFrame
+      local rollCFrame = CFrame.Angles(0, 0, roll)
+      workspace.CurrentCamera.CFrame = currentCFrame * rollCFrame
+      ```
+    code_samples:
+    parameters:
+      - name: rollAngle
+        type: float
+        default:
+        summary: |
+          The roll angle, in radians, to be applied to the `Class.Camera`.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: |
+      This function has been deprecated. Instead use the `Class.Camera.CFrame`
+      property to 'roll' the `Class.Camera`.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:TiltUnits
+    summary: |
+      Tilts the `Class.Camera` around its `Class.Camera.Focus` in 10 degree
+      increments around the `Class.Camera`'s X axis.
+    description: |
+      This function 'tilts' the `Class.Camera` by rotating it around the
+      `Class.Camera.Focus` around the `Class.Camera`'s X axis by a given
+      multiple of 10 degrees.
+
+      The rotation is applied to the `Class.Camera`'s `Class.Camera.CFrame`
+      property and is constrained between _-81.05_ and _81.05_ degrees.
+
+      This function tilts the `Class.Camera` in 10 degree increments, for
+      example:
+
+      ```lua
+      workspace.CurrentCamera:TiltUnits(2) -- 20 degrees
+      workspace.CurrentCamera:TiltUnits(-5) -- -50 degrees
+      ```
+
+      TiltUnits does not require the `Class.Camera.CameraType` to be
+      _'Scriptable'_.
+
+      See also:
+
+      - `Class.Camera:PanUnits()`
+    code_samples:
+    parameters:
+      - name: units
+        type: int
+        default:
+        summary: |
+          The number of 10 degree units by which to tilt the `Class.Camera`.
+    returns:
+      - type: bool
+        summary: |
+          Whether the `Class.Camera` tilt applied was constrained.
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function was used for legacy camera controls and has been deprecated.
+      Do not use in new work.
+    security: None
+    thread_safety: Unsafe
+  - name: Camera:ViewportPointToRay
+    summary: |
+      Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
+      at a given depth from the `Class.Camera` orientated in the
+      `Class.Camera`'s direction. Does not account for the GUI inset.
+    description: |
+      This function creates a unit `Datatype.Ray` from a 2D position on the
+      viewport (defined in pixels). This position does not account for the GUI
+      inset. The `Datatype.Ray` originates from the `Datatype.Vector3`
+      equivalent of the 2D position in the world at the given depth (in studs)
+      away from the `Class.Camera`.
+
+      As this function does not account for the GUI inset, the viewport position
+      given is not equivalent to the screen position used by GUI elements. If
+      you are not using `Class.ScreenGui.IgnoreGuiInset` and need an otherwise
+      identical function that accounts for the GUI offset, use
+      `Class.Camera:ScreenPointToRay()`.
+
+      This function can be used in conjunction with the
+      `Class.Camera.ViewportSize` property to create a ray from the centre of
+      the screen, for example:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      local viewportPoint = camera.ViewportSize / 2
+      local unitRay = camera:ViewportPointToRay(viewportPoint.X, viewportPoint.Y, 0)
+      ```
+
+      As the `Datatype.Ray` created is a unit ray it is only one stud long. To
+      create a longer ray, you can do the following:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      local length = 500
+      local unitRay = camera:ScreenPointToRay(100, 100)
+      local ray = Ray.new(unitRay.Origin, unitRay.Direction * length)
+      ```
+    code_samples:
+    parameters:
+      - name: x
+        type: float
+        default:
+        summary: |
+          The position on the X axis, in pixels, of the viewport point at which
+          to originate the `Datatype.Ray`. This position does not account for
+          the GUI inset.
+      - name: 'y'
+        type: float
+        default:
+        summary: |
+          The position on the Y axis, in pixels, of the viewport point at which
+          to originate the `Datatype.Ray`. This position does not account for
+          the GUI inset.
+      - name: depth
+        type: float
+        default: 0
+        summary: |
+          The depth from the `Class.Camera`, in studs, from which to offset the
+          origin of the `Datatype.Ray`.
+    returns:
+      - type: Ray
+        summary: |
+          A unit `Datatype.Ray`, originating from the equivalent
+          `Datatype.Vector3` world position of the given viewport coordinates at
+          the given depth away from the `Class.Camera`. This ray is orientated
+          in the direction of the `Class.Camera`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Camera:WorldToScreenPoint
+    summary: |
+      Returns the 2D screen location of a `Datatype.Vector3` position in the
+      world, the depth of it from the screen and whether it is visible. Accounts
+      for the GUI inset.
+    description: |
+      This function returns the screen location and depth of a
+      `Datatype.Vector3` _worldPoint_ and whether this point is visible on the
+      screen or not.
+
+      ![In-game example](/assets/legacy/WorldToScreenPointImage.jpg)
+
+      This function takes in account the current GUI inset (such as the space
+      occupied by the top bar). This means the 2D position returned is in the
+      same term as GUI positions and can be used to place GUI elements. For an
+      otherwise identical function that ignores the GUI inset, see
+      `Class.Camera:WorldToViewportPoint()`.
+
+      For example:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      local worldPoint = Vector3.new(0, 10, 0)
+      local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
+
+      local screenPoint = Vector2.new(vector.X, vector.Y)
+      local depth = vector.Z
+      ```
+
+      Note this function does not perform any raycasting, meaning the visible
+      bool will be true regardless if the _worldPoint_ is obscured by
+      `Class.BasePart|BaseParts` or `Class.Terrain`.
+    code_samples:
+    parameters:
+      - name: worldPoint
+        type: Vector3
+        default:
+        summary: |
+          The `Datatype.Vector3` world position.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing, in order:
+
+          A `Datatype.Vector3` whose X and Y components represent the offset of
+          the _worldPoint_ from the top left corner of the screen, in pixels.
+          The `Datatype.Vector3`'s Z component represents the depth of the
+          _worldPoint_ from the screen (in studs).
+
+          A bool indicating if the _worldPoint_ is within the bounds of the
+          screen
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Camera:WorldToViewportPoint
+    summary: |
+      Returns the 2D screen location of a `Datatype.Vector3` position in the
+      world, but does not account for the GUI inset.
+    description: |
+      This function returns the screen location and depth of a
+      `Datatype.Vector3` _worldPoint_ and whether this point is visible on the
+      screen or not.
+
+      ![In-game example](/assets/legacy/WorldToViewportPointImage.jpg)
+
+      This function does not take in account the current GUI inset (such as the
+      space occupied by the top bar). This means the 2D position returned is
+      taken from the top left corner of the viewport. This means, unless you are
+      using `Class.ScreenGui.IgnoreGuiInset` this position is not appropriate
+      for placing GUI elements.
+
+      For an otherwise identical function that accounts for the GUI inset, see
+      `Class.Camera:WorldToScreenPoint()`.
+
+      For example:
+
+      ```lua
+      local camera = workspace.CurrentCamera
+      local worldPoint = Vector3.new(0, 10, 0)
+      local vector, inViewport = camera:WorldToViewportPoint(worldPoint)
+
+      local viewportPoint = Vector2.new(vector.X, vector.Y)
+      local depth = vector.Z
+      ```
+
+      Note this function does not perform any raycasting, meaning the visible
+      bool will be true regardless if the _worldPoint_ is obscured by
+      `Class.BasePart|BaseParts` or `Class.Terrain`.
+    code_samples:
+      - check-if-a-point-is-visible
+    parameters:
+      - name: worldPoint
+        type: Vector3
+        default:
+        summary: |
+          The `Datatype.Vector3` world position.
+    returns:
+      - type: Tuple
+        summary: |
+          A tuple containing, in order:
+
+          A `Datatype.Vector3` whose X and Y components represent the offset of
+          the _worldPoint_ from the top left corner of the viewport, in pixels.
+          The `Datatype.Vector3`'s Z component represents the depth of the
+          _worldPoint_ from the screen (in studs).
+
+          A bool indicating if the _worldPoint_ is within the bounds of the
+          viewport.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+  - name: Camera:ZoomToExtents
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: boundingBoxCFrame
+        type: CFrame
+        default:
+        summary: ''
+      - name: boundingBoxSize
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: Camera.InterpolationFinished
+    summary: |
+      Fired when the `Class.Camera` has finished interpolating
+      using`Class.Camera:Interpolate()`.
+    description: |
+      This event fires when the `Class.Camera` has finished interpolating using
+      the `Class.Camera:Interpolate()` function.
+
+      This event will not fire if a tween is interrupted due to
+      `Class.Camera:Interpolate()` being called again.
+
+      You are advised to use `Class.TweenService` to animate the `Class.Camera`
+      instead, as it is more reliable and provides more options for easing
+      styles.
+    code_samples:
+    parameters: []
+    tags: []
+    deprecation_message: |
+      This event has been deprecated. Instead use `Class.TweenService` to
+      smoothly animate the `Class.Camera`.
+    security: None
+    thread_safety: Unsafe
+callbacks: []

@@ -77,7 +77,7 @@ The Roblox documentation has three main document types:
 
   Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
 
-- (Coming soon) API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
+- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
 
   APIs are entirely reference content and should use functional descriptions, linking to guides where appropriate. More than other content types, reference content should be terse and direct; summaries for properties, methods, events, and callbacks don't need to be full sentences.
 
@@ -92,6 +92,8 @@ If your contribution doesn't fit within these categories or covers a particularl
 Try to limit your edits to one class or feature so that the pull request is easier to review. Bug fixes and smaller improvements have a higher likelihood of fast approval. Large guides often require significant back-and-forth before publication.
 
 To avoid formatting issues, we recommend text editors like github.dev that let you preview Markdown as you write it. For prose, try to follow the guidelines in [STYLE.md](STYLE.md). For code samples, use the [Lua Style Guide](https://roblox.github.io/lua-style-guide/).
+
+To view a page fully formatted per what we see on the `main` branch, replace the entire URL from `content/` and before. Files with the basename `index` should have that name removed. For example, the page for "https://github.com/Roblox/creator-docs/blob/main/content/en-us/avatar/index.md" is rendered at "https://create.roblox.com/docs/en-us/avatar".
 
 ## Licenses
 

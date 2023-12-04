@@ -1,0 +1,80 @@
+name: EqualizerSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Controls the volume of incoming audio across three frequency ranges.
+description: |
+  An equalizer allows for control of the volume of various frequency ranges for
+  the `Class.Sound` or `Class.SoundGroup` the effect is parented to. This can be
+  used to highlight particular elements of audio or minimize or outright
+  eliminate others. The `Class.EqualizerSoundEffect` gives control over three
+  ranges of frequency: Low, Mid, and High. Their specific frequencies are as
+  follows:
+
+  - Low: 0 - 400 Hz
+  - Mid: 400 - 4000 Hz
+  - High: 4000+ Hz
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: EqualizerSoundEffect.HighGain
+    summary: |
+      The output volume of frequencies greater than 4000 Hz.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of frequencies greater than
+      4000 Hz. Measured in dB.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: EqualizerSoundEffect.LowGain
+    summary: |
+      The output volume of frequencies lower than 400 Hz.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of frequencies lower than
+      400 Hz. Measured in dB.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: EqualizerSoundEffect.MidGain
+    summary: |
+      The output volume of frequencies between 400 and 4000 Hz.
+    description: |
+      Range: -80 to 10 (default 0) The output volume of frequencies between 400
+      and 4000 Hz. Measured in dB.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

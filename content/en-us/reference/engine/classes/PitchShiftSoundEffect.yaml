@@ -1,0 +1,38 @@
+name: PitchShiftSoundEffect
+type: class
+category: Sounds
+memory_category: Instances
+summary: |
+  Adjusts the pitch of a sound without changing its playback speed.
+description: |
+  The PitchShiftSoundEffect raises or lowers the pitch of the associated Sound
+  or SoundGroup without changing the playback speed of the audio. This effect
+  can be computationally expensive.
+code_samples:
+inherits:
+  - SoundEffect
+tags: []
+deprecation_message: ''
+properties:
+  - name: PitchShiftSoundEffect.Octave
+    summary: |
+      The percentage to shift the original pitch.
+    description: |
+      Range: 0.5 to 2 (default 1.25) The percentage to shift the original pitch.
+      Setting this to its minimum (0.5) lowers the octave by 1, setting this to
+      its maximum (2) increases the octave by 1.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

@@ -1,0 +1,85 @@
+name: SurfaceLight
+type: class
+category: Lighting
+memory_category: Instances
+summary: |
+  A light source that emits illumination of a specified color and brightness
+  from a face for a specified range.
+description: |
+  A SurfaceLight is a light source that emits illumination of a specified
+  `Class.Light.Color` and `Class.Light.Brightness` from a
+  `Class.SurfaceLight.Face` for a specified `Class.SurfaceLight.Range`.
+
+  In order for a SurfaceLight to provide illumination, it must be the direct
+  child of a `Class.BasePart` or `Class.Attachment` (the part or attachment
+  itself must be a descendant of the Workspace). If a SurfaceLight is parented
+  to a part, then the light will emanate from the part's selected face(s). If
+  parented to an attachment SurfaceLight is equivalent to a `Class.SpotLight`.
+
+  For more light types, please see the **see also** section.
+
+  ## See Also
+
+  - `Class.PointLight`
+  - `Class.SpotLight`
+code_samples:
+  - surfacelight
+inherits:
+  - Light
+tags: []
+deprecation_message: ''
+properties:
+  - name: SurfaceLight.Angle
+    summary: |
+      The angle of which the light is shone from the SurfaceLight.
+    description: |
+      The angle of which the light is shone from the SurfaceLight.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceLight.Face
+    summary: |
+      Sets the side of the parent that the SurfaceLight comes from.
+    description: |
+      Sets the side of the parent that the SurfaceLight comes from.
+    code_samples:
+    type: NormalId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: SurfaceLight.Range
+    summary: |
+      The distance from the SurfaceLight's face that will illuminate.
+    description: |
+      The distance from the SurfaceLight's face that will illuminate.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

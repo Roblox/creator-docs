@@ -1,0 +1,94 @@
+name: UIAspectRatioConstraint
+type: class
+category: GUI
+memory_category: Instances
+summary: |
+  Ensures the parent UI element maintains a particular aspect ratio.
+description: |
+  A UIAspectRatioConstraint ensures that the parent UI element
+  (`Class.GuiObject`) maintains a particular aspect ratio even if its size is
+  set as a percentage of its parent. If an object with this constraint is also
+  under the control of a `Class.UILayout` such as `Class.UIGridLayout`, then the
+  constraint controls the objects size and overwrites any size the layout would
+  apply.
+
+  When applied to a GuiObject, the UIAspectRatioConstraint will make sure that
+  the objects ratio is maintained by the value defined in
+  `Class.UIAspectRatioConstraint.AspectRatio`. The
+  `Class.UIAspectRatioConstraint.AspectType` sets what determines the maximum
+  size of the object. When set to `Enum.AspectType.FitWithinMaxSize`, the
+  constraint will make the object the maximum size it can be within the
+  `Class.GuiObject` of the element. When set to ScaleWithParentSize, the
+  elements maximum size will be the size of the parent while still maintaining
+  the aspect ratio. Finally, the `Class.UIAspectRatioConstraint.DominantAxis`
+  will determine which axis to use when setting the new size of the element.
+code_samples:
+inherits:
+  - UIConstraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: UIAspectRatioConstraint.AspectRatio
+    summary: |
+      Determines the width-to-height ratio to be maintained by the constraint.
+    description: |
+      AspectRatio determines the width-to-height ratio to maintain. To flip the
+      ratio to height-to-width, take the inverse (divide 1 by the number or
+      raise to the -1st power). This value must be greater than zero. Below, a
+      white `Class.Frame` is placed within the a black `Class.Frame` with two
+      different width-to-height ratios.
+    code_samples:
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIAspectRatioConstraint.AspectType
+    summary: |
+      Determines what limits the maximum size of the UI element.
+    description: |
+      AspectType determines what limits the maximum size of the element.
+
+      - When set to FitWithinMaxSize, the constraint will make the object the
+        maximum size it can be within its own `Class.GuiBase2d.AbsoluteSize`.
+      - When set to ScaleWithParentSize, the UI element's maximum size will be
+        the size of the parent while still maintaining the aspect ratio..
+    code_samples:
+    type: AspectType
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIAspectRatioConstraint.DominantAxis
+    summary: |
+      Determines the axis to use when setting the new size of the UI element.
+    description: |
+      DominantAxis determines which axis to use when setting the new size of the
+      UI element if it would otherwise exceed the size of the parent.
+    code_samples:
+    type: DominantAxis
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

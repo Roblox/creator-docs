@@ -1,0 +1,453 @@
+name: AssetService
+type: class
+category: Data
+memory_category: Instances
+summary: |
+  A non-replicated service that handles asset related queries to the Roblox web
+  API.
+description: |
+  The AssetService is a non-replicated service that handles asset related
+  queries to the Roblox web API. Eventually, this will house all asset related
+  queries for Roblox objects stored in the web. One should mind the limitations
+  this API has.
+code_samples:
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: AssetService:CreateEditableImageAsync
+    summary: |
+      Creates a new `Class.EditableImage` instance populated with the given
+      image.
+    description: |
+      Creates a new `Class.EditableImage` instance populated with the given
+      texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
+      using an image asset, it must be associated with and/or owned by a creator
+      of the experience, or it must have been created inside the experience.
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: Content
+        default:
+        summary: |
+          Texture ID of the image to populate the `Class.EditableImage`.
+    returns:
+      - type: EditableImage
+        summary: |
+          A new `Class.EditableImage` containing the provided image.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshAsync
+    summary: |
+      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      content ID.
+    description: |
+      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      content ID.
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: |
+          Content ID of the mesh from which to create an `Class.EditableMesh`
+          instance.
+    returns:
+      - type: EditableMesh
+        summary: |
+          The new `Class.EditableMesh` instance.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreateEditableMeshFromPartAsync
+    summary: |
+      Returns a new `Class.EditableMesh` instance created from an existing
+      `Class.MeshPart`.
+    description: |
+      Returns a new `Class.EditableMesh` instance created from the
+      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
+    code_samples: []
+    parameters:
+      - name: meshPart
+        type: Instance
+        default:
+        summary: |
+          The `Class.MeshPart` from which to create an `Class.EditableMesh`
+          instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
+          for this method to operate.
+    returns:
+      - type: EditableMesh
+        summary: |
+          The new `Class.EditableMesh` instance.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreatePlaceAsync
+    summary: |
+      Clones a place with placeId equal to given `templatePlaceId`.
+    description: |
+      Clones a place with placeId equal to given templatePlaceId. The clone
+      place displays within the inventory of the place's creator with the given
+      name and description. This method returns the placeId of the new place,
+      which you can use with TeleportService. The template place must have
+      template copying enabled through place settings. You cannot use this
+      method to clone places that you don't own.
+
+      Frequent use of this API isn't recommended, particularly if the created
+      places contain scripts, as updating the code in a large volume of places
+      quickly becomes infeasible. For user-generated worlds, consider
+      serializing user creations and saving them in `Class.DataStore`s instead.
+    code_samples:
+    parameters:
+      - name: placeName
+        type: string
+        default:
+        summary: ''
+      - name: templatePlaceID
+        type: int64
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:CreatePlaceInPlayerInventoryAsync
+    summary: |
+      Clones a place which has placeId equal to given templatePlaceId and puts
+      it into the inventory of the given player.
+    description: |
+      This function has been removed as of Release 471. Clones a place which has
+      a placeId equal to the given templatePlaceID, placing it into the
+      inventory of the given player with the given name and description, if they
+      accept when prompted. This method cannot be used to clone places that you
+      do not own, or those which have disabled the use of the CreatePlace API in
+      their place's configuration.
+    code_samples:
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: placeName
+        type: string
+        default:
+        summary: ''
+      - name: templatePlaceID
+        type: int64
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:GetAssetIdsForPackage
+    summary: |
+      Returns an array of assetIds that are contained in a specified package.
+    description: |
+      Returns an array of assetIds that are contained in a specified package.
+    code_samples:
+    parameters:
+      - name: packageAssetId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:GetBundleDetailsAsync
+    summary: |
+      Returns details of the contents of specified bundle.
+    description: |
+      If the bundle ID does not exist, it throws HTTP 400 (HTTP/1.1 400 Bad
+      Request). If bundleId is not convertible to int, throws "Unable to cast
+      string to int64". If param type is string, it implicitly tries to convert
+      to int.
+
+      This function returns details of the contents of the specified bundle.
+
+      #### Understanding the returned ValueTable
+
+      It returns a ValueTable object with the following key-value pairs
+      containing details about the specified bundle
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Key Name</th>
+      			<th>Value Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>Id number</td>
+      			<td>int</td>
+      			<td>Bundle ID (passed in as an argument)</td>
+      		</tr>
+      		<tr>
+      			<td>Name</td>
+      			<td>string</td>
+      			<td>Bundle name</td>
+      		</tr>
+      		<tr>
+      			<td>Description</td>
+      			<td>string</td>
+      			<td>Bundle description</td>
+      		</tr>
+      		<tr>
+      			<td>BundleType</td>
+      			<td>string</td>
+      			<td>Bundle Type. eg. BodyParts or <code>AvatarAnimation|AvatarAnimations</code></td>
+      		</tr>
+      		<tr>
+      			<td>Items</td>
+      			<td>ValueArray</td>
+      			<td>An array of ValueTable objects</td>
+      		</tr>
+      	</tbody>
+      </table>
+
+      Each object in the Items array contains details of the item as described
+      in the table below:
+
+      <table>
+      	<thead>
+      		<tr>
+      			<th>Key Name</th>
+      			<th>Value Type</th>
+      			<th>Description</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td>Id number</td>
+      			<td>int</td>
+      			<td>Item's id</td>
+      		</tr>
+      		<tr>
+      			<td>Name</td>
+      			<td>string</td>
+      			<td>Item name</td>
+      		</tr>
+      		<tr>
+      			<td>Type</td>
+      			<td>string</td>
+      			<td>Item Type eg: "UserOutfit" or "Asset"</td>
+      		</tr>
+      	</tbody>
+      </table>
+    code_samples:
+      - getting-bundle-details
+    parameters:
+      - name: bundleId
+        type: int64
+        default:
+        summary: |
+          The id of the specified bundle.
+    returns:
+      - type: Dictionary
+        summary: |
+          A ValueTable object with the following key-value pairs containing
+          details about the specified bundle. See the function description for
+          more information.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:GetCreatorAssetID
+    summary: |
+      Returns the UserId of the account who created the creationID asset.
+    description: |
+      The GetCreatorAssetID function returns the `Class.Player.UserId` of the
+      account who created the _creationID_ asset.
+
+      This member is broken and doesn't function correctly. Avoid using it.
+    code_samples:
+    parameters:
+      - name: creationID
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+      - Deprecated
+    deprecation_message: |
+      This item is deprecated and no longer functions correctly. Do not use it
+      for new work.
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:GetGamePlacesAsync
+    summary: |
+      Returns a `Class.StandardPages` object which contains the name and placeId
+      of places within the current 'Game' (otherwise known as a 'Universe').
+    description: |
+      Returns a `Class.StandardPages` object which contains the name and placeId
+      of places within the current 'Game' (otherwise known as a 'Universe').
+    code_samples:
+      - AssetService-GetGamePlacesAsync1
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:PromptCreateAssetAsync
+    summary: |
+      Allows in-experience asset creation for users by prompting a publish
+      dialog when they press the submit button.
+    description: |
+      Allows in-experience asset creation for users by prompting a publish
+      dialog when they press the submit button. Can only be invoked on the
+      server side. When called, it presents a dialog to the user. The dialog
+      allows users to enter a name, description, and preview the asset. Upon
+      submitting, it saves the asset to the user's inventory.
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: |
+          Represents the user who submits an asset creation.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          Represents the asset to be created. Currently can't contain scripts or
+          nest non-public assets.
+      - name: assetType
+        type: AssetType
+        default:
+        summary: |
+          The asset type. Currently can only be `Enum.AssetType.Model`.
+    returns:
+      - type: Tuple
+        summary: |
+          The `Enum.PromptCreateAssetResult` and asset ID pair if successful.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:PromptImportAnimationClipFromVideoAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: progressCallback
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:SavePlaceAsync
+    summary: |
+      Saves the state of the current place.
+    description: |
+      Saves the state of the current place. This only works for places that are
+      created with `Class.AssetService:CreatePlaceAsync()` or have the API
+      enabled through place settings.
+    code_samples:
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AssetService:SearchAudio
+    summary: |
+      Finds audio assets matching a variety of search criteria.
+    description: |
+      Returns a `Class.AudioPages` object containing the result of the given
+      search. Will not return fields with empty values.
+
+      Note that this method has a low HTTP request limit and can throw an error,
+      so it should always be wrapped in `pcall()` for error handling. Possible
+      error messages include:
+
+      <table>
+        <thead>
+          <tr>
+            <th>Error Message</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTTP 429 (Too Many Requests)</td>
+            <td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
+          </tr>
+          <tr>
+            <td>Unexpected type for data, expected array got void</td>
+            <td>The keyword argument was filtered.</td>
+          </tr>
+        </tbody>
+      </table>
+    code_samples:
+      - printing-search-audio-result-titles
+    parameters:
+      - name: searchParameters
+        type: AudioSearchParams
+        default:
+        summary: ''
+    returns:
+      - type: AudioPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

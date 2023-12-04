@@ -1,0 +1,80 @@
+name: AudioAnalyzer
+type: class
+category:
+memory_category: Internal
+summary: |
+  Takes measurements from audio streams that are connected to it via one or more
+  `Class.Wire|Wires`.
+description: |
+  `Class.AudioAnalyzer` takes measurements from audio streams that are wired to
+  it through `Class.Wire`. It provides a single **Input** pin but does not
+  produce any output streams.
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioAnalyzer.PeakLevel
+    summary: |
+      The loudest volume observed during the last audio buffer.
+    description: |
+      The loudest volume observed during the last audio buffer. This property
+      changes often and thus does not fire changed events.
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Metering
+    serialization:
+      can_load: false
+      can_save: true
+  - name: AudioAnalyzer.RmsLevel
+    summary: |
+      The root-mean-square average volume observed during the last audio buffer.
+    description: |
+      The root-mean-square average volume observed during the last audio buffer.
+      This property is generally more stable than
+      `Class.AudioAnalyzer.PeakLevel|PeakLevel` but it may not capture momentary
+      volume spikes.
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Metering
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: AudioAnalyzer:GetSpectrum
+    summary: |
+      Returns the frequency spectrum of the last audio buffer.
+    description: |
+      Returns the frequency spectrum of the last audio buffer, as an array of
+      numbers. The elements of the array are root-mean-square volume levels,
+      evenly spaced from 0 hertz to 24,000 hertz.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []
