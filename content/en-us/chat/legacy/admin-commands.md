@@ -225,7 +225,7 @@ SetGroupRankPermission(number requesterUserId, number targetGroupId, number targ
 | SetUserPermission()          | number requesterUserId, number targetUserId, permissionLevel                       | bool   |
 | GetUserPermission()          | number userId                                                                      | number |
 | GetGroups()                  |                                                                                    | table  |
-| SetGroupRankPermission(name)     | number requesterUserId, number targetGroupId, number targetRankId, permissionLevel | bool   |
+| SetGroupRankPermission(name)     | targetGroupId, number player, permissionLevel | bool   |
 | GetGroupRankPermission()     | targetGroupId, targetRankId                                                        | int    |
 | GetUserGroupRankPermission() | number userId                                                                      | int    |
 
@@ -236,7 +236,7 @@ For easier setup you can also use this [Quick Start](https://www.roblox.com/libr
 | Command/Binding                  | Spoken Parameter                 |
 | -------------------------------- | -------------------------------- |
 | "list", "commands"               | username                         |
-| "sparkles"    "buildingtools"    | usernmae
+| "buildingtools"                    | username
 | "buildingtools"              | username                         |
 | "sparkles"                       | username                         |
 | "unforcefield", "unff"           | username                         |
