@@ -1,4 +1,35 @@
-import { getEditedProtectedFieldsData } from './engineReferenceChecks.js';
+import {
+  getEngineApiTypeFromFilePath,
+  getEditedProtectedFieldsData,
+} from './engineReferenceChecks.js';
+
+describe('getEngineApiTypeFromFilePath', () => {
+  it('should return "classes" for classes', () => {
+    const filePath = 'content/en-us/reference/engine/classes/Name.yaml';
+    const engineApiType = getEngineApiTypeFromFilePath(filePath);
+    expect(engineApiType).toBe('classes');
+  });
+  it('should return "datatypes" for datatypes', () => {
+    const filePath = 'content/en-us/reference/engine/datatypes/Name.yaml';
+    const engineApiType = getEngineApiTypeFromFilePath(filePath);
+    expect(engineApiType).toBe('datatypes');
+  });
+  it('should return "enums" for enums', () => {
+    const filePath = 'content/en-us/reference/engine/enums/Name.yaml';
+    const engineApiType = getEngineApiTypeFromFilePath(filePath);
+    expect(engineApiType).toBe('enums');
+  });
+  it('should return "globals" for globals', () => {
+    const filePath = 'content/en-us/reference/engine/globals/Name.yaml';
+    const engineApiType = getEngineApiTypeFromFilePath(filePath);
+    expect(engineApiType).toBe('globals');
+  });
+  it('should return "libraries" for libraries', () => {
+    const filePath = 'content/en-us/reference/engine/libraries/Name.yaml';
+    const engineApiType = getEngineApiTypeFromFilePath(filePath);
+    expect(engineApiType).toBe('libraries');
+  });
+});
 
 describe('compareProtectedFields', () => {
   const editableFields = ['summary', 'description', 'deprecation_message'];

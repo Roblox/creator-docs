@@ -11,7 +11,7 @@ To get all items of an Enum, call the `GetEnumItems()` method on the enum. The f
 
 ```lua
 local partTypes = Enum.PartType:GetEnumItems()
-for index, enumItem in ipairs(partTypes) do
+for index, enumItem in partTypes do
 	print(enumItem)
 end
 

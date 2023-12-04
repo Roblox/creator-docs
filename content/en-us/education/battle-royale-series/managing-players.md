@@ -188,7 +188,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
 ### Sending Players to Spawn
 
-Make sure each player gets teleported to a different spawn location in the arena by combining a for loop and the `pairs()` function to go through the active players array. Using `pairs()` allows you to go through every value in the players array, allowing the script to adapt to a variety of player numbers.
+Make sure each player gets teleported to a different spawn location in the arena by using a `for` loop to iterate through the active players array. Using a `for` loop allows you to go through every value in the players array, allowing the script to adapt to a variety of player numbers.
 
 1. In the `sendPlayersToMatch()` function, use a variable to create an array of all the arena spawn locations by getting the children of the Arena > SpawnLocations folder.
 
@@ -199,13 +199,13 @@ Make sure each player gets teleported to a different spawn location in the arena
    end
    ```
 
-2. Add the for loop below to get an array of all players and then iterate through each of them. To get players, type: `pairs(Players:GetPlayers())`.
+2. Add the `for` loop below to get an array of all players and then iterate through each of them. To get players, type: `Players:GetPlayers()`.
 
    ```lua
    function PlayerManager.sendPlayersToMatch()
       local arenaSpawns = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+      for playerKey, whichPlayer in Players:GetPlayers() do
 
       end
    end
@@ -221,7 +221,7 @@ When the game runs, it needs to identify which users are playing so they can be 
    function PlayerManager.sendPlayersToMatch()
       local arenaSpawns = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+      for playerKey, whichPlayer in Players:GetPlayers() do
          table.insert(activePlayers,whichPlayer)
       end
    end
@@ -230,7 +230,7 @@ When the game runs, it needs to identify which users are playing so they can be 
 2. To get a spawn location from the arena, create a variable named `spawnLocation` and set it to the **first** index in the `arenaSpawns` table.
 
    ```lua
-   for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+   for playerKey, whichPlayer in Players:GetPlayers() do
       table.insert(activePlayers,whichPlayer)
       local spawnLocation = arenaSpawns[1]
    end
@@ -239,7 +239,7 @@ When the game runs, it needs to identify which users are playing so they can be 
 3. Call `preparePlayer()` and pass in `whichPlayer` and `spawnLocation`. Then, since that spawn location was used, **remove** it from the table so the next player will get a different spawn.
 
    ```lua
-   for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+   for playerKey, whichPlayer in Players:GetPlayers() do
       table.insert(activePlayers,whichPlayer)
       local spawnLocation = arenaSpawns[1]
       preparePlayer(whichPlayer, spawnLocation)
@@ -410,7 +410,7 @@ function PlayerManager.sendPlayersToMatch()
 
 local arenaSpawns = spawnLocations:GetChildren()
 
-	for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+	for playerKey, whichPlayer in Players:GetPlayers() do
 		table.insert(activePlayers,whichPlayer)
 		local spawnLocation = arenaSpawns[1]
 		preparePlayer(whichPlayer, spawnLocation)

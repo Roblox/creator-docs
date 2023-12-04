@@ -63,7 +63,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
 
    local function validator(playerToTeleport, destinationPlayer, teleportationPoint)
    	-- Iterate through all tagged parts
-   	for _, area in ipairs(CollectionService:GetTagged("RestrictedSpawnArea")) do
+   	for _, area in CollectionService:GetTagged("RestrictedSpawnArea") do
    		local relativePosition = area.CFrame:PointToObjectSpace(teleportationPoint.Position)
    		local size = area.Size
    		local inXBounds = relativePosition.X < size.X / 2 and relativePosition.X > -size.X / 2

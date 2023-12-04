@@ -340,7 +340,7 @@ data. To update **CoinService**:
     end
 
     -- Setting up event listeners
-    for _, coin in ipairs(coins) do
+    for _, coin in coins do
       coin:SetAttribute("Enabled", true)
       coin.Touched:Connect(function(otherPart)
         onCoinTouched(otherPart, coin)

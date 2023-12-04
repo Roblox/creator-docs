@@ -11,9 +11,18 @@ import { capitalizeFirstLetter, Emoji } from './utils.js';
 
 const ajv = new Ajv.default({ strict: false });
 
+const schemaPathMap: Record<string, string> = {
+  classes: `${repositoryRoot}/tools/schemas/engine/classes.json`,
+  datatypes: `${repositoryRoot}/tools/schemas/engine/datatypes.json`,
+  enums: `${repositoryRoot}/tools/schemas/engine/enums.json`,
+  globals: `${repositoryRoot}/tools/schemas/engine/globals.json`,
+  libraries: `${repositoryRoot}/tools/schemas/engine/libraries.json`,
+};
 const regex = /reference\/engine\/([^\/]+)\/[^\/]+\.yaml/;
 
-const getApiTypeFromFilePath = (filePath: string): string | undefined => {
+export const getEngineApiTypeFromFilePath = (
+  filePath: string
+): string | undefined => {
   const match = filePath.match(regex);
   return match && match[1] ? match[1] : undefined;
 };
@@ -22,14 +31,6 @@ const getApiTypeFromFilePath = (filePath: string): string | undefined => {
 const getValidator = (schemaPath: string) => {
   const schema = JSON.parse(readFileSync(schemaPath, 'utf-8'));
   return ajv.compile(schema);
-};
-
-const schemaPathMap: Record<string, string> = {
-  classes: `${repositoryRoot}/tools/schemas/engine/classes.json`,
-  datatypes: `${repositoryRoot}/tools/schemas/engine/datatypes.json`,
-  enums: `${repositoryRoot}/tools/schemas/engine/enums.json`,
-  globals: `${repositoryRoot}/tools/schemas/engine/globals.json`,
-  libraries: `${repositoryRoot}/tools/schemas/engine/libraries.json`,
 };
 
 const handleYamlParseError = ({
@@ -63,24 +64,20 @@ ${requiredCheckMessage}`;
 };
 
 export const validateContentDataAgainstSchema = ({
+  engineApiType,
   config,
   contentData,
   filePath,
 }: {
+  engineApiType: string;
   config: IConfig;
   contentData: any;
   filePath: string;
 }) => {
-  // Check the YAML against schema
-  const apiType = getApiTypeFromFilePath(filePath);
-  if (!apiType) {
-    console.log(`No API type found for ${filePath}`);
-    return;
-  }
-  const schemaPath = schemaPathMap[apiType];
+  const schemaPath = schemaPathMap[engineApiType];
   if (!schemaPath) {
     console.log(
-      `No validator found for file ${filePath} and API type ${apiType}`
+      `No validator found for file ${filePath} and Engine API type ${engineApiType}`
     );
     return;
   }
@@ -199,13 +196,6 @@ export const checkProtectedFields = async ({
   contentData: any;
   filePath: string;
 }) => {
-  // Check the YAML against schema
-  const apiType = getApiTypeFromFilePath(filePath);
-  if (!apiType) {
-    console.log(`No API type found for ${filePath}`);
-    return;
-  }
-
   const oldContentStr = await getOldFile({
     branch: config.baseBranch,
     filePath,
@@ -243,7 +233,7 @@ export const checkProtectedFields = async ({
       .map((field) => `\`${field}\``)
       .join(newLineListMarker);
 
-  const message = `only the following fields are editable: ${formattedExcludedFields}. Please undo changes to the following fields:`;
+  const message = `only the following fields are editable: ${formattedExcludedFields}. Other fields are automatically overwritten if edited. Please undo changes to the following fields:`;
 
   const consoleMessage = `${Emoji.NoEntry} Requirement: In ${filePath}, ${message} ${editedFieldsOneLine}.`;
   console.log(consoleMessage);
@@ -288,13 +278,31 @@ export const checkEngineReferenceContent = async ({
     return;
   }
 
-  validateContentDataAgainstSchema({ config, filePath, contentData });
+  const engineApiType = getEngineApiTypeFromFilePath(filePath);
+  if (!engineApiType) {
+    console.log(`No Engine API type found for ${filePath}`);
+    return;
+  }
+
+  validateContentDataAgainstSchema({
+    engineApiType,
+    config,
+    filePath,
+    contentData,
+  });
 
   if (config.checkProtectedFields) {
-    await checkProtectedFields({
-      config,
-      contentData,
-      filePath,
-    });
+    if (engineApiType === 'classes' || engineApiType === 'enums') {
+      console.log(`Checking protected fields for ${filePath}`);
+      await checkProtectedFields({
+        config,
+        contentData,
+        filePath,
+      });
+    } else {
+      console.log(
+        `Skipping protected fields check for Engine API type ${engineApiType}`
+      );
+    }
   }
 };

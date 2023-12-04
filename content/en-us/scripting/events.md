@@ -510,7 +510,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local bindableEvent = ReplicatedStorage:WaitForChild("BindableEvent")
 
 local function onEventFire(passedTable)
-	for k, v in pairs(passedTable) do
+	for k, v in passedTable do
 		print(typeof(k))  --> string
 	end
 end

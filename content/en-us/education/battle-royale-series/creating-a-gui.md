@@ -319,7 +319,7 @@ Next, add the code for displaying the number of players at the start of a game. 
    function PlayerManager.sendPlayersToMatch()
       local availableSpawnPoints = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+      for playerKey, whichPlayer in Players:GetPlayers() do
          table.insert(activePlayers,whichPlayer)
 
          local spawnLocation = availableSpawnPoints[1]
