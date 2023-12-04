@@ -102,9 +102,10 @@ computation to be expensive.
   of `Class.RunService` without limiting the frequency, means these operations
   will be repeated every frame which often results in an unnecessary increase in
   computation time. These events include:
-  - `Class.RunService.RenderStepped`
-  - `Class.RunService.Stepped`
-  - `Class.RunService.Heartbeat`
+  - `Class.RunService.PreAnimation`
+  - `Class.RunService.PreRender`
+  - `Class.RunService.PreSimulation`
+  - `Class.RunService.PostSimulation`
 
 <h4>How to Mitigate</h4>
 
@@ -130,11 +131,11 @@ computation to be expensive.
     <td>Code executing on the RenderStepped event</td>
   </tr>
   <tr>
-    <td>RunService.Stepped</td>
+    <td>RunService.PreSimulation</td>
     <td>Code executing on the Stepped event</td>
   </tr>
   <tr>
-    <td>RunService.Heartbeat</td>
+    <td>RunService.PostSimulation</td>
     <td>Code executing on Heartbeat event</td>
   </tr>
 </table>

@@ -96,7 +96,7 @@ functions:
     description: |
       Accepts a function or a thread (as returned by coroutine.create) and
       schedules it to be called/resumed on the next
-      `Class.RunService.Heartbeat|Heartbeat` after the given amount of time in
+      `Class.RunService.PostSimulation|PostSimulation` after the given amount of time in
       seconds has elapsed. Arguments after the second are sent to the
       function/thread.
 
@@ -193,12 +193,12 @@ functions:
     description: |
       Yields the current thread until the given duration (in seconds) has
       elapsed, then resumes the thread on the next
-      `Class.RunService.Heartbeat|Heartbeat` step. The actual amount of time
+      `Class.RunService.PostSimulation|PostSimulation` step. The actual amount of time
       elapsed is returned.
 
       If no duration is given, it will default to zero (0). This means the
       thread resumes on the very next step, which is equivalent in behavior to
-      `RunService.Heartbeat:Wait()`
+      `RunService.PostSimulation:Wait()`
 
       Unlike the deprecated global `wait`, this function **does not throttle**
       and guarantees the resumption of the thread on the first Heartbeat that

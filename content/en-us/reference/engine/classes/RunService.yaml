@@ -16,9 +16,9 @@ description: |
   for in-studio testing.
 
   RunService also houses events that allow your code to adhere to Roblox's
-  frame-by-frame loop, such as `Class.RunService.Stepped|Stepped`,
-  `Class.RunService.Heartbeat|Heartbeat` and
-  `Class.RunService.RenderStepped|RenderStepped`. Selecting the proper event to
+  frame-by-frame loop, such as `Class.RunService.PreAnimation|PreAnimation`, `Class.RunService.PreSimulation|PreSimulation`,
+  `Class.RunService.PostSimulation|PostSimulation` and
+  `Class.RunService.PreRender|PreRender`. Selecting the proper event to
   use for any case is important, so you should read
   [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
   informed decision.
@@ -53,7 +53,7 @@ methods:
   - name: RunService:BindToRenderStep
     summary: |
       Given a string name of a function and a priority, this method binds the
-      function to `Class.RunService.RenderStepped`.
+      function to `Class.RunService.PreRender`.
     description: |
       The `BindToRenderStep` function binds a custom function to be called at a
       specific time during the render step. There are three main arguments for
@@ -172,7 +172,7 @@ methods:
       cases, this function will return _false_.
 
       If this function returns true, then the current environment can access
-      client-only features like `Class.RunService.RenderStepped` or
+      client-only features like `Class.RunService.PreRender` or
       `Class.Players.LocalPlayer`.
 
       #### RunService test function results
@@ -579,7 +579,7 @@ methods:
     description: |
       Given a name of a function sent to
       `Class.RunService:BindToRenderStep()|BindToRenderStep`, this method will
-      unbind the function from being called during RenderStepped. This is used
+      unbind the function from being called during PreRender. This is used
       to unbind bound functions once they are no longer needed, or when they no
       longer need to fire every _step_.
 
@@ -707,7 +707,7 @@ events:
       is used inappropriately. To avoid this, only use RenderStepped for code
       that works with the `Class.Workspace.CurrentCamera|camera` or
       `Class.Player.Character|character`. Otherwise,
-      `Class.RunService.Heartbeat` should be used.
+      `Class.RunService.PostSimulation` should be used.
 
       As RenderStepped fires every frame, it runs on a **variable frequency**.
       This means the rate will vary depending on the performance of the machine.

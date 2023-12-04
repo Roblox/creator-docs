@@ -44,7 +44,7 @@ Though putting scripts under actors grants them the capability for parallel exec
 Alternatively, you can use `Datatype.RBXScriptSignal:ConnectParallel()` method when you want to schedule a signal callback to immediately run your code in parallel upon triggering. You don't need to call `Library.task.desynchronize()` inside the signal callback.
 
 ```lua title='Desynchronize a Thread Using RBXScriptSignal:ConnectParallel()'
-RunService.Heartbeat:ConnectParallel(function ()
+RunService.PostSimulation:ConnectParallel(function ()
     ... -- some parallel code that computes a state update
     task.synchronize()
     ... -- some serial code that changes the state of instances
