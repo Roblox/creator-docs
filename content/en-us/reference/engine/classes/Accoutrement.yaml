@@ -5,7 +5,7 @@ memory_category: Instances
 summary: |
   An object that can attach to a player's character.
 description: |
-  An Accoutrement welds its child `Class.BasePart|part` called "Handle" to the
+  An `Class.Accoutrement` welds its child `Class.BasePart` called "Handle" to the
   player's character. You can change the position and rotation of the "Handle"
   part using either the `Class.Accoutrement.AttachmentPoint|AttachmentPoint` property or
   an `Class.Attachment` within the handle.
