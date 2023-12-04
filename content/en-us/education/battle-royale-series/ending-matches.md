@@ -270,11 +270,11 @@ An accurate count can't be kept unless players are removed. When a player is def
    end
    ```
 
-2. To find the player in the activePlayers table, use a for loop with `pairs()` that goes through the `activePlayer` table. Then, add an if statement that runs if a player matching the name passed into the function is found.
+2. To find the player in the `activePlayers` table, iterate through it using a `for` loop. Then, add an `if` statement that runs if a player matching the name passed into the function is found.
 
    ```lua
    local function removeActivePlayer(player)
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in activePlayers do
        if whichPlayer == player then
 
        end
@@ -296,7 +296,7 @@ An accurate count can't be kept unless players are removed. When a player is def
 
    ```lua
    local function removeActivePlayer(player)
-     for playerKey, whichPlayer in pairs(activePlayers) do
+     for playerKey, whichPlayer in activePlayers do
        if whichPlayer == player then
          table.remove(activePlayers, playerKey)
          playersLeft.Value = #activePlayers
@@ -413,7 +413,7 @@ local function checkPlayerCount()
 end
 
 local function removeActivePlayer(player)
-	for playerKey, whichPlayer in pairs(activePlayers) do
+	for playerKey, whichPlayer in activePlayers do
 		if whichPlayer == player then
 			table.remove(activePlayers, playerKey)
 			playersLeft.Value = #activePlayers
@@ -453,7 +453,7 @@ end
 function PlayerManager.sendPlayersToMatch()
 	local arenaSpawns = spawnLocations:GetChildren()
 
-	for playerKey, whichPlayer in pairs(Players:GetPlayers()) do
+	for playerKey, whichPlayer in Players:GetPlayers() do
 		table.insert(activePlayers,whichPlayer)
 		local spawnLocation = arenaSpawns[1]
 		preparePlayer(whichPlayer, spawnLocation)

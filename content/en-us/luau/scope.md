@@ -154,7 +154,7 @@ local fruitTable = {
 
 local function getFruitByColor(color)
 	local fruitName
-	for key, value in pairs(fruitTable) do
+	for key, value in fruitTable do
 		if value == color then
 			fruitName = key
 		end

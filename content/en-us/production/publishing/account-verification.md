@@ -73,7 +73,7 @@ The following script checks the verification status of each player as they join 
   local function onPlayerAdded(player)
     print(player:IsVerified())
   end
-  for _, player in pairs(Players:GetPlayers()) do
+  for _, player in Players:GetPlayers() do
     onPlayerAdded(player)
   end
   Players.PlayerAdded:Connect(onPlayerAdded)

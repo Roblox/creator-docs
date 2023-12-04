@@ -825,7 +825,7 @@ methods:
       		ChatConnections[targetName] = target
       	end
       	local names = {...}
-      	for _,name in pairs(names) do
+      	for _,name in names do
       		local signal = Instance.new(bindableClass)
       		signal.Name = targetName .. "_" .. name
       		signal.Parent = script
