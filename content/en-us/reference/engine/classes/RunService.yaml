@@ -642,7 +642,7 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PostSimulation
-    summary: ''
+    summary: 'Fires every frame after the physics simulation has completed.'
     description: ''
     code_samples:
     parameters:
@@ -655,7 +655,7 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreAnimation
-    summary: ''
+    summary: 'Fires every frame prior to the physics simulation but after rendering.'
     description: ''
     code_samples:
     parameters:
@@ -668,7 +668,7 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreRender
-    summary: ''
+    summary: 'Fires every frame prior to the frame being rendered.'
     description: ''
     code_samples:
     parameters:
@@ -681,7 +681,7 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreSimulation
-    summary: ''
+    summary: 'Fires every frame prior to the physics simulation.'
     description: ''
     code_samples:
     parameters:
