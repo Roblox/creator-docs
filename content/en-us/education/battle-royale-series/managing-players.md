@@ -199,7 +199,7 @@ Make sure each player gets teleported to a different spawn location in the arena
    end
    ```
 
-2. Add the for loop below to get an array of all players and then iterate through each of them. To get players, type: `Players:GetPlayers()`.
+2. Add the `for` loop below to get an array of all players and then iterate through each of them. To get players, type: `Players:GetPlayers()`.
 
    ```lua
    function PlayerManager.sendPlayersToMatch()
