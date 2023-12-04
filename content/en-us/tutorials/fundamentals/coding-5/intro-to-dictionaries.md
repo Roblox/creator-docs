@@ -264,6 +264,4 @@ When using brackets, be careful; key names created within the table must be trea
 
 Many scripts need to go through dictionaries or arrays, but you may not always know the start and end of these data structures. For example, a dictionary of players may be changing, or players may have an array inventory of varying sizes.
 
-In these situations, you can use `pairs()` and `ipairs()`. These can be used with a for loop to go through each element without known start and end points.
-
-It is also important to note that you can use [general iteration](https://luau-lang.org/performance#optimized-table-iteration) to loop through elements without the need for `pairs()` or `ipairs()`.
+In these situations, you can use `pairs()` and `ipairs()` in a `for` loop to go through each element without known start and end points. You can also use general iteration through the `in` keyword to loop through elements without the need for `pairs()` or `ipairs()`.
