@@ -154,11 +154,11 @@ local vector2 = {__type = "vector2"}
 local mt = {__index = vector2}
 
 function mt.__div(a, b)
-    if (type(a) == "number") then
+    if type(a) == "number" then
     	-- a is a scalar, b is a vector
     	local scalar, vector = a, b
     	return vector2.new(scalar / vector.x, scalar / vector.y)
-    elseif (type(b) == "number") then
+    elseif type(b) == "number" then
     	-- a is a vector, b is a scalar
    	local vector, scalar = a, b
    	return vector2.new(vector.x / scalar, vector.y / scalar)

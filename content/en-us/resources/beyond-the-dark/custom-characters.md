@@ -183,7 +183,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
     for _,part in vfxParts do
       local name = part:GetAttribute("AttachedBoneName")
       local bone = model:FindFirstChild(name, true)
-      if (bone) then
+      if bone then
         local offset = (bone.TransformedWorldCFrame:inverse() * part.CFrame)
         vfxTable[model][part] = {bone, offset}
       else

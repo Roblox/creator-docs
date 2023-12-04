@@ -353,7 +353,7 @@ local function snapToWorldGrid(proposedMotion)
 		return proposedMotion
 	end
 	local snapIncrement = math.floor(SNAP_INCREMENT)
-	if (snapIncrement < 1) then
+	if snapIncrement < 1 then
 		return proposedMotion
 	end
 	local newWorldPosition = startPartPosition + proposedMotion.Position
