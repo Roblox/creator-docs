@@ -331,7 +331,7 @@ methods:
       ```lua
       local Players = game:GetService("Players")
       local function getPlayerByUserId(userId)
-      	for _, player in pairs(Players:GetPlayers()) do
+      	for _, player in Players:GetPlayers() do
       		if player.UserId == userId then
       			return player
       		end
@@ -371,7 +371,7 @@ methods:
 
       ```lua
       local function getPlayerFromCharacter(character)
-      	for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+      	for _, player in game:GetService("Players"):GetPlayers() do
       		if player.Character == character then
       			return player
       		end
@@ -413,7 +413,7 @@ methods:
 
       ```lua
       Players = game:GetService("Players")
-      for i, player in pairs(Players:GetPlayers()) do
+      for i, player in Players:GetPlayers() do
           print(player.Name)
       end
       ```
@@ -431,7 +431,7 @@ methods:
       	print("Player: " .. player.Name)
       end
 
-      for _, player in pairs(Players:GetPlayers()) do
+      for _, player in Players:GetPlayers() do
       	onPlayerAdded(player)
       end
       Players.PlayerAdded:Connect(onPlayerAdded)

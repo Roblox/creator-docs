@@ -73,7 +73,7 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 
 ```lua
 local function Init()
-	for _,obj in pairs(CollectionService:GetTagged("LocalSpaceRotation")) do
+	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
 		if(obj:IsDescendantOf(workspace)) then
 			SetupObj(obj)
 		end
