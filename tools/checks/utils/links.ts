@@ -145,14 +145,15 @@ export const isRelativeLink = (link: string): boolean => {
   return link.startsWith('./') || link.startsWith('../');
 };
 
-export const isRobloxUrl = (url: string): boolean => {
+export const isAllowedWebsite = (url: string): boolean => {
   try {
     // check the end of hostnames
     const urlHost = new URL(url).hostname.toLowerCase();
     const isRobloxLink =
       urlHost.endsWith('.roblox.com') ||
+      urlHost === 'roblox.com' ||
       urlHost === 'luau-lang.org' ||
-      urlHost === 'roblox.com';
+      urlHost === 'www.lua.org';
     return isRobloxLink;
   } catch {
     return false;
@@ -177,7 +178,7 @@ const removeUrlHash = (url: string): string => {
 
 export const isAllowedHttpLink = (link: string) => {
   const sanitizedUrl = removeUrlHash(link);
-  if (isRobloxUrl(sanitizedUrl)) {
+  if (isAllowedWebsite(sanitizedUrl)) {
     return true;
   } else {
     let isAllowedHttpLink = allowedHttpLinksSet.has(sanitizedUrl);
@@ -199,7 +200,7 @@ export const getNonRobloxLinks = (content: string) => {
   const assetLinks = getLinksOfTypeFromContentString(content, LinkType.Asset);
   const pageLinks = getLinksOfTypeFromContentString(content, LinkType.Page);
   assetLinks.forEach((link) => {
-    if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
+    if (link.ref && isHttpLink(link.ref) && !isAllowedWebsite(link.ref)) {
       httpLinks.push(link);
     }
     if (link.ref && isRelativeLink(link.ref)) {
@@ -207,7 +208,7 @@ export const getNonRobloxLinks = (content: string) => {
     }
   });
   pageLinks.forEach((link) => {
-    if (link.ref && isHttpLink(link.ref) && !isRobloxUrl(link.ref)) {
+    if (link.ref && isHttpLink(link.ref) && !isAllowedWebsite(link.ref)) {
       httpLinks.push(link);
     }
     if (link.ref && isRelativeLink(link.ref)) {

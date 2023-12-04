@@ -285,7 +285,6 @@ export const compileMdx = async (text: string) => {
       .use(remarkMdx)
       .use(retextStringify)
       .process(text);
-    console.log(file);
     return;
   } catch (e) {
     if (e?.constructor.name === 'VFileMessage') {
