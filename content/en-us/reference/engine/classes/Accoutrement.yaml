@@ -6,11 +6,11 @@ summary: |
   An object that can attach to a player's character.
 description: |
   An Accoutrement welds its child `Class.BasePart|part` called "Handle" to the
-  player's character. You can change the position and rotation of the Handle
-  part using either the `Class.Accoutrement.AttachmentPoint` property or
-  an `Class.Attachment` within the Handle.
+  player's character. You can change the position and rotation of the "Handle"
+  part using either the `Class.Accoutrement.AttachmentPoint|AttachmentPoint` property or
+  an `Class.Attachment` within the handle.
 
-  When an accoutrement is attached to a character it will attach to the Head by default.
+  When an `Class.Accoutrement` is attached to a character model, it will attach to the "Head" part by default.
   A `Class.Weld` named "HeadWeld" will be created in the head with its `Class.Weld.Part0|Part0`
   set to the Head and its `Class.Weld.Part1|Part1` set to the Handle. Its `Class.Weld.C0|C0`
   will be set to `0, 0.5, 0` and its `Class.Weld.C1|C1` will be set to the Accoutrement's.
@@ -33,17 +33,17 @@ description: |
   Like the Headweld, the AccessoryWeld will be destroyed automatically when
   the Accoutrement is removed from the character.
 
-  Parts descending from an accoutrement are massless when attach to other parts
-  (e.g. with a `Class.Weld`) as long as they are not the root part of the assembly that
-  `Class.BasePart:GetRootPart()|GetRootPart()` returns.
-  `Class.BasePart:GetMass()|GetMass()` returns 0 for parts in this case, and it
-  doesn't add to the total mass or rotational inertia of the Assembly.
+  Parts descending from an `Class.Accoutrement` are massless when attached to other parts
+  (for example with a `Class.Weld`), as long as they are not the root part of the assembly that
+  `Class.BasePart:GetRootPart()` returns.
+  `Class.BasePart:GetMass()` returns 0 for parts in this case, and it
+  doesn't add to the total mass or rotational inertia of the assembly.
 
-  The size of the Handle `Class.BasePart|part` will update automatically when the
-  scale of its attached `Class.BasePart|part` is changed using `Class.Humanoid|humanoid`
+  The size of the "Handle" part will update automatically when the
+  scale of its attached `Class.BasePart` is changed using `Class.Humanoid`
   scaling features. The size will **not** change when the accoutrement is equipped,
   only when the scale changes. When this happens, a `Class.Vector3Value` named
-  "OriginalSize" will be created in the Handle with its value set to the Handle's
+  "OriginalSize" will be created in "Handle" with its value set to the handle's
   original size, if there isn't one already.
 
   A `Class.TouchTransmitter` named "TouchInterest" will automatically be created
