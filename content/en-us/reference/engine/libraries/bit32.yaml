@@ -22,8 +22,6 @@ functions:
       may be any representable integer. Negative displacements shift to the
       left.
 
-      <img src="/assets/engine-api/libraries/bit32/RSHIFT.png" width="500" alt="Number shifted 3 to the right" />
-
       This shift operation is what is called arithmetic shift. Vacant bits on
       the left are filled with copies of the higher bit of `x`; vacant bits on
       the right are filled with zeros. In particular, displacements with
