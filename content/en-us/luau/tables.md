@@ -62,13 +62,13 @@ print(testArray[4]) -- New string
 
 ### Iterating over Arrays
 
-To iterate over an array, use the global `ipairs()` function in a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
+To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
 
 ```lua
 local testArray = {"A string", 3.14159, workspace.Camera, "New string"}
 
--- Loop using "ipairs()"
-for index, value in ipairs(testArray) do
+-- Loop using general iteration
+for index, value in testArray do
 	print(index, value)
 end
 

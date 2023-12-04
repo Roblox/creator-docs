@@ -191,6 +191,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
       from Roblox.
@@ -231,7 +232,7 @@ methods:
       	CurrentStartIndex = 1, -- This can vary depending on the page you input.
       	TotalCount = 21, -- Always 21.
       	Results = {
-      		-- All parameters here are psuedo. They can vary depending on the asset.
+      		-- All parameters here are pseudo. They can vary depending on the asset.
       		[1] = {
       			Name = "Asset Name",
       			AssetId = 0000000,
@@ -291,7 +292,7 @@ methods:
       	CurrentStartIndex = 1, -- This can vary depending on the page you input.
       	TotalCount = 21, -- Always 21.
       	Results = {
-      		-- All parameters here are psuedo. They can vary depending on the asset.
+      		-- All parameters here are pseudo. They can vary depending on the asset.
       		[1] = {
       			Name = "Asset Name",
       			AssetId = 0000000,

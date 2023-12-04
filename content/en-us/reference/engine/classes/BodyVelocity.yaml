@@ -7,7 +7,7 @@ summary: |
 description: |
   The `Class.BodyVelocity` object applies a force on a `Class.BasePart` such
   that it will maintain a constant velocity. The `Class.BodyVelocity.Velocity`
-  property, not to be confused wtih `Class.BasePart.AssemblyLinearVelocity`,
+  property, not to be confused with `Class.BasePart.AssemblyLinearVelocity`,
   controls the goal velocity.
 
   `Class.BodyVelocity` is the linear counterpart to `Class.BodyAngularVelocity`.

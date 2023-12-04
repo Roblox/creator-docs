@@ -303,10 +303,11 @@ methods:
 
       In cases where another game server updated the key in the short timespan
       between retrieving the key's current value and setting the key's value,
-      `Class.GlobalDataStore:UpdateAsync()` will call the function again to
-      ensure that no data is overwritten. The function will be called as many
-      times as needed until the data is saved **or** until the callback function
-      returns `nil`.
+      `Class.GlobalDataStore:UpdateAsync()` will call the function again,
+      discarding the result of the previous call. The function will be called as
+      many times as needed until the data is saved **or** until the callback
+      function returns `nil`. This can be used to ensure that no data is
+      overwritten.
 
       Any string being stored in a data store must be valid
       `Library.utf8|UTF-8`. In UTF-8, values greater than 127 are used
@@ -346,8 +347,11 @@ methods:
         existing metadata is being changed; otherwise all existing metadata will
         be cleared.
 
+      If the callback returns `nil` instead, the current server will
+      stop attempting to update the key.
+
       The callback function cannot yield, so do **not** include calls like
-      `wait()`.
+      `Library.task.wait()`.
     code_samples:
     parameters:
       - name: key

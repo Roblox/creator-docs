@@ -134,7 +134,7 @@ properties:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -155,7 +155,7 @@ properties:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -169,7 +169,7 @@ properties:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:
@@ -564,7 +564,7 @@ properties:
       Developers toggling the GlobalShadows setting will notice that disabling
       it makes the place considerably darker. This is because when GlobalShadows
       is disabled `Class.Lighting.Ambient` is used to calculate the lighting hue
-      in both indoor and ourdoor spaces. This darkness can be resolved by
+      in both indoor and outdoor spaces. This darkness can be resolved by
       setting `Class.Lighting.Ambient` to a higher value such as
       `Class.Lighting.OutdoorAmbient`'s default value of 127, 127, 127.
 
@@ -695,15 +695,13 @@ properties:
       can_save: true
   - name: Lighting.Technology
     summary: |
-      A temporary non-scriptable property that determines the lighting system
-      used to render the 3D world (Legacy, Voxel, Compatibility, ShadowMap,
-      Future).
+      Determines the lighting system for rendering the 3D world. Non-scriptable.
+      .
     description: |
-      This property determines the lighting system used to render the 3D world
-      (Legacy, Voxel, Compatibility, ShadowMap, Future). It's only changeable in
-      Studio. Its purpose is to facilitate a smooth transition to the Future Is
-      Bright system. See the `Enum.Technology` enum for details on each
-      available system.
+      Determines the lighting system for rendering the 3D world. Non-scriptable
+      and only modifiable in Studio. See `Enum.Technology` for available options
+      and [Lighting Technology](../../../environment/lighting.md#technology) for
+      detailed descriptions and visual effects of each option.
     code_samples:
     type: Technology
     tags:
@@ -748,7 +746,7 @@ properties:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -764,7 +762,7 @@ properties:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -778,7 +776,7 @@ properties:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:
@@ -932,7 +930,7 @@ methods:
 
       	Lighting.TimeOfDay = timeString
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -948,7 +946,7 @@ methods:
 
       	Lighting.ClockTime = hours
 
-      	wait()
+      	task.wait()
       end
       ```
 
@@ -962,7 +960,7 @@ methods:
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
-      	wait()
+      	task.wait()
       end
       ```
     code_samples:

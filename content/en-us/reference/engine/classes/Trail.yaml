@@ -202,7 +202,7 @@ properties:
       The lifetime of a trail is also used by that effect's `Class.Trail.Color`
       and `Class.Trail.Transparency` properties to determine how each segment is
       drawn. Both of these properties are sequences, meaning that they define
-      their values at certain keypoints in the segement's lifetime and then
+      their values at certain keypoints in the segment's lifetime and then
       interpolate between the values as the segment ages.
 
       If a trail's lifetime changes while there are still segments that the

@@ -1,23 +1,40 @@
 name: ModelStreamingBehavior
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how `Class.Model|Models` are sent to clients in experiences with
+  instance streaming enabled.
+description: |
+  Controls how `Class.Model|Models` are replicated in experiences when instance
+  [streaming](../../../workspace/streaming.md) is enabled. Only affects models
+  with `Class.Model.ModelStreamingMode|ModelStreamingMode` set to
+  `Enum.ModelStreamingMode|Default`/`Enum.ModelStreamingMode|Nonatomic`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     value: 0
-    summary: ''
+    summary: |
+      Engine determines best behavior. Currently equivalent to **Legacy**.
     tags: []
     deprecation_message: ''
   - name: Legacy
     value: 1
-    summary: ''
+    summary: |
+      Models are sent when their parent is sent, typically during player join.
+      Models are never streamed out unless an ancestor of the model is streamed
+      out.
     tags: []
     deprecation_message: ''
   - name: Improved
     value: 2
-    summary: ''
+    summary: |
+      Models are never sent during player join. Models that are "non-spatial"
+      (containing no `Class.BasePart` descendants) are sent soon after join, but
+      before the `Class.Workspace.PersistentLoaded` event fires. Models that are
+      "spatial" (containing `Class.BasePart` descendants) are sent when any
+      `Class.BasePart` descendant needs to be streamed to a client, and may
+      stream out when all `Class.BasePart` descendants are eligible to stream
+      out.
     tags: []
     deprecation_message: ''

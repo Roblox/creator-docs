@@ -69,7 +69,7 @@ To create the basic water hazard:
      end
    end
 
-   for _, hazard in ipairs(hazards) do
+   for _, hazard in hazards do
      hazard.Touched:Connect(onHazardTouched)
    end
    ```

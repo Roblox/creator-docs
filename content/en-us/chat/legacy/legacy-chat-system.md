@@ -215,7 +215,7 @@ local util = require(script.Parent:WaitForChild("Util"))
 function ProcessMessage(message, ChatWindow, ChatSettings)
 	if string.sub(message, 1, 5) == "/last" then
 		local currentChannel = ChatWindow:GetCurrentChannel()
-		if (currentChannel) then
+		if currentChannel then
 			currentChannel:RemoveLastMessageFromChannel()
 		end
 		return true

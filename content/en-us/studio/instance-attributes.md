@@ -130,7 +130,7 @@ weapon:SetAttribute("FireSound", "rbxassetid://3821795742")
 
 -- Get all instance attributes
 local weaponAttributes = weapon:GetAttributes()
-for name, value in pairs(weaponAttributes) do
+for name, value in weaponAttributes do
 	print(name, value)
 end
 ```

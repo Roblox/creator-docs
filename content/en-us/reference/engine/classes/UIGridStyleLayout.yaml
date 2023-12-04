@@ -136,7 +136,7 @@ properties:
 methods:
   - name: UIGridStyleLayout:ApplyLayout
     summary: |
-      Force re-layout of subling UI elements.
+      Force re-layout of sibling UI elements.
     description: |
       The ApplyLayout method forces sibling UI elements to be re-laid out in
       case the sorting criteria may have changed (such as when
@@ -168,8 +168,8 @@ methods:
       This method is deprecated. Use `Class.UIGridStyleLayout.SortOrder`
       instead.
 
-      $DESCRIPTION_SHORT The function should take two arguments (each will be an
-      Instance child to compare), and return true if a comes before b, otherwise
+      The function should take two arguments (each will be an
+      `Class.Instance` child to compare), and return true if a comes before b, otherwise
       return false. In other words, use this function the same way you would use
       a ' function. The sorting should be deterministic, otherwise sort will
       fail and fall back to name order.

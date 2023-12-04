@@ -56,11 +56,14 @@ navigation:
     path: /art/modeling/3d-importer
   - title: Accessory Fitting Tool
     path: /art/accessories/accessory-fitting-tool
+  - title: Avatar Setup
+    path: /art/modeling/avatar-setup
   - title: Automatic Skinning
     path: /art/accessories/automatic-skinning-transfer
 
   - heading: Third Party Add-ons
-
+  - title: Roblox Blender Plugin
+    path: /art/modeling/roblox-blender-plugin
   - title: Calisthenics Tool
     path: /art/modeling/calisthenics-tool
   - title: Validation Tool

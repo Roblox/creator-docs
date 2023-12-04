@@ -48,11 +48,11 @@ The **Rig Builder** tool lets you insert pre-built rigs, typically for animation
 
 <img src="../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" alt="Rig Builder button indicated in Avatar tab" />
 
-## Avatar Preview
+## Avatar Setup
 
-The **Avatar Preview** tool lets you easily preview animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio. See [Avatar Preview](../studio/avatar-preview.md) for usage details.
+The **Avatar Setup** tool lets you easily preview animations, clothing, accessories, and body constructs on avatar models, directly in Studio. Avatar item creators can upload and validate assets for the Marketplace from this tool. See [Avatar Setup](../art/modeling/avatar-setup.md) for usage details.
 
-<img src="../assets/studio/general/Avatar-Tab-Avatar-Preview.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
+<img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
 <Alert severity="success">
 This feature is currently in beta and changes/upgrades should be anticipated. To use it, go to **Beta Features** and enable **UGC Bodies & Heads**.

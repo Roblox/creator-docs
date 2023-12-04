@@ -175,15 +175,15 @@ The skinned character's mesh positions aren't updated when the Creature animates
    local vfxTable = {} -- where we will store all the parts and offsets
 
    -- Assign a table to each model that will hold all vfx parts and offset
-   for _, model in pairs(vfxModels) do
+   for _, model in vfxModels do
     vfxTable[model] = {}
     local vfxParts = model:FindFirstChild("VFX"):GetChildren() -- Find theVFX folder
 
     -- Find the bone via attribute and calculate the offset for each part.
-    for _,part in pairs(vfxParts) do
+    for _,part in vfxParts do
       local name = part:GetAttribute("AttachedBoneName")
       local bone = model:FindFirstChild(name, true)
-      if (bone) then
+      if bone then
         local offset = (bone.TransformedWorldCFrame:inverse() * part.CFrame)
         vfxTable[model][part] = {bone, offset}
       else
@@ -196,8 +196,8 @@ The skinned character's mesh positions aren't updated when the Creature animates
    -- UPDATE - This should be linked to every client's RunService.Stepped
    -- Go through all models, then update all parts on the model to match the bonecframe.
    function VfxUpdateModule.updateVfx()
-    for model, vfxParts in pairs(vfxTable) do
-      for part, bone in pairs(vfxParts) do
+    for model, vfxParts in vfxTable do
+      for part, bone in vfxParts do
         part.CFrame = bone[1].TransformedWorldCFrame * bone[2]
       end
     end

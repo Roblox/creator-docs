@@ -1,14 +1,9 @@
 ---
-title: Luau Type Checking
+title: Type Checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
-Luau uses a typing engine that gives every variable an inferred type. These types are used to provide better warnings, errors, and suggestions in the Script Editor.
-
-```lua
-local foo = "bar" --> string
-local x = 5 --> number
-```
+Luau supports a gradual type system through the use of type annotations and type inference. These types are used to provide better warnings, errors, and suggestions in the [Script Editor](../studio/script-editor.md).
 
 ## Defining a Type
 
@@ -20,13 +15,13 @@ type Vector2 = {x: number, y: number}
 
 ## Inference Modes
 
-There are three type inference modes that Luau can use in `Class.Script|Scripts`:
+There are three Luau type inference modes that can be set on the first line of a `Class.Script`:
 
 - `--!nocheck` - Don't check types
 - `--!nonstrict` - Default mode for all scripts, only asserts variable types if they are explicitly annotated
 - `--!strict` - Asserts all types based off the inferred or explicitly annotated type
 
-The default mode for the type checker is `--!nonstrict`. To use a different mode, put `--!strict` or `--!nocheck` at the top of your script. These modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the Script Editor and surfaced as warnings in the Script Analyzer window.
+The default mode for the type checker is `--!nonstrict`. The other two modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the [Script Editor](../studio/script-editor.md) and surfaced as warnings in the [Script Analysis](../studio/script-editor.md#script-analysis) window.
 
 ## Types
 
@@ -66,9 +61,9 @@ You can also cast strings and booleans to literal values instead of using `strin
 
 ```lua
 local alwaysHelloWorld: "Hello world!" = "Hello world!"
-alwaysHelloWorld = "Just hello!" -- Type Error: Type '"Just hello!"' could not be into '"Hello world!"'
+alwaysHelloWorld = "Just hello!"  -- Type error: Type '"Just hello!"' could not be converted into '"Hello world!"'
 
-local alwaysTrue: true = false -- Type Error: Type 'false' could not be converted into 'true'
+local alwaysTrue: true = false  -- Type error: Type 'false' could not be converted into 'true'
 ```
 
 ### Type Casts
@@ -79,9 +74,9 @@ Sometimes, you might need to assist the typechecker by explicitly casting a valu
 local myNumber = 1
 local myString: string
 
-myString = myNumber -- not ok, type conversion error
-myString = myNumber :: any -- ok, all expressions can be cast to 'any'
-local myFlag = myNumber :: boolean -- not ok, types are unrelated
+myString = myNumber  -- Not OK; type conversion error
+myString = myNumber :: any  -- OK; all expressions can be cast to 'any'
+local myFlag = myNumber :: boolean  -- Not OK; types are unrelated
 ```
 
 ## Function Typing
@@ -105,8 +100,8 @@ end
 Luau now knows that the function takes two numbers and throws a warning if you try to pass anything that isn't a number into the function:
 
 ```lua
-add(5, 10) -- ok
-add(5, "foo") -- TypeError: Type `string` could not be converted into `number`.
+add(5, 10)
+add(5, "foo")  -- Type error: string could not be converted into number
 ```
 
 To define a return type, put a `:` operator at the end of the function definition:
@@ -119,7 +114,7 @@ To return multiple types, place the types in parentheses:
 
 ```lua
 local function FindSource(script: BaseScript, pattern: string): (string, number)
-	return 42, true -- type errors
+	return 42, true  -- Type errors
 end
 ```
 
@@ -149,7 +144,7 @@ local numberList: {[string]: number} = {
 	Baz = 10
 }
 
-numberList["bar"] = true -- type error, boolean can't convert to number
+numberList["bar"] = true  -- Type error: boolean can't convert to number
 ```
 
 Tables can also have explicit string indices defined in a type.
@@ -163,7 +158,7 @@ type Car = {
 local taxi: Car = {Speed = 30, Drive = drive}
 
 function drive(car)
-	-- always go the speed limit
+	-- Always go the speed limit
 end
 ```
 
@@ -186,8 +181,8 @@ end
 As expected, this function can take any value, and the typechecker won't raise a warning if you provide an invalid type, such as a `string`.
 
 ```lua
-print(addLotsOfNumbers(1, 2, 3, 4, 5)) -- 15
-print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- attempt to add string to number
+print(addLotsOfNumbers(1, 2, 3, 4, 5))  -- 15
+print(addLotsOfNumbers(1, 2, "car", 4, 5))  -- Attempt to add string to number
 ```
 
 Instead, assign a type to the `...`, just like how you assign any other type:
@@ -200,14 +195,14 @@ And now, the second line raises a type error.
 
 ```lua
 print(addLotsOfNumbers(1, 2, 3, 4, 5))
-print(addLotsOfNumbers(1, 2, "car", 4, 5)) -- TypeError: Type `string` could not be converted into `number`.
+print(addLotsOfNumbers(1, 2, "car", 4, 5))  -- Type error: string could not be converted into number
 
 ```
 
 However, this does not work when writing a functional type definition:
 
 ```lua
-type addLotsOfNumbers = (...: number) -> number -- Expected type, got ':'
+type addLotsOfNumbers = (...: number) -> number  -- Expected type, got ':'
 ```
 
 Instead, use the syntax `...type` to define a variadic type.
@@ -224,9 +219,9 @@ You can even define a type as two or more types using a union or intersection:
 type numberOrString = number | string
 type type1 = {foo: string}
 type type2 = {bar: number}
-type type1and2 = type1 & type2 -- {foo: string} & {bar: number}
+type type1and2 = type1 & type2  -- {foo: string} & {bar: number}
 
-local numString1: numberOrString = true -- type error
+local numString1: numberOrString = true  -- Type error
 local numString2: type1and2 = {foo = "hello", bar = 1}
 ```
 
@@ -238,7 +233,7 @@ You can use the `typeof` function in a type definition for inferred types:
 type Car = typeof({
 	Speed = 0,
 	Wheels = 4
-}) --> Car: {Speed: number, Wheels: number}
+})  --> Car: {Speed: number, Wheels: number}
 ```
 
 One way to use `typeof` is to define a metatable type using `setmetatable` inside the `typeof` function:
@@ -285,8 +280,8 @@ The `<T>` denotes a type that can be set to anything. The best way to visualize 
 ```lua
 type List<T> = {T}
 
-local Names: List<string> = {"Bob", "Dan", "Mary"} -- type becomes {string}
-local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13} -- type becomes {number}
+local Names: List<string> = {"Bob", "Dan", "Mary"}  -- Type becomes {string}
+local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13}  -- Type becomes {number}
 ```
 
 Generics can also have multiple substitutions inside the brackets.
@@ -318,8 +313,8 @@ local function State<T>(key: string, value: T): State<T>
 	}
 end
 
-local Activated = State("Activated", false) -- State<boolean>
-local TimesClicked = State("TimesClicked", 0) -- State<number>
+local Activated = State("Activated", false)  -- State<boolean>
+local TimesClicked = State("TimesClicked", 0)  -- State<number>
 ```
 
 ## Type Exports
@@ -333,8 +328,7 @@ export type Cat = {
 }
 ```
 
-```lua title="Script that uses the Types module"
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+```lua title="Script Using the Types Module"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Types = require(ReplicatedStorage.Types)
 

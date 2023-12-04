@@ -98,7 +98,7 @@ local Players = game:GetService("Players")
 
 local productFunctions = {}
 
--- ProductId 123123 brings the user back to full health
+-- Product ID 123123 brings the user back to full health
 productFunctions[123123] = function(receipt, player)
 	local character = player.Character
 	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
@@ -110,10 +110,10 @@ productFunctions[123123] = function(receipt, player)
 	end
 end
 
--- ProductId 456456 awards 100 gold to the user
+-- Product ID 456456 awards 100 gold to the user
 productFunctions[456456] = function(receipt, player)
-	local stats = player:FindFirstChild("leaderstats")
-	local gold = stats and stats:FindFirstChild("Gold")
+	local leaderstats = player:FindFirstChild("leaderstats")
+	local gold = leaderstats and leaderstats:FindFirstChild("Gold")
 
 	if gold then
 		gold.Value += 100
@@ -131,20 +131,20 @@ local function processReceipt(receiptInfo)
 		local handler = productFunctions[productId]
 		local success, result = pcall(handler, receiptInfo, player)
 		if success then
-			-- The user has received their benefits!
-			-- return PurchaseGranted to confirm the transaction.
+			-- The user has received their benefits
+			-- Return "PurchaseGranted" to confirm the transaction
 			return Enum.ProductPurchaseDecision.PurchaseGranted
 		else
 			warn("Failed to process receipt:", receiptInfo, result)
 		end
 	end
 
-	-- the user's benefits couldn't be awarded.
-	-- return NotProcessedYet to try again next time the user joins.
+	-- The user's benefits couldn't be awarded
+	-- Return "NotProcessedYet" to try again next time the user joins
 	return Enum.ProductPurchaseDecision.NotProcessedYet
 end
 
--- Set the callback; this can only be done once by one script on the server!
+-- Set the callback; this can only be done once by one server-side script
 MarketplaceService.ProcessReceipt = processReceipt
 ```
 
@@ -153,7 +153,11 @@ The `receiptInfo` table passed to the `processReceipt()` callback function conta
 </Alert>
 
 <Alert severity="warning">
-Roblox itself does <strong>not</strong> record the purchase history of Developer Products by specific users, although you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/datastores.md).
+The functions for handling each product ID **must** return `true` for it to successfully process the transaction. If not, the product will not be awarded.
+</Alert>
+
+<Alert severity="warning">
+Roblox itself does **not** record the purchase history of Developer Products by specific users, although you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/datastores.md).
 </Alert>
 
 ### Getting Information
@@ -163,7 +167,7 @@ To get information about a specific Developer Product, such as its price, name, 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 
-local productId = 000000 -- Change this to your developer product ID
+local productId = 000000  -- Change this to your developer product ID
 
 local productInfo = MarketplaceService:GetProductInfo(productId, Enum.InfoType.Product)
 
@@ -172,7 +176,7 @@ local success, productInfo = pcall(function()
 end)
 
 if success then
-	-- Use productInfo here!
+	-- Use "productInfo" here
 end
 ```
 
@@ -192,7 +196,6 @@ if developerProducts then
 		for field, value in developerProduct do
 			print(field .. ": " .. value)
 		end
-		print(" ")
 	end
 end
 ```

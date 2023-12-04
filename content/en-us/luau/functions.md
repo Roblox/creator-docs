@@ -193,7 +193,7 @@ To define a variadic function, you use the `...` token as the last or only param
 local function variadic(named, ...)
     local arguments = {...} -- pack the extra arguments into a table
     print("Named argument = ", named)
-    for i, value in ipairs(arguments) do
+    for i, value in arguments do
         print("Input No. ", i, "=", value)
     end
 end

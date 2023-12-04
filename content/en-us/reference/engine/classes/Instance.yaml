@@ -71,7 +71,7 @@ properties:
       belongs to a specific class ignoring class inheritance. For example:
 
       ```
-      for _, child in ipairs(game.Workspace:GetChildren()) do
+      for _, child in workspace:GetChildren() do
           if child.ClassName == "Part" then
               print("Found a Part")
               -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
@@ -327,7 +327,7 @@ methods:
       following code sample will destroy all parts in an object.
 
       ```
-      for _, instance in pairs(object:GetDescendants()) do
+      for _, instance in object:GetDescendants() do
       	if instance:IsA("BasePart") then
       		instance:Destroy()
       	end
@@ -764,8 +764,8 @@ methods:
       name. If no attribute has been assigned then nil is returned.
 
       For example, the following code snippet will set the value of the
-      instance's `InitialPostion` attribute. Note that this code sample does not
-      define `Class.Instance`:
+      instance's `InitialPosition` attribute. Note that this code sample does
+      not define `Class.Instance`:
 
       ```lua
       local initialPosition = instance:GetAttribute("InitialPosition")
@@ -865,7 +865,7 @@ methods:
 
       ```lua
       local attributes = instance:GetAttributes()
-      for name, value in pairs(attributes) do
+      for name, value in attributes do
           print(name .. " " .. value)
       end
       ```
@@ -913,7 +913,7 @@ methods:
       ```lua
       -- Generic for-loop example
       local children = workspace:GetChildren()
-      for i, child in ipairs(children) do
+      for i, child in children do
       	print(child.Name .. " is child number " .. i)
       end
       ```
@@ -991,11 +991,11 @@ methods:
       and E) before A and B.
 
       ```lua
-      local descendants = game.Workspace.Model:GetDescendants()
+      local descendants = workspace.Model:GetDescendants()
 
       -- Loop through all of the descendants of the model and
       -- print out their name
-      for index, descendant in pairs(descendants) do
+      for index, descendant in descendants do
       	print(descendant.Name)
       end
 
@@ -1155,7 +1155,7 @@ methods:
       ```lua
       local function paintFigure(character, color)
       	-- Iterate over the child objects of the character
-      	for _, child in pairs(character:GetChildren()) do
+      	for _, child in character:GetChildren() do
       		-- Filter out non-part objects, such as Shirt, Pants and Humanoid
       		-- R15 use MeshPart and R6 use Part, so we use BasePart here to detect both:
       		if child:IsA("BasePart") then
@@ -1311,7 +1311,7 @@ methods:
       Note that this code sample does not define `Class.Instance`:
 
       ```lua
-      instance:SetAttribute("InitialPosition", Vector3.new(0, 0, 0))
+      instance:SetAttribute("InitialPosition", Vector3.zero)
       ```
 
       #### Limitations

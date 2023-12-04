@@ -20,38 +20,34 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
     </tbody>
 </table>
 
-This cloud-based asset system allows you to store assets through Roblox so you don't need to maintain local copies as part of a saved Studio experience, and that you can reuse assets across the platform in various contexts for your projects, such as in different objects, places, or character bodies. You can find millions of free-to-use assets for projects on the [Creator Marketplace](https://create.roblox.com/marketplace), purchase assets for avatars on the [Marketplace](https://www.roblox.com/catalog), or create your own assets and import them directly into Studio through asset management tools.
+This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Marketplace][CreatorMarketplaceURL], equip avatar assets in the [Roblox Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
 
-When you import assets, they must pass a moderation check to ensure they meet Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846) before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain sole ownership of their usage on the platform, assign them to group ownership, or publish them to the Creator Marketplace in order to make them publicly available for all users to use within their own projects. Every asset you import is accessible within the [Toolbox](../../projects/assets/toolbox.md), allowing you to reuse them across all of your projects.
+When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset Permissions](#asset-permissions).
 
 ## Asset Types
 
 All [asset types](/reference/engine/enums/AssetType) available on the platform generally fall into one of three categories:
 
-- Assets that map to project-level items. You can find and configure these assets within the [Game Settings](../../studio/game-settings.md) window in Studio.
-- Assets that are objects, or that change the appearance or behavior of objects within places. You can find these assets within the [Creator Marketplace](https://create.roblox.com/marketplace).
-- Assets that change the body, clothing, or animation of avatars and non-playable characters. You can find these assets within the [Marketplace](https://www.roblox.com/catalog).
+- Assets that map to project-level items. You can find and configure these assets for specific experiences on the [Creator Dashboard][CreatorDashboardURL].
+- Assets that are objects, or that change the appearance or behavior of objects within places. You can [import](#asset-management) these assets or find them in the [Creator Marketplace][CreatorMarketplaceURL].
+- Assets that change the body, clothing, or animation of avatars and non-playable characters. You can find these assets in the [Roblox Marketplace][MarketplaceURL].
 
-Every asset type works differently depending on where it lives on the platform. For information on how to use each asset type for experiences, places, and avatars, see each of the following sections.
+Every asset type works differently depending on where it lives on the platform. See the following sections for information on how to use each asset type for [experiences](#for-experiences), [places](#for-places), and [avatars](#for-avatars).
 
 ### For Experiences
 
-There are three asset types that map to project-level items:
+There are three asset types that map to project-level items. These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects.
 
-- **Places** - Every experience has one or more places, or individual 3D worlds. Each place is represented by a data model that describes the place's 3D world and logic.
-- **Badges** - A badge is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
-- **Passes** - A pass is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
-
-These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects. For more information on these asset types, see [Projects - Places](../../projects/index.md#places), [Badges](../../production/publishing/badges.md), and [Passes](../../production/monetization/game-passes.md).
+- **Places** — Every experience has one or more [places](../../projects/index.md#places), or individual 3D worlds. Each place is represented by a [data model](../../projects/data-model.md) that describes the place's 3D world and logic.
+- **Badges** — A [badges](../../production/publishing/badges.md) is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
+- **Passes** — A [pass](../../production/monetization/game-passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 ### For Places
 
-In general, there are two categories of asset types for places that you can either import or find on the Creator Marketplace:
+In general, there are two categories of asset types for places that you can either [import](#asset-management) or find in the [Creator Marketplace][CreatorMarketplaceURL]:
 
-- Assets that exist as objects within the data model, such as models and meshes.
+- Assets that exist as objects within the data model, such as [models](../../parts/models.md) and [meshes](../../parts/meshes.md).
 - Assets that you apply as an object's property, such as audio, images, fonts, and videos.
-
-Assets that exist as objects within the data model are objects that you can drag-and-drop from the Creator Marketplace, and they automatically display within the viewport without any extra steps. However, assets that you must apply as an object's property are objects that only display or sound correctly in the viewport after you attach them to their appropriate objects.
 
 For more information on both types of these assets for places, such as where and how you can use them in Studio, reference the following table.
 
@@ -64,43 +60,41 @@ For more information on both types of these assets for places, such as where and
     </thead>
     <tbody>
         <tr>
-            <td>**Models**</td>
-            <td>A `Class.Model` is a container object for geometric groupings, such as `Class.BasePart`, `Class.MeshPart`, `Class.Motor6D`, and other `Class.Model` objects. Whenever you group objects together in Studio, they automatically become a `Class.Model` object.<br /><br />For more information, see [Models](../../parts/models.md).</td>
+            <td>**Model**</td>
+            <td>A `Class.Model` is a container object for geometric groupings such as `Class.BasePart|BaseParts`, `Class.MeshPart|MeshParts`, and other `Class.Model` objects. Models can also contain objects such as `Class.Script|Scripts`. Whenever you group objects together in Studio, they automatically become a `Class.Model` object. For more information, see [Models](../../parts/models.md).</td>
         </tr>
         <tr>
-            <td>**Meshes**</td>
-            <td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. You cannot create meshes in Studio, but you can import them in either `.fbx` or `.obj` format from third-party modeling tools.<br /><br />For more information, see [Meshes](../../parts/meshes.md).</td>
+            <td>**Mesh**</td>
+            <td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. For more information, see [Meshes](../../parts/meshes.md).</td>
         </tr>
         <tr>
             <td>**Audio**</td>
-            <td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes where the sound emits and how its volume changes in relation to each user's position within the experience.<br /><br />You can import audio assets in either `.mp3` or `.ogg` format. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+            <td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
         </tr>
         <tr>
-            <td>**Images**</td>
-            <td>A `Class.Decal` object is an object that displays an image that stretches to fit the surface of a part or union when you apply an image asset ID within the `Class.Decal.Texture` property, and a `Class.Texture` object is an object that displays an image that repeat both horizontally and vertically on the surface of a part or union when you apply an image asset ID within the `Class.Texture.Texture` property.<br /><br />You can import images in `.png`, `.jpg`, `.tga`, or `.bmp` format. For more information, see [Textures and Decals](../../parts/textures-decals.md).</td>
+            <td>**Image**</td>
+            <td>Images are used in several ways within a place, including [textures/decals](../../parts/textures-decals.md) on parts, [UI](../../ui/index.md) elements, [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
         </tr>
         <tr>
-            <td>**Fonts**</td>
-            <td>A `Class.TextButton`, `Class.TextLabel`, or `Class.TextBox` object is an object that displays typography in a specific style when you apply a font asset ID within its respective `Class.TextButton.FontFace`, `Class.TextLabel.FontFace`, or `Class.TextBox.FontFace` property.<br /><br />You cannot import fonts, but the Creator Marketplace offers over 80 different fonts you can use. For more information, see [Creator Marketplace](../../production/publishing/creator-marketplace.md).</td>
+            <td>**Font**</td>
+            <td>`Class.TextButton`, `Class.TextLabel`, and `Class.TextBox` objects display typography in a specific style when you apply a font asset ID. You cannot import fonts, but the [Creator Marketplace][CreatorMarketplaceURL] offers over 80 different fonts for your use.</td>
         </tr>
         <tr>
-            <td>**Videos**</td>
-            <td>A `Class.VideoFrame` object is an object that displays a video when you apply a video asset ID within the `Class.VideoFrame.Video` property.<br /><br />Some creators can import videos in `.webm` format, otherwise the Creator Marketplace offers many curated videos you can use in your projects. </td>
+            <td>**Video**</td>
+            <td>A `Class.VideoFrame` object displays a video through its `Class.VideoFrame.Video|Video` asset property. See [Video Frames](../../ui/video-frames.md) for more information.</td>
         </tr>
     </tbody>
 </table>
 
 ### For Avatars
 
-There are three categories of asset types for avatars that you can find on the Marketplace and equip to avatars:
+There are three categories of asset types for avatars that you can find in the [Roblox Marketplace][MarketplaceURL] and equip to avatars:
 
-- **Body Parts** - Assets that represent sections of the avatar character model, such as a Head, Torso, or LeftLeg.
-- **Clothing and Accessories** - Assets that represent clothing and accessories on top of body parts, such as a HairAccessory, ShirtAccessory, or PantsAccessory.
-- **Animations** - Assets that animate the avatar character model, such as a RunAnimation, JumpAnimation, or SwimAnimation.
+- **Body Parts** — Assets that represent sections of the avatar character model, such as its head, torso, or legs.
+- **Clothing and Accessories** — Assets that represent clothing and accessories on top of body parts.
+- **Animations** — Assets that animate the avatar character model, such as how it runs, jumps, or swims.
 
-Every avatar character model contains a `Class.HumanoidDescription` object with asset IDs for the avatar's body parts, clothing, accessories, and animations. By default, when a user joins an experience, their `Class.Player.Character` references the `Class.HumanoidDescription` object for the user's personal avatar, but you can apply a different `Class.HumanoidDescription` object as the user joins in order to adjust the characteristics of their playable character while they're accessing the experience, such as different asset IDs for their body parts, clothing and accessories, and how the character animates, as well as their scale and color.
-
-For more information, see [Character Appearance - HumanoidDescription](../../characters/appearance.md#humanoiddescription).
+Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [Character Appearance](../../characters/appearance.md).
 
 ## Asset Format Strings
 
@@ -242,15 +236,10 @@ end
 
 ## Asset Permissions
 
-An asset's privacy status determines who has permission to reuse the asset within their experiences. There are two types of privacy statuses:
-
-- **Private** - Only you or a group can use the asset.
-- **Public** - Everyone can use the asset.
-
-By default, all assets are private when you or a group import them into Studio, meaning only you or the group have access to the asset's unique asset ID. However, if you want to grant everyone access to the asset ID, you must publish the asset to the [Creator Marketplace](../../production/publishing/creator-marketplace.md) to make that information public.
+An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must publish the asset to the [Creator Marketplace][CreatorMarketplaceURL].
 
 <Alert severity="warning">
-  You can change an asset's privacy status at any time, but if another creator uses it within their experience while it was public, you cannot revoke access to that creator even if you change the asset's privacy status to private.
+Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
 </Alert>
 
 ## Asset Moderation
@@ -277,7 +266,11 @@ Roblox offers several tools to import, store, and publish your assets:
     <tbody>
         <tr>
             <td>[Asset Manager](../../projects/assets/manager.md)</td>
-            <td>Imports and stores image, mesh, package, audio, and model assets on an experience-level. As you use the Asset Manager within different experiences, it only displays the assets that you imported into that specific open experience. </td>
+            <td>Imports and stores [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md). Only displays assets that you've imported into the currently opened experience.</td>
+        </tr>
+				<tr>
+            <td>[Toolbox](../../projects/assets/toolbox.md)</td>
+            <td>Stores every asset that you or your [groups](../../projects/groups.md) have ever imported into Studio, regardless of what experience you currently have open. Also includes assets from the [Creator Marketplace][CreatorMarketplaceURL], allowing you to quickly drop user-generated assets directly into your experiences.</td>
         </tr>
         <tr>
             <td>[3D Importer](../../art/modeling/3d-importer.md)</td>
@@ -287,13 +280,19 @@ Roblox offers several tools to import, store, and publish your assets:
             <td>[Avatar Importer](../../studio/plugins-tab.md#avatar-importer)</td>
             <td>Imports avatar and custom rigs.</td>
         </tr>
-        <tr>
-            <td>[Toolbox](../../projects/assets/toolbox.md)</td>
-            <td>Stores every asset you or your groups have ever imported into Studio, regardless of what experience you currently have open. It also includes assets from the Creator Marketplace, allowing you to quickly drag-and-drop free user-generated assets directly into your experiences.</td>
-        </tr>
     </tbody>
 </table>
 
-To further help with asset organization, you can archive audio, decals, images, and meshes in the **DEVELOPMENT ITEMS** section of the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model).
+## Archiving Assets
 
-After you archive an asset, it is no longer usable in Roblox experiences. The asset fails to load and disappears from the website.
+To further help with organization, you can archive most asset types in the **DEVELOPMENT ITEMS** section of the [Creator Dashboard][CreatorDashboardURL].
+
+<img src="../../assets/creator-dashboard/Creations-Development-Items-Tab.png" width="800" alt="Development Items section on the Creator Dashboard" />
+
+<img src="../../assets/creator-dashboard/Archive-Asset.png" width="450" alt="Archive option for an asset on the Creator Dashboard" />
+
+After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
+
+[CreatorMarketplaceURL]: https://create.roblox.com/marketplace
+[MarketplaceURL]: https://www.roblox.com/catalog
+[CreatorDashboardURL]: https://create.roblox.com/dashboard/creations

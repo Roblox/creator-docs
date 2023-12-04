@@ -154,11 +154,11 @@ local vector2 = {__type = "vector2"}
 local mt = {__index = vector2}
 
 function mt.__div(a, b)
-    if (type(a) == "number") then
+    if type(a) == "number" then
     	-- a is a scalar, b is a vector
     	local scalar, vector = a, b
     	return vector2.new(scalar / vector.x, scalar / vector.y)
-    elseif (type(b) == "number") then
+    elseif type(b) == "number" then
     	-- a is a vector, b is a scalar
    	local vector, scalar = a, b
    	return vector2.new(vector.x / scalar, vector.y / scalar)
@@ -196,7 +196,7 @@ There are many ways to use metatables, for example the `__unm` metamethod (to ma
 local metatable = {
     __unm = function(t) -- __unm is for the unary - operator
     	local negated = {}
-    	for key, value in pairs(t) do
+    	for key, value in t do
     		negated[key] = -value -- negate all of the values in this table
     	end
     	return negated -- return the table
@@ -234,7 +234,7 @@ Now, obviously you can't call a table. That's just crazy, but (surprise, surpris
 local metatable = {
     __call = function(t, param)
     	local sum = {}
-    	for i, value in ipairs(t) do
+    	for i, value in t do
     		sum[i] = value + param -- Add the argument (5) to the value, then place it in the new table (t).
     	end
     	return unpack(sum) -- Return the individual table values
@@ -251,7 +251,7 @@ You can do a lot more as well, such as adding tables!
 local table1 = {10, 11, 12}
 local table2 = {13, 14, 15}
 
-for k, v in pairs(table1 + table2) do
+for k, v in table1 + table2 do
     print(k, v)
 end
 ```
@@ -262,11 +262,11 @@ This will error saying that you're attempting to perform arithmetic on a table. 
 local metatable = {
     __add = function(t1, t2)
     	local sum = {}
-    	for key, value in pairs(t1) do
+    	for key, value in t1 do
     		sum[key] = value
     	end
 
-    	for key, value in pairs(t2) do
+    	for key, value in t2 do
     		if sum[key] then
     			sum[key] += value
    		else
@@ -280,7 +280,7 @@ local metatable = {
 local table1 = setmetatable({10, 11, 12}, metatable)
 local table2 = setmetatable({13, 14, 15}, metatable)
 
-for k, v in pairs(table1 + table2) do
+for k, v in table1 + table2 do
    print(k, v)
 end
 ```
@@ -368,7 +368,7 @@ Set.__index = Set
 -- Function to construct a set from an optional list of items
 function Set.new(items)
 	local newSet = {}
-	for key, value in ipairs(items or {}) do
+	for key, value in items or {} do
 		newSet[value] = true
 	end
 	return setmetatable(newSet, Set)
@@ -392,7 +392,7 @@ end
 -- Function to output set as a comma-delimited list for debugging
 function Set:output()
 	local elems = {}
-	for key, value in pairs(self) do
+	for key, value in self do
 		table.insert(elems, tostring(key))
 	end
 	print(table.concat(elems, ", "))
@@ -452,7 +452,7 @@ When considering sets as Venn diagrams, you can get the **intersection** of two 
 ```lua
 local function getIntersection(set1, set2)
 	local result = Set.new()
-	for key, value in pairs(set1) do
+	for key, value in set1 do
 		if set2:contains(key) then
 			result:add(key)
 		end
@@ -474,10 +474,10 @@ You can get the **union** of two sets with the following function, meaning a col
 ```lua
 function Set:__add(otherSet)
 	local result = Set.new()
-	for entry in pairs(self) do
+	for entry in self do
 		result[entry] = true
 	end
-	for entry in pairs(otherSet) do
+	for entry in otherSet do
 		result[entry] = true
 	end
 	return result
@@ -498,10 +498,10 @@ You can remove all items in one set from the items in another set via the follow
 ```lua
 function Set:__sub(otherSet)
 	local result = Set.new()
-	for entry in pairs(self) do
+	for entry in self do
 		result[entry] = true
 	end
-	for entry in pairs(otherSet) do
+	for entry in otherSet do
 		result[entry] = nil
 	end
 	return result

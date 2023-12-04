@@ -39,9 +39,9 @@ properties:
       and (optionally) Puffiness as key-value pairs.
     description: |
       A JSON formatted array of Layered Accessories where each table in the
-      entry in the array describes an acccessory's AssetId, AccessoryType,
-      Order, and (optionally) Puffiness as key-value pairs. This can be edited
-      in the properties windows for the `Class.HumanoidDescription`.
+      entry in the array describes an accessory's AssetId, AccessoryType, Order,
+      and (optionally) Puffiness as key-value pairs. This can be edited in the
+      properties windows for the `Class.HumanoidDescription`.
 
       To make changes from Lua (which is recommended over editing the JSON
       directly), use `Class.HumanoidDescription:SetAccessories()` and
@@ -506,7 +506,7 @@ properties:
       - `Class.HumanoidDescription.HatAccessory|HatAccessory`,
         `Class.HumanoidDescription.HairAccessory|HairAccessory` and
         `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which all can
-        apply `Class.Accessory` objects which are joined to to the head
+        apply `Class.Accessory` objects which are joined to the head
     code_samples:
     type: int64
     tags: []
@@ -1572,9 +1572,9 @@ methods:
       local hd = Instance.new("HumanoidDescription")
       hd:AddEmote("Salute", 3360689775)
       local emotes = hd:GetEmotes()
-      for name, ids in pairs(emotes) do
+      for name, ids in emotes do
           print(("The emote %s has %d ids:"):format(name, #ids))
-          for _, id in pairs(ids) do
+          for _, id in ids do
               print(id)
           end
       end
@@ -1625,7 +1625,7 @@ methods:
       hd:SetEmotes{Salute = {3360689775}, Agree = {4849487550}}
       hd:SetEquippedEmotes({"Salute", "Agree"})
       -- Iterate over the equipped emotes:
-      for _, t in pairs(hd:GetEquippedEmotes()) do
+      for _, t in hd:GetEquippedEmotes() do
           print(("In slot %d: emote %s is equipped"):format(t.Slot, t.Name))
       end
       ```
@@ -1904,7 +1904,7 @@ events:
       local hd = Instance.new("HumanoidDescription")
       hd.EquippedEmotesChanged:Connect(function (equippedEmotes)
           print(("We have %d emotes equipped"):format(#equippedEmotes))
-          for _, t in pairs(equippedEmotes) do
+          for _, t in equippedEmotes do
               print(("In slot %d: emote %s is equipped"):format(t.Slot, t.Name))
           end
       end)

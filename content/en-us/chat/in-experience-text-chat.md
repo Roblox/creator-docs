@@ -139,7 +139,7 @@ The following example shows how to create a chat command that allows users to in
    		if character then
    			local humanoid = character:FindFirstChildOfClass("Humanoid")
    			if humanoid then
-   				for _, child in ipairs(humanoid:GetChildren()) do
+   				for _, child in humanoid:GetChildren() do
    					if child:IsA("NumberValue") then
    						child.Value *= scaleMult
    					end

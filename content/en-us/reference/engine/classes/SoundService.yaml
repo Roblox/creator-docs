@@ -123,11 +123,11 @@ properties:
       can_save: true
   - name: SoundService.DopplerScale
     summary: |
-      This property determines the degree to with a 3D `Class.Sound`s pitch
-      varies due to the Doppler effect.
+      This property determines the degree to which a 3D `Class.Sound` object's
+      pitch varies due to the Doppler effect.
     description: |
-      This property determines the degree to with a 3D `Class.Sound`s pitch
-      varies due to the Doppler effect.
+      This property determines the degree to which a 3D `Class.Sound` object's
+      pitch varies due to the Doppler effect.
 
       The Doppler effect describes a phenomenon whereby the pitch of a sound
       changes as the source and observer of the sound move further away, or
@@ -342,7 +342,7 @@ methods:
       Sets the listener used by the client.
 
       The first parameter is the `Enum.ListenerType` of the listener, the second
-      paramater is dependent on the listener type.
+      parameter is dependent on the listener type.
 
       - Camera ListenerType - Does not return a listener object as
         `Class.Workspace.CurrentCamera` is always used

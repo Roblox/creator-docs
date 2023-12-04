@@ -73,7 +73,7 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 
 ```lua
 local function Init()
-	for _,obj in pairs(CollectionService:GetTagged("LocalSpaceRotation")) do
+	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
 		if(obj:IsDescendantOf(workspace)) then
 			SetupObj(obj)
 		end
@@ -140,7 +140,7 @@ We have a server-side `Class.Script` that calculates various parameters and timi
 
 ```lua
 local function LightningUpdate()
-	while( true ) do
+	while true do
 		task.wait(rand:NextNumber(3.0, 10.0))
 		local info = CreateFXData()
 		lightningEvent:FireAllClients(info)

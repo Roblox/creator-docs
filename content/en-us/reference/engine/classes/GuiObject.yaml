@@ -27,7 +27,7 @@ description: |
   `Class.GuiObject.MouseEnter`, `Class.GuiObject.TouchTap`,
   `Class.GuiObject.InputBegan`, `Class.GuiObject.InputChanged` and
   `Class.GuiObject.InputEnded`. The last three of these mimic the events of
-  `UserinputService` of the same name. Although it is possible to detect mouse
+  `UserInputService` of the same name. Although it is possible to detect mouse
   button events on any GuiObject using `Class.GuiObject.InputBegan`, only
   `Class.ImageButton` and `Class.TextButton` have dedicated events for these
   (e.g. `Class.TextButton.MouseButton1Down`). This event ought not be used for
@@ -249,8 +249,8 @@ properties:
       If you set a UI element's border and background colors to the same color,
       you will be unable to distinguish the two.
 
-      Other properties properties that determine the visual properties of the
-      border include `Class.GuiObject.BorderSizePixel` and
+      Other properties that determine the visual properties of the border
+      include `Class.GuiObject.BorderSizePixel` and
       `Class.GuiObject.BackgroundTransparency`.
 
       Note that you will not be able to see an element's border if its
@@ -792,7 +792,7 @@ properties:
       parent's `Class.GuiObject.SizeConstraint|SizeConstraint`.
 
       Using negative sizes may result in undefined behavior in some cases, such
-      as with `Class.UIConstraint`. It is preferrable to change
+      as with `Class.UIConstraint`. It is preferable to change
       `Class.GuiObject.AnchorPoint|AnchorPoint` instead of using negative sizes.
 
       An object's actual pixel size can be read from the
@@ -848,7 +848,7 @@ properties:
       `Class.GuiObject.BackgroundTransparency` and
       `Class.TextLabel.TextTransparency`.
 
-      When indexing, this will return the BackgroundTranparency.
+      When indexing, this will return the BackgroundTransparency.
 
       When setting, this will change the BackgroundTransparency **and**
       TextTransparency of a `Class.GuiObject|GUI` element.
@@ -876,7 +876,7 @@ properties:
     description: |
       This property determines whether a `Class.GuiObject|GUI` will render
       shapes, images and/or text on screen. If set to false, the GUI and all of
-      its descedants (children) will not render.
+      its descendants (children) will not render.
 
       The rendering of individual components of a GUI can be controlled
       individually through transparency properties such as
@@ -1204,7 +1204,7 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      This event, as well as its counterparts, `Class.GuiObject.DragBein` and
+      This event, as well as its counterparts, `Class.GuiObject.DragBegin` and
       `Class.GuiObject.Draggable`, have all been deprecated. None should be used
       for new work.
     security: None
@@ -1318,7 +1318,7 @@ events:
       `Class.GuiObject|GUI` element.
 
       Please do not rely on the `x` and `y` arguments passed by this event as a
-      fool-proof way to to determine where the user's mouse is when it enters a
+      fool-proof way to determine where the user's mouse is when it enters a
       GUI. These coordinates may vary even when the mouse enters the GUI via the
       same edge - particularly when the mouse enters the element quickly. This
       is due to the fact the coordinates indicate the position of the mouse when
@@ -1363,7 +1363,7 @@ events:
       `Class.GuiObject|GUI` element.
 
       Please do not rely on the `x` and `y` arguments passed by this event as a
-      fool-proof way to to determine where the user's mouse is when it leaves a
+      fool-proof way to determine where the user's mouse is when it leaves a
       GUI. These coordinates may vary even when the mouse leaves the GUI via the
       same edge - particularly when the mouse leaves the element quickly. This
       is due to the fact the coordinates indicate the position of the mouse when
@@ -1548,9 +1548,9 @@ events:
       element, you can use the `Class.GuiObject.SelectionLost` event.
 
       When a GUI gains selection focus, the value of the
-      `Class.GuiService.SelectionObject|SelectionObject` property also changes
-      to the that gains selection. To determine which GUI gained selection,
-      check the value of this property.
+      `Class.GuiService.SelectedObject|SelectedObject` property also changes to
+      the that gains selection. To determine which GUI gained selection, check
+      the value of this property.
     code_samples:
       - GuiObject-SelectionGained1
     parameters: []

@@ -2,6 +2,7 @@
 import dictionary from 'dictionary-en';
 import { Plugin, unified } from 'unified';
 import remarkFrontMatter from 'remark-frontmatter';
+import remarkMdx from 'remark-mdx';
 import remarkParse from 'remark-parse';
 import remarkRetext from 'remark-retext';
 import retextContractions from 'retext-contractions';
@@ -30,7 +31,10 @@ import {
   RETEXT_SIMPLIFY_ALLOW_LIST,
   canIgnoreWordInSpellCheck,
 } from './words.js';
+import { VFile } from 'vfile';
 
+export const MDAST_UTIL_MDX_JSX = 'mdast-util-mdx-jsx';
+export const MICROMARK_EXTENSION_MDX_JSX = 'micromark-extension-mdx-jsx';
 const RETEXT_CONTRACTIONS = 'retext-contractions';
 export const RETEXT_INAPPROPRIATE = 'retext-inappropriate';
 const RETEXT_INDEFINITE_ARTICLES = 'retext-indefinite-article';
@@ -40,6 +44,8 @@ const RETEXT_REPEATED_WORDS = 'retext-repeated-words';
 export const RETEXT_SPELL = 'retext-spell'; // optional
 
 export const REQUIRED_CHECKS = new Set([
+  MDAST_UTIL_MDX_JSX,
+  MICROMARK_EXTENSION_MDX_JSX,
   RETEXT_CONTRACTIONS,
   RETEXT_INAPPROPRIATE,
   RETEXT_INDEFINITE_ARTICLES,
@@ -267,6 +273,25 @@ export const filterRetextSpell = (message: VFileMessage) => {
     return true;
   }
   return true;
+};
+
+/** Compiles MDX using remarkMdx and returns error if compilation fails
+ * Only used for linting
+ */
+export const compileMdx = async (text: string) => {
+  try {
+    const file = await unified()
+      .use(remarkParse)
+      .use(remarkMdx)
+      .use(retextStringify)
+      .process(text);
+    return;
+  } catch (e) {
+    if (e?.constructor.name === 'VFileMessage') {
+      const error = e as VFileMessage;
+      return error;
+    }
+  }
 };
 
 /**
