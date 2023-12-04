@@ -140,7 +140,7 @@ We have a server-side `Class.Script` that calculates various parameters and timi
 
 ```lua
 local function LightningUpdate()
-	while( true ) do
+	while true do
 		task.wait(rand:NextNumber(3.0, 10.0))
 		local info = CreateFXData()
 		lightningEvent:FireAllClients(info)
