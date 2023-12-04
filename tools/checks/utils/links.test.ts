@@ -4,7 +4,7 @@ import {
   LinkInfo,
   LinkType,
   getLinksOfTypeFromContentString,
-  isRobloxUrl,
+  isAllowedWebsite,
   trimStartRelativeAssetPath,
 } from './links.js';
 import {
@@ -68,6 +68,8 @@ describe('isRobloxUrl', () => {
     ['https://devforum.roblox.com/t/open-sourcing-creator-docs/2569346', true], // 🎉
     ['https://luau-lang.org', true],
     ['https://luau-lang.org/news/', true],
+    ['https://www.lua.org', true],
+    ['https://www.lua.org/pil/2.4.html', true],
     ['https://create.roblox.com/landing', true],
     ['https://create.roblox.com/dashboard/creations', true],
     ['https://create.roblox.com/talent', true],
@@ -80,7 +82,7 @@ describe('isRobloxUrl', () => {
     ['ftp://roblox.com', true], // Different scheme
     ['', false], // Empty string
   ])('should return %p for URL %p', (url, expected) => {
-    expect(isRobloxUrl(url)).toBe(expected);
+    expect(isAllowedWebsite(url)).toBe(expected);
   });
 });
 
