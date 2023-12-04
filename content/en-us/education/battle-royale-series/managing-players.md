@@ -188,7 +188,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
 ### Sending Players to Spawn
 
-Make sure each player gets teleported to a different spawn location in the arena by using a for loop to iterate through the active players array. Using a for loop allows you to go through every value in the players array, allowing the script to adapt to a variety of player numbers.
+Make sure each player gets teleported to a different spawn location in the arena by using a `for` loop to iterate through the active players array. Using a `for` loop allows you to go through every value in the players array, allowing the script to adapt to a variety of player numbers.
 
 1. In the `sendPlayersToMatch()` function, use a variable to create an array of all the arena spawn locations by getting the children of the Arena > SpawnLocations folder.
 
