@@ -1,15 +1,15 @@
 ---
 title: Sound Objects
-description: Sound Objects are objects that emit audio within an experience.
+description: Sound objects are instances that emit audio within an experience.
 ---
 
-A `Class.Sound` object is an object that emits audio within your experience. Studio assigns each [audio asset](../sound/assets.md) a **unique asset ID** that you can assign to `Class.Sound` objects to play a specific sound effect or music sample. You can either set this audio to play automatically at runtime, or trigger it to play from your scripts.
+Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../sound/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#scripting-sound-objects).
 
-You can use the [Creator Marketplace](../production/publishing/creator-marketplace.md) to find a variety of free-to-use audio assets for `Class.Sound` objects to play, or you can [import custom audio](../sound/assets.md#importing-custom-audio) that you are certain you have permission to use, such as audio you make yourself. Aside from customizing individual `Class.Sound` objects, you can also group `Class.Sound` objects together under a [sound group](../sound/groups.md) to control the volume and [dynamic effects](../sound/dynamic-effects.md) properties of multiple audio sources at once.
+To modify playback of multiple `Class.Sound` objects, you can assign them to a [sound group](../sound/groups.md) and control the entire group's volume, as well as apply [dynamic effects](../sound/dynamic-effects.md).
 
 ## Creating Sound Objects
 
-There are three locations you can create a `Class.Sound` object, and each location determines how audio emits and volume changes in relation to the user's position within the experience:
+There are three locations you can create a `Class.Sound` object, and each location determines how audio emits and volume changes in relation to the user's position within the experience.
 
 <table>
 <thead>
@@ -23,22 +23,20 @@ There are three locations you can create a `Class.Sound` object, and each locati
   <tr>
     <td>Child of a block, sphere, or cylinder `Class.BasePart`.</td>
     <td>Audio emits outward from the entire surface of the part.</td>
-    <td>Volume changes depending on the distance between the user's sound listener and the position of the part, as well as part's size.</td>
+    <td>Volume changes depending on the distance between the user's sound listener and the position of the part, as well as its size.</td>
   </tr>
   <tr>
     <td>Child of an `Class.Attachment`, `Class.MeshPart`, `Class.TrussPart`, `Class.WedgePart`, or `Class.CornerWedgePart`.</td>
-    <td>Audio emits outward from the single attachment point.</td>
-    <td>Volume changes depending on the distance between the user's sound listener and the position of the attachment.</td>
+    <td>Audio emits outward from the single attachment point or part center.</td>
+    <td>Volume changes depending on the distance between the user's sound listener and the attachment/part position.</td>
   </tr>
   <tr>
-    <td>Within the Workspace without a parent object.</td>
+    <td>Within `Class.SoundService` or `Class.Workspace`.</td>
     <td>Audio emits throughout the experience.</td>
-    <td>Volume and pan position remain the same regardless of the user's position or rotation.</td>
+    <td>Volume and pan position remain the same regardless of the user's sound listener position or rotation.</td>
   </tr>
 </tbody>
 </table>
-
-It's important to determine where you want to create a `Class.Sound` object because its location affects how users hear its audio. If you want users to only hear audio **near a specific position**, you must parent the `Class.Sound` object to a `Class.BasePart` or `Class.Attachment` for them to hear positional audio. However, if you want users to hear audio **regardless of their position**, you must insert a `Class.Sound` object directly into the Workspace without parenting it to another object for them to hear background audio, preferably under the `Class.SoundService` container for organization purposes.
 
 ### Positional Audio
 
@@ -252,7 +250,7 @@ The `Class.Sound.Looped|Looped` property allows you to repeat audio after it has
 
 ### Playing Audio Contextually
 
-Aside from auto-playing audio through the `Class.Sound` object's `Class.Sound:Play()|Play()` method, you can play audio contextually from a `Class.LocalScript` by calling **Play()** on the corresponding `Class.Sound` object. For example:
+Aside from auto-playing audio through the `Class.Sound` object's `Class.Sound.Playing|Playing` property, you can play audio contextually from a `Class.LocalScript` by calling `Class.Sound:Play()|Play()` on the corresponding `Class.Sound` object. For example:
 
 ```lua
 local sound = Instance.new("Sound")

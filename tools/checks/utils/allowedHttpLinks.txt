@@ -82,6 +82,7 @@ https://en.wikipedia.org/wiki/Creative_Commons
 https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 https://en.wikipedia.org/wiki/Double-precision_floating-point_format
 https://en.wikipedia.org/wiki/Ducking
+https://en.wikipedia.org/wiki/Endianness
 https://en.wikipedia.org/wiki/Euler_angles
 https://en.wikipedia.org/wiki/Exponential_backoff
 https://en.wikipedia.org/wiki/Facial_Action_Coding_System
@@ -326,10 +327,12 @@ https://www.loyaltyfoundation.org/
 https://www.lua.org/manual/5.1/
 https://www.lua.org/manual/5.1/manual.html
 https://www.lua.org/manual/5.2/manual.html
+https://www.lua.org/manual/5.3/manual.html
 https://www.lua.org/pil/16.1.html
 https://www.lua.org/pil/16.html
 https://www.lua.org/pil/2.3.html
 https://www.lua.org/pil/2.4.html
+https://www.lua.org/pil/23.1.html
 https://www.lua.org/pil/28.1.html
 https://www.lua.org/pil/5.1.html
 https://www.lua.org/pil/9.1.html
@@ -463,4 +466,5 @@ https://www.schemastore.org/json/
 https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa
 https://en.wikipedia.org/wiki/Type_introspection
 https://youtu.be/OEmFocfE0Xs
-https://www.youtube.com/watch?v=syQcaeRqqc4 
+https://www.youtube.com/watch?v=syQcaeRqqc4
+https://www.youtube-nocookie.com/embed/eqQyFL7KnmA?si=yVlqGzUvTnblj_c4

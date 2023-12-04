@@ -16,7 +16,7 @@ Subscriptions will be rolled out to more regions in the future.
 **Unavailable regions include:** Argentina, Canada, Chile, Colombia, India, Indonesia, Israel, Japan, Malaysia, Mexico, Peru, Philippines, Russia, Saudi Arabia, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, and Vietnam.
 
 <Alert severity="info">
-To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md).
+To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md). For a reference on how to implement subscriptions into your experience's monetization strategy, see this [implementation example](https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072).
 </Alert>
 
 ## Subscription Guidelines
@@ -98,8 +98,8 @@ To edit more than a subscription's image, delete and re-create the subscriptions
 
 Subscriptions have two possible states:
 
-- **Active:** Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
-- **Inactive:** Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
+- **Active** — Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
+- **Inactive** — Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
 
 <Alert severity="warning">
 Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, make it inactive first and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
@@ -247,6 +247,10 @@ When you prompt a subscription purchase, `Players.UserSubscriptionStatusChanged`
 
 Although you can prompt a subscription purchase from the client, checking if a user already has a subscription via `MarketplaceService.GetUserSubscriptionStatusAsync` must be done from the server.
 
+<Alert severity="warning">
+When adding subscriptions to your experience, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms can view the offering, but are unable to complete the purchase.
+</Alert>
+
 This example creates a `RemoteFunction` that the client can use to request the status of a subscription:
 
 ```lua
@@ -342,9 +346,11 @@ For example, if a user subscribes on desktop at the base price of US $9.99:
 
 If a different user subscribes to the same plan, but on mobile, the creator receives 699 Robux per month until the user cancels.
 
-Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund or does a chargeback for subscription charge within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
+Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund for a subscription through their bank or app store within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
 
 Refunds received outside the hold window will result in the payout amount for the refunded transaction being deducted from your Robux balance. If your experience is owned by a Group and the Group's balance is less than the amount to be deducted, the remainder will be deducted from the Group Owner's Robux balance.
+
+Users cancelling an active subscription and failing to renew it does not automatically result in a refund. User have to manually request refunds, which are handled on a case-by-case basis. For more information on the user subscription refund process, check out the [help center](https://en.help.roblox.com/hc/en-us/articles/20292383332500-Subscription-Billing-and-Refunds).
 
 <Alert severity="warning">
 Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees. This additional opportunity will be supported at a later date.
@@ -360,7 +366,7 @@ Payouts are found in **Robux Balance** > **My Transactions**:
 
 <img src="../../assets/monetization/subscriptions/subscriptions-pay-out.png" width="100%"/>
 
-To view refunding information of individual users, use `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`
+To view refunding information of individual users, use `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`.
 
 ## Subscription Analytics
 
@@ -379,6 +385,7 @@ Subscription analytics track the following metrics:
   - **Renewed**: The number of renewing subscriptions purchased in a prior period.
   - **Resurrected**: The number of new subscriptions purchased by users who had previously canceled.
 - **Cancellations**: The number of subscriptions that were not renewed. This includes all cancellations regardless of trigger, be it user cancellation, subscription deactivation by the creator, or by other means.
+  - Cancellations are different from refunds. Cancelled subscriptions are subscriptions that will no longer renew but are paid in full for the remainder of the billing cycle, whereas refunds return the paid subscription amount to the user.  
 - **Subscriptions by Platform**: The number of subscriptions purchased on each platform.
 - **Platform Earnings**: The net revenue earned through subscriptions purchased on each platform.
 

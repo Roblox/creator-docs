@@ -805,6 +805,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/EchoSoundEffect.yaml
         ignoreTranslation: true
+      - title: EditableImage
+        path: /reference/engine/classes/EditableImage
+        type: engineapi
+        source: /reference/engine/classes/EditableImage.yaml
+        ignoreTranslation: true
+      - title: EditableMesh
+        path: /reference/engine/classes/EditableMesh
+        type: engineapi
+        source: /reference/engine/classes/EditableMesh.yaml
+        ignoreTranslation: true
       - title: EmotesPages
         path: /reference/engine/classes/EmotesPages
         type: engineapi
@@ -3223,6 +3233,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AssetTypeVerification.yaml
         ignoreTranslation: true
+      - title: AudioApiRollout
+        path: /reference/engine/enums/AudioApiRollout
+        type: engineapi
+        source: /reference/engine/enums/AudioApiRollout.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi
@@ -5005,6 +5020,11 @@ navigation:
         path: /reference/engine/libraries/bit32
         type: engineapi
         source: /reference/engine/libraries/bit32.yaml
+        ignoreTranslation: true
+      - title: buffer
+        path: /reference/engine/libraries/buffer
+        type: engineapi
+        source: /reference/engine/libraries/buffer.yaml
         ignoreTranslation: true
       - title: coroutine
         path: /reference/engine/libraries/coroutine

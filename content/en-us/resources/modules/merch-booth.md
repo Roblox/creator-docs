@@ -154,10 +154,13 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    ```
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
-1. In the left column, click **Associated Items**, then select **PASSES**.
-1. Right-click a pass and select **Copy Asset ID**.
+1. In the left column, under **Monetization**, select **Passes**.
 
-   <img src="../../assets/developer-modules/merch-booth/Pass-Copy-Asset-ID.png" width="560" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Passes.png" width="330" />
+
+1. Click the **&ctdot;** button for a pass and select **Copy Asset ID**.
+
+   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="360" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.GamePass` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are passes. By default, items will appear in the catalog view in alphabetical order, but sorting can be customized via [setCatalogSort](#setcatalogsort).
 
@@ -207,10 +210,13 @@ Adding [developer products](../../production/monetization/developer-products.md)
    ```
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and select the experience.
-1. In the left column, click **Associated Items**, then select **DEVELOPER PRODUCTS**.
-1. Right-click a product and select **Copy Asset ID**.
+1. In the left column, under **Monetization**, select **Developer Products**.
 
-   <img src="../../assets/developer-modules/merch-booth/Developer-Product-Copy-Asset-ID.png" width="560" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
+
+1. Click the **&ctdot;** button for a product and select **Copy Asset ID**.
+
+   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="360" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.Product` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are developer products. By default, items appear in the catalog view in alphabetical order, but you can customize sorting using [setCatalogSort](#setcatalogsort).
 
@@ -236,7 +242,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
 
 ### Custom Catalog Button
 
-By default, a right-side **catalog button** lets users open the booth at any time.
+By default, a right-side **catalog button** lets players open the booth at any time.
 
 <img src="../../assets/developer-modules/merch-booth/UI-Catalog-Button.jpg" width="80%" />
 
@@ -265,21 +271,21 @@ In some cases, it may be useful to [remove](#togglecatalogbutton) this button an
 
 ### Shoppable Regions
 
-A helpful way to drive purchases in your experience is to automatically show the merch booth when a user enters an area.
+A helpful way to drive purchases in your experience is to automatically show the merch booth when a player enters an area.
 
 <video src="../../assets/developer-modules/merch-booth/Shoppable-Regions.mp4" controls
 width="100%" />
 
 To create a shoppable region:
 
-1. Create an `Class.BasePart.Anchored|Anchored` block that encompasses the detection region.
+1. Create an `Class.BasePart.Anchored|Anchored` block that encompasses the detection region. Make sure the block is tall enough to collide with the `Class.Model.PrimaryPart|PrimaryPart` of character models (**HumanoidRootPart** by default).
 
    <img src="../../assets/developer-modules/merch-booth/Shoppable-Region-Part.jpg" width="80%" />
    <figcaption>Block to detect when players approach the front of the shop counter</figcaption>
 
 1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the tag `ShopRegion` to the block so that `Class.CollectionService` detects it.
 
-1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from users in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
+1. Set the part's `Class.BasePart.Transparency|Transparency` to the maximum to hide it from players in the experience. Also disable its `Class.BasePart.CanCollide|CanCollide` and `Class.BasePart.CanQuery|CanQuery` properties so that objects do not physically collide with it and raycasts do not detect it.
 
    <Grid container spacing={3}>
    <Grid item>
@@ -294,39 +300,45 @@ To create a shoppable region:
 
    <img src="../../assets/developer-modules/merch-booth/LocalScript-In-StarterPlayerScripts.png" width="320" />
 
-1. In the new script, paste the following code which uses the `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events to detect when users enter/leave the region and calls [openMerchBooth](#openmerchbooth) and [closeMerchBooth](#closemerchbooth) to open/close the booth GUI.
+1. In the new script, paste the following code which uses the `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events to detect when characters enter/leave the region and calls [openMerchBooth](#openmerchbooth) and [closeMerchBooth](#closemerchbooth) to open/close the booth GUI.
 
-   ```lua title='LocalScript' highlight='15, 22'
-   local Players = game:GetService("Players")
-   local ReplicatedStorage = game:GetService("ReplicatedStorage")
-   local CollectionService = game:GetService("CollectionService")
+	```lua title='LocalScript' highlight='14, 21'
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local CollectionService = game:GetService("CollectionService")
 
-   local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
+	local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
-   -- Remove the default catalog button
-   MerchBooth.toggleCatalogButton(false)
+	-- Remove the default catalog button
+	MerchBooth.toggleCatalogButton(false)
 
-   -- Iterate through all tagged parts
-   for _, region in CollectionService:GetTagged("ShopRegion") do
-   	region.Touched:Connect(function(otherPart)
-   		local character = Players.LocalPlayer.Character
-   		if character and character:FindFirstChild("HumanoidRootPart") == otherPart then
-   			MerchBooth.openMerchBooth()
-   		end
-   	end)
+	local function setupRegion(region: BasePart)
+		region.Touched:Connect(function(otherPart)
+			local character = Players.LocalPlayer.Character
+			if character and otherPart == character.PrimaryPart then
+				MerchBooth.openMerchBooth()
+			end
+		end)
 
-   	region.TouchEnded:Connect(function(otherPart)
-   		local character = Players.LocalPlayer.Character
-   		if character and character:FindFirstChild("HumanoidRootPart") == otherPart then
-   			MerchBooth.closeMerchBooth()
-   		end
-   	end)
-   end
-   ```
+		region.TouchEnded:Connect(function(otherPart)
+			local character = Players.LocalPlayer.Character
+			if character and otherPart == character.PrimaryPart then
+				MerchBooth.closeMerchBooth()
+			end
+		end)
+	end
+
+	-- Iterate through existing tagged shop regions
+	for _, region in CollectionService:GetTagged("ShopRegion") do
+		setupRegion(region)
+	end
+	-- Detect when non-streamed shop regions stream in
+	CollectionService:GetInstanceAddedSignal("ShopRegion"):Connect(setupRegion)
+	```
 
 ### Proximity Prompts
 
-As an alternative to the 2D catalog view, you can add **proximity prompts** over in-experience objects. This encourages users to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
+As an alternative to the 2D catalog view, you can add **proximity prompts** over in-experience objects. This encourages players to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
 
 <video src="../../assets/developer-modules/merch-booth/Proximity-Prompts.mp4" controls
 width="100%" />
@@ -337,7 +349,7 @@ If a player has opened an item view through a proximity prompt, it automatically
 
 ### Changing the Equip Effect
 
-By default, the merch booth shows a generic sparkle effect when a user equips an item from it. To change the effect, set `particleEmitterTemplate` to your own instance of a `Class.ParticleEmitter` in a [configure](#configure) call.
+By default, the merch booth shows a generic sparkle effect when a player equips an item from it. To change the effect, set `particleEmitterTemplate` to your own instance of a `Class.ParticleEmitter` in a [configure](#configure) call.
 
 ```lua title='LocalScript - ConfigureMerchBooth' highlight='5-10, 13'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -429,7 +441,7 @@ Items in the merch booth are represented by a dictionary with the following key-
 	<tr>
 		<td>`isOwned`</td>
 		<td>bool</td>
-		<td>Whether the current user owns the item.</td>
+		<td>Whether the current player owns the item.</td>
 	</tr>
 	<tr>
 		<td>`creatorName`</td>
@@ -806,7 +818,7 @@ end
 
 <Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}>`addProximityButton(adornee:` `Class.BasePart`|`Class.Model`|`Class.Attachment|Attachment,` `assetId:`[`number`](../../luau/numbers.md)`)`</Typography>
 
-Adds a [proximity prompt](#proximity-prompts) over the given `adornee` that will trigger the display of an item's purchase view, given its asset ID. This can be used as an alternative to the 2D catalog view, encouraging users to discover items in the 3D environment.
+Adds a [proximity prompt](#proximity-prompts) over the given `adornee` that will trigger the display of an item's purchase view, given its asset ID. This can be used as an alternative to the 2D catalog view, encouraging players to discover items in the 3D environment.
 
 Note that an item must be added via [addItemAsync](#additemasync) before a proximity button can be assigned to it. See also [removeProximityButton](#removeproximitybutton) to remove the proximity prompt from an object.
 

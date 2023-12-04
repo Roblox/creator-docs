@@ -1,18 +1,22 @@
 name: Status
 type: enum
 summary: |
-  The purpose of this Enum is unknown.
+  It has been used with the unfinished
+  RbxStatus library
 description: |
-  The purpose of this Enum is unknown. It may have been used with the unfinished
+  It has been used with the unfinished
   RbxStatus library which would have allowed you to add conditions to a
-  Humanoid.
+  `Class.Humanoid`.
+
+  See `Class.Status` for more information.
 code_samples:
 tags:
   - Deprecated
 deprecation_message: |
-  The purpose of this Enum is unknown. It may have been used with the unfinished
-  RbxStatus library which would have allowed you to add conditions to a
-  Humanoid.
+  This enum is deprecated as it is used by the following deprecated
+  methods & events: `Class.Humanoid.AddStatus`, `Class.Humanoid.HasStatus`,
+  `Class.Humanoid.RemoveStatus`, `Class.Humanoid.StatusAdded`,
+  `Class.Humanoid.StatusRemoved`. It should not be used in new work.
 items:
   - name: Poison
     value: 0

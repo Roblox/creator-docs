@@ -112,9 +112,36 @@ You can use the `Class.SurfaceAppearance` instance to override a mesh's `Class.M
 
 ## Collision Fidelity
 
-The `Class.MeshPart.CollisionFidelity|CollisionFidelity` property determines how closely the visual representation of the object matches the physical bounds, or hitbox, of the object.
+The `Class.MeshPart.CollisionFidelity|CollisionFidelity` property determines how closely the visual representation of a mesh matches its physical bounds. It has the following options, in order of fidelity and performance impact from lowest to highest:
 
-See [here](../workspace/collisions.md#collision-fidelity) for an approximation of the `Class.MeshPart.CollisionFidelity|CollisionFidelity` options and outcomes.
+- **Box** — Creates a bounding collision box, ideal for small or non-interactive objects.
+- **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
+- **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
+- **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
+
+<Tabs>
+  <TabItem label="Original Mesh">
+    <img src="../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="600" height="500" alt="Original mesh of castle tower" />
+  </TabItem>
+	<TabItem label="Default">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="600" height="500" alt="Collision fidelity of Default shown for mesh" />
+  </TabItem>
+  <TabItem label="Box">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="600" height="500" alt="Collision fidelity of Box shown for mesh"/>
+  </TabItem>
+	<TabItem label="Hull">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="600" height="500" alt="Collision fidelity of Hull shown for mesh" />
+  </TabItem>
+	<TabItem label="Precise">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
+  </TabItem>
+</Tabs>
+
+<Alert severity="info">
+To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
+</Alert>
+
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
 ## Level of Detail
 
