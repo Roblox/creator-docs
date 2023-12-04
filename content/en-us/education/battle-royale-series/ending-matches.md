@@ -270,7 +270,7 @@ An accurate count can't be kept unless players are removed. When a player is def
    end
    ```
 
-2. To find the player in the activePlayers table, use a for loop that iterates through the `activePlayer` table. Then, add an if statement that runs if a player matching the name passed into the function is found.
+2. To find the player in the `activePlayers` table, iterate through it using a `for` loop. Then, add an `if` statement that runs if a player matching the name passed into the function is found.
 
    ```lua
    local function removeActivePlayer(player)
