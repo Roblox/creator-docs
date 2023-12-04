@@ -1900,14 +1900,14 @@ properties:
       input.
 
       For mouse and touch input, this is the screen position of the mouse/touch,
-      described in the x and y components.
+      described in the x and y components. The inset applied to GUI elements (such as from the top
+      bar) is accounted for in the position.
 
       For the mouse wheel input, the z component describes whether the wheel was
       moved forward (1), backwards (-1), or not at all (0).
 
       For `Enum.KeyCode` input, this indicates the position of the player's
-      `Class.Mouse`. The inset applied to GUI elements (such as from the top
-      bar) is accounted for in the position.
+      `Class.Mouse`.
 
       See also
 
