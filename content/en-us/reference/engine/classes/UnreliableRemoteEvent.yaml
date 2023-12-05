@@ -3,8 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  An object which facilitates asynchronous, unordered/unreliable, one-way communication across the
-  client-server boundary. Scripts firing a `Class.UnreliableRemoteEvent` do not yield.
+  An object which facilitates asynchronous, unordered/unreliable, one-way communication
+  across the client-server boundary. Scripts firing a `Class.UnreliableRemoteEvent` do
+  not yield.
 description: |
   The **UnreliableRemoteEvent** object is a variant of the `Class.RemoteEvent` object.
   It facilitates asynchronous, unordered/unreliable, one-way communication
@@ -167,16 +168,16 @@ events:
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
       `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called on the
-      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`. Not
-      guaranteed to fire if one of the above methods are called. This can occur due
-      to packet loss or to maintain optimal engine performance.
+      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`, although
+      this firing is not guaranteed even if one of the above methods are called. This
+      can occur due to packet loss or to maintain optimal engine performance.
     description: |
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
       `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called on the
-      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`.
-
-      It is not guaranteed that the event will fire if FireClient() or FireAllClients() is called as the event may be dropped due to packet loss or to maintain optimal engine performance.
+      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`, although
+      this firing is not guaranteed even if one of the above methods are called. This
+      can occur due to packet loss or to maintain optimal engine performance.
 
       It is not guaranteed that the order of events will match the order of FireServer() calls.
     code_samples: []
@@ -196,13 +197,15 @@ events:
     summary: |
       Fires from a `Class.Script` when
       `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
-      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`. Not guaranteed to fire if the above method is called. This can occur due to packet loss or to maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`, although
+      this firing is not guaranteed even if the above methods is called. This
+      can occur due to packet loss or to maintain optimal engine performance.
     description: |
       Fires from a `Class.Script` when
       `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
-      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`.
-
-      It is not guaranteed that the event will fire if FireServer() is called as the event may be dropped due to packet loss or to maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`, although
+      this firing is not guaranteed even if the above methods is called. This
+      can occur due to packet loss or to maintain optimal engine performance.
       
       It is not guaranteed that the order of events will match the order of FireServer() calls.
     code_samples: []
