@@ -3,10 +3,11 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  An object which facilitates asynchronous, unordered and unreliable, one-way communication across the
+  An object which facilitates asynchronous, unordered/unreliable, one-way communication across the
   client-server boundary. Scripts firing a `Class.UnreliableRemoteEvent` do not yield.
 description: |
-  The **UnreliableRemoteEvent** object is a variant of the RemoteEvent object. UnreliableRemoteEvents facilitate asynchronous, unordered and unreliable, one-way communication
+  The **UnreliableRemoteEvent** object is a variant of the `Class.RemoteEvent` object.
+  It facilitates asynchronous, unordered/unreliable, one-way communication
   across the [client-server](../../../projects/client-server.md) boundary
   without yielding for a response. This communication can be directed from one
   client to the server, from the server to a specific client, or from the server
@@ -17,11 +18,11 @@ description: |
   `Class.ReplicatedStorage`, although in some cases it's appropriate to store it
   in `Class.Workspace` or inside a `Class.Tool`.
 
-  Unreliable remote events are best used for ephemeral events including effects that are only relevant for a short time, 
-  or for replicating continuously changing data. These events are not resent if they are lost, 
-  and they do not wait for previously fired events to arrive before being processed. 
-  This can result in reduced latency and network traffic.
-  When requiring ordering and reliability consider using a `Class.RemoteEvent` instead.
+  `Class.UnreliableRemoteEvent` is best used for ephemeral events including effects that
+  are only relevant for a short time, or for replicating continuously changing data. These
+  events are not resent if they are lost and they do not wait for previously fired events
+  to arrive before being processed, potentially resulting in reduced latency and network
+  traffic. When requiring ordering and reliability, use a `Class.RemoteEvent` instead.
 
   #### Parameter Limitations
 
@@ -30,7 +31,8 @@ description: |
   well as Luau types such as numbers, strings, and booleans, although you should
   carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
-  There is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`. Events with payloads larger than this will be dropped. See the corresponding method description for more details.
+  There is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`. Larger
+  payloads will be dropped. See the corresponding method description for more details.
 code_samples: []
 inherits:
   - BaseRemoteEvent
