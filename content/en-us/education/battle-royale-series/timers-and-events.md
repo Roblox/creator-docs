@@ -102,7 +102,7 @@ To add a timer into the game, use the premade module script in the steps below. 
 
    function Timer:start(duration)
      if not self._running then
-       local timerThread = coroutine.wrap(function()
+       task.spawn(function()
          self._running = true
          self._duration = duration
          self._startTime = tick()
@@ -115,7 +115,6 @@ To add a timer into the game, use the premade module script in the steps below. 
          self._duration = nil
          self._finishedEvent:Fire(completed)
        end)
-       timerThread()
      else
        warn("Warning: timer could not start again as it is already running.")
      end
