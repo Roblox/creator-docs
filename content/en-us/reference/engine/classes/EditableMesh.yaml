@@ -45,6 +45,12 @@ description: |
   go counterclockwise around it.
 
   <img src="/assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
+
+  #### Limitations
+  
+  `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
+  triangles. Attempting to add too many vertices or triangles will cause an
+  error.
 code_samples: []
 inherits:
   - DataModelMesh

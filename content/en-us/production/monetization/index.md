@@ -86,8 +86,6 @@ A [Developer Product](../../production/monetization/developer-products.md) is an
 
 A [Pass](../../production/monetization/game-passes.md) allows you to charge a **one-time Robux fee** in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
-<img src="../../assets/monetization/game-passes/Passes-Listing.png" width="800" />
-
 ### Paid Access
 
 [Paid Access](../../production/monetization/paid-access.md) allows you to charge a **one-time Robux fee** in order for users to access your experience. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.

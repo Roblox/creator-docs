@@ -174,3 +174,75 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </CardContent>
 
 </Card>
+
+<br /> <br />
+
+<Card>
+
+<CardContent>
+
+<h2 style={{marginBottom: 12}}>Gameplay Scripting - Part 1</h2>
+
+<Typography variant="body2" color="textSecondary" component="p">
+Learn the programming skills you need to introduce gameplay to the laser tag environment.
+</Typography>
+
+<>
+<Grid
+    alignItems="stretch"
+    container
+    direction="row">
+
+<Grid item md={6} xs={12}
+    direction="column"  >
+
+<div class="container"
+style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+<iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc?si=2gk0n6cb9uq-48Ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+</div>
+
+</Grid>
+
+<Grid item md={6} xs={12} direction='column'>
+
+<>
+<Stepper activeStep={3} orientation="vertical">
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Spawn players into the environment, and respawn them once their health reaches zero.">
+
+<h5 style={{marginTop: 36}}>Spawn</h5>
+</StepLabel>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Create a blast mechanic that is both accurate in the 3D space and satisfying to players.">
+
+<h5 style={{marginTop: 36}}>Blast</h5>
+</StepLabel>
+</Step>
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Implement laser detecting behavior that handles blast direction, verifies collision, and reduces player health." >
+
+<h5 style={{marginTop: 36}}>Detect</h5>
+</StepLabel>
+</Step>
+</Stepper>
+</>
+
+</Grid>
+
+</Grid>
+</>
+
+<a href="gameplay-scripting/index.md">
+  <Button
+    variant="contained"
+    size="large">
+  Start creating
+  </Button>
+</a>
+</CardContent>
+
+</Card>
