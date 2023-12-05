@@ -724,6 +724,8 @@ methods:
       Returns the first descendant found with the given `Class.Instance.Name`.
     description: |
       Returns the first descendant found with the given `Class.Instance.Name`.
+
+      This method is disabled and can't be used.
     code_samples:
     parameters:
       - name: name
