@@ -71,7 +71,10 @@ The [Immersive Ads](../../production/monetization/immersive-ads.md) system allow
 
 [Subscriptions](../../production/monetization/subscriptions.md) within experiences let you offer users recurring benefits for a monthly fee.
 
-<img src="../../assets/monetization/developer-products/subscriptions.png" width="800" />
+<figure>
+  <img src="../../assets/monetization/subscriptions/Example-Subscriptions.png" width="600" />
+  <figcaption>Examples of experience subscriptions</figcaption>
+</figure>
 
 ### Developer Products
 

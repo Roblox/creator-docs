@@ -36,8 +36,9 @@ After the item creator adds your experience to the asset's sale location, you ca
 
 To search and enable an asset for sale:
 
-1. From your [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to your experience's overview page.
-2. Navigate to **Associated Items** → **Avatar Items**.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+2. In the **Monetization** menu, select **Avatar Items**. All avatar items for that experience display.
+   <img src="../../assets/monetization/avatar-items/navigation.png" width="50%" />
 3. Using the search bar, use the item's Asset ID to find the avatar item.
    1. If you do not see the item populate, verify that your Asset ID is correct and that the item creator has added the correct Place ID to the item's sales locations.
 4. Using the dropdown on the thumbnail, click **Enable Sale**.
@@ -45,3 +46,23 @@ To search and enable an asset for sale:
    <figure>
    <img src="../../assets/monetization/avatar-items/Avatar-Items-Enable.png" width="80%" />
    </figure>
+
+## Avatar Items Analytics
+
+Avatar Items analytics help you gauge the success of individual Avatar Items, identify trends, and forecast potential future earnings.  
+
+To access Avatar Items analytics:
+
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+
+2. Navigate to **Monetization > Avatar Items** and select the **Analytics** tab.
+
+<img src="../../assets/monetization/avatar-items/avatar-items-analytics.png" width="100%" />
+
+The analytics tab enables you to:
+
+- **View top performing items:** See your top selling and top grossing Avatar Items over a selected time period.
+- **Analyze overall sales and net revenue:** Showcase up to eight top items on a time-series graph.
+- **Monitor your catalog:** Examine a table with up to 400 items, sortable by sales and net revenue.
+
+<img src="../../assets/monetization/avatar-items/avatar-items-analytics-2.png" width="100%" />

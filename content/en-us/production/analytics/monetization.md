@@ -1,5 +1,5 @@
 ---
-title: Monetization Analysis
+title: Monetization
 description: Explains how to improve monetization metrics for your experience.
 ---
 
@@ -15,7 +15,8 @@ To view your experience's monetization analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
-1. In the **ANALYTICS** menu, select **Monetization**.
+2. In the **Monetization** menu, select **Overview**.
+    <img src="../../assets/analytics/monetization/monetization-overview.png" width="50%"/>
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 
@@ -28,6 +29,15 @@ On the monetization page, you can see the following metrics:
 | Paying users    | Number of daily active users who purchased an experience related item.         |
 | ARPPU           | Average revenue per paying user.                                               |
 | ARPDAU          | Average revenue per daily active user.                                         |
+
+From there, you can explore data for each monetization product:
+
+- [Developer Products](../monetization/developer-products.md#developer-product-analytics)
+- [Passes](../monetization/game-passes.md#passes-analytics)
+- [Avatar Items](../monetization/avatar-items.md#avatar-items-analytics)
+- [Subscriptions](../monetization/subscriptions.md#subscription-analytics)
+- [Immersive Ads](../monetization/immersive-ads.md#viewing-immersive-ad-metrics)
+- [Engagement Payouts](../monetization/engagement-based-payouts.md#accessing-payout-data)
 
 ## Improving Revenue
 

@@ -21,25 +21,19 @@ When you're creating an image to use for your Developer Product, consider the fo
 
 To create a new Developer Product:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the experience you want to create a Developer Product for. The experience's **Overview** page displays.
-1. Click on the experience you want to create a Developer Product for. The experience's **Overview** page displays.
-1. In the left-hand navigation, select **Associated Items**. The **Associated Items** page displays.
-
-   <img src="../../assets/monetization/game-passes/Associated-Items.jpg" width="30%" />
-
-1. In the horizontal navigation, select **DEVELOPER PRODUCTS**. All Developer Products for that experience display.
-1. Click the **CREATE A DEVELOPER PRODUCT** button. The **Create a Developer Product** page displays.
-1. Click the **UPLOAD IMAGE** button. A file browser displays.
-1. Select the image you want to display as the icon, then click the **Open** button.
-1. Fill in the following fields:
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+2. In the **Monetization** menu, select **Developer Products**. All developer products for that experience display.
+    <img src="../../assets/monetization/developer-products/developer-products.png" width="50%" />
+3. Click the **CREATE A DEVELOPER PRODUCT** button. The **Create a Developer Product** page displays.
+4. Click the **UPLOAD IMAGE** button. A file browser displays.
+5. Select the image you want to display as the icon, then click the **Open** button.
+6. Fill in the following fields:
 
    - **Name**: A title for your Developer Product.
    - **Description**: A description what a user should expect when they purchase the Developer Product.
    - **Price in Robux**: The amount of Robux you want to charge users for the Developer Product.
-
-1. Click the **CREATE DEVELOPER PRODUCT** button. The Developer Product displays within the **Developer Products** section of the **Associated Items** page.
-
-   <img src="../../assets/monetization/developer-products/Create-A-Developer-Product.jpg" width="70%" />
+    <img src="../../assets/monetization/developer-products/Create-A-Developer-Product.png" width="100%" />
+7. Click the **CREATE DEVELOPER PRODUCT** button. The Developer Product displays within the **Creations** section of the **Developer Products** page.
 
 <Alert severity="info">
    If you are creating a randomized Developer Product, review the <a href="./randomized-virtual-items-policy.md">Randomized Virtual Item Policy</a>.
@@ -47,15 +41,17 @@ To create a new Developer Product:
 
 ### Locating Developer Product IDs
 
-A Developer Product ID is the unique identifier of a Developer Product. You need this ID when you are [scripting Badges](#scripting-developer-products).
+A Developer Product ID is the unique identifier of a Developer Product.
 
 To locate a Developer Product ID:
 
-1. Navigate to the **Developer Product** section of an experience's **Associated Items** page.
-1. Hover over a Developer Product thumbnail and click the **&ctdot;** button. A contextual menu displays.
-1. Select **Copy Asset ID**. The Developer Product ID copies to your clipboard.
+1. Navigate to the **Developer Product** section of an experience's **Monetization** menu.
 
-   <img src="../../assets/monetization/developer-products/Copy-AssetID-Developer-Products.jpg" width="50%" />
+1. Hover over a Pass thumbnail and click the **&ctdot;** button. A contextual menu displays.
+
+1. Select **Copy Asset ID**. The Pass ID copies to your clipboard.
+
+   <img src="../../assets/monetization/developer-products/Copy-AssetID-Developer-Products.png" width="50%" />
 
 ## Scripting Developer Products
 
@@ -199,3 +195,23 @@ if developerProducts then
 	end
 end
 ```
+
+## Developer Product Analytics
+
+Developer Product analytics help you gauge the success of individual Developer Products, identify trends, and forecast potential future earnings.  
+
+To access Developer Product analytics:
+
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+
+2. Navigate to **Monetization > Developer Products** and select the **Analytics** tab.
+
+<img src="../../assets/monetization/developer-products/developer-products-analytics.png" width="100%" />
+
+The Analytics tab enables you to:
+
+- **View top performing items:** See your top selling and top grossing Developer Products over a selected time period.
+- **Analyze overall sales and net revenue:** Showcase up to eight top items on a time-series graph.
+- **Monitor your catalog:** Examine a table with up to 400 items, sortable by sales and net revenue.
+
+<img src="../../assets/monetization/developer-products/developer-products-analytics-2.png" width="100%" />

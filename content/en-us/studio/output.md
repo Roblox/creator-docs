@@ -7,7 +7,7 @@ The **Output** window, accessible from the [View](./view-tab.md) tab, displays e
 
 <img src="../assets/studio/general/View-Tab-Output.png" width="876" alt="Output button indicated in View tab of Studio" />
 
-You can customize the output through the following elements:
+Plugins can interact with the output window through `Class.LogService`, which can record and clear the output window contents. You can customize the output through the following elements:
 
 <img src="../assets/studio/general/Output-Window-Diagram.png" width="820" alt="Sections of Output window indicated by lettered pointers" />
 

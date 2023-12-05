@@ -257,21 +257,14 @@ local mainPortal = Workspace:WaitForChild("Main Portal Template")
 
 Once you insert ad units into your experience, the Creator Dashboard generates different types of metrics graphs to help you analyze the overall performance of your immersive ads. After about 48 hours of having immersive ads run in your experience, you can see how many impressions and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
 
-<Alert severity="info">
-   Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.
-</Alert>
-
-  <img src="../../assets/monetization/immersive-ads/ViewingMetrics-Graph.png" width="80%" />
-
 By tracking these trends over time, you can make strategic decisions on the number of ad units you include per place, which format of ad unit you want to prioritize, and where you can place individual ad units to generate impressions.
 
 To view immersive ad metrics:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations). All of your experiences display.
-1. Click on the experience you want to view the immersive ad metrics for. The experience's **Overview** page displays.
-1. In the left-hand navigation, navigate to the **Analytics** section and select **Immersive Ads**. The **Immersive Ads** page displays the immersive ad metrics graphs.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
-   <img src="../../assets/monetization/immersive-ads/ViewingMetrics-ImmersiveAdsHeader.png" width="20%" />
+2. Navigate to the **Monetization** tab and select **Immersive Ads**.
+   <img src="../../assets/monetization/immersive-ads/immersive-ads-metrics.png" width="40%" />
 
 For information on each metrics graph, see the following table.
 
@@ -317,6 +310,12 @@ For information on each metrics graph, see the following table.
   </tr>
 </tbody>
 </table>
+
+ <img src="../../assets/monetization/immersive-ads/ViewingMetrics-Graph.png" width="80%" />
+
+<Alert severity="info">
+   Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.
+</Alert>
 
 <Alert severity="warning">
    Roblox may make minor "over-delivery" adjustments to impressions or teleports for advertisers to account for potential invalid impressions or teleports, which may result in occasional changes in **Earnings per Mille** or **Earnings per Teleport** metrics.

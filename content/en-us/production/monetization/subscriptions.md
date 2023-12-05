@@ -372,9 +372,12 @@ To view refunding information of individual users, use `Class.MarketplaceService
 
 **Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted.
 
-To access subscription analytics, navigate to your experience in the Creator Dashboard and select **Analytics** > **Subscriptions**.
+To access subscription analytics:
 
-<img src="../../assets/monetization/subscriptions/subscriptions-analytics-2.png" width="30%"/>
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+
+2. Navigate to the **Monetization** tab and select **Subscriptions**.
+   <img src="../../assets/monetization/immersive-ads/immersive-ads-metrics.png" width="40%" />
 
 Subscription analytics track the following metrics:
 
