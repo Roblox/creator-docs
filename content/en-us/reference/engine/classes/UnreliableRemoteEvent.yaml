@@ -179,7 +179,9 @@ events:
       this firing is not guaranteed even if one of the above methods are called. This
       can occur due to packet loss or to maintain optimal engine performance.
 
-      It is not guaranteed that the order of events will match the order of FireServer() calls.
+      Also note that it is not guaranteed that the order of events will match the
+      order of `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
+      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` calls.
     code_samples: []
     parameters:
       - name: arguments
