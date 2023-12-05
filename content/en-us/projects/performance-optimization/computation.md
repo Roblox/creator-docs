@@ -127,8 +127,8 @@ computation to be expensive.
     <th>**Associated Computation**</th>
   </tr>
   <tr>
-    <td>RunService.RenderStepped</td>
-    <td>Code executing on the RenderStepped event</td>
+    <td>RunService.PreRender</td>
+    <td>Code executing on the PreRender event</td>
   </tr>
   <tr>
     <td>RunService.PreSimulation</td>
@@ -136,6 +136,10 @@ computation to be expensive.
   </tr>
   <tr>
     <td>RunService.PostSimulation</td>
+    <td>Code executing on Heartbeat event</td>
+  </tr>
+  <tr>
+    <td>RunService.Heartbeat</td>
     <td>Code executing on Heartbeat event</td>
   </tr>
 </table>

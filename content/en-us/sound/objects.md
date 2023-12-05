@@ -232,7 +232,7 @@ sound.Parent = attachment
 sound:Play()
 
 -- Start checking if emitter should be enabled
-RunService.PostSimulation:Connect(function()
+RunService.Heartbeat:Connect(function()
 	-- Enable the emitter within a time range of the audio; otherwise disable it
 	if sound.TimePosition >= 5 and sound.TimePosition < 20 then
 		emitter.Enabled = true

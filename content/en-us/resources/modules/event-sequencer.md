@@ -634,7 +634,7 @@ Creates a configurable `Class.Tween` which is preserved in seeking and in dynami
 	</tr>
 	<tr>
 		<td>`OnHeartbeat`</td>
-		<td>Custom function to fire on every `Class.RunService.PostSimulation|PostSimulation`; receives the tween alpha as its second parameter.</td>
+		<td>Custom function to fire on every `Class.RunService.Heartbeat|Heartbeat`; receives the tween alpha as its second parameter.</td>
 	</tr>
 	<tr>
 		<td>`OnEnd`</td>
@@ -684,7 +684,7 @@ end
 
 #### interval
 
-Executes a custom callback function over a specified duration on a specified frequency, in seconds. Useful for repeating events like flashing lights, pulsing an audio's intensity, etc. The lowest possible frequency is 0 seconds, but technically the minimum frequency is always clamped to `Class.RunService.PostSimulation|PostSimulation`.
+Executes a custom callback function over a specified duration on a specified frequency, in seconds. Useful for repeating events like flashing lights, pulsing an audio's intensity, etc. The lowest possible frequency is 0 seconds, but technically the minimum frequency is always clamped to `Class.RunService.Heartbeat|Heartbeat`.
 
 <table>
 <thead>
@@ -787,7 +787,7 @@ Schema.OnRun = function()
 		StartTimes = {5, 27.25},
 		OnStart = function(self)
 			-- Initialize temporary heartbeat connection
-			local tempConnection = RunService.PostSimulation:Connect(function()
+			local tempConnection = RunService.Heartbeat:Connect(function()
 
 			end)
 			-- Inform framework of connection
@@ -801,7 +801,7 @@ end
 
 Informs the framework of any modules, UI objects, connections, etc. which are created in the [OnRun](#onrun) lifecycle hook, ensuring they are properly cleaned up when [seeking](#seeking-scenes). Use cases include:
 
-- Informing the framework of a temporary ad-hoc connection such as `Class.RunService.PostSimulation` so that the connection is cleaned up when seeking to an earlier point in the scene's duration.
+- Informing the framework of a temporary ad-hoc connection such as `Class.RunService.Heartbeat` so that the connection is cleaned up when seeking to an earlier point in the scene's duration.
 
   ```lua title='Server Schema' highlight='8-10,12'
   Schema.OnRun = function()
@@ -811,7 +811,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
   		StartTimes = {5},
   		OnStart = function(self)
   			-- Initialize temporary heartbeat connection
-  			local tempConnection = RunService.PostSimulation:Connect(function()
+  			local tempConnection = RunService.Heartbeat:Connect(function()
 
   			end)
   			-- Inform framework of connection
@@ -855,7 +855,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
 
   CustomModule.init = function()
   	-- Initialize heartbeat connection
-  	CustomModule.connection = RunService.PostSimulation:Connect(function()
+  	CustomModule.connection = RunService.Heartbeat:Connect(function()
 
   	end)
   end

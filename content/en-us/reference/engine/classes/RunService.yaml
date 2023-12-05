@@ -17,7 +17,7 @@ description: |
 
   RunService also houses events that allow your code to adhere to Roblox's
   frame-by-frame loop, such as `Class.RunService.PreAnimation|PreAnimation`, `Class.RunService.PreSimulation|PreSimulation`,
-  `Class.RunService.PostSimulation|PostSimulation` and
+  `Class.RunService.Heartbeat|Heartbeat` and
   `Class.RunService.PreRender|PreRender`. Selecting the proper event to
   use for any case is important, so you should read
   [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
@@ -707,7 +707,7 @@ events:
       is used inappropriately. To avoid this, only use RenderStepped for code
       that works with the `Class.Workspace.CurrentCamera|camera` or
       `Class.Player.Character|character`. Otherwise,
-      `Class.RunService.PostSimulation` should be used.
+      `Class.RunService.Heartbeat` should be used.
 
       As RenderStepped fires every frame, it runs on a **variable frequency**.
       This means the rate will vary depending on the performance of the machine.

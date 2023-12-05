@@ -17,7 +17,7 @@ The following table lists the relevant legacy global methods and their preferred
 
 | Legacy Global Methods                   | Task Methods                                       | Additional Alternatives                            |
 | :-------------------------------------- | :------------------------------------------------- | :------------------------------------------------- |
-| `wait()`                                | `Library.task.wait()`                              | `Class.RunService.PostSimulation`                       |
+| `wait()`                                | `Library.task.wait()`                              | `Class.RunService.Heartbeat`                       |
 | `wait(n)`                               | `Library.task.wait()\|task.wait(n)`                |                                                    |
 | `spawn(f)`                              | `Library.task.defer()\|task.defer(f)`              | `Library.task.delay()\|task.delay(0, f)`           |
 | `delay(n, f)`                           | `Library.task.delay()\|task.delay(n, f)`           |                                                    |
@@ -60,7 +60,7 @@ print("B")
 
 #### task.delay
 
-`Library.task.delay()` takes a thread or function and schedules it for resumption after the given amount of time elapses on the next `Class.RunService.PostSimulation|PostSimulation` step. The thread resumes with built-in error handling and support for other engine features. Any additional arguments are passed to the thread or function resuming.
+`Library.task.delay()` takes a thread or function and schedules it for resumption after the given amount of time elapses on the next `Class.RunService.Heartbeat|Heartbeat` step. The thread resumes with built-in error handling and support for other engine features. Any additional arguments are passed to the thread or function resuming.
 
 Since the actual delay time may vary, the following code sample illustrates how you can calculate it by passing the current time as an argument:
 
@@ -78,7 +78,7 @@ A duration of zero will result in the thread or function resuming on the next st
 
 #### task.wait
 
-`Library.task.wait()` yields the current thread until the given duration (in seconds) elapses and then resumes the thread on the next `Class.RunService.PostSimulation|PostSimulation` step.
+`Library.task.wait()` yields the current thread until the given duration (in seconds) elapses and then resumes the thread on the next `Class.RunService.Heartbeat|Heartbeat` step.
 
 The actual yield time may vary. The following code sample illustrates how this method returns it for convenience:
 
@@ -89,7 +89,7 @@ local elapsedTime = task.wait(2) -- wait for 2 seconds
 print(elapsedTime) --> 2.0792941
 ```
 
-If no duration is given the duration will default to zero meaning the thread will automatically resume on the next step. This means `Library.task.wait()` is equivalent in behavior to `Class.RunService.PostSimulation`.
+If no duration is given the duration will default to zero meaning the thread will automatically resume on the next step. This means `Library.task.wait()` is equivalent in behavior to `Class.RunService.Heartbeat`.
 
 <Alert severity="info">
 `Library.task.wait()` is an optimized version of `wait()` that schedules the current thread to resume after some time elapses without throttling.

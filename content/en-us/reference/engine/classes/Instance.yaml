@@ -610,7 +610,7 @@ methods:
       than using the dot operator and almost 8 times longer than simply storing
       a reference to an object. Therefore, you should avoid calling it in
       performance-dependent code such as in tight loops or functions connected
-      to `Class.RunService.PostSimulation` and `Class.RunService.PreRender`.
+      to `Class.RunService.Heartbeat` and `Class.RunService.PreRender`.
       Instead, store the result in a variable, or consider using
       `Class.Instance.ChildAdded|ChildAdded` or
       `Class.Instance:WaitForChild()|WaitForChild()` to detect when a child of a
