@@ -32,7 +32,7 @@ The **Engagement-Based Payouts** charts track payout data based on the following
 
 - **Premium Visits:** How many visits are from Premium members.
 
-<img src="../../assets/monetization/engagement-based-payouts/engagement-based-payouts.png" width="100%" />
+<img src="../../assets/monetization/engagement-based-payouts/engagement-based-payouts-2.png" width="100%" />
 
 <Alert severity="info">
 Note that the dotted "projected earnings" line becomes solid after the payout amount is final, at which point Roblox adds the payout to your **Pending Robux** amount [here](https://www.roblox.com/transactions).

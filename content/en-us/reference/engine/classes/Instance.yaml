@@ -724,6 +724,10 @@ methods:
       Returns the first descendant found with the given `Class.Instance.Name`.
     description: |
       Returns the first descendant found with the given `Class.Instance.Name`.
+
+      This method is disabled and cannot be used. To find the first descendant
+      of an instance, consider using the `recursive` parameter on
+      `Class.Instance:FindFirstChild()` instead.
     code_samples:
     parameters:
       - name: name

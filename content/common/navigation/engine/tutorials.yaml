@@ -9,6 +9,9 @@ navigation:
   - title: Environmental Art
     path: /tutorials/environmental-art/
     navigation: /engine/tutorials-ea.yaml
+  - title: Gameplay Scripting
+    path: /tutorials/gameplay-scripting/
+    navigation: /engine/tutorials-gs.yaml
   - heading: Use Cases
   - title: Modeling
     section:

@@ -1,0 +1,13 @@
+backTo:
+  title: Back to Tutorials
+  path: /tutorials/
+navigation:
+  - heading: Gameplay Scripting Curriculum
+  - title: Overview
+    path: /tutorials/gameplay-scripting/
+  - title: Spawning and Respawning
+    path: /tutorials/gameplay-scripting/spawn-respawn
+  - title: Implementing Blaster Behavior
+    path: /tutorials/gameplay-scripting/implementing-blasters
+  - title: Detecting Hits
+    path: /tutorials/gameplay-scripting/detecting-hits
