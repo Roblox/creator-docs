@@ -31,7 +31,7 @@ description: |
   carefully explore the
   [limitations](../../../scripting/events/remote.md#argument-limitations).
   There is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`. Events with payloads larger than this will be dropped. See the corresponding method description for more details.
-code_samples:
+code_samples: []
 inherits:
   - BaseRemoteEvent
 tags: []
@@ -58,7 +58,7 @@ methods:
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
       Events with payloads larger than 900 bytes will be dropped. When this happens in RobloxStudio, a log message in the output menu will indicate by how many bytes the event has gone over.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -96,7 +96,7 @@ methods:
       `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` which works
       similarly but fires the event for each client connected to the same
       `Class.UnreliableRemoteEvent`.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
@@ -137,7 +137,7 @@ methods:
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
       Events with payloads larger than 900 bytes will be dropped. When this happens in RobloxStudio, a log message in the output menu will indicate by how many bytes the event has gone over.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -168,7 +168,7 @@ events:
       It is not guaranteed that the event will fire if FireClient() or FireAllClients() is called as the event may be dropped due to packet loss or to maintain optimal engine performance.
 
       It is not guaranteed that the order of events will match the order of FireServer() calls.
-    code_samples:
+    code_samples: []
     parameters:
       - name: arguments
         type: Tuple
@@ -196,7 +196,7 @@ events:
       It is not guaranteed that the event will fire if FireServer() is called as the event may be dropped due to packet loss or to maintain optimal engine performance.
       
       It is not guaranteed that the order of events will match the order of FireServer() calls.
-    code_samples:
+    code_samples: []
     parameters:
       - name: player
         type: Player
