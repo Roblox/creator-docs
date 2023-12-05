@@ -726,6 +726,8 @@ methods:
       Returns the first descendant found with the given `Class.Instance.Name`.
 
       This method is disabled and can't be used.
+      Developers looking to find the first descendant, should use the recursive
+      parameter on `Class.Instance.FindFirstChild()` instead.
     code_samples:
     parameters:
       - name: name
