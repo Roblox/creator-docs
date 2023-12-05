@@ -1,5 +1,5 @@
 ---
-title: Environmental Art Tutorial Overview
+title: Environmental Art Curriculum
 description: //
 next: /tutorials/environmental-art/greybox-your-environment
 hideInPageNavigation: true
