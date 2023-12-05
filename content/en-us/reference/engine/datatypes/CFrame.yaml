@@ -266,7 +266,33 @@ constructors:
         summary: ''
       - name: up
         type: Vector3
+        default: 'Vector3.yAxis'
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CFrame.lookAlong
+    summary: |-
+      Returns a `Datatype.CFrame` with the position of the first
+      `Datatype.Vector3` and an orientation directed along the second.
+    description: |-
+      Returns a new `Datatype.CFrame` with the position of `at` and facing
+      along `direction`, optionally specifying the upward direction (`up`)
+      with a default of `(0, 1, 0)`.
+
+      This constructor is equivalent to `CFrame.lookAt(at, at + direction)`.
+    parameters:
+      - name: at
+        type: Vector3
         default:
+        summary: ''
+      - name: direction
+        type: Vector3
+        default:
+        summary: ''
+      - name: up
+        type: Vector3
+        default: 'Vector3.yAxis'
         summary: ''
     code_samples: []
     tags: []

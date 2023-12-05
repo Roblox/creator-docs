@@ -9,13 +9,15 @@ Many customization options are accessible via **File** &rarr; **Studio Settings*
 
 <img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="Settings window with upper-left search field and sections menu indicated." />
 
+### Language
+
+Studio defaults to **English** as the system language but allows you to change it to another supported language. To change the language, search for the **Language** option and select the language of your choice. Restart Studio to reflect the change.
+
 ### Visual Theme
 
 Studio features both a **light theme** and **dark theme**. If your operating system supports light and dark modes, the default option mirrors your system mode.
 
 To explicitly change themes, search for the **Theme** option and select either **Default**, **Light**, or **Dark**.
-
-<img src="../assets/studio/general/Studio-Settings-Theme.png" width="750" alt="Settings window with 'theme' entered in search field to search for Studio's Theme setting." />
 
 ### Script Editor
 

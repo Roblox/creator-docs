@@ -21,8 +21,14 @@ deprecation_message: ''
 properties: []
 methods:
   - name: LogService:ClearOutput
-    summary: ''
-    description: ''
+    summary: |
+      Clears the Roblox Studio output window.
+    description: |
+      Clears the Roblox Studio output window.
+
+      The log history is also cleared, such that
+      `Class.LogService.GetLogHistory` will not return any entries from before
+      the `Class.LogService.ClearOutput` call.
     code_samples: []
     parameters: []
     returns:

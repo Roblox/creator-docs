@@ -15,42 +15,28 @@ To encourage Premium subscriber growth and increase your potential to earn engag
 
 Payout data can provide vital feedback to help you understand what factors drive Premium subscribers to your experiences.
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click the desired experience to view its details page.
-1. In the left column, under **Analytics**, select **Developer&nbsp;Stats**.
-1. In the top navigation, click the **ENGAGEMENT-BASED PAYOUTS** tab.
+To access payout data:
 
-   <img src="../../assets/creator-dashboard/Developer-Stats-Tabs-Premium.png" width="780" alt="Engagement-based payouts tab on Developer Stats page of Creator Dashboard" />
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
-### Premium Payout
+2. Navigate to the **Monetization** tab and select **Engagement Payouts**.
+   <img src="../../assets/monetization/engagement-based-payouts/navigation.png" width="40%" />
 
-The **Engagement-Based Payouts** chart tracks payout data based on the following metrics:
+### Engagement Payouts
 
-<Grid container spacing={0}>
-	<Grid item xs={3} lg={2}>
-		<img src="../../assets/monetization/engagement-based-payouts/Chart-Line-Orange.png" width="80%" />
-	</Grid>
-	<Grid item xs={9} lg={10}>
-		**Premium Playtime Score** is the amount of time Premium subscribers engage with the experience per day. This metric can provide immediate feedback on the impact of new features you release.
-	</Grid>
-	<Grid item xs={3} lg={2}>
-		<img src="../../assets/monetization/engagement-based-payouts/Chart-Line-Blue.png" width="80%" />
-	</Grid>
-	<Grid item xs={9} lg={10}>
-		**Premium Playtime Robux Earned** is the amount you can expect to earn for Premium subscriber engagement. This is not based on the daily time Premium subscribers spend engaging with the experience; instead, this metric aggregates each user's behavior over the past 28 days. As such, even though they have similar trends, this metric has no direct mathematical relationship with the **Premium Playtime Score**.
-	</Grid>
-</Grid>
+The **Engagement-Based Payouts** charts track payout data based on the following metrics:
 
-<img src="../../assets/monetization/engagement-based-payouts/Chart-Premium-Payout.png" width="800" alt="Example chart tracking engagement-based payout data" />
+- **Premium Playtime Robux Earned:** The amount you can expect to earn for Premium subscriber engagement. This is not based on the daily time Premium subscribers spend engaging with the experience; instead, this metric aggregates each user's behavior over the past 28 days. As such, even though they have similar trends, this metric has no direct mathematical relationship with the Premium Playtime Score.
+
+-  **Premium Playtime Score:** The amount of time Premium subscribers engage with the experience per day. This metric can provide immediate feedback on the impact of new features you release.
+
+- **Premium Visits:** How many visits are from Premium members.
+
+<img src="../../assets/monetization/engagement-based-payouts/engagement-based-payouts.png" width="100%" />
 
 <Alert severity="info">
 Note that the dotted "projected earnings" line becomes solid after the payout amount is final, at which point Roblox adds the payout to your **Pending Robux** amount [here](https://www.roblox.com/transactions).
 </Alert><br />
-
-### Premium Visits
-
-The **Premium Visits** chart tracks how many visits are from Premium members. Using the dropdown menu, choose **Premium Visit Percentage**, **Premium Visits**, or **Total Visits**.
-
-<img src="../../assets/monetization/engagement-based-payouts/Chart-Premium-Visits.png" width="800" alt="Example chart tracking how many visits are from Premium members" />
 
 ## Premium Purchase Modal
 
