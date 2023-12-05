@@ -1,6 +1,6 @@
 name: UnreliableRemoteEvent
 type: class
-category: Scripting
+category:
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, unordered and unreliable, one-way communication across the
