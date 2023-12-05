@@ -1,12 +1,12 @@
 name: UnreliableRemoteEvent
 type: class
-category:
+category: Scripting
 memory_category: Instances
 summary: |
   An object which facilitates asynchronous, unordered and unreliable, one-way communication across the
   client-server boundary. Scripts firing a `Class.UnreliableRemoteEvent` do not yield.
 description: |
-  The **UnreliableRemoteEvent** object is a variant of the RemoteEvent object. The UnreliableRemoteEvents facilitate asynchronous, unordered and unreliable, one-way communication
+  The **UnreliableRemoteEvent** object is a variant of the RemoteEvent object. UnreliableRemoteEvents facilitate asynchronous, unordered and unreliable, one-way communication
   across the [client-server](../../../projects/client-server.md) boundary
   without yielding for a response. This communication can be directed from one
   client to the server, from the server to a specific client, or from the server
