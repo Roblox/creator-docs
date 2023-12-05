@@ -41,7 +41,7 @@ methods:
   - name: UnreliableRemoteEvent:FireAllClients
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for each
-      client connected to the same `Class.UnreliableRemoteEvent`.
+      client connected to the same `Class.UnreliableRemoteEvent`. Has a 900 byte limit to the payload of the event, otherwise event is dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for each
       client connected to the same `Class.UnreliableRemoteEvent`. Unlike
@@ -76,7 +76,7 @@ methods:
   - name: UnreliableRemoteEvent:FireClient
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for a
-      specific client connected to the same `Class.UnreliableRemoteEvent`.
+      specific client connected to the same `Class.UnreliableRemoteEvent`. Has a 900 byte limit to the payload of the event, otherwise event is dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for one
       connected client specified by the required `Class.Player` argument. Since
@@ -119,9 +119,7 @@ methods:
   - name: UnreliableRemoteEvent:FireServer
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event on the
-      server from one client connected to the same `Class.UnreliableRemoteEvent`.
-
-      Note that there is a 900 byte limit to the payload of an UnreliableRemoteEvent. Events with payloads larger than this will be dropped. When this happens in RobloxStudio, we will output a log message in the output menu       indicating how many bytes the event has gone over.
+      server from one client connected to the same `Class.UnreliableRemoteEvent`. Has a 900 byte limit to the payload of the event, otherwise event is dropped.
     description: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event on the
       server from one client. Connected events receive the `Class.Player`
@@ -158,7 +156,7 @@ events:
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
       `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called on the
-      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`.
+      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`. Not guaranteed to fire if one of the above methods are called. This can occur due to packet loss or to maintain optimal engine performance.
     description: |
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
@@ -185,9 +183,7 @@ events:
     summary: |
       Fires from a `Class.Script` when
       `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
-      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`.
-
-      Note that due to the unreliable nature of UnreliableRemoteEvents it is not guaranteed that the signal will fire if you call one of FireClient(), FireAllClients() or FireSever(). This can occur due to packet loss or to       maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`. Not guaranteed to fire if the above method is called. This can occur due to packet loss or to maintain optimal engine performance.
     description: |
       Fires from a `Class.Script` when
       `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
