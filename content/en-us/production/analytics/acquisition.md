@@ -21,7 +21,14 @@ You can view analytics for individual or group owned experience. To view the lat
 
 ## Acquisition Sources
 
-On the acquisition dashboard, you can see the following sources:
+On the acquisition dashboard, you'll see the following charts and tables:
+
+- New users with play per source
+- New users with impressions per source
+- Home recommendations conversion rate
+- Cumulative new users funnel
+
+Here's a list of all the available acquisition sources:
 
 <table>
   <tr>
@@ -29,7 +36,7 @@ On the acquisition dashboard, you can see the following sources:
     <th>Description</th>
   </tr>
   <tr>
-    <td>Home</td>
+    <td>Home Recommendations</td>
     <td>**Recommended Experiences** section on Roblox **Home**</td>
   </tr>
   <tr>
@@ -53,6 +60,8 @@ On the acquisition dashboard, you can see the following sources:
     <td>All other traffic with unknown sources or can't be attributed, including the traffic from external sources</td>
   </tr>
 </table>
+
+<img src="../../assets/analytics/acquisition/home-recommendations.png" width= "78%" alt="Home Recommendations chart with icons."/>
 
 ## Improving Acquisition
 
