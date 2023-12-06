@@ -3,7 +3,7 @@ title: Contextual Purchases
 description: Contextual Purchases
 ---
 
-Contextual purchases are strategic events that occur outside an experience's [shop](https://create.roblox.com/docs/production/game-design/monetization-foundations) that prompt players to purchase items. Contextual purchases are designed opportunistically, operating under a "right item, right time" framework, where designers anticipate the wants of their players at key stages of the experience and provide a purchasable solution.
+**Contextual purchases** are strategic events that occur outside an experience's [shop](https://create.roblox.com/docs/production/game-design/monetization-foundations) that prompt players to purchase items. Contextual purchases are designed opportunistically, operating under a "right item, right time" framework, where designers anticipate the wants of their players at key stages of the experience and provide a purchasable solution.
 
 Approaches to contextual purchases can be divided into the following categories:
 
@@ -15,7 +15,7 @@ Approaches to contextual purchases can be divided into the following categories:
 
 ## In-Play
 
-In-play contextual purchases refer to presenting a purchase opportunity when a player is actively participating in an in-experience activity. Carefully consider the timing of any in-play contextual purchases to avoid negatively impacting a player's session.
+**In-play** contextual purchases refer to presenting a purchase opportunity when a player is actively participating in an in-experience activity. Carefully consider the timing of any in-play contextual purchases to avoid negatively impacting a player's session.
 
 [Color or Die](https://www.roblox.com/games/12931609417/Color-or-Die) does this well by presenting a contextual purchase opportunity after a player dies. In Color or Die, if a player dies they can respawn and lose a portion of their progress, or they can purchase an extra life and continue without any penalty.
 
@@ -34,7 +34,7 @@ This approach mimics the "continue countdown" option used by traditional arcade 
 
 ## Pre-Play
 
-Pre-play contextual purchases refer to presenting a purchase opportunity when a player is waiting to participate in an in-experience activity. This often occurs in instance-based experiences where gameplay occurs in isolated and repeated loops.
+**Pre-play** contextual purchases refer to presenting a purchase opportunity when a player is waiting to participate in an in-experience activity. This often occurs in instance-based experiences where gameplay occurs in isolated and repeated loops.
 
 [Doors](https://www.roblox.com/games/6516141723/DOORS) does this well by presenting players with pre-play contextual purchase opportunity before each round in the Pre-Run Shop. In _Doors_, the shop in the lobby only sells Knobs, the in-game currency, explicitly telling players that it's "used to purchase items before each run".
 
@@ -53,7 +53,7 @@ Before each run, after exiting the lobby, players enter an elevator, where they'
 
 ## Lobby
 
-Lobby contextual purchases intentionally leverage the social aspect of a lobby to incentivize players to purchase items. This is often done by having the shop be a 3D object in the experience that advertises wares, sales, and store related events to multiple players at once. This technique can be seen in [Super Striker League](https://www.roblox.com/games/3360853050/Super-Striker-League), where the lobby is frequently full of players.
+**Lobby** contextual purchases intentionally leverage the social aspect of a lobby to incentivize players to purchase items. This is often done by having the shop be a 3D object in the experience that advertises wares, sales, and store related events to multiple players at once. This technique can be seen in [Super Striker League](https://www.roblox.com/games/3360853050/Super-Striker-League), where the lobby is frequently full of players.
 
   <figure>
   <img src="../../assets/game-design/contextual-purchases/contextual-purchases-5.png" width="70%"/>
@@ -75,7 +75,7 @@ If utilizing lobby contextual purchases in your experience, ensure your players 
 
 ## Complementary
 
-Complementary contextual purchases are opportunities for players to purchase multiple items that have related effects. In [Bee Swarm Simulator](https://www.roblox.com/games/1537690962/Bee-Swarm-Simulator), players collect pollen to convert into honey. The store sells a Bee Pollen Pass, which enables players to collect twice the normal amount of pollen, and offers a Honey Speed Pass right below it, which enables players to convert pollen into honey at twice the rate.
+**Complementary** contextual purchases are opportunities for players to purchase multiple items that have related effects. In [Bee Swarm Simulator](https://www.roblox.com/games/1537690962/Bee-Swarm-Simulator), players collect pollen to convert into honey. The store sells a Bee Pollen Pass, which enables players to collect twice the normal amount of pollen, and offers a Honey Speed Pass right below it, which enables players to convert pollen into honey at twice the rate.
 
 <figure>
   <img src="../../assets/game-design/contextual-purchases/contextual-purchases-8.png" width="50%"/>
@@ -88,7 +88,7 @@ Be thoughtful about how many sales prompts you decide to use. Using this strateg
 
 ## UI
 
-Contextual cues in the UI can take a variety of forms and can be versatile tools in recommending purchases. Common UI purchase opportunities are communicated through badges, event windows, and announcements.
+Contextual cues in the **UI** can take a variety of forms and can be versatile tools in recommending purchases. Common UI purchase opportunities are communicated through badges, event windows, and announcements.
 
   <figure>
   <img src="../../assets/game-design/contextual-purchases/contextual-purchases-9.png" width="70%"/>

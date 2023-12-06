@@ -7,7 +7,7 @@ description: Content Updates
 
 <br />
 
-A _content cadence_ is the regular release of new content updates that can include items, quests, playable maps, and other content in an experience. It's a part of _live operations_ (LiveOps), the ongoing support of a live experience, which also includes experience expansions, bug fixes, and quality of life updates.
+A **content cadence** is the regular release of new content updates that can include items, quests, playable maps, and other content in an experience. It's a part of **live operations** (LiveOps), the ongoing support of a live experience, which also includes experience expansions, bug fixes, and quality of life updates.
 
 Content releases keep players engaged between larger updates and can be an essential element of a live experience's monetization strategy. Maintaining a content cadence requires developers to:
 
@@ -67,7 +67,7 @@ Seasons and holidays are also rich sources of ideas with potential for limited-t
   </figure>
 </GridContainer>
 
-The _core loop_ is a good place to start in identifying systems to support with content releases. Offering a variety of content allows developers to keep their cadence releases interesting, reduce the possibility of players becoming bored or overwhelmed by any one content type.
+The **core loop** is a good place to start in identifying systems to support with content releases. Offering a variety of content allows developers to keep their cadence releases interesting, reduce the possibility of players becoming bored or overwhelmed by any one content type.
 
 For more about core loops, see [Core Loops](../../production/game-design/core-loops.md).
 
@@ -103,7 +103,7 @@ Limited-time content is content which is available to all players but only for t
 
 ### Season Passes
 
-A _season pass_ system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most games, offering developers a straightforward framework for designing cadence releases.
+A **season pass** system, also known as a battle pass, is a combination of limited-time event and progression system in which players must complete a series of quest objectives to earn item rewards. Season passes can be adapted to most games, offering developers a straightforward framework for designing cadence releases.
 
 <figure>
     <img src="../../assets/game-design/content-update/content-update6.png" width="50%"/>

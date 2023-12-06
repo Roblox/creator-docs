@@ -27,7 +27,7 @@ To learn more about planning and creating events, see [Content Updates](content-
 
 ## Resource Planning
 
-_Resource planning_ involves balancing how virtual resources are created and how they're spent. This concept is best illustrated in the fictitious experience "_Feline Fishing Fun_", where players fish for their resources. _Feline Fishing Fun_ has the following characteristics:
+**Resource planning** involves balancing how virtual resources are created and how they're spent. This concept is best illustrated in the fictitious experience _Feline Fishing Fun_, where players fish for their resources. _Feline Fishing Fun_ has the following characteristics:
 
 - The currency used to purchase items in the shop is called Gold `(G)`.
 - Gold is earned by catching fish of various rarities and values and selling them to vendors.
@@ -48,7 +48,7 @@ If the developers launch the event without estimating the economic impact of inc
 
 ## Impact Estimation
 
-Estimating the potential impact of an event on an experience's economy is paramount to ensuring balance. A common method to gauge potential impact is through _Expected Value_ (EV) calculations.
+Estimating the potential impact of an event on an experience's economy is paramount to ensuring balance. A common method to gauge potential impact is through **Expected Value** (EV) calculations.
 
 An item's EV is defined as a predicted value of a variable, calculated as the sum of all possible values, each multiplied by the probability of its occurrence. Understanding Expected Value is critical to maintaining a balanced economy any time there is value to be gained from a probabilistically based system, such as _Feline Fishing Fun_'s fishing system.
 
@@ -76,11 +76,11 @@ While it's impossible to know exactly how many players will participate on a giv
 
 ## Resource Sinks
 
-A _resource sink_ is an economic system designed to remove resources from circulation. When designing new sources of currency, it's imperative to have plans for how to "sink" different quantities of excess currency. Common examples include:
+A **resource sink** is an economic system designed to remove resources from circulation. When designing new sources of currency, it's imperative to have plans for how to "sink" different quantities of excess currency. Common examples include:
 
 - Special event cosmetic items, like limited time golden accessories.
 - A sequential event that requires the spending of currency earned in the event prior.
-- An _Event Shop_ that appears during events that grant a small benefit to players who spend currency while the event is ongoing.
+- An **event shop** that appears during events that grant a small benefit to players who spend currency while the event is ongoing.
 
 The safest solution to safeguard an experience's economy is to have an event generate a unique event currency that is only used to purchase items from a special event shop. This ensures that the experience's main economy remains untouched.
 
