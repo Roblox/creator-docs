@@ -13,12 +13,12 @@ A game designer's role is to create an engaging experience for players, retain t
 
 <GridContainer numColumns="2">
   <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Subscription Design</figcaption>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/dXqZC4x2Vn8?si=CdkQvEY085pWO3iS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Onboarding Techniques</figcaption>
   </figure>
   <figure>
-  <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Monetization Metrics</figcaption>
+    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/kumeLD2TtRM?si=2nsTV0pia-HxwBPa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Subscription Design</figcaption>
   </figure>
 </GridContainer>
 
@@ -27,12 +27,12 @@ A game designer's role is to create an engaging experience for players, retain t
 <GridContainer numColumns="2">
 
   <figure>
+  <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <figcaption>Sketch Series: Subscription Design</figcaption>
+  </figure>
+ <figure>
       <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <figcaption>Sketch Series: Retention Metrics</figcaption>
-  </figure>
-  <figure>
-    <iframe width="432" height="243" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Sketch Series: Engagement Metrics</figcaption>
   </figure>
 </GridContainer>
 
@@ -45,6 +45,7 @@ A game designer's role is to create an engaging experience for players, retain t
 ## Build Your Experience
 
 - [Onboarding:](../../production/game-design/onboarding.md) Learn how to design an effective onboarding experience to retain as many new players as possible, increase potential concurrent and daily active users, and improve your experience's monetization potential.
+- [Onboarding Techniques:](../../production/game-design/onboarding-techniques.md) Learn strategies to help direct players through the onboarding funnel as quickly and seamlessly as possible.
 - [Quest Design:](../../production/game-design/introduction-to-quest-design.md) Learn how to effectively design quests, achievements, and dailies to increase engagement and retention in your experiences.
 - [UI and UX Design:](../../production/game-design/ui-ux-design.md) Learn how to design user interfaces and how to design an intuitive and engaging experience.
 

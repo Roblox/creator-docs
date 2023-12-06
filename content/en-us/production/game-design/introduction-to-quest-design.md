@@ -20,7 +20,7 @@ Structurally, quests consist of three components:
 - **Quantity:** The quantity is a modifier on the objective: collect 100 apples, slay 5 monsters, visit 10 players' homes. Quantity is one way to modify the difficulty of a quest, with larger quantities requiring more effort on the players' part in order to complete the objective.
 - **Reward:** The reward is the incentive for players to complete the quest. Common rewards are experience points (XP), currencies like gold coins, consumables like health potions, and other items of value. Generally, the more challenging the quest, the more valuable the rewards, so that players feel that the effort to complete the quest is worthwhile.
 
-The structure of a quest can vary from a single task to multiple tasks, all of which a player must complete to earn the reward. They might also unlock additional quests upon completion, called a called a _quest chain_.
+The structure of a quest can vary from a single task to multiple tasks, all of which a player must complete to earn the reward. They might also unlock additional quests upon completion, called a called a **quest chain**.
 
 There are two common types of quests:
 
@@ -105,7 +105,7 @@ The longer a player plays a game, the more familiar they become with its systems
 
 ### Create Resource Drip
 
-A _resource drip_ is a source that provides small amounts of virtual resources like currencies, XP, or crafting ingredients that add up over time, allowing players to plan their play sessions and resource spending around them.
+A **resource drip** is a source that provides small amounts of virtual resources like currencies, XP, or crafting ingredients that add up over time, allowing players to plan their play sessions and resource spending around them.
 
 Earning even small amounts regularly encourages players to spend because they know that there is always more to be found. When sources are scarce or too effort-intensive, it can discourage participation in the overall economy and lead to negative impressions about the fairness of the game's design.
 
@@ -133,7 +133,7 @@ To learn more about live operations and maintaining and updating a live game, se
 
 ### Facilitate Progression
 
-A _progression system_ can help players achieve them by promoting engagement with the game's [core loop](../../production/game-design/core-loops.md). As players engage with the core systems of the game, they progress through the loop and make progress on their own goals.
+A **progression system** can help players achieve them by promoting engagement with the game's [core loop](../../production/game-design/core-loops.md). As players engage with the core systems of the game, they progress through the loop and make progress on their own goals.
 
 Quests can act as a progression system by providing a structured way to advance through the game's content. With each quest completed, players earn rewards like weapons or skill points that help to prepare them for the next challenge.
 
@@ -157,7 +157,7 @@ These alternate gameplay goals can be especially engaging for experienced player
 
 ### Deliver Narrative
 
-In addition to their objectives, quantities, and rewards, quests can optionally include _flavor text_ that provides bits of narrative, and backstory about the game's world. While not strictly necessary, especially in games without narrative elements, story-based quests can enrich the player's experience and make them feel more immersed in the game world.
+In addition to their objectives, quantities, and rewards, quests can optionally include **flavor text** that provides bits of narrative, and backstory about the game's world. While not strictly necessary, especially in games without narrative elements, story-based quests can enrich the player's experience and make them feel more immersed in the game world.
 
 In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the game's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
 

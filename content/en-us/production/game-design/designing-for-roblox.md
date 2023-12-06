@@ -11,7 +11,7 @@ Roblox is unique, and the expectations and behavior of its user base can be conf
 
 ## Designing for Behavior
 
-Each experience on Roblox exists within the _wider context_ of the platform and its catalog, with users often hopping from one experience to another with friends. Always consider the way that user behavior on Roblox reflects this when designing an experience.
+Each experience on Roblox exists within the **wider context** of the platform and its catalog, with users often hopping from one experience to another with friends. Always consider the way that user behavior on Roblox reflects this when designing an experience.
 
 <h4>First Time User Experience (FTUE)</h4>
 
@@ -23,7 +23,7 @@ Be conscious of the norms of your genre. The closer your design patterns and use
 
 Many users treat Roblox as a place to hang out with their friends. Creating an experience conducive to social interaction encourages this kind of engagement and helps to grow your audience as users invite their friends to play with them. You can even make invitations a feature of your gameplay through mechanics such as parties and trading.
 
-Encouraging social gameplay can also help with _retention_, as users can act as evergreen sources of content for each other. Many popular role-playing experiences such as [Brookhaven](https://www.roblox.com/games/4924922222/) focus on providing users with the tools they need to interact with each other within the experience, and these interactions become the spontaneous content that keeps users coming back. For these reasons, single-player experiences often find it harder to build and retain an audience on Roblox.
+Encouraging social gameplay can also help with **retention**, as users can act as evergreen sources of content for each other. Many popular role-playing experiences such as [Brookhaven](https://www.roblox.com/games/4924922222/) focus on providing users with the tools they need to interact with each other within the experience, and these interactions become the spontaneous content that keeps users coming back. For these reasons, single-player experiences often find it harder to build and retain an audience on Roblox.
 
 Users spend a lot of time and money on their avatars and typically want them to be seen by their friends and other users. A common identity across the platform is part of what makes Roblox special, so if you're going to change that for your experience, make sure you have a good reason.
 
@@ -92,11 +92,11 @@ For more information, see the following resources:
 
 <h4>UI and UX</h4>
 
-The majority of Roblox users play on a mobile device, so it's wise to design your user interfaces (_UI_) and user experience (_UX_) around mobile devices first. If you want to cater to Xbox or PC/Mac users, bind commonly used actions to shortcuts on a gamepad and specific keys on keyboards.
+The majority of Roblox users play on a mobile device, so it's wise to design your user interfaces (**UI**) and user experience (**UX**) around mobile devices first. If you want to cater to Xbox or PC/Mac users, bind commonly used actions to shortcuts on a gamepad and specific keys on keyboards.
 
 For more information, see [Input and Camera](../../input/index.md)
 
-All Roblox experiences share a few _core UI_ elements, such as the chat and player list. Test your own UI regularly to make sure you avoid conflicting with where they sit on the screen, or disable anything you don't want to show. Many experiences share similar UI patterns, such as having inventory slots along the bottom of the screen. Replicating these patterns will ensure experienced Roblox users will intuitively understand how to use your interface.
+All Roblox experiences share a few **core UI** elements, such as the chat and player list. Test your own UI regularly to make sure you avoid conflicting with where they sit on the screen, or disable anything you don't want to show. Many experiences share similar UI patterns, such as having inventory slots along the bottom of the screen. Replicating these patterns will ensure experienced Roblox users will intuitively understand how to use your interface.
 
 Use consistent icons as much as possible, and keep everything as visual as you can. Many younger users struggle to read text-heavy interfaces, and regardless of ability many younger users are more reading-averse. Visual UI is also easier to translate for international audiences.
 
