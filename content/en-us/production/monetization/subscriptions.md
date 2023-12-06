@@ -377,7 +377,7 @@ To access subscription analytics:
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
 2. Navigate to the **Monetization** tab and select **Subscriptions**.
-   <img src="../../assets/monetization/immersive-ads/immersive-ads-metrics.png" width="40%" />
+   <img src="../../assets/monetization/subscriptions/subscriptions-analytics-2.png" width="40%"/>
 
 Subscription analytics track the following metrics:
 
