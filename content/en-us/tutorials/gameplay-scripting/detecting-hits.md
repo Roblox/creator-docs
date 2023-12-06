@@ -238,5 +238,5 @@ The three chapters in this curriculum cover the experience's core gameplay loop,
 - **Victory**: What conditions would make sense to declare one player or one team the winner? Most tag-outs after some amount of time? First player to reach some number of tag-outs? In a team-based experience, could you use player performance from the previous round to balance the teams at the start of a new round?
 
 <Alert severity="info">
-We’re interested in hearing from you about your experience following the Gameplay Scripting Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Gameplay Scripting Curriculum Q&A](https://devforum.roblox.com/t/gameplay-scripting-curriculum-qa/2731802).
+We’re interested in hearing from you about your experience following the Gameplay Scripting Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Gameplay Scripting Curriculum Q&A](https://devforum.roblox.com/t/gameplay-scripting-curriculum-qa/2731896).
 </Alert>
