@@ -37,7 +37,7 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Home Recommendations</td>
-    <td>**Recommended Experiences** section on Roblox **Home**</td>
+    <td>**Recommended Experiences** section on Roblox **Home** except for **Continue** and **Friends**</td>
   </tr>
   <tr>
     <td>Friends</td>
