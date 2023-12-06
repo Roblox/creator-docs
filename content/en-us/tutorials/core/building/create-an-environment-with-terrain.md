@@ -52,7 +52,7 @@ To create the island:
 
 ## Shape the Island
 
-If you keep the island in its current shape, players would have a difficult time navigating without falling off the island. Using the Terrain Editor's **Flatten** tool, you can click and drag on the sphere to evenly level the terrain on a fixed plane, and provide players a relatively flat surface as they start your experience. While this shape initially looks unnatural, you can also use the Terrain Editor's **Sculpt** tool around the edges of the island to ensure it looks organic and realisic.
+If you keep the island in its current shape, players would have a difficult time navigating without falling off the island. Using the Terrain Editor's **Flatten** tool, you can click and drag on the sphere to evenly level the terrain on a fixed plane, and provide players a relatively flat surface as they start your experience. While this shape initially looks unnatural, you can also use the Terrain Editor's **Sculpt** tool around the edges of the island to ensure it looks organic and realistic.
 
 To shape the island:
 
@@ -88,7 +88,7 @@ To shape the island:
 
    <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Sculpt-Settings.png" width="360" />
 
-1. In the viewport, click and drag your mose around the island's edges and below the water line to make
+1. In the viewport, click and drag your mouse around the island's edges and below the water line to make
    the island look more natural.
 
    <video controls loop muted>
