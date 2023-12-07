@@ -12,7 +12,7 @@ Using the [sample laser tag experience](https://www.roblox.com/games/14817965191
 - Detecting when players press the blast button.
 - Checking whether the player can use their blaster if they recently pressed the blast button.
 - Generating blast data that tells the server who initiated the blast, where it came from, and what was each laser beam's final destination.
-- Notifiying the server of the blast data so it can perform the appropriate actions if the blast collided with another player.
+- Notifying the server of the blast data so it can perform the appropriate actions if the blast collided with another player.
 - Resetting the blaster between each blast to give the blaster enough time to cool down before it can blast again.
 
 After you complete this section, you will learn about the scripts that allow the blaster to detect when its blasts collide with other players, then deduct the corresponding amount of health according to each blaster type.
@@ -57,7 +57,7 @@ end
 
 <br></br>
 
-If you examine **ReplicatedStorage** > **Blaster** > **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribue in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
+If you examine **ReplicatedStorage** > **Blaster** > **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
 
 <video controls src="/assets/tutorials/gameplay-scripting/Blast-State-Video-State.mp4" width="100%"></video>
 
@@ -162,7 +162,7 @@ To help prevent cheating, the server must verify all data that each client sends
 1. Does the player have a character and a location within the world?
 1. After sending the blast data, has the player moved an excessive distance away from where they blasted the laser beam?
 
-This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own experience. To demonstrate how to make this judement call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the experience.
+This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own experience. To demonstrate how to make this judgment call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the experience.
 
 ```lua title="getValidatedBlastData"
 local distanceFromCharacterToOrigin = blastData.originCFrame.Position - rootPartCFrame.Position
