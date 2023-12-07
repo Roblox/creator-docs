@@ -90,7 +90,7 @@ button.Activated:Connect(onButtonActivated)
 
 ## Pickup Effects
 
-Experiences often include collectible pickups in the 3D world such as medi-kits, ammo packs, and more. If you design these pickups to remain in the world for players to grab again and again, a "cooldown" time should be added before the pickup refreshes and reactivates.
+Experiences often include collectible pickups in the 3D world such as medkits, ammo packs, and more. If you design these pickups to remain in the world for players to grab again and again, a "cooldown" time should be added before the pickup refreshes and reactivates.
 
 Similar to [detecting collisions](#detecting-collisions), you can manage the debounce state with an [instance attribute](../studio/instance-attributes.md), and visualize the cooldown period by changing the part's `Class.BasePart.Transparency|Transparency`.
 

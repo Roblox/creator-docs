@@ -274,7 +274,7 @@ If you want to test this behavior, you can press <kbd>Esc</kbd>, navigate to the
 
 It's important to note that this script doesn't actually respawn characters, it just stops them from acting and provides visual feedback to players that the **server** is respawning their characters. To demonstrate, if you examine **ServerScriptService** > **SetupHumanoid** > **setupHumanoidAsync** > **onHumanoidDied**, the script sets `PlayerState` to `TaggedOut` (essentially notifying **ReplicatedStorage** > **PlayerStateHandler**), and adds some visual indicators. The actual logic of respawning is a built-in Roblox behavior.
 
-When players respawn back into the match, they respawn at spawn locaitons. If you check the **Workspace**, all spawn locations are set to `Class.SpawnLocation.Neutral`, meaning that players randomly respawn at one of those locations. To customize the respawn time, you can add the following line to the top of `SetupHumanoid`. To learn more about this technique, see `Class.Players.RespawnTime`.
+When players respawn back into the match, they respawn at spawn locations. If you check the **Workspace**, all spawn locations are set to `Class.SpawnLocation.Neutral`, meaning that players randomly respawn at one of those locations. To customize the respawn time, you can add the following line to the top of `SetupHumanoid`. To learn more about this technique, see `Class.Players.RespawnTime`.
 
 ```lua title="SetupHumanoid"
 local Players = game:GetService("Players")
