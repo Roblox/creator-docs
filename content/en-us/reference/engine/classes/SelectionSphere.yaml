@@ -14,14 +14,14 @@ description: |
   <img src="/assets/legacy/SelectionSphere.jpg" alt="A default SelectionSphere adorned to a semi-transparent default Part"  />
   There are a few properties available to configure the appearance of the
   sphere. The outline can modified through the
-  `Class.GuiBase3d.Color3|Color3`&dagger; and
-  `Class.GuiBase3d.Transparency|Transparency`&dagger; properties. The surface can
+  `Class.GuiBase3d.Color3|Color3`; and
+  `Class.GuiBase3d.Transparency|Transparency`; properties. The surface can
   be modified through the `Class.SelectionSphere.SurfaceColor3|SurfaceColor3` and
   `Class.SelectionSphere.SurfaceTransparency|SurfaceTransparency` properties.
   Finally, rendering of the sphere can be toggled with the
-  `Class.GuiBase3d.Visible|Visible`&dagger; property.
+  `Class.GuiBase3d.Visible|Visible`; property.
 
-  &dagger; These properties come from this object's superclass,
+  ; These properties come from this object's superclass,
   `Class.GuiBase3d`.
 
   The SelectionSphere object does not capture any form of input; it is solely a
