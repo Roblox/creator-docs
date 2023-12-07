@@ -50,7 +50,7 @@ newScriptButton.Click:Connect(onNewScriptButtonClicked)
 
 Plugins start from scripts. To create a plugin, create a `Class.Script` and save it as a plugin using the [Explorer](../studio/explorer.md). For example, to create the **EmptyScriptAdder Plugin**:
 
-1. Insert a new `Class.Script` into the `Class.ServerStorage` and rename it to **EmptyScriptAdder**.
+1. Insert a new `Class.Script` inside `Class.ServerStorage` and rename it to **EmptyScriptAdder**.
 
    <img src="../assets/studio/plugins/Plugin-Empty-Script-Adder.png" width="320" />
 
