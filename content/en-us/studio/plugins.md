@@ -16,7 +16,6 @@ plugin.
 
 <img src="../assets/studio/plugins/Plugin-EnableDebugging.png" width="320"/>
 
-
 ```lua title='EmptyScriptAdder Plugin'
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
 local Selection = game:GetService("Selection")
