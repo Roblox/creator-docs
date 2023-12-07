@@ -84,7 +84,7 @@ You cannot set both a daily and lifetime budget. Budgets are paid by either your
 
 To set up an ad campaign:
 
-1. Navigate to the **Campaign** tab in the Ads Manager and click the **CREATE** button. The **Campaign** window displays.
+1. Navigate to the **Manage Ads** tab in the Ads Manager and click the **CREATE** button. The **Campaign** window displays.
 
    <img src="../../assets/promotion/ads-manager/Campaign-Create.png" width="780" />
 

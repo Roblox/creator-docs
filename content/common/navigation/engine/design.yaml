@@ -12,6 +12,8 @@ navigation:
   - heading: Build Your Experience
   - title: Onboarding
     path: /production/game-design/onboarding
+  - title: Onboarding Techniques
+    path: /production/game-design/onboarding-techniques
   - title: Quest Design
     path: /production/game-design/introduction-to-quest-design
   - title: UI and UX
