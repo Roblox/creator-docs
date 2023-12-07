@@ -34,7 +34,7 @@ Taken together, these components can foster a thriving economy within your exper
 
 <br />
 
-_Items_ are individual pieces of content available to earn or purchase. The essence of monetization can be represented in three basic questions:
+**Items** are individual pieces of content available to earn or purchase. The essence of monetization can be represented in three basic questions:
 
 - What is being sold?
 - Where is it being sold?
@@ -77,7 +77,7 @@ They can then be further divided into categories of utility:
 </figure>
 <br />
 
-The _shop_ is where players go to enhance and personalize their experience through the purchasing of virtual items. The shop should be as interesting and intentionally designed as other parts of your experience.
+The **shop** is where players go to enhance and personalize their experience through the purchasing of virtual items. The shop should be as interesting and intentionally designed as other parts of your experience.
 
 The shop is one of the first places players start to learn more about an experience's economy and its variety of content, and serves as an information hub about current, new, and upcoming content. It also provides feedback for you to learn what type of purchasable content your players enjoy. A good shop is:
 
@@ -130,7 +130,7 @@ New content and item updates invites players back to the store to see what's new
 
 <br />
 
-_Merchandising_ is how players become aware of what's being sold in the shop. Merchandising is how you:
+**Merchandising** is how players become aware of what's being sold in the shop. Merchandising is how you:
 
 - Attract attention
 - Communicate value
@@ -231,7 +231,7 @@ Bundles are a great way to package up items that go together, whether it's a gro
 
 <br />
 
-The _starter pack_ is a limited time purchase option presented to new players who first join an experience. It's a player's first look at the items in the shop the developer believes are relevant to early gameplay. It's also a new player's first interaction with Robux exchange rates and pricing.
+The **starter pack** is a limited time purchase option presented to new players who first join an experience. It's a player's first look at the items in the shop the developer believes are relevant to early gameplay. It's also a new player's first interaction with Robux exchange rates and pricing.
 
 The starter pack can give new players a positive impression of the overall monetization strategy and provide key contextual information needed to understand the experience. Keep in mind that you're asking players for money very soon after their initial joining. Take care to begin building a customer relationship that ensures your players will derive an obvious benefit from their first purchase.
 
@@ -277,7 +277,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 
 <figure>
     <img src="../../assets/game-design/monetization-foundations/monetization-foundation-17.png" width="70%"/>
-    <figcaption>Price calculation in *_Sword Fighters Simulator_*</figcaption>
+    <figcaption>Price calculation in _Sword Fighters Simulator_</figcaption>
   </figure>
 
 ## Season Passes
@@ -288,7 +288,7 @@ The starter pack should be merchandised as a special deal using price calculatio
 </figure>
 <br />
 
-_Season passes_ are limited-time, quest-based progression systems that are part of a game's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season". While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses.
+**Season passes** are limited-time, quest-based progression systems that are part of a game's content cadence. Players complete quest objectives to earn rewards for the duration of the pre-defined period of time or "season". While similar in name, season passes are not game passes. Game passes are one-time purchases that confer gameplay bonuses.
 
 To learn how to implement game passes into your experiences, see the article on [game passes](../../production/monetization/game-passes.md).
 

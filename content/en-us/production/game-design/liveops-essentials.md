@@ -18,7 +18,7 @@ Without LiveOps updates, even dedicated players lose interest. After completing 
 
 ## Content Cadence
 
-_Content cadence_, the regular release of new content in a live game, varies based on developers' capabilities, ranging from weekly to monthly releases. These frequent introductions of fresh content aim to keep players engaged between major updates.
+**Content cadence**, the regular release of new content in a live game, varies based on developers' capabilities, ranging from weekly to monthly releases. These frequent introductions of fresh content aim to keep players engaged between major updates.
 
 <figure>
     <img src="../../assets/game-design/live-ops/live-ops-1.png" width="70%"/>

@@ -7,7 +7,7 @@ description: Prototyping
 
 <br />
 
-Prototyping is an experimental design process where teams iterate and explore preliminary ideas for experiences before finalizing and working on them as features. The two common prototyping techniques when it comes to Roblox development are [paper](#paper-prototyping) and [studio](#studio-prototyping) prototyping. The primary benefits of prototyping are:
+**Prototyping** is an experimental design process where teams iterate and explore preliminary ideas for experiences before finalizing and working on them as features. The two common prototyping techniques when it comes to Roblox development are [paper](#paper-prototyping) and [studio](#studio-prototyping) prototyping. The primary benefits of prototyping are:
 
 - **Time efficiency:** The value of prototyping is the speed in which you can iterate and explore solutions to potential problems. Prototyping ensures that you detect design flaws, oversights, and unexpected technical requirements in the early stages of pre-production, instead of months into development. The time and energy required to prototype in the early stages of creating an experience is less than the time and energy required to fix costly oversights in the later stages.
 - **Finding the fun:** Prototyping ensures that the experience being designed is actually fun to play. Ideas for experiences can be abstract, but prototyping forces you to confirm that your vision can be brought to life in the way you imagine.
@@ -18,7 +18,7 @@ Prototyping is an experimental design process where teams iterate and explore pr
 
   <br />
 
-_Paper prototyping_ is the act of designing an experience using physical objects to simulate gameplay and player interaction. Examples include:
+**Paper prototyping** is the act of designing an experience using physical objects to simulate gameplay and player interaction. Examples include:
 
 - Paper
 - Board game pieces
