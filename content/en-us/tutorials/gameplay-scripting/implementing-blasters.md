@@ -162,7 +162,7 @@ To help prevent cheating, the server must verify all data that each client sends
 1. Does the player have a character and a location within the world?
 1. After sending the blast data, has the player moved an excessive distance away from where they blasted the laser beam?
 
-This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own experience. To demonstrate how to make this judgement call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the experience.
+This last check involves a judgment call, and according to server latency and player movement speed, you might decide that different values are excessive for your own experience. To demonstrate how to make this judgment call, you can get a sense of the typical magnitude of positional change by adding a print statement in `getValidatedBlastData` and playtesting the experience.
 
 ```lua title="getValidatedBlastData"
 local distanceFromCharacterToOrigin = blastData.originCFrame.Position - rootPartCFrame.Position
