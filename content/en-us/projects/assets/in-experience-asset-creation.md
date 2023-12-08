@@ -67,7 +67,7 @@ PublishEvent.OnServerEvent:Connect(onUserPublish)
 
 [In-Experience Creation Demo Arena](https://www.roblox.com/games/12992503026/In-Experience-Creation-Demo-Arena) showcases an example on how you can use this feature. You can join the demo to walk through the in-experience creation workflow as a user and access the place file using the **Edit&nbsp;in&nbsp;Studio** option to reference the design.
 
-<img src="../../assets/misc/In-Experience-Creation-Place.jpg" width="90%" alt="Edit in Studio option from the demo experience's main page" />
+<img src="../../assets/misc/In-Experience-Creation-Place.png" width="780" alt="Edit in Studio option from the demo experience's main page" />
 
 ## Post-Creation and Attribution
 

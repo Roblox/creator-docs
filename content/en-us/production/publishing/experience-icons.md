@@ -33,21 +33,21 @@ To upload an experience icon:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Click on the experience you want to upload an icon for. The experience's **Overview** page displays.
-1. In the left-hand navigation, select **Places**.
+1. In the left-hand navigation, under **Configure**, select **Places**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Places-No-Icon.png" width="312" alt="Places button indicated for an experience on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Places-No-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-1. Click the **start place** marked with a star icon. If the experience contains only one place, it will be the only option.
+1. Click the **start place** marked with a star icon (if the experience contains only one place, it will be the only option). The place's **Basic Settings** page displays.
 
-   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="720" alt="Start place tile indicated in Places display on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
 1. In the place's left-hand navigation menu, select **Icon**.
 
-   <img src="../../assets/creator-dashboard/Place-Menu-Icon.png" width="312" alt="Icon button indicated for a place on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Place-Nav-Icon.png" width="330" alt="Icon button indicated for a place on the Creator Dashboard" />
 
 1. Set the media type to **Image** and click the **CHANGE** button. Then, from the file browser, select and confirm the image you want to use as the icon. Note that all icon images must pass [moderation](../../projects/assets/index.md#asset-moderation) before they appear to others on the Roblox platform.
 
-1. If the preview icon appears as you expect, click **SAVE&nbsp;CHANGES**.
+1. If the preview icon appears as you expect, click **Save Changes**.
 
    <img src="../../assets/creator-dashboard/Upload-Icon-Image.png" width="600" alt="Icon preview on the Creator Dashboard" />
 

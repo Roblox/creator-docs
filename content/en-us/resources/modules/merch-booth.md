@@ -160,7 +160,7 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
 
 1. Click the **&ctdot;** button for a pass and select **Copy Asset ID**.
 
-   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="360" />
+   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.GamePass` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are passes. By default, items will appear in the catalog view in alphabetical order, but sorting can be customized via [setCatalogSort](#setcatalogsort).
 
@@ -216,7 +216,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
 
 1. Click the **&ctdot;** button for a product and select **Copy Asset ID**.
 
-   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="360" />
+   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
 
 1. Paste each copied ID into a comma-delimited list within the `items` table **and** include `Enum.InfoType.Product` as the second parameter for [addItemAsync](#additemasync) to indicate that the items are developer products. By default, items appear in the catalog view in alphabetical order, but you can customize sorting using [setCatalogSort](#setcatalogsort).
 

@@ -117,9 +117,9 @@ For the bot to locate the PII data requested by users for deletion, obtain the f
 - The **Universe ID**, the unique identifier of your experience.
 - The **Start Place ID**, the unique identifier of the start place of an experience.
 
-To obtain these identifiers, open the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Place) page on **Creator Dashboard**. Then select an experience and copy the **Universe&nbsp;ID** and **Start&nbsp;Place&nbsp;ID**.
+To obtain these identifiers, open the [Creations](https://create.roblox.com/dashboard/creations?activeTab=Place) page on **Creator Dashboard**. Then select an experience and copy the **Universe ID** and **Start Place ID**.
 
-<img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID-Start-Place-ID.png" width="420" alt="Interface showing Universe ID and Start Place ID in experience context menu" />
+<img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID-Start-Place-ID.png" width="420" alt="Copy Universe ID and Copy Start Place ID options from Creator Dashboard" />
 
 ## Adding Scripts
 

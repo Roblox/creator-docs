@@ -277,13 +277,13 @@ When you're ready to showcase your experience, you can **publish** it to allow o
 
 1. Leave the other fields as their defaults, then click the blue **Create** button near the bottom of the window.
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
-1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make&nbsp;Public**.
+1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make Public**.
 
-   <img src="../../assets/getting-started/Creator-Dashboard-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
 
-1. Hover over the tile again, click the **&ctdot;** button, and select **Copy&nbsp;URL**.
+1. Hover over the tile again, click the **&ctdot;** button, and select **Copy URL**.
 
-   <img src="../../assets/getting-started/Creator-Dashboard-Copy-URL.png" width="420" alt="Copy URL option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-URL.png" width="420" alt="Copy URL option from Creator Dashboard" />
 
 1. Share the copied URL with others via social media or similar, as a direct link to your experience's landing page featuring a **play** button.
 

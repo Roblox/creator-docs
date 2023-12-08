@@ -111,9 +111,9 @@ By default, the invite notification that friends receive contains the sender's `
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. Similar to [badges](../../production/publishing/badges.md), notification strings are tied to a **specific experience**. Locate that experience's thumbnail and click on it.
-1. In the left column, click **Notifications**.
+1. In the left column, under **Engagement**, click **Notifications**.
 
-   <img src="../../assets/creator-dashboard/Details-Menu-Notifications.png" width="340" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Notifications.png" width="330" />
 
 1. In the center region, click the **Create a Notification String** button.
 
