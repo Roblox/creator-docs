@@ -3,7 +3,7 @@ title: Acquisition
 description: Explains how to interpret and improve acquisition metrics for your experience.
 ---
 
-**Acquisition** measures where new users are coming from and how well they convert.
+**Acquisition** measures where new and returning users are coming from and how well they convert.
 
 <Alert severity="info">
 Make sure you have an experience with good [Retention](../../production/analytics/retention.md) and [Engagement](../../production/analytics/engagement.md) before driving too many new users to it.
@@ -25,6 +25,8 @@ On the acquisition dashboard, you'll see the following charts and tables:
 
 - New users with play per source
 - New users with impressions per source
+- Returning users with plays per source
+- Returning users with impressions per source
 - Home recommendations conversion rate
 - Cumulative new users funnel
 
@@ -37,7 +39,11 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Home Recommendations</td>
-    <td>**Recommended Experiences** section on Roblox **Home** except for **Continue** and **Friends**</td>
+    <td>**Recommended Experiences** section on **Home**</td>
+  </tr>
+  <tr>
+    <td>Home Other</td>
+    <td>**Continue Play** and **Favorites** on **Home**</td>
   </tr>
   <tr>
     <td>Friends</td>
