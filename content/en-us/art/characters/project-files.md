@@ -51,7 +51,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/RthroMannequin_With-Cages.fbx" download>RthroMannequin_With-Cages.fbx</a></td>
-    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing designto use in Studio or your modeling application. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+    <td>An [Rthro Normal](../../art/characters/specifications.md#normal) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design to use in Studio or your modeling application. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/RthroSlenderMannequin.fbx" download>RthroSlenderMannequin.fbx</a></td>

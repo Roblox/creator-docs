@@ -32,7 +32,7 @@ Because you eventually want to merge into the `main` branch, use it as the basis
    cd creator-docs
    ```
 
-1. Then switch to the `main` branch (if you're not aleady on it):
+1. Then switch to the `main` branch (if you're not already on it):
 
    ```shell
    git checkout main
