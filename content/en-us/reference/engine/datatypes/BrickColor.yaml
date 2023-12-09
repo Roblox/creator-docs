@@ -14,8 +14,8 @@ description: |
   workspace.Part.BrickColor = BrickColor.new("Pastel Blue")
   -- By numerical index
   workspace.Part.BrickColor = BrickColor.new(11)
-  -- By RGB values
-  workspace.Part.BrickColor = BrickColor.new(128, 187, 219)
+  -- By RGB Color3 values 0-1
+  workspace.Part.BrickColor = BrickColor.new(0.502, 0.733, 0.859)
   ```
 
   The following table is the list of available brick colors.
