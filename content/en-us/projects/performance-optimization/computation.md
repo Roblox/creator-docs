@@ -106,6 +106,7 @@ computation to be expensive.
   - `Class.RunService.PreRender`
   - `Class.RunService.PreSimulation`
   - `Class.RunService.PostSimulation`
+  - `Class.RunService.Heartbeat`
 
 <h4>How to Mitigate</h4>
 

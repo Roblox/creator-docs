@@ -25,6 +25,7 @@ The most direct way to add frame-by-frame game tasks is through the following me
 - `Class.RunService.PreRender`
 - `Class.RunService.PreSimulation`
 - `Class.RunService.PostSimulation`
+- `Class.RunService.Heartbeat`
 
 ## Scheduler Priority
 
