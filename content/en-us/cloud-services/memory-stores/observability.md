@@ -213,9 +213,7 @@ The email alert system automatically detects and sends you alerts of memory stor
 
 When your experience triggers two types of alerts at the same time, the dashboard displays the alert header message and highlights the chart region for your attention as **Critical**.
 
-Currently, the system has four built-in alerts for memory usage and API requests.  If your experience exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance. All notification emails share the same format as the following example:
-
-<img src="../../assets/data/memory-store/Alert-Email.png" width="100%" />
+Currently, the system has four built-in alerts for memory usage and API requests.  If your experience exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance.
 
 ### Memory Usage Alerts
 

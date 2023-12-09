@@ -28,9 +28,9 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience with the place that you want to update.
-   1. Hover over the thumbnail of the target experience and click the **&ctdot;** button to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID** from the list.
+   1. Hover over the thumbnail of the target experience and click the **&ctdot;** button to display a list of options, then select **Copy Universe ID** from the list.
 
-      <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
+      <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
 
 1. Get the **Place ID** of the place that you want to update.
 

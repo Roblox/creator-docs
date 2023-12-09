@@ -27,24 +27,16 @@ To receive notifications through webhooks, you need to configure a webhook that 
 If you're setting up webhooks and handling personal data, ensure they comply with the [General Data Protection Regulation (GDPR)](https://gdpr-info.eu/).
 </Alert>
 
-To set up a webhook on the Creator Dashboard:
+To set up a webhook:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
-1. Click the dropdown menu on your account and select **Settings** from the list.
-
-   <img src="../../assets/creator-dashboard/dashboard-settings.png" width="100%" alt="Account settings on Creator Dashboard" />
-
-1. From the **SETTINGS** menu, select **Webhooks**.
-
-   <img src="../../assets/creator-dashboard/settings-menu-webhook.png" width="40%" alt="Webhooks settings on Creator Dashboard" />
-
+1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the [Creator Dashboard](https://create.roblox.com/settings/webhooks).
 1. Click the **Add Webhook** button.
-1. Complete configuration fields, include:
-   1. **Webhook URL**: Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
-   1. **Name**: Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
-   1. **Secret** (optional): Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verifying Webhook Security](#verifying-webhook-security).
-   1. **Triggers**: Choose one or more options from the list of supported triggers of events for which you want to receive notifications. Currently, the only supported event is **Right To Erasure Request** that occurs when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
-1. Click the **SAVE CHANGES** button.
+1. Complete the configuration fields:
+   1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
+   2. **Name** — Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
+   3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verifying Webhook Security](#verifying-webhook-security).
+   4. **Triggers** — Choose one or more options from the list of supported triggers of events for which you want to receive notifications. Currently, the only supported event is **Right To Erasure Request** that occurs when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
+1. Click the **Save Changes** button.
 
 <Alert severity="info">
  Currently, you can configure up to 5 webhooks in total.
@@ -82,15 +74,15 @@ For the three verified tools, you can find this information by searching in the 
 
 ## Testing Webhooks
 
-You can test whether the webhook you've configured can successfully receive notifications on **Creator Dashboard** with the following steps:
+You can test whether the webhook you've configured can successfully receive notifications on the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
-1. Navigate to the [Webhooks](https://create.roblox.com/dashboard/settings/webhooks) configuration page on **Creator Dashboard**.
-1. Select the webhook you want to test from the list of configured webhooks.
-1. Click the pencil icon next to the target webhook.
+1. Navigate to the [Webhooks](https://create.roblox.com/dashboard/settings/webhooks) configuration page.
+2. Select the webhook you want to test from the list of configured webhooks.
+3. Click the pencil icon next to the target webhook.
 
-   <img src="../../assets/creator-dashboard/example-webhook.png" width="80%" alt="The pencil icon next to an example webhook" />
+   <img src="../../assets/creator-dashboard/Configure-Webhook.png" width="780" alt="The pencil icon next to an example webhook" />
 
-1. Click the **TEST RESPONSE** button.
+4. Click the **TEST RESPONSE** button.
 
 The system then sends a notification in the `SampleNotification` type, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
 

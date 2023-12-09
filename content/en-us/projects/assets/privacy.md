@@ -78,7 +78,7 @@ You can also manually grant access to one or more assets from the experience's *
 1. Navigate to the experience's configuration page on the [Creator Dashboard][CreatorDashboardURL].
 2. In the **Configure** section, click on **Permissions**.
 
-   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Button.png" width="330" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Configure-Permissions.png" width="330" />
 
 3. Enter one or more asset IDs into the input field, separated by commas, and click the **Add** button.
 

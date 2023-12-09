@@ -3,86 +3,83 @@ title: Badges
 description: Badges are a special award you can gift users when they meet a goal within your experience.
 ---
 
-A **Badge** is a special award you can gift players when they meet a goal within your experience, such as completing a difficult objective or playing for a certain amount of time. As soon as a player receives a Badge, it displays within the **Badges** category of their inventory.
+A **badge** is a special award you can gift players when they meet a goal within your experience, such as completing a difficult objective or playing for a certain amount of time. As soon as a player receives a badge, it displays within the **Badges** category of their inventory.
 
-<img src="../../assets/publishing/badges/Inventory-Badges.png" width="60%" />
+<figure>
+<img src="../../assets/publishing/badges/Badges-Inventory.png" width="724" alt="Example badges in a player's inventory" />
+<figcaption>Example badges in a player's inventory</figcaption>
+</figure>
 
 ## Creating Badges
 
-When you're creating an image to use for your Badge, consider the following requirements:
+You can create up to 5 badges for free in a 24‑hour period (GMT) for each experience you own. If you want to create more within the 24‑hour period, each additional badge costs 100 Robux.
 
-- Use a template of **512×512 pixels**.
-- Save the image in either `.jpg`, `.png`, `.tga`, or `.bmp` format.
-- Don't include important details outside of the circular boundaries because the upload process trims and crops the final Badge into a circular image.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img alt="Good circular trimming" src="../../assets/publishing/badges/Circular-Trimming-Good.png" />
-    <figcaption>
-      <Alert severity="success">Includes all content</Alert>
-    </figcaption>
-  </figure>
-  <figure>
-    <img alt="Bad circular trimming" src="../../assets/publishing/badges/Circular-Trimming-Bad.png" />
-    <figcaption>
-      <Alert severity="error">Crops content</Alert>
-    </figcaption>
-  </figure>
-</GridContainer>
-
-You can create up to 5 Badges for free in a 24-hour period (GMT) for each experience you own. If you want to create more Badges within the 24-hour period, it costs <b>100 Robux</b> per additional Badge.
-
-To create a Badge:
+To create a badge:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. Click on the experience you want to create a Badge for. The experience's **Overview** page displays.
-1. In the left-hand navigation, select **Associated Items**. The **Associated Items** page displays for that specific experience with the Badges section open by default.
+1. Locate the associated experience, click the **&ctdot;** in the corner of its thumbnail, and select **Create Badge**.
 
-   <img src="../../assets/promotion/Associated-Items-Badges.jpg" width="50%" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Create-Badge.png" width="420" alt="Create Badge option from Creator Dashboard" />
 
-1. Click the **CREATE BADGE** button. The **Create a Badge** page displays.
-1. Click the **UPLOAD IMAGE** button. A file browser displays.
-1. Select the image you want to display as the icon, then click the **Open** button.
+1. On the create page, click the **Upload Image** button and then select/confirm the image you want to use as the badge's icon. When creating an image to use for a badge, consider the following:
+
+   - Use a template of **512×512 pixels**.
+   - The upload process trims and crops the badge image into a circular icon, so avoid putting important details outside of the circular boundaries.
+
+     <GridContainer numColumns="2">
+     <figure>
+     <img src="../../assets/publishing/badges/Circular-Trimming-Good.png" alt="Good circular trimming" />
+     <figcaption>
+     <Alert severity="success">Main content included</Alert>
+     </figcaption>
+     </figure>
+     <figure>
+     <img src="../../assets/publishing/badges/Circular-Trimming-Bad.png" alt="Bad circular trimming" />
+     <figcaption>
+     <Alert severity="error">Text content cropped</Alert>
+     </figcaption>
+     </figure>
+     </GridContainer>
+
 1. Fill in the following fields:
 
-   - **Name**: A title for your Badge.
-   - **Description**: A description of what the player can do to earn the Badge.
+   - **Name** — A title for the badge.
+   - **Description** — A description of what the player can do to earn the badge.
 
-1. Click the **CREATE Badge** button or **Purchase for 100 Robux** button if you have already created 5 Badges in a 24-hour period. The Badge displays within the **Badges** section of the **Associated Items** page, as well as the **Badges** section of the experience's main page.
+1. Click the **Create Badge** button. The new badge displays within the **Engagement**&nbsp;&rarr; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations), as well as the **Badges** section of the experience's main page.
 
-   <img src="../../assets/promotion/Create-A-Badge.jpg" width="70%" />
-
-   <img src="../../assets/publishing/badges/Badge-Created.png" width="80%" />
-
-### Locating Badge IDs
-
-A Badge ID is the unique identifier of a Badge. You need this ID when you are [scripting Badges](#scripting-badges).
-
-To locate a Badge ID:
-
-1. Navigate to the **Badges** section of an experience's **Associated Items** page.
-
-1. Hover over a Badge thumbnail and click the **&ctdot;** button. A contextual menu displays.
-
-1. Select **Copy Asset ID**. The Badge ID copies to your clipboard.
-
-   <img src="../../assets/promotion/Copy-AssetID-Badges.jpg" width="50%" />
+   <figure>
+	 <img src="../../assets/publishing/badges/Badge-Experience-Page.png" width="780" />
+	 <figcaption>Badge on experience's main page</figcaption>
+	 </figure>
 
 ## Scripting Badges
 
-Use scripting to give and keep track of Badges in your experiences. Common Badge scripting use cases include [awarding](#awarding-badges) Badges, [checking if a player has previously earned a Badge](#checking-earned-badges) in your experience, and [getting Badge information](#getting-badge-info).
+Common badge scripting workflows include [awarding badges](#awarding-badges), checking if a player has previously [earned](#checking-earned-badges) a badge in your experience, and [getting badge information](#getting-badge-info).
+
+### Locating Badge IDs
+
+A badge's ID is its unique identifier. You'll need this ID when implementing workflows such as [awarding the badge](#awarding-badges) to a player.
+
+1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the associated experience's **Badges** section under **Engagement**.
+
+   <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Badges.png" width="330" alt="Badges button indicated for an experience on the Creator Dashboard" />
+
+1. Click the **&ctdot;** button for a badge and select **Copy Asset ID**.
+
+   <img src="../../assets/creator-dashboard/Badge-Copy-Asset-ID.png" width="400" />
 
 ### Awarding Badges
 
-You can award players Badges throughout your experience by calling the **`Class.BadgeService:AwardBadge()`** function in a server-side **`Class.Script`**. **`Class.BadgeService:GetBadgeInfoAsync()`** returns properties of the Badge, including **`IsEnabled`**, which confirms whether or not the Badge can be awarded to a player. You should call this to check before awarding a Badge.
+You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadge()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player.
 
-The following script contains an example of a safe function for awarding Badges to players.
+The following is an example of a safe function for awarding badges to players.
 
 ```lua
 local BadgeService = game:GetService("BadgeService")
 
 local function awardBadge(player, badgeId)
-  -- Fetch Badge information
+  -- Fetch badge information
   local success, badgeInfo = pcall(BadgeService.GetBadgeInfoAsync, BadgeService, badgeId)
   if success then
     -- Confirm that badge can be awarded
@@ -90,37 +87,37 @@ local function awardBadge(player, badgeId)
       -- Award badge
       local awarded, errorMessage = pcall(BadgeService.AwardBadge, BadgeService, player.UserId, badgeId)
       if not awarded then
-        warn("Error while awarding Badge:", errorMessage)
+        warn("Error while awarding badge:", errorMessage)
       end
     end
   else
- 	  warn("Error while fetching Badge info!")
+ 	  warn("Error while fetching badge info!")
   end
 end
 ```
 
 ### Checking Earned Badges
 
-The following script checks when any player enters the experience, then verifies if that player owns the Badge with the [matching ID set](#locating-badge-ids) in the variable **`badgeID`**.
+The following script checks when any player enters the experience, then verifies if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `badgeID`.
 
 ```lua
 local BadgeService = game:GetService("BadgeService")
 local Players = game:GetService("Players")
 
-local BADGE_ID = 00000000  -- Change this to your Badge ID
+local BADGE_ID = 00000000  -- Change this to your badge ID
 
 local function onPlayerAdded(player)
-  -- Check if the player has the Badge
+  -- Check if the player has the badge
 	local success, hasBadge = pcall(BadgeService.UserHasBadgeAsync, BadgeService, player.UserId, badgeID)
 
   -- If there's an error, issue a warning and exit the function
 	if not success then
-		warn("Error while checking if player has Badge!")
+		warn("Error while checking if player has badge")
 		return
 	end
 
 	if hasBadge then
-		-- Handle player's Badge ownership as needed
+		-- Handle player's badge ownership as needed
 	end
 end
 
@@ -130,17 +127,16 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ### Getting Badge Info
 
-To get information about a Badge, such as its description or icon asset
-ID, use the **`Class.BadgeService:GetBadgeInfoAsync()`** function with a [**`badge ID`**](#locating-badge-ids). For example:
+To get information about a badge, such as its description or icon asset
+ID, call the `Class.BadgeService:GetBadgeInfoAsync()` method with a [badge ID](#locating-badge-ids). For example:
 
 ```lua
 local BadgeService = game:GetService("BadgeService")
 
-local BADGE_ID = 00000000  -- Change this to your Badge ID
+local BADGE_ID = 00000000  -- Change this to your badge ID
 
--- Fetch Badge information
+-- Fetch badge information
 local success, result = pcall(BadgeService.GetBadgeInfoAsync, BadgeService, BADGE_ID)
-print(success, result)
 
 -- Output the information
 if success then
@@ -149,7 +145,6 @@ if success then
 	print("Description:", result.Description)
 	print("Icon:", "rbxassetid://" .. result.IconImageId)
 else
-	warn("Error while fetching Badge info:", result)
+	warn("Error while fetching badge info:", result)
 end
-
 ```

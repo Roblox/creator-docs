@@ -55,7 +55,7 @@ end
 
 <br></br>
 
-To demonstrate this concept further, if you were to include a third blaster type with a wide, **vertical** spread, you could create a new blaster attribute, such as `spreadDirection`, then adjust the `Class.CFrame` calculation to use a different axis. For example, note the difference in the `direction` calculations in the following script below for this third blaster type.
+To demonstrate this concept further, if you were to include a third blaster type with a wide, **vertical** spread, you could create a new blaster attribute, such as `spreadDirection`, then adjust the `Datatype.CFrame` calculation to use a different axis. For example, note the difference in the `direction` calculations in the following script below for this third blaster type.
 
 ```lua
 if numLasers == 1 then
@@ -91,7 +91,7 @@ local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayD
 
 ## Cast Rays
 
-`castLaserRay()`, the second function in **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Class.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
+`castLaserRay()`, the second function in **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
 
 This information is particularly useful for first-person shooter experiences because it allows you to see when and where blasts intersect with players or the environment. For example, the following image demonstrates two rays that are casting parallel to each other. According to their point of origin and direction, Ray A misses the wall and continues until it meets its maximum distance, while Ray B collides with the wall. For more information on this process, see [Raycasting](../../workspace/raycasting.md).
 
@@ -118,7 +118,7 @@ The `Datatype.RaycastResult.Instance|Instance` value is the most critical of the
 ```lua title="castLaserRay"
 if result then
 	-- The blast hit something, check if it was a player.
-    destination = CFrame.new(result.Position, result.Position + result.Normal)
+    destination = CFrame.lookAt(result.Position, result.Position + result.Normal)
     taggedPlayer = getPlayerFromDescendant(result.Instance)
 else
 	-- The blast didn't hit anything, so its destination is
