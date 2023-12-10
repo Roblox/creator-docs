@@ -1,7 +1,6 @@
----
-title: Accessory Fitting Tool
-description: The Accessory Fitting Tool lets you adjust and test custom accessory models on different body types, animations, or custom assets.
-labels: Article,Engine,Cloud API
+acessorio
+titulo: Accessorio legal
+descriçao: esse acesorio foi feito por kakau uma menina de 7/8 anos se divirtam com o item,esse item de 32 robux vale a pena vcs me ajudam e eu tbm ajudo vcs ok?akakk
 ---
 
 The **Accessory Fitting Tool (AFT)** is a built-in Studio tool that allows you to test your custom models on multiple combinations of character bodies, animations, and accessories before generating the final `Class.Accessory` object. When testing your accessories, you can make minor fit and positional changes to ensure that you get the best result possible.
