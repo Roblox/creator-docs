@@ -681,12 +681,12 @@ functions:
         type: int
         default: 1
         summary: |
-          The starting index to unpack from.
+          The index of the first element to unpack.
       - name: j
         type: int
         default: '#list'
         summary: |
-          The number of elements to unpack.
+          The index of the last element to unpack.
     returns:
       - type: Variant
         summary: ''
