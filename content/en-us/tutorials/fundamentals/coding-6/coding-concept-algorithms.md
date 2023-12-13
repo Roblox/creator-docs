@@ -118,7 +118,7 @@ end
 ```
 
 <Alert severity="success">
-  For an optional challenge, try and figure out what are additional algorithms `pickCloths()` might use?
+  For an optional challenge, try and figure out what are additional algorithms `pickClothes()` might use?
 
 - Check the weather.
 - Check if clothes are clean
