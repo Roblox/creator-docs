@@ -1,6 +1,6 @@
 ---
 title: Else/If Practice with Giving Points
-description: Create a part that gives players points using if and else statments in Roblox Lua.
+description: Create a part that gives players points using if and else statements in Roblox Lua.
 next: /tutorials/fundamentals/coding-4/landing
 prev: /tutorials/fundamentals/coding-3/multiple-conditions
 ---
@@ -411,7 +411,7 @@ local function givePoints(player)
 		playerPoints.Value -= losePoints
 	end
 
-	-- Destroy the part, wait a second, and thne destroy the particle
+	-- Destroy the part, wait a second, and then destroy the particle
 	pointPart:Destroy()
 	
 	-- Creates a sparkles effect and destroys it

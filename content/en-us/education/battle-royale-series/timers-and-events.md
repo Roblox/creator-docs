@@ -27,7 +27,7 @@ Start by creating bindable event objects for the start and end of the match. Sin
 
 Right now, when players enter the arena, the intermission keeps restarting rather than beginning the timer. The main game loop needs to be told to stop and wait until the MatchEnd event fires before moving on to the next part of the code.
 
-Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `Connect()` like previously, call `Wait()` on MatchEnd to pause the game manager script until MatchEnd is fired. In this case, the wait function pauses the code until the game manager recieves a signal that the match ended.
+Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `Connect()` like previously, call `Wait()` on MatchEnd to pause the game manager script until MatchEnd is fired. In this case, the wait function pauses the code until the game manager receives a signal that the match ended.
 
 1. In **GameManager**, create variables for the `Events` folder and `MatchEnd` event.
 
@@ -198,7 +198,7 @@ Now that a timer is created, use the included functions `start()` and `stop()` d
    return MatchManager
    ```
 
-2. Below `timeup()`, add a function named `startTimer()` with a print statement. You'll display the timer in-game later.
+2. Below `timeUp()`, add a function named `startTimer()` with a print statement. You'll display the timer in-game later.
 
    ```lua
    -- Local Functions

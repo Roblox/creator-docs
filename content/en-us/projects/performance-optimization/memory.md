@@ -43,7 +43,7 @@ High memory usage in itself is not necessarily indicative of a problem, but some
 - A significant percentage of client crashes showing in the **Performance Dashboard**, particularly a sudden uptick that coincides with an update. Some degree of crashes are expected but you should investigate if your crash rates increase above 2-3%.
 - A crash occurs while testing on a device that you want your experience to support.
 - Your server memory usage exceeds 3GB.
-<Alert severity="info"> The curent maximum memory available to servers is 6.9GB. </Alert>
+<Alert severity="info"> The current maximum memory available to servers is 6.9GB. </Alert>
 
 There are no hard and fast values for what memory numbers are good or bad. It depends on the context of your experience and device. We recommended you identify a target device that you want to support and test with this device to determine if you have an issue.
 

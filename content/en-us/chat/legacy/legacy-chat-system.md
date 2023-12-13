@@ -15,7 +15,7 @@ You can set up the **Legacy Chat System** to enable users to quickly and easily 
 
 The chat system uses the [client-server model](../../projects/client-server.md). Server-side chat module components [ChatChannel](../../chat/legacy/server-side-chat-modules.md#chatchannel) and [ChatSpeaker](../../chat/legacy/server-side-chat-modules.md#chatspeaker) management is handled by the [ChatService](../../chat/legacy/server-side-chat-modules.md#chatservice) on the server, while the client is responsible for input and the display of messages. Communication between the server and clients is handled automatically using `Class.RemoteEvent|RemoteEvents`.
 
-The `Class.Chat` engine ervice itself is the essential storage unit for the chat system: when a Roblox place loads (either in Client or in Studio when running or playing), all of the components of the chat system are automatically loaded into `Class.Chat` service if `Class.Chat.LoadDefaultChat` is true. Legacy Chat System loads the following hierarchy:
+The `Class.Chat` engine service itself is the essential storage unit for the chat system: when a Roblox place loads (either in Client or in Studio when running or playing), all of the components of the chat system are automatically loaded into `Class.Chat` service if `Class.Chat.LoadDefaultChat` is true. Legacy Chat System loads the following hierarchy:
 
 - **ChatModules** - This `Class.Folder` is a collection of modules that are required by the **ChatServiceRunner**. All of the contents of this folder are required by the script and are used to create custom behavior on the server.
 - **ClientChatModules** - This folder contains various `Class.ModuleScript` s required by the **ChatScript**.

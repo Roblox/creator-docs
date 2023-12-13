@@ -1,6 +1,6 @@
 ---
 title: Scripting
-description: Scripting is event-driven and different for the clien and server side.
+description: Scripting is event-driven and different for the client and server side.
 ---
 
 Scripting lets you add custom, dynamic behavior to your experiences,

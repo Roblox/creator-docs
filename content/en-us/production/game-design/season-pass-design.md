@@ -205,7 +205,7 @@ Your experience's categories may look very different, depending on the systems t
 
 When presenting players with multiple missions and a time limit for completing them, it's important to consider the difficulty of the tasks. Difficulty can come from the quantity required to complete a mission as well as the tasks themselves. For example, eating 5 berries is easier than eating 25 berries, and combat is likely harder than driving a car.
 
-Like categories, you can designate easy, medium and hard difficulties for tasks and use that information to provide players with an acÍhievable set of missions for the season.
+Like categories, you can designate easy, medium and hard difficulties for tasks and use that information to provide players with an achievable set of missions for the season.
 
 - **Easy:** very quick to complete.
 - **Medium:** the baseline difficulty.

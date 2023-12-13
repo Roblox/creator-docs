@@ -120,8 +120,8 @@ end
 ```
 
 <Alert severity="success">
-<AlertTitle>Challenge - Divide pickcloths() Into Additional Algorithms</AlertTitle>
-What are additional algorithms pickCloths() might use?
+<AlertTitle>Challenge - Divide pickClothes() Into Additional Algorithms</AlertTitle>
+What are additional algorithms pickClothes() might use?
 
 - Check the weather.
 - Check if clothes are clean

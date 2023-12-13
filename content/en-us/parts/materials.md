@@ -3,7 +3,7 @@ title: Materials
 description: Materials determine objects' visual appearance and physical properties.
 comments: |
   1. Create a set of comparison images for the Terrain Details section, showing A) a default terrain voxel; B) how that same voxel looks with a custom material override; C) how that same voxel looks with TerrainDetail applied.
-  2. Completely revist Adaptive Materials section and figure out if it needs a partner article (if it warrants more content to really explain its usage).
+  2. Completely revisit Adaptive Materials section and figure out if it needs a partner article (if it warrants more content to really explain its usage).
   3. Make a video for Physical Properties showing a new ice material in application on both terrain and parts.
 ---
 

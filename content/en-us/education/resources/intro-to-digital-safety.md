@@ -51,7 +51,7 @@ _"A player is being mean. Help!"_
 
 _"Snarly805 is messaging people about giving out free robux if they go to this website."_
 
-    - **Specific and Clear** - Mentions a specific user by acocunt name and what they were doing.
+    - **Specific and Clear** - Mentions a specific user by account name and what they were doing.
 
 ## Reliable Information Online
 
@@ -95,7 +95,7 @@ Links to other websites can often be bait for scams or other harmful activities.
 
 For example, the text below is a common scam.
 
-_i'm making a game and i wanna put your roblox character in it. could you upload your roblox char texture as a decal and send me the link? here's a tutorial on youutube if you don't know how to do it._
+_i'm making a game and i wanna put your roblox character in it. could you upload your roblox char texture as a decal and send me the link? here's a tutorial on youtube if you don't know how to do it._
 
 Users would go to Youtube and follow instructions where they'd type in a browser link which had malicious code. Scammers would then gain access to accounts.
 
