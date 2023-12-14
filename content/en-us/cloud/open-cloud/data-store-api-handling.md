@@ -212,9 +212,9 @@ You can obtain the **Universe ID** of an experience with the following steps:
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 2. Find the experience with data stores that you want to access.
-3. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy&nbsp;Universe&nbsp;ID**.
+3. Click the **&ctdot;** button on the target experience's thumbnail to display a list of options, then select **Copy Universe ID**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Copy-Universe-ID.png" width="420" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
 
 ### Scopes
 

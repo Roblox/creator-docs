@@ -244,20 +244,10 @@ Changes made between auto-saves aren't published, so updating a live game still 
 
 ## Reverting to Previous Versions
 
-The owners of an experience can revert changes made by other editors.
-
-1. Navigate to the experience's main page on the Roblox website.
-1. Click the **&hellip;** button to the right of the experience title and select **Configure&nbsp;this&nbsp;Place**.
-
-   <img
-   src="../assets/misc/Experience-Page-Configure-Place.png"
-   width="50%" />
-
-1. On the target page, click **Version History** in the left column.
-1. Choose an earlier version and click **Revert to this version** to roll back.
+The owners of an experience can revert changes made by other editors. See [here](../production/publishing/publishing-experiences-and-places.md#reverting-to-previous-versions) for instructions.
 
 <Alert severity="error">
-Be careful when reverting changes in this way. If anyone is currently editing a game with [Team Create](#team-create), their session could still auto-save and overwrite the revert action. To ensure that nobody else is editing the game when you revert the changes, <a href="#disabling-team-create">disable</a> [Team Create](#team-create).
+Be careful when reverting changes. If anyone is currently editing the experience with [Team Create](#team-create), their session could still auto-save and overwrite the revert action. To ensure that nobody else is editing the place when you revert the changes, [disable Team Create](#disabling-team-create).
 </Alert>
 
 ## Team Create

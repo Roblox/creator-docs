@@ -18,18 +18,18 @@ There are two types of thumbnails that you can use to market your experience:
 The **Thumbnails** page is where you perform all thumbnail-related tasks, such as [uploading](#uploading), [ordering](#ordering), and [deleting](#deleting) thumbnails.
 
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-2. Click on the experience you want to upload a thumbnail for. The experience's **Overview** page displays.
-3. In the left-hand navigation, select **Places**.
+1. Click on the experience you want to upload a thumbnail for. The experience's **Overview** page displays.
+1. In the left-hand navigation, under **Configure**, select **Places**.
 
-   <img src="../../assets/creator-dashboard/Experience-Menu-Places-No-Icon.png" width="312" alt="Places button indicated for an experience on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Places-No-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-4. Click the **start place** marked with a star icon. If the experience contains only one place, it will be the only option.
+1. Click the **start place** marked with a star icon (if the experience contains only one place, it will be the only option). The place's **Basic Settings** page displays.
 
-   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="720" alt="Start place tile indicated in Places display on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Places-Start-Place-No-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
-5. In the place's left-hand navigation menu, select **Thumbnails**.
+1. In the place's left-hand navigation menu, select **Thumbnails**.
 
-   <img src="../../assets/creator-dashboard/Place-Menu-Thumbnails.png" width="312" alt="Icon button indicated for a place on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Place-Nav-Thumbnails.png" width="330" alt="Thumbnails button indicated for a place on the Creator Dashboard" />
 
 ### Uploading
 
@@ -40,12 +40,12 @@ You can add up to 10 images or video links per experience from the **Thumbnails*
 
 When you're creating an image to upload, use a template of **1920×1080 pixels** and export it in `.jpg`, `.gif`, `.png`, `.tga`, or `.bmp` format.
 
-1. Set the media type to **Image** and click the **UPLOAD&nbsp;IMAGE** button. Then, from the file browser, select and confirm the image you want to use as the thumbnail.
+1. Set the media type to **Image** and click the **Upload Image** button. Then, from the file browser, select and confirm the image you want to use as the thumbnail.
 
-   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Upload-Image.png" width="600" />
+   <img src="../../assets/creator-dashboard/Experience-Thumbnail-Media-Type-Image.png" width="400" />
 
 1. **(Optional)** Add an **Alt Text** description of your thumbnail so it's accessible to everyone. The description should be concise and describe your thumbnail accurately enough for players to understand its context.
-1. Click the **SAVE CHANGES** button at the bottom of the page.
+1. Click the **Save Changes** button at the bottom of the page.
 
 </TabItem>
 <TabItem label="Videos">
@@ -57,24 +57,24 @@ Xbox doesn't currently support video thumbnails.
 </Alert>
 
 1. Set the media type to **Video**.
-1. In the **YouTube URL** field, enter the URL of the video that you want to display as a video thumbnail, then click the **ADD&nbsp;VIDEO** button
 
-   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Link-Video.png" width="600" />
+   <img src="../../assets/creator-dashboard/Experience-Thumbnail-Media-Type-Video.png" width="400" />
 
+1. In the **YouTube URL** field, enter the URL of the video that you want to display as a video thumbnail, then click the **Add Video** button.
 1. **(Optional)** Add an **Alt Text** description of the video so it's accessible to everyone. The description should be concise and describe the video's content accurately enough for players to understand its context.
-1. Click the **SAVE CHANGES** button.
+1. Click the **Save Changes** button.
 
 </TabItem>
 <TabItem label="Auto-Generated">
 
 Roblox can auto‑generate images from the experience itself to showcase your environment designs. Auto‑generated thumbnails are based on Studio's camera position for the most recent publish of the place.
 
-1. Set the media type to **Auto-generated image** and click the **ADD&nbsp;THUMBNAIL** button.
+1. Set the media type to **Auto-generated image** and click the **Add Thumbnail** button.
 
-   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Auto-Generated.png" width="600" />
+   <img src="../../assets/creator-dashboard/Experience-Thumbnail-Media-Type-Auto.png" width="400" />
 
 1. **(Optional)** Add an **Alt Text** description of the thumbnail so it's accessible to everyone. The description should be concise and describe the thumbnail accurately enough for players to understand its context.
-1. Click the **SAVE CHANGES** button at the bottom of the page.
+1. Click the **Save Changes** button at the bottom of the page.
 
 </TabItem>
 </Tabs>
@@ -85,9 +85,9 @@ If you [upload](#uploading) multiple thumbnails, the experience's main page cycl
 
 1. Click and hold a thumbnail's "order" icon and drag it up or down. The other thumbnails move according to the dragged thumbnail's new position.
 
-   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Order.png" width="800" />
+   <img src="../../assets/creator-dashboard/Experience-Thumbnail-Reorder.png" width="780" />
 
-1. Click the **SAVE CHANGES** button.
+1. Click the **Save Changes** button.
 
 ### Deleting
 
@@ -95,7 +95,7 @@ To delete an [uploaded](#uploading) thumbnail from the **Thumbnails** page:
 
 1. Click the "trash" icon. A popup window displays asking if you'd like to permanently delete the thumbnail.
 
-   <img src="../../assets/publishing/experience-metadata/Creator-Dashboard-Thumbnail-Delete.png" width="800" />
+   <img src="../../assets/creator-dashboard/Experience-Thumbnail-Delete.png" width="780" />
 
 1. Click the **DELETE** button to confirm the action and delete the thumbnail from the queue on the experience's main page.
 

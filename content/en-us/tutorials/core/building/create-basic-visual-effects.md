@@ -24,7 +24,7 @@ particles that add texture to the atmosphere.
 
 The first type of particle emitter the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) uses to add dynamic movement to the
 experience is a giant flare at the top of the tallest sea stack platform. As the rest of the environment
-is static, this effect becomes a focal point in the 3D space, which incentizes players to progress through the environment
+is static, this effect becomes a focal point in the 3D space, which incentivizes players to progress through the environment
 so that they can reach the final platform of the experience.
 
 To create a flare:
@@ -78,7 +78,7 @@ You can use Roblox's pre-made flare image for the `Class.ParticleEmitter.Texture
 
 `Class.ParticleEmitter.LightEmission` determines the blending of the texture's colors with the colors behind them. At `0` the textures blend normally; at `1` they blend additively so that when particles overlap, their color multiplies to be brighter. The texture provided is designed to be used with this property set to 1.
 
-Properties such as `Class.ParticleEmitter.Lifetime` require a minimum and maximum value, where Roblox chooses a random duration in seconds between the minumum and maximum each time a particle. In this case, the particles should all last 10 seconds with no variation, so both values are `10`.
+Properties such as `Class.ParticleEmitter.Lifetime` require a minimum and maximum value, where Roblox chooses a random duration in seconds between the minimum and maximum each time a particle. In this case, the particles should all last 10 seconds with no variation, so both values are `10`.
 
 To configure the basic properties of the particle emitter:
 

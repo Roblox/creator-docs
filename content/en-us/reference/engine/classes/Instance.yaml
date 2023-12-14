@@ -610,7 +610,7 @@ methods:
       than using the dot operator and almost 8 times longer than simply storing
       a reference to an object. Therefore, you should avoid calling it in
       performance-dependent code such as in tight loops or functions connected
-      to `Class.RunService.Heartbeat` and `Class.RunService.RenderStepped`.
+      to `Class.RunService.Heartbeat` and `Class.RunService.PreRender`.
       Instead, store the result in a variable, or consider using
       `Class.Instance.ChildAdded|ChildAdded` or
       `Class.Instance:WaitForChild()|WaitForChild()` to detect when a child of a
@@ -1653,7 +1653,7 @@ events:
       `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
       and `Datatype.CFrame` properties of a `Class.BasePart` change due to
       gravity. To detect changes in these properties, consider using a
-      physics-based event like `Class.RunService.Stepped` or
+      physics-based event like `Class.RunService.PreSimulation` or
       `Class.BasePart.Touched`. A while-true-do loop can also work.
 
       For "-Value" objects, this event behaves differently: it only fires when

@@ -285,11 +285,11 @@ Roblox offers several tools to import, store, and publish your assets:
 
 ## Archiving Assets
 
-To further help with organization, you can archive most asset types in the **DEVELOPMENT ITEMS** section of the [Creator Dashboard][CreatorDashboardURL].
+To further help with organization, you can archive most asset types in the **Development Items** section of the [Creator Dashboard][CreatorDashboardURL].
 
-<img src="../../assets/creator-dashboard/Creations-Development-Items-Tab.png" width="800" alt="Development Items section on the Creator Dashboard" />
+<img src="../../assets/creator-dashboard/Creations-Development-Items.png" width="780" alt="Development Items section on the Creator Dashboard" />
 
-<img src="../../assets/creator-dashboard/Archive-Asset.png" width="450" alt="Archive option for an asset on the Creator Dashboard" />
+<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="Archive option for an asset on the Creator Dashboard" />
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 
