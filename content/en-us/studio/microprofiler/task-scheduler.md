@@ -21,8 +21,10 @@ A **frame** is a unit of game logic where work is done. Each frame should perfor
 The most direct way to add frame-by-frame game tasks is through the following members of `Class.RunService`:
 
 - `Class.RunService:BindToRenderStep()`
-- `Class.RunService.RenderStepped`
-- `Class.RunService.Stepped`
+- `Class.RunServer.PreAnimation`
+- `Class.RunService.PreRender`
+- `Class.RunService.PreSimulation`
+- `Class.RunService.PostSimulation`
 - `Class.RunService.Heartbeat`
 
 ## Scheduler Priority
@@ -37,13 +39,13 @@ The task scheduler categorizes and completes tasks in the following order. Some 
 To build performant games with efficiency in mind, note the following:
 
 - **Don't connect/bind functions to the render step unless absolutely necessary.**
-  Only tasks that must be done after input but before rendering should be done in such a way, like camera movement. For strict control over order, use `Class.RunService:BindToRenderStep()|BindToRenderStep()` instead of `Class.RunService.RenderStepped|RenderStepped`.
+  Only tasks that must be done after input but before rendering should be done in such a way, like camera movement. For strict control over order, use `Class.RunService:BindToRenderStep()|BindToRenderStep()` instead of `Class.RunService.PreRender|PreRender`.
 
 - **Minimize the amount of waiting scripts.**
-  Avoid using `while wait() do end` or `while true do wait() end` constructs, since these aren't guaranteed to run exactly every frame or gameplay step. Instead, use events like `Class.RunService.Stepped|Stepped` or `Class.RunService.Heartbeat|Heartbeat`. Similarly, avoid using `Global.RobloxGlobals.spawn()` or `Global.RobloxGlobals.delay()` as they use the same internal mechanics as `Global.RobloxGlobals.wait()`. Uses of `Global.RobloxGlobals.spawn()` are generally better served with `Library.coroutine.wrap()` and `Library.coroutine.resume()` of the `Library.coroutine` library.
+  Avoid using `while wait() do end` or `while true do wait() end` constructs, since these aren't guaranteed to run exactly every frame or gameplay step. Instead, use an event like `Class.RunService.Heartbeat|Heartbeat`. Similarly, avoid using `Global.RobloxGlobals.spawn()` or `Global.RobloxGlobals.delay()` as they use the same internal mechanics as `Global.RobloxGlobals.wait()`. Uses of `Global.RobloxGlobals.spawn()` are generally better served with `Library.coroutine.wrap()` and `Library.coroutine.resume()` of the `Library.coroutine` library.
 
 - **Manage physical states carefully.**
-  `Class.RunService.Stepped|Stepped` happens **before** physics, while `Class.RunService.Heartbeat|Heartbeat` happens **after** physics. Therefore, gameplay logic that affects the physics state should be done in `Class.RunService.Stepped|Stepped`, such as setting the `Class.BasePart.Velocity|Velocity` of parts. In contrast, gameplay logic that relies on or reacts to the physics state should be handled in `Class.RunService.Heartbeat|Heartbeat`, such as reading the `Class.BasePart.Position|Position` of parts to detect when they enter defined zones.
+  `Class.RunService.PreSimulation|PreSimulation` happens **before** physics, while `Class.RunService.PostSimulation|PostSimulation` happens **after** physics. Therefore, gameplay logic that affects the physics state should be done in `Class.RunService.PreSimulation|PreSimulation`, such as setting the `Class.BasePart.Velocity|Velocity` of parts. In contrast, gameplay logic that relies on or reacts to the physics state should be handled in `Class.RunService.PostSimulation|PostSimulation`, such as reading the `Class.BasePart.Position|Position` of parts to detect when they enter defined zones.
 
-- **Motor6D transform changes should be done on the Stepped event.**
-  If you don't, `Class.Animator|Animators` will overwrite changes on the next frame. Even without an `Class.Animator`, `Class.RunService.Stepped|Stepped` is the last Lua event fired before `Class.Motor6D.Transform` is applied to part positions.
+- **Motor6D transform changes should be done on the PreSimulation event.**
+  If you don't, `Class.Animator|Animators` will overwrite changes on the next frame. Even without an `Class.Animator`, `Class.RunService.PreSimulation|PreSimulation` is the last Lua event fired before `Class.Motor6D.Transform` is applied to part positions.
