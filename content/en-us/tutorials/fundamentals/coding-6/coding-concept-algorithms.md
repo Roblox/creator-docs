@@ -121,8 +121,8 @@ end
   For an optional challenge, try and figure out what are additional algorithms `pickClothes()` might use?
 
 - Check the weather.
-- Check if clothes are clean
-- Check if clothes match
+- Check if clothes are clean.
+- Check if clothes match.
 
 </Alert>
 
