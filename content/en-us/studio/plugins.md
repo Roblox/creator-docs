@@ -153,7 +153,7 @@ Due to a bug in Studio, you'll need to select the `Class.Script` inside the
 option to publish will be disabled.
 </Alert>
 
-1. In the **Explorer** window, right-click on the plugin script you want to publish to Roblox. A contextual menu displays.
+1. In the [Explorer](../studio/explorer.md) window, right-click on the plugin script you want to publish to Roblox. A contextual menu displays.
 1. Select **Publish as Plugin**. The **Asset Configuration** window opens.
 1. **(Optional)** In the upper-left corner of the window, click the image to upload a 512&times;512 image.
 1. Fill in the following fields:
