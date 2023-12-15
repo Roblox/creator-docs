@@ -9,6 +9,8 @@ A **plugin** is an extension that adds additional features or functionality to S
 
 You can create your own plugins to improve your workflow in Studio. The following code sample is a plugin called **EmptyScriptAdder** that inserts an empty script as the child of an object or in `Class.ServerScriptService`. The following sections explain the major parts to creating this plugin.
 
+To begin, you should enable **Plugin Debugging Enabled** in the **Studio** section of Studio's settings. This will expose the `Class.PluginDebugService` in Studio which provides real-time debugging for your plugin's code and makes it easier to reload and save your plugin.
+
 ```lua title='EmptyScriptAdder Plugin'
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
 local Selection = game:GetService("Selection")
@@ -42,13 +44,24 @@ newScriptButton.Click:Connect(onNewScriptButtonClicked)
 
 Plugins start from scripts. To create a plugin, create a `Class.Script` and save it as a plugin using the [Explorer](../studio/explorer.md). For example, to create the **EmptyScriptAdder Plugin**:
 
-1. Insert a new `Class.Script` inside **ServerStorage** and rename it to **EmptyScriptAdder**.
+1. Insert a new `Class.Script` inside `Class.ServerStorage` and rename it to **EmptyScriptAdder**.
 
    <img src="../assets/studio/plugins/Plugin-Empty-Script-Adder.png" width="320" />
 
 2. Copy and paste the **EmptyScriptAdder Plugin** code into the new script.
 3. Right-click the script in the Explorer and select **Save as Local Plugin**.
-4. In the popup window, click **Save** to insert the plugin script into your local **Plugins** folder of the Studio installation. The [Output](../studio/output.md) window indicates that the plugin successfully saved and the plugin runs for the first time after you save it.
+4. In the popup window, click **Save** to insert the plugin script into your local **Plugins** folder of the Studio installation.
+5. The plugin should appear in `Class.PluginDebugService` and start running.
+
+<Alert severity="warning">
+Make sure to delete the original script in `Class.ServerStorage` and work from the
+plugin inside `Class.PluginDebugService`, otherwise you may end up applying changes to the wrong script.
+</Alert>
+
+### Reloading and Saving Changes
+
+With your `Class.Plugin` inside `Class.PluginDebugService`, you can easily update the plugin by right-clicking it and then selecting **Save and Reload Plugin** from the context menu. If you simply want to reload the plugin, for example to step through a section of code using a breakpoint without saving the plugin, you can
+alternatively select **Reload Plugin**.
 
 ### Adding a Toolbar Button
 
@@ -121,9 +134,16 @@ As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../
 
 To publish a plugin:
 
-1. In the **Explorer** window, right-click on the plugin script you want to publish to Roblox. A contextual menu displays.
-1. Select **Publish as Plugin**. The **Asset Configuration** window opens.
-1. **(Optional)** In the upper-left corner of the window, click the image to upload a 512&times;512 image.
+1. In the [Explorer](../studio/explorer.md) window, right-click on the plugin script you want to publish and select **Publish as Plugin** from the context menu.
+
+   <Alert severity="warning">
+   Currently, due to a bug in Studio, you'll need to right-click the
+   `Class.Script` object inside the `Class.Plugin` to publish to
+   Roblox. If you right-click the parent `Class.Plugin` object, the
+   option to publish will be disabled.
+   </Alert>
+
+1. **(Optional)** In the upper-left corner of the asset configuration window, click the image to upload a 512&times;512 image.
 1. Fill in the following fields:
    - **Name**: A title for your plugin.
    - **Description**: A description that describes what a potential user should expect the plugin to do.
