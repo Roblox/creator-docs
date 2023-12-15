@@ -5,7 +5,7 @@ description: Learn how to make animations in Roblox Studio with step by step tut
 
 <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_nav_button.png" width="100%" />
 
-Using Roblox Studio, we'll show you how to make an experience where you players level up by moving in real-life with their mobile device. The way players move is up to you! Whether they're swimming through the air, or dance through the tracks, the only limit is your imagation.
+Using Roblox Studio, we'll show you how to make an experience where you players level up by moving in real-life with their mobile device. The way players move is up to you! Whether they're swimming through the air, or dance through the tracks, the only limit is your imagination.
 
 Whether you're new to building in Roblox, or have created before, we have a tutorial for either experience level interested in creating animations.
 

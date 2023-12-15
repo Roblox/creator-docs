@@ -281,7 +281,7 @@ The `<T>` denotes a type that can be set to anything. The best way to visualize 
 type List<T> = {T}
 
 local Names: List<string> = {"Bob", "Dan", "Mary"}  -- Type becomes {string}
-local Fibbonacci: List<number> = {1, 1, 2, 3, 5, 8, 13}  -- Type becomes {number}
+local Fibonacci: List<number> = {1, 1, 2, 3, 5, 8, 13}  -- Type becomes {number}
 ```
 
 Generics can also have multiple substitutions inside the brackets.

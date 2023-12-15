@@ -1,6 +1,6 @@
 ---
 title: Asset Manager
-description: The Asset Manager lets you manage places and bulk inport assets into your experience.
+description: The Asset Manager lets you manage places and bulk import assets into your experience.
 ---
 
 The **Asset Manager** lets you manage [places](../../production/publishing/publishing-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md).

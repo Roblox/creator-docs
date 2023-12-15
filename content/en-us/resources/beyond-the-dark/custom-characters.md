@@ -141,13 +141,13 @@ The skinned character's mesh positions aren't updated when the Creature animates
 1. We placed the following `Class.LocalScript` in **StarterPlayer** → **StarterPlayerScripts**. This essentially runs the VFX update function.
 
    ```lua title='Local Script'
-   -- Add this snippet to an existing local script that makes Stepped
+   -- Add this snippet to an existing local script that makes PreSimulation
    -- connections
 
    local RunService = game:GetService("RunService")
    local vfx = require(workspace.VfxUpdateModule)
 
-   RunService.Stepped:Connect(vfx.updateVfx)
+   RunService.PreSimulation:Connect(vfx.updateVfx)
    ```
 
    ```lua title='Module Script'
@@ -164,7 +164,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    --
    -- To Use:
    -- A LocalScript should require this module, then connect
-   -- VfxUpdateModule.updateVfx to the RunService.Stepped event.
+   -- VfxUpdateModule.updateVfx to the RunService.PreSimulation event.
 
    local VfxUpdateModule = {}
    local CollectionService = game:GetService("CollectionService")
@@ -193,7 +193,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
    end
    print(vfxTable)
 
-   -- UPDATE - This should be linked to every client's RunService.Stepped
+   -- UPDATE - This should be linked to every client's RunService.PreSimulation
    -- Go through all models, then update all parts on the model to match the bonecframe.
    function VfxUpdateModule.updateVfx()
     for model, vfxParts in vfxTable do

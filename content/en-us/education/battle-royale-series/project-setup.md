@@ -139,7 +139,7 @@ Before creating the arena, build the lobby, where players enter the experience a
 
 The arena is where players will compete. When building the arena, you'll **graybox** the environment with simple parts and colors. A graybox environment is an approximation of the final design, so a large cylinder may be an equally sized tree in the final version.
 
-This process, common in level design, gives designers a working prototype to test and itterate with. Once the map design feels good in playtesting, graybox assets are replaced with 3D assets and terrain.
+This process, common in level design, gives designers a working prototype to test and iterate with. Once the map design feels good in playtesting, graybox assets are replaced with 3D assets and terrain.
 
 1. Create a folder named Arena. Inside, add the floor for the arena. If you're using terrain, leave the folder empty for now.
 

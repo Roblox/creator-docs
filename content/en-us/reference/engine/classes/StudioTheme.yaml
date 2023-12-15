@@ -22,12 +22,11 @@ methods:
       `Datatype.Color3` of the Studio "MainButton" when it's **disabled**, you
       can use the following code:
 
-      ````lua
-      settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainButton, Enum.StudioStyleGuideModifier.Disabled)
       ```lua
+      settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainButton, Enum.StudioStyleGuideModifier.Disabled)
+      ```
 
       See the `Enum.StudioStyleGuideColor` reference for a list of Studio elements and `Enum.StudioStyleGuideModifier` for a list of modifiers.
-      ````
     code_samples:
     parameters:
       - name: styleguideitem

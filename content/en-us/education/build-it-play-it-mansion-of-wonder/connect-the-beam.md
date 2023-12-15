@@ -58,7 +58,7 @@ The image displayed along the beam can be customized by changing its 2D texture.
    </GridContainer>
 
    <Alert severity="warning">
-   If the arrow doesn't point the correct direction, attachments may be swapped. Make sure that Attachment0 connects to PlayerAttachment and Attachment1 to GoalAttachment. Alternatively, if you're using a custom texture, you may need to mirror the image in a photo-editting program.
+   If the arrow doesn't point the correct direction, attachments may be swapped. Make sure that Attachment0 connects to PlayerAttachment and Attachment1 to GoalAttachment. Alternatively, if you're using a custom texture, you may need to mirror the image in a photo-editing program.
    </Alert>
 
 3. Modify beam properties like **Color**, **LightEmission**, and **TextureSpeed** to design something that feels eye-catching and appealing. Below is just one example.

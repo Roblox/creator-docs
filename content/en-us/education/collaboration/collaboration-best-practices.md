@@ -52,7 +52,7 @@ One way of creating a positive learning environment is to use strategies that fo
 
 ### Students Helping One Another
 
-Strategies that encourage students to work together builds indepdencencs and makes collabration feel more natural.
+Strategies that encourage students to work together build independence and make collaboration feel more natural.
 
 #### Help Students Help Themselves
 

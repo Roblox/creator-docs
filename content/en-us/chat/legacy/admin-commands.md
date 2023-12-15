@@ -146,7 +146,7 @@ function sparklesCommand(commandData)
 	-- Loop through the parameters (execute on every given player's name)
 	for index = 1, #commandData.Parameters do
 		local parameter = commandData.Parameters[index]
-		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be refering to themselves
+		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be referring to themselves
 
 		-- Use a helper function to find the player's character and add the sparkles
 		local character = Utilities:GetCharacter(parameter)
@@ -189,7 +189,7 @@ function explodeCommand(commandData)
 	end
 	for index = 1, #commandData.Parameters do
 		local parameter = tostring(commandData.Parameters[index])
-		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be refering to themselves
+		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be referring to themselves
 
 		-- Use a helper function to find the player's character and add the explosion
 		local character = Utilities:GetCharacter(parameter)

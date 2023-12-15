@@ -16,7 +16,7 @@ coins, and disables the collection of a coin if it's been recently collected.
 ## Create the Coins
 
 Before you can script anything, you need to have placeholder objects in the world to use as
-your coins. Like the sea stack platfroms you made in the previous section, the coins can be
+your coins. Like the sea stack platforms you made in the previous section, the coins can be
 simple `Class.Part` objects.
 
 To create the coins:

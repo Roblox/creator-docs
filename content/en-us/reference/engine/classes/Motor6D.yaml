@@ -9,7 +9,7 @@ description: |
   (`Class.JointInstance.Part0|Part0` and `Class.JointInstance.Part1|Part1`)
   together in an animatable way. The `Class.Motor6D.Transform|Transform`
   property determines the offset between these parts. This can be set manually
-  using `Class.RunService.Stepped` or through an `Class.Animator`.
+  using `Class.RunService.PreSimulation` or through an `Class.Animator`.
 
   Models whose parts are joined by `Class.Motor6D` are usually referred to as
   **rigs**, typically for `Class.Humanoid|Humanoids`.
@@ -68,14 +68,14 @@ properties:
 
       `Class.Motor6D` transforms are not applied immediately, unlike updating
       `Class.JointInstance.C0|C0` and `Class.JointInstance.C1|C1`, but rather as
-      a batch in a parallel job after `Class.RunService.Stepped`, immediately
+      a batch in a parallel job after `Class.RunService.PreSimulation`, immediately
       before physics steps. The deferred batch update is much more efficient
       than many immediate updates.
 
       If the `Class.Motor6D` is part of an animated model with an
       `Class.Animator`, then `Class.Motor6D.Transform` will usually be
       overwritten every frame by the `Class.Animator` after
-      `Class.RunService.PreAnimation` and before `Class.RunService.Stepped`.
+      `Class.RunService.PreAnimation` and before `Class.RunService.PreSimulation`.
     code_samples:
     type: CFrame
     tags:
