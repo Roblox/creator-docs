@@ -460,7 +460,7 @@ description: |
     <td style={{backgroundColor: "#161D32"}}></td>
     <td>Black metallic</td>
     <td>149</td>
-    <td>[0.87, 0.114, 0.197]</td>
+    <td>[0.087, 0.114, 0.197]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#ABADAC"}}></td>
