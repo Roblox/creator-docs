@@ -129,7 +129,7 @@ If you want a 3D object such as a `Class.BasePart` to rotate on its own within t
 
 		-- Update loop
 		local t = 0
-		RunService.Heartbeat:Connect(function(delta)
+		RunService.PostSimulation:Connect(function(delta)
 			t += delta
 			viewportCamera.CFrame = CFrame.Angles(0, math.rad(t * objectRotationSpeed), 0) * CFrame.new(0, 0, cameraDistance)
 		end)
