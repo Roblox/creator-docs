@@ -13,7 +13,7 @@ By default, scripts execute sequentially. If your experience has complex logic o
 
 The parallel programming model also adds safety benefits to your code. By splitting code into multiple threads, when you edit code in one thread, it doesn't affect other code running in parallel. This reduces the risk of having one bug in your code corrupting the entire experience, and minimizes the delay for users in live servers when you push an update.
 
-Adopting the parallel programming model doesn't mean to put everything in multiple threads. For example, the [Server-side Raycasting Validation](#example-server-side-raycasting-validation) sets each individual user a remote event in parallel but still requires the initial code to run serially to change global properties, which is a common pattern for parallel execution.
+Adopting the parallel programming model doesn't mean to put everything in multiple threads. For example, the [Server-side Raycasting Validation](#server-side-raycasting-validation) sets each individual user a remote event in parallel but still requires the initial code to run serially to change global properties, which is a common pattern for parallel execution.
 
 Most times you need to combine serial and parallel phases to achieve your desired output, since currently there are some operations not supported in parallel that can prevent scripts from running, such as modifying instances in parallel phases. For more information on the level of usage of APIs in parallel, see [Thread Safety](#thread-safety).
 
