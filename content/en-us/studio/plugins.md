@@ -9,12 +9,7 @@ A **plugin** is an extension that adds additional features or functionality to S
 
 You can create your own plugins to improve your workflow in Studio. The following code sample is a plugin called **EmptyScriptAdder** that inserts an empty script as the child of an object or in `Class.ServerScriptService`. The following sections explain the major parts to creating this plugin.
 
-To start, you should enable Plugin Debugging in the Studio settings, this will
-expose the `Class.PluginDebugService` in Studio which provides real-time debugging
-for your plugin's code, as well as making it easier to reload and save your
-plugin.
-
-<img src="../assets/studio/plugins/Plugin-EnableDebugging.png" width="320"/>
+To begin, you should enable **Plugin Debugging Enabled** in the **Studio** section of Studio's settings. This will expose the `Class.PluginDebugService` in Studio which provides real-time debugging for your plugin's code and makes it easier to reload and save your plugin.
 
 ```lua title='EmptyScriptAdder Plugin'
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
@@ -59,22 +54,14 @@ Plugins start from scripts. To create a plugin, create a `Class.Script` and save
 5. The plugin should appear in `Class.PluginDebugService` and start running.
 
 <Alert severity="warning">
-Make sure to delete the original script in `ServerStorage` and work from the
-plugin inside `PluginDebugService`, otherwise, you may end up applying changes
-to the wrong script.
+Make sure to delete the original script in `Class.ServerStorage` and work from the
+plugin inside `Class.PluginDebugService`, otherwise you may end up applying changes to the wrong script.
 </Alert>
 
-### Reloading and saving changes
+### Reloading and Saving Changes
 
-With the `Class.Plugin` inside `Class.PluginDebugService`, you can easily
-update your plugin by right-clicking the plugin and then clicking
-`Save and Reload Plugin`.
-
-If you simply want to reload the plugin, for example, to step through a
-section of code with a breakpoint without saving the plugin, you can
-alternatively click on `Reload Plugin`.
-
-<img src="../assets/studio/plugins/Using-PluginDebugger.png" width="320"/>
+With your `Class.Plugin` inside `Class.PluginDebugService`, you can easily update the plugin by right-clicking it and then selecting **Save and Reload Plugin** from the context menu. If you simply want to reload the plugin, for example to step through a section of code using a breakpoint without saving the plugin, you can
+alternatively select **Reload Plugin**.
 
 ### Adding a Toolbar Button
 
