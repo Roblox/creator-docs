@@ -55,7 +55,7 @@ functions:
       - type: Variant
         summary: ''
     tags:
-    code_samples:
+    codesamples:
   - name: collectgarbage
     summary: |
       Performs the specified operation of the garbage collector.
@@ -78,7 +78,7 @@ functions:
       - type: Variant
         summary: ''
     tags:
-    code_samples:
+    codesamples:
   - name: error
     summary: |
       Halts thread execution and throws an error.
@@ -614,7 +614,7 @@ functions:
         type: int
         default: 10
         summary: |
-          The numerical base to convert _arg_ into.
+          The numerical base to convert `arg` into.
     returns:
       - type: Variant
         summary: ''
@@ -669,8 +669,8 @@ functions:
     summary: |
       Returns all elements from the given list as a tuple.
     description: |
-      Returns the elements from the given table. By default, _i_ is 1 and _j_ is
-      the length of _list_, as defined by the length operator.
+      Returns the elements from the given table. By default, `i` is 1 and `j` is
+      the length of `list`, as defined by the length operator.
     parameters:
       - name: list
         type: table
