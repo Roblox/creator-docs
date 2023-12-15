@@ -10,13 +10,13 @@ deprecation_message: ''
 items:
   - name: Success
     summary: |
-      The teleport was successful!.
+      The teleport was successful.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Failure
     summary: |
-      The teleport failed for an unknown reason!.
+      The teleport failed for an unknown reason.
     value: 1
     tags: []
     deprecation_message: ''
