@@ -85,13 +85,13 @@ methods:
         type: Vector3
         default:
         summary: |
-          The size of the cast block shape.
+          The size of the cast block shape in studs. The maximum size is 512 studs.
       - name: direction
         type: Vector3
         default:
         summary: |
           Direction of the shapecast, with the magnitude representing the
-          maximum distance the shape can travel.
+          maximum distance the shape can travel. The maximum distance is 1024 studs.
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
@@ -808,7 +808,7 @@ methods:
       you're using a `Datatype.CFrame` to help create the ray components,
       consider using `Datatype.CFrame.LookVector` as the directional vector and
       multiply it by the desired length as shown in the example below. The
-      maximum length of the direction vector is 5,000 studs.
+      maximum length of the direction vector is 15,000 studs.
 
       This method does **not** use a `Datatype.Ray` object, but its origin and
       direction components can be borrowed from `Datatype.Ray.Origin` and
@@ -902,13 +902,13 @@ methods:
         type: float
         default:
         summary: |
-          The radius of the cast spherical shape in studs.
+          The radius of the cast spherical shape in studs. The maximum radius is 256 studs.
       - name: direction
         type: Vector3
         default:
         summary: |
           Direction of the shapecast, with the magnitude representing the
-          maximum distance the shape can travel.
+          maximum distance the shape can travel. The maximum distance is 1024 studs.
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
