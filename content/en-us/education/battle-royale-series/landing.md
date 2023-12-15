@@ -76,7 +76,7 @@ Create a round-based multiplayer experience where users compete to be the last p
      </tr>
      <tr>
     <td><a href="../../education/battle-royale-series/cleanup-and-reset.md">Clean Up and Reset</a></td>
-    <td>Learn how code is cleaned up to ensure that each player experiences the a continous gameplay loop after a match.</td>
+    <td>Learn how code is cleaned up to ensure that each player experiences a continuous gameplay loop after a match.</td>
     </tr>
      <tr>
     <td><a href="../../education/battle-royale-series/finishing-the-project.md">Finishing the Project</a></td>

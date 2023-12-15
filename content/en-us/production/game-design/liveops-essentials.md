@@ -118,7 +118,7 @@ LiveOps updates are also the developers' opportunity to augment and improve thei
 
 The core loop is a game's minute-to-minute gameplay. Any features added during LiveOps should be connected to the core loop, so all of the game's systems remain integrated and supportive of one another.
 
-Analytics provide valuable insights into player behavior and game health, and may indicate areas of improvement that can be targeted by an update. The creator dashboard provides analytics data and suggestions based on a game's performance. Additonally, developers should consider their own LiveOps preferences and priorities:
+Analytics provide valuable insights into player behavior and game health, and may indicate areas of improvement that can be targeted by an update. The creator dashboard provides analytics data and suggestions based on a game's performance. Additionally, developers should consider their own LiveOps preferences and priorities:
 
 - What is their vision for the game?
 - What new features and content inspire them?

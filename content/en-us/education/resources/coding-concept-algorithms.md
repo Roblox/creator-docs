@@ -120,12 +120,12 @@ end
 ```
 
 <Alert severity="success">
-<AlertTitle>Challenge - Divide pickcloths() Into Additional Algorithms</AlertTitle>
-What are additional algorithms pickCloths() might use?
+<AlertTitle>Challenge - Divide pickClothes() Into Additional Algorithms</AlertTitle>
+What are additional algorithms pickClothes() might use?
 
 - Check the weather.
-- Check if clothes are clean
-- Check if clothes match
+- Check if clothes are clean.
+- Check if clothes match.
 
 </Alert>
 
@@ -133,9 +133,9 @@ What are additional algorithms pickCloths() might use?
 <AlertTitle>Discussion - Algorithms for Game Mechanics</AlertTitle>
 What additional algorithms might be used by the main algorithm of the following game mechanics?
 
-- A timed bridge
-- A shop that sells items
-- An item that gives a random powerup
+- A timed bridge.
+- A shop that sells items.
+- An item that gives a random powerup.
 
 </Alert>
 

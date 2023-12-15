@@ -289,7 +289,7 @@ Roblox provides a variety of built-in analytics using the [Analytics Dashboard](
     <td>
       <ul>
       <li ><strong>Demographics</strong> - commonly used devices, ages</li>
-      <li ><strong>Retention and Engagemen</strong>t- Metrics such as D1, D7 retention, average session time, drop-off, etc.</li>
+      <li ><strong>Retention and Engagement</strong> - Metrics such as D1, D7 retention, average session time, drop-off, etc.</li>
       </ul>
     </td>
    </tr>

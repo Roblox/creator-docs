@@ -710,7 +710,7 @@ methods:
       local RunService = game:GetService("RunService")
       while true do
       	for i = 1, 0, -0.01 do
-      		RunService.RenderStepped:Wait()
+      		RunService.PreRender:Wait()
       		beam:SetTextureOffset(i)
       	end
       end

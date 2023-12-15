@@ -54,12 +54,12 @@ Be aware that there is a limited amount of memory available to MicroProfiler lab
 
 ### Example
 
-The code sample below connects a dummy function to the `Class.RunService.Stepped` event, which runs every frame. Anything done this often should run as efficiently as possible, so calls to debug.profilebegin and debug.profileend have been added around the code to be profiled.
+The code sample below connects a dummy function to the `Class.RunService.PreSimulation` event, which runs every frame. Anything done this often should run as efficiently as possible, so calls to debug.profilebegin and debug.profileend have been added around the code to be profiled.
 
 ```lua
 local RunService = game:GetService("RunService")
 
-local function onStepped()
+local function onPreSimulation()
 	debug.profilebegin("Hard work") -- Start profiling here with this label
 	-- Example hard work: swap two variables 200,000 times
 	local a, b = 0, 1
@@ -68,7 +68,7 @@ local function onStepped()
 	end
 	debug.profileend() -- Stop profiling here
 end
-RunService.Stepped:Connect(onStepped)
+RunService.PreSimulation:Connect(onPreSimulation)
 ```
 
 Running the game and pausing the profiler (`Ctrl+P`), the custom profiler label is visible under the Stepped label:

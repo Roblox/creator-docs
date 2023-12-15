@@ -226,7 +226,7 @@ When players move into the transition state, remove their weapons.
          weapon:Destroy()
        end
 
-       -- If theplayer has the weapon in their backpack
+       -- If the player has the weapon in their backpack
        local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
 
        if backpackWeapon then
