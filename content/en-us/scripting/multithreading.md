@@ -5,8 +5,7 @@ description: Parallel Luau runs code on multiple threads simultaneously.
 
 With the **Parallel Luau** programming model, you can run code on multiple threads simultaneously, which can improve the performance of your experience. As you expand your experience with more content, you can adopt this model to help maintain the performance and safety of your Luau scripts.
 
-<video controls width="100%" src="../assets/scripting/parallel-luau.mp4">
-</video>
+<video controls width="100%" src="../assets/scripting/parallel-luau.mp4"></video>
 
 ## Parallel Programming Model
 
@@ -18,7 +17,7 @@ Adopting the parallel programming model doesn't mean to put everything in multip
 
 Most times you need to combine serial and parallel phases to achieve your desired output, since currently there are some operations not supported in parallel that can prevent scripts from running, such as modifying instances in parallel phases. For more information on the level of usage of APIs in parallel, see [Thread Safety](#thread-safety).
 
-## Splitting Code into Multiple Threads
+## Splitting Code Into Multiple Threads
 
 To run your experience's scripts in multiple threads concurrently, you need to split them into logical chunks under different **actors** in the [data model](../projects/data-model.md). Actors are represented by `Class.Actor` instances inheriting from `Class.DataModel`. They work as units of execution isolation that distribute the load across multiple cores running simultaneously.
 
@@ -29,13 +28,13 @@ You can put actors in proper containers or use them to replace the top-level ins
 <img
   alt="An example of a Script under an Actor"
   src="../assets/scripting/scripts/actor-example.png"
-  width="20%" />
+  width="320" />
 
 For most situations, you shouldn't put an actor as a child of another actor in the data model. However, if you decide to place a script nested within multiple actors for your specific use case, the script is owned by its closest ancestor actor.
 <img
   alt="A tree of actors and scripts that shows how a script is owned by its closest actor"
   src="../assets/scripting/scripts/ActorScreenshot.png"
-  width="20%" />
+  width="320" />
 
 ### Desynchronizing Threads
 
@@ -43,11 +42,15 @@ Though putting scripts under actors grants them the capability for parallel exec
 
 Alternatively, you can use `Datatype.RBXScriptSignal:ConnectParallel()` method when you want to schedule a signal callback to immediately run your code in parallel upon triggering. You don't need to call `Library.task.desynchronize()` inside the signal callback.
 
-```lua title='Desynchronize a Thread Using RBXScriptSignal:ConnectParallel()'
-RunService.Heartbeat:ConnectParallel(function ()
-    ... -- some parallel code that computes a state update
-    task.synchronize()
-    ... -- some serial code that changes the state of instances
+```lua title='Desynchronize a Thread'
+local RunService = game:GetService("RunService")
+
+RunService.Heartbeat:ConnectParallel(function()
+	...  -- Some parallel code that computes a state update
+
+	task.synchronize()
+
+	...  -- Some serial code that changes the state of instances
 end)
 ```
 
@@ -84,22 +87,22 @@ API members have a thread safety level that indicates whether and how you can us
 	</thead>
 	<tbody>
 		<tr>
-			<td>Unsafe</td>
+			<td>**Unsafe**</td>
 			<td>Cannot be read or written in parallel.</td>
 			<td>Cannot be called in parallel.</td>
 		</tr>
 		<tr>
-			<td>Read Parallel</td>
+			<td>**Read Parallel**</td>
 			<td>Can be read but not written in parallel.</td>
 			<td>N/A</td>
 		</tr>
 		<tr>
-			<td>Local Safe</td>
+			<td>**Local Safe**</td>
 			<td>Can be used within the same Actor; can be read but not written to by other `Class.Actor|Actors` in parallel.</td>
 			<td>Can be called within the same Actor; cannot be called by other `Class.Actor|Actors` in parallel.</td>
 		</tr>
 		<tr>
-			<td>Safe</td>
+			<td>**Safe**</td>
 			<td>Can be read and written.</td>
 			<td>Can be called.</td>
 		</tr>
@@ -116,15 +119,15 @@ If an API member doesn't specify a thread safety level, by default its thread sa
 
 Under the multithreading context, you can still allow scripts in different actors to communicate with each other to exchange data, coordinate tasks, and synchronize activities. The engine supports the following mechanisms for cross-thread communication:
 
-- **Actor Messaging API** for sending messages to an actor using scripts.
-- **Shared Table** data structure for efficiently sharing a large amount of data between multiple actors on a shared state.
-- **Direct Data Model Communication** for simple communication with restrictions.
+- [Actor Messaging](#actor-messaging) API for sending messages to an actor using scripts.
+- [Shared Table](#shared-table) data structure for efficiently sharing a large amount of data between multiple actors on a shared state.
+- [Direct Data Model Communication](#direct-data-model-communication) for simple communication with restrictions.
 
 You can support multiple mechanisms to accommodate your cross-thread communication needs. For example, you can send a shared table through the Actor Messaging API.
 
-### Actor Messaging API
+### Actor Messaging
 
-The **Actor Messaging API** allows a script, either in a serial or parallel context, to send data to an actor in the same data model. Communication through this API is asynchronous, in which the sender doesn't block until the receiver receives the message.
+The **Actor Messaging** API allows a script, either in a serial or parallel context, to send data to an actor in the same data model. Communication through this API is asynchronous, in which the sender doesn't block until the receiver receives the message.
 
 When sending messages using this API, you need to define a **topic** for categorizing the message. Each message can only be sent to a single actor, but that actor can internally have multiple callbacks bound to a message. Only scripts that are descendants of an actor can receive messages.
 
@@ -141,6 +144,7 @@ The following example shows how to use `Class.Actor:SendMessage()` to define a t
 local workerActor = workspace.WorkerActor
 workerActor:SendMessage("Greeting", "Hello World!")
 workerActor:SendMessage("Greeting", "Welcome")
+
 print("Sent messages")
 ```
 
@@ -149,10 +153,12 @@ The following example shows how to use `Class.Actor:BindToMessageParallel()` to 
 ```lua title="Example Message Receiver"
 -- Get the actor this script is parented to
 local actor = script:GetActor()
+
 -- Bind a callback for the "Greeting" message topic
 actor:BindToMessageParallel("Greeting", function(greetingString)
-    print(actor.Name, "-", greetingString)
+	print(actor.Name, "-", greetingString)
 end)
+
 print("Bound to messages")
 ```
 
@@ -166,7 +172,9 @@ Sending a shared table to another actor doesn't make a copy of the data. Instead
 
 You can also facilitate communication between multiple threads directly using the data model, in which different actors can write and subsequently read properties or attributes. However, to maintain the thread-safety, scripts running in parallel generally can't write to the data model. So directly using the data model for communication comes with restrictions and may force scripts to synchronize frequently, which can impact performance of your scripts.
 
-## Example: Server-side Raycasting Validation
+## Examples
+
+### Server-Side Raycasting Validation
 
 For a fighting and battle experience, you need to enable [raycasting](../workspace/raycasting.md) for your users' weapons. With the client simulating the weapons to achieve good latency, the server has to confirm the hit, which involves doing raycasts and some amount of heuristics that compute expected character velocity, and look at past behavior.
 
@@ -222,7 +230,7 @@ end
 remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 ```
 
-## Example: Server-side Procedural Terrain Generation
+### Server-Side Procedural Terrain Generation
 
 To create a vast world for your experience, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example:
 
