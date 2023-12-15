@@ -718,7 +718,7 @@ description: |
     <td style={{backgroundColor: "#0010B0"}}></td>
     <td>Dark blue</td>
     <td>303</td>
-    <td>[0.000, 0.63, 0.691]</td>
+    <td>[0.000, 0.063, 0.691]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#2C651D"}}></td>
@@ -874,13 +874,13 @@ description: |
     <td style={{backgroundColor: "#FF98DC"}}></td>
     <td>Carnation pink</td>
     <td>330</td>
-    <td>[0.1000, 0.597, 0.863]</td>
+    <td>[1.000, 0.597, 0.863]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FF5959"}}></td>
     <td>Persimmon</td>
     <td>331</td>
-    <td>[0.1000, 0.350, 0.350]</td>
+    <td>[1.000, 0.350, 0.350]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#750000"}}></td>
@@ -916,7 +916,7 @@ description: |
     <td style={{backgroundColor: "#FF9494"}}></td>
     <td>Salmon</td>
     <td>337</td>
-    <td>[0.1000, 0.581, 0.581]</td>
+    <td>[1.000, 0.581, 0.581]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#BE6862"}}></td>
@@ -1054,7 +1054,7 @@ description: |
     <td style={{backgroundColor: "#966766"}}></td>
     <td>Copper</td>
     <td>360</td>
-    <td>[ 0.589, 0.404, 0.400]</td>
+    <td>[0.589, 0.404, 0.400]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#564236"}}></td>
@@ -1192,7 +1192,7 @@ description: |
     <td style={{backgroundColor: "#12EED4"}}></td>
     <td>Teal</td>
     <td>1018</td>
-    <td>[0.71, 0.934, 0.832]</td>
+    <td>[0.071, 0.934, 0.832]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#00FFFF"}}></td>
