@@ -232,17 +232,16 @@ remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 
 ### Server-Side Procedural Terrain Generation
 
-To create a vast world for your experience, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example:
+To create a vast world for your experience, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example.
 
 ```lua
--- Parallel execution requires the use of actors.
--- This script clones itself; the original initiates
--- the process, while the clones act as workers.
+-- Parallel execution requires the use of actors
+-- This script clones itself; the original initiates the process, while the clones act as workers
 
 local actor = script:GetActor()
 if actor == nil then
 	local workers = {}
-	for i=1, 32 do
+	for i = 1, 32 do
 		local actor = Instance.new("Actor")
 		script:Clone().Parent = actor
 		table.insert(workers, actor)
@@ -256,14 +255,14 @@ if actor == nil then
 	-- Instruct the actors to generate terrain by sending messages
 	-- In this example, actors are chosen randomly
 	task.defer(function()
-		local Rand = Random.new()
-		local seed = Rand:NextNumber()
+		local rand = Random.new()
+		local seed = rand:NextNumber()
 		
 		local sz = 10
 		for x = -sz, sz do
 			for y = -sz, sz do
 				for z = -sz, sz do
-					workers[Rand:NextInteger(1, #workers)]:SendMessage("GenerateChunk", x, y, z, seed)
+					workers[rand:NextInteger(1, #workers)]:SendMessage("GenerateChunk", x, y, z, seed)
 				end
 			end
 		end
@@ -273,44 +272,44 @@ if actor == nil then
 	return
 end
 
-function MakeNdArray(numDim, size, elemValue)
+function makeNdArray(numDim, size, elemValue)
 	if numDim == 0 then
 		return elemValue
 	end
 	local result = {}
 	for i = 1, size do
-		result[i] = MakeNdArray(numDim - 1, size, elemValue)
+		result[i] = makeNdArray(numDim - 1, size, elemValue)
 	end
 	return result
 end
 
 
 
-function GenerateVoxelsWithSeed(xd, yd, zd, seed)
-	local matEnums = { Enum.Material.CrackedLava, Enum.Material.Basalt, Enum.Material.Asphalt }
-	local materials = MakeNdArray(3, 4, Enum.Material.CrackedLava)
-	local occupancy = MakeNdArray(3, 4, 1)
+function generateVoxelsWithSeed(xd, yd, zd, seed)
+	local matEnums = {Enum.Material.CrackedLava, Enum.Material.Basalt, Enum.Material.Asphalt}
+	local materials = makeNdArray(3, 4, Enum.Material.CrackedLava)
+	local occupancy = makeNdArray(3, 4, 1)
 	
-	local Rand = Random.new()
+	local rand = Random.new()
 	
 	for x = 0, 3 do
 		for y = 0, 3 do
 			for z = 0, 3 do
 				occupancy[x + 1][y + 1][z + 1] = math.noise(xd + 0.25 * x, yd + 0.25 * y, zd + 0.25 * z)
-				materials[x + 1][y + 1][z + 1] = matEnums[Rand:NextInteger(1, #matEnums)]
+				materials[x + 1][y + 1][z + 1] = matEnums[rand:NextInteger(1, #matEnums)]
 			end
 		end
 	end
 	
-	return { materials = materials, occupancy = occupancy }
+	return {materials = materials, occupancy = occupancy}
 end
 
 -- Bind the callback to be called in parallel execution context
 actor:BindToMessageParallel("GenerateChunk", function(x, y, z, seed)
-	local voxels = GenerateVoxelsWithSeed(x, y, z, seed)
+	local voxels = generateVoxelsWithSeed(x, y, z, seed)
 	local corner = Vector3.new(x * 16, y * 16, z * 16)
 	
-	-- Currently, WriteVoxels must be called in the serial phase
+	-- Currently, WriteVoxels() must be called in the serial phase
 	task.synchronize()
 	workspace.Terrain:WriteVoxels(
 		Region3.new(corner, corner + Vector3.new(16, 16, 16)),
