@@ -184,14 +184,15 @@ The server-side script that runs under that character's `Class.Actor` connects t
 
 ```lua
 local tool = script.Parent.Parent
-local remoteEvent = Instance.new("RemoteEvent") -- Create new remote event and parent it to the tool
+
+local remoteEvent = Instance.new("RemoteEvent")  -- Create new remote event and parent it to the tool
 remoteEvent.Parent = tool
-remoteEvent.Name = "RemoteMouseEvent" -- Rename it so that the local script can look for it
-local remoteEventConnection -- Create a reference for the remote event connection
+remoteEvent.Name = "RemoteMouseEvent"  -- Rename it so that the local script can look for it
+local remoteEventConnection  -- Create a reference for the remote event connection
 
 -- Function which listens for a remote event
 local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
-    -- SERIAL: execute setup code in serial
+    -- SERIAL: Execute setup code in serial
     local character = player.Character
     -- Ignore the user's character while raycasting
     local params = RaycastParams.new()
@@ -201,7 +202,7 @@ local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
     -- PARALLEL: Perform the raycast in parallel
     task.desynchronize()
     local origin = tool.Handle.CFrame.Position
-    local epsilon = 0.01 -- Used to extend the ray slightly since the click location might be slightly offset from the object
+    local epsilon = 0.01  -- Used to extend the ray slightly since the click location might be slightly offset from the object
     local lookDirection = (1 + epsilon) * (clickLocation.Position - origin)
     local raycastResult = workspace:Raycast(origin, lookDirection, params)
     if raycastResult then
@@ -209,24 +210,23 @@ local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
         if hitPart and hitPart.Name == "block" then
             local explosion = Instance.new("Explosion")
 
-            -- SERIAL: the code below modifies state outside of the actor
+            -- SERIAL: The code below modifies state outside of the actor
             task.synchronize()
-            explosion.DestroyJointRadiusPercent = 0 -- Make the explosion non-deadly
+            explosion.DestroyJointRadiusPercent = 0  -- Make the explosion non-deadly
             explosion.Position = clickLocation.Position
 
-            -- Multiple Actors could get the same part in a ray cast and decide to destroy it
-            -- this is actually perfectly safe, but it means that we'll see two explosions at once instead of one
-            -- so we can double check that we got to this part first here.
+            -- Multiple actors could get the same part in a raycast and decide to destroy it
+            -- This is perfectly safe but it would result in two explosions at once instead of one
+            -- The following double checks that execution got to this part first
             if hitPart.Parent then
                 explosion.Parent = workspace
-                hitPart:Destroy() -- destroy it
+                hitPart:Destroy()  -- Destroy it
             end
         end
     end
 end
 
--- Connect the signal in serial initially since some setup code is not
--- able to run in parallel.
+-- Connect the signal in serial initially since some setup code is not able to run in parallel
 remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 ```
 
@@ -283,8 +283,6 @@ function makeNdArray(numDim, size, elemValue)
 	return result
 end
 
-
-
 function generateVoxelsWithSeed(xd, yd, zd, seed)
 	local matEnums = {Enum.Material.CrackedLava, Enum.Material.Basalt, Enum.Material.Asphalt}
 	local materials = makeNdArray(3, 4, Enum.Material.CrackedLava)
@@ -324,24 +322,12 @@ end)
 
 To apply the maximum benefits of parallel programming, refer to the following best practices when adding your Lua code:
 
-### Avoiding Long Computations
+- **Avoid Long Computations** — Even in parallel, long computations can block execution of other scripts and cause lag. Avoid using parallel programming to handle a large volume of long, unyielding calculations.
 
-Even in parallel, long computations can block execution of other scripts and cause lag. Avoid using parallel programming to handle a large volume of long, unyielding calculations.
+   <img src="../assets/scripting/scripts/ParallelExecutionDark.png" width="100%" alt="Diagram demonstrating how overloading the parallel execution phase can still cause lag" />
 
-<img
-  alt="A diagram demonstrating how overloading the parallel execution phase can still cause lag"
-  src="../assets/scripting/scripts/ParallelExecutionDark.png"
-  width="100%" />
+- **Use the Right Number of Actors** — For the best performance, use more `Class.Actor|Actors`. Even if the device has fewer cores than `Class.Actor|Actors`, the granularity allows for more efficient load balancing between the cores.
 
-### Using the Right Number of Actors
+   <img src="../assets/scripting/scripts/FewerVsMoreActorsDark.png" width="100%" alt="Demonstration of how using more actors balances the load across cores" />
 
-For the best performance, use more `Class.Actor|Actors`. Even if the device has fewer cores than `Class.Actor|Actors`, the granularity allows for more efficient load balancing between the cores.
-
-<img
-  alt="A demonstration of how using more Actors balances the load across cores"
-  src="../assets/scripting/scripts/FewerVsMoreActorsDark.png"
-  width="100%" />
-
-This doesn't mean you should use as many `Class.Actor|Actors` as possible. You should still divide code into `Class.Actor|Actors` based on logic units rather than breaking code with connected logic to different `Class.Actor|Actors`.
-
-For example, if you want to enable [raycasting validation](#example-server-side-raycasting-validation) in parallel, it's reasonable to use 64 `Class.Actor|Actors` and more instead of just 4, even if you're targeting 4-core systems. This is valuable for scalability of the system and allows it to distribute the work based on the capability of the underlying hardware. However, you also shouldn't use too many `Class.Actor|Actors`, which are hard to maintain.
+   This doesn't mean you should use as many `Class.Actor|Actors` as possible. You should still divide code into `Class.Actor|Actors` based on logic units rather than breaking code with connected logic to different `Class.Actor|Actors`. For example, if you want to enable [raycasting validation](#server-side-raycasting-validation) in parallel, it's reasonable to use 64 `Class.Actor|Actors` and more instead of just 4, even if you're targeting 4-core systems. This is valuable for scalability of the system and allows it to distribute the work based on the capability of the underlying hardware. However, you also shouldn't use too many `Class.Actor|Actors`, which are hard to maintain.
