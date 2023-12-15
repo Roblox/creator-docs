@@ -19,7 +19,7 @@ Before taking pictures of the experience for the thumbnail and icon, you may wan
 
 ## Create a Game Icon
 
-A **game icon** can be any image that's a good first impression of your experience when other players see it in the search or game pages. For now, use a screenshot of your world. You can always come back later and create something more in image-editting software.
+A **game icon** can be any image that's a good first impression of your experience when other players see it in the search or game pages. For now, use a screenshot of your world. You can always come back later and create something more in image-editing software.
 
 ### Get a Screenshot
 

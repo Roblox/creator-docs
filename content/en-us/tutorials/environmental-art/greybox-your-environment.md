@@ -561,7 +561,7 @@ To exactly recreate the spawn zone geometry within the sample [Environment Art -
 
 The fourth step in creating the laser tag greybox environment is to create the geometry for combat pockets in the interior of the building. This geometry makes up the majority of the playable areas in the experience because combat pockets arise from the intersections of primary lane and cross lanes, which span the entirety of the building.
 
-The instructions in this section refer to this geometry as three separate combat pockets according to their location on a top-view of the map: the left combat pocket, the middle combat pocket, and the right combat pocket. Most combat pockets include a maxiumum of three entrance or exit points to refrain from giving users choice overload as they're navigating the space.
+The instructions in this section refer to this geometry as three separate combat pockets according to their location on a top-view of the map: the left combat pocket, the middle combat pocket, and the right combat pocket. Most combat pockets include a maximum of three entrance or exit points to refrain from giving users choice overload as they're navigating the space.
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro1.jpg" width="100%"/>
 

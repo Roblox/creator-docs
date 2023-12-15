@@ -127,7 +127,7 @@ Seeing an animation play more than once can make it easier to spot changes you w
 
 ## Improving and Exporting
 
-With the keyframes created, take time to make the animation more satisfying by adding or fine-tuning frames. Below are some optional ways to imrpove animations.
+With the keyframes created, take time to make the animation more satisfying by adding or fine-tuning frames. Below are some optional ways to improve animations.
 
 ### Adding More Poses
 

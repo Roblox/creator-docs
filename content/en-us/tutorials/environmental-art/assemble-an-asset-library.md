@@ -103,7 +103,7 @@ To create `Class.SurfaceAppearance` packages that you can child to your modular 
 
 4. Select the **Albedo** texture map for the corresponding tileable texture, then the **Open** button. The file browser closes, and the **ColorMap** property updates with a new assetID.
 5. Repeat this process for the **MetalnessMap**, **NormalMap**, and **RoughnessMap** properties, selecting their respective texture maps from the file browser.
-6. In the **Explorer** window, right-click the **SurfaceAppearance** object, then select **Convert to Packag**e from the contextual menu. The **Convert to Package** dialog displays.
+6. In the **Explorer** window, right-click the **SurfaceAppearance** object, then select **Convert to Package** from the contextual menu. The **Convert to Package** dialog displays.
 
    <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" width="300" />
 
