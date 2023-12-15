@@ -55,7 +55,7 @@ functions:
       - type: Variant
         summary: ''
     tags:
-    codesamples:
+    code_samples:
   - name: collectgarbage
     summary: |
       Performs the specified operation of the garbage collector.
@@ -78,7 +78,7 @@ functions:
       - type: Variant
         summary: ''
     tags:
-    codesamples:
+    code_samples:
   - name: error
     summary: |
       Halts thread execution and throws an error.
