@@ -14,7 +14,7 @@ description: |
   workspace.Part.BrickColor = BrickColor.new("Pastel Blue")
   -- By numerical index
   workspace.Part.BrickColor = BrickColor.new(11)
-  -- By RGB Color3 values 0-1
+  -- By RGB decimal values in range of 0-1
   workspace.Part.BrickColor = BrickColor.new(0.502, 0.733, 0.859)
   ```
 
