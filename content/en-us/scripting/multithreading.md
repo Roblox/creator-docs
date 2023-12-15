@@ -192,38 +192,38 @@ local remoteEventConnection  -- Create a reference for the remote event connecti
 
 -- Function which listens for a remote event
 local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
-    -- SERIAL: Execute setup code in serial
-    local character = player.Character
-    -- Ignore the user's character while raycasting
-    local params = RaycastParams.new()
-    params.FilterType = Enum.RaycastFilterType.Exclude
-    params.FilterDescendantsInstances = { character }
+	-- SERIAL: Execute setup code in serial
+	local character = player.Character
+	-- Ignore the user's character while raycasting
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+	params.FilterDescendantsInstances = { character }
 
-    -- PARALLEL: Perform the raycast in parallel
-    task.desynchronize()
-    local origin = tool.Handle.CFrame.Position
-    local epsilon = 0.01  -- Used to extend the ray slightly since the click location might be slightly offset from the object
-    local lookDirection = (1 + epsilon) * (clickLocation.Position - origin)
-    local raycastResult = workspace:Raycast(origin, lookDirection, params)
-    if raycastResult then
-        local hitPart = raycastResult.Instance
-        if hitPart and hitPart.Name == "block" then
-            local explosion = Instance.new("Explosion")
+	-- PARALLEL: Perform the raycast in parallel
+	task.desynchronize()
+	local origin = tool.Handle.CFrame.Position
+	local epsilon = 0.01  -- Used to extend the ray slightly since the click location might be slightly offset from the object
+	local lookDirection = (1 + epsilon) * (clickLocation.Position - origin)
+	local raycastResult = workspace:Raycast(origin, lookDirection, params)
+	if raycastResult then
+		local hitPart = raycastResult.Instance
+		if hitPart and hitPart.Name == "block" then
+			local explosion = Instance.new("Explosion")
 
-            -- SERIAL: The code below modifies state outside of the actor
-            task.synchronize()
-            explosion.DestroyJointRadiusPercent = 0  -- Make the explosion non-deadly
-            explosion.Position = clickLocation.Position
+			-- SERIAL: The code below modifies state outside of the actor
+			task.synchronize()
+			explosion.DestroyJointRadiusPercent = 0  -- Make the explosion non-deadly
+			explosion.Position = clickLocation.Position
 
-            -- Multiple actors could get the same part in a raycast and decide to destroy it
-            -- This is perfectly safe but it would result in two explosions at once instead of one
-            -- The following double checks that execution got to this part first
-            if hitPart.Parent then
-                explosion.Parent = workspace
-                hitPart:Destroy()  -- Destroy it
-            end
-        end
-    end
+			-- Multiple actors could get the same part in a raycast and decide to destroy it
+			-- This is perfectly safe but it would result in two explosions at once instead of one
+			-- The following double checks that execution got to this part first
+			if hitPart.Parent then
+				explosion.Parent = workspace
+				hitPart:Destroy()  -- Destroy it
+			end
+		end
+	end
 end
 
 -- Connect the signal in serial initially since some setup code is not able to run in parallel
