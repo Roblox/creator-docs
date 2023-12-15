@@ -484,463 +484,463 @@ description: |
     <td style={{backgroundColor: "#7B2E2F"}}></td>
     <td>Dark red</td>
     <td>154</td>
-    <td>[123, 46, 47]</td>
+    <td>[0.483, 0.181, 0.185]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FFF67B"}}></td>
     <td>Tr. Flu. Yellow</td>
     <td>157</td>
-    <td>[255, 246, 123]</td>
+    <td>[1.000, 0.965, 0.483]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E1A4C2"}}></td>
     <td>Tr. Flu. Red</td>
     <td>158</td>
-    <td>[225, 164, 194]</td>
+    <td>[0.883, 0.644, 0.761]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#756C62"}}></td>
     <td>Gun metallic</td>
     <td>168</td>
-    <td>[117, 108, 98]</td>
+    <td>[0.459, 0.424, 0.385]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#97695B"}}></td>
     <td>Red flip/flop</td>
     <td>176</td>
-    <td>[151, 105, 91]</td>
+    <td>[0.593, 0.412, 0.357]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#B48455"}}></td>
     <td>Yellow flip/flop</td>
     <td>178</td>
-    <td>[180, 132, 85]</td>
+    <td>[0.706, 0.518, 0.334]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#898788"}}></td>
     <td>Silver flip/flop</td>
     <td>179</td>
-    <td>[137, 135, 136]</td>
+    <td>[0.538, 0.530, 0.534]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#D7A94B"}}></td>
     <td>Curry</td>
     <td>180</td>
-    <td>[215, 169, 75]</td>
+    <td>[0.844, 0.663, 0.295]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#F9D62E"}}></td>
     <td>Fire Yellow</td>
     <td>190</td>
-    <td>[249, 214, 46]</td>
+    <td>[0.977, 0.840, 0.181]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E8AB2D"}}></td>
     <td>Flame yellowish orange</td>
     <td>191</td>
-    <td>[232, 171, 45]</td>
+    <td>[0.910, 0.671, 0.177]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#694028"}}></td>
     <td>Reddish brown</td>
     <td>192</td>
-    <td>[105, 64, 40]</td>
+    <td>[0.412, 0.251, 0.157]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#CF6024"}}></td>
     <td>Flame reddish orange</td>
     <td>193</td>
-    <td>[207, 96, 36]</td>
+    <td>[0.812, 0.377, 0.142]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#A3A2A5"}}></td>
     <td>Medium stone grey</td>
     <td>194</td>
-    <td>[163, 162, 165]</td>
+    <td>[0.640, 0.636, 0.648]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#4667A4"}}></td>
     <td>Royal blue</td>
     <td>195</td>
-    <td>[70, 103, 164]</td>
+    <td>[0.275, 0.404, 0.644]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#23478B"}}></td>
     <td>Dark Royal blue</td>
     <td>196</td>
-    <td>[35, 71, 139]</td>
+    <td>[0.138, 0.279, 0.546]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#8E4285"}}></td>
     <td>Bright reddish lilac</td>
     <td>198</td>
-    <td>[142, 66, 133]</td>
+    <td>[0.557, 0.259, 0.522]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#635F62"}}></td>
     <td>Dark stone grey</td>
     <td>199</td>
-    <td>[99, 95, 98]</td>
+    <td>[0.389, 0.373, 0.385]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#828A5D"}}></td>
     <td>Lemon metalic</td>
     <td>200</td>
-    <td>[130, 138, 93]</td>
+    <td>[0.510, 0.542, 0.365]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E5E4DF"}}></td>
     <td>Light stone grey</td>
     <td>208</td>
-    <td>[229, 228, 223]</td>
+    <td>[0.899, 0.895, 0.875]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#B08E44"}}></td>
     <td>Dark Curry</td>
     <td>209</td>
-    <td>[176, 142, 68]</td>
+    <td>[0.691, 0.557, 0.267]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#709578"}}></td>
     <td>Faded green</td>
     <td>210</td>
-    <td>[112, 149, 120]</td>
+    <td>[0.440, 0.585, 0.471]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#79B5B5"}}></td>
     <td>Turquoise</td>
     <td>211</td>
-    <td>[121, 181, 181]</td>
+    <td>[0.475, 0.710, 0.710]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#9FC3E9"}}></td>
     <td>Light Royal blue</td>
     <td>212</td>
-    <td>[159, 195, 233]</td>
+    <td>[0.624, 0.765, 0.914]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#6C81B7"}}></td>
     <td>Medium Royal blue</td>
     <td>213</td>
-    <td>[108, 129, 183]</td>
+    <td>[0.424, 0.506, 0.718]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#904C2A"}}></td>
     <td>Rust</td>
     <td>216</td>
-    <td>[144, 76, 42]</td>
+    <td>[0.565, 0.299, 0.165]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#7C5C46"}}></td>
     <td>Brown</td>
     <td>217</td>
-    <td>[124, 92, 70]</td>
+    <td>[0.487, 0.361, 0.275]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#96709F"}}></td>
     <td>Reddish lilac</td>
     <td>218</td>
-    <td>[150, 112, 159]</td>
+    <td>[0.589, 0.440, 0.624]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#6B629B"}}></td>
     <td>Lilac</td>
     <td>219</td>
-    <td>[107, 98, 155]</td>
+    <td>[0.420, 0.385, 0.608]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#A7A9CE"}}></td>
     <td>Light lilac</td>
     <td>220</td>
-    <td>[167, 169, 206]</td>
+    <td>[0.655, 0.663, 0.808]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#CD6298"}}></td>
     <td>Bright purple</td>
     <td>221</td>
-    <td>[205, 98, 152]</td>
+    <td>[0.804, 0.385, 0.597]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E4ADC8"}}></td>
     <td>Light purple</td>
     <td>222</td>
-    <td>[228, 173, 200]</td>
+    <td>[0.895, 0.679, 0.785]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#DC9095"}}></td>
     <td>Light pink</td>
     <td>223</td>
-    <td>[220, 144, 149]</td>
+    <td>[0.863, 0.565, 0.585]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#F0D5A0"}}></td>
     <td>Light brick yellow</td>
     <td>224</td>
-    <td>[240, 213, 160]</td>
+    <td>[0.942, 0.836, 0.628]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#EBB87F"}}></td>
     <td>Warm yellowish orange</td>
     <td>225</td>
-    <td>[235, 184, 127]</td>
+    <td>[0.922, 0.722, 0.499]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FDEA8D"}}></td>
     <td>Cool yellow</td>
     <td>226</td>
-    <td>[253, 234, 141]</td>
+    <td>[0.993, 0.918, 0.553]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#7DBBDD"}}></td>
     <td>Dove blue</td>
     <td>232</td>
-    <td>[125, 187, 221]</td>
+    <td>[0.491, 0.734, 0.867]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#342B75"}}></td>
     <td>Medium lilac</td>
     <td>268</td>
-    <td>[52, 43, 117]</td>
+    <td>[0.204, 0.169, 0.459]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#506D54"}}></td>
     <td>Slime green</td>
     <td>301</td>
-    <td>[80, 109, 84]</td>
+    <td>[0.314, 0.428, 0.330]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#5B5D69"}}></td>
     <td>Smoky grey</td>
     <td>302</td>
-    <td>[91, 93, 105]</td>
+    <td>[0.357, 0.365, 0.412]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#0010B0"}}></td>
     <td>Dark blue</td>
     <td>303</td>
-    <td>[0, 16, 176]</td>
+    <td>[0.000, 0.63, 0.691]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#2C651D"}}></td>
     <td>Parsley green</td>
     <td>304</td>
-    <td>[44, 101, 29]</td>
+    <td>[0.173, 0.397, 0.114]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#527CAE"}}></td>
     <td>Steel blue</td>
     <td>305</td>
-    <td>[82, 124, 174]</td>
+    <td>[0.322, 0.487, 0.683]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#335882"}}></td>
     <td>Storm blue</td>
     <td>306</td>
-    <td>[51, 88, 130]</td>
+    <td>[0.200, 0.346, 0.510]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#102ADC"}}></td>
     <td>Lapis</td>
     <td>307</td>
-    <td>[16, 42, 220]</td>
+    <td>[0.063, 0.165, 0.863]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#3D1585"}}></td>
     <td>Dark indigo</td>
     <td>308</td>
-    <td>[61, 21, 133]</td>
+    <td>[0.240, 0.083, 0.522]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#348E40"}}></td>
     <td>Sea green</td>
     <td>309</td>
-    <td>[52, 142, 64]</td>
+    <td>[0.204, 0.557, 0.251]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#5B9A4C"}}></td>
     <td>Shamrock</td>
     <td>310</td>
-    <td>[91, 154, 76]</td>
+    <td>[0.357, 0.604, 0.299]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#9FA1AC"}}></td>
     <td>Fossil</td>
     <td>311</td>
-    <td>[159, 161, 172]</td>
+    <td>[0.624, 0.632, 0.675]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#592259"}}></td>
     <td>Mulberry</td>
     <td>312</td>
-    <td>[89, 34, 89]</td>
+    <td>[0.350, 0.134, 0.350]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#1F801D"}}></td>
     <td>Forest green</td>
     <td>313</td>
-    <td>[31, 128, 29]</td>
+    <td>[0.122, 0.502, 0.114]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#9FADC0"}}></td>
     <td>Cadet blue</td>
     <td>314</td>
-    <td>[159, 173, 192]</td>
+    <td>[0.624, 0.679, 0.753]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#0989CF"}}></td>
     <td>Electric blue</td>
     <td>315</td>
-    <td>[9, 137, 207]</td>
+    <td>[0.036, 0.538, 0.812]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#7B007B"}}></td>
     <td>Eggplant</td>
     <td>316</td>
-    <td>[123, 0, 123]</td>
+    <td>[0.483, 0.000, 0.483]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#7C9C6B"}}></td>
     <td>Moss</td>
     <td>317</td>
-    <td>[124, 156, 107]</td>
+    <td>[0.487, 0.612, 0.420]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#8AAB85"}}></td>
     <td>Artichoke</td>
     <td>318</td>
-    <td>[138, 171, 133]</td>
+    <td>[0.542, 0.671, 0.522]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#B9C4B1"}}></td>
     <td>Sage green</td>
     <td>319</td>
-    <td>[185, 196, 177]</td>
+    <td>[0.726, 0.769, 0.695]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#CACBD1"}}></td>
     <td>Ghost grey</td>
     <td>320</td>
-    <td>[202, 203, 209]</td>
+    <td>[0.793, 0.797, 0.820]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#A75E9B"}}></td>
     <td>Lilac</td>
     <td>321</td>
-    <td>[167, 94, 155]</td>
+    <td>[0.655, 0.369, 0.608]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#7B2F7B"}}></td>
     <td>Plum</td>
     <td>322</td>
-    <td>[123, 47, 123]</td>
+    <td>[0.483, 0.185, 0.483]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#94BE81"}}></td>
     <td>Olivine</td>
     <td>323</td>
-    <td>[148, 190, 129]</td>
+    <td>[0.581, 0.746, 0.506]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#A8BD99"}}></td>
     <td>Laurel green</td>
     <td>324</td>
-    <td>[168, 189, 153]</td>
+    <td>[0.659, 0.742, 0.600]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#DFDFDE"}}></td>
     <td>Quill grey</td>
     <td>325</td>
-    <td>[223, 223, 222]</td>
+    <td>[0.875, 0.875, 0.871]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#970000"}}></td>
     <td>Crimson</td>
     <td>327</td>
-    <td>[151, 0, 0]</td>
+    <td>[0.593, 0.000, 0.000]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#B1E5A6"}}></td>
     <td>Mint</td>
     <td>328</td>
-    <td>[177, 229, 166]</td>
+    <td>[0.695, 0.899, 0.651]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#98C2DB"}}></td>
     <td>Baby blue</td>
     <td>329</td>
-    <td>[152, 194, 219]</td>
+    <td>[0.597, 0.761, 0.859]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FF98DC"}}></td>
     <td>Carnation pink</td>
     <td>330</td>
-    <td>[255, 152, 220]</td>
+    <td>[0.1000, 0.597, 0.863]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FF5959"}}></td>
     <td>Persimmon</td>
     <td>331</td>
-    <td>[255, 89, 89]</td>
+    <td>[0.1000, 0.350, 0.350]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#750000"}}></td>
     <td>Maroon</td>
     <td>332</td>
-    <td>[117, 0, 0]</td>
+    <td>[0.459, 0.000, 0.000]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#EFB838"}}></td>
     <td>Gold</td>
     <td>333</td>
-    <td>[239, 184, 56]</td>
+    <td>[0.938, 0.722, 0.220]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#F8D96D"}}></td>
     <td>Daisy orange</td>
     <td>334</td>
-    <td>[248, 217, 109]</td>
+    <td>[0.973, 0.851, 0.428]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E7E7EC"}}></td>
     <td>Pearl</td>
     <td>335</td>
-    <td>[231, 231, 236]</td>
+    <td>[0.906, 0.906, 0.926]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#C7D4E4"}}></td>
     <td>Fog</td>
     <td>336</td>
-    <td>[199, 212, 228]</td>
+    <td>[0.781, 0.832, 0.895]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FF9494"}}></td>
     <td>Salmon</td>
     <td>337</td>
-    <td>[255, 148, 148]</td>
+    <td>[0.1000, 0.581, 0.581]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#BE6862"}}></td>
     <td>Terra Cotta</td>
     <td>338</td>
-    <td>[190, 104, 98]</td>
+    <td>[0.746, 0.408, 0.385]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#562424"}}></td>
     <td>Cocoa</td>
     <td>339</td>
-    <td>[86, 36, 36]</td>
+    <td>[0.338, 0.142, 0.142]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#F1E7C7"}}></td>
     <td>Wheat</td>
     <td>340</td>
-    <td>[241, 231, 199]</td>
+    <td>[0.946, 0.906, 0.781]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#FEF3BB"}}></td>
     <td>Buttermilk</td>
     <td>341</td>
-    <td>[254, 243, 187]</td>
+    <td>[0.997, 0.953, 0.734]</td>
   </tr>
   <tr>
     <td style={{backgroundColor: "#E0B2D0"}}></td>
