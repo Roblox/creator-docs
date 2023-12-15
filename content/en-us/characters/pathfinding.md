@@ -580,7 +580,7 @@ To create a `Class.PathfindingLink` using this example:
    		end
    		-- Detect constraint position in relation to island
    		local boatPositionConnection
-   		boatPositionConnection = RunService.Heartbeat:Connect(function()
+   		boatPositionConnection = RunService.PostSimulation:Connect(function()
    			-- Stop boat when next to island
    			if boat.CylindricalConstraint.CurrentPosition >= 94 then
    				boatPositionConnection:Disconnect()

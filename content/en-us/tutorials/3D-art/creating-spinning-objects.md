@@ -52,10 +52,10 @@ local RunService = game:GetService("RunService")
 local propeller = script.Parent
 local ROTATE_SPEED = 100
 
--- Heartbeat fires every frame, after the physics simulation has completed.
+-- PostSimulation fires every frame, after the physics simulation has completed.
 -- step is the amount of time that has elapsed since the previous frame.
 
-RunService.Heartbeat:Connect(function(step)
+RunService.PostSimulation:Connect(function(step)
 	-- The amount to rotate is a function of ROTATE_SPEED and step.
 	local rotationAmount = math.rad(ROTATE_SPEED * step)
 
