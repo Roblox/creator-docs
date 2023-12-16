@@ -302,7 +302,7 @@ local part = model.Part
 <Alert severity="warning">
 Persistent models are intended for very rare circumstances, such as when a small number of parts must always be present on clients for `Class.LocalScript` use. If possible, server-side `Class.Script|Scripts` should be used, or `Class.LocalScript|LocalScripts` should be tolerant of parts streaming in and out. Persistent models are **not** intended to circumvent streaming, and overuse may negatively impact performance.
 
-Avoid creating catch-all persitent models that have a large number of sub-models. For example, if you're creating an experience with a large number of vehicles, do **not** create a single persistent model which contains every vehicle in the experience that you want to be persistent. Instead, set each individual vehicle model to be persistent, if necessary.
+Avoid creating catch-all persistent models that have a large number of sub-models. For example, if you're creating an experience with a large number of vehicles, do **not** create a single persistent model which contains every vehicle in the experience that you want to be persistent. Instead, set each individual vehicle model to be persistent, if necessary.
 </Alert>
 
 <Alert severity="info">
