@@ -478,15 +478,18 @@ functions:
       - name: list
         type: table
         default:
-        summary: ''
+        summary: |
+          The list of elements to be unpacked.
       - name: i
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The index of the first element to unpack.
       - name: j
         type: number
         default:
-        summary: ''
+        summary: |
+          The index of the last element to unpack.
     returns:
       - type: Tuple
         summary: ''
