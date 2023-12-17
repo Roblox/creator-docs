@@ -21,6 +21,11 @@ Private servers offer users privacy in circumstances like:
    You cannot enable both <a href="./paid-access.md">Paid Access</a> and private servers.
 </Alert>
 
+<Alert severity="warning">
+Players under 13 will not be able to join private servers unless they have the owner of the private server on their friends list.</Alert>
+
+
+
 ## Creating Private Servers
 
 Before you can create private servers, your experience must be public to all users.
