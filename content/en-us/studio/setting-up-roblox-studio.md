@@ -39,7 +39,8 @@ To install Roblox Studio:
    - On Windows, the file is `RobloxStudio.exe`.
    - On macOS, the file is `RobloxStudio.dmg`.
 
-1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
+1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;S![Uploading Roblox.jpg…]()
+tudio** button.
 
 1. Sign in to Studio with your Roblox account. If you don't have an account, create one at [roblox.com](https://www.roblox.com/) and follow the tips on [securing your account](https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Theft-Keeping-your-Account-Safe-).
 
