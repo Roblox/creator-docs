@@ -7,22 +7,22 @@ tags: []
 deprecation_message: ''
 items:
   - name: Idle
-    summary: ''
+    summary: 'The gui currently has no state'
     value: 0
     tags: []
     deprecation_message: ''
   - name: Hover
-    summary: ''
+    summary: 'The gui is being hovered over by the user'
     value: 1
     tags: []
     deprecation_message: ''
   - name: Press
-    summary: ''
+    summary: 'The gui is being pressed/held down by the user'
     value: 2
     tags: []
     deprecation_message: ''
   - name: NonInteractable
-    summary: ''
+    summary: 'The gui cannot be interacted with and therefore has no states'
     value: 3
     tags: []
     deprecation_message: ''
