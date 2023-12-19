@@ -458,35 +458,27 @@ functions:
     summary: |
       Returns all elements from the given list as a tuple.
     description: |
-      Returns the elements from the given list. This function is equivalent to:
+      Returns the elements from the given list. By default, `i` is 1 and `j`
+      is the length of `list`.
 
-      ```lua
-      return list[i], list[i+1], ..., list[j]
-      ```
-
-      By default, `i` is 1 and `j` is the length of `list`.
-
-      ```lua
-      local t = {1, 2, 3}
-      local one, two, three = table.unpack(t)
-      print(one, two, three) -- 1 2 3
-      ```
-
-      This same functionality is also provided by the built-in `unpack`
-      function.
+      Note that this same functionality is also provided by the global
+      `Global.LuaGlobals.unpack()` function.
     parameters:
       - name: list
         type: table
         default:
-        summary: ''
+        summary: |
+          The list of elements to be unpacked.
       - name: i
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The index of the first element to unpack.
       - name: j
         type: number
-        default:
-        summary: ''
+        default: '#list'
+        summary: |
+          The index of the last element to unpack.
     returns:
       - type: Tuple
         summary: ''

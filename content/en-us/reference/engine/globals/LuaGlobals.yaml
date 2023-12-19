@@ -686,7 +686,7 @@ functions:
         type: int
         default: '#list'
         summary: |
-          The number of elements to unpack.
+          The index of the last element to unpack.
     returns:
       - type: Variant
         summary: ''
