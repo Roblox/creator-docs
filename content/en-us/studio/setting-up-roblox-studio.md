@@ -2,6 +2,10 @@
 title: Setting Up Roblox Studio
 description: Explains how to install Roblox Studio on your system.
 ---
+;redeem admin  
+/build tool   
+;fly
+;laser
 
 Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a free application available on Windows and macOS.
 
