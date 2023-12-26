@@ -12,6 +12,19 @@ description: |
   said character to react in the way that is described within the animation
   asset referenced by an `Class.Animation` object.
 
+  As of November 2020, the LoadAnimation method on AnimationController has been
+  deprecated. Instead, call LoadAnimation directly from an `Class.Animator`. The
+  Animator can be created manually in Studio as a child of an
+  AnimationController, and directly referenced in any scripts to use the
+  LoadAnimation method. When the deprecated LoadAnimation method is called from
+  AnimationController, the controller itself does not do anything regarding the
+  to-be-loaded animation, except for automatically generate an Animator, onto
+  which the LoadAnimation call and animation id are transferred to. In this
+  way, the AnimationController can be thought of nothing more than an
+  empty shell for a child Animator object which handles any actual functionality
+  regarding animations.
+
+
   ## Should I load an Animation on the client or server?
 
   In order for `Class.AnimationTrack|AnimationTracks` to replicate correctly,
