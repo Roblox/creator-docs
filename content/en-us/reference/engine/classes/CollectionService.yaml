@@ -386,8 +386,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CollectionService.TagAdded
-    summary: ''
-    description: ''
+    summary: Fires when a tag is added to an object and is the only occurrence of that tag in the place.
+    description: This event fires when a tag is added to an object and is the only occurrence of that tag in the place.
     code_samples: []
     parameters:
       - name: tag
@@ -399,8 +399,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CollectionService.TagRemoved
-    summary: ''
-    description: ''
+    summary: Fires when a tag is removed from an object and is no longer used anywhere in the place.
+    description: This event fires when a tag is removed from an object and is no longer used anywhere in the place.
     code_samples: []
     parameters:
       - name: tag
