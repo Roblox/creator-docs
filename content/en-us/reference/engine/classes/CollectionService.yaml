@@ -8,9 +8,8 @@ description: |
   The `Class.CollectionService` manages groups (collections) of instances with
   tags. Tags are sets of strings applied to objects that replicate from the
   server to the client and in Team Create. They are also serialized when places
-  are saved. At the moment, tags are not visible within Roblox Studio except
-  with the use of a tag-editing plugin. You may see all the tags applied to any
-  object by selecting it and going to the tags section in the properties panel
+  are saved. You may see all of the tags applied to an object by selecting it
+  and scrolling down to the tags section in the property browser.
 
   The primary use of `Class.CollectionService` is to register instances with
   specific tags that you can use to extend their behavior. If you find yourself
