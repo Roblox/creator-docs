@@ -180,8 +180,23 @@ functions:
       Returns the value that was returned by the given ModuleScript, running it
       if it has not been run yet.
     description: |
-      Runs the supplied `Class.ModuleScript` if it has not been run already, and
-      returns what the ModuleScript returned (in both cases).
+      Runs the supplied `Class.ModuleScript`, and returns what the ModuleScript 
+      returned. This is usually a table or a function. Once the return object is 
+      created by an **initial** require call of some ModuleScript, future require
+      calls for the same ModuleScript (on the same side of client/server boundary)
+      will not run the code again. Instead, a reference to the **same** return object
+      created by the initial require call will be supplied. This behavior allows
+      for the sharing of values across different scripts, as multiple require
+      calls from different scripts will reference the same returned object. If
+      the returned object is a table, any values stored within the table are
+      shared and accessible by any script requiring that ModuleScript.
+      
+      Note that this "object sharing" behavior does not cross the client/server
+      boundary. This means that if a ModuleScript is accessible to both the
+      client and server (such as by being placed in `Class.ReplicatedStorage`) and
+      required on both a LocalScript as well as a Script, the code in the
+      ModuleScript will be run twice, and the LocalScript will receive a distinct
+      return object from the one received by the Script.
 
       If the ModuleScript the user wants to use has been uploaded to Roblox
       (with the instance's name being 'MainModule'), it can be loaded by using
