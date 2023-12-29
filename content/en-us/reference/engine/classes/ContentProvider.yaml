@@ -290,6 +290,10 @@ methods:
       For each requested asset, the callback function runs, indicating the
       asset's final `Enum.AssetFetchStatus`.
 
+      Can also take in a list of contentId strings, however these strings must
+      correspond to Image assets. Attempting to load non-image assets through
+      the use of their contentId strings will result in failure.
+
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
       has processed each requested instance or asset ID.
@@ -300,7 +304,7 @@ methods:
         type: Array
         default:
         summary: |
-          An array of items to load.
+          An array of instances or contentId strings to load.
       - name: callbackFunction
         type: Function
         default: nil
