@@ -1075,6 +1075,10 @@ methods:
       `IntValue:GetPropertyChangedSignal("Name"):Connect(someFunc)` since the
       `Changed` event of `Class.IntValue` objects only detect changes on the
       `Value` property.
+      
+      Note that the event this method returns will not pass any arguments
+      to a connected function, so the value of the changed property must be
+      read directly within a script.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
