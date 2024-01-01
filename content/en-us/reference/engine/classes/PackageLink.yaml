@@ -15,7 +15,7 @@ description: |
   In this case PackageLink designates `Class.Model` to be the root of the
   Package hierarchy.
 
-  They not creatable through `Class.Script|scripts`. They can only be added
+  They are not creatable through `Class.Script|scripts`. They can only be added
   through interaction with Studio and can only be parented to
   `Class.Instance|Instances` that can be published independently of DataModel
   publish. The PackageLink instance will always be the first child shown in the
