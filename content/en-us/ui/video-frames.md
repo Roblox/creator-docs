@@ -48,7 +48,7 @@ The video assets are now within the moderation queue and are only visible to you
 
 ## Playing Videos
 
-A `Class.VideoFrame` must be parented to a `Class.SurfaceGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable.
+A `Class.VideoFrame` must be parented to a `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` in order to be playable.
 
 To play a video in your experience without code:
 
