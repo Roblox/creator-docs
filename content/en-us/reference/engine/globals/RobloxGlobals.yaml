@@ -202,7 +202,7 @@ functions:
       twice, and the `Class.LocalScript` will receive a distinct return object from
       the one received by the `Class.Script`.
 
-      ALso note that if the `Class.ModuleScript` the user wants to run has been
+      Also note that if the `Class.ModuleScript` the user wants to run has been
       uploaded to Roblox (with the instance's name being `MainModule`), it can be
       loaded by using the `Global.RobloxGlobals.require()` function on the asset ID
       of the `Class.ModuleScript`, though only on the server.
