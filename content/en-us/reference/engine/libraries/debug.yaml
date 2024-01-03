@@ -271,15 +271,16 @@ functions:
       Assigns a custom tag name to the current thread's memory category in the
       Developer Console. Useful for analyzing memory usage of multiple threads
       in the same script which would otherwise be grouped together under the
-      same tag/name.
+      same tag/name. Returns the name of the current thread's previous memory category.
     parameters:
       - name: tag
         type: string
         default:
         summary: ''
     returns:
-      - type: void
-        summary: ''
+      - type: string
+        summary: |
+          The current thread's previous memory category.
     tags:
     code_samples:
   - name: debug.resetmemorycategory
