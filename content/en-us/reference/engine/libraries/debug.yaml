@@ -263,6 +263,18 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: debug.getmemorycategory
+    summary: |
+      Returns the name of the current thread's active memory category.
+    description: |
+      Returns the name of the current thread's active memory category.
+    parameters:
+    returns:
+      - type: string
+        summary: |
+          The current thread's active memory category.
+    tags:
+    code_samples:
   - name: debug.setmemorycategory
     summary: |
       Assigns a custom tag to the current thread's memory category in the
