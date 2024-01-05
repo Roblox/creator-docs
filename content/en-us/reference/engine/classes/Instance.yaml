@@ -1073,6 +1073,12 @@ methods:
       
       Note that this event will not pass any arguments to a connected function,
       so the value of the changed property must be read directly within a script.
+
+      <Alert severity="error">
+      Like `Class.Instance.Changed|Changed`, the event returned by this method does not fire for physics-related changes, 
+      like when the `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
+      and `Datatype.CFrame` properties of a `Class.BasePart` change due to gravity.
+      </Alert>
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
@@ -1647,17 +1653,19 @@ events:
       property, consider using the `GetPropertyChangedSignal` method instead to
       get an event that only fires when a given property changes.
 
+      For "-Value" objects, this event behaves differently: it only fires when
+      the `Value` property changes. See individual pages for `Class.IntValue`,
+      `Class.StringValue`, etc for more information. To detect other changes in
+      these objects, you must use `GetPropertyChangedSignal` instead.
+
+      <Alert severity="error">
       This event does not fire for physics-related changes, like when the
       `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
       and `Datatype.CFrame` properties of a `Class.BasePart` change due to
       gravity. To detect changes in these properties, consider using a
       physics-based event like `Class.RunService.PreSimulation` or
-      `Class.BasePart.Touched`. A while-true-do loop can also work.
-
-      For "-Value" objects, this event behaves differently: it only fires when
-      the `Value` property changes. See individual pages for `Class.IntValue`,
-      `Class.StringValue`, etc for more information. To detect other changes in
-      these objects, you must use `GetPropertyChangedSignal` instead.
+      `Class.BasePart.Touched`.
+      </Alert>
     code_samples:
       - Changed-Event
       - Change-Detector
