@@ -192,7 +192,7 @@ methods:
           The context that the filtered message will be used in. The default is
           PrivateChat.
     returns:
-      - type: Instance
+      - type: TextFilterResult
         summary: ''
     tags:
       - Yields
