@@ -1058,23 +1058,21 @@ methods:
     summary: |
       Get an event that fires when a given property of an object changes.
     description: |
-      This method returns an event that behaves exactly like the `Changed`
-      event, except that the event only fires when the given property changes.
-      It's generally a good idea to use this method instead of a connection to
-      `Changed` with a function that checks the property name. Subsequent calls
-      to this method on the same object with the same property name return the
-      same event.
-
-      `print(object:GetPropertyChangedSignal("Name") == object:GetPropertyChangedSignal("Name")) --> always true`
+      This method returns an event that behaves exactly like the
+      `Class.Instance.Changed|Changed` event, except that the event only fires
+      when the given property changes. It's generally a good idea to use this
+      method instead of a connection to `Class.Instance.Changed|Changed` with
+      a function that checks the property name. Subsequent calls to this method
+      on the same object with the same property name return the same event.
 
       `Class.ValueBase` objects, such as `Class.IntValue` and
-      `Class.StringValue`, use a modified `Changed` event that fires with the
-      contents of the `Value` property. As such, this method provides a way to
-      detect changes in other properties of those objects. For example, to
-      detect changes in the `Name` property of an `Class.IntValue`, use
-      `IntValue:GetPropertyChangedSignal("Name"):Connect(someFunc)` since the
-      `Changed` event of `Class.IntValue` objects only detect changes on the
-      `Value` property.
+      `Class.StringValue`, use a modified `Class.Instance.Changed|Changed`
+      event that fires with the contents of their value property. As such,
+      this method provides a way to detect changes in other properties of those
+      objects.
+      
+      Note that this event will not pass any arguments to a connected function,
+      so the value of the changed property must be read directly within a script.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
