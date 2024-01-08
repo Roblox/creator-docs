@@ -46,7 +46,7 @@ description: Learn how to build an obstacle course and code color changing block
   <td>
   <ul>
   <li>Windows or Mac Computer with Roblox Studio installed</li>
-  <li><a href="../../assets/education/handouts/introToStudio-cheatsheet.pdf" target="_blank" rel="noopener">Handout: Roblox Studio Cheatsheett</a></li>
+  <li><a href="../../assets/education/handouts/introToStudio-cheatsheet.pdf" target="_blank" rel="noopener">Handout: Roblox Studio Cheatsheet</a></li>
    <li><a href="../../assets/education/handouts/introToCoding-cheatsheet.pdf" target="_blank" rel="noopener">Handout: Intro to Coding Cheatsheet</a></li>
       <li><a href="../../assets/education/lesson-plans/introToGameDesign-brainstormHandout.pdf" target="_blank" rel="noopener">Optional Handout: Brainstorming</a></li>
   </ul>
