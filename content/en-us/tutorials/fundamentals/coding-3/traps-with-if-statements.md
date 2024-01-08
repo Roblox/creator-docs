@@ -7,7 +7,7 @@ prev: /tutorials/fundamentals/coding-3/intro-to-if-statements
 
 Traps that decrease players' health are a fun game-play element that can be coded with conditional statements. Practice using conditionals by creating a part that sets the player's health to zero when touched.
 
-<video controls src="../../../assets/education/coding-3/trap-exampleFinal.mp4" width="8 0%"></video>
+<video controls src="../../../assets/education/coding-3/trap-exampleFinal.mp4" width="80%"></video>
 
 ## Setting up the Trap
 
