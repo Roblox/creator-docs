@@ -24,22 +24,22 @@ The first section from left contains tools for copying, cutting, pasting, and du
   <tbody>
     <tr>
       <td>**Paste**</td>
-	  <td><kbd>Ctrl</kbd><kbd>V</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>V</kbd> (macOS)</td>
+	  <td><kbd>Ctrl</kbd><kbd>V</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>V</kbd> (Mac)</td>
       <td>Insert the clipboard contents.</td>
     </tr>
     <tr>
       <td>**Copy**</td>
-	  <td><kbd>Ctrl</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>C</kbd> (macOS)</td>
+	  <td><kbd>Ctrl</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>C</kbd> (Mac)</td>
       <td>Copy the current selections to the clipboard.</td>
     </tr>
 	<tr>
       <td>**Cut**</td>
-	  <td><kbd>Ctrl</kbd><kbd>X</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>X</kbd> (macOS)</td>
+	  <td><kbd>Ctrl</kbd><kbd>X</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>X</kbd> (Mac)</td>
       <td>Cut the current selections and put on the clipboard.</td>
     </tr>
 	<tr>
       <td>**Duplicate**</td>
-	  <td><kbd>Ctrl</kbd><kbd>D</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>D</kbd> (macOS)</td>
+	  <td><kbd>Ctrl</kbd><kbd>D</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>D</kbd> (Mac)</td>
       <td>Duplicate the current selections at the same level in the hierarchy.</td>
     </tr>
   </tbody>
@@ -86,7 +86,7 @@ The **Collisions** checkbox toggles the collisions state when you're transformin
 
 ### Transform Coordinates
 
-<kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on macOS toggles between transforming an object relative to **world** coordinates or the object's **local** coordinates. When in local mode, an **L** symbol appears to the lower-right of the object.
+<kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on Mac toggles between transforming an object relative to **world** coordinates or the object's **local** coordinates. When in local mode, an **L** symbol appears to the lower-right of the object.
 
 <Tabs>
   <TabItem label="World">
@@ -155,17 +155,17 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 ## Group Tools
 
-You can group objects into a [model](../parts/models.md) by selecting them and clicking the **Group** button. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>G</kbd> (Windows) or <kbd>⌘</kbd><kbd>G</kbd> (macOS).
+You can group objects into a [model](../parts/models.md) by selecting them and clicking the **Group** button. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>G</kbd> (Windows) or <kbd>⌘</kbd><kbd>G</kbd> (Mac).
 
-Alternatively, you can group objects into a [folder](../studio/explorer.md#organizing-by-folders) by clicking the small arrow next to the button and selecting **Group as a Folder**. This action has a default shortcut of <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> (Windows) or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> (macOS).
+Alternatively, you can group objects into a [folder](../studio/explorer.md#organizing-by-folders) by clicking the small arrow next to the button and selecting **Group as a Folder**. This action has a default shortcut of <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> (Windows) or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac).
 
-To **ungroup** an existing model or folder, click the small arrow next to the button and select **Ungroup**. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>U</kbd> (Windows) or <kbd>⌘</kbd><kbd>U</kbd> (macOS).
+To **ungroup** an existing model or folder, click the small arrow next to the button and select **Ungroup**. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>U</kbd> (Windows) or <kbd>⌘</kbd><kbd>U</kbd> (Mac).
 
 <img src="../assets/studio/general/Home-Tab-Group-Tools.png" width="800" alt="Group tools indicated in Home tab" />
 
 ## Lock Tools
 
-You can enable the **Lock Tool** by clicking the small arrow next to the **Lock** button and selecting **Lock&nbsp;Tool**. This action has a default shortcut of <kbd>Alt</kbd><kbd>L</kbd> (Windows) or <kbd>⌥</kbd><kbd>L</kbd> (macOS).
+You can enable the **Lock Tool** by clicking the small arrow next to the **Lock** button and selecting **Lock&nbsp;Tool**. This action has a default shortcut of <kbd>Alt</kbd><kbd>L</kbd> (Windows) or <kbd>⌥</kbd><kbd>L</kbd> (Mac).
 
 Once enabled, the tool operates as a "key" for both states&nbsp;&mdash; clicking on an unlocked object locks it, while clicking a locked object unlocks it.
 
@@ -175,7 +175,7 @@ To unlock all objects, click the small arrow next to the button and select **Unl
 
 ## Anchor Toggle
 
-The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (macOS).
+The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac).
 
 <img src="../assets/studio/general/Home-Tab-Anchor.png" width="800" alt="Anchor toggle indicated in Home tab" />
 

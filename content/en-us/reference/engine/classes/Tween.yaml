@@ -71,7 +71,7 @@ properties:
       the `Class.Tween` is to be carried out, using the `Datatype.TweenInfo`
       data type. The TweenInfo data type includes a range of properties that can
       be used to achieve various styles of animation, including reversing and
-      looping `Class.Tween`s (see examples).
+      looping `Class.Tween|Tweens` (see examples).
 
       As with all `Class.Tween` properties, the TweenInfo property is read only.
       If a developer wants to modify the TweenInfo of a Tween they must create a

@@ -56,7 +56,7 @@ To parent the mesh object with the mannequin armature:
 
 2. In the Workspace, click the mesh object, then hold <kbd>Shift</kbd> and **click** the mannequin's armature.
 
-3. Right click, or use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>P</kbd> to parent the accessory to the armature by selecting **Automatic Weights**.
+3. Right click, or use <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) to parent the accessory to the armature by selecting **Automatic Weights**.
 
    <video controls width="80%" src="../../assets/accessories/3_lc-blender-parenting-a-mesh.mp4">
    </video>
@@ -128,7 +128,7 @@ After exporting, see [Accessory Fitting Tool](../../art/accessories/accessory-fi
 The following tips may be helpful when manipulating your cage vertices:
 
 - On the top-right of the Viewport, toggle different [Viewport Shading](https://docs.blender.org/manual/en/latest/editors/3dview/display/shading.html) options, such as **Material Preview** and **X-Ray**, when necessary to better access vertices and view your caging progress.
-- You can hide vertices you're currently not adjusting by using Hide (<kbd>H</kbd>) and Unhide (<kbd>Alt</kbd>+<kbd>H</kbd>).
+- You can hide vertices you're currently not adjusting by using **Hide** (<kbd>H</kbd>) and **Unhide** (<kbd>Alt</kbd><kbd>H</kbd>; <kbd>⌥</kbd><kbd>H</kbd>).
 - Multiple vertices can be selected and adjusted at the same time. Use **Move**, **Scale**, or any other Blender tools to make adjustments to multiple vertices at once.
 
   <video controls width="80%" src="../../assets/accessories/7_lc-adjusting-multiple-vertices.mp4">

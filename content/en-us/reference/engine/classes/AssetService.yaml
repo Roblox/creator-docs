@@ -107,7 +107,7 @@ methods:
       Frequent use of this API isn't recommended, particularly if the created
       places contain scripts, as updating the code in a large volume of places
       quickly becomes infeasible. For user-generated worlds, consider
-      serializing user creations and saving them in `Class.DataStore`s instead.
+      serializing user creations and saving them in `Class.DataStore|DataStores` instead.
     code_samples:
     parameters:
       - name: placeName

@@ -145,7 +145,7 @@ When you go through the process of unwrapping the UVs of a mesh in third-party m
 
 To apply `Class.SurfaceAppearance` texture map data to unwrapped meshes in your asset library:
 
-1. In the **Explorer** window, click your **SurfaceAppearance** package, then press <kbd>Ctrl</kbd> + <kbd>D</kbd> or <kbd>⌘</kbd> + <kbd>D</kbd> to duplicate it.
+1. In the **Explorer** window, click your **SurfaceAppearance** package, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate it.
 2. Child the duplicate **SurfaceAppearance** package to either a modular asset or a prop. The asset applies its UV data to the texture maps and displays its visual treatment.
 3. Repeat this process for each modular asset and prop.
 

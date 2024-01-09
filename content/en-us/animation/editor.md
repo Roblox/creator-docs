@@ -33,13 +33,13 @@ rigs.
     <td>
       Opens a contextual menu with the following menu items:
       <ul>
-        <li><b>Load</b></li>
-        <li><b>Save</b></li>
-        <li><b>Save As </b></li>
-        <li><b>Import </b></li>
-        <li><b>Export</b></li>
-        <li><b>Create New</b></li>
-        <li><b>Set Animation Priority</b></li>
+        <li>**Load**</li>
+        <li>**Save**</li>
+        <li>**Save As **</li>
+        <li>**Import **</li>
+        <li>**Export**</li>
+        <li>**Create New**</li>
+        <li>**Set Animation Priority**</li>
       </ul>
     </td>
   </tr>
@@ -86,7 +86,7 @@ rigs.
   <tr>
     <td><img src="../assets/animation/animation-editor/Controls-Position-Indicator.png"
    width="100%" /></td>
-    <td>The <b>position indicator</b> that displays the timeline unit for the position of the scrubber in <b>seconds:frames</b>.</td>
+    <td>The **position indicator** that displays the timeline unit for the position of the scrubber in **seconds:frames**.</td>
   </tr>
 </table>
 
@@ -119,10 +119,10 @@ rigs.
     <td>
       Opens a contextual menu with the following menu items:
       <ul>
-        <li><b>Timeline Unit</b></li>
-        <li><b>Frame Rate: 30fps </b></li>
-        <li><b>Show <a href="../animation/events.md">Animation Events</a></b></li>
-        <li><b>Snap To Keys</b></li>
+        <li>**Timeline Unit**</li>
+        <li>**Frame Rate: 30fps **</li>
+        <li>**Show <a href="../animation/events.md">Animation Events</a>**</li>
+        <li>**Snap To Keys**</li>
     </ul>
     </td>
   </tr>
@@ -139,7 +139,7 @@ rigs.
   <tr>
     <td><img src="../assets/animation/animation-editor/Track-List-IK-Button.png"
    width="100%" /></td>
-    <td>Opens the <b>Manage IK</b> window.</td>
+    <td>Opens the **Manage IK** window.</td>
   </tr>
   <tr>
     <td><img src="../assets/animation/animation-editor/Track-List-Add-Tracks.png"
@@ -158,8 +158,8 @@ rigs.
     <td>
       Opens a contextual menu with the following menu items:
         <ul>
-            <li><b>Add Keyframe</b></li>
-            <li><b>Delete Track</b></li>
+            <li>**Add Keyframe**</li>
+            <li>**Delete Track**</li>
         </ul>
     </td>
   </tr>
@@ -242,12 +242,10 @@ To create a pose:
    <img src="../assets/animation/animation-editor/Track-Keyframe-Added.png" width="700" />
 
    <Alert severity="info" variant="standard">
-      When you're creating poses, you can toggle between <b>Move</b> and <b>Rotate</b>
-   modes by pressing <kbd>Ctrl</kbd> + <kbd>2</kbd> or <kbd>Ctrl</kbd> + <kbd>4</kbd>,
-   respectively (<kbd>Command ⌘</kbd> + <kbd>2</kbd> or <kbd>Command ⌘</kbd> + <kbd>4</kbd>
-   on Mac). These modes work exactly like moving and rotating base objects, including the
-   snap settings and incremental values located in the <b>Snap to Grid</b> section of the
-   <b>Model</b> tab.
+   When you're creating poses, you can toggle between **Move** and **Rotate**
+   modes by pressing <kbd>Ctrl</kbd><kbd>2</kbd> or <kbd>Ctrl</kbd><kbd>4</kbd>,
+   respectively (<kbd>⌘</kbd><kbd>2</kbd> or <kbd>⌘</kbd><kbd>4</kbd>
+   on Mac). These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the **Snap to Grid** section of the **Model** tab.
    </Alert>
 
 4. Continue moving or rotating parts until you get the desired pose.
@@ -345,13 +343,10 @@ useful for when you want to
 
 To duplicate one or more keyframes:
 
-1. Navigate to the **timeline** and select one or more keyframes. Every
-   selected keyframe is now surrounded by a blue border.
-1. Press **Ctrl+C** (**Command ⌘+C** on Mac). Every selected
-   keyframe copies to your clipboard.
+1. Navigate to the **timeline** and select one or more keyframes. Every selected keyframe is now surrounded by a blue border.
+1. Press <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd>). Every selected keyframe copies to your clipboard.
 1. Move the **scrubber** to a new frame position.
-1. Press **Ctrl+V** (**Command ⌘+V** on Mac). The keyframe(s) paste
-   into the new frame position.
+1. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd>). The keyframe(s) paste into the new frame position.
 
 ### Deleting Keyframes
 

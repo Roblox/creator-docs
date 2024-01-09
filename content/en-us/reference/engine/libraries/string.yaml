@@ -662,9 +662,10 @@ functions:
       Extracts the values packed in the provided binary string.
     description: |
       Extracts the values packed in the provided binary string based on the
-      first argument, `format`, which should match the one
-      originally used to `Library.string.pack|pack()` the string; see [here](https://www.lua.org/manual/5.3/manual.html#6.4.2) for options. The optional third parameter
-      determines the byte at which the reading starts.
+      first argument, `format`, which should match the one originally used to
+      `Library.string.pack|pack()` the string; see
+      [here](https://www.lua.org/manual/5.3/manual.html#6.4.2) for options. The
+      optional third parameter determines the byte at which the reading starts.
     parameters:
       - name: format
         type: string

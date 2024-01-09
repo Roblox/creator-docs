@@ -39,17 +39,17 @@ To create the backboard and border:
 
       <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Backboard.jpg" />
 
-1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>D</kbd> to duplicate the part.
+1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part.
 1. In the menu bar, select the **Move** tool and use one of the axis arrows to pull the duplicate backboard part away from the original position so you can see each object.
 1. In the **Explorer** window, select the duplicate backboard part that's about to become the border of your neon sign, then in the **Properties** window,
 
    1. Set **BrickColor** to **Lime Green**.
-   1. Set **Size** to **[7.75, 3.75, 0.25]**.
-   1. Set **Name** to **Border**.
+   2. Set **Size** to **[7.75, 3.75, 0.25]**.
+   3. Set **Name** to **Border**.
 
       <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Border.jpg" />
 
-1. In the **Explorer** window, select **Border**, then press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>D</kbd> to duplicate the part. **Do not move this new part** because it needs to be in its current position for the next sculpting step.
+1. In the **Explorer** window, select **Border**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part. **Do not move this new part** because it needs to be in its current position for the next sculpting step.
 
 Now that you have three parts that make up the basic shapes of your neon sign, you can sculpt the border's shape.
 
@@ -67,7 +67,7 @@ To create the neon border shape:
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Negate-Tool.jpg" />
 
-1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> and click on the original border part to select both parts at the same time.
+1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click on the original border part to select both parts at the same time.
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/NegativePart.jpg" />
 
@@ -113,7 +113,7 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
    1. Set **Color** to **[170,0,0]**.
    1. Set **Material** to **Neon**.
 
-1. In the **Explorer** window, select the text models, **Border**, and **Backboard**, then press <kbd>Ctrl</kbd>+<kbd>G</kbd> to group them into a single `Class.Model` object.
+1. In the **Explorer** window, select the text models, **Border**, and **Backboard**, then press <kbd>Ctrl</kbd><kbd>G</kbd> (<kbd>⌘</kbd><kbd>G</kbd>) to group them into a single `Class.Model` object.
 
    <Alert severity="info">
       For a reference of what this neon sign looks like within Studio, you can download the [base project file](../../assets/tutorials/creating-neon-signs/neon-sign-baseplate.rbxl) and compare it to your model.

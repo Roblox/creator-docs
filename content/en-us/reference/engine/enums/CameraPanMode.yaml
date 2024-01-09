@@ -20,7 +20,7 @@ items:
   - name: EdgeBump
     summary: |
       Disables swipe to pan on mobile devices, and enables edge bump camera
-      controls. It does not affect PC or Mac users.
+      controls. It does not affect Windows or Mac users.
     value: 1
     tags: []
     deprecation_message: ''

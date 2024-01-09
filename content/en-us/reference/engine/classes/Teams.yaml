@@ -16,7 +16,7 @@ description: |
   **Built-in team behavior** The following functionality of Teams exists by
   default and does not require the developer to program any custom behavior.
 
-  - When part of a Team, the name above a `Class.Player`'s character
+  - When part of a Team, the name above a player's character
     `Class.Model` will be colored to the `Class.Team.TeamColor`
   - Changing `Class.Player.TeamColor` will cause `Class.Player.Team` switch to
     the Team with the corresponding `Class.Team.TeamColor`
@@ -33,7 +33,7 @@ description: |
     `Class.Player.TeamColor` matches `Class.SpawnLocation.TeamColor` can spawn
     on that `Class.SpawnLocation`
   - When `Class.SpawnLocation.AllowTeamChangeOnTouch` is set to true, a
-    `Class.Player`'s `Class.Player.TeamColor` will change to
+    player's `Class.Player.TeamColor` will change to
     `Class.SpawnLocation.TeamColor` when their character touches the
     `Class.SpawnLocation`
 
@@ -67,14 +67,14 @@ methods:
       Note this will only return Team objects that are directly parented to the
       `Class.Teams` service. For this reason it is recommended developers only
       parent `Class.Team` objects to the `Class.Teams` service and not to other
-      `Class.Instance`s (or to each other).
+      `Class.Instance|Instances` (or to each other).
     code_samples:
       - Teams-GetTeams
     parameters: []
     returns:
       - type: Objects
         summary: |
-          An array of `Class.Team`s in the game.
+          An array of `Class.Team|Teams` in the game.
     tags: []
     deprecation_message: ''
     security: None

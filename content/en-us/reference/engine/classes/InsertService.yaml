@@ -219,9 +219,9 @@ methods:
     thread_safety: Unsafe
   - name: InsertService:GetFreeDecals
     summary: |
-      Retrieves a list of Free Decals from the Catalog.
+      Retrieves a list of free Decals from the Catalog.
     description: |
-      The GetFreeDecals function retrieves a list of Free `Class.Decal`s from
+      The GetFreeDecals function retrieves a list of free `Class.Decal|Decals` from
       the Catalog. The return type for this method is very odd, as it returns a
       single table wrapped in a table.
 

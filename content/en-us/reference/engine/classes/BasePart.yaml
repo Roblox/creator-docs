@@ -90,7 +90,7 @@ properties:
     summary: |
       The angular velocity of the part's assembly.
     description: |
-      The angular velocity vector of this `Class.BasePart|part`'s assembly. It's
+      The angular velocity vector of this part's assembly. It's
       the rate of change of orientation in radians per second.
 
       Angular velocity is the same at every point of the assembly.
@@ -144,7 +144,7 @@ properties:
     summary: |
       The linear velocity of the part's assembly.
     description: |
-      The linear velocity vector of this `Class.BasePart|part`'s assembly. It's
+      The linear velocity vector of this part's assembly. It's
       the rate of change in position of the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass` in studs per second.
 
@@ -198,7 +198,7 @@ properties:
       A reference to the root part of the assembly.
     description: |
       This property indicates the `Class.BasePart` automatically chosen to
-      represent the `Assembly|assembly`'s root part. It is the same part that's
+      represent the assembly's root part. It is the same part that's
       returned when developers call
       `Class.BasePart:GetRootPart()|GetRootPart()`.
 
@@ -649,7 +649,7 @@ properties:
       Describes the world position in which a part's center of mass is located.
     description: |
       The CenterOfMass property describes the **local** position of a
-      `Class.BasePart|part`'s center of mass. If this is a single part assembly,
+      part's center of mass. If this is a single part assembly,
       this is the `AssemblyCenterOfMass` converted from world space to local. On
       simple `Class.Part|Parts`, the center of mass is always (0,0,0). It can
       vary for `Class.WedgePart` or `Class.MeshPart` however.
@@ -676,7 +676,9 @@ properties:
       start off in the default group whose name is `"Default"`. This value
       cannot be empty.
 
-      Although this property itself is non-replicated, the engine internally replicates the value through another private property to solve backward compatibility issues.
+      Although this property itself is non-replicated, the engine internally
+      replicates the value through another private property to solve backward
+      compatibility issues.
     code_samples:
       - PhysicsService-RegisterCollisionGroup
     type: string
@@ -2149,7 +2151,7 @@ methods:
     summary: |
       Apply an angular impulse to the assembly.
     description: |
-      Applies an instant angular force impulse to this `Class.BasePart|part`'s
+      Applies an instant angular force impulse to this part's
       assembly, causing the assembly to spin.
 
       The resulting angular velocity from the impulse relies on the assembly's
@@ -2180,7 +2182,7 @@ methods:
       `Class.BasePart.AssemblyCenterOfMass|center of mass`.
     description: |
       This function applies an instant force impulse to this
-      `Class.BasePart|part`'s assembly.
+      part's assembly.
 
       The force is applied at the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass`, so the resulting
@@ -2213,7 +2215,7 @@ methods:
       Apply an impulse to the assembly at specified position.
     description: |
       This function applies an instant force impulse to this
-      `Class.BasePart|part`'s assembly, at the specified position in world
+      part's assembly, at the specified position in world
       space.
 
       If the position is not at the assembly's
@@ -2289,10 +2291,10 @@ methods:
     thread_safety: Safe
   - name: BasePart:CanSetNetworkOwnership
     summary: |
-      Checks whether you can set a `Class.BasePart|part`'s network ownership.
+      Checks whether you can set a part's network ownership.
     description: |
       The CanSetNetworkOwnership function checks whether you can set a
-      `Class.BasePart|part`'s network ownership.
+      part's network ownership.
 
       The function's return value verifies whether or not you can call
       `Class.BasePart:SetNetworkOwner()` or

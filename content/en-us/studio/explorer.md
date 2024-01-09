@@ -43,7 +43,7 @@ Some objects like primitive [parts](../parts/index.md) can be inserted from the 
    <img src="../assets/studio/explorer/Workspace-Add-Object.png" width="400" alt="Hovering over Workspace object to reveal insertion button" />
 
 - Right-click the object's parent and select **Insert&nbsp;Object**.
-- Select the object's parent and press <kbd>Ctrl</kbd><kbd>I</kbd> on Windows or <kbd>⌘</kbd><kbd>I</kbd> on macOS.
+- Select the object's parent and press <kbd>Ctrl</kbd><kbd>I</kbd> on Windows or <kbd>⌘</kbd><kbd>I</kbd> on Mac.
 
 Each method opens an **insertion window** which contains a list of objects, sorted by category. You can quickly locate familiar objects by typing a search query in the input field:
 
@@ -62,7 +62,7 @@ You can further customize the behavior of the insertion workflow as follows:
 
 For an object copied to the clipboard, you can paste it as a new child to the `Class.Workspace`, or into one or more existing parents.
 
-- Press <kbd>Ctrl</kbd><kbd>V</kbd> on Windows or <kbd>⌘</kbd><kbd>V</kbd> on macOS to paste the object into the top-level `Class.Workspace`.
+- Press <kbd>Ctrl</kbd><kbd>V</kbd> on Windows or <kbd>⌘</kbd><kbd>V</kbd> on Mac to paste the object into the top-level `Class.Workspace`.
 - Right-click specific parent(s) and choose one of the following options from the context menu:
 
    <table>
@@ -70,7 +70,7 @@ For an object copied to the clipboard, you can paste it as a new child to the `C
    <tr>
    <td>**Paste Into**</td>
    <td>Pastes the child geometrically on top of the original.</td>
-   <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>V</kbd>&nbsp;(macOS)</td>
+   <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>V</kbd>&nbsp;(Mac)</td>
    </tr>
    <tr>
    <td>**Paste Into at Original Location**</td>
@@ -103,7 +103,7 @@ You can organize objects into folders as follows:
 
 - Create a **Folder** instance through a standard [insertion](#insert-new-object) method, then drag and drop existing objects into it.
 
-- Select multiple objects, right-click them, and then select **Group&nbsp;as&nbsp;a&nbsp;Folder** from the context menu or press <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> on macOS.
+- Select multiple objects, right-click them, and then select **Group&nbsp;as&nbsp;a&nbsp;Folder** from the context menu or press <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> on Mac.
 
 ## Filtering Instances
 
@@ -237,7 +237,7 @@ Classes, and subclasses, and tags are filtered through various bespoke queries, 
 
 - `classname:[Class]` and `c:[Class]` both find everything that is of **class** `[Class]`. For example, `classname:Part` finds everything that is a `Class.Part`.
 - `is:[SubClass]` finds everything that is a **subclass** of `[SubClass]`. For example, `is:BasePart` finds everything that is a subclass of `Class.BasePart`, such as `Class.Part` and `Class.MeshPart`.
-- `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged **LightSource**. You can add tags in the [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), and tag names will autocomplete.
+- `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged **LightSource**. You can add tags using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), and tag names will autocomplete.
 
 ### Ancestry Filters
 
@@ -332,7 +332,7 @@ Within a [filtered](#filtering-instances) hierarchy, certain key shortcuts and m
 
 ### Select All
 
-Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on macOS selects all objects. Within a [filtered](#filtering-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
+Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all objects. Within a [filtered](#filtering-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
 
 <Tabs>
   <TabItem label="Non-Filtered">

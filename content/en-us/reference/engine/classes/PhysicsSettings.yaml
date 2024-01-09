@@ -267,8 +267,8 @@ properties:
       The behavior of this property varies depending on whether Roblox's physics
       engine is using the `PGS Physics Solver`, or the `Spring Physics Solver`.
 
-      This is controlled by the `Class.Workspace`'s
-      `Class.Workspace.PGSPhysicsSolverEnabled` property.
+      This is controlled by the `Class.Workspace.PGSPhysicsSolverEnabled`
+      property.
 
       ##### Spring Physics Solver
 
@@ -336,6 +336,21 @@ properties:
     security:
       read: None
       write: None
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.AreGravityForcesShownForSelectedOrHoveredAssemblies
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Display
     serialization:
@@ -432,11 +447,11 @@ properties:
       can_save: true
   - name: PhysicsSettings.AreOwnersShown
     summary: |
-      When set to true, each `Class.Player`'s character is outlined with a
+      When set to true, each player's character is outlined with a
       unique color, and each part that the player has network ownership over is
       outlined with the same color.
     description: |
-      When set to true, each `Class.Player`'s character is outlined with a
+      When set to true, each player's character is outlined with a
       unique color, and each part that the player has network ownership over is
       outlined with the same color.
     code_samples:
@@ -474,10 +489,10 @@ properties:
       can_save: true
   - name: PhysicsSettings.AreRegionsShown
     summary: |
-      When set to true, a cylinder is drawn around each `Class.Player`'s
+      When set to true, a cylinder is drawn around each player's
       character, representing their `Class.Player.SimulationRadius`.
     description: |
-      When set to true, a cylinder is drawn around each `Class.Player`'s
+      When set to true, a cylinder is drawn around each player's
       character, representing their `Class.Player.SimulationRadius`. Each
       physically simulated object will check to see which player is closest to
       that object, and if they are within the player's simulation radius. If

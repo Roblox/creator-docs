@@ -117,7 +117,7 @@ properties:
       Note, this property does not correspond with the actual time of day and
       will not change during the game unless it has been changed by a script.
 
-      For a measure of `Class.Lighting`'s time formatted as a 24 hour string use
+      For a measure of `Class.Lighting` time formatted as a 24 hour string use
       `Class.Lighting.CurrentTime`. Changing `Class.Lighting.CurrentTime` or
       using `Class.Lighting:SetMinutesAfterMidnight()` will also change this
       property.
@@ -351,17 +351,17 @@ properties:
       can_save: true
   - name: Lighting.FogColor
     summary: |
-      A `Datatype.Color3` value giving the hue of `Class.Lighting`'s fog.
+      A `Datatype.Color3` value giving the hue of `Class.Lighting` fog.
     description: |
       Fog properties are hidden when Lighting contains an `Class.Atmosphere`
       object.
 
-      A `Datatype.Color3` value giving the hue of `Class.Lighting`'s fog.
+      A `Datatype.Color3` value giving the hue of `Class.Lighting` fog.
 
       #### How does fog work?
 
       Fog in Roblox is displayed in a plane perpendicular to the
-      `Class.Workspace.CurrentCamera`s direction. It fades between the
+      `Class.Workspace.CurrentCamera` direction. It fades between the
       `Class.Lighting.FogStart` property where it is not visible, to the
       `Class.Lighting.FogEnd` property where it is fully opaque. The effect of
       fog is it blends color with the FogColor.
@@ -411,7 +411,7 @@ properties:
       #### How does fog work?
 
       Fog in Roblox is displayed in a plane perpendicular to the
-      `Class.Workspace.CurrentCamera`s look direction. It fades between the
+      `Class.Workspace.CurrentCamera` look direction. It fades between the
       `Class.Lighting.FogStart` property where it is not visible, to the FogEnd
       property where it is fully opaque. The effect of fog is it blends color
       with the `Class.Lighting.FogColor`.
@@ -463,7 +463,7 @@ properties:
       #### How does fog work?
 
       Fog in Roblox is displayed in a plane perpendicular to the
-      `Class.Workspace.CurrentCamera`s look direction. It fades between the
+      `Class.Workspace.CurrentCamera` look direction. It fades between the
       FogStart property where it is not visible, to the `Class.Lighting.FogEnd`
       property where it is fully opaque. The effect of fog is it blends color
       with the `Class.Lighting.FogColor`.
@@ -504,10 +504,10 @@ properties:
   - name: Lighting.GeographicLatitude
     summary: |
       The geographic latitude, in degrees, of the scene, influencing the result
-      of `Class.Lighting`s time on the position of the sun and moon.
+      of `Class.Lighting time on the position of the sun and moon.
     description: |
       The geographic latitude, in degrees, of the scene, influencing the result
-      of `Class.Lighting`s time on the position of the sun and moon.
+      of `Class.Lighting time on the position of the sun and moon.
 
       When calculating the position of the sun, the earth's tilt is also taken
       into account.
@@ -551,7 +551,7 @@ properties:
       Shadows are calculated using a voxel system, and each lighting voxel is
       4x4x4 studs. This means objects need to be larger than 4x4x4 studs to
       display a realistic shadow. Shadows are also recalculated when
-      `Class.BasePart`s are moving.
+      `Class.BasePart|BaseParts` are moving.
 
       Note, this property is unrelated to shadows from characters which are
       displayed regardless of what GlobalShadows is set to.
@@ -565,8 +565,8 @@ properties:
       it makes the place considerably darker. This is because when GlobalShadows
       is disabled `Class.Lighting.Ambient` is used to calculate the lighting hue
       in both indoor and outdoor spaces. This darkness can be resolved by
-      setting `Class.Lighting.Ambient` to a higher value such as
-      `Class.Lighting.OutdoorAmbient`'s default value of 127, 127, 127.
+      setting `Class.Lighting.Ambient` to a higher value such as the default of
+      `Class.Lighting.OutdoorAmbient`.
 
       In most cases developers are recommended to leave GlobalShadows enabled
       due to the superior visual appearance. See
@@ -629,7 +629,7 @@ properties:
 
       Outlines can be disabled on a global basis, using this `Class.Lighting`
       property, or alternatively on a surface-by-surface basis for
-      `Class.BasePart`s using `Enum.SurfaceType`.
+      `Class.BasePart|BaseParts` using `Enum.SurfaceType`.
 
       Although this property can be set by scripts, it recommended this property
       is set in Roblox Studio prior to publishing the place.
@@ -726,7 +726,7 @@ properties:
       Note, this property does not correspond with the actual time of day and
       will not change during the game unless it has been changed by a script.
 
-      For a numeric measure of `Class.Lighting`'s time use
+      For a numeric measure of `Class.Lighting` time use
       `Class.Lighting.ClockTime`. Changing `Class.Lighting.ClockTime` or using
       `Class.Lighting:SetMinutesAfterMidnight()` will also change this property.
 
@@ -807,7 +807,7 @@ methods:
       `Class.Lighting:SetMinutesAfterMidnight()` as it returns minutes after
       midnight in the current day.
 
-      For `Class.Lighting`s time formatted as a string, see
+      For `Class.Lighting` time formatted as a string, see
       `Class.Lighting.TimeOfDay`.
     code_samples:
       - Lighting-GetMinutesAfterMidnight1

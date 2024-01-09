@@ -242,7 +242,7 @@ local _places = {
 --------------------------------------
 ```
 
-1. Select the **entire table** and copy it to the clipboard with <kbd>Ctrl</kbd>+<kbd>C</kbd> (<kbd>Command ⌘</kbd>+<kbd>C</kbd> on Mac)
+1. Select the **entire table** and copy it to the clipboard with <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd> on Mac).
 2. Close the lobby place by clicking the X in its tab.
 
    <img
@@ -260,7 +260,7 @@ local _places = {
    src="../../assets/resources/battle-royale/installation-and-setup//Battle-Royale-Place-MainConfiguration.png"
    width="80%" />
 
-3. Paste the `_places` table you copied above over the existing `_places` table (<kbd>Ctrl</kbd>+<kbd>V</kbd> or <kbd>Command ⌘</kbd>+<kbd>V</kbd>) so that each place's tables are identical.
+3. Paste the `_places` table you copied above over the existing `_places` table (<kbd>Ctrl</kbd><kbd>V</kbd>; <kbd>⌘</kbd><kbd>V</kbd>) so that each place's tables are identical.
 
    ```lua
    --------------------------------------

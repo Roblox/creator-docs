@@ -35,7 +35,7 @@ In Studio, the `Class.StarterPlayer` object contains a number of properties that
 
     <Alert severity ='warning'>
 
-   If your cursor is stuck in the middle of the screen while testing, you can free up your mouse by pressing the <kbd>Escape</kbd> key or press <kbd>Shift</kbd>+<kbd>F5</kbd> to end the test.
+   If your cursor is stuck in the middle of the screen while testing, you can free up your mouse by pressing the <kbd>Escape</kbd> key or press <kbd>Shift</kbd><kbd>F5</kbd> to end the test.
    </Alert>
 
 ## Creating a Side-Scrolling Camera

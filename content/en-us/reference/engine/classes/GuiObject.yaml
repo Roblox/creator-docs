@@ -1645,7 +1645,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          A Lua array of `Datatype.Vector2` objects, each indicating the position of
           all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
@@ -1697,7 +1697,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          A Lua array of `Datatype.Vector2` objects, each indicating the position of
           all the fingers involved in the pinch gesture.
       - name: scale
         type: float
@@ -1755,7 +1755,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2`s, each indicating the position of
+          A Lua array of `Datatype.Vector2` objects, each indicating the position of
           all the fingers involved in the gesture.
       - name: rotation
         type: float
@@ -1816,7 +1816,7 @@ events:
       without any movement involved (a longer press would fire
       `Class.GuiObject.TouchLongPress`, and moving during the touch would fire
       `Class.GuiObject.TouchPan` and/or `Class.GuiObject.TouchSwipe`). It fires
-      with a table of `Datatype.Vector2`s that describe the relative positions
+      with a table of `Datatype.Vector2` objects that describe the relative positions
       of the fingers involved in the gesture.
 
       Since this event only requires one finger, it can be simulated in Studio

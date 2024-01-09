@@ -145,17 +145,25 @@ To verify a signature:
 
 1. Extract the timestamp value from the `Timestamp` footer of the notification.
 
-1. Extract the message body from the notification. For the following example notification, the message body is `You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ`.
+1. Extract the message body from the notification. For the following example notification, the message body is:
+
+   <figcaption>
+   You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
+	 </figcaption>
 
    <img src="../../assets/misc/Webhooks-Example-Message-Body.png" width="50%" alt="Example message body on Guilded"/>
 
-1. Concatenate the timestamp value and the message with a period character in the format as: `168487229.You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ`.
+1. Concatenate the timestamp value and the message with a period character in the format as:
+
+   <figcaption>
+   168487229.You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
+	 </figcaption>
 
 1. Compute a Hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
 
 1. Compare the extracted signature value to the expected signature. If you generated the signature correctly, the value should be the same.
 
-1. (Optional) To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
+1. **(Optional)** To prevent replay attacks, a type of cyber attack where attackers intercept and resend data to gain unauthorized access or perform malicious actions, it's helpful to compare the extracted timestamp value with the current timestamp and ensure it falls within a reasonable time limit. For example, a 10-minute window is usually a good reasonable time limit.
 
 </TabItem>
 </Tabs>

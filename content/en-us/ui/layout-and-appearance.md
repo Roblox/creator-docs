@@ -225,14 +225,12 @@ To set a gradient's color sequence:
 
    Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
 
-   <img src="../assets/studio/general/ColorSequence-White.png"
-   width="80%" />
+   <img src="../assets/studio/general/ColorSequence-White.png" width="640" alt="Color sequence popup from white to white" />
 
 1. Click a keypoint in the color sequence, then click the small square next to **Color** to open the **Colors** pop-up window.
 1. Select the desired color for the keypoint.
 
-   <img src="../assets/studio/general/ColorSequence-Red-White.png"
-   width="80%" />
+   <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
 
 1. If needed, you can:
 
@@ -254,14 +252,11 @@ To adjust a gradient's transparency across its range:
    Each square across the number sequence graph is a
    **keypoint** that determines the transparency value at that point.
 
-   <img
-   src="../assets/studio/general/NumberSequence-0.5-0.5.png"
-   width="80%" />
+   <img src="../assets/studio/general/NumberSequence-0.5-0.5.png" width="746" alt="Number sequence popup from 0.5 to 0.5" />
 
 1. Click and drag any keypoint around, or select a keypoint and enter a specific time/value combination through the **Time** and **Value** inputs.
 
-   <img src="../assets/studio/general/NumberSequence-0-1.png"
-   width="80%" />
+	 <img src="../assets/studio/general/NumberSequence-0-1.png" width="746" alt="Number sequence popup from 0 to 1" />
 
 1. If needed, you can:
 

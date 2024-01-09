@@ -11,7 +11,7 @@ By default, your **Explorer** hierarchy includes the `Class.Teams` service. If y
 
 1. In the **Model** tab, click the **Service** icon in the **Advanced** section to display a list of services.
 
-   <img src="../assets/studio/general/Model-Tab-Advanced-Service.png" width="500" />
+   <img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="740" alt="Advanced options indicated in Model tab" />
 
 2. From the **Insert Service** window, select **Teams** and click the **Insert** button.
 

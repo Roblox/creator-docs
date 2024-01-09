@@ -498,7 +498,7 @@ methods:
       calling this function.
 
       To check if the animation has loaded, verify that the
-      `Class.AnimationTrack`'s `Class.AnimationTrack.Length` is greater than
+      `Class.AnimationTrack.Length` is greater than
       zero.
     code_samples:
       - Animation-GetTimeOfKeyframe

@@ -19,22 +19,22 @@ together in unique ways to form more complex shapes known as **unions** or **int
   <tbody>
     <tr>
       <td>[Union](#unioning-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
       <td>Join two or more parts together to form a single solid union.</td>
     </tr>
 	<tr>
       <td>[Intersect](#intersecting-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
       <td>Intersect overlapping parts into a single solid intersection.</td>
     </tr>
     <tr>
       <td>[Negate](#negating-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
       <td>Negate parts, useful for making holes and indentations.</td>
     </tr>
     <tr>
       <td>[Separate](#separating-unions-or-intersections)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
       <td>Separate the union or intersection back into its individual parts.</td>
     </tr>
   </tbody>

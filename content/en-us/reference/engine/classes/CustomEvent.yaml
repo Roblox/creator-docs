@@ -28,7 +28,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: |
-      CustomEvents have been superseded by `Class.BindableEvent`s and should not
+      CustomEvents have been superseded by `Class.BindableEvent|BindableEvents` and should not
       be used in new work.
     security: None
     thread_safety: Unsafe

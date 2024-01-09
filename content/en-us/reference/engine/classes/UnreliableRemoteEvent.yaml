@@ -3,37 +3,39 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  An object which facilitates asynchronous, unordered and unreliable, one-way communication
-  across the client-server boundary. Scripts firing a `Class.UnreliableRemoteEvent` do
-  not yield.
+  An object which facilitates asynchronous, unordered and unreliable, one-way
+  communication across the client-server boundary. Scripts firing a
+  `Class.UnreliableRemoteEvent` do not yield.
 description: |
-  The **UnreliableRemoteEvent** object is a variant of the `Class.RemoteEvent` object.
-  It facilitates asynchronous, unordered and unreliable, one-way communication
-  across the [client-server](../../../projects/client-server.md) boundary
-  without yielding for a response. This communication can be directed from one
-  client to the server, from the server to a specific client, or from the server
-  to all clients.
+  The **UnreliableRemoteEvent** object is a variant of the `Class.RemoteEvent`
+  object. It facilitates asynchronous, unordered and unreliable, one-way
+  communication across the [client-server](../../../projects/client-server.md)
+  boundary without yielding for a response. This communication can be directed
+  from one client to the server, from the server to a specific client, or from
+  the server to all clients.
 
-  In order for both the server and clients to access a `Class.UnreliableRemoteEvent`
-  instance, it must be in a place where both sides can see it, such as
-  `Class.ReplicatedStorage`, although in some cases it's appropriate to store it
-  in `Class.Workspace` or inside a `Class.Tool`.
+  In order for both the server and clients to access a
+  `Class.UnreliableRemoteEvent` instance, it must be in a place where both sides
+  can see it, such as `Class.ReplicatedStorage`, although in some cases it's
+  appropriate to store it in `Class.Workspace` or inside a `Class.Tool`.
 
-  `Class.UnreliableRemoteEvent` is best used for ephemeral events including effects that
-  are only relevant for a short time, or for replicating continuously changing data. These
-  events are not resent if they are lost and they do not wait for previously fired events
-  to arrive before being processed, potentially resulting in reduced latency and network
-  traffic. When requiring ordering and reliability, use a `Class.RemoteEvent` instead.
+  `Class.UnreliableRemoteEvent` is best used for ephemeral events including
+  effects that are only relevant for a short time, or for replicating
+  continuously changing data. These events are not resent if they are lost and
+  they do not wait for previously fired events to arrive before being processed,
+  potentially resulting in reduced latency and network traffic. When requiring
+  ordering and reliability, use a `Class.RemoteEvent` instead.
 
   #### Parameter Limitations
 
   Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
-  others can be passed as a parameter when a `Class.UnreliableRemoteEvent` is fired, as
-  well as Luau types such as numbers, strings, and booleans, although you should
-  carefully explore the
-  [limitations](../../../scripting/events/remote.md#argument-limitations).
-  There is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`. Larger
-  payloads will be dropped. See the corresponding method description for more details.
+  others can be passed as a parameter when a `Class.UnreliableRemoteEvent` is
+  fired, as well as Luau types such as numbers, strings, and booleans, although
+  you should carefully explore the
+  [limitations](../../../scripting/events/remote.md#argument-limitations). There
+  is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
+  Larger payloads will be dropped. See the corresponding method description for
+  more details.
 code_samples: []
 inherits:
   - BaseRemoteEvent
@@ -43,35 +45,37 @@ properties: []
 methods:
   - name: UnreliableRemoteEvent:FireAllClients
     summary: |
-      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for each
-      client connected to the same `Class.UnreliableRemoteEvent`. Has a 900 byte limit to
-      the payload of the event, otherwise event is dropped.
+      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
+      for each client connected to the same `Class.UnreliableRemoteEvent`. Has a
+      900 byte limit to the payload of the event, otherwise event is dropped.
     description: |
-      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for each
-      client connected to the same `Class.UnreliableRemoteEvent`. Unlike
-      `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, this event does not take a
-      target `Class.Player` as the first argument, since it fires to multiple
-      clients. Since this method is used to communicate from the server to
-      clients, it will only work when used in a `Class.Script`.
+      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
+      for each client connected to the same `Class.UnreliableRemoteEvent`.
+      Unlike `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, this event
+      does not take a target `Class.Player` as the first argument, since it
+      fires to multiple clients. Since this method is used to communicate from
+      the server to clients, it will only work when used in a `Class.Script`.
 
       Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
       others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()`, as well as Luau
-      types such as numbers, strings, and booleans, although you should
+      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()`, as well
+      as Luau types such as numbers, strings, and booleans, although you should
       carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this happens in Studio,
-      a log message in the [Output](../../../studio/output.md) window will indicate by how many
-      bytes the event has gone over.
+      Events with payloads larger than 900 bytes will be dropped. When this
+      happens in Studio, a log message in the
+      [Output](../../../studio/output.md) window will indicate by how many bytes
+      the event has gone over.
     code_samples: []
     parameters:
       - name: arguments
         type: Tuple
         default:
         summary: |
-          Values to pass to all `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent`
-          events connected to the same `Class.UnreliableRemoteEvent`.
+          Values to pass to all
+          `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
+          connected to the same `Class.UnreliableRemoteEvent`.
     returns:
       - type: void
         summary: ''
@@ -81,30 +85,31 @@ methods:
     thread_safety: Unsafe
   - name: UnreliableRemoteEvent:FireClient
     summary: |
-      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for a
-      specific client connected to the same `Class.UnreliableRemoteEvent`. Has a 900
-      byte limit to the payload of the event, otherwise event is dropped.
+      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
+      for a specific client connected to the same `Class.UnreliableRemoteEvent`.
+      Has a 900 byte limit to the payload of the event, otherwise event is
+      dropped.
     description: |
-      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event for one
-      connected client specified by the required `Class.Player` argument. Since
-      this method is used to communicate from the server to a client, it will
-      only work when used in a `Class.Script`.
+      Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
+      for one connected client specified by the required `Class.Player`
+      argument. Since this method is used to communicate from the server to a
+      client, it will only work when used in a `Class.Script`.
 
       Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
       others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, as well as Luau types such
-      as numbers, strings, and booleans, although you should carefully explore
-      the
+      `Class.UnreliableRemoteEvent:FireClient()|FireClient()`, as well as Luau
+      types such as numbers, strings, and booleans, although you should
+      carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this happens in Studio,
-      a log message in the [Output](../../../studio/output.md) window will indicate by how many
-      bytes the event has gone over.
-      
-      See also
-      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` which works
-      similarly but fires the event for each client connected to the same
-      `Class.UnreliableRemoteEvent`.
+      Events with payloads larger than 900 bytes will be dropped. When this
+      happens in Studio, a log message in the
+      [Output](../../../studio/output.md) window will indicate by how many bytes
+      the event has gone over.
+
+      See also `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()`
+      which works similarly but fires the event for each client connected to the
+      same `Class.UnreliableRemoteEvent`.
     code_samples: []
     parameters:
       - name: player
@@ -116,8 +121,9 @@ methods:
         type: Tuple
         default:
         summary: |
-          Values to pass to `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent`
-          events connected to the same `Class.UnreliableRemoteEvent`.
+          Values to pass to
+          `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` events
+          connected to the same `Class.UnreliableRemoteEvent`.
     returns:
       - type: void
         summary: ''
@@ -127,34 +133,37 @@ methods:
     thread_safety: Unsafe
   - name: UnreliableRemoteEvent:FireServer
     summary: |
-      Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event on the
-      server from one client connected to the same `Class.UnreliableRemoteEvent`. Has a
-      900 byte limit to the payload of the event, otherwise event is dropped.
+      Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
+      on the server from one client connected to the same
+      `Class.UnreliableRemoteEvent`. Has a 900 byte limit to the payload of the
+      event, otherwise event is dropped.
     description: |
-      Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event on the
-      server from one client. Connected events receive the `Class.Player`
+      Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
+      on the server from one client. Connected events receive the `Class.Player`
       argument of the firing client. Since this method is used to communicate
       from a client to the server, it will only work when used in a
       `Class.LocalScript`.
 
       Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or
       others can be passed as a parameter to
-      `Class.UnreliableRemoteEvent:FireServer()|FireServer()`, as well as Luau types such
-      as numbers, strings, and booleans, although you should carefully explore
-      the
+      `Class.UnreliableRemoteEvent:FireServer()|FireServer()`, as well as Luau
+      types such as numbers, strings, and booleans, although you should
+      carefully explore the
       [limitations](../../../scripting/events/remote.md#argument-limitations).
 
-      Events with payloads larger than 900 bytes will be dropped. When this happens in Studio,
-      a log message in the [Output](../../../studio/output.md) window will indicate by how many
-      bytes the event has gone over.
+      Events with payloads larger than 900 bytes will be dropped. When this
+      happens in Studio, a log message in the
+      [Output](../../../studio/output.md) window will indicate by how many bytes
+      the event has gone over.
     code_samples: []
     parameters:
       - name: arguments
         type: Tuple
         default:
         summary: |
-          Values to pass to `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent`
-          events connected to the same `Class.UnreliableRemoteEvent`.
+          Values to pass to
+          `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` events
+          connected to the same `Class.UnreliableRemoteEvent`.
     returns:
       - type: void
         summary: ''
@@ -167,20 +176,22 @@ events:
     summary: |
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
-      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called on the
-      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`, although
-      this firing is not guaranteed even if one of the above methods are called. This
-      can occur due to packet loss or to maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called
+      on the same `Class.UnreliableRemoteEvent` instance from a `Class.Script`,
+      although this firing is not guaranteed even if one of the above methods
+      are called. This can occur due to packet loss or to maintain optimal
+      engine performance.
     description: |
       Fires from a `Class.LocalScript` when either
       `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
-      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called on the
-      same `Class.UnreliableRemoteEvent` instance from a `Class.Script`, although
-      this firing is not guaranteed even if one of the above methods are called. This
-      can occur due to packet loss or to maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` is called
+      on the same `Class.UnreliableRemoteEvent` instance from a `Class.Script`,
+      although this firing is not guaranteed even if one of the above methods
+      are called. This can occur due to packet loss or to maintain optimal
+      engine performance.
 
-      Also note that it is not guaranteed that the order of events will match the
-      order of `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
+      Also note that it is not guaranteed that the order of events will match
+      the order of `Class.UnreliableRemoteEvent:FireClient()|FireClient()` or
       `Class.UnreliableRemoteEvent:FireAllClients()|FireAllClients()` calls.
     code_samples: []
     parameters:
@@ -198,19 +209,22 @@ events:
   - name: UnreliableRemoteEvent.OnServerEvent
     summary: |
       Fires from a `Class.Script` when
-      `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
-      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`, although
-      this firing is not guaranteed even if the above methods is called. This
-      can occur due to packet loss or to maintain optimal engine performance.
+      `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the
+      same `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`,
+      although this firing is not guaranteed even if the above methods is
+      called. This can occur due to packet loss or to maintain optimal engine
+      performance.
     description: |
       Fires from a `Class.Script` when
-      `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the same
-      `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`, although
-      this firing is not guaranteed even if the above methods is called. This
-      can occur due to packet loss or to maintain optimal engine performance.
-      
-      Also note that it is not guaranteed that the order of events will match the order
-      of `Class.UnreliableRemoteEvent:FireServer()|FireServer()` calls.
+      `Class.UnreliableRemoteEvent:FireServer()|FireServer()` is called on the
+      same `Class.UnreliableRemoteEvent` instance from a `Class.LocalScript`,
+      although this firing is not guaranteed even if the above methods is
+      called. This can occur due to packet loss or to maintain optimal engine
+      performance.
+
+      Also note that it is not guaranteed that the order of events will match
+      the order of `Class.UnreliableRemoteEvent:FireServer()|FireServer()`
+      calls.
     code_samples: []
     parameters:
       - name: player
@@ -218,7 +232,8 @@ events:
         default:
         summary: |
           The `Class.Player` associated with the client that the
-          `Class.UnreliableRemoteEvent:FireServer()|FireServer()` call originates from.
+          `Class.UnreliableRemoteEvent:FireServer()|FireServer()` call
+          originates from.
       - name: arguments
         type: Tuple
         default:
