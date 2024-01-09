@@ -1,7 +1,7 @@
 ---
 title: Roblox Avatars
 description: Create and upload avatar characters, clothing, and accessories to the Roblox Marketplace.
-hideBreadcrumbs: true
+hideBreadcrumbs: false
 ---
 
 <img src="../assets/accessories/Layered-Clothing-Banner2.png" alt="Roblox avatars" width="100%" />
