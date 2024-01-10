@@ -1232,6 +1232,8 @@ events:
       Note that experience loading happens before persistent loading, and firing
       of the `Class.DataModel.Loaded` event does not indicate that all
       persistent models are present.
+
+      Note that this event is **server-side only** and should not be used in local scripts.
     code_samples: []
     parameters:
       - name: player
