@@ -90,7 +90,7 @@ In the tool's **Properties** window, use the following properties to customize t
 
 ### Enabling and Disabling Users to Drop Tools
 
-By default, a user can drop a tool by pressing the **Backspace** key on Windows or **delete** on macOS. You can disable this option by setting the **CanBeDropped** property of the tool to `false`. If **CanBeDropped** is `false`, pressing **Backspace** or **delete** returns the tool to the user's backpack.
+By default, a user can drop a tool by pressing the **Backspace** key on Windows or **delete** on Mac. You can disable this option by setting the **CanBeDropped** property of the tool to `false`. If **CanBeDropped** is `false`, pressing **Backspace** or **delete** returns the tool to the user's backpack.
 
 ### Creating Tools As Inventory Items
 

@@ -465,18 +465,18 @@ print("The server created the requested part:", newPart)
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 
--- Script in ServerScriptService to create Part with the passed properties
+-- Script in ServerScriptService to create a Part with the passed properties
 local function createPart(player, partColor, partPosition)
 	print(player.Name .. " requested a new part")
 	local newPart = Instance.new("Part")
-	-- Use partColor and partPosition to set the Part's BrickColor and Position
+	-- Use partColor and partPosition to set the part's BrickColor and Position
 	newPart.BrickColor = partColor
 	newPart.Position = partPosition
 	newPart.Parent = workspace
 	return newPart
 end
 
--- Bind createPart() to the `Class.RemoteFunction`'s OnServerInvoke callback
+-- Bind createPart() to the remote function's OnServerInvoke callback
 remoteFunction.OnServerInvoke = createPart
 ```
 

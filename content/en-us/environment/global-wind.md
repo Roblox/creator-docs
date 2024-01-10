@@ -5,10 +5,7 @@ description: The global wind vector sets the direction and strength that wind bl
 
 The `Class.Workspace.GlobalWind|GlobalWind` vector sets the direction and strength that wind blows through an experience, affecting [terrain grass](../parts/terrain.md#animated-grass) and [dynamic&nbsp;clouds](../environment/clouds.md). You can set it as a [constant vector](#global-wind-vector), or adjust it through [scripting](#scripted-effects) to create cyclical gusts of wind. Additionally, you can influence [particles](#particle-influence) to follow the global wind vector.
 
-<figure>
-  <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="100%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
-  <figcaption>Wind blowing dynamic clouds and terrain grass</figcaption>
-</figure>
+<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="100%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
 <Alert severity="warning">
 To see the effects of global wind in an experience, you'll need to enable [animated terrain grass](../parts/terrain.md#animated-grass) and/or [dynamic clouds](../environment/clouds.md).
@@ -34,10 +31,7 @@ Particles emitted by a `Class.ParticleEmitter` will follow the global wind vecto
 
 <img src="../assets/studio/properties/ParticleEmitter-WindAffectsDrag.png" width="320" alt="Drag and WindAffectsDrag properties shown in Properties window of Studio" />
 
-<figure>
-  <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Particles.mp4" controls width="90%" alt="Video of wind blowing particles from ParticleEmitter, Fire, and Smoke objects"></video>
-  <figcaption>Wind blowing particles from `Class.ParticleEmitter`, `Class.Fire`, and `Class.Smoke`</figcaption>
-</figure>
+<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Particles.mp4" controls width="800" alt="Video of wind blowing particles from a ParticleEmitter"></video>
 
 ## Wind Direction Widget
 
@@ -79,4 +73,4 @@ while true do
 end
 ```
 
-<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Gusts.mp4" controls width="90%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
+<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Gusts.mp4" controls width="800" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>

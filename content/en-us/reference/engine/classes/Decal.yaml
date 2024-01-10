@@ -66,10 +66,10 @@ properties:
       can_save: true
   - name: Decal.LocalTransparencyModifier
     summary: |
-      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
+      Acts as a multiplier for the decal's `Class.Decal.Transparency`
       property. The effects are only visible to the local player.
     description: |
-      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
+      Acts as a multiplier for the decal's `Class.Decal.Transparency`
       property. The effects are only visible to the `Class.Players.LocalPlayer`.
 
       This property should be used in situations where
@@ -79,7 +79,7 @@ properties:
 
       When LocalTransparencyModifier is set to 1, the `Class.Decal` will be
       completely invisible regardless of its original transparency. When it is
-      set to 0, the `Class.Decal`s rendered transparency will match the
+      set to 0, the decal's rendered transparency will match the
       `Class.Decal.Transparency` value. The formula for this is:
 
       ```
@@ -89,7 +89,7 @@ properties:
       Note, this property should be used on the client only and will not
       replicate to the server.
 
-      For a variant of this property for `Class.BasePart`s, see
+      For a variant of this property for `Class.BasePart|BaseParts`, see
       `Class.BasePart.LocalTransparencyModifier`.
     code_samples:
     type: float
@@ -197,7 +197,7 @@ properties:
       Determines the transparency of the `Class.Decal` with 0 being completely
       opaque and 1 completely transparent.
 
-      Note, `Class.Decal`s also respect the transparency of the original image
+      Note, `Class.Decal|Decals` also respect the transparency of the original image
       file uploaded to Roblox. This means transparency can be changed prior to
       uploading to Roblox, and without the need to use the Transparency
       property.
@@ -207,7 +207,7 @@ properties:
       is likely to be changed by another script, as is the case with player
       Characters.
 
-      For `Class.BasePart`s, see `Class.BasePart.Transparency`.
+      For `Class.BasePart|BaseParts`, see `Class.BasePart.Transparency`.
     code_samples:
       - Fading-Decal
     type: float

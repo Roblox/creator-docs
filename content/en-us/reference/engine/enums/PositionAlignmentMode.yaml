@@ -2,10 +2,10 @@ name: PositionAlignmentMode
 type: enum
 summary: |
   The PositionAlignmentMode Enum is used to select the number of
-  `Class.Attachment`s used in an alignment.
+  `Class.Attachment|Attachments` used in an alignment.
 description: |
   The PositionAlignmentMode Enum is used to select the number of
-  `Class.Attachment`s used in an alignment.
+  `Class.Attachment|Attachments` used in an alignment.
 code_samples:
 tags: []
 deprecation_message: ''

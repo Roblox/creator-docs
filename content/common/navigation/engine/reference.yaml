@@ -1365,6 +1365,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/MemoryStoreHashMap.yaml
         ignoreTranslation: true
+      - title: MemoryStoreHashMapPages
+        path: /reference/engine/classes/MemoryStoreHashMapPages
+        type: engineapi
+        source: /reference/engine/classes/MemoryStoreHashMapPages.yaml
+        ignoreTranslation: true
       - title: MemoryStoreQueue
         path: /reference/engine/classes/MemoryStoreQueue
         type: engineapi
@@ -3049,6 +3054,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Region3int16.yaml
         ignoreTranslation: true
+      - title: Secret
+        path: /reference/engine/datatypes/Secret
+        type: engineapi
+        source: /reference/engine/datatypes/Secret.yaml
+        ignoreTranslation: true
       - title: SharedTable
         path: /reference/engine/datatypes/SharedTable
         type: engineapi
@@ -3852,6 +3862,11 @@ navigation:
         path: /reference/engine/enums/HttpCachePolicy
         type: engineapi
         source: /reference/engine/enums/HttpCachePolicy.yaml
+        ignoreTranslation: true
+      - title: HttpCompression
+        path: /reference/engine/enums/HttpCompression
+        type: engineapi
+        source: /reference/engine/enums/HttpCompression.yaml
         ignoreTranslation: true
       - title: HttpContentType
         path: /reference/engine/enums/HttpContentType

@@ -110,10 +110,10 @@ To duplicate an event:
    src="../assets/animation/animation-editor/Animation-Events-Marker-Selected.png"
    width="700" />
 
-2. Press <kbd>Control</kbd> + <kbd>C</kbd> (<kbd>Command ⌘</kbd> + <kbd>C</kbd> on Mac).
+2. Press <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd> on Mac).
 3. Click-and-drag the **scrubber** to the frame position where you want to
    duplicate the event.
-4. Press <kbd>Control</kbd> + <kbd>V</kbd> (<kbd>Command ⌘</kbd> + <kbd>V</kbd> on Mac).
+4. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd> on Mac).
 
    <img
    src="../assets/animation/animation-editor/Animation-Events-Marker-Pasted.png"

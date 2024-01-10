@@ -132,13 +132,14 @@ properties:
       can_save: true
   - name: GuiBase2d.Localize
     summary: |
-      Automatically set to true when a LocalizationTable's Root targets this
-      object, or an ancestor of this object.
+      Automatically set to true when a localization table's
+      `Class.LocalizationTable.Root` targets this object, or an ancestor of this
+      object.
     description: |
-      This property is automatically set to true when a LocalizationTable's Root
-      targets this object, or an ancestor of this object.
-      `Class.LocalizationTable.LocalizationTable`s, with their
-      `Class.LocalizationTable.Root` property pointed at an instance, will
+      This property is automatically set to true when a localization table's
+      `Class.LocalizationTable.Root` targets this object, or an ancestor of this
+      object. `Class.LocalizationTable|LocalizationTables` with their
+      `Class.LocalizationTable.Root` property pointed at an instance will
       localize all `Class.TextLabel.TextButton` that are descendants of the root
       instance.
     code_samples:

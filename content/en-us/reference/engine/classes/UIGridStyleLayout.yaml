@@ -21,7 +21,7 @@ properties:
       The AbsoluteContentSize property of a `Class.UIGridStyleLayout` shows how
       much space the elements of the grid are taking up, including any padding
       created by the grid. This property is particularly useful to size
-      containers of grids such as `Class.Frame`s and Frame to make sure they
+      containers of grids such as `Class.Frame|Frames` to make sure they
       aren't any larger than the grid itself.
 
       It updates as soon as it's read. It won't fire a changed event immediately
@@ -168,11 +168,11 @@ methods:
       This method is deprecated. Use `Class.UIGridStyleLayout.SortOrder`
       instead.
 
-      The function should take two arguments (each will be an
-      `Class.Instance` child to compare), and return true if a comes before b, otherwise
-      return false. In other words, use this function the same way you would use
-      a ' function. The sorting should be deterministic, otherwise sort will
-      fail and fall back to name order.
+      The function should take two arguments (each will be an `Class.Instance`
+      child to compare), and return true if a comes before b, otherwise return
+      false. In other words, use this function the same way you would use a '
+      function. The sorting should be deterministic, otherwise sort will fail
+      and fall back to name order.
     code_samples:
     parameters:
       - name: function

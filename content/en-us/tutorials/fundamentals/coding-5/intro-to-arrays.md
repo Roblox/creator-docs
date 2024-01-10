@@ -108,7 +108,7 @@ In the array just created, `"Hi"` is at index 1, and `"Goodbye!"` is at index 3.
 
 Use index values to assign specific pieces of dialogue to the NPC. To use a value at a specific index, add the index after the array's name without any spaces, like `dialogueArray[1]`.
 
-1. Replace the variable `dialogue`'s default string value with index 2.
+1. Replace the `dialogue` variable's default string value with index 2.
 
    ```lua
     local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}

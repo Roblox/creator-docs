@@ -3,8 +3,8 @@ type: class
 category: Animations
 memory_category: Instances
 summary: |
-  TweenService is used to create `Class.Tween`s, which are used to interpolate,
-  or tween, the properties of instances. `Class.Tween`s can be used on any
+  TweenService is used to create `Class.Tween|Tweens` which are used to interpolate,
+  or tween, the properties of instances. `Class.Tween|Tweens` can be used on any
   object with compatible property types.
 description: |
   Tweens are used to interpolate the properties of instances. These can be used

@@ -20,7 +20,7 @@ Failure to combine head geometry and [remove head bones](../../characters/creati
 
 At this point, you should also combine the separate head and face objects within the single Head_Geo object. Some templates don't include some face objects, like lashes. To combine the head and face meshes:
 
-1. In the Outliner, hold <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> and click following objects, ending with the Head_Geo:
+1. In the Outliner, hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click following objects, ending with the Head_Geo:
 
    1. UpperTeeth_Geo
    2. LowerTeeth_Geo
