@@ -250,12 +250,12 @@ methods:
   - name: Animator:StepAnimations
     summary: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
-      `Class.AnimationTrack`s that are loaded onto the `Class.Animator`,
+      `Class.AnimationTrack|AnimationTracks` that are loaded onto the `Class.Animator`,
       applying the offsets to the model associated with the `Class.Animator`.
       For use in the command bar or by plugins only.
     description: |
       Increments the `Class.AnimationTrack.TimePosition` of all playing
-      `Class.AnimationTrack`s that are loaded onto the `Class.Animator`,
+      `Class.AnimationTrack|AnimationTracks` that are loaded onto the `Class.Animator`,
       applying the offsets to the model associated with the `Class.Animator`.
       For use in the command bar or by plugins only.
 
@@ -266,7 +266,7 @@ methods:
       Note that once animations have stopped playing, the model's joints will
       need to be manually reset to their original positions (see example).
 
-      This function is used to simulate playback of `Class.Animation`s when the
+      This function is used to simulate playback of `Class.Animation|Animations` when the
       game isn't running. This allows animations to be previewed without the
       consequences of running the game, such as scripts executing. If the
       function is called while the game is running, or by `Class.Script|Scripts`

@@ -371,9 +371,9 @@ methods:
       - Cross-server shouts
       - User-created signs
 
-      Calling FilterString from `Class.LocalScript`s is deprecated and will be
+      Calling FilterString from `Class.LocalScript|LocalScripts` is deprecated and will be
       disabled in the future. Text filtering should be done from server-side
-      `Class.Script`s using FilterStringAsync.
+      `Class.Script|Scripts` using FilterStringAsync.
 
       _Note:_ A game not using this filter function for custom chat or other
       user generated text may be subjected to moderation action.

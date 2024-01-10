@@ -65,7 +65,7 @@ The **Show** section lets you toggle specific windows and tools within Studio.
   </tr>
 	<tr>
     <td>**Find&nbsp;All&nbsp;/ Replace&nbsp;All**</td>
-    <td>Displays the results from searching with <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on macOS.</td>
+    <td>Displays the results from searching with <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.</td>
   </tr>
 	<tr>
     <td>**Team Create**</td>

@@ -9,12 +9,12 @@ There are many tips and tricks during the modeling process that can save you tim
 
 ### Hiding Inactive Objects
 
-In your Outliner, hide objects you aren't editing by enabling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}}/>. This cleans up your workspace and helps ensure you don't make unintentional changes to another object or collection.
+In your Outliner, hide objects you aren't editing by enabling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>. This cleans up your workspace and helps ensure you don't make unintentional changes to another object or collection.
 
 You can quickly bulk hide and unhide any parent and child objects that are not [disabled](../../../art/characters/creating/index.md#disabled-objects). To bulk hide objects:
 
 1. In the Outliner, navigate to a parent object, such as **Cage** or **Joints**.
-2. Hold <kbd>Shift</kbd> and click the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}}/> to toggle the object's visibility.
+2. Hold <kbd>Shift</kbd> and click the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> to toggle the object's visibility.
 
 ### Enable Wireframe View
 
@@ -23,5 +23,5 @@ Whenever you use a modeling application, switch between different viewport optio
 Enable wireframes on your material view by setting the following:
 
 1. Select the **Head_Geo**.
-2. In the side Properties panel, navigate to **Object Properties** <img src="../../../assets/art/blender-ui/Object-Select-Icon.png" style={{marginBottom:"0px;"}}/>.
+2. In the side Properties panel, navigate to **Object Properties** <img src="../../../assets/art/blender-ui/Object-Select-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>.
 3. In Viewport Display, enable **Wireframe**.

@@ -61,10 +61,10 @@ methods:
   - name: Ray:ClosestPoint
     summary: |
       Returns a `Datatype.Vector3` projected onto the ray so that it is within
-      the `Datatype.Ray`'s line of sight.
+      the `Datatype.Ray` line of sight.
     description: |
       Returns a `Datatype.Vector3` projected onto the ray so that it is within
-      the `Datatype.Ray`'s line of sight.
+      the `Datatype.Ray` line of sight.
 
       **Note:** the `Datatype.Ray` **must** be a unit ray for this method to
       behave as expected!

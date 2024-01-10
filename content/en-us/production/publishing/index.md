@@ -7,11 +7,9 @@ Publishing your experiences, assets, and accessories to Roblox allows you to mak
 
 ## Experiences
 
-When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) in Studio, Roblox creates a details page that displays the experience's icon and description. At first this page is private and only accessible to you or members of your group with the correct permissions, but when you're ready, you can release the experience to the public. This allows users to find your experience's details page through the Home, Search, or Discover page.
+When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) in Studio, Roblox creates a details page that displays the experience's icon and description. At first this page is private and only accessible to you or members of your group with the correct permissions, but when you're ready, you can release the experience to the public. For more information, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md).
 
-<img src="../../assets/publishing/index/publishing-experiences-example.png" width="531" />
-
-Once an experience is published, you can access the [Game Settings](../../studio/game-settings.md) window, which includes global settings for the experience, such as permissions, monetization, security, and localization options. For more information, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md).
+<img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="100%" />
 
 ## Assets
 
@@ -31,7 +29,5 @@ Once they pass moderation, you can:
 - Limit the number of copies available for purchase, increasing the rarity of your asset.
 - Provide exclusive items or discounts to Premium users.
 - Specify if you also want your asset to be available for purchase within experiences through the [Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md).
-
-<img src="../../assets/publishing/index/publishing-accessories-example.png" width="575" />
 
 For more information, see [Publishing to Avatar Marketplace](../../art/marketplace/marketplace-policy.md).

@@ -369,11 +369,11 @@ properties:
       A number between 0 and 1000 indicating how loud the `Class.Sound` is
       currently playing back.
 
-      This property reflects the amplitude of the `Class.Sound`'s playback in
+      This property reflects the amplitude of the sound's playback in
       the instance of time it is read. Therefore, for most sounds it will
       fluctuate constantly. Due to this it can appear in the Roblox Studio
       properties window as 0, however when read by code in the command bar or
-      `Class.Script`s it will return the correct value.
+      `Class.Script|Scripts` it will return the correct value.
     code_samples:
       - Sound-PlaybackLoudness
     type: double
@@ -667,12 +667,12 @@ properties:
       can only be in one sound group at a time.
     description: |
       The `Class.SoundGroup` that is linked to this `Class.Sound`.
-      `Class.SoundGroup.Volume` and `Class.SoundEffect`s applied to this sound
+      `Class.SoundGroup.Volume` and `Class.SoundEffect|SoundEffects` applied to this sound
       group will pass onto the sound. A sound can only be in one sound group at
       a time.
 
-      `Class.SoundGroup`s are used to manage the volume and effects of multiple
-      `Class.Sound`s at once. A `Class.Sound` is added to a `Class.SoundGroup`
+      `Class.SoundGroup|SoundGroups` are used to manage the volume and effects of multiple
+      `Class.Sound|Sounds` at once. A `Class.Sound` is added to a `Class.SoundGroup`
       by setting the SoundGroup property of the sound.
     code_samples:
       - Sound-SoundGroup
@@ -803,7 +803,7 @@ properties:
       playback volume (but not the Volume property) will be influenced by the
       `Class.SoundGroup.Volume` property of that `Class.SoundGroup`. The effect
       of this is multiplicative, meaning that a sound will play at the same
-      volume if its Volume is 0.1 and its `Class.SoundGroup`'s volume is 5 and
+      volume if its Volume is 0.1 and its `Class.SoundGroup` volume is 5 and
       vice-versa.
     code_samples:
       - Sound-Volume

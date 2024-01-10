@@ -19,7 +19,7 @@ description: |
   The following functionality of Teams exists by default and does not require
   the developer to program any custom behavior.
 
-  - When part of a Team, the name above a `Class.Player`'s character
+  - When part of a Team, the name above a player's character
     `Class.Model` will be colored to the `Class.Team.TeamColor`
   - Changing `Class.Player.TeamColor` will cause `Class.Player.Team` to switch
     to the Team with the corresponding `Class.Team.TeamColor`
@@ -36,7 +36,7 @@ description: |
     `Class.Player.TeamColor` matches `Class.SpawnLocation.TeamColor` can spawn
     on that `Class.SpawnLocation`
   - When `Class.SpawnLocation.AllowTeamChangeOnTouch` is set to true, a
-    `Class.Player`'s `Class.Player.TeamColor` will change to
+    player's `Class.Player.TeamColor` will change to
     `Class.SpawnLocation.TeamColor` when their character touches the
     `Class.SpawnLocation`
 
@@ -60,15 +60,15 @@ deprecation_message: ''
 properties:
   - name: Team.AutoAssignable
     summary: |
-      This property determines whether `Class.Player`s will be automatically
+      This property determines whether `Class.Player|Players` will be automatically
       placed onto the `Class.Team` when joining. If multiple teams have this
       property set to true, Roblox will attempt to even the teams out when
-      `Class.Player`s are added.
+      `Class.Player|Players` are added.
     description: |
-      This property determines whether `Class.Player`s will be automatically
+      This property determines whether `Class.Player|Players` will be automatically
       placed onto the `Class.Team` when joining. If multiple teams have this
       property set to true, Roblox will attempt to even the teams out when
-      `Class.Player`s are added.
+      `Class.Player|Players` are added.
 
       When a `Class.Player` joins a game they will be assigned to the
       `Class.Team` with `Class.Team.AutoAssignable` set to true that has the
@@ -159,7 +159,7 @@ properties:
       `Class.Player.TeamColor` property of players who are a member of the team.
 
       A lot of Roblox's default team functionality is based on the team color,
-      rather than the name or object. For example, `Class.SpawnLocation`s can be
+      rather than the name or object. For example, `Class.SpawnLocation|SpawnLocations` can be
       assigned to a team via `Class.SpawnLocation.TeamColor`. For this reason it
       is recommended that developers ensure each `Class.Team` has a unique
       TeamColor.
@@ -183,11 +183,11 @@ properties:
 methods:
   - name: Team:GetPlayers
     summary: |
-      Returns a list of `Class.Player`s who are assigned to the `Class.Team`. A
+      Returns a list of `Class.Player|Players` who are assigned to the `Class.Team`. A
       `Class.Player` is considered assigned if their `Class.Player.Team`
       property is equal to the `Class.Team` and `Class.Player.Neutral` is false.
     description: |
-      Returns a list of `Class.Player`s who are assigned to the `Class.Team`. A
+      Returns a list of `Class.Player|Players` who are assigned to the `Class.Team`. A
       `Class.Player` is considered assigned if their `Class.Player.Team`
       property is equal to the `Class.Team` and `Class.Player.Neutral` is false.
 
@@ -200,7 +200,7 @@ methods:
     returns:
       - type: Objects
         summary: |
-          An array of `Class.Player`s in the `Class.Team`.
+          An array of `Class.Player|Players` in the `Class.Team`.
     tags: []
     deprecation_message: ''
     security: None

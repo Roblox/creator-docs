@@ -7,7 +7,7 @@ summary: |
 description: |
   The RocketPropulsion object applies a force on a part so that it both
   **follows** and **faces** a target part. It acts like a hybrid of
-  `Class.BodyPosition` and `Class.BodyGyro`. Unlike other `Class.BodyMover`s, a
+  `Class.BodyPosition` and `Class.BodyGyro`. Unlike other `Class.BodyMover|BodyMovers`, a
   RocketPropulsion must be instructed to begin applying a force: call
   `Class.RocketPropulsion:Fire()|Fire` to start, or call
   `Class.RocketPropulsion:Abort()|Abort` to stop.

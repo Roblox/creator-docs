@@ -3,9 +3,6 @@ type: library
 summary: |
   A library of buffer functions.
 description: |
-  **NOTE:** The buffer library is currently a beta feature and is only available
-  in Studio.
-
   A buffer is an object that represents a fixed-size mutable block of memory.
   The buffer library provides functions for creation and manipulation of buffer
   objects, providing all its functions inside the global `Library.buffer`

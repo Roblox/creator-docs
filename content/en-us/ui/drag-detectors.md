@@ -11,7 +11,10 @@ description: Drag detectors instances encourage physical interaction with object
 - Players can manipulate anchored parts or models and they'll stay exactly where you put them upon release.
 - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it easier to test and adjust draggable objects while editing.
 
+<figure>
 <video src="../assets/ui/drag-detectors/Showcase.mp4" controls width="100%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
+<figcaption>Drag detectors used in a variety of implementations in the 3D world</figcaption>
+</figure>
 
 ## Making Objects Draggable
 
@@ -374,13 +377,13 @@ local connection = dragDetector:AddConstraintFunction(2, snapToWorldGrid)
 
 A basic implementation of drag detectors is a tower balance game where players must carefully remove pieces and attempt to keep the tower upright. In the following tower structure, each piece has a child `Class.DragDetector` with a default `Class.DragDetector.DragStyle|DragStyle` of **TranslatePlane** so that players can pull the pieces outward but not upward or downward.
 
-<video src="../assets/ui/drag-detectors/Balance-Tower.mp4" controls width="90%" alt="Drag detectors placed on each piece of a tower balance game"></video>
+<video src="../assets/ui/drag-detectors/Balance-Tower.mp4" controls width="800" alt="Drag detectors placed on each piece of a tower balance game"></video>
 
 ### Anchored Models With Adjustable Parts
 
 You can easily create and share models which are primarily anchored, but which have one or more child parts/models that players can drag. For example, the following desk has two drawers which players can open to inspect what's inside.
 
-<video src="../assets/ui/drag-detectors/Desk-Drawers.mp4" controls width="90%" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
+<video src="../assets/ui/drag-detectors/Desk-Drawers.mp4" controls width="800" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
 
 <Alert severity="warning">
 When making children of models draggable, you should set the drag detector's `Class.DragDetector.ReferenceInstance|ReferenceInstance` to an object within the model that can serve as a dedicated reference frame, for example the desk's top surface. This establishes a consistent reference `Datatype.CFrame` for the style/direction of dragging, even if the model is rotated.
@@ -390,13 +393,13 @@ When making children of models draggable, you should set the drag detector's `Cl
 
 You can combine drag detectors with `Class.Constraint|Constraints`, for example a marionette puppet. In the following setup, the control handles are anchored, the body parts are unanchored, and constraints hold the marionette together. Moving the handles with the **TranslateViewPlane** `Class.DragDetector.DragStyle|DragStyle` makes the marionette dance, and the individual body parts may also be moved with drag detectors, all while the model retains its integrity.
 
-<video src="../assets/ui/drag-detectors/Marionette.mp4" controls width="90%" alt="Drag detectors placed on the handles of a marionette puppet"></video>
+<video src="../assets/ui/drag-detectors/Marionette.mp4" controls width="800" alt="Drag detectors placed on the handles of a marionette puppet"></video>
 
 ### 3D User Interfaces
 
 3D user interfaces are easily achievable through drag detectors, such as adjusting the brightness of a `Class.SpotLight` based on a sliding switch dimmer. You can also detect the **X** and **Z** axes individually to control two different aspects of a 3D user interface, such as the `Class.ParticleEmitter.Size|Size`, `Class.ParticleEmitter.Speed|Speed`, and `Class.ParticleEmitter.Color|Color` of a `Class.ParticleEmitter`.
 
-<video src="../assets/ui/drag-detectors/Color-Slider.mp4" controls width="90%" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
+<video src="../assets/ui/drag-detectors/Color-Slider.mp4" controls width="800" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
 
 ```lua title='DragDetector - 3D User Interface'
 local model = script.Parent

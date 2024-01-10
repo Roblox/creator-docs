@@ -19,8 +19,6 @@ To create a unique experience that alters the appearance of your users, you can 
 
 The **Avatar** section in [Game Settings](../studio/game-settings.md#avatar) menu allows you to quickly set several global character properties in your experience. When editing the Avatar Game Settings, your avatar displays in the workspace as a visual preview.
 
-<img src="../assets/avatar/character-customization/Game-Settings-Avatar-Section.png" width="800" />
-
 <img src="../assets/avatar/character-customization/Avatar-In-Editor-Window.jpg"
 width="800" />
 

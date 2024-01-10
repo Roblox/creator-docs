@@ -61,7 +61,7 @@ graphics set to the automatic setting.
 
 To check the frame rate of your experience:
 
-- On the client, press `Shift + F5`.
+- On the client, press <kbd>Shift</kbd><kbd>F5</kbd>.
 - In Studio settings, under the **View** Tab, select **Stats** > **Summary** to
    enable debug stats. <Alert severity="warning"> Note, performance stats in
    Studio are skewed by the Studio application, so  you should view the frame
@@ -124,8 +124,8 @@ computation to be expensive.
 
 <table>
   <tr>
-    <th>**Scope**</th>
-    <th>**Associated Computation**</th>
+    <th>Scope</th>
+    <th>Associated Computation</th>
   </tr>
   <tr>
     <td>RunService.PreRender</td>
@@ -214,8 +214,8 @@ You can carry out the following tasks to help mitigate computation issues:
 
 <table>
   <tr>
-    <th>**Scope**</th>
-    <th>**Associated Computation**</th>
+    <th>Scope</th>
+    <th>Associated Computation</th>
   </tr>
   <tr>
     <td>physicsStepped</td>
@@ -317,9 +317,7 @@ something. Draw calls have significant overhead, and generally the fewer draw
 calls a frame the engine makes the less computational time is spent rendering a
 frame.
 
-You can see how many draw calls are currently occurring with the **Render
-Stats**>**Timing** item in Studio. You can view **Render Stats** in the client by
-pressing `Shift+F2`.
+You can see how many draw calls are currently occurring with the **Render Stats**&nbsp;&rarr; **Timing** item in Studio. You can view **Render Stats** in the client by pressing <kbd>Shift</kbd><kbd>F2</kbd>.
 
 The more objects that need to be drawn in your scene in a given frame, the more
 draw calls are made to the GPU. However, the Roblox engine utilizes a process

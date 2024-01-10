@@ -107,25 +107,28 @@ methods:
     thread_safety: Safe
   - name: WorldRoot:BulkMoveTo
     summary: |
-      Moves a table of `Class.BasePart|BaseParts` to a table of `Datatype.CFrame|CFrames`.
+      Moves a table of `Class.BasePart|BaseParts` to a table of
+      `Datatype.CFrame|CFrames`.
     description: |
       This function moves a table of `Class.BasePart|BaseParts` to a table of
       `Datatype.CFrame|CFrames` without necessarily firing the default property
-      `Class.Instance.Changed|Changed` events. This provides a very fast way to move
-      large numbers of parts, as you don't have to pay the cost of separate property sets
-      for each individual part.
+      `Class.Instance.Changed|Changed` events. This provides a very fast way to
+      move large numbers of parts, as you don't have to pay the cost of separate
+      property sets for each individual part.
 
-      The third argument allows you to further optimize the movement
-      operation. By default, the `Class.Instance.Changed|Changed` event of each part
-      fires for `Class.BasePart.Position|Position`, `Class.BasePart.Orientation|Orientation`,
-      and `Class.BasePart.CFrame|CFrame`. However, if you specify
+      The third argument allows you to further optimize the movement operation.
+      By default, the `Class.Instance.Changed|Changed` event of each part fires
+      for `Class.BasePart.Position|Position`,
+      `Class.BasePart.Orientation|Orientation`, and
+      `Class.BasePart.CFrame|CFrame`. However, if you specify
       `Enum.BulkMoveMode|FireCFrameChanged` as the third argument, only the
-      `Class.Instance.Changed|Changed` event for the `Class.BasePart.CFrame|CFrame` property
-      will fire.
+      `Class.Instance.Changed|Changed` event for the
+      `Class.BasePart.CFrame|CFrame` property will fire.
 
       Note that you should only use this function if you're sure that part
-      movement is a bottleneck in your code. Simply setting the `Class.BasePart.CFrame|CFrame`
-      property of individual parts and welded models is fast enough in the majority of cases.
+      movement is a bottleneck in your code. Simply setting the
+      `Class.BasePart.CFrame|CFrame` property of individual parts and welded
+      models is fast enough in the majority of cases.
     code_samples:
     parameters:
       - name: partList
@@ -304,20 +307,20 @@ methods:
     thread_safety: Unsafe
   - name: WorldRoot:FindPartsInRegion3
     summary: |
-      Returns an array of `Class.BasePart`s in the given `Datatype.Region3`.
+      Returns an array of `Class.BasePart|BaseParts` in the given `Datatype.Region3`.
     description: |
-      Returns an array of `Class.BasePart`s in the given `Datatype.Region3`.
+      Returns an array of `Class.BasePart|BaseParts` in the given `Datatype.Region3`.
 
       This function takes an optional maxParts parameter (default 20) which
-      limits the number of `Class.BasePart`s that can be returned. Once this
-      number has been reached, the search for `Class.BasePart`s will stop. This
-      means some `Class.BasePart`s may not be returned even if they are within
+      limits the number of `Class.BasePart|BaseParts` that can be returned. Once this
+      number has been reached, the search for `Class.BasePart|BaseParts` will stop. This
+      means some `Class.BasePart|BaseParts` may not be returned even if they are within
       the `Datatype.Region3`
 
       The optional ignoreDescendentsInstance parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
-      see if any `Class.BasePart`s are inside a `Class.BasePart` other than the
+      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other than the
       `Class.BasePart` itself.
 
       ```
@@ -331,7 +334,7 @@ methods:
       `Class.WorldRoot:FindPartsInRegion3WithWhiteList()` variants of this
       method exist to provide specific exclusion and inclusion functionality.
 
-      If no `Class.BasePart`s are found, an empty array will be returned.
+      If no `Class.BasePart|BaseParts` are found, an empty array will be returned.
     code_samples:
     parameters:
       - name: region
@@ -348,11 +351,11 @@ methods:
         type: int
         default: 20
         summary: |
-          The maximum amount of `Class.BasePart`s to be returned.
+          The maximum amount of `Class.BasePart|BaseParts` to be returned.
     returns:
       - type: Objects
         summary: |
-          An array of `Class.BasePart`s within the `Datatype.Region3`.
+          An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -397,11 +400,11 @@ methods:
         type: int
         default: 20
         summary: |
-          The maximum number of `Class.BasePart`s to be returned.
+          The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
       - type: Objects
         summary: |
-          An array of `Class.BasePart`s found within the `Datatype.Region3`.
+          An array of `Class.BasePart|BaseParts` found within the `Datatype.Region3`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -446,11 +449,11 @@ methods:
         type: int
         default: 20
         summary: |
-          The maximum number of `Class.BasePart`s to be returned.
+          The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
       - type: Objects
         summary: |
-          An array of `Class.BasePart`s within the `Datatype.Region3`.
+          An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -672,16 +675,16 @@ methods:
     thread_safety: Unsafe
   - name: WorldRoot:IsRegion3Empty
     summary: |
-      Returns a bool indicating whether there are no `Class.BasePart`s within
+      Returns a bool indicating whether there are no `Class.BasePart|BaseParts` within
       the given `Datatype.Region3`.
     description: |
       **IsRegion3Empty** returns a bool indicating whether there are no
-      `Class.BasePart`s within the given `Datatype.Region3`.
+      `Class.BasePart|BaseParts` within the given `Datatype.Region3`.
 
       The optional ignoreDescendentsInstance parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
-      see if any `Class.BasePart`s are inside a `Class.BasePart` other than the
+      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other than the
       `Class.BasePart` itself.
 
       ```
@@ -696,7 +699,7 @@ methods:
       `Class.WorldRoot:IsRegion3EmptyWithIgnoreList()`.
 
       This function only returns if a region is empty or not. Developers looking
-      to find `Class.BasePart`s in a region should use
+      to find `Class.BasePart|BaseParts` in a region should use
       `Class.WorldRoot:FindPartsInRegion3()`.
 
       #### How do Region3 checks work?

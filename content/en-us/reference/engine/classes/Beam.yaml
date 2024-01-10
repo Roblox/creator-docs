@@ -3,7 +3,7 @@ type: class
 category: Effects
 memory_category: Instances
 summary: |
-  Connects two `Class.Attachment`s by drawing a texture between them.
+  Connects two `Class.Attachment|Attachments` by drawing a texture between them.
 description: |
   A **Beam** object connects two `Class.Attachment|Attachments` by drawing a
   texture between them.
@@ -27,9 +27,9 @@ description: |
 
   - **P0**: The start of the beam; position of `Class.Beam.Attachment0`.
   - **P1**: `Class.Beam.CurveSize0` studs away from `Class.Beam.Attachment0`, in
-    `Class.Beam.Attachment0`'s positive X direction.
+    the positive X direction of `Class.Beam.Attachment0`.
   - **P2**: `Class.Beam.CurveSize1` studs away from `Class.Beam.Attachment1`, in
-    `Class.Beam.Attachment1`'s negative X direction.
+    the negative X direction of `Class.Beam.Attachment1`.
   - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
 
   ![Beam Curve](/assets/legacy/BeamCurve1.png)
@@ -46,9 +46,9 @@ properties:
     description: |
       The `Class.Attachment` the `Class.Beam` originates from.
 
-      A `Class.Beam`'s Attachment0 is the first control point on the
-      `Class.Beam`'s cubic Bézier curve. The orientation of Attachment0,
-      alongside the `Class.Beam`'s `Class.Beam.CurveSize0`, property determine
+      A beam's Attachment0 is the first control point on the
+      beam's cubic Bézier curve. The orientation of Attachment0,
+      alongside the `Class.Beam.CurveSize0` property, determine
       the position of the second control point.
 
       For the `Class.Attachment` where the `Class.Beam` ends see
@@ -75,9 +75,9 @@ properties:
     description: |
       The `Class.Attachment` the `Class.Beam` ends at.
 
-      A `Class.Beam`'s Attachment1 is the fourth and final control point on the
-      `Class.Beam`'s cubic Bézier curve. The orientation of Attachment1,
-      alongside the `Class.Beam`'s `Class.Beam.CurveSize1` property, determine
+      A beam's Attachment1 is the fourth and final control point on the
+      beam's cubic Bézier curve. The orientation of Attachment1,
+      alongside the `Class.Beam.CurveSize1` property, determine
       the position of the third control point.
 
       For the `Class.Attachment` where the `Class.Beam` starts see
@@ -126,8 +126,8 @@ properties:
     description: |
       Determines the color of the `Class.Beam`.
 
-      If the `Class.Beam`'s `Class.Beam.Texture` is set, this color will be
-      applied to the `Class.Beam`'s texture. If no `Class.Beam.Texture` has been
+      If `Class.Beam.Texture` is set, this color will be
+      applied to the beam's texture. If no `Class.Beam.Texture` has been
       set then the `Class.Beam` will appear as a solid bar colored in accordance
       with this property.
 
@@ -151,11 +151,11 @@ properties:
 
       ![enter image description here](/assets/legacy/BeamColor.png)
 
-      Note the `Class.Beam`'s coloration also depends on the number of
+      Note the beam's coloration also depends on the number of
       `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
       only show a transition between two colors. Therefore a `Class.Beam` will
       need to have at least n-1 segments in order for the color to display
-      correctly, where n is the number of `Datatype.ColorSequenceKeypoint`s in
+      correctly, where n is the number of `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints` in
       the `Datatype.ColorSequence`
     code_samples:
       - Creating-a-Beam-From-Scratch
@@ -173,7 +173,7 @@ properties:
   - name: Beam.CurveSize0
     summary: |
       Determines, along with `Class.Beam.Attachment0` the position of the first
-      control point in the `Class.Beam`'s Bézier curve.
+      control point in the beam's Bézier curve.
     description: |
       Determines, along with `Class.Beam.Attachment0` the position of the first
       control point in the Beam's Bézier curve.
@@ -190,17 +190,17 @@ properties:
       [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). This
       means they are not constrained to straight lines, and the curve of the
       beam can be modified by changing CurveSize0, `Class.Beam.CurveSize1` and
-      the orientation of the beam's `Class.Attachment`s.
+      the orientation of the beam's `Class.Attachment|Attachments`.
 
       Cubic Bézier curves are formed of four control points. They are determined
       as follows:
 
       - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
       - **P1**: CurveSize0 studs away from `Class.Beam.Attachment0`, in
-        `Class.Beam.Attachment0`'s positive X direction.
+        the positive X direction of `Class.Beam.Attachment0`.
       - **P2**: `Class.Beam.CurveSize1` studs away from
-        `Class.Beam.Attachment1`, in `Class.Beam.Attachment1`'s negative X
-        direction.
+        `Class.Beam.Attachment1`, in the negative X
+        direction of `Class.Beam.Attachment1`.
       - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
 
       The beam starts at P0, goes towards P1, and arrives at P3, from the
@@ -227,10 +227,10 @@ properties:
   - name: Beam.CurveSize1
     summary: |
       Determines, along with `Class.Beam.Attachment1` the position of the second
-      control point in the `Class.Beam`'s Bézier curve.
+      control point in the beam's Bézier curve.
     description: |
       Determines, along with `Class.Beam.Attachment0` the position of the first
-      control point in the Beam's Bézier curve.
+      control point in the beam's Bézier curve.
 
       The position of this point can be determined by the following equation:
 
@@ -244,17 +244,17 @@ properties:
       [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). This
       means they are not constrained to straight lines, and the curve of the
       beam can be modified by changing `Class.Beam.CurveSize0`, CurveSize1 and
-      the orientation of the beam's `Class.Attachment`s.
+      the orientation of the beam's `Class.Attachment|Attachments`.
 
       Cubic Bézier curves are formed of four control points. They are determined
       as follows:
 
       - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
       - **P1**: `Class.Beam.CurveSize0` studs away from
-        `Class.Beam.Attachment0`, in `Class.Beam.Attachment0`'s positive X
-        direction.
+        `Class.Beam.Attachment0`, in the positive X
+        direction of `Class.Beam.Attachment0`.
       - **P2**: CurveSize1 studs away from `Class.Beam.Attachment1`, in
-        `Class.Beam.Attachment1`'s negative X direction.
+        the negative X direction of `Class.Beam.Attachment1`.
       - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
 
       The beam starts at P0, goes towards P1, and arrives at P3, from the
@@ -284,7 +284,7 @@ properties:
     description: |
       Determines whether the `Class.Beam` is visible or not.
 
-      When this property is set to false, the `Class.Beam`'s
+      When this property is set to false, the beam's
       `Class.Beam.Segments` will not be displayed.
     code_samples:
       - Creating-a-Beam-From-Scratch
@@ -422,7 +422,7 @@ properties:
       segment can only show a transition between two colors or transparencies.
       Therefore a `Class.Beam` requires at least n-1 segments to display
       correctly, where n is the number of keypoint associated with the
-      `Class.Beam`'s `Class.Beam.Color` and `Class.Beam.Transparency`.
+      beam's `Class.Beam.Color` and `Class.Beam.Transparency`.
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: int
@@ -468,14 +468,14 @@ properties:
       can_save: true
   - name: Beam.TextureLength
     summary: |
-      Sets the length of the `Class.Beam`s texture if `Class.Beam.TextureMode`
+      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode`
       is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
       determines the size of the texture relative to the `Class.Beam|Beam's`
       length.
     description: |
-      Sets the length of the `Class.Beam`s texture if `Class.Beam.TextureMode`
+      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode`
       is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
-      determines the size of the texture relative to the `Class.Beam`'s length.
+      determines the size of the texture relative to the beam's length.
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: float
@@ -499,7 +499,7 @@ properties:
 
       #### Beam Texture Behavior
 
-      How a `Class.Beam`'s texture scales or repeats is dependent on the
+      How a beam's texture scales or repeats is dependent on the
       TextureMode property.
 
       When TextureMode is 'Wrap' the size of the repeating texture corresponds
@@ -513,7 +513,7 @@ properties:
 
       When `Class.Beam.TextureMode` is set to 'Stretch' however the texture will
       be stretched relative to the beam's length. The size of the texture
-      relative to the `Class.Beam`'s length will be one over the
+      relative to the beam's length will be one over the
       `Class.Beam.TextureLength`. In practice, this means the texture will
       repeat `Class.Beam.TextureLength` times. For an example of this see the
       image below:
@@ -590,7 +590,7 @@ properties:
       `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
       only show a transition between two transparencies. Therefore a
       `Class.Beam` will need to have at least n-1 segments in order to display
-      correctly, where n is the number of `Datatype.NumberSequenceKeypoint`s in
+      correctly, where n is the number of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` in
       the `Datatype.NumberSequence`
     code_samples:
       - Creating-a-Beam-From-Scratch
@@ -659,10 +659,10 @@ properties:
       can_save: true
   - name: Beam.ZOffset
     summary: |
-      The distance, in studs, the `Class.Beam`s display is offset by relative to
+      The distance, in studs, the `Class.Beam` display is offset by relative to
       the `Class.Workspace.CurrentCamera`.
     description: |
-      The distance, in studs, the `Class.Beam`s display is offset by relative to
+      The distance, in studs, the `Class.Beam` display is offset by relative to
       the `Class.Workspace.CurrentCamera`.
 
       When ZOffset is 0, the `Class.Beam` will be displayed in its standard
@@ -670,8 +670,8 @@ properties:
       ZOffset can be both positive and negative.
 
       This property can be particularly useful when using multiple
-      `Class.Beam|Beams` between the same `Class.Attachment`s. It can be used to
-      layer the `Class.Beam`s and avoid
+      `Class.Beam|Beams` between the same `Class.Attachment|Attachments`. It can be used to
+      layer the beams and avoid
       [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting).
     code_samples:
       - Beam-ZOffset
@@ -689,19 +689,18 @@ properties:
 methods:
   - name: Beam:SetTextureOffset
     summary: |
-      Sets the current offset of the `Class.Beam`'s texture cycle.
+      Sets the current offset of the beam's texture cycle.
     description: |
-      Sets the current offset of the `Class.Beam`'s texture cycle.
+      Sets the current offset of the beam's texture cycle.
 
-      The offset of a `Class.Beam`s texture cycle represents the progress of the
-      `Class.Beam`s texture animation. Hence, a `Class.Beam`'s texture cycle can
+      The offset of a `Class.Beam` texture cycle represents the progress of its texture animation. Hence, a beam's texture cycle can
       be reset as follows:
 
       ```lua
       beam:SetTextureOffset(0)
       ```
 
-      Where manual control is not required over the `Class.Beam`'s texture
+      Where manual control is not required over the beam's texture
       cycle, `Class.Beam.TextureSpeed` can be used instead to animate the
       `Class.Beam`. Although, for illustrative purposes, a similar function can
       be achieved with SetTextureOffset.

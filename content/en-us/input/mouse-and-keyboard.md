@@ -259,7 +259,7 @@ Roblox reserves system specific keyboard inputs that you can't change, disable, 
   </tr>
   <tr>
     <td><kbd>F11</kbd></td>
-    <td>Fullscreen mode (Windows)<br />Show desktop (macOS)</td>
+    <td>Fullscreen mode (Windows)<br />Show desktop (Mac)</td>
   </tr>
 	<tr>
     <td><kbd>F12</kbd></td>

@@ -73,7 +73,7 @@ To install the Clothing Validation Tool in Maya:
 1. Download [ValidationTool_Maya.zip](../../assets/accessories/validation-tool/ValidationTool_Maya.zip) and unzip the content in a local directory.
 2. Open the contents of the `.zip` file in a file browser.
 
-   - If on PC, **double-click** `install.bat`. This runs a batch script that enables you to quickly run the Validation Tool in Maya.
+   - If on Windows, **double-click** `install.bat`. This runs a batch script that enables you to quickly run the Validation Tool in Maya.
    - If on Mac, **right-click** the `install.command` file and select **Open With** > **Terminal**. This runs a terminal script that enables you to quickly run the Validation Tool in Maya.
 
      <img src="../../assets/accessories/validation-tool/Mac-Right-Click-Install.png" width="40%" />

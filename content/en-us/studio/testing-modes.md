@@ -143,7 +143,7 @@ If you're working on an experience with others in [Collaboration](../projects/co
 If you'd like to support Virtual Reality (VR) headsets for your experience, make sure to test in VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open-source industry standard providing access to VR.
 
 <Alert severity="info">
-Currently, Testing in VR is only supported on Windows PCs.
+Currently, Testing in VR is only supported on Windows.
 </Alert>
 
 ### Headset Configuration

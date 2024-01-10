@@ -1695,7 +1695,8 @@ methods:
         summary: |
           A `Datatype.CFrame` describing the position and orientation of the
           specified VR device.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -2745,7 +2746,7 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the position of the
+          An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the gesture.
       - name: state
         type: UserInputState
@@ -2890,7 +2891,7 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the positions of the
+          An array of `Datatype.Vector2` objects, indicating the positions of the
           touches (e.g. fingers) involved in the gesture.
       - name: totalTranslation
         type: Vector2
@@ -3236,7 +3237,7 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the position of the
+          An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
         type: bool
@@ -3346,7 +3347,8 @@ events:
         summary: |
           A `Datatype.CFrame` value indicating the updated CFrame of the body
           part that moved.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

@@ -75,8 +75,8 @@ After you add the webhook, use it to configure the bot with the following steps:
 
 1. Open the **All servers** list by clicking its icon or use the shortcut:
 
-   - <kbd>Control</kbd> + <kbd>S</kbd> on Windows.
-   - <kbd>Command ⌘</kbd> + <kbd>S</kbd> on Mac.
+   - <kbd>Ctrl</kbd><kbd>S</kbd> on Windows.
+   - <kbd>⌘</kbd><kbd>S</kbd> on Mac.
 
 1. Select your server for receiving right to erasure notifications.
 1. Expand the list under **Server home** and select **Manage Bots**.

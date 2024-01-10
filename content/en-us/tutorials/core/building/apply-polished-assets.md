@@ -57,7 +57,7 @@ To get the asset library from your inventory into your experience:
 1. In the menu bar, select the **View** tab.
 2. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
 
-   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="876" />
+   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
 
 3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 

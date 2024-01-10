@@ -75,7 +75,9 @@ The function `FindFirstChildWhichIsA()` can be used to look for specific object 
 
    ```
 
-2. Check to see if `character` has a Humanoid. Type `local humanoid = character:FindFirstChildWhichIsA("Humanoid")`.
+2. Check to see if `character` has a `Class.Humanoid` by typing:
+
+   `local humanoid = character:FindFirstChildWhichIsA("Humanoid")`
 
    ```lua
    local trapPart = script.Parent

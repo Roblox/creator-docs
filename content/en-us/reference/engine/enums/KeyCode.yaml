@@ -153,7 +153,7 @@ items:
     deprecation_message: ''
   - name: Slash
     summary: |
-      The `` key.
+      The `/` key.
     value: 47
     tags: []
     deprecation_message: ''

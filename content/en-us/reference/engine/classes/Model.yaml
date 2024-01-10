@@ -248,11 +248,11 @@ methods:
   - name: Model:BreakJoints
     summary: |
       Breaks connections between `BaseParts`, including surface connections with
-      any adjacent parts, `Class.WeldConstraint`s and all `Class.Weld`s and
+      any adjacent parts, `Class.WeldConstraint|WeldConstraints` and all `Class.Weld|Welds` and
       other `Class.JointInstance`s.
     description: |
       Breaks connections between `BaseParts`, including surface connections with
-      any adjacent parts, `Class.WeldConstraint`s, and all `Class.Weld`s and
+      any adjacent parts, `Class.WeldConstraint|WeldConstraints`, and all `Class.Weld|Welds` and
       other `Class.JointInstance`s.
 
       When BreakJoints is used on a Player character `Class.Model`, the
@@ -324,11 +324,11 @@ methods:
   - name: Model:GetExtentsSize
     summary: |
       Returns the size of the smallest bounding box that contains all of the
-      `Class.BasePart`s in the `Class.Model`, aligned with the
+      `Class.BasePart|BaseParts` in the `Class.Model`, aligned with the
       `Class.Model.PrimaryPart` if it is set.
     description: |
       Returns the size of the smallest bounding box that contains all of the
-      `Class.BasePart`s in the `Class.Model`. If `Class.Model.PrimaryPart`
+      `Class.BasePart|BaseParts` in the `Class.Model`. If `Class.Model.PrimaryPart`
       exists then the bounding box will be aligned to that part. If a primary
       part has not been set then the function will chose a part in the model to
       align the bounding box to. As the selection of this part is not
@@ -411,7 +411,7 @@ methods:
     thread_safety: Unsafe
   - name: Model:GetPrimaryPartCFrame
     summary: |
-      Returns the `Datatype.CFrame` of the `Class.Model`'s
+      Returns the `Datatype.CFrame` of the model's
       `Class.Model.PrimaryPart`. This function will throw an error if no primary
       part exists for the `Class.Model`.
     description: |
@@ -420,7 +420,7 @@ methods:
       `Class.PVInstance:GetPivot()` for new work and migrate your existing
       `Class.Model:GetPrimaryPartCFrame()` calls when convenient.
 
-      Returns the `Datatype.CFrame` of the `Class.Model`'s
+      Returns the `Datatype.CFrame` of the model's
       `Class.Model.PrimaryPart`.
 
       This function is equivalent to the following.
@@ -482,7 +482,7 @@ methods:
     thread_safety: Unsafe
   - name: Model:MakeJoints
     summary: |
-      Goes through all `Class.BasePart`s in the `Class.Model`. If any part's
+      Goes through all `Class.BasePart|BaseParts` in the `Class.Model`. If any part's
       side has a SurfaceType that can make a joint it will create a joint with
       any adjacent parts.
     description: |
@@ -659,7 +659,7 @@ methods:
     thread_safety: Unsafe
   - name: Model:SetPrimaryPartCFrame
     summary: |
-      Sets the `Class.BasePart.CFrame` of the `Class.Model`'s
+      Sets the `Class.BasePart.CFrame` of the model's
       `Class.Model.PrimaryPart`. All other parts in the model will also be moved
       and will maintain their orientation and offset respective to the
       `Class.Model.PrimaryPart`.
@@ -669,7 +669,7 @@ methods:
       behavior. Use `Class.PVInstance:PivotTo()` for new work and migrate your
       existing `Class.Model:SetPrimaryPartCFrame()` calls when convenient.
 
-      Sets the `Class.BasePart.CFrame` of the `Class.Model`'s
+      Sets the `Class.BasePart.CFrame` of the model's
       `Class.Model.PrimaryPart`. All other parts in the model will also be moved
       and will maintain their orientation and offset respective to the
       `Class.Model.PrimaryPart`.
@@ -695,12 +695,12 @@ methods:
   - name: Model:TranslateBy
     summary: |
       Shifts a `Class.Model` by the given `Datatype.Vector3` offset, preserving
-      the `Class.Model`'s orientation. If another `Class.BasePart` or
+      the model's orientation. If another `Class.BasePart` or
       `Class.Terrain` already exists at the new position then the `Class.Model`
       will overlap said object.
     description: |
       Shifts a `Class.Model` by the given `Datatype.Vector3` offset, preserving
-      the `Class.Model`'s orientation. If another `Class.BasePart` or
+      the model's orientation. If another `Class.BasePart` or
       `Class.Terrain` already exists at the new position then the `Class.Model`
       will overlap said object.
 

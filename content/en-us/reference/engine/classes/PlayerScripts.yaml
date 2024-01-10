@@ -8,7 +8,7 @@ description: |
   `Class.PlayerScripts` is a container object located inside `Class.Player`
   objects within the `Class.Players` game service. It is created automatically
   when a player joins the game. Its main purpose is to contain
-  `Class.LocalScript`s copied from the `Class.StarterPlayerScripts` container
+  `Class.LocalScript|LocalScripts` copied from the `Class.StarterPlayerScripts` container
   within the `Class.StarterPlayer` game service, which happens once upon
   creation. Descendant `LocalScripts` of `Class.PlayerScripts` will run code on
   the client of the `Class.Player`.

@@ -119,7 +119,7 @@ Every mesh within the sample modular building kit uses a [custom material](../..
 
 To use alternative custom materials for wall meshes:
 
-1. In the viewport, hold down <kbd>Alt</kbd> + <kbd>Shift</kbd> then click on any mesh of your building with a brick material.
+1. In the viewport, hold down <kbd>Alt</kbd><kbd>Shift</kbd> (<kbd>⌥</kbd><kbd>Shift</kbd>) then click on any mesh of your building with a brick material.
 
    <img src="../../assets/tutorials/assembling-modular-environments/Customizing-MassSelection.jpg" width="50%"/>
 
@@ -177,7 +177,7 @@ To swap `Class.SurfaceAppearance` objects for trim meshes:
 
 1. **(Optional)** To further customize the new `Class.SurfaceAppearance` object, select a new tint color.
 
-   1. In the viewport, hold down <kbd>Alt</kbd> + <kbd>Shift</kbd> then click on any mesh of your building with a trim.
+   1. In the viewport, hold down <kbd>Alt</kbd><kbd>Shift</kbd> (<kbd>⌥</kbd><kbd>Shift</kbd>) then click on any mesh of your building with a trim.
    1. In the **Properties** window, click either **BrickColor** or **Color**. The hexagon map or colors popup display, respectively.
    1. Select a new color. All active trim meshes update their tint color in the viewport.
 

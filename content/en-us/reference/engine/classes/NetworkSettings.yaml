@@ -259,11 +259,11 @@ properties:
       can_save: true
   - name: NetworkSettings.ShowActiveAnimationAsset
     summary: |
-      When set to true, a label will be shown above each `Class.Player`'s head,
+      When set to true, a label will be shown above each player's head,
       showing the current animation being played by the Player's
       `Class.Humanoid`, if any.
     description: |
-      When set to true, a label will be shown above each `Class.Player`'s head,
+      When set to true, a label will be shown above each player's head,
       showing the current animation being played by the Player's
       `Class.Humanoid`, if any.
     code_samples:
