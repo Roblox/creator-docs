@@ -304,7 +304,7 @@ methods:
         type: Array
         default:
         summary: |
-          An array of instances or contentId strings to load.
+          An array of instances or content ID strings (for images) to load.
       - name: callbackFunction
         type: Function
         default: nil
