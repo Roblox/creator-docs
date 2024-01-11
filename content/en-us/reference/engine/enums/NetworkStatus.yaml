@@ -1,0 +1,23 @@
+name: NetworkStatus
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Connected
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Disconnected
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

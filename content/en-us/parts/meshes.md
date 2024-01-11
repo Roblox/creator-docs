@@ -18,7 +18,7 @@ You can browse thousands of user-uploaded meshes from the [Creator Marketplace](
 
 1. Navigate to the **View** tab and select **Toolbox**.
 
-   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
 1. From the **Marketplace** tab, select the category dropdown and choose **Meshes**.
 

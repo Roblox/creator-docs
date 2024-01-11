@@ -180,29 +180,51 @@ functions:
       Returns the value that was returned by the given ModuleScript, running it
       if it has not been run yet.
     description: |
-      Runs the supplied `Class.ModuleScript` if it has not been run already, and
-      returns what the ModuleScript returned (in both cases).
+      Runs the supplied `Class.ModuleScript` and returns what the
+      `Class.ModuleScript` returned (usually a table or a function). Once the
+      return object is created by an **initial**
+      `Global.RobloxGlobals.require()` call of a `Class.ModuleScript`, future
+      `Global.RobloxGlobals.require()` calls for the same `Class.ModuleScript`
+      (on the same side of the client-server boundary) will not run the code
+      again. Instead, a reference to the **same** return object created by the
+      initial `Global.RobloxGlobals.require()` call will be supplied. This
+      behavior allows for the sharing of values across different scripts, as
+      multiple `Global.RobloxGlobals.require()` calls from different scripts
+      will reference the same returned object. If the returned object is a
+      table, any values stored within the table are shared and accessible by any
+      script requiring that `Class.ModuleScript`.
 
-      If the ModuleScript the user wants to use has been uploaded to Roblox
-      (with the instance's name being 'MainModule'), it can be loaded by using
-      the require function on the asset ID of the ModuleScript, though only on
-      the server.
+      As noted above, the "object sharing" behavior does not cross the
+      client-server boundary. This means that if a `Class.ModuleScript` is
+      accessible to both the client **and** server (such as by being placed in
+      `Class.ReplicatedStorage`) and `Global.RobloxGlobals.require()` is called
+      from both a `Class.LocalScript` as well as a `Class.Script`, the code in
+      the `Class.ModuleScript` will be run twice, and the `Class.LocalScript`
+      will receive a distinct return object from the one received by the
+      `Class.Script`.
+
+      Also note that if the `Class.ModuleScript` the user wants to run has been
+      uploaded to Roblox (with the instance's name being `MainModule`), it can
+      be loaded by using the `Global.RobloxGlobals.require()` function on the
+      asset ID of the `Class.ModuleScript`, though only on the server.
     parameters:
       - name: module
         type: ModuleScript
         default:
         summary: |
-          The ModuleScript that will be executed to retrieve the return value it
-          provides.
+          The `Class.ModuleScript` that will be executed to retrieve the return
+          value it provides.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          What the `Class.ModuleScript` returned (usually a table or a
+          function).
     tags:
     code_samples:
   - name: settings
     summary: |
-      Returns the GlobalSettings object, which can be used to access settings
-      objects that configure Roblox Studio's behavior.
+      Returns the `Class.GlobalSettings` object, which can be used to access
+      settings objects that configure Roblox Studio's behavior.
     description: |
       Returns the `Class.GlobalSettings` object, which can be used to access the
       settings objects that are used in Roblox Studio's settings menu.

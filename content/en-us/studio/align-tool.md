@@ -17,35 +17,38 @@ Primary benefits include:
 
 You can set the alignment mode to either **Min**, **Center**, or **Max**.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/align-tool/Icon-Min.png" width="110" />
-    <figcaption>Min</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Icon-Center.png" width="110" />
-    <figcaption>Center</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Icon-Max.png" width="110" />
-    <figcaption>Max</figcaption>
-  </figure>
-</GridContainer>
+<Grid container spacing={3}>
+	<Grid item>
+		<figure>
+    <img src="../assets/studio/align-tool/Icon-Min.png" width="80" />
+    <center><figcaption>Min</figcaption></center>
+  	</figure>
+	</Grid>
+	<Grid item>
+		<figure>
+    <img src="../assets/studio/align-tool/Icon-Center.png" width="80" />
+    <center><figcaption>Center</figcaption></center>
+  	</figure>
+	</Grid>
+	<Grid item>
+		<figure>
+    <img src="../assets/studio/align-tool/Icon-Max.png" width="80" />
+    <center><figcaption>Max</figcaption></center>
+  	</figure>
+	</Grid>
+</Grid>
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/align-tool/Mode-Min.jpg" />
-    <figcaption>Min</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Mode-Center.jpg" />
-    <figcaption>Center</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Mode-Max.jpg" />
-    <figcaption>Max</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Min">
+<img src="../assets/studio/align-tool/Mode-Min.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Center">
+<img src="../assets/studio/align-tool/Mode-Center.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Max">
+<img src="../assets/studio/align-tool/Mode-Max.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 ## Align In
 
@@ -53,20 +56,17 @@ The **World** or **Local** option specifies which relative coordinates to align 
 
 The **X**, **Y**, and **Z** checkboxes let you select which axes to align on. Note that you can select multiple axes in a single alignment operation.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/align-tool/Align-In-Before.jpg" />
-    <figcaption>Before Alignment</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Align-In-World-Z.jpg" />
-    <figcaption>Max &middot; World Z</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Align-In-Local-Z.jpg" />
-    <figcaption>Max &middot; Local Z</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Before Alignment">
+<img src="../assets/studio/align-tool/Align-In-Before.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Max | World Z">
+<img src="../assets/studio/align-tool/Align-In-World-Z.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Max | Local Z">
+<img src="../assets/studio/align-tool/Align-In-Local-Z.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 ## Relative To
 
@@ -76,36 +76,30 @@ An alignment operation can be relative to either the **Selection Bounds** or the
 
 **Selection Bounds** aligns the selected objects relative to the bounding box around them.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Before.jpg" />
-    <figcaption>Before Alignment</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Min-X.jpg" />
-    <figcaption>Min &middot; World X</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Max-X.jpg" />
-    <figcaption>Max &middot; World X</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Before Alignment">
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Before.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Min | World X">
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Min-X.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Max | World X">
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Max-X.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 ### Active Object
 
 **Active Object** aligns the objects relative to the **last selected object**. This object is outlined in orange and it will not move during the operation. While parts are selected, you can switch the active object by clicking on a different object.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Active-Object-Before.jpg" />
-    <figcaption>Before Alignment</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Active-Object-Min-X.jpg" />
-    <figcaption>Min &middot; World X</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/align-tool/Relative-To-Active-Object-Max-X.jpg" />
-    <figcaption>Max &middot; World X</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Before Alignment">
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Before.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Min | World X">
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Min-X.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Max | World X">
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Max-X.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>

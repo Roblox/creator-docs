@@ -4,12 +4,12 @@ category: Utility
 memory_category: Instances
 summary: |
   The Configuration object is a container object that is designed to hold value
-  objects to make values used in `Class.Tool`s or any model using
-  `Class.Script`s more accessible.
+  objects to make values used in `Class.Tool|Tools` or any model using
+  `Class.Script|Scripts` more accessible.
 description: |
   The Configuration object is a container object that is designed to hold value
-  objects to make values used in `Class.Tool`s or any model using
-  `Class.Script`s more accessible.
+  objects to make values used in `Class.Tool|Tools` or any model using
+  `Class.Script|Scripts` more accessible.
 
   ## How does the Configuration object work?
 

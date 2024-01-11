@@ -4,44 +4,25 @@ category: Animations
 memory_category: Animation
 summary: |
   Allows animations to be loaded and applied to a character or model in place of
-  a `Class.Humanoid` when a Humanoid is not needed.
+  a `Class.Humanoid`.
 description: |
   An object which allows animations to be loaded and applied to a character or
-  model in place of a `Class.Humanoid` when a Humanoid is not needed. Creates an
-  `Class.Animator` and loads animations to update `Class.Motor6D|Motor6Ds` of
-  said character to react in the way that is described within the animation
-  asset referenced by an `Class.Animation` object.
+  model in place of a `Class.Humanoid`. Creates an `Class.Animator` and loads
+  animations to update `Class.Motor6D|Motor6Ds` of said character to react in
+  the way that is described within the animation asset referenced by an
+  `Class.Animation` object.
 
-  ## Should I load an Animation on the client or server?
-
-  In order for `Class.AnimationTrack|AnimationTracks` to replicate correctly,
-  it's important to know when they should be loaded on the client (via
-  a`Class.LocalScript`) or on the server (via a `Class.Script`).
-
-  If an Animator is a descendant of a Humanoid or AnimationController in a
-  Player's `Class.Player.Character|Character` then animations started on that
-  Player's client will be replicated to the server and other clients.
-
-  If the Animator is not a descendant of a player character, its animations must
-  be loaded and started on the server to replicate.
-
-  The Animator object must be initially created on the server and replicated to
-  clients for animation replication to work at all. If an Animator is created
-  locally, then AnimationTracks loaded with that Animator will not replicate.
-
-  Both `Class.Humanoid:LoadAnimation()` and
-  `Class.AnimationController:LoadAnimation()` will create an Animator if one
-  does not already exist. When calling LoadAnimation from LocalScripts you need
-  to be careful to wait for the Animator to replicate from the server before
-  calling LoadAnimation if you want character animations to replicate. You can
-  do this with WaitForChild("Animator").
-
-  See also:
-
-  - [Animation Editor](../../../animation/editor.md) to explore this powerful
-    built-in plugin for creating custom animations
-  - [Using Animations](../../../animation/using.md) to learn how to add
-    pre-built and custom animations to your game
+  Note that the `Class.AnimationController:LoadAnimation()|LoadAnimation()`
+  method of this class has been deprecated. Instead, you should call
+  `Class.Animator:LoadAnimation()` directly from an `Class.Animator` which can
+  be created manually in Studio and directly referenced in scripts. When the
+  deprecated method is called from an `Class.AnimationController`, the
+  controller itself does nothing regarding the animation intended to be loaded,
+  except to automatically generate an `Class.Animator`, onto which the loading
+  call and animation ID are transferred. In this way, the
+  `Class.AnimationController` can be thought of as nothing more than an empty
+  shell for a child `Class.Animator` object which handles any actual
+  functionality regarding animations.
 code_samples:
   - AnimationController
 inherits:
@@ -77,7 +58,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          An array of playing `Class.AnimationTrack`s.
+          An array of playing `Class.AnimationTrack|AnimationTracks`.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -91,40 +72,6 @@ methods:
       This function loads an `Class.Animation` onto an
       `Class.AnimationController`, returning an `Class.AnimationTrack` that can
       be used for playback.
-
-      #### How to load an Animation
-
-      The following code can be used to load an `Class.Animation` onto an
-      `Class.AnimationController`.
-
-          local animationTrack = animationController:LoadAnimation(animation)
-          animationTrack:Play()
-
-      #### Should I load an Animation on the client or server?
-
-      In order for AnimationTracks to replicate correctly, it's important to
-      know when they should be loaded on the client (via a`Class.LocalScript`)
-      or on the server (via a `Class.Script`).
-
-      If an `Class.Animator` is a descendant of a Humanoid or
-      AnimationController in a Player's `Class.Player.Character|Character` then
-      animations started on that Player's client will be replicated to the
-      server and other clients.
-
-      If the Animator is not a descendant of a player character, its animations
-      must be loaded and started on the server to replicate.
-
-      The Animator object must be initially created on the server and replicated
-      to clients for animation replication to work at all. If an Animator is
-      created locally, then AnimationTracks loaded with that Animator will not
-      replicate.
-
-      Both `Class.Humanoid:LoadAnimation()` and
-      `Class.AnimationController:LoadAnimation()` will create an Animator if one
-      does not already exist. When calling LoadAnimation from LocalScripts you
-      need to be careful to wait for the Animator to replicate from the server
-      before calling LoadAnimation if you want character animations to
-      replicate. You can do this with WaitForChild("Animator").
     code_samples:
       - AnimationController
     parameters:
@@ -141,8 +88,7 @@ methods:
     deprecation_message: |
       This function is deprecated in favor of using
       `Class.Animator:LoadAnimation()` directly (the `Class.Animator` may be
-      created while editing or at runtime). For more information, see this
-      [announcement](https://devforum.roblox.com/t/deprecating-loadanimation-on-humanoid-and-animationcontroller/857129).
+      created while editing or at runtime).
     security: None
     thread_safety: Unsafe
 events:

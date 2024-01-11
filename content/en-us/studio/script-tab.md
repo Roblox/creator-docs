@@ -26,12 +26,12 @@ The **Navigate** section lets you quickly jump between any open script.
 <tbody>
   <tr>
     <td>**Back**</td>
-	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>-</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>-</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>-</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>-</kbd>&nbsp;(Mac)</td>
     <td>Navigates to the previous open script.</td>
   </tr>
   <tr>
     <td>**Fwd**</td>
-	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>=</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>=</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>=</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>=</kbd>&nbsp;(Mac)</td>
     <td>Navigates to the next open script.</td>
   </tr>
 </tbody>
@@ -101,7 +101,7 @@ The **Format** section lets you format sections or the entirety of the script fo
 <tbody>
   <tr>
     <td>**Format Selection**</td>
-	<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Windows)<br /><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Windows)<br /><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Mac)</td>
     <td>Formats the currently selected portion of the script with proper layout and indentation.</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ The **Format** section lets you format sections or the entirety of the script fo
 
 There are three common options for playtesting an experience. Click the button to start a playtest of that type, or click the small arrow below the button to choose another option.
 
-<img src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="888" alt="Playtest options in Script tab" />
+<img alt="Script tab playtest options" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="772" alt="Playtest options in Script tab" />
 
 <table>
   <thead>
@@ -252,7 +252,7 @@ The **Actions** section at the furthest right contains miscellaneous script acti
   </tr>
   <tr>
     <td>**Reload Script**</td>
-	<td><kbd>Ctrl</kbd><kbd>R</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>R</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Ctrl</kbd><kbd>R</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>R</kbd>&nbsp;(Mac)</td>
     <td>Applies any changes that have been made to a script to the active playtest. The changes are not saved to the script outside of the playtest unless your Studio settings are set to auto-save runtime script changes or you confirm to save the changes upon stopping the playtest. This action is only available while playtesting.</td>
   </tr>
   <tr>
@@ -262,17 +262,17 @@ The **Actions** section at the furthest right contains miscellaneous script acti
   </tr>
   <tr>
     <td>**Toggle Comment**</td>
-	<td><kbd>Ctrl</kbd><kbd>/</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>/</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Ctrl</kbd><kbd>/</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>/</kbd>&nbsp;(Mac)</td>
     <td>Toggles whether a line of script is a comment or not.</td>
   </tr>
   <tr>
     <td>**Expand All Folds**</td>
-	<td><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(Mac)</td>
     <td>Expands all collapsed folds in the script.</td>
   </tr>
   <tr>
     <td>**Collapse All Folds**</td>
-	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(macOS)</td>
+	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>E</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>E</kbd>&nbsp;(Mac)</td>
     <td>Collapses all foldable sections of the script.</td>
   </tr>
 </tbody>

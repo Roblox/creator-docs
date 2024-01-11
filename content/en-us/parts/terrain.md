@@ -112,7 +112,7 @@ The following default [materials](../parts/materials.md) are available for terra
 
 By default, terrain water ripples, oscillates, and shimmers with a subtle motion.
 
-<video src="../assets/modeling/terrain/Water-Appearance.mp4" controls width="90%" alt="Terrain water rippling, oscillating, and shimmering with a subtle motion"></video>
+<video src="../assets/modeling/terrain/Water-Appearance.mp4" controls width="800" alt="Terrain water rippling, oscillating, and shimmering with a subtle motion"></video>
 
 To customize the color and motion of water:
 
@@ -161,7 +161,7 @@ Some water properties are only visible while playtesting. To preview all propert
 
 While most materials are static, you can add animated blades of grass to the **Grass** terrain material. By default, grass sways gently in a simulated wind, and you can adjust the direction/strength of its animation through [global wind](../environment/global-wind.md).
 
-<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="90%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
+<video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="800" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
 To add animated grass to the **Grass** material:
 
@@ -169,11 +169,11 @@ To add animated grass to the **Grass** material:
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-1. Toggle on the **Decoration** property in the [Properties](../studio/properties.md) window.
+2. Toggle on the **Decoration** property in the [Properties](../studio/properties.md) window.
 
    <img src="../assets/studio/properties/Terrain-Decoration.png" width="320" alt="Decoration property of Terrain object in Properties window of Studio" />
 
-1. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
+3. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
 
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
@@ -190,7 +190,7 @@ To add animated grass to the **Grass** material:
    </TabItem>
    </Tabs>
 
-1. If desired, adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
+4. If desired, adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
 
 ### Custom Terrain Colors
 
@@ -263,7 +263,7 @@ The [Generate](../studio/terrain-editor.md#generate) tool allows you to procedur
 1. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the [Select](../studio/terrain-editor.md#select) tool's **X**/**Y**/**Z** inputs to set a specific position and size.
 1. Click the **Generate** button.
 
-   <video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="90%" alt="Video of terrain generating procedurally via the Generate tool"></video>
+   <video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="800" alt="Video of terrain generating procedurally via the Generate tool"></video>
 
 ### Heightmaps and Colormaps
 
@@ -308,7 +308,7 @@ To import a heightmap and optional colormap:
 
 1. Click the **Generate** button.
 
-   <video src="../assets/studio/terrain-editor/Import-Tool.mp4" controls width="90%" alt="Video of terrain generating automatically via the Import tool"></video>
+   <video src="../assets/studio/terrain-editor/Import-Tool.mp4" controls width="800" alt="Video of terrain generating automatically via the Import tool"></video>
 
 #### Color Key
 
@@ -594,7 +594,7 @@ The [Sea Level](../studio/terrain-editor.md#sea-level) tool lets you create a co
 
 1. Click the **Evaporate** button to remove water inside the selected region, or click the **Create** button to fill the selected region with water.
 
-   <video src="../assets/studio/terrain-editor/Sea-Level-Tool.mp4" controls width="90%" alt="Video of sea level being created and modified using the Sea Level tool"></video>
+   <video src="../assets/studio/terrain-editor/Sea-Level-Tool.mp4" controls width="800" alt="Video of sea level being created and modified using the Sea Level tool"></video>
 
 ## Detailed Editing
 
@@ -654,7 +654,7 @@ For tools which use the brush, Studio supports the following keyboard and mouse 
 
 The [Draw](../studio/terrain-editor.md#draw) tool **adds** or **subtracts** terrain using the brush. This tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the [Smooth](../studio/terrain-editor.md#smooth) tool.
 
-<video src="../assets/studio/terrain-editor/Draw-Tool.mp4" controls width="90%" alt="Video of terrain being added and subtracted using the Draw tool"></video>
+<video src="../assets/studio/terrain-editor/Draw-Tool.mp4" controls width="800" alt="Video of terrain being added and subtracted using the Draw tool"></video>
 
 ### Sculpting
 
@@ -662,22 +662,22 @@ The [Sculpt](../studio/terrain-editor.md#sculpt) tool **adds** or **subtracts** 
 
 Similar to the [Draw](../studio/terrain-editor.md#draw) tool, the [Sculpt](../studio/terrain-editor.md#sculpt) tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the [Smooth](../studio/terrain-editor.md#smooth) tool.
 
-<video src="../assets/studio/terrain-editor/Sculpt-Tool.mp4" controls width="90%" alt="Video of terrain being added and subtracted using the Sculpt tool"></video>
+<video src="../assets/studio/terrain-editor/Sculpt-Tool.mp4" controls width="800" alt="Video of terrain being added and subtracted using the Sculpt tool"></video>
 
 ### Smoothing
 
 The [Smooth](../studio/terrain-editor.md#smooth) tool smoothes out abrupt edges in terrain using the brush. This tool can be used in standalone mode, or you can toggle it on by holding <kbd>Shift</kbd> while using the [Draw](../studio/terrain-editor.md#draw) or [Sculpt](../studio/terrain-editor.md#sculpt) tools.
 
-<video src="../assets/studio/terrain-editor/Smooth-Tool.mp4" controls width="90%" alt="Video of terrain being smoothed using the Smooth tool"></video>
+<video src="../assets/studio/terrain-editor/Smooth-Tool.mp4" controls width="800" alt="Video of terrain being smoothed using the Smooth tool"></video>
 
 ### Flattening
 
 The [Flatten](../studio/terrain-editor.md#flatten) tool flattens terrain to a consistent level across a visualized plane. By default, the tool lowers terrain above the plane **and** raises terrain below to the plane, but you can opt to selectively lower **or** raise through the tool's **Flatten&nbsp;Mode** option.
 
-<video src="../assets/studio/terrain-editor/Flatten-Tool.mp4" controls width="90%" alt="Video of terrain being flattened to a plane using the Flatten tool"></video>
+<video src="../assets/studio/terrain-editor/Flatten-Tool.mp4" controls width="800" alt="Video of terrain being flattened to a plane using the Flatten tool"></video>
 
 ### Painting
 
 The [Paint](../studio/terrain-editor.md#paint) tool, using the brush, **paints** a terrain [material](#terrain-materials) over an existing material or **replaces** one material with another material.
 
-<video src="../assets/studio/terrain-editor/Paint-Tool.mp4" controls width="90%" alt="Video of terrain being painted and replaced using the Paint tool"></video>
+<video src="../assets/studio/terrain-editor/Paint-Tool.mp4" controls width="800" alt="Video of terrain being painted and replaced using the Paint tool"></video>

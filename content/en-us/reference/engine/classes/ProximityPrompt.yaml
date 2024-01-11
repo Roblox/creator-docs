@@ -285,11 +285,11 @@ properties:
   - name: ProximityPrompt.RootLocalizationTable
     summary: |
       A reference to a `Class.LocalizationTable` to be used to apply automated
-      localization to this `Class.ProximityPrompt`'s
-      `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`.
+      localization to this prompt's `Class.ProximityPrompt.ActionText` and
+      `Class.ProximityPrompt.ObjectText`.
     description: |
       This property serves as a reference to the `Class.LocalizationTable` used
-      to apply automated localization to the `Class.ProximityPrompt`'s
+      to apply automated localization to the prompt's
       `Class.ProximityPrompt.ActionText` and `Class.ProximityPrompt.ObjectText`.
       In order for this to apply, `Class.ProximityPrompt.AutoLocalize` must be
       set.
@@ -315,8 +315,8 @@ properties:
     summary: |
       The style of the prompt's UI.
     description: |
-      This property indicates the `Class.ProximityPrompt`'s style. When set to
-      Custom, no default UI will be provided.
+      This property indicates the prompt's style. When set to Custom, no default
+      UI will be provided.
 
       The provided UI can be swapped out for a custom UI. In order to do this,
       set Style to Custom. Then, listen to the

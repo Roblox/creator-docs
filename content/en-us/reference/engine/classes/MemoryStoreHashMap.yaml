@@ -30,6 +30,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MemoryStoreHashMap:ListItemsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: count
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: MemoryStoreHashMapPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: MemoryStoreHashMap:RemoveAsync
     summary: ''
     description: ''

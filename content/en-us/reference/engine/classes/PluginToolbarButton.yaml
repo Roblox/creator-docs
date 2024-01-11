@@ -19,9 +19,10 @@ description: |
   When pressed, the `Class.PluginToolbarButton.Click|Click` event fires. A
   button will also remain in the pressed state, which may be set manually using
   `Class.PluginToolbarButton:SetActive()|SetActive`. Upon plugin activation
-  (`Class.Plugin:Activate()`), buttons in all other `Class.PluginToolbar`s will
-  be toggled off. If all buttons in a toolbar are off, the toolbar's plugin is
-  deactivated (`Class.Plugin:Deactivate()`).
+  (`Class.Plugin:Activate()`), buttons in all other
+  `Class.PluginToolbar|PluginToolbars` will be toggled off. If all buttons in a
+  toolbar are off, the toolbar's plugin is deactivated
+  (`Class.Plugin:Deactivate()`).
 
   When the game viewport is not visible, buttons will be disabled as if their
   `Class.PluginToolbarButton.Enabled|Enabled` property were false. Disabled

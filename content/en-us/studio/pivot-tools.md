@@ -17,59 +17,50 @@ The **Edit Pivot** tool lets you move or rotate the pivot point of a [part](../p
 
 The following diagrams show example pivot locations in relation to object bounds.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Center-A.jpg" />
-    <figcaption>Center</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Corner-A.jpg" />
-    <figcaption>Corner</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Outside-A.jpg" />
-    <figcaption>Outside object bounds</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Center">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Center-A.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Corner">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Corner-A.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Outside Object Bounds">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Outside-A.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 When you rotate the pivot of a [model](../parts/models.md), the bounding box of the model also rotates.
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Model-A.jpg" />
-    <figcaption>Orientation = (0, 90, 0)</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Model-B.jpg" />
-    <figcaption>Orientation = (0, 135, 0)</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/Edit-Pivot-Model-C.jpg" />
-    <figcaption>Orientation = (0, 180, 0)</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Orientation = (0, 90, 0)">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Model-A.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Orientation = (0, 135, 0)">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Model-B.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="Orientation = (0, 180, 0)">
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Model-C.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 You can specify a `Class.Model.PrimaryPart|PrimaryPart` for models, which is a `Class.BasePart` within the model that you can use as a positional basis. In terms of pivot points:
 
 <ol type="A">
-<li>When you assign a `Class.Model.PrimaryPart|PrimaryPart` to a model, the existing pivot changes to the pivot point of the `Class.Model.PrimaryPart|PrimaryPart`. If you later unassign/clear the `Class.Model.PrimaryPart|PrimaryPart`, the pivot point resets to the <b>center</b> of the model's bounding box.</li>
-<li>If you <b>delete</b> the `Class.Model.PrimaryPart|PrimaryPart` from a model, the pivot point remains in the same location and does <b>not</b> revert to its previous position. This prevents a sudden "jump" if you delete any parts from the model.</li>
+<li>When you assign a `Class.Model.PrimaryPart|PrimaryPart` to a model, the existing pivot changes to the pivot point of the `Class.Model.PrimaryPart|PrimaryPart`. If you later unassign/clear the `Class.Model.PrimaryPart|PrimaryPart`, the pivot point resets to the **center** of the model's bounding box.</li>
+<li>If you **delete** the `Class.Model.PrimaryPart|PrimaryPart` from a model, the pivot point remains in the same location and does **not** revert to its previous position. This prevents a sudden "jump" if you delete any parts from the model.</li>
 </ol>
 
-<GridContainer numColumns="3">
-  <figure>
-    <img src="../assets/studio/pivot-tools/PrimaryPart-1.jpg" />
-    <figcaption>Initial pivot point</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/PrimaryPart-2.jpg" />
-    <figcaption>A. PrimaryPart assigned</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/studio/pivot-tools/PrimaryPart-3.jpg" />
-    <figcaption>B. PrimaryPart deleted</figcaption>
-  </figure>
-</GridContainer>
+<Tabs>
+<TabItem label="Initial Pivot Point">
+<img src="../assets/studio/pivot-tools/PrimaryPart-1.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="A. PrimaryPart Assigned">
+<img src="../assets/studio/pivot-tools/PrimaryPart-2.jpg" width="720" height="405" />
+</TabItem>
+<TabItem label="B. PrimaryPart Deleted">
+<img src="../assets/studio/pivot-tools/PrimaryPart-3.jpg" width="720" height="405" />
+</TabItem>
+</Tabs>
 
 ### Snap
 
@@ -103,33 +94,33 @@ In addition to the interactive tools, pivot values can be directly set in the [P
 </thead>
 <tbody>
   <tr>
-    <td><b>Origin Position</b></td>
+    <td>**Origin Position**</td>
     <td>Current world location of the object based on its pivot point rather than its bounding box. Useful for setting the precise location of a `Class.Model`.</td>
   </tr>
   <tr>
-    <td><b>Origin Orientation</b></td>
+    <td>**Origin Orientation**</td>
     <td>Current orientation of the object based around its pivot point rather than its bounding box.</td>
   </tr>
   <tr>
-    <td><b>Pivot Offset Position</b></td>
-    <td>Precise location of the pivot relative to the object.\*</td>
+    <td>**Pivot Offset Position**</td>
+    <td>Precise location of the pivot relative to the object.&sup1;</td>
   </tr>
   <tr>
-    <td><b>Pivot Offset Orientation</b></td>
-    <td>Precise pivot orientation.\*</td>
+    <td>**Pivot Offset Orientation**</td>
+    <td>Precise pivot orientation.&sup1;</td>
   </tr>
     <tr>
-    <td><b>World Pivot Position</b></td>
-    <td>The precise world location of the pivot for `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use <b>Pivot&nbsp;Offset&nbsp;Position</b> since the pivot becomes relative to that part.\*</td>
+    <td>**World Pivot Position**</td>
+    <td>The precise world location of the pivot for `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use **Pivot&nbsp;Offset&nbsp;Position** since the pivot becomes relative to that part.&sup1;</td>
   </tr>
     <tr>
-    <td><b>World Pivot Orientation</b></td>
-    <td>The precise world orientation for `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use <b>Pivot&nbsp;Offset&nbsp;Orientation</b> since the pivot becomes relative to that part.\*</td>
+    <td>**World Pivot Orientation**</td>
+    <td>The precise world orientation for `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use **Pivot&nbsp;Offset&nbsp;Orientation** since the pivot becomes relative to that part.&sup1;</td>
   </tr>
 </tbody>
 </table>
 
-<figcaption>*Changing this property will not move or rotate the object.</figcaption>
+<figcaption><sup>1</sup> Changing this property will not move or rotate the object.</figcaption>
 
 ## Scripting Pivots
 
@@ -153,13 +144,13 @@ Beyond the Studio tools, pivot points can be accessed and manipulated in scripts
   </tr>
   <tr>
     <td>`Class.BasePart.PivotOffset`</td>
-    <td>The `Datatype.CFrame` which specifies the pivot offset; effectively the offset of the pivot from the `Datatype.CFrame` of the `Class.BasePart`.\*</td>
+    <td>The `Datatype.CFrame` which specifies the pivot offset; effectively the offset of the pivot from the `Datatype.CFrame` of the `Class.BasePart`.&sup2;</td>
   </tr>
   <tr>
     <td>`Class.BasePart.PivotOffset|Model.WorldPivot`</td>
-    <td>For `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`, the `Datatype.CFrame` which specifies the model's pivot in world space. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use `Class.BasePart.PivotOffset` since the pivot becomes relative to that part.\*</td>
+    <td>For `Class.Model|Models` without a `Class.Model.PrimaryPart|PrimaryPart`, the `Datatype.CFrame` which specifies the model's pivot in world space. If a `Class.Model.PrimaryPart|PrimaryPart` is set, the model will use `Class.BasePart.PivotOffset` since the pivot becomes relative to that part.&sup2;</td>
   </tr>
 </tbody>
 </table>
 
-<figcaption>*Changing this property will not move or rotate the object.</figcaption>
+<figcaption><sup>2</sup> Changing this property will not move or rotate the object.</figcaption>

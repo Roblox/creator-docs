@@ -732,9 +732,9 @@ properties:
       bars. If set to 0, the health bars will not be displayed.
     description: |
       The HealthDisplayDistance `Class.Player` property sets the distance in
-      studs at which this player will see other `Class.Humanoid`'s health bars.
-      If set to 0, the health bars will not be displayed. This property is set
-      to `Class.StarterPlayer.HealthDisplayDistance` by default.
+      studs at which this player will see other `Class.Humanoid` health bars. If
+      set to 0, the health bars will not be displayed. This property is set to
+      `Class.StarterPlayer.HealthDisplayDistance` by default.
 
       If a Humanoid's health bar is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
@@ -764,8 +764,7 @@ properties:
       player base.
 
       This property allows access to the player's locale from the server. It is
-      similar to `Class.LocalizationService`'s
-      `Class.LocalizationService.RobloxLocaleId` property.
+      similar to the `Class.LocalizationService.RobloxLocaleId` property.
     code_samples:
       - checking-a-player-s-locale
     type: string
@@ -792,8 +791,8 @@ properties:
 
       This property can only be read from to determine membership (it cannot be
       set to another membership type). The property can only be changed via
-      `Class.CoreScript`s using `Class.Player:SetMembershipType()` - which are
-      not accessible.
+      `Class.CoreScript|CoreScripts` using `Class.Player:SetMembershipType()` -
+      which are not accessible.
     code_samples:
       - check-membership-status
     type: MembershipType
@@ -815,7 +814,7 @@ properties:
       set to 0, names are hidden.
     description: |
       The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid`'s names. If
+      in studs at which this player will see other `Class.Humanoid` names. If
       the property is set to 0, names are hidden. This property is set to
       `Class.StarterPlayer.NameDisplayDistance` by default.
 
@@ -1379,14 +1378,13 @@ methods:
 
       Note:
 
-      - `Class.Accessory|Accessories`, `Class.Shirt`s, `Class.ShirtGraphic`s,
-        `Class.CharacterMesh`es, `BodyColor`s, and `Class.Accoutrement`s are
+      - `Class.Accessory`, `Class.Shirt`, `Class.ShirtGraphic`,
+        `Class.CharacterMesh`, `Class.BodyColors`, and `Class.Accoutrement` are
         parented to the player's character.
-      - `Class.Decal`s, `Class.FileMesh`es, `Class.SpecialMesh`es,
-        `Class.BlockMesh`es, `Class.CylinderMesh`es, and `Class.Texture`s are
-        parented to the character's head.
-      - `Class.Tool`s and `Class.HopperBin`s are parented to the player's
-        StarterGear.
+      - `Class.Decal`, `Class.FileMesh`, `Class.SpecialMesh`, `Class.BlockMesh`,
+        `Class.CylinderMesh`, and `Class.Texture` are parented to the
+        character's head.
+      - `Class.Tool` is parented to the player's `Class.StarterGear`.
       - All other classes are ignored.
     code_samples:
       - Player-LoadCharacterAppearance1
@@ -1395,8 +1393,8 @@ methods:
         type: Instance
         default:
         summary: |
-          An instance of the asset being loaded, which can be obtained using
-          `Class.InsertService`'s `Class.InsertService:LoadAsset()` function.
+          An instance of the asset being loaded, which can be obtained using the
+          `Class.InsertService:LoadAsset()` function.
     returns:
       - type: void
         summary: ''
@@ -1491,8 +1489,8 @@ methods:
       the given direction until stopped, or interrupted by the player (by using
       their controls).
 
-      This is useful when scripting NPC `Class.Humanoid`s that move around a
-      map - but are not controlled by an actual player's input.
+      This is useful when scripting NPC `Class.Humanoid|Humanoids` that move
+      around a map - but are not controlled by an actual player's input.
 
       Note that the function's second argument indicates whether the provided
       `Datatype.Vector3` should move the player relative to world coordinates
@@ -1668,8 +1666,8 @@ methods:
       chats.
     description: |
       The SetSuperSafeChat `Class.Player` function sets whether or not the
-      player sees chat filtered by `Class.TextService`'s
-      `Class.TextService:FilterStringAsync()` rather than normal chats.
+      player sees chat filtered by `Class.TextService:FilterStringAsync()`
+      rather than normal chats.
 
       SuperSafeChat is a chat mode where players cannot see unfiltered messages.
 

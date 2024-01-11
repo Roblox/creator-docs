@@ -216,7 +216,7 @@ There are 7 missions total, and only 6 of them use seals. Most missions have com
 - **TeleportPositionsName**: Name of a folder with placeholder meshes to define player teleport positions and rotations when moving to the corrupt room, and back to the normal area. The same name is used in both cases.
 - **CorruptRoomName**: Names of the root folders (relative to ServerStorage) for the corrupt rooms. Corrupt rooms clone under TempStorage.Cloned when the mission starts, and they are destroyed when the mission is finished.
 - **MissionCompleteButtonName**: A cheat button in the corrupt rooms to finish the mission immediately. This is for [debugging purposes](../../resources/the-mystery-of-duvall-drive/main-design-requirements.md#debug-version).
-- **CheatKey**: The same cheat as a number or `Ctrl` + `Shift` + `Number`.
+- **CheatKey**: The same cheat as a number or <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>[Number]</kbd>.
 
 Some of the mission logic is in the **[GameStateManager](#gamestatemanager)** scripts, as seals and doors provide the main game flow for most missions, but most of the mission-specific logic is in `MissionsLogic` and `MissionsLogicClient` scripts that define several "types" of missions. The type is defined just by the presence of specifically named members in the mission description. There are a few types of missions:
 

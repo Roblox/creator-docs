@@ -5,13 +5,13 @@ memory_category: Instances
 summary: |
   Fills the entire screen with a semi-transparent grey background, with centered
   text in the middle of the screen. With the introduction of Roblox's GUI
-  features it has been deprecated and `Class.TextLabel`s should be used instead
-  for new work.
+  features it has been deprecated and `Class.TextLabel|TextLabels` should be
+  used instead for new work.
 description: |
   Fills the entire screen with a semi-transparent grey background, with centered
   text in the middle of the screen. With the introduction of Roblox's GUI
-  features it has been deprecated and `Class.TextLabel`s should be used instead
-  for new work.
+  features it has been deprecated and `Class.TextLabel|TextLabels` should be
+  used instead for new work.
 
   Messages will not display if the `Class.Message.Text` field is empty.
 code_samples:
@@ -21,9 +21,9 @@ tags:
   - Deprecated
 deprecation_message: |
   With the introduction of Roblox's GUI features hints have been deprecated and
-  `Class.TextLabel`s should be used instead for new work. The `Class.TextLabel`
-  object offers a wide range of features for displaying and customizing text
-  that messages do not.
+  `Class.TextLabel|TextLabels` should be used instead for new work. The
+  `Class.TextLabel` object offers a wide range of features for displaying and
+  customizing text that messages do not.
 properties:
   - name: Message.Text
     summary: |
@@ -37,8 +37,8 @@ properties:
     type: string
     tags: []
     deprecation_message: |
-      `Class.Message`s and `Class.Hint`s have been deprecated `Class.TextLabel`s
-      should be used instead in new work.
+      `Class.Message|Messages` and `Class.Hint|Hints` have been deprecated;
+      `Class.TextLabel|TextLabels` should be used instead in new work.
     security:
       read: None
       write: None

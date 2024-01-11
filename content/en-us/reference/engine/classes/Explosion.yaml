@@ -22,9 +22,9 @@ description: |
   **Explosion effects**
 
   `Class.Humanoid|Humanoids` are killed by explosions as they break the
-  character `Class.Model`'s neck joint. Parenting a `Class.ForceField` to a
-  model will protect all of its children from Explosions. This means that their
-  joints will not be broken and thus `Class.Humanoid`s will not be killed.
+  character `Class.Model` neck joint. Parenting a `Class.ForceField` to a model
+  will protect all of its children from Explosions. This means that their joints
+  will not be broken and thus `Class.Humanoid|Humanoids` will not be killed.
 
   If a developer doesn't want joints between `Class.BasePart|BaseParts` to be
   broken or wants to implement their own formula for damaging
@@ -48,11 +48,11 @@ deprecation_message: ''
 properties:
   - name: Explosion.BlastPressure
     summary: |
-      Used to determine the amount of force applied to `Class.BasePart`s caught
-      in the `Class.Explosion.BlastRadius`.
+      Used to determine the amount of force applied to
+      `Class.BasePart|BaseParts` caught in the `Class.Explosion.BlastRadius`.
     description: |
-      Used to determine the amount of force applied to `Class.BasePart`s caught
-      in the `Class.Explosion.BlastRadius`.
+      Used to determine the amount of force applied to
+      `Class.BasePart|BaseParts` caught in the `Class.Explosion.BlastRadius`.
 
       Currently this level of force applied does not vary based on distance from
       `Class.Explosion.Position`. Unanchored `BaseParts` will accelerate equally
@@ -100,15 +100,15 @@ properties:
       of the Explosion's visuals. The size of the Explosion's visual effect is
       the same regardless of BlastRadius (even if BlastRadius is 0).
 
-      `Class.BasePart`s within the BlastRadius will be affected by the
+      `Class.BasePart|BaseParts` within the BlastRadius will be affected by the
       explosion. Meaning, if `Class.Explosion.BlastPressure` is greater than 0,
       force will be applied to parts. The degree to which joints are broken
       within the BlastRadius depends on
       `Class.Explosion.DestroyJointRadiusPercent`. `Class.Explosion.Hit` will
       fire for any every `Class.BasePart` within the radius.
 
-      `Class.BasePart`s are considered within an `Class.Explosion`'s BlastRadius
-      even if they are only partially in range.
+      `Class.BasePart|BaseParts` are considered within
+      `Class.Explosion.BlastRadius` even if they are only partially in range.
     code_samples:
       - Explosion-Instantiation
     type: float
@@ -135,13 +135,13 @@ properties:
       For example, if `Class.Explosion.BlastRadius` is set to 100 and
       DestroyJointRadiusPercent is set to 0.5, any joints within a radius of 50
       studs would be broken. Any joints between the ranges of 50 and 100 studs
-      wouldn't be destroyed, but the `Class.Explosion`'s force would still be
-      applied to the `Class.BasePart`s.
+      wouldn't be destroyed, but the `Class.Explosion` force would still be
+      applied to the `Class.BasePart|BaseParts`.
 
-      This property allows developers to make `Class.Explosion`s 'non-lethal' to
-      `Class.Humanoid`s by setting DestroyJointRadiusPercent to 0. This means
-      the neck joint will not be broken when characters come into contact with
-      the `Class.Explosion`.
+      This property allows developers to make `Class.Explosion|Explosions`
+      'non-lethal' to `Class.Humanoid|Humanoids` by setting
+      DestroyJointRadiusPercent to 0. This means the neck joint will not be
+      broken when characters come into contact with the `Class.Explosion`.
     code_samples:
       - Explosion-DestroyJointRadiusPercent
       - Custom-Explosion
@@ -191,15 +191,16 @@ properties:
   - name: Explosion.Position
     summary: |
       This property is the position of the center of the `Class.Explosion`. It
-      is defined in world-space and not influenced by the `Class.Explosion`'s
+      is defined in world-space and not influenced by the `Class.Explosion`
       parent.
     description: |
       This property is the position of the center of the `Class.Explosion`. It
-      is defined in world-space and not influenced by the `Class.Explosion`'s
+      is defined in world-space and not influenced by the `Class.Explosion`
       parent.
 
-      `Class.BasePart`s will be influenced by the `Class.Explosion` if they are
-      within `Class.Explosion.BlastRadius` studs of the explosion's position.
+      `Class.BasePart|BaseParts` will be influenced by the `Class.Explosion` if
+      they are within `Class.Explosion.BlastRadius` studs of the explosion's
+      position.
 
       The effect of an explosion is instantaneous. This means that although the
       position of an explosion can be changed after it has been set it cannot
@@ -251,7 +252,7 @@ properties:
       `Class.Explosion` is shown or not.
 
       When Visible is set to false, the explosion will still affect
-      `Class.BasePart`s in its `Class.Explosion.BlastRadius`, the only
+      `Class.BasePart|BaseParts` in its `Class.Explosion.BlastRadius`, the only
       difference is it will not be seen.
 
       One use for this property would be for a developer to make their own
@@ -288,8 +289,8 @@ events:
 
       This event will also fire when `Class.Explosion.BlastPressure` is equal to
       zero. This means developers can program their own custom behavior for
-      explosions by eliminating the explosion's influence on `Class.BasePart`s
-      and `Class.Terrain`.
+      explosions by eliminating the explosion's influence on
+      `Class.BasePart|BaseParts` and `Class.Terrain`.
 
       Note that this event will fire for every `Class.BasePart` hit. This means
       it can fire multiple times for the same player character (as the character

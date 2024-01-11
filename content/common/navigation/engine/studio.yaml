@@ -68,8 +68,6 @@ navigation:
     path: /studio/properties
   - title: Game Settings
     path: /studio/game-settings
-  - title: Instance Attributes
-    path: /studio/instance-attributes
   - title: Studio Shortcuts
     path: /studio/shortcuts
   - heading: Plugins

@@ -26,7 +26,7 @@ To enable adaptive timestepping in Studio:
    src="../assets/physics/adaptive-timestepping/PhysicsSteppingMethod-Adaptive.png"
    width="320" />
 
-To observe the timestepping process in action, you can open the Studio **Microprofiler** (<kbd>Ctrl</kbd>+<kbd>F6</kbd>). Once the experience is running, press <kbd>Ctrl</kbd>+<kbd>P</kbd> to pause at the current frame.
+To observe the timestepping process in action, you can open the Studio **Microprofiler** (<kbd>Ctrl</kbd><kbd>F6</kbd>; <kbd>⌘</kbd><kbd>F6</kbd>). Once the experience is running, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) to pause at the current frame.
 
 Under the scope named **physicsStepped**, observe that the scope name of **worldStep** now reads **worldStep&nbsp;-&nbsp;Adaptive**.
 

@@ -458,8 +458,8 @@ functions:
     summary: |
       Returns all elements from the given list as a tuple.
     description: |
-      Returns the elements from the given list. By default, `i` is 1 and `j`
-      is the length of `list`.
+      Returns the elements from the given list. By default, `i` is 1 and `j` is
+      the length of `list`.
 
       Note that this same functionality is also provided by the global
       `Global.LuaGlobals.unpack()` function.

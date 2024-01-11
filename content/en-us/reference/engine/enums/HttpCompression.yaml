@@ -1,0 +1,18 @@
+name: HttpCompression
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: None
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Gzip
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''

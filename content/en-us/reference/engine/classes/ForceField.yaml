@@ -4,12 +4,14 @@ category: Avatar
 memory_category: Instances
 summary: |
   A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
-  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart`s from
-  having their joints broken due to an `Class.Explosion`.
+  `Class.Humanoid:TakeDamage()` function, and protects
+  `Class.BasePart|BaseParts` from having their joints broken due to an
+  `Class.Explosion`.
 description: |
   A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
-  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart`s from
-  having their joints broken due to an `Class.Explosion`.
+  `Class.Humanoid:TakeDamage()` function, and protects
+  `Class.BasePart|BaseParts` from having their joints broken due to an
+  `Class.Explosion`.
 
   ## ForceField Creation
 
@@ -17,10 +19,10 @@ description: |
   the `Class.SpawnLocation.Duration` property is greater than zero.
 
   ForceFields influence the instance they are parented to. When parented to a
-  `Class.Model` they will protect all of the `Class.BasePart`s descending from
-  that model. They may be parented to a `Class.BasePart`, but the part's joints
-  will only be protected if both the part and the part it is connected to also
-  contain ForceField.
+  `Class.Model` they will protect all of the `Class.BasePart|BaseParts`
+  descending from that model. They may be parented to a `Class.BasePart`, but
+  the part's joints will only be protected if both the part and the part it is
+  connected to also contain ForceField.
 
   ## Forcefields and Joints
 
@@ -32,7 +34,7 @@ description: |
 
   **ForceFields and Damage**
 
-  ForceFields only protect `Class.Humanoid`s from damage using the
+  ForceFields only protect `Class.Humanoid|Humanoids` from damage using the
   `Class.Humanoid:TakeDamage()` function. Humanoids can still be damaged by
   setting `Class.Humanoid.Health` directly. For this reason, it is advised that
   developers use `Class.Humanoid:TakeDamage()`. Bearing in mind of course, that
@@ -66,10 +68,10 @@ deprecation_message: ''
 properties:
   - name: ForceField.Visible
     summary: |
-      Determines whether or not the `Class.ForceField`'s particle effect is
+      Determines whether or not the `Class.ForceField` particle effect is
       visible.
     description: |
-      Determines whether or not the `Class.ForceField`'s particle effect is
+      Determines whether or not the `Class.ForceField` particle effect is
       visible.
 
       When is set to true, a particle effect is created, a number of rules

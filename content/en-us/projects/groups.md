@@ -168,9 +168,6 @@ If you're the group owner or a member with the **Create and edit group experienc
 
 1. In Studio, select **File** &rarr; **Publish to Roblox**.
 1. Near the bottom of the window, click **Create new game**.
-
-   <img src="../assets/publishing/experiences-places-assets/Publish-Window-Create-New.png" width="800" />
-
 1. Enter a place name and an optional description.
 1. For the **Creator** field, select the group for which you'd like to publish the place.
 

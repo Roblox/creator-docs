@@ -140,11 +140,11 @@ Once in free camera mode, you can use the following controls:
     <td>Zooms the camera in or out.</td>
   </tr>
   <tr>
-    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd> (macOS)</td>
+    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd> (Mac)</td>
     <td>Disables all `Class.CoreGui|CoreGuis` but not user-created GUIs.</td>
   </tr>
   <tr>
-    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd> (macOS)</td>
+    <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd> (Mac)</td>
     <td>Disables all user-created GUIs but not  `Class.CoreGui|CoreGuis`.</td>
   </tr>
 </tbody>

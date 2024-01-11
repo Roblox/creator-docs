@@ -130,7 +130,7 @@ This guide uses Blender's **Automatic Weights** function when you are parenting 
 To parent an armature to a mesh:
 
 1. At the top of the 3D viewport, click on the Mode dropdown, then switch back to **Object Mode**.
-2. Press <kbd>Alt</kbd>+<kbd>A</kbd> (Windows) or <kbd>Option</kbd>+<kbd>A</kbd> (Mac) to deselect every object.
+2. Press <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac) to deselect every object.
 3. Hold <kbd>shift</kbd> and select the **mesh object** and then the **armature**. The selection order is important.
 4. In the viewport, right-click on the **mesh object**. A pop-up menu displays.
 5. Select **Parent**, then **With Automatic Weights**.
@@ -242,7 +242,7 @@ The middle bone represents most of the foliage above the bottom bone. For a more
 
 To paint influence to the middle bone:
 
-1. In **Weight Paint** mode, press <kbd>Alt</kbd>+<kbd>A</kbd> (Windows) or <kbd>Option</kbd>+<kbd>A</kbd> (Mac) to deselect the current bone object.
+1. In **Weight Paint** mode, press <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac) to deselect the current bone object.
 2. Hold <kbd>shift</kbd> and <kbd>click</kbd> on the middle bone.
 3. On the right side of the viewport, click the **Tool** tab.
 4. Change the **Weight** value to **.5**.
@@ -259,7 +259,7 @@ The top bone should influence the top leaf area above the middle bone. Paint thi
 
 To paint influence to the top bone:
 
-1. In **Weight Paint** mode, press <kbd>Alt</kbd>+<kbd>A</kbd> (Windows) or <kbd>Option</kbd>+<kbd>A</kbd> (Mac) to deselect the current bone object.
+1. In **Weight Paint** mode, press <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac) to deselect the current bone object.
 2. Hold <kbd>shift</kbd> and click on the top bone.
 3. On the right side of the viewport, click the **Tool** tab.
 4. Change the **Weight** value to **0.25**.
@@ -288,7 +288,7 @@ To test your weight painting:
 2. Hold <kbd>shift</kbd> and select the **mesh object**.
 3. At the top of the 3D viewport, click on the Mode dropdown, then switch to **Weight Paint** mode.
 4. Hold <kbd>shift</kbd> and click the bone you want to test, then press <kbd>R</kbd> to test the rotation.
-5. Press <kbd>Alt</kbd>+<kbd>A</kbd> to deselect the current bone, then reselect and test another bone.
+5. Press <kbd>Alt</kbd><kbd>A</kbd> (<kbd>⌥</kbd><kbd>A</kbd>) to deselect the current bone, then reselect and test another bone.
 
    <video controls loop muted
       src="../../assets/modeling/skinned-meshes/Weight-Painting-Example-Gradient.mp4"
