@@ -129,8 +129,8 @@ items:
     deprecation_message: ''
   - name: InputMethod
     summary: |
-      Text input from an input method editor (IME). `Class.InputObject`s with
-      this type aren't currently fired.
+      Text input from an input method editor (IME).
+      `Class.InputObject|InputObjects` with this type aren't currently fired.
     value: 21
     tags: []
     deprecation_message: ''

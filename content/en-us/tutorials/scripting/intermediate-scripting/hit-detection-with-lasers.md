@@ -964,7 +964,7 @@ local MAX_LASER_DISTANCE = 500
 local FIRE_RATE  = 0.3
 local timeOfPreviousShot = 0
 
--- Check if enough time has pissed since previous shot was fired
+-- Check if enough time has passed since previous shot was fired
 local function canShootWeapon()
 	local currentTime = tick()
 	if currentTime - timeOfPreviousShot < FIRE_RATE then

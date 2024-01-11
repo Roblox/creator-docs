@@ -64,8 +64,8 @@ properties:
       `Class.Instance:FindFirstChildOfClass()`.
 
       Note this property is read only and cannot be altered by scripts.
-      Developers wishing to change an `Class.Instance`'s class will instead have
-      to create a new `Class.Instance`.
+      Developers wishing to change an instance's class will instead have to
+      create a new `Class.Instance`.
 
       Unlike `Class.Instance:IsA()`, ClassName can be used to check if an object
       belongs to a specific class ignoring class inheritance. For example:
@@ -312,9 +312,9 @@ methods:
     thread_safety: Unsafe
   - name: Instance:ClearAllChildren
     summary: |
-      This function destroys all of an `Class.Instance`'s children.
+      This function destroys all of an instance's children.
     description: |
-      This function destroys all of an `Class.Instance`'s children.
+      This function destroys all of an instance's children.
 
       As `Class.Instance:Destroy()` also calls itself on the children of an
       object it is used on, this function will destroy all descendants.
@@ -437,9 +437,9 @@ methods:
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Instance.Name` is equal to the given name.
 
-      This function works upwards, meaning it starts at the `Class.Instance`'s
-      immediate `Class.Instance.Parent` and works up towards the
-      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+      This function works upwards, meaning it starts at the instance's immediate
+      `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
+      matching ancestor is found, it returns nil.
 
       The following code snippet would find the first ancestor of the object
       named 'Car'.
@@ -474,9 +474,9 @@ methods:
       Returns the first ancestor of the `Class.Instance` whose
       `Class.Instance.ClassName` is equal to the given className.
 
-      This function works upwards, meaning it starts at the `Class.Instance`'s
-      immediate `Class.Instance.Parent` and works up towards the
-      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+      This function works upwards, meaning it starts at the instance's immediate
+      `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
+      matching ancestor is found, it returns nil.
 
       A common use of this function is finding the `Class.Model` a
       `Class.BasePart` belongs to. For example:
@@ -513,9 +513,9 @@ methods:
       Returns the first ancestor of the `Class.Instance` for whom
       `Class.Instance:IsA()` returns true for the given className.
 
-      This function works upwards, meaning it starts at the `Class.Instance`'s
-      immediate `Class.Instance.Parent` and works up towards the
-      `Class.DataModel`. If no matching ancestor is found, it returns nil.
+      This function works upwards, meaning it starts at the instance's immediate
+      `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
+      matching ancestor is found, it returns nil.
 
       Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
       `Class.Instance:IsA()` which respects class inheritance. For example:
@@ -610,8 +610,8 @@ methods:
       than using the dot operator and almost 8 times longer than simply storing
       a reference to an object. Therefore, you should avoid calling it in
       performance-dependent code such as in tight loops or functions connected
-      to `Class.RunService.Heartbeat` and `Class.RunService.PreRender`.
-      Instead, store the result in a variable, or consider using
+      to `Class.RunService.Heartbeat` and `Class.RunService.PreRender`. Instead,
+      store the result in a variable, or consider using
       `Class.Instance.ChildAdded|ChildAdded` or
       `Class.Instance:WaitForChild()|WaitForChild()` to detect when a child of a
       given name becomes available.
@@ -856,8 +856,8 @@ methods:
     thread_safety: Unsafe
   - name: Instance:GetAttributes
     summary: |
-      Returns a dictionary of string → variant pairs for each of the
-      `Class.Instance`'s attributes.
+      Returns a dictionary of string → variant pairs for each of the instance's
+      attributes.
     description: |
       This function returns a dictionary of string → variant pairs for each
       attribute where the string is the name of the attribute and the variant is
@@ -898,10 +898,10 @@ methods:
     thread_safety: Safe
   - name: Instance:GetChildren
     summary: |
-      Returns an array containing all of the `Class.Instance`'s children.
+      Returns an array containing all of the instance's children.
     description: |
       Returns an array (a numerically indexed table) containing all of the
-      `Class.Instance`'s direct children, or every `Class.Instance` whose
+      instance's direct children, or every `Class.Instance` whose
       `Class.Instance.Parent|Parent` is equal to the object. The array can be
       iterated upon using either a numeric or generic for-loop:
 
@@ -932,18 +932,16 @@ methods:
     returns:
       - type: Objects
         summary: |
-          An array containing the `Class.Instance`'s children.
+          An array containing the instance's children.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
   - name: Instance:GetDebugId
     summary: |
-      Returns a coded string of the `Class.Instance`s DebugId used internally by
-      Roblox.
+      Returns a coded string of the debug ID used internally by Roblox.
     description: |
-      Returns a coded string of the `Class.Instance`s DebugId used internally by
-      Roblox.
+      Returns a coded string of the debug ID used internally by Roblox.
 
       Note:
 
@@ -1017,7 +1015,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          An array containing the `Class.Instance`'s descendants.
+          An array containing the instance's descendants.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -1025,10 +1023,10 @@ methods:
     thread_safety: Safe
   - name: Instance:GetFullName
     summary: |
-      Returns a string describing the `Class.Instance`'s ancestry.
+      Returns a string describing the instance's ancestry.
     description: |
-      Returns a string describing the `Class.Instance`'s ancestry. The string is
-      a concatenation of the `Class.Instance.Name|Name` of the object and its
+      Returns a string describing the instance's ancestry. The string is a
+      concatenation of the `Class.Instance.Name|Name` of the object and its
       ancestors, separated by periods. The `Class.DataModel` (`game`) is not
       considered. For example, a `Class.Part` in the `Class.Workspace` may
       return `Class.Workspace.Part`.
@@ -1058,23 +1056,21 @@ methods:
     summary: |
       Get an event that fires when a given property of an object changes.
     description: |
-      This method returns an event that behaves exactly like the `Changed`
-      event, except that the event only fires when the given property changes.
-      It's generally a good idea to use this method instead of a connection to
-      `Changed` with a function that checks the property name. Subsequent calls
-      to this method on the same object with the same property name return the
-      same event.
-
-      `print(object:GetPropertyChangedSignal("Name") == object:GetPropertyChangedSignal("Name")) --> always true`
+      This method returns an event that behaves exactly like the
+      `Class.Instance.Changed|Changed` event, except that the event only fires
+      when the given property changes. It's generally a good idea to use this
+      method instead of a connection to `Class.Instance.Changed|Changed` with a
+      function that checks the property name. Subsequent calls to this method on
+      the same object with the same property name return the same event.
 
       `Class.ValueBase` objects, such as `Class.IntValue` and
-      `Class.StringValue`, use a modified `Changed` event that fires with the
-      contents of the `Value` property. As such, this method provides a way to
-      detect changes in other properties of those objects. For example, to
-      detect changes in the `Name` property of an `Class.IntValue`, use
-      `IntValue:GetPropertyChangedSignal("Name"):Connect(someFunc)` since the
-      `Changed` event of `Class.IntValue` objects only detect changes on the
-      `Value` property.
+      `Class.StringValue`, use a modified `Class.Instance.Changed|Changed` event
+      that fires with the contents of their value property. As such, this method
+      provides a way to detect changes in other properties of those objects.
+
+      Note that this event will not pass any arguments to a connected function,
+      so the value of the changed property must be read directly within a
+      script.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
@@ -1137,10 +1133,10 @@ methods:
     thread_safety: Safe
   - name: Instance:IsA
     summary: |
-      Returns true if an `Class.Instance`'s class matches or inherits from a
-      given class.
+      Returns true if an instance's class matches or inherits from a given
+      class.
     description: |
-      IsA returns true if the `Class.Instance`'s class is **equivalent to** or a
+      IsA returns true if the instance's class is **equivalent to** or a
       **subclass** of a given class. This function is similar to the
       **instanceof** operators in other languages, and is a form of
       [type introspection](https://en.wikipedia.org/wiki/Type_introspection). To
@@ -1151,10 +1147,10 @@ methods:
       Most commonly, this function is used to test if an object is some kind of
       part, such as `Class.Part` or `Class.WedgePart`, which inherits from
       `Class.BasePart` (an abstract class). For example, if your goal is to
-      change all of a `Class.Player.Character|Character`'s limbs to the same
-      color, you might use `Class.Instance:GetChildren()|GetChildren` to iterate
-      over the children, then use IsA to filter non-`Class.BasePart` objects
-      which lack the `Datatype.BrickColor` property:
+      change all of a character's limbs to the same color, you might use
+      `Class.Instance:GetChildren()|GetChildren` to iterate over the children,
+      then use IsA to filter non-`Class.BasePart` objects which lack the
+      `Datatype.BrickColor` property:
 
       ```lua
       local function paintFigure(character, color)
@@ -1227,8 +1223,7 @@ methods:
       Returns true if an `Class.Instance` is a descendant of the given ancestor.
 
       An `Class.Instance` is considered the descendant of an object if the
-      `Class.Instance`'s parent or one of its parent's parent is set to the
-      object.
+      instance's parent or one of its parent's parent is set to the object.
 
       Note, `Class.DataModel` is a descendant of nil. This means IsDescendantOf
       cannot be used with a parameter of nil to check if an object has been
@@ -1390,11 +1385,7 @@ methods:
         assumed to exist.
       - If a call to this method exceeds 5 seconds without returning, and no
         `timeOut` parameter has been specified, a warning will be printed to the
-        output that the thread may yield indefinitely. This warning takes the
-        following form where `X` is the parent's name and `Y` is the child's
-        name:
-
-        `Infinite yield possible on 'X:WaitForChild("Y")'`
+        output that the thread may yield indefinitely.
     code_samples:
       - Instance-WaitForChild1
     parameters:
@@ -1569,8 +1560,7 @@ events:
 
       This event includes two parameters, _child_ and _parent_. _Child_ refers
       to the `Class.Instance` whose `Class.Instance.Parent` was actually
-      changed. _Parent_ refers to this `Class.Instance`'s new
-      `Class.Instance.Parent`.
+      changed. _Parent_ refers to this instance's new `Class.Instance.Parent`.
 
       You can use this event to track the deletion of an instance in Studio,
       such as manual deletion in the Explorer or through a plugin. If you need
@@ -1603,9 +1593,8 @@ events:
       has been changed is passed to the connected function.
 
       For example, the following code snippet will connect the
-      `AttributeChanged` function to fire whenever one of `Class.Instance`'s
-      attributes changes. Note that this code sample does not define
-      `Class.Instance`:
+      `AttributeChanged` function to fire whenever one of instance's attributes
+      changes. Note that this code sample does not define `Class.Instance`:
 
       ```lua
       local function attributeChanged(attributeName)

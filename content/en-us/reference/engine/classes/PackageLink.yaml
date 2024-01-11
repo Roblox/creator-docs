@@ -5,21 +5,17 @@ memory_category: Instances
 summary: |
   Links a `Class.DataModel` instance to a corresponding asset in the cloud.
 description: |
-  The purpose of the PackageLink object is to link a `Class.DataModel` instance
-  to a corresponding asset in the cloud. This improves flows for collaboration,
-  version control and sharing for models. The PackageLink instance will be a
-  child of the root of the entire package hierarchy.
+  The purpose of the `Class.PackageLink` object is to link a `Class.DataModel`
+  instance to a corresponding asset in the cloud. This improves flows for
+  collaboration, version control, and sharing for models. The
+  `Class.PackageLink` instance will be a child of the root of the entire package
+  hierarchy.
 
-  ![PackageLink in Studio Explorer](/assets/legacy/PackageLink.jpg)
-
-  In this case PackageLink designates `Class.Model` to be the root of the
-  Package hierarchy.
-
-  They not creatable through `Class.Script|scripts`. They can only be added
-  through interaction with Studio and can only be parented to
-  `Class.Instance|Instances` that can be published independently of DataModel
-  publish. The PackageLink instance will always be the first child shown in the
-  tree view, regardless of sorting.
+  `Class.PackageLink|PackageLinks` are not creatable through
+  `Class.Script|Scripts`. They can only be added through interaction with Studio
+  and can only be parented to `Class.Instance|Instances` that can be published
+  independently of `Class.DataModel` publish. The `Class.PackageLink` instance
+  will always be the first child shown in the tree view, regardless of sorting.
 code_samples:
 inherits:
   - Instance

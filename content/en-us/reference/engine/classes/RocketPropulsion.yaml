@@ -7,9 +7,9 @@ summary: |
 description: |
   The RocketPropulsion object applies a force on a part so that it both
   **follows** and **faces** a target part. It acts like a hybrid of
-  `Class.BodyPosition` and `Class.BodyGyro`. Unlike other `Class.BodyMover`s, a
-  RocketPropulsion must be instructed to begin applying a force: call
-  `Class.RocketPropulsion:Fire()|Fire` to start, or call
+  `Class.BodyPosition` and `Class.BodyGyro`. Unlike other
+  `Class.BodyMover|BodyMovers`, a RocketPropulsion must be instructed to begin
+  applying a force: call `Class.RocketPropulsion:Fire()|Fire` to start, or call
   `Class.RocketPropulsion:Abort()|Abort` to stop.
 
   You can detect when the part reaches its target using the
@@ -98,7 +98,7 @@ properties:
     description: |
       The MaxThrust property determines the upper limit of the thrust that may
       be exerted to move the part. Parts or assemblies that have high
-      `Class.BasePart:GetMass()|mass` will require more thrust in order to to
+      `Class.BasePart:GetMass()|mass` will require more thrust in order to
       remain airborne, and thus track the
       `Class.RocketPropulsion.Target|Target`.
     code_samples:
@@ -139,7 +139,7 @@ properties:
       Determines the object towards which the part should follow/face.
     description: |
       The Target property determines the object towards which the
-      `Class.RocketPropulsion` will exert force/torque. If set to `nil`, the the
+      `Class.RocketPropulsion` will exert force/torque. If set to `nil`, the
       `Class.RocketPropulsion.TargetOffset|TargetOffset` will be used instead.
     code_samples:
     type: BasePart

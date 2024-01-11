@@ -77,9 +77,9 @@ To add individual image texture files:
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Surface-Appearance.png" />
 
-5. Copy the `Class.SurfaceAppearance` with the populated image map with <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+5. Copy the `Class.SurfaceAppearance` with the populated image map with <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd>).
 6. Hold <kbd>Shift</kbd> and click all of your model's MeshParts to select all of your character's geometry.
-7. Use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to paste into all of the head geometries. An updated `Class.SurfaceAppearance` populates in each `Class.MeshPart` object.
+7. Use <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>V</kbd>) to paste into all of the head geometries. An updated `Class.SurfaceAppearance` populates in each `Class.MeshPart` object.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Surface-Appearance-Applied.png" />
 

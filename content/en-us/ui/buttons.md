@@ -74,7 +74,7 @@ To add a button to the face of a part:
 
 ## Changing the Appearance of an ImageButton
 
-Changing the appearance of an `Class.ImageButton` when a user is interacting with it provides useful visual feedback. For example, when an `Class.ImageButton` changes visual appearance when a user hovers over it, it lets the user know that it isn't disabled and that they have the option to click it if they want to perform that `Class.ImageButton`'s action.
+Changing the appearance of an `Class.ImageButton` when a user is interacting with it provides useful visual feedback. For example, when an `Class.ImageButton` changes visual appearance when a user hovers over it, it lets the user know that it isn't disabled and that they have the option to click it if they want to perform that `Class.ImageButton` action.
 
 An `Class.ImageButton` has three properties to change its visual appearance:
 

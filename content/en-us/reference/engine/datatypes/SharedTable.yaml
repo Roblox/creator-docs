@@ -9,6 +9,13 @@ description: |
   [Parallel Luau](../../../scripting/multithreading.md), where it can be used to
   share state across scripts parented under different `Class.Actor` instances.
 
+  There are a couple idiomatic ways to communicate shared tables between
+  scripts. One method is to store and retrieve `Datatype.SharedTable` objects in
+  the `Class.SharedTableRegistry`. The registry lets any script in the same data
+  model get or set a `Datatype.SharedTable` by name. Another method is to use
+  `Class.Actor:SendMessage()` to send a shared table to another `Class.Actor`
+  inside a message.
+
   Like a Luau table, a `Datatype.SharedTable` object stores a set of key-value
   element pairs. Unlike a Luau table, only selected types of objects may be
   stored in a SharedTable, similar to other restrictions you'll find elsewhere
@@ -78,6 +85,8 @@ constructors:
       assert(st.z[2] == "b")
       assert(st.z[3] == "c")
       ```
+
+      Note that in some cases it may be desirable to store a `Datatype.SharedTable` in the `Class.SharedTableRegistry`. The `Class.ShareTableRegistry:GetSharedTable()` method provides a convenient way to accomplish this.
     parameters:
       - name: t
         type: table

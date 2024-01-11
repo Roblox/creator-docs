@@ -104,11 +104,12 @@ properties:
 
       This default value of this property is 10 seconds.
 
-      The duration feature allows developers to easily give `Class.Player`s
-      protection from 'spawn killing' which can be a frustrating experience for
-      players. Note, `Class.ForceField`s will only protect users from
-      `Class.Explosion`s and Weapons that use `Class.Humanoid:TakeDamage()` to
-      deal damage or otherwise check for a `Class.ForceField`.
+      The duration feature allows developers to easily give
+      `Class.Player|Players` protection from 'spawn killing' which can be a
+      frustrating experience for players. Note, `Class.ForceField|ForceFields`
+      will only protect users from `Class.Explosion|Explosions` and weapons that
+      use `Class.Humanoid:TakeDamage()` to deal damage or otherwise check for a
+      `Class.ForceField`.
     code_samples:
       - SpawnLocation-ForceField
     type: int
@@ -133,7 +134,7 @@ properties:
       `Class.SpawnLocation.AllowTeamChangeOnTouch` functionality is disabled.
 
       This property provides the most convenient way of preventing
-      `Class.Player`s from spawning at a spawn.
+      `Class.Player|Players` from spawning at a spawn.
 
       Note, although team changing on touch using
       `Class.SpawnLocation.AllowTeamChangeOnTouch` is disabled when Enabled is
@@ -185,14 +186,14 @@ properties:
   - name: SpawnLocation.TeamColor
     summary: |
       Sets what team the `Class.SpawnLocation` is affiliated to. If
-      `Class.SpawnLocation.Neutral` property is false, only `Class.Player`s with
-      the same `Class.Player.TeamColor` as the spawn's TeamColor will be able to
-      spawn there.
+      `Class.SpawnLocation.Neutral` property is false, only
+      `Class.Player|Players` with the same `Class.Player.TeamColor` as the
+      spawn's TeamColor will be able to spawn there.
     description: |
       The TeamColor property sets what team the `Class.SpawnLocation` is
       affiliated to. If `Class.SpawnLocation.Neutral` property is false, only
-      `Class.Player`s with the same `Class.Player.TeamColor` as the spawn's
-      TeamColor will be able to spawn there.
+      `Class.Player|Players` with the same `Class.Player.TeamColor` as the
+      spawn's TeamColor will be able to spawn there.
 
       If `Class.SpawnLocation.AllowTeamChangeOnTouch` is true
       `Class.Player.Neutral` will be set to this property upon contact with the

@@ -105,8 +105,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: thread
         type: thread
@@ -160,8 +161,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: function
         type: function
@@ -213,8 +215,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: level
         type: number

@@ -3,7 +3,7 @@ title: Setting Up Roblox Studio
 description: Explains how to install Roblox Studio on your system.
 ---
 
-Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a free application available on Windows and macOS.
+Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a free application available on Windows and Mac.
 
 <img src="../assets/studio/general/Studio-Splash.jpg" width="800" alt="Roblox Studio setup landing screen." />
 
@@ -12,7 +12,7 @@ Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a fr
 The following system specifications ensure that Studio runs smoothly:
 
 - **Windows (64-bit)** &ndash; Windows 7, 8, 8.1, 10, or 11. For Windows 10 or earlier, you also need Internet Explorer 11 or higher and the latest version of [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section).&sup1;
-- **macOS** &ndash; macOS 10.13 (High Sierra) and above.
+- **Mac** &ndash; macOS 10.13 (High Sierra) and above.
 - **Processor** &ndash; Processor with a clock speed of 1.6 GHz or better.
 - **RAM** &ndash; 4 GB of system memory.
 - **Hard Disk** &ndash; At least 10 GB of available hard disk space after installation.
@@ -37,7 +37,7 @@ To install Roblox Studio:
 1. Find the Studio installer in your browser's download history and double-click the file.
 
    - On Windows, the file is `RobloxStudio.exe`.
-   - On macOS, the file is `RobloxStudio.dmg`.
+   - On Mac, the file is `RobloxStudio.dmg`.
 
 1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
 

@@ -3,13 +3,13 @@ type: class
 category: Gameplay
 memory_category: Instances
 summary: |
-  A container object that holds a `Class.Player`'s inventory. Any `Class.Tool`
-  in a player's Backpack will be displayed in their inventory at the bottom of
-  their screen.
+  A container object that holds a player's inventory. Any `Class.Tool` in a
+  player's Backpack will be displayed in their inventory at the bottom of their
+  screen.
 description: |
-  A container object that holds a `Class.Player`'s inventory. Any `Class.Tool`
-  in a player's Backpack will be displayed in their inventory at the bottom of
-  their screen. Selecting `Class.Tool`s from the inventory will equip the
+  A container object that holds a player's inventory. Any `Class.Tool` in a
+  player's Backpack will be displayed in their inventory at the bottom of their
+  screen. Selecting `Class.Tool|Tools` from the inventory will equip the
   `Class.Tool`, moving it from the Backpack to the player's character.
 
   The Backpack can also store `Class.Script|Scripts` and

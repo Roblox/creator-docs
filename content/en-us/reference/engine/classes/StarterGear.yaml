@@ -4,8 +4,8 @@ category: Social
 memory_category: Instances
 summary: |
   If the game allows gear, StarterGear contains all of a player's appropriate
-  gear. Whenever the `Class.Player`'s character spawns, all of the contents of
-  that player's StarterGear will get copied into the player's `Class.Backpack`.
+  gear. Whenever the player's character spawns, all of the contents of that
+  player's StarterGear will get copied into the player's `Class.Backpack`.
 description: |
   StarterGear is a container that is automatically inserted into each
   `Class.Player` when the player joins the game. When a player spawns, the
@@ -16,7 +16,7 @@ description: |
 
   Unlike `Class.StarterPack`, StarterGear is not a service but rather a child of
   each `Class.Player` object -- this means that its contents are player-specific
-  so that each player can have different `Class.Tool`s within their
+  so that each player can have different `Class.Tool|Tools` within their
   `Class.StarterGear`. It is not replicated to any client, including the owning
   player.
 
@@ -58,9 +58,9 @@ description: |
   ## Gameplay Considerations
 
   Before adding any gear to a game, consider the implication of doing so. Gear
-  includes `Class.Script`s and allows the player to perform actions that the
-  developer may not have considered. For example, a navigational gear may allow
-  the player to access a part of the map the developer does not want to be
+  includes `Class.Script|Scripts` and allows the player to perform actions that
+  the developer may not have considered. For example, a navigational gear may
+  allow the player to access a part of the map the developer does not want to be
   accessed. Weapons allow players with gear to damage other players, possibly
   without the ability to retaliate. Always play-test games after adding gear to
   them to make sure there are no abuse cases.

@@ -21,7 +21,7 @@ This tutorial only changes the head of your model, so you only need to adjust th
 2. In the Outliner, find the Joints parent object.
 3. Hold <kbd>Shift</kbd> and click the **Hide** icon for the Joints object to hide everything.
 4. Expand the Joints object and un-hide the Head_Geo and Hat_Att and Hair_Att.
-   1. If required, disable **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}}/> next to the \_Att objects.
+   1. If required, disable **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> next to the \_Att objects.
 5. Toggle Visibility for the **Hat_Att**, **Hair_Att**, and **FaceFront_Att**.
 6. Verify the placement of the attachments. The goblin's head is shorter than the starting template, so the attachments require minor vertical adjustment.
 7. Select the attachments

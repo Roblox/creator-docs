@@ -5,7 +5,7 @@ description: Explore the customization options for Roblox Studio.
 
 ## Studio Settings
 
-Many customization options are accessible via **File** &rarr; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on macOS). You can quickly locate known settings by typing search queries into the search field at the top of the window.
+Many customization options are accessible via **File** &rarr; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). You can quickly locate known settings by typing search queries into the search field at the top of the window.
 
 <img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="Settings window with upper-left search field and sections menu indicated." />
 
@@ -22,8 +22,6 @@ To explicitly change themes, search for the **Theme** option and select either *
 ### Script Editor
 
 The built-in [script editor](../studio/script-editor.md) has multiple configuration options. To access them, select the **Script&nbsp;Editor** tab on the left side of the settings window.
-
-<img src="../assets/studio/general/Studio-Settings-Script-Editor.png" width="750" alt="Settings window with Script Editor menu option selected." />
 
 Commonly modified options include:
 

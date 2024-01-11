@@ -550,6 +550,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ConfigureServerService.yaml
         ignoreTranslation: true
+      - title: ConnectivityService
+        path: /reference/engine/classes/ConnectivityService
+        type: engineapi
+        source: /reference/engine/classes/ConnectivityService.yaml
+        ignoreTranslation: true
       - title: Constraint
         path: /reference/engine/classes/Constraint
         type: engineapi
@@ -594,6 +599,11 @@ navigation:
         path: /reference/engine/classes/ControllerService
         type: engineapi
         source: /reference/engine/classes/ControllerService.yaml
+        ignoreTranslation: true
+      - title: ConversationalAIAcceptanceService
+        path: /reference/engine/classes/ConversationalAIAcceptanceService
+        type: engineapi
+        source: /reference/engine/classes/ConversationalAIAcceptanceService.yaml
         ignoreTranslation: true
       - title: CookiesService
         path: /reference/engine/classes/CookiesService
@@ -1365,6 +1375,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/MemoryStoreHashMap.yaml
         ignoreTranslation: true
+      - title: MemoryStoreHashMapPages
+        path: /reference/engine/classes/MemoryStoreHashMapPages
+        type: engineapi
+        source: /reference/engine/classes/MemoryStoreHashMapPages.yaml
+        ignoreTranslation: true
       - title: MemoryStoreQueue
         path: /reference/engine/classes/MemoryStoreQueue
         type: engineapi
@@ -1930,6 +1945,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
         ignoreTranslation: true
+      - title: RobloxEditableImage
+        path: /reference/engine/classes/RobloxEditableImage
+        type: engineapi
+        source: /reference/engine/classes/RobloxEditableImage.yaml
+        ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
         type: engineapi
@@ -2264,6 +2284,11 @@ navigation:
         path: /reference/engine/classes/StarterPlayerScripts
         type: engineapi
         source: /reference/engine/classes/StarterPlayerScripts.yaml
+        ignoreTranslation: true
+      - title: StartupMessageService
+        path: /reference/engine/classes/StartupMessageService
+        type: engineapi
+        source: /reference/engine/classes/StartupMessageService.yaml
         ignoreTranslation: true
       - title: Stats
         path: /reference/engine/classes/Stats
@@ -3049,6 +3074,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Region3int16.yaml
         ignoreTranslation: true
+      - title: Secret
+        path: /reference/engine/datatypes/Secret
+        type: engineapi
+        source: /reference/engine/datatypes/Secret.yaml
+        ignoreTranslation: true
       - title: SharedTable
         path: /reference/engine/datatypes/SharedTable
         type: engineapi
@@ -3708,6 +3738,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FacialAnimationStreamingState.yaml
         ignoreTranslation: true
+      - title: FACSDataLod
+        path: /reference/engine/enums/FACSDataLod
+        type: engineapi
+        source: /reference/engine/enums/FACSDataLod.yaml
+        ignoreTranslation: true
       - title: FieldOfViewMode
         path: /reference/engine/enums/FieldOfViewMode
         type: engineapi
@@ -3852,6 +3887,11 @@ navigation:
         path: /reference/engine/enums/HttpCachePolicy
         type: engineapi
         source: /reference/engine/enums/HttpCachePolicy.yaml
+        ignoreTranslation: true
+      - title: HttpCompression
+        path: /reference/engine/enums/HttpCompression
+        type: engineapi
+        source: /reference/engine/enums/HttpCompression.yaml
         ignoreTranslation: true
       - title: HttpContentType
         path: /reference/engine/enums/HttpContentType
@@ -4117,6 +4157,11 @@ navigation:
         path: /reference/engine/enums/NetworkOwnership
         type: engineapi
         source: /reference/engine/enums/NetworkOwnership.yaml
+        ignoreTranslation: true
+      - title: NetworkStatus
+        path: /reference/engine/enums/NetworkStatus
+        type: engineapi
+        source: /reference/engine/enums/NetworkStatus.yaml
         ignoreTranslation: true
       - title: NormalId
         path: /reference/engine/enums/NormalId

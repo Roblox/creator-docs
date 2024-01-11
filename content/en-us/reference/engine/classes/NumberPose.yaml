@@ -10,7 +10,7 @@ description: |
   which is affected depends on the name of the NumberPose.
 
   NumberPoses are the building blocks of facial animation and, with
-  `Class.Keyframe`s, make up `Class.KeyframeSequence`s.
+  `Class.Keyframe|Keyframes`, make up `Class.KeyframeSequence`s.
 
   ## NumberPoses and Facial Animation
 
@@ -21,13 +21,13 @@ description: |
 
   ## NumberPose and hierarchy
 
-  Contrary to `Class.Pose` Instances, `Class.NumberPose`s cannot be parented
-  together. However, they all must be stored in a `Class.Folder` named
+  Contrary to `Class.Pose` Instances, `Class.NumberPose|NumberPoses` cannot be
+  parented together. However, they all must be stored in a `Class.Folder` named
   'FaceControls' that is a child of the 'Head' `Class.Pose`.
 
   ## NumberPose value
 
-  The Roblox animation system applies `Class.NumberPose.Value`s to the
+  The Roblox animation system applies `Class.NumberPose` values to the
   corresponding FACS controls. Because those controls only respond to values
   between 0 and 1, the values calculated by the animation system are always
   clamped to that range.
