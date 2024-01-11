@@ -1074,11 +1074,12 @@ methods:
       Note that this event will not pass any arguments to a connected function,
       so the value of the changed property must be read directly within a script.
 
-      <Alert severity="error">
-      Like `Class.Instance.Changed|Changed`, the event returned by this method does not fire for physics-related changes, 
-      like when the `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
-      and `Datatype.CFrame` properties of a `Class.BasePart` change due to gravity.
-      </Alert>
+      Like `Class.Instance.Changed|Changed`, the event returned by this method does not
+      fire for physics-related changes, such as when the `Class.BasePart.CFrame|CFrame`,
+      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
+      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
+      `Class.BasePart.Position|Position`, or `Class.BasePart.Orientation|Orientation`
+      properties of a `Class.BasePart` change due to gravity or other physical forces.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
