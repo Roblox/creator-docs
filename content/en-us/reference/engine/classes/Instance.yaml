@@ -1658,7 +1658,6 @@ events:
       `Class.StringValue`, etc for more information. To detect other changes in
       these objects, you must use `GetPropertyChangedSignal` instead.
 
-      <Alert severity="error">
       This event does not fire for physics-related changes, like when the
       `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
       and `Datatype.CFrame` properties of a `Class.BasePart` change due to
