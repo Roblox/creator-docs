@@ -1644,10 +1644,11 @@ events:
       property, consider using the `GetPropertyChangedSignal` method instead to
       get an event that only fires when a given property changes.
 
-      For "-Value" objects, this event behaves differently: it only fires when
-      the `Value` property changes. See individual pages for `Class.IntValue`,
-      `Class.StringValue`, etc for more information. To detect other changes in
-      these objects, you must use `GetPropertyChangedSignal` instead.
+      For "value" objects such as `Class.IntValue`, this event only fires when the
+      `Value` property changes. See individual pages for `Class.IntValue`,
+      `Class.StringValue`, etc. for more information. To detect other changes in
+      these objects, you must use `Class.Instance:GetPropertyChangedSignal()
+      instead.
 
       This event does not fire for physics-related changes, like when the
       `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
