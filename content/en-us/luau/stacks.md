@@ -32,7 +32,7 @@ end
 ​
 -- Put a new value onto the stack
 function Stack:Push(value)
-	self._stack[#self._stack+1] = value
+	table.insert(self._stack, value)
 end
 ​
 -- Take a value off the stack
@@ -41,9 +41,7 @@ function Stack:Pop()
 		return nil
 	end
 ​
-	local value = self._stack[#self._stack]
-	self._stack[#self._stack] = nil
-	return value
+	return table.remove(self._stack, #self._stack)
 end
 ​
 return Stack
