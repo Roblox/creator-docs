@@ -58,11 +58,11 @@ properties:
       can_save: true
   - name: ContentProvider.RequestQueueSize
     summary: |
-      Gives the number of items in the `Class.ContentProvider` request queue that
-      need to be downloaded.
+      Gives the number of items in the `Class.ContentProvider` request queue
+      that need to be downloaded.
     description: |
-      Gives the number of items in the `Class.ContentProvider` request queue that
-      need to be downloaded.
+      Gives the number of items in the `Class.ContentProvider` request queue
+      that need to be downloaded.
 
       Items are added to the client's request queue when an asset is used for
       the first time or `Class.ContentProvider:PreloadAsync()` is called.

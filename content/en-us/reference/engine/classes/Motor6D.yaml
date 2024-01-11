@@ -68,14 +68,15 @@ properties:
 
       `Class.Motor6D` transforms are not applied immediately, unlike updating
       `Class.JointInstance.C0|C0` and `Class.JointInstance.C1|C1`, but rather as
-      a batch in a parallel job after `Class.RunService.PreSimulation`, immediately
-      before physics steps. The deferred batch update is much more efficient
-      than many immediate updates.
+      a batch in a parallel job after `Class.RunService.PreSimulation`,
+      immediately before physics steps. The deferred batch update is much more
+      efficient than many immediate updates.
 
       If the `Class.Motor6D` is part of an animated model with an
       `Class.Animator`, then `Class.Motor6D.Transform` will usually be
       overwritten every frame by the `Class.Animator` after
-      `Class.RunService.PreAnimation` and before `Class.RunService.PreSimulation`.
+      `Class.RunService.PreAnimation` and before
+      `Class.RunService.PreSimulation`.
     code_samples:
     type: CFrame
     tags:

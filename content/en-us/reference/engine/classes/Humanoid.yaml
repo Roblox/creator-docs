@@ -135,8 +135,8 @@ properties:
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
       When Enabled, AutomaticScalingEnabled causes the size of the character to
-      change in response to the values in the humanoid's child scale
-      values changing.
+      change in response to the values in the humanoid's child scale values
+      changing.
     description: |
       The Humanoid has six child scale values including `BodyDepthScale`,
       `BodyHeightScale`, `BodyProportionScale`, `BodyTypeScale`,
@@ -183,8 +183,8 @@ properties:
       An offset applied to the Camera's subject position when its CameraSubject
       is set to this Humanoid.
     description: |
-      The CameraOffset property specifies an offset to the camera's
-      subject position when its `Class.Camera.CameraSubject` is set to this
+      The CameraOffset property specifies an offset to the camera's subject
+      position when its `Class.Camera.CameraSubject` is set to this
       `Class.Humanoid`.
 
       The offset is applied in object-space, relative to the orientation of the
@@ -306,21 +306,21 @@ properties:
       will default to the humanoid's parent's name property.
 
       #### Player Character Loading
-      
-      When players load their character, either
-      automatically or through the use of
-      `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
+
+      When players load their character, either automatically or through the use
+      of `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
       created by the engine will have its `DisplayName` property set to the
       player's `DisplayName` property.
 
       #### StarterCharacter and StarterHumanoid
-      
+
       When a `Class.Humanoid` named `StarterHumanoid` is parented to
       `Class.StarterPlayer`, or when a Humanoid is present in a Model named
       `StarterCharacter`, the DisplayName property will be respected when
       Characters are loaded by Players in the game. The engine will only
       override the `DisplayName` property of the Humanoid with the `DisplayName`
-      property of the player if the `Class.Humanoid.DisplayName` of `StarterHumanoid` is an empty string.
+      property of the player if the `Class.Humanoid.DisplayName` of
+      `StarterHumanoid` is an empty string.
     code_samples:
     type: string
     tags: []
@@ -1314,12 +1314,12 @@ methods:
       `Class.Animation|Animations`
 
       Starting from the humanoid's `Class.Humanoid.RootPart`, the function
-      collects all `Class.Attachment|Attachments` parented in the current part, whose name
-      ends with "RigAttachment". It then searches for a matching attachment in
-      the character that shares the same name as the attachment. Using those two
-      attachments, a Motor6D joint is generated based on the parts associated
-      with the two attachments, and the `Class.Attachment.CFrame|CFrame` of the
-      attachments.
+      collects all `Class.Attachment|Attachments` parented in the current part,
+      whose name ends with "RigAttachment". It then searches for a matching
+      attachment in the character that shares the same name as the attachment.
+      Using those two attachments, a Motor6D joint is generated based on the
+      parts associated with the two attachments, and the
+      `Class.Attachment.CFrame|CFrame` of the attachments.
 
       BuildRigFromAttachments also scales the character and sets body colors.
 

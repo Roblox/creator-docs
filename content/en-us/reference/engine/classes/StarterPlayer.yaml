@@ -88,10 +88,10 @@ properties:
 
       This property is copied from the `Class.StarterPlayer` to a `Class.Player`
       when they join the game. Following that. the value of this property is
-      copied to `Class.Humanoid.AutoJumpEnabled` property of the
-      character's `Class.Humanoid` on spawn. In other words, it is
-      possible to set the auto-jump behavior on a per-character, per-player and
-      per-game basis using these three properties.
+      copied to `Class.Humanoid.AutoJumpEnabled` property of the character's
+      `Class.Humanoid` on spawn. In other words, it is possible to set the
+      auto-jump behavior on a per-character, per-player and per-game basis using
+      these three properties.
     code_samples:
       - Auto-Jump-Toggle
     type: bool
@@ -588,13 +588,13 @@ properties:
       can_save: true
   - name: StarterPlayer.HealthDisplayDistance
     summary: |
-      Sets the distance at which this player will see other `Class.Humanoid` health
-      bars. If set to 0, the health bars will not be displayed.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      health bars. If set to 0, the health bars will not be displayed.
     description: |
       The HealthDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid` health
-      bars. If set to 0, the health bars will not be displayed. This property is
-      set to 100 studs by default.
+      in studs at which this player will see other `Class.Humanoid` health bars.
+      If set to 0, the health bars will not be displayed. This property is set
+      to 100 studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.HealthDisplayDistance` property.
@@ -703,11 +703,11 @@ properties:
       can_save: true
   - name: StarterPlayer.NameDisplayDistance
     summary: |
-      Sets the distance at which this player will see other `Class.Humanoid` names. If
-      set to 0, names are hidden.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      names. If set to 0, names are hidden.
     description: |
-      Sets the distance at which this player will see other `Class.Humanoid` names. If
-      set to 0, names are hidden.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      names. If set to 0, names are hidden.
 
       The NameDisplayDistance `Class.StarterPlayer` property sets the distance
       in studs at which this player will see other `Class.Humanoid` names. If

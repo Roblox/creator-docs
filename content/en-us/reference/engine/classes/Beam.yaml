@@ -46,10 +46,10 @@ properties:
     description: |
       The `Class.Attachment` the `Class.Beam` originates from.
 
-      A beam's Attachment0 is the first control point on the
-      beam's cubic Bézier curve. The orientation of Attachment0,
-      alongside the `Class.Beam.CurveSize0` property, determine
-      the position of the second control point.
+      A beam's Attachment0 is the first control point on the beam's cubic Bézier
+      curve. The orientation of Attachment0, alongside the
+      `Class.Beam.CurveSize0` property, determine the position of the second
+      control point.
 
       For the `Class.Attachment` where the `Class.Beam` ends see
       `Class.Beam.Attachment1`.
@@ -75,10 +75,10 @@ properties:
     description: |
       The `Class.Attachment` the `Class.Beam` ends at.
 
-      A beam's Attachment1 is the fourth and final control point on the
-      beam's cubic Bézier curve. The orientation of Attachment1,
-      alongside the `Class.Beam.CurveSize1` property, determine
-      the position of the third control point.
+      A beam's Attachment1 is the fourth and final control point on the beam's
+      cubic Bézier curve. The orientation of Attachment1, alongside the
+      `Class.Beam.CurveSize1` property, determine the position of the third
+      control point.
 
       For the `Class.Attachment` where the `Class.Beam` starts see
       `Class.Beam.Attachment0`.
@@ -126,10 +126,9 @@ properties:
     description: |
       Determines the color of the `Class.Beam`.
 
-      If `Class.Beam.Texture` is set, this color will be
-      applied to the beam's texture. If no `Class.Beam.Texture` has been
-      set then the `Class.Beam` will appear as a solid bar colored in accordance
-      with this property.
+      If `Class.Beam.Texture` is set, this color will be applied to the beam's
+      texture. If no `Class.Beam.Texture` has been set then the `Class.Beam`
+      will appear as a solid bar colored in accordance with this property.
 
       #### Beams and ColorSequences
 
@@ -155,8 +154,9 @@ properties:
       `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
       only show a transition between two colors. Therefore a `Class.Beam` will
       need to have at least n-1 segments in order for the color to display
-      correctly, where n is the number of `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints` in
-      the `Datatype.ColorSequence`
+      correctly, where n is the number of
+      `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints` in the
+      `Datatype.ColorSequence`
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: ColorSequence
@@ -196,11 +196,11 @@ properties:
       as follows:
 
       - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
-      - **P1**: CurveSize0 studs away from `Class.Beam.Attachment0`, in
-        the positive X direction of `Class.Beam.Attachment0`.
+      - **P1**: CurveSize0 studs away from `Class.Beam.Attachment0`, in the
+        positive X direction of `Class.Beam.Attachment0`.
       - **P2**: `Class.Beam.CurveSize1` studs away from
-        `Class.Beam.Attachment1`, in the negative X
-        direction of `Class.Beam.Attachment1`.
+        `Class.Beam.Attachment1`, in the negative X direction of
+        `Class.Beam.Attachment1`.
       - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
 
       The beam starts at P0, goes towards P1, and arrives at P3, from the
@@ -251,10 +251,10 @@ properties:
 
       - **P0**: The start of the beam, the position of `Class.Beam.Attachment0`
       - **P1**: `Class.Beam.CurveSize0` studs away from
-        `Class.Beam.Attachment0`, in the positive X
-        direction of `Class.Beam.Attachment0`.
-      - **P2**: CurveSize1 studs away from `Class.Beam.Attachment1`, in
-        the negative X direction of `Class.Beam.Attachment1`.
+        `Class.Beam.Attachment0`, in the positive X direction of
+        `Class.Beam.Attachment0`.
+      - **P2**: CurveSize1 studs away from `Class.Beam.Attachment1`, in the
+        negative X direction of `Class.Beam.Attachment1`.
       - **P3**: The end of the beam, the position of `Class.Beam.Attachment1`
 
       The beam starts at P0, goes towards P1, and arrives at P3, from the
@@ -284,8 +284,8 @@ properties:
     description: |
       Determines whether the `Class.Beam` is visible or not.
 
-      When this property is set to false, the beam's
-      `Class.Beam.Segments` will not be displayed.
+      When this property is set to false, the beam's `Class.Beam.Segments` will
+      not be displayed.
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: bool
@@ -421,8 +421,8 @@ properties:
       certain number of segments to display correctly. This is because each
       segment can only show a transition between two colors or transparencies.
       Therefore a `Class.Beam` requires at least n-1 segments to display
-      correctly, where n is the number of keypoint associated with the
-      beam's `Class.Beam.Color` and `Class.Beam.Transparency`.
+      correctly, where n is the number of keypoint associated with the beam's
+      `Class.Beam.Color` and `Class.Beam.Transparency`.
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: int
@@ -468,13 +468,13 @@ properties:
       can_save: true
   - name: Beam.TextureLength
     summary: |
-      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode`
-      is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
+      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode` is
+      'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
       determines the size of the texture relative to the `Class.Beam|Beam's`
       length.
     description: |
-      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode`
-      is 'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
+      Sets the length of the `Class.Beam` texture if `Class.Beam.TextureMode` is
+      'Wrap' or 'Static'. If `Class.Beam.TextureMode` is 'Stretch' then it
       determines the size of the texture relative to the beam's length.
     code_samples:
       - Creating-a-Beam-From-Scratch
@@ -499,8 +499,8 @@ properties:
 
       #### Beam Texture Behavior
 
-      How a beam's texture scales or repeats is dependent on the
-      TextureMode property.
+      How a beam's texture scales or repeats is dependent on the TextureMode
+      property.
 
       When TextureMode is 'Wrap' the size of the repeating texture corresponds
       to `Class.Beam.TextureLength` in studs. For an example of this see the
@@ -590,8 +590,9 @@ properties:
       `Class.Beam.Segments` the `Class.Beam` has. Each segment of the beam can
       only show a transition between two transparencies. Therefore a
       `Class.Beam` will need to have at least n-1 segments in order to display
-      correctly, where n is the number of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` in
-      the `Datatype.NumberSequence`
+      correctly, where n is the number of
+      `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` in the
+      `Datatype.NumberSequence`
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: NumberSequence
@@ -670,8 +671,8 @@ properties:
       ZOffset can be both positive and negative.
 
       This property can be particularly useful when using multiple
-      `Class.Beam|Beams` between the same `Class.Attachment|Attachments`. It can be used to
-      layer the beams and avoid
+      `Class.Beam|Beams` between the same `Class.Attachment|Attachments`. It can
+      be used to layer the beams and avoid
       [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting).
     code_samples:
       - Beam-ZOffset
@@ -693,17 +694,17 @@ methods:
     description: |
       Sets the current offset of the beam's texture cycle.
 
-      The offset of a `Class.Beam` texture cycle represents the progress of its texture animation. Hence, a beam's texture cycle can
-      be reset as follows:
+      The offset of a `Class.Beam` texture cycle represents the progress of its
+      texture animation. Hence, a beam's texture cycle can be reset as follows:
 
       ```lua
       beam:SetTextureOffset(0)
       ```
 
-      Where manual control is not required over the beam's texture
-      cycle, `Class.Beam.TextureSpeed` can be used instead to animate the
-      `Class.Beam`. Although, for illustrative purposes, a similar function can
-      be achieved with SetTextureOffset.
+      Where manual control is not required over the beam's texture cycle,
+      `Class.Beam.TextureSpeed` can be used instead to animate the `Class.Beam`.
+      Although, for illustrative purposes, a similar function can be achieved
+      with SetTextureOffset.
 
       ```lua
       local RunService = game:GetService("RunService")

@@ -16,8 +16,8 @@ description: |
   **Built-in team behavior** The following functionality of Teams exists by
   default and does not require the developer to program any custom behavior.
 
-  - When part of a Team, the name above a player's character
-    `Class.Model` will be colored to the `Class.Team.TeamColor`
+  - When part of a Team, the name above a player's character `Class.Model` will
+    be colored to the `Class.Team.TeamColor`
   - Changing `Class.Player.TeamColor` will cause `Class.Player.Team` switch to
     the Team with the corresponding `Class.Team.TeamColor`
   - When using the default player list users will be grouped and displayed by
@@ -32,10 +32,9 @@ description: |
   - When `Class.SpawnLocation.Neutral` is set to false, only players whose
     `Class.Player.TeamColor` matches `Class.SpawnLocation.TeamColor` can spawn
     on that `Class.SpawnLocation`
-  - When `Class.SpawnLocation.AllowTeamChangeOnTouch` is set to true, a
-    player's `Class.Player.TeamColor` will change to
-    `Class.SpawnLocation.TeamColor` when their character touches the
-    `Class.SpawnLocation`
+  - When `Class.SpawnLocation.AllowTeamChangeOnTouch` is set to true, a player's
+    `Class.Player.TeamColor` will change to `Class.SpawnLocation.TeamColor` when
+    their character touches the `Class.SpawnLocation`
 
   **Optional extended team behavior** Many developers chose to add the following
   features to teams in their own code.

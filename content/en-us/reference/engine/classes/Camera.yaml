@@ -142,16 +142,15 @@ properties:
         _'Follow'_, _'Attach'_, _'Track'_, _'Watch'_ and _'Custom'_
         `Class.Camera.CameraType|CameraTypes`
       - For all `Class.Camera.CameraType|CameraTypes` but _'Scriptable'_, the
-        object whose position the camera's `Class.Camera.Focus` will be
-        set to
+        object whose position the camera's `Class.Camera.Focus` will be set to
 
       CameraSubject accepts a variety of `Class.Instance|Instances`. The default
       camera scripts respond differently to different CameraSubject types:
 
       - `Class.Humanoid` — By default the CameraSubject is set to the
         `Class.Player.LocalPlayer|LocalPlayer` `Class.Humanoid`. The camera
-        scripts will follow the `Class.Humanoid` factoring in the
-        humanoid's current state and `Class.Humanoid.CameraOffset`
+        scripts will follow the `Class.Humanoid` factoring in the humanoid's
+        current state and `Class.Humanoid.CameraOffset`
       - `Class.BasePart` — The camera scripts will follow the position of any
         `Class.BasePart`, with a vertical offset in the case of
         `Class.VehicleSeat|VehicleSeats`
@@ -445,11 +444,10 @@ properties:
 
       See also:
 
-      - `Class.VRService:GetUserCFrame()` which
-        can be used to obtain the `Datatype.CFrame` of the head
-      - `Class.VRService:RecenterUserHeadCFrame()` which is
-        used to recenter the head to the current position and orientation of the
-        VR device
+      - `Class.VRService:GetUserCFrame()` which can be used to obtain the
+        `Datatype.CFrame` of the head
+      - `Class.VRService:RecenterUserHeadCFrame()` which is used to recenter the
+        head to the current position and orientation of the VR device
       - The `Class.Camera:GetRenderCFrame()` function which returns the
         `Class.Camera` `Class.Camera.CFrame` combined with the `Datatype.CFrame`
         of the user's head
@@ -513,8 +511,8 @@ properties:
       can_save: true
   - name: Camera.MaxAxisFieldOfView
     summary: |
-      Sets the angle of the camera's field of view along the longest
-      viewport axis.
+      Sets the angle of the camera's field of view along the longest viewport
+      axis.
     description: |
       The MaxAxisFieldOfView property sets how many degrees along the longest
       viewport axis the camera can view.
@@ -543,15 +541,15 @@ properties:
       can_save: false
   - name: Camera.NearPlaneZ
     summary: |
-      Describes the negative z-offset, in studs, of the camera's near
-      clipping plane.
+      Describes the negative z-offset, in studs, of the camera's near clipping
+      plane.
     description: |
       The NearPlaneZ property describes how far away the Camera's near clipping
       plane is in studs. The near clipping plane is a geometric plane that sits
-      in-front of the camera's `Class.Camera.CFrame`. Anything between
-      this plane and the camera will not render. This creates a cutaway view
-      when viewing objects at very short distances. See the images below for a
-      visual example of this:
+      in-front of the camera's `Class.Camera.CFrame`. Anything between this
+      plane and the camera will not render. This creates a cutaway view when
+      viewing objects at very short distances. See the images below for a visual
+      example of this:
 
       ![A demonstration of how the near clipping plane resides in front of the camera's view](/assets/legacy/NearPlaneZ1.jpg)
       ![A demonstration of how anything falling behind the clipping plane is not rendered](/assets/legacy/NearPlaneZ2.jpg)
@@ -664,7 +662,8 @@ methods:
       between the `Class.Camera.Focus` and `Class.Camera.CFrame`.
     description: |
       This function is used by _'PopperCam'_ in the default camera scripts to
-      ensure obstructions do not come between the `Class.Camera` and its subject.
+      ensure obstructions do not come between the `Class.Camera` and its
+      subject.
 
       This function will check all `Class.BasePart|BaseParts` and
       `Class.Terrain` in the `Class.Workspace` with the following exceptions:
@@ -712,8 +711,7 @@ methods:
       See also:
 
       - `Class.Camera:GetTiltSpeed()` for the speed at which the `Class.Camera`
-        is rotating around its `Class.Camera.Focus` on the camera's X
-        axis
+        is rotating around its `Class.Camera.Focus` on the camera's X axis
       - `Class.Camera:PanUnits()` to 'pan' the camera
       - `Class.Camera:TiltUnits()` to 'tilt' the camera
     code_samples:
@@ -737,12 +735,12 @@ methods:
       _castPoints_.
     description: |
       This function returns an array of `Class.BasePart|BaseParts` that are
-      obscuring the lines of sight between camera's
-      `Class.Camera.CFrame` and the _castPoints_.
+      obscuring the lines of sight between camera's `Class.Camera.CFrame` and
+      the _castPoints_.
 
       GetPartsObscuringTarget is used by the 'Invisicam' in the default camera
-      scripts to hide parts between the camera's `Class.Camera.CFrame`
-      and `Class.Camera.Focus`.
+      scripts to hide parts between the camera's `Class.Camera.CFrame` and
+      `Class.Camera.Focus`.
 
       Any `Class.Instance|Instances` included in the _ignoreList_ array will,
       along with their descendants, be ignored.
@@ -793,8 +791,7 @@ methods:
       - type: Objects
         summary: |
           An array of `Class.BasePart|BaseParts` that obscure the lines of sight
-          between the camera's `Class.Camera.CFrame` and the
-          _castPoints_.
+          between the camera's `Class.Camera.CFrame` and the _castPoints_.
     tags: []
     deprecation_message: ''
     security: None
@@ -823,8 +820,8 @@ methods:
       renderCFrame = workspace.CurrentCamera.CFrame * headCFrame
       ```
 
-      The camera's render `Datatype.CFrame` will only be changed to
-      account for the head when the `Class.Camera.HeadLocked` property is true.
+      The camera's render `Datatype.CFrame` will only be changed to account for
+      the head when the `Class.Camera.HeadLocked` property is true.
     code_samples:
     parameters: []
     returns:
@@ -837,19 +834,17 @@ methods:
     thread_safety: Unsafe
   - name: Camera:GetRoll
     summary: |
-      Returns in radians the current roll, or rotation around the
-      camera's Z-axis, applied to the `Class.Camera` using
-      `Class.Camera:SetRoll()`.
+      Returns in radians the current roll, or rotation around the camera's
+      Z-axis, applied to the `Class.Camera` using `Class.Camera:SetRoll()`.
     description: |
       This function returns, in radians, the current roll applied to the
       `Class.Camera` using `Class.Camera:SetRoll()`. Roll is defined as rotation
       around the camera's Z-axis.
 
       This function only returns roll applied using the `Class.Camera:SetRoll()`
-      function. Roll manually applied to the camera's
-      `Class.Camera.CFrame` is not accounted for. To obtain the actual roll of
-      the `Class.Camera`, including roll manually applied, you can use the
-      following snippet:
+      function. Roll manually applied to the camera's `Class.Camera.CFrame` is
+      not accounted for. To obtain the actual roll of the `Class.Camera`,
+      including roll manually applied, you can use the following snippet:
 
       ```lua
       local function getActualRoll()
@@ -973,8 +968,8 @@ methods:
         type: CFrame
         default:
         summary: |
-          The `Datatype.CFrame` for the camera's `Class.Camera.Focus` to
-          tween to.
+          The `Datatype.CFrame` for the camera's `Class.Camera.Focus` to tween
+          to.
       - name: duration
         type: float
         default:
@@ -999,8 +994,7 @@ methods:
       This function pans the `Class.Camera` around the `Class.Camera.Focus` in
       45 degree increments around the Y axis.
 
-      The rotation is applied to the camera's `Class.Camera.CFrame`
-      property.
+      The rotation is applied to the camera's `Class.Camera.CFrame` property.
 
       This function pans the `Class.Camera` in 45 degree increments, for
       example:
@@ -1179,11 +1173,11 @@ methods:
       increments around the camera's X axis.
     description: |
       This function 'tilts' the `Class.Camera` by rotating it around the
-      `Class.Camera.Focus` around the camera's X axis by a given
-      multiple of 10 degrees.
+      `Class.Camera.Focus` around the camera's X axis by a given multiple of 10
+      degrees.
 
-      The rotation is applied to the camera's `Class.Camera.CFrame`
-      property and is constrained between _-81.05_ and _81.05_ degrees.
+      The rotation is applied to the camera's `Class.Camera.CFrame` property and
+      is constrained between _-81.05_ and _81.05_ degrees.
 
       This function tilts the `Class.Camera` in 10 degree increments, for
       example:
@@ -1220,8 +1214,8 @@ methods:
   - name: Camera:ViewportPointToRay
     summary: |
       Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
-      at a given depth from the `Class.Camera` orientated in the
-      camera's direction. Does not account for the GUI inset.
+      at a given depth from the `Class.Camera` orientated in the camera's
+      direction. Does not account for the GUI inset.
     description: |
       This function creates a unit `Datatype.Ray` from a 2D position on the
       viewport (defined in pixels). This position does not account for the GUI
