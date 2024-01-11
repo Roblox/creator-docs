@@ -64,20 +64,22 @@ properties:
       Determines whether `Class.TextChatService` should create default
       `Class.TextChatCommand|TextChatCommands`.
 
-      If true, the following `Class.TextChatCommand|TextChatCommands` are created and put in a
-      `Class.Folder` named **TextChatCommands** inside `Class.TextChatService`:
+      If true, the following `Class.TextChatCommand|TextChatCommands` are
+      created and put in a `Class.Folder` named **TextChatCommands** inside
+      `Class.TextChatService`:
 
-      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                             | Usage Example  |
-      | :---------------- | :----------- | :------------- | :------------------------------------------------------------------------------------------------------ | :------------- |
-      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                            | `\console`     |
-      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                     | `\e dance`     |
-      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                          | `\help`        |
-      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel|TextChannels`.   | `\m Username`  |
-      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel|TextChannels`. | `\um Username` |
-      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                                 | `\version`     |
+      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                          | Usage Example  |
+      | :---------------- | :----------- | :------------- | :--------------------------------------------------------------------------------------------------- | :------------- | -------------- |
+      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                         | `\console`     |
+      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                  | `\e dance`     |
+      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                       | `\help`        |
+      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel   | TextChannels`. | `\m Username`  |
+      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel | TextChannels`. | `\um Username` |
+      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                              | `\version`     |
 
-      Developers can edit, create, and remove `Class.TextChatCommand|TextChatCommands` as even
-      if `Class.TextChatService.CreateDefaultCommands` is `true`.
+      Developers can edit, create, and remove
+      `Class.TextChatCommand|TextChatCommands` as even if
+      `Class.TextChatService.CreateDefaultCommands` is `true`.
 
       Mute and unmute commands apply to all TextChannels.
     code_samples: []
@@ -100,10 +102,10 @@ properties:
       Determines whether `Class.TextChatService` should create default
       `Class.TextChannel|TextChannels`.
 
-      If true, `Class.Team` based `Class.TextChannel|TextChannels` are automatically created
-      (and removed when `Class.Team|Teams` are removed), along with the following
-      `Class.TextChannel|TextChannels` in a `Class.Folder` named **TextChannels** inside
-      `Class.TextChatService`:
+      If true, `Class.Team` based `Class.TextChannel|TextChannels` are
+      automatically created (and removed when `Class.Team|Teams` are removed),
+      along with the following `Class.TextChannel|TextChannels` in a
+      `Class.Folder` named **TextChannels** inside `Class.TextChatService`:
 
       | Name                                | Description                                                                                                                                                                                            |
       | :---------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -114,8 +116,8 @@ properties:
       If false, `Class.Team` based `Class.TextChannel|TextChannels` are **not**
       automatically created and destroyed.
 
-      Developers can edit, create, and remove `Class.TextChannel|TextChannels` even if
-      `Class.TextChatService.CreateDefaultTextChannels` is `true`.
+      Developers can edit, create, and remove `Class.TextChannel|TextChannels`
+      even if `Class.TextChatService.CreateDefaultTextChannels` is `true`.
     code_samples: []
     type: bool
     tags: []

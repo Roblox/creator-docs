@@ -24,7 +24,7 @@ description: |
     `Class.Mouse.TargetSurface|TargetSurface` properties. These can be useful
     for simple cases, but `Class.WorldRoot:Raycast()` should be used in more
     complicated [raycasting](../../../workspace/raycasting.md) scenarios.
-  - `Class.Plugin|Plugins` can use use `Class.Plugin:GetMouse()` to get a
+  - `Class.Plugin|Plugins` can use `Class.Plugin:GetMouse()` to get a
     `Class.PluginMouse`, which behaves similarly.
 
   ```lua
@@ -74,8 +74,8 @@ properties:
       local position = mouse.Hit.p
       ```
 
-      Hit is often used by `Class.Tool|Tools` to fire a weapon towards the mouse in
-      third person.
+      Hit is often used by `Class.Tool|Tools` to fire a weapon towards the mouse
+      in third person.
 
       Developers looking for the `Class.BasePart` the mouse is pointing at
       should use `Class.Mouse.Target`.
@@ -407,15 +407,13 @@ properties:
       can_save: true
   - name: Mouse.UnitRay
     summary: |
-      A `Datatype.Ray` directed towards the mouse's world position,
-      originating from the `Class.Workspace.CurrentCamera` world
-      position.
+      A `Datatype.Ray` directed towards the mouse's world position, originating
+      from the `Class.Workspace.CurrentCamera` world position.
     description: |
-      The UnitRay property is a `Datatype.Ray` directed toward the
-      mouse's position in 3D space (described by `Class.Mouse.Hit`). It
-      originates from the `Class.Camera.CFrame|CFrame` of the
-      `Class.Workspace.CurrentCamera`. Like all unit rays, it has a distance
-      of 1.
+      The UnitRay property is a `Datatype.Ray` directed toward the mouse's
+      position in 3D space (described by `Class.Mouse.Hit`). It originates from
+      the `Class.Camera.CFrame|CFrame` of the `Class.Workspace.CurrentCamera`.
+      Like all unit rays, it has a distance of 1.
 
       ```lua
       local Players = game:GetService("Players")

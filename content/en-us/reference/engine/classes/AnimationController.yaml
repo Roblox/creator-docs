@@ -7,10 +7,10 @@ summary: |
   a `Class.Humanoid`.
 description: |
   An object which allows animations to be loaded and applied to a character or
-  model in place of a `Class.Humanoid`. Creates an
-  `Class.Animator` and loads animations to update `Class.Motor6D|Motor6Ds` of
-  said character to react in the way that is described within the animation
-  asset referenced by an `Class.Animation` object.
+  model in place of a `Class.Humanoid`. Creates an `Class.Animator` and loads
+  animations to update `Class.Motor6D|Motor6Ds` of said character to react in
+  the way that is described within the animation asset referenced by an
+  `Class.Animation` object.
 
   Note that the `Class.AnimationController:LoadAnimation()|LoadAnimation()`
   method of this class has been deprecated. Instead, you should call

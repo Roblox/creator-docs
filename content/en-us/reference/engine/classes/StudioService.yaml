@@ -8,8 +8,8 @@ summary: |
 description: |
   StudioService provides access to configuration of Roblox Studio, allows
   importing files from the user's file system, and other miscellaneous
-  information. It is intended to be used by `Class.Plugin|Plugins` in order to provide
-  a consistent user experience.
+  information. It is intended to be used by `Class.Plugin|Plugins` in order to
+  provide a consistent user experience.
 
   - Plugins that allow the user to move objects may find
     `Class.StudioService.GridSize|GridSize`,

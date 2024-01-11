@@ -45,9 +45,9 @@ properties:
 
       <img src="/assets/legacy/SelectionBox.LineThickness.jpg" alt="Three SelectionBoxes with LineThickness values of 0.075, 0.15 (default) and 0.3" />
 
-      Pictured above are three default `Class.Part|Parts` with default SelectionBoxes
-      applied to them. Their thicknesses from left-to-right are 0.075, 0.15
-      (default) and 0.3.
+      Pictured above are three default `Class.Part|Parts` with default
+      SelectionBoxes applied to them. Their thicknesses from left-to-right are
+      0.075, 0.15 (default) and 0.3.
 
       See also:
 

@@ -447,13 +447,13 @@ properties:
       can_save: true
   - name: PhysicsSettings.AreOwnersShown
     summary: |
-      When set to true, each player's character is outlined with a
-      unique color, and each part that the player has network ownership over is
-      outlined with the same color.
+      When set to true, each player's character is outlined with a unique color,
+      and each part that the player has network ownership over is outlined with
+      the same color.
     description: |
-      When set to true, each player's character is outlined with a
-      unique color, and each part that the player has network ownership over is
-      outlined with the same color.
+      When set to true, each player's character is outlined with a unique color,
+      and each part that the player has network ownership over is outlined with
+      the same color.
     code_samples:
     type: bool
     tags: []
@@ -489,15 +489,14 @@ properties:
       can_save: true
   - name: PhysicsSettings.AreRegionsShown
     summary: |
-      When set to true, a cylinder is drawn around each player's
-      character, representing their `Class.Player.SimulationRadius`.
+      When set to true, a cylinder is drawn around each player's character,
+      representing their `Class.Player.SimulationRadius`.
     description: |
-      When set to true, a cylinder is drawn around each player's
-      character, representing their `Class.Player.SimulationRadius`. Each
-      physically simulated object will check to see which player is closest to
-      that object, and if they are within the player's simulation radius. If
-      both conditions are met, that player will becomes the network owner of
-      that object.
+      When set to true, a cylinder is drawn around each player's character,
+      representing their `Class.Player.SimulationRadius`. Each physically
+      simulated object will check to see which player is closest to that object,
+      and if they are within the player's simulation radius. If both conditions
+      are met, that player will becomes the network owner of that object.
     code_samples:
     type: bool
     tags: []

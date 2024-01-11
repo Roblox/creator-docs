@@ -90,8 +90,8 @@ properties:
     summary: |
       The angular velocity of the part's assembly.
     description: |
-      The angular velocity vector of this part's assembly. It's
-      the rate of change of orientation in radians per second.
+      The angular velocity vector of this part's assembly. It's the rate of
+      change of orientation in radians per second.
 
       Angular velocity is the same at every point of the assembly.
 
@@ -144,8 +144,8 @@ properties:
     summary: |
       The linear velocity of the part's assembly.
     description: |
-      The linear velocity vector of this part's assembly. It's
-      the rate of change in position of the assembly's
+      The linear velocity vector of this part's assembly. It's the rate of
+      change in position of the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass` in studs per second.
 
       If you want to know the velocity at a point other than the assembly's
@@ -198,9 +198,8 @@ properties:
       A reference to the root part of the assembly.
     description: |
       This property indicates the `Class.BasePart` automatically chosen to
-      represent the assembly's root part. It is the same part that's
-      returned when developers call
-      `Class.BasePart:GetRootPart()|GetRootPart()`.
+      represent the assembly's root part. It is the same part that's returned
+      when developers call `Class.BasePart:GetRootPart()|GetRootPart()`.
 
       The root part can be changed by changing the
       `Class.BasePart.RootPriority|RootPriority` of the parts in the assembly.
@@ -648,11 +647,11 @@ properties:
     summary: |
       Describes the world position in which a part's center of mass is located.
     description: |
-      The CenterOfMass property describes the **local** position of a
-      part's center of mass. If this is a single part assembly,
-      this is the `AssemblyCenterOfMass` converted from world space to local. On
-      simple `Class.Part|Parts`, the center of mass is always (0,0,0). It can
-      vary for `Class.WedgePart` or `Class.MeshPart` however.
+      The CenterOfMass property describes the **local** position of a part's
+      center of mass. If this is a single part assembly, this is the
+      `AssemblyCenterOfMass` converted from world space to local. On simple
+      `Class.Part|Parts`, the center of mass is always (0,0,0). It can vary for
+      `Class.WedgePart` or `Class.MeshPart` however.
     code_samples:
     type: Vector3
     tags:
@@ -2151,8 +2150,8 @@ methods:
     summary: |
       Apply an angular impulse to the assembly.
     description: |
-      Applies an instant angular force impulse to this part's
-      assembly, causing the assembly to spin.
+      Applies an instant angular force impulse to this part's assembly, causing
+      the assembly to spin.
 
       The resulting angular velocity from the impulse relies on the assembly's
       `Class.BasePart.AssemblyMass|mass`. So a higher impulse is required to
@@ -2181,8 +2180,7 @@ methods:
       Apply an impulse to the assembly at the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass`.
     description: |
-      This function applies an instant force impulse to this
-      part's assembly.
+      This function applies an instant force impulse to this part's assembly.
 
       The force is applied at the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass`, so the resulting
@@ -2214,9 +2212,8 @@ methods:
     summary: |
       Apply an impulse to the assembly at specified position.
     description: |
-      This function applies an instant force impulse to this
-      part's assembly, at the specified position in world
-      space.
+      This function applies an instant force impulse to this part's assembly, at
+      the specified position in world space.
 
       If the position is not at the assembly's
       `Class.BasePart.AssemblyCenterOfMass|center of mass`, the impulse will
@@ -2293,8 +2290,8 @@ methods:
     summary: |
       Checks whether you can set a part's network ownership.
     description: |
-      The CanSetNetworkOwnership function checks whether you can set a
-      part's network ownership.
+      The CanSetNetworkOwnership function checks whether you can set a part's
+      network ownership.
 
       The function's return value verifies whether or not you can call
       `Class.BasePart:SetNetworkOwner()` or

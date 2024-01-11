@@ -21,8 +21,8 @@ description: |
 
   ## NumberPose and hierarchy
 
-  Contrary to `Class.Pose` Instances, `Class.NumberPose|NumberPoses` cannot be parented
-  together. However, they all must be stored in a `Class.Folder` named
+  Contrary to `Class.Pose` Instances, `Class.NumberPose|NumberPoses` cannot be
+  parented together. However, they all must be stored in a `Class.Folder` named
   'FaceControls' that is a child of the 'Head' `Class.Pose`.
 
   ## NumberPose value

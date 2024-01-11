@@ -8,11 +8,12 @@ description: |
   Represents a speaker in a `Class.TextChannel`.
 
   `Class.TextSource|TextSources` provide details on permissions users have in
-  `Class.TextChannel|TextChannels`. There may be multiple `Class.TextSource|TextSources` for a user if
-  that user belongs in multiple `Class.TextChannel|TextChannels`.
+  `Class.TextChannel|TextChannels`. There may be multiple
+  `Class.TextSource|TextSources` for a user if that user belongs in multiple
+  `Class.TextChannel|TextChannels`.
 
-  Create `Class.TextSource|TextSources` with `Class.TextChannel:AddUserAsync()`, which adds
-  a `Class.TextSource` to the `Class.TextChannel` as a descendant.
+  Create `Class.TextSource|TextSources` with `Class.TextChannel:AddUserAsync()`,
+  which adds a `Class.TextSource` to the `Class.TextChannel` as a descendant.
 
   Remove `Class.TextSource|TextSources` by calling `Class.TextSource.Destroy`.
 

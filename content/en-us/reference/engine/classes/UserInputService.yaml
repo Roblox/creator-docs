@@ -2891,8 +2891,8 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2` objects, indicating the positions of the
-          touches (e.g. fingers) involved in the gesture.
+          An array of `Datatype.Vector2` objects, indicating the positions of
+          the touches (e.g. fingers) involved in the gesture.
       - name: totalTranslation
         type: Vector2
         default:
