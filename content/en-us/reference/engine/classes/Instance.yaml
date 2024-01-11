@@ -1664,7 +1664,6 @@ events:
       gravity. To detect changes in these properties, consider using a
       physics-based event like `Class.RunService.PreSimulation` or
       `Class.BasePart.Touched`.
-      </Alert>
     code_samples:
       - Changed-Event
       - Change-Detector
