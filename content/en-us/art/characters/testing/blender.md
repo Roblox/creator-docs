@@ -48,12 +48,12 @@ Use the following steps in Blender to verify your joint skinning in Pose mode:
 
 1. With the **Armature** object selected, navigate to the **Object Properties** > **Viewport Display** and enable **Show In Front**. This allows you to see and access bones within your character.
 2. With the armature selected, and switch to **Pose Mode**.
-3. Select all the face bones of your model and press <kbd>H</kbd> to hide. You can reveal these again later with <kbd>Alt</kbd> + <kbd>H</kbd> in Pose mode.
+3. Select all the face bones of your model and press <kbd>H</kbd> to hide. You can reveal these again later with <kbd>Alt</kbd><kbd>H</kbd> (<kbd>⌥</kbd><kbd>H</kbd>) in Pose mode.
 4. Select any body bone and press <kbd>R</kbd> to rotate. Verify that your body bones correctly deform and bend the character mesh as expected in natural poses.
 
    1. While actively rotating a bone, right-click to cancel the rotation and set the bone to its original position.
    2. While actively rotating a bone, you can **click to confirm** the rotation and save the current position. You can combine this to make various poses of your character by changing the rotation of various limbs at once.
-   3. If you've saved a rotation, press <kbd>Option</kbd>/<kbd>Alt</kbd> + <kbd>R</kbd> to clear any rotation in Pose Mode. Make sure to reset your pose whenever you complete testing.
+   3. If you've saved a rotation, press <kbd>Alt</kbd><kbd>R</kbd> (<kbd>⌥</kbd><kbd>R</kbd>) to clear any rotation in Pose Mode. Make sure to reset your pose whenever you complete testing.
 
    <video controls src="../../../assets/art/avatar/basic-creation/Testing_02.mp4" width="100%"></video>
 

@@ -5,7 +5,7 @@ memory_category: Instances
 summary: |
   Enables transporting `Class.Player|Players` between places and servers.
 description: |
-  TeleportService is responsible for transporting `Class.Player`s between
+  TeleportService is responsible for transporting `Class.Player|Players` between
   different places and servers.
 
   All teleporting functionality is consolidated into a single

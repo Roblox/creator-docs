@@ -1,12 +1,12 @@
 name: HumanoidHealthDisplayType
 type: enum
 summary: |
-  Controls under what circumstances the `Class.Humanoid`'s health bar is
+  Controls under what circumstances the `Class.Humanoid` health bar is
   displayed.
 description: |
-  Controls when the `Class.Humanoid`'s health bar is displayed. This works in
-  conjunction with the `Class.Humanoid`'s `MaxHealth` property, which must have
-  a value higher than zero or the health bar doesn't display.
+  Controls when the `Class.Humanoid` health bar is displayed. This works in
+  conjunction with the `Class.Humanoid.MaxHealth` property which must have a
+  value higher than zero or the health bar doesn't display.
 code_samples:
 tags: []
 deprecation_message: ''

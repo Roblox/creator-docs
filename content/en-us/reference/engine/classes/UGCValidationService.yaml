@@ -13,6 +13,27 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:CompareTextureOverlapByteString
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: byteStringBaseline
+        type: string
+        default:
+        summary: ''
+      - name: byteStringFollowup
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

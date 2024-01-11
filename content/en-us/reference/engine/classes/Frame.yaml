@@ -8,11 +8,11 @@ description: |
   Frame is a `Class.GuiObject` that renders as a plain rectangle with no other
   content. They are the simplest concrete example of a `Class.GuiObject`, as
   they provide very little additional functionality (`Class.Frame.FrameStyle`).
-  Despite this, Frames are useful as containers for other `Class.GuiObject`s,
-  such as `Class.TextLabel`, `Class.ImageLabel`. The key benefit to using a
-  Frame over a `Class.Folder` as a container object is the ability to further
-  manipulate the `Class.GuiObject.Size` and `Class.GuiObject.Position` of any
-  descendant `Class.GuiObject`s.
+  Despite this, Frames are useful as containers for other
+  `Class.GuiObject|GuiObjects`, such as `Class.TextLabel`, `Class.ImageLabel`.
+  The key benefit to using a Frame over a `Class.Folder` as a container object
+  is the ability to further manipulate the `Class.GuiObject.Size` and
+  `Class.GuiObject.Position` of any descendant `Class.GuiObject`s.
 code_samples:
 inherits:
   - GuiObject

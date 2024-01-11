@@ -83,8 +83,8 @@ To create an animation for your head using the Face Animation Editor:
 
 2. In the **Face Animation Editor**, adjust sliders for the body parts you want to manipulate. Animation tracks for each facial part you manipulate automatically display in the track list along with keyframes for your current position in the timeline. The character's face also updates in the viewport.
 
-   - To undo a step on a slider, press `CMD`+`Z`.
-   - To redo a step on a slider, press `CMD`+`Y`.
+   - To undo a step on a slider, press <kbd>Ctrl</kbd><kbd>Z</kbd> (<kbd>⌘</kbd><kbd>Z</kbd>).
+   - To redo a step on a slider, press <kbd>Ctrl</kbd><kbd>Y</kbd> (<kbd>⌘</kbd><kbd>Y</kbd>).
    - To reset a slider to its default value, right click on the slider. A contextual menu displays. Select **Reset Selected**.
 
 3. (Optional) Adjust the scrubber to a new position further along the timeline, then navigate back to the **Face Animation Editor** and adjust sliders to create a new facial expression. When you play the animation, the first facial expression will ease into the second facial expression.

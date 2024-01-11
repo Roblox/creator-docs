@@ -11,9 +11,9 @@ description: |
   different visual style, resize differently and characters are able to climb
   them.
 
-  TrussParts have significantly more restrictive size limitations than
-  other parts. The smallest they can be is 2x2x2 studs, and the longest they
-  can be is 512 studs.
+  TrussParts have significantly more restrictive size limitations than other
+  parts. The smallest they can be is 2x2x2 studs, and the longest they can be is
+  512 studs.
 
   ![A Truss beam as it appears in game](/assets/legacy/TrussPart.png)
 

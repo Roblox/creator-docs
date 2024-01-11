@@ -18,10 +18,10 @@ description: |
   `Class.SpecialMesh.MeshType` of a `Class.SpecialMesh` being set to 'Cylinder'
   or `Class.Part.Shape` being set to 'Cylinder'. However, unlike those two
   cases, it is orientated so that the height of the cylinder is along the
-  `Class.BasePart`'s Y axis.
+  `Class.BasePart` Y axis.
 
   The dimensions of the mesh scale relative to the `Class.BasePart.Size` of the
-  `Class.BasePart`. This scale is uniformly along the `Class.BasePart`'s Y axis
+  `Class.BasePart`. This scale is uniformly along the `Class.BasePart` Y axis
   and maintaining a 1:1 ratio for the part's X and Z axis, using the lowest
   value. This means the `Class.BasePart` can be resized normally, but the cross
   section of the cylinder will always remain a circle and cannot be stretched or

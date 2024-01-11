@@ -105,8 +105,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: thread
         type: thread
@@ -160,8 +161,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: function
         type: function
@@ -213,8 +215,9 @@ functions:
       general logging and filtering purposes, but also for sending the data to
       systems expecting structured input, such as crash aggregation.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      This function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: level
         type: number
@@ -263,6 +266,18 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: debug.getmemorycategory
+    summary: |
+      Returns the name of the current thread's active memory category.
+    description: |
+      Returns the name of the current thread's active memory category.
+    parameters:
+    returns:
+      - type: string
+        summary: |
+          The current thread's active memory category.
+    tags:
+    code_samples:
   - name: debug.setmemorycategory
     summary: |
       Assigns a custom tag to the current thread's memory category in the
@@ -271,15 +286,16 @@ functions:
       Assigns a custom tag name to the current thread's memory category in the
       Developer Console. Useful for analyzing memory usage of multiple threads
       in the same script which would otherwise be grouped together under the
-      same tag/name.
+      same tag/name. Returns the name of the current thread's previous memory category.
     parameters:
       - name: tag
         type: string
         default:
         summary: ''
     returns:
-      - type: void
-        summary: ''
+      - type: string
+        summary: |
+          The current thread's previous memory category.
     tags:
     code_samples:
   - name: debug.resetmemorycategory

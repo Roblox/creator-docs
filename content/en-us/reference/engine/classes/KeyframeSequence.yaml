@@ -3,11 +3,12 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  This object stores all of the `Class.Keyframe`s and other data for the
-  animation.
+  This object stores all of the `Class.Keyframe|Keyframes` and other data for
+  the animation.
 description: |
-  This object stores all the `Class.Keyframe`s for an animation, determines if
-  the animation is looped, and determines its priority against other animations.
+  This object stores all the `Class.Keyframe|Keyframes` for an animation,
+  determines if the animation is looped, and determines its priority against
+  other animations.
 
   ## What is a KeyframeSequence?
 
@@ -17,8 +18,8 @@ description: |
   CurveAnimation internally. Although, usually created by the Roblox Animation
   Editor, KeyframeSequence can also be created by other plugins or even
   manually. Once uploaded to Roblox, Roblox assigns a Content ID that
-  `Class.Animation`s use for the `Class.Animation.AnimationId` property to refer
-  to the uploaded KeyframeSequence.
+  `Class.Animation|Animations` use for the `Class.Animation.AnimationId`
+  property to refer to the uploaded KeyframeSequence.
 
   Note, in most cases, you do not need to manipulate KeyframeSequences, as the
   animation editor covers most animation functionality. However, in some cases
@@ -40,11 +41,11 @@ description: |
 
   ## KeyframeSequence Structure
 
-  KeyframeSequences act as a container that hold `Class.Keyframe`s. Keyframes
-  represent a 'key' frame in the animation, that are interpolated between during
-  playback.
+  KeyframeSequences act as a container that hold `Class.Keyframe|Keyframes`.
+  Keyframes represent a 'key' frame in the animation, that are interpolated
+  between during playback.
 
-  Keyframes contain `Class.Pose`s. `Class.Pose`s, specific to each
+  Keyframes contain `Class.Pose|Poses`. `Class.Pose|Poses`, specific to each
   `Class.BasePart` being animated, contain the `Datatype.CFrame` applied to the
   `Class.Motor6D` connecting two parts. Poses match the `Class.BasePart` they
   correspond with by name and apply their data to the `Class.Motor6D` with this
@@ -114,7 +115,7 @@ methods:
     description: |
       This function adds a `Class.Keyframe` to the `Class.KeyframeSequence` by
       parenting it to the `Class.KeyframeSequence`. It is functionally identical
-      to setting the `Class.Keyframe`'s `Class.Instance.Parent` to the
+      to setting the keyframe's `Class.Instance.Parent` to the
       `Class.KeyframeSequence`.
 
       Note, this function will not error when called with an instance other than
@@ -137,18 +138,19 @@ methods:
     thread_safety: Unsafe
   - name: KeyframeSequence:GetKeyframes
     summary: |
-      Returns an array that contains all `Class.Keyframe`s contained in a
-      `Class.KeyframeSequence`.
+      Returns an array that contains all `Class.Keyframe|Keyframes` contained in
+      a `Class.KeyframeSequence`.
     description: |
-      **GetKeyframes** returns an array that contains all `Class.Keyframe`s that
-      have been added to a `Class.KeyframeSequence`.
+      **GetKeyframes** returns an array that contains all
+      `Class.Keyframe|Keyframes` that have been added to a
+      `Class.KeyframeSequence`.
     code_samples:
       - Get-KeyframeSequence-Length
     parameters: []
     returns:
       - type: Objects
         summary: |
-          An array of `Class.Keyframe`s.
+          An array of `Class.Keyframe|Keyframe`.
     tags: []
     deprecation_message: ''
     security: None
@@ -162,8 +164,8 @@ methods:
       by setting its parent to nil. It is functionally identical to setting the
       keyframe's parent to nil.
 
-      This sets the `Class.Keyframe`'s parent to nil, but does not destroy it.
-      This means, provided another reference to the keyframe remains, it can be
+      This sets the keyframe's parent to `nil`, but does not destroy it. This
+      means, provided another reference to the keyframe remains, it can be
       re-parented later.
 
       Note, this function will not error when called with an `Class.Instance`

@@ -5,13 +5,15 @@ memory_category: Instances
 summary: |
   Acts as a `Class.Folder` containing information about functions for a
   `Class.ReflectionMetadataClass`, and should be parented to it.
-  `Class.ReflectionMetadataMember`s that are parented to this object will be
-  perceived as functions under the class this is parented to.
+  `Class.ReflectionMetadataMember|ReflectionMetadataMembers` that are parented
+  to this object will be perceived as functions under the class this is parented
+  to.
 description: |
   Acts as a `Class.Folder` containing information about functions for a
   `Class.ReflectionMetadataClass`, and should be parented to it.
-  `Class.ReflectionMetadataMember`s that are parented to this object will be
-  perceived as functions under the class this is parented to.
+  `Class.ReflectionMetadataMember|ReflectionMetadataMembers` that are parented
+  to this object will be perceived as functions under the class this is parented
+  to.
 code_samples:
 inherits:
   - Instance

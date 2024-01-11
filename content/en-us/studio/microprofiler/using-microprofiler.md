@@ -16,14 +16,14 @@ MicroProfiler isn't visible by default and is summoned by keystroke. You can sum
    <img src="../../assets/optimization/microprofiler/Tutorial-mpt1.png"
    width="80%" />
 
-2. Summon MicroProfiler by pressing `Control`+`Alt`+`F6`. You can see the render time for each individual frame represented at the top by the individual vertical orange bars. The higher the orange bar, the longer that particular frame takes to render.
+2. Summon MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>). You can see the render time for each individual frame represented at the top by the individual vertical orange bars. The higher the orange bar, the longer that particular frame takes to render.
 
    <img src="../../assets/optimization/microprofiler/Tutorial-mpt3.png"
    width="80%" />
 
 ## Pausing MicroProfiler
 
-MicroProfiler is constantly running, analyzing the render time for every frame. To see useful data, you need to pause MicroProfiler and analyze render information on a frame-by-frame basis. Press `Ctrl`+`P` to pause the MicroProfiler.
+MicroProfiler is constantly running, analyzing the render time for every frame. To see useful data, you need to pause MicroProfiler and analyze render information on a frame-by-frame basis. Press <kbd>Ctrl</kbd><kbd>P</kbd> to pause the MicroProfiler.
 
 <img src="../../assets/optimization/microprofiler/Tutorial-mpt5.png"
    width="80%" />
@@ -104,8 +104,8 @@ Now that MicroProfiler has provided a starting point, it's time to troubleshoot 
 If the large horizontal bars in MicroProfiler are wrapped in this tag you will know that you were successful in identifying the unoptimized code.
 
 1. Playtest your experience.
-2. Pause MicroProfiler using `Ctrl`+`P`.
+2. Pause MicroProfiler using <kbd>Ctrl</kbd><kbd>P</kbd>.
 3. **Click** and **drag** down to find the largest horizontal category in that frame.
-4. Look for the newly created `Raycast Spam` tag
+4. Look for the newly created `Raycast Spam` tag.
 
    <img src="../../assets/optimization/microprofiler/Tutorial-mpt12.png" width="80%" />

@@ -266,7 +266,7 @@ constructors:
         summary: ''
       - name: up
         type: Vector3
-        default: 'Vector3.yAxis'
+        default: Vector3.yAxis
         summary: ''
     code_samples: []
     tags: []
@@ -292,7 +292,7 @@ constructors:
         summary: ''
       - name: up
         type: Vector3
-        default: 'Vector3.yAxis'
+        default: Vector3.yAxis
         summary: ''
     code_samples: []
     tags: []

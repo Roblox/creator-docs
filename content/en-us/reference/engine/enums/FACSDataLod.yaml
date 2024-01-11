@@ -1,0 +1,23 @@
+name: FACSDataLod
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: LOD0
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: LOD1
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: LODCount
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

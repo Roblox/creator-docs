@@ -9,9 +9,9 @@ summary: |
 description: |
   The PlayerMouse behaves identically to the `Class.Mouse` object that is
   obtained using `Class.Tool.Equipped`. It can be accessed from
-  `Class.LocalScript`s using the local player's `Class.Player:GetMouse()`
-  method. Both PlayerMouse and `Class.Mouse` are legacy APIs, superseded by
-  `Class.UserInputService`.
+  `Class.LocalScript|LocalScripts` using the local player's
+  `Class.Player:GetMouse()` method. Both PlayerMouse and `Class.Mouse` are
+  legacy APIs, superseded by `Class.UserInputService`.
 
   The only difference between the PlayerMouse and the `Class.Mouse` object is
   the PlayerMouse can be obtained using the `Class.Player:GetMouse()` method.
