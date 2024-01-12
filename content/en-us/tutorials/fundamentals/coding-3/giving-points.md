@@ -86,7 +86,9 @@ To award points, you'll need to get access to the player's information which is 
 
 You can do so by adding the **Players** service to your script. **Services** are additional sets of pre-built functions made by Roblox engineers to save you time.
 
-1. Get the **Players** service by typing: `local Players = game:GetService("Players")`
+1. Get the **Players** service by typing:
+
+   `local Players = game:GetService("Players")`
 
    ```lua
    -- Points values
@@ -139,7 +141,7 @@ PointsScript will need two functions. The first function will give and subtract 
 4. If a player touched the part, it'll be stored inside the player variable. If not, the variable will stay empty. On your own:
 
    - Inside the function, check if player has a value. If there is, then call `givePoints(player)`.
-   - Beneath the function, connect `partTouched()` to `pointPart`'s Touched event.
+   - Beneath the function, connect `partTouched()` to the Touched event of `pointPart`.
 
    ```lua
    -- Checks if player touched the part

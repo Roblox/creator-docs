@@ -30,7 +30,7 @@ The following is a breakdown of what is included in each Blender template file:
 
 ### Disabled Objects
 
-When using the template project files for Blender, you might notice some objects, like attachment objects, are permanently hidden in the Viewport even when toggling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}}/>. Since attachment objects are often not modified until the end of the character creation process, these objects have **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}}/> enabled to make the organization of your project more efficient, especially when bulk toggling object visibility.
+When using the template project files for Blender, you might notice some objects, like attachment objects, are permanently hidden in the Viewport even when toggling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>. Since attachment objects are often not modified until the end of the character creation process, these objects have **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> enabled to make the organization of your project more efficient, especially when bulk toggling object visibility.
 
 If you need access to disabled objects, use the following instructions to access the **Disable In Viewport** toggle:
 

@@ -116,7 +116,7 @@ methods:
         default: PrivateChat
         summary: ''
     returns:
-      - type: Instance
+      - type: TextFilterTranslatedResult
         summary: ''
     tags:
       - Yields

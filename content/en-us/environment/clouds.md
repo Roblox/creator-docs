@@ -5,20 +5,16 @@ description: Dynamic Clouds render realistic, customizable clouds that drift slo
 
 Roblox's **dynamic clouds** are realistic clouds that drift slowly across the sky. You can adjust their appearance through the `Class.Clouds` object to create unique atmospheres such as stormy skies, stunning sunsets, and alien worlds. You can also customize their direction and speed through [global&nbsp;wind](../environment/global-wind.md).
 
-<figure>
-  <video src="../assets/lighting-and-effects/clouds/Showcase.mp4" controls width="100%" alt="Video of wind blowing dynamic clouds across the sky"></video>
-  <figcaption>Wind blowing dynamic clouds across the sky</figcaption>
-</figure>
+<video src="../assets/lighting-and-effects/clouds/Showcase.mp4" controls width="100%" alt="Video of wind blowing dynamic clouds across the sky"></video>
 
-## Adding Dynamic Clouds
+## Enabling Clouds
 
-You can manage dynamic clouds in your experience through the `Class.Clouds` object. While you can place this object anywhere for organization or replication purposes, clouds only render if you parent the object under the `Class.Terrain` class.
+You can manage dynamic clouds in an experience through the `Class.Clouds` object. While you can place this object anywhere for organization or replication purposes, clouds only render if you parent the object under the `Class.Terrain` class.
 
-To create dynamic clouds:
+To enable dynamic clouds:
 
-1. Navigate to the [Explorer](../studio/explorer.md) window.
-1. Hover over **Terrain** and click the &CirclePlus; button. A contextual menu displays.
-1. From the contextual menu, insert **Clouds**.
+1. In the [Explorer](../studio/explorer.md) window, hover over **Terrain** and click the &CirclePlus; button. A contextual menu displays.
+1. From the menu, insert **Clouds**.
 
    <img src="../assets/studio/explorer/Terrain-Clouds.png" width="320" alt="Clouds object shown in Explorer window of Studio" />
 
@@ -59,10 +55,10 @@ The `Class.Clouds.Density|Density` property controls the intensity of the partic
 The `Class.Clouds.Color|Color` property controls the material color of cloud particles. It's important to note that several `Class.Lighting` and `Class.Atmosphere` properties also influence cloud color, so if you want to simulate specific atmospheres, experiment with multiple properties until you have the effect you want.
 
 <Tabs>
-  <TabItem label="Color = (255, 255, 255)">
-    <img src="../assets/lighting-and-effects/clouds/Color-A.jpg" width="800" height="450" alt="Clouds with Color value of (255, 255, 255)" />
+  <TabItem label="Color = [255, 255, 255]">
+    <img src="../assets/lighting-and-effects/clouds/Color-A.jpg" width="800" height="450" alt="Clouds with Color value of [255, 255, 255]" />
   </TabItem>
-  <TabItem label="Color = (75, 50, 255)">
-    <img src="../assets/lighting-and-effects/clouds/Color-B.jpg" width="800" height="450" alt="Clouds with Color value of (75, 50, 255)" />
+  <TabItem label="Color = [75, 50, 255]">
+    <img src="../assets/lighting-and-effects/clouds/Color-B.jpg" width="800" height="450" alt="Clouds with Color value of [75, 50, 255]" />
   </TabItem>
 </Tabs>

@@ -5,11 +5,11 @@ memory_category: Instances
 summary: |
   Represents a sequence of rotations and the interpolation curve between them.
 description: |
-  This class holds a sorted list of `RotationCurveKey`s that represent a
-  sequence of rotations. The shape of the interpolation curve between two
-  RotationCurveKeys is determined by the RotationCurveKey interpolation type.
-  RotationCurve provides a sampling method `GetValueAtTime` returning its result
-  as the rotation component of a CFrame.
+  This class holds a sorted list of `RotationCurveKey|RotationCurveKeys` that
+  represent a sequence of rotations. The shape of the interpolation curve
+  between two RotationCurveKeys is determined by the RotationCurveKey
+  interpolation type. RotationCurve provides a sampling method `GetValueAtTime`
+  returning its result as the rotation component of a CFrame.
 code_samples:
 inherits:
   - Instance

@@ -43,8 +43,8 @@ To create a mood:
 
 1. In the **Face Animation Editor**, adjust sliders for the facial parts you want to manipulate. Animation tracks for each facial part you manipulate automatically display in the track list along with keyframes for your current position in the timeline. The character's face also updates in the viewport.
 
-   - To undo a step on a slider, press <kbd>CMD</kbd>+<kbd>Z</kbd>.
-   - To redo a step on a slider, press <kbd>CMD</kbd>+<kbd>Y</kbd>.
+   - To undo a step on a slider, press <kbd>Ctrl</kbd><kbd>Z</kbd> (<kbd>⌘</kbd><kbd>Z</kbd>).
+   - To redo a step on a slider, press <kbd>Ctrl</kbd><kbd>Y</kbd> (<kbd>⌘</kbd><kbd>Y</kbd>).
    - To reset a slider to its default value, right click on the slider. A contextual menu displays. Select **Reset Selected**.
 
 1. When you are finished creating your animation, navigate to the **Media and Playback Controls** and click the **…** button. A pop-up menu displays.

@@ -18,6 +18,40 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: ScriptContext:GetLuauHeapInstanceReferenceReport
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: target
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: ScriptContext:GetLuauHeapMemoryReport
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: target
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: ScriptContext:SetTimeout
     summary: |
       Limits how long a script is allowed to run without yielding.

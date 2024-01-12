@@ -38,49 +38,33 @@ are three types of light sources:
 
 ## Particle Emitters
 
-A [particle emitter](../effects/particle-emitters.md) is an object that emits 2D
-images (particles) that look and behave for the duration of their lifetime
-according to the particle emitter's set properties.
+A [particle emitter](../effects/particle-emitters.md) is an object that emits customizable 2D images (particles) into the world, useful for simulating special effects like fire, smoke, and sparks.
 
 <video src="../assets/lighting-and-effects/particle-emitter/Showcase.mp4"
 controls width="100%"></video>
 
-Particle [properties](../effects/particle-emitters.md#particle-properties) such as
-the size, position, and color can change over time to create special effects
-like sparkles, smoke, and explosions.
-
 ## Beams
 
-A [Beam](../effects/beams.md) is an object that renders a texture between two
+A [beam](../effects/beams.md) is an object that renders a texture between two
 `Class.Attachment` objects `Class.Beam.Attachment0` and
 `Class.Beam.Attachment1`. By setting beam properties, you can:
 
-- [Add textures](../effects/beams.md#adding-a-texture) with [color
-  gradients](/effects/beams#creating-a-color-gradient) to create interesting
-  visuals like waterfalls and force fields.
-- Modify a beam's transparency so that it [fades over
-  time](/effects/beams#fading-a-beam).
-- Warp its shape by changing the [width](../effects/beams.md#changing-a-beams-width)
-  or [curve](../effects/beams.md#curving-a-beam) of each attachment point.
+- Add a [texture](../effects/beams.md#texture) and [color gradient](../effects/beams.md#color) to create interesting visuals like waterfalls and force fields.
+- Modify a beam's [transparency](/effects/beams#transparency) so that it fades over time.
+- Warp its shape by changing the [width](../effects/beams.md#width) or [curve](../effects/beams.md#curve) of each attachment point.
 
 <video src="../assets/lighting-and-effects/beam/Showcase.mp4" controls
 width="100%"></video>
 
 ## Trails
 
-A [Trail](../effects/trails.md) is an object that creates a trail between and behind
-two `Class.Attachment` objects `Class.Trail.Attachment0` and
-`Class.Trail.Attachment1` that are associated with a part as it moves through a
-space. Trails can help players visualize movement, such as a sword slashing
-through the air, projectiles flying to their target, or footprints walking away.
+A [trail](../effects/trails.md) is an object that creates a trail between and behind two `Class.Attachment` objects as they move through space. Trails can help players visualize movement, such as a sword slashing through the air, projectiles flying to their target, or footprints walking away.
+
 By setting trail properties, you can:
 
-- Add textures to create interesting visuals like a [rainbow
-  trail](/effects/trails#rainbow-trail) or [rainbow trail
-  marks](/effects/trails#car-skid-marks).
-- [Customize a color gradient](../effects/trails.md#creating-a-color-gradient).
-- [Modify a trail's length](../effects/trails.md#adjusting-a-trails-lifetime) for
-  animated movement.
+- Add a [texture](../effects/trails.md#texture) to create interesting visuals.
+- Set a constant or gradient [color](../effects/trails.md#color).
+- Modify a trail's [lifetime](../effects/trails.md#lifetime).
 
 <video src="../assets/lighting-and-effects/trail/Showcase.mp4" controls
 width="100%"></video>

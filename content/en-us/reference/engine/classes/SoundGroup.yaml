@@ -4,14 +4,14 @@ category: Sounds
 memory_category: Internal
 summary: |
   A `Class.SoundGroup` is used to manage the volume and sound effects on
-  multiple `Class.Sound`s at once. `Class.Sound`s in the SoundGroup will have
-  their volume and effects adjusted by the SoundGroup.
+  multiple `Class.Sound|Sounds` at once. `Class.Sound|Sounds` in the SoundGroup
+  will have their volume and effects adjusted by the SoundGroup.
 description: |
   A `Class.SoundGroup` is used to manage the volume and effects on multiple
-  `Class.Sound`s at once. Every sound in the sound group will have its volume
-  adjusted by the group's `Class.SoundGroup.Volume` property. If the SoundGroup
-  has any `Class.SoundEffect`s as children, those effects will be applied to all
-  of the `Class.Sound`s in the group.
+  `Class.Sound|Sounds` at once. Every sound in the sound group will have its
+  volume adjusted by the group's `Class.SoundGroup.Volume` property. If the
+  SoundGroup has any `Class.SoundEffect|SoundEffects` as children, those effects
+  will be applied to all of the `Class.Sound|Sounds` in the group.
 
   The `Class.SoundGroup.Volume` property acts as a multiplier, and thus sounds
   in a SoundGroup will retain their relative volumes when it is set. This means
@@ -42,10 +42,10 @@ deprecation_message: ''
 properties:
   - name: SoundGroup.Volume
     summary: |
-      The volume multiplier applied to `Class.Sound`s that are in the
+      The volume multiplier applied to `Class.Sound|Sounds` that are in the
       `Class.SoundGroup`. This value ranges from 0 to 10.
     description: |
-      The volume multiplier applied to `Class.Sound`s that are in the
+      The volume multiplier applied to `Class.Sound|Sounds` that are in the
       `Class.SoundGroup`. This value ranges from 0 to 10.
 
       This property acts as a multiplier, and thus sounds in a

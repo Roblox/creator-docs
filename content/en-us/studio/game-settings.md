@@ -67,11 +67,11 @@ The **Basic Info** tab contains general settings for an experience, such as its 
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Microphone</b></td>
+    <td>**Enable Microphone**</td>
     <td>Enables voice-eligible users to use chat with spatial voice within your experience. See [Spatial Voice](../chat/spatial-voice.md) for more information.</td>
   </tr>
   <tr>
-    <td><b>Enable Camera</b></td>
+    <td>**Enable Camera**</td>
     <td>Enables eligible users to animate their avatar with their camera in your experience. See [Animate Your Avatar](https://en.help.roblox.com/hc/en-us/articles/17877687557396) for more information.</td>
   </tr>
 </tbody>
@@ -309,11 +309,11 @@ The **Other** tab includes settings that are typically reserved for special situ
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Drafts Mode</b></td>
+    <td>**Enable Drafts Mode**</td>
     <td>Enables asynchronous, drafts-based script editing in a [Team Create](../projects/collaboration.md) session.</td>
   </tr>
   <tr>
-    <td><b>Shutdown All Servers</b></td>
+    <td>**Shutdown All Servers**</td>
     <td>Shuts down all servers currently running the experience.</td>
   </tr>
 </tbody>

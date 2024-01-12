@@ -32,7 +32,7 @@ $env:ROBLOX_CLIENT_SECRET='your_client_secret_here'
 $env:ROBLOX_PORT=3000 # Optional. Default is 3000.
 ```
 
-On macOS and most Linux distributions, run these commands at the terminal:
+On Mac and most Linux distributions, run these commands at the terminal:
 
 ```bash
 export ROBLOX_CLIENT_ID=your_client_id_here

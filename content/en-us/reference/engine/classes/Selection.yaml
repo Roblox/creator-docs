@@ -3,22 +3,22 @@ type: class
 category: Plugins
 memory_category: Instances
 summary: |
-  The Selection service controls the `Class.Instance`s that are selected in
-  Roblox Studio.
+  The Selection service controls the `Class.Instance|Instances` that are
+  selected in Roblox Studio.
 description: |
-  The Selection service controls the `Class.Instance`s that are selected in
-  Roblox Studio.
+  The Selection service controls the `Class.Instance|Instances` that are
+  selected in Roblox Studio.
 
-  This service is particularly useful when developing `Class.Plugin`s, as it
-  allows the developer to access and manipulate the current selection.
+  This service is particularly useful when developing `Class.Plugin|Plugins`, as
+  it allows the developer to access and manipulate the current selection.
 
-  Currently selected `Class.Instance`s can be obtained and set using the
-  `Class.Selection:Get()` and `Class.Selection:Set()` functions. The
+  Currently selected `Class.Instance|Instances` can be obtained and set using
+  the `Class.Selection:Get()` and `Class.Selection:Set()` functions. The
   `Class.Selection.SelectionChanged` event fires whenever the current selection
   changes.
 
-  For more information on using `Class.Selection` and `Class.Plugin`s, see
-  `Class.Plugin`.
+  For more information on using `Class.Selection` and `Class.Plugin|Plugins`,
+  see `Class.Plugin`.
 
   Selection is also often used in the command bar, to set hidden properties or
   run functions for selected `Class.Instance|Instances`.
@@ -70,17 +70,19 @@ methods:
     thread_safety: Unsafe
   - name: Selection:Get
     summary: |
-      Returns an array of currently selected `Class.Instance`s in Roblox Studio.
+      Returns an array of currently selected `Class.Instance|Instances` in
+      Roblox Studio.
     description: |
-      Returns an array of currently selected `Class.Instance`s in Roblox Studio.
+      Returns an array of currently selected `Class.Instance|Instances` in
+      Roblox Studio.
 
-      If no `Class.Instance`s are selected, the array returned be empty. This
-      function can be used in conjunction with the
+      If no `Class.Instance|Instances` are selected, the array returned be
+      empty. This function can be used in conjunction with the
       `Class.Selection.SelectionChanged` event to get the selection whenever it
       changes.
 
-      Note, this function can only be used in `Class.Plugin`s or the command
-      line.
+      Note, this function can only be used in `Class.Plugin|Plugins` or the
+      command line.
 
       For changing the current selection, please see `Class.Selection:Set()`.
     code_samples:
@@ -90,7 +92,7 @@ methods:
     returns:
       - type: Objects
         summary: |
-          An array of currently selected `Class.Instance`s.
+          An array of currently selected `Class.Instance|Instances`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -113,11 +115,11 @@ methods:
     thread_safety: Unsafe
   - name: Selection:Set
     summary: |
-      Sets the currently selected objects in Roblox Studio to `Class.Instance`s
-      in the given array.
+      Sets the currently selected objects in Roblox Studio to
+      `Class.Instance|Instances` in the given array.
     description: |
-      Sets the currently selected objects in Roblox Studio to `Class.Instance`s
-      in the given array.
+      Sets the currently selected objects in Roblox Studio to
+      `Class.Instance|Instances` in the given array.
 
       Calling this function will cause the `Class.Selection.SelectionChanged`
       event to fire, unless the new selection set is identical to the previous
@@ -139,7 +141,8 @@ methods:
         type: Objects
         default:
         summary: |
-          An array of `Class.Instance`s to set the current selection to.
+          An array of `Class.Instance|Instances` to set the current selection
+          to.
     returns:
       - type: void
         summary: ''
@@ -150,13 +153,14 @@ methods:
 events:
   - name: Selection.SelectionChanged
     summary: |
-      Fires when the `Class.Instance`s selected in Roblox Studio changes.
+      Fires when the `Class.Instance|Instances` selected in Roblox Studio
+      changes.
     description: |
-      Fires when the `Class.Instance`s selected in Roblox Studio changes.
+      Fires when the `Class.Instance|Instances` selected in Roblox Studio
+      changes.
 
       Note this event does not give the new selection. Developers will need to
-      use `Class.Selection`'s `Class.Selection:Get()` function to obtain the
-      current selection.
+      use the `Class.Selection:Get()` function to obtain the current selection.
 
       Although this event can be used outside of plugins and the command bar, it
       only applies to the selection in Roblox Studio and therefore has no
