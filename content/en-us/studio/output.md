@@ -25,7 +25,7 @@ Plugins can interact with the output window through `Class.LogService`, which ca
 </Grid>
 <Grid container spacing={2}>
 	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{margin:"9px 0px;"}}> Clears all output messages from the window. This action has a shortcut of <kbd>Ctrl</kbd><kbd>K</kbd> on Windows or <kbd>⌘</kbd><kbd>K</kbd> on macOS.</Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{margin:"9px 0px;"}}> Clears all output messages from the window. This action has a shortcut of <kbd>Ctrl</kbd><kbd>K</kbd> on Windows or <kbd>⌘</kbd><kbd>K</kbd> on Mac.</Grid>
 </Grid>
 <Grid container spacing={2}>
 	<Grid item><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>

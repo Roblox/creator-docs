@@ -22,9 +22,7 @@ In addition, Studio can render **navigation labels** that indicate specific mate
 To enable navigation visualization:
 
 1. Open **File** &rarr; **Studio Settings**.
-1. In the **Studio** tab, enable **Show&nbsp;Navigation&nbsp;Mesh** and, optionally, **Show&nbsp;Navigation&nbsp;Labels**.
-
-   <img src="../assets/avatar/pathfinding/Settings-Navigation-Visualization.png" width="600" alt="Navigation visualization options in Studio settings" />
+1. In the **Studio** tab, within the **Visualization** section, enable **Show&nbsp;Navigation&nbsp;Mesh** and, optionally, **Show&nbsp;Navigation&nbsp;Labels**.
 
 ## Creating Paths
 
@@ -438,7 +436,7 @@ In some cases, [material preference](#setting-material-costs) is not enough. For
    })
    ```
 
-   <video controls src="../assets/avatar/pathfinding/GeyserBlocker-Path.mp4" width="750"></video>
+   <video controls src="../assets/avatar/pathfinding/GeyserBlocker-Path.mp4" width="800"></video>
 
 ### Ignoring Obstacles
 
@@ -597,7 +595,7 @@ To create a `Class.PathfindingLink` using this example:
    followPath(TEST_DESTINATION)
    ```
 
-   <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="750" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
+   <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
 
 ## Streaming Compatibility
 

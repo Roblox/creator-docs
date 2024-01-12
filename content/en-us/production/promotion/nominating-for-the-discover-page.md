@@ -12,7 +12,7 @@ should have a consistent and active user base, be well-liked by the community,
 and remain public to all users. Consequently, [Paid
 Access](/production/monetization/paid-access) experiences are ineligible.
 
-<img src="../../assets/promotion/Experiences-Sorted-View.png"
+<img src="../../assets/promotion/misc/Experiences-Sorted-View.png"
 	width="80%" />
 
 After you nominate an experience, wait at least 2 weeks before re-submitting a

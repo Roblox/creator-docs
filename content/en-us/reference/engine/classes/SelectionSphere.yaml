@@ -12,10 +12,9 @@ description: |
   the outline is visible.
 
   There are a few properties available to configure the appearance of the
-  sphere. The outline can modified through the
-  `Class.GuiBase3d.Color3` and
-  `Class.GuiBase3d.Transparency` properties. The surface can
-  be modified through the `Class.SelectionSphere.SurfaceColor3|SurfaceColor3` and
+  sphere. The outline can modified through the `Class.GuiBase3d.Color3` and
+  `Class.GuiBase3d.Transparency` properties. The surface can be modified through
+  the `Class.SelectionSphere.SurfaceColor3|SurfaceColor3` and
   `Class.SelectionSphere.SurfaceTransparency|SurfaceTransparency` properties.
   Finally, rendering of the sphere can be toggled with the
   `Class.GuiBase3d.Visible` property.

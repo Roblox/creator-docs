@@ -6,7 +6,7 @@ summary: ''
 description: |
   A PluginToolbar is an object created by using the
   `Class.Plugin:CreateToolbar()` method. It is used to create
-  `Class.PluginToolbarButton`s using the
+  `Class.PluginToolbarButton|PluginToolbarButtons` using the
   `Class.PluginToolbar:CreateButton()|CreateButton` function. In general, it is
   good practice for a plugin to use **one and only one** uniquely named toolbar
   for all of its buttons. In Roblox Studio, toolbars are rendered under the

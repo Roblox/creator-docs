@@ -67,7 +67,7 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 
 Each part has a variety of properties that you can customize through the [Properties](../studio/properties.md) window.
 
-<img src="../assets/studio/properties/Part-Appearance.png" width="320" />
+<img src="../assets/studio/properties/Sections-Example.png" width="320" />
 
 The following are commonly utilized properties:
 
@@ -108,7 +108,7 @@ See [here](../studio/ui-overview.md#selecting-objects) for advanced methods of s
 
 You can move, scale, and rotate selected parts either through modeling tools or by setting a new position, size, or orientation in the [Properties](#part-properties) window.
 
-When using the tools, you can move, scale, or rotate parts in either **world** orientation or **local** orientation by pressing <kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on macOS. When you enable local orientation,
+When using the tools, you can move, scale, or rotate parts in either **world** orientation or **local** orientation by pressing <kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on Mac. When you enable local orientation,
 the arrow axis indicators change to a part's local orientation, and an **L** indicator displays. For more information, see [Object and World Space](../workspace/index.md).
 
 <Tabs>

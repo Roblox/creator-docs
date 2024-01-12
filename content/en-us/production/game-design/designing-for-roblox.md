@@ -92,7 +92,7 @@ For more information, see the following resources:
 
 <h4>UI and UX</h4>
 
-The majority of Roblox users play on a mobile device, so it's wise to design your user interfaces (**UI**) and user experience (**UX**) around mobile devices first. If you want to cater to Xbox or PC/Mac users, bind commonly used actions to shortcuts on a gamepad and specific keys on keyboards.
+The majority of Roblox users play on a mobile device, so it's wise to design your user interfaces (**UI**) and user experience (**UX**) around mobile devices first. If you want to cater to Xbox/PlayStation or Windows/Mac users, bind commonly used actions to shortcuts on a gamepad and specific keys on keyboards.
 
 For more information, see [Input and Camera](../../input/index.md)
 

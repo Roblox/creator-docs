@@ -1,7 +1,7 @@
 ---
 title: Debugging
 description: |
-  Debugger is a tool that helps you inspect your scripts line-by-line as they run.
+  Debugging tools help you resolve errors and inspect scripts line-by-line as they run.
 tags:
   - Roblox Studio
   - Debugger
@@ -10,13 +10,7 @@ tags:
   - Breakpoints
 ---
 
-Roblox Studio offers many debugging tools commonly found in Integrated Development Environments (IDEs). The **debugger** is a tool that helps you inspect your scripts line-by-line as they run. It displays data in the **Watch**, **Call Stack**, **Breakpoints**, and **Output** windows for you to inspect.
-
-<img alt="Debugger in Studio" src="../assets/studio/debugging/Debugger.png" width="1148px" />
-
-To disable and reenable the debugger, open the **Studio Settings** menu, toggle the **Debugger Enabled** setting, then restart Studio.
-
-<img alt="Enable Debugger in Studio settings" src="../assets/studio/debugging/Studio-Settings-Debugger-Enabled.png" width="632px" />
+Studio offers many debugging tools commonly found in Integrated Development Environments (IDEs). These tools help you resolve errors and inspect scripts line-by-line as they run. Debugging info is displayed in the **Watch**, **Call Stack**, **Breakpoints**, and [Output](../studio/output.md) windows for you to inspect.
 
 ## General Workflow
 
@@ -25,19 +19,17 @@ If you notice a problem in your experience or want to verify that it works as yo
 1. [Insert breakpoints](#inserting-breakpoints) on the lines of codes that you want to examine.
 2. In the [Script](../studio/script-tab.md) tab, click **Play** or **Run** in the test tab to start a playtest session, also known as a debugging session.
 
-   <img alt="Script tab playtest options" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="541px" />
+   <img alt="Script tab playtest options" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="772" alt="Playtest options in Script tab" />
 
 3. When a script hits a breakpoint, the playtest session pauses. Step through the code. Inspect the **Watch**, **Call Stack**, and **Output** windows to help you diagnose and understand the problem.
 4. Insert additional breakpoints on lines of code that haven't executed yet to inspect additional data. [Disable](#disabling-breakpoints) or [delete](#deleting-breakpoints) breakpoints that you don't need anymore.
 5. In the **Script** tab, click **Stop** to end the debugging session.
 
-   <img alt="Script tab shows test and stop buttons" src="../assets/studio/debugging/Script-Tab-Test-Stop.png" width="557px" />
-
 Repeat the previous steps until you solve the problem or find its root cause. As you learn the general workflow, you can configure the breakpoints to break only if certain conditions are met, to print a message to the **Output** window, and to run only on the client or server. For more information, see [Breakpoint Configurations](#breakpoint-configurations).
 
 ### Inserting Breakpoints
 
-Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#in-the-watch-window) variables, and inspect the [call stack](#in-the-call-stack-window). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools. You can insert a breakpoint at any line of executable code.
+Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch-window) variables, and inspect the [call stack](#call-stack-window). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools. You can insert a breakpoint at any line of executable code.
 
 To insert a standard breakpoint at a line of code, left-click the margin to the right of its line number. You can also right-click the margin and click Insert Breakpoint. The breakpoint appears as a red dot. To disable it, click the dot.
 
@@ -49,9 +41,9 @@ If you insert a breakpoint at a line in a script, the script pauses before it ex
 
 <img alt="Active breakpoint in the debugger shows yellow arrow" src="../assets/studio/debugging/Gutter-Breakpoint-Active.png" width="320px" />
 
-When the script pauses, execute the following code one line at a time by stepping through them with the buttons in the [Script](../studio/script-tab.md) tab. The buttons also appear in the top-left corner of the [Call Stack](#in-the-call-stack-window) window. As you step through the code, monitor how your experience changes as the current line executes.
+When the script pauses, execute the following code one line at a time by stepping through them with the buttons in the [Script](../studio/script-tab.md) tab. The buttons also appear in the top-left corner of the [Call Stack](#call-stack-window) window. As you step through the code, monitor how your experience changes as the current line executes.
 
-<img alt="Script Tab focused on the Debugger section" src="../assets/studio/debugging/Script-Tab-Debugger-Section.png" width="557px" />
+<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="888" alt="Debugging tools indicated in Script tab"/>
 
 The following table summarizes the three ways to step through code. To continue executing your code after you hit a breakpoint, click **Resume** in the **Script** tab.
 
@@ -67,30 +59,30 @@ The following table summarizes the three ways to step through code. To continue 
   <tbody>
     <tr>
       <th><img alt="Button to step into a line of code" src="../assets/studio/debugging/Debugger-Step-In-Icon.png" width="60%" /></th>
-      <td><b>Step Into</b></td>
+      <td>**Step Into**</td>
       <td><kbd>F11</kbd></td>
-      <td>The <b>Step Into</b> button moves the debugger into the code of the function on the current line. If there is no function on the current line, the debugger moves to the next line.</td>
+      <td>The **Step Into** button moves the debugger into the code of the function on the current line. If there is no function on the current line, the debugger moves to the next line.</td>
     </tr>
     <tr>
       <th><img alt="Button to step over a line of code" src="../assets/studio/debugging/Debugger-Step-Over-Icon.png" width="60%" /></th>
-      <td><b>Step Over</b></td>
+      <td>**Step Over**</td>
       <td><kbd>F10</kbd></td>
-      <td>The <b>Step Over</b> button moves the debugger to the next line of code, <b>not</b> moving into functions.</td>
+      <td>The **Step Over** button moves the debugger to the next line of code, **not** moving into functions.</td>
     </tr>
     <tr>
       <th><img alt="Button to step out of a line of code" src="../assets/studio/debugging/Debugger-Step-Out-Icon.png" /></th>
-      <td><b>Step Out</b></td>
-      <td><kbd>Shift</kbd> + <kbd>F11</kbd></td>
-      <td>The <b>Step Out</b> button moves the debugger out of the current function and to the next line of code after the function call. If the current line isn't inside a function, the debugger moves to the next line.</td>
+      <td>**Step Out**</td>
+      <td><kbd>Shift</kbd><kbd>F11</kbd></td>
+      <td>The **Step Out** button moves the debugger out of the current function and to the next line of code after the function call. If the current line isn't inside a function, the debugger moves to the next line.</td>
     </tr>
   </tbody>
 </table>
 
 ### Inspecting Code
 
-When a breakpoint pauses the experience during a playtest, you can inspect the [Watch](#in-the-watch-window) window, [Call Stack](#in-the-call-stack-window) window, [Output](#in-the-output-window) window, and [Script Editor](#in-the-script-editor) to find information about variable values and function executions. With this information, you can find the root cause of the problem in your experience.
+When a breakpoint pauses the experience during a playtest, you can inspect the [Watch](#watch-window) window, [Call Stack](#call-stack-window) window, [Output](#output-window) window, and [Script Editor](#script-editor) to find information about variable values and function executions. With this information, you can find the root cause of the problem in your experience.
 
-#### In the Watch Window
+#### Watch Window
 
 The **Watch** window has two tabs: **Variables** and **My Watches**. The **Variables** tab shows information about the current variables in scope, and the **My Watches** tab shows the value of variables or expressions that you define. Both tabs show information before the line executes.
 
@@ -121,7 +113,7 @@ To inspect code in the Watch window:
 
 4. Compare the values of variables and expressions from what you expect and what you see in the Watch window. If there's a difference between how you expect the variables to change and how they actually change, then the variables or the functions interacting with them might be causing problems or bugs.
 
-#### In the Call Stack Window
+#### Call Stack Window
 
 The **Call Stack** window shows which line of code is going to execute next when the debugger reaches a breakpoint. The Call Stack indicates which line you call a function from and, if you call the function in other functions, the order of function calls and which lines you call the other functions. The top function of the Call Stack is the last called and first to execute. You can use the Call Stack to check whether the order of function calls in your scripts matches your mental model of the function calls.
 
@@ -144,11 +136,11 @@ To inspect code in the Call Stack window during a debugging session:
 
 4. Compare the order of function calls that you thought of in step 2 and the actual order from step 3. If there are any differences, then there's a difference between how you expect the code to behave and how it actually behaves, thereby causing potential problems and bugs.
 
-#### In the Output window
+#### Output window
 
-The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, log messages from Logpoints, messages from calls to `print()`, and errors from calls to `warn()`. For more information on the **Output** window and how to customize it, see [Output](./output.md).
+The [Output](./output.md) window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, log messages, messages from calls to `print()`, and errors from calls to `warn()`.
 
-#### In the Script Editor
+#### Script Editor
 
 The Debugger is integrated with the [Script Editor](../studio/script-editor.md). When your experience pauses at a breakpoint in a script, you can hover your mouse over the name of a variable to see its value. For example, you can see the value of a table that you pass as an argument in a function call.
 
@@ -333,4 +325,4 @@ The **Developer Console** provides a wide array of details including client and 
 When a script prints or errors in Studio or the Player app, the app records the message in a log file in the local file system. These files are located in different places depending on the operating system:
 
 - On Windows, logs are in the directory `%LOCALAPPDATA%\Roblox\logs`. Sort the folder by date modified. The names of log files start with the format `log_XXXXX`. Logs with the same `XXXXX` value are from the same Studio session.
-- On macOS, logs are in the directory `~/Library/Logs/Roblox`. In the Finder, click the **Go** menu, select **Go to Folder**, type in that directory, and confirm.
+- On Mac, logs are in the directory `~/Library/Logs/Roblox`. In the Finder, click the **Go** menu, select **Go to Folder**, type in that directory, and confirm.

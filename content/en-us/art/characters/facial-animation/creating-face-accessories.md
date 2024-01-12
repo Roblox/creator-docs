@@ -118,7 +118,7 @@ To set up your Blender project:
 
 Connect the mesh object to the character's armature by parenting the armature to the mesh object. To parent the armature:
 
-1. In Object Mode, hold `shift` and **click** the accessory model and then any of the character bones.
+1. In Object Mode, hold <kbd>Shift</kbd> and **click** the accessory model and then any of the character bones.
 2. Right click and select **Parent**, then select **With Automatic Weights**.
    <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-face-accessories/videos/Parent-Armature.mp4">
    </video>

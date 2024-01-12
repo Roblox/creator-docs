@@ -30,15 +30,15 @@ To create the platform and track of your elevator:
    1. Set **Name** to **Platform**.
    1. Set **Size** to **[8,1,4]**.
 
-1. In the **Explorer** window, select the platform, then press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>D</kbd> to duplicate the part. This duplicate part is about to become the track the platform uses to move up and down.
+1. In the **Explorer** window, select the platform, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part. This duplicate part is about to become the track the platform uses to move up and down.
 1. In the menu bar, select the **Move** tool, then use one of the axis arrows to pull the duplicate part away from the original position so there is a small gap between each object.
 1. In the **Properties** window,
 
    1. Set **Name** to **Track**.
-   1. In the **Size** property, set the Y axis to **20** studs tall.
-   1. Enable the **Anchored** property.
+   2. In the **Size** property, set the Y axis to **20** studs tall.
+   3. Enable the **Anchored** property.
 
-1. In the **Explorer** window, select both parts, then press <kbd>Ctrl</kbd>+<kbd>G</kbd> to group them.
+1. In the **Explorer** window, select both parts, then press <kbd>Ctrl</kbd><kbd>G</kbd> (<kbd>⌘</kbd><kbd>G</kbd>) to group them.
 1. Rename the model **Elevator**.
 
    <GridContainer numColumns="2">

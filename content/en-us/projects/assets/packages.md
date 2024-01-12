@@ -101,7 +101,7 @@ Once modified, packages with unpublished changes are marked with a **yellow dot*
 
 ### Adding or Updating Configurations
 
-You can include [instance attributes](../../studio/instance-attributes.md) at the root of a package to customize its behavior, for example the max speed of a packaged vehicle or the debounce time for a packaged button.
+You can include [instance attributes](../../studio/properties.md#instance-attributes) at the root of a package to customize its behavior, for example the max speed of a packaged vehicle or the debounce time for a packaged button.
 
 When you publish a package, the current set of attributes/values will become the package's **default configurations**. On any given copy of a package, configurations are shown in **bold&nbsp;italics** and those attribute values can be changed on a per-instance basis. When package copies are [updated](#updating-outdated-copies), modified configuration values will be preserved, while other attributes will be updated to the latest default value.
 

@@ -158,7 +158,7 @@ When adding bones, you can quickly create bones parented under the Face bone by 
 To add bones to the character eyelids:
 
 1. In **Edit Mode**, hold <kbd>Shift</kbd> and click both **eye bones** to select them.
-2. Press <kbd>Shift</kbd>+<kbd>D</kbd> and click to duplicate the bones in the same position. Do this four times to create 8 total new bones.
+2. Press <kbd>Shift</kbd><kbd>D</kbd> and click to duplicate the bones in the same position. Do this four times to create 8 total new bones.
 3. With **X-Axis mirror enabled**, position each bone at the corners of the eyes.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/6_Adding_And_Positioning_Eyelids.mp4">
@@ -249,7 +249,7 @@ You can create controls in many different ways. The following example uses **Bon
 
 To start creating face bone controls:
 
-1. In **Object Mode**, select the Joints armature and press <kbd>Shift</kbd>+<kbd>D</kbd> to duplicate the Joints armature object.
+1. In **Object Mode**, select the Joints armature and press <kbd>Shift</kbd><kbd>D</kbd> to duplicate the Joints armature object.
 2. Rename the new armature to **Controller**.
 3. In **Edit Mode**, select all non-face bones, right click and select **Delete Selected Bones**.
 4. Rename the bones to include **\_Con**, to denote them as controller bones. You can batch rename them with the following process:
