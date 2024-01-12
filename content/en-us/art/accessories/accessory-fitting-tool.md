@@ -36,7 +36,9 @@ To setup your accessories:
 
 1. Ensure that your custom asset is selectable in your project. See [3D Importer](../../art/modeling/3d-importer.md) for instructions on importing a custom model into your experience.
 2. In the Avatar tab, select the **Accessory Fitting Tool**. The Accessory Fitting Tool panel displays.
-   <img src="../../assets/studio/general/Avatar-Tab-Accessory-Fitting-Tool.png" />
+
+   <img src="../../assets/studio/general/Avatar-Tab-Accessory-Fitting-Tool.png" width="786" />
+
 3. Select the **Part** field and click on the `Class.MeshPart` or `Class.Model` in the viewport that you intend to preview. The text field populates with the name of the object selected.
 
    <img src="../../assets/accessories/accessory-fitting-tool/MeshPart-Selected.png" />
@@ -233,9 +235,7 @@ Use the following cage editing tools to help visualize and edit any cage vertice
 
 To make changes to the vertices of the currently selected cage:
 
-1. In the Avatar tab > **Snap To Grid**, disable Move snapping. This enables you to make detailed changes to a vertex's position.
-   <img src="../../assets/studio/general/Rotate-Move-Snapping-Disable.png" />
-
+1. In the **Avatar** tab's **Snap To Grid** section, disable **Move** snapping. This enables you to make detailed changes to a vertex's position.
 2. Select a vertex and use the **Move** tool to reposition. Changes to the cage apply immediately and display in the preview panel.
    1. Use the opacity sliders to better visualize the changes to your cage.
    2. Set the **Falloff Distance** depending on the number of vertices being adjusted at once.

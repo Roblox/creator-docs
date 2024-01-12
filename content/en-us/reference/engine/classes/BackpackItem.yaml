@@ -17,11 +17,9 @@ deprecation_message: ''
 properties:
   - name: BackpackItem.TextureId
     summary: |
-      The texture icon that is displayed for a tool in the `Class.Player`'s
-      backpack.
+      The texture icon that is displayed for a tool in the player's backpack.
     description: |
-      The texture icon that is displayed for a tool in the `Class.Player`'s
-      backpack.
+      The texture icon that is displayed for a tool in the player's backpack.
 
       This property should be set to the content ID of an image uploaded to the
       Roblox website.

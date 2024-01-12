@@ -16,7 +16,7 @@ The Script Editor supports all types of [scripts](../scripting/scripts.md) and o
 <Alert severity="info">
 You can customize the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
 
-To browse the settings, open **Studio&nbsp;Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows or <kbd>⌥</kbd><kbd>S</kbd> on macOS) and select the **Script&nbsp;Editor** tab.
+To browse the settings, open **Studio&nbsp;Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows or <kbd>⌥</kbd><kbd>S</kbd> on Mac) and select the **Script&nbsp;Editor** tab.
 </Alert>
 
 ## Autocomplete
@@ -47,24 +47,24 @@ The Script Editor generates code-related information that can improve your progr
 
 ### Go to Declaration
 
-You can jump to the declaration of a function or variable by holding <kbd>Ctrl</kbd> on Windows or <kbd>⌘</kbd> on macOS when clicking the call, or by right-clicking its call and clicking **Go&nbsp;to&nbsp;Declaration**.
+You can jump to the declaration of a function or variable by holding <kbd>Ctrl</kbd> on Windows or <kbd>⌘</kbd> on Mac when clicking the call, or by right-clicking its call and clicking **Go&nbsp;to&nbsp;Declaration**.
 
 <img src="../assets/studio/script-editor/Go-To-Declaration.png" width="800" alt="Go to Declaration workflow on a declared function" />
 
 ### Script Function Filter
 
-The **Script Function Filter** displays a list of all functions declared in a script. To open it, press <kbd>Alt</kbd><kbd>F</kbd> on Windows or <kbd>⌥</kbd><kbd>F</kbd> on macOS. With the list open, you can browse the signatures for each function, filter through them by name, and double-click one to jump to its declaration.
+The **Script Function Filter** displays a list of all functions declared in a script. To open it, press <kbd>Alt</kbd><kbd>F</kbd> on Windows or <kbd>⌥</kbd><kbd>F</kbd> on Mac. With the list open, you can browse the signatures for each function, filter through them by name, and double-click one to jump to its declaration.
 
 <img src="../assets/studio/script-editor/Script-Functions-Filter.png" width="800" alt="Script Function Filter showing all functions inside a script" />
 
 ## Find and Replace
 
-The **Find/Replace** widget lets you find and replace code in an open script. The widget supports matching case, matching the whole word, and searching by regular expressions. To open it, press <kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on macOS.
+The **Find/Replace** widget lets you find and replace code in an open script. The widget supports matching case, matching the whole word, and searching by regular expressions. To open it, press <kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on Mac.
 
 <img src="../assets/studio/script-editor/Find-Replace-Widget-Labeled.png" width="760" alt="Find/Replace widget labeled"/>
 
 <Alert severity="info">
-For broader searches, the **Find All / Replace All** window lets you find/replace code across multiple scripts in the experience. To open it, press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on macOS.
+For broader searches, the **Find All / Replace All** window lets you find/replace code across multiple scripts in the experience. To open it, press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.
 </Alert>
 
 ## Real-Time Feedback
@@ -97,7 +97,7 @@ This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&
 **Code Assist** is an AI assistant that suggests lines or functions of code as you type, helping you code more efficiently and stay focused. Based on contexts from your comment and code, suggestions will be triggered in two ways:
 
 - **Automatically** when you pause on a line for a few seconds and the AI model has enough context for a suggestion.
-- **Manually** with shortcut <kbd>Alt</kbd><kbd>&Backslash;</kbd> on Windows or <kbd>⌥</kbd><kbd>&Backslash;</kbd> on MacOS (you can [customize](../studio/shortcuts.md) this shortcut).
+- **Manually** with shortcut <kbd>Alt</kbd><kbd>&Backslash;</kbd> on Windows or <kbd>⌥</kbd><kbd>&Backslash;</kbd> on Mac (you can [customize](../studio/shortcuts.md) this shortcut).
 
 Press <kbd>Tab</kbd> to accept a suggestion, or ignore it by continuing to type. Currently, your script needs to contain at least a few lines of code to trigger a suggestion.
 
@@ -153,7 +153,7 @@ The following table summarizes multi-cursor workflows and their shortcuts.
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>macOS</th>
+      <th>Mac</th>
     </tr>
   </thead>
   <tbody>
@@ -212,7 +212,7 @@ You can add cursors with a combination of keyboard shortcuts and mouse maneuvers
 
 To add a cursor at your mouse pointer location:
 
-1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on macOS.
+1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac.
 2. Click where you want to add the cursor.
 
    <video controls width="512" src="../assets/studio/script-editor/AddWithClick.mp4"></video>
@@ -225,20 +225,20 @@ You can drag the mouse to add a cursor to a selection, split a multi-line select
 
 To add a cursor to a selection of code through dragging:
 
-1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on macOS.
+1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac.
 2. Click and drag your mouse over the selection of code.
 
    <video controls width="512" src="../assets/studio/script-editor/AddWithDrag.mp4"></video>
 
 ##### Split Selection Into Lines
 
-To split a multi-line selection into lines and add a cursor at the end of each line, press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd> on macOS.
+To split a multi-line selection into lines and add a cursor at the end of each line, press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd> on Mac.
 
 <video controls width="405" src="../assets/studio/script-editor/SplitSelectionsIntoLines.mp4"></video>
 
 ##### Column/Block Select
 
-To select columns and blocks of code or whitespace, drag the mouse while holding <kbd>Shift</kbd><kbd>Alt</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd> on macOS. As you drag, a cursor will be added on each highlighted line.
+To select columns and blocks of code or whitespace, drag the mouse while holding <kbd>Shift</kbd><kbd>Alt</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd> on Mac. As you drag, a cursor will be added on each highlighted line.
 
 <video controls width="405" src="../assets/studio/script-editor/ColumnBlockSelect.mp4"></video>
 
@@ -246,7 +246,7 @@ To select columns and blocks of code or whitespace, drag the mouse while holding
 
 To add a cursor directly above or below the primary cursor:
 
-1. Press and hold <kbd>Ctrl</kbd><kbd>Alt</kbd> on Windows or <kbd>⌘</kbd><kbd>⌥</kbd> on macOS.
+1. Press and hold <kbd>Ctrl</kbd><kbd>Alt</kbd> on Windows or <kbd>⌘</kbd><kbd>⌥</kbd> on Mac.
 2. Press the <kbd>↑</kbd> or <kbd>↓</kbd> arrows.
 
    <video controls width="434" src="../assets/studio/script-editor/AddAboveBelow.mp4"></video>
@@ -260,7 +260,7 @@ You can add cursors to all matches of a selection or to the next/previous match,
 To add a cursor to all matches of a selected portion:
 
 1. Select the code that you want to search for matches of.
-2. Press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>L</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>L</kbd> on macOS.
+2. Press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>L</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>L</kbd> on Mac.
 
    <video controls width="454" src="../assets/studio/script-editor/AddToAllMatches.mp4"></video>
 
@@ -269,7 +269,7 @@ To add a cursor to all matches of a selected portion:
 To add a cursor to the **next** matching selection:
 
 1. Select the code that you want to search for matches of.
-2. Press <kbd>Ctrl</kbd><kbd>D</kbd> on Windows or <kbd>⌘</kbd><kbd>D</kbd> on macOS.
+2. Press <kbd>Ctrl</kbd><kbd>D</kbd> on Windows or <kbd>⌘</kbd><kbd>D</kbd> on Mac.
 3. Continue pressing <kbd>Ctrl</kbd><kbd>D</kbd> or <kbd>⌘</kbd><kbd>D</kbd> until you've selected all the next matches that you want.
 
    <video controls width="454" src="../assets/studio/script-editor/AddToNextPrevMatch.mp4"></video>
@@ -291,7 +291,7 @@ There is no default shortcut for adding a cursor to the **previous** matching se
 
 For each of the matching-related workflows above, you can match **case** and/or **whole word** as follows:
 
-1. Open the Find/Replace tool (<kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on macOS).
+1. Open the Find/Replace tool (<kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on Mac).
 2. Use the toggle buttons to choose if a matched selection should be case-sensitive and/or match the whole word only.
 
    <img src="../assets/studio/script-editor/Find-Match-Case-Whole-Word.png" width="500" />
@@ -308,14 +308,14 @@ You can remove cursors with the following keyboard shortcuts and mouse maneuvers
 
 To remove a cursor:
 
-1. Press and hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on macOS.
+1. Press and hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac.
 2. Click the cursor you want to remove.
 
    <video controls width="485" src="../assets/studio/script-editor/RemoveWithClick.mp4"></video>
 
 #### Most Recently Added
 
-To remove the most recently added cursor, press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on macOS.
+To remove the most recently added cursor, press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on Mac.
 
 <video controls width="393" src="../assets/studio/script-editor/UndoRecentCursor.mp4"></video>
 
@@ -346,7 +346,7 @@ The Script Editor has the following keyboard shortcuts. You can also access many
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>macOS</th>
+      <th>Mac</th>
     </tr>
   </thead>
   <tbody>
@@ -394,7 +394,7 @@ The Script Editor has the following keyboard shortcuts. You can also access many
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>macOS</th>
+      <th>Mac</th>
     </tr>
   </thead>
   <tbody>
@@ -496,7 +496,7 @@ The Script Editor has the following keyboard shortcuts. You can also access many
     <tr>
       <th>Command</th>
       <th>Windows</th>
-      <th>macOS</th>
+      <th>Mac</th>
     </tr>
   </thead>
   <tbody>

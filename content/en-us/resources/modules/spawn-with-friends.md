@@ -5,11 +5,10 @@ description: The Spawn With Friends module automatically moves spawning players 
 
 It can be challenging to locate friends in-experience. The **SpawnWithFriends** [developer module](../../resources/modules/index.md) automatically moves spawning players near one of their friends present in the experience. This module can also be configured to teleport a player on command instead of automatically.
 
-<video src="../../assets/developer-modules/spawn-with-friends/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/spawn-with-friends/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-	Before spawning occurs, the system confirms that there is enough space, in order to avoid spawning a character inside the map's geometry. Thus, this module might work better in experiences with large, open spaces.
+	Before spawning occurs, in order to avoid spawning a character inside the map's geometry, the system confirms that there is enough space. Thus, this module might work better in experiences with large, open spaces.
 </Alert>
 
 ## Module Usage
@@ -18,9 +17,9 @@ width="100%" />
 
 To use the **SpawnWithFriends** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
    <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
 
@@ -28,7 +27,7 @@ To use the **SpawnWithFriends** module in an experience:
 
    <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
    <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
 
@@ -36,7 +35,7 @@ To use the **SpawnWithFriends** module in an experience:
 
    <img src="../../assets/developer-modules/spawn-with-friends/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **SpawnWithFriends** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SpawnWithFriends** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/spawn-with-friends/Move-Package.png" width="320" />
 
@@ -51,7 +50,7 @@ This module may result in players spawning in restricted areas like VIP rooms, a
      <figcaption>Block filling the entire prison room to prevent players from spawning inside</figcaption>
    </figure>
 
-1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the tag `RestrictedSpawnArea` to each block so that `Class.CollectionService` detects them.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of each block's properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `RestrictedSpawnArea` so that `Class.CollectionService` detects them.
 
 1. Paste the following code into a `Class.Script` within **ServerScriptService**.
 
@@ -84,7 +83,9 @@ This module may result in players spawning in restricted areas like VIP rooms, a
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -141,13 +142,17 @@ SpawnWithFriends.configure({
 
 #### teleportToRandomFriend
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>teleportToRandomFriend(playerToTeleport:</InlineCode>`Class.Player`<InlineCode>):</InlineCode>`boolean`</Typography>
+<figcaption>
+teleportToRandomFriend(playerToTeleport: `Class.Player`): `boolean`
+</figcaption>
 
 Manually triggers teleportation of a player to one of their friends in the experience. Returns a boolean indicating whether or not teleportation succeeded; failure to teleport can be caused by the absence of friends in the server or the inability to find an unobstructed teleportation point. This function can only be called from a `Class.Script`.
 
 #### setTeleportationValidator
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTeleportationValidator(validator:</InlineCode>`function`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+setTeleportationValidator(validator: `function`)
+</figcaption>
 
 Allows you to perform custom pre-teleportation checks by hooking up a validator callback function. The callback receives three parameters:
 

@@ -40,7 +40,7 @@ properties:
     description: |
       FreeMemoryMBytes is a read-only property that describes how much free
       memory is available, in MBs. It is stored as a floating point number, so
-      it can be be read down at the level of available bytes by multiplying its
+      it can be read down at the level of available bytes by multiplying its
       value by `1024 * 1024`.
     code_samples:
     type: float
@@ -259,13 +259,13 @@ properties:
       can_save: true
   - name: NetworkSettings.ShowActiveAnimationAsset
     summary: |
-      When set to true, a label will be shown above each `Class.Player`'s head,
-      showing the current animation being played by the Player's
-      `Class.Humanoid`, if any.
+      When set to true, a label will be shown above each player's head, showing
+      the current animation being played by the Player's `Class.Humanoid`, if
+      any.
     description: |
-      When set to true, a label will be shown above each `Class.Player`'s head,
-      showing the current animation being played by the Player's
-      `Class.Humanoid`, if any.
+      When set to true, a label will be shown above each player's head, showing
+      the current animation being played by the Player's `Class.Humanoid`, if
+      any.
     code_samples:
     type: bool
     tags: []

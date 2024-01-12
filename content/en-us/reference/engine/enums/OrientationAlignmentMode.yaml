@@ -2,10 +2,10 @@ name: OrientationAlignmentMode
 type: enum
 summary: |
   The OrientationAlignmentMode Enum is used to select the number of
-  `Class.Attachment`s used in an alignment.
+  `Class.Attachment|Attachments` used in an alignment.
 description: |
   The OrientationAlignmentMode Enum is used to select the number of
-  `Class.Attachment`s used in an alignment.
+  `Class.Attachment|Attachments` used in an alignment.
 code_samples:
 tags: []
 deprecation_message: ''

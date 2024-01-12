@@ -7,7 +7,7 @@ The MicroProfiler is an optimization tool available in Roblox Studio and the Rob
 
 ## Using The MicroProfiler
 
-To open the MicroProfiler interface, press `Ctrl+Alt+F6` in Studio or the Client. When open, a menu bar is visible at the top of the game view. Under it, there is a moving bar graph which reflects the time used on each frame of the Task Scheduler as they pass – the most recent frames appear on the right, and flow to the left.
+To open the MicroProfiler interface, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. When open, a menu bar is visible at the top of the game view. Under it, there is a moving bar graph which reflects the time used on each frame of the Task Scheduler as they pass – the most recent frames appear on the right, and flow to the left.
 
 <img src="../../assets/optimization/microprofiler/1MicroProfiler-Frames.jpeg"
    width="50%" />
@@ -17,7 +17,7 @@ The orange bars indicate the processing time each frame is taking. They should g
 <img src="../../assets/optimization/microprofiler/2MicroProfiler-Frames-Spike.jpeg"
    width="50%" />
 
-To pause the recording of frames, press `Ctrl+P` or click **Pause** along the top bar. While paused, a timeline appears over the game view, and you can navigate through frames by clicking or dragging on the graph. Scrolling zooms on the timeline. Colorful labels describe different tasks being performed; labels that appear directly underneath another label indicate that a task is performed during another task.
+To pause the recording of frames, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) or click **Pause** along the top bar. While paused, a timeline appears over the game view, and you can navigate through frames by clicking or dragging on the graph. Scrolling zooms on the timeline. Colorful labels describe different tasks being performed; labels that appear directly underneath another label indicate that a task is performed during another task.
 
 <img src="../../assets/optimization/microprofiler/3MicroProfiler-Timeline.jpeg"
    width="50%" />
@@ -71,7 +71,7 @@ end
 RunService.PreSimulation:Connect(onPreSimulation)
 ```
 
-Running the game and pausing the profiler (`Ctrl+P`), the custom profiler label is visible under the Stepped label:
+Running the game and pausing the profiler (<kbd>Ctrl</kbd><kbd>P</kbd>; <kbd>⌘</kbd><kbd>P</kbd>), the custom profiler label is visible under the Stepped label:
 
 <img src="../../assets/optimization/microprofiler/5MicroProfiler-Custom.png"
    width="50%" />

@@ -1900,8 +1900,8 @@ properties:
       input.
 
       For mouse and touch input, this is the screen position of the mouse/touch,
-      described in the X and Y components. The inset applied to GUI elements (such as from the top
-      bar) is accounted for in the position.
+      described in the X and Y components. The inset applied to GUI elements
+      (such as from the top bar) is accounted for in the position.
 
       For the mouse wheel input, the Z component describes whether the wheel was
       moved forward (1), backwards (-1), or not at all (0).

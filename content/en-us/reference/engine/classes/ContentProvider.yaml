@@ -58,11 +58,11 @@ properties:
       can_save: true
   - name: ContentProvider.RequestQueueSize
     summary: |
-      Gives the number of items in `Class.ContentProvider`'s request queue that
-      need to be downloaded.
+      Gives the number of items in the `Class.ContentProvider` request queue
+      that need to be downloaded.
     description: |
-      Gives the number of items in `Class.ContentProvider`'s request queue that
-      need to be downloaded.
+      Gives the number of items in the `Class.ContentProvider` request queue
+      that need to be downloaded.
 
       Items are added to the client's request queue when an asset is used for
       the first time or `Class.ContentProvider:PreloadAsync()` is called.
@@ -290,6 +290,10 @@ methods:
       For each requested asset, the callback function runs, indicating the
       asset's final `Enum.AssetFetchStatus`.
 
+      This method can also take in a list of content ID strings, however these
+      strings must correspond to **image** assets. Attempting to load non-image
+      assets through the use of their content ID strings will result in failure.
+
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
       has processed each requested instance or asset ID.
@@ -300,7 +304,7 @@ methods:
         type: Array
         default:
         summary: |
-          An array of items to load.
+          An array of instances or content ID strings (for images) to load.
       - name: callbackFunction
         type: Function
         default: nil

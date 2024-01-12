@@ -28,7 +28,7 @@ While logical at first glance, testing will show that the `Class.BasePart.Touche
 
 <img src="../assets/scripting/scripts/Touched-Event-No-Debounce.png" width="780" />
 
-To avoid causing excessive damage on initial contact, you can add a debounce system which enforces a cooldown period on damage through an [instance attribute](../studio/instance-attributes.md).
+To avoid causing excessive damage on initial contact, you can add a debounce system which enforces a cooldown period on damage through an [instance attribute](../studio/properties.md#instance-attributes).
 
 ```lua title='Script - Damage Player Using Debounce' highlight='10, 11, 13, 14'
 local part = script.Parent
@@ -92,7 +92,7 @@ button.Activated:Connect(onButtonActivated)
 
 Experiences often include collectible pickups in the 3D world such as medkits, ammo packs, and more. If you design these pickups to remain in the world for players to grab again and again, a "cooldown" time should be added before the pickup refreshes and reactivates.
 
-Similar to [detecting collisions](#detecting-collisions), you can manage the debounce state with an [instance attribute](../studio/instance-attributes.md), and visualize the cooldown period by changing the part's `Class.BasePart.Transparency|Transparency`.
+Similar to [detecting collisions](#detecting-collisions), you can manage the debounce state with an [instance attribute](../studio/properties.md#instance-attributes), and visualize the cooldown period by changing the part's `Class.BasePart.Transparency|Transparency`.
 
 ```lua title='Script - Health Pickup Using Debounce' highlight='10, 11, 13, 15-17'
 local part = script.Parent

@@ -7,7 +7,9 @@ description: |
 
   #### Number Limitations
 
-  This library treats numbers as unsigned 32-bit integers; numbers will be converted to this before being used (see image below). Numbers with decimal numbers are rounded to the nearest whole number.
+  This library treats numbers as unsigned 32-bit integers; numbers will be
+  converted to this before being used (see image below). Numbers with decimal
+  numbers are rounded to the nearest whole number.
 
   <img src="/assets/engine-api/libraries/bit32/32-Bit-Restriction.png" width="500" alt="32-bit integer conversion (in hexadecimal)" />
 code_samples:
@@ -99,11 +101,10 @@ functions:
       Returns the bitwise negation of a given number.
     description: |
       Returns the bitwise negation of `x`.
-      
+
       <img src="/assets/engine-api/libraries/bit32/NOT.png" width="500" alt="Negation of a provided number" />
-      
-      For any integer `x`, the following
-      identity holds:
+
+      For any integer `x`, the following identity holds:
 
       ```lua
       assert(bit32.bnot(x) == (-1 - x) % 2^32)

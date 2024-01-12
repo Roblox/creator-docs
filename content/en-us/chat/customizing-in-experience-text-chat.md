@@ -129,7 +129,7 @@ You can customize the appearance of chat message bodies and prefixes using [rich
 
 ### Adding Chat Tags
 
-If your experience has users with special [attributes](../studio/instance-attributes.md) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their chat messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags for those with the `IsVIP` attribute.
+If your experience has users with special [attributes](../studio/properties.md#instance-attributes) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their chat messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags for those with the `IsVIP` attribute.
 
 ```lua title='LocalScript' highlight='4,5,9-11'
 local TextChatService = game:GetService("TextChatService")

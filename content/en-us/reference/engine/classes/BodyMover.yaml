@@ -6,9 +6,9 @@ summary: |
   Base class for objects that continually exert forces to parts.
 description: |
   BodyMover is the abstract base class for the set of legacy objects that exert
-  forces to `Class.BasePart`s in different ways. In general, the subclasses of
-  BodyMover can be placed into one of two categories based on the type of
-  force(s) they exert:
+  forces to `Class.BasePart|BaseParts` in different ways. In general, the
+  subclasses of BodyMover can be placed into one of two categories based on the
+  type of force(s) they exert:
 
   ## Translational Force
 

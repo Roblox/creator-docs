@@ -11,7 +11,7 @@ You can define single-line comments with a double hyphen (`--`) anywhere outside
 
 Use single line comments for in-line notes. If the comment spans multiple lines, use multiple single-line comments.
 
-You can add and remove single-line comments in the Script Editor with the keyboard shortcut <kbd>Ctrl/Cmd</kbd> + <kbd>/</kbd>.
+You can add and remove single-line comments in the Script Editor with the keyboard shortcut <kbd>Ctrl</kbd><kbd>/</kbd> (<kbd>⌘</kbd><kbd>/</kbd>).
 
 ```lua
 -- This condition is really important because the world would blow up if it

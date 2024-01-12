@@ -4,36 +4,37 @@ category: Animations
 memory_category: Animation
 summary: |
   A Keyframe holds the `Class.Pose|Poses` applied to joints in a `Class.Model`
-  at a given point of time in an animation. `Class.Keyframe`s are interpolated
-  between during animation playback.
+  at a given point of time in an animation. `Class.Keyframe|Keyframes` are
+  interpolated between during animation playback.
 description: |
-  A Keyframe holds the `Class.Pose`s applied to joints in a `Class.Model` at a
-  given point of time in an animation. `Class.Keyframe`s are interpolated
-  between during animation playback.
+  A Keyframe holds the `Class.Pose|Poses` applied to joints in a `Class.Model`
+  at a given point of time in an animation. `Class.Keyframe|Keyframes` are
+  interpolated between during animation playback.
 
   Note, in most cases developers do not need to manipulate
-  `Class.KeyframeSequence`s as the animation editor covers most animation
-  functionality. However, in some cases a developer may wish to generate an
-  animation from a `Class.Script` or build their own plugin.
+  `Class.KeyframeSequence|KeyframeSequences` as the animation editor covers most
+  animation functionality. However, in some cases a developer may wish to
+  generate an animation from a `Class.Script` or build their own plugin.
 
   ## Structure
 
   Keyframes are held within a `Class.KeyframeSequence` and contain `Class.Pose`
-  objects. The poses are named in accordance with the `Class.BasePart`s they
-  correspond to and are structured in terms of joint hierarchy. This means each
-  `Class.Pose` is parented to the `Class.Pose` corresponding to the part it is
-  attached to. See below for a visual example.
+  objects. The poses are named in accordance with the `Class.BasePart|BaseParts`
+  they correspond to and are structured in terms of joint hierarchy. This means
+  each `Class.Pose` is parented to the `Class.Pose` corresponding to the part it
+  is attached to. See below for a visual example.
 
-  Note, as `Class.Pose`s are named in accordance with the `Class.BasePart`s they
-  correspond to, animations require distinct part names to play correctly.
+  Note, as `Class.Pose|Poses` are named in accordance with the
+  `Class.BasePart|BaseParts` they correspond to, animations require distinct
+  part names to play correctly.
 
   ## Interpolation
 
   During animation playback the poses in different keyframes are interpolated
   between. This allows a smooth animation to be created without needing to
   define every frame. Note, the style of interpolation is determined in the
-  `Class.Pose` object. The Keyframe object merely holds the `Class.Pose`s at a
-  defined point of time in the animation (`Class.Keyframe.Time`).
+  `Class.Pose` object. The Keyframe object merely holds the `Class.Pose|Poses`
+  at a defined point of time in the animation (`Class.Keyframe.Time`).
 code_samples:
   - Keyframe-Generate-Poses
 inherits:
@@ -43,12 +44,12 @@ deprecation_message: ''
 properties:
   - name: Keyframe.Time
     summary: |
-      The `Class.Keyframe`'s time position (in seconds) in an animation. This
-      determines the time at which the `Class.Pose`s inside the keyframe will be
-      shown.
+      The `Class.Keyframe` time position (in seconds) in an animation. This
+      determines the time at which the `Class.Pose|Poses` inside the keyframe
+      will be shown.
     description: |
-      This property gives the `Class.Keyframe`'s time position (in seconds) in
-      an animation. This determines the time at which the `Class.Pose`s inside
+      This property gives the `Class.Keyframe` time position (in seconds) in an
+      animation. This determines the time at which the `Class.Pose|Poses` inside
       the keyframe will be shown.
 
       Note the `Class.Keyframe` with the highest time value in a
@@ -178,8 +179,8 @@ methods:
     thread_safety: Unsafe
   - name: Keyframe:GetPoses
     summary: |
-      Returns an array containing all `Class.Pose`s that have been added to a
-      `Class.Keyframe`.
+      Returns an array containing all `Class.Pose|Poses` that have been added to
+      a `Class.Keyframe`.
     description: |
       This function returns an array containing all `Class.Pose|Poses` that have
       been added to a `Class.Keyframe`.
@@ -189,7 +190,7 @@ methods:
     returns:
       - type: Objects
         summary: |
-          An array of `Class.Pose`s.
+          An array of `Class.Pose|Poses`.
     tags: []
     deprecation_message: ''
     security: None
@@ -246,11 +247,8 @@ methods:
       `Class.Instance.Parent` to nil.
     description: |
       This function removes a `Class.Pose` from the `Class.Keyframe` by setting
-      its `Class.Instance.Parent` to nil.
-
-      The `Class.Pose`'s `Class.Instance.Parent` is set to nil, but it is not
-      destroyed. This means, provided the pose is referenced it can be
-      re-parented later.
+      its `Class.Instance.Parent` to `nil` without destroying it. This means the
+      provided the pose is referenced and it can be re-parented later.
 
       Note, this function will not error when an instance other than a
       `Class.Pose` is given as the pose parameter.

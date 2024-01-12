@@ -1,5 +1,5 @@
 ---
-title: Publishing Experiences and Places
+title: Experiences and Places
 description: Explains how to publish the places in your experience.
 ---
 
@@ -9,11 +9,13 @@ description: Explains how to publish the places in your experience.
 <img src="../../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" width="800" />
 </figure>
 
-While an experience can consist of many places, each experience can only have one [starting place](#publishing-a-starting-place) that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
-
-## Publishing a Starting Place
+## Publishing Experiences
 
 By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions. When appropriate, you can [release the experience](#releasing-to-the-public) to the public.
+
+### Starting Place
+
+While an experience can consist of many places, each experience can only have one **starting place** that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
 
 To publish a place as the starting place of an entirely new experience:
 
@@ -21,7 +23,6 @@ To publish a place as the starting place of an entirely new experience:
 1. Fill in the following fields, most of which can be changed later from [Game Settings](../../studio/game-settings.md).
 
    - **Name** / **Description** — The experience name and a description that describes what a potential player should expect. See [metadata best practices](#metadata-best-practices) for guidelines.
-
    - **Creator** — The creator you'd like to attribute as the creator of the experience.
 
      <Alert severity="success">
@@ -37,9 +38,9 @@ To publish a place as the starting place of an entirely new experience:
 
 Once you publish your experience, you can [configure more settings](#configuring-experiences) and also add more places to your experience.
 
-## Creating Additional Places
+### Additional Places
 
-After you have [published a starting place](#publishing-a-starting-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
+After you have published a [starting place](#starting-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
@@ -56,13 +57,36 @@ After you have [published a starting place](#publishing-a-starting-place) to cre
 1. Right-click the new place, select **Rename**, and enter a more descriptive name.
 1. When you double-click the new place, a new Studio session opens for editing the new place.
 
+### Changing the Starting Place
+
+The starting place of an experience cannot be instantly swapped with another place, but you can change it through the following steps:
+
+1. Navigate to the [Creator Dashboard][creatordashboard].
+1. Click on the thumbnail of the experience for which you want to change the starting place. The experience's **Overview** page displays.
+1. In the left-hand navigation, under **Configure**, select **Places**.
+
+   <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
+
+1. Click the **Edit in Studio** button for both the **current** starting place and a target **new** starting place. Two separate instances of Studio open, one for each place.
+
+   <img src="../../assets/creator-dashboard/Experience-Change-Starting-Place.png" width="554" />
+
+1. In the Studio instance running the **current** starting place, select **File**&nbsp;&rarr; **Publish&nbsp;to&nbsp;Roblox&nbsp;As…** in the menu bar (do not select simply **Publish&nbsp;to&nbsp;Roblox** as it would publish the starting place over itself).
+1. In the window that appears, click the tile for the same experience, then choose whether to publish it as a **new** place or to overwrite an existing place. Click the **Create** or **Overwrite** button respectively.
+1. In the Studio instance running the intended **new** starting place, select **File**&nbsp;&rarr; **Publish&nbsp;to&nbsp;Roblox&nbsp;As…** in the menu bar.
+1. In the window that appears, click the tile for the same experience, then choose the **original** starting place. Click the **Overwrite** button.
+1. Close both instances of Studio.
+1. Back in the [Creator Dashboard][creatordashboard], use the **Restart Servers for Updates** workflow as outlined in [Updating Experiences](#updating-experiences).
+
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Restart-Servers.png" width="420" alt="Restart Servers for Updates option from Creator Dashboard" />
+
 ## Configuring Experiences
 
-You can customize your experience's settings from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or within Studio's [Game Settings](../../studio/game-settings.md). Some settings are only configurable within Studio while others are only configurable on the dashboard.
+You can customize your experience's settings from the [Creator Dashboard][creatordashboard] or within Studio's [Game Settings](../../studio/game-settings.md). Some settings are only configurable within Studio while others are only configurable on the dashboard.
 
 ### Creator Dashboard
 
-Most experience settings are configurable from the [Creator Dashboard](https://create.roblox.com/dashboard/creations), including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [questionnaire](../promotion/experience-guidelines.md#questionnaire-categories) required for generating [experience guidelines](#experience-guidelines). To configure an experience:
+Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [questionnaire](../promotion/experience-guidelines.md#questionnaire-categories) required for generating [experience guidelines](#experience-guidelines). To configure an experience:
 
 1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
 1. Click on the category you wish to configure from the left-hand navigation.
@@ -87,7 +111,7 @@ Once an experience is published, the [Game Settings](../../studio/game-settings.
 
 New experiences begin as **private** and are only accessible to you and members of your group with the correct [permissions](../../projects/groups.md#roles-and-permissions). When appropriate, you can release an experience to the public as follows:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. Navigate to the [Creator Dashboard][creatordashboard].
 1. Locate the experience, click the **&ctdot;** in the corner of its thumbnail, and select **Make Public**.
 
    <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
@@ -139,7 +163,7 @@ By default, all private and public experiences are locked so that you or your gr
 To allow users to download an editable copy of your experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Select the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
+1. Click on the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
 1. In the left-hand navigation, under **Configure**, select **Places**.
 
    <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
@@ -198,7 +222,7 @@ A comparable option is to make your experience private, which shuts down its ser
 
 To shut down all servers:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. Navigate to the [Creator Dashboard][creatordashboard].
 1. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Shut Down All Servers**.
 
    <img src="../../assets/creator-dashboard/Experience-Context-Menu-Shutdown-Servers.png" width="420" alt="Shut Down All Servers option from Creator Dashboard" />

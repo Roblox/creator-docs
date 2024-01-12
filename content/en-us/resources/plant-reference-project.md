@@ -359,7 +359,7 @@ Of course, this is only useful for server-to-client replication and for values t
 
 In situations where the server needs to replicate a custom value to the client
 that's specific to a given `Class.Instance`, you can use
-[attributes](../studio/instance-attributes.md). Roblox automatically replicates
+[attributes](../studio/properties.md#instance-attributes). Roblox automatically replicates
 attribute values, so you don't need to maintain any code paths to replicate
 state associated with an object. Another advantage is that this replication
 happens alongside the instance itself.

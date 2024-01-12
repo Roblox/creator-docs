@@ -120,10 +120,10 @@ properties:
       `Class.HumanoidDescription.ProportionScale|ProportionScale` property does
       not have any effect.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following BodyTypeScales
-      values (from left-to-right): 0, 0.5, 1.0. Also visible are 6 stacked 1x1x1
-      cube parts for reference.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following BodyTypeScales values (from left-to-right): 0, 0.5, 1.0. Also
+      visible are 6 stacked 1x1x1 cube parts for reference.
 
       See also:
 
@@ -196,9 +196,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyDepthScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following DepthScale values
-      (from left-to-right): 0.25, 1.0, 2.0.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following DepthScale values (from left-to-right): 0.25, 1.0, 2.0.
 
       See also:
 
@@ -244,7 +244,7 @@ properties:
       - `Class.HumanoidDescription.Head|Head`, which can change the mesh of the
         head
       - `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which can apply
-        one or more `Class.Accessory`s to the face
+        one or more `Class.Accessory` objects to the face
     code_samples:
     type: int64
     tags: []
@@ -570,9 +570,9 @@ properties:
       description is `Class.Humanoid:ApplyDescription()|applied` to a Humanoid,
       this value maps to a "HeadScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following HeadScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following HeadScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
@@ -611,9 +611,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyHeightScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following HeightScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following HeightScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
@@ -953,12 +953,14 @@ properties:
       When the value of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale`
       is 0, this property does not have any effect.
 
-      In the image, four R15 figures are visible whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following ProportionScale
-      values (from left-to-right): 0, 0.5, 1.0, 0.0. Each have a BodyTypeScale
-      of 1.0, except for the right which has 0.0. Also visible are 6 stacked
-      1x1x1 cube parts for reference. The table below lists the BodyTypeScale
-      and ProportionScale values for each figure in the image.
+      In the image, four R15 figures are visible whose
+      `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following ProportionScale values (from left-to-right): 0, 0.5, 1.0, 0.0.
+      Each have a BodyTypeScale of 1.0, except for the right which has 0.0. Also
+      visible are 6 stacked 1x1x1 cube parts for reference. The table below
+      lists the BodyTypeScale and ProportionScale values for each figure in the
+      image.
 
       <table>
       <thead><tr>
@@ -1455,9 +1457,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyWidthScale" `Class.NumberValue` within the Humanoid.
 
-      In the image above, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following WidthScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image above, three R15 figures whose `Class.Humanoid|Humanoids`
+      have `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following WidthScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
