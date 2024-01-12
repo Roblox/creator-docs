@@ -732,9 +732,9 @@ properties:
       bars. If set to 0, the health bars will not be displayed.
     description: |
       The HealthDisplayDistance `Class.Player` property sets the distance in
-      studs at which this player will see other `Class.Humanoid` health bars.
-      If set to 0, the health bars will not be displayed. This property is set
-      to `Class.StarterPlayer.HealthDisplayDistance` by default.
+      studs at which this player will see other `Class.Humanoid` health bars. If
+      set to 0, the health bars will not be displayed. This property is set to
+      `Class.StarterPlayer.HealthDisplayDistance` by default.
 
       If a Humanoid's health bar is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
@@ -791,8 +791,8 @@ properties:
 
       This property can only be read from to determine membership (it cannot be
       set to another membership type). The property can only be changed via
-      `Class.CoreScript|CoreScripts` using `Class.Player:SetMembershipType()` - which are
-      not accessible.
+      `Class.CoreScript|CoreScripts` using `Class.Player:SetMembershipType()` -
+      which are not accessible.
     code_samples:
       - check-membership-status
     type: MembershipType
@@ -1381,11 +1381,10 @@ methods:
       - `Class.Accessory`, `Class.Shirt`, `Class.ShirtGraphic`,
         `Class.CharacterMesh`, `Class.BodyColors`, and `Class.Accoutrement` are
         parented to the player's character.
-      - `Class.Decal`, `Class.FileMesh`, `Class.SpecialMesh`,
-        `Class.BlockMesh`, `Class.CylinderMesh`, and `Class.Texture` are
-        parented to the character's head.
-      - `Class.Tool` is parented to the player's
-        `Class.StarterGear`.
+      - `Class.Decal`, `Class.FileMesh`, `Class.SpecialMesh`, `Class.BlockMesh`,
+        `Class.CylinderMesh`, and `Class.Texture` are parented to the
+        character's head.
+      - `Class.Tool` is parented to the player's `Class.StarterGear`.
       - All other classes are ignored.
     code_samples:
       - Player-LoadCharacterAppearance1
@@ -1394,8 +1393,8 @@ methods:
         type: Instance
         default:
         summary: |
-          An instance of the asset being loaded, which can be obtained using
-          the `Class.InsertService:LoadAsset()` function.
+          An instance of the asset being loaded, which can be obtained using the
+          `Class.InsertService:LoadAsset()` function.
     returns:
       - type: void
         summary: ''
@@ -1490,8 +1489,8 @@ methods:
       the given direction until stopped, or interrupted by the player (by using
       their controls).
 
-      This is useful when scripting NPC `Class.Humanoid|Humanoids` that move around a
-      map - but are not controlled by an actual player's input.
+      This is useful when scripting NPC `Class.Humanoid|Humanoids` that move
+      around a map - but are not controlled by an actual player's input.
 
       Note that the function's second argument indicates whether the provided
       `Datatype.Vector3` should move the player relative to world coordinates

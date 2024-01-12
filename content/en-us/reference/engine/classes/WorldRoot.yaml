@@ -85,13 +85,15 @@ methods:
         type: Vector3
         default:
         summary: |
-          The size of the cast block shape in studs. The maximum size is 512 studs.
+          The size of the cast block shape in studs. The maximum size is 512
+          studs.
       - name: direction
         type: Vector3
         default:
         summary: |
           Direction of the shapecast, with the magnitude representing the
-          maximum distance the shape can travel. The maximum distance is 1024 studs.
+          maximum distance the shape can travel. The maximum distance is 1024
+          studs.
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
@@ -307,21 +309,23 @@ methods:
     thread_safety: Unsafe
   - name: WorldRoot:FindPartsInRegion3
     summary: |
-      Returns an array of `Class.BasePart|BaseParts` in the given `Datatype.Region3`.
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3`.
     description: |
-      Returns an array of `Class.BasePart|BaseParts` in the given `Datatype.Region3`.
+      Returns an array of `Class.BasePart|BaseParts` in the given
+      `Datatype.Region3`.
 
       This function takes an optional maxParts parameter (default 20) which
-      limits the number of `Class.BasePart|BaseParts` that can be returned. Once this
-      number has been reached, the search for `Class.BasePart|BaseParts` will stop. This
-      means some `Class.BasePart|BaseParts` may not be returned even if they are within
-      the `Datatype.Region3`
+      limits the number of `Class.BasePart|BaseParts` that can be returned. Once
+      this number has been reached, the search for `Class.BasePart|BaseParts`
+      will stop. This means some `Class.BasePart|BaseParts` may not be returned
+      even if they are within the `Datatype.Region3`
 
       The optional ignoreDescendentsInstance parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
-      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other than the
-      `Class.BasePart` itself.
+      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other
+      than the `Class.BasePart` itself.
 
       ```
       local min = part.Position - (0.5 * part.Size)
@@ -334,7 +338,8 @@ methods:
       `Class.WorldRoot:FindPartsInRegion3WithWhiteList()` variants of this
       method exist to provide specific exclusion and inclusion functionality.
 
-      If no `Class.BasePart|BaseParts` are found, an empty array will be returned.
+      If no `Class.BasePart|BaseParts` are found, an empty array will be
+      returned.
     code_samples:
     parameters:
       - name: region
@@ -404,7 +409,8 @@ methods:
     returns:
       - type: Objects
         summary: |
-          An array of `Class.BasePart|BaseParts` found within the `Datatype.Region3`.
+          An array of `Class.BasePart|BaseParts` found within the
+          `Datatype.Region3`.
     tags:
       - Deprecated
     deprecation_message: |
@@ -675,8 +681,8 @@ methods:
     thread_safety: Unsafe
   - name: WorldRoot:IsRegion3Empty
     summary: |
-      Returns a bool indicating whether there are no `Class.BasePart|BaseParts` within
-      the given `Datatype.Region3`.
+      Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
+      within the given `Datatype.Region3`.
     description: |
       **IsRegion3Empty** returns a bool indicating whether there are no
       `Class.BasePart|BaseParts` within the given `Datatype.Region3`.
@@ -684,8 +690,8 @@ methods:
       The optional ignoreDescendentsInstance parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
-      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other than the
-      `Class.BasePart` itself.
+      see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other
+      than the `Class.BasePart` itself.
 
       ```
       local min = part.Position - (0.5 * part.Size)
@@ -905,13 +911,15 @@ methods:
         type: float
         default:
         summary: |
-          The radius of the cast spherical shape in studs. The maximum radius is 256 studs.
+          The radius of the cast spherical shape in studs. The maximum radius is
+          256 studs.
       - name: direction
         type: Vector3
         default:
         summary: |
           Direction of the shapecast, with the magnitude representing the
-          maximum distance the shape can travel. The maximum distance is 1024 studs.
+          maximum distance the shape can travel. The maximum distance is 1024
+          studs.
       - name: params
         type: RaycastParams
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}

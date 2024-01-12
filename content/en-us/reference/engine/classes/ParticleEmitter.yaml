@@ -8,9 +8,9 @@ description: |
   A **ParticleEmitter** is a special object that emits customizable 2D particles
   into the world. To emit and render particles, it must be parented to a
   `Class.BasePart` or an `Class.Attachment` within such a part. When parented to
-  a `Class.BasePart`, particles spawn randomly within the part's bounding
-  box or [shape](../../../effects/particle-emitters.md#shape); when parented
-  to an `Class.Attachment`, particles spawn from the attachment's position.
+  a `Class.BasePart`, particles spawn randomly within the part's bounding box or
+  [shape](../../../effects/particle-emitters.md#shape); when parented to an
+  `Class.Attachment`, particles spawn from the attachment's position.
 
   Particles emit automatically when the emitter is
   `Class.ParticleEmitter.Enabled|Enabled` with a non-zero
@@ -155,7 +155,7 @@ properties:
       `Class.ParticleEmitter.Speed|Speed` means particles emit in the opposite
       direction. `Class.ParticleEmitter.SpreadAngle|SpreadAngle` further varies
       the emission direction.
-      
+
       If you add a `Class.ParticleEmitter` to an `Class.Attachment`, which has a
       direction, you can rotate the attachment itself
       (`Class.Attachment.Orientation`) instead of using this property.
@@ -175,11 +175,11 @@ properties:
     summary: |
       Determines if particles emit from the emitter.
     description: |
-      The **Enabled** property determines if particles emit from the emitter. Setting this to `false`
-      stops further particles from spawning, but any existing particles remain
-      active until they expire. This property is useful when you have a pre-made
-      particle effect that you want to remain disabled until you need it to emit
-      particles.
+      The **Enabled** property determines if particles emit from the emitter.
+      Setting this to `false` stops further particles from spawning, but any
+      existing particles remain active until they expire. This property is
+      useful when you have a pre-made particle effect that you want to remain
+      disabled until you need it to emit particles.
 
       If you want to clear all particles from a disabled emitter, call
       `Class.ParticleEmitter:Clear()|Clear()`. Then, if desired, call
@@ -277,10 +277,10 @@ properties:
         the first frame after playing the last.
       - **OneShot** &ndash; Play through the animation only once across the
         particle's lifetime. With this setting, the
-        `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property doesn't apply;
-        instead, the framerate is determined by the particle's
-        `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number of frames
-        in the animation. **OneShot** animations are useful for clear
+        `Class.ParticleEmitter.FlipbookFramerate|FlipbookFramerate` property
+        doesn't apply; instead, the framerate is determined by the particle's
+        `Class.ParticleEmitter.Lifetime|Lifetime` divided evenly by the number
+        of frames in the animation. **OneShot** animations are useful for clear
         non-repeating animations, such as an explosion that creates a puff of
         smoke and then fades out.
       - **PingPong** &ndash; Play from the first to the last frame, then in
@@ -360,7 +360,7 @@ properties:
       This property should not be confused with
       `Class.ParticleEmitter.LightInfluence|LightInfluence` which determines how
       particles are affected by environmental light.
-      
+
       This property does **not** cause particles to light the environment around
       them. To accomplish that, consider using a `Class.PointLight`.
     code_samples:
@@ -407,7 +407,8 @@ properties:
     description: |
       The **LockedToPart** property determines if particles "stick" to the
       emission source (the `Class.Attachment` or `Class.BasePart` to which the
-      `Class.ParticleEmitter` is parented). If `true`, active particles will move in lock step if the parent object moves.
+      `Class.ParticleEmitter` is parented). If `true`, active particles will
+      move in lock step if the parent object moves.
 
       Alternatively, consider using the
       `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` property
@@ -593,17 +594,19 @@ properties:
       Depending on the `Class.ParticleEmitter.Shape|Shape` value, this property
       performs a different action:
 
-      - For cylinders, it specifies the top radius proportion. A value
-        of 0 means the top of the cylinder has zero radius, making it a cone. A value of 1 means the cylinder has no
-        deformation.
-  
-      - For discs, it specifies the inner radius proportion. A value
-        of 0 means the disc is fully closed (circle/ellipse), while a value of 1 means emission only occurs on the
-        outermost rim of the disc. Values between 0 and 1 emit from an annulus with a certain thickness.
+      - For cylinders, it specifies the top radius proportion. A value of 0
+        means the top of the cylinder has zero radius, making it a cone. A value
+        of 1 means the cylinder has no deformation.
 
-      - For spheres, it specifies the hemispherical angle over which
-        particles emit. A value of 1 means particles emit from the entire sphere; a value of 0.5 means particles emit
-        from a half-dome; a value of 0 means particles only emit from a single point at the north pole.
+      - For discs, it specifies the inner radius proportion. A value of 0 means
+        the disc is fully closed (circle/ellipse), while a value of 1 means
+        emission only occurs on the outermost rim of the disc. Values between 0
+        and 1 emit from an annulus with a certain thickness.
+
+      - For spheres, it specifies the hemispherical angle over which particles
+        emit. A value of 1 means particles emit from the entire sphere; a value
+        of 0.5 means particles emit from a half-dome; a value of 0 means
+        particles only emit from a single point at the north pole.
 
       For visual examples, see
       [here](../../../effects/particle-emitters.md#shape).
@@ -641,15 +644,19 @@ properties:
     summary: |
       Determines the world size over individual particles' lifetimes.
     description: |
-      The **Size** property determines the world size of all active particles over their individual lifetimes. This
-      property represents the dimensions of the square `Class.ParticleEmitter.Texture|Texture` for each particle. It is
-      a `Datatype.NumberSequence` that works similarly to `Class.ParticleEmitter.Transparency|Transparency`.
+      The **Size** property determines the world size of all active particles
+      over their individual lifetimes. This property represents the dimensions
+      of the square `Class.ParticleEmitter.Texture|Texture` for each particle.
+      It is a `Datatype.NumberSequence` that works similarly to
+      `Class.ParticleEmitter.Transparency|Transparency`.
 
-      A particle's present size is determined by linearly interpolating on this sequence using the particle's age and
-      its total lifetime. For example, if a particle spawned 2 seconds ago and has a 4 second lifetime, the size will be
-      whatever is 50% of the way through the `Datatype.NumberSequence`. For any `Datatype.NumberSequenceKeypoint` with a
-      non-zero envelope value, a random value in the envelope range is chosen for each keypoint for each particle when it
-      emits.
+      A particle's present size is determined by linearly interpolating on this
+      sequence using the particle's age and its total lifetime. For example, if
+      a particle spawned 2 seconds ago and has a 4 second lifetime, the size
+      will be whatever is 50% of the way through the `Datatype.NumberSequence`.
+      For any `Datatype.NumberSequenceKeypoint` with a non-zero envelope value,
+      a random value in the envelope range is chosen for each keypoint for each
+      particle when it emits.
     code_samples:
     type: NumberSequence
     tags: []
@@ -664,11 +671,21 @@ properties:
       can_save: true
   - name: ParticleEmitter.Speed
     summary: |
-      Determines a random range of velocities (minimum to maximum) at which new particles will emit, measured in studs per second.
+      Determines a random range of velocities (minimum to maximum) at which new
+      particles will emit, measured in studs per second.
     description: |
-      The **Speed** property determines a random range of velocities (minimum to maximum) at which new particles will emit, measured in studs per second. Each particle's velocity is chosen upon emission and it applies in the `Class.ParticleEmitter.EmissionDirection|EmissionDirection`. Negative values cause particles to travel in reverse.
+      The **Speed** property determines a random range of velocities (minimum to
+      maximum) at which new particles will emit, measured in studs per second.
+      Each particle's velocity is chosen upon emission and it applies in the
+      `Class.ParticleEmitter.EmissionDirection|EmissionDirection`. Negative
+      values cause particles to travel in reverse.
 
-      Note that changing `Class.ParticleEmitter.Speed|Speed` does not affect active particles and they retain whatever speed they already have. However, `Class.ParticleEmitter.Acceleration|Acceleration`, `Class.ParticleEmitter.Drag|Drag`, and `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` can be used to affect the speed of active particles over their lifetime.
+      Note that changing `Class.ParticleEmitter.Speed|Speed` does not affect
+      active particles and they retain whatever speed they already have.
+      However, `Class.ParticleEmitter.Acceleration|Acceleration`,
+      `Class.ParticleEmitter.Drag|Drag`, and
+      `Class.ParticleEmitter.VelocityInheritance|VelocityInheritance` can be
+      used to affect the speed of active particles over their lifetime.
     code_samples:
     type: NumberRange
     tags: []
@@ -686,12 +703,15 @@ properties:
       Determines the angles at which particles may be randomly emit, measured in
       degrees.
     description: |
-      The **SpreadAngle** property determines the random angles at which a particle may be emitted. For example, if the
-      `Class.ParticleEmitter.EmissionDirection|EmissionDirection` is **Top** (+**Y**), this `Datatype.Vector2` describes
-      the size of the random angle spread on the **X**/**Z** axes, in degrees.
+      The **SpreadAngle** property determines the random angles at which a
+      particle may be emitted. For example, if the
+      `Class.ParticleEmitter.EmissionDirection|EmissionDirection` is **Top**
+      (+**Y**), this `Datatype.Vector2` describes the size of the random angle
+      spread on the **X**/**Z** axes, in degrees.
 
-      Setting one axis to 360 will cause particles to emit in all direction in a **circle**. Setting both to 360 will
-      cause particles to emit in all directions in a **sphere**.
+      Setting one axis to 360 will cause particles to emit in all direction in a
+      **circle**. Setting both to 360 will cause particles to emit in all
+      directions in a **sphere**.
     code_samples:
     type: Vector2
     tags: []
@@ -710,7 +730,9 @@ properties:
       lifetime.
     description: |
       Allows for non-uniform scaling of particles, curve-controlled over their
-      lifetime. Values greater than 0 cause particles to both shrink horizontally and grow vertically, while values less than 0 cause particles to both grow horizontally and shrink vertically.
+      lifetime. Values greater than 0 cause particles to both shrink
+      horizontally and grow vertically, while values less than 0 cause particles
+      to both grow horizontally and shrink vertically.
     code_samples:
     type: NumberSequence
     tags: []
@@ -727,10 +749,12 @@ properties:
     summary: |
       Determines the image rendered on particles.
     description: |
-      The **Texture** property determines the image rendered on particles. This image is influenced
-      by `Class.ParticleEmitter.Color|Color`, `Class.ParticleEmitter.Transparency|Transparency`,
-      `Class.ParticleEmitter.LightInfluence|LightInfluence`, and `Class.ParticleEmitter.LightEmission|LightEmission`. Textures
-      with transparent backgrounds work best for particles.
+      The **Texture** property determines the image rendered on particles. This
+      image is influenced by `Class.ParticleEmitter.Color|Color`,
+      `Class.ParticleEmitter.Transparency|Transparency`,
+      `Class.ParticleEmitter.LightInfluence|LightInfluence`, and
+      `Class.ParticleEmitter.LightEmission|LightEmission`. Textures with
+      transparent backgrounds work best for particles.
     code_samples:
     type: Content
     tags: []
@@ -766,19 +790,19 @@ properties:
     summary: |
       Determines the transparency of particles over their individual lifetimes.
     description: |
-      The **Transparency** property determines the transparency of all active particles over their
-      individual lifetimes. It works similar to `Class.ParticleEmitter.Size|Size` in how it affects
-      particles over time. In terms of rendering, a value of 0 is completely visible (opaque) and a
+      The **Transparency** property determines the transparency of all active
+      particles over their individual lifetimes. It works similar to
+      `Class.ParticleEmitter.Size|Size` in how it affects particles over time.
+      In terms of rendering, a value of 0 is completely visible (opaque) and a
       value of 1 is completely invisible (not rendered at all).
 
       A particle's present transparency is determined by linearly interpolating
-      on this sequence using the particle's age and its total
-      lifetime. For example, if a particle spawned 2 seconds ago and has a 4
-      second lifetime, the transparency will be whatever is 50% of the way
-      through the `Datatype.NumberSequence`. For any
-      `Datatype.NumberSequenceKeypoint` with a non-zero envelope value, a random
-      value in the envelope range is chosen for each keypoint for each particle
-      when it emits.
+      on this sequence using the particle's age and its total lifetime. For
+      example, if a particle spawned 2 seconds ago and has a 4 second lifetime,
+      the transparency will be whatever is 50% of the way through the
+      `Datatype.NumberSequence`. For any `Datatype.NumberSequenceKeypoint` with
+      a non-zero envelope value, a random value in the envelope range is chosen
+      for each keypoint for each particle when it emits.
     code_samples:
     type: NumberSequence
     tags: []
@@ -871,9 +895,9 @@ properties:
       that this property accepts fractional values; it is not like
       `Class.GuiObject.ZIndex` (an integer).
 
-      Positive values move particles closer to the camera and negative
-      values move particles away. Sufficiently negative values can cause
-      particles to render inside or behind the parent part.
+      Positive values move particles closer to the camera and negative values
+      move particles away. Sufficiently negative values can cause particles to
+      render inside or behind the parent part.
     code_samples:
     type: float
     tags: []
@@ -891,8 +915,8 @@ methods:
     summary: |
       Clears all particles that have been emitted.
     description: |
-      The **Clear** method instantly clears all existing particles that have been
-      emitted by the `Class.ParticleEmitter` through its natural emission
+      The **Clear** method instantly clears all existing particles that have
+      been emitted by the `Class.ParticleEmitter` through its natural emission
       (non-zero `Class.ParticleEmitter.Rate|Rate` on an
       `Class.ParticleEmitter.Enabled|Enabled` emitter) or via
       `Class.ParticleEmitter:Emit()|Emit()`.

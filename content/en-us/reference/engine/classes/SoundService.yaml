@@ -3,19 +3,20 @@ type: class
 category: Sounds
 memory_category: Instances
 summary: |
-  A service that determines various aspects of how `Class.Sound|Sounds` play in the
-  game.
+  A service that determines various aspects of how `Class.Sound|Sounds` play in
+  the game.
 description: |
-  A service that determines various aspects of how `Class.Sound|Sounds` play in the
-  game. SoundService is also often used to store `Class.SoundGroup|SoundGroups` although
-  this is not mandatory for `Class.SoundGroup|SoundGroups` to work.
+  A service that determines various aspects of how `Class.Sound|Sounds` play in
+  the game. SoundService is also often used to store
+  `Class.SoundGroup|SoundGroups` although this is not mandatory for
+  `Class.SoundGroup|SoundGroups` to work.
 
   ## What can SoundService do?
 
   SoundService properties such as `Class.SoundService.AmbientReverb`,
   `Class.SoundService.DistanceFactor`, `Class.SoundService.DopplerScale` and
-  `Class.SoundService.RolloffScale` can be used to change how all `Class.Sound|Sounds`
-  play in the game.
+  `Class.SoundService.RolloffScale` can be used to change how all
+  `Class.Sound|Sounds` play in the game.
 
   The `Class.SoundService:SetListener()` function allows developers to set the
   position where sounds are heard from.
@@ -146,7 +147,8 @@ properties:
       ```
 
       Note the Doppler effect has no impact on 2D `Class.Sound|Sounds`,
-      (`Class.Sound|Sounds` not parented to a `Class.BasePart` or `Class.Attachment`).
+      (`Class.Sound|Sounds` not parented to a `Class.BasePart` or
+      `Class.Attachment`).
 
       Developers wishing to learn more about the different settings Roblox's
       sound engine uses should consult the
@@ -196,8 +198,8 @@ properties:
       `Class.Sound.RollOffMode` property is set to 'Inverse' or
       'InverseTapered'. 'Linear' and 'LinearSquare' `Enum.RollOffMode` use a
       different attenuation model which is not influenced by this property. This
-      property also has no impact on 2D sounds (`Class.Sound|Sounds` not parented to a
-      `Class.BasePart` or `Class.Attachment`).
+      property also has no impact on 2D sounds (`Class.Sound|Sounds` not
+      parented to a `Class.BasePart` or `Class.Attachment`).
 
       The higher the RolloffScale, the more rapidly a 3D sound's volume will
       attenuate as the distance between the listener and the sound increases.
@@ -244,8 +246,8 @@ properties:
 methods:
   - name: SoundService:GetListener
     summary: |
-      GetListener returns the current `Class.SoundService` listener type and what
-      is set as listener.
+      GetListener returns the current `Class.SoundService` listener type and
+      what is set as listener.
     description: |
       This function returns `Class.SoundService|SoundService's` current listener
       type and what is set as listener.
@@ -361,12 +363,11 @@ methods:
 
       #### What is a listener?
 
-      The `Class.SoundService` listener determines the point from which audio
-      in the game is being 'heard' by the player. For 3D `Sounds` (sounds
-      parented to a BasePart or `Class.Attachment`) the listener influences the
-      volume and left/right balance of a playing sound. Listeners have no
-      influence on the playback of 2D sounds as they have no position of
-      emission.
+      The `Class.SoundService` listener determines the point from which audio in
+      the game is being 'heard' by the player. For 3D `Sounds` (sounds parented
+      to a BasePart or `Class.Attachment`) the listener influences the volume
+      and left/right balance of a playing sound. Listeners have no influence on
+      the playback of 2D sounds as they have no position of emission.
 
       By default, the listener is set to the CurrentCamera. However, a range of
       different types of listeners can be used.
