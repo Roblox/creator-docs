@@ -266,8 +266,7 @@ properties:
 
       When set to true, the tool will only fire `Class.Tool.Activated` when
       `Class.Tool:Activate()` is called. This also suppresses the
-      `Class.ContextActionService`'s `Class.ContextActionService:BindActivate()`
-      function.
+      `Class.ContextActionService:BindActivate()` function.
 
       When set to false, mouse clicks (when the tool is equipped) will also fire
       `Class.Tool.Activated`.
@@ -439,7 +438,8 @@ events:
     summary: |
       Fired when the player clicks while a tool is equipped.
     description: |
-      Activated isn't called if the Ctrl key is pressed during a click.
+      Activated isn't called if the <kbd>Ctrl</kbd> key is pressed during a
+      click.
 
       The Activated event fires when the player clicks while a `Class.Tool` is
       equipped.

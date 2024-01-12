@@ -3,31 +3,32 @@ type: class
 category: Gameplay
 memory_category: Instances
 summary: |
-  A service-level container whose contents are copied into each `Class.Player`'s
+  A service-level container whose contents are copied into each player's
   `Class.Backpack` when the player spawns. It is generally used to hold `Tools`,
-  but is sometimes used to hold `Class.LocalScript`s to ensure that each player
-  gets a copy.
+  but is sometimes used to hold `Class.LocalScript|LocalScripts` to ensure that
+  each player gets a copy.
 description: |
-  A service-level container whose contents are copied into each `Class.Player`'s
+  A service-level container whose contents are copied into each player's
   `Class.Backpack` when the player spawns. It is generally used to hold `Tools`,
-  but is sometimes used to hold `Class.LocalScript`s to ensure that each player
-  gets a copy.
+  but is sometimes used to hold `Class.LocalScript|LocalScripts` to ensure that
+  each player gets a copy.
 
   When a player's character spawns, the contents of the StarterPack and their
   `Class.StarterGear` are copied into their `Class.Backpack`. Once a character
   dies, the `Class.Backpack` is removed and a new one is created -- populating
   it using the contents of `Class.StarterPack` and `Class.StarterGear`.
 
-  The StarterPack is used to determine a set of `Class.Tool`s that _all_ players
-  will spawn with. If a developer wants to ensure that certain `Class.Tool`s are
-  available to specific players, then they will need to parent the `Class.Tool`s
-  directly to the player's `Class.Backpack` instead.
+  The StarterPack is used to determine a set of `Class.Tool|Tools` that _all_
+  players will spawn with. If a developer wants to ensure that certain
+  `Class.Tool|Tools` are available to specific players, then they will need to
+  parent the `Class.Tool|Tools` directly to the player's `Class.Backpack`
+  instead.
 
   Note: while normally the contents of `Class.StarterPack` are predefined, the
   contents can be changed while the game is running by adding and removing
-  `Class.Tool`s accordingly. These updates will pass onto a player's backpack
-  when they respawn and their backpacks are reloaded. Changes to the StarterPack
-  should be made by the server.
+  `Class.Tool|Tools` accordingly. These updates will pass onto a player's
+  backpack when they respawn and their backpacks are reloaded. Changes to the
+  StarterPack should be made by the server.
 
   A tool can be added to the StarterPack using the following code.
 

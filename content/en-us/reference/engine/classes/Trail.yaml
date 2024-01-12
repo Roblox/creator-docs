@@ -375,7 +375,7 @@ properties:
       Sets length of texture if `Class.Trail.TextureMode` is _Wrap_ or _Static_.
       If mode is _Stretch_ sets number of times texture will repeat.
     description: |
-      This property determines how `Class.Trail.Texture`s are drawn by
+      This property determines how `Class.Trail.Texture|Textures` are drawn by
       `Class.Trail`. The behavior of TextureLength is determined by the
       `Class.Trail.TextureMode` of its trail.
 

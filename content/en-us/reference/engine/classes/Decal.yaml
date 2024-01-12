@@ -66,11 +66,11 @@ properties:
       can_save: true
   - name: Decal.LocalTransparencyModifier
     summary: |
-      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
-      property. The effects are only visible to the local player.
+      Acts as a multiplier for the decal's `Class.Decal.Transparency` property.
+      The effects are only visible to the local player.
     description: |
-      Acts as a multiplier for the `Class.Decal`'s `Class.Decal.Transparency`
-      property. The effects are only visible to the `Class.Players.LocalPlayer`.
+      Acts as a multiplier for the decal's `Class.Decal.Transparency` property.
+      The effects are only visible to the `Class.Players.LocalPlayer`.
 
       This property should be used in situations where
       `Class.Decal.Transparency` is being set by a different script. The benefit
@@ -79,7 +79,7 @@ properties:
 
       When LocalTransparencyModifier is set to 1, the `Class.Decal` will be
       completely invisible regardless of its original transparency. When it is
-      set to 0, the `Class.Decal`s rendered transparency will match the
+      set to 0, the decal's rendered transparency will match the
       `Class.Decal.Transparency` value. The formula for this is:
 
       ```
@@ -89,7 +89,7 @@ properties:
       Note, this property should be used on the client only and will not
       replicate to the server.
 
-      For a variant of this property for `Class.BasePart`s, see
+      For a variant of this property for `Class.BasePart|BaseParts`, see
       `Class.BasePart.LocalTransparencyModifier`.
     code_samples:
     type: float
@@ -197,9 +197,9 @@ properties:
       Determines the transparency of the `Class.Decal` with 0 being completely
       opaque and 1 completely transparent.
 
-      Note, `Class.Decal`s also respect the transparency of the original image
-      file uploaded to Roblox. This means transparency can be changed prior to
-      uploading to Roblox, and without the need to use the Transparency
+      Note, `Class.Decal|Decals` also respect the transparency of the original
+      image file uploaded to Roblox. This means transparency can be changed
+      prior to uploading to Roblox, and without the need to use the Transparency
       property.
 
       `Class.Decal.LocalTransparencyModifier` acts as a multiplier for the
@@ -207,7 +207,7 @@ properties:
       is likely to be changed by another script, as is the case with player
       Characters.
 
-      For `Class.BasePart`s, see `Class.BasePart.Transparency`.
+      For `Class.BasePart|BaseParts`, see `Class.BasePart.Transparency`.
     code_samples:
       - Fading-Decal
     type: float
@@ -233,7 +233,7 @@ properties:
       of) other Decals with lower ZIndex.
 
       The range of valid values is -MAX_INT to MAX_INT, inclusive (2,147,483,647
-      or (2^31 - 1)). If you are unsure if you will need to layer an decal
+      or (2^31 - 1)). If you are unsure if you will need to layer a decal
       between two already-existing decals in the future, it can be a good idea
       to use multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
       ZIndex values you can use for elements rendered in-between other elements.

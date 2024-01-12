@@ -57,7 +57,7 @@ Building successful content takes time and effort, but there is low risk and no 
 
 <h4>Instant publishing to reach a global audience</h4>
 
-Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, PC, and Xbox.
+Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, Windows, and Xbox.
 
 <h4>Platform-driven discovery and rapid viral growth</h4>
 

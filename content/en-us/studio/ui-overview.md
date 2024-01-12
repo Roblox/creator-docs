@@ -138,9 +138,9 @@ The [Properties](../studio/properties.md) window lets you adjust properties of a
 
 <img src="../assets/studio/properties/Location-In-Studio.png" width="800" alt="Properties window in Studio" />
 
-At the bottom of the window, you can define custom [attributes](../studio/instance-attributes.md) for an object, similar to its default properties. Attributes and their values are saved with your place/assets and they're an ideal way for team members to experiment with different values during runtime, even if they don't understand the underlying code.
+At the bottom of the window, you can define custom [attributes](../studio/properties.md#instance-attributes) for an object, similar to its default properties. Attributes and their values are saved with your place/assets and they're an ideal way for team members to experiment with different values during runtime, even if they don't understand the underlying code.
 
-<img src="../assets/studio/properties/Instance-Attributes.png" width="320" alt="Attributes in Properties window of Roblox Studio" />
+<img src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
 
 ### Asset Manager
 
@@ -154,7 +154,7 @@ The [Asset Manager](../projects/assets/manager.md) lets you manage places, image
 
 The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [published](../production/publishing/publishing-assets.md) or those which were published by [groups](../projects/groups.md) you belong to.
 
-<img src="../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
 <img src="../assets/studio/toolbox/Model-Search-Example.png" width="360" alt="Toolbox window in Studio" />
 

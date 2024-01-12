@@ -13,9 +13,9 @@ This tutorial explains the basics of [Roblox Studio](../../studio/setting-up-rob
 
 ## Creating a New Experience
 
-[Roblox Studio](../../studio/setting-up-roblox-studio.md), a free application available on Windows and macOS, is the essential building tool for Roblox experiences.
+[Roblox Studio](../../studio/setting-up-roblox-studio.md), a free application available on Windows and Mac, is the essential building tool for Roblox experiences.
 
-With Studio open, create a new place by pressing <kbd>Ctrl</kbd><kbd>N</kbd> on Windows or <kbd>⌘</kbd><kbd>N</kbd> on macOS. Alternatively, click the **Baseplate** template under the **All&nbsp;Templates** tab.
+With Studio open, create a new place by pressing <kbd>Ctrl</kbd><kbd>N</kbd> on Windows or <kbd>⌘</kbd><kbd>N</kbd> on Mac. Alternatively, click the **Baseplate** template under the **All&nbsp;Templates** tab.
 
 <img src="../../assets/getting-started/Baseplate-Template-Icon.png" width="198" alt="Baseplate template button in Roblox Studio" />
 

@@ -7,26 +7,26 @@ summary: |
   join a game.
 description: |
   The StarterPlayerScripts is a container object located within the
-  `Class.StarterPlayer` service. It contains `Class.LocalScript`s and other
-  objects to be copied to the `Class.PlayerScripts` container once when a
-  `Class.Player` joins the game. For example, if you want to create special
-  effects on the client when certain conditions are met, you can place a
+  `Class.StarterPlayer` service. It contains `Class.LocalScript|LocalScripts`
+  and other objects to be copied to the `Class.PlayerScripts` container once
+  when a `Class.Player` joins the game. For example, if you want to create
+  special effects on the client when certain conditions are met, you can place a
   `Class.LocalScript` within this object to do that.
 
-  This object is also a good place for `Class.LocalScript`s that define
-  additional inputs with `Class.ContextActionService`. For inputs that are only
-  relevant when a player has spawned in, you can use
+  This object is also a good place for `Class.LocalScript|LocalScripts` that
+  define additional inputs with `Class.ContextActionService`. For inputs that
+  are only relevant when a player has spawned in, you can use
   `Class.ContextActionService:BindAction()` when the `Class.Players.LocalPlayer`
   character spawns. Then, use `Class.ContextActionService:UnbindAction()` when
   they die or despawn.
 
   When a game is run, this object will also house the default multi-platform
-  Roblox control scripts for the camera and character. If `Class.LocalScript`s
-  named "CameraScript" or "ControlScript" are placed within this folder, they
-  will **replace** the Roblox defaults for those scripts respectively. You can
-  add empty LocalScripts for each of these to simply disable them altogether.
-  This is useful for games that do not follow the usual control paradigms of a
-  3rd person game.
+  Roblox control scripts for the camera and character. If
+  `Class.LocalScript|LocalScripts` named "CameraScript" or "ControlScript" are
+  placed within this folder, they will **replace** the Roblox defaults for those
+  scripts respectively. You can add empty LocalScripts for each of these to
+  simply disable them altogether. This is useful for games that do not follow
+  the usual control paradigms of a 3rd person game.
 code_samples:
 inherits:
   - Instance

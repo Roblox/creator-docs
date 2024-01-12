@@ -102,8 +102,8 @@ properties:
       Developers should remove a linked source via the properties window, rather
       than setting the property to _'[Embedded]'_.
 
-      For the LinkedSource property for `Class.ModuleScript`s, please see
-      `Class.ModuleScript.LinkedSource`.
+      For the LinkedSource property for `Class.ModuleScript|ModuleScripts`,
+      please see `Class.ModuleScript.LinkedSource`.
     code_samples:
     type: Content
     tags: []

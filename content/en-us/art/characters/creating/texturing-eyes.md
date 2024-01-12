@@ -12,7 +12,7 @@ To texture your eye mesh objects:
 1.  Increase the texture image resolution.
 2.  In the Outliner, toggle the **Hide in Viewport** option for the **Head_Geo**, **LowerTeeth_Geo**, **Tongue_Geo**, and **UpperTeeth_Geo**. Leave the eye mesh objects visible.
     <video controls src="../../../assets/art/avatar/basic-creation/Texturing_01.mp4" width="100%"></video>
-3.  In Object Mode, hold <kbd>Shift</kbd> and click on both the **LeftEye_Geo** and the **RightEye_Geo**. Then right-click and select **Join (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>J</kbd>)** to join the objects. The two objects merge using the name of the last object selected.
+3.  In Object Mode, hold <kbd>Shift</kbd> and click on both the **LeftEye_Geo** and the **RightEye_Geo**. Then right-click and select **Join** (<kbd>Ctrl</kbd><kbd>J</kbd>; <kbd>⌘</kbd><kbd>J</kbd>) to join the objects. The two objects merge using the name of the last object selected.
     <video controls src="../../../assets/art/avatar/basic-creation/Texturing_02.mp4" width="100%"></video>
 4.  Switch to **Texture Paint** mode.
 5.  With the Draw tool active, set the following brush settings for the outer eye shadow:

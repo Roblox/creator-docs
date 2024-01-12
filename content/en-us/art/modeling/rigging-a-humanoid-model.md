@@ -144,7 +144,7 @@ To navigate to Pose mode and test your poses:
 1. In **Object Mode**, select any part of your model.
 2. Click on the Mode dropdown, then switch to **Pose** mode.
 3. Hold <kbd>Shift</kbd> and click the bone you want to test to highlight it, then press <kbd>R</kbd> to test the rotation.
-4. Press <kbd>Alt</kbd>+<kbd>A</kbd> to deselect the current bone, then reselect and test another bone.
+4. Press <kbd>Alt</kbd><kbd>A</kbd> (<kbd>⌥</kbd><kbd>A</kbd>) to deselect the current bone, then reselect and test another bone.
 
    <video controls src="../../assets/modeling/meshes/rigging-humanoid/9-test-bones.mp4" width="100%"></video>
 

@@ -277,7 +277,7 @@ Each NPC includes a `Class.Configuration` object within its hierarchy which acts
 
 The **NPC** script uses `Class.CollectionService` tags to manage aggression toward other characters and players. Various tags from the following table can be assigned as follows:
 
-- To assign tag(s) to another NPC, assign them to the NPC's top-level `Class.Model` using the **Tag&nbsp;Editor**, accessible from the [View](../studio/view-tab.md) tab.
+- To assign tag(s) to another NPC, assign them to the NPC's top-level `Class.Model` using the [Tags](../studio/properties.md#instance-tags) section of its properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools).
 - To assign a tag to a `Class.Player` character, you can add a `Class.Script` to **StarterCharacterScripts** with a `Class.CollectionService:AddTag()` call. For example:
 
   ```lua

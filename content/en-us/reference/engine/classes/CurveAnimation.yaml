@@ -16,11 +16,11 @@ description: |
   ## CurveAnimation structure
 
   CurveAnimation stores curves in a hierarchical manner, matching the hierarchy
-  of the structure of `Class.Motor6D`s or `Class.Bone`s in the animated model.
-  Under each CurveAnimation instance lies a hierarchy of `Class.Folder`
-  instances representing animated joints in the model. Under each such folder
-  instance, several possible instances may exist. An instance named 'Position'
-  of type `Class.Vector3Curve` can drive the local translation of the
+  of the structure of `Class.Motor6D|Motor6Ds` or `Class.Bone|Bones` in the
+  animated model. Under each CurveAnimation instance lies a hierarchy of
+  `Class.Folder` instances representing animated joints in the model. Under each
+  such folder instance, several possible instances may exist. An instance named
+  'Position' of type `Class.Vector3Curve` can drive the local translation of the
   `Class.Motor6D` or `Class.Bone` on the animated model. Similarly, an instance
   named 'Rotation', of type either `Class.EulerRotationCurve` or
   `Class.RotationCurve` can drive the local rotation of the `Class.Motor6D` or
@@ -42,8 +42,8 @@ description: |
   example, you can animate FACS controls for facial animations by creating a
   folder under the CurveAnimation instance named after an existing
   `Class.FaceControls` instance in the model. Then, to animate individual facial
-  controllers, you can store individual `Class.FloatCurve`s instances named
-  after the animated `Class.FaceControls` property.
+  controllers, you can store individual `Class.FloatCurve` instances named after
+  the animated `Class.FaceControls` property.
 
   ## Using CurveAnimation when making animations
 

@@ -41,9 +41,9 @@ properties:
 
       #### How do I create a mesh?
 
-      Meshes can currently only uploaded using `Class.MeshPart`s or the asset
-      manager. Once uploaded however, the content ID for the mesh can be used
-      for the MeshId property. For more information, see
+      Meshes can currently only uploaded using `Class.MeshPart|MeshParts` or the
+      asset manager. Once uploaded however, the content ID for the mesh can be
+      used for the MeshId property. For more information, see
       [Meshes](../../../parts/meshes.md).
     code_samples:
       - Mesh-VertexColor
