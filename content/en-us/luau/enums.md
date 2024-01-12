@@ -26,7 +26,7 @@ end
 
 The `Datatype.EnumItem` is the data type for items in enums. An `Datatype.EnumItem` has three properties:
 
-- `Name` - The name of the `EnumIem`.
+- `Name` - The name of the `Datatype.EnumItem`.
 - `Value` - The numerical index of the `Datatype.EnumItem`.
 - `EnumType` - The parent `Datatype.Enum` of the `Datatype.EnumItem`.
 
