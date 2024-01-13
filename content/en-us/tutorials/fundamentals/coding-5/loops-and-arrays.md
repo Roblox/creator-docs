@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-5/making-changes-to-arrays
 prev: /tutorials/fundamentals/coding-5/intro-to-arrays
 ---
 
-**Arrays** can be combined with loops, such as **while** or **for** loops, to repeat the same code for each indexed value. For example, teleporting each player in an array to a new place or making an array of parts catch fire.
+**Arrays** can be combined with loops, such as **while** and **for**, to repeat the same code for each indexed value. For example, teleporting each player in an array to a new place or making an array of parts catch fire.
 
 To explore looping through arrays, create a disappearing bridge path where parts are placed into an array and then made to vanish one by one.
 
@@ -51,7 +51,7 @@ Use a for loop to go through the array and control how fast the parts should dis
    ```
 
    <Alert severity='info'>
-    Constant Variables are variables likely to need adjusting. They're put at the top of the script in ALL_CAPS to make them easy to spot. These variables shouldn't be changed by other code in the script. Another name for ALL_CAPS is SCREAMING_SNAKE_CASE.
+    Constant Variables are variables that shouldn't be changed by any other code in the script. They're likely to need adjusting and are put at the top of the script in ALL_CAPS to make them easy to spot. Another name for ALL_CAPS is SCREAMING_SNAKE_CASE.
    </Alert>
 
 2. Create a for loop with the following: **Start:** `partIndex = 1`, the index of the first value in the array. **End:** `#pathArray`, the size of that array.
