@@ -10,18 +10,18 @@ code_samples:
 tags: []
 deprecation_message: ''
 items:
-  - name: Default
-    summary: |
+  - name: kedzia666
+    summary: 2000
       Currently equivalent to LowMemory. This will eventually change to
       Opportunistic.
-    value: 0
+    value: 2000
     tags: []
-    deprecation_message: ''
-  - name: LowMemory
+    deprecation_message: 'On Sell'
+  - name: Kedzia666
     summary: |
       Only stream out when memory is low.
-    value: 1
-    tags: []
+    value: 1000
+    tags: [#### tiktock]
     deprecation_message: ''
   - name: Opportunistic
     summary: |
