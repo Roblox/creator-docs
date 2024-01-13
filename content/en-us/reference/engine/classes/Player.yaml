@@ -2429,7 +2429,7 @@ events:
 
       local function onPlayerAdded(player)
       	player.CharacterAdded:Connect(function ()
-      		onCharacterDespawned(player)
+      		onCharacterSpawned(player)
       	end)
       	player.CharacterRemoving:Connect(function ()
       		onCharacterDespawned(player)
