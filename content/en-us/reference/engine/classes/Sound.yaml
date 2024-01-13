@@ -369,10 +369,10 @@ properties:
       A number between 0 and 1000 indicating how loud the `Class.Sound` is
       currently playing back.
 
-      This property reflects the amplitude of the sound's playback in
-      the instance of time it is read. Therefore, for most sounds it will
-      fluctuate constantly. Due to this it can appear in the Roblox Studio
-      properties window as 0, however when read by code in the command bar or
+      This property reflects the amplitude of the sound's playback in the
+      instance of time it is read. Therefore, for most sounds it will fluctuate
+      constantly. Due to this it can appear in the Roblox Studio properties
+      window as 0, however when read by code in the command bar or
       `Class.Script|Scripts` it will return the correct value.
     code_samples:
       - Sound-PlaybackLoudness
@@ -667,13 +667,13 @@ properties:
       can only be in one sound group at a time.
     description: |
       The `Class.SoundGroup` that is linked to this `Class.Sound`.
-      `Class.SoundGroup.Volume` and `Class.SoundEffect|SoundEffects` applied to this sound
-      group will pass onto the sound. A sound can only be in one sound group at
-      a time.
+      `Class.SoundGroup.Volume` and `Class.SoundEffect|SoundEffects` applied to
+      this sound group will pass onto the sound. A sound can only be in one
+      sound group at a time.
 
-      `Class.SoundGroup|SoundGroups` are used to manage the volume and effects of multiple
-      `Class.Sound|Sounds` at once. A `Class.Sound` is added to a `Class.SoundGroup`
-      by setting the SoundGroup property of the sound.
+      `Class.SoundGroup|SoundGroups` are used to manage the volume and effects
+      of multiple `Class.Sound|Sounds` at once. A `Class.Sound` is added to a
+      `Class.SoundGroup` by setting the SoundGroup property of the sound.
     code_samples:
       - Sound-SoundGroup
     type: SoundGroup

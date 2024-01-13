@@ -5,8 +5,8 @@ summary: |
   displayed.
 description: |
   Controls when the `Class.Humanoid` health bar is displayed. This works in
-  conjunction with the `Class.Humanoid.MaxHealth` property which must have
-  a value higher than zero or the health bar doesn't display.
+  conjunction with the `Class.Humanoid.MaxHealth` property which must have a
+  value higher than zero or the health bar doesn't display.
 code_samples:
 tags: []
 deprecation_message: ''

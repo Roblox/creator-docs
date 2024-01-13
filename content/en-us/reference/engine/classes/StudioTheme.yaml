@@ -26,7 +26,8 @@ methods:
       settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainButton, Enum.StudioStyleGuideModifier.Disabled)
       ```
 
-      See the `Enum.StudioStyleGuideColor` reference for a list of Studio elements and `Enum.StudioStyleGuideModifier` for a list of modifiers.
+      See the `Enum.StudioStyleGuideColor` reference for a list of Studio
+      elements and `Enum.StudioStyleGuideModifier` for a list of modifiers.
     code_samples:
     parameters:
       - name: styleguideitem

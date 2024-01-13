@@ -5,8 +5,8 @@ memory_category: Instances
 summary: |
   A container for a Player's currently rendered ScreenGuis.
 description: |
-  The PlayerGui object is a container that holds a player's user GUI. If
-  a `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
+  The PlayerGui object is a container that holds a player's user GUI. If a
+  `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
   inside of the ScreenGui will be drawn to the player's screen. Any
   `Class.LocalScript` will run as soon as it is inserted into a PlayerGui.
 

@@ -4,12 +4,14 @@ category: Avatar
 memory_category: Instances
 summary: |
   A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
-  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart|BaseParts` from
-  having their joints broken due to an `Class.Explosion`.
+  `Class.Humanoid:TakeDamage()` function, and protects
+  `Class.BasePart|BaseParts` from having their joints broken due to an
+  `Class.Explosion`.
 description: |
   A `Class.ForceField` protects a `Class.Humanoid` from taking damage using the
-  `Class.Humanoid:TakeDamage()` function, and protects `Class.BasePart|BaseParts` from
-  having their joints broken due to an `Class.Explosion`.
+  `Class.Humanoid:TakeDamage()` function, and protects
+  `Class.BasePart|BaseParts` from having their joints broken due to an
+  `Class.Explosion`.
 
   ## ForceField Creation
 
@@ -17,10 +19,10 @@ description: |
   the `Class.SpawnLocation.Duration` property is greater than zero.
 
   ForceFields influence the instance they are parented to. When parented to a
-  `Class.Model` they will protect all of the `Class.BasePart|BaseParts` descending from
-  that model. They may be parented to a `Class.BasePart`, but the part's joints
-  will only be protected if both the part and the part it is connected to also
-  contain ForceField.
+  `Class.Model` they will protect all of the `Class.BasePart|BaseParts`
+  descending from that model. They may be parented to a `Class.BasePart`, but
+  the part's joints will only be protected if both the part and the part it is
+  connected to also contain ForceField.
 
   ## Forcefields and Joints
 

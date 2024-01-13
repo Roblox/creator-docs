@@ -1,4 +1,4 @@
-name: AvatarCreationService
+name: ConversationalAIAcceptanceService
 type: class
 category:
 memory_category: Instances
@@ -10,63 +10,69 @@ inherits:
 tags:
   - NotCreatable
   - Service
+  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarCreationService:PromptCreateAvatarAsync
+  - name: ConversationalAIAcceptanceService:AlternativeAssetSelected
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: player
-        type: Player
+      - name: requestId
+        type: string
         default:
         summary: ''
-      - name: humanoidDescription
-        type: HumanoidDescription
+      - name: previousAssetId
+        type: int64
+        default:
+        summary: ''
+      - name: assetId
+        type: int64
         default:
         summary: ''
     returns:
-      - type: Tuple
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-events:
-  - name: AvatarCreationService.UgcValidationFailure
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: guid
-        type: string
-        default:
-        summary: ''
-      - name: errorMessage
-        type: string
-        default:
+      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
-  - name: AvatarCreationService.UgcValidationSuccess
+  - name: ConversationalAIAcceptanceService:AssetInserted
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: guid
+      - name: requestId
         type: string
         default:
         summary: ''
-      - name: serializedModel
-        type: string
+      - name: assetId
+        type: int64
         default:
+        summary: ''
+    returns:
+      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
+  - name: ConversationalAIAcceptanceService:InstanceInserted
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requestId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+events: []
 callbacks: []
