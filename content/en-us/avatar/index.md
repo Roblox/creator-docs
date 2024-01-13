@@ -12,7 +12,7 @@ Every Roblox user is represented by a customizable character called an **avatar*
 
 ## Creating
 
-Create avatar items for Roblox, ranging from clothing, accessories, bodies, and heads. Learn about the various components that power the feature-rich technology unique to Roblox avatars and cosmetics.
+Create avatar free items for Roblox, ranging from clothing, accessories, bodies, and heads. Learn about the various components that power the feature-rich technology unique to Roblox avatars and cosmetics.
 
 <GridContainer numColumns = '2'>
 
