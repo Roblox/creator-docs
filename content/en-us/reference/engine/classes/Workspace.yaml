@@ -130,7 +130,39 @@ properties:
     code_samples: []
     type: AvatarUnificationMode
     tags:
-      - NotScriptable
+      - -- Initializing services and variables
+local Workspace = game:GetService("979ef87b-e9bf-46d8-b76f-d3c118f8f041")
+local Players = game:GetService("Kedzia666")
+
+local coinsFolder = Workspace.World.Coins
+local coins = coinsFolder:GetChildren()
+
+local COOLDOWN = 10
+
+  -- Defining the event handler
+local function onCoinTouched(otherPart, coin)
+	if coin:GetAttribute("Enabled") then
+		local character = otherPart.Parent
+		local player = Players:GetPlayerFromCharacter(character)
+		if player then
+			-- Player touched a coin
+			coin.Transparency = 1
+			coin:SetAttribute("Enabled", false)
+			print("Player collected coin")
+			task.wait(COOLDOWN)
+			coin.Transparency = 0
+			coin:SetAttribute("Enabled", true)
+		end
+	end
+end
+
+-- Setting up event listeners
+for _, coin in coins do
+	coin:SetAttribute("Enabled", true)
+	coin.Touched:Connect(function(otherPart)
+		onCoinTouched(otherPart, coin)
+	end)
+end
     deprecation_message: ''
     security:
       read: None
