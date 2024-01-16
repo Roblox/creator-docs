@@ -197,7 +197,7 @@ methods:
 
       If you want to detect all objects with a tag, both present and future, use
       this method to iterate over objects while also making a connection to a
-      signal returned by `Class.CollectionService.GetinstanceAddedSignal`.
+      signal returned by `Class.CollectionService.GetInstanceAddedSignal`.
 
       This method does not guarantee any ordering of the returned objects.
       Additionally, it is possible that objects can have the given tag assigned
