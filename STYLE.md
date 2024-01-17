@@ -107,12 +107,13 @@ To link to a page in the Roblox Engine API, use the following syntax. The parser
 
 - `` `Global.LuaGlobals.Function()` ``
 - `` `Global.RobloxGlobals.Function()` ``
+- `` `Global.RobloxGlobals.Property` ``
 - `` `Library.Name` ``
-- `` `Library.Name.function()` ``
-- `` `Library.Name.function(argument)` ``
-- `` `Library.Name.function(arg1, arg2, arg3, ...)` ``
+- `` `Library.Name.Function()` ``
+- `` `Library.Name.Function(argument)` ``
+- `` `Library.Name.Function(arg1, arg2, arg3, ...)` ``
 
-The default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply `BasePart`.
+The default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply `Class.BasePart`.
 
 If desired, override the default link text using a `|` character:
 
@@ -162,7 +163,7 @@ The following table contains some examples and how they render in the documentat
       <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutine.create()</a></code></td>
     </tr>
    <tr>
-      <td><code>`Class.Beam:SetTextureOffset(1)|myBeam:SetTextureOffset(1)`</code></td>
+      <td><code>`Class.Beam:SetTextureOffset()|myBeam:SetTextureOffset(1)`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/Beam#SetTextureOffset">myBeam:SetTextureOffset(1)</a></code></td>
     </tr>
     <tr>
