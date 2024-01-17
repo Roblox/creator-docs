@@ -118,7 +118,6 @@ If desired, override the default link text using a `|` character:
 
 - `` `Class.Name.Property|PropertyName` ``
 - `` `Enum.Name|EnumItemName` ``
-- `` `Enum.Name|Custom text here` ``
 
 The following table contains some examples and how they render in the documentation.
 
