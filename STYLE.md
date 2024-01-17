@@ -85,17 +85,23 @@ For links to other pages or the web, use standard Markdown instead of JSX or HTM
 [Meshes](../parts/meshes.md)
 ```
 
-To link to the Roblox Engine API, use the following syntax. The parser detects these keywords and creates monospaced links to the API page:
+To link to a page in the Roblox Engine API, use the following syntax. The parser detects these keywords and creates monospaced links to the API page:
 
 - `` `Class.Name` ``
 - `` `Class.Name.Property` ``
 - `` `Class.Name:Method()` ``
+- `` `Class.Name:Method(argument)` ``
+- `` `Class.Name:Method(arg1, arg2, arg3, ...)` ``
 - `` `Class.Name.Event` ``
 - `` `Class.Name.Callback` ``
 
 - `` `Datatype.Name` ``
 - `` `Datatype.Name:Method()` ``
+- `` `Datatype.Name:Method(argument)` ``
+- `` `Datatype.Name:Method(arg1, arg2, arg3, ...)` ``
 - `` `Datatype.Name.constructor()` ``
+- `` `Datatype.Name.constructor(argument)` ``
+- `` `Datatype.Name.constructor(arg1, arg2, arg3, ...)` ``
 
 - `` `Enum.Name` ``
 
@@ -103,11 +109,16 @@ To link to the Roblox Engine API, use the following syntax. The parser detects t
 - `` `Global.RobloxGlobals.Name` ``
 - `` `Library.Name` ``
 - `` `Library.Name.function()` ``
+- `` `Library.Name.function(argument)` ``
+- `` `Library.Name.function(arg1, arg2, arg3, ...)` ``
+
+The default link text will display without the initial API type prefix (Class, Datatype, Enum, Global, Library).
 
 If desired, override the default link text using a `|` character:
 
 - `` `Class.Name.Property|PropertyName` ``
 - `` `Enum.Name|EnumItemName` ``
+- `` `Enum.Name|Custom text here` ``
 
 The following table contains some examples and how they render in the documentation.
 
