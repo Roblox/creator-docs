@@ -87,6 +87,8 @@ For links to other pages or the web, use standard Markdown instead of JSX or HTM
 
 To link to a page in the Roblox Engine API, use the following syntax. The parser detects these keywords and creates monospaced links to the API page:
 
+### Classes
+
 - `` `Class.Name` ``
 - `` `Class.Name.Property` ``
 - `` `Class.Name:Method()` ``
@@ -94,6 +96,8 @@ To link to a page in the Roblox Engine API, use the following syntax. The parser
 - `` `Class.Name:Method(arg1, arg2, arg3, ...)` ``
 - `` `Class.Name.Event` ``
 - `` `Class.Name.Callback` ``
+
+### Data Types
 
 - `` `Datatype.Name` ``
 - `` `Datatype.Name:Method()` ``
@@ -103,19 +107,26 @@ To link to a page in the Roblox Engine API, use the following syntax. The parser
 - `` `Datatype.Name.constructor(argument)` ``
 - `` `Datatype.Name.constructor(arg1, arg2, arg3, ...)` ``
 
+### Enums
+
 - `` `Enum.Name` ``
+
+### Lua/Roblox Globals
 
 - `` `Global.LuaGlobals.Function()` ``
 - `` `Global.RobloxGlobals.Function()` ``
 - `` `Global.RobloxGlobals.Property` ``
+
+### Libraries
+
 - `` `Library.Name` ``
 - `` `Library.Name.Function()` ``
 - `` `Library.Name.Function(argument)` ``
 - `` `Library.Name.Function(arg1, arg2, arg3, ...)` ``
 
-The default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply <a href="https://create.roblox.com/docs/reference/engine/classes/BasePart">BasePart</a>.
+Note that the default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply <a href="https://create.roblox.com/docs/reference/engine/classes/BasePart">BasePart</a>.
 
-If desired, override the default link text using a `|` character:
+If desired, you can override the default link text using a `|` character:
 
 - `` `Class.Name.Property|PropertyName` ``
 - `` `Enum.Name|EnumItemName` ``
@@ -142,7 +153,11 @@ The following table contains some examples and how they render in the documentat
       <td><code>`Class.MarketplaceService:GetProductInfo()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#GetProductInfo">MarketplaceService:GetProductInfo()</a></code></td>
     </tr>
-   <tr>
+    <tr>
+      <td><code>`Class.MarketplaceService:GetProductInfo()|GetProductInfo()`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#GetProductInfo">GetProductInfo()</a></code></td>
+    </tr>
+    <tr>
       <td><code>`Datatype.Color3`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3">Color3</a></code></td>
     </tr>
