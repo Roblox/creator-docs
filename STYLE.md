@@ -105,8 +105,8 @@ To link to a page in the Roblox Engine API, use the following syntax. The parser
 
 - `` `Enum.Name` ``
 
-- `` `Global.LuaGlobals.Name` ``
-- `` `Global.RobloxGlobals.Name` ``
+- `` `Global.LuaGlobals.Function()` ``
+- `` `Global.RobloxGlobals.Function()` ``
 - `` `Library.Name` ``
 - `` `Library.Name.function()` ``
 - `` `Library.Name.function(argument)` ``
