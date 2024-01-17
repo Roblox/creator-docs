@@ -112,7 +112,7 @@ To link to a page in the Roblox Engine API, use the following syntax. The parser
 - `` `Library.Name.function(argument)` ``
 - `` `Library.Name.function(arg1, arg2, arg3, ...)` ``
 
-The default link text will display without the initial API type prefix (Class, Datatype, Enum, Global, Library).
+The default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply `BasePart`.
 
 If desired, override the default link text using a `|` character:
 
