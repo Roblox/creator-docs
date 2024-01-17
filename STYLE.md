@@ -161,6 +161,14 @@ The following table contains some examples and how they render in the documentat
       <td><code>`Library.coroutine.create()`</code></td>
       <td><code><a href="https://create.roblox.com/docs/reference/engine/libraries/coroutine">coroutine.create()</a></code></td>
     </tr>
+   <tr>
+      <td><code>`Class.Beam:SetTextureOffset(1)|myBeam:SetTextureOffset(1)`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/classes/Beam#SetTextureOffset">myBeam:SetTextureOffset(1)</a></code></td>
+    </tr>
+    <tr>
+      <td><code>`Datatype.CFrame.new(x, y, z)`</code></td>
+      <td><code><a href="https://create.roblox.com/docs/reference/engine/datatypes/CFrame#new">CFrame.new(x, y, z)</a></code></td>
+    </tr>
   </tbody>
 </table>
 
