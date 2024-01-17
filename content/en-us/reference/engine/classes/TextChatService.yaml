@@ -68,14 +68,14 @@ properties:
       created and put in a `Class.Folder` named **TextChatCommands** inside
       `Class.TextChatService`:
 
-      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                                           | Usage Example  |
-      | :---------------- | :----------- | :------------- | :-------------------------------------------------------------------------------------------------------------------- | :------------- |
-      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                                          | `\console`     |
-      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                                   | `\e dance`     |
-      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                                        | `\help`        |
-      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel | TextChannels`.   | `\m Username`  |
-      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel | TextChannels`. | `\um Username` |
-      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                                               | `\version`     |
+      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                                            | Usage Example  |
+      | :---------------- | :----------- | :------------- | :--------------------------------------------------------------------------------------------------------------------- | :------------- |
+      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                                           | `\console`     |
+      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                                    | `\e dance`     |
+      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                                         | `\help`        |
+      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel\|TextChannels`.   | `\m Username`  |
+      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel\|TextChannels`. | `\um Username` |
+      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                                                | `\version`     |
 
       Developers can edit, create, and remove
       `Class.TextChatCommand|TextChatCommands` as even if
