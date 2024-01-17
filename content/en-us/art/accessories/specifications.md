@@ -13,7 +13,6 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 
 - **Single Mesh** - Accessories must be a single mesh.
 - **Budgets** - Accessories can't exceed **4k** triangles.
-- **Texture Budget** - Texture maps can't exceed **1024x1024px**. Assets using additional maps with `Class.SurfaceAppearance` can use smaller **256x256px** maps to optimize performance with virtually no loss in detail.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - Use **quads** whenever possible. Avoid faces with 5 or more sides.
 - **Mesh Size** - Meshes must follow a standard size (in studs, centered on attachment point) depending on its type:
@@ -160,6 +159,10 @@ See the following specifications for attachments:
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.
   - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.
   - Items using `RightCollarAttachment` or `LeftCollarAttachment` do not move with the character's arm.
+
+## Textures
+
+Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Keep in mind that smaller assets, such as accessories, can use smaller texture map sizes, such as **256&times;256px**, to optimize performance with virtually no loss in detail.
 
 ## Layered Requirements
 

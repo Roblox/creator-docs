@@ -4016,7 +4016,7 @@ To configure your own global lighting:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
 
-1. **(Optional)** Apply one or more customizable filters, such as bloom, depth of field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
+1. **(Optional)** Apply one or more customizable filters, such as bloom, depth‑of‑field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
 

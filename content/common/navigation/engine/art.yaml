@@ -2,7 +2,7 @@ navigation:
   - heading: Modeling
   - title: Overview
     path: /art/modeling/
-  - title: Technical Specifications
+  - title: Modeling Specifications
     path: /art/modeling/specifications
   - title: Reference Assets
     path: /art/modeling/project-files
@@ -16,6 +16,8 @@ navigation:
     path: /art/modeling/roblox-blender-plugin
 
   - heading: Texturing
+  - title: Texture Specifications
+    path: /art/modeling/texture-specifications
   - title: Physically-based Rendering (PBR)
     path: /art/modeling/surface-appearance
   - title: PBR Material References
