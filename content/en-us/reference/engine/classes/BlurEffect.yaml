@@ -5,7 +5,7 @@ memory_category: Instances
 summary: |
   Applies a blur to the entire game world.
 description: |
-  The **BlurEffect** applies a gaussian blur to the entire rendered game world.
+  The **BlurEffect** applies a Gaussian blur to the entire rendered game world.
   The strength of the blur is controlled by the `Class.BlurEffect.Size`. Only
   one **BlurEffect** can be applied at once (the instance with the greatest
   `Class.BlurEffect.Size|Size` takes priority).

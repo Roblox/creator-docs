@@ -164,7 +164,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing Requirements](../../art/modeling/specifications.md#textures)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
     <td>Rigging and Skinning</td>

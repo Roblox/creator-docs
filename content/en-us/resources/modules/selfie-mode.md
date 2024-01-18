@@ -70,9 +70,9 @@ SelfieMode.configure({
 
 **SelfieMode** comes with the following [actions](#action), each of which you can use with the [activateAction](#activateaction), [deactivateAction](#deactivateaction), and [toggleAction](#toggleaction) functions, or detect through the [actionActivated](#actionactivated) and [actionDeactivated](#actiondeactivated) events.
 
-#### Depth of Field
+#### Depth-of-Field
 
-By default, **SelfieMode** shows a generic **depth of field** effect (subtle blur of the background) when a player toggles the action.
+By default, **SelfieMode** shows a generic **depth‑of‑field** effect (subtle blur of the background) when a player toggles the action.
 
 <Tabs>
   <TabItem label="Off">
@@ -85,10 +85,10 @@ By default, **SelfieMode** shows a generic **depth of field** effect (subtle blu
 
 <Alert severity="warning">
 <p>This effect does not render on mobile devices such as phones and tablets. As such, it will not be offered as an action on those devices.</p>
-On non-mobile devices, the player's graphics quality (**Settings**&nbsp;&rarr; **Graphics&nbsp;Quality**) must be eight or higher to render depth of field. If their graphics quality is less than eight, they'll be prompted to increase it.
+On non-mobile devices, the player's graphics quality (**Settings**&nbsp;&rarr; **Graphics&nbsp;Quality**) must be eight or higher to render depth‑of‑field. If their graphics quality is less than eight, they'll be prompted to increase it.
 </Alert>
 
-To change the default depth of field effect, set `depthOfFieldEffect` to your own `Class.DepthOfFieldEffect` instance in a [configure](#configure) call.
+To change the default depth‑of‑field effect, set `depthOfFieldEffect` to your own `Class.DepthOfFieldEffect` instance in a [configure](#configure) call.
 
 ```lua title='LocalScript - ConfigureSelfieMode' highlight='5-9, 12'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -231,7 +231,7 @@ end)
 <tbody>
 	<tr>
 		<td>`DepthOfField`</td>
-		<td>Reference to the [Depth of Field](#depth-of-field) action.</td>
+		<td>Reference to the [Depth‑of‑Field](#depth-of-field) action.</td>
 	</tr>
 	<tr>
 		<td>`LockGaze`</td>

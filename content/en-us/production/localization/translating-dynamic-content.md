@@ -3,7 +3,7 @@ title: Translating Dynamic Content
 description: Explains how to use Parameters in localization tables to translate specific parts of content.
 ---
 
-You can use **Parameters** in your [localization table](../../production/localization/translating-in-experience-content.md#cloud-localization-table) when only
+You can use **Parameters** in your [localization table](../../production/localization/manual-translations.md#cloud-localization-table) when only
 part of the displayed string requires translation, such as localizing a
 unit of measurement after a number value, referencing a username, or
 displaying time and date.

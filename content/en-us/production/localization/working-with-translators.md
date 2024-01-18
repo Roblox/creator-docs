@@ -10,12 +10,12 @@ When translating content in your experience to a language that you are not famil
 - Share the `.csv` file of your localization table with a [Non-Roblox translator](#working-with-non-roblox-translators).
 
 <Alert severity="warning">
-Before working with any translators, make sure you set your <a href="./accessing-localization-settings.md#setting-source-language">source</a> and <a href="./accessing-localization-settings.md#setting-supported-languages">supported languages</a> in the experience's localization settings.
+Before working with any translators, make sure you set your <a href="../localization/index.md#setting-source-language">source</a> and <a href="../localization/index.md#setting-supported-languages">supported languages</a> in the experience's localization settings.
 </Alert>
 
 ## Adding Translators
 
-You can add Roblox users or groups as translators in your experience's [localization page](./accessing-localization-settings.md). Adding Roblox users as translators allows you to leverage all the benefits of Roblox's translation tools such as managing group-level permissions and viewing translation analytics.
+You can add Roblox users or groups as translators in your experience's [localization page](../localization/index.md#localization-settings). Adding Roblox users as translators allows you to leverage all the benefits of Roblox's translation tools such as managing group-level permissions and viewing translation analytics.
 
 Any Roblox user or group with edit permissions for your experience can manage, edit, and review translations and translators. Translators can see your string entries and edit translations for any of your supported languages. Translators can not configure any localization settings, add or delete any localization table entries, or grant translator permissions to any users or groups.
 
@@ -77,4 +77,4 @@ To download a translation report:
 
 You can work with translators who do not have Roblox accounts by downloading your experience's localization table as a `.csv` and having your translators add directly to the spreadsheet file. Once your translators have added their contributions, you can re-upload the `.csv` file through Studio. When adding translations through this workflow, translation analytics does not capture translator contributions and detailed history.
 
-See [Adding Translations With File Upload](../../production/localization/translating-in-experience-content.md#adding-translations-with-file-upload) for more information on downloading your experience's localization spreadsheet.
+See [Adding Translations With File Upload](../../production/localization/manual-translations.md#adding-translations-with-file-upload) for more information on downloading your experience's localization spreadsheet.
