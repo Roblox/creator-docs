@@ -3,7 +3,7 @@ title: Migrating from Legacy Chat to In-Experience Text Chat
 description: Explains how to migrate from the Legacy Chat System to the more modern and safe In-Experience Text Chat system.
 ---
 
-The [in-experience text chat system](../chat/in-experience-text-chat.md) offers simplified implementations and modern user interface (UI) of the same feature set as the legacy chat system, providing a more robust and flexible solution for supporting and extending chat in your experience. With this system, you no longer need to fork the chat system manually to add customization and chat commands. Instead, you can simply use engine API classes or the Studio settings to support your chat functionalities.
+The [in-experience text chat system](../chat/in-experience-text-chat.md) offers simplified implementations and modern user interface (UI) of the same feature set as the [legacy chat system](../chat/legacy/legacy-chat-system.md), providing a more robust and flexible solution for supporting and extending chat in your experience. With this system, you no longer need to fork the chat system manually to add customization and chat commands. Instead, you can simply use engine API classes or the Studio settings to support your chat functionalities.
 
 This guide assists you in migrating from the legacy chat system by providing alternative methods for implementing common chat functionalities and behaviors using the in-experience text chat system.
 
