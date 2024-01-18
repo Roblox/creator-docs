@@ -1,6 +1,6 @@
 ﻿# Roblox Documentation Style Guide
 
-This document contains guidelines for our content. The document is subject to change and _not_ comprehensive. If you have suggestions, open an issue or submit a pull request.
+This document contains guidelines for our content. The document is subject to change and **not** comprehensive. If you have suggestions, open an issue or submit a pull request.
 
 ## Content Types
 
@@ -19,63 +19,53 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
 
 - Use present tense whenever possible, even for things that happen after something else.
 
-  **Bad**: You pressed the button, so the cursor will change soon.
-
-  **Better**: After you press the button, the cursor changes.
+  - **BAD**: You pressed the button, so the cursor will change soon.
+  - **BETTER**: After you press the button, the cursor changes.
 
 - Use active voice whenever possible. Active voice forces you to include the subject, which makes an enormous difference in clarity.
 
-  **Bad**: The list of players is returned.
+  - **WORSE**: The list of players is returned.
+  - **BETTER**: The server returns the list of players.
 
-  **Better**: The server returns the list of players.
+- The terms "we" and "our" implies Roblox and is usually reserved for recommendations.
+
+  - **BAD**: Now that we're happy with the terrain, we can start placing our models.
+  - **BETTER**: When you're satisfied with the terrain, begin placing your models.
 
 - Use second-person to address the reader, but try to avoid saying "you" (and especially "you can") too often.
 
-  **Bad**: If you want to build a custom user interface, you can add a container.
+  - **WORSE**: If you want to build a custom user interface, you can add a container.
+  - **BETTER**: Add a container to begin building a custom user interface.
 
-  **Better**: Add a container to begin building a custom user interface.
+- Use **bold** for key terms and UI elements, **not** italics. Use `monospace` for file paths, code, functions, variables, etc.
 
-- "We" is Roblox and is usually reserved for recommendations.
-
-  **Bad**: Now that we're happy with the terrain, we can start placing our models.
-
-  **Better**: When you're satisfied with the terrain, begin placing your models.
-
-- Use bold for key terms and UI elements. Use monospace for file paths, code, functions, variables, etc. Don't use italics.
-
-  **Bad**: It's _very important_ that you click the stop button after running ./script.sh.
-
-  **Better**: Click the **Stop** button after running `./script.sh`.
+  - **BAD**: It's _very important_ that you click the stop button after running **./script.sh**.
+  - **BETTER**: Click the **Stop** button after running `./script.sh`.
 
 - Avoid idioms or colloquialisms. They're hard to localize and confuse many readers.
 
-  **Bad**: Publishing in Roblox is a piece of cake.
-
-  **Better**: Publishing in Roblox is fast and simple.
+  - **WORSE**: Publishing in Roblox is a piece of cake.
+  - **BETTER**: Publishing in Roblox is fast and simple.
 
 - "Can" is for optional actions or permission, "might" for possibility, "must" for requirements, and "should" for recommendations. Avoid "may."
 
-  **Bad**: You should accept the license agreement before you may make changes. You might also review the coding standards.
-
-  **Better**: You must accept the license agreement before you can make changes. You should also review the coding standards.
+  - **WORSE**: You should accept the license agreement before you may make changes. You might also review the coding standards.
+  - **BETTER**: You must accept the license agreement before you can make changes. You should also review the coding standards.
 
 - Avoid gender identifiers. Whenever possible, make subjects plural.
 
-  **Bad**: After clicking, a player can see his or her inventory on his/her screen.
-
-  **Better**: After clicking, players can see their inventories on screen.
+  - **BAD**: After clicking, a player can see his or her inventory on his/her screen.
+  - **BETTER**: After clicking, players can see their inventories on screen.
 
 - Use "select" for options or objects in an experience. Use "click" for buttons or icons.
 
-  **Bad**: Click and drag to grab the signpost. Then select the **Color** button.
+  - **BAD**: Click and drag to grab the signpost. Then select the **Color** button.
+  - **BETTER**: Select the signpost and click the **Color** button.
 
-  **Better**: Select the signpost and click the **Color** button.
+- Spell out one (1) through nine (9). Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), always use numerals, even if the number if smaller than 10.
 
-- Spell out one through nine. Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), use numerals, even if the number if smaller than 10.
-
-  **Bad**: 3 people looked for thirteen files on a six GB hard drive.
-
-  **Better**: Three people looked for 13 files on a 6 GB hard drive.
+  - **BAD**: 3 people looked for thirteen files on a six GB hard drive.
+  - **BETTER**: Three people looked for 13 files on a 6 GB hard drive.
 
 ## Links
 
@@ -116,7 +106,7 @@ When referencing a Roblox Engine API class, method, etc. in prose, use [automati
 
 - For words that are both **concepts** and API **terms** (for example, a [`Touched`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched) event), consider whether you're referring to the concept or the term. Concepts require no special formatting.
 
-  - **TERM**: Connect the function to the [`Touched`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched) event.
+  - **API TERM**: Connect the function to the [`Touched`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched) event.
   - **CONCEPT**: Display text after a player's character has touched the part.
 
 #### Link Syntax
@@ -229,7 +219,7 @@ This technique should be used to shorten the length of rendered links on the pag
 - **WORSE**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`MarketplaceService:PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`MarketplaceService:PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`MarketplaceService.ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
 - **BETTER**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
 
-You should also use link substitution when using an API term in plural:
+You should also use link substitution when framing an API term in plural:
 
 - **BAD**: A model can contain several [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart)s.
 - **BETTER**: A model can contain several [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
