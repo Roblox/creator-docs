@@ -406,6 +406,8 @@ navigation:
             path: /chat/bubble-chat
           - title: Migrating to In-Experience Text Chat
             path: /chat/migrate-to-in-experience-text-chat
+          - title: Legacy Chat Service
+            path: /chat/legacy/legacy-chat-system
   - title: Cloud Services
     section:
       - title: Data Stores
