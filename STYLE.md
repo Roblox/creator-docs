@@ -79,59 +79,88 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
 
 ## Links
 
-For links to other pages or the web, use standard Markdown instead of JSX or HTML. When linking to another page, use relative links to the Markdown file, and include the `.md` extension:
+### Off-Site Links
 
-```md
-[Meshes](../parts/meshes.md)
-```
+For links to other domains or the web, use standard Markdown instead of JSX or HTML:
 
-To link to a page in the Roblox Engine API, use the following syntax. The parser detects these keywords and creates monospaced links to the API page:
+- `[Creator Dashboard](https://create.roblox.com/creations)`
+- `[Blender](https://www.blender.org/)`
 
-### Classes
+### Documentation Site Links
 
-- `` `Class.Name` ``
-- `` `Class.Name.Property` ``
-- `` `Class.Name:Method()` ``
-- `` `Class.Name:Method(argument)` ``
-- `` `Class.Name:Method(arg1, arg2, arg3, ...)` ``
-- `` `Class.Name.Event` ``
-- `` `Class.Name.Callback` ``
+When linking to another page on the Roblox Documentation site, use **relative** links to the Markdown file, including the `.md` extension:
 
-### Data Types
+- `[Meshes](../parts/meshes.md)`
+- `[Merch Booth](../resources/modules/merch-booth.md)`
 
-- `` `Datatype.Name` ``
-- `` `Datatype.Name:Method()` ``
-- `` `Datatype.Name:Method(argument)` ``
-- `` `Datatype.Name:Method(arg1, arg2, arg3, ...)` ``
-- `` `Datatype.Name.constructor()` ``
-- `` `Datatype.Name.constructor(argument)` ``
-- `` `Datatype.Name.constructor(arg1, arg2, arg3, ...)` ``
+### Engine API Links
 
-### Enums
+When referencing a Roblox Engine API class, method, etc. in prose, use [automatic API links](#link-syntax). Do **not** use HTML or Markdown links to a specific URL such as `[BasePart](https://create.roblox.com/docs/reference/engine/classes/BasePart.html)`.
 
-- `` `Enum.Name` ``
+#### Usage Guidelines
 
-### Lua/Roblox Globals
+- In prose, you should always link to an API member, but avoid excessive usage through pronouns and contextual references. For example:
 
-- `` `Global.LuaGlobals.Function()` ``
-- `` `Global.RobloxGlobals.Function()` ``
-- `` `Global.RobloxGlobals.Property` ``
+  - **WORSE**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies, and [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can detect collisions with other [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
+  - **BETTER**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies and they can detect collisions with each other.
 
-### Libraries
+- Never frame API names in the possessive; instead, adjust the phrasing to avoid possessive case: 
 
-- `` `Library.Name` ``
-- `` `Library.Name.Function()` ``
-- `` `Library.Name.Function(argument)` ``
-- `` `Library.Name.Function(arg1, arg2, arg3, ...)` ``
+  - **BAD**: A [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart)'s color is defined by its [`Color`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Color) property.
+  - **BETTER**: The color of a [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is defined by its [`Color`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Color) property.
 
-Note that the default link text will display without the initial API type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` will render as simply <a href="https://create.roblox.com/docs/reference/engine/classes/BasePart">BasePart</a>.
+- If a term should be **plural** in prose, append the plural term after a `|` as outlined in [Link Substitution](#link-substitution).
 
-If desired, you can override the default link text using a `|` character:
+  - **BAD**: A model can contain several [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart)s.
+  - **BETTER**: A model can contain several [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
 
-- `` `Class.Name.Property|PropertyName` ``
-- `` `Enum.Name|EnumItemName` ``
+- For words that are both **concepts** and API **terms** (for example, a [`Touched`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched) event), consider whether you're referring to the concept or the term. Concepts require no special formatting.
 
-The following table contains some examples and how they render in the documentation.
+  - **TERM**: Connect the function to the [`Touched`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Touched) event.
+  - **CONCEPT**: Display text after a player's character has touched the part.
+
+#### Link Syntax
+
+To link to a page in the Roblox Engine API, use the following syntax patterns. The parser detects these keywords and forms monospaced links on the API page:
+
+- **Classes**
+
+  - `` `Class.Name` ``
+  - `` `Class.Name.Property` ``
+  - `` `Class.Name:Method()` ``
+  - `` `Class.Name:Method(argument)` ``
+  - `` `Class.Name:Method(arg1, arg2, arg3, ...)` ``
+  - `` `Class.Name.Event` ``
+  - `` `Class.Name.Callback` ``
+
+- **Data Types**
+
+  - `` `Datatype.Name` ``
+  - `` `Datatype.Name:Method()` ``
+  - `` `Datatype.Name:Method(argument)` ``
+  - `` `Datatype.Name:Method(arg1, arg2, arg3, ...)` ``
+  - `` `Datatype.Name.constructor()` ``
+  - `` `Datatype.Name.constructor(argument)` ``
+  - `` `Datatype.Name.constructor(arg1, arg2, arg3, ...)` ``
+
+- **Enums**
+
+  - `` `Enum.Name` ``
+
+- **Lua/Roblox Globals**
+
+  - `` `Global.LuaGlobals.Function()` ``
+  - `` `Global.RobloxGlobals.Function()` ``
+  - `` `Global.RobloxGlobals.Property` ``
+
+- **Libraries**
+
+  - `` `Library.Name` ``
+  - `` `Library.Name.Function()` ``
+  - `` `Library.Name.Function(argument)` ``
+  - `` `Library.Name.Function(arg1, arg2, arg3, ...)` ``
+
+The following table contains examples and how they render in the documentation. Note that the default link text will display without the initial type prefix (`Class.`, `Datatype.`, `Enum.`, `Global.`, `Library.`). For example, `` `Class.BasePart` `` renders as simply [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
 
 <table>
   <thead>
@@ -188,30 +217,28 @@ The following table contains some examples and how they render in the documentat
   </tbody>
 </table>
 
-## Referencing the API
+#### Link Substitution
 
-When referencing a term from the API in prose, use [automatic API links](#links) whenever it makes sense. The examples in this section demonstrate the API link syntax.
+If desired, you can override the default link text using a `|` character followed by the desired term:
 
-Not every mention of a class, method, or property needs an auto-link. Particularly in an ordered list, overuse of links can distract readers and pull them out of the task flow. In those situations, use your best judgment on whether a link is necessary and helpful. In other situations, such as the API documentation or a reference table, auto-links are almost always a good idea.
+- `` `Class.Name.Property|PropertyName` ``
+- `` `Enum.Name|EnumItemName` ``
 
-If you refer to a term without linking to it, maintain the same capitalization and wrap it in backticks. For example, refer to a `BasePart`, not a "base part."
+This technique should be used to shorten the length of rendered links on the page:
 
-Never frame API names in the possessive:
+- **WORSE**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`MarketplaceService:PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`MarketplaceService:PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`MarketplaceService.ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
+- **BETTER**: [`MarketplaceService`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService) is responsible for in-experience transactions. The most notable methods are [`PromptProductPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptProductPurchase) and [`PromptPurchase()`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#PromptPurchase), as well as the callback [`ProcessReceipt`](https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt) which must be defined so that transactions do not fail.
 
-**Bad**: A `Class.BasePart`'s color is defined by its `Color` property.
+You should also use link substitution when using an API term in plural:
 
-**Better**: The color of a `Class.BasePart` is defined by its `Class.BasePart.Color` property.
+- **BAD**: A model can contain several [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart)s.
+- **BETTER**: A model can contain several [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
 
-If you must make a term plural, include the "s," but make it part of the name itself rather than placing it outside the backticks:
+#### Monospace Non-Links
 
-**Bad**: A model can contain several `Class.BasePart`s.
+To render a term in monospace without any possibility of forming a link, append the term with `|no-link`:
 
-**Better**: A model can contain several `Class.BasePart|BaseParts`.
-
-For words that are both concepts and API terms (for example, a `Touched` event or `Name` property), consider whether you are referring to the concept or the term. Concepts require no special formatting:
-
-- Connect the function to the `Class.BasePart.Touched` event.
-- Display text when players touch the part.
+- `` `monospace|no-link` `` &rarr; `monospace`
 
 ## Engine Reference YAML Files
 
