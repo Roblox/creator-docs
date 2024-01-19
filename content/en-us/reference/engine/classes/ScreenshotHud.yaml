@@ -18,7 +18,7 @@ description: |
     screenshot.
   - A close button that closes the `Class.ScreenshotHud`.
 
-  <img src="/assets/engine-api/classes/ScreenshotHud/Diagram.jpg" width="100%" />
+  <img src="../../../assets/engine-api/classes/ScreenshotHud/Diagram.jpg" width="100%" />
 code_samples:
   - ScreenshotHud
 inherits:

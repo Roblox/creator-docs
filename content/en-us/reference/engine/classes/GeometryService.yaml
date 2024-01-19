@@ -206,12 +206,12 @@ methods:
       of both parts.
 
       <figure>
-      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Intersect.jpg"
+      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Intersect.jpg"
       width="720" alt="Two block parts overlapping" />
       <figcaption>Separate parts</figcaption>
       </figure>
       <figure>
-      <img src="/assets/modeling/solid-modeling/Intersect-Result.jpg"
+      <img src="../../../assets/modeling/solid-modeling/Intersect-Result.jpg"
       width="720" alt="Parts intersected into a new solid model" />
       <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
       </figure>
@@ -333,12 +333,12 @@ methods:
       geometry from that of the cylinder.
 
       <figure>
-      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Subtract.jpg"
+      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Subtract.jpg"
       width="720" alt="Longer block overlapping a cylinder" />
       <figcaption>Separate parts</figcaption>
       </figure>
       <figure>
-      <img src="/assets/modeling/solid-modeling/Negate-Result.jpg" width="720"
+      <img src="../../../assets/modeling/solid-modeling/Negate-Result.jpg" width="720"
       alt="Block part subtracted from cylinder" />
       <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
       </figure>
@@ -460,12 +460,12 @@ methods:
       both parts.
 
       <figure>
-      <img src="/assets/modeling/solid-modeling/Separate-Parts-To-Union.jpg"
+      <img src="../../../assets/modeling/solid-modeling/Separate-Parts-To-Union.jpg"
       width="720" alt="Block and cylinder parts overlapping" />
       <figcaption>Separate parts</figcaption>
       </figure>
       <figure>
-      <img src="/assets/modeling/solid-modeling/Union-Result.jpg" width="720"
+      <img src="../../../assets/modeling/solid-modeling/Union-Result.jpg" width="720"
       alt="Parts joined together into a single solid union" />
       <figcaption>Resulting <code>Class.PartOperation</code></figcaption>
       </figure>

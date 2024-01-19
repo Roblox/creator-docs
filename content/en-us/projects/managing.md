@@ -102,8 +102,6 @@ practices](/production/publishing/publishing-experiences-and-places#metadata-bes
 experience [icons](../production/publishing/experience-icons.md), and [promotional
 thumbnails](/production/promotion/promotional-thumbnails).
 
-<img src="../assets/misc/Experience-Page-Default.jpg" width="100%" />
-
 ## World Building Practices
 
 The following tips will help you build your world in a more efficient and

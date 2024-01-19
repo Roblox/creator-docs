@@ -4,11 +4,13 @@ export enum Emoji {
   EnvelopeWithArrow = '📩',
   HammerAndWrench = '🛠️',
   Label = '🏷️',
+  Link = '🔗',
   NoEntry = '⛔️',
   Mag = '🔍',
   Mailbox = '📫',
   OpenFileFolder = '📂',
   RobotFace = '🤖',
+  WasteBasket = '🗑️',
   WhiteCheckMark = '✅',
 }
 

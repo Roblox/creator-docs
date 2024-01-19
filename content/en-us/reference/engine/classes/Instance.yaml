@@ -1069,14 +1069,17 @@ methods:
       provides a way to detect changes in other properties of those objects.
 
       Note that this event will not pass any arguments to a connected function,
-      so the value of the changed property must be read directly within a script.
+      so the value of the changed property must be read directly within a
+      script.
 
-      Like `Class.Instance.Changed|Changed`, the event returned by this method does not
-      fire for physics-related changes, such as when the `Class.BasePart.CFrame|CFrame`,
+      Like `Class.Instance.Changed|Changed`, the event returned by this method
+      does not fire for physics-related changes, such as when the
+      `Class.BasePart.CFrame|CFrame`,
       `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
       `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
-      `Class.BasePart.Position|Position`, or `Class.BasePart.Orientation|Orientation`
-      properties of a `Class.BasePart` change due to gravity or other physical forces.
+      `Class.BasePart.Position|Position`, or
+      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
+      change due to gravity or other physical forces.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
@@ -1644,8 +1647,8 @@ events:
       property, consider using the `GetPropertyChangedSignal` method instead to
       get an event that only fires when a given property changes.
 
-      For "value" objects such as `Class.IntValue`, this event only fires when the
-      `Value` property changes. See individual pages for `Class.IntValue`,
+      For "value" objects such as `Class.IntValue`, this event only fires when
+      the `Value` property changes. See individual pages for `Class.IntValue`,
       `Class.StringValue`, etc. for more information. To detect other changes in
       these objects, you must use `Class.Instance:GetPropertyChangedSignal()
       instead.

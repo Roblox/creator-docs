@@ -16,13 +16,13 @@ Our platform provides you with unparalleled opportunities to create content like
 
 ## Everything You Need
 
-<img src="assets/getting-started/platform-overview/Everything-You-Need.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" width="100%" />
 
 On Roblox you can start building for free, have everything you need in one place, and are only charged **after** you make money. We provide services, developer support, and free tools such as [Roblox Studio](./studio/setting-up-roblox-studio.md) to help you get started immediately. We also eliminate complicated fee structures by covering hosting, storage, customer support, localization, regulatory requirements, payment processing, and platform fees. And finally, you only pay a percent of money earned **after** you earn the money. With no upfront costs, and everything you need in one place to get started, there is minimal risk to building rich content or an amazing experience on Roblox.
 
 ## Rapid Iteration
 
-<img src="assets/getting-started/platform-overview/Rapid-Iteration.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Rapid-Iteration.jpg" width="100%" />
 
 With [Roblox Studio](./studio/setting-up-roblox-studio.md), you can modify your experiences and publish immediately across console, desktop, and mobile devices without requiring additional approvals from these other platforms (all creators must abide by our [Terms of Use](https://www.roblox.com/info/terms) to publish their experiences with us). This lets you make real-time updates and get feedback from your global users, so you can continuously improve your experience.
 
@@ -30,13 +30,13 @@ In addition, with our streaming architecture people can instantly access your ex
 
 ## Instant Global Access
 
-<img src="assets/getting-started/platform-overview/Instant-Global-Access.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Instant-Global-Access.jpg" width="100%" />
 
 As of the quarter ending June 30, 2023, there were more than 65.5 million average DAUs on Roblox, the majority of whom joined through word of mouth to engage with their friends. Users discover content and experiences through personalized and social recommendations or through search, and can join experiences seamlessly without downloading another app. This combination of a large audience, a social graph, recommendations, and seamless teleportation between experiences drives meaningful organic growth. You can further boost growth through our low-cost ad engine.
 
 ## Committed to Our Community
 
-<img src="assets/getting-started/platform-overview/Community.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Community.jpg" width="100%" />
 
 Not only do we minimize all risks to develop and grow your experience on Roblox, but we are also committed to supporting our community with the right economics. This means 1) charging you only after you earn money, 2) running as lean as possible so you can take home more, and 3) continuing to find more opportunities for you to scale your experience and earn money.
 

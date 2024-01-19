@@ -61,7 +61,7 @@ description: |
   >&lt;/font&gt; is hungry.
   ```
 
-  <img src="/assets/legacy/Stroke-RichText.png" />
+  <img src="../../../assets/legacy/Stroke-RichText.png" />
 code_samples:
 inherits:
   - UIComponent
@@ -78,12 +78,12 @@ properties:
       instead of the text itself.
 
       <figure>
-      <img src="/assets/legacy/Text-Outline-Slim.png" />
+      <img src="../../../assets/legacy/Text-Outline-Slim.png" />
       <figcaption>Contextual</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Text-Border.png" />
+      <img src="../../../assets/legacy/Text-Border.png" />
       <figcaption>Border</figcaption>
       </figure>
             
@@ -109,12 +109,12 @@ properties:
       strokes.
 
       <figure>
-      <img src="/assets/legacy/Outline-Color-Solid.png" />
+      <img src="../../../assets/legacy/Outline-Color-Solid.png" />
       <figcaption>Stroke <code>UIStroke/Color|Color</code> of **0**, **95**, **225**</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Outline-Color-Gradient.png" />
+      <img src="../../../assets/legacy/Outline-Color-Gradient.png" />
       <figcaption><code>UIStroke</code> with <code>UIGradient</code> child</figcaption>
       </figure>
 
@@ -164,17 +164,17 @@ properties:
       of either **Round**, **Bevel**, or **Miter**. Default is **Round**.
 
       <figure>
-      <img src="/assets/legacy/Outline-Corner-Round.png" />
+      <img src="../../../assets/legacy/Outline-Corner-Round.png" />
       <figcaption>Round</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Outline-Corner-Bevel.png" />
+      <img src="../../../assets/legacy/Outline-Corner-Bevel.png" />
       <figcaption>Bevel</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Outline-Corner-Miter.png" />
+      <img src="../../../assets/legacy/Outline-Corner-Miter.png" />
       <figcaption>Miter</figcaption>
       </figure>
             
@@ -199,12 +199,12 @@ properties:
       the parent's outer edges.
 
       <figure>
-      <img src="/assets/legacy/Outline-Thickness-4.png" />
+      <img src="../../../assets/legacy/Outline-Thickness-4.png" />
       <figcaption>4</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Outline-Thickness-12.png" />
+      <img src="../../../assets/legacy/Outline-Thickness-12.png" />
       <figcaption>12</figcaption>
       </figure>
 
@@ -239,12 +239,12 @@ properties:
       render text and borders that are "hollow" (consisting of only an outline).
 
       <figure>
-      <img src="/assets/legacy/Outline-Transparency-A.png" />
+      <img src="../../../assets/legacy/Outline-Transparency-A.png" />
       <figcaption>Stroke <code>UIStroke/Transparency|Transparency</code> of **0.5**Object <code>TextLabel/TextTransparency|TextTransparency</code> of **0**</figcaption>
       </figure>
 
       <figure>
-      <img src="/assets/legacy/Outline-Transparency-B.png" />
+      <img src="../../../assets/legacy/Outline-Transparency-B.png" />
       <figcaption>Stroke <code>UIStroke/Transparency|Transparency</code> of **0**Object <code>TextLabel/TextTransparency|TextTransparency</code> of **1**</figcaption>
       </figure>
             

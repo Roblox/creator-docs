@@ -7,8 +7,8 @@ summary: |
   on the `Class.SpecialMesh.MeshType|MeshType` property.
 description: |
   The `Class.SpecialMesh` object applies a mesh to a `Class.BasePart` depending
-  on the `Class.SpecialMesh.MeshType|MeshType` property. A number of options
-  are available.
+  on the `Class.SpecialMesh.MeshType|MeshType` property. A number of options are
+  available.
 
   - **Brick** - A block shape, equivalent to a `Class.BlockMesh`
   - **Cylinder** - A cylinder, identical to a `Class.Part` with a

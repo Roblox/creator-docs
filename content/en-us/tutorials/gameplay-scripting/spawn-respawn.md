@@ -145,11 +145,11 @@ Because the custom force field is a GUI rather than a new `Class.ParticleEmitter
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-hex.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-hex.png" width="100%"/>
     <figcaption>First-person force field visuals</figcaption>
   </figure>
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-field.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-field.png" width="100%"/>
     <figcaption>Third-person force field visuals</figcaption>
   </figure>
 </GridContainer>
@@ -263,11 +263,11 @@ If you want to test this behavior, you can press <kbd>Esc</kbd>, navigate to the
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="assets/tutorials/gameplay-scripting/Reset-Character-Button.png" width="80%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/Reset-Character-Button.png" width="80%"/>
     <figcaption>Reset Character Button</figcaption>
   </figure>
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-tagged-out.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-tagged-out.png" width="100%"/>
     <figcaption>Respawn Screen</figcaption>
   </figure>
 </GridContainer>

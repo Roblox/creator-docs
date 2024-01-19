@@ -5,7 +5,7 @@ description: Provides a working OAuth 2.0 sample application.
 
 Roblox provides a Node.js sample app that shows how to use OAuth 2.0 to let users log in to their Roblox accounts. This app uses the [authorization code flow _without_ PKCE](oauth2-overview.md#grant-types) and is thus only suitable for confidential clients, such as private servers.
 
-<a href="/assets/open-cloud/open-cloud-nodejs-sample-oauth2-main.zip">
+<a href="../../assets/open-cloud/open-cloud-nodejs-sample-oauth2-main.zip">
   <Button variant="contained">Get the Code</Button>
 </a>
 

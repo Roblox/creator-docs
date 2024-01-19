@@ -7,9 +7,9 @@ This page includes information to help experienced Unity developers get started 
 
 ## Getting Oriented
 
-![Overview of Unity](assets/unity/roblox-unity-editor.jpg)
+![Overview of Unity](./assets/unity/roblox-unity-editor.jpg)
 
-![Overview of Roblox Studio](assets/unity/roblox-unity-studio-markup.png)
+![Overview of Roblox Studio](./assets/unity/roblox-unity-studio-markup.png)
 
 Unity's hierarchy view and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D scenes:
 

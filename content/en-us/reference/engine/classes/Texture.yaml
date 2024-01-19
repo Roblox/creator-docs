@@ -64,8 +64,8 @@ properties:
 
       #### Example
 
-      <img src="/assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
-      <img src="/assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
+      <img src="../../../assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
+      <img src="../../../assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
 
       In the screenshots above, a Part with a Texture is visible. On the left,
       OffsetStudsU/OffsetStudsV are both 0, so the rendered texture tiling
@@ -98,8 +98,8 @@ properties:
 
       #### Example
 
-      <img src="/assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
-      <img src="/assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
+      <img src="../../../assets/legacy/Texture.OffsetStudsUV.0.jpg"  />
+      <img src="../../../assets/legacy/Texture.OffsetStudsUV.1.jpg"  />
 
       In the screenshots above, a Part with a Texture is visible. On the left,
       OffsetStudsU/OffsetStudsV are both 0, so the rendered texture tiling

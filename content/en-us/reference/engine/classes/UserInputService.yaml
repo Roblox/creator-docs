@@ -1447,142 +1447,142 @@ methods:
         <tbody>
           <tr>
             <td><code>Enum.KeyCode.ButtonX</code></td>
-            <td><img src="/assets/scripting/controls/xboxX.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxX.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxX.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonY</code></td>
-            <td><img src="/assets/scripting/controls/xboxY.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxY.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxY.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonA</code></td>
-            <td><img src="/assets/scripting/controls/xboxA.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxA.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxA.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonB</code></td>
-            <td><img src="/assets/scripting/controls/xboxB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadLeft</code></td>
-            <td><img src="/assets/scripting/controls/dpadLeft.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadLeft.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadLeft.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadRight</code></td>
-            <td><img src="/assets/scripting/controls/dpadRight.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadRight.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadRight.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadUp</code></td>
-            <td><img src="/assets/scripting/controls/dpadUp.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadUp.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadUp.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadDown</code></td>
-            <td><img src="/assets/scripting/controls/dpadDown.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadDown.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadDown.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonSelect</code></td>
-            <td><img src="/assets/scripting/controls/xboxView.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxView.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxView.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonStart</code></td>
-            <td><img src="/assets/scripting/controls/xboxmenu.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxmenu.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxmenu.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL1</code></td>
-            <td><img src="/assets/scripting/controls/xboxLB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR1</code></td>
-            <td><img src="/assets/scripting/controls/xboxRB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL2</code></td>
-            <td><img src="/assets/scripting/controls/xboxLT.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR2</code></td>
-            <td><img src="/assets/scripting/controls/xboxRT.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL3</code></td>
-            <td><img src="/assets/scripting/controls/xboxLS.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR3</code></td>
-            <td><img src="/assets/scripting/controls/xboxRS.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick1</code></td>
-            <td><img src="/assets/scripting/controls/xboxLSDirectional.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick2</code></td>
-            <td><img src="/assets/scripting/controls/xboxRSDirectional.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backspace</code></td>
-            <td><img src="/assets/scripting/controls/backspace.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/backspace.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/backspace.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Return</code></td>
-            <td><img src="/assets/scripting/controls/return.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/return.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/return.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.LeftShift</code></td>
-            <td><img src="/assets/scripting/controls/shift.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.RightShift</code></td>
-            <td><img src="/assets/scripting/controls/shift.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Tab</code></td>
-            <td><img src="/assets/scripting/controls/tab.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/tab.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/tab.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Apostrophe</code></td>
-            <td><img src="/assets/scripting/controls/apostrophe.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/apostrophe.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/apostrophe.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Comma</code></td>
-            <td><img src="/assets/scripting/controls/comma.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/comma.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/comma.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backquote</code></td>
-            <td><img src="/assets/scripting/controls/graveaccent.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/graveaccent.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/graveaccent.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Period</code></td>
-            <td><img src="/assets/scripting/controls/period.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/period.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/period.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Space</code></td>
-            <td><img src="/assets/scripting/controls/spacebar.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/spacebar.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/spacebar.png</code></td>
           </tr>
         </tbody>

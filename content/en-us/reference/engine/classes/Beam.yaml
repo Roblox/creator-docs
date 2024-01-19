@@ -506,7 +506,7 @@ properties:
       to `Class.Beam.TextureLength` in studs. For an example of this see the
       image below:
 
-      <img src="/assets/legacy/textureMode_wrap.jpg" class = "half-sized" />
+      <img src="../../../assets/legacy/textureMode_wrap.jpg" class = "half-sized" />
 
       Note, the 'Static' `Enum.TextureMode` type is not used for `Class.Beam`s
       and therefore behaves identically to 'Wrap'.
@@ -518,7 +518,7 @@ properties:
       repeat `Class.Beam.TextureLength` times. For an example of this see the
       image below:
 
-      <img src="/assets/legacy/textureMode_strech.jpg" class = "half-sized" />
+      <img src="../../../assets/legacy/textureMode_strech.jpg" class = "half-sized" />
     code_samples:
       - Creating-a-Beam-From-Scratch
     type: TextureMode

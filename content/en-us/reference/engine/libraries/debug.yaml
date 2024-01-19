@@ -286,7 +286,8 @@ functions:
       Assigns a custom tag name to the current thread's memory category in the
       Developer Console. Useful for analyzing memory usage of multiple threads
       in the same script which would otherwise be grouped together under the
-      same tag/name. Returns the name of the current thread's previous memory category.
+      same tag/name. Returns the name of the current thread's previous memory
+      category.
     parameters:
       - name: tag
         type: string
