@@ -25,7 +25,7 @@ description: |
     `Class.SpotLight.Face` property determines the axis of the attachment from
     which light emanates; **-Z** is front, **+X** is right, **+Y** is top, etc.
 
-  <img src="/assets/legacy/LightingDiagram-SpotLight.jpg" />
+  <img src="../../../assets/legacy/LightingDiagram-SpotLight.jpg" />
 
   See also:
 

@@ -11,7 +11,7 @@ description: |
   converted to this before being used (see image below). Numbers with decimal
   numbers are rounded to the nearest whole number.
 
-  <img src="/assets/engine-api/libraries/bit32/32-Bit-Restriction.png" width="500" alt="32-bit integer conversion (in hexadecimal)" />
+  <img src="../../../assets/engine-api/libraries/bit32/32-Bit-Restriction.png" width="500" alt="32-bit integer conversion (in hexadecimal)" />
 code_samples:
 properties:
 functions:
@@ -85,7 +85,7 @@ functions:
         </tbody>
       </table>
 
-      <img src="/assets/engine-api/libraries/bit32/AND.png" width="500" alt="Bitwise AND of 3 numbers" />
+      <img src="../../../assets/engine-api/libraries/bit32/AND.png" width="500" alt="Bitwise AND of 3 numbers" />
     parameters:
       - name: numbers
         type: Tuple
@@ -102,7 +102,7 @@ functions:
     description: |
       Returns the bitwise negation of `x`.
 
-      <img src="/assets/engine-api/libraries/bit32/NOT.png" width="500" alt="Negation of a provided number" />
+      <img src="../../../assets/engine-api/libraries/bit32/NOT.png" width="500" alt="Negation of a provided number" />
 
       For any integer `x`, the following identity holds:
 
@@ -159,7 +159,7 @@ functions:
         </tbody>
       </table>
 
-      <img src="/assets/engine-api/libraries/bit32/OR.png" width="500" alt="Bitwise OR of 3 numbers" />
+      <img src="../../../assets/engine-api/libraries/bit32/OR.png" width="500" alt="Bitwise OR of 3 numbers" />
     parameters:
       - name: numbers
         type: Tuple
@@ -227,7 +227,7 @@ functions:
         </tbody>
       </table>
 
-      <img src="/assets/engine-api/libraries/bit32/XOR.png" width="580" alt="Bitwise XOR of 3 numbers" />
+      <img src="../../../assets/engine-api/libraries/bit32/XOR.png" width="580" alt="Bitwise XOR of 3 numbers" />
     parameters:
       - name: numbers
         type: Tuple
@@ -370,7 +370,7 @@ functions:
       displacements with absolute values higher than 31 result in zero (all bits
       are shifted out).
 
-      <img src="/assets/engine-api/libraries/bit32/LSHIFT.png" width="500" alt="Number shifted 3 to the left" />
+      <img src="../../../assets/engine-api/libraries/bit32/LSHIFT.png" width="500" alt="Number shifted 3 to the left" />
 
       For positive displacements, the following equality holds:
 
@@ -431,7 +431,7 @@ functions:
       displacements with absolute values higher than 31 result in zero (all bits
       are shifted out).
 
-      <img src="/assets/engine-api/libraries/bit32/RSHIFT.png" width="500" alt="Number shifted 3 to the right" />
+      <img src="../../../assets/engine-api/libraries/bit32/RSHIFT.png" width="500" alt="Number shifted 3 to the right" />
 
       For positive displacements, the following equality holds:
 

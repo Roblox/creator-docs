@@ -9,7 +9,7 @@ description: |
   intersected into a single solid model through Studio's solid modeling
   **Intersect** tool, or through `Class.BasePart:IntersectAsync()`.
 
-  <img src="/assets/studio/general/Model-Tab-Intersect.png"
+  <img src="../../../assets/studio/general/Model-Tab-Intersect.png"
   alt="Intersect tool indicated in Model tab" width="630" />
 
   See [Solid Modeling](../../../parts/solid-modeling.md) to learn more about

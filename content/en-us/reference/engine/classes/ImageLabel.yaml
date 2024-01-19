@@ -273,7 +273,7 @@ properties:
       As a multiplier for the borders of a 9slice, it is useful for reusing one
       rounded corner image for multiple radii.
 
-      <img src="/assets/legacy/scaleImageExample.png" />
+      <img src="../../../assets/legacy/scaleImageExample.png" />
 
       See also:
 

@@ -13,7 +13,7 @@ This feature is currently in beta and changes/upgrades should be anticipated. To
 
 ## Adding Avatars
 
-When importing your avatar assets into Studio using the [3D Importer](../../art/modeling/3d-importer.md) and selecting **Validate UGC Body**, the Avatar Setup tool opens automatically with your imported avatar character and any accompanying clothing and accessories.
+When importing your avatar assets into Studio using the [3D Importer](./3d-importer.md) and selecting **Validate UGC Body**, the Avatar Setup tool opens automatically with your imported avatar character and any accompanying clothing and accessories.
 
 If you have an existing avatar rig inside the place, such as one created through the [Rig Builder](../../studio/rig-builder.md) tool:
 

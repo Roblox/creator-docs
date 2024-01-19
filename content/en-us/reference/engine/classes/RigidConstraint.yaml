@@ -16,7 +16,7 @@ description: |
   **Rigid&nbsp;Constraint** through Studio's **Create** menu in the
   [Model](../../../studio/model-tab.md) tab.
 
-  <img src="/assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
+  <img src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
   width="740" alt="Constraint picker indicated in Studio toolbar" />
 
   Note that this tool behaves differently depending on whether you click on

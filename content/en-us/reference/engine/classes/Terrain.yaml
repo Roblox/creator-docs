@@ -532,7 +532,7 @@ methods:
       `Enum.Material` and the area's CFrame and Size. The orientation of the
       wedge is the same as an equivalent `Class.WedgePart`.
 
-      <img src="/assets/legacy/Terrain.FillWedge.jpg" alt="The results of a call to Terrain:FillWedge with CFrame (0, 50, 0), Size (20, 20, 20), and Material Asphalt" width="537" height="415" />
+      <img src="../../../assets/legacy/Terrain.FillWedge.jpg" alt="The results of a call to Terrain:FillWedge with CFrame (0, 50, 0), Size (20, 20, 20), and Material Asphalt" width="537" height="415" />
 
       In the image above, a floating chunk of Terrain was created by calling
       this function as in the following code. A transparent, pink part with the

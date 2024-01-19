@@ -227,7 +227,7 @@ methods:
       The **CreateToolbar** function creates a new `Class.PluginToolbar` with
       the given name. The toolbar can then be used to create plugin buttons.
 
-      <img src="/assets/legacy/PluginToolbar-light.png" />
+      <img src="../../../assets/legacy/PluginToolbar-light.png" />
     code_samples:
       - Plugin-CreateToolbar1
     parameters:

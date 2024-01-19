@@ -147,7 +147,7 @@ properties:
       red and white hat are multiplied with that of the VertexColor's XYZ
       components.
 
-      <img src="/assets/legacy/DataModelMesh.VertexColor.jpg" />
+      <img src="../../../assets/legacy/DataModelMesh.VertexColor.jpg" />
 
       It should be noted that this property is a `Datatype.Vector3` rather than
       a `Datatype.Color3`. To convert, use the following function:

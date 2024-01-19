@@ -59,7 +59,7 @@ end
 
 If you examine **ReplicatedStorage** > **Blaster** > **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
 
-<video controls src="/assets/tutorials/gameplay-scripting/Blast-State-Video-State.mp4" width="100%"></video>
+<video controls src="../../assets/tutorials/gameplay-scripting/Blast-State-Video-State.mp4" width="100%"></video>
 
 This slight pause prevents you from being able to blast as quickly as you can click. For example, if you change the function to always return true, you can rapidly blast your blaster without any delay, which is unrealistic for laser tag gameplay.
 
@@ -71,7 +71,7 @@ end
 
 <br></br>
 
-<video controls src="/assets/tutorials/gameplay-scripting/Blast-State-Video-True.mp4" width="100%"></video>
+<video controls src="../../assets/tutorials/gameplay-scripting/Blast-State-Video-True.mp4" width="100%"></video>
 
 ## Generate Blast Data
 

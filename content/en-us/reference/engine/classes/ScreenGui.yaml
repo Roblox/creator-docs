@@ -38,7 +38,7 @@ properties:
 
       <figure>
       <img
-      src="/assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-True.png"
+      src="../../../assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-True.png"
       width="840" alt="Mobile device showing UI button clipped by device safe
       area" />
       <figcaption>When set to <code>true</code>, UI objects are clipped
@@ -51,7 +51,7 @@ properties:
 
       <figure>
       <img
-      src="/assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-False.png"
+      src="../../../assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-False.png"
       width="840" alt="Mobile device showing UI button overflowing device safe
       area, obscured by screen camera notch" />
       <figcaption>When set to <code>false</code>, UI objects may overflow the
@@ -176,7 +176,7 @@ properties:
       messages.
 
       <img
-      src="/assets/engine-api/classes/ScreenGui/Core-UI-Safe-Area.png"
+      src="../../../assets/engine-api/classes/ScreenGui/Core-UI-Safe-Area.png"
       width="840" alt="Mobile device showing UI buttons inside core UI safe area" />
 
       If you set this property to `Enum.ScreenInsets|None`, UI objects may be
@@ -192,11 +192,11 @@ properties:
       based on control visibility/size to avoid UI collisions.
 
       <img
-      src="/assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Collapsed.png"
+      src="../../../assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Collapsed.png"
       width="840" alt="Mobile device showing the location of top bar safe area with minimal Roblox UI controls" />
 
       <img
-      src="/assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Expanded.png"
+      src="../../../assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Expanded.png"
       width="840" alt="Mobile device showing the location of top bar safe area responding dynamically to expanded Roblox UI controls" />
     code_samples: []
     type: ScreenInsets

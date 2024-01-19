@@ -14,6 +14,30 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: UGCValidationService:ResetCollisionFidelityWithEditableMeshDataLua
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshPart
+        type: MeshPart
+        default:
+        summary: ''
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: collisionFidelity
+        type: CollisionFidelity
+        default: Box
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: UGCValidationService:CompareTextureOverlapByteString
     summary: ''
     description: ''

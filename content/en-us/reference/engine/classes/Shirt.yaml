@@ -6,7 +6,7 @@ summary: |
   Displays a Shirt texture from the Roblox website to display on a
   `Class.Humanoid` rig.
 description: |
-  <img src="/assets/legacy/Shirt.jpg" alt="A default rig wearing a very dapper Shirt (rbxassetid://86896487)"  />
+  <img src="../../../assets/legacy/Shirt.jpg" alt="A default rig wearing a very dapper Shirt (rbxassetid://86896487)"  />
 
   The **Shirt** object displays a Shirt texture from the Roblox website on a
   `Class.Humanoid` rig. Shirts cover the torso and arms, and will take priority

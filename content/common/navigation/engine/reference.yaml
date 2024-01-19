@@ -3203,11 +3203,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnimationClipFromVideoStatus.yaml
         ignoreTranslation: true
-      - title: AnimationCompositorMode
-        path: /reference/engine/enums/AnimationCompositorMode
-        type: engineapi
-        source: /reference/engine/enums/AnimationCompositorMode.yaml
-        ignoreTranslation: true
       - title: AnimationPriority
         path: /reference/engine/enums/AnimationPriority
         type: engineapi
@@ -3927,11 +3922,6 @@ navigation:
         path: /reference/engine/enums/HumanoidRigType
         type: engineapi
         source: /reference/engine/enums/HumanoidRigType.yaml
-        ignoreTranslation: true
-      - title: HumanoidStateMachineMode
-        path: /reference/engine/enums/HumanoidStateMachineMode
-        type: engineapi
-        source: /reference/engine/enums/HumanoidStateMachineMode.yaml
         ignoreTranslation: true
       - title: HumanoidStateType
         path: /reference/engine/enums/HumanoidStateType
