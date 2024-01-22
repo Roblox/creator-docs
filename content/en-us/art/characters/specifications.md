@@ -9,7 +9,7 @@ When ready to export, see [Export Requirements](../../art/characters/export-sett
 
 ## Geometry
 
-Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [types](#body-types), [parts](#body-parts), and [budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:
+Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [types](#body-scale), [parts](#body-parts), and [budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:
 
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces. Meshes used as outer cages do not need to be watertight.
 - **No N-gons** - Model your assets in quads where possible.
@@ -17,9 +17,9 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 - **Orientation** - Characters must face positive Z and stand up in positive Y.
 - **Pose** - Before exporting, set your character to an I-Pose when possible.
 
-### Body Types
+### Body Scale
 
-Roblox supports 3 standards of body types: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body type is the same, each body type has a unique maximum total body size, as well as a range for each body asset.
+Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body scale is the same, each body scale has a unique maximum total body size, as well as a range for each body asset.
 
 <center>
 <figure>
@@ -31,7 +31,7 @@ A visualization of how Roblox combines the 15 body parts into 6 distinct assets.
 </center>
 
 <Alert severity='warning'>
-Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body type to ensure a standard avatar size and scale.
+Since body assets partially overlap with each other, the total body dimensions do not represent the sum of the avatar's asset dimensions. The total body dimension is the most important factor of each body scale to ensure a standard avatar size and scale.
 </Alert>
 
 #### Normal
@@ -45,7 +45,7 @@ A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#ref
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body type.
+In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
 
 <br />
 
@@ -153,7 +153,7 @@ A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resour
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body type.
+In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
 
 <br />
 
@@ -261,7 +261,7 @@ A Classic body scale [downloadable mannequin](../../avatar/resources.md#referenc
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body type.
+In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Default** to import your model as a Classic body scale.
 
 <br />
 

@@ -45,7 +45,7 @@ After you open the test experience in Studio, import your custom character model
 
       <img src="../../../assets/art/avatar/basic-creation/Testing-Rig-Type.png" />
 
-   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../art/characters/specifications.md#body-types).
+   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../art/characters/specifications.md#body-scale).
    3. Check for any red errors that may block import into Studio.
    4. Verify any yellow warnings that may indicate a quality issue with your avatar components.
 
