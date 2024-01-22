@@ -16,9 +16,9 @@ description: |
   You can get a HumanoidDescription by using the following functions:
 
   - `Class.Players:GetHumanoidDescriptionFromUserId()`, for an outfit currently
-    being worn by a user on Roblox.com
+    being worn by a user on Roblox.
   - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfit created
-    by a user on Roblox.com
+    by a user on Roblox.
   - You can create a Humanoid rig model from a HumanoidDescription through
     `Class.Players:CreateHumanoidModelFromDescription()`.
 
