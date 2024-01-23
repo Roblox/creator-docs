@@ -22,7 +22,7 @@ To upload video assets, you must be a 13+ [ID verified](https://en.help.roblox.c
 - It's less than 375 MB.
 - It includes only English audio and text (additional languages will be supported at a later date).
 
-Videos that don't meet these requirements are rejected. When uploading videos, consider the following:
+Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
 - Each video upload costs 2,000 Robux.
 - You can upload a maximum of three videos within any 30-day period, starting from the date of your first video upload.

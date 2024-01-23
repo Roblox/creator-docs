@@ -335,11 +335,11 @@ When you apply a custom material to a part, the part's `Class.Part.MaterialVaria
 
 When you reuse custom materials in models and packages, each `MaterialVariant` instance must be in `Class.MaterialService` for it to work.
 
-- If you publish a model in the Creator Marketplace with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about publishing models to the Creator Marketplace, see [Publishing Assets](../production/publishing/publishing-assets.md).
-- If you insert a model from the Creator Marketplace, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Marketplace, see [Creator Marketplace](../production/publishing/creator-marketplace.md).
+- If you publish a model in the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about publishing models to the Creator Store, see [Publishing Assets](../production/publishing/publishing-assets.md).
+- If you insert a model from the Creator Store, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Store, see [Creator Store](../production/publishing/creator-store.md).
 - If you want to use custom materials with packages, put the package in `Class.MaterialService`. For more information on packages, see [Packages](../projects/assets/packages.md).
 
-The [Creator Marketplace](../production/publishing/creator-marketplace.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
+The [Creator Store](../production/publishing/creator-store.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
 
 <Alert severity="success">
 To make the most of adaptive materials, use a consistent naming convention for your `Class.MaterialVariant` instances. For example, you can use `PascalCase` with the base material of the custom material as the first word, as in `GrassWet`, `GrassDry`, and `GrassBurned`.

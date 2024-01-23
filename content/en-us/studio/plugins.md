@@ -1,9 +1,9 @@
 ---
 title: Plugins
-description: Plugins are extensions to Studio that you can create to add custom features.
+description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-marketplace.md#finding-assets) community-made plugins from the Creator Marketplace, or you can [create](#creating-new-plugins) and [publish](#publishing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Marketplace, you can either offer them for free or sell them for [Robux](../production/monetization/index.md).
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#publishing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Store, you can either offer them for free or sell them for [Robux](../production/monetization/index.md).
 
 ## Creating New Plugins
 
@@ -130,7 +130,7 @@ end)
 
 ## Publishing Plugins
 
-As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can publish plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). In addition, you can give other creators the ability to purchase and/or install your plugins by publishing them to the [Creator Marketplace](../production/publishing/creator-marketplace.md) with supplementary thumbnails that provide visual information on the plugin's functionality. The minimum amount you can sell plugins is 100 Robux.
+As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can publish plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). In addition, you can give other creators the ability to purchase and/or install your plugins by publishing them to the [Creator Store](../production/publishing/creator-store.md) with supplementary thumbnails that provide visual information on the plugin's functionality. The minimum amount you can sell plugins is 100 Robux.
 
 To publish a plugin:
 
@@ -149,7 +149,7 @@ To publish a plugin:
    - **Description**: A description that describes what a potential user should expect the plugin to do.
    - **Creator**: The creator you'd like to attribute as the creator of the plugin. If you are using [Team Create](../projects/collaboration.md#team-create), every creator appears, otherwise "Me" is the only option.
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your plugin.
-1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Marketplace. If you have previously [verified your account](../production/publishing/account-verification.md), the **Price** field becomes available.
+1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you have previously [verified your account](../production/publishing/account-verification.md), the **Price** field becomes available.
 1. **(Optional)** In the **Price** field, input the amount of Robux you want to charge for the plugin. If you keep the default value of `0`, the plugin is free to all creators.
 1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md).
 

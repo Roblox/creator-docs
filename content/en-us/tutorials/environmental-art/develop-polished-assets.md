@@ -36,7 +36,7 @@ Many developers choose to create a mood or theme board, then add as many picture
 
 Now that you have an art style for your experience, it's time to review your layout and figure out what textures you need to create materials for the 3D space. Environments often require textures that can cover large surfaces, as well as textures that can provide a level of detail to your assets without adding additional geometry. For example, your greybox environment needs textures that can cover the outdoor space, such as moss, flowers and stones, as well as textures to provide details to the combat pockets, such as panels and bolts to frame doorways.
 
-There are two high-level texturing methods that you can use to meet these requirements: tileable textures and trim sheets. The following sections provide information and guidance on both texture methods, including what to consider as you find textures on the [Creator Marketplace](../../production/publishing/creator-marketplace.md), or design them in third-party tools.
+There are two high-level texturing methods that you can use to meet these requirements: tileable textures and trim sheets. The following sections provide information and guidance on both texture methods, including what to consider as you find textures on the [Creator Store](../../production/publishing/creator-store.md), or design them in third-party tools.
 
 ### Tileable Textures
 

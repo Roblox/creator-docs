@@ -5,7 +5,7 @@ description: Layered Modeling Requirements lists the specific technical requirem
 
 When creating accessories and clothing for Roblox, it's important to meet specific technical requirements to ensure compatibility and optimize for performance and quality.
 
-Although rigid accessories and layerable accessories share many technical requirements, layerable accessories must include additional components to ensure the accessories deform and stretch appropriately on different body types. If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../art/marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
+Although rigid accessories and layerable accessories share many technical requirements, layerable accessories must include additional components to ensure the accessories deform and stretch appropriately on different body scales. If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../art/marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
 
 When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
 
@@ -15,7 +15,19 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 - **Budgets** - Accessories can't exceed **4k** triangles.
 - **Watertight** - All geometry must be watertight without exposed holes or backfaces.
 - Use **quads** whenever possible. Avoid faces with 5 or more sides.
-- **Mesh Size** - Meshes must follow a standard size (in studs, centered on attachment point) depending on its type:
+- **Mesh Size** - Depending on the type of accessory asset, meshes must follow a standard size (in studs, centered on attachment point) depending on the [body scale](#body-scale) it is designed for.
+
+### Body Scale
+
+Roblox supports 3 types of body scales: `Classic`, `Normal`, and `Slender`. When designing your accessory, the size of your accessory cannot exceed the following sizes based on body scale and accessory asset type.
+
+See [Body Scale](../accessories/body-scale.md) for more information on the different types of body proportions Roblox supports.
+
+<Alert severity = 'info'>
+You can use tools like the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to help visualize and adjust the scale of your mesh on a mannequin within a visualized boundary before uploading and publishing the asset.
+</Alert>
+
+#### Classic
 
 <table>
 <thead>
@@ -64,8 +76,14 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
     <td>2</td>
   </tr>
   <tr>
-    <td>Shoulder</td>
+    <td>Shoulder (attached to NeckAttachment)</td>
     <td>7</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Shoulder (other)</td>
+    <td>3</td>
     <td>3</td>
     <td>3</td>
   </tr>
@@ -90,9 +108,179 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 </tbody>
 </table>
 
-<Alert severity = 'info'>
-You can use tools like the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to help visualize and adjust your mesh on a mannequin within a visualized boundary before uploading and publishing the asset.
-</Alert>
+#### Normal
+
+<table>
+<thead>
+  <tr>
+    <th>Asset Type</th>
+    <th>Width (X)</th>
+    <th>Height (Y)</th>
+    <th>Depth (Z)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>T-Shirt, Shirt, Sweater, Jacket, Pants, Shorts, Dress &amp; Skirt</td>
+    <td>8</td>
+    <td>8</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Hat</td>
+    <td>1.87</td>
+    <td>2.5</td>
+    <td>1.87</td>
+  </tr>
+  <tr>
+    <td>Hair</td>
+    <td>1.87</td>
+    <td>3.12* <br /> (Not centered: 1.25 up, 1.875 down)</td>
+    <td>2.18* <br /> (Not centered: 0.9375 front, 1.25 behind)</td>
+  </tr>
+  <tr>
+    <td>Face</td>
+    <td>1.87</td>
+    <td>1.25</td>
+    <td>1.25</td>
+  </tr>
+  <tr>
+    <td>Eyebrow and Eyelashes</td>
+    <td>1.5</td>
+    <td>0.5</td>
+    <td>0.5</td>
+  </tr>
+  <tr>
+    <td>Neck</td>
+    <td>2.95</td>
+    <td>3.68</td>
+    <td>2.16</td>
+  </tr>
+  <tr>
+    <td>Shoulder (attached to NeckAttachment)</td>
+    <td>6.90</td>
+    <td>3.68</td>
+    <td>3.24</td>
+  </tr>
+  <tr>
+    <td>Shoulder (attached to RightCollarAttachment, LeftCollarAttachment)</td>
+    <td>2.95</td>
+    <td>3.68</td>
+    <td>3.24</td>
+  </tr>
+    <tr>
+    <td>Shoulder (attached to RightShoulderAttachment, LeftShoulderAttachment)</td>
+    <td>2.67</td>
+    <td>4.40</td>
+    <td>3.09</td>
+  </tr>
+  <tr>
+    <td>Front</td>
+    <td>2.95</td>
+    <td>3.68</td>
+    <td>3.24</td>
+  </tr>
+  <tr>
+    <td>Back</td>
+    <td>9.86</td>
+    <td>8.59</td>
+    <td>4.87* <br /> (Not centered: 1.623 front, 3.246 behind)</td>
+  </tr>
+  <tr>
+    <td>Waist</td>
+    <td>3.94</td>
+    <td>4.29* <br /> (Not centered: 1.842 up, 2.457 down)</td>
+    <td>7.57</td>
+  </tr>
+</tbody>
+</table>
+
+#### Slender
+
+<table>
+<thead>
+  <tr>
+    <th>Asset Type</th>
+    <th>Width (X)</th>
+    <th>Height (Y)</th>
+    <th>Depth (Z)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>T-Shirt, Shirt, Sweater, Jacket, Pants, Shorts, Dress &amp; Skirt</td>
+    <td>8</td>
+    <td>8</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Hat</td>
+    <td>1.78</td>
+    <td>2.5</td>
+    <td>1.78</td>
+  </tr>
+  <tr>
+    <td>Hair</td>
+    <td>1.78</td>
+    <td>3.12* <br /> (Not centered: 1.25 up, 1.875 down)</td>
+    <td>2.08* <br /> (Not centered: 10.892 front, 1.189 behind)</td>
+  </tr>
+  <tr>
+    <td>Face</td>
+    <td>1.78</td>
+    <td>1.25</td>
+    <td>1.18</td>
+  </tr>
+  <tr>
+    <td>Eyebrow and Eyelashes</td>
+    <td>1.5</td>
+    <td>0.5</td>
+    <td>0.5</td>
+  </tr>
+  <tr>
+    <td>Neck</td>
+    <td>2.59</td>
+    <td>3.39</td>
+    <td>1.92</td>
+  </tr>
+  <tr>
+    <td>Shoulder (attached to NeckAttachment)</td>
+    <td>6.05</td>
+    <td>3.39</td>
+    <td>2.88</td>
+  </tr>
+  <tr>
+    <td>Shoulder (attached to RightCollarAttachment, LeftCollarAttachment)</td>
+    <td>2.59</td>
+    <td>3.39</td>
+    <td>2.88</td>
+  </tr>
+    <tr>
+    <td>Shoulder (attached to RightShoulderAttachment, LeftShoulderAttachment)</td>
+    <td>2.37</td>
+    <td>3.96</td>
+    <td>2.75</td>
+  </tr>
+  <tr>
+    <td>Front</td>
+    <td>2.59</td>
+    <td>3.39</td>
+    <td>2.88</td>
+  </tr>
+  <tr>
+    <td>Back</td>
+    <td>8.64</td>
+    <td>7.91</td>
+    <td>4.32* <br /> (Not centered: 1.443 front, 2.886 behind)</td>
+  </tr>
+  <tr>
+    <td>Waist</td>
+    <td>3.76</td>
+    <td>3.29* <br /> (Not centered: 1.414 up, 1.885 down)</td>
+    <td>6.73</td>
+  </tr>
+</tbody>
+</table>
 
 ### Attachment Points
 
