@@ -13,7 +13,7 @@ When you [publish an experience](../../production/publishing/publishing-experien
 
 ## Assets
 
-As long as you are the original creator and that the asset adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), you can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md) or [3D Importer](../../art/modeling/3d-importer.md), or any model or plugin that you have uploaded to your inventory in the [Toolbox](../../projects/assets/toolbox.md). When you publish any of these assets, the [Creator Marketplace](../../production/publishing/creator-marketplace.md) makes it automatically available to other creators to use within their experiences.
+As long as you are the original creator and that the asset adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), you can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md) or [3D Importer](../../art/modeling/3d-importer.md), or any model or plugin that you have uploaded to your inventory in the [Toolbox](../../projects/assets/toolbox.md). When you publish any of these assets, the [Creator Store](../../production/publishing/creator-store.md) makes it automatically available to other creators to use within their experiences.
 
 <img src="../../assets/studio/toolbox/Model-Search-Example.png" width="360" />
 

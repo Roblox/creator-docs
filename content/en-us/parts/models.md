@@ -107,3 +107,7 @@ Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `C
 Because 3D content that exists on the client changes dynamically in a streaming-enabled experience, models may suddenly disappear. To alleviate this, you can set specific models to render as lower resolution "imposter" meshes when streamed out, as detailed in [Model Level&nbsp;of&nbsp;Detail](../workspace/streaming.md#model-level-of-detail).
 
 See [Model Streaming Controls](../workspace/streaming.md#model-streaming-controls) for more on model-level streaming controls.
+
+## Publishing Models
+
+You can [publish](../production/publishing/publishing-assets.md) models to the [Creator Store](../production/publishing/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright.

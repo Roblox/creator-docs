@@ -20,7 +20,7 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
     </tbody>
 </table>
 
-This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Marketplace][CreatorMarketplaceURL], equip avatar assets in the [Roblox Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
+This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
 
 When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset Permissions](#asset-permissions).
 
@@ -29,8 +29,8 @@ When you import assets, they must pass a [moderation](#asset-moderation) check b
 All [asset types](/reference/engine/enums/AssetType) available on the platform generally fall into one of three categories:
 
 - Assets that map to project-level items. You can find and configure these assets for specific experiences on the [Creator Dashboard][CreatorDashboardURL].
-- Assets that are objects, or that change the appearance or behavior of objects within places. You can [import](#asset-management) these assets or find them in the [Creator Marketplace][CreatorMarketplaceURL].
-- Assets that change the body, clothing, or animation of avatars and non-playable characters. You can find these assets in the [Roblox Marketplace][MarketplaceURL].
+- Assets that are objects, or that change the appearance or behavior of objects within places. You can [import](#asset-management) these assets or find them in the [Creator Store][CreatorMarketplaceURL].
+- Assets that change the body, clothing, or animation of avatars and non-playable characters. You can find these assets in the [Marketplace][MarketplaceURL].
 
 Every asset type works differently depending on where it lives on the platform. See the following sections for information on how to use each asset type for [experiences](#for-experiences), [places](#for-places), and [avatars](#for-avatars).
 
@@ -44,7 +44,7 @@ There are three asset types that map to project-level items. These asset types a
 
 ### For Places
 
-In general, there are two categories of asset types for places that you can either [import](#asset-management) or find in the [Creator Marketplace][CreatorMarketplaceURL]:
+In general, there are two categories of asset types for places that you can either [import](#asset-management) or find in the [Creator Store][CreatorMarketplaceURL]:
 
 - Assets that exist as objects within the data model, such as [models](../../parts/models.md) and [meshes](../../parts/meshes.md).
 - Assets that you apply as an object's property, such as audio, images, fonts, and videos.
@@ -77,7 +77,7 @@ For more information on both types of these assets for places, such as where and
         </tr>
         <tr>
             <td>**Font**</td>
-            <td>`Class.TextButton`, `Class.TextLabel`, and `Class.TextBox` objects display typography in a specific style when you apply a font asset ID. You cannot import fonts, but the [Creator Marketplace][CreatorMarketplaceURL] offers over 80 different fonts for your use.</td>
+            <td>`Class.TextButton`, `Class.TextLabel`, and `Class.TextBox` objects display typography in a specific style when you apply a font asset ID. You cannot import fonts, but the [Creator Store][CreatorMarketplaceURL] offers over 80 different fonts for your use.</td>
         </tr>
         <tr>
             <td>**Video**</td>
@@ -88,7 +88,7 @@ For more information on both types of these assets for places, such as where and
 
 ### For Avatars
 
-There are three categories of asset types for avatars that you can find in the [Roblox Marketplace][MarketplaceURL] and equip to avatars:
+There are three categories of asset types for avatars that you can find in the [Marketplace][MarketplaceURL] and equip to avatars:
 
 - **Body Parts** — Assets that represent sections of the avatar character model, such as its head, torso, or legs.
 - **Clothing and Accessories** — Assets that represent clothing and accessories on top of body parts.
@@ -236,7 +236,7 @@ end
 
 ## Asset Permissions
 
-An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must publish the asset to the [Creator Marketplace][CreatorMarketplaceURL].
+An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must publish the asset to the [Creator Store][CreatorMarketplaceURL].
 
 <Alert severity="warning">
 Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
@@ -270,7 +270,7 @@ Roblox offers several tools to import, store, and publish your assets:
         </tr>
 				<tr>
             <td>[Toolbox](../../projects/assets/toolbox.md)</td>
-            <td>Stores every asset that you or your [groups](../../projects/groups.md) have ever imported into Studio, regardless of what experience you currently have open. Also includes assets from the [Creator Marketplace][CreatorMarketplaceURL], allowing you to quickly drop user-generated assets directly into your experiences.</td>
+            <td>Stores every asset that you or your [groups](../../projects/groups.md) have ever imported into Studio, regardless of what experience you currently have open. Also includes assets from the [Creator Store][CreatorMarketplaceURL], allowing you to quickly drop user-generated assets directly into your experiences.</td>
         </tr>
         <tr>
             <td>[3D Importer](../../art/modeling/3d-importer.md)</td>

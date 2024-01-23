@@ -120,7 +120,7 @@ To insert an image ad:
    1. From the menu, insert an **AdGui**.
 
 <Alert severity="info">
-   You can also insert an image ad package from the Creator Marketplace, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Marketplace, see [Inserting Ad Units - Portal Ads](#portal-ads).
+   You can also insert an image ad package from the Creator Store, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Store, see [Inserting Ad Units - Portal Ads](#portal-ads).
 </Alert>
 
 Once you publish the experience, users can see the ad unit in one of the following states:
@@ -159,7 +159,7 @@ A portal ad is made up of two core components:
 - A static, non-clickable image.
 - A door that teleports users to an advertiser's experience.
 
-The Creator Marketplace includes portal ads that represent these core components through a **BasePortal** package. While this package must remain as-is outside of its scale, position, and rotation in order to remain valid and able to serve ads, portal ads also include a **Decorative** folder of both static and dynamic visual elements that display or hide according to the ad unit's state. You can customize these visual elements as long as the core components stay intact and without obstruction.
+The Creator Store includes portal ads that represent these core components through a **BasePortal** package. While this package must remain as-is outside of its scale, position, and rotation in order to remain valid and able to serve ads, portal ads also include a **Decorative** folder of both static and dynamic visual elements that display or hide according to the ad unit's state. You can customize these visual elements as long as the core components stay intact and without obstruction.
 
 <GridContainer numColumns="2">
   <figure>
@@ -183,7 +183,7 @@ For example, the following two portal ad packages have the exact same core compo
 
 To insert a portal ad:
 
-1. Open the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+1. Open the [Creator Store](../../production/publishing/creator-store.md).
    1. In the menu bar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
 1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.

@@ -45,7 +45,7 @@ can:
 
 ## Creating Textures or Decals
 
-To create a texture or decal, you have to add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#importing-assets) images for textures and decals to Studio for use between experiences, and [publish](../production/publishing/publishing-assets.md) them to the [Creator Marketplace](../production/publishing/creator-marketplace.md). Once you import the image, Studio assigns it a unique asset ID.
+To create a texture or decal, you have to add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#importing-assets) images for textures and decals to Studio for use between experiences, and [publish](../production/publishing/publishing-assets.md) them to the [Creator Store](../production/publishing/creator-store.md). Once you import the image, Studio assigns it a unique asset ID.
 
 <Alert severity="info">
   Every texture or decal image that you create and import to Roblox must adhere to the <a href='https://en.help.roblox.com/hc/articles/203313410'>Community Rules</a> and <a href='https://en.help.roblox.com/hc/articles/115004647846'>Terms of Use</a>.

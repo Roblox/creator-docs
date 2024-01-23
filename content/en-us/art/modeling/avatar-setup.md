@@ -156,7 +156,7 @@ The **Test in Experience** button starts playtesting the experience with the pre
 
 ### Publish
 
-The **Publish** button opens the publish asset dialog, with an option to upload the avatar and any accessory items to the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+The **Publish** button opens the publish asset dialog, with an option to upload the avatar and any accessory items to the [Creator Store](../../production/publishing/creator-store.md).
 
 <figure>
 <img src="../../assets/studio/avatar-setup/Interface-Publish.jpg" width="700" alt="Publish button indicated in Avatar Preview tool" />

@@ -25,11 +25,11 @@ To see **EventSequencer** in action within an editable place, check out the [Con
 
 To use the **EventSequencer** framework in an experience:
 
-1. From the [View](../../studio/view-tab.md), open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md), open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
@@ -243,7 +243,7 @@ To install the plugin:
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-2. With the **Marketplace** tab selected, select **Plugins** from the dropdown menu.
+2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
 
    <img src="../../assets/studio/toolbox/Marketplace-Plugins.png" width="360" />
 

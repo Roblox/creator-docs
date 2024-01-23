@@ -10,13 +10,13 @@ The **Toolbox** contains a selection of [models](../../parts/models.md), [images
 
 ## Sections
 
-The toolbox is organized into distinct sections of [Marketplace](#marketplace), [Inventory](#inventory), and [Recent](#recent).
+The toolbox is organized into distinct sections of [Creator Store](#creator-store), [Inventory](#inventory), and [Recent](#recent).
 
-### Marketplace
+### Creator Store
 
-The **Marketplace** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/frames.md#videoframe), and fonts made by Roblox or Roblox community members.
+The **Creator Store** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/frames.md#videoframe), and fonts made by Roblox or Roblox community members.
 
-<img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" alt="Marketplace tab indicated in Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" alt="Creator Store tab indicated in Studio's Toolbox" />
 
 <Alert severity="warning">
 Take caution when inserting models that you didn't create into your experiences, as they may contain malicious scripts that can impact performance or behavior. It's recommended to always [inspect assets](#asset-inspection) and investigate any embedded scripts before bringing them into your place file.
@@ -24,7 +24,7 @@ Take caution when inserting models that you didn't create into your experiences,
 
 ### Inventory
 
-The **Inventory** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [packages](../../projects/assets/packages.md), [videos](../../ui/frames.md#videoframe), [plugins](../../studio/plugins.md), [animations](../../animation/editor.md), and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+The **Inventory** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [packages](../../projects/assets/packages.md), [videos](../../ui/frames.md#videoframe), [plugins](../../studio/plugins.md), [animations](../../animation/editor.md), and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Store](../../production/publishing/creator-store.md).
 
 <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />
 
@@ -40,17 +40,17 @@ The **Recent** tab is similar to [Inventory](#inventory) except that it is filte
 <TabItem label="Asset Category">
 Within any of the toolbox sections, use the **category selector** dropdown to sort assets by category. The options in the dropdown vary by section.
 
-<img src="../../assets/studio/toolbox/Marketplace-Category-Selector.png" width="360" height="284" alt="Category selector in Marketplace tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Marketplace-Category-Selector.png" width="360" height="284" alt="Category selector in the Creator Store tab of Studio's Toolbox" />
 </TabItem>
-<TabItem label="Marketplace Sorting">
-Within the [Marketplace](#marketplace) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
+<TabItem label="Creator Store Sorting">
+Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
 
-<img src="../../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in Marketplace tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in the Creator Store tab of Studio's Toolbox" />
 </TabItem>
 <TabItem label="Inventory Sorting">
 Within the [Inventory](#inventory) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter by **My&nbsp;Assets**, and sort by other criteria.
 
-<img src="../../assets/studio/toolbox/Inventory-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in Inventory tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Inventory-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in the Inventory tab of Studio's Toolbox" />
 
 <Alert severity="success">
 Checking **My Assets** is particularly useful for filtering by assets that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to. All assets with this criteria can be [configured](#asset-configuration-and-versioning) directly within Studio.

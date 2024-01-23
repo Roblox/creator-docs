@@ -1,15 +1,15 @@
 ---
 title: External Catalog Queries
-description: External Catalog Queries let you externally query the Creator Marketplace Catalog and Marketplace Catalog.
+description: External Catalog Queries let you externally query the Creator Store Catalog and Marketplace Catalog.
 ---
 
-You can search Roblox's assets outside Studio by accessing the external catalog API. Use the [Creator Marketplace API](#creator-marketplace-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
+You can search Roblox's assets outside Studio by accessing the external catalog API. Use the [Creator Store API](#creator-store-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
 
 Each API requires a URL and custom search parameters for that specific catalog. If both URL and parameters are valid, the API returns a JSON format with the results of your search.
 
-## Creator Marketplace API
+## Creator Store API
 
-You can query items from the Creator Marketplace catalog using the following URL:
+You can query items from the Creator Store catalog using the following URL:
 `https://search.roblox.com/catalog/json?[params]`
 
 You can replace `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
@@ -18,7 +18,7 @@ You can replace `[params]` with the appropriate [query parameters](#query-parame
 
 You can specify search parameters by appending a series of parameters and values to the URL, each separated by a `&`.
 
-Use the following parameters to query the Creator Marketplace catalog:
+Use the following parameters to query the Creator Store catalog:
 
 <table>
 <thead>
