@@ -227,7 +227,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 ## Creating and Selling Studio Plugins
 
-You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Marketplace](../production/publishing/creator-marketplace.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of 100&nbsp;Robux.
+You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/publishing/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of 100&nbsp;Robux.
 
 <Grid container spacing={3}>
 <Grid item xs={12} lg={7}>

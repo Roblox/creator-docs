@@ -62,22 +62,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: StarterPlayer.AnimationCompositorMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: AnimationCompositorMode
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Character
-    serialization:
-      can_load: true
-      can_save: true
   - name: StarterPlayer.AutoJumpEnabled
     summary: |
       Sets whether the character will automatically jump when hitting an
@@ -611,22 +595,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
-    serialization:
-      can_load: true
-      can_save: true
-  - name: StarterPlayer.HumanoidStateMachineMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: HumanoidStateMachineMode
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Controls
     serialization:
       can_load: true
       can_save: true

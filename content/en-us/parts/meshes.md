@@ -12,9 +12,9 @@ You can insert [creator-uploaded meshes](#inserting-meshes) or import [custom me
 
 ## Inserting Meshes
 
-### Creator Marketplace
+### Creator Store
 
-You can browse thousands of user-uploaded meshes from the [Creator Marketplace](../production/publishing/creator-marketplace.md) through the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md).
+You can browse thousands of user-uploaded meshes from the [Creator Store](../production/publishing/creator-store.md) through the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md).
 
 1. Navigate to the **View** tab and select **Toolbox**.
 

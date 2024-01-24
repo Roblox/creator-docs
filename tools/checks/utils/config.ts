@@ -43,7 +43,9 @@ export interface IConfig {
   checkProtectedFields: boolean;
   checkRelativeLinks: boolean;
   checkRetextAnalysis: boolean;
+  checkUnusedAssets: boolean;
   debug: boolean;
+  deleteUnusedAssets: boolean;
   files: FileOption;
   onlyRequiredChecks: boolean;
   postPullRequestComments: boolean;
@@ -198,10 +200,20 @@ export const getConfig = async (): Promise<IConfig> => {
       description: 'Whether to check retext analysis',
       default: getEnvVar('CHECK_RETEXT_ANALYSIS', DataType.Boolean),
     })
+    .option('checkUnusedAssets', {
+      type: 'boolean',
+      description: 'Whether to check for unused assets',
+      default: getEnvVar('CHECK_UNUSED_ASSETS', DataType.Boolean),
+    })
     .option('commitHash', {
       type: 'string',
       description: 'The commit hash to post a pull request comment on',
       default: process.env.COMMIT_HASH,
+    })
+    .option('deleteUnusedAssets', {
+      type: 'boolean',
+      description: 'Whether to delete unused assets',
+      default: getEnvVar('DELETE_UNUSED_ASSETS', DataType.Boolean),
     })
     .option('debug', {
       type: 'boolean',

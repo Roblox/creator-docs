@@ -54,7 +54,7 @@ properties:
       plugin toolbar buttons are visible. Some are enabled as a result of this
       property being true, such as the Localization Tools button.
 
-      <img src="/assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
+      <img src="../../../assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
 
       Typically, this property is good to enable if an action triggered by a
       plugin button's `Class.PluginToolbarButton.Click|Click` event doesn't

@@ -28,7 +28,7 @@ Once we had our early draft of the overall layout, we used [terrain](../../parts
   <figcaption>Early concept of how we wanted the player to approach the house. To drive players to want to get a closer look at the house, we used trees to obscure their view while still giving glimpses of the house and the event in the sky.</figcaption>
 </figure>
 
-Using both simple [parts](../../parts/index.md) along with [Creator Marketplace](../../production/publishing/creator-marketplace.md) assets, we were able to quickly add in content that would help us compose the environment, including:
+Using both simple [parts](../../parts/index.md) along with [Creator Store](../../production/publishing/creator-store.md) assets, we were able to quickly add in content that would help us compose the environment, including:
 
 - Making the road bend so players couldn't see all the way down the length of it.
 - Adding trees with denser areas where we wanted to make it clear the player couldn't access, along with thinner areas where we wanted to encourage them to explore.
@@ -36,11 +36,11 @@ Using both simple [parts](../../parts/index.md) along with [Creator Marketplace]
 - Positioning the giant event behind the storm in the sky so players could see parts, but not the whole thing, until they approach the house itself.
 - Placing and figuring out the general shape of the house we ultimately settled with.
 
-No amount of experience guarantees your first ideas are the best ones. This is why we got assets into Studio quickly and used simple parts and Creator Marketplace assets to fill in the environment with temporary assets. This allowed us to not have to make everything up front, and we could start playtesting within the first few days.
+No amount of experience guarantees your first ideas are the best ones. This is why we got assets into Studio quickly and used simple parts and Creator Store assets to fill in the environment with temporary assets. This allowed us to not have to make everything up front, and we could start playtesting within the first few days.
 
 <figure>
   <img src="../../assets/resources/mystery-of-duvall-drive/constructing-the-house/earliest-version-toolbox-house.png" width="60%" />
-  <figcaption>Earliest version using simple parts and the Creator Marketplace.</figcaption>
+  <figcaption>Earliest version using simple parts and the Creator Store.</figcaption>
 </figure>
 
 While we wanted to eventually replace the temporary assets with our own, the only thing we cared about early on was laying out the basics and playing the experience to make sure the environment was fun to move around and wasn't too large or too much of a "straight shot" so that players were encouraged to explore.

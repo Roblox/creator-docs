@@ -129,7 +129,7 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 </Tabs>
 
 <Alert severity = 'info'>
-For technical details on texture file requirements, see [texture requirements](../../art/modeling/specifications.md#textures).
+For technical details on texture file requirements, see [texture requirements](../../art/modeling/texture-specifications.md).
 </Alert>
 
 ### Color (Albedo)

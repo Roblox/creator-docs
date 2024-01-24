@@ -71,7 +71,7 @@ and meshes from other tools.
 
 By default, assets are private to your experience and you can use them in any
 place by referencing its ID. You can also publish and share them to the
-community in the [Creator Marketplace](https://create.roblox.com/marketplace/),
+community in the [Creator Store](https://create.roblox.com/marketplace/),
 so others can use them as well.
 
 For more information on how to import and publish assets, see

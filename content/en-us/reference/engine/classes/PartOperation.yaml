@@ -77,14 +77,14 @@ properties:
 
       <figure>
       <img
-      src="/assets/modeling/solid-modeling/CSG-SmoothingAngle-0.jpg" width="400"
+      src="../../../assets/modeling/solid-modeling/CSG-SmoothingAngle-0.jpg" width="400"
       alt="Solid modeled part with SmoothingAngle of 0" />
       <figcaption><code>Class.PartOperation.SmoothingAngle|SmoothingAngle</code>
       = 0</figcaption>
       </figure>
       <figure>
       <img
-      src="/assets/modeling/solid-modeling/CSG-SmoothingAngle-50.jpg"
+      src="../../../assets/modeling/solid-modeling/CSG-SmoothingAngle-50.jpg"
       width="400" alt="Solid modeled part with SmoothingAngle of 50" />
       <figcaption><code>Class.PartOperation.SmoothingAngle|SmoothingAngle</code>
       = 50</figcaption>

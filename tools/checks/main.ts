@@ -41,6 +41,7 @@ import {
   allowedHttpLinksTextFileFullPath,
   checkContentLinks,
   allNonRobloxHttpLinks,
+  checkUnusedAssets,
 } from './utils/links.js';
 import {
   addToSummaryOfRequirements,
@@ -57,7 +58,6 @@ let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
-  console.log('Checking only Markdown files...');
   if (config.files === FileOption.All) {
     filesToCheck.push(
       ...getAllContentFileNamesWithExtension({
@@ -229,6 +229,9 @@ try {
       });
     }
     console.log('::endgroup::');
+  }
+  if (config.checkUnusedAssets) {
+    checkUnusedAssets({ config });
   }
   if (config.debug) {
     writeListToFile(

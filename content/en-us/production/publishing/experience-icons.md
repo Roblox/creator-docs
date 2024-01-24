@@ -21,7 +21,7 @@ the experience displays on the [Discover](https://www.roblox.com/discover#/) pag
   </figure>
 </GridContainer>
 
-When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/translating-experience-page-information.md), you can also include supplementary [image and video thumbnails](../../production/promotion/promotional-thumbnails.md) that further promote the experience.
+When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](../../production/promotion/promotional-thumbnails.md) that further promote the experience.
 
 For more information on maximizing the impact of your experience's icon, see [Best Practices](#best-practices).
 

@@ -17,7 +17,7 @@ description: |
   [Model](../../../studio/model-tab.md) tab.
 
   <img
-  src="/assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
+  src="../../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
   width="740" alt="Constraint picker indicated in Studio toolbar" />
 
   Unlike most constraints, `Class.NoCollisionConstraint` does not utilize any

@@ -21,13 +21,13 @@ Every property of the `Class.Atmosphere` object inside the `Class.Lighting` serv
 
 ### Density
 
-The `Class.Atmosphere.Density|Density` property controls how many particles exist in the air of your experience; the higher the density, the more particles, which obstruct a player's view of objects and terrain. This is useful in creating a depth of field.
+The `Class.Atmosphere.Density|Density` property controls how many particles exist in the air of your experience; the higher the density, the more particles, which obstruct a player's view of objects and terrain.
 
 <Tabs>
-  <TabItem label="Density = 0">
+  <TabItem label="0">
     <img src="../assets/lighting-and-effects/atmosphere/Density-A.jpg" width="800" height="400" alt="Atmosphere with Density value of 0" />
   </TabItem>
-  <TabItem label="Density = 0.35">
+  <TabItem label="0.35">
     <img src="../assets/lighting-and-effects/atmosphere/Density-B.jpg" width="800" height="400" alt="Atmosphere with Density value of 0.35" />
   </TabItem>
 </Tabs>
@@ -41,10 +41,10 @@ Density only **directly** affects objects and terrain; however, since you view a
 The `Class.Atmosphere.Offset|Offset` property controls how light transmits between the camera and the sky background. When you increase this value, it creates a horizon silhouette; when you decrease this value, it blends distant objects into the sky for a seemingly endless and seamless open world.
 
 <Tabs>
-  <TabItem label="Offset = 0">
+  <TabItem label="0">
     <img src="../assets/lighting-and-effects/atmosphere/Offset-A.jpg" width="800" height="400" alt="Atmosphere with Offset value of 0" />
   </TabItem>
-  <TabItem label="Offset = 1">
+  <TabItem label="1">
     <img src="../assets/lighting-and-effects/atmosphere/Offset-B.jpg" width="800" height="400" alt="Atmosphere with Offset value of 1" />
   </TabItem>
 </Tabs>
@@ -58,10 +58,10 @@ Carefully balance the `Class.Atmosphere.Offset|Offset` property with the `Class.
 The `Class.Atmosphere.Haze|Haze` property controls the haziness of the atmosphere to create a visible effect both above the horizon and far into the distance from the camera. To create environmental moods, like a smoky tint for a polluted alien planet or a foggy blue tint for a somber experience, combine this property with the [Color](#color) property.
 
 <Tabs>
-  <TabItem label="Haze = 1">
+  <TabItem label="1">
     <img src="../assets/lighting-and-effects/atmosphere/Haze-A.jpg" width="800" height="400" alt="Atmosphere with Haze value of 1" />
   </TabItem>
-  <TabItem label="Haze = 2.8">
+  <TabItem label="2.8">
     <img src="../assets/lighting-and-effects/atmosphere/Haze-B.jpg" width="800" height="400" alt="Atmosphere with Haze value of 2.8" />
   </TabItem>
 </Tabs>
@@ -74,10 +74,10 @@ and themes. To expand this property's visible effect, combine it with a high
 [Haze](#haze) property value.
 
 <Tabs>
-  <TabItem label="Color = [255, 255, 255]">
+  <TabItem label="[255, 255, 255]">
     <img src="../assets/lighting-and-effects/atmosphere/Color-A.jpg" width="800" height="400" alt="Atmosphere with Color value of [255, 255, 255]" />
   </TabItem>
-  <TabItem label="Color = [255, 200, 255]">
+  <TabItem label="[255, 200, 255]">
     <img src="../assets/lighting-and-effects/atmosphere/Color-B.jpg" width="800" height="400" alt="Atmosphere with Color value of [255, 200, 255]" />
   </TabItem>
 </Tabs>
@@ -90,10 +90,10 @@ increased effect of sunlight cast onto the sky and experience. To see this prope
 [Haze](#haze) value higher than 0.
 
 <Tabs>
-  <TabItem label="Glare = 0">
+  <TabItem label="0">
     <img src="../assets/lighting-and-effects/atmosphere/Glare-A.jpg" width="800" height="400" alt="Atmosphere with Glare value of 0" />
   </TabItem>
-  <TabItem label="Glare = 1">
+  <TabItem label="1">
     <img src="../assets/lighting-and-effects/atmosphere/Glare-B.jpg" width="800" height="400" alt="Atmosphere with Glare value of 1" />
   </TabItem>
 </Tabs>
@@ -105,10 +105,10 @@ property sets the hue of the atmosphere away from the sun, gradually falling off
 from [Color](#color) toward this value. To see this property's visible effect, you **must** combine a glare with [Haze](#haze) and [Glare](#glare) values higher than 0.
 
 <Tabs>
-  <TabItem label="Decay = [255, 255, 255]">
+  <TabItem label="[255, 255, 255]">
     <img src="../assets/lighting-and-effects/atmosphere/Decay-A.jpg" width="800" height="400" alt="Atmosphere with Decay value of [255, 255, 255]" />
   </TabItem>
-  <TabItem label="Decay = [255, 90, 80]">
+  <TabItem label="[255, 90, 80]">
     <img src="../assets/lighting-and-effects/atmosphere/Decay-B.jpg" width="800" height="400" alt="Atmosphere with Decay value of [255, 90, 80]" />
   </TabItem>
 </Tabs>

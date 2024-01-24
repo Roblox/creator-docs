@@ -16,7 +16,7 @@ description: |
   atmospheric effects, including particle density, haze, glare, and color. See
   [Atmospheric Effects](../../../environment/atmosphere.md) for details.
 
-  <img src="/assets/lighting-and-effects/atmosphere/Offset-A.jpg" />
+  <img src="../../../assets/lighting-and-effects/atmosphere/Offset-A.jpg" />
 
   In addition, **Lighting** (along with `Class.Workspace.CurrentCamera`) may
   contain post-processing effects such as `Class.SunRaysEffect` and
@@ -24,7 +24,7 @@ description: |
   [Post-Processing Effects](../../../environment/post-processing-effects.md) for
   more information.
 
-  <video src="/assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4"
+  <video src="../../../assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4"
   controls width="100%"></video>
 code_samples:
   - Day-Night-Cycle

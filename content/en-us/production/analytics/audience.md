@@ -39,6 +39,6 @@ For privacy reasons, if there are less than 3 users in any age or gender groups,
 Consider the following strategies for using audience data to improve your experience:
 
 - Prioritize content that your audience might be interested in.
-- [Localize](../../production/localization/translating-experience-page-information.md) your experience metadata such as titles with your audience in mind.
+- [Localize](../../production/localization/index.md) your experience metadata such as titles with your audience in mind.
 - Identify opportunities to attract new audiences.
 - Share this data with potential brand sponsors.

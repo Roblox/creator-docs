@@ -86,10 +86,10 @@ properties:
       friend invite prompt.
 
       <img
-      src="/assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.jpg"
-      width="812" /> <img
-      src="/assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.jpg"
-      width="812" />
+      src="../../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png"
+      width="840" /> <img
+      src="../../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.png"
+      width="840" />
     code_samples: []
     type: string
     tags: []

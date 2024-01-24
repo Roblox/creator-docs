@@ -7,9 +7,9 @@ This page includes information to help experienced Unity developers get started 
 
 ## Getting Oriented
 
-![Overview of Unity](assets/unity/roblox-unity-editor.jpg)
+![Overview of Unity](./assets/unity/roblox-unity-editor.jpg)
 
-![Overview of Roblox Studio](assets/unity/roblox-unity-studio-markup.png)
+![Overview of Roblox Studio](./assets/unity/roblox-unity-studio-markup.png)
 
 Unity's hierarchy view and Roblox Studio's [Explorer](studio/explorer.md) are the primary windows for organizing elements in 3D scenes:
 
@@ -18,7 +18,7 @@ Unity's hierarchy view and Roblox Studio's [Explorer](studio/explorer.md) are th
 
 However, Hierarchy view has no predefined structure, whereas Explorer has a strict structure. It might help to think of Explorer as a combination of Unity's Hierarchy view and Project window, with the Workspace folder as the most recognizable element.
 
-Similarly, the Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unity Project window. The Asset Manager lets you manage all assets within your experience, whereas the Toolbox lets you access any assets you've published. The Toolbox also lets you search the Creator Marketplace for assets from Roblox or the community, similar to the Unity Asset Store.
+Similarly, the Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unity Project window. The Asset Manager lets you manage all assets within your experience, whereas the Toolbox lets you access any assets you've published. The Toolbox also lets you search the Creator Store for assets from Roblox or the community, similar to the Unity Asset Store.
 
 ## Philosophical Differences
 
@@ -159,7 +159,7 @@ Roblox files live in the cloud (although you can export copies), so Roblox Studi
 
 ## Plugins
 
-Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the Creator Marketplace, just like assets, many for free.
+Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the Creator Store, just like assets, many for free.
 
 ## Glossary
 
@@ -177,6 +177,6 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 | Terrain Inspector | Terrain Editor | |
 | Spawn point | `Class.SpawnLocation` | |
 | Console | Output | |
-| Asset Store | Creator Marketplace | |
+| Asset Store | Creator Store | |
 | Overlays | Menu bar | |
 | Tool | [Plugin](studio/plugins.md) | |

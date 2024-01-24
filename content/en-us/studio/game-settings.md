@@ -211,7 +211,7 @@ The **Localization** tab contains language settings related to [localization](..
   </tr>
   <tr>
     <td>**Automatic Translation**</td>
-    <td>The languages for which you'd like to enable [automatic translation](../production/localization/translating-in-experience-content.md#automatic-translation).</td>
+    <td>The languages for which you'd like to enable [automatic translation](../production/localization/automatic-translations.md).</td>
   </tr>
 </tbody>
 </table>

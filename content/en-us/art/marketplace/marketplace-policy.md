@@ -54,7 +54,7 @@ Each body can only include the following parts, and cannot have additional appen
   - Eyebrows (optional)
   - Eyelashes (optional)
 
-Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-types) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
+Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-scale) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
 
 Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 

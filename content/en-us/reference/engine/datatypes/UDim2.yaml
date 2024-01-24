@@ -64,22 +64,22 @@ constructors:
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: |
           The X dimension scale.
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: |
           The X dimension offset.
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: |
           The Y dimension scale.
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: |
           The Y dimension offset.
     code_samples: []
@@ -97,7 +97,7 @@ constructors:
         type: UDim
         default:
         summary: ''
-      - name: 'y'
+      - name: y
         type: UDim
         default:
         summary: ''
@@ -108,18 +108,18 @@ constructors:
     summary: Returns a new `Datatype.UDim2` with the given scale components and no offsets.
     description: |-
       Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets. Equivalent to:
-
+      
       ```lua
       UDim2.fromScale(xScale, yScale) == UDim2.new(xScale, 0, yScale, 0)
       ```
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []
@@ -135,11 +135,11 @@ constructors:
     parameters:
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []

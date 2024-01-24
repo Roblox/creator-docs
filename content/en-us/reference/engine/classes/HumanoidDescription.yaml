@@ -16,9 +16,9 @@ description: |
   You can get a HumanoidDescription by using the following functions:
 
   - `Class.Players:GetHumanoidDescriptionFromUserId()`, for an outfit currently
-    being worn by a user on Roblox.com
-  - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfits created
-    by a user on Roblox.com
+    being worn by a user on Roblox.
+  - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfit created
+    by a user on Roblox.
   - You can create a Humanoid rig model from a HumanoidDescription through
     `Class.Players:CreateHumanoidModelFromDescription()`.
 
@@ -107,7 +107,7 @@ properties:
       type (1); when `Class.Humanoid:ApplyDescription()|applied`, maps to the
       "BodyTypeScale" `Class.NumberValue` within the HumanoidDescription.
     description: |
-      <img src="/assets/legacy/BodyTypeScale.jpg"  />
+      <img src="../../../assets/legacy/BodyTypeScale.jpg"  />
 
       **BodyTypeScale** determines by which the shape of a Humanoid rig is
       interpolated from the standard R15 body shape (0) to a taller and more
@@ -188,7 +188,7 @@ properties:
       rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`, maps to
       the "DepthScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/DepthScale.jpg"  />
+      <img src="../../../assets/legacy/DepthScale.jpg"  />
 
       **DepthScale** determines by what factor the height (back-to-front
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
@@ -378,7 +378,7 @@ properties:
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
       `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/GraphicTShirt.jpg"  />
+      <img src="../../../assets/legacy/GraphicTShirt.jpg"  />
 
       **GraphicTShirt** determines the `Class.ShirtGraphic.Graphic|Graphic` used
       by a `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`
@@ -561,7 +561,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the "HeadScale"
       `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/HeadScale.jpg"  />
+      <img src="../../../assets/legacy/HeadScale.jpg"  />
 
       **HeadScale** determines by what factor the Head of a `Class.Humanoid` is
       scaled, as well as any accessories attached to it (such as those specified
@@ -603,7 +603,7 @@ properties:
       Humanoid rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`,
       maps to the "HeightScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/HeightScale.jpg"  />
+      <img src="../../../assets/legacy/HeightScale.jpg"  />
 
       **HeightScale** determines by what factor the height (top-to-bottom
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
@@ -908,7 +908,7 @@ properties:
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
       `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/Pants.jpg"  />
+      <img src="../../../assets/legacy/Pants.jpg"  />
 
       **Pants** determines the `Class.Pants.PantsTemplate|PantsTemplate` used by
       a `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied` to a
@@ -943,7 +943,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the
       "BodyProportionScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/ProportionScale.jpg"  />
+      <img src="../../../assets/legacy/ProportionScale.jpg"  />
 
       **ProportionScale** determines how wide (0) or narrow (1) a Humanoid rig.
       Values outside of the [0-1] range are clamped. When the description is
@@ -1191,7 +1191,7 @@ properties:
       Determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by a
       `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/Shirt.jpg"  />
+      <img src="../../../assets/legacy/Shirt.jpg"  />
 
       **Shirt** determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by
       a `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1449,7 +1449,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the "BodyWidthScale"
       `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/WidthScale.jpg"  />
+      <img src="../../../assets/legacy/WidthScale.jpg"  />
 
       **WidthScale** determines by what factor the width (left-to-right
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not

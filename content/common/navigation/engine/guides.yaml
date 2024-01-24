@@ -406,6 +406,8 @@ navigation:
             path: /chat/bubble-chat
           - title: Migrating to In-Experience Text Chat
             path: /chat/migrate-to-in-experience-text-chat
+          - title: Legacy Chat System
+            path: /chat/legacy/legacy-chat-system
   - title: Cloud Services
     section:
       - title: Data Stores
@@ -458,8 +460,8 @@ navigation:
         section:
           - title: Overview
             path: /production/publishing/publishing-assets
-          - title: Creator Marketplace
-            path: /production/publishing/creator-marketplace
+          - title: Creator Store
+            path: /production/publishing/creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines
@@ -540,14 +542,14 @@ navigation:
     section:
       - title: Overview
         path: /production/localization/
-      - title: Accessing Localization Settings
-        path: /production/localization/accessing-localization-settings
-      - title: Translating Experience Page Information
-        path: /production/localization/translating-experience-page-information
-      - title: Translating In-Experience Content
+      - title: Automatic Translations
+        path: /production/localization/automatic-translations
+      - title: Custom Translations
         section:
           - title: Overview
-            path: /production/localization/translating-in-experience-content
+            path: /production/localization/custom-translations
+          - title: Manually Editing Localization Table
+            path: /production/localization/manual-translations
           - title: Translating Dynamic Content
             path: /production/localization/translating-dynamic-content
           - title: Localizing with Scripting

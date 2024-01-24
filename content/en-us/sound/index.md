@@ -3,11 +3,11 @@ title: Sound and Music
 description: An overview of sound and music features on Roblox
 ---
 
-Sound effects and music enhance your experiences and make them more immersive. You can import your own [audio assets](#audio-assets) or search for free-to-use audio in the [Creator Marketplace](../production/publishing/creator-marketplace.md), play audio through `Class.Sound` or objects, and enhance audio playback through [dynamic effects](#dynamic-effects).
+Sound effects and music enhance your experiences and make them more immersive. You can import your own [audio assets](#audio-assets) or search for free-to-use audio in the [Creator Store](../production/publishing/creator-store.md), play audio through `Class.Sound` or objects, and enhance audio playback through [dynamic effects](#dynamic-effects).
 
 ## Audio Assets
 
-You can import [audio assets](../sound/assets.md) that you're certain you have permission to use, such as audio you make yourself. If you are uncertain whether you have permission to use an audio file, the [Creator Marketplace](../production/publishing/creator-marketplace.md) contains a wide variety of free-to-use audio, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
+You can import [audio assets](../sound/assets.md) that you're certain you have permission to use, such as audio you make yourself. If you are uncertain whether you have permission to use an audio file, the [Creator Store](../production/publishing/creator-store.md) contains a wide variety of free-to-use audio, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
 
 ## Sound Objects
 

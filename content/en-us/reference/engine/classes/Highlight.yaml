@@ -23,13 +23,13 @@ description: |
     <tbody>
       <tr>
         <td>
-          <img src="/assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="70%" />
+          <img src="../../../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="70%" />
         </td>
         <td>
-          <img src="/assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" width="70%" />
+          <img src="../../../assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" width="70%" />
         </td>
         <td>
-          <img src="/assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" width="70%" />
+          <img src="../../../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" width="70%" />
         </td>
       </tr>
     </tbody>
@@ -53,9 +53,9 @@ description: |
   it creates an interior fill with a checker pattern to emulate the
   `Class.Highlight.FillTransparency|FillTransparency` property.
 
-  <img src="/assets/ui/highlighting-objects/Fallback-Version-On-Trees.jpg" width="70%" />
+  <img src="../../../assets/ui/highlighting-objects/Fallback-Version-On-Trees.jpg" width="70%" />
 
-  <img src="/assets/ui/highlighting-objects/Low-End-Interior-Fill.jpg" width="70%" />
+  <img src="../../../assets/ui/highlighting-objects/Low-End-Interior-Fill.jpg" width="70%" />
 code_samples:
 inherits:
   - Instance
@@ -108,10 +108,10 @@ properties:
         <tbody>
           <tr>
             <td>
-              <img src="/assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" width="50%" />
+              <img src="../../../assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" width="50%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/DepthMode-Occluded.jpg" width="50%" />
+              <img src="../../../assets/ui/highlighting-objects/DepthMode-Occluded.jpg" width="50%" />
             </td>
           </tr>
         </tbody>
@@ -166,13 +166,13 @@ properties:
         <tbody>
           <tr>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillColor-Red.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillColor-Red.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillColor-Green.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillColor-Green.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillColor-Blue.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillColor-Blue.jpg" width="70%" />
             </td>
           </tr>
         </tbody>
@@ -209,13 +209,13 @@ properties:
         <tbody>
           <tr>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillTransparency-0.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillTransparency-0.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillTransparency-Half.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillTransparency-Half.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/FillTransparency-1.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/FillTransparency-1.jpg" width="70%" />
             </td>
           </tr>
         </tbody>
@@ -249,13 +249,13 @@ properties:
         <tbody>
           <tr>
             <td>
-              <img src="/assets/ui/highlighting-objects/OutlineColor-Red.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/OutlineColor-Red.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/OutlineColor-Green.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/OutlineColor-Green.jpg" width="70%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/OutlineColor-Blue.jpg" width="70%" />
+              <img src="../../../assets/ui/highlighting-objects/OutlineColor-Blue.jpg" width="70%" />
             </td>
           </tr>
         </tbody>
@@ -289,10 +289,10 @@ properties:
         <tbody>
           <tr>
             <td>
-              <img src="/assets/ui/highlighting-objects/OutlineTransparency-0.jpg" width="50%" />
+              <img src="../../../assets/ui/highlighting-objects/OutlineTransparency-0.jpg" width="50%" />
             </td>
             <td>
-              <img src="/assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="50%" />
+              <img src="../../../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="50%" />
             </td>
           </tr>
         </tbody>

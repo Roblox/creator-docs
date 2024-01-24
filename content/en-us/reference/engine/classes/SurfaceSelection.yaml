@@ -10,7 +10,7 @@ description: |
   `Class.PartAdornment.Adornee|Adornee`. The highlight's color is configurable
   using the `Class.GuiBase3d.Color3|Color3` property.
 
-  <img src="/assets/legacy/SurfaceSelection.jpg" alt="A screenshot of a SurfaceSelection" width="302" height="153" />
+  <img src="../../../assets/legacy/SurfaceSelection.jpg" alt="A screenshot of a SurfaceSelection" width="302" height="153" />
 
   The SurfaceSelection object is typically used by `Class.Plugin` when the user
   is selecting the face of a Part. However, it is not limited to plugin use.

@@ -13,6 +13,26 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: DraftsService:ShowSourceDiffsAgainstCurrent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: sources
+        type: Array
+        default:
+        summary: ''
+      - name: scripts
+        type: Objects
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

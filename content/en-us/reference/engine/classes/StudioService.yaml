@@ -152,11 +152,11 @@ properties:
       <tbody>
       <tr>
         <td><code>22.5</code></td>
-        <td><img src="/assets/legacy/StudioService.RotateIncrement.22.5.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.RotateIncrement.22.5.jpg" /></td>
       </tr>
       <tr>
         <td><code>90.0</code></td>
-        <td><img src="/assets/legacy/StudioService.RotateIncrement.90.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.RotateIncrement.90.jpg" /></td>
       </tr>
       </tbody>
       </table>
@@ -254,13 +254,13 @@ properties:
       <tbody>
       <tr>
       <td><code>true</code></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.jpg" /></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.rotation.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.UseLocalSpace.true.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.UseLocalSpace.true.rotation.jpg" /></td>
       </tr>
       <tr>
       <td><code>false</code></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.jpg" /></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.rotation.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.UseLocalSpace.false.jpg" /></td>
+        <td><img src="../../../assets/legacy/StudioService.UseLocalSpace.false.rotation.jpg" /></td>
       </tr>
       </tbody>
       </table>

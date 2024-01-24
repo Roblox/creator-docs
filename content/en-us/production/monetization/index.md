@@ -122,7 +122,7 @@ You'll receive a [commission](../../art/marketplace/marketplace-fees-and-commiss
 
 ### Plugins
 
-A [Plugin](../../studio/plugins.md) is an extension that adds additional features or functionality to Studio. You can sell plugins to other creators on the [Creator Marketplace](../../production/publishing/creator-marketplace.md) for Robux, or offer them for free. For more information, see [Publishing Plugins](../../studio/plugins.md#publishing-plugins).
+A [Plugin](../../studio/plugins.md) is an extension that adds additional features or functionality to Studio. You can sell plugins to other creators on the [Creator Store](../../production/publishing/creator-store.md) for Robux, or offer them for free. For more information, see [Publishing Plugins](../../studio/plugins.md#publishing-plugins).
 
 <Alert severity="warning">
    There is a 30 day escrow hold for each purchase. Roblox holds the commission from your items and your Robux share of the sale for 30 days, starting from the date of sale.
