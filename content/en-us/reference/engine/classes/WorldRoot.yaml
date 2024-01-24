@@ -897,8 +897,8 @@ methods:
       and the `Datatype.RaycastResult.Position|Position` property represents the
       intersection point that causes the hit.
 
-      This method throws an error if it is passed invalid `Datatype.CFrame`,
-      size, or direction inputs.
+      This method throws an error if it is passed invalid radius
+      or direction inputs.
     code_samples:
       - worldroot---spherecast
     parameters:
