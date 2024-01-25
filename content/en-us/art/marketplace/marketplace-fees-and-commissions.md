@@ -14,7 +14,7 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Fees
 
-When uploading, accessories and clothing require an upload fee of **750 Robux** per submission. Bodies and heads do not require an upload fee. In general, fees are not refunded if an item is rejected through moderation.
+When uploading, accessories, clothing, bodies, and heads require an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation.
 
 ## Commissions
 

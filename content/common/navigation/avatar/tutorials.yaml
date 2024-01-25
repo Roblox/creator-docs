@@ -8,7 +8,7 @@ navigation:
   - title: Clothing
     path: /art/accessories/creating
     navigation: /avatar/tutorials-clothing.yaml
-  - title: Bodies
+  - title: Bodies - From Templates
     path: /art/characters/creating
     navigation: /avatar/tutorials-bodies.yaml
   - heading: Use Cases

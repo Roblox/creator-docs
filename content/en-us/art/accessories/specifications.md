@@ -348,6 +348,15 @@ See the following specifications for attachments:
   - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.
   - Items using `RightCollarAttachment` or `LeftCollarAttachment` do not move with the character's arm.
 
+### Face Accessories
+
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with avatar bodies. For more information on bundling your face accessories with avatar models, see [Publishing Bodies with Eyelashes and Eyebrows](../accessories/publishing-eyebrows-eyelashes.md).
+
+- **Naming Convention when bundled** - When including these assets with an avatar body upload, the accessory objects must use the following name conventions:
+  - `EyebrowAccessory`
+  - `EyelashAccessory`
+  - `HairAccessory`
+
 ## Textures
 
 Textures created for accessories must meet Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Keep in mind that smaller assets, such as accessories, can use smaller texture map sizes, such as **256&times;256px**, to optimize performance with virtually no loss in detail.
