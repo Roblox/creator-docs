@@ -9,13 +9,13 @@ You can [explore](#exploring-assets) a wide variety of free‑to‑use audio ass
 
 The [Toolbox](../projects/assets/toolbox.md) contains a wide variety of audio assets made by Roblox and the Roblox community for creators to use within their experiences, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
 
-1. Navigate to the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md), then use the category selector dropdown to select **Audio**.
+1. Navigate to the **Creator Store** tab of the [Toolbox](../projects/assets/toolbox.md), then use the category selector dropdown to select **Audio**.
 
-   <img src="../assets/studio/toolbox/Marketplace-Audio.png" width="360" alt="Audio section of Marketplace in Studio's Toolbox" />
+   <img src="../assets/studio/toolbox/Creator-Store-Audio.png" width="360" alt="Audio section of Creator Store in Studio's Toolbox" />
 
 2. Use the keyword search, quick filter options, and/or advanced filters to narrow down the results.
 
-   <img src="../assets/studio/toolbox/Marketplace-Audio-Discovery.png" width="580" alt="Audio discovery options in Studio's Toolbox" />
+   <img src="../assets/studio/toolbox/Creator-Store-Audio-Discovery.png" width="580" alt="Audio discovery options in Studio's Toolbox" />
 
 3. Click any audio asset to insert it as a new `Class.Sound` instance into the [Explorer](../studio/explorer.md) hierarchy. You can also click the small **play** button to begin previewing it and to view more info.
 

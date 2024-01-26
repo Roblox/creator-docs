@@ -33,11 +33,11 @@ To use the **EventSequencer** framework in an experience:
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
 1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Event Sequencer** module and click it, or drag-and-drop it into the 3D view.
 
@@ -245,11 +245,11 @@ To install the plugin:
 
 2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Plugins.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Plugins.png" width="360" />
 
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Scene-Manager-Plugin.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />
 
 4. Click the plugin's icon to view its details and then click the **Install** button.
 5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.

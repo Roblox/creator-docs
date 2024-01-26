@@ -14,15 +14,15 @@ You can insert [creator-uploaded meshes](#inserting-meshes) or import [custom me
 
 ### Creator Store
 
-You can browse thousands of user-uploaded meshes from the [Creator Store](../production/publishing/creator-store.md) through the **Marketplace** tab of the [Toolbox](../projects/assets/toolbox.md).
+You can browse thousands of user-uploaded meshes from the **Creator Store** tab of the [Toolbox](../projects/assets/toolbox.md).
 
-1. Navigate to the **View** tab and select **Toolbox**.
+1. Navigate to the [View](../studio/view-tab.md) tab and select **Toolbox**.
 
    <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-1. From the **Marketplace** tab, select the category dropdown and choose **Meshes**.
+1. From the **Creator Store** tab, select the category dropdown and choose **Meshes**.
 
-   <img src="../assets/studio/toolbox/Marketplace-Meshes.png" width="360" />
+   <img src="../assets/studio/toolbox/Creator-Store-Meshes.png" width="360" />
 
 1. In the **Search** field, type anything you'd like to find.
 1. Either click or drag-and-drop a mesh to insert it into the viewport.

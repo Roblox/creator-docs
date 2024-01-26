@@ -40,12 +40,12 @@ The **Recent** tab is similar to [Inventory](#inventory) except that it is filte
 <TabItem label="Asset Category">
 Within any of the toolbox sections, use the **category selector** dropdown to sort assets by category. The options in the dropdown vary by section.
 
-<img src="../../assets/studio/toolbox/Marketplace-Category-Selector.png" width="360" height="284" alt="Category selector in the Creator Store tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Creator-Store-Category-Selector.png" width="360" height="284" alt="Category selector in the Creator Store tab of Studio's Toolbox" />
 </TabItem>
 <TabItem label="Creator Store Sorting">
 Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
 
-<img src="../../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in the Creator Store tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Creator-Store-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in the Creator Store tab of Studio's Toolbox" />
 </TabItem>
 <TabItem label="Inventory Sorting">
 Within the [Inventory](#inventory) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter by **My&nbsp;Assets**, and sort by other criteria.

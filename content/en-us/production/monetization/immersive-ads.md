@@ -174,14 +174,14 @@ To insert a portal ad:
 
 1. Open the [Creator Store](../../production/publishing/creator-store.md).
    1. In the menu bar, navigate to the **View** tab.
-   1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
+   1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
 1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
 1. Click the **Ads** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Ads.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Ads.png" width="200" />
 
 1. Click any of the **Portal** template packages. The ad unit displays in the viewport.
 1. **(Optional)** Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.

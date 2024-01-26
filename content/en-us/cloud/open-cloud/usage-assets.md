@@ -3,15 +3,25 @@ title: Usage Guide for Assets
 description: Explains how to use Open Cloud Web APIs for assets to support usage such as uploading and updating.
 ---
 
-With [Assets API](../../reference/cloud/assets/v1.json) of Open Cloud, you can upload assets with a single HTTP request rather than manually importing them to Studio. This API supports uploading new assets and updating existing ones with version control, making it helpful for automating your asset management workflow.
+The [Assets API](../../reference/cloud/assets/v1.json) of Open Cloud allows you to upload and update assets with a single HTTP request rather than manually importing them to Studio. This API supports:
 
-For example, you can write a script using Assets API to upload and create a new version of your model assets on Roblox automatically whenever you save them in your modeling tool such as Blender or Maya. This way, you can quickly update custom model assets in your inventory without manually importing them every time you make a change.
+- Uploading new assets.
+- Updating existing assets with version control.
+- Updating asset metadata, including descriptions, display names, icons, and previews.
+- Managing asset versions, such as rolling back to a specified previous version.
+- Checking existing information of an asset, including metadata, versions, and any in-process updating operations.
+
+<Alert severity="info">
+This API contains Beta endpoints that might be subject to changes for future releases.
+</Alert>
 
 ## Supported Asset Types and Limits
 
-Different from the [Asset Manager](../../projects/assets/manager.md) in Studio, in which you can import assets without specifying types, you must specify your asset's **Asset Type** and the generic **Content Type** when sending an Assets API call. For each call, you can only create or update one asset with the file size up to 20 MB.
+For endpoints that don't create a new asset or update the content of existing assets, there are no restrictions and limits. However, the asset content uploading functionality powered by the **Create Asset** and **Update Asset** endpoints only supports limited types of assets with restrictions. For each call, you can only create or update one asset with the file size up to 20 MB with the following limits:
 
-Currently, Assets API supports the following types of assets:
+<Alert severity="info">
+Updating asset metadata using the **Update Asset** endpoint is not subject to the following limits.
+</Alert>
 
 <table>
   <thead>
@@ -88,11 +98,15 @@ Currently, Assets API supports the following types of assets:
   </tbody>
 </table>
 
-## Uploading an Asset
+## Security Permissions
 
-For both creating a new asset and updating an existing asset to a new version using Assets API, you need to [Create an API key](./api-keys.md#creating-api-keys) on [Creator Dashboard](https://create.roblox.com/credentials). If you want to use the API key to manage your individually-owned assets, create the API key under your account. If you want to use the API key to manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-Owned API Key Permissions](./api-keys.md#group-owned-api-key-permissions).
+The API supports both first-party use with [API key authorization](./api-keys.md) and third-party use in [OAuth 2 applications](./oauth2-overview.md). Each way requires different security permission settings.
 
-Once you create an API key, you can't switch its ownership between individuals or groups. If you create an API key under your own account, you can't use it for managing group assets.
+### API Keys
+
+To use the API in your own scripts or tools, you need to [Create an API key](./api-keys.md#creating-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-Owned API Key Permissions](./api-keys.md#group-owned-api-key-permissions).
+
+Once you create an API key, you can't switch its ownership between individuals or groups, so if you create an API key under your own account, you can't use it for managing group assets.
 
 <Alert severity="warning">
 To create an API key for a group or create a group asset, you must have the corresponding permissions. For more information on granting group permissions, see [Group Roles and Permissions](../../projects/groups.md#roles-and-permissions).
@@ -101,13 +115,23 @@ To create an API key for a group or create a group asset, you must have the corr
 Regardless of whether you are creating the API key for yourself or your group, make sure to add the following permissions:
 
 1. Add **Assets API** to **Access Permissions**.
-1. Add both **Read** and **Write** operation permissions to your selected experience.
+1. Add **Read** and **Write** operation permissions to your selected experience, depending on the required scopes of the endpoints you plan to call.
 
-### Creating an New Asset
+Once you have the API key, copy it to the `x-api-key` request header. All endpoints require the `x-api-key` request header.
 
-To upload a new asset:
+```bash title ="Example API Request Header"
+--header 'x-api-key: ${ApiKey}' \
+```
 
-1. Copy the API key to the `x-api-key` request header of the [Create Asset](../../reference/cloud/assets/v1.json#POST-v1-assets) method.
+### OAuth 2.0 Apps
+
+To use the API for a third-party OAuth 2.0 application, add the `asset:read` and `asset:write` permission scopes when [registering your app](./oauth2-registration.md#adding-permissions). Choose these scopes based on the requirements of the endpoints you plan to use.
+
+## Creating a New Asset
+
+To upload a new asset by an HTTP request:
+
+1. Copy the API key to the `x-api-key` request header of the [Create Asset](../../reference/cloud/assets/v1.json#POST-v1-assets) endpoint.
 1. In your request:
 
    1. Specify the target [asset type](#supported-asset-types-and-limits).
@@ -134,34 +158,87 @@ To upload a new asset:
 
    ```
 
-### Updating an Existing Asset
+## Updating an Existing Asset
 
-To update an existing asset to a new version:
-
-<Alert severity="warning">
-Currently, you can only update models. Audio and decals don't have version control and can't be updated.
+<Alert severity="info">
+Asset updating is powered by Beta endpoints that might be subject to changes for future releases.
 </Alert>
 
-1. Copy the API key to the `x-api-key` request header of the [Update Asset](../../reference/cloud/assets/v1.json#PATCH-v1-assets-_asset_) method.
-1. Add the asset ID in your request. To copy your asset ID:
-   1. Navigate to the [Creation](https://create.roblox.com/creations) page of **Creator Dashboard**.
+To update an existing asset by an HTTP request:
+
+1. Copy the API key to the `x-api-key` request header of the [Update Asset](../../reference/cloud/assets/v1.json#PATCH-v1-assets-_asset_) endpoint.
+1. Add the asset type and asset ID in your request. To copy your asset ID:
+   1. Navigate to the [Creation](https://create.roblox.com/creations) page of the **Creator Dashboard**.
    1. Select the **DEVELOPMENT ITEMS** category.
    1. Select the category of your asset and find the target asset.
    1. Hover over the thumbnail of the target asset and click the **&ctdot;** button to display a list of options, then select **Copy Asset ID** from the list.
       <img src="../../assets/open-cloud/copy-asset-id.png" width="50%" />
-1. Add the file path and content type of your asset in your request.
 
-```bash title ="Example Request for Update Asset"
+<Tabs>
+<TabItem label="Asset Content">
+
+<Alert severity="warning">
+Currently, you can only update the asset content for `.fbx` files. The update creates a new version.
+</Alert>
+
+```bash title ="Example Request for Updating Asset Content"
 curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}' \
---header 'x-api-key: ${ApiKey}' \
---form 'request="{
-  \"assetId\": ${assetId},
-}"' \
---form 'fileContent=@"/filepath/model.fbx";type=model/fbx'
+--header 'x-api-key: {apiKey}' \
+--form 'request={
+    \"assetType\": \"{assetType}\",
+    \"assetId\": \"{assetId}\",
+    \"creationContext\": { 
+        \"creator\": {
+            \"userId\": {userId}
+        },
+        \"expectedPrice\":{expectedPrice}
+    },
+}' \
+--form 'fileContent=@"{file-path}"'
 
 ```
 
-### Checking an Uploaded Asset
+</TabItem>
+<TabItem label="Metadata">
+
+```bash title ="Example Request for Updating Asset Metadata"
+curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
+--header 'x-api-key;' \
+--form 'request={
+    \"assetType\": \"{assetType}\",
+    \"assetId\": \"{assetId}\",
+    \"displayName\": \"{new display name}\",
+    \"description\": \"{new description}\"
+}'
+
+```
+
+</TabItem>
+<TabItem label="Content and Metadata">
+
+```bash title ="Example Request for Updating Both Asset Content and Metadata"
+curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
+--header 'x-api-key: {apiKey}' \
+--form 'request={
+    \"assetType\": \"{assetType}\",
+    \"assetId\": \"{assetId}\",
+    \"displayName\": \"{new display name}\",
+    \"description\": \"{new description}\",    
+    \"creationContext\": { 
+        \"creator\": {
+            \"userId\": {userId}
+        },
+        \"expectedPrice\":{expectedPrice}
+    },
+}' \
+--form 'fileContent=@\"{file-path}\"'
+
+```
+
+</TabItem>
+</Tabs>
+
+## Retrieving Asset Operation Status
 
 If your request for creating a new asset or updating an existing asset succeeds, it returns an **Operation ID** in the format of `{ "path": "operations/${operationId}" }`. You can use it to check the status and result of your upload with the following steps:
 
