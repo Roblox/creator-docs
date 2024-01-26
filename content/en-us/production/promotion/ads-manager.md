@@ -213,7 +213,7 @@ This content is not allowed on the platform in any context.
 </thead>
 <tbody>
   <tr>
-    <td>Occasional mild violence or light unrealistic blood.</td>
+    <td>No violence, occasional mild violence or light unrealistic blood.</td>
     <td>Included</td>
     <td>Included</td>
     <td>Included</td>
