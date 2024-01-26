@@ -21,7 +21,7 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
   <CardContent>
     <Typography variant="h5" component="div">Clothing and Accessories</Typography>
     <br />
-    Create 3D cosmetics, like layerable clothes and rigid accessories.
+    Understand how 3D cosmetics, like layerable clothes and rigid accessories work.
   </CardContent>
   <CardActions>
   <Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn More</Button>
@@ -33,7 +33,7 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
 <CardContent>
 <Typography variant="h5" component="div">Characters</Typography>
 <br />
-Create unique Roblox avatars, using mesh geometry, rigs, facial animation, and other important components.
+Learn the various components that make up the unique Roblox avatar, including using mesh geometry, rigs, facial animation, and other important components.
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../art/characters/index.md" size='large' color='primary' variant='text'>Learn More</Button>
@@ -47,7 +47,7 @@ Create unique Roblox avatars, using mesh geometry, rigs, facial animation, and o
   <CardContent>
     <Typography variant="h5" component="div">Tutorials</Typography>
     <br />
-    Follow tutorials for clothing and characters to create your own unique 3D asset to bring into Studio.
+    Follow tutorials for clothing and characters to start creating your own unique 3D asset to bring into Studio.
   </CardContent>
   <CardActions>
   <Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn More</Button>

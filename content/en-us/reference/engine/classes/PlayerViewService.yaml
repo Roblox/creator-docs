@@ -49,6 +49,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: PlayerViewService:GetDeviceCameraCFrameForSelfView
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: CFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: PlayerViewService:OnCameraCFrameReplicationRequest
     summary: ''
     description: ''

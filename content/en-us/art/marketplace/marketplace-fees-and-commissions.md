@@ -14,7 +14,7 @@ You receive a commission every time users purchase your item. If users purchase 
 
 ## Fees
 
-When uploading, accessories and clothing require an upload fee of **750 Robux** per submission. Bodies and heads do not require an upload fee. In general, fees are not refunded if an item is rejected through moderation.
+When uploading, accessories, clothing, bodies, and heads require an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation.
 
 ## Commissions
 
@@ -95,104 +95,7 @@ To protect against automated purchases, Roblox sets purchase limits for Limiteds
 
 Depending on the 3D asset type, you must set the price of the item within the marketplace price range. If you are selling a [Limited](#limiteds) item, you can set your item price as **0**, or any value after the **Limiteds Price Floor**.
 
-The following are the current Marketplace price ranges (in Robux):
-
-<table>
-<thead>
-  <tr>
-    <th>**3D Asset Type**</th>
-    <th>**Non-Limiteds Price Range**</th>
-    <th>**Limiteds Price Floor**</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Hats</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Hair</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Face</td>
-    <td>15 - 5,000 </td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td>Shoulder</td>
-    <td>15 - 5,000</td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td>Neck</td>
-    <td>20 - 5,000</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Front</td>
-    <td>20 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Back</td>
-    <td>100 - 10,000</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Waist</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Pants</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Shorts</td>
-    <td>50 - 10,000</td>
-    <td>85</td>
-  </tr>
-  <tr>
-    <td>T-Shirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Shirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Dress Skirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Jacket</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Sweater</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Body</td>
-    <td>75 - 10,000</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Head</td>
-    <td>75 - 10,000</td>
-    <td>N/A</td>
-  </tr>
-</tbody>
-</table>
+[View Current Marketplace Ranges](https://create.roblox.com/dashboard/creations/pricing)
 
 ## Classic Clothing
 

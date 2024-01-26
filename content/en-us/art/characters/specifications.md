@@ -435,6 +435,10 @@ See the following specifications for the individual mesh objects that make up a 
 
    <img src="../../assets/modeling/meshes/Modeling-Requirements-Caps.png" width="600" />
 
+### Face Accessories
+
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with an avatar body. See [Accessory Specifications](../accessories/specifications.md#face-accessories) for additional information on face accessories.
+
 ### Visibility
 
 To ensure that avatar sizes are visually consistent, you must standardize body part visibility with the following requirements:
