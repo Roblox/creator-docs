@@ -104,7 +104,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local performSomeAction = require(ReplicatedStorage.performSomeAction)
 
 -- Assumes that this script is a child of the fishing pole
-local fishingPole = Script.parent
+local fishingPole = script.Parent
 local ACTION_CAST = "Cast"
 
 -- Check that the key is down, then call another function
