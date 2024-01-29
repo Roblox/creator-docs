@@ -82,7 +82,22 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
     </tr>
     <tr>
-      <td><a href="../../parts/models.md">Model</a></td>
+      <td><a href="../../parts/models.md">Models</a></td>
+      <td>
+        <ul>
+          <li>`.rbxm`</li>
+          <li>`.rbxmx`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>`model/x-rbxm`</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="../../parts/meshes.md">Meshes</a></td>
       <td>
         <ul>
           <li>`.fbx`</li>
