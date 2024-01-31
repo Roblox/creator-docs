@@ -358,26 +358,35 @@ string variableName;
 In Luau, you can write variables and logic in a tighter scope than their function or class by nesting the logic within `do` and `end` keywords, similar to curly brackets `{}` in C#. For more details, see [Scope](./scope.md).
 
 ```lua title='Scoping in Luau'
-local example = "Example text"
+local outerVar = 'Outer scope text'
 
 do
-	example ..= " changed!"
-	print(example)  -- Outputs 'Example text changed!'
+    -- Modify 'outerVar'
+    outerVar = 'Inner scope modified text'
+    -- Introduce a local variable
+    local innerVar = 'Inner scope text'
+    print('1: ' .. outerVar)    -- prints "1: Inner scope modified text"
+    print('2: ' .. innerVar)    -- prints "2: Inner scope text"
 end
 
-print(example)  -- Outputs 'Example text'
+print('3: ' .. outerVar)        -- prints "3: "Inner scope modified text"
+-- Attempting to print 'innerVar' here would fail
 ```
 
 ```cs title='Scoping in C#'
-string example = "Example text";
+var outerVar = "Outer scope text";
 
 {
-	example += " changed!";
-	Console.WriteLine(example);  // Outputs 'Example text changed!'
+	// Modify 'outerVar'
+	outerVar = "Inner scope modified text";
+	// Introduce a local variable
+	var innerVar = "Inner scope text";
+	Console.WriteLine("1: " + outerVar);    // prints "1: Inner scope modified text"
+	Console.WriteLine("2: " + innerVar);    // prints "2: Inner scope text"
 }
 
-
-Console.WriteLine(example);  // Outputs 'Example text'
+Console.WriteLine("3: " + outerVar);		// prints "3: "Inner scope modified text"
+// Attempting to print 'innerVar' here would fail
 ```
 
 ## Conditional Statements
