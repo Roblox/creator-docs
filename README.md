@@ -10,7 +10,7 @@ If you're unfamiliar with the GitHub contribution process, see [About pull reque
 
 ## Reporting Issues
 
-If you find a problem with the documentation and don't want to submit a pull request, please let us know by [reporting it on the Roblox developer forums](https://devforum.roblox.com/w/bug-report/).
+If you find a problem with the documentation and don't want to submit a pull request, please let us know by [reporting it on the Roblox developer forums](https://devforum.roblox.com/w/bug-
 
 ## Contribution Guidelines
 
