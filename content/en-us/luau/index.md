@@ -24,7 +24,7 @@ Luau includes the following data types:
 - [Tables](../luau/tables.md) are [arrays](../luau/tables.md#arrays) or [dictionaries](../luau/tables.md#dictionaries) of any value except `nil`.
 - [Enums](../luau/enums.md) are fixed lists of items.
 
-Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](../luau/type-checking) to make type issues obvious and easy to locate.
+Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](../luau/type-checking.md) to make type issues obvious and easy to locate.
 
 ## Data Structures
 
