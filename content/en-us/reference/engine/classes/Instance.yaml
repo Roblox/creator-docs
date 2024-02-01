@@ -102,6 +102,7 @@ properties:
       necessarily unique identifiers however; multiple children of an object may
       share the same name. Names are used to keep the object hierarchy
       organized, along with allowing scripts to access specific objects.
+      The name of an instance cannot exceed 100 characters in size.
 
       The name of an object is often used to access the object through the data
       model hierarchy using the following methods:
