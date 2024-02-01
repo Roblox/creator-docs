@@ -8,6 +8,7 @@ A `Class.Beam` is an object that renders a `Class.Texture` between two `Class.At
 - Add a [texture](#texture) and [color gradient](#color) to create interesting visuals like waterfalls and force fields.
 - Modify a beam's [transparency](#transparency) so that it fades over time.
 - Warp its shape by changing the [width](#width) or [curve](#curve) of each attachment point.
+- Specify the texture's [length and mode](#texture-lengthmode) to affect how it repeats across the beam's length.
 
 <video src="../assets/lighting-and-effects/beam/Showcase.mp4" controls
 width="100%"></video>
@@ -57,8 +58,7 @@ The `Class.Beam.Texture|Texture` property renders that texture across the length
 
 <img src="../assets/lighting-and-effects/beam/Texture-Applied.png" width="800" />
 
-A beam renders its texture using two triangles drawn between **segments**, and the segments are laid out between the two attachment points' orientation. By default, a beam uses 10 segment pairs, but you can modify the
-`Class.Beam.Segments|Segments` property to increase or decrease this amount. It is important to note that when you rotate attachment points in different directions, segments also rotate.
+A beam renders its texture using two triangles drawn between `Class.Beam.Segments|Segments`, and the segments are laid out between the two attachment points' orientation. When you rotate attachment points in different directions, segments also rotate.
 
 <img src="../assets/lighting-and-effects/beam/Attachments-Rotated.png" width="800" />
 
@@ -116,7 +116,7 @@ The `Class.Beam.Color|Color` property tints the beam's texture to either a speci
 
 ### Transparency
 
-The `Class.Beam.Transparency|Transparency` property sets the opacity of the beam as a consistent value, or as a `Datatype.NumberSequence` opacity across its entire span. Opacity can range from **0** (totally opaque) to **1** (fully clear).
+The `Class.Beam.Transparency|Transparency` property sets the transparency of the beam as a consistent value or as a `Datatype.NumberSequence` with ranges from **0** (totally opaque) to **1** (fully clear).
 
 <Tabs>
 <TabItem label="Constant Opacity">
@@ -163,10 +163,23 @@ The beam below has a `Class.Beam.Width0|Width0` value of **0.5** and a
 
 <img src="../assets/lighting-and-effects/beam/Width-Adjusted.png" width="800" />
 
+### Texture Length/Mode
+
+A beam's `Class.Beam.TextureLength|TextureLength` and `Class.Beam.TextureMode|TextureMode` determine how its [texture](#texture) repeats across its length.
+
+When `Class.Beam.TextureMode|TextureMode` is set to `Enum.TextureMode.Wrap` or `Enum.TextureMode.Static`, the texture repetitions will equal the beam's overall length (in&nbsp;studs) divided by its `Class.Beam.TextureLength|TextureLength`.
+
+<img src="../assets/engine-api/enums/TextureMode/Wrap-Static.png" width="720" alt="TextureMode diagram with Wrap or Static mode" />
+
+<figure>
+When `Class.Beam.TextureMode|TextureMode` is set to `Enum.TextureMode.Stretch`, the texture will repeat `Class.Beam.TextureLength|TextureLength` times across the beam's overall length.
+
+<img src="../assets/engine-api/enums/TextureMode/Stretch.png" width="720" alt="TextureMode diagram with Stretch mode" />
+</figure>
+
 ### Facing
 
-When you move one of a beam's attachments, the beam moves and scales because the attachment points determine its start and end. If you want the beam to move and face the camera no matter what angle it's being viewed from, set the
-`Class.Beam.FaceCamera|FaceCamera` property to `true`. Note that this property does not move the beam's position, only its angle.
+A beam is a 2D projection existing in 3D space, meaning that it may not be visible from every angle. The `Class.Beam.FaceCamera|FaceCamera` property, when set to `true`, ensures that the beam always faces the `Class.Workspace.CurrentCamera|CurrentCamera`, regardless of its orientation.
 
 <figure>
 <video src="../assets/lighting-and-effects/beam/FaceCamera.mp4" controls width="800"></video>
@@ -175,6 +188,13 @@ When you move one of a beam's attachments, the beam moves and scales because the
 
 ### Curve
 
-Beams use a cubic Bézier curve which you can curve up or down relative to the attachments' orientations using the `Class.Beam.CurveSize0|CurveSize0` and `Class.Beam.CurveSize1|CurveSize1` properties.
+Beams are configured to use a cubic Bézier curve formed by four control points. This means they are not constrained to straight lines and the curve of the beam can be modified by changing `Class.Beam.CurveSize0|CurveSize0`, `Class.Beam.CurveSize1|CurveSize1`, and the orientation of the beam's `Class.Attachment|Attachments`.
+
+- **P0** — The start of the beam; position of `Class.Beam.Attachment0|Attachment0`.
+- **P1** — `Class.Beam.CurveSize0|CurveSize0` studs away from `Class.Beam.Attachment0|Attachment0`, in the positive **X** direction of `Class.Beam.Attachment0|Attachment0`.
+- **P2** — `Class.Beam.CurveSize1|CurveSize1` studs away from `Class.Beam.Attachment1|Attachment1`, in the negative **X** direction of `Class.Beam.Attachment1|Attachment1`.
+- **P3** — The end of the beam; position of `Class.Beam.Attachment1|Attachment1`.
+
+<img src="../assets/engine-api/classes/Beam/Curvature-Diagram.png" width="800" alt="Beam curvature diagram" />
 
 <img src="../assets/lighting-and-effects/beam/Curves-Applied.png" width="800" />

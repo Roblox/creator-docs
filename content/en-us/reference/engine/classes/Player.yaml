@@ -149,48 +149,31 @@ properties:
     summary: |
       Changes the camera's mode to either first or third person.
     description: |
-      The CameraMode `Class.Player` property sets what mode that the player's
-      camera is in. By default, the camera mode is set to third person.
+      The **CameraMode** property sets the player's camera mode, defaulting to
+      third person.
 
-      The camera has two modes:
+      #### Third Person
 
-      1. First person
-      2. Third person
+      In the default third person mode (`Enum.CameraMode.Classic`), the
+      character can be seen in the camera. While in this mode, the default
+      behavior is:
 
-      The `Enum.CameraMode` Enum is used to set CameraMode in Player, and
-      determines when first and third person cameras should be used.
+      - Players can right-click and drag (mouse), tap and drag (mobile), use the
+        secondary thumbstick (gamepad), or press the left/right arrows (keyboard) to rotate the camera around their character.
+      - When a player moves their character, it faces in the corresponding
+      movement direction.
+      - Players can zoom in and out freely, even to first person on full zoom
+      in.
 
-      #### First-person
+      #### First Person
 
-      In first-person mode, the player's camera is zoomed all the way in. Unless
-      there is a visible GUI present with the `Class.GuiButton.Modal` property
-      set to _true_, the mouse will be locked and the user's camera will turn as
-      the mouse moves.
-
-      ![First Person CameraMode](/assets/legacy/CameraMode-LockFirstPerson.jpg)
-
-      #### Third-person
-
-      In third-person mode, the character can be seen in the camera. While in
-      third-person mode on Roblox:
-
-      - You may right-click and drag to rotate your camera, or use the arrow
-        keys at the bottom right-hand corner of the screen.
-      - When you move your mouse, your camera does not change (unless you move
-        the mouse to the end of the screen).
-      - When you press any of the arrow keys, the user's character will face in
-        the corresponding arrow key's direction.
-      - You can zoom in and out freely.
-
-      Third-person is the default camera setting.
-
-      ![Third Person CameraMode](/assets/legacy/CameraMode-Classic.jpg)
-
-      This item should be used in a `Class.LocalScript` to work as expected
-      online.
+      In first person mode (`Enum.CameraMode.LockFirstPerson`), the player's
+      camera is zoomed all the way in. Unless there is a visible GUI present
+      with the `Class.GuiButton.Modal` property set to `true`, moving the mouse,
+      tap-dragging on mobile, or using the secondary thumbstick on a gamepad
+      will rotate the camera around the character.
     code_samples:
       - playing-in-first-person
-      - untitled
     type: CameraMode
     tags: []
     deprecation_message: ''
@@ -1665,21 +1648,19 @@ methods:
       Sets whether or not the player sees filtered chats, rather than normal
       chats.
     description: |
-      The SetSuperSafeChat `Class.Player` function sets whether or not the
-      player sees chat filtered by `Class.TextService:FilterStringAsync()`
-      rather than normal chats.
+      This method sets whether or not the player sees chat filtered by
+      `Class.TextService:FilterStringAsync()` rather than normal chats.
 
-      SuperSafeChat is a chat mode where players cannot see unfiltered messages.
+      ```lua
+      local Players = game:GetService("Players")
 
-      For example, entering the following command in the command prompt would
-      enable SuperSafeChat for the player named polarpanda16, as long as that
-      player is in the game:
+      local player = Players.LocalPlayer
+      player:SetSuperSafeChat(true)
+      ```
 
-      ![Command prompt example enabling SuperSafeChat](/assets/legacy/Screen_Shot_2018-07-28_at_9.46.09_PM.png)
-
-      Regardless of whether a player has SuperSafeChat enabled, all chat should
-      be filtered by TextService when broadcasted to other players or on the
-      player's own screen. `Class.TextService:FilterStringAsync()` returns a
+      Regardless of whether a player has filtered chat enabled, all chat should
+      be filtered by `Class.TextService` when broadcast to other players or on
+      the player's own screen. `Class.TextService:FilterStringAsync()` returns a
       `Class.TextFilterResult` object that can be filtered differently according
       to the message's intended use.
     code_samples:
