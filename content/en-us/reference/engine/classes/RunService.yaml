@@ -160,6 +160,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: RunService:GetRobloxGuiFocused
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: RunService:IsClient
     summary: |
       Returns whether the current environment is running on the client.
@@ -749,6 +761,19 @@ events:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+  - name: RunService.RobloxGuiFocusedChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: isRobloxGuiFocused
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: RunService.Stepped
     summary: |

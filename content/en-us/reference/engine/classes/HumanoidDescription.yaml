@@ -107,8 +107,6 @@ properties:
       type (1); when `Class.Humanoid:ApplyDescription()|applied`, maps to the
       "BodyTypeScale" `Class.NumberValue` within the HumanoidDescription.
     description: |
-      <img src="../../../assets/legacy/BodyTypeScale.jpg"  />
-
       **BodyTypeScale** determines by which the shape of a Humanoid rig is
       interpolated from the standard R15 body shape (0) to a taller and more
       slender/realistic body type (1). Values outside of the [0-1] range are

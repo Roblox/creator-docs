@@ -14,7 +14,7 @@ description: |
   `Class.Part`.
 
   For information on how `Class.BasePart|BaseParts` are grouped into simulated
-  rigid bodies, see [Understanding Assemblies](../../../physics/assemblies.md).
+  rigid bodies, see [Assemblies](../../../physics/assemblies.md).
 
   There are many different objects that interact with `Class.BasePart` (other
   than `Class.Terrain`), including:
@@ -54,21 +54,22 @@ properties:
     summary: |
       Determines whether a part is immovable by physics.
     description: |
-      The Anchored property determines whether the part will be **immovable** by
-      physics. When enabled, a part will never change position due to gravity,
-      other parts collisions, overlapping other parts, or any other
-      physics-related causes. A part that is not anchored is called
-      **unanchored**. As a result, two anchored parts will never fire the
-      `Class.BasePart.Touched` event on each other. An anchored part may still
-      be moved by changing its `Class.BasePart.CFrame` or
-      `Class.BasePart.Position`, and it still may have a nonzero
-      `Class.BasePart.AssemblyLinearVelocity` and
-      `Class.BasePart.AssemblyAngularVelocity`. Finally, if an unanchored part
-      is joined with an anchored part through an object like a `Class.Weld`, it
-      too will act anchored. If such a joint breaks the part may be affected by
-      physics again. See
-      [Understanding Assemblies](../../../physics/assemblies.md) for more on
-      this.
+      The **Anchored** property determines whether the part will be
+      immovable by physics. When enabled, a part will never change position
+      due to gravity, other part collisions, overlapping other parts, or any
+      other physics-related causes. As a result, two anchored parts will never
+      fire the `Class.BasePart.Touched` event on each other.
+      
+      An anchored part may still be moved by changing its
+      `Class.BasePart.CFrame|CFrame` or `Class.BasePart.Position|Position`, and
+      it still may have a nonzero
+      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity` and
+      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`. 
+      
+      Finally, if an unanchored part is joined with an anchored part through an
+      object like a `Class.Weld`, it too will act anchored. If such a joint
+      breaks, the part may be affected by physics again. See
+      [Assemblies](../../../physics/assemblies.md) for more details.
 
       Network ownership cannot be set on anchored parts. If a part's anchored
       status changes on the server, the network ownership of that part will be
@@ -206,8 +207,7 @@ properties:
 
       Parts that all share the same AssemblyRootPart are in the same assembly.
 
-      For more information on root parts, see
-      [Understanding Assemblies](../../../physics/assemblies.md).
+      For more information on root parts, see [Assemblies](../../../physics/assemblies.md).
     code_samples:
     type: BasePart
     tags:
@@ -1297,7 +1297,7 @@ properties:
       you don't want to affect the handling of the car or a massless render mesh
       welded to a simpler collision mesh.
 
-      See also [Understanding Assemblies](../../../physics/assemblies.md), an
+      See also [Assemblies](../../../physics/assemblies.md), an
       article documenting what root parts are and how to use them.
     code_samples:
     type: bool
@@ -1698,7 +1698,7 @@ properties:
       You can use this property to control which part of an assembly is the root
       part and keep the root part stable if size changes.
 
-      See also [Understanding Assemblies](../../../physics/assemblies.md), an
+      See also [Assemblies](../../../physics/assemblies.md), an
       article documenting what root parts are and how to use them.
     code_samples:
     type: int
@@ -2471,14 +2471,11 @@ methods:
     description: |
       Returns the base part of an assembly. When moving an assembly of parts
       using a `Datatype.CFrame`. it is important to move this base part (this
-      will move all other parts connected to it accordingly).
+      will move all other parts connected to it accordingly). More information
+      is available in the [Assemblies](../../../physics/assemblies.md) article.
 
-      More information is available in the
-      [Understanding Assemblies](../../../physics/assemblies.md) article.
-
-      This function predates the `AssemblyRootPart` property. It remains
-      supported for backward-compatibility; you should use the
-      `AssemblyRootPart` property directly.
+      This function predates the `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. It remains supported for
+      backwards compatibility, but you should use `Class.BasePart.AssemblyRootPart|AssemblyRootPart` directly.
     code_samples:
     parameters: []
     returns:

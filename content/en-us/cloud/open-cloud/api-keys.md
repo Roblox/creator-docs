@@ -14,10 +14,10 @@ authenticate to Open Cloud on your behalf.
 
 ## Creating API Keys
 
-You can create and configure API keys on **Creator Dashboard** for your own
-experiences or group-owned experiences. A Roblox
+You can create and configure API keys for your individually-owned
+experiences or group-owned experiences (A Roblox
 [group](../../projects/groups.md) allows multiple creators to work on the same
-experience, use the same assets, and share API keys.
+experience, use the same assets, and share API keys).
 
 You must be the group owner or assigned to a role within the group that has the
 API key admin permission in order to create an API key for your group. A group
@@ -27,12 +27,11 @@ experiences** permission can create an API key that can publish a place file.
 
 To create an API key:
 
-1. Navigate to the [Credentials](https://create.roblox.com/credentials) page on
-   **Creator Dashboard**.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com).
 
 1. (Optional) Click the **CREATOR** dropdown to select a group if you are
    creating the API key for a group.
-
+1. On the navigation menu, select **Open Cloud** > **API Keys**.
 1. Click the **Create API Key** button.
 1. Enter a unique name for your API key. Use a name that can help you recall the
    purpose later, such as `PLACE_PUBLISHING_KEY` for publishing places to your
