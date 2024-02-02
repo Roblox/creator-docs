@@ -1,4 +1,4 @@
-name: CollaboratorStatus
+name: ModerationStatus
 type: enum
 summary: ''
 description: ''
@@ -6,23 +6,28 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: None
-    summary: ''
-    value: 0
-    tags: []
-    deprecation_message: ''
-  - name: Editing3D
+  - name: ReviewedApproved
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Scripting
+  - name: ReviewedRejected
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: PrivateScripting
+  - name: NotReviewed
     summary: ''
     value: 3
+    tags: []
+    deprecation_message: ''
+  - name: NotApplicable
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Invalid
+    summary: ''
+    value: 5
     tags: []
     deprecation_message: ''
