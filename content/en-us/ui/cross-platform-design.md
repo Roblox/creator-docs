@@ -163,15 +163,18 @@ local InputTypes = {
 	[Enum.UserInputType.None] = nil,
 	[Enum.UserInputType.TextInput] = nil,
 	[Enum.UserInputType.InputMethod] = nil,
+	
 	[Enum.UserInputType.MouseButton1] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 	[Enum.UserInputType.MouseButton2] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 	[Enum.UserInputType.MouseButton3] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 	[Enum.UserInputType.MouseWheel] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 	[Enum.UserInputType.MouseMovement] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 	[Enum.UserInputType.Keyboard] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	
 	[Enum.UserInputType.Touch] = PlayerInput.InputTypes.TOUCH,
 	[Enum.UserInputType.Accelerometer] = PlayerInput.InputTypes.TOUCH,
 	[Enum.UserInputType.Gyro] = PlayerInput.InputTypes.TOUCH,
+	
 	[Enum.UserInputType.Gamepad1] = PlayerInput.InputTypes.GAMEPAD,
 	[Enum.UserInputType.Gamepad2] = PlayerInput.InputTypes.GAMEPAD,
 	[Enum.UserInputType.Gamepad3] = PlayerInput.InputTypes.GAMEPAD,
