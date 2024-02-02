@@ -153,9 +153,12 @@ methods:
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
       item:
 
-      - Server requests (recommended) prompt original copies until they run out, regardless of the price. Once original copies are out, resale copies are prompted.
+      - Server requests (recommended) prompt original copies until they run out,
+        regardless of the price. Once original copies are out, resale copies are
+        prompted.
 
-      - Client requests prompt from the lowest resale price even if original copies are available.
+      - Client requests prompt from the lowest resale price even if original
+        copies are available.
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market

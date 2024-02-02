@@ -26,7 +26,9 @@ The memory quota limits the total amount of memory that an experience can consum
 
 When users join the experience, the additional memory quota is available immediately. When users leave the experience, the quota doesn't reduce immediately. There's a trace back period of **8 days** before the quota re-evaluates to a lower value.
 
-With the observability feature available, you can view the memory size quota of your experience in real-time using the Memory Usage chart. For more information on properly arranging your memory usage to ensure an uninterrupted experience for your users, see [Identifying Peak Times and Performance Bottlenecks](../../cloud-services/memory-stores/observability.md#identifying-peak-times-and-performance-bottlenecks).
+After your experience hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
+
+With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your experience in real-time using the **Memory Usage** chart.
 
 ### API Request Limits
 
