@@ -22,7 +22,7 @@
   },
   "[markdown]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": "explicit"
+      "source.fixAll.markdownlint": true
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2,
