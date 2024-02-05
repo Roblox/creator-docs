@@ -39,7 +39,7 @@ description: |
   				<b>Messages sent per game server</b>
   			</td>
   			<td>
-  				 150 + 60 * (number of players in this game server) per minute
+  				 600 + 240 * (number of players in this game server) per minute
   			</td>
   		</tr>
   		<tr>
@@ -47,7 +47,7 @@ description: |
   				<b>Messages received per topic</b>
   			</td>
   			<td>
-  				(10 + 20 * number of servers) per minute
+  				(40 + 80 * number of servers) per minute
   			</td>
   		</tr>
   		<tr>
@@ -55,7 +55,7 @@ description: |
   				<b>Messages received for entire game</b>
   			</td>
   			<td>
-  				 (100 + 50 * number of servers) per minute
+  				 (400 + 200 * number of servers) per minute
   			</td>
   		</tr>
       <tr>
@@ -63,7 +63,7 @@ description: |
   				<b>Subscriptions allowed per game server</b>
   			</td>
   			<td>
-  				 5 + 2 * (number of players in this game server)
+  				 20 + 8 * (number of players in this game server)
   			</td>
   		</tr>
   	</tbody>
