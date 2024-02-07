@@ -23,6 +23,7 @@ inherits:
 tags:
   - NotCreatable
   - Service
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: VRService.AutomaticScaling
@@ -44,8 +45,8 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
   - name: VRService.FadeOutViewOnCollision
     summary: |
       When true, a VR player's view will fade to black when their head collides
@@ -56,7 +57,8 @@ properties:
       walls while in VR. The default value is true.
     code_samples: []
     type: bool
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -64,8 +66,8 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
   - name: VRService.GuiInputUserCFrame
     summary: |
       Describes what UserCFrame is responsible for input in VR.
@@ -82,7 +84,8 @@ properties:
     code_samples:
       - VRService-GuiInputUserCFrame
     type: UserCFrame
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
