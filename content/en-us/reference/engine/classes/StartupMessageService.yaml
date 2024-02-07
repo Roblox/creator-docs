@@ -13,18 +13,6 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods:
-  - name: StartupMessageService:GetStartupMessage
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Variant
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+methods: []
 events: []
 callbacks: []

@@ -6,22 +6,22 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Editing3D
+  - name: None
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Scripting
+  - name: Editing3D
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: PrivateScripting
+  - name: Scripting
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: None
+  - name: PrivateScripting
     summary: ''
     value: 3
     tags: []

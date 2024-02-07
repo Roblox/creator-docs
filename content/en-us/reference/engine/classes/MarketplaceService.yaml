@@ -151,7 +151,14 @@ methods:
       Prompts a user to purchase an item with the given `assetId`. If prompting
       a purchase of a
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
-      item, the request must come from the server or the purchase fails.
+      item:
+
+      - Server requests (recommended) prompt original copies until they run out,
+        regardless of the price. Once original copies are out, resale copies are
+        prompted.
+
+      - Client requests prompt from the lowest resale price even if original
+        copies are available.
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market

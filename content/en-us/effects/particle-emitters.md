@@ -56,7 +56,12 @@ To insert an image into a particle emitter:
 
    <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="800" alt="Toolbox indicated in Home tab" />
 
-2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Marketplace** tab.
+2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Creator Store** tab.
+
+   <img src="../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />
+
+   <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" alt="Creator Store tab indicated in Studio's Toolbox" />
+
 3. Right-click on the image you want to insert into a particle emitter and select **Copy&nbsp;Asset&nbsp;ID**.
 4. In the [Explorer](../studio/explorer.md) window, select a `Class.ParticleEmitter`.
 5. In the [Properties](../studio/properties.md) window, paste the asset ID into the **Texture** property.

@@ -20,10 +20,6 @@ description: |
     the default humanoid for each player's character.
   - A `Class.Model` instance named **StarterCharacter**, which will be used as
     the character model for all players
-
-  A typical structure may look something like this:
-
-  ![StarterPlayer Tree](/assets/legacy/StarterPlayerTree.png)
 code_samples:
   - setting-a-player-s-replication-focus
   - displaying-a-humanoid-s-health-and-name
@@ -200,7 +196,6 @@ properties:
 
       Third-person is the default camera setting.
     code_samples:
-      - untitled
       - playing-in-first-person
     type: CameraMode
     tags: []

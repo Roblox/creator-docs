@@ -25,18 +25,21 @@ T-shirts are square images applied to the front of an avatar's torso. To make a 
 
 ### Shirts and Pants
 
-Classic shirts and pants are image assets that wrap around an avatar's body. To create shirts and pants, download the following clothing templates and draw your own art on top. Once completed, you can upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to [test](#testing) in your own experience.
+Classic shirts and pants are image assets that wrap around an avatar's body. To create shirts and pants, [download and unzip](../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates and draw your own art on top. Once completed, you can upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to [test](#testing) in your own experience.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/accessories/classic-clothing/Template-Shirts-R15_07262019.png" />
-    <figcaption>Shirt (Torso and Arms)</figcaption>
+    <img src="../../assets/accessories/classic-clothing/Template-Shirts-R15.png" />
+    <figcaption><center> <a href="../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Shirt (Torso and Arms)</a></center></figcaption>
+
   </figure>
   <figure>
-    <img src="../../assets/accessories/classic-clothing/Template-Pants-R15_07262019.png" />
-    <figcaption>Pants (Torso and Legs)</figcaption>
+    <img src="../../assets/accessories/classic-clothing/Template-Pants-R15.png" />
+    <figcaption><center> <a href = "../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Pants (Torso and Legs)</a></center></figcaption>
   </figure>
 </GridContainer>
+
+<br />
 
 The following table includes sizes for each template part:
 

@@ -49,41 +49,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: PlayerViewService:OnCameraCFrameReplicationRequest
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: PlayerViewService:UpdateDeviceCFrame
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default: nil
-        summary: ''
-      - name: cframe
-        type: CFrame
-        default: Identity
-        summary: ''
-      - name: timestamp
-        type: int64
-        default: 0
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
 events: []
 callbacks: []

@@ -146,8 +146,6 @@ properties:
       right side of the screen should appear more red, and normals pointing
       towards the top side of your screen should appear more green.
 
-      ![Bread normal map](/assets/legacy/bread-nmap.png)
-
       The terms "DirectX format" and "OpenGL format" are sometimes used to
       describe whether the G channel of the normal map is inverted or not.
       Roblox expects the OpenGL format.

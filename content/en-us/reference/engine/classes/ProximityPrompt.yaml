@@ -9,7 +9,8 @@ description: |
   The **ProximityPrompt** instance lets you prompt players to interact with an
   object in the 3D world, such as opening a door or picking up an item. A
   `Class.ProximityPrompt` object works when parented to a `Class.BasePart`,
-  `Class.Attachment`, or `Class.Model` (with `Class.Model.PrimaryPart|PrimaryPart` set) in the workspace. When the player's
+  `Class.Attachment`, or `Class.Model` (with
+  `Class.Model.PrimaryPart|PrimaryPart` set) in the workspace. When the player's
   character approaches, a UI appears to prompt them for input.
 
   Prompts consist of three primary elements, each of which can be controlled by
