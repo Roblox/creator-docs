@@ -78,7 +78,7 @@ For external links to other websites outside of [https://create.roblox.com](http
 
 ### Documentation Site Links
 
-When linking to another page on the Roblox Documentation site, use **relative** links to the Markdown file, including the `.md` extension:
+When linking to another page on the Roblox Documentation site, use **relative** links to the Markdown file, including the `.md` extension. Links to Engine API reference pages are handled separately (see section below).
 
 - `[Meshes](../parts/meshes.md)`
 - `[Merch Booth](../resources/modules/merch-booth.md)`
