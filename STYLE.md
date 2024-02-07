@@ -49,7 +49,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
 
 - "Can" is for optional actions or permission, "might" for possibility, "must" for requirements, and "should" for recommendations. Avoid "may."
 
-  - **WORSE**: You should accept the license agreement before you may make changes. You might also review the coding standards.
+  - **BAD**: You should accept the license agreement before you may make changes. You might also review the coding standards.
   - **BETTER**: You must accept the license agreement before you can make changes. You should also review the coding standards.
 
 - Avoid gender identifiers. Whenever possible, make subjects plural.
