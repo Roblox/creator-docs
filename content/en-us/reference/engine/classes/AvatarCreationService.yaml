@@ -34,39 +34,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events:
-  - name: AvatarCreationService.UgcValidationFailure
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: guid
-        type: string
-        default:
-        summary: ''
-      - name: errorMessage
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: AvatarCreationService.UgcValidationSuccess
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: guid
-        type: string
-        default:
-        summary: ''
-      - name: serializedModel
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []

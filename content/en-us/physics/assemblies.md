@@ -1,5 +1,5 @@
 ---
-title: Understanding Assemblies
+title: Assemblies
 description: Explains physical assemblies and how they behave in Roblox's rigid body physics engine.
 ---
 
