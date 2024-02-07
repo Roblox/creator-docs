@@ -85,7 +85,7 @@ When linking to another page on the Roblox Documentation site, use **relative** 
 
 ### Engine API Reference Page Links
 
-When referencing a Roblox Engine API class, method, etc. in prose, use [automatic API links](#link-syntax). Do **not** use HTML or Markdown links to a specific URL such as `[BasePart](https://create.roblox.com/docs/reference/engine/classes/BasePart.html)`.
+When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#api-link-syntax) instead.`.
 
 #### Usage Guidelines
 
