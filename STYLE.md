@@ -111,7 +111,7 @@ When referencing a Roblox Engine API member, such as a class, method, enum, data
 
 #### Link Syntax
 
-To link to a page in the Roblox Engine API, use the following syntax patterns. The parser detects these keywords and forms monospaced links on the API page:
+To link to a page in the Roblox Engine API, use the following syntax patterns. The parser detects these keywords and forms monospaced links to the proper Engine API page in our site.
 
 - **Classes**
 
