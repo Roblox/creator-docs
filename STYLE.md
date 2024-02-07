@@ -69,7 +69,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
 
 ## Links
 
-### Off-Site Links
+### External Links
 
 For links to other domains or the web, use standard Markdown instead of JSX or HTML:
 
