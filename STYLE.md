@@ -91,7 +91,7 @@ When referencing a Roblox Engine API member, such as a class, method, enum, data
 
 - In prose, you should always link to an API member, but avoid excessive usage through pronouns and contextual references. For example:
 
-  - **WORSE**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies, and [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can detect collisions with other [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
+  - **BAD**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies, and [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can detect collisions with other [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
   - **BETTER**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies and they can detect collisions with each other.
 
 - Never frame API names in the possessive; instead, adjust the phrasing to avoid possessive case: 
