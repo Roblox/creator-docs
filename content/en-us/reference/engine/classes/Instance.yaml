@@ -373,7 +373,7 @@ methods:
       - Clone-Example
     parameters: []
     returns:
-      - type: Instance
+      - type: Instance?
         summary: ''
     tags: []
     deprecation_message: ''
