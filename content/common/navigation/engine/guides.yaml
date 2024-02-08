@@ -426,6 +426,8 @@ navigation:
             path: /cloud-services/memory-stores/queue
           - title: Observability
             path: /cloud-services/memory-stores/observability
+      - title: Experience Notifications
+        path: /cloud-services/experience-notifications
       - title: Cross-Server Messaging
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity Developers
