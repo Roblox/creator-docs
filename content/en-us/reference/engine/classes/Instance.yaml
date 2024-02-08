@@ -23,15 +23,17 @@ properties:
   - name: Instance.Archivable
     summary: |
       Determines if an `Class.Instance` can be cloned using
-      `Class.Instance:Clone()` or saved to file.
+      `Class.Instance:Clone()`, or when saved/published.
     description: |
-      This property determines whether an `Class.Instance|object` should be
-      included when the game is published or saved, or when
-      `Class.Instance:Clone()` is called on one of the object's ancestors.
-      Calling Clone directly on an object will return nil if the cloned object
-      is not archivable. Copying an object in Studio (using the 'Duplicate' or
-      'Copy' options) will ignore the Archivable property and set Archivable to
-      true for the copy.
+      This property determines whether the instance should be included when the
+      experience is published or saved, or when `Class.Instance:Clone()|Clone()`
+      is called on one of the instance's ancestors. Calling
+      `Class.Instance:Clone()|Clone()` directly on an instance will return `nil`
+      if that instance is **not** `Class.Instance.Archivable|Archivable`.
+      
+      Copying an object in Studio using the **Duplicate** or **Copy**/**Paste**
+      options will ignore its own `Class.Instance.Archivable|Archivable` property
+      and set `Class.Instance.Archivable|Archivable` to `true` for the copy.
 
       ```
       local part = Instance.new("Part")
