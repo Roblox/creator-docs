@@ -77,7 +77,7 @@ description: |
 
   This service is especially useful for supporting gamepad and touch input. For
   gamepad input, you might choose to bind the B button to an action that returns
-  the user to the previous menu when they entire another menu. For touch,
+  the user to the previous menu when they enter another menu. For touch,
   on-screen touch buttons can be used in place of key presses: these buttons
   display only while the action is bound, and the position, text and/or images
   of these buttons can be configured through this service. They're somewhat
