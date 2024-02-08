@@ -352,9 +352,9 @@ methods:
       **Clone** creates a copy of an object and all of its descendants, ignoring
       all objects that are not `Class.Instance.Archivable|Archivable`. The copy
       of the root object is returned by this function and its
-      `Class.Instance.Parent|Parent` is set to nil. Note that if the object
-      itself has `Class.Instance.Archivable|Archivable` set to false, this
-      function will return nil.
+      `Class.Instance.Parent|Parent` is set to `nil`. Note that if the object
+      itself has `Class.Instance.Archivable|Archivable` set to `false`, this
+      function will return `nil`.
 
       If a reference property such as `Class.ObjectValue.Value` is set in a
       cloned object, the value of the copy's property depends on original's
