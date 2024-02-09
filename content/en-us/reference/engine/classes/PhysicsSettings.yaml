@@ -899,6 +899,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: PhysicsSettings.TorqueDrawScale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
   - name: PhysicsSettings.UseCSGv2
     summary: |
       If set to true, version 2 of Roblox's CSG solver will be used instead of

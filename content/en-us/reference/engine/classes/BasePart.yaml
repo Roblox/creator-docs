@@ -54,18 +54,18 @@ properties:
     summary: |
       Determines whether a part is immovable by physics.
     description: |
-      The **Anchored** property determines whether the part will be
-      immovable by physics. When enabled, a part will never change position
-      due to gravity, other part collisions, overlapping other parts, or any
-      other physics-related causes. As a result, two anchored parts will never
-      fire the `Class.BasePart.Touched` event on each other.
-      
+      The **Anchored** property determines whether the part will be immovable by
+      physics. When enabled, a part will never change position due to gravity,
+      other part collisions, overlapping other parts, or any other
+      physics-related causes. As a result, two anchored parts will never fire
+      the `Class.BasePart.Touched` event on each other.
+
       An anchored part may still be moved by changing its
       `Class.BasePart.CFrame|CFrame` or `Class.BasePart.Position|Position`, and
       it still may have a nonzero
       `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity` and
-      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`. 
-      
+      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`.
+
       Finally, if an unanchored part is joined with an anchored part through an
       object like a `Class.Weld`, it too will act anchored. If such a joint
       breaks, the part may be affected by physics again. See
@@ -207,7 +207,8 @@ properties:
 
       Parts that all share the same AssemblyRootPart are in the same assembly.
 
-      For more information on root parts, see [Assemblies](../../../physics/assemblies.md).
+      For more information on root parts, see
+      [Assemblies](../../../physics/assemblies.md).
     code_samples:
     type: BasePart
     tags:
@@ -1297,8 +1298,8 @@ properties:
       you don't want to affect the handling of the car or a massless render mesh
       welded to a simpler collision mesh.
 
-      See also [Assemblies](../../../physics/assemblies.md), an
-      article documenting what root parts are and how to use them.
+      See also [Assemblies](../../../physics/assemblies.md), an article
+      documenting what root parts are and how to use them.
     code_samples:
     type: bool
     tags: []
@@ -1698,8 +1699,8 @@ properties:
       You can use this property to control which part of an assembly is the root
       part and keep the root part stable if size changes.
 
-      See also [Assemblies](../../../physics/assemblies.md), an
-      article documenting what root parts are and how to use them.
+      See also [Assemblies](../../../physics/assemblies.md), an article
+      documenting what root parts are and how to use them.
     code_samples:
     type: int
     tags: []
@@ -2474,8 +2475,10 @@ methods:
       will move all other parts connected to it accordingly). More information
       is available in the [Assemblies](../../../physics/assemblies.md) article.
 
-      This function predates the `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. It remains supported for
-      backwards compatibility, but you should use `Class.BasePart.AssemblyRootPart|AssemblyRootPart` directly.
+      This function predates the
+      `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. It remains
+      supported for backwards compatibility, but you should use
+      `Class.BasePart.AssemblyRootPart|AssemblyRootPart` directly.
     code_samples:
     parameters: []
     returns:
