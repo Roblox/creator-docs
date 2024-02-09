@@ -18,6 +18,8 @@ navigation:
   - heading: V2 Resources (Beta)
   - title: Inventory
     path: /cloud/open-cloud/inventory
+  - title: Experience Notifications
+    path: /cloud/open-cloud/experience-notifications
   - heading: V1 Resources
   - title: Assets
     path: /cloud/open-cloud/usage-assets

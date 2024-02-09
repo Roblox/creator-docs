@@ -85,7 +85,7 @@ When linking to another page on the Roblox Documentation site, use **relative** 
 
 ### Engine API Reference Page Links
 
-When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#api-link-syntax) instead.`.
+When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#link-syntax) instead.`.
 
 #### Usage Guidelines
 
@@ -94,7 +94,7 @@ When referencing a Roblox Engine API member, such as a class, method, enum, data
   - **BAD**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies, and [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can detect collisions with other [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart).
   - **BETTER**: [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is an abstract base class for in-world objects that render and are physically simulated. [`BaseParts`](https://create.roblox.com/docs/reference/engine/classes/BasePart) can be grouped into simulated rigid assemblies and they can detect collisions with each other.
 
-- Never frame API names in the possessive; instead, adjust the phrasing to avoid possessive case: 
+- Never frame API names in the possessive; instead, adjust the phrasing to avoid possessive case:
 
   - **BAD**: A [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart)'s color is defined by its [`Color`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Color) property.
   - **BETTER**: The color of a [`BasePart`](https://create.roblox.com/docs/reference/engine/classes/BasePart) is defined by its [`Color`](https://create.roblox.com/docs/reference/engine/classes/BasePart#Color) property.
