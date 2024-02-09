@@ -2,7 +2,7 @@
 
 This repository holds source code for the creator documentation at [create.roblox.com/docs](https://create.roblox.com/docs).
 
-**Note**: Currently, the repository has guides, tutorials, and educational content. Engine API reference files and code samples are coming soon.
+**Note**: Currently, the repository has guides, tutorials, educational content, and the Engine API reference. Code samples are coming soon.
 
 If you're unfamiliar with the GitHub contribution process, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and the following video.
 
