@@ -84,7 +84,7 @@ functions:
       <tr><td>%A</td><td>Full weekday name *</td>        <td>Wednesday</td></tr>
       <tr><td>%b</td><td>Abbreviated month name *</td>   <td>Sep</td></tr>
       <tr><td>%B</td><td>Full month name *</td>          <td>September</td></tr>
-      <tr><td>%c</td><td>Date and time *</td>            <td>09/16/98 23:48:10</td></tr>
+      <tr><td>%c</td><td>Date and time *</td>            <td>Wed Sep 16 23:48:10 1998</td></tr>
       <tr><td>%d</td><td>Day of the month</td>         <td>16</td></tr>
       <tr><td>%H</td><td>Hour, using 24-hour clock</td><td>23</td></tr>
       <tr><td>%I</td><td>Hour, using 12-hour clock</td><td>11</td></tr>
