@@ -57,7 +57,7 @@ You can customize teleportations, such as [teleporting users to a specific serve
 
 ### Teleporting to Specific Servers
 
-To teleport users to specific servers, set the target server using `Class.TeleportOptions` and pass it to the `Class.TeleportService:TeleportAsync()` method. If you don't specify a server, users are sorted into any public server. The details of the first user in the list is used to matchmake to a public server.
+To teleport users to specific servers, set the target server using `Class.TeleportOptions` and pass it to the `Class.TeleportService:TeleportAsync()` method. If you don't specify a server, users are teleported into a matchmade public server. The information of the first user in the list is used to matchmake to that public server.
 
 To teleport users to a specific public server, set the `Class.TeleportOptions.ServerInstanceId` property as a valid instance ID, which is a unique identifier for a public server.
 
