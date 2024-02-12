@@ -23,15 +23,17 @@ properties:
   - name: Instance.Archivable
     summary: |
       Determines if an `Class.Instance` can be cloned using
-      `Class.Instance:Clone()` or saved to file.
+      `Class.Instance:Clone()`, or when saved/published.
     description: |
-      This property determines whether an `Class.Instance|object` should be
-      included when the game is published or saved, or when
-      `Class.Instance:Clone()` is called on one of the object's ancestors.
-      Calling Clone directly on an object will return nil if the cloned object
-      is not archivable. Copying an object in Studio (using the 'Duplicate' or
-      'Copy' options) will ignore the Archivable property and set Archivable to
-      true for the copy.
+      This property determines whether the instance should be included when the
+      experience is published or saved, or when `Class.Instance:Clone()|Clone()`
+      is called on one of the instance's ancestors. Calling
+      `Class.Instance:Clone()|Clone()` directly on an instance will return `nil`
+      if that instance is **not** `Class.Instance.Archivable|Archivable`.
+      
+      Copying an object in Studio using the **Duplicate** or **Copy**/**Paste**
+      options will ignore its own `Class.Instance.Archivable|Archivable` property
+      and set `Class.Instance.Archivable|Archivable` to `true` for the copy.
 
       ```
       local part = Instance.new("Part")
@@ -101,8 +103,8 @@ properties:
       This property is an identifier that describes an object. Names are not
       necessarily unique identifiers however; multiple children of an object may
       share the same name. Names are used to keep the object hierarchy
-      organized, along with allowing scripts to access specific objects.
-      The name of an instance cannot exceed 100 characters in size.
+      organized, along with allowing scripts to access specific objects. The
+      name of an instance cannot exceed 100 characters in size.
 
       The name of an object is often used to access the object through the data
       model hierarchy using the following methods:
@@ -346,29 +348,24 @@ methods:
     thread_safety: Unsafe
   - name: Instance:Clone
     summary: |
-      Create a copy of an object and all its descendants, ignoring objects that
-      are not `Class.Instance.Archivable|Archivable`.
+      Create a copy of an instance and all its descendants, ignoring instances
+      that are not `Class.Instance.Archivable|Archivable`.
     description: |
-      **Clone** creates a copy of an object and all of its descendants, ignoring
-      all objects that are not `Class.Instance.Archivable|Archivable`. The copy
-      of the root object is returned by this function and its
-      `Class.Instance.Parent|Parent` is set to nil.
+      **Clone** creates a copy of an instance and all of its descendants, ignoring
+      all instances that are not `Class.Instance.Archivable|Archivable`. The copy
+      of the root instance is returned by this method and its
+      `Class.Instance.Parent|Parent` is set to `nil`. Note that if the instance
+      itself has `Class.Instance.Archivable|Archivable` set to `false`, this
+      function will return `nil`.
 
       If a reference property such as `Class.ObjectValue.Value` is set in a
-      cloned object, the value of the copy's property depends on original's
+      cloned instance, the value of the copy's property depends on original's
       value:
 
-      - If a reference property refers to an object that was **also** cloned, an
-        _internal reference_, the copy will refer to the copy.
-      - If a reference property refers to an object that was **not** cloned, an
-        _external reference_, the same value is maintained in the copy.
-
-      This function is typically used to create models that can be regenerated.
-      First, get a reference to the original object. Then, make a copy of the
-      object and insert the copy by setting its `Class.Instance.Parent|Parent`
-      to the `Class.Workspace` or one of its descendants. Finally, when it's
-      time to regenerate the model, `Class.Instance:Destroy()|Destroy` the copy
-      and clone a new one from the original like before.
+      - If a reference property refers to an instance that was **also** cloned,
+      the copy will refer to the copy.
+      - If a reference property refers to an object that was **not** cloned,
+      the same value is maintained in the copy.
     code_samples:
       - Clone-Example
     parameters: []

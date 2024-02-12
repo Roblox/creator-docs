@@ -3663,6 +3663,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DragDetectorDragStyle.yaml
         ignoreTranslation: true
+      - title: DragDetectorPermissionPolicy
+        path: /reference/engine/enums/DragDetectorPermissionPolicy
+        type: engineapi
+        source: /reference/engine/enums/DragDetectorPermissionPolicy.yaml
+        ignoreTranslation: true
       - title: DragDetectorResponseStyle
         path: /reference/engine/enums/DragDetectorResponseStyle
         type: engineapi
