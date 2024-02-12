@@ -28,7 +28,8 @@ description: |
   `Class.LocalScript`. As UserInputService is client-side only, users in the
   game can only detect their own input - and not the input of others.
 
-  See also `Class.ContextActionService`, a service which allows you to bind function to multiple user inputs.
+  See also `Class.ContextActionService`, a service which allows you to bind
+  function to multiple user inputs.
 code_samples:
   - UserInputService
 inherits:

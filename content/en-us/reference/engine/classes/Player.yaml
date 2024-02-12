@@ -159,11 +159,12 @@ properties:
       behavior is:
 
       - Players can right-click and drag (mouse), tap and drag (mobile), use the
-        secondary thumbstick (gamepad), or press the left/right arrows (keyboard) to rotate the camera around their character.
+        secondary thumbstick (gamepad), or press the left/right arrows
+        (keyboard) to rotate the camera around their character.
       - When a player moves their character, it faces in the corresponding
-      movement direction.
+        movement direction.
       - Players can zoom in and out freely, even to first person on full zoom
-      in.
+        in.
 
       #### First Person
 
@@ -1642,6 +1643,22 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+  - name: Player:SetChatTranslationSettingsLocaleId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: locale
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: Player:SetSuperSafeChat
     summary: |

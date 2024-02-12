@@ -192,6 +192,7 @@ https://start.codabra.org/
 https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
+https://stripe.com/docs/connect/cross-border-payouts
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html
 https://substance3d.adobe.com/documentation/sddoc/transformation-2d-172825332.html
@@ -206,6 +207,8 @@ https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
 https://support.guilded.gg/hc/en-us
 https://support.guilded.gg/hc/en-us/articles/1500002751582-Create-a-Server
 https://support.guilded.gg/hc/en-us/articles/360038927934-Incoming-Webhooks
+https://support.stripe.com/express/questions/what-is-a-w-8-form
+https://support.stripe.com/express/questions/what-is-a-w-9-form
 https://teaching.pitt.edu/wp-content/uploads/2020/07/FLEX-Designing-Discussion-Questions-Using-Blooms-Taxonomy-Examples.pdf
 https://techbrainiacs.com/
 https://techkidzafrica.co.ke/

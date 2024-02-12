@@ -699,8 +699,7 @@ properties:
     summary: |
       Overrides the default selection adornment used for gamepads.
     description: |
-      This property overrides the default selection adornment used for
-      gamepads.
+      This property overrides the default selection adornment used for gamepads.
 
       Note that the chosen **SelectionImageObject** overlays the selected
       `Class.GuiObject` with the `Class.GuiObject.Size|Size` of the image. For

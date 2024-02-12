@@ -218,10 +218,10 @@ properties:
       read from this property if they implement their own object movement tools.
 
       The images below show how movement/rotation tools change when working with
-      parts. When **UseLocalSpace** is `false`, the movement tools align
-      with the global axes, and when `true` the movement tools align with the
-      part's local axes.
-  
+      parts. When **UseLocalSpace** is `false`, the movement tools align with
+      the global axes, and when `true` the movement tools align with the part's
+      local axes.
+
       <table>
       <thead>
       <tr>
