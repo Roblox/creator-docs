@@ -280,7 +280,7 @@ methods:
       This function can be used to ensure that the user's in-game head is
       positioned according to the location of the user's VR headset.
 
-      This is similar to the `Class.UserInputService` function,
+      This behaves identically to the `Class.UserInputService` function,
       `Class.UserInputService:RecenterUserHeadCFrame()`.
 
       Since `VRServiceService` only runs client-side, this function will only
