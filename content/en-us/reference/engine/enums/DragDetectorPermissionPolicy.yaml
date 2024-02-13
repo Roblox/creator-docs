@@ -1,0 +1,23 @@
+name: DragDetectorPermissionPolicy
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Nobody
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Everybody
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Scriptable
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

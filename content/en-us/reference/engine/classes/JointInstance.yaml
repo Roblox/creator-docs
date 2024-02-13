@@ -3,33 +3,21 @@ type: class
 category:
 memory_category: PhysicsParts
 summary: |
-  JointInstance is the base class for joints, such as Connectors, Welds, and
-  Snaps.
+  The base class for joints.
 description: |
-  JointInstance is the base class for joints, such as Connectors, Welds, and
-  Snaps.
+  **JointInstance** is the base class for joints such as `Class.Weld|Welds` and
+  `Class.Motor|Motors`.
 
-  `Class.Weld`, `Class.Snap`, `Class.WeldConstraint`, `Class.Motor`, and
-  `Class.Motor6D` joints all combine multiple parts into the same Assembly. An
-  assembly is a rigid body if none of its parts are anchored. No physical forces
-  can ever separate the parts of an Assembly or move them relative to each other
-  unless the joints are removed or updated. They're a single body.
+  `Class.Weld`, `Class.WeldConstraint`, `Class.Motor`, and `Class.Motor6D` all
+  combine multiple parts into the same
+  [assembly](../../../physics/assemblies.md). Every assembly has a root part
+  (`Class.BasePart:GetRootPart()`) and when
+  `Class.JointInstance.C0|C0`/`Class.JointInstance.C1|C1` of a
+  `Class.JointInstance` is modified, the root part will stay where it was.
 
-  Every Assembly has a root part, see `Class.BasePart:GetRootPart()`. When a
-  JointInstance's `Class.JointInstance.C0|C0`/`Class.JointInstance.C1|C1` is
-  modified the root part will stay where it was.
-
-  Welds do not have any directionality. `Class.JointInstance.Part0|Part0` or
-  `Class.JointInstance.Part1|Part1`, doesn't matter. You can imagine rigid
-  joints forming a tree branching down from the root part. All the parts down
-  the tree from root will move, and their welded "children" in this tree will
-  move with them.
-
-  A typical Roblox avatar is a single assembly. Here's a visualization of this
-  tree in a basic R15 humanoid rig on the left, and a representation of this
-  implicit tree of which parts move relative to which parts on the right.
-
-  ![Assembly Representation](/assets/legacy/AssemblyTree.png)
+  Welds do not have any directionality. You can imagine rigid joints forming a
+  tree branching down from the root part. All the parts down the tree from root
+  will move, and their welded "children" in this tree will move with them.
 code_samples:
 inherits:
   - Instance

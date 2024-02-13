@@ -697,42 +697,27 @@ properties:
       can_save: true
   - name: GuiObject.SelectionImageObject
     summary: |
-      Overrides the default selection adornment (used for gamepads).
+      Overrides the default selection adornment used for gamepads.
     description: |
-      This property overrides the default selection adornment (used for
-      gamepads). For best results, this should point to a `Class.GuiObject|GUI`.
+      This property overrides the default selection adornment used for gamepads.
 
-      Note that the SelectionImageObject overlays the selected GUI with the
-      `Class.GuiObject.Size` of the image. For best results when using a
-      non-default SelectionImageObject, you should size the SelectionImageObject
-      via the scale `Datatype.UDim2` values. This helps ensure that the object
-      scales properly over the selected element.
+      Note that the chosen **SelectionImageObject** overlays the selected
+      `Class.GuiObject` with the `Class.GuiObject.Size|Size` of the image. For
+      best results, you should size the custom **SelectionImageObject** via the
+      scale `Datatype.UDim2` values to help ensure that the object scales
+      properly over the selected element.
 
-      The default SelectionImageObject is a blue and white square outline around
-      the selected GUI element. In the image below, the selected GUI is a white
-      `Class.Frame`.
-
-      ![Default SelectionImageObject](/assets/legacy/Screen_Shot_2018-09-13_at_9.57.14_PM.png)
-
-      For instance, changing the SelectionImageObject to a `Class.ImageLabel`
-      with red and white square outline
-      [image](https://www.roblox.com/library/2347505468/SelectionImage-Red),
-      `Class.GuiObject.BackgroundTransparency` of 1, `Class.GuiObject.Size` of
-      _UDim2(1.1, 0, 1.1, 0)_, and `Class.GuiObject.Position` of _UDim2(-0.05,
-      0, -0.05, 0)_ results in the image below:
-
-      ![Custom SelectionImageObject](/assets/legacy/Screen_Shot_2018-09-13_at_9.53.54_PM.png)
-
-      Changing the SelectionImageObject for a GUI element only affects that
-      element. To change the SelectionImageObject for all of a user's GUI
-      elements, you can set the `Class.PlayerGui.SelectionImageObject` property.
+      Changing the **SelectionImageObject** for a `Class.GuiObject` element only
+      affects that element. To affect all of a user's GUI elements, set the
+      `Class.PlayerGui.SelectionImageObject` property.
 
       To determine or set which GUI element is selected by the user, you can use
-      the `Class.GuiService.SelectedObject` property. The user uses the gamepad
-      to select different GUI elements, invoking the
-      `Class.GuiObject.NextSelectionUp`, `Class.GuiObject.NextSelectionDown`,
-      `Class.GuiObject.NextSelectionLeft`, and
-      `Class.GuiObject.NextSelectionRight` events.
+      the `Class.GuiService.SelectedObject` property. The player uses the
+      gamepad to select different GUI elements, invoking the
+      `Class.GuiObject.NextSelectionUp|NextSelectionUp`,
+      `Class.GuiObject.NextSelectionDown|NextSelectionDown`,
+      `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`, and
+      `Class.GuiObject.NextSelectionRight|NextSelectionRight` events.
     code_samples:
     type: GuiObject
     tags: []

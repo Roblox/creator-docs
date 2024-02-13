@@ -164,7 +164,7 @@ To define an ad set:
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Locations.png" width="780" />
 
-2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Some options may not be available in some jurisdictions.
+2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Some options may not be available in some locations.
    <img src="../../assets/promotion/ads-manager/Ad-Set-Gender-Ages-Devices.png" width="780" />
 
 3. Select where your ad will appear, determined by your campaign objective.

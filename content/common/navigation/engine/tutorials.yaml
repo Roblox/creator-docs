@@ -65,8 +65,6 @@ navigation:
         path: /tutorials/building/physics/building-a-hinged-door
       - title: Building a Ferris Wheel
         path: /tutorials/building/physics/building-a-ferris-wheel
-      - title: Creating Spinning Objects
-        path: /tutorials/3D-art/creating-spinning-objects
       - title: Creating Elevators
         path: /tutorials/3D-art/creating-elevators
   - title: Animation

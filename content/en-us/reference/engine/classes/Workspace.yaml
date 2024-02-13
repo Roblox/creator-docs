@@ -757,17 +757,11 @@ properties:
       This property is a reference to the `Class.Terrain` object parented to the
       `Class.Workspace`.
 
-      ![An example of Roblox terrain](/assets/legacy/Terrain.png)
+      <img src="/assets/studio/explorer/Workspace-Terrain.png" width="320"
+      alt="Terrain object within the Workspace hierarchy" />
 
-      This property, like `Class.Workspace.CurrentCamera`, ensures that
-      developers to not inadvertently index a descendant of `Class.Workspace`
-      named 'Terrain' when looking for a game's `Class.Terrain` object. Without
-      this property, developers would need to use the
-      `Class.Instance:FindFirstChildOfClass()` function.
-
-      ```lua
-      workspace.Terrain.WaterColor = Color3.new(0, 1, 0) -- make the water green
-      ```
+      See [Environmental Terrain](../../../parts/terrain.md) for more
+      information.
     code_samples:
     type: Terrain
     tags:
@@ -815,18 +809,16 @@ methods:
       connected to these parts.
     description: |
       Goes through all `Class.BasePart|BaseParts` given, breaking any joints
-      connected to these parts.
+      connected to these parts. This function will break any of the following
+      types of joints:
 
-      This function will break any of the following types of joints:
+      - `Class.JointInstance|JointInstances` such as `Class.Weld|Welds`
+      - `Class.WeldConstraint|WeldConstraints`
 
-      - `Class.JointInstance|JointInstances` such as `Connectors`, `Welds` and
-        `Snaps`
-      - `Class.WeldConstraint`s
-
-      Unlike `Class.Model.MakeJoints`, this function requires an array of
+      Unlike `Class.Model:MakeJoints()`, this function requires an array of
       `Class.BasePart|BaseParts` as a parameter. This array is given as follows:
 
-      ```
+      ```lua
       workspace:BreakJoints({part1, part2, part3})
       ```
 

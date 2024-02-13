@@ -3,7 +3,7 @@ title: Roblox for Unity Developers
 description: If you're an experienced Unity developer, use this page to get oriented with Roblox.
 ---
 
-This page includes information to help experienced Unity developers get started with Roblox: basic orientation, conceptual comparison, and key differences.
+This page includes information to help experienced Unity developers get started with Roblox, which includes: basic orientation, a conceptual comparison, and key differences between the two platforms.
 
 ## Getting Oriented
 

@@ -550,11 +550,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ConfigureServerService.yaml
         ignoreTranslation: true
-      - title: ConnectivityService
-        path: /reference/engine/classes/ConnectivityService
-        type: engineapi
-        source: /reference/engine/classes/ConnectivityService.yaml
-        ignoreTranslation: true
       - title: Constraint
         path: /reference/engine/classes/Constraint
         type: engineapi
@@ -599,11 +594,6 @@ navigation:
         path: /reference/engine/classes/ControllerService
         type: engineapi
         source: /reference/engine/classes/ControllerService.yaml
-        ignoreTranslation: true
-      - title: ConversationalAIAcceptanceService
-        path: /reference/engine/classes/ConversationalAIAcceptanceService
-        type: engineapi
-        source: /reference/engine/classes/ConversationalAIAcceptanceService.yaml
         ignoreTranslation: true
       - title: CookiesService
         path: /reference/engine/classes/CookiesService
@@ -1944,11 +1934,6 @@ navigation:
         path: /reference/engine/classes/RigidConstraint
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
-        ignoreTranslation: true
-      - title: RobloxEditableImage
-        path: /reference/engine/classes/RobloxEditableImage
-        type: engineapi
-        source: /reference/engine/classes/RobloxEditableImage.yaml
         ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
@@ -3678,6 +3663,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DragDetectorDragStyle.yaml
         ignoreTranslation: true
+      - title: DragDetectorPermissionPolicy
+        path: /reference/engine/enums/DragDetectorPermissionPolicy
+        type: engineapi
+        source: /reference/engine/enums/DragDetectorPermissionPolicy.yaml
+        ignoreTranslation: true
       - title: DragDetectorResponseStyle
         path: /reference/engine/enums/DragDetectorResponseStyle
         type: engineapi
@@ -4117,6 +4107,11 @@ navigation:
         path: /reference/engine/enums/ModelStreamingMode
         type: engineapi
         source: /reference/engine/enums/ModelStreamingMode.yaml
+        ignoreTranslation: true
+      - title: ModerationStatus
+        path: /reference/engine/enums/ModerationStatus
+        type: engineapi
+        source: /reference/engine/enums/ModerationStatus.yaml
         ignoreTranslation: true
       - title: ModifierKey
         path: /reference/engine/enums/ModifierKey

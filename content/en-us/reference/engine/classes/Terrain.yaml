@@ -676,25 +676,55 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: Terrain:ReadVoxelChannels
-    summary: ''
-    description: ''
+    summary: |
+      Returns a region of terrain voxel data in table format based on the
+      channel names.
+    description: |
+      Returns a region of terrain voxel data in table format based on the
+      channel names.
     code_samples:
+      - terrain-readvoxelchannels-code-example
     parameters:
       - name: region
         type: Region3
         default:
-        summary: ''
+        summary: |
+          Target region to read from. Must be aligned to the voxel grid. Will
+          throw an error if region is too large; limit is currently 4194304
+          voxels&sup3;.
       - name: resolution
         type: float
         default:
-        summary: ''
+        summary: |
+          Voxel resolution. Must be 4.
       - name: channelIds
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of channel IDs (strings) that need to be accessed from the voxel
+          data. Each channel ID represents a type of data that's stored in
+          voxel. Current supported IDs are
+          `{"SolidMaterial", "SolidOccupancy", "LiquidOccupancy"}`.
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          Returns voxel data as a dictionary based on the `channelIds` input.
+          Keys represent each channel ID with their respective value as an array
+          of 3D data.
+
+          - `SolidMaterial` — The `Enum.Material` material of the voxel. Note
+            that `Enum.Material|Water` is not supported anymore; instead, a
+            voxel that contains water will have a value of `LiquidOccupancy`.
+          - `SolidOccupancy` — The occupancy of the voxel's material as
+            specified in the `SolidMaterial` channel. This is a value between 0
+            (empty) and 1 (full).
+          - `LiquidOccupancy` — Specifies the occupancy of the
+            `Enum.Material|Water` material in a voxel as a value between 0 (no
+            water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
+            `SolidMaterial` is not `Enum.Material|Air`, this will be 0.
+
+          The dictionary also contains a `Size` key with a value representing
+          the 3D array size of each channel data.
     tags: []
     deprecation_message: ''
     security: None
@@ -988,22 +1018,46 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: Terrain:WriteVoxelChannels
-    summary: ''
-    description: ''
+    summary: |
+      Sets a region of terrain using a dictionary of voxel channel data.
+    description: |
+      Sets a region of terrain using a dictionary of voxel channel data.
     code_samples:
+      - terrain-writevoxelchannels-example
     parameters:
       - name: region
         type: Region3
         default:
-        summary: ''
+        summary: |
+          Target region to write to. Must be aligned to the voxel grid. Will
+          throw an error if region is too large; limit is currently 4194304
+          voxels&sup3;.
       - name: resolution
         type: float
         default:
-        summary: ''
+        summary: |
+          Voxel resolution. Must be 4.
       - name: channels
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Dictionary of voxel data similar to the return value of
+          `Class.Terrain:ReadVoxelChannels()|ReadVoxelChannels()`. Keys
+          represent each channel ID with their respective value as an array of
+          3D data. The dictionary can support single or multiple channel inputs.
+
+          - `SolidMaterial` — The `Enum.Material` material of the voxel. Note
+            that `Enum.Material|Water` is not supported anymore; instead, a
+            voxel that contains only water should be entered as
+            `SolidMaterial = Enum.Material.Air, LiquidOccupancy = x`, where `x`
+            is a number between 0 (exclusive) and 1 (inclusive).
+          - `SolidOccupancy` — The occupancy of the voxel's material as
+            specified in the `SolidMaterial` channel. This should be a value
+            between 0 (empty) and 1 (full).
+          - `LiquidOccupancy` — Specifies the occupancy of the
+            `Enum.Material|Water` material in a voxel as a value between 0 (no
+            water) and 1 (full of water). If the `SolidOccupancy` is 1 and the
+            `SolidMaterial` is not `Enum.Material|Air`, this will be 0.
     returns:
       - type: void
         summary: ''
