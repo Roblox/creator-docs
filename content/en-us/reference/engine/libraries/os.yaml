@@ -183,7 +183,7 @@ functions:
       <tr>
         <td>%z</td>
         <td>ISO 8601 offset from UTC in timezone (1 minute = 1, 1 hour = 100)</td>
-        <td>-1000</td>
+        <td>-0800</td>
       </tr>
       <tr>
         <td>%Z</td>
