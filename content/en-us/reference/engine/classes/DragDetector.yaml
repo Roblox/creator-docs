@@ -354,8 +354,10 @@ properties:
       can_load: true
       can_save: true
   - name: DragDetector.PermissionPolicy
-    summary: ''
-    description: ''
+    summary: |
+      Controls the permission level for which players can interact with the `Class.DragDetector`.
+    description: |
+      Controls the permission level for which players can interact with the `Class.DragDetector`. Default is `Enum.DragDetectorPermissionPolicy.Everybody`.
     code_samples: []
     type: DragDetectorPermissionPolicy
     tags: []
@@ -701,14 +703,49 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: DragDetector:SetPermissionPolicyFunction
-    summary: ''
-    description: ''
+    summary: |
+      Passes a function to be used if and only if
+      `Class.DragDetector.PermissionPolicy|PermissionPolicy` is set to
+      `Enum.DragDetectorPermissionPolicy.Scriptable`.
+    description: |
+      Passes a function to be used if and only if
+      `Class.DragDetector.PermissionPolicy|PermissionPolicy` is set to
+      `Enum.DragDetectorPermissionPolicy.Scriptable`. The given function accepts
+      a `Class.Player` parameter for enabling/disabling the detector for a
+      specific player. It also receives a `part` parameter indicating which
+      specific `Class.BasePart` was clicked, such as one part within a draggable
+      `Class.Model`; this is useful for enabling/disabling the detector based on
+      that part's `Class.Instance.Name|Name`, `Class.BasePart.Color|Color`,
+      `Class.Instance:HasTag()|HasTag()` value, or other details.
+
+      ```lua
+      local dragDetector = script.Parent.DragDetector
+      dragDetector.PermissionPolicy = Enum.DragDetectorPermissionPolicy.Scriptable
+
+      dragDetector:SetPermissionPolicyFunction(function(player, part)
+      	if player and player:GetAttribute("IsInTurn") then
+      		return true
+      	elseif part and not part:GetAttribute("IsDraggable") then
+      		return false
+      	else
+      		return true
+      	end
+      end)
+      ```
     code_samples: []
     parameters:
       - name: function
         type: Function
         default:
-        summary: ''
+        summary: |
+          Function for setting the detector's interactivity. This function
+          accepts a `Class.Player` parameter for enabling/disabling the detector
+          for a specific player. It also receives a `part` parameter indicating
+          which specific `Class.BasePart` was clicked, such as one part within a
+          draggable `Class.Model`; this is useful for enabling/disabling the
+          detector based on that part's `Class.Instance.Name|Name`,
+          `Class.BasePart.Color|Color`, `Class.Instance:HasTag()|HasTag()`
+          value, or other details.
     returns:
       - type: void
         summary: ''
