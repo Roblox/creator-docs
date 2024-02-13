@@ -191,7 +191,7 @@ functions:
             <td><code>*</code></td>
             <td>any</td>
             <td>Equivalent to <code>s</code> but accepts any variable by converting it to a string using <code>tostring</code>.</td>
-            <td>*</td>
+            <td>table: 0x0123456789abcdef</td>
           </tr>
           <tr>
             <td><code>%</code></td>
