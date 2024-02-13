@@ -80,36 +80,128 @@ functions:
            </tr>
         </thead>
       <tbody>
-      <tr><td>%a</td><td>Abbreviated weekday name *</td> <td>Wed</td></tr>
-      <tr><td>%A</td><td>Full weekday name *</td>        <td>Wednesday</td></tr>
-      <tr><td>%b</td><td>Abbreviated month name *</td>   <td>Sep</td></tr>
-      <tr><td>%B</td><td>Full month name *</td>          <td>September</td></tr>
-      <tr><td>%c</td><td>Date and time *</td>            <td>Wed Sep 16 23:48:10 1998</td></tr>
-      <tr><td>%d</td><td>Day of the month</td>         <td>16</td></tr>
-      <tr><td>%H</td><td>Hour, using 24-hour clock</td><td>23</td></tr>
-      <tr><td>%I</td><td>Hour, using 12-hour clock</td><td>11</td></tr>
-      <tr><td>%j</td><td>Day of year</td>              <td>259</td></tr>
-      <tr><td>%m</td><td>Month</td>                    <td>09</td></tr>
-      <tr><td>%M</td><td>Minute</td>                   <td>48</td></tr>
-      <tr><td>%p</td><td>Either "AM" or "PM"</td>      <td>pm</td></tr>
-      <tr><td>%S</td><td>Second</td>                   <td>10</td></tr>
-      <tr><td>%U</td><td>Week number (first Sunday as the first day of week one)</td><td>37</td></tr>
-      <tr><td>%w</td><td>Weekday</td>                  <td>3</td></tr>
-      <tr><td>%W</td><td>Week number (first Monday as the first day of week one)</td><td>37</td></tr>
-      <tr><td>%x</td><td>Date *</td>                     <td>09/16/98</td></tr>
-      <tr><td>%X</td><td>Time *</td>                     <td>23:48:10</td></tr>
-      <tr><td>%y</td><td>Two-digit year</td>           <td>98</td></tr>
-      <tr><td>%Y</td><td>Full year</td>                <td>1998</td></tr>
-      <tr><td>%z</td><td>ISO 8601 offset from UTC in timezone (1 minute = 1, 1 hour = 100)</td><td>-0400</td></tr>
-      <tr><td>%Z</td><td>Timezone name or abbreviation *</td><td>Eastern Daylight Time</td></tr>
-      <tr><td>%%</td><td>The % character</td>          <td>%</td></tr>
+      <tr>
+        <td>%a</td>
+        <td>Abbreviated weekday name *</td>
+        <td>Mon</td>
+      </tr>
+      <tr>
+        <td>%A</td>
+        <td>Full weekday name *</td>
+        <td>Monday</td>
+      </tr>
+      <tr>
+        <td>%b</td>
+        <td>Abbreviated month name *</td>
+        <td>Feb</td>
+      </tr>
+      <tr>
+        <td>%B</td>
+        <td>Full month name *</td>
+        <td>February</td>
+      </tr>
+      <tr>
+        <td>%c</td>
+        <td>Date and time *</td>
+        <td>Mon Feb 12 14:14:35 2024</td>
+      </tr>
+      <tr>
+        <td>%d</td>
+        <td>Day of the month</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>%H</td>
+        <td>Hour, using 24-hour clock</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>%I</td>
+        <td>Hour, using 12-hour clock</td>
+        <td>02</td>
+      </tr>
+      <tr>
+        <td>%j</td>
+        <td>Day of year</td>
+        <td>043</td>
+      </tr>
+      <tr>
+        <td>%m</td>
+        <td>Month</td>
+        <td>02</td>
+      </tr>
+      <tr>
+        <td>%M</td>
+        <td>Minute</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>%p</td>
+        <td>Either "AM" or "PM"</td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td>%S</td>
+        <td>Second</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>%U</td>
+        <td>Week number (first Sunday as the first day of week one)</td>
+        <td>06</td>
+      </tr>
+      <tr>
+        <td>%w</td>
+        <td>Weekday</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>%W</td>
+        <td>Week number (first Monday as the first day of week one)</td>
+        <td>07</td>
+      </tr>
+      <tr>
+        <td>%x</td>
+        <td>Date *</td>
+        <td>02/12/24</td>
+      </tr>
+      <tr>
+        <td>%X</td>
+        <td>Time *</td>
+        <td>14:14:35</td>
+      </tr>
+      <tr>
+        <td>%y</td>
+        <td>Two-digit year</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>%Y</td>
+        <td>Full year</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>%z</td>
+        <td>ISO 8601 offset from UTC in timezone (1 minute = 1, 1 hour = 100)</td>
+        <td>-1000</td>
+      </tr>
+      <tr>
+        <td>%Z</td>
+        <td>Timezone name or abbreviation *</td>
+        <td>PST</td>
+      </tr>
+      <tr>
+        <td>%%</td>
+        <td>The % character</td>
+        <td>%</td>
+      </tr>
       </tbody>
       </table>
 
       \* This value can vary depending on the current locale.
 
-      &dagger; The example provided is for September 16th, 1998 (a Wednesday) at
-      11:48:10 PM (23:48:10), ran using locale "en-us" in Eastern Time (ET).
+      &dagger; The example provided is for February 12th, 2024 (Monday) at
+      2:14:35 PM (14:14:35), run using locale "en-us" in Pacific Time (PST).
 
       If the provided `formatString` is exactly `"*t"` (local time) or `"!*t"`
       (UTC time), this function instead returns a dictionary containing the
