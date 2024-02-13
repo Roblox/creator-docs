@@ -464,6 +464,8 @@ navigation:
             path: /production/publishing/publishing-assets
           - title: Creator Store
             path: /production/publishing/creator-store
+          - title: Selling on the Creator Store
+            path: /production/publishing/selling-on-the-creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines
