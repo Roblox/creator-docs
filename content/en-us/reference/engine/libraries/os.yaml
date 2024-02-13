@@ -201,7 +201,7 @@ functions:
       \* This value can vary depending on the current locale.
 
       &dagger; The example provided is for February 12th, 2024 (Monday) at
-      2:14:35 PM (14:14:35), run using locale "en-us" in Pacific Time (PST).
+      2:14:35 PM (14:14:35), run using locale "en-us" in Pacific Standard Time (PST).
 
       If the provided `formatString` is exactly `"*t"` (local time) or `"!*t"`
       (UTC time), this function instead returns a dictionary containing the
