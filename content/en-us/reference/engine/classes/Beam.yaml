@@ -20,20 +20,21 @@ description: |
   #### Beam Curvature
 
   Beams are configured to use a cubic Bézier curve formed by four control
-  points. This means they are not constrained to straight lines and the curve
-  of the beam can be modified by changing `Class.Beam.CurveSize0|CurveSize0`,
+  points. This means they are not constrained to straight lines and the curve of
+  the beam can be modified by changing `Class.Beam.CurveSize0|CurveSize0`,
   `Class.Beam.CurveSize1|CurveSize1`, and the orientation of the beam's
   `Class.Attachment|Attachments`.
 
   - **P0** — The start of the beam; position of
-  `Class.Beam.Attachment0|Attachment0`.
+    `Class.Beam.Attachment0|Attachment0`.
   - **P1** — `Class.Beam.CurveSize0|CurveSize0` studs away from
-  `Class.Beam.Attachment0|Attachment0`, in the positive **X** direction of
-  `Class.Beam.Attachment0|Attachment0`.
+    `Class.Beam.Attachment0|Attachment0`, in the positive **X** direction of
+    `Class.Beam.Attachment0|Attachment0`.
   - **P2** — `Class.Beam.CurveSize1|CurveSize1` studs away from
-  `Class.Beam.Attachment1|Attachment1`, in the negative **X** direction of
-  `Class.Beam.Attachment1|Attachment1`.
-  - **P3** — The end of the beam; position of `Class.Beam.Attachment1|Attachment1`
+    `Class.Beam.Attachment1|Attachment1`, in the negative **X** direction of
+    `Class.Beam.Attachment1|Attachment1`.
+  - **P3** — The end of the beam; position of
+    `Class.Beam.Attachment1|Attachment1`
 
   <img src="/assets/engine-api/classes/Beam/Curvature-Diagram.png" width="800" alt="Beam curvature diagram" />
 code_samples:
@@ -47,10 +48,10 @@ properties:
     summary: |
       The `Class.Attachment` the beam originates from.
     description: |
-      The `Class.Attachment` the beam originates from. This attachment
-      is the first control point on the beam's cubic Bézier curve; its
-      orientation, alongside the `Class.Beam.CurveSize0|CurveSize0` property,
-      determines the position of the second control point. See
+      The `Class.Attachment` the beam originates from. This attachment is the
+      first control point on the beam's cubic Bézier curve; its orientation,
+      alongside the `Class.Beam.CurveSize0|CurveSize0` property, determines the
+      position of the second control point. See
       [Beams](../../../effects/beams.md#curve) for more details.
 
       For the `Class.Attachment` where the beam ends, see
@@ -125,7 +126,9 @@ properties:
       solid line colored in accordance with this property.
 
       This property is a `Datatype.ColorSequence`, allowing the color to be
-      configured to vary across the length of the beam. Consider the following `Datatype.ColorSequence` which, when applied to a beam, would yield the pictured result.
+      configured to vary across the length of the beam. Consider the following
+      `Datatype.ColorSequence` which, when applied to a beam, would yield the
+      pictured result.
 
       ```lua
       local colorSequence = ColorSequence.new({
@@ -263,7 +266,7 @@ properties:
       This property should not be confused with
       `Class.Beam.LightInfluence|LightInfluence` which determines how the beam
       is affected by environmental light.
-      
+
       This property does **not** cause the beam to light the environment.
     code_samples:
     type: float
@@ -437,8 +440,9 @@ properties:
       Determines the transparency of the beam across its segments. This property
       is a `Datatype.NumberSequence`, allowing the transparency to be configured
       to vary across the length of the beam.
-      
-      Consider the following `Datatype.NumberSequence` which, when applied to a beam, would yield the pictured result.
+
+      Consider the following `Datatype.NumberSequence` which, when applied to a
+      beam, would yield the pictured result.
 
       ```lua
       local numberSequence = NumberSequence.new({
@@ -453,10 +457,10 @@ properties:
 
       Note that the beam's transparency also depends on the number of
       `Class.Beam.Segments|Segments`. Each segment of the beam can only show a
-      transition between two transparencies. Therefore a beam will need
-      to have at least `n-1` segments in order to display correctly, where `n`
-      is the number of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints`
-      in the `Datatype.NumberSequence`.
+      transition between two transparencies. Therefore a beam will need to have
+      at least `n-1` segments in order to display correctly, where `n` is the
+      number of `Datatype.NumberSequenceKeypoint|NumberSequenceKeypoints` in the
+      `Datatype.NumberSequence`.
     code_samples:
     type: NumberSequence
     tags: []
@@ -471,9 +475,13 @@ properties:
       can_save: true
   - name: Beam.Width0
     summary: |
-      The width of the beam at its origin (`Class.Beam.Attachment0|Attachment0`), in studs.
+      The width of the beam at its origin
+      (`Class.Beam.Attachment0|Attachment0`), in studs.
     description: |
-      The width of the beam at its origin (`Class.Beam.Attachment0|Attachment0`), in studs. The beam's width will change linearly to `Class.Beam.Width1|Width1` studs at its end (`Class.Beam.Attachment1|Attachment1`).
+      The width of the beam at its origin
+      (`Class.Beam.Attachment0|Attachment0`), in studs. The beam's width will
+      change linearly to `Class.Beam.Width1|Width1` studs at its end
+      (`Class.Beam.Attachment1|Attachment1`).
     code_samples:
     type: float
     tags: []
@@ -488,9 +496,13 @@ properties:
       can_save: true
   - name: Beam.Width1
     summary: |
-      The width of the beam at its end (`Class.Beam.Attachment1|Attachment1`), in studs.
+      The width of the beam at its end (`Class.Beam.Attachment1|Attachment1`),
+      in studs.
     description: |
-      The width of the beam at its end (`Class.Beam.Attachment1|Attachment1`), in studs. The beam's width will change linearly from `Class.Beam.Width0|Width0` studs at its origin (`Class.Beam.Attachment0|Attachment0`).
+      The width of the beam at its end (`Class.Beam.Attachment1|Attachment1`),
+      in studs. The beam's width will change linearly from
+      `Class.Beam.Width0|Width0` studs at its origin
+      (`Class.Beam.Attachment0|Attachment0`).
     code_samples:
     type: float
     tags: []
@@ -548,9 +560,11 @@ methods:
       - The texture cycle wraps at 0 and 1, meaning the texture is in the same
         position when the offset is at 0 or 1.
       - If the `Class.Beam.Texture|Texture` property is not set, this method
-      does nothing.
+        does nothing.
       - Increasing the offset will act in the inverse direction to the
-        `Class.Beam.TextureSpeed|TextureSpeed` property, meaning it will move the texture in the opposite direction to the direction the texture animates when `Class.Beam.TextureSpeed|TextureSpeed` is greater than 0.
+        `Class.Beam.TextureSpeed|TextureSpeed` property, meaning it will move
+        the texture in the opposite direction to the direction the texture
+        animates when `Class.Beam.TextureSpeed|TextureSpeed` is greater than 0.
     code_samples:
     parameters:
       - name: offset

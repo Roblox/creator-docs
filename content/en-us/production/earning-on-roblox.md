@@ -239,6 +239,12 @@ You can create and sell Studio [plugins](../studio/plugins.md) to the community 
 </Grid>
 </Grid>
 
+<Alert severity="warning">
+   In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+
+   Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
+</Alert>
+
 ## Converting Earned Robux to Cash
 
 Once you earn Robux, you can continue to use it in our platform to buy developer assets, plugins, [advertising](../production/promotion/advertising-on-roblox.md), in-experience items, or virtual items. In addition, when you have at least 30,000 earned Robux in your account, you may be eligible to exchange your earned Robux for real currency using the [Developer Exchange][link_developer_exchange] program.

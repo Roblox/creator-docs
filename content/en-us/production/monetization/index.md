@@ -3,7 +3,7 @@ title: Monetization
 description: Monetization is a part of Roblox's overall structure to provide value to creators.
 ---
 
-Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), and offering [private servers](#private-servers) for users to play just with friends.
+Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with friends, and [selling plugins](../publishing/selling-on-the-creator-store.md) to other creators on the Creator Store.
 
 If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
 
@@ -122,7 +122,13 @@ You'll receive a [commission](../../art/marketplace/marketplace-fees-and-commiss
 
 ### Plugins
 
-A [Plugin](../../studio/plugins.md) is an extension that adds additional features or functionality to Studio. You can sell plugins to other creators on the [Creator Store](../../production/publishing/creator-store.md) for Robux, or offer them for free. For more information, see [Publishing Plugins](../../studio/plugins.md#publishing-plugins).
+A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio. You can sell plugins to other creators on the [Creator Store](../../production/publishing/creator-store.md) for Robux, or offer them for free. For more information, see [Publishing Plugins](../../studio/plugins.md#publishing-plugins).
+
+<Alert severity="warning">
+   In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+
+   Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
+</Alert>
 
 <Alert severity="warning">
    There is a 30 day escrow hold for each purchase. Roblox holds the commission from your items and your Robux share of the sale for 30 days, starting from the date of sale.

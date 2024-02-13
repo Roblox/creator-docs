@@ -10,7 +10,7 @@ description: |
   A **TrussPart** is similar to a `Class.Part` but with a different visual
   `Class.TrussPart.Style|Style` and the important distinction that default
   characters are able to climb it.
-  
+
   This part type has significantly more restrictive size limitations than other
   parts; it must be `2 * 2 * n` studs where `n` is a multiple of 2 with a
   maximum of 512.
@@ -25,7 +25,7 @@ properties:
       Sets what the truss looks like.
     description: |
       Sets what the truss looks like, from the following options:
-      
+
       - `Enum.Style.AlternatingSupports`
       - `Enum.Style.BridgeStyleSupports`
       - `Enum.Style.NoSupports`

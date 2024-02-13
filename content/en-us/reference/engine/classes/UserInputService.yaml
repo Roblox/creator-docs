@@ -28,10 +28,8 @@ description: |
   `Class.LocalScript`. As UserInputService is client-side only, users in the
   game can only detect their own input - and not the input of others.
 
-  See also:
-
-  - `Class.ContextActionService`, a service which allows you to bind functions
-    to multiple user inputs
+  See also `Class.ContextActionService`, a service which allows you to bind
+  function to multiple user inputs.
 code_samples:
   - UserInputService
 inherits:
@@ -94,22 +92,9 @@ properties:
       gamepad.
     description: |
       This property describes whether the device being used by a user has an
-      available gamepad.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-
-      if userInputService.GamepadEnabled then
-      	print("Gamepad enabled")
-      else
-      	print("Gamepad not enabled")
-      end
-      ```
-
-      If gamepads are available, you can use
+      available gamepad. If gamepads are available, you can use
       `Class.UserInputService:GetConnectedGamepads()` to retrieve a list of
-      connected gamepads and `Class.UserInputService:GetNavigationGamepads()` to
-      retrieve a list of connected gamepads that also control navigation GUIs.
+      connected gamepads.
 
       As `Class.UserInputService` is client-side only, this property can only be
       used in a `Class.LocalScript`.
@@ -119,16 +104,13 @@ properties:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
     code_samples:
-      - UserInputService-GamepadDisconnected
+      - UserInputService-GetActiveGamepad
     type: bool
     tags:
       - ReadOnly
@@ -710,9 +692,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -769,9 +748,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -779,7 +755,7 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
+      - UserInputService-GetActiveGamepad
     parameters: []
     returns:
       - type: Array
@@ -942,9 +918,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -986,9 +959,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1224,7 +1194,6 @@ methods:
       - `Class.UserInputService:GetConnectedGamepads()`, to return all gamepads
         connected regardless of GUI navigational control
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters: []
     returns:
       - type: Array
@@ -1623,9 +1592,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1804,9 +1770,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1953,8 +1916,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -1962,7 +1923,6 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadEnum
         type: UserInputType
@@ -2031,8 +1991,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2197,7 +2155,6 @@ events:
       Since a Roblox game supports multiple controllers, this event is useful
       when paired with the `Class.UserInputService.GamepadDisconnected` event to
       track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetNavigationGamepads()` and
       `Class.UserInputService:GetConnectedGamepads()` to find the correct
       gamepad to use.
 
@@ -2223,9 +2180,6 @@ events:
 
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2233,7 +2187,6 @@ events:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2254,7 +2207,6 @@ events:
       Since a Roblox game supports multiple controllers, this event is useful
       when paired with the `Class.UserInputService.GamepadConnected` event to
       track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetNavigationGamepads()` and
       `Class.UserInputService:GetConnectedGamepads()` to find the correct
       gamepad to use.
 
@@ -2277,9 +2229,6 @@ events:
 
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2287,7 +2236,6 @@ events:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadNum
         type: UserInputType
