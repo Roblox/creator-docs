@@ -190,7 +190,7 @@ functions:
           <tr>
             <td><code>*</code></td>
             <td>any</td>
-            <td>Equivalent to <code>s</code> but accepts any variable by converting it to a string using <code>tostring</code>.</td>
+            <td>Equivalent to <code>s</code> but accepts any variable by converting it to a string using <code>Global.LuaGlobals.tostring()</code>.</td>
             <td>table: 0x0123456789abcdef</td>
           </tr>
           <tr>
