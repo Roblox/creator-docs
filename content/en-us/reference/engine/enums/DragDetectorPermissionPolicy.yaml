@@ -26,7 +26,7 @@ items:
   - name: Scriptable
     summary: |
       Invokes the function registered via
-      `Class.DragDetector:SetScriptedPermissionCheck()`, enabling/disabling the
+      `Class.DragDetector:SetPermissionPolicyFunction()`, enabling/disabling the
       detector based on whether the function returns `true` or `false`.
     value: 2
     tags: []
