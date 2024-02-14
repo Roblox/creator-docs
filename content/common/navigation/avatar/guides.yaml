@@ -35,6 +35,8 @@ navigation:
         path: /art/characters/facial-animation/using-heads-in-studio
       - title: Animating Heads
         path: /art/characters/facial-animation/animating-heads
+      - title: Moods
+        path: /art/characters/facial-animation/moods
       - title: FACS Poses Reference
         path: /art/characters/facial-animation/facs-poses-reference
   - heading: Publishing and Selling

@@ -134,7 +134,7 @@ To upload your asset:
 
 6. Click **Submit** to pay any applicable upload fee and submit your asset for moderation approval.
 
-After uploading the asset, you can find it in the **Creator Store** tab of the [Toolbox](../../projects/assets/toolbox.md) where you can view the current moderation status or edit the title and description.
+After uploading the asset, you can find it in the **Creations** tab of the [Toolbox](../../projects/assets/toolbox.md) where you can view the current moderation status or edit the title and description.
 
 ### Troubleshooting
 
