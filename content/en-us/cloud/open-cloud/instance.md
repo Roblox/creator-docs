@@ -13,6 +13,10 @@ These APIs are currently in beta and have the following restrictions:
 - You can only read and update `Class.Script`, `Class.LocalScript`, and
   `Class.ModuleScript` objects.
 
+- You can't update scripts that are currently open in Roblox Studio.
+
+- You can't update scripts that are part of a [package](../../projects/assets/packages.md).
+
 - You can only use API key authentication. Create an
   [API key](../open-cloud/api-keys.md) with **Engine (Beta)** added as an API
   system.
@@ -294,6 +298,10 @@ curl --include --location --request PATCH "https://apis.roblox.com/cloud/v2/univ
 
   </TabItem>
 </Tabs>
+
+<Alert severity="info">
+If you receive a `TypeError` when attempting to update a script, verify that the script isn't open in Roblox Studio. If it is, close its Script Editor tab. You can also check the Studio output for additional errors, such as `Engine_OC_API: Processing Error - Live scripting session is active`.
+</Alert>
 
 ## Polling for Results
 
