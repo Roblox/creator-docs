@@ -19,7 +19,7 @@ In the following method to create a neon sign, follow each section to learn how 
    You can create your own assets in third-party modeling tools and follow along with your own design. For information on exporting models for use in Studio, see [Exporting Requirements](../../art/modeling/export-requirements.md).
 </Alert>
 
-## Creating the Backboard and Border
+## Create the Backboard and Border
 
 A `Class.Part` is Roblox's primary building block that you can move, resize, rotate, and customize to change their appearance, such as their color and material. Using [basic parts](../../parts/index.md) to create the foundation of neon signs is useful because the signage's backboard and border only require basic shapes.
 
@@ -53,7 +53,7 @@ To create the backboard and border:
 
 Now that you have three parts that make up the basic shapes of your neon sign, you can sculpt the border's shape.
 
-## Shaping the Neon Border
+## Shape the Neon Border
 
 Using [solid modeling](../../parts/solid-modeling.md), you can join and separate parts in unique ways to form more complex shapes known as **unions**. This process enables you to resize and modify the duplicate border part to become the neon border.
 
@@ -89,7 +89,7 @@ To create the neon border shape:
 
 Now that you have a complete backboard and a glowing neon border, you can create extruding neon 3D text for the words of the sign.
 
-## Incorporating Neon 3D Text
+## Incorporate Neon 3D Text
 
 Since Studio doesn't natively support 3D text, this guide provides an open-text.obj file for you to import into your scene that contains a 3D model of text that spells the word "OPEN". You can also use other methods to create 3D texts or custom designs for this process, such as using your own models from third-part modeling software, working with community plugins, or creating your own text manually in Studio through solid modeling.
 

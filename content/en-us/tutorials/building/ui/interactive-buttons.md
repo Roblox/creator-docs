@@ -1,17 +1,15 @@
 ---
 title: Interactive Buttons
 description: The process for creating interactive on-screen buttons.
-next: /tutorials/building/ui/proximity-prompts
-prev: /tutorials/building/ui/creating-a-score-bar
 ---
 
-In [Creating a Score Bar](../../../tutorials/building/ui/creating-a-score-bar.md), you built a basic GUI to display information. In this tutorial, you'll learn how to make on-screen buttons that can be used for menus, interface actions, and more.
+This tutorial shows you how to make on-screen buttons for menus, interface actions, and more.
 
 ![alt](../../../assets/tutorials/interactive-buttons/Intro-Screenshot.jpg)
 
 ## Button Types
 
-There are two types of button objects that can be used in your GUI design:
+There are two types of button objects that you can use in your UI designs:
 
 <table>
     <thead>

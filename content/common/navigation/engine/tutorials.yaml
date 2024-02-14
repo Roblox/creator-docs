@@ -27,7 +27,7 @@ navigation:
         path: /art/modeling/skinning-a-humanoid-model.md
   - title: User Interfaces
     section:
-      - title: Creating a Score Bar
+      - title: Creating Score Bars
         path: /tutorials/building/ui/creating-a-score-bar
       - title: Interactive Buttons
         path: /tutorials/building/ui/interactive-buttons

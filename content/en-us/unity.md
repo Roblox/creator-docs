@@ -1,6 +1,7 @@
 ---
 title: Roblox for Unity Developers
 description: If you're an experienced Unity developer, use this page to get oriented with Roblox.
+comments: This document could use more information (and some links) around replication, remote events, and cloud services.
 ---
 
 This page includes information to help experienced Unity developers get started with Roblox, which includes: basic orientation, a conceptual comparison, and key differences between the two platforms.
@@ -156,6 +157,10 @@ Key differences between the two include:
 In Unity, you collaborate with standard version control systems or paid services like Unity Version Control.
 
 Roblox files live in the cloud (although you can export copies), so Roblox Studio provides built-in tools for collaborative editing: group management, permissions, script drafting, and more. See [Collaboration](projects/collaboration.md).
+
+<Alert severity="info">
+Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unity prefabs. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your teammates publish a new version of a package, you can quickly update existing instances of that package within an experience or set them to auto-update.
+</Alert>
 
 ## Plugins
 
