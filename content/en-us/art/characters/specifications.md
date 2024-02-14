@@ -592,7 +592,7 @@ See the following requirements for humanoid rigging:
 - **Rig Hierarchy** - Humanoid rigs require a specific bone hierarchy and naming convention:
 
   - Root
-  - HumanoidRootPart
+  - HumanoidRootNode
   - LowerTorso
   - UpperTorso
   - Head (representing the base of the neck)

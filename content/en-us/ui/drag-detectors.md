@@ -195,11 +195,11 @@ Permission of players to interact with a given drag detector instance can be spe
 </thead>
 <tbody>
   <tr>
-    <td>`Enum.DragDetectorPermissionPolicy.Nobody`</td>
+    <td>`Enum.DragDetectorPermissionPolicy.Nobody|Nobody`</td>
     <td>No players can interact with the `Class.DragDetector`.</td>
   </tr>
   <tr>
-    <td>`Enum.DragDetectorPermissionPolicy.Everybody`</td>
+    <td>`Enum.DragDetectorPermissionPolicy.Everybody|Everybody`</td>
     <td>All players can interact with the `Class.DragDetector`.</td>
   </tr>
   <tr>
@@ -214,13 +214,13 @@ local dragDetector = script.Parent.DragDetector
 dragDetector.PermissionPolicy = Enum.DragDetectorPermissionPolicy.Scriptable
 
 dragDetector:SetPermissionPolicyFunction(function(player, part)
-  if player and player:GetAttribute("IsInTurn") then
-    return true
-  elseif part and not part:GetAttribute("IsDraggable") then
-    return false
-  else
-    return true
-  end
+	if player and player:GetAttribute("IsInTurn") then
+		return true
+	elseif part and not part:GetAttribute("IsDraggable") then
+		return false
+	else
+		return true
+	end
 end)
 ```
 
