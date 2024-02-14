@@ -582,6 +582,7 @@ methods:
         },
         "Id": 14703770624,
         "IsEditable": true,
+        "ModerationStatus": Enum.ModerationStatus.ReviewedApproved,
         "Name": "Your Costume",
         "OutfitType": "Avatar",
         "PlayerAvatarType": "R15",
