@@ -188,6 +188,12 @@ functions:
             <td>7fa<br>7FA</td>
           </tr>
           <tr>
+            <td><code>*</code></td>
+            <td>any</td>
+            <td>Equivalent to <code>s</code> but accepts any variable by converting it to a string using <code>Global.LuaGlobals.tostring()</code>.</td>
+            <td>table: 0x0123456789abcdef</td>
+          </tr>
+          <tr>
             <td><code>%</code></td>
             <td></td>
             <td><code>%</code> followed by another <code>%</code> will return the <code>%</code> sign itself.</td>
