@@ -217,6 +217,21 @@ PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
 </TabItem>
 </Tabs>
 
+#### The StudioSelectable Collision Group
+
+Tools in Roblox Studio use the collision filtering system to filter what objects are candidates for selection when clicking in the 3d viewport. Objects whose assigned collision group does not collide with StudioSelectable will be ignored. For example, you if you have checkpoints in your racing game whose effective area is defined by a large transparent part, assigning a "Checkpoints" collision group to those parts would allow you to quickly disable selection for them so that they don't get in the way when you are editing the underlying map geometry.
+
+When creating your own plugins and other tooling it is recommended that you also follow this convention, assigning the `StudioSelectable` as the CollisionGroup of your RaycastParams.
+```lua title="Conventional Cursor Raycast for Plugin Code"
+local raycastParams = RaycastParams.new()
+raycastParams.CollisionGroup = "StudioSelectable" --> To follow the convention
+raycastParams.BruteForceAllSlow = true --> So that CanQuery = false parts can be selected too
+
+local mousePosition = game:GetService("UserInputService"):GetMouseLocation()
+local mouseRay = workspace.CurrentCamera:ViewportPointToRay(mousePosition.X, mousePosition.Y)
+local filteredSelectionHit = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
+```
+
 ### Part-to-Part Filtering
 
 To prevent collisions between two specific parts without
