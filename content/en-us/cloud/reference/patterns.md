@@ -137,14 +137,14 @@ fields:
 
 - **path** - The endpoint path to call to poll for the request's completion.
   Append the path to the original base URL of the resource method.
-- **status** - The status of the request. Valid values are `pending` and `done`.
-- **Response** - The response object. This field is empty until the status is `done.`
+- **done** - A boolean value that represents whether or not the operation has completed.
+- **response** - The response object. This field is empty until the status is `done.`
 - **metadata** - Custom metadata specific to the request being made.
 
 ```json title="Example Operation Object"
 {
   "path": "v1/assets/12345/operation/xyz",
-  "status": "done",
+  "done": true,
   "response": {
     "value1": "myValue",
     "value2": 1234

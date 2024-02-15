@@ -1,23 +1,33 @@
 name: DragDetectorPermissionPolicy
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used to control the permission level for which players can interact with a
+  `Class.DragDetector`.
+description: |
+  Used to control the permission level for which players can interact with a
+  `Class.DragDetector` through its
+  `Class.DragDetector.PermissionPolicy|PermissionPolicy` property.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Nobody
-    summary: ''
+    summary: |
+      No players can interact with the `Class.DragDetector`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Everybody
-    summary: ''
+    summary: |
+      All players can interact with the `Class.DragDetector`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Scriptable
-    summary: ''
+    summary: |
+      Invokes the function registered via
+      `Class.DragDetector:SetPermissionPolicyFunction()`, enabling/disabling the
+      detector based on whether the function returns `true` or `false`.
     value: 2
     tags: []
     deprecation_message: ''

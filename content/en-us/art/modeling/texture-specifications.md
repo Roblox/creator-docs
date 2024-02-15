@@ -12,10 +12,13 @@ See the following requirements when creating your own basic and advanced texture
 - **File Formats** — File formats for textures that are uploaded separately in Studio must be submitted as a `.png`, `.jpg`, `.tga`, or `.bmp`.
 
 - **Resolution** — Roblox supports up to 1024×1024 pixel texture resolutions. To optimize for performance, you may consider using smaller resolutions. Use the following general guidance:
+
   - For smaller 5×5 stud objects, use 256×256 texture resolutions.
   - For medium 10×10 stud objects, use 512×512 texture resolutions.
   - For larger 20×20 stud objects, use 1024×1024 texture resolutions.
   - See [PBR Texture Budgets](#surfaceappearance) for similar guidances with PBR texture maps.
+
+- **Single Material** - Mesh objects can only have one material assigned.
 
 <Alert severity ='info'>
 Roblox default [materials](../../parts/materials.md) follow a similar texel resolution pattern:
