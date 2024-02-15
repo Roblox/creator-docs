@@ -205,7 +205,25 @@ To set your item on sale and access Marketplace settings:
 
 #### Price
 
-When your item is ready to sell, you must set your price within the appropriate [price range](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+<Alert severity = 'warning'>
+Dynamic price floors activate on February 22nd, 2024. Any dynamic pricing changes made prior to that date will become active with the release of dynamic price floors.
+</Alert>
+
+When your item is ready to sell, you must set your price within the appropriate [dynamic price range](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+
+You can set two types of price controls based on the price floor:
+
+- **Amount Above Price Floor (required)** is the amount of Robux that the item will be above the current price floor. For example, if the floor is 50 Robux and you input 5 Robux here, the price will be 55 Robux. You can also choose to set this value to zero if you want your item to always be priced at the floor price.
+- **Do Not Price Below (optional)** is the lowest price a creator's item can go. It is optional and will always be respected. This input is helpful if you care about what the lowest price your item can be sold for. For example, if you input 200 Robux here, your item price will never drop below 200 Robux regardless of what the price floor is.
+
+  <Alert severity = 'info'>
+
+  If you have Marketplace listing before the implementation of the dynamic price range, the following price controls now apply until changed:
+
+  - **Amount Above Price Floor** defaults to zero Robux.
+  - **Do Not Price Below** defaults to the existing price of the item.
+
+  </Alert>
 
 When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
 
