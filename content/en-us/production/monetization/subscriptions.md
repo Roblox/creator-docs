@@ -13,7 +13,7 @@ Users can purchase subscriptions on the desktop app or website using a credit or
 
 Subscriptions will be rolled out to more regions in the future.
 
-**Unavailable regions include:** Argentina, Canada, Chile, Colombia, India, Indonesia, Israel, Japan, Malaysia, Mexico, Peru, Philippines, Russia, Saudi Arabia, Switzerland, Taiwan, Thailand, Turkey, UAE, Ukraine, and Vietnam.
+**Unavailable regions include:** Argentina, Canada, Chile, Colombia, India, Indonesia, Israel, Japan, Malaysia, Mexico, Peru, Philippines, Russia, Saudi Arabia, Switzerland, Taiwan, Thailand, Türkiye (Turkey), UAE, Ukraine, and Vietnam.
 
 <Alert severity="info">
 To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md). For a reference on how to implement subscriptions into your experience's monetization strategy, see this [implementation example](https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072).
