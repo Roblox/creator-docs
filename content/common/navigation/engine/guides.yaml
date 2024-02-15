@@ -426,8 +426,6 @@ navigation:
             path: /cloud-services/memory-stores/queue
           - title: Observability
             path: /cloud-services/memory-stores/observability
-      - title: Experience Notifications
-        path: /cloud-services/experience-notifications
       - title: Cross-Server Messaging
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity Developers
@@ -488,10 +486,6 @@ navigation:
         path: /production/promotion/
       - title: Discovery
         path: /production/promotion/discovery
-      - title: Events Platform
-        path: /production/promotion/events-platform
-      - title: Player Invite Prompts
-        path: /production/promotion/invite-prompts
       - title: Advertising
         section:
           - title: Overview
@@ -504,12 +498,18 @@ navigation:
             path: /production/promotion/user-advertisements
           - title: Complying with Advertising Standards
             path: /production/promotion/complying-with-advertising-standards
-      - title: Getting Featured on Roblox Owned Channels
-        path: /production/promotion/getting-featured-on-roblox-owned-channels
+      - title: Audience Engagement
+        path: /production/promotion/audience-engagement
+      - title: Events Platform
+        path: /production/promotion/events-platform
+      - title: Player Invite Prompts
+        path: /production/promotion/invite-prompts
+      - title: Experience Notifications
+        path: /cloud-services/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
-      - title: Growing Your Audience
-        path: /production/promotion/growing-your-audience
+      - title: Getting Featured on Roblox‑Owned Channels
+        path: /production/promotion/getting-featured-on-roblox-owned-channels
   - title: Monetization
     section:
       - title: Overview

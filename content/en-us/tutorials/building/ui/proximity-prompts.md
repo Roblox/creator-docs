@@ -11,7 +11,7 @@ You can create interactive proximity prompts that appear when users approach obj
 
 This tutorial uses the [Dungeon Delve](https://www.roblox.com/games/6749940622/Dungeon-Delve-Learn) project as a showcase. To follow along, open it in Studio before proceeding.
 
-<img width="60%" src="../../../assets/tutorials/proximity-prompts/Dungeon-Delve-Edit-Place.png" />
+<img src="../../../assets/tutorials/proximity-prompts/Dungeon-Delve-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
 
 ## Create a Prompt
 

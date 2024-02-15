@@ -36,14 +36,18 @@ In order to use the APIs to send notifications, the experience must meet the fol
 
 ### Enabling Notifications
 
-Users of age 13+ are eligible to receive Experience Notifications and can enable them through the [Follow](../../production/promotion/growing-your-audience.md#followers) button on your experience's details page, which will soon be renamed as **Notifications** and relocated to improve discoverability.
+Users of age 13+ are eligible to receive Experience Notifications and can enable them by clicking the **Notify** button on your experience's details page. Users can also view and manage all the experiences they receive notifications from in the [Notifications](https://www.roblox.com/my/account#!/notifications) settings for their Roblox account.
 
-13+ users who already follow your experience will be retained and these users will be automatically eligible to receive Experience Notifications in addition to existing [update notifications](../../production/promotion/growing-your-audience.md#announcing-updates).
+<Grid container spacing={2}>
+<Grid item>
+<img src="../../assets/promotion/misc/Experience-Mobile-Enable-Notifications.png" width="375" alt="Enable notifications button on an experience's details page (mobile)" />
+</Grid>
+<Grid item>
+<img src="../../assets/promotion/misc/Experience-Page-Enable-Notifications.png" width="480" alt="Enable notifications button on an experience's details page (web)" />
+</Grid>
+</Grid>
 
-<figure>
-<img src="../../assets/open-cloud/experience-notifications/Per-Experience-Enable-Notification.png" width="375" alt="Enable notifications button on an experience's info panel" />
-<figcaption>Enable Notifications button (coming soon)</figcaption>
-</figure>
+13+ users who already follow your experience will be retained and these users will be automatically eligible to receive Experience Notifications in addition to existing [update notifications](../../production/promotion/audience-engagement.md#announcing-updates).
 
 ### Receiving Notifications
 
@@ -60,10 +64,10 @@ You may use Experience Notifications to notify users of moments and activity tha
 
 <Grid container spacing={3}>
 <Grid item>
-<img src="../../assets/open-cloud/experience-notifications/Example-Notification-A.png" width="369" alt="Example notification" />
+<img src="../../assets/open-cloud/experience-notifications/Example-Notification-A.png" width="369" height="130" alt="Example notification" />
 </Grid>
 <Grid item>
-<img src="../../assets/open-cloud/experience-notifications/Example-Notification-D.png" width="369" alt="Example notification" />
+<img src="../../assets/open-cloud/experience-notifications/Example-Notification-D.png" width="369" height="130" alt="Example notification" />
 </Grid>
 </Grid>
 
@@ -72,10 +76,10 @@ You may use Experience Notifications to notify users of moments and activity tha
 
 <Grid container spacing={3}>
 <Grid item>
-<img src="../../assets/open-cloud/experience-notifications/Example-Notification-C.png" width="369" alt="Example notification" />
+<img src="../../assets/open-cloud/experience-notifications/Example-Notification-C.png" width="369" height="130" alt="Example notification" />
 </Grid>
 <Grid item>
-<img src="../../assets/open-cloud/experience-notifications/Example-Notification-B.png" width="369" alt="Example notification" />
+<img src="../../assets/open-cloud/experience-notifications/Example-Notification-B.png" width="369" height="130" alt="Example notification" />
 </Grid>
 </Grid>
 
@@ -203,7 +207,7 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 
 A spam prevention system exists to ensure the quality of notifications for users and protect the shared notification channel for all developers. Because of this, delivery of notifications is not guaranteed. This spam prevention system is directly informed by user engagement: the more users engage with your notifications, the more reach they'll receive. You can transparently track engagement metrics in the [analytics](#analytics) dashboard, as explained below.
 
-To start, Experience Notifications are subject to the same static throttle limit of [experience update](../../production/promotion/growing-your-audience.md#announcing-updates) notifications. Each user can receive one notification every three days from a given experience and you'll receive transparent feedback when a user's throttle limit is reached. The limit will be relaxed over time.
+To start, Experience Notifications are subject to the same static throttle limit of [experience update](../../production/promotion/audience-engagement.md#announcing-updates) notifications. Each user can receive one notification every three days from a given experience and you'll receive transparent feedback when a user's throttle limit is reached. The limit will be relaxed over time.
 
 Additionally, the following list outlines some of the special cases which may result in **non‑delivery** of a notification:
 
@@ -244,7 +248,7 @@ The summary section serves as a snapshot of the aggregate performance of your no
 <tbody>
   <tr>
     <td>**Opted-in Users**</td>
-    <td>The total number of users that have turned on notifications for your experience. Please note that this does include users under the age of 13 who are only able to receive notification of [experience updates](../../production/promotion/growing-your-audience.md#announcing-updates), not personalized Experience Notifications.</td>
+    <td>The total number of users that have turned on notifications for your experience. Please note that this does include users under the age of 13 who are only able to receive notification of [experience updates](../../production/promotion/audience-engagement.md#announcing-updates), not personalized Experience Notifications.</td>
   </tr>
   <tr>
     <td>**Impressions**</td>
