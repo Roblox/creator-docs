@@ -25,11 +25,6 @@ Once all six places are published, you're ready to playtest.
 
 4. From the target page, click the large play button to test your game.
 
-   <img
-   alt="Lobby View."
-   src="../../assets/resources/battle-royale/running-the-game/Battle-Royale-Lobby-Play.png"
-   width="360" />
-
 ## Game Controls
 
 The following are the various keyboard and mouse, mobile, and gamepad controls set for this project. See [Inputs](../../input/index.md) for more information on customizing your own controls.

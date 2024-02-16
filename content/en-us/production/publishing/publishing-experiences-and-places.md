@@ -140,7 +140,7 @@ Once an experience is [public](#releasing-to-the-public), you can copy its link 
 1. Locate the experience, typically under the **Continue** header on the home screen, and tap its tile to open the info screen.
 1. In the lower-left corner of the screen, click the **&ctdot;** button and select **Share** to open your device's sharing options.
 
-   <img src="../../assets/publishing/experiences-places-assets/Mobile-Share.png" width="390" />
+   <img src="../../assets/promotion/misc/Experience-Mobile-Share.png" width="390" />
 
 </TabItem>
 </Tabs>
@@ -179,7 +179,7 @@ To allow users to download an editable copy of your experience:
 1. Enable **Allow users to download a copy of this Place**.
 1. Click the **Save Changes** button. Your experience is now uncopylocked and creators can download an editable copy of it from the experience's main page.
 
-   <img src="../../assets/publishing/experiences-places-assets/Uncopylocked-Experience-Edit-In-Studio.png" width="780" />
+   <img src="../../assets/publishing/experiences-places-assets/Edit-Place-Elemental-Academy.png" width="780" />
 
 ## Updating Experiences
 

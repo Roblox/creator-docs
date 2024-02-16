@@ -12,9 +12,9 @@ In the last lesson, you learned how to make a door with `Class.HingeConstraint|H
 
 ## Ferris Wheel Setup
 
-1. Add a ferris wheel into a place using either [this model](https://www.roblox.com/library/6448931648/FerrisWheel) or this [pre-built place](https://www.roblox.com/games/6448937909/Ferris-Wheel). You can open the place in Studio by clicking Edit as shown.
+1. Add a ferris wheel into a place using either [this model](https://www.roblox.com/library/6448931648/FerrisWheel) or this [pre-built place](https://www.roblox.com/games/6448937909/Ferris-Wheel).
 
-   <img src="../../../assets/tutorials/building-a-ferris-wheel/gamePageEdit.jpg" width="60%" />
+   <img src="../../../assets/tutorials/building-a-ferris-wheel/Ferris-Wheel-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
 
 2. To view constraints and attachments, in the **Model** tab, toggle on **Constraint Details**.
 
