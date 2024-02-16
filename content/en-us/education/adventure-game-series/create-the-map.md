@@ -5,7 +5,7 @@ next: /education/adventure-game-series/code-the-leaderboard
 prev: /education/adventure-game-series/landing
 ---
 
-<img src="../../assets/education/adventure-game-series/heroBanner_titlePage.jpg" width="75%" />
+<img src="../../assets/education/adventure-game-series/heroBanner_titlePage.jpg" width="75%
 
 Adventure games can come in different forms but often focus on getting a player to explore a world. This experience will be all about exploring, harvesting items, selling them, upgrading bags, and then doing it all over again. This cycle of actions is called a **game loop**.
 
