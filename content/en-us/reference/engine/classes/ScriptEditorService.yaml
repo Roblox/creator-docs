@@ -295,11 +295,11 @@ methods:
                 character: number,
               }
             },
-            code: string?
-            message: string
-            severity: Enum.Severity?
+            code: string?,
+            message: string,
+            severity: Enum.Severity?,
             codeDescription: { href: string }?
-          },
+          }
         }
       }
       ```
