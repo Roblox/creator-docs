@@ -3,9 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Describes the appearance of a Body Part for the HumanoidDescription'
+  Describes the appearance of a Body Part for the HumanoidDescription
 description: |
-  **BodyPartDescription** is an object that stores the description for an Avatar's Body Parts, such as the Color. It is ment to be placed underneath a `Class.HumanoidDescription`, in order to work with `Class.Humanoid:ApplyDescription()`.
+  **BodyPartDescription** is an object that stores the description for an Avatar's Body Parts, such as the Color. It is meant to be placed underneath a `Class.HumanoidDescription`, in order to work with `Class.Humanoid:ApplyDescription()`.
 code_samples: []
 inherits:
   - Instance

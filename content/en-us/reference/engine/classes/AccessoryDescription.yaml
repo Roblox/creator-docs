@@ -3,9 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Describes the appearance of an Accessory for the HumanoidDescription.'
+  Describes the appearance of an Accessory for the HumanoidDescription.
 description: |
-  **AccessoryDescription** is an object that stores the description for an `Class.Accessory`. It is ment to be placed underneath a `Class.HumanoidDescription`, in order to work with `Class.Humanoid:ApplyDescription()`.
+  **AccessoryDescription** is an object that stores the description for an `Class.Accessory`. It is meant to be placed underneath a `Class.HumanoidDescription`, in order to work with `Class.Humanoid:ApplyDescription()`.
 code_samples: []
 inherits:
   - Instance
