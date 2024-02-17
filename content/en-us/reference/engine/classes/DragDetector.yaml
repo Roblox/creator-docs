@@ -355,9 +355,12 @@ properties:
       can_save: true
   - name: DragDetector.PermissionPolicy
     summary: |
-      Controls the permission level for which players can interact with the `Class.DragDetector`.
+      Controls the permission level for which players can interact with the
+      `Class.DragDetector`.
     description: |
-      Controls the permission level for which players can interact with the `Class.DragDetector`. Default is `Enum.DragDetectorPermissionPolicy.Everybody`.
+      Controls the permission level for which players can interact with the
+      `Class.DragDetector`. Default is
+      `Enum.DragDetectorPermissionPolicy.Everybody`.
     code_samples: []
     type: DragDetectorPermissionPolicy
     tags: []

@@ -566,7 +566,7 @@ navigation:
     section:
       - title: Overview
         path: /production/analytics/
-      - title: Real-Time
+      - title: Monitoring
         section:
           - title: Performance
             path: /production/analytics/performance

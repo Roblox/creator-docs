@@ -2820,11 +2820,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VisibilityCheckDispatcher.yaml
         ignoreTranslation: true
-      - title: VisibilityService
-        path: /reference/engine/classes/VisibilityService
-        type: engineapi
-        source: /reference/engine/classes/VisibilityService.yaml
-        ignoreTranslation: true
       - title: Visit
         path: /reference/engine/classes/Visit
         type: engineapi
