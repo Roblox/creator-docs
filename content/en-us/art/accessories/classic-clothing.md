@@ -1,5 +1,5 @@
----
-title: Classic Clothing
+Acceorio de Maitte_976![d09244ac-42f2-434e-80c2-976eb0b77b7f](https://github.com/Roblox/creator-docs/assets/159210536/6cda072a-b629-4633-9cc2-b9bf36c9ac18)
+
 description: Classic clothing are decals you can apply to a classic character model's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
 ---
 
