@@ -22,7 +22,7 @@ education:
   - 'content/en-us/education/**/*'
   - 'content/en-us/assets/education/**/*'
   - 'content/common/navigation/education.yaml'
-
+Name
 design:
   - 'content/en-us/production/game-design/**/*'
   - 'content/common/navigation/engine/design.yaml'
