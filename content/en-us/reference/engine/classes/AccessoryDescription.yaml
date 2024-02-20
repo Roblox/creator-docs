@@ -2,8 +2,10 @@ name: AccessoryDescription
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Describes the appearance of an `Class.Accessory` for the `Class.HumanoidDescription`.
+description: |
+  **AccessoryDescription** is an object that stores the description for an `Class.Accessory`. It is meant to be placed underneath a `Class.HumanoidDescription` in order to work with `Class.Humanoid:ApplyDescription()`.
 code_samples: []
 inherits:
   - Instance
