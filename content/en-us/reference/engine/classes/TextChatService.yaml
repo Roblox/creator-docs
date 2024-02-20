@@ -302,7 +302,7 @@ callbacks:
     returns:
       - type: Tuple
         summary: |
-          If a `Class.TextChatMessagethose` is returned, those properties will be
+          If a `Class.TextChatMessage` is returned, those properties will be
           applied to the associated bubble, overriding `Class.BubbleChatConfiguration`
           properties.
     tags: []
