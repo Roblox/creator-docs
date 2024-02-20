@@ -302,8 +302,8 @@ callbacks:
     returns:
       - type: Tuple
         summary: |
-          If a
-          `Class.TextChatMessagethose properties will be applied to the associated bubble, overriding `Class.BubbleChatConfiguration`
+          If a `Class.TextChatMessage` is returned, those properties will be
+          applied to the associated bubble, overriding `Class.BubbleChatConfiguration`
           properties.
     tags: []
     deprecation_message: ''
