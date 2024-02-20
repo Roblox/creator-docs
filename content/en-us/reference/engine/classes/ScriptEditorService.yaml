@@ -125,19 +125,19 @@ methods:
     thread_safety: Unsafe
   - name: ScriptEditorService:RegisterAutocompleteCallback
     summary: |
-      Registers an Autocomplete callback `callbackFunction` named `name` with
+      Registers an autocomplete callback `callbackFunction` named `name` with
       priority `priority`.
     description: |
-      Registers an Autocomplete callback `callbackFunction` named `name` with
+      Registers an autocomplete callback `callbackFunction` named `name` with
       priority `priority`.
 
-      When the Script Editor invokes Autocomplete, all registered autocomplete
+      When the Script Editor invokes autocomplete, all registered autocomplete
       callbacks call in order of ascending priority with the autocomplete
       request and response. Multiple callbacks may share a priority, but then
       their calling order is unpredictable. Each callback is intended to return
       a response table with the same format as the response input table.
       Callbacks shouldn't yield. The first callback invoked receives the
-      internal Autocomplete's response as its response table, and subsequent
+      internal autocomplete's response as its response table, and subsequent
       callbacks receive the previous callback's output as their response table.
       Callbacks may either modify the passed table or return a new table of the
       same format.
@@ -200,8 +200,8 @@ methods:
       - `Response.items` is an array of the completion items. The order of this
         array is insignificant, and it resorts in the editor as the user types.
       - `Response.items[n].label` is the label of the item which display in the
-        Autocomplete menu.
-      - `Response.items[n].kind` specifies what type of Autocomplete item this
+        autocomplete menu.
+      - `Response.items[n].kind` specifies what type of autocomplete item this
         is. Primarily this controls the icon given to the item in the editor.
         Not all kinds have a unique icon. If not specified, the editor uses the
         "Text" icon. Unsupported kinds default to displaying the "Property"
@@ -221,7 +221,7 @@ methods:
       - `Response.items[n].overloads` specifies the number of overloads of a
         function autocompletion.
       - `Response.items[n].learnMoreLink` links to a relevant page on the
-        creator docs. This URL must be an https request to create.roblox.com, no
+        creator docs. This URL must be a `https` request to create.roblox.com; no
         other URLs display in the editor.
       - `Response.items[n].codeSample` specifies a sample use of the completion
         item. `documentation` must be non-empty to display this field.
@@ -234,7 +234,7 @@ methods:
 
       If a callback returns a malformed result or encounters an error, the
       editor discards the modified Response table and uses the built-in
-      Autocomplete result list.
+      autocomplete result list.
     code_samples:
       - ScriptEditorService-RegisterAutocompleteCallback
     parameters:
@@ -295,11 +295,11 @@ methods:
                 character: number,
               }
             },
-            code: string?
-            message: string
-            severity: Enum.Severity?
+            code: string?,
+            message: string,
+            severity: Enum.Severity?,
             codeDescription: { href: string }?
-          },
+          }
         }
       }
       ```
