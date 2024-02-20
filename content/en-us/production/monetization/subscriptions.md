@@ -32,12 +32,7 @@ Before creating your subscriptions, ensure they align with [Roblox's Terms of Us
 
 ## Creating Subscriptions
 
-To create a subscription, you must meet the following prerequisites:
-
-- Be phone or [ID verified](https://en.help.roblox.com/hc/en-us/articles/4407282410644-Age-ID-Verification).
-- The experience with the subscription must be created in Studio and available in Creator Hub before September 1, 2023. This requirement will be waived in the future.
-
-To create a subscription:
+Before you can create a subscription, you must be phone or [ID verified](../publishing/account-verification.md). To create a subscription:
 
 1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**. Then click **CREATE A SUBSCRIPTION**.
 
@@ -48,7 +43,7 @@ To create a subscription:
    <img src="../../assets/monetization/subscriptions/subscriptions-2.png" width="80%"/>
 
 3. Create a unique **Subscription Name**. No two subscriptions within an experience can share the same name. This subscription name appears alongside a shortened version of your experience name in billing statements. Allowed characters are a-z, A-Z, 0-9, spaces, and `.,:/!?@#&'`.
-4. Write a **Description** of your subscription. This is what users see when deciding to purchase your subscription. Your description must clearly describe what benefits your subscription offers. Descriptions are capped at 1,000 characters and support emojis. Once activated, a subscription's benefits cannot be changed.
+4. Write a **Description** of your subscription. This is what users see when deciding to purchase your subscription. Your description must clearly describe what benefits your subscription offers. Descriptions are capped at 1,000 characters and support emojis. Once you activate a subscription, you cannot reduce its benefits.
 5. Select the subscription **Product Type**. There are three product types:
 
    1. **Durable:** Permanent items that persist after use or acquisition, such as physical items like weapons. If a subscription includes a bundle of different types of goods, with one or more of them durable, such as a value pack with a sword and a potion, choose **Durable** as its product type.
@@ -68,7 +63,7 @@ To create a subscription:
 
 ### Activating Subscriptions
 
-Once a subscription is ready to go on-sale, select the **Ellipses** from the top right corner of the subscription tile and select **Activate**. Activated subscriptions are available for sale in the **Experience Details** page and within the experience itself.
+Once a subscription is ready to go on-sale, click **&ctdot;** at the top right corner of the subscription tile and select **Activate**. Activated subscriptions are available for sale in the **Experience Details** page and within the experience itself.
 
 <img src="../../assets/monetization/subscriptions/subscriptions-activate.png" width="60%"/>
 
@@ -82,30 +77,43 @@ Before activating your subscription for the first time, you must confirm a short
 
 You can have up to 50 subscriptions per experience between active and inactive subscriptions. To edit subscriptions, navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**.
 
-### Changing Subscription Images
+You can edit a subscription's image, description, or state. If you want to edit more than these properties, you need to delete and recreate the subscriptions with the desired changes.
 
-After creating a subscription, the only modification you can make is to update the image:
+### Changing Image
+
+To update a subcription's image:
 
 1. With the subscription selected, click the **CHANGE** button.
 
    <img src="../../assets/monetization/subscriptions/subscriptions-4.png" width="80%"/>
 
-2. Choose the new image and click **SAVE** and then **SAVE CHANGES**. The new image goes live after successfully passing moderation.
+2. Choose a new image and click **Save**, then **Save Changes**. The new image goes live after successfully passing moderation.
 
-To edit more than a subscription's image, delete and re-create the subscriptions with the desired changes.
+### Changing Description
 
-### Changing Subscription States
+To change a subscription's description:
+
+1. With the subscription selected, click the **Description** field.
+2. Edit the description, then click **Save Changes**. Descriptions are capped at 1,000 characters and can support emojis.
+3. Confirm changes by clicking **Yes, Confirm** on the confirmation window. Description updates are reflected immediately.  
+
+### Changing State
 
 Subscriptions have two possible states:
 
 - **Active** — Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
 - **Inactive** — Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
 
+To change a subscription's state:
+
+1. On the Subscriptions page, click **&ctdot;** at the top right corner of the subscription's tile. Either **Activate** or **Deactivate** displays, depending on the current state of the subscription, alongside some other options.
+2. Select either **Activate** or **Deactivate** to flip the state of the subscription.
+
 <Alert severity="warning">
 Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, make it inactive first and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
 </Alert>
 
-## Integrating Subscriptions into Experiences
+## Integrating Subscriptions into an Experience
 
 This code sample is a simple example of how to implement subscription detection in your experience:
 
