@@ -6,7 +6,7 @@ summary: |
   Describes the appearance of a Humanoid character including body parts,
   accessories, colors, scales, animations, and emotes.
 description: |
-  **HumanoidDescription** is an object that stores a description a
+  **HumanoidDescription** is an object that stores a description of a
   `Class.Humanoid` for R6 and R15 rigs. It can be
   `Class.Humanoid:ApplyDescription()|applied` in order to set a rig's scaling,
   clothing (`Class.Shirt`, `Class.Pants`, `Class.ShirtGraphic`),

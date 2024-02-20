@@ -13,8 +13,8 @@ To access the dashboard:
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Dashboard**.
 2. Under the **CREATOR** dropdown, select your account or the group owning the target experience.
-3. Select the target experience.
-4. In the **REAL-TIME** menu, select **Memory Stores**.
+3. Select the experience.
+4. In the **Monitoring** dropdown, select **Memory Stores**.
 
 ## Available Charts
 
