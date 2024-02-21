@@ -762,29 +762,26 @@ methods:
     thread_safety: Safe
   - name: Instance:GetAttribute
     summary: |
-      Returns the attribute which has been assigned to the given name.
+      Returns the value which has been assigned to the given attribute name.
     description: |
-      This function returns the attribute which has been assigned to the given
-      name. If no attribute has been assigned then nil is returned.
+      This method returns the value which has been assigned to the given
+      attribute name. If no attribute has been assigned, `nil` is returned.
 
-      For example, the following code snippet will set the value of the
-      instance's `InitialPosition` attribute. Note that this code sample does
-      not define `Class.Instance`:
+      For example, the following code snippet sets and then gets the value of
+      the instance's **InitialPosition** attribute:
 
       ```lua
+      local part = workspace.Part
+      part:SetAttribute("InitialPosition", part.Position)
+
       local initialPosition = instance:GetAttribute("InitialPosition")
+      print(initialPosition)
       ```
 
-      See also:
+      #### See Also
 
-      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
-        to the given value
-      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
-        variant pairs for each of the instance's attributes
-      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
-        changed on the instance
-      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
-        fires when the given attribute changes
+      - `Class.Instance:SetAttribute()` which sets the attribute with the given name to the given value.
+      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value pairs for each of the instance's attributes.
     code_samples:
     parameters:
       - name: attribute
@@ -795,8 +792,8 @@ methods:
     returns:
       - type: Variant
         summary: |
-          The attribute which has been assigned to the given name. If no
-          attribute has been assigned then nil is returned.
+          The value which has been assigned to the given attribute name. If no
+          attribute has been assigned, `nil` is returned.
     tags: []
     deprecation_message: ''
     security: None
@@ -805,39 +802,34 @@ methods:
     summary: |
       Returns an event that fires when the given attribute changes.
     description: |
-      This function returns an event that behaves exactly like the `Changed`
-      event, except that the event only fires when the given attribute changes.
+      This function returns an event that behaves exactly like the
+      `Class.Instance.Changed|Changed` event, except that it only fires when the
+      specific given attribute changes; effectively it is similar to
+      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
+      for attributes.
+      
       It's generally a good idea to use this method instead of a connection to
-      Changed with a function that checks the attribute name. Subsequent calls
-      to this method on the same object with the same attribute name return the
-      same event.
+      `Class.Instance.Changed|Changed` with a function that checks the attribute
+      name. Subsequent calls to this method on the same object with the same
+      attribute name return the same event.
 
-      It is similar to `Class.Instance:GetPropertyChangedSignal()` but for
-      attributes.
-
-      For example, the following code snippet will return a signal that fires
-      the function `Class.Instance.AttributeChanged` when the instance's
-      `InitialPosition` attribute changes. Note that this code sample does not
-      define `Class.Instance`:
+      The following code example returns a signal that fires the function
+      `attributeChanged()` when the part's **InitialPosition** attribute
+      changes:
 
       ```lua
+      local part = workspace.Part
+      part:SetAttribute("InitialPosition", part.Position)
+
       local function attributeChanged()
-          print("Attribute changed")
+      	print("Attribute changed")
       end
 
-      instance:GetAttributeChangedSignal("InitialPosition"):Connect(attributeChanged)
+      part:GetAttributeChangedSignal("InitialPosition"):Connect(attributeChanged)
       ```
 
-      See also:
-
-      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
-        to the given value
-      - `Class.Instance:GetAttribute()`, returns the attribute which has been
-        assigned to the given name
-      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
-        variant pairs for each of the instance's attributes
-      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
-        changed on the instance
+      See also `Class.Instance.AttributeChanged` which fires whenever any
+      attribute is changed on the instance.
     code_samples:
     parameters:
       - name: attribute
@@ -856,34 +848,25 @@ methods:
     thread_safety: Unsafe
   - name: Instance:GetAttributes
     summary: |
-      Returns a dictionary of string → variant pairs for each of the instance's
-      attributes.
+      Returns a dictionary of the instance's attributes.
     description: |
-      This function returns a dictionary of string → variant pairs for each
-      attribute where the string is the name of the attribute and the variant is
-      a non-nil value.
+      This method returns a dictionary of key‑value pairs for each attribute
+      where the key is the attribute's name and the value is a non‑`nil` value.
 
-      For example, the following code snippet will print an instance's
-      attributes and values. Note that this code sample does not define
-      `Class.Instance`:
+      For example, the following code snippet outputs an instance's
+      attributes and values:
 
       ```lua
-      local attributes = instance:GetAttributes()
-      for name, value in attributes do
-          print(name .. " " .. value)
+      local part = workspace.Part
+      part:SetAttribute("InitialPosition", part.Position)
+      part:SetAttribute("CanUse", true)
+
+      for name, value in part:GetAttributes() do
+      	print(name .. " = " .. value)
       end
       ```
 
-      See also:
-
-      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
-        to the given value
-      - `Class.Instance:GetAttribute()`, returns the attribute which has been
-        assigned to the given name
-      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
-        changed on the instance
-      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
-        fires when the given attribute changes
+      See also `Class.Instance:GetAttribute()` which returns the value that has been assigned to the given attribute name.
     code_samples:
     parameters: []
     returns:
@@ -1054,10 +1037,10 @@ methods:
     thread_safety: Safe
   - name: Instance:GetPropertyChangedSignal
     summary: |
-      Get an event that fires when a given property of an object changes.
+      Get an event that fires when a given property of the instance changes.
     description: |
       This method returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that the event only fires
+      `Class.Instance.Changed|Changed` event, except that it only fires
       when the given property changes. It's generally a good idea to use this
       method instead of a connection to `Class.Instance.Changed|Changed` with a
       function that checks the property name. Subsequent calls to this method on
@@ -1065,21 +1048,29 @@ methods:
 
       `Class.ValueBase` objects, such as `Class.IntValue` and
       `Class.StringValue`, use a modified `Class.Instance.Changed|Changed` event
-      that fires with the contents of their value property. As such, this method
-      provides a way to detect changes in other properties of those objects.
+      that fires with the contents of their `Value` property. As such, this
+      method provides a way to detect changes in other properties of those
+      objects.
 
       Note that this event will not pass any arguments to a connected function,
       so the value of the changed property must be read directly within a
       script.
 
-      Like `Class.Instance.Changed|Changed`, the event returned by this method
-      does not fire for physics-related changes, such as when the
-      `Class.BasePart.CFrame|CFrame`,
+      #### Limitations
+
+      The event returned by this method does **not** fire for physics-related
+      changes, such as when the `Class.BasePart.CFrame|CFrame`,
       `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
       `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
       `Class.BasePart.Position|Position`, or
       `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
-      change due to gravity or other physical forces.
+      change due to gravity. To detect changes in these properties, consider
+      using a physics-based event like `Class.RunService.PreSimulation`.
+
+      Additionally, the returned event may not fire on every modification of
+      properties that change very frequently, and/or it may not fire for such
+      properties at all. It's recommended that you carefully test for property
+      changes that impact game logic.
     code_samples:
       - Changed-Old-to-New
       - Changed-and-GetPropertyChangedSignal
@@ -1310,41 +1301,36 @@ methods:
     summary: |
       Sets the attribute with the given name to the given value.
     description: |
-      This function sets the attribute with the given name to the given value.
-      If the value given is nil, then the attribute will be removed (since nil
-      is returned by default).
+      This method sets the attribute with the given name to the given value.
+      If the value given is `nil`, the attribute will be removed, since `nil`
+      is returned by default.
 
-      For example, the following code snippet will set the instance's
-      `InitialPosition` attribute to `Datatype.Vector3|Vector3.new(0, 0, 0)`.
-      Note that this code sample does not define `Class.Instance`:
+      For example, the following code snippet sets the instance's
+      **InitialPosition** attribute to `Datatype.Vector3|Vector3.new(0, 10, 0)`:
 
       ```lua
-      instance:SetAttribute("InitialPosition", Vector3.zero)
+      local part = workspace.Part
+      part:SetAttribute("InitialPosition", Vector3.new(0, 10, 0))
       ```
 
       #### Limitations
 
       Naming requirements and restrictions:
 
-      - Names must only use alphanumeric characters and underscore
-      - No spaces or unique symbols are allowed
-      - Strings must be 100 characters or less
-      - Names are not allowed to start with RBX unless the caller is a Roblox
-        core-script (reserved for Roblox)
+      - Names must only use alphanumeric characters and underscore.
+      - No spaces or unique symbols are allowed.
+      - Strings must be 100 characters or less.
+      - Names are not allowed to start with **RBX** unless the caller is a
+      Roblox core script (reserved for Roblox).
 
       When attempting to set an attribute to an unsupported type, an error will
       be thrown.
 
       See also:
 
-      - `Class.Instance:GetAttribute()`, returns the attribute which has been
-        assigned to the given name
-      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
-        variant pairs for each of the instance's attributes
-      - `Class.Instance.AttributeChanged`, fires whenever an attribute is
-        changed on the instance
-      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
-        fires when the given attribute changes
+      - `Class.Instance:GetAttribute()` which returns the value that has
+      been assigned to the given attribute name.
+      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value pairs for each of the instance's attributes.
     code_samples:
     parameters:
       - name: attribute
@@ -1356,7 +1342,7 @@ methods:
         type: Variant
         default:
         summary: |
-          The value that the specified attribute is being set to.
+          The value to set the specified attribute to.
     returns:
       - type: void
         summary: ''
@@ -1597,32 +1583,25 @@ events:
     summary: |
       Fires whenever an attribute is changed on the `Class.Instance`.
     description: |
-      This event fires whenever an attribute is changed on the instance. This
-      includes when an attribute is set to nil. The name of the attribute that
-      has been changed is passed to the connected function.
+      This event fires whenever any attribute is changed on the instance,
+      including when an attribute is set to `nil`. The name of the changed
+      attribute is passed to the connected function.
 
-      For example, the following code snippet will connect the
-      `AttributeChanged` function to fire whenever one of instance's attributes
-      changes. Note that this code sample does not define `Class.Instance`:
+      For example, the following code snippet connects the `attributeChanged()`
+      function to fire whenever one of instance's attributes changes:
 
       ```lua
+      local part = workspace.Part
+
       local function attributeChanged(attributeName)
-          print(attributeName, "changed")
+      	print(attributeName, "changed")
       end
 
-      instance.AttributeChanged:Connect(attributeChanged)
+      part.AttributeChanged:Connect(attributeChanged)
       ```
 
-      See also:
-
-      - `Class.Instance:SetAttribute()`, sets the attribute with the given name
-        to the given value
-      - `Class.Instance:GetAttribute()`, returns the attribute which has been
-        assigned to the given name
-      - `Class.Instance:GetAttributes()`, returns a dictionary of string →
-        variant pairs for each of the instance's attributes
-      - `Class.Instance:GetAttributeChangedSignal()`, returns an event that
-        fires when the given attribute changes
+      See also `Class.Instance:GetAttributeChangedSignal()` which returns an
+      event that fires when a specific given attribute changes.
     code_samples:
     parameters:
       - name: attribute
@@ -1636,29 +1615,32 @@ events:
     thread_safety: Unsafe
   - name: Instance.Changed
     summary: |
-      Fired immediately after a property of an object changes.
+      Fired immediately after a property of the instance changes.
     description: |
-      The Changed event fires right after most properties change on objects. It
-      is possible to find the present value of a changed property by using
-      `object[property]`. To get the value of a property before it changes, you
-      must have stored the value of the property before it changed.
+      This event fires immediately after most properties change on the instance.
+      It is possible to find the present value of a changed property by using
+      `object[property]`.
 
-      If you are only interested in listening to the change of a specific
-      property, consider using the `GetPropertyChangedSignal` method instead to
-      get an event that only fires when a given property changes.
+      If you are only interested in listening to the change of one specific
+      property, consider using the
+      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
+      method instead.
 
-      For "value" objects such as `Class.IntValue`, this event only fires when
-      the `Value` property changes. See individual pages for `Class.IntValue`,
-      `Class.StringValue`, etc. for more information. To detect other changes in
-      these objects, you must use `Class.Instance:GetPropertyChangedSignal()
+      For `Class.ValueBase` objects such as `Class.IntValue` and
+      `Class.StringValue`, this event only fires when the object's `Value`
+      property changes. To detect other changes in `Class.ValueBase` objects,
+      use `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
       instead.
 
-      This event does not fire for physics-related changes, like when the
-      `Datatype.CFrame`, `Velocity`, `RotVelocity`, `Position`, `Orientation`
-      and `Datatype.CFrame` properties of a `Class.BasePart` change due to
-      gravity. To detect changes in these properties, consider using a
-      physics-based event like `Class.RunService.PreSimulation` or
-      `Class.BasePart.Touched`.
+      #### Limitations
+
+      This event does **not** fire for physics-related changes, such as when the
+      `Class.BasePart.CFrame|CFrame`, `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`, `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`, `Class.BasePart.Position|Position`, or `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart` change due to gravity. To detect changes in these properties, consider using a
+      physics-based event like `Class.RunService.PreSimulation`.
+
+      Additionally, this event may not fire on every modification of properties
+      that change very frequently, and/or it may not fire for such properties at
+      all. It's recommended that you carefully test for property changes that impact game logic.
     code_samples:
       - Changed-Event
       - Change-Detector
@@ -1768,63 +1750,37 @@ events:
     summary: |
       Fires immediately before a descendant of the `Class.Instance` is removed.
     description: |
-      DescendantRemoving fires **immediately before** the
-      `Class.Instance.Parent|Parent` of a descendant of the `Class.Instance`
-      changes such that the object is no longer a descendant of the Instance.
-      `Class.Instance:Destroy()|Destroy` and `Class.Instance:Remove()|Remove`
-      change an object's Parent to nil, so calling these on a descendant of an
-      object will therefore cause this event to fire.
+      This event fires **immediately before** the parent `Class.Instance`
+      changes such that a **descendant** instance will no longer be a
+      descendant. `Class.Instance:Destroy()|Destroy()` changes an instance's
+      `Class.Instance.Parent|Parent` to `nil`, so calling that method on a
+      descendant of the parent will cause this event to fire.
 
-      Since this event fires before the descendant's removal, the Parent of the
-      descendant will be unchanged, i.e., it will still be a descendant at the
-      time of this event firing. If the descendant is also a child of the
-      object, It will also fire before ChildRemoved. There is no similar event
-      called "DescendantRemoved".
+      Since this event fires **before** the descendant's removal, the parent of
+      the descendant will be unchanged at the time of this event firing. If the
+      descendant is also a **direct child** of the parent, this event will fire
+      before `Class.Instance.ChildRemoved`.
 
-      If a descendant has children, this event fires with the descendant first
+      If a descendant has children, this event fires with the descendant first,
       followed by its descendants.
-
-      #### Example
-
-      The example below should help clarify how DescendantRemoving fires when
-      there are several objects involved.
-
-      ![A cropped screenshot of the Explorer window. A Model contains ModelA and ModelB, which each contain a Part, PartA and PartB respectively. PartA contains a Fire object named FireA.](/assets/legacy/DescendantRemoving2.png)
-
-      - Calling `Class.Instance:Remove()|Remove` on **PartA** would cause
-        DescendantRemoving to fire on both **ModelA** and **Model**, in that
-        order.
-      - Setting the `Class.Instance.Parent|Parent` of **PartA** to **ModelB**
-        would cause DescendantRemoving to fire on **ModelA** but not **Model**
-        (as Model would still be an ancestor of PartA).
-      - Calling `Class.Instance:Destroy()|Destroy` on **ModelA** would cause
-        DescendantRemoving to fire multiple times on several objects:
-        1. On **Model** with **ModelA**, **PartA** then **FireA**.
-        2. On **ModelA**, with **PartA** then **FireA**.
-        3. On **PartA** with **FireA**.
 
       #### Warning
 
       This event fires with the descendant object that is being removed.
       Attempting to set the `Class.Instance.Parent|Parent` of the descendant
-      being removed to something else **will fail** with the following warning:
-      "Something unexpectedly tried to set the parent of X to Y while trying to
-      set the parent of X. Current parent is Z", where X is the removing
-      descendant, Y is the ignored parent setting, and Z is the original parent
-      of X. Below is an example that demonstrates this:
+      to something else will fail. Below is an example that demonstrates this:
 
       ```
       workspace.DescendantRemoving:Connect(function(descendant)
-      	-- Don't manipulate the parent of descendant in this function!
-      	-- This event fires BECAUSE the parent of descendant was manipulated,
-      	-- and the change hasn't happened yet, i.e. this function fires before that happens.
+      	-- Do not manipulate the parent of the descendant in this function!
+      	-- This event fires BECAUSE the parent was manipulated, and the change hasn't happened yet
       	-- Therefore, it is problematic to change the parent like this:
       	descendant.Parent = game
       end)
+
       local part = Instance.new("Part")
       part.Parent = workspace
-      part.Parent = nil -- This triggers DescendantRemoving on Workspace:
-      --> Something unexpectedly tried to set the parent of Part to NULL while trying to set the parent of Part. Current parent is Workspace.
+      part.Parent = nil
       ```
 
       See also `Class.Instance.DescendantAdded|DescendantAdded`.

@@ -17,7 +17,7 @@ width="100%"></video>
 
 Before you begin to create a beam, it's useful to toggle on visibility of attachments so you can see where the beam starts and ends.
 
-1. In the menu bar, navigate to the [Model](../studio/model-tab.md) tab, then the **Constraints** section.
+1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
 2. If it's not currently enabled, toggle on **Constraint Details**.
 
    <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="740" alt="Constraint Details toggle indicated in Model tab" />
@@ -25,32 +25,46 @@ Before you begin to create a beam, it's useful to toggle on visibility of attach
 To create a beam:
 
 1. Create two parts and position them a short distance from each other. One will act as the start of the beam and the other as the end of the beam. Group the parts into a `Class.Model`.
-2. In the [Explorer](../studio/explorer.md) window, add an `Class.Attachment` to each part:
+2. In the **Explorer** window, add an `Class.Attachment` object to each part:
 
    1. Hover over one part and click the &CirclePlus; button. A contextual menu displays.
    2. From the contextual menu, insert an **Attachment**.
    3. Repeat for the other part.
 
-3. In the [Explorer](../studio/explorer.md) window, add a `Class.Beam` to the model:
+3. In the **Explorer** window, add a `Class.Beam` object to the model:
 
    1. Hover over the model and click the &CirclePlus; button. A contextual menu displays.
    2. From the contextual menu, insert a **Beam**.
 
       <img src="../assets/studio/explorer/Model-Beam-Setup.png" width="320" />
 
-4. Select the new **Beam** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment`.
+4. Select the new **Beam** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment` object.
 
-   1. In the [Properties](../studio/properties.md) window, select the **Attachment0** property. Your cursor changes.
-   2. In the [Explorer](../studio/explorer.md) window, select the attachment of the part you want to be the start of your beam.
-   3. Back in the [Properties](../studio/properties.md) window, select the **Attachment1** property. Your cursor changes.
-   4. In the [Explorer](../studio/explorer.md) window, select the attachment of the part you want to be the end of your beam.
+   1. In the **Properties** window, select the **Attachment0** property. Your cursor changes.
+   2. In the **Explorer** window, select the attachment of the part you want to be the start of your beam.
+   3. Back in the **Properties** window, select the **Attachment1** property. Your cursor changes.
+   4. In the **Explorer** window, select the attachment of the part you want to be the end of your beam.
 
 <figure>
 <img src="../assets/lighting-and-effects/beam/Default-Beam.png" width="800" />
 <figcaption>Default beam between two attachments</figcaption>
 </figure>
 
+<Alert severity="warning">
+Beams require attachments to function properly. If you remove either attachment object from step 4, the beam stops rendering its texture.
+</Alert>
+
 ## Customizing Beams
+
+By experimenting with the following properties, you can customize a beam's visual appearance to make unique gameplay elements like force fields, waterfalls, and pathway obstacles.
+
+<video controls loop muted>
+  <source src="../assets/tutorials/laser-traps-with-beams/laserTrap_beamExamples.mp4" width="80%" />
+</video>
+
+<Alert severity="info">
+The visual quality of your beams can change depending on the graphics settings on the player's device. To review your beam across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your beam.
+</Alert>
 
 ### Texture
 
@@ -69,8 +83,8 @@ The `Class.Beam.Color|Color` property tints the beam's texture to either a speci
 <Tabs>
 <TabItem label="Constant Color">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Beam`.
-2. In the [Properties](../studio/properties.md) window, select the **Color** property. You can either:
+1. In the **Explorer** window, select the beam.
+2. In the **Properties** window, select the **Color** property. You can either:
 
    1. Click on the color square to open the **Colors** pop-up window and select a color.
    2. Input three numbers into the RGB color value field.
@@ -80,8 +94,8 @@ The `Class.Beam.Color|Color` property tints the beam's texture to either a speci
 </TabItem>
 <TabItem label="Color Gradient">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Beam`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Color** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, click inside the **Color** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Color-Open-Sequence.png" width="320" alt="Button to open color sequence popup" />
 
@@ -100,7 +114,7 @@ The `Class.Beam.Color|Color` property tints the beam's texture to either a speci
 
    <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
 
-1. If desired, you can:
+1. For more customization, you can:
 
    - Add another keypoint by clicking anywhere on the graph.
    - Make a color change sooner or later within the gradient by dragging an intermediary keypoint to a new position.
@@ -121,15 +135,15 @@ The `Class.Beam.Transparency|Transparency` property sets the transparency of the
 <Tabs>
 <TabItem label="Constant Opacity">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Beam`.
-1. In the [Properties](../studio/properties.md) window, select the **Transparency** property.
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, select the **Transparency** property.
 1. Input the desired opacity for the beam.
 
 </TabItem>
 <TabItem label="Number Sequence">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Beam`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Transparency** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, click inside the **Transparency** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Transparency-Open-Sequence.png" width="320" alt="Button to open number sequence popup" />
 

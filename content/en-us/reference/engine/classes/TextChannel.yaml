@@ -28,8 +28,10 @@ methods:
       Displays a system message to the user.
     description: |
       Displays a system message to user. Can only be used in a
-      `Class.LocalScript`. Messages are only visible to that user and aren't
-      automatically filtered or localized.
+      `Class.LocalScript`, or in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`. Messages
+      are only visible to that user and aren't automatically filtered or
+      localized.
     code_samples: []
     parameters:
       - name: systemMessage
@@ -92,7 +94,8 @@ methods:
       Sends a `Class.TextChatMessage` to the server.
     description: |
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
-      `Class.LocalScript`.
+      `Class.LocalScript`, or in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
     code_samples: []
     parameters:
       - name: message
