@@ -50,6 +50,7 @@ properties:
     description: |
       Determines how the `Datatype.OverlapParams.FilterDescendantsInstances`
       array is used, depending on the `Enum.RaycastFilterType` provided.
+      Default is `Enum.RaycastFilterType.Exclude`.
     code_samples: []
     tags: []
     deprecation_message: ''
