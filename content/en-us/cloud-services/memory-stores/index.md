@@ -73,6 +73,6 @@ The [memory stores observability dashboard](../../cloud-services/memory-stores/o
 
 `Class.MemoryStoreService` offers separate namespaces for API calls from Studio that are different from runtime servers, so you can safely test a memory store before going to production. Your API calls from Studio for testing don't access production data so that you can freely test new features.
 
-Studio testing has the same [limits and quotas](#limits-and-quotas) as the production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing.
+Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing. When testing from Studio, you may notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
 
 To debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).
