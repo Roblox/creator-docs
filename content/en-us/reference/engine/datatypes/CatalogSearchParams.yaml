@@ -147,6 +147,16 @@ properties:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: CatalogSearchParams.Limit
+    type: number
+    summary: |
+      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`, and `120`. Defaults to `30`.
+    default: ''
+    description: |
+      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`, and `120`. Defaults to `30`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 methods:
 functions:
 math_operations:
