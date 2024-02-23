@@ -9,8 +9,7 @@ description: |
   decorating messages, filtering text, creating commands, and developing custom
   chats interfaces.
 
-  To learn more, see [In-Experience Text
-  Chat](../../../chat/customizing-in-experience-text-chat.md).
+  To learn more, see [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -284,19 +283,20 @@ events:
     thread_safety: Unsafe
   - name: TextChatService.MessageReceived
     summary: |
-      Fires when a `Class.TextChannel:SendAsync()` response is received by the
-      server, or when `Class.TextChannel:DisplaySystemMessage()` is invoked on
-      the client.
+      Fires exclusively on the client in two circumstances: when the client
+      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
     description: |
-      Fires exclusively on the client when a `Class.TextChannel:SendAsync()`
-      response is received by the server, or when
-      `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
+      Fires exclusively on the client in two circumstances: when the client
+      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
 
       Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
       and the text of the message (with `Class.TextChatMessage.Text`).
 
       The `Class.TextChatMessage` parameter is the final result of any functions
-      bound to `Class.TextChatService.OnIncomingMessage`.
+      bound to `Class.TextChatService.OnIncomingMessage` or
+      `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
       - name: textChatMessage
