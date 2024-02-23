@@ -1,5 +1,5 @@
 ---
-title: Welcome to Roblox Studio
+title: Roblox Studio
 description: Learn how Roblox Studio is an all-in-one IDE that lets you create experiences that run on the Roblox Engine.
 ---
 **Build anything you can imagine with the all-in-one IDE for Roblox.**

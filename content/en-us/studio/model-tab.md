@@ -202,7 +202,7 @@ The **Gameplay** section tools allow you to insert beautiful effects like [light
 
 The **Advanced** section contains tools to insert advanced objects, services, and scripts, as well as configure [collision filtering](../workspace/collisions.md#collision-filtering).
 
-<img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="740" alt="Advanced options indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="754" alt="Advanced options indicated in Model tab" />
 
 <table>
 <thead>

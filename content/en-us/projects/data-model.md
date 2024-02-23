@@ -323,7 +323,7 @@ For more information, see [In-Experience Text Chat System](../chat/in-experience
 feature that simulates realistic communication based on how close you are to
 other users. You can use this service to toggle the feature on and off.
 
-For more information, see [Spatial Voice](../chat/spatial-voice.md).
+For more information, see [Chat with Voice](../chat/voice-chat.md).
 
 ## Folders and Models
 

@@ -394,8 +394,8 @@ navigation:
         path: /animation/using
   - title: Chat
     section:
-      - title: Spatial Voice
-        path: /chat/spatial-voice
+      - title: Chat with Voice
+        path: /chat/voice-chat
       - title: Text Chat
         section:
           - title: Overview

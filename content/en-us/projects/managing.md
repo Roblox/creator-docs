@@ -27,7 +27,7 @@ define project settings:
 
 1. In the menu bar, select the **Home** tab, then click **Game Settings**. If you haven't saved your project, you are prompted to do so.
 
-   <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="800" alt="Game Settings button indicated in Home tab" />
+   <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 2. Fill in the required fields for the **Basic Info** tab and click **Save**.
    This unlocks more tabs to define other project settings as
@@ -42,27 +42,6 @@ multiple experiences can utilize them.
 
 See [Assets](../projects/assets/index.md) for details on instances, assets,
 and their association in Roblox.
-
-## Testing
-
-Your team can instantly test the experience on PC, mobile, and other devices you
-wish to support through the Roblox app; no need to compile builds, deploy to
-app stores, or await app store approval.
-
-Studio offers a suite of options for testing an experience before releasing it
-to the public:
-
-- **Rapid playtesting** that provides a close simulation of the experience
-  running on the Roblox application.
-- **Multi-client simulation** for comparing how each client "sees" other clients
-  within the experience.
-- **Device emulation** that provides insight on how controls operate on a mobile
-  device or how on-screen UI displays on different screens and aspect ratios.
-- **Collaborative playtesting** with members of your
-  [team](../projects/setting-up-a-team.md).
-
-For more information on each testing option, see [Studio Testing
-Modes](../studio/testing-modes.md).
 
 ## Publishing Projects
 
