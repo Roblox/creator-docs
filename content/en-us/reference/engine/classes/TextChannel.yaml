@@ -5,17 +5,14 @@ memory_category: Instances
 summary: |
   Represents a text chat channel.
 description: |
-  Represents a text chat channel.
-
-  Contains `Class.TextSource|TextSources` as descendants.
+  Represents a text chat channel. Contains `Class.TextSource|TextSources` as descendants.
 
   To send a chat message to the `Class.TextChannel`, call
   `Class.TextChannel:SendAsync()` from a `Class.LocalScript`. The corresponding
   `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
   that channel.
 
-  To learn more about using TextChannels, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  To learn more, see [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -121,18 +118,19 @@ methods:
 events:
   - name: TextChannel.MessageReceived
     summary: |
-      Fires when the server receives a `Class.TextChannel:SendAsync()` response
-      or invokes `Class.TextChannel:DisplaySystemMessage()`.
+      Fires exclusively on the client in two circumstances: when the client
+      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
     description: |
-      Only fired on the receiving client when the server receives a
-      `Class.TextChannel:SendAsync()` response or invokes
-      `Class.TextChannel:DisplaySystemMessage()`.
+      Fires exclusively on the client in two circumstances: when the client
+      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
 
-      Use `Class.TextChatMessage` parameter to get the `Class.TextSource` and
-      the text of the message (with `Class.TextChatMessage.Text`).
+      Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
+      and the text of the message (with `Class.TextChatMessage.Text`).
 
-      The `Class.TextChatMessage` parameter can be mutated by any functions
-      bound to `Class.TextChatMessage.OnIncomingMessage` and
+      The `Class.TextChatMessage` parameter is the final result of any functions
+      bound to `Class.TextChatService.OnIncomingMessage` or
       `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
