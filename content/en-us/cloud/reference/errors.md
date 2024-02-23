@@ -44,7 +44,7 @@ The following table describes possible values for `code`.
     <tr>
       <td>`INVALID_ARGUMENT`</td>
       <td>400</td>
-      <td>You passed an invalid argument, such as an invalid `universeId`.</td>
+      <td>You passed an invalid argument, such as an invalid `universeId`. You might also have missing or invalid headers, such as `Content-Length` and `Content-Type`.</td>
     </tr>
     <tr>
       <td>`PERMISSION_DENIED`</td>
@@ -141,7 +141,7 @@ Reference the following table for a summary of all high-level Open Cloud errors.
     <tr>
       <td>400</td>
       <td>INVALID_ARGUMENT</td>
-      <td>You passed an invalid argument, such as an invalid `universeId`.</td>
+      <td>You passed an invalid argument, such as an invalid `universeId`. You might also have missing or invalid headers, such as `Content-Length` and `Content-Type`.</td>
     </tr>
     <tr>
       <td>403</td>
