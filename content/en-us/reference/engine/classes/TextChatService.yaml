@@ -284,11 +284,11 @@ events:
   - name: TextChatService.MessageReceived
     summary: |
       Fires exclusively on the client in two circumstances: when the client
-      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      receives a `Class.TextChannel:SendAsync()` response from the server, or
       when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
     description: |
       Fires exclusively on the client in two circumstances: when the client
-      receives a `Class.TextChannel:SendAsync()` request from the server, or
+      receives a `Class.TextChannel:SendAsync()` response from the server, or
       when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
 
       Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
