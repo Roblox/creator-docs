@@ -283,13 +283,13 @@ events:
     thread_safety: Unsafe
   - name: TextChatService.MessageReceived
     summary: |
-      Fires exclusively on the client in two circumstances: when the client
-      receives a `Class.TextChannel:SendAsync()` response from the server, or
-      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
+      Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or when the client receives a valid `Class.TextChannel:SendAsync()` response from the server.
     description: |
-      Fires exclusively on the client in two circumstances: when the client
-      receives a `Class.TextChannel:SendAsync()` response from the server, or
-      when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client.
+      Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or when the client receives a valid `Class.TextChannel:SendAsync()` response from the server.
+      
+      If the server's `Class.TextChannel.ShouldDeliverCallback` property is bound and returns false, the client will not fire `Class.TextChatService.MessageReceived`.
+      
+      This event can only be fired on the client.
 
       Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
       and the text of the message (with `Class.TextChatMessage.Text`).
