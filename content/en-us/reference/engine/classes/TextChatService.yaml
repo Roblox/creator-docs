@@ -293,7 +293,6 @@ events:
       
       If the server's `Class.TextChannel.ShouldDeliverCallback` property is bound
       and returns `false`, the client will not fire `Class.TextChatService.MessageReceived`.
-      
 
       Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
       and the text of the message (with `Class.TextChatMessage.Text`).
