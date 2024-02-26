@@ -780,8 +780,10 @@ methods:
 
       #### See Also
 
-      - `Class.Instance:SetAttribute()` which sets the attribute with the given name to the given value.
-      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value pairs for each of the instance's attributes.
+      - `Class.Instance:SetAttribute()` which sets the attribute with the given
+        name to the given value.
+      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
+        pairs for each of the instance's attributes.
     code_samples:
     parameters:
       - name: attribute
@@ -807,7 +809,7 @@ methods:
       specific given attribute changes; effectively it is similar to
       `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
       for attributes.
-      
+
       It's generally a good idea to use this method instead of a connection to
       `Class.Instance.Changed|Changed` with a function that checks the attribute
       name. Subsequent calls to this method on the same object with the same
@@ -853,8 +855,8 @@ methods:
       This method returns a dictionary of key‑value pairs for each attribute
       where the key is the attribute's name and the value is a non‑`nil` value.
 
-      For example, the following code snippet outputs an instance's
-      attributes and values:
+      For example, the following code snippet outputs an instance's attributes
+      and values:
 
       ```lua
       local part = workspace.Part
@@ -866,7 +868,8 @@ methods:
       end
       ```
 
-      See also `Class.Instance:GetAttribute()` which returns the value that has been assigned to the given attribute name.
+      See also `Class.Instance:GetAttribute()` which returns the value that has
+      been assigned to the given attribute name.
     code_samples:
     parameters: []
     returns:
@@ -1040,9 +1043,9 @@ methods:
       Get an event that fires when a given property of the instance changes.
     description: |
       This method returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that it only fires
-      when the given property changes. It's generally a good idea to use this
-      method instead of a connection to `Class.Instance.Changed|Changed` with a
+      `Class.Instance.Changed|Changed` event, except that it only fires when the
+      given property changes. It's generally a good idea to use this method
+      instead of a connection to `Class.Instance.Changed|Changed` with a
       function that checks the property name. Subsequent calls to this method on
       the same object with the same property name return the same event.
 
@@ -1301,9 +1304,9 @@ methods:
     summary: |
       Sets the attribute with the given name to the given value.
     description: |
-      This method sets the attribute with the given name to the given value.
-      If the value given is `nil`, the attribute will be removed, since `nil`
-      is returned by default.
+      This method sets the attribute with the given name to the given value. If
+      the value given is `nil`, the attribute will be removed, since `nil` is
+      returned by default.
 
       For example, the following code snippet sets the instance's
       **InitialPosition** attribute to `Datatype.Vector3|Vector3.new(0, 10, 0)`:
@@ -1321,16 +1324,17 @@ methods:
       - No spaces or unique symbols are allowed.
       - Strings must be 100 characters or less.
       - Names are not allowed to start with **RBX** unless the caller is a
-      Roblox core script (reserved for Roblox).
+        Roblox core script (reserved for Roblox).
 
       When attempting to set an attribute to an unsupported type, an error will
       be thrown.
 
       See also:
 
-      - `Class.Instance:GetAttribute()` which returns the value that has
-      been assigned to the given attribute name.
-      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value pairs for each of the instance's attributes.
+      - `Class.Instance:GetAttribute()` which returns the value that has been
+        assigned to the given attribute name.
+      - `Class.Instance:GetAttributes()` which returns a dictionary of key‑value
+        pairs for each of the instance's attributes.
     code_samples:
     parameters:
       - name: attribute
@@ -1635,12 +1639,18 @@ events:
       #### Limitations
 
       This event does **not** fire for physics-related changes, such as when the
-      `Class.BasePart.CFrame|CFrame`, `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`, `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`, `Class.BasePart.Position|Position`, or `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart` change due to gravity. To detect changes in these properties, consider using a
-      physics-based event like `Class.RunService.PreSimulation`.
+      `Class.BasePart.CFrame|CFrame`,
+      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
+      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
+      `Class.BasePart.Position|Position`, or
+      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
+      change due to gravity. To detect changes in these properties, consider
+      using a physics-based event like `Class.RunService.PreSimulation`.
 
       Additionally, this event may not fire on every modification of properties
       that change very frequently, and/or it may not fire for such properties at
-      all. It's recommended that you carefully test for property changes that impact game logic.
+      all. It's recommended that you carefully test for property changes that
+      impact game logic.
     code_samples:
       - Changed-Event
       - Change-Detector
@@ -1767,8 +1777,8 @@ events:
       #### Warning
 
       This event fires with the descendant object that is being removed.
-      Attempting to set the `Class.Instance.Parent|Parent` of the descendant
-      to something else will fail. Below is an example that demonstrates this:
+      Attempting to set the `Class.Instance.Parent|Parent` of the descendant to
+      something else will fail. Below is an example that demonstrates this:
 
       ```
       workspace.DescendantRemoving:Connect(function(descendant)

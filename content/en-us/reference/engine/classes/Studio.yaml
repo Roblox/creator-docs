@@ -1034,6 +1034,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Studio.EnableCodeAssist
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
   - name: Studio.EnableIndentationRulers
     summary: ''
     description: ''

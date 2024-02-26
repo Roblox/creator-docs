@@ -9,7 +9,7 @@ providing more engaging and immersive interactions for your users.
 build functionality within the Roblox engine.
 
 <Alert severity="success">
-Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+Contributing your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
 </Alert>
 
 ## Scripts

@@ -26,9 +26,9 @@ items:
     deprecation_message: ''
   - name: Ragdoll
     summary: |
-      (Deprecated) The Humanoid has been hit by a fast moving object (uncontrolled falling).
-      _The Humanoid can recover from this._ This state has to be set and unset manually
-      using `Class.Humanoid:ChangeState()`.
+      (Deprecated) The Humanoid has been hit by a fast moving object
+      (uncontrolled falling). _The Humanoid can recover from this._ This state
+      has to be set and unset manually using `Class.Humanoid:ChangeState()`.
     value: 1
     tags: []
     deprecation_message: ''
@@ -54,7 +54,8 @@ items:
     deprecation_message: ''
   - name: Freefall
     summary: |
-      The Humanoid is currently freefalling (jumped from a height or fell off a ledge).
+      The Humanoid is currently freefalling (jumped from a height or fell off a
+      ledge).
     value: 5
     tags: []
     deprecation_message: ''

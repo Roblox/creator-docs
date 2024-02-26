@@ -1775,7 +1775,7 @@ properties:
     description: |
       A part's `Class.BasePart.Size|Size` property determines its **visual**
       dimensions, while `Class.BasePart.ExtentsSize|ExtentsSize` represents the
-      actual size used by the physics engine, for example in
+      actual size used by the physics engine, such as in
       [collision detection](../../../workspace/collisions.md). The individual
       dimensions (length, width, height) can be as low as 0.001 and as high
       as 2048. Size dimensions below 0.05 will be **visually** represented as if

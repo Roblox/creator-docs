@@ -26,7 +26,7 @@ Roblox's eligibility requirements for sellers, customers, and assets are stricte
 In order to create a seller account, you must meet the following Roblox eligibility requirements:
 
 - Your Roblox account must be **verified** with a [government ID](account-verification.md#verifying-through-government-id).
-- Your Roblox account must have a **clean moderation history**.
+- Your Roblox account must not have been recently **banned** for any reason.
 - You must be **18** years of age or older.
 - You must reside in [one of the countries supported](https://stripe.com/docs/connect/cross-border-payouts) by our third-party payments provider.
 

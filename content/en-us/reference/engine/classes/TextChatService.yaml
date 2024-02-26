@@ -9,7 +9,8 @@ description: |
   decorating messages, filtering text, creating commands, and developing custom
   chats interfaces.
 
-  To learn more, see [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
+  To learn more, see
+  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -198,12 +199,12 @@ properties:
 methods:
   - name: TextChatService:DisplayBubble
     summary: |
-      Displays a chat bubble above the provided part or character.
+      Displays a chat bubble above the provided part or player character.
     description: |
-      Displays a chat bubble above the provided `partOrCharacter` and fires the
+      Displays a chat bubble above the provided part or player character, and fires the
       `Class.TextChatService.BubbleDisplayed|BubbleDisplayed` event with the
       parameters specified in this method. Can display bubbles for non-player
-      characters (NPCs).
+      characters (NPCs) if you specify a part within the character, such as its head.
     code_samples: []
     parameters:
       - name: partOrCharacter
