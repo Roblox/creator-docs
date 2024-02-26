@@ -1,7 +1,6 @@
 ---
 title: Custom Particle Effects
 description: The process for creating a multicolor plume of smoke from an active volcano.
-next: /tutorials/building/effects/laser-traps-with-beams
 prev: /tutorials/building/effects/basic-particle-effects
 ---
 
