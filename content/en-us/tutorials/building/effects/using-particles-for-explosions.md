@@ -1,7 +1,6 @@
 ---
 title: Using Particles for Explosions
 description: The process for creating a trap that emits a burst of particles when it kills a player.
-prev: /tutorials/building/effects/laser-traps-with-beams
 ---
 
 Previously, you worked with particles that played continuously, like [smoke from a volcano](../../../tutorials/building/effects/custom-particle-effects.md). Particles can also be used in a single burst, such as explosions. This tutorial will show you how to create a trap that emits a burst of particles and kills a player.
