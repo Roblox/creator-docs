@@ -55,7 +55,7 @@ navigation:
         path: /tutorials/building/effects/basic-particle-effects
       - title: Custom Particle Effects
         path: /tutorials/building/effects/custom-particle-effects
-      - title: Laser Traps with Beams
+      - title: Creating Laser Beams
         path: /tutorials/building/effects/laser-traps-with-beams
       - title: Using Particles for Explosions
         path: /tutorials/building/effects/using-particles-for-explosions
