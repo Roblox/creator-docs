@@ -223,11 +223,11 @@ properties:
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
       body parts, scripts, and other objects.
     description: |
-      The Character property contains a reference to a `Class.Model` containing
+      The **Character** property contains a reference to a `Class.Model` containing
       a `Class.Humanoid`, body parts, scripts, and other objects required for
-      simulating the player's avatar in-game. The model is parented to the
-      `Class.Workspace`, but may be moved. It is automatically loaded when
-      `Class.Players.CharacterAutoLoads` is true, but can be manually loaded
+      simulating the player's avatar in-experience. The model is parented to the
+      `Class.Workspace` but it may be moved. It is automatically loaded when
+      `Class.Players.CharacterAutoLoads` is true and it can be manually loaded
       otherwise using `Class.Player:LoadCharacter()`.
 
       Initially, this property is nil, then set when the player's character first
