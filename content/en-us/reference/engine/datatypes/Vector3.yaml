@@ -320,10 +320,12 @@ properties:
 methods:
   - name: Vector3:Abs
     summary: |
-      Returns a new vector from the absolute values of the original's components.
+      Returns a new vector from the absolute values of the original's
+      components.
     description: |
-      Returns a new vector from the absolute values of the original's components.
-      For example, a vector of `(-2, 4, -6)` returns a vector of `(2, 4, 6)`.
+      Returns a new vector from the absolute values of the original's
+      components. For example, a vector of `(-2, 4, -6)` returns a vector of
+      `(2, 4, 6)`.
     parameters:
     returns:
       - type: Vector3
