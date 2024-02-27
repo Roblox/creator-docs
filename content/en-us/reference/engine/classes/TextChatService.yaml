@@ -301,7 +301,7 @@ events:
       bound to `Class.TextChatService.OnIncomingMessage` or `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
-      - name: textChatMessage
+      - name: receivedMessage
         type: TextChatMessage
         default:
         summary: |
