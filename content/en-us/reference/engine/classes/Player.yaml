@@ -244,7 +244,7 @@ properties:
       `Class.Instance.Parent|Parent` property is `nil`. Therefore,
       in a `Class.LocalScript` under `Class.StarterGui` or
       `Class.StarterPack`, it is advisable to make sure the parent
-      of **Character** is not nil before using it, for example:
+      of **Character** is not `nil` before using it, for example:
 
       ```lua
       local Players = game:GetService("Players")
