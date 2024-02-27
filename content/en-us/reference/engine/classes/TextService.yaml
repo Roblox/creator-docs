@@ -95,8 +95,11 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: TextService:FilterAndTranslateStringAsync
-    summary: ''
-    description: ''
+    summary: |
+      Chat translation is not supported in legacy chat. This method is no longer supported and should not be used.
+    description: |
+      Chat translation is not supported in legacy chat. This method is no longer supported and should not be used. All calls return an empty object. 
+      Translating chat messages is only available via `Class.TextChatService`.
     code_samples: []
     parameters:
       - name: stringToFilter

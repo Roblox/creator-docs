@@ -256,10 +256,12 @@ methods:
     deprecation_message: ''
   - name: Vector2:Abs
     summary: |
-      Returns a new vector from the absolute values of the original's components.
+      Returns a new vector from the absolute values of the original's
+      components.
     description: |
-      Returns a new vector from the absolute values of the original's components.
-      For example, a vector of `(-2, 4)` returns a vector of `(2, 4)`.
+      Returns a new vector from the absolute values of the original's
+      components. For example, a vector of `(-2, 4)` returns a vector of
+      `(2, 4)`.
     parameters:
     returns:
       - type: Vector2
@@ -312,9 +314,9 @@ methods:
     summary: |
       Returns the angle in radians between the two vectors.
     description: |
-      Returns the angle in radians between the two vectors. Specify `true` for the
-      optional `isSigned` boolean if you want a signed angle. By default, the method
-      returns the absolute value.
+      Returns the angle in radians between the two vectors. Specify `true` for
+      the optional `isSigned` boolean if you want a signed angle. By default,
+      the method returns the absolute value.
     parameters:
       - name: other
         type: Vector2

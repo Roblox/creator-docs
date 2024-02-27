@@ -42,8 +42,7 @@ properties:
     description: ''
     code_samples: []
     type: AudioApiRollout
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
