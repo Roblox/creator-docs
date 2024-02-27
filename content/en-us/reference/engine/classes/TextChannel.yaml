@@ -150,10 +150,10 @@ callbacks:
       Called when `Class.TextChannel` is receiving an incoming message. Can only
       be implemented on the client.
 
-      Use this to decorate `Class.TextChatMessage`s. If this callback returns a
-      `Class.TextChatMessageProperties`, those properties are merged with the
-      `Class.TextChatMessage` parameter to create a new `Class.TextChatMessage`
-      with those properties.
+      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this
+      callback returns a `Class.TextChatMessageProperties`, those properties are
+      merged with the `Class.TextChatMessage` parameter to create a new
+      `Class.TextChatMessage` with those properties.
 
       When bound to the client sending a message, this event can be fired twice,
       first when the message is initially sent and received by the same client
@@ -161,9 +161,9 @@ callbacks:
       message from the server. `Class.TextChannel.OnIncomingMessage` callbacks
       always run **after** `Class.TextChatService.OnIncomingMessage` callback.
 
-      This should be defined only once per TextChannel in the source code.
-      Multiple bindings to the same TextChannel will override one another in a
-      nondeterministic manner.
+      This should be defined only once per `Class.TextChannel` in the source
+      code. Multiple bindings to the same channel will override one another in
+      a nondeterministic manner.
     code_samples: []
     parameters:
       - name: message
