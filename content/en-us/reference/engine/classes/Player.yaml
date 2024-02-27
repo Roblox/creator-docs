@@ -227,7 +227,7 @@ properties:
       a `Class.Humanoid`, body parts, scripts, and other objects required for
       simulating the player's avatar in-experience. The model is parented to the
       `Class.Workspace` but it may be moved. It is automatically loaded when
-      `Class.Players.CharacterAutoLoads` is true and it can be manually loaded
+      `Class.Players.CharacterAutoLoads` is `true` and it can be manually loaded
       otherwise using `Class.Player:LoadCharacter()`.
 
       Initially this property is `nil` and it is set when the player's character first
