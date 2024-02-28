@@ -29,7 +29,7 @@ TeleportService:TeleportAsync(TARGET_PLACE_ID, {playerToTeleport}, teleportOptio
 ```
 
 <Alert severity="warning">
-You can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server-side scripts. This limitation reduces client-side exploitation.
+You can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server-side scripts. This limitation reduces client-side exploitation. If necessary, you can call `Class.TeleportService:Teleport()|Teleport()` from client-side scripts, but `Class.TeleportService:TeleportAsync()|TeleportAsync()` is the recommended method.
 </Alert>
 
 If you want to take precautions of handling errors when setting up teleportation, see [Handling Failed Teleports](#handling-failed-teleports).
