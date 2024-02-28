@@ -368,14 +368,27 @@ methods:
       	  <td>Describes whether the asset is purchasable.</td>
         </tr>
       	<tr>
+      	  <td><code>ItemRestrictions</code></td>
+      	  <td>string</td>
+      	  <td> 
+          Describes whether the item is limited or unlimited.
+            <ul>
+              <li><code>empty</code> &mdash; Asset is an unlimited item</li>
+              <li><code>collectible</code> &mdash; Asset is a UGC Limited item</li>
+              <li><code>limited</code> &mdash; Asset is a Roblox Limited item</li>
+              <li><code>limitedUnique</code> &mdash; Asset is a Roblox Limited Unique</li>
+            </ul>
+          </td>
+        </tr>
+      	<tr>
       	  <td><code>IsLimited</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited item" that is no longer (if ever) sold.</td>
+      	  <td>Describes whether the asset is a Roblox Limited that is no longer (if ever) sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsLimitedUnique</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited unique" ("Limited&nbsp;U") item that only has a fixed number sold.</td>
+      	  <td>Describes whether the asset is a unique Roblox Limited ("Limited&nbsp;U") item that only has a fixed number sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsNew</code></td>
