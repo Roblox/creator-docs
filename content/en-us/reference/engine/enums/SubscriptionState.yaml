@@ -1,28 +1,33 @@
-name: StudioCloseMode
+name: SubscriptionState
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: None
+  - name: NeverSubscribed
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: CloseStudio
+  - name: SubscribedWillRenew
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: CloseDoc
+  - name: SubscribedWillNotRenew
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: LogOut
+  - name: SubscribedRenewalPaymentPending
     summary: ''
     value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Expired
+    summary: ''
+    value: 4
     tags: []
     deprecation_message: ''

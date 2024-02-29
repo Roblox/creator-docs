@@ -1874,21 +1874,21 @@ methods:
       happen, you should repeatedly call MoveTo so that the timeout will keep
       resetting.
 
-      `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions apply:
+      `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions
+      apply:
 
-        * The character arrives at its destination.
+      - The character arrives at its destination.
 
-        * The character gets stuck and the eight-second timer expires.
+      - The character gets stuck and the eight-second timer expires.
 
-        * The value of either `Class.Humanoid.WalkToPoint` or 
-          `Class.Humanoid.WalkToPart` changes.
+      - The value of either `Class.Humanoid.WalkToPoint` or
+        `Class.Humanoid.WalkToPart` changes.
 
-        * A script calls `Class.Humanoid:Move()` with a new `moveDirection` 
-          parameter.
+      - A script calls `Class.Humanoid:Move()` with a new `moveDirection`
+        parameter.
 
-        * A script changes the `Class.BasePart.CFrame|CFrame` property of the 
-          `Class.Humanoid.RootPart|RootPart`.
-
+      - A script changes the `Class.BasePart.CFrame|CFrame` property of the
+        `Class.Humanoid.RootPart|RootPart`.
     code_samples:
       - humanoid-moveto-without-time-out
     parameters:
@@ -2565,10 +2565,10 @@ events:
       `Enum.HumanoidStateType`.
 
       When a `Class.Humanoid` jumps, this event fires with an `active` parameter
-      of `true` before shortly afterwards firing again with an `active` 
+      of `true` before shortly afterwards firing again with an `active`
       parameter of `false`. This second firing does not correspond with a
-      `Class.Humanoid` landing; for that, listen for the
-      `Landed` `Enum.HumanoidStateType` using `Class.Humanoid.StateChanged`.
+      `Class.Humanoid` landing; for that, listen for the `Landed`
+      `Enum.HumanoidStateType` using `Class.Humanoid.StateChanged`.
 
       You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
       function.

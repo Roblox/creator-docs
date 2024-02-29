@@ -161,17 +161,17 @@ functions:
           `slnaf`, each representing a piece of information:
 
           - `s` ([string](/luau/strings.md)) — The function source identifier,
-          equal to the full name of the script the function is defined in.
+            equal to the full name of the script the function is defined in.
           - `l` ([number](/luau/numbers.md)) — The line number of the function
-          call represented by `level`.
+            call represented by `level`.
           - `n` ([string](/luau/strings.md)) — The name of the function; may be
-          `nil` for anonymous functions and C functions without an assigned
-          debug name.
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
           - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
-          Arity of the function, which refers to the parameter count and whether
-          the function is variadic.
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
           - `f` ([function](/luau/functions.md)) — The function which was
-          inspected.
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -192,11 +192,11 @@ functions:
       local function fnA()
 
       end
-      
+
       local function fnB()
 
       end
-      
+
       -- Output line ("l"), name ("n"), and identifier ("f") for both fnA() and fnB()
       print(debug.info(fnA, "lnf"))  --> 1 fnA function: 0x75e3d3c398a81252
       print(debug.info(fnB, "lnf"))  --> 5 fnB function: 0x6022a6dc5ccf4ab2
@@ -210,8 +210,8 @@ functions:
         type: function
         default:
         summary: |
-          The function of the call stack which the information returned
-          should describe.
+          The function of the call stack which the information returned should
+          describe.
       - name: options
         type: string
         default:
@@ -221,17 +221,17 @@ functions:
           `slnaf`, each representing a piece of information:
 
           - `s` ([string](/luau/strings.md)) — The function source identifier,
-          equal to the full name of the script the function is defined in.
+            equal to the full name of the script the function is defined in.
           - `l` ([number](/luau/numbers.md)) — The line that `function` is
-          defined on.
+            defined on.
           - `n` ([string](/luau/strings.md)) — The name of the function; may be
-          `nil` for anonymous functions and C functions without an assigned
-          debug name.
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
           - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
-          Arity of the function, which refers to the parameter count and whether
-          the function is variadic.
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
           - `f` ([function](/luau/functions.md)) — The function which was
-          inspected.
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -284,17 +284,17 @@ functions:
           `slnaf`, each representing a piece of information:
 
           - `s` ([string](/luau/strings.md)) — The function source identifier,
-          equal to the full name of the script the function is defined in.
+            equal to the full name of the script the function is defined in.
           - `l` ([number](/luau/numbers.md)) — The line number of the function
-          call represented by `level`.
+            call represented by `level`.
           - `n` ([string](/luau/strings.md)) — The name of the function; may be
-          `nil` for anonymous functions and C functions without an assigned
-          debug name.
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
           - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
-          Arity of the function, which refers to the parameter count and whether
-          the function is variadic.
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
           - `f` ([function](/luau/functions.md)) — The function which was
-          inspected.
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -350,10 +350,10 @@ functions:
       Assigns a custom tag to the current thread's memory category.
     description: |
       Assigns a custom tag name to the current thread's memory category in the
-      [Developer Console](../../../studio/developer-console.md). Useful for analyzing memory usage of multiple threads
-      in the same script which would otherwise be grouped together under the
-      same tag/name. Returns the name of the current thread's previous memory
-      category.
+      [Developer Console](../../../studio/developer-console.md). Useful for
+      analyzing memory usage of multiple threads in the same script which would
+      otherwise be grouped together under the same tag/name. Returns the name of
+      the current thread's previous memory category.
     parameters:
       - name: tag
         type: string

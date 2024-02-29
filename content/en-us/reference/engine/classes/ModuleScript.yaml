@@ -58,7 +58,8 @@ properties:
       online code to the script's `Class.Script.Source`.
     code_samples:
     type: Content
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This property is now replaced by
       [packages](../../../projects/assets/packages.md) which has greater
