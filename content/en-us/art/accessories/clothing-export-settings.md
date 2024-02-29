@@ -1,18 +1,17 @@
 ---
-title: Character Body Export Settings
+title: Layered Clothing Export Settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
-Export your model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contains all the mesh and texture data, including the rig and influence data, you need to later [import](../../art/modeling/3d-importer.md) into Studio.
+Export your mesh or model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contains all the mesh and texture data, including the rig and influence data, you need to later [import](../../art/modeling/3d-importer.md) into Studio.
 
-Check that your model meets Roblox's [avatar character specifications](../../art/characters/specifications.md) before exporting to ensure Studio compatibility.
-
-- If you are creating a layered clothing accessory, ensure that your model follows [layered clothing specifications](../../art/accessories/clothing-specifications.md) and use the [layered clothing export settings](../../art/accessories/clothing-export-settings.md).
 - If you are creating a rigid accessory, ensure that your model follows [rigid accessory specifications](../../art/accessories/specifications.md) and use the [rigid export settings](../../art/accessories/export-settings.md).
+- If you are creating an avatar character model, ensure that your model follows [character specifications](../../art/characters/specifications.md) and use the [character body export settings](../../art/characters/export-settings.md).
 - If you are creating a generic mesh, ensure that your model follows Roblox's [general specifications](../../art/modeling/specifications.md) and use the [general export settings](../../art/modeling/export-requirements.md).
 
-<Alert severity = 'error'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate.
+<Alert severity = 'warning'>
+If you have any modifiers to your mesh or project objects, make sure to apply
+or delete them before export.
 </Alert>
 
 <Tabs>
@@ -36,12 +35,8 @@ To export the `.fbx` file in Blender:
 
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" />
 
-6. Enable **Bake Animation**. Avatar characters with [facial animation data](../../art/characters/facial-animation/index.md) require animation data.
-
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" /> <br />
-
-7. Click the **Export FBX** button.
-8. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model. See [Testing Characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information
+6. Click the **Export FBX** button.
+7. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 </TabItem>
 <TabItem label="Maya">
@@ -52,15 +47,14 @@ To export a mesh in Maya as a `.fbx` file:
 3. Near the bottom of the window, click the **Files of type** dropdown, then select **FBX export**.
 4. On the right-hand side of the window, navigate to the **Options...** section.
 5. In the **Geometry** section, enable **Smooth Mesh** and **Referenced Asset Content**.
-6. In the **Animation** section, enable **Animation**. Avatar characters with [facial animation data](../../art/characters/facial-animation/index.md) require animation data.
-7. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
-8. In the **Advanced Options** section,
+6. If you need to import textures as a `.png`, in the **Embed Media** section, enable **Embed Media**.
+7. In the **Advanced Options** section,
    - Navigate to **Units**, then enable **Automatic**.
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
    - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
-9. Click the **Export All** button.
+8. Click the **Export All** button.
    <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
-10. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model. See [Testing Characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information
+9. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model and the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) to convert the model into an accessory.
 
 </TabItem>
 </Tabs>
