@@ -15,7 +15,7 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CaptureService:CaptureScreenshot
-    summary: 'Take a screenshot associated with the returned contentId.'
+    summary: 'Take a screenshot associated with the returnedcontentId.'
     description: 'Take a screenshot that can be identified by the returned contentId. This function does not save the screenshot to the gallery.'
     code_samples: []
     parameters:
