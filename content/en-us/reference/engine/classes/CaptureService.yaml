@@ -31,8 +31,8 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
-    summary: 'Save the specified contentId to the player's gallery.'
-    description: 'Ask to save the specified screenshot to the `LocalPlayer`'s gallery.'
+    summary: "Save the specified contentId to the player's gallery."
+    description: "Ask to save the specified screenshot to the `LocalPlayer`'s gallery."
     code_samples: []
     parameters:
       - name: contentIds
@@ -51,8 +51,8 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
-    summary: 'Ask to share screenshots with the player's contacts.'
-    description: 'Ask to share the specified screenshots with the `LocalPlayer`'s contacts. Only available for +13 users.'
+    summary: "Ask to share screenshots with the player's contacts."
+    description: "Ask to share the specified screenshots with the `LocalPlayer`'s contacts. Only available for +13 users."
     code_samples: []
     parameters:
       - name: contentId
