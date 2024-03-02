@@ -15,8 +15,8 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CaptureService:CaptureScreenshot
-    summary: ''
-    description: ''
+    summary: 'Take a screenshot associated with the returned contentId.'
+    description: 'Take a screenshot that can be identified by the returned contentId. This function does not save the screenshot to the gallery.'
     code_samples: []
     parameters:
       - name: onCaptureReady
@@ -31,14 +31,14 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
-    summary: ''
-    description: ''
+    summary: 'Save the specified contentId to the player's gallery.'
+    description: 'Ask to save the specified screenshot to the `LocalPlayer`'s gallery.'
     code_samples: []
     parameters:
       - name: contentIds
         type: Array
         default:
-        summary: ''
+        summary: 'The contentIds of the screenshots that will save.'
       - name: resultCallback
         type: Function
         default:
@@ -51,14 +51,14 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
-    summary: ''
-    description: ''
+    summary: 'Ask to share screenshots with the player's contacts.'
+    description: 'Ask to share the specified screenshots with the `LocalPlayer`'s contacts. Only available for +13 users.'
     code_samples: []
     parameters:
       - name: contentId
         type: Content
         default:
-        summary: ''
+        summary: 'The contentId of the screenshot that will be shared.'
       - name: launchData
         type: string
         default:
