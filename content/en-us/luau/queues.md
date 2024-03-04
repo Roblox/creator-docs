@@ -36,29 +36,29 @@ You can use built-in queues of `Class.MemoryStoreService` or use [tables](../lua
 ```lua title="Implementing a Regular Queue Using Table"
 local Queue = {}
 Queue.__index = Queue
-​
+
 function Queue.new()
 	local self = setmetatable({}, Queue)
-​
+
 	self._first = 0
 	self._last = -1
 	self._queue = {}
-​
+
 	return self
 end
-​
+
 -- Check if the queue is empty
 function Queue:IsEmpty()
 	return self._first > self._last
 end
-​
+
 -- Add a value to the queue
 function Queue:Enqueue(value)
 	local last = self._last + 1
 	self._last = last
 	self._queue[last] = value
 end
-​
+
 -- Remove a value from the queue
 function Queue:Dequeue()
 	local first = self._first
@@ -70,7 +70,7 @@ function Queue:Dequeue()
 	self._first = first + 1
 	return value
 end
-​
+
 return Queue
 
 ```
@@ -80,32 +80,32 @@ The following code sample is a usage example as a `Class.Script` under `Class.Wo
 ```lua title='Regular Queue Usage Example'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Queue = require(ReplicatedStorage:WaitForChild("Queue"))
-​
+
 local myQueue = Queue.new()
-​
+
 -- Add some values to the queue
 myQueue:Enqueue(5)
 myQueue:Enqueue(10)
 myQueue:Enqueue(15)
-​
+
 -- myQueue = { 5, 10, 15 }
-​
+
 -- Remove one value from the queue
 local first = myQueue:Dequeue()
 print("The first value added to the queue was", first)
-​
+
 -- myQueue = { 10, 15 }
-​
+
 -- Add more values to the queue
 myQueue:Enqueue(20)
 myQueue:Enqueue(25)
 myQueue:Enqueue(30)
-​
+
 -- myQueue = { 10, 15, 20, 25, 30 }
-​
+
 -- Remove another value from the queue
 local second = myQueue:Dequeue()
 print("The second value added to the queue was", second)
-​
+
 -- myQueue = { 15, 20, 25, 30 }
 ```
