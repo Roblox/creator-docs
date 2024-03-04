@@ -207,6 +207,15 @@ end
 TextChatService.OnIncomingMessage = onIncomingChatMessage
 ```
 
+## Adding A System Message
+
+By using [:DisplaySystemMessage](https://create.roblox.com/docs/reference/engine/classes/TextChannel#DisplaySystemMessage) you are able to create a system-like message. This can be used to greet users, or alert them when an ingame event is happening.
+```lua title='LocalScript'
+game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("[Server] Hello There, " .. game.Players.LocalPlayer.Name)
+```
+![image](https://github.com/Roblox/creator-docs/assets/74430503/41e01981-d308-4ab3-85ca-2999f466859c)
+
+
 ## Adding Chat Bubbles
 
 In addition to displaying messages on the chat window, you can add and customize chat bubbles above user avatars and NPC characters for immersive engagement. For more information, see [Bubble Chat](../chat/bubble-chat.md).
