@@ -96,7 +96,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -168,7 +168,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -240,7 +240,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
