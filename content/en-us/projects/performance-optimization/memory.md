@@ -34,7 +34,7 @@ The amount of available memory varies significantly across devices, and the appr
 
 There are several ways to identify memory usage for an experience:
 
- 1. Open the [Developer Console](../../studio/developer-console.md) and switch to the Memory tab. This tab gives a break down of how memory is being allocated. It's recommended you do this in the client rather than Studio to get the most accurate readouts.
+ 1. Open the [Developer Console](../../studio/developer-console.md) and switch to the **Memory** tab. This tab gives a break down of how memory is being allocated. It's recommended you do this in the client rather than Studio to get the most accurate readouts.
  2. Enable the **Performance Stats** view from the settings menu in the client to see total client memory usage over-layed on the screen.
  3. Check the [Performance Dashboard](../../production/analytics/performance.md) for average memory usage across all clients & servers in your experience. This dashboard also provides client crash rates.
 
