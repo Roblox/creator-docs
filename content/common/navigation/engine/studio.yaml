@@ -31,10 +31,6 @@ navigation:
     path: /studio/testing-modes
   - title: Output Window
     path: /studio/output
-  - title: Developer Console
-    path: /studio/developer-console
-  #- title: ScriptProfiler # If this is part of the dev console, figure out if it can just be added to that article
-  #  path: /studio/scriptprofiler
   - title: MicroProfiler
     section:
       - title: Overview
@@ -45,6 +41,10 @@ navigation:
         path: /studio/microprofiler/tag-table
       - title: Using MicroProfiler
         path: /studio/microprofiler/using-microprofiler
+  - title: Developer Console
+    path: /studio/developer-console
+  - title: Script Profiler
+    path: /studio/optimization/scriptprofiler
   - heading: UI Reference
   - title: Quick Access Tools
     path: /studio/quick-access
