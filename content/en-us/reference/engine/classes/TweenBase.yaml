@@ -76,6 +76,10 @@ methods:
 
       If you want to reset the progress variables of the tween, use
       `Class.TweenBase:Cancel()`.
+
+      You can only pause tweens that are in `Playing` `PlaybackState`, tweens 
+      in other states won't pause. To keep track of the current `PlaybackState`,
+      you can listen to the `PlaybackState` property change events.
     code_samples:
       - Tween-Pausing
     parameters: []
