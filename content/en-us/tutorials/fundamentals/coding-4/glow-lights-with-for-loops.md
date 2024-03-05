@@ -68,7 +68,7 @@ Remember, a for loop starts with keyword `for` followed by a control variable. T
    end
    ```
 
-2. In scope of the for loop, set the brightness property of the light to the value in the control variable by typing `light.Brightness = brightnessChange`. Now, when the loop runs, the light will become brighter.
+2. In scope of the for loop, set the brightness property of the light to the value in the control variable by typing `light.Brightness = currentBrightness`. Now, when the loop runs, the light will become brighter.
 
    ```lua
    for currentBrightness = 0, 5, brightnessChange do
