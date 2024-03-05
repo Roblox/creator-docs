@@ -2,8 +2,13 @@ name: AudioDeviceInput
 type: class
 category:
 memory_category: Internal
-summary: ''
-description: ''
+summary: |
+  Produces audio streams from physical devices, such as microphones.
+description: |
+  `Class.AudioDeviceInput` produces audio streams from physical devices, such as microphones.
+  It provides a single **Output** pin which can be connected to other pins via `Class.Wire|Wires`.
+  `Class.AudioDeviceInput` has properties for selecting which `Class.Player` is producing the stream,
+  and controlling whether or not they are muted.
 code_samples: []
 inherits:
   - Instance
@@ -12,8 +17,24 @@ tags:
 deprecation_message: ''
 properties:
   - name: AudioDeviceInput.AccessType
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether the list of user IDs provided to
+      `Class.AudioDeviceInput.SetUserIdAccessList|SetUserIdAccessList`
+      is treated as an allow-list or deny-list.
+    description: |
+      Determines whether the list of user IDs provided to
+      `Class.AudioDeviceInput.SetUserIdAccessList|SetUserIdAccessList` is
+      treated as an allow-list or deny-list.
+      
+      If `Class.AudioDeviceInput.AccessType|AccessType` is
+      `Enum.AccessModifierType.Allow`, then **only** the supplied user IDs
+      are **permitted** to hear this `Class.AudioDeviceInput`. If
+      `Class.AudioDeviceInput.AccessType|AccessType` is
+      `Enum.AccessModifierType.Deny`, then **only** the supplied user IDs
+      are **blocked** from hearing this `Class.AudioDeviceInput`.
+      
+      Since player voices are networked, this property should only be
+      assigned from the server in order to replicate properly.
     code_samples: []
     type: AccessModifierType
     tags: []
@@ -27,8 +48,14 @@ properties:
       can_load: true
       can_save: true
   - name: AudioDeviceInput.Active
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether the physical device is actively recording.
+    description: |
+      Controls whether the physical device is actively recording.
+      This property is only set by Roblox core scripts, but it may be read
+      by user scripts. Generally, an `Class.AudioDeviceInput` may only
+      be producing sound if `Class.AudioDeviceInput.Active|Active` is
+      true **and** `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples: []
     type: bool
     tags: []
@@ -42,8 +69,11 @@ properties:
       can_load: true
       can_save: true
   - name: AudioDeviceInput.IsReady
-    summary: ''
-    description: ''
+    summary: |
+      Denotes whether this `Class.AudioDeviceInput` is ready to produce sound.
+    description: |
+      Denotes whether this `Class.AudioDeviceInput` is ready to produce sound,
+      meaning all network connections have been established.
     code_samples: []
     type: bool
     tags:
@@ -59,9 +89,18 @@ properties:
       can_load: false
       can_save: true
   - name: AudioDeviceInput.Muted
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Controls whether this `Class.AudioDeviceInput` is muted.
+    description: |
+      Controls whether this `Class.AudioDeviceInput` is muted. Unlike
+      `Class.AudioDeviceInput.Active|Active`, this property is publicly
+      scriptable.
+      
+      Generally, an `Class.AudioDeviceInput` may only be heard if
+      `Class.AudioDeviceInput.Active|Active` is true **and**
+      `Class.AudioDeviceInput.Muted|Muted` is false.
+    code_samples:
+      - audio-wiring---push-to-talk
     type: bool
     tags: []
     deprecation_message: ''
@@ -74,8 +113,11 @@ properties:
       can_load: true
       can_save: true
   - name: AudioDeviceInput.Player
-    summary: ''
-    description: ''
+    summary: |
+      Determines whose device is producing sound.
+    description: |
+      Determines whose device is producing sound. In order to replicate properly, this should only be assigned from the server.
+      Assigning this property locally generally does not work, unless `Class.AudioDeviceInput.Player|Player` is `Class.Players.LocalPlayer`.
     code_samples: []
     type: Player
     tags: []
@@ -106,8 +148,10 @@ methods:
     security: PluginSecurity
     thread_safety: Unsafe
   - name: AudioDeviceInput:GetUserIdAccessList
-    summary: ''
-    description: ''
+    summary: |
+      Returns a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`.
+    description: |
+      Returns a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`, depending on the `Class.AudioDeviceInput.AccessType|AccessType`.
     code_samples: []
     parameters: []
     returns:
@@ -118,8 +162,14 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AudioDeviceInput:SetUserIdAccessList
-    summary: ''
-    description: ''
+    summary: |
+      Sets a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`.
+    description: |
+      Sets a list of user IDs that are either permitted to hear or blocked from
+      hearing this `Class.AudioDeviceInput`, depending on the `Class.AudioDeviceInput.AccessType|AccessType`.
+      
+      Note that this method replicates from server to client; in general, it should
+      only be called from the server in order to replicate properly.
     code_samples: []
     parameters:
       - name: userIds

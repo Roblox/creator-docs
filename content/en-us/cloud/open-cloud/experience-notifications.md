@@ -3,10 +3,6 @@ title: Experience Notifications
 description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
-<Alert severity="success">
-This feature is currently in beta and changes/upgrades should be anticipated.
-</Alert>
-
 **Experience Notifications** are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content. This article contains [best practices](#best-practices), [examples](#example-notifications), instructions for [implementation](#implementation) and [analytics](#analytics), details on the [delivery system](#delivery-system), and an overview of [guidelines](#guidelines).
 
 <Grid container spacing={3}>
@@ -234,7 +230,7 @@ Starting in March, performance of your notifications and notifiable audience are
 
 ### Notifications Summary
 
-The summary section serves as a snapshot of the aggregate performance of your notifications.
+The summary section serves as a snapshot of the aggregate performance of your notifications. A minimum of 100 aggregate impressions is required to display the performance statistics.
 
 <img src="../../assets/open-cloud/experience-notifications/Analytics-Summary.png" width="880" />
 
