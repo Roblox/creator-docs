@@ -79,8 +79,11 @@ methods:
 
       You can only pause tweens that are in the `Class.TweenBase.PlaybackState|PlaybackState`
       of `Enum. PlaybackState.Playing`; tweens in other states won't pause.
-      To keep track of the current `PlaybackState`, you can listen to the `PlaybackState`
-      property change events.
+      This may be a factor when a tween is in a different
+      `Class.TweenBase.PlaybackState|PlaybackState` such as `Enum. PlaybackState.Delayed`
+      (as a result of its `Datatype.TweenInfo.DelayTime` being greater than 0),
+      attempting to pause the tween will fail and the tween will play following its specified
+      delay time.
     code_samples:
       - Tween-Pausing
     parameters: []
