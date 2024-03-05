@@ -122,7 +122,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -223,7 +223,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -324,7 +324,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>

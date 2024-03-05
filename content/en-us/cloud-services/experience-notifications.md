@@ -3,10 +3,6 @@ title: Experience Notifications
 description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
-<Alert severity="success">
-This feature is currently in beta and changes/upgrades should be anticipated.
-</Alert>
-
 **Experience Notifications** are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content. This article contains [best practices](#best-practices), [examples](#example-notifications), instructions for [implementation](#implementation) and [analytics](#analytics), details on the [delivery system](#delivery-system), and an overview of [guidelines](#guidelines).
 
 <Grid container spacing={3}>
@@ -155,30 +151,33 @@ As with [Player Invite Prompts](../production/promotion/invite-prompts.md), you 
 
 ### Including the Package
 
-**During the beta period,** you must obtain the Lua package from the [Creator Store](../production/publishing/creator-store.md).
+To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../production/publishing/creator-store.md).
 
-1. Navigate to the [Experience Notifications Beta](https://create.roblox.com/store/asset/16200196026/Experience-Notifications-Beta) item page.
-1. Click the **Get Model** button in the upper right.
+1. From the [View](../studio/view-tab.md) tab, open the [Toolbox](../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../assets/open-cloud/experience-notifications/Beta-Get-Model.png" width="760" />
+   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-1. Once obtained, the button changes to **Try in Studio**. You can also locate the package in the Studio's [Toolbox](../projects/assets/toolbox.md) under **Inventory**&nbsp;&rarr; **My&nbsp;Models**.
+   <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
-   <img src="../assets/open-cloud/experience-notifications/Beta-Try-In-Studio.png" width="760" />
+1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-	 <img src="../assets/open-cloud/experience-notifications/Beta-Toolbox-Item.png" width="360" />
+   <img src="../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Click the package to insert it into the [Explorer](../studio/explorer.md) hierarchy, then move the entire **OpenCloud** model into **ServerScriptService**.
+1. Locate and click the **Dev Modules** tile.
+
+   <img src="../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+
+1. Locate the **Open Cloud** module and click it, or drag‑and‑drop it into the 3D view.
+
+   <img src="../assets/open-cloud/experience-notifications/Toolbox-Package.png" width="143" />
+
+1. In the [Explorer](../studio/explorer.md) window, move the entire **OpenCloud** model into **ServerScriptService**.
 
    <img src="../assets/open-cloud/experience-notifications/Move-Package.png" width="320" />
 
 ### Sending an Experience Notification
 
 Once you've [created a notification string](#creating-a-notification-string) and included the [package](#including-the-package) in your project, you can send notifications from server‑side scripts.
-
-<Alert severity="warning">
-During the beta period, notifications can only be sent to users who can manage the experience.
-</Alert>
 
 To send a basic notification to a specific user, include the [notification string](#creating-a-notification-string) asset ID in the payload's `messageId` field, then call the [createUserNotification](#createusernotification) function with the recipient's `Class.Player.UserId` and the request data.
 
@@ -304,7 +303,7 @@ Starting in March, performance of your notifications and notifiable audience are
 
 ### Notifications Summary
 
-The summary section serves as a snapshot of the aggregate performance of your notifications.
+The summary section serves as a snapshot of the aggregate performance of your notifications. A minimum of 100 aggregate impressions is required to display the performance statistics.
 
 <img src="../assets/open-cloud/experience-notifications/Analytics-Summary.png" width="880" />
 
