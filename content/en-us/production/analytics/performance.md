@@ -89,7 +89,7 @@ If you identify a performance issue, use the following steps to debug and fix it
 2. **Use built-in testing tools** to troubleshoot performance:
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
-   - [ScriptProfiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
+   - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
    - [MicroProfiler](../../studio/microprofiler/using-microprofiler.md) for viewing unoptimized portions of your experience visually.
 
 3. **Gather user feedback** from your community.

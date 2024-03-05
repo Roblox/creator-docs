@@ -13,7 +13,7 @@ Users can purchase subscriptions on the desktop app or website using a credit or
 
 Subscriptions will be rolled out to more regions in the future.
 
-**Unavailable regions include:** Argentina, Canada, Chile, Colombia, India, Indonesia, Israel, Japan, Malaysia, Mexico, Peru, Philippines, Russia, Saudi Arabia, Switzerland, Taiwan, Thailand, Türkiye (Turkey), UAE, Ukraine, and Vietnam.
+**Unavailable regions include:** Argentina, Colombia, India, Indonesia, Japan, Russia, Taiwan, Türkiye (Turkey), UAE, Ukraine, and Vietnam.
 
 <Alert severity="info">
 To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md). For a reference on how to implement subscriptions into your experience's monetization strategy, see this [implementation example](https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072).
@@ -26,9 +26,9 @@ Before creating your subscriptions, ensure they align with [Roblox's Terms of Us
 - **Provide clear, distinguishable subscription options:** Use short, succinct, and self-explanatory names that differentiate subscription options from one another. Specify the price and duration for each option when merchandising in-experience.
 - **Offer the same benefits across platforms and devices:** Regardless of where the subscription was purchased, ensure the user receives the same benefits for any given subscription plan.
 - **Design subscriptions to fit with each other and overall experience offerings:** Tiering of the same suite of benefits, like offering "Bronze," "Silver," and "Gold" tiers that are mutually exclusive, is not currently available. Ensure subscriptions represent distinct sets of benefits.
-- **Offer the benefits for the full term of the subscription:** Once a subscription offering is live, honor the benefits described and do not change or revoke benefits behind the scenes.
+- **Offer the benefits for the full term of the subscription:** Once a subscription offering is live, honor the benefits described and do not revoke benefits behind the scenes.
 - **Do not direct users to purchase on another platform (e.g. mobile, web, etc.) in-experience:** While you are free to communicate with users off-platform, using the Roblox app to direct users to purchase elsewhere is prohibited.
-- **Do not gate subscription benefits by additional requirements once a user has paid:** Requiring a user to perform additional tasks, such as posting to social media, to get access to benefits they have paid for is prohibited. Battle passes do not fall under this category and are permissible to create through subscription purchases.
+- **Do not gate subscription benefits by additional requirements once a user has paid:** Requiring a user to perform additional tasks, such as posting to social media, to get access to benefits they have paid for is prohibited. This guideline does not impact battle passes, which you are allowed to both create and market as a subscription purchase.
 
 ## Creating Subscriptions
 
