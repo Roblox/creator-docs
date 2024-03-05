@@ -209,7 +209,7 @@ TextChatService.OnIncomingMessage = onIncomingChatMessage
 
 ## Displaying System Messages
 
-By using [:DisplaySystemMessage](https://create.roblox.com/docs/reference/engine/classes/TextChannel#DisplaySystemMessage) you are able to create a system-like message. This can be used to greet users, or alert them when an ingame event is happening.
+Through `Class.TextChannel:DisplaySystemMessage()`, you can display a system-like message, useful for greeting users or alerting them when an in-experience event is happening.
 
 ```lua title='LocalScript'
 local Players = game:GetService("Players")
