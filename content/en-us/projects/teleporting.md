@@ -119,7 +119,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 To retrieve only the teleport data on the client, you can use `Class.TeleportService:GetLocalPlayerTeleportData()`.
 
-## ​​Handling Failed Teleports
+## Handling Failed Teleports
 
 Like any API call that involves network requests, teleports might fail and throw an error. Even if a call succeeds and the teleport initiates, it can still fail at the last moment without throwing an error and leave the user in the server. When this happens, it triggers `Class.TeleportService.TeleportInitFailed`.
 

@@ -22,7 +22,7 @@ The first step in setting up the admin commands library is to add a new Chat Mod
 Rather than implementing most of the Chat Module logic you will simply require the library module that does a bulk of the work and adds extra functionality. The simplest way to add the library into your module is to require it by its assetId at the top of your script.
 
 ```lua
-​local AdminCommands = require(1163352238)
+local AdminCommands = require(1163352238)
 ```
 
 This Module returns a table of functions, with the `Run` function as the most important one. The library has a `Run` function for its Chat module. It is important that AdminCommands returns this `Run` function to the Chat Service. The function is indexed by its name, `Run`, and you can return the following as if `Run` was a property of our AdminCommands table representation:
@@ -113,7 +113,7 @@ Current utility functions are:
 A useful command to have would be one that prints a list of all optional commands that users have available. This command outputs each command bound to the library and a few of its properties.
 
 ```lua
-​-- Prints a list of all bound commands
+-- Prints a list of all bound commands
 
 function listCommand(commandData)
 

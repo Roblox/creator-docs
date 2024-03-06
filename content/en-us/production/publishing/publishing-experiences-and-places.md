@@ -272,7 +272,7 @@ All experiences should adhere to the following best practices for naming:
 - **Use decorations cautiously** &ndash; Decorating the name with one or two well-placed emojis isn't harmful, but misplaced or excessive decorations can confuse users who quickly want to identify the experience.
 
 <Alert severity="success">
-🌍 **Evolution Simulator** 🌍​
+🌍 **Evolution Simulator** 🌍
 </Alert>
 <Alert severity="error">
 🐒🐬🐊 **Ev**🌍**luti**🌍**n Simulator** 🌷🍀🌿
