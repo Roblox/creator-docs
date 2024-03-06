@@ -527,6 +527,16 @@ methods:
         "FavoriteCount": 0
       }
       ```
+
+      <br /> <br /> To query for limited or unlimited assets, use the following
+      `itemRestrictions` values:
+
+      | itemRestrictions | Limited or Unlimited  |
+      | :--------------: | :-------------------: |
+      |     `empty`      |       Unlimited       |
+      |  `collectible`   |      UGC Limited      |
+      |    `limited`     |    Roblox Limited     |
+      | `limitedUnique`  | Roblox Limited Unique |
     code_samples:
     parameters:
       - name: itemId

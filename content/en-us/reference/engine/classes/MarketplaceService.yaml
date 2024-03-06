@@ -370,12 +370,12 @@ methods:
       	<tr>
       	  <td><code>IsLimited</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited item" that is no longer (if ever) sold.</td>
+      	  <td>Describes whether the asset is a Roblox Limited that is no longer (if ever) sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsLimitedUnique</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited unique" ("Limited&nbsp;U") item that only has a fixed number sold.</td>
+      	  <td>Describes whether the asset is a unique Roblox Limited ("Limited&nbsp;U") item that only has a fixed number sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsNew</code></td>
@@ -522,6 +522,27 @@ methods:
         default:
         summary: |
           The ID of the subscription to check.
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:GetUserSubscriptionDetailsAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: ''
+      - name: subscriptionId
+        type: string
+        default:
+        summary: ''
     returns:
       - type: Dictionary
         summary: ''

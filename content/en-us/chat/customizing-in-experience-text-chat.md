@@ -207,6 +207,19 @@ end
 TextChatService.OnIncomingMessage = onIncomingChatMessage
 ```
 
+## Displaying System Messages
+
+Through `Class.TextChannel:DisplaySystemMessage()`, you can display a system-like message, useful for greeting users or alerting them when an in-experience event is happening.
+
+```lua title='LocalScript'
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+
+local generalChannel = TextChatService.TextChannels.RBXGeneral
+
+generalChannel:DisplaySystemMessage("[Server] Hello " .. Players.LocalPlayer.Name)
+```
+
 ## Adding Chat Bubbles
 
 In addition to displaying messages on the chat window, you can add and customize chat bubbles above user avatars and NPC characters for immersive engagement. For more information, see [Bubble Chat](../chat/bubble-chat.md).

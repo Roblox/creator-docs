@@ -1423,6 +1423,36 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Studio.LoadAllBuiltinPluginsInRunModes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Studio.LoadUserPluginsInRunModes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: Studio.LocalAssetsFolder
     summary: ''
     description: ''

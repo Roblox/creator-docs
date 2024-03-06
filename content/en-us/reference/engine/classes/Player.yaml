@@ -223,33 +223,33 @@ properties:
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
       body parts, scripts, and other objects.
     description: |
-      The **Character** property contains a reference to a `Class.Model` containing
-      a `Class.Humanoid`, body parts, scripts, and other objects required for
-      simulating the player's avatar in-experience. The model is parented to the
-      `Class.Workspace` but it may be moved. It is automatically loaded when
-      `Class.Players.CharacterAutoLoads` is `true` and it can be manually loaded
-      otherwise using `Class.Player:LoadCharacter()`.
+      The **Character** property contains a reference to a `Class.Model`
+      containing a `Class.Humanoid`, body parts, scripts, and other objects
+      required for simulating the player's avatar in-experience. The model is
+      parented to the `Class.Workspace` but it may be moved. It is automatically
+      loaded when `Class.Players.CharacterAutoLoads` is `true` and it can be
+      manually loaded otherwise using `Class.Player:LoadCharacter()`.
 
-      Initially this property is `nil` and it is set when the player's character first
-      spawns. Use the `Class.Player.CharacterAdded` event to detect when a
+      Initially this property is `nil` and it is set when the player's character
+      first spawns. Use the `Class.Player.CharacterAdded` event to detect when a
       player's character properly loads, and the
       `Class.Player.CharacterRemoving` event to detect when the character is
       about to despawn. Avoid using `Class.Instance:GetPropertyChangedSignal()`
       on this property.
 
-      Note that `Class.LocalScript|LocalScripts` that are cloned from `Class.StarterGui` or
-      `Class.StarterPack` into a player's `Class.PlayerGui` or `Class.Backpack` respectively
-      are often run before the old character model is replaced, so
-      `Class.Player.Character` may refer to the old model whose
-      `Class.Instance.Parent|Parent` property is `nil`. Therefore,
-      in a `Class.LocalScript` under `Class.StarterGui` or
-      `Class.StarterPack`, it is advisable to make sure the parent
-      of **Character** is not `nil` before using it, for example:
+      Note that `Class.LocalScript|LocalScripts` that are cloned from
+      `Class.StarterGui` or `Class.StarterPack` into a player's
+      `Class.PlayerGui` or `Class.Backpack` respectively are often run before
+      the old character model is replaced, so `Class.Player.Character` may refer
+      to the old model whose `Class.Instance.Parent|Parent` property is `nil`.
+      Therefore, in a `Class.LocalScript` under `Class.StarterGui` or
+      `Class.StarterPack`, it is advisable to make sure the parent of
+      **Character** is not `nil` before using it, for example:
 
       ```lua
       local Players = game:GetService("Players")
       local player = Players.LocalPlayer
-      
+
       local character = player.Character
       if not character or character.Parent == nil then
       	character = player.CharacterAdded:Wait()

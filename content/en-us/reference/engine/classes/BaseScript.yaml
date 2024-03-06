@@ -106,7 +106,8 @@ properties:
       please see `Class.ModuleScript.LinkedSource`.
     code_samples:
     type: Content
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: |
       This property is now replaced by
       [packages](../../../projects/assets/packages.md) which has greater

@@ -150,10 +150,12 @@ properties:
   - name: CatalogSearchParams.Limit
     type: number
     summary: |
-      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`, and `120`. Defaults to `30`.
+      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`,
+      and `120`. Defaults to `30`.
     default: ''
     description: |
-      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`, and `120`. Defaults to `30`.
+      Specifies the number of items to return. Accepts `10`, `28`, `30`, `60`,
+      and `120`. Defaults to `30`.
     code_samples: []
     tags: []
     deprecation_message: ''

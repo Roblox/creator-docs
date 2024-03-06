@@ -17,17 +17,32 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
 <GridContainer numColumns = '2'>
 
 <Card >
-  <CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
+  <CardMedia component='img' height='165' image='../../assets/art/avatar/Rigid-Thumbnail.png' alt="rigid accessory thumbnail example"/>
   <CardContent>
-    <Typography variant="h5" component="div">Clothing and Accessories</Typography>
+    <Typography variant="h5" component="div">Rigid accessories</Typography>
     <br />
-    Understand how 3D cosmetics, like layerable clothes and rigid accessories work.
+    Understand the various components that make up rigid accessories, the most basic form of 3D avatar cosmetics.
   </CardContent>
   <CardActions>
   <Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 
+<Card >
+  <CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
+  <CardContent>
+    <Typography variant="h5" component="div">Layered clothing</Typography>
+    <br />
+    Understand the advanced components of layered clothing, accessories that stretch and fit over a target.
+  </CardContent>
+  <CardActions>
+  <Button href="../art/accessories/layered-clothing.md" size='large' color='primary' variant='text'>Learn More</Button>
+  </CardActions>
+</Card>
+
+</GridContainer> <br />
+
+<GridContainer numColumns = '2'>
 <Card style={{height: '100%'}}>
 <CardMedia component='img' height='165' image='../../assets/art/avatar/Bodies-Thumbnail.png' alt="bodies thumbnail example"/>
 <CardContent>
@@ -39,22 +54,19 @@ Learn the various components that make up the unique Roblox avatar, including us
 <Button href="../art/characters/index.md" size='large' color='primary' variant='text'>Learn More</Button>
 </CardActions>
 </Card>
-</GridContainer> <br />
 
-<GridContainer numColumns = '2'>
 <Card>
   <CardMedia component='img' height='165' image='../../assets/art/avatar/Tutorial-Thumbnail.png' alt="tutorial thumbnail example"/>
   <CardContent>
     <Typography variant="h5" component="div">Tutorials</Typography>
     <br />
-    Follow tutorials for clothing and characters to start creating your own unique 3D asset to bring into Studio.
+    Follow step-by-step guides to create accessories, clothing, and characters to start creating your own unique 3D avatar asset.
   </CardContent>
   <CardActions>
   <Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
-<figure>
-</figure>
+
 </GridContainer> <br />
 
 <Alert severity = 'info'>

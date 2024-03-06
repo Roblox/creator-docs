@@ -5,14 +5,16 @@ memory_category: Instances
 summary: |
   Represents a text chat channel.
 description: |
-  Represents a text chat channel. Contains `Class.TextSource|TextSources` as descendants.
+  Represents a text chat channel. Contains `Class.TextSource|TextSources` as
+  descendants.
 
   To send a chat message to the `Class.TextChannel`, call
   `Class.TextChannel:SendAsync()` from a `Class.LocalScript`. The corresponding
   `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
   that channel.
 
-  To learn more, see [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
+  To learn more, see
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -119,20 +121,24 @@ events:
   - name: TextChannel.MessageReceived
     summary: |
       Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
-      client, or when the client receives a valid `Class.TextChannel:SendAsync()` response from the server.
+      client, or when the client receives a valid
+      `Class.TextChannel:SendAsync()` response from the server.
     description: |
-      Like `Class.TextChatService.MessageReceived`, fires when `Class.TextChannel:DisplaySystemMessage()`
-      is invoked on the client, or when the client receives a valid `Class.TextChannel:SendAsync()`
-      response from the server. This event is only fired on the client.
-      
-      If the server's `Class.TextChannel.ShouldDeliverCallback` property is bound and returns `false`,
-      the client will not fire `Class.TextChannel.MessageReceived`.
+      Like `Class.TextChatService.MessageReceived`, fires when
+      `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or
+      when the client receives a valid `Class.TextChannel:SendAsync()` response
+      from the server. This event is only fired on the client.
+
+      If the server's `Class.TextChannel.ShouldDeliverCallback` property is
+      bound and returns `false`, the client will not fire
+      `Class.TextChannel.MessageReceived`.
 
       Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
       and the text of the message (with `Class.TextChatMessage.Text`).
 
       The `Class.TextChatMessage` parameter is the final result of any functions
-      bound to `Class.TextChatService.OnIncomingMessage` or `Class.TextChannel.OnIncomingMessage`.
+      bound to `Class.TextChatService.OnIncomingMessage` or
+      `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
       - name: incomingMessage
@@ -164,8 +170,8 @@ callbacks:
       always run **after** `Class.TextChatService.OnIncomingMessage` callback.
 
       This should be defined only once per `Class.TextChannel` in the source
-      code. Multiple bindings to the same channel will override one another in
-      a nondeterministic manner.
+      code. Multiple bindings to the same channel will override one another in a
+      nondeterministic manner.
     code_samples: []
     parameters:
       - name: message

@@ -1495,6 +1495,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/NoCollisionConstraint.yaml
         ignoreTranslation: true
+      - title: Noise
+        path: /reference/engine/classes/Noise
+        type: engineapi
+        source: /reference/engine/classes/Noise.yaml
+        ignoreTranslation: true
       - title: NotificationService
         path: /reference/engine/classes/NotificationService
         type: engineapi
@@ -1594,6 +1599,11 @@ navigation:
         path: /reference/engine/classes/Path
         type: engineapi
         source: /reference/engine/classes/Path.yaml
+        ignoreTranslation: true
+      - title: Path2D
+        path: /reference/engine/classes/Path2D
+        type: engineapi
+        source: /reference/engine/classes/Path2D.yaml
         ignoreTranslation: true
       - title: PathfindingLink
         path: /reference/engine/classes/PathfindingLink
@@ -2519,6 +2529,11 @@ navigation:
         path: /reference/engine/classes/Texture
         type: engineapi
         source: /reference/engine/classes/Texture.yaml
+        ignoreTranslation: true
+      - title: TextureGenerationPartGroup
+        path: /reference/engine/classes/TextureGenerationPartGroup
+        type: engineapi
+        source: /reference/engine/classes/TextureGenerationPartGroup.yaml
         ignoreTranslation: true
       - title: TimerService
         path: /reference/engine/classes/TimerService
@@ -4143,6 +4158,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/NetworkStatus.yaml
         ignoreTranslation: true
+      - title: NoiseType
+        path: /reference/engine/enums/NoiseType
+        type: engineapi
+        source: /reference/engine/enums/NoiseType.yaml
+        ignoreTranslation: true
       - title: NormalId
         path: /reference/engine/enums/NormalId
         type: engineapi
@@ -4658,6 +4678,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/Style.yaml
         ignoreTranslation: true
+      - title: SubscriptionExpirationReason
+        path: /reference/engine/enums/SubscriptionExpirationReason
+        type: engineapi
+        source: /reference/engine/enums/SubscriptionExpirationReason.yaml
+        ignoreTranslation: true
       - title: SubscriptionPaymentStatus
         path: /reference/engine/enums/SubscriptionPaymentStatus
         type: engineapi
@@ -4667,6 +4692,11 @@ navigation:
         path: /reference/engine/enums/SubscriptionPeriod
         type: engineapi
         source: /reference/engine/enums/SubscriptionPeriod.yaml
+        ignoreTranslation: true
+      - title: SubscriptionState
+        path: /reference/engine/enums/SubscriptionState
+        type: engineapi
+        source: /reference/engine/enums/SubscriptionState.yaml
         ignoreTranslation: true
       - title: SurfaceConstraint
         path: /reference/engine/enums/SurfaceConstraint
@@ -4757,11 +4787,6 @@ navigation:
         path: /reference/engine/enums/TextTruncate
         type: engineapi
         source: /reference/engine/enums/TextTruncate.yaml
-        ignoreTranslation: true
-      - title: TextureGenerationMeshHandlerUnwrapMode
-        path: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode
-        type: engineapi
-        source: /reference/engine/enums/TextureGenerationMeshHandlerUnwrapMode.yaml
         ignoreTranslation: true
       - title: TextureMode
         path: /reference/engine/enums/TextureMode

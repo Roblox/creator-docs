@@ -13,6 +13,59 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: PublishService:CreateAssetOrAssetVersionAndPollAssetWithTelemetryAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: serializedInstance
+        type: string
+        default:
+        summary: ''
+      - name: creatorType
+        type: AssetCreatorType
+        default:
+        summary: ''
+      - name: creatorId
+        type: int64
+        default:
+        summary: ''
+      - name: assetType
+        type: string
+        default:
+        summary: ''
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: description
+        type: string
+        default:
+        summary: ''
+      - name: token
+        type: string
+        default:
+        summary: ''
+      - name: contentType
+        type: string
+        default:
+        summary: ''
+      - name: expectedPrice
+        type: int
+        default: 0
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

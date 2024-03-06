@@ -467,5 +467,52 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: AssetService.AudioMetadataFailedResponse
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requestid
+        type: int64
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: AssetService.AudioMetadataRequest
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requestid
+        type: int64
+        default:
+        summary: ''
+      - name: request
+        type: Array
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: AssetService.AudioMetadataResponse
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requestid
+        type: int64
+        default:
+        summary: ''
+      - name: response
+        type: Array
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks: []

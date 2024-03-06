@@ -14,22 +14,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: UGCValidationService:ValidateEditableMeshCageUVCoincident
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: editableMesh
-        type: EditableMesh
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: UGCValidationService:CompareTextureOverlapByteString
     summary: ''
     description: ''
@@ -50,23 +34,6 @@ methods:
       - Yields
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: UGCValidationService:ValidateCageUVCoincident
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: meshId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
 events: []
 callbacks: []

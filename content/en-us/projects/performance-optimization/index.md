@@ -34,19 +34,19 @@ but you need the following diagnostic tools to diagnose server issues.
     <th>Environment</th>
   </tr>
   <tr>
-    <td><a href="../../production/analytics/performance.md">Performance Dashboard</a></td>
+    <td>[Performance Dashboard](../../production/analytics/performance.md)</td>
     <td>A dashboard with aggregate charts for client and server memory usage, client frame rate, server heartbeat, and crash rates in real-time. It's helpful for analyzing patterns and over-time behaviors of your performance to identify issues.</td>
     <td>Creator Dashboard</td>
     <td>Live sessions</td>
   </tr>
   <tr>
-    <td><a href="../../studio/developer-console.md">Developer Console</a></td>
+    <td>[Developer Console](../../studio/developer-console.md)</td>
     <td>A console provides real-time log messages, errors and detailed information on memory, networking, and script performance. It's useful to view memory consumption, key server health stats, script performance stats, and to launch the client or server MicroProfiler.</td>
     <td>Studio</td>
     <td>Live sessions Studio testing</td>
   </tr>
   <tr>
-    <td><a href="../../studio/microprofiler/index.md">MicroProfiler</a></td>
+    <td>[MicroProfiler](../../studio/microprofiler/index.md)</td>
     <td>A debugging tool that breaks down how much computational time is spent on tasks each frame. It can generate dumps for analysis showing a precise breakdown of individual frames, making it helpful for identifying the specific task causing performance issues. You can run the profiler on either the client or the server, depending on which side you identify that there's an issue.</td>
     <td>In-Experience Settings</td>
     <td>Live sessions and Studio testing</td>
