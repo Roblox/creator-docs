@@ -3014,6 +3014,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/OverlapParams.yaml
         ignoreTranslation: true
+      - title: Path2DControlPoint
+        path: /reference/engine/datatypes/Path2DControlPoint
+        type: engineapi
+        source: /reference/engine/datatypes/Path2DControlPoint.yaml
+        ignoreTranslation: true
       - title: PathWaypoint
         path: /reference/engine/datatypes/PathWaypoint
         type: engineapi

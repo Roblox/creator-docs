@@ -254,7 +254,7 @@ The following table serves as a quick reference for how to use remote events and
     <td>`RemoteFunction.OnServerInvoke = function(player, args)`</td>
   </tr>
 </table>
-<Typography variant='h4'>[Server &rarr; Client &rarr; Server](#server-to-client-to-server) &nbsp;<Chip size='small' label='Serious Risks' color='secondary'/></Typography>
+<Typography variant='h4'>[Server &rarr; Client &rarr; Server](#server-to-client-to-server) &nbsp;<Chip size='small' label='Serious Risks' color='primary'/></Typography>
 
 ### Asynchronous Networking Events
 
