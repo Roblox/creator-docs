@@ -8,8 +8,7 @@ description: Explains how to interpret and improve audience metrics for your exp
 To view your experience's audience analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
-2. In the **ANALYTICS** menu, select **Audience**.
+1. In the **Analytics** menu on the left, select **Audience**.
 
 You can view analytics for individual or group owned experiences. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 

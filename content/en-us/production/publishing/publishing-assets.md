@@ -67,7 +67,7 @@ The asset is now public and visible to everyone within the [Creator Store](../..
 
 ## Through Studio
 
-You can publish assets directly in Studio from the Toolbox or Explorer window. However, it's not currently possible to set a USD price for an asset through these methods, only through the [Creator Dashboard](#through-creator-dashboard).
+You can publish assets directly in Studio from the **Toolbox** or **Explorer** window. However, it's not currently possible to set a USD price for an asset through these methods, only through the [Creator Dashboard](#through-creator-dashboard).
 
 ### From the Toolbox
 
@@ -77,9 +77,9 @@ If your asset is already in your [Toolbox Inventory](../../projects/assets/toolb
 
    <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-1. Click on the **Inventory** tab.
+1. Click on the **Creations** tab.
 
-   <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creations-Tab.png" width="360" />
 
 1. Click the **category selector** dropdown and select the asset type you'd like to publish. All assets you have [previously imported](../../projects/assets/manager.md#importing-assets) display within the chosen category.
 

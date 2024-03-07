@@ -156,7 +156,7 @@ To publish a plugin:
    The only way to set a price for a plugin in USD is through the Creator Dashboard. For instructions on this process, see [Publishing Assets](../production/publishing/publishing-assets.md#through-creator-dashboard).
    </Alert>
 
-1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md).
+1. Click the **Submit** button. Your plugin is now available to you in the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md).
 
    <Alert severity="info">
    If you change your mind and would like to publicly publish or monetize a plugin you have previously uploaded, you can do this from the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Publishing Assets](../production/publishing/publishing-assets.md).

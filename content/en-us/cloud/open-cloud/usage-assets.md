@@ -169,7 +169,7 @@ To update an existing asset by an HTTP request:
 1. Copy the API key to the `x-api-key` request header of the [Update Asset](../../reference/cloud/assets/v1.json#PATCH-v1-assets-_asset_) endpoint.
 1. Add the asset type and asset ID in your request. To copy your asset ID:
    1. Navigate to the [Creation](https://create.roblox.com/creations) page of the **Creator Dashboard**.
-   1. Select the **DEVELOPMENT ITEMS** category.
+   1. Select the **Development Items** category.
    1. Select the category of your asset and find the target asset.
    1. Hover over the thumbnail of the target asset and click the **&ctdot;** button to display a list of options, then select **Copy Asset ID** from the list.
       <img src="../../assets/open-cloud/copy-asset-id.png" width="50%" />
