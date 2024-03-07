@@ -406,7 +406,7 @@ export const ASSET_LINK_TEST_CASES: LinkTestCaseType[] = [
     matches: [],
   },
   {
-    text: `<span><Chip label='[Protocol]://[String]' color='secondary' /></span>`,
+    text: `<span><Chip label='[Protocol]://[String]' color='primary' /></span>`,
     matches: [],
   },
 ];
@@ -441,5 +441,5 @@ export const SAMPLE_TEXT_NO_ASSET_LINK_MATCHES = `
     [link](/path/to/page/)
     [^1]: This is a footnote
     - before \`game:GetService("Selection"):Get()[1]:Next()\` after.
-    <span><Chip label='[Protocol]://[String]' color='secondary' /></span>
+    <span><Chip label='[Protocol]://[String]' color='primary' /></span>
   `;
