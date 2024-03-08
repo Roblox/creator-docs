@@ -57,15 +57,14 @@ Next, the first string of the story needs to be combined with the player's answe
 
 2. Still on the same line, type the name of the variable holding the player's answer.
 
-   ````lua
+   ```lua
        -- Code story between the dashes
        -- =============================================
            local name1 = storyMaker:GetInput("What is your favorite name?")
 
            local story = "In a tree on a hill lives the great wizard " .. name1
        -- =============================================
-     ```
-   ````
+   ```
 
 ## Showing the Story
 
