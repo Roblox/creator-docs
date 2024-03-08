@@ -10,7 +10,7 @@ The **asset privacy system**, currently applicable to audio and video assets, le
 For private audio and video assets that you or your [group](../../projects/groups.md) own, you can share them with Roblox friends from the [Creator Dashboard][CreatorDashboardURL].
 
 1. Navigate to the [Creator Dashboard][CreatorDashboardURL].
-2. In the upper tab bar, select **DEVELOPMENT ITEMS**, then click either **AUDIO** or **VIDEOS**.
+2. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**.
 
    <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" width="780"/>
 

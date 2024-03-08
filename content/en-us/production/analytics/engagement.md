@@ -14,8 +14,7 @@ description: Explains how to improve engagement metrics for your experience.
 To view your experience's engagement analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
-1. In the **ANALYTICS** menu, select **Engagement**.
+1. In the **Analytics** menu on the left, select **Engagement**.
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 

@@ -34,7 +34,7 @@ Before creating your subscriptions, ensure they align with [Roblox's Terms of Us
 
 Before you can create a subscription, you must be phone or [ID verified](../publishing/account-verification.md). To create a subscription:
 
-1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**. Then click **CREATE A SUBSCRIPTION**.
+1. Navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**. Then click **Create A Subscription**.
 
    <img src="../../assets/monetization/subscriptions/subscriptions-1.png" width="40%"/>
 
@@ -54,8 +54,8 @@ Before you can create a subscription, you must be phone or [ID verified](../publ
 
    <img src="../../assets/monetization/subscriptions/subscriptions-3.png" width="100%"/>
 
-7. The **Recurring Cadence** is how often the user is charged for subscription. Currently, this value is always monthly. Click **CREATE SUBSCRIPTION**.
-8. Double-check the details and click **CREATE**.
+7. The **Recurring Cadence** is how often the user is charged for subscription. Currently, this value is always monthly. Click **Create Subscription**.
+8. Double-check the details and click **Create**.
 
 <Alert severity="warning">
    After creating your subscription, you can't make changes to anything but the cover image.
@@ -83,7 +83,7 @@ You can edit a subscription's image, description, or state. If you want to edit 
 
 To update a subcription's image:
 
-1. With the subscription selected, click the **CHANGE** button.
+1. With the subscription selected, click the **Change** button.
 
    <img src="../../assets/monetization/subscriptions/subscriptions-4.png" width="80%"/>
 
@@ -400,6 +400,6 @@ Subscription analytics track the following metrics:
 - **Subscriptions by Platform**: The number of subscriptions purchased on each platform.
 - **Platform Earnings**: The net revenue earned through subscriptions purchased on each platform.
 
-This information is visible in the form of charts based on a date range under the **TRENDS** tab, and as a comprehensive list of total subscriptions offered under the **HISTORY** tab.
+This information is visible in the form of charts based on a date range under the **Trends** tab, and as a comprehensive list of total subscriptions offered under the **History** tab.
 
 <img src="../../assets/monetization/subscriptions/subscriptions-analytics.png" width="100%"/>
