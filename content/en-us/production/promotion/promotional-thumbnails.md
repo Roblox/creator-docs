@@ -97,7 +97,7 @@ To delete an [uploaded](#uploading) thumbnail from the **Thumbnails** page:
 
    <img src="../../assets/creator-dashboard/Experience-Thumbnail-Delete.png" width="780" />
 
-1. Click the **DELETE** button to confirm the action and delete the thumbnail from the queue on the experience's main page.
+1. Click the **Delete** button to confirm the action and delete the thumbnail from the queue on the experience's main page.
 
 ## Capturing Thumbnails in Free Camera Mode
 

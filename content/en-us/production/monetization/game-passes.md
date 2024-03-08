@@ -40,16 +40,17 @@ To create a new Pass:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 2. In the **Monetization** menu, select **Passes**. All passes for that experience display.
-    <img src="../../assets/monetization/game-passes/Passes.png" width="50%" />
-3. Click the **CREATE A PASS** button. The **Create a Pass** page displays.
-4. Uploading an image for your pass is optional. If desired, press the **CHANGE** button to change the default image and upload your own.
+
+   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Passes.png" width="330" />
+
+3. Click the **Create a Pass** button.
+4. Uploading an image for your pass is optional. If desired, press the **Change** button to change the default image and upload your own.
 5. Fill in the following fields:
 
    - **Name**: A title for your Pass.
    - **Description**: A description what a player should expect when they purchase the Pass.
-  	<img src="../../assets/monetization/game-passes/create-a-pass.png" width="100%" />
 
-6. Click the **CREATE PASS** button. The Pass displays within the **Passes** section of the **Creations** page.
+6. Click the **Create Pass** button. The Pass displays within the **Passes** section of the **Creations** page.
 
 <Alert severity="info">
    If the pass will be used as a "randomized" reward, remember to review the <a href="./randomized-virtual-items-policy.md">Randomized Virtual Item Policy</a>.
@@ -67,7 +68,7 @@ To locate a Pass ID:
 
 1. Select **Copy Asset ID**. The Pass ID copies to your clipboard.
 
-   <img src="../../assets/monetization/game-passes/Copy-AssetID.png" width="50%" />
+   <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
 
 ## Monetizing Passes
 
@@ -95,7 +96,7 @@ To monetize a Pass:
 
    <img src="../../assets/monetization/game-passes/Configure-Set-Price.png" width="60%" />
 
-1. Click the **SAVE CHANGES** button.
+1. Click the **Save Changes** button.
 
 ## Assigning Pass Privileges
 

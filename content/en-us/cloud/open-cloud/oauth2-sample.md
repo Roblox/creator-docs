@@ -64,7 +64,7 @@ npm start
 
 Then navigate to `http://localhost:3000` (or your non-default port) in a web browser.
 
-The app immediately redirects you to the Roblox login screen, at which point you can log in, verify the permissions that the app is requesting, and click **CONFIRM AND GIVE ACCESS**.
+The app immediately redirects you to the Roblox login screen, at which point you can log in, verify the permissions that the app is requesting, and click **Confirm and Give Access**.
 
 Roblox then redirects you back to `localhost`, where you can see that the app now displays some minimal user information and a link back to your profile on Roblox.
 

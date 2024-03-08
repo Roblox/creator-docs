@@ -26,11 +26,11 @@ The following system specifications ensure that Studio runs smoothly:
 To install Roblox Studio:
 
 1. Navigate to [create.roblox.com][landingurl].
-1. Click the **START CREATING** button. A pop-up dialog displays.
+1. Click the **Start Creating** button. A pop-up dialog displays.
 
    <img src="../assets/studio/general/Studio-Splash-Start-Creating.png" width="700" alt="Start Creating button indicated on splash screen." />
 
-1. Click the **DOWNLOAD STUDIO** button.
+1. Click the **Download Studio** button.
 
    <img src="../assets/studio/general/Download-Popup.png" width="400" alt="Download Studio button indicated on download modal." />
 

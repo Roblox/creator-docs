@@ -27,11 +27,9 @@ experiences** permission can create an API key that can publish a place file.
 
 To create an API key:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com).
-
-1. (Optional) Click the **CREATOR** dropdown to select a group if you are
-   creating the API key for a group.
-1. On the navigation menu, select **Open Cloud** > **API Keys**.
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. **(Optional)** Click the **Creator Hub** dropdown to select a group if you are creating the API key for a group.
+1. In the left navigation menu, select **Open Cloud** &rarr; **API Keys**.
 1. Click the **Create API Key** button.
 1. Enter a unique name for your API key. Use a name that can help you recall the
    purpose later, such as `PLACE_PUBLISHING_KEY` for publishing places to your
