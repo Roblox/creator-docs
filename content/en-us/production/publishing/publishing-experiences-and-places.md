@@ -209,7 +209,7 @@ To restart all servers for updates:
 
    <img src="../../assets/creator-dashboard/Experience-Context-Menu-Restart-Servers.png" width="420" alt="Restart Servers for Updates option from Creator Dashboard" />
 
-1. Confirm restart by clicking the **RESTART** button.
+1. Confirm restart by clicking the **Restart** button.
 
 </TabItem>
 <TabItem label="Shut Down All Servers">

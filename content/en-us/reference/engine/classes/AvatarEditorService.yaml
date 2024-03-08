@@ -376,7 +376,7 @@ methods:
         summary: |
           Returns an array of item details with the following fields:
 
-          ````lua
+          ```lua
             {
               "AssetType" = "string",
               "CreatorName" = "string",
@@ -400,8 +400,7 @@ methods:
               "Price" = 0,
               "ProductId" = 0
             }
-          ```.
-          ````
+          ```
     tags:
       - Yields
     deprecation_message: ''

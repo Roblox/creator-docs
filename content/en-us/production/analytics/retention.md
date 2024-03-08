@@ -14,8 +14,7 @@ description: Explains how to improve retention metrics for your experience.
 To view your experience's retention analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
-1. In the **ANALYTICS** menu, select **Retention**.
+1. In the **Analytics** menu on the left, select **Retention**.
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 

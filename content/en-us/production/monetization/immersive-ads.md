@@ -172,7 +172,7 @@ For example, the following two portal ad packages have the exact same core compo
 
 To insert a portal ad:
 
-1. Open the [Creator Store](../../production/publishing/creator-store.md).
+1. Open the Creator Store.
    1. In the menu bar, navigate to the **View** tab.
    1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
 1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.

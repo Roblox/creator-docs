@@ -14,8 +14,7 @@ Make sure you have an experience with good [Retention](../../production/analytic
 To view your experience's acquisition analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
-1. In the **ANALYTICS** menu, select **Acquisition**.
+1. In the **Analytics** menu on the left, select **Acquisition**.
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 

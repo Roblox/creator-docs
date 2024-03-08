@@ -16,23 +16,20 @@ You can only register apps for individual accounts or groups that you own.
 
 To register an app:
 
-1. In the Creator Dashboard, go to the
-   [Credentials](https://create.roblox.com/credentials) page, click the **OAUTH 2.0
-   APPS** tab, and click **CREATE APP**.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Click the **Create OAuth 2.0 App** button.
 1. Enter a valid and globally unique **Application Name**.
-1. Read and agree to the **Roblox Terms of Service** and click **CREATE**. The
-   confirmation screen appears and provides you with your **Client ID** and
-   **Secret**.
+1. Read and agree to the **Roblox Terms of Service** and click **Create**.
 1. Copy and store the **Client ID** and **Secret** in a secure place. After
    closing the page, you no longer have access to the secret and can only
    generate a new one. After you finish registering an app, you can still access
    and edit the app's other properties.
-1. Click **CONTINUE TO EDIT** to configure your app, which is described in the
+1. Click **Continue to Edit** to configure your app, which is described in the
    following sections.
 
 ## Configuring General Information
 
-Configure the general information of your app, which includes:
+Once you've [registered](#registering-your-app) your app, you should configure its general information, including:
 
 - A description, which is visible to everyone in the Roblox community.
 - A thumbnail image for your app. The recommended file size is at least 150x150
@@ -96,13 +93,12 @@ debugging within your team.
 If you want to extend the user base for your app, you need to publish it in
 public mode by submitting it for review:
 
-1. Go to the [Credentials](https://create.roblox.com/credentials) page in
-   Creator Dashboard and click on the **OAUTH 2.0 APPS** tab.
-1. Click the **EDIT AND PUBLISH** button for the app that you want to publish.
-1. Fill in all the required information and click the **REVIEW AND PUBLISH**
+1. Go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Click the **Edit and Publish** button for the app that you want to publish.
+1. Fill in all the required information and click the **Review and Publish**
    button. A message with limits on your app permissions during the pending
    review period appears.
-1. Click **SUBMIT FOR REVIEW**.
+1. Click **Submit for Review**.
 
 While your app review is pending, you can't edit or submit another request until
 the current review request is approved or rejected. Your app remains in
@@ -117,13 +113,12 @@ notification of the result when the review is completed.
 You can edit or delete your app with the following steps if it's not under
 review:
 
-1. Go to the [Credentials](https://create.roblox.com/credentials) page on the
-   **Creator Dashboard** and click the **OAUTH 2.0 APPS** tab.
-1. Click **EDIT** or **DELETE** for the desired app.
+1. Go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Click **Edit** or **Delete** for the desired app.
 
    - If you chose to edit an app, follow the same steps and requirements of
      [registration](#registering-your-app).
-   - If you chose to delete an app, click **YES, DELETE** to confirm deletion.
+   - If you chose to delete an app, click **Yes, Delete** to confirm deletion.
      After you delete an app, you can't recover it.
 
 Modifying your app's general information or redirect URLs does not require users

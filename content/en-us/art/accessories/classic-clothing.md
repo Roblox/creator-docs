@@ -159,4 +159,4 @@ To upload a custom clothing item:
    <img src="../../assets/creator-dashboard/Upload-Classic-Clothing.png" width="720" />
 
 1. Enter a name and description for your clothing item.
-1. Click the **UPLOAD** button at the bottom of the page. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.
+1. Click the **Upload** button at the bottom of the page. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.
