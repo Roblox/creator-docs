@@ -45,7 +45,7 @@ To upload an experience icon:
 
    <img src="../../assets/creator-dashboard/Place-Nav-Icon.png" width="330" alt="Icon button indicated for a place on the Creator Dashboard" />
 
-1. Set the media type to **Image** and click the **CHANGE** button. Then, from the file browser, select and confirm the image you want to use as the icon. Note that all icon images must pass [moderation](../../projects/assets/index.md#asset-moderation) before they appear to others on the Roblox platform.
+1. Set the media type to **Image** and click the **Change** button. Then, from the file browser, select and confirm the image you want to use as the icon. Note that all icon images must pass [moderation](../../projects/assets/index.md#asset-moderation) before they appear to others on the Roblox platform.
 
 1. If the preview icon appears as you expect, click **Save Changes**.
 

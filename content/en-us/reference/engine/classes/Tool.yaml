@@ -489,7 +489,7 @@ events:
       print "Tool deactivated" when the player releases the left mouse button,
       while the tool is equipped.
 
-      ````lua
+      ```lua
       local tool = Instance.new("Tool")
       tool.RequiresHandle = false
       tool.Parent = game.Players.LocalPlayer.Backpack
@@ -499,8 +499,7 @@ events:
       end
 
       tool.Deactivated:Connect(toolDeactivated)
-      ```"
-      ````
+      ```
     code_samples:
       - player-fly-tool
     parameters: []

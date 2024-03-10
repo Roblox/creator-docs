@@ -106,7 +106,7 @@ For more information, see [Packages](../../projects/assets/packages.md).
 
 Assets are reflected through formatted strings, each of which points to an online file or a file saved to the client's device. The basic structure is a **protocol** followed by `://` and a **string** that varies according to the protocol.
 
-<span><Chip label='[Protocol]://[String]' color='secondary' /></span>
+<span><Chip label='[Protocol]://[String]' color='primary' /></span>
 
 ### rbxassetid
 
@@ -114,17 +114,17 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 <GridContainer numColumns="3">
   <figure>
-    <figcaption><Chip label='rbxassetid://7229442422' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://7229442422' color='primary' /></figcaption>
     <br />
     <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://3845386987' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://3845386987' color='primary' /></figcaption>
     <br />
     <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://9125402735' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://9125402735' color='primary' /></figcaption>
     <br />
     <audio controls>
 <source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
@@ -135,7 +135,7 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 `rbxasset` points to Roblox's content folder on the user's device, for example:
 
-<span><Chip label='rbxasset://textures/face.png' color='secondary' /></span><br />
+<span><Chip label='rbxasset://textures/face.png' color='primary' /></span><br />
 
 The content folder's location depends on the user's operating system:
 
@@ -152,7 +152,7 @@ The content folder's location depends on the user's operating system:
 
 `rbxthumb` points to a thumbnail image for the provided asset. Its string format takes a thumbnail type, an asset ID, width, height, and an optional circular filter.
 
-<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='secondary' /></span><br />
+<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='primary' /></span><br />
 
 Supported types (`type`) and sizes (`w` and `h`) are as follows:
 
@@ -213,7 +213,7 @@ Supported types (`type`) and sizes (`w` and `h`) are as follows:
 
 You can also include a `filters=circular` parameter to crop the thumbnail circularly, useful for displaying thumbnails like **AvatarHeadShot** in an on-screen GUI like an `Class.ImageLabel`.
 
-<span><Chip label='rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular' color='secondary' /></span><br />
+<span><Chip label='rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular' color='primary' /></span><br />
 
 ```lua title='LocalScript - Get AvatarHeadShot Thumbnail' highlight='3,5-7,9'
 local Players = game:GetService("Players")
@@ -232,13 +232,13 @@ end
 
 `rbxhttp` is shorthand for `Class.ContentProvider.BaseUrl`, for example:
 
-<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='secondary' /></span>
+<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' /></span>
 
 ### https / http
 
 `https` or `http` points to the exact location of something on the internet. It only works on Roblox-approved domains and raises an error if you use it elsewhere.
 
-<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='secondary' /></span>
+<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='primary' /></span>
 
 ## Asset Permissions
 

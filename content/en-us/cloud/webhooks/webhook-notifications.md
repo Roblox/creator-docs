@@ -82,7 +82,7 @@ You can test whether the webhook you've configured can successfully receive noti
 
    <img src="../../assets/creator-dashboard/Configure-Webhook.png" width="780" alt="The pencil icon next to an example webhook" />
 
-4. Click the **TEST RESPONSE** button.
+4. Click the **Test Response** button.
 
 The system then sends a notification in the `SampleNotification` type, which includes the **User ID** of the user who triggers the notification, as the following example schema shows:
 

@@ -613,9 +613,6 @@ To export an animation:
 Once the upload is complete, you can copy the animation's asset ID
 from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Using Animations](../animation/using.md).
 
-1. Click the **Inventory** tab and select **My Animations** from the dropdown menu.
-
-   <img src="../assets/studio/toolbox/Inventory-My-Animations.png" width="360" />
-
+1. Click the **Creations** tab and select **Animations** from the dropdown menu.
 2. Right-click the desired animation and select **Copy Asset ID** from the contextual menu.
 3. See [Using Animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.
