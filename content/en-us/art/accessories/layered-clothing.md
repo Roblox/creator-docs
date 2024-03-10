@@ -1,6 +1,6 @@
 ---
 title: Layered Clothing
-description: Layered clothing are cosmetic accessories that stretch, fit, and layer over any body type simulating real-life clothing.
+description: Layered clothing are cosmetic accessories that stretch, fit, and layer over any body type simulating real-life clothing. body 
 hideBreadcrumbs: true
 ---
 
