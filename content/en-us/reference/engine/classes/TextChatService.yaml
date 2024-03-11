@@ -192,13 +192,13 @@ properties:
             <td><b>RBXTeam[BrickColor]</b></td>
             <td>For team-specific player messages.
             
-            Name of <code>Class.TextChannel</code> is <code>RBXTeam</code> followed by name of <code>Class.Team.TeamColor</code>. For example, <code>RBXTeamCrimson</code> for a team with "Crimson" <code>Datatype.BrickColor</code> as its TeamColor property.</td>
+            Name of <code>Class.TextChannel</code> is <code>RBXTeam</code> followed by name of <code>Class.Team.TeamColor</code>. For example, <code>RBXTeamCrimson</code> for a team with "Crimson" <code>Datatype.BrickColor</code> as its <code>Class.Team.TeamColor</code> property.</td>
           </tr>
           <tr>
             <td><b>RBXWhisper:[UserId1]_[UserId2]</b></td>
             <td>For whisper messages between two players.
             
-            The <code>Class.Player.UserId|UserIds</code> in <code>Class.TextChannel.Name</code> refer to players in the server who have a whisper channel. For example, <code>RBXWhisper:2276836_505306092</code> if a player with <code>Player.UserId|UserId</code> <code>2276836</code> began whispering a player with <code>Player.UserId|UserId</code> <code>505306092</code>.</td>
+            The <code>Class.Player.UserId|UserIds</code> in <code>Class.TextChannel.Name</code> refer to players in the server who have a whisper channel. For example, <code>RBXWhisper:2276836_505306092</code> if players with <code>Player.UserId|UserIds</code> <code>2276836</code> and <code>505306092</code> began whispering.</td>
           </tr>
         </tbody>
       </table>
