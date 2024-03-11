@@ -3,7 +3,7 @@ title: Creating Bundled Installers
 description: Install Roblox Studio on multiple computers for schools or summer camps.
 ---
 
-For organizations looking to install Roblox Client or Studio on multiple computers, we offer bundled installers. Normally, an installer is used on individual computers, but this can difficult if you're looking to mass install Roblox, or Roblox Studio on multiple computers.
+For organizations looking to install Roblox Client or Studio on multiple computers, we offer bundled installers. Normally, an installer is used on individual computers, but this can be difficult if you're looking to mass install Roblox, or Roblox Studio on multiple computers.
 
 To help in this process, you can create your own bundled installer, giving you a traditional executable that can be installed on multiple computers. This can then be used in software deployment and imaging tools.
 
