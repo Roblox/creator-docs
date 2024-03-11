@@ -10,7 +10,7 @@ description: |
   a 2D GUI space like a `Class.ScreenGui`. At the moment, no shadow or post
   effects are available. Neon and Glass `Enum.Material|materials` will be
   rendered on lowest quality. Nested GUIs aren't supported, which means
-  GuiObjects don't work as expected under ViewportFrame.
+  GuiObjects don't work as expected under ViewportFrame. A ViewportFrame can use a `Class.Sky` child as a cubemap for reflections. Only the Sky's Skybox properties are used.
 
   For a step-by-step walkthrough, see the [Frames](../../../ui/frames.md).
 code_samples:

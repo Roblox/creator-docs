@@ -13,6 +13,8 @@ description: |
   Moon, and stars from the sky. The recommended picture dimensions for a Skybox
   side are 256x256 pixels. By adjusting the `Class.Sky.StarCount` property of
   the Sky object, you can change how many stars will appear in the sky at night.
+
+  The Sky object can also be used as a cubemap for reflections in ViewportFrames. When used in this way, only the Sky's Skybox properties are used.
 code_samples:
 inherits:
   - Instance
