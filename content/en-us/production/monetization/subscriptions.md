@@ -95,7 +95,7 @@ To change a subscription's description:
 
 1. With the subscription selected, click the **Description** field.
 2. Edit the description, then click **Save Changes**. Descriptions are capped at 1,000 characters and can support emojis.
-3. Confirm changes by clicking **Yes, Confirm** on the confirmation window. Description updates are reflected immediately.  
+3. Confirm changes by clicking **Yes, Confirm** on the confirmation window. Description updates are reflected immediately.
 
 ### Changing State
 
@@ -378,9 +378,11 @@ To view refunding information of individual users, use `Class.MarketplaceService
 
 ## Subscription Analytics
 
-**Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted.
+**Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted. You can access ready-made analytics through the Creator Dashboard, or you can capture subscription updates in real-time using webhooks.
 
-To access subscription analytics:
+### Through Creator Dashboard
+
+To access subscription analytics on the Creator Dashboard:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 
@@ -396,10 +398,14 @@ Subscription analytics track the following metrics:
   - **Renewed**: The number of renewing subscriptions purchased in a prior period.
   - **Resurrected**: The number of new subscriptions purchased by users who had previously canceled.
 - **Cancellations**: The number of subscriptions that were not renewed. This includes all cancellations regardless of trigger, be it user cancellation, subscription deactivation by the creator, or by other means.
-  - Cancellations are different from refunds. Cancelled subscriptions are subscriptions that will no longer renew but are paid in full for the remainder of the billing cycle, whereas refunds return the paid subscription amount to the user.  
+  - Cancellations are different from refunds. Cancelled subscriptions are subscriptions that will no longer renew but are paid in full for the remainder of the billing cycle, whereas refunds return the paid subscription amount to the user.
 - **Subscriptions by Platform**: The number of subscriptions purchased on each platform.
 - **Platform Earnings**: The net revenue earned through subscriptions purchased on each platform.
 
 This information is visible in the form of charts based on a date range under the **Trends** tab, and as a comprehensive list of total subscriptions offered under the **History** tab.
 
 <img src="../../assets/monetization/subscriptions/subscriptions-analytics.png" width="100%"/>
+
+### Through Webhooks
+
+The Cloud API Webhook feature includes triggers for four subscription events: cancelled, purchased, refunded and renewed. These notifications fire immediately, so you can respond in real-time or create your own custom analytics. For more information on how to set up a webhook, see [Webhook Notifications](../../cloud/webhooks/webhook-notifications.md).
