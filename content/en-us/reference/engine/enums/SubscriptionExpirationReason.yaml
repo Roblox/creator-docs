@@ -7,27 +7,27 @@ tags: []
 deprecation_message: ''
 items:
   - name: ProductInactive
-    summary: ''
+    summary: 'Subscription product is inactive.'
     value: 0
     tags: []
     deprecation_message: ''
   - name: ProductDeleted
-    summary: ''
+    summary: 'Subscription product has been deleted.'
     value: 1
     tags: []
     deprecation_message: ''
   - name: SubscriberCancelled
-    summary: ''
+    summary: 'Subscriber has cancelled the subscription.'
     value: 2
     tags: []
     deprecation_message: ''
   - name: SubscriberRefunded
-    summary: ''
+    summary: 'Subscriber has been refunded.'
     value: 3
     tags: []
     deprecation_message: ''
   - name: Lapsed
-    summary: ''
+    summary: 'Subscription has lapsed.'
     value: 4
     tags: []
     deprecation_message: ''
