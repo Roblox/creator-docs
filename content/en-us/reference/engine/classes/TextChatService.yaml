@@ -168,9 +168,9 @@ properties:
       `Class.TextChannel|TextChannels`.
     description: |
       Determines whether `Class.TextChatService` should create default
-      `Class.TextChannel|TextChannels`.
-
-      If true, a `Class.Folder` named **TextChannels** is created inside `Class.TextChatService` at runtime to contain the following `Class.TextChannel|TextChannels`:
+      `Class.TextChannel|TextChannels`. If true, a `Class.Folder` named
+      **TextChannels** is created inside `Class.TextChatService` at runtime to
+      contain the following `Class.TextChannel|TextChannels`:
 
       <table>
         <thead>
@@ -182,47 +182,22 @@ properties:
         <tbody>
           <tr>
             <td><b>RBXGeneral</b></td>
-            <td>For player messages.</td>
+            <td><code>Class.TextChannel</code> for player messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> receives a <a href="../../../ui/rich-text.md">rich text</a> font color tag to give chatting players their distinctive name color. If <code>Class.Player.Team</code> exists, that <code>Class.Team.TeamColor</code> is used instead of the default name color.</td>
           </tr>
           <tr>
             <td><b>RBXSystem</b></td>
-            <td>For system messages.</td>
+            <td><code>Class.TextChannel</code> for system messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.Text</code> is given a light grey color tag by default, or a red color tag if <code>Class.TextChatMessage.Metadata</code> contains the word <code>"Error"</code>.</td>
           </tr>
           <tr>
             <td><b>RBXTeam[BrickColor]</b></td>
-            <td>For team-specific player messages.
-            
-            Name of <code>Class.TextChannel</code> is <code>RBXTeam</code> followed by name of <code>Class.Team.TeamColor</code>. For example, <code>RBXTeamCrimson</code> for a team with "Crimson" <code>Datatype.BrickColor</code> as its <code>Class.Team.TeamColor</code> property.</td>
+            <td><code>Class.TextChannel</code> for team-specific player messages, created when a <code>Class.Team.TeamColor|TeamColor</code> is in use by any <code>Class.Team</code> within the <code>Class.Teams</code> service. Name of the created channel is <b>RBXTeam</b> followed by the <code>Class.Team.TeamColor|TeamColor</code> name, for example <b>RBXTeamCrimson</b> for a team color associated with the "Crimson" <code>Datatype.BrickColor</code>. In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> is colored according to the <code>Class.Player.TeamColor|TeamColor</code> and is prepended with <b>[Team]</b>.<br /><br />Team channels create <code>Class.TextSource|TextSources</code> for all non‑<code>Class.Player.Neutral|Neutral</code> players with the matching <code>Class.Team.TeamColor|TeamColor</code>, allowing them to use team‑only chat. Channels are removed if there are no remaining teams with an associated <code>Class.Team.TeamColor|TeamColor</code>.</td>
           </tr>
           <tr>
             <td><b>RBXWhisper:[UserId1]_[UserId2]</b></td>
-            <td>For whisper messages between two players.
-            
-            The <code>Class.Player.UserId|UserIds</code> in <code>Class.TextChannel.Name</code> refer to players in the server who have a whisper channel. For example, <code>RBXWhisper:2276836_505306092</code> if players with <code>Player.UserId|UserIds</code> <code>2276836</code> and <code>505306092</code> began whispering.</td>
+            <td><code>Class.TextChannel</code> for whisper messages between two players, created when a player uses the <code>/whisper</code> command on another player, for example <b>RBXWhisper:2276836_505306092</b> for players with <code>Class.Player.UserId|UserIds</code> <b>2276836</b> and <b>505306092</b>. Inside whisper channels are two <code>Class.TextSource|TextSources</code> associated with the respective <code>Class.Player.UserId|UserIds</code>. In the chat window, messages are colored the same as those in <b>RBXGeneral</b> and <code>Class.TextChatMessage.PrefixText</code> is modified to show whether a message was sent from or received by the local user.<br /><br />Whisper channels are removed when either player leaves the experience.</td>
           </tr>
         </tbody>
       </table>
-
-      When a `Class.Team.TeamColor|TeamColor` is in use by any `Class.Team` within the `Class.Teams` service, a respective **RBXTeam[BrickColor]** `Class.TextChannel` is automatically created inside the **TextChannels** folder. When there are no remaining `Class.Team|Teams` with that `Class.Team.TeamColor`, the `Class.TextChannel` associated with the `Class.Team.TeamColor|TeamColor` is removed. This `Class.TextChannel` creates `Class.TextSource|TextSources` for all non-`Class.Player.Neutral|Neutral` players with the matching `Class.Team.TeamColor`, allowing them to use team-only chat if `Class.TextChatService.CreateDefaultCommands` is true.
-
-      **RBXWhisper:[UserId1]_[UserId2]** `Class.TextChannel|TextChannels` are created when a player uses the `/whisper` command on another player, and are removed when either player leaves the experience. Inside each `RBXWhisper` `Class.TextChannel` are the two `Class.TextSource|TextSources` associated with the titular `Player.UserId|UserIds`.
-      
-      Each of these default `Class.TextChannel|TextChannels` has associated special behavior with its internally bound `Class.TextChannel.OnIncomingMessage` callback function. This changes how messages appear when sent through one of the default channels. The callback is assigned automatically either at runtime if the `Class.TextChannel` exists, or when the `Class.TextChannel` is created.
-
-      - **RBXGeneral:** The default `Class.TextChannel.OnIncomingMessage|OnIncomingMessage` callback for this `Class.TextChannel` modifies `Class.TextChatMessage.PrefixText`, applying a [rich text font color tag](../ui/rich-text.md#color) to give chatting players their distinctive name color. If `Class.Player.Team` exists, that `Class.Team.TeamColor` is used instead of the default name color.
-
-      - **RBXSystem:** Each `Class.TextChatMessage.Text` is given a light grey <ColorSwatch value="#D4D4D4" /> color tag. If `Class.TextChatMessage.Metadata` contains the word `"Error"`, `Class.TextChatMessage.Text` is colored red <ColorSwatch value="#F74B52" /> instead.
-
-      - **RBXTeam[BrickColor]:** Messages sent in an `RBXTeam` `Class.TextChannel` are modified such that the word `[Team]` is prepended to `Class.TextChatMessage.PrefixText`, and the `Class.TextChatMessage.PrefixText|PrefixText` gets colored according to the `Class.Player.TeamColor`.
-
-      - **RBXWhisper:[UserId1]_[UserId2]:** All `Class.TextChatMessage|TextChatMessages` sent through whisper channels apply the same name coloring formula as `RBXGeneral`, while also modifying `Class.TextChatMessage.PrefixText` to show whether a message was sent from or received by the local user.
-
-      These default `Class.TextChannel.OnIncomingMessage` callbacks can be overwritten by the developer.
-
-      Note that you can edit, create, and remove
-      `Class.TextChannel|TextChannels` even if
-      `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
-      is true.
     code_samples: []
     type: bool
     tags: []
