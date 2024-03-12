@@ -61,7 +61,7 @@ Have you ever searched for a lost pet in house going room by room? On your own c
    local function findPet(whereToSearch, searchFor)
      for place, value in pairs(whereToSearch) do
        if value == searchFor then
-         return room
+         return place
        end
      end
    end
