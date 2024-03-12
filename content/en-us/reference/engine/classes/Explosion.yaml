@@ -15,7 +15,7 @@ description: |
   `Class.Humanoid` characters not protected by a `Class.ForceField`.
   `Class.Constraint|Constraints` will not be broken by an explosion.
 
-  If an explosion is parented while the game is running, it will automatically play the explosion effects and unparent itself when it finishes. Note that it is not destroyed, so connections do not get disconnected and the parent is not locked. If you keep a strong reference to the explosion, it will not be garbage collected.
+  If an explosion is parented to the data model while the game is running, it will automatically play the explosion effects and unparent itself when it finishes. Note that it is not destroyed, so connections do not get disconnected and the parent is not locked. If you keep a strong reference to the explosion, it will not be garbage collected.
 
   **Explosion effects**
 
