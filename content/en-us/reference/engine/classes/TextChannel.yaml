@@ -172,7 +172,10 @@ callbacks:
       code. Multiple bindings to the same channel will override one another in a
       nondeterministic manner.
 
-      When `Class.TextChatService.CreateDefaultTextChannels` is true, those default `Class.TextChannel|TextChannels` have their `Class.TextChannel.OnIncomingMessage` callbacks assigned internally in order to [exhibit special default behavior.](../reference/engine/classes/TextChatService#CreateDefaultTextChannels)
+      When `Class.TextChatService:CreateDefaultTextChannels()` is true,
+      those default `Class.TextChannel|TextChannels` have their
+      `Class.TextChannel.OnIncomingMessage` callbacks assigned
+      internally in order to exhibit special default behavior.
     code_samples: []
     parameters:
       - name: message
