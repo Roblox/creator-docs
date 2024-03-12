@@ -6,18 +6,26 @@ description: Explains how to set up webhooks to automate your notification manag
 Instead of manually monitoring all events in your experience and requests from users, you can set up webhooks to receive real-time notifications on a third-party messaging tool or your custom endpoint that can receive HTTP requests. This helps you automate your notification management workflow to reduce manual effort handling notifications.
 
 <Alert severity="info">
-Currently, Roblox fully supports webhook notifications for Discord, Guilded, and Slack for the event of user requesting to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
+Currently, Roblox fully supports webhook notifications for Discord, Guilded, and Slack. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
 </Alert>
 
 ## Webhook Workflow
 
-A webhook is a mechanism for sending real-time notifications or data between two different applications or services over the internet, such as Roblox and a third-party messaging tool. Webhooks are useful for automating workflows between Roblox and third-party applications that you use for collaborating with your team, as they allow for real-time data sharing and processing
+Webhooks send real-time notifications or data between two different applications or services, such as Roblox and a third-party messaging tool. Unlike traditional APIs, which require you to set up a client application to send requests to a server to receive data, webhooks send data to your client endpoint as soon as an event occurs. They're useful for automating workflows between Roblox and third-party applications that you use for collaborating with your team, as they allow for real-time data sharing and processing.
 
-Once you set up a webhook, whenever a target event occurs, Roblox sends a request to the webhook URL that you configured. Currently, the only supported event is when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
+Once you set up a webhook, whenever a target event occurs, Roblox sends a request to the webhook URL you provide. The webhook URL then redirects the request to your receiving application or custom endpoint, which can take action based on the data included in the webhook payload. This could include erasing data for GDPR, sending a confirmation to the user, or triggering another event.
 
-The webhook URL then redirects the request to your receiving application or custom endpoint, which can take action based on the data included in the webhook payload, such as erasing the data, sending a confirmation to the user, or triggering another event.
+## Supported Triggers
 
-Unlike traditional APIs, which require you to set up a client application to send requests to a server to receive data, webhooks initiate the sending of data to a client application as soon as an event occurs, allowing the Roblox server to send data without the need for a request. This results in faster data transfer and processing times, making webhooks ideal for real-time or high-volume data processing scenarios.
+Roblox currently supports the following event triggers for notifications:
+
+- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the [subscription](../../cloud/reference/Subscription) and subscriber, as well as the reason given for the cancellation.
+- **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
+- ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data deletion requests under the General Data Protection Regulation (**GDPR**).
+
+For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription) reference.
 
 ## Configuring Webhooks on Creator Dashboard
 
@@ -35,7 +43,7 @@ To set up a webhook:
    1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
    2. **Name** — Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
    3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verifying Webhook Security](#verifying-webhook-security).
-   4. **Triggers** — Choose one or more options from the list of supported triggers of events for which you want to receive notifications. Currently, the only supported event is **Right To Erasure Request** that occurs when a user submits a request to erase their ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data.
+   4. **Triggers** — Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
 1. Click the **Save Changes** button.
 
 <Alert severity="info">
@@ -44,7 +52,7 @@ To set up a webhook:
 
 ## Setting up Webhook URLs
 
-You can set up a custom HTTP service endpoint as your webhook URL with the following requirements:
+You can set up a custom HTTP service endpoint as your webhook URL, provided it fulfills the following requirements:
 
 - It must be publicly accessible for handling requests.
 - It can handle POST requests.
@@ -60,13 +68,11 @@ For more information of the schema of POST requests to handle, see the [Payload 
 
 ### Delivery Failure Retry Policy
 
-When a webhook notification fails to reach your specified URL due to errors such as endpoint unavailability, Roblox retries sending the message to the configured URL 5 times using a fixed window size. If the notification still fails to be delivered after 5 attempts, Roblox stops trying to send the notification and assumes that the URL is no longer valid. In this situation, you need to update your webhook configuration with a new URL that is reachable and able to receive notifications. To troubleshoot and validate your webhook URL can successfully receive notifications, see [Testing Webhooks](#testing-webhooks).
+When a webhook notification fails to reach your specified URL due to errors such as endpoint unavailability, Roblox retries sending the message to the configured URL 5 times using a fixed window size. If the notification still fails to be delivered after 5 attempts, Roblox stops trying to send the notification and assumes that the URL is no longer valid. In this situation, you need to update your webhook configuration with a new URL that is reachable and able to receive notifications. To troubleshoot and confirm that your webhook URL can successfully receive notifications, see [Testing Webhooks](#testing-webhooks).
 
 ### Third-Party Requirements
 
-Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool.
-
-For the three verified tools, you can find this information by searching in the following sources:
+Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool. For the three supported third-party tools, see the following:
 
 - [Discord Help Center](https://support.discord.com/hc/en-us)
 - [Guilded Support](https://support.guilded.gg/hc/en-us)
@@ -149,7 +155,7 @@ To verify a signature:
 
    <figcaption>
    You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
-	 </figcaption>
+    </figcaption>
 
    <img src="../../assets/misc/Webhooks-Example-Message-Body.png" width="50%" alt="Example message body on Guilded"/>
 
@@ -157,7 +163,7 @@ To verify a signature:
 
    <figcaption>
    168487229.You have received a new notification for Right to Erasure for the User Id: XXXXXXXX in the game(s) with Ids: YYYYYYY, ZZZZZZZZZ
-	 </figcaption>
+    </figcaption>
 
 1. Compute a Hash-based message authentication code (HMAC) with the SHA256 hash function using the secret you defined during the configuration as the key and the base string you generated through step 2 as the message. Convert the result to Base64 format to get the expected signature.
 
@@ -209,11 +215,9 @@ Body:{
 }
 ```
 
-## Handling Data Deletion
+## Handling Notifications
 
-If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements.
-
-If you use a Guilded or Discord server for receiving webhook notifications and use data stores for storing PII data of your users, you can create a bot to handle webhook notifications and help automate data deletion. [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
+If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
 
 If you use a custom endpoint as your webhook server instead of a third-party tool, you can extract the data subject to deletion from the webhook payload and build your own automation solution. The following code sample provides an example solution and adds prevention to replay attacks by verifying that the request is coming from Roblox:
 
