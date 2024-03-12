@@ -200,11 +200,11 @@ To remove source content through a `.csv` upload:
 
 ## Adding Translations
 
-You can add translations to entries on your experience's localization table [in the localization settings](#adding-translations-in-localization-page) or [with a `.csv` file upload](#adding-translations-with-file-upload).
+You can add translations to [string](#adding-string-translations), [experience information](#adding-experience-information-translations), or [experience product](#adding-experience-product-translations) entries on your experience's localization table using the localization portal or [with a `.csv` file upload](#adding-translations-with-file-upload).
 
-In some cases, some strings require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translating Dynamic Content](./translating-dynamic-content.md) for implementation details.
+In some cases, strings may require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translating Dynamic Content](./translating-dynamic-content.md) for implementation details.
 
-### Adding Translations In Localization Page
+### Adding String Translations
 
 The [localization](../localization/index.md#localization-settings) page provides a direct way to provide translations for the collected strings. This method of adding translations is the only option available to users added as translators to your experience.
 
@@ -216,12 +216,42 @@ To translate text through the localization page:
 4. In the Strings column, select the string you intend to translate.
 5. In the **Text to translate** field, input the desired translation and click **Save**.
 
-   <img src="../../assets/localization/Portal-Adding-Translation.png" width="80%"
+   <img src="../../assets/localization/Portal-Adding-String.png" width="100%"
    />
 
 <Alert severity="info">
 You cannot make edits to an existing source's <b>Key</b>, <b>Context</b> or <b>Example</b> fields through the localization settings page. To add or edit a source's <b>Key</b>, <b>Context,</b> or <b>Example</b> fields, you can remove and re-add the entry on the Localization page with these fields included, or make the edits directly through the <InlineCode>.csv</InlineCode> upload process.
 </Alert>
+
+### Adding Experience Information Translations
+
+On your experience's localization page, you can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
+
+1. In the localization settings page, click the **Translate** button on the top right.
+2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
+3. Select the **Information** tab at the top of the page.
+
+   1. For Name and Description fields, input the desired translation and click **Save**.
+
+      <img src="../../assets/localization/Portal-Adding-Information.png" width="100%"
+      />
+
+   2. For Icon and Thumbnails, use the Upload or Remove buttons to modify your localized images. You can upload up to 10 thumbnails per experience. When complete, click **Save**.
+
+      <img src="../../assets/localization/Portal-Adding-Information-Thumbnail.png" width="100%"
+      />
+
+### Adding Experience Product Translations
+
+On your experience's localization page, you can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [game passes](../../production/monetization/game-passes.md), and [badges](../../production/publishing/badges.md):
+
+1. In the localization settings page, click the **Translate** button on the top right.
+2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
+3. Select the **Products** tab at the top of the page.
+4. Input the desired translations for your experience product and click **Save**.
+
+   <img src="../../assets/localization/Portal-Adding-Product.png" width="100%"
+   />
 
 ### Adding Translations With File Upload
 
