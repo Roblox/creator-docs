@@ -3,21 +3,13 @@ title: Developer Console
 description: Developer Console is a tool for debugging your experience during testing or in production.
 ---
 
+import OpeningSteps from '../includes/developer-console/opening-developer-console.md'
+
 The **Developer Console** is a tool for debugging your experience when testing in Studio or running it in production. It shows log messages and errors similar to the [Output](../studio/output.md) window and detailed information on [Memory](#memory), [Network](#network), and more.
 
 ## Opening the Console
 
-The **Developer Console** is accessible while [testing](../studio/testing-modes.md) or running an experience in the following ways:
-
-- Press <kbd>F9</kbd>.
-- Type `/console` into the chat.
-- Use the in-experience menu:
-  1. Open the in-experience **Roblox Menu**.
-
-     <img src="../assets/ui/general/Roblox-Menu-Button.png" width="680" />
-
-  2. Select the **Settings** tab.
-  3. Scroll down to **Developer Console** and click **Open**.
+<OpeningSteps components={props.components}/>
 
 ## Console Sections
 
@@ -75,137 +67,13 @@ The **Server** view also includes a command bar that lets users with editing per
 
 ### Memory
 
-The **Memory** tool shows metrics on memory usage. Models, terrain, parts, visual effects, scripts, physical contraptions, audio, and more can all contribute to total memory usage. The **Memory** tool has the following section:
+ **Developer Console** provides two tools for monitoring memory usage, including:
 
-- **CoreMemory** &mdash; Memory used by processes built into the Roblox engine such as networking, avatars, and GUI elements.
-- **PlaceMemory** &mdash; Memory that scales as a direct result of choices made as an experience is built.
-- **UntrackedMemory** &mdash; Arbitrary memory allocations that are not tagged.
-- **PlaceScriptMemory** &mdash; Memory used by user Luau script threads. This section includes script names and custom memory tags.
-- **CoreScriptMemory** &mdash; Memory used by internal Roblox script threads.
+- **Memory** — View real-time memory consumption by usage categories, including memory usage by both your custom components and the engine internal processes.
 
-**PlaceMemory** section has sub-categories. The following table describes each sub-category and tips for reducing memory usage.
+- **Luau Heap** — Create snapshots on the heap memory, which refers to the memory allocation to your scripts. This tool provides various memory allocation views to help you identify current memory allocation and issues from different perspectives, such as object types and engine classes. It also allows you to create multiple snapshots to compare differences in memory usage over time.
 
-<table size="small">
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Description</th>
-      <th>Memory Management Tips</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>**HttpCache**</td>
-      <td>Assets (images, meshes, etc.) loaded from Roblox servers and now held in a cache in memory.</td>
-      <td>Load fewer or smaller assets.</td>
-    </tr>
-    <tr>
-      <td>**Instances**</td>
-      <td>`Class.Instance|Instances` in the place.</td>
-      <td>If possible, reduce the overall number of instances (objects in the [data model](../projects/data-model.md)).</td>
-    </tr>
-    <tr>
-      <td>**Signals**</td>
-      <td>Signals that fire between instances (an event firing on one instance to trigger an event on another instance).</td>
-      <td>Use fewer event connections between instances.</td>
-    </tr>
-    <tr>
-      <td>**LuaHeap**</td>
-      <td>Heap memory for both core scripts (scripts that ship with the Roblox client) and custom scripts.</td>
-      <td>Write memory-efficient scripts.</td>
-    </tr>
-    <tr>
-      <td>**Script**</td>
-      <td>Lua Scripts.</td>
-      <td>Use fewer or shorter scripts.</td>
-    </tr>
-    <tr>
-      <td>**PhysicsCollision**</td>
-      <td>Collision data for physics simulations.</td>
-      <td>If a part doesn't need to move, set `Class.BasePart.Anchored|Anchored` to **true**. If a part never needs to collide with anything, set `Class.BasePart.CanCollide|CanCollide` to **false**.</td>
-    </tr>
-    <tr>
-      <td>**PhysicsParts**</td>
-      <td>Physics geometry and kinetics.</td>
-      <td>Use simpler, smaller, or fewer parts.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsSolidModels**</td>
-      <td>Graphics data to render solid models.</td>
-      <td>Use fewer/simpler solid models or set their `Enum.RenderFidelity` to **Automatic**.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsMeshParts**</td>
-      <td>Graphics for `Class.MeshPart` objects.</td>
-      <td>Use fewer or simpler meshes.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsParticles**</td>
-      <td>Graphics for particle systems.</td>
-      <td>Use fewer particle systems or produce fewer particles with shorter lifespans.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsParts**</td>
-      <td>Graphics for parts.</td>
-      <td>Use fewer or simpler parts.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsSpatialHash**</td>
-      <td>General rendering.</td>
-      <td>Use fewer parts, particles, lights, and anything else that contributes to rendering.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsTerrain**</td>
-      <td>Graphics for terrain.</td>
-      <td>Use less terrain.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsTexture**</td>
-      <td>Texture memory.</td>
-      <td>Use fewer or smaller textures.</td>
-    </tr>
-    <tr>
-      <td>**GraphicsTextureCharacter**</td>
-      <td>Texture memory for characters.</td>
-      <td>Use fewer unique character appearances.</td>
-    </tr>
-    <tr>
-      <td>**Sounds**</td>
-      <td>In-memory sounds.</td>
-      <td>Use fewer or smaller sounds.</td>
-    </tr>
-    <tr>
-      <td>**StreamingSounds**</td>
-      <td>Streaming sounds.</td>
-      <td>Use fewer streaming sounds.</td>
-    </tr>
-    <tr>
-      <td>**TerrainVoxels**</td>
-      <td>Terrain voxels.</td>
-      <td>Use less terrain.</td>
-    </tr>
-    <tr>
-      <td>**TerrainPhysics**</td>
-      <td>Terrain physics.</td>
-      <td>For objects close to terrain, set `Class.BasePart.CanCollide|CanCollide` to **false** and/or `Class.BasePart.Anchored|Anchored` to **true**.</td>
-    </tr>
-    <tr>
-      <td>**Gui**</td>
-      <td>Memory used by common GUI elements.</td>
-      <td>Reduce or optimize your GUI instance usage.</td>
-    </tr>
-    <tr>
-      <td>**Animation**</td>
-      <td>Memory used for animation data, such as poses and `Class.KeyframeSequence` cached data for avatar animations.</td>
-      <td>Use fewer distinct animations and optimize animations if possible.</td>
-    </tr>
-    <tr>
-      <td>**Navigation**</td>
-      <td>Memory used by supporting structures for `Class.PathfindingService`.</td>
-      <td>Optimize usage and make fewer calls to `Class.PathfindingService`.</td>
-    </tr>
-  </tbody>
-</table>
+For more information, see [Memory Usage](../studio/optimization/memory-usage.md)
 
 ### Network
 
@@ -223,4 +91,4 @@ The **Network** tool shows the number of web calls that the experience has made.
 
 ### Script Profiler
 
-**Script Profiler** tool allows you to record profiling sessions of all running scripts and view their CPU time costs with custom recording and display settings. It's helpful for identifying scripts that take up the most CPU resources and slow down the performance. For more information, see [Script Profiler](../studio/optimization/scriptprofiler.md).
+The **Script Profiler** tool allows you to record profiling sessions of all running scripts and view their CPU time costs with custom recording and display settings. It's helpful for identifying scripts that take up the most CPU resources and slow down the performance. For more information, see [Script Profiler](../studio/optimization/scriptprofiler.md).

@@ -533,9 +533,9 @@ methods:
       | itemRestrictions | Limited or Unlimited  |
       | :--------------: | :-------------------: |
       |     `empty`      |       Unlimited       |
-      |  `collectible`   |      UGC Limited      |
-      |    `limited`     |    Roblox Limited     |
-      | `limitedUnique`  | Roblox Limited Unique |
+      |  `Collectible`   |      UGC Limited      |
+      |    `Limited`     |    Roblox Limited     |
+      | `LimitedUnique`  | Roblox Limited Unique |
     code_samples:
     parameters:
       - name: itemId

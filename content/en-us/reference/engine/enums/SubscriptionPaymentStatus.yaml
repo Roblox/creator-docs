@@ -7,12 +7,12 @@ tags: []
 deprecation_message: ''
 items:
   - name: Paid
-    summary: ''
+    summary: 'Payment for the subscription has been received.'
     value: 0
     tags: []
     deprecation_message: ''
   - name: Refunded
-    summary: ''
+    summary: 'Payment for the subscription has been refunded.'
     value: 1
     tags: []
     deprecation_message: ''
