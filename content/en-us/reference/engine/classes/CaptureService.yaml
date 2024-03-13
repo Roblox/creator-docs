@@ -51,7 +51,7 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
-    summary: "Ask to share screenshots with the player's contacts."
+    summary: "Ask to share screenshots with the user's share sheet."
     description: 'Ask the `Class.Players.LocalPlayer|LocalPlayer` to share the specified screenshots with their contacts. <Alert severity="warning">This function is only available for +13 users. </Alert>'
     code_samples: []
     parameters:
