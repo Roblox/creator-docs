@@ -22,7 +22,7 @@ description: |
   you no longer need. However in many cases an object may have a specific period
   of utility after which it needs to be destroyed.
 
-  Take the example of a wall being smashed into individual bricks. If you want  a brick to linger for 3 seconds before being destroyed, you can use the following code:
+  Take the example of a wall being smashed into individual bricks. If you want a brick to linger for 3 seconds before being destroyed, you can use the following code:
 
   ```lua
   task.wait(3)
