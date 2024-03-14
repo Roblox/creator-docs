@@ -1,4 +1,4 @@
-name: UserNotificationPayloadParameterValue
+name: VisualizationMode
 type: class
 category:
 memory_category: Instances
@@ -10,22 +10,22 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
-  - name: UserNotificationPayloadParameterValue.Int64Value
+  - name: VisualizationMode.Enabled
     summary: ''
     description: ''
     code_samples: []
-    type: int64
+    type: bool
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: Data
+    category: State
     serialization:
       can_load: true
       can_save: true
-  - name: UserNotificationPayloadParameterValue.StringValue
+  - name: VisualizationMode.Title
     summary: ''
     description: ''
     code_samples: []
@@ -33,10 +33,10 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: Data
+    category: State
     serialization:
       can_load: true
       can_save: true

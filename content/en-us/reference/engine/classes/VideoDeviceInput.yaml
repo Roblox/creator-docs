@@ -1,4 +1,4 @@
-name: UserNotificationPayload
+name: VideoDeviceInput
 type: class
 category:
 memory_category: Instances
@@ -7,14 +7,15 @@ description: ''
 code_samples: []
 inherits:
   - Instance
-tags: []
+tags:
+  - NotReplicated
 deprecation_message: ''
 properties:
-  - name: UserNotificationPayload.AnalyticsData
+  - name: VideoDeviceInput.Active
     summary: ''
     description: ''
     code_samples: []
-    type: UserNotificationPayloadAnalyticsData
+    type: bool
     tags: []
     deprecation_message: ''
     security:
@@ -25,22 +26,7 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: UserNotificationPayload.JoinExperience
-    summary: ''
-    description: ''
-    code_samples: []
-    type: UserNotificationPayloadJoinExperience
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-  - name: UserNotificationPayload.MessageId
+  - name: VideoDeviceInput.CameraId
     summary: ''
     description: ''
     code_samples: []
@@ -55,11 +41,11 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: UserNotificationPayload.Type
+  - name: VideoDeviceInput.CaptureQuality
     summary: ''
     description: ''
     code_samples: []
-    type: string
+    type: VideoDeviceCaptureQuality
     tags: []
     deprecation_message: ''
     security:
@@ -70,34 +56,23 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods:
-  - name: UserNotificationPayload:GetParameters
+  - name: VideoDeviceInput.IsReady
     summary: ''
     description: ''
     code_samples: []
-    parameters: []
-    returns:
-      - type: Variant
-        summary: ''
-    tags: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: UserNotificationPayload:SetParameters
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: parameters
-        type: Variant
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+methods: []
 events: []
 callbacks: []

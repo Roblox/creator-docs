@@ -106,7 +106,7 @@ To customize the beam:
 1. Insert a beam into **CollisionBox**.
    1. In the **Explorer** window, hover over **CollisionBox**, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **Beam**.
-1. Assign the collision box's attachments to the new Beam object.
+1. Assign the collision box's attachments to the new `Class.Beam` object.
    1. In the **Explorer** window, select the beam.
    1. In the **Properties** window,
       1. Set **Attachment0** to **StartAttachment**.

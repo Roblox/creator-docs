@@ -101,7 +101,7 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: LocalUserSecurity
+      read: None
       write: LocalUserSecurity
     thread_safety: ReadSafe
     category: Data

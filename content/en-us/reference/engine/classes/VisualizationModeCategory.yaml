@@ -1,4 +1,4 @@
-name: UserNotification
+name: VisualizationModeCategory
 type: class
 category:
 memory_category: Instances
@@ -10,35 +10,33 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
-  - name: UserNotification.Id
+  - name: VisualizationModeCategory.Enabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: VisualizationModeCategory.Title
     summary: ''
     description: ''
     code_samples: []
     type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: true
-  - name: UserNotification.Payload
-    summary: ''
-    description: ''
-    code_samples: []
-    type: UserNotificationPayload
     tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
-    category: Data
+    category: State
     serialization:
       can_load: true
       can_save: true
