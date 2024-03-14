@@ -3,11 +3,10 @@ type: class
 category: Utility
 memory_category: Instances
 summary: |
-  The Debris service the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
+  The Debris service allows the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 description: |
-  The Debris service allows the developer to schedule the removal of the object
-  without yielding any code, through the usage of the `Class.Debris:AddItem()`
+  The Debris service allows the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 
   After the lifetime argument has elapsed (in seconds) the object is removed in
@@ -95,8 +94,7 @@ properties:
 methods:
   - name: Debris:AddItem
     summary: |
-      Allows the developer to schedule the removal of the object without
-      yielding any code.
+      Allows the developer to schedule guaranteed destruction of the object without yielding.
     description: |
       Allows the developer to schedule guaranteed destruction of the object without yielding.
 
