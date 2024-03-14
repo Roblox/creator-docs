@@ -26,7 +26,7 @@ description: |
   of utility after which it needs to be destroyed.
 
   Take the example of projectile that has just been thrown. It could be cleaned
-  up using:
+  up after 3 seconds using:
 
   ```lua
   task.wait(3)
@@ -122,7 +122,7 @@ methods:
       specific period of utility after which it needs to be destroyed.
 
       Take the example of projectile that has just been thrown. On first
-      thought, it could be cleaned up using:
+      thought, it could be cleaned up after 3 seconds using:
       
       ```lua
       task.wait(3)
