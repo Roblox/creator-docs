@@ -3,13 +3,16 @@ type: class
 category: Utility
 memory_category: Instances
 summary: |
-  The Debris service allows the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
+  The Debris service allows the developer to schedule guaranteed destruction of
+  the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 description: |
-  The Debris service allows the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
+  The Debris service allows the developer to schedule guaranteed destruction of
+  the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 
-  After the lifetime argument has elapsed (in seconds) the object is destroyed in the same manner as `Class.Instance:Destroy()`.
+  After the lifetime argument has elapsed (in seconds) the object is destroyed
+  in the same manner as `Class.Instance:Destroy()`.
 
   As Debris is a service it must be created using the
   `Class.ServiceProvider:GetService()` method.
@@ -22,14 +25,18 @@ description: |
   you no longer need. However in many cases an object may have a specific period
   of utility after which it needs to be destroyed.
 
-  Take the example of a wall being smashed into individual bricks. If you want a brick to linger for 3 seconds before being destroyed, you can use the following code:
+  Take the example of a wall being smashed into individual bricks. If you want a
+  brick to linger for 3 seconds before being destroyed, you can use the
+  following code:
 
   ```lua
   task.wait(3)
   brick:Destroy()
   ```
 
-  However, waiting causes the thread to yield which may not be desired. To avoid yielding, a callback function can be scheduled to run on a new thread after 3 seconds:
+  However, waiting causes the thread to yield which may not be desired. To avoid
+  yielding, a callback function can be scheduled to run on a new thread after 3
+  seconds:
 
   ```lua
   task.delay(3, function()
@@ -43,7 +50,9 @@ description: |
   task.delay(3, brick.Destroy, brick)
   ```
 
-  While this solves the above issue by preventing the code from yielding, there is a second drawback: The scheduled callback will never run if the script is disabled or destroyed before the callback runs.
+  While this solves the above issue by preventing the code from yielding, there
+  is a second drawback: The scheduled callback will never run if the script is
+  disabled or destroyed before the callback runs.
 
   This is where Debris comes in. The following code addresses both of the
   above issues:
@@ -52,9 +61,15 @@ description: |
   Debris:AddItem(brick, 3)
   ```
 
-  Debris does not yield the current thread and runs outside the context of the script, so it guarantees the instance is eventually destroyed even if the script is disabled or destroyed.
+  Debris does not yield the current thread and runs outside the context of the
+  script, so it guarantees the instance is eventually destroyed even if the
+  script is disabled or destroyed.
 
-  Debris also has a hardcoded `Class.Debris.MaxItems` value of 1,000 objects, so if more than 1,000 debris is added, the oldest debris will be destroyed instantly to make room for the new debris. This means you should treat the lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris could be destroyed before that time if 1,000 other debris are added after it.
+  Debris also has a hardcoded `Class.Debris.MaxItems` value of 1,000 objects,
+  so if more than 1,000 debris is added, the oldest debris will be destroyed
+  instantly to make room for the new debris. This means you should treat the
+  lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris
+  could be destroyed before that time if 1,000 other debris are added after it.
 code_samples:
   - Debris-AddItem
 inherits:
@@ -75,7 +90,8 @@ properties:
       If this number is exceeded, objects are automatically destroyed in order
       from oldest to newest until the amount is less than or equal to MaxItems.
 
-      This property is currently restricted and will error if set. The value is hardcoded to 1,000 items.
+      This property is currently restricted and will error if set. The value is
+      hardcoded to 1,000 items.
     code_samples:
     type: int
     tags:
@@ -93,14 +109,25 @@ properties:
 methods:
   - name: Debris:AddItem
     summary: |
-      Allows the developer to schedule guaranteed destruction of the object without yielding.
+      Allows the developer to schedule guaranteed destruction of the object
+      without yielding.
     description: |
-      Allows the developer to schedule guaranteed destruction of the object without yielding.
+      Allows the developer to schedule guaranteed destruction of the object
+      without yielding.
 
       Registers a given `Class.Instance` to the `Class.Debris` service for
-      removal within the specified lifetime. The first argument is the object being destroyed, and the second argument is the amount of time in seconds the `Class.Debris` service will attempt to wait before destroying the object. The lifetime argument is optional and defaults to 10 seconds if not specified. The delay argument is a number, so it also accepts decimal points, such as '1.5', or '0.25'.
+      removal within the specified lifetime. The first argument is the object
+      being destroyed, and the second argument is the amount of time in seconds
+      the `Class.Debris` service will attempt to wait before destroying the
+      object. The lifetime argument is optional and defaults to 10 seconds if
+      not specified. The delay argument is a number, so it also accepts decimal
+      points, such as '1.5', or '0.25'.
 
-      If more than `Class.Debris.MaxItems` items are assigned to Debris, the oldest items will be destroyed instantly to make room for the new items. This means you should treat the lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris could be cleaned up before that time if `Class.Debris.MaxItems` other debris are added after it.
+      If more than `Class.Debris.MaxItems` items are assigned to Debris, the
+      oldest items will be destroyed instantly to make room for the new items.
+      This means you should treat the lifetime parameter as a maximum lifetime,
+      not an exact lifetime. Your debris could be cleaned up before that time if
+      `Class.Debris.MaxItems` other debris are added after it.
     code_samples:
       - Debris-AddItem
     parameters:
