@@ -725,7 +725,8 @@ methods:
 
           The dictionary also contains a `Size` key with a value representing
           the 3D array size of each channel data.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -1061,7 +1062,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

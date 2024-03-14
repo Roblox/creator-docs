@@ -1604,6 +1604,8 @@ methods:
               Disagree = {4849495710}
           }
           ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1653,6 +1655,8 @@ methods:
               {Slot = 1, Name = "Disagree"},
           }
           ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1771,6 +1775,8 @@ methods:
               Disagree = {4849495710}
           }
           ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1832,6 +1838,8 @@ methods:
               {Slot = 1, Name = "Disagree"},
           }
           ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1878,6 +1886,8 @@ events:
               Disagree = {4849495710}
           }
           ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1931,6 +1941,8 @@ events:
               {Slot = 1, Name = "Disagree"},
           }
           ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None

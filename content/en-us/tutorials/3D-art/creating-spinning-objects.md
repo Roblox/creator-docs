@@ -3,184 +3,297 @@ title: Creating Spinning Objects
 description: Explains the process of creating dynamic motion by spinning objects.
 ---
 
-**Spinning objects** instantly create dynamic motion within your experience, helping your environment feel more immersive and realistic to everyday objects that constantly spin, such as windmills and propellers. Studio has various methods to create rotating motion, such as using a script to continually change an object's rotation, or adding constraints that ensure only a portion of an object spins while the rest remains static.
+**Spinning objects** are objects that rotate on one more axis within the 3D space. Using the built-in power of Roblox's simulation engine, you can make objects spin and interact with their environment in a way that emulates real-world physical behavior that's familiar and intuitive to players, such as gravity, aerodynamics, and friction.
 
-<video controls src="../../assets/tutorials/creating-spinning-objects/Overview.mp4" width="80%"></video>
+Using the [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) `.rbxl` file as a reference, this tutorial explains how physical forces impact angular motion in Studio, and shows you various techniques to spin objects in your experiences with different spinning behavior, including guidance on:
 
-As with all 3D creation, there are many ways to achieve any particular goal. In this guide, you can quickly make objects spin indefinitely by using tools and methods available within Studio. Follow each of the following methods to learn how to:
+- Using an `Class.AngularVelocity` mover constraint to spin an entire assembly at a constant angular velocity.
+- Using a `Class.HingeConstraint` mechanical constraint to spin a part within an assembly at a constant angular velocity as the rest of the assembly remains stationary.
+- Using the `Class.BasePart.ApplyAngularImpulse|ApplyAngularImpulse` method to spin an assembly with an initial angular force that slowly decelerates over time.
 
-- Make an entire object constantly spin with a `Class.Script`.
-- Allow a portion of an object to remain stationary while the rest of the object constantly spins using a `Class.HingeConstraint`.
+<video controls src="../../assets/tutorials/creating-spinning-objects/Overview.mp4" width="90%"></video>
 
 <Alert severity="info">
-   This guide uses two downloadable `.fbx` files of a propeller prop: one keeps the entire propeller as a single object while the other separates the propeller's head from its base. You can use these components to understand the basic principles of each method, then apply them to your own components that you want to spin in your experiences.
+   You can create your own assemblies using basic parts or meshes from third-party modeling tools, then follow along with your own assets. For information on exporting meshes for use in Studio, see [Exporting Requirements](../../art/modeling/export-requirements.md).
 </Alert>
 
-## Using Scripts
+## Angular Motion and Physical Forces
 
-`Class.Script|Scripts` provide a fine level of control over the behavior of objects, allowing you to adjust properties to create new behavior for objects within your experiences. Using scripts to implement rotation is useful when you want to calibrate the behavior using a single object, then later scale the behavior to influence a group of objects while only needing to make adjustments to the script itself.
+Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so in order to predict the behavior of spinning objects in experiences, it's important to have a high-level understanding of how objects spin in real life with angular motion.
 
-To use a script to make a propeller spin indefinitely:
+**Angular motion**, or rotational motion, is movement around a fixed point or axis. For example, when a propeller has angular motion, it spins around its rotational axis in the middle of the propeller.
 
-1. Import the [Propeller-Scripting-Method](../../assets/tutorials/creating-spinning-objects/Propeller-Scripting-Method.fbx) `.fbx` file.
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../../assets/tutorials/creating-spinning-objects/Rotational-Axis.png" width="100%"/>
+  </figure>
+  <figure>
+    <video controls src="../../assets/tutorials/creating-spinning-objects/Rotational-Axis.mp4" width="100%"></video>
+  </figure>
+</GridContainer>
 
-   1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
+Angular motion cannot exist without external, physical forces pushing or pulling objects to spin. According to Newton's first [law of motion](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#First_law), stationary objects remain stationary and moving objects remain in motion unless they are acted on by an external force. For example, a stationary propeller remains stationary unless a physical force like wind pushes it to spin.
 
-      <img src="../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
+<GridContainer numColumns="2">
+  <figure>
+    <video controls src="../../assets/tutorials/creating-spinning-objects/Stop-Propeller.mp4" width="100%"></video>
+  </figure>
+  <figure>
+  </figure>
+</GridContainer>
 
-   1. Select the **Propeller-Scripting-Method** `.fbx` file, then click the **Open** button. The **Import Preview** window displays.
-   1. In the hierarchy panel, select **Propeller_Geo**.
-   1. In the **Object General** section,
+**Torque** is the measure of the physical force that causes objects to spin, and it's responsible for objects obtaining angular acceleration. This concept is particularly important for objects to spin in Studio; the more torque you apply to objects, the more quickly they can spin.
 
-      1. Rename the mesh **Propeller**.
-      1. Enable the **Anchored** property to ensure the propeller doesn't change position when its blades begin to move.
+This is because torque needs to be _greater_ than any directional physical forces pushing back against the object, such as gravity or friction. For example, if you were to place the propeller in dirt, the physical force of the wind needs to overcome the amount of friction from the dirt to continue spinning the propeller. If the wind's force is not much greater than the friction from the dirt, the propeller spins, just more slowly than the previous example.
 
-   1. Click the **Import** button. The propeller displays within the viewport.
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../../assets/tutorials/creating-spinning-objects/Dirt-Friction.png" width="100%"/>
+  </figure>
+  <figure>
+    <video controls src="../../assets/tutorials/creating-spinning-objects/Dirt-Propeller.mp4" width="100%"></video>
+  </figure>
+</GridContainer>
 
-      <img width="80%" img src="../../assets/tutorials/creating-spinning-objects/Importing-Propeller-Scripting-Method.jpg" />
+**Angular velocity** is the measure of an object's rotation rate, or how fast the object rotates around a fixed point or axis over a period of time. Studio measures angular velocity according to how many [radians](https://en.wikipedia.org/wiki/Radian) an object spins per second. There are 2π radians (6.283) in one rotation, so in order for an object to make a full rotation per second, it must have enough torque to spin about 6 radians. Understanding angular velocity is important for designing gameplay in your experiences because it helps you determine how much torque you need in order to achieve a particular speed for your spinning objects.
 
-1. In the **Explorer** window, insert a script into the propeller.
+The following sections dive deeper into these concepts as you learn how to spin objects at either a constant or initial angular velocity with the necessary torque to overcome any oppositional physical forces. As you review these physics concepts with the upcoming techniques, you can more accurately predict how to adjust property values to achieve any ideal spinning behavior in Studio.
 
-   1. Hover over **Propeller** and click the **⊕** button. A contextual menu displays.
-   1. From the menu, insert a **Script**.
+## Maintaining a Constant Angular Force
 
-1. In the new script, enter the following:
+For an object to reach and maintain a constant angular velocity, it needs an angular force to overcome any oppositional physical forces that either decelerate the object's rotation, or cause the object to remain stationary. For example, if you want an object to have an angular velocity of `[0, 12, 0]` in Studio, you need enough torque for the object to spin `12` radians per second along the Y axis in its environment, or about two full rotations.
 
-```lua
-local RunService = game:GetService("RunService")
+The amount of torque you apply to your objects not only depends on oppositional physical forces within the environment itself, such as gravity and friction, but also on the object itself. For example, if you have two objects of the same shape that are spinning on the same axis, the object with the larger amount of mass requires more force to rotate its weight.
 
-local propeller = script.Parent
-local ROTATE_SPEED = 100
+<GridContainer numColumns="2">
+  <figure>
+    <video controls src="../../assets/tutorials/creating-spinning-objects/Little-Triangle.mp4" width="100%"></video>
+    <figcaption>The little triangle part has a small amount of mass, so it needs less angular force to spin.</figcaption>
+  </figure>
+  <figure>
+    <video controls src="../../assets/tutorials/creating-spinning-objects/Big-Triangle.mp4" width="100%"></video>
+    <figcaption>The large triangle part has a large amount of mass, so it needs more angular force to spin.</figcaption>
+  </figure>
+</GridContainer>
 
--- PostSimulation fires every frame, after the physics simulation has completed.
--- step is the amount of time that has elapsed since the previous frame.
+The following subsections use assemblies of different shapes and sizes to teach you how to spin either an entire object or only a portion of the object at a constant angular velocity. As you experiment with different property values, you will learn how to estimate the maximum amount of torque you need for assemblies in your own experiences.
 
-RunService.PostSimulation:Connect(function(step)
-	-- The amount to rotate is a function of ROTATE_SPEED and step.
-	local rotationAmount = math.rad(ROTATE_SPEED * step)
+### Using AngularVelocity Constraints
 
-	-- Apply rotationAmount to the propeller's current CFrame.
-	propeller.CFrame = propeller.CFrame * CFrame.Angles(0, rotationAmount, 0)
-end)
-```
+`Class.AngularVelocity` objects are a type of [mover constraint](../../physics/mover-constraints.md) that apply torque on an entire assembly to maintain a constant angular velocity. To begin spinning the assembly, the `Class.AngularVelocity` constraint needs to know:
 
-When you [playtest your experience](../../studio/test-tab.md), the script quickly rotates the propeller along the Y axis. If you want the propeller to move more quickly or slowly, you can adjust the speed to be higher or lower, respectively.
+- The fixed point and direction of rotational movement to spin the assembly around.
+- The axis or axes to apply a target constant angular velocity.
+- The amount of radians you want the assembly to spin per second.
+- The maximum amount of torque the engine can apply for the assembly to reach a constant angular velocity.
 
-<video controls src="../../assets/tutorials/creating-spinning-objects/Using-Scripts.mp4" width="80%"></video>
+To demonstrate this process, you will add a block to your workspace with an attachment that an `Class.AngularVelocity` constraint references to spin the block `6` radians per second along the Y axis at a constant angular velocity, or about one full rotation.
 
-## Using HingeConstraints
+<img src="../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.jpg" width="90%" />
 
-`Class.Constraint|Constraints` provide the ability to emulate realistic behavior of objects under physical forces, such as gravity, wind, and friction. Using a `Class.HingeConstraint`, you can create a relationship between the head and base of a propeller, then implement realistic motion in which the base of the propeller remains stationary while the head and its blades continuously spin. When accuracy is important, constraints allow you to simulate how objects spin in real world conditions.
+#### Add Attachment
 
-### Configuring the Propeller Components
+You can specify the fixed point to spin an assembly by adding an `Class.Attachment` object to the assembly, then configuring the attachment's position in the 3D space. The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience places an attachment in the center of a block part so that the constraint can spin the part counterclockwise around the center of itself.
 
-Before you create a `Class.HingeConstraint`, it's important to configure each of the propeller's components to make sure they have clear naming, the base remains anchored when the blades are in motion, and that you can easily see what's happening as you configure your constraint. This initial setup allows for the entire process to run more smoothly.
+Attachments include visual aids to help you visualize their axes of rotation. The yellow arrow denotes the primary axis of rotation, and the orange arrow denotes the secondary axis of rotation. While neither axis of rotation influences the block's rotation in the steps of this technique, it's important to understand these visual aids for future reference because they can assist you in determining ideal behavior for different types of constraints.
 
-To configure the propeller components:
+<img src="../../assets/tutorials/creating-spinning-objects/Attachment-Visual-Aids.png" width="90%" />
 
-1. Import the [Propeller-HingeConstraint-Method](../../assets/tutorials/creating-spinning-objects/Propeller-HingeConstraint-Method.fbx) `.fbx` file.
+To add an attachment:
 
-   1. In the menu bar, navigate to the **Home** tab, then click **Import 3D**. A file browser displays.
+1. In the **Explorer** window, insert a **block** part into the **Workspace**.
 
-      <img src="../../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
+   <img src="../../assets/tutorials/creating-spinning-objects/AV-Attachment-2.jpg" width="80%" />
 
-   1. Select the **Propeller-HingeConstraint-Method** `.fbx` file, then click the **Open** button. The **Import Preview** window displays.
-   1. In the **Object General** section, rename the model **Propeller**.
-   1. In the hierarchy panel, select **PropellerHead_Geo**, then in the **Object General** section, rename the mesh **Head**.
-   1. In the hierarchy panel, select **PropellerBase_Geo**, then in the **Object General** section,
+1. Insert an attachment into the new part.
+   1. In the **Explorer** window, hover over the part and click the ⊕ button. A contextual menu displays.
+   1. From the menu, insert an **Attachment**. The attachment displays in the center of the part.
+   1. Rename the attachment to **SpinAttachment**.
 
-      1. Rename the object **Base**.
-      1. Enable the **Anchored** property to ensure the propeller doesn't change position when its blades begin to move.
+   <img src="../../assets/tutorials/creating-spinning-objects/AV-Attachment-3.jpg" width="80%" />
 
-   1. Click the **Import** button. The propeller displays within the viewport.
+#### Configure Constraint
 
-      <img width="80%" img src="../../assets/tutorials/creating-spinning-objects/Importing-Propeller-HingeConstraint-Method.jpg" />
+Now that your block has a fixed point to spin the block, you can configure the properties of an `Class.AngularVelocity` constraint to specify the rotational direction, axis or axes to apply a target constant angular velocity, the amount of radians you want the block to spin per second, and the maximum amount of torque the engine can apply for the block to reach a constant angular velocity.
 
-1. In the menu bar, select the **Move** tool, then use the green Y axis arrow to create a gap between both parts to make it easier to visualize the HingeConstraint configuration.
+The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience applies up to 1000 Rowton-studs per second to spin the block 6 radians per second along the Y axis at a constant angular velocity. Rowton-studs are Roblox's primary physical units for measuring torque. To reference Roblox physical units and how they convert to metric units, see [Roblox Units](../../physics/units.md).
 
-### Configuring the HingeConstraint
+To configure an `Class.AngularVelocity` constraint:
 
-Now that you have two components that make up the foundation of your propeller, you can create a `Class.HingeConstraint`, reorient the associated attachments so the propeller's head is able to spin on the Y axis without breaking the hinge, and set the constraint's values to enable the propeller to spin against any physical force within the experience.
+1. **(Optional)** Make the constraint visible in the 3D space so that you can reference its rotational direction.
+   1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+   1. If it's not currently enabled, click **Constraint Details** to display a constraint visual aids.
 
-#### Creating the HingeConstraint and Attachments
+   <img src="../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="50%" />
 
-A `Class.HingeConstraint` allows two `Class.Attachment|Attachments` to rotate about one axis. This type of [constraint](../../physics/mechanical-constraints.md) is ideal for spinning objects with multiple components because it allows you to specify which component you want to spin while keeping the other stationary.
+1. Insert an `Class.AngularVelocity` constraint into the part.
+   1. In the **Explorer** window, hover over the part, then click the ⊕ icon. A contextual menu displays.
+   1. From the contextual menu, insert **AngularVelocity**. The constraint's visual aid displays with a rotational arrow that denotes which direction the constraint will spin the part.
+1. Assign the part's attachment to the new constraint.
+   1. In the **Explorer** window, select the constraint.
+   1. In the **Properties** window,
+      1. Set **Attachment0** to **SpinAttachment**.
+      1. Set **AngularVelocity** to `0, 6, 0` to spin the part 6 radians per second along the Y axis.
+      1. Set **MaxTorque** to `1000` to apply up to 1000 Rowton-studs of an angular force per second to achieve the target angular velocity.
+      1. Keep **RelativeTo** to **World** to spin the block according to the world's position and orientation. By default, it will spin the block counterclockwise.
 
-To create a HingeConstraint and its attachments:
+   <img src="../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.jpg" width="80%" />
 
-1. In the **Explorer** window, insert a HingeConstraint into **Head**.
+1. Verify the amount of torque you set spings the block 6 radians per second along the Y axis.
+   1. In the menu bar, navigate to the **Test** tab.
+   1. In the **Simulation** section, click the **Mode Picker**. A dropdown menu displays.
 
-   1. Hover over **Head** and click the **⊕** button. A contextual menu displays.
-   1. From the menu, insert a **HingeConstraint**.
+      <img src="../../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
 
-1. Insert an attachment into **Head** and **Base**.
+   1. Select **Run**. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-   1. Hover over **Head** and click the **⊕** button. A contextual menu displays.
+   <video controls src="../../assets/tutorials/creating-spinning-objects/AV-Constraint-2.mp4" width="80%"></video>
+
+You may need to adjust your torque depending on your block's scale and any oppositional physical forces in your environment. For example, the properties of the `Class.AngularVelocity` constraint in the sample experience work for a block part with a default size of `4, 1, 2` on a flat platform with a plastic material, and an environment with the classic preset gravity.
+
+However, if your block is a larger size and on grass terrain, you need to increase your `Class.AngularVelocity.MaxTorque` property because the angular force needs to overcome both the block's mass and friction from the environment. For example, the large block part that's quadruple the size of the sample's part needs at least `300000` Rowton-studs per second to achieve the set angular velocity!
+
+<video controls src="../../assets/tutorials/creating-spinning-objects/Big-Block.mp4" width="80%"></video>
+
+### Using HingeConstraint Constraints
+
+`Class.HingeConstraint` objects are a type of [mechanical constraint](../../physics/mechanical-constraints.md) that allows two attachments to rotate around one axis, constraining the attachments to the same position and their primary axes in the same direction. When you set `Class.HingeConstraint.ActuatorType` to **Motor**, this constraint applies torque on the two attachments with the goal of the attachments reaching and maintaining a constant angular velocity.
+
+Further, when you place attachments into an assembly with two objects, the objects lock together and attempt to spin together according to the attachment's fixed primary axis. If you anchor one of these objects, the angular force continues to spin the other object at a constant angular velocity while the rest of the assembly remains stationary.
+
+For example, to begin spinning a particular object within an assembly, the `Class.HingeConstraint` constraint needs to know:
+
+- The position where you want the attachments to overlap.
+- The direction of rotational movement to spin the attachments.
+- The axis or axes to apply a target constant angular velocity.
+- The amount of radians you want the attachments to spin per second.
+- The maximum amount of torque the engine can apply for the attachments to reach a constant angular velocity.
+
+To demonstrate this process, you will add a propeller assembly with two objects to your workspace with attachments in both objects that a `Class.HingeConstraint` constraint references to spin the propeller `3` radians per second (about half a full rotation) along the Y axis at a constant angular velocity while the base of the propeller remains stationary.
+
+<img src="../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.jpg" mg width="90%" />
+
+#### Get Propeller Asset
+
+The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
+
+This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
+
+<BrowseSampleCard href='https://create.roblox.com/store/asset/16558528602' description='Create your spinning object with this propeller model.' title='Propeller' assetId={16558528602}  />
+
+To get this propeller asset from your inventory into your experience:
+
+1. In the menu bar, select the **View** tab.
+2. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
+
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
+
+3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
+
+   <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
+
+4. Click the **Propeller** tile. The model displays in your viewport.
+
+   <img src="../../assets/tutorials/creating-spinning-objects/Propeller.jpg" mg width="80%" />
+
+#### Configure Attachments
+
+You can specify both the position of where you want the attachments to overlap and the direction of rotational movement to spin a particular object within an assembly by adding two `Class.Attachment` objects to the assembly, then configuring their alignment and orientation in the 3D space.
+
+The sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience aligns two attachments near the position of where the unanchored propeller overlaps with the anchored base, and orients their primary axis of rotation upwards so that they spin counterclockwise. The base attachment cannot spin in this example because the base is anchored.
+
+To configure attachments for the hinge constraint:
+
+1. Insert an `Class.Attachment` object into **Head** and **Base**.
+   1. In the **Explorer** window, hover over **Head** and click the ⊕ button. A contextual menu displays.
    1. From the menu, insert an **Attachment**.
    1. Repeat this process for **Base**.
    1. Rename both attachments **HeadAttachment** and **BaseAttachment**, respectively.
 
-      <img width="50%" img src="../../assets/tutorials/creating-spinning-objects/Creating-HingeConstraint.jpg" />
+   <img src="../../assets/tutorials/creating-spinning-objects/HC-Attachments-2.jpg" width="80%" />
 
-1. Select the **HingeConstraint**.
-1. In the **Properties** window, assign the attachments to the HingeConstraint.
+1. Rotate **HeadAttachment** and **BaseAttachment** so that the yellow arrow of each attachment points upwards on the Y axis. This tells Studio to rotate the attachments counterclockwise.
 
-   1. Select the `Class.HingeConstraint.Attachment0` property. Your cursor changes.
-   1. In the **Explorer** window, select **HeadAttachment**.
-   1. Select the `Class.HingeConstraint.Attachment1` property. Your cursor changes.
-   1. In the **Explorer** window, select **BaseAttachment**.
+   <img src="../../assets/tutorials/creating-spinning-objects/HC-Attachments-3.jpg" width="80%" />
 
-      <img width="60%" img src="../../assets/tutorials/creating-spinning-objects/Assigning-Attachments.jpg" />
+1. Move **BaseAttachment** to the top of **Base**, and **HeadAttachment** to the bottom edge of **Propeller**. This tells Studio where to connect the hinge itself, and overlap both attachments at runtime.
 
-#### Rotating and Moving the Attachments
+   <img src="../../assets/tutorials/creating-spinning-objects/HC-Attachments-4.jpg" width="80%" />
 
-If you keep both attachments at their default orientations and positions, the propeller's head tries to spin on the Z axis through the base instead of on the Y axis on top of the base. To ensure this doesn't happen, you must rotate the attachments until both Y axis arrows are pointing down, then move the hinge to the top of the base so the blades spin in the correct location.
+#### Configure Constraint
 
-<figure>
-  <video controls src="../../assets/tutorials/creating-spinning-objects/Broken-Propeller.mp4" width="80%"></video>
-  <figcaption>If you don't reorient and reposition the attachments, the propeller's head spins on the wrong axis in the middle of the base.</figcaption>
-</figure>
+Now that your attachments have position to overlap and a direction of rotational movement, you can configure the properties of a `Class.HingeConstraint` constraint to specify the axis or axes to apply a target constant angular velocity, the amount of radians you want the attachments to spin per second, and the maximum amount of torque the engine can apply for the attachments to reach a constant angular velocity.
 
-Before you begin to reorient your attachments, make sure you are able to view them within the viewport by enabling constraint details:
+Similar to the previous technique, the sample [Spinning Objects](https://www.roblox.com/games/16550477904/Spinning-Objects) experience applies up to 1000 Rowton-studs per second to spin the attachments 3 radians per second along the Y axis at a constant angular velocity. However, because the base attachment is in an anchored object, only the propeller's attachment can spin.
 
-1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
-1. If it's not currently enabled, click **Constraint Details** and **Draw On Top** to display constraint and attachment visual aids.
+To configure a hinge constraint:
 
-   <img width="60%" img src="../../assets/tutorials/creating-elevators/Constraint-Details.jpg" />
+1. Insert a `Class.HingeConstraint` object into **Head**.
+   1. In the **Explorer** window, hover over **Head**, then click the ⊕ icon. A contextual menu displays.
+   1. From the contextual menu, insert a **HingeConstraint**.
+1. Assign the propeller's attachments to the new constraint.
+   1. In the **Explorer** window, select the constraint.
+   1. In the **Properties** window,
+      1. Set **Attachment0** to **HeadAttachment**.
+      1. Set **Attachment1** to **BaseAttachment**. The hinge displays in the viewport.
 
-1. If you want to make the visualization of each attachment larger, increase **Scale**.
+   <img src="../../assets/tutorials/creating-spinning-objects/HC-Hinge-2.jpg" width="80%" />
 
-   <img width="60%" img src="../../assets/tutorials/creating-elevators/Constraint-Details-Scale.jpg" />
+1. In the **Explorer** window, select the constraint, then in the **Properties** window,
+   1. Set **ActuatorType** to **Motor**. New property fields display.
+   1. Set **MotorMaxTorque** to `1000` to apply up to 1000 Rowton-studs of a constant angular force per second to achieve the target angular velocity.
+   1. Set **AngularVelocity** to `3` to spin the head of the propeller 3 radians per second.
 
-It's important to view attachments so that you can visualize how the constraint is using both attachments to connect the rotating object to the stationary object and see what axis the attachments are rotating on.
+   <img src="../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.jpg" width="80%" />
 
-To rotate and move the constraint's attachments so the blades spin correctly:
+1. Verify the amount of torque you set spins the propeller 3 radians per second along the Y axis.
+   1. In the menu bar, navigate to the **Test** tab.
+   1. In the **Simulation** section, click the **Mode Picker**. A dropdown menu displays.
 
-1. In the menu bar, select the **Rotate** tool and rotate the **HeadAttachment** and **BaseAttachment** so that the yellow arrow of each attachment points downwards on the Y axis.
+      <img src="../../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
 
-   <img width="60%" img src="../../assets/tutorials/creating-spinning-objects/Rotating-Attachments.jpg" />
+   1. Select **Run**. Studio simulates the experience at the current camera position without your avatar in the 3D space.
 
-1. Select the **Move** tool and use the green Y Axis arrow to reposition the **BaseAttachment** until it's at the top of the base. This tells Studio where to connect the hinge itself.
+   <video controls src="../../assets/tutorials/creating-spinning-objects/HC-Hinge-3.mp4" width="80%"></video>
 
-   <img width="60%" img src="../../assets/tutorials/creating-spinning-objects/Repositioning-BaseAttachment.jpg" />
+## Applying an Initial Angular Force
 
-1. In the **Explorer** window, select **Head**, then continue using the **Move** tool to close the gap between the propeller's head and base. This step is technically optional because Studio connects the hinge at runtime, but it's ideal to see the object as it reflects to users.
+For an object to reach an initial angular velocity, it needs an impulse of angular force to overcome any oppositional physical forces that cause the object to remain stationary. After the impulse of angular force, the object slowly decelerates until it is stationary again because there isn't enough torque to keep the object spinning with the oppositional physical forces in the environment.
 
-   <img width="60%" img src="../../assets/tutorials/creating-spinning-objects/Repositioning-PropellerHead.jpg" />
+This technique is useful to spin objects after a significant gameplay event, such as an explosion or impactful collision, because it provides players instantaneous feedback. To demonstrate, the following subsection teaches you how to spin an assembly with an initial random angular force that you can adapt with new values to meet your own gameplay requirements.
 
-#### Setting HingeConstraint Values
+### Using ApplyAngularImpulse
 
-Now that you have a `Class.HingeConstraint` and have aligned its associated `Class.Attachment|Attachments`, it's time to set the constraint's values to tell Studio's engine how quickly the blades need to rotate, and how strong the blade's motion must push against any physical force within the experience. To ensure that the propeller rotates under all physical conditions, this technique uses the highest strength value possible.
+The `Class.BasePart.ApplyAngularImpulse|ApplyAngularImpulse` method applies torque on an entire assembly to obtain an initial angular velocity before slowing to a stop. To begin spinning the assembly, the method needs to know:
 
-To set values for your constraint to enable elevator movement within a set range of motion:
+- The assembly to spin.
+- The axis or axes to apply torque to reach an initial angular velocity.
+- The amount of torque to apply to each axis.
 
-1. In the **Explorer** window, select **HingeConstraint**.
-1. In the **Properties** window, navigate to the **Hinge** section, then set **ActuatorType** to **Motor**. New property fields display.
-1. Navigate to the **Motor** section, then ensure the propeller head has plenty of strength to handle any physical load, and that they rotate quickly per second.
+You can define all of these values in a script. For example, the sample script defines the assembly to spin as the script's parent, then it applies a random angular force between `0` and `100` Rowton-studs on the Y axis.
 
-   1. Set **MotorMaxTorque** to **9999999999999999999999999999999999999999**. The field displays inf.
-   1. Set **AngularVelocity** to **50**.
+To spin an assembly using `Class.BasePart.ApplyAngularImpulse|ApplyAngularImpulse`:
 
-When you [playtest your experience](../../studio/test-tab.md), the `Class.HingeConstraint` moves the propeller at a speed of 50 frames per second along the Y axis. If you want the propeller to move more quickly or slowly, you can adjust the AngularVelocity value to be higher or lower, respectively.
+1. Insert a **sphere** part into the **Workspace**. The sample uses a sphere with a `Class.MaterialVariant` so you can clearly visualize the sphere's movement.
 
-<video controls src="../../assets/tutorials/creating-spinning-objects/Using-HingeConstraints.mp4" width="80%"></video>
+   <img src="../../assets/tutorials/creating-spinning-objects/Impulse-1.jpg" width="80%" />
+
+1. Insert a script into the new part.
+   1. In the **Explorer** window, hover over the part and click the ⊕ button. A contextual menu displays.
+   1. From the menu, insert a **Script**.
+1. Replace the default code with the following code:
+
+``` lua
+
+local part = script.Parent
+
+local function spinPart()
+    local impulse = Vector3.new(0, math.random(0, 100), 0)
+    part.AssemblyAngularVelocity = impulse
+end
+
+spinPart()
+
+```
+
+   <video controls src="../../assets/tutorials/creating-spinning-objects/Impulse-3.mp4" width="80%"></video>

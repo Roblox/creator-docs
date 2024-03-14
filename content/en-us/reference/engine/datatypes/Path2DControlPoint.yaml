@@ -1,11 +1,11 @@
 name: Path2DControlPoint
 type: datatype
 summary: |
-  Stores the info for a single control point used 
-  with the `Class.Path2D` instance.
+  Stores the info for a single control point used with the `Class.Path2D`
+  instance.
 description: |
-  The **Path2DControlPoint** data type represents a single control point
-  used with the `Class.Path2D` instance. 
+  The **Path2DControlPoint** data type represents a single control point used
+  with the `Class.Path2D` instance.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -37,10 +37,10 @@ constructors:
   - name: Path2DControlPoint.new
     summary: |
       Returns a `Datatype.Path2DControlPoint` with the position, left
-      tangent, and right tangent set. 
+      tangent, and right tangent set.
     description: |
       Returns a `Datatype.Path2DControlPoint` with the position, left
-      tangent, and right tangent set. 
+      tangent, and right tangent set.
     parameters:
       - name: Position
         type: UDim2
