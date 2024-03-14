@@ -9,8 +9,7 @@ description: |
   The Debris service allows the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 
-  After the lifetime argument has elapsed (in seconds) the object is removed in
-  the same manner as `Class.Instance:Destroy()`.
+  After the lifetime argument has elapsed (in seconds) the object is destroyed in the same manner as `Class.Instance:Destroy()`.
 
   As Debris is a service it must be created using the
   `Class.ServiceProvider:GetService()` method.
@@ -73,7 +72,7 @@ properties:
       The maximum number of items that can be assigned to the Debris service at
       one time.
 
-      If this number is exceeded, objects are automatically removed in order
+      If this number is exceeded, objects are automatically destroyed in order
       from oldest to newest until the amount is less than or equal to MaxItems.
 
       This property is currently restricted and will error if set. The value is hardcoded to 1,000 items.
@@ -99,7 +98,7 @@ methods:
       Allows the developer to schedule guaranteed destruction of the object without yielding.
 
       Registers a given `Class.Instance` to the `Class.Debris` service for
-      removal within the specified lifetime. The first argument is the object being removed, and the second argument is the amount of time in seconds the `Class.Debris` service will attempt to wait before destroying the object. The lifetime argument is optional and defaults to 10 seconds if not specified. The delay argument is a number, so it also accepts decimal points, such as '1.5', or '0.25'.
+      removal within the specified lifetime. The first argument is the object being destroyed, and the second argument is the amount of time in seconds the `Class.Debris` service will attempt to wait before destroying the object. The lifetime argument is optional and defaults to 10 seconds if not specified. The delay argument is a number, so it also accepts decimal points, such as '1.5', or '0.25'.
 
       If more than `Class.Debris.MaxItems` items are assigned to Debris, the oldest items will be destroyed instantly to make room for the new items. This means you should treat the lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris could be cleaned up before that time if `Class.Debris.MaxItems` other debris are added after it.
     code_samples:
