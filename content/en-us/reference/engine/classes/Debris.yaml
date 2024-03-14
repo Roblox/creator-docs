@@ -29,7 +29,7 @@ description: |
   up using:
 
   ```lua
-  wait(3)
+  task.wait(3)
   projectile:Destroy()
   ```
 
@@ -39,7 +39,7 @@ description: |
   example, if it reached `Class.Workspace.FallenPartsDestroyHeight`).
 
   ```lua
-  delay(3, function()
+  task.delay(3, function()
   	if projectile and projectile.Parent then
   		projectile:Destroy()
   	end
@@ -124,7 +124,7 @@ methods:
       Take the example of projectile that has just been thrown. On first
       thought, it could be cleaned up using:
 
-          wait(3)
+          task.wait(3)
           projectile:Destroy()
 
       However there are a number of issues with this approach. Firstly, it
@@ -135,7 +135,7 @@ methods:
       error as it tries to destroy an item that has already been destroyed. One
       answer may be:
 
-          delay(3, function()
+          task.delay(3, function()
           	if projectile and projectile.Parent then
           		projectile:Destroy()
           	end
