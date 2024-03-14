@@ -154,9 +154,6 @@ To upload a custom clothing item:
 
 1. Navigate to the [Upload Asset](https://create.roblox.com/dashboard/creations/upload?assetType=TShirt) page.
 1. Select either **T-Shirt**, **Shirt**, or **Pants** from the asset type selector menu.
-1. Click the small upload button to choose a valid image file from your computer.
-
-   <img src="../../assets/creator-dashboard/Upload-Classic-Clothing.png" width="720" />
-
+1. Click the small **Upload** button to choose a valid image file from your computer.
 1. Enter a name and description for your clothing item.
 1. Click the **Upload** button at the bottom of the page. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.
