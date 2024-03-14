@@ -3,7 +3,7 @@ title: Setting Up Roblox Studio
 description: Explains how to install Roblox Studio on your system.
 ---
 
-Create immersive 3D experiences on Roblox with [Roblox Studio][landingurl], a free application available on Windows and Mac.
+Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
 <img src="../assets/studio/general/Studio-Splash.jpg" width="800" alt="Roblox Studio setup landing screen." />
 
@@ -23,14 +23,13 @@ The following system specifications ensure that Studio runs smoothly:
 
 ## Installing Studio
 
-To install Roblox Studio:
+To install Roblox Studio on your Windows or Mac computer:
 
-1. Navigate to [create.roblox.com][landingurl].
-1. Click the **Start Creating** button. A pop-up dialog displays.
+1. Click the following **Download Studio** button. A pop-up dialog displays.
 
-   <img src="../assets/studio/general/Studio-Splash-Start-Creating.png" width="700" alt="Start Creating button indicated on splash screen." />
+   <UseStudioButton variant='blueLogoIconButton' />
 
-1. Click the **Download Studio** button.
+1. In the pop-up dialog, click the **Download Studio** button.
 
    <img src="../assets/studio/general/Download-Popup.png" width="400" alt="Download Studio button indicated on download modal." />
 
@@ -50,5 +49,3 @@ In contrast to certain other engines, every experience runs on the latest versio
 If your current version of Studio is outdated, you'll see an **Update Available** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 
 <img src="../assets/studio/general/Update-Restart-Prompt.png" width="815" alt="Update Available button indicated in upper-right region of Studio." />
-
-[landingurl]: https://create.roblox.com/landing

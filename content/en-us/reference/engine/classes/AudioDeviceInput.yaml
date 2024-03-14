@@ -5,10 +5,11 @@ memory_category: Internal
 summary: |
   Produces audio streams from physical devices, such as microphones.
 description: |
-  `Class.AudioDeviceInput` produces audio streams from physical devices, such as microphones.
-  It provides a single **Output** pin which can be connected to other pins via `Class.Wire|Wires`.
-  `Class.AudioDeviceInput` has properties for selecting which `Class.Player` is producing the stream,
-  and controlling whether or not they are muted.
+  `Class.AudioDeviceInput` produces audio streams from physical devices, such as
+  microphones. It provides a single **Output** pin which can be connected to
+  other pins via `Class.Wire|Wires`. `Class.AudioDeviceInput` has properties for
+  selecting which `Class.Player` is producing the stream, and controlling
+  whether or not they are muted.
 code_samples: []
 inherits:
   - Instance
@@ -19,22 +20,22 @@ properties:
   - name: AudioDeviceInput.AccessType
     summary: |
       Determines whether the list of user IDs provided to
-      `Class.AudioDeviceInput.SetUserIdAccessList|SetUserIdAccessList`
-      is treated as an allow-list or deny-list.
+      `Class.AudioDeviceInput.SetUserIdAccessList|SetUserIdAccessList` is
+      treated as an allow-list or deny-list.
     description: |
       Determines whether the list of user IDs provided to
       `Class.AudioDeviceInput.SetUserIdAccessList|SetUserIdAccessList` is
       treated as an allow-list or deny-list.
-      
+
       If `Class.AudioDeviceInput.AccessType|AccessType` is
-      `Enum.AccessModifierType.Allow`, then **only** the supplied user IDs
-      are **permitted** to hear this `Class.AudioDeviceInput`. If
+      `Enum.AccessModifierType.Allow`, then **only** the supplied user IDs are
+      **permitted** to hear this `Class.AudioDeviceInput`. If
       `Class.AudioDeviceInput.AccessType|AccessType` is
-      `Enum.AccessModifierType.Deny`, then **only** the supplied user IDs
-      are **blocked** from hearing this `Class.AudioDeviceInput`.
-      
-      Since player voices are networked, this property should only be
-      assigned from the server in order to replicate properly.
+      `Enum.AccessModifierType.Deny`, then **only** the supplied user IDs are
+      **blocked** from hearing this `Class.AudioDeviceInput`.
+
+      Since player voices are networked, this property should only be assigned
+      from the server in order to replicate properly.
     code_samples: []
     type: AccessModifierType
     tags: []
@@ -51,11 +52,11 @@ properties:
     summary: |
       Controls whether the physical device is actively recording.
     description: |
-      Controls whether the physical device is actively recording.
-      This property is only set by Roblox core scripts, but it may be read
-      by user scripts. Generally, an `Class.AudioDeviceInput` may only
-      be producing sound if `Class.AudioDeviceInput.Active|Active` is
-      true **and** `Class.AudioDeviceInput.Muted|Muted` is false.
+      Controls whether the physical device is actively recording. This property
+      is only set by Roblox core scripts, but it may be read by user scripts.
+      Generally, an `Class.AudioDeviceInput` may only be producing sound if
+      `Class.AudioDeviceInput.Active|Active` is true **and**
+      `Class.AudioDeviceInput.Muted|Muted` is false.
     code_samples: []
     type: bool
     tags: []
@@ -95,7 +96,7 @@ properties:
       Controls whether this `Class.AudioDeviceInput` is muted. Unlike
       `Class.AudioDeviceInput.Active|Active`, this property is publicly
       scriptable.
-      
+
       Generally, an `Class.AudioDeviceInput` may only be heard if
       `Class.AudioDeviceInput.Active|Active` is true **and**
       `Class.AudioDeviceInput.Muted|Muted` is false.
@@ -116,8 +117,10 @@ properties:
     summary: |
       Determines whose device is producing sound.
     description: |
-      Determines whose device is producing sound. In order to replicate properly, this should only be assigned from the server.
-      Assigning this property locally generally does not work, unless `Class.AudioDeviceInput.Player|Player` is `Class.Players.LocalPlayer`.
+      Determines whose device is producing sound. In order to replicate
+      properly, this should only be assigned from the server. Assigning this
+      property locally generally does not work, unless
+      `Class.AudioDeviceInput.Player|Player` is `Class.Players.LocalPlayer`.
     code_samples: []
     type: Player
     tags: []
@@ -149,9 +152,12 @@ methods:
     thread_safety: Unsafe
   - name: AudioDeviceInput:GetUserIdAccessList
     summary: |
-      Returns a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`.
+      Returns a list of user IDs that are either permitted to hear or blocked
+      from hearing this `Class.AudioDeviceInput`.
     description: |
-      Returns a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`, depending on the `Class.AudioDeviceInput.AccessType|AccessType`.
+      Returns a list of user IDs that are either permitted to hear or blocked
+      from hearing this `Class.AudioDeviceInput`, depending on the
+      `Class.AudioDeviceInput.AccessType|AccessType`.
     code_samples: []
     parameters: []
     returns:
@@ -163,13 +169,15 @@ methods:
     thread_safety: Unsafe
   - name: AudioDeviceInput:SetUserIdAccessList
     summary: |
-      Sets a list of user IDs that are either permitted to hear or blocked from hearing this `Class.AudioDeviceInput`.
+      Sets a list of user IDs that are either permitted to hear or blocked from
+      hearing this `Class.AudioDeviceInput`.
     description: |
       Sets a list of user IDs that are either permitted to hear or blocked from
-      hearing this `Class.AudioDeviceInput`, depending on the `Class.AudioDeviceInput.AccessType|AccessType`.
-      
-      Note that this method replicates from server to client; in general, it should
-      only be called from the server in order to replicate properly.
+      hearing this `Class.AudioDeviceInput`, depending on the
+      `Class.AudioDeviceInput.AccessType|AccessType`.
+
+      Note that this method replicates from server to client; in general, it
+      should only be called from the server in order to replicate properly.
     code_samples: []
     parameters:
       - name: userIds

@@ -1,4 +1,4 @@
-name: SubscriptionPaymentStatus
+name: CSGAsyncDynamicCollision
 type: enum
 summary: ''
 description: ''
@@ -6,15 +6,18 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Paid
-    summary: |
-      Payment for the subscription has been received.
+  - name: Default
+    summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Refunded
-    summary: |
-      Payment for the subscription has been refunded.
+  - name: Disabled
+    summary: ''
     value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Experimental
+    summary: ''
+    value: 2
     tags: []
     deprecation_message: ''

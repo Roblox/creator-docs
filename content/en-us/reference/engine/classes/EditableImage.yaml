@@ -248,6 +248,30 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: EditableImage:DrawProjectionImage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: mesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: projection
+        type: Dictionary
+        default:
+        summary: ''
+      - name: brushConfig
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: EditableImage:DrawRectangle
     summary: |
       Draws a rectangle of the given size at the given top-left position.
