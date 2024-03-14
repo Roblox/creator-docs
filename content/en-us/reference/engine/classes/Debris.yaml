@@ -123,9 +123,11 @@ methods:
 
       Take the example of projectile that has just been thrown. On first
       thought, it could be cleaned up using:
-
-          task.wait(3)
-          projectile:Destroy()
+      
+      ```lua
+      task.wait(3)
+      projectile:Destroy()
+      ```
 
       However there are a number of issues with this approach. Firstly, it
       requires yielding the code with a wait, which is not always desirable.
@@ -135,11 +137,13 @@ methods:
       error as it tries to destroy an item that has already been destroyed. One
       answer may be:
 
-          task.delay(3, function()
-          	if projectile and projectile.Parent then
-          		projectile:Destroy()
-          	end
-          end)
+      ```lua
+      task.delay(3, function()
+      	if projectile and projectile.Parent then
+      		projectile:Destroy()
+      	end
+      end)
+      ```
 
       This solves the above issues, as it spawns a new thread to prevent the
       current one from yielding and checks to see if it can be destroyed.
@@ -149,7 +153,9 @@ methods:
       This is where Debris comes in, and the following code addresses all of the
       above issues.
 
-          Debris:AddItem(projectile, 3)
+      ```lua
+      Debris:AddItem(projectile, 3)
+      ```
 
       Debris does not yield the current thread, does not require a new thread
       and will not error if the object is already destroyed. For this reason it
