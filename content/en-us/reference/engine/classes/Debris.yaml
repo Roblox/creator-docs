@@ -3,8 +3,7 @@ type: class
 category: Utility
 memory_category: Instances
 summary: |
-  The Debris service allows the developer to schedule the removal of the object
-  without yielding any code, through the usage of the `Class.Debris:AddItem()`
+  The Debris service the developer to schedule guaranteed destruction of the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 description: |
   The Debris service allows the developer to schedule the removal of the object
@@ -17,50 +16,47 @@ description: |
   As Debris is a service it must be created using the
   `Class.ServiceProvider:GetService()` method.
 
-  **Why use Debris?**
+  #### Why use Debris?
 
-  Beyond creating a bit of a mess, objects that are no longer required can use
+  Besides creating a bit of a mess, objects that are no longer required can use
   up system memory and cause the game to run slower over time. For this reason
   it is always advised to run the `Class.Instance:Destroy()` function on objects
   you no longer need. However in many cases an object may have a specific period
   of utility after which it needs to be destroyed.
 
-  Take the example of projectile that has just been thrown. It could be cleaned
-  up after 3 seconds using:
+  Take the example of a wall being smashed into individual bricks. If you want  a brick to linger for 3 seconds before being destroyed, you can use the following code:
 
   ```lua
   task.wait(3)
-  projectile:Destroy()
+  brick:Destroy()
   ```
 
-  However there are a number of issues with this approach. Firstly, it requires
-  yielding the code with a wait, which is not always desirable. Secondly, before
-  the 3 seconds have elapsed the object may have already been destroyed (for
-  example, if it reached `Class.Workspace.FallenPartsDestroyHeight`).
+  However, waiting causes the thread to yield which may not be desired. To avoid yielding, a callback function can be scheduled to run on a new thread after 3 seconds:
 
   ```lua
   task.delay(3, function()
-  	if projectile and projectile.Parent then
-  		projectile:Destroy()
-  	end
+  	brick:Destroy()
   end)
   ```
 
-  This solves the above issues, as it spawns a new thread to prevent the current
-  one from yielding and checks to see if it can be destroyed. However at this
-  point a simple command has already become quite complicated and an unnecessary
-  thread is being created.
-
-  This is where Debris comes in, and the following code addresses all of the
-  above issues.
-
+  Or in one line:
+  
   ```lua
-  Debris:AddItem(projectile, 3)
+  task.delay(3, brick.Destroy, brick)
   ```
 
-  Debris does not yield the current thread, does not require a new thread and
-  will not error if the object is already destroyed. For this reason it is the
-  recommended method for cleaning up objects with a fixed lifetime.
+  While this solves the above issue by preventing the code from yielding, there is a second drawback: The scheduled callback will never run if the script is disabled or destroyed before the callback runs.
+
+  This is where Debris comes in. The following code addresses both of the
+  above issues:
+
+  ```lua
+  Debris:AddItem(brick, 3)
+  ```
+
+  Debris does not yield the current thread and runs outside the context of the script, so it guarantees the instance is eventually destroyed even if the script is disabled or destroyed.
+
+  Debris also has a hardcoded `Class.Debris.MaxItems` value of 1,000 objects, so if more than 1,000 debris is added, the oldest debris will be destroyed instantly to make room for the new debris. This means you should treat the lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris could be destroyed before that time if 1,000 other debris are added after it.
 code_samples:
   - Debris-AddItem
 inherits:
@@ -72,7 +68,7 @@ deprecation_message: ''
 properties:
   - name: Debris.MaxItems
     summary: |
-      Historically the maximum number of items that can be assigned to the
+      The maximum number of items that can be assigned to the
       `Class.Debris` service at one time.
     description: |
       The maximum number of items that can be assigned to the Debris service at
@@ -81,7 +77,7 @@ properties:
       If this number is exceeded, objects are automatically removed in order
       from oldest to newest until the amount is less than or equal to MaxItems.
 
-      This property is currently restricted and will error if used.
+      This property is currently restricted and will error if set. The value is hardcoded to 1,000 items.
     code_samples:
     type: int
     tags:
@@ -102,64 +98,12 @@ methods:
       Allows the developer to schedule the removal of the object without
       yielding any code.
     description: |
-      Allows the developer to schedule the removal of the object without
-      yielding any code.
+      Allows the developer to schedule guaranteed destruction of the object without yielding.
 
       Registers a given `Class.Instance` to the `Class.Debris` service for
-      removal after the specified delay. The first argument is the object being
-      removed, and the second argument is the amount of time in seconds the
-      `Class.Debris` service will wait before removing the object. The delay
-      argument is optional, if it is not specified, it defaults to 10 seconds.
-      The delay argument is a number, so it accepts decimal points, such as
-      '1.5', or '0.25'.
+      removal within the specified lifetime. The first argument is the object being removed, and the second argument is the amount of time in seconds the `Class.Debris` service will attempt to wait before destroying the object. The lifetime argument is optional and defaults to 10 seconds if not specified. The delay argument is a number, so it also accepts decimal points, such as '1.5', or '0.25'.
 
-      #### Why use Debris?
-
-      Beyond creating a bit of a mess, objects that are no longer required can
-      use up system memory and cause the game to run slower over time. For this
-      reason it is always advised to run the `Class.Instance:Destroy()` function
-      on objects you no longer need. However in many cases an object may have a
-      specific period of utility after which it needs to be destroyed.
-
-      Take the example of projectile that has just been thrown. On first
-      thought, it could be cleaned up after 3 seconds using:
-      
-      ```lua
-      task.wait(3)
-      projectile:Destroy()
-      ```
-
-      However there are a number of issues with this approach. Firstly, it
-      requires yielding the code with a wait, which is not always desirable.
-      Secondly, before the 3 seconds have elapsed the object may have already
-      been destroyed (for example, if it reached
-      `Class.Workspace.FallenPartsDestroyHeight`). In this case, the code would
-      error as it tries to destroy an item that has already been destroyed. One
-      answer may be:
-
-      ```lua
-      task.delay(3, function()
-      	if projectile and projectile.Parent then
-      		projectile:Destroy()
-      	end
-      end)
-      ```
-
-      This solves the above issues, as it spawns a new thread to prevent the
-      current one from yielding and checks to see if it can be destroyed.
-      However at this point a simple command has already become quite
-      complicated and an unnecessary thread is being created.
-
-      This is where Debris comes in, and the following code addresses all of the
-      above issues.
-
-      ```lua
-      Debris:AddItem(projectile, 3)
-      ```
-
-      Debris does not yield the current thread, does not require a new thread
-      and will not error if the object is already destroyed. For this reason it
-      is the recommended method for cleaning up objects with a fixed lifetime.
+      If more than `Class.Debris.MaxItems` items are assigned to Debris, the oldest items will be destroyed instantly to make room for the new items. This means you should treat the lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris could be cleaned up before that time if `Class.Debris.MaxItems` other debris are added after it.
     code_samples:
       - Debris-AddItem
     parameters:
