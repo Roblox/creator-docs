@@ -17,11 +17,11 @@ To create a project with the **Baseplate** template:
 1. In the vertical navigation bar, select the **New** tab. All templates display.
 1. Select the **Baseplate** template. Studio opens a new experience.
 
-   <img src="../../../assets/tutorials/core-building-and-scripting/Templates-Baseplate.jpg" width="640" />
+   <img src="../../../assets/tutorials/core-building-and-scripting/Templates-Baseplate.jpg" alt="Studio's landing page interface with the Baseplate template highlighted." width="640" />
 
 1. In the **Explorer** window, right-click the **Baseplate** object. A contextual menu displays.
 1. Select **Delete**. The viewport displays an empty world with a spawn location in the middle.
 
-   <img src="../../../assets/tutorials/core-building-and-scripting/Baseplate-Deleted.jpg" width="81%" />
+   <img src="../../../assets/tutorials/core-building-and-scripting/Baseplate-Deleted.jpg" alt="A viewport view of the baseplate template without the baseplate. The spawn location is highlighted in the middle of the view." width="81%" />
 
 In the next section of the tutorial, you will learn how to use the Terrain Editor to create an island environment around the spawn location.

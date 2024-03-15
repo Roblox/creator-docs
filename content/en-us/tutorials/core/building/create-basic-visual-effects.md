@@ -104,7 +104,7 @@ To configure the sequences for `Class.ParticleEmitter.Size` and `Class.ParticleE
 1. Add points to the sequence by clicking on it, and move them until the window resembles the following example:
 
    <figure>
-   <img src="../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Size.png" width="888" />
+   <img src="../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Size.png" alt="A number sequence window where the size starts at 0 and grows slowly in the beginning of its lifetime, then quickly grows to a size of 10 and remains 10 for the duration of the lifetime." width="888" />
    <figcaption>The Y axis represents each particle's size and the X axis represents each particle's lifetime. The size starts at 0 and grows slowly in the beginning of its lifetime, then quickly grows to a size of 10 and remains 10 for the duration of the lifetime.</figcaption>
    </figure>
 
@@ -112,11 +112,11 @@ To configure the sequences for `Class.ParticleEmitter.Size` and `Class.ParticleE
 1. Add points to the sequence by clicking on it, and move them until the window resembles the following example:
 
    <figure>
-   <img src="../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Transparency.png" width="888" />
+   <img src="../../../assets/tutorials/core-building-and-scripting/Flare-NumberSequence-Transparency.png" alt="A number sequence window where the particle is visible (equal or close to 0) for the majority of its lifetime. As the particle approaches the end of its lifetime, its transparency value bounces up and down at different values, settling at 1 at the very end." width="888" />
    <figcaption>The particle is visible (equal or close to 0) for the majority of its lifetime. As the particle approaches the end of its lifetime, its transparency value bounces up and down at different values, settling at 1 at the very end.</figcaption>
    </figure>
 
-<img src="../../../assets/tutorials/core-building-and-scripting/Final-Flare.jpg" width="80%" />
+<img src="../../../assets/tutorials/core-building-and-scripting/Final-Flare.jpg" alt="The final version of the flare against a bright blue sky." width="80%" />
 
 ### Add a PointLight
 
@@ -133,7 +133,7 @@ A `Class.PointLight` is best for this to emit light spherically from the part at
    1. Set **Brightness** to **2** to make the light brighter.
    1. Set **Range** to **36** to increase the light's range.
 
-<img src="../../../assets/tutorials/core-building-and-scripting/Flare-With-PointLight.jpg" width="80%" />
+<img src="../../../assets/tutorials/core-building-and-scripting/Flare-With-PointLight.jpg" alt="The final version of the flare hovering over a gray cylinder sea stack. The flare emits a gentle glow over the sea stack." width="80%" />
 
 ## Create the Dust Particles
 
@@ -187,7 +187,7 @@ Here are the values for all other previously explained properties. Refer back to
    1. Set **Size** to the following `Datatype.NumberSequence`:
 
       <figure>
-      <img src="../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Size.png" width="888" />
+      <img src="../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Size.png" alt="A number sequence window where the size rises to 0.25 shortly after creation, then fades down gradually to 0." width="888" />
       <figcaption>The size rises to 0.25 shortly after creation, then fades down gradually to 0</figcaption>
       </figure>
 
@@ -195,7 +195,7 @@ Here are the values for all other previously explained properties. Refer back to
    1. Set **Transparency** to the following `Datatype.NumberSequence`:
 
       <figure>
-      <img src="../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Transparency.png" width="888" />
+      <img src="../../../assets/tutorials/core-building-and-scripting/DustMotes-NumberSequence-Transparency.png" alt="A number sequence window where the particle begins fully transparent, becomes randomly more opaque with an envelope of 0.1, then slowly fades out." width="888" />
       <figcaption>Begins fully transparent, becomes randomly more opaque (envelope of 0.1), then slowly fades out</figcaption>
       </figure>
 
@@ -208,6 +208,6 @@ Here are the values for all other previously explained properties. Refer back to
    1. Set **Acceleration** to **1, -1, 1** to make the particles gently float upwards.
 
 <figure>
-<img src="../../../assets/tutorials/core-building-and-scripting/Dust-Motes-Sky.jpg" />
+<img src="../../../assets/tutorials/core-building-and-scripting/Dust-Motes-Sky.jpg" alt="The final version of the dust particles against a bright blue sky." />
 <figcaption>Faint dust particles in the air looking up at the sky from the platforms</figcaption>
 </figure>

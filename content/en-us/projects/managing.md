@@ -27,7 +27,7 @@ define project settings:
 
 1. In the menu bar, select the **Home** tab, then click **Game Settings**. If you haven't saved your project, you are prompted to do so.
 
-   <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
+   <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Studio's Home tab with the Game Settings button highlighted." />
 
 2. Fill in the required fields for the **Basic Info** tab and click **Save**.
    This unlocks more tabs to define other project settings as
@@ -91,15 +91,10 @@ level design in Studio.
 
 A representation of the user can help designers understand the scale of their world and accommodate size-sensitive areas like hallways or doors. To insert a character model for this purpose:
 
-1. In the menu bar, select the **Avatar** tab, then click **[Rig
-   Builder](/studio/rig-builder)**.
-2. Select one of the rigs to insert it into your experience. While building,
-   position the rig near key areas to better understand the scale of a
-   construction.
+1. In the menu bar, select the **Avatar** tab, then click **[Rig Builder](/studio/rig-builder)**.
+2. Select one of the rigs to insert it into your experience. While building, position the rig near key areas to better understand the scale of a construction.
 
-<img
-src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-outside.png"
-/>
+<img src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-outside.png" alt="A rthro avatar stands next to a blocky avatar to demonstrate their scale in relation to a large house." />
 
 ### Grayboxing
 
@@ -116,11 +111,11 @@ Drive](/resources/the-mystery-of-duvall-drive).
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-inside.png" />
+    <img src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-inside.png" alt="A rthro and blocky avatar stand next to each other in a simple greybox map of a large foyer."/>
     <figcaption>Grayboxed map</figcaption>
   </figure>
   <figure>
-    <img src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-final.png" />
+    <img src="../assets/resources/mystery-of-duvall-drive/constructing-the-house/scale-final.png" alt="A rthro and blocky avatar stand next to each other in the complete map of a large foyer with high-quality assets and lighting."/>
     <figcaption>Finished map</figcaption>
   </figure>
 </GridContainer>
@@ -152,7 +147,7 @@ railings. All other objects like candles and bookshelves are `Class.MeshPart`
 objects. For more information, see [Meshes](../parts/meshes.md) and [External
 Modeling](/art/modeling).
 
-<img src="../assets/misc/Building-Best-Practices-Example-Parts.jpg" />
+<img src="../assets/misc/Building-Best-Practices-Example-Parts.jpg" alt="A library environment composed of both parts and meshes." />
 
 ### Applying Materials
 
@@ -202,7 +197,7 @@ Additionally, Roblox showcase experiences have documentation on how the latest f
 implemented. For instance, [Beyond the Dark
 Showcase](/resources/beyond-the-dark) and [The Mystery of Duvall Drive](../resources/the-mystery-of-duvall-drive/index.md) outline best practices such as asset packages, modular building, and more.
 
-<img src="../assets/resources/beyond-the-dark/building-architecture/Architecture-Overview.jpeg" />
+<img src="../assets/resources/beyond-the-dark/building-architecture/Architecture-Overview.jpeg" alt="An angled side view of the inside of a spaceship enviroment with high-quality assets, lighting, and special effects." />
 
 ## Using Plugins
 

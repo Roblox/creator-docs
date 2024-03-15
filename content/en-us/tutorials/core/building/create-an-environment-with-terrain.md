@@ -21,18 +21,17 @@ To create the island:
 
 1. In the menu bar, navigate to the **Home** tab, then click the **Terrain Editor** button. The **Terrain Editor** window displays.
 
-   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png" alt="Studio's Home tab with the Terrain Editor tool highlighted." width="800" />
 
 1. In the **Terrain Editor** window, click the **Edit** tab, then the **Draw** button.
 
-   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Draw.png" width="360" />
+   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Draw.png" alt="Studio's Terrain Editor window with both the Edit tab and Draw button highlighted." width="360" />
 
 1. In the **Brush Settings** and **Material Settings** sections, keep all default setting except for the following:
 
    <Grid container spacing={0} alignItems="flex-start">
     <Grid item>
-   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Draw-Settings.png" width="360" />
+   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Draw-Settings.png" alt="Studio's Draw tool settings for this step in the task. The Brush Mode's Add button is highlighted." width="360" />
    </Grid>
     <Grid item>
     - Set **Base Size** to **32**.
@@ -58,13 +57,13 @@ To shape the island:
 
 1. In the **Terrain Editor** window, click the **Flatten** button.
 
-   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Flatten.png" width="360" />
+   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Flatten.png" alt="Studio's Terrain Editor window with both the Edit tab and Flatten button highlighted." width="360" />
 
 1. In the **Brush Settings** section, keep all default setting except for the following:
 
    <Grid container spacing={0} alignItems="flex-start">
     <Grid item>
-   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" width="360" />
+   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" alt="Studio's Flatten tool settings for this step in the task."  width="360" />
    </Grid>
     <Grid item>
     - Set **Base Size** to **18**.
@@ -82,11 +81,11 @@ To shape the island:
 
 1. Navigate back to the **Terrain Editor** window, then click the **Sculpt** button.
 
-   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Sculpt.png" width="360" />
+   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Sculpt.png" alt="Studio's Terrain Editor window with both the Edit tab and Sculpt button highlighted." width="360" />
 
 1. In the **Brush Settings** and **Material Settings** sections, set **Material** to **Sand**, otherwise keep all default settings.
 
-   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Sculpt-Settings.png" width="360" />
+   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Sculpt-Settings.png" alt="Studio's Sculpt tool settings for this step in the task. The Brush Mode's Add button highlighted." width="360" />
 
 1. In the viewport, click and drag your mouse around the island's edges and below the water line to make
    the island look more natural.
@@ -110,7 +109,7 @@ To create the water around the island:
 
 1. In the **Terrain Editor** window, click the **Fill** button.
 
-   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Fill.png" width="360" />
+   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Fill.png" alt="Studio's Terrain Editor window with both the Edit tab and Fill button highlighted." width="360" />
 
 1. In the **Selection Settings** section,
    1. Set **Position** to **0, -15, 0** to ensure the water fills below the top of the island.
@@ -119,7 +118,7 @@ To create the water around the island:
 
    <Grid container spacing={0} alignItems="flex-start">
     <Grid item>
-   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Fill-Settings.png" width="360" />
+   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Fill-Settings.png" alt="Studio's Fill tool material settings for this step in the task. The Material Mode's Replace button, source material, and target material are highlighted." width="360" />
    </Grid>
    <Grid item>
     - Set **Material Mode** to **Replace**.
@@ -143,13 +142,13 @@ To apply materials to the island:
 
 1. In the **Terrain Editor**, click the **Paint** button.
 
-   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Paint.png" width="360" />
+   <img src="../../../assets/studio/terrain-editor/Edit-Tab-Paint.png" alt="Studio's Terrain Editor window with both the Edit tab and Paint button highlighted." width="360" />
 
 1. In the **Brush Settings** and **Material Settings** sections, keep all default setting except for the following:
 
    <Grid container spacing={0} alignItems="flex-start">
     <Grid item>
-   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Paint-Settings.png" width="360" />
+   <img src="../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Paint-Settings.png" alt="Studio's Paint tool settings for this step in the task. The material is highlighted." width="360" />
    </Grid>
    <Grid item>
     - Set **Material Mode** to **Paint**.
@@ -191,14 +190,12 @@ To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. Walk around the island and check out how it looks while playing. When you're
    done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="800" />
    <video controls loop muted>
    <source src="../../../assets/tutorials/create-an-environment-with-terrain/create-an-environment-with-terrain-walking.mp4" />
    </video>

@@ -15,7 +15,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 
 <center>Maple Leaf Tree</center>
 <figure>
-<center> <img src="../../assets/art/resources/Tree-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Tree-Resource.png" width="100%" alt="A green maple tree mesh"/> </center>
 </figure>
 <figure>
 A skinned tree model with the soil, branches, and leaves as separate meshes bound to a single armature. This is packaged with UV textures that can be applied with `Class.SurfaceAppearance`. This is an advanced version of the tree model used in the <a href="../../art/modeling/skinning-a-simple-mesh.md">Skinning a Simple Mesh</a> guide.
@@ -33,7 +33,7 @@ A skinned tree model with the soil, branches, and leaves as separate meshes boun
 
 <center>Shoebot</center>
 <figure>
-<center> <img src="../../assets/art/resources/Shoebot-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Shoebot-Resource.png" width="100%" alt="A white round robot with arms and orange trim."/> </center>
 </figure>
 <figure>
 A robot non-player character used in the <a href="https://www.roblox.com/games/7208091524/Beyond-the-Dark-Vistech-Showcase">Beyond The Dark</a> showcase.
@@ -51,7 +51,7 @@ A robot non-player character used in the <a href="https://www.roblox.com/games/7
 
 <center>Creature</center>
 <figure>
-<center> <img src="../../assets/art/resources/Creature-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Creature-Resource.png" width="100%" alt="A black and blue alien creature with tentacles."/> </center>
 </figure>
 <figure>
 Creature model from the <a href="https://www.roblox.com/games/7208091524/Beyond-the-Dark-Vistech-Showcase">Beyond The Dark</a> showcase. This model is made up of 11 meshes and over 50 bones.
@@ -80,7 +80,7 @@ The following include examples and templates utilizing Roblox's required [avatar
 
 <center>Fish Person</center>
 <figure>
-<center> <img src="../../assets/art/resources/Fish-Person-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Fish-Person-Resource.png" width="100%" alt="A blue-green scaly creature with a bulb-ish head ornament."/> </center>
 </figure>
 <figure>
 A rigged and skinned humanoid character model with a full body cage, facial animation rig, and associated PBR texture maps.
@@ -100,7 +100,7 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 
 <center>Goblin</center>
 <figure>
-<center> <img src="../../assets/art/resources/Goblin-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Goblin-Resource.png" width="100%" alt="A brown goblin with bright green eyes."/> </center>
 </figure>
 <figure>
 A rigged and skinned humanoid character model with a full body cage, facial animation rig.
@@ -120,7 +120,7 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 
 <center>Blocky</center>
 <figure>
-<center> <img src="../../assets/art/resources/Blocky-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Blocky-Resource.png" width="100%" alt="A colorless blocky-like character."/> </center>
 </figure>
 <figure>
 A Blocky character model with an animatable head and a full body cage.
@@ -143,7 +143,7 @@ A Blocky character model with an animatable head and a full body cage.
 
 <center>Lola</center>
 <figure>
-<center> <img src="../../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Lola-Resource.png" width="100%" alt="A pink-haired character complete with brown jacket, goggles, leggings, and pants."/> </center>
 </figure>
 <figure>
 A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
@@ -166,7 +166,7 @@ A skinned R15 character created from the <a href="../../art/modeling/skinning-a-
 
 <center>Tshirt - Uncaged</center>
 <figure>
-<center> <img src="../../assets/art/resources/Tshirt-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Tshirt-Resource.png" width="100%" alt="A tie-dye tshirt with a rainbow of colors in a general spiral toward the torso."/> </center>
 </figure>
 <figure>
 Uncaged example clothing ready for caging in a 3D modeling software.
@@ -185,7 +185,7 @@ Uncaged example clothing ready for caging in a 3D modeling software.
 
 <center>Clothing Examples</center>
 <figure>
-<center> <img src="../../assets/art/Generic-Icon.png" width="100%" /> </center>
+<center> <img src="../../assets/art/Generic-Icon.png" width="100%" alt=""/> </center>
 </figure>
 <figure>
 Caged 3D accessory models and associated PBR textures. Ready for import into Studio or in a modeling tool.
@@ -205,7 +205,7 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 
 <center>Classic Mannequin</center>
 <figure>
-<center> <img src="../../assets/art/resources/Body-Scale-Classic.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Body-Scale-Classic.png" width="100%" alt="A white untextured mannequin in the blocky style."/> </center>
 </figure>
 <figure>
 A blank mannequin using Roblox's [Classic](../../art/characters/specifications.md#classic) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
@@ -226,7 +226,7 @@ A blank mannequin using Roblox's [Classic](../../art/characters/specifications.m
 
 <center>Rthro Mannequin</center>
 <figure>
-<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Normal.png" width="100%" alt="A white untextured mannequin in a larger build humanoid style."/> </center>
 </figure>
 <figure>
 A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
@@ -247,7 +247,7 @@ A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specificati
 
 <center>Rthro Slender Mannequin</center>
 <figure>
-<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Body-Scale-Rthro-Slender.png" width="100%" alt="A white untextured mannequin in a slimmer build humanoid style."/> </center>
 </figure>
 <figure>
 A blank mannequin using Roblox's [Rthro Slender](../../art/characters/specifications.md#slender) proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
@@ -277,7 +277,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 
 <CardContent>
 <figure>
-<img src="../../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently round shaped head."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -297,7 +297,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 <CardContent>
 <figure>
-<img src="../../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently square shaped head."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -318,7 +318,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 <CardContent>
 <figure>
-<img src="../../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently elongated snout and mouth."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -339,7 +339,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <CardContent>
 
 <figure>
-<img src="../../assets/art/avatar/templates/SemiRealistic-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/SemiRealistic-Templates.png" width = "100%" alt="A male and female presenting pair with realistic body proportions and facial shape."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -360,7 +360,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <CardContent>
 
 <figure>
-<img src="../../assets/art/avatar/templates/Anime-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Anime-Templates.png" width = "100%" alt="A male and female presenting pair with larger anime-like eyes and prominently oval shaped faces."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -381,7 +381,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <CardContent>
 
 <figure>
-<img src="../../assets/art/avatar/templates/Caricature-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Caricature-Templates.png" width = "100%" alt="A humanoid cartoonish figure with exaggerated features, including a prominent forehead, nose, and chin."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -400,7 +400,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <CardContent>
 
 <figure>
-<img src="../../assets/art/avatar/templates/Stylized-Templates.png" width = "100%"/>
+<img src="../../assets/art/avatar/templates/Stylized-Templates.png" width = "100%" alt="A cartoonish figure with a round head and exaggerated forehead."/>
 </figure>
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../../art/characters/creating/index.md) for instructions.
@@ -426,7 +426,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 <center>R15 Rig and Attachments</center>
 <figure>
-<center> <img src="../../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" alt="A Blender visualization of bones and attachment meshes in a neutral humanoid pose."/> </center>
 </figure>
 <figure>
 Standard armature rig template for Blender. Use this template for rigging **bodies** and **clothing** items.
@@ -449,7 +449,7 @@ Standard armature rig template for Blender. Use this template for rigging **bodi
 
 <center>Cages for Clothing</center>
 <figure>
-<center> <img src="../../assets/art/resources/Clothing-Cage-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Clothing-Cage-Resource.png" width="100%" alt="A humanoid shaped mesh in a neutral A-pose."/> </center>
 </figure>
 <figure>
 Project files for creation, includes a full-body inner and outer cage mesh for creation of **clothing** items.
@@ -472,7 +472,7 @@ Project files for creation, includes a full-body inner and outer cage mesh for c
 
 <center>Cages for Bodies</center>
 <figure>
-<center> <img src="../../assets/art/resources/Body-Cages-Resource.png" width="100%" /> </center>
+<center> <img src="../../assets/art/resources/Body-Cages-Resource.png" width="100%" alt="A humanoid shaped mesh in a neutral A-pose. Each section of the mesh is colored differently based on the body part."/> </center>
 </figure>
 <figure>
 Project files for creation, includes the 15 individual body part cages required for caging your avatar **bodies**.
@@ -495,7 +495,7 @@ Project files for creation, includes the 15 individual body part cages required 
 
 <center>Combined Project Files</center>
 <figure>
-<center> <img src="../../assets/art/Generic-Icon.png" width="100%" /> </center>
+<center> <img src="../../assets/art/Generic-Icon.png" width="100%" alt="" /> </center>
 </figure>
 <figure>
 Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. <br /> <br /> Use this template to rig and cage bodies and clothing.
@@ -524,7 +524,7 @@ Template file containing all content from previous templates, includes rig skele
 
 <center>Blender Studio Plugin</center>
 <figure>
-<center> <img src="../../assets/art/Generic-Icon.png" width="100%" /> </center>
+<center> <img src="../../assets/art/Generic-Icon.png" width="100%" alt=""/> </center>
 </figure>
 <figure>
 Open-source Blender Studio add-on that allows you to upload assets directly from Blender to Studio.
@@ -544,7 +544,7 @@ Open-source Blender Studio add-on that allows you to upload assets directly from
 
 <center>Blender Validation Tool</center>
 <figure>
-<center> <img src="../../assets/art/Generic-Icon.png" width="100%" /> </center>
+<center> <img src="../../assets/art/Generic-Icon.png" width="100%" alt=""/> </center>
 </figure>
 <figure>
 Blender add-on for verifying avatar technical compatibility before importing into Studio.
@@ -563,7 +563,7 @@ Blender add-on for verifying avatar technical compatibility before importing int
 
 <center>Blender Calisthenics Tool</center>
 <figure>
-<center> <img src="../../assets/art/Generic-Icon.png" width="100%" /> </center>
+<center> <img src="../../assets/art/Generic-Icon.png" width="100%" alt=""/> </center>
 </figure>
 <figure>
 Blender add-on for checking skinning data on characters and clothing.
