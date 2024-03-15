@@ -1,5 +1,6 @@
 ---
-title: Scripting
+title
+: Scripting
 description: Scripting is event-driven and different for the client and server side.
 ---
 
