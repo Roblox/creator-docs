@@ -7,8 +7,8 @@ summary: |
   the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 description: |
-  The Debris service allows the developer to schedule guaranteed destruction of
-  the object without yielding, through the usage of the `Class.Debris:AddItem()`
+  The **Debris** service allows scheduling of guaranteed destruction of an
+  object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 
   As Debris is a service it must be created using the
