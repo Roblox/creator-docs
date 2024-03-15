@@ -56,10 +56,8 @@ description: |
   ```
 
   Note that `Class.Debris` has a hardcoded maximum of 1,000 objects, so if
-  more than 1,000 items are added through `Class.Debris:AddItem()|AddItem()`,
-  the oldest debris will be destroyed instantly to make room for new debris.
-  This means you should treat the `lifetime` parameter as a **maximum**
-  lifetime, not an exact lifetime.
+  more than 1,000 items are added, the oldest debris will be destroyed
+  instantly to make room for new debris.
 code_samples:
   - Debris-AddItem
 inherits:
@@ -99,25 +97,19 @@ properties:
 methods:
   - name: Debris:AddItem
     summary: |
-      Allows the developer to schedule guaranteed destruction of the object
-      without yielding.
+      Registers a given `Class.Instance` for removal within the specified
+      lifetime.
     description: |
-      Allows the developer to schedule guaranteed destruction of the object
-      without yielding.
+      Registers a given `Class.Instance` for removal within the specified
+      lifetime. After the `lifetime` argument has elapsed, the object is
+      destroyed in the same manner as `Class.Instance:Destroy()`. Note
+      that the `lifetime` argument is optional and defaults to 10 seconds.
 
-      Registers a given `Class.Instance` to the `Class.Debris` service for
-      removal within the specified lifetime. The first argument is the object
-      being destroyed, and the second argument is the amount of time in seconds
-      the `Class.Debris` service will attempt to wait before destroying the
-      object. The lifetime argument is optional and defaults to 10 seconds if
-      not specified. The delay argument is a number, so it also accepts decimal
-      points, such as '1.5', or '0.25'.
-
-      If more than `Class.Debris.MaxItems` items are assigned to Debris, the
-      oldest items will be destroyed instantly to make room for the new items.
-      This means you should treat the lifetime parameter as a maximum lifetime,
-      not an exact lifetime. Your debris could be cleaned up before that time if
-      `Class.Debris.MaxItems` other debris are added after it.
+      Note that `Class.Debris` has a hardcoded maximum of 1,000 objects,
+      so if more than 1,000 items are added, the oldest debris will be
+      destroyed instantly to make room for new debris. This means you
+      should treat the `lifetime` parameter as a **maximum** lifetime,
+      not an exact lifetime.
     code_samples:
       - Debris-AddItem
     parameters:
@@ -125,12 +117,12 @@ methods:
         type: Instance
         default:
         summary: |
-          The `Class.Instance` to be added to `Class.Debris`.
+          The `Class.Instance` to add to `Class.Debris`.
       - name: lifetime
         type: double
         default: 10
         summary: |
-          The number of seconds before the `Class.Instance` should be destroyed.
+          Number of seconds before the `Class.Instance` should be destroyed.
     returns:
       - type: void
         summary: ''
