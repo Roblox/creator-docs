@@ -11,21 +11,18 @@ description: |
   the object without yielding, through the usage of the `Class.Debris:AddItem()`
   method.
 
-  After the lifetime argument has elapsed (in seconds) the object is destroyed
-  in the same manner as `Class.Instance:Destroy()`.
-
   As Debris is a service it must be created using the
   `Class.ServiceProvider:GetService()` method.
 
-  #### Why use Debris?
+  #### Advantages
 
   Besides creating a bit of a mess, objects that are no longer required can use
-  up system memory and cause the game to run slower over time. For this reason
-  it is always advised to run the `Class.Instance:Destroy()` function on objects
-  you no longer need. However in many cases an object may have a specific period
-  of utility after which it needs to be destroyed.
+  up system memory and cause an experience to run slower over time. For this
+  reason, it's always advised to call `Class.Instance:Destroy()` on objects
+  you no longer need. In some cases, however, an object may have a specific
+  period of utility before it can be destroyed.
 
-  Take the example of a wall being smashed into individual bricks. If you want a
+  Consider a wall being smashed into individual bricks. If you want a
   brick to linger for 3 seconds before being destroyed, you can use the
   following code:
 
@@ -44,32 +41,25 @@ description: |
   end)
   ```
 
-  Or in one line:
-  
-  ```lua
-  task.delay(3, brick.Destroy, brick)
-  ```
+  While this solves the above issue by preventing the code from yielding, it
+  introduces a second drawback in that the scheduled callback will never run if
+  the script is disabled or destroyed before the callback runs.
 
-  While this solves the above issue by preventing the code from yielding, there
-  is a second drawback: The scheduled callback will never run if the script is
-  disabled or destroyed before the callback runs.
-
-  This is where Debris comes in. The following code addresses both of the
-  above issues:
+  This is where `Class.Debris` has a specific advantage, as it does not yield
+  the current thread and runs outside the context of the script, guaranteeing
+  the instance is eventually destroyed even if the script is disabled or
+  destroyed. The following code addresses both issues cited for
+  `Library.task.wait()` and `Library.task.delay()`:
 
   ```lua
   Debris:AddItem(brick, 3)
   ```
 
-  Debris does not yield the current thread and runs outside the context of the
-  script, so it guarantees the instance is eventually destroyed even if the
-  script is disabled or destroyed.
-
-  Debris also has a hardcoded `Class.Debris.MaxItems` value of 1,000 objects,
-  so if more than 1,000 debris is added, the oldest debris will be destroyed
-  instantly to make room for the new debris. This means you should treat the
-  lifetime parameter as a maximum lifetime, not an exact lifetime. Your debris
-  could be destroyed before that time if 1,000 other debris are added after it.
+  Note that `Class.Debris` has a hardcoded maximum of 1,000 objects, so if
+  more than 1,000 items are added through `Class.Debris:AddItem()|AddItem()`,
+  the oldest debris will be destroyed instantly to make room for new debris.
+  This means you should treat the `lifetime` parameter as a **maximum**
+  lifetime, not an exact lifetime.
 code_samples:
   - Debris-AddItem
 inherits:
