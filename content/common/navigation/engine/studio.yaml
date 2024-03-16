@@ -42,9 +42,13 @@ navigation:
       - title: Using MicroProfiler
         path: /studio/microprofiler/using-microprofiler
   - title: Developer Console
-    path: /studio/developer-console
-  - title: Script Profiler
-    path: /studio/optimization/scriptprofiler
+    section:
+      - title: Overview
+        path: /studio/developer-console
+      - title: Script Profiler
+        path: /studio/optimization/scriptprofiler
+      - title: Memory Usage
+        path: /studio/optimization/memory-usage
   - heading: UI Reference
   - title: Quick Access Tools
     path: /studio/quick-access

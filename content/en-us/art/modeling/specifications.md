@@ -31,11 +31,11 @@ Roblox supports third-party meshes with an internal rig, or skeleton structure t
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Custom-Puffer-Blender.png" />
+    <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Custom-Puffer-Blender.png" alt="A cartoon-ish low polygon model of a puffer fish."/>
     <figcaption>Generic rig model.</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Hierarchy-Custom-Blender-Bones.png" width="75%" />
+    <img src="../../assets/animation/importing-custom-3d-rigs/Rig-Hierarchy-Custom-Blender-Bones.png" width="75%" alt="The Outliner in Blender of the puffer fish model, showing the armature bone structure."/>
     <figcaption>Generic rig bone structure (Blender).</figcaption>
   </figure>
 </GridContainer>
@@ -72,7 +72,7 @@ For general use, see the following requirements for adding inner and outer cage 
 
 - **Naming Conventions** - The inner and outer cage must be named after the primary mesh object with **\_InnerCage** and **\_OuterCage** affixed.
 
-   <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" />
+   <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" alt="The Outliner in Blender showing two mesh objects called Tshirt_InnerCage and Tshirt_OuterCage."/>
 
 - **Outer Cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
 - **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.

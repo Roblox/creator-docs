@@ -1597,14 +1597,15 @@ methods:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1647,14 +1648,15 @@ methods:
           An array of tables describing the name and slot which each emote is
           equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1766,14 +1768,15 @@ methods:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1828,14 +1831,15 @@ methods:
           &ndash; OR &ndash; An array of tables describing the name and slot
           which each emote is equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1875,14 +1879,15 @@ events:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1929,14 +1934,15 @@ events:
           An array of tables describing the name and slot which each emote is
           equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None

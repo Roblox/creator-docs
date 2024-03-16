@@ -15,7 +15,7 @@ We are looking for projects with innovative gameplay, ambitious visual designs, 
 - Cross-platform, with mobile optimization in mind.
 - Social mechanics as key to the experience.
 - In-game avatars that reflect elements of the user's platform avatar identity.
-  Ability to leverage items that you can equip on platform avatars, like the ones you buy in the Marketplace .
+- Ability to leverage items that you can equip on platform avatars, like the ones you buy in the Marketplace.
 
 If you are accepted into the program, we will partner with you to define key deliverables for your project and provide funding based off of your progress towards these milestones.
 

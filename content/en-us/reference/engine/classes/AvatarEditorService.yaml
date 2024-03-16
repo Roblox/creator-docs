@@ -376,7 +376,7 @@ methods:
         summary: |
           Returns an array of item details with the following fields:
 
-          ````lua
+          ```lua
             {
               "AssetType" = "string",
               "CreatorName" = "string",
@@ -400,8 +400,9 @@ methods:
               "Price" = 0,
               "ProductId" = 0
             }
-          ```.
-          ````
+          ```
+
+          .
     tags:
       - Yields
     deprecation_message: ''
@@ -534,9 +535,9 @@ methods:
       | itemRestrictions | Limited or Unlimited  |
       | :--------------: | :-------------------: |
       |     `empty`      |       Unlimited       |
-      |  `collectible`   |      UGC Limited      |
-      |    `limited`     |    Roblox Limited     |
-      | `limitedUnique`  | Roblox Limited Unique |
+      |  `Collectible`   |      UGC Limited      |
+      |    `Limited`     |    Roblox Limited     |
+      | `LimitedUnique`  | Roblox Limited Unique |
     code_samples:
     parameters:
       - name: itemId

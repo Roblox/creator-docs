@@ -285,21 +285,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Studio.Automatically commit locked scripts when you save or publish to Roblox
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Script Editor
-    serialization:
-      can_load: true
-      can_save: true
   - name: Studio.Automatically trigger AI Code Completion
     summary: ''
     description: ''

@@ -48,11 +48,11 @@ When `Class.Bone` objects are used in animation, they affect the appearance of t
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/modeling/skinned-meshes/Rig-Constraint-Details.jpg" />
+    <img src="../../assets/modeling/skinned-meshes/Rig-Constraint-Details.jpg" alt="A translucent humanoid outline, showing various sphere points where the constraints exist."/>
     <figcaption>Constraint Details enabled</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/skinned-meshes/Rig-Bone-Visualization.jpg" />
+    <img src="../../assets/modeling/skinned-meshes/Rig-Bone-Visualization.jpg" alt="A translucent humanoid outline, showing 15 pink bones objects over various limbs."/>
     <figcaption>When using the Animation Editor</figcaption>
   </figure>
 </GridContainer>

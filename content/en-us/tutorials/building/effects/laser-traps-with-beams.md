@@ -73,10 +73,9 @@ Before you add a `Class.Beam` object to your blaster, it's important to configur
 
 To configure attachments for the laser beam:
 
-1. **(Optional)** Make attachments visible in the 3D space so that you can make accurate adjustments to their position and orientation.
+1. **(Optional)** Make attachment visual aids larger in the 3D space so that you can clearly visualize the start and end of the laser beam.
    1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
-   1. If it's not currently enabled, click **Constraint Details** to display attachment visual aids.
-   1. Set **Scale** to `2.5` to make the visualization of each attachment clearly visible. It's important to view attachments so that you can visualize the start and end of the laser beam.
+   1. Set **Scale** to `2.5` to make each attachment visual aid larger.
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="50%" />
 
@@ -107,7 +106,7 @@ To customize the beam:
 1. Insert a beam into **CollisionBox**.
    1. In the **Explorer** window, hover over **CollisionBox**, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **Beam**.
-1. Assign the collision box's attachments to the new Beam object.
+1. Assign the collision box's attachments to the new `Class.Beam` object.
    1. In the **Explorer** window, select the beam.
    1. In the **Properties** window,
       1. Set **Attachment0** to **StartAttachment**.
