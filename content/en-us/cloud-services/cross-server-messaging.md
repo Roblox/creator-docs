@@ -54,7 +54,7 @@ local MESSAGING_TOPIC = "FriendServerEvent"
 Players.PlayerAdded:Connect(function(player)
 	-- Publish to topic
 	local publishSuccess, publishResult = pcall(function()
-		local message = player.Name .. " joined server with 'JobId' of " .. game.JobId
+		local message = `{player.Name} joined server with 'JobId' of {game.JobId}`
 		MessagingService:PublishAsync(MESSAGING_TOPIC, message)
 	end)
 	if not publishSuccess then

@@ -29,20 +29,20 @@ Remember the first sentence you wrote for the story? Time to add that into the c
 
    **Original Placeholder**: _In a tree on a hill, lives the great wizard_ name1.
 
-5. Have the story variable store the string like below. Make sure to add a space after the last word but before the quotation mark.
+5. Have the story variable store the string like below, using backticks.
 
    ```lua
      -- Code story between the dashes
      -- =============================================
         local name1 = storyMaker:GetInput("What is your favorite name?")
 
-        local story = "In a tree on a hill lives the great wizard "
+        local story = `In a tree on a hill lives the great wizard `
      -- =============================================
    ```
 
 ## Adding the Name
 
-Next, the first string of the story needs to be combined with the player's answer. Combining things together is called **concatenation**. To combine the two strings together, use `..`
+Next, the first string of the story needs to be combined with the player's answer. Combining things together is called **concatenation**. To combine the two strings together, use `{}`.
 
 1. On the same line as the story variable, type ..
 
@@ -51,7 +51,7 @@ Next, the first string of the story needs to be combined with the player's answe
      -- =============================================
         local name1 = storyMaker:GetInput("What is your favorite name?")
 
-        local story = "In a tree on a hill lives the great wizard " ..
+        local story = `In a tree on a hill lives the great wizard, {}`
      -- =============================================
    ```
 
@@ -62,7 +62,7 @@ Next, the first string of the story needs to be combined with the player's answe
        -- =============================================
            local name1 = storyMaker:GetInput("What is your favorite name?")
 
-           local story = "In a tree on a hill lives the great wizard " .. name1
+           local story = `In a tree on a hill lives the great wizard, {name1}`
        -- =============================================
    ```
 
@@ -77,7 +77,7 @@ Now that the story is typed, it needs to be shown to players. T
      -- =============================================
          local name1 = storyMaker:GetInput("What is your favorite name?")
 
-         local story = "In a tree on a hill lives the great wizard " .. name1
+         local story = `In a tree on a hill lives the great wizard, {name1}`
      -- =============================================
 
 

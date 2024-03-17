@@ -146,7 +146,7 @@ You can assign a function, known as an **event handler**, to execute when an eve
 local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
-	print(player.Name .. " joined the game!")
+	print(`{player.Name} joined the game!`)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
@@ -167,7 +167,7 @@ end)
 -- Anonymous function in an event handler
 local Players = game:GetService("Players")
 Players.PlayerAdded:Connect(function(player)
-	print(player.Name .. " joined the game!")
+	print(`{player.Name} joined the game!`)
 end)
 ```
 

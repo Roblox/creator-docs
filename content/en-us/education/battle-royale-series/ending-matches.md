@@ -160,7 +160,7 @@ When the timer ends, fire the Match End event and send the matching end state va
 
      matchManager.prepareGame()
      local endState = matchEnd.Event:Wait()
-     print("Game ended with: " .. endState)
+     print(`Game ended with: {endState}`)
    end
    ```
 
@@ -518,7 +518,7 @@ while true do
 
 	matchManager.prepareGame()
 	local endState = matchEnd.Event:Wait()
-	print("Game ended with: " .. endState)
+	print(`Game ended with: {endState}`)
 end
 ```
 

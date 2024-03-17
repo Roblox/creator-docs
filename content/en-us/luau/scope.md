@@ -47,10 +47,10 @@ x = 0  -- Global variable "x"
 
 for i = 1, 4 do
 	x += 1
-	print("Global 'x' = " .. x)
+	print(`Global 'x' = {x}`)
 end
 
-print("Global 'x' = " .. x)
+print(`Global 'x' = {x}`)
 
 --[[ Resulting output:
 Global 'x' = 1
@@ -91,10 +91,10 @@ local x = 0  -- Local variable "x"
 
 for i = 1, 4 do
 	local x = 1  -- Different variable "x", local to this "for" loop
-	print("Loop 'x' = " .. x)
+	print(`Loop 'x' = {x}`)
 end
 
-print("Initial 'x' = " .. x)
+print(`Initial 'x' = {x}`)
 
 --[[ Resulting output:
 Loop 'x' = 1
@@ -164,5 +164,5 @@ end
 
 local fruit = getFruitByColor("Yellow")
 print(fruit) -- Lemon
-print(fruit .. ", not " .. fruitName) -- Lemon, not Chocolate
+print(`{fruit}, not {fruitName}`) -- Lemon, not Chocolate
 ```

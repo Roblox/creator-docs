@@ -97,7 +97,7 @@ local player = Players.LocalPlayer
 local bindableEvent = Instance.new("BindableEvent")
 local function onCustomACMAction(targetPlayer)
   -- At this point, you could call InvokeServer() on a RemoteFunction to alert the server of the selection
-  print("ACM event selected by " .. player.Name .. " on " .. targetPlayer.Name)
+  print(`ACM event selected by {player.Name} on {targetPlayer.Name}`)
 end
 bindableEvent.Event:Connect(onCustomACMAction)
 

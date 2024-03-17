@@ -23,7 +23,7 @@ To add more words or punctuation to the sentence, add another string using conca
      -- =============================================
         local name1 = storyMaker:GetInput("What is your favorite name?")
 
-        local story = "In a tree on a hill lives the great wizard " .. name1 .. ". "
+        local story = `In a tree on a hill lives the great wizard {name1}.`
      -- =============================================
    ```
 
@@ -41,7 +41,7 @@ To ask a second question, create a new question and keep adding to the same vari
       local name1 = storyMaker:GetInput("What is your favorite name?")
       local food1
 
-      local story = "In a tree on a hill lives the great wizard " .. name1 .. ". "
+      local story = `In a tree on a hill lives the great wizard {name1}.`
    ```
 
 3. Use `storyMaker:GetInput("")` to ask the player a question and store their answer.
@@ -50,16 +50,16 @@ To ask a second question, create a new question and keep adding to the same vari
       local name1 = storyMaker:GetInput("What is your favorite name?")
       local food1
 
-      local story = "In a tree on a hill lives the great wizard " .. name1 .. ". "
+      local story = `In a tree on a hill lives the great wizard {name1}.`
    ```
 
-4. In the story variable, concatenate the next story string using `..` Be sure to include a space after the end of the sentence.
+4. In the story variable, define a string using backticks. This allows to concatenate variables using `{}`.
 
    ```lua
    local name1 = storyMaker:GetInput("What is your favorite name?")
    local food1 = storyMaker:GetInput("What is your favorite food?")
 
-   local story = "In a tree on a hill lives the great wizard " .. name1 .. ". " .. "Every morning, the wizard loves eating a giant bowl of honey roasted "
+   local story = `In a tree on a hill lives the great wizard {name1}. Every morning, the wizard loves eating a giant bowl of honey roasted.`
    ```
 
    <Alert severity="info">
@@ -72,7 +72,7 @@ To ask a second question, create a new question and keep adding to the same vari
    local name1 = storyMaker:GetInput("What is your favorite name?")
    local food1 = storyMaker:GetInput("What is your favorite food?")
 
-   local story = "In a tree on a hill lives the great wizard " .. name1 .. ". " .. "Every morning, the wizard loves eating a giant bowl of honey roasted " .. food1 .. ". "
+   local story = `In a tree on a hill lives the great wizard {name1}. Every morning, the wizard loves eating a giant bowl of honey roasted {food1}.`
    ```
 
 ## Optional Additions
@@ -90,7 +90,8 @@ Also, below are some **tips and tricks** to make stories for fun for players.
 Variables can be used more than once — just use concatenation between strings where you want to include the word(s).
 
 **Example Code**:
-`"I am " .. name1 .. " and you are in the palace of " .. name1 .. "!"`
+```lua
+`I am {name1} and you are in the palace of {name1}!`
 
 **Result**:
 I am Sameth and you are in the palace of Sameth!

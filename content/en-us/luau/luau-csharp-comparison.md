@@ -563,9 +563,9 @@ void variableArguments(params string[] inventoryItems) {
 ### Named Arguments
 
 ```lua title='Named Arguments in Luau'
--- Named arguments
+-- Named arguments using
 local function namedArguments(args)
-	return args.name .. "'s birthday: " .. args.dob
+	return `{args.name}'s birthday: {args.dob}`
 end
 
 namedArguments{name="Bob", dob="4/1/2000"}

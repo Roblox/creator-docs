@@ -141,7 +141,7 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
 	if message.TextSource then
 		local player = Players:GetPlayerByUserId(message.TextSource.UserId)
 		if player:GetAttribute("IsVIP") then
-			properties.PrefixText = "<font color='#F5CD30'>[VIP]</font> " .. message.PrefixText
+			properties.PrefixText = `<font color='#F5CD30'>[VIP]</font> {message.PrefixText}`
 		end
 	end
 
@@ -217,7 +217,7 @@ local TextChatService = game:GetService("TextChatService")
 
 local generalChannel = TextChatService.TextChannels.RBXGeneral
 
-generalChannel:DisplaySystemMessage("[Server] Hello " .. Players.LocalPlayer.Name)
+generalChannel:DisplaySystemMessage(`[Server] Hello {Players.LocalPlayer.Name}`)
 ```
 
 ## Adding Chat Bubbles

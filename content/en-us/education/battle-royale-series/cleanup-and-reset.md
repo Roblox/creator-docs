@@ -112,7 +112,7 @@ Use a module function to take information from the correct end state, whether th
 
      if endState == gameSettings.endStates.FoundWinner then
        local winnerName = playerManager.getWinnerName()
-       statusToReturn = "Winner is : " .. winnerName
+       statusToReturn = `Winner is: {winnerName}`
      elseif endState == gameSettings.endStates.TimerUp then
        statusToReturn = "Time ran out!"
      else
@@ -129,7 +129,7 @@ Use a module function to take information from the correct end state, whether th
 
      if endState == gameSettings.endStates.FoundWinner then
        local winnerName = playerManager.getWinnerName()
-       statusToReturn = "Winner is : " .. winnerName
+       statusToReturn = `Winner is: {winnerName}`
      elseif endState == gameSettings.endStates.TimerUp then
        statusToReturn = "Time ran out!"
      else
@@ -500,7 +500,7 @@ function MatchManager.getEndStatus(endState)
 
 	if endState == gameSettings.endStates.FoundWinner then
 		local winnerName = playerManager.getWinnerName()
-		messageToReturn = "Winner is : " .. winnerName
+		messageToReturn = `Winner is: {winnerName}`
 	elseif endState == gameSettings.endStates.TimerUp then
 		messageToReturn = "Time ran out!"
 	else

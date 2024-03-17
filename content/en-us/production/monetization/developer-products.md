@@ -192,7 +192,7 @@ end)
 if developerProducts then
 	for _, developerProduct in developerProducts do
 		for field, value in developerProduct do
-			print(field .. ": " .. value)
+			print(`{field}: {value}`)
 		end
 	end
 end

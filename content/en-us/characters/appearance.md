@@ -241,7 +241,7 @@ if humanoid then
   local descriptionClone = humanoid:GetAppliedDescription()
   descriptionClone.Torso = 86500008
   -- Multiple face accessory assets are allowed in a comma-separated string
-  descriptionClone.FaceAccessory = descriptionClone.FaceAccessory .. ",2535420239"
+  descriptionClone.FaceAccessory = `{descriptionClone.FaceAccessory},2535420239`
   -- Apply modified "descriptionClone" to humanoid
   humanoid:ApplyDescription(descriptionClone)
 end
