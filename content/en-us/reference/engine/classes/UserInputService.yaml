@@ -29,7 +29,7 @@ description: |
   game can only detect their own input - and not the input of others.
 
   See also `Class.ContextActionService`, a service which allows you to bind
-  function to multiple user inputs.
+  functions to multiple user inputs.
 code_samples:
   - UserInputService
 inherits:
