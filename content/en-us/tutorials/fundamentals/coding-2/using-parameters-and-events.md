@@ -77,7 +77,7 @@ The actual information that gets passed through the parameter is called an **arg
    end
    ```
 
-### Use an Events to Call the Functions
+### Use an Event to Call the Function
 
 We want the function to run whenever something touches the part. To make that happen, connect the function to the `Touched` event. **Events** are things that happen in the experience. Like a player touching a part or losing health. When a function is connected to an event, the function runs whenever the event happens.
 
