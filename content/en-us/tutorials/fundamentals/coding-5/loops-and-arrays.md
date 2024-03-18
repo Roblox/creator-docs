@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-5/making-changes-to-arrays
 prev: /tutorials/fundamentals/coding-5/intro-to-arrays
 ---
 
-**Arrays** can be combined with loops, such as **while** or **for** loops, to repeat the same code for each indexed value. For example, teleporting each player in an array to a new place or making an array of parts catch fire.
+**Arrays** can be combined with loops, such as **while** and **for**, to repeat the same code for each indexed value. For example, teleporting each player in an array to a new place or making an array of parts catch fire.
 
 To explore looping through arrays, create a disappearing bridge path where parts are placed into an array and then made to vanish one by one.
 
@@ -28,9 +28,9 @@ For the project, find or create a set of three parts to make disappear. The part
 
    ```lua
    local pathArray = {
-    workspace.Part1,
-    workspace.Part2,
-    workspace.Part3,
+      workspace.Part1,
+      workspace.Part2,
+      workspace.Part3,
    }
    ```
 
@@ -43,23 +43,23 @@ Use a for loop to go through the array and control how fast the parts should dis
    ```lua
    local VANISH_RATE = 1.5
 
-    local pathArray = {
-    workspace.Part1,
-    workspace.Part2,
-    workspace.Part3
+   local pathArray = {
+      workspace.Part1,
+      workspace.Part2,
+      workspace.Part3
    }
    ```
 
    <Alert severity='info'>
-    Constant Variables are variables likely to need adjusting. They're put at the top of the script in ALL_CAPS to make them easy to spot. These variables shouldn't be changed by other code in the script. Another name for ALL_CAPS is SCREAMING_SNAKE_CASE.
+    Constant Variables are variables that shouldn't be changed by any other code in the script. They're likely to need adjusting and are put at the top of the script in ALL_CAPS to make them easy to spot. Another name for ALL_CAPS is SCREAMING_SNAKE_CASE.
    </Alert>
 
 2. Create a for loop with the following: **Start:** `partIndex = 1`, the index of the first value in the array. **End:** `#pathArray`, the size of that array.
 
    ```lua
-    for partIndex = 1, #pathArray  do
+   for partIndex = 1, #pathArray  do
 
-    end
+   end
    ```
 
 3. So there's a delay before a part disappears, in the loop, add a `Library.task.wait()` using `VANISH_RATE`.
@@ -100,14 +100,14 @@ Right now, the parts disappear forever. To make them reappear, create a second f
 1. After the first loop, add a `Library.task.wait()` to create a short delay before the path reappears.
 
    ```lua
-    for partIndex = 1, #pathArray  do
-       task.wait(VANISH_RATE)
-       local whichPart = pathArray[partIndex]
-       whichPart.CanCollide = false
-       whichPart.Transparency = 1
-    end
+   for partIndex = 1, #pathArray  do
+      task.wait(VANISH_RATE)
+      local whichPart = pathArray[partIndex]
+      whichPart.CanCollide = false
+      whichPart.Transparency = 1
+   end
 
-    task.wait(1)
+   task.wait(1)
    ```
 
 2. **On your own**, try coding a second for loop that makes the path useable again by changing each part's CanCollide property to true and Transparency to 0. When finished, check your work against the code below.
@@ -136,25 +136,25 @@ The parts disappear and reappear, but only once. To make the code keep repeating
 1. At the bottom of the script, create a new while true do loop. Then, **move both** for loops into the while loop.
 
    ```lua
-    while true do
+   while true do
       -- Make a part disappear from the array in order
-       for partIndex = 1, #pathArray  do
-          task.wait(VANISH_RATE)
-          local whichPart = pathArray[partIndex]
-          whichPart.CanCollide = false
-          whichPart.Transparency = 1
-       end
+      for partIndex = 1, #pathArray  do
+         task.wait(VANISH_RATE)
+         local whichPart = pathArray[partIndex]
+         whichPart.CanCollide = false
+         whichPart.Transparency = 1
+      end
 
-       -- Wait for a second before making the path reappear
-       task.wait(1)
+      -- Wait for a second before making the path reappear
+      task.wait(1)
 
-       -- Reset the path by making all parts walkable again
-       for partIndex = 1, #pathArray do
-          local whichPart = pathArray[partIndex]
-          whichPart.CanCollide = true
-          whichPart.Transparency = 0
-       end
-    end
+      -- Reset the path by making all parts walkable again
+      for partIndex = 1, #pathArray do
+         local whichPart = pathArray[partIndex]
+         whichPart.CanCollide = true
+         whichPart.Transparency = 0
+      end
+   end
    ```
 
 2. Check that once all parts disappear, they reappear.
@@ -163,17 +163,17 @@ The parts disappear and reappear, but only once. To make the code keep repeating
 
 A finished version of the project can be downloaded.
 
-```lua title="Completed script"
- local VANISH_RATE = 1.0
+   ```lua title="Completed script"
+   local VANISH_RATE = 1.0
 
- local pathArray = {
-    workspace.Part1,
-     workspace.Part2,
-    workspace.Part3,
- }
+   local pathArray = {
+      workspace.Part1,
+      workspace.Part2,
+      workspace.Part3,
+   }
 
- while true do
-    -- Make a part disappear from the array in order
+   while true do
+      -- Make a part disappear from the array in order
       for partIndex = 1, #pathArray  do
          task.wait(VANISH_RATE)
          local whichPart = pathArray[partIndex]
@@ -181,16 +181,16 @@ A finished version of the project can be downloaded.
          whichPart.Transparency = 1
       end
 
-    -- Wait for a second before making the path reappear
-    task.wait(1.0)
+      -- Wait for a second before making the path reappear
+      task.wait(1.0)
 
-    -- Reset the path by making all parts walkable again
-    for partIndex = 1, #pathArray do
-       local whichPart = pathArray[partIndex]
-       whichPart.CanCollide = true
-       whichPart.Transparency = 0
-    end
- end
+      -- Reset the path by making all parts walkable again
+      for partIndex = 1, #pathArray do
+         local whichPart = pathArray[partIndex]
+         whichPart.CanCollide = true
+         whichPart.Transparency = 0
+      end
+   end
 ```
 
 ## Arrays and ipairs()
@@ -206,23 +206,23 @@ This will be demonstrated by quickly adding particles to a whole folder of parts
 3. Use GetChildren() to automatically get an array listing all the objects in the folder.
 
    ```lua
-    local partsFolder = workspace.PartsFolder
-
-    -- Gets an array listing the parts in PartsFolder
-    local partsArray = partsFolder:GetChildren()
+   local partsFolder = workspace.PartsFolder
+   
+   -- Gets an array listing the parts in PartsFolder
+   local partsArray = partsFolder:GetChildren()
    ```
 
 4. Use `in ipairs(ArrayToUse)` with the for loop to go through partsArray and add particles.
 
    ```lua title="Completed script"
-    -- Gets an array listing the parts in PartsFolder
-    local partsArray = partsFolder:GetChildren()
-
-    -- Adds particles to every part in the array
-    for index, part in ipairs(partsArray) do
-       local particles = Instance.new("ParticleEmitter")
-       particles.Parent = part
-    end
+   -- Gets an array listing the parts in PartsFolder
+   local partsArray = partsFolder:GetChildren()
+   
+   -- Adds particles to every part in the array
+   for index, part in ipairs(partsArray) do
+      local particles = Instance.new("ParticleEmitter")
+      particles.Parent = part
+   end
    ```
 
 Playtest and watch the particles float up from every part in the folder.
