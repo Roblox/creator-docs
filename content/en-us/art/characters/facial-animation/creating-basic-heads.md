@@ -80,7 +80,7 @@ Your character must have an internal bone structure to drive the vertices of the
 
 ### RootFaceJoint
 
-The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This RootFaceJoint bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh.
+The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This root bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh. The RootFaceJoint bone object is commonly named "DynamicHead" in the reference templates and examples, but you can use any name as long as you [map the root bone](#mapping) in custom properties.
 
 To add a RootFaceJoint bone:
 
@@ -158,7 +158,7 @@ When adding bones, you can quickly create bones parented under the Face bone by 
 To add bones to the character eyelids:
 
 1. In **Edit Mode**, hold <kbd>Shift</kbd> and click both **eye bones** to select them.
-2. Press <kbd>Shift</kbd>+<kbd>D</kbd> and click to duplicate the bones in the same position. Do this four times to create 8 total new bones.
+2. Press <kbd>Shift</kbd><kbd>D</kbd> and click to duplicate the bones in the same position. Do this four times to create 8 total new bones.
 3. With **X-Axis mirror enabled**, position each bone at the corners of the eyes.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/6_Adding_And_Positioning_Eyelids.mp4">
@@ -249,7 +249,7 @@ You can create controls in many different ways. The following example uses **Bon
 
 To start creating face bone controls:
 
-1. In **Object Mode**, select the Joints armature and press <kbd>Shift</kbd>+<kbd>D</kbd> to duplicate the Joints armature object.
+1. In **Object Mode**, select the Joints armature and press <kbd>Shift</kbd><kbd>D</kbd> to duplicate the Joints armature object.
 2. Rename the new armature to **Controller**.
 3. In **Edit Mode**, select all non-face bones, right click and select **Delete Selected Bones**.
 4. Rename the bones to include **\_Con**, to denote them as controller bones. You can batch rename them with the following process:
@@ -426,7 +426,7 @@ To map your saved poses and the RootFaceJoint:
 9. In the field to the right of the custom property name:
    1. If you're mapping a base pose, input the corresponding [FACS base pose](./facs-poses-reference.md) or combination pose name exactly as it is spelled.
    2. If you're mapping a combination pose, input each base pose you are combining separated by an underscore, such as **Funneler_JawDrop_Pucker**.
-   3. If you're mapping the RootFaceJoint, input **Face**.
+   3. If you're mapping the RootFaceJoint, input the name of the face root bone, commonly **DynamicHead**.
 10. Press **Enter**.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/18_Mapping.mp4"></video>

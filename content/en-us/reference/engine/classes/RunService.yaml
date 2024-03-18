@@ -16,10 +16,11 @@ description: |
   for in-studio testing.
 
   RunService also houses events that allow your code to adhere to Roblox's
-  frame-by-frame loop, such as `Class.RunService.PreAnimation|PreAnimation`, `Class.RunService.PreSimulation|PreSimulation`,
+  frame-by-frame loop, such as `Class.RunService.PreAnimation|PreAnimation`,
+  `Class.RunService.PreSimulation|PreSimulation`,
   `Class.RunService.Heartbeat|Heartbeat` and
-  `Class.RunService.PreRender|PreRender`. Selecting the proper event to
-  use for any case is important, so you should read
+  `Class.RunService.PreRender|PreRender`. Selecting the proper event to use for
+  any case is important, so you should read
   [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
   informed decision.
 code_samples:
@@ -39,6 +40,23 @@ properties:
     type: string
     tags:
       - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: RunService.RunState
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RunState
+    tags:
+      - Hidden
       - NotReplicated
     deprecation_message: ''
     security:
@@ -579,8 +597,8 @@ methods:
     description: |
       Given a name of a function sent to
       `Class.RunService:BindToRenderStep()|BindToRenderStep`, this method will
-      unbind the function from being called during PreRender. This is used
-      to unbind bound functions once they are no longer needed, or when they no
+      unbind the function from being called during PreRender. This is used to
+      unbind bound functions once they are no longer needed, or when they no
       longer need to fire every _step_.
 
       If there is no bound function by the given name, this method takes no
@@ -642,7 +660,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PostSimulation
-    summary: 'Fires every _frame_ after the physics simulation has completed.'
+    summary: |
+      Fires every _frame_ after the physics simulation has completed.
     description: ''
     code_samples:
     parameters:
@@ -655,7 +674,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreAnimation
-    summary: 'Fires every _frame_ prior to the physics simulation but after rendering.'
+    summary: |
+      Fires every _frame_ prior to the physics simulation but after rendering.
     description: ''
     code_samples:
     parameters:
@@ -668,7 +688,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreRender
-    summary: 'Fires every _frame_ prior to the frame being rendered.'
+    summary: |
+      Fires every _frame_ prior to the frame being rendered.
     description: ''
     code_samples:
     parameters:
@@ -681,7 +702,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: RunService.PreSimulation
-    summary: 'Fires every _frame_ prior to the physics simulation.'
+    summary: |
+      Fires every _frame_ prior to the physics simulation.
     description: ''
     code_samples:
     parameters:

@@ -5,11 +5,10 @@ description: The Scavenger Hunt module gives players an inherently gamified way 
 
 The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives players an inherently gamified way to explore your experience, organically introducing them to the entire place. Player progress is persistent, so scavenger hunts can continue across sessions.
 
-<video src="../../assets/developer-modules/scavenger-hunt/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/scavenger-hunt/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-This module utilizes [data stores](../../cloud-services/datastores.md). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of the [Game&nbsp;Settings](../../studio/game-settings.md) window.
+This module utilizes [data stores](../../cloud-services/datastores.md). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window.
 </Alert>
 
 ## Module Usage
@@ -18,25 +17,25 @@ This module utilizes [data stores](../../cloud-services/datastores.md). To test 
 
 To use the **ScavengerHunt** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Scavenger Hunt** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **ScavengerHunt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ScavengerHunt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Move-Package.png" width="320" />
 
@@ -57,16 +56,20 @@ If you don't want to use the bundled mesh tokens, any `Class.Model` or `Class.Ba
 - Object has a `Class.CollectionService` tag of `ScavengerHuntPart`. If desired, the `Class.CollectionService` tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
 - Object contains a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the token is collected.
 
-  <GridContainer numColumns="2">
-   <figure>
+  <Grid container spacing={3}>
+	<Grid item>
+	<figure>
    <img src="../../assets/developer-modules/scavenger-hunt/Token-Model-Structure.png" width="320" />
    <figcaption>Model</figcaption>
    </figure>
-   <figure>
+	</Grid>
+	<Grid item>
+	<figure>
    <img src="../../assets/developer-modules/scavenger-hunt/Token-BasePart-Structure.png" width="320" />
    <figcaption>MeshPart</figcaption>
    </figure>
-  </GridContainer>
+	</Grid>
+	</Grid>
 
 <Alert severity="error">
 Remember that each token must have a unique name as a means of tracking player progress.
@@ -82,7 +85,7 @@ Regions differ slightly from tokens, as large areas that are marked as "collecte
 
 1. Create an anchored part around the region, such as a block or sphere. The module will automatically disable the `Class.BasePart.CanCollide|CanCollide` property on runtime so players do not physically collide with the region.
 1. Give it a **unique name**. This name is how the module tracks which regions each player has entered.
-1. Using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, apply the tag `ScavengerHuntPart` to the part so that `Class.CollectionService` detects it. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
+1. Using the [Tags](../../studio/properties.md#instance-tags) section of the part's properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools), apply the tag `ScavengerHuntPart` to the part so that `Class.CollectionService` detects it. If desired, the tag name which the module utilizes can be changed by setting a different value for `tokenTag` in a [configureServer](#configureserver) call.
 1. Include a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the region is entered.
 
    <img src="../../assets/developer-modules/scavenger-hunt/Region-Structure.png" width="320" />
@@ -217,12 +220,15 @@ end)
 
 #### configureClient
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configureClient(config: `Library.table`)
+</figcaption>
 
 Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
 <Tabs>
 <TabItem label="General">
+
 <table>
 <thead>
 	<tr>
@@ -309,8 +315,10 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Modals">
+
 <table>
 <thead>
 	<tr>
@@ -333,7 +341,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`modal.textColor`</td>
 		<td>Color of the text that appears in a modal (`Datatype.Color3`).</td>
-		<td>[255,&nbsp;255,&nbsp;255]</td>
+		<td>[255, 255, 255]</td>
 	</tr>
 	<tr>
 		<td>`modal.textSize`</td>
@@ -342,7 +350,7 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 	<tr>
 		<td>`useCustomModals`</td>
-		<td>If true, default modals are not displayed. This lets you show custom modals as outlined in [Custom&nbsp;GUI](#custom-gui).</td>
+		<td>If true, default modals are not displayed. This lets you show custom modals as outlined in [Custom GUI](#custom-gui).</td>
 		<td>false</td>
 	</tr>
 	<tr>
@@ -352,8 +360,10 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Navigation Beam">
+
 <table>
 <thead>
 	<tr>
@@ -371,7 +381,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`navigationBeam.color`</td>
 		<td>`Datatype.ColorSequence` defining the beam's color across its segments. See `Class.Beam.Color` for details.</td>
-		<td>[255,&nbsp;255,&nbsp;255]&nbsp;&rarr; [255,&nbsp;255,&nbsp;255]</td>
+		<td>[255, 255, 255] &rarr; [255,&nbsp;255,&nbsp;255]</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.curveSize0`</td>
@@ -426,7 +436,7 @@ Overrides default client-side configuration options through the following keys/v
 	<tr>
 		<td>`navigationBeam.transparency`</td>
 		<td>`Datatype.NumberSequence` defining the beam's transparency across its segments. See `Class.Beam.Transparency` for details.</td>
-		<td>(0,&nbsp;0)&nbsp;&rarr; (0.15,&nbsp;1)&nbsp;&rarr; (1,&nbsp;1)</td>
+		<td>(0, 0) &rarr; (0.15, 1) &rarr; (1, 1)</td>
 	</tr>
 	<tr>
 		<td>`navigationBeam.width0`</td>
@@ -445,6 +455,7 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 </Tabs>
 
@@ -468,7 +479,9 @@ ScavengerHunt.configureClient({
 
 #### configureServer
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configureServer(config: `Library.table`)
+</figcaption>
 
 Overrides default server-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
@@ -511,7 +524,9 @@ ScavengerHunt.configureServer({
 
 #### disable
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>disable():</InlineCode>`nil`</Typography>
+<figcaption>
+disable()
+</figcaption>
 
 Hides all UI for the scavenger hunt, disconnects all input event listeners, and prevents players from collecting tokens or interacting with regions. This function can only be called from a `Class.Script`.
 
@@ -525,7 +540,9 @@ ScavengerHunt.disable()
 
 #### enable
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>enable():</InlineCode>`nil`</Typography>
+<figcaption>
+enable()
+</figcaption>
 
 Shows all UI for the scavenger hunt, connects all input event listeners, and allows players to collect tokens and interact with regions. This function can only be called from a `Class.Script`.
 
@@ -541,14 +558,12 @@ ScavengerHunt.enable()
 
 #### collected
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>collected(player:</InlineCode>`Class.Player`<InlineCode>, itemName:</InlineCode>`Library.string`<InlineCode>, totalCollected:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a player collides with a token or enters a region. The connected function will receive the `Class.Player` that collided with the token or entered the region and the name of the token that was collided into or the region that was entered. This event can only be connected in a `Class.Script`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -579,14 +594,12 @@ end)
 
 #### allCollected
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>allCollected(player:</InlineCode>`Class.Player`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a player collects all tokens or enters all regions in the scavenger hunt. The connected function will receive the `Class.Player` that collected all tokens, and it is only ever fired once per player. This event can only be connected in a `Class.Script`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -609,8 +622,6 @@ end)
 
 #### showInfoModal
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showInfoModal():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to true. This event can only be connected in a `Class.LocalScript`.
 
 ```lua title='LocalScript' highlight='6-9'
@@ -626,8 +637,6 @@ end)
 ```
 
 #### showCompleteModal
-
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showCompleteModal():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the player clicks on the token tracker when the `useCustomModals` [configuration](#configureclient) option is set to `true` and the player has collected all tokens in the scavenger hunt. This event can only be connected in a `Class.LocalScript`.
 
@@ -647,12 +656,16 @@ end)
 
 #### hideOtherGuis
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+hideOtherGuis(callback: `function`)
+</figcaption>
 
-This callback runs immediately before a modal is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the modal is shown. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
+This callback runs immediately before a modal is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the modal is shown. See [GUI Visibility](#gui-visibility) for details and sample code.
 
 #### showOtherGuis
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+showOtherGuis(callback: `function`)
+</figcaption>
 
-This callback runs immediately after a modal has been dismissed, letting you enable entire `Class.ScreenGui|ScreenGuis` or elements within them. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
+This callback runs immediately after a modal has been dismissed, letting you enable entire `Class.ScreenGui|ScreenGuis` or elements within them. See [GUI Visibility](#gui-visibility) for details and sample code.

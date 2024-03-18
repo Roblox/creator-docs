@@ -15,7 +15,7 @@ description: |
   the advantage of needing to create much fewer animations for your game while
   giving your experience a more realistic and polished feel.
 
-  `Class.IKControl`s must be a child of a `Class.Humanoid` or
+  `Class.IKControl|IKControls` must be a child of a `Class.Humanoid` or
   `Class.AnimationController` with an `Class.Animator` and have all of their
   required properties set properly, otherwise they don't have any effect. The
   required properties are `Class.IKControl.Type|Type`,
@@ -43,8 +43,8 @@ description: |
   `Class.IKControl.EndEffector|EndEffector`. You can enable/disable it using
   `Class.IKControl.Enabled|Enabled` or change how much they have an effect over
   the underlying animation using the `Class.IKControl.Weight|Weight`. Be
-  careful: if you do not set up your `Class.IKControl`s correctly, you might
-  generate bad and unrealistic poses!
+  careful: if you do not set up your `Class.IKControl|IKControls` correctly, you
+  might generate bad and unrealistic poses!
 code_samples:
   - IKControl-Setup
 inherits:
@@ -114,9 +114,9 @@ properties:
       child, a `Class.Motor6D` directly, a `Class.Bone`, or a
       `Class.Attachment`. The pivot of the selected
       `Class.IKControl.EndEffector|EndEffector` moves to the
-      `Class.IKControl.Target|Target`, so you can use `Class.Attachment`s to
-      modify which point of a `Class.BasePart` should reach the
-      `Class.IKControl.Target|Target`.
+      `Class.IKControl.Target|Target`, so you can use
+      `Class.Attachment|Attachments` to modify which point of a `Class.BasePart`
+      should reach the `Class.IKControl.Target|Target`.
     code_samples: []
     type: Instance
     tags: []
@@ -136,12 +136,12 @@ properties:
       where it moves.
     description: |
       The end-effector offset is an additional `Datatype.CFrame` applied on top
-      of the `Class.IKControl.Target|Target`'s `Datatype.CFrame` that produces
-      the final `Datatype.CFrame` used to place the
+      of the `Class.IKControl.Target|Target` `Datatype.CFrame` that produces the
+      final `Datatype.CFrame` used to place the
       `Class.IKControl.EndEffector|EndEffector`. By default, it's the identity
       CFrame, so if you don't set it, it has no effect and the
       `Class.IKControl.EndEffector|EndEffector` uses the
-      `Class.IKControl.Target|Target`'s `Datatype.CFrame` directly, which is
+      `Class.IKControl.Target|Target` `Datatype.CFrame` directly, which is
       specified in the local space of the
       `Class.IKControl.EndEffector|EndEffector`.
 
@@ -172,12 +172,12 @@ properties:
       to change where the `Class.IKControl.EndEffector|EndEffector` moves.
     description: |
       The offset is an additional `Datatype.CFrame` applied on top of the
-      `Class.IKControl.Target|Target`'s `Datatype.CFrame` that produces the
-      final `Datatype.CFrame` used to place the
+      `Class.IKControl.Target|Target` `Datatype.CFrame` that produces the final
+      `Datatype.CFrame` used to place the
       `Class.IKControl.EndEffector|EndEffector`. It's identity by default, so if
       you don't set it, it has no effect and the
       `Class.IKControl.EndEffector|EndEffector` will use the
-      `Class.IKControl.Target|Target`'s `Datatype.CFrame` directly. You can
+      `Class.IKControl.Target|Target` `Datatype.CFrame` directly. You can
       animate it to create procedural animations such as typing on a keyboard.
       It's useful when the `Class.IKControl.Target|Target` and
       `Class.IKControl.EndEffector|EndEffector` aren't aligned and you need to

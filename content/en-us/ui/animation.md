@@ -561,7 +561,7 @@ The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a st
    ```
 
    <Alert severity="info">
-   If your experience's **source language** is not English (`"en"`), change the locale code for `SOURCE_LOCALE` to match the source language in [localization settings](../production/localization/accessing-localization-settings.md#accessing-the-settings-page).
+   If your experience's **source language** is not English (`"en"`), change the locale code for `SOURCE_LOCALE` to match the source language in [localization settings](../production/localization/index.md#localization-settings).
    </Alert>
 
 1. Create a `Class.TextLabel` in a suitable location, such as within a `Class.ScreenGui` parented to `Class.StarterGui`.

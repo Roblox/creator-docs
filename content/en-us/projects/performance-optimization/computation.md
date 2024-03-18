@@ -24,9 +24,7 @@ computation performance issues.
 The server heartbeat (frame rate) is capped at 60fps for all experiences, so
 values below that might indicate a performance issue. To check server heartbeat:
 
-- **With the [Developer Console](../../studio/developer-console.md)** - In the
-  **Server Jobs** tab, find the **Steps Per Sec** value, which represents the
-  heartbeat of your experience.
+- **With the [Developer Console](../../studio/developer-console.md)** - In the **Server Jobs** tab, find the **Steps Per Sec** value, which represents the heartbeat of your experience.
 - **With the server [MicroProfiler](../../studio/microprofiler/index.md)** -
   Look at the length of each frame to see if some are taking longer than 16.6ms
   (1 / 60).
@@ -34,17 +32,11 @@ values below that might indicate a performance issue. To check server heartbeat:
   The MicroProfiler is particularly useful for identifying 'spikes' in
   performance, where some frames take significantly than others to process.
 
-- **With the [Performance
-  Dashboard](../../production/analytics/performance.md)** - You can view
-  heartbeat values for production experiences.
+- **With the [Performance Dashboard](../../production/analytics/performance.md)** - You can view heartbeat values for production experiences.
 
-Another symptom of degraded server heartbeat is increased latency (commonly
-known as ping). The longer the server takes to finish computing its tasks each
-frame, the longer it takes to process network data sent and received from
-clients. To check average ping for all players connected to a server:
+Another symptom of degraded server heartbeat is increased latency (commonly known as ping). The longer the server takes to finish computing its tasks each frame, the longer it takes to process network data sent and received from clients. To check average ping for all players connected to a server:
 
-- **With the [Developer Console](../../studio/developer-console.md)** - Go to
-  the **Server Stats** tab in the **Developer Console**.
+- **With the [Developer Console](../../studio/developer-console.md)** - Go to the **Server Stats** tab.
 
 ### Client
 
@@ -61,7 +53,7 @@ graphics set to the automatic setting.
 
 To check the frame rate of your experience:
 
-- On the client, press `Shift + F5`.
+- On the client, press <kbd>Shift</kbd><kbd>F5</kbd>.
 - In Studio settings, under the **View** Tab, select **Stats** > **Summary** to
    enable debug stats. <Alert severity="warning"> Note, performance stats in
    Studio are skewed by the Studio application, so  you should view the frame
@@ -124,8 +116,8 @@ computation to be expensive.
 
 <table>
   <tr>
-    <th>**Scope**</th>
-    <th>**Associated Computation**</th>
+    <th>Scope</th>
+    <th>Associated Computation</th>
   </tr>
   <tr>
     <td>RunService.PreRender</td>
@@ -214,8 +206,8 @@ You can carry out the following tasks to help mitigate computation issues:
 
 <table>
   <tr>
-    <th>**Scope**</th>
-    <th>**Associated Computation**</th>
+    <th>Scope</th>
+    <th>Associated Computation</th>
   </tr>
   <tr>
     <td>physicsStepped</td>
@@ -317,9 +309,7 @@ something. Draw calls have significant overhead, and generally the fewer draw
 calls a frame the engine makes the less computational time is spent rendering a
 frame.
 
-You can see how many draw calls are currently occurring with the **Render
-Stats**>**Timing** item in Studio. You can view **Render Stats** in the client by
-pressing `Shift+F2`.
+You can see how many draw calls are currently occurring with the **Render Stats**&nbsp;&rarr; **Timing** item in Studio. You can view **Render Stats** in the client by pressing <kbd>Shift</kbd><kbd>F2</kbd>.
 
 The more objects that need to be drawn in your scene in a given frame, the more
 draw calls are made to the GPU. However, the Roblox engine utilizes a process

@@ -1,0 +1,13 @@
+name: NoiseType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: SimplexGabor
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''

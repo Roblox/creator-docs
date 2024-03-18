@@ -3,49 +3,27 @@ title: Scripts
 description: Scripts are containers that contain Luau code.
 ---
 
-Scripts are containers that hold Luau code and can modify the properties and
-behaviors of other objects. You can use scripts to implement the overall logic
-of your experience to do things like manipulate an object, change its appearance
-or events, or respond to user interactions.
+`Class.Script` objects are pieces of Luau code that can modify object behaviors and implement the overall logic of your experience. They can run on the client or server, depending on the functionality you're building. For example, a script that detects and acts on user input must run on the client, and a script that validates an in-experience consumable must run on the server.
 
-Scripts can run on the client or
-server, depending on the functionality you're building. For example, a script that
-detects and acts on user input must run on the client and a script that
-validates an in-game consumable must run on the server.
+Both server-side and client-side scripts can require `Class.ModuleScript` objects, which are [reusable modules](#module-scripts) for organizing and sharing code.
 
-## Types of Scripts
+There are two things to consider when writing scripts:
 
-Roblox has three types of scripts:
+Scripts have a `Class.Script.RunContext` property that sets whether the script runs on the client or server. There are three types of run context:
 
-- `Class.Script` for scripts that can run on the server.
-- `Class.LocalScript` for scripts that can run on a client.
-- `Class.ModuleScript` for reusable modules that can be included in server and
-  client scripts.
+- **Legacy** - lets the script run based on its parent container. Legacy is the default run context.
+- **Server** - lets the script run only on the server, regardless of its parent container.
+- **Client** - lets the script run only on the client, regardless of its parent container.
 
-To control where scripts run, see the [server](../projects/data-model.md#server),
-[client](../projects/data-model.md#client), and
-[replication](../projects/data-model.md#replication) sections of the data model
-documentation to understand the appropriate places to place your scripts,
-so the Roblox engine understands how to run and replicate them.
-
-## Creating Scripts
-
-To create script objects in the data model using the **Explorer** window in Studio:
-
-1. Hover over the parent container into which you want to insert a script.
-2. Click the **&CirclePlus;** button that appears to the right of the
-   container to open the **Insert Object** menu.
-3. Select the type of script you want to insert.
-4. Rename the script to reflect its purpose using `PascalCase`.
+Scripts need to reside in **script containers** in the data model. Based on the run context, you need to place the script in the right container. For more information, see the [server](../projects/data-model.md#server), [client](../projects/data-model.md#client), and [replication](../projects/data-model.md#replication) sections of the data model documentation.
 
 <Alert severity="info">
-See our [code samples](../samples/index.md) and [tutorials](../tutorials/index.md) for scripting
-examples.
+You can also use `Class.LocalScript` objects for client-side scripts, but we recommend using regular scripts with the run context setting to specify whether the script runs on the client or server.
 </Alert>
 
 ## Module Scripts
 
-`Class.ModuleScript` objects are reusable scripts that other script objects
+`Class.ModuleScript` objects are reusable modules that script objects
 load by calling the `Global.RobloxGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
 per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
@@ -129,7 +107,7 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
-If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, such as in a `Class.Script` and a `Class.LocalScript`, then the `Class.ModuleScript` returns a unique reference for each side.
+If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, then the `Class.ModuleScript` returns a unique reference for each side.
 
 ### Patterns
 
@@ -294,3 +272,18 @@ NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, .
 	print("Received RequestA from", player, ...)
 end)
 ```
+
+## Creating Scripts
+
+To create script objects in the Studio **Explorer** window:
+
+1. Hover over the parent container into which you want to insert a script.
+2. Click the **&CirclePlus;** button that appears to the right of the
+   container to open the **Insert Object** menu.
+3. Select the type of script you want to insert.
+4. Rename the script.
+
+<Alert severity="info">
+See our [code samples](../samples/index.md) and [tutorials](../tutorials/index.md) for scripting
+examples.
+</Alert>

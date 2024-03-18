@@ -28,10 +28,8 @@ description: |
   `Class.LocalScript`. As UserInputService is client-side only, users in the
   game can only detect their own input - and not the input of others.
 
-  See also:
-
-  - `Class.ContextActionService`, a service which allows you to bind functions
-    to multiple user inputs
+  See also `Class.ContextActionService`, a service which allows you to bind
+  functions to multiple user inputs.
 code_samples:
   - UserInputService
 inherits:
@@ -94,22 +92,9 @@ properties:
       gamepad.
     description: |
       This property describes whether the device being used by a user has an
-      available gamepad.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-
-      if userInputService.GamepadEnabled then
-      	print("Gamepad enabled")
-      else
-      	print("Gamepad not enabled")
-      end
-      ```
-
-      If gamepads are available, you can use
+      available gamepad. If gamepads are available, you can use
       `Class.UserInputService:GetConnectedGamepads()` to retrieve a list of
-      connected gamepads and `Class.UserInputService:GetNavigationGamepads()` to
-      retrieve a list of connected gamepads that also control navigation GUIs.
+      connected gamepads.
 
       As `Class.UserInputService` is client-side only, this property can only be
       used in a `Class.LocalScript`.
@@ -119,16 +104,13 @@ properties:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
       - `Class.UserInputService:GamepadSupports()`
     code_samples:
-      - UserInputService-GamepadDisconnected
+      - UserInputService-GetActiveGamepad
     type: bool
     tags:
       - ReadOnly
@@ -710,9 +692,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -769,9 +748,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -779,7 +755,7 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
+      - UserInputService-GetActiveGamepad
     parameters: []
     returns:
       - type: Array
@@ -942,9 +918,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -986,9 +959,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1224,7 +1194,6 @@ methods:
       - `Class.UserInputService:GetConnectedGamepads()`, to return all gamepads
         connected regardless of GUI navigational control
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters: []
     returns:
       - type: Array
@@ -1447,142 +1416,142 @@ methods:
         <tbody>
           <tr>
             <td><code>Enum.KeyCode.ButtonX</code></td>
-            <td><img src="/assets/scripting/controls/xboxX.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxX.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxX.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonY</code></td>
-            <td><img src="/assets/scripting/controls/xboxY.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxY.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxY.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonA</code></td>
-            <td><img src="/assets/scripting/controls/xboxA.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxA.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxA.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonB</code></td>
-            <td><img src="/assets/scripting/controls/xboxB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadLeft</code></td>
-            <td><img src="/assets/scripting/controls/dpadLeft.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadLeft.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadLeft.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadRight</code></td>
-            <td><img src="/assets/scripting/controls/dpadRight.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadRight.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadRight.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadUp</code></td>
-            <td><img src="/assets/scripting/controls/dpadUp.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadUp.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadUp.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.DPadDown</code></td>
-            <td><img src="/assets/scripting/controls/dpadDown.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/dpadDown.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/dpadDown.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonSelect</code></td>
-            <td><img src="/assets/scripting/controls/xboxView.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxView.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxView.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonStart</code></td>
-            <td><img src="/assets/scripting/controls/xboxmenu.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxmenu.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxmenu.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL1</code></td>
-            <td><img src="/assets/scripting/controls/xboxLB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR1</code></td>
-            <td><img src="/assets/scripting/controls/xboxRB.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRB.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRB.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL2</code></td>
-            <td><img src="/assets/scripting/controls/xboxLT.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR2</code></td>
-            <td><img src="/assets/scripting/controls/xboxRT.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRT.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRT.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonL3</code></td>
-            <td><img src="/assets/scripting/controls/xboxLS.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.ButtonR3</code></td>
-            <td><img src="/assets/scripting/controls/xboxRS.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRS.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRS.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick1</code></td>
-            <td><img src="/assets/scripting/controls/xboxLSDirectional.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxLSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxLSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Thumbstick2</code></td>
-            <td><img src="/assets/scripting/controls/xboxRSDirectional.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/xboxRSDirectional.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/xboxRSDirectional.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backspace</code></td>
-            <td><img src="/assets/scripting/controls/backspace.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/backspace.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/backspace.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Return</code></td>
-            <td><img src="/assets/scripting/controls/return.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/return.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/return.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.LeftShift</code></td>
-            <td><img src="/assets/scripting/controls/shift.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.RightShift</code></td>
-            <td><img src="/assets/scripting/controls/shift.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/shift.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/shift.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Tab</code></td>
-            <td><img src="/assets/scripting/controls/tab.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/tab.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/tab.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Apostrophe</code></td>
-            <td><img src="/assets/scripting/controls/apostrophe.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/apostrophe.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/apostrophe.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Comma</code></td>
-            <td><img src="/assets/scripting/controls/comma.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/comma.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/comma.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Backquote</code></td>
-            <td><img src="/assets/scripting/controls/graveaccent.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/graveaccent.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/graveaccent.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Period</code></td>
-            <td><img src="/assets/scripting/controls/period.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/period.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/period.png</code></td>
           </tr>
           <tr>
             <td><code>Enum.KeyCode.Space</code></td>
-            <td><img src="/assets/scripting/controls/spacebar.png" width="24" /></td>
+            <td><img src="../../../assets/scripting/controls/spacebar.png" width="24" /></td>
             <td><code>rbxasset://textures/ui/Controls/spacebar.png</code></td>
           </tr>
         </tbody>
@@ -1623,9 +1592,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1695,7 +1661,8 @@ methods:
         summary: |
           A `Datatype.CFrame` describing the position and orientation of the
           specified VR device.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1803,9 +1770,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
       - `Class.UserInputService:GetGamepadConnected()`
@@ -1952,8 +1916,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -1961,7 +1923,6 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadEnum
         type: UserInputType
@@ -2030,8 +1991,6 @@ methods:
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2196,7 +2155,6 @@ events:
       Since a Roblox game supports multiple controllers, this event is useful
       when paired with the `Class.UserInputService.GamepadDisconnected` event to
       track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetNavigationGamepads()` and
       `Class.UserInputService:GetConnectedGamepads()` to find the correct
       gamepad to use.
 
@@ -2222,9 +2180,6 @@ events:
 
       - `Class.UserInputService.GamepadDisconnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2232,7 +2187,6 @@ events:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2253,7 +2207,6 @@ events:
       Since a Roblox game supports multiple controllers, this event is useful
       when paired with the `Class.UserInputService.GamepadConnected` event to
       track which controllers/gamepads are active. You can also use
-      `Class.UserInputService:GetNavigationGamepads()` and
       `Class.UserInputService:GetConnectedGamepads()` to find the correct
       gamepad to use.
 
@@ -2276,9 +2229,6 @@ events:
 
       - `Class.UserInputService.GamepadConnected`
       - `Class.UserInputService:GetConnectedGamepads()`
-      - `Class.UserInputService:GetNavigationGamepads()`
-      - `Class.UserInputService:SetNavigationGamepad()`
-      - `Class.UserInputService:IsNavigationGamepad()`
       - `Class.UserInputService:IsGamepadButtonDown()`
       - `Class.UserInputService:GetSupportedGamepadKeyCodes()`
       - `Class.UserInputService:GetGamepadState()`
@@ -2286,7 +2236,6 @@ events:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GamepadDisconnected
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2347,7 +2296,7 @@ events:
       Interface device.
     description: |
       The InputChanged event fires when a user changes how they're interacting
-      via a Human-Computer Interface device (Mouse button down, touch begin,
+      via a Human-Computer Interface device (mouse button down, touch begin,
       keyboard button down, etc).
 
       To ignore events that are automatically handled by Roblox, like scrolling
@@ -2389,7 +2338,7 @@ events:
       Fires when a user stops interacting via a Human-Computer Interface device.
     description: |
       The InputEnded event fires when a user stops interacting via a
-      Human-Computer Interface device (Mouse button down, touch begin, keyboard
+      Human-Computer Interface device (mouse button down, touch begin, keyboard
       button down, etc). This is useful when tracking when a user releases a
       keyboard key, mouse button, touchscreen input, etc.
 
@@ -2745,7 +2694,7 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the position of the
+          An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the gesture.
       - name: state
         type: UserInputState
@@ -2890,8 +2839,8 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the positions of the
-          touches (e.g. fingers) involved in the gesture.
+          An array of `Datatype.Vector2` objects, indicating the positions of
+          the touches (e.g. fingers) involved in the gesture.
       - name: totalTranslation
         type: Vector2
         default:
@@ -3236,7 +3185,7 @@ events:
         type: Array
         default:
         summary: |
-          An array of `Datatype.Vector2`s, indicating the position of the
+          An array of `Datatype.Vector2` objects, indicating the position of the
           fingers involved in the tap gesture.
       - name: gameProcessedEvent
         type: bool
@@ -3346,7 +3295,8 @@ events:
         summary: |
           A `Datatype.CFrame` value indicating the updated CFrame of the body
           part that moved.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

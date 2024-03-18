@@ -12,7 +12,7 @@ description: |
   addition to a surface for each of its faces. By default, only the outline is
   visible.
 
-  <img src="/assets/legacy/SelectionBox.jpg" alt="A default SelectionBox adorned to a default Part"  />
+  <img src="../../../assets/legacy/SelectionBox.jpg" alt="A default SelectionBox adorned to a default Part"  />
   There are several properties available to configure the appearance of the
   cube. The outline can modified through the
   `Class.GuiBase3d.Color3|Color3`&dagger;,
@@ -43,11 +43,11 @@ properties:
       measured in studs, the same unit for `Class.BasePart.Size`. If set to 0,
       the outline will not be visible at all.
 
-      <img src="/assets/legacy/SelectionBox.LineThickness.jpg" alt="Three SelectionBoxes with LineThickness values of 0.075, 0.15 (default) and 0.3" />
+      <img src="../../../assets/legacy/SelectionBox.LineThickness.jpg" alt="Three SelectionBoxes with LineThickness values of 0.075, 0.15 (default) and 0.3" />
 
-      Pictured above are three default `Class.Part`s with default SelectionBoxes
-      applied to them. Their thicknesses from left-to-right are 0.075, 0.15
-      (default) and 0.3.
+      Pictured above are three default `Class.Part|Parts` with default
+      SelectionBoxes applied to them. Their thicknesses from left-to-right are
+      0.075, 0.15 (default) and 0.3.
 
       See also:
 

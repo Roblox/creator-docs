@@ -5,8 +5,7 @@ description: The Photo Booth module lets players strike a unique pose with a bac
 
 Taking a photo is a perfect way to commemorate a great experience. The **PhotoBooth** [developer module](../../resources/modules/index.md) is an easy-to-use photo staging tool which lets the players strike a unique pose with a background that represents their experience.
 
-<video src="../../assets/developer-modules/photo-booth/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/photo-booth/Showcase.mp4" controls width="100%"></video>
 
 ## Module Usage
 
@@ -14,25 +13,25 @@ width="100%" />
 
 To use the **PhotoBooth** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Photo Booth** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/photo-booth/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **PhotoBooth** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **PhotoBooth** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/photo-booth/Move-Package.png" width="320" />
 
@@ -156,12 +155,15 @@ end)
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
 <Tabs>
 <TabItem label="Appearance">
+
 <table>
 <thead>
 	<tr>
@@ -233,8 +235,10 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Behavior">
+
 <table>
 <thead>
 	<tr>
@@ -271,6 +275,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 </Tabs>
 
@@ -289,7 +294,9 @@ PhotoBooth.configure({
 
 #### setBackgrounds
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setBackgrounds(backgrounds:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+setBackgrounds(backgrounds: `Library.table`)
+</figcaption>
 
 Overrides the default backgrounds provided by the photo booth. Background images should be at 16:9 aspect ratio (1024&times;768) for an optimal experience and their asset IDs should be included in the backgrounds array. 1–4&nbsp;(inclusive) backgrounds can be provided.
 
@@ -308,8 +315,6 @@ PhotoBooth.setBackgrounds({
 
 #### countdownStarted
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>countdownStarted():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when the countdown starts. This event can only be connected in a `Class.LocalScript`.
 
 ```lua title='LocalScript' hightlight='5-7'
@@ -324,8 +329,6 @@ end)
 
 #### printoutShown
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>printoutShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when the printout is shown to the user. This event can only be connected in a `Class.LocalScript`.
 
 ```lua title='LocalScript' hightlight='5-7'
@@ -339,8 +342,6 @@ end)
 ```
 
 #### promptShown
-
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the printout is closed and the camera button is showing again. This event can only be connected in a `Class.LocalScript`.
 
@@ -358,12 +359,16 @@ end)
 
 #### hideOtherGuis
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>hideOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+hideOtherGuis(callback: `function`)
+</figcaption>
 
-This callback runs immediately before the printout is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the printout is shown. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
+This callback runs immediately before the printout is displayed, letting you disable entire `Class.ScreenGui|ScreenGuis` or elements within them before the printout is shown. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI Visibility](#gui-visibility) for details and sample code.
 
 #### showOtherGuis
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>showOtherGuis(callback:</InlineCode>`function`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+showOtherGuis(callback: `function`)
+</figcaption>
 
-This callback runs after the printout has been closed, letting you reenable entire `Class.ScreenGui|ScreenGuis` or elements within them. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI&nbsp;Visibility](#gui-visibility) for details and sample code.
+This callback runs after the printout has been closed, letting you reenable entire `Class.ScreenGui|ScreenGuis` or elements within them. GUIs used by the photo booth have the attribute **ShowInPhotoBooth** set to **true**. See [GUI Visibility](#gui-visibility) for details and sample code.

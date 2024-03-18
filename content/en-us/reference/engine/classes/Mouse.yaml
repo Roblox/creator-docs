@@ -24,7 +24,7 @@ description: |
     `Class.Mouse.TargetSurface|TargetSurface` properties. These can be useful
     for simple cases, but `Class.WorldRoot:Raycast()` should be used in more
     complicated [raycasting](../../../workspace/raycasting.md) scenarios.
-  - `Class.Plugin|Plugins` can use use `Class.Plugin:GetMouse()` to get a
+  - `Class.Plugin|Plugins` can use `Class.Plugin:GetMouse()` to get a
     `Class.PluginMouse`, which behaves similarly.
 
   ```lua
@@ -74,8 +74,8 @@ properties:
       local position = mouse.Hit.p
       ```
 
-      Hit is often used by `Class.Tool`s to fire a weapon towards the mouse in
-      third person.
+      Hit is often used by `Class.Tool|Tools` to fire a weapon towards the mouse
+      in third person.
 
       Developers looking for the `Class.BasePart` the mouse is pointing at
       should use `Class.Mouse.Target`.
@@ -121,7 +121,7 @@ properties:
       can_save: true
   - name: Mouse.Icon
     summary: |
-      The content ID of the image used as the `Class.Mouse`'s icon.
+      The content ID of the image used as the `Class.Mouse` icon.
     description: |
       **Icon** is a property that determines the image used as the pointer. If
       blank, a default arrow is used. While the cursor hovers over a
@@ -166,82 +166,82 @@ properties:
           </thead>
           <tbody>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-Pointer.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-Pointer.png" /></td>
                   <td><code>rbxasset://SystemCursors/Arrow</code></td>
                   <td>Default clicking and selection.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-PointingHand.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-PointingHand.png" /></td>
                   <td><code>rbxasset://SystemCursors/PointingHand</code></td>
                   <td>Hovering over an active link/button.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-OpenHand.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-OpenHand.png" /></td>
                   <td><code>rbxasset://SystemCursors/OpenHand</code></td>
                   <td>Hovering over a draggable item.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-GrabbingHand.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-GrabbingHand.png" /></td>
                   <td><code>rbxasset://SystemCursors/ClosedHand</code></td>
                   <td>Dragging an item.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-IBeam.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-IBeam.png" /></td>
                   <td><code>rbxasset://SystemCursors/IBeam</code></td>
                   <td>Hovering in a text field.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeNS.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNS.png" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNS</code></td>
                   <td>Hovering over a vertical resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeEW.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeEW.png" /></td>
                   <td><code>rbxasset://SystemCursors/SizeEW</code></td>
                   <td>Hovering over a horizontal resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeNESW.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNESW.png" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNESW</code></td>
                   <td>Hovering over a corner resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeNWSE.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNWSE.png" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNWSE</code></td>
                   <td>Hovering over a corner resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeAll.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeAll.png" /></td>
                   <td><code>rbxasset://SystemCursors/SizeAll</code></td>
                   <td>Hovering over a multi-direction resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeSplitV.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeSplitV.png" /></td>
                   <td><code>rbxasset://SystemCursors/SplitNS</code></td>
                   <td>Hovering over a vertical "split" handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-ResizeSplitH.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeSplitH.png" /></td>
                   <td><code>rbxasset://SystemCursors/SplitEW</code></td>
                   <td>Hovering over a horizontal "split" handle.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-Forbidden.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-Forbidden.png" /></td>
                   <td><code>rbxasset://SystemCursors/Forbidden</code></td>
                   <td>Hovering over a locked/forbidden item.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-Wait.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-Wait.png" /></td>
                   <td><code>rbxasset://SystemCursors/Wait</code></td>
                   <td>Indicating an action is in progress.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-Busy.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-Busy.png" /></td>
                   <td><code>rbxasset://SystemCursors/Busy</code></td>
                   <td>Indicating the system is busy.</td>
               </tr>
               <tr>
-                  <td><img src="/assets/legacy/Mouse-Icon-Crosshair.png" /></td>
+                  <td><img src="../../../assets/legacy/Mouse-Icon-Crosshair.png" /></td>
                   <td><code>rbxasset://SystemCursors/Cross</code></td>
                   <td>Hovering over a pinpoint selection area.</td>
               </tr>
@@ -266,11 +266,11 @@ properties:
   - name: Mouse.Origin
     summary: |
       A `Datatype.CFrame` positioned at the `Class.Workspace.CurrentCamera` and
-      oriented toward the `Class.Mouse`'s 3D position.
+      oriented toward the mouse's 3D position.
     description: |
       The origin `Class.Mouse` property is a `Datatype.CFrame` indicating where
       the mouse originated from. It is positioned at the
-      `Class.Workspace.CurrentCamera` and oriented toward the `Class.Mouse`'s 3D
+      `Class.Workspace.CurrentCamera` and oriented toward the mouse's 3D
       position.
 
       `Class.Mouse.UnitRay` starts at the same position as Origin, and extends
@@ -407,15 +407,13 @@ properties:
       can_save: true
   - name: Mouse.UnitRay
     summary: |
-      A `Datatype.Ray` directed towards the `Class.Mouse`'s world position,
-      originating from the `Class.Workspace.CurrentCamera|Camera`'s world
-      position.
+      A `Datatype.Ray` directed towards the mouse's world position, originating
+      from the `Class.Workspace.CurrentCamera` world position.
     description: |
-      The UnitRay property is a `Datatype.Ray` directed toward the
-      `Class.Mouse`'s position in 3D space (described by `Class.Mouse.Hit`). It
-      originates from the `Class.Camera.CFrame|CFrame` of the
-      `Class.Workspace.CurrentCamera`. Like all unit rays, it has a distance
-      of 1.
+      The UnitRay property is a `Datatype.Ray` directed toward the mouse's
+      position in 3D space (described by `Class.Mouse.Hit`). It originates from
+      the `Class.Camera.CFrame|CFrame` of the `Class.Workspace.CurrentCamera`.
+      Like all unit rays, it has a distance of 1.
 
       ```lua
       local Players = game:GetService("Players")

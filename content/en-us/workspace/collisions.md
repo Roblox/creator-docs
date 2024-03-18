@@ -35,7 +35,7 @@ end
 part.Touched:Connect(onTouched)
 ```
 
-Note that the `Class.BasePart.Touched|Touched` event can fire multiple times in quick succession based on subtle physical collisions, such as when a moving object "settles" into a resting position or when a collision involves a [multi‑part model](#model-collisions). To avoid triggering more `Class.BasePart.Touched|Touched` events than necessary, you can implement a simple debounce system which enforces a "cooldown" period through an instance [attribute](../studio/instance-attributes.md).
+Note that the `Class.BasePart.Touched|Touched` event can fire multiple times in quick succession based on subtle physical collisions, such as when a moving object "settles" into a resting position or when a collision involves a [multi‑part model](#model-collisions). To avoid triggering more `Class.BasePart.Touched|Touched` events than necessary, you can implement a simple debounce system which enforces a "cooldown" period through an instance [attribute](../studio/properties.md#instance-attributes).
 
 ```lua title='Part Collision With Cooldown' highlight='3, 6, 9-12'
 local part = workspace.Part
@@ -86,16 +86,16 @@ Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated grou
 
 You can easily set up collision groups through Studio's **Collision Groups Editor**, accessible by clicking the **Collision&nbsp;Groups** button in the [Model](../studio/model-tab.md) tab.
 
-<img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="815" alt="Collision Groups tool indicated in Model tab of Studio" />
+<img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="754" alt="Collision Groups tool indicated in Model tab of Studio" />
 
 The editor functions in either **List&nbsp;View** which favors [docking](../studio/customization.md#window-layout) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
 
 <Tabs>
   <TabItem label="List View">
-    <img src="../assets/studio/collision-groups-editor/List-View.png" width="750" height="180" alt="List View example in Collision Groups Editor" />
+    <img src="../assets/studio/collision-groups-editor/List-View.png" width="500" height="176" alt="List View example in Collision Groups Editor" />
   </TabItem>
   <TabItem label="Table View">
-    <img src="../assets/studio/collision-groups-editor/Table-View.png" width="750" height="180" alt="Table View example in Collision Groups Editor" />
+    <img src="../assets/studio/collision-groups-editor/Table-View.png" width="500" height="176" alt="Table View example in Collision Groups Editor" />
   </TabItem>
 </Tabs>
 
@@ -111,16 +111,16 @@ To create a new collision group:
 
    <Tabs>
    <TabItem label="List View">
-   <img src="../assets/studio/collision-groups-editor/New-Group-List-View.png" width="750" height="180" alt="New group added to Collision Groups Editor in List View" />
+   <img src="../assets/studio/collision-groups-editor/New-Group-List-View.png" width="500" height="220" alt="New group added to Collision Groups Editor in List View" />
    </TabItem>
    <TabItem label="Table View">
-   <img src="../assets/studio/collision-groups-editor/New-Group-Table-View.png" width="750" height="180" alt="New group added to Collision Groups Editor in Table View" />
+   <img src="../assets/studio/collision-groups-editor/New-Group-Table-View.png" width="500" height="220" alt="New group added to Collision Groups Editor in Table View" />
    </TabItem>
    </Tabs>
 
 1. Repeat the process if necessary, choosing a unique and descriptive name for each group. Note that you can change a group's name during development by clicking in its field, or by selecting it and clicking the **rename** button.
 
-   <img src="../assets/studio/collision-groups-editor/Rename-Group.png" width="360" alt="Button and field indicated for renaming a group in the Collision Groups Editor" />
+   <img src="../assets/studio/collision-groups-editor/Rename-Group.png" width="500" alt="Button and field indicated for renaming a group in the Collision Groups Editor" />
 
 </TabItem>
 <TabItem label="Scripting">
@@ -149,9 +149,9 @@ To assign objects to groups you've [created](#creating-groups) through the Studi
 1. Select one or more `Class.BasePart|BaseParts` that qualify as part of a collision group.
 1. Assign them to the group by clicking the **&CirclePlus;** button for its row. Objects can belong to only one collision group at a time, so placing them in a new group removes them from their current group.
 
-   <img src="../assets/studio/collision-groups-editor/Add-To-Group.png" width="360" alt="Plus button indicated in Collision Groups Editor for adding selected parts to a group" />
+   <img src="../assets/studio/collision-groups-editor/Add-To-Group.png" width="500" alt="Plus button indicated in Collision Groups Editor for adding selected parts to a group" />
 
-Once assigned, the new group is reflected under the object's **CollisionGroup** property.
+Once assigned, the new group is reflected under the object's `Class.BasePart.CollisionGroup|CollisionGroup` property.
 
 <img src="../assets/physics/collisions/BasePart-CollisionGroup.png" width="320" alt="Chosen collision group indicated as the part's CollisionGroup property" />
 </TabItem>
@@ -186,15 +186,15 @@ In the following example, objects in the **Cubes** group will **not** collide wi
 
 <Tabs>
   <TabItem label="List View">
-    <img src="../assets/studio/collision-groups-editor/Configure-Groups-List-View.png" width="750" height="158" alt="Group configured in List View of Collision Groups Editor" />
+    <img src="../assets/studio/collision-groups-editor/Configure-Groups-List-View.png" width="500" height="176" alt="Group configured in List View of Collision Groups Editor" />
   </TabItem>
   <TabItem label="Table View">
-    <img src="../assets/studio/collision-groups-editor/Configure-Groups-Table-View.png" width="750" height="158" alt="Group configured in Table View of Collision Groups Editor" />
+    <img src="../assets/studio/collision-groups-editor/Configure-Groups-Table-View.png" width="500" height="176" alt="Group configured in Table View of Collision Groups Editor" />
   </TabItem>
 </Tabs>
 </TabItem>
 <TabItem label="Scripting">
-To configure how objects in two collision groups interact, call `Class.PhysicsService:CollisionGroupSetCollidable()|CollisionGroupSetCollidable()`, providing the two collision groups and a boolean `true` (collidable) or `false` (non-collidable). If objects in the same group should or shouldn't collide with each other, use that group name for both the first and second parameters.
+To configure how objects in two collision groups interact, call `Class.PhysicsService:CollisionGroupSetCollidable()|CollisionGroupSetCollidable()`, providing the two collision groups and a boolean `true` (collidable) or `false` (non‑collidable). If objects in the same group should or shouldn't collide with each other, use that group name for both the first and second parameters.
 
 ```lua title="Collision Group Setup" highlight='15'
 local PhysicsService = game:GetService("PhysicsService")
@@ -216,6 +216,28 @@ PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
 
 </TabItem>
 </Tabs>
+
+#### StudioSelectable Collision Group
+
+Tools in Studio use the collision filtering system to determine which objects are candidates for selection when clicking in the 3D viewport. Objects whose assigned collision group does **not** collide with **StudioSelectable** will be ignored.
+
+For example, if you have checkpoints in a racing experience whose effective areas are defined by large transparent parts, you can assign them to a **Checkpoints** collision group and then make that group non‑collidable with **StudioSelectable** so that they don't get in the way when you're editing the underlying map geometry.
+
+<img src="../assets/studio/collision-groups-editor/StudioSelectable-Off.png" width="500" alt="Checkpoints group configured to be non-collidable with StudioSelectable group" />
+
+For plugin code, it's recommended that you assign `"StudioSelectable"` as the collision group filter of your `Datatype.RaycastParams` when finding parts under the cursor. This allows your plugins to match the selection mechanics that creators have learned to expect from built‑in Studio tools.
+
+```lua title="Recommended Plugin Selection Raycast"
+local UserInputService = game:GetService("UserInputService")
+
+local raycastParams = RaycastParams.new()
+raycastParams.CollisionGroup = "StudioSelectable"  -- To follow the convention
+raycastParams.BruteForceAllSlow = true  -- So that parts with CanQuery of "false" can be selected
+
+local mouseLocation = UserInputService:GetMouseLocation()
+local mouseRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
+local filteredSelectionHit = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
+```
 
 ### Part-to-Part Filtering
 
@@ -308,7 +330,7 @@ end
 
 The collision fidelity property has the following options, in order of fidelity and performance impact from lowest to highest:
 
-- **Box** — Creates a bounding collision box, ideal for small or non-interactive objects.
+- **Box** — Creates a bounding collision box, ideal for small or non‑interactive objects.
 - **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
 - **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
 - **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
@@ -335,4 +357,4 @@ The collision fidelity property has the following options, in order of fidelity 
 To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).

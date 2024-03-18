@@ -25,25 +25,25 @@ To see **EventSequencer** in action within an editable place, check out the [Con
 
 To use the **EventSequencer** framework in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md), open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Event Sequencer** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/event-sequencer/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **EventSequencer** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EventSequencer** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/event-sequencer/Move-Package.png" width="320" />
 
@@ -90,12 +90,12 @@ To get started quickly, you can find an empty scene inside the module's main fol
    <img src="../../assets/developer-modules/event-sequencer/ReplicatedStorage-BlankScene-Folder.png" width="320" />
 
    <Alert severity="warning">
-   While developing an event, you can alternatively place scenes elsewhere in the [Explorer](../../studio/explorer.md) hierarchy and tag them with **SequencerScene** using the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab (**BlankScene** is already tagged as such). However, you'll need to move all event-ready scenes to **ReplicatedStorage** in order for them to work within the overall event flow.
+   While developing an event, you can alternatively place scenes elsewhere in the [Explorer](../../studio/explorer.md) hierarchy and tag them with **SequencerScene** using the [Tags](../../studio/properties.md#instance-tags) section of their properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools) (**BlankScene** is already tagged as such). However, you'll need to move all event-ready scenes to **ReplicatedStorage** in order for them to work within the overall event flow.
    </Alert>
 
 #### Time Length
 
-Each scene should have a **time length**, in seconds, defining its duration &mdash; just like a movie or concert has a set duration. Time length is defined as a numeric [attribute](../../studio/instance-attributes.md) on the scene's folder named **TimeLength** which you can set directly in Studio or programmatically through `Class.Instance:SetAttribute()`.
+Each scene should have a **time length**, in seconds, defining its duration &mdash; just like a movie or concert has a set duration. Time length is defined as a numeric [attribute](../../studio/properties.md#instance-attributes) on the scene's folder named **TimeLength** which you can set directly in Studio or programmatically through `Class.Instance:SetAttribute()`.
 
 <Grid container spacing={3}>
 <Grid item>
@@ -189,8 +189,7 @@ You can use configurations in both the [Client](#client) and [Server](#server) m
 
 A unique feature of **EventSequencer** is the ability to "seek" around scenes as you might seek through a video. In [Replace Mode](#replace-mode), you can also switch between scenes to preview an entire multi-scene event before deploying it to production.
 
-<video src="../../assets/developer-modules/event-sequencer/Seek-Bar.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/event-sequencer/Seek-Bar.mp4" controls width="800"></video>
 
 **Scene seeking is not accessible to everybody** since users simply enjoying the event should not have the ability to control its time flow. Instead, you must grant seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them.
 
@@ -242,20 +241,17 @@ To install the plugin:
 
 1. From Studio's **View** menu, open the **Toolbox**.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-2. With the **Marketplace** tab selected, select **Plugins** from the dropdown menu.
+2. With the **Creator Store** tab selected, select **Plugins** from the dropdown menu.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Plugins.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Plugins.png" width="360" />
 
 3. In the search field, type **Scene Manager** and press <kbd>Enter</kbd> to locate the plugin.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Scene-Manager-Plugin.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Scene-Manager-Plugin.png" width="360" />
 
-4. Click the plugin's icon to view its details and then click the blue **Install** button.
-
-   <img src="../../assets/studio/toolbox/Install-Button.png" width="320" />
-
+4. Click the plugin's icon to view its details and then click the **Install** button.
 5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
 
 ### Loading and Unloading Scenes
@@ -306,10 +302,8 @@ The top-level `Class.Lighting` service stores all of a place's lighting properti
    <img src="../../assets/developer-modules/event-sequencer/Lighting-Service-Instances.png" width="320" />
 
 1. In the **Scene Manager** plugin window, click **Save Lighting** for the desired scene.
+1. Select and expand that scene's **Environment**/**Lighting** configuration and you'll see the same lighting properties as [attributes](../../studio/properties.md#instance-attributes) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
 
-   <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Save-Lighting.png" width="294" />
-
-1. Select and expand that scene's **Environment**/**Lighting** configuration and you'll see the same lighting properties as [attributes](../../studio/instance-attributes.md) of the folder, as well as cloned children of the top-level `Class.Lighting` service.
    <Grid container spacing={3}>
    <Grid item>
     <figure>
@@ -327,10 +321,8 @@ The top-level `Class.Lighting` service stores all of a place's lighting properti
 
    Once lighting properties and children are saved for a scene, you can quickly load them back into the top-level `Class.Lighting` service by clicking **Load Lighting** from the plugin window.
 
-   <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Load-Lighting.png" width="294" />
-
 <Alert severity="info">
-<p>If you want an environmental lighting effect like `Class.Atmosphere` to persist between scenes of a multi-scene event, place it in the top-level `Class.Lighting` service and assign it a boolean [attribute](../../studio/instance-attributes.md) of **SceneFrameworkIgnore** set to **true**.</p>
+<p>If you want an environmental lighting effect like `Class.Atmosphere` to persist between scenes of a multi-scene event, place it in the top-level `Class.Lighting` service and assign it a boolean [attribute](../../studio/properties.md#instance-attributes) of **SceneFrameworkIgnore** set to **true**.</p>
 <p>The framework also applies a **UseCurrentLighting** attribute to the top-level `Class.Lighting` service with a default of **false**. If set to **true**, the service's lighting overrides all scene-specific lighting during playtesting &mdash; however, scene lighting always takes precedence in a published event. As a real world analogy, this lets you stage a concert in full light before "turning down the lights" as the show begins.</p>
 </Alert>
 
@@ -343,16 +335,11 @@ Since `Class.Terrain` is a top-level class within `Class.Workspace`, you cannot 
    <img src="../../assets/developer-modules/event-sequencer/Terrain-Class.png" width="320" />
 
 1. In the **Scene Manager** plugin window, click **Save Terrain** for the desired scene.
-
-   <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Save-Terrain.png" width="294" />
-
 1. Select and expand that scene's **Environment**/**Terrain** folder and you'll see a **TerrainRegion** object which represents the saved terrain.
 
    <img src="../../assets/developer-modules/event-sequencer/Saved-Terrain-TerrainRegion.png" width="320" />
 
    Once terrain is saved for a scene, you can quickly load it back into the top-level `Class.Terrain` service by clicking **Load Terrain** from the plugin window.
-
-   <img src="../../assets/developer-modules/event-sequencer/Plugin-UI-Load-Terrain.png" width="294" />
 
 <Alert severity="warning">
 If a scene contains absolutely no terrain, you should still click **Save Terrain** for it. This saves an "empty" terrain region for the scene and effectively clears all terrain from any scene shown before it.
@@ -879,7 +866,9 @@ While **inform** is critical for [seeking](#seeking-and-switching-scenes) suppor
 
 #### loadScene
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>loadScene(sceneName:</InlineCode>`Library.string`<InlineCode>, startTime:</InlineCode>`number`<InlineCode>?)</InlineCode></Typography>
+<figcaption>
+loadScene(sceneName: `Library.string`, startTime: `number` ?)
+</figcaption>
 
 Programmatically loads a scene by `sceneName` and starts it at `startTime` from its beginning. There will be a 5 second "grace period" for the scene to load from the server before the seek occurs and the scene starts playing. This means that if you call `loadScene("[SceneName]", 20)` at exactly 4:15:00 PM, the framework will wait 5 seconds in addition to the requested 20, kicking off the scene at 4:15:25 PM.
 
@@ -909,7 +898,9 @@ Do not call `loadScene` from within a schema [lifecycle hook](#schema-lifecycle-
 
 #### createSchema
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>createSchema():</InlineCode>`Library.table`</Typography>
+<figcaption>
+createSchema(): `Library.table`
+</figcaption>
 
 Returns an instance of the scene [schema](#scene-schemas) to create logic for the scene.
 
@@ -927,7 +918,9 @@ end
 
 #### seek
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>seek(time:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+seek(time: `number`)
+</figcaption>
 
 Seeks to the `time` value, in seconds, from the currently loaded scene's beginning.
 
@@ -945,7 +938,9 @@ Do not call `seek` from within a schema [lifecycle hook](#schema-lifecycle-hooks
 
 #### setSceneWarningTime
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSceneWarningTime(endSceneTimeWindow:</InlineCode>`number`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+setSceneWarningTime(endSceneTimeWindow: `number`)
+</figcaption>
 
 Sets the amount of time from the **end** of all scenes at which a warning is dispatched. You can detect the warning either client-side through [onSceneEndingWarningForClient](#onsceneendingwarningforclient) or server-side through [onSceneEndingWarningForServer](#onsceneendingwarningforserver).
 
@@ -968,13 +963,17 @@ end)
 
 #### setSeekingPermissions
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setSeekingPermissions(permissions:</InlineCode>`Library.table`<InlineCode>)</InlineCode></Typography>
+<figcaption>
+setSeekingPermissions(permissions: `Library.table`)
+</figcaption>
 
 Grants seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them. See [Seeking and Switching Scenes](#seeking-scenes) for more information.
 
 #### getCurrentSceneEnvironment
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentSceneEnvironment():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
+<figcaption>
+getCurrentSceneEnvironment(): `Class.Folder` **(YIELDS)**
+</figcaption>
 
 Returns the current scene's client-side or server-side [Environment](#environment) folder, depending on whether it's called from the [Client](#client) schema script or [Server](#server) schema script respectively.
 
@@ -1027,7 +1026,9 @@ end
 
 #### getCurrentServerEnvironmentFromClient
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCurrentServerEnvironmentFromClient():</InlineCode>`Class.Folder` <InlineCode>YIELDS</InlineCode></Typography>
+<figcaption>
+getCurrentServerEnvironmentFromClient(): `Class.Folder` **(YIELDS)**
+</figcaption>
 
 Returns the current scene's **server-side** [Environment](#environment) folder. Unlike [getCurrentSceneEnvironment](#getcurrentsceneenvironment), you can call this from the [Client](#client) schema script.
 
@@ -1058,7 +1059,9 @@ end
 
 #### isLoadingScene
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>isLoadingScene():</InlineCode>`boolean`</Typography>
+<figcaption>
+isLoadingScene(): `boolean`
+</figcaption>
 
 Called from the server to know if a scene is currently loading.
 
@@ -1083,8 +1086,6 @@ print("Scene loaded")
 
 #### onSceneEndingWarningForClient
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires on the client before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.LocalScript`.
 
 ```lua title='LocalScript' highlight='6,8'
@@ -1100,8 +1101,6 @@ end)
 
 #### onSceneEndingWarningForServer
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneEndingWarningForServer():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires on the server before the scene is about to end. The default time is 3 seconds, but you can configure it through [setSceneWarningTime](#setscenewarningtime). This event can only be connected in a `Class.Script`.
 
 ```lua title='Script' highlight='6,8'
@@ -1116,8 +1115,6 @@ end)
 ```
 
 #### onSceneLoadedForClient
-
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onSceneLoadedForClient():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the client when the scene is starting. This event can only be connected in a `Class.LocalScript`.
 
@@ -1137,8 +1134,6 @@ end)
 ```
 
 #### onOrchestrationFinished
-
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onOrchestrationFinished():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires on the server when a scene has reached its [time length](#time-length) and has effectively ended. This event receives an `endedSceneName` string name argument for the scene that just finished and you can chain off this event to conditionally [load another scene](#loadscene). Can only be connected in a `Class.Script`.
 

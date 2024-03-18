@@ -20,8 +20,7 @@ This module includes the following features:
 </tbody>
 </table>
 
-<video src="../../assets/developer-modules/social-interactions/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/social-interactions/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
 The body orientation feature uses `Datatype.CFrame` adjustment of the **Neck** and **Waist** joints on the character, meaning that custom rigs must include `Class.Motor6D` objects of the same name for the module to work properly.
@@ -33,25 +32,25 @@ The body orientation feature uses `Datatype.CFrame` adjustment of the **Neck** a
 
 To use the **SocialInteractions** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Social Interactions** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/social-interactions/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **SocialInteractions** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SocialInteractions** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/social-interactions/Move-Package.png" width="320" />
 
@@ -196,7 +195,9 @@ SocialInteractions.setTriggerWordsForChatAnimation("rbxassetid://5911729486", {"
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`.
 
@@ -246,7 +247,9 @@ SocialInteractions.configure({
 
 #### setTriggerWordsForChatAnimation
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setTriggerWordsForChatAnimation(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWords:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+setTriggerWordsForChatAnimation(animationId: `Library.string`, triggerWords: `Library.table`)
+</figcaption>
 
 Registers a new animation in the chat animation feature. Typing any word that matches a string pattern included in the `triggerWords` table will activate the animation whose ID is passed as the first parameter.
 
@@ -268,14 +271,12 @@ SocialInteractions.setTriggerWordsForChatAnimation(
 
 #### onChatAnimationPlayed
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>onChatAnimationPlayed(animationId:</InlineCode>`Library.string`<InlineCode>, triggerWord:</InlineCode>`Library.string`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a chat animation plays. The connected function receives the animation ID and the word that triggered the animation as its arguments. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>

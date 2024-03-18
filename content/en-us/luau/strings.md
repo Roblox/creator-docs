@@ -1,6 +1,6 @@
 ---
 title: Strings
-description: Strings are sequence of characters, such as letters, numbers, and symbols.
+description: A sequence of characters, such as letters, numbers, and symbols.
 ---
 
 The **string** data type is a sequence of characters, such as letters, numbers, and symbols. It's the data type for storing most text-based information.
@@ -118,10 +118,11 @@ print(string2)  --> Hello	world!
 
 ## String Interpolation
 
-Luau supports string interpolation, a feature that lets you insert expressions into strings. Use backticks (`` ` ``) to declare an interpolated string. Then add expressions inside of curly brackets:
+Luau supports **string interpolation**, a feature that lets you insert expressions into strings. Use backticks (`` ` ``) to declare an interpolated string, then add expressions inside of curly brackets:
 
 ```lua
 local world = "world"
+
 local string1 = `Hello {world}!`
 print(string1)  --> Hello world!
 ```
@@ -131,9 +132,10 @@ Although variables are the most common usage, you can use any expression, includ
 ```lua
 local world = "world"
 local number = 1
+local letters = {"w", "o", "r", "l", "d"}
+
 local string1 = `Hello {world}, {number} time!`
 local string2 = `Hello {world}, {number + 1} times!`
-local letters = {"w", "o", "r", "l", "d"}
 local string3 = `Hello {table.concat(letters)} a third time!`
 
 print(string1)  --> Hello world, 1 time!

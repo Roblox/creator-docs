@@ -5,8 +5,7 @@ description: The Emote Bar module aims to provide players an accessible, customi
 
 Emotes are a core component of any social experience. The **EmoteBar** [developer module](../../resources/modules/index.md) aims to provide players an accessible, customizable way to facilitate meaningful social interaction.
 
-<video src="../../assets/developer-modules/emote-bar/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/emote-bar/Showcase.mp4" controls width="100%"></video>
 
 ## Module Usage
 
@@ -14,25 +13,25 @@ width="100%" />
 
 To use the **EmoteBar** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Emote Bar** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/emote-bar/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **EmoteBar** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **EmoteBar** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/emote-bar/Move-Package.png" width="320" />
 
@@ -84,7 +83,7 @@ A **mega emote** is formed when multiple players in the same area perform the sa
 
 ### Tempo
 
-An emote's **tempo** is the speed at which it plays when its button is tapped once. The default speed of an emote is determined by its [`defaultTempo`](#setemotes). An emote's speed can be increased or decreased by tapping its button faster or slower.
+An emote's **tempo** is the speed at which it plays when its button is tapped once. The default speed of an emote is determined by its `defaultTempo`. An emote's speed can be increased or decreased by tapping its button faster or slower.
 
 ## API Reference
 
@@ -168,7 +167,9 @@ EmoteBar.configureClient({
 
 #### configureServer
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureServer(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configureServer(config: `Library.table`)
+</figcaption>
 
 Overrides default server-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -227,12 +228,15 @@ EmoteBar.configureServer({
 
 #### configureClient
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configureClient(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configureClient(config: `Library.table`)
+</figcaption>
 
-Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`. Depending on the value of [`guiType`](#emotebarguitype), options in the noted tabs also apply.
+Overrides default client-side configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.LocalScript`. Depending on the value of `guiType`, options in the noted tabs also apply.
 
 <Tabs>
 <TabItem label="General">
+
 <table>
 <thead>
 	<tr>
@@ -244,8 +248,8 @@ Overrides default client-side configuration options through the following keys/v
 <tbody>
 	<tr>
 		<td>`guiType`</td>
-		<td>Controls which form the GUI will take for displaying emotes ([`EmoteBar.GuiType`](#emotebarguitype)).</td>
-		<td>[`EmoteBar`](#emotebarguitype)</td>
+		<td>Controls which form the GUI will take for displaying emotes ([EmoteBar.GuiType](#emotebarguitype)).</td>
+		<td>[EmoteBar](#emotebarguitype)</td>
 	</tr>
 	<tr>
 		<td>`useTempo`</td>
@@ -264,9 +268,10 @@ Overrides default client-side configuration options through the following keys/v
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Bar">
-If the value of [`guiType`](#emotebarguitype) is `EmoteBar` (default), the following options apply:
+If the value of `guiType` is [EmoteBar](#emotebarguitype) (default), the following options apply:
 
 <table>
 <thead>
@@ -324,9 +329,10 @@ If the value of [`guiType`](#emotebarguitype) is `EmoteBar` (default), the follo
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Wheel">
-If the value of [`guiType`](#emotebarguitype) is `EmoteWheel`, the following options apply:
+If the value of `guiType` is [EmoteWheel](#emotebarguitype), the following options apply:
 
 <table>
 <thead>
@@ -354,6 +360,7 @@ If the value of [`guiType`](#emotebarguitype) is `EmoteWheel`, the following opt
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 </Tabs>
 
@@ -382,7 +389,9 @@ EmoteBar.configureClient({
 
 #### setEmotes
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setEmotes(emotes:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+setEmotes(emotes: `Library.table`)
+</figcaption>
 
 Sets the custom emotes to use. These will be added to the defaults if `useDefaultEmotes` is `true`, or replace the defaults if `useDefaultEmotes` is `false`. This function can only be called from a `Class.Script` and changes will automatically replicate to all clients.
 
@@ -419,7 +428,9 @@ EmoteBar.setEmotes({
 
 #### setGuiVisibility
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>setGuiVisibility(visible:</InlineCode>`boolean`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+setGuiVisibility(visible: `boolean`)
+</figcaption>
 
 Shows or hides the emotes GUI. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -433,7 +444,9 @@ EmoteBar.setGuiVisibility(false)
 
 #### getEmote
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`Library.table`</Typography>
+<figcaption>
+getEmote(emoteName: `Library.string`): `Library.table`
+</figcaption>
 
 Gets an [Emote](#emote) by name. Returns `nil` if the emote cannot be found. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -451,7 +464,9 @@ local shrug = EmoteBar.getEmote("Shrug")
 
 #### playEmote
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>playEmote(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+playEmote(emote: [Emote](#emote))
+</figcaption>
 
 Plays the given [Emote](#emote) and fires the [emotePlayed](#emoteplayed) event on the server, if connected. This function can only be called from a `Class.LocalScript` on a specific client.
 
@@ -466,7 +481,9 @@ EmoteBar.playEmote(shrug)
 
 #### lockEmote
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+lockEmote(emoteName: `Library.string`)
+</figcaption>
 
 Locks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -480,7 +497,9 @@ EmoteBar.lockEmote("Applaud")
 
 #### unlockEmote
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>unlockEmote(emoteName:</InlineCode>`Library.string`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+unlockEmote(emoteName: `Library.string`)
+</figcaption>
 
 Unlocks the [Emote](#emote) with the given name. This function can only be called from a `Class.LocalScript` on the client.
 
@@ -496,14 +515,12 @@ EmoteBar.unlockEmote("Applaud")
 
 #### emotePlayed
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>emotePlayed(player:</InlineCode>`Class.Player`<InlineCode>, emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when any client plays an emote. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -512,7 +529,7 @@ Fires when any client plays an emote. This event can only be connected in a `Cla
 		<td>Player who acted out the emote.</td>
 	</tr>
 	<tr>
-		<td>emote: [`Emote`](#emote)</td>
+		<td>emote: [Emote](#emote)</td>
 		<td>Emote which was played.</td>
 	</tr>
 </tbody>
@@ -530,19 +547,17 @@ end)
 
 #### lockedEmoteActivated
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>lockedEmoteActivated(emote:</InlineCode>[`Emote`](#emote)<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a client clicks a locked emote. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>emote: [`Emote`](#emote)</td>
+		<td>emote: [Emote](#emote)</td>
 		<td>Locked emote which was activated.</td>
 	</tr>
 </tbody>

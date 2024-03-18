@@ -1,7 +1,8 @@
 navigation:
   - title: Getting Started
     path: /avatar/
-  - heading: Clothing and Accessories
+
+  - heading: Accessories
     section:
   - title: Overview
     path: /art/accessories/
@@ -9,12 +10,19 @@ navigation:
     path: /art/accessories/specifications
   - title: Body Scale
     path: /art/accessories/body-scale
+  - title: Export Settings
+    path: /art/accessories/export-settings
+
+  - heading: Clothing
+    section:
+  - title: Overview
+    path: /art/accessories/layered-clothing
+  - title: Specifications
+    path: /art/accessories/clothing-specifications
   - title: Reference Files
     path: /art/accessories/project-files
   - title: Export Settings
-    path: /art/accessories/export-settings
-  - title: Custom Thumbnails
-    path: /art/marketplace/custom-thumbnails
+    path: /art/accessories/clothing-export-settings
   - title: Classic Clothing
     path: /art/accessories/classic-clothing
 
@@ -35,8 +43,11 @@ navigation:
         path: /art/characters/facial-animation/using-heads-in-studio
       - title: Animating Heads
         path: /art/characters/facial-animation/animating-heads
+      - title: Moods
+        path: /art/characters/facial-animation/moods
       - title: FACS Poses Reference
         path: /art/characters/facial-animation/facs-poses-reference
+
   - heading: Publishing and Selling
   - title: Policies and Guidelines
     section:
@@ -60,6 +71,8 @@ navigation:
     path: /art/modeling/avatar-setup
   - title: Automatic Skinning
     path: /art/accessories/automatic-skinning-transfer
+  - title: Custom Thumbnails
+    path: /art/marketplace/custom-thumbnails
 
   - heading: Third Party Add-ons
   - title: Roblox Blender Plugin

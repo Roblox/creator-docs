@@ -159,39 +159,35 @@ PlayerInput.InputTypes = {
 PlayerInput.CurrentInput = nil
 PlayerInput.InputTypeChanged = Instance.new("BindableEvent")
 
-local function getInputType(userInputType)
-	if userInputType == Enum.UserInputType.MouseButton1 or
-		userInputType == Enum.UserInputType.MouseButton2 or
-		userInputType == Enum.UserInputType.MouseButton3 or
-		userInputType == Enum.UserInputType.MouseWheel or
-		userInputType == Enum.UserInputType.MouseMovement or
-		userInputType == Enum.UserInputType.Keyboard then
+local InputTypes = {
+	[Enum.UserInputType.None] = nil,
+	[Enum.UserInputType.TextInput] = nil,
+	[Enum.UserInputType.InputMethod] = nil,
 
-		return PlayerInput.InputTypes.KEYBOARD_MOUSE
+	[Enum.UserInputType.MouseButton1] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	[Enum.UserInputType.MouseButton2] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	[Enum.UserInputType.MouseButton3] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	[Enum.UserInputType.MouseWheel] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	[Enum.UserInputType.MouseMovement] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
+	[Enum.UserInputType.Keyboard] = PlayerInput.InputTypes.KEYBOARD_MOUSE,
 
-	elseif userInputType == Enum.UserInputType.Touch or
-		userInputType == Enum.UserInputType.Accelerometer or
-		userInputType == Enum.UserInputType.Gyro  then
+	[Enum.UserInputType.Touch] = PlayerInput.InputTypes.TOUCH,
+	[Enum.UserInputType.Accelerometer] = PlayerInput.InputTypes.TOUCH,
+	[Enum.UserInputType.Gyro] = PlayerInput.InputTypes.TOUCH,
 
-		return PlayerInput.InputTypes.TOUCH
-
-	elseif userInputType == Enum.UserInputType.Gamepad1 or
-		userInputType == Enum.UserInputType.Gamepad2 or
-		userInputType == Enum.UserInputType.Gamepad3 or
-		userInputType == Enum.UserInputType.Gamepad4 or
-		userInputType == Enum.UserInputType.Gamepad5 or
-		userInputType == Enum.UserInputType.Gamepad6 or
-		userInputType == Enum.UserInputType.Gamepad7 or
-		userInputType == Enum.UserInputType.Gamepad8 then
-
-		return PlayerInput.InputTypes.GAMEPAD
-	end
-
-	return nil
-end
+	[Enum.UserInputType.Gamepad1] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad2] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad3] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad4] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad5] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad6] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad7] = PlayerInput.InputTypes.GAMEPAD,
+	[Enum.UserInputType.Gamepad8] = PlayerInput.InputTypes.GAMEPAD,
+}
 
 local function setPlayerInputType(userInputType)
-	local playerInputType = getInputType(userInputType)
+	local playerInputType = InputTypes[userInputType]
+
 	if playerInputType and playerInputType ~= PlayerInput.CurrentInput then
 		PlayerInput.CurrentInput = playerInputType
 		PlayerInput.InputTypeChanged:Fire(playerInputType)

@@ -194,9 +194,9 @@ The Developer Statistics dashboard is a legacy feature that might not reflect th
 To access the Developer Statistics dashboard of your or your group's experience:
 
 1. Navigate to the [Creations](https://create.roblox.com/creations) page of **Creator Dashboard**, which lists all your experiences.
-   - For group-owned experiences, click the **CREATOR** dropdown to select the target group.
+   - For group-owned experiences, click the **Creator Hub** dropdown to select the target group.
 2. Select the experience for which you want to view the developer stats.
-3. On the **ANALYTICS** category of the navigation menu, select **Developer Stats**.
+3. On the **Analytics** category of the navigation menu, select **Developer Stats**.
 
 ### Live Stats
 

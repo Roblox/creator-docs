@@ -13,15 +13,15 @@ This tutorial explains the basics of [Roblox Studio](../../studio/setting-up-rob
 
 ## Creating a New Experience
 
-[Roblox Studio](../../studio/setting-up-roblox-studio.md), a free application available on Windows and macOS, is the essential building tool for Roblox experiences.
+[Roblox Studio](../../studio/setting-up-roblox-studio.md), a free application available on Windows and Mac, is the essential building tool for Roblox experiences.
 
-With Studio open, create a new place by pressing <kbd>Ctrl</kbd><kbd>N</kbd> on Windows or <kbd>⌘</kbd><kbd>N</kbd> on macOS. Alternatively, click the **Baseplate** template under the **All&nbsp;Templates** tab.
+With Studio open, create a new place by pressing <kbd>Ctrl</kbd><kbd>N</kbd> on Windows or <kbd>⌘</kbd><kbd>N</kbd> on Mac. Alternatively, click the **Baseplate** template under the **All&nbsp;Templates** tab.
 
-<img src="../../assets/getting-started/Baseplate-Template-Icon.png" width="198" alt="Baseplate template button in Roblox Studio" />
+<img src="../../assets/getting-started/Baseplate-Template-Icon.png" width="198" alt="A close up view of the baseplate template button in Roblox Studio." />
 
 The **Baseplate** template consists of a **spawn location** where player characters appear in the world when they enter the experience, as well as a wide open **baseplate** floor.
 
-<img src="../../assets/getting-started/New-Template-With-Spawn-Location.jpg" width="800" alt="New Baseplate template open in Studio, showing the default spawn location" />
+<img src="../../assets/getting-started/New-Template-With-Spawn-Location.jpg" width="800" alt="New Baseplate template open in Studio with the default spawn location highlighted." />
 
 ## Moving the Camera
 
@@ -86,11 +86,11 @@ A `Class.Part` is Roblox's primary building block. You can [move](#moving-parts)
 </thead>
 <tbody>
 <tr>
-<td><img src="../../assets/modeling/parts/Basic-Part-Block.png" alt="Block part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Sphere.png" alt="Sphere part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Cylinder.png" alt="Cylinder part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Wedge.png" alt="Wedge part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="Corner Wedge part" /></td>
+<td><img src="../../assets/modeling/parts/Basic-Part-Block.png" alt="A single block part" /></td>
+<td><img src="../../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single sphere part" /></td>
+<td><img src="../../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single cylinder part" /></td>
+<td><img src="../../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single wedge part" /></td>
+<td><img src="../../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single corner wedge part" /></td>
 </tr>
 </tbody>
 </table>
@@ -99,23 +99,23 @@ To insert a part:
 
 1. In the menu bar, select the [Model](../../studio/model-tab.md) tab.
 
-   <img src="../../assets/studio/general/Toolbar-Model-Tab.png" width="830" alt="Model tab indicated in Studio toolbar" />
+   <img src="../../assets/studio/general/Toolbar-Model-Tab.png" width="830" alt="Studio's Model tab highlighted in the toolbar." />
 
 2. Under the **Part** button, click the dropdown arrow to reveal the **part type picker** and choose a part type.
 
-   <img src="../../assets/getting-started/Model-Tab-Part-Type-Picker.png" width="826" alt="Part type picker indicated in Model tab" />
+   <img src="../../assets/getting-started/Model-Tab-Part-Type-Picker.png" width="826" alt="Studio's Model tab with the Part Type Picker dropdown menu highlighted." />
 
 3. Click the button to insert a part of the chosen type into the world.
 
-   <img src="../../assets/getting-started/Model-Tab-Insert-Part.png" width="826" alt="Insert part button indicated in Model tab" />
+   <img src="../../assets/getting-started/Model-Tab-Insert-Part.png" width="826" alt="Studio's Model tab with the Part button highlighted." />
 
-   <img src="../../assets/getting-started/First-Inserted-Part.jpg"   width="800" alt="First block part inserted into place" />
+   <img src="../../assets/getting-started/First-Inserted-Part.jpg"   width="800" alt="A viewport view of the default spawn location with the new block part highlighted." />
 
 ### Selecting Parts
 
 Inserted parts are automatically selected, and you can select parts at any time with the **Select** tool. Hovering over and clicking a part selects it, and you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them.
 
-<img src="../../assets/studio/general/Model-Tab-Select.png" width="830" alt="Select tool indicated in Model tab" />
+<img src="../../assets/studio/general/Model-Tab-Select.png" width="830" alt="Studio's Model tab with the Select tool highlighted." />
 
 ### Moving Parts
 
@@ -123,15 +123,15 @@ The new part is the first "platform" that players will jump to from the spawn lo
 
 1. With the newly inserted part selected in the 3D viewport, toggle on the **Move** tool.
 
-   <img src="../../assets/studio/general/Model-Tab-Move.png" width="830" alt="Move tool indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
 
 1. Click and drag the arrow that's pointing in the direction you want to move the part. Remember that this is the first platform players will jump to, so you should move it just slightly away for an easy first jump.
 
-   <img src="../../assets/getting-started/First-Part-Moved.jpg" width="800" alt="First block part moved away from spawn location" />
+   <img src="../../assets/getting-started/First-Part-Moved.jpg" width="800" alt="A viewport view of the block part with the move directional visual cues." />
 
 1. If you want to adjust the default snapping increment, change the **Move** field value in the **Snap&nbsp;to&nbsp;Grid** section. Alternatively, you can disable move snapping by toggling off the checkbox next to **Move**.
 
-   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping options indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Studio's Model tab with the Transform Snapping tools highlighted." />
 
 ### Scaling Parts
 
@@ -139,11 +139,11 @@ Similar to [moving](#moving-parts), parts scale along the **X**, **Y**, and **Z*
 
 1. With the platform part still selected in the 3D viewport, toggle on the **Scale** tool.
 
-   <img src="../../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Scale tool indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
 
 1. Click and drag the handles to scale the part up in size, making the platform easier for players to land on from the first jump.
 
-   <img src="../../assets/getting-started/First-Part-Scaled.jpg" width="800" alt="First block part scaled up in size" />
+   <img src="../../assets/getting-started/First-Part-Scaled.jpg" width="800" alt="A viewport view of the block part that is now larger with the scale directional visual cues." />
 
 ### Rotating Parts
 
@@ -151,24 +151,23 @@ Similar to [moving](#moving-parts) and [scaling](#scaling-parts), parts rotate a
 
 1. With the platform part still selected in the 3D viewport, toggle on the **Rotate** tool.
 
-   <img src="../../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Rotate tool indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
 
 1. Click and drag a circle to rotate the part in that direction.
 
-   <img src="../../assets/getting-started/First-Part-Rotated.jpg" width="800" alt="First block rotated" />
+   <img src="../../assets/getting-started/First-Part-Rotated.jpg" width="800" alt="A viewport view of the block part that is now rotated on the Y axis with the rotation directional visual cues." />
 
 1. If you want to adjust the default rotation increment, change the **Rotate** field value in the **Snap&nbsp;to&nbsp;Grid** section. Alternatively, you can disable rotation snapping by toggling off the checkbox next to **Rotate**.
 
-   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping options indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Studio's Model tab with the Transform Snapping tools highlighted." />
 
 ### Customizing Colors and Materials
 
 The fastest way to recolor a part is through the hexagonal **color picker** accessible through the small dropdown arrow under the **Color** button. By default, picking a color applies it to all selected parts. Alternatively, you can apply a chosen color as a painting tool by toggling on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and clicking specific parts in the 3D viewport.
 
-<img src="../../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Color button indicated in Model tab" />
+<img src="../../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Basic Color Picker dropdown menu and the Toggle Action As Tool highlighted." />
 
-<img src="../../assets/studio/general/Hexagon-Color-Picker.png"
-	width="380" />
+<img src="../../assets/studio/general/Hexagon-Color-Picker.png" alt="A close up view of all basic colors you can apply to your parts." width="380" />
 
 You can also customize a part's **material** to simulate real-world materials such as wood, glass, or fabric. A part's material affects both its visual appearance **and** its physical traits; for example, the **Concrete** material is heavier than the **Plastic** material, so a concrete brick will have higher density than a plastic brick and sink faster in water.
 
@@ -176,20 +175,20 @@ To apply different materials to parts:
 
 1. Open the **Material Manager**.
 
-   <img src="../../assets/studio/general/Model-Tab-Material-Manager-Trimmed.png" width="826" alt="Material Manager button indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Material-Manager-Trimmed.png" width="826" alt="Studio's Model tab with the Material Manager highlighted." />
 
 1. In the 3D viewport, select one or more parts.
 1. In the **Material Manager** palette, hover your mouse over the desired material (you don't need to select it) and click the **Apply&nbsp;to&nbsp;Selected&nbsp;Parts** button.
 
-   <img src="../../assets/studio/material-manager/Apply-To-Selected-Parts.png" width="700" alt="Apply to Selected Parts button indicated in Material Manager" />
+   <img src="../../assets/studio/material-manager/Apply-To-Selected-Parts.png" width="700" alt="Studio's Material Manager with the Apply to Selected Parts button highlighted." />
 
-   <img src="../../assets/getting-started/First-Part-Styled.jpg" width="800" alt="First block recolored and with Slate material applied" />
+   <img src="../../assets/getting-started/First-Part-Styled.jpg" width="800" alt="A viewport view of the block part with a new material. The block part is highlighted." />
 
 ### Completing the Course
 
 Using the skills and tools you've learned so far, build out the course with several more platforms of varying [shapes](#inserting-parts), [sizes](#scaling-parts), [rotations](#rotating-parts), and [colors/materials](#customizing-colors-and-materials).
 
-<img src="../../assets/getting-started/Course-Completed.jpg" width="800" alt="Initial course completed with multiple platforms of varying shapes, sizes, colors, and materials" />
+<img src="../../assets/getting-started/Course-Completed.jpg" width="800" alt="A viewport view of an example course with multiple platforms of varying shapes, sizes, colors, and materials." />
 
 <Alert severity="warning">
 As you add more platforms, remember to [move the camera](#moving-the-camera) and view the overall construction from multiple angles. While the gap between two platforms might appear jumpable when viewed from one angle, looking at it from another angle may reveal that a jump between the two platforms is obviously impossible.
@@ -206,7 +205,7 @@ Since platforms should remain fixed in space, you'll need to **anchor** each par
 1. In the 3D viewport, [select](#selecting-parts) each of the platform parts you've inserted into the world.
 1. Toggle on the **Anchor** option in the **Parts** section.
 
-   <img src="../../assets/studio/general/Model-Tab-Anchor.png" width="770" alt="Anchored toggle indicated in Model tab" />
+   <img src="../../assets/studio/general/Model-Tab-Anchor.png" width="770" alt="Studio's Model tab with the Anchor button highlighted." />
 
 ### Deleting the Baseplate
 
@@ -214,15 +213,15 @@ If you [playtest](#playtesting-the-course) your experience right now and miss a 
 
 1. Access the [Explorer](../../studio/explorer.md) window. If it's not currently open, click **Explorer** from the [View](../../studio/view-tab.md) tab.
 
-   <img src="../../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Explorer toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Studio's View tab with the Explorer button highlighted." />
 
 1. Expand the top-level **Workspace** tree, locate the **Baseplate** object, and select it.
 
-   <img src="../../assets/getting-started/Workspace-Baseplate-Selected.png" width="320" alt="Baseplate selected in Explorer hierarchy" />
+   <img src="../../assets/getting-started/Workspace-Baseplate-Selected.png" width="320" alt="Studio's Explorer window with the Baseplate object highlighted." />
 
 1. Press <kbd>Delete</kbd>. The course now floats in an empty sky.
 
-   <img src="../../assets/getting-started/Course-No-Baseplate.jpg" width="800" alt="Baseplate deleted from platformer course" />
+   <img src="../../assets/getting-started/Course-No-Baseplate.jpg" width="800" alt="A viewport view of the example course without the baseplate." />
 
 ## Playtesting the Course
 
@@ -230,7 +229,7 @@ Playtesting is a vital step before [publishing](#publishing-an-experience) any e
 
 To playtest your experience, click the **Play** button (<kbd>F5</kbd>) in the menu bar.
 
-<img src="../../assets/studio/general/Model-Tab-Quick-Access-Play.png" width="770" alt="Play button indicated in Quick Access Toolbar" />
+<img src="../../assets/studio/general/Model-Tab-Quick-Access-Play.png" width="770" alt="Studio's Model tab with the Play button highlighted in the menu bar." />
 
 While playtesting, you can use the same controls as a default Roblox experience:
 
@@ -263,7 +262,7 @@ While playtesting, you can use the same controls as a default Roblox experience:
 
 To stop playtesting, click the **Stop** button (<kbd>Shift</kbd><kbd>F5</kbd>) in the menu bar.
 
-<img src="../../assets/studio/general/Model-Tab-Quick-Access-Stop.png" width="770" alt="Stop button indicated in Quick Access Toolbar" />
+<img src="../../assets/studio/general/Model-Tab-Quick-Access-Stop.png" width="770" alt="Studio's Model tab with the Stop button highlighted in the menu bar." />
 
 ## Publishing an Experience
 
@@ -279,15 +278,15 @@ When you're ready to showcase your experience, you can **publish** it to allow o
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
 1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make Public**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="An experience's tile in the Creator Dashboard, with the Make Public menu item highlighted." />
 
 1. Hover over the tile again, click the **&ctdot;** button, and select **Copy URL**.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-URL.png" width="420" alt="Copy URL option from Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-URL.png" width="420" alt="An experience's tile in the Creator Dashboard, with the Copy URL menu item highlighted." />
 
 1. Share the copied URL with others via social media or similar, as a direct link to your experience's landing page featuring a **play** button.
 
-   <img src="../../assets/getting-started/Experience-Page-Default.jpg" width="100%" />
+   <img src="../../assets/getting-started/Experience-Page-Default.jpg" alt="A close up view of the experience's tile on its landing page." width="100%" />
 
 <Alert severity="success">
 Congratulations on creating your first Roblox experience! To add more features to your platformer and learn more about building immersive experiences on Roblox, check out [tutorials](../../tutorials/index.md).

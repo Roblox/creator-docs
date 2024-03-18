@@ -376,7 +376,7 @@ methods:
         summary: |
           Returns an array of item details with the following fields:
 
-          ````lua
+          ```lua
             {
               "AssetType" = "string",
               "CreatorName" = "string",
@@ -400,8 +400,9 @@ methods:
               "Price" = 0,
               "ProductId" = 0
             }
-          ```.
-          ````
+          ```
+
+          .
     tags:
       - Yields
     deprecation_message: ''
@@ -527,6 +528,16 @@ methods:
         "FavoriteCount": 0
       }
       ```
+
+      <br /> <br /> To query for limited or unlimited assets, use the following
+      `itemRestrictions` values:
+
+      | itemRestrictions | Limited or Unlimited  |
+      | :--------------: | :-------------------: |
+      |     `empty`      |       Unlimited       |
+      |  `Collectible`   |      UGC Limited      |
+      |    `Limited`     |    Roblox Limited     |
+      | `LimitedUnique`  | Roblox Limited Unique |
     code_samples:
     parameters:
       - name: itemId
@@ -582,6 +593,7 @@ methods:
         },
         "Id": 14703770624,
         "IsEditable": true,
+        "ModerationStatus": Enum.ModerationStatus.ReviewedApproved,
         "Name": "Your Costume",
         "OutfitType": "Avatar",
         "PlayerAvatarType": "R15",

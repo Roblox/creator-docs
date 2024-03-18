@@ -9,8 +9,9 @@ description: |
   The TremoloSoundEffect creates a trembling effect on a sound by varying the
   volume of the sound up and down.
 
-  Like all other `Class.SoundEffect`s, a TremoloSoundEffect can be applied
-  either to a `Class.Sound` or `Class.SoundGroup` by being parented to either.
+  Like all other `Class.SoundEffect|SoundEffects`, a TremoloSoundEffect can be
+  applied either to a `Class.Sound` or `Class.SoundGroup` by being parented to
+  either.
 code_samples:
 inherits:
   - SoundEffect

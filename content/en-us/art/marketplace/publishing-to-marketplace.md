@@ -3,7 +3,59 @@ title: Publishing to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
-If you are participating in the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) and you have an avatar asset that meets Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md), you can upload the asset and enable your item for sale on the Marketplace.
+In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](#creator-and-group-requirements). Users who satisfy the requirements and have not hit their [publishing limits](#publishing-limits), can upload and sell their assets in the following general steps:
+
+1. [Upload the asset](#uploading-an-asset) through Studio for validation and moderation.
+2. [Publish the asset](#updating-an-asset) to the Marketplace after configuring metadata and Marketplace settings.
+
+## Creator and Group Requirements
+
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](../../production/publishing/vr-guidelines.md) and [Premium membership](https://www.roblox.com/premium/membership). At this time, only UGC Program members are eligible to upload and sell assets on the Marketplace.
+
+See the following breakdown of the user and group requirements:
+
+<table>
+<thead>
+  <tr>
+    <th colspan="2"><center>Creator is able to…</center></th>
+    <th>ID/Premium Requirements</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Individually</td>
+    <td>Upload content from Studio</td>
+    <td>&mdash; ID Verification</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td rowspan="3">As a Group</td>
+    <td>Upload content from Studio</td>
+    <td>Uploading user needs: <br /><br />&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td>Publishing user needs: <br /><br />&mdash; ID Verification<br /><br />&mdash; Premium 1000/2200<br /><br />Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+  </tr>
+</tbody>
+</table>
+
+<Alert severity = 'info'>
+If you are an existing UGC program participant with Premium 450, you will be required to cancel your existing subscription and upgrade to maintain your marketplace privileges.
+</Alert>
+
+## Publishing Limits
 
 There are limits on the number of assets you can upload to Roblox and enable for sale on the Marketplace:
 
@@ -82,7 +134,7 @@ To upload your asset:
 
 6. Click **Submit** to pay any applicable upload fee and submit your asset for moderation approval.
 
-After uploading the asset, you can find it in the **Marketplace** tab of the [Toolbox](../../projects/assets/toolbox.md) where you can view the current moderation status or edit the title and description.
+After uploading the asset, you can find it in the **Creations** tab of the [Toolbox](../../projects/assets/toolbox.md) where you can view the current moderation status or edit the title and description.
 
 ### Troubleshooting
 
@@ -153,16 +205,37 @@ To set your item on sale and access Marketplace settings:
 
 #### Price
 
-When your item is ready to sell, you must set your price within the appropriate [price range](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+When your item is ready to sell, you must set your price within the appropriate [dynamic price range](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+
+You can set two types of price controls based on the price floor:
+
+- **Amount Above Price Floor (required)** is the amount of Robux that the item will be above the current price floor. For example, if the floor is 50 Robux and you input 5 Robux here, the price will be 55 Robux. You can also choose to set this value to zero if you want your item to always be priced at the floor price.
+- **Do Not Price Below (optional)** is the lowest price a creator's item can go. It is optional and will always be respected. This input is helpful if you care about what the lowest price your item can be sold for. For example, if you input 200 Robux here, your item price will never drop below 200 Robux regardless of what the price floor is.
+
+<Alert severity = 'info'>
+
+If you have Marketplace listing before the implementation of the dynamic price range, the following price controls now apply until changed:
+
+- **Amount Above Price Floor** defaults to zero Robux.
+- **Do Not Price Below** defaults to the existing price of the item.
+
+</Alert>
 
 When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
 
 #### Limited
 
+<Alert severity = 'info'>
+Starting middle of March 2024:
+- You can change the **Title** and **Description** of your Limited items.
+- You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
+- You can increase, but not decrease, **Quantity Per User**.
+</Alert>
+
 Limited assets, or **Limiteds**, are assets that have a set quantity available for purchase. By enabling the Limited option for your asset, you can set the quantity of your creations which can give you more control over their scarcity. For information on pricing and payments, see [Limited Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md#limited-items). At this time, bodies and heads are not eligible as Limiteds.
 
 <Alert severity = 'warning'>
-After publishing Limiteds, you cannot change the asset's **Title**, **Description**, **Price**, **Resellable status**, or **Quantity**. You should ensure that your asset details are free of typos or mistakes before publishing a Limited.
+At this time, you cannot change a published Limited asset's **Title**, **Description**, **Price**, **Resellable status**, or **Quantity**. You should ensure that your asset details are free of typos or mistakes before publishing a Limited.
 </Alert>
 
 To set your asset as limited:
@@ -186,6 +259,16 @@ Copy limits are based on ownership. If a user owns the maximum limit of copies i
 Limited assets on the Marketplace before the release of this setting don't include a copy limit.
 
 #### Sale Location
+
+<Alert severity = 'info'>
+Starting middle of March 2024, the following sales locations will be available for both Limited and non-Limited items:
+
+- **Marketplace Only**
+- **Marketplace and Experience by Place ID**
+- **Marketplace and All Experiences**
+- **Experience by Place ID Only**
+
+</Alert>
 
 The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain experiences, or only the Marketplace.
 
@@ -242,6 +325,10 @@ The following location options are available for **Limiteds**:
     </Alert>
 
 #### Premium Benefits
+
+<Alert severity = 'info'>
+Starting middle of March 2024, Premium benefits will not apply to new items. Existing items will continue to have premium benefits support until later this year.
+</Alert>
 
 The Premium benefit options allow you to provide exclusive items or discounts to Premium subscribers. All items with Premium exclusivity or discounts appear in the [Premium Marketplace category](https://www.roblox.com/catalog?Category=1&salesTypeFilter=3) and include a Premium logo in the item name. Premium benefits don't apply to [Limited assets](#limited).
 

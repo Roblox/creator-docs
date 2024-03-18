@@ -149,48 +149,32 @@ properties:
     summary: |
       Changes the camera's mode to either first or third person.
     description: |
-      The CameraMode `Class.Player` property sets what mode that the player's
-      camera is in. By default, the camera mode is set to third person.
+      The **CameraMode** property sets the player's camera mode, defaulting to
+      third person.
 
-      The camera has two modes:
+      #### Third Person
 
-      1. First person
-      2. Third person
+      In the default third person mode (`Enum.CameraMode.Classic`), the
+      character can be seen in the camera. While in this mode, the default
+      behavior is:
 
-      The `Enum.CameraMode` Enum is used to set CameraMode in Player, and
-      determines when first and third person cameras should be used.
+      - Players can right-click and drag (mouse), tap and drag (mobile), use the
+        secondary thumbstick (gamepad), or press the left/right arrows
+        (keyboard) to rotate the camera around their character.
+      - When a player moves their character, it faces in the corresponding
+        movement direction.
+      - Players can zoom in and out freely, even to first person on full zoom
+        in.
 
-      #### First-person
+      #### First Person
 
-      In first-person mode, the player's camera is zoomed all the way in. Unless
-      there is a visible GUI present with the `Class.GuiButton.Modal` property
-      set to _true_, the mouse will be locked and the user's camera will turn as
-      the mouse moves.
-
-      ![First Person CameraMode](/assets/legacy/CameraMode-LockFirstPerson.jpg)
-
-      #### Third-person
-
-      In third-person mode, the character can be seen in the camera. While in
-      third-person mode on Roblox:
-
-      - You may right-click and drag to rotate your camera, or use the arrow
-        keys at the bottom right-hand corner of the screen.
-      - When you move your mouse, your camera does not change (unless you move
-        the mouse to the end of the screen).
-      - When you press any of the arrow keys, the user's character will face in
-        the corresponding arrow key's direction.
-      - You can zoom in and out freely.
-
-      Third-person is the default camera setting.
-
-      ![Third Person CameraMode](/assets/legacy/CameraMode-Classic.jpg)
-
-      This item should be used in a `Class.LocalScript` to work as expected
-      online.
+      In first person mode (`Enum.CameraMode.LockFirstPerson`), the player's
+      camera is zoomed all the way in. Unless there is a visible GUI present
+      with the `Class.GuiButton.Modal` property set to `true`, moving the mouse,
+      tap-dragging on mobile, or using the secondary thumbstick on a gamepad
+      will rotate the camera around the character.
     code_samples:
       - playing-in-first-person
-      - untitled
     type: CameraMode
     tags: []
     deprecation_message: ''
@@ -237,37 +221,39 @@ properties:
   - name: Player.Character
     summary: |
       A `Class.Model` controlled by the player that contains a `Class.Humanoid`,
-      body parts, scripts and other objects.
+      body parts, scripts, and other objects.
     description: |
-      The Character property contains a reference to a `Class.Model` containing
-      a `Class.Humanoid`, body parts, scripts and other objects required for
-      simulating the player's avatar in-game. The model is parented to the
-      `Class.Workspace`, but may be moved. It is automatically loaded when
-      `Class.Players.CharacterAutoLoads` is true, but can be manually loaded
-      otherwise using `Class.Player:LoadCharacter()`.
+      The **Character** property contains a reference to a `Class.Model`
+      containing a `Class.Humanoid`, body parts, scripts, and other objects
+      required for simulating the player's avatar in-experience. The model is
+      parented to the `Class.Workspace` but it may be moved. It is automatically
+      loaded when `Class.Players.CharacterAutoLoads` is `true` and it can be
+      manually loaded otherwise using `Class.Player:LoadCharacter()`.
 
-      Initially, this property is nil then set when the player's character first
-      spawns. Use the `Class.Player.CharacterAdded` event to detect when a
+      Initially this property is `nil` and it is set when the player's character
+      first spawns. Use the `Class.Player.CharacterAdded` event to detect when a
       player's character properly loads, and the
       `Class.Player.CharacterRemoving` event to detect when the character is
       about to despawn. Avoid using `Class.Instance:GetPropertyChangedSignal()`
       on this property.
 
-      Note: LocalScripts that are cloned from `Class.StarterGui` or
-      `Class.StarterPack` into a player's `Class.Backpack` or `Class.PlayerGui`
-      are often run before the old Character model is deleted. Player.Character
-      still refers to a model, but that model's parent is nil and it has been
-      destroyed. Because of this, if the Character already exists, you should
-      check to make sure that the Character's parent is not nil before using it.
-
-      So if you're writing a `Class.LocalScript` under the `Class.StarterGui` or
-      `Class.StarterPack` that requires access to the player's character, use
-      this:
+      Note that `Class.LocalScript|LocalScripts` that are cloned from
+      `Class.StarterGui` or `Class.StarterPack` into a player's
+      `Class.PlayerGui` or `Class.Backpack` respectively are often run before
+      the old character model is replaced, so `Class.Player.Character` may refer
+      to the old model whose `Class.Instance.Parent|Parent` property is `nil`.
+      Therefore, in a `Class.LocalScript` under `Class.StarterGui` or
+      `Class.StarterPack`, it is advisable to make sure the parent of
+      **Character** is not `nil` before using it, for example:
 
       ```lua
       local Players = game:GetService("Players")
       local player = Players.LocalPlayer
-      local character = player.Character or player.CharacterAdded:Wait()
+
+      local character = player.Character
+      if not character or character.Parent == nil then
+      	character = player.CharacterAdded:Wait()
+      end
       ```
     code_samples:
     type: Model
@@ -732,9 +718,9 @@ properties:
       bars. If set to 0, the health bars will not be displayed.
     description: |
       The HealthDisplayDistance `Class.Player` property sets the distance in
-      studs at which this player will see other `Class.Humanoid`'s health bars.
-      If set to 0, the health bars will not be displayed. This property is set
-      to `Class.StarterPlayer.HealthDisplayDistance` by default.
+      studs at which this player will see other `Class.Humanoid` health bars. If
+      set to 0, the health bars will not be displayed. This property is set to
+      `Class.StarterPlayer.HealthDisplayDistance` by default.
 
       If a Humanoid's health bar is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
@@ -764,8 +750,7 @@ properties:
       player base.
 
       This property allows access to the player's locale from the server. It is
-      similar to `Class.LocalizationService`'s
-      `Class.LocalizationService.RobloxLocaleId` property.
+      similar to the `Class.LocalizationService.RobloxLocaleId` property.
     code_samples:
       - checking-a-player-s-locale
     type: string
@@ -792,8 +777,8 @@ properties:
 
       This property can only be read from to determine membership (it cannot be
       set to another membership type). The property can only be changed via
-      `Class.CoreScript`s using `Class.Player:SetMembershipType()` - which are
-      not accessible.
+      `Class.CoreScript|CoreScripts` using `Class.Player:SetMembershipType()` -
+      which are not accessible.
     code_samples:
       - check-membership-status
     type: MembershipType
@@ -815,7 +800,7 @@ properties:
       set to 0, names are hidden.
     description: |
       The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid`'s names. If
+      in studs at which this player will see other `Class.Humanoid` names. If
       the property is set to 0, names are hidden. This property is set to
       `Class.StarterPlayer.NameDisplayDistance` by default.
 
@@ -1379,14 +1364,13 @@ methods:
 
       Note:
 
-      - `Class.Accessory|Accessories`, `Class.Shirt`s, `Class.ShirtGraphic`s,
-        `Class.CharacterMesh`es, `BodyColor`s, and `Class.Accoutrement`s are
+      - `Class.Accessory`, `Class.Shirt`, `Class.ShirtGraphic`,
+        `Class.CharacterMesh`, `Class.BodyColors`, and `Class.Accoutrement` are
         parented to the player's character.
-      - `Class.Decal`s, `Class.FileMesh`es, `Class.SpecialMesh`es,
-        `Class.BlockMesh`es, `Class.CylinderMesh`es, and `Class.Texture`s are
-        parented to the character's head.
-      - `Class.Tool`s and `Class.HopperBin`s are parented to the player's
-        StarterGear.
+      - `Class.Decal`, `Class.FileMesh`, `Class.SpecialMesh`, `Class.BlockMesh`,
+        `Class.CylinderMesh`, and `Class.Texture` are parented to the
+        character's head.
+      - `Class.Tool` is parented to the player's `Class.StarterGear`.
       - All other classes are ignored.
     code_samples:
       - Player-LoadCharacterAppearance1
@@ -1395,8 +1379,8 @@ methods:
         type: Instance
         default:
         summary: |
-          An instance of the asset being loaded, which can be obtained using
-          `Class.InsertService`'s `Class.InsertService:LoadAsset()` function.
+          An instance of the asset being loaded, which can be obtained using the
+          `Class.InsertService:LoadAsset()` function.
     returns:
       - type: void
         summary: ''
@@ -1491,8 +1475,8 @@ methods:
       the given direction until stopped, or interrupted by the player (by using
       their controls).
 
-      This is useful when scripting NPC `Class.Humanoid`s that move around a
-      map - but are not controlled by an actual player's input.
+      This is useful when scripting NPC `Class.Humanoid|Humanoids` that move
+      around a map - but are not controlled by an actual player's input.
 
       Note that the function's second argument indicates whether the provided
       `Datatype.Vector3` should move the player relative to world coordinates
@@ -1667,21 +1651,19 @@ methods:
       Sets whether or not the player sees filtered chats, rather than normal
       chats.
     description: |
-      The SetSuperSafeChat `Class.Player` function sets whether or not the
-      player sees chat filtered by `Class.TextService`'s
+      This method sets whether or not the player sees chat filtered by
       `Class.TextService:FilterStringAsync()` rather than normal chats.
 
-      SuperSafeChat is a chat mode where players cannot see unfiltered messages.
+      ```lua
+      local Players = game:GetService("Players")
 
-      For example, entering the following command in the command prompt would
-      enable SuperSafeChat for the player named polarpanda16, as long as that
-      player is in the game:
+      local player = Players.LocalPlayer
+      player:SetSuperSafeChat(true)
+      ```
 
-      ![Command prompt example enabling SuperSafeChat](/assets/legacy/Screen_Shot_2018-07-28_at_9.46.09_PM.png)
-
-      Regardless of whether a player has SuperSafeChat enabled, all chat should
-      be filtered by TextService when broadcasted to other players or on the
-      player's own screen. `Class.TextService:FilterStringAsync()` returns a
+      Regardless of whether a player has filtered chat enabled, all chat should
+      be filtered by `Class.TextService` when broadcast to other players or on
+      the player's own screen. `Class.TextService:FilterStringAsync()` returns a
       `Class.TextFilterResult` object that can be filtered differently according
       to the message's intended use.
     code_samples:
@@ -2431,7 +2413,7 @@ events:
 
       local function onPlayerAdded(player)
       	player.CharacterAdded:Connect(function ()
-      		onCharacterDespawned(player)
+      		onCharacterSpawned(player)
       	end)
       	player.CharacterRemoving:Connect(function ()
       		onCharacterDespawned(player)

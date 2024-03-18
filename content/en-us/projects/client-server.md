@@ -12,7 +12,7 @@ server.
 
 <figure>
   <img
-    alt="Server with connections to three client devices"
+    alt="A server grouping with connections to three client devices."
     src="../assets/scripting/client-server/Client-Server-Model.png"
     width="100%" />
   <figcaption>Server with connections to three client devices</figcaption>
@@ -34,7 +34,7 @@ applicable scripts.
 
 <figure>
   <img
-    alt="Mapping of objects between 'edit' and 'runtime' data models"
+    alt="A diagram that maps objects between 'edit' and 'runtime' data models."
     src="../assets/scripting/client-server/Data-Model-Mapping.png"
     width="720" />
   <figcaption></figcaption>
@@ -58,17 +58,17 @@ common scenarios for data replication.
 <GridContainer numColumns="3">
 <figure>
 <p><center>**Client** &rarr; **Server**</center></p>
-<img src="../assets/scripting/client-server/Remote-Flow-Client-Server.png" width="100%" alt="Diagram of one client communicating with the server" />
+<img src="../assets/scripting/client-server/Remote-Flow-Client-Server.png" width="100%" alt="A diagram of one client communicating with the server." />
 Communication from any client to the server. For example, a client presses the <kbd>P</kbd> key to drink an invisibility potion, and tells the server to make that player's character invisible to all other players.
 </figure>
 <figure>
 <p><center>**Server** &rarr; **Client**</center></p>
-<img src="../assets/scripting/client-server/Remote-Flow-Server-Client.png" width="100%" alt="Diagram of the server communicating with one client" />
+<img src="../assets/scripting/client-server/Remote-Flow-Server-Client.png" width="100%" alt="A diagram of the server communicating with one client." />
 Communication from the server to one specific client. For example, a player joins the experience and the server populates that player's inventory with a set of items.
 </figure>
 <figure>
 <p><center>**Server** &rarr; **All Clients**</center></p>
-<img src="../assets/scripting/client-server/Remote-Flow-Server-All-Clients.png" width="100%" alt="Diagram of the server communicating with all connected clients" />
+<img src="../assets/scripting/client-server/Remote-Flow-Server-All-Clients.png" width="100%" alt="A diagram of the server communicating with all connected clients." />
 Communication between the server and all connected clients. For example, displaying a countdown timer to all participants in a race.
 </figure>
 </GridContainer>
@@ -84,15 +84,15 @@ assemblies, which the physics engine treats as a single rigid body.
 <br/>
 <Grid container spacing={2}>
   <Grid item xs={4} lg={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A single block part in the shape of a cube that represents a single assembly." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
   <Grid item xs={4} lg={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" alt="A player character that represents a single assembly of 18 individual parts." width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
   <Grid item xs={8} lg={6}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" alt="A pirate ship mesh that represents a single assembly of 179 individual parts." width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>
 </Grid>
@@ -107,7 +107,7 @@ client or server. Ownership typically happens automatically, but you can assign
 it directly for fine-tuned responsiveness.
 
 <figure>
-  <video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="Video showing part ownership indicated through colored outlines"></video>
+  <video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="A player character walks around collecting glowing objects on the floor. Part ownership is indicated with colored outlines."></video>
   <figcaption>Part ownership indicated through colored outlines</figcaption>
 </figure>
 
@@ -118,4 +118,4 @@ responsible for filtering chat messages and deciding which messages to replicate
 to other clients. For example, the server may filter out messages that contain
 profanity or are too long.
 
-<video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="90%"></video>
+<video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="90%" alt="Two characters talk to each other through chat bubbles above their heads in a spooky blue environment."></video>

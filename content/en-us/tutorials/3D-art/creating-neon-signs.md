@@ -19,7 +19,7 @@ In the following method to create a neon sign, follow each section to learn how 
    You can create your own assets in third-party modeling tools and follow along with your own design. For information on exporting models for use in Studio, see [Exporting Requirements](../../art/modeling/export-requirements.md).
 </Alert>
 
-## Creating the Backboard and Border
+## Create the Backboard and Border
 
 A `Class.Part` is Roblox's primary building block that you can move, resize, rotate, and customize to change their appearance, such as their color and material. Using [basic parts](../../parts/index.md) to create the foundation of neon signs is useful because the signage's backboard and border only require basic shapes.
 
@@ -39,21 +39,21 @@ To create the backboard and border:
 
       <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Backboard.jpg" />
 
-1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>D</kbd> to duplicate the part.
+1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part.
 1. In the menu bar, select the **Move** tool and use one of the axis arrows to pull the duplicate backboard part away from the original position so you can see each object.
 1. In the **Explorer** window, select the duplicate backboard part that's about to become the border of your neon sign, then in the **Properties** window,
 
    1. Set **BrickColor** to **Lime Green**.
-   1. Set **Size** to **[7.75, 3.75, 0.25]**.
-   1. Set **Name** to **Border**.
+   2. Set **Size** to **[7.75, 3.75, 0.25]**.
+   3. Set **Name** to **Border**.
 
       <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Border.jpg" />
 
-1. In the **Explorer** window, select **Border**, then press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>D</kbd> to duplicate the part. **Do not move this new part** because it needs to be in its current position for the next sculpting step.
+1. In the **Explorer** window, select **Border**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part. **Do not move this new part** because it needs to be in its current position for the next sculpting step.
 
 Now that you have three parts that make up the basic shapes of your neon sign, you can sculpt the border's shape.
 
-## Shaping the Neon Border
+## Shape the Neon Border
 
 Using [solid modeling](../../parts/solid-modeling.md), you can join and separate parts in unique ways to form more complex shapes known as **unions**. This process enables you to resize and modify the duplicate border part to become the neon border.
 
@@ -67,7 +67,7 @@ To create the neon border shape:
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Negate-Tool.jpg" />
 
-1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> and click on the original border part to select both parts at the same time.
+1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click on the original border part to select both parts at the same time.
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/NegativePart.jpg" />
 
@@ -89,7 +89,7 @@ To create the neon border shape:
 
 Now that you have a complete backboard and a glowing neon border, you can create extruding neon 3D text for the words of the sign.
 
-## Incorporating Neon 3D Text
+## Incorporate Neon 3D Text
 
 Since Studio doesn't natively support 3D text, this guide provides an open-text.obj file for you to import into your scene that contains a 3D model of text that spells the word "OPEN". You can also use other methods to create 3D texts or custom designs for this process, such as using your own models from third-part modeling software, working with community plugins, or creating your own text manually in Studio through solid modeling.
 
@@ -113,7 +113,7 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
    1. Set **Color** to **[170,0,0]**.
    1. Set **Material** to **Neon**.
 
-1. In the **Explorer** window, select the text models, **Border**, and **Backboard**, then press <kbd>Ctrl</kbd>+<kbd>G</kbd> to group them into a single `Class.Model` object.
+1. In the **Explorer** window, select the text models, **Border**, and **Backboard**, then press <kbd>Ctrl</kbd><kbd>G</kbd> (<kbd>⌘</kbd><kbd>G</kbd>) to group them into a single `Class.Model` object.
 
    <Alert severity="info">
       For a reference of what this neon sign looks like within Studio, you can download the [base project file](../../assets/tutorials/creating-neon-signs/neon-sign-baseplate.rbxl) and compare it to your model.
@@ -123,4 +123,4 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
 1. In the **Explorer** window, right-click **NeonSign**. A contextual menu displays.
 1. Select **Save to Roblox**.
 
-After you save the asset in your [Toolbox](../../projects/assets/toolbox.md), you can use it within any of your experiences. In addition, you can [publish your asset](../../production/publishing/publishing-assets.md) to the [Creator Marketplace](../../production/publishing/creator-marketplace.md) to make it publicly available to all creators to use within their experiences too.
+After you save the asset in your [Toolbox](../../projects/assets/toolbox.md), you can use it within any of your experiences. In addition, you can [publish your asset](../../production/publishing/publishing-assets.md) to the [Creator Store](../../production/publishing/creator-store.md) to make it publicly available to all creators to use within their experiences too.

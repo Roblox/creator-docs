@@ -14,23 +14,23 @@ The invite prompt system features the following:
    <Tabs>
    <TabItem label="In-Experience Prompt">
      <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.jpg" width="812" height="375" />
-   <figcaption>Prompt to invite multiple friends</figcaption>
+     <img src="../../assets/promotion/invite-prompts/Prompt-Multiple-Friends-Custom-Message.png" width="840" height="403" />
+   <figcaption><center>Prompt to invite multiple friends</center></figcaption>
      </figure>
      <figure>
-     <img src="../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.jpg" width="812" height="375" />
-   <figcaption>Prompt to invite a specific friend</figcaption>
+     <img src="../../assets/promotion/invite-prompts/Prompt-Specific-Friend-Custom-Message.png" width="840" height="403" />
+   <figcaption><center>Prompt to invite a specific friend</center></figcaption>
      </figure>
    </TabItem>
    <TabItem label="Invite Notification">
     <GridContainer numColumns="2">
       <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Lock-Screen-Custom-Message.jpg" width="375" height="812" />
-    <figcaption>Notification on phone lock screen</figcaption>
+      <img src="../../assets/promotion/invite-prompts/Notification-Lock-Screen-Custom-Message.png" width="403" height="840" />
+    <figcaption><center>Notification on phone lock screen</center></figcaption>
       </figure>
       <figure>
-      <img src="../../assets/promotion/invite-prompts/Notification-Roblox-App-Custom-Message.jpg" width="375" height="812" />
-    <figcaption>Notification in Roblox app</figcaption>
+      <img src="../../assets/promotion/invite-prompts/Notification-Roblox-App-Custom-Message.png" width="403" height="840" />
+    <figcaption><center>Notification in Roblox app</center></figcaption>
       </figure>
      </GridContainer>
    </TabItem>
@@ -116,21 +116,20 @@ By default, the invite notification that friends receive contains the sender's `
    <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Notifications.png" width="330" />
 
 1. In the center region, click the **Create a Notification String** button.
+1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
 
-   <img src="../../assets/promotion/invite-prompts/CD-Button-Create-Notification-String.png" width="365" />
-
-1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder. For example:
-
-   - **\{displayName\}** wants you to join their adventure in **\{experienceName\}**!
-   - **\{displayName\}** just cleared the sixth stage of **\{experienceName\}**. Can you?
+   <Alert severity="success">
+   <AlertTitle>Example Notifications</AlertTitle>
+	 <ul>
+	 <li>**\{displayName\}** wants you to join their adventure in **\{experienceName\}**!</li>
+	 <li>**\{displayName\}** just cleared the sixth stage of **\{experienceName\}**. Can you?</li>
+	 </ul>
+	 </Alert>
 
 1. When ready, click the **Create Notification String** button.
-
-   <img src="../../assets/promotion/invite-prompts/CD-Button-Save-Notification-String.png" width="479" />
-
 1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
 
-   <img src="../../assets/promotion/invite-prompts/CD-Notification-List-Copy-Asset-ID.png" width="800" />
+   <img src="../../assets/creator-dashboard/Notifications-Invite-Prompt-Copy-Asset-ID.png" width="780" />
 
 1. In the `Class.ExperienceInviteOptions` object for the invite prompt, paste the asset ID as the value of the `Class.ExperienceInviteOptions.InviteMessageId|InviteMessageId` property.
 

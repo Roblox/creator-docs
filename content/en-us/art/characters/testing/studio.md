@@ -45,7 +45,7 @@ After you open the test experience in Studio, import your custom character model
 
       <img src="../../../assets/art/avatar/basic-creation/Testing-Rig-Type.png" />
 
-   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../art/characters/specifications.md#body-types).
+   2. If using the template files, set **Rig Scale** to **Rthro**. Otherwise, use the appropriate rig scale for your [character body type](../../../art/characters/specifications.md#body-scale).
    3. Check for any red errors that may block import into Studio.
    4. Verify any yellow warnings that may indicate a quality issue with your avatar components.
 
@@ -77,9 +77,9 @@ To add individual image texture files:
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Surface-Appearance.png" />
 
-5. Copy the `Class.SurfaceAppearance` with the populated image map with <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+5. Copy the `Class.SurfaceAppearance` with the populated image map with <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd>).
 6. Hold <kbd>Shift</kbd> and click all of your model's MeshParts to select all of your character's geometry.
-7. Use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to paste into all of the head geometries. An updated `Class.SurfaceAppearance` populates in each `Class.MeshPart` object.
+7. Use <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>V</kbd>) to paste into all of the head geometries. An updated `Class.SurfaceAppearance` populates in each `Class.MeshPart` object.
 
    <img src="../../../assets/art/avatar/basic-creation/Testing-Surface-Appearance-Applied.png" />
 

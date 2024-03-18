@@ -143,11 +143,11 @@ The next pose will have the character posed to crouch before leaping up.
 
 To save time and transition between animation loops, the last pose will be a copied version of the first, neutral pose. Then, you can either leave the pose as is or tweak it to get a more interesting animation.
 
-1. Select the top keyframe (diamond symbol) in the timeline for the first pose. Notice how keyframes for each part are selected. Once you select all keyframes, copy them <kbd>Ctrl</kbd>+<kbd>C</kbd> (<kbd>⌘</kbd>+<kbd>C</kbd>).
+1. Select the top keyframe (diamond symbol) in the timeline for the first pose. Notice how keyframes for each part are selected. Once you select all keyframes, copy them <kbd>Ctrl</kbd><kbd>C</kbd> (<kbd>⌘</kbd><kbd>C</kbd>).
 
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-selectFirst.png)
 
-2. Move to the **end** of the animation (1:00 in the example) by clicking on the timeline. Then paste the keyframes using <kbd>Ctrl</kbd>+<kbd>V</kbd> (<kbd>⌘</kbd>+<kbd>V</kbd>). If desired, take some time to adjust the pose to add more detail in the animation.
+2. Move to the **end** of the animation (1:00 in the example) by clicking on the timeline. Then paste the keyframes using <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd>). If desired, take some time to adjust the pose to add more detail in the animation.
 
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-pasteLastFrame.png)
 

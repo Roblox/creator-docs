@@ -11,7 +11,7 @@ Every Roblox user is represented by a customizable character called an **avatar*
 
 Custom avatars are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing into Studio. To create a custom Roblox avatar character for your own experience, it's important to start with the following:
 
-- A basic background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
+- An advanced background with 3D modeling tools such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview).
 - An understanding of the [components that make up an avatar character](#components-of-an-avatar).
 - An understanding of the general [character creation process](#creation-process).
 - Review the [basic character creation tutorial](../../art/accessories/creating/index.md) to get started on creating your first avatar character using Roblox's templates.
@@ -118,14 +118,14 @@ When wearing layered clothing, the clothing isn't attached directly to the attac
 
 ## Creation Process
 
-When designing an avatar model, you must export all of the avatar components in a single `.fbx` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
+When designing an avatar model, you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
 
 In general, the creation process follows these typical workflows:
 
 <GridContainer numColumns="2">
-  <figure><figcaption><center>Basic Creation with Templates</center></figcaption><img src="../../assets/art/avatar/Workflow-Templates.png"/><figcaption>Customize a Roblox template character that already includes all the necessary components.  See [Creating with Templates](../../art/characters/creating/index.md) for guides and instructions.</figcaption></figure>
+  <figure><figcaption><center>Basic Creation with Templates</center></figcaption><img src="../../assets/art/avatar/Workflow-Bodies-Templates.png"/><figcaption>Customize a Roblox template character that already includes all the necessary components.  See [Creating with Templates](../../art/characters/creating/index.md) for guides and instructions.</figcaption></figure>
 
-  <figure><figcaption><center>Advanced Creation from Scratch</center></figcaption><img src="../../assets/art/avatar/Workflow-Scratch.png"/><figcaption>Create characters from scratch, allowing full customization of the avatar character's components.</figcaption></figure>
+  <figure><figcaption><center>Advanced Creation from Scratch</center></figcaption><img src="../../assets/art/avatar/Workflow-Bodies-Traditional.png"/><figcaption>Create characters from scratch, allowing full customization of the avatar character's components.</figcaption></figure>
 </GridContainer>
 
 <Alert severity = 'warning'>
@@ -164,7 +164,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing Requirements](../../art/modeling/specifications.md#textures)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
     <td>Rigging and Skinning</td>

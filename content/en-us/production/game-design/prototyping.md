@@ -28,7 +28,7 @@ description: Prototyping
 
 <figure>
     <img src="../../assets/game-design/prototyping/prototyping-1.png" width="70%"/>
-    <figcaption>Examples of paper prototyping tools</figcaption>
+    <figcaption>Examples of paper prototyping tools.</figcaption>
   </figure>
 
 The benefits of paper prototyping are:
@@ -38,7 +38,7 @@ The benefits of paper prototyping are:
 - **UI/UX Design:** The ease of drawing on paper makes paper prototyping one of the best mediums for exploring optimal UI and UX designs for your experience.
     <figure>
       <img src="../../assets/game-design/prototyping/prototyping-2.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <figcaption>Using paper prototyping to explore UI/UX design.</figcaption>
     </figure>
 
 Despite its benefits, prototyping on paper has drawbacks due to the difference in medium. The detriments of paper prototyping are:
@@ -60,7 +60,7 @@ _Studio prototyping_ is the act of using Roblox Studio to design and iterate the
 - **Early technical issues detection:** The abstraction of paper prototyping can result in unrealistic ideas that are impossible to technically implement. Prototyping in studio forces you to determine if your idea is something you can practically create with the resources available to you.
     <figure>
       <img src="../../assets/game-design/prototyping/prototyping-3.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <figcaption>An early obby prototype made in Roblox Studio.</figcaption>
     </figure>
 
 Despite its benefits, the limitations of studio prototyping include:
@@ -69,7 +69,7 @@ Despite its benefits, the limitations of studio prototyping include:
 - **Increased iteration time** Due to the increased cost of creating different virtual environments, more time is required to iterate multiple systems in an experience.
     <figure>
       <img src="../../assets/game-design/prototyping/prototyping-4.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <figcaption>A more complex prototype made in Roblox Studio. </figcaption>
     </figure>
 
 ## Best Practices

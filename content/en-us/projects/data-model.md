@@ -323,7 +323,7 @@ For more information, see [In-Experience Text Chat System](../chat/in-experience
 feature that simulates realistic communication based on how close you are to
 other users. You can use this service to toggle the feature on and off.
 
-For more information, see [Spatial Voice](../chat/spatial-voice.md).
+For more information, see [Chat with Voice](../chat/voice-chat.md).
 
 ## Folders and Models
 
@@ -340,11 +340,11 @@ find and modify objects later on if needed.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/studio/explorer/Example-Organized-Folders-In-Workspace.png" width="320" />
+    <img src="../assets/studio/explorer/Example-Organized-Folders-In-Workspace.png" alt="The Explorer window with a demonstration of a folder organization structure." width="320" />
     <figcaption>Objects organized into `Class.Folder|Folders`</figcaption>
   </figure>
   <figure>
-    <img src="../assets/studio/explorer/Example-Maps-In-Workspace-ServerStorage.png" width="320" />
+    <img src="../assets/studio/explorer/Example-Maps-In-Workspace-ServerStorage.png" alt="The Explorer window with a demonstration of a model organization structure in several services." width="320" />
     <figcaption>Various "map" models to swap between `Class.Workspace` and `Class.ServerStorage`</figcaption>
   </figure>
 </GridContainer>

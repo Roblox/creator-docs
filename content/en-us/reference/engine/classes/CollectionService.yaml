@@ -5,40 +5,24 @@ memory_category: Instances
 summary: |
   A service which manages object collections using assigned tags.
 description: |
-  The `Class.CollectionService` manages groups (collections) of instances with
-  tags. Tags are sets of strings applied to objects that replicate from the
-  server to the client and in Team Create. They are also serialized when places
-  are saved. At the moment, tags are not visible within Roblox Studio except
-  with the use of a tag-editing plugin.
+  `Class.CollectionService` manages groups (collections) of instances with
+  **tags**. Tags are sets of strings applied to objects that replicate from the
+  server to the client. They are also serialized when places are saved.
 
   The primary use of `Class.CollectionService` is to register instances with
   specific tags that you can use to extend their behavior. If you find yourself
   adding the same script to many different objects, perhaps a script that uses
-  CollectionService would be better. Here are a couple examples:
+  `Class.CollectionService` would be better.
 
-  - In an obstacle course with many bricks that kill players, don't paste the
-    same script in all your kill bricks! Instead, tag them with "KillBrick".
-    Then, have any brick tagged as such kill the player.
-  - Players with a VIP game pass could have their `Class.Humanoid` tagged "VIP",
-    and be allowed through doors that only allow VIPs.
-  - When creating a freeze-tag game, you could tag frozen players'
-    `Class.Humanoid` objects with a "Frozen" tag. Then, use a
-    `Class.LocalScript` to listen for the "Frozen" tag and create client-side
-    visual effects to reduce the number of objects replicated from server to
-    client.
+  Tags can be added or removed through this class' methods such as
+  `Class.CollectionService:AddTag()|AddTag()` or
+  `Class.CollectionService:RemoveTag()|RemoveTag()`. They can also be managed
+  directly in Studio through the
+  [Tags](../../../studio/properties.md#instance-tags) section of an instance's
+  properties, or through the built‑in
+  [Tag&nbsp;Editor](../../../studio/view-tab.md#windows-and-tools) tool.
 
-  When working with collections and tags, it's a good idea to use an
-  [object-oriented programming style](https://www.lua.org/pil/16.html). In
-  almost all situations, tagged objects have their own identity, state and
-  behavior. The pattern goes like this: when a tag is found
-  (`Class.CollectionService:GetTagged()` and
-  `Class.CollectionService:GetInstanceAddedSignal()`), create a Lua object with
-  the Roblox instance. When it is removed
-  (`Class.CollectionService:GetInstanceRemovedSignal()`), call a cleanup/destroy
-  method within the Lua object. See the code samples for a better idea of how
-  this can be done.
-
-  ## Replication
+  #### Replication
 
   When tags replicate, **all tags on an object replicate at the same time**.
   Therefore, if you set a tag on an object from the client then add/remove a
@@ -47,10 +31,9 @@ description: |
   `Class.Workspace.StreamingEnabled|StreamingEnabled` places, instances can be
   unloaded as they leave the client's streamed area. If such an instance
   re-enters the streamed area, properties and tags will be re-synchronized from
-  the server. This can cause changes made by `Class.LocalScript`s to be
-  overwritten/removed.
-code_samples:
-  - CollectionService-Door
+  the server. This can cause changes made by `Class.LocalScript|LocalScripts` to
+  be overwritten/removed.
+code_samples: []
 inherits:
   - Instance
 tags:
@@ -214,7 +197,7 @@ methods:
 
       If you want to detect all objects with a tag, both present and future, use
       this method to iterate over objects while also making a connection to a
-      signal returned by `Class.CollectionService.GetinstanceAddedSignal`.
+      signal returned by `Class.CollectionService.GetInstanceAddedSignal`.
 
       This method does not guarantee any ordering of the returned objects.
       Additionally, it is possible that objects can have the given tag assigned
@@ -386,8 +369,12 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CollectionService.TagAdded
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a tag is added to an object and the added tag is the only
+      occurrence of that tag in the place.
+    description: |
+      This event fires when a tag is added to an object and the added tag is the
+      only occurrence of that tag in the place.
     code_samples: []
     parameters:
       - name: tag
@@ -399,8 +386,12 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CollectionService.TagRemoved
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a tag is removed from an object and the removed tag is no
+      longer used anywhere in the place.
+    description: |
+      This event fires when a tag is removed from an object and the removed tag
+      is no longer used anywhere in the place.
     code_samples: []
     parameters:
       - name: tag

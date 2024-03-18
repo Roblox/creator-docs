@@ -7,19 +7,27 @@ Publishing your experiences, assets, and accessories to Roblox allows you to mak
 
 ## Experiences
 
-When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) in Studio, Roblox creates a details page that displays the experience's icon and description. At first this page is private and only accessible to you or members of your group with the correct permissions, but when you're ready, you can release the experience to the public. This allows users to find your experience's details page through the Home, Search, or Discover page.
+When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) in Studio, Roblox creates a details page that displays the experience's icon and description. At first this page is private and only accessible to you or members of your group with the correct permissions, but when you're ready, you can release the experience to the public. For more information, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md).
 
-<img src="../../assets/publishing/index/publishing-experiences-example.png" width="531" />
-
-Once an experience is published, you can access the [Game Settings](../../studio/game-settings.md) window, which includes global settings for the experience, such as permissions, monetization, security, and localization options. For more information, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md).
+<img src="../../assets/publishing/experiences-places-assets/Experience-Page-Example.jpg" width="100%" />
 
 ## Assets
 
-As long as you are the original creator and that the asset adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), you can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md) or [3D Importer](../../art/modeling/3d-importer.md), or any model or plugin that you have uploaded to your inventory in the [Toolbox](../../projects/assets/toolbox.md). When you publish any of these assets, the [Creator Marketplace](../../production/publishing/creator-marketplace.md) makes it automatically available to other creators to use within their experiences.
+As long as you are the original creator and that the asset adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), you can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md) or [3D Importer](../../art/modeling/3d-importer.md), or any model or plugin that you have uploaded to your inventory in the [Toolbox](../../projects/assets/toolbox.md). You can also publish some assets by right-clicking in the **Explorer** window, then selecting ["Save to Roblox..."](../../production/publishing/publishing-assets.md#through-explorer) from the contextual menu.
+
+When you publish any of these assets and choose to make them public, the [Creator Store](../../production/publishing/creator-store.md) makes them automatically available to other creators to use within their experiences.
 
 <img src="../../assets/studio/toolbox/Model-Search-Example.png" width="360" />
 
-While there are limits on the number of assets you can publish per 30 days, you can [verify your account](../../production/publishing/account-verification.md) to publish more of each asset type and maximize their discoverability, as well as sell your plugins. For more information, see [Publishing Assets](../../production/publishing/publishing-assets.md).
+While there are limits on the number of assets you can publish per 30 days, you can [verify your account](../../production/publishing/account-verification.md) to publish more of each asset type and maximize their discoverability. For more information, see [Publishing Assets](../../production/publishing/publishing-assets.md).
+
+<Alert severity="warning">
+
+In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+
+Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
+
+</Alert>
 
 ## Accessories and Clothing
 
@@ -31,7 +39,5 @@ Once they pass moderation, you can:
 - Limit the number of copies available for purchase, increasing the rarity of your asset.
 - Provide exclusive items or discounts to Premium users.
 - Specify if you also want your asset to be available for purchase within experiences through the [Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md).
-
-<img src="../../assets/publishing/index/publishing-accessories-example.png" width="575" />
 
 For more information, see [Publishing to Avatar Marketplace](../../art/marketplace/marketplace-policy.md).

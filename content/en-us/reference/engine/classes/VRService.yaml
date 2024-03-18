@@ -23,6 +23,7 @@ inherits:
 tags:
   - NotCreatable
   - Service
+  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: VRService.AutomaticScaling
@@ -35,17 +36,32 @@ properties:
       the objects around them as larger than a player with a large avatar will.
     code_samples: []
     type: VRScaling
-    tags:
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
+  - name: VRService.AvatarGestures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: VRService.FadeOutViewOnCollision
     summary: |
       When true, a VR player's view will fade to black when their head collides
@@ -62,10 +78,10 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
   - name: VRService.GuiInputUserCFrame
     summary: |
       Describes what UserCFrame is responsible for input in VR.
@@ -82,13 +98,14 @@ properties:
     code_samples:
       - VRService-GuiInputUserCFrame
     type: UserCFrame
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
       can_load: false
       can_save: false
@@ -155,7 +172,7 @@ properties:
     category: Data
     serialization:
       can_load: false
-      can_save: true
+      can_save: false
 methods:
   - name: VRService:GetTouchpadMode
     summary: |
@@ -277,7 +294,7 @@ methods:
       This function can be used to ensure that the user's in-game head is
       positioned according to the location of the user's VR headset.
 
-      This is similar to the `Class.UserInputService` function,
+      This behaves identically to the `Class.UserInputService` function,
       `Class.UserInputService:RecenterUserHeadCFrame()`.
 
       Since `VRServiceService` only runs client-side, this function will only

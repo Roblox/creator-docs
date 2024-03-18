@@ -1,6 +1,6 @@
 ---
 title: Numbers
-description: Numbers in Luau are double-precision floating-point numbers.
+description: A double-precision floating-point number.
 ---
 
 The **number** data type, or `double`, represents a [double-precision (64-bit) floating-point](https://wikipedia.org/wiki/Double-precision_floating-point_format) number. Numbers can range from -1.7 \* 10<sup>308</sup> to 1.7 \* 10<sup>308</sup> (around 15 digits of precision, positive or negative).

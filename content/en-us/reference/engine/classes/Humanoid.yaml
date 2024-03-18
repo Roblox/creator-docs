@@ -135,8 +135,8 @@ properties:
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
       When Enabled, AutomaticScalingEnabled causes the size of the character to
-      change in response to the values in the `Class.Humanoid`'s child scale
-      values changing.
+      change in response to the values in the humanoid's child scale values
+      changing.
     description: |
       The Humanoid has six child scale values including `BodyDepthScale`,
       `BodyHeightScale`, `BodyProportionScale`, `BodyTypeScale`,
@@ -183,8 +183,8 @@ properties:
       An offset applied to the Camera's subject position when its CameraSubject
       is set to this Humanoid.
     description: |
-      The CameraOffset property specifies an offset to the `Class.Camera`'s
-      subject position when its `Class.Camera.CameraSubject` is set to this
+      The CameraOffset property specifies an offset to the camera's subject
+      position when its `Class.Camera.CameraSubject` is set to this
       `Class.Humanoid`.
 
       The offset is applied in object-space, relative to the orientation of the
@@ -305,19 +305,22 @@ properties:
       string. If `DisplayName` is an empty string, the humanoid's name display
       will default to the humanoid's parent's name property.
 
-      **Player Character Loading** When players load their character, either
-      automatically or through the use of
-      `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
+      #### Player Character Loading
+
+      When players load their character, either automatically or through the use
+      of `Class.Player:LoadCharacter()|LoadCharacter()`, the Humanoid that is
       created by the engine will have its `DisplayName` property set to the
       player's `DisplayName` property.
 
-      **StarterCharacter and StarterHumanoid** When a Humanoid named
-      `StarterHumanoid` is parented to `Class.StarterPlayer`, or when a Humanoid
-      is present in a Model named `StarterCharacter`, the DisplayName property
-      will be respected when Characters are loaded by Players in the game. The
-      engine will only override the `DisplayName` property of the Humanoid with
-      the `DisplayName` property of the player if the `StarterHumanoid`'s
-      `DisplayName` property is an empty string.
+      #### StarterCharacter and StarterHumanoid
+
+      When a `Class.Humanoid` named `StarterHumanoid` is parented to
+      `Class.StarterPlayer`, or when a Humanoid is present in a Model named
+      `StarterCharacter`, the DisplayName property will be respected when
+      Characters are loaded by Players in the game. The engine will only
+      override the `DisplayName` property of the Humanoid with the `DisplayName`
+      property of the player if the `Class.Humanoid.DisplayName` of
+      `StarterHumanoid` is an empty string.
     code_samples:
     type: string
     tags: []
@@ -437,7 +440,7 @@ properties:
       #### Death
 
       When the value of the character's health reaches 0, the `Class.Humanoid`
-      automatically transitions to the _Dead_ `Enum.HumanoidStateType`. In this
+      automatically transitions to the `Dead` `Enum.HumanoidStateType`. In this
       state, Health is locked to 0; however, there is no error or warning for
       setting the Health of a dead Humanoid to a positive nonzero value.
     code_samples:
@@ -628,7 +631,7 @@ properties:
       constrained between 0 and 1000.
 
       This property is only visible in the Properties window if
-      `Class.Humanoid.UseJumpPower`` is set to **true**, as it would not be
+      `Class.Humanoid.UseJumpPower` is set to **true**, as it would not be
       relevant otherwise.
 
       Note:
@@ -809,10 +812,10 @@ properties:
   - name: Humanoid.PlatformStand
     summary: |
       Determines whether the `Class.Humanoid` is currently in the
-      _PlatformStanding_ `Enum.HumanoidStateType`.
+      `PlatformStanding` `Enum.HumanoidStateType`.
     description: |
       PlatformStand describes whether the `Class.Humanoid` is currently in the
-      _PlatformStanding_ `Enum.HumanoidStateType`. When true, the Humanoid is in
+      `PlatformStanding` `Enum.HumanoidStateType`. When true, the Humanoid is in
       a state where it is free-falling and cannot move. This state behaves
       similar to sitting, except that jumping does not free the humanoid from
       the state.
@@ -1311,12 +1314,12 @@ methods:
       `Class.Animation|Animations`
 
       Starting from the humanoid's `Class.Humanoid.RootPart`, the function
-      collects all `Class.Attachment`s parented in the current part, whose name
-      ends with "RigAttachment". It then searches for a matching attachment in
-      the character that shares the same name as the attachment. Using those two
-      attachments, a Motor6D joint is generated based on the parts associated
-      with the two attachments, and the `Class.Attachment.CFrame`s of the
-      attachments.
+      collects all `Class.Attachment|Attachments` parented in the current part,
+      whose name ends with "RigAttachment". It then searches for a matching
+      attachment in the character that shares the same name as the attachment.
+      Using those two attachments, a Motor6D joint is generated based on the
+      parts associated with the two attachments, and the
+      `Class.Attachment.CFrame|CFrame` of the attachments.
 
       BuildRigFromAttachments also scales the character and sets body colors.
 
@@ -1870,6 +1873,22 @@ methods:
       for `Class.Humanoid.MoveToFinished` to fire. If you don't want this to
       happen, you should repeatedly call MoveTo so that the timeout will keep
       resetting.
+
+      `Class.Humanoid:MoveTo()|MoveTo()` ends if any of the following conditions
+      apply:
+
+      - The character arrives at its destination.
+
+      - The character gets stuck and the eight-second timer expires.
+
+      - The value of either `Class.Humanoid.WalkToPoint` or
+        `Class.Humanoid.WalkToPart` changes.
+
+      - A script calls `Class.Humanoid:Move()` with a new `moveDirection`
+        parameter.
+
+      - A script changes the `Class.BasePart.CFrame|CFrame` property of the
+        `Class.Humanoid.RootPart|RootPart`.
     code_samples:
       - humanoid-moveto-without-time-out
     parameters:
@@ -2414,7 +2433,7 @@ events:
       setting the health property.
 
       This event only fires if the `Class.Humanoid` is a descendant of the
-      `Class.Workspace`. If the _Dead_ `Enum.HumanoidStateType` is disabled it
+      `Class.Workspace`. If the `Dead` `Enum.HumanoidStateType` is disabled it
       will not fire.
     code_samples:
       - Humanoid-Died1
@@ -2425,14 +2444,14 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.FallingDown
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _FallingDown_
+      Fires when the `Class.Humanoid` enters or leaves the `FallingDown`
       `Enum.HumanoidStateType`.
     description: |
       The FallingDown event fires when the `Class.Humanoid` enters and leaves
-      the _FallingDown_ `Enum.HumanoidStateType`.
+      the `FallingDown` `Enum.HumanoidStateType`.
 
-      The `Class.Humanoid` will enter the _GettingUp_ state 3 seconds after the
-      _FallingDown_ state is enabled. When this happens this event will fire
+      The `Class.Humanoid` will enter the `GettingUp` state 3 seconds after the
+      `FallingDown` state is enabled. When this happens this event will fire
       with an _active_ value of _false_, and `Class.Humanoid.GettingUp` will
       fire with an _active_ value of _true_.
     code_samples:
@@ -2443,27 +2462,27 @@ events:
         default:
         summary: |
           Describes whether the `Class.Humanoid` is entering or leaving the
-          _FallingDown_ `Enum.HumanoidStateType`.
+          `FallingDown` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: Humanoid.FreeFalling
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _Freefall_
+      Fires when the `Class.Humanoid` enters or leaves the `Freefall`
       `Enum.HumanoidStateType`.
     description: |
-      This event fires when the `Class.Humanoid` enters or leaves the _Freefall_
+      This event fires when the `Class.Humanoid` enters or leaves the `Freefall`
       `Enum.HumanoidStateType`.
 
       The _active_ parameter represents whether the `Class.Humanoid` is entering
-      or leaving the _Freefall_ state.
+      or leaving the `Freefall` state.
 
-      Although the _Freefall_ state generally ends when the `Class.Humanoid`
+      Although the `Freefall` state generally ends when the `Class.Humanoid`
       reaches the ground, this event may fire with _active_ equal to _false_ if
       the state is changed while the `Class.Humanoid` is falling. For this
       reason, you should use `Class.Humanoid.StateChanged` and listen for the
-      _Landed_ state to work out when a `Class.Humanoid` has landed.
+      `Landed` state to work out when a `Class.Humanoid` has landed.
     code_samples:
       - humanoid-action-events
     parameters:
@@ -2471,7 +2490,7 @@ events:
         type: bool
         default:
         summary: |
-          Whether the `Class.Humanoid` is entering or leaving the _Freefall_
+          Whether the `Class.Humanoid` is entering or leaving the `Freefall`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
@@ -2479,15 +2498,15 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.GettingUp
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _GettingUp_
+      Fires when the `Class.Humanoid` enters or leaves the `GettingUp`
       `Enum.HumanoidStateType`.
     description: |
       This event fires when the `Class.Humanoid` enters or leaves the
-      _GettingUp_ `Enum.HumanoidStateType`.
+      `GettingUp` `Enum.HumanoidStateType`.
 
-      The _GettingUp_ `Enum.HumanoidStateType` is a transition state that is
-      activated shortly after the `Class.Humanoid` enters the _FallingDown_ (3
-      seconds) or _Ragdoll_ (1 second)
+      The `GettingUp` `Enum.HumanoidStateType` is a transition state that is
+      activated shortly after the `Class.Humanoid` enters the `FallingDown` (3
+      seconds) or `Ragdoll` (1 second)
       `Enum.HumanoidStateType|HumanoidStateTypes`.
 
       When a `Class.Humanoid` attempts to get back up, this event will first
@@ -2498,7 +2517,7 @@ events:
 
       - To force a `Class.Humanoid` to fall over, use the
         `Class.Humanoid:ChangeState()` function to change the
-        `Class.Humanoid|Humanoid's` state to _FallingDown_
+        `Class.Humanoid|Humanoid's` state to `FallingDown`
     code_samples:
       - humanoid-action-events
     parameters:
@@ -2506,7 +2525,7 @@ events:
         type: bool
         default:
         summary: |
-          Whether the `Class.Humanoid` is entering or leaving the _GettingUp_
+          Whether the `Class.Humanoid` is entering or leaving the `GettingUp`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
@@ -2539,16 +2558,16 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.Jumping
     summary: |
-      Fires when the `Class.Humanoid` enters and leaves the _Jumping_
+      Fires when the `Class.Humanoid` enters and leaves the `Jumping`
       `Enum.HumanoidStateType`.
     description: |
-      This event fires when the `Class.Humanoid` enters and leaves the _Jumping_
+      This event fires when the `Class.Humanoid` enters and leaves the `Jumping`
       `Enum.HumanoidStateType`.
 
-      When a `Class.Humanoid` jumps this will fire with a _active_ parameter of
-      _true_ before shortly afterwards firing again with an active parameter of
-      _false_. This does not correspond with when a `Class.Humanoid` has landed.
-      For that, developers should listen for the _Landed_
+      When a `Class.Humanoid` jumps, this event fires with an `active` parameter
+      of `true` before shortly afterwards firing again with an `active`
+      parameter of `false`. This second firing does not correspond with a
+      `Class.Humanoid` landing; for that, listen for the `Landed`
       `Enum.HumanoidStateType` using `Class.Humanoid.StateChanged`.
 
       You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
@@ -2560,7 +2579,7 @@ events:
         type: bool
         default:
         summary: |
-          Whether the `Class.Humanoid` is entering or leaving the _Jumping_
+          Whether the `Class.Humanoid` is entering or leaving the `Jumping`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
@@ -2600,13 +2619,13 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.PlatformStanding
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _PlatformStanding_
+      Fires when the `Class.Humanoid` enters or leaves the `PlatformStanding`
       `Enum.HumanoidStateType`.
     description: |
       This event fires when the `Class.Humanoid` enters or leaves the
-      _PlatformStanding_ `Enum.HumanoidStateType`.
+      `PlatformStanding` `Enum.HumanoidStateType`.
 
-      Whilst the `Class.Humanoid` is in the _PlatformStanding_ state, the
+      Whilst the `Class.Humanoid` is in the `PlatformStanding` state, the
       `Class.Humanoid.PlatformStand` property will be _true_.
 
       Whilst `Class.Humanoid.PlatformStand` is set to _true_, the
@@ -2624,17 +2643,17 @@ events:
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
-          _PlatformStanding_ `Enum.HumanoidStateType`.
+          `PlatformStanding` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: Humanoid.Ragdoll
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _Ragdoll_
+      Fires when the `Class.Humanoid` enters or leaves the `Ragdoll`
       `Enum.HumanoidStateType`.
     description: |
-      This event fires when the `Class.Humanoid` enters or leaves the _Ragdoll_
+      This event fires when the `Class.Humanoid` enters or leaves the `Ragdoll`
       `Enum.HumanoidStateType`.
 
       The `active` parameter will have the value `true` or `false` to indicate
@@ -2646,7 +2665,7 @@ events:
       See also:
 
       - `Class.Humanoid.FallingDown` for the `Class.Humanoid` event connected
-        with the _FallingDown_ state, which behaves similarly to _Ragdoll_
+        with the `FallingDown` state, which behaves similarly to `Ragdoll`
     code_samples:
       - humanoid-action-events
     parameters:
@@ -2654,7 +2673,7 @@ events:
         type: bool
         default:
         summary: |
-          Whether the `Class.Humanoid` is entering or leaving the _Ragdoll_
+          Whether the `Class.Humanoid` is entering or leaving the `Ragdoll`
           `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
@@ -2846,25 +2865,25 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.Strafing
     summary: |
-      Fires when the `Class.Humanoid` enters or leaves the _StrafingNoPhysics_
+      Fires when the `Class.Humanoid` enters or leaves the `StrafingNoPhysics`
       `Enum.HumanoidStateType`.
     description: |
       This event does not fire when the `Class.Humanoid` is strafing and should
       not be used by developers
 
       This event is fired when the `Class.Humanoid` enters or leaves the
-      _StrafingNoPhysics_ `Enum.HumanoidStateType`.
+      `StrafingNoPhysics` `Enum.HumanoidStateType`.
 
-      When the `Class.Humanoid` enters the _StrafingNoPhysics_ state this event
+      When the `Class.Humanoid` enters the `StrafingNoPhysics` state this event
       will fire with an _active_ parameter of _true_. The event will fire again
       with _active_ equal to _false_ when the `Class.Humanoid` leaves the
-      _StrafingNoPhysics_ state.
+      `StrafingNoPhysics` state.
 
-      This event is associated with the _StrafingNoPhysics_ `Class.Humanoid`
+      This event is associated with the `StrafingNoPhysics` `Class.Humanoid`
       state and does **not** fire when the `Class.Humanoid` is moving
       perpendicular to the direction it is facing. This state is currently
       unused, if it is set using `Class.Humanoid:ChangeState()` the state will
-      revert to _RunningNoPhysics_.
+      revert to `RunningNoPhysics`.
     code_samples:
       - humanoid-action-events
     parameters:
@@ -2873,7 +2892,7 @@ events:
         default:
         summary: |
           Whether the `Class.Humanoid` is entering or leaving the
-          _StrafingNoPhysics_ `Enum.HumanoidStateType`.
+          `StrafingNoPhysics` `Enum.HumanoidStateType`.
     tags: []
     deprecation_message: ''
     security: None

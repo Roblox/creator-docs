@@ -146,12 +146,22 @@ methods:
     thread_safety: Unsafe
   - name: MarketplaceService:PromptPurchase
     summary: |
-      Prompts a user to purchase an item with the given `assetId`.
+      Prompts a user to purchase an item with the given `assetId`. Does not work
+      for USD Creator Store purchases.
     description: |
-      Prompts a user to purchase an item with the given `assetId`. If prompting
-      a purchase of a
+      Prompts a user to purchase an item with the given `assetId`. **This does
+      not work for
+      [USD Creator Store](../../../production/publishing/selling-on-the-creator-store.md)
+      purchases**. If prompting a purchase of a
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
-      item, the request must come from the server or the purchase fails.
+      item:
+
+      - Server requests (recommended) prompt original copies until they run out,
+        regardless of the price. Once original copies are out, resale copies are
+        prompted.
+
+      - Client requests prompt from the lowest resale price even if original
+        copies are available.
     code_samples:
       - MarketplaceService-PromptPurchase1
       - market
@@ -360,12 +370,12 @@ methods:
       	<tr>
       	  <td><code>IsLimited</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited item" that is no longer (if ever) sold.</td>
+      	  <td>Describes whether the asset is a Roblox Limited that is no longer (if ever) sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsLimitedUnique</code></td>
       	  <td>boolean</td>
-      	  <td>Describes whether the asset is a "limited unique" ("Limited&nbsp;U") item that only has a fixed number sold.</td>
+      	  <td>Describes whether the asset is a unique Roblox Limited ("Limited&nbsp;U") item that only has a fixed number sold.</td>
         </tr>
       	<tr>
       	  <td><code>IsNew</code></td>
@@ -446,6 +456,9 @@ methods:
       Returns the product information of a subscription for the given
       `subscriptionId`.
     description: |
+      **Note**: Because it returns a localized price, you can only call this
+      method from a `Class.Script` with `Enum.RunContext.Client`.
+
       Returns the product information of a subscription for the given
       `subscriptionId`.
 
@@ -520,12 +533,91 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MarketplaceService:GetUserSubscriptionDetailsAsync
+    summary: |
+      Returns a table that contains the details of the user's subscription for a
+      given `subscriptionId`.
+    description: |
+      Returns a dictionary table containing the details of the user's
+      subscription for the given `subscriptionId`. The table contains the
+      following keys:
+
+      <table size="small">
+      	<thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+      	<tr>
+      	  <td><code>SubscriptionState</code></td>
+      	  <td><code>Enum.SubscriptionState</code></td>
+      	  <td>Current state of this particular subscription.</td>
+        </tr>
+      	<tr>
+      	  <td><code>NextRenewTime</code></td>
+      	  <td><code>Datatype.DateTime</code></td>
+      	  <td>
+            Renewal time for this current subscription. May be in the past if the subscription is in
+            <code>Enum.SubscriptionState.SubscribedRenewalPaymentPending|SubscribedRenewalPaymentPending</code> state. This
+            field is will be <code>nil</code> if the subscription will not renew, is <code>Enum.SubscriptionState.Expired|Expired</code>, or the user never subscribed.
+          </td>
+        </tr>
+        <tr>
+      	  <td><code>ExpireTime</code></td>
+      	  <td><code>Datatype.DateTime</code></td>
+      	  <td>
+            When this subscription expires. This field will be <code>nil</code>
+            if the subscription is not cancelled or the user never subscribed.
+          </td>
+        </tr>
+        <tr>
+      	  <td><code>ExpirationDetails</code></td>
+      	  <td><code>Library.table</code></td>
+      	  <td>
+            Table containing the details of the subscription expiration. This
+            field will be <code>nil</code> if the subscription is not in the
+            <code>Enum.SubscriptionState.Expired|Expired</code> state. If populated, the table contains a <code>ExpirationReason</code> key of type <code>Enum.SubscriptionExpirationReason</code> describing why the subscription is expired.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      Note that this method can only be called from a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` of
+      `Enum.RunContext.Server|Server`. If you only need to determine the
+      `IsSubscribed` status of a user, it's recommended to use
+      `Class.MarketplaceService:GetUserSubscriptionStatusAsync()|GetUserSubscriptionStatusAsync()`
+      as it is faster and more efficient for that particular purpose.
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: |
+          The `Class.Player` object whose subscription details you want to
+          check.
+      - name: subscriptionId
+        type: string
+        default:
+        summary: |
+          The ID of the subscription to check.
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
     summary: |
       Returns an `Library.table|Array` that contains up to one year of the
       user's subscription payment history for the given `subscriptionId`.
     description: |
-      **Note**: This method can only be called from a `Class.Script` with
+      **Note**: You can only call this method from a `Class.Script` with
       `Enum.RunContext.Server`.
 
       Returns an `Library.table|Array` that contains up to one year of the

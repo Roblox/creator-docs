@@ -44,10 +44,10 @@ description: |
   at the front or the back. The front of the face is visible when the vertices
   go counterclockwise around it.
 
-  <img src="/assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
+  <img src="../../../assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 
   #### Limitations
-  
+
   `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
   triangles. Attempting to add too many vertices or triangles will cause an
   error.
@@ -186,7 +186,7 @@ methods:
     description: |
       Given a stable triangle ID, returns a list of adjacent triangles.
 
-      <img src="/assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
+      <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
     code_samples: []
     parameters:
       - name: triangleId
@@ -208,7 +208,7 @@ methods:
     description: |
       Given a stable vertex ID, returns a list of adjacent vertices.
 
-      <img src="/assets/engine-api/classes/EditableMesh/GetAdjacentVertices.png" alt="Adjacent vertices indicated around requested vertex" width="120" />
+      <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentVertices.png" alt="Adjacent vertices indicated around requested vertex" width="120" />
     code_samples: []
     parameters:
       - name: vertexId

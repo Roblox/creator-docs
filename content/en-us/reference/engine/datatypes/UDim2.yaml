@@ -7,8 +7,9 @@ description: |
   The `Datatype.UDim2` data type represents a two-dimensional value where each
   dimension is composed of a relative scale and an absolute offset. It is a
   combination of two `Datatype.UDim` representing the X and Y dimensions. The
-  most common usages of `Datatype.UDim2` objects are setting the `Class.GuiObject.Size|Size`
-  and `Class.GuiObject.Position|Position` of `Class.GuiObject|GuiObjects`.
+  most common usages of `Datatype.UDim2` objects are setting the
+  `Class.GuiObject.Size|Size` and `Class.GuiObject.Position|Position` of
+  `Class.GuiObject|GuiObjects`.
 
   ```lua
   local guiObject = script.Parent
@@ -63,22 +64,22 @@ constructors:
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: |
           The X dimension scale.
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: |
           The X dimension offset.
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: |
           The Y dimension scale.
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: |
           The Y dimension offset.
     code_samples: []
@@ -114,11 +115,11 @@ constructors:
     parameters:
       - name: xScale
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yScale
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []
@@ -134,11 +135,11 @@ constructors:
     parameters:
       - name: xOffset
         type: number
-        default:
+        default: 0
         summary: ''
       - name: yOffset
         type: number
-        default:
+        default: 0
         summary: ''
     code_samples: []
     tags: []

@@ -5,8 +5,8 @@ description: Immersive Ads allow you insert ad units into your experience that p
 
 The **Immersive Ads** system allows you to insert ad units into your experience that permit Roblox to programmatically serve ad content from advertisers to your active users. There are two formats of immersive ad units:
 
-- **Image Ads** - A static, non-clickable image within the 3D space.
-- **Portal Ads** - A static, non-clickable image with a door that teleports users into an advertiser's experience.
+- **Image Ads** — A static, non-clickable image within the 3D space.
+- **Portal Ads** — A static, non-clickable image with a door that teleports users into an advertiser's experience.
 
 <Alert severity="info">
    The advertiser's experience includes a button to return users back to your experience.
@@ -15,40 +15,30 @@ The **Immersive Ads** system allows you to insert ad units into your experience 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/monetization/immersive-ads/Overview-ImageAd.jpg" />
-    <figcaption>
-      Image Ad Format
-    </figcaption>
+    <figcaption>Image Ad Format</figcaption>
   </figure>
   <figure>
     <video controls src="../../assets/monetization/immersive-ads/Overview-PortalAd.mp4" width="90%"></video>
-    <figcaption>
-      Portal Ad Format
-    </figcaption>
+    <figcaption>Portal Ad Format</figcaption>
   </figure>
 </GridContainer>
 
 Ad content is specific to the user, meaning two users might simultaneously see different images or teleport to different advertiser experiences from the exact same ad unit, and if a user is ineligible to see ads, ad units display a fallback image of the Roblox logo.
 
-To illustrate this concept, see the following three images of the same ad unit showing different content depending on the user. User A sees an ad promoting an advertiser's _The Mystery of Duvall Drive_ experience while User B sees an ad promoting an advertiser's _Beyond the Dark_ experience. User C doesn't see an ad at all from this ad unit because they are ineligible to see ads.
+To illustrate this concept, see the following three images of the same ad unit showing different content depending on the user. User A sees an ad promoting [The Mystery of Duvall Drive](../../resources/the-mystery-of-duvall-drive/index.md) experience while User B sees an ad promoting [Beyond the Dark](../../resources/beyond-the-dark/index.md). User C doesn't see an ad at all from this ad unit because they are ineligible to see ads.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../../assets/monetization/immersive-ads/Overview-UserA.jpg" />
-    <figcaption>
-      User A
-    </figcaption>
+    <figcaption>User A</figcaption>
   </figure>
   <figure>
     <img src="../../assets/monetization/immersive-ads/Overview-UserB.jpg" />
-    <figcaption>
-      User B
-    </figcaption>
+    <figcaption>User B</figcaption>
   </figure>
   <figure>
     <img src="../../assets/monetization/immersive-ads/Overview-UserC.jpg" />
-    <figcaption>
-      User C
-    </figcaption>
+    <figcaption>User C</figcaption>
   </figure>
 </GridContainer>
 
@@ -65,11 +55,17 @@ Roblox pays out earnings on the 25th of the following month from when you insert
 
 ## Experience and User Eligibility
 
-While everyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience is eligible to serve ads, which is based on an internal set of eligibility criteria. You can check your experience's eligibility status to serve ads by visiting your experience's details page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the left-hand navigation's **Analytics** section displays an **Immersive Ads** header, your experience is eligible.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience is eligible to serve ads, which is based on an internal set of eligibility criteria. You can check your experience's eligibility status to serve ads by visiting your experience's details page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the left-hand navigation's **Monetization** section displays an **Immersive Ads** option, your experience is eligible.
 
-<img src="../../assets/monetization/immersive-ads/Eligibility-ImmersiveAdsHeader.jpg" width="80%" />
+<img src="../../assets/monetization/immersive-ads/immersive-ads-eligibility.png" width="100%" />
 
-Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as users under the age of 13. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether for those users by utilizing `Class.PolicyService` API. For more information, see [Removing Ad Units from Ineligible Users](#removing-ad-units-for-ineligible-users).
+Advertisers can choose to limit which experiences their Immersive Ads are shown in to align with their brand. While we expect that all Roblox experiences are appropriate for most advertisers, some advertisers may choose to be more restrictive with where their ads are shown. Therefore, ad demand and publisher earnings could vary based upon an experience's age recommendation. Experiences with content suitable for more audiences should generally expect to earn more through immersive ads than experiences with more mature content. For more information on advertiser controls, see [Define Ad Sets](../promotion/ads-manager.md#define-ad-sets).
+
+Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Removing Ad Units for Ineligible Users](#removing-ad-units-for-ineligible-users).
+
+<Alert severity="warning">
+   Intentionally misrepresenting your experience in the experience questionnaire in an attempt to increase traffic is prohibited and may have moderation consequences.
+</Alert>
 
 ## Inserting Ad Units
 
@@ -78,15 +74,11 @@ When you insert an ad unit into an eligible experience, it's important to check 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/monetization/immersive-ads/Inserting-ImageAd.jpg" width="80%" />
-    <figcaption>
-      This ad unit is valid and can serve ads.
-    </figcaption>
+    <figcaption>This ad unit is valid and can serve ads</figcaption>
   </figure>
   <figure>
     <img src="../../assets/monetization/immersive-ads/Inserting-PortalAd.jpg" width="80%" />
-    <figcaption>
-      This ad unit is invalid because it's too small. It cannot serve ads until you scale it to a valid size.
-    </figcaption>
+    <figcaption>This ad unit is invalid because it's too small; it cannot serve ads until you scale it to a valid size</figcaption>
   </figure>
 </GridContainer>
 
@@ -100,27 +92,24 @@ In order for the ad unit to be valid and serve ads once you publish the experien
 - The block is no smaller than 8 by 4.5 studs, and no larger than 32 by 18 studs.
 - The block doesn't include another `Class.AdGui` or `Class.SurfaceGui` object on the same face of the ad.
 
+<figure>
 <img src="../../assets/monetization/immersive-ads/ImageAds-Sample.jpg" width="50%" />
+</figure>
 
 To insert an image ad:
 
-1. Insert a block part into your experience.
+1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
 
-   1. In the menu bar, select the **Home** tab.
-   1. Click the small arrow below **Part**. A dropdown menu displays.
+   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />
 
-      <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />
-
-   1. Select **Block**. A block part displays within the viewport.
-
-1. In the **Properties** window, navigate to the **Face** property and choose a face or keep the default face.
+1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.
-1. In the **Explorer** window, add an **AdGui** object to the part.
+1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
    1. Hover over the part and click the **⊕** button. A contextual menu displays.
    1. From the menu, insert an **AdGui**.
 
 <Alert severity="info">
-   You can also insert an image ad package from the Creator Marketplace, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Marketplace, see [Inserting Ad Units - Portal Ads](#portal-ads).
+   You can also insert an image ad package from the Creator Store, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Store, see [Inserting Ad Units - Portal Ads](#portal-ads).
 </Alert>
 
 Once you publish the experience, users can see the ad unit in one of the following states:
@@ -159,14 +148,14 @@ A portal ad is made up of two core components:
 - A static, non-clickable image.
 - A door that teleports users to an advertiser's experience.
 
-The Creator Marketplace includes portal ads that represent these core components through a **BasePortal** package. While this package must remain as-is outside of its scale, position, and rotation in order to remain valid and able to serve ads, portal ads also include a **Decorative** folder of both static and dynamic visual elements that display or hide according to the ad unit's state. You can customize these visual elements as long as the core components stay intact and without obstruction.
+The Creator Store includes portal ads that represent these core components through a **BasePortal** package. While this package must remain as-is outside of its scale, position, and rotation in order to remain valid and able to serve ads, portal ads also include a **Decorative** folder of both static and dynamic visual elements that display or hide according to the ad unit's state. You can customize these visual elements as long as the core components stay intact and without obstruction.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/monetization/immersive-ads/PortalAds-BasePortal.jpg" width="70%" />
+    <img src="../../assets/monetization/immersive-ads/Portal-Ads-BasePortal.png" width="320" />
   </figure>
   <figure>
-    <img src="../../assets/monetization/immersive-ads/PortalAds-Decorative.jpg" />
+    <img src="../../assets/monetization/immersive-ads/Portal-Ads-Decorative.png" width="320" />
   </figure>
 </GridContainer>
 
@@ -183,16 +172,16 @@ For example, the following two portal ad packages have the exact same core compo
 
 To insert a portal ad:
 
-1. Open the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+1. Open the Creator Store.
    1. In the menu bar, navigate to the **View** tab.
-   1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Marketplace** tab open.
+   1. Select **Toolbox**. The [Toolbox](../../projects/assets/toolbox.md) window displays with the **Creator Store** tab open.
 1. In the **Categories** section, click the **See&nbsp;All** button. All categories display.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
 1. Click the **Ads** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Ads.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Ads.png" width="200" />
 
 1. Click any of the **Portal** template packages. The ad unit displays in the viewport.
 1. **(Optional)** Customize the visual elements that surround the ad unit by modifying elements within the package's **Decorative** folder.
@@ -228,9 +217,9 @@ Once you publish the experience, users can see the ad unit in one of the followi
 
 ## Removing Ad Units for Ineligible Users
 
-Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), you must either hide, replace, or block ad content from users who are ineligible to see ads. By default, immersive ad units handle this by replacing ads with a fallback image of the Roblox logo for users ineligible to see ads. However, if you want to hide or remove the ad units entirely, you must use `Class.PolicyService.GetPolicyInfoForPlayerAsync` to return an `AreAdsAllowed` boolean that determines the eligibility of each user who accesses your experience to see ads, then include logic to modify ad visibility to ineligible users.
+Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), you must either hide, replace, or block ad content from users who are ineligible to see ads. By default, immersive ad units handle this by replacing ads with a fallback image of the Roblox logo for users ineligible to see ads. However, if you want to hide or remove the ad units entirely, you must use `Class.PolicyService:GetPolicyInfoForPlayerAsync()` to return an `AreAdsAllowed` boolean that determines the eligibility of each user who accesses your experience to see ads, then include logic to modify ad visibility to ineligible users.
 
-For example, the following code sample uses `Class.PolicyService.GetPolicyInfoForPlayerAsync` to check the eligibility of each user to see ads as they enter the experience. If `AreAdsAllowed` is true for a user, portal ads remain visible, but if it's false, the script destroys all of them. While this is a great strategy to remove ad content from users who are ineligible to see ads, it's important to note that destroying ad units may change your experience's gameplay if some users can see ad units while others cannot.
+For example, the following code sample uses `Class.PolicyService:GetPolicyInfoForPlayerAsync()` to check the eligibility of each user to see ads as they enter the experience. If `AreAdsAllowed` is true for a user, portal ads remain visible, but if it's false, the script destroys all of them. While this is a great strategy to remove ad content from users who are ineligible to see ads, it's important to note that destroying ad units may change your experience's gameplay if some users can see ad units while others cannot.
 
 ```lua
 local Players = game:GetService("Players")
@@ -238,33 +227,33 @@ local PolicyService = game:GetService("PolicyService")
 local Workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
--- Sample assumes a Main Portal Template model exists under Workspace
+-- Sample assumes a "Main Portal Template" model exists under Workspace
 local mainPortal = Workspace:WaitForChild("Main Portal Template")
 
 -- Get the policy info for the user
 	local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)
 	if success and result then
 		if not result.AreAdsAllowed then
-			-- Destroy all Main Portal Template instances on the user's client if ads are not allowed
+			-- Destroy the "Main Portal Template" instance on the user's client if ads are not allowed
 			mainPortal:Destroy()
 		end
 	else
-		print("Failed to get policy for player", player.Name, "Exception:", result)
+		print("Failed to get policy for player", player.Name, "| Exception:", result)
 	end
 ```
 
 ## Viewing Immersive Ad Metrics
 
-Once you insert ad units into your experience, the Creator Dashboard generates different types of metrics graphs to help you analyze the overall performance of your immersive ads. After about 48 hours of having immersive ads run in your experience, you can see how many impressions and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
+Once you insert ad units into your experience, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your immersive ads. After about 48 hours of having immersive ads run in your experience, you can see how many impressions and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
 
 By tracking these trends over time, you can make strategic decisions on the number of ad units you include per place, which format of ad unit you want to prioritize, and where you can place individual ad units to generate impressions.
 
 To view immersive ad metrics:
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on the dashboard and select your experience.
+1. Navigate to the **Monetization** tab and select **Immersive Ads**.
 
-2. Navigate to the **Monetization** tab and select **Immersive Ads**.
-   <img src="../../assets/monetization/immersive-ads/immersive-ads-metrics.png" width="40%" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Immersive-Ads.png" width="330" />
 
 For information on each metrics graph, see the following table.
 
@@ -311,7 +300,7 @@ For information on each metrics graph, see the following table.
 </tbody>
 </table>
 
- <img src="../../assets/monetization/immersive-ads/ViewingMetrics-Graph.png" width="80%" />
+ <img src="../../assets/monetization/immersive-ads/ViewingMetrics-Graph.png" width="100%" />
 
 <Alert severity="info">
    Metrics graphs that report impressions and teleports per ad unit use each ad unit's name in Studio.

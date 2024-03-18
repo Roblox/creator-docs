@@ -5,17 +5,16 @@ memory_category: Instances
 summary: |
   Represents a text chat channel.
 description: |
-  Represents a text chat channel.
-
-  Contains `Class.TextSource`s as descendants.
+  Represents a text chat channel. Contains `Class.TextSource|TextSources` as
+  descendants.
 
   To send a chat message to the `Class.TextChannel`, call
   `Class.TextChannel:SendAsync()` from a `Class.LocalScript`. The corresponding
   `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
   that channel.
 
-  To learn more about using TextChannels, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  To learn more, see
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -28,8 +27,10 @@ methods:
       Displays a system message to the user.
     description: |
       Displays a system message to user. Can only be used in a
-      `Class.LocalScript`. Messages are only visible to that user and aren't
-      automatically filtered or localized.
+      `Class.LocalScript`, or in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`. Messages
+      are only visible to that user and aren't automatically filtered or
+      localized.
     code_samples: []
     parameters:
       - name: systemMessage
@@ -92,7 +93,8 @@ methods:
       Sends a `Class.TextChatMessage` to the server.
     description: |
       Sends a `Class.TextChatMessage` to the server. Can only be used in a
-      `Class.LocalScript`.
+      `Class.LocalScript`, or in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client`.
     code_samples: []
     parameters:
       - name: message
@@ -118,18 +120,24 @@ methods:
 events:
   - name: TextChannel.MessageReceived
     summary: |
-      Fires when the server receives a `Class.TextChannel:SendAsync()` response
-      or invokes `Class.TextChannel:DisplaySystemMessage()`.
+      Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
+      client, or when the client receives a valid
+      `Class.TextChannel:SendAsync()` response from the server.
     description: |
-      Only fired on the receiving client when the server receives a
-      `Class.TextChannel:SendAsync()` response or invokes
-      `Class.TextChannel:DisplaySystemMessage()`.
+      Like `Class.TextChatService.MessageReceived`, fires when
+      `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or
+      when the client receives a valid `Class.TextChannel:SendAsync()` response
+      from the server. This event is only fired on the client.
 
-      Use `Class.TextChatMessage` parameter to get the `Class.TextSource` and
-      the text of the message (with `Class.TextChatMessage.Text`).
+      If the server's `Class.TextChannel.ShouldDeliverCallback` property is
+      bound and returns `false`, the client will not fire
+      `Class.TextChannel.MessageReceived`.
 
-      The `Class.TextChatMessage` parameter can be mutated by any functions
-      bound to `Class.TextChatMessage.OnIncomingMessage` and
+      Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
+      and the text of the message (with `Class.TextChatMessage.Text`).
+
+      The `Class.TextChatMessage` parameter is the final result of any functions
+      bound to `Class.TextChatService.OnIncomingMessage` or
       `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
@@ -150,10 +158,10 @@ callbacks:
       Called when `Class.TextChannel` is receiving an incoming message. Can only
       be implemented on the client.
 
-      Use this to decorate `Class.TextChatMessage`s. If this callback returns a
-      `Class.TextChatMessageProperties`, those properties are merged with the
-      `Class.TextChatMessage` parameter to create a new `Class.TextChatMessage`
-      with those properties.
+      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this
+      callback returns a `Class.TextChatMessageProperties`, those properties are
+      merged with the `Class.TextChatMessage` parameter to create a new
+      `Class.TextChatMessage` with those properties.
 
       When bound to the client sending a message, this event can be fired twice,
       first when the message is initially sent and received by the same client
@@ -161,8 +169,8 @@ callbacks:
       message from the server. `Class.TextChannel.OnIncomingMessage` callbacks
       always run **after** `Class.TextChatService.OnIncomingMessage` callback.
 
-      This should be defined only once per TextChannel in the source code.
-      Multiple bindings to the same TextChannel will override one another in a
+      This should be defined only once per `Class.TextChannel` in the source
+      code. Multiple bindings to the same channel will override one another in a
       nondeterministic manner.
     code_samples: []
     parameters:
@@ -183,15 +191,18 @@ callbacks:
     thread_safety: Unsafe
   - name: TextChannel.ShouldDeliverCallback
     summary: |
-      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client.
+      Called for each client when `Class.TextChannel` is receiving an incoming
+      message to determine whether or not it should be delivered to that client.
     description: |
-      Called for each client when `Class.TextChannel` is receiving an incoming message to determine whether or not it should be delivered to that client. Can only be defined on the server.
+      Called for each client when `Class.TextChannel` is receiving an incoming
+      message to determine whether or not it should be delivered to that client.
+      Can only be defined on the server.
 
-      Once defined, this callback needs to return a truthy value such as `true`, `1`,
-      or `"hello"` to deliver the message to said client. If the callback returns
-      anything else (including `nil`), the message won't be delivered to that client, although the
-      sender will see the message regardless.
-      
+      Once defined, this callback needs to return a truthy value such as `true`,
+      `1`, or `"hello"` to deliver the message to said client. If the callback
+      returns anything else (including `nil`), the message won't be delivered to
+      that client, although the sender will see the message regardless.
+
       The sender can be referenced by `Class.TextChatMessage.TextSource`.
     code_samples: []
     parameters:

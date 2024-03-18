@@ -6,7 +6,7 @@ description: Solid modeling is the process of joining parts together to form com
 **Solid modeling** is the process of joining [parts](../parts/index.md)
 together in unique ways to form more complex shapes known as **unions** or **intersections**. You can perform four solid modeling operations using the tools within the [Model](../studio/model-tab.md) tab.
 
-<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="754" />
+<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="744" />
 
 <table>
   <thead>
@@ -19,22 +19,22 @@ together in unique ways to form more complex shapes known as **unions** or **int
   <tbody>
     <tr>
       <td>[Union](#unioning-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
       <td>Join two or more parts together to form a single solid union.</td>
     </tr>
 	<tr>
       <td>[Intersect](#intersecting-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
       <td>Intersect overlapping parts into a single solid intersection.</td>
     </tr>
     <tr>
       <td>[Negate](#negating-parts)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
       <td>Negate parts, useful for making holes and indentations.</td>
     </tr>
     <tr>
       <td>[Separate](#separating-unions-or-intersections)</td>
-	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (macOS)</td>
+	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
       <td>Separate the union or intersection back into its individual parts.</td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ To combine parts together into a union:
 1. Select all parts to join together.
 2. Click the **Union** button. All of the parts combine into one solid `Class.UnionOperation` with the name **Union**.
 
-   <img src="../assets/studio/general/Model-Tab-Union.png" alt="Union tool indicated in Model tab" width="630" />
+   <img src="../assets/studio/general/Model-Tab-Union.png" alt="Union tool indicated in Model tab" width="702" />
 
 ## Intersecting Parts
 
@@ -82,7 +82,7 @@ To intersect overlapping parts together:
 1. Select all parts to intersect.
 2. Click the **Intersect** button. All of the parts combine into one solid `Class.IntersectOperation` with the name **Intersection**.
 
-   <img src="../assets/studio/general/Model-Tab-Intersect.png" alt="Intersect tool indicated in Model tab" width="630" />
+   <img src="../assets/studio/general/Model-Tab-Intersect.png" alt="Intersect tool indicated in Model tab" width="702" />
 
 ## Negating Parts
 
@@ -106,12 +106,12 @@ To subtract a part from other overlapping parts:
 1. Select the part you would like to negate from other parts.
 1. Click **Negate**. The part becomes a `Class.NegateOperation` with the name **NegativePart** and turns pink and translucent to indicate its state.
 
-   <img src="../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="630" />
+   <img src="../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="702" />
 
 1. Select both the negated part and the parts you want to subtract it from.
 1. Click **Union**. The negated part is cut out from the included overlapping parts.
 
-   <img src="../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="630" />
+   <img src="../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="702" />
 
 ## Separating Unions or Intersections
 
@@ -122,7 +122,7 @@ To separate a union or intersection back into individual parts:
 1. Select a `Class.UnionOperation`.
 1. Click **Separate**. The parts separate back into their original form.
 
-   <img src="../assets/studio/general/Model-Tab-Separate.png" alt="Separate tool indicated in Model tab" width="630" />
+   <img src="../assets/studio/general/Model-Tab-Separate.png" alt="Separate tool indicated in Model tab" width="702" />
 
 ## Render Fidelity
 

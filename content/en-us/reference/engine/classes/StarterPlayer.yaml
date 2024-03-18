@@ -20,10 +20,6 @@ description: |
     the default humanoid for each player's character.
   - A `Class.Model` instance named **StarterCharacter**, which will be used as
     the character model for all players
-
-  A typical structure may look something like this:
-
-  ![StarterPlayer Tree](/assets/legacy/StarterPlayerTree.png)
 code_samples:
   - setting-a-player-s-replication-focus
   - displaying-a-humanoid-s-health-and-name
@@ -42,7 +38,7 @@ properties:
     description: |
       The AllowCustomAnimations `Class.StarterPlayer` property describes the
       current game's permission levels regarding custom avatar
-      `Class.Animation`s from the website.
+      `Class.Animation|Animations` from the website.
 
       As such, this value cannot be changed from within the game. It can only be
       changed by changing the game's permission levels within the game's
@@ -62,22 +58,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: StarterPlayer.AnimationCompositorMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: AnimationCompositorMode
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Character
-    serialization:
-      can_load: true
-      can_save: true
   - name: StarterPlayer.AutoJumpEnabled
     summary: |
       Sets whether the character will automatically jump when hitting an
@@ -88,10 +68,10 @@ properties:
 
       This property is copied from the `Class.StarterPlayer` to a `Class.Player`
       when they join the game. Following that. the value of this property is
-      copied to `Class.Humanoid.AutoJumpEnabled` property of the
-      `Class.Player.Character`s `Class.Humanoid` on spawn. In other words, it is
-      possible to set the auto-jump behavior on a per-character, per-player and
-      per-game basis using these three properties.
+      copied to `Class.Humanoid.AutoJumpEnabled` property of the character's
+      `Class.Humanoid` on spawn. In other words, it is possible to set the
+      auto-jump behavior on a per-character, per-player and per-game basis using
+      these three properties.
     code_samples:
       - Auto-Jump-Toggle
     type: bool
@@ -216,7 +196,6 @@ properties:
 
       Third-person is the default camera setting.
     code_samples:
-      - untitled
       - playing-in-first-person
     type: CameraMode
     tags: []
@@ -235,7 +214,7 @@ properties:
       `Class.Player.Character`.
     description: |
       **CharacterJumpHeight** determines the starting value of
-      `Class.Humanoid.JumpHeight` for a `Class.Player`'s
+      `Class.Humanoid.JumpHeight` for a player's
       `Class.Player.Character|Character`. The value of this property defaults to
       7.2 studs.
 
@@ -264,9 +243,9 @@ properties:
       `Class.Player.Character`.
     description: |
       **CharacterJumpPower** determines the starting value of
-      `Class.Humanoid.JumpPower` for a `Class.Player`'s
+      `Class.Humanoid.JumpPower` for a player's
       `Class.Player.Character|Character`. The value of this property defaults to
-      50 and when applied to the `Class.Player`s `Class.Humanoid` it will be
+      50 and when applied to the player's `Class.Humanoid` it will be
       constrained between 0 and 1000.
 
       This property is only visible in the Properties window If
@@ -294,10 +273,10 @@ properties:
       `Class.Player.Character`.
     description: |
       **CharacterMaxSlopeAngle** determines the starting value of
-      `Class.Humanoid.MaxSlopeAngle` for a `Class.Player`'s
+      `Class.Humanoid.MaxSlopeAngle` for a player's
       `Class.Player.Character|Character`. It defaults to 89°, so humanoids can
       climb pretty much any slope they want by default. When applied to the
-      `Class.Player`'s `Class.Humanoid` it will be constrained between 0 and 89.
+      player's `Class.Humanoid` it will be constrained between 0 and 89.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -320,7 +299,7 @@ properties:
       `Class.Player.Character`.
     description: |
       **CharacterUseJumpPower** determines the starting value of
-      `Class.Humanoid.UseJumpPower` for a `Class.Player`'s
+      `Class.Humanoid.UseJumpPower` for a player's
       `Class.Player.Character|Character`. Toggling it will change which property
       is visible in the properties window:
       `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight` (false) or
@@ -347,7 +326,7 @@ properties:
       `Class.Player.Character`.
     description: |
       **CharacterWalkSpeed** determines the starting value of
-      `Class.Humanoid.WalkSpeed` for a `Class.Player`'s
+      `Class.Humanoid.WalkSpeed` for a player's
       `Class.Player.Character|Character`. This property defaults to 16.
 
       Since this property is only relevant for characters being spawned in the
@@ -588,19 +567,19 @@ properties:
       can_save: true
   - name: StarterPlayer.HealthDisplayDistance
     summary: |
-      Sets the distance at which this player will see other Humanoid's health
-      bars. If set to 0, the health bars will not be displayed.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      health bars. If set to 0, the health bars will not be displayed.
     description: |
       The HealthDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid`'s health
-      bars. If set to 0, the health bars will not be displayed. This property is
-      set to 100 studs by default.
+      in studs at which this player will see other `Class.Humanoid` health bars.
+      If set to 0, the health bars will not be displayed. This property is set
+      to 100 studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.HealthDisplayDistance` property.
 
-      If a Humanoid's health bar is visible, you can set the display type using
-      `Class.Humanoid.DisplayDistanceType`.
+      If a `Class.Humanoid` health bar is visible, you can set the display type
+      using `Class.Humanoid.DisplayDistanceType`.
     code_samples:
       - hiding-player-health-and-names
     type: float
@@ -611,22 +590,6 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
-    serialization:
-      can_load: true
-      can_save: true
-  - name: StarterPlayer.HumanoidStateMachineMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: HumanoidStateMachineMode
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Controls
     serialization:
       can_load: true
       can_save: true
@@ -703,20 +666,20 @@ properties:
       can_save: true
   - name: StarterPlayer.NameDisplayDistance
     summary: |
-      Sets the distance at which this player will see other Humanoid's names. If
-      set to 0, names are hidden.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      names. If set to 0, names are hidden.
     description: |
-      Sets the distance at which this player will see other Humanoid's names. If
-      set to 0, names are hidden.
+      Sets the distance at which this player will see other `Class.Humanoid`
+      names. If set to 0, names are hidden.
 
       The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid`'s names. If
+      in studs at which this player will see other `Class.Humanoid` names. If
       set to 0, names are hidden. This property is set to 100 studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.NameDisplayDistance` property.
 
-      If a Humanoid's name is visible, you can set the display type using
+      If a `Class.Humanoid` name is visible, you can set the display type using
       `Class.Humanoid.DisplayDistanceType`.
     code_samples:
       - hiding-player-health-and-names

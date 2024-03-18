@@ -8,14 +8,14 @@ description: PBR textures are advanced textures using multiple texture maps.
 <Tabs>
 <TabItem label="Clothing">
 <GridContainer numColumns="2">
-<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png"/>
-<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example-2.jpg"/>
+<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A humanoid avatar with dreadlocks, a glossy jacket, jeans with decals, and boots."/>
+<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example-2.jpg" alt="A humanoid avatar with a short haircut, leather jacket, capri pants and orange shoes."/>
 </GridContainer>
 </TabItem>
 <TabItem label="Environment">
 	<GridContainer numColumns="2">
-		<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" />
-		<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" />
+		<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="A realistic leafy bush"/>
+		<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="A realistic mossy rock"/>
 	</GridContainer>
 </TabItem>
 </Tabs>
@@ -36,7 +36,7 @@ To enable surface appearance for a `Class.MeshPart`:
    <img
    alt="Insert SurfaceAppearance"
    src="../../assets/modeling/surface-appearance/Insert-SurfaceAppearance.png"
-   width="320"
+   width="320" alt="A SurfaceAppearance object parented within a MeshPart in Studio's Explorer window."
    />
 
    When you are ready to add texture maps to your `Class.SurfaceAppearance` object, you can click each map property to browse and set the appropriate asset ID for each image:
@@ -44,8 +44,7 @@ To enable surface appearance for a `Class.MeshPart`:
    <img
    alt="Insert SurfaceAppearance"
    src="../../assets/modeling/surface-appearance/Applying-Texture-Maps.png"
-   width="320"
-   />
+   width="320" alt="A close-up of the Properties panel where the user selected the ColorMap property. A popup displays all available image textures to select." />
 
 ## Texture Maps
 
@@ -62,15 +61,15 @@ See the following examples for an overview of Roblox's supported texture maps an
 The `Class.SurfaceAppearance.ColorMap|ColorMap` property sets the color data of the surface, including any transparency present in the map. See [Color&nbsp;(Albedo)](#color-albedo) for additional information.
 <GridContainer numColumns="3">
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap.jpg" alt="A completely filled image, mostly red with various black splotches and white scratches."/>
     	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" alt="A blank white sphere with a dark background."/>
     	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-After.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-After.jpg" alt="A red sphere with black splotches and white scratches with a dark background."/>
     	<figcaption>Mesh and Texture</figcaption>
 	</figure>
 </GridContainer>
@@ -79,15 +78,15 @@ The `Class.SurfaceAppearance.ColorMap|ColorMap` property sets the color data of 
 The `Class.SurfaceAppearance.NormalMap|NormalMap` texture property defines the topography of the surface allowing you to add visual textures such as bumps, dents, or cracks to your surface. See [Normal](#normal) for additional information.
 <GridContainer numColumns="3">
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap.jpg" alt="A completely filled image, mostly cyan with streaks and bumps across the surface giving the impression of a tactile surface." />
     	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-Before.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-Before.jpg" alt="A blank teal sphere with a dark background."/>
     	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-After.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-After.jpg" alt="A teal sphere with tactile streaks and bumps across the surface."/>
     	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
@@ -96,15 +95,15 @@ The `Class.SurfaceAppearance.NormalMap|NormalMap` texture property defines the t
 The grayscale `Class.SurfaceAppearance.RoughnessMap|RoughnessMap` texture property defines the smoothness of the surface, allowing for a glossy or matte visual appearance. See [Roughness](#roughness) for additional information.
 <GridContainer numColumns="3">
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap.png" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap.png" alt="A completely filled image of black diamond shapes over a light grey background."/>
     	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-Before.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-Before.jpg" alt="A blank purple sphere with a dark background."/>
     	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-After.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-After.jpg" alt="A purple sphere that has glossy diamond shapes over its surface."/>
     	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
@@ -113,15 +112,15 @@ The grayscale `Class.SurfaceAppearance.RoughnessMap|RoughnessMap` texture proper
 The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture property defines the metallic visual properties of the surface. See [Metalness](#metalness) for additional information.
 <GridContainer numColumns="3">
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap.jpg" alt="A completely filled image with a completely black border and scratch-like streaks revealing a white center."/>
     	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-Before.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-Before.jpg" alt="A blank light blue sphere with a dark background."/>
     	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
-    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-After.jpg" />
+    	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-After.jpg" alt="A light blue sphere with parts of its surface looking scratched. The scratched areas reveal a metal-ness quality that is more reflective."/>
     	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
@@ -129,7 +128,7 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 </Tabs>
 
 <Alert severity = 'info'>
-For technical details on texture file requirements, see [texture requirements](../../art/modeling/specifications.md#textures).
+For technical details on texture file requirements, see [texture requirements](../../art/modeling/texture-specifications.md).
 </Alert>
 
 ### Color (Albedo)
@@ -157,15 +156,15 @@ The following example demonstrates how the **Overlay** mode works using a white 
 
 <GridContainer numColumns="3">
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-ColorMap.png"/>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-ColorMap.png" alt="A completely filled image of a semi-repeating pattern with 8 by 8 small light blue squares. The background is checkered to indicate transparency."/>
   <figcaption>Example color/albedo map with transparency</figcaption>
 </figure>
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg"/>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" alt="A blank white sphere over a dark background."/>
   <figcaption>Example mesh object (white)</figcaption>
 </figure>
 <figure>
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-Overlay.jpg"/>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-AlphaMode-Overlay.jpg" alt="A white sphere with small blue squares scattered over the surface."/>
   <figcaption>`Class.SurfaceAppearance.AlphaMode|AlphaMode` set to **Overlay** using reference map and material</figcaption>
 </figure>
 </GridContainer>
@@ -174,11 +173,11 @@ The following example uses the **Overlay** mode for custom characters, revealing
 
 <GridContainer numColumns="2">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Custom-Skin-Tone-Map.png" width = "73%"/>
+<img src="../../assets/modeling/surface-appearance/Custom-Skin-Tone-Map.png" width = "73%" alt="A completely filled image of a texture map for a 3D humanoid model. Various parts of the image is checkered or partially checkered to indicate varying levels of transparency."/>
 <figcaption>Color map containing transparency in sections to expose the original mesh color</figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Custom-Skin-Tone-Example.png"/>
+<img src="../../assets/modeling/surface-appearance/Custom-Skin-Tone-Example.png" alt="Four of the same humanoid models with different skin tones: light brown, black, white, dark green."/>
 <figcaption>Several variations of characters with a single color map using **Overlay** mode</figcaption>
 </figure>
 </GridContainer>
@@ -195,15 +194,15 @@ The following example demonstrates how a partial and full transparency in this m
 <TabItem label="Sample Meshes">
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Opacity-0.png" />
+<img src="../../assets/modeling/surface-appearance/Opacity-0.png" alt="A sphere with a basket-like surface."/>
 <figcaption><center>No transparency</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Opacity-Half.png" />
+<img src="../../assets/modeling/surface-appearance/Opacity-Half.png" alt="A sphere with regular triangular patterns on its surface partially invisible." />
 <figcaption><center>Half transparency in sections</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Opacity-1.png" />
+<img src="../../assets/modeling/surface-appearance/Opacity-1.png" alt="A sphere with regular triangular patterns on its surface completely invisible."/>
 <figcaption><center>Full transparency in sections</center></figcaption>
 </figure>
 </GridContainer>
@@ -211,15 +210,15 @@ The following example demonstrates how a partial and full transparency in this m
 <TabItem label="Image Maps">
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/OpacityTexture-0.png" />
+<img src="../../assets/modeling/surface-appearance/OpacityTexture-0.png" alt="A completely filled image of a thatched basket-like surface."/>
 <figcaption><center>No transparency</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/OpacityTexture-Half.png" />
+<img src="../../assets/modeling/surface-appearance/OpacityTexture-Half.png" alt="A completely filled image with a thatched basket-like surface with a regular triangle pattern partially transparent."/>
 <figcaption><center>Half transparency in sections</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/OpacityTexture-1.png" />
+<img src="../../assets/modeling/surface-appearance/OpacityTexture-1.png" alt="A completely filled image with a thatched basket-like surface with a regular triangle pattern fully transparent."/>
 <figcaption><center>Full transparency in sections</center></figcaption>
 </figure>
 </GridContainer>
@@ -236,15 +235,15 @@ In the following figure, you can switch between the mesh reference and the map r
 <TabItem label="Sample Meshes">
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-0.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-0.png" alt="A clay colored smooth sphere."/>
 <figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-Half.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-Half.png" alt="A clay colored sphere with a moderately rocky surface."/>
 <figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-1.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-1.png" alt="A clay colored sphere with an extremely rocky surface"/>
 <figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>
@@ -252,15 +251,15 @@ In the following figure, you can switch between the mesh reference and the map r
 <TabItem label="Image Maps">
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-Map-0.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-Map-0.png" alt="A completely filled teal image."/>
 <figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-Map-Half.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-Map-Half.png" alt="A completely filled teal image with a moderate amount of surface aberrations in slightly lighter and darker shades"/>
 <figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Normal-Map-1.png" />
+<img src="../../assets/modeling/surface-appearance/Normal-Map-1.png" alt="A completely filled teal image with a heavy amount of surface aberrations in slightly lighter and darker shades"/>
 <figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>
@@ -281,15 +280,15 @@ See the following figure for comparisons of various roughness map values:
 
 <GridContainer numColumns="3">
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-0.png" />
+<img src="../../assets/modeling/surface-appearance/Roughness-0.png" alt="A blue glossy sphere with a legend indicating the roughness map is completely black." />
 <figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-Half.png" />
+<img src="../../assets/modeling/surface-appearance/Roughness-Half.png" alt="A blue semi-glossy sphere with a legend indicating the roughness map is exactly grey."/>
 <figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Roughness-1.png" />
+<img src="../../assets/modeling/surface-appearance/Roughness-1.png" alt="A blue matte sphere with a legend indicating the roughness map is completely white."/>
 <figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>
@@ -312,15 +311,15 @@ See the following figure for comparisons of various metalness map values:
 <GridContainer numColumns="3">
 
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-0.png" />
+<img src="../../assets/modeling/surface-appearance/Metalness-0.png" alt="A brown sphere with light splotches. A legend indicates the metalness map is completely black."/>
 <figcaption><center>0.0</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-Half.png" />
+<img src="../../assets/modeling/surface-appearance/Metalness-Half.png" alt="A brown sphere with light splotches and some reflectiveness. A legend indicates the metalness map is exactly grey."/>
 <figcaption><center>0.5</center></figcaption>
 </figure>
 <figure>
-<img src="../../assets/modeling/surface-appearance/Metalness-1.png" />
+<img src="../../assets/modeling/surface-appearance/Metalness-1.png" alt="A brown sphere with moderate splotches and lots of reflectiveness. A legend indicates the metalness map is completely white."/>
 <figcaption><center>1.0</center></figcaption>
 </figure>
 </GridContainer>

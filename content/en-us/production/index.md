@@ -56,7 +56,7 @@ within the Roblox ecosystem.
   Robux to create different types of adverts which will be displayed on the
   Roblox website for players to click on.
 
-- The [Sponsor System](../production/promotion/sponsoring-experiences.md) displays your
+- The [Ads Manager](../production/promotion/ads-manager.md#sponsored-experiences) displays your
   experience on the Roblox experience page in dedicated sponsor slots alongside
   some of the most popular experiences on the platform. The more Robux spent on
   adverts and sponsors, the more impressions and clicks they will receive.

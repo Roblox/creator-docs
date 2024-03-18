@@ -74,29 +74,14 @@ properties:
     summary: |
       Determines how a rendered image will be colorized.
     description: |
-      This property determines how a rendered image will be colorized. It allows
+      This property determines how a rendered image will be colorized, allowing
       you to change the image color without directly modifying the rendered
-      object.The default colorization value is
-      `Datatype.Color3|Color3.new(1,1,1)` (white). When set to white no
-      colorization occurs.
+      object. The default colorization value is
+      `Datatype.Color3|Color3.new(1, 1, 1)` (white) at which no color
+      modification occurs.
 
-      It functions similarly to `Class.ImageLabel.ImageColor3` and
-      `Class.Decal.Color3`except that it is applied to the rendered image.
-
-      The image below demonstrates the same ViewportFrame with two different
-      colorizations. The first image has the default (white) colorization and
-      the second image has a `Color3.new(255, 255, 102)` (yellow) colorization.
-
-      ![ViewportFrame with the default white colorization](/assets/legacy/Screen_Shot_2019-02-09_at_8.03.48_PM.png)
-
-      ![ViewportFrame with a yellow colorization](/assets/legacy/Screen_Shot_2019-02-09_at_8.08.58_PM.png)
-
-      See also:
-
-      - `Class.ViewportFrame.ImageTransparency`, determines the transparency of
-        the rendered image
-      - `Class.ViewportFrame.CurrentCamera`, the `Class.Camera` that is used to
-        render children objects
+      See also `Class.ViewportFrame.ImageTransparency|ImageTransparency` which
+      determines the transparency of the rendered image.
     code_samples:
     type: Color3
     tags: []
@@ -113,29 +98,13 @@ properties:
     summary: |
       Determines the transparency of the rendered image.
     description: |
-      This property determines the transparency of the rendered image. It allows
+      This property determines the transparency of the rendered image, allowing
       you to change the image transparency without directly modifying the
-      rendered object. A value of 0 is completely opaque, and a value of 1 is
-      completely transparent (invisible). The default transparency is 0.
+      rendered object. A value of 0 (default) is completely opaque and a value
+      of 1 is completely transparent (invisible).
 
-      This property behaves similarly to
-      `Class.GuiObject.BackgroundTransparency` or `Class.BasePart.Transparency`
-      except that it is applied to the rendered image.
-
-      The image below demonstrates the same ViewportFrame with two different
-      transparency. The first image has a transparency of 0 and the second image
-      has a transparency of 0.5.
-
-      ![ViewportFrame with default 0 transparency](/assets/legacy/Screen_Shot_2019-02-09_at_8.03.48_PM.png)
-
-      ![ViewportFrame with 0.5 transparencu](/assets/legacy/Screen_Shot_2019-02-09_at_8.23.38_PM.png)
-
-      See also:
-
-      - `Class.ViewportFrame.ImageColor3`, determines how a rendered image will
-        be colorized
-      - `Class.ViewportFrame.CurrentCamera`, the `Class.Camera` that is used to
-        render children objects
+      See also `Class.ViewportFrame.ImageColor3|ImageColor3` which determines
+      how a rendered image will be colorized.
     code_samples:
     type: float
     tags: []

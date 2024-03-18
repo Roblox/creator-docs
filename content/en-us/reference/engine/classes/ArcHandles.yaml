@@ -11,7 +11,7 @@ description: |
   interactive, it must be parented to a player's `Class.PlayerGui` or the
   `Class.CoreGui`.
 
-  <img src="/assets/engine-api/classes/ArcHandles/ArcHandles-Example.jpg"  alt="ArcHandles example" />
+  <img src="../../../assets/engine-api/classes/ArcHandles/ArcHandles-Example.jpg"  alt="ArcHandles example" />
 code_samples:
 inherits:
   - HandlesBase

@@ -7,7 +7,7 @@ description: |
   screen safe area. The insets are relative to the **fullscreen area**, meaning
   the rectangular region that encompasses all visible pixels on the screen.
 
-  <img src="/assets/engine-api/enums/ScreenInsets/Inset-Regions.png" width="840"
+  <img src="../../../assets/engine-api/enums/ScreenInsets/Inset-Regions.png" width="840"
   alt="Mobile device showing inset regions Fullscreen, Core UI Safe Area, and
   Device Safe Area" />
 code_samples: []

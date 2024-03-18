@@ -5,8 +5,7 @@ description: The Surface Art module lets players literally leave their mark in a
 
 Players often enjoy feeling like they're a part of constructing the space they're in. The **SurfaceArt** [developer module](../../resources/modules/index.md) lets players literally leave their mark in an experience.
 
-<video src="../../assets/developer-modules/surface-art/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/surface-art/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
 By default, a player can place 2 pieces of art across all of the tagged surfaces in the workspace. All of a player's art will be removed when they leave the game.
@@ -18,25 +17,25 @@ By default, a player can place 2 pieces of art across all of the tagged surfaces
 
 To use the **SurfaceArt** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Surface Art** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/surface-art/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **SurfaceArt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **SurfaceArt** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/surface-art/Move-Package.png" width="320" />
 
@@ -57,7 +56,7 @@ The module comes with one **SurfaceCanvas** model that you can position in the 3
    <img src="../../assets/developer-modules/surface-art/SurfaceArt-UI.jpg" width="800" />
 
 <Alert severity="info">
-	It is not required that you use the packaged mesh for placing art. The module uses `Class.CollectionService` to locate parts tagged as `SurfaceCanvas` and make them operate as canvases. Any tagged canvas must be a `Class.BasePart` and it should have an [attribute](../../studio/instance-attributes.md) defining the surface face as outlined in [Changing the Canvas Face](#changing-the-canvas-face).
+	It is not required that you use the packaged mesh for placing art. The module uses `Class.CollectionService` to locate parts tagged as `SurfaceCanvas` and make them operate as canvases. Any tagged canvas must be a `Class.BasePart` and it should have an [attribute](../../studio/properties.md#instance-attributes) defining the surface face as outlined in [Changing the Canvas Face](#changing-the-canvas-face).
 </Alert>
 
 ### Changing the Canvas Face
@@ -216,12 +215,15 @@ Images to be used as art for the canvas are represented by a table with two valu
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function can only be called from a `Class.Script`.
 
 <Tabs>
 <TabItem label="General">
+
 <table>
 <thead>
 	<tr>
@@ -238,7 +240,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`assets`</td>
-		<td>List of [`SurfaceArtAsset`](#surfaceartasset) types.</td>
+		<td>List of [SurfaceArtAsset](#surfaceartasset) types.</td>
 		<td>(see&nbsp;code&nbsp;below)</td>
 	</tr>
 	<tr>
@@ -248,8 +250,10 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Appearance">
+
 <table>
 <thead>
 	<tr>
@@ -321,8 +325,10 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 <TabItem label="Interaction">
+
 <table>
 <thead>
 	<tr>
@@ -379,6 +385,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 </tbody>
 </table>
+
 </TabItem>
 </Tabs>
 
@@ -396,7 +403,9 @@ SurfaceArt.configure({
 
 #### getCanvases
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>getCanvases():</InlineCode>`Library.table`</Typography>
+<figcaption>
+getCanvases(): `Library.table`
+</figcaption>
 
 Returns all of the canvases tagged with the `SurfaceCanvas` tag.
 
@@ -410,7 +419,9 @@ local canvases = SurfaceArt.getCanvases()
 
 #### placeArt
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>placeArt(player:</InlineCode>`Class.Player`<InlineCode>, canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+placeArt(player: `Class.Player`, canvas: `Class.BasePart`)
+</figcaption>
 
 Places an art piece programmatically on behalf of a player. Note that the `canvas` object must be tagged with the `SurfaceCanvas` tag when the server is initialized. It is recommended to use this only with a canvas returned from [getCanvases](#getcanvases).
 
@@ -430,7 +441,9 @@ end)
 
 #### removeAllArt
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>removeAllArt():</InlineCode>`nil`</Typography>
+<figcaption>
+removeAllArt()
+</figcaption>
 
 Removes all artwork from all surfaces.
 
@@ -446,14 +459,12 @@ SurfaceArt.removeAllArt()
 
 #### artChanged
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>artChanged(canvas:</InlineCode>`Class.BasePart`<InlineCode>, spot:</InlineCode>`Class.Frame`<InlineCode>, spotPosition:</InlineCode>`Datatype.Vector3`<InlineCode>, artId:</InlineCode>`Library.string`<InlineCode>, ownerUserId:</InlineCode>`number`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when an artwork is changed at a particular location on a canvas. When an artwork is removed, `artId` will be `nil`. Note that a `Datatype.Vector3` value is passed as the third parameter to the event handler so that you can position a [custom effect](#showing-custom-effects) at the exact position where the artwork is placed. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -494,14 +505,12 @@ end)
 
 #### promptShown
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptShown(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a canvas interaction prompt is shown to a player. The connected function receives the canvas upon which the prompt is showing. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -525,14 +534,12 @@ end)
 
 #### promptHidden
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>promptHidden(canvas:</InlineCode>`Class.BasePart`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a canvas interaction prompt is hidden. The connected function receives the canvas upon which the prompt was showing. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -556,8 +563,6 @@ end)
 
 #### selectorShown
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selectorShown():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when the surface art selector UI is shown to a player. This event can only be connected in a `Class.LocalScript`.
 
 ```lua title='LocalScript' highlight='6-8'
@@ -572,8 +577,6 @@ end)
 ```
 
 #### selectorHidden
-
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>selectorHidden():</InlineCode> `Datatype.RBXScriptSignal`</Typography>
 
 Fires when the surface art selector UI is hidden for a player. This event can only be connected in a `Class.LocalScript`.
 

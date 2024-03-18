@@ -101,7 +101,7 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: LocalUserSecurity
+      read: None
       write: LocalUserSecurity
     thread_safety: ReadSafe
     category: Data
@@ -145,8 +145,23 @@ methods:
     security: None
     thread_safety: Safe
   - name: HttpService:GetSecret
-    summary: ''
-    description: ''
+    summary: |
+      Returns a `Datatype.Secret` from the secrets store.
+    description: |
+      This method returns a value previously added to the secrets store for the
+      experience. The secret content is not printable and, for security reasons,
+      secrets are not available when the experience runs locally.
+
+      The returned `Datatype.Secret` can be transformed using built-in methods
+      such as `Datatype.Secret:AddPrefix()`. It is expected to be sent as a part
+      of the HTTP request.
+
+      Note that a secret may have an associated domain name. If the domain name
+      is empty, the secret cannot be sent over the network and therefore could
+      not be used as an API key. To allow sending the secret anywhere, set the
+      domain name to `*`. You can also limit the URL to a specific domain name
+      such as `apis.myservice.com` or to subdomains of a domain, for example
+      `*.myservice.org`.
     code_samples: []
     parameters:
       - name: key
@@ -375,10 +390,11 @@ methods:
       Sends an HTTP request using any HTTP method given a dictionary of
       information.
     description: |
-      The **RequestAsync()** function sends an HTTP request using a dictionary
-      to specify the request data, such as the target URL, method, headers and
-      request body data. It returns a dictionary that describes the response
-      data received.
+      This method sends an HTTP request using a dictionary to specify the
+      request data, such as the target URL, method, headers and request body
+      data. It returns a dictionary that describes the response data received.
+      Optionally, the request can be compressed using
+      `Enum.HttpCompression|HttpCompression`.
 
       #### Request Dictionary Fields
 
@@ -415,6 +431,12 @@ methods:
                   <td>String</td>
                   <td>no</td>
                   <td>The request body. Can be any string, including binary data. Must be excluded when using the GET or HEAD HTTP methods. It might be necessary to specify the <code>Content-Type</code> header when sending JSON or other formats.</td>
+              </tr>
+              <tr>
+                  <td><b>Compress</b></td>
+                  <td><code>Enum.HttpCompression</code></td>
+                  <td>no</td>
+                  <td>An optional compression field that will compress the data in the request. The value can either be <code>Enum.HttpCompression|None</code> or <code>Enum.HttpCompression|Gzip</code>.</td>
               </tr>
           </tbody>
       </table>

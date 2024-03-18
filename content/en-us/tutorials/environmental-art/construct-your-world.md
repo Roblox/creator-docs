@@ -2161,13 +2161,13 @@ To apply your asset library to the left-most planter:
 2. Select the divot part.
 3. In the menu bar, navigate to the **Model** tab, then click the **Negate** button. The part turns translucent.
 
-   <img src="../../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="100%" />
+   <img src="../../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="702" />
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Planters-3.jpg" width="100%"/>
 
 4. Select both the negated part and the planter exterior part.
 5. In the **Model** tab, click the **Union** button. The negated part is cut out from the overlapping planter exterior part.
 
-   <img src="../../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="100%" />
+   <img src="../../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="702" />
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Planters-5.jpg" width="100%"/>
 
 6. Select the union, then in the **Properties** window,
@@ -4016,7 +4016,7 @@ To configure your own global lighting:
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
 
-1. **(Optional)** Apply one or more customizable filters, such as bloom, depth of field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
+1. **(Optional)** Apply one or more customizable filters, such as bloom, depth‑of‑field, or sun rays. For more information on these properties, see [Post-Processing Effects](../../environment/post-processing-effects.md).
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-4.jpg" width="100%"/>
 

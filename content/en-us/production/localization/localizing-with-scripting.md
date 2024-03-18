@@ -3,7 +3,7 @@ title: Localizing with Scripting
 description: Explains how to use localization APIs for specialized translation tasks.
 ---
 
-You can use localization APIs for specialized translation tasks that are not automatically handled by [adding translations](../../production/localization/translating-in-experience-content.md) to the localization table. Roblox provides a `Class.LocalizationService` to handle all localization scripting needs. Use the `Class.LocalizationService` for the following tasks:
+You can use localization APIs for specialized translation tasks that are not automatically handled by [adding translations](../../production/localization/manual-translations.md) to the localization table. Roblox provides a `Class.LocalizationService` to handle all localization scripting needs. Use the `Class.LocalizationService` for the following tasks:
 
 - [**Localizing images and sounds**.](#localizing-images-and-sounds)
 - [**Translating part of individual strings**.](#translating-individual-strings)
@@ -15,7 +15,7 @@ When reusing translation code, you should use a [**TranslationHelper ModuleScrip
 
 ## Localizing Images and Sounds
 
-Add localization beyond text in your experience by providing unique images and sounds based off of a user's locale. To localize assets, first add the **source** and **target** asset IDs to your experience's [localization table](../../production/localization/translating-in-experience-content.md#cloud-localization-table) then use the localization API to fetch the different assets.
+Add localization beyond text in your experience by providing unique images and sounds based off of a user's locale. To localize assets, first add the **source** and **target** asset IDs to your experience's [localization table](../../production/localization/manual-translations.md#cloud-localization-table) then use the localization API to fetch the different assets.
 
 <GridContainer numColumns="3">
   <figure>
@@ -32,7 +32,8 @@ Add localization beyond text in your experience by providing unique images and s
   </figure>
 </GridContainer>
 
-To start localizing images and sounds, add [**source** and **target**](../../production/localization/translating-in-experience-content.md#manually-adding-source-content) asset IDs to your localization table. Asset ID entries on the localization table must include a **Key** as an identifier to be called by the API.
+To start localizing images and sounds, add your [**source** and **target**](../../production/localization/manual-translations.md) asset IDs to your localization table. Asset ID entries on the localization table must include a **Key** as an identifier to be called by the API.
+
 The following is an example entry on a localization table using asset IDs:
 
 <table>
@@ -301,7 +302,7 @@ end
 
 ## Reacting to Users Switching Languages
 
-Users can change their language settings at any time using their in-experience Settings menu. This user setting change automatically updates non-scripting localization assets, such as strings handled by [automatic translation](../../production/localization/translating-in-experience-content.md#automatic-translation), but may not update scripted localization changes that have already rendered, such as GUI images or sounds.
+Users can change their language settings at any time using their in-experience Settings menu. This user setting change automatically updates non-scripting localization assets, such as strings handled by [automatic translation](../../production/localization/automatic-translations.md), but may not update scripted localization changes that have already rendered, such as GUI images or sounds.
 
 <GridContainer numColumns="2">
   <figure>

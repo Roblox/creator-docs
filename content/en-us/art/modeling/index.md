@@ -17,15 +17,15 @@ If you meet certain account requirements, you can publish and sell your avatar-r
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" />
+    <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A Roblox avatar wearing a glossy puffy jacket and jeans"/>
     <figcaption>Create custom accessories, clothing, and characters that anyone can wear and use</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Beyond-The-Dark-Example.png" />
+    <img src="../../assets/modeling/meshes/Beyond-The-Dark-Example.png" alt="A floating alien creature in space, from the Beyond The Dark experience"/>
     <figcaption>Design a custom character unique to your experience</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" />
+    <img src="../../assets/modeling/meshes/Mystery-of-Duvall-Example.png" alt="A cluttered interior room with a candle in the forefront and spooky interior lighting from the Mystery of Duvall Drive experience"/>
     <figcaption>Use custom meshes and models to give your environments ambiance and depth</figcaption>
   </figure>
 </GridContainer>
@@ -36,15 +36,15 @@ Roblox supports many types of custom meshes, as long as they adhere to the [gene
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/art/Basic-Mesh-Example.png" />
+    <img src="../../assets/art/Basic-Mesh-Example.png" alt="A plain white tree mesh without a texture"/>
     <figcaption>A mesh object sets the shape and geometry of the 3D object</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/art/Basic-Texture-Example.png" />
+    <img src="../../assets/art/Basic-Texture-Example.png" alt="Various color maps used to apply textures to the tree bark, and inner, middle, and outer leaves"/>
     <figcaption>A texture image map applies a surface appearance and color</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/art/Basic-Mesh-Combined-Example.png" />
+    <img src="../../assets/art/Basic-Mesh-Combined-Example.png" alt="The tree mesh and the image maps combined to create a single tree"/>
     <figcaption>The mesh and texture combine to make a unique custom 3D object</figcaption>
   </figure>
 </GridContainer>
@@ -73,8 +73,8 @@ For more information on rigging and skinning, see [Rigging and Skinning](../../a
 **Physically-Based Rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
 
 <GridContainer numColumns="2">
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" />
-  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" />
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="A realistic looking leafy bush with shadows and depth."/>
+  <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="A realistic looking rock with moss on the top." />
 </GridContainer>
 
 For more information on PBR textures, see [PBR Textures](../../art/modeling/surface-appearance.md).
@@ -119,7 +119,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing Requirements](../../art/modeling/specifications.md#textures)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
     <td>Rigging and Skinning</td>

@@ -52,9 +52,9 @@ methods:
     deprecation_message: ''
   - name: Random:NextNumber
     summary: |
-      Returns a pseudorandom number uniformly distributed over `[0, 1)`.
+      Returns a pseudorandom number uniformly distributed over `[0, 1]`.
     description: |
-      Returns a pseudorandom number uniformly distributed over `[0, 1)`.
+      Returns a pseudorandom number uniformly distributed over `[0, 1]`.
     parameters:
     returns:
       - type: number
@@ -64,9 +64,9 @@ methods:
     deprecation_message: ''
   - name: Random:NextNumber
     summary: |
-      Returns a pseudorandom number uniformly distributed over `[min, max)`.
+      Returns a pseudorandom number uniformly distributed over `[min, max]`.
     description: |
-      Returns a pseudorandom number uniformly distributed over `[min, max)`.
+      Returns a pseudorandom number uniformly distributed over `[min, max]`.
     parameters:
       - name: min
         type: number
@@ -86,12 +86,11 @@ methods:
     summary: |
       Uniformly shuffles a table in-place.
     description: |
-      Uniformly shuffles the array part of `tb` in-place using `NextInteger`
-      to pick indices. If there are any `nil` "holes" in the array part of the
-      table, `Shuffle` throws an error, since shuffling could change the
-      length.
+      Uniformly shuffles the array part of `tb` in-place using `NextInteger` to
+      pick indices. If there are any `nil` "holes" in the array part of the
+      table, `Shuffle` throws an error, since shuffling could change the length.
 
-      The hash part of `tb` is ignored. No metamethods are of `tb` are invoked.
+      The hash part of `tb` is ignored. No metamethods of `tb` are invoked.
 
       The shuffle is defined to be a Fisher-Yates shuffle so the number of
       `NextInteger` calls is guaranteed to be consistent between engine versions

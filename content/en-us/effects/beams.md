@@ -5,267 +5,210 @@ description: Beams create a visual, animatable effect between two attachments.
 
 A `Class.Beam` is an object that renders a `Class.Texture` between two `Class.Attachment` objects. By setting beam properties, you can:
 
-- [Add textures](#adding-a-texture) with [color
-  gradients](#creating-a-color-gradient) to create interesting visuals like
-  waterfalls and force fields.
-- Modify a beam's transparency so that it [fades over time](#fading-a-beam).
-- Warp its shape by changing the [width](#changing-a-beams-width) or
-  [curve](#curving-a-beam) of each attachment point.
+- Add a [texture](#texture) and [color gradient](#color) to create interesting visuals like waterfalls and force fields.
+- Modify a beam's [transparency](#transparency) so that it fades over time.
+- Warp its shape by changing the [width](#width) or [curve](#curve) of each attachment point.
+- Specify the texture's [length and mode](#texture-lengthmode) to affect how it repeats across the beam's length.
 
 <video src="../assets/lighting-and-effects/beam/Showcase.mp4" controls
 width="100%"></video>
 
 ## Creating a Beam
 
-Before you begin to create a beam, you must make sure you are able to
-view attachments:
+Before you begin to create a beam, it's useful to toggle on visibility of attachments so you can see where the beam starts and ends.
 
-1. In the menu bar, navigate to the **Model** tab, then the
-   **Constraints** section.
-2. If it is not currently enabled, toggle on **Constraint Details**.
+1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+2. If it's not currently enabled, toggle on **Constraint Details**.
 
-   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="740" alt="Constraint Details toggle indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
-It is important to be able to view attachments because they determine
-where a beam starts and ends. To create a beam:
+To create a beam:
 
-1. Create two parts. One will be the start of the beam while the other
-   will be the end of the beam.
-2. Group the parts into a **Model**.
-3. In the **Explorer** window, add an attachment to each part:
+1. Create two parts and position them a short distance from each other. One will act as the start of the beam and the other as the end of the beam. Group the parts into a `Class.Model`.
+2. In the **Explorer** window, add an `Class.Attachment` object to each part:
 
    1. Hover over one part and click the &CirclePlus; button. A contextual menu displays.
-   1. From the contextual menu, insert an **Attachment**.
-   1. Repeat for the other part.
+   2. From the contextual menu, insert an **Attachment**.
+   3. Repeat for the other part.
 
-4. In the **Explorer** window, add a beam to the model:
+3. In the **Explorer** window, add a `Class.Beam` object to the model:
 
-   1. Hover over the part and click the &CirclePlus; button. A contextual menu displays.
-   1. From the contextual menu, insert a **Beam**.
+   1. Hover over the model and click the &CirclePlus; button. A contextual menu displays.
+   2. From the contextual menu, insert a **Beam**.
 
-5. Select the **Beam**.
-6. In the **Properties** window, assign the attachments to the
-   beam:
+      <img src="../assets/studio/explorer/Model-Beam-Setup.png" width="320" />
 
-   1. Select the **Attachment0** property. Your cursor changes.
-   1. In the **Explorer** window, select the attachment of the part you want to
-      be the start of your beam.
-   1. Select **Attachment1** property. Your cursor
-      changes.
-   1. In the
-      **Explorer** window, select the other attachment of the part you want to be
-      the end of your beam. **Ensure you assign each attachment property to a
-      different attachment.**
+4. Select the new **Beam** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment` object.
 
-   <GridContainer numColumns="2">
-     <img src="../assets/lighting-and-effects/beam/Explorer-Model-With-Beam.png" />
-     <img src="../assets/lighting-and-effects/beam/Default-Beam.png" />
-   </GridContainer>
-
-## Moving and Scaling a Beam
-
-When you move a part,
-the beam moves and scales to its new position because the attachment
-points determine the start and end of the beam.
-
-If you want the beam to move and face the player no matter their
-direction, set the
-`Class.Beam.FaceCamera|FaceCamera`
-property to **true**. Note that this property does not move the beam's
-position, only its angle.
+   1. In the **Properties** window, select the **Attachment0** property. Your cursor changes.
+   2. In the **Explorer** window, select the attachment of the part you want to be the start of your beam.
+   3. Back in the **Properties** window, select the **Attachment1** property. Your cursor changes.
+   4. In the **Explorer** window, select the attachment of the part you want to be the end of your beam.
 
 <figure>
-<video src="../assets/lighting-and-effects/beam/FaceCamera.mp4" controls width="80%"></video>
-<figcaption>Default vs. **FaceCamera**</figcaption>
+<img src="../assets/lighting-and-effects/beam/Default-Beam.png" width="800" />
+<figcaption>Default beam between two attachments</figcaption>
 </figure>
 
-## Adding a Texture
+<Alert severity="warning">
+Beams require attachments to function properly. If you remove either attachment object from step 4, the beam stops rendering its texture.
+</Alert>
 
-The
-`Class.Beam.Texture|Texture`
-property renders a texture across the length of the beam. You can set a
-beam's
-`Class.Beam.Texture|Texture`
-property to any asset ID. For more information, including how to add or
-upload your own textures, see
-[Textures and Decals](../parts/textures-decals.md#creating-textures-or-decals).
+## Customizing Beams
+
+By experimenting with the following properties, you can customize a beam's visual appearance to make unique gameplay elements like force fields, waterfalls, and pathway obstacles.
+
+<video controls loop muted>
+  <source src="../assets/tutorials/laser-traps-with-beams/laserTrap_beamExamples.mp4" width="80%" />
+</video>
+
+<Alert severity="info">
+The visual quality of your beams can change depending on the graphics settings on the player's device. To review your beam across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your beam.
+</Alert>
+
+### Texture
+
+The `Class.Beam.Texture|Texture` property renders that texture across the length of the beam. You can set a beam's `Class.Beam.Texture|Texture` property to any asset ID. For more information, including how to add or upload your own textures, see [Importing Assets](../projects/assets/manager.md#importing-assets).
 
 <img src="../assets/lighting-and-effects/beam/Texture-Applied.png" width="800" />
 
-Beams render their [textures](#adding-a-texture) using two
-triangles drawn between **segments**, and the segments are laid out
-between the two attachment points' orientation. By default, a beam uses
-10 segment pairs, but you can modify the
-`Class.Beam.Segments|Segments`
-property to increase or decrease this amount. It is important to note
-that when you rotate attachment points in different directions, segments
-also rotate.
+A beam renders its texture using two triangles drawn between `Class.Beam.Segments|Segments`, and the segments are laid out between the two attachment points' orientation. When you rotate attachment points in different directions, segments also rotate.
 
 <img src="../assets/lighting-and-effects/beam/Attachments-Rotated.png" width="800" />
 
-## Fading a Beam
+### Color
 
-The `Class.Beam.Transparency|Transparency`
-property sets the opacity of a beam either as a consistent opacity or as
-a `Datatype.NumberSequence`.
-A number sequence changes a beam's opacity across the length of the
-beam from one attachment point to another; it can range anywhere from **0**
-(totally opaque) to **1** (fully clear).
+The `Class.Beam.Color|Color` property tints the beam's texture to either a specific hue, or to a gradient `Datatype.ColorSequence` across its entire span.
 
-To set a beam to a specific opacity:
+<Tabs>
+<TabItem label="Constant Color">
 
-1. In the **Explorer** window, select the **Beam**.
-2. In the **Properties** window, select the **Transparency** property.
-3. Input a value of transparency that you want the beam to be.
+1. In the **Explorer** window, select the beam.
+2. In the **Properties** window, select the **Color** property. You can either:
 
-To open a beam's number sequence:
-
-1. In the **Explorer** window, select the **Beam**.
-2. In the **Properties** window, select the **Transparency** property.
-3. Click the **&hellip;** button. A
-   number sequence pop-up displays.
-
-   <img
-   src="../assets/lighting-and-effects/beam/Open-Transparency-NumberSequence-Window.png"
-   width="320" />
-
-   <img
-   src="../assets/studio/general/NumberSequence-0.5-0.5.png"
-   width="800" />
-
-The X axis is the position along the beam's length, and the Y axis is
-the transparency at that position. Each square at the start and end of
-the number sequence is a **keypoint** that determines the opacity value
-of the property at that point within the beam
-
-To edit a beam's number sequence, perform any of the following actions:
-
-- To change the opacity at a point along the beam, click on a
-  **keypoint** and either drag it up or down, or enter a value in
-  the **Value** field.
-- To insert new keypoints, click on any point in the graph.
-- To delete a keypoint, select the **keypoint**, then the **Delete**
-  button.
-- To reset the sequence, select the **Reset** button.
-
-  <img
-  src="../assets/studio/general/NumberSequence-0-1-0.png"
-  width="800" />
-
-  <img
-  src="../assets/lighting-and-effects/beam/Transparency-Applied.png"
-  width="800" />
-
-## Creating a Color Gradient
-
-The
-`Class.Beam.Color|Color`
-property tints the beam's texture to either a specific hue or a
-`Datatype.ColorSequence`.
-A color sequence changes the beam's color across the length of the beam
-from one attachment point to another.
-
-To set a beam to a specific hue:
-
-1. In the **Explorer** window, select the **Beam**.
-2. In the **Properties** window, select the **Color** property.
-3. You can either:
-
-   1. Click on the color square to open the **Colors**
-      pop-up window and select a color.
-
-   1. Input three numbers into the RGB color value field.
+   1. Click on the color square to open the **Colors** pop-up window and select a color.
+   2. Input three numbers into the RGB color value field.
 
    <img src="../assets/studio/properties/Color-Input-Options.png" width="320" />
 
-To open a beam's color sequence:
+</TabItem>
+<TabItem label="Color Gradient">
 
-1. In the **Explorer** window, select the **Beam**.
-2. In the **Properties** window, select the **Color** property.
-3. Click the **&hellip;** button. A color sequence pop-up
-   displays. By default, the color sequence is all white.
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, click inside the **Color** property field, then click the **&ctdot;** button.
 
-   <img
-   src="../assets/lighting-and-effects/beam/Open-Color-ColorSequence-Window.png"
-   width="320" />
+   <img src="../assets/studio/properties/Color-Open-Sequence.png" width="320" alt="Button to open color sequence popup" />
 
-   <img src="../assets/studio/general/ColorSequence-White.png" width="626" />
+   In the color sequence popup, each triangle on the bottom axis is a
+   **keypoint** that determines the color value of the beam at that
+   point along its span.
 
-Each triangle on the bottom axis of the color sequence is a **keypoint** that
-determines the color value of the property at that point between the beam's
-attachments.
+	 <img src="../assets/studio/general/ColorSequence-White-Keypoints-Labeled.png" width="640" alt="Keypoints labeled in color sequence popup" />
 
-To edit a beam's color sequence:
+1. Click the keypoint at the start of the color sequence, click the
+   small square next to **Color**, and select a color from the popup window.
 
-1. Click the **keypoint** at the start of the color sequence, then click the
-   small square next to **Color** to open the colors pop-up
-   window and select the color you want at the start of the beam.
+	 <img src="../assets/studio/general/ColorSequence-Red-White.png" width="640" alt="Color sequence popup from red to white" />
 
-   <img src="../assets/studio/general/ColorSequence-Red-White.png" width="626"
-       />
+1. If you want the beam to change color near the end of its span, click the keypoint at the end of the color sequence, click the small square next to **Color**, and select a color from the popup window.
 
-2. If you want the beam to change color near the end of the beam, click the
-   **keypoint** at the end of the color sequence, then click the small square
-   next to **Color** to open the colors pop-up
-   window and select a color.
+   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
 
-   <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="626"
-   />
-
-3. If needed, you can:
+1. For more customization, you can:
 
    - Add another keypoint by clicking anywhere on the graph.
+   - Make a color change sooner or later within the gradient by dragging an intermediary keypoint to a new position.
+   - Delete an intermediary keypoint by selecting it and clicking the **Delete** button.
+   - Reset the entire sequence by clicking the **Reset** button.
 
-   - Drag any existing keypoints to a new position. This is useful if you want
-     a color to change sooner or later within the gradient.
+   <img src="../assets/studio/general/ColorSequence-Red-Cyan-Purple.png" width="640" alt="Color sequence popup from red to cyan to purple" />
 
-   - Delete a keypoint by selecting it, then the **Delete** button.
+   <img src="../assets/lighting-and-effects/beam/ColorSequence-Applied.png" width="800" />
 
-   - Reset the sequence by selecting the **Reset** button.
+</TabItem>
+</Tabs>
 
-   <img
-   src="../assets/studio/general/ColorSequence-Red-Cyan-Purple.png"
-   width="626" />
+### Transparency
 
-   <img
-   src="../assets/lighting-and-effects/beam/ColorSequence-Applied.png"
-   width="800" />
+The `Class.Beam.Transparency|Transparency` property sets the transparency of the beam as a consistent value or as a `Datatype.NumberSequence` with ranges from **0** (totally opaque) to **1** (fully clear).
 
-## Changing a Beam's Width
+<Tabs>
+<TabItem label="Constant Opacity">
 
-You can set the beam's width in studs at each endpoint by configuring
-the
-`Class.Beam.Width0|Width0`
-and
-`Class.Beam.Width1|Width1`
-properties. A higher value equates to a larger width, and a lower value
-equates to a smaller width. If you set either value to smaller than 0,
-Studio sets it back to **0**.
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, select the **Transparency** property.
+1. Input the desired opacity for the beam.
 
-The beam below has a
-`Class.Beam.Width0|Width0`
-value of **0.5** and a
-`Class.Beam.Width1|Width1`
-value of **3**.
+</TabItem>
+<TabItem label="Number Sequence">
+
+1. In the **Explorer** window, select the beam.
+1. In the **Properties** window, click inside the **Transparency** property field, then click the **&ctdot;** button.
+
+   <img src="../assets/studio/properties/Transparency-Open-Sequence.png" width="320" alt="Button to open number sequence popup" />
+
+   In the number sequence popup, each square at the start and end of the graph is a **keypoint** that determines the opacity value of the beam at that
+   point along its span. By default, the graph defaults to a straight line and the beam is of consistent opacity.
+
+   <img src="../assets/studio/general/NumberSequence-0.5-0.5-Keypoints-Labeled.png" width="746" alt="Keypoints labeled in number sequence popup" />
+
+1. Perform any of the following actions:
+
+   - To change the opacity at a point, click on a keypoint and either
+     drag it up or down, or enter a value in the **Value** field.
+   - To insert a new keypoint, click on any point in the graph.
+   - To delete a keypoint, select it and click the **Delete** button.
+   - Reset the entire sequence by clicking the **Reset** button.
+
+   <img src="../assets/studio/general/NumberSequence-0-1-0.png" width="746" alt="Number sequence popup from 0 to 1 to 0" />
+
+   <img src="../assets/lighting-and-effects/beam/Transparency-Applied.png" width="800" />
+
+</TabItem>
+</Tabs>
+
+### Width
+
+You can set the beam's width in studs at each endpoint by configuring the
+`Class.Beam.Width0|Width0` and `Class.Beam.Width1|Width1` properties. A higher value equates to a larger width and a lower value equates to a smaller width. If you set either value to smaller than 0, Studio sets it back to **0**.
+
+The beam below has a `Class.Beam.Width0|Width0` value of **0.5** and a
+`Class.Beam.Width1|Width1` value of **3**.
 
 <img src="../assets/lighting-and-effects/beam/Width-Adjusted.png" width="800" />
 
-## Curving a Beam
+### Texture Length/Mode
 
-Beams use a cubic [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).
-You can modify this curve to curve up or down relative to the
-attachments' orientations using the
-`Class.Beam.CurveSize0|CurveSize0`
-and
-`Class.Beam.CurveSize1|CurveSize1`
-properties.
+A beam's `Class.Beam.TextureLength|TextureLength` and `Class.Beam.TextureMode|TextureMode` determine how its [texture](#texture) repeats across its length.
 
-A
-`Class.Beam.CurveSize0|CurveSize0`
-property with a high value causes the beam to dip low, while a low value
-causes the beam to **start off high**; conversely, a
-`Class.Beam.CurveSize1|CurveSize1`
-property with a high value causes the beam to **end high** while a low
-value causes the beam to dip low.
+When `Class.Beam.TextureMode|TextureMode` is set to `Enum.TextureMode.Wrap` or `Enum.TextureMode.Static`, the texture repetitions will equal the beam's overall length (in&nbsp;studs) divided by its `Class.Beam.TextureLength|TextureLength`.
+
+<img src="../assets/engine-api/enums/TextureMode/Wrap-Static.png" width="720" alt="TextureMode diagram with Wrap or Static mode" />
+
+<figure>
+When `Class.Beam.TextureMode|TextureMode` is set to `Enum.TextureMode.Stretch`, the texture will repeat `Class.Beam.TextureLength|TextureLength` times across the beam's overall length.
+
+<img src="../assets/engine-api/enums/TextureMode/Stretch.png" width="720" alt="TextureMode diagram with Stretch mode" />
+</figure>
+
+### Facing
+
+A beam is a 2D projection existing in 3D space, meaning that it may not be visible from every angle. The `Class.Beam.FaceCamera|FaceCamera` property, when set to `true`, ensures that the beam always faces the `Class.Workspace.CurrentCamera|CurrentCamera`, regardless of its orientation.
+
+<figure>
+<video src="../assets/lighting-and-effects/beam/FaceCamera.mp4" controls width="800"></video>
+<figcaption>Default vs. FaceCamera</figcaption>
+</figure>
+
+### Curve
+
+Beams are configured to use a cubic Bézier curve formed by four control points. This means they are not constrained to straight lines and the curve of the beam can be modified by changing `Class.Beam.CurveSize0|CurveSize0`, `Class.Beam.CurveSize1|CurveSize1`, and the orientation of the beam's `Class.Attachment|Attachments`.
+
+- **P0** — The start of the beam; position of `Class.Beam.Attachment0|Attachment0`.
+- **P1** — `Class.Beam.CurveSize0|CurveSize0` studs away from `Class.Beam.Attachment0|Attachment0`, in the positive **X** direction of `Class.Beam.Attachment0|Attachment0`.
+- **P2** — `Class.Beam.CurveSize1|CurveSize1` studs away from `Class.Beam.Attachment1|Attachment1`, in the negative **X** direction of `Class.Beam.Attachment1|Attachment1`.
+- **P3** — The end of the beam; position of `Class.Beam.Attachment1|Attachment1`.
+
+<img src="../assets/engine-api/classes/Beam/Curvature-Diagram.png" width="800" alt="Beam curvature diagram" />
 
 <img src="../assets/lighting-and-effects/beam/Curves-Applied.png" width="800" />

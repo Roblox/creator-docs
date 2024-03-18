@@ -6,17 +6,17 @@ id: toolbox
 
 The **Toolbox** contains a selection of [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/frames.md#videoframe), and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to.
 
-<img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+<img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
 
 ## Sections
 
-The toolbox is organized into distinct sections of [Marketplace](#marketplace), [Inventory](#inventory), and [Recent](#recent).
+The Toolbox contains four distinct sections: [Creator Store](#creator-store), [Inventory](#inventory), [Recent](#recent), and [Creations](#creations).
 
-### Marketplace
+### Creator Store
 
-The **Marketplace** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/frames.md#videoframe), and fonts made by Roblox or Roblox community members.
+The **Creator Store** section contains models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members.
 
-<img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" alt="Marketplace tab indicated in Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" alt="A close up view of the Toolbox with the Creator Store tab highlighted." />
 
 <Alert severity="warning">
 Take caution when inserting models that you didn't create into your experiences, as they may contain malicious scripts that can impact performance or behavior. It's recommended to always [inspect assets](#asset-inspection) and investigate any embedded scripts before bringing them into your place file.
@@ -24,45 +24,43 @@ Take caution when inserting models that you didn't create into your experiences,
 
 ### Inventory
 
-The **Inventory** section contains [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [packages](../../projects/assets/packages.md), [videos](../../ui/frames.md#videoframe), [plugins](../../studio/plugins.md), [animations](../../animation/editor.md), and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+The **Inventory** section contains models, images, meshes, audio, packages, videos, plugins, animations, and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Store](../../production/publishing/creator-store.md).
 
-<img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="Inventory tab indicated in Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="A close up view of the Toolbox with the Inventory tab highlighted." />
 
 ### Recent
 
-The **Recent** tab is similar to [Inventory](#inventory) except that it is filtered by recently used [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [videos](../../ui/frames.md#videoframe), and [animations](../../animation/editor.md).
+The **Recent** tab is similar to [Inventory](#inventory) except that filters your recently used models, images, meshes, audio, videos, and animations.
 
-<img src="../../assets/studio/toolbox/Recent-Tab.png" width="360" alt="Recent tab indicated in Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Recent-Tab.png" width="360" alt="A close up view of the Toolbox with the Recent tab highlighted." />
+
+### Creations
+
+The **Creations** tab is similar to [Inventory](#inventory), with the important distinction that it filters models, images, meshes, audio, plugins, and animations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to. You can [configure](#asset-configuration-and-versioning) all assets in this section directly within Studio.
+
+<img src="../../assets/studio/toolbox/Creations-Tab.png" alt="A close up view of the Toolbox with the Creations tab highlighted." width="360" />
 
 ## Sorting and Searching
 
 <Tabs>
 <TabItem label="Asset Category">
-Within any of the toolbox sections, use the **category selector** dropdown to sort assets by category. The options in the dropdown vary by section.
+Within any of the Toolbox sections, use the **category selector** dropdown to sort assets by category. The options in the dropdown vary by section.
 
-<img src="../../assets/studio/toolbox/Marketplace-Category-Selector.png" width="360" height="284" alt="Category selector in Marketplace tab of Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Creator-Store-Category-Selector.png" width="360" height="284" alt="The Toolbox window with the Category Selector highlighted" />
+
 </TabItem>
-<TabItem label="Marketplace Sorting">
-Within the [Marketplace](#marketplace) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
+<TabItem label="Creator Store Sorting">
+Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
 
-<img src="../../assets/studio/toolbox/Marketplace-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in Marketplace tab of Studio's Toolbox" />
-</TabItem>
-<TabItem label="Inventory Sorting">
-Within the [Inventory](#inventory) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter by **My&nbsp;Assets**, and sort by other criteria.
-
-<img src="../../assets/studio/toolbox/Inventory-Advanced-Filter.png" width="580" height="110" alt="Advanced filter button indicated in Inventory tab of Studio's Toolbox" />
-
-<Alert severity="success">
-Checking **My Assets** is particularly useful for filtering by assets that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to. All assets with this criteria can be [configured](#asset-configuration-and-versioning) directly within Studio.
-</Alert>
+<img src="../../assets/studio/toolbox/Creator-Store-Advanced-Filter.png" width="580" height="110" alt="The Toolbox window with the Advanced Filter highlighted" />
 </TabItem>
 </Tabs>
 
 ## Asset Inspection
 
-You can closely inspect a model, image, mesh, plugin, video, or font asset by hovering over its thumbnail and clicking the "magnify" icon.
+You can closely inspect a model, image, mesh, plugin, video, or font asset by hovering over its thumbnail and clicking the magnifying glass icon.
 
-<img src="../../assets/studio/toolbox/Asset-Inspect-Icon.png" width="400" alt="Asset inspection button indicated for an asset in the Toolbox" />
+<img src="../../assets/studio/toolbox/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset in the Asset Manager. The Insect Asset icon is highlighted." />
 
 When previewing 3D assets like meshes, you can move the virtual camera around to get a better view from all angles. For videos, you can preview the entire video in the popup.
 
@@ -98,12 +96,12 @@ When previewing 3D assets like meshes, you can move the virtual camera around to
 
 In the lower-right corner of the preview frame, the **composition** button reveals the full hierarchy of the asset including `Class.Script|Scripts`, `Class.MeshPart|MeshParts`, `Class.Animation|Animations`, and more. It's recommended to always inspect embedded scripts before bringing a model into your place file, as scripts that you didn't write may contain malicious code that can impact performance or behavior.
 
-<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="Asset composition hierarchy shown below the preview of an asset" />
+<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset in the Asset Manager, and the full hierarchy of the asset displays underneath the 3D representation. The Asset Composition icon is highlighted." />
 
 ## Asset Configuration and Versioning
 
 Right-clicking an asset and selecting **Edit Asset** opens the **Asset Configuration** window. In this window, you can edit the asset's details or restore it to a previous version.
 
 <Alert severity="warning">
-Asset configuration is only possible for assets you've personally published or those which were published by [groups](../../projects/groups.md) you belong to. See [Inventory Sorting](#sorting-and-searching) on how to filter assets by these criteria.
+Asset configuration is only possible for assets you've personally published or those which were published by [groups](../../projects/groups.md) you belong to. The [Creations](#creations) tab is particularly useful for filtering assets in this way.
 </Alert>

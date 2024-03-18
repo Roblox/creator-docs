@@ -4,11 +4,11 @@ category: Meshes
 memory_category: PhysicsParts
 summary: |
   The `Class.SpecialMesh` object applies a mesh to a `Class.BasePart` depending
-  on the the `Class.SpecialMesh.MeshType|MeshType` property.
+  on the `Class.SpecialMesh.MeshType|MeshType` property.
 description: |
   The `Class.SpecialMesh` object applies a mesh to a `Class.BasePart` depending
-  on the the `Class.SpecialMesh.MeshType|MeshType` property. A number of options
-  are available.
+  on the `Class.SpecialMesh.MeshType|MeshType` property. A number of options are
+  available.
 
   - **Brick** - A block shape, equivalent to a `Class.BlockMesh`
   - **Cylinder** - A cylinder, identical to a `Class.Part` with a
@@ -41,16 +41,16 @@ description: |
 
   - `Class.BasePart.Material` displays correctly on the mesh when using a
     `Class.MeshPart` and not when using a SpecialMesh
-  - `Class.MeshPart`s include the `Class.MeshPart.CollisionFidelity` property,
-    meaning the collision model of a `Class.MeshPart` can be set to resemble the
-    geometry of the mesh. The SpecialMesh object by contrast, uses the parent
-    `Class.BasePart`s collision model
+  - `Class.MeshPart|MeshParts` include the `Class.MeshPart.CollisionFidelity`
+    property, meaning the collision model of a `Class.MeshPart` can be set to
+    resemble the geometry of the mesh. The SpecialMesh object by contrast, uses
+    the parent `Class.BasePart|BaseParts` collision model
   - The mesh of a `Class.MeshPart` scales on all axis depending on the
     `Class.BasePart.Size|Size` property of the `Class.MeshPart`, the mesh of a
     SpecialMesh does not
   - The SpecialMesh object includes the `Class.DataModelMesh.Offset|Offset` and
-    `Class.DataModelMesh.Scale|Scale` properties whereas `Class.MeshPart`s do
-    not
+    `Class.DataModelMesh.Scale|Scale` properties whereas
+    `Class.MeshPart|MeshParts` do not
   - The `Class.FileMesh.MeshId|MeshId` property of a `Class.SpecialMesh` can be
     changed by a `Class.Script` or `Class.LocalScript` during runtime. The
     `Class.MeshPart.MeshId|MeshId` property of a `Class.MeshPart` can not.

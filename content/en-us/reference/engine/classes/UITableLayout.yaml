@@ -10,10 +10,11 @@ description: |
   elements (the table cells) of these rows are then arranged in columns (within
   rows). Each cell within a row has the same height, and each cell within a
   column has the same width. The hierarchy in the explorer should look like this
-  (`Class.Frame`s are yellow rows, `Class.TextLabel`s are cells)
+  (`Class.Frame|Frames` are yellow rows; `Class.TextLabel|TextLabels` are
+  cells).
 
-  <img src="/assets/legacy/UITableLayout_Hierarchy.png" alt="Hierarchy of UI elements used with a UITableLayout" />
-  <img src="/assets/legacy/UITableLayout_Padding.png" alt="UITableLayout result" />
+  <img src="../../../assets/legacy/UITableLayout_Hierarchy.png" alt="Hierarchy of UI elements used with a UITableLayout" />
+  <img src="../../../assets/legacy/UITableLayout_Padding.png" alt="UITableLayout result" />
 
   By changing the `Class.UIGridStyleLayout.FillDirection`, sibling UI elements
   can act as columns instead.
@@ -30,10 +31,11 @@ description: |
 
   Cells will continue to respect `Class.UISizeConstraint` objects within them.
   In other words, setting `Class.UISizeConstraint.MinSize` on
-  `Class.UISizeConstraint`s within the header cells can determine the size of
-  the rest of the cells. If `Class.UISizeConstraint.MaxSize` restricts a cell's
-  size from filling the allotted space (i.e. another row/column is wider than
-  it), it will align to the top-left.
+  `Class.UISizeConstraint|UISizeConstraints` within the header cells can
+  determine the size of the rest of the cells. If
+  `Class.UISizeConstraint.MaxSize` restricts a cell's size from filling the
+  allotted space (i.e. another row/column is wider than it), it will align to
+  the top-left.
 code_samples:
   - Build-UI-Table
 inherits:

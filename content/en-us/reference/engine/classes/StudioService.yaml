@@ -6,10 +6,10 @@ summary: |
   Provides access to configuration of Roblox Studio and allows importing files
   from the user's file system.
 description: |
-  StudioService provides access to configuration of Roblox Studio, allows
+  **StudioService** provides access to configuration of Roblox Studio, allows
   importing files from the user's file system, and other miscellaneous
-  information. It is intended to be used by `Class.Plugin`s in order to provide
-  a consistent user experience.
+  information. It is intended to be used by `Class.Plugin|Plugins` in order to
+  provide a consistent user experience.
 
   - Plugins that allow the user to move objects may find
     `Class.StudioService.GridSize|GridSize`,
@@ -105,14 +105,15 @@ properties:
       can_save: false
   - name: StudioService.GridSize
     summary: |
-      Determines the distance in studs by which studio's drag and move tools
+      Determines the distance in studs by which Studio's drag and move tools
       move objects each tick.
     description: |
-      **GridSize** determines the distance in studs by which studio's drag and
-      move tools move objects each tick. This is set by the user Model tab under
-      the "Snap to Grid" section.
+      **GridSize** determines the distance in studs by which Studio's drag and
+      move tools move objects each tick. This is set in the user's
+      [Model](../../../studio/model-tab.md) tab under the
+      **Snap&nbsp;to&nbsp;Grid** section.
 
-      ![Studio "snap to grid" UI](/assets/legacy/SnapToGrid.jpg)
+      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping tools indicated in Model tab" />
     code_samples:
     type: float
     tags:
@@ -129,37 +130,15 @@ properties:
       can_save: false
   - name: StudioService.RotateIncrement
     summary: |
-      Determines the degrees by which studio's rotation tool will rotate
+      Determines the degrees by which Studio's rotation tool will rotate
       selected objects each tick.
     description: |
-      **RotateIncrement** determines the angle in degrees by which studio's
-      rotation tool will rotate selected objects each tick. This is set by the
-      user Model tab under the "Snap to Grid" section.
+      **RotateIncrement** determines the angle in degrees by which Studio's
+      rotation tool will rotate selected objects each tick. This is set in the
+      user's [Model](../../../studio/model-tab.md) tab under the
+      **Snap&nbsp;to&nbsp;Grid** section.
 
-      ![Studio "snap to grid" UI](/assets/legacy/SnapToGrid.jpg)
-
-      The table below shows how the rotation handles appear while dragging.
-      Notice how lower values render more axles. In these images,
-      `Class.StudioService.UseLocalSpace|UseLocalSpace` is `true`.
-
-      <table>
-      <thead>
-      <tr>
-        <td>RotateIncrement</td>
-        <td>Image</td>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>22.5</code></td>
-        <td><img src="/assets/legacy/StudioService.RotateIncrement.22.5.jpg" /></td>
-      </tr>
-      <tr>
-        <td><code>90.0</code></td>
-        <td><img src="/assets/legacy/StudioService.RotateIncrement.90.jpg" /></td>
-      </tr>
-      </tbody>
-      </table>
+      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping tools indicated in Model tab" />
     code_samples:
     type: float
     tags:
@@ -204,13 +183,13 @@ properties:
       ```lua
       local locale = game:GetService("StudioService").StudioLocaleId
       if locale == "en_US" then
-         print("Howdy, ya'll")
+      	print("Howdy, ya'll")
       elseif locale == "en_GB" then
-         print("'Ello, gov'na")
+      	print("'Ello, gov'na")
       elseif locale:sub(1, 2) == "en" then
-         print("Hello")
+      	print("Hello")
       elseif locale == "fr_FR" then
-         print("Bonjour")
+      	print("Bonjour")
       end
       ```
     code_samples:
@@ -229,38 +208,31 @@ properties:
       can_save: false
   - name: StudioService.UseLocalSpace
     summary: |
-      Determines whether studio tools will use local space of an object or
+      Determines whether Studio tools will use local space of an object or
       global space.
     description: |
-      **UseLocalSpace** determines whether the studio movement/rotation tools
+      **UseLocalSpace** determines whether the Studio movement/rotation tools
       will manipulate a part's `Class.BasePart.CFrame|CFrame` using the local
       space of an object or global space. By default, this setting is toggled
-      with <kbd>Ctrl-L</kbd>. Plugins can read from this property if they
-      implement their own object movement tools.
+      with <kbd>Ctrl</kbd><kbd>L</kbd> or <kbd>⌘</kbd><kbd>L</kbd>. Plugins can
+      read from this property if they implement their own object movement tools.
 
-      The table below shows how movement/rotation tools change when working with
-      parts. Notice how when UseLocalSpace is false, the movement tools align
-      with the global axes, and when true the movement tools align with the
-      part's local axes.
+      The images below show how movement/rotation tools change when working with
+      parts. When **UseLocalSpace** is `false`, the movement tools align with
+      the global axes, and when `true` the movement tools align with the part's
+      local axes.
 
       <table>
       <thead>
       <tr>
-      <td>UseLocalSpace</td>
-      <td>Movement</td>
-      <td>Rotation</td>
+      <th>false</th>
+      <th>true</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <td><code>true</code></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.jpg" /></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.true.rotation.jpg" /></td>
-      </tr>
-      <tr>
-      <td><code>false</code></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.jpg" /></td>
-        <td><img src="/assets/legacy/StudioService.UseLocalSpace.false.rotation.jpg" /></td>
+      <td><img src="/assets/modeling/parts/Manipulate-World-Orientation.png" width="360" alt="Part draggers in World orientation mode" /></td>
+      <td><img src="/assets/modeling/parts/Manipulate-Local-Orientation.png" width="360" alt="Part draggers in Local orientation mode" /></td>
       </tr>
       </tbody>
       </table>
@@ -325,10 +297,10 @@ methods:
     thread_safety: Unsafe
   - name: StudioService:GetUserId
     summary: |
-      Returns the studio user's userId if they're logged in, otherwise
+      Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
     description: |
-      Returns the studio user's userId if they're logged in, otherwise
+      Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
     code_samples:
       - studioservice-getuserid

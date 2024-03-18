@@ -6,7 +6,7 @@ description: Luau is the scripting language creators use in Roblox Studio.
 [Luau](https://luau-lang.org) is the scripting language creators use in Roblox Studio. It is a fast, small, safe, gradually typed embeddable scripting language derived from [Lua 5.1](https://www.lua.org/manual/5.1/). Use Luau in scripts to make your experience dynamic and interactive. For a comparison of language features in Luau and C#, see [Luau and C# Comparison](../luau/luau-csharp-comparison.md).
 
 <Alert severity="success">
-Contribute your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
+Contributing your Luau scripts for AI training can help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
 </Alert>
 
 ## Support in Studio
@@ -24,7 +24,7 @@ Luau includes the following data types:
 - [Tables](../luau/tables.md) are [arrays](../luau/tables.md#arrays) or [dictionaries](../luau/tables.md#dictionaries) of any value except `nil`.
 - [Enums](../luau/enums.md) are fixed lists of items.
 
-Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](https://luau-lang.org/typecheck) to make type issues obvious and easy to locate.
+Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](../luau/type-checking.md) to make type issues obvious and easy to locate.
 
 ## Data Structures
 

@@ -6,7 +6,7 @@ summary: |
   Describes the appearance of a Humanoid character including body parts,
   accessories, colors, scales, animations, and emotes.
 description: |
-  **HumanoidDescription** is an object that stores a description a
+  **HumanoidDescription** is an object that stores a description of a
   `Class.Humanoid` for R6 and R15 rigs. It can be
   `Class.Humanoid:ApplyDescription()|applied` in order to set a rig's scaling,
   clothing (`Class.Shirt`, `Class.Pants`, `Class.ShirtGraphic`),
@@ -16,9 +16,9 @@ description: |
   You can get a HumanoidDescription by using the following functions:
 
   - `Class.Players:GetHumanoidDescriptionFromUserId()`, for an outfit currently
-    being worn by a user on Roblox.com
-  - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfits created
-    by a user on Roblox.com
+    being worn by a user on Roblox.
+  - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, for an outfit created
+    by a user on Roblox.
   - You can create a Humanoid rig model from a HumanoidDescription through
     `Class.Players:CreateHumanoidModelFromDescription()`.
 
@@ -107,8 +107,6 @@ properties:
       type (1); when `Class.Humanoid:ApplyDescription()|applied`, maps to the
       "BodyTypeScale" `Class.NumberValue` within the HumanoidDescription.
     description: |
-      <img src="/assets/legacy/BodyTypeScale.jpg"  />
-
       **BodyTypeScale** determines by which the shape of a Humanoid rig is
       interpolated from the standard R15 body shape (0) to a taller and more
       slender/realistic body type (1). Values outside of the [0-1] range are
@@ -120,10 +118,10 @@ properties:
       `Class.HumanoidDescription.ProportionScale|ProportionScale` property does
       not have any effect.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following BodyTypeScales
-      values (from left-to-right): 0, 0.5, 1.0. Also visible are 6 stacked 1x1x1
-      cube parts for reference.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following BodyTypeScales values (from left-to-right): 0, 0.5, 1.0. Also
+      visible are 6 stacked 1x1x1 cube parts for reference.
 
       See also:
 
@@ -188,7 +186,7 @@ properties:
       rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`, maps to
       the "DepthScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/DepthScale.jpg"  />
+      <img src="../../../assets/legacy/DepthScale.jpg"  />
 
       **DepthScale** determines by what factor the height (back-to-front
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
@@ -196,9 +194,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyDepthScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following DepthScale values
-      (from left-to-right): 0.25, 1.0, 2.0.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following DepthScale values (from left-to-right): 0.25, 1.0, 2.0.
 
       See also:
 
@@ -244,7 +242,7 @@ properties:
       - `Class.HumanoidDescription.Head|Head`, which can change the mesh of the
         head
       - `Class.HumanoidDescription.FaceAccessory|FaceAccessory`, which can apply
-        one or more `Class.Accessory`s to the face
+        one or more `Class.Accessory` objects to the face
     code_samples:
     type: int64
     tags: []
@@ -378,7 +376,7 @@ properties:
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
       `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/GraphicTShirt.jpg"  />
+      <img src="../../../assets/legacy/GraphicTShirt.jpg"  />
 
       **GraphicTShirt** determines the `Class.ShirtGraphic.Graphic|Graphic` used
       by a `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`
@@ -561,7 +559,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the "HeadScale"
       `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/HeadScale.jpg"  />
+      <img src="../../../assets/legacy/HeadScale.jpg"  />
 
       **HeadScale** determines by what factor the Head of a `Class.Humanoid` is
       scaled, as well as any accessories attached to it (such as those specified
@@ -570,9 +568,9 @@ properties:
       description is `Class.Humanoid:ApplyDescription()|applied` to a Humanoid,
       this value maps to a "HeadScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following HeadScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following HeadScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
@@ -603,7 +601,7 @@ properties:
       Humanoid rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`,
       maps to the "HeightScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/HeightScale.jpg"  />
+      <img src="../../../assets/legacy/HeightScale.jpg"  />
 
       **HeightScale** determines by what factor the height (top-to-bottom
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
@@ -611,9 +609,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyHeightScale" `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following HeightScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following HeightScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
@@ -908,7 +906,7 @@ properties:
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
       `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/Pants.jpg"  />
+      <img src="../../../assets/legacy/Pants.jpg"  />
 
       **Pants** determines the `Class.Pants.PantsTemplate|PantsTemplate` used by
       a `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied` to a
@@ -943,7 +941,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the
       "BodyProportionScale" `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/ProportionScale.jpg"  />
+      <img src="../../../assets/legacy/ProportionScale.jpg"  />
 
       **ProportionScale** determines how wide (0) or narrow (1) a Humanoid rig.
       Values outside of the [0-1] range are clamped. When the description is
@@ -953,12 +951,14 @@ properties:
       When the value of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale`
       is 0, this property does not have any effect.
 
-      In the image, four R15 figures are visible whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following ProportionScale
-      values (from left-to-right): 0, 0.5, 1.0, 0.0. Each have a BodyTypeScale
-      of 1.0, except for the right which has 0.0. Also visible are 6 stacked
-      1x1x1 cube parts for reference. The table below lists the BodyTypeScale
-      and ProportionScale values for each figure in the image.
+      In the image, four R15 figures are visible whose
+      `Class.Humanoid|Humanoids` have
+      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following ProportionScale values (from left-to-right): 0, 0.5, 1.0, 0.0.
+      Each have a BodyTypeScale of 1.0, except for the right which has 0.0. Also
+      visible are 6 stacked 1x1x1 cube parts for reference. The table below
+      lists the BodyTypeScale and ProportionScale values for each figure in the
+      image.
 
       <table>
       <thead><tr>
@@ -1189,7 +1189,7 @@ properties:
       Determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by a
       `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied`.
     description: |
-      <img src="/assets/legacy/Shirt.jpg"  />
+      <img src="../../../assets/legacy/Shirt.jpg"  />
 
       **Shirt** determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by
       a `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1447,7 +1447,7 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied`, maps to the "BodyWidthScale"
       `Class.NumberValue` within the Humanoid.
     description: |
-      <img src="/assets/legacy/WidthScale.jpg"  />
+      <img src="../../../assets/legacy/WidthScale.jpg"  />
 
       **WidthScale** determines by what factor the width (left-to-right
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
@@ -1455,9 +1455,9 @@ properties:
       `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
       to a "BodyWidthScale" `Class.NumberValue` within the Humanoid.
 
-      In the image above, three R15 figures whose `Class.Humanoid`s have
-      `Class.HumanoidDescription`s applied with the following WidthScale values
-      (from left-to-right): 0.5, 1.0, 1.5.
+      In the image above, three R15 figures whose `Class.Humanoid|Humanoids`
+      have `Class.HumanoidDescription|HumanoidDescriptions` applied with the
+      following WidthScale values (from left-to-right): 0.5, 1.0, 1.5.
 
       See also:
 
@@ -1597,14 +1597,15 @@ methods:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1647,14 +1648,15 @@ methods:
           An array of tables describing the name and slot which each emote is
           equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1766,14 +1768,15 @@ methods:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1828,14 +1831,15 @@ methods:
           &ndash; OR &ndash; An array of tables describing the name and slot
           which each emote is equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     returns:
       - type: void
         summary: ''
@@ -1875,14 +1879,15 @@ events:
           A dictionary of emotes where the key is the emote name and the value
           is an array of emote asset IDs. Example:
 
-          ````lua
+          ```lua
           {
               Salute = {3360689775},
               Agree = {4849487550},
               Disagree = {4849495710}
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None
@@ -1929,14 +1934,15 @@ events:
           An array of tables describing the name and slot which each emote is
           equipped. Example:
 
-          ````lua
+          ```lua
           {
               {Slot = 3, Name = "Salute"},
               {Slot = 2, Name = "Agree"},
               {Slot = 1, Name = "Disagree"},
           }
-          ```.
-          ````
+          ```
+
+          .
     tags: []
     deprecation_message: ''
     security: None

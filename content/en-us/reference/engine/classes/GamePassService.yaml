@@ -22,66 +22,54 @@ properties: []
 methods:
   - name: GamePassService:PlayerHasPass
     summary: |
-      Returns _true_ if the `Class.Player` has the specified legacy game pass.
-      Does not work with new game passes.
+      Returns `true` if the `Class.Player` has the specified **legacy** game
+      pass. Does not work with new game passes.
     description: |
-      This function will not work with new game passes, use
+      This function will not work with new game passes; use
       `Class.MarketplaceService:UserOwnsGamePassAsync()` instead.
 
-      This function returns _true_ if the `Class.Player` has the specified
-      legacy game pass.
+      This function returns `true` if the `Class.Player` has the specified
+      legacy game pass. The result of this function may be cached, meaning it
+      should not be relied on to give an up to date result.
 
-      The result of this function may be cached, meaning it should not be relied
-      on to give an up to date result.
-
-      See [Passes](../../../production/monetization/game-passes.md) for further information.
+      See [Passes](../../../production/monetization/game-passes.md) for further
+      information.
 
       #### Legacy Game Passes
 
-      Historically, game passes on Roblox had an _Asset ID_ associated with
-      them. Although game passes created with an _Asset ID_ still have an _Asset
-      ID_, they now also have a _Game Pass ID_. All new game passes created
-      today **only** have a _Game Pass ID_.
+      Historically, game passes on Roblox had an **asset ID** associated with
+      them. Although such game passes still have an asset ID, they now also have
+      a **pass ID**. All new game passes created **only** have a pass ID.
 
-      You can retrieve the _Game Pass ID_ of any pass through its URL, for
-      example the _Game Pass ID_ of the below pass is 1:
-
-      ```
-      https://www.roblox.com/game-pass/1/myGamePass
-      ```
-
-      Whether you are using an _Asset ID_ or a _Game Pass ID_ determines which
+      Whether you are using an **Asset ID** or a **pass ID** determines which
       API members you can use.
 
-      <table >
+      <table>
           <thead>
               <tr>
-                  <td> </td>
-                  <td>Works with Asset ID (Legacy)</td>
-                  <td>Works with Game Pass ID (Current)</td>
+                  <td></td>
+                  <td>Asset ID (Legacy)</td>
+                  <td>Pass ID (Current)</td>
               </tr>
           </thead>
           <tbody>
               <tr>
                   <td>Verify Ownership</td>
-                  <td>`Class.GamePassService:PlayerHasPass()`</td>
-                  <td>`Class.MarketplaceService:UserOwnsGamePassAsync()`</td>
+                  <td><code>Class.GamePassService:PlayerHasPass()</code></td>
+                  <td><code>Class.MarketplaceService:UserOwnsGamePassAsync()</code></td>
               </tr>
               <tr>
                   <td>Prompt a purchase</td>
-                  <td>`Class.MarketplaceService:PromptPurchase()`</td>
-                  <td>`Class.MarketplaceService:PromptGamePassPurchase()`</td>
+                  <td><code>Class.MarketplaceService:PromptPurchase()</code></td>
+                  <td><code>Class.MarketplaceService:PromptGamePassPurchase()</code></td>
               </tr>
               <tr>
                   <td>Prompted purchase finished</td>
-                  <td>`Class.MarketplaceService.PromptPurchaseFinished`</td>
-                  <td>`Class.MarketplaceService.PromptGamePassPurchaseFinished`</td>
+                  <td><code>Class.MarketplaceService.PromptPurchaseFinished</code></td>
+                  <td><code>Class.MarketplaceService.PromptGamePassPurchaseFinished</code></td>
               </tr>
           </tbody>
       </table>
-
-      API members that work with _Asset IDs_ **will not** work with new game
-      passes as they do not have them.
     code_samples:
       - GamePassService-PlayerHasPass1
     parameters:

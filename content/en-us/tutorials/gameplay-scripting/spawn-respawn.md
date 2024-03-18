@@ -23,7 +23,7 @@ Luau code in Studio is often event-driven, meaning that scripts listen for event
 
 `Players.PlayerAdded:Connect` is a part of multiple scripts in the experience. If you use the <kbd>Ctrl/Cmd+Shift+F</kbd> shortcut and search for `Players.PlayerAdded:Connect`, the results provide a good starting point for understanding the experience's initial setup.
 
-![Find All window in Studio](/assets/tutorials/gameplay-scripting/tutorial-gs-player-added.png)
+<img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-player-added.png" alt="Studio's Find All window with the Players.PlayerAdded results highlighted." width="80%"/>
 
 To demonstrate, open **ServerScriptService** > **SetupHumanoid**. The distinction between `Class.Player` and `Class.Player.Character|Character` is key to understanding this script:
 
@@ -57,7 +57,7 @@ The important note with this script is that the properties are completely option
 
 If you change the values of these properties, it's important to playtest so that you can see the impact of your new settings. You can recreate what players experience in a multiplayer environment by selecting at least two characters in the **Clients and Servers** section of the **Test** tab.
 
-![Multiplayer testing in Studio](/assets/tutorials/gameplay-scripting/tutorial-gs-server.png)
+<img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-server.png" alt="Studio's Test tab with the the players dropdown highlighted. This setting needs to be at least two players to see the impact of your new settings." width="60%"/>
 
 <Alert severity="info">
 Try changing some of these values and playtesting with multiple players to see how they affect the gameplay of the experience. For instance, how might player strategy change if you chose to hide the health display?
@@ -145,11 +145,11 @@ Because the custom force field is a GUI rather than a new `Class.ParticleEmitter
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-hex.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-hex.png" alt="First-person force field visuals include a futuristic hexagonal grid on the perimeter of the screen." width="100%"/>
     <figcaption>First-person force field visuals</figcaption>
   </figure>
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-field.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-field.png" alt="Third-person force field visuals include a blue sparkling orb around the player spawning into the experience." width="100%"/>
     <figcaption>Third-person force field visuals</figcaption>
   </figure>
 </GridContainer>
@@ -263,11 +263,11 @@ If you want to test this behavior, you can press <kbd>Esc</kbd>, navigate to the
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="assets/tutorials/gameplay-scripting/Reset-Character-Button.png" width="80%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/Reset-Character-Button.png" alt="Roblox's settings menu with the Reset Character button highlighted." width="80%"/>
     <figcaption>Reset Character Button</figcaption>
   </figure>
   <figure>
-    <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-tagged-out.png" width="100%"/>
+    <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-tagged-out.png" alt="The respawn screen displays as a player respawns back into the match." width="100%"/>
     <figcaption>Respawn Screen</figcaption>
   </figure>
 </GridContainer>

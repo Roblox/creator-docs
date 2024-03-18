@@ -20,7 +20,7 @@ Using the [Environment Art - Assembling](https://www.roblox.com/games/1444778704
 
 After you complete this section, you will learn how to utilize your asset library in creative ways to replace or convert the greybox environment, and add final touches that enhance the overall 3D space.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/Overview.png" width="100%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/Overview.png" alt="The sample laser tag experience's modular and prop kit." width="100%"/>
 
 <Alert severity="info">
     Before you begin to compile your asset library by importing your tileable textures, trim sheets, modular assets, and props into Studio, it's best practice to arrange and organize all of your content in a folder structure according to their data type, such as trim sheets, decals, modular assets, and props. This can provide you an ease of reference as you create custom materials and visual treatments.
@@ -47,34 +47,34 @@ To create `Class.MaterialVariant` objects for your tileable textures:
 
 4. In the **Inspector**, navigate to the **General** section, then rename the material to align with the name of your tileable texture.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-4.jpg" width="40%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-4.jpg" alt="The Inspector view with the name of the material highlighted." width="40%"/>
 
 5. In the **Texture Maps** section, on the right-hand side of **Color**, click the **Import** button. A file browser displays.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-5.jpg" width="40%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-5.jpg" alt="The Texture Maps section of the Inspector view with the Import button highlighted." width="40%"/>
 
 6. In the file browser, select the **Albedo** texture map `.png` file for the corresponding tileable texture, then the **Open** button. The file browser closes, and the new color map displays with its assetID.
 7. Repeat this process for the **Metalness**, **Normal**, and **Roughness** texture maps. The custom material updates to reflect the texture maps.
 
    <GridContainer numColumns="2">
      <figure>
-       <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7a.jpg" width="85%"/>
+       <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7a.jpg" alt="All texture maps for the Moss_Lumpy_A material." width="85%"/>
      </figure>
      <figure>
-       <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7b.jpg" width="100%"/>
+       <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-7b.jpg" alt=" sphere part with the Moss_Lumpy_A material applied." width="100%"/>
      </figure>
    </GridContainer>
 
 8. In the **Overrides** section, enable the **Set as Override** toggle to ensure that when you apply ground to your terrain, Studio uses this custom material.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-8.jpg" width="40%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-8.jpg" alt="The Set as Override toggle enabled." width="40%"/>
 
 9. **(Optional)** If you are creating a custom material that represents an organic material,
 
    1. In the **Tiling** section, click the **Pattern** dropdown.
    1. Select **Organic** to randomize the output and reduce visible tiling.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-9.jpg" width="40%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CustomMaterials-9.jpg" alt="The Tiling section of the Inspector view with its settings." width="40%"/>
 
 10. Repeat this process for each tileable texture you want to include in your experience.
 
@@ -89,7 +89,7 @@ Studio utilizes trim sheets within `Class.SurfaceAppearance` objects that you ca
 
 After you supply the texture maps to these properties, you can make the `Class.SurfaceAppearance` object a child of a `Class.MeshPart` with uv data that maps to your trim sheet, and the uv data automatically applies to the parent mesh. It's for this reason that it's useful to make the `Class.SurfaceAppearance` object a [package](../../projects/assets/packages.md) so that you can reuse the same `Class.SurfaceAppearance` object across all of your modular assets and props. For example, the following meshes all have uv data that maps to the same trim sheet layout that's represented within a single `Class.SurfaceAppearance` object package.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-Intro.jpg" width="80%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-Intro.jpg" alt="" width="80%"/>
 
 You can use or modify the sample texture map `.png` files to create a `Class.SurfaceAppearance` object that respects the uv data for the sample modular assets and props within the final sample laser tag environment, or you can use your own that you designed in the previous section of the tutorial that apply to your own modular assets and props.
 
@@ -99,27 +99,22 @@ To create `Class.SurfaceAppearance` packages that you can child to your modular 
 2. Select the **SurfaceAppearance** object, then in the **Properties** window, select the **ColorMap** property. A pop-up displays.
 3. Click the **Add Image…** button. A file browser displays.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-3.jpg" width="30%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-3.jpg" alt="The ColorMap pop-up with the Add Image button highlighted." width="30%"/>
 
 4. Select the **Albedo** texture map for the corresponding tileable texture, then the **Open** button. The file browser closes, and the **ColorMap** property updates with a new assetID.
 5. Repeat this process for the **MetalnessMap**, **NormalMap**, and **RoughnessMap** properties, selecting their respective texture maps from the file browser.
-6. In the **Explorer** window, right-click the **SurfaceAppearance** object, then select **Convert to Package** from the contextual menu. The **Convert to Package** dialog displays.
-
-   <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" width="300" />
-
+6. In the **Explorer** window, right-click the **SurfaceAppearance** object, then select **Convert to Packag**e from the contextual menu. The **Convert to Package** dialog displays.
 7. Fill out the **Title** and **Description** fields, set the ownership to yourself or a group, then click the **Submit** button. Once complete, a chain link symbol displays over the SurfaceAppearance object's icon to identify it as a package.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-7.jpg" width="30%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-7.jpg" alt="The Surface Appearance icon with a chain link symbol." width="30%"/>
 
 8. **(Optional)** Select the **SurfaceAppearance** object's child **PackageLink** object, then in the **Properties** window, enable **AutoUpdate** to automatically update the package if you make any modifications to the **SurfaceAppearance** object.
-
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/SAPackages-8.jpg" width="40%"/>
 
 ## Import Modular Assets and Props
 
 Studio represents the modular assets and props that you import as `Class.Model` objects with child `Class.MeshPart|MeshParts` for each component of the asset. For example, if you import a wall section with a top trim, bottom trim, and wall component, Studio represents the `.fbx` or `.obj` file as a **Wall_Section** `Class.Model` with separate child **Top_Trim**, **Bottom_Trim**, and **Wall** `Class.MeshPart|MeshParts`.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/Importing-Intro.png" width="30%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/Importing-Intro.png" alt="" width="30%"/>
 
 Using the 3D Importer, you can import the sample modular kit and props into Studio for use in your asset library, or you can import any assets you designed in the previous section of the tutorial. For more information on this tool's functionality, see [3D Importer](../../art/modeling/3d-importer.md).
 
@@ -127,12 +122,12 @@ To import your modular assets and props into the experience:
 
 1. In the **Home** or **Avatar** tab, click the **Import 3D** button. A file browser displays.
 
-   <img alt="3D Importer Panels" src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="100%" />
+   <img alt="3D Importer Panels" src="../../assets/studio/general/Avatar-Tab-Import-3D.png" alt="Studio's Avatar tab with the 3D Importer highlighted." width="100%" />
 
 2. Select a `.fbx` file for either a modular asset or prop.
 3. Verify the object preview and check that the import settings are correct for your object.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/Importing-3.jpg" width="80%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/Importing-3.jpg" alt="" width="80%"/>
 
 4. Verify any [warning or error messages](../../art/modeling/3d-importer.md#warnings-and-errors).
 5. Click **Import**. The asset displays in the **Explorer** window and in the viewport.
@@ -145,7 +140,7 @@ When you go through the process of unwrapping the UVs of a mesh in third-party m
 
 To apply `Class.SurfaceAppearance` texture map data to unwrapped meshes in your asset library:
 
-1. In the **Explorer** window, click your **SurfaceAppearance** package, then press <kbd>Ctrl</kbd> + <kbd>D</kbd> or <kbd>⌘</kbd> + <kbd>D</kbd> to duplicate it.
+1. In the **Explorer** window, click your **SurfaceAppearance** package, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate it.
 2. Child the duplicate **SurfaceAppearance** package to either a modular asset or a prop. The asset applies its UV data to the texture maps and displays its visual treatment.
 3. Repeat this process for each modular asset and prop.
 
@@ -165,15 +160,13 @@ The `Class.BasePart.CanCollide` property determines whether the object can physi
 
 To alleviate some of this impact on performance, disable this property for objects that the user will never interact with. For example, the final sample laser tag environment disables this property for all foliage.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SettingParameters-CanCollide.png" width="60%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SettingParameters-CanCollide.png" alt="" width="60%"/>
 
 ### CanTouch
 
-The `Class.BasePart.CanTouch` property determines if `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events fire on the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox engine checks the object's touch event state to see if it needs to trigger or stop an event. This process happens for every single frame, which can take up a significant amount of memory if the engine needs to check the touch event state for many objects at once.
+The `Class.BasePart.CanTouch` property determines if `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events fire on the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox engine checks the object's touch event state to see if it needs to trigger or stop an event.
 
-To alleviate some of this impact on memory, only enable this property for objects that must trigger an event. For example, the final sample laser tag environment only enables this property for transparent **detector** `Class.Part` objects in door frames that must trigger an event to open or close the door according to a user's distance from the doorway. For more information on this detection process, see the Intermediate Scripting tutorial.
-
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SettingParameters-CanTouch.png" width="30%"/>
+This process happens for every single frame, which can take up a significant amount of memory if the engine needs to check the touch event state for many objects at once. To alleviate some of this impact on memory, only enable this property for objects that must trigger an event.
 
 ### CanQuery
 
@@ -187,17 +180,17 @@ The `Class.BasePart.CastShadow` property determines whether the object casts a s
 
 These calculations can come at a performance cost, especially when you have many objects of geometric complexity. This is because objects with geometric complexity have more polygons than objects that are geometrically simple, meaning they have more vertices that the engine needs to calculate for the object's shadow. The fewer polygons in an object, the faster the operation and cheaper its shadow.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SettingParameters-CastShadow1.png" width="80%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/SettingParameters-CastShadow1.png" alt="A wall section with few polygons, and a plant with many polygons casting shadows on a white wall." width="80%"/>
 
 Shadows can provide a great sense of realism to objects with 3D geometrical depth, so when you're deciding where to disable this property, consider where objects provide a significant visual improvement to the environment, and where users will notice missing shadows. For example, the complex shadows of foliage can provide a great sense of immersion in the outdoor space where users are likely to see them, but that same immersion isn't necessary for the foliage that peaks through the ceiling that users will never interact with.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CastShadow-Enabled.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CastShadow-Enabled.jpg" alt="Foliage casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Enabled</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CastShadow-Disabled.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CastShadow-Disabled.jpg" alt="Foliage not casting shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Disabled</figcaption>
   </figure>
 </GridContainer>
@@ -208,11 +201,11 @@ The `Class.MeshPart.DoubleSided` property determines whether to render both face
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/DoubleSided-Enabled.png" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/DoubleSided-Enabled.png" alt="A tree with all planar meshes facing the camera." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = Enabled</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/DoubleSided-Disabled.png" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/DoubleSided-Disabled.png" alt="A tree with less leaves because all planar meshes facing away from the camera are disabled." width="100%"/>
     <figcaption>`Class.MeshPart.DoubleSided` = Disabled</figcaption>
   </figure>
 </GridContainer>
@@ -225,11 +218,11 @@ The `Class.MeshPart.CollisionFidelity` property determines how closely the physi
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="100%"/>
+    <img src="../../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" alt="A grey castle mesh." width="100%"/>
     <figcaption>Original Mesh</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="100%"/>
+    <img src="../../assets/physics/collisions/Collision-Fidelity-Default.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>Default</figcaption>
   </figure>
 </GridContainer>
@@ -238,15 +231,15 @@ You can set this property to a different value to reduce the precision of a mesh
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="100%"/>
+    <img src="../../assets/physics/collisions/Collision-Fidelity-Box.jpg" alt="The same castle mesh with cube hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>Box</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="100%"/>
+    <img src="../../assets/physics/collisions/Collision-Fidelity-Hull.jpg" alt="The same castle mesh with a cylindrical hitbox that shows where users can collide with the castle." width="100%"/>
     <figcaption>Hull</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="100%"/>
+    <img src="../../assets/physics/collisions/Collision-Fidelity-Precise.jpg" alt="The same castle mesh with a colorful hitbox that shows where users can collide with the castle. This version shows more colorful faces than the default hitbox." width="100%"/>
     <figcaption>PreciseConvexDecomposition</figcaption>
   </figure>
 </GridContainer>
@@ -257,15 +250,15 @@ To demonstrate this concept, reference the following images that display the hit
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-WallMesh.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-WallMesh.jpg" alt="A wall model that provides a rise in elevation." width="100%"/>
     <figcaption>Original Mesh</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Default.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>
     <figcaption>Default</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Box.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Box.jpg" alt="The same wall model with a colorful hitbox for the trim, but only a box hitbox for the wall mesh." width="100%"/>
     <figcaption>Box</figcaption>
   </figure>
 </GridContainer>
@@ -274,18 +267,18 @@ As you're making these decisions, it's important to consider how changing the de
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-BoxTop.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-BoxTop.jpg" alt="A wall model with a box hitbox for the top trip. Because the box sticks out, users can unintentionally collide with the top trim." width="100%"/>
     <figcaption>Box</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Hull.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Hull.jpg" alt="The same wall model with a hull hitbox for the top trip. Because hull hitbox conforms much closer to the top of the model, allowing users to avoid colliding with the trim." width="100%"/>
     <figcaption>Hull</figcaption>
   </figure>
 </GridContainer>
 
 Note that it can be important to have a hitbox that precisely conforms to the shape of your mesh, especially when you need to control exactly how users collide with its shape. For example, in the final sample laser tag environment, it's important that users only collide with the edges of the doorway and not the doorway itself, otherwise they would never be able to enter or exit a combat pocket.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Doorway.png" width="50%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Doorway.png" alt="A doorway model with optimized hitbox meshes." width="50%"/>
 
 <Alert severity="info">
     To visualize collision fidelity in Studio, open **Studio Settings** from the **File** menu, then enable **Show Decomposition Geometry**.
@@ -303,14 +296,14 @@ Now that all of your modular assets are in Studio with rendering parameters that
 
 Because your `Class.SurfaceAppearance` objects are already packages, when you convert your `Class.Model` objects into packages, they become nested packages. Nested packages allow you to maintain complex hierarchies of child objects that you can modify independent of the `Class.Model` object package. This allows you greater control over the individual components of your assets.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section3/ConvertingAssets-Intro.png" width="30%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section3/ConvertingAssets-Intro.png" alt="" width="30%"/>
 
 To convert your modular assets and props into packages:
 
 1. In the **Explorer** window, right-click a modular asset or a prop, then select **Convert to Package** from the contextual menu. The **Convert to Package** dialog displays.
 2. Fill out the **Title** and **Description** fields, set the ownership to yourself or a group, then click the **Submit** button. Once complete, a chain link symbol displays over the model's icon to identify it as a package.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/ConvertingAssets-2.png" width="30%"/>
+   <img src="../../assets/tutorials/environmental-art-curriculum/Section3/ConvertingAssets-2.png" alt="The Model icon with a chain link symbol." width="30%"/>
 
 3. Repeat this process for each modular asset and prop.
 

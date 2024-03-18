@@ -82,6 +82,30 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: WireframeHandleAdornment:AddText
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: point
+        type: Vector3
+        default:
+        summary: ''
+      - name: text
+        type: string
+        default:
+        summary: ''
+      - name: size
+        type: int
+        default: 12
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: WireframeHandleAdornment:Clear
     summary: ''
     description: ''

@@ -1016,8 +1016,8 @@ methods:
 
       #### GetBlockedUserIds
 
-      Returns a list of `Class.Player.UserId`s associated with users that have
-      been blocked by the local player.
+      Returns a list of `Class.Player.UserId|UserIds` associated with users that
+      have been blocked by the local player.
 
       #### PlayerBlockedEvent
 

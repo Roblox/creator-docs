@@ -12,9 +12,123 @@ You can create and sell bodies, heads, accessories, and clothes on the [Marketpl
 
 You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../../production/analytics/analytics-dashboard.md#sales-data).
 
-## Fees
+## Upload Fees
 
-When uploading, accessories and clothing require an upload fee of **750 Robux** per submission. Bodies and heads do not require an upload fee. In general, fees are not refunded if an item is rejected through moderation.
+When uploading, accessories, clothing, bodies, and heads require an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
+
+## Publishing Advance
+
+<Alert severity = 'info'>
+Starting middle of March 2024, Marketplace items require a publishing advance that replaces the [per-unit fee](#per-unit-fee). Existing creators do not have to pay a publishing advance for any existing items.
+</Alert>
+
+A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dynamic and dependent on the type of Marketplace item being sold:
+
+- For **Non-Limited** items, the publishing advance can range between 500 and 1,500 Robux.
+- For **Limited** items, the publishing advance can range between 5000 and 10,000 Robux.
+  - The publishing advance does not apply for **free Limited items** which are Limited items that are sold at 0 cost. Free Limiteds still require a [per-unit fee](#per-unit-fee).
+- Items taken off-sale and put back on-sale do not require another publishing advance.
+
+When publishing an asset, Roblox does not take the 30% commission until the publishing advance is fully recouped as rebates to the creator. Rebates are granted within 24 hours of the item purchase and are independent of the 30 day escrow for [commissions](#commissions).
+
+For an example of how the publishing advance is recouped, the following table represents a hypothetical situation where the **publishing advance is 1000 Robux**, and the **item is sold in an experience at 400 Robux**:
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="2">**Creator Receives**</th>
+    <th>**Roblox Receives**</th>
+    <th>**Affiliate Receives**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>30% Creator Commission</td>
+    <td>Publishing Advance Rebate (from Platform Commission)</td>
+    <td>30% Platform Commission</td>
+    <td>40% Affiliate (experience owner) Commission</td>
+  </tr>
+  <tr>
+    <td>Unit 1 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 2 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 3 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 4 sold </td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 5 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 6 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 7 sold</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 8 sold<br /><br />*Creator has received 960 Robux in total publishing advance rebates*</td>
+    <td>120 Robux</td>
+    <td>120 Robux</td>
+    <td>← Given to creator</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 9 sold<br /><br />*Creator has received 1000 Robux in total publishing advance rebates*</td>
+    <td>120 Robux</td>
+    <td>40 Robux</td>
+    <td>80 Robux</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Unit 10 sold<br /><br />*No more publishing advance rebate*</td>
+    <td>120 Robux</td>
+    <td>0 Robux</td>
+    <td>120 Robux</td>
+    <td>160 Robux</td>
+  </tr>
+  <tr>
+    <td>Continues with each unit sold</td>
+    <td>…</td>
+    <td>…</td>
+    <td>…</td>
+    <td>…</td>
+  </tr>
+</tbody>
+</table>
 
 ## Commissions
 
@@ -95,104 +209,7 @@ To protect against automated purchases, Roblox sets purchase limits for Limiteds
 
 Depending on the 3D asset type, you must set the price of the item within the marketplace price range. If you are selling a [Limited](#limiteds) item, you can set your item price as **0**, or any value after the **Limiteds Price Floor**.
 
-The following are the current Marketplace price ranges (in Robux):
-
-<table>
-<thead>
-  <tr>
-    <th>**3D Asset Type**</th>
-    <th>**Non-Limiteds Price Range**</th>
-    <th>**Limiteds Price Floor**</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Hats</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Hair</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Face</td>
-    <td>15 - 5,000 </td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td>Shoulder</td>
-    <td>15 - 5,000</td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td>Neck</td>
-    <td>20 - 5,000</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Front</td>
-    <td>20 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Back</td>
-    <td>100 - 10,000</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Waist</td>
-    <td>50 - 5,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Pants</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Shorts</td>
-    <td>50 - 10,000</td>
-    <td>85</td>
-  </tr>
-  <tr>
-    <td>T-Shirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Shirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Dress Skirt</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Jacket</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Sweater</td>
-    <td>50 - 10,000</td>
-    <td>70</td>
-  </tr>
-  <tr>
-    <td>Body</td>
-    <td>75 - 10,000</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Head</td>
-    <td>75 - 10,000</td>
-    <td>N/A</td>
-  </tr>
-</tbody>
-</table>
+[View Current Marketplace Ranges](https://create.roblox.com/dashboard/creations/pricing)
 
 ## Classic Clothing
 

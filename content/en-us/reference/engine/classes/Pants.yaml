@@ -6,7 +6,7 @@ summary: |
   Displays a Pants texture from the Roblox website to display on a
   `Class.Humanoid` rig.
 description: |
-  <img src="/assets/legacy/Pants.jpg" alt="A default rig wearing a very dapper pair of pants (rbxassetid://86896501)"  />
+  <img src="../../../assets/legacy/Pants.jpg" alt="A default rig wearing a very dapper pair of pants (rbxassetid://86896501)"  />
 
   The **Pants** object displays a Pants texture from the Roblox website on a
   `Class.Humanoid` rig. Pants cover the torso and legs, and will be covered by a

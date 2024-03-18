@@ -7,7 +7,7 @@ The **Game Settings** window contains all Studio-level settings and
 customization options for Roblox experiences, including settings for
 [permissions](#permissions), [monetization](#monetization), [security](#security), and [localization](#localization). You can access it from the [Home](../studio/home-tab.md) tab of the toolbar.
 
-<img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="800" alt="Game Settings button indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 <Alert severity="warning">
 The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publishing-experiences-and-places.md) to Roblox.
@@ -67,11 +67,11 @@ The **Basic Info** tab contains general settings for an experience, such as its 
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Microphone</b></td>
-    <td>Enables voice-eligible users to use chat with spatial voice within your experience. See [Spatial Voice](../chat/spatial-voice.md) for more information.</td>
+    <td>**Enable Microphone**</td>
+    <td>Enables voice-eligible users to use voice chat within your experience. See [Chat with Voice](../chat/voice-chat.md) for more information.</td>
   </tr>
   <tr>
-    <td><b>Enable Camera</b></td>
+    <td>**Enable Camera**</td>
     <td>Enables eligible users to animate their avatar with their camera in your experience. See [Animate Your Avatar](https://en.help.roblox.com/hc/en-us/articles/17877687557396) for more information.</td>
   </tr>
 </tbody>
@@ -211,7 +211,7 @@ The **Localization** tab contains language settings related to [localization](..
   </tr>
   <tr>
     <td>**Automatic Translation**</td>
-    <td>The languages for which you'd like to enable [automatic translation](../production/localization/translating-in-experience-content.md#automatic-translation).</td>
+    <td>The languages for which you'd like to enable [automatic translation](../production/localization/automatic-translations.md).</td>
   </tr>
 </tbody>
 </table>
@@ -309,11 +309,11 @@ The **Other** tab includes settings that are typically reserved for special situ
 </thead>
 <tbody>
   <tr>
-    <td><b>Enable Drafts Mode</b></td>
+    <td>**Enable Drafts Mode**</td>
     <td>Enables asynchronous, drafts-based script editing in a [Team Create](../projects/collaboration.md) session.</td>
   </tr>
   <tr>
-    <td><b>Shutdown All Servers</b></td>
+    <td>**Shutdown All Servers**</td>
     <td>Shuts down all servers currently running the experience.</td>
   </tr>
 </tbody>

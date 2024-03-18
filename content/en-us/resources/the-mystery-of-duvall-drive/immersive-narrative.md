@@ -96,7 +96,7 @@ To create thought bubbles, we parented a `Class.BillboardGui` with a child `Clas
 
 <img src="../../assets/resources/mystery-of-duvall-drive/immersive-narrative/richtext-thought-bubble.png" width="80%" />
 
-By using `Class.TextLabel|TextLabels` instead of images, we kept the text readable by Roblox, and we were able to auto-localize this content and make it accessible to many more players without having to do anything! For more information on this process, see [Translating In-Experience Content](../../production/localization/translating-in-experience-content.md).
+By using `Class.TextLabel|TextLabels` instead of images, we kept the text readable by Roblox, and we were able to auto-localize this content and make it accessible to many more players without having to do anything! For more information on this process, see [automatic translations](../../production/localization/automatic-translations.md).
 
 ## Announcements
 

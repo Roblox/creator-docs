@@ -26,21 +26,22 @@ items:
     deprecation_message: ''
   - name: Ragdoll
     summary: |
-      The Humanoid has been hit by a fast moving object (uncontrolled falling).
-      _The Humanoid can recover from this._
+      (Deprecated) The Humanoid has been hit by a fast moving object
+      (uncontrolled falling). _The Humanoid can recover from this._ This state
+      has to be set and unset manually using `Class.Humanoid:ChangeState()`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: GettingUp
     summary: |
-      The Humanoid is getting back on their feet after Ragdoll.
+      The Humanoid is getting back on their feet after FallingDown or Ragdoll.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Jumping
     summary: |
       The Humanoid just jumped. (Check `Class.Humanoid.Jump`). This state lasts
-      only briefly. This state normally transitions into either Standing, if on
+      only briefly. This state normally transitions into either Landed, if on
       the ground, or Freefall, if still in the air.
     value: 3
     tags: []
@@ -53,7 +54,8 @@ items:
     deprecation_message: ''
   - name: Freefall
     summary: |
-      The Humanoid is currently freefalling (jumped from a height).
+      The Humanoid is currently freefalling (jumped from a height or fell off a
+      ledge).
     value: 5
     tags: []
     deprecation_message: ''
@@ -74,14 +76,13 @@ items:
     deprecation_message: ''
   - name: Running
     summary: |
-      Currently running while physics of parts in range are being calculated
-      (e.g. After a jump, close to other players, and others).
+      Currently running while on the ground.
     value: 8
     tags: []
     deprecation_message: ''
   - name: RunningNoPhysics
     summary: |
-      Currently running and not near other physical objects. (deprecated).
+      (Deprecated) Currently running and not near other physical objects.
     value: 10
     tags: []
     deprecation_message: ''
@@ -114,7 +115,7 @@ items:
     deprecation_message: ''
   - name: Dead
     summary: |
-      The Humanoid died. Changing a Humanoid's state to this one will kill it.
+      The Humanoid died. Changing a Humanoid's state to this state will kill it.
     value: 15
     tags: []
     deprecation_message: ''

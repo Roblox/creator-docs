@@ -254,7 +254,7 @@ The following table serves as a quick reference for how to use remote events and
     <td>`RemoteFunction.OnServerInvoke = function(player, args)`</td>
   </tr>
 </table>
-<Typography variant='h4'>[Server &rarr; Client &rarr; Server](#server-to-client-to-server) &nbsp;<Chip size='small' label='Serious Risks' color='secondary'/></Typography>
+<Typography variant='h4'>[Server &rarr; Client &rarr; Server](#server-to-client-to-server) &nbsp;<Chip size='small' label='Serious Risks' color='primary'/></Typography>
 
 ### Asynchronous Networking Events
 
@@ -465,18 +465,18 @@ print("The server created the requested part:", newPart)
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 
--- Script in ServerScriptService to create Part with the passed properties
+-- Script in ServerScriptService to create a Part with the passed properties
 local function createPart(player, partColor, partPosition)
 	print(player.Name .. " requested a new part")
 	local newPart = Instance.new("Part")
-	-- Use partColor and partPosition to set the Part's BrickColor and Position
+	-- Use partColor and partPosition to set the part's BrickColor and Position
 	newPart.BrickColor = partColor
 	newPart.Position = partPosition
 	newPart.Parent = workspace
 	return newPart
 end
 
--- Bind createPart() to the `Class.RemoteFunction`'s OnServerInvoke callback
+-- Bind createPart() to the remote function's OnServerInvoke callback
 remoteFunction.OnServerInvoke = createPart
 ```
 

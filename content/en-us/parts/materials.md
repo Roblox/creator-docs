@@ -15,10 +15,10 @@ The easiest way to interact with materials is through Studio's **Material&nbsp;M
 
 <Tabs>
   <TabItem label="Home Tab">
-    <img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="846" height="156" alt="Material Manager button in Studio toolbar Home tab" />
+    <img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" height="156" alt="Material Manager button in Studio toolbar Home tab" />
   </TabItem>
   <TabItem label="Model Tab">
-    <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="850" height="156" alt="Material Manager button in Studio toolbar Model tab" />
+    <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="672" height="156" alt="Material Manager button in Studio toolbar Model tab" />
   </TabItem>
 </Tabs>
 
@@ -124,7 +124,7 @@ The **Material Generator** is designed to create material variants from text ent
 
 1. Open the **Material Generator** tool from the [Home](../studio/home-tab.md) tab.
 
-   <img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="778" alt="Material Generator button in Studio toolbar Home tab" />
+   <img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator button in Studio toolbar Home tab" />
 
 2. In the text box at the top of the window, enter keywords and then click the **Generate** button. Generating satisfying results can be an iterative process requiring a long list of descriptors to help focus in on the material you want. Here are some tips:
 
@@ -335,11 +335,11 @@ When you apply a custom material to a part, the part's `Class.Part.MaterialVaria
 
 When you reuse custom materials in models and packages, each `MaterialVariant` instance must be in `Class.MaterialService` for it to work.
 
-- If you publish a model in the Creator Marketplace with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about publishing models to the Creator Marketplace, see [Publishing Assets](../production/publishing/publishing-assets.md).
-- If you insert a model from the Creator Marketplace, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Marketplace, see [Creator Marketplace](../production/publishing/creator-marketplace.md).
+- If you publish a model in the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about publishing models to the Creator Store, see [Publishing Assets](../production/publishing/publishing-assets.md).
+- If you insert a model from the Creator Store, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Store, see [Creator Store](../production/publishing/creator-store.md).
 - If you want to use custom materials with packages, put the package in `Class.MaterialService`. For more information on packages, see [Packages](../projects/assets/packages.md).
 
-The [Creator Marketplace](../production/publishing/creator-marketplace.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
+The [Creator Store](../production/publishing/creator-store.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
 
 <Alert severity="success">
 To make the most of adaptive materials, use a consistent naming convention for your `Class.MaterialVariant` instances. For example, you can use `PascalCase` with the base material of the custom material as the first word, as in `GrassWet`, `GrassDry`, and `GrassBurned`.
@@ -1282,157 +1282,157 @@ The following table lists the default RGB values for each base material. For inf
     <tr>
         <td>Asphalt</td>
         <td>80, 84, 84</td>
-        <td style={{backgroundColor:"rgb(80,84,84)"}}></td>
+        <td><ColorSwatch value="rgb(80,84,84)" /></td>
     </tr>
     <tr>
         <td>Basalt</td>
         <td>75, 74, 74</td>
-        <td style={{backgroundColor:"rgb(75,74,74)"}}></td>
+        <td><ColorSwatch value="rgb(75,74,74)" /></td>
     </tr>
     <tr>
         <td>Brick</td>
         <td>138, 97, 73</td>
-        <td style={{backgroundColor:"rgb(138,97,73)"}}></td>
+        <td><ColorSwatch value="rgb(138,97,73)" /></td>
     </tr>
     <tr>
         <td>Cobblestone</td>
         <td>134, 134, 118</td>
-        <td style={{backgroundColor:"rgb(134,134,118)"}}></td>
+        <td><ColorSwatch value="rgb(134,134,118)" /></td>
     </tr>
     <tr>
         <td>Concrete</td>
         <td>152, 152, 152</td>
-        <td style={{backgroundColor:"rgb(152,152,152)"}}></td>
+        <td><ColorSwatch value="rgb(152,152,152)" /></td>
     </tr>
     <tr>
         <td>CorrodedMetal</td>
         <td>104, 140, 173</td>
-        <td style={{backgroundColor:"rgb(104,140,173)"}}></td>
+        <td><ColorSwatch value="rgb(104,140,173)" /></td>
     </tr>
     <tr>
         <td>CrackedLava</td>
         <td>255, 24, 67</td>
-        <td style={{backgroundColor:"rgb(255,24,67)"}}></td>
+        <td><ColorSwatch value="rgb(255,24,67)" /></td>
     </tr>
     <tr>
         <td>DiamondPlate</td>
         <td>168, 175, 176</td>
-        <td style={{backgroundColor:"rgb(168,175,176)"}}></td>
+        <td><ColorSwatch value="rgb(168,175,176)" /></td>
     </tr>
     <tr>
         <td>Fabric</td>
         <td>194, 193, 168</td>
-        <td style={{backgroundColor:"rgb(194,193,168)"}}></td>
+        <td><ColorSwatch value="rgb(194,193,168)" /></td>
     </tr>
     <tr>
         <td>Foil</td>
         <td>168, 175, 176</td>
-        <td style={{backgroundColor:"rgb(168,175,176)"}}></td>
+        <td><ColorSwatch value="rgb(168,175,176)" /></td>
     </tr>
     <tr>
         <td>Glacier</td>
         <td>221, 228, 229</td>
-        <td style={{backgroundColor:"rgb(221,228,229)"}}></td>
+        <td><ColorSwatch value="rgb(221,228,229)" /></td>
     </tr>
     <tr>
         <td>Glass</td>
         <td>138, 167, 168</td>
-        <td style={{backgroundColor:"rgb(138,167,168)"}}></td>
+        <td><ColorSwatch value="rgb(138,167,168)" /></td>
     </tr>
     <tr>
         <td>Granite</td>
         <td>149, 146, 139</td>
-        <td style={{backgroundColor:"rgb(149,146,139)"}}></td>
+        <td><ColorSwatch value="rgb(149,146,139)" /></td>
     </tr>
     <tr>
         <td>Grass</td>
         <td>111, 126, 62</td>
-        <td style={{backgroundColor:"rgb(111,126,62)"}}></td>
+        <td><ColorSwatch value="rgb(111,126,62)" /></td>
     </tr>
     <tr>
         <td>Ground</td>
         <td>140, 130, 104</td>
-        <td style={{backgroundColor:"rgb(140,130,104)"}}></td>
+        <td><ColorSwatch value="rgb(140,130,104)" /></td>
     </tr>
     <tr>
         <td>Ice</td>
         <td>204, 210, 223</td>
-        <td style={{backgroundColor:"rgb(204,210,223)"}}></td>
+        <td><ColorSwatch value="rgb(204,210,223)" /></td>
     </tr>
     <tr>
         <td>LeafyGrass</td>
         <td>106, 134, 64</td>
-        <td style={{backgroundColor:"rgb(106,134,64)"}}></td>
+        <td><ColorSwatch value="rgb(106,134,64)" /></td>
     </tr>
     <tr>
         <td>Limestone</td>
         <td>255, 243, 192</td>
-        <td style={{backgroundColor:"rgb(255,243,192)"}}></td>
+        <td><ColorSwatch value="rgb(255,243,192)" /></td>
     </tr>
     <tr>
         <td>Marble</td>
         <td>122, 122, 122</td>
-        <td style={{backgroundColor:"rgb(122,122,122)"}}></td>
+        <td><ColorSwatch value="rgb(122,122,122)" /></td>
     </tr>
     <tr>
         <td>Metal</td>
         <td>168, 175, 176</td>
-        <td style={{backgroundColor:"rgb(168,175,176)"}}></td>
+        <td><ColorSwatch value="rgb(168,175,176)" /></td>
     </tr>
     <tr>
         <td>Mud</td>
         <td>121, 112, 98</td>
-        <td style={{backgroundColor:"rgb(121,112,98)"}}></td>
+        <td><ColorSwatch value="rgb(121,112,98)" /></td>
     </tr>
     <tr>
         <td>Pavement</td>
         <td>143, 144, 135</td>
-        <td style={{backgroundColor:"rgb(143, 144, 135)"}}></td>
+        <td><ColorSwatch value="rgb(143, 144, 135)" /></td>
     </tr>
     <tr>
         <td>Pebble</td>
         <td>122,122,118</td>
-        <td style={{backgroundColor:"rgb(122,122,118)"}}></td>
+        <td><ColorSwatch value="rgb(122,122,118)" /></td>
     </tr>
     <tr>
         <td>Rock</td>
         <td>99, 100, 102</td>
-        <td style={{backgroundColor:"rgb(99,100,102)"}}></td>
+        <td><ColorSwatch value="rgb(99,100,102)" /></td>
     </tr>
     <tr>
         <td>Salt</td>
         <td>255, 255, 254</td>
-        <td style={{backgroundColor:"rgb(255,255,254)"}}></td>
+        <td><ColorSwatch value="rgb(255,255,254)" /></td>
     </tr>
     <tr>
         <td>Sand</td>
         <td>207, 203, 167</td>
-        <td style={{backgroundColor:"rgb(207,203,167)"}}></td>
+        <td><ColorSwatch value="rgb(207,203,167)" /></td>
     </tr>
     <tr>
         <td>Sandstone</td>
         <td>148, 124, 95</td>
-        <td style={{backgroundColor:"rgb(148,124,95)"}}></td>
+        <td><ColorSwatch value="rgb(148,124,95)" /></td>
     </tr>
     <tr>
         <td>Slate</td>
         <td>88, 89, 86</td>
-        <td style={{backgroundColor:"rgb(88,89,86)"}}></td>
+        <td><ColorSwatch value="rgb(88,89,86)" /></td>
     </tr>
     <tr>
         <td>Snow</td>
         <td>235, 253, 255</td>
-        <td style={{backgroundColor:"rgb(235,253,255)"}}></td>
+        <td><ColorSwatch value="rgb(235,253,255)" /></td>
     </tr>
     <tr>
         <td>Wood</td>
         <td>172, 148, 108</td>
-        <td style={{backgroundColor:"rgb(172,148,108)"}}></td>
+        <td><ColorSwatch value="rgb(172,148,108)" /></td>
     </tr>
     <tr>
         <td>WoodPlanks</td>
         <td>172, 148, 108</td>
-        <td style={{backgroundColor:"rgb(172,148,108)"}}></td>
+        <td><ColorSwatch value="rgb(172,148,108)" /></td>
     </tr>
 </tbody>
 </table>

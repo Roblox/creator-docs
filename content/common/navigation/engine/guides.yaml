@@ -262,14 +262,14 @@ navigation:
         path: /environment/lighting
       - title: Atmosphere
         path: /environment/atmosphere
-      - title: Post-Processing Effects
-        path: /environment/post-processing-effects
-      - title: Skyboxes
-        path: /environment/skybox
       - title: Clouds
         path: /environment/clouds
       - title: Global Wind
         path: /environment/global-wind
+      - title: Post-Processing Effects
+        path: /environment/post-processing-effects
+      - title: Skyboxes
+        path: /environment/skybox
   - title: Characters
     section:
       - title: Overview
@@ -394,8 +394,8 @@ navigation:
         path: /animation/using
   - title: Chat
     section:
-      - title: Spatial Voice
-        path: /chat/spatial-voice
+      - title: Chat with Voice
+        path: /chat/voice-chat
       - title: Text Chat
         section:
           - title: Overview
@@ -406,6 +406,8 @@ navigation:
             path: /chat/bubble-chat
           - title: Migrating to In-Experience Text Chat
             path: /chat/migrate-to-in-experience-text-chat
+          - title: Legacy Chat System
+            path: /chat/legacy/legacy-chat-system
   - title: Cloud Services
     section:
       - title: Data Stores
@@ -428,6 +430,8 @@ navigation:
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity Developers
     path: /unity
+  - title: Roblox for Unreal Developers
+    path: /unreal
 
   - heading: Distribute
   - title: Overview
@@ -458,8 +462,10 @@ navigation:
         section:
           - title: Overview
             path: /production/publishing/publishing-assets
-          - title: Creator Marketplace
-            path: /production/publishing/creator-marketplace
+          - title: Creator Store
+            path: /production/publishing/creator-store
+          - title: Selling on the Creator Store
+            path: /production/publishing/selling-on-the-creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines
@@ -482,13 +488,9 @@ navigation:
         path: /production/promotion/
       - title: Discovery
         path: /production/promotion/discovery
-      - title: Events Platform
-        path: /production/promotion/events-platform
-      - title: Player Invite Prompts
-        path: /production/promotion/invite-prompts
       - title: Advertising
         section:
-          - title: Advertising on Roblox
+          - title: Overview
             path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
@@ -498,12 +500,18 @@ navigation:
             path: /production/promotion/user-advertisements
           - title: Complying with Advertising Standards
             path: /production/promotion/complying-with-advertising-standards
-      - title: Getting Featured on Roblox Owned Channels
-        path: /production/promotion/getting-featured-on-roblox-owned-channels
+      - title: Audience Engagement
+        path: /production/promotion/audience-engagement
+      - title: Events Platform
+        path: /production/promotion/events-platform
+      - title: Player Invite Prompts
+        path: /production/promotion/invite-prompts
+      - title: Experience Notifications
+        path: /cloud-services/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
-      - title: Growing Your Audience
-        path: /production/promotion/growing-your-audience
+      - title: Getting Featured on Roblox‑Owned Channels
+        path: /production/promotion/getting-featured-on-roblox-owned-channels
   - title: Monetization
     section:
       - title: Overview
@@ -540,14 +548,14 @@ navigation:
     section:
       - title: Overview
         path: /production/localization/
-      - title: Accessing Localization Settings
-        path: /production/localization/accessing-localization-settings
-      - title: Translating Experience Page Information
-        path: /production/localization/translating-experience-page-information
-      - title: Translating In-Experience Content
+      - title: Automatic Translations
+        path: /production/localization/automatic-translations
+      - title: Custom Translations
         section:
           - title: Overview
-            path: /production/localization/translating-in-experience-content
+            path: /production/localization/custom-translations
+          - title: Manually Editing Localization Table
+            path: /production/localization/manual-translations
           - title: Translating Dynamic Content
             path: /production/localization/translating-dynamic-content
           - title: Localizing with Scripting
@@ -560,7 +568,7 @@ navigation:
     section:
       - title: Overview
         path: /production/analytics/
-      - title: Real-Time
+      - title: Monitoring
         section:
           - title: Performance
             path: /production/analytics/performance

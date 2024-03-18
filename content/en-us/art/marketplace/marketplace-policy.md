@@ -48,31 +48,139 @@ Each body can only include the following parts, and cannot have additional appen
   - 1 right leg
   - 1 left leg
 - Heads
-  - Head (includes baked-in eyes, nose, and mouth, if applicable)
+  - Head (includes baked-in eyes, nose, ears, and mouth, if applicable)
     - All heads must include the 17 minimum [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).
     - It's recommended to include more poses to increase facial animation quality and fidelity.
   - Eyebrows (optional)
   - Eyelashes (optional)
 
-Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-types) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
+Avatars must adhere to the [appropriate size requirements](../../art/characters/specifications.md#body-scale) and cannot have any invisible or non-rendering body parts. See [Avatar character specifications](../../art/characters/specifications.md) for more information.
 
 Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
 ### Modesty Layers
 
-A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and lower torso. All avatars with skin-like texture in the groin and chest require a modesty layer when applicable.
+A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and lower torso. All avatars with a smooth and flat skin-like surface texture require a modesty layer. Avatars with feathers, scales, rocks, or metal over the groin and chest area do not require a modesty layer.
 
-<GridContainer numColumns="2">
-  <figure>
-  <center><img src="../../assets/art/avatar/Modesty-Layer-Example-A.png" width = "70%"/></center>
-  <figcaption><center>Require modesty layer</center></figcaption>
-  </figure>
-  <figure>
-  <center><img src="../../assets/art/avatar/Modesty-Layer-Example-B.png" width = "70%"/></center>
-  <figcaption><center>Does not require modesty layer</center></figcaption>
-  </figure>
-</GridContainer>
+<table>
+<thead>
+  <tr>
+    <th><center>Requires modesty layer</center></th>
+    <th><center>Does not require modesty layer</center></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-A.png" /></center>
+      <figcaption><center></center>
+      </figcaption></figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-B.png" /></center>
+      <figcaption><center></center>
+      </figcaption></figure>
+    </td>
+  </tr>
+  </tbody>
+</table>
 
+<BaseAccordion>
+<AccordionSummary>
+<Typography>Additional modesty layer examples</Typography>
+
+  </AccordionSummary>
+  <AccordionDetails>
+
+<table>
+<thead>
+  <tr>
+    <th><center>Requires modesty layer</center></th>
+    <th><center>Does not require modesty layer</center></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <figure>
+      <center><img src="../../assets/art/avatar/Modesty-Layer-Example-C-Giga.png" /></center>
+      <figcaption><center>[GigaChad](https://www.roblox.com/bundles/2836/GigaChad)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-C-Cyber.png" /></center>
+      <figcaption><center>[Cybernetic Superhero](https://www.roblox.com/bundles/808/Cybernetic-Superhero)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-D-Tela.png" /></center>
+      <figcaption><center>[Telamons Business Casual](https://www.roblox.com/bundles/210/Telamons-Business-Casual)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-D-Greaser.png" /></center>
+      <figcaption><center>[Greaser Chicken](https://www.roblox.com/bundles/1178/Greaser-Chicken)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-E-Polar.png" /></center>
+      <figcaption><center>[Polar Bear](https://www.roblox.com/bundles/195/Polar-Bear)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-E-Great-Bear.png" /></center>
+      <figcaption><center>[The Great Bear War Grizzly Warrior](https://www.roblox.com/bundles/370/The-Great-Bear-War-Grizzly-Warrior)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-F-Scarlett.png" /></center>
+      <figcaption><center>[Scarlett](https://www.roblox.com/bundles/3968/Scarlett)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-F-Scare.png" /></center>
+      <figcaption><center>[Scarecrow](https://www.roblox.com/bundles/6506/Scarecrow)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-G-Teddy.png" /></center>
+      <figcaption><center>[Teddy Bear](https://www.roblox.com/bundles/2094/Teddy-Bear)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-G-Dragon.png" /></center>
+      <figcaption><center>[Custom Dragon Colour](https://www.roblox.com/bundles/7735/Custom-Dragon-Colour)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-H-Bungling.png" /></center>
+      <figcaption><center>[Bungling](https://www.roblox.com/bundles/115561/Bungling)</center></figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Modesty-Layer-Example-H-Pumpkin.png" /></center>
+      <figcaption><center>[Living Pumpkin](https://www.roblox.com/bundles/8734/Living-Pumpkin)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+
+</AccordionDetails>
+  </BaseAccordion>
+
+<br /><br />
 For all modesty layers, the following applies:
 
 - All modesty layers must be fully opaque. While they can include artistic highlights, shadows, or textures, modesty layers that are sheer or partially transparent are not permitted.
@@ -111,13 +219,18 @@ Upper torso modesty layers can include strapless bras, racerback bras, balconett
 
 ### Age Appropriate
 
-Avatar bodies must not be sexually suggestive or depict or suggest nudity in genital areas. This includes depicting pubic hair, genitalia, or nipples. This includes any visible depiction through or around the [modesty layers](#modesty-layers).
+Avatar bodies must not be sexually suggestive, or depict or suggest nudity in genital areas. This includes:
+
+- Any depiction of exposed pubic hair, genitalia, or nipples
+- Any depiction of genitalia, buttock or chest cleavage, or nipples through or around the [modesty layers](#modesty-layers)
+- Excessive highlighting or shadowing of breasts, pelvis, or buttocks
+- Avatars where, due to exaggerated size, the focal point of the body is on the breasts, pelvis, or buttocks
 
 Roblox moderates avatars that do not follow the modesty layers requirements under the [Romantic and Sexual Content Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
 ### Accessories and Clothing
 
-Avatar bodies cannot include any accessories or clothing. Accessories are items that you can find separately in the Marketplace that are not part of the body part requirements, such as equipable tails, wings, glasses, clothing, [tattoos](#tattoos), and [makeup](#makeup). You must upload and sell these items separately. Heads can include hair, eyelashes, and eyebrows, but these must also be separate items.
+Avatar bodies cannot include any accessories or clothing. Accessories are items that you can find separately in the Marketplace that are not part of the body part requirements, such as equipable tails, wings, extra limbs, glasses, clothing, [tattoos](#tattoos), and [makeup](#makeup). You must upload and sell these items separately. Heads can include hair, eyelashes, and eyebrows, but these must also be separate items.
 
 <GridContainer numColumns='2'>
 <figure>
@@ -130,7 +243,12 @@ Avatar bodies cannot include any accessories or clothing. Accessories are items 
 </figure>
 </GridContainer>
 
-The following are examples of assets you can find on the Marketplace and cannot be included with a submitted avatar body:
+<BaseAccordion>
+<AccordionSummary>
+<Typography>Additional accessory examples</Typography>
+
+  </AccordionSummary>
+  <AccordionDetails>
 
 <table>
 <tbody>
@@ -180,8 +298,43 @@ The following are examples of assets you can find on the Marketplace and cannot 
       <center>Tail Feathers</center>
     </td>
   </tr>
+  <tr>
+    <td>
+      <center><img src="../../assets/art/avatar/Acc-Glasses.png"/></center>
+      <center>[Hipster Glasses](https://www.roblox.com/catalog/125369932/Hipster-Glasses)</center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center><img src="../../assets/art/avatar/Acc-Sunglasses.png"/></center>
+      <center>[Sunglasses](https://www.roblox.com/catalog/42847660/Epic-Sunglasses)</center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center><img src="../../assets/art/avatar/Acc-Whiskers.png"/></center>
+      <center>[Whiskers](https://www.roblox.com/catalog/13209067084/Whiskers)</center>
+    </td>
+  </tr>
 </tbody>
 </table>
+</AccordionDetails>
+  </BaseAccordion>
+
+<br /><br />
+
+The following is an example of rejected and accepted version of the same asset:
+
+<GridContainer numColumns="2">
+<figure>
+<center><img src="../../assets/art/avatar/Acc-Demon-Horns-A.png" /></center>
+<figcaption>Body rejected for accessories (horns).</figcaption>
+</figure>
+<figure>
+<center><img src="../../assets/art/avatar/Acc-Demon-Horns-B.png" /></center>
+<figcaption> [Demon3](https://www.roblox.com/bundles/2485/Demon3) approved after removal of accessories on body upload.</figcaption>
+</figure>
+</GridContainer>
 
 Roblox moderates avatars with accessories or clothing under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
@@ -200,21 +353,68 @@ Tattoos are drawings, patterns, or shapes that are distinct from the body's text
 </figure>
 </GridContainer>
 
+The following is an example of rejected and accepted version of the same asset:
+
+<GridContainer numColumns="2">
+<figure>
+  <center><img src="../../assets/art/avatar/Tattoo-Samy-A.png" /></center>
+  <figcaption>Body rejected for tattoo (face on neck).</figcaption>
+</figure>
+<figure>
+  <center><img src="../../assets/art/avatar/Tattoo-Samy-B.png" /></center>
+  <figcaption> [Samy the Cobra](https://www.roblox.com/bundles/6699/Samy-The-Cobra) approved after removal of tattoo on body. <br /><br /> Note that this avatar doesn't require a modesty layer because it does not have skin-like texture in the groin area.</figcaption>
+</figure>
+</GridContainer>
+
 #### Makeup
 
 Avatar heads can use shading and shadowing to show dimension and definition. This includes shading of the eyelids in a tone similar to skin tone, single color lips, eyeliner, eyelashes, and eyebrows, or cheeks shaded to look flushed, rosy, healthy, or warm.
 
 Your avatar head cannot include any additional color, shading, or outlining not solely used to show dimension and definition of the face. You must upload and sell these features separately. This includes facial painting, multicolor eyelashes, eyeliner, and lips, and eyeshadow that goes beyond shading and is not related to the skin tone of the rest of the body.
 
-<GridContainer numColumns="2">
-  <figure>
-  <center><img src="../../assets/art/avatar/Makeup-Example-A.png" width = "40%"/></center>
-  <figcaption><center>Facial shadowing and detail are permitted</center></figcaption>
-  </figure><figure>
-  <center><img src="../../assets/art/avatar/Makeup-Example-B.png" width = "40%"/></center>
-  <figcaption><center>Face painting and multi-color features are not permitted</center></figcaption>
-  </figure>
-</GridContainer>
+<table>
+<thead>
+  <tr>
+    <th><center>Facial shadowing and detail are permitted</center></th>
+    <th><center>Face painting and multi-color features are not permitted</center></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <figure>
+      <center><img src="../../assets/art/avatar/Makeup-Example-A.png" /></center>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Makeup-Example-B.png" /></center>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure>
+      <center><img src="../../assets/art/avatar/Makeup-Example-C.png" /></center>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Makeup-Example-D.png" /></center>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure>
+      <center><img src="../../assets/art/avatar/Makeup-Example-E.png" /></center>
+      </figure>
+    </td>
+    <td>
+      <figure><center><img src="../../assets/art/avatar/Makeup-Example-F.png" /></center>
+      </figure>
+    </td>
+  </tr>
+</tbody>
+</table>
 
 ### Customizable Skin Tones
 

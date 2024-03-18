@@ -5,19 +5,19 @@ description: The Asset Manager lets you manage places and bulk import assets int
 
 The **Asset Manager** lets you manage [places](../../production/publishing/publishing-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md).
 
-<img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
+<img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
 
 ## Asset Folders
 
 Assets are organized within folders based on their type. You can switch between **grid view** and **list view** by clicking the view toggle button.
 
-<img src="../../assets/studio/asset-manager/View-Toggle.png" width="460" alt="Toggle button for grid and list view indicated in Asset Manager" />
+<img src="../../assets/studio/asset-manager/View-Toggle.png" width="460" alt="The Asset Manager window with the View toggle button highlighted." />
 
 ## Importing Assets
 
 The **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
 
-<img src="../../assets/studio/asset-manager/Import-Button.png" width="360" />
+<img src="../../assets/studio/asset-manager/Import-Button.png" alt="The Asset Manager window with the Bulk Import button highlighted." width="360" />
 
 <table>
 <thead>
@@ -37,14 +37,14 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
   </tr>
   <tr>
     <td>**Audio**</td>
-    <td>You can import audio assets that you are certain you have permission to use in either `.mp3` or `.ogg` format. If you're uncertain whether you have permission to use an audio file, the [Creator Marketplace](../../production/publishing/creator-marketplace.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced sound effects. See [Audio Assets](../../sound/assets.md) for details.</td>
+    <td>You can import audio assets that you are certain you have permission to use in either `.mp3` or `.ogg` format. If you're uncertain whether you have permission to use an audio file, the [Creator Store](../../production/publishing/creator-store.md) has a variety of free-to-use audio, including more than 100,000 professionally-produced sound effects. See [Audio Assets](../../sound/assets.md) for details.</td>
   </tr>
 </tbody>
 </table>
 
 ## Inserting Assets
 
-You can insert assets into the [Explorer](../../studio/explorer.md) hierarchy by dragging-and-dropping or by right-clicking the asset name/tile and selecting **Insert**.
+You can insert assets into the [Explorer](../../studio/explorer.md) window hierarchy by dragging-and-dropping or by right-clicking the asset name/tile and selecting **Insert**.
 
 Behavior of dragging-and-dropping into the 3D viewport varies by asset type:
 
@@ -246,7 +246,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
 
 You can closely inspect an image, mesh, package, or audio file by hovering over its thumbnail in [grid view](#asset-folders) and clicking the "magnify" icon, or by right-clicking its name in [list view](#asset-folders) and selecting **Asset&nbsp;Preview**.
 
-<img src="../../assets/studio/asset-manager/Asset-Inspect-Icon.png" width="400" alt="Asset inspection button indicated for an asset in the Asset Manager" />
+<img src="../../assets/studio/asset-manager/Asset-Inspect-Icon.png" width="400" alt="A preview view of an asset in the Asset Manager. The Insect Asset icon is highlighted." />
 
 When previewing 3D assets like meshes, you can move the virtual camera around to get a better view from all angles. For videos, you can preview the entire video in the popup.
 
@@ -282,4 +282,4 @@ When previewing 3D assets like meshes, you can move the virtual camera around to
 
 In the lower-right corner of the preview frame, the **composition** button reveals the full hierarchy of the asset including `Class.Script|Scripts`, `Class.MeshPart|MeshParts`, `Class.Animation|Animations`, and more.
 
-<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="Asset composition hierarchy shown below the preview of an asset" />
+<img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset in the Asset Manager, and the full hierarchy of the asset displays underneath the 3D representation. The Asset Composition icon is highlighted." />

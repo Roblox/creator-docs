@@ -1,0 +1,38 @@
+name: SubscriptionState
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: NeverSubscribed
+    summary: |
+      User has never subscribed to the product.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: SubscribedWillRenew
+    summary: |
+      Subscription is active and will renew.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: SubscribedWillNotRenew
+    summary: |
+      Subscription is active and will not renew.
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: SubscribedRenewalPaymentPending
+    summary: |
+      Subscription is active and renewal payment is pending.
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Expired
+    summary: |
+      Subscription has expired.
+    value: 4
+    tags: []
+    deprecation_message: ''

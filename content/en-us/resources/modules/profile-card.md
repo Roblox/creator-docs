@@ -5,8 +5,7 @@ description: The Profile Card module lets players see more information about oth
 
 It can be interesting to learn about other players. The **ProfileCard** [developer module](../../resources/modules/index.md) is a great way to see more information about others within an experience, from badges achieved to the player's favorite games.
 
-<video src="../../assets/developer-modules/profile-card/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/profile-card/Showcase.mp4" controls width="100%"></video>
 
 ## Module Usage
 
@@ -14,25 +13,25 @@ width="100%" />
 
 To use the **ProfileCard** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Profile Card** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/profile-card/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **ProfileCard** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **ProfileCard** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/profile-card/Move-Package.png" width="320" />
 
@@ -44,7 +43,7 @@ Profile cards have different views depending on whether you're viewing your own 
 <TabItem label="Your Card">
 When you first spawn into the experience, an icon appears over your character. Clicking the icon opens the profile card view. Once the card is closed, the icon disappears, but you can reopen the card at any time by clicking your character.
 
-<img src="../../assets/developer-modules/profile-card/Player-Icon.jpg" width="80%" />
+<img src="../../assets/developer-modules/profile-card/Player-Icon.jpg" width="800" />
 
 When viewing your own card, it appears as it would to another player, except placeholder text will appear for any blank inputs. Additionally, the status string is subject to **text filtering**, as any free text input should be.
 
@@ -68,6 +67,7 @@ When viewing your own card, it appears as it would to another player, except pla
     <figcaption>Attempt to enter invalid status</figcaption>
   </figure>
 </GridContainer>
+
 </TabItem>
 <TabItem label="Other Player's Card">
 Icons do not appear over other characters, but clicking on a character will open their profile card. The button in the upper-right corner of the card lets you quickly request that player as a friend.
@@ -84,6 +84,7 @@ Note that players under the age of 13 will only see the status message if it's a
     <figcaption>Card without custom status</figcaption>
   </figure>
 </GridContainer>
+
 </TabItem>
 </Tabs>
 
@@ -93,7 +94,9 @@ Note that players under the age of 13 will only see the status message if it's a
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table. This function should be called from a `Class.LocalScript` within **StarterPlayerScripts**.
 

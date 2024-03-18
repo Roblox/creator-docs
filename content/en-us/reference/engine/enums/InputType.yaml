@@ -12,8 +12,8 @@ description: |
 code_samples:
 tags: []
 deprecation_message: |
-  This enum is deprecated as it is used by deprecated methods. It should not
-  be used in new work.
+  This enum is deprecated as it is used by deprecated methods. It should not be
+  used in new work.
 items:
   - name: NoInput
     summary: |

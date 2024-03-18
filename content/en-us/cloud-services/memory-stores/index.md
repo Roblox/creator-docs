@@ -26,7 +26,9 @@ The memory quota limits the total amount of memory that an experience can consum
 
 When users join the experience, the additional memory quota is available immediately. When users leave the experience, the quota doesn't reduce immediately. There's a trace back period of **8 days** before the quota re-evaluates to a lower value.
 
-With the observability feature available, you can view the memory size quota of your experience in real-time using the Memory Usage chart. For more information on properly arranging your memory usage to ensure an uninterrupted experience for your users, see [Identifying Peak Times and Performance Bottlenecks](../../cloud-services/memory-stores/observability.md#identifying-peak-times-and-performance-bottlenecks).
+After your experience hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
+
+With the [observability](../../cloud-services/memory-stores/observability.md) dashboard, you can view the memory size quota of your experience in real-time using the **Memory Usage** chart.
 
 ### API Request Limits
 
@@ -71,6 +73,6 @@ The [memory stores observability dashboard](../../cloud-services/memory-stores/o
 
 `Class.MemoryStoreService` offers separate namespaces for API calls from Studio that are different from runtime servers, so you can safely test a memory store before going to production. Your API calls from Studio for testing don't access production data so that you can freely test new features.
 
-Studio testing has the same [limits and quotas](#limits-and-quotas) as the production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing.
+Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing. When testing from Studio, you may notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
 
 To debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).

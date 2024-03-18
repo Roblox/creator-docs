@@ -96,10 +96,9 @@ endpoint.
   the refresh token to obtain a new set of tokens, which includes an access token,
   a refresh token, and an ID token. A refresh token:
 
-  - Has a lifetime of six months.
-  - Can be used to obtain a new set of tokens.
-  - Can be invalidated before it expires if an app user revokes the authorization
-    from user settings.
+  - Is valid for 6 months.
+  - Can only be used once before it expires to refresh tokens.
+  - Can be invalidated before it expires if an app user revokes the authorization.
 
 - **ID Token** - Provides proof that a user's identity has been authenticated. Its
   content depends on the scopes requested and can contain basic user information,

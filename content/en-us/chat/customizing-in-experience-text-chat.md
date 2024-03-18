@@ -129,7 +129,7 @@ You can customize the appearance of chat message bodies and prefixes using [rich
 
 ### Adding Chat Tags
 
-If your experience has users with special [attributes](../studio/instance-attributes.md) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their chat messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags for those with the `IsVIP` attribute.
+If your experience has users with special [attributes](../studio/properties.md#instance-attributes) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their chat messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags for those with the `IsVIP` attribute.
 
 ```lua title='LocalScript' highlight='4,5,9-11'
 local TextChatService = game:GetService("TextChatService")
@@ -180,6 +180,44 @@ TextChatService.OnIncomingMessage = function(textChatMessage: TextChatMessage)
 
 	return properties
 end
+```
+
+### Customizing Translated Messages
+
+By default, Roblox [automatically translates](../production/localization/automatic-translations.md) text chat messages based on users' language settings. To apply message customizations to translated messages, use the `Class.TextChatMessage.Translation` property. The following example, a `Class.Script` in `Class.ReplicatedStorage` with its `Enum.RunContext` property as `Client`, sets the font color of translated messages to the same color as untranslated messages.
+
+```lua title='Script'
+local TextChatService = game:GetService("TextChatService")
+
+local FONT_COLOR = "#FF007F"
+local FORMAT_STRING = `<font color='{FONT_COLOR}'>%s</font>`
+
+local function onIncomingChatMessage(textChatMessage: TextChatMessage)
+	local properties = Instance.new("TextChatMessageProperties")
+
+	properties.Text = string.format(FORMAT_STRING, textChatMessage.Text)
+
+	if textChatMessage.Translation then
+		properties.Translation = string.format(FORMAT_STRING, textChatMessage.Translation)
+	end
+
+	return properties
+end
+
+TextChatService.OnIncomingMessage = onIncomingChatMessage
+```
+
+## Displaying System Messages
+
+Through `Class.TextChannel:DisplaySystemMessage()`, you can display a system-like message, useful for greeting users or alerting them when an in-experience event is happening.
+
+```lua title='LocalScript'
+local Players = game:GetService("Players")
+local TextChatService = game:GetService("TextChatService")
+
+local generalChannel = TextChatService.TextChannels.RBXGeneral
+
+generalChannel:DisplaySystemMessage("[Server] Hello " .. Players.LocalPlayer.Name)
 ```
 
 ## Adding Chat Bubbles

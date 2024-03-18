@@ -239,6 +239,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods: []
+methods:
+  - name: AudioReverb:GetConnectedWires
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

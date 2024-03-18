@@ -1,11 +1,11 @@
 ---
 title: Publishing Assets
-description: Explains how to publish assets to the Creator Marketplace.
+description: Explains how to publish assets to the Creator Store.
 ---
 
-**Publishing assets** to the [Creator Marketplace](../../production/publishing/creator-marketplace.md) is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md), or any [model](../../parts/models.md) or [plugin](../../studio/plugins.md) that you have uploaded to your inventory.
+**Publishing assets** to the [Creator Store](../../production/publishing/creator-store.md) is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md), or any [model](../../parts/models.md) or [plugin](../../studio/plugins.md) that you have uploaded to your inventory.
 
-There are limits on the number of assets you can publish per 30 days, depending on whether you've [verified your account](../../production/publishing/account-verification.md):
+Every asset that you import must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and respect the [DMCA Guidelines](../../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can publish per 30 days, depending on whether you've [verified your account](../../production/publishing/account-verification.md):
 
 <table>
 <thead>
@@ -36,46 +36,83 @@ There are limits on the number of assets you can publish per 30 days, depending 
 </table>
 
 <Alert severity="warning">
-Make sure that every asset you import adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and remember to review the [DMCA Guidelines](../../production/publishing/dmca-guidelines.md) regarding copyright.
+
+In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+
+Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./selling-on-the-creator-store.md).
+
 </Alert>
+
+## Through Creator Dashboard
+
+Publishing assets through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) is useful when you are doing multiple tasks in quick succession for an experience. It's also the only way to set a [USD price](./selling-on-the-creator-store.md) for a plugin. Roblox strongly recommends setting USD prices for any assets you wish to sell in advance of the USD pricing launch in the spring of 2024.
+
+To publish an asset through the dashboard:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+
+1. In the horizontal navigation, select [DEVELOPMENT ITEMS](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../../projects/assets/manager.md#importing-assets) display within their respective category.
+
+1. Select the asset that you want to publish. The asset's **Configure** page displays.
+
+1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
+
+1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
+
+1. **(Optional)** If you have a [seller account](./selling-on-the-creator-store.md) and are publishing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators once USD pricing launches on the Creator Store in the spring of 2024.
+
+1. Click the **Save** button.
+
+The asset is now public and visible to everyone within the [Creator Store](../../production/publishing/creator-store.md).
 
 ## Through Studio
 
-You can publish assets directly in Studio through the [Toolbox](../../projects/assets/toolbox.md) without needing to access the [Creator Dashboard](https://create.roblox.com/dashboard/creations). To publish an asset within Studio:
+You can publish assets directly in Studio from the **Toolbox** or **Explorer** window. However, it's not currently possible to set a USD price for an asset through these methods, only through the [Creator Dashboard](#through-creator-dashboard).
+
+### From the Toolbox
+
+If your asset is already in your [Toolbox Inventory](../../projects/assets/toolbox.md#inventory) and you just want to publish it to the Creator Store, you can publish it directly from Studio without needing to access the [Creator Dashboard](https://create.roblox.com/dashboard/creations). To publish an asset in the Toolbox:
 
 1. Navigate to the **View** tab of the menu bar and select **Toolbox**. The **Toolbox** window displays.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-1. Click on the **Inventory** tab.
+1. Click on the **Creations** tab.
 
-   <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creations-Tab.png" width="360" />
 
 1. Click the **category selector** dropdown and select the asset type you'd like to publish. All assets you have [previously imported](../../projects/assets/manager.md#importing-assets) display within the chosen category.
 
    <img src="../../assets/studio/toolbox/Inventory-Category-Selector.png" width="360" />
 
 1. Right-click on your desired asset to publish and select **Edit Asset**. The **Asset Configuration** dialog displays.
-1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your asset.
 
-   <img src="../../assets/publishing/publishing-assets/Rich-Media.jpg" width="90%" />
+1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, click the **+** button to add up to 5 supplementary thumbnails for your asset.
 
-1. Enable the **Distribute on Marketplace** toggle.
+1. Enable the **Distribute on Creator Store** toggle.
+
 1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
 
 1. Click the **Submit** button.
 
-The asset is now public and visible to everyone within the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+The asset is now public and visible to everyone within the [Creator Store](../../production/publishing/creator-store.md).
 
-## Through Creator Dashboard
+### With the Explorer Window
 
-Publishing assets through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) is useful when you are doing multiple tasks in quick succession for an experience. To publish an asset through the dashboard:
+You can publish any models you create in an open project from the [Explorer](../../studio/explorer.md) window. Assets that you publish using this method automatically appear in your [Toolbox Inventory](../../projects/assets/toolbox.md#inventory). To publish an asset in the Explorer:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
-1. In the horizontal navigation, select [DEVELOPMENT ITEMS](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../../projects/assets/manager.md#importing-assets) display within their respective category.
-1. Select the asset that you want to publish. The asset's **Configure** page displays.
-1. In the **Settings** section, enable the **Distribute on Marketplace** toggle.
+1. In the **Explorer** window, right-click the asset you want to upload and select **Save to Roblox...**. The **Asset Configuration** dialog displays.
+
+1. Enable the **Distribute on Creator Store** toggle.
+
 1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
-1. Click the **Save** button.
 
-The asset is now public and visible to everyone within the [Creator Marketplace](../../production/publishing/creator-marketplace.md).
+1. Click the **Submit** button.
+
+The asset is now public and visible to everyone within the [Creator Store](../../production/publishing/creator-store.md).
+
+<Alert severity="info">
+
+  If you need to overwrite an asset with a new version, click **Overwrite an existing asset...** in the bottom left of the Asset Configuration window.
+
+</Alert>

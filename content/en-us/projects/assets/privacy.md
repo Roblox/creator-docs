@@ -10,14 +10,14 @@ The **asset privacy system**, currently applicable to audio and video assets, le
 For private audio and video assets that you or your [group](../../projects/groups.md) own, you can share them with Roblox friends from the [Creator Dashboard][CreatorDashboardURL].
 
 1. Navigate to the [Creator Dashboard][CreatorDashboardURL].
-2. In the upper tab bar, select **DEVELOPMENT ITEMS**, then click either **AUDIO** or **VIDEOS**.
+2. In the upper tab bar, select **Development Items**, then click either **Audio** or **Videos**.
 
-   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" width="780"/>
+   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
 
 3. Click the desired asset from the central list to open its configuration page.
 4. In the left menu of the asset's configuration page, click **Permissions**.
 
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" width="330" />
+   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
 
 5. You can now share the asset in two scopes:
 
@@ -26,7 +26,7 @@ For private audio and video assets that you or your [group](../../projects/group
 
    Under **Collaborator Access** &rarr; **Creators**, search for specific friends to share the asset with.
 
-	 <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Creators.png" width="780" />
+	 <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Creators.png" alt="A close up view of the Creators Collaborator Access settings. The search friends bar is highlighted." width="780" />
 
 	 <Alert severity="info">
    Sharing an asset with a friend does not automatically grant access to any of their experiences; it only gives them **permission** to use the asset. They will need to intentionally [use the asset in an experience](#using-shared-assets) for that experience to gain access to it.
@@ -37,7 +37,7 @@ For private audio and video assets that you or your [group](../../projects/group
 
    Under **Experience Access**, enter an experience's universe ID to grant it permission to access all versions of the asset. You must have permission to edit the experience to perform this operation.
 
-	 <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Experiences.png" width="780" />
+	 <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Experiences.png" alt="A close up view of the Experience Collaborator Access settings. The Enter Universe IDs input is highlighted." width="780" />
 
    </TabItem>
    </Tabs>
@@ -56,12 +56,12 @@ To revoke access for one or more friends:
 
 1. Navigate to the asset's **Permissions** page.
 
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" width="330" />
+   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
 
 2. Under **Collaborator Access** &rarr; **Creators**, locate the friend for which to revoke access.
 3. Click the **Remove** button to the right of their name.
 
-   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Remove-Creator.png" width="780" />
+   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Remove-Creator.png" alt="A close up view of a Creator tile that has access to an asset. The Remove button is highlighted." width="780" />
 
 4. When finished, click the **save changes** button at the bottom of the screen.
 
@@ -69,24 +69,24 @@ To revoke access for one or more friends:
 
 Assets shared with you appear in the **My Audio** and **My Videos** sections of the [Toolbox](../../projects/assets/toolbox.md).
 
-<img src="../../assets/studio/toolbox/Inventory-My-Audio.png" width="360" alt="My Audio section of Inventory in Studio's Toolbox" />
+<img src="../../assets/studio/toolbox/Inventory-My-Audio.png" width="360" alt="A close up view of the Toolbox with the Inventory tab and the assets dropdown highlighted." />
 
 Although the assets are shared with you, a given experience does **not** automatically gain access to any shared assets until you **insert** them in the experience, for example as a `Class.Sound` object.
 
 You can also manually grant access to one or more assets from the experience's **Permissions** page as follows:
 
 1. Navigate to the experience's configuration page on the [Creator Dashboard][CreatorDashboardURL].
-2. In the **Configure** section, click on **Permissions**.
+2. In the left-hand navigation, navigate to the **Configure** section, then click on **Permissions**.
 
-   <img src="../../assets/creator-dashboard/Experience-Nav-Configure-Permissions.png" width="330" />
+   <img src="../../assets/creator-dashboard/Experience-Nav-Configure-Permissions.png" alt="A close up view of the left-hand navigation. The Permissions navigation item menu item is highlighted." width="330" />
 
 3. Enter one or more asset IDs into the input field, separated by commas, and click the **Add** button.
 
-   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Assets-Input.png" width="780" />
+   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Assets-Input.png" alt="A close up view of the Enter asset IDs input." width="780" />
 
    Successfully added assets appear in the list slightly lower down the page:
 
-   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Assets-Added.png" width="780" />
+   <img src="../../assets/creator-dashboard/Experience-Settings-Permissions-Assets-Added.png" alt="A close up view of several example assets that the experience has access to use." width="780" />
 
 4. When finished, click the **save changes** button at the bottom of the screen.
 

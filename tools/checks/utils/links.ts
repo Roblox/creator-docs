@@ -1,7 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { readListFromFile, repositoryRoot } from './files.js';
-import { Emoji } from './utils.js';
+import globPkg from 'glob';
+const { glob } = globPkg;
+import {
+  FileExtension,
+  getAllContentFileNamesWithExtension,
+  readFileSync,
+  readListFromFile,
+  repositoryRoot,
+} from './files.js';
+import { Emoji, Locale } from './utils.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
@@ -265,19 +273,14 @@ ${requiredCheckMessage}`;
   }
 };
 
+const closedSourceDirectories = ['content/en-us/reference/cloud/'];
+
 const closedSourceFiles = [
-  'content/en-us/art/marketplace/marketplace-fees-and-commissions.md',
   'content/en-us/index/index.md',
   'content/en-us/production/promotion/advertising-on-roblox.md',
   'content/en-us/production/promotion/complying-with-advertising-standards.md',
   'content/en-us/production/promotion/discovery.md',
-  'content/en-us/production/promotion/sponsoring-experiences.md',
   'content/en-us/production/promotion/sponsoring-items.md',
-  'content/en-us/reference/cloud/index.md',
-  'content/en-us/reference/cloud/oauth2/authorization-flow.md',
-  'content/en-us/reference/cloud/oauth2/discovery-document.md',
-  'content/en-us/reference/cloud/oauth2/tokens.md',
-  'content/en-us/reference/cloud/oauth2/user-information.md',
   'content/en-us/samples/index.md',
 ];
 
@@ -301,6 +304,11 @@ const processRelativeLink = ({
   let isClosedSourceFile = false;
   if (!doesFileExist) {
     isClosedSourceFile = closedSourceFilesSet.has(newFilePathFromRoot);
+    closedSourceDirectories.forEach((dir) => {
+      if (newFilePathFromRoot.startsWith(dir)) {
+        isClosedSourceFile = true;
+      }
+    });
   }
   // Don't need to do anything else if the file exists or is closed source
   if (doesFileExist || isClosedSourceFile) {
@@ -350,6 +358,71 @@ export const checkContentLinks = ({
   if (config.checkRelativeLinks) {
     relativeLinks.forEach((link) => {
       processRelativeLink({ config, filePath, link });
+    });
+  }
+};
+
+export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
+  console.log(`${Emoji.Mag} Checking for unused assets...`);
+  // Get all files to check
+  const allFiles = [
+    ...getAllContentFileNamesWithExtension({
+      locale: Locale.EN_US,
+      fileExtension: FileExtension.MARKDOWN,
+    }),
+    ...getAllContentFileNamesWithExtension({
+      locale: Locale.EN_US,
+      fileExtension: FileExtension.YAML,
+    }),
+  ];
+
+  // Get all asset links from content files
+  const allAssetLinksFullPath: string[] = [];
+  for (const filePath of allFiles) {
+    const fileContent = readFileSync(filePath);
+    const { relativeLinks } = getNonRobloxLinks(fileContent);
+
+    const fullPathAssetLinks = relativeLinks.map((link) => {
+      const fileDir = path.dirname(filePath);
+      const fullPath = path.join(fileDir, link.ref);
+      return fullPath;
+    });
+    allAssetLinksFullPath.push(...fullPathAssetLinks);
+  }
+  const allAssetLinksSet = new Set(allAssetLinksFullPath);
+
+  // Get all asset paths from file system
+  const assetsFolder = path.join(repositoryRoot, 'content/en-us/assets/');
+  const filesInAssetsFolder = glob.sync(`${assetsFolder}**/*`, { nodir: true });
+  // Asset names are unique, so you don't need a set
+
+  // Compare the list of assets with set of links
+  // Don't do anything if they're the same size
+  if (filesInAssetsFolder.length === allAssetLinksSet.size) {
+    console.log(`${Emoji.WhiteCheckMark} All assets are used`);
+    return;
+  }
+
+  const unusedAssets = filesInAssetsFolder.filter((filePath) => {
+    const isAssetUsed = allAssetLinksSet.has(filePath);
+    if (!isAssetUsed) {
+      console.log(`${Emoji.Link} Unused asset: ${filePath}`);
+      // Return true to keep it after the filter
+      return true;
+    }
+    if (config.debug) {
+      console.log(`${Emoji.WhiteCheckMark} Used asset: ${filePath}`);
+    }
+    return false;
+  });
+  console.log(`${Emoji.Bulb} Total unused assets: ${unusedAssets.length}`);
+
+  if (config.deleteUnusedAssets) {
+    unusedAssets.forEach((filePath) => {
+      console.log(
+        `${Emoji.WasteBasket}  Deleting ${filePath.split(repositoryRoot)[1]}`
+      );
+      fs.unlinkSync(filePath);
     });
   }
 };

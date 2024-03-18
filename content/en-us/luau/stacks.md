@@ -16,7 +16,7 @@ Though Luau doesn't have stacks as a built-in data structure, you can use [table
 ```lua Implement a Stack Using Table
 local Stack = {}
 Stack.__index = Stack
-​
+
 function Stack.new()
 	local self = setmetatable({}, Stack)
 
@@ -24,28 +24,26 @@ function Stack.new()
 
 	return self
 end
-​
+
 -- Check if the stack is empty
 function Stack:IsEmpty()
 	return #self._stack == 0
 end
-​
+
 -- Put a new value onto the stack
 function Stack:Push(value)
-	self._stack[#self._stack+1] = value
+	table.insert(self._stack, value)
 end
-​
+
 -- Take a value off the stack
 function Stack:Pop()
 	if self:IsEmpty() then
 		return nil
 	end
-​
-	local value = self._stack[#self._stack]
-	self._stack[#self._stack] = nil
-	return value
+
+	return table.remove(self._stack, #self._stack)
 end
-​
+
 return Stack
 ```
 
@@ -54,25 +52,25 @@ The following code sample is a usage example as a `Class.Script` under `Class.Wo
 ```lua title='Stack Usage Example'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Stack = require(ReplicatedStorage:WaitForChild("Stack"))
-​
+
 local s = Stack.new()
-​
+
 -- Change the stack 	Resulting stack		 Output
-​
+
 s:Push(1)      			-- {1}
-​
+
 s:Push(5)      			-- {1, 5}
-​
+
 s:Push(10)     			-- {1, 5, 10}
-​
+
 print(s:Pop()) 			-- {1, 5}            10
-​
+
 print(s:Pop()) 			-- {1}               5
-​
+
 s:Push(20)     			-- {1, 20}
-​
+
 print(s:Pop()) 			-- {1}               20
-​
+
 print(s:Pop()) 			-- {}                1
 ```
 

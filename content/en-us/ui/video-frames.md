@@ -22,7 +22,7 @@ To upload video assets, you must be a 13+ [ID verified](https://en.help.roblox.c
 - It's less than 375 MB.
 - It includes only English audio and text (additional languages will be supported at a later date).
 
-Videos that don't meet these requirements are rejected. When uploading videos, consider the following:
+Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
 - Each video upload costs 2,000 Robux.
 - You can upload a maximum of three videos within any 30-day period, starting from the date of your first video upload.
@@ -63,7 +63,7 @@ To play a video in your experience without code:
 
 If you want to play a video in your experience with code, paste the following code into a `Class.Script` within `Class.ServerScriptService` to create a `Class.Part` and play the video on its front surface.
 
-``` lua
+```lua
 local screenPart = Instance.new("Part")
 screenPart.Size = Vector3.new(16, 9, 1)
 screenPart.Position = Vector3.new(0, 8, -20)

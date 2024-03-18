@@ -23,12 +23,12 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 When you **group** objects together, they automatically become a `Class.Model` object.
 
 1. In the 3D viewport or the [Explorer](../studio/explorer.md) window, select every object that you want to group into a model.
-1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on macOS. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
+1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
    <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="Three basic objects grouped into a Model object" />
 
 <Alert severity="info">
-To completely ungroup a model back to its original objects, right-click it and select **Ungroup**, or press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on macOS.
+To completely ungroup a model back to its original objects, right-click it and select **Ungroup**, or press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on Mac.
 </Alert>
 
 ### Setting a Primary Part
@@ -47,7 +47,7 @@ As you hover over models in the viewport, they are outlined to indicate their po
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
 
-As models typically contain multiple child [parts](../parts/index.md) or [meshes](../parts/meshes.md), some children may be hidden from view. To select a specific child without moving the camera around or locating the child in the [Explorer](../studio/explorer.md) hierarchy, click while holding <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on macOS to perform [selection cycling](../studio/ui-overview.md#selection-cycling).
+As models typically contain multiple child [parts](../parts/index.md) or [meshes](../parts/meshes.md), some children may be hidden from view. To select a specific child without moving the camera around or locating the child in the [Explorer](../studio/explorer.md) hierarchy, click while holding <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac to perform [selection cycling](../studio/ui-overview.md#selection-cycling).
 
 <figure>
   <video src="../assets/studio/general/Selection-Cycling.mp4" controls width="80%" alt="Video showing selection cycling through a model"></video>
@@ -107,3 +107,7 @@ Instance [streaming](../workspace/streaming.md) dynamically loads and unloads `C
 Because 3D content that exists on the client changes dynamically in a streaming-enabled experience, models may suddenly disappear. To alleviate this, you can set specific models to render as lower resolution "imposter" meshes when streamed out, as detailed in [Model Level&nbsp;of&nbsp;Detail](../workspace/streaming.md#model-level-of-detail).
 
 See [Model Streaming Controls](../workspace/streaming.md#model-streaming-controls) for more on model-level streaming controls.
+
+## Publishing Models
+
+You can [publish](../production/publishing/publishing-assets.md) models to the [Creator Store](../production/publishing/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright.

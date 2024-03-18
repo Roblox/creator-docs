@@ -19,9 +19,10 @@ description: |
   When pressed, the `Class.PluginToolbarButton.Click|Click` event fires. A
   button will also remain in the pressed state, which may be set manually using
   `Class.PluginToolbarButton:SetActive()|SetActive`. Upon plugin activation
-  (`Class.Plugin:Activate()`), buttons in all other `Class.PluginToolbar`s will
-  be toggled off. If all buttons in a toolbar are off, the toolbar's plugin is
-  deactivated (`Class.Plugin:Deactivate()`).
+  (`Class.Plugin:Activate()`), buttons in all other
+  `Class.PluginToolbar|PluginToolbars` will be toggled off. If all buttons in a
+  toolbar are off, the toolbar's plugin is deactivated
+  (`Class.Plugin:Deactivate()`).
 
   When the game viewport is not visible, buttons will be disabled as if their
   `Class.PluginToolbarButton.Enabled|Enabled` property were false. Disabled
@@ -53,7 +54,7 @@ properties:
       plugin toolbar buttons are visible. Some are enabled as a result of this
       property being true, such as the Localization Tools button.
 
-      <img src="/assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
+      <img src="../../../assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
 
       Typically, this property is good to enable if an action triggered by a
       plugin button's `Class.PluginToolbarButton.Click|Click` event doesn't

@@ -25,10 +25,26 @@ functions:
       the call of the function calling `Library.debug.traceback()`, and so on.
       See the code sample below for an example of sequential function calls.
 
-      The format of the returned traceback is **not defined** and may change at
-      any time; use only for debug diagnostics and error analytics. It's
-      recommended that you **never** parse the return value of this function for
-      specific information, such as script names or line numbers.
+      Note that this function will often return inaccurate results (compared to
+      the original source code) and that the format of the returned traceback
+      may change at any time. You should **not** parse the return value for
+      specific information such as script names or line numbers.
+
+      The following example includes sequential function calls; `fnB()` is
+      called, and it calls `fnA()` which then calls `Library.debug.traceback()`.
+
+      ```lua
+      local function fnA()
+      	print(debug.traceback("Specific moment during fnA()"))
+      end
+
+      local function fnB()
+      	fnA()
+      end
+
+      -- Call function fnB() to begin traceback
+      fnB()
+      ```
     parameters:
       - name: message
         type: string
@@ -42,91 +58,120 @@ functions:
           The number of calls "up" the call stack to return.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          Traceback of the current function call stack.
     tags:
     code_samples:
-      - Debug-Traceback
   - name: debug.traceback
     summary: |
       Returns a string of undefined format that describes the current function
       call stack.
     description: |
-      Returns a string of undefined format that describes the current function
-      call stack.
-    parameters:
-      - name: thread
-        type: thread
-        default:
-        summary: ''
-      - name: message
-        type: string
-        default: ''
-        summary: ''
-      - name: level
-        type: number
-        default: 1
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-    code_samples:
-  - name: debug.info
-    summary: |
-      Traverses the entire stack of target thread and returns a string
-      containing the call stack of target level details.
-    description: |
-      Allows programmatic inspection of the call stack.
+      Returns a traceback of the current function call stack as a string; in
+      other words, a description of the functions that have been called up to
+      this point. During debugging, this behaves like an error stack trace but
+      does not stop execution of the script.
 
-      - `thread` (thread) - A thread as returned by
-        `Library.coroutine.create()`.
-      - `level` - A `number` to describe the point at which information from the
-        call stack information should be returned.
-        - A value of `1` represents the function which is calling
-          `Library.debug.info()`.
-        - A value of `2` represents the function that called that function, and
-          so on. Out-of-bounds values result in no values returned.
-      - `options` - A string that represents the information to be returned. It
-        must contain exactly 0 or 1 of each of the following characters and no
-        others: `slnaf`
-        - `s` - `Library.string`. The function source identifier, equal to the
-          full name of the script the function is defined in
-        - `l` - `number`. If `functionOrLevel` is a function, the line the
-          function is defined on. If `functionOrLevel` is a number (examining a
-          stack frame), the line number of the function call
-        - `n` - `Library.string`. The name of the function, may be nil for
-          anonymous functions and C functions without an assigned debug name.
-        - `a` - `number`, `boolean`. Arity of the function, which refers to the
-          parameter count and whether the function is variadic.
-        - `f` - `function`. The function which was inspected.
+      The `level` parameter specifies what level of the call stack to consider,
+      with `1` being the call of `Library.debug.traceback()` itself, `2` being
+      the call of the function calling `Library.debug.traceback()`, and so on.
+      See the code sample below for an example of sequential function calls.
 
-      This function differs from `Library.debug.traceback()` in that it
-      guarantees the format of the data it returns. This is useful not only for
-      general logging and filtering purposes, but also for sending the data to
-      systems expecting structured input, such as crash aggregation.
+      Note that this function will often return inaccurate results (compared to
+      the original source code) and that the format of the returned traceback
+      may change at any time. You should **not** parse the return value for
+      specific information such as script names or line numbers.
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      The following example includes sequential function calls; `fnB()` is
+      called, and it calls `fnA()` which then calls `Library.debug.traceback()`.
+
+      ```lua
+      local function fnA()
+      	print(debug.traceback("Specific moment during fnA()"))
+      end
+
+      local function fnB()
+      	fnA()
+      end
+
+      -- Call function fnB() to begin traceback
+      fnB()
+      ```
     parameters:
       - name: thread
         type: thread
         default:
         summary: |
-          A thread as returned by `Library.coroutine.create()`, omit entirely to
-          use the current thread.
+          A thread as returned by `Library.coroutine.create()`.
+      - name: message
+        type: string
+        default: ''
+        summary: |
+          The first line of the returned string.
+      - name: level
+        type: number
+        default: 1
+        summary: |
+          The number of calls "up" the call stack to return.
+    returns:
+      - type: string
+        summary: |
+          Traceback of the current function call stack.
+    tags:
+    code_samples:
+  - name: debug.info
+    summary: |
+      Traverses the entire stack of current thread and returns a string
+      containing the call stack of target level details.
+    description: |
+      Allows programmatic inspection of the call stack. This function differs
+      from `Library.debug.traceback()` in that it guarantees the format of the
+      data it returns. This is useful for general logging and filtering purposes
+      as well as for sending the data to systems expecting structured input,
+      such as crash aggregation.
+
+      ```lua
+      local function fnA()
+      	-- Output source identifier ("s") and line ("l") at levels 1 and 2
+      	print(debug.info(1, "sl"))  --> fnA() 3
+      	print(debug.info(2, "sl"))  --> fnA() 7
+      end
+
+      fnA()
+      ```
+
+      Note that this function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
+    parameters:
       - name: level
         type: number
         default:
         summary: |
           Determines at what level of the call stack the information returned
-          should describe.
+          should describe. A value of `1` represents the function which is
+          calling `Library.debug.info()`, a value of `2` represents the function
+          that called that function, and so on.
       - name: options
         type: string
         default:
         summary: |
           A string that describes what the returned information should
-          represent. It must only contain 0 or 1 instances of the following
-          characters, each representing a piece of information: `slnaf`.
+          represent. It must only contain 0 or 1 instances of the characters
+          `slnaf`, each representing a piece of information:
+
+          - `s` ([string](/luau/strings.md)) — The function source identifier,
+            equal to the full name of the script the function is defined in.
+          - `l` ([number](/luau/numbers.md)) — The line number of the function
+            call represented by `level`.
+          - `n` ([string](/luau/strings.md)) — The name of the function; may be
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
+          - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
+          - `f` ([function](/luau/functions.md)) — The function which was
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -137,45 +182,56 @@ functions:
       Traverses the entire stack of current thread and returns a string
       containing the call stack of target function details.
     description: |
-      Allows programmatic inspection of the call stack.
+      Allows programmatic inspection of the call stack. This function differs
+      from `Library.debug.traceback()` in that it guarantees the format of the
+      data it returns. This is useful for general logging and filtering purposes
+      as well as for sending the data to systems expecting structured input,
+      such as crash aggregation.
 
-      - `function` - A `function` to describe the point at which information
-        from the call stack information should be returned.
-      - `options` - A string that represents the information to be returned. It
-        must contain exactly 0 or 1 of each of the following characters and no
-        others: `slnaf`
-        - `s` - `Library.string`. The function source identifier, equal to the
-          full name of the script the function is defined in
-        - `l` - `number`. If `functionOrLevel` is a function, the line the
-          function is defined on. If `functionOrLevel` is a number (examining a
-          stack frame), the line number of the function call
-        - `n` - `Library.string`. The name of the function, may be nil for
-          anonymous functions and C functions without an assigned debug name.
-        - `a` - `number`, `boolean`. Arity of the function, which refers to the
-          parameter count and whether the function is variadic.
-        - `f` - `function`. The function which was inspected.
+      ```lua
+      local function fnA()
 
-      This function differs from `Library.debug.traceback()` in that it
-      guarantees the format of the data it returns. This is useful not only for
-      general logging and filtering purposes, but also for sending the data to
-      systems expecting structured input, such as crash aggregation.
+      end
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      local function fnB()
+
+      end
+
+      -- Output line ("l"), name ("n"), and identifier ("f") for both fnA() and fnB()
+      print(debug.info(fnA, "lnf"))  --> 1 fnA function: 0x75e3d3c398a81252
+      print(debug.info(fnB, "lnf"))  --> 5 fnB function: 0x6022a6dc5ccf4ab2
+      ```
+
+      Note that this function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
       - name: function
         type: function
         default:
         summary: |
-          Determines at what function of the call stack the information returned
-          should describe.
+          The function of the call stack which the information returned should
+          describe.
       - name: options
         type: string
         default:
         summary: |
           A string that describes what the returned information should
-          represent. It must only contain 0 or 1 instances of the following
-          characters, each representing a piece of information: `slnaf`.
+          represent. It must only contain 0 or 1 instances of the characters
+          `slnaf`, each representing a piece of information:
+
+          - `s` ([string](/luau/strings.md)) — The function source identifier,
+            equal to the full name of the script the function is defined in.
+          - `l` ([number](/luau/numbers.md)) — The line that `function` is
+            defined on.
+          - `n` ([string](/luau/strings.md)) — The name of the function; may be
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
+          - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
+          - `f` ([function](/luau/functions.md)) — The function which was
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -183,52 +239,62 @@ functions:
     code_samples:
   - name: debug.info
     summary: |
-      Traverses the entire stack of current thread and returns a string
+      Traverses the entire stack of target thread and returns a string
       containing the call stack of target level details.
     description: |
-      Allows programmatic inspection of the call stack.
+      Allows programmatic inspection of the call stack. This function differs
+      from `Library.debug.traceback()` in that it guarantees the format of the
+      data it returns. This is useful for general logging and filtering purposes
+      as well as for sending the data to systems expecting structured input,
+      such as crash aggregation.
 
-      - `level` - A `number` to describe the point at which information from the
-        call stack information should be returned.
-        - A value of `1` represents the function which is calling
-          `Library.debug.info()`.
-        - A value of `2` represents the function that called that function, and
-          so on. Out-of-bounds values result in no values returned.
-      - `options` - A string that represents the information to be returned. It
-        must contain exactly 0 or 1 of each of the following characters and no
-        others: `slnaf`
-        - `s` - `Library.string`. The function source identifier, equal to the
-          full name of the script the function is defined in
-        - `l` - `number`. If `functionOrLevel` is a function, the line the
-          function is defined on. If `functionOrLevel` is a number (examining a
-          stack frame), the line number of the function call
-        - `n` - `Library.string`. The name of the function, may be nil for
-          anonymous functions and C functions without an assigned debug name.
-        - `a` - `number`, `boolean`. Arity of the function, which refers to the
-          parameter count and whether the function is variadic.
-        - `f` - `function`. The function which was inspected.
+      ```lua
+      local function fnA()
+      	-- Output source identifier ("s") and line ("l") at levels 1 and 2
+      	print(debug.info(1, "sl"))  --> fnA() 3
+      	print(debug.info(2, "sl"))  --> fnA() 7
+      end
 
-      This function differs from `Library.debug.traceback()` in that it
-      guarantees the format of the data it returns. This is useful not only for
-      general logging and filtering purposes, but also for sending the data to
-      systems expecting structured input, such as crash aggregation.
+      fnA()
+      ```
 
-      This function is similar to [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part
-      of the standard Lua library which serves a similar purpose.
+      Note that this function is similar to
+      [debug.getinfo](https://www.lua.org/pil/23.1.html), an unavailable part of
+      the standard Lua library which serves a similar purpose.
     parameters:
+      - name: thread
+        type: thread
+        default:
+        summary: |
+          A thread as returned by `Library.coroutine.create()`.
       - name: level
         type: number
         default:
         summary: |
           Determines at what level of the call stack the information returned
-          should describe.
+          should describe. A value of `1` represents the function which is
+          calling `Library.debug.info()`, a value of `2` represents the function
+          that called that function, and so on.
       - name: options
         type: string
         default:
         summary: |
-          Describes what the returned information should represent. It must only
-          contain 0 or 1 instances of the following characters, each
-          representing a piece of information: `slnaf`.
+          A string that describes what the returned information should
+          represent. It must only contain 0 or 1 instances of the characters
+          `slnaf`, each representing a piece of information:
+
+          - `s` ([string](/luau/strings.md)) — The function source identifier,
+            equal to the full name of the script the function is defined in.
+          - `l` ([number](/luau/numbers.md)) — The line number of the function
+            call represented by `level`.
+          - `n` ([string](/luau/strings.md)) — The name of the function; may be
+            `nil` for anonymous functions and C functions without an assigned
+            debug name.
+          - `a` ([number](/luau/numbers.md), [boolean](/luau/booleans.md)) —
+            Arity of the function, which refers to the parameter count and
+            whether the function is variadic.
+          - `f` ([function](/luau/functions.md)) — The function which was
+            inspected.
     returns:
       - type: Tuple
         summary: ''
@@ -236,15 +302,18 @@ functions:
     code_samples:
   - name: debug.profilebegin
     summary: |
-      Starts profiling for a MicroProfiler label.
+      Starts profiling for a label.
     description: |
-      Starts profiling for a MicroProfiler label.
+      Starts profiling for a
+      [MicroProfiler](../../../studio/microprofiler/index.md) label.
     parameters:
       - name: label
         type: string
         default:
         summary: |
-          The text that this MicroProfiler label displays.
+          The text that this
+          [MicroProfiler](../../../studio/microprofiler/index.md) label
+          displays.
     returns:
       - type: void
         summary: ''
@@ -252,10 +321,11 @@ functions:
     code_samples:
   - name: debug.profileend
     summary: |
-      Stops profiling for the most recent MicroProfiler label that
+      Stops profiling for the most recent label that
       `Library.debug.profilebegin()` opened.
     description: |
-      Stops profiling for the most recent MicroProfiler label that
+      Stops profiling for the most recent
+      [MicroProfiler](../../../studio/microprofiler/index.md) label that
       `Library.debug.profilebegin()` opened.
     parameters:
     returns:
@@ -263,23 +333,36 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: debug.getmemorycategory
+    summary: |
+      Returns the name of the current thread's active memory category.
+    description: |
+      Returns the name of the current thread's active memory category.
+    parameters:
+    returns:
+      - type: string
+        summary: |
+          The current thread's active memory category.
+    tags:
+    code_samples:
   - name: debug.setmemorycategory
     summary: |
-      Assigns a custom tag to the current thread's memory category in the
-      Developer Console.
+      Assigns a custom tag to the current thread's memory category.
     description: |
       Assigns a custom tag name to the current thread's memory category in the
-      Developer Console. Useful for analyzing memory usage of multiple threads
-      in the same script which would otherwise be grouped together under the
-      same tag/name.
+      [Developer Console](../../../studio/developer-console.md). Useful for
+      analyzing memory usage of multiple threads in the same script which would
+      otherwise be grouped together under the same tag/name. Returns the name of
+      the current thread's previous memory category.
     parameters:
       - name: tag
         type: string
         default:
         summary: ''
     returns:
-      - type: void
-        summary: ''
+      - type: string
+        summary: |
+          The current thread's previous memory category.
     tags:
     code_samples:
   - name: debug.resetmemorycategory

@@ -1,222 +1,137 @@
 ---
-title: Creating a Score Bar
+title: Creating Score Bars
 description: The process for creating a score bar UI that displays current player information.
-next: /tutorials/building/ui/interactive-buttons
 ---
 
-Games often need to display information to the player such as their current score, health, or their character's level. A **GUI**, short for **G**raphical **U**ser **I**nterface, is used to display such information.
+A **score bar** is a UI element that displays player information that is important for your experience's gameplay, such as their leveling up statistics, currency count, or power-up items in their inventory. By displaying score bars directly on the player's screen, you can keep their attention on what they need in order to accomplish various goals within your experience.
 
-In this intro tutorial, you'll learn how to build a score bar along the top-center of the screen, similar to the one shown below.
+Using the [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) `.rbxl` file as a reference, this tutorial shows you how to create a score bar that tracks the amount of gold players collect, including guidance on:
 
-<img src="../../../assets/tutorials/creating-a-score-bar/Finished-Score-Bar-Intro.jpg" width="100%" />
-
-To make the score bar GUI appear on the screen, you'll first need to create a `Class.ScreenGui` object&nbsp;&mdash; this behaves as a 2D canvas to display visual elements on the player's screen. It's usually best to add this to the `Class.StarterGui` service so that it gets copied to each player's local game session when they join.
-
-1. In the Explorer window, hover over the **StarterGui** object and click the **+** button.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/StarterGui-Insert-Object.png" width="60%" />
-
-2. Select **ScreenGui** from the menu. This will create a new 2D screen space in front of the 3D game world.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/StarterGui-ScreenGui.png" width="60%" />
+- Creating a frame in the top-center of the screen.
+- Adding a crown icon that communicates what the score bar is tracking without any textual guidance.
+- Inserting score text that records the amount of gold the player collects.
+- Testing your UI design on multiple emulated devices to review its appearance on different screens and aspect ratios.
 
 <Alert severity="info">
-
-As you continue to build your game, additional `Class.ScreenGui` containers can be added to StarterGui, each containing GUI objects for a specific "scene" or purpose. For example, you could create one `Class.ScreenGui` for your menu screen, another for your in-game GUI elements (initially disabled), then show or hide them through scripting when appropriate.
-
+As with all 2D creation, there are many ways to achieve any particular goal. You can create your own 2D assets in third-party UI tools and follow along with your own design.
 </Alert>
 
-## Creating a Frame
+<img src="../../../assets/tutorials/creating-a-score-bar/Score-Bar-Intro.png" mg width="90%" />
 
-For organization and scaling/resizing, it's best to group related GUI elements inside a `Class.Frame` container. For instance, a basic score bar may contain both an `Class.ImageLabel` and `Class.TextLabel` inside a `Class.Frame` object.
+## Create the Frame
 
-<img src="../../../assets/tutorials/creating-a-score-bar/Frame-Diagram.png" width="60%" />
+To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter an experience.
 
-To add an empty frame:
+After you create a `Class.ScreenGui` object, you can create and customize its child `Class.GuiObject|GuiObjects` according to each container's purpose. To demonstrate this concept, this section teaches you how to create a `Class.ScreenGui` object with a child `Class.Frame` object that will contain both the icon and text of the score bar.
 
-1. Hover over the **ScreenGui** object, click the **+** button, and select **Frame**. This will create a blank frame in the upper-left corner of the screen.
+<img src="../../../assets/tutorials/creating-a-score-bar/Frame-Diagram2.png" width="60%" />
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/Empty-Frame.jpg" width="60%" />
-
-2. As a best practice, rename the new frame according to what it will contain, for example **ScoreBarFrame**.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Renamed.png" width="60%" />
-
-<Alert severity="info">
-In a final game, a player's GUI may utilize multiple frames such as one to display score, another for in-game abilities, and more.
-</Alert>
-
-### Size
-
-To change the size of the score bar, you'll need to set various **Size** properties on the frame.
-
-1. Make sure **ScoreBarFrame** is selected.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Renamed.png" width="60%" />
-
-2. In the **Properties** window, locate the **Size** property and click the arrow to expand its tree.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/Expand-Size-Tree.png" width="60%" />
-
-3. For the frame to dynamically resize on various devices and screens, it's best to use **Scale** properties. For this GUI, set the following:
-
-   <img alt="**Size** &rarr; **X** = **0.25, 0**, **Size** &rarr; **Y** = **0.08, 0**" src="../../../assets/tutorials/creating-a-score-bar/Frame-Size.png" width="60%" />
-
-This should resize the frame to a thin rectangle:
-
-<img src="../../../assets/tutorials/creating-a-score-bar/Frame-Resized.jpg" width="60%" />
-
-### Scaling
-
-The current size values work nicely on larger screens, but the vertical **Y** scale of **0.08** (8%) may appear a bit small on a phone.
-
-<img src="../../../assets/tutorials/creating-a-score-bar/Phone-Display.png" width="60%" />
-
-To control how a GUI scales across different screen sizes, you can use **constraints**. In this case, a `Class.UISizeConstraint` will prevent the frame from getting too small.
-
-1. Hover over the **ScoreBarFrame** object, click the **+** button, and insert a **UISizeConstraint**.
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/New-UISizeConstraint.png" width="60%" />
-
-2. Select the new constraint object and set its **MinSize** property to **0, 40**. This prevents the frame from shrinking to less than 40 pixels in vertical size.
-
-   <img alt="" src="../../../assets/tutorials/creating-a-score-bar/UISizeConstraint-MinSize.png" width="60%" />
-
-### Position
-
-In Roblox games, the top-left area of the screen is typically occupied by the chat window. To move the score bar to a clearer region, adjust its **AnchorPoint** and **Position**.
-
-1. Change the frame's **AnchorPoint** property to **0.5, 0** so that its position will be based around its horizontal center.
-
-   <img alt="**AnchorPoint** = **0.5, 0**" src="../../../assets/tutorials/creating-a-score-bar/Frame-AnchorPoint.png" width="60%" />
-
-2. Expand the frame's **Position** tree and change **X** to **0.5, 0**. This should center the frame along the top edge of the game window.
-
-   <img alt="**Position** &rarr; **X** = **0.5, 0**" src="../../../assets/tutorials/creating-a-score-bar/Frame-Position.png" width="60%" />
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Centered.jpg" width="100%" />
-
-### Styling
-
-Currently the GUI frame is solid white with a thin border, but it can easily be changed.
-
-1. Make the frame translucent black by changing its background properties.
-
-   <img alt="**BackgroundColor3** = **0, 0, 0**, **BackgroundTransparency** = **0.6**" src="../../../assets/tutorials/creating-a-score-bar/Frame-Background-Values.png" width="60%" />
-
-2. Remove the border completely by setting **BorderSizePixel** to **0**.
-
-   <img alt="**BorderSizePixel** = **0**" src="../../../assets/tutorials/creating-a-score-bar/Frame-BorderSizePixel.png" width="60%" />
-
-   The frame should now look like this:
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Finalized.jpg" width="100%" />
-
-### Arrangement
-
-**Layout** objects can be used to arrange GUI elements like images or text inside the frame. Although a score bar doesn't seem like a list, the `Class.UIListLayout` object lets you easily arrange child elements in a vertical or horizontal sequence.
+In addition to customizing the frame's properties, this section also provides instructions on adding a child `Class.UISizeConstraint` and `Class.UIListLayout` object to the frame. This technique ensures that `Class.GuiObject|GuiObjects` automatically arrange horizontally as you insert them into the frame, and that they are always legible on smaller screen sizes. If you don't follow this guidance, every `Class.GuiObject` you add to the frame will arrange outside of the frame's perimeter.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-a-score-bar/List-Layout-Vertical.png" />
-    <figcaption>Vertical Sequence</figcaption>
+    <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Vertical.png" />
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/creating-a-score-bar/List-Layout-Horizontal.png" />
-    <figcaption>Horizontal Sequence</figcaption>
+    <img src="../../../assets/tutorials/creating-a-score-bar/Frame-Horizontal.png" />
   </figure>
 </GridContainer>
 
-1. Hover over the **ScoreBarFrame** object, click the **+** button, and insert a **UIListLayout**.
+To recreate the frame container within the sample [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) place file:
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/New-UIListLayout.png" width="60%" />
+1. Create a `Class.ScreenGui` object to contain your on-screen UI.
+   1. In the **Explorer** window, hover over **StarterGui** and click the ⊕ icon. A contextual menu displays.
+   1. Insert a **ScreenGui**.
+1. Create a container for the entire score bar UI component.
+   1. Insert a **Frame** into the **ScreenGui** object.
 
-2. Change the following property values to arrange the image and score text side-by-side, vertically centered within the frame:
+      <img src="../../../assets/tutorials/creating-a-score-bar/Frame-2A.png" width="100%" />
 
-   <img alt="**FillDirection** = **Horizontal**, **VerticalAlignment** = **Center**" src="../../../assets/tutorials/creating-a-score-bar/UIListLayout-Values.png" width="60%" />
+   1. Select the new **Frame**, then in the **Properties** window,
+      1. Set **AnchorPoint** to `0.5, 0` to set the frame's origin point in the top-middle of itself (50% from the left to the right of the frame, and 0% from the top to the bottom of the frame).
+      1. Set **BackgroundColor** to `0.6` to make the frame's background black.
+      1. Set **BackgroundTransparency** to `0.6` to make the frame's background semi-transparent.
+      1. Set **Position** to `{0.5, 0},{0.01, 0}` to set the frame near the top-middle of the screen (50% from the left to the right of the screen, and 1% from the top to the bottom of the screen).
+      1. Set **Size** to `{0.25, 0},{0.08, 0}` so the frame takes up a large portion of the middle of the screen to grab the player's attention (25% horizontally, and 8% vertically).
+      1. Set **Name** to **ScoreBarFrame**.
 
-### Device Emulation
+      <img src="../../../assets/tutorials/creating-a-score-bar/Frame-2B.png" width="100%" />
 
-As you configure any GUI, it's highly recommended that you use Studio's **Device Emulation** to preview how it will appear on different screens.
+1. Add a constraint to the frame so that its contents are always legible on small screen sizes.
+   1. Insert a **UISizeConstraint** object into **ScoreBarFrame**.
+   1. Select the new constraint, then in the **Properties** window, set **MinSize** to `0, 40` to ensure the frame never shrinks to less than 40 pixels vertically.
+1. Add a layout object to the frame so that its contents arrange from left-to-right and vertically center within the frame's perimeter.
+   1. Insert a **UIListLayout** object into **ScoreBarFrame**.
+   1. Select the new layout object, then in the **Properties** window,
+      1. Set **FillDirection** to **Horizontal**.
+      1. Set **VerticalAlignment** to **Center**.
 
-1. Near the upper-right corner of the 3D view, click the emulation button.
+## Add an Icon
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/Device-Emulator-Button.png" width="60%" />
+An icon is a symbol that represents an action, object, or concept in an experience. Using icons that are simple and intuitive allows players to easily recognize what you're communicating with your UI without using text, which can clutter the screen and pull attention away from content that matters.
 
-2. Above the 3D view, select any device from the menu. Generally, it's a good idea to test your GUI on at least one device within the **Phone**, **Tablet**, **Desktop**, and **Console** sections.
+For example, the sample uses a simple gold crown icon to indicate how much gold a player has collected. This icon is easily recognizable as being the most important goal within the experience, and it includes minimal details so that it remains legible on mobile device screens.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/Device-Emulator-Devices.png" width="60%" />
+To recreate the gold crown icon within the sample [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) place file:
 
-## Adding an Image
+1. Insert an **ImageLabel** object into **ScoreBarFrame**.
+   1. In the **Explorer** window, hover over **ScoreBarFrame** and click the ⊕ icon. A contextual menu displays.
+   1. Insert an **ImageLabel**.
 
-Images inside a GUI are typically `Class.ImageLabel` objects, basic 2D images which can be resized as needed.
+      <img src="../../../assets/tutorials/creating-a-score-bar/Icon-1B.png" width="100%" />
 
-1. Insert an **ImageLabel** into the **ScoreBarFrame** object and select it.
+1. Select the new label, then in the **Properties** window,
+   1. Set **Image** to `rbxassetid://5673786644` to make the icon a crown.
+   1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
+   1. Set **LayoutOrder** to `1`. This ensures the icon remains the first GuiObject in the frame from left-to-right when you insert text in the next section of the tutorial.
+   1. Set **Size** to `{1.25,0},{1,0}` to widen the label area beyond the full width of the frame.
+   1. Set **SizeConstraint** to **RelativeYY** to preserve the icon's aspect ratio by scaling the size of the label with the height of the parent frame.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/New-ImageLabel.png" width="60%" />
+      <img src="../../../assets/tutorials/creating-a-score-bar/Icon-2E.png" width="100%" />
 
-2. To place this tutorial's crown image into the label, locate its **Image** property and paste in `rbxassetid://5673786644`.
+## Insert Score Text
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Image.png" width="60%" />
+Score text records the player's score within an experience, such as how many points they earn within a match. It's important that all UI text is both clear and easy to read so players can quickly understand the information they need to be successful within your experience.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Inserted.jpg" width="100%" />
+For example, the sample uses large text on top of a contrasting color so that it doesn't blend in with the noise of the background. This is particularly significant for accessibility because it ensures the text remains legible as the player moves through the 3D space, which may include objects that are the same color as the text.
 
-3. Expand the image object's **Size** tree and set the following property values:
+To recreate the score text within the sample [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush) place file:
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Size.png" width="60%" />
+1. Insert a **TextLabel** object into **ScoreBarFrame**.
+   1. In the **Explorer** window, hover over **ScoreBarFrame** and click the ⊕ icon. A contextual menu displays.
+   1. Insert a **TextLabel**.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Resized.jpg" />
+      <img src="../../../assets/tutorials/creating-a-score-bar/Text-1B.png" width="100%" />
 
-4. As you can see, these scaling values stretch the image beyond the full width of the frame. To make sure that only the **height** is considered, change the image's **SizeConstraint** to **RelativeYY**.
+1. Select the new label, then in the **Properties** window,
+   1. Set **BackgroundTransparency** to `1` to make the label's background completely transparent.
+   1. Set **Size** to `{1,0},{1,0}` to widen the label to the whole frame (100% horizontally and 100% vertically of the parent frame). The label extends beyond the frame's boundaries because it's being offset by the icon.
+   1. Set **SizeConstraint** to **RelativeYY** to ensure the size of the label scales with the height of the parent frame, and preserve the icon's aspect ratio. This step also makes the label a square and keeps it within the frame's boundaries.
+   1. Set **Font** to **GothamSSm** to match the aesthetics of the environment.
+   1. Set **Text** to `0` to start the score from zero.
+   1. Set **TextColor3** to `255, 200, 100` to tint the text gold.
+   1. Set **TextSize** to `30` to make the text bigger on the screen.
+   1. Set **TextXAlignment** to **Left** to ensure the score text remains left-aligned near the crown icon regardless of whether the player's score is 0, 1,000, or 1,000,000.
 
-   <img alt="**SizeConstraint** = **RelativeYY**" src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-SizeConstraint.png" width="60%" />
+      <img src="../../../assets/tutorials/creating-a-score-bar/Text-2H.png" width="100%" />
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Constrained.jpg" />
+## Test the Design
 
-5. Elements in a `Class.UIListLayout` are ordered by their **LayoutOrder**. Change this property to **1** since the image should be the first element inside the frame. You won't see any change since the image is the only element, but it's a good idea to set the layout order now.
+Studio's **Device Emulator** allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of designing UI because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
 
-   <img alt="**LayoutOrder** = **1**" src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-LayoutOrder.png" width="60%" />
+For example, if you don't test your UI on a range of screen sizes, players with large screens may not be able to read your text or decipher your icons, and players with small screens may not be able to see the 3D space because your UI elements take up too much room on the display.
 
-6. Finally, change the image's background from white to fully transparent by setting **BackgroundTransparency** to **1**.
+To emulate your UI on various screen sizes:
 
-   <img alt="**BackgroundTransparency** = **1**" src="../../../assets/tutorials/creating-a-score-bar/BackgroundTransparency.png" width="60%" />
+1. In the menu bar, select the **Test** tab.
+1. In the **Emulation** section, click **Device**. The viewport changes to reflect the aspect ratio of an average laptop.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/ImageLabel-Finalized.jpg" />
+   <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 
-## Inserting Text
+1. In the resolution dropdown, select **Actual Resolution**. This allows you to see the true resolution of your UI elements on the device you're emulating.
 
-GUI text is often rendered through a `Class.TextLabel` object which lets you choose a font, color, alignment, and more.
+   <img src="../../../assets/tutorials/creating-a-score-bar/ResolutionDropdown.png" width="80%" />
 
-1. Insert a **TextLabel** into the **ScoreBarFrame** object and select it.
+1. In the device dropdown, select at least one device within the **Phone**, **Tablet**, **Desktop**, and **Console** sections.
 
-   <img src="../../../assets/tutorials/creating-a-score-bar/New-TextLabel.png" width="60%" />
-
-2. Change its **LayoutOrder** property to **2**. Because the associated `Class.UIListLayout` is set to horizontal, this will place the label to the right of the image.
-
-   <img alt="**LayoutOrder** = **2**" src="../../../assets/tutorials/creating-a-score-bar/TextLabel-LayoutOrder.png" width="60%" />
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Inserted.jpg" />
-
-3. Resize the label by setting the following property values:
-
-   <img alt="**Size** &rarr; **X** = **1, 0**, **Size** &rarr; **Y** = **1, 0**, **SizeConstraint** = **RelativeYY**" src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Size.png" width="60%" />
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Resized.jpg" />
-
-4. Style the text by setting its font, color, and scaling.
-
-   <img alt="**Font** = **GothamBold**, **Text** = **0**, **TextColor3** = **255, 200, 100**, **TextSize** = **30**" src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Values.png" width="60%" />
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Styled.jpg" />
-
-5. Change **TextXAlignment** to **Left** so that the score text stays left-aligned near the crown image regardless of whether the player's score is 0, 1000, or 1000000.
-
-   <img alt="**TextXAlignment** = **Left**" src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Alignment.png" width="60%" />
-
-6. Finally, make the label's background fully transparent by setting **BackgroundTransparency** to **1**.
-
-   <img alt="**BackgroundTransparency** = **1**" src="../../../assets/tutorials/creating-a-score-bar/BackgroundTransparency.png" width="60%" />
-
-   <img src="../../../assets/tutorials/creating-a-score-bar/TextLabel-Finalized.jpg" />
-
-This covers the basics of GUI objects&nbsp;&mdash; you now have a basic score bar that adapts to both large and small screens.
+   <img src="../../../assets/tutorials/creating-a-score-bar/DeviceDropdown.png" />

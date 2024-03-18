@@ -19,7 +19,7 @@ methods:
     summary: |
       Returns an array of all `Datatype.Enum`s.
     description: |
-      Returns an array containing all available `Datatype.Enum`s on Roblox.
+      Returns an array containing all available `Datatype.Enum|Enums` on Roblox.
     parameters:
     returns:
       - type: Array

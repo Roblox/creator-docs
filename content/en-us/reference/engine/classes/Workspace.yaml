@@ -140,6 +140,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.CSGAsyncDynamicCollision
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CSGAsyncDynamicCollision
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: Workspace.ClientAnimatorThrottling
     summary: |
       Specifies the animation throttling mode for the local client.
@@ -193,7 +209,7 @@ properties:
       - Objects parented to the `Class.Camera` will not replicate to the server,
         regardless of what `Class.Workspace.FilteringEnabled` is set to. Prior
         to `Class.Workspace.FilteringEnabled`, this was the main way to render
-        `Class.BasePart`s on one client only.
+        `Class.BasePart|BaseParts` on one client only.
 
       Below is an example of how this property can be used to access the
       `Class.Camera` object and increase its `Class.Camera.FieldOfView`.
@@ -371,7 +387,7 @@ properties:
   - name: Workspace.Gravity
     summary: |
       Determines the acceleration due to gravity applied to falling
-      `Class.BasePart`s.
+      `Class.BasePart|BaseParts`.
     description: |
       Determines the acceleration due to gravity applied to falling
       `Class.BasePart|BaseParts`. This value is measured in studs per second
@@ -433,9 +449,9 @@ properties:
       MeshParts.
     description: |
       Sets whether character Heads and Accessories should be downloaded as
-      `Class.MeshPart`s. The `Default` value is the same as `Enabled`. If this
-      feature is enabled, built-in avatars will use `Class.MeshPart`s for the
-      character's Head and Accessories.
+      `Class.MeshPart|MeshParts`. The `Default` value is the same as `Enabled`.
+      If this feature is enabled, built-in avatars will use
+      `Class.MeshPart|MeshParts` for the character's Head and Accessories.
     code_samples:
     type: MeshPartHeadsAndAccessories
     tags:
@@ -757,17 +773,11 @@ properties:
       This property is a reference to the `Class.Terrain` object parented to the
       `Class.Workspace`.
 
-      ![An example of Roblox terrain](/assets/legacy/Terrain.png)
+      <img src="/assets/studio/explorer/Workspace-Terrain.png" width="320"
+      alt="Terrain object within the Workspace hierarchy" />
 
-      This property, like `Class.Workspace.CurrentCamera`, ensures that
-      developers to not inadvertently index a descendant of `Class.Workspace`
-      named 'Terrain' when looking for a game's `Class.Terrain` object. Without
-      this property, developers would need to use the
-      `Class.Instance:FindFirstChildOfClass()` function.
-
-      ```lua
-      workspace.Terrain.WaterColor = Color3.new(0, 1, 0) -- make the water green
-      ```
+      See [Environmental Terrain](../../../parts/terrain.md) for more
+      information.
     code_samples:
     type: Terrain
     tags:
@@ -811,21 +821,20 @@ properties:
 methods:
   - name: Workspace:BreakJoints
     summary: |
-      Goes through all `Class.BasePart`s given, breaking any joints connected to
-      these parts.
+      Goes through all `Class.BasePart|BaseParts` given, breaking any joints
+      connected to these parts.
     description: |
-      Goes through all `Class.BasePart`s given, breaking any joints connected to
-      these parts.
+      Goes through all `Class.BasePart|BaseParts` given, breaking any joints
+      connected to these parts. This function will break any of the following
+      types of joints:
 
-      This function will break any of the following types of joints:
+      - `Class.JointInstance|JointInstances` such as `Class.Weld|Welds`
+      - `Class.WeldConstraint|WeldConstraints`
 
-      - `Class.JointInstance`s such as `Connectors`, `Welds` and `Snaps`
-      - `Class.WeldConstraint`s
+      Unlike `Class.Model:MakeJoints()`, this function requires an array of
+      `Class.BasePart|BaseParts` as a parameter. This array is given as follows:
 
-      Unlike `Class.Model.MakeJoints`, this function requires an array of
-      `Class.BasePart`s as a parameter. This array is given as follows:
-
-      ```
+      ```lua
       workspace:BreakJoints({part1, part2, part3})
       ```
 
@@ -837,7 +846,8 @@ methods:
         type: Objects
         default:
         summary: |
-          An array of `Class.BasePart`s for whom joints are to be broken.
+          An array of `Class.BasePart|BaseParts` for whom joints are to be
+          broken.
     returns:
       - type: void
         summary: ''
@@ -848,14 +858,15 @@ methods:
     thread_safety: Unsafe
   - name: Workspace:GetNumAwakeParts
     summary: |
-      Returns the number of `Class.BasePart`s that are deemed physically active,
-      due to being recently under the influence of physics.
+      Returns the number of `Class.BasePart|BaseParts` that are deemed
+      physically active, due to being recently under the influence of physics.
     description: |
-      Returns the number of `Class.BasePart`s that are deemed physically active,
-      due to being recently under the influence of physics.
+      Returns the number of `Class.BasePart|BaseParts` that are deemed
+      physically active, due to being recently under the influence of physics.
 
-      This function provides a measure of how many `Class.BasePart`s are being
-      influenced by, or recently under the influence of, physical forces.
+      This function provides a measure of how many `Class.BasePart|BaseParts`
+      are being influenced by, or recently under the influence of, physical
+      forces.
 
       ```
       print(workspace:GetNumAwakeParts()) -- prints the number of 'awake' parts
@@ -864,14 +875,14 @@ methods:
       #### Sleeping vs Awake Parts
 
       In order to ensure good performance, Roblox sets `BaseParts` in which
-      physics are not being applied to a 'sleeping' state. `Class.BasePart`s
-      with `Class.BasePart.Anchored` set to true, for example, will always be
-      sleeping as physics doesn't apply to them. When a force is applied to a
-      non anchored `Class.BasePart`, an 'awake' state will be applied. Whilst a
-      `Class.BasePart` is awake the Roblox physics engine will perform
-      continuous calculations to ensure physical forces interact correctly with
-      the part. Once the `Class.BasePart` is no longer subject to physical
-      forces, it will revert to a 'sleeping' state.
+      physics are not being applied to a 'sleeping' state.
+      `Class.BasePart|BaseParts` with `Class.BasePart.Anchored` set to true, for
+      example, will always be sleeping as physics doesn't apply to them. When a
+      force is applied to a non anchored `Class.BasePart`, an 'awake' state will
+      be applied. Whilst a `Class.BasePart` is awake the Roblox physics engine
+      will perform continuous calculations to ensure physical forces interact
+      correctly with the part. Once the `Class.BasePart` is no longer subject to
+      physical forces, it will revert to a 'sleeping' state.
     code_samples:
     parameters: []
     returns:
@@ -897,13 +908,14 @@ methods:
 
       Physics throttling occurs when the physics engine detects it cannot keep
       up with the game in realtime. When physics is being throttled, it will
-      update less frequently causing `Class.BasePart`s to appear to move slower.
+      update less frequently causing `Class.BasePart|BaseParts` to appear to
+      move slower.
 
       Without throttling, the physics simulation would fall further behind out
       of sync with the game. This can lead to lower frame rates and other
       undesirable behavior.
 
-      Objects associated with `Class.Humanoid`s are exempt from physics
+      Objects associated with `Class.Humanoid|Humanoids` are exempt from physics
       throttling.
 
       See also `Class.Workspace:SetPhysicsThrottleEnabled()`.
@@ -913,7 +925,7 @@ methods:
       Developers should always avoid creating places that overload the physics
       engine, as it leads to sub-par experience for players. Those wishing to
       simulate physics throttling for research purposes however, need only
-      create a lot of `Class.Part`s very quickly.
+      create a lot of `Class.Part|Parts` very quickly.
 
       ```
       local i = 0
@@ -1055,7 +1067,7 @@ methods:
         type: Objects
         default:
         summary: |
-          An array of `Class.BasePart`s for whom joints are to be made.
+          An array of `Class.BasePart|BaseParts` for whom joints are to be made.
       - name: jointType
         type: JointCreationMode
         default:
@@ -1073,8 +1085,8 @@ methods:
     thread_safety: Unsafe
   - name: Workspace:MakeJoints
     summary: |
-      Goes through all `Class.BasePart`s given. If any part's side has a
-      `Enum.SurfaceType` that can make a joint it will create a joint with any
+      Goes through all `Class.BasePart|BaseParts` given. If any part's side has
+      a `Enum.SurfaceType` that can make a joint it will create a joint with any
       adjacent parts.
     description: |
       **Deprecated**
@@ -1152,15 +1164,16 @@ methods:
     thread_safety: Unsafe
   - name: Workspace:UnjoinFromOutsiders
     summary: |
-      Breaks all joints between the specified `Class.BasePart`s and other
-      `Class.BasePart`s.
+      Breaks all joints between the specified `Class.BasePart|BaseParts` and
+      other `Class.BasePart|BaseParts`.
     description: |
-      Breaks all joints between the specified `Class.BasePart`s and other
-      `Class.BasePart`s.
+      Breaks all joints between the specified `Class.BasePart|BaseParts` and
+      other `Class.BasePart|BaseParts`.
 
-      This function requires an array of `Class.BasePart`s. Note, joints will
-      not be broken between these `Class.BasePart`s (each other), only between
-      these `Class.BasePart`s and other `Class.BasePart`s not in the array.
+      This function requires an array of `Class.BasePart|BaseParts`. Note,
+      joints will not be broken between these `Class.BasePart|BaseParts` (each
+      other), only between these `Class.BasePart|BaseParts` and other
+      `Class.BasePart|BaseParts` not in the array.
 
       This function is used by the Roblox Studio Move tool when the user starts
       moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
@@ -1188,7 +1201,8 @@ methods:
         type: Objects
         default:
         summary: |
-          An array of `Class.BasePart`s for whom joints are to be broken.
+          An array of `Class.BasePart|BaseParts` for whom joints are to be
+          broken.
     returns:
       - type: void
         summary: ''
@@ -1199,10 +1213,10 @@ methods:
   - name: Workspace:ZoomToExtents
     summary: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
-      of `Class.BasePart`s currently in the `Class.Workspace`.
+      of `Class.BasePart|BaseParts` currently in the `Class.Workspace`.
     description: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
-      of `Class.BasePart`s currently in the `Class.Workspace`.
+      of `Class.BasePart|BaseParts` currently in the `Class.Workspace`.
 
       This function was used in the, now removed, 'Zoom To Extents' button in
       Roblox Studio. It exhibits similar behavior to the 'Zoom To' (F shortcut)

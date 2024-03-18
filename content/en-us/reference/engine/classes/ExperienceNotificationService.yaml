@@ -14,26 +14,60 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: ExperienceNotificationService:CreateUserNotificationAsync
+  - name: ExperienceNotificationService:InvokeOptInPromptClosed
     summary: ''
     description: ''
     code_samples: []
-    parameters:
-      - name: userId
-        type: string
-        default:
-        summary: ''
-      - name: userNotification
-        type: UserNotification
-        default:
-        summary: ''
+    parameters: []
     returns:
-      - type: Instance
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: ExperienceNotificationService:PromptOptIn
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ExperienceNotificationService:CanPromptOptInAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: ExperienceNotificationService.OptInPromptClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: ExperienceNotificationService.PromptOptInRequested
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks: []

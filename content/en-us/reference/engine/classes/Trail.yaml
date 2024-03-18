@@ -3,16 +3,17 @@ type: class
 category: Effects
 memory_category: Instances
 summary: |
-  The Trail object is used to create a trail like effect between two points.
+  Used to create a trail effect between two attachments.
 description: |
-  The Trail object is used to create a trail like an effect between two points.
-  As the points move through space a texture is drawn on the plane the points
-  define. This is commonly used to create effects to help visualize movements
-  like tracer trails behind projectiles, footprints, tire tracks, and many other
-  similar effects.
+  The **Trail** object is used to create a trail effect between two attachments.
+  As the attachments move through space, a texture is drawn on their defined
+  plane. This is commonly used to create effects that visualize movements like
+  tracer trails behind projectiles, footprints, tire tracks, and similar
+  effects.
 
   See [Trails](../../../effects/trails.md) for more information.
 code_samples:
+  - creating-a-part-with-a-basic-trail
 inherits:
   - Instance
 tags: []
@@ -20,24 +21,20 @@ deprecation_message: ''
 properties:
   - name: Trail.Attachment0
     summary: |
-      Determines where the Trail will start drawing its segments.
+      Along with `Class.Trail.Attachment1|Attachment1`, determines where the
+      trail will start drawing its segments.
     description: |
       A `Class.Trail` starts drawing its segments at the positions of its
-      `Class.Trail.Attachment0` and **\*Attachment1**.
+      **Attachment0** and `Class.Trail.Attachment1|Attachment1`. When the trail
+      is `Class.Trail.Enabled|Enabled`, it records the positions of its
+      attachments every frame and connects these positions to the attachments'
+      positions on the previous frame, creating a polygon that is then filled in
+      by the trail's `Class.Trail.Color|Color` and
+      `Class.Trail.Texture|Texture`.
 
-      When the Trail is `Class.Trail.Enabled` it will record the positions of
-      its attachments every frame. It will connect these positions to the
-      positions of the attachments on the previous frame. This creates a polygon
-      that is then filled in by the Trail's `Class.Trail.Color` and
-      `Class.Trail.Texture` (if that Texture exists).
-
-      When created a Trail will not have any Attachments set by default. These
-      will need to be set in order for the effect to work.
-
-      Changing the Attachments of a Trail while a trail is drawing will remove
+      Changing the attachments of a trail while a trail is drawing will remove
       all of the segments the trail has already drawn.
     code_samples:
-      - creating-a-part-with-a-basic-trail
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -51,24 +48,20 @@ properties:
       can_save: true
   - name: Trail.Attachment1
     summary: |
-      Determines where the Trail will start drawing its segments.
+      Along with `Class.Trail.Attachment0|Attachment0`, determines where the
+      trail will start drawing its segments.
     description: |
       A `Class.Trail` starts drawing its segments at the positions of its
-      **Attachment0** and `Class.Trail.Attachment1`.
+      `Class.Trail.Attachment0|Attachment0` and **Attachment1**. When the trail
+      is `Class.Trail.Enabled|Enabled`, it records the positions of its
+      attachments every frame and connects these positions to the attachments'
+      positions on the previous frame, creating a polygon that is then filled in
+      by the trail's `Class.Trail.Color|Color` and
+      `Class.Trail.Texture|Texture`.
 
-      When the Trail is `Class.Trail.Enabled` it will record the positions of
-      its attachments every frame. It will connect these positions to the
-      positions of the attachments on the previous frame. This creates a polygon
-      that is then filled in by the Trail's `Class.Trail.Color` and
-      `Class.Trail.Texture` (if that Texture exists).
-
-      When created a Trail will not have any Attachments set by default. These
-      will need to be set in order for the effect to work.
-
-      Changing the Attachments of a Trail while a trail is drawing will remove
+      Changing the attachments of a trail while a trail is drawing will remove
       all of the segments the trail has already drawn.
     code_samples:
-      - creating-a-part-with-a-basic-trail
     type: Attachment
     tags: []
     deprecation_message: ''
@@ -82,15 +75,14 @@ properties:
       can_save: true
   - name: Trail.Brightness
     summary: |
-      Scales the light emitted from Trail when
-      `Class.Trail.LightInfluence|LightInfluence` is 0.
+      Scales the light emitted from the trail when
+      `Class.Trail.LightInfluence|LightInfluence` is less than 1.
     description: |
-      Scales the light emitted from `Class.Trail`. By default, this property is
-      1 and can set to any number within the range [0, 10000].
-
+      Scales the light emitted from the trail when
+      `Class.Trail.LightInfluence|LightInfluence` is less than 1. This property
+      is 1 by default and can set to any number within the range of 0 to 10000.
       Increasing the value of `Class.Trail.LightInfluence|LightInfluence`
-      decreases the effect of **Brightness**. **Brightness** doesn't have any
-      effect when `Class.Trail.LightInfluence|LightInfluence` is 1.
+      decreases the effect of this property's value.
     code_samples:
     type: float
     tags: []
@@ -105,26 +97,17 @@ properties:
       can_save: true
   - name: Trail.Color
     summary: |
-      The color of the trail segments throughout the lifetime of the trail.
+      The color of the trail throughout its lifetime.
     description: |
-      The color of a `Class.Trail` can be set with the effect's Color property.
-      This property determines what color the segments of the trail will have
-      through their `Class.Trail.Lifetime`.
+      Determines the color of the trail throughout its lifetime. If
+      `Class.Trail.Texture|Texture` is set, this color will tint the texture.
 
-      Color is a `Datatype.ColorSequence`, which means that the segments in a
-      trail can shift between several colors. Note that if the color for a trail
-      changes after some of the trail segments have been drawn, all of the old
-      segments will be updated to match the new colors.
-
-      If a trail has a `Class.Trail.Texture` then the Color property will tint
-      that texture.
-
-      ![Trails with tinted textures](/assets/legacy/TrailTextureColor.png)
-
-      Any transparent components of a texture will not be tinted.
+      This property is a `Datatype.ColorSequence`, allowing the color to be
+      configured to vary across the length of the trail. If the color changes
+      after some of the trail segments have been drawn, all of the old segments
+      will be updated to match the new colors.
     code_samples:
       - creating-a-trail-with-a-color-gradient
-      - changing-a-trail-color-as-it-is-drawing
     type: ColorSequence
     tags: []
     deprecation_message: ''
@@ -138,18 +121,15 @@ properties:
       can_save: true
   - name: Trail.Enabled
     summary: |
-      Toggles whether the trail will be drawn or not.
+      Determines whether the trail will be drawn or not.
     description: |
-      This property determines whether the trail will be drawn or not. When
-      `true`, the trail will create segments between the current position of its
-      `Class.Trail.Attachment0` and the position of its attachments in the last
-      frame. Defaults to `true`.
+      This property determines whether the trail will be drawn or not.
 
-      If enabled is set to `false` while a trail is drawing, no new segments
-      will be drawn, but any existing segments will be cleaned up naturally when
-      they reach the end of their `Class.Trail.Lifetime`. To forcibly clean up
-      any existing segments, use the `Class.Trail:Clear()` function at the same
-      time.
+      If set to `false` while a trail is drawing, no new segments will be drawn,
+      but any existing segments will be cleaned up naturally when they reach the
+      end of their `Class.Trail.Lifetime|Lifetime`. To forcibly clean up
+      existing segments, call the `Class.Trail:Clear()|Clear()` method at the
+      same time.
     code_samples:
     type: bool
     tags: []
@@ -164,20 +144,18 @@ properties:
       can_save: true
   - name: Trail.FaceCamera
     summary: |
-      Whether the trail textures will always face the camera.
+      Determines whether the trail will always face the camera, regardless of
+      its orientation.
     description: |
-      This property determines whether the `Class.Trail` is always drawn facing
-      the camera. If set to `true`, the trail textures will always face the
-      camera. If set to `false`, the texture will be drawn in the direction of
-      the distance between the trail's `Class.Trail.Attachment0` and
-      `Class.Trail.Attachment1`. The default value is `false`.
+      A `Class.Trail` is a 2D projection existing in 3D space, meaning that it
+      may not be visible from every angle. The **FaceCamera** property, when set
+      to `true`, ensures that the trail always faces the
+      `Class.Workspace.CurrentCamera|CurrentCamera`, regardless of its
+      orientation.
 
-      Note that changing this property immediately affects all existing and
-      future trail segments. This means that all existing and new segments will
-      adjust to face the player's camera or the direction of the attachments
-      according to the property's new state.
+      Changing this property immediately affects all existing and future trail
+      segments.
     code_samples:
-      - setting-a-trail-s-facecamera-property
     type: bool
     tags: []
     deprecation_message: ''
@@ -191,26 +169,23 @@ properties:
       can_save: true
   - name: Trail.Lifetime
     summary: |
-      Duration of the trail in seconds.
+      Determines how long each segment in a trail will last, in seconds.
     description: |
-      The Lifetime property determines how long each segment in its
-      `Class.Trail` will last in seconds. Once a segment is drawn, it will wait
-      for the given lifetime (measured in seconds) and then will disappear. The
-      lifetime property defaults to 2 seconds, but can be set anywhere between
-      0.01 and 20.
+      The **Lifetime** property determines how long each segment in a trail will
+      last, in seconds, before it disappears. Defaults to 2 seconds but can be
+      set anywhere between 0.01 and 20.
 
-      The lifetime of a trail is also used by that effect's `Class.Trail.Color`
-      and `Class.Trail.Transparency` properties to determine how each segment is
-      drawn. Both of these properties are sequences, meaning that they define
-      their values at certain keypoints in the segment's lifetime and then
-      interpolate between the values as the segment ages.
+      The lifetime of a trail is also used by that effect's
+      `Class.Trail.Color|Color` and `Class.Trail.Transparency|Transparency`
+      properties to determine how each segment is drawn. Both of these
+      properties are sequences, meaning that they define their values at certain
+      keypoints in the segment's lifetime and then interpolate between the
+      values as the segment ages.
 
-      If a trail's lifetime changes while there are still segments that the
-      trail has drawn, these segments will immediately behave as if they always
-      had the new lifetime. This means that if they have existed for longer than
-      the lifetime they will be removed immediately.
+      If a trail's lifetime changes, existing segments will immediately behave
+      as if they always had the new lifetime, meaning that if they've existed
+      for longer than the new lifetime, they will be removed immediately.
     code_samples:
-      - setting-a-trail-s-lifetime
     type: float
     tags: []
     deprecation_message: ''
@@ -224,23 +199,22 @@ properties:
       can_save: true
   - name: Trail.LightEmission
     summary: |
-      Sets how much the colors of the trail are blended with the colors behind
-      them.
+      Determines to what degree the colors of the trail are blended with the
+      colors behind it.
     description: |
-      The LightEmission `Class.Trail` property sets how much the
-      `Class.Trail.Color|Colors` of the trail are blended with the colors behind
-      them. LightEmission uses additive blending to combine the colors, meaning
-      the RGB values of the colors are added together to determine the displayed
-      color. This addition is weighted by the value of LightEmission.
+      Determines to what degree the colors of the trail are blended with the
+      colors behind it. It should be set in the range of 0 to 1. A value of 0
+      uses normal blending modes and a value of 1 uses additive blending.
 
-      When changed this property instantly affects all particles owned by the
-      emitter, both current and future particles.
+      This property should not be confused with
+      `Class.Trail.LightInfluence|LightInfluence` which determines how the trail
+      is affected by environmental light.
 
-      This property is not related to the dynamic lighting engine of Roblox. If
-      you need your trail to emit light, it is recommended to create parts with
-      `Class.PointLight` that follow the path of the trail.
+      Changing this property immediately affects all existing and future
+      segments of the trail.
+
+      This property does **not** cause the trail to light the environment.
     code_samples:
-      - creating-a-trail-that-emits-light
     type: float
     tags: []
     deprecation_message: ''
@@ -254,23 +228,20 @@ properties:
       can_save: true
   - name: Trail.LightInfluence
     summary: |
-      Determines the factor to which the Trail is influenced by the
+      Determines the degree to which the trail is influenced by the
       environment's lighting.
     description: |
-      **LightInfluence** determines the factor the light in the environment
-      affects the appearance of the Trail. A value of zero (0) ensures no
-      influence which allows a trail to be visible even in complete darkness.
+      Determines the degree to which the trail is influenced by the
+      environment's lighting, clamped between 0 and 1. When 0, the trail will be
+      unaffected by the environment's lighting. When 1, it will be fully
+      affected by lighting as a `Class.BasePart` would be.
 
       Changing this property immediately affects all existing and future
       segments of the trail.
 
-      See also:
-
-      - `Class.Trail.LightEmission|LightEmission`, another Trail property
-        related to light
-      - `Class.Beam.LightEmission`, an identical property used by `Class.Beam`s
+      See also `Class.Trail.LightEmission|LightEmission` which specifies to what
+      degree the colors of the trail are blended with the colors behind it.
     code_samples:
-      - setting-a-trail-s-light-influence
     type: float
     tags: []
     deprecation_message: ''
@@ -286,20 +257,12 @@ properties:
     summary: |
       Sets the maximum length of the trail.
     description: |
-      This property determines the maximum length of each of the segments in the
-      trail. Note that changing it will only affect **new** segments that are
-      drawn; any old segments that have already been drawn will maintain their
-      current length.
-
-      This value can be any number greater than or equal to 0, and it defaults
-      to 0, meaning that the trail will not have a maximum length. Note that
-      even if this property is 0 or another large number, the trail is still
-      constrained by its `Class.Trail.Lifetime|Lifetime`. Old segments will be
-      erased if they reach the end of their lifetime, even if the trail is
-      shorter than the maximum length.
+      This property determines the maximum length of the trail, in studs. Its
+      value defaults to 0, meaning that the trail will not have a maximum length
+      and trail segments will expire in their `Class.Trail.Lifetime|Lifetime`.
 
       This property can be used alongside the `Class.Trail.MinLength|MinLength`
-      property which determines the minimum length trail must before it is
+      property which determines the minimum length a trail must be before it's
       drawn.
     code_samples:
     type: float
@@ -315,24 +278,20 @@ properties:
       can_save: true
   - name: Trail.MinLength
     summary: |
-      Minimum length of a trail's segment in studs.
+      Sets the minimum length of the trail.
     description: |
-      This property determines the minimum length of each of the segments in the
-      trail. If neither of the trail's `Class.Trail.Attachment0` or
-      `Class.Trail.Attachment1` have moved at least the minimum length in studs,
-      no new segments will be created and the endpoints of the current segment
-      will be moved to the current position of the attachments.
+      This property determines the minimum length of the trail, in studs. If
+      neither of the trail's attachments have moved at least this value, no new
+      segments will be created and the endpoints of the current segment will be
+      moved to the current position of the attachments.
 
       Note that changing this property will only affect **new** segments that
       are drawn; any old segments that have already been drawn will maintain
       their current length.
 
-      This value can be any number greater than or equal to 0 and it defaults to
-      0.1.
-
       This property can be used alongside the `Class.Trail.MaxLength|MaxLength`
-      property which determines the maximum length trail may be before its
-      oldest segments are erased.
+      property which determines the maximum trail length before its oldest
+      segments are erased.
     code_samples:
     type: float
     tags: []
@@ -347,16 +306,23 @@ properties:
       can_save: true
   - name: Trail.Texture
     summary: |
-      The texture to display on the trail.
+      The content ID of the texture to be displayed on the trail.
     description: |
-      This property sets which image asset to use for the texture. This is set
-      the same way as textures in other objects such as `Class.ImageLabel` or
-      `Class.ParticleEmitter`. Textures can be displayed in a variety of ways
-      based on the trail's `Class.Trail.TextureMode|TextureMode` and
-      `Class.Trail.TextureLength|TextureLength` properties.
+      The content ID of the texture to be displayed on the trail. If this
+      property is not set, the trail will be displayed as a solid plane; this
+      also occurs when the texture is set to an invalid content ID or the image
+      associated with the texture has not yet loaded.
 
-      If a texture is not provided, only the `Class.Trail.Color` of the trail
-      will be used.
+      The appearance of the texture can be further modified by other trail
+      properties including `Class.Trail.Color|Color` and
+      `Class.Trail.Transparency|Transparency`.
+
+      Scaling of the texture is determined by the distance between
+      `Class.Trail.Attachment0|Attachment0` and
+      `Class.Trail.Attachment1|Attachment1`, as well as the
+      `Class.Trail.TextureMode|TextureMode`,
+      `Class.Trail.TextureLength|TextureLength`, and
+      `Class.Trail.WidthScale|WidthScale` properties.
     code_samples:
       - creating-a-trail-with-a-pawprint-texture
     type: Content
@@ -372,20 +338,13 @@ properties:
       can_save: true
   - name: Trail.TextureLength
     summary: |
-      Sets length of texture if `Class.Trail.TextureMode` is _Wrap_ or _Static_.
-      If mode is _Stretch_ sets number of times texture will repeat.
+      Sets the length of the trail's texture, dependent on
+      `Class.Trail.TextureMode|TextureMode`.
     description: |
-      This property determines how `Class.Trail.Texture`s are drawn by
-      `Class.Trail`. The behavior of TextureLength is determined by the
-      `Class.Trail.TextureMode` of its trail.
-
-      If the TextureLength is changed after its trail has drawn some of its
-      segments, the new length will only be applied to new segments being drawn
-      -- old segments will be unaffected.
-
-      This value can be any number greater than 0 and defaults to 1.
+      Sets the length of the trail's texture, dependent on
+      `Class.Trail.TextureMode|TextureMode`. Changing this property immediately
+      affects all existing and future trail segments.
     code_samples:
-      - setting-a-trail-s-texture-length
     type: float
     tags: []
     deprecation_message: ''
@@ -399,19 +358,47 @@ properties:
       can_save: true
   - name: Trail.TextureMode
     summary: |
-      Sets how `Class.Trail.Texture` will be drawn.
+      Determines the manner in which the `Class.Trail.Texture|Texture` scales,
+      repeats, and moves along with the trail's attachments.
     description: |
-      This property determines how the effect's `Class.Trail.Texture` (if any)
-      is drawn. The behavior of the texture in each mode is also very much
-      dependent on the effect's `Class.Trail.TextureLength` property.
+      This property, alongside `Class.Trail.TextureLength|TextureLength`,
+      determines how a trail's `Class.Trail.Texture|Texture` scales, repeats,
+      and moves along with the trail's attachments. Changing this property
+      immediately affects all existing and future trail segments.
 
-      Note that changing a trail's `Class.Trail.TextureMode|TextureMode` after
-      some of the trail has been drawn will affect all of the previously drawn
-      segments.
+      #### Scale and Repetition
 
-      This property defaults to `Enum.TextureMode|Stretch`.
+      When **TextureMode** is set to `Enum.TextureMode.Wrap` or
+      `Enum.TextureMode.Static`, the `Class.Trail.TextureLength|TextureLength`
+      property sets the length of the texture as it repeats across the trail's
+      length.
+
+      <img src="/assets/engine-api/enums/TextureMode/Wrap-Static.png" width="720" alt="TextureMode diagram with Wrap mode" />
+
+      When **TextureMode** is set to `Enum.TextureMode.Stretch`, the texture
+      will repeat `Class.Trail.TextureLength|TextureLength` times across the
+      trail's overall length.
+
+      <img src="/assets/engine-api/enums/TextureMode/Stretch.png" width="720" alt="TextureMode diagram with Stretch mode" />
+
+      #### Movement
+
+      The **TextureMode** property also affects the **movement** of the trail's
+      texture as follows:
+
+      - If set to `Enum.TextureMode.Stretch`, the texture will stretch out based
+        on the lifetime of the trail, and shrink inwards if the trail's
+        attachments stop moving.
+
+      - If set to `Enum.TextureMode.Wrap`, the texture will be tiled as the
+        length of the trail changes, but the textures will remain stationary
+        relative to their attachments.
+
+      - If set to `Enum.TextureMode.Static`, the texture will be rolled out as
+        the attachments move, and they will remain in place until their lifetime
+        is met. This setting is ideal for trail textures that should appear
+        "stamped" where rendered, such as paw prints or tire tracks.
     code_samples:
-      - setting-a-trail-s-texture-mode
     type: TextureMode
     tags: []
     deprecation_message: ''
@@ -425,21 +412,14 @@ properties:
       can_save: true
   - name: Trail.Transparency
     summary: |
-      Sets the transparency of the Trail's segments over the trail's
-      `Class.Trail.Lifetime`.
+      Sets the transparency of the trail's segments over its
+      `Class.Trail.Lifetime|Lifetime`.
     description: |
-      The Transparency property of a `Class.Trail` sets how transparent the
-      segments of the trail are over the trail's `Class.Trail.Lifetime`. This
-      value is a `Datatype.NumberSequence`, meaning it can be a static value or
-      can change throughout the lifetime of the trail segments.
-
-      The values in the NumberSequence can be any number, but the effective
-      range of transparency is 0 (completely opaque) to 1 (completely
-      see-through). The Transparency property for TrailEffects defaults to 0.5.
+      Sets the transparency of the trail's segments over its
+      `Class.Trail.Lifetime|Lifetime`. This value is a
+      `Datatype.NumberSequence`, meaning it can be a static value or can change
+      throughout the lifetime of the trail segments.
     code_samples:
-      - setting-a-trail-s-transparency-single-value-sequence
-      - untitled
-      - setting-a-trail-s-transparency-multi-value-sequence
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -453,26 +433,15 @@ properties:
       can_save: true
   - name: Trail.WidthScale
     summary: |
-      A `Datatype.NumberSequence` that scales the width of the `Class.Trail`
-      over the course of its lifetime.
+      Scales the width of the trail over the course of its lifetime.
     description: |
-      The WidthScale property is a `Datatype.NumberSequence` that scales the
-      width of the `Class.Trail` over the course of its lifetime.
-
-      This property can range from `0` to `1`. The value of the property
-      influences the width of the trail by setting the trail's width to the
-      product of:
-
-          (distance between trail's attachment0 and attachment1 in studs) * (the value of WidthScale)
-
-      For example, if the trail's attachments are 2 stud's apart, and the value
+      This property is a `Datatype.NumberSequence` that scales the width of the
+      trail over the course of its lifetime. Values can range between 0 and 1,
+      acting as a multiplier on the distance between the trail's attachments.
+      For example, if the trail's attachments are 2 stud's apart and the value
       of this property is 0.5, the trail's width will be 1 stud and the trail
-      will be centered in between the two attachments.
-
-      If you would like to hide the trail entirely, consider setting
-      `Class.Trail.Enabled` to false.
+      will be centered between the two attachments.
     code_samples:
-      - scaling-a-trail-s-width
     type: NumberSequence
     tags: []
     deprecation_message: ''
@@ -489,22 +458,15 @@ methods:
     summary: |
       Clears the segments of the trail.
     description: |
-      The Clear function clears the segments of the `Class.Trail`. This means
-      that any trail that has been drawn will be erased when this function is
-      called, even if that segment's `Class.Trail.Lifetime` duration has not yet
-      been reached.
+      This method immediately clears all segments of the trail and is useful for
+      cleaning up trails with longer lifetimes or for cases where the trail
+      should be removed because of a specific action.
 
-      While this is less noticeable for trails with shorter lifetimes, this is
-      useful when cleaning up trails that have a longer lifetime, or for cases
-      where the trail is removed when a certain game action occurs.
-
-      Calling this function will only affect old segments that have already been
-      done. It will not affect the drawing of any new trail segments after this
-      function call. If you would like to clear existing trail segments, and
-      temporarily prevent new segments from being drawn, consider toggling the
-      trail's `Class.Trail.Enabled` property to false at the same time.
+      Calling this method only affects existing segments. To clear existing
+      trail segments **and** temporarily prevent new segments from being drawn,
+      toggle the trail's `Class.Trail.Enabled|Enabled` property to `false` at
+      the same time.
     code_samples:
-      - clearing-and-disabling-a-trail
     parameters: []
     returns:
       - type: void

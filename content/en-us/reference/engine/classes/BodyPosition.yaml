@@ -28,7 +28,7 @@ tags:
   - Deprecated
 deprecation_message: |
   This object is deprecated and should not be used for new work. Use
-  `Class.AlignOrientation` instead.
+  `Class.AlignPosition` instead.
 properties:
   - name: BodyPosition.D
     summary: |

@@ -5,8 +5,7 @@ description: The Friends Locator module lets players easily find and teleport to
 
 It can be challenging to locate friends in-experience. The **FriendsLocator** [developer module](../../resources/modules/index.md) lets players easily find and teleport to their friends inside a place.
 
-<video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls
-width="100%" />
+<video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls width="100%"></video>
 
 ## Module Usage
 
@@ -14,25 +13,25 @@ width="100%" />
 
 To use the **FriendsLocator** module in an experience:
 
-1. From the **View** tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Marketplace** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="760" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../../assets/studio/toolbox/Marketplace-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
-1. Locate and click the **DEV MODULES** tile.
+1. Locate and click the **Dev Modules** tile.
 
-   <img src="../../assets/studio/toolbox/Marketplace-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Friends Locator** module and click it, or drag-and-drop it into the 3D view.
 
    <img src="../../assets/developer-modules/friends-locator/Toolbox-Icon.png" width="143" />
 
-1. In the **Explorer** window, move the entire **FriendsLocator** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **FriendsLocator** model into **ServerScriptService**. Upon running the experience, the module will distribute itself to various services and begin running.
 
    <img src="../../assets/developer-modules/friends-locator/Move-Package.png" width="320" />
 
@@ -70,7 +69,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, interacting with an icon will teleport your character to that friend's location. Currently, experiences using `Class.Workspace.StreamingEnabled|StreamingEnabled` should implement custom content pre-streaming around the teleport location, although this behavior will be built into future versions of the module.
+   By default, clicking/tapping a friend's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#requesting-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
 ### Connecting to Events
@@ -133,7 +132,9 @@ To replace the default UI:
 
 #### configure
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>configure(config:</InlineCode>`Library.table`<InlineCode>):</InlineCode>`nil`</Typography>
+<figcaption>
+configure(config: `Library.table`)
+</figcaption>
 
 Overrides default configuration options through the following keys/values in the `config` table.
 
@@ -192,14 +193,12 @@ FriendsLocator.configure({
 
 #### clicked
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>clicked(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a locator icon is clicked/activated by the local player. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -214,26 +213,37 @@ Fires when a locator icon is clicked/activated by the local player. This event c
 </tbody>
 </table>
 
-```lua title='LocalScript' highlight='5-7'
+```lua title='LocalScript'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
 
 local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
 
+local localPlayer = Players.LocalPlayer
+
 FriendsLocator.clicked:Connect(function(player, playerCFrame)
+	-- Request streaming around target location
+	if workspace.StreamingEnabled then
+		local success, errorMessage = pcall(function()
+			localPlayer:RequestStreamAroundAsync(playerCFrame.Position)
+		end)
+		if not success then
+			print(errorMessage)
+		end
+	end
+
 	print("You clicked on locator icon for", player.DisplayName, "at position", playerCFrame.Position)
 end)
 ```
 
 #### visibilityChanged
 
-<Typography sx={{bgcolor:'media.inlineCodeBackground',borderRadius:1}}><InlineCode>visibilityChanged(player:</InlineCode>`Class.Player`<InlineCode>, playerCFrame:</InlineCode>`Datatype.CFrame`<InlineCode>, isVisible:</InlineCode>`boolean`<InlineCode>):</InlineCode> `Datatype.RBXScriptSignal`</Typography>
-
 Fires when a locator icon is shown/hidden on the local player's screen. This event can only be connected in a `Class.LocalScript`.
 
-<table>
+<table size="small">
 <thead>
 	<tr>
-		<th colspan='2'>**Parameters**</th>
+		<th colspan='2'>Parameters</th>
 	</tr>
 </thead>
 <tbody>
@@ -247,7 +257,7 @@ Fires when a locator icon is shown/hidden on the local player's screen. This eve
 	</tr>
 	<tr>
 		<td>isVisible: `boolean`</td>
-		<td>Whether the locator icon is currently visible on the local player's screen. Note that this will still be `true` if [`alwaysOnTop`](#configure) is `false` and the locator renders behind an object in the 3D world.</td>
+		<td>Whether the locator icon is currently visible on the local player's screen. Note that this will still be `true` if `alwaysOnTop` is `false` and the locator renders behind an object in the 3D world.</td>
 	</tr>
 </tbody>
 </table>

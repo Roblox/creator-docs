@@ -18,7 +18,7 @@ description: |
     screenshot.
   - A close button that closes the `Class.ScreenshotHud`.
 
-  <img src="/assets/engine-api/classes/ScreenshotHud/Diagram.jpg" width="100%" />
+  <img src="../../../assets/engine-api/classes/ScreenshotHud/Diagram.jpg" width="100%" />
 code_samples:
   - ScreenshotHud
 inherits:
@@ -112,6 +112,36 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.HideCoreGuiForCaptures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: ScreenshotHud.HidePlayerGuiForCaptures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
     serialization:
       can_load: true
       can_save: true

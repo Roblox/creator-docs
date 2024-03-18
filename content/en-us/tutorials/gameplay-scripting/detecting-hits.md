@@ -96,7 +96,7 @@ local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayD
 This information is particularly useful for first-person shooter experiences because it allows you to see when and where blasts intersect with players or the environment. For example, the following image demonstrates two rays that are casting parallel to each other. According to their point of origin and direction, Ray A misses the wall and continues until it meets its maximum distance, while Ray B collides with the wall. For more information on this process, see [Raycasting](../../workspace/raycasting.md).
 
 <figure>
-  <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-ray.png" width="60%" alt="Ray casting diagram" />
+  <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-ray.png" width="60%" alt="A diagram where Ray A continues through the wall, and Ray B collides with the wall." />
 </figure>
 
 The `castLaserRay()` parameters specify that `Raycast()` calls must consider every part in the workspace **except** the character who blasted. The script then casts a ray for each direction in the `directions` table. If a ray hits something, it generates a `Datatype.RaycastResult`, which has five properties:
@@ -202,7 +202,7 @@ Note that this process occurs for each **ray**, not each player. A blast can hav
 </Alert>
 
 <figure>
-  <img src="/assets/tutorials/gameplay-scripting/tutorial-gs-health.png" width="80%" />
+  <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-health.png" alt="" width="80%" />
 </figure>
 
 `Class.Humanoid.Health|Health` doesn't accept negative values, so `onPlayerTagged` has some logic to keep player health at or above zero. After verifying that player health is above zero, it compares health to `damagePerHit` and uses the smaller of the two values. For example, if a player has 10 health and is hit by a 15 damage laser beam, the laser only inflicts 10 points of damage.

@@ -187,8 +187,15 @@ properties:
       can_load: false
       can_save: false
   - name: TextChatMessage.Translation
-    summary: ''
-    description: ''
+    summary: |
+      Translated and filtered text message.
+    description: |
+      Represents translated and filtered text messages based on users'
+      localization settings. The system doesn't translate messages between users
+      with the same localization settings or using languages without the text
+      filter support, so this property can be an empty string if no translation
+      happens. For customization, see
+      [Customizing Translated Messages](../../../chat/customizing-in-experience-text-chat.md).
     code_samples: []
     type: string
     tags: []

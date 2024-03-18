@@ -56,4 +56,6 @@ You can download reference `.fbx` models of [eyelashes](../../assets/art/referen
    </figure>
    </GridContainer>
 
-8. Once you are ready to upload the avatar model with your face accessories, follow [Uploading an Asset](../../art/marketplace/publishing-to-marketplace.md#uploading-an-asset) for instructions on uploading and publishing your avatar body with eyelashes and eyebrows to the Marketplace.
+8. If required, rename the accessory objects to `EyelashAccessory` or `EyebrowAccessory` accordingly.
+
+9. Once you are ready to upload the avatar model with your face accessories, follow [Uploading an Asset](../../art/marketplace/publishing-to-marketplace.md#uploading-an-asset) for instructions on uploading and publishing your avatar body with eyelashes and eyebrows to the Marketplace.

@@ -118,22 +118,22 @@ methods:
     thread_safety: Unsafe
   - name: Pose:GetSubPoses
     summary: |
-      Returns an array containing all sub `Class.Pose`s that have been added to
-      a `Class.Pose`.
+      Returns an array containing all sub `Class.Pose|Poses` that have been
+      added to a `Class.Pose`.
     description: |
-      Returns an array containing all sub `Class.Pose`s that have been added to
-      a `Class.Pose`. This is functionally the same as using the
+      Returns an array containing all sub `Class.Pose|Poses` that have been
+      added to a `Class.Pose`. This is functionally the same as using the
       `Class.Instance:GetChildren()` function on the `Class.Pose`.
 
       Note: this function returns all children of the `Class.Pose`, including
-      non `Class.Pose` `Class.Instance`s if any are present.
+      non `Class.Pose` `Class.Instance|Instances` if any are present.
     code_samples:
       - Keyframe-Reset-Poses
     parameters: []
     returns:
       - type: Objects
         summary: |
-          An array of sub `Class.Pose`s.
+          An array of sub `Class.Pose|Poses`.
     tags: []
     deprecation_message: ''
     security: None

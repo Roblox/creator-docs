@@ -7,11 +7,11 @@ summary: |
 description: |
   The DataModelMesh is an abstract class from which mesh classes descend.
 
-  Mesh classes are objects that, when parented to `Class.BasePart`s alter the
-  appearance of the part to that of a predefined mesh. Note, they only alter the
-  appearance of the part and not the physics/collision boundaries of the part.
-  Developers looking to apply a mesh to a part that alters the part's collision
-  should use `Class.MeshPart`s.
+  Mesh classes are objects that, when parented to `Class.BasePart|BaseParts`
+  alter the appearance of the part to that of a predefined mesh. Note, they only
+  alter the appearance of the part and not the physics/collision boundaries of
+  the part. Developers looking to apply a mesh to a part that alters the part's
+  collision should use `Class.MeshPart|MeshParts`.
 
   Note the `Class.MeshPart` and `Class.CharacterMesh` classes do not descend
   from DataModelMesh.
@@ -147,7 +147,7 @@ properties:
       red and white hat are multiplied with that of the VertexColor's XYZ
       components.
 
-      <img src="/assets/legacy/DataModelMesh.VertexColor.jpg" />
+      <img src="../../../assets/legacy/DataModelMesh.VertexColor.jpg" />
 
       It should be noted that this property is a `Datatype.Vector3` rather than
       a `Datatype.Color3`. To convert, use the following function:

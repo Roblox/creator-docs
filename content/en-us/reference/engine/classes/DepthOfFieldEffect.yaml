@@ -18,7 +18,7 @@ description: |
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
 
-  <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+  <img src="../../../assets/legacy/DepthOfField-Diagram.svg" />
 code_samples:
 inherits:
   - PostEffect
@@ -33,7 +33,7 @@ properties:
       `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` point plus
       `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
 
-      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+      <img src="../../../assets/legacy/DepthOfField-Diagram.svg" />
     code_samples:
     type: float
     tags: []
@@ -53,7 +53,7 @@ properties:
       Controls the distance away from the camera (in studs) where objects are in
       focus.
 
-      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+      <img src="../../../assets/legacy/DepthOfField-Diagram.svg" />
     code_samples:
     type: float
     tags: []
@@ -76,7 +76,7 @@ properties:
       `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` (on both sides)
       where no blur is applied. Measured in studs.
 
-      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+      <img src="../../../assets/legacy/DepthOfField-Diagram.svg" />
     code_samples:
     type: float
     tags: []
@@ -97,7 +97,7 @@ properties:
       `Class.DepthOfFieldEffect.FocusDistance|FocusDistance` point minus
       `Class.DepthOfFieldEffect.InFocusRadius|InFocusRadius` value.
 
-      <img src="/assets/legacy/DepthOfField-Diagram.svg" />
+      <img src="../../../assets/legacy/DepthOfField-Diagram.svg" />
     code_samples:
     type: float
     tags: []

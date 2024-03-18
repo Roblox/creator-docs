@@ -1,6 +1,6 @@
 ---
 title: Variables
-description: Variables are names that hold values. They can be numbers, strings, booleans, and data types.
+description: A name that holds a value.
 ---
 
 A **variable** is a name that holds a value. Variable values can be [numbers](./numbers.md), [strings](./strings.md), [booleans](./booleans.md), [data types](/reference/engine/datatypes), and more.

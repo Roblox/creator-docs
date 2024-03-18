@@ -11,7 +11,10 @@ description: Drag detectors instances encourage physical interaction with object
 - Players can manipulate anchored parts or models and they'll stay exactly where you put them upon release.
 - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it easier to test and adjust draggable objects while editing.
 
+<figure>
 <video src="../assets/ui/drag-detectors/Showcase.mp4" controls width="100%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
+<figcaption>Drag detectors used in a variety of implementations in the 3D world</figcaption>
+</figure>
 
 ## Making Objects Draggable
 
@@ -39,39 +42,39 @@ To make any part or model draggable, simply add a `Class.DragDetector` as a dire
 </thead>
 <tbody>
   <tr>
-    <td>**TranslateLine**</td>
+    <td>`Enum.DragDetectorDragStyle.TranslateLine|TranslateLine`</td>
     <td>1D motion along the detector's `Class.DragDetector.Axis|Axis`, by default the world **Y** axis.</td>
   </tr>
   <tr>
-    <td>**TranslatePlane**</td>
+    <td>`Enum.DragDetectorDragStyle.TranslatePlane|TranslatePlane`</td>
     <td>2D motion in the plane perpendicular to the detector's `Class.DragDetector.Axis|Axis`, by default the world **XZ** plane.</td>
   </tr>
 	<tr>
-    <td>**TranslatePlaneOrLine**</td>
+    <td>`Enum.DragDetectorDragStyle.TranslatePlaneOrLine|TranslatePlaneOrLine`</td>
     <td>2D motion in the plane perpendicular to the detector's `Class.DragDetector.Axis|Axis` and, when the [modifier](#modifier-input) is active, 1D motion along the detector's `Class.DragDetector.Axis|Axis`.</td>
   </tr>
 	<tr>
-    <td>**TranslateLineOrPlane**</td>
+    <td>`Enum.DragDetectorDragStyle.TranslateLineOrPlane|TranslateLineOrPlane`</td>
     <td>1D motion along the detector's `Class.DragDetector.Axis|Axis` and, when the [modifier](#modifier-input) is active, 2D motion in the plane perpendicular to the detector's `Class.DragDetector.Axis|Axis`.</td>
   </tr>
 	<tr>
-    <td>**TranslateViewPlane**</td>
+    <td>`Enum.DragDetectorDragStyle.TranslateViewPlane|TranslateViewPlane`</td>
     <td>2D motion in the plane perpendicular to the camera's view. In this mode, the plane is constantly updated, even while dragging, and will always face the camera's current view.</td>
   </tr>
 	<tr>
-    <td>**RotateAxis**</td>
+    <td>`Enum.DragDetectorDragStyle.RotateAxis|RotateAxis`</td>
     <td>Rotation about the detector's `Class.DragDetector.Axis|Axis`, by default the world **Y** axis.</td>
   </tr>
 	<tr>
-    <td>**RotateTrackball**</td>
+    <td>`Enum.DragDetectorDragStyle.RotateTrackball|RotateTrackball`</td>
     <td>Trackball rotation, further customized through the `Class.DragDetector.TrackballRadialPullFactor|TrackballRadialPullFactor` and `Class.DragDetector.TrackballRollFactor|TrackballRollFactor` properties.</td>
   </tr>
 	<tr>
-    <td>**BestForDevice**</td>
+    <td>`Enum.DragDetectorDragStyle.BestForDevice|BestForDevice`</td>
     <td>**TranslatePlaneOrLine** for mouse and gamepad; **TranslatePlane** for touch; **6DOF** for VR.</td>
   </tr>
 	<tr>
-    <td>**Scriptable**</td>
+    <td>`Enum.DragDetectorDragStyle.Scriptable|Scriptable`</td>
     <td>Calculates desired motion via a custom function provided through `Class.DragDetector:SetDragStyleFunction()|SetDragStyleFunction()`.</td>
   </tr>
 </tbody>
@@ -122,17 +125,17 @@ The `Class.DragDetector.ResponseStyle|ResponseStyle` property specifies how an o
 </thead>
 <tbody>
   <tr>
-    <td>**Geometric**</td>
+    <td>`Enum.DragDetectorResponseStyle.Geometric|Geometric`</td>
     <td>Both inside the running experience and in Studio edit mode, the position/orientation of an anchored object will be updated to exactly reflect the proposed motion.</td>
 		<td>For an unanchored object, behavior is the same as for an anchored object. However, in a running experience, the object will be anchored at the start of the drag and restored to unanchored upon drag release.</td>
   </tr>
   <tr>
-    <td>**Physical**</td>
+    <td>`Enum.DragDetectorResponseStyle.Physical|Physical`</td>
     <td>An anchored object will default to **Geometric** behavior, as it is not affected by forces.</td>
 		<td>An unanchored object will be moved by [constraint forces](#physics-response) that attempt to bring it to the desired position and/or orientation given by the proposed motion. </td>
   </tr>
 	<tr>
-    <td>**Custom**</td>
+    <td>`Enum.DragDetectorResponseStyle.Custom|Custom`</td>
     <td>The object will not move at all, but `Class.DragDetector.DragFrame|DragFrame` will still be updated and you can [respond to drag manipulation](#scripting-responses-to-clicking-and-dragging) however you'd like.</td>
 		<td>(same as anchored)</td>
   </tr>
@@ -178,6 +181,48 @@ By default, there are no limits to 3D motion beyond the inherent restrictions of
 <Alert severity="warning">
 When using axis/movement limits, you should always set the detector's `Class.DragDetector.ReferenceInstance|ReferenceInstance` so that the limits are relative to a dedicated reference frame. If you fail to establish the reference frame, each drag of the object will reset its limits to its own current world space position/orientation.
 </Alert>
+
+### Drag Permission
+
+Permission of players to interact with a given drag detector instance can be specified by the `Class.DragDetector.PermissionPolicy|PermissionPolicy` property. This is set to `Enum.DragDetectorPermissionPolicy.Everybody` by default, and it can also be changed to support scripted permission controls as shown in the code sample.
+
+<table>
+<thead>
+  <tr>
+    <th>Setting</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`Enum.DragDetectorPermissionPolicy.Nobody|Nobody`</td>
+    <td>No players can interact with the `Class.DragDetector`.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DragDetectorPermissionPolicy.Everybody|Everybody`</td>
+    <td>All players can interact with the `Class.DragDetector`.</td>
+  </tr>
+  <tr>
+    <td>`Enum.DragDetectorPermissionPolicy.Scriptable|Scriptable`</td>
+    <td>Players' drag permissions will be determined by a function registered through `Class.DragDetector:SetPermissionPolicyFunction()|SetPermissionPolicyFunction()`. Under this setting, failure to register a function or returning an invalid result will prevent all players from dragging.</td>
+  </tr>
+</tbody>
+</table>
+
+```lua title='DragDetector - Scripted Drag Permission'
+local dragDetector = script.Parent.DragDetector
+dragDetector.PermissionPolicy = Enum.DragDetectorPermissionPolicy.Scriptable
+
+dragDetector:SetPermissionPolicyFunction(function(player, part)
+	if player and player:GetAttribute("IsInTurn") then
+		return true
+	elseif part and not part:GetAttribute("IsDraggable") then
+		return false
+	else
+		return true
+	end
+end)
+```
 
 ### Physics Response
 
@@ -374,13 +419,13 @@ local connection = dragDetector:AddConstraintFunction(2, snapToWorldGrid)
 
 A basic implementation of drag detectors is a tower balance game where players must carefully remove pieces and attempt to keep the tower upright. In the following tower structure, each piece has a child `Class.DragDetector` with a default `Class.DragDetector.DragStyle|DragStyle` of **TranslatePlane** so that players can pull the pieces outward but not upward or downward.
 
-<video src="../assets/ui/drag-detectors/Balance-Tower.mp4" controls width="90%" alt="Drag detectors placed on each piece of a tower balance game"></video>
+<video src="../assets/ui/drag-detectors/Balance-Tower.mp4" controls width="800" alt="Drag detectors placed on each piece of a tower balance game"></video>
 
 ### Anchored Models With Adjustable Parts
 
 You can easily create and share models which are primarily anchored, but which have one or more child parts/models that players can drag. For example, the following desk has two drawers which players can open to inspect what's inside.
 
-<video src="../assets/ui/drag-detectors/Desk-Drawers.mp4" controls width="90%" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
+<video src="../assets/ui/drag-detectors/Desk-Drawers.mp4" controls width="800" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
 
 <Alert severity="warning">
 When making children of models draggable, you should set the drag detector's `Class.DragDetector.ReferenceInstance|ReferenceInstance` to an object within the model that can serve as a dedicated reference frame, for example the desk's top surface. This establishes a consistent reference `Datatype.CFrame` for the style/direction of dragging, even if the model is rotated.
@@ -390,13 +435,13 @@ When making children of models draggable, you should set the drag detector's `Cl
 
 You can combine drag detectors with `Class.Constraint|Constraints`, for example a marionette puppet. In the following setup, the control handles are anchored, the body parts are unanchored, and constraints hold the marionette together. Moving the handles with the **TranslateViewPlane** `Class.DragDetector.DragStyle|DragStyle` makes the marionette dance, and the individual body parts may also be moved with drag detectors, all while the model retains its integrity.
 
-<video src="../assets/ui/drag-detectors/Marionette.mp4" controls width="90%" alt="Drag detectors placed on the handles of a marionette puppet"></video>
+<video src="../assets/ui/drag-detectors/Marionette.mp4" controls width="800" alt="Drag detectors placed on the handles of a marionette puppet"></video>
 
 ### 3D User Interfaces
 
 3D user interfaces are easily achievable through drag detectors, such as adjusting the brightness of a `Class.SpotLight` based on a sliding switch dimmer. You can also detect the **X** and **Z** axes individually to control two different aspects of a 3D user interface, such as the `Class.ParticleEmitter.Size|Size`, `Class.ParticleEmitter.Speed|Speed`, and `Class.ParticleEmitter.Color|Color` of a `Class.ParticleEmitter`.
 
-<video src="../assets/ui/drag-detectors/Color-Slider.mp4" controls width="90%" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
+<video src="../assets/ui/drag-detectors/Color-Slider.mp4" controls width="800" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
 
 ```lua title='DragDetector - 3D User Interface'
 local model = script.Parent

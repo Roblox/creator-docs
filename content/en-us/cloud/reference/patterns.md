@@ -40,6 +40,11 @@ GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25&pageToken=aaaBBB
 Aside from the `pageToken`, you must use the same query for pagination to work
 properly. Altering any filter parameter results in a 400 error.
 
+## Content Length and Type
+
+If your request includes a body, be sure to include the `Content-Length` and
+`Content-Type` headers. Most HTTP clients add these headers automatically.
+
 ## Filtering
 
 Some methods let you filter the response by including a `filter` parameter in
@@ -137,14 +142,14 @@ fields:
 
 - **path** - The endpoint path to call to poll for the request's completion.
   Append the path to the original base URL of the resource method.
-- **status** - The status of the request. Valid values are `pending` and `done`.
-- **Response** - The response object. This field is empty until the status is `done.`
+- **done** - A boolean value that represents whether or not the operation has completed.
+- **response** - The response object. This field is empty until the `done` field has a value of `true`.
 - **metadata** - Custom metadata specific to the request being made.
 
 ```json title="Example Operation Object"
 {
   "path": "v1/assets/12345/operation/xyz",
-  "status": "done",
+  "done": true,
   "response": {
     "value1": "myValue",
     "value2": 1234

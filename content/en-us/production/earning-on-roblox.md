@@ -57,7 +57,7 @@ Building successful content takes time and effort, but there is low risk and no 
 
 <h4>Instant publishing to reach a global audience</h4>
 
-Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, PC, and Xbox.
+Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, Windows, and Xbox.
 
 <h4>Platform-driven discovery and rapid viral growth</h4>
 
@@ -227,7 +227,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 ## Creating and Selling Studio Plugins
 
-You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Marketplace](../production/publishing/creator-marketplace.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of 100&nbsp;Robux.
+You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/publishing/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of 100&nbsp;Robux.
 
 <Grid container spacing={3}>
 <Grid item xs={12} lg={7}>
@@ -238,6 +238,12 @@ You can create and sell Studio [plugins](../studio/plugins.md) to the community 
 <img src="../assets/monetization/earning/Percentages-Studio-Plugins.svg" alt="Pie chart illustrating the commission structure for creating and selling Studio plugins" />
 </Grid>
 </Grid>
+
+<Alert severity="warning">
+   In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+
+   Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
+</Alert>
 
 ## Converting Earned Robux to Cash
 

@@ -26,7 +26,7 @@ description: |
   `Class.BaseScript.Disabled|Disabled`. Assets and `Class.ModuleScript` that are
   useful to both the server and clients should go in `Class.ReplicatedStorage`
   instead. Finally, you can further organize objects within this service through
-  the use of `Class.Folder`s without affecting the way it behaves.
+  the use of `Class.Folder|Folders` without affecting the way it behaves.
 code_samples:
 inherits:
   - Instance

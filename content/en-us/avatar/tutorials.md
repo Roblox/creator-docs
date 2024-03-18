@@ -8,7 +8,7 @@ hideBreadcrumbs: true
 Learn how to create assets with structured tutorials that walks through each creation step from modeling in a third-party tool to importing in Studio.
 
 <br /> <br />
-<a href="../art/accessories/creating-rigid/texturing.md" id="prereqs"> </a>
+
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Prerequisites</Typography>
@@ -122,7 +122,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -223,7 +223,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>
@@ -324,7 +324,7 @@ style={{position: "relative"}}>
   <Button
     variant="contained"
     size="large">
-  Start creating
+  Start Creating
   </Button>
 </a>
 </CardContent>

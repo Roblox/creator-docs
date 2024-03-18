@@ -318,6 +318,62 @@ properties:
     tags: []
     deprecation_message: ''
 methods:
+  - name: Vector3:Abs
+    summary: |
+      Returns a new vector from the absolute values of the original's
+      components.
+    description: |
+      Returns a new vector from the absolute values of the original's
+      components. For example, a vector of `(-2, 4, -6)` returns a vector of
+      `(2, 4, 6)`.
+    parameters:
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Ceil
+    summary: |
+      Returns a new vector from the ceiling of the original's components.
+    description: |
+      Returns a new vector from the ceiling of the original's components. For
+      example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-2, 6, 9)`.
+    parameters:
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Floor
+    summary: |
+      Returns a new vector from the floor of the original's components.
+    description: |
+      Returns a new vector from the floor of the original's components. For
+      example, a vector of `(-2.6, 5.1, 8.8)` returns a vector of `(-3, 5, 8)`.
+    parameters:
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector3:Sign
+    summary: |
+      Returns a new vector from the sign (-1, 0, or 1) of the original's
+      components.
+    description: |
+      Returns a new vector from the sign (-1, 0, or 1) of the original's
+      components. For example, a vector of `(-2.6, 5.1, 0)` returns a vector of
+      `(-1, 1, 0)`.
+    parameters:
+    returns:
+      - type: Vector3
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: Vector3:Cross
     summary: |
       Returns the cross product of the two vectors.
@@ -336,11 +392,11 @@ methods:
     deprecation_message: ''
   - name: Vector3:Angle
     summary: |
-      Returns the angle in radians between the two vectors. If an axis is
-      provided, it determines the sign of the angle.
+      Returns the angle in radians between the two vectors. If you provide an
+      axis, it determines the sign of the angle.
     description: |
-      Returns the angle in radians between the two vectors. If an axis is
-      provided, it determines the sign of the angle.
+      Returns the angle in radians between the two vectors. If you provide an
+      axis, it determines the sign of the angle.
     parameters:
       - name: other
         type: Vector3

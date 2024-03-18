@@ -5,8 +5,8 @@ memory_category: Instances
 summary: |
   A container for a Player's currently rendered ScreenGuis.
 description: |
-  The PlayerGui object is a container that holds a `Class.Player`'s user GUI. If
-  a `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
+  The PlayerGui object is a container that holds a player's user GUI. If a
+  `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
   inside of the ScreenGui will be drawn to the player's screen. Any
   `Class.LocalScript` will run as soon as it is inserted into a PlayerGui.
 
@@ -121,9 +121,9 @@ methods:
       #### Comparison of Values
 
       The screenshots below show the topbar at 1.0, 0.5 and 0.0 transparency.
-      <img src="/assets/legacy/Topbar_Transparency_1.0.png" alt="The TopBar with a transparency of 1.0 (completely hidden)]"  />
-      <img src="/assets/legacy/Topbar_Transparency_0.5.png" alt="The TopBar with a transparency of 0.5 (50% transparency)]"  />
-      <img src="/assets/legacy/Topbar_Transparency_0.png" alt="The TopBar with a transparency of 0.0 (completely opaque)"  />
+      <img src="../../../assets/legacy/Topbar_Transparency_1.0.png" alt="The TopBar with a transparency of 1.0 (completely hidden)]"  />
+      <img src="../../../assets/legacy/Topbar_Transparency_0.5.png" alt="The TopBar with a transparency of 0.5 (50% transparency)]"  />
+      <img src="../../../assets/legacy/Topbar_Transparency_0.png" alt="The TopBar with a transparency of 0.0 (completely opaque)"  />
 
       #### Usage
 

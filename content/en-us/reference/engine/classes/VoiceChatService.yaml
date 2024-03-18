@@ -19,13 +19,12 @@ properties:
       Indicates whether or not the place uses the default voice manager.
     description: |
       Indicates whether or not the place uses the default voice manager. This is
-      on by default.
+      enabled by default.
 
       When enabled, the default voice manager adds all voice-eligible users to
-      chat with spatial voice as they join the place.
-
-      When disabled, the place doesn't use the default voice manager, and users
-      are not added to chat with spatial voice when they join the place.
+      voice chat as they join the place. When disabled, the place doesn't use
+      the default voice manager, and users are not added to voice chat when they
+      join the place.
     code_samples: []
     type: bool
     tags: []
@@ -43,8 +42,7 @@ properties:
     description: ''
     code_samples: []
     type: AudioApiRollout
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: PluginSecurity
@@ -54,6 +52,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: VoiceChatService.UseRME
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
 methods:
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
