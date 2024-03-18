@@ -1,5 +1,5 @@
 ---
-title: Repeating Code with while Loops
+title: Repeating Code with While Loops
 description: Learn how to use while loops with Roblox's Luau language in this computer science lesson.
 next: /tutorials/fundamentals/coding-4/intro-to-for-loops
 prev: /tutorials/fundamentals/coding-4/landing
