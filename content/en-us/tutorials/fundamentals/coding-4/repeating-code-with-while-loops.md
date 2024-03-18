@@ -42,7 +42,7 @@ A local variable only works in the script where it was created. If a local varia
    local loopingPart
    ```
 
-2. Set the variable to the looping part by typing `= workspace.loopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
+2. Set the variable to the looping part by typing `= workspace.LoopingPart` on the same line. Remember that the `=` operator sets the value of a variable to whatever is on the right of it.
 
    ```lua
    -- Changes the color of LoopingPart every few seconds
@@ -88,7 +88,7 @@ Next, you'll set up the while loop for the color changing part.
    ```
 
    <Alert severity="info">
-   You might have noticed the editor automatically added end to the script and indented the next line of code. Indenting makes code easier to read. Instructions in a loop should **always** be indented.
+   You might have noticed the editor automatically added `end` to the script and indented the next line of code. Indenting makes code easier to read. Instructions in a loop should **always** be indented.
    </Alert>
 
 ### Adding Code in the Loop
@@ -153,7 +153,7 @@ If you add a second line of color changing code right now, it would change the b
 
    <video controls src="../../../assets/education/coding-4/loops-and-parts-finishedPart.mp4" width="100%"></video>
 
-**Troubleshooting Notes**
+**Troubleshooting Notes**  
 At this point, if the color changing part doesn't work as intended, try one of the following below.
 
 **Issue**: Colors are skipped
