@@ -307,5 +307,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: AudioPlayer.Ended
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AudioPlayer.Looped
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 callbacks: []

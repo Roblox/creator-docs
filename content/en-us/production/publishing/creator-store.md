@@ -74,23 +74,15 @@ Users can now leave reviews on Creator Store assets in addition to the currently
 To add assets to your experience from the Creator Store:
 
 1. Find the asset you want to add to your experience.
+2. Either click the asset or drag-and-drop it from the [Toolbox](../../projects/assets/toolbox.md) into the viewport.
 
-2. Either click the asset or drag-and-drop it from the Toolbox into the viewport.
+   - If the asset is a model, mesh, image, video, or audio file, it displays in the [Explorer](../../studio/explorer.md) window. Assets with 3D content also display in the 3D viewport.
+   - If the asset is a plugin, it displays in the [Plugins](../../studio/plugins-tab.md) tab of the menu bar.
+   - If the asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [buttons](../../ui/buttons.md), as well as your [inventory](../../projects/assets/toolbox.md#inventory).
 
-   - If your asset is a model or mesh, it displays both in the viewport and the **Explorer** window.
-   - If your asset is an image, video, or audio file, it displays in the **Explorer** window.
-   - If your asset is a plugin, it displays in the **Plugins** tab of the menu bar.
-   - If your asset is a font, it displays in your font library within user interface elements, such as [labels](../../ui/labels.md) or [buttons](../../ui/buttons.md), as well as the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
-
-### Disabling Scripts
-
-Some assets include scripts that allow the asset to perform specific actions, such as animating at runtime or triggering a sound when a user interacts with the asset. However, if you want to add an asset to your experience without allowing any of its scripts to trigger, you can disable the scripts within the asset.
-
-To disable scripts:
-
-1. In the **Explorer** window, right-click on the asset with scripts you want to disable. A contextual menu displays.
-
-2. Select **Disable Scripts**.
+<Alert severity="info">
+Some assets include scripts that perform specific actions, such as animating at runtime or triggering a sound. If you want to use an asset without allowing any of its scripts to run, right-click the object in the [Explorer](../../studio/explorer.md) window and select **Disable&nbsp;Scripts** from the context menu.
+</Alert>
 
 ## Publishing and Selling Assets
 

@@ -17,44 +17,7 @@ tags:
   - NotCreatable
   - NotBrowsable
 deprecation_message: ''
-properties:
-  - name: LuaSourceContainer.CurrentEditor
-    summary: |
-      The `Class.Player` who is currently editing this script. This property is
-      only used when in Team Create mode.
-    description: |
-      The `Class.Player` who is currently editing this script. This property is
-      only used when in
-      [Team Create](../../../projects/collaboration.md#team-create) mode.
-    code_samples:
-    type: Instance
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-  - name: LuaSourceContainer.RuntimeSource
-    summary: ''
-    description: ''
-    code_samples: []
-    type: string
-    tags:
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: PluginSecurity
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
+properties: []
 methods: []
 events: []
 callbacks: []

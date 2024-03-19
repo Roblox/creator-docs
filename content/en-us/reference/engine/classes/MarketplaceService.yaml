@@ -535,13 +535,13 @@ methods:
     thread_safety: Unsafe
   - name: MarketplaceService:GetUserSubscriptionDetailsAsync
     summary: |
-      Returns a table that contains the details of the user's subscription for
-      a given `subscriptionId`.
+      Returns a table that contains the details of the user's subscription for a
+      given `subscriptionId`.
     description: |
       Returns a dictionary table containing the details of the user's
       subscription for the given `subscriptionId`. The table contains the
       following keys:
-      
+
       <table size="small">
       	<thead>
       	  <tr>
@@ -584,7 +584,7 @@ methods:
         </tr>
         </tbody>
       </table>
-      
+
       Note that this method can only be called from a `Class.Script` with
       `Class.BaseScript.RunContext|RunContext` of
       `Enum.RunContext.Server|Server`. If you only need to determine the
@@ -597,7 +597,8 @@ methods:
         type: Player
         default:
         summary: |
-          The `Class.Player` object whose subscription details you want to check.
+          The `Class.Player` object whose subscription details you want to
+          check.
       - name: subscriptionId
         type: string
         default:

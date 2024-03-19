@@ -7,7 +7,7 @@ Creating a high-quality experience demands many skills such as modeling, scripti
 
 With Studio's **built-in** **collaboration tools**, creators can contribute to experiences independently on their own time, or work together with their team all at the same time.
 
-<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Creators working together in a collaborative session" />
+<img src="../assets/studio/collaboration/Collaborative-Session.jpg" alt="Three creators working together in a collaborative session, each with differnt color markers to demonstrate what objects they're currently editing in the environment." />
 
 ## Managing Collaborators
 
@@ -17,7 +17,7 @@ To collaborate with others, you first need to [add collaborators](#adding-collab
 
 When you're ready to collaborate on an experience, click the **Collaborate** button in the upper-right corner of Studio:
 
-<img src="../assets/studio/collaboration/Collaborate-Button.png" width="745" />
+<img src="../assets/studio/collaboration/Collaborate-Button.png" alt="Studio's menu bar with the Collaborate button highlighted." width="745" />
 
 <Alert severity="info">
 In order to manage collaborators, the place must be saved to Roblox. If not saved to Roblox, a **Save to Roblox** button is shown in the dialog. Click this button, save your place to Roblox, and then click the **Collaborate** button to return to the Manage Collaborators dialog.
@@ -25,7 +25,7 @@ In order to manage collaborators, the place must be saved to Roblox. If not save
 
 Type into the search bar at the top to search for a collaborator to add. A dropdown will appear listing any collaborators that match your entry. Select the collaborator to add them and click Save for your collaboration settings to take effect.
 
-   <img src="../assets/studio/collaboration/Collaborator-Search.png" width="800" />
+   <img src="../assets/studio/collaboration/Collaborator-Search.png" alt="A close up view of the search bar searching for a user named cherpl. A picture of the user displays in the dropdown." width="800" />
 
 In user-owned experiences, the search bar shows both users and groups to add as a collaborator. If a user is your friend, you see a friend icon to the right of their username. In group-owned experiences, you can only add users, not groups, as collaborators.
 
@@ -72,11 +72,11 @@ For user-owned experiences you can grant **Play** access to any user or group, b
 
 1. With the experience open in Studio, click the **Collaborate** button in the upper right corner of Studio.
 
-   <img src="../assets/studio/collaboration/Collaborate-Button.png" width="745" />
+   <img src="../assets/studio/collaboration/Collaborate-Button.png" alt="Studio's menu bar with the Collaborate button highlighted." width="745" />
 
 1. Select **Edit** from the permissions dropdown for the individual.
 
-   <img src="../assets/studio/collaboration/Collaborators-User-Permission-Edit.png" width="800" />
+   <img src="../assets/studio/collaboration/Collaborators-User-Permission-Edit.png" alt="A close up view of a collaborator's tile with the permission dropdown menu highlighted." width="800" />
 
 #### Group-Owned Experiences
 
@@ -89,26 +89,26 @@ To manage which roles in a group have editing permissions for **all** group expe
 1. Navigate to the [Groups](https://www.roblox.com/groups) page and select the group.
 1. Click the **&hellip;** button in the upper-right corner and select **Configure&nbsp;Group**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" width="800" />
+   <img src="../assets/publishing/groups/Configure-Group.png" alt="A close up view of an experience tile with both the ellipis button and Configure Group menu item highlighted." width="800" />
 
 1. In the left column, select the **Roles** tab.
 1. For each group role that you want to give editing permissions to, enable **Create and edit group experiences**.
 
-   <img src="../assets/publishing/groups/Create-Edit-Group-Experiences.png" width="800" />
+   <img src="../assets/publishing/groups/Create-Edit-Group-Experiences.png" alt="A close up view of an group role settings. The Create and edit group experiences setting are highlighted." width="800" />
 
 In the **Manage Collaborators** dialog, these roles display **Edit** access but are grayed out to indicate that you can't change the access level from Studio.
 
-   <img src="../assets/studio/collaboration/Collaborators-Group-Permission-Edit.png" width="800" />
+   <img src="../assets/studio/collaboration/Collaborators-Group-Permission-Edit.png" alt="A close up view of the Manage Collaborators dialog. The Admin role Edit access dropdown menu is highlighted." width="800" />
 
 ##### Specific Group Experiences
 
 Group owners can grant **Edit** access to specific experiences to roles without the **Create and edit group experiences** permission enabled. With a group-owned experience open, click on the **Collaborate** button. Then select the role, which is **No Access** by default, and set the access level to **Edit**. All users within this role should now have **Edit** access for this experience only; this won't grant them access to other group experiences.
 
-   <img src="../assets/studio/collaboration/Collaborate-Edit-Access-This-Game-Only.png" width="70%" />
+   <img src="../assets/studio/collaboration/Collaborate-Edit-Access-This-Game-Only.png" alt="A close up view of the Manage Collaborators dialog with the Member role Edit access dropdown menu expanded. The Edit menu item is highlighted." width="70%" />
 
 Users outside of a group can't have **Edit** access to the group's experiences, but you can grant them **Play** access.
 
-   <img src="../assets/studio/collaboration/Collaborators-Out-Of-Group-Play-Access.png" width="70%" />
+   <img src="../assets/studio/collaboration/Collaborators-Out-Of-Group-Play-Access.png" alt="A close up view of the Manage Collaborators dialog with two collborators highlighted without Edit access." width="70%" />
 
 ## Accessing a Session
 
@@ -117,7 +117,7 @@ Those who have permission to edit an experience can join a [Team Create](#team-c
 1. Close all currently open places in Studio, or restart Studio.
 1. Select the **Shared With Me** tab for user-owned experiences, or the **Group&nbsp;Games** tab if it's a [group-owned](../projects/groups.md) experience.
 
-   <img src="../assets/studio/collaboration/Access-Session-Options.png" width="70%" />
+   <img src="../assets/studio/collaboration/Access-Session-Options.png" alt="A close up view of Studio's landing page with the Shared With Me tab highlighted." width="70%" />
 
 1. Click the desired tile to begin editing.
 
@@ -129,13 +129,13 @@ All collaborators can manipulate objects, and the changes automatically appear f
 
 Each collaborator in a session has a color behind their avatar in the **Team Create** window.
 
-<img src="../assets/studio/collaboration/Collaborators-List.png" width="50%" />
+<img src="../assets/studio/collaboration/Collaborators-List.png" alt="The Team Create window open with two collaborators in the session. Each collaborator has a different color behind their avatar." width="50%" />
 
 When a collaborator selects an object, a selection box in their color appears around the object in the 3D view. The [Explorer](../studio/explorer.md) window also indicates when a collaborator selects an object.
 
 <GridContainer numColumns="2">
-  <img src="../assets/studio/collaboration/User-Color-Parts.jpg" />
-  <img src="../assets/studio/collaboration/User-Color-Explorer.png" />
+  <img src="../assets/studio/collaboration/User-Color-Parts.jpg" alt="A viewport view of a block part pyramid. The parts near the top of the pyramid are highlighted in green to signify that the collaborator with the green color has the parts selected in their Studio instance." />
+  <img src="../assets/studio/collaboration/User-Color-Explorer.png" alt="A close up view of the three block part objects in the Explorer window. There is a green circle near the objects to signify that the collaborator with the green color has the parts selected in their Studio instance." />
 </GridContainer>
 
 ### Undo and Redo
@@ -162,9 +162,9 @@ You can edit scripts while collaborators edit them and playtest scripts locally 
 
 When editing a script, it appears in the **Drafts** window, accessible from the **View** tab. Drafts are saved to your local file system and persist between Studio sessions on the same machine.
 
-<img src="../assets/studio/collaboration/View-Tab-Drafts.png" width="80%" />
+<img src="../assets/studio/collaboration/View-Tab-Drafts.png" alt="Studio's View tab with the Drafts button highlighted." width="80%" />
 
-<img src="../assets/studio/collaboration/Drafts-Window.png" width="50%" />
+<img src="../assets/studio/collaboration/Drafts-Window.png" alt="The Drafts window with two draft script instances." width="50%" />
 
 ### Comparing Local and Cloud Scripts
 
@@ -173,11 +173,11 @@ To compare a local draft of a script with the version saved to the cloud:
 1. Right-click the local draft.
 1. Select **Compare with server** to open the **Diff Result** window.
 
-   <img src="../assets/studio/collaboration/Drafts-Compare.png" width="50%" />
+   <img src="../assets/studio/collaboration/Drafts-Compare.png" alt="The Drafts window displays a pop-up window when you right-click a local draft. The Compare with server menu item is highlighted." width="50%" />
 
 1. Compare the line numbers to help determine which to keep. Code that collaborators changed or deleted appears in red. Code that you updated appears in green.
 
-   <img src="../assets/studio/collaboration/Script-Diff-Result.png" width="70%" />
+   <img src="../assets/studio/collaboration/Script-Diff-Result.png" alt="A close up view of a couple of lines that were edited by different collaborators." width="70%" />
 
 ### Committing Scripts to the Cloud
 
@@ -186,13 +186,13 @@ To commit your local edits to the cloud:
 1. Left-click a script, or hold <kbd>Shift</kbd> and left-click to select multiple scripts.
 1. Click **Commit** to commit all selected scripts to the cloud.
 
-   <img src="../assets/studio/collaboration/Drafts-Commit.png" width="50%" />
+   <img src="../assets/studio/collaboration/Drafts-Commit.png" alt="The Drafts window with the Commit button highlighted." width="50%" />
 
 ### Merging Changes
 
 If a collaborator commits to the same script that you're editing, an icon with a green &CirclePlus; symbol appears in the **Drafts** window.
 
-<img src="../assets/studio/collaboration/Script-Updated.png" width="50%" />
+<img src="../assets/studio/collaboration/Script-Updated.png" alt="The Drafts window with the green plus icon highlighted to the left of a draft script." width="50%" />
 
 To merge their changes into your script:
 
@@ -207,13 +207,13 @@ To merge their changes into your script:
 
 1. Once you check the desired options, toggle the **Preview Resolution** switch to preview how the script will look.
 
-   <img src="../assets/studio/collaboration/Script-Merge-Preview.png" width="70%" />
+   <img src="../assets/studio/collaboration/Script-Merge-Preview.png" alt="The Merge Tools window with the Preview Resolution toggle highlighted." width="70%" />
 
 ### Restoring Deleted Scripts
 
 If a collaborator deletes a script that you're editing, an icon with a red &#8856; symbol appears in the **Drafts** window:
 
-<img src="../assets/studio/collaboration/Script-Deleted.png" width="50%" />
+<img src="../assets/studio/collaboration/Script-Deleted.png" alt="The Drafts window with the red plus icon highlighted to the left of a draft script." width="50%" />
 
 To restore deleted scripts:
 
@@ -227,7 +227,7 @@ To chat with collaborators:
 
 1. In the **View** tab, click **Chat**.
 
-   <img src="../assets/studio/collaboration/View-Tab-Chat.png" width="80%" />
+   <img src="../assets/studio/collaboration/View-Tab-Chat.png" alt="Studio's View tab with the Chat button highlighted." width="80%" />
 
 1. Click on the text box and type your message.
 1. Press <kbd>Enter</kbd> to send the message.
@@ -236,7 +236,7 @@ To chat with collaborators:
 
 If [Team Create](#team-create) is on, Studio automatically saves the project to the cloud every five minutes. The [Output](../studio/output.md) window shows the place name and save location after the save is successful. Additionally, the status bar at the bottom of the Studio window shows when a save is in progress and when it's done.
 
-<img src="../assets/studio/collaboration/Save-Messages.png" width="80%" />
+<img src="../assets/studio/collaboration/Save-Messages.png" alt="The Output window with the Status Bar highlighted." width="80%" />
 
 <Alert severity="info">
 Changes made between auto-saves aren't published, so updating a live game still requires explicit publishing via <b>Publish&nbsp;to&nbsp;Roblox</b>.
@@ -260,11 +260,11 @@ Owners of an experience can enable Team Create. There are two ways to enable Tea
 
 - Toggle Team Create on when you save or publish to Roblox for the first time.
 
-  <img src="../assets/studio/collaboration/Toggle-Team-Create-Save-Or-Publish.png" width="70%" />
+  <img src="../assets/studio/collaboration/Toggle-Team-Create-Save-Or-Publish.png" alt="The pop-up window that displays when you are saving or publishing your experience for the first time. The Team Create toggle is highlighted." width="70%" />
 
 - Open the Team Create widget in the View tab and click the **Turn On** button.
 
-  <img src="../assets/studio/collaboration/Team-Create-Widget-Open.png" width="70%" />
+  <img src="../assets/studio/collaboration/Team-Create-Widget-Open.png" alt="A view of Studio with the View tab, Team Create button, and the Turn On button in the Team Create window highlighted." width="70%" />
 
 <Alert severity="info">
 If you haven't saved or published the place to Roblox, the <b>Turn On</b> button appears as <b>Save to Roblox</b>. When you click the button, the <b>Save Game</b> dialog opens, and you can enable Team Create as shown in the first method.
@@ -278,7 +278,7 @@ To disable Team Create:
 
 1. At the bottom of the **Team Create** window, click the **&hellip;** button.
 
-   <img src="../assets/studio/collaboration/Disable-Button.png" width="50%" />
+   <img src="../assets/studio/collaboration/Disable-Button.png" alt="The Team Create window with the ellipsis button in the bottom right corner highlighted." width="50%" />
 
 1. Select **Disable Team Create**.
 1. When prompted, click **Yes** to end the session.

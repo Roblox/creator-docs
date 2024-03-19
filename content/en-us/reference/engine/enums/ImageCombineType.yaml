@@ -22,3 +22,18 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: Add
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Multiply
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: AlphaBlend
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

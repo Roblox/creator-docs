@@ -167,6 +167,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: RenderingTest.RenderingTestFrameCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: RenderingTest
+    serialization:
+      can_load: true
+      can_save: true
   - name: RenderingTest.ShouldSkip
     summary: ''
     description: ''

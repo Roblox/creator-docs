@@ -17,7 +17,7 @@ Using the [Environment Art - Optimizing](https://www.roblox.com/games/1444784529
 
 While the Roblox engine handles most optimization work for you, you can assist in these optimization efforts by utilizing the [Microprofiler](../../studio/microprofiler/index.md) to see where it takes more time to render specific frames. Using this information, you can make informed decisions about what assets need your attention in regards to their parameters or excess content.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section5/Overview.jpg" width="100%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section5/Overview.jpg" alt="" width="100%"/>
 
 ## Review Physics and Rendering Parameters
 
@@ -27,11 +27,11 @@ When you modify physics and rendering parameters, it's useful near the end of th
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Disabled.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Disabled.jpg" alt="An outdoor view of the sample laser tag experience that casts shadows." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Disabled</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Enabled.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/ReviewingParameters-Enabled.jpg" alt="An outdoor view of the sample laser tag experience that doesn't cast shadows. There is almost no difference in this view, but it improves performance." width="100%"/>
     <figcaption>`Class.BasePart.CastShadow` = Enabled</figcaption>
   </figure>
 </GridContainer>
@@ -46,7 +46,7 @@ As you transition between developing your assets and constructing your environme
 
 For example, if you were to import the following two fire hydrant meshes into Studio separately, even if they are exactly the same in appearance, the Roblox engine treats them as two objects with unique assetIDs. The more unique calls the engine needs to make, the more of an impact on memory and performance. For this reason, it's important to confirm when you're reusing an asset multiple times, each instance of that asset uses the same assetID so that the engine only needs to make a single call to render it repeatedly.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section5/RemovingTextures-Firehydrants.jpg" width="100%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section5/RemovingTextures-Firehydrants.jpg" alt="Two of the exact same fire hydrant with unique assetIDs. There is no visual difference but the duplicate assetIDs negatively impacts performance." width="100%"/>
 
 ### Optimize Geometry
 
@@ -61,7 +61,7 @@ To illustrate this point, the final sample laser tag environment parents multipl
 
 For example, in the following image, the left tower remains multiple assets under a `Class.Model` object, and the right tower is a single asset. You can modify each component of the left tower individually, but when you modify the right tower, such as changing its color to black, it affects the entirety of the object. This is why it's important to only consider this technique near the end of your environment's development when you know where you can improve performance without affecting your aesthetic goals.
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section5/OptimizingGeo-Towers.jpg" width="100%"/>
+<img src="../../assets/tutorials/environmental-art-curriculum/Section5/OptimizingGeo-Towers.jpg" alt="A front view of the two towers. The tower on the left includes multiple assets under a single model, while the tower on the right decreases the amount of assets by removing all texture objects." width="100%"/>
 
 Expanding on the second technique, assets with geometric complexity have more polygons, meaning they have more vertices that the engine needs to calculate as it renders their visual appearance. This means that assets with less complexity and fidelity are less costly to render, leading to an improvement in both performance and memory.
 
@@ -78,10 +78,10 @@ For example, consider the following view of a planter in the sample environment.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/LayeredTransparencies-Left.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/LayeredTransparencies-Left.jpg" alt="A Rthro avatar facing a planter with multiple plants with transparency between the leaves." width="100%"/>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/LayeredTransparencies-Right.jpg" width="100%"/>
+    <img src="../../assets/tutorials/environmental-art-curriculum/Section5/LayeredTransparencies-Right.jpg" alt="A side view of the Rthro avatar facing a planter with multiple plants with transparency between the leaves, and example layers of overdrawn pixels are highlighted to show where there is overdrawn in the environment." width="100%"/>
   </figure>
 </GridContainer>
 

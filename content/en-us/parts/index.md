@@ -92,7 +92,7 @@ The following are commonly utilized properties:
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**.
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="826" alt="Part menu indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="672" alt="Part menu indicated in Model tab" />
 
 <Alert severity="info">
 To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#inserting-and-parenting).
@@ -126,7 +126,7 @@ Parts move on the **X** (red), **Y** (green), and **Z** (blue) axes. You can mov
 
 1. In the **Tools** section, select the **Move** tool, then select the part you want to move.
 
-   <img src="../assets/studio/general/Model-Tab-Move.png" width="830" alt="Move tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Move.png" width="768" alt="Move tool indicated in Model tab" />
 
 2. Click and drag the arrow that is pointing in the direction you want to move the part.
 
@@ -138,7 +138,7 @@ Parts scale on the **X** (red), **Y** (green), and **Z** (blue) axes. You can ma
 
 1. In the **Tools** section, select the **Scale** tool, then select the part you want to scale.
 
-   <img src="../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Scale tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Scale.png" width="768" alt="Scale tool indicated in Model tab" />
 
 2. Click and drag a ball to scale the part in that direction.
 
@@ -151,7 +151,7 @@ Parts rotate on the **X** (red), **Y** (green), and **Z** (blue) axes. You can r
 
 1. In the **Tools** section, select the **Rotate** tool, then select the part you want to rotate.
 
-   <img src="../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Rotate tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Rotate.png" width="768" alt="Rotate tool indicated in Model tab" />
 
 2. Click and drag a circle to rotate the part in that direction.
 
@@ -165,7 +165,7 @@ While a part is gray by default, you can change it to any color through the foll
 
 Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
 
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Color button indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="842" alt="Color button indicated in Model tab" />
 
 <img src="../assets/studio/general/Hexagon-Color-Picker.png"
 	width="380" />
