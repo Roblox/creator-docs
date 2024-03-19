@@ -149,7 +149,7 @@ If you don't see the leaderboard, try the following:
 
 ### Coding Items and Spaces
 
-Remember that items can be anything based off the game design document. Such as items can be crystals instead.
+Remember that the stat names can be anything based off the game design document. In other words, "Items" can be "Crystals" instead.
 
 1. Add a blank line to separate the next stat, then create the item stat by setting up a new IntValue the same way you did for gold.
 
