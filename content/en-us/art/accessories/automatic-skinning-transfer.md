@@ -31,7 +31,7 @@ While automatic skinning often works better than manual skinning, there are some
 
 ### Modifying Character Cages
 
-You can modify character cages for the accessories to deform accurately to the expected character surfaces using the automatic skinning transfer. For example, auto-skinning may cause layered accessories to deform based on an incorrect body part because the transfer process is based on the closest distance between the accessory and its inner cage. In the following instance, a beard accessory was modeled using a blocky-type full-body cage. This causes the beard to deform incorrectly because parts of the beard are closer to the character cage's upper chest instead of the chin:
+You can modify character cages for the accessories to deform accurately to the expected character surfaces using the automatic skinning transfer. For example, auto-skinning may cause layered clothing to deform based on an incorrect body part because the transfer process is based on the closest distance between the accessory and its inner cage. In the following instance, a beard accessory was modeled using a blocky-type full-body cage. This causes the beard to deform incorrectly because parts of the beard are closer to the character cage's upper chest instead of the chin:
 
 <img src="../../assets/avatar/dynamic-heads/creating-face-accessories/Full-Body-Cage.png" width="60%" />
 
