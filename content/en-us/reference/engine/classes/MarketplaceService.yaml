@@ -296,7 +296,7 @@ methods:
         </tr>
         </tbody>
       </table>
-      	
+
       #### Creator Information
 
       <table size="small">
@@ -649,8 +649,8 @@ methods:
         <tr>
       	  <td><code>PaymentStatus</code></td>
       	  <td><code>Enum.SubscriptionPaymentStatus</code></td>
-      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code> if the user paid for this particular subscription period. 
-          <code>Enum.SubscriptionPaymentStatus.Refunded</code> if the user refunded this particular subscription period. 
+      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code> if the user paid for this particular subscription period.
+          <code>Enum.SubscriptionPaymentStatus.Refunded</code> if the user refunded this particular subscription period.
           </td>
         </tr>
         </tbody>
@@ -1197,6 +1197,9 @@ callbacks:
       - The player needs to be in the server for the callback to be invoked, but
         does not need to be in the server for the result of the callback to be
         recorded on the backend.
+
+      - The callback is called for a player after the PlayerAdded event has
+        been fired for that player.
 
       - The callback for a given purchase may run on two different servers at
         the same time, if the player joins another server before the callback in
