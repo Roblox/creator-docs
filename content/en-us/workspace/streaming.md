@@ -14,7 +14,7 @@ In-experience **instance streaming** allows the Roblox engine to dynamically loa
 
 Instance streaming is enabled through the **StreamingEnabled** property of the **Workspace** object in Studio. This property cannot be set in a script. Streaming is enabled by default for new places created in Studio.
 
-<img src="../assets/studio/properties/Workspace-StreamingEnabled.png" width="320" alt="StreamingEnabled property enabled on Workspace object in Studio" />
+<img src="../assets/studio/properties/Workspace-StreamingEnabled.png" width="320" alt="The Properties window with the StreamingEnabled property enabled." />
 
 Once enabled, it's recommended that you adhere to the following practices:
 
@@ -36,7 +36,7 @@ By default, when a player joins an experience with instance streaming enabled, i
 
 Then, during gameplay, the server may stream necessary instances to the client, as they are needed.
 
-<img src="../assets/optimization/streaming/Technical-Behavior.svg" width="800" height="464" alt="Diagram showing when various instances and their descendants stream in" />
+<img src="../assets/optimization/streaming/Technical-Behavior.svg" width="800" height="464" alt="Diagram showing when various instances and their descendants in the Workspace stream in." />
 
 <figcaption><sup>1</sup> Terrain is treated uniquely, in that the instance replicates to the client when the experience loads, but terrain regions only stream in when needed</figcaption><br />
 
@@ -47,30 +47,30 @@ Models set to non-default behavior like [Atomic](#atomic) stream in under specia
 <Tabs>
 <TabItem label="Default / Legacy">
 
-<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Default.png" width="320" height="121" alt="ModelStreamingBehavior property of Workspace object" />
+<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Default.png" width="320" height="121" alt="The Properties window with the ModelStreamingBehavior property set to Default." />
 
 When [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Default**/**Legacy**, the `Class.Model` container and its non‑spatial descendants such as `Class.Script|Scripts` replicate to the client when the player joins. Then, when eligible, the model's `Class.BasePart` descendants stream in.
 
-<img src="../assets/optimization/streaming/Model-Stream-In-Default.svg" width="800" height="176" alt="Diagram showing default model stream in behavior" />
+<img src="../assets/optimization/streaming/Model-Stream-In-Default.svg" width="800" height="176" alt="Diagram showing default model stream in behavior." />
 
 </TabItem>
 <TabItem label="Improved">
 
-<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Improved.png" width="320" height="121" alt="ModelStreamingBehavior property of Workspace object" />
+<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Improved.png" width="320" height="121" alt="The Properties window with the ModelStreamingBehavior property set to Improved." />
 
 When [ModelStreamingBehavior](#modelstreamingbehavior) is set to **Improved**, model streaming behavior varies by whether the model is **spatial** (contains `Class.BasePart` descendants) or **non‑spatial** (contains no `Class.BasePart` descendants).
 
 - Instead of on player join, a **spatial** model (one containing `Class.BasePart` descendants) is sent only when one of its `Class.BasePart` descendants is eligible to stream in. At that point, the model and part are replicated, along with the model's non‑spatial descendants. Then, when eligible, the model's other spatial descendants stream in.
 
-  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Spatial.svg" width="800" height="176" alt="Diagram showing improved spatial model stream in behavior" />
+  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Spatial.svg" width="800" height="176" alt="A diagram showing improved spatial model stream in behavior." />
 
 - A key consideration is when a spatial model and all of its `Class.BasePart|BaseParts` belong to a single [network ownership](../physics/network-ownership.md) unit, such as an avatar or NPC character model. In such cases, the entire model will stream in atomically.
 
-  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Character.svg" width="800" height="400" alt="Diagram showing improved character model stream in behavior" />
+  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Character.svg" width="800" height="400" alt="Diagram showing improved character model stream in behavior." />
 
 - For a **non‑spatial** model (one without `Class.BasePart` descendants), the model container and its descendants are replicated to the client soon after the player joins, and all are exempt from streaming out. Assuming the model exists in `Class.Workspace` when the player joins, this occurs before the `Class.Workspace.PersistentLoaded` event fires.
 
-  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Non-Spatial.svg" width="800" height="176" alt="Diagram showing improved non-spatial model stream in behavior" />
+  <img src="../assets/optimization/streaming/Model-Stream-In-Improved-Non-Spatial.svg" width="800" height="176" alt="Diagram showing improved non-spatial model stream in behavior." />
 
 </TabItem>
 </Tabs>
@@ -114,7 +114,7 @@ To further anticipate stream out, examine these scenarios:
 
 If you set [ModelStreamingBehavior](#modelstreamingbehavior) to **Improved**, the engine may stream out [Default](#default--nonatomic) ([Nonatomic](#default--nonatomic)) models when they're eligible to stream out, potentially freeing up memory on the client and reducing the instances which need property updates.
 
-<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Improved.png" width="320" alt="ModelStreamingBehavior property of Workspace object" />
+<img src="../assets/studio/properties/Workspace-ModelStreamingBehavior-Improved.png" width="320" alt="The Properties window with the ModelStreamingBehavior property set to Improved." />
 
 Under **Improved** model streaming behavior, streaming out of [Default](#default--nonatomic) ([Nonatomic](#default--nonatomic)) models is based on whether the model is **spatial** (contains `Class.BasePart` descendants) or **non‑spatial** (contains no `Class.BasePart` descendants).
 
@@ -185,7 +185,7 @@ There may be a slight delay of ~10 milliseconds between when a part is created o
 
 The following properties control how instance streaming applies to your experience. All of these properties are **non-scriptable** and must be set on the **Workspace** object in Studio.
 
-<img src="../assets/studio/properties/Workspace-Streaming-Properties.png" width="320" alt="Streaming properties shown on Workspace object in Studio" />
+<img src="../assets/studio/properties/Workspace-Streaming-Properties.png" width="320" alt="The Properties window with the ModelStreamingBehavior, StreamingIntegrityMode, StreamingMidRadius, StreamingTargetRadius, and StreamOutBehavior property highlighted." />
 
 ### ModelStreamingBehavior
 
@@ -240,7 +240,7 @@ The **StreamOutBehavior** property sets the [streaming out](#streaming-out) beha
 
 Globally, the [ModelStreamingBehavior](#modelstreamingbehavior) property lets you control how models are streamed in on join. Additionally, to avoid issues with streaming on a per-model basis and minimize use of `Class.Instance:WaitForChild()|WaitForChild()`, you can customize how `Class.Model|Models` and their descendants stream through their `Class.Model.ModelStreamingMode|ModelStreamingMode` property.
 
-<img src="../assets/studio/properties/Model-ModelStreamingMode.png" width="320" alt="ModelStreamingMode property indicated on a model's properties in Studio" />
+<img src="../assets/studio/properties/Model-ModelStreamingMode.png" width="320" alt="The Properties window with the ModelStreamingMode property set to Default. The property is also highlighted." />
 
 ### Default / Nonatomic
 
@@ -273,7 +273,7 @@ If a `Class.Model` is changed to **Atomic**, all of its descendants are streamed
 
 An atomic model is only streamed out when all of its descendant parts are eligible for streaming out, at which point the entire model streams out together. If only some parts of an atomic model would typically be streamed out, the entire model and its descendants remain on the client.
 
-<img src="../assets/optimization/streaming/ModelStreamingMode-Atomic.svg" width="800" height="336" alt="Diagram showing Atomic model streaming along with children" />
+<img src="../assets/optimization/streaming/ModelStreamingMode-Atomic.svg" width="800" height="336" alt="A diagram showing Atomic model streaming along with children." />
 
 ```lua title='LocalScript' highlight='2, 5-6'
 -- Atomic model does not exist at load time; use WaitForChild()
@@ -288,7 +288,7 @@ local part = model.Part
 
 **Persistent** models are not subject to normal streaming in or out. They are sent as a complete atomic unit soon after the player joins and before the `Class.Workspace.PersistentLoaded` event fires. Persistent models and their descendants are never streamed out, but to safely handle streaming in within a separate `Class.LocalScript`, you should use `Class.Instance:WaitForChild()|WaitForChild()` on the parent model, or wait for the `Class.Workspace.PersistentLoaded|PersistentLoaded` event to fire.
 
-<img src="../assets/optimization/streaming/ModelStreamingMode-Persistent.svg" width="800" height="336" alt="Diagram showing Persistent model streaming along with children" />
+<img src="../assets/optimization/streaming/ModelStreamingMode-Persistent.svg" width="800" height="336" alt="A diagram showing Persistent model streaming along with children." />
 
 ```lua title='LocalScript' highlight='2, 5-6'
 -- Persistent model does not exist at load time; use WaitForChild()
@@ -423,11 +423,11 @@ When streaming is enabled, `Class.Model|Models` outside of the currently streame
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/model-objects/LevelOfDetail-Actual.jpg" alt="Model in actual level of detail" />
+    <img src="../assets/modeling/model-objects/LevelOfDetail-Actual.jpg" alt="A globe model displays in its actual level of detail." />
     <figcaption>Actual model</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/model-objects/LevelOfDetail-StreamingMesh.jpg" alt="Model represented as low resolution imposter mesh" />
+    <img src="../assets/modeling/model-objects/LevelOfDetail-StreamingMesh.jpg" alt="The same globe model displays as a low resolution imposter mesh with rough edges that obscure the globe's details." />
     <figcaption>Low resolution "imposter" mesh</figcaption>
   </figure>
 </GridContainer>

@@ -4,7 +4,7 @@ description: Classic clothing are decals you can apply to a classic character mo
 ---
 
 <Alert severity="warning">
-Modern user-generated avatars do not support classic clothing.
+Current user-generated avatars do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
 </Alert>
 
 Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
@@ -21,11 +21,17 @@ The three types of classic clothing items are **T-shirts**, **Shirts**, and **Pa
 
 ### T-shirts
 
-T-shirts are square images applied to the front of an avatar's torso. To make a t-shirt, create a square image (such as 512×512 pixels) and then upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to test in your own experience.
+T-shirts are square images applied to the front of an avatar's torso. To make a t-shirt:
+
+1. Create a square image (such as 512×512 pixels).
+2. Use an image editor to apply changes in the specific square sections of the template images.
+3. Upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to test in your own experience.
+4. Follow the [Testing](#testing) steps to ensure your 2D image looks as expected.
+5. Follow the [Uploading](#uploading) steps to upload and sell your asset on the Marketplace.
 
 ### Shirts and Pants
 
-Classic shirts and pants are image assets that wrap around an avatar's body. To create shirts and pants, [download and unzip](../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates and draw your own art on top. Once completed, you can upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to [test](#testing) in your own experience.
+Classic shirts and pants are image assets that wrap around an avatar's body. Because classic shirts and pants have specific size requirements, download and modify the provided template files to begin creating these assets.
 
 <GridContainer numColumns="2">
   <figure>
@@ -39,10 +45,11 @@ Classic shirts and pants are image assets that wrap around an avatar's body. To 
   </figure>
 </GridContainer>
 
-<br />
-
-The following table includes sizes for each template part:
-
+<BaseAccordion>
+<AccordionSummary>
+Table of sizes for each template part
+</AccordionSummary>
+<AccordionDetails>
 <table>
 <thead>
   <tr>
@@ -74,10 +81,17 @@ The following table includes sizes for each template part:
   </tr>
 </tbody>
 </table>
+</AccordionDetails>
+</BaseAccordion>
 
-<Alert severity="info">
-8-bit alpha channels can be used for transparent regions.
-</Alert>
+<br />
+
+To begin creating classic shirts and pants:
+
+1. [Download and unzip](../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates to use as a canvas for your art.
+2. When complete, upload the image to Roblox using the [Asset Manager](../../projects/assets/manager.md) to test in your own experience.
+3. Follow the [Testing](#testing) steps to ensure your 2D image looks as expected.
+4. Follow the [Uploading](#uploading) steps to upload and sell your asset on the Marketplace.
 
 When applying clothing to R15 avatars in Roblox, some limits exist with the templates and may require some testing to get right, as shown in the following examples:
 
@@ -154,9 +168,6 @@ To upload a custom clothing item:
 
 1. Navigate to the [Upload Asset](https://create.roblox.com/dashboard/creations/upload?assetType=TShirt) page.
 1. Select either **T-Shirt**, **Shirt**, or **Pants** from the asset type selector menu.
-1. Click the small upload button to choose a valid image file from your computer.
-
-   <img src="../../assets/creator-dashboard/Upload-Classic-Clothing.png" width="720" />
-
+1. Click the small **Upload** button to choose a valid image file from your computer.
 1. Enter a name and description for your clothing item.
 1. Click the **Upload** button at the bottom of the page. Once approved by Roblox, the item shows up as one of your creations and can be equipped or offered for sale to other Roblox players.

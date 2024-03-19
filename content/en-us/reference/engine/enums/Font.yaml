@@ -4,7 +4,6 @@ summary: ''
 description: |
   The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
   `Class.TextButton` to determine how the GUI element will render its text.
-
 code_samples:
 tags: []
 deprecation_message: ''
@@ -285,12 +284,36 @@ items:
       <img width="80%" src="../../../assets/engine-api/enums/Font/Ubuntu.png" />
     tags: []
     deprecation_message: ''
-  - name: Builder
-    value: 46
+  - name: BuilderSans
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Builder.png" />
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSans.png" /> 
 
       See [Builder Font License](../../../resources/builder-font-license.md).
+    value: 46
+    tags: []
+    deprecation_message: ''
+  - name: BuilderSansMedium
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansMedium.png" /> 
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
+    value: 47
+    tags: []
+    deprecation_message: ''
+  - name: BuilderSansBold
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansBold.png" /> 
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
+    value: 48
+    tags: []
+    deprecation_message: ''
+  - name: BuilderSansExtraBold
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansExtraBold.png" /> 
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
+    value: 49
     tags: []
     deprecation_message: ''
   - name: Unknown

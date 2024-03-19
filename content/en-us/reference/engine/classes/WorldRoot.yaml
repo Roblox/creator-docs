@@ -933,6 +933,26 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+  - name: WorldRoot:StepPhysics
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: dt
+        type: float
+        default:
+        summary: ''
+      - name: parts
+        type: Objects
+        default: '{}'
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
   - name: WorldRoot:findPartOnRay
     summary: ''
     description: ''

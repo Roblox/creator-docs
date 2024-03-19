@@ -1,10 +1,9 @@
 ---
 title: Experience Icons
-description: Icons are the first image that a user sees when an experience displays on the Discover page.
+description: Icons are an important factor in helping users recognize your experience and grow its brand.
 ---
 
-A high-quality **icon** is one of the most important factors in getting your experience noticed, as it's the first image users see when
-the experience displays on the [Discover](https://www.roblox.com/discover#/) page. With such prominent placement, it's recommended that the icon expresses the theme, tone, and/or genre of the experience.
+A high-quality **icon**, in addition to a showcase [thumbnail](../promotion/promotional-thumbnails.md), is an important factor in helping users recognize your experience and grow its brand. With prominent placement in various sections of the [Home](https://www.roblox.com/home) page, it's recommended that the icon expresses the theme, tone, and/or genre of the experience.
 
 <GridContainer numColumns="3">
 	<figure>
@@ -48,8 +47,6 @@ To upload an experience icon:
 1. Set the media type to **Image** and click the **Change** button. Then, from the file browser, select and confirm the image you want to use as the icon. Note that all icon images must pass [moderation](../../projects/assets/index.md#asset-moderation) before they appear to others on the Roblox platform.
 
 1. If the preview icon appears as you expect, click **Save Changes**.
-
-   <img src="../../assets/creator-dashboard/Upload-Icon-Image.png" width="600" alt="Icon preview on the Creator Dashboard" />
 
 ## Best Practices
 
@@ -100,7 +97,7 @@ An icon will have a higher impact if it's unique and provides relevant imagery o
 	<figure>
     <img src="../../assets/publishing/experience-metadata/Icon-Theme-Park-Symbol.jpg" alt="Icon with ambiguous graphic in top-right corner" />
     <figcaption>
-      <Alert severity="error">Ambiguous graphic in top-right corner</Alert>
+      <Alert severity="error">Ambiguous graphic in top‑right corner</Alert>
     </figcaption>
   </figure>
 </GridContainer>

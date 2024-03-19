@@ -133,7 +133,7 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 The **Material&nbsp;Manager** window lets you apply and create custom materials for parts and [terrain](../parts/terrain.md). See [Materials](../parts/materials.md) for details.
 
-<img src="../assets/studio/general/Home-Tab-Material-Manager-Trimmed.png" width="758" alt="Material Manager indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" alt="Material Manager indicated in Home tab" />
 
 ## Material Generator
 
@@ -141,9 +141,9 @@ The **Material&nbsp;Manager** window lets you apply and create custom materials 
 This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Generator**.
 </Alert>
 
-The **Material Generator** is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds. See [Material Generator](../parts/materials.md#material-generator) for details.
+The [Material Generator](../parts/materials.md#material-generator) is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds.
 
-<img src="../assets/studio/general/Home-Tab-Material-Generator-Trimmed.png" width="758" alt="Material Generator indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator indicated in Home tab" />
 
 ## Color Picker
 

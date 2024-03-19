@@ -13,7 +13,7 @@ The fastest way to create a `Class.RigidConstraint` is by selecting **Rigid&nbsp
 
 <img
 src="../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-width="740" alt="Constraint picker indicated in Studio toolbar" />
+width="754" alt="Constraint picker indicated in Studio toolbar" />
 
 Note that this tool behaves differently depending on whether you click on existing `Class.BasePart|BaseParts`, `Class.Attachment|Attachments`, or `Class.Bone|Bones` after the tool is activated:
 

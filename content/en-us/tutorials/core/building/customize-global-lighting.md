@@ -41,13 +41,14 @@ The first step in matching the sample **Island Jump - Final** experience's `Clas
 
 In addition, the `Class.Lighting.ColorShift_Top` property controls the color of light that reflects from surfaces facing the sun or moon. By default, these three properties are set to produce a dark gray tone throughout your world, but to compliment the nautical sea stack environment of the final sample, you can adjust these properties to make both the ambient and reflective lighting have the subtle **blue-grey** tone of a traditional ocean palette.
 
+<div><b>A comparison between the sample Island Jump experience's default and custom ambient lighting</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-Color.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-Color.jpg" alt="The sample Island Jump experience with default ambient lighting visuals." />
     <figcaption>Default Properties</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Color.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Color.jpg" alt="The sample Island Jump experience with custom ambient lighting visuals." />
     <figcaption>Custom Properties</figcaption>
   </figure>
 </GridContainer>
@@ -64,13 +65,14 @@ To adjust the color of ambient lighting in your environment:
 
 The second step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to harden the shadows in your environment. This creates a more dramatic effect when players navigate between the outdoor and covered areas of your experience.
 
+<div><b>A comparison between the sample Island Jump experience's default and custom shadows</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-Color.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-Shadows.jpg" alt="The sample Island Jump experience with default shadow visuals that produce fuzzy shadows." />
     <figcaption>Default Shadows</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Color.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Shadows.jpg" alt="The sample Island Jump experience with custom shadow visuals that produce sharp shadows."/>
     <figcaption>Custom Shadows</figcaption>
   </figure>
 </GridContainer>
@@ -86,13 +88,14 @@ The third step in matching the sample **Island Jump - Final** experience's `Clas
 
 The Future lighting system allows both your global and local lighting to work together and provide more realistic and immersive visuals. For example, the local lighting from the glowing flare with the ShadowMap lighting system doesn't produce a shadow at all while the glowing flare with the Future lighting system technology produces a subtle shadow near the circumference of the sea stack platform. This effect becomes more pronounced the more light sources you have within your environment.
 
+<div><b>A comparison between the ShadowMap lighting system and the Future lighting system</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/ShadowMap-System.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/ShadowMap-System.jpg" alt="The sample Island Jump experience with the ShadowMap lighting system." />
     <figcaption>ShadowMap lighting system</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Future-System.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Future-System.jpg" alt="The sample Island Jump experience with the Future lighting system that produces more prominent lighting from the flare."/>
     <figcaption>Future lighting system</figcaption>
   </figure>
 </GridContainer>
@@ -116,13 +119,14 @@ The final step in matching the sample **Island Jump - Final** experience's `Clas
 
 The sun's default position is high in the sky, emulating around midday in the real world. However, to produce more pronounced shadows and directionality within the environment, you can move the sun to the right of the sea stack platforms.
 
+<div><b>A comparison between the default and custom sun position</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-SunPosition.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Default-SunPosition.jpg" alt="The sample Island Jump experience with the default sun position high in the sky."/>
     <figcaption>Default sun position</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-SunPosition.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-SunPosition.jpg" alt="The sample Island Jump experience with a custom sun position approaching the horizon." />
     <figcaption>Custom sun position</figcaption>
   </figure>
 </GridContainer>
@@ -148,13 +152,14 @@ The following instructions show you how to adjust `Class.Atmosphere` properties 
 
 The first step in matching the sample **Island Jump - Final** experience's `Class.Atmosphere` properties is to increase air particle density. The `Class.Atmosphere.Density` property controls how many particles exist in the air of your environment. When you increase this property, the additional amount of particles obstruct the players' view of objects in the background. This is particularly useful for hiding the boundaries of your water terrain.
 
+<div><b>A comparison between the default and custom air particle density</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-SunPosition.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-SunPosition.jpg" alt="The sample Island Jump experience with the default air particle density that produces a clear background." />
     <figcaption>Default air particle density</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-AirParticleDensity.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-AirParticleDensity.jpg" alt="The sample Island Jump experience with custom air particle density that produces a hazy background." />
     <figcaption>Custom air particle density</figcaption>
   </figure>
 </GridContainer>
@@ -170,13 +175,14 @@ The second step in matching the sample **Island Jump - Final** experience's `Cla
 
 While the sample experience could have set this property to zero to completely hide players' view of the horizon, the next section of the tutorial adds mountain objects near the boundaries of the experience that need to be visible. In addition, decreasing the default value without setting it to zero mimics a fog starting to roll in the distance, creating a more realistic environment.
 
+<div><b>A comparison between the default and custom Offset values</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-AirParticleDensity.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-AirParticleDensity.jpg" alt="The sample Island Jump experience with default Offset values that keep the background visible." />
     <figcaption>Default `Class.Atmosphere.Offset` properties</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Offset.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/core-building-and-scripting/Custom-Offset.jpg" alt="The sample Island Jump experience with custom Offset values that hide the edges of the background."/>
     <figcaption>Custom `Class.Atmosphere.Offset` properties</figcaption>
   </figure>
 </GridContainer>
@@ -190,9 +196,9 @@ Now that your experience's global lighting is set to custom properties, in the n
 
 <Tabs>
   <TabItem label="Pre-Customization">
-    <img src="../../../assets/tutorials/core-building-and-scripting/Lighting-Pre-Customization.jpg" />
+    <img src="../../../assets/tutorials/core-building-and-scripting/Lighting-Pre-Customization.jpg" alt="The sample Island Jump experience's lighting visuals before the customization from this page." />
   </TabItem>
   <TabItem label="Customized Visual Effects">
-    <img src="../../../assets/tutorials/core-building-and-scripting/Lighting-Post-Customization.jpg" />
+    <img src="../../../assets/tutorials/core-building-and-scripting/Lighting-Post-Customization.jpg" alt="The sample Island Jump experience's lighting visuals after the customization from this page." />
   </TabItem>
 </Tabs>

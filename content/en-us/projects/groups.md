@@ -27,11 +27,11 @@ To configure roles:
 1. Navigate to the [Groups](https://www.roblox.com/groups) page and select your group.
 1. Click the **&hellip;** button in the upper-right corner and select **Configure&nbsp;Group**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" width="800" />
+   <img src="../assets/publishing/groups/Configure-Group.png" alt="A close up view of an experience tile with both the ellipis button and Configure Group menu item highlighted." width="800" />
 
 1. In the left column, select the **Roles** tab.
 
-   <img src="../assets/publishing/groups/Group-Admin-Roles.png" width="353" />
+   <img src="../assets/publishing/groups/Group-Admin-Roles.png" alt="A close up view of the left column with the Roles navigation item highlighted." width="353" />
 
 1. To secure your group and its creations, inspect and adjust the permissions for each role.
 
@@ -158,7 +158,7 @@ To assign roles:
 1. In the left column, select the **Members** tab.
 1. Using the drop-down menu below each group member, select a role.
 
-   <img src="../assets/publishing/groups/Assign-Role.png" width="340" />
+   <img src="../assets/publishing/groups/Assign-Role.png" alt="A close up view of a member of a group. The dropdown menu is extended, and the Member role is highlighted." width="340" />
 
 ## Publishing Group Places
 
@@ -170,18 +170,12 @@ If you're the group owner or a member with the **Create and edit group experienc
 1. Near the bottom of the window, click **Create new game**.
 1. Enter a place name and an optional description.
 1. For the **Creator** field, select the group for which you'd like to publish the place.
-
-   <img src="../assets/publishing/groups/Publish-To-Group-New.png" width="800" />
-
 1. When ready, click the **Create** button.
 
 ### To Existing Experience
 
 1. Select **File** &rarr; **Publish to Roblox**.
 1. Select a group from the drop-down menu.
-
-   <img src="../assets/publishing/groups/Publish-To-Group-Existing.png" width="800" />
-
 1. Click an existing group experience. On the next screen you can:
 
    - Add the place you're publishing as a **new** place within the same experience.
@@ -198,11 +192,11 @@ To manage payouts:
 1. Navigate to the [Groups](https://www.roblox.com/groups) page and select your group.
 1. Click the **&hellip;** button in the upper-right corner and select **Configure&nbsp;Group**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" width="800" />
+   <img src="../assets/publishing/groups/Configure-Group.png"alt="A close up view of an experience tile with both the ellipis button and Configure Group menu item highlighted." width="800" />
 
 1. In the left column, hover over **Revenue** and then click **Payouts**.
 
-   <img src="../assets/publishing/groups/Group-Admin-Revenue-Payouts.png" width="353" />
+   <img src="../assets/publishing/groups/Group-Admin-Revenue-Payouts.png" alt="A close up view of the left column with the Revenue navigation item highlighted, as well as the Payouts submenu item." width="353" />
 
 ### One-Time Payouts
 
@@ -212,7 +206,7 @@ To transfer a one-time payout:
 
 1. Select the **One-time Payout** tab.
 
-   <img src="../assets/publishing/groups/Group-Admin-Payouts-One-Time.png" width="800" />
+   <img src="../assets/publishing/groups/Group-Admin-Payouts-One-Time.png" alt="A close up view of both the Recurring Payout and One-Time Payout tabs. The One-time Payout tab is highlighted." width="800" />
 
 1. Use the drop-down menu to choose whether the payout is a set amount or a percentage of the group's total Robux balance.
 
@@ -230,7 +224,7 @@ To configure recurring payouts:
 
 1. Select the **Recurring Payout** tab.
 
-   <img src="../assets/publishing/groups/Group-Admin-Payouts-Recurring.png" width="800" />
+   <img src="../assets/publishing/groups/Group-Admin-Payouts-Recurring.png" alt="A close up view of both the Recurring Payout and One-Time Payout tabs. The Recurring Payout tab is highlighted." width="800" />
 
 1. Add one or more payout recipients by clicking the **Add Payout Recipient** button.
 1. Next to each member, enter the percentage of the group's Robux that you would like them to receive every month. To remove them from the payout, click the "trash" button.

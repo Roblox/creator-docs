@@ -40,7 +40,7 @@ The **rig**, or bone structure, within a rigged mesh creates additional posable 
 
 Once you successfully [import](../../parts/meshes.md#importing-meshes) a rigged mesh model into Studio, Studio represents this rig structure with `Class.Bone` instances that you can then pose and animate. You can view bones in Studio by toggling **Constraint Details** in the Model tab, or when you are using the [Animation Editor](../../animation/editor.md).
 
-<img src="../../assets/studio/general/Model-Tab-Constraint-Details.png" width="740" alt="Constraint Details toggle indicated in Model tab" />
+<img src="../../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
 <Alert severity = "info">
 When `Class.Bone` objects are used in animation, they affect the appearance of the parts but don't change the physical shape in cases such as [collision detection](../../workspace/collisions.md).
@@ -48,11 +48,11 @@ When `Class.Bone` objects are used in animation, they affect the appearance of t
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/modeling/skinned-meshes/Rig-Constraint-Details.jpg" />
+    <img src="../../assets/modeling/skinned-meshes/Rig-Constraint-Details.jpg" alt="A translucent humanoid outline, showing various sphere points where the constraints exist."/>
     <figcaption>Constraint Details enabled</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/skinned-meshes/Rig-Bone-Visualization.jpg" />
+    <img src="../../assets/modeling/skinned-meshes/Rig-Bone-Visualization.jpg" alt="A translucent humanoid outline, showing 15 pink bones objects over various limbs."/>
     <figcaption>When using the Animation Editor</figcaption>
   </figure>
 </GridContainer>

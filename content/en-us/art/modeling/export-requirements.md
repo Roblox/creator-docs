@@ -21,7 +21,7 @@ To export the `.fbx` file in Blender:
 2. Select **Export**, then **FBX (.fbx)**. The **Blender File View** window displays.
 3. On the right-hand side, change the **Path Mode** property to **Copy**, then toggle the **Embed Textures** button.
 
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" />
+   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-1.png" width="320" alt="Blender export sidebar showing Path Mode set to Copy and the Embed Textures button enabled."/>
 
 4. If your project doesn't already have .01 scene unit scaling, set the **Transform** > **Scale** to `.01`.
 
@@ -29,11 +29,11 @@ To export the `.fbx` file in Blender:
 
 5. Under the **Armature** section, disable **Add Leaf Bones**.
 
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" />
+   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-3.png" width="320" alt="Blender export sidebar showing Transform Scale set to .01"/>
 
 6. Unless exporting content with animation keyframes, such as a walk cycle or a character with [facial animation data](../../art/characters/facial-animation/index.md), disable **Bake Animation**.
 
-   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" /> <br />
+   <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" alt="Blender export sidebar showing Add Leaf Bones as unchecked"/> <br />
 
 7. Click the **Export FBX** button.
 
@@ -53,7 +53,7 @@ To export a mesh in Maya as a `.fbx` file:
    - Navigate to **Axis Conversion**, then set the **Up Axis** property to **Y**.
    - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
 9. Click the **Export All** button.
-   <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
+   <img src="../../assets/accessories/lc-requirements-maya-settings.png" alt="Blender export sidebar showing Bake Animation as unchecked"  />
 
 </TabItem>
 </Tabs>

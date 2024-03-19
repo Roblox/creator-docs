@@ -8,8 +8,8 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
 <table>
   <tbody>
     <tr>
-      <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" /></td>
-      <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" width="90%" /></td>
+      <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
+      <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
       <td><audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
     </tr>
     <tr>
@@ -116,12 +116,12 @@ Assets are reflected through formatted strings, each of which points to an onlin
   <figure>
     <figcaption><Chip label='rbxassetid://7229442422' color='primary' /></figcaption>
     <br />
-    <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" />
+    <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
   </figure>
   <figure>
     <figcaption><Chip label='rbxassetid://3845386987' color='primary' /></figcaption>
     <br />
-    <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" width="90%" />
+    <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" alt="Three particle emitters emit red, blue, and yellow particles over jar assets that sit on top of a stone tower. The red particles are highlighted." width="90%" />
   </figure>
   <figure>
     <figcaption><Chip label='rbxassetid://9125402735' color='primary' /></figcaption>
@@ -295,7 +295,7 @@ To further help with organization, you can archive most asset types in the **Dev
 
 <img src="../../assets/creator-dashboard/Creations-Development-Items.png" width="780" alt="Development Items section on the Creator Dashboard" />
 
-<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="Archive option for an asset on the Creator Dashboard" />
+<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="A close up view of a Splash Ring asset. The ellipsis button and the Archive menu item are highlighted." />
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 

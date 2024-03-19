@@ -25,7 +25,7 @@ Set up the project by opening the [rig template project](../../assets/modeling/m
 
 To import and parent the accessory model:
 
-1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend). This file contains the default armature required for layered accessories.
+1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend). This file contains the default armature required for layered clothing.
 
    <img
    alt="Blender Mannequin Template Project"

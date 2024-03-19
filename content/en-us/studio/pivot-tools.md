@@ -9,7 +9,7 @@ The **Pivot** tools and related properties give you full control over the points
 
 The interactive Studio tools are located in the [Model](./model-tab.md) tab.
 
-<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="830" alt="Pivot Tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="768" alt="Pivot Tools indicated in Model tab" />
 
 ### Edit Pivot
 
