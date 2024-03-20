@@ -26,7 +26,7 @@ description: |
   - When using the default player list users will be grouped and displayed
     together as a team
   - Setting `Class.Player.Neutral` to true will cause the `Class.Player` to be
-    disassociated with the team, however, it will not change `Class.Player.Team`
+    disassociated with the team; however, it will not change `Class.Player.Team`
     or `Class.Player.TeamColor`
   - When a `Class.Player` joins a game, they will be allocated to the team with
     `Class.Team.AutoAssignable` set to true that has the fewest players. If no
