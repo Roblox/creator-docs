@@ -16,7 +16,7 @@ properties:
     summary: |
       The size in offsets of the area that is scrollable.
     description: |
-      The size in offsets of the area that is scrollable. This property is set to the maximum of the `Class.ScrollingFrame.CanvasSize` property and the size of the children if `Class.ScrollingFrame.AutomaticCanvasSize` is set to something other than None.
+      The size in offsets of the area that is scrollable. This property is set to the maximum of the `Class.ScrollingFrame.CanvasSize` property and the size of the children if `Class.ScrollingFrame.AutomaticCanvasSize` is set to something other than `None|Enum.AutomaticSize`.
     code_samples:
     type: Vector2
     tags:
@@ -61,7 +61,7 @@ properties:
       size will adjust to fit that content.
 
       When AutomaticCanvasSize is set to an
-      `Enum.AutomaticSize|Enum.AutomaticSize` value other than None,
+      `Enum.AutomaticSize` value other than `None|no-link`,
       `Class.ScrollingFrame.AbsoluteCanvasSize` may resize depending on its
       child content.
     code_samples:
