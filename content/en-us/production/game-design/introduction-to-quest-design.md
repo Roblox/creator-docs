@@ -27,13 +27,13 @@ There are two common types of quests:
 - **Achievements:** Also known as badges on Roblox, are single-task quests that often require significant time and effort to complete. Earning a particularly challenging achievement is a source of pride, and badges allow players to show off their accomplishments to others. Achievements can also act as an indicator of player progression, representing milestones that they have achieved throughout their journey in a game. To learn how to implement achievements in your experience, see [Badges](../../production/publishing/badges.md).
 
    <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-0.png"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-0.png" alt="A close up view of an achievement badge for the Jailbreak experience that awards players who achieve the highest bounty in a busy server. The badge on the left-hand side displays a lightskinned blocky male avatar turned to his right to look at text that says Smooth Criminal." />
       <figcaption>Achievement badge in [*Jailbreak*](https://www.roblox.com/games/606849621/)</figcaption>
     </figure>
 
 - **Dailies**: Also known as daily quests, these are short tasks with modest rewards that are available for and must be completed within 24-hours. Some daily quest systems provide the same quests every day, while others rotate quests to provide players with new objectives to avoid repetition. Dailies have simple objectives with low requirements for completion to encourage players to complete the quests in a single play session.
     <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-1.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-1.png" alt="A pop-up UI in the World // Zero experience that displays various daily quests for players along with the awards they can earn." width="70%"/>
       <figcaption>Daily quests in [*World // Zero*](https://www.roblox.com/games/2727067538/)</figcaption>
     </figure>
 
@@ -54,7 +54,7 @@ Though they use similar mechanics to task and reward players, quests, achievemen
 - Deliver narrative
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-2.png" width="100%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-2.png" alt="A chart tracking how quests, achievements, and dailies overlap in meeting various gameplay requirements, such as short-term goals, tutorials, progression, and narrative." width="100%"/>
       <figcaption>Overlap of roles between quests, achievements, and dailies</figcaption>
     </figure>
 
@@ -75,7 +75,7 @@ By creating quests that require players to explore different areas of the game o
 In this example from [_Squishmallows_](https://www.roblox.com/games/7941853407/), one of the game's many locations, the campsite, is being surfaced. This quest might be the first time that a player learns that there is a campsite in the game, and the reward incentivizes them to explore the map to find it.
 
   <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-8.png" width="30%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-8.png" alt="A pop-up UI in the Squishmallows experience that informs players what they need to do in a quest to obtain a reward." width="30%"/>
       <figcaption>Quests in *Squishmallows*</figcaption>
     </figure>
 
@@ -90,7 +90,7 @@ Quests can also teach players how to use those features by acting as tutorials. 
 - Players feel good about learning to play, because they are rewarded for it.
 
 <figure>
-  <img src="../../assets/game-design/introduction-to-quest-design/quest-design-9.png" width="35%"/>
+  <img src="../../assets/game-design/introduction-to-quest-design/quest-design-9.png" alt="A pop-up UI in the RoCitizens experience that informs players what they need to do in a tutorial quest to obtain a reward." width="35%"/>
       <figcaption>Tutorial quest in [*RoCitizens*](https://www.roblox.com/games/137877687/)</figcaption>
   </figure>
 
@@ -99,7 +99,7 @@ Quests can also teach players how to use those features by acting as tutorials. 
 The longer a player plays a game, the more familiar they become with its systems and content. When players are incentivized to try new things, they are less likely to fall into gameplay routines that become boring over time. Quests can add variety to a player's session by encouraging them to engage with content or systems that they might not have otherwise, or to revisit ones that they have not engaged with recently. This can be especially helpful for games with repetitive gameplay, or those that have less frequent updates, but any game can benefit by keeping its players engaged and ensuring that all of its areas remain active.
 
   <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-3.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-3.png" alt="Quest UI in The Wild West experience that displays tiles in various colors to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
       <figcaption>Quests in [*The Wild West*](https://www.roblox.com/games/2317712696/)</figcaption>
     </figure>
 
@@ -114,7 +114,7 @@ An experience's economy is tied to its core loop. When a player engages with the
 For these reasons, it can be beneficial to drip-feed resources to players over time, and one way to do that is through quest rewards. Dailies are an excellent delivery mechanism for currencies because the rewards are reliable, small, and valuable enough to encourage players to return every day.
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" alt="A pop-up UI in the Adopt Me! experience that displays tiles in a top-down list to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
       <figcaption>Daily quests in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
     </figure>
 
@@ -123,7 +123,7 @@ For these reasons, it can be beneficial to drip-feed resources to players over t
 Limited-time content is any type of consumable or collectible content like quests, pets, or cars that are only available to players temporarily. If players do not earn or complete the content before time runs out, they might never have another opportunity. For that reason, limited-time content spurs engagement as players increase their efforts in a rush to beat the clock.
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-10.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-10.png" alt="A close up view of the Discover page with various experience tiles that are themed for Halloween to inspire player engagement for the season." width="70%"/>
       <figcaption>Limited-time seasonal events</figcaption>
     </figure>
 
@@ -140,7 +140,7 @@ Quests can act as a progression system by providing a structured way to advance 
 [Season Passes](../../production/game-design/season-pass-design.md) are progression systems that incorporate quests. In [_Dragon Adventures_](https://www.roblox.com/games/3475397644/), players complete quests called "missions" in order to earn points toward reward tiers. The quests are all activities that are tied to the core loop mechanics of hatching and raising dragons. As players progress through the tiers, they unlock more rewards, culminating in unlocking an exclusive dragon as the final season reward. Through this UI, players can track their progress through the tiers as the deadline for the end of the season approaches.
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-11.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-11.png" alt="Missions UI in the Dragon Adventures experience that displays two rows of tiles to inform players what they need to do in for different reward tiers to obtain rewards for either the base gameplay or with a season pass." width="70%"/>
       <figcaption>Season pass progression in *Dragon Adventures*</figcaption>
     </figure>
 
@@ -149,7 +149,7 @@ Quests can act as a progression system by providing a structured way to advance 
 Quests can encourage players to play the game in more interesting and challenging ways that they might not have tried before. In this example from Jailbreak, players are required to not only shoot down an enemy helicopter, but to do so while riding in a vehicle – a challenge that they might never attempt otherwise. As evidenced by the "impossible" rating, achieving this badge likely requires many attempts, during which the player is highly engaged.
 
   <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-4.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-4.png" alt="A close up view of an achievement badge for the Jailbreak experience that awards players who shoot down a helicopter while riding in a vehicle. The badge on the left-hand side displays a lightskinned blocky male avatar turned to his left to look at text that says Top Gun." width="70%"/>
       <figcaption>Achievement badge in *Jailbreak*</figcaption>
     </figure>
 
@@ -162,7 +162,7 @@ In addition to their objectives, quantities, and rewards, quests can optionally 
 In [_Spellbound_](https://www.roblox.com/games/6468323505/), the player accepts a quest from an NPC named Moritor, who needs help retrieving a potion to cure his baldness. The text tells the player not just what to do, but why, and it does so in a way that contributes to the game's humorous tone and experience. Even the quest's reward, a hat, is thematically tied to the story.
 
   <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-5.png" width="70%"/>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-5.png" alt="Quest UI in the form of a red scroll that displays both narrative from the blocky male character to the right of the scroll, as well as an objective prompt and rewards players will earn if they complete the quest." width="70%"/>
       <figcaption>Quest narrative in *Spellbound*</figcaption>
     </figure>
 
