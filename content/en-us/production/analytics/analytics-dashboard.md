@@ -12,10 +12,7 @@ Analytics Dashboard helps you measure and gain insight into your experience's pe
 
 Any experience with more than 10 Daily Active Users (DAU) and 10 play hours for 7 consecutive days is eligible for accessing all KPIs on the dashboard.
 
-The dashboard also provides the following statistics data:
-
-- [Sales Data](#sales-data) that you can download and analyze in custom ways.
-- [Developer Statistics](#developer-statistics) on your experience health and revenue that you can view and download.
+The dashboard also provides [Sales Data](#sales-data) that you can download and analyze in custom ways.
 
 ## Setting Up Analytics Dashboard
 
@@ -174,69 +171,3 @@ On the `.csv` sales data sheet, each sold item has the following attributes and 
 | Hold Status        | The status of whether Robux from this sale have been released to you or are still in a hold.                                                                                                                                | `Released`, `Held`, `Cancelled`       |
 | Revenue            | The amount of Robux you receive for the purchase, which is the item listing price excluding any [Marketplace Fees](../../art/marketplace/marketplace-fees-and-commissions.md), Affiliate Fees, and Recurring Group Payouts. | `50`                                  |
 | Price              | The item listing price, which is the amount of Robux that the buyer paid for the purchase.                                                                                                                                  | `10`                                  |
-
-## Developer Statistics
-
-With the **Developer Statistics** dashboard, you can view and download key statistics data on your experience health and revenue for custom analytics. The dashboard includes the following statistics:
-
-- [Live stats](#live-stats) on the amount of users currently visiting an experience and the platform they are using.
-- [Filtered devices](#filtered-devices) that can't access your experience due to performance issues and their crash rate.
-- [Historical data](#historical-data) on the total number of user visits and the average amount of time each user stayed by platform and time range.
-- [Developer Product sales](#developer-product-sales) daily and monthly stats.
-- [Premium](../../production/monetization/engagement-based-payouts.md#accessing-payout-data) membership payout and visit data.
-
-<Alert severity = 'warning'>
-The Developer Statistics dashboard is a legacy feature that might not reflect the real-time data of your experience. Use alternatives such as [Sales Data](#sales-data) and [Engagement Dashboard](../../production/analytics/engagement.md) for more accurate statistics.
-</Alert>
-
-### Accessing Developer Statistics
-
-To access the Developer Statistics dashboard of your or your group's experience:
-
-1. Navigate to the [Creations](https://create.roblox.com/creations) page of **Creator Dashboard**, which lists all your experiences.
-   - For group-owned experiences, click the **Creator Hub** dropdown to select the target group.
-2. Select the experience for which you want to view the developer stats.
-3. On the **Analytics** category of the navigation menu, select **Developer Stats**.
-
-### Live Stats
-
-**Live Stats** displays the number of users in the entire experience and the number of live servers in use. In addition to the total number of users, it also has the number of users on each platform, including **Computer**, **Tablet**, **Phone**, and **Console**. The system updates the data every 30 seconds.
-
-Live stats data is useful for learning the distribution of users on different platforms. When implementing features and evaluating performance, you can prioritize supporting the user-preferred platforms to retain your user base.
-
-<img src="../../assets/analytics/developer-stats/Live-Stats.png" width= "80%" />
-
-### Filtered Devices
-
-**Filtered Devices** displays the devices that failed to access your experience due to performance issues. For each filtered device, the dashboard also provides a crash rate, which is calculated by the number of client crashes / the number of successful client connections. The system clears and re-calculates filtered devices and crash rates every time you update your experience with a new version.
-
-Filtered devices data is useful to determine how compatible your experience is with older hardware. If your experience has a variety of users from different platforms and no filtered devices, it is a good indicator that your experience is compatible with a wide variety of hardware.
-
-### Historical Data
-
-**Historical Data** displays hourly, daily, and monthly visit and revenue data of each platform, including **computer**, **tablet**, **phone**, and **console**. This data can help you understand your user retention and revenue based on the platform. The dashboard includes the following two charts:
-
-<table>
-  <thead>
-    <tr>
-      <th>Chart Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Visits</td>
-      <td>The amount of times users have visited your experience.</td>
-    </tr>
-    <tr>
-      <td>Average Visit Length</td>
-      <td>The average amount of time in minutes that users have spent in your experience.</td>
-    </tr>
-  </tbody>
-</table>
-
-<img src="../../assets/analytics/developer-stats/Chart-Visits.png" width= "80%" />
-
-### Developer Product Sales
-
-**Developer Product Sales** displays the total number of users who visit your experience, the average amount of time they visit, and how much Robux you have earned from in-experience [Developer Product](../../production/monetization/developer-products.md) sales, in daily and monthly tables. You can filter the data by platform, including **computer**, **tablet**, **phone**, and **console**. This data is useful to see how much Developer Products contribute to your total Robux revenue and identify your most popular developer product.

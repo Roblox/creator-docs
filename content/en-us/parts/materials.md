@@ -15,10 +15,10 @@ The easiest way to interact with materials is through Studio's **Material&nbsp;M
 
 <Tabs>
   <TabItem label="Home Tab">
-    <img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="846" height="156" alt="Material Manager button in Studio toolbar Home tab" />
+    <img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" height="156" alt="Material Manager button in Studio toolbar Home tab" />
   </TabItem>
   <TabItem label="Model Tab">
-    <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="850" height="156" alt="Material Manager button in Studio toolbar Model tab" />
+    <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="672" height="156" alt="Material Manager button in Studio toolbar Model tab" />
   </TabItem>
 </Tabs>
 
@@ -124,7 +124,7 @@ The **Material Generator** is designed to create material variants from text ent
 
 1. Open the **Material Generator** tool from the [Home](../studio/home-tab.md) tab.
 
-   <img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="778" alt="Material Generator button in Studio toolbar Home tab" />
+   <img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator button in Studio toolbar Home tab" />
 
 2. In the text box at the top of the window, enter keywords and then click the **Generate** button. Generating satisfying results can be an iterative process requiring a long list of descriptors to help focus in on the material you want. Here are some tips:
 

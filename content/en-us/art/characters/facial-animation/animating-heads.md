@@ -13,7 +13,7 @@ In all methods, creating and combining multiple facial expressions over a durati
 
 After you create and publish a head that supports facial animation to Roblox, you can play the animation from a script or replace a character's default animation with your new animation. These animations can make your characters feel more expressive and full of life, such as playing a silly expression when a character walks, or an annoyed expression when a character is idle.
 
-<img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Overview.png" width="80%" />
+<img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Overview.png" alt="A view of Studio where the Face Animation Editor, Animation Editor, and viewport are visible. The viewport shows a close up view of a blocky male avatar blinking with his left eye." width="80%" />
 
 ## Creating Animations
 
@@ -30,12 +30,12 @@ To create an animation by inserting individual FACS values:
 1. In the **track list** of the Animation Editor, click the **plus icon**. A contextual menu displays additional tracks you can add to the track list.
 2. Hover over **Brows**, **Eyes**, **Jaw**, **Mouth**, or **Tongue**. A contextual menu displays all mapped FACS poses for that region of the face.
 
-   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/FACS-Popup.jpg" width="60%" />
+   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/FACS-Popup.jpg" alt="A close up view of the Animation Editor with the contextual menu and its submenu expanded. The plus icon is highlighted to signify how to open the contextual menu." width="60%" />
 
 3. Select a FACS pose. An animation track for that FACS pose displays in the track list.
 4. In the values input, enter a number between **0** and **1** to manipulate the body part into a new position. For example, if you change `LeftEyeClosed` to 1, the character's left eye closes.
 
-   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Animation-Track-Values-Input.jpg" width="60%" />
+   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Animation-Track-Values-Input.jpg" alt="A close up view of the track list in the Animation Editor. The values input is highlighted." width="60%" />
 
 ### Using the Face Animation Editor
 
@@ -79,7 +79,7 @@ To create an animation for your head using the Face Animation Editor:
 
 1. In the **track list** of the Animation Editor, click the **Face** button. The **Face Animation Editor** displays to the left of the track list.
 
-   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Face-Button.jpg" width="50%" />
+   <img src="../../../assets/avatar/dynamic-heads/animating-dynamic-heads/Face-Button.jpg" alt="A close up view of the track list in the Animation Editor. The Face button is highlighted." width="50%" />
 
 2. In the **Face Animation Editor**, adjust sliders for the body parts you want to manipulate. Animation tracks for each facial part you manipulate automatically display in the track list along with keyframes for your current position in the timeline. The character's face also updates in the viewport.
 
@@ -97,8 +97,7 @@ When you export a head that supports animation to Studio, it becomes available f
 
 You can export head animations using the same workflow as [exporting other animations](../../../animation/editor.md#exporting-an-animation). Once the upload is complete, copy the animation's asset ID by clicking the copy button. **This ID is required for scripting animations**.
 
-<img src="../../../assets/studio/general/Publish-Copy-Asset-ID.png"
-   width="60%" />
+<img src="../../../assets/studio/general/Publish-Copy-Asset-ID.png" alt="A close up view of pop-up window that displays after you upload an asset. The Copy Asset ID button is highlighted." width="60%" />
 
 ## Scripting Animations
 

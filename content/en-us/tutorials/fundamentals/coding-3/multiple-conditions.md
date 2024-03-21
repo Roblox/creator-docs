@@ -40,9 +40,7 @@ if finishTime > 10 and <= 15 then
 end
 ```
 
-One problem with this method is that you must account for every scenario. Another is that it has many lines of code, which becomes difficult to read.
-
-A better way is to code a single if statement and use the keyword `elseif` to provide alternative conditions to test if the first condition isn't true.
+A more readable and efficient way to code this is to use a single if statement and use the keyword `elseif` to provide alternative conditions to test if the previous conditions aren't true.
 
 ```lua title="Uses elseif and else"
 if finishTime < 5  then
@@ -51,12 +49,10 @@ elseif finishTime >= 5 and <= 10 then
    -- Get a silver medal
 elseif finishTime > 10 and <= 15 then
    -- Get a bronze medal
-else
-   -- Do not award a medal
 end
 ```
 
-When the if/then statement runs, it'll start at the top and run the code only the **first** true condition it finds.
+When the if/then statement runs, it'll start at the top and only run the code for the **first** true condition it finds.
 
 ## Setting Up the Race Course
 
