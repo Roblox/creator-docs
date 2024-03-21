@@ -34,7 +34,7 @@ To practice, you'll create a script that stores player items in a table, then ad
     table.insert(playerItems, "Bread")
     table.insert(playerItems, "Sleeping Bag")
 
-    print(playerItems )
+    print(playerItems)
    ```
 
 3. Run the project. In Output, expand the three dots `...` to see the printed table.

@@ -355,8 +355,8 @@ methods:
       Bind a `Enum.KeyCode` with a specific `Enum.UserInputType` to trigger
       `Class.Tool.Activation` and `Class.ClickDetector` events.
     description: |
-      Bind an `Enum.KeyCode` that can be used with a `Enum.UserInputType` to
-      activate `Class.ClickDetector` events and `Class.Tool` objects. When the
+      Bind a `Enum.KeyCode` that can be used with a `Enum.UserInputType` to
+      activate `Class.ClickDetector` events, `Class.Tool|Tools`, and `Class.GuiButton|GuiButtons`. When the
       given key/button is pressed, it fires the `Class.Mouse.Button1Down` event
       on the mouse sent to `Class.Tool.Equipped`. This in turn fires the
       `Class.Tool.Activated` event if `Class.Tool.ManualActivationOnly` is not
