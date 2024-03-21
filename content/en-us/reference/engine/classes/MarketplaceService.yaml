@@ -1198,7 +1198,7 @@ callbacks:
         does not need to be in the server for the result of the callback to be
         recorded on the backend.
 
-      - The callback is called for a player after the PlayerAdded event has
+      - The callback is called for a player after the `Class.Players.PlayerAdded` event has
         been fired for that player.
 
       - The callback for a given purchase may run on two different servers at
