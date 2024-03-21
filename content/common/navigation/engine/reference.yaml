@@ -1945,6 +1945,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
         ignoreTranslation: true
+      - title: RobloxEditableMesh
+        path: /reference/engine/classes/RobloxEditableMesh
+        type: engineapi
+        source: /reference/engine/classes/RobloxEditableMesh.yaml
+        ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
         type: engineapi
@@ -3617,6 +3622,11 @@ navigation:
         path: /reference/engine/enums/DebuggerStatus
         type: engineapi
         source: /reference/engine/enums/DebuggerStatus.yaml
+        ignoreTranslation: true
+      - title: DecreaseMinimumPartDensityMode
+        path: /reference/engine/enums/DecreaseMinimumPartDensityMode
+        type: engineapi
+        source: /reference/engine/enums/DecreaseMinimumPartDensityMode.yaml
         ignoreTranslation: true
       - title: DevCameraOcclusionMode
         path: /reference/engine/enums/DevCameraOcclusionMode

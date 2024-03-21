@@ -19,6 +19,8 @@ navigation:
     path: /studio/pivot-tools
   - title: Terrain Editor
     path: /studio/terrain-editor
+  - title: Texture Generator
+    path: /studio/texture-generator
   - title: Rig Builder
     path: /studio/rig-builder
   - heading: Scripting Tools

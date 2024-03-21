@@ -56,3 +56,8 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
+  - name: UserVerifiedForVoice
+    summary: ''
+    value: 512
+    tags: []
+    deprecation_message: ''

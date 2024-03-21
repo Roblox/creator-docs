@@ -9,12 +9,12 @@ There are different ways to make code run over and over. If you want the code to
 
 ## How For Loops Work
 
-For loops use three values to control how many times they run: a **control** variable, an **end** value, and an **increment** value. Starting from the value of the control variable, the for loops will either count up or down each time it runs code inside the loop until it passes the end value. Positive increment values count up, negative increment values count down.
+For loops use three values to control how many times they run: a **control** variable, an **end** value, and an **increment** value. Starting from the value of the control variable, the for loops will either count up or down each time it runs code inside the loop until it passes the end value. Positive increment values count up, and negative increment values count down.
 
 <img src="../../../assets/education/coding-4/forLoop_annotatedExample.png" width="50%" />
 
 <Alert severity="info">
-Different computer languages might use other terminology with for loops. For instance, in C# or Javascript, the end value might be called the condition.
+Different computer languages might use other terminology with for loops. For instance, in C# or JavaScript, the end value might be called the condition.
 </Alert>
 
 ## Steps in a For Loop
@@ -62,7 +62,7 @@ To see how a for loop works, use these steps to code a for loop that starts at 1
    ```
 
    <Alert severity="info">
-   A for loop doesn't need an increment. Without one, the loop will, by default, add 1 after each loop.
+   A for loop doesn't explicitly need an increment. Without one, the loop will, by default, add 1 after each loop.
 
    `for count = 10, 0`
    </Alert>

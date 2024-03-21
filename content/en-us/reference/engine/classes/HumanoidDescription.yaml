@@ -34,13 +34,13 @@ deprecation_message: ''
 properties:
   - name: HumanoidDescription.AccessoryBlob
     summary: |
-      A JSON formatted array of Layered Accessories where each table in the
-      entry in the array describes an accessory's AssetId, AccessoryType, Order,
-      and (optionally) Puffiness as key-value pairs.
+      A JSON formatted array of Layered clothing where each table in the entry
+      in the array describes an accessory's AssetId, AccessoryType, Order, and
+      (optionally) Puffiness as key-value pairs.
     description: |
-      A JSON formatted array of Layered Accessories where each table in the
-      entry in the array describes an accessory's AssetId, AccessoryType, Order,
-      and (optionally) Puffiness as key-value pairs. This can be edited in the
+      A JSON formatted array of Layered clothing where each table in the entry
+      in the array describes an accessory's AssetId, AccessoryType, Order, and
+      (optionally) Puffiness as key-value pairs. This can be edited in the
       properties windows for the `Class.HumanoidDescription`.
 
       To make changes from Lua (which is recommended over editing the JSON
