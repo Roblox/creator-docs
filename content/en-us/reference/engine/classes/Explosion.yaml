@@ -229,9 +229,9 @@ properties:
       can_save: true
   - name: Explosion.TimeScale
     summary: |
-      Value between 0-1 that controls the speed of the particle effect.
+      Value between 0 and 1 that controls the speed of the particle effect.
     description: |
-      A value between 0-1 that controls the speed of the particle effect. At 1
+      A value between 0 and 1 that controls the speed of the particle effect. At 1
       it runs at normal speed, at 0.5 it runs at half speed, and at 0 it freezes
       time.
     code_samples: []
