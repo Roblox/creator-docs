@@ -272,7 +272,7 @@ Attachments are points on the accessory model that connect to another attachment
 
 The [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically applies the following specifications for attachments on clothing assets:
 
-- **One attachment** - Each accessory, including layered accessories, require at least one attachment point to its associated body part.
+- **One attachment** - Each accessory, including layered clothing, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
 
 If setting attachment names manually, use the following `Class.Attachment` name for each accessory type:

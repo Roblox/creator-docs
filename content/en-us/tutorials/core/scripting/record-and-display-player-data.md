@@ -30,11 +30,11 @@ To create a module script:
    You are placing a module script into **ServerStorage** because you want to manage the coin collection
    logic on the server.
 
-   <img src="../../../assets/tutorials/record-and-display-player-data/Insert-ModuleScript.png" width="320" />
+   <img src="../../../assets/tutorials/record-and-display-player-data/Insert-ModuleScript.png" alt="Studio's Explorer window with both the ServerScriptService's plus icon and ModuleScript object highlighted." width="320" />
 
 1. Rename the module script to **PlayerData**.
 
-   <img src="../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-PlayerData.png" width="320" />
+   <img src="../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-PlayerData.png" alt="Studio's Explorer window with the PlayerData script highlighted under ServerStorage." width="320" />
 
 1. Replace the default code with the following code:
 
@@ -174,7 +174,7 @@ To create the leaderboard:
 1. In the **Explorer** window, create a **ModuleScript** in **ServerStorage**, then
 rename the module script to **Leaderboard**.
 
-   <img src="../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-Leaderboard.png" width="320" />
+   <img src="../../../assets/tutorials/record-and-display-player-data/ModuleScript-Renamed-Leaderboard.png" alt="Studio's Explorer window with the Leaderboard script highlighted under ServerStorage." width="320" />
 
 1. Replace the default code with the following code:
 
@@ -377,8 +377,7 @@ you've collected on the leaderboard UI. To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. Move your character to touch a coin. If your scripts are working correctly, the
 leaderboard UI displays and increase your coin count as you collect more coins.

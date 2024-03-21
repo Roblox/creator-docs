@@ -59,7 +59,7 @@ Textures are image files that define the surface appearance of your accessory. Y
   <figure><img src="../../assets/art/accessories/Attachment-Data-Model-Example.png" width="80%"/><figcaption>Geometry with the "_Att" suffix automatically convert to `Class.Attachment` objects in Studio</figcaption></figure>
 </GridContainer>
 
-For layered accessories, the attachment point is used to associate with the correct body part when the body ragdolls or is dismembered. In Studio, attachments are represented by `Class.Attachment` objects.
+For layered clothing, the attachment point is used to associate with the correct body part when the body ragdolls or is dismembered. In Studio, attachments are represented by `Class.Attachment` objects.
 
 Attachments for clothing items are automatically generated in Studio using the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
 
@@ -81,7 +81,7 @@ A rigging armature defines how a layered asset can move with a character model. 
   <figure><img src="../../assets/art/accessories/Outer-Cage-Example.png" /><figcaption>The outer cage defines the outer surface of the clothing item where any additional clothes can wrap and layer over</figcaption></figure>
 </GridContainer>
 
-Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt stretches and fits over a character body. The outer cage of a t-shirt defines how additional layered accessories fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
+Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt stretches and fits over a character body. The outer cage of a t-shirt defines how additional layered clothing fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
 
 ## Creation Process
 

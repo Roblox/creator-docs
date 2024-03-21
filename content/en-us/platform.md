@@ -4,42 +4,36 @@ description: Learn about the unique value propositions on Roblox.
 next: /creation
 ---
 
-**Learn about the unique value propositions on Roblox.**
+<h5>Learn about the unique value propositions on Roblox</h5>
 
-Roblox's vision is to reimagine how people come together. As a **User-Generated Content** (UGC) platform, we provide the technology for creators to bring that vision to life. Whether you're an individual creator, a professional development studio, or something in between, we're committed to supporting and growing our community so we can make Roblox better and empower you to create all you can imagine.
+Our vision is to reimagine how people come together. Whether you're an individual creator, a professional development studio, or something in between, we're committed to supporting and growing our community so we can make Roblox better and enable the creation of anything, anywhere, by anyone.
 
-Our platform provides you with unparalleled opportunities to create content like simple avatar accessories to immersive 3D experiences. Building successful experiences takes time and effort. But there is **low risk and no additional cost** to building on Roblox, and we provide the tools, services, and support to help you build the most immersive experiences.
+Our platform provides you with unparalleled opportunities to create content from simple UGC items to the immersive experiences. Building successful experiences takes time and effort. But Roblox offers creators everything you need to create, scale and monetize.
 
-- We give you everything you need to start creating for free.
-- Our tools let you rapidly iterate and test your experiences.
-- You have instant global access to a large audience.
-
-## Everything You Need
+## Create
 
 <img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" width="100%" />
 
-On Roblox you can start building for free, have everything you need in one place, and are only charged **after** you make money. We provide services, developer support, and free tools such as [Roblox Studio](./studio/setting-up-roblox-studio.md) to help you get started immediately. We also eliminate complicated fee structures by covering hosting, storage, customer support, localization, regulatory requirements, payment processing, and platform fees. And finally, you only pay a percent of money earned **after** you earn the money. With no upfront costs, and everything you need in one place to get started, there is minimal risk to building rich content or an amazing experience on Roblox.
+Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setting-up-roblox-studio.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
 
-## Rapid Iteration
+With Roblox, you can deploy globally in seconds across major platforms&nbsp;— from mobile to console to desktop to VR&nbsp;— and in multiple languages. We also simplify creation by providing hosting and an infrastructure that powers automatic, synchronous real-time gameplay as well as covering storage, localization, and payment processing.
+
+## Scale
 
 <img src="./assets/getting-started/platform-overview/Rapid-Iteration.jpg" width="100%" />
 
-With [Roblox Studio](./studio/setting-up-roblox-studio.md), you can modify your experiences and publish immediately across console, desktop, and mobile devices without requiring additional approvals from these other platforms (all creators must abide by our [Terms of Use](https://www.roblox.com/info/terms) to publish their experiences with us). This lets you make real-time updates and get feedback from your global users, so you can continuously improve your experience.
+On Roblox, you can reach a massive, global audience of 71.5M daily active users (DAUs) across 190 countries who spend an average of 2.4 hours on the platform everyday. Not only that, 58% of our DAUs are over the age of 13 years old and it's our fastest growing segment with +28% growth year over year. (Data as of Q4 '23). Additionally, our automatic chat translations allow users worldwide to easily communicate with each other across 16 languages.
 
-In addition, with our streaming architecture people can instantly access your experiences, and even jump from one experience to another, without downloads. This lets you create immersive multiplayer experiences quickly with less risk and scale those experiences to everyone immediately.
+Our efficient discovery capabilities offer a massive opportunity to find the right audience and acquire new users.
 
-## Instant Global Access
+We also provide a robust analytics suite of tools to measure and gain insights on your experience's performance. This allows you to adjust content strategies and rapidly iterate to get your desired outcome.
 
-<img src="./assets/getting-started/platform-overview/Instant-Global-Access.jpg" width="100%" />
+## Monetize
 
-As of the quarter ending June 30, 2023, there were more than 65.5 million average DAUs on Roblox, the majority of whom joined through word of mouth to engage with their friends. Users discover content and experiences through personalized and social recommendations or through search, and can join experiences seamlessly without downloading another app. This combination of a large audience, a social graph, recommendations, and seamless teleportation between experiences drives meaningful organic growth. You can further boost growth through our low-cost ad engine.
+<img src="./assets/landing/Growth_Banner_Landing.jpg" width="100%" />
 
-## Committed to Our Community
+Creators of all sizes, from an individual to small developer teams to large developer studios, are finding success. In 2023, our creators earned $741 million\*, up 19% year-over-year.
 
-<img src="./assets/getting-started/platform-overview/Community.jpg" width="100%" />
+We want to help creators monetize and find success on Roblox, and we're constantly developing new ways for our community to earn. We empower creators with a wide array of ways to earn money on Roblox that includes in-experience purchases, ads as well as selling avatar items or creator plugins. See [Earning on Roblox](./production/earning-on-roblox.md) to learn more about how to make money on Roblox. And, with efforts like the [Creator Fund](./creator-fund.md), we seek to fund and support the next generation of experiences.
 
-Not only do we minimize all risks to develop and grow your experience on Roblox, but we are also committed to supporting our community with the right economics. This means 1) charging you only after you earn money, 2) running as lean as possible so you can take home more, and 3) continuing to find more opportunities for you to scale your experience and earn money.
-
-For example, with the launch of engagement based payments (EBP), we started paying developers for simply having engaging experiences. See [Earning on Roblox](./production/earning-on-roblox.md) to learn more about how to make money on Roblox. And with efforts like [Game Fund](./production/monetization/game-fund.md), we seek to fund and support the next generation of experiences.
-
-While Roblox minimizes the risks and costs associated with building an experience, it is not trivial to build a successful experience. It is important to learn who you are building for, design with engagement in mind, and thoughtfully leverage Roblox's unique social features. To help you build experiences, Roblox provides support to our developer community through resources like [Level Up](./production/game-design/index.md) and [UGC Events](./production/promotion/events-platform.md), and even connects you with top talent through our [Talent Hub](https://talent.roblox.com). You can also read the documentation on this site and visit our [Developer Forum](https://devforum.roblox.com) for more tips and guidance on building great experiences.
+<figcaption>\* ~24k creators earned >185k Robux (~$650 at the DevEx rate) on Roblox in the last twelve months, which represents ~1/1000 of the 25 million creators monetizing on Roblox (as of Dec 31, 2023)</figcaption>

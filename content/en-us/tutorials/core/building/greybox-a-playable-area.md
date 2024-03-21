@@ -40,7 +40,7 @@ A stud is Studio's primary unit for length, and it's equivalent to 28cm.
 
 </Alert>
 
-<img src="../../../assets/tutorials/block-out-a-playable-area/Platform-Levels.jpg" />
+<img src="../../../assets/tutorials/block-out-a-playable-area/Platform-Levels.jpg" alt="A distant view of the sample island jump experience's greybox geometry. Each level of height difference between sea stacks is highlighted." />
 
 <Alert severity="info">
 
@@ -60,12 +60,13 @@ While you can use almost any part shape to represent your sea stack platforms, i
 with **cylinder** parts because they offer a flat surface for you to land on when you playtest jumping from platform to platform,
 and because they are similar in shape to the sea stack meshes you will use in the final section of the tutorial.
 
+<div><b>A comparison between the sample Island Jump experience's greybox and final geometry</b></div>
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Greybox.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Greybox.jpg" alt="The sample Island Jump experience's greybox geometry." />
   </figure>
   <figure>
-    <img width="100%" img src="../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Final.jpg" />
+    <img width="100%" img src="../../../assets/tutorials/block-out-a-playable-area/Add-Platforms-Final.jpg" alt="The sample Island Jump experience's final geometry." />
   </figure>
 </GridContainer>
 
@@ -80,7 +81,7 @@ To create an organization structure:
 1. In the **Explorer** window, hover over the **Workspace** and click the **&CirclePlus;** icon. A contextual menu displays.
 1. From the contextual menu, insert a **Folder** object. A folder object displays that you will use to contain all assets for the 3D world.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Folder.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Folder.png" alt="Studio's Explorer window with both the Workspace's plus icon and Folder object highlighted." width="320" />
 
 1. Rename the new folder `World`.
 
@@ -95,11 +96,11 @@ To create an organization structure:
 1. Hover over the **World** folder and click the **&CirclePlus;** icon.
 1. From the contextual menu, insert a **Model**.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Model.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Add-Model.png" alt="Studio's Explorer window with both the World folder's plus icon and Model object highlighted." width="320" />
 
 1. **Rename** the model to `Blockout_Parts`.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Model-Renamed.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Model-Renamed.png" alt="Studio's Explorer window with the new Blockout_Parts model highlighted under the World folder." width="320" />
 
 ### Insert Parts
 
@@ -117,30 +118,30 @@ To insert a cylinder part for your first platform:
 1. In the menu bar, select the **Home** tab.
 1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
 
-   <img src="../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" alt="Studio's Home tab with both the Part tool's dropdown arrow and Cylinder object highlighted." width="800" />
 
 1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
 1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../parts/index.md#manipulating-parts).
 
-   <img src="../../../assets/studio/general/Home-Tab-Move.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="800" />
 
-   <img src="../../../assets/studio/general/Home-Tab-Scale.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Scale.png" alt="Studio's Home tab with the Scale tool highlighted." width="800" />
 
-   <img src="../../../assets/studio/general/Home-Tab-Rotate.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Rotate.png" alt="Studio's Home tab with the Rotate tool highlighted." width="800" />
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" width="80%" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
 1. Using the same process, add and configure at least seven more sea stack platforms with increasing levels of height into the **Blockout_Parts** model.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island surrounded by water, and the water itself." width="80%" />
 
 1. In the **Explorer** window, select the **Block_Out** model.
 1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
-   <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Anchor.png" alt="Studio's Home tab with the Anchor tool highlighted." width="800" />
 
   </TabItem>
   <TabItem key = "2" label="Recreate the Sample">
@@ -150,11 +151,11 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
 1. In the menu bar, select the **Home** tab.
 1. In the **Insert** section, click the **Part** dropdown arrow, then select **Cylinder**. A cylinder part displays in the viewport.
 
-   <img src="../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Part-Menu-Cylinder.png" alt="Studio's Home tab with both the Part tool's dropdown arrow and Cylinder object highlighted." width="800" />
 
 1. In the **Explorer** window, click and drag the new **Part** to the **Blockout_Parts** model. The part becomes a child of the model.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
 1. In the **Properties** window,
 
@@ -163,7 +164,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    1. Set **CFrame.Position** to **-23, -4, 9** so the top of the platform is only a short jump from the surface of the island.
    1. Set **CFrame.Orientation** to **0, 0, 90** so the flat surface of the cylinder faces toward the sky.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" width="80%" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
 1. Using this process, add and configure seven more sea stack levels with the following values for the rest of the sea stack platforms:
 
@@ -282,12 +283,12 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
    </tbody>
    </table>
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" width="80%"  />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Final-Platforms.jpg" alt="Many large cylinder objects partially sticking out of an island and its surrounding water." width="80%" />
 
 1. In the **Explorer** window, select the **Block_Out** model.
 1. In the **Home** tab, navigate to the **Edit** section, and click the **Anchor** icon. This ensures that the physics system doesn't move your parts when the experience starts.
 
-   <img src="../../../assets/studio/general/Home-Tab-Anchor.png" width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Anchor.png" alt="Studio's Home tab with the Anchor tool highlighted." width="800" />
 
   </TabItem>
 </Tabs>
@@ -307,7 +308,7 @@ To align parts:
 1. In the **Explorer** window, select all of your platforms.
 1. In the menu bar, navigate to the **Model** tab, then click the [Align Tool](../../../studio/align-tool.md). The **Align Tool** window displays.
 
-   <img src="../../../assets/studio/general/Model-Tab-Align-Tool.png" width="830" alt="Align Tool indicated in Model tab" />
+   <img src="../../../assets/studio/general/Model-Tab-Align-Tool.png" width="830" alt="Studio's Model tab with the Align tool highlighted." />
 
 1. In the **Align Tool** window,
 
@@ -317,7 +318,7 @@ To align parts:
 
 1. Click the **Align** button. All parts align on the Y axis according to the part with the lowest Y `Class.Part.Position` value.
    <figure>
-     <img src="../../../assets/tutorials/block-out-a-playable-area/Platforms-Aligned-Underwater.jpg" />
+     <img src="../../../assets/tutorials/block-out-a-playable-area/Platforms-Aligned-Underwater.jpg" alt="An underwater view of many cylinders that are aligned along their bottom edge." />
      <figcaption>All platforms align their bottom edge</figcaption>
    </figure>
 
@@ -332,9 +333,9 @@ There are four solid modeling tools:
 - **Negate** – Negates parts, which is useful for making holes and indentations.
 - **Separate** – Separates the union or intersection back into its individual parts.
 
-For the purposes of creating a hollow tunnel, you only need to use the Union and Negate tools. For a full breakdown of all of the tools, see [Solid Modeling](../../../parts/solid-modeling.md).
+For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [Solid Modeling](../../../parts/solid-modeling.md).
 
-<img src="../../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="754" />
+<img src="../../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the solid modeling tools highlighted." width="754" />
 
 To create a hollow tunnel:
 
@@ -380,17 +381,17 @@ To create a hollow tunnel:
    </tbody>
    </table>
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Start.jpg" width="740" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Start.jpg" alt="A close-up view of a gray block sticking out of a gray cylinder." width="740" />
 
 1. In the **Explorer** window, select the block part.
 1. In the **Model** tab, navigate to the **Solid Modeling** section, then click the **Negate** button. The part turns translucent.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Negate.jpg" width="740" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Negate.jpg" alt="A close-up view of a partially translucent pink block sticking out of a gray cylinder." width="740" />
 
 1. In the **Explorer** window, select both the negated part and the cylinder tunnel part.
 1. In the **Model** tab, navigate back to the **Solid Modeling** section, then click the **Union** button. The negated part is cut out from the overlapping tunnel cylinder.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Union.jpg" width="740" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Union.jpg" alt="A close-up view of a gray cylinder with an open tunnel through itself. The tunnel does not have a roof." width="740" />
 
 1. Rename the new union to something that reflects its height level and position, such as **Level_4b_Union**.
 1. Duplicate the sea stack platform underneath your new union, and position it so that it's on top of the tunnel. The sample **Island Jump - Building** experience positions the duplicate **Level_4b** platform above the union with the following values:
@@ -414,7 +415,7 @@ To create a hollow tunnel:
    </tbody>
    </table>
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Final.jpg" width="740" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Final.jpg" alt="A close-up view of a tunnel through a cylinder." width="740" />
 
 ## Playtest
 
@@ -430,18 +431,17 @@ To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. In the **Explorer** window, select the arrow next to your character model that displays your Roblox username. All of your character model's children objects display.
 1. Select **Humanoid**.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Character-Humanoid.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Explorer-Character-Humanoid.png" alt="Studio's Explorer window with the Humanoid object highlighted. The hierarchy of the Workspace to CharacterModel to Humanoid is also highlighted." width="320" />
 
 1. In the **Properties** window, navigate to the **Jump Settings** section, then enable **UseJumpPower**. The **JumpPower** property displays with a default value of **50**.
 1. Set **JumpPower** to **0**. This ensures your character is unable to jump, emulating the same starting state for players after you script the gameplay.
 
-   <img src="../../../assets/tutorials/block-out-a-playable-area/Humanoid-Jump-Settings.png" width="320" />
+   <img src="../../../assets/tutorials/block-out-a-playable-area/Humanoid-Jump-Settings.png" alt="Jump Settings with the JumpPower and UseJumpPower properties highlighted." width="320" />
 
    <Alert severity="info">
    If you can't see the **Properties** window, open the **View** tab and ensure **Properties** is selected in the **Show** section.

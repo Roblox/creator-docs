@@ -13,7 +13,7 @@ The fastest way to create a `Class.WeldConstraint` is by selecting **Weld** thro
 
 <img
 src="../../assets/studio/general/Model-Tab-Constraints-Create-Menu.png"
-width="740" alt="Constraint picker indicated in Studio toolbar" />
+width="754" alt="Constraint picker indicated in Studio toolbar" />
 
 Note that this tool behaves differently depending on how many `Class.BasePart|BaseParts` are selected when the tool is activated:
 

@@ -7,7 +7,7 @@ description: Explore the customization options for Roblox Studio.
 
 Many customization options are accessible via **File** &rarr; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). You can quickly locate known settings by typing search queries into the search field at the top of the window.
 
-<img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="Settings window with upper-left search field and sections menu indicated." />
+<img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="A close up view of the Studio Settings window. The search bar and settings navigation sections are highlighted." />
 
 ### Language
 
@@ -62,16 +62,16 @@ Commonly modified options include:
 
 You can reposition any window by click-dragging its **header bar** into the bounds of another window. When you do so, a floating **position selector** appears in the target window.
 
-<img src="../assets/studio/general/Docking-Position-Selector.jpg" width="800" alt="Position selector widget shown in center of 3D viewport." />
+<img src="../assets/studio/general/Docking-Position-Selector.jpg" width="800" alt="The position selector widget in 3D viewport on top of a darkened background." />
 
 Moving your mouse pointer over one of the selector's **icons** shows a preview of where the dragged window will move in context to the target region. For example, the "upper&nbsp;half" icon makes the dragged window occupy the upper half of the target region, while the "right&nbsp;column" icon makes the dragged window dock to the right side of the target region.
 
 <Tabs>
   <TabItem label="Upper Half">
-	<img src="../assets/studio/general/Docking-Reposition-Window-Upper-Half.jpg" width="800" alt="Upper Half icon selected in selector widget." />
+	<img src="../assets/studio/general/Docking-Reposition-Window-Upper-Half.jpg" width="800" alt="The position selector widget in 3D viewport with the Upper Half button highlighted. When you select this button, the 3D viewport displays a preview of where the window will move in context to the upper half of the screen." />
   </TabItem>
   <TabItem label="Right Column">
-    <img src="../assets/studio/general/Docking-Reposition-Window-Right-Column.jpg" width="800" alt="Right Column icon selected in selector widget." />
+    <img src="../assets/studio/general/Docking-Reposition-Window-Right-Column.jpg" width="800" alt="The position selector widget in 3D viewport with the Right Column button highlighted. When you select this button, the 3D viewport displays a preview of where the window will move in context to the right column of the screen." />
   </TabItem>
 </Tabs>
 
@@ -80,7 +80,7 @@ Moving your mouse pointer over one of the selector's **icons** shows a preview o
 If you choose the **center** icon of the [position selector](#repositioning-windows), the dragged window will **group** into the target region as a tab. This allows you to set up tab groups of commonly used windows.
 
 <figure>
-  <img src="../assets/studio/general/Docking-Grouped-Tabs.png" width="320" alt="Three windows grouped together as tabs." />
+  <img src="../assets/studio/general/Docking-Grouped-Tabs.png" width="320" alt="An example of an Explorer window if you choose the center icon of the position selection. It includes three tabs at the bottom of the window: the Explorer window, the Properties window, and the Terrain Editor window." />
   <figcaption>Three windows grouped together as tabs</figcaption>
 </figure>
 
@@ -90,11 +90,11 @@ To float a window freely of other windows, click the small dropdown arrow in the
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/studio/general/Docking-Options-Float.png" width="369" alt="Small dropdown arrow in upper-right of window with Float selected." />
+    <img src="../assets/studio/general/Docking-Options-Float.png" width="369" alt="A close up view of the Explorer window with the small dropdown arrow and its Float menu item highlighted. This allows you to float a docked window." />
     <figcaption>Float a docked window</figcaption>
   </figure>
   <figure>
-    <img src="../assets/studio/general/Docking-Options-Dock.png" width="386" alt="Small dropdown arrow in upper-right of window with Dock selected." />
+    <img src="../assets/studio/general/Docking-Options-Dock.png" width="386" alt="A close up view of the Explorer window with the small dropdown arrow and its Dock menu item highlighted. This allows you to re-dock a floating window." />
     <figcaption>Re-dock a floating window</figcaption>
   </figure>
 </GridContainer>
@@ -104,13 +104,13 @@ To float a window freely of other windows, click the small dropdown arrow in the
 To maximize screen space for the 3D viewport, you can **pin** windows (or&nbsp;an entire [group](#grouping-windows) of windows) as **vertical tabs** on the left or right side of the viewport. Once pinned, you can temporarily open any window by clicking its tab&nbsp;&mdash; this does not disturb other windows, and the expanded window will automatically collapse when you click in another window or click its tab again.
 
 <figure>
-  <img src="../assets/studio/general/Docking-Pinned-Tabs.jpg" width="800" alt="Three windows pinned to the right side of the viewport." />
+  <img src="../assets/studio/general/Docking-Pinned-Tabs.jpg" width="800" alt="An example 3D viewport where the Explorer, Properties, and Terrain Editor windows are pinned to the right of the screen." />
   <figcaption>Three windows pinned to the right side of the viewport</figcaption>
 </figure>
 
 To pin a window or an entire [group](#grouping-windows) of windows, click the "pin" button. Alternatively, to un-pin a pinned window/group, open it and click the "expand" button.
 
 <figure>
-  <img src="../assets/studio/general/Docking-Options-Pin.png" width="320" alt="Pin button in upper-right corner of window." />
+  <img src="../assets/studio/general/Docking-Options-Pin.png" width="320" alt="A close up view of the Explorer window with the Pin or Un-Pin button highlighted." />
   <figcaption>Pin or un-pin a window/group</figcaption>
 </figure>

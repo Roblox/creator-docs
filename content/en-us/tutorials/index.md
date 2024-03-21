@@ -10,7 +10,7 @@ that walks you through how to build, script, and polish your experiences with
 amazing art and visuals.
 
 <br /> <br />
-<a href="" id="prereqs"> </a>
+
 <BaseAccordion>
 <AccordionSummary>
 <Typography variant="h4">Prerequisites</Typography>

@@ -29,11 +29,11 @@ the workspace:
 </thead>
 <tbody>
 <tr>
-<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="Block part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="Sphere part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="Cylinder part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="Wedge part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="Corner Wedge part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single gray block part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single gray sphere part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single gray cylinder part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single gray wedge part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single gray corner wedge part" /></td>
 </tr>
 </tbody>
 </table>
@@ -53,11 +53,11 @@ create lifelike objects that you can pose and animate.
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/meshes/Mesh-Textured.jpg" />
+    <img src="../assets/modeling/meshes/Mesh-Textured.jpg" alt="A high-quality treasure chest mesh with a texture." />
     <figcaption>Mesh with texture</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/meshes/Mesh-SurfaceAppearance.jpg" />
+    <img src="../assets/modeling/meshes/Mesh-SurfaceAppearance.jpg" alt="A realistic looking leafy bush with shadows and depth."/>
     <figcaption>Mesh with SurfaceAppearance</figcaption>
   </figure>
 </GridContainer>
@@ -66,7 +66,7 @@ create lifelike objects that you can pose and animate.
 
 The `Class.Terrain` object allows you to generate and sculpt detailed and realistic terrain environments, such as mountains, bodies of water, grass-covered hills, or a flat desert. Using the [Terrain Editor](../studio/terrain-editor.md), you can easily generate and alter large regions of terrain.
 
-<img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="Desert terrain with mountains in the distance" />
+<img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="A viewport view of desert terrain with mountains in the distance." />
 
 ## Models
 
@@ -78,11 +78,11 @@ also contain scripts that act on the individual objects of the model.
 
 <GridContainer numColumns="2">
 	<figure>
-		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" alt="Model named Octavia" />
+		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" alt="A humanoid model of a creepy girl with four red eyes standing in an A pose. She wears a maroon dress with webs and bright red stockings." />
 		<figcaption>A model named Octavia</figcaption>
 	</figure>
 	<figure>
-    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="320" alt="The groupings which comprise the Octavia model in Studio's Explorer window" />
+    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="320" alt="A close up view of the model's children in the Explorer window that comprise the model." />
     	<figcaption>The groupings that comprise the model</figcaption>
     </figure>
 </GridContainer>
