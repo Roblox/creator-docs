@@ -16,7 +16,7 @@ properties:
     summary: |
       The size in offsets of the area that is scrollable.
     description: |
-      The size in offsets of the area that is scrollable. By default, this property is
+      The size in offsets of the area that is scrollable. This property is
       set to the maximum of the `Class.ScrollingFrame.CanvasSize|CanvasSize`
       property and the size of the children if
       `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize` is set
