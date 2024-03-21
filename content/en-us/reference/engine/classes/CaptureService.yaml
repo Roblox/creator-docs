@@ -2,8 +2,13 @@ name: CaptureService
 type: class
 category:
 memory_category: Instances
-summary: 'A service which provides developer control over screenshot capture features.'
-description: 'CaptureService is a client-sided service that allows users to capture areas of your experience and share them with other players. CaptureService is useful for a painting experience to share artwork with players, or an adventure experience to help users remember their achievements later on.'
+summary: |
+  A service which provides developer control over screenshot capture features.
+description: |
+  **CaptureService** is a client-side service that allows users to capture areas
+  of your experience and share them with other players. This service may be
+  useful in a painting experience for participants to share artwork with others,
+  or an adventure experience to help users remember their achievements later on.
 code_samples: []
 inherits:
   - Instance
@@ -15,8 +20,11 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CaptureService:CaptureScreenshot
-    summary: 'Take a screenshot associated with the returned contentId.'
-    description: 'Take a screenshot that can be identified by a temporary contentId. This function does not save the screenshot to the gallery.'
+    summary: |
+      Takes a screenshot associated with the returned `contentId`.
+    description: |
+      Takes a screenshot that can be identified by a temporary `contentId`.
+      This method does not save the screenshot to the gallery.
     code_samples: []
     parameters:
       - name: onCaptureReady
@@ -31,14 +39,19 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
-    summary: "Save the specified contentIds to the player's gallery."
-    description: 'Ask the `Class.Players.LocalPlayer|LocalPlayer` to save the specified screenshots to their gallery. <Alert severity="info">The gallery can be accessed in the Captures tab of the Roblox escape menu.</Alert>'
+    summary: |
+      Prompts saving of the specified content IDs to the user's gallery.
+    description: |
+      Prompts the `Class.Players.LocalPlayer|LocalPlayer` to save the specified
+      screenshots to their gallery, accessible from the **Captures** tab of the
+      in-experience Roblox menu.
     code_samples: []
     parameters:
       - name: contentIds
         type: Array
         default:
-        summary: 'The contentIds of the screenshots that will save.'
+        summary: |
+          The content IDs of the screenshots to save.
       - name: resultCallback
         type: Function
         default:
@@ -51,14 +64,19 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
-    summary: "Ask to share screenshots with the user's share sheet."
-    description: 'Ask the `Class.Players.LocalPlayer|LocalPlayer` to share the specified screenshots via their share sheet. <Alert severity="warning">This function is only available for +13 users. </Alert>'
+    summary: |
+      Prompts the user to share a screenshot via their share sheet.
+    description: |
+      Prompts the `Class.Players.LocalPlayer|LocalPlayer` to share a
+      specified screenshot via their share sheet. Note that this
+      method is only available to users age 13+.
     code_samples: []
     parameters:
       - name: contentId
         type: Content
         default:
-        summary: 'The contentId of the screenshot that will be shared.'
+        summary: |
+          The content ID of the screenshot that will be shared.
       - name: launchData
         type: string
         default:
