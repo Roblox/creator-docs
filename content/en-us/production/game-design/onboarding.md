@@ -16,7 +16,7 @@ description: Onboarding
 
 **Day 1 Retention** is gauged by the amount of players who make it through the FTUE, known as the **Player Funnel**. The funnel is widest at the top and narrowest at the bottom as fewer players complete each step. All experiences lose some amount of players along this path.
 
-<img src="../../assets/game-design/onboarding/onboarding_1.png" width="70%" />
+<img src="../../assets/game-design/onboarding/onboarding_1.png" alt="A diagram of an upside down pyramid that's broken into four sections that decrease in size from top-to-bottom to signifiy the tunnel of fewer and fewer players completing each step. The top section says Tap Play Button, the top-middle section says Start First-Time User Experience, the bottom-middle section says Finish FTUE, and the bottom section says Return." width="70%" />
 
 The onboarding experience aims to limit drop-off between steps and retain as many new players as possible to increase potential concurrent users, daily active users (DAU), and an experience's monetization potential. The Day 1 (D1) retention metric counts players who return the next day and measures onboarding success by gauging its impact on new players. Experiences with high D1 retention metrics often owe that success to effectively accomplishing their onboarding goals.
 
@@ -33,7 +33,7 @@ Although onboarding experiences are as varied as the experiences they introduce,
 For successful onboarding, players need to grasp controls for an experience's navigation and interaction. Displaying complex, unfamiliar controls on-screen or incorporating them in a tutorial can be beneficial.
 
 <figure>
-    <img src="../../assets/game-design/onboarding/onboarding_2.png" width="70%" />
+    <img src="../../assets/game-design/onboarding/onboarding_2.png" alt="A close up view of UI in the Super Striker League experience that displays which buttons to press on your mouse or keyboard to complete various actions." width="70%" />
     <figcaption>[*Super Striker League*](https://www.roblox.com/games/3360853050/) controls.</figcaption>
   </figure>
 
@@ -54,7 +54,7 @@ New players typically decide their interest in an experience within minutes. To 
 Player XP-based leveling systems allow players to earn experience points based on their activity, level up when they hit certain XP thresholds, and unlock rewards. Keeping thresholds low for a player's early levels allows them to level up quickly, receive rewards for their efforts, and feel the fun of progression early in the experience.
 
 <figure>
-   <img src="../../assets/game-design/onboarding/onboarding_3.png" width="70%" />
+   <img src="../../assets/game-design/onboarding/onboarding_3.png" alt="A chart of the experience a player needs to level up in an experience. The curve increase exponentially from left-to-right." width="70%" />
     <figcaption>Player XP Level Up curve.</figcaption>
   </figure>
 
@@ -84,7 +84,7 @@ Providing short, mid, and long-term goals help players conceptualize future play
 To learn how to accomplish this through season passes, see [Season Pass Design](../../production/game-design/core-loops.md).
 
 <figure>
-    <img src="../../assets/game-design/onboarding/onboarding_4.png" width="70%"/>
+    <img src="../../assets/game-design/onboarding/onboarding_4.png" alt="A pop-up UI in the Jailbreak experience that displays various items a player can earn if they play through a season. The season pass exclusive items are marked with a bright color to attract attention." width="70%"/>
     <figcaption>Season Pass in _Jailbreak_.</figcaption>
   </figure>
 

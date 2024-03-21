@@ -176,11 +176,6 @@ The following are common examples of models that may not yield expected results 
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Humanoid-2.png" alt=""/><figcaption>**Animals** &mdash; Setup tool expects humanoid-style character models.</figcaption></figure></center>
-    </td>
-  </tr>
-  <tr>
-    <td>
         <center><figure><img src="../../assets/avatar/avatar-setup/Non-Contiguous.png" alt=""/><figcaption>**Non-contiguous mesh** &mdash; Setup tool expects the body mesh to be completely contiguous.</figcaption></figure></center>
     </td>
   </tr>

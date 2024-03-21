@@ -38,11 +38,11 @@ Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](http
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-3.png" width="100%"/>
+    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-3.png" alt="A close up view of an unselected circular Items button with a brown book icon. The environment in the background is a brown dirt with a patch of snow." width="100%"/>
     <figcaption>Items prior to selection in *Spellbound RPG*</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-2.png" width="90%"/>
+    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-2.png" alt="A close up view of a selected circular Items button with a brown book icon, along with three additional buttons for skills, equipment, and the players deck. The additional buttons only display when the button is selected." width="90%"/>
     <figcaption>Items after selection in *Spellbound RPG*</figcaption>
   </figure>
 </GridContainer>

@@ -5,7 +5,7 @@ description: Explains how to install Roblox Studio on your system.
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
-<img src="../assets/studio/general/Studio-Splash.jpg" width="800" alt="Roblox Studio setup landing screen." />
+<img src="../assets/studio/general/Studio-Splash.jpg" width="800" alt="" />
 
 ## System Requirements
 
@@ -31,7 +31,7 @@ To install Roblox Studio on your Windows or Mac computer:
 
 1. In the pop-up dialog, click the **Download Studio** button.
 
-   <img src="../assets/studio/general/Download-Popup.png" width="400" alt="Download Studio button indicated on download modal." />
+   <img src="../assets/studio/general/Download-Popup.png" width="400" alt="The pop-up dialog with the Download Studio button highlighted." />
 
 1. Find the Studio installer in your browser's download history and double-click the file.
 
@@ -48,4 +48,4 @@ In contrast to certain other engines, every experience runs on the latest versio
 
 If your current version of Studio is outdated, you'll see an **Update Available** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 
-<img src="../assets/studio/general/Update-Restart-Prompt.png" width="815" alt="Update Available button indicated in upper-right region of Studio." />
+<img src="../assets/studio/general/Update-Restart-Prompt.png" width="815" alt="Studio's Model tab with the Update Studio button highlighted." />

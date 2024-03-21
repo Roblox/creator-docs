@@ -5,7 +5,7 @@ description: The Align Tool lets you align objects or groups of objects along th
 
 The **Align Tool** lets you align objects or groups of objects along the **X**, **Y**, or **Z** axes. You can access it from the **Model** tab of the toolbar.
 
-<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="672" alt="Align Tool indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="672" alt="Studio's Model tab with the Align Tool highlighted." />
 
 Primary benefits include:
 
@@ -20,19 +20,19 @@ You can set the alignment mode to either **Min**, **Center**, or **Max**.
 <Grid container spacing={3}>
 	<Grid item>
 		<figure>
-    <img src="../assets/studio/align-tool/Icon-Min.png" width="80" />
+    <img src="../assets/studio/align-tool/Icon-Min.png" width="80" alt="The Min icon in the toolbar." />
     <center><figcaption>Min</figcaption></center>
   	</figure>
 	</Grid>
 	<Grid item>
 		<figure>
-    <img src="../assets/studio/align-tool/Icon-Center.png" width="80" />
+    <img src="../assets/studio/align-tool/Icon-Center.png" width="80" alt="The Center icon in the toolbar." />
     <center><figcaption>Center</figcaption></center>
   	</figure>
 	</Grid>
 	<Grid item>
 		<figure>
-    <img src="../assets/studio/align-tool/Icon-Max.png" width="80" />
+    <img src="../assets/studio/align-tool/Icon-Max.png" width="80" alt="The Max icon in the toolbar." />
     <center><figcaption>Max</figcaption></center>
   	</figure>
 	</Grid>
@@ -40,13 +40,13 @@ You can set the alignment mode to either **Min**, **Center**, or **Max**.
 
 <Tabs>
 <TabItem label="Min">
-<img src="../assets/studio/align-tool/Mode-Min.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Mode-Min.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Min button on the world Z axis. A transluscent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 <TabItem label="Center">
-<img src="../assets/studio/align-tool/Mode-Center.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Mode-Center.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Center button on the world Z axis. A transluscent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 <TabItem label="Max">
-<img src="../assets/studio/align-tool/Mode-Max.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Mode-Max.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world Z axis. A transluscent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 </Tabs>
 
@@ -58,13 +58,13 @@ The **X**, **Y**, and **Z** checkboxes let you select which axes to align on. No
 
 <Tabs>
 <TabItem label="Before Alignment">
-<img src="../assets/studio/align-tool/Align-In-Before.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Align-In-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned." />
 </TabItem>
 <TabItem label="Max | World Z">
-<img src="../assets/studio/align-tool/Align-In-World-Z.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Align-In-World-Z.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world Z axis. A transluscent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 <TabItem label="Max | Local Z">
-<img src="../assets/studio/align-tool/Align-In-Local-Z.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Align-In-Local-Z.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on their local Z axis. A transluscent orange rectangle represents where the objects align in context to each other." />
 </TabItem>
 </Tabs>
 
@@ -78,13 +78,13 @@ An alignment operation can be relative to either the **Selection Bounds** or the
 
 <Tabs>
 <TabItem label="Before Alignment">
-<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Before.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned. A transluscent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
 <TabItem label="Min | World X">
-<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Min-X.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Min-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Min button on the world X axis relative to their collective bounding box. A transluscent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
 <TabItem label="Max | World X">
-<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Max-X.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Selection-Bounds-Max-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world X axis relative to their collective bounding box. A transluscent red rectangle represents where the objects' collective bounding box." />
 </TabItem>
 </Tabs>
 
@@ -94,12 +94,12 @@ An alignment operation can be relative to either the **Selection Bounds** or the
 
 <Tabs>
 <TabItem label="Before Alignment">
-<img src="../assets/studio/align-tool/Relative-To-Active-Object-Before.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Before.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are unaligned. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
 <TabItem label="Min | World X">
-<img src="../assets/studio/align-tool/Relative-To-Active-Object-Min-X.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Min-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Min button on the world X axis relative to the active object. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
 <TabItem label="Max | World X">
-<img src="../assets/studio/align-tool/Relative-To-Active-Object-Max-X.jpg" width="720" height="405" />
+<img src="../assets/studio/align-tool/Relative-To-Active-Object-Max-X.jpg" width="720" height="405" alt="An angled side view of a small red cube, large blue cube, and a small purple cube that are aligned with the Max button on the world X axis relative to the active object. The large blue cube has a yellow outline to represent that it's the active object." />
 </TabItem>
 </Tabs>

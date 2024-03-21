@@ -14,15 +14,15 @@ files as `Class.MeshPart|MeshParts` as outlined in [Meshes](../parts/meshes.md).
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/parts/Basic-Part-Sphere.png" />
+    <img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single gray sphere part" />
     <figcaption>Basic sphere part</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/parts/Part-Example-CSG.jpg" />
+    <img src="../assets/modeling/parts/Part-Example-CSG.jpg"alt="A bright blue hollow bowl that was made with solid modeling operations."/>
     <figcaption>Bowl created with solid modeling</figcaption>
   </figure>
 	<figure>
-    <img src="../assets/modeling/parts/Mesh-Example.jpg" />
+    <img src="../assets/modeling/parts/Mesh-Example.jpg" alt="A high-quality treasure chest mesh with a texture." />
     <figcaption>Mesh with texture</figcaption>
   </figure>
 </GridContainer>
@@ -54,11 +54,11 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 </thead>
 <tbody>
 <tr>
-<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="Block part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="Sphere part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="Cylinder part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="Wedge part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="Corner Wedge part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single gray block part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single gray sphere part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single gray cylinder part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single gray wedge part" /></td>
+<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single gray corner wedge part" /></td>
 </tr>
 </tbody>
 </table>
@@ -67,7 +67,7 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 
 Each part has a variety of properties that you can customize through the [Properties](../studio/properties.md) window.
 
-<img src="../assets/studio/properties/Sections-Example.png" width="320" />
+<img src="../assets/studio/properties/Sections-Example.png" alt="A close up view of the Properties window with the Appearance and Transform properties highlighted." width="320" />
 
 The following are commonly utilized properties:
 
@@ -92,7 +92,7 @@ The following are commonly utilized properties:
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**.
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="672" alt="Part menu indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="826" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
 
 <Alert severity="info">
 To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#inserting-and-parenting).
@@ -113,10 +113,10 @@ the arrow axis indicators change to a part's local orientation, and an **L** ind
 
 <Tabs>
   <TabItem label="World">
-    <img src="../assets/modeling/parts/Manipulate-World-Orientation.png" width="480" alt="Part draggers in World orientation mode" />
+    <img src="../assets/modeling/parts/Manipulate-World-Orientation.png" width="480" alt="An angled gray block part with draggers in World orientation mode." />
   </TabItem>
   <TabItem label="Local">
-    <img src="../assets/modeling/parts/Manipulate-Local-Orientation.png" width="480" alt="Part draggers in Local orientation mode" />
+    <img src="../assets/modeling/parts/Manipulate-Local-Orientation.png" width="480" alt="An angled gray block part with draggers in Local orientation mode. The L to signify that the object is in Local orientation mode is highlighted." />
   </TabItem>
 </Tabs>
 
@@ -126,11 +126,11 @@ Parts move on the **X** (red), **Y** (green), and **Z** (blue) axes. You can mov
 
 1. In the **Tools** section, select the **Move** tool, then select the part you want to move.
 
-   <img src="../assets/studio/general/Model-Tab-Move.png" width="768" alt="Move tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
 
 2. Click and drag the arrow that is pointing in the direction you want to move the part.
 
-   <img src="../assets/modeling/parts/Manipulate-Move.png" width="600" />
+   <img src="../assets/modeling/parts/Manipulate-Move.png" alt="An angled gray block part with the Move tool's visual aids." width="600" />
 
 ### Scaling Parts
 
@@ -138,12 +138,11 @@ Parts scale on the **X** (red), **Y** (green), and **Z** (blue) axes. You can ma
 
 1. In the **Tools** section, select the **Scale** tool, then select the part you want to scale.
 
-   <img src="../assets/studio/general/Model-Tab-Scale.png" width="768" alt="Scale tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
 
 2. Click and drag a ball to scale the part in that direction.
 
-   <img src="../assets/modeling/parts/Manipulate-Scale.png" width="600"
-   />
+   <img src="../assets/modeling/parts/Manipulate-Scale.png" alt="An angled gray block part with the Scale tool's visual aids." width="600" />
 
 ### Rotating Parts
 
@@ -151,11 +150,11 @@ Parts rotate on the **X** (red), **Y** (green), and **Z** (blue) axes. You can r
 
 1. In the **Tools** section, select the **Rotate** tool, then select the part you want to rotate.
 
-   <img src="../assets/studio/general/Model-Tab-Rotate.png" width="768" alt="Rotate tool indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
 
 2. Click and drag a circle to rotate the part in that direction.
 
-   <img src="../assets/modeling/parts/Manipulate-Rotate.png" width="600" />
+   <img src="../assets/modeling/parts/Manipulate-Rotate.png" alt="An angled gray block part with the Rotate tool's visual aids." width="600" />
 
 ## Coloring Parts
 
@@ -165,25 +164,22 @@ While a part is gray by default, you can change it to any color through the foll
 
 Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
 
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="842" alt="Color button indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Color tool's Basic Color Picker button and Toggle Action as Tool button highlighted." />
 
-<img src="../assets/studio/general/Hexagon-Color-Picker.png"
-	width="380" />
+<img src="../assets/studio/general/Hexagon-Color-Picker.png" alt="A close up view of the hexagonal colors you can make your parts." width="380" />
 
 ### Colors Popup
 
 The **Colors** popup allows you to set a color through your operating system's color picker widget. To access it, navigate to the [Properties](../studio/properties.md) window and click the small box to the left of the `Class.BasePart.Color|Color` property.
 
-<img src="../assets/studio/properties/Color-Picker.png"
-width="320" />
+<img src="../assets/studio/properties/Color-Picker.png" alt="A close up view of the Properties window with the Color property's color box highlighted." width="320" />
 
 ### RGB Value
 
 To define a specific RGB color value for a part, enter an RGB value into the
 `Class.BasePart.Color|Color` property field.
 
-<img src="../assets/studio/properties/Color-RGB-Entry.png"
-	width="320" />
+<img src="../assets/studio/properties/Color-RGB-Entry.png" alt="A close up view of the Properties window with the Color property's RGB color value highlighted." width="320" />
 
 ## Applying Materials
 
@@ -195,11 +191,11 @@ Similar to [color](#coloring-parts), you can customize a part's **material** to 
 
   <GridContainer numColumns="2">
     <figure>
-      <img src="../assets/modeling/parts/Material-SmoothPlastic.png" />
+      <img src="../assets/modeling/parts/Material-SmoothPlastic.png" alt="An angled red block part with a smooth plastic material." />
       <figcaption>SmoothPlastic</figcaption>
     </figure>
     <figure>
-      <img src="../assets/modeling/parts/Material-Neon.jpg" />
+      <img src="../assets/modeling/parts/Material-Neon.jpg" alt="An angled red block part with a glowing neon material."/>
       <figcaption>Neon</figcaption>
     </figure>
   </GridContainer>
