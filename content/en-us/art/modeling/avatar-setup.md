@@ -24,7 +24,7 @@ Creating these [avatar components](../characters/index.md#components-of-an-avata
 </figure>
 <figure>
     <img src="../../assets/avatar/avatar-setup/Avatar-Setup-Example-B.png" />
-    <figcaption>Using the various Avatar Setup features, test out skin tones, animations, rigid and layered accessories, and more.</figcaption>
+    <figcaption>Using the various Avatar Setup features, test out skin tones, animations, rigid and layered clothing, and more.</figcaption>
 </figure>
 </GridContainer>
 
@@ -33,7 +33,7 @@ The avatar auto-setup performs the following on a submitted character model:
 - **Rigging** - adds an R15 armature to your body model to enable movement and animation.
 - **Skinning** - adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
 - **Facial animation** - generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
-- **Caging** - adds the outer cage mesh to your avatar, enabling it to wear layered accessories.
+- **Caging** - adds the outer cage mesh to your avatar, enabling it to wear layered clothing.
 - **Partitioning** - separates the single body mesh into the appropriate R15 parts.
 - **Creating attachments** - adds the appropriate attachment points enabling the character to wear rigid accessories.
 
@@ -172,11 +172,6 @@ The following are common examples of models that may not yield expected results 
   <tr>
     <td>
         <center><figure><img src="../../assets/avatar/avatar-setup/I-pose.png" alt=""/><figcaption>**I-pose** &mdash; Setup tool expects A-Pose.</figcaption></figure></center>
-    </td>
-  </tr>
-  <tr>
-    <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Humanoid-2.png" alt=""/><figcaption>**Animals** &mdash; Setup tool expects humanoid-style character models.</figcaption></figure></center>
     </td>
   </tr>
   <tr>

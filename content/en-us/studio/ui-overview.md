@@ -8,7 +8,7 @@ description: User interface overview for Roblox Studio, the essential building t
 The **toolbar** resides at the top of Studio. The buttons and tools visible in the bar change when you click on the [Home](../studio/home-tab.md), [Model](../studio/model-tab.md), [Avatar](../studio/avatar-tab.md), [Test](../studio/test-tab.md), [View](../studio/view-tab.md), and [Plugins](../studio/plugins-tab.md) tabs.
 
 <img src="../assets/studio/general/Toolbar-Tabs-Labeled.png"
-   width="800" alt="Primary tabs in Studio toolbar" />
+   width="800" alt="Studio's toolbar with the Home, Model, Avatar, Test, View, and Plugins tabs highlighted." />
 
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
@@ -42,7 +42,7 @@ The 3D viewport represents the `Class.Workspace` of a place. From here, you can 
 <figure>
 	<img
 		src="../assets/studio/general/Editor-Window.jpg"
-		width="100%" alt="3D viewport in Roblox Studio" />
+		width="100%" alt="An example viewport display of a desert environment with multiple stone pillars. One of the pillars displays movement visual aids from the Move tool." />
 	<figcaption>3D viewport in Roblox Studio</figcaption>
 </figure>
 
@@ -93,7 +93,7 @@ Inside the viewport, you can move the camera with the following controls:
 
 As you hover over parts and models in the viewport, they are outlined to indicate their potential selection. You can select an outlined object by clicking it, or you can select multiple objects by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them.
 
-<img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
+<img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="A warehouse environment with the stairs and multiple pallet box objects with a blue highlight to signify that they are selected in the 3D viewport."/>
 
 #### Selection Cycling
 
@@ -112,63 +112,63 @@ When one or more objects or [models](../parts/models.md) are selected in the [Ex
 
 To display **outlines** and/or **bounding boxes** around selected objects, choose an option from the **Selection Style** menu in the [View](../studio/view-tab.md) tab.
 
-<img src="../assets/studio/general/View-Tab-Selection-Style.png" width="670" alt="Selection Style menu indicated in View tab of Studio" />
+<img src="../assets/studio/general/View-Tab-Selection-Style.png" width="670" alt="Studio's View tab with the Selection Style tool highlighted." />
 
-<img src="../assets/studio/general/Selected-Object-Bounding-Box.jpg" width="800" alt="Selected part showing both its selection outline and a bounding box" />
+<img src="../assets/studio/general/Selected-Object-Bounding-Box.jpg" width="800" alt="A warehouse environment with rope object's selection outline and bounding box highlighted." />
 
 ## Common Windows
 
 You can toggle on commonly used windows through the [View](../studio/view-tab.md) tab, including the [Explorer](../studio/explorer.md) window, [Properties](../studio/properties.md) window, [Asset&nbsp;Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and many others.
 
-<img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="View tab indicated in Studio toolbar" />
+<img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="Studio's toolbar and View tab with the tab highlighted." />
 
 ### Explorer
 
 The [Explorer](../studio/explorer.md) window, visible by default, shows a hierarchical list of every object and service inside the place, collectively referred to as its **data model**. Frequently used services in the hierarchy include `Class.Workspace` which mirrors the [3D viewport](#3d-viewport), as well as `Class.ReplicatedStorage` and `Class.ServerStorage`.
 
-<img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Explorer toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Studio's View tab with the Explorer button highlighted." />
 
-<img src="../assets/studio/explorer/Location-In-Studio.png" width="800" alt="Explorer window in Studio" />
+<img src="../assets/studio/explorer/Location-In-Studio.png" width="800" alt="A close up view of the Explorer window next to a portion of the 3D viewport." />
 
 ### Properties
 
 The [Properties](../studio/properties.md) window lets you adjust properties of a selected object to change how it looks and behaves. Object properties are divided into sections; for example, a `Class.MeshPart` includes sections like **Appearance** which allows you to change its color, material, transparency, and more.
 
-<img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Properties toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Studio's View tab with the Properties button highlighted." />
 
-<img src="../assets/studio/properties/Location-In-Studio.png" width="800" alt="Properties window in Studio" />
+<img src="../assets/studio/properties/Location-In-Studio.png" width="800" alt="A close up view of the Properties window next to a portion of the 3D viewport." />
 
 At the bottom of the window, you can define custom [attributes](../studio/properties.md#instance-attributes) for an object, similar to its default properties. Attributes and their values are saved with your place/assets and they're an ideal way for team members to experiment with different values during runtime, even if they don't understand the underlying code.
 
-<img src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
+<img src="../assets/studio/properties/Attributes-Example-B.png" alt="A close up view of the Attributes section of the Properties window." width="320" />
 
 ### Asset Manager
 
 The [Asset Manager](../projects/assets/manager.md) lets you manage places, images, meshes, packages, audio, and models in your experience. It also provides a mechanism to bulk import large groups of assets.
 
-<img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
 
-<img src="../assets/studio/asset-manager/Grid-View.png" width="360" alt="Asset Manager window in Studio" />
+<img src="../assets/studio/asset-manager/Grid-View.png" width="360" alt="The Asset Manager window." />
 
 ### Toolbox
 
 The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [published](../production/publishing/publishing-assets.md) or those which were published by [groups](../projects/groups.md) you belong to.
 
-<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+<img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
 
-<img src="../assets/studio/toolbox/Model-Search-Example.png" width="360" alt="Toolbox window in Studio" />
+<img src="../assets/studio/toolbox/Model-Search-Example.png" width="360" alt="The Toolbox window." />
 
 ### Output Window
 
 The **Output** window, accessible from the [View](../studio/view-tab.md) tab, displays errors captured from running scripts, messages from Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`. See [Output Window](../studio/output.md) for further details.
 
-<img src="../assets/studio/general/View-Tab-Output.png" width="876" alt="Output button indicated in View tab of Studio" />
+<img src="../assets/studio/general/View-Tab-Output.png" width="876" alt="Studio's View tab with the Output button highlighted." />
 
 ### Command Bar
 
 The **Command Bar**, accessible from the [View](../studio/view-tab.md) tab, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
 
-<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="876" alt="Command Bar button indicated in View tab of Studio" />
+<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="876" alt="Studio's View tab with the Command Bar button highlighted." />
 
 ## Saving & Publishing
 
@@ -203,7 +203,7 @@ Studio offers a suite of options for testing an experience before [releasing it 
 
 - **Rapid playtesting** that provides a close simulation of the experience running on the Roblox application.
 
-   <img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
+   <img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Studio's Test tab with the Playtest button and it Mode Picker button highlighted." />
 
 - **Multi-client simulation** for comparing how each client "sees" other clients within the experience.
 - **Device emulation** that provides insight on how controls operate on a mobile device or how on-screen UI displays on different screens and aspect ratios.

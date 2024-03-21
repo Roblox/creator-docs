@@ -5,7 +5,7 @@ description: Avatars come in 3 different standard sizes, Classic, Rthro, Rthro S
 
 Roblox supports three common avatar sizes, known as **Classic**, **Rthro**, and **Rthro Slender**. This standard sizing helps keep avatar characters consistent, allowing developers to create experiences and environments that can fit commonly sized character models.
 
-When modeling rigid accessories, like a helmet that contours around a character's head, it's important to use a mannequin to help ensure your proportions fit. The asset provided in this tutorial example was originally modeled using **Rthro** proportions. Layered accessories, such as clothing, don't require body scale specification, since layered assets automatically stretch and deform over any body scale.
+When modeling rigid accessories, like a helmet that contours around a character's head, it's important to use a mannequin to help ensure your proportions fit. The asset provided in this tutorial example was originally modeled using **Rthro** proportions. Layered clothing, such as clothing, don't require body scale specification, since layered assets automatically stretch and deform over any body scale.
 
 If you are modeling your asset, visit the [references resources](../../avatar/resources.md#references) to download any of the following mesh mannequin:
 
