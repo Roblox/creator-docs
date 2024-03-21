@@ -26,11 +26,11 @@ navigation:
             path: /projects/data-model
           - title: Client-Server Runtime
             path: /projects/client-server
+          - title: Instance Streaming
+            path: /workspace/streaming
       - title: Managing
         path: /projects/managing
-      - title: Instance Streaming
-        path: /workspace/streaming
-      - title: Working in Teams # needs some work with naming
+      - title: Working in Teams
         section:
           - title: Setting Up a Team
             path: /projects/setting-up-a-team
@@ -198,8 +198,7 @@ navigation:
       - title: Scheduler
         path: /scripting/scheduler
       - title: Multi-Threading
-        path:
-          /scripting/multithreading
+        path: /scripting/multithreading
           # - title: Debouncing
           #   path: /scripting/debounce
       - title: Security Tactics and Cheat Mitigation
@@ -542,8 +541,6 @@ navigation:
             path: /production/monetization/business-resources
           - title: Randomized Virtual Items Policy
             path: /production/monetization/randomized-virtual-items-policy
-          - title: Game Fund
-            path: /production/monetization/game-fund
   - title: Localization
     section:
       - title: Overview
@@ -594,6 +591,8 @@ navigation:
         path: /production/community/
       - title: Event Organizers
         path: /production/community/event-organizers
+      - title: Creator Fund
+        path: /creator-fund
       - title: Talent Hub Developer Safety
         path: /production/community/talent-hub-developer-safety
   - heading: For Educators
