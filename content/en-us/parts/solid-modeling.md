@@ -6,7 +6,7 @@ description: Solid modeling is the process of joining parts together to form com
 **Solid modeling** is the process of joining [parts](../parts/index.md)
 together in unique ways to form more complex shapes known as **unions** or **intersections**. You can perform four solid modeling operations using the tools within the [Model](../studio/model-tab.md) tab.
 
-<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="744" />
+<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the Solid Modeling tools highlighted." width="754" />
 
 <table>
   <thead>

@@ -9,7 +9,7 @@ description: PBR textures are advanced textures using multiple texture maps.
 <TabItem label="Clothing">
 <GridContainer numColumns="2">
 <img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" alt="A humanoid avatar with dreadlocks, a glossy jacket, jeans with decals, and boots."/>
-<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example-2.jpg" alt="A humanoid avatar with a short haircut, leather jacket, capri pants and orange shoes."/>
+<img src="../../assets/modeling/surface-appearance/Layered-Clothing-Example-2.jpg" alt="A humanoid avatar with a short haircut, leather jacket, capri pants, and orange shoes."/>
 </GridContainer>
 </TabItem>
 <TabItem label="Environment">
@@ -44,7 +44,7 @@ To enable surface appearance for a `Class.MeshPart`:
    <img
    alt="Insert SurfaceAppearance"
    src="../../assets/modeling/surface-appearance/Applying-Texture-Maps.png"
-   width="320" alt="A close-up of the Properties panel where the user selected the ColorMap property. A popup displays all available image textures to select." />
+   width="320" alt="A close-up of the Properties window where the user selected the ColorMap property. A popup displays all available image textures to select." />
 
 ## Texture Maps
 

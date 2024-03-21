@@ -7,11 +7,11 @@ description: Explains the process for exporting avatar animations from Maya.
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="40%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Overview-Mannequin.jpg" />
+    <img width="40%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Overview-Mannequin.jpg" alt="A humanoid mannequin in Maya with IK controls." />
     <figcaption>R15 mannequin reference</figcaption>
   </figure>
   <figure>
-    <video controls src="../../assets/animation/exporting-avatar-animations-from-maya/Moving-Rig.mp4" width="40%"></video>
+    <video controls src="../../assets/animation/exporting-avatar-animations-from-maya/Moving-Rig.mp4" alt="An angled side view of the same humnoid mannequin walking in place." width="40%"></video>
     <figcaption>Example walking animation</figcaption>
   </figure>
 </GridContainer>
@@ -57,11 +57,11 @@ To mute the translation channel:
    1. In the menu bar, click **Windows**. A contextual menu displays.
    1. Hover over **Workspaces**, then click **Animation**. The **Graph Editor** displays.
 
-      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Opening-GraphEditor-and-TimeSlider.jpg" />
+      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Opening-GraphEditor-and-TimeSlider.jpg" alt="A close up view of the Windows dropdown menu in Maya. The Workspaces menu item is highlighted, as well as the Animation submenu." />
 
 1. Move the **Time Marker** to frame 0.
 
-   <img width="50%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Time-Marker.jpg" />
+   <img width="50%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Time-Marker.jpg" alt="A close up view of the Graph Editor in Maya. The Time marker for a character's right hand is at frame 0, and is highlighted." />
 
 1. In the **Outliner**, select the root node. If you are using the reference file, this is **TSM3_root**.
 1. In the **Channel Box**, right-click on the **Translate Z** value. A contextual menu displays.
@@ -69,10 +69,10 @@ To mute the translation channel:
 
    <GridContainer numColumns="2">
      <figure>
-      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Mute-Selected.jpg" />
+      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Mute-Selected.jpg" alt="A close up view of the Channel Box in Maya. The Mute Selected menu item in the contextual menu from step 4 is highlighted." />
      </figure>
      <figure>
-      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Muted-TranslateZ.jpg" />
+      <img width="90%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Muted-TranslateZ.jpg" alt="A close up view of the Channel Box in Maya. The Translate Z property channel box color is orange to signify it is muted. The rest of the values are in cyan blue to signify that they remain unmuted." />
      </figure>
    </GridContainer>
 
@@ -89,17 +89,17 @@ To export your avatar animation from Maya:
    1. In the menu bar, click **Windows**. A contextual menu displays.
    1. Hover over **Settings/Preferences**, then click **Plug-in Manager**. The **Plug-in Manager** window displays.
 
-      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Plugin-Manager.jpg" />
+      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Plugin-Manager.jpg" alt="A close up view of the Windows dropdown menu in Maya. The Settings/Preferences menu item is highlighted, as well as the Plguin-in Manager submenu." />
 
    1. In the search field, input **fbxmaya**. The **fbxmaya.mll** plugin displays.
    1. Enable the **Loaded** and **Auto load** options.
 
-      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Loaded-and-AutoLoad-Radio-Buttons.jpg" />
+      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Loaded-and-AutoLoad-Radio-Buttons.jpg" alt="The Plug-in Manager with a close up view of the fbxmaya file. Its Loaded and Auto load settings are highlighted." />
 
 1. In the menu bar, click **File**. A contextual menu displays.
 1. Select **Export All**. The **Export All** window displays.
 
-   <img width="40%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Export-All.png" />
+   <img width="40%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Export-All.png" alt="A close up view of the File dropdown menu in Maya. The Export All menu item is highlighted." />
 
 1. At the bottom of the window,
 
@@ -112,14 +112,14 @@ To export your avatar animation from Maya:
    1. Verify that the **Start** and **End** fields correlate to the frames you want to export for your animation loop.
    1. Set **Step** to **1**.
 
-      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Bake-Animation.jpg" />
+      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Bake-Animation.jpg" alt="A close up view of the Options pane. The Bake Animation settings are highlighted." />
 
 1. Click the **Advanced Options** dropdown for additional export settings, then in the **FBX File Format** section,
 
    1. Set **Type** to **Binary**.
    1. Set **Version** to **FBX 2020**.
 
-      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/FBX-File-Format.jpg" />
+      <img width="80%" img src="../../assets/animation/exporting-avatar-animations-from-maya/FBX-File-Format.jpg" alt="A close up view of the Options pane. The FBX File Format settings are highlighted." />
 
 1. In the bottom right corner, click the **Export All** button. After a moment, the avatar animation `.fbx` file displays in your file browser.
 
@@ -134,7 +134,7 @@ To test the animation in Studio:
    1. In the menu bar, navigate to the **Avatar** tab.
    1. In the **Rig** section, click **Rig Builder**. The **Rig Builder** window displays with the R15 tab options open by default.
 
-      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Rig-Builder.png" />
+      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Rig-Builder.png" alt="Studio's Avatar tab with the Rig Builder tool highlighted." />
 
    1. Select any rig you want to use as a test. The rig displays within the viewport.
 
@@ -142,7 +142,7 @@ To test the animation in Studio:
 
    1. In the **Animation** section of the **Avatar** tab, click **Animation Editor**. The **Animation Editor** window displays.
 
-      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Animation-Editor.png" />
+      <img width="760" img src="../../assets/studio/general/Avatar-Tab-Animation-Editor.png" alt="Studio's Avatar tab with the Animation Editor tool highlighted." />
 
    1. In the viewport, click your rig. A dialog displays in the Animation Editor.
    1. In the **Animation Name** field, enter a new animation name, then click the **Create** button. The Animation Editor window displays the media and playback controls, timeline, and track list.
@@ -152,7 +152,7 @@ To test the animation in Studio:
    1. Navigate to the **Media and Playback Controls** and click the **&ctdot;** button. A contextual menu displays.
    1. Hover over **Import**, then select **From FBX Animation**. A file browser displays.
 
-      <img width="60%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Importing-From-FBX-Animation.jpg" />
+      <img width="60%" img src="../../assets/animation/exporting-avatar-animations-from-maya/Importing-From-FBX-Animation.jpg" alt="A close up view of the Animation Editor window. The ellipsis contextual menu displays, and the From FBX Animation submenu item is highlighted." />
 
    1. Select the FBX animation you just exported from Maya, then click **Open**. The animation's keyframes load into the Animation Editor.
 

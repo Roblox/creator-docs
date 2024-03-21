@@ -36,9 +36,9 @@ These steps show how to create a script that changes a part's color if a stateme
 
 ### Formatting If Statements
 
-**Conditions** can come in various forms but are often simple statements like math equations. For example, if 1+1 equals 2, then run some code. Like ordinary math equations, conditional can use **operators** such as plus(`+`) or less than(`<=`) to evaluate statements.
+**Conditions** can come in various forms but are often simple statements like math equations. For example, if 1+1 equals 2, then run some code. Like ordinary math equations, conditional can use **operators** such as plus (`+`) or less than (`<`) to evaluate statements.
 
-One particular operator to be aware of is `==`. It stands for "is equal to." So the statement `2 + 2 == 4` can be read as two plus two is equal to four. Be very careful not to mix it up with `=`, which assigns new values to objects like variables.
+One particular operator to be aware of is `==`; it stands for "is equal to." So the statement `2 + 2 == 4` can be read as "two plus two is equal to four". Be very careful not to mix it up with `=`, which assigns new values to objects like variables.
 
 1. Set up the empty conditional. In the script, type `if then`, and press <kbd>Enter</kbd> to autocomplete the conditional. The keyword `then` will be underlined because the code is incomplete.
 
@@ -123,7 +123,7 @@ The table below lists some common Lua operators. More information about operator
 
 - `==` : Is equal to.
 - `~=` : Is not equal to.
-- `<` or `>` or used for less or greater than, respectively.
+- `<` or `>` are used for less or greater than, respectively.
 - `<=` or `>=` are used for less/greater than or equal to, respectively.
 
 ## Variables and Properties
@@ -161,7 +161,7 @@ Conditional statements are also used to evaluate the status of properties and va
 
 ## Summary
 
-Conditional statements check to see if a statement is accurate, and if so, run code. If statements are a very common type of conditional statement. They use the pattern "If this is true, then do that."
+Conditional statements check to see if a statement is accurate, and if so, run some code. If statements are a very common type of conditional statement. They use the pattern "If this is true, then do that."
 
 Code chunks using conditional statements are called control structures. Control structures can hold multiple conditional statements.
 
