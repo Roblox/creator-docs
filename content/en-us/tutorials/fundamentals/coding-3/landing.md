@@ -23,11 +23,7 @@ Many experiences have actions that only take place if a list of requirements are
    <tr>
     <td><b>Prerequisites</b></td>
     <td>
-    Before beginning this course, readers should be able to:
-
-    Navigate Roblox Studio
-
-    Declare new variables and functions
+    Before beginning this course, readers should be able to navigate Roblox Studio, as well as declare new variables and functions.
     </td>
 
    </tr>

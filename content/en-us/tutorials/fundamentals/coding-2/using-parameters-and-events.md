@@ -121,4 +121,4 @@ The `Touched` event fires whenever one part touches another part and can be used
 
 ## Summary
 
-Parameters are used to pass information that would be normally out of scope (where a function can't see it), into a function. Meanwhile, events are special signals that go off inside of the experience when something important happens. Different objects have different events. Functions can be connected to events so that they are called each time the event gets fired. This little script connected a function to the trap's `Touched` event, and passed in what was touching the trap through the parameter.
+Parameters are used to pass information that would be normally out of scope (where a function can't see it), into a function. Meanwhile, events are special signals that go off inside of the experience when something important happens. Different objects have different events. Functions can be connected to events so that they are called each time the event gets fired. This little script connected a function to the trap's `Class.BasePart.Touched|Touched` event, and passed in what was touching the trap through the parameter.

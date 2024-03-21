@@ -28,9 +28,9 @@ For the project, find or create a set of three parts to make disappear. The part
 
    ```lua
    local pathArray = {
-      workspace.Part1,
-      workspace.Part2,
-      workspace.Part3,
+   	workspace.Part1,
+   	workspace.Part2,
+   	workspace.Part3,
    }
    ```
 
@@ -44,14 +44,14 @@ Use a for loop to go through the array and control how fast the parts should dis
    local VANISH_RATE = 1.5
 
    local pathArray = {
-      workspace.Part1,
-      workspace.Part2,
-      workspace.Part3
+   	workspace.Part1,
+   	workspace.Part2,
+   	workspace.Part3
    }
    ```
 
    <Alert severity='info'>
-    Constant Variables are variables that shouldn't be changed by any other code in the script. They're likely to need adjusting and are put at the top of the script in ALL_CAPS to make them easy to spot. Another name for ALL_CAPS is SCREAMING_SNAKE_CASE.
+    **Constants** are variables that shouldn't be changed by any other code in the script. They're likely to need adjusting and are put at the top of the script in `ALL_CAPS` to make them easy to spot.
    </Alert>
 
 2. Create a for loop with the following: **Start:** `partIndex = 1`, the index of the first value in the array. **End:** `#pathArray`, the size of that array.
@@ -101,10 +101,10 @@ Right now, the parts disappear forever. To make them reappear, create a second f
 
    ```lua
    for partIndex = 1, #pathArray  do
-      task.wait(VANISH_RATE)
-      local whichPart = pathArray[partIndex]
-      whichPart.CanCollide = false
-      whichPart.Transparency = 1
+   	task.wait(VANISH_RATE)
+   	local whichPart = pathArray[partIndex]
+   	whichPart.CanCollide = false
+   	whichPart.Transparency = 1
    end
 
    task.wait(1)
@@ -138,22 +138,22 @@ The parts disappear and reappear, but only once. To make the code keep repeating
    ```lua
    while true do
       -- Make a part disappear from the array in order
-      for partIndex = 1, #pathArray  do
-         task.wait(VANISH_RATE)
-         local whichPart = pathArray[partIndex]
-         whichPart.CanCollide = false
-         whichPart.Transparency = 1
-      end
+   	for partIndex = 1, #pathArray  do
+   		task.wait(VANISH_RATE)
+   		local whichPart = pathArray[partIndex]
+   		whichPart.CanCollide = false
+   		whichPart.Transparency = 1
+   	end
 
-      -- Wait for a second before making the path reappear
-      task.wait(1)
+   	-- Wait for a second before making the path reappear
+   	task.wait(1)
 
-      -- Reset the path by making all parts walkable again
-      for partIndex = 1, #pathArray do
-         local whichPart = pathArray[partIndex]
-         whichPart.CanCollide = true
-         whichPart.Transparency = 0
-      end
+   	-- Reset the path by making all parts walkable again
+   	for partIndex = 1, #pathArray do
+   		local whichPart = pathArray[partIndex]
+   		whichPart.CanCollide = true
+   		whichPart.Transparency = 0
+   	end
    end
    ```
 
@@ -167,29 +167,29 @@ A finished version of the project can be downloaded.
    local VANISH_RATE = 1.0
 
    local pathArray = {
-      workspace.Part1,
-      workspace.Part2,
-      workspace.Part3,
+   	workspace.Part1,
+   	workspace.Part2,
+   	workspace.Part3,
    }
 
    while true do
-      -- Make a part disappear from the array in order
-      for partIndex = 1, #pathArray  do
-         task.wait(VANISH_RATE)
-         local whichPart = pathArray[partIndex]
-         whichPart.CanCollide = false
-         whichPart.Transparency = 1
-      end
+   	-- Make a part disappear from the array in order
+   	for partIndex = 1, #pathArray  do
+   		task.wait(VANISH_RATE)
+   		local whichPart = pathArray[partIndex]
+   		whichPart.CanCollide = false
+   		whichPart.Transparency = 1
+   	end
 
-      -- Wait for a second before making the path reappear
-      task.wait(1.0)
+   	-- Wait for a second before making the path reappear
+   	task.wait(1.0)
 
-      -- Reset the path by making all parts walkable again
-      for partIndex = 1, #pathArray do
-         local whichPart = pathArray[partIndex]
-         whichPart.CanCollide = true
-         whichPart.Transparency = 0
-      end
+   	-- Reset the path by making all parts walkable again
+   	for partIndex = 1, #pathArray do
+   		local whichPart = pathArray[partIndex]
+   		whichPart.CanCollide = true
+   		whichPart.Transparency = 0
+   	end
    end
 ```
 
@@ -220,8 +220,8 @@ This will be demonstrated by quickly adding particles to a whole folder of parts
    
    -- Adds particles to every part in the array
    for index, part in ipairs(partsArray) do
-      local particles = Instance.new("ParticleEmitter")
-      particles.Parent = part
+   	local particles = Instance.new("ParticleEmitter")
+   	particles.Parent = part
    end
    ```
 

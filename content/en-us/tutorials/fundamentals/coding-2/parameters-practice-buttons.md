@@ -36,7 +36,7 @@ Now that the bridge is set up, create the button.
 
 ## Making the Button Interactive
 
-This time, instead of using the Touched event to create a trap, you'll use it to create a button that makes the bridge usable. To make the bridge collidable, use the code `bridge.CanCollide = true` within a custom function that runs when a player touches the button. You know everything else you need to complete the following steps.
+This time, instead of using the `Class.BasePart.Touched|Touched` event to create a trap, you'll use it to create a button that makes the bridge usable. To make the bridge collidable, use the code `bridge.CanCollide = true` within a custom function that runs when a player touches the button. You know everything else you need to complete the following steps.
 
 Try to figure it out yourself before looking at the code solution.
 
