@@ -6,7 +6,7 @@ summary: |
   A service which provides developer control over screenshot capture features.
 description: |
   **CaptureService** is a client-side service that allows users to capture areas
-  of your experience and share them with other players. This service may be
+  of your experience. This service may be
   useful in a painting experience for participants to share artwork with others,
   or an adventure experience to help users remember their achievements later on.
 code_samples: []
