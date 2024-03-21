@@ -106,7 +106,7 @@ In the array just created, `"Hi"` is at index 1, and `"Goodbye!"` is at index 3.
 
 ## Using Specific Index Values
 
-Use index values to assign specific pieces of dialogue to the NPC. To use a value at a specific index, add the index after the array's name without any spaces, like `dialogueArray[1]`.
+Use index values to assign specific pieces of dialogue to the NPC. To use a value at a specific index, add the index in brackets directly after the array's name, like `dialogueArray[1]`.
 
 1. Replace the `dialogue` variable's default string value with index 2.
 
@@ -120,7 +120,7 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
    ```
 
    <Alert severity="warning">
-   If an index doesn't exist, a nil error will display in Output. For example, since this array has three values, using index[4] will result in an error.
+   If an index doesn't exist, a nil error will display in Output. For example, since this array only has three values, using `dialogueArray[4]` will result in an error.
    </Alert>
 
 2. Playtest and click the NPC. The second array value should appear in the chat bubble. Try changing the code to test out each value in the table.

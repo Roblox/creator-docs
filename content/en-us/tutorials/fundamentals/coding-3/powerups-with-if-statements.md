@@ -8,12 +8,13 @@ prev: /tutorials/fundamentals/coding-3/traps-with-if-statements
 If statements can have multiple requirements that need to be true before running code. The keyword `and` allows you to combine statements. The following code evaluates first if two plus two equals six and then if four does not equal six. If both statements are true, the code will run.
 
 ```lua
-if 2+2 == 6 and 4 ~= 6 then
+-- will not run
+if 2 + 2 == 6 and 4 ~= 6 then
    print("Both statements are true")
 end
 
 -- will run
-if 4+2 == 6 and 4~=6 then
+if 4 + 2 == 6 and 4 ~= 6 then
    print("Both statements are true")
 end
 ```
@@ -32,13 +33,13 @@ Use this code with a simple part or a model, such as a crystal, coin, or glowing
 
    ```lua
    -- Gives a temporary speed boost when touched
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
    ```
 
 3. Set up a function named `onTouch` and connect it to the parent object's `Touched` event. Then playtest and check your work.
 
    ```lua
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
 
    local function onTouch(otherPart)
       print("Something touched speedBoost")
@@ -137,4 +138,4 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 
 ## Summary
 
-The keyword `and` can be used to require multiple conditions before running a code chunk, such as a value being more than 0 and less than 100. Or that there's a Humanoid, and its WalkSpeed is less or equal to 50.
+The keyword `and` can be used to require multiple conditions before running a code chunk, such as a value being more than 0 and less than 100. Or that if there is a Humanoid and its WalkSpeed is less or equal to 50.
