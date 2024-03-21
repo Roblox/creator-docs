@@ -38,7 +38,7 @@ A `while`—`do` loop evaluates if a specified condition is true or false. If th
 local timeRemaining = 10
 
 while timeRemaining > 0 do
-	print("Seconds remaining: " .. timeRemaining)
+	print(`Seconds remaining: {timeRemaining}`)
 	task.wait(1)
 	timeRemaining -= 1
 end
@@ -93,7 +93,7 @@ local currentGoblinCount = 18
 repeat
 	spawnGoblin()
 	currentGoblinCount += 1
-	print("Current goblin count: " .. currentGoblinCount)
+	print(`Current goblin count: {currentGoblinCount}`)
 until currentGoblinCount == 25
 
 print("Goblins repopulated!")

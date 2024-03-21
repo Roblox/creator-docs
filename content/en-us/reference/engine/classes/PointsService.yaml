@@ -64,7 +64,7 @@ methods:
 
       ```lua
       local userId, amount, total = game:GetService("PointsService"):AwardPoints(1, 5)
-      print("The user was awarded " ..amount.. " points. They have now have a total of " ..total.. " points in this game.")
+      print(`The user was awarded {amount} points. They have now have a total of {total} points in this game.`)
       ```
     code_samples:
       - PointsService-AwardPoints1
@@ -159,7 +159,7 @@ events:
 
       ```lua
       local function pointsAwarded(userId, pointsAwarded, userBalanceInGame, userTotalBalance)
-      	print("User: " .. userId .. " has now earned " .. userBalanceInGame .. " (+" .. pointsAwarded ..") points in the current game, now making their total balance " .. userTotalBalance)
+      	print(`User: {userId} has now earned {userBalanceInGame} (+{pointsAwarded}) points in the current game, now making their total balance {userTotalBalance}`)
       end
 
       game:GetService("PointsService").PointsAwarded:Connect(pointsAwarded)

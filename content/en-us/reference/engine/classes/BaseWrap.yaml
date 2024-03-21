@@ -107,10 +107,10 @@ properties:
       	local alignObjects = {}
       	for _, obj in selectedObjects do
       		if obj:IsA("BaseWrap") then
-      			--print("Wrap: " .. obj.Name)
+      			--print(`Wrap: {obj.Name}`)
       			table.insert(alignObjects, obj)
       		else
-      			print("Ignore: " .. obj.Name)
+      			print(`Ignore: {obj.Name}`)
       		end
       	end
 
@@ -121,10 +121,10 @@ properties:
 
       	local anchorWrap = alignObjects[1]
       	local worldA_from_Wrap = anchorWrap.ImportOriginWorld
-      	print("Anchor: " .. anchorWrap.Name)
+      	print(`Anchor: {anchorWrap.Name}`)
       	for i = 2, #alignObjects do
       		local wrapToAlign = alignObjects[i]
-      		print("Align: " .. wrapToAlign.Name)
+      		print(`Align: {wrapToAlign.Name}`)
       		local wrap_from_WorldB = wrapToAlign.ImportOriginWorld:Inverse()
       		local worldA_from_WorldB = worldA_from_Wrap * wrap_from_WorldB
       		local worldB = wrapToAlign.Parent.CFrame

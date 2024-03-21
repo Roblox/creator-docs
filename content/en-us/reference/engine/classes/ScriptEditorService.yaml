@@ -393,7 +393,7 @@ methods:
       ```lua
       local ses = game:GetService('ScriptEditorService')
       ses:UpdateSourceAsync(Workspace.Script, function(oldContent)
-        return oldContent .. " World!"
+        return `{oldContent} World!`
       end)
       ```
     code_samples: []

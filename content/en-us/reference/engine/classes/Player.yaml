@@ -2404,11 +2404,11 @@ events:
       local Players = game:GetService("Players")
 
       local function onCharacterSpawned(player)
-      	print(player.Name .. " is spawning")
+      	print(`{player.Name} is spawning`)
       end
 
       local function onCharacterDespawned(player)
-      	print(player.Name .. " is despawning")
+      	print(`{player.Name} is despawning`)
       end
 
       local function onPlayerAdded(player)

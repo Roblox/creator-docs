@@ -827,7 +827,7 @@ methods:
       	local names = {...}
       	for _,name in names do
       		local signal = Instance.new(bindableClass)
-      		signal.Name = targetName .. "_" .. name
+      		signal.Name = `{targetName}_{name}`
       		signal.Parent = script
       		target[name] = signal
       	end
@@ -900,7 +900,7 @@ methods:
       	else
       		tries += 1
       		if tries == maxAttempts then
-      			error("Error calling SetCore CoreGuiChatConnections: " .. result)
+      			error(`Error calling SetCore CoreGuiChatConnections: {result}`)
       		else
       			task.wait()
       		end

@@ -428,7 +428,7 @@ methods:
       local Players = game:GetService("Players")
 
       local function onPlayerAdded(player)
-      	print("Player: " .. player.Name)
+      	print(`Player: {player.Name}`)
       end
 
       for _, player in Players:GetPlayers() do
@@ -1002,11 +1002,11 @@ events:
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-      	print(player.Name .. " joined the game!")
+      	print(`{player.Name} joined the game!`)
       end)
 
       Players.PlayerRemoving:Connect(function(player)
-      	print(player.Name .. " left the game!")
+      	print(`{player.Name} left the game!`)
       end)
       ```
 
@@ -1089,11 +1089,11 @@ events:
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-        print(player.Name .. " joined the game!")
+        print(`{player.Name} joined the game!`)
       end)
 
       Players.PlayerRemoving:Connect(function(player)
-        print(player.Name .. " left the game!")
+        print(`{player.Name} left the game!`)
       end)
       ```
 

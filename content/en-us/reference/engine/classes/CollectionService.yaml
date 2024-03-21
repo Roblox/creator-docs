@@ -230,7 +230,7 @@ methods:
       local CollectionService = game:GetService("CollectionService")
       local object = workspace.Model
       local tags = CollectionService:GetTags(object)
-      print("The object " .. object:GetFullName() .. " has tags: " .. table.concat(tags, ", "))
+      print(`The object {object:GetFullName()} has tags: {table.concat(tags, ", ")}`)
       ```
 
       This method is useful when you want to do something with multiple tags at
