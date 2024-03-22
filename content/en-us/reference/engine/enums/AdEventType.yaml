@@ -9,15 +9,33 @@ items:
   - name: VideoLoaded
     summary: ''
     value: 0
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: VideoRemoved
     summary: ''
     value: 1
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
   - name: UserCompletedVideo
     summary: ''
     value: 2
+    tags:
+      - Deprecated
+    deprecation_message: ''
+  - name: RewardedAdLoaded
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: RewardedAdGrant
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: RewardedAdUnloaded
+    summary: ''
+    value: 5
     tags: []
     deprecation_message: ''
