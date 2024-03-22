@@ -93,6 +93,7 @@ Variables can be used more than once — just use concatenation between strings 
 
 ```lua
 `I am {name1} and you are in the palace of {name1}!`
+```
 
 **Result**:
 I am Sameth and you are in the palace of Sameth!

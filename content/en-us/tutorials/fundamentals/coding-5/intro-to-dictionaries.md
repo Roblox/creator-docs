@@ -53,36 +53,36 @@ One everyday use of dictionaries is organizing player or character information. 
 
 1. In a new script, create a dictionary named `enemy`.
 
-```lua
-local enemy = {
+   ```lua
+   local enemy = {
 
-}
+   }
    ```
 
 2. The first key in the dictionary will track the enemy's name with a variable called `name`.
 
-```lua
-local enemy = {
-   Name
-}
-```
+   ```lua
+   local enemy = {
+      Name
+   }
+   ```
 
 3. Assign an enemy name to the key, followed by a comma.
 
-```lua
-local enemy = {
-   Name = "Spike",
-}
-```
+   ```lua
+   local enemy = {
+      Name = "Spike",
+   }
+   ```
 
 4. Add a second key-value pair for how much health the enemy should have. Remember, keys should always use the same data type, but values don't have to.
 
-```lua
-local enemy = {
-   Name = "Spike",
-   Health  = 1000,
-}
-```
+   ```lua
+   local enemy = {
+      Name = "Spike",
+      Health  = 1000,
+   }
+   ```
 
 ### Using Dictionary Values
 
@@ -90,15 +90,15 @@ There are two ways to access dictionary values:
 `tableName["keyName"]` -- Note the quotations
 `tableName.keyName`
 
-```lua
-local enemy = {
-   Name = "Spike",
-   Health  = 1000,
-}
+   ```lua
+   local enemy = {
+      Name = "Spike",
+      Health  = 1000,
+   }
 
-print(`The villain {enemy["Name"]} approaches!`)
-print(`The villain {enemy.Name} approaches!`)
-```
+   print(`The villain {enemy["Name"]} approaches!`)
+   print(`The villain {enemy.Name} approaches!`)
+   ```
 
 Which style to use usually depends on the purpose of the table. For tables holding a collection of values like a list of players in a server, coders will usually use tableName["keyName"]. For a dictionary used to describe an object, coders are more likely to use tableName.keyName.
 
@@ -108,16 +108,16 @@ Changing a key's value is the same as any other variable; use the equal `=` oper
 
 1. Beneath the `enemy` table, set the enemy's name to something else.
 
-```lua
-local enemy = {
-   Name = "Spike",
-   Health = 1000,
-}
+   ```lua
+   local enemy = {
+      Name = "Spike",
+      Health = 1000,
+   }
 
-enemy.Name = "Rana"
-   
-print(`The enemy's name is {enemy.Name}`)
-```
+   enemy.Name = "Rana"
+      
+   print(`The enemy's name is {enemy.Name}`)
+   ```
 
 2. Playtest and check the Output window.
 
@@ -127,46 +127,46 @@ Dictionaries can interact with pre-existing variables declared in other parts of
 
 1. In **ServerScriptService**, create a new script named PlayerPoints. In the script, get the Players Service and create an empty dictionary named `playerPoints`.
 
-```lua
-Players = game:GetService("Players")
+   ```lua
+   Players = game:GetService("Players")
 
-local playerPoints = {
+   local playerPoints = {
 
-}
-```
+   }
+   ```
 
 2. Code a local function for setting player points with a parameter for a new player variable. Connect the function to the `Class.Players.PlayerAdded` event.
 
-```lua
-local playerPoints = {
+   ```lua
+   local playerPoints = {
 
-}
+   }
 
-local function setPoints(newPlayer)
+   local function setPoints(newPlayer)
 
-end
+   end
 
-Players.PlayerAdded:Connect(setPoints)
-```
+   Players.PlayerAdded:Connect(setPoints)
+   ```
 
 3. In the function, add a variable to get the player's `Name`, a property in every **Player** object, and a print statement for testing.
 
-```lua
-local function setPoints(newPlayer)
-   local name = newPlayer.Name
-   print(`Hello {name}`)
-end
-```
+   ```lua
+   local function setPoints(newPlayer)
+      local name = newPlayer.Name
+      print(`Hello {name}`)
+   end
+   ```
 
 4. Insert name into the `playerPoints` dictionary as a key, and set the value, the player's points, to 0.
 
-```lua
-local function setPoints(newPlayer)
-   local name = newPlayer.Name
-   print(`Hello {name}`)
-   playerPoints[name] = 0
-end
-```
+   ```lua
+   local function setPoints(newPlayer)
+      local name = newPlayer.Name
+      print(`Hello {name}`)
+      playerPoints[name] = 0
+   end
+   ```
 
     <Alert severity="warning">
      Since `name` was created as a variable, it can be accessed with the actual variable name. If `name` had been simply a key name, it would need to be accessed the same as other strings, playerPoints["name"]
@@ -175,33 +175,33 @@ end
 
 5. Use `name` to print the name of the player and playerPoints[name] to print the value of the key matching the variable.
 
-```lua
-local function setPoints(newPlayer)
-   local name = newPlayer.Name
-   print(`Hello {name}`)
-   playerPoints[name] = 0
-   print(`{name} has {playerPoints[name]} points.`)
-end
-```
+   ```lua
+   local function setPoints(newPlayer)
+      local name = newPlayer.Name
+      print(`Hello {name}`)
+      playerPoints[name] = 0
+      print(`{name} has {playerPoints[name]} points.`)
+   end
+   ```
 
 6. Run the project and look into the output editor.
 
-```lua title="Finished script"
-Players = game:GetService("Players")
+   ```lua title="Finished script"
+   Players = game:GetService("Players")
 
-local playerPoints = {
+   local playerPoints = {
 
-}
+   }
 
-local function setPoints(newPlayer)
-   local name = newPlayer.Name
-   print(`Hello {name}`)
-   playerPoints[name] = 0
-   print(`{name} has {playerPoints[name]} points.`)
-end
+   local function setPoints(newPlayer)
+      local name = newPlayer.Name
+      print(`Hello {name}`)
+      playerPoints[name] = 0
+      print(`{name} has {playerPoints[name]} points.`)
+   end
 
-Players.PlayerAdded:Connect(setPoints)
-```
+   Players.PlayerAdded:Connect(setPoints)
+   ```
 
 ### Optional Challenges
 
