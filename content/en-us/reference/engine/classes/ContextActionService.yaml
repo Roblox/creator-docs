@@ -356,12 +356,13 @@ methods:
       `Class.Tool.Activation` and `Class.ClickDetector` events.
     description: |
       Bind a `Enum.KeyCode` that can be used with a `Enum.UserInputType` to
-      activate `Class.ClickDetector` events, `Class.Tool|Tools`, and `Class.GuiButton|GuiButtons`. When the
-      given key/button is pressed, it fires the `Class.Mouse.Button1Down` event
-      on the mouse sent to `Class.Tool.Equipped`. This in turn fires the
-      `Class.Tool.Activated` event if `Class.Tool.ManualActivationOnly` is not
-      set to true. For gamepad input, this function is called by the default
-      control scripts in order to bind the ButtonR2 `Enum.KeyCode`.
+      activate `Class.ClickDetector` events, `Class.Tool|Tools`, and
+      `Class.GuiButton|GuiButtons`. When the given key/button is pressed, it
+      fires the `Class.Mouse.Button1Down` event on the mouse sent to
+      `Class.Tool.Equipped`. This in turn fires the `Class.Tool.Activated` event
+      if `Class.Tool.ManualActivationOnly` is not set to true. For gamepad
+      input, this function is called by the default control scripts in order to
+      bind the ButtonR2 `Enum.KeyCode`.
 
       Note that the `Enum.UserInputType` specified must be `Keyboard` or
       `Gamepad1` through `Gamepad8` in order to be valid.

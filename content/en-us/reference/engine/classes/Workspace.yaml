@@ -230,6 +230,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.DecreaseMinimumPartDensityMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DecreaseMinimumPartDensityMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: Workspace.DistributedGameTime
     summary: |
       The amount of time, in seconds, that the game has been running.
@@ -433,7 +449,10 @@ properties:
     description: ''
     code_samples:
     type: InterpolationThrottlingMode
-    tags: []
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -441,8 +460,8 @@ properties:
     thread_safety: ReadSafe
     category: Behavior
     serialization:
-      can_load: true
-      can_save: true
+      can_load: false
+      can_save: false
   - name: Workspace.MeshPartHeadsAndAccessories
     summary: |
       Sets whether character Heads and Accessories should be downloaded as
