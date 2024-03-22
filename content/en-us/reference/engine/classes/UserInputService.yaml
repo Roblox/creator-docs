@@ -1230,7 +1230,7 @@ methods:
 
       local textLabel = script.Parent
       local mapKey = Enum.KeyCode.M
-      textLabel.Text = "Press " .. UserInputService:GetStringForKeyCode(mapKey) .. " to open the map"
+      textLabel.Text = `Press {UserInputService:GetStringForKeyCode(mapKey)} to open the map"
       ```
 
       #### Examples on QWERTY Keyboard
@@ -2165,7 +2165,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       local function GamepadConnected(gamepad)
-      	print("Player has plugged controller: " .. tostring(gamepad))
+      	print(`Player has plugged controller: {tostring(gamepad)}`)
       end)
 
       userInputService.GamepadConnected:Connect(GamepadConnected)
@@ -2217,7 +2217,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       local function GamepadDisconnected(gamepad)
-      	print("Player has unplugged controller: " .. tostring(gamepad))
+      	print(`Player has unplugged controller: {tostring(gamepad)}`)
       end)
 
       userInputService.GamepadDisconnected:Connect(GamepadDisconnected)
@@ -2735,7 +2735,7 @@ events:
 
       function onTouchMoved(touch, gameProcessedEvent)
       	local oldPosition = touch.Position - touch.Delta
-      	print("Touch moved from " .. tostring(oldPosition) .. "to " .. tostring(touch.Position))
+      	print(`Touch moved from {tostring(oldPosition)} to {tostring(touch.Position)}`)
       end
 
       UserInputService.TouchMoved:Connect(onTouchMoved)

@@ -129,7 +129,7 @@ ScavengerHunt.collected:Connect(function(player, itemName)
 end)
 
 ScavengerHunt.allCollected:Connect(function(player)
-	print(player.DisplayName .. " completed the hunt!")
+	print(`{player.DisplayName} completed the hunt!`)
 end)
 ```
 
@@ -616,7 +616,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ScavengerHunt = require(ReplicatedStorage:WaitForChild("ScavengerHunt"))
 
 ScavengerHunt.allCollected:Connect(function(player)
-	print(player.DisplayName .. " completed the hunt!")
+	print(`{player.DisplayName} completed the hunt!`)
 end)
 ```
 

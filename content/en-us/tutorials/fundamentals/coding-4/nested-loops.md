@@ -55,19 +55,19 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
 
    -- Outer loop
    for partBatch = 1, numberOfBatches do
-     print ("Top outer loop: part batch " .. partBatch)
+     print (`Top outer loop: part batch {partBatch}`)
      currentColor = Color3.fromRGB(math.random(0, 255),math.random(0, 255),math.random(0, 255))
 
      -- Inner loop
      for partNumber = 1, partsPerBatch do
        createPart()
-       print("Inner loop: part " .. partNumber)
+       print(`Inner loop: part {partNumber}`)
        -- Track parts baked
        partsMade = partsMade + 1
        task.wait(.5)
      end
 
-     print("Bottom outer loop: " .. partsMade .. " parts made so far.")
+     print(`Bottom outer loop: {partsMade} parts made so far.`)
 
      task.wait(2)
    end
@@ -343,20 +343,20 @@ end
 
 -- Outer loop
 for cupcakeBatch = 1, numberOfBatches do
-	print ("Top outer loop: cupcake batch " .. cupcakeBatch)
+	print (`Top outer loop: cupcake batch {cupcakeBatch}`)
 	frostingColor = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
 	cupColor = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
 
 	-- Inner loop
 	for cupcakeNumber = 1, cupcakesPerBatch do
 		makeCupcake()
-		print("Inner loop: cupcake " .. cupcakeNumber)
+		print(`Inner loop: cupcake {cupcakeNumber}`)
 	 -- Track muffins baked
 		cupcakesBaked = cupcakesBaked + 1
 		task.wait(.5)
 end
 
-print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")
+print(`Bottom outer loop: {cupcakesBaked} cupcakes baked so far.`)
 end
 ```
 

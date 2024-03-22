@@ -136,7 +136,7 @@ To run an event, we would either use a remote event from clients, or a function 
 
 ```lua
  local params = {
-	RootObject = workspace.Content.Interior.Foyer["Ritual-DemoVersion"]["SealDropoff_" .. missionName],
+	RootObject = workspace.Content.Interior.Foyer["Ritual-DemoVersion"][`SealDropoff_{missionName}`],
 	isEnabled = enabled
 }
 local eventId = eventManagerFunc:Invoke("Run", {eventName = "Ritual_Init_Dropoff", eventParams = params} )

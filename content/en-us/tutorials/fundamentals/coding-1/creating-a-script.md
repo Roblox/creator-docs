@@ -159,14 +159,14 @@ Print functions display text on the screen, as you saw earlier. It's one of the 
 
 ### Combining Strings
 
-You can display any string in the Output using `print()`; you can even print multiple strings stored within variables or typed directly within the function. **Concatenation** is combining strings. To concatenate the string assigned to your variable and a second string, use two dots `..` The following example concatenates two variables and two typed strings.
+You can display any string in the Output using `print()`; you can even print multiple strings stored within variables or typed directly within the function. **Interpolation** is combining strings. To interpolate the string assigned to your variable and a second string, use backticks and brackets (`{}`). The following example interpolates two variables and two typed strings.
 
 ```lua title = 'Uses variables and strings together'
 
 local firstAnimal = "porcupines"
 local secondAnimal = "dolphins"
 
-print("I like " .. firstAnimal .. " and " .. secondAnimal)
+print(`I like {firstAnimal} and {secondAnimal}`)
 ```
 
 Play around with printing different combinations of strings.
@@ -175,6 +175,6 @@ Play around with printing different combinations of strings.
 
 New scripts can be created by clicking the + button next to the name of an object. ServerScriptService is a common place to create new scripts. New scripts include the default code `print("Hello world!")`. This code will display `Hello world!` in the Output window, where you can see the results of your code and if any errors have occurred.
 
-"Hello world!"' is an example of a string data type. Strings can include any combination of characters that you might type on your keyboard. Concatenation is when multiple strings are combined.
+"Hello world!"' is an example of a string data type. Strings can include any combination of characters that you might type on your keyboard. Interpolation is when multiple strings are combined.
 
 Variables are containers that can be assigned to hold different data types, such as strings and numbers.

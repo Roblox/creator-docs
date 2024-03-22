@@ -299,7 +299,7 @@ functions:
       end
       -- Measure amount of time this took:
       local deltaTime = os.clock() - startTime
-      print("Elapsed time: " .. deltaTime)
+      print(`Elapsed time: {deltaTime}`)
       -->  Elapsed time: 0.044425600033719 (actual number may vary)
       ```
     parameters:

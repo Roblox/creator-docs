@@ -93,7 +93,7 @@ local function createPart(player, partColor, partPosition)
 		return false
 	end
 
-	print(player.Name .. " requested a new part")
+	print(`{player.Name} requested a new part`)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition

@@ -197,7 +197,7 @@ To finish, use an if statement with multiple conditions to award players a diffe
    ```lua
    local function finish()
       raceActive = false
-      print("You finished in " .. timePassed)
+      print(`You finished in {timePassed}`)
    end
    ```
 
@@ -206,7 +206,7 @@ To finish, use an if statement with multiple conditions to award players a diffe
    ```lua
    local function finish()
       raceActive = false
-      print("You finished in " .. timePassed)
+      print(`You finished in {timePassed}`)
 
       if timePassed <= 10 then
          print("You get a gold medal!")
@@ -225,7 +225,7 @@ Now that you've tested for the gold medal, code conditions for the other medals 
    ```lua
    local function finish()
      raceActive = false
-     print("You finished in " .. timePassed)
+     print(`You finished in {timePassed}`)
 
      if timePassed <= 10 then
        print("You get a gold medal!")
@@ -240,7 +240,7 @@ Now that you've tested for the gold medal, code conditions for the other medals 
    ```lua
    local function finish()
       raceActive = false
-      print("You finished in " .. timePassed)
+      print(`You finished in {timePassed}`)
 
       if timePassed <= 10 then
          print("You get a gold medal!")
@@ -275,7 +275,7 @@ It's recommended that every if statement has an else, just in case the code does
    ```lua
    local function finish()
      raceActive = false
-     print("You finished in " .. timePassed)
+     print(`You finished in {timePassed}`)
 
      if timePassed <= 10 then
        print("You get a gold medal!")
@@ -318,7 +318,7 @@ local raceActive = true
 -- Runs when the player touches the finish line and shows them an award
 local function finish()
    raceActive = false
-   print("You finished in " .. timePassed)
+   print(`You finished in {timePassed}`)
 
    if timePassed <= 10 then
       print("You get a gold medal!")

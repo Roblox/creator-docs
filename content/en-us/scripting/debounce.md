@@ -13,7 +13,7 @@ Suppose you want to create a hazardous trap part that inflicts 10 damage when to
 local part = script.Parent
 
 local function damagePlayer(otherPart)
-	print(part.Name .. " collided with " .. otherPart.Name)
+	print(`{part.Name} collided with {otherPart.Name}`)
 
 	local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then
@@ -36,7 +36,7 @@ local part = script.Parent
 local RESET_TIME = 1
 
 local function damagePlayer(otherPart)
-	print(part.Name .. " collided with " .. otherPart.Name)
+	print(`{part.Name} collided with {otherPart.Name}`)
 
 	local humanoid = otherPart.Parent:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then

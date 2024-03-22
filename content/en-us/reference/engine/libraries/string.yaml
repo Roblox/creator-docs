@@ -255,7 +255,7 @@ functions:
 
       ```lua
       local str = "%-10d"
-      print(string.format(str, 300) .. "]")
+      print(`{string.format(str, 300)}])
       -- 300       ]
       -- There are 7 spaces between '300' and ']'
 
@@ -286,7 +286,7 @@ functions:
 
       ```lua
       local str = "%012i"
-      print("Score: " .. string.format(str, 15000))
+      print(`Score: {string.format(str, 15000)}`)
       -- Output: Score: 000000015000
       -- The output has 12 digits total, left-padded with zeros
       ```

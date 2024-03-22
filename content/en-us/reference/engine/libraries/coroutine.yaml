@@ -106,7 +106,7 @@ description: |
   	local repetition = ""
   	while true do
   		-- Do one repetition then yield the result
-  		repetition = repetition .. word
+  		repetition ..= word
   		coroutine.yield(repetition)
   	end
   end
