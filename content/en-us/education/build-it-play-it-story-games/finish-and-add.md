@@ -90,6 +90,7 @@ Also, below are some **tips and tricks** to make stories for fun for players.
 Variables can be used more than once — just use concatenation between strings where you want to include the word(s).
 
 **Example Code**:
+
 ```lua
 `I am {name1} and you are in the palace of {name1}!`
 
