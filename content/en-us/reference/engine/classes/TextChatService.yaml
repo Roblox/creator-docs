@@ -170,12 +170,18 @@ properties:
       Determines whether `Class.TextChatService` should create default
       `Class.TextChannel|TextChannels`. If true, a `Class.Folder` named
       **TextChannels** is created inside `Class.TextChatService` at runtime to
-      contain the following `Class.TextChannel|TextChannels`:
+      contain the `Class.TextChannel|TextChannels` outlined in the table below.
+      Each of the default channels has the described special behavior applied to
+      messages using its internally bound `Class.TextChannel.OnIncomingMessage`
+      callback function, changing how messages appear when sent through the
+      channel. The callback is assigned automatically either at runtime
+      (if the `Class.TextChannel` exists) or when the `Class.TextChannel` is
+      created.
 
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Channel</th>
             <th>Description</th>
           </tr>
         </thead>
@@ -199,16 +205,8 @@ properties:
         </tbody>
       </table>
 
-      Each of these default `Class.TextChannel|TextChannels` has associated
-      special behavior applied to messages using its internally bound
-      `Class.TextChannel.OnIncomingMessage` callback function. This changes
-      how messages appear when sent through one of the default channels,
-      described in the table above. The callback is assigned automatically
-      either at runtime (if the `Class.TextChannel` exists), or when the
-      `Class.TextChannel` is created.
-
-      These default `Class.TextChannel.OnIncomingMessage` callbacks can be
-      overwritten. Also note that you can edit, create, and remove
+      Note that the default `Class.TextChannel.OnIncomingMessage` callbacks
+      can be overwritten. Also note that you can edit, create, and remove
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
