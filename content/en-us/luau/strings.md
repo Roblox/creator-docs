@@ -46,9 +46,11 @@ print(string1)
 
 ## Combining Strings
 
-To combine strings, **concatenate** them with two dots (`..`) or using backticks and brackets (`{}`). Concatenating strings doesn't insert a space between them, so you'll need to include space(s) at the end/beginning of a preceding/subsequent string, or concatenate a space between the two strings.
+### Concatenation
 
-```lua title='Concatenation with double dots'
+To combine strings, **concatenate** them with two dots (`..`). Concatenating strings doesn't insert a space between them, so you'll need to include space(s) at the end/beginning of a preceding/subsequent string, or concatenate a space between the two strings.
+
+```lua title='Concatenation'
 local hello = "Hello"
 local helloWithSpace = "Hello "
 local world = "world!"
@@ -62,7 +64,11 @@ print(string2)  --> Hello world!
 print(string3)  --> Hello world!
 ```
 
-```lua title='Concatenation with backticks and brackets'
+### Interpolation
+
+To combine strings, **interpolate** them with backticks and brackets (`{}`). String interpolation was introduced in Luau. It is a more modern way to combine strings with expressions and should be used over concatenation.
+
+```lua title='Interpolation'
 local hello = "Hello"
 local helloWithSpace = "Hello "
 local world = "world!"
