@@ -3,16 +3,10 @@ type: class
 category: Utility
 memory_category: Instances
 summary: |
-  The Debris service allows the developer to schedule guaranteed destruction of
-  the object without yielding, through the usage of the `Class.Debris:AddItem()`
-  method.
+    Allows scheduling guaranteed destruction of an object without yielding.  
 description: |
-  The **Debris** service allows scheduling of guaranteed destruction of an
-  object without yielding, through the usage of the `Class.Debris:AddItem()`
-  method.
-
-  As Debris is a service it must be created using the
-  `Class.ServiceProvider:GetService()` method.
+  The **Debris** service allows scheduling guaranteed destruction of an
+  object without yielding.
 
   #### Advantages
 
@@ -41,9 +35,13 @@ description: |
   end)
   ```
 
-  While this solves the above issue by preventing the code from yielding, it
-  introduces a second drawback in that the scheduled callback will never run if
-  the script is disabled or destroyed before the callback runs.
+  Or in one line:
+  
+  ```lua
+  task.delay(3, brick.Destroy, brick)
+  ```
+
+  While this now avoids yielding, it has a drawback in that the scheduled callback will never run if the script is disabled or destroyed before the callback runs.
 
   This is where `Class.Debris` has a specific advantage, as it does not yield
   the current thread and runs outside the context of the script, guaranteeing
@@ -97,10 +95,10 @@ properties:
 methods:
   - name: Debris:AddItem
     summary: |
-      Registers a given `Class.Instance` for removal within the specified
+      Schedules a given `Class.Instance` for destruction within the specified
       lifetime.
     description: |
-      Registers a given `Class.Instance` for removal within the specified
+      Schedules a given `Class.Instance` for destruction within the specified
       lifetime. After the `lifetime` argument has elapsed, the object is
       destroyed in the same manner as `Class.Instance:Destroy()`. Note
       that the `lifetime` argument is optional and defaults to 10 seconds.
