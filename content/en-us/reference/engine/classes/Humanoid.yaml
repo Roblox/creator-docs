@@ -218,8 +218,6 @@ properties:
       For player `Class.Player.Character|Characters` the CollisionType property
       will be decided by the Avatar Collision Option in Game Settings.
 
-      ![Collision Options in Game Settings](/assets/legacy/HumanoidCollisionType.jpg)
-
       This property is writable by `Class.Plugin|Plugins` and can be read by all
       scripts.
 
@@ -914,8 +912,6 @@ properties:
       A reference to the humanoid's **HumanoidRootPart** object, the root
       driving part of the `Class.Humanoid` that controls a humanoid's movement
       through the 3D world. This part is normally invisible.
-
-      ![HumanoidRootPart made visible](/assets/engine-api/classes/Humanoid/Character-HumanoidRootPart.jpg)
 
       Note that in the case of player characters, **RootPart** is the same as
       the `Class.Model.PrimaryPart` of the `Class.Player.Character` model.
@@ -1997,7 +1993,7 @@ methods:
       normal. In the image below, a R15 avatar has had their right hand replaced
       with a slightly larger version (also pictured).
 
-      ![An image of a Roblox avatar with a large right hand, replaced using ReplaceBodyPartR15. How handy](/assets/legacy/Humanoid.ReplaceBodyPartR15.png)
+      ![An image of a Roblox avatar with a large right hand, replaced using ReplaceBodyPartR15.](../../../assets/legacy/Humanoid.ReplaceBodyPartR15.png)
 
       This function is useful for modifying characters during gameplay or
       building characters from a base rig. The related function

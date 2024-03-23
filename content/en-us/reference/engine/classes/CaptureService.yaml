@@ -78,6 +78,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: CaptureService:GetCaptureStorageSizeAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pathArr
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events:
   - name: CaptureService.CaptureBegan
     summary: ''

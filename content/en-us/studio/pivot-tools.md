@@ -9,7 +9,7 @@ The **Pivot** tools and related properties give you full control over the points
 
 The interactive Studio tools are located in the [Model](./model-tab.md) tab.
 
-<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="830" alt="Pivot Tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="768" alt="Studio's Model tab with the Pivot Tools section highlighted." />
 
 ### Edit Pivot
 
@@ -19,13 +19,13 @@ The following diagrams show example pivot locations in relation to object bounds
 
 <Tabs>
 <TabItem label="Center">
-<img src="../assets/studio/pivot-tools/Edit-Pivot-Center-A.jpg" width="720" height="405" />
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Center-A.jpg" width="720" height="405" alt="A blue cube with its pivot point set in the center of the cube. A green circle represents the object's rotation in relation to its pivot point." />
 </TabItem>
 <TabItem label="Corner">
-<img src="../assets/studio/pivot-tools/Edit-Pivot-Corner-A.jpg" width="720" height="405" />
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Corner-A.jpg" width="720" height="405" alt="A blue cube with its pivot point set on a corner of the cube. A green circle represents the object's rotation in relation to its pivot point." />
 </TabItem>
 <TabItem label="Outside Object Bounds">
-<img src="../assets/studio/pivot-tools/Edit-Pivot-Outside-A.jpg" width="720" height="405" />
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Outside-A.jpg" width="720" height="405" alt="A blue cube with its pivot point set on outside of the cube's geometry. A green circle represents the object's rotation in relation to its pivot point." />
 </TabItem>
 </Tabs>
 
@@ -33,7 +33,7 @@ When you rotate the pivot of a [model](../parts/models.md), the bounding box of 
 
 <Tabs>
 <TabItem label="Orientation = (0, 90, 0)">
-<img src="../assets/studio/pivot-tools/Edit-Pivot-Model-A.jpg" width="720" height="405" />
+<img src="../assets/studio/pivot-tools/Edit-Pivot-Model-A.jpg" width="720" height="405" alt="A model of a purple, blue, and red block with its pivot point set on a the edge of the model's bounding box. A green circle represents the object's rotation in relation to its pivot point." />
 </TabItem>
 <TabItem label="Orientation = (0, 135, 0)">
 <img src="../assets/studio/pivot-tools/Edit-Pivot-Model-B.jpg" width="720" height="405" />

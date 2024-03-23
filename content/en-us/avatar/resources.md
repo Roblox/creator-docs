@@ -156,6 +156,54 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 </Grid>
 
+## Auto-Setup References
+
+<Grid container alignItems='stretch' style={{margin: -6}}>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Nature Girl - AutoSetup</center>
+<figure>
+<center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including clothing and rigid accessory assets and PBR texture assets. <br /> <br />
+This Auto-Setup template is not compatible with the traditional avatar creation workflow.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+<Grid item xs={12} md={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent>
+
+<center>Stylish Male - AutoSetup</center>
+<figure>
+<center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
+</figure>
+<figure>
+A comprehensive `.zip` folder of an [Avatar Auto-Setup](../art/modeling/avatar-setup.md#avatar-auto-setup) ready character model, including the base body and associated PBR textures. <br /> <br />
+This Auto-Setup template is not compatible with the traditional avatar creation workflow.
+</figure>
+</CardContent>
+
+<CardActions style={{bottom: 0, width: '100%'}}>
+<Button href="../assets/art/reference-files/StylizedMale-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+</Grid>
+
+</Grid>
+
 ## Project Files
 
 <Grid container alignItems='stretch' style={{margin: -6}}>

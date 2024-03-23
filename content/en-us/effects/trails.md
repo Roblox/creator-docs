@@ -21,7 +21,7 @@ Before you begin to create a trail, it's useful to toggle on visibility of attac
 1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
 2. If it's not currently enabled, toggle on **Constraint Details**.
 
-   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="740" alt="Constraint Details toggle indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
 The following video demonstrates how attachments that are closer to each other create a trail with a smaller width:
 

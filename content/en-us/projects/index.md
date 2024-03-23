@@ -10,7 +10,7 @@ A Roblox project is a collection of [places](#places), [assets](#assets), [setti
 Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and Places](../production/publishing/publishing-experiences-and-places.md) for details on creating and managing experiences.
 
 <figure>
-<img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" width="800" />
+<img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
 </figure>
 
 Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the Roblox engine interprets the data model, see [Client-Server Runtime](../projects/client-server.md).
@@ -27,8 +27,8 @@ In Roblox, assets such as images, meshes, and audio are stored as **cloud-based 
 <table>
   <tbody>
     <tr>
-      <td><img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" /></td>
-      <td><img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" width="90%" /></td>
+      <td><img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
+      <td><img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
       <td><audio controls><source src="../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
     </tr>
     <tr>

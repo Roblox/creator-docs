@@ -331,22 +331,34 @@ items:
     tags: []
     deprecation_message: ''
   - name: BuilderSans
-    summary: ''
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSans.png" />
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
     value: 46
     tags: []
     deprecation_message: ''
   - name: BuilderSansMedium
-    summary: ''
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansMedium.png" />
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
     value: 47
     tags: []
     deprecation_message: ''
   - name: BuilderSansBold
-    summary: ''
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansBold.png" />
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
     value: 48
     tags: []
     deprecation_message: ''
   - name: BuilderSansExtraBold
-    summary: ''
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/BuilderSansExtraBold.png" />
+
+      See [Builder Font License](../../../resources/builder-font-license.md).
     value: 49
     tags: []
     deprecation_message: ''

@@ -11,16 +11,39 @@ description: Explains how to publish the places in your experience.
 
 ## Publishing Experiences
 
-By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions. When appropriate, you can [release the experience](#releasing-to-the-public) to the public.
+By default, publishing a new place creates a new experience. New experiences begin as **private** and are only accessible to you and members of your [group](../../projects/groups.md) with the correct permissions.
 
-### Starting Place
+When you're ready to release an experience to a wider audience, you
+can [release it to the public](#releasing-to-the-public), although beta testing should still be an essential part of your development cycle. Because you're not able to determine which countries have access to an experience, which limits the ability to run beta tests in smaller markets, consider these strategies:
 
-While an experience can consist of many places, each experience can only have one **starting place** that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
+<Tabs>
+  <TabItem label="Paid-Access Beta">
+    Under the [paid access](../../production/monetization/paid-access.md) model, users
+    must pay an upfront fee in **Robux**, the platform's currency. This limits
+    your user base, allowing you to test and iterate with smaller server fills,
+    although the test results you gather may not reflect performance among a
+    wider audience.
+  </TabItem>
+  <TabItem label="Ghost Release">
+    Under the "ghost release" model, you release an experience under a temporary
+    name and icon. This doesn't necessarily gauge marketing appeal, but it can help
+    you test the experience without impacting its rating. When testing is
+    complete, you can remove the ghost version and conduct a
+    [full&nbsp;release](#full-release).
+  </TabItem>
+	<TabItem label="Full Release">
+    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/promotional-thumbnails.md).
+  </TabItem>
+</Tabs>
 
-To publish a place as the starting place of an entirely new experience:
+### Start Place
+
+While an experience can consist of many places, each experience can only have one **start place** that all users load into when they join. From within any place, you can [teleport](../../projects/teleporting.md) users to another place.
+
+To publish a place as the start place of an entirely new experience:
 
 1. In the Studio menu bar, select **File** &rarr; **Publish to Roblox**. A contextual menu displays.
-1. Fill in the following fields, most of which can be changed later from [Game Settings](../../studio/game-settings.md).
+2. Fill in the following fields, most of which can be [reconfigured](#configuring-experiences) later.
 
    - **Name** / **Description** — The experience name and a description that describes what a potential player should expect. See [metadata best practices](#metadata-best-practices) for guidelines.
    - **Creator** — The creator you'd like to attribute as the creator of the experience.
@@ -32,15 +55,13 @@ To publish a place as the starting place of an entirely new experience:
    - **Genre** — The genre that best describes the experience.
    - **Devices** — Each applicable device type that you want to support. The default options are practical for most new creators.
 
-     <img src="../../assets/publishing/experiences-places-assets/Supported-Devices.png" width="300" alt="Possible devices to support when publishing an experience: Computer, Phone, Tablet, Console, or VR" />
+3. Click the **Create** button.
 
-1. Click the **Create** button.
-
-Once you publish your experience, you can [configure more settings](#configuring-experiences) and also add more places to your experience.
+Once you publish your experience, you can [configure more settings](#configuring-experiences) and also [add more places](#additional-places).
 
 ### Additional Places
 
-After you have published a [starting place](#starting-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
+After you have published a [start place](#start-place) to create the overall experience, you can add additional places through the [Asset Manager](../../projects/assets/manager.md). To create a new place within an existing experience:
 
 1. From the [View](../../studio/view-tab.md) tab, open the [Asset Manager](../../projects/assets/manager.md).
 
@@ -50,35 +71,33 @@ After you have published a [starting place](#starting-place) to create the overa
 
    <img src="../../assets/studio/asset-manager/Folder-Menu-Button.png" width="360" />
 
-1. Avoiding the thumbnail/name of your starting place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name.
+1. Avoiding the thumbnail/name of your start place, right-click in an empty region of the window and select **Add New Place**. A new place displays with a placeholder name.
 
    <img src="../../assets/studio/asset-manager/Places-New-Place-Created.png" width="360" />
 
 1. Right-click the new place, select **Rename**, and enter a more descriptive name.
 1. When you double-click the new place, a new Studio session opens for editing the new place.
 
-### Changing the Starting Place
+### Changing the Start Place
 
-The starting place of an experience cannot be instantly swapped with another place, but you can change it through the following steps:
+The [start place](#start-place) of an experience cannot be instantly swapped with another place, but you can change it through the following steps.
 
-1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Click on the thumbnail of the experience for which you want to change the starting place. The experience's **Overview** page displays.
+1. If desired, save/backup your **current** start place to a `.rbxl` file or to a new place within the experience.
+1. Navigate to the [Creator Dashboard][creatordashboard] and click on the thumbnail of the experience for which you want to change the start place. The experience's **Overview** page displays.
 1. In the left-hand navigation, under **Configure**, select **Places**.
 
    <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-1. Click the **Edit in Studio** button for both the **current** starting place and a target **new** starting place. Two separate instances of Studio open, one for each place.
+1. Click the **Edit in Studio** button for the intended **new** start place. Studio opens and loads that specific place.
 
-   <img src="../../assets/creator-dashboard/Experience-Change-Starting-Place.png" width="554" />
+   <img src="../../assets/creator-dashboard/Experience-Change-Start-Place.png" width="550" />
 
-1. In the Studio instance running the **current** starting place, select **File**&nbsp;&rarr; **Publish&nbsp;to&nbsp;Roblox&nbsp;As…** in the menu bar (do not select simply **Publish&nbsp;to&nbsp;Roblox** as it would publish the starting place over itself).
-1. In the window that appears, click the tile for the same experience, then choose whether to publish it as a **new** place or to overwrite an existing place. Click the **Create** or **Overwrite** button respectively.
-1. In the Studio instance running the intended **new** starting place, select **File**&nbsp;&rarr; **Publish&nbsp;to&nbsp;Roblox&nbsp;As…** in the menu bar.
-1. In the window that appears, click the tile for the same experience, then choose the **original** starting place. Click the **Overwrite** button.
-1. Close both instances of Studio.
-1. Back in the [Creator Dashboard][creatordashboard], use the **Restart Servers for Updates** workflow as outlined in [Updating Experiences](#updating-experiences).
+1. Select **File** &rarr; **Publish to Roblox As…** in the menu bar (do not select simply **Publish&nbsp;to&nbsp;Roblox** as it would publish the place over itself).
+1. In the window that appears, click the tile for the same experience, then choose the **current** start place. Click the **Overwrite** button.
 
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Restart-Servers.png" width="420" alt="Restart Servers for Updates option from Creator Dashboard" />
+   <img src="../../assets/publishing/experiences-places-assets/Publish-Window-Select-Start-Place.png" width="720" />
+
+1. **(Optional)** If the experience is live, it's recommended that you restart its servers as outlined in [Updating Experiences](#updating-experiences).
 
 ## Configuring Experiences
 
