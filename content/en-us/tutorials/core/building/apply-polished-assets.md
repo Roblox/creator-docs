@@ -1,4 +1,4 @@
----
+---poo
 title: Apply Polished Assets
 description: Explains how to finish your scene by replacing simple parts with complex, imported models.
 prev: /tutorials/core/building/customize-global-lighting
