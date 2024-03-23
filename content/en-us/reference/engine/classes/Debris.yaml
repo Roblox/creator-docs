@@ -25,7 +25,7 @@ description: |
   brick:Destroy()
   ```
 
-  However, waiting causes the thread to yield which may not be desired. To avoid
+  However, waiting causes the thread to yield which may be undesired. To avoid
   yielding, a callback function can be scheduled to run on a new thread after 3
   seconds:
 
@@ -41,7 +41,9 @@ description: |
   task.delay(3, brick.Destroy, brick)
   ```
 
-  While this now avoids yielding, it has a drawback in that the scheduled callback will never run if the script is disabled or destroyed before the callback runs.
+  While this now avoids yielding, it has a potential drawback in that the
+  scheduled callback will never run if the script is disabled or destroyed
+  before the callback runs.
 
   This is where `Class.Debris` has a specific advantage, as it does not yield
   the current thread and runs outside the context of the script, guaranteeing
