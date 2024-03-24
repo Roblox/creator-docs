@@ -152,7 +152,7 @@ functions:
       secretPassword = "VerySecret1234" -- A global variable exclusive to Main
 
       local function checkPassword(password)
-	      return password == secretPassword
+          return password == secretPassword
       end
 
       local result = checkPassword(getInput()) -- Call external function getInput
