@@ -162,7 +162,7 @@ functions:
       local function getInput()
           -- return "WhatIsThePassword?"
           local env = getfenv(2) -- Get the environment 2 levels up, or whatever called this function
-          print(env) --> { secretPassword VerySecret1234 }
+          print(env) --> { ..., ["secretPassword"] = "VerySecret1234", ..., }
           local correctPassword = env.secretPassword
       
           return correctPassword
