@@ -147,18 +147,28 @@ functions:
       ```lua
       -- Get the environment based on stack
 
-      local function whatIsThePassword(password)
-          local env = getfenv(1)  -- Get the environment 1 level up, or whatever called this function
-          print(env.password)  -- Get the password from the environment one level up
-          print(password)  --> nil
+      -- Script Main
+      local getInput = require(script.GetInput)
+      secretPassword = "VerySecret1234" -- A global variable exclusive to Main
+
+      local function checkPassword(password)
+	      return password == secretPassword
       end
 
-      local function openSesame()
-          local password = "secret"  -- A variable local to openSesame()
-          whatIsThePassword(password)
-      end
+      local result = checkPassword(getInput()) -- Call external function getInput
+      print(result) --> true
 
-      openSesame()
+      -- ModuleScript GetInput
+      local function getInput()
+          -- return "WhatIsThePassword?"
+          local env = getfenv(2) -- Get the environment 2 levels up, or whatever called this function
+          print(env) --> { secretPassword VerySecret1234 }
+          local correctPassword = env.secretPassword
+      
+          return correctPassword
+      end
+      
+      return getInput
       ```
     parameters:
       - name: stack
