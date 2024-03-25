@@ -80,53 +80,74 @@ properties:
         </thead>
         <tbody>
           <tr>
+            <td><b>RBXClearCommand</b></td>
+            <td>clear</td>
+            <td>cls</td>
+            <td>Clears the chat log for the local user.</td>
+            <td><code>/cls</code></td>
+          </tr>
+          <tr>
             <td><b>RBXConsoleCommand</b></td>
             <td>console</td>
             <td></td>
             <td>Opens the Developer Console.</td>
-            <td><code>\console</code></td>
+            <td><code>/console</code></td>
           </tr>
           <tr>
             <td><b>RBXEmoteCommand</b></td>
             <td>emote</td>
             <td>e</td>
             <td>Plays an avatar emote.</td>
-            <td><code>\e dance</code></td>
+            <td><code>/e dance</code></td>
           </tr>
           <tr>
             <td><b>RBXHelpCommand</b></td>
             <td>help</td>
             <td>?</td>
             <td>Shows a list of chat commands.</td>
-            <td><code>\help</code></td>
+            <td><code>/help</code></td>
           </tr>
           <tr>
             <td><b>RBXMuteCommand</b></td>
             <td>mute</td>
             <td>m</td>
             <td>Mutes a user by their <code>Class.Player.Name|Name</code> or <code>Class.Player.DisplayName|DisplayName</code> in all <code>Class.TextChannel|TextChannels</code>.</td>
-            <td><code>\m Username</code></td>
+            <td><code>/m Username</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXTeamCommand</b></td>
+            <td>team</td>
+            <td>t</td>
+            <td>Enters team chat mode where messages are only visible to teammates.</td>
+            <td><code>/t</code></td>
           </tr>
           <tr>
             <td><b>RBXUnmuteCommand</b></td>
             <td>unmute</td>
             <td>um</td>
             <td>Unmutes a user by their <code>Class.Player.Name|Name</code> or <code>Class.Player.DisplayName|DisplayName</code> in all <code>Class.TextChannel|TextChannels</code>.</td>
-            <td><code>\um Username</code></td>
+            <td><code>/um Username</code></td>
           </tr>
           <tr>
             <td><b>RBXVersionCommand</b></td>
             <td>version</td>
             <td>v</td>
             <td>Shows the chat version.</td>
-            <td><code>\version</code></td>
+            <td><code>/version</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXWhisperCommand</b></td>
+            <td>whisper</td>
+            <td>w</td>
+            <td>Enters whisper mode with another <code>Class.Player</code>.</td>
+            <td><code>/w DisplayName</code> or <code>/w @Username</code></td>
           </tr>
         </tbody>
       </table>
 
       Note that you can edit, create, and remove
       `Class.TextChatCommand|TextChatCommands` even if
-      `Class.TextChatService:CreateDefaultCommands()|CreateDefaultCommands()` is
+      `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` is
       true. Also note that mute and unmute commands apply to all
       `Class.TextChannel|TextChannels`.
     code_samples: []
@@ -147,42 +168,47 @@ properties:
       `Class.TextChannel|TextChannels`.
     description: |
       Determines whether `Class.TextChatService` should create default
-      `Class.TextChannel|TextChannels`.
-
-      If true, `Class.Team`-based `Class.TextChannel|TextChannels` are
-      automatically created (and removed when `Class.Team|Teams` are removed),
-      along with the following `Class.TextChannel|TextChannels` in a
-      `Class.Folder` named **TextChannels** inside `Class.TextChatService`:
+      `Class.TextChannel|TextChannels`. If true, a `Class.Folder` named
+      **TextChannels** is created inside `Class.TextChatService` at runtime to
+      contain the `Class.TextChannel|TextChannels` outlined in the table below.
+      Each of the default channels has the described special behavior applied to
+      messages using its internally bound `Class.TextChannel.OnIncomingMessage`
+      callback function, changing how messages appear when sent through the
+      channel. The callback is assigned automatically either at runtime
+      (if the `Class.TextChannel` exists) or when the `Class.TextChannel` is
+      created.
 
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Channel</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><b>RBXGeneral</b></td>
-            <td>For all messages.</td>
+            <td><code>Class.TextChannel</code> for player messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> receives a <a href="../../../ui/rich-text.md">rich text</a> font color tag to give chatting players their distinctive name color. If <code>Class.Player.Team</code> exists, that <code>Class.Team.TeamColor</code> is used instead of the default name color.</td>
           </tr>
           <tr>
             <td><b>RBXSystem</b></td>
-            <td>For system messages.</td>
+            <td><code>Class.TextChannel</code> for system messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.Text</code> is given a light grey color tag by default, or a red color tag if <code>Class.TextChatMessage.Metadata</code> contains the word <code>"Error"</code>.</td>
           </tr>
           <tr>
             <td><b>RBXTeam[BrickColor]</b></td>
-            <td>For team messages. Name of the <code>Class.TextChannel</code> is the string <code>RBXTeam</code> followed by the name of <code>Class.Team.BrickColor</code>. For example, <code>RBXTeamCrimson</code> for a team with "Crimson" <code>Datatype.BrickColor</code>.</td>
+            <td><code>Class.TextChannel</code> for team-specific player messages, created when a <code>Class.Team.TeamColor|TeamColor</code> is in use by any <code>Class.Team</code> within the <code>Class.Teams</code> service. Name of the created channel is <b>RBXTeam</b> followed by the <code>Class.Team.TeamColor|TeamColor</code> name. For example, <b>RBXTeamCrimson</b> is a <code>Class.TextChannel</code> created when there is an active team whose <code>Class.Team.TeamColor|TeamColor</code> property is the "Crimson" <code>Datatype.BrickColor</code>.<br /><br />In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> is colored according to the <code>Class.Player.TeamColor|TeamColor</code> and is prepended with <b>[Team]</b>.<br /><br />Team channels create <code>Class.TextSource|TextSources</code> for all non‑<code>Class.Player.Neutral|Neutral</code> players with the matching <code>Class.Team.TeamColor|TeamColor</code>, allowing them to use team‑only chat. Channels are removed if there are no remaining teams with an associated <code>Class.Team.TeamColor|TeamColor</code>.</td>
+          </tr>
+          <tr>
+            <td><b>RBXWhisper:[UserId1]_[UserId2]</b></td>
+            <td><code>Class.TextChannel</code> for whisper messages between two players, created when a player uses the <code>/whisper</code> command on another player. For example <b>RBXWhisper:2276836_505306092</b> is a <code>Class.TextChannel</code> for players with <code>Class.Player.UserId|UserIds</code> <b>2276836</b> and <b>505306092</b>. Inside whisper channels are two <code>Class.TextSource|TextSources</code> associated with the respective <code>Class.Player.UserId|UserIds</code>.<br /><br />In the chat window, messages are colored the same as those in <b>RBXGeneral</b> and <code>Class.TextChatMessage.PrefixText</code> is modified to show whether a message was sent from or received by the local user.<br /><br />Whisper channels are removed when either player leaves the experience.</td>
           </tr>
         </tbody>
       </table>
 
-      If false, `Class.Team`-based `Class.TextChannel|TextChannels` are **not**
-      automatically created and destroyed.
-
-      Note that you can edit, create, and remove
+      Note that the default `Class.TextChannel.OnIncomingMessage` callbacks
+      can be overwritten. Also note that you can edit, create, and remove
       `Class.TextChannel|TextChannels` even if
-      `Class.TextChatService:CreateDefaultTextChannels()|CreateDefaultTextChannels()`
+      `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
     code_samples: []
     type: bool
@@ -383,18 +409,12 @@ callbacks:
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
     description: |
-      Called when `Class.TextChatService` is receiving an incoming message. This
-      can only be implemented on the client.
+      Called when `Class.TextChatService` is receiving an incoming message. Can only be implemented on the client.
 
-      Use this to decorate `Class.TextChatMessage` instances. If this callback
-      returns a `Class.TextChatMessageProperties`, those properties are merged
-      with the `Class.TextChatMessage` parameter to create a new
-      `Class.TextChatMessage` with those properties.
+      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this callback returns a `Class.TextChatMessageProperties`, those properties are merged with the `Class.TextChatMessage` parameter to create a new
+      `Class.TextChatMessage`.
 
-      When bound to the client sending a message, this callback can be called
-      twice, first when the message is initially sent and received locally by
-      the same client, and again when the result of the filtered message is
-      received by that client from the server.
+      When bound to the client sending a message, this callback is run twice; first when the message is initially sent and received locally, and again when the client receives the result of the filtered message from the server.
 
       Note that this `Class.TextChatService.OnIncomingMessage` callback runs
       **before** any `Class.TextChannel.OnIncomingMessage` callbacks.
