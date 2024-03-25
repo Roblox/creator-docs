@@ -48,8 +48,8 @@ description: |
   This is where `Class.Debris` has a specific advantage, as it does not yield
   the current thread and runs outside the context of the script, guaranteeing
   the instance is eventually destroyed even if the script is disabled or
-  destroyed. The following code addresses both issues cited for
-  `Library.task.wait()` and `Library.task.delay()`:
+  destroyed. The following code does not yield and guarantees the instance will
+  be destroyed:
 
   ```lua
   Debris:AddItem(brick, 3)
