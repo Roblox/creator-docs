@@ -56,7 +56,7 @@ methods:
     returns:
       - type: string
         summary: |
-          A raw binary string representation of the `Class.File|File's`
+          A raw binary string representation of the `Class.File`
           contents.
     tags: []
     deprecation_message: ''
@@ -64,11 +64,11 @@ methods:
     thread_safety: Unsafe
   - name: File:GetTemporaryId
     summary: |
-      Gets a _rbxtemp_ asset id for this `Class.File`.
+      Gets a `rbxtemp://` asset ID for this `Class.File`.
     description: |
-      This function is used to retrieve a temporary asset id associated with
-      this `Class.File`. This id can be used like an _rbxassetid_ - for example,
-      it can be assigned to the Image property of an `Class.ImageLabel`.
+      This function is used to retrieve a temporary asset ID associated with
+      the `Class.File`. The ID can be used like `rbxassetid://`, for example
+      it can be assigned to the `Class.ImageLabel.Image|Image` property of an `Class.ImageLabel`.
 
       Throws an error if the file does not exist on disk.
     code_samples:

@@ -60,7 +60,7 @@ methods:
       Note, the _customLoadingScreen_ will not be used if the destination place
       is in a different game.
 
-      #### Loading screen
+      #### Loading Screen
 
       During a teleport, while the destination place is loading, the
       _customLoadingScreen_ is parented to the `Class.CoreGui`. Once the place
@@ -68,11 +68,10 @@ methods:
       `Class.Instance.Parent|parented` to _nil_.
 
       If you wish to preserve the _customLoadingScreen_ and perform your own
-      transitions, you will need to parent it to the
-      `Class.Players.LocalPlayer|LocalPlayer's` `Class.PlayerGui`. For an
-      example of this, see the code sample below.
+      transitions, you will need to parent it to the local player's
+      `Class.PlayerGui`. For an example of this, see the code sample below.
 
-      #### Studio limitation
+      #### Studio Limitation
 
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
@@ -595,7 +594,7 @@ methods:
 
       TeleportToPrivateServer can only be called on the server.
 
-      #### Spawn name
+      #### Spawn Name
 
       An optional _spawnName_ parameter can be provided, which will cause the
       `Class.Player|Players` to initially spawn at the `Class.SpawnLocation` of
@@ -605,7 +604,7 @@ methods:
       `Class.SpawnLocation.TeamColor|TeamColor` as the `Class.Team` the
       `Class.Player|Players` will be assigned to upon joining the game.
 
-      #### Teleport data
+      #### Teleport Data
 
       A _teleportData_ parameter can be specified. This is data the clients will
       transmit to the destination place and can be retrieved using
@@ -626,7 +625,7 @@ methods:
       use `Class.TeleportService:SetTeleportSetting()` and
       `Class.TeleportService:GetTeleportSetting()`.
 
-      #### Loading screen
+      #### Loading Screen
 
       A _customLoadingScreen_ argument can be specified. This is a
       `Class.ScreenGui` that is copied (without scripts) into the
@@ -634,7 +633,7 @@ methods:
 
       You are advised to instead set the loading screen on the client using
       `Class.TeleportService:SetTeleportGui()`. The loading `Class.ScreenGui`
-      should also be parented to the `Class.Player|Player's` `Class.PlayerGui` a
+      should also be parented to the local player's `Class.PlayerGui` a
       few seconds before the teleport to ensure a smooth transition using a
       `Class.RemoteEvent`. For an example of this see
       `Class.TeleportService:SetTeleportGui()|SetTeleportGui`
@@ -643,7 +642,7 @@ methods:
       using `Class.TeleportService:GetArrivingTeleportGui()`, where developers
       can parent it to the `Class.PlayerGui`.
 
-      #### Teleport failure
+      #### Teleport Failure
 
       In some circumstances a teleport may fail. This can be due to the
       developer configuring the teleport incorrectly or issues with Roblox's
@@ -656,7 +655,7 @@ methods:
         to issues with Roblox's servers. In this case the user will be shown an
         error message and be required to rejoin the game
 
-      #### Studio limitation
+      #### Studio Limitation
 
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
@@ -855,17 +854,11 @@ methods:
         returned by `Class.TeleportService:ReserveServer()`, the id returned is
         not appropriate for use with reserved servers.
 
-      #### Studio limitation
+      #### Studio Limitation
 
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
-
-      See also:
-
-      - For the `Class.DataModel.PlaceId|PlaceIds` and
-        `Class.DataModel.JobId|JobIds` of a `Class.Player|Player's` friends, use
-        `Class.Player:GetFriendsOnline()`
     code_samples:
       - following-a-player-in-a-universe
     parameters:
@@ -1171,11 +1164,10 @@ events:
   - name: TeleportService.LocalPlayerArrivedFromTeleport
     summary: |
       Fires when the `Class.Players.LocalPlayer|LocalPlayer` enters the place
-      following a teleport. Provides the `Class.Player|Player's` _teleportData_
-      and _customLoadingScreen_.
+      following a teleport.
     description: |
       This function fires when the `Class.Players.LocalPlayer` enters the place
-      following a teleport. The _teleportData_ and _customLoadingScreen_ are
+      following a teleport. The `teleportData` and `customLoadingScreen` are
       provided as arguments.
 
       When fetching _teleportData_ and the _customLoadingScreen_ you are advised
@@ -1188,7 +1180,7 @@ events:
       parented to `Class.ReplicatedFirst`. Otherwise, when the connection is
       made the event may have already fired.
 
-      #### Loading screen
+      #### Loading Screen
 
       During a teleport, while the destination place is loading, the
       _customLoadingScreen_ is parented to the `Class.CoreGui`. Once the place
@@ -1196,10 +1188,9 @@ events:
       `Class.Instance.Parent|parented` to _nil_.
 
       If you wish to preserve the _customLoadingScreen_ and perform your own
-      transitions, you will need to parent it to the
-      `Class.Players.LocalPlayer|LocalPlayer's` `Class.PlayerGui`. For example,
-      using the following code inside a `Class.LocalScript` in
-      `Class.ReplicatedFirst`:
+      transitions, you will need to parent it to the local player's
+      `Class.PlayerGui`. For example, using the following code inside a
+      `Class.LocalScript` in `Class.ReplicatedFirst`:
 
       ```lua
       local TeleportService = game:GetService("TeleportService")
@@ -1221,7 +1212,7 @@ events:
       The _customLoadingScreen_ will not be used if the destination place is in
       a different game.
 
-      #### Studio limitation
+      #### Studio Limitation
 
       This service does not work during playtesting in Roblox Studio &mdash; To
       test aspects of your game using it, you must publish the game and play it
