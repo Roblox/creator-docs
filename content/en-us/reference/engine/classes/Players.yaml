@@ -775,7 +775,7 @@ methods:
     description: |
       The GetFriends `Class.Players` function returns a `Class.FriendPages`
       object which contains information for all of the given
-      `Class.Player|Player's` friends. The items within the FriendPages object
+      user's friends. The items within the `Class.FriendPages` object
       are tables with the following fields:
 
       <table>

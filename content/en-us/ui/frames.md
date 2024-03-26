@@ -59,7 +59,7 @@ A `Class.ViewportFrame` is a frame that uses a camera to render 3D objects. This
 - 3D models of items in an inventory menu.
 - Rotating objects that a character has equipped.
 
-3D objects that users view through a `Class.ViewportFrame` can either move with their camera, remain static, or rotate within the `Class.ViewportFrame`.
+3D objects that users view through a `Class.ViewportFrame` can either move with their camera, remain static, or rotate within the `Class.ViewportFrame`. This object can also include a `Class.Sky` child as a cubemap for reflections.
 
 <Tabs>
 <TabItem label="With Camera">
@@ -102,8 +102,8 @@ If you want the 3D object to remain static:
 If you want a 3D object such as a `Class.BasePart` to rotate on its own within the frame:
 
 1. Add a new **ViewportFrame** to the [screen](../ui/on-screen-containers.md).
-2. In the [Explorer](../studio/explorer.md), drag the desired `Class.BasePart` into the new `Class.ViewportFrame`.
-3. Insert a new `Class.LocalScript` into the `Class.ViewportFrame` and paste in the following code.
+1. In the [Explorer](../studio/explorer.md), drag the desired `Class.BasePart` into the new `Class.ViewportFrame`.
+1. Insert a new `Class.LocalScript` into the `Class.ViewportFrame` and paste in the following code.
 
 	```lua
 	local RunService = game:GetService("RunService")
@@ -137,6 +137,17 @@ If you want a 3D object such as a `Class.BasePart` to rotate on its own within t
 		warn("3D object not found as child of viewport frame")
 	end
 	```
+
+</TabItem>
+<TabItem label="Skybox Reflections">
+
+This object can use a `Class.Sky` child as a cubemap for reflections, in which case only the `Class.Sky` object's six **Skybox[…]** properties are used. Assuming these properties are valid, lighting inside the `Class.ViewportFrame` acts similarly to if `Class.Lighting.EnvironmentSpecularScale` and `Class.Lighting.EnvironmentDiffuseScale` are both set to 1.
+
+To implement skybox cubemap reflections:
+
+1. Insert a `Class.Sky` object as a direct child of the `Class.ViewportFrame`.
+1. Set the `Class.Sky` object's six texture properties (`Class.Sky.SkyboxBk|SkyboxBk`, `Class.Sky.SkyboxDn|SkyboxDn`, `Class.Sky.SkyboxFt|SkyboxFt`, `Class.Sky.SkyboxLf|SkyboxLf`, `Class.Sky.SkyboxRt|SkyboxRt`, `Class.Sky.SkyboxUp|SkyboxUp`).
+1. For `Class.Part|Parts` that should appear within the frame, set their `Class.BasePart.Reflectance|Reflectance` property greater than 0, or use a reflectant material like `Enum.Material.Glass|Glass` or `Enum.Material.Foil|Foil`. For `Class.MeshPart|MeshParts` that should appear within the frame, apply a `Class.SurfaceAppearance` with a properly-configured `Class.SurfaceAppearance.MetalnessMap|MetalnessMap`.
 
 </TabItem>
 </Tabs>

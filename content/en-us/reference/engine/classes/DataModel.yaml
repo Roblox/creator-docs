@@ -3,15 +3,15 @@ type: class
 category: Scripting
 memory_category: Instances
 summary: |
-  The DataModel (commonly known as **game** after the global variable used to
-  access it) is the root of Roblox's parent-child hierarchy. Its direct children
-  are services (such as the `Class.Workspace` and `Class.Lighting`) that act as
-  the fundamental components of a Roblox game.
+  The root of Roblox's parent-child hierarchy. Its direct children are services,
+  such as `Class.Workspace` and `Class.Lighting`, that act as the fundamental
+  components of a Roblox game.
 description: |
-  The DataModel (commonly known as **game** after the global variable used to
-  access it) is the root of Roblox's parent-child hierarchy. Its direct children
-  are services (such as the `Class.Workspace` and `Class.Lighting`) that act as
-  the fundamental components of a Roblox game.
+  The [Data Model](../../../projects/data-model.md) (commonly known as `game`
+  after the global variable used to access it) is the root of Roblox's
+  parent-child hierarchy. Its direct children are services, such as
+  `Class.Workspace` and `Class.Lighting`, that act as the fundamental components
+  of a Roblox game.
 code_samples:
   - DataModel1
 inherits:
@@ -111,13 +111,6 @@ properties:
       Not functional. Historically described the gear permissions of the place
       as set on the Roblox website.
     description: |
-      This property is broken and should not be used.
-
-      This property historically described the `Enum.GearGenreSetting` of the
-      place, reflecting the gear permissions configured in the place settings.
-      These settings determine what gear could be added to a
-      `Class.Player|Player's` `Class.StarterGear`.
-
       This property, along with `Class.DataModel.Genre`, no longer functions
       correctly and attempting to read it may throw an error.
     code_samples:
@@ -172,24 +165,21 @@ properties:
       A unique identifier for the running game server instance.
     description: |
       This property is a unique identifier for the running game server instance.
+      It is a universally unique identifier (UUID), meaning that no two servers,
+      past or present, will ever have the same ID.
 
-      The JobId is a [universally unique identifier (UUID)][1] meaning that no
-      two servers, past or present, will ever have the same JobId.
+      Defaults to an empty string in Studio.
 
-      JobId defaults to an empty string in Roblox Studio.
-
-      See also:
+      #### See Also
 
       - `Class.TeleportService:GetPlayerPlaceInstanceAsync()` which can be used
-        to retrieve the JobId of a `Class.Player|Player's` current server
+        to retrieve the `Class.DataModel.JobId` of a user's current server.
       - `Class.TeleportService:TeleportToPlaceInstance()` which can be used to
-        teleport a `Class.Player` to a specific server
+        teleport a `Class.Player` to a specific server.
       - `Class.DataModel.PrivateServerId` describes the ID of the private server
-        the game server instance belongs to
+        the game server instance belongs to.
       - `Class.HttpService:GenerateGUID()`, a function that can be used to
-        generate your own UUIDs
-
-      [1]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+        generate your own UUIDs.
     code_samples:
     type: string
     tags:

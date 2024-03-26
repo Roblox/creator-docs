@@ -188,9 +188,8 @@ methods:
       - If the _input_ string is not a valid JSON object, this function will
         throw an error.
 
-      To encode a Lua table into a JSON object, you can use
-      `Class.HttpService|HttpService's` `Class.HttpService:JSONEncode()`
-      function.
+      To encode a Lua table into a JSON object, you can use the
+      `Class.HttpService:JSONEncode()` function.
 
       Many web endpoints use JSON, as it is commonly used on the Internet. Visit
       [JSON.org](https://www.json.org) to become more familiar with the format.
@@ -231,9 +230,8 @@ methods:
         JSON. This may cause problems if you want to use the outputted JSON
         elsewhere.
 
-      To reverse the encoding process, and decode a JSON object, you can use
-      `Class.HttpService|HttpService's` `Class.HttpService:JSONDecode()`
-      function.
+      To reverse the encoding process, and decode a JSON object, you can use the
+      `Class.HttpService:JSONDecode()` function.
 
       Many web endpoints use JSON, as it is commonly used on the Internet. Visit
       [JSON.org](https://www.json.org) to become more familiar with the format.

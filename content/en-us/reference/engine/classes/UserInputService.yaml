@@ -965,7 +965,6 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GetGamepadState
     parameters:
       - name: gamepadNum
         type: UserInputType

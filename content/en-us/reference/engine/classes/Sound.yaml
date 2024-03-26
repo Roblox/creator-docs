@@ -246,7 +246,7 @@ properties:
       parented to a `Class.Part` or `Class.Attachment` (3D sounds).
     description: |
       The maximum distance, in studs, a client's listener can be from the
-      `Class.Sound|Sound's` origin and still hear it. Only applies to Sounds
+      `Class.Sound` origin and still hear it. Only applies to Sounds
       parented to a `Class.Part` or `Class.Attachment` (3D sounds).
 
       How MaxDistance impacts the attenuation of a sound (manner in which it
@@ -514,7 +514,7 @@ properties:
       parented to a `Class.Part` or `Class.Attachment` (3D sounds).
     description: |
       The maximum distance, in studs, a client's listener can be from the
-      `Class.Sound|Sound's` origin and still hear it. Only applies to Sounds
+      `Class.Sound` origin and still hear it. Only applies to Sounds
       parented to a `Class.Part` or `Class.Attachment` (3D sounds).
 
       How RollOffMaxDistance impacts the attenuation of a sound (manner in which

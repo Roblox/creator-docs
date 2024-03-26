@@ -15,7 +15,7 @@ tags:
   - Deprecated
 deprecation_message: |
   Status is an unfinished object designed to store custom `Class.Humanoid`
-  statuses. It has been depreciated and should not be used by developers in new
+  statuses. It has been deprecated and should not be used by developers in new
   work.
 
   Developers looking to implement custom `Class.Humanoid` statuses should use

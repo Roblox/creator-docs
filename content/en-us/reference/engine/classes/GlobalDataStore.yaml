@@ -21,11 +21,11 @@ properties: []
 methods:
   - name: GlobalDataStore:OnUpdate
     summary: |
-      Sets callback as a function to be executed any time the value associated
-      with key is changed.
+      Sets a callback function to be executed any time the value associated
+      with a key is changed.
     description: |
-      This function sets **callback** as the function to be run any time the
-      value associated with the `Class.GlobalDataStore|data store's` key
+      This function sets `callback` as the function to be run any time the
+      value associated with the `key`
       changes. Once every minute, OnUpdate polls for changes by other servers.
       Changes made on the same server will run the function immediately. In
       other words, functions like

@@ -31,11 +31,11 @@ deprecation_message: ''
 properties:
   - name: PathfindingModifier.Label
     summary: |
-      The name of the navigation area inside or on top of the
-      `Class.Part|Part's` volume.
+      The name of the navigation area inside or on top of the `Class.Part`
+      volume.
     description: |
-      The name of the navigation area inside or on top of the
-      `Class.Part|Part's` volume.
+      The name of the navigation area inside or on top of the `Class.Part`
+      volume.
 
       For a more detailed overview of `Class.PathfindingService` and
       `Class.PathfindingModifier`, see

@@ -3,13 +3,16 @@ title: Skyboxes
 description: Skyboxes are cubes made up of six individual images that create an immersive background.
 ---
 
-A **skybox** is a cube made up of six individual images that create an
-immersive background in an experience. A skybox appears to be panoramic
-because the images are made to be perfectly aligned with each other,
-allowing you to look in all directions without the impression of being
-inside a cube. This makes experiences feel larger than
-they really are, and it adds depth to your atmosphere, such as simulating
-deep space or underwater environments.
+A **skybox** (`Class.Sky`) is a cube made up of six individual images that create an immersive background in an experience. When the images are designed to be perfectly aligned with each other, the skybox appears to be panoramic without the impression of being inside a cube. This makes experiences feel larger than they really are, and it adds depth to your atmosphere, such as simulating deep space or underwater environments.
+
+Additionally, the `Class.Sky` object includes [celestial bodies](#celestial-bodies) such as a sun, moon, and stars which dynamically appear, rise, and set based on the
+`Class.Lighting.TimeOfDay|TimeOfDay` or `Class.Lighting.ClockTime|ClockTime`.
+
+Finally, the `Class.Sky` object can be used as a cubemap for reflections in `Class.ViewportFrame|ViewportFrames`. For details, see [Frames](../ui/frames.md#viewportframe).
+
+## Creating a Skybox
+
+If you've created your own skybox images, you must first [import](../projects/assets/manager.md#importing-assets) them to Roblox before you can use them in a skybox. Each image must be seamless along **all edges** of neighboring images when "folded" into a cube.
 
 <figure>
 <img src="../assets/lighting-and-effects/skybox/Skybox-Unfolded.png" width="722" />
@@ -21,13 +24,9 @@ deep space or underwater environments.
 <figcaption>Faces "folded" to imply formation of skybox cube</figcaption>
 </figure>
 
-## Creating a Skybox
-
-If you've created your own skybox images, you must first [import](../projects/assets/manager.md#importing-assets) them to Roblox before you can use them in a skybox. Each image must be seamless along **all edges** of neighboring images when "folded" into a cube.
-
 To create a skybox:
 
-1. In the [Explorer](../studio/explorer.md) window, insert a **Sky** object into the **Lighting** object.
+1. In the [Explorer](../studio/explorer.md) window, insert a `Class.Sky` object into the `Class.Lighting` container.
 
    <img src="../assets/studio/explorer/Lighting-Sky.png" width="320" />
 
