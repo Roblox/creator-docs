@@ -73,6 +73,24 @@ Once strings are captured to your localization table, follow these steps to enab
 Roblox has initial and monthly quotas for automatic translation. The quotas determine how many string entries you can translate per language. The initial quota determines to how many string entries you can translate via automatic translations when you localize your experience for the first time. After you use up the initial quota, any subsequent translations come from your monthly quota, which resets every month.
 </Alert>
 
+## Automatic Translation Updates
+
+As the automatic translation tool improves, more accurate translations may become available for existing strings. When these updates become available, Roblox refreshes any automatic translations. Automatic translation updates will appear in your translation history.
+
+<img src="../../assets/localization/Update-Log.png"
+     width="800" alt="A translation history log displays at the bottom of each translation entry."/>
+
+If you have a specific translation that you want to remain unchanged, you can lock the entry to ensure it will not be impacted by any updates.
+
+<img src="../../assets/localization/Lock-Translations.png"
+     width="800" alt="A 'Lock translation from automatic updates' toggle is accessible below the translation entry field in each translation entry."/>
+
+<Alert severity = 'warning'>
+By locking an entry, you are approving the translation and turning it into a manual entry. This means it will not be impacted by any automatic translation updates, including safety-related updates. If, in the future, it is discovered that the translation violates policy, your experience will still be subject to moderation.
+</Alert>
+
+By default, manually added strings and strings with manual translations are locked. If you unlock an entry, it will be impacted by both automatic translation updates and ATC if it is enabled. If you want to generate a new automatic translation for a previously changed or cleared translation, unlock the entry.
+
 ## Supported Languages
 
 Roblox supports automatic translation with the following languages:
