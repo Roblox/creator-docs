@@ -33,7 +33,7 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
 events: []
 callbacks: []

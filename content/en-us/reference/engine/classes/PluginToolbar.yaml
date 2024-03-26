@@ -71,7 +71,7 @@ methods:
           Text displayed under the button icon. Optional. If this field is not
           provided, the **ID** will be used instead.
     returns:
-      - type: Instance
+      - type: PluginToolbarButton
         summary: |
           The created `Class.PluginToolbarButton` instance.
     tags: []

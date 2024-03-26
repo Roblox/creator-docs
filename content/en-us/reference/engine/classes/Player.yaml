@@ -328,13 +328,13 @@ properties:
   - name: Player.DataComplexity
     summary: |
       The total amount of data currently being stored in the
-      `Class.Player|Player's` cache on the current place.
+      player's cache on the current place.
     description: |
       This property was once used by an ancient data persistence method to
       indicate the total amount of data currently being stored in the
-      `Class.Player|Player's` cache on the current place.
+      player's cache on the current place.
 
-      Note:
+      #### Notes
 
       - Booleans and numbers cost 1 data complexity unit.
       - Strings cost their length divided by 100 in data complexity units.

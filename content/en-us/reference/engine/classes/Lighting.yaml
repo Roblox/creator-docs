@@ -23,9 +23,6 @@ description: |
   `Class.BlurEffect`. See
   [Post-Processing Effects](../../../environment/post-processing-effects.md) for
   more information.
-
-  <video src="../../../assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4"
-  controls width="100%"></video>
 code_samples:
   - Day-Night-Cycle
 inherits:
