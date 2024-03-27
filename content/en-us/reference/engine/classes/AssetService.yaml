@@ -191,7 +191,7 @@ methods:
     summary: |
       Provides relevant metadata about a specific audio source.
     description: |
-      Provides relevant metadata about a specific audio source (artist, title, duration, genre, type, etc.).
+      Provides relevant metadata about a specific audio source (artist, title, duration, type, etc.).
     code_samples:
       - AssetService-GetAudioMetadataAsync
     parameters:
