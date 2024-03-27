@@ -74,9 +74,9 @@ if res then
 	-- Get asset ID from localization table by referencing the Key
 	localizedImageID = translator:FormatByKey("Key_JewelsImage")
 	-- Set the image
-	localizedImage.Image = "rbxassetid://" .. localizedImageID
+	localizedImage.Image = `rbxassetid://{localizedImageID}`
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 ```
 
@@ -125,7 +125,7 @@ if res then
 	local sourceTranslation = translator:Translate(game, "Screen")
 	print(sourceTranslation) -- Expected Output: "Pantalla"
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 ```
 
@@ -173,7 +173,7 @@ if res then
 	local sourceTranslation = translator:Translate( workspace.WindowScreen.SurfaceGui.TextLabel, "Screen")
 	print(sourceTranslation) -- Expected Output: Mosquitero
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 ```
 
@@ -255,7 +255,7 @@ if res then
 	local keyTranslation2 = translator:FormatByKey("Key_Prize_2", {AmountCash=500, NumJewels=100})
 	print(keyTranslation2) -- Expected Output: $500.00 dinero y 100 joyas
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 ```
 
@@ -288,7 +288,7 @@ if res1 then
 	local translate1 = translator:Translate(game, "jewels")
 	print(translate1) -- Expected Output in pt: joyas
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 
 -- Use Translate function with second Translator
@@ -296,7 +296,7 @@ if res2 then
 	local translate2 = fallbackTranslator:Translate(game, "jewels")
 	print(translate2) -- Expected Output in if user is set to 'es': jóias
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. fallbackTranslator)
+	print(`GetTranslatorForPlayerAsync failed: {fallbackTranslator}`)
 end
 ```
 
@@ -331,7 +331,7 @@ end)
 
 -- Function that gets called when change in player's locale ID is detected
 local function OnLocaleIdChanged()
-	print("Translator has changed to: " .. translator.LocaleId)
+	print(`Translator has changed to: {translator.LocaleId}`)
 	-- You should re-translate any assets translated with Localization APIs to the player's new language here
 end
 
@@ -341,7 +341,7 @@ if res then
 	-- Listen for a change in player's locale ID
 	translator:GetPropertyChangedSignal("LocaleId"):Connect(OnLocaleIdChanged)
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print(`GetTranslatorForPlayerAsync failed: {translator}`)
 end
 ```
 

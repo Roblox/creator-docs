@@ -321,7 +321,7 @@ functions:
       }
 
       for name, score in pairs(scores) do
-          print(name .. " has score: " .. score)
+          print(`{name} has score: {score}`)
       end
       ```
     parameters:
@@ -633,7 +633,7 @@ functions:
       ```lua
       local isRobloxCool = true
       -- Convert the boolean to a string then concatenate:
-      print("Roblox is cool: " .. tostring(isRobloxCool)) --> Roblox is cool: true
+      print(`Roblox is cool: {tostring(isRobloxCool)}`) --> Roblox is cool: true
       ```
     parameters:
       - name: e

@@ -26,7 +26,7 @@ end
 
 --Print place in line
 local placeInLine = getPlaceInLine(shipToFind)
-print("Your place in line is " .. placeInLine)
+print(`Your place in line is {placeInLine}`)
 ```
 
 ## Dictionary Search Example

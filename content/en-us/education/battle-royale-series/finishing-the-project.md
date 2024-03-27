@@ -111,7 +111,7 @@ local randomGenerator = Random.new()
 function MapManager.pickNewMap()
 	local whichMapKey = randomGenerator:NextInteger(1,#availableMaps)
 	activeMap = availableMaps[whichMapKey]
-	print("New map: " .. activeMap.Name)
+	print(`New map: {activeMap.Name}`)
 end
 
 -- returns a table with the maps current spawn points

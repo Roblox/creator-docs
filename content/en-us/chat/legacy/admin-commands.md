@@ -154,7 +154,7 @@ function sparklesCommand(commandData)
 			local sparkles = Instance.new("Sparkles")
 			sparkles.Parent = character:FindFirstChild("HumanoidRootPart")
 
-			Utilities:SendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. "added sparkles to " .. parameter))
+			Utilities:SendSystemSuccessMessage(commandData, `{commandData.Speaker.Name} added sparkles to {parameter}`)
 		else
 			Utilities:SendSystemErrorMessage(commandData, string.format("'s' is not a valid player.", parameter))
 			return false
@@ -197,7 +197,7 @@ function explodeCommand(commandData)
 		local success = makeExplosion(character)
 
 		if success then
-			Utilities:sendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. " made" .. parameter .. " explode."))
+			Utilities:SendSystemSuccessMessage(commandData, `{commandData.Speaker.Name} made {parameter} explode.`)
 		else
 			Utilities:SendSystemErrorMessage(commandData, string.format("'s' is not a valid player.", parameter))
 			return false

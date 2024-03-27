@@ -111,7 +111,7 @@ local function onPlayerAdded(player)
     local teleportData = joinData.TeleportData
     local randomNumber = teleportData.randomNumber
 
-    print(player.Name .. "joined with the number" .. randomNumber)
+    print(`{player.Name} joined with the number {randomNumber}`)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)

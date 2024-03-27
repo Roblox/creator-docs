@@ -307,7 +307,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEventTest")
 
 local function onCreatePart(player, partColor, partPosition)
-   print(player.Name .. " fired the RemoteEvent")
+   print(`{player.Name} fired the RemoteEvent`)
    local newPart = Instance.new("Part")
    newPart.BrickColor = partColor
    newPart.Position = partPosition
@@ -467,7 +467,7 @@ local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 
 -- Script in ServerScriptService to create a Part with the passed properties
 local function createPart(player, partColor, partPosition)
-	print(player.Name .. " requested a new part")
+	print(`{player.Name} requested a new part`)
 	local newPart = Instance.new("Part")
 	-- Use partColor and partPosition to set the part's BrickColor and Position
 	newPart.BrickColor = partColor

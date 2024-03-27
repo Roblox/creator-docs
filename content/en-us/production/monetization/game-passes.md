@@ -120,12 +120,12 @@ local function onPlayerAdded(player)
 
 	-- If there's an error, issue a warning and exit the function
 	if not success then
-		warn("Error while checking if player has pass: " .. tostring(message))
+		warn(`Error while checking if player has pass: {tostring(message)}`)
 		return
 	end
 
 	if hasPass then
-		print(player.Name .. " owns the Pass with ID " .. passID)
+		print(`{player.Name} owns the Pass with ID {passID}`)
 		-- Assign this player the ability or bonus related to the Pass
 	end
 end
@@ -154,7 +154,7 @@ local passID = 0000000  -- Change this to your Pass ID
 -- Function to handle a completed prompt and purchase
 local function onPromptPurchaseFinished(player, purchasedPassID, purchaseSuccess)
 	if purchaseSuccess and purchasedPassID == passID then
-		print(player.Name .. " purchased the Pass with ID " .. passID)
+		print(`{player.Name} purchased the Pass with ID {passID}`)
 		-- Assign this player the ability or bonus related to the Pass
 	end
 end
@@ -183,7 +183,7 @@ local function promptPurchase()
 	end)
 
 	if not success then
-		warn("Error while checking if player has pass: " .. tostring(message))
+		warn(`Error while checking if player has pass: {tostring(message)}`)
 		return
 	end
 

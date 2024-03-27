@@ -75,7 +75,7 @@ The three scripts below will look for the particle emitter and beam objects crea
     local playerBeam = player.Character.HumanoidRootPart:FindFirstChildOfClass("Beam")
     playerBeam:Destroy()
 
-    print(player.Name .. " finished the tutorial")
+    print(`{player.Name} finished the tutorial`)
 
     -- Placeholder for further code. E.g. if you wanted to send messages to the server to do other tasks
 

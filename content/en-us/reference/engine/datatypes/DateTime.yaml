@@ -71,10 +71,10 @@ description: |
   local dt = DateTime.now()
 
   -- The "dddd" token is replaced with the full day of the week
-  print("Today is " .. dt:FormatLocalTime("dddd", "en-us"))
+  print(`Today is {dt:FormatLocalTime("dddd", "en-us")}`)
 
   -- For the "en-us" locale, the "LL" token equals "MMMM D, YYYY"
-  print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
+  print(`The date is {dt:FormatLocalTime("LL", "en-us")}`)
   ```
 
   ##### Composite Tokens
@@ -636,7 +636,7 @@ methods:
       ```lua
       local dt = DateTime.now()
       -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
-      print("The date is " .. dt:FormatUniversalTime("LL", "en-us"))
+      print(`The date is {dt:FormatUniversalTime("LL", "en-us")}`)
       --> "The date is June 11, 2020"
       ```
     parameters:
@@ -668,7 +668,7 @@ methods:
       ```lua
       local dt = DateTime.now()
       -- For en-us, the "LL" token equals "MMM D, YYYY", which gives "June 11, 2020"
-      print("The date is " .. dt:FormatLocalTime("LL", "en-us"))
+      print(`The date is {dt:FormatLocalTime("LL", "en-us")}`)
       --> "The date is June 11, 2020"
       ```
     parameters:

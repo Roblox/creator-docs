@@ -138,7 +138,7 @@ local bindableEvent = ServerScriptService:FindFirstChildOfClass("BindableEvent")
 
 local function onEventFire(passedTable)
 	for k, v in passedTable do
-		print(k .. " = " .. v)
+		print(`{k} = {v}`)
 		--> 1 = Sword
 		--> 2 = Bow
 		--> CharName = Diva Dragonslayer

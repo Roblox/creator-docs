@@ -23,7 +23,7 @@ local myDictionary = {
 }
 
 for key, value in pairs(myDictionary) do
-  print(key .. " is " .. value)
+  print(`{key} is {value} )
 end
 ```
 
@@ -60,7 +60,7 @@ You have:
 local players = {"Ali", "Ben", "Cammy"}
 
 for playerRank, playerName in ipairs(players) do
-    print("Winner #" .. playerRank .. " is " .. playerName)
+    print(`Winner #{playerRank} is {playerName}`)
 end
 ```
 

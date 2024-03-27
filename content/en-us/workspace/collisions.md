@@ -29,7 +29,7 @@ The following code pattern shows how the `Class.BasePart.Touched|Touched` event 
 local part = workspace.Part
 
 local function onTouched(otherPart)
-	print(part.Name .. " collided with " .. otherPart.Name)
+	print(`{part.Name} collided with {otherPart.Name}`)
 end
 
 part.Touched:Connect(onTouched)
@@ -44,7 +44,7 @@ local COOLDOWN_TIME = 1
 
 local function onTouched(otherPart)
 	if not part:GetAttribute("Touched") then
-		print(part.Name .. " collided with " .. otherPart.Name)
+		print(`{part.Name} collided with {otherPart.Name}`)
 
 		part:SetAttribute("Touched", true)  -- Set attribute to true
 		task.wait(COOLDOWN_TIME)  -- Wait for cooldown duration
@@ -65,7 +65,7 @@ The following code pattern shows how the `Class.BasePart.TouchEnded|TouchEnded` 
 local part = workspace.Part
 
 local function onTouchEnded(otherPart)
-	print(part.Name .. " is no longer touching " .. otherPart.Name)
+	print(`{part.Name} is no longer touching {otherPart.Name}`)
 end
 
 part.TouchEnded:Connect(onTouchEnded)

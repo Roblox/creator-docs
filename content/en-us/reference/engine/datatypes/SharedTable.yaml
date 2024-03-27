@@ -336,7 +336,7 @@ functions:
 
       ```lua
       local oldValue = st["x"]
-      st["x"] = oldValue .. ",x"
+      st["x"] = `{oldValue},x`
       ```
 
       The update function makes it possible to perform an atomic update to an

@@ -147,7 +147,7 @@ Once it finds the value, the function will use the `return` keyword to return th
 
     local valueFound = findValue(playerItems, "Bread")
 
-    print("The value is at index " .. valueFound)
+    print(`The value is at index {valueFound}`)
    ```
 
 ### Removing a Value
@@ -167,7 +167,7 @@ If a value was found using the find function, it can be removed. Check if a valu
    ```lua
    for index = 1, #playerItems do
       local itemString = playerItems[index]
-      print("Index " .. index .. ": " .. itemString)
+      print(`Index {index}: {itemString}`)
    end
    ```
 
@@ -217,7 +217,7 @@ While the previous code could only remove the first instance of a value found, t
    ```lua
    for index = 1, #playerItems do
      local itemString = playerItems[index]
-     print("Index " .. index .. ": " .. itemString)
+     print(`Index {index}: {itemString}`)
    end
    ```
 

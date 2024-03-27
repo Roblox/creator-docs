@@ -27,11 +27,11 @@ You can check for connected gamepads via `Class.UserInputService.GamepadConnecte
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.GamepadConnected:Connect(function(gamepad)
-	print("User has connected controller: " .. tostring(gamepad))
+	print(`User has connected controller: {tostring(gamepad)}`)
 end)
 
 UserInputService.GamepadDisconnected:Connect(function(gamepad)
-	print("User has disconnected controller: " .. tostring(gamepad))
+	print(`User has disconnected controller: {tostring(gamepad)}`)
 end)
 ```
 

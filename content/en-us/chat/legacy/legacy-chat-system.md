@@ -114,11 +114,11 @@ local function Run(ChatService)
 	local myChannel = ChatService:AddChannel("MyChannel")
 
 	local function onSpeakerJoined(speakerName)
-		myChannel:SendSystemMessage(speakerName .. " has joined the channel.")
+		myChannel:SendSystemMessage(`{speakerName} has joined the channel.`)
 	end
 
 	local function onSpeakerLeft(speakerName)
-		myChannel:SendSystemMessage(speakerName .. " has left the channel.")
+		myChannel:SendSystemMessage(`{speakerName} has left the channel.`)
 	end
 
 	myChannel.SpeakerJoined:Connect(onSpeakerJoined)
@@ -431,7 +431,7 @@ local function Run(ChatService)
 
 	task.spawn(function()
 		while task.wait(5) do
-			timeBot:SayMessage("The current time is: " .. os.time(), "All", {})
+			timeBot:SayMessage(`The current time is: {os.time()}`, "All", {})
 		end
 	end)
 end

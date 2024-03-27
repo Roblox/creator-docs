@@ -147,7 +147,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 local function onCreatePart(player, partColor, partPosition)
-	print(player.Name .. " fired the RemoteEvent")
+	print(`{player.Name} fired the RemoteEvent`)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition
@@ -316,7 +316,7 @@ local remoteFunction = ReplicatedStorage:FindFirstChildOfClass("RemoteFunction")
 
 -- Callback function
 local function createPart(player, partColor, partPosition)
-	print(player.Name .. " requested a new part")
+	print(`{player.Name} requested a new part`)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition
@@ -441,7 +441,7 @@ local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 local function onEventFire(player, passedTable)
 	for k, v in passedTable do
-		print(k .. " = " .. v)
+		print(`{k} = {v}`)
 		--> 1 = Sword
 		--> 2 = Bow
 		--> CharName = Diva Dragonslayer

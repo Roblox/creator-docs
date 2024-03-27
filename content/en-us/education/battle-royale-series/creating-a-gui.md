@@ -264,7 +264,7 @@ IntValues will be used to store the player count and time left.
 
    -- Local Functions
    local function updateRoundStatus()
-      status.Value = "Players Left: " .. playersLeft.Value .. " / Time Left: " .. timeLeft.Value
+      status.Value = `Players Left: {playersLeft.Value} / Time Left: {timeLeft.Value}`
    end
    ```
 
@@ -448,7 +448,7 @@ local timeLeft = displayValues:WaitForChild("TimeLeft")
 
 -- Local Functions
 local function updateRoundStatus()
-	status.Value = "Players Left: " .. playersLeft.Value .. " / Time Left: " .. timeLeft.Value
+	status.Value = `Players Left: {playersLeft.Value} / Time Left: {timeLeft.Value}`
 end
 
 -- Module Functions
