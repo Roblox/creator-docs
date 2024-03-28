@@ -56,8 +56,7 @@ methods:
     returns:
       - type: string
         summary: |
-          A raw binary string representation of the `Class.File`
-          contents.
+          A raw binary string representation of the `Class.File` contents.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
@@ -66,9 +65,10 @@ methods:
     summary: |
       Gets a `rbxtemp://` asset ID for this `Class.File`.
     description: |
-      This function is used to retrieve a temporary asset ID associated with
-      the `Class.File`. The ID can be used like `rbxassetid://`, for example
-      it can be assigned to the `Class.ImageLabel.Image|Image` property of an `Class.ImageLabel`.
+      This function is used to retrieve a temporary asset ID associated with the
+      `Class.File`. The ID can be used like `rbxassetid://`, for example it can
+      be assigned to the `Class.ImageLabel.Image|Image` property of an
+      `Class.ImageLabel`.
 
       Throws an error if the file does not exist on disk.
     code_samples:

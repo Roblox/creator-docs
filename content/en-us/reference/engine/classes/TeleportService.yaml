@@ -633,8 +633,8 @@ methods:
 
       You are advised to instead set the loading screen on the client using
       `Class.TeleportService:SetTeleportGui()`. The loading `Class.ScreenGui`
-      should also be parented to the local player's `Class.PlayerGui` a
-      few seconds before the teleport to ensure a smooth transition using a
+      should also be parented to the local player's `Class.PlayerGui` a few
+      seconds before the teleport to ensure a smooth transition using a
       `Class.RemoteEvent`. For an example of this see
       `Class.TeleportService:SetTeleportGui()|SetTeleportGui`
 

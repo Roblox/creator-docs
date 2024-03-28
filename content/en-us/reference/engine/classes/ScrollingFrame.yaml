@@ -16,11 +16,11 @@ properties:
     summary: |
       The size in offsets of the area that is scrollable.
     description: |
-      The size in offsets of the area that is scrollable. This property is
-      set to the maximum of the `Class.ScrollingFrame.CanvasSize|CanvasSize`
+      The size in offsets of the area that is scrollable. This property is set
+      to the maximum of the `Class.ScrollingFrame.CanvasSize|CanvasSize`
       property and the size of the children if
-      `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize` is set
-      to something other than `Enum.AutomaticSize.None`.
+      `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize` is set to
+      something other than `Enum.AutomaticSize.None`.
     code_samples:
     type: Vector2
     tags:
@@ -64,10 +64,10 @@ properties:
       add text and other content to a UI object at edit or run time, and the
       size will adjust to fit that content.
 
-      When this property is set to an
-      `Enum.AutomaticSize` value other than `Enum.AutomaticSize|None`,
-      `Class.ScrollingFrame.AbsoluteCanvasSize|AbsoluteCanvasSize` may
-      resize depending on its child content.
+      When this property is set to an `Enum.AutomaticSize` value other than
+      `Enum.AutomaticSize|None`,
+      `Class.ScrollingFrame.AbsoluteCanvasSize|AbsoluteCanvasSize` may resize
+      depending on its child content.
     code_samples:
     type: AutomaticSize
     tags: []

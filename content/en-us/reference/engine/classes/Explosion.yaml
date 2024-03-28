@@ -16,15 +16,15 @@ description: |
   `Class.Constraint|Constraints` will not be broken by an explosion.
 
   If an `Class.Explosion` is parented anywhere in the data model while the
-  experience is running, it immediately sets off and, within a few seconds,
-  it becomes unparented. It is not destroyed with `Class.Instance:Destroy()`
-  in this case, so connections do not get disconnected and the parent is not
-  locked. As with all instances, keeping a strong reference an
-  `Class.Explosion` will prevent it from being garbage collected.
-  
-  Note that an `Class.Explosion` must be a descendant of `Class.Workspace`
-  for the explosion visuals to play and the physical/damaging effects to have
-  an impact.
+  experience is running, it immediately sets off and, within a few seconds, it
+  becomes unparented. It is not destroyed with `Class.Instance:Destroy()` in
+  this case, so connections do not get disconnected and the parent is not
+  locked. As with all instances, keeping a strong reference an `Class.Explosion`
+  will prevent it from being garbage collected.
+
+  Note that an `Class.Explosion` must be a descendant of `Class.Workspace` for
+  the explosion visuals to play and the physical/damaging effects to have an
+  impact.
 
   #### Explosion Effects
 
@@ -32,20 +32,19 @@ description: |
   the character `Class.Model` neck joint. Parenting a `Class.ForceField` to a
   model will protect all of its children from the explosion kill effect.
 
-  If you do not want joints between `Class.BasePart|BaseParts` to be broken,
-  or you want to implement your own formula for damaging
+  If you do not want joints between `Class.BasePart|BaseParts` to be broken, or
+  you want to implement your own formula for damaging
   `Class.Humanoid|Humanoids`, it's recommended that you set
-  `Class.Explosion.DestroyJointRadiusPercent|DestroyJointRadiusPercent` to 0
-  and use the `Class.Explosion.Hit|Hit` event to handle the result of the
-  explosion.
+  `Class.Explosion.DestroyJointRadiusPercent|DestroyJointRadiusPercent` to 0 and
+  use the `Class.Explosion.Hit|Hit` event to handle the result of the explosion.
 
-  Explosions can also be configured to damage `Class.Terrain`, creating
-  craters, as configured through the
-  `Class.Explosion.ExplosionType|ExplosionType` property.
+  Explosions can also be configured to damage `Class.Terrain`, creating craters,
+  as configured through the `Class.Explosion.ExplosionType|ExplosionType`
+  property.
 
   Note that the effect of an explosion is **not** disrupted by obstacles,
-  meaning that parts/terrain shielded behind other parts/terrain will still
-  be affected.
+  meaning that parts/terrain shielded behind other parts/terrain will still be
+  affected.
 code_samples:
   - Explosion-Instantiation
 inherits:
@@ -235,9 +234,9 @@ properties:
     summary: |
       Value between 0 and 1 that controls the speed of the particle effect.
     description: |
-      A value between 0 and 1 that controls the speed of the particle effect. At 1
-      it runs at normal speed, at 0.5 it runs at half speed, and at 0 it freezes
-      time.
+      A value between 0 and 1 that controls the speed of the particle effect. At
+      1 it runs at normal speed, at 0.5 it runs at half speed, and at 0 it
+      freezes time.
     code_samples: []
     type: float
     tags: []

@@ -14,18 +14,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: ExperienceNotificationService:InvokeOptInPromptClosed
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: ExperienceNotificationService:PromptOptIn
     summary: ''
     description: ''
@@ -60,14 +48,5 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: ExperienceNotificationService.PromptOptInRequested
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
 callbacks: []

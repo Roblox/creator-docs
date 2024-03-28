@@ -327,12 +327,12 @@ properties:
       can_save: true
   - name: Player.DataComplexity
     summary: |
-      The total amount of data currently being stored in the
-      player's cache on the current place.
+      The total amount of data currently being stored in the player's cache on
+      the current place.
     description: |
       This property was once used by an ancient data persistence method to
-      indicate the total amount of data currently being stored in the
-      player's cache on the current place.
+      indicate the total amount of data currently being stored in the player's
+      cache on the current place.
 
       #### Notes
 

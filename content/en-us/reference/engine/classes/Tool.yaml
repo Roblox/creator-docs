@@ -360,13 +360,15 @@ events:
       Fires when the player clicks while the tool is equipped.
     description: |
       This event fires when the player clicks while the `Class.Tool` is
-      equipped. It is **not** fired if the <kbd>Ctrl</kbd> key is pressed during the click.
+      equipped. It is **not** fired if the <kbd>Ctrl</kbd> key is pressed during
+      the click.
 
-      This event is typically used to perform an action when the player uses the tool, for instance to launch a rocket from a rocket launcher weapon tool.
+      This event is typically used to perform an action when the player uses the
+      tool, for instance to launch a rocket from a rocket launcher weapon tool.
 
       The below code, when placed in a `Class.LocalScript`, creates a tool in
-      the local player's `Class.Backpack` and prints "Tool activated" when
-      the player clicks while the created tool is equipped.
+      the local player's `Class.Backpack` and prints "Tool activated" when the
+      player clicks while the created tool is equipped.
 
       ```lua
       local tool = Instance.new("Tool")
@@ -387,8 +389,8 @@ events:
     thread_safety: Unsafe
   - name: Tool.Deactivated
     summary: |
-      Fires when the player releases their click while the tool is
-      equipped and activated.
+      Fires when the player releases their click while the tool is equipped and
+      activated.
     description: |
       This event fires when the player releases their click while the
       `Class.Tool` is equipped and activated. It is typically used to perform an
@@ -444,8 +446,8 @@ events:
     summary: |
       Fires when the tool is unequipped.
     description: |
-      This event fires when a player unequips the `Class.Tool` (puts it in
-      their `Class.Backpack`).
+      This event fires when a player unequips the `Class.Tool` (puts it in their
+      `Class.Backpack`).
 
       The opposite of this event, `Class.Tool.Equipped`, can be used to
       determine when the player equips the tool by taking it out of their
