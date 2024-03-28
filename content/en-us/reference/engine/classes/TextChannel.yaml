@@ -161,17 +161,24 @@ callbacks:
       Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this
       callback returns a `Class.TextChatMessageProperties`, those properties are
       merged with the `Class.TextChatMessage` parameter to create a new
-      `Class.TextChatMessage` with those properties.
+      `Class.TextChatMessage`.
 
-      When bound to the client sending a message, this event can be fired twice,
-      first when the message is initially sent and received by the same client
-      locally, and then when the client receives the result of the filtered
-      message from the server. `Class.TextChannel.OnIncomingMessage` callbacks
-      always run **after** `Class.TextChatService.OnIncomingMessage` callback.
+      When bound to the client sending a message, this callback is run twice;
+      first when the message is initially sent and received locally, and again
+      when the client receives the result of the filtered message from the
+      server.
+
+      `Class.TextChannel.OnIncomingMessage` callbacks always run **after** the
+      `Class.TextChatService.OnIncomingMessage` callback.
 
       This should be defined only once per `Class.TextChannel` in the source
       code. Multiple bindings to the same channel will override one another in a
       nondeterministic manner.
+
+      When `Class.TextChatService:CreateDefaultTextChannels()` is true, those
+      default `Class.TextChannel|TextChannels` have their
+      `Class.TextChannel.OnIncomingMessage` callbacks assigned internally in
+      order to exhibit special default behavior.
     code_samples: []
     parameters:
       - name: message

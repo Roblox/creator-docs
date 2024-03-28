@@ -90,7 +90,7 @@ methods:
       `Class.Script.Source` property.
 
       For example, in
-      [Team Create Drafts](../../../projects/collaboration.md#scripting-using-drafts-mode)
+      [Team Create Drafts](../../../projects/collaboration.md#collaborative-scripting)
       mode, this method returns the contents of a local draft created from the
       script, if one exists.
     code_samples: []

@@ -7,7 +7,7 @@ summary: |
   viewing player.
 description: |
   The role of a Translator is to manufacture/return strings localized for the
-  viewing player. it can be used to retrieve display-ready localized text from a
+  viewing player. It can be used to retrieve display-ready localized text from a
   `Class.LocalizationTable`. The source of the `Class.Translator.LocaleId`
   property, the set of tables it will search, and the order it will search them
   in depends on which method was used to create the Translator instance.
