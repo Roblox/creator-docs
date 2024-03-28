@@ -56,8 +56,8 @@ properties:
       not be deleted when the player respawns.
 
       When set to true, this `Class.LayerCollector` will be cloned into each
-      player's `Class.PlayerGui` when they respawn, and it will
-      delete itself when the player respawns again.
+      player's `Class.PlayerGui` when they respawn, and it will delete itself
+      when the player respawns again.
     code_samples:
     type: bool
     tags: []

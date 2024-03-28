@@ -13,7 +13,7 @@ description: |
   `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` property. By adjusting
   the `Class.Sky.StarCount|StarCount` property, you can change how many stars
   appear in the sky at night.
-  
+
   This object can also be used as a cubemap for reflections in
   `Class.ViewportFrame|ViewportFrames`, in which case only the `Class.Sky`
   object's six **Skybox[…]** properties are used. For details, see
@@ -183,7 +183,8 @@ properties:
     summary: |
       How many stars are shown in the skybox.
     description: |
-      How many stars are shown in the skybox. Only works if `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` is true.
+      How many stars are shown in the skybox. Only works if
+      `Class.Sky.CelestialBodiesShown|CelestialBodiesShown` is true.
     code_samples:
     type: int
     tags: []

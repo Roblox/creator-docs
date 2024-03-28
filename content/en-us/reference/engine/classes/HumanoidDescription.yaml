@@ -881,8 +881,9 @@ properties:
       `Class.Pants` instance.
     description: |
       **Pants** determines the `Class.Pants.PantsTemplate|PantsTemplate` used by
-      a `Class.Pants` instance when `Class.Humanoid:ApplyDescription()`
-      is called on a `Class.Humanoid`. The asset type must be for **Pants**, not a **Decal** or **Image**.
+      a `Class.Pants` instance when `Class.Humanoid:ApplyDescription()` is
+      called on a `Class.Humanoid`. The asset type must be for **Pants**, not a
+      **Decal** or **Image**.
 
       #### See Also
 
@@ -1124,8 +1125,9 @@ properties:
       `Class.Shirt` instance.
     description: |
       **Shirt** determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by
-      a `Class.Shirt` instance when `Class.Humanoid:ApplyDescription()`
-      is called on a `Class.Humanoid`. The asset type must be for **Shirt**, not a **Decal** or **Image**.
+      a `Class.Shirt` instance when `Class.Humanoid:ApplyDescription()` is
+      called on a `Class.Humanoid`. The asset type must be for **Shirt**, not a
+      **Decal** or **Image**.
 
       #### See Also
 

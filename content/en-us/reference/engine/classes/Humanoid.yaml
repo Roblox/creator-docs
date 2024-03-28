@@ -660,7 +660,7 @@ properties:
       The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
     description: |
       The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
-      
+
       The value of this property is used alongside the
       `Class.Humanoid.Health|Health` property to size the default health bar
       display. When a humanoid's `Class.Humanoid.Health|Health` reaches
@@ -1054,13 +1054,16 @@ properties:
       #### Notes
 
       - When controlled on a mobile device or a gamepad, a humanoid can walk
-      slower than its `Class.Humanoid.WalkSpeed|WalkSpeed` if the controlling thumbstick is moved just a gradual degree from center.
-      - You can freeze a humanoid in place by setting `Class.Humanoid.WalkSpeed|WalkSpeed` to 0; this prevents the controlling player from moving it through the default movement mechanisms.
+        slower than its `Class.Humanoid.WalkSpeed|WalkSpeed` if the controlling
+        thumbstick is moved just a gradual degree from center.
+      - You can freeze a humanoid in place by setting
+        `Class.Humanoid.WalkSpeed|WalkSpeed` to 0; this prevents the controlling
+        player from moving it through the default movement mechanisms.
       - The default animation script scales a humanoid's movement animations
-      based on how fast it is moving relative to the default speed of 16
-      studs/second.
+        based on how fast it is moving relative to the default speed of 16
+        studs/second.
       - The speed at which the `Class.Humanoid` is currently walking can be
-      obtained using the `Class.Humanoid.Running|Running` event.
+        obtained using the `Class.Humanoid.Running|Running` event.
     code_samples:
     type: float
     tags: []
@@ -1182,8 +1185,8 @@ methods:
     summary: |
       Attaches the specified `Class.Accessory` to the humanoid's parent.
     description: |
-      This method attaches the specified `Class.Accessory` to the
-      humanoid's parent.
+      This method attaches the specified `Class.Accessory` to the humanoid's
+      parent.
 
       When this method is called, an `Class.Accessory` is attached to the
       character by searching for an `Class.Attachment` in the humanoid's parent
@@ -1283,7 +1286,8 @@ methods:
       generated based on the parts associated with the two attachments and the
       `Class.Attachment.CFrame|CFrame` of the attachments.
 
-      `Class.Humanoid:BuildRigFromAttachments()` also scales the character and sets body colors.
+      `Class.Humanoid:BuildRigFromAttachments()` also scales the character and
+      sets body colors.
     code_samples:
       - Humanoid-BuildRigFromAttachments-Port
       - R15-Package-Importer
@@ -1312,11 +1316,11 @@ methods:
       automatically be changed when set. For example:
 
       - Setting the state to `Enum.HumanoidStateType.Swimming` when the humanoid
-      is not in the water will cause it to be automatically set to
-      `Enum.HumanoidStateType.GettingUp`.
+        is not in the water will cause it to be automatically set to
+        `Enum.HumanoidStateType.GettingUp`.
       - As it is unused, setting the state to
-      `Enum.HumanoidStateType.PlatformStanding` will cause the humanoid state to
-      be automatically set to `Enum.HumanoidStateType.Running`.
+        `Enum.HumanoidStateType.PlatformStanding` will cause the humanoid state
+        to be automatically set to `Enum.HumanoidStateType.Running`.
 
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
@@ -1386,8 +1390,8 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:GetAccessories
     summary: |
-      Returns an array of `Class.Accessory` objects that the
-      humanoid's parent is currently wearing.
+      Returns an array of `Class.Accessory` objects that the humanoid's parent
+      is currently wearing.
     description: |
       This function returns an array of `Class.Accessory` objects that the
       humanoid's parent is currently wearing. All such `Class.Accessory` objects
@@ -1396,7 +1400,8 @@ methods:
       If the `Class.Humanoid` has no `Class.Accessory` objects, an empty array
       will be returned.
 
-      See also `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory` to a humanoid's parent.
+      See also `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory` to
+      a humanoid's parent.
     code_samples:
       - remove-accessories-after-loading
     parameters: []
@@ -1415,19 +1420,20 @@ methods:
       describes its current look.
     description: |
       This function returns a copy of the humanoid's cached
-      `Class.HumanoidDescription` which describes its current look. This can be used to quickly determine a character's look and to assign their
-      look to other characters using the `Class.Humanoid:ApplyDescription()`
-      function.
+      `Class.HumanoidDescription` which describes its current look. This can be
+      used to quickly determine a character's look and to assign their look to
+      other characters using the `Class.Humanoid:ApplyDescription()` function.
 
       #### See Also
 
       - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
-      `Class.HumanoidDescription` describing the avatar for the passed in user.
+        `Class.HumanoidDescription` describing the avatar for the passed in
+        user.
       - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
-      `Class.HumanoidDescription` whose parameters are initialized to match that
-      of the passed in server-side outfit asset.
+        `Class.HumanoidDescription` whose parameters are initialized to match
+        that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
-      player with the look from the passed in `Class.HumanoidDescription`.
+        player with the look from the passed in `Class.HumanoidDescription`.
     code_samples:
     parameters: []
     returns:
@@ -1449,11 +1455,11 @@ methods:
       what the actual body part names are, instead returning an enum.
 
       It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
-      For example, if a player's body part touches something,
-      this function will return get a part instance. Developers can then look up
-      what part of the body that was, like head or arm. Then depending on what
-      that part was, developers can either perform some gameplay action or
-      replace that part with some other part - perhaps showing damage.
+      For example, if a player's body part touches something, this function will
+      return get a part instance. Developers can then look up what part of the
+      body that was, like head or arm. Then depending on what that part was,
+      developers can either perform some gameplay action or replace that part
+      with some other part - perhaps showing damage.
 
       This function can be useful for games where hit location is important. For
       example, it can be used to determine if a player is hit in the leg and
@@ -1756,9 +1762,9 @@ methods:
       using `Class.RunService:BindToRenderStep()` (see example).
 
       This function can be called on the server, but this should only be done
-      when the server has [network
-      ownership](../../../physics/network-ownership.md) of the humanoid's
-      assembly.
+      when the server has
+      [network ownership](../../../physics/network-ownership.md) of the
+      humanoid's assembly.
 
       See also `Class.Humanoid:MoveTo()` which makes a`Class.Humanoid` walk to a
       point, and `Class.Player:Move()` which effectively calls this function.
@@ -2121,14 +2127,15 @@ methods:
       #### See Also
 
       - `Class.Humanoid:GetAppliedDescription()` which returns the
-      `Class.HumanoidDescription` currently applied to the humanoid.
+        `Class.HumanoidDescription` currently applied to the humanoid.
       - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
-      `Class.HumanoidDescription` describing the avatar for the passed in user.
+        `Class.HumanoidDescription` describing the avatar for the passed in
+        user.
       - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
-      `Class.HumanoidDescription` whose parameters are initialized to match that
-      of the passed in server-side outfit asset.
+        `Class.HumanoidDescription` whose parameters are initialized to match
+        that of the passed in server-side outfit asset.
       - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
-      player with the look from the passed in `Class.HumanoidDescription`.
+        player with the look from the passed in `Class.HumanoidDescription`.
     code_samples:
     parameters:
       - name: humanoidDescription
@@ -2652,10 +2659,10 @@ events:
 
       #### See Also
 
-      -  `Class.Humanoid:GetState()` and `Class.Humanoid:ChangeState()` to get
-      and set the state.
+      - `Class.Humanoid:GetState()` and `Class.Humanoid:ChangeState()` to get
+        and set the state.
       - `Class.Humanoid:SetStateEnabled()` to enable and disable specific
-      states.
+        states.
     code_samples:
       - jumping-particles
       - jump-cooldown
@@ -2833,14 +2840,15 @@ events:
       if there are alternatives that better suit your needs.
 
       - In most cases, it's advised to connect a `Class.BasePart.Touched` event
-      for `Class.BasePart|BaseParts` of interest instead, as the
-      `Class.Humanoid.Touched` event will constantly fire when the humanoid is
-      moving. For example, in a dodgeball game, it would be more practical to
-      connect a `Class.BasePart.Touched|Touched` event for the balls rather than use `Class.Humanoid.Touched`.
+        for `Class.BasePart|BaseParts` of interest instead, as the
+        `Class.Humanoid.Touched` event will constantly fire when the humanoid is
+        moving. For example, in a dodgeball game, it would be more practical to
+        connect a `Class.BasePart.Touched|Touched` event for the balls rather
+        than use `Class.Humanoid.Touched`.
       - When trying to work out when the `Class.Humanoid` has landed on the
-      ground, the `Class.Humanoid.StateChanged` event is more suitable.
-      Alternatively, you can check `Class.Humanoid.FloorMaterial` to see if the
-      humanoid is standing on any non-air material.
+        ground, the `Class.Humanoid.StateChanged` event is more suitable.
+        Alternatively, you can check `Class.Humanoid.FloorMaterial` to see if
+        the humanoid is standing on any non-air material.
 
       #### Notes
 

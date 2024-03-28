@@ -11,8 +11,9 @@ description: |
   set of **Physically‑Based Rendering** (PBR) texture images, or maps, on a
   single object. Combining multiple texture maps can more accurately simulate
   color, roughness, and reflectivity in any lighting environment and can enhance
-  the visual elements of your assets and environment; see [PBR Textures](../../../art/modeling/surface-appearance.md) for more details.
-  
+  the visual elements of your assets and environment; see
+  [PBR Textures](../../../art/modeling/surface-appearance.md) for more details.
+
   <figure>
   <img src="/assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" width="405" alt="A realistic leafy bush" />
   <img src="/assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" width="405" alt="A realistic mossy rock" />
@@ -49,8 +50,8 @@ properties:
       depth-based effects like `Class.DepthOfFieldEffect`, glass and water
       refraction, and water reflection.
 
-      See [here](../../../art/modeling/surface-appearance.md#alpha-modes) for more
-      information.
+      See [here](../../../art/modeling/surface-appearance.md#alpha-modes) for
+      more information.
     code_samples:
     type: AlphaMode
     tags: []
@@ -72,8 +73,8 @@ properties:
       this texture controls its opacity, which behaves differently based on the
       `Class.SurfaceAppearance.AlphaMode` setting.
 
-      See [here](../../../art/modeling/surface-appearance.md#color-albedo) for more
-      information.
+      See [here](../../../art/modeling/surface-appearance.md#color-albedo) for
+      more information.
     code_samples:
     type: Content
     tags: []
@@ -103,8 +104,8 @@ properties:
       effect. For the most realistic reflections, it's recommended to set
       `Class.Lighting.EnvironmentSpecularScale` and
       `Class.Lighting.EnvironmentDiffuseScale` to 1, as well as
-      `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` to `(0, 0,
-      0)`.
+      `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` to
+      `(0, 0, 0)`.
 
       See [here](../../../art/modeling/surface-appearance.md#metalness) for more
       information.
@@ -134,7 +135,7 @@ properties:
       linearly to normal vector components of -1 and 1.016 respectively. This
       range is stretched slightly from -1 to 1 so that a byte value of 127 maps
       to exactly 0.
-      
+
       The normal vector's **Z** axis is always defined as the direction of the
       underlying mesh's normal. A uniform `(127, 127, 255)` image translates to
       a completely flat normal map where the normal is everywhere perpendicular

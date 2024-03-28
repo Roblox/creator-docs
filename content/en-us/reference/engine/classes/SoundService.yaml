@@ -249,8 +249,8 @@ methods:
       GetListener returns the current `Class.SoundService` listener type and
       what is set as listener.
     description: |
-      This function returns the `Class.SoundService` current listener
-      type and what is set as listener.
+      This function returns the `Class.SoundService` current listener type and
+      what is set as listener.
 
       The first result returned is the `Enum.ListenerType` of the listener, the
       second result is dependent on the ListenerType:

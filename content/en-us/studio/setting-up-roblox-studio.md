@@ -48,4 +48,4 @@ In contrast to certain other engines, every experience runs on the latest versio
 
 If your current version of Studio is outdated, you'll see an **Update Available** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 
-<img src="../assets/studio/general/Update-Restart-Prompt.png" width="815" alt="Studio's Model tab with the Update Studio button highlighted." />
+<img src="../assets/studio/general/Toolbar-Update-Prompt.png" width="754" alt="Studio's Model tab with the Update Studio button highlighted." />

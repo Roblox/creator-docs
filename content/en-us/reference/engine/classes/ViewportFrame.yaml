@@ -10,23 +10,23 @@ description: |
   `Class.ScreenGui`. This object has the following caveats:
 
   - No shadows or
-  [post-processing](../../../environment/post-processing-effects.md) effects are
-  rendered.
+    [post-processing](../../../environment/post-processing-effects.md) effects
+    are rendered.
   - `Enum.Material.Neon` and `Enum.Material.Glass` materials render at the
-  lowest quality.
+    lowest quality.
   - Nested `Class.GuiObject|GuiObjects` aren't supported.
   - By default, lighting inside a `Class.ViewportFrame` acts as if
-  `Class.Lighting.EnvironmentSpecularScale` and
-  `Class.Lighting.EnvironmentDiffuseScale` are both set to 0, so properties that
-  rely on these fields, such as `Class.SurfaceAppearance.MetalnessMap`, may look
-  different.
+    `Class.Lighting.EnvironmentSpecularScale` and
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to 0, so properties
+    that rely on these fields, such as `Class.SurfaceAppearance.MetalnessMap`,
+    may look different.
   - This object can use a `Class.Sky` child as a cubemap for reflections, in
-  which case only the `Class.Sky` object's six **Skybox[…]** properties are
-  used. Assuming these properties are valid, lighting inside the
-  `Class.ViewportFrame` acts similarly to if
-  `Class.Lighting.EnvironmentSpecularScale` and
-  `Class.Lighting.EnvironmentDiffuseScale` are both set to 1. For details, see
-  [Frames](../../../ui/frames.md#viewportframe).
+    which case only the `Class.Sky` object's six **Skybox[…]** properties are
+    used. Assuming these properties are valid, lighting inside the
+    `Class.ViewportFrame` acts similarly to if
+    `Class.Lighting.EnvironmentSpecularScale` and
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to 1. For details, see
+    [Frames](../../../ui/frames.md#viewportframe).
 code_samples:
   - viewportframe---create-gui
   - viewportframe---control-camera
@@ -40,8 +40,8 @@ properties:
       The lighting hue applied to the area within the `Class.ViewportFrame`.
     description: |
       This property determines the lighting hue applied to the area within the
-      `Class.ViewportFrame`. Defaults to `Datatype.Color3|Color3.fromRGB(200,
-      200, 200)` (ghost grey).
+      `Class.ViewportFrame`. Defaults to
+      `Datatype.Color3|Color3.fromRGB(200, 200, 200)` (ghost grey).
     code_samples:
     type: Color3
     tags: []
@@ -149,7 +149,8 @@ properties:
       A `Datatype.Vector3` representing the direction of the light source.
     description: |
       A `Datatype.Vector3` representing the direction of the light source from
-      position `Datatype.Vector3|Vector3.new(0, 0, 0)`. Defaults to `Datatype.Vector3|Vector3.new(-1, -1, -1)`.
+      position `Datatype.Vector3|Vector3.new(0, 0, 0)`. Defaults to
+      `Datatype.Vector3|Vector3.new(-1, -1, -1)`.
     code_samples:
     type: Vector3
     tags: []
