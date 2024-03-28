@@ -42,12 +42,10 @@ properties:
 methods:
   - name: EulerRotationCurve:GetAnglesAtTime
     summary: |
-      Samples the 3 `FloatCurves|FloatCurve` (X, Y, Z) at the time passed as
-      argument. Returns the result as 3 Euler angles. If a channel curve is
+      Samples the 3 `Class.FloatCurve|FloatCurves` (X, Y, Z) at the time passed as argument. Returns the result as 3 Euler angles. If a channel curve is
       missing or no key is found in the curve the channel is evaluated as nil.
     description: |
-      Samples the 3 `FloatCurves|FloatCurve` (X, Y, Z) at the time passed as
-      argument. Returns the result as 3 Euler angles. If a channel curve is
+      Samples the 3 `Class.FloatCurve|FloatCurves` (X, Y, Z) at the time passed as argument. Returns the result as 3 Euler angles. If a channel curve is
       missing or no key is found in the curve the channel is evaluated as nil.
     code_samples:
     parameters:
