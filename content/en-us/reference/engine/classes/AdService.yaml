@@ -39,23 +39,6 @@ methods:
     security: None
     thread_safety: Unsafe
 events:
-  - name: AdService.ShowDynamicEudsaDisclosure
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: advertiserName
-        type: string
-        default:
-        summary: ''
-      - name: payerName
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: AdService.VideoAdClosed
     summary: |
       Historically fired when an `Class.AdService` video closed.

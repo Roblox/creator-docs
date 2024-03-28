@@ -921,6 +921,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
   - name: PhysicsSettings.SolverConvergenceMetricType
     summary: ''
     description: ''

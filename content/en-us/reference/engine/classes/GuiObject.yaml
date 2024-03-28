@@ -130,8 +130,8 @@ properties:
     summary: |
       Determines the color of the `Class.GuiObject` background.
     description: |
-      This property determines the color of the `Class.GuiObject`
-      background but is deprecated in favor of
+      This property determines the color of the `Class.GuiObject` background but
+      is deprecated in favor of
       `Class.GuiObject.BackgroundColor3|BackgroundColor3`, which should be used
       in new work instead.
     code_samples:
@@ -156,8 +156,8 @@ properties:
     summary: |
       Determines the `Class.GuiObject` background color.
     description: |
-      This property determines the color of a `Class.GuiObject` background
-      (the fill color).
+      This property determines the color of a `Class.GuiObject` background (the
+      fill color).
 
       Another property that determines the visual properties of the background
       is `Class.GuiObject.BackgroundTransparency`. If an element's
@@ -214,9 +214,9 @@ properties:
     summary: |
       Determines the color of the `Class.GuiObject` border.
     description: |
-      This property determines the color of a `Class.GuiObject`
-      border but is deprecated in favor of the `Datatype.Color3` property
-      BorderColor3, which should be used in new work instead.
+      This property determines the color of a `Class.GuiObject` border but is
+      deprecated in favor of the `Datatype.Color3` property BorderColor3, which
+      should be used in new work instead.
     code_samples:
     type: BrickColor
     tags:
@@ -583,11 +583,11 @@ properties:
       `Class.GuiObject.AnchorPoint`.
 
       The scalar position is relative to the size of the parent GUI element. For
-      example, if `Class.GuiObject.AnchorPoint|AnchorPoint` is set to `0, 0` and Position is set to
-      `{0, 0}, {0, 0}`, the element's top left corner renders at the top left
-      corner of the parent element. Similarly, if AnchorPoint is set to `0, 0`
-      and Position is set to `{0.5, 0}, {0.5, 0}`, the element's top left corner
-      will render at the direct center of the parent element.
+      example, if `Class.GuiObject.AnchorPoint|AnchorPoint` is set to `0, 0` and
+      Position is set to `{0, 0}, {0, 0}`, the element's top left corner renders
+      at the top left corner of the parent element. Similarly, if AnchorPoint is
+      set to `0, 0` and Position is set to `{0.5, 0}, {0.5, 0}`, the element's
+      top left corner will render at the direct center of the parent element.
 
       The pixel portions of the `Datatype.UDim2` value are the same regardless
       of the parent GUI's size. The values represent the position of the object
@@ -645,7 +645,8 @@ properties:
     summary: |
       Determine whether the `Class.GuiObject|GUI` can be selected by a gamepad.
     description: |
-      This property determines whether the `Class.GuiObject` can be selected when navigating GUIs using a gamepad.
+      This property determines whether the `Class.GuiObject` can be selected
+      when navigating GUIs using a gamepad.
 
       If this property is true, a GUI can be selected. Selecting a GUI also sets
       the `Class.GuiService.SelectedObject` property to that object.
@@ -738,8 +739,8 @@ properties:
     summary: |
       Determine the pixel and scalar size of a `Class.GuiObject|GUI`.
     description: |
-      This property determines the `Class.GuiObject` scalar and pixel size
-      using a `Datatype.UDim2`. Its value can be expressed as
+      This property determines the `Class.GuiObject` scalar and pixel size using
+      a `Datatype.UDim2`. Its value can be expressed as
       `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
       `({ScalarX, PixelX}, {ScalarY, PixelY})`.
 
