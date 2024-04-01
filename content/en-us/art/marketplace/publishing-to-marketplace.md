@@ -226,7 +226,7 @@ When setting a price, you can see the percentage breakdown of commissions in the
 #### Limited
 
 <Alert severity = 'info'>
-Starting middle of March 2024:
+Starting early April 2024:
 - You can change the **Title** and **Description** of your Limited items.
 - You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
 - You can increase, but not decrease, **Quantity Per User**.
@@ -261,7 +261,7 @@ Limited assets on the Marketplace before the release of this setting don't inclu
 #### Sale Location
 
 <Alert severity = 'info'>
-Starting middle of March 2024, the following sales locations will be available for both Limited and non-Limited items:
+Starting early April 2024, the following sales locations will be available for both Limited and non-Limited items:
 
 - **Marketplace Only**
 - **Marketplace and Experience by Place ID**
@@ -327,7 +327,7 @@ The following location options are available for **Limiteds**:
 #### Premium Benefits
 
 <Alert severity = 'info'>
-Starting middle of March 2024, Premium benefits will not apply to new items. Existing items will continue to have premium benefits support until later this year.
+Starting early April 2024, Premium benefits will not apply to new items. Existing items will continue to have premium benefits support until later this year.
 </Alert>
 
 The Premium benefit options allow you to provide exclusive items or discounts to Premium subscribers. All items with Premium exclusivity or discounts appear in the [Premium Marketplace category](https://www.roblox.com/catalog?Category=1&salesTypeFilter=3) and include a Premium logo in the item name. Premium benefits don't apply to [Limited assets](#limited).
