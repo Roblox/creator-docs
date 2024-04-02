@@ -10,7 +10,7 @@ This module covers different aspects of running a class, like assessments and cl
 By the end of this article, you will:
 
 - Understand ways to assess or evaluate student progress.
-- Recognize optional learning tools, such as Team Create or Private Servers.
+- Recognize optional learning tools, such as Live Collaboration or Private Servers.
 - Know where to find resources on digital civility and classroom management.
 
 ## Assessments and Evaluation
@@ -92,7 +92,7 @@ Roblox offers multiple means of communicating on the platform, like experience-m
 </tr>
 <tr>
 <td>
-<b><a href = "#team-create">Team Create</a></b>
+<b><a href = "#live-collaboration">Live Collaboration</a></b>
 </td>
 <td>
 A tool in Roblox Studio that allows people to invite friends to collaborate on a project simultaneously with them.
@@ -134,9 +134,9 @@ These features include:
 href="https://en.help.roblox.com/hc/en-us/articles/206224956-Chatting-and-Playing-with-Friends"><Button
 variant="contained">Learn More</Button></a>
 
-### Team Create
+### Live Collaboration
 
-Team Create allows the owner of a project to invite friends to join them in
+**Live Collaboration** allows the owner of a project to invite friends to join them in
 Roblox Studio to **collaboratively** build worlds or edit scripts together in
 real-time. Multiple students can work together to design an environment or solve
 a scripting exercise. This tool allows for shared projects or group-work in
@@ -159,11 +159,6 @@ variant="contained">Learn More</Button></a>
 ### Groups
 
 Groups are mini-communities that can be formed on the Roblox platform. Each group includes features like a member list with ranks and a "wall" to post announcements. For educators, groups can be used in classroom management posting links to experiences. Additionally, students can form their own groups as a way of collaboratively working on projects in Roblox Studio.
-
-<Alert>
-<AlertTitle>Team Create and Group Games</AlertTitle>
-While both may be similar, group games have a few extra features. For instance, in **Team Create**, the original creator of that place maintains ownership. This can become a problem if that owner leaves the project. **Groups** on the other hand, make it easier to collectively credit a group of individuals.
-</Alert>
 
 <p>
 <a href="../../projects/groups.md"

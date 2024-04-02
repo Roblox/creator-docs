@@ -246,6 +246,6 @@ The **Game Settings** button, accessible only for a [published](../production/pu
 
 ## Team Test
 
-During a [Team Create](../projects/collaboration.md#team-create) session, clicking **Team Test** starts a playtest with other editors, and **Exit Game** exits out of a current playtest.
+During a [collaborative](../projects/collaboration.md) session, clicking **Team Test** starts a playtest with other editors, and **Exit Game** exits out of a current playtest.
 
 <img src="../assets/studio/general/Home-Tab-Team-Test-Options.png" width="800" alt="Team Test option buttons indicated in Home tab" />

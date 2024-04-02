@@ -9,12 +9,12 @@ The **View** tab lets you toggle various windows in Studio, toggle the [view sel
 
 ## Windows and Tools
 
-The **Show** section lets you toggle specific windows and tools within Studio.
+The **Show** section lets you toggle specific windows and tools within Studio. Commonly accessed windows/tools include:
 
 <table>
 <thead>
   <tr>
-    <th>Action</th>
+    <th>Option</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -36,44 +36,16 @@ The **Show** section lets you toggle specific windows and tools within Studio.
     <td>Toggles the [Toolbox](../projects/assets/toolbox.md) window open and closed.</td>
   </tr>
   <tr>
-    <td>**Object Browser**</td>
-    <td>Shows information on every object, class, and enum in Roblox.</td>
-  </tr>
-  <tr>
     <td>**Output**</td>
-    <td>Shows any errors, warnings, or print outputs from running scripts.</td>
-  </tr>
-  <tr>
-    <td>**Script Analysis**</td>
-    <td>Shows script errors and warnings without having to start running the experience.</td>
+    <td>The [Output](../studio/output.md) window shows any errors, warnings, or print outputs from running scripts.</td>
   </tr>
   <tr>
     <td>**Command Bar**</td>
-    <td>Used to execute Luau code outside of scripts.</td>
-  </tr>
-	<tr>
-    <td>**Performance**</td>
-    <td>View diagnostic information of your experience.</td>
-  </tr>
-	<tr>
-    <td>**Task Scheduler**</td>
-    <td>Shows feedback on looping services in your experience while it's running.</td>
-  </tr>
-	<tr>
-    <td>**Script Performance**</td>
-    <td>Shows CPU usage of scripts.</td>
+    <td>The [Command Bar](../studio/ui-overview.md#command-bar) can be used to execute Luau code outside of scripts.</td>
   </tr>
 	<tr>
     <td>**Find&nbsp;All&nbsp;/ Replace&nbsp;All**</td>
-    <td>Displays the results from searching with <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.</td>
-  </tr>
-	<tr>
-    <td>**Team Create**</td>
-    <td>Lets you [collaborate](../projects/collaboration.md) with other Roblox users.</td>
-  </tr>
-	<tr>
-    <td>**Script Recovery**</td>
-    <td>Toggles a window containing recovered scripts.</td>
+    <td>Displays the results from searching with <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on macOS.</td>
   </tr>
 	<tr>
     <td>**Terrain Editor**</td>
@@ -82,18 +54,6 @@ The **Show** section lets you toggle specific windows and tools within Studio.
 	<tr>
     <td>**Tag Editor**</td>
     <td>Opens a window with tools for defining, assigning, and managing tags for use with `Class.CollectionService`.</td>
-  </tr>
-	<tr>
-    <td>**Call Stack**</td>
-    <td>View the call stack while using the debugger.</td>
-  </tr>
-  <tr>
-    <td>**Breakpoints**</td>
-    <td>View existing [breakpoints](../studio/debugging.md) in a script while using the debugger.</td>
-  </tr>
-  <tr>
-    <td>**Watch**</td>
-    <td>Used to monitor variable values as you step through breakpoints while using the debugger.</td>
   </tr>
 </tbody>
 </table>

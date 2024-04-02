@@ -26,8 +26,7 @@ These APIs are currently in beta and have the following restrictions:
 
   ![The Creator Hub API key screen](../../assets/open-cloud/instance-api-beta.png)
 
-- You must have [Team Create](../../projects/collaboration.md#enabling-team-create)
-  enabled for the experience that you want to access.
+- You must have a [collaborative](../../projects/collaboration.md) session enabled for the experience that you want to access.
 
 ## Listing Children
 
@@ -387,16 +386,11 @@ from the web. The demo consists of the following:
    Discover page. Click on the overflow menu, and then **Edit in Studio**.
    Studio opens with a copy of the place.
 
-1. Click **File > Save to Roblox** and fill out the necessary information to
+1. Click **File** &rarr; **Save to Roblox** and fill out the necessary information to
    save the Potion Shop Demo as the default place for your experience. Test the
    experience. You should see the UI for the Potion Shop Demo. Make a note of
    the name, cost, and colors of the potions. You'll change them later using
    Open Cloud!
-
-   <Alert severity="info">
-   Leave the **Team Create** option enabled. The Instance API only works for
-   Team Create experiences.
-   </Alert>
 
 ### Setting up the Sheet
 

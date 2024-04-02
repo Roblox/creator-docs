@@ -5,15 +5,15 @@ memory_category: Instances
 summary: |
   An asset loaded from a file on disk.
 description: |
-  An object that represents an Asset loaded from a file on a local disk.
+  An object that represents an asset loaded from a file on a local disk. Files
+  generate a temporary asset ID in the form `rbxtemp://` which can be used in
+  Studio without uploading the asset, but will be destroyed when the
+  `Class.File` is destroyed or when the Studio session ends. Temporary asset IDs
+  are not shared across [collaborative](../../../projects/collaboration.md)
+  sessions.
 
-  Files generate a temporary asset id in the form _"rbxtemp://####"_, which can
-  be used in Studio without uploading the asset, but will be destroyed when the
-  File is destroyed or when the Studio session ends. Temporary asset ids are not
-  shared across [Team Create](../../../projects/collaboration.md).
-
-  The default `Class.Instance.Name|Name` of a File instance will be the filename
-  on disk, excluding path, including extension.
+  The default `Class.Instance.Name|Name` of a `Class.File` instance will be the
+  filename on disk, excluding the path but including the extension.
 code_samples:
 inherits:
   - Instance
