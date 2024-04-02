@@ -117,7 +117,7 @@ Roblox as a company prides itself on the variety of ways we keep our community s
 
 ### Blocking Chat in Roblox
 
-While in **Roblox Studio**, students cannot chat with others online unless building on a shared [Team Create](../../projects/collaboration.md#team-create) server.
+While in **Roblox Studio**, students cannot chat with others online unless building in a [collaborative](../../projects/collaboration.md) session.
 
 For **visiting Roblox** experiences, teachers can block Chat by following the steps on <a href="https://en.help.roblox.com/hc/en-us/articles/203313120-Safety-Features-Chat-Privacy-Filtering">Safety Features and Chat</a>. Additionally, some experiences offer the ability to rent private<a href="../../education/support/private-servers-for-classroom-use.md"> servers</a> for free or a small fee.
 
