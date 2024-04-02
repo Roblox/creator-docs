@@ -174,9 +174,8 @@ properties:
       Each of the default channels has the described special behavior applied to
       messages using its internally bound `Class.TextChannel.OnIncomingMessage`
       callback function, changing how messages appear when sent through the
-      channel. The callback is assigned automatically either at runtime
-      (if the `Class.TextChannel` exists) or when the `Class.TextChannel` is
-      created.
+      channel. The callback is assigned automatically either at runtime (if the
+      `Class.TextChannel` exists) or when the `Class.TextChannel` is created.
 
       <table>
         <thead>
@@ -205,8 +204,8 @@ properties:
         </tbody>
       </table>
 
-      Note that the default `Class.TextChannel.OnIncomingMessage` callbacks
-      can be overwritten. Also note that you can edit, create, and remove
+      Note that the default `Class.TextChannel.OnIncomingMessage` callbacks can
+      be overwritten. Also note that you can edit, create, and remove
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
@@ -409,12 +408,18 @@ callbacks:
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
     description: |
-      Called when `Class.TextChatService` is receiving an incoming message. Can only be implemented on the client.
+      Called when `Class.TextChatService` is receiving an incoming message. Can
+      only be implemented on the client.
 
-      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this callback returns a `Class.TextChatMessageProperties`, those properties are merged with the `Class.TextChatMessage` parameter to create a new
+      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this
+      callback returns a `Class.TextChatMessageProperties`, those properties are
+      merged with the `Class.TextChatMessage` parameter to create a new
       `Class.TextChatMessage`.
 
-      When bound to the client sending a message, this callback is run twice; first when the message is initially sent and received locally, and again when the client receives the result of the filtered message from the server.
+      When bound to the client sending a message, this callback is run twice;
+      first when the message is initially sent and received locally, and again
+      when the client receives the result of the filtered message from the
+      server.
 
       Note that this `Class.TextChatService.OnIncomingMessage` callback runs
       **before** any `Class.TextChannel.OnIncomingMessage` callbacks.

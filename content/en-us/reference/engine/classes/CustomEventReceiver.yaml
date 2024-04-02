@@ -24,7 +24,7 @@ properties:
     tags: []
     deprecation_message: |
       `Class.CustomEvent|CustomEvents` have been superseded by
-      `Class.BindableEvent|BindableEvent's` and should not be used in new work.
+      `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security:
       read: None
       write: None
