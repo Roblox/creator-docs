@@ -10,7 +10,7 @@ description: |
   The StarterGui service is a container object designed to hold
   `Class.LayerCollector|GUI objects` such as `Class.ScreenGui|ScreenGuis`.
 
-  ## StarterGui as a container
+  #### StarterGui as a Container
 
   When a `Class.Player.Character` respawns, the contents of their
   `Class.PlayerGui` are emptied. Children of the `Class.StarterGui` are then
@@ -18,10 +18,10 @@ description: |
 
   `Class.LayerCollector|GUI objects` such as `Class.ScreenGui|ScreenGuis` with
   their `Class.LayerCollector.ResetOnSpawn|ResetOnSpawn` property set to false
-  will only be placed into each `Class.Player|Player's` `Class.PlayerGui` once
-  and will not be deleted when the `Class.Player` respawns.
+  will only be placed into each player's `Class.PlayerGui` once and will not be
+  deleted when the `Class.Player` respawns.
 
-  ## StarterGui as an interface
+  #### StarterGui as an Interface
 
   The StarterGui also includes a range of functions allowing you to interact
   with the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()`

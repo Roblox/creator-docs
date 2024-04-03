@@ -3,13 +3,11 @@ type: class
 category: Data
 memory_category: Instances
 summary: |
-  A non-replicated service that handles asset related queries to the Roblox web
+  A non-replicated service that handles asset-related queries to the Roblox web
   API.
 description: |
-  The AssetService is a non-replicated service that handles asset related
-  queries to the Roblox web API. Eventually, this will house all asset related
-  queries for Roblox objects stored in the web. One should mind the limitations
-  this API has.
+  **AssetService** is a non-replicated service that handles asset-related
+  queries to the Roblox web API.
 code_samples:
 inherits:
   - Instance
@@ -95,16 +93,18 @@ methods:
     thread_safety: Unsafe
   - name: AssetService:CreatePlaceAsync
     summary: |
-      Clones a place with placeId equal to given `templatePlaceId`.
+      Clones a place through the given `templatePlaceID`.
     description: |
-      Clones a place with placeId equal to given templatePlaceId. The clone
-      place displays within the inventory of the place's creator with the given
-      name and description. This method returns the placeId of the new place,
-      which you can use with TeleportService. The template place must have
-      template copying enabled through place settings. You cannot use this
-      method to clone places that you don't own.
+      Clones a place through the given `templatePlaceID` and returns the
+      `Class.DataModel.PlaceId|PlaceId` of the new place, which you can use with
+      `Class.TeleportService`. The clone place displays within the inventory of
+      the place's creator with the given name and description.
 
-      Frequent use of this API isn't recommended, particularly if the created
+      Note that the template place must have template copying enabled through
+      place settings. You cannot use this method to clone places that you don't
+      own.
+
+      Frequent use of this API is not recommended, particularly if the created
       places contain scripts, as updating the code in a large volume of places
       quickly becomes infeasible. For user-generated worlds, consider
       serializing user creations and saving them in `Class.DataStore|DataStores`
@@ -114,18 +114,22 @@ methods:
       - name: placeName
         type: string
         default:
-        summary: ''
+        summary: |
+          Name of the new place.
       - name: templatePlaceID
         type: int64
         default:
-        summary: ''
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the place to clone.
       - name: description
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Description of the new place.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          `Class.DataModel.PlaceId|PlaceId` of the new place.
     tags:
       - Yields
     deprecation_message: ''
@@ -133,15 +137,9 @@ methods:
     thread_safety: Unsafe
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
     summary: |
-      Clones a place which has placeId equal to given templatePlaceId and puts
-      it into the inventory of the given player.
-    description: |
-      This function has been removed as of Release 471. Clones a place which has
-      a placeId equal to the given templatePlaceID, placing it into the
-      inventory of the given player with the given name and description, if they
-      accept when prompted. This method cannot be used to clone places that you
-      do not own, or those which have disabled the use of the CreatePlace API in
-      their place's configuration.
+      Clones a place through the given `templatePlaceID` and puts it into the
+      inventory of the given player.
+    description: ''
     code_samples:
     parameters:
       - name: player
@@ -165,14 +163,15 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: |
+      This method has been removed and is no longer functional.
     security: None
     thread_safety: Unsafe
   - name: AssetService:GetAssetIdsForPackage
     summary: |
-      Returns an array of assetIds that are contained in a specified package.
+      Returns an array of asset IDs that are contained in a specified package.
     description: |
-      Returns an array of assetIds that are contained in a specified package.
+      Returns an array of asset IDs that are contained in a specified package.
     code_samples:
     parameters:
       - name: packageAssetId
@@ -181,24 +180,51 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Asset IDs that are contained in a specified package.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: AssetService:GetAudioMetadataAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Provides relevant metadata about a specific audio source.
+    description: |
+      Provides relevant metadata about a specific audio source (artist, title,
+      duration, type, etc.).
+    code_samples:
+      - AssetService-GetAudioMetadataAsync
     parameters:
       - name: idList
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of asset or content IDs for which to retrieve metadata. Max
+          batch size is 30.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array of dictionary tables in the same order as the request, where
+          each dictionary contains the following metadata for its asset/content:
+
+          - `AssetId` ([string](/luau/strings.md))
+
+          - `Title` ([string](/luau/strings.md))
+
+          - `Artist` ([string](/luau/strings.md))
+
+          - `Duration` ([number](/luau/numbers.md)) in seconds
+
+          - `AudioType` (`Enum.AudioSubType`)
+
+          Note that if an error occurs on fetching metadata for any of the
+          requested assets, for example the asset ID doesn't exist, its
+          dictionary table is still included in the returned array but it only
+          contains the `AssetId` field for reference purposes. Additionally, if
+          the `AudioType` cannot be determined for a given asset (perhaps
+          because it's private audio), the resulting dictionary will not contain
+          an `AudioType` entry.
     tags:
       - Yields
     deprecation_message: ''
@@ -208,84 +234,11 @@ methods:
     summary: |
       Returns details of the contents of specified bundle.
     description: |
-      If the bundle ID does not exist, it throws HTTP 400 (HTTP/1.1 400 Bad
-      Request). If bundleId is not convertible to int, throws "Unable to cast
-      string to int64". If param type is string, it implicitly tries to convert
-      to int.
-
       This function returns details of the contents of the specified bundle.
 
-      #### Understanding the returned ValueTable
-
-      It returns a ValueTable object with the following key-value pairs
-      containing details about the specified bundle
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Key Name</th>
-      			<th>Value Type</th>
-      			<th>Description</th>
-      		</tr>
-      	</thead>
-      	<tbody>
-      		<tr>
-      			<td>Id number</td>
-      			<td>int</td>
-      			<td>Bundle ID (passed in as an argument)</td>
-      		</tr>
-      		<tr>
-      			<td>Name</td>
-      			<td>string</td>
-      			<td>Bundle name</td>
-      		</tr>
-      		<tr>
-      			<td>Description</td>
-      			<td>string</td>
-      			<td>Bundle description</td>
-      		</tr>
-      		<tr>
-      			<td>BundleType</td>
-      			<td>string</td>
-      			<td>Bundle Type. eg. BodyParts or <code>AvatarAnimation|AvatarAnimations</code></td>
-      		</tr>
-      		<tr>
-      			<td>Items</td>
-      			<td>ValueArray</td>
-      			<td>An array of ValueTable objects</td>
-      		</tr>
-      	</tbody>
-      </table>
-
-      Each object in the Items array contains details of the item as described
-      in the table below:
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Key Name</th>
-      			<th>Value Type</th>
-      			<th>Description</th>
-      		</tr>
-      	</thead>
-      	<tbody>
-      		<tr>
-      			<td>Id number</td>
-      			<td>int</td>
-      			<td>Item's id</td>
-      		</tr>
-      		<tr>
-      			<td>Name</td>
-      			<td>string</td>
-      			<td>Item name</td>
-      		</tr>
-      		<tr>
-      			<td>Type</td>
-      			<td>string</td>
-      			<td>Item Type eg: "UserOutfit" or "Asset"</td>
-      		</tr>
-      	</tbody>
-      </table>
+      If the bundle ID does not exist, it throws `HTTP 400 (Bad Request)`. If
+      `bundleId` is not convertible to an integer, it throws
+      `Unable to cast string to int64`.
     code_samples:
       - getting-bundle-details
     parameters:
@@ -293,13 +246,30 @@ methods:
         type: int64
         default:
         summary: |
-          The id of the specified bundle.
+          The ID of the specified bundle.
     returns:
       - type: Dictionary
         summary: |
-          A ValueTable object with the following key-value pairs containing
-          details about the specified bundle. See the function description for
-          more information.
+          Dictionary with the following key-value pairs containing details about
+          the specified bundle:
+
+          - `Id` — Bundle ID (same as passed `bundleId` argument)
+
+          - `Name` — Bundle name
+
+          - `Description` — Bundle description
+
+          - `BundleType` — String representing the `Enum.BundleType`, for
+            example `"BodyParts"` or `"DynamicHead"`
+
+          - `Items` — Array of items in the bundle, each with details
+            represented through the following keys:
+
+            - `Id` — Item ID
+
+            - `Name` — Item name
+
+            - `Type` — Item type such as `"Asset"` .
     tags:
       - Yields
     deprecation_message: ''
@@ -332,11 +302,11 @@ methods:
     thread_safety: Unsafe
   - name: AssetService:GetGamePlacesAsync
     summary: |
-      Returns a `Class.StandardPages` object which contains the name and placeId
-      of places within the current 'Game' (otherwise known as a 'Universe').
+      Returns a `Class.StandardPages` object which contains the name and
+      `Class.DataModel.PlaceId|PlaceId` of places within the current experience.
     description: |
-      Returns a `Class.StandardPages` object which contains the name and placeId
-      of places within the current 'Game' (otherwise known as a 'Universe').
+      Returns a `Class.StandardPages` object which contains the name and
+      `Class.DataModel.PlaceId|PlaceId` of places within the current experience.
     code_samples:
       - AssetService-GetGamePlacesAsync1
     parameters: []
@@ -351,26 +321,26 @@ methods:
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
-      dialog when they press the submit button.
+      dialog.
     description: |
       Allows in-experience asset creation for users by prompting a publish
-      dialog when they press the submit button. Can only be invoked on the
-      server side. When called, it presents a dialog to the user. The dialog
-      allows users to enter a name, description, and preview the asset. Upon
-      submitting, it saves the asset to the user's inventory.
+      dialog. When called, it presents a dialog to the user, allowing them to
+      enter a name, description, and preview the asset. Upon submitting, it
+      saves the asset to the user's inventory. Can only be invoked on the server
+      side.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
         summary: |
-          Represents the user who submits an asset creation.
+          The user who submits an asset creation.
       - name: instance
         type: Instance
         default:
         summary: |
-          Represents the asset to be created. Currently can't contain scripts or
-          nest non-public assets.
+          The asset to be created. Currently can't contain scripts or nest
+          non-public assets.
       - name: assetType
         type: AssetType
         default:
@@ -410,8 +380,8 @@ methods:
     summary: |
       Saves the state of the current place.
     description: |
-      Saves the state of the current place. This only works for places that are
-      created with `Class.AssetService:CreatePlaceAsync()` or have the API
+      Saves the state of the current place. Only works for places that are
+      created with `Class.AssetService:CreatePlaceAsync()` or which have the API
       enabled through place settings.
     code_samples:
     parameters: []
@@ -467,52 +437,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events:
-  - name: AssetService.AudioMetadataFailedResponse
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: requestid
-        type: int64
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: AssetService.AudioMetadataRequest
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: requestid
-        type: int64
-        default:
-        summary: ''
-      - name: request
-        type: Array
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: AssetService.AudioMetadataResponse
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: requestid
-        type: int64
-        default:
-        summary: ''
-      - name: response
-        type: Array
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []

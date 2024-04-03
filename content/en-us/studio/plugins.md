@@ -147,7 +147,8 @@ To publish a plugin:
 1. Fill in the following fields:
    - **Name**: A title for your plugin.
    - **Description**: A description that describes what a potential user should expect the plugin to do.
-   - **Creator**: The creator you'd like to attribute as the creator of the plugin. If you are using [Team Create](../projects/collaboration.md#team-create), every creator appears, otherwise "Me" is the only option.
+   - **Creator**: The creator you'd like to attribute as the creator of the plugin.
+
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your plugin.
 1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you have previously [verified your account](../production/publishing/account-verification.md), the **Price** field becomes available. If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
 1. **(Optional)** In the **Price** field, input the amount of Robux you want to charge for the plugin. If you keep the default value of `0`, the plugin is free to all creators.

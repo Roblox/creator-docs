@@ -44,7 +44,11 @@ Roblox has reference code to assist you with designing and building player data 
 
 <a href="https://create.roblox.com/marketplace/asset/14376223840/Purchase-Handling)">
   <Button variant="contained">Get the Code</Button>
-</a>
+</a><br />
+
+After you import the model into Studio, you should see the following folder structure:
+
+<img src="../../assets/data/player-data-purchasing/Sample-Hierarchy.png" alt="Explorer window showing the purchasing system model." width="320" />
 
 ## Architecture
 
@@ -54,7 +58,7 @@ This high-level diagram illustrates the key systems in the sample and how they i
 
 ## Retries
 
-**Class:** `DataStoreWrapper`
+**Class:** [`DataStoreWrapper`](#sample-code)
 
 ### Background
 
@@ -124,7 +128,7 @@ Ultimately, our view is that the simple approach (processing every request) is p
 
 ## Session Locking
 
-**Class:** `SessionLockedDataStoreWrapper`
+**Class:** [`SessionLockedDataStoreWrapper`](#sample-code)
 
 ### Background
 
@@ -188,7 +192,7 @@ If the lock expiry time has been exceeded without the lock being updated, then a
 
 ## Developer Product Processing
 
-**Singleton:** `ReceiptHandler`
+**Singleton:** [`ReceiptHandler`](#sample-code)
 
 ### Background
 
@@ -246,7 +250,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
 ## Player Data
 
-**Singletons:** `PlayerData.Server`, `PlayerData.Client`
+**Singletons:** [`PlayerData.Server`](#sample-code), [`PlayerData.Client`](#sample-code)
 
 ### Background
 

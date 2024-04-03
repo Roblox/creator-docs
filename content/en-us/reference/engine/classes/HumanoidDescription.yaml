@@ -102,28 +102,22 @@ properties:
       can_save: true
   - name: HumanoidDescription.BodyTypeScale
     summary: |
-      Determines the factor by which the shape of a Humanoid rig is interpolated
-      from the standard R15 body shape (0) to a taller and more slender body
-      type (1); when `Class.Humanoid:ApplyDescription()|applied`, maps to the
-      "BodyTypeScale" `Class.NumberValue` within the HumanoidDescription.
-    description: |
-      **BodyTypeScale** determines by which the shape of a Humanoid rig is
+      Determines the factor by which the shape of a `Class.Humanoid` is
       interpolated from the standard R15 body shape (0) to a taller and more
-      slender/realistic body type (1). Values outside of the [0-1] range are
-      clamped. When the description is
-      `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
-      to a "BodyTypeScales" `Class.NumberValue` within the Humanoid.
+      slender body type (1).
+    description: |
+      **BodyTypeScale** determines the factor by which the shape of a
+      `Class.Humanoid` is interpolated from the standard R15 body shape (0) to a
+      taller and more slender body type (1). Values outside the range of 0 to 1
+      are clamped. When the description is applied through
+      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      **BodyTypeScale** `Class.NumberValue` within the `Class.Humanoid`.
 
-      When the value of this property is 0, the
-      `Class.HumanoidDescription.ProportionScale|ProportionScale` property does
-      not have any effect.
+      Note that when the value of this property is 0, the
+      `Class.HumanoidDescription.ProportionScale|ProportionScale` property has
+      no effect.
 
-      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
-      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following BodyTypeScales values (from left-to-right): 0, 0.5, 1.0. Also
-      visible are 6 stacked 1x1x1 cube parts for reference.
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -182,23 +176,16 @@ properties:
       can_save: true
   - name: HumanoidDescription.DepthScale
     summary: |
-      Determines by what factor the depth (back-to-front distance) of a Humanoid
-      rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`, maps to
-      the "DepthScale" `Class.NumberValue` within the Humanoid.
+      Determines by what factor the depth (back-to-front distance) of a
+      `Class.Humanoid` is scaled.
     description: |
-      <img src="../../../assets/legacy/DepthScale.jpg"  />
-
-      **DepthScale** determines by what factor the height (back-to-front
+      **DepthScale** determines by what factor the depth (back-to-front
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
-      attached to its head. When the description is
-      `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
-      to a "BodyDepthScale" `Class.NumberValue` within the Humanoid.
+      attached to its head. When the description is applied through
+      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      **BodyDepthScale** `Class.NumberValue` within the Humanoid.
 
-      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
-      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following DepthScale values (from left-to-right): 0.25, 1.0, 2.0.
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -374,16 +361,14 @@ properties:
   - name: HumanoidDescription.GraphicTShirt
     summary: |
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
-      `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`.
+      `Class.ShirtGraphic`.
     description: |
-      <img src="../../../assets/legacy/GraphicTShirt.jpg"  />
-
       **GraphicTShirt** determines the `Class.ShirtGraphic.Graphic|Graphic` used
-      by a `Class.ShirtGraphic` when `Class.Humanoid:ApplyDescription()|applied`
-      to a `Class.Humanoid`. The asset type **must be for a T-Shirt** and not a
-      Decal or Image.
+      by a `Class.ShirtGraphic` instance when
+      `Class.Humanoid:ApplyDescription()` is called on a `Class.Humanoid`. The
+      asset type must be for a **T‑Shirt**, not a **Decal** or **Image**.
 
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -555,24 +540,19 @@ properties:
       can_save: true
   - name: HumanoidDescription.HeadScale
     summary: |
-      Determines by what factor the Head of a `Class.Humanoid` is scaled; when
-      `Class.Humanoid:ApplyDescription()|applied`, maps to the "HeadScale"
-      `Class.NumberValue` within the Humanoid.
+      Determines by what factor the **Head** object of a `Class.Humanoid` is
+      scaled, as well as any accessories attached to it.
     description: |
-      <img src="../../../assets/legacy/HeadScale.jpg"  />
-
-      **HeadScale** determines by what factor the Head of a `Class.Humanoid` is
-      scaled, as well as any accessories attached to it (such as those specified
-      by `Class.HumanoidDescription.HatAccessory|HatAccessory` and
+      **HeadScale** determines by what factor the **Head** object of a
+      `Class.Humanoid` is scaled, as well as any accessories attached to it
+      (such as those specified by
+      `Class.HumanoidDescription.HatAccessory|HatAccessory` and
       `Class.HumanoidDescription.HairAccessory|HairAccessory`). When the
-      description is `Class.Humanoid:ApplyDescription()|applied` to a Humanoid,
-      this value maps to a "HeadScale" `Class.NumberValue` within the Humanoid.
+      description is applied through `Class.Humanoid:ApplyDescription()`, this
+      value maps to a **HeadScale** `Class.NumberValue` within the
+      `Class.Humanoid`.
 
-      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
-      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following HeadScale values (from left-to-right): 0.5, 1.0, 1.5.
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -598,22 +578,16 @@ properties:
   - name: HumanoidDescription.HeightScale
     summary: |
       Determines by what factor the height (top-to-bottom distance) of a
-      Humanoid rig is scaled; when `Class.Humanoid:ApplyDescription()|applied`,
-      maps to the "HeightScale" `Class.NumberValue` within the Humanoid.
+      `Class.Humanoid` is scaled, as well as all accessories not attached to its
+      head.
     description: |
-      <img src="../../../assets/legacy/HeightScale.jpg"  />
-
       **HeightScale** determines by what factor the height (top-to-bottom
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
-      attached to its head. When the description is
-      `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
-      to a "BodyHeightScale" `Class.NumberValue` within the Humanoid.
+      attached to its head. When the description is applied through
+      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      **BodyHeightScale** `Class.NumberValue` within the `Class.Humanoid`.
 
-      In the image, three R15 figures whose `Class.Humanoid|Humanoids` have
-      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following HeightScale values (from left-to-right): 0.5, 1.0, 1.5.
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -904,16 +878,14 @@ properties:
   - name: HumanoidDescription.Pants
     summary: |
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
-      `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied`.
+      `Class.Pants` instance.
     description: |
-      <img src="../../../assets/legacy/Pants.jpg"  />
-
       **Pants** determines the `Class.Pants.PantsTemplate|PantsTemplate` used by
-      a `Class.Pants` when `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`. The asset type **must be for a Pants** and not a Decal
-      or Image.
+      a `Class.Pants` instance when `Class.Humanoid:ApplyDescription()` is
+      called on a `Class.Humanoid`. The asset type must be for **Pants**, not a
+      **Decal** or **Image**.
 
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -937,56 +909,19 @@ properties:
       can_save: true
   - name: HumanoidDescription.ProportionScale
     summary: |
-      Determines how wide (0) or narrow (1) a `Class.Humanoid` rig is; when
-      `Class.Humanoid:ApplyDescription()|applied`, maps to the
-      "BodyProportionScale" `Class.NumberValue` within the Humanoid.
+      Determines how wide (0) or narrow (1) a `Class.Humanoid` rig is.
     description: |
-      <img src="../../../assets/legacy/ProportionScale.jpg"  />
+      **ProportionScale** determines how wide (0) or narrow (1) a
+      `Class.Humanoid` rig is. Values outside the range of 0 to 1 are clamped.
+      When the description is applied through
+      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      **BodyProportionScale** `Class.NumberValue` within the `Class.Humanoid`.
 
-      **ProportionScale** determines how wide (0) or narrow (1) a Humanoid rig.
-      Values outside of the [0-1] range are clamped. When the description is
-      `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
-      to a "BodyProportionScale" `Class.NumberValue` within the Humanoid.
+      Note that when the value of
+      `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale` is 0, this
+      property has no effect.
 
-      When the value of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale`
-      is 0, this property does not have any effect.
-
-      In the image, four R15 figures are visible whose
-      `Class.Humanoid|Humanoids` have
-      `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following ProportionScale values (from left-to-right): 0, 0.5, 1.0, 0.0.
-      Each have a BodyTypeScale of 1.0, except for the right which has 0.0. Also
-      visible are 6 stacked 1x1x1 cube parts for reference. The table below
-      lists the BodyTypeScale and ProportionScale values for each figure in the
-      image.
-
-      <table>
-      <thead><tr>
-        <td>Value</td>
-        <td>1st</td>
-        <td>2nd</td>
-        <td>3rd</td>
-        <td>Control</td>
-      </tr></thead>
-      <tbody>
-      <tr>
-        <td>BodyTypeScale</td>
-        <td>1.0</td>
-        <td>1.0</td>
-        <td>1.0</td>
-        <td>0.0</td>
-      </tr>
-      <tr>
-        <td>ProportionScale</td>
-        <td>0.0</td>
-        <td>0.5</td>
-        <td>1.0</td>
-        <td>0.0</td>
-      </tr>
-      </tbody>
-      </table>
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -1187,16 +1122,14 @@ properties:
   - name: HumanoidDescription.Shirt
     summary: |
       Determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by a
-      `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied`.
+      `Class.Shirt` instance.
     description: |
-      <img src="../../../assets/legacy/Shirt.jpg"  />
-
       **Shirt** determines the `Class.Shirt.ShirtTemplate|ShirtTemplate` used by
-      a `Class.Shirt` when `Class.Humanoid:ApplyDescription()|applied` to a
-      `Class.Humanoid`. The asset type **must be for a Shirt** and not a Decal
-      or Image.
+      a `Class.Shirt` instance when `Class.Humanoid:ApplyDescription()` is
+      called on a `Class.Humanoid`. The asset type must be for **Shirt**, not a
+      **Decal** or **Image**.
 
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.
@@ -1443,23 +1376,16 @@ properties:
   - name: HumanoidDescription.WidthScale
     summary: |
       Determines by what factor the width (left-to-right distance) of a
-      `Class.Humanoid` is scaled; when
-      `Class.Humanoid:ApplyDescription()|applied`, maps to the "BodyWidthScale"
-      `Class.NumberValue` within the Humanoid.
+      `Class.Humanoid` is scaled, as well as all accessories not attached to its
+      head.
     description: |
-      <img src="../../../assets/legacy/WidthScale.jpg"  />
-
       **WidthScale** determines by what factor the width (left-to-right
       distance) of a `Class.Humanoid` is scaled, as well as all accessories not
-      attached to its head. When the description is
-      `Class.Humanoid:ApplyDescription()|applied` to a Humanoid, this value maps
-      to a "BodyWidthScale" `Class.NumberValue` within the Humanoid.
+      attached to its head. When the description is applied through
+      `Class.Humanoid:ApplyDescription()`, this value maps to a
+      **BodyWidthScale** `Class.NumberValue` within the `Class.Humanoid`.
 
-      In the image above, three R15 figures whose `Class.Humanoid|Humanoids`
-      have `Class.HumanoidDescription|HumanoidDescriptions` applied with the
-      following WidthScale values (from left-to-right): 0.5, 1.0, 1.5.
-
-      See also:
+      #### See Also
 
       - [HumanoidDescription System](../../../characters/appearance.md#humanoiddescription),
         for more information on `Class.HumanoidDescription`.

@@ -19,19 +19,19 @@ The **Navigate** section lets you quickly jump between any open script.
 <thead>
   <tr>
     <th>Action</th>
-	<th>Shortcut</th>
+		<th>Shortcut</th>
     <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>**Back**</td>
-	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>-</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>-</kbd>&nbsp;(Mac)</td>
+		<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>-</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>-</kbd>&nbsp;(Mac)</td>
     <td>Navigates to the previous open script.</td>
   </tr>
   <tr>
     <td>**Fwd**</td>
-	<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>=</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>=</kbd>&nbsp;(Mac)</td>
+		<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>=</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>=</kbd>&nbsp;(Mac)</td>
     <td>Navigates to the next open script.</td>
   </tr>
 </tbody>
@@ -94,19 +94,19 @@ The **Format** section lets you format sections or the entirety of the script fo
 <thead>
   <tr>
     <th>Action</th>
-	<th>Shortcut</th>
+		<th>Shortcut</th>
     <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>**Format Selection**</td>
-	<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Windows)<br /><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Mac)</td>
+		<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Windows)<br /><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd>&nbsp;(Mac)</td>
     <td>Formats the currently selected portion of the script with proper layout and indentation.</td>
   </tr>
   <tr>
     <td>**Format Document**</td>
-	<td></td>
+		<td></td>
     <td>Formats the entire script regardless of the current selection.</td>
   </tr>
 </tbody>
@@ -258,7 +258,7 @@ The **Actions** section at the furthest right contains miscellaneous script acti
   <tr>
     <td>**Commit**</td>
 	<td></td>
-    <td>Commits any changes to the script so the updated script is available to other developers within your team. This action is only available during <a href="../projects/collaboration.md">Team Create</a> sessions.</td>
+    <td>Commits any changes to the script so the updated script is available to other developers within your team. This action is only available during <a href="../projects/collaboration.md">collaborative</a> sessions.</td>
   </tr>
   <tr>
     <td>**Toggle Comment**</td>

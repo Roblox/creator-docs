@@ -148,7 +148,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
   - name: AudioDeviceInput:GetUserIdAccessList
     summary: |
