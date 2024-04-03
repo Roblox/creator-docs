@@ -38,6 +38,7 @@ navigation:
   - heading: Example Projects
     path:
   - title: The Mystery of Duvall Drive
+    path: /resources/the-mystery-of-duvall-drive/
     section:
       - title: Overview
         path: /resources/the-mystery-of-duvall-drive/
@@ -54,6 +55,7 @@ navigation:
       - title: Designing Dark Soundscapes
         path: /resources/the-mystery-of-duvall-drive/designing-dark-soundscapes
       - title: Technical Overview
+        path: /resources/the-mystery-of-duvall-drive/technical-overview
         section:
           - title: Overview
             path: /resources/the-mystery-of-duvall-drive/technical-overview
@@ -64,6 +66,7 @@ navigation:
           - title: Supporting Systems
             path: /resources/the-mystery-of-duvall-drive/supporting-systems
   - title: Beyond The Dark
+    path: /resources/beyond-the-dark/
     section:
       - title: Overview
         path: /resources/beyond-the-dark/

@@ -21,11 +21,3 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
-  - name: SplitWord
-    summary: |
-      Text is truncated at the end of the text; extra graphemes that cannot fit
-      into the space are replaced with `...`. Unlike `AtEnd`, the final
-      truncated word may be split to fit more characters on the last line.
-    value: 2
-    tags: []
-    deprecation_message: ''

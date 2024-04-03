@@ -3168,6 +3168,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnalyticsEconomyAction.yaml
         ignoreTranslation: true
+      - title: AnalyticsEconomyFlowType
+        path: /reference/engine/enums/AnalyticsEconomyFlowType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsEconomyFlowType.yaml
+        ignoreTranslation: true
+      - title: AnalyticsEconomyTransactionType
+        path: /reference/engine/enums/AnalyticsEconomyTransactionType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsEconomyTransactionType.yaml
+        ignoreTranslation: true
       - title: AnalyticsLogLevel
         path: /reference/engine/enums/AnalyticsLogLevel
         type: engineapi
@@ -3177,6 +3187,11 @@ navigation:
         path: /reference/engine/enums/AnalyticsProgressionStatus
         type: engineapi
         source: /reference/engine/enums/AnalyticsProgressionStatus.yaml
+        ignoreTranslation: true
+      - title: AnalyticsProgressionType
+        path: /reference/engine/enums/AnalyticsProgressionType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsProgressionType.yaml
         ignoreTranslation: true
       - title: AnimationClipFromVideoStatus
         path: /reference/engine/enums/AnimationClipFromVideoStatus

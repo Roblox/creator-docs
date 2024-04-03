@@ -245,6 +245,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: Instance.Sandboxed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Permissions
+    serialization:
+      can_load: false
+      can_save: false
   - name: Instance.UniqueId
     summary: ''
     description: ''

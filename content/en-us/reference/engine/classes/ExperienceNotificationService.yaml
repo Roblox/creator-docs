@@ -3,9 +3,13 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Service containing methods to validate users and prompt them to enable experience notifications.
+  Service containing methods to validate users and prompt them to enable
+  experience notifications.
 description: |
-  [Experience Notifications](../../../cloud-services/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. This service contains methods to validate users and prompt them to enable notifications.
+  [Experience Notifications](../../../cloud-services/experience-notifications.md)
+  are a way for 13+ users to keep up with their favorite experiences through
+  timely, personalized notifications. This service contains methods to validate
+  users and prompt them to enable notifications.
 code_samples: []
 inherits:
   - Instance
@@ -35,7 +39,10 @@ methods:
       `Class.BaseScript.RunContext|RunContext` set to
       `Enum.RunContext.Client|Client`.
 
-      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+      See
+      [Experience Notifications](../../../cloud-services/experience-notifications.md)
+      for more details on implementing and customizing notifications, using
+      launch data, and more.
     code_samples:
       - ExperienceNotificationService1
     parameters: []
@@ -48,7 +55,8 @@ methods:
     thread_safety: Unsafe
   - name: ExperienceNotificationService:CanPromptOptInAsync
     summary: |
-      Indicates whether the local player can be prompted to enable notifications.
+      Indicates whether the local player can be prompted to enable
+      notifications.
     description: |
       `Class.ExperienceNotificationService:CanPromptOptInAsync()|CanPromptOptInAsync()`
       returns `true` if the local player can be prompted to enable
@@ -66,7 +74,10 @@ methods:
       `Global.LuaGlobals.pcall|pcall()` since it's an asynchronous network call
       that may occasionally fail.
 
-      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+      See
+      [Experience Notifications](../../../cloud-services/experience-notifications.md)
+      for more details on implementing and customizing notifications, using
+      launch data, and more.
     code_samples:
       - ExperienceNotificationService1
     parameters: []
@@ -84,14 +95,16 @@ events:
     summary: |
       Fires when the local player closes the prompt.
     description: |
-      This event fires when the local player closes a prompt that was
-      displayed through
-      `Class.ExperienceNotificationService:PromptOptIn()|PromptOptIn()`. It can
-      only be connected in a `Class.LocalScript` or in a `Class.Script` with
-      `Class.BaseScript.RunContext|RunContext` set to
+      This event fires when the local player closes a prompt that was displayed
+      through `Class.ExperienceNotificationService:PromptOptIn()|PromptOptIn()`.
+      It can only be connected in a `Class.LocalScript` or in a `Class.Script`
+      with `Class.BaseScript.RunContext|RunContext` set to
       `Enum.RunContext.Client|Client`.
 
-      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+      See
+      [Experience Notifications](../../../cloud-services/experience-notifications.md)
+      for more details on implementing and customizing notifications, using
+      launch data, and more.
     code_samples:
       - ExperienceNotificationService1
     parameters: []

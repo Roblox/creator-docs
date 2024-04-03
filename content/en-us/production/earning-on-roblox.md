@@ -179,7 +179,7 @@ In 2022 alone, 1.8 billion total avatar items were sold on the platform, making 
 
 Creators can [create](../art/marketplace/publishing-to-marketplace.md) and sell accessories, clothes, bodies, and heads for avatars in the [Marketplace][link_marketplace] or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
 
-After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. If you're participating in the [UGC Program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990), you can upload and sell 3D [clothing](../art/accessories/index.md), [accessories](../art/accessories/index.md), and [avatar bodies and heads](../art/characters/index.md). It costs 750&nbsp;Robux to upload each asset.
+After you pay any applicable upload fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the [Marketplace][link_marketplace]. You can upload and sell 3D [clothing](../art/accessories/index.md), [accessories](../art/accessories/index.md), and [avatar bodies and heads](../art/characters/index.md). It costs 750&nbsp;Robux to upload each asset.
 
 You receive a commission every time a user purchases your item. When community items are sold in the marketplace, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience who we refer to as an "affiliate." An affiliate earns commission for marketing another user's creations.
 
@@ -242,7 +242,7 @@ You can create and sell Studio [plugins](../studio/plugins.md) to the community 
 <Alert severity="warning">
    In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
 
-   Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
+Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
 </Alert>
 
 ## Converting Earned Robux to Cash
