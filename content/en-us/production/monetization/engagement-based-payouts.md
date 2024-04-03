@@ -128,7 +128,7 @@ end)
 
 -- Handle membership changed event
 Players.PlayerMembershipChanged:Connect(function(player)
-	warn(`User membership changed; new membership is {tostring(player.MembershipType)}`)
+	warn(`User membership changed; new membership is {player.MembershipType}`)
 
 	-- Teleport character if membership type is Premium and character is on teleporter
 	if player.MembershipType == Enum.MembershipType.Premium and player:GetAttribute("CharacterPartsTouching") > 0 then

@@ -9,12 +9,12 @@ Dictionaries are tables that associate names or "\*keys\*\*" with a value instea
 
 Example:
 
-```lua title="Lua dictionary syntax"
-local pet = {
-   Name = "Bobbie",
-   Type = "Dog",
-}
-```
+   ```lua title="Lua dictionary syntax"
+   local pet = {
+      Name = "Bobbie",
+      Type = "Dog",
+   }
+   ```
 
 Use dictionaries when you need to label values, not just list them in order as an array does —practice using dictionaries in this tutorial by manipulating values associated with a player.
 
@@ -22,26 +22,26 @@ Use dictionaries when you need to label values, not just list them in order as a
 
 Like arrays, dictionaries are assigned to a variable with curly brackets`{}`. **Key value pairs** are stored on separate lines followed by a comma. Keys and values can be any data type, including strings, numbers, and variable names.
 
-```lua
-local playerNames = {
-   player1 = "Zap",
-   player2 = "Kel",
-}
-print(playerNames["player1"])
-```
+   ```lua
+   local playerNames = {
+      player1 = "Zap",
+      player2 = "Kel",
+   }
+   print(playerNames["player1"])
+   ```
 
 To reference parts or other instanced objects as keys, use brackets.
 
-```lua
-local greenPart = workspace.GreenPart
-local redPart = workspace.RedPart
+   ```lua
+   local greenPart = workspace.GreenPart
+   local redPart = workspace.RedPart
 
-local partList = {
-   [greenPart] = true,
-   [redPart] = false,
-}
-print(partList[redPart])
-```
+   local partList = {
+      [greenPart] = true,
+      [redPart] = false,
+   }
+   print(partList[redPart])
+   ```
 
  <Alert severity="warning">
  Use consistent data types for dictionary keys. Mixing data types, such as using both strings and variables for keys, can lead to inconsistent results when manipulating the array and confuse other coders.
@@ -215,42 +215,42 @@ Below are some challenges that apply to using dictionaries in different ways. Se
 
 `pairs()` is a function that's often used to iterate through **dictionaries**. An example is seen below.
 
-```lua
-local myDictionary = {
-   ["Blue Player"] = "Ana",
-   ["Gold Player"] = "Binh",
-   ["Red Player"] = "Cate",
-}
+   ```lua
+   local myDictionary = {
+      ["Blue Player"] = "Ana",
+      ["Gold Player"] = "Binh",
+      ["Red Player"] = "Cate",
+   }
 
-for key, value in pairs(myDictionary) do
-   print(`{key} is {value}`)
-end
-```
+   for key, value in pairs(myDictionary) do
+      print(`{key} is {value}`)
+   end
+   ```
 
 `pairs()` can be used to work with a dictionary element's key, value, or both. In the for loop below, the first variable is the key. The second variable is the value. The dictionary that you want to work with is passed in to `pairs()`.
 
-```lua
-local inventory = {
-   ["Gold Bricks"] = 43,
-   Carrots = 3,
-   Torches  = 2,
-}
+   ```lua
+   local inventory = {
+      ["Gold Bricks"] = 43,
+      Carrots = 3,
+      Torches  = 2,
+   }
 
-print("You have:")
+   print("You have:")
 
-for itemName, itemValue in pairs(inventory) do
-   print(itemValue, itemName)
-end
-```
+   for itemName, itemValue in pairs(inventory) do
+      print(itemValue, itemName)
+   end
+   ```
 
 When executed, the code will print the following:
 
-```lua
-You have:
-43 Gold Bricks
-3 Carrots
-2 Torches
-```
+   ```lua
+   You have:
+   43 Gold Bricks
+   3 Carrots
+   2 Torches
+   ```
 
 ## Summary
 

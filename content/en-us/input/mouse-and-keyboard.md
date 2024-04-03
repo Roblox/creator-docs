@@ -138,7 +138,7 @@ UserInputService.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
 
 UserInputService.InputChanged:Connect(function(inputObject)
 	if inputObject.UserInputType == Enum.UserInputType.MouseMovement then
-		print(`Mouse delta is ({tostring(inputObject.Delta.X)}, {tostring(inputObject.Delta.Y)})`)
+		print(`Mouse delta is ({inputObject.Delta.X}, {inputObject.Delta.Y})`)
 	end
 end)
 ```

@@ -59,7 +59,7 @@ To ask a second question, create a new question and keep adding to the same vari
    local name1 = storyMaker:GetInput("What is your favorite name?")
    local food1 = storyMaker:GetInput("What is your favorite food?")
 
-   local story = `In a tree on a hill lives the great wizard {name1}. Every morning, the wizard loves eating a giant bowl of honey roasted.`
+   local story = `In a tree on a hill lives the great wizard {name1}. Every morning, the wizard loves eating a giant bowl of honey roasted `
    ```
 
    <Alert severity="info">
@@ -90,10 +90,7 @@ Also, below are some **tips and tricks** to make stories for fun for players.
 Variables can be used more than once — just use concatenation between strings where you want to include the word(s).
 
 **Example Code**:
-
-```lua
-`I am {name1} and you are in the palace of {name1}!`
-```
+`` `I am {name1} and you are in the palace of {name1}!` ``
 
 **Result**:
 I am Sameth and you are in the palace of Sameth!

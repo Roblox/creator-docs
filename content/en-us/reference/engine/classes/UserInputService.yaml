@@ -1230,7 +1230,7 @@ methods:
 
       local textLabel = script.Parent
       local mapKey = Enum.KeyCode.M
-      textLabel.Text = `Press {UserInputService:GetStringForKeyCode(mapKey)} to open the map"
+      textLabel.Text = `Press {UserInputService:GetStringForKeyCode(mapKey)} to open the map`
       ```
 
       #### Examples on QWERTY Keyboard
@@ -2165,7 +2165,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       local function GamepadConnected(gamepad)
-      	print(`Player has plugged controller: {tostring(gamepad)}`)
+      	print(`Player has plugged controller: {gamepad}`)
       end)
 
       userInputService.GamepadConnected:Connect(GamepadConnected)
@@ -2217,7 +2217,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       local function GamepadDisconnected(gamepad)
-      	print(`Player has unplugged controller: {tostring(gamepad)}`)
+      	print(`Player has unplugged controller: {gamepad}`)
       end)
 
       userInputService.GamepadDisconnected:Connect(GamepadDisconnected)
@@ -2584,7 +2584,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function TouchEnded(touch, gameProcessedEvent)
-      	print("Touch ended at "..tostring(touch.Position))
+      	print(`Touch ended at {touch.Position}`)
       end
 
       UserInputService.TouchEnded:Connect(TouchEnded)
@@ -2657,7 +2657,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       function TouchLongPress(TouchPositions, state, gameProcessedEvent)
-      	print("Long press event fired. State of press: "..tostring(state))
+      	print(`Long press event fired. State of press: {state}`)
       end
 
       userInputService.TouchLongPress:Connect(TouchLongPress)
@@ -2735,7 +2735,7 @@ events:
 
       function onTouchMoved(touch, gameProcessedEvent)
       	local oldPosition = touch.Position - touch.Delta
-      	print(`Touch moved from {tostring(oldPosition)} to {tostring(touch.Position)}`)
+      	print(`Touch moved from {oldPosition} to {touch.Position}`)
       end
 
       UserInputService.TouchMoved:Connect(onTouchMoved)
@@ -2808,7 +2808,7 @@ events:
       local userInputService = game:GetService("UserInputService")
 
       userInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
-      	print("Speed of touch drag: "..tostring(velocity))
+      	print(`Speed of touch drag: {velocity}`)
       end)
       ```
 
@@ -2885,7 +2885,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchPinch:Connect(function(touchPositions, scale, velocity, state, gameProcessedEvent)
-      	print("Scale difference since beginning of pinch: "..tostring(scale))
+      	print(`Scale difference since beginning of pinch: {scale}`)
       end)
       ```
 
@@ -2968,7 +2968,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchRotate:Connect(function(touchPositions, rotation, velocity, state, gameProcessedEvent)
-      	print("Camera has rotated "..tostring(rotation).." degrees!")
+      	print(`Camera has rotated {rotation} degrees!`)
       end)
       ```
 

@@ -295,7 +295,7 @@ if success then
 		local entries = pages:GetCurrentPage()
 		-- Iterate through all key-value pairs on page
 		for _, entry in entries do
-			print(`{entry.key} : {tostring(entry.value)}`)
+			print(`{entry.key} : {entry.value}`)
 		end
 		-- Check if last page has been reached
 		if pages.IsFinished then
