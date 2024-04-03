@@ -149,7 +149,7 @@ local RewardManager = require(ServerStorage.RewardManager)
 
 --Calls function from module script
 local coins = RewardManager.getCoinReward("easy")
-print("Should award " .. coins .. " coins")
+print(`Should award {coins} coins`)
 ```
 
 <Alert severity="warning">

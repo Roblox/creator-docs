@@ -17,9 +17,9 @@ print("1000" - 234) -- 766
 print("hello" + 234) -- error: attempt to perform arithmetic (add) string and number
 ```
 
-## Concatenation
+## Interpolation and Concatenation
 
-In concatenation, Luau coerces numbers to strings. To convert a number to a string without using coercion, use the `Library.string.format()` function.
+In both interpolation and concatenation, Luau coerces numbers to strings. To convert a number to a string without using coercion, use the `Library.string.format()` function.
 
 ```lua
 print(`Pi is {math.pi}`) -- 3.1415926535898

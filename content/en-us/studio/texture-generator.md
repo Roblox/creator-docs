@@ -193,6 +193,7 @@ The following prompting tips enable the tool to provide better and more consiste
 - Use descriptive phrases instead of single words for key items, for example "worn&nbsp;leather" instead of just "leather."
 - Add styling cues like "cinematic," "photorealistic," "cartoon," or "low&nbsp;poly" to influence the overall look.
 </TabItem>
+
 <TabItem label="Generation Angle">
 The [generation angle](#generation-angle) sets the most important view of your mesh which will be prioritized during generation. Changing this angle can often help eliminate inconsistencies in textures.
 
@@ -200,6 +201,7 @@ The [generation angle](#generation-angle) sets the most important view of your m
 - For flat objects like plates, swords, and fences, make sure the generation angle displays a view with a high surface area.
 - For humanoid and animal meshes, experiment with different generation angles, such as a head-on view of the face and a side view profile, to find the most consistent and coherent texture.
 </TabItem>
+
 <TabItem label="Iterative Refinement">
 Generating the most suitable textures is an iterative process. It helps to preview often and tweak prompts incrementally to reach your vision.
 
@@ -207,4 +209,5 @@ Generating the most suitable textures is an iterative process. It helps to previ
 - Change the prompt word order. Words at the beginning of the prompt can have more weight when generating.
 - Generate several previews to compare different prompts, or try the same prompts with different [seeds](#seed-control) to get a preview that fits your vision.
 </TabItem>
+
 </Tabs>

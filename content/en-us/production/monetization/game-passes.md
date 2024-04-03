@@ -120,7 +120,7 @@ local function onPlayerAdded(player)
 
 	-- If there's an error, issue a warning and exit the function
 	if not success then
-		warn(`Error while checking if player has pass: {tostring(message)}`)
+		warn(`Error while checking if player has pass: {message}`)
 		return
 	end
 
@@ -183,7 +183,7 @@ local function promptPurchase()
 	end)
 
 	if not success then
-		warn(`Error while checking if player has pass: {tostring(message)}`)
+		warn(`Error while checking if player has pass: {message}`)
 		return
 	end
 

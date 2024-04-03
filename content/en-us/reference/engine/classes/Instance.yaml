@@ -245,6 +245,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: Instance.UniqueId
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UniqueId
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: Instance.archivable
     summary: ''
     description: ''
@@ -1803,8 +1820,7 @@ events:
         summary: |
           The `Class.Instance` that is being removed.
     tags: []
-    deprecation_message: |
-      Deprecation Message
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: Instance.Destroying

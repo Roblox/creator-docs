@@ -31,7 +31,7 @@ For Lua coding principles that you can adapt to the classroom, check our <a href
 
 ### Collaboration
 
-Roblox Studio is built with collaboration in mind, making it an ideal choice for students studying for the AP test independently or online. The [Team Create](../../projects/collaboration.md#team-create) feature allows students to work simultaneously on the same project stored on the cloud. Additionally, students can work simultaneously in the <a href="https://www.youtube.com/watch?v=6wuZJTiwCtM&feature=emb_logo" target="_blank" rel="noopener">same script</a>, or dedicate scripts to specific tasks, making it easy to track a student's individual contributions.
+Roblox Studio is built with [collaboration](../../projects/collaboration.md) in mind, making it an ideal choice for students studying for the AP test independently or online. Additionally, students can work simultaneously in the <a href="https://www.youtube.com/watch?v=6wuZJTiwCtM&feature=emb_logo" target="_blank" rel="noopener">same script</a>, or dedicate scripts to specific tasks, making it easy to track a student's individual contributions.
 
 ### Types of Student Projects
 

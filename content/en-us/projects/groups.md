@@ -146,7 +146,7 @@ To configure roles:
 </table>
 
 <Alert severity="warning">
-By default, only the group owner has the <b>Create and edit group experiences</b> permission, a requirement for being a collaborator in [Team Create](../projects/collaboration.md#team-create). This permission should be granted with care because members who have it may threaten the <a href="#safety-in-group-experiences">safety</a> of the group's experiences.
+By default, only the group owner has the **Create and edit group experiences** permission, a requirement for being a [collaborator](../projects/collaboration.md) in a team session. This permission should be granted with care because members who have it may threaten the [safety](#safety-in-group-experiences) of the group's experiences.
 </Alert>
 
 ### Assigning Roles

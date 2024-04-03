@@ -2,8 +2,10 @@ name: ExperienceNotificationService
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Service containing methods to validate users and prompt them to enable experience notifications.
+description: |
+  [Experience Notifications](../../../cloud-services/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. This service contains methods to validate users and prompt them to enable notifications.
 code_samples: []
 inherits:
   - Instance
@@ -14,22 +16,28 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: ExperienceNotificationService:InvokeOptInPromptClosed
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: ExperienceNotificationService:PromptOptIn
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Shows an in-experience prompt for the local player to enable
+      notifications.
+    description: |
+      `Class.ExperienceNotificationService:PromptOptIn()|PromptOptIn()` prompts
+      the local player to enable notifications through an in-experience modal.
+      You should always use the result of
+      `Class.ExperienceNotificationService:CanPromptOptInAsync()|CanPromptOptInAsync()`
+      before calling this method since the ability to be prompted depends on
+      various factors like the player's age or whether they've already enabled
+      notifications for your experience.
+
+      This method always infers the **local** player
+      (`Class.Players.LocalPlayer`) and it can only be called from a
+      `Class.LocalScript` or from a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to
+      `Enum.RunContext.Client|Client`.
+
+      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+    code_samples:
+      - ExperienceNotificationService1
     parameters: []
     returns:
       - type: void
@@ -39,13 +47,33 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: ExperienceNotificationService:CanPromptOptInAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Indicates whether the local player can be prompted to enable notifications.
+    description: |
+      `Class.ExperienceNotificationService:CanPromptOptInAsync()|CanPromptOptInAsync()`
+      returns `true` if the local player can be prompted to enable
+      notifications. You should always use the result of this method before
+      calling `Class.ExperienceNotificationService:PromptOptIn()|PromptOptIn()`
+      since the ability to be prompted depends on various factors like the
+      player's age or whether they've already enabled notifications for your
+      experience.
+
+      This method always infers the **local** player
+      (`Class.Players.LocalPlayer`) and it can only be called from a
+      `Class.LocalScript` or from a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to
+      `Enum.RunContext.Client|Client`. It should also be called in a
+      `Global.LuaGlobals.pcall|pcall()` since it's an asynchronous network call
+      that may occasionally fail.
+
+      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+    code_samples:
+      - ExperienceNotificationService1
     parameters: []
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          Whether the local player can be prompted to enable notifications.
     tags:
       - Yields
     deprecation_message: ''
@@ -53,21 +81,22 @@ methods:
     thread_safety: Unsafe
 events:
   - name: ExperienceNotificationService.OptInPromptClosed
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Fires when the local player closes the prompt.
+    description: |
+      This event fires when the local player closes a prompt that was
+      displayed through
+      `Class.ExperienceNotificationService:PromptOptIn()|PromptOptIn()`. It can
+      only be connected in a `Class.LocalScript` or in a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to
+      `Enum.RunContext.Client|Client`.
+
+      See [Experience Notifications](../../../cloud-services/experience-notifications.md) for more details on implementing and customizing notifications, using launch data, and more.
+    code_samples:
+      - ExperienceNotificationService1
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: ExperienceNotificationService.PromptOptInRequested
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
 callbacks: []

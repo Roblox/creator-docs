@@ -157,15 +157,11 @@ properties:
       can_save: true
   - name: Humanoid.BreakJointsOnDeath
     summary: |
-      Determines whether a `Class.Humanoid|Humanoid's` joints break when in the
-      Dead state.
+      Determines whether the humanoid's joints break when in the
+      `Enum.HumanoidStateType.Dead` state.
     description: |
-      Determines whether a `Class.Humanoid|Humanoid's` joints break when in the
-      Dead state. Defaults to true.
-
-      If it is set to false, BreakJoints will not be called on death or after
-      death. If it is set to true, the existing break-joints-every-frame
-      behavior will be used.
+      Determines whether the humanoid's joints break when in the
+      `Enum.HumanoidStateType.Dead` state. Defaults to true.
     code_samples:
     type: bool
     tags: []
@@ -365,7 +361,7 @@ properties:
       local Humanoid = route.to.humanoid
 
       Humanoid:GetPropertyChangedSignal("FloorMaterial"):Connect(function()
-          print(`New value for FloorMaterial: {tostring(Humanoid.FloorMaterial)}`)
+          print(`New value for FloorMaterial: {Humanoid.FloorMaterial}`)
       end)
       ```
 
@@ -401,46 +397,43 @@ properties:
       Describes the current health of the Humanoid on the range [0,
       `Class.Humanoid.MaxHealth`].
     description: |
-      **Health** is a property that represents the current health of the
-      `Class.Humanoid`. The value is restricted to the range [0,
-      `Class.Humanoid.MaxHealth`]. If the Humanoid is dead, Health is
-      continually set to 0.
+      This property represents the current health of the `Class.Humanoid`. The
+      value is restricted to the range between 0 and
+      `Class.Humanoid.MaxHealth|MaxHealth`. If the humanoid is dead, this
+      property is continually set to 0.
 
-      #### Dealing Damage
+      Note that the `Class.Humanoid:TakeDamage()|TakeDamage()` function may be
+      used to subtract from `Class.Humanoid.Health|Health` instead of setting
+      the property directly.
 
-      The `Class.Humanoid:TakeDamage()|TakeDamage` function should be used to
-      subtract from Health. If a Humanoid has a `Class.ForceField` as a sibling,
-      the function will **not** lower Health.
+      #### Health Regeneration
 
-      #### Regeneration
-
-      If there is no `Class.Script` named "Health" within
-      `Class.StarterCharacterScripts`, a passive health regeneration script is
-      automatically inserted. This causes players' characters to spawn with the
-      same health regeneration script, which adds 1% of
-      `Class.Humanoid.MaxHealth|MaxHealth` to Health each second, while the
-      Humanoid is not dead. To disable this health regeneration behavior, add an
-      empty Script named "Health" to `Class.StarterCharacterScripts`.
+      By default, a passive health regeneration script is automatically inserted
+      into humanoids. This causes non-dead player characters to regenerate 1% of
+      `Class.Humanoid.MaxHealth|MaxHealth` each second. To disable this
+      regeneration behavior, add an empty `Class.Script` named **Health** to
+      `Class.StarterCharacterScripts`.
 
       #### Health Bar Display
 
-      When Health is less than `Class.Humanoid.MaxHealth|MaxHealth`, a health
-      bar is displayed under the Humanoid's name in-game. The display behavior
-      of the health bar is dependent on the
+      When `Class.Humanoid.Health|Health` is less than
+      `Class.Humanoid.MaxHealth|MaxHealth`, a health bar is displayed
+      in-experience. The display behavior of the health bar is dependent on the
       `Class.Humanoid.HealthDisplayDistance|HealthDisplayDistance` and
       `Class.Humanoid.HealthDisplayType|HealthDisplayType`.
 
-      A `Class.Player` will not see their own name and health bar above their
-      `Class.Player.Character|Character`. Instead, it is displayed in the top
-      right corner of the screen on the top bar. The health bar is visible when
-      Health is less than `Class.Humanoid.MaxHealth|MaxHealth`.
+      See
+      [Character Name/Health Display](../../../characters/name-health-display.md)
+      for an in-depth guide on controlling the appearance of character names and
+      health bars.
 
       #### Death
 
       When the value of the character's health reaches 0, the `Class.Humanoid`
-      automatically transitions to the `Dead` `Enum.HumanoidStateType`. In this
-      state, Health is locked to 0; however, there is no error or warning for
-      setting the Health of a dead Humanoid to a positive nonzero value.
+      automatically transitions to the `Enum.HumanoidStateType.Dead` state. In
+      this state, `Class.Humanoid.Health|Health` is locked to 0; however, there
+      is no error or warning for setting the `Class.Humanoid.Health|Health` of a
+      dead humanoid to a positive nonzero value.
     code_samples:
     type: float
     tags:
@@ -456,19 +449,19 @@ properties:
       can_save: false
   - name: Humanoid.HealthDisplayDistance
     summary: |
-      Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
-      to control the distance from which a humanoid's health bar can be seen.
+      Used in conjunction with the
+      `Class.Humanoid.DisplayDistanceType|DisplayDistanceType` property to
+      control the distance from which a humanoid's health bar can be seen.
     description: |
-      The **HealthDisplayDistance** property is a number used in conjunction
-      with the `Class.Humanoid.DisplayDistanceType` property to control the
-      distance from which a humanoid's health bar can be seen.
+      This property is a number used in conjunction with the
+      `Class.Humanoid.DisplayDistanceType|DisplayDistanceType` property to
+      control the distance from which a humanoid's health bar can be seen.
 
       See
       [Character Name/Health Display](../../../characters/name-health-display.md)
       for an in-depth guide on controlling the appearance of character names and
       health bars.
     code_samples:
-      - displaying-a-humanoid-s-health-and-name
     type: float
     tags: []
     deprecation_message: ''
@@ -484,20 +477,23 @@ properties:
     summary: |
       Controls when the humanoid's health bar is allowed to be displayed.
     description: |
-      **HealthDisplayType** controls when a humanoid's health bar is allowed to
-      be displayed. By default, this property is set to
+      This property controls when a humanoid's health bar is allowed to be
+      displayed. By default, this property is set to
       `Enum.HumanoidHealthDisplayType|DisplayWhenDamaged`, which makes the
-      health bar only display when a humanoid's `Class.Humanoid.Health` is less
-      than its `Class.Humanoid.MaxHealth`. It can also be set to
-      `Enum.HumanoidHealthDisplayType|AlwaysOn`, which makes the health bar
+      health bar only display when a humanoid's `Class.Humanoid.Health|Health`
+      is less than its `Class.Humanoid.MaxHealth|MaxHealth`. It can also be set
+      to `Enum.HumanoidHealthDisplayType|AlwaysOn`, which makes the health bar
       always display, or `Enum.HumanoidHealthDisplayType|AlwaysOff`, which
       prevents it from ever displaying.
 
-      This property functions independently of the humanoid's
-      `HealthDisplayDistance` property, which is responsible for making the
-      health bar fade out at certain distances. If **HealthDisplayType** is set
-      to `Enum.HumanoidHealthDisplayType|AlwaysOn`, it will still fade out
-      depending the how `Class.Humanoid.HealthDisplayDistance` is configured.
+      Note that this property functions independently of the humanoid's
+      `Class.Humanoid.HealthDisplayDistance|HealthDisplayDistance` property
+      which is responsible for making the health bar fade out at certain
+      distances. If `Humanoid.HealthDisplayType|HealthDisplayType` is set to
+      `Enum.HumanoidHealthDisplayType|AlwaysOn`, it will still fade out
+      depending the how
+      `Class.Humanoid.HealthDisplayDistance|HealthDisplayDistance` is
+      configured.
 
       See
       [Character Name/Health Display](../../../characters/name-health-display.md)
@@ -520,27 +516,23 @@ properties:
       Determines the distance off the ground the `Class.Humanoid.RootPart`
       should be.
     description: |
-      HipHeight determines the distance (in studs) off the ground the
-      `Class.Humanoid.RootPart` should be when the Humanoid is standing. The
-      `Class.Humanoid.RigType|RigType` influences the way this property behaves:
+      Determines the distance (in studs) off the ground the
+      `Class.Humanoid.RootPart|RootPart` should be when the humanoid is
+      standing. The `Class.Humanoid.RigType|RigType` influences the way this
+      property behaves.
 
-      #### HipHeight for R15 Humanoids
-
-      With R15 rigs, a suitable HipHeight is preset to ensure the height of the
-      `Class.Humanoid.RootPart` is correct. The height of the legs is not used.
-      The overall height of the Humanoid can be described in the following
-      formula:
+      For R15 rigs, a suitable hip height is preset to ensure the height of the
+      `Class.Humanoid.RootPart|RootPart` is correct. The height of the legs is
+      not used. The overall height of the humanoid can be described in the
+      following formula:
 
       ```lua
       Height = (0.5 * RootPart.Size.Y) + HipHeight
       ```
 
-      #### HipHeight for R6 Humanoids
-
-      For R6 rigs, the `Class.Humanoid.RootPart|RootPart's` height is determined
-      by the height of the character's legs and `Class.Humanoid.RootPart`.
-      HipHeight instead describes a relative offset. The overall height of the
-      Humanoid can be described in the following formula:
+      For R6 rigs, `Class.Humanoid.HipHeight|HipHeight` instead describes a
+      relative offset. The overall height of the humanoid can be described in
+      the following formula:
 
       ```lua
       Height = LeftLeg.Size.Y + (0.5 * RootPart.Size.Y) + HipHeight
@@ -559,24 +551,12 @@ properties:
       can_save: true
   - name: Humanoid.Jump
     summary: |
-      If true, the `Class.Humanoid` jumps with an upwards force equal to the
-      value of its `Class.Humanoid.JumpPower` property or the height of
-      `Class.Humanoid.JumpHeight`, depending on the value of
-      `Class.Humanoid.UseJumpPower`.
+      If `true`, the `Class.Humanoid` jumps with an upwards force.
     description: |
-      If true, the `Class.Humanoid` jumps with an upwards force equal to the
-      value of its `Class.Humanoid.JumpPower` property or the height of
+      If `true`, the `Class.Humanoid` jumps with an upwards force equal to the
+      value of `Class.Humanoid.JumpPower` or the height of
       `Class.Humanoid.JumpHeight`, depending on the value of
       `Class.Humanoid.UseJumpPower`.
-
-      If `Class.Humanoid.UseJumpPower` is set to true,
-      `Class.Humanoid|Humanoids` are able to jump roughly 7.2 studs high by
-      default, depending on both the `Class.Workspace|Workspace's`
-      `Class.Workspace.Gravity`, and the `Class.Humanoid.JumpPower` of the
-      humanoid itself.
-
-      If `Class.Humanoid.UseJumpPower` is set to false, the height of the jump
-      can be set explicitly with `Class.Humanoid.JumpHeight`.
     code_samples:
     type: bool
     tags:
@@ -594,18 +574,19 @@ properties:
     summary: |
       Provides control over the height that the `Class.Humanoid` jumps to.
     description: |
-      Provides control over the height a `Class.Humanoid` jumps in studs. The
+      Provides control over the height a `Class.Humanoid` jumps, in studs. The
       starting value of this property is determined by the value of
-      `Class.StarterPlayer.CharacterJumpHeight`, which defaults to 7.2.
+      `Class.StarterPlayer.CharacterJumpHeight` which defaults to 7.2.
 
-      This property is only visible in the Properties window if
+      Although setting this property to 0 will effectively prevent the humanoid
+      from jumping, it's recommended to disable jumping by disabling the
+      `Enum.HumanoidStateType.Jumping` state through
+      `Class.Humanoid:SetStateEnabled()`.
+
+      This property is only visible in the
+      [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **false**, as it would not be
-      relevant otherwise.
-
-      This property can be used to adjust the height that a humanoid can jump,
-      allowing developers to remove jumping, allow dynamically adjustable jump
-      height based on character stats or raise the jump height (as if on the
-      moon or such).
+      relevant otherwise (instead, `Class.Humanoid.JumpPower` is used).
     code_samples:
     type: float
     tags: []
@@ -625,20 +606,20 @@ properties:
     description: |
       Determines how much upwards force is applied to the `Class.Humanoid` when
       jumping. The starting value of this property is determined by the value of
-      `Class.StarterPlayer.CharacterJumpPower`, which defaults to 50 and is
-      constrained between 0 and 1000.
+      `Class.StarterPlayer.CharacterJumpPower` which defaults to 50 and is
+      constrained between 0 and 1000. Note that jumps are also influenced by the
+      `Class.Workspace.Gravity` property which determines the acceleration due
+      to gravity.
 
-      This property is only visible in the Properties window if
+      Although setting this property to 0 will effectively prevent the humanoid
+      from jumping, it's recommended to disable jumping by disabling the
+      `Enum.HumanoidStateType.Jumping` state through
+      `Class.Humanoid:SetStateEnabled()`.
+
+      This property is only visible in the
+      [Properties](../../../studio/properties.md) window if
       `Class.Humanoid.UseJumpPower` is set to **true**, as it would not be
-      relevant otherwise.
-
-      Note:
-
-      - Jumps are also influenced by the `Class.Workspace.Gravity` property
-        which determines the acceleration due to gravity.
-      - Although setting this property to 0 will prevent the `Class.Humanoid`
-        from jumping, developers are advised to disable the "Jumping" state
-        using the `Class.Humanoid:SetStateEnabled()` function.
+      relevant otherwise (instead, `Class.Humanoid.JumpHeight` is used).
     code_samples:
     type: float
     tags: []
@@ -676,17 +657,16 @@ properties:
       can_save: false
   - name: Humanoid.MaxHealth
     summary: |
-      The maximum value of a `Class.Humanoid|Humanoid's`
-      `Class.Humanoid.Health`.
+      The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
     description: |
-      The maximum value of a `Class.Humanoid|Humanoid's`
-      `Class.Humanoid.Health`. The value of this property is used with the value
-      of the `Class.Humanoid.Health` property to size the default health bar
-      display.
+      The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
 
-      When a `Class.Humanoid|Humanoid's` `Class.Humanoid.Health` reaches its
-      maximum value, its health bar may not be displayed anymore, depending on
-      its `Class.Humanoid.HealthDisplayType` property, as seen below:
+      The value of this property is used alongside the
+      `Class.Humanoid.Health|Health` property to size the default health bar
+      display. When a humanoid's `Class.Humanoid.Health|Health` reaches
+      `Class.Humanoid.MaxHealth|MaxHealth`, its health bar may not be displayed,
+      depending on its `Class.Humanoid.HealthDisplayType|HealthDisplayType`
+      property.
     code_samples:
     type: float
     tags: []
@@ -810,18 +790,14 @@ properties:
   - name: Humanoid.PlatformStand
     summary: |
       Determines whether the `Class.Humanoid` is currently in the
-      `PlatformStanding` `Enum.HumanoidStateType`.
+      `Enum.HumanoidStateType.PlatformStanding` state.
     description: |
-      PlatformStand describes whether the `Class.Humanoid` is currently in the
-      `PlatformStanding` `Enum.HumanoidStateType`. When true, the Humanoid is in
-      a state where it is free-falling and cannot move. This state behaves
+      Determines whether the `Class.Humanoid` is currently in the
+      `Enum.HumanoidStateType.PlatformStanding` state. When true, the Humanoid
+      is in a state where it is free-falling and cannot move. This state behaves
       similar to sitting, except that jumping does not free the humanoid from
       the state.
-
-      The now-deprecated `Class.SkateboardPlatform` puts the Humanoid into this
-      state, much like how a `Class.Seat` causes a sitting state.
     code_samples:
-      - putting-a-player-into-the-platformstand-state
     type: bool
     tags: []
     deprecation_message: ''
@@ -1068,29 +1044,27 @@ properties:
       can_save: true
   - name: Humanoid.WalkSpeed
     summary: |
-      Describes the `Class.Humanoid|Humanoid's` maximum movement speed in
-      studs/sec.
+      Describes the humanoid's maximum movement speed in studs per second.
     description: |
-      WalkSpeed is a property that describes how quickly this `Class.Humanoid`
-      is able to walk, in studs per second. This property defaults to the value
-      of `Class.StarterPlayer.CharacterWalkSpeed`, which defaults to 16, meaning
-      a Roblox `Class.Player.Character` can move 16 studs in any direction each
-      second by default.
+      This property describes how quickly the `Class.Humanoid` is able to walk,
+      in studs per second. It defaults to the value of
+      `Class.StarterPlayer.CharacterWalkSpeed` (16), meaning a player character
+      can move 16 studs in any direction each second.
 
-      Note:
+      #### Notes
 
       - When controlled on a mobile device or a gamepad, a humanoid can walk
-        slower than their WalkSpeed if the controlling joystick is moved closer
-        to its center
-      - Roblox's default animation script scales a humanoid's movement
-        animations based on how fast it is moving relative to the default speed
-        of 16 studs/sec
-      - The speed the `Class.Humanoid` is currently walking at can be obtained
-        using the `Class.Humanoid.Running` event
-      - Movement speed is reduced to _87.5%_ WalkSpeed when swimming and _70%_
-        WalkSpeed when climbing
+        slower than its `Class.Humanoid.WalkSpeed|WalkSpeed` if the controlling
+        thumbstick is moved just a gradual degree from center.
+      - You can freeze a humanoid in place by setting
+        `Class.Humanoid.WalkSpeed|WalkSpeed` to 0; this prevents the controlling
+        player from moving it through the default movement mechanisms.
+      - The default animation script scales a humanoid's movement animations
+        based on how fast it is moving relative to the default speed of 16
+        studs/second.
+      - The speed at which the `Class.Humanoid` is currently walking can be
+        obtained using the `Class.Humanoid.Running|Running` event.
     code_samples:
-      - freeze-a-player
     type: float
     tags: []
     deprecation_message: ''
@@ -1209,34 +1183,29 @@ properties:
 methods:
   - name: Humanoid:AddAccessory
     summary: |
-      Attaches the specified `Class.Accessory` to the
-      `Class.Humanoid|Humanoid's` parent.
+      Attaches the specified `Class.Accessory` to the humanoid's parent.
     description: |
-      The AddAccessory function attaches the specified `Class.Accessory` to the
-      `Class.Humanoid|Humanoid's` parent.
+      This method attaches the specified `Class.Accessory` to the humanoid's
+      parent.
 
-      #### How are Accessories attached to Humanoids?
-
-      When this function is called, the `Class.Accessory` is parented to the
-      `Class.Humanoid|Humanoid's` parent and then attached.
-
-      An `Class.Accessory` is attached to the character by searching for an
-      `Class.Attachment` in the `Class.Humanoid|Humanoid's` parent that shares
-      the same name as an `Class.Attachment` in the accessory's _Handle_
-      `Class.Part`. If one is found, the _Handle_ part will be connected to the
-      parent of the `Class.Attachment` using a `Class.Weld`. This weld will be
-      configured so the `Class.Attachment|Attachments` occupy the same space.
+      When this method is called, an `Class.Accessory` is attached to the
+      character by searching for an `Class.Attachment` in the humanoid's parent
+      that shares the same name as an `Class.Attachment` in the accessory's
+      **Handle** `Class.Part`. If one is found, the **Handle** part will be
+      connected to the parent of the `Class.Attachment` using a `Class.Weld`,
+      and the weld will be configured so the `Class.Attachment|Attachments`
+      occupy the same space.
 
       If the required `Class.Attachment` can not be found, then the
-      `Class.Accessory` will remain parented to the `Class.Humanoid|Humanoid's`
-      parent but it will be unattached.
+      `Class.Accessory` will remain parented to the humanoid's parent but it
+      will be unattached.
 
-      Typically accessory welds are created on the server. Under certain
-      circumstances, they can be created on the client. In these situations,
-      client-sided calls to `Class.Humanoid.AddAccessory` may not always produce
-      the desired behavior and you can use
-      `Class.Humanoid.BuildRigFromAttachments` to force the expected weld
-      creation.
+      Typically, accessory welds are created on the server, but they can be
+      created on the client under certain circumstances. In these situations,
+      client-sided calls to `Class.Humanoid:AddAccessory()|AddAccessory()` may
+      not always produce the desired behavior and you can use
+      `Class.Humanoid:BuildRigFromAttachments()|BuildRigFromAttachments()` to
+      force the expected weld creation.
     code_samples:
       - Humanoid-AddAccessory-Example
     parameters:
@@ -1303,23 +1272,22 @@ methods:
   - name: Humanoid:BuildRigFromAttachments
     summary: |
       Assembles a tree of `Class.Motor6D` joints by attaching together
-      `Class.Attachment` objects in a `Class.Humanoid|Humanoid's` character.
+      `Class.Attachment` objects in a humanoid's character.
     description: |
-      BuildRigFromAttachments assembles a tree of `Class.Motor6D` joints for a
-      `Class.Humanoid`. Motor6D joints are required for the playback of
-      `Class.Animation|Animations`
+      This method assembles a tree of `Class.Motor6D` joints for the
+      `Class.Humanoid`. `Class.Motor6D` joints are required for the playback of
+      `Class.Animation|Animations`.
 
-      Starting from the humanoid's `Class.Humanoid.RootPart`, the function
-      collects all `Class.Attachment|Attachments` parented in the current part,
-      whose name ends with "RigAttachment". It then searches for a matching
-      attachment in the character that shares the same name as the attachment.
-      Using those two attachments, a Motor6D joint is generated based on the
-      parts associated with the two attachments, and the
+      Starting from the humanoid's `Class.Humanoid.RootPart|RootPart`, this
+      method collects all `Class.Attachment|Attachments` parented in the current
+      part whose name ends with **RigAttachment**. It then searches for a
+      matching attachment in the character that shares the same name as the
+      attachment. Using those two attachments, a `Class.Motor6D` joint is
+      generated based on the parts associated with the two attachments and the
       `Class.Attachment.CFrame|CFrame` of the attachments.
 
-      BuildRigFromAttachments also scales the character and sets body colors.
-
-      See the provided code sample below to see how this function works.
+      `Class.Humanoid:BuildRigFromAttachments()` also scales the character and
+      sets body colors.
     code_samples:
       - Humanoid-BuildRigFromAttachments-Port
       - R15-Package-Importer
@@ -1333,33 +1301,30 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:ChangeState
     summary: |
-      Set the `Class.Humanoid` to enter the given `Enum.HumanoidStateType`.
+      Sets the `Class.Humanoid` to enter the given `Enum.HumanoidStateType`.
     description: |
       This function causes the `Class.Humanoid` to enter the given
-      `Enum.HumanoidStateType`.
-
-      The humanoid state describes the activity the `Class.Humanoid` is
+      `Enum.HumanoidStateType`, describing the activity the `Class.Humanoid` is
       currently doing.
 
-      You should check the page for `Enum.HumanoidStateType` for more
-      information on what particular states do as some have unintuitive names.
-      For example, running describes a state where the
-      `Class.Humanoid|Humanoid's` legs are on the ground, including when
-      stationary
+      Please review the `Enum.HumanoidStateType` page for more information on
+      the particular states, as some have unintuitive names. For example,
+      `Enum.HumanoidStateType.Running` describes a state where the humanoid's
+      legs are on the ground, including when stationary.
 
-      Due to the default behavior of the `Class.Humanoid` some states will
-      automatically be changed when set to. For example:
+      Due to the default behavior of the `Class.Humanoid`, some states will
+      automatically be changed when set. For example:
 
-      - Setting the state to _'Swimming_' when the `Class.Humanoid` is not in
-        the water will lead to it being automatically set to _'GettingUp'_
-      - As it is unused, setting the state to _'PlatformStanding'_ will lead to
-        it being automatically set to _'Running'_
+      - Setting the state to `Enum.HumanoidStateType.Swimming` when the humanoid
+        is not in the water will cause it to be automatically set to
+        `Enum.HumanoidStateType.GettingUp`.
+      - As it is unused, setting the state to
+        `Enum.HumanoidStateType.PlatformStanding` will cause the humanoid state
+        to be automatically set to `Enum.HumanoidStateType.Running`.
 
-      See also:
-
-      - To enable or disable a particular state use
-        `Class.Humanoid:SetStateEnabled()`
-      - To get the current state use `Class.Humanoid:GetState()`
+      See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
+      particular state, and `Class.Humanoid:GetState()` to get the current
+      humanoid state.
     code_samples:
       - double-jump
     parameters:
@@ -1410,7 +1375,6 @@ methods:
 
       - To unequip tools, use `Class.Humanoid:UnequipTools()`
     code_samples:
-      - how-to-spawn-colorful-bricks-on-click
     parameters:
       - name: tool
         type: Instance
@@ -1426,56 +1390,50 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:GetAccessories
     summary: |
-      Returns an array of `Class.Accessory|Accessories` that the
-      `Class.Humanoid|Humanoid's` parent is currently wearing.
+      Returns an array of `Class.Accessory` objects that the humanoid's parent
+      is currently wearing.
     description: |
-      This function returns an array of `Class.Accessory|Accessories` that the
-      `Class.Humanoid|Humanoid's` parent is currently wearing. All
-      `Class.Accessory` objects parented to the `Class.Humanoid|Humanoid's`
-      parent will be included, regardless of if they are attached or not. If the
-      humanoid is not wearing any accessories, the array will be empty.
+      This function returns an array of `Class.Accessory` objects that the
+      humanoid's parent is currently wearing. All such `Class.Accessory` objects
+      will be included, regardless of whether they're attached or not.
 
-      If the `Class.Humanoid` has no `Class.Accessory|Accessories` an empty
-      array will be returned
+      If the `Class.Humanoid` has no `Class.Accessory` objects, an empty array
+      will be returned.
 
-      See also:
-
-      - Use `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory` to a
-        `Class.Humanoid|Humanoid's` parent
+      See also `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory` to
+      a humanoid's parent.
     code_samples:
       - remove-accessories-after-loading
     parameters: []
     returns:
       - type: Array
         summary: |
-          An array of `Class.Accessory|Accessories` that are parented to the
-          `Class.Humanoid|Humanoid's` parent.
+          An array of `Class.Accessory` objects that are parented to the
+          humanoid's parent.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: Humanoid:GetAppliedDescription
     summary: |
-      Returns back a copy of the `Class.Humanoid|Humanoid's` cached
-      `Class.HumanoidDescription`, which describes its current look.
-    description: |
-      This blocking function returns back a copy of the
-      `Class.Humanoid|Humanoid's` cached `Class.HumanoidDescription`, which
+      Returns a copy of the humanoid's cached `Class.HumanoidDescription` which
       describes its current look.
+    description: |
+      This function returns a copy of the humanoid's cached
+      `Class.HumanoidDescription` which describes its current look. This can be
+      used to quickly determine a character's look and to assign their look to
+      other characters using the `Class.Humanoid:ApplyDescription()` function.
 
-      This can be used to quickly determine a player's look and to assign their
-      look to other players using the `Class.Humanoid:ApplyDescription()`
-      function.
+      #### See Also
 
-      See also:
-
-      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
-        HumanoidDescription which describes the Avatar for the passed in user
-      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
-        HumanoidDescription whose parameters are initialized to match that of
-        the passed in server-side outfit asset
-      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
-        with the look from the HumanoidDescription Instance passed in
+      - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
+        `Class.HumanoidDescription` describing the avatar for the passed in
+        user.
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
+        `Class.HumanoidDescription` whose parameters are initialized to match
+        that of the passed in server-side outfit asset.
+      - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
+        player with the look from the passed in `Class.HumanoidDescription`.
     code_samples:
     parameters: []
     returns:
@@ -1494,14 +1452,14 @@ methods:
       This function returns what `Enum.BodyPartR15` a `Class.Part` is, or
       `Enum.BodyPartR15.Unknown` if the part is not an R15 body part. This
       function allows developers to retrieve player body parts independent of
-      what the actual body part names are, instead returning an Enum.
+      what the actual body part names are, instead returning an enum.
 
       It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
-      For example, if a `Class.Player|player's` body part touches something,
-      this function will return get a part instance. Developers can then look up
-      what part of the body that was, like head or arm. Then depending on what
-      that part was, developers can either perform some gameplay action or
-      replace that part with some other part - perhaps showing damage.
+      For example, if a player's body part touches something, this function will
+      return get a part instance. Developers can then look up what part of the
+      body that was, like head or arm. Then depending on what that part was,
+      developers can either perform some gameplay action or replace that part
+      with some other part - perhaps showing damage.
 
       This function can be useful for games where hit location is important. For
       example, it can be used to determine if a player is hit in the leg and
@@ -1528,22 +1486,20 @@ methods:
       `Class.Part`.
     description: |
       This function returns the `Enum.Limb` enum that is associated with the
-      given `Class.Part`
-
-      This function works for both R15 and R6 rigs, for example:
+      given `Class.Part`. It works for both R15 and R6 rigs, for example:
 
       ```lua
       -- For R15
-      print(humanoid:GetLimb(character.LeftUpperLeg)) -- Enum.Limb.LeftLeg
-      print(humanoid:GetLimb(character.LeftLowerLeg)) -- Enum.Limb.LeftLeg
-      print(humanoid:GetLimb(character.LeftFoot)) -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character.LeftUpperLeg))  -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character.LeftLowerLeg))  -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character.LeftFoot))  -- Enum.Limb.LeftLeg
 
       -- For R6
-      print(humanoid:GetLimb(character:FindFirstChild("Left Leg"))) -- Enum.Limb.LeftLeg
+      print(humanoid:GetLimb(character:FindFirstChild("Left Leg")))  -- Enum.Limb.LeftLeg
       ```
 
-      GetLimb will throw an error if the `Class.Part|Part's` parent is not set
-      to the `Class.Humanoid|Humanoid's` parent.
+      Note that `Class.Humanoid:GetLimb()` will throw an error if the part's
+      parent is not set to the humanoid's parent.
     code_samples:
       - Humanoid-GetLimb1
     parameters:
@@ -1610,22 +1566,15 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:GetState
     summary: |
-      Returns the `Class.Humanoid|Humanoid's` current `Enum.HumanoidStateType`.
+      Returns the humanoid's current `Enum.HumanoidStateType`.
     description: |
-      This function returns the `Class.Humanoid|Humanoid's` current
-      `Enum.HumanoidStateType`.
+      This function returns the humanoid's current `Enum.HumanoidStateType`,
+      describing the activity the `Class.Humanoid` is currently doing, such as
+      jumping or swimming.
 
-      The humanoid state describes the activity the `Class.Humanoid` is
-      currently doing, such as jumping or freefalling.
-
-      See also:
-
-      - To change the `Class.Humanoid|Humanoid's` state use
-        `Class.Humanoid:ChangeState()`
-      - To enable or disable a particular state use
-        `Class.Humanoid:SetStateEnabled()`
-      - For more information on the different states available, see
-        `Enum.HumanoidStateType`
+      See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
+      particular state, and `Class.Humanoid:ChangeState()` to change the current
+      humanoid state.
     code_samples:
       - double-jump
     parameters: []
@@ -1792,14 +1741,14 @@ methods:
       Causes the `Class.Humanoid` to walk in the given direction.
     description: |
       This function causes the `Class.Humanoid` to walk in the given
-      `Datatype.Vector3` _direction_.
+      `Datatype.Vector3` direction.
 
-      By default, the _direction_ given is in world terms. If the
-      _relativeToCamera_ parameter is _true_ however the _direction_ given is
-      relative to the `Class.Workspace.CurrentCamera|CurrentCamera's`
-      `Datatype.CFrame`. As the negative Z direction is considered 'forwards' in
-      Roblox, the following code would make the `Class.Humanoid` walk in the
-      direction of the `Class.Workspace.CurrentCamera`.
+      By default, the direction is in world terms, but If the `relativeToCamera`
+      parameter is `true`, the direction is relative to the `Datatype.CFrame` of
+      the `Class.Workspace.CurrentCamera|CurrentCamera`. As the negative **Z**
+      direction is considered "forwards" in Roblox, the following code will make
+      the humanoid walk in the direction of the
+      `Class.Workspace.CurrentCamera|CurrentCamera`.
 
       ```lua
       humanoid:Move(Vector3.new(0, 0, -1), true)
@@ -1807,7 +1756,7 @@ methods:
 
       When this function is called, the `Class.Humanoid` will move until the
       function is called again. However, if the default control scripts are
-      being used this function will be overwritten when called on `Class.Player`
+      being used, this function will be overwritten when called on player
       `Class.Player.Character|Characters`. This can be avoided by either not
       using the default control scripts, or calling this function every frame
       using `Class.RunService:BindToRenderStep()` (see example).
@@ -1815,14 +1764,10 @@ methods:
       This function can be called on the server, but this should only be done
       when the server has
       [network ownership](../../../physics/network-ownership.md) of the
-      `Class.Humanoid|Humanoid's` assembly.
+      humanoid's assembly.
 
-      See also:
-
-      - To make a`Class.Humanoid` walk to a point, use the
-        `Class.Humanoid:MoveTo()` function
-      - For `Class.Player|Players` the `Class.Player:Move()` function exists
-        that calls this function
+      See also `Class.Humanoid:MoveTo()` which makes a`Class.Humanoid` walk to a
+      point, and `Class.Player:Move()` which effectively calls this function.
     code_samples:
       - moving-a-humanoid-forwards
     parameters:
@@ -1835,8 +1780,8 @@ methods:
         type: bool
         default: false
         summary: |
-          _True_ if the _direction_ parameter should be taken as relative to the
-          `Class.Workspace.CurrentCamera`.
+          Set to `true` if the `moveDirection` parameter should be taken as
+          relative to the `Class.Workspace.CurrentCamera|CurrentCamera`.
     returns:
       - type: void
         summary: ''
@@ -1907,27 +1852,20 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:RemoveAccessories
     summary: |
-      Removes all `Class.Accessory|Accessories` worn by the
-      `Class.Humanoid|Humanoid's` parent.
+      Removes all `Class.Accessory` objects worn by the humanoid's parent.
     description: |
-      This function removes all `Class.Accessory|Accessories` worn by the
-      `Class.Humanoid|Humanoid's` parent. When this function is called, all
-      `Class.Accessory|Accessories` sharing an `Class.Instance.Parent` with the
-      `Class.Humanoid` will be removed. For `Class.Player`
-      `Class.Player.Character|Characters` this will remove all hats and other
-      accessories.
+      This function removes all `Class.Accessory` objects worn by the humanoid's
+      parent. For player `Class.Player.Character|Characters`, this will remove
+      all hats and other accessories.
 
-      This function removes `Class.Accessory|Accessories` by calling
-      `Class.Instance:Destroy()` on them. This means the
-      `Class.Instance.Parent|Parents` of the accessories are set to _nil_ and
+      This function removes `Class.Accessory` object by calling
+      `Class.Instance:Destroy()` on them, meaning the
+      `Class.Instance.Parent|Parent` of the accessories are set to `nil` and
       locked.
 
-      See also:
-
-      - To attach an `Class.Accessory` use the `Class.Humanoid:AddAccessory()`
-        function
-      - To get all `Class.Accessory|Accessories` belonging to a `Class.Humanoid`
-        use the `Class.Humanoid:GetAccessories()` function
+      See also `Class.Humanoid:AddAccessory()` to attach an `Class.Accessory`,
+      and `Class.Humanoid:GetAccessories()` to get all `Class.Accessory` objects
+      belonging to a `Class.Humanoid`.
     code_samples:
       - remove-accessories-after-loading
     parameters: []
@@ -1988,12 +1926,8 @@ methods:
     summary: |
       Dynamically replaces a Humanoid body part with a different part.
     description: |
-      ReplaceBodyPartR15 dynamically replaces a R15/Rthro limb part in a
-      Humanoid with a different part. The part is automatically scaled as
-      normal. In the image below, a R15 avatar has had their right hand replaced
-      with a slightly larger version (also pictured).
-
-      ![An image of a Roblox avatar with a large right hand, replaced using ReplaceBodyPartR15.](../../../assets/legacy/Humanoid.ReplaceBodyPartR15.png)
+      Dynamically replaces a R15/Rthro limb part in a Humanoid with a different
+      part. The part is automatically scaled as normal.
 
       This function is useful for modifying characters during gameplay or
       building characters from a base rig. The related function
@@ -2173,17 +2107,13 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:ApplyDescription
     summary: |
-      Makes the `Class.Player.Character|character's` look match that of the
-      passed in `Class.HumanoidDescription`.
+      Makes the character's look match that of the passed in
+      `Class.HumanoidDescription`.
     description: |
-      This yield function makes the `Class.Player.Character|character's`
-      appearance match the specification of the passed in
-      `Class.HumanoidDescription`. A copy of the passed
+      This yielding function makes the character's look match that of the passed
+      in `Class.HumanoidDescription`. A copy of the passed
       `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
       for the `Class.Humanoid`.
-
-      It allows you to quickly set a character's appearance and store the
-      specification of that appearance.
 
       This function is optimized through making the assumption that only this
       function is used to change the appearance of the character, and no changes
@@ -2194,20 +2124,18 @@ methods:
       character, `Class.Humanoid:ApplyDescriptionReset()` will always ensure the
       character reflects the passed in `Class.HumanoidDescription`.
 
-      See also:
+      #### See Also
 
-      - `Class.Humanoid:ApplyDescriptionReset()`, Makes the
-        `Class.Player.Character|character's` look match that of the passed in
-        `Class.HumanoidDescription` (even after external changes)
-      - `Class.Humanoid:GetAppliedDescription()`, returns the
-        HumanoidDescription currently applied to the Humanoid
-      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
-        HumanoidDescription which describes the Avatar for the passed in user
-      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
-        HumanoidDescription whose parameters are initialized to match that of
-        the passed in server-side outfit asset
-      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
-        with the look from the HumanoidDescription Instance passed in
+      - `Class.Humanoid:GetAppliedDescription()` which returns the
+        `Class.HumanoidDescription` currently applied to the humanoid.
+      - `Class.Players:GetHumanoidDescriptionFromUserId()` which returns a
+        `Class.HumanoidDescription` describing the avatar for the passed in
+        user.
+      - `Class.Players:GetHumanoidDescriptionFromOutfitId()` which returns a
+        `Class.HumanoidDescription` whose parameters are initialized to match
+        that of the passed in server-side outfit asset.
+      - `Class.Player:LoadCharacterWithHumanoidDescription()` which spawns a
+        player with the look from the passed in `Class.HumanoidDescription`.
     code_samples:
     parameters:
       - name: humanoidDescription
@@ -2230,49 +2158,30 @@ methods:
     thread_safety: Unsafe
   - name: Humanoid:ApplyDescriptionReset
     summary: |
-      Makes the `Class.Player.Character|character's` look match that of the
-      passed in `Class.HumanoidDescription` (even after external changes).
+      Makes the character's look match that of the passed in
+      `Class.HumanoidDescription`, even after external changes.
     description: |
-      This yield function makes the `Class.Player.Character|character's`
-      appearance match the specification of the passed in
-      `Class.HumanoidDescription`. A copy of the passed
-      `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
-      for the `Class.Humanoid`.
-
-      It allows you to quickly set a character's appearance and store the
-      specification of that appearance.
+      This yielding function makes the character's look match that of the passed
+      in `Class.HumanoidDescription`, even after external changes. A copy of the
+      passed `Class.HumanoidDescription` is cached as the
+      `Class.HumanoidDescription` for the `Class.Humanoid`.
 
       This function will always ensure the character reflects the passed in
       `Class.HumanoidDescription`, even if changes have been made to the
-      character not using the `Class.HumanoidDescription` system (i.e not using
-      `Class.Humanoid:ApplyDescriptionReset()` or
-      `Class.Humanoid:ApplyDescription()`). This is in contrast to
-      `Class.Humanoid:ApplyDescription()`, which is optimized and may
-      incorrectly apply a `Class.HumanoidDescription` if the character has been
-      changed by means other than through the `Class.HumanoidDescription`
-      system.
-
-      See also:
-
-      - `Class.Humanoid:ApplyDescription()`, Makes the
-        `Class.Player.Character|character's` look match that of the passed in
-        `Class.HumanoidDescription`.
-      - `Class.Humanoid:GetAppliedDescription()`, returns the
-        HumanoidDescription currently applied to the Humanoid
-      - `Class.Players:GetHumanoidDescriptionFromUserId()`, gives back a
-        HumanoidDescription which describes the Avatar for the passed in user
-      - `Class.Players:GetHumanoidDescriptionFromOutfitId()`, gives back a
-        HumanoidDescription whose parameters are initialized to match that of
-        the passed in server-side outfit asset
-      - `Class.Player:LoadCharacterWithHumanoidDescription()`, spawns a player
-        with the look from the HumanoidDescription Instance passed in
+      character not using the `Class.HumanoidDescription` system (for example
+      not using `Class.Humanoid:ApplyDescriptionReset()|ApplyDescriptionReset()`
+      or `Class.Humanoid:ApplyDescription()|ApplyDescription()`). This is in
+      contrast to `Class.Humanoid:ApplyDescription()|ApplyDescription()` which
+      is optimized and may incorrectly apply a `Class.HumanoidDescription` if
+      the character has been changed by means other than through the
+      `Class.HumanoidDescription` system.
     code_samples:
     parameters:
       - name: humanoidDescription
         type: HumanoidDescription
         default:
         summary: |
-          The `Class.HumanoidDescription` Instance which you want to set the
+          The `Class.HumanoidDescription` instance which you want to set the
           character to match.
       - name: assetTypeVerification
         type: AssetTypeVerification
@@ -2451,7 +2360,6 @@ events:
       with an _active_ value of _false_, and `Class.Humanoid.GettingUp` will
       fire with an _active_ value of _true_.
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2480,7 +2388,6 @@ events:
       reason, you should use `Class.Humanoid.StateChanged` and listen for the
       `Landed` state to work out when a `Class.Humanoid` has landed.
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2498,24 +2405,19 @@ events:
       `Enum.HumanoidStateType`.
     description: |
       This event fires when the `Class.Humanoid` enters or leaves the
-      `GettingUp` `Enum.HumanoidStateType`.
-
-      The `GettingUp` `Enum.HumanoidStateType` is a transition state that is
-      activated shortly after the `Class.Humanoid` enters the `FallingDown` (3
-      seconds) or `Ragdoll` (1 second)
-      `Enum.HumanoidStateType|HumanoidStateTypes`.
+      `Enum.HumanoidStateType.GettingUp` state, a transition state that is
+      activated shortly after the `Class.Humanoid` enters the
+      `Enum.HumanoidStateType.FallingDown|FallingDown` (3 seconds) or
+      `Enum.HumanoidStateType.Ragdoll|Ragdoll` (1 second) states.
 
       When a `Class.Humanoid` attempts to get back up, this event will first
-      fire with an _active_ parameter of _true_ before shortly after firing
-      again with an _active_ parameter of _false_.
+      fire with an `active` parameter of `true` before shortly after firing
+      again with an `active` parameter of `false`.
 
-      See also:
-
-      - To force a `Class.Humanoid` to fall over, use the
-        `Class.Humanoid:ChangeState()` function to change the
-        `Class.Humanoid|Humanoid's` state to `FallingDown`
+      To force a `Class.Humanoid` to fall over, use the
+      `Class.Humanoid:ChangeState()` function with
+      `Enum.HumanoidStateType.FallingDown`.
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2569,7 +2471,6 @@ events:
       You can disable jumping using the `Class.Humanoid:SetStateEnabled()`
       function.
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2632,7 +2533,6 @@ events:
       disabled `Class.Platform` part. Despite this, it can still be used by
       developers.
     code_samples:
-      - Humanoid-PlatformStanding1
     parameters:
       - name: active
         type: bool
@@ -2663,7 +2563,6 @@ events:
       - `Class.Humanoid.FallingDown` for the `Class.Humanoid` event connected
         with the `FallingDown` state, which behaves similarly to `Ragdoll`
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2696,7 +2595,6 @@ events:
         `Class.Humanoid.StateChanged` event
     code_samples:
       - Humanoid-Running1
-      - humanoid-action-events
     parameters:
       - name: speed
         type: float
@@ -2749,23 +2647,22 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.StateChanged
     summary: |
-      Fired when the state of the `Class.Humanoid` is changed.
+      Fires when the state of the `Class.Humanoid` is changed.
     description: |
       This event fires when the state of the `Class.Humanoid` is changed.
 
-      The humanoid state describes the activity the `Class.Humanoid` is
-      currently doing. It takes the form of a `Enum.HumanoidStateType` value.
+      As there is no "idle" humanoid state, you should instead use the
+      `Class.Humanoid.Running` event or listen to the
+      `Class.Humanoid.RootPart|RootPart` part's
+      `Class.BasePart.Velocity|Velocity` to work out when the `Class.Humanoid`
+      is standing still.
 
-      See also:
+      #### See Also
 
-      - To get and set the state use `Class.Humanoid:GetState()` and
-        `Class.Humanoid:ChangeState()`
-      - Individual states can be disabled using
-        `Class.Humanoid:SetStateEnabled()`
-      - As there is no idle humanoid state, you should instead use the
-        `Class.Humanoid.Running` event or listen to the
-        `Class.Humanoid.RootPart|RootPart's` `Class.BasePart.Velocity` to work
-        out when the `Class.Humanoid` is standing still
+      - `Class.Humanoid:GetState()` and `Class.Humanoid:ChangeState()` to get
+        and set the state.
+      - `Class.Humanoid:SetStateEnabled()` to enable and disable specific
+        states.
     code_samples:
       - jumping-particles
       - jump-cooldown
@@ -2774,12 +2671,12 @@ events:
         type: HumanoidStateType
         default:
         summary: |
-          The `Class.Humanoid|Humanoid's` previous state type.
+          The humanoid's previous state type.
       - name: new
         type: HumanoidStateType
         default:
         summary: |
-          The `Class.Humanoid|Humanoid's` current state type.
+          The humanoid's current state type.
     tags: []
     deprecation_message: ''
     security: None
@@ -2881,7 +2778,6 @@ events:
       unused, if it is set using `Class.Humanoid:ChangeState()` the state will
       revert to `RunningNoPhysics`.
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: active
         type: bool
@@ -2916,7 +2812,6 @@ events:
       - You can disable swimming using the `Class.Humanoid:SetStateEnabled()`
         function
     code_samples:
-      - humanoid-action-events
     parameters:
       - name: speed
         type: float
@@ -2929,39 +2824,38 @@ events:
     thread_safety: Unsafe
   - name: Humanoid.Touched
     summary: |
-      Fires when one of the `Class.Humanoid|Humanoid's` limbs come in contact
-      with another `Class.BasePart`.
+      Fires when one of the humanoid's limbs come in contact with another
+      `Class.BasePart`.
     description: |
-      This event fires when one of the `Class.Humanoid|Humanoid's` limbs come in
-      contact with another `Class.BasePart`.
-
-      The `Class.BasePart` the `Class.Humanoid|Humanoid's` limb is touching
-      along with the limb itself is given.
+      This event fires when one of the humanoid's limbs comes in contact with
+      another `Class.BasePart`. The `Class.BasePart` which the limb is touching,
+      along with the limb itself, is given.
 
       This event will not fire when limbs belonging to the `Class.Humanoid` come
       into contact with themselves.
 
-      #### Alternatives to the Humanoid Touched event
+      #### Alternatives
 
-      Although the Humanoid.Touched event is useful, developers should consider
-      if there are alternatives that suit their needs better before using it.
+      Although the `Class.Humanoid.Touched` event is useful, you should consider
+      if there are alternatives that better suit your needs.
 
-      - In most cases it is advised to connect a `Class.BasePart.Touched` event
-        for `Class.BasePart|BaseParts` of interest instead. This is because the
-        Humanoid Touched event will constantly fire when the humanoid is moving.
-        For example, in a dodgeball game it would be more practical to connect a
-        touched event for the balls rather than the humanoid
-      - For developers trying to work out when the `Class.Humanoid` has landed
-        on the ground, the `Class.Humanoid.StateChanged` event is more suitable.
-        Alternatively, developers can use `Class.Humanoid.FloorMaterial` to see
-        if the `Class.Humanoid` is standing on anything
+      - In most cases, it's advised to connect a `Class.BasePart.Touched` event
+        for `Class.BasePart|BaseParts` of interest instead, as the
+        `Class.Humanoid.Touched` event will constantly fire when the humanoid is
+        moving. For example, in a dodgeball game, it would be more practical to
+        connect a `Class.BasePart.Touched|Touched` event for the balls rather
+        than use `Class.Humanoid.Touched`.
+      - When trying to work out when the `Class.Humanoid` has landed on the
+        ground, the `Class.Humanoid.StateChanged` event is more suitable.
+        Alternatively, you can check `Class.Humanoid.FloorMaterial` to see if
+        the humanoid is standing on any non-air material.
 
-      Note:
+      #### Notes
 
       - Connecting to this event will cause a `Class.TouchTransmitter` to be
-        created in every limb
+        created in every limb.
       - There is currently no equivalent of `Class.BasePart.TouchEnded` for
-        `Class.Humanoid|Humanoids`"
+        `Class.Humanoid|Humanoids`.
     code_samples:
       - midas-touch-2
     parameters:

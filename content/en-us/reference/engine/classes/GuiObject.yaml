@@ -128,10 +128,10 @@ properties:
       can_save: true
   - name: GuiObject.BackgroundColor
     summary: |
-      Determines the color of a `Class.GuiObject|GUI's` background.
+      Determines the color of the `Class.GuiObject` background.
     description: |
-      This property used to determine the color of a `Class.GuiObject|GUI's`
-      background but is deprecated in favor of
+      This property determines the color of the `Class.GuiObject` background but
+      is deprecated in favor of
       `Class.GuiObject.BackgroundColor3|BackgroundColor3`, which should be used
       in new work instead.
     code_samples:
@@ -154,10 +154,10 @@ properties:
       can_save: false
   - name: GuiObject.BackgroundColor3
     summary: |
-      Determines a`Class.GuiObject|GUI's` background color.
+      Determines the `Class.GuiObject` background color.
     description: |
-      This property determines the color of a `Class.GuiObject|UI` background
-      (the fill color).
+      This property determines the color of a `Class.GuiObject` background (the
+      fill color).
 
       Another property that determines the visual properties of the background
       is `Class.GuiObject.BackgroundTransparency`. If an element's
@@ -168,9 +168,7 @@ properties:
       `Class.TextButton`, or `Class.TextLabel`, make sure the color of your
       background contrasts the text's color.
 
-      See also:
-
-      - `Class.GuiObject.BorderColor3`
+      See also `Class.GuiObject.BorderColor3`.
     code_samples:
       - Rainbow-Frame
     type: Color3
@@ -186,10 +184,10 @@ properties:
       can_save: true
   - name: GuiObject.BackgroundTransparency
     summary: |
-      Determines the transparency of the `Class.GuiObject|GUI's` background and
+      Determines the transparency of the `Class.GuiObject` background and
       border.
     description: |
-      This property determines the transparency of the `Class.GuiObject|GUI's`
+      This property determines the transparency of the `Class.GuiObject`
       background and border.
 
       It does not, however, determine the transparency of text if the GUI is a
@@ -214,11 +212,11 @@ properties:
       can_save: true
   - name: GuiObject.BorderColor
     summary: |
-      Determines the color of a `Class.GuiObject|GUI's` border.
+      Determines the color of the `Class.GuiObject` border.
     description: |
-      This property used to determine the color of a `Class.GuiObject|GUI's`
-      border but is deprecated in favor of the `Datatype.Color3` property
-      BorderColor3, which should be used in new work instead.
+      This property determines the color of a `Class.GuiObject` border but is
+      deprecated in favor of the `Datatype.Color3` property BorderColor3, which
+      should be used in new work instead.
     code_samples:
     type: BrickColor
     tags:
@@ -238,23 +236,16 @@ properties:
       can_save: false
   - name: GuiObject.BorderColor3
     summary: |
-      Determines the color of a `Class.GuiObject|GUI's` border.
+      Determines the color of the `Class.GuiObject` border.
     description: |
-      The `Class.UIStroke` component allows for more advanced border effects.
+      Determines the color of a `Class.GuiObject` rectangular border (also known
+      as the stroke color). This is separate from the object's
+      `Class.GuiObject.BackgroundColor3`. Note that you will not be able to see
+      the object's border if its `Class.GuiObject.BorderSizePixel` property is
+      set to 0.
 
-      BorderColor3 determines the color of a `Class.GuiObject|UI` element's
-      rectangular border (also known as the stroke color).
-
-      This is separate from the UI element's `Class.GuiObject.BackgroundColor3`.
-      If you set a UI element's border and background colors to the same color,
-      you will be unable to distinguish the two.
-
-      Other properties that determine the visual properties of the border
-      include `Class.GuiObject.BorderSizePixel` and
-      `Class.GuiObject.BackgroundTransparency`.
-
-      Note that you will not be able to see an element's border if its
-      BorderSizePixel property is set to 0.
+      Note that the `Class.UIStroke` component allows for more advanced border
+      effects.
     code_samples:
       - Rainbow-Frame
       - Button-Highlight
@@ -585,24 +576,18 @@ properties:
       can_save: true
   - name: GuiObject.Position
     summary: |
-      Determines the pixel and scalar position of a `GUI`.
+      Determines the pixel and scalar position of the `Class.GuiObject`.
     description: |
-      This property determines a `Class.GuiObject|GUI's` pixel and scalar size
-      using a `Datatype.UDim2`. Its value can be expressed as
-      `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
-      `({ScalarX, PixelX}, {ScalarY, PixelY})`. Position is centered around a
-      GUI's `Class.GuiObject.AnchorPoint`.
-
-      An element's position can also be set by modifying both its scalar and
-      pixel positions at the same time. For instance, its position can be set to
-      `({0.25, 100}, {0.25, 100})`.
+      This property determines the `Class.GuiObject` pixel and scalar size using
+      a `Datatype.UDim2`. Position is centered around the object's
+      `Class.GuiObject.AnchorPoint`.
 
       The scalar position is relative to the size of the parent GUI element. For
-      example, if AnchorPoint is set to `0, 0` and Position is set to
-      `{0, 0}, {0, 0}`, the element's top left corner renders at the top left
-      corner of the parent element. Similarly, if AnchorPoint is set to `0, 0`
-      and Position is set to `{0.5, 0}, {0.5, 0}`, the element's top left corner
-      will render at the direct center of the parent element.
+      example, if `Class.GuiObject.AnchorPoint|AnchorPoint` is set to `0, 0` and
+      Position is set to `{0, 0}, {0, 0}`, the element's top left corner renders
+      at the top left corner of the parent element. Similarly, if AnchorPoint is
+      set to `0, 0` and Position is set to `{0.5, 0}, {0.5, 0}`, the element's
+      top left corner will render at the direct center of the parent element.
 
       The pixel portions of the `Datatype.UDim2` value are the same regardless
       of the parent GUI's size. The values represent the position of the object
@@ -660,19 +645,19 @@ properties:
     summary: |
       Determine whether the `Class.GuiObject|GUI` can be selected by a gamepad.
     description: |
-      This property determines whether a ~GuiObject|GUI` can be selected when
-      navigating GUIs using a gamepad.
+      This property determines whether the `Class.GuiObject` can be selected
+      when navigating GUIs using a gamepad.
 
       If this property is true, a GUI can be selected. Selecting a GUI also sets
       the `Class.GuiService.SelectedObject` property to that object.
 
       When this is false, the GUI cannot be selected. However, setting this to
       false when a GUI is selected will not deselect it nor change the value of
-      the GuiService's SelectedObject property.
+      the `Class.GuiService.SelectedObject` property.
 
       Add `Class.GuiObject.SelectionGained` and `Class.GuiObject.SelectionLost`
       will not fire for the element. To deselect a GuiObject, you must change
-      `Class.GuiService|GuiService's` SelectedObject property.
+      the `Class.GuiService.SelectedObject` property.
 
       This property is useful if a GUI is connected to several GUIs via
       properties such as this `Class.GuiObject.NextSelectionUp`,
@@ -754,8 +739,8 @@ properties:
     summary: |
       Determine the pixel and scalar size of a `Class.GuiObject|GUI`.
     description: |
-      This property determines a `Class.GuiObject|GUI's` scalar and pixel size
-      using a `Datatype.UDim2`. Its value can be expressed as
+      This property determines the `Class.GuiObject` scalar and pixel size using
+      a `Datatype.UDim2`. Its value can be expressed as
       `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
       `({ScalarX, PixelX}, {ScalarY, PixelY})`.
 

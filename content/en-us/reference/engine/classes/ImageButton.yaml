@@ -22,11 +22,11 @@ deprecation_message: ''
 properties:
   - name: ImageButton.HoverImage
     summary: |
-      A textureId that will be used when `Class.ImageButton` is being hovered.
+      A texture ID that will be used when the `Class.ImageButton` is being
+      hovered.
     description: |
-      A textureId that could be set on the `Class.ImageButton|ImageButton's`
-      properties. When the button is hovered, it will render HoverImage if
-      specified.
+      A texture ID that will be used when the `Class.ImageButton` is being
+      hovered.
     code_samples:
     type: Content
     tags: []

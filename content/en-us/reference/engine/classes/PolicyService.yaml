@@ -55,7 +55,13 @@ methods:
       <td>AllowedExternalLinkReferences</td>
       <td>Array of strings</td>
       <td>Any experience that references external links</td>
-      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", and "YouTube".</td>
+      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", "YouTube", and "X".</td>
+      </tr>
+      <tr>
+      <td>IsEligibleToPurchaseSubscription</td>
+      <td>Boolean</td>
+      <td>Any experience that wants to sell subscriptions</td>
+      <td>When true, the player is eligible to purchase subscriptions within an experience.</td>
       </tr>
       <tr>
       <td>IsPaidItemTradingAllowed</td>
