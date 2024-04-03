@@ -86,7 +86,7 @@ Once Stripe accepts your application, you cannot change the country associated w
 
 ### Checking Approval Status
 
-To check the status of your application, revisit the [Seller Onboarding](https://create.roblox.com/settings/eligibility/seller-onboarding) page, then click **Edit Account Info**. Your approval status can be in any of the following states:
+To check the status of your application, revisit the [Seller Onboarding](https://create.roblox.com/settings/eligibility/priced-assets) page, then click **Edit Account Info**. Your approval status can be in any of the following states:
 
 - **Pending** — Your information is being reviewed.
 - **Failed** — Your seller account has not been created, either because of an error or because your information was incorrect.
@@ -118,7 +118,7 @@ Your earnings automatically pay out once a month to the bank associated with you
 
 <Alert severity="warning">
 
-If your seller eligibility is suspended, either due to a change of seller information or moderation consequences, payouts are frozen until you can restore your eligibility. To see the status of your account, see the [Seller Onboarding](https://create.roblox.com/settings/eligibility/seller-onboarding) page.
+If your seller eligibility is suspended, either due to a change of seller information or moderation consequences, payouts are frozen until you can restore your eligibility. To see the status of your account, see the [Seller Onboarding](https://create.roblox.com/settings/eligibility/priced-assets) page.
 
 </Alert>
 
