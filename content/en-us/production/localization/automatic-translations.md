@@ -98,7 +98,7 @@ Roblox supports automatic translation between the languages listed below. Curren
 <table>
 <thead>
   <tr>
-    <th>Currently Supported Languages for automatic translation</th>
+    <th>Currently Supported Languages for Automatic Translation</th>
   </tr>
 </thead>
 <tbody>

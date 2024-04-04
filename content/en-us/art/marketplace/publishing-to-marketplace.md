@@ -206,18 +206,7 @@ When setting a price, you can see the percentage breakdown of commissions in the
 
 #### Limited
 
-<Alert severity = 'info'>
-Starting early April 2024:
-- You can change the **Title** and **Description** of your Limited items.
-- You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
-- You can increase, but not decrease, **Quantity Per User**.
-</Alert>
-
 Limited assets, or **Limiteds**, are assets that have a set quantity available for purchase. By enabling the Limited option for your asset, you can set the quantity of your creations which can give you more control over their scarcity. For information on pricing and payments, see [Limited Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md#limited-items). At this time, bodies and heads are not eligible as Limiteds.
-
-<Alert severity = 'warning'>
-At this time, you cannot change a published Limited asset's **Title**, **Description**, **Price**, **Resellable status**, or **Quantity**. You should ensure that your asset details are free of typos or mistakes before publishing a Limited.
-</Alert>
 
 To set your asset as limited:
 
@@ -228,6 +217,7 @@ To set your asset as limited:
    width="80%" />
 
 2. If you want to prevent users from reselling your Limited, disable the **Resellable** option. If disabled, you will not be eligible for [resell commissions](../../art/marketplace/marketplace-fees-and-commissions.md#reselling).
+   - If this is enabled on an item, it cannot be disabled later.
 3. In the **Price** field, set the price for the item. You can set the price to **0** if you want the item to be free or set a price within the [Marketplace price ranges](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges).
 4. In the **Quantity** field, set the number of assets that users can purchase.
 
@@ -237,19 +227,7 @@ If you are selling a Limited item, you can enable **Limit Copies Per User** to s
 
 Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
 
-Limited assets on the Marketplace before the release of this setting don't include a copy limit.
-
 #### Sale Location
-
-<Alert severity = 'info'>
-Starting early April 2024, the following sales locations will be available for both Limited and non-Limited items:
-
-- **Marketplace Only**
-- **Marketplace and Experience by Place ID**
-- **Marketplace and All Experiences**
-- **Experience by Place ID Only**
-
-</Alert>
 
 The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain experiences, or only the Marketplace.
 
@@ -291,10 +269,6 @@ The following location options are available for all items:
     </Alert>
 
 ### Publish Item
-
-<Alert severity = 'info'>
-Starting early April 2024, Premium benefits will not apply to new items. Existing items will continue to have premium benefits support until later this year.
-</Alert>
 
 When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../../art/marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
 
