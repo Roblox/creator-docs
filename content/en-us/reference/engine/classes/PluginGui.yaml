@@ -37,8 +37,7 @@ properties:
 methods:
   - name: PluginGui:BindToClose
     summary: |
-      Binds a function to the `Class.PluginGui` close button, overriding the
-      default behavior.
+      Binds a callback to the `Class.PluginGui` close button.
     description: |
       This function binds a callback to the `Class.PluginGui` close button.
 
