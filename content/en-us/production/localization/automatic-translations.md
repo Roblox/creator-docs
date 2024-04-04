@@ -93,7 +93,7 @@ By default, manually added strings and strings with manual translations are lock
 
 ## Supported Languages
 
-Roblox supports automatic translation with the following languages:
+Roblox supports automatic translation between the languages listed below. Currently, Roblox Translate will always assume that source strings are in the [experience source language](./index.md#setting-source-language).
 
 <table>
 <thead>
@@ -107,6 +107,9 @@ Roblox supports automatic translation with the following languages:
   </tr>
   <tr>
     <td>Chinese - Traditional</td>
+  </tr>
+   <tr>
+    <td>English</td>
   </tr>
   <tr>
     <td>French</td>
