@@ -167,5 +167,14 @@ properties:
       can_load: false
       can_save: false
 methods: []
-events: []
+events:
+  - name: BaseWrap.VerticesModified
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks: []

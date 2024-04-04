@@ -3,59 +3,12 @@ title: Publishing to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
-In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](#creator-and-group-requirements). Users who satisfy the requirements and have not hit their [publishing limits](#publishing-limits), can upload and sell their assets in the following general steps:
+In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](../marketplace/marketplace-policy.md#creator-requirements). Users who satisfy the requirements and have not hit their [uploading and publishing limits](#uploading-and-publishing-limits), can upload and sell their assets in the following general steps:
 
 1. [Upload the asset](#uploading-an-asset) through Studio for validation and moderation.
 2. [Publish the asset](#updating-an-asset) to the Marketplace after configuring metadata and Marketplace settings.
 
-## Creator and Group Requirements
-
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](../../production/publishing/vr-guidelines.md) and [Premium membership](https://www.roblox.com/premium/membership). At this time, only UGC Program members are eligible to upload and sell assets on the Marketplace.
-
-See the following breakdown of the user and group requirements:
-
-<table>
-<thead>
-  <tr>
-    <th colspan="2"><center>Creator is able to…</center></th>
-    <th>ID/Premium Requirements</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="3">Individually</td>
-    <td>Upload content from Studio</td>
-    <td>&mdash; ID Verification</td>
-  </tr>
-  <tr>
-    <td>Publish content to the Marketplace</td>
-    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td>Keep existing content on-sale</td>
-    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td rowspan="3">As a Group</td>
-    <td>Upload content from Studio</td>
-    <td>Uploading user needs: <br /><br />&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td>Publish content to the Marketplace</td>
-    <td>Publishing user needs: <br /><br />&mdash; ID Verification<br /><br />&mdash; Premium 1000/2200<br /><br />Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
-  </tr>
-  <tr>
-    <td>Keep existing content on-sale</td>
-    <td>Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
-  </tr>
-</tbody>
-</table>
-
-<Alert severity = 'info'>
-If you are an existing UGC program participant with Premium 450, you will be required to cancel your existing subscription and upgrade to maintain your marketplace privileges.
-</Alert>
-
-## Publishing Limits
+## Uploading and Publishing Limits
 
 There are limits on the number of assets you can upload to Roblox and enable for sale on the Marketplace:
 
@@ -76,7 +29,7 @@ There are limits on the number of assets you can upload to Roblox and enable for
 
   </tr>
   <tr>
-    <td>Enabling on sale<sup>&dagger;</sup></td>
+    <td>Publishing - Enabling on sale<sup>&dagger;</sup></td>
     <td>1 per day</td>
     <td>N/A</td>
 

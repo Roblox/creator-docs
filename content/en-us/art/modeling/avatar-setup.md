@@ -181,7 +181,7 @@ The following are common examples of models that may not yield expected results 
   </tr>
   <tr>
     <td>
-        <center><figure><img src=".**./../assets/avatar/avatar-setup/No-Neck.png" alt=""/><figcaption>**No neck - Setup tool expects a neck connecting a head to the torso.</figcaption></figure></center>
+        <center><figure><img src=".**./../assets/avatar/avatar-setup/No-Neck.png" alt=""/><figcaption>**No neck** - Setup tool expects a neck connecting a head to the torso.</figcaption></figure></center>
     </td>
   </tr>
   <tr>

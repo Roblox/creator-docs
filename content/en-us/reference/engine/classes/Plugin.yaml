@@ -299,6 +299,23 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+  - name: Plugin:GetPluginComponent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: Plugin:GetSelectedRibbonTool
     summary: |
       Returns the currently selected `Enum.RibbonTool`.

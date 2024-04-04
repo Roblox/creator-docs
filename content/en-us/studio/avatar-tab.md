@@ -54,10 +54,6 @@ The **Avatar Setup** tool lets you easily preview animations, clothing, accessor
 
 <img src="../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
-<Alert severity="success">
-This feature is currently in beta and changes/upgrades should be anticipated. To use it, go to **Beta Features** and enable **UGC Bodies & Heads**.
-</Alert>
-
 ## Animation Editor
 
 The **Animation Editor** allows you to design and publish custom animations on rigs. For more information, see [Animation Editor](../animation/editor.md).

@@ -334,6 +334,22 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+  - name: ScriptEditorService:StripComments
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: code
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: ScriptEditorService:OpenScriptDocumentAsync
     summary: |
       Requests that a Script Editor open the specified script. Returns (true,
