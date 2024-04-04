@@ -53,6 +53,7 @@ See the following breakdown of the user and group requirements:
   </tr>
 </tbody>
 </table>
+
 <Alert severity = 'info'>
 If you are an existing UGC program participant with Premium 450, you will be required to cancel your existing subscription and upgrade to maintain your marketplace privileges.
 </Alert>
