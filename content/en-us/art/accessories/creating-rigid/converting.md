@@ -41,7 +41,7 @@ To fit and generate your accessory:
 <Alert severity = 'success'>
 After successful fitting and converting, your 3D model should populate in your project as a `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
 
-- [Upload the accessory](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace. At this time, only UGC Program participants can sell user-generated content on the Marketplace.
+- [Upload the accessory](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace.- [Upload the accessory](../../../art/accessories/creating-rigid/publishing.md) to the Marketplace. At this time, only UGC Program participants can sell user-generated content on the Marketplace.
 - Use the accessory in your current experience by equipping it to character models with [HumanoidDescription](../../../characters/appearance.md#humanoiddescription), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
 - Save the accessory to your [Toolbox](../../../projects/assets/toolbox.md) to share or use within any of your experiences.
 
