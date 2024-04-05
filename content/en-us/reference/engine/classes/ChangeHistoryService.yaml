@@ -204,8 +204,9 @@ methods:
       returned recording identifier to complete the recording and update the
       undo/redo stack.
 
-      If the plugin already has a recording in progress, this method will fail
-      and return `nil`.
+      If this method fails to begin a recording, this method will return `nil`.
+      Recordings fail if the plugin already has a recording in progress, or if
+      the user is in Run or Play mode.
 
       You may use
       `Class.ChangeHistoryService.IsRecordingInProgress()|IsRecordingInProgress()`
