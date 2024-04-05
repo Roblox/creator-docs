@@ -169,7 +169,7 @@ Like all items sold on Roblox, creators also receive a percentage [commission](#
 - This per-unit fee also applies when selling free Limiteds. If 200 limited hats are listed at a **0** Robux price, the creator pays **4,000** Robux to list this free limited item. For Limiteds set to a price of 0 (free items), **Roblox keeps the entire per-unit fee**.
 
 <Alert severity ='warning'>
-You cannot take your Limited item off-sale. If your item is moderated your payment is not refunded. For more information on our moderation policies and guidelines, see [Marketplace guidelines](../../art/marketplace/marketplace-policy.md#general-guidelines).
+You cannot take your Limited item off-sale. If your item is moderated your payment is not refunded. For more information on our moderation policies and guidelines, see [Marketplace guidelines](../../art/marketplace/marketplace-policy.md#general-creation-guidelines).
 </Alert>
 
 ### Reselling

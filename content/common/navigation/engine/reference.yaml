@@ -1495,11 +1495,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/NoCollisionConstraint.yaml
         ignoreTranslation: true
-      - title: Noise
-        path: /reference/engine/classes/Noise
-        type: engineapi
-        source: /reference/engine/classes/Noise.yaml
-        ignoreTranslation: true
       - title: NotificationService
         path: /reference/engine/classes/NotificationService
         type: engineapi
@@ -1944,11 +1939,6 @@ navigation:
         path: /reference/engine/classes/RigidConstraint
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
-        ignoreTranslation: true
-      - title: RobloxEditableMesh
-        path: /reference/engine/classes/RobloxEditableMesh
-        type: engineapi
-        source: /reference/engine/classes/RobloxEditableMesh.yaml
         ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
@@ -2535,16 +2525,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Texture.yaml
         ignoreTranslation: true
-      - title: TextureGenerationPartGroup
-        path: /reference/engine/classes/TextureGenerationPartGroup
-        type: engineapi
-        source: /reference/engine/classes/TextureGenerationPartGroup.yaml
-        ignoreTranslation: true
-      - title: TextureGenerationUnwrappingRequest
-        path: /reference/engine/classes/TextureGenerationUnwrappingRequest
-        type: engineapi
-        source: /reference/engine/classes/TextureGenerationUnwrappingRequest.yaml
-        ignoreTranslation: true
       - title: TimerService
         path: /reference/engine/classes/TimerService
         type: engineapi
@@ -2789,11 +2769,6 @@ navigation:
         path: /reference/engine/classes/VideoCaptureService
         type: engineapi
         source: /reference/engine/classes/VideoCaptureService.yaml
-        ignoreTranslation: true
-      - title: VideoDeviceInput
-        path: /reference/engine/classes/VideoDeviceInput
-        type: engineapi
-        source: /reference/engine/classes/VideoDeviceInput.yaml
         ignoreTranslation: true
       - title: VideoFrame
         path: /reference/engine/classes/VideoFrame
@@ -3193,6 +3168,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnalyticsEconomyAction.yaml
         ignoreTranslation: true
+      - title: AnalyticsEconomyFlowType
+        path: /reference/engine/enums/AnalyticsEconomyFlowType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsEconomyFlowType.yaml
+        ignoreTranslation: true
+      - title: AnalyticsEconomyTransactionType
+        path: /reference/engine/enums/AnalyticsEconomyTransactionType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsEconomyTransactionType.yaml
+        ignoreTranslation: true
       - title: AnalyticsLogLevel
         path: /reference/engine/enums/AnalyticsLogLevel
         type: engineapi
@@ -3202,6 +3187,11 @@ navigation:
         path: /reference/engine/enums/AnalyticsProgressionStatus
         type: engineapi
         source: /reference/engine/enums/AnalyticsProgressionStatus.yaml
+        ignoreTranslation: true
+      - title: AnalyticsProgressionType
+        path: /reference/engine/enums/AnalyticsProgressionType
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsProgressionType.yaml
         ignoreTranslation: true
       - title: AnimationClipFromVideoStatus
         path: /reference/engine/enums/AnimationClipFromVideoStatus

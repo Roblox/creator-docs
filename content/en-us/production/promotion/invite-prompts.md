@@ -172,9 +172,7 @@ end
 
 local canInvite = canSendGameInvite(player)
 if canInvite then
-	local success, errorMessage = pcall(function()
-		SocialService:PromptGameInvite(player)
-	end)
+	SocialService:PromptGameInvite(player)
 end
 ```
 
@@ -202,9 +200,7 @@ end
 
 local canInvite = canSendGameInvite(player)
 if canInvite then
-	local success, errorMessage = pcall(function()
-		SocialService:PromptGameInvite(player, inviteOptions)
-	end)
+	SocialService:PromptGameInvite(player, inviteOptions)
 end
 ```
 
@@ -248,9 +244,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
 
    local canInvite = canSendGameInvite(player)
    if canInvite then
-   	local success, errorMessage = pcall(function()
-   		SocialService:PromptGameInvite(player, inviteOptions)
-   	end)
+   	SocialService:PromptGameInvite(player, inviteOptions)
    end
    ```
 
@@ -287,9 +281,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
 
    local canInvite = canSendGameInvite(player)
    if canInvite then
-   	local success, errorMessage = pcall(function()
-   		SocialService:PromptGameInvite(player, inviteOptions)
-   	end)
+   	SocialService:PromptGameInvite(player, inviteOptions)
    end
    ```
 

@@ -210,6 +210,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: UserGameSettings.MasterVolumeStudio
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: UserGameSettings.MouseSensitivity
     summary: |
       A float between 0 and 4 representing the sensitivity of the client's
@@ -244,22 +259,6 @@ properties:
     serialization:
       can_load: false
       can_save: false
-  - name: UserGameSettings.QualityResetLevel
-    summary: ''
-    description: ''
-    code_samples: []
-    type: int
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
   - name: UserGameSettings.RCCProfilerRecordFrameRate
     summary: ''
     description: ''

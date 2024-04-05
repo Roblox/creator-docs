@@ -4,6 +4,11 @@ summary: ''
 description: |
   The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
   `Class.TextButton` to determine how the GUI element will render its text.
+
+  **Note that Gotham and Arial will be removed in the near future. See the
+  [forum
+  announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+  for more information.**
 code_samples:
 tags: []
 deprecation_message: ''
@@ -360,6 +365,18 @@ items:
 
       See [Builder Font License](../../../resources/builder-font-license.md).
     value: 49
+    tags: []
+    deprecation_message: ''
+  - name: Arimo
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/Arimo.png" />
+    value: 50
+    tags: []
+    deprecation_message: ''
+  - name: ArimoBold
+    summary: |
+      <img width="80%" src="../../../assets/engine-api/enums/Font/ArimoBold.png" />
+    value: 51
     tags: []
     deprecation_message: ''
   - name: Unknown

@@ -168,7 +168,7 @@ description: Create a spaceship and race it on an alien planet.
 
 Pair Building Activity
 
-    - Group up two students. Have one publish a place and set up [Team Create](../../projects/collaboration.md#team-create) .
+    - Group up two students. Have one publish a place and set up [Live Collaboration](../../projects/collaboration.md) .
     - Have students take turns adding one piece at a time, or making one change at a time until they create a finished speeder.
 
 **Simply the Lesson**

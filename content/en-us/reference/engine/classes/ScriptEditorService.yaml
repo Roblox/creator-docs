@@ -88,11 +88,6 @@ methods:
       the editor, the method returns the text that the editor would display if
       it's opened. The edit-time source is not always be consistent with the
       `Class.Script.Source` property.
-
-      For example, in
-      [Team Create Drafts](../../../projects/collaboration.md#scripting-using-drafts-mode)
-      mode, this method returns the contents of a local draft created from the
-      script, if one exists.
     code_samples: []
     parameters:
       - name: script
@@ -338,6 +333,22 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:StripComments
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: code
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: ScriptEditorService:OpenScriptDocumentAsync
     summary: |

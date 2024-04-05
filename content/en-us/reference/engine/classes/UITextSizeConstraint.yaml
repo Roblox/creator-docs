@@ -32,7 +32,6 @@ properties:
     description: |
       This property indicates the largest size in pixels the font is allowed to
       be. It defaults to 1000 pixels and much be set larger than or equal to the
-      `Class.UITextSizeConstraint|UITextSizeConstraint's`
       `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property.
 
       If the affected `Class.GuiObject` has its

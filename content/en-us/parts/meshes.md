@@ -27,7 +27,7 @@ Roblox supports many types of meshes, as long as they adhere to the [general mes
 Studio also supports meshes with components for creating avatar character models or accessories, such as [rigging and skinning](#rigging-and-skinning-meshes) data.
 
 <Alert severity='info'>
-If you are participating in the UGC program, you can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing on the Marketplace. See [Avatar](../avatar/index.md) for more information.
+You can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing on the Marketplace. See [Avatar](../avatar/index.md) for more information.
 </Alert>
 
 ## Importing Meshes
