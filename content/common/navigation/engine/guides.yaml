@@ -505,6 +505,8 @@ navigation:
             path: /production/publishing/vr-guidelines
       - title: Account Verification
         path: /production/publishing/account-verification
+      - title: Rights Manager
+        path: /production/publishing/rights-manager
   - title: Promotion
     path: /production/promotion/
     section:
