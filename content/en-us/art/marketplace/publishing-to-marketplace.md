@@ -220,6 +220,8 @@ To set your asset as limited:
    - If this is enabled on an item, it cannot be disabled later.
 3. In the **Price** field, set the price for the item. You can set the price to **0** if you want the item to be free or set a price within the [Marketplace price ranges](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges).
 4. In the **Quantity** field, set the number of assets that users can purchase.
+   - For paid Limited items, the maximum is 3000.
+   - For free Limited items, there is no maximum.
 
 ##### Limit Copies Per User
 
@@ -250,16 +252,8 @@ The following location options are available for all items:
     <td>Users can purchase this item in the Marketplace or any experiences that offer Marketplace purchases. This is the default setting.</td>
   </tr>
   <tr>
-    <td>Marketplace and My Experiences</td>
-    <td>Users can purchase this item in the Marketplace or any of the asset creator's experiences that offer Marketplace purchases.</td>
-  </tr>
-  <tr>
     <td>Experience By Place ID (API Only)</td>
     <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../../production/monetization/avatar-items.md) for their experience.</td>
-  </tr>
-  <tr>
-    <td>Marketplace only</td>
-    <td>Users can only purchase this item in the Marketplace.</td>
   </tr>
 </tbody>
 </table>
