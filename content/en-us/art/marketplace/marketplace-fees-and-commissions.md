@@ -18,11 +18,7 @@ When uploading, accessories, clothing, bodies, and heads require an upload fee o
 
 ## Publishing Advance
 
-<Alert severity = 'info'>
-Starting middle of March 2024, Marketplace items require a publishing advance that replaces the [per-unit fee](#per-unit-fee). Existing creators do not have to pay a publishing advance for any existing items.
-</Alert>
-
-A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dynamic and dependent on the type of Marketplace item being sold:
+A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dependent on the type of Marketplace item being sold:
 
 <table>
 <thead>
@@ -111,12 +107,12 @@ A publishing advance is a refundable upfront fee that you pay at the time of pub
   <tr>
     <td>Body</td>
     <td>4000</td>
-    <td>n/a – no limited bodies</td>
+    <td>Not available as Limiteds.</td>
   </tr>
   <tr>
     <td>Head</td>
     <td>1500</td>
-    <td>n/a – no limited heads</td>
+    <td>Not available as Limiteds.</td>
   </tr>
 </tbody>
 </table>
