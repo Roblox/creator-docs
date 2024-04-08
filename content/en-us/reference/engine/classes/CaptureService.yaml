@@ -5,10 +5,10 @@ memory_category: Instances
 summary: |
   A service which provides control over screenshot capture features.
 description: |
-  **CaptureService** is a client-side service that allows developers to control how the screenshot capture feature integrates with their experiences.
-
-  Developers can use **CaptureService** to include pre-set moments where a screenshot is automatically taken for users. Users then have the option to save, share, or delete the screenshot.
-
+  **CaptureService** is a client-side service that allows developers to control
+  how the screenshot capture feature integrates with their experiences. It can
+  be used to include preset moments where a screenshot is automatically taken
+  for a user, and that user can then save, share, or delete the screenshot.
 code_samples: []
 inherits:
   - Instance
@@ -23,11 +23,11 @@ methods:
     summary: |
       Takes a screenshot and provides a temporary `contentId` to identify it.
     description: |
-      This method captures a screenshot for the user but does not immediately 
-      save it to their Captures. Instead, a temporary `contentId` is created
-      to identify the new capture.
+      This method captures a screenshot for the user but does not immediately
+      save it to their **Captures** gallery within the experience's main menu.
+      Instead, a temporary `contentId` is created to identify the new capture.
 
-      The `onCaptureReady` callback can be used to prompt the user to save or 
+      The `onCaptureReady` callback can be used to prompt the user to save or
       share the screenshot.
     code_samples: []
     parameters:
@@ -46,11 +46,11 @@ methods:
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
-      Prompts the user to save specified captures to their Captures gallery.
+      Prompts the user to save specified captures to their gallery.
     description: |
       This method prompts the user to save the screenshots identified by the
-      provided `contentIds` to their Captures gallery, which is accessible 
-      from the Captures tab of the in-experience Roblox menu.
+      provided `contentIds` to their **Captures** gallery within the
+      experience's main menu.
     code_samples: []
     parameters:
       - name: contentIds
@@ -63,8 +63,8 @@ methods:
         default:
         summary: |
           A callback function that will be invoked with a dictionary mapping
-          `contentId` to a boolean indicating if the user accepted saving that
-          capture.
+          each `contentId` to a boolean indicating if the user accepted saving
+          that capture.
     returns:
       - type: void
         summary: ''
@@ -76,22 +76,22 @@ methods:
     summary: |
       Prompts the user to share a specified screenshot capture. 
     description: |
-      This method prompts the user to share the screenshot identified by the 
+      This method prompts the user to share the screenshot identified by the
       provided `contentId` using the native share sheet on their device.
 
-      The capture image will be shared along with an invite link to the 
-      experience when supported. Not all devices/apps support including both
-      a screenshot and invite link.
+      The capture image will be shared along with an invite link to the
+      experience when supported. Not all devices/apps support including both a
+      screenshot and invite link.
 
-      The `launchData` will be available in the `launchData` field for users
-      who join through the invite link.
+      The `launchData` will be available in the `launchData` field for users who
+      join through the invite link.
     code_samples: []
     parameters:
       - name: contentId
         type: Content
         default:
         summary: |
-          The `contentId` identifying the screenshot to share.  
+          The `contentId` identifying the screenshot to share.
       - name: launchData
         type: string
         default:
@@ -118,8 +118,8 @@ events:
   - name: CaptureService.CaptureBegan
     summary: Fires immediately before a capture begins.
     description: |
-      This event fires right before a new screenshot capture is taken. It can 
-      be used to customize the capture experience, for example by hiding certain
+      This event fires right before a new screenshot capture is taken. It can be
+      used to customize the capture experience, for example by hiding certain
       GUI elements.
     code_samples: []
     parameters: []
@@ -131,7 +131,8 @@ events:
     summary: Fires after a capture finishes.
     description: |
       This event fires after a new screenshot capture completes. It can be used
-      to restore any changes made when the `CaptureBegan` event fired.
+      to restore any changes made when the
+      `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []
     parameters: []
     tags: []
@@ -154,7 +155,9 @@ events:
   - name: CaptureService.UserCaptureSaved
     summary: Fires when the user saves a capture.
     description: |
-      This event fires when the user saves a screenshot using the Roblox screenshot capture UI. It can be used for analytics or to prompt the user to share their capture.
+      This event fires when the user saves a screenshot using the Roblox
+      screenshot capture UI. It can be used for analytics or to prompt the user
+      to share their capture.
     code_samples: []
     parameters:
       - name: captureContentId
