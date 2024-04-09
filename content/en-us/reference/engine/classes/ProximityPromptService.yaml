@@ -211,7 +211,8 @@ events:
     summary: |
       Triggers when the user interacts with this prompt.
     description: |
-      This event triggers when the player interacts with this prompt.
+      This event triggers when the player completes interaction with a prompt, either when `Class.ProximityPrompt.KeyboardKeyCode|key`/button is pressed, or after a
+      specified amount of time holding the button, if Class.ProximityPrompt.HoldDuration` is used. 
     code_samples:
     parameters:
       - name: prompt
