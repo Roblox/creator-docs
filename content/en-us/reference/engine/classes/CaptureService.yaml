@@ -141,7 +141,8 @@ events:
     thread_safety: Unsafe
   - name: CaptureService.CaptureSaved
     summary: ''
-    description: ''
+    description: |
+      This event has been superseded by the `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     code_samples: []
     parameters:
       - name: captureInfo
