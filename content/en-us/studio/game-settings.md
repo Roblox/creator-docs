@@ -310,7 +310,7 @@ The **Other** tab includes settings that are typically reserved for special situ
 <tbody>
   <tr>
     <td>**Enable Drafts Mode**</td>
-    <td>Enables asynchronous, drafts-based script editing in a [Team Create](../projects/collaboration.md) session.</td>
+    <td>Enables asynchronous, drafts-based script editing in a [collaborative](../projects/collaboration.md) session.</td>
   </tr>
   <tr>
     <td>**Shutdown All Servers**</td>

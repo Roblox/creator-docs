@@ -63,7 +63,7 @@ To create a mood:
 
       - **Title**: A name for your plugin.
       - **Description**: A description that describes what a potential user should expect the plugin to do.
-      - **Creator**: The creator you'd like to attribute as the creator of the plugin. If you are using Team Create, every creator appears, otherwise "Me" is the only option.
+      - **Creator**: The creator you'd like to attribute as the creator of the plugin.
 
    1. Click the **Submit** button. After a moment, the Asset Configuration dialog displays your mood's `Class.Animation.AnimationID` that you can use to set the mood to characters within your experiences.
 

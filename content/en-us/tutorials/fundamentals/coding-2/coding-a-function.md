@@ -73,7 +73,7 @@ Information that is inside the function, or can be used by the function, is in *
 
 ```lua
 local function printFood()
-   print("Curry")
+   print("Curry!")
 end
 ```
 
@@ -89,7 +89,7 @@ There's one more thing we need to do before the function will work, and that's t
 
    ```lua
    local function printFood()
-      print("Curry")
+      print("Curry!")
    end
 
    printFood()

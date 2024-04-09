@@ -91,6 +91,27 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AssetService:CreateMeshPartAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: MeshPart
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place through the given `templatePlaceID`.

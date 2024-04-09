@@ -171,7 +171,7 @@ If a collaborative session, Roblox stores scripts in a central cloud-based repos
 <Alert severity="info">
 Drafts mode is **enabled** by default. If you want to **disable** it but continue to collaborate with others, open the [Game Settings](../studio/game-settings.md) window, select the **Other** tab, and turn off **Enable&nbsp;Drafts&nbsp;Mode**.
 
-Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable Team Create](#team-create) and then reenable it to restart the session.
+Note that all collaborators will need to exit the session for the change to take effect. Alternatively, you can [disable collaboration](#disabling-collaboration) and then reenable it to restart the session.
 </Alert>
 
 ### Drafting Scripts
@@ -250,24 +250,12 @@ During a collaborative session, Studio automatically saves the project to the cl
 The owners of an experience can revert changes made by other editors. See [here](../production/publishing/publishing-experiences-and-places.md#reverting-to-previous-versions) for instructions.
 
 <Alert severity="error">
-Be careful when reverting changes. If anyone is currently editing the experience in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable Team Create](#team-create).
+Be careful when reverting changes. If anyone is currently editing the experience in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable collaboration](#disabling-collaboration).
 </Alert>
 
-## Team Create
+## Disabling Collaboration
 
-**Team Create** is the core Studio feature that enables collaboration. Workflows that involve the [Manage Collaborators](#managing-collaborators) dialog will automatically enable the feature, but you can still enable or disable it manually if necessary.
-
-<Tabs>
-<TabItem label="Enabling Team Create">
-
-1. Click the **Collaborate** button in the toolbar.
-
-   <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
-
-2. Set up who can collaborate in the session as outlined in [Managing Collaborators](#managing-collaborators). When you click **Save**, Studio will reload the place in a collaborative session.
-
-</TabItem>
-<TabItem label="Disabling Team Create">
+**Team Create** is the core Studio feature that enables collaboration. Workflows that involve the [Manage Collaborators](#managing-collaborators) dialog will automatically enable the feature, but you can manually disable it if necessary.
 
 1. If the [Live Collaborators](#viewing-collaborators) window isn't already open, click on any of the collaborator icons to open it.
 
@@ -278,6 +266,3 @@ Be careful when reverting changes. If anyone is currently editing the experience
    <img src="../assets/studio/collaboration/Live-Collaborators-Disable.png" width="280" />
 
 3. When prompted, confirm ending the session to reload the place in a non‑collaborative state.
-
-</TabItem>
-</Tabs>

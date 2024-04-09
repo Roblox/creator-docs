@@ -2,8 +2,13 @@ name: CaptureService
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service which provides control over screenshot capture features.
+description: |
+  **CaptureService** is a client-side service that allows developers to control
+  how the screenshot capture feature integrates with their experiences. It can
+  be used to include preset moments where a screenshot is automatically taken
+  for a user, and that user can then save, share, or delete the screenshot.
 code_samples: []
 inherits:
   - Instance
@@ -15,14 +20,23 @@ deprecation_message: ''
 properties: []
 methods:
   - name: CaptureService:CaptureScreenshot
-    summary: ''
-    description: ''
+    summary: |
+      Takes a screenshot and provides a temporary `contentId` to identify it.
+    description: |
+      This method captures a screenshot for the user but does not immediately
+      save it to their **Captures** gallery within the experience's main menu.
+      Instead, a temporary `contentId` is created to identify the new capture.
+
+      The `onCaptureReady` callback can be used to prompt the user to save or
+      share the screenshot.
     code_samples: []
     parameters:
       - name: onCaptureReady
         type: Function
         default:
-        summary: ''
+        summary: |
+          A callback function that is called with the `contentId` of the new
+          capture once it is ready.
     returns:
       - type: void
         summary: ''
@@ -31,18 +45,26 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
-    summary: ''
-    description: ''
+    summary: |
+      Prompts the user to save specified captures to their gallery.
+    description: |
+      This method prompts the user to save the screenshots identified by the
+      provided `contentIds` to their **Captures** gallery within the
+      experience's main menu.
     code_samples: []
     parameters:
       - name: contentIds
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of `contentId` strings identifying the screenshots to save.
       - name: resultCallback
         type: Function
         default:
-        summary: ''
+        summary: |
+          A callback function that will be invoked with a dictionary mapping
+          each `contentId` to a boolean indicating if the user accepted saving
+          that capture.
     returns:
       - type: void
         summary: ''
@@ -51,26 +73,40 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
-    summary: ''
-    description: ''
+    summary: |
+      Prompts the user to share a specified screenshot capture. 
+    description: |
+      This method prompts the user to share the screenshot identified by the
+      provided `contentId` using the native share sheet on their device.
+
+      The capture image will be shared along with an invite link to the
+      experience when supported. Not all devices/apps support including both a
+      screenshot and invite link.
+
+      The `launchData` will be available in the `launchData` field for users who
+      join through the invite link.
     code_samples: []
     parameters:
       - name: contentId
         type: Content
         default:
-        summary: ''
+        summary: |
+          The `contentId` identifying the screenshot to share.
       - name: launchData
         type: string
         default:
-        summary: ''
+        summary: |
+          An optional string to include as launch data in the invite link.
       - name: onAcceptedCallback
-        type: Function
+        type: Function 
         default:
-        summary: ''
+        summary: |
+          An optional callback function invoked if the user accepts sharing.
       - name: onDeniedCallback
         type: Function
         default:
-        summary: ''
+        summary: |
+          An optional callback function invoked if the user denies sharing.
     returns:
       - type: void
         summary: ''
@@ -80,8 +116,11 @@ methods:
     thread_safety: Unsafe
 events:
   - name: CaptureService.CaptureBegan
-    summary: ''
-    description: ''
+    summary: Fires immediately before a capture begins.
+    description: |
+      This event fires right before a new screenshot capture is taken. It can be
+      used to customize the capture experience, for example by hiding certain
+      GUI elements.
     code_samples: []
     parameters: []
     tags: []
@@ -89,8 +128,11 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CaptureService.CaptureEnded
-    summary: ''
-    description: ''
+    summary: Fires after a capture finishes.
+    description: |
+      This event fires after a new screenshot capture completes. It can be used
+      to restore any changes made when the
+      `Class.CaptureService.CaptureBegan|CaptureBegan` event fired.
     code_samples: []
     parameters: []
     tags: []
@@ -99,7 +141,8 @@ events:
     thread_safety: Unsafe
   - name: CaptureService.CaptureSaved
     summary: ''
-    description: ''
+    description: |
+      This event has been superseded by the `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     code_samples: []
     parameters:
       - name: captureInfo
@@ -111,14 +154,18 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CaptureService.UserCaptureSaved
-    summary: ''
-    description: ''
+    summary: Fires when the user saves a capture.
+    description: |
+      This event fires when the user saves a screenshot using the Roblox
+      screenshot capture UI. It can be used for analytics or to prompt the user
+      to share their capture.
     code_samples: []
     parameters:
       - name: captureContentId
         type: Content
         default:
-        summary: ''
+        summary: |
+          The `contentId` identifying the screenshot that the user saved.
     tags: []
     deprecation_message: ''
     security: None
