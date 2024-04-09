@@ -5,11 +5,10 @@ memory_category: Instances
 summary: |
   Represents a sequence of rotations and the interpolation curve between them.
 description: |
-  This class holds a sorted list of `RotationCurveKey|RotationCurveKeys` that
-  represent a sequence of rotations. The shape of the interpolation curve
-  between two RotationCurveKeys is determined by the RotationCurveKey
-  interpolation type. RotationCurve provides a sampling method `GetValueAtTime`
-  returning its result as the rotation component of a CFrame.
+  This class holds a sorted list of
+  `Datatype.RotationCurveKey|RotationCurveKeys` that represent a sequence of
+  rotations. The shape of the interpolation curve between two keys is determined
+  by the `Datatype.RotationCurveKey.Interpolation` type.
 code_samples:
 inherits:
   - Instance
@@ -58,10 +57,11 @@ methods:
     summary: |
       Returns the index of the last and first key of a period of time.
     description: |
-      The first returned value is the index of the last key with
-      `key.time <= time` (or `min(1,length`) if no key was found). The second
-      returned value is the index of the first key with `key.time >= time` (or
-      the length of the curve if no key was found satisfying the inequality).
+      The first item in the returned array is the index of the last key with
+      time less than or equal to `time` (or the lesser of either 1 or the curve
+      length if no key was found). The second item in the returned array is the
+      index of the first key with time greater than or equal to `time` (or the
+      curve length if no key was found satisfying the inequality).
     code_samples:
     parameters:
       - name: time
@@ -77,94 +77,102 @@ methods:
     thread_safety: Unsafe
   - name: RotationCurve:GetKeys
     summary: |
-      Returns a copy of all the keys in the RotationCurve as a Lua array of
-      RotationCurveKey.
+      Returns a copy of all the keys in the rotation curve as a Lua array of
+      `Datatype.RotationCurveKey|RotationCurveKeys`.
     description: |
-      Returns a copy of all the keys in the RotationCurve as a Lua array of
-      RotationCurveKey.
+      Returns a copy of all the keys in the rotation curve as a Lua array of
+      `Datatype.RotationCurveKey|RotationCurveKeys`.
     code_samples:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array of `Datatype.RotationCurveKey|RotationCurveKeys`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: RotationCurve:GetValueAtTime
     summary: |
-      Samples the RotationCurve at a given time and returns the corresponding
-      rotation as a CFrame. Empty RotationCurves are evaluated as identity.
+      Samples the rotation curve at a given time and returns the corresponding
+      rotation as a `Datatype.CFrame`.
     description: |
-      Samples the RotationCurve at a given time and returns the corresponding
-      rotation as a CFrame. Empty RotationCurves are evaluated as identity.
+      Samples the rotation curve at a given time and returns the corresponding
+      rotation as a `Datatype.CFrame`. Empty rotation curves are evaluated as `Datatype.CFrame.identity`.
     code_samples:
     parameters:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          Time at which to sample the curve.
     returns:
       - type: CoordinateFrame?
-        summary: ''
+        summary: |
+          Value of the curve at the requested `time`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: RotationCurve:InsertKey
     summary: |
-      Adds the key passed as argument to this curve. If a key at the same time
-      is found it will be replaced.
+      Adds the key passed as an argument to this curve. If a key at the same
+      time is found, it will be replaced.
     description: |
-      Adds the key passed as argument to this curve. If a key at the same time
-      is found it will be replaced. First return value is true if a key was
-      added, false if a previous key was replaced. Second return value is the
-      index at which the marker was added.
+      Adds the key passed as an argument to this curve. If a key at the same
+      time is found, it will be replaced. In the returned array, the first value
+      is `true` if a key was added or `false` if a previous key was replaced;
+      the second value is the index at which the marker was added.
     code_samples:
     parameters:
       - name: key
         type: RotationCurveKey
         default:
-        summary: ''
+        summary: |
+           `Datatype.RotationCurveKey` to insert.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          (see description)
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: RotationCurve:RemoveKeyAtIndex
     summary: |
-      Removes a given number of Keys starting from a given index. Returns the
-      number of keys that were removed.
+      Removes a given number of keys starting from a given index.
     description: |
-      Removes a given number of Keys starting from a given index. Returns the
-      number of keys that were removed.
+      Removes a given number (`count`) of keys starting from the `startingIndex`
+      index and returns the number of keys that were removed.
     code_samples:
     parameters:
       - name: startingIndex
         type: int
         default:
-        summary: ''
+        summary: |
+          Starting index from which to remove keys.
       - name: count
         type: int
         default: 1
-        summary: ''
+        summary: |
+          Number of keys to remove.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          Number of keys removed.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: RotationCurve:SetKeys
     summary: |
-      Resets this curve keys using the RotationCurveKey array passed as
-      argument.
+      Resets this curve's keys using the `Datatype.RotationCurveKey` array passed as an argument.
     description: |
-      Resets this curve keys using the RotationCurveKey array passed as
-      argument. Keys in the keysArray are sorted in ascending time order before
-      insertion. Keys at duplicated times are removed in a stable manner.
+      Resets this curve's keys using the `Datatype.RotationCurveKey` array
+      passed as an argument. Keys in the `keys` array are sorted in ascending
+      time order before insertion, and keys at duplicated times are removed in a
+      stable manner.
+      
       Returns the number of keys actually inserted. Keys previously stored in
       this curve are removed before the keys passed as arguments are added.
     code_samples:
@@ -172,10 +180,12 @@ methods:
       - name: keys
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of `Datatype.RotationCurveKey|RotationCurveKeys`.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          Number of keys inserted.
     tags: []
     deprecation_message: ''
     security: None

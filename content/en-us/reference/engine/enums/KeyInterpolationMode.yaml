@@ -3,8 +3,9 @@ type: enum
 summary: |
   Describes the interpolation method between two keys.
 description: |
-  Describes the interpolation method for a FloatCurve or RotationCurve segment
-  between the key for which this mode is set and the next key in the curve.
+  Describes the interpolation method for a `Class.FloatCurve` or
+  `Class.RotationCurve` segment between the key for which this mode is set and
+  the next key in the curve.
 code_samples:
 tags: []
 deprecation_message: ''

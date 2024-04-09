@@ -3054,6 +3054,11 @@ navigation:
         type: engineapi
         source: /reference/engine/datatypes/Region3int16.yaml
         ignoreTranslation: true
+      - title: RotationCurveKey
+        path: /reference/engine/datatypes/RotationCurveKey
+        type: engineapi
+        source: /reference/engine/datatypes/RotationCurveKey.yaml
+        ignoreTranslation: true
       - title: Secret
         path: /reference/engine/datatypes/Secret
         type: engineapi
