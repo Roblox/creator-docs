@@ -153,6 +153,10 @@ To customize the color and motion of water:
    </tbody>
    </table>
 
+<Alert severity="success">
+If you have a place with shoreline terrain (water meeting land), it's recommended that you upgrade your shorelines to improve how water joins with land. All of Studio's templates already use upgraded tech, and you can check your previously‑saved places by opening the [Terrain Editor](../studio/terrain-editor.md) and looking for the **Upgrade** prompt.
+</Alert>
+
 <Alert severity="info">
 Some water properties are only visible while playtesting. To preview all properties while editing, open **Studio&nbsp;Settings**, search for **Editor&nbsp;Quality&nbsp;Level**, and set it to the highest level.
 </Alert>
