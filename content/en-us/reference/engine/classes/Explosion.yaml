@@ -8,8 +8,7 @@ summary: |
   `Class.WeldConstraint|WeldConstraints` between parts and kills
   `Class.Humanoid` characters not protected by a `Class.ForceField`.
 description: |
-  An Explosion applies force to `BaseParts|BasePart` within the explosion's
-  `Class.Explosion.BlastRadius`. This force breaks
+  An Explosion applies force to `Class.BasePart|BaseParts` within the explosion's `Class.Explosion.BlastRadius|BlastRadius`. This force breaks
   `Class.JointInstance|JointInstances` and
   `Class.WeldConstraint|WeldConstraints` between parts and kills
   `Class.Humanoid` characters not protected by a `Class.ForceField`.
