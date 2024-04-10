@@ -1,4 +1,4 @@
-name: AvatarCreationService
+name: CommerceService
 type: class
 category:
 memory_category: Instances
@@ -13,24 +13,7 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarCreationService:LoadAvatarModelAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: id
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: AvatarCreationService:PromptCreateAvatarAsync
+  - name: CommerceService:PromptRealWorldCommerceBrowser
     summary: ''
     description: ''
     code_samples: []
@@ -39,17 +22,42 @@ methods:
         type: Player
         default:
         summary: ''
-      - name: humanoidDescription
-        type: HumanoidDescription
+      - name: url
+        type: string
         default:
         summary: ''
     returns:
-      - type: Tuple
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: CommerceService:UserEligibleForRealWorldCommerceAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: CommerceService.InExperienceBrowserRequested
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: url
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
 callbacks: []

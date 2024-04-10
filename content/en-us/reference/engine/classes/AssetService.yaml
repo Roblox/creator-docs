@@ -117,13 +117,16 @@ methods:
 
           - `CollisionFidelity` – The value of
             `Class.MeshPart.CollisionFidelity|CollisionFidelity` in the
-            resulting part. Defaults to `Enum.CollisionFidelity.Default` if the option is absent or the `options` table is `nil`.
+            resulting part. Defaults to `Enum.CollisionFidelity.Default` if the
+            option is absent or the `options` table is `nil`.
           - `RenderFidelity` – The value of
             `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
-            part. Defaults to `Enum.RenderFidelity.Automatic` if the option is absent or the `options` table is `nil`.
+            part. Defaults to `Enum.RenderFidelity.Automatic` if the option is
+            absent or the `options` table is `nil`.
           - `FluidFidelity` – The value of
-            `Class.MeshPart.FluidFidelity|FluidFidelity` in the resulting
-            part. Defaults to `Enum.FluidFidelity.Automatic` if the option is absent or the `options` table is `nil`.
+            `Class.MeshPart.FluidFidelity|FluidFidelity` in the resulting part.
+            Defaults to `Enum.FluidFidelity.Automatic` if the option is absent
+            or the `options` table is `nil`.
     returns:
       - type: MeshPart
         summary: ''

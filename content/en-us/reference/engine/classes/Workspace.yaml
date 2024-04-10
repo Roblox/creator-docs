@@ -444,6 +444,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.InsertPoint
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: Workspace.InterpolationThrottling
     summary: ''
     description: ''

@@ -74,7 +74,7 @@ methods:
     thread_safety: Unsafe
   - name: CaptureService:PromptShareCapture
     summary: |
-      Prompts the user to share a specified screenshot capture. 
+      Prompts the user to share a specified screenshot capture. .
     description: |
       This method prompts the user to share the screenshot identified by the
       provided `contentId` using the native share sheet on their device.
@@ -98,7 +98,7 @@ methods:
         summary: |
           An optional string to include as launch data in the invite link.
       - name: onAcceptedCallback
-        type: Function 
+        type: Function
         default:
         summary: |
           An optional callback function invoked if the user accepts sharing.
@@ -114,9 +114,27 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: CaptureService:DeleteCapturesAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pathArr
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events:
   - name: CaptureService.CaptureBegan
-    summary: Fires immediately before a capture begins.
+    summary: |
+      Fires immediately before a capture begins.
     description: |
       This event fires right before a new screenshot capture is taken. It can be
       used to customize the capture experience, for example by hiding certain
@@ -128,7 +146,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CaptureService.CaptureEnded
-    summary: Fires after a capture finishes.
+    summary: |
+      Fires after a capture finishes.
     description: |
       This event fires after a new screenshot capture completes. It can be used
       to restore any changes made when the
@@ -142,7 +161,8 @@ events:
   - name: CaptureService.CaptureSaved
     summary: ''
     description: |
-      This event has been superseded by the `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
+      This event has been superseded by the
+      `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     code_samples: []
     parameters:
       - name: captureInfo
@@ -154,7 +174,8 @@ events:
     security: None
     thread_safety: Unsafe
   - name: CaptureService.UserCaptureSaved
-    summary: Fires when the user saves a capture.
+    summary: |
+      Fires when the user saves a capture.
     description: |
       This event fires when the user saves a screenshot using the Roblox
       screenshot capture UI. It can be used for analytics or to prompt the user

@@ -344,22 +344,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: StarterPlayer.DeathStyle
-    summary: ''
-    description: ''
-    code_samples: []
-    type: DeathStyle
-    tags:
-      - NotBrowsable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Character
-    serialization:
-      can_load: true
-      can_save: true
   - name: StarterPlayer.DevCameraOcclusionMode
     summary: |
       Sets how the default camera handles objects between the camera and the
