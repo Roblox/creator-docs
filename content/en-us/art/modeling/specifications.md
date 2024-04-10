@@ -7,8 +7,9 @@ Roblox supports a wide variety of mesh configurations created from third-party s
 
 Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
+- If you are creating a rigid accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
+- If you are creating a clothing accessory model, ensure that your model follows [Clothing Specifications](../../art/accessories/clothing-specifications.md).
 - If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/characters/specifications.md).
-- If you are creating an accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
 
 When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
 

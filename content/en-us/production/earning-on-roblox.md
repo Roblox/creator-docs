@@ -227,23 +227,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 ## Creating and Selling Studio Plugins
 
-You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/publishing/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of 100&nbsp;Robux.
-
-<Grid container spacing={3}>
-<Grid item xs={12} lg={7}>
-- Creator of the Studio plugin receives **70%**
-- Platform receives **30%**
-</Grid>
-<Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Studio-Plugins.svg" alt="Pie chart illustrating the commission structure for creating and selling Studio plugins" />
-</Grid>
-</Grid>
-
-<Alert severity="warning">
-   In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
-</Alert>
+You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/publishing/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
 
 ## Converting Earned Robux to Cash
 

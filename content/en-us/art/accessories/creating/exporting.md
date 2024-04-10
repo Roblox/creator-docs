@@ -28,3 +28,7 @@ To export your file from Blender:
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" /> <br />
 
 7. Click the **Export FBX** button.
+
+<Alert severity ='success'>
+You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating/Long_Sleeve_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
+</Alert>

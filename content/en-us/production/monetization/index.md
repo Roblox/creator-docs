@@ -122,14 +122,8 @@ You'll receive a [commission](../../art/marketplace/marketplace-fees-and-commiss
 
 ### Plugins
 
-A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio. You can sell plugins to other creators on the [Creator Store](../../production/publishing/creator-store.md) for Robux, or offer them for free. For more information, see [Publishing Plugins](../../studio/plugins.md#publishing-plugins).
+A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio. You can offer them to other creators on the [Creator Store](../../production/publishing/creator-store.md) for free, or you can sell them for **United States Dollars**, with a minumum price of $4.99. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
 
 <Alert severity="warning">
-   In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-   Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
-</Alert>
-
-<Alert severity="warning">
-   There is a 30 day escrow hold for each purchase. Roblox holds the commission from your items and your Robux share of the sale for 30 days, starting from the date of sale.
+   There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.
 </Alert>

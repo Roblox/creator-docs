@@ -21,13 +21,7 @@ When you publish any of these assets and choose to make them public, the [Creato
 
 While there are limits on the number of assets you can publish per 30 days, you can [verify your account](../../production/publishing/account-verification.md) to publish more of each asset type and maximize their discoverability. For more information, see [Publishing Assets](../../production/publishing/publishing-assets.md).
 
-<Alert severity="warning">
-
-In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
-
-</Alert>
+You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
 
 ## Accessories and Clothing
 

@@ -1,4 +1,13 @@
 navigation:
+  - title: Overview
+    path: /art/
+
+  - heading: Getting Started
+  - title: Studio
+    path: /art/overview-studio
+  - title: Third-Party Software
+    path: /art/overview-dcc
+
   - heading: Modeling
   - title: Overview
     path: /art/modeling/
