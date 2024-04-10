@@ -217,7 +217,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 <center> <img src="../assets/art/resources/Rig-And-Attachments-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-Standard armature rig template for Blender. Use this template for rigging **bodies** and **clothing** items.
+Standard armature rig template for various software. Use this template for rigging **bodies** and **clothing** items.
 </figure>
 
 </CardContent>

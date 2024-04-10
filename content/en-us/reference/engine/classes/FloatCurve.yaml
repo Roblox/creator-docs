@@ -3,17 +3,13 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A sorted list of time-value pairs (`Datatype.FloatCurveKey|FloatCurveKeys`)
-  that define a curve. Used to animate a single numerical value.
+  A sorted list of time-value pairs that define a curve. Used to animate a
+  single numerical value.
 description: |
   An instance representing a 1D float curve encoded via a sorted list of
-  `Datatype.FloatCurveKey|FloatCurveKeys`.
-
-  `Datatype.FloatCurveKey|FloatCurveKeys` are value-time points that represent
-  the changes in value over time. The changes of a single value over time are
-  represented by a curve. Animators can edit keys to modify a curve. The shape
-  of the curve is dictated by the `Enum.KeyInterpolationMode` chosen at each
-  key.
+  `Datatype.FloatCurveKey|FloatCurveKeys`. The shape of the interpolation curve
+  between two keys is determined by the `Datatype.FloatCurveKey.Interpolation`
+  type.
 code_samples:
 inherits:
   - Instance
@@ -60,12 +56,13 @@ methods:
     thread_safety: Unsafe
   - name: FloatCurve:GetKeyIndicesAtTime
     summary: |
-      Returns key indices before and after time.
+      Returns the index of the last and first key of a period of time.
     description: |
-      The first returned value is the index of the last key with
-      `key.time <= time` (or `min(1,length)` if no key was found). The second
-      returned value is the index of the first key with `key.time >= time` or
-      the length of the curve if no key was found satisfying the inequality.
+      The first item in the returned array is the index of the last key with
+      time less than or equal to `time` (or the lesser of either 1 or the curve
+      length if no key was found). The second item in the returned array is the
+      index of the first key with time greater than or equal to `time` (or the
+      curve length if no key was found satisfying the inequality).
     code_samples:
     parameters:
       - name: time
@@ -82,15 +79,16 @@ methods:
   - name: FloatCurve:GetKeys
     summary: |
       Returns a copy of all the keys in the FloatCurve as a Lua array of
-      FloatCurveKey.
+      `Datatype.FloatCurveKey|FloatCurveKeys`.
     description: |
       Returns a copy of all the keys in the FloatCurve as a Lua array of
-      FloatCurveKey.
+      `Datatype.FloatCurveKey|FloatCurveKeys`.
     code_samples:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          Array of `Datatype.FloatCurveKey|FloatCurveKeys`.
     tags: []
     deprecation_message: ''
     security: None
@@ -105,79 +103,89 @@ methods:
       - name: time
         type: float
         default:
-        summary: ''
+        summary: |
+          Time at which to sample the curve.
     returns:
       - type: float?
-        summary: ''
+        summary: |
+          Value of the curve at the requested `time`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: FloatCurve:InsertKey
     summary: |
-      Adds the key passed as argument to this curve.
+      Adds the key passed as an argument to this curve. If a key at the same
+      time is found, it will be replaced.
     description: |
-      Adds the key passed as argument to this curve. If a key exists at the same
-      time it will be replaced. First return value is true if a key was added,
-      false if a previous key was replaced. Second return value is the index at
-      which the marker was added.
+      Adds the key passed as an argument to this curve. If a key at the same
+      time is found, it will be replaced. In the returned array, the first value
+      is `true` if a key was added or `false` if a previous key was replaced;
+      the second value is the index at which the marker was added.
     code_samples:
     parameters:
       - name: key
         type: FloatCurveKey
         default:
-        summary: ''
+        summary: |
+          `Datatype.FloatCurveKey` to insert.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          (see description)
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: FloatCurve:RemoveKeyAtIndex
     summary: |
-      Removes a given number of Keys starting from a given index. Returns the
-      number of keys that were removed.
+      Removes a given number of keys starting from a given index.
     description: |
-      Removes a given number of Keys starting from a given index. Returns the
-      number of keys that were removed.
+      Removes a given number (`count`) of keys starting from the `startingIndex`
+      index and returns the number of keys that were removed.
     code_samples:
     parameters:
       - name: startingIndex
         type: int
         default:
-        summary: ''
+        summary: |
+          Starting index from which to remove keys.
       - name: count
         type: int
         default: 1
-        summary: ''
+        summary: |
+          Number of keys to remove.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          Number of keys removed.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: FloatCurve:SetKeys
     summary: |
-      Resets this curve's keys using the FloatCurveKey array passed as argument.
+      Resets this curve's keys using the `Datatype.FloatCurveKey` array passed
+      as an argument.
     description: |
-      Resets this curve's keys using the FloatCurveKey array passed as argument.
-      Keys in the keysArray are sorted in ascending time order before insertion.
-      Keys at duplicated times are removed in a stable manner. Returns the
-      number of keys actually inserted.
+      Resets this curve's keys using the `Datatype.FloatCurveKey` array passed
+      as an argument. Keys in the `keys` array are sorted in ascending time
+      order before insertion, and keys at duplicated times are removed in a
+      stable manner.
 
-      Keys previously stored in this curve are removed before the keys passed as
-      arguments are added.
+      Returns the number of keys actually inserted. Keys previously stored in
+      this curve are removed before the keys passed as arguments are added.
     code_samples:
     parameters:
       - name: keys
         type: Array
         default:
-        summary: ''
+        summary: |
+          Array of `Datatype.FloatCurveKey|FloatCurveKeys`.
     returns:
       - type: int
-        summary: ''
+        summary: |
+          Number of keys inserted.
     tags: []
     deprecation_message: ''
     security: None

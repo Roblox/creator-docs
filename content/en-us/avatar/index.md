@@ -8,7 +8,23 @@ hideBreadcrumbs: true
 
 **Create and sell avatar items.**
 
-Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with [experiences](../platform.md) and customize themselves with a wide range of clothing and accessories from the [Marketplace](https://www.roblox.com/catalog). Currently, only creators participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can upload and sell items on the Marketplace.
+Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with [experiences](../platform.md) and customize themselves with a wide range of clothing and accessories from the [Marketplace](https://www.roblox.com/catalog).
+
+Whether you're creating and selling a basic accessory, clothes, or an avatar character body, your general workflow involves the following:
+<br />
+<img src="../assets/accessories/Avatar-Item-Creation.png" alt="Modeling is performed with third party software, importing and uploading performed with Studio, and publishing and Marketplace management performed with Creator Hub" width="100%" />
+
+1.  **Modeling and Creation** &mdash; Create the asset in a third-party software such as Blender or Maya.
+
+    - Roblox supports many types of third-party models, but assets intended for the Marketplace require their own specifications for [rigid accessories](../art/accessories/specifications.md), [clothing accessories](../art/accessories/clothing-specifications.md), and [bodies](../art/characters/specifications.md).
+
+2.  **Importing and Uploading** &mdash; Add your creation to the Roblox servers through Studio.
+
+    - Initial validation and moderation occurs during this stage. See each item category section for individual instructions.
+
+3.  **Publishing and Selling** &mdash; Manage your asset on your [Creator Dashboard](https://create.roblox.com/dashboard/creations) where you can set your item price and other Marketplace configurations before you enable the item for sale.
+
+    - See [Marketplace](../art/marketplace/index.md) for an overview of this process.
 
 ## Creating
 

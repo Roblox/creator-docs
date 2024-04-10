@@ -288,6 +288,9 @@ methods:
           - `RenderFidelity` – The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
             parts.
+          - `FluidFidelity` – The value of
+            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
+            parts.
           - `SplitApart` – Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
@@ -415,6 +418,9 @@ methods:
           - `RenderFidelity` – The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
             parts.
+          - `FluidFidelity` – The value of
+            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
+            parts.
           - `SplitApart` – Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
@@ -541,6 +547,9 @@ methods:
             resulting parts.
           - `RenderFidelity` – The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
+            parts.
+          - `FluidFidelity` – The value of
+            `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
             parts.
           - `SplitApart` – Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).

@@ -36,6 +36,7 @@ navigation:
   - title: Plant Reference Project
     path: /resources/plant-reference-project
   - title: Battle Royale
+    path: /resources/battle-royale/
     section:
       - title: Overview
         path: /resources/battle-royale/

@@ -88,13 +88,7 @@ Some assets include scripts that perform specific actions, such as animating at 
 
 [Publishing assets](../../production/publishing/publishing-assets.md) to the Creator Store is the only way to make your assets publicly available to all creators to use within their own experiences in Studio. You can publish any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md), or any [model](../../parts/models.md) or [plugin](../../studio/plugins.md) that you have uploaded to your inventory.
 
-<Alert severity="warning">
-
-In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
-
-</Alert>
+You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
 
 ## Verifying Your Account
 
@@ -108,6 +102,6 @@ For information on how to verify your account either through a government-issued
 
 <Alert severity="warning">
 
-**Phone number verification is no longer sufficient** to sell paid assets on the Creator Store. Even if your account is verified by phone number, you still need to verify with a [government ID](account-verification.md#verifying-through-government-id) and create a seller account ahead of the launch of USD pricing in the spring of 2024. For more information, see [Selling on the Creator Store](./selling-on-the-creator-store.md).
+**Phone number verification is no longer sufficient** to sell assets on the Creator Store. Even if your account is verified by phone number, you still need to verify with a [government ID](account-verification.md#verifying-through-government-id) and create a seller account. For more information, see [Selling on the Creator Store](./selling-on-the-creator-store.md).
 
 </Alert>

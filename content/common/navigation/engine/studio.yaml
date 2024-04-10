@@ -34,6 +34,7 @@ navigation:
   - title: Output Window
     path: /studio/output
   - title: MicroProfiler
+    path: /studio/microprofiler/
     section:
       - title: Overview
         path: /studio/microprofiler/
@@ -44,6 +45,7 @@ navigation:
       - title: Using MicroProfiler
         path: /studio/microprofiler/using-microprofiler
   - title: Developer Console
+    path: /studio/developer-console
     section:
       - title: Overview
         path: /studio/developer-console

@@ -17,6 +17,7 @@ navigation:
     path: /studio/
     navigation: /engine/studio.yaml
   - title: Projects
+    path: /projects
     section:
       - title: Overview
         path: /projects/
@@ -39,6 +40,7 @@ navigation:
           - title: Groups
             path: /projects/groups
       - title: Performance Optimization
+        path: /projects/performance-optimization/
         section:
           - title: Overview
             path: /projects/performance-optimization/
@@ -49,6 +51,7 @@ navigation:
           - title: Load Times
             path: /projects/performance-optimization/load-times
   - title: Assets
+    path: /projects/assets/
     section:
       - title: Overview
         path: /projects/assets/
@@ -67,10 +70,12 @@ navigation:
       - title: In-Experience Asset Creation
         path: /projects/assets/in-experience-asset-creation
   - title: 3D Workspace
+    path: /workspace/
     section:
       - title: Overview
         path: /workspace/
       - title: Parts
+        path: /parts/
         section:
           - title: Overview
             path: /parts/
@@ -87,6 +92,7 @@ navigation:
       - title: Terrain
         path: /parts/terrain
       - title: Physics
+        path: /physics/
         section:
           - title: Overview
             path: /physics/
@@ -99,6 +105,7 @@ navigation:
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
+            path: /physics/mechanical-constraints
             section:
               - title: Overview
                 path: /physics/mechanical-constraints
@@ -129,6 +136,7 @@ navigation:
               - title: NoCollision
                 path: /physics/constraints/no-collision
           - title: Mover Constraints
+            path: /physics/mover-constraints
             section:
               - title: Overview
                 path: /physics/mover-constraints
@@ -151,6 +159,7 @@ navigation:
           - title: Roblox Units
             path: /physics/units
       - title: Effects
+        path: /effects/
         section:
           - title: Overview
             path: /effects/
@@ -179,6 +188,7 @@ navigation:
           # - title: Bézier Curves
           #   path: /docs/mechanics/bezier-curves
   - title: Scripting
+    path: /scripting/
     section:
       - title: Overview
         path: /scripting/
@@ -204,6 +214,7 @@ navigation:
       - title: Security Tactics and Cheat Mitigation
         path: /scripting/security/security-tactics
       - title: Luau
+        path: /luau/
         section:
           - title: Overview
             path: /luau/
@@ -254,6 +265,7 @@ navigation:
               - title: Type Checking
                 path: /luau/type-checking
   - title: Environment
+    path: /environment/
     section:
       - title: Overview
         path: /environment/
@@ -270,6 +282,7 @@ navigation:
       - title: Skyboxes
         path: /environment/skybox
   - title: Characters
+    path: /characters/
     section:
       - title: Overview
         path: /characters/
@@ -284,6 +297,7 @@ navigation:
       - title: R6 to R15 Adapter
         path: /characters/r6-to-r15-adapter
   - title: Players
+    path: /players/
     section:
       - title: Overview
         path: /players/
@@ -306,6 +320,7 @@ navigation:
           - title: Disabling Default UI Elements
             path: /players/disabling-ui
   - title: Input
+    path: /input/
     section:
       - title: Overview
         path: /input/
@@ -316,6 +331,7 @@ navigation:
       - title: Gamepad
         path: /input/gamepad
   - title: Sound
+    path: /sound/
     section:
       - title: Overview
         path: /sound/
@@ -328,6 +344,7 @@ navigation:
       - title: Dynamic Effects
         path: /sound/dynamic-effects
   - title: User Interface
+    path: /ui/
     section:
       - title: Overview
         path: /ui/
@@ -374,6 +391,7 @@ navigation:
       - title: Loading Screens
         path: /ui/customizing-loading-screens
   - title: Animation
+    path: /animation/
     section:
       - title: Overview
         path: /animation/
@@ -396,6 +414,7 @@ navigation:
       - title: Chat with Voice
         path: /chat/voice-chat
       - title: Text Chat
+        path: /chat/in-experience-text-chat
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
@@ -410,12 +429,14 @@ navigation:
   - title: Cloud Services
     section:
       - title: Data Stores
+        path: /cloud-services/datastores
         section:
           - title: Overview
             path: /cloud-services/datastores
           - title: Implementing Player Data and Purchasing Systems
             path: /scripting/data/player-data-purchasing
       - title: Memory Stores
+        path: /cloud-services/memory-stores/
         section:
           - title: Overview
             path: /cloud-services/memory-stores/
@@ -438,10 +459,12 @@ navigation:
   - title: Roblox User Base
     path: /production/roblox-user-base
   - title: Publishing
+    path: /production/publishing/
     section:
       - title: Overview
         path: /production/publishing/
       - title: Experiences
+        path: /production/publishing/publishing-experiences-and-places
         section:
           - title: Overview
             path: /production/publishing/publishing-experiences-and-places
@@ -458,6 +481,7 @@ navigation:
       #   - title: Avatar Marketplace Thumbnails
       #     path: /production/publishing/marketplace-thumbnails
       - title: Assets
+        path: /production/publishing/publishing-assets
         section:
           - title: Overview
             path: /production/publishing/publishing-assets
@@ -481,13 +505,17 @@ navigation:
             path: /production/publishing/vr-guidelines
       - title: Account Verification
         path: /production/publishing/account-verification
+      - title: Rights Manager
+        path: /production/publishing/rights-manager
   - title: Promotion
+    path: /production/promotion/
     section:
       - title: Overview
         path: /production/promotion/
       - title: Discovery
         path: /production/promotion/discovery
       - title: Advertising
+        path: /production/promotion/advertising-on-roblox
         section:
           - title: Overview
             path: /production/promotion/advertising-on-roblox
@@ -512,6 +540,7 @@ navigation:
       - title: Getting Featured on Roblox‑Owned Channels
         path: /production/promotion/getting-featured-on-roblox-owned-channels
   - title: Monetization
+    path: /production/monetization/
     section:
       - title: Overview
         path: /production/monetization/
@@ -542,12 +571,14 @@ navigation:
           - title: Randomized Virtual Items Policy
             path: /production/monetization/randomized-virtual-items-policy
   - title: Localization
+    path: /production/localization/
     section:
       - title: Overview
         path: /production/localization/
       - title: Automatic Translations
         path: /production/localization/automatic-translations
       - title: Custom Translations
+        path: /production/localization/custom-translations
         section:
           - title: Overview
             path: /production/localization/custom-translations
@@ -562,6 +593,7 @@ navigation:
       - title: Language Codes
         path: /production/localization/language-codes
   - title: Analytics
+    path: /production/analytics/
     section:
       - title: Overview
         path: /production/analytics/
@@ -572,6 +604,7 @@ navigation:
           - title: Error Report
             path: /production/analytics/error-report
       - title: Analytics Dashboard
+        path: /production/analytics/analytics-dashboard
         section:
           - title: Overview
             path: /production/analytics/analytics-dashboard
@@ -586,6 +619,7 @@ navigation:
           - title: Monetization
             path: /production/analytics/monetization
   - title: Community
+    path: /production/community/
     section:
       - title: Overview
         path: /production/community/

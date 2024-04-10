@@ -79,7 +79,7 @@ Notice how all of these sample tileable textures have equal visible distribution
   </figure>
 </GridContainer>
 
-If you decide to design your own tileable textures in third-party modeling tools like [Substance Designer](https://www.adobe.com/products/substance3d-designer.html) or [Blender](https://www.blender.org/), keep the following in mind:
+If you decide to design your own tileable textures in third-party modeling tools like [Substance Designer](https://www.adobe.com/products/substance3d-designer) or [Blender](https://www.blender.org/), keep the following in mind:
 
 - You can create textures as large as 1024x1024, but the closer you get to this maximum size, the higher the performance cost.
 - Create equal visible distribution so that no one element is more distinguishable than others.
@@ -134,7 +134,7 @@ Following this fundamental rule, the final sample laser tag environment uses the
   </figure>
 </GridContainer>
 
-If you decide to design your own trim sheets in third-party modeling tools like [Substance Designer](https://www.adobe.com/products/substance3d-designer.html), [Blender](https://www.blender.org/), or [ZBrush](https://www.maxon.net/en/zbrush), keep the following in mind:
+If you decide to design your own trim sheets in third-party modeling tools like [Substance Designer](https://www.adobe.com/products/substance3d-designer), [Blender](https://www.blender.org/), or [ZBrush](https://www.maxon.net/en/zbrush), keep the following in mind:
 
 - You can create textures as large as 1024x1024, but the closer you get to this maximum size, the higher the performance cost.
 - The trim sheet must be equal in length both along the X and Y axis.

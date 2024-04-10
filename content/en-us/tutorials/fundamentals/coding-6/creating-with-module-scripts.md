@@ -186,7 +186,7 @@ Right now, a leaderboard keeps track of a player's keys and treasure. To change 
 
 3. Copy and paste these two local functions into the **Local Functions** section.
 
-   - `getPlayerKeys()` returns the value of the player's `keys` leaderstat.
+   - `getPlayerKeys()` returns the value of the player's `Lockpicks` leaderstat.
 
    - `getPlayerTreasure()` returns the value of the player's `Treasure` leaderstat.
 
@@ -195,7 +195,7 @@ Right now, a leaderboard keeps track of a player's keys and treasure. To change 
    local function getPlayerKeys(whichCharacter)
       local player = Players:GetPlayerFromCharacter(whichCharacter)
       local leaderstats = player:FindFirstChild("leaderstats")
-      return leaderstats:WaitForChild("Keys")
+      return leaderstats:WaitForChild("Lockpicks")
    end
    local function getPlayerTreasure(whichCharacter)
       local player = Players:GetPlayerFromCharacter(whichCharacter)
@@ -228,12 +228,6 @@ If needed, check your script against the one below for any troubleshooting issue
 
 ```lua title = "Current TreasureManager Script"
 local TreasureManager = {}
-
-local Players = game:GetService("Players")
-local keyDrop = 1
-
------------------- Local Functions
-local TreasureManager = {}
 local Players = game:GetService("Players")
 local keyDrop = 1
 
@@ -241,7 +235,7 @@ local keyDrop = 1
 local function getPlayerKeys(whichCharacter)
    local player = Players:GetPlayerFromCharacter(whichCharacter)
    local leaderstats = player:FindFirstChild("leaderstats")
-   return leaderstats:WaitForChild("Keys")
+   return leaderstats:WaitForChild("Lockpicks")
 end
 
 local function getPlayerTreasure(whichCharacter)
@@ -280,7 +274,7 @@ The _TreasureManager_ module script will be used when players touch a treasure c
    local function getPlayerKeys(whichCharacter)
       local player = Players:GetPlayerFromCharacter(whichCharacter)
       local leaderstats = player:FindFirstChild("leaderstats")
-      return leaderstats:WaitForChild("Keys")
+      return leaderstats:WaitForChild("Lockpicks")
    end
    ```
 
@@ -304,7 +298,7 @@ The _TreasureManager_ module script will be used when players touch a treasure c
    ```lua
    function TreasureManager.canOpenChest(whichCharacter)
       local playerKeys = getPlayerKeys(whichCharacter)
-      if playerKeys.Value >= 1 then
+      if playerKeys.Value >= chestPickCost then
          return true
       else
          return false
@@ -423,7 +417,7 @@ local chestReward = 100
 local function getPlayerKeys(whichCharacter)
    local player = Players:GetPlayerFromCharacter(whichCharacter)
    local leaderstats = player:FindFirstChild("leaderstats")
-   return leaderstats:WaitForChild("Keys")
+   return leaderstats:WaitForChild("Lockpicks")
 end
 
 local function getPlayerTreasure(whichCharacter)
@@ -443,7 +437,7 @@ end
 
 function TreasureManager.canOpenChest(whichCharacter)
    local playerKeys = getPlayerKeys(whichCharacter)
-   if playerKeys.Value >= 1 then
+   if playerKeys.Value >= chestPickCost then
    return true
    else
    return false

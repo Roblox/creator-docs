@@ -71,7 +71,7 @@ properties:
       Developers can get obtain the position of Hit like so:
 
       ```
-      local position = mouse.Hit.p
+      local position = mouse.Hit.Position
       ```
 
       Hit is often used by `Class.Tool|Tools` to fire a weapon towards the mouse

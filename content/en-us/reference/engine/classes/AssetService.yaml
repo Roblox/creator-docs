@@ -91,6 +91,47 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AssetService:CreateMeshPartAsync
+    summary: |
+      Creates a new `Class.MeshPart` with a specified mesh ID and an optional
+      table of fidelity values.
+    description: |
+      This method creates a `Class.MeshPart` with a specified
+      `Class.MeshPart.CollisionFidelity|CollisionFidelity`,
+      `Class.MeshPart.RenderFidelity|RenderFidelity`, and
+      `Class.MeshPart.FluidFidelity|FluidFidelity`. Because
+      `Class.MeshPart.MeshId` is read only, this method is for creating a mesh
+      with any mesh ID through scripts, without having to clone an existing
+      `Class.MeshPart`. It throws errors if creation fails.
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: Content
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing one or more controls for the method:
+
+          - `CollisionFidelity` – The value of
+            `Class.MeshPart.CollisionFidelity|CollisionFidelity` in the
+            resulting part. Defaults to `Enum.CollisionFidelity.Default` if the option is absent or the `options` table is `nil`.
+          - `RenderFidelity` – The value of
+            `Class.MeshPart.RenderFidelity|RenderFidelity` in the resulting
+            part. Defaults to `Enum.RenderFidelity.Automatic` if the option is absent or the `options` table is `nil`.
+          - `FluidFidelity` – The value of
+            `Class.MeshPart.FluidFidelity|FluidFidelity` in the resulting
+            part. Defaults to `Enum.FluidFidelity.Automatic` if the option is absent or the `options` table is `nil`.
+    returns:
+      - type: MeshPart
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place through the given `templatePlaceID`.

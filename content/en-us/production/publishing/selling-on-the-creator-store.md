@@ -3,23 +3,21 @@ title: Selling on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
-In the spring of 2024, you will be able to sell [plugins](./../../studio/plugins.md) on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
+You can sell [plugins](./../../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#completing-the-application-form) to create a seller account.
 
-Once you have a seller account, **you can set USD prices** for your plugins from their asset configuration pages. They will go on sale once the update to the Creator Store launches.
+Once you have a seller account, **you can set USD prices** for your plugins from their asset configuration pages and sell them on the Creator Store.
 
-<Alert severity="error">
+<Alert severity="warning">
 
-You must create a seller account, **even if you're already selling plugins for Robux** through a [verified](account-verification.md) account. If you don't create a seller account and set prices before the USD pricing launch, your plugins will be taken off sale.
-
-When USD pricing launches, using `Class.MarketplaceService.PromptPurchase` to sell plugins will be disabled. If you use this API to sell plugins in your experiences, remove it now and direct players to visit the Creator Store site. This change does not affect free products.
+If you previously listed plugins for sale with Robux pricing, these will now have been taken off sale. If you want to relist them for sale, you must create a seller account and set USD pricing.
 
 </Alert>
 
 ## Requirements
 
-Roblox's eligibility requirements for sellers, customers, and assets are stricter than previous requirements for selling and buying plugins with Robux. Even if you're already selling on the Creator Store, you will only be able to continue doing so if you meet these requirements, create a seller account, and set USD prices.
+Roblox's eligibility requirements for sellers, customers, and assets are stricter than previous requirements for selling and buying with Robux. Even if you're have previously sold on the Creator Store, you will only be able to continue doing so if you meet these requirements, create a seller account, and set USD prices.
 
 ### For Sellers
 
@@ -34,7 +32,7 @@ If you violate any of these requirements after you create your seller account, y
 
 <Alert severity="warning">
 
-**Phone number verification is no longer sufficient** to sell paid assets on the Creator Store. Even if your account is verified by phone number, you still need to verify with a [government ID](account-verification.md#verifying-through-government-id).
+**Phone number verification is no longer sufficient** to sell assets on the Creator Store. Even if your account is verified by phone number, you still need to verify with a [government ID](account-verification.md#verifying-through-government-id).
 
 </Alert>
 
@@ -50,17 +48,9 @@ Every asset that you sell on the Creator Store must adhere to the [Community Rul
 
 In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider [republishing them](publishing-assets.md) under individual ownership.
 
-<Alert severity="error">
-
-Any plugins on sale for Robux with **no USD pricing** will be **removed from sale** once USD pricing launches for customers. If you haven't set a USD price for a monetized plugin and it's removed from the Creator Store, you must create a seller account to put it back on sale with a price.
-
-To ensure your plugins aren't off sale for any period, it's best to create your seller account and set USD prices now.
-
-</Alert>
-
 ## Seller Account
 
-All prospective plugin sellers on the Creator Store must complete an application form through Stripe to create their seller account, set USD prices, and receive payouts. This process applies **even if you are already selling plugins for Robux**.
+All prospective plugin sellers on the Creator Store must complete an application form through Stripe to create their seller account, set USD prices, and receive payouts. This process applies even if you have previously sold plugins for Robux on the Store.
 
 ### Completing the Application Form
 
@@ -86,7 +76,7 @@ Once Stripe accepts your application, you cannot change the country associated w
 
 ### Checking Approval Status
 
-To check the status of your application, revisit the [Seller Onboarding](https://create.roblox.com/settings/eligibility/seller-onboarding) page, then click **Edit Account Info**. Your approval status can be in any of the following states:
+To check the status of your application, revisit the [Seller Onboarding](https://create.roblox.com/settings/eligibility/priced-assets) page, then click **Edit Account Info**. Your approval status can be in any of the following states:
 
 - **Pending** — Your information is being reviewed.
 - **Failed** — Your seller account has not been created, either because of an error or because your information was incorrect.
@@ -102,7 +92,7 @@ If you edit any information after you have been approved, you **return to the Pe
 
 ## Earnings
 
-Once Stripe confirms your information and creates your seller account, you can start setting USD prices for your assets. If your assets are public at that time, they will go on sale on the Creator Store once the new purchasing features launch in the spring of 2024.
+Once Stripe confirms your information and creates your seller account, you can start setting USD prices for your assets. If your assets are public at that time, they will go on sale on the Creator Store.
 
 ### Pricing
 
@@ -118,7 +108,7 @@ Your earnings automatically pay out once a month to the bank associated with you
 
 <Alert severity="warning">
 
-If your seller eligibility is suspended, either due to a change of seller information or moderation consequences, payouts are frozen until you can restore your eligibility. To see the status of your account, see the [Seller Onboarding](https://create.roblox.com/settings/eligibility/seller-onboarding) page.
+If your seller eligibility is suspended, either due to a change of seller information or moderation consequences, payouts are frozen until you can restore your eligibility. To see the status of your account, see the [Seller Onboarding](https://create.roblox.com/settings/eligibility/priced-assets) page.
 
 </Alert>
 
@@ -130,3 +120,9 @@ Reimbursements for customers **deduct from the seller's account**. This occurs i
 - An asset is moderated after customers have already purchased it.
 
 When a refund occurs, Roblox removes the asset from the customer's inventory. If a very high proportion of sales for an asset come from accounts with an exceptional history of chargebacks, the asset is taken off sale and your payouts are frozen. If you have grounds to appeal this action, you can file a request with [Roblox support](https://en.help.roblox.com/hc/en-us/articles/360000272703).
+
+## Transactions and Upcoming Payouts
+
+You can find a record of all your Creator Store transactions on the [Transactions](https://create.roblox.com/dashboard/transactions) page of the Creator Dashboard. This includes both your **Incoming Payments** (sales) and your **Outgoing Payments** (purchases) on the Store.
+
+Above your transaction record are details of any upcoming revenue, along with a past [payout](#payouts) total. **Available Balance** is the money you will be paid in the next payout. **Pending Revenue** is the revenue currently held in 30-day escrow, which will eventually enter your Available Balance once the escrow period on each transaction has expired.

@@ -7,6 +7,15 @@ Character models require a specific set of components and configuration standard
 
 When ready to export, see [Export Requirements](../../art/characters/export-settings.md) for mesh export settings for Blender and Maya.
 
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
+<li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
+<li>When creating a clothing accessory model, see [Clothing Specifications](../../art/accessories/clothing-specifications.md).</li>
+</ul>
+</Alert>
+
 ## Geometry
 
 Avatar character models are made up of 15 separate mesh objects and require additional geometry requirements to import into Studio and publish successfully. In addition to the body [types](#body-scale), [parts](#body-parts), and [budget](#triangle-budgets) specifications, ensure that your models also fulfill the following general requirements when modeling:

@@ -18,15 +18,108 @@ When uploading, accessories, clothing, bodies, and heads require an upload fee o
 
 ## Publishing Advance
 
-<Alert severity = 'info'>
-Starting middle of March 2024, Marketplace items require a publishing advance that replaces the [per-unit fee](#per-unit-fee). Existing creators do not have to pay a publishing advance for any existing items.
-</Alert>
+A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dependent on the type of Marketplace item being sold:
 
-A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dynamic and dependent on the type of Marketplace item being sold:
+<table>
+<thead>
+  <tr>
+    <th>Asset Type</th>
+    <th>Non-Limited Publishing Advance</th>
+    <th>Paid Limited Publishing Advance</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Hat</td>
+    <td>1500</td>
+    <td>20000</td>
+  </tr>
+  <tr>
+    <td>Face</td>
+    <td>1500</td>
+    <td>20000</td>
+  </tr>
+  <tr>
+    <td>Hair</td>
+    <td>1700</td>
+    <td>20000</td>
+  </tr>
+  <tr>
+    <td>Neck</td>
+    <td>1000</td>
+    <td>15000</td>
+  </tr>
+  <tr>
+    <td>Shoulder</td>
+    <td>1000</td>
+    <td>15000</td>
+  </tr>
+  <tr>
+    <td>Front</td>
+    <td>1000</td>
+    <td>15000</td>
+  </tr>
+  <tr>
+    <td>Back</td>
+    <td>1000</td>
+    <td>15000</td>
+  </tr>
+  <tr>
+    <td>Waist</td>
+    <td>1000</td>
+    <td>15000</td>
+  </tr>
+  <tr>
+    <td>Jacket</td>
+    <td>1000</td>
+    <td>13000</td>
+  </tr>
+  <tr>
+    <td>T-Shirt</td>
+    <td>1000</td>
+    <td>13000</td>
+  </tr>
+  <tr>
+    <td>Shirt</td>
+    <td>1000</td>
+    <td>13000</td>
+  </tr>
+  <tr>
+    <td>Sweater</td>
+    <td>1000</td>
+    <td>13000</td>
+  </tr>
+  <tr>
+    <td>Pants</td>
+    <td>1500</td>
+    <td>16000</td>
+  </tr>
+  <tr>
+    <td>Dress/Skirt</td>
+    <td>1500</td>
+    <td>16000</td>
+  </tr>
+  <tr>
+    <td>Shorts</td>
+    <td>1500</td>
+    <td>16000</td>
+  </tr>
+  <tr>
+    <td>Body</td>
+    <td>4000</td>
+    <td>Not available as Limiteds.</td>
+  </tr>
+  <tr>
+    <td>Head</td>
+    <td>1500</td>
+    <td>Not available as Limiteds.</td>
+  </tr>
+</tbody>
+</table>
 
-- For **Non-Limited** items, the publishing advance can range between 500 and 1,500 Robux.
-- For **Limited** items, the publishing advance can range between 5000 and 10,000 Robux.
-  - The publishing advance does not apply for **free Limited items** which are Limited items that are sold at 0 cost. Free Limiteds still require a [per-unit fee](#per-unit-fee).
+The following policies also apply:
+
+- The publishing advance does not apply for **free Limited items** which are Limited items that are sold at 0 cost. Free Limiteds still require a [per-unit fee](#per-unit-fee).
 - Items taken off-sale and put back on-sale do not require another publishing advance.
 
 When publishing an asset, Roblox does not take the 30% commission until the publishing advance is fully recouped as rebates to the creator. Rebates are granted within 24 hours of the item purchase and are independent of the 30 day escrow for [commissions](#commissions).
@@ -169,7 +262,7 @@ Like all items sold on Roblox, creators also receive a percentage [commission](#
 - This per-unit fee also applies when selling free Limiteds. If 200 limited hats are listed at a **0** Robux price, the creator pays **4,000** Robux to list this free limited item. For Limiteds set to a price of 0 (free items), **Roblox keeps the entire per-unit fee**.
 
 <Alert severity ='warning'>
-You cannot take your Limited item off-sale. If your item is moderated your payment is not refunded. For more information on our moderation policies and guidelines, see [Marketplace guidelines](../../art/marketplace/marketplace-policy.md#general-guidelines).
+You cannot take your Limited item off-sale. If your item is moderated your payment is not refunded. For more information on our moderation policies and guidelines, see [Marketplace guidelines](../../art/marketplace/marketplace-policy.md#general-creation-guidelines).
 </Alert>
 
 ### Reselling

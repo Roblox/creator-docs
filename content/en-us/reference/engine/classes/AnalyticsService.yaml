@@ -17,8 +17,9 @@ code_samples:
 inherits:
   - Instance
 tags:
+  - NotCreatable
   - Service
-  - Deprecated
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: AnalyticsService.ApiKey
@@ -115,7 +116,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -291,7 +293,8 @@ methods:
       - type: void
         summary: |
           No return.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -395,7 +398,8 @@ methods:
       - type: void
         summary: |
           No return.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -523,6 +527,219 @@ methods:
       - type: void
         summary: |
           No return.
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogEconomyEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: flowType
+        type: AnalyticsEconomyFlowType
+        default:
+        summary: ''
+      - name: currencyType
+        type: string
+        default:
+        summary: ''
+      - name: endingBalance
+        type: float
+        default:
+        summary: ''
+      - name: amount
+        type: float
+        default:
+        summary: ''
+      - name: transactionType
+        type: string
+        default:
+        summary: ''
+      - name: itemSku
+        type: string
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogFunnelStepEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: funnelName
+        type: string
+        default:
+        summary: ''
+      - name: step
+        type: int
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogOnboardingFunnelStepEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: step
+        type: int
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogProgressionCompleteEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: level
+        type: int
+        default:
+        summary: ''
+      - name: levelName
+        type: string
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogProgressionEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: status
+        type: AnalyticsProgressionType
+        default:
+        summary: ''
+      - name: level
+        type: int
+        default:
+        summary: ''
+      - name: levelName
+        type: string
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogProgressionFailEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: level
+        type: int
+        default:
+        summary: ''
+      - name: levelName
+        type: string
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AnalyticsService:LogProgressionStartEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: level
+        type: int
+        default:
+        summary: ''
+      - name: levelName
+        type: string
+        default:
+        summary: ''
+      - name: customFields
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
