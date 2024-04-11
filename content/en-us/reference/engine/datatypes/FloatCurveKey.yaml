@@ -54,9 +54,11 @@ properties:
   - name: FloatCurveKey.Interpolation
     type: KeyInterpolationMode
     summary: |
-      The key interpolation mode for the segment started by this `Datatype.FloatCurveKey`.
+      The key interpolation mode for the segment started by this
+      `Datatype.FloatCurveKey`.
     description: |
-      Defines this key interpolation mode for the segment started by this `Datatype.FloatCurveKey`.
+      Defines this key interpolation mode for the segment started by this
+      `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''

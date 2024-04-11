@@ -56,9 +56,11 @@ properties:
   - name: RotationCurveKey.Interpolation
     type: KeyInterpolationMode
     summary: |
-      The key interpolation mode for the segment started by this `Datatype.RotationCurveKey`.
+      The key interpolation mode for the segment started by this
+      `Datatype.RotationCurveKey`.
     description: |
-      Defines the key interpolation mode for the segment started by this `Datatype.RotationCurveKey`.
+      Defines the key interpolation mode for the segment started by this
+      `Datatype.RotationCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''

@@ -68,6 +68,26 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+  - name: Selection:AddFocusCallback
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: priority
+        type: int
+        default:
+        summary: ''
+      - name: function
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: Selection:Get
     summary: |
       Returns an array of currently selected `Class.Instance|Instances` in

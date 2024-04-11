@@ -21,3 +21,8 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: SplitWord
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
