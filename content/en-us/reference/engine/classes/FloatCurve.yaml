@@ -132,7 +132,7 @@ methods:
     returns:
       - type: Array
         summary: |
-          (see description)
+          (see description) .
     tags: []
     deprecation_message: ''
     security: None

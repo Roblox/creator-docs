@@ -11,6 +11,15 @@ If you are intending to publish and sell these assets on the Marketplace, there 
 
 When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
 
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
+<li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
+<li>when creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
+</ul>
+</Alert>
+
 ## Geometry and Budgets
 
 - **Single Mesh** - Accessories must be a single mesh.

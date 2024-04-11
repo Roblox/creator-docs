@@ -35,17 +35,11 @@ Every asset that you import must adhere to the [Community Rules](https://en.help
 </tbody>
 </table>
 
-<Alert severity="warning">
-
-In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](./selling-on-the-creator-store.md).
-
-</Alert>
+You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
 
 ## Through Creator Dashboard
 
-Publishing assets through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) is useful when you are doing multiple tasks in quick succession for an experience. It's also the only way to set a [USD price](./selling-on-the-creator-store.md) for a plugin. Roblox strongly recommends setting USD prices for any assets you wish to sell in advance of the USD pricing launch in the spring of 2024.
+Publishing assets through the [Creator Dashboard](https://create.roblox.com/dashboard/creations) is useful when you are doing multiple tasks in quick succession for an experience. It's also the only way to set a [USD price](./selling-on-the-creator-store.md) for a plugin.
 
 To publish an asset through the dashboard:
 
@@ -57,9 +51,7 @@ To publish an asset through the dashboard:
 
 1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
 
-1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
-
-1. **(Optional)** If you have a [seller account](./selling-on-the-creator-store.md) and are publishing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators once USD pricing launches on the Creator Store in the spring of 2024.
+1. **(Optional)** If you have a [seller account](./selling-on-the-creator-store.md) and are publishing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 
 1. Click the **Save** button.
 
@@ -91,8 +83,6 @@ If your asset is already in your [Toolbox Inventory](../../projects/assets/toolb
 
 1. Enable the **Distribute on Creator Store** toggle.
 
-1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
-
 1. Click the **Submit** button.
 
 The asset is now public and visible to everyone within the [Creator Store](../../production/publishing/creator-store.md).
@@ -104,8 +94,6 @@ You can publish any models you create in an open project from the [Explorer](../
 1. In the **Explorer** window, right-click the asset you want to upload and select **Save to Roblox...**. The **Asset Configuration** dialog displays.
 
 1. Enable the **Distribute on Creator Store** toggle.
-
-1. **(Optional)** If you are [ID or phone verified](../../production/publishing/account-verification.md) and are publishing a plugin, input the amount of Robux you want to charge for the plugin in the **Price** field. If you keep the default value of **0**, the plugin is free to all creators.
 
 1. Click the **Submit** button.
 

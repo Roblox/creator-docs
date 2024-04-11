@@ -3,15 +3,9 @@ title: Plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#publishing-and-monetizing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Store, you can either offer them for free or sell them for Robux.
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#publishing-and-monetizing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
 
-<Alert severity="warning">
-
-In the spring of 2024, creators will be able to sell plugins on the Creator Store for **United States Dollars** (USD) and receive a significantly higher revenue share, as Roblox will only deduct taxes and payment processing fees.
-
-Any plugin **without USD pricing** will be **taken off sale** when USD pricing launches. If you have any plugins currently on sale for Robux, ensure you set up a seller account and add USD pricing for your plugins now. For more information, see [Selling on the Creator Store](../production/publishing/selling-on-the-creator-store.md).
-
-</Alert>
+If you choose to also publish your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars**, with a minumum price of $4.99. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../production/publishing/selling-on-the-creator-store.md).
 
 ## Creating New Plugins
 
@@ -140,6 +134,12 @@ end)
 
 As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can publish plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/publishing/creator-store.md), or to publish them privately for your own use. If you choose to publish your plugin publicly, you can set a price at which to sell it to other creators.
 
+<Alert severity="info">
+
+The only way to set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and monetize it later from the dashboard. For instructions on this process, see [Publishing Assets](../production/publishing/publishing-assets.md#through-creator-dashboard).
+
+</Alert>
+
 To publish a plugin:
 
 1. In the **Explorer** window, right-click a plugin script, then select **Publish as Plugin** from the contextual menu.
@@ -150,15 +150,11 @@ To publish a plugin:
    - **Creator**: The creator you'd like to attribute as the creator of the plugin.
 
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your plugin.
-1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you have previously [verified your account](../production/publishing/account-verification.md), the **Price** field becomes available. If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
-1. **(Optional)** In the **Price** field, input the amount of Robux you want to charge for the plugin. If you keep the default value of `0`, the plugin is free to all creators.
-
-   <Alert severity="info">
-   The only way to set a price for a plugin in USD is through the Creator Dashboard. For instructions on this process, see [Publishing Assets](../production/publishing/publishing-assets.md#through-creator-dashboard).
-   </Alert>
-
+1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
 1. Click the **Submit** button. Your plugin is now available to you in the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md).
 
-   <Alert severity="info">
-   If you change your mind and would like to publicly publish or monetize a plugin you have previously uploaded, you can do this from the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Publishing Assets](../production/publishing/publishing-assets.md).
-   </Alert>
+<Alert severity="info">
+
+If you change your mind and would like to publicly publish or monetize a plugin you have previously uploaded, you can do this from the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Publishing Assets](../production/publishing/publishing-assets.md).
+
+</Alert>

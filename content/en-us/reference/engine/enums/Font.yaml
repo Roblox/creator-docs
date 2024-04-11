@@ -6,8 +6,7 @@ description: |
   `Class.TextButton` to determine how the GUI element will render its text.
 
   **Note that Gotham and Arial will be removed in the near future. See the
-  [forum
-  announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+  [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
   for more information.**
 code_samples:
 tags: []
@@ -370,12 +369,14 @@ items:
   - name: Arimo
     summary: |
       <img width="80%" src="../../../assets/engine-api/enums/Font/Arimo.png" />
+      .
     value: 50
     tags: []
     deprecation_message: ''
   - name: ArimoBold
     summary: |
       <img width="80%" src="../../../assets/engine-api/enums/Font/ArimoBold.png" />
+      .
     value: 51
     tags: []
     deprecation_message: ''

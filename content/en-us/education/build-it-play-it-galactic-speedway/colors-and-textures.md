@@ -41,7 +41,7 @@ To change the texture of your driftspeeder, start by downloading one or more of 
 
 <Alert severity="info">
 <AlertTitle>Creating Your Own Textures</AlertTitle>
-Make your own designs by bringing any one of these textures into a tool like [Photoshop](https://www.adobe.com/products/photoshop.html) (paid) or [Krita](https://krita.org/) (open-source). Try variations like changing the color or adding new designs.
+Make your own designs by bringing any one of these textures into a tool like [Photoshop](https://www.adobe.com/products/photoshop) (paid) or [Krita](https://krita.org/) (open-source). Try variations like changing the color or adding new designs.
 </Alert>
 
 ## Import a Texture

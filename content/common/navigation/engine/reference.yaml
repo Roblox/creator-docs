@@ -530,6 +530,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CommandService.yaml
         ignoreTranslation: true
+      - title: CommerceService
+        path: /reference/engine/classes/CommerceService
+        type: engineapi
+        source: /reference/engine/classes/CommerceService.yaml
+        ignoreTranslation: true
       - title: CompressorSoundEffect
         path: /reference/engine/classes/CompressorSoundEffect
         type: engineapi
@@ -2029,6 +2034,11 @@ navigation:
         path: /reference/engine/classes/ScriptEditorService
         type: engineapi
         source: /reference/engine/classes/ScriptEditorService.yaml
+        ignoreTranslation: true
+      - title: ScriptProfilerService
+        path: /reference/engine/classes/ScriptProfilerService
+        type: engineapi
+        source: /reference/engine/classes/ScriptProfilerService.yaml
         ignoreTranslation: true
       - title: ScriptService
         path: /reference/engine/classes/ScriptService
@@ -3587,11 +3597,6 @@ navigation:
         path: /reference/engine/enums/DataStoreRequestType
         type: engineapi
         source: /reference/engine/enums/DataStoreRequestType.yaml
-        ignoreTranslation: true
-      - title: DeathStyle
-        path: /reference/engine/enums/DeathStyle
-        type: engineapi
-        source: /reference/engine/enums/DeathStyle.yaml
         ignoreTranslation: true
       - title: DebuggerEndReason
         path: /reference/engine/enums/DebuggerEndReason

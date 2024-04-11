@@ -38,7 +38,7 @@ Distilled down to its basics, [American Craftsman](https://en.wikipedia.org/wiki
 
 ## Surface Appearance and Trim Maps
 
-Trim maps are simple repeatable textures that can be applied to a wide variety of assets. Trim maps do a lot of heavy lifting in experiences and fill the gap between completely tiling textures and creating a 1:1 texture set that you would get from painting an object in a program like [Substance Painter](https://www.adobe.com/products/substance3d-painter.html) or using [photogrammetry](../../resources/the-mystery-of-duvall-drive/constructing-the-house.md#photogrammetry). The wood material shown previously was set up as a trim map which means that it could be reused on many different meshes, each mesh taking advantage of the same trim textures just by laying out its UVs creatively.
+Trim maps are simple repeatable textures that can be applied to a wide variety of assets. Trim maps do a lot of heavy lifting in experiences and fill the gap between completely tiling textures and creating a 1:1 texture set that you would get from painting an object in a program like [Substance Painter](https://www.adobe.com/products/substance3d-painter) or using [photogrammetry](../../resources/the-mystery-of-duvall-drive/constructing-the-house.md#photogrammetry). The wood material shown previously was set up as a trim map which means that it could be reused on many different meshes, each mesh taking advantage of the same trim textures just by laying out its UVs creatively.
 
 <GridContainer numColumns="3">
   <figure>
@@ -149,7 +149,7 @@ Along with heavily reusing textures, you can apply other techniques to keep your
   <figcaption>This leather trim texture set consists of a normal map at 1024, a base color map at 512, a roughness map at 256, and no metalness map. </figcaption>
 </figure>
 
-In [Substance Designer](https://www.adobe.com/products/substance3d-designer.html), the easiest way to resize outputs is to add a [Transformation 2D node](https://substance3d.adobe.com/documentation/sddoc/transformation-2d-172825332.html) just before your final output node and adjust the **Output Size** within the Base Parameters section for that node.
+In [Substance Designer](https://www.adobe.com/products/substance3d-designer), the easiest way to resize outputs is to add a [Transformation 2D node](https://substance3d.adobe.com/documentation/sddoc/transformation-2d-172825332.html) just before your final output node and adjust the **Output Size** within the Base Parameters section for that node.
 
 <GridContainer numColumns="2">
   <figure>

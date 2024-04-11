@@ -98,7 +98,8 @@ methods:
       rotation as a `Datatype.CFrame`.
     description: |
       Samples the rotation curve at a given time and returns the corresponding
-      rotation as a `Datatype.CFrame`. Empty rotation curves are evaluated as `Datatype.CFrame.identity`.
+      rotation as a `Datatype.CFrame`. Empty rotation curves are evaluated as
+      `Datatype.CFrame.identity`.
     code_samples:
     parameters:
       - name: time
@@ -129,11 +130,11 @@ methods:
         type: RotationCurveKey
         default:
         summary: |
-           `Datatype.RotationCurveKey` to insert.
+          `Datatype.RotationCurveKey` to insert.
     returns:
       - type: Array
         summary: |
-          (see description)
+          (see description) .
     tags: []
     deprecation_message: ''
     security: None
@@ -166,13 +167,14 @@ methods:
     thread_safety: Unsafe
   - name: RotationCurve:SetKeys
     summary: |
-      Resets this curve's keys using the `Datatype.RotationCurveKey` array passed as an argument.
+      Resets this curve's keys using the `Datatype.RotationCurveKey` array
+      passed as an argument.
     description: |
       Resets this curve's keys using the `Datatype.RotationCurveKey` array
       passed as an argument. Keys in the `keys` array are sorted in ascending
       time order before insertion, and keys at duplicated times are removed in a
       stable manner.
-      
+
       Returns the number of keys actually inserted. Keys previously stored in
       this curve are removed before the keys passed as arguments are added.
     code_samples:

@@ -31,5 +31,5 @@ To export your model as a `.fbx`:
 5. Click the **Export FBX** button.
 
 <Alert severity = 'success'>
-You've completed the texturing section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
+You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
 </Alert>
