@@ -8,7 +8,7 @@ animations on rigs.
 
 A rig is an object with individual sections connected by joints. You can
 move these joints to [create poses](#creating-poses), and
-the Animation Editor will smoothly animate the rig from pose-to-pose. As
+the Animation Editor then smoothly animates the rig from pose-to-pose. As
 long as all moving parts are connected with
 `Class.Motor6D`
 objects, you can use the Animation Editor for both human and non-human
@@ -35,8 +35,8 @@ rigs.
       <ul>
         <li>**Load**</li>
         <li>**Save**</li>
-        <li>**Save As **</li>
-        <li>**Import **</li>
+        <li>**Save As**</li>
+        <li>**Import**</li>
         <li>**Export**</li>
         <li>**Create New**</li>
         <li>**Set Animation Priority**</li>
@@ -120,7 +120,7 @@ rigs.
       Opens a contextual menu with the following menu items:
       <ul>
         <li>**Timeline Unit**</li>
-        <li>**Frame Rate: 30fps **</li>
+        <li>**Frame Rate: 30fps**</li>
         <li>**Show <a href="../animation/events.md">Animation Events</a>**</li>
         <li>**Snap To Keys**</li>
     </ul>
@@ -165,57 +165,39 @@ rigs.
   </tr>
 </table>
 
-## Opening the Animation Editor
-
-To create an animation within Studio, you will first need to open the
-Animation Editor.
-
-To open the Animation Editor:
-
-1. In the menu bar, navigate to the **Avatar** tab.
-2. In the **Animations** section, click on the **Animation Editor**.
-   The **Animation Editor** window displays.
-
-   <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
-
 ## Creating an Animation
 
-Before you create an animation, you should have a rig within your
-experience. If you don't have a rig available, insert a pre-built
-rig with the [Rig Builder](../studio/rig-builder.md) plugin. The pre-built rigs have all of the basic parts and mechanisms to
+You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Builder](../studio/rig-builder.md) plugin. The pre-built rigs have all of the basic parts and mechanisms to
 build a character animation.
 
 <img src="../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" />
 
-After the Animation Editor is
-[open](#opening-the-animation-editor), you can create a new animation for a rig:
+If you have a rig, you can create a new animation for it using the following steps:
 
-1. Select the rig you want to create an animation for. A dialog
-   displays.
+1. In the menu bar, navigate to the **Avatar** tab.
+2. In the **Animations** section, click the **Animation Editor** to display its window.
 
-   <img
-   src="../assets/animation/animation-editor/Create-Animation-Dialog.png"
-   width="380" />
+   <img src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
 
-2. In the **Animation Name** field, enter a new animation name, then
+3. Select the rig you want to create an animation for to display the creation dialog.
+
+   <img src="../assets/animation/animation-editor/Create-Animation-Dialog.png" width="380" />
+
+4. In the **Animation Name** field, enter a new animation name, then
    click the **Create** button. The Animation Editor window displays
    the [media and playback controls](#media-and-playback-controls), [timeline](#timeline), and [track list](#track-list).
 
 From here, you can begin [creating poses](#creating-poses)
-for your rig and experiment with animation settings, such as [looping
+for your rig and modifying the animation settings, such as [looping
 the animation](#looping-an-animation) or [setting its
 priority](#setting-a-priority).
 
-## Creating Poses
+### Creating Poses
 
-A **pose** is when you move and/or rotate parts of a rig (hands, feet,
-torso, etc.) to specific positions. After you create multiple poses, the
-Animation Editor will run between them with a defined
-easing setting to smoothly animate the
-rig from pose-to-pose.
+An animation consists of different **poses**, or specific positions and orientations of `Class.Bone` or `Class.MeshPart` objects within a rig. You can create poses by moving or rotating bones or meshes, such as the rig's hands, feet, or torso. After you create multiple poses on different positions of the timeline, the Animation Editor runs between them with your [easing settings](#easing) to smoothly animate the rig from pose-to-pose.
 
-For example, consider a simple animation where a humanoid character turns
-to look 45° to the left. This animation involves two poses:
+For example, a simple animation where a humanoid character turns
+to look 45° to the left has two poses:
 
 - The initial position looking forward.
 - The turned position looking left.
@@ -224,34 +206,35 @@ to look 45° to the left. This animation involves two poses:
 
 To create a pose:
 
-1. In the Animation Editor window, navigate to the timeline, then
+1. In the **Explorer** window, select the rig and expand its child instances to access the bones or meshes.
+
+2. In the Animation Editor window, navigate to the timeline, then
    click-and-move the **scrubber** to the frame position where you
    want to set the pose. By default, Roblox represents timeline units as
-   **seconds:frames** and animations run at 30 frames per second, so
-   0:15 indicates ½ second.
+   **seconds:frames** and animations run at 30 frames per second. For example, 0:15 indicates ½ second.
 
-   <img src="../assets/animation/animation-editor/Scrubber-0-15.png"
-   width="500" />
+   <img src="../assets/animation/animation-editor/Scrubber-0-15.png" width="60%" />
 
-2. In the **viewport**, hover your mouse over the **rig** and click on
-   a part to select it.
-3. Move and/or rotate the part to a new orientation. A **new track**
-   displays in the track list, and a new **keyframe** displays on the
-   timeline.
+3. In the **viewport**, hover your mouse over **rig** and select a bone or mesh. You can also select the ⊕ icon on the timeline and click **Add All** to add all bones or meshes to the animation.
+   <img controls src="../assets/modeling/skinned-meshes/Animation-Editor-Add-Tracks.png" width="60%" />
 
-   <img src="../assets/animation/animation-editor/Track-Keyframe-Added.png" width="700" />
+4. Move or rotate the bone or mesh to a new orientation. For bones, you can rotate them to pose the rig along the created bone joints.
+
+   <video controls src="../assets/modeling/skinned-meshes/Transform-Demo-Skinned.mp4" width="100%"></video>
 
    <Alert severity="info" variant="standard">
-   When you're creating poses, you can toggle between **Move** and **Rotate**
+   When creating poses, you can toggle between **Move** and **Rotate**
    modes by pressing <kbd>Ctrl</kbd><kbd>2</kbd> or <kbd>Ctrl</kbd><kbd>4</kbd>,
    respectively (<kbd>⌘</kbd><kbd>2</kbd> or <kbd>⌘</kbd><kbd>4</kbd>
    on Mac). These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the **Snap to Grid** section of the **Model** tab.
    </Alert>
 
-4. Continue moving or rotating parts until you get the desired pose.
-   Whenever you adjust a specific part, a **new keyframe** displays
-   on the **timeline** for that part at that specific frame position.
-5. When you're ready to preview the animation, you can either:
+5. Continue moving or rotating bones or meshes until you get the desired pose.
+   Whenever you adjust a specific bone or mesh, a **new track** displays in the track list, and a **new keyframe** displays on the **timeline** for that bone more mesh at that specific frame position.
+
+   <img src="../assets/animation/animation-editor/Track-Keyframe-Added.png" width="80%" />
+
+6. When you're ready to preview the animation, you can either:
 
    - Navigate to the **Media and Playback Controls**, then click the
      **Play** button.
@@ -261,8 +244,7 @@ To create a pose:
    - Or press the **Spacebar**.
 
   <Alert severity="info" variant="standard">
-      By default, the timeline displays a duration of 1 second (30 frames), but
-      the animation's actual duration is determined by the final keyframe. To
+      By default, the timeline displays a duration of 1 second (30 frames), but the final keyframe determines the animation's actual duration. To
       add more time to the timeline, enter a new value in the right-side box of
       the position indicator.
   </Alert>
@@ -378,7 +360,7 @@ While using the slider, you can preview the animation and scrub through the time
 
 To access the **Optimize Keyframes** tool:
 
-1. In the **Animation Editor**, click ****&ctdot;**** button and select **Optimize Keyframes**. A dialog box with a slider displays.
+1. In the **Animation Editor**, click \***\*&ctdot;\*\*** button and select **Optimize Keyframes**. A dialog box with a slider displays.
 
    <img
     alt="Optimize Keyframes"
@@ -631,9 +613,6 @@ To export an animation:
 Once the upload is complete, you can copy the animation's asset ID
 from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Using Animations](../animation/using.md).
 
-1. Click the **Inventory** tab and select **My Animations** from the dropdown menu.
-
-   <img src="../assets/studio/toolbox/Inventory-My-Animations.png" width="360" />
-
+1. Click the **Creations** tab and select **Animations** from the dropdown menu.
 2. Right-click the desired animation and select **Copy Asset ID** from the contextual menu.
 3. See [Using Animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.

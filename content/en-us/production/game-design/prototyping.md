@@ -27,8 +27,8 @@ description: Prototyping
 - Office supplies
 
 <figure>
-    <img src="../../assets/game-design/prototyping/prototyping-1.png" width="70%"/>
-    <figcaption>Examples of paper prototyping tools</figcaption>
+    <img src="../../assets/game-design/prototyping/prototyping-1.png" alt="A stack of cardboard cards, a number 2 pencil, and a handful of semi-transluscent cyan blue dice sit on top of a dark brown table to signify common household objects you can use to prototype your gameplay." width="70%"/>
+    <figcaption>Examples of paper prototyping tools.</figcaption>
   </figure>
 
 The benefits of paper prototyping are:
@@ -37,8 +37,8 @@ The benefits of paper prototyping are:
 - **Broader system context:** The abstraction of paper protoyping enables you to interact with more systems in your experience without getting weighed down by practical implementation. This freedom to explore system interaction ideas allows you to think of solutions from a design perspective, that you can then test once the prototyping stage is over. Even if it proves to be out of scope or difficult to implement, the initial idea gleamed from the broader system context provided by paper prototyping enables you to discover new creative solutions you might not otherwise have considered.
 - **UI/UX Design:** The ease of drawing on paper makes paper prototyping one of the best mediums for exploring optimal UI and UX designs for your experience.
     <figure>
-      <img src="../../assets/game-design/prototyping/prototyping-2.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <img src="../../assets/game-design/prototyping/prototyping-2.png" alt="A lightskinned hand holds a small paper cutout of a piece of pepperoni over a piece of paper with a UI prototype of a pizza building system. The piece of paper is on a dark brown table." width="70%"/>
+      <figcaption>Using paper prototyping to explore UI/UX design.</figcaption>
     </figure>
 
 Despite its benefits, prototyping on paper has drawbacks due to the difference in medium. The detriments of paper prototyping are:
@@ -59,8 +59,8 @@ _Studio prototyping_ is the act of using Roblox Studio to design and iterate the
 - **Reusable work:** Creating in directly in studio allows you to build off your work. Unlike paper prototyping, you don't have to start over when the prototyping period concludes, and can continue working from where you left off.
 - **Early technical issues detection:** The abstraction of paper prototyping can result in unrealistic ideas that are impossible to technically implement. Prototyping in studio forces you to determine if your idea is something you can practically create with the resources available to you.
     <figure>
-      <img src="../../assets/game-design/prototyping/prototyping-3.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <img src="../../assets/game-design/prototyping/prototyping-3.png" alt="An example greybox obby course with various gray, purple, and red parts above an open space without a baseplate." width="70%"/>
+      <figcaption>An early obby prototype made in Roblox Studio.</figcaption>
     </figure>
 
 Despite its benefits, the limitations of studio prototyping include:
@@ -68,8 +68,8 @@ Despite its benefits, the limitations of studio prototyping include:
 - **Smaller testing scope:** Due to the time required to script, debug, and replace assets involved in a prototype, the scope to test potential gameplay interactions and systems is limited.
 - **Increased iteration time** Due to the increased cost of creating different virtual environments, more time is required to iterate multiple systems in an experience.
     <figure>
-      <img src="../../assets/game-design/prototyping/prototyping-4.png" width="70%"/>
-      <figcaption>Using paper prototyping to explore UI/UX design</figcaption>
+      <img src="../../assets/game-design/prototyping/prototyping-4.png" alt="An example greybox obby course with parts of various textures, yellow Roblox coins, and a particle emitter emitting light green particles." width="70%"/>
+      <figcaption>A more complex prototype made in Roblox Studio. </figcaption>
     </figure>
 
 ## Best Practices

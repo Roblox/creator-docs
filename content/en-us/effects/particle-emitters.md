@@ -24,12 +24,18 @@ itself instead of using `Class.ParticleEmitter.EmissionDirection|EmissionDirecti
 
 To create a particle emitter on a given `Class.BasePart` or `Class.Attachment`:
 
-1. In the [Explorer](../studio/explorer.md) window, hover over the part or attachment and click the &CirclePlus; button. A contextual menu displays.
+1. In the **Explorer** window, hover over the part or attachment and click the &CirclePlus; button. A contextual menu displays.
 2. From the menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area or from the attachment's position.
 
    <img src="../assets/studio/explorer/MeshPart-ParticleEmitter.png" width="320" alt="ParticleEmitter object as child of MeshPart in Explorer hierarchy" />
 
 ## Customizing Particles
+
+By experimenting with the following properties, you can customize a particle's visual appearance to make unique gameplay elements like bursting volcanos, magical dust, and dust motes.
+
+<Alert severity="info">
+The visual quality of your particles can change depending on the graphic settings on the player's device. To review your particles across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your particles.
+</Alert>
 
 ### Texture
 
@@ -52,7 +58,7 @@ see [Importing Assets](../projects/assets/manager.md#importing-assets).
 
 To insert an image into a particle emitter:
 
-1. In the menu bar, navigate to the [Home](../studio/home-tab.md) tab and select **Toolbox**. The [Toolbox](../projects/assets/toolbox.md) window displays.
+1. In the menu bar, navigate to the **Home** tab and select **Toolbox**. The **Toolbox** window displays.
 
    <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="800" alt="Toolbox indicated in Home tab" />
 
@@ -63,8 +69,8 @@ To insert an image into a particle emitter:
    <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" alt="Creator Store tab indicated in Studio's Toolbox" />
 
 3. Right-click on the image you want to insert into a particle emitter and select **Copy&nbsp;Asset&nbsp;ID**.
-4. In the [Explorer](../studio/explorer.md) window, select a `Class.ParticleEmitter`.
-5. In the [Properties](../studio/properties.md) window, paste the asset ID into the **Texture** property.
+4. In the **Explorer** window, select a `Class.ParticleEmitter`.
+5. In the **Properties** window, paste the asset ID into the **Texture** property.
 
 ### Color
 
@@ -73,8 +79,8 @@ The `Class.ParticleEmitter.Color|Color` property tints each particle's texture t
 <Tabs>
 <TabItem label="Constant Color">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.ParticleEmitter`.
-1. In the [Properties](../studio/properties.md) window, select the **Color** property. You can either:
+1. In the **Explorer** window, select the `Class.ParticleEmitter`.
+1. In the **Properties** window, select the **Color** property. You can either:
 
    1. Click on the color square to open the **Colors** pop-up window and select a color.
    2. Input three numbers into the RGB color value field.
@@ -88,8 +94,8 @@ The `Class.ParticleEmitter.Color|Color` property tints each particle's texture t
 </TabItem>
 <TabItem label="Color Gradient">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.ParticleEmitter`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Color** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the `Class.ParticleEmitter`.
+1. In the **Properties** window, click inside the **Color** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Color-Open-Sequence.png" width="320" alt="Button to open color sequence popup" />
 
@@ -109,7 +115,7 @@ The `Class.ParticleEmitter.Color|Color` property tints each particle's texture t
 
    <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
 
-1. If desired, you can:
+1. For more customization, you can:
 
    - Add another keypoint by clicking anywhere on the graph.
    - Make a color change sooner or later within the gradient by dragging an intermediary keypoint to a new position.
@@ -126,15 +132,15 @@ The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to
 <Tabs>
 <TabItem label="Constant Size">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.ParticleEmitter`.
-1. In the [Properties](../studio/properties.md) window, select the **Size** property.
+1. In the **Explorer** window, select the `Class.ParticleEmitter`.
+1. In the **Properties** window, select the **Size** property.
 1. Input the size that you want each particle to be.
 
 </TabItem>
 <TabItem label="Number Sequence">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.ParticleEmitter`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Size** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the `Class.ParticleEmitter`.
+1. In the **Properties** window, click inside the **Size** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Size-Open-Sequence.png" width="320" alt="Button to open number sequence popup" />
 
@@ -162,6 +168,10 @@ The `Class.ParticleEmitter.Size|Size` property sets the size of each particle to
 
 </TabItem>
 </Tabs>
+
+<Alert severity="warning">
+Particle size can impact performance due to fill-rate. The more pixels particles occupy on a player's screen, the more costly it is on the GPU.
+</Alert>
 
 ### Transparency
 
@@ -198,6 +208,10 @@ Note that changing `Class.ParticleEmitter.Speed|Speed` does not affect active pa
 ### Rate
 
 The `Class.ParticleEmitter.Rate|Rate` property sets the number of particles that emit per second. A single particle emitter can create up to 500 particles per second. For best performance, keep the particle rate as low as possible and experiment with [size](#size) and [other properties](#other-properties) to achieve the desired visual effect.
+
+<Alert severity="warning">
+Particle count can impact performance due to overdraw, especially when particles are overlapping. The more layers of transparent effects on screen, the more costly it is on the GPU.
+</Alert>
 
 ### Orientation
 

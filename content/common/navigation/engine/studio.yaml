@@ -19,6 +19,8 @@ navigation:
     path: /studio/pivot-tools
   - title: Terrain Editor
     path: /studio/terrain-editor
+  - title: Texture Generator
+    path: /studio/texture-generator
   - title: Rig Builder
     path: /studio/rig-builder
   - heading: Scripting Tools
@@ -31,11 +33,8 @@ navigation:
     path: /studio/testing-modes
   - title: Output Window
     path: /studio/output
-  - title: Developer Console
-    path: /studio/developer-console
-  #- title: ScriptProfiler # If this is part of the dev console, figure out if it can just be added to that article
-  #  path: /studio/scriptprofiler
   - title: MicroProfiler
+    path: /studio/microprofiler/
     section:
       - title: Overview
         path: /studio/microprofiler/
@@ -45,6 +44,15 @@ navigation:
         path: /studio/microprofiler/tag-table
       - title: Using MicroProfiler
         path: /studio/microprofiler/using-microprofiler
+  - title: Developer Console
+    path: /studio/developer-console
+    section:
+      - title: Overview
+        path: /studio/developer-console
+      - title: Script Profiler
+        path: /studio/optimization/scriptprofiler
+      - title: Memory Usage
+        path: /studio/optimization/memory-usage
   - heading: UI Reference
   - title: Quick Access Tools
     path: /studio/quick-access

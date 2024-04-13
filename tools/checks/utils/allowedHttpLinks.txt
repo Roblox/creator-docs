@@ -12,6 +12,7 @@ https://apstudents.collegeboard.org/ap/2019-07/digital-portfolio-student-user-gu
 https://apstudents.collegeboard.org/course-index-page
 https://arm.kiber-one.com/modules.html
 https://aspire2be.co.uk/
+https://www.audacityteam.org/
 https://blackrocket.com/courses/
 https://brightoncollege.ac.th/
 https://btl3d.com/roblox
@@ -92,9 +93,11 @@ https://en.wikipedia.org/wiki/Inverse_kinematics
 https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 https://en.wikipedia.org/wiki/Linear_search
 https://en.wikipedia.org/wiki/Matrix_multiplication
+https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion
 https://en.wikipedia.org/wiki/Percent-encoding
 https://en.wikipedia.org/wiki/Photogrammetry
 https://en.wikipedia.org/wiki/Quaternion
+https://en.wikipedia.org/wiki/Radian
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Shard_(database_architecture
 https://en.wikipedia.org/wiki/Type_introspection
@@ -164,6 +167,7 @@ https://popfizz.io/
 https://program-school.org/
 https://projectscientist.org/
 https://quixel.com/
+https://www.reaper.fm/
 https://reg136.imperisoft.com/kellogg/ProgramDetail/3235313532/Registration.aspx
 https://reportharmfulcontent.com/
 https://richmond.clubscikidz.com/summer-camps/coding-with-roblox/
@@ -176,6 +180,7 @@ https://roblox.qualtrics.com/jfe/form/SV_9QPfsGGqLHRYGMe?jfefe=new
 https://roblox.qualtrics.com/jfe/form/SV_a4PdqU3StYp6crI
 https://rojo.space/
 https://scratchpad.co.nz/courses/roblox-learn-it-school-holiday-programme/
+https://sheets.google.com/
 https://simplycoding.org/roblox-coding-for-kids/
 https://sketchfab.com/3d-models/asklepios-879e7f628ecb4683b23e803242abea62
 https://sketchfab.com/3d-models/barn-owl-0e65de5934db4f0eae02835ba7227dcc
@@ -192,6 +197,7 @@ https://start.codabra.org/
 https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
+https://stripe.com/docs/connect/cross-border-payouts
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html
 https://substance3d.adobe.com/documentation/sddoc/transformation-2d-172825332.html
@@ -206,6 +212,8 @@ https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
 https://support.guilded.gg/hc/en-us
 https://support.guilded.gg/hc/en-us/articles/1500002751582-Create-a-Server
 https://support.guilded.gg/hc/en-us/articles/360038927934-Incoming-Webhooks
+https://support.stripe.com/express/questions/what-is-a-w-8-form
+https://support.stripe.com/express/questions/what-is-a-w-9-form
 https://teaching.pitt.edu/wp-content/uploads/2020/07/FLEX-Designing-Discussion-Questions-Using-Blooms-Taxonomy-Examples.pdf
 https://techbrainiacs.com/
 https://techkidzafrica.co.ke/
@@ -234,9 +242,9 @@ https://wikipedia.org/wiki/Scientific_notation
 https://wikipedia.org/wiki/Single-precision_floating-point_format
 https://www.931smd.com/
 https://www.acceleratekid.com/camps/
-https://www.adobe.com/products/photoshop.html
-https://www.adobe.com/products/substance3d-designer.html
-https://www.adobe.com/products/substance3d-painter.html
+https://www.adobe.com/products/photoshop
+https://www.adobe.com/products/substance3d-designer
+https://www.adobe.com/products/substance3d-painter
 https://www.allisontutoring.com/
 https://www.alvinblox.com/
 https://www.artxcampus.co.kr/
@@ -338,6 +346,7 @@ https://www.lua.org/pil/5.1.html
 https://www.lua.org/pil/9.1.html
 https://www.makersmuse.in/
 https://www.maxon.net/en/zbrush
+https://www.maxon.net/en/cinema-4d
 https://www.mcdonogh.org/community/parents/summer-camps/game-dev-coding-camps
 https://www.mrbrendonross.com/
 https://www.nextgenscience.org/

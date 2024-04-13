@@ -52,16 +52,20 @@ While playing solo, you can toggle between **Client** and **Server** modes by cl
 
 Depending on the mode, control of your character and the camera changes as follows:
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Client.jpg" />
-    <figcaption>In **Client** mode, the simulation uses your character controls and camera setup. This testing mode is a close simulation of the experience running on the Roblox application, without multiple players.</figcaption>
+<Tabs>
+<TabItem label="Client Mode">
+	<figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Client.jpg" width="800" height="450" />
+    <figcaption>In **Client** mode, the 3D viewport is surrounded by a **blue** border and the simulation uses your character controls and camera setup. This testing mode is a close simulation of the experience running on the Roblox application, without multiple players.</figcaption>
   </figure>
-  <figure>
-    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Server.jpg" />
-    <figcaption>In **Server** mode, your character is inserted but is not under your control. You can move about the place with a free-floating camera, select objects, and inspect their properties.</figcaption>
+</TabItem>
+<TabItem label="Server Mode">
+	<figure>
+    <img src="../assets/studio/debugging/Client-Server-Toggle-3D-Server.jpg" width="800" height="450" />
+    <figcaption>In **Server** mode, the 3D viewport is surrounded by a **green** border and your character is inserted but is not under your control. You can move about the place with a free‑floating camera, select objects, and inspect their properties.</figcaption>
   </figure>
-</GridContainer>
+</TabItem>
+</Tabs>
 
 #### Explorer Window
 

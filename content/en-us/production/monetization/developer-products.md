@@ -5,7 +5,7 @@ description: Developer Products are items or abilities that users can purchase m
 
 A **Developer Product** is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions.
 
-<img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" width="80%" />
+<img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" />
 
 <Alert severity="info">
    For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
@@ -23,17 +23,19 @@ To create a new Developer Product:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 2. In the **Monetization** menu, select **Developer Products**. All developer products for that experience display.
-    <img src="../../assets/monetization/developer-products/developer-products.png" width="50%" />
-3. Click the **CREATE A DEVELOPER PRODUCT** button. The **Create a Developer Product** page displays.
-4. Click the **UPLOAD IMAGE** button. A file browser displays.
+
+    <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
+
+3. Click the **Create a Developer Product** button.
+4. Click the **Upload Image** button. A file browser displays.
 5. Select the image you want to display as the icon, then click the **Open** button.
 6. Fill in the following fields:
 
    - **Name**: A title for your Developer Product.
    - **Description**: A description what a user should expect when they purchase the Developer Product.
    - **Price in Robux**: The amount of Robux you want to charge users for the Developer Product.
-    <img src="../../assets/monetization/developer-products/Create-A-Developer-Product.png" width="100%" />
-7. Click the **CREATE DEVELOPER PRODUCT** button. The Developer Product displays within the **Creations** section of the **Developer Products** page.
+
+7. Click the **Create Developer Product** button.
 
 <Alert severity="info">
    If you are creating a randomized Developer Product, review the <a href="./randomized-virtual-items-policy.md">Randomized Virtual Item Policy</a>.
@@ -51,7 +53,7 @@ To locate a Developer Product ID:
 
 1. Select **Copy Asset ID**. The Pass ID copies to your clipboard.
 
-   <img src="../../assets/monetization/developer-products/Copy-AssetID-Developer-Products.png" width="50%" />
+   <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
 
 ## Scripting Developer Products
 

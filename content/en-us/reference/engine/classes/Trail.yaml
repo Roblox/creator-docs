@@ -7,8 +7,8 @@ summary: |
 description: |
   The **Trail** object is used to create a trail effect between two attachments.
   As the attachments move through space, a texture is drawn on their defined
-  plane. This is commonly used to create effects that visualize movements
-  like tracer trails behind projectiles, footprints, tire tracks, and similar
+  plane. This is commonly used to create effects that visualize movements like
+  tracer trails behind projectiles, footprints, tire tracks, and similar
   effects.
 
   See [Trails](../../../effects/trails.md) for more information.
@@ -21,7 +21,8 @@ deprecation_message: ''
 properties:
   - name: Trail.Attachment0
     summary: |
-      Along with `Class.Trail.Attachment1|Attachment1`, determines where the trail will start drawing its segments.
+      Along with `Class.Trail.Attachment1|Attachment1`, determines where the
+      trail will start drawing its segments.
     description: |
       A `Class.Trail` starts drawing its segments at the positions of its
       **Attachment0** and `Class.Trail.Attachment1|Attachment1`. When the trail
@@ -47,7 +48,8 @@ properties:
       can_save: true
   - name: Trail.Attachment1
     summary: |
-      Along with `Class.Trail.Attachment0|Attachment0`, determines where the trail will start drawing its segments.
+      Along with `Class.Trail.Attachment0|Attachment0`, determines where the
+      trail will start drawing its segments.
     description: |
       A `Class.Trail` starts drawing its segments at the positions of its
       `Class.Trail.Attachment0|Attachment0` and **Attachment1**. When the trail
@@ -99,7 +101,7 @@ properties:
     description: |
       Determines the color of the trail throughout its lifetime. If
       `Class.Trail.Texture|Texture` is set, this color will tint the texture.
-      
+
       This property is a `Datatype.ColorSequence`, allowing the color to be
       configured to vary across the length of the trail. If the color changes
       after some of the trail segments have been drawn, all of the old segments
@@ -210,7 +212,7 @@ properties:
 
       Changing this property immediately affects all existing and future
       segments of the trail.
-      
+
       This property does **not** cause the trail to light the environment.
     code_samples:
     type: float
@@ -257,7 +259,7 @@ properties:
     description: |
       This property determines the maximum length of the trail, in studs. Its
       value defaults to 0, meaning that the trail will not have a maximum length
-      and trail segments will expire in their `Class.Trail.Lifetime|Lifetime`. 
+      and trail segments will expire in their `Class.Trail.Lifetime|Lifetime`.
 
       This property can be used alongside the `Class.Trail.MinLength|MinLength`
       property which determines the minimum length a trail must be before it's
@@ -310,7 +312,7 @@ properties:
       property is not set, the trail will be displayed as a solid plane; this
       also occurs when the texture is set to an invalid content ID or the image
       associated with the texture has not yet loaded.
-      
+
       The appearance of the texture can be further modified by other trail
       properties including `Class.Trail.Color|Color` and
       `Class.Trail.Transparency|Transparency`.
@@ -385,16 +387,17 @@ properties:
       texture as follows:
 
       - If set to `Enum.TextureMode.Stretch`, the texture will stretch out based
-      on the lifetime of the trail, and shrink inwards if the trail's
-      attachments stop moving.
+        on the lifetime of the trail, and shrink inwards if the trail's
+        attachments stop moving.
 
       - If set to `Enum.TextureMode.Wrap`, the texture will be tiled as the
-      length of the trail changes, but the textures will remain stationary
-      relative to their attachments.
+        length of the trail changes, but the textures will remain stationary
+        relative to their attachments.
 
       - If set to `Enum.TextureMode.Static`, the texture will be rolled out as
-      the attachments move, and they will remain in place until their lifetime
-      is met. This setting is ideal for trail textures that should appear "stamped" where rendered, such as paw prints or tire tracks.
+        the attachments move, and they will remain in place until their lifetime
+        is met. This setting is ideal for trail textures that should appear
+        "stamped" where rendered, such as paw prints or tire tracks.
     code_samples:
     type: TextureMode
     tags: []

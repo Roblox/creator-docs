@@ -37,14 +37,14 @@ If the selected object and its visual draggers are not currently in view within 
 
 The **Mode** selector toggles between standard geometric transformations and [simulation of mechanical constraints](../physics/mechanical-constraints.md#simulating-constraints) while moving or rotating parts.
 
-<img src="../assets/studio/general/Model-Tab-Mode.png" width="770" alt="Mode selector indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Mode.png" width="768" alt="Mode selector indicated in Model tab" />
 
 ### Collisions
 
 The **Collisions** checkbox toggles the collisions state when you're transforming objects. If collisions are **off**, you can move, scale, and rotate objects so that they overlap each other; if collisions are **on**, you cannot transform objects to overlap other objects.
 
 <img src="../assets/studio/general/Model-Tab-Collisions-On.png"
-   width="830" alt="Collisions checkbox indicated in Model tab" />
+   width="768" alt="Collisions checkbox indicated in Model tab" />
 
 ### Transform Snapping
 
@@ -70,33 +70,43 @@ Snap increments for tool transforms are based on **studs** for moving/scaling or
 
 The **Pivot** tools give you full control over the points around which objects rotate and translate. See [Pivot&nbsp;Tools](../studio/pivot-tools.md) for details.
 
-<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="830" alt="Pivot Tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Pivot-Tools.png" width="768" alt="Pivot Tools indicated in Model tab" />
 
 ## Align Tool
 
 The **Align Tool** button opens a set of tools for aligning objects or groups of objects along the X, Y, or Z axes. For more information, see [Align&nbsp;Tool](../studio/align-tool.md).
 
-<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="830" alt="Align Tool indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="672" alt="Align Tool indicated in Model tab" />
 
 ## Part Insertion
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**. For more information, see [Parts](../parts/index.md).
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="826" alt="Part menu indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="672" alt="Part menu indicated in Model tab" />
 
 ## Material Manager
 
 The **Material&nbsp;Manager** window lets you apply and create custom materials for parts and [terrain](../parts/terrain.md). See [Materials](../parts/materials.md) for details.
 
-<img src="../assets/studio/general/Model-Tab-Material-Manager-Trimmed.png" width="826" alt="Material Manager indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="672" alt="Material Manager indicated in Model tab" />
 
 ## Color Picker
 
 Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
 
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Color button indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="842" alt="Color button indicated in Model tab" />
 
 For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#coloring-parts).
+
+## Texture Generator
+
+<Alert severity="success">
+This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Texture&nbsp;Generator**.
+</Alert>
+
+The [Texture Generator](../studio/texture-generator.md) tool quickly creates custom textures for meshes through text prompts.
+
+<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="716" alt="Texture Generator indicated in Model tab" />
 
 ## Group Tools
 
@@ -106,7 +116,7 @@ Alternatively, you can group objects into a [folder](../studio/explorer.md#organ
 
 To **ungroup** an existing model or folder, click the small arrow next to the button and select **Ungroup**. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>U</kbd> (Windows) or <kbd>⌘</kbd><kbd>U</kbd> (Mac).
 
-<img src="../assets/studio/general/Model-Tab-Group-Tools.png" width="770" alt="Group tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Group-Tools.png" width="718" alt="Group tools indicated in Model tab" />
 
 ## Lock Tools
 
@@ -116,19 +126,19 @@ Once enabled, the tool operates as a "key" for both states&nbsp;&mdash; clicking
 
 To unlock all objects, click the small arrow next to the button and select **Unlock&nbsp;All**.
 
-<img src="../assets/studio/general/Model-Tab-Lock-Tools.png" width="770" alt="Lock tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Lock-Tools.png" width="716" alt="Lock tools indicated in Model tab" />
 
 ## Anchor Toggle
 
 The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac).
 
-<img src="../assets/studio/general/Model-Tab-Anchor.png" width="770" alt="Anchor toggle indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Anchor.png" width="716" alt="Anchor toggle indicated in Model tab" />
 
 ## Solid Modeling
 
 The **Solid Modeling** section contains tools to create new geometry beyond the basic [parts](../parts/index.md) Roblox provides. For more information, see [Solid Modeling](../parts/solid-modeling.md).
 
-<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="754" />
+<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="744" />
 
 <table>
   <thead>
@@ -166,7 +176,7 @@ The **Solid Modeling** section contains tools to create new geometry beyond the 
 
 The **Constraints** section contains tools for creating physical `Class.Constraint|Constraints` between objects.
 
-<img src="../assets/studio/general/Model-Tab-Constraints.png" width="740" />
+<img src="../assets/studio/general/Model-Tab-Constraints.png" width="754" />
 
 Constraints are categorized into two groups:
 
@@ -202,7 +212,7 @@ The **Gameplay** section tools allow you to insert beautiful effects like [light
 
 The **Advanced** section contains tools to insert advanced objects, services, and scripts, as well as configure [collision filtering](../workspace/collisions.md#collision-filtering).
 
-<img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="740" alt="Advanced options indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Advanced-Options.png" width="754" alt="Advanced options indicated in Model tab" />
 
 <table>
 <thead>

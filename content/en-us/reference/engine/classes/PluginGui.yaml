@@ -37,11 +37,11 @@ properties:
 methods:
   - name: PluginGui:BindToClose
     summary: |
-      Binds a function to the `Class.PluginGui|PluginGui's` close button,
-      overriding the default behavior.
+      Binds a function to the `Class.PluginGui` close button, overriding the
+      default behavior.
     description: |
-      This function binds a function to the `Class.PluginGui|PluginGui's` close
-      button, overriding the default behavior.
+      This function binds a function to the `Class.PluginGui` close button,
+      overriding the default behavior.
 
       By default, when the user clicks the 'x' button in the top right corner of
       the `Class.PluginGui` the `Class.LayerCollector.Enabled|Enabled` property

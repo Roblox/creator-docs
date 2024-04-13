@@ -40,7 +40,8 @@ items:
       setting is ideal for trail textures that should appear "stamped" where
       rendered, such as paw prints or tire tracks.
 
-      This value is not supported for `Class.Beam` and therefore behaves identically to **Wrap**.
+      This value is not supported for `Class.Beam` and therefore behaves
+      identically to **Wrap**.
     value: 2
     tags: []
     deprecation_message: ''

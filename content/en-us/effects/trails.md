@@ -18,36 +18,45 @@ After you [create a trail](#creating-a-trail), you can:
 
 Before you begin to create a trail, it's useful to toggle on visibility of attachments so you can more easily discern how their spacing affects the trail's width.
 
-1. In the menu bar, navigate to the [Model](../studio/model-tab.md) tab, then the **Constraints** section.
+1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
 2. If it's not currently enabled, toggle on **Constraint Details**.
 
-   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="740" alt="Constraint Details toggle indicated in Model tab" />
+   <img src="../assets/studio/general/Model-Tab-Constraint-Details.png" width="754" alt="Constraint Details toggle indicated in Model tab" />
 
 The following video demonstrates how attachments that are closer to each other create a trail with a smaller width:
 
 <video src="../assets/lighting-and-effects/trail/Attachment-Width-Between.mp4" controls width="800"></video>
 
-To create a trail on a given part:
+To create a trail on a part:
 
-1. In the [Explorer](../studio/explorer.md) window, insert two `Class.Attachment|Attachments` and a `Class.Trail` into the part.
+1. In the **Explorer** window, insert two `Class.Attachment|Attachments` and a `Class.Trail` object into the part.
 
    1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
    2. From the menu, insert two **Attachments** and one **Trail**.
 
       <img src="../assets/studio/explorer/Part-Trail-Setup.png" width="320" />
 
-2. Select the new **Trail** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment`.
+2. Select the new **Trail** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment` object.
 
-   1. In the [Properties](../studio/properties.md) window, select the **Attachment0** property. Your cursor changes.
-   2. In the [Explorer](../studio/explorer.md) window, select the first attachment you created.
-   3. Back in the [Properties](../studio/properties.md) window, select the **Attachment1** property. Your cursor changes.
-   4. In the [Explorer](../studio/explorer.md) window, select the second attachment you created.
+   1. In the **Properties** window, select the **Attachment0** property. Your cursor changes.
+   2. In the **Explorer** window, select the first attachment you created.
+   3. Back in the **Properties** window, select the **Attachment1** property. Your cursor changes.
+   4. In the **Explorer** window, select the second attachment you created.
 
 3. Using the [Move](../parts/index.md#moving-parts) tool, position both attachments within the part according to how wide you want the trail to be.
-4. To see the trail, move the part in any direction and the trail will
-   follow.
+4. To see the trail, move the part in any direction and the trail follows.
+
+<Alert severity="warning">
+Trails require attachments to function properly. If you remove either `Class.Attachment` object from step 2, the trail stops rendering its texture.
+</Alert>
 
 ## Customizing Trails
+
+By experimenting with the following properties, you can customize a trail's visual appearance to make unique gameplay elements like wind gusts, sword slashes, and tire marks from fast cars.
+
+<Alert severity="info">
+The visual quality of your trails can change depending on the graphics settings on the player's device. To review your trail across quality levels, it's recommended to open **Studio Settings**, search for **Editor Quality Level**, and set it to the both the lowest and highest level after you finish customizing your trail.
+</Alert>
 
 ### Texture
 
@@ -64,8 +73,8 @@ The `Class.Trail.Color|Color` property tints the trail's texture to either a spe
 <Tabs>
 <TabItem label="Constant Color">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Trail`.
-2. In the [Properties](../studio/properties.md) window, select the **Color** property. You can either:
+1. In the **Explorer** window, select the trail.
+2. In the **Properties** window, select the **Color** property. You can either:
 
    1. Click on the color square to open the **Colors** pop-up window and select a color.
    2. Input three numbers into the RGB color value field.
@@ -75,8 +84,8 @@ The `Class.Trail.Color|Color` property tints the trail's texture to either a spe
 </TabItem>
 <TabItem label="Color Gradient">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Trail`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Color** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the trail.
+1. In the **Properties** window, click inside the **Color** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Color-Open-Sequence.png" width="320" alt="Button to open color sequence popup" />
 
@@ -95,7 +104,7 @@ The `Class.Trail.Color|Color` property tints the trail's texture to either a spe
 
    <img src="../assets/studio/general/ColorSequence-Red-Purple.png" width="640" alt="Color sequence popup from red to purple" />
 
-1. If desired, you can:
+1. For more customization, you can:
 
    - Add another keypoint by clicking anywhere on the graph.
    - Make a color change sooner or later within the gradient by dragging an intermediary keypoint to a new position.
@@ -112,15 +121,15 @@ The `Class.Trail.Transparency|Transparency` property sets the transparency of th
 <Tabs>
 <TabItem label="Constant Opacity">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Trail`.
-2. In the [Properties](../studio/properties.md) window, select the **Transparency** property.
+1. In the **Explorer** window, select the trail.
+2. In the **Properties** window, select the **Transparency** property.
 3. Input the desired opacity for the trail.
 
 </TabItem>
 <TabItem label="Number Sequence">
 
-1. In the [Explorer](../studio/explorer.md) window, select the `Class.Trail`.
-1. In the [Properties](../studio/properties.md) window, click inside the **Transparency** property field and click the **&ctdot;** button.
+1. In the **Explorer** window, select the trail.
+1. In the **Properties** window, click inside the **Transparency** property field, then click the **&ctdot;** button.
 
    <img src="../assets/studio/properties/Transparency-Open-Sequence.png" width="320" alt="Button to open number sequence popup" />
 

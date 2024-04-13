@@ -1,152 +1,101 @@
 ---
-title: Meshes in Studio
+title: Meshes
 description: Meshes are a collection of vertices, edges, and faces that make up 3D objects.
 ---
 
-You can insert [creator-uploaded meshes](#inserting-meshes) or import [custom meshes](#importing-meshes) into Studio. Once added to your experience, you can access meshes in the [Toolbox](../projects/assets/toolbox.md) or [Asset Manager](../projects/assets/manager.md) and configure them in the following ways:
+`Class.MeshPart` objects are descendants of the `Class.BasePart` class. They represent **meshes**, which are collections of vertices, edges, and faces that make up a 3D object. Unlike parts, which you can directly create in Studio, you need to use a third-party modeling application like Blender or Maya to create meshes, then import them into Studio as `Class.MeshPart` objects.
 
-- [Add or update textures](#adding-textures) for the mesh through its `Class.MeshPart.TextureID|TextureID` or through [surface appearance](../art/modeling/surface-appearance.md).
-- Configure [collision fidelity](#collision-fidelity) for your mesh object.
-- Set the [level of detail](#level-of-detail) for your meshes to optimize for performance and visual quality.
-- [Pose and animate](#posing-and-animating) your rigged meshes to add an extra level of visual customization to your models.
+After importing a mesh into Studio, you can customize its rendering properties, such as textures, level of detail, and collision fidelity. In addition to importing your own meshes, you can also browse and select from user-uploaded meshes using the [Creator Store](../production/publishing/creator-store.md).
 
-## Inserting Meshes
+Roblox supports many types of meshes, as long as they adhere to the [general mesh specifications](../art/modeling/specifications.md). A basic mesh consists of at least one mesh object and one texture:
 
-### Creator Store
-
-You can browse thousands of user-uploaded meshes from the **Creator Store** tab of the [Toolbox](../projects/assets/toolbox.md).
-
-1. Navigate to the [View](../studio/view-tab.md) tab and select **Toolbox**.
-
-   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
-
-1. From the **Creator Store** tab, select the category dropdown and choose **Meshes**.
-
-   <img src="../assets/studio/toolbox/Creator-Store-Meshes.png" width="360" />
-
-1. In the **Search** field, type anything you'd like to find.
-1. Either click or drag-and-drop a mesh to insert it into the viewport.
-
-### Asset Manager
-
-Meshes that you've personally [imported](#importing-meshes) or those which were imported by [groups](../projects/groups.md) you belong to appear in the [Asset Manager](../projects/assets/manager.md).
-
-1. Navigate to the **View** tab and select **Asset Manager**.
-
-   <img src="../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Asset Manager toggle button in Studio" />
-
-1. Open the **Meshes** folder, then either:
-
-   - Drag-and-drop a mesh into the 3D viewport.
-   - Right-click on a mesh and select **Insert**, or select **Insert With Location** if you'd like to preserve mesh location data that was stored during the [import](#importing-meshes) process.
-
-## Importing Meshes
-
-You can import custom meshes created through other applications through Studio's [3D&nbsp;Importer](../art/modeling/3d-importer.md) as `.fbx` or `.obj` files. All imported meshes must adhere to Studio's [mesh requirements](../art/characters/specifications.md).
-
-<img src="../assets/studio/general/Home-Tab-Import-3D.png" width="715" />
-
-<Alert severity='info'>
-If you meet certain account requirements, you can sell your custom meshes as accessories on the [Marketplace](https://www.roblox.com/catalog). See [Avatar documentation](../avatar/index.md) for an overview of the avatar creation, uploading, and selling process.
-</Alert>
-
-### Bulk Import
-
-You can bulk import custom meshes directly to your Toolbox or Asset Manager inventory. The bulk import feature doesn't support complex meshes such as those with rigging, skinning, or animation data. To import more than one asset through the [Asset Manager](../projects/assets/manager.md):
-
-1. Click the **Bulk Import** button.
-
-   <img src="../assets/studio/asset-manager/Import-Button.png" width="360" />
-
-2. Select the meshes you want to import from your local machine, then click the **Open** button.
-3. For each mesh you select, set the applicable options listed below and click **Apply**, or select **Apply&nbsp;All** to apply your choices to every mesh.
-
-   - **Rescale if too large**
-   - **Reverse inward-pointing mesh normals**
-   - **Import file as single mesh**
-
-   <Alert severity="warning">
-   If any child mesh contains more than 10,000 polygons, Studio rejects the parent mesh. If a parent mesh contains more than 50 child meshes, Studio rejects all of its children meshes.
-   </Alert>
-
-After a moment, the meshes display with a status icon. Successfully imported meshes enter the moderation queue and are only visible to you within the **Meshes** folder of the [Asset Manager](../projects/assets/manager.md) and in the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
-
-## Adding Textures
-
-### Image Textures
-
-Image textures wrap around a 3D mesh. Most meshes already include textures, although textures can be changed or altered by changing the **TextureID** field to an appropriate image asset ID.
-
-To apply a mesh texture in Studio:
-
-1. Within the [Explorer](../studio/explorer.md) window, select the `Class.MeshPart` object.
-2. In the [Properties](../studio/properties.md) window, select the **TextureID** field.
-
-   <img src="../assets/modeling/meshes/Properties-TextureID.png"
-   width="320" />
-
-3. Enter a new texture ID or locate a specific texture.
-
-### Surface Appearance
-
-You can use the `Class.SurfaceAppearance` instance to override a mesh's `Class.MeshPart.TextureID|TextureID` with advanced PBR textures, including color, normal, metal, and roughness maps. See [Surface Appearance](../art/modeling/surface-appearance.md) for details.
-
-<GridContainer numColumns="4">
+<GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-After.jpg" />
-    <figcaption>ColorMap</figcaption>
+    <img src="../assets/art/Basic-Mesh-Example.png" />
+    <figcaption>A mesh object sets the shape and geometry of the 3D object</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-After.jpg" />
-    <figcaption>NormalMap</figcaption>
+    <img src="../assets/art/Basic-Texture-Example.png" />
+    <figcaption>A texture image map applies a surface appearance and color</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-After.jpg" />
-    <figcaption>MetalnessMap</figcaption>
-  </figure>
-  <figure>
-    <img src="../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-After.jpg" />
-    <figcaption>RoughnessMap</figcaption>
+    <img src="../assets/art/Basic-Mesh-Combined-Example.png" />
+    <figcaption>The mesh and texture combine to make a unique custom 3D object</figcaption>
   </figure>
 </GridContainer>
 
-## Collision Fidelity
+Studio also supports meshes with components for creating avatar character models or accessories, such as [rigging and skinning](#rigging-and-skinning-meshes) data.
 
-The `Class.MeshPart.CollisionFidelity|CollisionFidelity` property determines how closely the visual representation of a mesh matches its physical bounds. It has the following options, in order of fidelity and performance impact from lowest to highest:
-
-- **Box** — Creates a bounding collision box, ideal for small or non-interactive objects.
-- **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
-- **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
-- **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
-
-<Tabs>
-  <TabItem label="Original Mesh">
-    <img src="../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="600" height="500" alt="Original mesh of castle tower" />
-  </TabItem>
-	<TabItem label="Default">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="600" height="500" alt="Collision fidelity of Default shown for mesh" />
-  </TabItem>
-  <TabItem label="Box">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="600" height="500" alt="Collision fidelity of Box shown for mesh"/>
-  </TabItem>
-	<TabItem label="Hull">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="600" height="500" alt="Collision fidelity of Hull shown for mesh" />
-  </TabItem>
-	<TabItem label="Precise">
-    <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
-  </TabItem>
-</Tabs>
-
-<Alert severity="info">
-To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
+<Alert severity='info'>
+You can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing on the Marketplace. See [Avatar](../avatar/index.md) for more information.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+## Importing Meshes
 
-## Level of Detail
+You can import meshes into Studio using the [3D Importer](../art/modeling/3d-importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or Toolbox, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
 
-By default, meshes will always display in precise fidelity, no matter how far they are from the camera, but you can dynamically control a mesh's level of detail through its `Enum.RenderFidelity` property. Setting less important meshes to a lower render fidelity will improve an experience's performance if you have many detailed meshes. When it is set to **Automatic**, the mesh renders at a different level
-of detail depending on its distance from the camera:
+If the mesh file you are importing contains objects using specific naming conventions or contains facial animation data, the 3D Importer automatically detects and converts them into the following objects instead of `Class.MeshPart`:
+
+- `Class.Attachment`: Objects with `_Att` at the end of their names.
+- `Class.WrapTarget`: Objects with `_OuterCage` at the end of their names.
+- `Class.WrapLayer`: Objects with both `_InnerCage` `_OuterCage` at the end of their names.
+- `Class.FaceControls`: Objects containing avatar character heads and the appropriate facial animation data.
+
+If you want to bulk-import meshes along with non-3D assets, such as images and audio, you can use the [Asset Manager](../projects/assets/manager.md). However, the Asset Manager doesn't support importing meshes with rigging, skinning, and animation data, accessories, or characters with facial animations.
+
+## Customizing Meshes
+
+Unlike basic parts, meshes have more customization options that you can adjust for advanced rendering fidelity.
+
+### Texture
+
+**Textures** determine the visual appearance of meshes. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four Physically-Based Rendering (PBR) textures within a `Class.SurfaceAppearance` or `Class.MaterialVariant` child object of the mesh. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
+
+<Tabs>
+<TabItem label="PBR Textures">
+Studio supports four PBR texture maps, each corresponding to a visual characteristic of an object's surface appearance. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment, and enhance the visual elements of your assets and environment. For more information on PBR textures and the texture maps, see [PBR Textures](../art/modeling/surface-appearance.md).
+
+<GridContainer numColumns="2">
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" />
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" />
+</GridContainer>
+
+You can apply PBR textures using one of the following objects:
+
+- `Class.SurfaceAppearance`: Applies PBR textures to the mesh surface and doesn't affect its geometry.
+- `Class.MaterialVariant`: Represents a custom material that not only applies PBR textures to the mesh surface but also adds physical properties.
+
+To add PBR textures to a mesh:
+
+1. In the **Explorer** window, hover over the MeshPart object. Click the **⊕** button and select **SurfaceAppearance** or **MaterialVariant**.
+
+2. In the **Properties** window, edit the properties corresponding to the PBR texture maps.
+
+<Alert severity="info">
+If you add both `Class.SurfaceAppearance` and `Class.MaterialVariant` as child objects of a mesh, Studio only applies the texture map settings of the `Class.SurfaceAppearance` object to the mesh. The mesh still has all other settings of the `Class.MaterialVariant` object, such as custom physical properties.
+</Alert>
+
+</TabItem>
+<TabItem label="Single Texture">
+If the mesh you import to Studio doesn't come with texture data, or you want to change the existing texture, use the following steps to add a single texture:
+
+1. [Import the texture file](../projects/assets/manager.md#importing-assets) to Asset Manager. The file must follow the [texture specifications](../art/modeling/texture-specifications.md). Upon completion, Studio automatically assigns and prompts an asset ID.
+2. Copy the asset ID.
+3. In the **Explorer** window, select the **MeshPart** object.
+4. In the **Properties** window, select the **TextureID** field and paste the asset ID of the texture.
+
+<Alert severity="warning">
+    If your mesh has existing PBR textures, setting a Texture ID can't override the PBR textures.
+</Alert>
+
+</TabItem>
+</Tabs>
+
+### Level of Detail
+
+**Level of detail** settings determine the rendering fidelity of meshes. By default, meshes always display in the most precise fidelity, no matter how far they are from the camera, but you can dynamically control a mesh's level of detail using its `Enum.RenderFidelity` property.
+
+If you have many detailed meshes, setting less necessary ones to a lower fidelity can improve your experience's performance. Or, you can set the property to **Automatic** for all meshes to render their levels of detail based on their distances from the camera:
 
 <table>
 <thead>
@@ -175,30 +124,50 @@ of detail depending on its distance from the camera:
 </tbody>
 </table>
 
-## Posing and Animating
+### Collision Fidelity
 
-Rigged meshes contain `Class.Bone` instances that you can rotate and position to articulate your mesh at different points. These bones and their inherited influences are identical to their Blender or Maya counterparts.
+**Collision fidelity** determines how closely the visual representation of a mesh matches its physical bounds. The `Class.MeshPart.CollisionFidelity` property has the following options, in order of fidelity and performance impact from lowest to highest:
 
-To pose a rigged mesh in Studio:
+- **Box**: Creates a bounding collision box, ideal for small or non-interactive objects.
+- **Hull**: Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
+- **Default**: Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
+- **PreciseConvexDecomposition**: Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
 
-1. In the **Explorer** window, select the imported mesh and expand its child instances to access the bones.
-2. Select a bone and rotate it to pose the model along the created bone joints.
+To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
 
-   <video controls src="../assets/modeling/skinned-meshes/Transform-Demo-Skinned.mp4" width="100%"></video>
+<Tabs>
+  <TabItem label="Original Mesh">
+    <img src="../assets/physics/collisions/Collision-Fidelity-MeshPart.jpg" width="600" height="500" alt="Original mesh of castle tower" />
+  </TabItem>
+	<TabItem label="Default">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Default.jpg" width="600" height="500" alt="Collision fidelity of Default shown for mesh" />
+  </TabItem>
+  <TabItem label="Box">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Box.jpg" width="600" height="500" alt="Collision fidelity of Box shown for mesh"/>
+  </TabItem>
+	<TabItem label="Hull">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Hull.jpg" width="600" height="500" alt="Collision fidelity of Hull shown for mesh" />
+  </TabItem>
+	<TabItem label="Precise">
+    <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
+  </TabItem>
+</Tabs>
 
-You can animate a rigged mesh using the [Animation Editor](../animation/editor.md), and the mesh object's `Class.Bone|Bones` display as options you can add to the animation track.
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
-To animate a rigged mesh in Studio:
+## Rigging and Skinning Meshes
 
-1. Open the [Animation Editor](../animation/editor.md).
+**Rigging** is the process of connecting a mesh with an internal poseable skeleton rig. Rigged meshes allow mesh surfaces to rotate and move using internal bones within a model, such as a character's knee or elbow. **Skinning** a rigged mesh allows the rigged mesh object to deform, stretch, and bend in a more realistic manner.
 
-   <img controls src="../assets/studio/general/Avatar-Tab-Animation-Editor.png" width="760" />
+<GridContainer numColumns="2">
+  <figure>
+    <video controls src="../assets/modeling/skinned-meshes/Head-Rigid-Example.mp4"></video>
+    <figcaption>Without skinning, the entire head mesh rotates on a single axis</figcaption>
+  </figure>
+  <figure>
+    <video controls src="../assets/modeling/skinned-meshes/Head-Skinned-Example.mp4"></video>
+    <figcaption>With skinning, the head mesh bends naturally at the neck, and the bottom of the neck stays connected to the torso</figcaption>
+  </figure>
+</GridContainer>
 
-2. Select the mesh object in the workspace.
-3. In the **timeline**, navigate to the &CirclePlus; icon and click **Add&nbsp;All** to add all the created bones to the animation.
-
-   <img controls src="../assets/modeling/skinned-meshes/Animation-Editor-Add-Tracks.png" width="600" />
-
-4. Test and animate your new rig by applying transforms to the specific bones you've created. See [Animation](../animation/index.md) for additional instructions on animating.
-
-   <video controls src="../assets/modeling/skinned-meshes/Transform-Demo-AE.mp4" width="100%"></video>
+For more information on rigging and skinning, see [Rigging and Skinning](../art/modeling/rigging.md). After rigging a mesh, you can add animation and poses to it using the Animation Editor. See [Creating an Animation](../animation/editor.md#creating-an-animation) for more information. Marketplace 3D assets, such as avatar clothing and bodies, also require rigging and skinning. See [Avatar](../avatar/index.md) for more information on requirements for Marketplace assets.

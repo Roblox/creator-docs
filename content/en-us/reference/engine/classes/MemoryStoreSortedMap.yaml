@@ -10,9 +10,10 @@ description: |
   to the maximum allowed size -- see
   [Memory Stores](../../../cloud-services/memory-stores/sorted-map.md)). Each
   item can also have an optional sort key, which can be a number or a string. In
-  the ordering of items, the sort key takes precedence if provided. Numeric sort
-  keys are sorted before string sort keys. After sorting by sort key, the rest
-  of the items are arranged in alphabetical order by key.
+  the ordering of items, the sort key, if provided, takes precedence over the
+  key. Items with numeric sort keys are sorted before items with string sort
+  keys, which are sorted before items with no sort key. Items with the same sort
+  key and items with no sort key are arranged in alphabetical order by key.
 code_samples:
 inherits:
   - Instance
@@ -33,7 +34,7 @@ methods:
         type: string
         default:
         summary: |
-          Key whose value to retrieve.
+          Key whose value and sort key to retrieve.
     returns:
       - type: Tuple
         summary: |
@@ -49,9 +50,9 @@ methods:
     thread_safety: Unsafe
   - name: MemoryStoreSortedMap:GetRangeAsync
     summary: |
-      Retrieves items within a sorted range of keys.
+      Retrieves items within a sorted range of keys and sort keys.
     description: |
-      Gets items within a sorted range of keys.
+      Gets items within a sorted range of keys and sort keys.
     code_samples:
       - retrieving-memorystore-keys
     parameters:
@@ -71,14 +72,14 @@ methods:
         default:
         summary: |
           **(Optional)** Lower bound, exclusive, for the returned keys. This is
-          provided as a table where one or both of Key and sort key can be
+          provided as a table where one or both of key and sort key can be
           specified: { key: string, sortKey: Variant } .
       - name: exclusiveUpperBound
         type: Variant
         default:
         summary: |
           **(Optional)** Upper bound, exclusive, for the returned keys. This is
-          provided as a table where one or both of Key and sort key can be
+          provided as a table where one or both of key and sort key can be
           specified: { key: string, sortKey: Variant } .
     returns:
       - type: Array
@@ -113,7 +114,8 @@ methods:
     summary: |
       Sets the value of a key.
     description: |
-      Sets the value of the key overwriting any existing key value.
+      Sets the value and sort key of the key overwriting any existing key value
+      and sort key.
     code_samples:
     parameters:
       - name: key

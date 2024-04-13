@@ -1,0 +1,103 @@
+name: VideoError
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Ok
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Eof
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: EAgain
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: BadParameter
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: AllocFailed
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: CodecInitFailed
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: CodecCloseFailed
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: DecodeFailed
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: ParsingFailed
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: Unsupported
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Generic
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: DownloadFailed
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: StreamNotFound
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: EncodeFailed
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: CreateFailed
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: NoPermission
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: NoService
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: ReleaseFailed
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: Unknown
+    summary: ''
+    value: 18
+    tags: []
+    deprecation_message: ''

@@ -28,7 +28,8 @@ description: |
   `Class.LocalScript`. As UserInputService is client-side only, users in the
   game can only detect their own input - and not the input of others.
 
-  See also `Class.ContextActionService`, a service which allows you to bind function to multiple user inputs.
+  See also `Class.ContextActionService`, a service which allows you to bind
+  functions to multiple user inputs.
 code_samples:
   - UserInputService
 inherits:
@@ -964,7 +965,6 @@ methods:
       - `Class.UserInputService:GamepadSupports()`
       - `Class.UserInputService.GamepadEnabled`
     code_samples:
-      - UserInputService-GetGamepadState
     parameters:
       - name: gamepadNum
         type: UserInputType
@@ -2295,7 +2295,7 @@ events:
       Interface device.
     description: |
       The InputChanged event fires when a user changes how they're interacting
-      via a Human-Computer Interface device (Mouse button down, touch begin,
+      via a Human-Computer Interface device (mouse button down, touch begin,
       keyboard button down, etc).
 
       To ignore events that are automatically handled by Roblox, like scrolling
@@ -2337,7 +2337,7 @@ events:
       Fires when a user stops interacting via a Human-Computer Interface device.
     description: |
       The InputEnded event fires when a user stops interacting via a
-      Human-Computer Interface device (Mouse button down, touch begin, keyboard
+      Human-Computer Interface device (mouse button down, touch begin, keyboard
       button down, etc). This is useful when tracking when a user releases a
       keyboard key, mouse button, touchscreen input, etc.
 

@@ -12,7 +12,7 @@ While overall world lighting is globally controlled through the `Class.Lighting`
 
 The remainder of this tutorial uses the [Misty Harbor](https://www.roblox.com/games/6445909934/Misty-Harbor) project as a showcase. To follow along, open it in Studio before proceeding.
 
-<img src="../../../assets/tutorials/lighting-with-props/Edit-Place-Misty-Harbor.png" width="60%" />
+<img src="../../../assets/tutorials/lighting-with-props/Misty-Harbor-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
 
 ## Point Lights
 

@@ -3,7 +3,9 @@ title: Plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#publishing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences. If you choose to also publish your plugins to the Creator Store, you can either offer them for free or sell them for [Robux](../production/monetization/index.md).
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/publishing/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#publishing-and-monetizing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
+
+If you choose to also publish your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars**, with a minumum price of $4.99. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../production/publishing/selling-on-the-creator-store.md).
 
 ## Creating New Plugins
 
@@ -49,7 +51,7 @@ Plugins start from scripts. To create a plugin, create a `Class.Script` and save
    <img src="../assets/studio/plugins/Plugin-Empty-Script-Adder.png" width="320" />
 
 2. Copy and paste the **EmptyScriptAdder Plugin** code into the new script.
-3. Right-click the script in the Explorer and select **Save as Local Plugin**.
+3. In the **Explorer** window, right-click the script and select **Save as Local Plugin**.
 4. In the popup window, click **Save** to insert the plugin script into your local **Plugins** folder of the Studio installation.
 5. The plugin should appear in `Class.PluginDebugService` and start running.
 
@@ -128,31 +130,31 @@ end)
 
 ```
 
-## Publishing Plugins
+## Publishing and Monetizing Plugins
 
-As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can publish plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). In addition, you can give other creators the ability to purchase and/or install your plugins by publishing them to the [Creator Store](../production/publishing/creator-store.md) with supplementary thumbnails that provide visual information on the plugin's functionality. The minimum amount you can sell plugins is 100 Robux.
+As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can publish plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/publishing/creator-store.md), or to publish them privately for your own use. If you choose to publish your plugin publicly, you can set a price at which to sell it to other creators.
+
+<Alert severity="info">
+
+The only way to set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and monetize it later from the dashboard. For instructions on this process, see [Publishing Assets](../production/publishing/publishing-assets.md#through-creator-dashboard).
+
+</Alert>
 
 To publish a plugin:
 
-1. In the [Explorer](../studio/explorer.md) window, right-click on the plugin script you want to publish and select **Publish as Plugin** from the context menu.
-
-   <Alert severity="warning">
-   Currently, due to a bug in Studio, you'll need to right-click the
-   `Class.Script` object inside the `Class.Plugin` to publish to
-   Roblox. If you right-click the parent `Class.Plugin` object, the
-   option to publish will be disabled.
-   </Alert>
-
+1. In the **Explorer** window, right-click a plugin script, then select **Publish as Plugin** from the contextual menu.
 1. **(Optional)** In the upper-left corner of the asset configuration window, click the image to upload a 512&times;512 image.
 1. Fill in the following fields:
    - **Name**: A title for your plugin.
    - **Description**: A description that describes what a potential user should expect the plugin to do.
-   - **Creator**: The creator you'd like to attribute as the creator of the plugin. If you are using [Team Create](../projects/collaboration.md#team-create), every creator appears, otherwise "Me" is the only option.
-1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your plugin.
-1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you have previously [verified your account](../production/publishing/account-verification.md), the **Price** field becomes available.
-1. **(Optional)** In the **Price** field, input the amount of Robux you want to charge for the plugin. If you keep the default value of `0`, the plugin is free to all creators.
-1. Click the **Submit** button. Your plugin is now available to you in the [Toolbox](../projects/assets/toolbox.md).
+   - **Creator**: The creator you'd like to attribute as the creator of the plugin.
 
-   <Alert severity="info">
-   If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md). If you change your mind and would like to publish a plugin you have previously uploaded, see [Publishing Assets](../production/publishing/publishing-assets.md).
-   </Alert>
+1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), click the **+** button to add up to 5 supplementary thumbnails for your plugin.
+1. **(Optional)** Enable the **Distribute on Marketplace** toggle to publish your plugin to the Creator Store. If you don't enable **Distribute on Marketplace**, the plugin only publishes to the **Inventory** tab of the [Toolbox](../projects/assets/toolbox.md).
+1. Click the **Submit** button. Your plugin is now available to you in the **Inventory** and **Creations** tabs of the [Toolbox](../projects/assets/toolbox.md).
+
+<Alert severity="info">
+
+If you change your mind and would like to publicly publish or monetize a plugin you have previously uploaded, you can do this from the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Publishing Assets](../production/publishing/publishing-assets.md).
+
+</Alert>

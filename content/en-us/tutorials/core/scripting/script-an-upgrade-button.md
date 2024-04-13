@@ -121,9 +121,7 @@ To implement the jump upgrade:
    **ReplicatedStorage** because both the client and server must be able to
    access them.
 
-   <img
-   src="../../../assets/tutorials/script-an-upgrade-button/Insert-RemoteFunction.png"
-   width="320" />
+   <img src="../../../assets/tutorials/script-an-upgrade-button/Insert-RemoteFunction.png" alt="Studio's Explorer window with the IncreaseJumpPowerFunction script highlighted under the Instances folder." width="320" />
 
 1. In the **Explorer** window, select **StarterPlayer**.
 1. In the **Properties** window, enable the **CharacterUseJumpPower** property.
@@ -307,8 +305,7 @@ You should now be able to purchase jump upgrades for coins using the upgrade but
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. If your scripts are working correctly, a button for purchasing jumping power appears on-screen. Try clicking the button before you collect any coins to check that it doesn't award you additional jumping power, then try collecting some coins and see if the upgrade works when you click again.
    <video controls loop muted>

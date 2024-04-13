@@ -6,18 +6,18 @@ description: An overview of how assets work on the platform.
 Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various instances as a property that's appropriate for that particular asset type. For example, `Class.Texture`, `Class.MeshPart`, and `Class.Sound` instances reference image, mesh, and audio assets through their respective `Class.Texture.TextureID|TextureID`, `Class.MeshPart.MeshID|MeshID`, and `Class.Sound.SoundID|SoundID` properties.
 
 <table>
-    <tbody>
-        <tr>
-            <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" /></td>
-            <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" width="90%" /></td>
-            <td><audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
-        </tr>
-        <tr>
+  <tbody>
+    <tr>
+      <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
+      <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
+      <td><audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
+    </tr>
+    <tr>
 			<td><code>rbxassetid://7229442422</code></td>
 			<td><code>rbxassetid://6768917255</code></td>
 			<td><code>rbxassetid://9125402735</code></td>
-        </tr>
-    </tbody>
+    </tr>
+  </tbody>
 </table>
 
 This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
@@ -96,11 +96,17 @@ There are three categories of asset types for avatars that you can find in the [
 
 Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [Character Appearance](../../characters/appearance.md).
 
+## Packages
+
+Within Studio, you can convert single assets or asset hierarchies into **packages** and reuse them in multiple experiences, letting you optimize asset management across your entire team or across multiple projects. When a package is updated, you or your team members can update specific copies to the most current version, update all copies across an experience, or set specific copies to auto update.
+
+For more information, see [Packages](../../projects/assets/packages.md).
+
 ## Asset Format Strings
 
 Assets are reflected through formatted strings, each of which points to an online file or a file saved to the client's device. The basic structure is a **protocol** followed by `://` and a **string** that varies according to the protocol.
 
-<span><Chip label='[Protocol]://[String]' color='secondary' /></span>
+<span><Chip label='[Protocol]://[String]' color='primary' /></span>
 
 ### rbxassetid
 
@@ -108,17 +114,17 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 <GridContainer numColumns="3">
   <figure>
-    <figcaption><Chip label='rbxassetid://7229442422' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://7229442422' color='primary' /></figcaption>
     <br />
-    <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" width="90%" />
+    <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://3845386987' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://3845386987' color='primary' /></figcaption>
     <br />
-    <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" width="90%" />
+    <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" alt="Three particle emitters emit red, blue, and yellow particles over jar assets that sit on top of a stone tower. The red particles are highlighted." width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://9125402735' color='secondary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://9125402735' color='primary' /></figcaption>
     <br />
     <audio controls>
 <source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
@@ -129,7 +135,7 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 `rbxasset` points to Roblox's content folder on the user's device, for example:
 
-<span><Chip label='rbxasset://textures/face.png' color='secondary' /></span><br />
+<span><Chip label='rbxasset://textures/face.png' color='primary' /></span><br />
 
 The content folder's location depends on the user's operating system:
 
@@ -146,7 +152,7 @@ The content folder's location depends on the user's operating system:
 
 `rbxthumb` points to a thumbnail image for the provided asset. Its string format takes a thumbnail type, an asset ID, width, height, and an optional circular filter.
 
-<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='secondary' /></span><br />
+<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='primary' /></span><br />
 
 Supported types (`type`) and sizes (`w` and `h`) are as follows:
 
@@ -207,7 +213,7 @@ Supported types (`type`) and sizes (`w` and `h`) are as follows:
 
 You can also include a `filters=circular` parameter to crop the thumbnail circularly, useful for displaying thumbnails like **AvatarHeadShot** in an on-screen GUI like an `Class.ImageLabel`.
 
-<span><Chip label='rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular' color='secondary' /></span><br />
+<span><Chip label='rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular' color='primary' /></span><br />
 
 ```lua title='LocalScript - Get AvatarHeadShot Thumbnail' highlight='3,5-7,9'
 local Players = game:GetService("Players")
@@ -226,13 +232,13 @@ end
 
 `rbxhttp` is shorthand for `Class.ContentProvider.BaseUrl`, for example:
 
-<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='secondary' /></span>
+<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' /></span>
 
 ### https / http
 
 `https` or `http` points to the exact location of something on the internet. It only works on Roblox-approved domains and raises an error if you use it elsewhere.
 
-<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='secondary' /></span>
+<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='primary' /></span>
 
 ## Asset Permissions
 
@@ -289,7 +295,7 @@ To further help with organization, you can archive most asset types in the **Dev
 
 <img src="../../assets/creator-dashboard/Creations-Development-Items.png" width="780" alt="Development Items section on the Creator Dashboard" />
 
-<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="Archive option for an asset on the Creator Dashboard" />
+<img src="../../assets/creator-dashboard/Asset-Context-Menu-Archive.png" width="400" alt="A close up view of a Splash Ring asset. The ellipsis button and the Archive menu item are highlighted." />
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 

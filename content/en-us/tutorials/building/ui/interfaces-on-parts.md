@@ -1,12 +1,9 @@
 ---
 title: Interfaces on Parts
 description: The process for creating interactive interfaces on parts.
-prev: /tutorials/building/ui/proximity-prompts
 ---
 
-In previous UI courses, you built a [basic score bar](../../../tutorials/building/ui/creating-a-score-bar.md) and created an [interactive button](../../../tutorials/building/ui/interactive-buttons.md). This tutorial will show how to use these skills to create an information board.
-
-The `Class.SurfaceGui` object lets you display GUI content onto surfaces in the 3D world. They are commonly used to display leaderboards, or to signpost areas in a game world.
+The `Class.SurfaceGui` object lets you display GUI content onto surfaces in the 3D world. They are commonly used to display leaderboards, or to signpost areas in the 3D space. This tutorial shows you how to create an information board about long sword statistics.
 
 ![alt text](../../../assets/tutorials/interfaces-on-parts/3D-Finished-Product.png)
 

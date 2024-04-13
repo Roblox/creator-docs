@@ -1,6 +1,6 @@
 ---
 title: Nil
-description: The nil data type represents non-existence or nothingness.
+description: Data type representing non-existence or nothingness.
 ---
 
 In Luau, `nil` represents non-existence or nothingness. It's different from any other value or data type. You can use it to destroy a variable or remove a value in a table. It's the only value other than `false` which doesn't evaluate to [`true`](./booleans.md).

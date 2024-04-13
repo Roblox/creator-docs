@@ -21,7 +21,7 @@ Get tips and lessons Nathan learned while scaling up a company on Roblox.
 
 ### Protecting You and Your Business
 
-​​How to protect yourself, your business, and your intellectual property.
+How to protect yourself, your business, and your intellectual property.
 
 <p><iframe width="746" height="420" src="https://www.youtube-nocookie.com/embed/v1QOTxXQc2E?start=3157" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 

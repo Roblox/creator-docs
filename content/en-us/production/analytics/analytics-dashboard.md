@@ -12,10 +12,7 @@ Analytics Dashboard helps you measure and gain insight into your experience's pe
 
 Any experience with more than 10 Daily Active Users (DAU) and 10 play hours for 7 consecutive days is eligible for accessing all KPIs on the dashboard.
 
-The dashboard also provides the following statistics data:
-
-- [Sales Data](#sales-data) that you can download and analyze in custom ways.
-- [Developer Statistics](#developer-statistics) on your experience health and revenue that you can view and download.
+The dashboard also provides [Sales Data](#sales-data) that you can download and analyze in custom ways.
 
 ## Setting Up Analytics Dashboard
 
@@ -35,18 +32,18 @@ If you don't want to activate the dashboard immediately, or you accidentally dec
 
 ### Granting Group Permission
 
-By default, for a [group experience](../../projects/groups.md), only the group owner with the "Create and edit group experiences" permission can view the analytics dashboard because some KPIs are sensitive information, such as your revenue. You can grant permission for your group members to access the analytics dashboard with the following steps:
+By default in a [group experience](../../projects/groups.md), only the group **owner** can view the analytics dashboard, as some KPIs such as revenue are sensitive information. The owner can grant permission for group members to access the analytics dashboard as follows:
 
 1. Select the group you want to grant permission on the [Groups](https://www.roblox.com/groups) page.
-
 2. Click the **&ctdot;** button and select **Configure Group** in the dropdown menu.
 
-3. Navigate to the **Roles** tab. Select an existing role that you want to grant access to the analytics dashboard or create a new role.
+   <img src="../../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
 
+3. Navigate to the **Roles** tab. Select an existing role that you want to grant access to the analytics dashboard, or create a new role.
 4. In the **Assets** section, toggle on **View group experience analytics**.
 
 <Alert severity="info">
-The "View group experience analytics" and "Create and edit group experiences" permissions are independent. Turning on one of them doesn't affect the other, so you can let group members view the analytics dashboard for group experiences even if they can't edit those experiences.
+The **View group experience analytics** and **Create and edit group experiences** permissions are independent. Turning on one of them doesn't affect the other, so you can let group members view the analytics dashboard for group experiences even if they can't edit those experiences.
 </Alert>
 
 ## Dashboard Functionalities
@@ -139,23 +136,26 @@ Sales data download is one of the Roblox analytics offerings that can help you v
 Roblox automatically generates a `.csv` (comma-separated values) file for your sales data and updates it every 48 hours. You can download and customize it to fit your analytics tactics. To access the file:
 
 1. In your [Account Info Settings](https://www.roblox.com/my/account#!/info), add and verify your email address for receiving the data download link.
-
-1. In your [Security Settings](https://www.roblox.com/my/account#!/security), set up an **Authenticator App** as the 2-Step Verification method for your account.
-1. Navigate to your or your group's transactions page.
+2. In your [Security Settings](https://www.roblox.com/my/account#!/security), set up an **Authenticator App** as the 2-Step Verification method for your account.
+3. Navigate to your or your group's transactions page.
 
    1. For your personal sales data, navigate to the [My Transactions](https://www.roblox.com/transactions) page.
-   1. For your group's sales data:
+   2. For your group's sales data:
       1. Navigate to the [Groups](https://www.roblox.com/groups) page and select the target group.
-      1. Click the **…** button on the group banner and select **Configure Group**.
-         <img src="../../assets/publishing/groups/Configure-Group.png" width="80%" />
-      1. In the navigation menu, hover over **Revenue** to show the dropdown and then select **Sales**.
+      2. Click the **&ctdot;** button on the group banner and select **Configure Group**.
+      3. In the navigation menu, hover over **Revenue** to show the dropdown and then select **Sales**.
 
-1. From the **Type of Transaction** dropdown, select **Sales of Goods**. Then click the **Download Data** button.
+4. From the **Type of Transaction** dropdown, select **Sales of Goods**. Then click the **Download Data** button.
+
    <img src="../../assets/analytics/sales-of-good.png" width="80%" />
-1. On the prompted calendar, select a calendar month of sales data to download. You can choose any month from the current date to up to two years ago. If you choose the current month, the file will include all available data of the partial month.
+
+5. On the prompted calendar, select a calendar month of sales data to download. You can choose any month from the current date to up to two years ago. If you choose the current month, the file will include all available data of the partial month.
+
    <img src="../../assets/analytics/sales-data-calendar.png" width= "45%" />
-1. In your inbox of your verified email address, you receive an email with a link to download a `.zip` file that contains your sales data in `.csv` format. The link will expire after 48 hours.
-1. You can use the `.csv` sales data sheet to analyze the data in your desired way to meet your specific business needs. For example, you can filter to display only sale records with pending Robux to release to you, so you can calculate the timeline and amount of your sales payout to make decisions on when to [exchange earned Robux for real-world currency (DevEx)](../../production/earning-on-roblox.md#the-developer-exchange-program) or pay your collaborators.
+
+6. In your inbox of your verified email address, you receive an email with a link to download a `.zip` file that contains your sales data in `.csv` format. The link will expire after 48 hours.
+
+7. You can use the `.csv` sales data sheet to analyze the data in your desired way to meet your specific business needs. For example, you can filter to display only sale records with pending Robux to release to you, so you can calculate the timeline and amount of your sales payout to make decisions on when to [exchange earned Robux for real-world currency (DevEx)](../../production/earning-on-roblox.md#the-developer-exchange-program) or pay your collaborators.
 
 ### Sales Data Attributes
 
@@ -174,69 +174,3 @@ On the `.csv` sales data sheet, each sold item has the following attributes and 
 | Hold Status        | The status of whether Robux from this sale have been released to you or are still in a hold.                                                                                                                                | `Released`, `Held`, `Cancelled`       |
 | Revenue            | The amount of Robux you receive for the purchase, which is the item listing price excluding any [Marketplace Fees](../../art/marketplace/marketplace-fees-and-commissions.md), Affiliate Fees, and Recurring Group Payouts. | `50`                                  |
 | Price              | The item listing price, which is the amount of Robux that the buyer paid for the purchase.                                                                                                                                  | `10`                                  |
-
-## Developer Statistics
-
-With the **Developer Statistics** dashboard, you can view and download key statistics data on your experience health and revenue for custom analytics. The dashboard includes the following statistics:
-
-- [Live stats](#live-stats) on the amount of users currently visiting an experience and the platform they are using.
-- [Filtered devices](#filtered-devices) that can't access your experience due to performance issues and their crash rate.
-- [Historical data](#historical-data) on the total number of user visits and the average amount of time each user stayed by platform and time range.
-- [Developer Product sales](#developer-product-sales) daily and monthly stats.
-- [Premium](../../production/monetization/engagement-based-payouts.md#accessing-payout-data) membership payout and visit data.
-
-<Alert severity = 'warning'>
-The Developer Statistics dashboard is a legacy feature that might not reflect the real-time data of your experience. Use alternatives such as [Sales Data](#sales-data) and [Engagement Dashboard](../../production/analytics/engagement.md) for more accurate statistics.
-</Alert>
-
-### Accessing Developer Statistics
-
-To access the Developer Statistics dashboard of your or your group's experience:
-
-1. Navigate to the [Creations](https://create.roblox.com/creations) page of **Creator Dashboard**, which lists all your experiences.
-   - For group-owned experiences, click the **CREATOR** dropdown to select the target group.
-2. Select the experience for which you want to view the developer stats.
-3. On the **ANALYTICS** category of the navigation menu, select **Developer Stats**.
-
-### Live Stats
-
-**Live Stats** displays the number of users in the entire experience and the number of live servers in use. In addition to the total number of users, it also has the number of users on each platform, including **Computer**, **Tablet**, **Phone**, and **Console**. The system updates the data every 30 seconds.
-
-Live stats data is useful for learning the distribution of users on different platforms. When implementing features and evaluating performance, you can prioritize supporting the user-preferred platforms to retain your user base.
-
-<img src="../../assets/analytics/developer-stats/Live-Stats.png" width= "80%" />
-
-### Filtered Devices
-
-**Filtered Devices** displays the devices that failed to access your experience due to performance issues. For each filtered device, the dashboard also provides a crash rate, which is calculated by the number of client crashes / the number of successful client connections. The system clears and re-calculates filtered devices and crash rates every time you update your experience with a new version.
-
-Filtered devices data is useful to determine how compatible your experience is with older hardware. If your experience has a variety of users from different platforms and no filtered devices, it is a good indicator that your experience is compatible with a wide variety of hardware.
-
-### Historical Data
-
-**Historical Data** displays hourly, daily, and monthly visit and revenue data of each platform, including **computer**, **tablet**, **phone**, and **console**. This data can help you understand your user retention and revenue based on the platform. The dashboard includes the following two charts:
-
-<table>
-  <thead>
-    <tr>
-      <th>Chart Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Visits</td>
-      <td>The amount of times users have visited your experience.</td>
-    </tr>
-    <tr>
-      <td>Average Visit Length</td>
-      <td>The average amount of time in minutes that users have spent in your experience.</td>
-    </tr>
-  </tbody>
-</table>
-
-<img src="../../assets/analytics/developer-stats/Chart-Visits.png" width= "80%" />
-
-### Developer Product Sales
-
-**Developer Product Sales** displays the total number of users who visit your experience, the average amount of time they visit, and how much Robux you have earned from in-experience [Developer Product](../../production/monetization/developer-products.md) sales, in daily and monthly tables. You can filter the data by platform, including **computer**, **tablet**, **phone**, and **console**. This data is useful to see how much Developer Products contribute to your total Robux revenue and identify your most popular developer product.

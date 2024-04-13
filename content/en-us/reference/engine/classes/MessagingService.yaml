@@ -3,20 +3,25 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  MessagingService allows game servers in the same game to communicate with each
-  other.
+  Allows servers of the same experience to communicate with each other.
 description: |
-  The MessagingService allows game servers in the same game to communicate with
-  each other in real time (< 1 second) using topics. Topics are developer
-  defined strings (1-80 characters) that game servers can send and receive
-  messages.
+  **MessagingService** allows servers of the same experience to communicate with
+  each other in real time (less than 1 second) using topics. Topics are
+  developer‑defined strings (1–80 characters) that servers use to send and
+  receive messages.
 
-  Delivery is best effort and not guaranteed. Make sure to architect your game
-  so delivery failures are not critical.
+  Delivery is best effort and not guaranteed. Make sure to architect your
+  experience so delivery failures are not critical.
 
-  ## Limitations
+  [Cross-Server Messaging](../../../cloud-services/cross-server-messaging.md)
+  explores how to communicate between servers in greater detail.
 
-  Note: these limits are subject to change.
+  If you want to publish ad-hoc messages to live game servers, you can use the
+  [Open Cloud APIs](../../../cloud/open-cloud/usage-messaging.md).
+
+  #### Limitations
+
+  Note that these limits are subject to change.
 
   <table>
   	<thead>
@@ -39,7 +44,7 @@ description: |
   				<b>Messages sent per game server</b>
   			</td>
   			<td>
-  				 150 + 60 * (number of players in this game server) per minute
+  				 600 + 240 * (number of players in this game server) per minute
   			</td>
   		</tr>
   		<tr>
@@ -47,7 +52,7 @@ description: |
   				<b>Messages received per topic</b>
   			</td>
   			<td>
-  				(10 + 20 * number of servers) per minute
+  				(40 + 80 * number of servers) per minute
   			</td>
   		</tr>
   		<tr>
@@ -55,7 +60,7 @@ description: |
   				<b>Messages received for entire game</b>
   			</td>
   			<td>
-  				 (100 + 50 * number of servers) per minute
+  				 (400 + 200 * number of servers) per minute
   			</td>
   		</tr>
       <tr>
@@ -63,20 +68,19 @@ description: |
   				<b>Subscriptions allowed per game server</b>
   			</td>
   			<td>
-  				 5 + 2 * (number of players in this game server)
+  				 20 + 8 * (number of players in this game server)
+  			</td>
+  		</tr>
+      <tr>
+  			<td>
+  				<b>Subscribe requests per game server</b>
+  			</td>
+  			<td>
+  				 240 requests per minute
   			</td>
   		</tr>
   	</tbody>
   </table>
-
-  [Cross-Server Messaging](../../../cloud-services/cross-server-messaging.md)
-  explores how to communicate between game servers in greater detail with
-  relevant code samples. Note that Cross-Server Messaging has separate
-  namespaces for live games and Studio, and they can't communicate with each
-  other.
-
-  If you want to publish ad-hoc messages to live game servers, you can use the
-  [Open Cloud APIs](../../../cloud/open-cloud/usage-messaging.md).
 code_samples:
 inherits:
   - Instance
@@ -158,16 +162,14 @@ methods:
       It yields until the subscription is properly registered and returns a
       connection object.
 
-      To unsubscribe, call `Datatype.RBXScriptConnection|:Disconnect()` on the
-      returned object. Once Disconnect() is called, the callback should never be
-      invoked. Killing the script containing the connections also causes the
-      underlying connect to be unsubscribed.
+      To unsubscribe, call `Datatype.RBXScriptConnection|Disconnect()` on the
+      returned object. Once called, the callback should never be invoked.
+      Killing the script containing the connections also causes the underlying
+      connect to be unsubscribed.
 
-      See also:
-
-      - `Class.MessagingService:PublishAsync()`, sends the provided message to
-        all subscribers to the topic, triggering their registered callbacks to
-        be invoked
+      See also `Class.MessagingService:PublishAsync()` which sends the provided
+      message to all subscribers to the topic, triggering their registered
+      callbacks to be invoked.
     code_samples:
       - subscribing-to-cross-server-messages
     parameters:

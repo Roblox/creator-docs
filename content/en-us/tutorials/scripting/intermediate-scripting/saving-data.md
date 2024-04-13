@@ -214,7 +214,6 @@ Now that you understand basic data store usage, test it out in a sample game.
 
 You can also edit the game in Studio and explore the enhanced **GoldManager** script which includes data auto-saving and more.
 
-<GridContainer numColumns="2">
-  <img src="../../../assets/tutorials/intro-to-saving-data/Gold-Rush-Edit.png" />
-  <img src="../../../assets/tutorials/intro-to-saving-data/Gold-Rush-GoldManager.png" />
-</GridContainer>
+<img src="../../../assets/tutorials/intro-to-saving-data/Gold-Rush-Edit-Place.png" width="780" alt="Edit in Studio option from the experience's main page" />
+
+<img src="../../../assets/tutorials/intro-to-saving-data/Gold-Rush-GoldManager.png" width="320" />

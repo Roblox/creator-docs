@@ -117,49 +117,14 @@ functions:
       Returns the current environment in use by the caller, as a dictionary.
 
       - If provided with a function, the environment of the function will be
-        returned.
-      - If provided with an integer, `getfenv()` will provide the environment of
-        the function at the provided stack level: Level 1 is the function
-        calling `getfenv()`. If `stack` is `0`, `getfenv()` returns the global
-        environment of the current script. When using `getfenv()` to get the
-        current environment of a script, it will return the same table every
-        time within the specific thread.
-
-      ```lua
-      -- Get the current environment
-
-      myVariable = "Hello, environments"  -- A global variable (non-local)
-      local env = getfenv()
-      print(env["myVariable"])  --> Hello, environments
-      ```
-
-      ```lua
-      -- Get the environment of a function
-
-      local function printMessage()
-          print(message)
-      end
-      local env = getfenv(printMessage)
-      env.message = "Hello, function environments"
-      printMessage()  --> Hello, function environments
-      ```
-
-      ```lua
-      -- Get the environment based on stack
-
-      local function whatIsThePassword(password)
-          local env = getfenv(1)  -- Get the environment 1 level up, or whatever called this function
-          print(env.password)  -- Get the password from the environment one level up
-          print(password)  --> nil
-      end
-
-      local function openSesame()
-          local password = "secret"  -- A variable local to openSesame()
-          whatIsThePassword(password)
-      end
-
-      openSesame()
-      ```
+      returned.
+      - If provided with an integer, `Global.LuaGlobals.getfenv()` will provide
+      the environment of the function at the provided stack level: Level 1 is
+      the function calling `Global.LuaGlobals.getfenv()`. If `stack` is `0`,
+      `Global.LuaGlobals.getfenv()` returns the global environment of the
+      current script. When using `Global.LuaGlobals.getfenv()` to get the
+      current environment of a script, it will return the same table every time
+      within the specific thread.
     parameters:
       - name: stack
         type: Variant
@@ -171,6 +136,13 @@ functions:
       - type: table
         summary: ''
     tags:
+      - Deprecated
+    deprecation_message: |
+      This function allows uncontrolled change of the global/function
+      environment and disables script optimizations. Changes to the environment
+      are not tracked by the script analysis tooling and may result in missing
+      or incorrect warnings. As a replacement, consider using
+      `Library.debug.info()` instead.
     code_samples:
   - name: getmetatable
     summary: |
@@ -543,6 +515,12 @@ functions:
       - type: Variant
         summary: ''
     tags:
+      - Deprecated
+    deprecation_message: |
+      This function allows uncontrolled change of the global/function
+      environment and disables script optimizations. Changes to the environment
+      are not tracked by the script analysis tooling and may result in missing
+      or incorrect warnings.
     code_samples:
   - name: setmetatable
     summary: |

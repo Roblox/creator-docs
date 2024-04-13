@@ -306,6 +306,11 @@ items:
     value: 533
     tags: []
     deprecation_message: ''
+  - name: PlacelaunchCreatorBan
+    summary: ''
+    value: 600
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchCustomMessage
     summary: ''
     value: 610

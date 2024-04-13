@@ -5,7 +5,7 @@ next: /art/characters/creating/caging
 prev: /art/characters/creating/texturing-face
 ---
 
-Physically-based rendering (PBR) textures use multiple texture maps to define how a surface reacts under different lighting and environmental conditions. PBR textures can elevate the look and feel of your assets, including your avatar, accessories, and clothing. Typically, PBR textures are created in a texturing tool, such as [Substance 3D](https://www.adobe.com/products/substance3d-painter.html) or [ZBrush](https://www.maxon.net/en/zbrush). Many third-party 3D models available online include PBR textures.
+Physically-based rendering (PBR) textures use multiple texture maps to define how a surface reacts under different lighting and environmental conditions. PBR textures can elevate the look and feel of your assets, including your avatar, accessories, and clothing. Typically, PBR textures are created in a texturing tool, such as [Substance 3D](https://www.adobe.com/products/substance3d-painter) or [ZBrush](https://www.maxon.net/en/zbrush). Many third-party 3D models available online include PBR textures.
 
 <GridContainer numColumns="2">
   <figure><img src="../../../assets/modeling/surface-appearance/Layered-Clothing-Example.png" />  <figcaption>Characters and accessories can make use of PBR textures to apply visual pop and material realism.</figcaption></figure>

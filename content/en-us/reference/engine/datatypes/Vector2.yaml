@@ -254,6 +254,84 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: Vector2:Abs
+    summary: |
+      Returns a new vector from the absolute values of the original's
+      components.
+    description: |
+      Returns a new vector from the absolute values of the original's
+      components. For example, a vector of `(-2, 4)` returns a vector of
+      `(2, 4)`.
+    parameters:
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Ceil
+    summary: |
+      Returns a new vector from the ceiling of the original's components.
+    description: |
+      Returns a new vector from the ceiling of the original's components. For
+      example, a vector of `(-2.6, 5.1)` returns a vector of `(-2, 6)`.
+    parameters:
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Floor
+    summary: |
+      Returns a new vector from the floor of the original's components.
+    description: |
+      Returns a new vector from the floor of the original's components. For
+      example, a vector of `(-2.6, 5.1)` returns a vector of `(-3, 5)`.
+    parameters:
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Sign
+    summary: |
+      Returns a new vector from the sign (-1, 0, or 1) of the original's
+      components.
+    description: |
+      Returns a new vector from the sign (-1, 0, or 1) of the original's
+      components. For example, a vector of `(-2.6, 5.1)` returns a vector of
+      `(-1, 1)`.
+    parameters:
+    returns:
+      - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:Angle
+    summary: |
+      Returns the angle in radians between the two vectors.
+    description: |
+      Returns the angle in radians between the two vectors. Specify `true` for
+      the optional `isSigned` boolean if you want a signed angle. By default,
+      the method returns the absolute value.
+    parameters:
+      - name: other
+        type: Vector2
+        default:
+        summary: ''
+      - name: isSigned
+        type: boolean
+        default: false
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: Vector2:Dot
     summary: |
       Returns a scalar dot product of the two vectors.

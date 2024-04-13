@@ -28,17 +28,13 @@ To create the basic water hazard:
 
 1. In the **Hazards** folder, insert a **block** part and rename it **Hazard**.
 
-   <img
-   src="../../../assets/tutorials/create-player-hazards/New-Hazard-Part.png"
-   width="320" />
+   <img src="../../../assets/tutorials/create-player-hazards/New-Hazard-Part.png" alt="Studio's Explorer window with the Hazard block Part highlighted under the Hazards folder." width="320" />
 
 1. Move and scale the part to cover the water line around the island and platforms. For example, the
    sample [Island Jump - Scripting](https://www.roblox.com/games/14239042199/Island-Jump-Scripting) experience
    sets **Size** to **825, 1, 576** and **CFrame.Position** to **174, -6.5, 38**.
 
-   <img
-      src="../../../assets/tutorials/create-player-hazards/Hazard-Part-On-Water.jpg"
-      width="600" />
+   <img src="../../../assets/tutorials/create-player-hazards/Hazard-Part-On-Water.jpg" alt="A far out view of all of the cylinder sea stacks and the island. A large block part covers the water where a player could land if they fell from a sea stack." width="600" />
 
 1. Select the part, then in the **Properties** window, configure the following properties so
    the hazard is invisible, and players can pass right through it:
@@ -165,8 +161,7 @@ water, your character should die and lose their coins. To test your game:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. Move your character to collect some coins, then jump in the water. If your
    scripts are working correctly, your character dies, and the coin count on

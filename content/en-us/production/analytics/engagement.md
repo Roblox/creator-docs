@@ -14,8 +14,7 @@ description: Explains how to improve engagement metrics for your experience.
 To view your experience's engagement analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-
-1. In the **ANALYTICS** menu, select **Engagement**.
+1. In the **Analytics** menu on the left, select **Engagement**.
 
 You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 
@@ -52,3 +51,12 @@ Performance is how well your experience runs on different devices and platforms.
 3. **Set up a user community** that can help identify bugs and crashes.
 
 You can grow your experience faster if it's more engaging to both new and existing users. For more information on retaining your users for engagement, see [Retention](../../production/analytics/retention.md).
+
+## Improving New User First Session Retention
+
+The New User First Session Retention chart shows how many new users are still playing X minutes after joining your experience for the first time. It compares the current period with the previous period. You can use it to generate insights and catch issues with your experience's onboarding.
+
+For instance, if your chart shows that the percentage of new users still playing after 5 minutes decreased significantly week-on-week, you could explore the following potential causes:
+
+1. **Look into new user onboarding friction** from any recent updates. Did you add a new step, or change any introductory messaging?
+2. **Check [error](./error-report.md) and [performance](./performance.md) reports** to see if there has been any change in performance or stability after a recent update.

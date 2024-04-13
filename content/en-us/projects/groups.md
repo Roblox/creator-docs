@@ -25,129 +25,60 @@ Group owners can configure the **roles** for other members in the group. The def
 To configure roles:
 
 1. Navigate to the [Groups](https://www.roblox.com/groups) page and select your group.
-1. Click the **&hellip;** button in the upper-right corner and select **Configure&nbsp;Group**.
+1. Click the **&ctdot;** button in the upper-right corner and select **Configure&nbsp;Group**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" width="800" />
+   <img src="../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
 
 1. In the left column, select the **Roles** tab.
 
-   <img src="../assets/publishing/groups/Group-Admin-Roles.png" width="353" />
+   <img src="../assets/publishing/groups/Group-Admin-Roles.png" alt="A close up view of the left column with the Roles navigation item highlighted." width="160" />
 
-1. To secure your group and its creations, inspect and adjust the permissions for each role.
+1. To secure your group and its creations, inspect and adjust the permissions for each role. Commonly managed options include:
 
-<table>
-<thead>
-	<tr>
-		<th colspan='2'>Posts</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>View group wall</b></td>
-		<td>View discussions on the group's wall.</td>
-	</tr>
-	<tr>
-		<td><b>Post on group wall</b></td>
-		<td>Participate in conversations on the group's wall.</td>
-	</tr>
-	<tr>
-		<td><b>Delete group wall posts</b></td>
-		<td>Delete posts that other members have made on the group's wall.</td>
-	</tr>
-	<tr>
-		<td><b>View group shout</b></td>
-		<td>See the group status.</td>
-	</tr>
-	<tr>
-		<td><b>Post group shout</b></td>
-		<td>Update the group status.</td>
-	</tr>
-</tbody>
-<thead>
-	<tr>
-		<th colspan='2'>Members</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>Manage lower-ranked member ranks</b></td>
-		<td>Change the role of other members currently assigned to a lower-ranked role.</td>
-	</tr>
-	<tr>
-		<td><b>Accept join requests</b></td>
-		<td>Accept or deny any pending requests to join the group, assuming the group is currently set to require manual approval.</td>
-	</tr>
-	<tr>
-		<td><b>Kick lower-ranked members</b></td>
-		<td>Kick out members assigned to lower-ranked roles.</td>
-	</tr>
-</tbody>
-<thead>
-	<tr>
-		<th colspan='2'>Miscellaneous</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-			<td><b>Manage allies and enemies</b></td>
-			<td>Declare or remove 'ally' and 'enemy' groups that display on the group's profile.</td>
-	</tr>
-	<tr>
-			<td><b>View audit log</b></td>
-			<td>Monitor changes regarding the group.</td>
-	</tr>
-</tbody>
-<thead>
-	<tr>
-		<th colspan='2'>Assets</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>Spend group funds</b></td>
-		<td>Use the group's funds for certain group-related actions.</td>
-	</tr>
-	<tr>
-		<td><b>Advertise the group</b></td>
-		<td>Create ads for the group via the <b>Advertise Group</b> menu option.</td>
-	</tr>
-	<tr>
-		<td><b>Create group items</b></td>
-		<td>Create group items via the <b>Store</b> tab on the group's main page.</td>
-	</tr>
-	<tr>
-		<td><b>Configure group items</b></td>
-		<td>Manage existing items via the <b>Store</b> tab on the group's main page.</td>
-	</tr>
-	<tr>
-		<td><b>Create and edit group experiences</b></td>
-		<td>Create and edit experiences and assets that are specifically owned by the group.</td>
-	</tr>
-	<tr>
-		<td><b>View group experience analytics</b></td>
-		<td>View analytics for group experiences.</td>
-	</tr>
-</tbody>
-<thead>
-	<tr>
-		<th colspan='2'>Open Cloud</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>Create group API keys</b></td>
-		<td>Create and view API keys for this role, but not manage keys for other roles.</td>
-	</tr>
-	<tr>
-		<td><b>Administer all group API keys</b></td>
-		<td>Gain all of the permissions that a group owner has for API keys, including the ability to create, view, edit, revoke, and audit all of the group's keys.</td>
-	</tr>
-</tbody>
-</table>
+   <table>
+   <thead>
+	 <tr>
+     <th colspan="2">Members</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <td>**Manage lower‑ranked member ranks**</td>
+     <td>Change the role of other members currently assigned to a lower‑ranked role.</td>
+   </tr>
+   <tr>
+     <td>**Accept join requests**</td>
+     <td>Accept or deny any pending requests to join the group, assuming the group is currently set to require manual approval.</td>
+   </tr>
+   <tr>
+     <td>**Kick lower‑ranked members**</td>
+     <td>Kick out members assigned to lower‑ranked roles.</td>
+   </tr>
+   </tbody>
+   <thead>
+	 <tr>
+     <th colspan="2">Assets</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <td>**Spend group funds**</td>
+     <td>Use the group's funds for certain group‑related actions.</td>
+   </tr>
+   <tr>
+     <td>**Create and edit group experiences**</td>
+     <td>Create and edit experiences and assets that are specifically owned by the group. See [here](../projects/collaboration.md#group-owned-experiences) for how this setting relates to collaborative sessions.</td>
+   </tr>
+   <tr>
+     <td>**View group experience analytics**</td>
+     <td>View analytics for group experiences. See [here](../production/analytics/analytics-dashboard.md#granting-group-permission) for details.</td>
+   </tr>
+   </tbody>
+   </table>
 
-<Alert severity="warning">
-By default, only the group owner has the <b>Create and edit group experiences</b> permission, a requirement for being a collaborator in [Team Create](../projects/collaboration.md#team-create). This permission should be granted with care because members who have it may threaten the <a href="#safety-in-group-experiences">safety</a> of the group's experiences.
-</Alert>
+   <Alert severity="warning">
+   By default, only the group owner has the **Create and edit group experiences** permission, a requirement for being a [collaborator](../projects/collaboration.md) in a team session. This permission should be granted with care because members who have it may threaten the [safety](#safety-in-group-experiences) of the group's experiences.
+   </Alert>
 
 ### Assigning Roles
 
@@ -158,36 +89,7 @@ To assign roles:
 1. In the left column, select the **Members** tab.
 1. Using the drop-down menu below each group member, select a role.
 
-   <img src="../assets/publishing/groups/Assign-Role.png" width="340" />
-
-## Publishing Group Places
-
-If you're the group owner or a member with the **Create and edit group experiences** permission, you can publish a group place as follows.
-
-### New Experience
-
-1. In Studio, select **File** &rarr; **Publish to Roblox**.
-1. Near the bottom of the window, click **Create new game**.
-1. Enter a place name and an optional description.
-1. For the **Creator** field, select the group for which you'd like to publish the place.
-
-   <img src="../assets/publishing/groups/Publish-To-Group-New.png" width="800" />
-
-1. When ready, click the **Create** button.
-
-### To Existing Experience
-
-1. Select **File** &rarr; **Publish to Roblox**.
-1. Select a group from the drop-down menu.
-
-   <img src="../assets/publishing/groups/Publish-To-Group-Existing.png" width="800" />
-
-1. Click an existing group experience. On the next screen you can:
-
-   - Add the place you're publishing as a **new** place within the same experience.
-   - Overwrite an existing place within the experience.
-
-1. Click the **Create** or **Overwrite** button.
+   <img src="../assets/publishing/groups/Assign-Role.png" alt="A close up view of a member of a group. The dropdown menu is extended, and the Member role is highlighted." width="340" />
 
 ## Managing Payouts
 
@@ -196,51 +98,52 @@ You can use groups to share Robux revenue. Group owners can pay contributors by 
 To manage payouts:
 
 1. Navigate to the [Groups](https://www.roblox.com/groups) page and select your group.
-1. Click the **&hellip;** button in the upper-right corner and select **Configure&nbsp;Group**.
+1. Click the **&ctdot;** button in the upper-right corner and select **Configure&nbsp;Group**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" width="800" />
+   <img src="../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
 
 1. In the left column, hover over **Revenue** and then click **Payouts**.
 
-   <img src="../assets/publishing/groups/Group-Admin-Revenue-Payouts.png" width="353" />
+   <img src="../assets/publishing/groups/Group-Admin-Revenue-Payouts.png" alt="A close up view of the left column with the Revenue navigation item highlighted, as well as the Payouts submenu item." width="330" />
 
-### One-Time Payouts
+	 From the payouts screen, initiate a **recurring payout** or **one‑time payout**.
 
-Group owners can perform one-time payouts of Robux to a single group member or multiple members. This payout can be a lump sum or a percentage of the group's total funds, but you can only distribute Robux in whole numbers. If you choose to distribute by percentage, the amount rounds down to the nearest whole number of Robux, and the remainder remains in the group's funds.
+	 <Tabs>
+	 <TabItem label="Recurring Payout">
+	 Group owners can configure recurring payouts to automatically share profits when the group earns them. There's a short delay from when the group earns the funds and when they distribute to members. When you change a member's recurring payout, Roblox sends a message notification to that member to inform them of the change.
 
-To transfer a one-time payout:
+   To configure recurring payouts:
 
-1. Select the **One-time Payout** tab.
+   1. Select the **Recurring Payout** tab.
 
-   <img src="../assets/publishing/groups/Group-Admin-Payouts-One-Time.png" width="800" />
+      <img src="../assets/publishing/groups/Group-Admin-Payouts-Recurring.png" alt="A close up view of both the Recurring Payout and One-Time Payout tabs. The Recurring Payout tab is highlighted." width="800" />
 
-1. Use the drop-down menu to choose whether the payout is a set amount or a percentage of the group's total Robux balance.
+   2. Add one or more payout recipients by clicking the **Add Payout Recipient** button.
+   3. Next to each member, enter the percentage of the group's Robux that you would like them to receive every month. To remove them from the payout, click the "trash" button.
+   4. After everything looks correct, click **Save**.
 
-1. Add one or more payout recipients by clicking the **Add Payout Recipient** button.
+   </TabItem>
+   <TabItem label="One-Time Payout">
+   Group owners can perform one-time payouts of Robux to a single group member or multiple members. This payout can be a lump sum or a percentage of the group's total funds, but you can only distribute Robux in whole numbers. If you choose to distribute by percentage, the amount rounds down to the nearest whole number of Robux, and the remainder remains in the group's funds.
 
-1. Next to each member, enter the amount or percentage you want to give to them. To remove them from the payout, click the "trash" button.
+   To make a one-time payout:
 
-1. After everything looks correct, click **Distribute**.
+   1. Select the **One-time Payout** tab.
 
-### Recurring Payouts
+      <img src="../assets/publishing/groups/Group-Admin-Payouts-One-Time.png" alt="A close up view of both the Recurring Payout and One-Time Payout tabs. The One-time Payout tab is highlighted." width="800" />
 
-Group owners can configure recurring payouts to automatically share profits when the group earns them. There's a short delay from when the group earns the funds and when they distribute to members. When you change a member's recurring payout, Roblox sends a message notification to that member to inform them of the change.
+   2. Use the drop-down menu to choose whether the payout is a set amount or a percentage of the group's total Robux balance.
+   3. Add one or more payout recipients by clicking the **Add Payout Recipient** button.
+   4. Next to each member, enter the amount or percentage you want to give to them. To remove them from the payout, click the "trash" button.
+   5. After everything looks correct, click **Distribute**.
 
-To configure recurring payouts:
-
-1. Select the **Recurring Payout** tab.
-
-   <img src="../assets/publishing/groups/Group-Admin-Payouts-Recurring.png" width="800" />
-
-1. Add one or more payout recipients by clicking the **Add Payout Recipient** button.
-1. Next to each member, enter the percentage of the group's Robux that you would like them to receive every month. To remove them from the payout, click the "trash" button.
-
-1. After everything looks correct, click **Save**.
+   </TabItem>
+   </Tabs>
 
 ## Safety in Group Experiences
 
-Group members with the **Create and edit group experiences** permission can enable the **Allow&nbsp;Copying** setting for a creation, potentially allowing the entire Roblox community to copy and use it. The following tips can help you improve the safety and intellectual property protections in group experiences.
+Group members with the **Create and edit group experiences** permission can enable the **Place&nbsp;Copying** setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. The following tips can help you improve the safety and intellectual property protections in group experiences.
 
 - Check that each group role has the correct [permissions](#roles-and-permissions). If you don't want members with a role to have the editing permissions, disable **Create and edit group experiences** for that role.
 - Confirm that each member is [assigned](#assigning-roles) the appropriate role.
-- Confirm that **Allow Copying** is disabled for a place before you add assets that you don't want others to copy.
+- Confirm that [Place Copying](../production/publishing/publishing-experiences-and-places.md#allowing-copying) is **disabled** before you add assets that you don't want others to copy.

@@ -152,10 +152,40 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: RenderingTest.QualityAuto
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: RenderingTest
+    serialization:
+      can_load: true
+      can_save: true
   - name: RenderingTest.QualityLevel
     summary: ''
     description: ''
     code_samples:
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: RenderingTest
+    serialization:
+      can_load: true
+      can_save: true
+  - name: RenderingTest.RenderingTestFrameCount
+    summary: ''
+    description: ''
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''

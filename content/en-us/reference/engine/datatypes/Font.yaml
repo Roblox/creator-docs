@@ -4,16 +4,21 @@ summary: |
   Describes the font used to render text.
 description: |
   Describes the **font** used to render text. Every font consists of a **font
-  family** (like Source Sans Pro), a **weight** (like Bold), and a **style**
-  (like Italic).
+  family** (like Source Sans Pro), a **weight** like `Enum.FontWeight.Bold`, and
+  a **style** like `Enum.FontStyle.Italic`.
 
   Font families are a type of asset, like images or meshes. Each font family
-  contains a number of font faces, each face has a different weight and style.
+  contains a number of font faces, and each face has a different weight and
+  style.
 
-  Font is used by the FontFace property on `Class.TextLabel.FontFace|TextLabel`,
-  `Class.TextButton.FontFace|TextButton`, and `Class.TextBox.FontFace|TextBox`.
+  `Datatype.Font` is used by the `Class.TextLabel.FontFace`,
+  `Class.TextButton.FontFace`, and `Class.TextBox.FontFace` properties.
 
-  ## Font List
+  **Note that Gotham and Arial will be removed in the near future. See the
+  [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+  for more information.**
+
+  #### Font List
 
   | Name               | Asset ID                                          | Weights                                                                       |
   | ------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -21,8 +26,10 @@ description: |
   | Amatic SC          | `rbxasset://fonts/families/AmaticSC.json`         | Regular, Bold                                                                 |
   | Arial              | `rbxasset://fonts/families/Arial.json`            | Regular, Bold                                                                 |
   | Arial (Legacy)     | `rbxasset://fonts/families/LegacyArial.json`      | Regular, Bold                                                                 |
+  | Arimo              | `rbxasset://fonts/families/Arimo.json`            | Regular, Medium, Semi Bold, Bold                                              |
   | Balthazar          | `rbxasset://fonts/families/Balthazar.json`        | Regular                                                                       |
   | Bangers            | `rbxasset://fonts/families/Bangers.json`          | Regular                                                                       |
+  | Builder Sans       | `rbxasset://fonts/families/BuilderSans.json`      | Thin, Light, Regular, medium, Semi Bold, Bold, Extra Bold                     |
   | Comic Neue Angular | `rbxasset://fonts/families/ComicNeueAngular.json` | Bold                                                                          |
   | Creepster          | `rbxasset://fonts/families/Creepster.json`        | Regular                                                                       |
   | Denk One           | `rbxasset://fonts/families/DenkOne.json`          | Regular                                                                       |
@@ -40,6 +47,7 @@ description: |
   | Luckiest Guy       | `rbxasset://fonts/families/LuckiestGuy.json`      | Regular                                                                       |
   | Merriweather       | `rbxasset://fonts/families/Merriweather.json`     | Light, Regular, Bold, Black                                                   |
   | Michroma           | `rbxasset://fonts/families/Michroma.json`         | Regular                                                                       |
+  | Montserrat         | `rbxasset://fonts/families/Montserrat.json`       | Thin, Extra Light, Light, Regular, Mediu, Semi Bold, Bold, Black              |
   | Nunito             | `rbxasset://fonts/families/Nunito.json`           | Extra Light, Light, Regular, Semi Bold, Bold, Extra Bold, Black               |
   | Oswald             | `rbxasset://fonts/families/Oswald.json`           | Extra Light, Light, Regular, Medium, Semi Bold, Bold                          |
   | Patrick Hand       | `rbxasset://fonts/families/PatrickHand.json`      | Regular                                                                       |
@@ -60,8 +68,8 @@ tags: []
 deprecation_message: ''
 constructors:
   - name: Font.new
-    summary: Creates a new Font.
-    description: Creates a new Font.
+    summary: Creates a new `Datatype.Font`.
+    description: Creates a new `Datatype.Font`.
     parameters:
       - name: family
         type: Content
@@ -82,62 +90,66 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Font.fromEnum
-    summary: Creates a Font from an `Enum.Font` value.
+    summary: Creates a `Datatype.Font` from an `Enum.Font` value.
     description: |-
-      Creates a Font from an `Enum.Font` value.
+      Creates a `Datatype.Font` from an `Enum.Font` value. Throws an error when called with `Enum.Font.Unknown`.
 
-      Throws an error when called with `Enum.Font.Unknown`.
+      The following table indicates the family, weight, and style associated with each `Enum.Font`.
 
-      #### Outputs
-
-      | Value              | Family                                            | Weight   | Italic |
-      | ------------------ | ------------------------------------------------- | -------- | ------ |
-      | AmaticSC           | `rbxasset://fonts/families/AmaticSC.json`         | Regular  | ❌     |
-      | Antique            | `rbxasset://fonts/families/RomanAntique.json`     | Regular  | ❌     |
-      | Arcade             | `rbxasset://fonts/families/PressStart2P.json`     | Regular  | ❌     |
-      | Arial              | `rbxasset://fonts/families/Arial.json`            | Regular  | ❌     |
-      | ArialBold          | `rbxasset://fonts/families/Arial.json`            | Bold     | ❌     |
-      | Bangers            | `rbxasset://fonts/families/Bangers.json`          | Regular  | ❌     |
-      | Bodoni             | `rbxasset://fonts/families/AccanthisADFStd.json`  | Regular  | ❌     |
-      | Cartoon            | `rbxasset://fonts/families/ComicNeueAngular.json` | Regular  | ❌     |
-      | Code               | `rbxasset://fonts/families/Inconsolata.json`      | Regular  | ❌     |
-      | Creepster          | `rbxasset://fonts/families/Creepster.json`        | Regular  | ❌     |
-      | DenkOne            | `rbxasset://fonts/families/DenkOne.json`          | Regular  | ❌     |
-      | Fantasy            | `rbxasset://fonts/families/Balthazar.json`        | Regular  | ❌     |
-      | Fondamento         | `rbxasset://fonts/families/Fondamento.json`       | Regular  | ❌     |
-      | FredokaOne         | `rbxasset://fonts/families/FredokaOne.json`       | Regular  | ❌     |
-      | Garamond           | `rbxasset://fonts/families/Guru.json`             | Regular  | ❌     |
-      | Gotham             | `rbxasset://fonts/families/GothamSSm.json`        | Regular  | ❌     |
-      | GothamBlack        | `rbxasset://fonts/families/GothamSSm.json`        | Heavy    | ❌     |
-      | GothamBold         | `rbxasset://fonts/families/GothamSSm.json`        | Bold     | ❌     |
-      | GothamMedium       | `rbxasset://fonts/families/GothamSSm.json`        | Medium   | ❌     |
-      | GrenzeGotisch      | `rbxasset://fonts/families/GrenzeGotisch.json`    | Regular  | ❌     |
-      | Highway            | `rbxasset://fonts/families/HighwayGothic.json`    | Regular  | ❌     |
-      | IndieFlower        | `rbxasset://fonts/families/IndieFlower.json`      | Regular  | ❌     |
-      | JosefinSans        | `rbxasset://fonts/families/JosefinSans.json`      | Regular  | ❌     |
-      | Jura               | `rbxasset://fonts/families/Jura.json`             | Regular  | ❌     |
-      | Kalam              | `rbxasset://fonts/families/Kalam.json`            | Regular  | ❌     |
-      | Legacy             | `rbxasset://fonts/families/LegacyArial.json`      | Regular  | ❌     |
-      | LuckiestGuy        | `rbxasset://fonts/families/LuckiestGuy.json`      | Regular  | ❌     |
-      | Merriweather       | `rbxasset://fonts/families/Merriweather.json`     | Regular  | ❌     |
-      | Michroma           | `rbxasset://fonts/families/Michroma.json`         | Regular  | ❌     |
-      | Nunito             | `rbxasset://fonts/families/Nunito.json`           | Regular  | ❌     |
-      | Oswald             | `rbxasset://fonts/families/Oswald.json`           | Regular  | ❌     |
-      | PatrickHand        | `rbxasset://fonts/families/PatrickHand.json`      | Regular  | ❌     |
-      | PermanentMarker    | `rbxasset://fonts/families/PermanentMarker.json`  | Regular  | ❌     |
-      | Roboto             | `rbxasset://fonts/families/Roboto.json`           | Regular  | ❌     |
-      | RobotoCondensed    | `rbxasset://fonts/families/RobotoCondensed.json`  | Regular  | ❌     |
-      | RobotoMono         | `rbxasset://fonts/families/RobotoMono.json`       | Regular  | ❌     |
-      | Sarpanch           | `rbxasset://fonts/families/Sarpanch.json`         | Regular  | ❌     |
-      | SciFi              | `rbxasset://fonts/families/Zekton.json`           | Regular  | ❌     |
-      | SourceSans         | `rbxasset://fonts/families/SourceSansPro.json`    | Regular  | ❌     |
-      | SourceSansBold     | `rbxasset://fonts/families/SourceSansPro.json`    | Bold     | ❌     |
-      | SourceSansItalic   | `rbxasset://fonts/families/SourceSansPro.json`    | Regular  | ✅     |
-      | SourceSansLight    | `rbxasset://fonts/families/SourceSansPro.json`    | Light    | ❌     |
-      | SourceSansSemibold | `rbxasset://fonts/families/SourceSansPro.json`    | SemiBold | ❌     |
-      | SpecialElite       | `rbxasset://fonts/families/SpecialElite.json`     | Regular  | ❌     |
-      | TitilliumWeb       | `rbxasset://fonts/families/TitilliumWeb.json`     | Regular  | ❌     |
-      | Ubuntu             | `rbxasset://fonts/families/Ubuntu.json`           | Regular  | ❌     |
+      | Font Enum            | Family                                            | Weight    | Style  |
+      | -------------------- | ------------------------------------------------- | --------  | ------ |
+      | AmaticSC             | `rbxasset://fonts/families/AmaticSC.json`         | Regular   | Normal |
+      | Antique              | `rbxasset://fonts/families/RomanAntique.json`     | Regular   | Normal |
+      | Arcade               | `rbxasset://fonts/families/PressStart2P.json`     | Regular   | Normal |
+      | Arial                | `rbxasset://fonts/families/Arial.json`            | Regular   | Normal |
+      | ArialBold            | `rbxasset://fonts/families/Arial.json`            | Bold      | Normal |
+      | Arimo                | `rbxasset://fonts/families/Arimo.json`            | Regular   | Normal |
+      | ArimoBold            | `rbxasset://fonts/families/Arimo.json`            | Bold      | Normal |
+      | Bangers              | `rbxasset://fonts/families/Bangers.json`          | Regular   | Normal |
+      | Bodoni               | `rbxasset://fonts/families/AccanthisADFStd.json`  | Regular   | Normal |
+      | BuilderSans          | `rbxasset://fonts/families/BuilderSans.json`      | Regular   | Normal |
+      | BuilderSansMedium    | `rbxasset://fonts/families/BuilderSans.json`      | Medium    | Normal |
+      | BuilderSansBold      | `rbxasset://fonts/families/BuilderSans.json`      | Bold      | Normal |
+      | BuilderSansExtraBold | `rbxasset://fonts/families/BuilderSans.json`      | ExtraBold | Normal |
+      | Cartoon              | `rbxasset://fonts/families/ComicNeueAngular.json` | Regular   | Normal |
+      | Code                 | `rbxasset://fonts/families/Inconsolata.json`      | Regular   | Normal |
+      | Creepster            | `rbxasset://fonts/families/Creepster.json`        | Regular   | Normal |
+      | DenkOne              | `rbxasset://fonts/families/DenkOne.json`          | Regular   | Normal |
+      | Fantasy              | `rbxasset://fonts/families/Balthazar.json`        | Regular   | Normal |
+      | Fondamento           | `rbxasset://fonts/families/Fondamento.json`       | Regular   | Normal |
+      | FredokaOne           | `rbxasset://fonts/families/FredokaOne.json`       | Regular   | Normal |
+      | Garamond             | `rbxasset://fonts/families/Guru.json`             | Regular   | Normal |
+      | Gotham               | `rbxasset://fonts/families/GothamSSm.json`        | Regular   | Normal |
+      | GothamBlack          | `rbxasset://fonts/families/GothamSSm.json`        | Heavy     | Normal |
+      | GothamBold           | `rbxasset://fonts/families/GothamSSm.json`        | Bold      | Normal |
+      | GothamMedium         | `rbxasset://fonts/families/GothamSSm.json`        | Medium    | Normal |
+      | GrenzeGotisch        | `rbxasset://fonts/families/GrenzeGotisch.json`    | Regular   | Normal |
+      | Highway              | `rbxasset://fonts/families/HighwayGothic.json`    | Regular   | Normal |
+      | IndieFlower          | `rbxasset://fonts/families/IndieFlower.json`      | Regular   | Normal |
+      | JosefinSans          | `rbxasset://fonts/families/JosefinSans.json`      | Regular   | Normal |
+      | Jura                 | `rbxasset://fonts/families/Jura.json`             | Regular   | Normal |
+      | Kalam                | `rbxasset://fonts/families/Kalam.json`            | Regular   | Normal |
+      | Legacy               | `rbxasset://fonts/families/LegacyArial.json`      | Regular   | Normal |
+      | LuckiestGuy          | `rbxasset://fonts/families/LuckiestGuy.json`      | Regular   | Normal |
+      | Merriweather         | `rbxasset://fonts/families/Merriweather.json`     | Regular   | Normal |
+      | Michroma             | `rbxasset://fonts/families/Michroma.json`         | Regular   | Normal |
+      | Nunito               | `rbxasset://fonts/families/Nunito.json`           | Regular   | Normal |
+      | Oswald               | `rbxasset://fonts/families/Oswald.json`           | Regular   | Normal |
+      | PatrickHand          | `rbxasset://fonts/families/PatrickHand.json`      | Regular   | Normal |
+      | PermanentMarker      | `rbxasset://fonts/families/PermanentMarker.json`  | Regular   | Normal |
+      | Roboto               | `rbxasset://fonts/families/Roboto.json`           | Regular   | Normal |
+      | RobotoCondensed      | `rbxasset://fonts/families/RobotoCondensed.json`  | Regular   | Normal |
+      | RobotoMono           | `rbxasset://fonts/families/RobotoMono.json`       | Regular   | Normal |
+      | Sarpanch             | `rbxasset://fonts/families/Sarpanch.json`         | Regular   | Normal |
+      | SciFi                | `rbxasset://fonts/families/Zekton.json`           | Regular   | Normal |
+      | SourceSans           | `rbxasset://fonts/families/SourceSansPro.json`    | Regular   | Normal |
+      | SourceSansBold       | `rbxasset://fonts/families/SourceSansPro.json`    | Bold      | Normal |
+      | SourceSansItalic     | `rbxasset://fonts/families/SourceSansPro.json`    | Regular   | Italic |
+      | SourceSansLight      | `rbxasset://fonts/families/SourceSansPro.json`    | Light     | Normal |
+      | SourceSansSemibold   | `rbxasset://fonts/families/SourceSansPro.json`    | SemiBold  | Normal |
+      | SpecialElite         | `rbxasset://fonts/families/SpecialElite.json`     | Regular   | Normal |
+      | TitilliumWeb         | `rbxasset://fonts/families/TitilliumWeb.json`     | Regular   | Normal |
+      | Ubuntu               | `rbxasset://fonts/families/Ubuntu.json`           | Regular   | Normal |
     parameters:
       - name: font
         type: Font

@@ -1,6 +1,6 @@
 ---
 title: Tables
-description: Tables can store multiple values of any type that isn't nil, including booleans, numbers, strings, functions, and other tables.
+description: Data type which can store multiple values of any non-nil type, including booleans, numbers, strings, functions, and other tables.
 ---
 
 The **table** data type can store multiple values of any type that isn't `nil`, including [booleans](./booleans.md), [numbers](./numbers.md), [strings](./strings.md), [functions](./functions.md), and other tables. Construct tables with curly braces (`{}`):

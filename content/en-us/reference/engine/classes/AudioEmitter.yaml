@@ -42,6 +42,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioEmitter.DistanceAttenuation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BinaryString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: AudioEmitter:GetConnectedWires
     summary: ''
@@ -57,7 +72,37 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
+    thread_safety: Unsafe
+  - name: AudioEmitter:GetDistanceAttenuation
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AudioEmitter:SetDistanceAttenuation
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: curve
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
     thread_safety: Unsafe
 events: []
 callbacks: []

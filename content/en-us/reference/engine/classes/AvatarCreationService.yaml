@@ -13,6 +13,23 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AvatarCreationService:LoadAvatarModelAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: id
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instance
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: ''
     description: ''

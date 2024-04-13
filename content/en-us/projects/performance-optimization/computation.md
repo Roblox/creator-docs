@@ -24,9 +24,7 @@ computation performance issues.
 The server heartbeat (frame rate) is capped at 60fps for all experiences, so
 values below that might indicate a performance issue. To check server heartbeat:
 
-- **With the [Developer Console](../../studio/developer-console.md)** - In the
-  **Server Jobs** tab, find the **Steps Per Sec** value, which represents the
-  heartbeat of your experience.
+- **With the [Developer Console](../../studio/developer-console.md)** - In the **Server Jobs** tab, find the **Steps Per Sec** value, which represents the heartbeat of your experience.
 - **With the server [MicroProfiler](../../studio/microprofiler/index.md)** -
   Look at the length of each frame to see if some are taking longer than 16.6ms
   (1 / 60).
@@ -34,17 +32,11 @@ values below that might indicate a performance issue. To check server heartbeat:
   The MicroProfiler is particularly useful for identifying 'spikes' in
   performance, where some frames take significantly than others to process.
 
-- **With the [Performance
-  Dashboard](../../production/analytics/performance.md)** - You can view
-  heartbeat values for production experiences.
+- **With the [Performance Dashboard](../../production/analytics/performance.md)** - You can view heartbeat values for production experiences.
 
-Another symptom of degraded server heartbeat is increased latency (commonly
-known as ping). The longer the server takes to finish computing its tasks each
-frame, the longer it takes to process network data sent and received from
-clients. To check average ping for all players connected to a server:
+Another symptom of degraded server heartbeat is increased latency (commonly known as ping). The longer the server takes to finish computing its tasks each frame, the longer it takes to process network data sent and received from clients. To check average ping for all players connected to a server:
 
-- **With the [Developer Console](../../studio/developer-console.md)** - Go to
-  the **Server Stats** tab in the **Developer Console**.
+- **With the [Developer Console](../../studio/developer-console.md)** - Go to the **Server Stats** tab.
 
 ### Client
 

@@ -73,10 +73,7 @@ methods:
         default: 0
         summary: |
           **(Optional)** Maximum possible number of items that can be returned.
-          By default is 50. There is no guarantee that the method returns the
-          same number of items as the specified pageSize. This parameter only
-          guarantees that the method never returns more than the specified
-          limit.
+          The default is 50.
       - name: cursor
         type: string
         default: ''

@@ -34,7 +34,7 @@ With the [observability](../../cloud-services/memory-stores/observability.md) da
 
 For API request limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue or sorted map is limited to **100,000** request units per minute.
 
-Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreService:GetRangeAsync()` for sorted maps and `Class.MemoryStoreService:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreService:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreService:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
+Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreSortedMap:GetRangeAsync()` for sorted maps and `Class.MemoryStoreQueue:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreSortedMap:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreQueue:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
 
 The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
 
@@ -53,7 +53,7 @@ For a single sorted map or queue, the following size and item count limits apply
 To keep your memory usage pattern optimal and avoid hitting the [limits](#limits-and-quotas), follow these best practices:
 
 - **Remove processed items.** Consistently cleaning up read items using `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps can free up memory and keep the data structure up-to-date.
-- **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreService:GetQueue()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
+- **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreQueue:AddAsync()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
   - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire experience.
   - Always either explicitly delete unneeded items or set a short item expiration.
   - Generally, it's recommended to use explicit deletion for releasing memory as it takes effect immediately, and use item expiration as a safety mechanism to prevent unused items from occupying memory indefinitely.
@@ -67,12 +67,233 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 ## Observability
 
-The [memory stores observability dashboard](../../cloud-services/memory-stores/observability.md) provides insights and analytics for monitoring and troubleshooting your memory store usage. With real-time updating charts on different aspects of your memory usage and API requests, you can track the memory usage pattern of your experience, view the current allocated quotas, monitor the API status, and identify potential issues for performance optimization.
+The [Observability Dashboard](../../cloud-services/memory-stores/observability.md) provides insights and analytics for monitoring and troubleshooting your memory store usage. With real-time updating charts on different aspects of your memory usage and API requests, you can track the memory usage pattern of your experience, view the current allocated quotas, monitor the API status, and identify potential issues for performance optimization.
+
+The following table lists and describes all status codes of API responses available on the Observability Dashboard's **Request Count by Status** and **Requests by API x Status** charts. For more information on how to resolve these errors, see [Troubleshooting](#troubleshooting). For the specific quota or limit that an error relates to, see [Limits and Quotas](#limits-and-quotas).
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Success</td>
+      <td>Success.</td>
+    </tr>
+    <tr>
+      <td>DataStructureMemoryOverLimit</td>
+      <td>Exceeds data structure level memory size limit (100MB).</td>
+    </tr>
+    <tr>
+      <td>DataUpdateConflict</td>
+      <td>Conflict due to concurrent update.</td>
+    </tr>
+    <tr>
+      <td>AccessDenied</td>
+      <td>Unauthorized to access experience data. This request doesn't consume request units or use quota.</td>
+    </tr>
+    <tr>
+      <td>InternalError</td>
+      <td>Internal error.</td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>The request doesn't have required information or has malformed information.</td>
+    </tr>
+    <tr>
+      <td>DataStructureItemsOverLimit</td>
+      <td>Exceeds data structure level item count limit (1M).</td>
+    </tr>
+    <tr>
+      <td>NoItemFound</td>
+      <td>No item found in `Class.MemoryStoreQueue:ReadAsync()` or `Class.MemoryStoreSortedMap:UpdateAsync()`. `ReadAsync()` polls every 2 seconds and returns this status code until it finds items in the queue.</td>
+    </tr>
+    <tr>
+      <td>DataStructureRequestsOverLimit</td>
+      <td>Exceeds data structure level request unit limit (100,000 request units per minute).</td>
+    </tr>
+    <tr>
+      <td>TotalRequestsOverLimit</td>
+      <td>Exceeds universe-level request unit limit.</td>
+    </tr>
+    <tr>
+      <td>TotalMemoryOverLimit</td>
+      <td>Exceeds universe-level memory quota.</td>
+    </tr>
+    <tr>
+      <td>ItemValueSizeTooLarge</td>
+      <td>Value size exceeds limit (32KB).</td>
+    </tr>
+  </tbody>
+</table>
+
+The following table lists states codes from client side, which are currently not available on the Observability Dashboard.
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>InternalError</td>
+      <td>Internal Error.</td>
+    </tr>
+    <tr>
+      <td>UnpublishedPlace</td>
+      <td>You must publish this place to use MemoryStoreService.</td>
+    </tr>
+    <tr>
+      <td>InvalidClientAccess</td>
+      <td>MemoryStoreService must be called from server.</td>
+    </tr>
+    <tr>
+      <td>InvalidExpirationTime</td>
+      <td>The field 'expiration' time must be between 0 and 3,888,000.</td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>Unable to convert value to json.</td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>Unable to convert sortKey to a valid number or string.</td>
+    </tr>
+      <tr>
+      <td>TransformCallbackFailed</td>
+      <td>Failed to invoke transformation callback function.</td>
+    </tr>
+      <tr>
+      <td>RequestThrottled</td>
+      <td>Recent MemoryStores requests hit one or more limits.</td>
+    </tr>
+      <tr>
+      <td>UpdateConflict</td>
+      <td>Exceeded max number of retries.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Troubleshooting
+
+The following table lists and describes the recommended solution for each response status code:
+
+<table>
+  <thead>
+    <tr>
+      <th>Error</th>
+      <th>Troubleshooting options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DataStructureRequestsOverLimit</td>
+      <td rowspan="2">
+        <ul>
+          <li>Add a local cache by saving information to another variable and rechecking after a certain time interval, such as 30 seconds.</li>
+          <li>Use the **Request Count by Status** chart to verify that you are receiving more **Success** responses than **NoItemFounds**. Limit the amount of times you hit `Class.MemoryStoreService` with a failed request.</li>
+          <li>Implement a short delay between requests.</li>
+          <li>Follow the [best practices](#best-practices), including:</li>
+            <ul>
+              <li>Sharding your data structures if you receive a significant amount of **DataStructureRequestsOverLimit** responses.</li>
+              <li>Implement an exponential backoff for finding a reasonable rate of requests to send.</li>
+            </ul>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>TotalRequestsOverLimit</td>
+    </tr>
+    <tr>
+      <td>DataStructureItemsOverLimit</td>
+      <td rowspan="3">
+        <ul>
+          <li>Apply [best practices](#best-practices) on reducing the memory size.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>DataStructureMemoryOverLimit</td>
+    </tr>
+    <tr>
+      <td>TotalMemoryOverLimit</td>
+    </tr>
+    <tr>
+      <td>DataUpdateConflict</td>
+      <td>
+        <ul>
+          <li>Implement a short delay between requests to avoid multiple requests updating the same key at the same time.</li>
+          <li>For sorted maps, use the callback function on the `Class.MemoryStoreSortedMap:UpdateAsync()` method to abort a request after a certain number of attempts, as the following code sample shows:</li>
+             ```lua title="Example of Aborting Request"
+             local MemoryStoreService = game:GetService("MemoryStoreService")
+             local map = MemoryStoreService:GetSortedMap("AuctionItems")
+
+             function placeBid(itemKey, bidAmount)
+                 map:UpdateAsync(itemKey, function(item)
+                     item = item or { highestBid = 0 }
+                     if item.highestBid < bidAmount then
+                         item.highestBid = bidAmount
+                         return item
+                     end
+                     print("item is "..item.highestBid)
+                     return nil
+                 end, 1000)
+             end
+
+             placeBid("MyItem", 50)
+             placeBid("MyItem", 40)
+             print("done")
+             ```
+          <li>Investigate to see if you’re calling `Class.MemoryStoreService` efficiently to avoid conflicts. Ideally, you shouldn't over-send requests.</li>
+          <li>Consistently remove items once they are read using the `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Internal Error</td>
+      <td>
+        <ul>
+          <li>Check the <a href="https://status.roblox.com/pages/59db90dbcdeb2f04dadcf16d">Roblox status page</a>.</li>
+          <li>File a <a href="https://devforum.roblox.com/t/how-to-post-a-bug-report/24388">bug report</a> describing the issue with your experience's Universe ID.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>InvalidRequest</td>
+      <td>
+        <ul>
+          <li>Make sure that you include correct and valid parameters in your request. Examples of invalid parameters include:</li>
+          <ul>
+            <li>An empty string</li>
+            <li>A string that exceeds the length limit</li>
+          </ul>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>ItemValueSizeTooLarge</td>
+      <td>
+        <ul>
+          <li>Shard or split the item value into multiple keys.</li>
+          <ul>
+            <li>To organize grouped keys, sort them alphabetically by adding a `prefix` to the key.</li>
+          </ul>
+          <li>Encoding or compressing stored values.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Testing and Debugging in Studio
 
-`Class.MemoryStoreService` offers separate namespaces for API calls from Studio that are different from runtime servers, so you can safely test a memory store before going to production. Your API calls from Studio for testing don't access production data so that you can freely test new features.
+The data in `Class.MemoryStoreService` is isolated between Studio and production, so changing the data in Studio doesn't affect production behavior. This means that your API calls from Studio don't access production data, allowing you to safely test memory stores and new features before going to production.
 
-Studio testing has the same [limits and quotas](#limits-and-quotas) as the production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing.
+Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing. When testing from Studio, you may notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
 
-To debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).
+For information on how to debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).

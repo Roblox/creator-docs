@@ -1,196 +1,177 @@
 ---
-title: Laser Traps with Beams
-description: The process for creating a laser trap that sets an avatar's health to 0 when touched.
-next: /tutorials/building/effects/using-particles-for-explosions
-prev: /tutorials/building/effects/laser-traps-with-beams
+title: Creating Lasers Beams
+description: A tutorial on creating a laser beam that sets an avatar's health to 0 on impact.
 ---
 
-Beams are an effect that can be used to create lasers, force fields, and even waterfalls. This object draws a texture between two points with customizable properties like speed, width, and curve.
+A **laser beam** is a ray of light. While rarely dangerous in real life, sci-fi experiences often use laser beams as a mechanism to damage players on impact. However, because of their versatility and prominence in futuristic media, laser beams are useful for all sorts of gameplay mechanics, such as blaster weapons, puzzles, obstacles, and environment aesthetics.
 
-<video controls loop muted>
-  <source src="../../../assets/tutorials/laser-traps-with-beams/laserTrap_beamExamples.mp4" />
-</video>
+Using a sample [Laser Beam Blaster](https://create.roblox.com/store/asset/16382650186) model, this tutorial shows you how to create a laser beam special effect with an optional script to set the player's health to zero on collision, including guidance on:
 
-## Trap Setup
-
-In this tutorial, you'll create a laser trap that uses a beam and insert a script to set a player's health to 0 when the trap is touched.
-
-<video controls loop muted>
-  <source src="../../../assets/tutorials/laser-traps-with-beams/laserTrap_testFinalLaser.mp4" />
-</video>
-
-### Add Attachments
-
-**Attachments** are where one object can connect to another. In this case, attachments will be used for the start and end points of the beam.
-
-<figure>
-    <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showSetup_alt.png" />
-    <figcaption>Model with two green attachments</figcaption>
-</figure>
-
-1. Attachments aren't normally visible. To view attachments, toggle on **Constraint Details** in the **Model** tab.
-
-   ![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_constraintDetails.png)
-
-2. Create an anchored part or model named **LaserTrap**. Then, add two attachments named **StartAttachment** and **EndAttachment**.
-
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showTrapPart.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showPartsCreated.png" />
-   </GridContainer>
-
-## Move Attachments
-
-New attachments are created in the center of the part. For the beam, the attachments will need to be moved into position.
-
-1. Select **StartAttachment** (1) and use the **Move** tool to position it at the edge of the laser trap.
-2. Move **EndAttachment** (2) further away to where the laser should stop.
-
-   ![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_showAttachments.jpg)
+- Setting up an invisible collision box that detects when a player collides with the laser beam.
+- Configuring attachments that represent the reach of the laser beam's emission.
+- Customizing a beam that emulates the visual characteristics of a futuristic laser beam.
+- Scripting behavior for the collision box that damages the player's character.
 
 <Alert severity="info">
-
-Attachments may be hidden inside a part. To display hidden attachments, enable **Draw On Top** from the **Model** tab.
-
-![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_drawOnTop.png)
-
+You can create your own assets in third-party modeling tools and follow along with your own design. For information on exporting models for use in Studio, see [Exporting Requirements](../../../art/modeling/export-requirements.md).
 </Alert>
 
-## Create the Beam
+<video controls src="../../../assets/tutorials/laser-traps-with-beams/Script.mp4" width="90%"></video>
 
-With the attachments in place, a beam can now be created.
+## Get Blaster Asset
 
-1. Under **LaserTrap**, add a **Beam** object named **Laser**.
+The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
 
-   ![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_addBeamObject.jpg)
+This tutorial references a high-quality laser beam blaster model that you can use as you replicate each step within the following sections.
 
-2. With **Laser** selected, find **Attachment0** in the Properties window. Click the empty box to the right of the property and then, in the Explorer, click **StartAttachment**.
+<img src="../../../assets/tutorials/laser-traps-with-beams/LaserBlasterAsset.png" mg width="90%" />
 
-   <video controls loop muted>
-   <source src="../../../assets/tutorials/laser-traps-with-beams/laserTrap_setAttachment0.mp4" />
-   </video>
+You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
-3. Set **Attachment1** to **EndAttachment** using the same process. The properties should appear as below.
+<BrowseSampleCard href='https://create.roblox.com/store/asset/16382650186' description='Create your laser beam with this high-quality laser beam blaster.' title='Laser Beam Blaster' assetId={16382650186}  />
 
-   ![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_showAttachmentsSet.png)
+To get this blaster asset from your inventory into your experience:
 
-4. By default, a beam doesn't always face the camera. This may lead to situations where players are unable to see a beam from different angles.
+1. In the menu bar, select the **View** tab.
+2. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
 
-   <Grid container spacing={4}>
-    <Grid item xs={6}>
-      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamDifferentAngles_left.jpg" />
-      <b>Left View</b>
-    </Grid>
-    <Grid item xs={6}>
-      <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamDifferentAngles_top.jpg" />
-      <b>Top View</b>
-    </Grid>
-   </Grid>
+   <img src="../../../assets/studio/general/View-Tab-Toolbox.png" width="776" />
 
-   So the beam is visible at any position, go into the beam properties and enable `FaceCamera`.
+3. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
-   <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_toggleFaceCamera.png" />
+   <img src="../../../assets/studio/toolbox/Inventory-Tab.png" width="360" />
 
-## Beam Properties
+4. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
 
-Beams use 2D images that can be customized with properties to affect the color, size, or curvature.
+## Setup a Collision Box
 
-1. Copy the **asset ID** of an image you uploaded, or copy an ID from the examples below.
+The complete laser beam that sets players health to zero on impact needs to be able to detect when players collide with the laser. Because `Class.Beam` objects don't have default collision detection capabilities, you must set up collision detection with basic parts.
 
-   <Grid container spacing={6}>
-    <Grid item xs={4}>
-      <img src="../../../assets/tutorials/laser-traps-with-beams/beam6060542021.png" />
-      `rbxassetid://6060542021`
-    </Grid>
-    <Grid item xs={4}>
-      <img src="../../../assets/tutorials/laser-traps-with-beams/beam6060542158.png" />
-      `rbxassetid://6060542158`
-    </Grid>
-    <Grid item xs={4}>
-      <img src="../../../assets/tutorials/laser-traps-with-beams/beam6060542252.png" />
-      `rbxassetid://6060542252`
-    </Grid>
-   </Grid>
+For example, this tutorial uses an invisible block part with a `Class.Beam` object as a collision box that detects when a character's `Class.Humanoid` object touches the laser beam. In the final section of the tutorial, you will create a script that uses this information to trigger damage to the player's health.
 
-2. In the beam's `Texture` property, paste the asset ID.
+To set up the collision box:
 
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showBeamWithTexture.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_pasteTextureID.png" />
-   </GridContainer>
+1. Insert a **block** part into **LaserBeamBlaster**.
 
-3. Make the laser appear brighter by changing a few properties.
+   <img src="../../../assets/tutorials/laser-traps-with-beams/CollisionBox-1.jpg" width="80%" />
 
-   1. Add a faint glow by changing the `LightEmission` property to 0.5.
-   2. Change `Transparency` to 0 (fully opaque).
+1. Select the part, then in the **Properties** window,
+   1. Set **Name** to **CollisionBox**. The part's name and its case style are important for the script later in the tutorial.
+   1. Enable **Anchored** to ensure that the physics system doesn't move the part when the experience starts.
 
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_showBeamLightEmission.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_transparencyLightEmission.png" />
-   </GridContainer>
+1. Scale **CollisionBox** to the length you want your laser beam to blast from the blaster. For example, this tutorial scales the it to be the same length as the blaster.
 
-4. Make the beam wider by setting both **Width0** and **Width1** to 4.
+   <img src="../../../assets/tutorials/laser-traps-with-beams/CollisionBox-2.jpg" width="80%" />
 
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamWidthLarger.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_setWidth.png" />
-   </GridContainer>
+1. Move **CollisionBox** to a position where it extends from the blaster's emitter bulb. Your collision box now represents the reach of the laser beam's blast from the blaster.
 
-5. The `TextureSpeed` property animates the texture over time. For a fast, flickering effect, set it to 3.
+   <img src="../../../assets/tutorials/laser-traps-with-beams/CollisionBox-3.jpg" width="80%" />
 
-6. Make the laser look a bit more dangerous by changing its `Color` property.
+## Configure Attachments
 
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_beamColor.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_changeColor.png" />
-   </GridContainer>
+Before you add a `Class.Beam` object to your blaster, it's important to configure two `Class.Attachment` objects in the 3D space to represent the reach of the laser's emission from the blaster's emitter bulb. Beams operate by rendering a texture between attachments, so if you don't have attachments for the beam to reference, it cannot function at all.
+
+To configure attachments for the laser beam:
+
+1. **(Optional)** Make attachment visual aids larger in the 3D space so that you can clearly visualize the start and end of the laser beam.
+   1. In the menu bar, navigate to the **Model** tab, then the **Constraints** section.
+   1. Set **Scale** to `2.5` to make each attachment visual aid larger.
+
+   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-1.png" width="50%" />
+
+1. Insert two attachments into the collision box.
+   1. In the **Explorer** window, hover over **CollisionBox**, then click the ⊕ icon. A contextual menu displays.
+   1. From the contextual menu, insert an **Attachment**.
+   1. Repeat this process so that **CollisionBox** has two attachment objects.
+   1. Rename both attachments **StartAttachment** and **EndAttachment**, respectively.
+
+   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-2.jpg" width="80%" />
+
+1. Move **StartAttachment** to the edge of **CollisionBox** that overlaps with the emitter bulb, then move **EndAttachment** to the edge of **CollisionBox** that represents the reach of the laser beam.
+
+   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-3.jpg" width="80%" />
+
+1. Make the **CollisionBox** transparent so that you will be able to see the texture the beam renders between the attachments without obstruction.
+   1. In the **Explorer** window, select **CollisionBox**.
+   1. In the **Properties** window, set **Transparency** to `1` to make the part completely transparent.
+
+   <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-4.jpg" width="80%" />
+
+## Customize the Beam
+
+Now that you have `Class.Attachment` objects in the 3D space, you can add and customize a `Class.Beam` object to emulate the visual characteristics of a laser beam. This tutorial provides guidance on how to create a futuristic, bright pink beam that animates quickly, but by experimenting with the same properties, you can create a variety of different special effects.
+
+To customize the beam:
+
+1. Insert a beam into **CollisionBox**.
+   1. In the **Explorer** window, hover over **CollisionBox**, then click the ⊕ icon. A contextual menu displays.
+   1. From the contextual menu, insert a **Beam**.
+1. Assign the collision box's attachments to the new `Class.Beam` object.
+   1. In the **Explorer** window, select the beam.
+   1. In the **Properties** window,
+      1. Set **Attachment0** to **StartAttachment**.
+      1. Set **Attachment1** to **EndAttachment**. The beam renders its default texture between the two attachments.
+
+   <img src="../../../assets/tutorials/laser-traps-with-beams/Beam-2.jpg" width="80%" />
+
+1. Customize the beam's visual appearance so it looks like a futuristic laser beam.
+   1. In the **Explorer** window, verify the beam is still selected.
+   1. In the **Properties** window,
+      1. Set **Texture** to `rbxassetid://6060542021` to render a new texture that looks like a laser beam.
+      1. Set **Color** to `255, 47, 137` to tint the laser bright pink.
+      1. Set **LightEmission** to `0.5` to add a faint glow to the laser.
+      1. Set **Width0** and **Width1** to `4` to widen the laser.
+      1. Set **TextureSpeed** to `2` to make the laser animate more quickly.
+      1. Enable **FaceCamera** to ensure the laser is visible no matter the angle of the player from the laser.
+
+   <video controls src="../../../assets/tutorials/laser-traps-with-beams/Beam-3.mp4" width="80%"></video>
 
 <Alert severity="info">
-
-Textures have different modes, the default being **Stretch** which stretches the texture between the two attachments. Depending on your beam, you may want an alternative like **Wrap** or **Static**. Learn more on the `Class.Beam.TextureMode|TextureMode` page.
-
+For more information on all beam properties you can customize, see [Beams](../../../effects/beams.md).
 </Alert>
 
-## Trap Mechanic
+## Script Damage Behavior
 
-The script for the trap will check if an invisible part is touches a player. The part is used since beams don't have collision detection by default.
+Your laser beam is currently aesthetically pleasing for its environment, but it's also completely harmless as a blaster weapon. To modify the laser blaster so that it can deal damage to players, you must add in a script to the collision box that triggers this behavior.
 
-1. In **LaserTrap**, create a new part named **CollisionBox** that overlaps the beam.
+The sample script works by waiting to see which objects touch the collision box. If an object that touches the collision box includes a child `Class.Humanoid` object, the script sets its `Class.Humanoid.Health|Health property` to `0`. By default, every player character includes a `Class.Humanoid` object, so every time a player collides with the collision box, the script instantaneously sets their health to zero, and the character falls apart.
 
-   <GridContainer numColumns="2">
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_collisionBox.jpg" />
-     <img src="../../../assets/tutorials/laser-traps-with-beams/lasertrap_createCollisionBox.png" />
-   </GridContainer>
+To script the behavior that damages the player:
 
-2. **Anchor** CollisionBox so it doesn't move.
+1. Insert a script into **LaserBeamBlaster**.
+   1. In the **Explorer** window, hover over **LaserBeamBlaster**, then click the ⊕ icon. A contextual menu displays.
+   1. From the contextual menu, insert a **Script**.
 
-   ![alt](../../../assets/tutorials/laser-traps-with-beams/lasertrap_anchorPart.png)
-
-3. In the main model or part named **LaserTrap**, add a new script. Copy the code below and paste it into the new script.
+2. Replace the default code with the following code:
 
    ```lua
    local laserTrap = script.Parent
    local collisionBox = laserTrap.CollisionBox
 
-   -- Hide the collision box
-   collisionBox.Transparency = 1
-
    local function onTouch(otherPart)
-     local character = otherPart.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+	   local character = otherPart.Parent
+	   local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-     if humanoid then
-       humanoid.Health = 0
-     end
+	   if humanoid then
+		   humanoid.Health = 0
+	   end
    end
 
    collisionBox.Touched:Connect(onTouch)
    ```
 
-4. Test the trap by walking into the laser beam. If it's not working correctly, make sure the script is in the right place and the collision box is properly named.
+3. Test the behavior by walking into the laser beam.
 
-<video controls loop muted>
-  <source src="../../../assets/tutorials/laser-traps-with-beams/laserTrap_testFinalLaser.mp4" />
-</video>
+   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-With the beam complete, explore additional beam properties like `CurveSize0` and `CurveSize1`, [import](../../../production/publishing/publishing-assets.md) your own textures, or even make a new object like a force field.
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="800" />
+
+   1. Walk into the laser beam to see your character fall apart. When you're done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
+
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="800" />
+
+   <Alert severity="warning">
+   If the behavior isn't working correctly, make sure the script is a child of **LaserBeamBlaster**, and that the collision box is named `CollisionBox`.
+   </Alert>
+
+You now have a dangerous laser beam blaster! Using the skills in this tutorial, you can customize all sorts of beam special effects, such as glowing force fields, rapid waterfalls, and speed ramps. For example, you can experiment with additional beam properties like `CurveSize0` and `CurveSize1`, [import](../../../production/publishing/publishing-assets.md) your own textures, and pair beams with other special effects, like [Particle Emitters](../../../effects/particle-emitters.md) and [Light Sources](../../../effects/light-sources.md). Happy creating!

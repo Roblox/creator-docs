@@ -5,11 +5,11 @@ memory_category: Instances
 summary: |
   A service handling in-experience text chat.
 description: |
-  A service handling in-experience text chat. TextChatService handles various
-  text chat related tasks, such as managing channels, decorating messages,
-  filtering text, creating commands, and developing custom chats interfaces.
+  A service handling in-experience text chat, including managing channels,
+  decorating messages, filtering text, creating commands, and developing custom
+  chats interfaces.
 
-  To learn more about using TextChatService, see
+  To learn more, see
   [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
 code_samples:
 inherits:
@@ -40,8 +40,8 @@ properties:
       Determines whether to fully enable `Class.TextChatService` or revert to
       the legacy chat system.
     description: |
-      Determines whether `Class.TextChatService` should be fully enabled or to
-      allow the legacy chat system. Setting to this property to
+      Determines whether to fully enable `Class.TextChatService` or revert to
+      the legacy chat system. Setting this property to
       `Enum.ChatVersion.LegacyChatService` effectively disables
       `Class.TextChatService`.
     code_samples: []
@@ -68,20 +68,88 @@ properties:
       created and put in a `Class.Folder` named **TextChatCommands** inside
       `Class.TextChatService`:
 
-      | Name              | PrimaryAlias | SecondaryAlias | Description                                                                                                          | Usage Example  |
-      | :---------------- | :----------- | :------------- | :------------------------------------------------------------------------------------------------------------------- | :------------- |
-      | RBXConsoleCommand | console      |                | Opens the Developer Console.                                                                                         | `\console`     |
-      | RBXEmoteCommand   | emote        | e              | Plays avatar emote.                                                                                                  | `\e dance`     |
-      | RBXHelpCommand    | help         | ?              | Shows a list of chat commands.                                                                                       | `\help`        |
-      | RBXMuteCommand    | mute         | m              | Mutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel\|TextChannels`.   | `\m Username`  |
-      | RBXUnmuteCommand  | unmute       | um             | Unmutes a user by user's `Class.Player.Name` or `Class.Player.DisplayName` in all `Class.TextChannel\|TextChannels`. | `\um Username` |
-      | RBXVersionCommand | version      | v              | Shows the chat version.                                                                                              | `\version`     |
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Primary Alias</th>
+            <th>Secondary Alias</th>
+            <th>Description</th>
+            <th>Usage Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>RBXClearCommand</b></td>
+            <td>clear</td>
+            <td>cls</td>
+            <td>Clears the chat log for the local user.</td>
+            <td><code>/cls</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXConsoleCommand</b></td>
+            <td>console</td>
+            <td></td>
+            <td>Opens the Developer Console.</td>
+            <td><code>/console</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXEmoteCommand</b></td>
+            <td>emote</td>
+            <td>e</td>
+            <td>Plays an avatar emote.</td>
+            <td><code>/e dance</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXHelpCommand</b></td>
+            <td>help</td>
+            <td>?</td>
+            <td>Shows a list of chat commands.</td>
+            <td><code>/help</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXMuteCommand</b></td>
+            <td>mute</td>
+            <td>m</td>
+            <td>Mutes a user by their <code>Class.Player.Name|Name</code> or <code>Class.Player.DisplayName|DisplayName</code> in all <code>Class.TextChannel|TextChannels</code>.</td>
+            <td><code>/m Username</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXTeamCommand</b></td>
+            <td>team</td>
+            <td>t</td>
+            <td>Enters team chat mode where messages are only visible to teammates.</td>
+            <td><code>/t</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXUnmuteCommand</b></td>
+            <td>unmute</td>
+            <td>um</td>
+            <td>Unmutes a user by their <code>Class.Player.Name|Name</code> or <code>Class.Player.DisplayName|DisplayName</code> in all <code>Class.TextChannel|TextChannels</code>.</td>
+            <td><code>/um Username</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXVersionCommand</b></td>
+            <td>version</td>
+            <td>v</td>
+            <td>Shows the chat version.</td>
+            <td><code>/version</code></td>
+          </tr>
+          <tr>
+            <td><b>RBXWhisperCommand</b></td>
+            <td>whisper</td>
+            <td>w</td>
+            <td>Enters whisper mode with another <code>Class.Player</code>.</td>
+            <td><code>/w DisplayName</code> or <code>/w @Username</code></td>
+          </tr>
+        </tbody>
+      </table>
 
-      Developers can edit, create, and remove
-      `Class.TextChatCommand|TextChatCommands` as even if
-      `Class.TextChatService.CreateDefaultCommands` is `true`.
-
-      Mute and unmute commands apply to all TextChannels.
+      Note that you can edit, create, and remove
+      `Class.TextChatCommand|TextChatCommands` even if
+      `Class.TextChatService.CreateDefaultCommands|CreateDefaultCommands` is
+      true. Also note that mute and unmute commands apply to all
+      `Class.TextChannel|TextChannels`.
     code_samples: []
     type: bool
     tags: []
@@ -100,24 +168,47 @@ properties:
       `Class.TextChannel|TextChannels`.
     description: |
       Determines whether `Class.TextChatService` should create default
-      `Class.TextChannel|TextChannels`.
+      `Class.TextChannel|TextChannels`. If true, a `Class.Folder` named
+      **TextChannels** is created inside `Class.TextChatService` at runtime to
+      contain the `Class.TextChannel|TextChannels` outlined in the table below.
+      Each of the default channels has the described special behavior applied to
+      messages using its internally bound `Class.TextChannel.OnIncomingMessage`
+      callback function, changing how messages appear when sent through the
+      channel. The callback is assigned automatically either at runtime (if the
+      `Class.TextChannel` exists) or when the `Class.TextChannel` is created.
 
-      If true, `Class.Team` based `Class.TextChannel|TextChannels` are
-      automatically created (and removed when `Class.Team|Teams` are removed),
-      along with the following `Class.TextChannel|TextChannels` in a
-      `Class.Folder` named **TextChannels** inside `Class.TextChatService`:
+      <table>
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>RBXGeneral</b></td>
+            <td><code>Class.TextChannel</code> for player messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> receives a <a href="../../../ui/rich-text.md">rich text</a> font color tag to give chatting players their distinctive name color. If <code>Class.Player.Team</code> exists, that <code>Class.Team.TeamColor</code> is used instead of the default name color.</td>
+          </tr>
+          <tr>
+            <td><b>RBXSystem</b></td>
+            <td><code>Class.TextChannel</code> for system messages. In the chat window, messages are modified such that <code>Class.TextChatMessage.Text</code> is given a light grey color tag by default, or a red color tag if <code>Class.TextChatMessage.Metadata</code> contains the word <code>"Error"</code>.</td>
+          </tr>
+          <tr>
+            <td><b>RBXTeam[BrickColor]</b></td>
+            <td><code>Class.TextChannel</code> for team-specific player messages, created when a <code>Class.Team.TeamColor|TeamColor</code> is in use by any <code>Class.Team</code> within the <code>Class.Teams</code> service. Name of the created channel is <b>RBXTeam</b> followed by the <code>Class.Team.TeamColor|TeamColor</code> name. For example, <b>RBXTeamCrimson</b> is a <code>Class.TextChannel</code> created when there is an active team whose <code>Class.Team.TeamColor|TeamColor</code> property is the "Crimson" <code>Datatype.BrickColor</code>.<br /><br />In the chat window, messages are modified such that <code>Class.TextChatMessage.PrefixText|PrefixText</code> is colored according to the <code>Class.Player.TeamColor|TeamColor</code> and is prepended with <b>[Team]</b>.<br /><br />Team channels create <code>Class.TextSource|TextSources</code> for all non‑<code>Class.Player.Neutral|Neutral</code> players with the matching <code>Class.Team.TeamColor|TeamColor</code>, allowing them to use team‑only chat. Channels are removed if there are no remaining teams with an associated <code>Class.Team.TeamColor|TeamColor</code>.</td>
+          </tr>
+          <tr>
+            <td><b>RBXWhisper:[UserId1]_[UserId2]</b></td>
+            <td><code>Class.TextChannel</code> for whisper messages between two players, created when a player uses the <code>/whisper</code> command on another player. For example <b>RBXWhisper:2276836_505306092</b> is a <code>Class.TextChannel</code> for players with <code>Class.Player.UserId|UserIds</code> <b>2276836</b> and <b>505306092</b>. Inside whisper channels are two <code>Class.TextSource|TextSources</code> associated with the respective <code>Class.Player.UserId|UserIds</code>.<br /><br />In the chat window, messages are colored the same as those in <b>RBXGeneral</b> and <code>Class.TextChatMessage.PrefixText</code> is modified to show whether a message was sent from or received by the local user.<br /><br />Whisper channels are removed when either player leaves the experience.</td>
+          </tr>
+        </tbody>
+      </table>
 
-      | Name                                | Description                                                                                                                                                                                            |
-      | :---------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | RBXGeneral                          | For all messages.                                                                                                                                                                                      |
-      | RBXSystem                           | For system messages.                                                                                                                                                                                   |
-      | RBXTeam<`Datatype.BrickColor.Name`> | For team messages. Name of the `Class.TextChannel` is the string "RBXTeam" followed by the name of `Class.Team.BrickColor`. (Ex: "RBXTeamNavy blue" for a team with "Navy blue" `Datatype.BrickColor`) |
-
-      If false, `Class.Team` based `Class.TextChannel|TextChannels` are **not**
-      automatically created and destroyed.
-
-      Developers can edit, create, and remove `Class.TextChannel|TextChannels`
-      even if `Class.TextChatService.CreateDefaultTextChannels` is `true`.
+      Note that the default `Class.TextChannel.OnIncomingMessage` callbacks can
+      be overwritten. Also note that you can edit, create, and remove
+      `Class.TextChannel|TextChannels` even if
+      `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
+      is true.
     code_samples: []
     type: bool
     tags: []
@@ -133,13 +224,13 @@ properties:
 methods:
   - name: TextChatService:DisplayBubble
     summary: |
-      Displays a chat bubble above the provided part or character.
+      Displays a chat bubble above the provided part or player character.
     description: |
-      Displays a chat bubble above the provided _partOrCharacter_. Can display
-      bubbles for non-player characters (NPCs).
-
-      Fires the `Class.TextChatService.BubbleDisplayed` event with the
-      parameters specified in this method.
+      Displays a chat bubble above the provided part or player character, and
+      fires the `Class.TextChatService.BubbleDisplayed|BubbleDisplayed` event
+      with the parameters specified in this method. Can display bubbles for
+      non-player characters (NPCs) if you specify a part within the character,
+      such as its head.
     code_samples: []
     parameters:
       - name: partOrCharacter
@@ -219,18 +310,25 @@ events:
     thread_safety: Unsafe
   - name: TextChatService.MessageReceived
     summary: |
-      Fires when a `Class.TextChannel:SendAsync()` response is received by the
-      server or `Class.TextChannel:DisplaySystemMessage()` is invoked.
+      Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
+      client, or when the client receives a valid
+      `Class.TextChannel:SendAsync()` response from the server.
     description: |
-      Only fired on the receiving client. when `Class.TextChannel:SendAsync()`
-      response is received by the server or
-      `Class.TextChannel:DisplaySystemMessage()` is invoked.
+      Like `Class.TextChannel.MessageReceived`, fires when
+      `Class.TextChannel:DisplaySystemMessage()` is invoked on the client, or
+      when the client receives a valid `Class.TextChannel:SendAsync()` response
+      from the server. This event is only fired on the client.
 
-      Use `Class.TextChatMessage` parameter to get the `Class.TextSource` and
-      the text of the message (with `Class.TextChatMessage.Text`).
+      If the server's `Class.TextChannel.ShouldDeliverCallback` property is
+      bound and returns `false`, the client will not fire
+      `Class.TextChatService.MessageReceived`.
+
+      Use the `Class.TextChatMessage` parameter to get the `Class.TextSource`
+      and the text of the message (with `Class.TextChatMessage.Text`).
 
       The `Class.TextChatMessage` parameter is the final result of any functions
-      bound to `Class.TextChatMessage.OnIncomingMessage`.
+      bound to `Class.TextChatService.OnIncomingMessage` or
+      `Class.TextChannel.OnIncomingMessage`.
     code_samples: []
     parameters:
       - name: textChatMessage
@@ -247,11 +345,9 @@ events:
       Fires when `Class.TextChannel:SendAsync()` is called by the sending
       client.
     description: |
-      Only fired on the sending client when `Class.TextChannel:SendAsync()` is
-      called by the sending client.
-
-      Use this to allow placeholder messages to be shown to the user while
-      waiting for server response to `Class.TextChannel:SendAsync()`.
+      Fires when `Class.TextChannel:SendAsync()` is called by the sending
+      client. Use this to allow placeholder messages to be shown to the user
+      while waiting for server response to `Class.TextChannel:SendAsync()`.
     code_samples: []
     parameters:
       - name: textChatMessage
@@ -269,22 +365,21 @@ callbacks:
     summary: |
       Called when a bubble chat is about to be displayed.
     description: |
-      Called when a bubble chat is about to be displayed.
-
-      This can only be implemented on the client.
+      Called when a bubble chat is about to be displayed. This can only be
+      implemented on the client.
 
       Use this to customize individual bubble chat messages. If this callback
-      returns a 'Class.BubbleChatMessageProperties', those properties will be
+      returns a `Class.BubbleChatMessageProperties`, those properties will be
       applied to the associated bubble, overriding
       `Class.BubbleChatConfiguration` properties. If a `Class.UICorner`,
       `Class.UIGradient`, or `Class.ImageLabel` is parented under
-      `BubbleChatMessageProperties`, they will also override their respective
-      counterparts defined in `Class.BubbleChatConfiguration`
+      `Class.BubbleChatMessageProperties`, they will also override their
+      respective counterparts defined in `Class.BubbleChatConfiguration`.
 
       If the chat message is sent by a player, `message.TextSource` will
       correspond to that player, and `adornee` will be `nil`.
 
-      If the chat message is sent via `Class.TextChatService:DisplayBubble`, the
+      If the chat message is sent via `Class.TextChatService:DisplayBubble`,
       `adornee` will be the `partOrCharacter` provided, and `message.TextSource`
       will be `nil`.
     code_samples: []
@@ -298,13 +393,13 @@ callbacks:
         type: Instance
         default:
         summary: |
-          The _partOrCharacter_ the bubble chat message is attached to.
+          The part or character the bubble chat message is attached to.
     returns:
       - type: Tuple
         summary: |
-          If a
-          `Class.TextChatMessagethose properties will be applied to the associated bubble, overriding `Class.BubbleChatConfiguration`
-          properties.
+          If a `Class.TextChatMessage` is returned, those properties will be
+          applied to the associated bubble, overriding
+          `Class.BubbleChatConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None
@@ -313,25 +408,24 @@ callbacks:
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
     description: |
-      Called when `Class.TextChatService` is receiving an incoming message.
+      Called when `Class.TextChatService` is receiving an incoming message. Can
+      only be implemented on the client.
 
-      This can only be implemented on the client.
+      Use this to decorate `Class.TextChatMessage|TextChatMessages`. If this
+      callback returns a `Class.TextChatMessageProperties`, those properties are
+      merged with the `Class.TextChatMessage` parameter to create a new
+      `Class.TextChatMessage`.
 
-      Use this to decorate `Class.TextChatMessage` instances. If this callback
-      returns a `Class.TextChatMessageProperties`, those properties are merged
-      with the `Class.TextChatMessage` parameter to create a new
-      `Class.TextChatMessage` with those properties.
+      When bound to the client sending a message, this callback is run twice;
+      first when the message is initially sent and received locally, and again
+      when the client receives the result of the filtered message from the
+      server.
 
-      When bound to the client sending a message, this event can be fired twice,
-      first when the message is initially sent and received locally by the same
-      client, and then when the result of the filtered message is received by
-      that client from the server.
-
-      `Class.TextChatService.OnIncomingMessage` callback runs **before** any
-      `Class.TextChannel.OnIncomingMessage` callbacks.
+      Note that this `Class.TextChatService.OnIncomingMessage` callback runs
+      **before** any `Class.TextChannel.OnIncomingMessage` callbacks.
 
       This should be defined only once in the source code. Multiple bindings
-      will override one another in a nondeterministic manner.
+      will override one another in a non‑deterministic manner.
     code_samples: []
     parameters:
       - name: message

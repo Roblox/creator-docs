@@ -138,8 +138,8 @@ methods:
         type: Tuple
         default:
         summary: |
-          How intensely the motor should vibrate. Only takes the first value in
-          the tuple.
+          How intensely the motor should vibrate. Only uses the first value in
+          the tuple, which should be a number.
     returns:
       - type: void
         summary: ''

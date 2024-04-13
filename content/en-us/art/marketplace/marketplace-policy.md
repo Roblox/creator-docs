@@ -11,7 +11,54 @@ Only creators participating in the [UGC program](https://devforum.roblox.com/t/u
 
 If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../art/marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
-## General Guidelines
+## Creator Requirements
+
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership). At this time, only UGC Program members are eligible to upload and sell assets on the Marketplace.
+
+See the following breakdown of the user and group requirements:
+
+<table>
+<thead>
+  <tr>
+    <th colspan="2"><center>Creator is able to…</center></th>
+    <th>ID/Premium Requirements</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Individually</td>
+    <td>Upload content from Studio</td>
+    <td>&mdash; ID Verification</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td rowspan="3">As a Group</td>
+    <td>Upload content from Studio</td>
+    <td>Uploading user needs: <br /><br />&mdash; ID Verification<br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Publish content to the Marketplace</td>
+    <td>Publishing user needs: <br /><br />&mdash; ID Verification<br /><br />&mdash; Premium 1000/2200<br /><br />Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+  </tr>
+  <tr>
+    <td>Keep existing content on-sale</td>
+    <td>Group owner needs:<br /><br />&mdash; Premium 1000/2200</td>
+  </tr>
+</tbody>
+</table>
+
+<Alert severity = 'info'>
+If you are an existing UGC program participant with Premium 450, you will be required to cancel your existing subscription and upgrade to maintain your marketplace privileges.
+</Alert>
+
+## General Creation Guidelines
 
 When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/moderation.md) and item removal.
 
@@ -32,21 +79,42 @@ Whether or not you are the original creator of the asset, you must ensure that y
   - Making a user's avatar disappear (completely or partially).
 - Do not create items that depend on issues or glitches on the Roblox platform.
 - Do not include excessive text on items.
+- Do not miscategorize your items, such as listing a pants asset in the Shirt category. See [Miscategorization](#miscategorization).
+
+## Accessory and Clothing Guidelines
+
+Submissions of accessory and clothing items to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and respective technical specifications for [Accessory](../accessories/specifications.md) or [Clothing](../accessories/clothing-specifications.md) items.
+
+### Miscategorization
+
+Do not miscategorize items when you upload them. Proper categorization includes the following:
+
+- Complete hairstyles (hair with full head coverage) must be in the Hair category.
+  - Partial hairstyles (e.g. Bangs and Braids) can be in Head, Face, or Hair categories.
+  - Facial hair must be in the Face category.
+- Non-hair accessories that are primarily visible above the neck must be in either Head or Face. Accessories not primarily visible above the neck cannot be in these categories.
+  - Items that sit on only the avatar shoulders can be in Shoulder.
+- Clothing categories must be in their proper grouping of either Tops or Bottoms.
+  - Designs that are distinctly Tops (T-Shirt, Shirt, Jacket) must be in one of those Tops categories.
+  - Designs that are distinctly Bottoms (Shorts, Pants, Skirt) must be in one of those Bottoms categories.
+- Hat designs (e.g. baseball caps, beanies, cowboy hats) must be in the Head category.
+  - Designs that combine Head items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Head or Hair category.
+- Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
 
 ## Avatar Body Guidelines
 
-Submissions of avatar bodies to the Marketplace must follow additional policy guidelines, along with the [general guidelines](#general-guidelines) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+Submissions of avatar bodies to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [Avatar technical specifications](../characters/specifications.md).
 
 ### Body Part Requirements
 
 Each body can only include the following parts, and cannot have additional appendages:
 
 - Body Parts
-  - 1 right arm
-  - 1 left arm
-  - 1 torso
-  - 1 right leg
-  - 1 left leg
+  - 1 right arm, comprising of an upper arm, a lower arm, and a hand.
+  - 1 left arm, comprising of an upper arm, a lower arm, and a hand.
+  - 1 torso, comprising of an upper torso and a lower torso.
+  - 1 right leg, comprising of an upper leg, a lower leg, and a foot.
+  - 1 left leg, comprising of an upper leg, a lower leg, and a foot.
 - Heads
   - Head (includes baked-in eyes, nose, ears, and mouth, if applicable)
     - All heads must include the 17 minimum [FACS controls](../../art/characters/facial-animation/facs-poses-reference.md).

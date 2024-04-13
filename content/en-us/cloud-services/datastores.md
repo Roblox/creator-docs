@@ -315,6 +315,10 @@ When iterating through `Class.DataStoreService:GetOrderedDataStore()` using `Cla
 
 ## Metadata
 
+<Alert severity="info">
+Ordered data stores do not support versioning and metadata, so `Class.DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore`. If you need versioning and metadata support, use a `Class.DataStore`.
+</Alert>
+
 There are two types of metadata associated with keys:
 
 - **Service-defined** - Every object has default read-only metadata such as the most recent update time and creation time.
@@ -824,7 +828,7 @@ Along with request frequency, data stores limit how much data can be used per en
 ### Throughput Limits
 
 The following table describes per-key throughput limits to ensure optimal
-performance on Roblox servers.
+performance on Roblox servers. Each limit applies to every single key across all servers in the experience, and it refreshes over time. For example, for each request, Roblox examines the usage of quota associated with the key over the last 60 seconds. If the usage including current request is within the throughput limit, the request is approved. However, of the usage exceeds the limit, the request is denied.
 
 <table>
 <thead>
@@ -846,8 +850,8 @@ performance on Roblox servers.
 </table>
 
 <Alert severity="info">
-  For every request, we round throughput up to the next kilobyte. For example,
-  if you write 800 bytes and 1.2 KB in two requests, we count that as 3 KB total
+  For every request, Roblox rounds throughput up to the next kilobyte. For example,
+  if you write 800 bytes and 1.2 KB in two requests, Roblox counts that as 3 KB total
   throughput (1 KB and 2 KB, respectively).
 </Alert>
 

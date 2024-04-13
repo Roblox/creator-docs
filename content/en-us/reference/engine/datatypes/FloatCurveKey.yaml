@@ -5,17 +5,20 @@ summary: |
 description: |
   A time-value pair used with `Class.FloatCurve` instances.
 
-  The `Interpolation` property dictates the interpolation mode for the segment
-  started by this key and ended by the next key on the curve. Each segment may
-  use a different interpolation mode.
+  The `Datatype.FloatCurveKey.Interpolation|Interpolation` property dictates the
+  interpolation mode for the segment started by this key and ended by the next
+  key on the curve. Each segment may use a different interpolation mode.
 
-  The `LeftTangent` and `RightTangent` properties apply to the cubic
-  interpolation mode and define the desired tangent (slope) at the key.
+  The `Datatype.FloatCurveKey.LeftTangent|LeftTangent` and
+  `Datatype.FloatCurveKey.RightTangent|RightTangent` properties apply to the
+  cubic interpolation mode and define the desired tangent (slope) at the key.
   Different left and right values can be used to encode discontinuities in slope
-  at the key. Attempting to set a `RightTangent` value on a key that doesn't use
-  the cubic interpolation mode will result in a runtime error. It is possible to
-  set the `LeftTangent` property on any key, as it will be used should the
-  preceding segment use cubic interpolation.
+  at the key. Attempting to set a
+  `Datatype.FloatCurveKey.RightTangent|RightTangent` value on a key that doesn't
+  use the cubic interpolation mode will result in a runtime error. It is
+  possible to set the `Datatype.FloatCurveKey.LeftTangent|LeftTangent` property
+  on any key, as it will be used should the preceding segment use cubic
+  interpolation.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -23,18 +26,22 @@ constructors:
   - name: FloatCurveKey.new
     summary: Returns a new `Datatype.FloatCurveKey` from the given time and value.
     description: |-
-      Creates a new `Datatype.FloatCurveKey` at a given time and value. `LeftTangent` and
-      RightTangent are left uninitialized. If not initialized, tangent values of
-      0 will be used when evaluating the curve.
+      Creates a new `Datatype.FloatCurveKey` at a given time and value.
+      `Datatype.FloatCurveKey.LeftTangent|LeftTangent` and
+      `Datatype.FloatCurveKey.RightTangent|RightTangent` are left uninitialized
+      and, if not initialized, tangent values of 0 will be used when evaluating
+      the curve.
     parameters:
       - name: time
         type: number
         default:
-        summary: ''
+        summary: |
+          Time at which to create the new `Datatype.FloatCurveKey`.
       - name: value
         type: number
         default:
-        summary: ''
+        summary: |
+          Value of the new `Datatype.FloatCurveKey`.
       - name: Interpolation
         type: KeyInterpolationMode
         default:
@@ -47,45 +54,47 @@ properties:
   - name: FloatCurveKey.Interpolation
     type: KeyInterpolationMode
     summary: |
-      The key interpolation mode for the segment started by this key.
+      The key interpolation mode for the segment started by this
+      `Datatype.FloatCurveKey`.
     description: |
-      Defines this key interpolation mode for the segment started by this key.
+      Defines this key interpolation mode for the segment started by this
+      `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: FloatCurveKey.Time
     type: number
     summary: |
-      The time position of this key.
+      The time position of this `Datatype.FloatCurveKey`.
     description: |
-      The time position of this key.
+      The time position of this `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: FloatCurveKey.Value
     type: number
     summary: |
-      The value of this key.
+      The value of this `Datatype.FloatCurveKey`.
     description: |
-      The value of this key.
+      The value of this `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: FloatCurveKey.RightTangent
     type: number
     summary: |
-      The tangent to the right of this key.
+      The tangent to the right of this `Datatype.FloatCurveKey`.
     description: |
-      The tangent to the right of this key.
+      The tangent to the right of this `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: FloatCurveKey.LeftTangent
     type: number
     summary: |
-      The tangent to the left of this key.
+      The tangent to the left of this `Datatype.FloatCurveKey`.
     description: |
-      The tangent to the left of this key.
+      The tangent to the left of this `Datatype.FloatCurveKey`.
     code_samples: []
     tags: []
     deprecation_message: ''

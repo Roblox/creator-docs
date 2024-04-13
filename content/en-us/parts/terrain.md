@@ -153,6 +153,10 @@ To customize the color and motion of water:
    </tbody>
    </table>
 
+<Alert severity="success">
+If you have a place with shoreline terrain (water meeting land), it's recommended that you upgrade your shorelines to improve how water joins with land. All of Studio's templates already use upgraded tech, and you can check your previously‑saved places by opening the [Terrain Editor](../studio/terrain-editor.md) and looking for the **Upgrade** prompt.
+</Alert>
+
 <Alert severity="info">
 Some water properties are only visible while playtesting. To preview all properties while editing, open **Studio&nbsp;Settings**, search for **Editor&nbsp;Quality&nbsp;Level**, and set it to the highest level.
 </Alert>
@@ -328,139 +332,139 @@ The following table describes color mapping to a corresponding material. If your
     <td>Air</td>
     <td>[255, 255, 255]</td>
 		<td>FFFFFF</td>
-    <td style={{backgroundColor:"rgb(255,255,255)"}}></td>
+    <td><ColorSwatch value="rgb(255,255,255)" /></td>
   </tr>
   <tr>
     <td>Asphalt</td>
     <td>[115, 123, 107]</td>
 		<td>737B6B</td>
-    <td style={{backgroundColor:"rgb(115,123,107)"}}></td>
+    <td><ColorSwatch value="rgb(115,123,107)" /></td>
   </tr>
   <tr>
     <td>Basalt</td>
     <td>[30, 30, 37]</td>
 		<td>1E1E25</td>
-    <td style={{backgroundColor:"rgb(30,30,37)"}}></td>
+    <td><ColorSwatch value="rgb(30,30,37)" /></td>
   </tr>
   <tr>
     <td>Brick</td>
     <td>[138, 86, 62]</td>
 		<td>8A563E</td>
-    <td style={{backgroundColor:"rgb(138,86,62)"}}></td>
+    <td><ColorSwatch value="rgb(138,86,62)" /></td>
   </tr>
   <tr>
     <td>Cobblestone</td>
     <td>[132, 123, 90]</td>
 		<td>847B5A 847b5A</td>
-    <td style={{backgroundColor:"rgb(132,123,90)"}}></td>
+    <td><ColorSwatch value="rgb(132,123,90)" /></td>
   </tr>
   <tr>
     <td>Concrete</td>
     <td>[127, 102, 63]</td>
 		<td>7F663F</td>
-    <td style={{backgroundColor:"rgb(127,102,63)"}}></td>
+    <td><ColorSwatch value="rgb(127,102,63)" /></td>
   </tr>
   <tr>
     <td>CrackedLava</td>
     <td>[232, 156, 74]</td>
 		<td>E89C4A</td>
-    <td style={{backgroundColor:"rgb(232,156,74)"}}></td>
+    <td><ColorSwatch value="rgb(232,156,74)" /></td>
   </tr>
   <tr>
     <td>Glacier</td>
     <td>[101, 176, 234]</td>
 		<td>65B0EA</td>
-    <td style={{backgroundColor:"rgb(101,176,234)"}}></td>
+    <td><ColorSwatch value="rgb(101,176,234)" /></td>
   </tr>
   <tr>
     <td>Grass</td>
     <td>[106, 127, 63]</td>
 		<td>6A7F3F</td>
-    <td style={{backgroundColor:"rgb(106,127,63)"}}></td>
+    <td><ColorSwatch value="rgb(106,127,63)" /></td>
   </tr>
   <tr>
     <td>Ground</td>
     <td>[102, 92, 59]</td>
 		<td>665C3B</td>
-    <td style={{backgroundColor:"rgb(102,92,59)"}}></td>
+    <td><ColorSwatch value="rgb(102,92,59)" /></td>
   </tr>
   <tr>
     <td>Ice</td>
     <td>[129, 194, 224]</td>
 		<td>81C2E0</td>
-    <td style={{backgroundColor:"rgb(129,194,224)"}}></td>
+    <td><ColorSwatch value="rgb(129,194,224)" /></td>
   </tr>
   <tr>
     <td>LeafyGrass</td>
     <td>[115, 132, 74]</td>
 		<td>73844A</td>
-    <td style={{backgroundColor:"rgb(115,132,74)"}}></td>
+    <td><ColorSwatch value="rgb(115,132,74)" /></td>
   </tr>
   <tr>
     <td>Limestone</td>
     <td>[206, 173, 148]</td>
 		<td>CEAD94</td>
-    <td style={{backgroundColor:"rgb(206,173,148)"}}></td>
+    <td><ColorSwatch value="rgb(206,173,148)" /></td>
   </tr>
   <tr>
     <td>Mud</td>
     <td>[58, 46, 36]</td>
 		<td>3A2E24</td>
-    <td style={{backgroundColor:"rgb(58,46,36)"}}></td>
+    <td><ColorSwatch value="rgb(58,46,36)" /></td>
   </tr>
   <tr>
     <td>Pavement</td>
     <td>[148, 148, 140]</td>
 		<td>94948C</td>
-    <td style={{backgroundColor:"rgb(148,148,140)"}}></td>
+    <td><ColorSwatch value="rgb(148,148,140)" /></td>
   </tr>
   <tr>
     <td>Rock</td>
     <td>[102, 108, 111]</td>
 		<td>666C6F</td>
-    <td style={{backgroundColor:"rgb(102,108,111)"}}></td>
+    <td><ColorSwatch value="rgb(102,108,111)" /></td>
   </tr>
   <tr>
     <td>Salt</td>
     <td>[198, 189, 181]</td>
 		<td>C6BDB5</td>
-    <td style={{backgroundColor:"rgb(198,189,181)"}}></td>
+    <td><ColorSwatch value="rgb(198,189,181)" /></td>
   </tr>
   <tr>
     <td>Sand</td>
     <td>[143, 126, 95]</td>
 		<td>8F7E5F</td>
-    <td style={{backgroundColor:"rgb(143,126,95)"}}></td>
+    <td><ColorSwatch value="rgb(143,126,95)" /></td>
   </tr>
   <tr>
     <td>Sandstone</td>
     <td>[137, 90, 71]</td>
 		<td>895A47</td>
-    <td style={{backgroundColor:"rgb(137,90,71)"}}></td>
+    <td><ColorSwatch value="rgb(137,90,71)" /></td>
   </tr>
   <tr>
     <td>Slate</td>
     <td>[63, 127, 107]</td>
 		<td>3F7F6B</td>
-    <td style={{backgroundColor:"rgb(63,127,107)"}}></td>
+    <td><ColorSwatch value="rgb(63,127,107)" /></td>
   </tr>
   <tr>
     <td>Snow</td>
     <td>[195, 199, 218]</td>
 		<td>C3C7DA</td>
-    <td style={{backgroundColor:"rgb(195,199,218)"}}></td>
+    <td><ColorSwatch value="rgb(195,199,218)" /></td>
   </tr>
   <tr>
     <td>WoodPlanks</td>
     <td>[139, 109, 79]</td>
 		<td>8B6D4F</td>
-    <td style={{backgroundColor:"rgb(139,109,79)"}}></td>
+    <td><ColorSwatch value="rgb(139,109,79)" /></td>
   </tr>
   <tr>
     <td>Water</td>
     <td>[12, 84, 92]</td>
 		<td>0C545C</td>
-    <td style={{backgroundColor:"rgb(12,84,92)"}}></td>
+    <td><ColorSwatch value="rgb(12,84,92)" /></td>
   </tr>
 </tbody>
 </table>

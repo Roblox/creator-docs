@@ -1,14 +1,15 @@
 ---
-title: Export Settings
+title: Character Body Export Settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
-Export your character model as a `.fbx` to take advantage of all of Studio's 3D import features. Your `.fbx` export contains all the rig, skinning, and animation data you need to later [import](../../art/modeling/3d-importer.md) into Studio.
+Export your model as a `.fbx` or `.gltf` to take advantage of all of Studio's 3D import features. When rigging or skinning a layerable model, these file types contains all the mesh and texture data, including the rig and influence data, you need to later [import](../../art/modeling/3d-importer.md) into Studio.
 
 Check that your model meets Roblox's [avatar character specifications](../../art/characters/specifications.md) before exporting to ensure Studio compatibility.
 
-- If you are creating an accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
-- If you are creating a generic mesh, ensure that your model follows Roblox's [General Specifications](../../art/modeling/specifications.md).
+- If you are creating a layered clothing accessory, ensure that your model follows [layered clothing specifications](../../art/accessories/clothing-specifications.md) and use the [layered clothing export settings](../../art/accessories/clothing-export-settings.md).
+- If you are creating a rigid accessory, ensure that your model follows [rigid accessory specifications](../../art/accessories/specifications.md) and use the [rigid export settings](../../art/accessories/export-settings.md).
+- If you are creating a generic mesh, ensure that your model follows Roblox's [general specifications](../../art/modeling/specifications.md) and use the [general export settings](../../art/modeling/export-requirements.md).
 
 <Alert severity = 'error'>
 If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate.

@@ -36,14 +36,14 @@ To access Assistant from the official [Documentation](../) site:
 ### In Studio
 
 <Alert severity="success">
-The Studio tooling is in beta. To use it, open **Beta Features** from the **File** menu and enable **Assistant**.
+The Studio tooling is in beta. To use it, open **Beta Features** from the **File** menu and enable **Assistant Preview**.
 </Alert>
 
 To access Assistant from Studio:
 
-1. Click the Assistant button in the top-right corner of Studio.
+1. Click the **Assistant** button in the top-right corner of Studio.
 
-   <img src="../assets/studio/general/Assistant.png" width="815" alt="Assistant button indicated in top-right area of toolbar" />
+   <img src="../assets/studio/general/Toolbar-Assistant.png" width="754" alt="Assistant button indicated in top-right area of toolbar" />
 
 1. Type a request into the field near the bottom of the window, using guidance from [Prompting Tips](#prompting-tips) to generate improved responses. Based on the result, you can then:
 

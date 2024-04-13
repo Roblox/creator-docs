@@ -628,6 +628,66 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: PhysicsSettings.DrawConstraintsNetForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.DrawContactsNetForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.DrawTotalNetForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.EnableForceVisualizationSmoothing
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
   - name: PhysicsSettings.FluidForceDrawScale
     summary: |
       Sets the scale of arrows drawn for aerodynamic force visualization.
@@ -670,6 +730,21 @@ properties:
     description: ''
     code_samples: []
     type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.ForceVisualizationSmoothingSteps
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
     tags: []
     deprecation_message: ''
     security:
@@ -846,6 +921,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
+    serialization:
+      can_load: true
+      can_save: true
   - name: PhysicsSettings.SolverConvergenceMetricType
     summary: ''
     description: ''
@@ -896,6 +986,21 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Performance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: PhysicsSettings.TorqueDrawScale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Display
     serialization:
       can_load: true
       can_save: true

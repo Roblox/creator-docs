@@ -1,6 +1,6 @@
 ---
 title: Enums
-description: Enums are fixed list of items. Access them through the global DataType.Enum object.
+description: A fixed list of items (enumeration).
 ---
 
 The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You can access enums through the global object called `Datatype.Enum`. For a full list of Enums and their items, see [Enums](/reference/engine/enums) in the API Reference.

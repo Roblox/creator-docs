@@ -40,7 +40,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 To accurately visualize constraints in Studio, you can use the following options from the [Model](../studio/model-tab.md) tab:
 
-<img src="../assets/studio/general/Model-Tab-Constraints-Section-Labeled.png" width="740" alt="Constraints tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Constraints-Section-Labeled.png" width="754" alt="Constraints tools indicated in Model tab" />
 
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
@@ -66,7 +66,7 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 
 1. In the [Model](../studio/model-tab.md) tab, access the **Create** button's picker menu and select the desired constraint type, for example **Angular&nbsp;Velocity**.
 
-   <img src="../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="740" alt="Constraint picker indicated in Studio toolbar" />
+   <img src="../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="754" alt="Constraint picker indicated in Studio toolbar" />
 
 1. In the 3D viewport, hover over any `Class.Part` or `Class.MeshPart` and click to add a new `Class.Attachment` to the part at the visualized point. Alternatively, hover over and click an existing `Class.Attachment` or `Class.Bone` to use it for the constraint.
 

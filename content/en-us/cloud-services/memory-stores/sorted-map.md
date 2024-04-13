@@ -79,8 +79,6 @@ Example of some data sorted in ascending order -
 
 Note how `player0` sorts after all keys with a sort key. `player6` sorts after all keys with a numeric sort key. `player4` and `player5` have the same sort key, so they are sorted in ascending order by key.
 
-If you do not want to utilize sort key and you want to sort your keys in numerical order, put only numerical values for key **names** and add padding for them. For example, to sort `100` after `99`, pad the numbers on the left as in `00100` and `00099`.
-
 <Alert severity="warning">
 Under the EU General Data Protection Regulation (GDPR), if your memory stores have user data subject to [Right to be Forgotten](https://gdpr.eu/right-to-be-forgotten/) you **must** remove the data in 30 days, even if you set your memory store key's expiration up to 45 days.
 </Alert>
@@ -100,7 +98,7 @@ end
 
 ## Getting Data
 
-You can either get a data value and sort key associated with a specific key or get multiple values of keys in a range.
+You can either get a data value and sort key associated with a specific key or get multiple values and sort keys for keys within a range.
 
 ### Getting Data with One Key
 
@@ -128,7 +126,7 @@ end
 
 ### Getting Data with Multiple Keys
 
-To get multiple keys from the sorted map as a single operation, call `Class.MemoryStoreSortedMap:GetRangeAsync()`. This function lists all existing keys by default, but you can set the upper and lower bounds for the key range. For example, the following code sample retrieves up to 20 items starting from the beginning of the sorted map, with keys greater than or equal to `10`, sort keys greater than or equal to `100` and keys less than or equal to `50`, sort keys less than or equal to `500`.
+To get data for multiple keys from the sorted map as a single operation, call `Class.MemoryStoreSortedMap:GetRangeAsync()`. This function lists all existing keys by default, but you can set the upper and lower bounds for the key range. For example, the following code sample retrieves up to 20 items starting from the beginning of the sorted map, with keys greater than or equal to `10`, sort keys greater than or equal to `100` and keys less than or equal to `50`, sort keys less than or equal to `500`.
 
 ```lua title='Getting a Range of Keys from a Sorted Map'
 local MemoryStoreService = game:GetService("MemoryStoreService")
@@ -169,7 +167,6 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 local sortedMap = MemoryStoreService:GetSortedMap("Leaderboard")
 
 local function updateLeaderboard(itemKey, killsToAdd, deathsToAdd)
-	local score = killsToAdd / math.max(deathsToAdd, 1)
 	local success, newStats, newScore = pcall(function()
 		return sortedMap:UpdateAsync(itemKey, function(playerStats, playerScore)
 			playerStats = playerStats or { kills = 0, deaths = 0 }

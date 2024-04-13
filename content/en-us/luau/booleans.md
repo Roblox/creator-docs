@@ -1,9 +1,9 @@
 ---
 title: Booleans
-description: Booleans have a value of either false or true.
+description: Data type having a value of either true or false.
 ---
 
-The **boolean** data type, or `bool`, has a value of either `false` or `true`.
+The **boolean** data type, or `bool`, has a value of either `true` or `false`.
 
 ## Conditionals
 

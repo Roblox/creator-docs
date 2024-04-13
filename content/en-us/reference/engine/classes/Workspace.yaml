@@ -140,6 +140,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.CSGAsyncDynamicCollision
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CSGAsyncDynamicCollision
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: Workspace.ClientAnimatorThrottling
     summary: |
       Specifies the animation throttling mode for the local client.
@@ -211,6 +227,22 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.DecreaseMinimumPartDensityMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DecreaseMinimumPartDensityMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -412,12 +444,31 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.InsertPoint
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: Workspace.InterpolationThrottling
     summary: ''
     description: ''
     code_samples:
     type: InterpolationThrottlingMode
-    tags: []
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -425,8 +476,8 @@ properties:
     thread_safety: ReadSafe
     category: Behavior
     serialization:
-      can_load: true
-      can_save: true
+      can_load: false
+      can_save: false
   - name: Workspace.MeshPartHeadsAndAccessories
     summary: |
       Sets whether character Heads and Accessories should be downloaded as

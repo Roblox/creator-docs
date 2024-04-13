@@ -5,14 +5,28 @@ memory_category: Gui
 summary: |
   `Class.GuiObject|GUI` that can display children 3D objects.
 description: |
-  A **ViewportFrame** is a type of `Class.GuiObject|GUI` that can render 3D
-  objects inside its bounds. This is a great way to display 3D objects/models in
-  a 2D GUI space like a `Class.ScreenGui`. At the moment, no shadow or post
-  effects are available. Neon and Glass `Enum.Material|materials` will be
-  rendered on lowest quality. Nested GUIs aren't supported, which means
-  GuiObjects don't work as expected under ViewportFrame.
+  **ViewportFrame** is a `Class.GuiObject` that can render 3D objects inside its
+  bounds, offering a way to display 3D objects in a 2D space like a
+  `Class.ScreenGui`. This object has the following caveats:
 
-  For a step-by-step walkthrough, see the [Frames](../../../ui/frames.md).
+  - No shadows or
+    [post-processing](../../../environment/post-processing-effects.md) effects
+    are rendered.
+  - `Enum.Material.Neon` and `Enum.Material.Glass` materials render at the
+    lowest quality.
+  - Nested `Class.GuiObject|GuiObjects` aren't supported.
+  - By default, lighting inside a `Class.ViewportFrame` acts as if
+    `Class.Lighting.EnvironmentSpecularScale` and
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to 0, so properties
+    that rely on these fields, such as `Class.SurfaceAppearance.MetalnessMap`,
+    may look different.
+  - This object can use a `Class.Sky` child as a cubemap for reflections, in
+    which case only the `Class.Sky` object's six **Skybox[…]** properties are
+    used. Assuming these properties are valid, lighting inside the
+    `Class.ViewportFrame` acts similarly to if
+    `Class.Lighting.EnvironmentSpecularScale` and
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to 1. For details, see
+    [Frames](../../../ui/frames.md#viewportframe).
 code_samples:
   - viewportframe---create-gui
   - viewportframe---control-camera
@@ -26,8 +40,8 @@ properties:
       The lighting hue applied to the area within the `Class.ViewportFrame`.
     description: |
       This property determines the lighting hue applied to the area within the
-      `Class.ViewportFrame`. This property defaults to 200, 200, 200 (ghost
-      grey).
+      `Class.ViewportFrame`. Defaults to
+      `Datatype.Color3|Color3.fromRGB(200, 200, 200)` (ghost grey).
     code_samples:
     type: Color3
     tags: []
@@ -44,20 +58,15 @@ properties:
     summary: |
       `Class.Camera` that is used to render children objects.
     description: |
-      This property is a `Class.Camera` instance that is used to render children
-      objects. Defaults to _nil_.
+      `Class.Camera` instance that is used to render children objects. Defaults
+      to `nil`.
 
-      The `Class.Camera` object will not replicate so the
-      `Class.ViewportFrame.CurrentCamera` won't replicate either. If you save a
-      Camera in the server, it will not appear in the client. When you set this
-      property, `Class.Camera.CFrame` and `Class.Camera.FieldOfView` will be
-      saved and replicate with `Class.ViewportFrame` internally so the client
-      can render ViewportFrame without a Camera object. If you want to change
-      the client's Camera, you have to create a new Camera using a
-      `Class.LocalScript` at runtime.
+      The `Class.Camera` object does not replicate so the
+      `Class.ViewportFrame.CurrentCamera` won't replicate either. When you set
+      this property, `Class.Camera.CFrame` and `Class.Camera.FieldOfView` will
+      be saved and replicate with `Class.ViewportFrame` internally so the client
+      can render the frame without a `Class.Camera` object.
     code_samples:
-      - viewportframe---create-gui
-      - viewportframe---control-camera
     type: Camera
     tags:
       - NotReplicated
@@ -76,8 +85,9 @@ properties:
     description: |
       This property determines how a rendered image will be colorized, allowing
       you to change the image color without directly modifying the rendered
-      object. The default colorization value is `Datatype.Color3|Color3.new(1,
-      1, 1)` (white) at which no color modification occurs.
+      object. The default colorization value is
+      `Datatype.Color3|Color3.new(1, 1, 1)` (white) at which no color
+      modification occurs.
 
       See also `Class.ViewportFrame.ImageTransparency|ImageTransparency` which
       determines the transparency of the rendered image.
@@ -102,7 +112,8 @@ properties:
       rendered object. A value of 0 (default) is completely opaque and a value
       of 1 is completely transparent (invisible).
 
-      See also `Class.ViewportFrame.ImageColor3|ImageColor3` which determines how a rendered image will be colorized.
+      See also `Class.ViewportFrame.ImageColor3|ImageColor3` which determines
+      how a rendered image will be colorized.
     code_samples:
     type: float
     tags: []
@@ -119,8 +130,8 @@ properties:
     summary: |
       The color of the emitted light.
     description: |
-      The color of the emitted light. This property defaults to 140, 140, 140
-      (silver flip/flop).
+      The color of the emitted light. Defaults to
+      `Datatype.Color3|Color3.fromRGB(140, 140, 140)` (silver).
     code_samples:
     type: Color3
     tags: []
@@ -135,11 +146,11 @@ properties:
       can_save: true
   - name: ViewportFrame.LightDirection
     summary: |
-      A `Datatype.Vector3` representing the direction of the light source from
-      the position 0, 0, 0.
+      A `Datatype.Vector3` representing the direction of the light source.
     description: |
       A `Datatype.Vector3` representing the direction of the light source from
-      the position 0, 0, 0. This property defaults to -1, -1, -1.
+      position `Datatype.Vector3|Vector3.new(0, 0, 0)`. Defaults to
+      `Datatype.Vector3|Vector3.new(-1, -1, -1)`.
     code_samples:
     type: Vector3
     tags: []

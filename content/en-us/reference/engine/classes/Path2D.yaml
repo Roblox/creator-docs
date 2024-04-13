@@ -1,0 +1,377 @@
+name: Path2D
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - GuiBase
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: Path2D.Color
+    summary: |
+      Determines the color of the `Class.Path2D` path.
+    description: |
+      Determines the color of the `Class.Path2D` path.
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Path2D.Position
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Path2D.SelectedControlPoint
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Control Points
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Path2D.SelectedControlPointData
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Path2DControlPoint
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Control Points
+    serialization:
+      can_load: true
+      can_save: false
+  - name: Path2D.Thickness
+    summary: |
+      Determines how thick the `Class.Path2D` path is.
+    description: |
+      Determines how thick the `Class.Path2D` path is.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Path2D.Transparency
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Path2D.Visible
+    summary: |
+      Determines if the `Class.Path2D` path is rendered or not.
+    description: |
+      Determines if the `Class.Path2D` path is rendered or not. When false, the
+      path will not render. However, any modifications to the control points
+      will update correctly, ensuring that querying data will have the correct
+      info.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Path2D.ZIndex
+    summary: |
+      Determines the order in which a `Class.Path2D` path renders relative to
+      other GUIs.
+    description: |
+      Determines the order in which a `Class.Path2D` path renders relative to
+      other GUIs. Works the same as `Class.GuiObject.ZIndex` but does not
+      interact with layout order in any way.
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: Path2D:GetControlPoint
+    summary: |
+      Returns the `Datatype.Path2DControlPoint` for a given index.
+    description: |
+      Returns the `Datatype.Path2DControlPoint` for a given index. If the index
+      is out of bounds, this method will throw an error.
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Path2DControlPoint
+        summary: |
+          The control point at the given index.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetControlPoints
+    summary: |
+      Returns all the `Datatype.Path2DControlPoint|Path2DControlPoints` for the
+      `Class.Path2D`.
+    description: |
+      Returns a table of all the
+      `Datatype.Path2DControlPoint|Path2DControlPoints` for the `Class.Path2D`.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: |
+          Table of all the `Datatype.Path2DControlPoint|Path2DControlPoints`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetPositionOnCurve
+    summary: |
+      Returns the position at a given value in parameter space.
+    description: |
+      Returns the 2D `Datatype.UDim2` position at a given `t` value between 0
+      and 1 (inclusive), representing the parameter space result of querying the
+      spline. The values will be more tightly packed near bends and wider apart
+      in straighter segments; see
+      `Class.Path2D:GetPositionOnCurveArcLength()|GetPositionOnCurveArcLength()`
+      for even spacing results.
+
+      Throws an error if the `Class.Path2D` has less than two control points.
+    code_samples: []
+    parameters:
+      - name: t
+        type: float
+        default:
+        summary: |
+          The value to query the `Class.Path2D` at.
+    returns:
+      - type: UDim2
+        summary: |
+          The position in parameter space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetPositionOnCurveArcLength
+    summary: |
+      Returns the position at a given value in arc length space.
+    description: |
+      Returns the 2D `Datatype.UDim2` position at a given `t` value between 0
+      and 1 (inclusive), representing the arc length space result of querying
+      the spline. The values will be evenly spaced along the spline; see
+      `Class.Path2D:GetPositionOnCurve()|GetPositionOnCurve()` for parameter
+      spacing results.
+
+      Throws an error if the `Class.Path2D` has less than two control points.
+    code_samples: []
+    parameters:
+      - name: t
+        type: float
+        default:
+        summary: |
+          The value to query the Path2D at.
+    returns:
+      - type: UDim2
+        summary: |
+          The position in arc length space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetTangentOnCurve
+    summary: |
+      Returns the tangent at a given value in parameter space.
+    description: |
+      Returns the tangent at a given `t` value in parameter space where `t` is a
+      value between 0 and 1 (inclusive). Throws an error if the `Class.Path2D`
+      has less than two control points.
+    code_samples: []
+    parameters:
+      - name: t
+        type: float
+        default:
+        summary: |
+          The value to query the `Class.Path2D` at.
+    returns:
+      - type: Vector2
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetTangentOnCurveArcLength
+    summary: |
+      Returns the tangent at a given value in arc length space.
+    description: |
+      Returns the tangent at a given `t` value in arc length space where `t` is
+      a value between 0 and 1 (inclusive). Throws an error if the `Class.Path2D`
+      has less than two control points.
+    code_samples: []
+    parameters:
+      - name: t
+        type: float
+        default:
+        summary: |
+          The value to query the `Class.Path2D` at.
+    returns:
+      - type: Vector2
+        summary: |
+          The tangent in arc length space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:InsertControlPoint
+    summary: |
+      Inserts a new control point at a given index.
+    description: |
+      Inserts a new `Datatype.Path2DControlPoint` at a given index. Throws a
+      warning if the index is out of bounds or if you're trying to add control
+      points past the limit of 250.
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: |
+          The index to insert at.
+      - name: point
+        type: Path2DControlPoint
+        default:
+        summary: |
+          The control point to insert.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:RemoveControlPoint
+    summary: |
+      Removes a control at the given index.
+    description: |
+      Removes a control point at the given index. Throws a warning if the index
+      is out of bounds.
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: |
+          The index to remove at.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:SetControlPoints
+    summary: |
+      Sets all the control points to the specified array, replacing all existing
+      points with new ones.
+    description: |
+      Sets all the control points to the specified array, replacing all existing
+      points with new ones. Throws a warning if there are more than 250 points
+      in the `controlPoints` array.
+    code_samples: []
+    parameters:
+      - name: controlPoints
+        type: Array
+        default:
+        summary: |
+          The new list of control points to set.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:UpdateControlPoint
+    summary: |
+      Updates a control point at the given index.
+    description: |
+      Updates the control point at the given index. Throws a warning if the
+      index is out of range.
+    code_samples: []
+    parameters:
+      - name: index
+        type: int
+        default:
+        summary: |
+          The control point index to update.
+      - name: point
+        type: Path2DControlPoint
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

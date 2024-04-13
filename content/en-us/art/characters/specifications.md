@@ -1,11 +1,20 @@
 ---
 title: Character Specifications
-description: Character Specification lists the specific technical requirements for custom characters created outside of Studio.
+description: Character specification lists the specific technical requirements for custom characters created outside of Studio.
 ---
 
 Character models require a specific set of components and configuration standards to ensure all avatar features work as expected. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
 
 When ready to export, see [Export Requirements](../../art/characters/export-settings.md) for mesh export settings for Blender and Maya.
+
+<Alert severity = 'warning'>
+<AlertTitle>If creating other types of 3D models:</AlertTitle>
+<ul>
+<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
+<li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
+<li>When creating a clothing accessory model, see [Clothing Specifications](../../art/accessories/clothing-specifications.md).</li>
+</ul>
+</Alert>
 
 ## Geometry
 
@@ -592,7 +601,7 @@ See the following requirements for humanoid rigging:
 - **Rig Hierarchy** - Humanoid rigs require a specific bone hierarchy and naming convention:
 
   - Root
-  - HumanoidRootPart
+  - HumanoidRootNode
   - LowerTorso
   - UpperTorso
   - Head (representing the base of the neck)

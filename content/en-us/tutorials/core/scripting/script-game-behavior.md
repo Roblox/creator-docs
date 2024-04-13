@@ -24,7 +24,7 @@ To create the coins:
 1. In the **Explorer** window, add a new folder into the **World** folder, then rename it **Coins**.
 1. Insert a **cylinder** part into the **Coins** folder, then rename the part to **Coin**.
 
-   <img src="../../../assets/tutorials/script-game-behavior/New-Single-Coin.png" width="320"  />
+   <img src="../../../assets/tutorials/script-game-behavior/New-Single-Coin.png" alt="Studio's Explorer window with the Coin part highlighted. The hierarchy of the Workspace to World folder to Coins folder to Coin part is also highlighted." width="320"  />
 
 1. Select the part, then in the **Properties** window,
 
@@ -36,15 +36,13 @@ To create the coins:
    - Enable **Anchored**. This tells the engine to never change the position of the coin due to any physics-related
      simulation, meaning players can touch the coin without affecting its location.
 
-   <img src="../../../assets/tutorials/script-game-behavior/Single-Coin-In-Viewport.jpg" width="600" />
+   <img src="../../../assets/tutorials/script-game-behavior/Single-Coin-In-Viewport.jpg" alt="A close up view of a gold coin next to two gray cylinder sea stacks on the island." width="600" />
 
 1. Duplicate a few more coins and position them around the map for testing purposes.
 
-   <img src="../../../assets/tutorials/script-game-behavior/Duplicated-Coins.png" width="320" />
+   <img src="../../../assets/tutorials/script-game-behavior/Duplicated-Coins.png" alt="Studio's Explorer window with multiple Coin parts highlighted under the Coins folder." width="320" />
 
-   <img
-   src="../../../assets/tutorials/script-game-behavior/Multiple-Coins-In-Level.jpg"
-   />
+   <img src="../../../assets/tutorials/script-game-behavior/Multiple-Coins-In-Level.jpg" alt="A view of multiple coins on the island and two gray cylinder sea stacks." />
 
 Your cylinder parts now look like coins and prevent physics simulation, but you need to add
 logic to the coins so players can collect them.
@@ -60,11 +58,11 @@ declare that in a script. To create a script:
 1. From the contextual menu, select **Script**. A new script displays under **ServerScriptService**,
 which tells the engine to run the script on the server, and prevents clients from accessing the code.
 
-   <img src="../../../assets/tutorials/script-game-behavior/Insert-Script.png" width="320" />
+   <img src="../../../assets/tutorials/script-game-behavior/Insert-Script.png" alt="Studio's Explorer window with both ServerScriptService's plus icon and Script object highlighted." width="320" />
 
 1. Rename the script to **CoinService**.
 
-   <img src="../../../assets/tutorials/script-game-behavior/Rename-New-Script.png" width="320" />
+   <img src="../../../assets/tutorials/script-game-behavior/Rename-New-Script.png" alt="Studio's Explorer window with the CoinService script highlighted under ServerScriptService." width="320" />
 
 1. Replace the default code with the following code:
 
@@ -225,14 +223,13 @@ your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png"
-   width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
 
 1. Move your character to touch a coin. If your scripts are working correctly, the
    **Output** window displays `Player collected coin`, and the coin disappears for 10 seconds
    before re-appearing.
 
-   <img src="../../../assets/tutorials/script-game-behavior/Output-Collect-Coin.png" width="700" />
+   <img src="../../../assets/tutorials/script-game-behavior/Output-Collect-Coin.png" alt="Studio's Output window that displays confirmation that the player collected a coin." width="700" />
 
    <Alert severity="info"> If you can't see the **Output** window, navigate to the **View** tab, then
    select **Output**. </Alert>

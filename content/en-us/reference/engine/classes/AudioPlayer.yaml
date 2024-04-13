@@ -7,7 +7,8 @@ summary: |
 description: |
   `Class.AudioPlayer` is used to play audio assets. It provides a single
   **Output** pin which can be connected to other pins via `Class.Wire|Wires`.
-code_samples: []
+code_samples:
+  - audio-wiring---device-output
 inherits:
   - Instance
 tags:
@@ -270,7 +271,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
   - name: AudioPlayer:Play
     summary: |
@@ -306,5 +307,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: AudioPlayer.Ended
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AudioPlayer.Looped
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 callbacks: []

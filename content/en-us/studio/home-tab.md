@@ -133,7 +133,7 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 The **Material&nbsp;Manager** window lets you apply and create custom materials for parts and [terrain](../parts/terrain.md). See [Materials](../parts/materials.md) for details.
 
-<img src="../assets/studio/general/Home-Tab-Material-Manager-Trimmed.png" width="758" alt="Material Manager indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" alt="Material Manager indicated in Home tab" />
 
 ## Material Generator
 
@@ -141,9 +141,9 @@ The **Material&nbsp;Manager** window lets you apply and create custom materials 
 This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Generator**.
 </Alert>
 
-The **Material Generator** is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds. See [Material Generator](../parts/materials.md#material-generator) for details.
+The [Material Generator](../parts/materials.md#material-generator) is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds.
 
-<img src="../assets/studio/general/Home-Tab-Material-Generator-Trimmed.png" width="758" alt="Material Generator indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator indicated in Home tab" />
 
 ## Color Picker
 
@@ -242,10 +242,10 @@ Once a playtest is running, the following options become available:
 
 The **Game Settings** button, accessible only for a [published](../production/publishing/index.md) experience, lets you update basic information, permissions, security, avatar settings, and more. For more information, see the [Game Settings](../studio/game-settings.md) reference page.
 
-<img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="800" alt="Game Settings button indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 ## Team Test
 
-During a [Team Create](../projects/collaboration.md#team-create) session, clicking **Team Test** starts a playtest with other editors, and **Exit Game** exits out of a current playtest.
+During a [collaborative](../projects/collaboration.md) session, clicking **Team Test** starts a playtest with other editors, and **Exit Game** exits out of a current playtest.
 
 <img src="../assets/studio/general/Home-Tab-Team-Test-Options.png" width="800" alt="Team Test option buttons indicated in Home tab" />

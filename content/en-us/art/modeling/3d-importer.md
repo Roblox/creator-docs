@@ -15,7 +15,7 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 
 The 3D Importer is divided into three sections:
 
-<img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" />
+<img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
 A. The **preview panel**, located in the top left, allows you to rotate and examine 3D objects before importing into your workspace or Toolbox.
 
@@ -37,7 +37,7 @@ To import a 3D object:
 
 1. In the Home or Avatar tab, click **Import 3D**. A file browser displays.
 
-   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Import 3D button indicated in Avatar tab" />
+   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Import 3D button indicated in Avatar tab" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
 
 2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
@@ -240,11 +240,11 @@ If you see a warning icon in the hierarchy, expand the hierarchy until you reach
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../assets/modeling/meshes/Warning-Settings-Panel.png" />
+    <img src="../../assets/modeling/meshes/Warning-Settings-Panel.png" alt="A warning message in orange stating an error about cages mismatching."/>
     <figcaption>Warning and error messages display in the appropriate section in the inspector panel.</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/modeling/meshes/Warning-Mouse-Over.png" />
+    <img src="../../assets/modeling/meshes/Warning-Mouse-Over.png" alt="An error message in red with a pop-up message about missing textures."/>
     <figcaption>Some errors display a tooltip when hovering over the error icon.</figcaption>
   </figure>
 </GridContainer>

@@ -29,7 +29,7 @@ TeleportService:TeleportAsync(TARGET_PLACE_ID, {playerToTeleport}, teleportOptio
 ```
 
 <Alert severity="warning">
-You can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server-side scripts. This limitation reduces client-side exploitation.
+You can only call `Class.TeleportService:TeleportAsync()|TeleportAsync()` from server-side scripts. This limitation reduces client-side exploitation. If necessary, you can call `Class.TeleportService:Teleport()|Teleport()` from client-side scripts, but `Class.TeleportService:TeleportAsync()|TeleportAsync()` is the recommended method.
 </Alert>
 
 If you want to take precautions of handling errors when setting up teleportation, see [Handling Failed Teleports](#handling-failed-teleports).
@@ -57,7 +57,7 @@ You can customize teleportations, such as [teleporting users to a specific serve
 
 ### Teleporting to Specific Servers
 
-To teleport users to specific servers, set the target server using `Class.TeleportOptions` and pass it to the `Class.TeleportService:TeleportAsync()` method. If you don't specify a server, users are sorted into any public server.
+To teleport users to specific servers, set the target server using `Class.TeleportOptions` and pass it to the `Class.TeleportService:TeleportAsync()` method. If you don't specify a server, users are teleported into a matchmade public server. The information of the first user in the list is used to matchmake to that public server.
 
 To teleport users to a specific public server, set the `Class.TeleportOptions.ServerInstanceId` property as a valid instance ID, which is a unique identifier for a public server.
 
@@ -119,7 +119,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 To retrieve only the teleport data on the client, you can use `Class.TeleportService:GetLocalPlayerTeleportData()`.
 
-## ​​Handling Failed Teleports
+## Handling Failed Teleports
 
 Like any API call that involves network requests, teleports might fail and throw an error. Even if a call succeeds and the teleport initiates, it can still fail at the last moment without throwing an error and leave the user in the server. When this happens, it triggers `Class.TeleportService.TeleportInitFailed`.
 

@@ -670,3 +670,18 @@ items:
     value: 134
     tags: []
     deprecation_message: ''
+  - name: BreakpointMarker
+    summary: ''
+    value: 136
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumHover
+    summary: ''
+    value: 137
+    tags: []
+    deprecation_message: ''
+  - name: DiffLineNumSeparatorBackgroundHover
+    summary: ''
+    value: 138
+    tags: []
+    deprecation_message: ''
