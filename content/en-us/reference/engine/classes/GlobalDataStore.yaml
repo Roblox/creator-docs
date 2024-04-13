@@ -10,6 +10,11 @@ description: |
 
   See [Data Stores](../../../cloud-services/datastores.md) for an in-depth guide
   on data structure, management, error handling, etc.
+
+  Ordered data stores do not support versioning and metadata, so
+  `Class.DataStoreKeyInfo` is always `nil` for keys in an
+  `Class.OrderedDataStore`. If you need versioning and metadata support, use a
+  `Class.DataStore`.
 code_samples:
 inherits:
   - Instance
@@ -71,10 +76,6 @@ methods:
       `Class.DataStoreKeyInfo` instance. If the key does not exist or if the
       latest version has been marked as deleted, both return values will be
       `nil`.
-
-      `Class.OrderedDataStore` does not support versioning and metadata, so
-      `Class.DataStoreKeyInfo` will always be `nil` for keys in an
-      `Class.OrderedDataStore`.
 
       Keys are cached locally for 4 seconds after the first read. A
       `Class.GlobalDataStore:GetAsync()` call within these 4 seconds returns a

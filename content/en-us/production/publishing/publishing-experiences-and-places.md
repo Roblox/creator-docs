@@ -177,26 +177,26 @@ Roblox strongly recommends that you fill out the guidelines questionnaire for ea
 
 ### Allowing Copying
 
-By default, all private and public experiences are locked so that you or your group are the only creators who have access to edit its place files. However, if you want to allow other creators to be able to download an editable copy of your experience for their own creator process, you can **uncopylock** the experience. This is particularly helpful when you create templates or reference files for open use.
+By default, all private and public experiences are locked so that you or your [group](../../projects/groups.md) are the only creators who have permission to edit its place files. However, if you want to allow other creators to be able to access an editable copy of your experience for their own creation process, you can **uncopylock** the experience. This is particularly helpful when you create templates or reference files for open use.
 
-To allow users to download an editable copy of your experience:
+To allow the community to access an editable copy of your experience:
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
-1. Click on the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
-1. In the left-hand navigation, under **Configure**, select **Places**.
+2. Click on the thumbnail of the experience you want to allow users to copy. The experience's **Overview** page displays.
+3. In the left-hand navigation, under **Configure**, select **Places**.
 
    <img src="../../assets/creator-dashboard/Experience-Nav-Places-Icon.png" width="330" alt="Places button indicated for an experience on the Creator Dashboard" />
 
-1. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
+4. Click the **start place** marked with a star icon. The place's **Basic Settings** page displays.
 
    <img src="../../assets/creator-dashboard/Places-Start-Place-Icon.png" width="200" alt="Start place tile indicated in Places display on the Creator Dashboard" />
 
-1. In the place's left-hand navigation menu, select **Permissions**.
+5. In the place's left-hand navigation menu, select **Permissions**.
 
    <img src="../../assets/creator-dashboard/Place-Nav-Permissions.png" width="330" alt="Permissions button indicated for a place on the Creator Dashboard" />
 
-1. Enable **Allow users to download a copy of this Place**.
-1. Click the **Save Changes** button. Your experience is now uncopylocked and creators can download an editable copy of it from the experience's main page.
+6. Enable **Allow users to download a copy of this Place**.
+7. Click the **Save Changes** button. Your experience is now uncopylocked and creators can access an editable copy of it from the experience's main page.
 
    <img src="../../assets/publishing/experiences-places-assets/Edit-Place-Elemental-Academy.png" width="780" />
 

@@ -315,6 +315,10 @@ When iterating through `Class.DataStoreService:GetOrderedDataStore()` using `Cla
 
 ## Metadata
 
+<Alert severity="info">
+Ordered data stores do not support versioning and metadata, so `Class.DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore`. If you need versioning and metadata support, use a `Class.DataStore`.
+</Alert>
+
 There are two types of metadata associated with keys:
 
 - **Service-defined** - Every object has default read-only metadata such as the most recent update time and creation time.

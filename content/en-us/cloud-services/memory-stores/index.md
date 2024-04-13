@@ -34,7 +34,7 @@ With the [observability](../../cloud-services/memory-stores/observability.md) da
 
 For API request limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue or sorted map is limited to **100,000** request units per minute.
 
-Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreService:GetRangeAsync()` for sorted maps and `Class.MemoryStoreService:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreService:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreService:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
+Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreSortedMap:GetRangeAsync()` for sorted maps and `Class.MemoryStoreQueue:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreSortedMap:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreQueue:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
 
 The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
 
@@ -53,7 +53,7 @@ For a single sorted map or queue, the following size and item count limits apply
 To keep your memory usage pattern optimal and avoid hitting the [limits](#limits-and-quotas), follow these best practices:
 
 - **Remove processed items.** Consistently cleaning up read items using `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps can free up memory and keep the data structure up-to-date.
-- **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreService:GetQueue()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
+- **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreQueue:AddAsync()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
   - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire experience.
   - Always either explicitly delete unneeded items or set a short item expiration.
   - Generally, it's recommended to use explicit deletion for releasing memory as it takes effect immediately, and use item expiration as a safety mechanism to prevent unused items from occupying memory indefinitely.
@@ -109,7 +109,7 @@ The following table lists and describes all status codes of API responses availa
     </tr>
     <tr>
       <td>NoItemFound</td>
-      <td>No item found in `Class.MemoryStoreQueue:ReadAsync()` or `Class.MemoryStoreSortedMap:UpdateAsync()`.</td>
+      <td>No item found in `Class.MemoryStoreQueue:ReadAsync()` or `Class.MemoryStoreSortedMap:UpdateAsync()`. `ReadAsync()` polls every 2 seconds and returns this status code until it finds items in the queue.</td>
     </tr>
     <tr>
       <td>DataStructureRequestsOverLimit</td>

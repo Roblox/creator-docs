@@ -36,6 +36,14 @@ description: |
       <td><code>Class.Decal</code></td>
       <td><code>Class.Decal.Texture</code></td>
     </tr>
+    <tr>
+      <td><code>Class.Texture</code></td>
+      <td><code>Class.Texture.Texture</code></td>
+    </tr>
+    <tr>
+      <td><code>Class.SurfaceAppearance</code></td>
+      <td><code>Class.SurfaceAppearance.ColorMap</code></td>
+    </tr>
   </tbody>
   </table>
 

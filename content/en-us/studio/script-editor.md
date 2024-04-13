@@ -90,18 +90,14 @@ The **Output** window, accessible from the [View](./view-tab.md) tab, displays e
 
 ## Code Assist
 
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **AI-Powered** **Code Completion**. You can also contribute your Luau scripts for AI training to help enhance Luau-focused AI tools in Studio. For more information, see [Empower Luau creation](https://create.roblox.com/data-collection).
-</Alert>
-
-**Code Assist** is an AI assistant that suggests lines or functions of code as you type, helping you code more efficiently and stay focused. Based on contexts from your comment and code, suggestions will be triggered in two ways:
+**Code Assist** is a feature that suggests lines or functions of code as you type, helping you code more efficiently and stay focused. Based on contexts from your comment and code, suggestions will be triggered in two ways:
 
 - **Automatically** when you pause on a line for a few seconds and the AI model has enough context for a suggestion.
 - **Manually** with shortcut <kbd>Alt</kbd><kbd>&Backslash;</kbd> on Windows or <kbd>⌥</kbd><kbd>&Backslash;</kbd> on Mac (you can [customize](../studio/shortcuts.md) this shortcut).
 
 Press <kbd>Tab</kbd> to accept a suggestion, or ignore it by continuing to type. Currently, your script needs to contain at least a few lines of code to trigger a suggestion.
 
-<video controls width="800" src="../assets/studio/script-editor/Code-Assist.mp4" alt="Video of Code Assist AI suggestion tool in Studio's script editor"></video>
+<video controls width="800" src="../assets/studio/script-editor/Code-Assist.mp4" alt="Video of Code Assist suggestion tool in Studio's script editor"></video>
 
 <Alert severity="warning">
 **Code Assist** helps automate basic coding tasks so you can focus on creative work, but it does not always suggest perfect code (see [Limitations](#limitations)). It's still your responsibility to review, test, and determine if the code suggestion is contextually appropriate.
@@ -109,7 +105,7 @@ Press <kbd>Tab</kbd> to accept a suggestion, or ignore it by continuing to type.
 
 ### Improving Suggestions
 
-To get more accurate and relevant suggestions, it's recommended that you follow clean coding practices, regardless of AI assistance, and:
+To get more accurate and relevant suggestions, it's recommended that you follow clean coding practices, regardless of assistance, and:
 
 - Break down your code into smaller functions.
 - Use descriptive script names that capture the overall intent of what each script does. For example, name a script **SyncCustomSounds** instead of just **Sounds**.

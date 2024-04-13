@@ -264,6 +264,8 @@ navigation:
                 path: /luau/type-coercion
               - title: Type Checking
                 path: /luau/type-checking
+          - title: Native Code Generation
+            path: /luau/native-code-gen
   - title: Environment
     path: /environment/
     section:
