@@ -5,13 +5,13 @@ description: Events Platform lets you create time-based events for your experien
 
 As part of your [promotion](../../production/promotion/index.md) initiatives, the integrated **Events&nbsp;Platform** lets you create time-based events for your experience. Users can discover your events on the experience's detail page and through an [event details page](#event-details-page). Users can also opt into [notifications](#streampush-notifications) that they'll receive when your event begins.
 
-<img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Live.jpg" width="810" alt="Example event page on the Roblox website" />
+<img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Live.jpg" alt="Example event page on the Roblox website" />
 
 ## Managing Events
 
 You can manage events through the [Creator Dashboard][creatordashboard], under the [Events][eventsupcoming] tab.
 
-<img src="../../assets/creator-dashboard/Creations-Events.png" width="780" alt="Events section on the Creator Dashboard" />
+<img src="../../assets/creator-dashboard/Creations-Events-Button.png" width="780" alt="Events section on the Creator Dashboard" />
 
 ### Creating Events
 
@@ -19,40 +19,25 @@ To create an event, you must be the **group owner** of any [group-owned](../../p
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
 2. With the [Events][eventsupcoming] tab selected, click the **Create Event** button.
-3. On the event creation screen, enter the **event name**, a starting date/time at least 15 minutes in the future, and an ending date/time.
-
-   <img src="../../assets/creator-dashboard/Event-Name-Duration.png" width="780" alt="Event name and date range entry on Events page of the Creator Dashboard" />
-
-4. To the left of the larger center image, click the **Select Experience** widget, choose the experience associated with your event, and click the **Confirm** button.
+3. On the event creation screen, click the **Select Experience** widget, choose the experience associated with your event, and click the **Confirm** button.
 
    <Grid container spacing={2}>
    <Grid item xs={12} lg={3}>
-   <img src="../../assets/creator-dashboard/Event-Select-Experience-Button.png" width="190" alt="Select Experience widget on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Event-Select-Experience-Button.png" width="188" alt="Select Experience widget on the Creator Dashboard" />
    </Grid>
    <Grid item xs={12} lg={9}>
-   <img src="../../assets/creator-dashboard/Event-Select-Experience-Menu.png" width="600" alt="Experience Picker widget on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Event-Select-Experience-Picker.png" width="520" alt="Experience Picker widget on the Creator Dashboard" />
    </Grid>
    </Grid>
 
-5. Once confirmed, the experience's [icon](../../production/publishing/experience-icons.md) will appear and the on-page carousel will be populated with the experience's [promotional thumbnails](../../production/promotion/promotional-thumbnails.md).
+4. Enter the event name, description, a starting date/time at least 15 minutes in the future, and an ending date/time. Your description should follow general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
 
-   <Grid container spacing={2}>
-   <Grid item xs={12} lg={3}>
-   <img src="../../assets/creator-dashboard/Event-Select-Experience-Button-Filled.png" width="190" alt="Select Experience widget showing an experience linked to the event" />
-   </Grid>
-   <Grid item xs={12} lg={9}>
-   <img src="../../assets/creator-dashboard/Event-Thumbnail-Carousel.jpg" width="600" alt="Experience thumbnail applied to event" />
-   </Grid>
-   </Grid>
-
-6. Below the carousel, enter a **description** in the input box. Your description should follow general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
-
-   - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major update such as a new "season" or new places to explore, summarize the updates.
+   - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major experience update, summarize the key updates.
    - Incentives for players to join the event, such as exclusive event-specific [merch](../../resources/modules/merch-booth.md), "boss&nbsp;fight" challenges, [badges](../../production/publishing/badges.md) that may be earned during the event, and more.
 
-7. When ready, click **Publish Event** to immediately publish the [event details page](#event-discovery) and make your event discoverable on the experience's detail page. If you're not ready to publish the event, click **Save** to keep an editable draft for [future publication](#publishing-draft-events).
+5. When ready, click **Publish Event** to immediately publish the [event details page](#event-discovery) and make your event discoverable on the experience's detail page. If you're not ready to publish the event, click **Save** to keep an editable draft for [future publication](#publishing-draft-events).
 
-   <img src="../../assets/creator-dashboard/Event-Publish-Save-Buttons.png" width="780" alt="Publish Event and Save (Draft) buttons on the Creator Dashboard" />
+   <img src="../../assets/creator-dashboard/Creations-Events-Example.png" width="368" alt="Example events on the Creator Dashboard" />
 
    <Alert severity="warning">
    Note that you cannot change the event's associated experience after publishing, and assets that are pending review or are moderated will display a placeholder.
@@ -62,7 +47,7 @@ To create an event, you must be the **group owner** of any [group-owned](../../p
 
 Events that you saved as **drafts** during creation remain editable until you publish them. You can find drafted events on the [Drafts][eventsdrafts] page of the [Creator Dashboard][creatordashboard].
 
-<img src="../../assets/creator-dashboard/Event-Drafts-Button.png" width="780" alt="Drafts category button on Creator Dashboard"/>
+<img src="../../assets/creator-dashboard/Creations-Events-Drafts-Button.png" width="780" alt="Drafts category button on Creator Dashboard"/>
 
 To publish a draft event:
 
@@ -77,7 +62,7 @@ To publish a draft event:
 To cancel an upcoming/active event, or to delete a draft/past/canceled event and remove its detail page.
 
 1. Visit the [Upcoming][eventsupcoming], [Past][eventspast], or [Drafts][eventsdrafts] page.
-1. Hover over the event thumbnail, click the **&ctdot;** button, and select either **Cancel Event** or **Delete Event**.
+1. Hover over the event thumbnail, click the **&ctdot;** button, and select either **Cancel&nbsp;Event** or **Delete&nbsp;Event**.
 
    <Tabs>
    <TabItem label="Cancel Event">
@@ -100,7 +85,7 @@ From the event details page, click/tap the **share** button below the event titl
 <img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Copy-URL.png" width="800" height="320" alt="Share button indicated on event details page" />
 </TabItem>
 <TabItem label="Upcoming Events">
-From the [Upcoming][eventsupcoming] events page, hover over the event thumbnail, click the **&ctdot;** button, and select **Copy Event Details URL**.
+From the [Upcoming][eventsupcoming] events page, hover over the event thumbnail, click the **&ctdot;** button, and select **Copy&nbsp;Event&nbsp;Details&nbsp;URL**.
 <img src="../../assets/creator-dashboard/Event-Context-Menu-Copy-Event-Details-URL.png" width="600" height="320" alt="Event's right-click context menu indicating the selection of Copy Event Details URL" />
 </TabItem>
 </Tabs>

@@ -7,7 +7,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
    This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [portal](#portal-ads) ads), and for [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages.
 
 ## Creating an Ad Account
 
@@ -73,7 +73,7 @@ Campaigns are defined by their **campaign objective** and **budgeting and schedu
 Campaign objectives are divided into two categories:
 
 - **Awareness:** Campaigns focused on awareness show image ads to increase awareness of your brand. These are placed as image ads in-experience, appearing as virtual billboards.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form aFs either Immersive Ads placed within immersive ad units in publisher experiences, or as sponsored experiences on the Home, Discover, and Search pages.
+- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal or image ad units in publisher experiences, or as **sponsored experiences** on the Home, Discover, and Search pages.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
 
@@ -173,15 +173,23 @@ To define an ad set:
 4. For Immersive Ads, determine what kinds of experiences you want your ads to be shown in. Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach.
    <img src="../../assets/promotion/ads-manager/Brand-Suitability.png" width="780" />
 
-5. Determine how you want to spend your budget. A higher CPM can increase the chances of winning the [auction](#bidding-and-auction), but it also means you'll pay more.
+5. Choose which [genres](#genre-targeting) you want to target with your ads. For sponsored experiences, this represents the genre interests of your audience. For Immersive Ads, this represents the genre of the experiences your ads will display in.
+
+6. Determine how you want to spend your budget. A higher CPM can increase the chances of winning the [auction](#bidding-and-auction), but it also means you'll pay more.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Bidding.png" width="900" />
 
-6. Lastly, name your ad set and click the **NEXT** button.
+7. Lastly, name your ad set and click the **NEXT** button.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Name-Next.png" width="780" />
 
 To maximize your advertising reach and use both in-experience portals and sponsored experiences within the same campaign, consider creating an additional ad set. This flexibility enables you to experiment with different ad strategies and optimize your campaign's performance.
+
+<Alert severity="info">
+
+When you define your ad set, an audience estimation displays that indicates how many Roblox user accounts your ads can reach over a month when applying your targeting parameters and placements. It estimates a maximum number of users on the platform who may be exposed to your ads, and does not take into consideration your budget limits or bidding parameters.
+
+</Alert>
 
 #### Brand Suitability Tables
 
@@ -327,6 +335,28 @@ As an example:
 3. Another advertiser submits a bid of $12.
 
 The second advertiser wins the auction and is charged $10.01, the price of the second highest bid, plus one cent.
+
+#### Genre Targeting
+
+You can target particular genres with your ad sets. Note that these are Roblox's genre classifications and may not be the same as the genre categories self-declared by developers. There are nine genres available for targeting:
+
+- **Action** - Emphasizes physical challenges that require motor skills such as jumping, shooting, and climbing.
+- **Adventure** - Complete tasks by using clues and interacting with people or the environment to progress gameplay.
+- **Obby** - Requires players to navigate a series of challenging obstacles to reach a goal or complete a task.
+- **Roleplaying** - Players assume the roles of characters in a fictional setting and have freedom to influence the story.
+- **Simulation** - Experiences that closely simulate real world or fictional realities.
+- **Social** - Enables an environment where characters can meet friends, hangout, and socialize.
+- **Sports** - Emulates the playing of traditional or fictional physical sports.
+- **Strategy** - Focuses on skillful thinking and planning to achieve success.
+- **Tycoon** - Players take on the role of a business owner and manage various aspects of the business to achieve success and profitability.
+
+For Immersive Ads, the genres you select apply to the content of the experiences your ads will display in. For instance, if you select only Roleplaying, your ads will not appear in any experiences classified as Action. For sponsored experiences, these classifications apply to your users. Ads will only be served to users who like to play experiences in your selected genres.
+
+<Alert severity="warning">
+
+You cannot use genre targeting on audiences for sponsored experiences in the EU due to data protection regulations.
+
+</Alert>
 
 ### Create Ads
 
