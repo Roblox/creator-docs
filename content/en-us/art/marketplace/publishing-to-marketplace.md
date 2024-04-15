@@ -3,6 +3,9 @@ title: Publishing to Marketplace
 description: Explains how to publish user-generated content to the Marketplace.
 ---
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
+
 In order to publish and sell assets on the Marketplace, your account or group must first meet [Roblox's Creator and Group requirements](../marketplace/marketplace-policy.md#creator-and-group-requirements). Users who satisfy the requirements and have not hit their [publishing limits](#uploading-and-publishing-limits), can upload and sell their assets in the following general steps:
 
 1. [Upload the asset](#uploading-an-asset) through Studio for validation and moderation.
@@ -28,14 +31,14 @@ There are limits on the number of assets you can upload to Roblox and enable for
 <tbody>
   <tr>
     <td>Uploading and moderation</td>
-    <td>N/A</td>
-    <td>10 per day</td>
+    <td>No limit</td>
+    <td>No limit</td>
 
   </tr>
   <tr>
     <td>Publishing - Enabling on sale<sup>&dagger;</sup></td>
     <td>1 per day</td>
-    <td>N/A</td>
+    <td>No limit</td>
 
   </tr>
 </tbody>
@@ -64,7 +67,7 @@ To upload your asset:
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
    <Alert severity = 'info'>
-   If you do not see this dropdown, your account may not have access to upload assets to the Marketplace. Currently only creators participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can sell items on the Marketplace at this time.
+   If you do not see this dropdown, your account may not have access to upload assets to the Marketplace. For more information, see [Creator Requirements](../marketplace/marketplace-policy.md#creator-requirements).
    </Alert>
 
    <GridContainer numColumns='2'>
@@ -175,7 +178,7 @@ Before selecting either option, familiarize yourself with the various [fee and c
 
 The following item attributes only apply if you set your asset as a Limited item:
 
-- **Quantity** - set the number of assets that available on the Marketplace.
+- **Quantity** - set the number of assets that available on the Marketplace. The maximum quantity for paid Limiteds is 3000. Free limiteds do not have a quantity maximum.
 - **Limit copies per user** - (Optional) Sets the number of times a user can purchase this asset.
   - Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
   - After publishing, you can only increase, but not decrease, this value.
@@ -204,26 +207,7 @@ If you have Marketplace listing before the implementation of the dynamic price r
 
 When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
 
-#### Limited
-
-Limited assets, or **Limiteds**, are assets that have a set quantity available for purchase. By enabling the Limited option for your asset, you can set the quantity of your creations which can give you more control over their scarcity. For information on pricing and payments, see [Limited Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md#limited-items). At this time, bodies and heads are not eligible as Limiteds.
-
-To set your asset as limited:
-
-1. Enable the **Limited** option next to the On Sale toggle. Additional menu options display.
-
-   <img
-   src="../../assets/publishing/marketplace/Asset-Configure-Page-Limited.png"
-   width="80%" />
-
-2. If you want to prevent users from reselling your Limited, disable the **Resellable** option. If disabled, you will not be eligible for [resell commissions](../../art/marketplace/marketplace-fees-and-commissions.md#reselling).
-   - If this is enabled on an item, it cannot be disabled later.
-3. In the **Price** field, set the price for the item. You can set the price to **0** if you want the item to be free or set a price within the [Marketplace price ranges](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges).
-4. In the **Quantity** field, set the number of assets that users can purchase.
-   - For paid Limited items, the maximum is 3000.
-   - For free Limited items, there is no maximum.
-
-##### Limit Copies Per User
+#### Limit Copies Per User
 
 If you are selling a Limited item, you can enable **Limit Copies Per User** to set the number of times a user can purchase this asset. This only affects the purchases from the original listing and users can still purchase additional copies of the same Limited asset from resellers. You can't change this setting after publishing.
 

@@ -4,10 +4,6 @@ description: Explains upload fees and commission from selling accessories and cl
 comments: Updates to this page require careful internal review. We generally don't accept pull requests on it.
 ---
 
-<Alert severity = 'warning'>
-Only creators participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can upload items on the Marketplace at this time.
-</Alert>
-
 You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
 You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../../production/analytics/analytics-dashboard.md#sales-data).
@@ -18,7 +14,9 @@ When uploading, accessories, clothing, bodies, and heads require an upload fee o
 
 ## Publishing Advance
 
-A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. This publishing advance is dependent on the type of Marketplace item being sold:
+A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. The publishing advance does not apply for **free Limited items** which require a [per-unit fee](#per-unit-fee). Items taken off-sale and put back on-sale do not require another publishing advance.
+
+This publishing advance is dependent on the type of Marketplace item being sold:
 
 <table>
 <thead>
@@ -117,13 +115,9 @@ A publishing advance is a refundable upfront fee that you pay at the time of pub
 </tbody>
 </table>
 
-The following policies also apply:
-
-- The publishing advance does not apply for **free Limited items** which are Limited items that are sold at 0 cost. Free Limiteds still require a [per-unit fee](#per-unit-fee).
-- Items taken off-sale and put back on-sale do not require another publishing advance.
-
-When publishing an asset, Roblox does not take the 30% commission until the publishing advance is fully recouped as rebates to the creator. Rebates are granted within 24 hours of the item purchase and are independent of the 30 day escrow for [commissions](#commissions).
-
+<BaseAccordion>
+<AccordionSummary>Publishing Advance Example Scenario</AccordionSummary>
+<AccordionDetails>
 For an example of how the publishing advance is recouped, the following table represents a hypothetical situation where the **publishing advance is 1000 Robux**, and the **item is sold in an experience at 400 Robux**:
 
 <table>
@@ -222,6 +216,21 @@ For an example of how the publishing advance is recouped, the following table re
   </tr>
 </tbody>
 </table>
+</AccordionDetails>
+</BaseAccordion>
+
+<br /><br />
+
+Rebate credits are reimbursed once per day. See the following guidelines:
+
+- Once per day, Roblox processes rebates from your sales and adds them to your transaction report.
+  - If you see the rebate on your transaction report, the credit has been applied to your account.
+  - The 30 day escrow does not apply for rebates.
+- You can access this data on the Creator Dashboard's [My Transactions](https://create.roblox.com/dashboard/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
+
+  <img src="../../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
+
+- If a sale occurs after Roblox processes rebates, you may need to wait until the next day's processing to receive the rebate credit and see the rebate in the transaction report.
 
 ## Commissions
 
@@ -240,30 +249,15 @@ Limited assets follow a different payout structure. See [Limiteds](#limiteds) fo
 
 ## Limiteds
 
-When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset. Limiteds require a [per-unit fee](#per-unit-fee) and can be [resold](#reselling) by Premium members unless the item creator disables reselling.
+When setting assets on sale, you can [configure your creation](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
 
 At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
 
 ### Per-unit Fee
 
-When publishing Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time. When an item is sold, the creator receives this per-unit fee back in proportion to the quantity of items sold.
+When publishing free Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time.
 
-<Alert severity ='info'>
-Limited items are also subject to different [sell price ranges](#price-range) for each asset type.
-</Alert>
-
-Like all items sold on Roblox, creators also receive a percentage [commission](#commissions) when participating in a Limited sale. See the following hypothetical example for a breakdown of payments and earnings for Limiteds:
-
-- A creator intends to sell **200** Limited hats at **100** Robux each.
-- The creator first pays a per-unit fee based on factors like quantity and asset type. In this hypothetical case, the per-unit fee that is due before publishing is **4,000** Robux or **20** Robux per item.
-- When the item is purchased, the creator makes **50** Robux per sale: **30** Robux from the usual **30%** commission for creators, plus **20** Robux from the portion of the per-unit fee that is returned.
-  - **30** Robux (commission per item): **100** Robux per item x **30%** commission
-  - **20** Robux (per-unit fee): **4,000** Robux per-unit fee / **200** Limited hats
-- This per-unit fee also applies when selling free Limiteds. If 200 limited hats are listed at a **0** Robux price, the creator pays **4,000** Robux to list this free limited item. For Limiteds set to a price of 0 (free items), **Roblox keeps the entire per-unit fee**.
-
-<Alert severity ='warning'>
-You cannot take your Limited item off-sale. If your item is moderated your payment is not refunded. For more information on our moderation policies and guidelines, see [Marketplace guidelines](../../art/marketplace/marketplace-policy.md#general-creation-guidelines).
-</Alert>
+As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 limited hats are listed at a **0** Robux price, the creator pays **20,000** Robux to list this free limited item. For free Limiteds, **Roblox keeps the entire per-unit fee**.
 
 ### Reselling
 

@@ -4,7 +4,8 @@ description: Layered clothing are cosmetic accessories that stretch, fit, and la
 hideBreadcrumbs: true
 ---
 
-<img src="../../assets/accessories/Layered-Clothing-Banner.jpg"/>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
 
 Layered clothing accessories are 3D cosmetic items that users can equip and wear on their avatar body, such as pants, t-shirt, jackets, dresses, and more. Unlike [rigid accessories](../../art/accessories/index.md) that only attach to a specific point on a character, layered clothing stretches and fits over any body type and existing clothing.
 

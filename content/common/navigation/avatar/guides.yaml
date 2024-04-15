@@ -69,6 +69,8 @@ navigation:
     path: /art/marketplace/publishing-to-marketplace
   - title: Marketplace Fees and Commissions
     path: /art/marketplace/marketplace-fees-and-commissions
+  - title: Frequently Asked Questions
+    path: /art/marketplace/frequently-asked-questions
 
   - heading: Studio Tools
   - title: 3D Importer

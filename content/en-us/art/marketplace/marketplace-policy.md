@@ -3,17 +3,13 @@ title: Marketplace Policy
 description: Marketplace Requirements lists the specific requirements for Marketplace Assets.
 ---
 
-<Alert severity = 'warning'>
-Only creators participating in the [UGC program](https://devforum.roblox.com/t/updates-and-changes-to-the-ugc-catalog-application/1974990) can upload items on the Marketplace at this time.
-</Alert>
-
 3D accessories and clothing assets you sell on the [Marketplace](https://www.roblox.com/catalog), such as clothing accessories, must follow specific requirements. Some requirements may require additional configuration on a third-party modeling software, such as Blender or Maya.
 
 If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../art/marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
 ## Creator Requirements
 
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership). At this time, only UGC Program members are eligible to upload and sell assets on the Marketplace.
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership).
 
 See the following breakdown of the user and group requirements:
 
@@ -53,10 +49,6 @@ See the following breakdown of the user and group requirements:
   </tr>
 </tbody>
 </table>
-
-<Alert severity = 'info'>
-If you are an existing UGC program participant with Premium 450, you will be required to cancel your existing subscription and upgrade to maintain your marketplace privileges.
-</Alert>
 
 ## General Creation Guidelines
 

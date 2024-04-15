@@ -301,7 +301,7 @@ The **Publish** button opens the publish asset dialog, with an option to upload 
 
 When selecting the Publish option, you can upload the asset to the Marketplace, where you can sell the item paying an upload fee, clearing moderation, and publishing the asset to the catalog.
 
-The upload option opens the following prompt which goes through additional validation checks before uploading to the moderation queue. At this time, only members of the UGC program can submit avatar assets to the Marketplace.
+The upload option opens the following prompt which goes through additional validation checks before uploading to the moderation queue.
 
 For additional resources on the publishing process and Marketplace, see the following:
 

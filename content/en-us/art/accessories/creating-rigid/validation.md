@@ -5,7 +5,7 @@ prev: /art/accessories/creating-rigid/converting
 next: /art/accessories/creating-rigid/publishing
 ---
 
-After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset. At this time, only participants of the UGC Program can publish assets to the Marketplace.
+After generating your `Class.Accessory` item, you can now begin the process of **publishing** the asset to the Marketplace. This step is optional and only applicable for creators who intend to sell their asset.
 
 The publishing process involves three major steps:
 

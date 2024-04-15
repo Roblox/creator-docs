@@ -4,7 +4,8 @@ description: Rigid accessories are basic 3D cosmetics users can equip and wear o
 hideBreadcrumbs: true
 ---
 
-<img src="../../assets/avatar/character-customization/Avatar-Banner.jpg" />
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
 
 Rigid accessories are the most basic 3D cosmetic items that users can equip and wear on their avatar character, such props, weapons, chats, and more. Unlike [clothing accessories](../accessories/layered-clothing.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
 
