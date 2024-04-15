@@ -16,7 +16,7 @@ Classes represent core objects and services in the Roblox engine. They contain
 properties, methods, events, and callbacks.
 
 <SideBarLink nodeId='Engine API/Classes'>
-  <Button color='secondary' size='large' variant='contained'>see Classes</Button>
+  <Button color='secondary' size='large' variant='contained'>See Classes</Button>
 </SideBarLink>
 <br/><br/><br/>
 
@@ -26,7 +26,7 @@ Data Types are types unique to the Roblox engine. They can contain constructors,
 properties, and methods.
 
 <SideBarLink nodeId='Engine API/Data Types'>
-  <Button color='secondary' size='large' variant='contained'>see Data types</Button>
+  <Button color='secondary' size='large' variant='contained'>See Data Types</Button>
 </SideBarLink>
 <br/><br/><br/>
 
@@ -36,7 +36,7 @@ Enums are groups of constants that define preset values that you can use with
 other APIs.
 
 <SideBarLink nodeId='Engine API/Enums'>
-  <Button color='secondary' size='large' variant='contained'>see enums</Button>
+  <Button color='secondary' size='large' variant='contained'>See Enums</Button>
 </SideBarLink>
 <br/><br/><br/>
 
@@ -46,7 +46,7 @@ Globals are functions or properties that you can use in any script. Lua globals
 are native to Lua while Roblox globals are found only on Roblox.
 
 <SideBarLink nodeId='Engine API/Globals'>
-  <Button color='secondary' size='large' variant='contained'>see globals</Button>
+  <Button color='secondary' size='large' variant='contained'>See Globals</Button>
 </SideBarLink>
 <br/><br/><br/>
 
@@ -56,6 +56,6 @@ Libraries are groups of functions that you can use to manipulate built-in data
 types.
 
 <SideBarLink nodeId='Engine API/Libraries'>
-  <Button color='secondary' size='large' variant='contained'>see libraries</Button>
+  <Button color='secondary' size='large' variant='contained'>See Libraries</Button>
 </SideBarLink>
 <br/><br/><br/>

@@ -7,5 +7,5 @@ Enums are groups of constants that define preset values that you can use with
 other APIs.
 
 <SideBarLink nodeId='Engine API/Enums'>
-  <Button color='secondary' size='large' variant='contained'>see enums</Button>
+  <Button color='secondary' size='large' variant='contained'>See Enums</Button>
 </SideBarLink>
