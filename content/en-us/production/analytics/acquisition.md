@@ -68,6 +68,41 @@ Here's a list of all the available acquisition sources:
 
 <img src="../../assets/analytics/acquisition/home-recommendations.png" width= "78%" alt="Home Recommendations chart with icons."/>
 
+## Acquisition Attribution
+
+The dashboard categorizes results for each acquisition source as follows:
+
+<table>
+  <tr>
+    <th>Attribution</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Users with Plays</td>
+    <td>Unique new users with plays on the experience.</td>
+  </tr>
+  <tr>
+    <td>Conversion Rate</td>
+    <td>Percent of new users who played after viewing your experience at source (ad impression, search result, recommendation).</td>
+  </tr>
+  <tr>
+    <td>D7 Retention</td>
+    <td>Percentage of new players acquired in the date range who played again on the 8th day (D8) after their first session ended.</td>
+  </tr>
+  <tr>
+    <td>7D Playtime per User (Cumulative)</td>
+    <td>Cumulative playtime for new players acquired in the date range in their first 7 days divided by the number of new players acquired in the date range.</td>
+  </tr>
+  <tr>
+    <td>30D Payer Conversion (Cumulative)</td>
+    <td>Number of paying users from new players acquired in the date range in their first 30 days divided by the number of new players acquired in the date range.</td>
+  </tr>
+  <tr>
+    <td>30D Revenue per User (Cumulative)</td>
+    <td>Cumulative revenue, excluding subscriptions, engagement payouts, and immersive ads, for new players acquired in the date range in their first 30 days divided by the number of new players acquired in the date range.</td>
+  </tr>
+</table>
+
 ## Improving Acquisition
 
 To improve acquisition, you can run an acquisition funnel to identify sources that might drive more traffic or convert better, such as:

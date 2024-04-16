@@ -769,21 +769,16 @@ methods:
       `Class.DataStoreService` access from Studio requires the 
       **Enable Studio Access to API Services** setting from the **Security** panel
       in [Game Settings](../../../studio/game-settings.md).
-
       
       ```lua
       local DataStoreService = game:GetService("DataStoreService")
 
-      -- access DataStore 'Data' as place placeId
+      -- access DataStore 'Data' by setting PlaceId to placeId and GameId to universeId.
       game:SetPlaceId(placeId)
       game:SetUniverseId(universeId)
       local dataStore = DataStoreService:GetDataStore("Data")
       ```
-
-      You can use `Class.DataModel:SetUniverseId()` to set the
-      `Class.DataModel.GameId` of the game instance. However, it is the
-      `Class.DataModel.PlaceId` that must be set to access the
-      `Class.DataStoreService`.
+      
     code_samples:
     parameters:
       - name: placeId
