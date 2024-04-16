@@ -1,0 +1,1204 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Standard Data Stores",
+    "description": "This page includes reference documentation for working with standard data stores. For more information on using the API, see [Handling API Requests for Data Stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [Usage Guide](../../../cloud/open-cloud/usage-data-stores.md).",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com/datastores"
+    }
+  ],
+  "paths": {
+    "/v1/universes/{universeId}/standard-datastores": {
+      "get": {
+        "tags": ["Datastores"],
+        "summary": "List data stores in an experience",
+        "description": "Returns a list of an experience's data stores.",
+        "operationId": "Datastores_ListDatastoresAsync",
+        "x-roblox-cloud-api-operation-name": "List Data Stores",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Provide to request the next set of data. See [Cursors](../../../cloud/open-cloud/data-store-api-handling.md#cursors).",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of items to return. Each call only reads one partition, so it can return fewer than the given value when running out of objectives on one partition.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "prefix",
+            "in": "query",
+            "description": "Provide to return only data stores with this prefix. ",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "description": "An array of data stores in the target experience.",
+                      "items": {
+                        "$ref": "#/components/schemas/DataStore"
+                      }
+                    },
+                    "nextPageCursor": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Indicates that there is more data available in the requested result set. See [Cursors](../../../cloud/open-cloud/data-store-api-handling.md#cursors)."
+                    }
+                  },
+                  "example": "{\n  \"datastores\": [\n    {\n      \"name\": \"PlayerInventory\",\n      \"createdTime\": \"2022-02-18T22:38:59.9244932Z\"\n    },\n    {\n      \"name\": \"PlayerExperience\",\n      \"createdTime\": \"2022-02-18T23:00:10.4773508Z\"\n    },\n    {\n      \"name\": \"PlayerWeapons\",\n      \"createdTime\": \"2022-02-18T23:00:22.3725681Z\"\n    },\n    {\n      \"name\": \"PlayerArmor\",\n      \"createdTime\": \"2022-02-18T22:59:33.8472882Z\"\n    },\n    {\n      \"name\": \"PlayerHP\",\n      \"createdTime\": \"2022-02-18T22:58:47.6904028Z\"\n    }\n  ],\n  \"nextPageCursor\": \"...\"\n}\n"
+                },
+                "encoding": {
+                  "metadata": {
+                    "contentType": "application/json; charset=utf-8; content-length=388;"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoresList"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "DataStoreService:ListDataStoresAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request GET \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"prefix=Player\" \\\n-d \"limit=5\""
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/standard-datastores/datastore/entries": {
+      "get": {
+        "tags": ["Entries"],
+        "summary": "List entries",
+        "description": "Returns a list of entry keys within a data store.",
+        "operationId": "Entries_ListKeysAsync",
+        "x-roblox-cloud-api-operation-name": "List Entries",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "allScopes",
+            "in": "query",
+            "description": "Set to true to return keys from all scopes.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "prefix",
+            "in": "query",
+            "description": "Provide to return only keys with this prefix.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Provide to request the next set of data. See [Cursors](../../../cloud/open-cloud/data-store-api-handling.md#cursors).",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of items to return. Each call only reads one partition, so it can return fewer than the given value when running out of objectives on one partition.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 16
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "keys": {
+                      "type": "array",
+                      "description": "An array of entry keys within the target data store.",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "nextPageCursor": {
+                      "type": "string",
+                      "nullable": true,
+                      "description": "Indicates that there is more data available in the requested result set. See [Cursors](../../../cloud/open-cloud/data-store-api-handling.md#cursors)."
+                    }
+                  },
+                  "example": "{\n  \"keys\": [\n    {\n      \"key\": \"269323\"\n    }\n  ],\n  \"nextPageCursor\": \"eyJ2ZXJzaW9uIjoxLCJjdXJzb3IiOiIzIyJ9\"\n}\n"
+                },
+                "encoding": {
+                  "metadata": {
+                    "contentType": "application/json; charset=utf-8; content-length=388;"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoreListObjectKeys"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "DataStore:ListKeysAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request GET \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"prefix=\" \\\n-d \"limit=5\""
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/standard-datastores/datastore/entries/entry": {
+      "get": {
+        "tags": ["Entries"],
+        "summary": "Get entry.",
+        "description": "Returns the value and metadata associated with an entry.",
+        "operationId": "Entries_GetEntryAsync",
+        "x-roblox-cloud-api-operation-name": "Get Entry",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the user content of the entry in the body of the response.",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "content-md5": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-version": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-version-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-userids": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "roblox-entry-created-time": {
+                      "type": "string",
+                      "description": "The time at which the entry was created.",
+                      "format": "date-time"
+                    },
+                    "last-modified": {
+                      "type": "string",
+                      "description": "The time at which this particular version was created.",
+                      "format": "date-time"
+                    },
+                    "roblox-entry-version": {
+                      "type": "string",
+                      "description": "The version of the returned entry.",
+                      "format": "binary"
+                    },
+                    "roblox-entry-attributes": {
+                      "type": "string",
+                      "description": "Attributes associated with the returned entry. Serialized JSON map object.",
+                      "format": "binary"
+                    },
+                    "roblox-entry-userids": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      },
+                      "description": "Comma-separated list of Roblox user IDs tagged with the entry."
+                    },
+                    "content-md5": {
+                      "type": "string",
+                      "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5).",
+                      "format": "binary"
+                    }
+                  },
+                  "example": "{\n  \"content-md5\": \"zuYxEhwuySMvOi8CitXImw==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-userids\": [ 1, 2, 3 ]\n}"
+                },
+                "encoding": {
+                  "metadata": {
+                    "contentType": "application/json; charset=utf-8; content-length=388;"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "The key is marked as deleted."
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoreReadObject"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "GlobalDataStore:GetAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request GET \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"entryKey=269323\""
+          }
+        ]
+      },
+      "post": {
+        "tags": ["Entries"],
+        "summary": "Set entry.",
+        "description": "Sets the value, metadata and user IDs associated with an entry.",
+        "operationId": "Entries_SetEntryAsync",
+        "x-roblox-cloud-api-operation-name": "Set Entry",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "matchVersion",
+            "in": "query",
+            "description": "Provide to update only if the current version matches this.",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "nullable": true
+            }
+          },
+          {
+            "name": "exclusiveCreate",
+            "in": "query",
+            "description": "Create the entry only if it does not exist.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          },
+          {
+            "name": "roblox-entry-attributes",
+            "in": "header",
+            "description": "Attributes to be associated with new version of the entry. Serialized by JSON map objects. If not provided, existing attributes are cleared.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "roblox-entry-userids",
+            "in": "header",
+            "description": "Comma-separated list of Roblox user IDs tagged with the entry. If not provided, existing user IDs are cleared.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "content-md5",
+            "in": "header",
+            "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5).",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "maxLength": 4194304,
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntryVersion"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": [
+              "Label.DatastoreCreateObject",
+              "Label.DatastoreUpdateObject"
+            ]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "GlobalDataStore:SetAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request POST \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry?datastoreName=Coins&entryKey=269323\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--header \"content-md5: IGPBYI1uC6+AJJxC4r5YBA==\" \\\n--header \"content-type: application/json\" \\\n--header \"roblox-entry-userids: [269323]\" \\\n--header \"roblox-entry-attributes: {}\" \\\n--d \"value\""
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["Entries"],
+        "summary": "Delete entry.",
+        "description": "Marks the entry as deleted by creating a tombstone version. Entries are deleted permanently after 30 days.",
+        "operationId": "Entries_DeleteEntryAsync",
+        "x-roblox-cloud-api-operation-name": "Delete Entry",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The entry is deleted.",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoreDeleteObject"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "GlobalDataStore:RemoveAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request DELETE \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"entryKey=269323\""
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/increment": {
+      "post": {
+        "tags": ["Entries"],
+        "summary": "Increment entry",
+        "description": "Increments the value for an entry by a given amount, or create a new entry with that amount.",
+        "operationId": "Entries_IncrementEntryAsync",
+        "x-roblox-cloud-api-operation-name": "Increment Entry",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "incrementBy",
+            "in": "query",
+            "description": "The amount by which the entry should be incremented, or the starting value if it doesn't exist.",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": 1
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          },
+          {
+            "name": "roblox-entry-attributes",
+            "in": "header",
+            "description": "Attributes to be associated with new version of the entry. Serialized by JSON map objects. If not provided, existing attributes are cleared.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "roblox-entry-userids",
+            "in": "header",
+            "description": "A comma-separated list of Roblox user IDs that the entry is tagged with. If not provided, existing user IDs are cleared.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the latest version of the entry after it has been incremented.",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "content-md5": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-version": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-version-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-userids": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "roblox-entry-created-time": {
+                      "type": "string",
+                      "description": "The time at which the entry was created.",
+                      "format": "date-time"
+                    },
+                    "last-modified": {
+                      "type": "string",
+                      "description": "The time at which this particular version was created.",
+                      "format": "date-time"
+                    },
+                    "roblox-entry-version": {
+                      "type": "string",
+                      "description": "The version of the returned entry.",
+                      "format": "binary"
+                    },
+                    "roblox-entry-attributes": {
+                      "type": "string",
+                      "description": "Attributes associated with the returned entry. Serialized JSON map object.",
+                      "format": "binary"
+                    },
+                    "roblox-entry-userids": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      },
+                      "description": "Comma-separated list of Roblox user IDs tagged with the entry."
+                    },
+                    "content-md5": {
+                      "type": "string",
+                      "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5).",
+                      "format": "binary"
+                    }
+                  },
+                  "example": "{\n  \"content-md5\": \"K4phWUsfTE2wkCqKOVztkw==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000009.08D9E6DF74AC5F42.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-03T06:36:05.9184962+00:00\",\n  \"roblox-entry-userids\": []\n}"
+                },
+                "encoding": {
+                  "metadata": {
+                    "contentType": "application/json; charset=utf-8; content-length=388;"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "The key is marked as deleted."
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": [
+              "Label.DatastoreCreateObject",
+              "Label.DatastoreUpdateObject"
+            ]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "GlobalDataStore:IncrementAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request POST \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry/increment\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--header 'content-length: 0' \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"entryKey=269323\" \\\n-d \"incrementBy=3\""
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/versions/version": {
+      "get": {
+        "tags": ["Entries"],
+        "summary": "Get entry version.",
+        "description": "Returns the value and metadata of a specific version of an entry.",
+        "operationId": "Entries_GetEntryVersionAsync",
+        "x-roblox-cloud-api-operation-name": "Get Entry Version",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "versionId",
+            "in": "query",
+            "description": "The version to inspect.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              },
+              "content-md5": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-version": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-version-created-time": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "roblox-entry-attributes": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "roblox-entry-userids": {
+                "schema": {
+                  "type": "array"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "roblox-entry-created-time": {
+                      "type": "string",
+                      "description": "The time at which the entry was created.",
+                      "format": "date-time"
+                    },
+                    "last-modified": {
+                      "type": "string",
+                      "description": "The time at which this particular version was created.",
+                      "format": "date-time"
+                    },
+                    "roblox-entry-version": {
+                      "type": "string",
+                      "description": "The version of the returned entry.",
+                      "format": "binary"
+                    }
+                  },
+                  "example": "{\n  \"content-md5\": \"sTf90fedVsft8zZf6nUg8g==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000003.08D9E6DE485A7680.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-03T06:27:42.0652160+00:00\",\n  \"roblox-entry-attributes\": {},\n  \"roblox-entry-userids\": [ 269323 ]\n}"
+                },
+                "encoding": {
+                  "metadata": {
+                    "contentType": "application/json; charset=utf-8; content-length=388;"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoreReadVersion"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "DataStore:GetVersionAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request GET \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry/versions/version\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"entryKey=269323\" \\\n-d \"versionId=08D9E6A3F2188CFF.0000000003.08D9E6DE485A7680.01\""
+          }
+        ],
+        "x-roblox-throttling-limit": {
+          "perApiKey": {
+            "periodInSeconds": "60",
+            "maxInPeriod": 100
+          }
+        }
+      }
+    },
+    "/v1/universes/{universeId}/standard-datastores/datastore/entries/entry/versions": {
+      "get": {
+        "tags": ["Entries"],
+        "summary": "List entry versions",
+        "description": "Returns a list of versions for an entry.",
+        "operationId": "Entries_ListEntryVersionsAsync",
+        "x-roblox-cloud-api-operation-name": "List Entry Versions",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience with data stores that you want to access. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-data-stores.md#getting-the-universe-id) on the **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "datastoreName",
+            "in": "query",
+            "description": "The name of the data store.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entryKey",
+            "in": "query",
+            "description": "The key identifying the entry.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "schema": {
+              "type": "string",
+              "default": "global",
+              "nullable": true
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "description": "Provide to request the next set of data (see [Cursors](../../../cloud/open-cloud/data-store-api-handling.md#cursors)).",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "startTime",
+            "in": "query",
+            "description": "Provide to not include versions earlier than this timestamp.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "description": "Provide to not include versions later than this timestamp.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "description": "Either `Ascending` (earlier versions first) or `Descending` (later versions first).",
+            "schema": {
+              "type": "string",
+              "default": "Ascending",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of items to return. Each call only reads one partition, so it can return fewer than the given value when running out of objectives on one partition.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 16
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "date": {
+                "schema": {
+                  "type": "date-time"
+                }
+              },
+              "content-type": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "conent-length": {
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            },
+            "content": {
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntryVersion"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request / Invalid file content."
+          },
+          "403": {
+            "description": "Publish not allowed on place."
+          },
+          "404": {
+            "description": "The experience or data store was not found."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.DatastoreListVersions"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-lua-equivalent": "DataStore:ListVersionsAsync",
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --include --location --request GET \"https://apis.roblox.com/datastores/v1/universes/3310576216/standard-datastores/datastore/entries/entry/versions\" \\\n--header \"x-api-key: ${API_KEY}\" \\\n--get \\\n-d \"datastoreName=Coins\" \\\n-d \"entryKey=269323\" \\\n-d \"limit=5\""
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DataStore": {
+        "type": "object",
+        "description": "The data store object with its name and created time.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "format": "binary",
+            "description": "The name of your data store."
+          },
+          "createdTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "description": "The timestamp of when the data store was created in the ISO time format."
+          }
+        },
+        "additionalProperties": false
+      },
+      "EntryVersion": {
+        "type": "object",
+        "description": "The entry version object returned by the `List Entry Versions` method.",
+        "properties": {
+          "version": {
+            "type": "string",
+            "format": "binary",
+            "description": "The version name of the qualifying entry."
+          },
+          "deleted": {
+            "type": "boolean",
+            "default": false,
+            "description": "Indicates whether the entry has been deleted."
+          },
+          "contentLength": {
+            "type": "number",
+            "description": "The length of the content."
+          },
+          "createdTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp of when the version was created in the ISO time format."
+          },
+          "objectCreatedTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp of when the data store was created in the ISO time format."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
+      }
+    }
+  }
+}

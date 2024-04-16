@@ -1,0 +1,625 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Ordered Data Stores (Beta)",
+    "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handling API Requests for Data Stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [Usage Guide](../../../cloud/open-cloud/usage-data-stores.md).",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com/ordered-data-stores"
+    }
+  ],
+  "paths": {
+    "/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries": {
+      "get": {
+        "tags": ["OrderedDataStores"],
+        "description": "Returns a list of entries from an ordered data store.",
+        "operationId": "OrderedDataStores_ListEntries",
+        "x-roblox-cloud-api-operation-name": "List",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the target ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "max_page_size",
+            "in": "query",
+            "description": "The maximum number of entries to return. The service may return fewer than this value. The default value is `10`. The maximum value is `100`, and any input above 100 is coerced to `100`.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "A page token received from a previous `List` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `List` must match the call providing the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "order_by",
+            "in": "query",
+            "description": "The enumeration direction. The order by default is ascending. Input a `desc` suffix for descending.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "The range of qualifying values of entries to return. See [Filters](../../../cloud/open-cloud/data-store-api-handling.md#filters).",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListEntriesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries' \\\n --header 'x-api-key: <insert-api-key>' \n"
+          }
+        ]
+      },
+      "post": {
+        "tags": ["OrderedDataStores"],
+        "description": "Creates a new entry with the content value provided.",
+        "operationId": "OrderedDataStores_CreateEntry",
+        "x-roblox-cloud-api-operation-name": "Create",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The name of the entry.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CreateEntryRequest",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/CreateEntryRequest"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entry"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries?id=<id>' \\\n--header 'x-api-key: <insert-api-key>' \\\n--header 'Content-Type: application/json' \\\n--data '{ \n    \"value\": <long> \n}'\n"
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}": {
+      "get": {
+        "tags": ["OrderedDataStores"],
+        "description": "Gets and returns the specified entry.",
+        "operationId": "OrderedDataStores_GetEntry",
+        "x-roblox-cloud-api-operation-name": "Get",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entry"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries/<entry>' \\\n --header 'x-api-key: <insert-api-key>' \n"
+          }
+        ]
+      },
+      "delete": {
+        "tags": ["OrderedDataStores"],
+        "description": "Deletes the specified entry.",
+        "operationId": "OrderedDataStores_DeleteEntry",
+        "x-roblox-cloud-api-operation-name": "Delete",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success: the entry was successfully deleted or didn't exist."
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: Studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location --request DELETE 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries/<entry>' \\\n --header 'x-api-key: <insert-api-key>' \n"
+          }
+        ]
+      },
+      "patch": {
+        "tags": ["OrderedDataStores"],
+        "description": "Updates an entry value and returns the updated entry.",
+        "operationId": "OrderedDataStores_UpdateEntry",
+        "x-roblox-cloud-api-operation-name": "Update",
+        "parameters": [
+          {
+            "name": "universeIdId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UpdateEntryRequest",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UpdateEntryRequest"
+            }
+          },
+          {
+            "name": "allow_missing",
+            "in": "query",
+            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow Missing Flags](../../../cloud/open-cloud/data-store-api-handling.md#allow-missing-flags).",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entry"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "409": {
+            "description": "Aborted."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location --request PATCH 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries/<entry>' \\\n--header 'x-api-key: <insert-api-key>' \\\n--header 'Content-Type: application/json' \\\n--data '{ \n    \"value\": <long> \n}'\n"
+          }
+        ]
+      }
+    },
+    "/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}:increment": {
+      "post": {
+        "tags": ["OrderedDataStores"],
+        "description": "Increments the value of the key by the provided amount and returns the updated entry.",
+        "operationId": "OrderedDataStores_IncrementEntry",
+        "x-roblox-cloud-api-operation-name": "Increment",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/creations).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderedDataStore",
+            "in": "path",
+            "description": "The name of the ordered data store.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "incrementEntryRequest",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/IncrementEntryRequest"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entry"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: invalid orderedDataStore, scope or entry name or encoding."
+          },
+          "403": {
+            "description": "Forbidden: studio access to APIs is not allowed, incorrect API key or scope."
+          },
+          "404": {
+            "description": "Not found."
+          },
+          "429": {
+            "description": "Too Many Requests."
+          }
+        },
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location 'https://apis.roblox.com/ordered-data-stores/v1/universes/<universeId>/orderedDataStores/<orderedDataStore>/scopes/<scope>/entries/<entry>:increment' \\\n--header 'x-api-key: <insert-api-key>' \\\n--header 'Content-Type: application/json' \\\n--data '{ \n    \"amount\": <long> \n}'\n"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Entry": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the request."
+          },
+          "id": {
+            "type": "string",
+            "description": "The name of the entry"
+          },
+          "value": {
+            "type": "integer",
+            "description": "The value of the entry.",
+            "format": "int64"
+          }
+        },
+        "description": "Represents an entry."
+      },
+      "IncrementEntryRequest": {
+        "required": ["amount"],
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "description": "The amount to increment by the entry value. If the input value exceeds the maximum value supported by int64, which is 9,223,372,036,854,775,807, the request fails with a 400 Bad Request error.",
+            "format": "int64"
+          }
+        },
+        "description": "Increments entry value."
+      },
+      "UpdateEntryRequest": {
+        "required": ["value"],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "description": "The value to update the entry. If the input value exceeds the maximum value supported by int64, which is 9,223,372,036,854,775,807, the request fails with a 400 Bad Request error.",
+            "format": "int64"
+          }
+        },
+        "description": "Updates the entry provided with a new value."
+      },
+      "CreateEntryRequest": {
+        "required": ["value"],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "description": "The value to set the new entry. If the input value exceeds the maximum value supported by int64, which is 9,223,372,036,854,775,807, the request fails with a 400 Bad Request error.",
+            "format": "int64"
+          }
+        },
+        "description": "Creates a new entry with the value provided."
+      },
+      "ListEntriesResponse": {
+        "type": "object",
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entry"
+            },
+            "description": "The Entries from the specified Scope."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of Entries in the parent collection."
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "OrderedDataStores"
+    }
+  ]
+}

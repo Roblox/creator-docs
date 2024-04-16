@@ -1,0 +1,4198 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Cloud API",
+    "description": "Open Cloud 2.0",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com/cloud"
+    }
+  ],
+  "paths": {
+    "/v2/creator-store-products": {
+      "post": {
+        "tags": ["Cloud"],
+        "description": "Add a Creator Store product.",
+        "operationId": "Cloud_CreateCreatorStoreProduct",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatorStoreProduct"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatorStoreProduct"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["creator-store-product:write"],
+            "title": "Create Creator Store Product"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/CreatorStoreProduct",
+            "name": "CreatorStoreProduct"
+          }
+        }
+      }
+    },
+    "/v2/creator-store-products/{creator-store-product}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Get a Creator Store product.",
+        "operationId": "Cloud_GetCreatorStoreProduct",
+        "parameters": [
+          {
+            "name": "creator-store-product",
+            "in": "path",
+            "description": "The creator-store-product ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatorStoreProduct"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["creator-store-product:read"],
+            "title": "Get Creator Store Product"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/CreatorStoreProduct",
+            "name": "CreatorStoreProduct"
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Cloud"],
+        "description": "Update a Creator Store product.",
+        "operationId": "Cloud_UpdateCreatorStoreProduct",
+        "parameters": [
+          {
+            "name": "creator-store-product",
+            "in": "path",
+            "description": "The creator-store-product ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the creator store product is not found, a creator store\n product is created. In this situation, `update_mask` is ignored.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [true]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatorStoreProduct"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatorStoreProduct"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["creator-store-product:write"],
+            "title": "Update Creator Store Product"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/CreatorStoreProduct",
+            "name": "CreatorStoreProduct"
+          }
+        }
+      }
+    },
+    "/v2/groups/{group}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Gets the specified group.",
+        "operationId": "Cloud_GetGroup",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get Group"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Group",
+            "name": "Group"
+          }
+        }
+      }
+    },
+    "/v2/groups/{group}/join-requests": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "List join requests under a group.",
+        "operationId": "Cloud_ListGroupJoinRequests",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group join requests to return. The service might\n return fewer than this value. If unspecified, at most 10 group join\n requests are returned. The maximum value is 20 and higher values are set\n to 20.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 20, inclusive",
+              "exampleValues": [10]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `user`\n field and `==` operator are supported.\n\n\n Example: `\"user == 'users/156'\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupJoinRequestsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["group:read"],
+            "title": "List Group Join Requests"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupJoinRequest",
+            "name": "GroupJoinRequest"
+          }
+        }
+      }
+    },
+    "/v2/groups/{group}/memberships": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "List group members in a group.",
+        "operationId": "Cloud_ListGroupMemberships",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group memberships to return. The service might return\n fewer than this value. If unspecified, at most 10 group memberships are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [10]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n See the\n [filtering](/cloud/reference/patterns#list-group-memberships)\n documentation for more information.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupMembershipsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "List Group Memberships"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupMembership",
+            "name": "GroupMembership"
+          }
+        }
+      }
+    },
+    "/v2/groups/{group}/roles": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "List roles in a group.\n\n The permissions field for roles is viewable based on the requester's access\n and scopes.\n\n Permissions for the guest role are always visible - a scope is not needed.\n\n If the requester is a member of the group and has the `group:read` scope,\n permissions in their role are visible.\n\n If the requester is the owner of the group and has the `group:read` scope,\n permissions in all roles are visible.",
+        "operationId": "Cloud_ListGroupRoles",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of group roles to return. The service might return fewer\n than this value. If unspecified, at most 10 group roles are returned. The\n maximum value is 20 and higher values are set to 20.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 20, inclusive",
+              "exampleValues": [10]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListGroupRolesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "List Group Roles"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupRole",
+            "name": "GroupRole"
+          }
+        }
+      }
+    },
+    "/v2/groups/{group}/shout": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Gets the group shout.\n\n If a guest can view the group shout, this is always retrievable.\n\n If a guest cannot, a member who has the permissions to view the group\n shout, along with the `group:read` scope, will be able to read the group\n shout.",
+        "operationId": "Cloud_GetGroupShout",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupShout"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get Group Shout"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupShout",
+            "name": "GroupShout"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Gets the specified universe.",
+        "operationId": "Cloud_GetUniverse",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Universe"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get Universe"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Cloud"],
+        "description": "Updates the specified universe.\n\n This method is guaranteed to return all updated fields.\n This method may additionally return the full resource.",
+        "operationId": "Cloud_UpdateUniverse",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Universe"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Universe"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe:write"],
+            "title": "Update Universe"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Gets the specified place.",
+        "operationId": "Cloud_GetPlace",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Place"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get Place"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Place",
+            "name": "Place"
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Cloud"],
+        "description": "Updates the specified place.",
+        "operationId": "Cloud_UpdatePlace",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Place"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Place"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe.place:write"],
+            "title": "Update Place"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Place",
+            "name": "Place"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/instances/{instance}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Gets an instance and its property data.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
+        "operationId": "Cloud_GetInstance",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "description": "The instance ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/GetInstanceMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/Instance"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe.place.instance:read"],
+            "title": "Get Instance"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Instance",
+            "name": "Instance"
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Cloud"],
+        "description": "Updates an instance's property data.\n\n When updating a `Script` instance's source property, the maximum supported\n property size is 200,000 bytes after UTF-8 encoding.",
+        "operationId": "Cloud_UpdateInstance",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "description": "The instance ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Instance"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/UpdateInstanceMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/Instance"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe.place.instance:write"],
+            "title": "Update Instance"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Instance",
+            "name": "Instance"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/instances/{instance}:listChildren": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Lists an instance's children.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
+        "operationId": "Cloud_ListInstanceChildren",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "description": "The instance ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of child instance to return. The service may return\n fewer than this value. If unspecified, at most 200 children will be\n returned. The maximum value is 200; values above 200 will be coerced to\n 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 200, inclusive",
+              "exampleValues": [100]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous `ListInstanceChildrenRequest` call.\n Provide this to retrieve the subsequent page.\n\n When paginating, all other parameters provided to\n `ListInstanceChildrenRequest` must match the call that provided the page\n token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/ListInstanceChildrenMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/ListInstanceChildrenResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe.place.instance:read"],
+            "title": "List Instance Children"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Instance",
+            "name": "Instance"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/subscription-products/{subscription-product}/subscriptions/{subscription}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Get the subscription.",
+        "operationId": "Cloud_GetSubscription",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscription-product",
+            "in": "path",
+            "description": "The subscription-product ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscription",
+            "in": "path",
+            "description": "The subscription ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the subscription.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": ["VIEW_UNSPECIFIED", "BASIC", "FULL"],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": ["VIEW_UNSPECIFIED"]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Subscription"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe:write",
+              "universe.subscription-product.subscription:read"
+            ],
+            "title": "Get Subscription"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Subscription",
+            "name": "Subscription"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}:restartServers": {
+      "post": {
+        "tags": ["Cloud"],
+        "description": "Restarts all currently running servers for a given universe. Used for\n releasing experience updates.",
+        "operationId": "Cloud_RestartUniverseServers",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestartUniverseServersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestartUniverseServersResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["universe:write"],
+            "title": "Restart Universe Servers"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/Universe",
+            "name": "Universe"
+          }
+        }
+      }
+    },
+    "/v2/users/{user}": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Get a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
+        "operationId": "Cloud_GetUser",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "The user ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get User"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/User",
+            "name": "User"
+          }
+        }
+      }
+    },
+    "/v2/users/{user}/inventory-items": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "List inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
+        "operationId": "Cloud_ListInventoryItems",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "The user ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of inventory items to return. The service might return\n fewer than this value. If unspecified, at most 10 inventory items are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [10]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n See the\n [filtering](/cloud/reference/patterns#list-inventory-items)\n documentation for more information.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListInventoryItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "List Inventory Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/InventoryItem",
+            "name": "InventoryItem"
+          }
+        }
+      }
+    },
+    "/v2/users/{user}/notifications": {
+      "post": {
+        "tags": ["Cloud"],
+        "description": "Sends a notification to a user.",
+        "operationId": "Cloud_CreateUserNotification",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "The user ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserNotification"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserNotification"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "STABLE",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": ["user.user-notification:write"],
+            "title": "Create User Notification"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserNotification",
+            "name": "UserNotification"
+          }
+        }
+      }
+    },
+    "/v2/users/{user}:generateThumbnail": {
+      "get": {
+        "tags": ["Cloud"],
+        "description": "Generates and returns the URL for the user's avatar thumbnail.",
+        "operationId": "Cloud_GenerateUserThumbnail",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "The user ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "Size of the generated thumbnail. The generated thumbnail will have `size *\n size` dimension.\n\n Currently supported values:\n 48, 50, 60, 75, 100, 110, 150, 180, 352, 420, 720\n Default is 420.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Specify the format of the generated thumbnail. Default is `.png`.",
+            "schema": {
+              "enum": ["FORMAT_UNSPECIFIED", "PNG", "JPEG"],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": ["FORMAT_UNSPECIFIED"]
+              }
+            }
+          },
+          {
+            "name": "shape",
+            "in": "query",
+            "description": "Specify the shape of the thumbnail. Default is circular.",
+            "schema": {
+              "enum": ["SHAPE_UNSPECIFIED", "ROUND", "SQUARE"],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": ["SHAPE_UNSPECIFIED"]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/GenerateUserThumbnailMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/GenerateUserThumbnailResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Generate User Thumbnail"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/User",
+            "name": "User"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AvatarAsset": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "description": "Asset ID.\n\n Format: \"assets/123\"\n\n Note: This resource path refers to apis.roblox.com/assets.  That is,\n the full URI of the asset might look like\n \"apis.roblox.com/assets/v1/assets/123\"."
+          },
+          "meta": {
+            "$ref": "#/components/schemas/AvatarAsset_Meta",
+            "description": "Metadata that describes how the asset should be equipped within body."
+          }
+        },
+        "description": "AvatarAsset represents an body part asset or accessory that belongs to a\n body. Need to be in sync with avatar-core source definition:\n https://github.rbx.com/Roblox/avatar-core/blob/master/protos/roblox/avatarcore/outfits/v1beta1/outfits.proto#L27",
+        "x-oneOf": {
+          "Meta": ["meta"]
+        }
+      },
+      "AvatarAsset_AssetPosition": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "description": "X adjustment of the modified position in studs.",
+            "format": "float"
+          },
+          "y": {
+            "type": "number",
+            "description": "y adjustment of the modified position in studs.",
+            "format": "float"
+          },
+          "z": {
+            "type": "number",
+            "description": "Z adjustment of the modified position in studs.",
+            "format": "float"
+          }
+        },
+        "description": "Accessory refinement property, allowing consumers to control how much an\n asset has its position adjusted with respect to its default location."
+      },
+      "AvatarAsset_AssetRotation": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "description": "X degrees of the rotation.",
+            "format": "float"
+          },
+          "y": {
+            "type": "number",
+            "description": "Y degrees of the rotation.",
+            "format": "float"
+          },
+          "z": {
+            "type": "number",
+            "description": "Z degrees of the rotation.",
+            "format": "float"
+          }
+        },
+        "description": "Accessory refinement property, allowing consumers to control how much an\n asset is rotated with respect to its default orientation."
+      },
+      "AvatarAsset_AssetScale": {
+        "type": "object",
+        "properties": {
+          "scale": {
+            "type": "number",
+            "description": "Total scale multiplier of accessory (deprecated).",
+            "format": "float"
+          },
+          "x": {
+            "type": "number",
+            "description": "X scale multiplier of accessory.",
+            "format": "float"
+          },
+          "y": {
+            "type": "number",
+            "description": "Y scale multiplier of accessory.",
+            "format": "float"
+          },
+          "z": {
+            "type": "number",
+            "description": "Z scale multiplier of accessory.",
+            "format": "float"
+          }
+        },
+        "description": "Accessory refinement property, allowing consumers to control how much an\n asset is scaled with respect to its default size."
+      },
+      "AvatarAsset_Meta": {
+        "type": "object",
+        "properties": {
+          "layeredClothingVersion": {
+            "type": "integer",
+            "description": "Layered clothing property, allowing consumers to track business-logic\n difference between backwards-incompatible structure revisions.",
+            "format": "int32"
+          },
+          "order": {
+            "type": "integer",
+            "description": "In what order this asset is worn.",
+            "format": "int32"
+          },
+          "puffiness": {
+            "type": "number",
+            "description": "Puffiness Controls how much underlying clothing items inflate the current\n clothing item. Range: -1 ~ 1",
+            "format": "float"
+          },
+          "position": {
+            "$ref": "#/components/schemas/AvatarAsset_AssetPosition",
+            "description": "Position controls how the asset has its position adjusted relative to its\n default location"
+          },
+          "rotation": {
+            "$ref": "#/components/schemas/AvatarAsset_AssetRotation",
+            "description": "Rotation controls how much an asset is rotated with respect to its\n default orientation"
+          },
+          "scale": {
+            "$ref": "#/components/schemas/AvatarAsset_AssetScale",
+            "description": "Scale controls how much an asset is scaled with respect to its default\n size."
+          }
+        },
+        "description": "Metadata that describes how the asset should be equipped on an avatar.",
+        "x-oneOf": {
+          "LayeredClothingVersion": ["layeredClothingVersion"],
+          "Order": ["order"],
+          "Position": ["position"],
+          "Puffiness": ["puffiness"],
+          "Rotation": ["rotation"],
+          "Scale": ["scale"]
+        }
+      },
+      "AvatarBody": {
+        "required": ["name"],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the AvatarBody.\n Format: avatar-bodies/{avatar_body}"
+          },
+          "name": {
+            "type": "string",
+            "description": "User-defined name",
+            "x-example-values": {
+              "exampleValues": ["New Outfit"]
+            }
+          },
+          "colors": {
+            "$ref": "#/components/schemas/BodyColors",
+            "description": "Body part colors"
+          },
+          "bodyAssets": {
+            "$ref": "#/components/schemas/BodyAssets",
+            "description": "Body part assets"
+          },
+          "bodyScale": {
+            "$ref": "#/components/schemas/BodyScale",
+            "description": "Body scale"
+          },
+          "otherAssets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AvatarAsset"
+            },
+            "description": "Assets that are not body parts"
+          },
+          "avatarType": {
+            "enum": [
+              "PLAYER_AVATAR_TYPE_UNSPECIFIED",
+              "PLAYER_AVATAR_TYPE_R6",
+              "PLAYER_AVATAR_TYPE_R15"
+            ],
+            "type": "string",
+            "description": "Body type",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["PLAYER_AVATAR_TYPE_UNSPECIFIED"]
+            }
+          },
+          "operationId": {
+            "type": "string",
+            "description": "Operation Id\n go/aip/not-precedent: This is a short-term solution to meet Expedition time\n constraints that will only be exposed to Engine-side internal code. Methods\n using this resource will never be exposed through API Gateway while this\n field exists."
+          }
+        },
+        "description": "Represents an avatar body -- outfit that consists of multiple bodypart\n assets. The body is created in experience\n Fields available for update: colors, body_assets, other_assets, scale",
+        "x-resource": true,
+        "x-oneOf": {
+          "BodyAssets": ["bodyAssets"]
+        }
+      },
+      "AvatarMarketplaceOrder": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the avatar marketplace order.\n Format: avatar-marketplace-orders/{avatar_marketplace_order}",
+            "x-example-values": {
+              "exampleValues": [
+                "avatar-marketplace-orders/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          },
+          "purchasingUser": {
+            "immutable": true,
+            "type": "string",
+            "description": "Purchaser of the order.",
+            "x-example-values": {
+              "exampleValues": ["users/21557"]
+            }
+          },
+          "fulfillmentGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AvatarMarketplaceOrder_FulfillmentGroup"
+            },
+            "description": "List of fulfillment groups in the order."
+          },
+          "purchasePlace": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Place the order was made in, if it was made in a place.",
+            "x-example-values": {
+              "exampleValues": ["universes/123/places/123"]
+            }
+          },
+          "context": {
+            "$ref": "#/components/schemas/AvatarMarketplaceOrder_Context",
+            "description": "Context of the order. Input only."
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Time at which the order was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "status": {
+            "readOnly": true,
+            "enum": ["UNKNOWN", "PENDING", "RESERVED", "SUCCEEDED", "FAILED"],
+            "type": "string",
+            "description": "Fulfillment state of the whole order.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          },
+          "receipt": {
+            "$ref": "#/components/schemas/AvatarMarketplaceOrder_Receipt",
+            "description": "Receipt for the order."
+          },
+          "batchPurchaseAuthToken": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "An encrypted batch purchase authentication token that is required when\n making in-experience purchases. This is only used by the first-party use\n case of purchasing collectibles in-experience via Game Engine\n PromptPurchase. The token is fetched from backends by RCC and passed back\n to the Roblox Client to include here into the Order creation request to\n prove the purchase was authorized by the experience creator. As a UML\n Sequence Diagram:\n   participant User\n   participant Client\n   participant RCC\n   participant OrdersApi\n   participant Collectibles\n   User -> RCC: Completed Quest, trigger PromptBulkPurchase\n   RCC -> Collectibles: GenerateBatchPurchaseAuthToken\n   RCC -> Client: PromptBulkPurchase w/ AuthToken\n   Client -> User: Show Purchase Prompt\n   User -> Client: Approve purchase\n   Client -> OrdersApi: CreateOrder w/ AuthToken + User Auth"
+          }
+        },
+        "description": "Represents an order in the Avatar Marketplace.",
+        "x-resource": true
+      },
+      "AvatarMarketplaceOrder_Context": {
+        "type": "object",
+        "properties": {
+          "productSurface": {
+            "enum": [
+              "UNKNOWN",
+              "OAUTH_APP",
+              "GAME_ENGINE",
+              "SHOPPING_CART_WEB"
+            ],
+            "type": "string",
+            "description": "Product surface where the order was made, eg. game_engine or\n shopping_cart.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          }
+        },
+        "description": "Contextual information, generally used for logging."
+      },
+      "AvatarMarketplaceOrder_FulfillmentGroup": {
+        "type": "object",
+        "properties": {
+          "strategy": {
+            "immutable": true,
+            "enum": ["UNKNOWN", "BEST_EFFORT"],
+            "type": "string",
+            "description": "Strategy to use to fulfill the items in this group.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          },
+          "lineItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AvatarMarketplaceOrder_LineItem"
+            },
+            "description": "List of line items in the fulfillment group."
+          },
+          "status": {
+            "readOnly": true,
+            "enum": ["UNKNOWN", "PENDING", "RESERVED", "SUCCEEDED", "FAILED"],
+            "type": "string",
+            "description": "Status of the fulfillment group.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          }
+        },
+        "description": "Groups of line items to fulfill together."
+      },
+      "AvatarMarketplaceOrder_LineItem": {
+        "type": "object",
+        "properties": {
+          "collectibleProductId": {
+            "type": "string",
+            "description": "ID of the product to purchase if it is a Collectible."
+          },
+          "virtualEconomyProductId": {
+            "type": "string",
+            "description": "ID of the product to purchase in the VirtualEconomy system."
+          },
+          "limitedV1InstanceId": {
+            "type": "string",
+            "description": "Instance ID for a Limited 1.0 item (aka UserAssetId)."
+          },
+          "agreedPriceRobux": {
+            "immutable": true,
+            "type": "integer",
+            "description": "Agreed price on the item. Transcoded as string in JSON.",
+            "format": "int64"
+          },
+          "assetId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "ID of the asset being purchased if it is an asset."
+          },
+          "bundleId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "ID of the bundle being purchased if it is a Bundle."
+          },
+          "status": {
+            "readOnly": true,
+            "enum": ["UNKNOWN", "PENDING", "RESERVED", "SUCCEEDED", "FAILED"],
+            "type": "string",
+            "description": "Status of the line item.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          },
+          "errorReason": {
+            "readOnly": true,
+            "enum": [
+              "UNKNOWN",
+              "INTERNAL",
+              "INSUFFICIENT_ROBUX",
+              "QUOTA_EXCEEDED",
+              "INVALID_REQUEST",
+              "INVALID_PRODUCT_TYPE",
+              "NOT_FOR_SALE",
+              "NOT_AVAILABLE_FOR_PURCHASER",
+              "PRICE_MISMATCH",
+              "SOLD_OUT",
+              "PURCHASE_PLACE_INVALID",
+              "PURCHASER_IS_SELLER",
+              "EXPERIENCE_VERIFICATION_ERROR",
+              "QUANTITY_LIMIT_EXCEEDED",
+              "MISSING_PURCHASE_AUTH_TOKEN",
+              "INVALID_PURCHASE_AUTH_TOKEN",
+              "ALREADY_OWNED",
+              "INSUFFICIENT_MEMBERSHIP",
+              "ACCOUNT_RESTRICTED"
+            ],
+            "type": "string",
+            "description": "Reason for the error, if the status is an error status.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["UNKNOWN"]
+            }
+          }
+        },
+        "description": "Specific item in the order.",
+        "x-oneOf": {
+          "itemTargetId": ["assetId", "bundleId"],
+          "productId": [
+            "collectibleProductId",
+            "virtualEconomyProductId",
+            "limitedV1InstanceId"
+          ]
+        }
+      },
+      "AvatarMarketplaceOrder_Receipt": {
+        "type": "object",
+        "properties": {
+          "purchasedItemsCount": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "Total number of items successfully purchased so far.",
+            "format": "int32"
+          },
+          "totalSpentRobux": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "Total robux spent on items successfully purchased.",
+            "format": "int64"
+          }
+        },
+        "description": "Receipt listing post-execution information."
+      },
+      "BodyAssets": {
+        "required": [
+          "head",
+          "torso",
+          "rightArm",
+          "leftArm",
+          "rightLeg",
+          "leftLeg"
+        ],
+        "type": "object",
+        "properties": {
+          "head": {
+            "$ref": "#/components/schemas/DynamicHead",
+            "description": "Dynamic head consisting of multiple assets"
+          },
+          "torso": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Torso"
+          },
+          "rightArm": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Right Arm"
+          },
+          "leftArm": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Left Arm"
+          },
+          "rightLeg": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Right Leg"
+          },
+          "leftLeg": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Left Leg"
+          }
+        },
+        "description": "Assets that are body parts"
+      },
+      "BodyColors": {
+        "required": [
+          "headColor",
+          "torsoColor",
+          "rightArmColor",
+          "leftArmColor",
+          "rightLegColor",
+          "leftLegColor"
+        ],
+        "type": "object",
+        "properties": {
+          "headColor": {
+            "type": "string",
+            "description": "Head color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          },
+          "torsoColor": {
+            "type": "string",
+            "description": "Torso color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          },
+          "rightArmColor": {
+            "type": "string",
+            "description": "Right arm color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          },
+          "leftArmColor": {
+            "type": "string",
+            "description": "Left arm color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          },
+          "rightLegColor": {
+            "type": "string",
+            "description": "Right leg color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          },
+          "leftLegColor": {
+            "type": "string",
+            "description": "Left leg color",
+            "x-example-values": {
+              "exampleValues": ["#FFFFFF"]
+            }
+          }
+        },
+        "description": "Colors of all body parts in format of Color Hex Code, E.g. \"#FFFFFF\" (white)\n Need to be in sync with avatar-core source definition:\n https://github.rbx.com/Roblox/avatar-core/blob/master/protos/roblox/avatarcore/outfits/v1beta1/outfits.proto#L27"
+      },
+      "BodyScale": {
+        "required": ["heightScale", "widthScale"],
+        "type": "object",
+        "properties": {
+          "heightScale": {
+            "type": "number",
+            "description": "Determines by what factor the height (top-to-bottom distance) is scaled.\n Range 0.9-1.05.",
+            "format": "double",
+            "x-example-values": {
+              "exampleValues": [1]
+            }
+          },
+          "widthScale": {
+            "type": "number",
+            "description": "Determines by what factor the width (left-to-right distance) is\n scaled. Range: 0.7-1.0",
+            "format": "double",
+            "x-example-values": {
+              "exampleValues": [1]
+            }
+          },
+          "headScale": {
+            "type": "number",
+            "description": "Determines by what factor the Head is scaled. Range 0.95-1.0",
+            "format": "double"
+          },
+          "proportion": {
+            "type": "number",
+            "description": "Determines how wide (0) or narrow (1) a Humanoid rig. Range 0.0-1.0",
+            "format": "double"
+          },
+          "bodyType": {
+            "type": "number",
+            "description": "Determines by which the shape of a Humanoid rig is interpolated. Range\n 0.0-1.0",
+            "format": "double"
+          }
+        },
+        "description": "Represent scale factors of different aspects of an avatar body.\n Need to be in sync with avatar-core source definition:\n https://github.rbx.com/Roblox/avatar-core/blob/master/protos/roblox/avatarcore/outfits/v1beta1/outfits.proto#L27",
+        "x-oneOf": {
+          "BodyType": ["bodyType"],
+          "HeadScale": ["headScale"],
+          "Proportion": ["proportion"]
+        }
+      },
+      "CreatorStoreProduct": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the Creator Store product.\n\n Format: creator-store-products/{creator_store_product}",
+            "x-example-values": {
+              "exampleValues": [
+                "creator-store-products/ProductNamespace-ProductType-123"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the product."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the product."
+          },
+          "basePrice": {
+            "$ref": "#/components/schemas/Money",
+            "description": "The base price of the product. Only USD and specific values (based on\n product type) are supported. See the documentation on `product_type` for\n details.\n\n The actual purchase price is based on this base price, but often differs\n slightly due to locale-specific considerations.\n\n Set this to 0 to make the product free."
+          },
+          "purchasePrice": {
+            "$ref": "#/components/schemas/Money",
+            "description": "The effective purchase price for the user, after factoring in\n locale-specific considerations."
+          },
+          "published": {
+            "type": "boolean",
+            "description": "Whether the product is considered published, from the seller's perspective.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "restrictions": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "enum": [
+                "RESTRICTION_UNSPECIFIED",
+                "SOLD_ITEM_RESTRICTED",
+                "SELLER_TEMPORARILY_RESTRICTED",
+                "SELLER_PERMANENTLY_RESTRICTED",
+                "SELLER_NO_LONGER_ACTIVE"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": ["RESTRICTION_UNSPECIFIED"]
+              }
+            },
+            "description": "Restrictions applied to the product. A product can have multiple\n restrictions active at one time."
+          },
+          "purchasable": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the product is purchasable.\n\n For this value to be true, `published` must be true and `restrictions` must\n be empty.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "userSeller": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The Roblox user selling the product. For now, this value is always a\n Roblox user, but code should assume this field may expand to other types\n of sellers, such as groups, in the future."
+          },
+          "groupSeller": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The Roblox group selling the product."
+          },
+          "modelAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a model with this asset ID."
+          },
+          "pluginAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a plugin with this asset ID."
+          },
+          "audioAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is an audio file with this asset ID."
+          },
+          "decalAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a decal with this asset ID."
+          },
+          "meshPartAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a mesh part with this asset ID."
+          },
+          "videoAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a video with this asset ID."
+          },
+          "fontFamilyAssetId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The Creator Store product is a font family with this asset ID."
+          }
+        },
+        "description": "Represents a product in the Creator Store.",
+        "x-resource": true,
+        "x-oneOf": {
+          "productType": [
+            "modelAssetId",
+            "pluginAssetId",
+            "audioAssetId",
+            "decalAssetId",
+            "meshPartAssetId",
+            "videoAssetId",
+            "fontFamilyAssetId"
+          ],
+          "seller": ["userSeller", "groupSeller"]
+        }
+      },
+      "DataStore": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the data store.\n Format: universes/{universe}/data-stores/{data_store}"
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the data store was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The ID of the data store. Matches the last segment of the path."
+          }
+        },
+        "description": "Represents a data store.",
+        "x-resource": true
+      },
+      "DataStoreEntry": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the data store entry.\n Format:\n universes/{universe}/data-stores/{data_store}/entries/{data_store_entry}\n Format:\n universes/{universe}/data-stores/{data_store}/scopes/{data_store_scope}/entries/{data_store_entry}"
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the data store entry was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "revisionId": {
+            "readOnly": true,
+            "immutable": true,
+            "type": "string",
+            "description": "The revision ID of the data store entry.\n\n A new revision is committed whenever the entry is changed in any way.\n\n The format is an arbitrary string.\n Example: \"foo\""
+          },
+          "revisionCreateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the revision was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "state": {
+            "readOnly": true,
+            "enum": ["STATE_UNSPECIFIED", "ACTIVE", "DELETED"],
+            "type": "string",
+            "description": "The state of the data store entry.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["STATE_UNSPECIFIED"]
+            }
+          },
+          "etag": {
+            "readOnly": true,
+            "type": "string",
+            "description": "This checksum is computed by the server based on the value of other\n fields, and may be sent on update and delete requests (and potentially\n on certain custom methods) to ensure the client has an up-to-date\n value before proceeding."
+          },
+          "value": {
+            "$ref": "#/components/schemas/GoogleProtobufValue",
+            "description": "The value of the entry."
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource ID of the entry.\n\n This matches the last segment of the resource path, and is provided\n only for convenience."
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Users associated with the entry."
+          },
+          "attributes": {
+            "type": "object",
+            "description": "An arbitrary set of attributes associated with the entry."
+          }
+        },
+        "description": "A key-value entry in a data store.",
+        "x-resource": true
+      },
+      "DataStoreScope": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the data store scope.\n Format:\n universes/{universe}/data-stores/{data_store}/scopes/{data_store_scope}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/data-stores/some-data-store/scopes/some-data-store-scope"
+              ]
+            }
+          }
+        },
+        "description": "Represents a subdivision of entries within a data store.\n\n Scopes are optional, and their usage is discouraged. When scope is\n omitted in the URI path, the default scope \"global\" is used.\n\n When the scope is \"global\", the resource path omits scope. That is, the\n `path` of an entry with `\"global\"` scope is of the form\n `\"universes/1234/data-stores/5678/entries/my-entry\"`.\n\n Use of the collection wildcard (`-`) as a scope name is discouraged;\n listing entries in just that scope is not supported. See\n ListDataStoreEntries for more information.",
+        "x-resource": true
+      },
+      "Decimal": {
+        "type": "object",
+        "properties": {
+          "significand": {
+            "type": "integer",
+            "description": "The significant digits of the number.",
+            "format": "int64"
+          },
+          "exponent": {
+            "type": "integer",
+            "description": "Represents the position of the decimal point within the significand.\n\n When the exponent is 0, the value of the Decimal is simply the value of\n `significand`.\n\n When the exponent is greater than 0, represents the number of trailing\n zeroes after the significant digits.\n\n When the exponent is less than 0, represents how many of the significant\n digits (and implicit leading zeroes, as needed) come after the decmial\n point.",
+            "format": "int32"
+          }
+        },
+        "description": "Represents a decimal number in a form similar to scientific notation.\n\n Examples:\n  - 17            === `{significand: 17   exponent: 0} (or just {significand:\n    17})`\n  - -0.005        === `{significand: -5   exponent: -3}`\n  - 33.5 million  === `{significand: 335  exponent: 5}`\n  - 11/8 (1.375)  === `{significand: 1375 exponent: -3}`\n\n Note that the range of a Decimal exceeds that of a JSON `number` (double), as\n well as that of a `decimal64`."
+      },
+      "DynamicHead": {
+        "required": ["dynamicHead", "mood"],
+        "type": "object",
+        "properties": {
+          "dynamicHead": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Dynamic head asset, which is the main component of dynamic head outfit"
+          },
+          "mood": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Mood is rendered on user's face"
+          },
+          "eyebrowAccessory": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Eyebrow accessory of head"
+          },
+          "eyelashAccessory": {
+            "$ref": "#/components/schemas/AvatarAsset",
+            "description": "Eyelash accessory of head"
+          }
+        },
+        "description": "Assets that belong to an avatar body's head.",
+        "x-oneOf": {
+          "EyebrowAccessory": ["eyebrowAccessory"],
+          "EyelashAccessory": ["eyelashAccessory"]
+        }
+      },
+      "GenerateUserThumbnailMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n GenerateUserThumbnail request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for GenerateUserThumbnail operations."
+      },
+      "GenerateUserThumbnailResponse": {
+        "type": "object",
+        "properties": {
+          "imageUri": {
+            "type": "string",
+            "description": "URI for the generated thumbnail."
+          }
+        },
+        "description": "Returns the URI for the generated thumbnail."
+      },
+      "GetInstanceMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n GetInstance request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for GetInstance operations."
+      },
+      "GoogleProtobufAny": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string",
+            "description": "The type of the serialized message."
+          }
+        },
+        "additionalProperties": true,
+        "description": "Contains an arbitrary serialized message along with a @type that describes the type of the serialized message."
+      },
+      "GoogleProtobufValue": {
+        "description": "Represents a dynamically typed value which can be either null, a number, a string, a boolean, a recursive struct value, or a list of values."
+      },
+      "Group": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the group.\n\n Format: groups/{group}",
+            "x-example-values": {
+              "exampleValues": ["groups/7"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the group was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the group was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "A unique ID that identifies the group.",
+            "x-example-values": {
+              "exampleValues": ["7"]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the group.\n\n Must be non-empty. Has a maximum limit of 50 characters.",
+            "x-example-values": {
+              "exampleValues": ["Roblox"]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the group.\n\n Has a maximum limit of 1000 characters.",
+            "x-example-values": {
+              "exampleValues": ["Official fan club of Roblox!"]
+            }
+          },
+          "owner": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource path of the owner.\n\n If the group is abandoned and has no owner, this field is not returned.",
+            "x-example-values": {
+              "exampleValues": ["users/21557"]
+            }
+          },
+          "memberCount": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "The total number of members within a group.",
+            "format": "int32",
+            "x-example-values": {
+              "exampleValues": [10196297]
+            }
+          },
+          "publicEntryAllowed": {
+            "type": "boolean",
+            "description": "Whether the group allows public entry.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "locked": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the group is locked.\n\n A locked group is a group that has been\n moderated/banned by Roblox.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "verified": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the group has the verified badge.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          }
+        },
+        "description": "A mini-community within Roblox for communication, discussions, and more.",
+        "x-resource": true,
+        "x-oneOf": {
+          "Owner": ["owner"]
+        }
+      },
+      "GroupJoinRequest": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the group_join_request.\n Format: groups/{group}/join-requests/{group_join_request}",
+            "x-example-values": {
+              "exampleValues": ["groups/7/join-requests/156"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the group_join_request was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "user": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource path of the user.",
+            "x-example-values": {
+              "exampleValues": ["users/156"]
+            }
+          }
+        },
+        "description": "A join request for a group.\n\n Will only be accessible to requesters with the `Accept Join Requests`\n permission.",
+        "x-resource": true
+      },
+      "GroupMembership": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the group membership.\n\n Format: groups/{group}/memberships/{group_membership}",
+            "x-example-values": {
+              "exampleValues": ["groups/7/memberships/MjE1NTc"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp of when the group membership was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp of when the group membership was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "user": {
+            "immutable": true,
+            "type": "string",
+            "description": "The resource path of a member of the group.",
+            "x-example-values": {
+              "exampleValues": ["users/21557"]
+            }
+          },
+          "role": {
+            "type": "string",
+            "description": "The resource path for the role of the group member.",
+            "x-example-values": {
+              "exampleValues": ["groups/7/roles/52"]
+            }
+          }
+        },
+        "description": "A membership to a group.",
+        "x-resource": true
+      },
+      "GroupRole": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the group role.\n\n Format: groups/{group}/roles/{group_role}",
+            "x-example-values": {
+              "exampleValues": ["groups/7/roles/200"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the GroupRole was created.\n\n Visible only to owners of the group.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the GroupRole was last updated.\n\n Visible only to owners of the group.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "A unique ID that identifies a role.",
+            "x-example-values": {
+              "exampleValues": ["200"]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the role.\n\n Has a maximum limit of 100 characters. Names above the limit are\n rejected.",
+            "x-example-values": {
+              "exampleValues": ["Member"]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the role.\n\n Has a maximum limit of 1000 characters. Strings above the limit are\n rejected. Visible only to owners of the group.",
+            "x-example-values": {
+              "exampleValues": ["This is a description for the role"]
+            }
+          },
+          "rank": {
+            "type": "integer",
+            "description": "The rank of the role.\n\n The minimum value is 0. The maximum value is 255.",
+            "format": "int32",
+            "x-example-values": {
+              "description": "An integer between 0 and 255, inclusive",
+              "exampleValues": [1]
+            }
+          },
+          "memberCount": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "Total number of members within a role.\n\n This field is not returned for guest roles.",
+            "format": "int32",
+            "x-example-values": {
+              "exampleValues": [10223136]
+            }
+          },
+          "permissions": {
+            "$ref": "#/components/schemas/GroupRole_RolePermissions",
+            "description": "The permissions granted for this role.\n\n This value is populated based on the read scope and role of the authorized\n user or API key creator. If the user or creator is the owner of the parent\n group, they are able to view all role permissions in the group. If the user\n or creator is a member of the parent group, they are able to view their\n role's permissions in the group. Anyone can view guest permissions. In\n the case that someone can't view the permissions, this field is not\n returned."
+          }
+        },
+        "description": "A configurable property to grant specific privileges for members within a\n group.",
+        "x-resource": true,
+        "x-oneOf": {
+          "Description": ["description"],
+          "MemberCount": ["memberCount"]
+        }
+      },
+      "GroupRole_RolePermissions": {
+        "type": "object",
+        "properties": {
+          "viewWallPosts": {
+            "type": "boolean",
+            "description": "View group wall.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "createWallPosts": {
+            "type": "boolean",
+            "description": "Post on group wall.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "deleteWallPosts": {
+            "type": "boolean",
+            "description": "Delete group wall posts.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "viewGroupShout": {
+            "type": "boolean",
+            "description": "View group shout.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "createGroupShout": {
+            "type": "boolean",
+            "description": "Post group shout.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "changeRank": {
+            "type": "boolean",
+            "description": "Manage lower-ranked member ranks.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "acceptRequests": {
+            "type": "boolean",
+            "description": "Accept join requests.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "exileMembers": {
+            "type": "boolean",
+            "description": "Kick lower-ranked members.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "manageRelationships": {
+            "type": "boolean",
+            "description": "Manage allies and enemies.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "viewAuditLog": {
+            "type": "boolean",
+            "description": "View audit log.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "spendGroupFunds": {
+            "type": "boolean",
+            "description": "Spend group funds.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "advertiseGroup": {
+            "type": "boolean",
+            "description": "Advertise group.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "createAvatarItems": {
+            "type": "boolean",
+            "description": "Create avatar items.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "manageAvatarItems": {
+            "type": "boolean",
+            "description": "Manage avatar items.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "manageGroupUniverses": {
+            "type": "boolean",
+            "description": "Manage group universes.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "viewUniverseAnalytics": {
+            "type": "boolean",
+            "description": "View universe analytics.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "createApiKeys": {
+            "type": "boolean",
+            "description": "Create group API Keys.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "manageApiKeys": {
+            "type": "boolean",
+            "description": "Manage all group API keys.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          }
+        },
+        "description": "Represents the permissions on a role."
+      },
+      "GroupShout": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the group shout.\n\n Format: groups/{group}/shout",
+            "x-example-values": {
+              "exampleValues": ["groups/7/shout"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp of when the group shout was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp of when the group shout was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "content": {
+            "type": "string",
+            "description": "The shout content.\n\n Has a maximum limit of 255 characters.",
+            "x-example-values": {
+              "exampleValues": [
+                "This is the group shout content to share with everyone."
+              ]
+            }
+          },
+          "poster": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The resource path for the poster of the group shout.\n\n If the group is abandoned, has no owner, and has never had a shout, this\n field is not returned.",
+            "x-example-values": {
+              "exampleValues": ["users/21557"]
+            }
+          }
+        },
+        "description": "A single post on a group that can hold important group updates or other\n information.",
+        "x-resource": true,
+        "x-oneOf": {
+          "Poster": ["poster"]
+        }
+      },
+      "Instance": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the instance.\n Format: universes/{universe}/places/{place}/instances/{instance}"
+          },
+          "hasChildren": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "whether the instance has any children instance",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "engineInstance": {
+            "$ref": "#/components/schemas/roblox.engine.Instance",
+            "description": "the property details of the instance"
+          }
+        },
+        "description": "Represents a data model instance.",
+        "x-resource": true
+      },
+      "InventoryItem": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the inventory item.\n\n Format: users/{user}/inventory-items/{inventory_item}",
+            "x-example-values": {
+              "exampleValues": [
+                "users/3725356332/inventory-items/VVNFUl9BU1NFVF9JRD0xNzM0MTM3ODE3MjA"
+              ]
+            }
+          },
+          "assetDetails": {
+            "$ref": "#/components/schemas/InventoryItem_AssetDetails",
+            "description": "Populated if this item is an asset."
+          },
+          "badgeDetails": {
+            "$ref": "#/components/schemas/InventoryItem_BadgeDetails",
+            "description": "Populated if this item is a badge."
+          },
+          "gamePassDetails": {
+            "$ref": "#/components/schemas/InventoryItem_GamePassDetails",
+            "description": "Populated if this item is a game pass."
+          },
+          "privateServerDetails": {
+            "$ref": "#/components/schemas/InventoryItem_PrivateServerDetails",
+            "description": "Populated if this item is a private server."
+          }
+        },
+        "description": "Represents an item in a user's inventory.",
+        "x-resource": true,
+        "x-oneOf": {
+          "details": [
+            "assetDetails",
+            "badgeDetails",
+            "gamePassDetails",
+            "privateServerDetails"
+          ]
+        }
+      },
+      "InventoryItem_AssetDetails": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "description": "A unique ID that identifies an asset.",
+            "x-example-values": {
+              "exampleValues": ["12928981934"]
+            }
+          },
+          "inventoryItemAssetType": {
+            "enum": [
+              "INVENTORY_ITEM_ASSET_TYPE_UNSPECIFIED",
+              "CLASSIC_TSHIRT",
+              "AUDIO",
+              "HAT",
+              "MODEL",
+              "CLASSIC_SHIRT",
+              "CLASSIC_PANTS",
+              "DECAL",
+              "CLASSIC_HEAD",
+              "FACE",
+              "GEAR",
+              "ANIMATION",
+              "TORSO",
+              "RIGHT_ARM",
+              "LEFT_ARM",
+              "LEFT_LEG",
+              "RIGHT_LEG",
+              "PACKAGE",
+              "PLUGIN",
+              "MESH_PART",
+              "HAIR_ACCESSORY",
+              "FACE_ACCESSORY",
+              "NECK_ACCESSORY",
+              "SHOULDER_ACCESSORY",
+              "FRONT_ACCESSORY",
+              "BACK_ACCESSORY",
+              "WAIST_ACCESSORY",
+              "CLIMB_ANIMATION",
+              "DEATH_ANIMATION",
+              "FALL_ANIMATION",
+              "IDLE_ANIMATION",
+              "JUMP_ANIMATION",
+              "RUN_ANIMATION",
+              "SWIM_ANIMATION",
+              "WALK_ANIMATION",
+              "POSE_ANIMATION",
+              "EMOTE_ANIMATION",
+              "VIDEO",
+              "TSHIRT_ACCESSORY",
+              "SHIRT_ACCESSORY",
+              "PANTS_ACCESSORY",
+              "JACKET_ACCESSORY",
+              "SWEATER_ACCESSORY",
+              "SHORTS_ACCESSORY",
+              "LEFT_SHOE_ACCESSORY",
+              "RIGHT_SHOE_ACCESSORY",
+              "DRESS_SKIRT_ACCESSORY",
+              "EYEBROW_ACCESSORY",
+              "EYELASH_ACCESSORY",
+              "MOOD_ANIMATION",
+              "DYNAMIC_HEAD",
+              "CREATED_PLACE",
+              "PURCHASED_PLACE"
+            ],
+            "type": "string",
+            "description": "The specific asset type of this item.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["INVENTORY_ITEM_ASSET_TYPE_UNSPECIFIED"]
+            }
+          },
+          "instanceId": {
+            "type": "string",
+            "description": "A unique ID that identifies an instance or \"copy\" of the asset that's\n owned by a user.",
+            "x-example-values": {
+              "exampleValues": ["173413781720"]
+            }
+          },
+          "collectibleDetails": {
+            "$ref": "#/components/schemas/InventoryItem_CollectibleDetails",
+            "description": "Additional details if this asset is a collectible. Otherwise, this\n attribute will be omitted."
+          }
+        },
+        "description": "Specific fields only applicable to assets",
+        "x-oneOf": {
+          "CollectibleDetails": ["collectibleDetails"]
+        }
+      },
+      "InventoryItem_BadgeDetails": {
+        "type": "object",
+        "properties": {
+          "badgeId": {
+            "type": "string",
+            "description": "A unique ID that identifies a badge.",
+            "x-example-values": {
+              "exampleValues": ["119925991"]
+            }
+          }
+        },
+        "description": "Specific fields that are applicable to a badge."
+      },
+      "InventoryItem_CollectibleDetails": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "description": "A unique ID of a Roblox item that is a collectible.",
+            "x-example-values": {
+              "exampleValues": ["521cca19-75bb-4e05-a0af-633b1532c24d"]
+            }
+          },
+          "instanceId": {
+            "type": "string",
+            "description": "A unique ID of an individual copy of a collectible with ownership tied\n to a group or user.",
+            "x-example-values": {
+              "exampleValues": ["a8a27d38-ee51-4cf4-8b0a-485d0dfd8607"]
+            }
+          },
+          "instanceState": {
+            "enum": [
+              "COLLECTIBLE_ITEM_INSTANCE_STATE_UNSPECIFIED",
+              "AVAILABLE",
+              "HOLD"
+            ],
+            "type": "string",
+            "description": "The instance state of this specific Collectible Item Instance which\n affects whether it can be resold or traded.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["COLLECTIBLE_ITEM_INSTANCE_STATE_UNSPECIFIED"]
+            }
+          },
+          "serialNumber": {
+            "type": "integer",
+            "description": "If the asset is a Limited, a user-visible number that shows this item is\n the nth replica of the asset. Otherwise, this attribute will be omitted.",
+            "format": "int64",
+            "x-example-values": {
+              "exampleValues": [160]
+            }
+          }
+        },
+        "description": "Specific fields that are applicable to a collectible.",
+        "x-oneOf": {
+          "InstanceId": ["instanceId"],
+          "InstanceState": ["instanceState"],
+          "ItemId": ["itemId"],
+          "SerialNumber": ["serialNumber"]
+        }
+      },
+      "InventoryItem_GamePassDetails": {
+        "type": "object",
+        "properties": {
+          "gamePassId": {
+            "type": "string",
+            "description": "A unique ID that identifies a game pass.",
+            "x-example-values": {
+              "exampleValues": ["83167572"]
+            }
+          }
+        },
+        "description": "Specific fields that are applicable to a game pass."
+      },
+      "InventoryItem_PrivateServerDetails": {
+        "type": "object",
+        "properties": {
+          "privateServerId": {
+            "type": "string",
+            "description": "A unique ID that identifies a private server.",
+            "x-example-values": {
+              "exampleValues": ["175156"]
+            }
+          }
+        },
+        "description": "Specific fields that are applicable to a private server."
+      },
+      "ListGroupJoinRequestsResponse": {
+        "type": "object",
+        "properties": {
+          "groupJoinRequests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupJoinRequest"
+            },
+            "description": "The GroupJoinRequests from the specified Group."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupJoinRequests in the parent collection."
+      },
+      "ListGroupMembershipsResponse": {
+        "type": "object",
+        "properties": {
+          "groupMemberships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupMembership"
+            },
+            "description": "The GroupMemberships from the specified Group."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupMemberships in the parent collection."
+      },
+      "ListGroupRolesResponse": {
+        "type": "object",
+        "properties": {
+          "groupRoles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupRole"
+            },
+            "description": "The GroupRoles from the specified Group."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of GroupRoles in the parent collection."
+      },
+      "ListInstanceChildrenMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n ListInstanceChildren request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for ListInstanceChildren operations."
+      },
+      "ListInstanceChildrenResponse": {
+        "type": "object",
+        "properties": {
+          "instances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Instance"
+            },
+            "description": "A list of children instances."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token, which can be sent as `page_token` to retrieve the next page.\n If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "Returns children instances"
+      },
+      "ListInventoryItemsResponse": {
+        "type": "object",
+        "properties": {
+          "inventoryItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InventoryItem"
+            },
+            "description": "The InventoryItems from the specified User."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of InventoryItems in the parent collection."
+      },
+      "MemoryStore": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the memory store.\n Format: universes/{universe}/memory-store",
+            "x-example-values": {
+              "exampleValues": ["universes/123/memory-store"]
+            }
+          }
+        },
+        "description": "Represents the memory store of the universe.",
+        "x-resource": true
+      },
+      "MemoryStoreQueue": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the memory store queue.\n Format: universes/{universe}/memory-store/queues/{memory_store_queue}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/memory-store/queues/some-memory-store-queue-id"
+              ]
+            }
+          }
+        },
+        "description": "A queue is a linear data structure with a collection of items that either\n follows the first-in-first-out (FIFO) principle or prioritizes elements based\n on predefined criteria.",
+        "x-resource": true
+      },
+      "MemoryStoreQueueItem": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the MemoryStoreQueueItem.\n Format:\n universes/{universe}/memoryStore/scopes/{memory_store_scope}/queues/{memory_store_queue}/items/{memory_store_queue_item}"
+          },
+          "value": {
+            "$ref": "#/components/schemas/GoogleProtobufValue",
+            "description": "The value of the queue item"
+          },
+          "priority": {
+            "type": "integer",
+            "description": "The priority of the queue item",
+            "format": "int32"
+          },
+          "expireTime": {
+            "type": "string",
+            "description": "The expiration time of the item",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "ttl": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "Input only. The TTL for the item.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": ["3.5s"]
+            }
+          }
+        },
+        "description": "Represents queue item name.",
+        "x-resource": true,
+        "x-oneOf": {
+          "expiration": ["expireTime", "ttl"]
+        }
+      },
+      "MemoryStoreSortedMap": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the memory store sorted map.\n Format:\n universes/{universe}/memory-store/sorted-maps/{memory_store_sorted_map}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id"
+              ]
+            }
+          }
+        },
+        "description": "The sorted map data structure of [memory\n stores](https://create.roblox.com/docs/cloud-services/memory-stores) allows\n you to store frequent in-memory data as key-value pairs and maintain a\n specific order based on the keys. Unlike queues, the order of keys entering a\n map doesn't determine the order of processing, making sorted maps useful for\n key-based data organization for implementing in-experience entities for\n engagement such as leaderboards and cross-server auctioning.",
+        "x-resource": true
+      },
+      "MemoryStoreSortedMapItem": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the memory store sorted map item.\n Format:\n universes/{universe}/memory-store/sorted-maps/{memory_store_sorted_map}/items/{memory_store_sorted_map_item}"
+          },
+          "value": {
+            "$ref": "#/components/schemas/GoogleProtobufValue",
+            "description": "The value of the item."
+          },
+          "etag": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The server generated tag of an item."
+          },
+          "expireTime": {
+            "type": "string",
+            "description": "The expiration time of an item.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "ttl": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "Input only. The TTL for the item.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": ["3.5s"]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The name of the item."
+          },
+          "stringSortKey": {
+            "type": "string",
+            "description": "The item will be sorted lexicographically according to this string."
+          },
+          "numericSortKey": {
+            "type": "number",
+            "description": "The item will be sorted according to this number.",
+            "format": "double"
+          }
+        },
+        "description": "Represents a sorted map item name.",
+        "x-resource": true,
+        "x-oneOf": {
+          "expiration": ["expireTime", "ttl"],
+          "sortKey": ["stringSortKey", "numericSortKey"]
+        }
+      },
+      "Money": {
+        "type": "object",
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "description": "A currency code.\n\n This may be a three-letter currency code defined in ISO 4217.\n\n APIs may define additional currency codes that are not included in the ISO\n 4217 standard (for example, virtual currencies or cryptocurrencies). These\n must start with \"X-\", in order to distinguish them from potential future\n ISO 4217 codes. For example, `\"USD\"` is the ISO 4217 code for United States dollar."
+          },
+          "quantity": {
+            "$ref": "#/components/schemas/Decimal",
+            "description": "The quantity of currency."
+          }
+        },
+        "description": "Represents an amount of money with its currency type.\n\n Examples:\n  - Five US dollars === `{currency_code: \"USD\" quantity: {significand: 5}}`"
+      },
+      "Operation": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The server-assigned path, which is only unique within the same service that\n originally returns it. If you use the default HTTP mapping, the\n `path` should be a resource path ending with `operations/{unique_id}`."
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/GoogleProtobufAny",
+            "description": "Service-specific metadata associated with the operation.  It typically\n contains progress information and common metadata such as create time.\n Some services might not provide such metadata.  Any method that returns a\n long-running operation should document the metadata type, if any."
+          },
+          "done": {
+            "type": "boolean",
+            "description": "If the value is `false`, it means the operation is still in progress.\n If `true`, the operation is completed, and either `error` or `response` is\n available.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "error": {
+            "$ref": "#/components/schemas/Status",
+            "description": "The error result of the operation in case of failure or cancellation."
+          },
+          "response": {
+            "$ref": "#/components/schemas/GoogleProtobufAny",
+            "description": "The normal response of the operation in case of success.  If the original\n method returns no data on success, such as `Delete`, the response is\n `google.protobuf.Empty`.  If the original method is standard\n `Get`/`Create`/`Update`, the response should be the resource.  For other\n methods, the response should have the type `XxxResponse`, where `Xxx`\n is the original method name.  For example, if the original method name\n is `TakeSnapshot()`, the inferred response type is\n `TakeSnapshotResponse`."
+          }
+        },
+        "description": "This resource represents a long-running operation that is the result of a\n network API call.",
+        "x-resource": true,
+        "x-oneOf": {
+          "result": ["error", "response"]
+        }
+      },
+      "OrderedDataStore": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the ordered data store.\n Format: universes/{universe}/ordered-data-stores/{ordered_data_store}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/ordered-data-stores/some-ordered-data-store-id"
+              ]
+            }
+          }
+        },
+        "description": "Represents an ordered data store.",
+        "x-resource": true
+      },
+      "OrderedDataStoreEntry": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the ordered data store entry.\n\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}/entries/{ordered_data_store_entry}"
+          },
+          "value": {
+            "type": "number",
+            "description": "The value of the entry.\n\n Always rounded to the nearest integer.",
+            "format": "double"
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The name of the entry."
+          }
+        },
+        "description": "A key-value entry in an ordered data store.",
+        "x-resource": true
+      },
+      "OrderedDataStoreScope": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the ordered data store scope.\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/ordered-data-stores/some-ordered-data-store-id/scopes/some-ordered-data-store-scope-id"
+              ]
+            }
+          }
+        },
+        "description": "Represents scope name.",
+        "x-resource": true
+      },
+      "Place": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the place.\n Format: universes/{universe}/places/{place}",
+            "x-example-values": {
+              "exampleValues": ["universes/123/places/123"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the place was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the place was updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the place.",
+            "x-example-values": {
+              "exampleValues": ["ROBLOX Battle [OPEN]"]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the place.",
+            "x-example-values": {
+              "exampleValues": [
+                "OPEN SOURCE! \n Feel free to check out how we made this game and ask us about it!"
+              ]
+            }
+          },
+          "serverSize": {
+            "type": "integer",
+            "description": "The maximum number of allowed users in a single server.",
+            "format": "int32"
+          }
+        },
+        "description": "Represents a Roblox place.",
+        "x-resource": true,
+        "x-oneOf": {
+          "Description": ["description"],
+          "DisplayName": ["displayName"],
+          "ServerSize": ["serverSize"]
+        }
+      },
+      "RestartUniverseServersRequest": {
+        "required": ["path"],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The name of the universe.\n\n Format: universes/{universe}",
+            "x-example-values": {
+              "exampleValues": ["universes/123"]
+            }
+          }
+        },
+        "description": "Restarts all of the universe's servers."
+      },
+      "RestartUniverseServersResponse": {
+        "type": "object",
+        "properties": {},
+        "description": "Empty response. May later contain a status."
+      },
+      "Secret": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the secret.\n\n Format:  universes/{universe}/secrets/{secret}"
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Secret creation timestamp.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Timestamp when the secret was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "secret": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "The content of the secret. For example: API keys (text), private keys\n (binary).",
+            "format": "bytes"
+          },
+          "keyId": {
+            "type": "string",
+            "description": "Pubilc key identifier. The key with this identifier was used for sealed box\n encryption."
+          },
+          "domain": {
+            "type": "string",
+            "description": "Secret designation: domain name, or a wildcard."
+          }
+        },
+        "description": "A secret represented as a byte array.\n\n Secrets are software-level credentials that allow a program\n to access another program without the need for providing a username and\n a password.",
+        "x-resource": true
+      },
+      "Status": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "description": "A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client."
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GoogleProtobufAny"
+            },
+            "description": "A list of messages that carry the error details.  There is a common set of message types for APIs to use."
+          }
+        },
+        "description": "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors)."
+      },
+      "Subscription": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the subscription.\n\n The subscription ID is the same as the user ID of the user who subscribed.\n Format:\n universes/{universe}/subscription-products/{subscription_product}/subscriptions/{subscription}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/subscription-products/some-subscription-product-id/subscriptions/some-subscription-id"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the subscription was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the subscription was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "active": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the subscription is active.\n\n This is equivalent  to whether `state` is equal to SUBSCRIBED_WILL_RENEW,\n SUBSCRIBED_WILL_NOT_RENEW, or SUBSCRIBED_RENEWAL_PAYMENT_PENDING.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "willRenew": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the subscription will renew.\n\n This is equivalent to whether `state` is equal to SUBSCRIBED_WILL_RENEW or\n SUBSCRIBED_RENEWAL_PAYMENT_PENDING.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "lastBillingTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the subscription was last billed.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "nextRenewTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the subscription will next be automatically renewed.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "expireTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the subscription will, or did, expire.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "state": {
+            "readOnly": true,
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "SUBSCRIBED_WILL_RENEW",
+              "SUBSCRIBED_WILL_NOT_RENEW",
+              "SUBSCRIBED_RENEWAL_PAYMENT_PENDING",
+              "EXPIRED"
+            ],
+            "type": "string",
+            "description": "The state of the subscription.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["STATE_UNSPECIFIED"]
+            }
+          },
+          "expirationDetails": {
+            "$ref": "#/components/schemas/Subscription_ExpirationDetails",
+            "description": "Information about the expiration of the subscription."
+          },
+          "purchasePlatform": {
+            "readOnly": true,
+            "enum": ["PURCHASE_PLATFORM_UNSPECIFIED", "DESKTOP", "MOBILE"],
+            "type": "string",
+            "description": "The platform on which the subscription was purchased.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["PURCHASE_PLATFORM_UNSPECIFIED"]
+            }
+          },
+          "paymentProvider": {
+            "readOnly": true,
+            "enum": [
+              "PAYMENT_PROVIDER_UNSPECIFIED",
+              "STRIPE",
+              "APPLE",
+              "GOOGLE"
+            ],
+            "type": "string",
+            "description": "The payment provider used to purchase the subscription.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["PAYMENT_PROVIDER_UNSPECIFIED"]
+            }
+          },
+          "user": {
+            "immutable": true,
+            "type": "string",
+            "description": "The user who subscribed to the subscription.",
+            "x-example-values": {
+              "exampleValues": ["users/123"]
+            }
+          }
+        },
+        "description": "Represents a user's subscription to a subscription product.",
+        "x-resource": true,
+        "x-oneOf": {
+          "subscriber": ["user"]
+        }
+      },
+      "SubscriptionProduct": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the subscription product.\n Format: universes/{universe}/subscription-products/{subscription_product}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/subscription-products/some-subscription-product-id"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the subscription product.",
+            "x-example-values": {
+              "exampleValues": ["Some subscription product"]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the subscription product.",
+            "x-example-values": {
+              "exampleValues": ["Some subscription product description"]
+            }
+          },
+          "initialActivateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The time at which the product was first activated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "state": {
+            "readOnly": true,
+            "enum": ["STATE_UNSPECIFIED", "ACTIVE", "INACTIVE", "DELETED"],
+            "type": "string",
+            "description": "The state of the subscription product.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["STATE_UNSPECIFIED"]
+            }
+          },
+          "basePrice": {
+            "$ref": "#/components/schemas/Money",
+            "description": "The base price of the product; only USD and specific values are supported.\n\n The actual purchase price will be based on this base price, but will often\n not be exactly the same, due to locale-specific considerations.\n\n Set this to zero to make the product free."
+          }
+        },
+        "description": "Represents a product to which users can subscribe.",
+        "x-resource": true
+      },
+      "Subscription_ExpirationDetails": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "enum": [
+              "EXPIRATION_REASON_UNSPECIFIED",
+              "PRODUCT_INACTIVE",
+              "PRODUCT_DELETED",
+              "SUBSCRIBER_CANCELLED",
+              "SUBSCRIBER_REFUNDED",
+              "LAPSED"
+            ],
+            "type": "string",
+            "description": "The reason the subscription expired.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["EXPIRATION_REASON_UNSPECIFIED"]
+            }
+          }
+        },
+        "description": "Information about the expiration of a subscription."
+      },
+      "Universe": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the universe.\n\n Format: universes/{universe}",
+            "x-example-values": {
+              "exampleValues": ["universes/20514875"]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the universe was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the universe was updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "displayName": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The name of the universe.\n\n This field can be updated by updating the root place's name.",
+            "x-example-values": {
+              "exampleValues": ["ROBLOX Battle [OPEN]"]
+            }
+          },
+          "description": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The description of the universe.\n\n This field can be updated by updating the root place's description.",
+            "x-example-values": {
+              "exampleValues": [
+                "OPEN SOURCE! \n Feel free to check out how we made this game and ask us about it!"
+              ]
+            }
+          },
+          "user": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The universe is user-owned."
+          },
+          "group": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The universe is group-owned."
+          },
+          "visibility": {
+            "readOnly": true,
+            "enum": ["VISIBILITY_UNSPECIFIED", "PUBLIC", "PRIVATE"],
+            "type": "string",
+            "description": "Whether or not the universe is publicly accessible.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["VISIBILITY_UNSPECIFIED"]
+            }
+          },
+          "facebookSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Facebook social link."
+          },
+          "twitterSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Twitter social link."
+          },
+          "youtubeSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Youtube social link."
+          },
+          "twitchSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Twitch social link."
+          },
+          "discordSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Discord social link."
+          },
+          "robloxGroupSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Roblox group social link."
+          },
+          "guildedSocialLink": {
+            "$ref": "#/components/schemas/Universe_SocialLink",
+            "description": "The Guilded social link."
+          },
+          "voiceChatEnabled": {
+            "type": "boolean",
+            "description": "Whether or not voice chat is enabled for users in the Experience.\n\n Updating this value will not affect active servers.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "ageRating": {
+            "readOnly": true,
+            "enum": [
+              "AGE_RATING_UNSPECIFIED",
+              "AGE_RATING_ALL",
+              "AGE_RATING_9_PLUS",
+              "AGE_RATING_13_PLUS",
+              "AGE_RATING_17_PLUS"
+            ],
+            "type": "string",
+            "description": "The age rating of this universe.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["AGE_RATING_UNSPECIFIED"]
+            }
+          },
+          "privateServerPriceRobux": {
+            "type": "integer",
+            "description": "Represents the price in Robux of private servers.\n\n If unset, private servers are not supported for this universe.\n\n Can only be disabled when using a field mask.\n\n Setting to null will disable all active private servers.\n\n Changing the price will cancel all private server subscriptions.",
+            "format": "int32"
+          },
+          "desktopEnabled": {
+            "type": "boolean",
+            "description": "Whether or not players can join the Experience via Desktop.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "mobileEnabled": {
+            "type": "boolean",
+            "description": "Whether or not players can join the Experience via Mobile.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "tabletEnabled": {
+            "type": "boolean",
+            "description": "Whether or not players can join the Experience via Tablet.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "consoleEnabled": {
+            "type": "boolean",
+            "description": "Whether or not players can join the Experience via Console.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "vrEnabled": {
+            "type": "boolean",
+            "description": "Whether or not players can join the Experience via VR.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          }
+        },
+        "description": "A universe represents a Roblox experience.",
+        "x-resource": true,
+        "x-oneOf": {
+          "ConsoleEnabled": ["consoleEnabled"],
+          "DesktopEnabled": ["desktopEnabled"],
+          "MobileEnabled": ["mobileEnabled"],
+          "PrivateServerPriceRobux": ["privateServerPriceRobux"],
+          "TabletEnabled": ["tabletEnabled"],
+          "VoiceChatEnabled": ["voiceChatEnabled"],
+          "VrEnabled": ["vrEnabled"],
+          "owner": ["user", "group"]
+        }
+      },
+      "Universe_SocialLink": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the social link."
+          },
+          "uri": {
+            "type": "string",
+            "description": "The uri of the social link."
+          }
+        },
+        "description": "A social link that may be associated with the universe.\n\n Can only be removed when using a field mask."
+      },
+      "UpdateInstanceMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n UpdateInstance request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for UpdateInstance operations."
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the user.\n\n Format: users/{user}"
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp at which the user was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Unique ID that identifies a user in Roblox.",
+            "x-example-values": {
+              "exampleValues": ["123456"]
+            }
+          },
+          "name": {
+            "type": "string",
+            "description": "Unique username for a user in Roblox.",
+            "x-example-values": {
+              "exampleValues": ["exampleUser"]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Display name for the user.",
+            "x-example-values": {
+              "exampleValues": ["userDefinedName"]
+            }
+          },
+          "about": {
+            "type": "string",
+            "description": "User-defined information about themselves.",
+            "x-example-values": {
+              "exampleValues": ["Example User's bio"]
+            }
+          },
+          "locale": {
+            "type": "string",
+            "description": "Current locale selected by the user. Returns IETF language code.",
+            "x-example-values": {
+              "exampleValues": ["en-US"]
+            }
+          },
+          "premium": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Whether the user is a premium user.\n\n To access this data, you need an API key / OAuth token with the following\n scope: user.advanced:read",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "idVerified": {
+            "readOnly": true,
+            "type": "boolean",
+            "description": "Specifies if the user is ID-verified.\n\n To access this data, you need an API key / OAuth token with the following\n scope: user.advanced:read",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "socialNetworkProfiles": {
+            "$ref": "#/components/schemas/User_SocialNetworkProfiles",
+            "description": "User's social network profiles and visibility."
+          }
+        },
+        "description": "Represents any registered user of Roblox.",
+        "x-resource": true
+      },
+      "UserNotification": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the user notification.\n\n Format: users/{user}/notifications/{user_notification}",
+            "x-example-values": {
+              "exampleValues": [
+                "users/1/notifications/a6746f2e-2cc6-11ee-be56-0242ac120002"
+              ]
+            }
+          },
+          "id": {
+            "readOnly": true,
+            "type": "string",
+            "description": "A unique UUID of the user notification.",
+            "x-example-values": {
+              "exampleValues": ["a6746f2e-2cc6-11ee-be56-0242ac120002"]
+            }
+          },
+          "source": {
+            "$ref": "#/components/schemas/UserNotification_Source",
+            "description": "The source of the notification."
+          },
+          "payload": {
+            "$ref": "#/components/schemas/UserNotification_Payload",
+            "description": "The notification payload."
+          }
+        },
+        "description": "A notification sent to a user.",
+        "x-resource": true
+      },
+      "UserNotification_Payload": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "writeOnly": true,
+            "enum": ["TYPE_UNSPECIFIED", "MOMENT"],
+            "type": "string",
+            "description": "The type of notification.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["TYPE_UNSPECIFIED"]
+            }
+          },
+          "messageId": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "An ID that represents a customizable notification message template\n that you create in Creator Dashboard.\n\n The message can contain customizable parameters that you can specify\n values for. For example, `Your {egg_name} just hatched` has an\n `egg_name` parameter. See the `parameters` field for more\n information.",
+            "x-example-values": {
+              "exampleValues": ["5dd7024b-68e3-ac4d-8232-4217f86ca244"]
+            }
+          },
+          "parameters": {
+            "writeOnly": true,
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/UserNotification_Payload_ParameterValue"
+            },
+            "description": "A map of parameters used to render a notification message template.\n\n For example, given a template of `Your {egg_name} just hatched.` with\n parameters of `[{\"egg_name\": {\"string_value\": \"royal egg\"}}]`, the\n rendered notification message is: `Your royal egg just hatched.`"
+          },
+          "joinExperience": {
+            "$ref": "#/components/schemas/UserNotification_Payload_JoinExperience",
+            "description": "Call-to-action that represents joining an experience."
+          },
+          "analyticsData": {
+            "$ref": "#/components/schemas/UserNotification_Payload_AnalyticsData",
+            "description": "Data for how analytics are reported."
+          }
+        },
+        "description": "Details about the notification.",
+        "x-oneOf": {
+          "callToAction": ["joinExperience"]
+        }
+      },
+      "UserNotification_Payload_AnalyticsData": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "Category of the notification, used to group analytics data.\n\n For example, \"Golden egg hatched\", \"Bronze egg hatched\", \"Volcano\n eruptions\".",
+            "x-example-values": {
+              "exampleValues": ["Bronze egg hatched"]
+            }
+          }
+        },
+        "description": "Data for how analytics are reported."
+      },
+      "UserNotification_Payload_JoinExperience": {
+        "type": "object",
+        "properties": {
+          "launchData": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "Arbitrary data that is available to an experience\n when a user joins the experience with the notification.\n\n This value is limited to a maximum of 200 bytes.",
+            "x-example-values": {
+              "exampleValues": ["Launch Data"]
+            }
+          }
+        },
+        "description": "A call-to-action that represents joining an experience."
+      },
+      "UserNotification_Payload_ParameterValue": {
+        "type": "object",
+        "properties": {
+          "stringValue": {
+            "type": "string",
+            "description": "A string value.",
+            "x-example-values": {
+              "exampleValues": ["bronze egg"]
+            }
+          },
+          "int64Value": {
+            "type": "integer",
+            "description": "An int64 value.",
+            "format": "int64",
+            "x-example-values": {
+              "exampleValues": [10101010]
+            }
+          }
+        },
+        "description": "A parameter value that a template uses to render a notification message.",
+        "x-oneOf": {
+          "value": ["stringValue", "int64Value"]
+        }
+      },
+      "UserNotification_Source": {
+        "type": "object",
+        "properties": {
+          "universe": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "The universe from which the user notification is sent.",
+            "x-example-values": {
+              "exampleValues": ["universes/96623001"]
+            }
+          }
+        },
+        "description": "The source of the notification.",
+        "x-oneOf": {
+          "source": ["universe"]
+        }
+      },
+      "UserRestriction": {
+        "required": ["user"],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the user restriction.\n Format: universes/{universe}/user-restrictions/{user_restriction}\n Format:\n universes/{universe}/places/{place}/user-restrictions/{user_restriction}",
+            "x-example-values": {
+              "exampleValues": ["universes/123/user-restrictions/123"]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the user restriction was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "user": {
+            "type": "string",
+            "description": "The affected user.",
+            "x-example-values": {
+              "exampleValues": ["users/156"]
+            }
+          },
+          "gameJoinRestriction": {
+            "$ref": "#/components/schemas/UserRestriction_GameJoinRestriction",
+            "description": "The user is banned from the parent universe or place."
+          }
+        },
+        "description": "Represents a restriction on a user.",
+        "x-resource": true
+      },
+      "UserRestriction_GameJoinRestriction": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean",
+            "description": "By default, this is false since a user's access to an experience\n is not restricted to begin with.\n\n If this is set to true at the experience level, this becomes true\n automatically at the place level for all places in the experience.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "startTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The start time of the restriction.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": ["2023-07-05T12:34:56Z"]
+            }
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": ["3.5s"]
+            }
+          },
+          "privateReason": {
+            "type": "string",
+            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user.",
+            "x-example-values": {
+              "exampleValues": ["some private reason"]
+            }
+          },
+          "displayReason": {
+            "type": "string",
+            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user.",
+            "x-example-values": {
+              "exampleValues": ["some display reason"]
+            }
+          },
+          "excludeAltAccounts": {
+            "type": "boolean",
+            "description": "When true, the restriction will not be be propagated to alt accounts.\n\n Defaults to false.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "inherited": {
+            "type": "boolean",
+            "description": "This is true when the restriction doesn't directly apply to the parent\n resource, but to some other ancestor resource.\n\n For example, if a user restriction exists on universes/123, then any\n places within that universe from which the user was not explicitly\n restricted will have an inherited restriction and this field will be\n `true`.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          }
+        },
+        "description": "A restriction means the affected user will not be able to join the parent\n universe or place, and will be kicked if currently joined."
+      },
+      "User_SocialNetworkProfiles": {
+        "type": "object",
+        "properties": {
+          "facebook": {
+            "type": "string",
+            "description": "Facebook profile URI."
+          },
+          "twitter": {
+            "type": "string",
+            "description": "Twitter profile URI."
+          },
+          "youtube": {
+            "type": "string",
+            "description": "YouTube profile URI."
+          },
+          "twitch": {
+            "type": "string",
+            "description": "Twitch profile URI."
+          },
+          "guilded": {
+            "type": "string",
+            "description": "Guilded profile URI."
+          },
+          "visibility": {
+            "enum": [
+              "SOCIAL_NETWORK_VISIBILITY_UNSPECIFIED",
+              "NO_ONE",
+              "FRIENDS",
+              "FRIENDS_AND_FOLLOWING",
+              "FRIENDS_FOLLOWING_AND_FOLLOWERS",
+              "EVERYONE"
+            ],
+            "type": "string",
+            "description": "Visibility of the social network profiles.\n\n To access this data, you need an API key / OAuth token with the following\n scope: user.social:read",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["SOCIAL_NETWORK_VISIBILITY_UNSPECIFIED"]
+            }
+          }
+        },
+        "description": "Social network profiles of a user."
+      },
+      "roblox.engine.Folder": {
+        "type": "object",
+        "properties": {},
+        "description": "A simple container used to hold and organize Roblox instances."
+      },
+      "roblox.engine.Instance": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "The unique identifier for an instance. \n Format: lower-case hexadecimal characters\n Example: 44b188da-ce63-2b47-02e9-c68d004b5664"
+          },
+          "Parent": {
+            "type": "string",
+            "description": "The parent of the Instance.\n Format: lower-case hexadecimal characters\n Example: 44b188da-ce63-2b47-02e9-c68d004b5664"
+          },
+          "Name": {
+            "type": "string",
+            "description": "A non-unique identifier of the Instance."
+          },
+          "Details": {
+            "$ref": "#/components/schemas/roblox.engine.InstanceDetails",
+            "description": "Properties specific to the type of the instance."
+          }
+        },
+        "description": "Instance is the base class for all classes in the Roblox class hierarchy.",
+        "x-oneOf": {
+          "Details": ["Details"],
+          "Name": ["Name"]
+        }
+      },
+      "roblox.engine.InstanceDetails": {
+        "type": "object",
+        "properties": {
+          "Folder": {
+            "$ref": "#/components/schemas/roblox.engine.Folder",
+            "description": "A simple container used to hold and organize Roblox instances."
+          },
+          "LocalScript": {
+            "$ref": "#/components/schemas/roblox.engine.LocalScript",
+            "description": "A LocalScript is a Lua code container that runs its contents on the client (player's device) instead of the server."
+          },
+          "ModuleScript": {
+            "$ref": "#/components/schemas/roblox.engine.ModuleScript",
+            "description": "A ModuleScript is a type of Lua source container that runs once and must return exactly one value."
+          },
+          "Script": {
+            "$ref": "#/components/schemas/roblox.engine.Script",
+            "description": "A Script is a Lua code container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot."
+          }
+        },
+        "description": "Contains instance type-specific details about a data model instance.",
+        "x-oneOf": {
+          "kind": ["Folder", "LocalScript", "ModuleScript", "Script"]
+        }
+      },
+      "roblox.engine.LocalScript": {
+        "type": "object",
+        "properties": {
+          "Enabled": {
+            "type": "boolean",
+            "description": "Determines whether a BaseScript will run or not.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "RunContext": {
+            "enum": ["Legacy", "Server", "Client", "Plugin"],
+            "type": "string",
+            "description": "Determines the context under which the script will run.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["Legacy"]
+            }
+          },
+          "Source": {
+            "type": "string",
+            "description": "The code to be executed."
+          }
+        },
+        "description": "A LocalScript is a Lua code container that runs its contents on the client (player's device) instead of the server.",
+        "x-oneOf": {
+          "Enabled": ["Enabled"],
+          "RunContext": ["RunContext"],
+          "Source": ["Source"]
+        }
+      },
+      "roblox.engine.ModuleScript": {
+        "type": "object",
+        "properties": {
+          "Source": {
+            "type": "string",
+            "description": "The code to be executed."
+          }
+        },
+        "description": "A ModuleScript is a type of Lua source container that runs once and must return exactly one value.",
+        "x-oneOf": {
+          "Source": ["Source"]
+        }
+      },
+      "roblox.engine.Script": {
+        "type": "object",
+        "properties": {
+          "Enabled": {
+            "type": "boolean",
+            "description": "Determines whether the BaseScript will run or not.",
+            "x-example-values": {
+              "exampleValues": [true]
+            }
+          },
+          "RunContext": {
+            "enum": ["Legacy", "Server", "Client", "Plugin"],
+            "type": "string",
+            "description": "Determines the context in which the script will run.",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": ["Legacy"]
+            }
+          },
+          "Source": {
+            "type": "string",
+            "description": "The code to be executed."
+          }
+        },
+        "description": "A Script is a Lua code container that can access server-side objects, properties, and events, such as to award badges to players using BadgeService, while LocalScripts on the client cannot.",
+        "x-oneOf": {
+          "Enabled": ["Enabled"],
+          "RunContext": ["RunContext"],
+          "Source": ["Source"]
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Cloud"
+    }
+  ],
+  "x-categories": ["Cloud"]
+}

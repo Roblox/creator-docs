@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Messaging Service",
+    "description": "You can send and receive the following request and response to broadcast messages across servers of your experience. For information on the usage of the API, see [Messaging Usage Guide](../../../cloud/open-cloud/usage-messaging.md).",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com/messaging-service/"
+    }
+  ],
+  "paths": {
+    "/v1/universes/{universeId}/topics/{topic}": {
+      "post": {
+        "tags": ["CrossServerMessaging"],
+        "operationId": "CrossServerMessaging_Publish",
+        "x-roblox-cloud-api-operation-name": "Publish a Message",
+        "description": "Publish a message to a pre-defined topic of an experience, with the size of the message up to 1,024 characters (1 KB). Requires the **Publish** permission for API keys and the **universe-messaging-service:publish** scope for OAuth 2.0 apps. See [Cross-Server Messaging](../../../cloud-services/cross-server-messaging.md#subscribe-users-to-receive-messages) for defining and subscribing users to a topic.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience in which you want to send your messages to. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-messaging.md#publishing-messages-to-live-servers) on **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "description": "The topic that you want to publish your message to, with up to 80 characters.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublishRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublishRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublishRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PublishRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns an empty response body."
+          },
+          "400": {
+            "description": "Invalid request."
+          },
+          "401": {
+            "description": "The API key is not valid for this operation / You don't have the authorization."
+          },
+          "403": {
+            "description": "Publishing is not allowed on this experience."
+          },
+          "500": {
+            "description": "Server internal error / Unknown error."
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Publish"]
+          },
+          {
+            "roblox-oauth2": ["universe-messaging-service:publish"]
+          }
+        ],
+        "x-roblox-cloud-api-operation": true
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PublishRequest": {
+        "type": "object",
+        "description": "The request body object with the message string that you want to publish to the live server.",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true,
+            "description": "The message content that you want to publish to the live server."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

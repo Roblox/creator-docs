@@ -11,6 +11,11 @@ description: |
   inspection of the entries in sorted order using a `Class.DataStorePages`
   object.
 
+  Ordered data stores do not support versioning and metadata, so
+  `Class.DataStoreKeyInfo` is always `nil` for keys in an
+  `Class.OrderedDataStore`. If you need versioning and metadata support, use a
+  `Class.DataStore`.
+
   See [Data Stores](../../../cloud-services/datastores.md) for an overview on
   using ordered data stores.
 code_samples:
@@ -52,7 +57,7 @@ methods:
         type: Variant
         default:
         summary: |
-          Optional parameter. If set, data pages with a value less than than
+          Optional parameter. If set, data pages with a value less than
           **minValue** will be excluded.
       - name: maxValue
         type: Variant

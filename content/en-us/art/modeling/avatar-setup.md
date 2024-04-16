@@ -74,11 +74,12 @@ The full requirements for the input body model are as follows:
 
 1. **Single mesh** - The body must be a single mesh with 6 merged components:
 
-   1. **1 main head and body** - singly connected, watertight, manifold mesh with 2 eye bags and 1 mouth bag.
+   1. **1 main head and body** - Singly connected, watertight, manifold mesh.
    2. **5 distinct head components** - While the entire input model must be a single mesh, the following head components are required:
 
-      1. **2 eyes** - Heads must include 2 eyes that are half spheres and each connected by their own single vertex to the head component.
-      2. **3 mouthparts** - Heads must include upper teeth, lower teeth, and tongue within the mouth bag. Each must be connected by their own single vertex to the head component.
+      1. **2 eyes** - Heads must include 2 connected eyebags containing half-sphere eyes that do not share any vertices with the head component.
+      2. **3 mouthparts** - Heads must include a connected mouthbag that houses the **upper teeth**, **lower teeth**, and **tongue**.
+         1. Each of these mouthparts must be singly connected and not share any vertices with each other or with the head mesh.
 
     <GridContainer numColumns="2">
     <figure>
@@ -141,16 +142,17 @@ The full requirements for the input body model are as follows:
     </table>
 
 5. **Humanoid shape** - The body must follow a general humanoid shape, with two arms, two legs, a torso, and a head.
-6. **A-pose** - The body should form an upright A-pose with the front facing the negative Z axis.
+6. **A-pose** - The body should form an upright A-pose.
    1. Bodies with I-pose or T-pose may produce lower quality results.
    2. Ensure that no limbs obscure or overlap each other from the front view.
-7. **Symmetrical** - The body should be left and right symmetrical.
+7. **Negative Z Axis** - The body front should face the negative Z axis.
+8. **Symmetrical** - The body should be left and right symmetrical.
    1. Asymmetrical bodies may still work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
-8. **Watertight** - Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
-9. **No accessories** - Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
-10. **Distinct neck area** - Keep the neck distinct and not merged with the shoulders or upper torso.
-11. **Includes texture** - The input model should include a base textureID or SurfaceAppearance object ([PBR textures](../modeling/surface-appearance.md)).
-12. **Follows Marketplace and Community Policy** - The model must conform to Roblox's [Marketplace Policy](../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+9. **Watertight** - Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
+10. **No accessories** - Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
+11. **Distinct neck area** - Keep the neck distinct and not merged with the shoulders or upper torso.
+12. **Includes texture** - The input model should include a base textureID or SurfaceAppearance object ([PBR textures](../modeling/surface-appearance.md)).
+13. **Follows Marketplace and Community Policy** - The model must conform to Roblox's [Marketplace Policy](../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 #### Examples of Non-Supported Models
 

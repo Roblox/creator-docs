@@ -1,0 +1,100 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Place Publishing",
+    "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [Usage Guide](../../../cloud/open-cloud/usage-place-publishing.md).",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://apis.roblox.com/universes/"
+    }
+  ],
+  "paths": {
+    "/v1/{universeId}/places/{placeId}/versions": {
+      "post": {
+        "tags": ["Places"],
+        "operationId": "Places_CreatePlaceVersionApiKey",
+        "x-roblox-cloud-api-operation-name": "Publish a Place",
+        "description": "Publish a new place or update an existing place with a new version.",
+        "parameters": [
+          {
+            "name": "universeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of the experience in which you want to publish your place to. You can [copy your experience's Universe ID](../../../cloud/open-cloud/usage-place-publishing.md#publishing-a-place) on **Creator Dashboard**.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "placeId",
+            "in": "path",
+            "required": true,
+            "description": "The identifier of your place. See [Publishing Places with API Keys](../../../cloud/open-cloud/usage-place-publishing.md) on obtaining a Place ID.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "versionType",
+            "in": "query",
+            "description": "Can only be either: \n- `Saved`: the place file should be saved, but not published. \n - `Published`: the place file should be saved and published.",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the published place's version number.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "{\"versionNumber\":7}"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request / Invalid file content."
+          },
+          "401": {
+            "description": "API key not valid for operation, user does not have authorization."
+          },
+          "403": {
+            "description": "Publish not allowed on place."
+          },
+          "404": {
+            "description": "Place or universe does not exist."
+          },
+          "409": {
+            "description": "Place not part of the universe."
+          },
+          "500": {
+            "description": "Server internal error / Unknown error."
+          }
+        },
+        "security": [],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-code-samples": [
+          {
+            "language": "curl",
+            "script": "curl --location --request POST 'https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published' \n--header 'x-api-key: abc...' \n--header 'Content-Type: application/xml' \n--data-raw '<roblox></roblox>'\n"
+          }
+        ],
+        "x-roblox-throttling-limit": {
+          "perApiKey": {
+            "periodInSeconds": "60",
+            "maxInPeriod": 10
+          }
+        },
+        "x-roblox-size-limit": 10485760
+      }
+    }
+  }
+}
