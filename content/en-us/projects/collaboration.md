@@ -181,10 +181,6 @@ In a collaborative session, you can code together in real-time through [live scr
 
 ### Live Scripting
 
-<Alert severity="info">
-Live Scripting is **enabled** by default. If you and your team prefer to collaborate on scripts in an environment similar to source control, explore [Drafts](#drafts-mode) mode.
-</Alert>
-
 **Live Scripting** lets collaborators code together in real time. In the [Script Editor](../studio/script-editor.md), each collaborator's cursor color matches their assigned color in the [Live Collaborators](#viewing-collaborators) window.
 
 <Grid container spacing={2}>
@@ -197,6 +193,10 @@ Live Scripting is **enabled** by default. If you and your team prefer to collabo
 </Grid>
 
 While live scripting, edits are auto‑saved every 5 minutes just like place edits, and a collaborator can manually save a script at any time with <kbd>Ctrl</kbd><kbd>S</kbd> (<kbd>⌘</kbd><kbd>S</kbd>). Saved or auto‑saved versions are logged in the [Script History](#viewing-script-history) window.
+
+<Alert severity="info">
+Live Scripting is **enabled** by default. If you and your team prefer to collaborate on scripts in an environment similar to source control, explore [Drafts](#drafts-mode) mode.
+</Alert>
 
 ### Drafts Mode
 
