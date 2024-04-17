@@ -32,12 +32,12 @@ ModuleScripts are commonly placed in **ServerScriptService** when used by server
 When created, every module script starts out with the code below:
 
 ```lua
-local module = {}
+local Module = {}
 
-return module
+return Module
 ```
 
-The line `local module = {}` creates a table, or container of code, where the module's shared functions and variables can be stored. This table should be renamed to the module's purpose, such as `RewardManager` or `ParticleController`. As opposed to other variables which are Pascal case (`myVariable`), module tables are recommended to start capitalized.
+The line `local Module = {}` creates a table, or container of code, where the module's shared functions and variables can be stored. This table should be renamed to the module's purpose, such as `RewardManager` or `ParticleController`. As opposed to other variables which are camel case (`myVariable`), module tables are recommended to use pascal case and start capitalized (`MyModule`).
 
 ```lua
 local RewardManager = {}
@@ -45,7 +45,7 @@ local RewardManager = {}
 return RewardManager
 ```
 
-So other scripts can use a module's non-local functions or variables, every module ends with return `myModule`. Whenever another script tries to get code from the module, return lets that script access code stored inside the module table.
+So other scripts can use a module's non-local functions or variables, every module ends with return `MyModule`. Whenever another script tries to get code from the module, return lets that script access code stored inside the module table.
 
 ### Adding to Module Scripts
 
@@ -54,10 +54,10 @@ To add a function or variable to the module which can be used in another script,
 ```lua
 local TestModule = {}
 
--- Adds a variable to 'myModule' table
+-- Adds a variable to 'TestModule' table
 TestModule.myVariable = 100
 
--- Adds a function to 'myModule' table
+-- Adds a function to 'TestModule' table
 function TestModule.doTask(player)
  -- Placeholder code
 end
@@ -66,7 +66,7 @@ return TestModule
 ```
 
 <Alert severity="warning">
-Anything added to the module table should be typed between `local myModule = {}` and `return myModule`, or else the code may create an error.
+Anything added to the module table should be typed between `local MyModule = {}` and `return MyModule`, or else the code may create an error.
 </Alert>
 
 ### Scope in Module Scripts
@@ -78,7 +78,7 @@ Typing `local` in front of variables and functions means they are **only** usabl
 Any code used **only** by that module script should still include `local`. For instance, the code below includes the local variable `difficultyModifier`, which can only be used in that module script, and the function `getCoinReward()`, which can be used in scripts outside the module.
 
 ```lua
-local rewardManager = {}
+local RewardManager = {}
 
 -- Usable only in the module script
 local rewardCoins = 50
@@ -91,12 +91,12 @@ local difficultyModifier = {
 }
 
 -- Usable in other scripts
-function rewardManager.getCoinReward(difficulty)
+function RewardManager.getCoinReward(difficulty)
  local coins = difficultyModifier[difficulty] * rewardCoins
  return coins
 end
 
-return rewardManager
+return RewardManager
 ```
 
 ## Using Modules In Others Scripts
@@ -106,21 +106,21 @@ By itself, a module script can't run code — it needs to be loaded in another s
 To use a module, in a separate script, set a variable equal to `require(moduleScript)`.
 
 ```lua
-local myModule = require(ServerStorage.ModuleScript)
+local MyModule = require(ServerStorage.ModuleScript)
 ```
 
-Now, the variable `myModule` contains the module table created in that module script. To use functions and variables from that table, type the variable name, followed by a dot, and the exact name of what to use in that module script, like `myModule.myFunction()`. When the script runs and reaches that line, it'll access that specific function or variable stored in the module table.
+Now, the variable `MyModule` contains the module table created in that module script. To use functions and variables from that table, type the variable name, followed by a dot, and the exact name of what to use in that module script, like `MyModule.myFunction()`. When the script runs and reaches that line, it'll access that specific function or variable stored in the module table.
 
 ```lua
-local myModule = require(ServerStorage.ModuleScript)
+local MyModule = require(ServerStorage.ModuleScript)
 
-myModule.myFunction()
+MyModule.myFunction()
 ```
 
-## Example
+## RewardManager Example
 
 ```lua title="ModuleScript - RewardManager"
-local rewardManager = {}
+local RewardManager = {}
 
 -- Usable only in the module script
 local rewardCoins = 50
@@ -133,12 +133,12 @@ local difficultyModifier = {
 }
 
 -- Usable in other scripts
-function rewardManager.getCoinReward(difficulty)
+function RewardManager.getCoinReward(difficulty)
  local coins = difficultyModifier[difficulty] * rewardCoins
  return coins
 end
 
-return rewardManager
+return RewardManager
 ```
 
 ```lua title='Script - TreasureChestScript'
