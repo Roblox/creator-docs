@@ -51,7 +51,7 @@ To file an IP removal request:
 
 1. Near the top of the **Rights Manager** landing page, click the **New Removal Request** button. A new IP removal request form displays.
 
-   <img src="../../assets/publishing/rights-manager/New-Removal-Request.png" width="100%" />
+   <img src="../../assets/publishing/rights-manager/New-Removal-Request.png" width="90%" />
 
 1. Fill out all applicable fields.
    1. If the source of your creation is on Roblox,
@@ -60,7 +60,7 @@ To file an IP removal request:
    1. If the source of your creation is off Roblox,
       1. In the **Your creation** section, click the **Source of your creation** dropdown, then select **Outside of Roblox**.
       1. **(Optional)** In the **Link to your creation** field, provide a link to your creation outside of the platform.
-   1. In the **Creation you're reporting** section, provide a link to the creation you are reporting.
+   1. In the **Creations you're reporting** section, provide up to 250 links to the creations you are reporting.
    1. **(Optional)** In the **Additional details** section,
       1. In the **Description** field, provide any additional information that can help Roblox understand your report. For example, if you are reporting an asset in an experience, provide a screenshot and details of where to find the asset you are reporting.
       1. Click the **Upload** button or drag and drop a maximum of 6 `.pdf`, `.jpg`, or `.png` files from your device that support your removal request.
@@ -71,7 +71,7 @@ To file an IP removal request:
 1. **(Optional)** Add more creations for removal to the same IP removal request.
    1. Add a new creation for removal.
       1. Click the **Add Creation** button. New fields display above the table.
-      1. Fill out the fields using the same process in step 4, then click the **Add Creation** button. The new reported creation displays in the table.
+      1. Fill out the fields using the same process in step 2, then click the **Add Creation** button. The new reported creation displays in the table.
    1. Duplicate a creation for removal.
       1. In the table of all reported creations, navigate to the reported creation you want to duplicate, then in the **Actions** column, click the ellipsis button. A contextual menu displays.
       1. In the contextual menu, select **Duplicate**. A duplicate copy of the reported creation displays above the table.
