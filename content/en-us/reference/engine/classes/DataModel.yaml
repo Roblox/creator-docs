@@ -763,13 +763,13 @@ methods:
       This function sets the `Class.DataModel.PlaceId` of the game instance to
       the given _placeId_.
 
-      Setting both `Class.DataModel.PlaceId` and `Class.DataModel.GameId` are 
+      Setting both `Class.DataModel.PlaceId` and `Class.DataModel.GameId` are
       required to access `Class.DataStoreService` when the place is unpublished,
-      for example a local `.rbxl` file. See below for an example. Note that gaining
-      `Class.DataStoreService` access from Studio requires the 
-      **Enable Studio Access to API Services** setting from the **Security** panel
-      in [Game Settings](../../../studio/game-settings.md).
-      
+      for example a local `.rbxl` file. See below for an example. Note that
+      gaining `Class.DataStoreService` access from Studio requires the **Enable
+      Studio Access to API Services** setting from the **Security** panel in
+      [Game Settings](../../../studio/game-settings.md).
+
       ```lua
       local DataStoreService = game:GetService("DataStoreService")
 
@@ -778,7 +778,6 @@ methods:
       game:SetUniverseId(universeId)
       local dataStore = DataStoreService:GetDataStore("Data")
       ```
-      
     code_samples:
     parameters:
       - name: placeId
@@ -803,8 +802,8 @@ methods:
       .rbxl files that have not been published to Roblox.
 
       To access the `Class.DataStoreService` in an unpublished place, both
-      `Class.DataModel:SetUniverseId()` and `Class.DataModel:SetPlaceId()`
-      must be set.
+      `Class.DataModel:SetUniverseId()` and `Class.DataModel:SetPlaceId()` must
+      be set.
     code_samples:
     parameters:
       - name: universeId

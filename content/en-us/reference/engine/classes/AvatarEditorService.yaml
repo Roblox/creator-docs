@@ -696,10 +696,10 @@ methods:
       Returns a list of recommended assets based on a given `Enum.AssetType` and
       asset id.
     description: |
-      Returns a list of recommended assets based on a given
-      `Enum.AssetType` and asset id. Use this to gather a list of similar assets
-      to the asset provided. Take a look at the code sample below for more
-      information on possible usages for this function.
+      Returns a list of recommended assets based on a given `Enum.AssetType` and
+      asset id. Use this to gather a list of similar assets to the asset
+      provided. Take a look at the code sample below for more information on
+      possible usages for this function.
 
       Data is in the format:
 
@@ -738,7 +738,9 @@ methods:
         type: AvatarAssetType
         default:
         summary: |
-          The type of asset recommendations to retrieve recommendations for. Only affects the response when item based recommendations don't exist for the given `contextAssetId`.
+          The type of asset recommendations to retrieve recommendations for.
+          Only affects the response when item based recommendations don't exist
+          for the given `contextAssetId`.
       - name: contextAssetId
         type: int64
         default: 0

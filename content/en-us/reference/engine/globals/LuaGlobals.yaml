@@ -117,14 +117,14 @@ functions:
       Returns the current environment in use by the caller, as a dictionary.
 
       - If provided with a function, the environment of the function will be
-      returned.
+        returned.
       - If provided with an integer, `Global.LuaGlobals.getfenv()` will provide
-      the environment of the function at the provided stack level: Level 1 is
-      the function calling `Global.LuaGlobals.getfenv()`. If `stack` is `0`,
-      `Global.LuaGlobals.getfenv()` returns the global environment of the
-      current script. When using `Global.LuaGlobals.getfenv()` to get the
-      current environment of a script, it will return the same table every time
-      within the specific thread.
+        the environment of the function at the provided stack level: Level 1 is
+        the function calling `Global.LuaGlobals.getfenv()`. If `stack` is `0`,
+        `Global.LuaGlobals.getfenv()` returns the global environment of the
+        current script. When using `Global.LuaGlobals.getfenv()` to get the
+        current environment of a script, it will return the same table every
+        time within the specific thread.
     parameters:
       - name: stack
         type: Variant

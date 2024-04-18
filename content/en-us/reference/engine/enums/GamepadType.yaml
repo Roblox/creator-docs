@@ -1,4 +1,4 @@
-name: GuiType
+name: GamepadType
 type: enum
 summary: ''
 description: ''
@@ -6,28 +6,23 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Core
+  - name: Unknown
+    summary: ''
     value: 0
-    summary: ''
     tags: []
     deprecation_message: ''
-  - name: Custom
+  - name: PS4
+    summary: ''
     value: 1
-    summary: ''
     tags: []
     deprecation_message: ''
-  - name: PlayerNameplates
+  - name: PS5
+    summary: ''
     value: 2
-    summary: ''
     tags: []
     deprecation_message: ''
-  - name: CustomBillboards
+  - name: XboxOne
+    summary: ''
     value: 3
-    summary: ''
-    tags: []
-    deprecation_message: ''
-  - name: CoreBillboards
-    summary: ''
-    value: 4
     tags: []
     deprecation_message: ''

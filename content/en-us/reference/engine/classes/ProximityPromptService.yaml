@@ -33,7 +33,7 @@ properties:
       ```lua
       local ProximityPromptService = game:GetService("ProximityPromptService")
       local ReplicatedStorage = game:GetService("ReplicatedStorage")
-      
+
       local enablePrompts = ReplicatedStorage:FindFirstChild("EnablePrompts")  -- BindableEvent
 
       -- Connect to the BindableEvent and fire from another script controlling experience logic
@@ -55,8 +55,8 @@ properties:
       can_save: true
   - name: ProximityPromptService.MaxPromptsVisible
     summary: |
-      Maximum number of `Class.ProximityPrompt|ProximityPrompts` that will
-      be shown to the player.
+      Maximum number of `Class.ProximityPrompt|ProximityPrompts` that will be
+      shown to the player.
     description: |
       This property indicates the maximum number of
       `Class.ProximityPrompt|ProximityPrompts` that will be shown to the player.

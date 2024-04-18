@@ -173,6 +173,19 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: CaptureService.CaptureSavedInternal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: captureInfo
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: CaptureService.UserCaptureSaved
     summary: |
       Fires when the user saves a capture.

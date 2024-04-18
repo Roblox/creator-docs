@@ -11,28 +11,11 @@ tags:
   - NotBrowsable
 deprecation_message: ''
 properties:
-  - name: Path2D.Color
-    summary: |
-      Determines the color of the `Class.Path2D` path.
-    description: |
-      Determines the color of the `Class.Path2D` path.
-    code_samples: []
-    type: Color3
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
-  - name: Path2D.Position
+  - name: Path2D.Color3
     summary: ''
     description: ''
     code_samples: []
-    type: UDim2
+    type: Color3
     tags: []
     deprecation_message: ''
     security:
@@ -148,6 +131,18 @@ properties:
       can_load: true
       can_save: true
 methods:
+  - name: Path2D:GetBoundingRect
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Rect
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: Path2D:GetControlPoint
     summary: |
       Returns the `Datatype.Path2DControlPoint` for a given index.

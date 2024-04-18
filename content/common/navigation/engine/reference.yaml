@@ -3848,6 +3848,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/GameAvatarType.yaml
         ignoreTranslation: true
+      - title: GamepadType
+        path: /reference/engine/enums/GamepadType
+        type: engineapi
+        source: /reference/engine/enums/GamepadType.yaml
+        ignoreTranslation: true
       - title: GearGenreSetting
         path: /reference/engine/enums/GearGenreSetting
         type: engineapi
