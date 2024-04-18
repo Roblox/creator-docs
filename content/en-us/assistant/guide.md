@@ -60,7 +60,7 @@ When given a request to generate a material, Assistant in Studio can quickly sty
 
 #### Insert Script
 
-If you enter a script generation request like _"Make the player jump when they touch the part"_ while you have a `Class.Part` or `Class.MeshPart` selected, Assistant will show the script's contents and add the new script instance to that part.
+If you enter a script generation request like _"Make the player's character jump when they touch this part,"_ Assistant will show the script's contents and add the new script instance to the currently selected object in the data model. If nothing is selected, Assistant will make the placement decision based on your prompts.
 
 <img src="../assets/assistant/Studio-Script-Insert.png" width="360" alt="Requested script inserted into selected part" />
 
