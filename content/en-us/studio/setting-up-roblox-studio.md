@@ -1,4 +1,6 @@
----
+my creator
+my studio
+my build---
 title: Setting Up Roblox Studio
 description: Explains how to install Roblox Studio on your system.
 ---
