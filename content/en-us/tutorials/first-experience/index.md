@@ -175,7 +175,7 @@ To apply different materials to parts:
 
 1. Open the **Material Manager**.
 
-   <img src="../../assets/studio/general/Model-Tab-Material-Manager-Trimmed.png" width="826" alt="Studio's Model tab with the Material Manager highlighted." />
+   <img src="../../assets/studio/general/Model-Tab-Material-Manager.png" width="826" alt="Studio's Model tab with the Material Manager highlighted." />
 
 1. In the 3D viewport, select one or more parts.
 1. In the **Material Manager** palette, hover your mouse over the desired material (you don't need to select it) and click the **Apply&nbsp;to&nbsp;Selected&nbsp;Parts** button.
