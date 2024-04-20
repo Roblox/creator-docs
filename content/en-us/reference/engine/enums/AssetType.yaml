@@ -39,6 +39,16 @@ items:
       The asset is Lua code, for example a `Class.ModuleScript`.
     tags: []
     deprecation_message: ''
+  - name: HTML
+    value: 6
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Text
+    value: 7
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: Hat
     value: 8
     summary: |
@@ -75,6 +85,11 @@ items:
       The asset is a decal (image).
     tags: []
     deprecation_message: ''
+  - name: Avatar
+    value: 16
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: Head
     value: 17
     summary: |
@@ -99,11 +114,26 @@ items:
       The asset is a badge.
     tags: []
     deprecation_message: ''
+  - name: GroupEmblem
+    value: 22
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: Animation
     value: 24
     summary: |
       The asset is an animation; also see the more specific animation type enums
       below.
+    tags: []
+    deprecation_message: ''
+  - name: Arms
+    value: 25
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Legs
+    value: 26
+    summary: ''
     tags: []
     deprecation_message: ''
   - name: Torso
@@ -142,16 +172,36 @@ items:
       The asset is a pack, for example an animation package.
     tags: []
     deprecation_message: ''
+  - name: YouTubeVideo
+    value: 33
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: GamePass
     value: 34
     summary: |
       The asset is a GamePass.
     tags: []
     deprecation_message: ''
+  - name: App
+    value: 35
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: Code
+    value: 37
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: Plugin
     value: 38
     summary: |
       The asset is a plugin.
+    tags: []
+    deprecation_message: ''
+  - name: SolidModel
+    value: 39
+    summary: ''
     tags: []
     deprecation_message: ''
   - name: MeshPart
@@ -266,6 +316,16 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
+  - name: LocalizationTableManifest
+    value: 59
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: LocalizationTableTranslation
+    value: 60
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: EmoteAnimation
     value: 61
     summary: |
@@ -276,6 +336,11 @@ items:
     value: 62
     summary: |
       The asset is a video.
+    tags: []
+    deprecation_message: ''
+  - name: TexturePack
+    value: 63
+    summary: ''
     tags: []
     deprecation_message: ''
   - name: TShirtAccessory
@@ -328,6 +393,16 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
+  - name: FontFace
+    value: 74
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: MeshHiddenSurfaceRemoval
+    value: 75
+    summary: ''
+    tags: []
+    deprecation_message: ''
   - name: EyebrowAccessory
     value: 76
     summary: ''
@@ -345,6 +420,11 @@ items:
     deprecation_message: ''
   - name: DynamicHead
     value: 79
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: CodeSnippet
+    value: 80
     summary: ''
     tags: []
     deprecation_message: ''
