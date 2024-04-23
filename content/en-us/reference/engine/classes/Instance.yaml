@@ -191,9 +191,16 @@ properties:
       Instance.new("NumberValue", workspace)
       ```
 
+      Whena a change is made to certain properties while an instance is
+      parented in the `Class.DataModel` the engine may need to perform extra
+      work internally (for things like replication, rendering, and GUI
+      layouting). Therefore where possible it is a good idea to change an
+      instance's properties **before** you set its Parent, rather than after,
+      to avoid performing that work redundantly.
+
       #### Object Replication
 
-      An object created by server will not replicate to clients until it is
+      An object created by the server will not replicate to clients until it is
       parented to some object that is replicated. When creating an object then
       setting many properties, it's recommended to **set Parent last**. This
       ensures the object replicates once, instead of replicating many property
@@ -209,8 +216,9 @@ properties:
       ```
 
       However, if you were parenting your parts to a `Class.Model` whose parent
-      hasn't been set yet, then setting the parent first would not matter as the
-      model would not have replicated yet.
+      hasn't been set yet, then parenting each part to that model is
+      okay as the model would not have replicated yet.
+      
     code_samples:
     type: Instance
     tags:
