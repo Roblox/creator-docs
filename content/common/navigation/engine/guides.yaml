@@ -50,6 +50,8 @@ navigation:
             path: /projects/performance-optimization/memory
           - title: Load Times
             path: /projects/performance-optimization/load-times
+      - title: External Tools
+        path: /projects/external-tools
   - title: Assets
     path: /projects/assets/
     section:

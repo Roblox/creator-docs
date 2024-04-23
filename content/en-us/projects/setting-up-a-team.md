@@ -73,7 +73,7 @@ Includes jobs such as gameplay programmer, lead programmer, and systems programm
 
 **Key Criteria**
 
-- Understanding and expertise with using version control through [Rojo](https://rojo.space/) and [GitHub](https://github.com/).
+- Expertise in a scripting language like Python, JavaScript, or Lua and version control systems like [Git](https://git-scm.com/).
 
 - Strong understanding of the [Roblox APIs](/reference/engine), modular codebases, and object-oriented programming.
 

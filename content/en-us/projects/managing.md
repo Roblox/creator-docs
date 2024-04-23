@@ -254,4 +254,4 @@ The following tools are used by some builders to test and manage performance con
 
 ### Project Management
 
-[Rojo](https://rojo.space/) is beneficial if your team wishes to use external version control systems like Git and code editors like Visual Studio Code or Sublime Text.
+[Rojo](https://rojo.space/) is beneficial if your team wants to use external version control systems or text editors. See [External Tools](external-tools.md).

@@ -100,6 +100,7 @@ To set up an ad campaign:
    <img src="../../assets/promotion/ads-manager/Campaign-Budget-Schedule.png" width="780" />
 
 5. Determine the length of your campaign by selecting the **End Date** field.
+
    - End dates are optional when using daily budgets for debit and credit cards. If an end date is not set, campaign will run indefinitely using the daily budget.
    - End dates are required for ad credit funded campaigns.
 
@@ -160,7 +161,7 @@ Regardless of what option you select, your ads will not be shown in experiences 
 
 To define an ad set:
 
-1. Determine the regions you want your ad to appear in.
+1. Determine the regions or countries you want your ad to appear in. You can select up to 10. When you target a region, you automatically target every country within that region.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Locations.png" width="780" />
 
@@ -168,7 +169,7 @@ To define an ad set:
    <img src="../../assets/promotion/ads-manager/Ad-Set-Gender-Ages-Devices.png" width="780" />
 
 3. Select where your ad will appear, determined by your campaign objective.
-    <img src="../../assets/promotion/ads-manager/ad-placement.png" width="780" />
+   <img src="../../assets/promotion/ads-manager/ad-placement.png" width="780" />
 
 4. For Immersive Ads, determine what kinds of experiences you want your ads to be shown in. Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach.
    <img src="../../assets/promotion/ads-manager/Brand-Suitability.png" width="780" />
@@ -208,7 +209,7 @@ This content is not allowed on the platform in any context.
 - Depiction of sexual acts or nudity
 - Hate speech or promotion of hate groups
 - Discussion or depiction of use of illegal drugs or regulated substances including tobacco, vaping, and steroids
-- Discussion or depiction of political content including political parties,  political candidates, and elected officials
+- Discussion or depiction of political content including political parties, political candidates, and elected officials
 
 <table>
 <thead>
@@ -315,9 +316,9 @@ This content is not allowed on the platform in any context.
 
 #### Bidding and Auction
 
-Ads on Roblox work in a bidding system, where advertisers bid to have their ads shown to users through the available ad units placed in an experience. When determining your bidding settings, bids are reflected as CPM (cost-per-thousand impressions). Your max bid for CPM is the maximum amount you're willing to pay every thousand times your ad is seen by the user.  A higher CPM can increase the chances of winning the auction, but it also means you'll pay more.
+Ads on Roblox work in a bidding system, where advertisers bid to have their ads shown to users through the available ad units placed in an experience. When determining your bidding settings, bids are reflected as CPM (cost-per-thousand impressions). Your max bid for CPM is the maximum amount you're willing to pay every thousand times your ad is seen by the user. A higher CPM can increase the chances of winning the auction, but it also means you'll pay more.
 
-Coinciding with this, Roblox runs an auction to determine the best ad to show when there is an ad opportunity.  Advertisers set the maximum price they are willing to pay as CPM or CPP (cost per play). Roblox considers the player and ad information to  generate an eCPM (effective cost per thousand impressions) value for each ad in the request.
+Coinciding with this, Roblox runs an auction to determine the best ad to show when there is an ad opportunity. Advertisers set the maximum price they are willing to pay as CPM or CPP (cost per play). Roblox considers the player and ad information to generate an eCPM (effective cost per thousand impressions) value for each ad in the request.
 
 All eligible ads participate in a **second price auction**. The ad with the highest bid wins the ad slot, but only charges the price of the second highest price, plus one cent. In principle, this looks like:
 
@@ -458,15 +459,15 @@ To review your ad campaign:
 
 Once a campaign, ad set, or ad is submitted, an advertiser can make adjustments to certain parameters. To determine which parameters are changeable, consult the following table:
 
-|Changeable|Fixed|
-| --- | --- |
-|Campaign name|Campaign objective|
-|Campaign end and start dates|Campaign budget type|
-|Campaign budget amount|Ad set bid type|
-|Ad set bid amount|Ad set targeting parameters|
-|Ad set name||
-|Ad name||
-|Ad type||
+| Changeable                   | Fixed                       |
+| ---------------------------- | --------------------------- |
+| Campaign name                | Campaign objective          |
+| Campaign end and start dates | Campaign budget type        |
+| Campaign budget amount       | Ad set bid type             |
+| Ad set bid amount            | Ad set targeting parameters |
+| Ad set name                  |                             |
+| Ad name                      |                             |
+| Ad type                      |                             |
 
 ### Canceling a Campaign
 
@@ -488,23 +489,23 @@ You can't transfer ad credits associated with a specific campaign to another cam
 
 The information provided at the [campaign](#define-the-campaign) level includes:
 
-| Reporting Column  | Definition                                                                                                             |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Name**          | The name of the ad campaign.                                                                                           |
-| **Off/On**        | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
-| **Status**        | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses). |
-| **Spent**         | The total amount of USD or ad credit you have spent on the selected campaign.                                                                        |
-| **Impressions**   | A count for every time a user sees an ad according to Roblox's internal criteria.                                    |
-| **Cost Per Mille (CPM)**           | The cost of 1,000 impressions of your ad.                                                                  |
-| **Clicks**           | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                  |
-| **Click-Through Rate (CTR)**           | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.                                                                  |
-| **Cost Per Play (CPP)**           | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                  ||
-| **Plays**           | The number of times users entered your experience.                                            |
-| **Play Rate**           | Percentage calculated by dividing the number of plays by the number of impressions.                                                                  |
-| **Budget**        | The amount of money allocated for this ad campaign, on a daily or lifetime timeframe.                                  |
-| **Objective**     | Displays the campaign objective between awareness or visits.                                                           |
-| **Schedule**      | Displays the campaign run time.                                                                                        |
-| **Payment Method**      | The method used to pay for your advertising campaign, categorized as either card or ad credit.                                                                                                                            |
+| Reporting Column             | Definition                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
+| **Name**                     | The name of the ad campaign.                                                                                           |
+| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
+| **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses). |
+| **Spent**                    | The total amount of USD or ad credit you have spent on the selected campaign.                                          |
+| **Impressions**              | A count for every time a user sees an ad according to Roblox's internal criteria.                                      |
+| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                              |
+| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                  |
+| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.            |
+| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |     |
+| **Plays**                    | The number of times users entered your experience.                                                                     |
+| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                    |
+| **Budget**                   | The amount of money allocated for this ad campaign, on a daily or lifetime timeframe.                                  |
+| **Objective**                | Displays the campaign objective between awareness or visits.                                                           |
+| **Schedule**                 | Displays the campaign run time.                                                                                        |
+| **Payment Method**           | The method used to pay for your advertising campaign, categorized as either card or ad credit.                         |
 
 ### Ad Set Reports
 
@@ -512,22 +513,22 @@ The information provided at the [campaign](#define-the-campaign) level includes:
 
 The information provided at the [ad set](#define-ad-sets) level includes:
 
-| Reporting Column  | Definition                                                                                              |
-| ----------------- | ------------------------------------------------------------------------------------------------------- |
-| **Name**          | The name of the ad set.                                                                                 |
-| **Off/On**        | A toggle indicating if the ad campaign is active, paused, or disabled.                                  |
-| **Status**        | Displays the status of the ad set. For a list of all statuses, see [Ad Set Statuses](#ad-set-statuses). |
-| **Campaign**      | Shows to which campaign an ad set belongs.                                                   |
-| **Ad Placement**      | Where an ad is displayed, between in-experience, and as sponsored experiences on the Home, Discover, and Search pages.                                                   |
-| **Max Bid**      | The maximum bid amount set for ad auction, shown in either USD or ad credit.                                                   |
-| **Spent**         | The total amount of USD or ad credit you have spent.                                                  |
-| **Impressions**   | A count for every time a user sees an ad according to Roblox's internal criteria.                     |
-| **Cost Per Mille (CPM)**           | The cost of 1,000 impressions of your ad.                                                                  |
-| **Clicks**           | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                  |
-| **Click-Through Rate (CTR)**           | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.                                                                  |
-| **Plays**           | The number of times users entered your experience.                     |
-| **Play Rate**           | Percentage calculated by dividing the number of plays by the number of impressions.                                                                  |
-| **Cost Per Play (CPP)**           | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                  |
+| Reporting Column             | Definition                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Name**                     | The name of the ad set.                                                                                                |
+| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
+| **Status**                   | Displays the status of the ad set. For a list of all statuses, see [Ad Set Statuses](#ad-set-statuses).                |
+| **Campaign**                 | Shows to which campaign an ad set belongs.                                                                             |
+| **Ad Placement**             | Where an ad is displayed, between in-experience, and as sponsored experiences on the Home, Discover, and Search pages. |
+| **Max Bid**                  | The maximum bid amount set for ad auction, shown in either USD or ad credit.                                           |
+| **Spent**                    | The total amount of USD or ad credit you have spent.                                                                   |
+| **Impressions**              | A count for every time a user sees an ad according to Roblox's internal criteria.                                      |
+| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                              |
+| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                  |
+| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.            |
+| **Plays**                    | The number of times users entered your experience.                                                                     |
+| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                    |
+| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |
 
 ### Ad Reports
 
@@ -535,20 +536,20 @@ The information provided at the [ad set](#define-ad-sets) level includes:
 
 The information provided at the [individual ad](#create-ads) level includes:
 
-| Reporting Column  | Definition                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------ |
-| **Name**          | The name of the ad.                                                                                    |
-| **Off/On**        | A toggle indicating if the ad campaign is active, paused, or disabled.                                 |
-| **Status**        | Displays the status of the individual ad. For a list of all statuses, see [Ad Statuses](#ad-statuses). |
-| **Ad Set**        | Displays the ad set the corresponding individual ad belongs to.                                        |
-| **Ad Format**     | Displays if the Ad is an Image or Portal Ad.                                                           |
-| **Spent**         | The total amount of USD or ad credit you have spent.                                                           |
-| **Impressions**   | A count for every time a user sees an ad according to Roblox's internal criteria.                    |
-| **Cost Per Mille (CPM)**           | The cost of 1,000 impressions of your ad.                                                                 |
-| **Clicks**           | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                  |
-| **Plays**           | The number of times users entered your experience.                                                                  |
-| **Play Rate**           | Percentage calculated by dividing the number of plays by the number of impressions.                                                                  |
-| **Cost Per Play (CPP)**           | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                  |
+| Reporting Column         | Definition                                                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| **Name**                 | The name of the ad.                                                                                             |
+| **Off/On**               | A toggle indicating if the ad campaign is active, paused, or disabled.                                          |
+| **Status**               | Displays the status of the individual ad. For a list of all statuses, see [Ad Statuses](#ad-statuses).          |
+| **Ad Set**               | Displays the ad set the corresponding individual ad belongs to.                                                 |
+| **Ad Format**            | Displays if the Ad is an Image or Portal Ad.                                                                    |
+| **Spent**                | The total amount of USD or ad credit you have spent.                                                            |
+| **Impressions**          | A count for every time a user sees an ad according to Roblox's internal criteria.                               |
+| **Cost Per Mille (CPM)** | The cost of 1,000 impressions of your ad.                                                                       |
+| **Clicks**               | The number of times users clicked on your ad on the Home, Discover, and Search pages.                           |
+| **Plays**                | The number of times users entered your experience.                                                              |
+| **Play Rate**            | Percentage calculated by dividing the number of plays by the number of impressions.                             |
+| **Cost Per Play (CPP)**  | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays. |
 
 ### Delivery Columns
 
@@ -562,25 +563,25 @@ You can use the following status tables to understand what each status means.
 
 #### Ad Campaign Statuses
 
-| Delivery Status | Definition                                                                                                                                                                                                                                                                     |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Active**      | Your campaign contains at least one ad running normally.                                                                                                                                                                                                                       |
-| **Paused**      | The campaign is not delivering because it is toggled off (paused by user).                                                                                                                                                                                                     |
-| **Scheduled**   | The campaign flight dates are set in the future and will begin delivering when the start date has passed.                                                                                                                                                                      |
+| Delivery Status | Definition                                                                                                                                                                                                                                                                         |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active**      | Your campaign contains at least one ad running normally.                                                                                                                                                                                                                           |
+| **Paused**      | The campaign is not delivering because it is toggled off (paused by user).                                                                                                                                                                                                         |
+| **Scheduled**   | The campaign flight dates are set in the future and will begin delivering when the start date has passed.                                                                                                                                                                          |
 | **Inactive**    | There are no delivering ad sets within the campaign. This could mean that no ad sets have been created within the campaign, all ad sets or ads are paused, or a combination of the two. Looking at the **Ad Sets** or **Ads** tab will help determine why they are not delivering. |
-| **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                                                     |
-| **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                                                     |
+| **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                                                         |
+| **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                                                         |
 
 #### Ad Set Statuses
 
-| Delivery Status | Definition                                                                                                                                                                                                                                               |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Active**      | The ad is running normally, or your campaign or ad sets contains at least one ad running normally.                                                                                                                                                       |
-| **Paused**      | The ad set is not delivering because it is toggled off.                                                                                                                                                                                                  |
+| Delivery Status | Definition                                                                                                                                                                                                                                                 |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Active**      | The ad is running normally, or your campaign or ad sets contains at least one ad running normally.                                                                                                                                                         |
+| **Paused**      | The ad set is not delivering because it is toggled off.                                                                                                                                                                                                    |
 | **Inactive**    | There are no delivering ads within the ad set. This could mean one or more of the following: No ads have been created within the ad set. Ads are paused or have been rejected. Looking at the **Ads** tab will help determine why they are not delivering. |
-| **Scheduled**   | The ad set start date is set in the future and will turn on at the scheduled time for the campaign.                                                                                                                                                      |
-| **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                               |
-| **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                               |
+| **Scheduled**   | The ad set start date is set in the future and will turn on at the scheduled time for the campaign.                                                                                                                                                        |
+| **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                                 |
+| **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                                 |
 
 #### Ad Statuses
 
