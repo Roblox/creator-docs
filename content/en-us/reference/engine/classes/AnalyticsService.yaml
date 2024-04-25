@@ -563,11 +563,11 @@ methods:
         summary: ''
       - name: itemSku
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -589,13 +589,21 @@ methods:
         type: string
         default:
         summary: ''
+      - name: funnelSessionId
+        type: string
+        default: ''
+        summary: ''
       - name: step
         type: int
-        default:
+        default: 0
+        summary: ''
+      - name: stepName
+        type: string
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -617,9 +625,13 @@ methods:
         type: int
         default:
         summary: ''
+      - name: stepName
+        type: string
+        default: ''
+        summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -637,17 +649,21 @@ methods:
         type: Player
         default:
         summary: ''
+      - name: progressionPathName
+        type: string
+        default:
+        summary: ''
       - name: level
         type: int
         default:
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -665,6 +681,10 @@ methods:
         type: Player
         default:
         summary: ''
+      - name: progressionPathName
+        type: string
+        default:
+        summary: ''
       - name: status
         type: AnalyticsProgressionType
         default:
@@ -675,11 +695,11 @@ methods:
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -697,17 +717,21 @@ methods:
         type: Player
         default:
         summary: ''
+      - name: progressionPathName
+        type: string
+        default:
+        summary: ''
       - name: level
         type: int
         default:
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void
@@ -725,17 +749,21 @@ methods:
         type: Player
         default:
         summary: ''
+      - name: progressionPathName
+        type: string
+        default:
+        summary: ''
       - name: level
         type: int
         default:
         summary: ''
       - name: levelName
         type: string
-        default:
+        default: ''
         summary: ''
       - name: customFields
-        type: Array
-        default:
+        type: Dictionary
+        default: nil
         summary: ''
     returns:
       - type: void

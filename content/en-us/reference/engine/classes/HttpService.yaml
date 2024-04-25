@@ -309,7 +309,7 @@ methods:
       - International-Space-Station
     parameters:
       - name: url
-        type: string
+        type: Variant
         default:
         summary: |
           The web address you are requesting data from.
@@ -350,7 +350,7 @@ methods:
       - HttpService-Pastebin
     parameters:
       - name: url
-        type: string
+        type: Variant
         default:
         summary: |
           The destination address for the data.

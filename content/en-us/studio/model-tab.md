@@ -76,27 +76,33 @@ The **Pivot** tools give you full control over the points around which objects r
 
 The **Align Tool** button opens a set of tools for aligning objects or groups of objects along the X, Y, or Z axes. For more information, see [Align&nbsp;Tool](../studio/align-tool.md).
 
-<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="672" alt="Align Tool indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="660" alt="Align Tool indicated in Model tab" />
 
 ## Part Insertion
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**. For more information, see [Parts](../parts/index.md).
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="672" alt="Part menu indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Part menu indicated in Model tab" />
 
-## Material Manager
+## Color Widget
 
-The **Material&nbsp;Manager** window lets you apply and create custom materials for parts and [terrain](../parts/terrain.md). See [Materials](../parts/materials.md) for details.
+Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. Once you've selected a color, you can quickly apply it to other parts by selecting those parts and clicking the **Color** button itself.
 
-<img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="672" alt="Material Manager indicated in Model tab" />
-
-## Color Picker
-
-Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
-
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="842" alt="Color button indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="704" alt="Studio's Model tab with the Color widget's components highlighted." />
 
 For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#coloring-parts).
+
+## Material Widget
+
+<Alert severity="success">
+The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
+</Alert>
+
+Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+
+<img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material widget's components highlighted." />
+
+See [Materials](../parts/materials.md) for details on how materials differ in Roblox versus other platforms.
 
 ## Texture Generator
 
@@ -106,7 +112,7 @@ This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&
 
 The [Texture Generator](../studio/texture-generator.md) tool quickly creates custom textures for meshes through text prompts.
 
-<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="716" alt="Texture Generator indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="704" alt="Texture Generator indicated in Model tab" />
 
 ## Group Tools
 
@@ -116,7 +122,7 @@ Alternatively, you can group objects into a [folder](../studio/explorer.md#organ
 
 To **ungroup** an existing model or folder, click the small arrow next to the button and select **Ungroup**. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>U</kbd> (Windows) or <kbd>⌘</kbd><kbd>U</kbd> (Mac).
 
-<img src="../assets/studio/general/Model-Tab-Group-Tools.png" width="718" alt="Group tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Group-Tools.png" width="706" alt="Group tools indicated in Model tab" />
 
 ## Lock Tools
 
@@ -126,19 +132,19 @@ Once enabled, the tool operates as a "key" for both states&nbsp;&mdash; clicking
 
 To unlock all objects, click the small arrow next to the button and select **Unlock&nbsp;All**.
 
-<img src="../assets/studio/general/Model-Tab-Lock-Tools.png" width="716" alt="Lock tools indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Lock-Tools.png" width="704" alt="Lock tools indicated in Model tab" />
 
 ## Anchor Toggle
 
 The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac).
 
-<img src="../assets/studio/general/Model-Tab-Anchor.png" width="716" alt="Anchor toggle indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Anchor.png" width="704" alt="Anchor toggle indicated in Model tab" />
 
 ## Solid Modeling
 
 The **Solid Modeling** section contains tools to create new geometry beyond the basic [parts](../parts/index.md) Roblox provides. For more information, see [Solid Modeling](../parts/solid-modeling.md).
 
-<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="744" />
+<img src="../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Solid modeling tools indicated in Model tab" width="732" />
 
 <table>
   <thead>

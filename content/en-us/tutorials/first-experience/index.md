@@ -165,9 +165,7 @@ Similar to [moving](#moving-parts) and [scaling](#scaling-parts), parts rotate a
 
 The fastest way to recolor a part is through the hexagonal **color picker** accessible through the small dropdown arrow under the **Color** button. By default, picking a color applies it to all selected parts. Alternatively, you can apply a chosen color as a painting tool by toggling on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and clicking specific parts in the 3D viewport.
 
-<img src="../../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Basic Color Picker dropdown menu and the Toggle Action As Tool highlighted." />
-
-<img src="../../assets/studio/general/Hexagon-Color-Picker.png" alt="A close up view of all basic colors you can apply to your parts." width="380" />
+<img src="../../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Basic Color Picker open." />
 
 You can also customize a part's **material** to simulate real-world materials such as wood, glass, or fabric. A part's material affects both its visual appearance **and** its physical traits; for example, the **Concrete** material is heavier than the **Plastic** material, so a concrete brick will have higher density than a plastic brick and sink faster in water.
 
@@ -205,7 +203,7 @@ Since platforms should remain fixed in space, you'll need to **anchor** each par
 1. In the 3D viewport, [select](#selecting-parts) each of the platform parts you've inserted into the world.
 1. Toggle on the **Anchor** option in the **Parts** section.
 
-   <img src="../../assets/studio/general/Model-Tab-Anchor.png" width="770" alt="Studio's Model tab with the Anchor button highlighted." />
+   <img src="../../assets/studio/general/Model-Tab-Anchor.png" width="704" alt="Studio's Model tab with the Anchor button highlighted." />
 
 ### Deleting the Baseplate
 
@@ -244,7 +242,7 @@ While playtesting, you can use the same controls as a default Roblox experience:
   <tr>
     <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
     <td>Run forward, left, back, or right</td>
-  </tr>  
+  </tr>
   <tr>
     <td><kbd>Spacebar</kbd></td>
     <td>Jump</td>

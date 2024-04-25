@@ -1,0 +1,13 @@
+name: DeviceFeatureType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: DeviceCapture
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''

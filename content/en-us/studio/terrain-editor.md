@@ -5,7 +5,7 @@ description: The Terrain Editor tools generate and sculpt realistic terrain envi
 
 The **Terrain Editor**, accessible from the [Home](../studio/home-tab.md) or [View](../studio/view-tab.md) tab, lets you generate and manipulate [environmental terrain](../parts/terrain.md) through its [Create](#create-tab) and [Edit](#edit-tab) toolsets.
 
-<img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
 
 <Alert severity="info">
 For detailed instructions on working with terrain, see the [Terrain](../parts/terrain.md) guide.

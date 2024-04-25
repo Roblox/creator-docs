@@ -1168,12 +1168,12 @@ To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
 
 1. Play your experience and try to reach the flare at the top of the stacks.
 1. When you're done, navigate back to the menu bar, and click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
 
 Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../platform.md), or follow additional tutorial curricula, such as the [Environmental Art Curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
 

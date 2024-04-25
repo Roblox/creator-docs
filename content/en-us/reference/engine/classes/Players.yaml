@@ -552,6 +552,23 @@ methods:
       be used in all new work.
     security: None
     thread_safety: Unsafe
+  - name: Players:BanAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: Players:CreateHumanoidModelFromDescription
     summary: |
       Returns a character Model equipped with everything specified in the passed
@@ -980,6 +997,23 @@ methods:
           A tuple containing the content URL of a user thumbnail based on the
           specified parameters, and a bool describing if the image is ready to
           be used or not.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Players:UnbanAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
     tags:
       - Yields
     deprecation_message: ''

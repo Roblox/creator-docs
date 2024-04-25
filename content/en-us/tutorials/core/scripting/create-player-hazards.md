@@ -161,7 +161,7 @@ water, your character should die and lose their coins. To test your game:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
 
 1. Move your character to collect some coins, then jump in the water. If your
    scripts are working correctly, your character dies, and the coin count on
