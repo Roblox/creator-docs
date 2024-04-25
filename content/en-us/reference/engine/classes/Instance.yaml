@@ -191,10 +191,10 @@ properties:
       Instance.new("NumberValue", workspace)
       ```
 
-      Whena a change is made to certain properties while an instance is
-      parented in the `Class.DataModel` the engine may need to perform extra
+      When a change is made to certain properties while an instance is
+      parented in the `Class.DataModel`, the engine may need to perform extra
       work internally (for things like replication, rendering, and GUI
-      layouting). Therefore where possible it is a good idea to change an
+      layout). Whenever possible, change an
       instance's properties **before** you set its Parent, rather than after,
       to avoid performing that work redundantly.
 
