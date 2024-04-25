@@ -138,7 +138,7 @@ To exactly recreate the floor geometry within the sample [Environment Art - Grey
    1. In the menu bar, select the **Model** tab.
    1. In the **Parts** section, click the dropdown arrow and select **Block**. A block part displays in the viewport.
 
-      <img src="../../assets/studio/general/Model-Tab-Part-Tools.png" width="100%" alt="Studio's Model tab with the Part button and Part Type Picker elements highlighted." />
+      <img src="../../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Part button and Part Type Picker elements highlighted." />
 
    1. In the **Explorer** window, select the block, then in the **Properties** window,
       1. Set **Size** to **105, 1, 185**.

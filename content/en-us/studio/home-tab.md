@@ -5,13 +5,13 @@ description: The Home tab contains basic tools for building and testing your exp
 
 The **Home** tab contains basic tools for building and testing your experience.
 
-<img src="../assets/studio/general/Toolbar-Home-Tab.png" width="800" alt="Home tab indicated in Studio toolbar" />
+<img src="../assets/studio/general/Toolbar-Home-Tab.png" width="716" alt="Home tab indicated in Studio toolbar" />
 
 ## Clipboard
 
 The first section from left contains tools for copying, cutting, pasting, and duplicating instances. You can perform these operations on both 3D world objects or instances in the [Explorer](../studio/explorer.md) window.
 
-<img src="../assets/studio/general/Home-Tab-Clipboard-Tools.png" width="800" alt="Clipboard tools indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Clipboard-Tools.png" width="716" alt="Clipboard tools indicated in Home tab" />
 
 <table>
   <thead>
@@ -49,7 +49,7 @@ The first section from left contains tools for copying, cutting, pasting, and du
 
 The primary transform tools include **Select**, **Move**, **Scale**, and **Rotate**. When you choose a tool, visual draggers display on the selected object in the viewport.
 
-<img src="../assets/studio/general/Home-Tab-Transform-Tools.png" width="800" alt="Transform tools indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Transform-Tools.png" width="716" alt="Transform tools indicated in Home tab" />
 
 <GridContainer numColumns="3">
   <figure>
@@ -76,13 +76,13 @@ If the selected object and its visual draggers are not currently in view within 
 
 The **Mode** selector toggles between standard geometric transformations and [simulation of mechanical constraints](../physics/mechanical-constraints.md#simulating-constraints) while moving or rotating parts.
 
-<img src="../assets/studio/general/Home-Tab-Mode.png" width="800" alt="Mode selector indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Mode.png" width="716" alt="Mode selector indicated in Home tab" />
 
 ### Collisions
 
 The **Collisions** checkbox toggles the collisions state when you're transforming objects. If collisions are **off**, you can move, scale, and rotate objects so that they overlap each other; if collisions are **on**, you cannot transform objects to overlap other objects.
 
-<img src="../assets/studio/general/Home-Tab-Collisions-On.png" width="800" alt="Collisions checkbox indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Collisions-On.png" width="716" alt="Collisions checkbox indicated in Home tab" />
 
 ### Transform Coordinates
 
@@ -101,19 +101,19 @@ The **Collisions** checkbox toggles the collisions state when you're transformin
 
 The **Editor** button opens a window with tools for creating and shaping static terrain. For more information, see [Terrain Editor](./terrain-editor.md).
 
-<img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
 
 ## Toolbox
 
 The [Toolbox]/projects/assets/toolbox) includes all of the models, images, meshes, audio, and more that you've published, or those published by groups you belong to. It also includes a selection of assets made by Roblox or Roblox community members.
 
-<img src="../assets/studio/general/Home-Tab-Toolbox.png" width="800" alt="Toolbox indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Toolbox.png" width="716" alt="Toolbox indicated in Home tab" />
 
 ## Part Insertion
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**. For more information, see [Parts](../parts/index.md).
 
-<img src="../assets/studio/general/Home-Tab-Part-Tools.png" width="800" alt="Part menu indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
 ## UI Designer
 
@@ -129,29 +129,25 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 <img src="../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
 
-## Material Manager
+## Color Widget
 
-The **Material&nbsp;Manager** window lets you apply and create custom materials for parts and [terrain](../parts/terrain.md). See [Materials](../parts/materials.md) for details.
+Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. Once you've selected a color, you can quickly apply it to other parts by selecting those parts and clicking the **Color** button itself.
 
-<img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" alt="Material Manager indicated in Home tab" />
-
-## Material Generator
-
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Generator**.
-</Alert>
-
-The [Material Generator](../parts/materials.md#material-generator) is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds.
-
-<img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator indicated in Home tab" />
-
-## Color Picker
-
-Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
-
-<img src="../assets/studio/general/Home-Tab-Color-Tools.png" width="800" alt="Color button indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Color-Tools.png" width="776" alt="Studio's Home tab with the Color widget's components highlighted." />
 
 For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#coloring-parts).
+
+## Material Widget
+
+<Alert severity="success">
+The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
+</Alert>
+
+Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+
+<img src="../assets/studio/general/Home-Tab-Material-Tools.png" width="776" alt="Studio's Home tab with the Material widget's components highlighted." />
+
+See [Materials](../parts/materials.md) for details on how materials differ in Roblox versus other platforms.
 
 ## Group Tools
 
@@ -161,7 +157,7 @@ Alternatively, you can group objects into a [folder](../studio/explorer.md#organ
 
 To **ungroup** an existing model or folder, click the small arrow next to the button and select **Ungroup**. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>U</kbd> (Windows) or <kbd>⌘</kbd><kbd>U</kbd> (Mac).
 
-<img src="../assets/studio/general/Home-Tab-Group-Tools.png" width="800" alt="Group tools indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Group-Tools.png" width="776" alt="Group tools indicated in Home tab" />
 
 ## Lock Tools
 
@@ -171,19 +167,19 @@ Once enabled, the tool operates as a "key" for both states&nbsp;&mdash; clicking
 
 To unlock all objects, click the small arrow next to the button and select **Unlock&nbsp;All**.
 
-<img src="../assets/studio/general/Home-Tab-Lock-Tools.png" width="800" alt="Lock tools indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Lock-Tools.png" width="776" alt="Lock tools indicated in Home tab" />
 
 ## Anchor Toggle
 
 The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac).
 
-<img src="../assets/studio/general/Home-Tab-Anchor.png" width="800" alt="Anchor toggle indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Anchor.png" width="776" alt="Anchor toggle indicated in Home tab" />
 
 ## Playtest Options
 
 There are three common options for playtesting an experience. Clicking the button starts a playtest of the currently selected mode, and clicking the small arrow below the button lets you choose a different mode.
 
-<img src="../assets/studio/general/Home-Tab-Playtest-Options.png" width="800" alt="Playtest options indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Playtest-Options.png" width="760" alt="Playtest options indicated in Home tab" />
 
 <table>
   <thead>
@@ -214,7 +210,7 @@ There are three common options for playtesting an experience. Clicking the butto
 
 Once a playtest is running, the following options become available:
 
-<img src="../assets/studio/general/Home-Tab-Playtest-Running-Options.png" width="800" alt="Playtest options indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Playtest-Running-Options.png" width="767" alt="Playtest options indicated in Home tab" />
 
 <table>
 <thead>
@@ -248,4 +244,4 @@ The **Game Settings** button, accessible only for a [published](../production/pu
 
 During a [collaborative](../projects/collaboration.md) session, clicking **Team Test** starts a playtest with other editors, and **Exit Game** exits out of a current playtest.
 
-<img src="../assets/studio/general/Home-Tab-Team-Test-Options.png" width="800" alt="Team Test option buttons indicated in Home tab" />
+<img src="../assets/studio/general/Home-Tab-Team-Test-Options.png" width="714" alt="Team Test option buttons indicated in Home tab" />

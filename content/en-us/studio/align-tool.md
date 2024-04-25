@@ -5,7 +5,7 @@ description: The Align Tool lets you align objects or groups of objects along th
 
 The **Align Tool** lets you align objects or groups of objects along the **X**, **Y**, or **Z** axes. You can access it from the **Model** tab of the toolbar.
 
-<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="672" alt="Studio's Model tab with the Align Tool highlighted." />
+<img src="../assets/studio/general/Model-Tab-Align-Tool.png" width="660" alt="Studio's Model tab with the Align Tool highlighted." />
 
 Primary benefits include:
 

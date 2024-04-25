@@ -56,10 +56,10 @@ properties:
       each player's `Class.PlayerGui` once, and the `Class.LayerCollector` will
       not be deleted when the player respawns.
 
-      When set to true, or if this `Class.LayerCollector` is an indirect 
+      When set to true, or if this `Class.LayerCollector` is an indirect
       descendant of `Class.StarterGui`, this `Class.LayerCollector` will be
-      cloned into each player's `Class.PlayerGui` when they respawn, and it
-      will delete itself when the player respawns again.
+      cloned into each player's `Class.PlayerGui` when they respawn, and it will
+      delete itself when the player respawns again.
     code_samples:
     type: bool
     tags: []
@@ -101,6 +101,26 @@ properties:
       can_load: true
       can_save: true
 methods:
+  - name: LayerCollector:GetGuiObjectsAtPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: x
+        type: int
+        default:
+        summary: ''
+      - name: 'y'
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: LayerCollector:GetLayoutNodeTree
     summary: ''
     description: ''

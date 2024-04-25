@@ -54,7 +54,7 @@ To access Assistant from Studio:
 
 #### Quick Style
 
-When given a request to generate a material, Assistant in Studio can quickly style existing parts through a lightweight implementation of the [Material Generator](../parts/materials.md#material-generator).
+When given a request to generate a material, Assistant in Studio can quickly style existing parts through a lightweight implementation of the [Material Generator](../studio/material-generator.md).
 
 <img src="../assets/assistant/Studio-Quick-Styling-Material.png" width="360" alt="Material variations shown in Assistant for quick styling" />
 

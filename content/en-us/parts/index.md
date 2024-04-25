@@ -92,7 +92,7 @@ The following are commonly utilized properties:
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**.
 
-<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="826" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
+<img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
 
 <Alert severity="info">
 To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#inserting-and-parenting).
@@ -162,11 +162,9 @@ While a part is gray by default, you can change it to any color through the foll
 
 ### Hexagon Map
 
-Clicking the small dropdown arrow on the **Color** button reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. You can also apply a chosen color as a painting tool by toggling on **Color Action as Tool** and clicking specific parts in the 3D viewport.
+Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. Once you've selected a color, you can quickly apply it to other parts by selecting those parts and clicking the **Color** button itself.
 
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Color tool's Basic Color Picker button and Toggle Action as Tool button highlighted." />
-
-<img src="../assets/studio/general/Hexagon-Color-Picker.png" alt="A close up view of the hexagonal colors you can make your parts." width="380" />
+<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="772" alt="Studio's Model tab with the Color button's components highlighted." />
 
 ### Colors Popup
 

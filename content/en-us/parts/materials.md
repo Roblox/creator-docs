@@ -5,52 +5,38 @@ description: Materials determine objects' visual appearance and physical propert
 
 Roblox's materials are unlike materials on other platforms, in that their visual appearance **and** their [physical properties](#physical-properties) reflect those of materials in the real world. For example, concrete is heavier than plastic and sinks faster in water. When you set the material of a part or terrain, Roblox simulates its physical material properties to make this behavior just work.
 
-The Roblox engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials. The [Material Manager](#material-manager) in Studio helps you visualize materials and apply them to parts.
+The Roblox engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
 
 You can also create your own [custom materials](#custom-materials) and apply them to parts or [terrain](../parts/terrain.md). Custom materials have an additional [adaptive materials](#adaptive-materials) behavior that lets you adapt any model to use your art style and custom materials, even if someone else created the model.
 
-## Material Manager
+## Applying Materials
 
-The easiest way to interact with materials is through Studio's **Material&nbsp;Manager**, a streamlined tool for working with materials.
+You can quickly apply materials to [parts](../parts/index.md) through the [Material](#material-widget) widget. The [Material Manager](#material-manager) offers the same functionality and an additional "paint&nbsp;tool" application mode.
+
+### Material Widget
+
+<Alert severity="success">
+The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
+</Alert>
+
+The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs.
+
+<img src="../assets/studio/general/Model-Tab-Material.png" width="704" alt="Studio's Model tab with the Material button highlighted." />
+
+Clicking the small dropdown arrow reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+
+<img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material button's components highlighted." />
+
+### Material Manager
+
+If you've enabled the [Material Picker](#material-widget) beta, access the **Material Manager** from the picker window. If you have not enabled the beta, locate its dedicated button to the left of the **Color** button in the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tab.
+
+<img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="704" alt="Studio's Model tab with the Material Manager button highlighted." />
+
+From the manager window, you can apply materials to [parts](../parts/index.md) through the following workflows.
 
 <Tabs>
-  <TabItem label="Home Tab">
-    <img src="../assets/studio/general/Home-Tab-Material-Manager.png" width="694" height="156" alt="Material Manager button in Studio toolbar Home tab" />
-  </TabItem>
-  <TabItem label="Model Tab">
-    <img src="../assets/studio/general/Model-Tab-Material-Manager.png" width="672" height="156" alt="Material Manager button in Studio toolbar Model tab" />
-  </TabItem>
-</Tabs>
-
-The material manager window consists of four main sections:
-
-<img src="../assets/studio/material-manager/Material-Manager-Diagram.png" width="860" alt="Material Manager window showing four distinct sections (A-D)" />
-
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The **Toolbar** displays key commands and a material search field.</p></Grid>
-</Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The **Browser** displays available materials, either all at once or by category.</p></Grid>
-</Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The **Palette** displays the materials in the currently selected category.</p></Grid>
-</Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The **Inspector** displays information about the selected material.</p></Grid>
-</Grid>
-
-You can change the window's [layout within Studio](../studio/setting-up-roblox-studio.md#window-layout), just like other windows, and you can toggle between **grid** or **list** view using the view options button in the top-right corner.
-
-<img src="../assets/studio/material-manager/View-Options-Button.png" width="728" alt="View options button in top-right corner of Material Manager window" />
-
-### Applying Materials to Parts
-
-#### Apply to Selected
-
+<TabItem label="Apply to Selected">
 The default `Enum.Material` property for new `Class.Part` instances is **Plastic**. To apply a different material to parts:
 
 1. In the 3D viewport or [Explorer](../studio/explorer.md), select one or more parts.
@@ -58,8 +44,8 @@ The default `Enum.Material` property for new `Class.Part` instances is **Plastic
 
    <img src="../assets/studio/material-manager/Apply-To-Selected-Parts.png" width="700" alt="Apply to Selected Parts button indicated in Material Manager" />
 
-#### Paint Tool
-
+</TabItem>
+<TabItem label="Paint Tool">
 You can also use a material as a painting tool that applies to parts:
 
 1. In the **Material Manager**, select the material you want to apply.
@@ -70,19 +56,16 @@ You can also use a material as a painting tool that applies to parts:
 1. In the 3D viewport, hover over and click the parts that you want to apply the material to.
 1. When you're done painting, click the button again to disable the tool.
 
-### Applying Materials to Terrain
-
-Unlike on parts, you cannot directly apply base materials to [terrain](../parts/terrain.md) through the **Material&nbsp;Manager**, although you can use it to [apply custom materials to terrain](#applying-custom-materials-to-terrain).
+</TabItem>
+</Tabs>
 
 ## Custom Materials
 
-The [Material Manager](#material-manager) provides a user interface to interact with various aspects of `Class.MaterialService`, including creating new **custom materials** and applying them to parts and terrain. Custom materials are represented by `Class.MaterialVariant` instances within `Class.MaterialService`.
+The [Material Manager](#material-manager) provides a user interface to interact with various aspects of `Class.MaterialService`, including creating new custom materials and applying them to parts and [terrain](../parts/terrain.md). Custom materials are represented by `Class.MaterialVariant` instances within `Class.MaterialService`.
 
 <img src="../assets/modeling/materials/Explorer-MaterialVariant-Instances.png" width="320" alt="Explorer window showing two MaterialVariant instances within MaterialService" />
 
 You can apply custom materials per-part or globally to both parts and terrain, and you can fine-tune how custom materials apply to faces of terrain with `Class.TerrainDetail` instances.
-
-Note that the appearance of custom materials is based on [Physically Based Rendering](../art/modeling/surface-appearance.md) (PBR) textures that you make with other tools, such as Adobe [Substance 3D Designer](https://www.adobe.com/products/substance3d-designer) and [Substance 3D Painter](https://www.adobe.com/products/substance3d-painter). For more information, see Adobe's [documentation](https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html).
 
 <Alert severity="info">
 `Class.MaterialVariant` and `Class.SurfaceAppearance` instances both use [PBR](../art/modeling/surface-appearance.md) textures to customize the appearance of objects. The difference is that `Class.MaterialVariant` is for customizing the appearance of reusable tileable material, whereas `Class.SurfaceAppearance` is for customizing the visual appearance of a specific mesh with UV mapping. `Class.MaterialVariant` instances also have [physical properties](#physical-properties) that `Class.SurfaceAppearance` instances don't.
@@ -90,13 +73,9 @@ Note that the appearance of custom materials is based on [Physically Based Rende
 
 ### Creating Custom Materials
 
-You can edit all properties of a custom material in the [Material&nbsp;Manager](#material-manager), through the AI-powered [Material Generator](#material-generator), or through the properties of a `Class.MaterialVariant` instance.
+You can edit all properties of a custom material in the [Material Manager](#material-manager) or through the properties of a `Class.MaterialVariant` instance. You can also generate custom materials through the prompt‑based [Material Generator](../studio/material-generator.md).
 
-Note that if you rename a custom material **after** applying it to parts, those parts will not automatically use the custom material with the new name. This behavior allows for [Adaptive Materials](#adaptive-materials). If you want parts to continue using a custom material after you rename it, you'll need to re-apply the custom material.
-
-#### Material Manager
-
-To create a custom material in the [Material&nbsp;Manager](#material-manager):
+To create a custom material in the [Material Manager](#material-manager):
 
 1. Click the **base material** from which your custom material will inherit [physical properties](#physical-properties). If you skip this step, the base material will be **Plastic**, but you can change it later.
 
@@ -114,107 +93,35 @@ To create a custom material in the [Material&nbsp;Manager](#material-manager):
 4. For each **texture map** option such as **Color** or **Normal**, paste an asset&nbsp;ID or import a new texture from your computer. Square textures work best. If you don't specify an asset for a texture map, that texture remains blank.
 5. If desired, adjust the **Studs Per Tile** and **Pattern** values to change how the material looks.
 
-#### Material Generator
-
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Generator**.
+<Alert severity="info">
+If necessary, you can delete a custom material from the [Material Manager](#material-manager) by selecting it and clicking the **Delete** button below its preview globe. Alternatively, you can delete its associated `Class.MaterialVariant` instance within **MaterialService** of the [Explorer](../studio/explorer.md).
 </Alert>
 
-The **Material Generator** is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds. Once you find a satisfying result, you can instantly save it as a new custom material.
+### Applying Custom Materials
 
-1. Open the **Material Generator** tool from the [Home](../studio/home-tab.md) tab.
-
-   <img src="../assets/studio/general/Home-Tab-Material-Generator.png" width="694" alt="Material Generator button in Studio toolbar Home tab" />
-
-2. In the text box at the top of the window, enter keywords and then click the **Generate** button. Generating satisfying results can be an iterative process requiring a long list of descriptors to help focus in on the material you want. Here are some tips:
-
-   - For close-up patterns, try using terms like "close&nbsp;up," "top down," and "texture."
-   - For simpler repeating patterns, try using terms like "simple," "pattern," "symmetrical," and "flat."
-   - For more control, add stylistic terms like "photorealistic," "cartoon," or "hand-drawn."
-   - For the ability to change colors, try including terms like "grayscale" which will allow you to tint the material afterwards.
-
-   <p>As follows are some example keyword combos and the approximate results. Note that every click of **Generate** yields different results, even with the exact same keywords.</p>
-
-   <Tabs>
-   <TabItem label="Example 1">
-      <p>"Stained Glass"</p>
-      <GridContainer numColumns="4">
-      <img src="../assets/modeling/materials/Material-Generator-Example-2D.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-2C.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-2A.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-2B.jpg" />
-      </GridContainer>
-   </TabItem>
-   <TabItem label="Example 2">
-      <p>"Rainbow Pebbles Pile Matte Finish"</p>
-      <GridContainer numColumns="4">
-      <img src="../assets/modeling/materials/Material-Generator-Example-1A.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-1B.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-1C.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-1D.jpg" />
-      </GridContainer>
-   </TabItem>
-   <TabItem label="Example 3">
-      <p>"Rusted Metal Charred"</p>
-      <GridContainer numColumns="4">
-      <img src="../assets/modeling/materials/Material-Generator-Example-3A.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-3B.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-3C.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-3D.jpg" />
-      </GridContainer>
-   </TabItem>
-   <TabItem label="Example 4">
-      <p>"Japanese Cherry Blossom Fabric"</p>
-      <GridContainer numColumns="4">
-      <img src="../assets/modeling/materials/Material-Generator-Example-4C.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-4B.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-4A.jpg" />
-      <img src="../assets/modeling/materials/Material-Generator-Example-4D.jpg" />
-      </GridContainer>
-   </TabItem>
-   </Tabs>
-
-3. Click a generated image tile to view more options, as well as apply the material in "preview" mode to all selected parts.
-
-   <Grid container spacing={2}>
-   <Grid item><img src="../assets/modeling/materials/Material-Generator-Expanded-Options.png" width="220" /></Grid>
-   <Grid item><img src="../assets/modeling/materials/Material-Generator-Preview-On-Part.jpg" width="540" /></Grid>
-   </Grid>
-
-4. Adjust the **Studs Per Tile** slider to interactively preview how the material's texture will appear on the selected parts. Additionally, test out the **Organic** toggle which makes materials appear less "repetitive" by randomizing the output.
-
-   <figure>
-   <video src="../assets/modeling/materials/Material-Generator-Preview.mp4" controls width="100%" alt="Adjustment of Studs Per Tile value and Organic toggle" />
-   <figcaption>Adjustment of **Studs Per Tile** value and **Organic** toggle</figcaption>
-   </figure>
-
-5. When ready, choose a **Base Material** to apply that material's [physical properties](#physical-properties) to your custom material. Then click the **Save & Apply Variant** button to save the custom material to the [Material&nbsp;Manager](#material-manager).
-
-### Applying Custom Materials to Parts
-
-For parts, you can use a custom material just like any other material, applying it to [selected parts](#apply-to-selected) or using it as a [paint tool](#paint-tool).
+For [parts](../parts/index.md), you can use a custom material just like any other material, applying it to selected parts through the [Material](#applying-materials) widget or the [Material Manager](#material-manager).&sup1;
 
 You can also apply the new material to a part by setting its **MaterialVariant** property in the [Properties](../studio/properties.md) window. In this case, Studio automatically sets its **Material** property to the base material you chose when creating the material.
 
 <img src="../assets/modeling/materials/Properties-Material-And-MaterialVariant.png" width="320" alt="Material and MaterialVariant properties set in the Properties window" />
 
-### Applying Custom Materials to Terrain
+<Alert severity="warning">
+Note that if you rename a custom material **after** applying it to parts, those parts will not automatically use the custom material with the new name. This behavior allows for [Adaptive Materials](#adaptive-materials). If you want parts to continue using a custom material after you rename it, you'll need to re-apply the custom material.
+</Alert>
 
-Unlike on parts, you cannot **directly** apply custom materials to [terrain](../parts/terrain.md), although you can set a custom material as a **material override** to an existing base material for all terrain using that base material.
-
-See [Material Overrides](#material-overrides) for instructions on using a custom material as a global per-place override for any base material.
+<figcaption>&sup1; Unlike on parts, you cannot **directly** apply custom materials to [terrain](../parts/terrain.md), although you can set a custom material as a [material override](#material-overrides) to an existing base material for all terrain using that material.</figcaption>
 
 ### Material Overrides
 
 You can set a custom material as a **material override** to make its base material serve as a reference to the custom material. When you do so, Studio will use the custom material for both the textures and [physical properties](#physical-properties) of any part or [terrain](../parts/terrain.md) that uses the custom material.
 
 <Alert severity="info">
-Material overrides are the only way to [apply custom materials to terrain](#applying-custom-materials-to-terrain). Note also that the materials for terrain are global per place, so you can't apply multiple variants of the same base material to the terrain in a single place.
+Material overrides are the only way to apply custom materials to terrain. Note also that the materials for terrain are global per place, so you can't apply multiple variants of the same base material to the terrain in a single place.
 </Alert>
 
 #### Setting Overrides
 
-To set a custom material as a material override in the [Material&nbsp;Manager](#material-manager):
+To set a custom material as a material override in the [Material Manager](#material-manager):
 
 1. Click the custom material that you want to set as an override.
 1. In the inspector, scroll down to **Overrides** and enable **Set as Override**.
@@ -231,7 +138,7 @@ By default, applying a custom material to parts or as an override applies that c
 
 To customize the faces of terrain using a custom material:
 
-1. In the palette of the [Material&nbsp;Manager](#material-manager), click the custom material.
+1. In the palette of the [Material Manager](#material-manager), click the custom material.
 1. In the inspector, confirm that its **Set as Override** toggle is enabled.
 
    <img src="../assets/studio/material-manager/Set-Override-Enabled.png" width="320" />
@@ -250,28 +157,22 @@ You can disable an entire material override and all base materials that it's cur
 
 <Tabs>
 <TabItem label="Disable Entire Override">
-1. In the palette of the [Material&nbsp;Manager](#material-manager), click a **custom material** that's being used as an override.
+1. In the palette of the [Material Manager](#material-manager), click a **custom material** that's being used as an override.
 1. In the inspector, scroll down to **Overrides** and disable **Set as Override**.
 
    <img src="../assets/studio/material-manager/Set-Override-Disabled.png" width="320" />
 </TabItem>
 <TabItem label="Disable Override for Specific Material">
-1. In the palette of the [Material&nbsp;Manager](#material-manager), click a **base material** which is being overridden by a custom material.
+1. In the palette of the [Material Manager](#material-manager), click a **base material** which is being overridden by a custom material.
 2. In the inspector, scroll down to **Material Override** and select **None** from the menu.
 
    <img src="../assets/studio/material-manager/Disable-Material-Override-Specific.png" width="320" />
 </TabItem>
 </Tabs>
 
-### Deleting Custom Materials
-
-You can delete a custom material from the [Material&nbsp;Manager](#material-manager) by selecting it and clicking the **Delete** button below its preview globe. Alternatively, you can delete its associated `Class.MaterialVariant` instance within **MaterialService** of the [Explorer](../studio/explorer.md).
-
-<img src="../assets/studio/material-manager/Delete-Custom-Material.png" width="300" alt="Delete button indicated in Material Manager" />
-
 ## Physical Properties
 
-All materials have built-in **physical properties** such as density, elasticity, and friction. Through the application of [custom materials with unique physical properties](#applying-to-custom-materials), you can affect global material behavior for all parts and [terrain](../parts/terrain.md) which use the custom material, such as creating an extremely slippery variant of the **Ice** material.
+All materials have built-in **physical properties** such as density, elasticity, and friction. Through the application of [custom materials](#custom-materials) with unique physical properties, you can affect global material behavior for all parts and [terrain](../parts/terrain.md) which use the custom material, such as creating an extremely slippery variant of the **Ice** material.
 
 When factoring physical properties, the engine prioritizes more granular per-part settings over material behaviors to determine the effective physical properties of a surface:
 
@@ -303,28 +204,31 @@ When factoring physical properties, the engine prioritizes more granular per-par
 	</Grid>
 </Grid>
 
-### Applying to Custom Materials
-
+<Tabs>
+<TabItem label="Applying to Custom Materials">
 To set unique physical properties for any [custom material](#custom-materials) and automatically apply them to all parts and [terrain](../parts/terrain.md) which use the material:
 
-1. In the palette of the [Material&nbsp;Manager](#material-manager), click the custom material.
-1. In the inspector, scroll down to the **Physics** section and set custom physical properties as detailed in the `Datatype.PhysicalProperties` reference.
+1. In the palette of the [Material Manager](#material-manager), click the custom material.
+2. In the inspector, scroll down to the **Physics** section and set custom physical properties as detailed in the `Datatype.PhysicalProperties` reference.
 
    <img src="../assets/studio/material-manager/Physical-Properties.png" width="320" alt="Custom physical properties in Material Manager inspector pane" />
 
-   For any part that uses the custom material and does **not** have [part-specific](#per-part-overrides) overrides, the **CurrentPhysicalProperties** branch in the [Properties](../studio/properties.md) window reveals that its default physical properties are overridden by the custom material's properties.
+   For any part that uses the custom material and does **not** have [part-specific](#physical-properties) overrides, the **CurrentPhysicalProperties** branch in the [Properties](../studio/properties.md) window reveals that its default physical properties are overridden by the custom material's properties.
 
    <img src="../assets/modeling/materials/Properties-Physical-Overridden.png" width="320" alt="Properties window showing physical properties overridden by those of custom material" />
 
-### Per-Part Overrides
-
-If you need to override a part's [custom material properties](#applying-to-custom-materials) and set physical properties for that specific part, you can use its **CustomPhysicalProperties** toggle.
+</TabItem>
+<TabItem label="Per-Part Overrides">
+If you need to override a part's custom material properties and set physical properties for that specific part, you can use its **CustomPhysicalProperties** toggle.
 
 1. With the part selected, enable **CustomPhysicalProperties** in the [Properties](../studio/properties.md) window.
 
    <img src="../assets/modeling/materials/Properties-Part-CustomPhysicalProperties.png" width="320" alt="CustomPhysicalProperties enabled in a part's properties" />
 
 2. Set custom physical properties as detailed in the `Datatype.PhysicalProperties` reference.
+
+</TabItem>
+</Tabs>
 
 ## Adaptive Materials
 

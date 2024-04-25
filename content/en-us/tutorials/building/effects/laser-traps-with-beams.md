@@ -164,11 +164,11 @@ To script the behavior that damages the player:
 
    1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="800" />
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" width="716" />
 
    1. Walk into the laser beam to see your character fall apart. When you're done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
 
-      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="800" />
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" width="716" />
 
    <Alert severity="warning">
    If the behavior isn't working correctly, make sure the script is a child of **LaserBeamBlaster**, and that the collision box is named `CollisionBox`.
