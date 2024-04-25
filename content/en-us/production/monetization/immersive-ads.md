@@ -100,7 +100,7 @@ To insert an image ad:
 
 1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
 
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />
+   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" />
 
 1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.

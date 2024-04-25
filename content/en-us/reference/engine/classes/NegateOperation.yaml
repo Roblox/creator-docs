@@ -9,7 +9,7 @@ description: |
   Studio's solid modeling **Negate** tool.
 
   <img src="../../../assets/studio/general/Model-Tab-Negate.png" alt="Negate
-  tool indicated in Model tab" width="702" />
+  tool indicated in Model tab" width="732" />
 
   A negated part turns pink and translucent as an indicator of its state. If the
   negated part is then unioned with a normal part using the **Union** tool,

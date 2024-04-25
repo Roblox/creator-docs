@@ -95,7 +95,7 @@ You'll use the tools in the Terrain Editor to create the world you drew in your 
 1. Open Studio and create a new **Flat Terrain** project.
 2. In the **Home** tab, click the **Editor** button. This opens the **Terrain Editor** on the left of the screen.
 
-   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="800" alt="Terrain Editor indicated in Home tab" />
+   <img src="../../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
 
 3. In the Terrain Editor, go to the **Edit** tab. Then use the **Paint** tool to change the material of the landscape. Depending on your vision, paint in roads, water, or even lava.
 

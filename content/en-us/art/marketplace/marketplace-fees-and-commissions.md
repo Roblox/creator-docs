@@ -236,6 +236,10 @@ Rebate credits are reimbursed once per day. See the following guidelines:
 
 When community items are sold on Roblox, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience.
 
+<Alert severity = 'warning'>
+Your account must follow [Marketplace Creator Requirements](./marketplace-policy.md#creator-requirements) to keep items listed on the Marketplace and eligible for commissions.
+</Alert>
+
 There is a 30 day escrow hold for each purchase. Roblox holds the commission from the sale of your items for 30 days starting from the date of sale and your Robux share of the sale.
 
 | Item Type                                        | Marketplace Purchase |                 In-Experience Purchase                  |
@@ -244,7 +248,7 @@ There is a 30 day escrow hold for each purchase. Roblox holds the commission fro
 | Classic Clothing                                 | Creator receives 70% | Creator receives 60%<br />Experience owner receives 10% |
 
 <Alert severity = 'info'>
-Limited assets follow a different payout structure. See [Limiteds](#limiteds) for more information.
+Limited items that are sold for free follow a different per-unit payout structure. See [Per-Unit Fee](#per-unit-fee) for more information.
 </Alert>
 
 ## Limiteds

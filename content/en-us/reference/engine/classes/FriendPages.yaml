@@ -18,7 +18,7 @@ description: |
   </tr>
   <tr>
   <td><code>DisplayName</code></td>
-  <td>boolean</td>
+  <td>string</td>
   <td>The current display name of the friend.</td>
   </tr>
   <tr>

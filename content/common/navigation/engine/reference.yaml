@@ -960,6 +960,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/GameSettings.yaml
         ignoreTranslation: true
+      - title: GenericChallengeService
+        path: /reference/engine/classes/GenericChallengeService
+        type: engineapi
+        source: /reference/engine/classes/GenericChallengeService.yaml
+        ignoreTranslation: true
       - title: GenericSettings
         path: /reference/engine/classes/GenericSettings
         type: engineapi
@@ -3178,6 +3183,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AlphaMode.yaml
         ignoreTranslation: true
+      - title: AnalyticsCustomFieldKeys
+        path: /reference/engine/enums/AnalyticsCustomFieldKeys
+        type: engineapi
+        source: /reference/engine/enums/AnalyticsCustomFieldKeys.yaml
+        ignoreTranslation: true
       - title: AnalyticsEconomyAction
         path: /reference/engine/enums/AnalyticsEconomyAction
         type: engineapi
@@ -3647,6 +3657,11 @@ navigation:
         path: /reference/engine/enums/DeveloperMemoryTag
         type: engineapi
         source: /reference/engine/enums/DeveloperMemoryTag.yaml
+        ignoreTranslation: true
+      - title: DeviceFeatureType
+        path: /reference/engine/enums/DeviceFeatureType
+        type: engineapi
+        source: /reference/engine/enums/DeviceFeatureType.yaml
         ignoreTranslation: true
       - title: DeviceType
         path: /reference/engine/enums/DeviceType

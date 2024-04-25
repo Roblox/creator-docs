@@ -9,7 +9,7 @@ If you are ready to sell an item and the item meets the requirements below, see 
 
 ## Creator Requirements
 
-To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership).
+To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership). Your ID-verified account must participate in an active Premium 1000/2200 membership to keep your Marketplace items on sale after uploading and publishing.
 
 See the following breakdown of the user and group requirements:
 

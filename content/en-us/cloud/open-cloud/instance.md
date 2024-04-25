@@ -1,6 +1,6 @@
 ---
 title: Engine Instance
-description: Explains how to use Open Cloud Web APIs to access the Roblox Engine Instances.
+description: Explains how to use Open Cloud APIs to access the Roblox Engine Instances.
 ---
 
 The Engine Open Cloud APIs let you manage `Class.Instance` objects in your

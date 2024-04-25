@@ -118,6 +118,38 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+  - name: ScriptEditorService:IsAutocompleteCallbackRegistered
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: ScriptEditorService:IsScriptAnalysisCallbackRegistered
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: ScriptEditorService:RegisterAutocompleteCallback
     summary: |
       Registers an autocomplete callback `callbackFunction` named `name` with
