@@ -153,7 +153,9 @@ constructors:
       quaternion (`qX`, `qY`, `qZ`, `qW`).
     description: |-
       Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and
-      quaternion (`qX`, `qY`, `qZ`, `qW`).
+      quaternion (`qX`, `qY`, `qZ`, `qW`). The quaternion is expected
+      to be of unit length to represent a valid rotation.
+      If this isn't the case, the quaternion will be normalized.
     parameters:
       - name: x
         type: number

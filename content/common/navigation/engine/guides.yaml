@@ -211,8 +211,6 @@ navigation:
         path: /scripting/scheduler
       - title: Multi-Threading
         path: /scripting/multithreading
-          # - title: Debouncing
-          #   path: /scripting/debounce
       - title: Security Tactics and Cheat Mitigation
         path: /scripting/security/security-tactics
       - title: Luau
@@ -462,6 +460,8 @@ navigation:
     path: /production/
   - title: Roblox User Base
     path: /production/roblox-user-base
+  - title: Discovery
+    path: /discovery
   - title: Publishing
     path: /production/publishing/
     section:
@@ -516,8 +516,6 @@ navigation:
     section:
       - title: Overview
         path: /production/promotion/
-      - title: Discovery
-        path: /production/promotion/discovery
       - title: Advertising
         path: /production/promotion/advertising-on-roblox
         section:
