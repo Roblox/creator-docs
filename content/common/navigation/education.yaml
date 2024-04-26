@@ -90,6 +90,9 @@ navigation:
   - heading: Tutorial Series
   - title: Featured Content
     path: /education/support/education-content
+  - title: Coding Fundamentals
+    path: /tutorials/fundamentals/coding-1/coding-fundamentals
+    navigation: /engine/tutorials-fundamentals.yaml
   - title: Build It, Play It Series
     path: /education/landing-pages/build-it-play-it
     section:

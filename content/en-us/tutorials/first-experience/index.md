@@ -1,291 +1,335 @@
 ---
-title: Introduction to Roblox Studio
-description: Explains the process of creating a platformer experience to introduce the basics of Roblox Studio.
+title: Creating Your First Experience
+description: Explains the process of creating your first experience in Roblox Studio.
 ---
 
-This tutorial explains the basics of [Roblox Studio](../../studio/setting-up-roblox-studio.md) by building, playtesting, and publishing a simple platformer experience. Follow each section and learn how to:
+After you complete the onboarding tour and are familiar with Roblox Studio's user interface, you're ready to start creating experiences on the platform.
 
-- Create the foundation of your platformer using one of Studio's bundled templates.
-- Navigate around the 3D viewport to see the environment from every angle.
-- Create platforms for players to traverse using Studio's primary building blocks.
-- Playtest and troubleshoot your experience.
-- Make your experience available for everyone on Roblox to play.
+Using a sample [high-quality catapult](https://create.roblox.com/store/asset/17266332444/IntroToStudioCatapult) asset pack, this tutorial walks you through the creation process for an experience in which players can launch five projectiles toward targets on floating platforms before a UI displays that allows them to reset the environment, including guidance on:
 
-## Creating a New Experience
+- Building and organizing a data model for a single place using one of Studio's project templates.
+- Customizing both primitive and complex 3D objects from the Creator Store with unique properties for your own gameplay requirements.
+- Organizing and placing scripts in their proper locations so the Roblox engine can properly simulate and render gameplay.
+- Playtesting and publishing your creation to a global audience that accesses the platform using a variety of devices.
 
-[Roblox Studio](../../studio/setting-up-roblox-studio.md), a free application available on Windows and Mac, is the essential building tool for Roblox experiences.
+After you complete this process, you can learn how to recreate a simple 3D platformer experience with the [core curriculum](../core/index.md), experiment with different use case tutorials, or start making your own projects.
 
-With Studio open, create a new place by pressing <kbd>Ctrl</kbd><kbd>N</kbd> on Windows or <kbd>⌘</kbd><kbd>N</kbd> on Mac. Alternatively, click the **Baseplate** template under the **All&nbsp;Templates** tab.
+<img src="../../assets/getting-started/Overview.jpg" alt="" width="90%" />
 
-<img src="../../assets/getting-started/Baseplate-Template-Icon.png" width="198" alt="A close up view of the baseplate template button in Roblox Studio." />
+## Create a Project
 
-The **Baseplate** template consists of a **spawn location** where player characters appear in the world when they enter the experience, as well as a wide open **baseplate** floor.
+A **project** is a collection of assets, settings, and other resources that together represent an experience. All projects start with a single **place** that players load into when they join an experience, but you can create additional places within that same experience to organize assets for different gameplay areas. For example, if you want players to join a dungeon before teleporting to either a vast desert or spooky island, you can organize the assets for each area into their own place.
 
-<img src="../../assets/getting-started/New-Template-With-Spawn-Location.jpg" width="800" alt="New Baseplate template open in Studio with the default spawn location highlighted." />
+<figure>
+<img src="../../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
+</figure>
 
-## Moving the Camera
+A place's object hierarchy is its **data model**, and it describes everything that compiles that gameplay area, such as the objects that make up the 3D world to objects that control runtime behavior. When you first open a project, the starting place's data model is relatively simple, but it can quickly become more complex depending on the amount of objects, interactivity, or behavior you want to implement in your experience.
 
-With the new place open in Studio, click inside the 3D viewport and use the following keyboard/mouse controls to look around.
+<GridContainer numColumns="2">
+  <figure>
+    <img width="90%" img src="../../assets/getting-started/DataModel-Start.png" />
+    <figcaption>Data model at the start of the tutorial</figcaption>
+  </figure>
+  <figure>
+    <img width="80%" img src="../../assets/getting-started/DataModel-End.png" />
+    <figcaption>Data model at the end of the tutorial</figcaption>
+  </figure>
+</GridContainer>
 
-<table>
-<thead>
-  <tr>
-    <th>Key/Shortcut</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
-    <td>Moves the camera forward, left, back, or right</td>
-  </tr>
-  <tr>
-    <td><kbd>Q</kbd> <kbd>E</kbd></td>
-    <td>Moves the camera down or up</td>
-  </tr>
-  <tr>
-    <td><kbd>Shift</kbd></td>
-    <td>In combination with any movement key, changes the camera speed</td>
-  </tr>
-  <tr>
-    <td><kbd>F</kbd></td>
-    <td>Focuses the camera on a selected part</td>
-  </tr>
-  <tr>
-    <td>**Right Mouse Button**</td>
-    <td>When pressed, dragging the mouse moves the camera view around</td>
-  </tr>
-  <tr>
-    <td>**Mouse Scroll Wheel**</td>
-    <td>Zooms the camera in or out</td>
-  </tr>
-	<tr>
-    <td>**Middle Mouse Button**</td>
-    <td>When pressed, dragging the mouse pans the camera</td>
-  </tr>
-</tbody>
-</table>
+For your first experience, this tutorial teaches you how to build and organize a data model for a single place using one of Studio's project templates. **Project templates** are useful because they provide a set of default objects in the starting place's data model that you can use to build experiences for different genres.
 
-## Building Your Experience
+For example, if you want to build a roleplay experience with a sprawling city, you can open the [Modern City](https://www.roblox.com/games/13165709401/Modern-City) template that includes reusable wall, window, and door objects you can snap together to create unique building variations. Similarly, if you want to build a racing experience, you can open the [Racing](https://www.roblox.com/games/16078915506/Racing) template that includes a working race car and winding track object you can restructure in countless configurations.
 
-When you're comfortable navigating the viewport with the camera, you can begin building your experience by adding platforms of different shapes and colors for players to jump between.
+<GridContainer numColumns="2">
+  <figure>
+    <img width="50%" img src="../../assets/getting-started/ModernCity-Tile.png" />
+    <figcaption>Modern City Template Tile</figcaption>
+  </figure>
+  <figure>
+    <img width="50%" img src="../../assets/getting-started/Racing-Tile.png" />
+    <figcaption>Racing Template Tile</figcaption>
+  </figure>
+</GridContainer>
 
-### Inserting Parts
+To keep things simple, this tutorial instructs you to create a project with the [Baseplate](https://www.roblox.com/games/95206881/Baseplate) template because it includes two default objects that are important for almost every experience on the platform:
 
-A `Class.Part` is Roblox's primary building block. You can [move](#moving-parts), [resize](#scaling-parts), and [rotate](#rotating-parts) parts, as well as customize their appearance, such as their [color and material](#customizing-colors-and-materials). There are five different part types that you can insert through the **Parts** section of the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tabs:
+- **Spawn location** – A `Class.SpawnLocation` object is where player characters appear in the 3D space when they join an experience, as well as where they respawn when their health reaches zero.
+- **Baseplate** – A baseplate is a floor with a 4x4 grid texture.
 
-<table>
-<thead>
-<tr>
-<th><center>Block</center></th>
-<th><center>Sphere</center></th>
-<th><center>Cylinder</center></th>
-<th><center>Wedge</center></th>
-<th><center>Corner Wedge</center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="../../assets/modeling/parts/Basic-Part-Block.png" alt="A single block part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single sphere part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single cylinder part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single wedge part" /></td>
-<td><img src="../../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single corner wedge part" /></td>
-</tr>
-</tbody>
-</table>
+This template is a great starting point to create your first experience because it provides a neutral world with high-fidelity lighting technology, and a floor that aligns with stud measurements that you can use to position and orient 3D objects along a grid. Studs are Studio's base unit of length, and each stud equates to about 28 cm. For more information on Studio's primary units, see [Roblox Units](../../physics/units.md).
 
-To insert a part:
+<GridContainer numColumns="2">
+  <figure>
+    <img width="50%" img src="../../assets/getting-started/Baseplate-Tile.png" />
+    <figcaption>Baseplate Template Tile</figcaption>
+  </figure>
+  <figure>
+  </figure>
+</GridContainer>
 
-1. In the menu bar, select the [Model](../../studio/model-tab.md) tab.
+To open a project with the Baseplate template:
 
-   <img src="../../assets/studio/general/Toolbar-Model-Tab.png" width="830" alt="Studio's Model tab highlighted in the toolbar." />
+1. Open **Roblox Studio**. The landing page displays all available project templates.
+1. Select the **Baseplate** template tile. Studio opens a new experience with a spawn location and a baseplate.
 
-2. Under the **Part** button, click the dropdown arrow to reveal the **part type picker** and choose a part type.
+   <img src="../../assets/getting-started/New-Template-With-Spawn-Location.jpg" width="80%" alt="New Baseplate template open in Studio with the default spawn location highlighted." />
 
-   <img src="../../assets/getting-started/Model-Tab-Part-Type-Picker.png" width="826" alt="Studio's Model tab with the Part Type Picker dropdown menu highlighted." />
+## Get Asset Pack
 
-3. Click the button to insert a part of the chosen type into the world.
+Now that you have a project open, you can add additional 3D objects to the data model aside from the spawn location and baseplate. Studio represents 3D objects as `Class.BasePart` objects that render with physical simulation in the 3D space, and emulate real-world physical behavior like gravity, friction, and force.
 
-   <img src="../../assets/getting-started/Model-Tab-Insert-Part.png" width="826" alt="Studio's Model tab with the Part button highlighted." />
+There are several types of `Class.BasePart` objects, but the most common are:
 
-   <img src="../../assets/getting-started/First-Inserted-Part.jpg"   width="800" alt="A viewport view of the default spawn location with the new block part highlighted." />
+- **Parts** – A `Class.Part` object is Studio's primitive 3D object that comes in five different shapes: ball, block, cylinder, wedge, and corner wedge.
+- **Meshes** – A `Class.MeshPart` object is a collection of vertices, edges, and faces that make up an object from a third-party modeling application.
 
-### Selecting Parts
+To help you become familiar with both types of 3D objects, this tutorial provides you an asset pack that includes the following parts and meshes that create the core gameplay for your first experience:
 
-Inserted parts are automatically selected, and you can select parts at any time with the **Select** tool. Hovering over and clicking a part selects it, and you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them.
+<GridContainer numColumns="3">
+  <figure>
+    <img width="100%" img src="../../assets/getting-started/AssetPack-Catapult.jpg" />
+    <figcaption>A catapult model of meshes that you can aim left or right from a grounded platform.</figcaption>
+  </figure>
+  <figure>
+    <img width="100%" img src="../../assets/getting-started/AssetPack-Projectiles.jpg" />
+    <figcaption>Three ball part projectiles that you can equip to the catapult.</figcaption>
+  </figure>
+  <figure>
+    <img width="100%" img src="../../assets/getting-started/AssetPack-Platform.jpg" />
+    <figcaption>Two floating platform meshes with block part targets you can knock over with projectiles.</figcaption>
+  </figure>
+</GridContainer>
 
-<img src="../../assets/studio/general/Model-Tab-Select.png" width="830" alt="Studio's Model tab with the Select tool highlighted." />
+You can find this asset pack on the **Creator Store**, a marketplace that features assets from Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. The Creator Store is accessible directly in Studio within the **Toolbox**, as well as on the [Creator Hub](https://create.roblox.com/store/models). For more information about this marketplace, see [Creator Store](../../production/publishing/creator-store.md).
 
-### Moving Parts
+<img src="../../assets/studio/toolbox/Creator-Store-Tab-Extended.png" width="100%" />
 
-The new part is the first "platform" that players will jump to from the spawn location, so you should move it further away. By default, parts move incrementally by **studs**, the basic measurement unit in Roblox.
+To insert this tutorial's asset pack from the Creator Store to your Studio inventory, click the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
-1. With the newly inserted part selected in the 3D viewport, toggle on the **Move** tool.
+<BrowseSampleCard href='https://create.roblox.com/store/asset/17266332444/Intro-to-Studio-Catapult-Platforms' description='Create your first experience using this high-quality catapult model.' title='Intro to Studio - Catapult & Platforms' assetId={17266332444}  />
 
-   <img src="../../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
+To get this asset pack from your inventory into your experience:
 
-1. Click and drag the arrow that's pointing in the direction you want to move the part. Remember that this is the first platform players will jump to, so you should move it just slightly away for an easy first jump.
+1. In the menu bar, select the **View** tab.
+1. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
 
-   <img src="../../assets/getting-started/First-Part-Moved.jpg" width="800" alt="A viewport view of the block part with the move directional visual cues." />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" alt="Studio's View tab with the Toolbox tool highlighted." width="876" />
 
-1. If you want to adjust the default snapping increment, change the **Move** field value in the **Snap&nbsp;to&nbsp;Grid** section. Alternatively, you can disable move snapping by toggling off the checkbox next to **Move**.
+1. In the **Toolbox** window, click the **Inventory** tab. The **My Models** sort displays.
 
-   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Studio's Model tab with the Transform Snapping tools highlighted." />
+   <img src="../../assets/studio/toolbox/Inventory-Tab.png" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
 
-### Scaling Parts
+1. Click the **Intro to Studio - Catapult & Platforms** tile. The asset pack displays in your viewport.
 
-Similar to [moving](#moving-parts), parts scale along the **X**, **Y**, and **Z** axes. You can make a part larger or smaller by using the **Scale** tool.
+   <img width="80%" img src="../../assets/getting-started/AssetPack-Viewport.jpg" />
 
-1. With the platform part still selected in the 3D viewport, toggle on the **Scale** tool.
+## Customize Targets
 
-   <img src="../../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
+When you add a 3D object into your experience, Studio updates the **Explorer window** to display the name of the object and a nest of its children within the `Class.Workspace` service. For example, after you add the catapult model into your viewport, the Explorer window displays the **IntrotoStudioCatapult** folder and its child assets alongside the spawn location and baseplate.
 
-1. Click and drag the handles to scale the part up in size, making the platform easier for players to land on from the first jump.
+<GridContainer numColumns="2">
+  <figure>
+    <img width="90%" img src="../../assets/getting-started/DataModel-Workspace.png" />
+  </figure>
+  <figure>
+  </figure>
+</GridContainer>
 
-   <img src="../../assets/getting-started/First-Part-Scaled.jpg" width="800" alt="A viewport view of the block part that is now larger with the scale directional visual cues." />
+The Explorer window is a fundamental Studio window that represents the data model for the place in your experience that you have open. This means that if you have an experience with multiple places, this window displays different objects depending on the place you're currently working on.
 
-### Rotating Parts
+When you select an object in the Explorer window, Studio updates the **Properties window** to display a selection of properties you can customize for that object without using a script, such as the object's size, color, position, or orientation. To demonstrate this process, this section of the tutorial provides guidance on customizing the visual and behavioral characteristics of the gray targets on the floating platforms.
 
-Similar to [moving](#moving-parts) and [scaling](#scaling-parts), parts rotate around the **X**, **Y**, and **Z** axes. By default, parts rotate incrementally by **degrees**.
+To customize your targets:
 
-1. With the platform part still selected in the 3D viewport, toggle on the **Rotate** tool.
+1. Select one of the target objects.
+   1. In the **Explorer** window, click the dropdown arrow to the left of the **IntroToStudioCatapult** folder to display all of its children.
+   1. Using this process, expand the **TargetPlatforms** folder, the child **TargetPlatform** model for the floating platform closest to the grounded catapult platform, and its **TargetParts** folder to display every part on the floating platform.
 
-   <img src="../../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
+      <img width="45%" img src="../../assets/getting-started/Targets-1B.png" />
 
-1. Click and drag a circle to rotate the part in that direction.
+   1. Click one of the parts. The **viewport** displays an outline around the object to indicate that it is selected, and the **Properties** window updates to display a selection of customizable properties for that specific part.
 
-   <img src="../../assets/getting-started/First-Part-Rotated.jpg" width="800" alt="A viewport view of the block part that is now rotated on the Y axis with the rotation directional visual cues." />
+      <img width="80%" img src="../../assets/getting-started/Targets-1C.jpg" />
 
-1. If you want to adjust the default rotation increment, change the **Rotate** field value in the **Snap&nbsp;to&nbsp;Grid** section. Alternatively, you can disable rotation snapping by toggling off the checkbox next to **Rotate**.
+1. In the **Properties** window,
+   1. Set **BrickColor** to the color you want to tint the part.
+   1. Set **Size** to the scale you want the part to have along the X, Y, and Z axes.
+   1. Set **CFrame.Position** to the location you want the part to have on the platform.
+   1. Set **CFrame.Orientation** to the rotation you want the part to have along the Y axis.
 
-   <img src="../../assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Studio's Model tab with the Transform Snapping tools highlighted." />
+   <img width="80%" img src="../../assets/getting-started/Targets-2.jpg" />
 
-### Customizing Colors and Materials
+1. Repeat this process for other parts on the floating platforms.
 
-The fastest way to recolor a part is through the hexagonal **color picker** accessible through the small dropdown arrow under the **Color** button. By default, picking a color applies it to all selected parts. Alternatively, you can apply a chosen color as a painting tool by toggling on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and clicking specific parts in the 3D viewport.
+   <img width="80%" img src="../../assets/getting-started/Targets-3.jpg" />
 
-<img src="../../assets/studio/general/Model-Tab-Color-Tools.png" width="770" alt="Studio's Model tab with the Basic Color Picker open." />
+## Organize Scripts
 
-You can also customize a part's **material** to simulate real-world materials such as wood, glass, or fabric. A part's material affects both its visual appearance **and** its physical traits; for example, the **Concrete** material is heavier than the **Plastic** material, so a concrete brick will have higher density than a plastic brick and sink faster in water.
+While you have a lot of flexibility in how you organize data models within your projects, the Roblox engine expects certain objects to be in specific **container services** for simulation and rendering functionality to work properly between the server and the client. The **server** refers to a Roblox computer that acts as the ultimate authority for maintaining the experience's state, and it keeps all connected **clients**, or player devices like mobile phones and laptops, in sync with its source of truth.
 
-To apply different materials to parts:
+<figure>
+  <img src="../../assets/scripting/client-server/Client-Server-Model.png" width="100%" alt="A server grouping with connections to three client devices."/>
+  <figcaption>Server with connections to three client devices</figcaption>
+</figure>
 
-1. Open the **Material Manager**.
+The main categories of container services include:
 
-   <img src="../../assets/studio/general/Model-Tab-Material-Manager.png" width="826" alt="Studio's Model tab with the Material Manager highlighted." />
+- **Workspace** - Contains objects that render in the 3D world.
+- **Environment** - Contains objects for environmental settings and elements.
+- **Replication** - Contains content and logic that replicates between the server and client.
+- **Server** - Contains server-side only content and logic.
+- **Client** - Contains client-side content and logic.
+- **Chat** - Contains objects that enable chat features.
 
-1. In the 3D viewport, select one or more parts.
-1. In the **Material Manager** palette, hover your mouse over the desired material (you don't need to select it) and click the **Apply&nbsp;to&nbsp;Selected&nbsp;Parts** button.
+Up to this point in the tutorial, you have only interacted with objects in the `Class.Workspace` service of your data model. However, in order for the catapult to operate properly, you must move some of its child script objects to different container services. Roblox offers two types of script objects to contain Luau code that modify object behavior and implement the overall logic of your experience:
 
-   <img src="../../assets/studio/material-manager/Apply-To-Selected-Parts.png" width="700" alt="Studio's Material Manager with the Apply to Selected Parts button highlighted." />
+- `Class.Script|Scripts` - A script that can run on the server or client depending on its set `Class.Script.RunContext|RunContext` property.
+- `Class.ModuleScript|ModuleScripts` - A reusable script that you can require from both server and client scripts.
 
-   <img src="../../assets/getting-started/First-Part-Styled.jpg" width="800" alt="A viewport view of the block part with a new material. The block part is highlighted." />
+A `Class.Script` object's `Class.Script.RunContext|RunContext` property determines whether the script runs on the client or server. There are three types of run context:
 
-### Completing the Course
+- **Legacy** - The script runs based on its parent container. Legacy is the default run context.
+- **Server** - The script runs only on the server, regardless of its parent container.
+- **Client** - The script runs only on the client, regardless of its parent container.
 
-Using the skills and tools you've learned so far, build out the course with several more platforms of varying [shapes](#inserting-parts), [sizes](#scaling-parts), [rotations](#rotating-parts), and [colors/materials](#customizing-colors-and-materials).
+It's important to be mindful of where scripts run, otherwise your objects might not behave the way you want them to. For example, if you playtest the experience right now, players cannot equip projectiles to the catapult or launch them at the targets. To ensure that the gameplay works properly, you must move the children within the **ReplicatedStorage** and **ServerScriptService** folders into their respective container services.
 
-<img src="../../assets/getting-started/Course-Completed.jpg" width="800" alt="A viewport view of an example course with multiple platforms of varying shapes, sizes, colors, and materials." />
+`Class.ReplicatedStorage` contains objects that are available to both the server and connected clients, making it the best location for the experience's gameplay logic that needs to keep track of how many projectiles a player launches before it displays UI. `Class.ServerScriptService` contains scripting-related assets that are only meant for server use, making it the best location for the experience's gameplay logic that connects projectiles to the catapult, launches projectiles in a particular direction, and resets the catapult to its starting position.
 
-<Alert severity="warning">
-As you add more platforms, remember to [move the camera](#moving-the-camera) and view the overall construction from multiple angles. While the gap between two platforms might appear jumpable when viewed from one angle, looking at it from another angle may reveal that a jump between the two platforms is obviously impossible.
+To organize folders into their correct container services for the catapult to work properly:
+
+1. In the **Explorer** window, expand the **ReplicatedStorage** and **ServerScriptStorage** folders.
+
+   <img width="45%" img src="../../assets/getting-started/Scripts-1.png" />
+
+1. Select all children within the **ReplicatedStorage** folder, then drag them into the **ReplicatedStorage** service.
+
+   <img width="45%" img src="../../assets/getting-started/Scripts-2.png" />
+
+   <Alert severity="info">
+   The **UIHandler** `Class.Script` object has a `Class.Script.RunContext|RunContext` property set to **Client**, so it runs client-side only.
+   </Alert>
+
+1. Select all children within the **ServerScriptStorage** folder, then drag them into the **ServerScriptStorage** service.
+
+   <img width="45%" img src="../../assets/getting-started/Scripts-3.png" />
+
+1. Delete the **ReplicatedStorage** and **ServerScriptStorage** folders.
+   1. Select both folders.
+   1. Press `Delete`.
+
+1. Playtest to verify that the catapult now works properly.
+   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+
+      <img src="../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+
+   1. Equip the **Ice** projectile to the catapult, aim it toward the nearest floating platform, then launch it at the targets.
+
+      <figure>
+         <video src="../../assets/getting-started/Scripts-5B.mp4" controls width="80%" alt=""></video>
+      </figure>
+
+   1. Equip the **WoodPlanks** projectile to the catapult, aim it toward the farthest floating platform, then launch it at the targets.
+
+      <figure>
+         <video src="../../assets/getting-started/Scripts-5C.mp4" controls width="80%" alt=""></video>
+      </figure>
+
+   1. When you're done playtesting, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
+
+      <img src="../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="800" />
+
+## Customize Projectiles
+
+While your projectiles are exactly the same size as each other, they travel different distances when you launch them from the catapult. This is because each projectile has a unique **material** that emulates the physical characteristics of its real-world counterpart, including its density, elasticity, and friction.
+
+According to Newton's second [law of motion](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#Second_law), the acceleration of an object depends on the force acting on the object and the mass of the object itself. As the catapult provides the same amount of force for each launch, each projectile's acceleration changes in proportion to their mass. Projectiles with a small amount of mass accelerate faster than projectiles with a large amount of mass, and projectiles with a large amount of mass accelerate slower than projectiles with a small amount of mass.
+
+To see this principle in action, examine the results from your previous playtest. The `WoodPlanks` material is less dense than the `Ice` material, so the wooden projectile is able to accelerate more quickly, and therefore travel a larger distance than the icy projectile from the same launch point. If you were to launch the wooden projectile at the targets closest to the catapult, the projectile would travel above and beyond the platform entirely. Similarly, if you were to launch the icy projectile at the targets furthest from the catapult, the projectile would never be able to travel the distance and make impact with the targets.
+
+<GridContainer numColumns="2">
+  <figure>
+    <video src="../../assets/getting-started/Projectile-TooFar.mp4" controls width="100%" alt=""></video>
+  </figure>
+  <figure>
+  <video src="../../assets/getting-started/Projectile-TooClose.mp4" controls width="100%" alt=""></video>
+  </figure>
+</GridContainer>
+
+Roblox Studio is a real-world simulation engine that emulates physical behavior in real time, so it's important to consider how your objects behave differently depending on their physical characteristics. For the final gameplay section of the tutorial, you will experiment with customizing the third projectile with a material that can reach a third floating platform of targets. To reference a list of physical properties for each material, see [Materials - Default Physical Properties](../../parts/materials.md#default-physical-properties).
+
+To customize the third projectile:
+
+1. Create a third floating platform of targets.
+   1. In the **Explorer** window, select a **TargetPlatform** object.
+   1. Press `CMD` + `D` to duplicate the platform and targets.
+   1. Use the **Move** tool to move the new platform to a new position.
+
+   <img width="80%" img src="../../assets/getting-started/Projectiles-1.jpg" />
+
+1. Change the third projectile's material to have the right amount of mass to travel to your third platform's targets.
+   1. In the **Explorer** window, expand the **ProjectileMaterials** folder, then select **ProjectileC**.
+   1. In the **Properties** window, set **Material** to the real-world material you want the part to simulate, including its visual and physical characteristics. This material needs the right amount of mass to reach the new platform.
+
+   <img width="80%" img src="../../assets/getting-started/Projectiles-2.jpg" />
+
+1. Playtest the experience to verify that the projectile makes impact with the targets on the third floating platform.
+
+   <video src="../../assets/getting-started/Projectiles-3.mp4" controls width="80%" alt=""></video>
+
+## Publish Experience
+
+Roblox not only provides the tooling and engine for you to create and run experiences, it also gives you access to a large social network of players that access the platform on a wide array of devices, including phones, computers, tablets, consoles, and VR hardware. When you're ready to release your experience to this global audience, you must publish and configure the experience's settings so that it's available to all players on any device you want to support.
+
+<img src="../../assets/getting-started/platform-overview/Rapid-Iteration.jpg" alt="" width="90%" />
+
+Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various objects as a property that's appropriate for that particular asset type. When you publish an experience, the experience itself receives a `Class.DataModel.GameID|UniverseID`, and each of its individual places receives a `Class.DataModel.PlaceId|PlaceID`.
+
+<Alert severity="info">
+
+`Class.DataModel.GameID|UniverseIDs` and `Class.DataModel.PlaceId|PlaceIDs` are useful for managing Roblox resources through Open Cloud APIs, such as automating internal workflows, improving efficiency with content creation and management, and supporting experience operations from the web. For more information, see the [Open Cloud](../../cloud/open-cloud/index.md) overview.
+
 </Alert>
 
-### Anchoring Parts
+Once this occurs, the **Creator Dashboard** provides you tools and resources to monitor, manage, and perform tasks for your experience and its places, such as:
 
-If you [playtest](#playtesting-the-course) the platformer now, you'll notice that gravity pulls each new part down to the baseplate.
+- Monitoring player activity, retention, and growth with [analytics features](../../production/analytics/index.md).
+- Automatically translating in-experience content for a global audience that speaks a variety of languages with [localization features](../../production/localization/index.md).
+- Configuring in-experience purchases and immersive advertising with [monetization features](../../production/monetization/index.md).
 
-<video src="../../assets/getting-started/Course-Gravity.mp4" controls width="90%" alt="Platforms falling by gravity to the baseplate"></video>
+What you learn on the Creator Dashboard can give you important insights into how to further iterate on your project and engage your audience. For example, if you learn that your audience values multiplayer competition, you could create multiple catapults that keep track of how many targets each player knocks over, then republish the experience to make your update instantaneously available on the platform with only one click.
 
-Since platforms should remain fixed in space, you'll need to **anchor** each part that you insert into the world.
+To publish your experience for the first time:
 
-1. In the 3D viewport, [select](#selecting-parts) each of the platform parts you've inserted into the world.
-1. Toggle on the **Anchor** option in the **Parts** section.
+1. Upload your experience to the cloud.
+   1. In the menu bar, click **File**, then select **Publish to Roblox**. The **Publish Game** window displays.
 
-   <img src="../../assets/studio/general/Model-Tab-Anchor.png" width="704" alt="Studio's Model tab with the Anchor button highlighted." />
+      <img src="../../assets/studio/general/File-Menu-Publish-to-Roblox.png" alt="Studio's File menu with the Publish to Roblox menu item highlighted." width="45%" />
 
-### Deleting the Baseplate
+   1. In the **Publish Game** window, fill out all applicable fields.
+      1. In the **Name** field, provide a name for your experience.
+      1. In the **Description** field, provide a summary of what a player can expect from the experience.
+      1. From the **Genre** dropdown menu, select the genre that you want to represent your experience.
+      1. In the **Devices** section, enable every device you want players to use to access your experience.
+   1. At the bottom-right of the window, click the **Create** button. Your experience is now in the cloud with a `Class.DataModel.GameID|UniverseID` and a `Class.DataModel.PlaceID|PlaceID` for the starting place.
 
-If you [playtest](#playtesting-the-course) your experience right now and miss a jump, your character will land safely on the baseplate. To provide a consequence when players miss a jump, you can delete the baseplate, forcing them to restart from the spawn location each time.
+1. Make the experience public to all players.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard). The **Creations** landing page displays your first experience.
 
-1. Access the [Explorer](../../studio/explorer.md) window. If it's not currently open, click **Explorer** from the [View](../../studio/view-tab.md) tab.
+      <img width="80%" img src="../../assets/getting-started/Publish-2A.png" />
 
-   <img src="../../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Studio's View tab with the Explorer button highlighted." />
+   1. Hover over the experience's tile, click the ⋯ button, and select **Make Public** from the contextual menu.
 
-1. Expand the top-level **Workspace** tree, locate the **Baseplate** object, and select it.
+      <img width="45%" img src="../../assets/getting-started/Publish-2B.png" />
 
-   <img src="../../assets/getting-started/Workspace-Baseplate-Selected.png" width="320" alt="Studio's Explorer window with the Baseplate object highlighted." />
+1. **(Optional)** Share your experience with others.
+   1. From the **Creator Dashboard**, hover over your experience's tile, click the ⋯ button, and select **Copy URL** from the contextual menu.
 
-1. Press <kbd>Delete</kbd>. The course now floats in an empty sky.
+      <img width="45%" img src="../../assets/getting-started/Publish-3A.png" />
 
-   <img src="../../assets/getting-started/Course-No-Baseplate.jpg" width="800" alt="A viewport view of the example course without the baseplate." />
-
-## Playtesting the Course
-
-Playtesting is a vital step before [publishing](#publishing-an-experience) any experience because you need to verify that players can reach the final platform. When you playtest your platformer, consider its difficulty and how that might affect the typical player's experience.
-
-To playtest your experience, click the **Play** button (<kbd>F5</kbd>) in the menu bar.
-
-<img src="../../assets/studio/general/Model-Tab-Quick-Access-Play.png" width="770" alt="Studio's Model tab with the Play button highlighted in the menu bar." />
-
-While playtesting, you can use the same controls as a default Roblox experience:
-
-<table>
-<thead>
-  <tr>
-    <th>Control</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td>
-    <td>Run forward, left, back, or right</td>
-  </tr>
-  <tr>
-    <td><kbd>Spacebar</kbd></td>
-    <td>Jump</td>
-  </tr>
-  <tr>
-    <td>**Right Mouse Button**</td>
-    <td>When pressed, dragging the mouse moves the camera view around</td>
-  </tr>
-  <tr>
-    <td>**Mouse Scroll Wheel**</td>
-    <td>Zooms the camera in or out</td>
-  </tr>
-</tbody>
-</table>
-
-To stop playtesting, click the **Stop** button (<kbd>Shift</kbd><kbd>F5</kbd>) in the menu bar.
-
-<img src="../../assets/studio/general/Model-Tab-Quick-Access-Stop.png" width="770" alt="Studio's Model tab with the Stop button highlighted in the menu bar." />
-
-## Publishing an Experience
-
-When you're ready to showcase your experience, you can **publish** it to allow other players on Roblox to test it. To publish your experience:
-
-1. In the menu bar, select **File** &rarr; **Publish&nbsp;to&nbsp;Roblox**.
-1. In the popup window that opens, fill in the following fields:
-
-   - **Name** &mdash; A name for the new experience.
-   - **Description** &mdash; A summary of what a player should expect from the experience.
-
-1. Leave the other fields as their defaults, then click the blue **Create** button near the bottom of the window.
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/creations).
-1. Hover over the experience's tile, click the **&ctdot;** button, and select **Make Public**.
-
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="An experience's tile in the Creator Dashboard, with the Make Public menu item highlighted." />
-
-1. Hover over the tile again, click the **&ctdot;** button, and select **Copy URL**.
-
-   <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-URL.png" width="420" alt="An experience's tile in the Creator Dashboard, with the Copy URL menu item highlighted." />
-
-1. Share the copied URL with others via social media or similar, as a direct link to your experience's landing page featuring a **play** button.
-
-   <img src="../../assets/getting-started/Experience-Page-Default.jpg" alt="A close up view of the experience's tile on its landing page." width="100%" />
+   1. Share the URL with others as a direct link to your experience's landing page.
 
 <Alert severity="success">
-Congratulations on creating your first Roblox experience! To add more features to your platformer and learn more about building immersive experiences on Roblox, check out [tutorials](../../tutorials/index.md).
+Congratulations on creating your first Roblox experience! To learn more about building immersive experiences on Roblox, check out [tutorials](../../tutorials/index.md).
 </Alert>

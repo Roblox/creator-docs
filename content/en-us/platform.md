@@ -12,7 +12,7 @@ Our platform provides you with unparalleled opportunities to create content from
 
 ## Create
 
-<img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" alt="" width="100%" />
 
 Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setting-up-roblox-studio.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
 
@@ -20,7 +20,7 @@ With Roblox, you can deploy globally in seconds across major platforms&nbsp;— 
 
 ## Scale
 
-<img src="./assets/getting-started/platform-overview/Rapid-Iteration.jpg" width="100%" />
+<img src="./assets/getting-started/platform-overview/Rapid-Iteration.jpg" alt="" width="100%" />
 
 On Roblox, you can reach a massive, global audience of 71.5M daily active users (DAUs) across 190 countries who spend an average of 2.4 hours on the platform everyday. Not only that, 58% of our DAUs are over the age of 13 years old and it's our fastest growing segment with +28% growth year over year. (Data as of Q4 '23). Additionally, our automatic chat translations allow users worldwide to easily communicate with each other across 16 languages.
 
@@ -30,7 +30,7 @@ We also provide a robust analytics suite of tools to measure and gain insights o
 
 ## Monetize
 
-<img src="./assets/landing/Growth_Banner_Landing.jpg" width="100%" />
+<img src="./assets/landing/Growth_Banner_Landing.jpg" alt="" width="100%" />
 
 Creators of all sizes, from an individual to small developer teams to large developer studios, are finding success. In 2023, our creators earned $741 million\*, up 19% year-over-year.
 
