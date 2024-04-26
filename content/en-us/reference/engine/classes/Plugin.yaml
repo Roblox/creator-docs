@@ -341,6 +341,18 @@ methods:
     description: |
       Retrieves a previously stored value with the given key, or nil if the
       given key doesn't exist.
+
+      Because multiple instances of the same plugin can run simultaneously
+      (for example, if multiple Studio windows are open), you shouldn't
+      depend on this value staying the same over time. The other plugin
+      instances can update the setting at any time.
+
+      This call can silently fail and return `nil` if multiple instances of
+      the same plugin are actively reading and writing data. If your plugin 
+      expects to write to settings frequently, you should double-check the
+      returned value from this call after a short while to distinguish 
+      between a setting being temporarily unavailable and a setting not
+      existing.
     code_samples:
       - Plugin-GetSetting1
     parameters:
@@ -561,7 +573,24 @@ methods:
       persist even after studio is closed.
     description: |
       Stores a given value for later use under the given key. The value will
-      persist even after studio is closed.
+      persist even after Roblox Studio is closed.
+
+      These settings are saved in JSON format as a map with string keys.
+      Arrays are automatically converted to maps by converting the numeric
+      keys to strings first.
+
+      The JSON format imposes additional restrictions. Including the
+      following characters can corrupt the settings file:
+      - Backslashes (`\`) in keys or values (in particular, escaped quotes
+      (`\"`).
+      - Newlines (`\n`) in keys.
+      - Quotes (`"`) in keys.
+      - Periods (`.`) in keys.
+
+      This call can silently fail if multiple instances of the same plugin
+      are actively reading and writing data. If your plugin expects to write
+      to settings frequently, you may check that the data has been
+      properly written by calling `Class.Plugin:GetSetting()`.
     code_samples:
       - Plugin-SetSetting1
     parameters:
