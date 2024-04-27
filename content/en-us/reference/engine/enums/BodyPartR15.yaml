@@ -109,7 +109,7 @@ items:
     deprecation_message: ''
   - name: Unknown
     summary: |
-      Unknown R15 Humanoid body part!.
+      Unknown R15 Humanoid body part.
     value: 17
     tags: []
     deprecation_message: ''
