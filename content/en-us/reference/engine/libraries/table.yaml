@@ -409,7 +409,7 @@ functions:
       the removed element. When pos is an integer between `1` and `#t`, it
       shifts down the elements `t[pos+1], t[pos+2], ..., t[#t]` and erases
       element `t[#t]`. The index `pos` can also be `0` when `#t` is `0` or
-      `#t+1`; in those cases, the function erases the element `t[pos]``.
+      `#t+1`; in those cases, the function erases the element `t[pos]`.
     parameters:
       - name: t
         type: Array
