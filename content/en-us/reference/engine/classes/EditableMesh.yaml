@@ -125,7 +125,7 @@ methods:
         summary: |
           Point position in the mesh's local object space.
     returns:
-      - type: number
+      - type: tuple
         summary: |
           Closest stable triangle ID
     tags: []
