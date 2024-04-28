@@ -125,10 +125,9 @@ methods:
         summary: |
           Point position in the mesh's local object space.
     returns:
-      - type: Tuple
+      - type: number
         summary: |
-          Tuple of the triangle ID, point on the mesh in local object space, and
-          the barycentric coordinate of the position within the triangle.
+          Closest stable triangle ID
     tags: []
     deprecation_message: ''
     security: None
