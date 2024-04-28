@@ -6,7 +6,7 @@ columns:
       items:
         - title: Guides
           navigation: /engine/guides.yaml
-          path: /platform
+          path: /get-started
         - title: Tutorials
           navigation: /engine/tutorials.yaml
           path: /tutorials/

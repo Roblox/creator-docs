@@ -1,6 +1,8 @@
 navigation:
+  - heading: Get Started
+  - title: Create Your First Experience
+    path: /tutorials/first-experience/
   - heading: Curriculum Paths
-
   - title: Overview
     path: /tutorials/
   - title: Core

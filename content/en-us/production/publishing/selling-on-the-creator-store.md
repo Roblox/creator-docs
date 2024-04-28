@@ -25,7 +25,7 @@ In order to create a seller account, you must meet the following Roblox eligibil
 
 - Your Roblox account must be **verified** with a [government ID](account-verification.md#verifying-through-government-id).
 - Your Roblox account must not have been recently **banned** for any reason.
-- You must be **18** years of age or older.
+- You must be either **18** years of age or older, or **13-17** years of age with **parental consent**.
 - You must reside in [one of the countries supported](https://stripe.com/docs/connect/cross-border-payouts) by our third-party payments provider.
 
 If you violate any of these requirements after you create your seller account, your account will be suspended, your assets will be taken off sale, and payouts will be frozen. If you believe your account was incorrectly suspended, you can [appeal](https://www.roblox.com/report-appeals#/) the applicable violation.

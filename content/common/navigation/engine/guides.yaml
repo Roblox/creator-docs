@@ -1,15 +1,12 @@
 defaultType: markdown
 navigation:
   - heading: Learn the basics
+  - title: Get Started
+    path: /get-started
   - title: Platform Overview
     path: /platform
   - title: Creation Overview
     path: /creation
-  - title: Create Your First Experience
-    path: /tutorials/first-experience/
-  - title: Coding Fundamentals
-    path: /tutorials/fundamentals/coding-1/coding-fundamentals
-    navigation: /engine/tutorials-fundamentals.yaml
   - title: Assistant
     path: /assistant/guide
   - heading: Create
