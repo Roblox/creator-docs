@@ -562,6 +562,9 @@ methods:
     description: |
       Stores a given value for later use under the given key. The value will
       persist even after studio is closed.
+      Note: Currently dots (`.`) are not allowed in settings keys and are
+      replaced with underscores (`_`). As a workaround, plese avoid using dots
+      in settings keys.
     code_samples:
       - Plugin-SetSetting1
     parameters:
