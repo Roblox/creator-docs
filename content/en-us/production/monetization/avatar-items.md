@@ -1,3 +1,4 @@
+![Skin21](https://github.com/Roblox/creator-docs/assets/168533363/9e62e89d-d150-402a-94b7-4b1911334596)
 ---
 title: Avatar Items
 description: Sell community created Avatar items exclusively through your experience.
