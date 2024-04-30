@@ -490,7 +490,7 @@ You can't transfer ad credits associated with a specific campaign to another cam
 The information provided at the [campaign](#define-the-campaign) level includes:
 
 | Reporting Column             | Definition                                                                                                             |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Name**                     | The name of the ad campaign.                                                                                           |
 | **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
 | **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses). |
@@ -499,7 +499,7 @@ The information provided at the [campaign](#define-the-campaign) level includes:
 | **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                              |
 | **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                  |
 | **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.            |
-| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |     |
+| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |
 | **Plays**                    | The number of times users entered your experience.                                                                     |
 | **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                    |
 | **Budget**                   | The amount of money allocated for this ad campaign, on a daily or lifetime timeframe.                                  |
