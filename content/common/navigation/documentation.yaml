@@ -2,7 +2,7 @@ columns:
   - - title: Overview
       path: /
     - title: Engine
-      path: /platform
+      path: /get-started
       items:
         - title: Guides
           navigation: /engine/guides.yaml

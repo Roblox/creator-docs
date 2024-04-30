@@ -961,6 +961,32 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: CFrame:FuzzyEq
+    summary: |
+      Returns `true` if the other 'Datatype.CFrame' is sufficiently close
+      to this 'Datatype.CFrame' in both position and rotation.
+    description: |
+      Returns `true` if the other 'Datatype.CFrame' is sufficiently close
+      to this 'Datatype.CFrame' in both position and rotation.
+      The `eps` value is used to control the tolerance for this similarity.
+      This value is optional and should be a small positive value if provided.
+      The similarity for position is component-wise, and for rotation uses a fast
+      approximation of the angle difference.
+    parameters:
+      - name: other
+        type: CFrame
+        default:
+        summary: ''
+      - name: epsilon
+        type: number
+        default: 0.00001 (1e-5)
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 functions:
 math_operations:
   - operation: '*'

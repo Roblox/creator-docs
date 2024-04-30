@@ -19,7 +19,7 @@ At its core, using external tools with Roblox is a _syncing_ problem:
 
 For the whole solution to feel seamless and automatic, you need to a) listen for changes to files and b) incorporate these changes back into Studio. In other words, you need a server and a Studio plugin, which is how [Rojo](https://rojo.space/) solves this problem.
 
-Rojo extracts all script files in your project into Luau files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
+Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first" approach. It extracts all script files in your project into Luau files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
 
 ## Installing Rojo with Foreman
 
@@ -50,7 +50,7 @@ Then generate the project structure for your new experience and build it:
 ```bash
 rojo init my-new-experience
 cd my-new-experience
-rojo build -o my-new-experience.rbxlx
+rojo build -o my-new-experience.rbxl
 ```
 
 Alternatively, you can [port an existing experience](https://rojo.space/docs/v7/getting-started/existing-game/). Either way, after you have a project, start the Rojo server:
@@ -59,7 +59,7 @@ Alternatively, you can [port an existing experience](https://rojo.space/docs/v7/
 rojo serve
 ```
 
-In Roblox Studio, open the `.rbxlx` file you just built, start the Rojo plugin, and connect to your now-running server, at which point you can start making changes in your preferred text editor and watch those changes automatically sync back to Studio.
+In Roblox Studio, open the `.rbxl` file you just built, start the Rojo plugin, and connect to your now-running server, at which point you can start making changes in your preferred text editor and watch those changes automatically sync back to Studio.
 
 ![Visual Studio Code with a Rojo project open.](../assets/scripting/external-tools/external-tools-vscode.png)
 
@@ -149,7 +149,6 @@ You might also consider adding:
 - A linter like [selene](https://github.com/Kampfkarren/selene) to catch common issues and enforce coding standards
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
-- Continuous integration tests that run builds after every commit and check for errors
 - [Open Cloud](https://create.roblox.com/docs/cloud/open-cloud) scripts (not synced to Studio) to [update a published experience](https://create.roblox.com/docs/cloud/reference/Universe#Update-Universe) or [restart servers](https://create.roblox.com/docs/cloud/reference/Universe#Restart-Universe-Servers)
 
 ## Assets

@@ -617,6 +617,15 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
+      - title: Event Types
+        path: /production/analytics/event-types
+        section:
+          - title: Overview
+            path: /production/analytics/event-types
+          - title: Economy Events
+            path: /production/analytics/economy-events
+          - title: Funnel Events
+            path: /production/analytics/funnel-events
   - title: Community
     path: /production/community/
     section:
