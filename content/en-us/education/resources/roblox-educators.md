@@ -659,7 +659,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 <a href="https://www.smartkidsclubtt.com/" title="Smart Kids Educational Club">Smart Kids Educational Club</a>
 
-#### Turkey
+#### Türkiye (Turkey)
 
 <a href="https://www.atolyevizyon.com/" title="Atolye Vizyon">Atolye Vizyon</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
