@@ -155,6 +155,11 @@ To navigate to another page while in **Edit** mode:
 
 3. Press **Enter**.
 
+### Folders
+
+Each `Class.Folder` in your UI hierarchy can define its own `Class.UILayout` (List, Grid, Page, Table) or use the default Position-based layout. For example, you could have a `Class.GuiObject` with multiple `Class.Folder` children, each with a different `Class.UILayout` type.
+Additionally, `Class.Folder` contents are exempted from the effects of a `Class.UILayout` sibling.
+
 ## Constraints
 
 There are three types of **constraints** you can use within your experiences: [UIAspectRatioConstraint](#uiaspectratioconstraint), [UISizeConstraint](#uisizeconstraint), and [UITextSizeConstraint](#uitextsizeconstraint).
