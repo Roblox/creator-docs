@@ -25,7 +25,7 @@ The **Texture Generator** tool is designed to quickly create custom textures for
 </GridContainer>
 
 <Alert severity="info">
-**Texture Generator** is best suited for custom 3D assets where the desired texture is contextual to the asset itself. To generate repeating or tiled images for texturing surfaces like a wood floor or cobblestone pathway, [Material Generator](../parts/materials.md#material-generator) may produce better results.
+**Texture Generator** is best suited for custom 3D assets where the desired texture is contextual to the asset itself. To generate repeating or tiled images for texturing surfaces like a wood floor or cobblestone pathway, [Material Generator](../studio/material-generator.md) may produce better results.
 </Alert>
 
 <figcaption><sup>1</sup> When generating a texture for a `Class.Model` group of `Class.MeshPart|MeshParts`, the meshes should be arranged in a sensible way such that a unified body is formed. Avoid generating a texture for an arbitrary group of meshes scattered about the model's bounds, or for more than one identical mesh in the same operation.</figcaption>
@@ -34,7 +34,7 @@ The **Texture Generator** tool is designed to quickly create custom textures for
 
 To begin generating textures, navigate to the [Model](../studio/model-tab.md) tab and open the **Texture Generator** tool.
 
-<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="716" alt="Texture Generator indicated in Model tab" />
+<img src="../assets/studio/general/Model-Tab-Texture-Generator.png" width="704" alt="Texture Generator indicated in Model tab" />
 
 With the tool's window open:
 

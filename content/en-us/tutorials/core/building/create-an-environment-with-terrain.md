@@ -21,7 +21,7 @@ To create the island:
 
 1. In the menu bar, navigate to the **Home** tab, then click the **Terrain Editor** button. The **Terrain Editor** window displays.
 
-   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png" alt="Studio's Home tab with the Terrain Editor tool highlighted." width="800" />
+   <img src="../../../assets/studio/general/Home-Tab-Terrain-Editor.png" alt="Studio's Home tab with the Terrain Editor tool highlighted." width="716" />
 
 1. In the **Terrain Editor** window, click the **Edit** tab, then the **Draw** button.
 
@@ -190,12 +190,12 @@ To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
 
 1. Walk around the island and check out how it looks while playing. When you're
    done, navigate back to the menu bar and click the **Stop** button. Studio exits playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
    <video controls loop muted>
    <source src="../../../assets/tutorials/create-an-environment-with-terrain/create-an-environment-with-terrain-walking.mp4" />
    </video>

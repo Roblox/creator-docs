@@ -377,7 +377,7 @@ you've collected on the leaderboard UI. To playtest your experience:
 
 1. In the menu bar, click the **Play** button. Studio enters playtest mode.
 
-   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="800" />
+   <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="Studio's Home tab with the Play button highlighted in the menu bar." width="716" />
 
 1. Move your character to touch a coin. If your scripts are working correctly, the
 leaderboard UI displays and increase your coin count as you collect more coins.

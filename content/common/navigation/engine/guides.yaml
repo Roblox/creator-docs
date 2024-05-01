@@ -1,15 +1,12 @@
 defaultType: markdown
 navigation:
   - heading: Learn the basics
+  - title: Get Started
+    path: /get-started
   - title: Platform Overview
     path: /platform
   - title: Creation Overview
     path: /creation
-  - title: Create Your First Experience
-    path: /tutorials/first-experience/
-  - title: Coding Fundamentals
-    path: /tutorials/fundamentals/coding-1/coding-fundamentals
-    navigation: /engine/tutorials-fundamentals.yaml
   - title: Assistant
     path: /assistant/guide
   - heading: Create
@@ -50,6 +47,8 @@ navigation:
             path: /projects/performance-optimization/memory
           - title: Load Times
             path: /projects/performance-optimization/load-times
+      - title: External Tools
+        path: /projects/external-tools
   - title: Assets
     path: /projects/assets/
     section:
@@ -209,8 +208,6 @@ navigation:
         path: /scripting/scheduler
       - title: Multi-Threading
         path: /scripting/multithreading
-          # - title: Debouncing
-          #   path: /scripting/debounce
       - title: Security Tactics and Cheat Mitigation
         path: /scripting/security/security-tactics
       - title: Luau
@@ -460,6 +457,8 @@ navigation:
     path: /production/
   - title: Roblox User Base
     path: /production/roblox-user-base
+  - title: Discovery
+    path: /discovery
   - title: Publishing
     path: /production/publishing/
     section:
@@ -514,8 +513,6 @@ navigation:
     section:
       - title: Overview
         path: /production/promotion/
-      - title: Discovery
-        path: /production/promotion/discovery
       - title: Advertising
         path: /production/promotion/advertising-on-roblox
         section:
@@ -620,6 +617,15 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
+      - title: Event Types
+        path: /production/analytics/event-types
+        section:
+          - title: Overview
+            path: /production/analytics/event-types
+          - title: Economy Events
+            path: /production/analytics/economy-events
+          - title: Funnel Events
+            path: /production/analytics/funnel-events
   - title: Community
     path: /production/community/
     section:

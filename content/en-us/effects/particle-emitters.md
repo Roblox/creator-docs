@@ -60,7 +60,7 @@ To insert an image into a particle emitter:
 
 1. In the menu bar, navigate to the **Home** tab and select **Toolbox**. The **Toolbox** window displays.
 
-   <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="800" alt="Toolbox indicated in Home tab" />
+   <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="716" alt="Toolbox indicated in Home tab" />
 
 2. If you want to insert an image that you have previously imported, click the **Inventory** tab. If you want to insert an image from another creator, click the **Creator Store** tab.
 

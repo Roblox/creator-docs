@@ -66,3 +66,41 @@ If you wanted to specify a field mask to update the values of only `foo.b` and
 
 In Open Cloud, update methods that support a field mask have a parameter named
 `updateMask`, where you can specify a field mask as a value.
+
+## Money
+
+Generally used to define a price, the `Money` type has a three-letter currency code (as defined in ISO 4217) and a quantity, which uses the `Decimal` type. For example, a $17.99 Creator Store product looks like this:
+
+```json
+"myPrice": {
+  "currencyCode": "USD",
+  "quantity": {
+    "significand": 1799,
+    "exponent": -2
+  }
+}
+```
+
+## Decimal
+
+Represents a decimal number in a form similar to scientific notation, with significant digits and an exponent.
+
+Examples:
+
+- 17
+
+  `{"significand": 17, "exponent": 0}` or just `{"significand": 17}`
+
+- -0.005
+
+  `{"significand": -5, "exponent": -3}`
+
+- 33.5 million (33,500,000)
+
+  `{"significand": 335, "exponent": 5}`
+
+- 11/8 (1.375)
+
+  `{"significand": 1375, "exponent": -3}`
+
+When `exponent` is greater than 0, it represents the number of trailing zeroes after the significant digits. When `exponent` is less than 0, it represents how many of the significant digits come after the decimal point. When `exponent` is 0, the value of the `Decimal` is the value of the `significand`.

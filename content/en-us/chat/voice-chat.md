@@ -5,7 +5,7 @@ description: Explains how to use the proximity-based voice chat feature.
 
 <Alert severity="success">
 <p>Chat with voice is currently available to all 13+ [phone number verified](https://en.help.roblox.com/hc/en-us/articles/203313350) users in the United&nbsp;States, Canada, United&nbsp;Kingdom, Australia, New&nbsp;Zealand, Spain, Mexico, Chile, Costa&nbsp;Rica, and Puerto&nbsp;Rico. Users **not** in these countries should use [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) to enable chat with voice.</p>
-<p>Once verified, users can opt-in to use this feature by visiting their account **Settings** page, enabling them to use chat with voice in any Roblox experience that supports it.</p>
+<p>Once verified, users can opt-in to use this feature by visiting their account **Settings** page, enabling them to use chat with voice in any Roblox experience that supports it. Experiences with voice often see an uplift in engagement, DAU, and spending.</p>
 </Alert>
 
 **Chat with voice** is a proximity-based voice chat feature that simulates realistic communication based on how close you are to other users who are speaking. The closer you are to another user's avatar, the louder their voice; conversely, the farther away you are, the softer their voice.

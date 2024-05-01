@@ -1,0 +1,23 @@
+name: AnalyticsCustomFieldKeys
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: CustomField01
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: CustomField02
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CustomField03
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

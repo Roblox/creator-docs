@@ -153,7 +153,9 @@ constructors:
       quaternion (`qX`, `qY`, `qZ`, `qW`).
     description: |-
       Returns a `Datatype.CFrame` from position (`x`, `y`, `z`) and
-      quaternion (`qX`, `qY`, `qZ`, `qW`).
+      quaternion (`qX`, `qY`, `qZ`, `qW`). The quaternion is expected
+      to be of unit length to represent a valid rotation.
+      If this isn't the case, the quaternion will be normalized.
     parameters:
       - name: x
         type: number
@@ -955,6 +957,32 @@ methods:
     parameters:
     returns:
       - type: Tuple
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CFrame:FuzzyEq
+    summary: |
+      Returns `true` if the other 'Datatype.CFrame' is sufficiently close
+      to this 'Datatype.CFrame' in both position and rotation.
+    description: |
+      Returns `true` if the other 'Datatype.CFrame' is sufficiently close
+      to this 'Datatype.CFrame' in both position and rotation.
+      The `eps` value is used to control the tolerance for this similarity.
+      This value is optional and should be a small positive value if provided.
+      The similarity for position is component-wise, and for rotation uses a fast
+      approximation of the angle difference.
+    parameters:
+      - name: other
+        type: CFrame
+        default:
+        summary: ''
+      - name: epsilon
+        type: number
+        default: 0.00001 (1e-5)
+        summary: ''
+    returns:
+      - type: bool
         summary: ''
     code_samples: []
     tags: []

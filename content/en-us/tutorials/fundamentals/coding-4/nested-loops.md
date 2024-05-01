@@ -44,9 +44,9 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
    local partsPerBatch = 5
    local partsMade = 0
 
-   -- Makes a single  cube
+   -- Makes a single cube
    local function createPart()
-     local part= Instance.new("Part")
+     local part = Instance.new("Part")
      part.Size = Vector3.new(2, 2, 2)
      part.CFrame = CFrame.new(20, 0, 20)
      part.Color = currentColor
@@ -55,16 +55,15 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
 
    -- Outer loop
    for partBatch = 1, numberOfBatches do
-     print ("Top outer loop: part batch " .. partBatch)
-     currentColor = Color3.fromRGB(math.random(0, 255),math.random(0, 255),math.random(0, 255))
+     print("Top outer loop: part batch " .. partBatch)
+     currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
 
      -- Inner loop
      for partNumber = 1, partsPerBatch do
        createPart()
        print("Inner loop: part " .. partNumber)
-       -- Track parts baked
        partsMade = partsMade + 1
-       task.wait(.5)
+       task.wait(0.5)
      end
 
      print("Bottom outer loop: " .. partsMade .. " parts made so far.")
@@ -129,7 +128,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    ```lua
    local function makeCube()
-       local cube= Instance.new("Part")
+       local cube = Instance.new("Part")
        cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
        cube.Color = currentColor
        cube.Parent = workspace
@@ -204,8 +203,7 @@ The script will have three loops total, one each for the length, width, and heig
        local spawnY = (heightIndex - 1) * CUBE_SIZE
 
        for lengthIndex = 1, TOWER_SIZE do
-     local spawnX = lengthIndex * CUBE_SIZE
-
+           local spawnX = lengthIndex * CUBE_SIZE
        end
    end
    ```
@@ -229,13 +227,13 @@ The script will have three loops total, one each for the length, width, and heig
        local spawnY = (heightIndex - 1) * CUBE_SIZE
 
        for lengthIndex = 1, TOWER_SIZE do
-     local spawnX = lengthIndex * CUBE_SIZE
+           local spawnX = lengthIndex * CUBE_SIZE
 
            for widthIndex = 1, TOWER_SIZE do
-         local spawnZ = widthIndex * CUBE_SIZE
-         makecube(spawnX, spawnY, spawnZ)
-         task.wait(0.25)
-     end
+               local spawnZ = widthIndex * CUBE_SIZE
+               makecube(spawnX, spawnY, spawnZ)
+               task.wait(0.25)
+           end
        end
    end
    ```
@@ -281,9 +279,9 @@ local CUBE_SIZE = 2
 local function makecube(spawnX, spawnY, spawnZ)
     local cube = Instance.new("Part")
     cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-    cube.Color =  currentColor
-	cube.Transparency = cubeTransparency -- Sets transparency
-	cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
+    cube.Color = currentColor
+    cube.Transparency = cubeTransparency -- Sets transparency
+    cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
     cube.Parent = workspace
 end
 
@@ -294,8 +292,7 @@ for heightIndex = 1, TOWER_SIZE do
 
     for lengthIndex = 1, TOWER_SIZE do
         local spawnX = lengthIndex * CUBE_SIZE
-		cubeTransparency = (lengthIndex - 1) * 0.10 --Updates every loop starting at 0
-
+	cubeTransparency = (lengthIndex - 1) * 0.10 --Updates every loop starting at 0
 
         for widthIndex = 1, TOWER_SIZE do
             local spawnZ = widthIndex * CUBE_SIZE
@@ -330,33 +327,33 @@ local cupcakesBaked = 0
 
 --Makes a single cupcake
 local function makeCupcake()
-		local serverStorage = game:GetService("ServerStorage")
-		local cupcake = serverStorage.Cupcake:Clone()
-		local cup = cupcake.Cup
-		local frosting = cupcake.Frosting
-		cupcake:SetPrimaryPartCFrame(CFrame.new(0,20, 0) *CFrame.Angles(0, 0, -90))
-		frosting.Color = frostingColor
-		cup.Color = cupColor
-		cupcake.Parent = workspace
+    local serverStorage = game:GetService("ServerStorage")
+    local cupcake = serverStorage.Cupcake:Clone()
+    local cup = cupcake.Cup
+    local frosting = cupcake.Frosting
+    cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) *CFrame.Angles(0, 0, -90))
+    frosting.Color = frostingColor
+    cup.Color = cupColor
+    cupcake.Parent = workspace
 end
 
 
 -- Outer loop
 for cupcakeBatch = 1, numberOfBatches do
-	print ("Top outer loop: cupcake batch " .. cupcakeBatch)
-	frostingColor = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
-	cupColor = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
+    print("Top outer loop: cupcake batch " .. cupcakeBatch)
+    frostingColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+    cupColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
 
-	-- Inner loop
-	for cupcakeNumber = 1, cupcakesPerBatch do
-		makeCupcake()
-		print("Inner loop: cupcake " .. cupcakeNumber)
-	 -- Track muffins baked
-		cupcakesBaked = cupcakesBaked + 1
-		task.wait(.5)
-end
+    -- Inner loop
+    for cupcakeNumber = 1, cupcakesPerBatch do
+        makeCupcake()
+        print("Inner loop: cupcake " .. cupcakeNumber)
+        -- Track muffins baked
+        cupcakesBaked = cupcakesBaked + 1
+        task.wait(0.5)
+    end
 
-print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")
+    print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")
 end
 ```
 
