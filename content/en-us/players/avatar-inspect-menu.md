@@ -38,11 +38,11 @@ GuiService:SetInspectMenuEnabled(false)
 
 local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
 if humanoid then
-  -- Get current HumanoidDescription from a player character
-  local humanoidDescription = humanoid:GetAppliedDescription()
+	-- Get current HumanoidDescription from a player character
+	local humanoidDescription = humanoid:GetAppliedDescription()
 
-  -- Load the inspect menu from a humanoid description
-  GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
+	-- Load the inspect menu from a humanoid description
+	GuiService:InspectPlayerFromHumanoidDescription(humanoidDescription, player.Name)
 end
 ```
 
@@ -53,16 +53,15 @@ The Avatar Inspect Menu can inspect players who aren't in the current experience
 Use the following code sample to open the Avatar Inspect Menu based on a `Class.Player.UserId|UserId`:
 
 ```lua
-
 local GuiService = game:GetService("GuiService")
 local Players = game:GetService("Players")
 
--- Get user ID by player name
+-- Get user ID by username
 local success, userId = pcall(function()
-  return Players:GetUserIdFromNameAsync("IgnisRBX")
+	return Players:GetUserIdFromNameAsync("RobloxUser")
 end)
 
 if success then
-  GuiService:InspectPlayerFromUserId(userId)
+	GuiService:InspectPlayerFromUserId(userId)
 end
 ```
