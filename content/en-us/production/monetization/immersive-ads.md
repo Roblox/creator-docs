@@ -90,7 +90,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
   - Bots cannot be included in visitor counts.
 - You must comply with the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
 
-<Alert info="warning">
+<Alert severity="warning">
 
 Publishers who do not comply with these requirements may lose their eligibility temporarily or permanently. In some cases, they may lose some or all ad payouts and may have their content or account suspended.
 
@@ -147,17 +147,30 @@ Implementing a reward for a video ad must be done in a `Class.Script` using `Enu
 
 ```lua title="Reward Mechanism for Video Ad"
 local function grantReward(PlayerId)
-  -- grant an in-game reward
+   -- grant an in-game reward
+end
+local function showRewardPrompt(PlayerId)
+   -- show Prompt
+end
+local function hideRewardPrompt(PlayerId)
+   -- hide Prompt
 end
 local AdGui = script.Parent
 AdGui.OnAdEvent = function(eventData)
-  local AdEventType = eventData.AdEventType
-  local PlayerId = eventData.PlayerId
-  if AdEventType == Enum.AdEventType.UserCompletedVideo then
-    grantReward(PlayerId)
-    return true
-  end
-  return false
+   local AdEventType = eventData.AdEventType
+   local PlayerId = eventData.PlayerId
+   if AdEventType == Enum.AdEventType.RewardedAdLoaded then
+       showRewardPrompt(PlayerId)
+       return true
+   elseif AdEventType == Enum.AdEventType.RewardedAdGrant then
+       grantReward(PlayerId)
+       hideRewardPrompt(PlayerId)
+       return true
+   elseif AdEventType == Enum.AdEventType.RewardedAdUnloaded then
+       hideRewardPrompt(PlayerId)
+       return true
+   end
+   return false
 end
 ```
 

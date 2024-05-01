@@ -42,8 +42,8 @@ AnalyticsService:LogEconomyEvent(
     currentPlayer,
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins", -- currency name
+    50, -- amount earned 
     50, -- current balance
-    50, -- amount earned
     Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- transaction type
 )
 

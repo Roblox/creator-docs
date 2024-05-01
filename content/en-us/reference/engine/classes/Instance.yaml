@@ -191,12 +191,11 @@ properties:
       Instance.new("NumberValue", workspace)
       ```
 
-      When a change is made to certain properties while an instance is
-      parented in the `Class.DataModel`, the engine may need to perform extra
-      work internally (for things like replication, rendering, and GUI
-      layout). Whenever possible, change an
-      instance's properties **before** you set its Parent, rather than after,
-      to avoid performing that work redundantly.
+      When a change is made to certain properties while an instance is parented
+      in the `Class.DataModel`, the engine may need to perform extra work
+      internally (for things like replication, rendering, and GUI layout).
+      Whenever possible, change an instance's properties **before** you set its
+      Parent, rather than after, to avoid performing that work redundantly.
 
       #### Object Replication
 
@@ -216,9 +215,8 @@ properties:
       ```
 
       However, if you were parenting your parts to a `Class.Model` whose parent
-      hasn't been set yet, then parenting each part to that model is
-      okay as the model would not have replicated yet.
-      
+      hasn't been set yet, then parenting each part to that model is okay as the
+      model would not have replicated yet.
     code_samples:
     type: Instance
     tags:

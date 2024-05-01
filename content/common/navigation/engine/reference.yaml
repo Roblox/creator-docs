@@ -4438,6 +4438,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/RenderFidelity.yaml
         ignoreTranslation: true
+      - title: RenderingCacheOptimizationMode
+        path: /reference/engine/enums/RenderingCacheOptimizationMode
+        type: engineapi
+        source: /reference/engine/enums/RenderingCacheOptimizationMode.yaml
+        ignoreTranslation: true
       - title: RenderingTestComparisonMethod
         path: /reference/engine/enums/RenderingTestComparisonMethod
         type: engineapi

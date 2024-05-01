@@ -91,7 +91,8 @@ callbacks:
           Options table for the method:
 
           - `PlayerId` – The user ID of the player related to the ad event.
-          - `AdEventType` – A `Enum.AdEventType` enum value describing the AdGui events.
+          - `AdEventType` – A `Enum.AdEventType` enum value describing the AdGui
+            events.
     returns:
       - type: bool
         summary: |

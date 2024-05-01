@@ -44,11 +44,11 @@ properties:
       can_save: true
   - name: VRService.AvatarGestures
     summary: |
-      When true, a VR player will be able to animate their hands and head
-      using their controllers and headset.
+      When true, a VR player will be able to animate their hands and head using
+      their controllers and headset.
     description: |
-      When set to true, a VR player will be able to animate their hands and
-      head using their controllers and headset.
+      When set to true, a VR player will be able to animate their hands and head
+      using their controllers and headset.
 
       This property must be set on the server.
     code_samples: []
@@ -134,8 +134,8 @@ properties:
       device.
 
       If a VR device is enabled, you can interact with its location and movement
-      through methods such as `Class.UserInputService:GetUserCFrame()`. You
-      can also react to VR device movement using the
+      through methods such as `Class.UserInputService:GetUserCFrame()`. You can
+      also react to VR device movement using the
       `Class.UserInputService.UserCFrameChanged` event.
 
       ```lua
@@ -296,8 +296,8 @@ methods:
     thread_safety: Unsafe
   - name: VRService:RequestNavigation
     summary: |
-      Requests navigation to the specified `Datatype.CFrame` using the
-      specified `Enum.UserCFrame` as the origin for the visualizer parabola.
+      Requests navigation to the specified `Datatype.CFrame` using the specified
+      `Enum.UserCFrame` as the origin for the visualizer parabola.
     description: |
       This method requests navigation to the specified `Datatype.CFrame` using
       the specified `Enum.UserCFrame` as the origin for the visualizer parabola.
@@ -377,8 +377,8 @@ events:
       coordinate and the specified `Enum.UserCFrame` indicating the device
       requesting the navigation.
 
-      This event can be used alongside
-      `Class.UserInputService` service events and methods.
+      This event can be used alongside `Class.UserInputService` service events
+      and methods.
 
       Since this event fires locally, it can only be used in a
       `Class.LocalScript`.
@@ -407,8 +407,8 @@ events:
       changed. You can use this event to track the states of VR touchpads
       connected via the user's client.
 
-      This event can be used alongside
-      `Class.UserInputService` service events and methods.
+      This event can be used alongside `Class.UserInputService` service events
+      and methods.
 
       Since this event fires locally, it can only be used in a
       `Class.LocalScript`.
@@ -454,7 +454,8 @@ events:
         type: CFrame
         default:
         summary: |
-          The updated `Datatype.CFrame` coordinates of the VR device after the change.
+          The updated `Datatype.CFrame` coordinates of the VR device after the
+          change.
     tags: []
     deprecation_message: ''
     security: None

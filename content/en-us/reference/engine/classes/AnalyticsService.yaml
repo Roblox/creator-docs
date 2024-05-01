@@ -549,11 +549,11 @@ methods:
         type: string
         default:
         summary: ''
-      - name: endingBalance
+      - name: amount
         type: float
         default:
         summary: ''
-      - name: amount
+      - name: endingBalance
         type: float
         default:
         summary: ''

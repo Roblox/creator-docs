@@ -60,8 +60,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
-tags:
-  - NotReplicated
+tags: []
 deprecation_message: ''
 properties:
   - name: EditableImage.Size

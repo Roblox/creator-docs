@@ -553,8 +553,10 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: Players:BanAsync
-    summary: 'Service not live.'
-    description: 'Service not live.'
+    summary: |
+      Service not live.
+    description: |
+      Service not live.
     code_samples: []
     parameters:
       - name: config
@@ -1003,8 +1005,10 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: Players:UnbanAsync
-    summary: 'Service not live.'
-    description: 'Service not live.'
+    summary: |
+      Service not live.
+    description: |
+      Service not live.
     code_samples: []
     parameters:
       - name: config

@@ -12,8 +12,172 @@ tags:
   - Service
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: GenericChallengeService:SignalChallengeAbandoned
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService:SignalChallengeCompleted
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+      - name: challengeType
+        type: string
+        default:
+        summary: ''
+      - name: challengeMetadata
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService:SignalChallengeInvalidated
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService:SignalChallengeLoaded
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+      - name: success
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService:SignalChallengeRequired
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+      - name: challengeType
+        type: string
+        default:
+        summary: ''
+      - name: challengeMetadata
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events:
+  - name: GenericChallengeService.ChallengeAbandonedEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService.ChallengeCompletedEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+      - name: challengeType
+        type: string
+        default:
+        summary: ''
+      - name: challengeMetadata
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService.ChallengeInvalidatedEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GenericChallengeService.ChallengeLoadedEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: challengeID
+        type: string
+        default:
+        summary: ''
+      - name: success
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: GenericChallengeService.ChallengeRequiredEvent
     summary: ''
     description: ''
