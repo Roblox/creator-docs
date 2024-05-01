@@ -157,8 +157,7 @@ To navigate to another page while in **Edit** mode:
 
 ### Folders
 
-Each `Class.Folder` in your UI hierarchy can define its own `Class.UILayout` (List, Grid, Page, Table) or use the default Position-based layout. For example, you could have a `Class.GuiObject` with multiple `Class.Folder` children, each with a different `Class.UILayout` type.
-Additionally, `Class.Folder` contents are exempted from the effects of a `Class.UILayout` sibling.
+Each `Class.Folder` in your UI hierarchy can define its own `Class.UILayout` (`Class.UIListLayout`, `Class.UIGridLayout`, `Class.UIPageLayout`, `Class.UITableLayout`), or use a default position-based layout. For example, you can implement a `Class.GuiObject` with multiple `Class.Folder` children, each with a different `Class.UILayout` type. Additionally, `Class.Folder` contents are exempt from the effects of a `Class.UILayout` sibling.
 
 ## Constraints
 
