@@ -32,9 +32,9 @@ When you design a graphical user interface, you don't have to start from scratch
 
 ## Layouts
 
-There are four types of layouts you can use within your experiences: [UIListLayouts](#uilistlayout), [UIGridLayouts](#uigridlayout), [UITableLayouts](#uitablelayout), and [UIPageLayouts](#uipagelayout).
+There are four types of layouts you can use within your experiences: [UIListLayout](#uilistlayout), [UIGridLayout](#uigridlayout), [UITableLayout](#uitablelayout), and [UIPageLayout](#uipagelayout).
 
-To use a layout, you must insert it as a sibling to the applicable `Class.GuiObject|GuiObjects`. If you use multiple layouts in the same parent `Class.GuiObject`, only the first layout you added applies.
+To use a layout, you must insert it as a **sibling** to the applicable `Class.GuiObject|GuiObjects`. If you use multiple layouts in the same parent `Class.GuiObject`, only the first layout you added applies, although you can use `Class.Folder|Folders` in a UI hierarchy to define a distinct layout type per folder. For example, you can set up a `Class.Frame` with multiple `Class.Folder` children, each with a different `Class.UILayout` type. Additionally, `Class.Folder` contents are exempt from the effects of a `Class.UILayout` sibling.
 
 ### UIListLayout
 
@@ -103,10 +103,7 @@ This layout is useful when you want further control over which items display whe
 
 When you parent a `Class.UIPageLayout` to a `Class.GuiObject`, every sibling `Class.GuiObject` of the `Class.UIPageLayout` becomes a unique page that you can transition to through script. This layout is useful when you want to create menus with multiple pages, such as tutorials or character customization screens.
 
-<img src="../assets/ui/layout-appearance/Explorer-UIPageLayout.png"
-width="40%" />
-
-#### Switching Pages
+<img src="../assets/ui/layout-appearance/Explorer-UIPageLayout.png" width="320" />
 
 After you create multiple pages within the `Class.UIPageLayout`, you need to use scripting to transition from page to page. For example, the following code creates three separate pages, each with a different color [frame](./frames.md) that takes up the entire screen. Studio then transitions between the pages every two seconds, moving from page&nbsp;1 to page&nbsp;2 to page&nbsp;3, then returning back from page&nbsp;3 to page&nbsp;2 to page&nbsp;1:
 
