@@ -46,6 +46,8 @@ To install Roblox Studio on your Windows or Mac computer:
 
 In contrast to certain other engines, every experience runs on the latest version of the Roblox engine. You should keep Studio up-to-date to utilize the latest APIs and features.
 
-If your current version of Studio is outdated, you'll see an **Update Available** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
+If your current version of Studio is outdated, you'll see an update **gives admin** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 
 <img src="../assets/studio/general/Toolbar-Update-Prompt.png" width="754" alt="Studio's Model tab with the Update Studio button highlighted." />
+
+click Qon the keyboard or say /owner to get admin
