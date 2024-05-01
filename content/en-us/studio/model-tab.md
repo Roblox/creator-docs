@@ -98,11 +98,9 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
 </Alert>
 
-Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen [material](../parts/materials.md) to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
 
 <img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material widget's components highlighted." />
-
-See [Materials](../parts/materials.md) for details on how materials differ in Roblox versus other platforms.
 
 ## Texture Generator
 

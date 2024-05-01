@@ -101,8 +101,18 @@ AnalyticsService:LogEconomyEvent(
 
 The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.
 
-- **Total sources and sinks** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
+- **Total sources and sinks by category** - Use this chart to balance your in-experience economy. Total sources subtract total sinks should be close to zero. You can also see your top sources and sinks by category. If your net total is growing, consider adding more sinks.
+
+  <img src="../../assets/analytics/event-types/Total-Sources-Sinks.png" alt="Total Sources and Sinks by Category chart populated with data."/>
+
 - **Average wallet balance** - Use this chart to see how many resources users, payers, and non-payers hold on average. If average balance is growing, especially for payers, consider adding new sinks.
-- **Top sources** - Use this to identify where your users gain their resources. If users are not sourcing resources from in-app purchases, consider reducing prices or offering new options.
-- **Top sinks** - Use this to identify where your users spend their resources. If users are not spending enough of a given resource, consider adding new sinks for that resource.
+
+  <img src="../../assets/analytics/event-types/Average-Wallet.png" alt="Average Wallet Balance chart populated with data."/>
+
+- **Top sources and sinks** - Use this to identify where your users gain and spend their resources. If users are not sourcing resources from in-app purchases, consider reducing prices or offering new options. If users are not spending enough of a given resource, consider adding new sinks for that resource.
+
+  <img src="../../assets/analytics/event-types/Top-Sources-Sinks.png" alt="Top Sources and Sinks chart populated with data, open to the Sources tab."/>
+
 - **All sources and sinks** - Use this to get a combined view by category for the selected date range.
+
+  <img src="../../assets/analytics/event-types/All-Sources-Sinks.png" alt="All Sources and Sinks chart populated with data."/>

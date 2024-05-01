@@ -7,7 +7,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
    This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [portal](#portal-ads) ads), and for [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), and for [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages.
 
 ## Creating an Ad Account
 
@@ -70,10 +70,11 @@ Before launching your campaign, you'll be able to [review your campaign details]
 
 Campaigns are defined by their **campaign objective** and **budgeting and scheduling** parameters.
 
-Campaign objectives are divided into two categories:
+Campaign objectives are divided into three categories:
 
-- **Awareness:** Campaigns focused on awareness show image ads to increase awareness of your brand. These are placed as image ads in-experience, appearing as virtual billboards.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal or image ad units in publisher experiences, or as **sponsored experiences** on the Home, Discover, and Search pages.
+- **Awareness:** Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
+- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal or display ad units in publisher experiences, or as **sponsored experiences** on the Home, Discover, and Search pages.
+- **Video Views:** Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
 
@@ -89,6 +90,7 @@ To set up an ad campaign:
    <img src="../../assets/promotion/ads-manager/Campaign-Create.png" width="780" />
 
 2. Select your **Payment Method**. If using ad credits, ensure the campaign budget does not exceed the available ad credits within your account. Ad credits will be debited upon campaign submission based on your set budget.
+
    <img src="../../assets/promotion/ads-manager/campaign-payment-method.png" width="780" />
 
 3. Determine the **Campaign Objective** by selecting it in the dropdown.
@@ -366,6 +368,7 @@ You can create three different types of ads using the Ads Manager:
 - [Sponsored Experiences](#sponsored-experiences) appear as sponsored experience tiles on the Home, Discover, and Search pages.
 - [Portal Ads](#portal-ads) are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
 - [Image Ads](#image-ads) are static, non-clickable images within the 3D space of an experience.
+- [Video Ads](#video-ads) are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
 
 The **Ad Type** is determined by your [campaign objective](#define-the-campaign). Campaign objectives valuing **awareness** are displayed as image ads, while campaign objectives valuing **visits** are displayed as tile and portal ads.
 
@@ -430,6 +433,15 @@ To create an image ad:
    <img src="../../assets/promotion/ads-manager/Image-Ad-Preview.png" width="780" />
 
 4. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
+
+#### Video Ads
+
+To create a video ad:
+
+1. Click the **UPLOAD MEDIA** button in the drag and drop window. A navigation window displays.
+2. Navigate to and confirm the video file you'd like to use.
+3. With your ad video selected, preview it by clicking the **Expanding Arrows** over the video thumbnail.
+4. Name your video ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
 ### Review the Campaign
 
@@ -640,8 +652,4 @@ Ad credit-related activities are categorized as follows:
 
 Roblox diligently combats ad fraud using advanced detection methods for bots and other fraudulent activities, ensuring advertisers don't pay for fraudulent traffic and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
 
-Roblox may suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. To avoid fraudulent behavior and maintain advertising integrity, advertisers should follow these best practices:
-
-- Do not attempt to upload malware to the Roblox Ad Manager.
-- Do not provide false identification or payment information to Roblox.
-- Do not make fraudulent refund requests or dispute payments for services properly rendered.
+Accounts responsible for ad fraud will have their accounts suspended to prevent ongoing abuse. In addition, Roblox may suspend ad campaigns or advertiser accounts for non-payment of services properly rendered. Roblox expects advertisers to act with integrity and follow the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#advertiser-integrity).

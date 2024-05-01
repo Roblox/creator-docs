@@ -5,7 +5,7 @@ description: Explains the process of creating your first experience in Roblox St
 
 After you complete the onboarding tour and are familiar with Roblox Studio's user interface, you're ready to start creating experiences on the platform.
 
-Using a sample [high-quality catapult](https://create.roblox.com/store/asset/17266332444/IntroToStudioCatapult) asset pack, this tutorial walks you through the creation process for an experience in which players can launch five projectiles toward targets on floating platforms before a UI displays that allows them to reset the environment, including guidance on:
+Using a sample [high-quality catapult](https://create.roblox.com/store/asset/17266332444/IntroToStudioCatapult) asset pack, this tutorial walks you through the creation process for an experience in which players can launch five projectiles toward targets on floating platforms, including guidance on:
 
 - Building and organizing a data model for a single place using one of Studio's project templates.
 - Customizing both primitive and complex 3D objects from the Creator Store with unique properties for your own gameplay requirements.

@@ -26,8 +26,10 @@ properties:
       can_load: true
       can_save: true
   - name: AdGui.EnableVideoAds
-    summary: ''
-    description: ''
+    summary: |
+      Enables the AdGui to serve video ads.
+    description: |
+      The property enables the AdGui to serve video ads.
     code_samples: []
     type: bool
     tags: []
@@ -76,17 +78,24 @@ methods: []
 events: []
 callbacks:
   - name: AdGui.OnAdEvent
-    summary: ''
-    description: ''
+    summary: |
+      Used to react to the AdGui events.
+    description: |
+      The callback function used to react to the AdGui events.
     code_samples: []
     parameters:
       - name: eventInfo
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Options table for the method:
+
+          - `PlayerId` – The user ID of the player related to the ad event.
+          - `AdEventType` – A `Enum.AdEventType` enum value describing the AdGui events.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          Whether the callback has successfully reacted to the event.
     tags: []
     deprecation_message: ''
     security: None
