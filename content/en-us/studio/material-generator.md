@@ -11,7 +11,7 @@ The **Material Generator** is designed to create material variants from text ent
 
 ## Generating Materials
 
-If you've enabled the [Material Picker](../parts/materials.md#material-picker) beta, click **Generate&nbsp;New&nbsp;Material** from the picker's window. If you have not enabled the beta, click the **Material&nbsp;Generator** button to the left of the **Color** button in the [Home](../studio/home-tab.md) tab.
+If you've enabled the [Material Picker](../parts/materials.md#material-picker) beta, click **Generate** from the picker's window. If you have not enabled the beta, click the **Material&nbsp;Generator** button to the left of the **Color** button in the [Home](../studio/home-tab.md) tab.
 
 <img src="../assets/studio/general/Model-Tab-Material-Generator.png" width="704" alt="Studio's Model tab with the Material Generator button highlighted." />
 
