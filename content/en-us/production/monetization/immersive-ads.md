@@ -5,7 +5,7 @@ description: Immersive Ads allow you insert ad units into your experience that p
 
 The **Immersive Ads** system allows you to insert ad units into your experience that permit Roblox to programmatically serve ad content from advertisers to your active users. There are three ad formats that may be served in your experience:
 
-- **Video Ads** - A video up to 30 seconds that users can watch in-experience, which can either be click-to-play or autoplaying.
+- **Video Ads** — A video up to 30 seconds that users can watch in-experience, which can either be click-to-play or autoplaying.
 - **Image Ads** — A static, non-clickable image within the 3D space.
 - **Portal Ads** — A static, non-clickable image with a door that teleports users into an advertiser's experience.
 
@@ -63,31 +63,17 @@ Roblox pays out earnings on the 25th of the following month from when you insert
    Roblox has ad fraud systems in place to create a positive advertiser, publisher, and user experience. Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), if you engage in malicious practices to inflate impressions or teleports, Roblox may deduct Robux from your expected payout or reclaim fraudulently earned Robux. In addition, Roblox may suspend your experience and/or account.
 </Alert>
 
-## Experience and User Eligibility
-
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience is eligible to serve ads, which is based on an internal set of eligibility criteria. You can check your experience's eligibility status to serve ads by visiting your experience's details page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the left-hand navigation's **Monetization** section displays an **Immersive Ads** option, your experience is eligible.
-
-<img src="../../assets/monetization/immersive-ads/immersive-ads-eligibility.png" width="100%" />
-
-Advertisers can choose to limit which experiences their Immersive Ads are shown in to align with their brand. While we expect that all Roblox experiences are appropriate for most advertisers, some advertisers may choose to be more restrictive with where their ads are shown. Therefore, ad demand and publisher earnings could vary based upon an experience's age recommendation. Experiences with content suitable for more audiences should generally expect to earn more through immersive ads than experiences with more mature content. For more information on advertiser controls, see [Define Ad Sets](../promotion/ads-manager.md#define-ad-sets).
-
-Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Removing Ad Units for Ineligible Users](#removing-ad-units-for-ineligible-users).
+## Publisher Eligibility
 
 <Alert severity="warning">
-   Intentionally misrepresenting your experience in the experience questionnaire in an attempt to increase traffic is prohibited and may have moderation consequences.
-</Alert>
-
-## Publisher Eligibility Requirements
-
-<Alert severity="warning">
-
 The following requirements take effect from June 1st, 2024.
-
 </Alert>
 
-Just as there are [standards](../promotion/complying-with-advertising-standards.md) for advertisers on Roblox, when you monetize your content on Roblox with ads, you will be required to adhere to a set of [Ad Publisher Integrity requirements](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new "Eligibility" tab on the Immersive Ads page.
 
-In Creator Hub, you can see and manage your eligibility status in the **Eligibility** tab of the Immersive Ads page for your experience, under Monetization in the sidebar. You must meet the following criteria to be eligible to publish ads:
+<img src="../../assets/creator-dashboard/Immersive-Ads-Eligibility.png" width = "80%"/>
+<br />
+Experiences must meet the following criteria to be eligible to be an ad publisher:
 
 - Your account must have **2-factor authentication (2FA)** enabled.
   - For group-owned experiences, this requirement applies to the owner of the group.
@@ -97,7 +83,7 @@ In Creator Hub, you can see and manage your eligibility status in the **Eligibil
 - Your account must be **[ID verified](../publishing/account-verification.md)**.
   - For group-owned experiences, this requirement applies to the owner of the group.
   - Requirement is persistent - if a publisher disables identity verification, they will lose eligibility.
-- Your experience must be **Public**.
+- Your experience must be **Public**. If a publisher makes the experience Private, the experience will lose eligibility.
 - You must complete the **Experience Guidelines Questionnaire** for your experience.
 - Your experience must maintain **2,000 unique visitors per month**.
   - This is calculated based on visitors in the most recent 30 calendar days for which Roblox has complete data.
@@ -109,6 +95,10 @@ In Creator Hub, you can see and manage your eligibility status in the **Eligibil
 Publishers who do not comply with these requirements may lose their eligibility temporarily or permanently. In some cases, they may lose some or all ad payouts and may have their content or account suspended.
 
 </Alert>
+
+## User Eligibility
+
+Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13 or users outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Removing Ad Units for Ineligible Users](#removing-ad-units-for-ineligible-users).
 
 ## Inserting Ad Units
 
