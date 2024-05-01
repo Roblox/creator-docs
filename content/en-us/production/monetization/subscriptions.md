@@ -58,7 +58,7 @@ Before you can create a subscription, you must be phone or [ID verified](../publ
 8. Double-check the details and click **Create**.
 
 <Alert severity="warning">
-   After creating your subscription, you can't make changes to anything but the cover image.
+   After creating your subscription, you can't make changes to anything but the cover image and description.
 </Alert>
 
 ### Activating Subscriptions
