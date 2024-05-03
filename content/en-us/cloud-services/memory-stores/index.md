@@ -3,28 +3,31 @@ title: Memory Stores
 description: Explains how to implement memory store data structures to store frequent in-memory data.
 ---
 
-`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that need to be persistent and static across sessions, use [Data Stores](../../cloud-services/datastores.md).
+`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that needs to persist across sessions, use [Data Stores](../../cloud-services/datastores.md).
 
 ## Data Structures
 
-Instead of directly accessing raw data, memory stores have two primitive data structures shared across servers for quick processing: [sorted map](../../cloud-services/memory-stores/sorted-map.md) and [queue](../../cloud-services/memory-stores/queue.md). You can choose which one to use based on your usage, such as:
+Instead of directly accessing raw data, memory stores have three primitive data structures shared across servers for quick processing: [sorted map](../../cloud-services/memory-stores/sorted-map.md), [queue](../../cloud-services/memory-stores/queue.md), and [hash map](../../cloud-services/memory-stores/hash-map.md). Each data structure is a good fit for certain use cases:
 
-- **Skill-based matchmaking** - Save user information, such as skill level, in a shared **queue** among servers and use lobby servers to run matchmaking periodically.
-- **Cross-server trading and auctioning** - Enable universal trading between different servers on items, where users can bid on items with real-time changing prices stored inside a **map** as key-value pairs.
-- **Global leaderboards** - Store and update user rankings on a shared leaderboard inside a **map** with key-value pairs.
-- **Cache for Persistent Data** - Sync and copy your persistent data in a data store to a memory store **map** with key-value pairs to function as caches, which can help improve your experience's performance.
+- **Skill-based matchmaking** - Save user information, such as skill level, in a shared **queue** among servers, and use lobby servers to run matchmaking periodically.
+- **Cross-server trading and auctioning** - Enable universal trading between different servers, where users can bid on items with real-time changing prices, with a **sorted map** of key-value pairs.
+- **Global leaderboards** - Store and update user rankings on a shared leaderboard inside a **sorted map**.
+- **Shared inventories** - Save inventory items and statistics in a shared **hash map**, where users can utilize inventory items concurrently with one another.
+- **Cache for Persistent Data** - Sync and copy your persistent data in a data store to a memory store **hash map** that can act as a cache and improve your experience's performance.
 
-In general, if you need to access data based on a specific key, use a sorted map. If you need to process your data in a specific order, use a queue.
+<img src="../../assets/data/memory-store/Flow-Chart.svg" width="60%" />
+
+In general, if you need to access data based on a specific key, use a hash map. If you need that data to be ordered, use a sorted map. If you need to process your data in a specific order, use a queue.
 
 ## Limits and Quotas
 
-To maintain the scalability and system performance, memory stores have data usage quota for the memory size, API requests, and the data structure size.
+To maintain the scalability and system performance, memory stores have data usage quotas for the memory size, API requests, and the data structure size.
 
 ### Memory Size Quota
 
-The memory quota limits the total amount of memory that an experience can consume. It's not a fixed value. Instead, it changes over time depending on the number of users in the experience according to the following formula: **64KB + 1KB ⨉ [number of users]**. The quota applies on the experience level instead of the server level.
+The memory quota limits the total amount of memory that an experience can consume. It's not a fixed value. Instead, it changes over time depending on the number of users in the experience according to the following formula: **64KB + 1KB \* [number of users]**. The quota applies on the experience level instead of the server level.
 
-When users join the experience, the additional memory quota is available immediately. When users leave the experience, the quota doesn't reduce immediately. There's a trace back period of **8 days** before the quota re-evaluates to a lower value.
+When users join the experience, the additional memory quota is available immediately. When users leave the experience, the quota doesn't reduce immediately. There's a traceback period of eight days before the quota reevaluates to a lower value.
 
 After your experience hits the memory size quota, any API requests that increase the memory size always fail. Requests that decrease or don't change the memory size still succeed.
 
@@ -32,7 +35,7 @@ With the [observability](../../cloud-services/memory-stores/observability.md) da
 
 ### API Request Limits
 
-For API request limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue or sorted map is limited to **100,000** request units per minute.
+For API request limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue, sorted map, or hash map is limited to **100,000** request units per minute.
 
 Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreSortedMap:GetRangeAsync()` for sorted maps and `Class.MemoryStoreQueue:ReadAsync()` for queues. These two methods consume units based on the number of returned items with at least one request unit. For example, if `Class.MemoryStoreSortedMap:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreQueue:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
 
@@ -45,25 +48,39 @@ With the [observability](../../cloud-services/memory-stores/observability.md) fe
 For a single sorted map or queue, the following size and item count limits apply:
 
 - Maximum number of items: 1,000,000
+- Maximum total size (including keys for sorted map): 100 MB
 
-- Maximum total size (including keys for sorted map): 100MB
+### Per-Partition Limits
+
+See [Per-Partition Limits](per-partition-limits.md).
 
 ## Best Practices
 
 To keep your memory usage pattern optimal and avoid hitting the [limits](#limits-and-quotas), follow these best practices:
 
 - **Remove processed items.** Consistently cleaning up read items using `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps can free up memory and keep the data structure up-to-date.
+
 - **Set the expiration time to the smallest time frame possible when adding data.** Though the default expiration time is 45 days for both `Class.MemoryStoreQueue:AddAsync()` and `Class.MemoryStoreSortedMap:SetAsync()`, setting the shortest possible time can automatically clean up old data to prevent them from filling up your memory usage quota.
+
   - Don't store a large amount of data with a long expiration, as it risks exceeding your memory quota and potentially causing issues that can break your entire experience.
   - Always either explicitly delete unneeded items or set a short item expiration.
-  - Generally, it's recommended to use explicit deletion for releasing memory as it takes effect immediately, and use item expiration as a safety mechanism to prevent unused items from occupying memory indefinitely.
-- **Only keep the necessary values in memory.** For example, for an auction house experience, only the highest offered bid value is useful to maintain the auctioning system. You can use `Class.MemoryStoreQueue:UpdateAsync()`  on one key to keep the highest bid rather than keeping all bids in your data structure.
-- **Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to find a good rate of requests to send.** This algorithm can help you stay below the API request limits and reduce **DataUpdateConflicts** errors rather than constantly hitting `Class.MemoryStoreService` to get the correct response.
-- **Split a giant data structure into multiple smaller ones by [sharding](https://en.wikipedia.org/wiki/Shard_(database_architecture)).** It's easier to manage data stored in smaller structures rather than storing everything in one large data structure that can constantly hit both request and usage limits.
-  - For sorted maps, instead of putting keys with a set of different prefixes in one sorted map, separate each prefix into its own sorted map.
-  - For example, instead of having a monolithic sorted map that contains keys for each user and their associated value, shard the map into multiple maps based on the first digits of user IDs to enhance scalability.
+  - Generally, you should use explicit deletion for releasing memory and item expiration as a safety mechanism to prevent unused items from occupying memory for an extended period of time.
 
-- **Compress stored values.** For example, use the [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm to reduce the stored value size.
+- Only keep necessary values in memory.
+
+  For example, for an auction house experience, you only need to maintain the highest bid. You can use `Class.MemoryStoreQueue:UpdateAsync()` on one key to keep the highest bid rather than keeping all bids in your data structure.
+
+- Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to help stay below API request limits.
+
+  For example, if you receive a `DataUpdateConflict`, you might retry after two seconds, then four, eight, etc. rather than constantly sending requests to `Class.MemoryStoreService` to get the correct response.
+
+- Split giant data structures into multiple smaller ones by [sharding](https://en.wikipedia.org/wiki/Shard_(database_architecture)).
+
+  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the first digits of their user IDs.
+
+- Compress stored values.
+
+  For example, consider using the [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) algorithm to reduce the stored value size.
 
 ## Observability
 
@@ -114,6 +131,10 @@ The following table lists and describes all status codes of API responses availa
     <tr>
       <td>DataStructureRequestsOverLimit</td>
       <td>Exceeds data structure level request unit limit (100,000 request units per minute).</td>
+    </tr>
+    <tr>
+      <td>PartitionRequestsOverLimit</td>
+      <td>Exceeds partition request unit limit.</td>
     </tr>
     <tr>
       <td>TotalRequestsOverLimit</td>
@@ -192,7 +213,7 @@ The following table lists and describes the recommended solution for each respon
   </thead>
   <tbody>
     <tr>
-      <td>DataStructureRequestsOverLimit</td>
+      <td>DataStructureRequestsOverLimit / PartitionRequestsOverLimit</td>
       <td rowspan="2">
         <ul>
           <li>Add a local cache by saving information to another variable and rechecking after a certain time interval, such as 30 seconds.</li>
@@ -200,7 +221,7 @@ The following table lists and describes the recommended solution for each respon
           <li>Implement a short delay between requests.</li>
           <li>Follow the [best practices](#best-practices), including:</li>
             <ul>
-              <li>Sharding your data structures if you receive a significant amount of **DataStructureRequestsOverLimit** responses.</li>
+              <li>Sharding your data structures if you receive a significant amount of **DataStructureRequestsOverLimit**/**PartitionRequestsOverLimit** responses.</li>
               <li>Implement an exponential backoff for finding a reasonable rate of requests to send.</li>
             </ul>
         </ul>
@@ -294,6 +315,6 @@ The following table lists and describes the recommended solution for each respon
 
 The data in `Class.MemoryStoreService` is isolated between Studio and production, so changing the data in Studio doesn't affect production behavior. This means that your API calls from Studio don't access production data, allowing you to safely test memory stores and new features before going to production.
 
-Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota you have can be very limited since you are the only user for studio testing. When testing from Studio, you may notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
+Studio testing has the same [limits and quotas](#limits-and-quotas) as production. For quotas calculated based on the number of users, the resulting quota can be very small since you are the only user for Studio testing. When testing from Studio, you might also notice slightly higher latency and elevated error rates compared to usage in production due to some additional checks that are performed to verify access and permissions.
 
 For information on how to debug a memory store on live experiences or when testing in studio, use [Developer Console](../../studio/developer-console.md).

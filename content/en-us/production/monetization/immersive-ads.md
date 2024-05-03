@@ -51,13 +51,23 @@ To illustrate this concept, see the following three images of the same ad unit s
   </figure>
 </GridContainer>
 
-If your active users are eligible to see ads and meet the specific criteria from the advertiser, such as their gender or device, you may be eligible to earn Robux according to how they interact with the ad content:
+## Publisher Earnings From Immersive Ads
 
-- A video impression requires the ad to occupy 1.5% of the screen, be viewed at an angle of up to 55 degrees, with at least 50% of ad pixels visible, and played for 2 seconds. Video completion requires watching a 15-second ad with the same criteria from start to finish.
-- Image ads pay Robux for each viewable impression, which Roblox defines using an internal set of viewability criteria that considers factors such as the size of the ad, the angle between a user and an ad, and any obstruction between the user and the ad.
-- Portal ads pay Robux for each successful teleport, which Roblox defines as when a user enters the portal and arrives at the advertiser's experience.
+If your active users are eligible to see ads and meet the specific criteria from the advertiser, such as their country or device, you may be eligible to earn Robux according to how they interact with the ad content.
 
-Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your experience. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25th. You can track your collective earnings from ad immersive ads either through the **My Transactions** or **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
+How publishers earn:
+
+- For **video ads that are click-to-play**, users must click on the ad to initiate the video to start playing. Advertisers bid on a "15 second view". Therefore, publishers earn when a user watches a video for at least 15 seconds. Publishers can implement a reward mechanism to incentivize a user to watch the view for at least 15 seconds to drive earnings.
+
+- For **video ads that are autoplay**, the video starts playing when a user looks at the ad and pauses when the user looks away. Advertisers bid on a video impression. Therefore, publishers earn for each video impression where an impression is when a user looks at the ad for at least 0.5 seconds, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and with at least 50% of the video ads pixels visible.
+
+- **Image ads** are static, non-clickable images within the 3D space. Advertisers bid on an image impression. Therefore, publishers earn for each image impression. An image impression is when a user looks at the ad for at least 1 second, the ad occupies 1.5% of the viewport, the ad is viewed at an angle of up to 55 degrees, and with at least 50% of image ad pixels visible.
+
+- **Portal ads** are static, non-clickable images with a door that teleports users into an advertiser's experience. Advertisers bid on a teleport. Publishers earn for each successful teleport. A teleport is when a user enters the portal and arrives at the advertiser's experience.
+
+To learn more about how advertisers are billed, you can refer to our overview on [ads billing](../promotion/ads-manager.md#ads-billing).
+
+Roblox pays out earnings on the 25th of the following month from when you inserted ad units into your experience. For example, if you insert ad units during the month of March, your payout date for the viewable impressions and successful teleports from those ad units is April 25th. You can track your collective earnings from ad Immersive Ads either through the **My Transactions** or **Group Transactions** page. You can also analyze their overall performance through metrics graphs on the Creator Dashboard.
 
 <Alert severity="warning">
    Roblox has ad fraud systems in place to create a positive advertiser, publisher, and user experience. Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), if you engage in malicious practices to inflate impressions or teleports, Roblox may deduct Robux from your expected payout or reclaim fraudulently earned Robux. In addition, Roblox may suspend your experience and/or account.
@@ -342,14 +352,14 @@ local mainPortal = Workspace:WaitForChild("Main Portal Template")
 
 ## Viewing Immersive Ad Metrics
 
-Once you insert ad units into your experience, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your immersive ads. After about 48 hours of having immersive ads run in your experience, you can see how many impressions and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
+Once you insert ad units into your experience, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your Immersive Ads. After about 48 hours of having Immersive Ads run in your experience, you can see how many video views, impressions, and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
 
-By tracking these trends over time, you can make strategic decisions on the number of ad units you include per place, which format of ad unit you want to prioritize, and where you can place individual ad units to generate impressions.
+By tracking these trends over time, you can make strategic decisions on the number of ad units you include per place, which format of ad unit you want to prioritize, and where you can place individual ad units to generate video views, impressions, and teleports.
 
 To view Immersive Ad metrics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on the dashboard and select your experience.
-1. Navigate to the **Monetization** tab and select **Immersive Ads**.
+2. Navigate to the **Monetization** tab and select **Immersive Ads**.
 
    <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Immersive-Ads.png" width="330" />
 
@@ -358,5 +368,5 @@ To view Immersive Ad metrics:
 </Alert>
 
 <Alert severity="warning">
-   Roblox may make minor "over-delivery" adjustments to impressions or teleports for advertisers to account for potential invalid impressions or teleports, which may result in occasional changes in **Earnings per Mille** or **Earnings per Teleport** metrics.
+   Roblox may make minor "over-delivery" adjustments to impressions or teleports for advertisers to account for potential invalid video views, impressions, or teleports, which may result in occasional changes in **Earnings per Mille** or **Earnings per Teleport** metrics.
 </Alert>

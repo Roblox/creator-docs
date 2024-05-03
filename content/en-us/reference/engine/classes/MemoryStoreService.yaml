@@ -23,17 +23,21 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MemoryStoreService:GetHashMap
-    summary: ''
-    description: ''
+    summary: |
+      Returns a `Class.MemoryStoreHashMap` instance for the provided name.
+    description: |
+      Returns a `Class.MemoryStoreHashMap` instance for the provided name. The
+      name is global within the game, so any place that uses the same name
+      accesses the same hash map.
     code_samples: []
     parameters:
       - name: name
         type: string
         default:
-        summary: ''
+        summary: The name of the hash map.
     returns:
       - type: MemoryStoreHashMap
-        summary: ''
+        summary: A `Class.MemoryStoreHashMap` instance for the provided name.
     tags: []
     deprecation_message: ''
     security: None
@@ -44,7 +48,7 @@ methods:
     description: |
       Returns a `Class.MemoryStoreQueue` instance for the provided name. The
       name is global within the game, thus any place that uses the same name
-      will access the same queue.
+      accesses the same queue.
     code_samples:
     parameters:
       - name: name
@@ -71,8 +75,8 @@ methods:
       Returns a `Class.MemoryStoreSortedMap` instance for the provided name.
     description: |
       Returns a `Class.MemoryStoreSortedMap` instance for the provided name. The
-      name is global within the game, so any place that uses the same name will
-      access the same sorted map.
+      name is global within the game, so any place that uses the same name
+      accesses the same sorted map.
     code_samples:
     parameters:
       - name: name

@@ -2,8 +2,15 @@ name: MemoryStoreHashMap
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Provides access to a hash map within `Class.MemoryStoreService`.
+description: |
+  Provides access to a hash map within `Class.MemoryStoreService`. A hash 
+  map is a
+  collection of items where string keys are associated with arbitrary values (up
+  to the maximum allowed size -- see
+  [Memory Stores](../../../cloud-services/memory-stores/hash-map.md)).
+  The keys have no ordering guarantees.
 code_samples: []
 inherits:
   - Instance
@@ -14,48 +21,63 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MemoryStoreHashMap:GetAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Retrieves the value of a key in the hash map.
+    description: |
+      Retrieves the value of a key in the hash map.
+    code_samples: 
+      - getting-data-hash-map-memory-store
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The key whose value you want to retrieve.
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The value, or nil if the key doesn't exist.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: MemoryStoreHashMap:ListItemsAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through items in the hash map.
+    description: |
+      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through items in the hash map.
+    code_samples: 
+      - listing-data-hash-map-memory-store
     parameters:
       - name: count
         type: int
         default:
-        summary: ''
+        summary: |
+          Maximum possible number of items that can be returned.
     returns:
       - type: MemoryStoreHashMapPages
-        summary: ''
+        summary: |
+          A `Class.MemoryStoreHashMapPages` instance that enumerates the items as
+          `Class.MemoryStoreHashMapPages` instances.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: MemoryStoreHashMap:RemoveAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Removes an item from the hash map.
+    description: |
+      Removes an item from the hash map.
+    code_samples: 
+      - removing-data-hash-map-memory-store
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The key to remove.
     returns:
       - type: void
         summary: ''
@@ -65,22 +87,30 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: MemoryStoreHashMap:SetAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Sets the value of a key in the hash map.
+    description: |
+      Sets the value of a key in the hash map, overwriting any existing value.
+    code_samples: 
+      - adding-data-hash-map-memory-store
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The key whose value to set.
       - name: value
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The value to set.
       - name: expiration
         type: int64
         default:
-        summary: ''
+        summary: |
+          Item expiration in seconds, after which the item is automatically
+          removed from the hash map. The maximum expiration time is 45 days
+          (3,888,000 seconds).
     returns:
       - type: bool
         summary: ''
@@ -90,25 +120,50 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: MemoryStoreHashMap:UpdateAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Retrieves the value of a key from a hash map and lets you update it to a
+      new value.
+    description: |
+      Retrieves the value of a key from a hash map and lets you update it to a
+      new value.
+
+      This method accepts a callback function that retrieves the existing key
+      value and passes it to a transform function, which returns the new value
+      for the item, with these exceptions:
+
+      - If the key does not exist, the old value passed to the function is nil.
+      - If the function returns nil, the update is canceled.
+
+      The new value is saved only if the key was not updated (for example, by a
+      different game server) since the moment it was read. If the value changed
+      in that time, the transform function is called again with the most recent
+      item value. This cycle repeats until the value is saved successfully or
+      the transform function returns nil to abort the operation.
+    code_samples:
+      - updating-hash-map-memory-store
     parameters:
       - name: key
         type: string
         default:
-        summary: ''
+        summary: |
+          The key whose value you want to update.
       - name: transformFunction
         type: Function
         default:
-        summary: ''
+        summary: |
+          The transform function, which you provide. This function takes the old
+          value as an input and returns the new value.
       - name: expiration
         type: int64
         default:
-        summary: ''
+        summary: |
+          Item expiration in seconds, after which the item is automatically
+          removed from the hash map. The maximum expiration time is 45 days
+          (3,888,000 seconds).
     returns:
       - type: Variant
-        summary: ''
+        summary: |
+          The last value returned by the transform function.
     tags:
       - Yields
     deprecation_message: ''

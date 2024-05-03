@@ -443,8 +443,14 @@ navigation:
             path: /cloud-services/memory-stores/sorted-map
           - title: Queue
             path: /cloud-services/memory-stores/queue
+          - title: Hash Map
+            path: /cloud-services/memory-stores/hash-map
           - title: Observability
             path: /cloud-services/memory-stores/observability
+          - title: Per-Partition Limits
+            path: /cloud-services/memory-stores/per-partition-limits
+          - title: Best Practices
+            path: /cloud-services/memory-stores/best-practices
       - title: Cross-Server Messaging
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity Developers
