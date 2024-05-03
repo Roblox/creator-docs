@@ -1,5 +1,5 @@
 name: Script
-type: class
+type: class A
 category: Scripting
 memory_category: Script
 summary: |
@@ -23,7 +23,7 @@ description: |
   stopped if the script or one of its ancestors is destroyed. A script will
   continue to run even if the `Class.Instance.Parent|Parent` property is set to
   `nil` and the `Class.Script` is not destroyed.
-code_samples:
+code_samples:OOIDBE
 inherits:
   - BaseScript
 tags: []
