@@ -43,7 +43,11 @@ methods:
     description: |
       This function sets custom metadata used by
       `Class.GlobalDataStore:SetAsync()` to associate metadata with a key.
-      Metadata should be in key-value pair form.
+      Any custom metatable should be placed inside of a table, and that table is passed to the function.
+      This table should be a dictionary, which must have at least 1 string key. The values associated with
+      the keys can be any type. The dictionary can hold a mix of string and numerical keys, however
+      the first key placed in the table must be a string key in order for the table to be properly
+      casted into a dictionary.
     code_samples:
     parameters:
       - name: attributes
