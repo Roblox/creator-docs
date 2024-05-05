@@ -44,7 +44,7 @@ items:
     deprecation_message: ''
   - name: Basalt
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 788
     tags: []
     deprecation_message: ''
@@ -56,7 +56,7 @@ items:
     deprecation_message: ''
   - name: CrackedLava
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 804
     tags: []
     deprecation_message: ''
@@ -68,7 +68,7 @@ items:
     deprecation_message: ''
   - name: Limestone
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 820
     tags: []
     deprecation_message: ''
@@ -80,7 +80,7 @@ items:
     deprecation_message: ''
   - name: Pavement
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 836
     tags: []
     deprecation_message: ''
@@ -104,19 +104,19 @@ items:
     deprecation_message: ''
   - name: Rock
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 896
     tags: []
     deprecation_message: ''
   - name: Sandstone
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 912
     tags: []
     deprecation_message: ''
   - name: CorrodedMetal
     summary: |
-      Applies to `Class.BasePart` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1040
     tags: []
     deprecation_message: ''
@@ -146,7 +146,7 @@ items:
     deprecation_message: ''
   - name: LeafyGrass
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1284
     tags: []
     deprecation_message: ''
@@ -164,31 +164,31 @@ items:
     deprecation_message: ''
   - name: Snow
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1328
     tags: []
     deprecation_message: ''
   - name: Mud
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1344
     tags: []
     deprecation_message: ''
   - name: Ground
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1360
     tags: []
     deprecation_message: ''
   - name: Asphalt
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1376
     tags: []
     deprecation_message: ''
   - name: Salt
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1392
     tags: []
     deprecation_message: ''
@@ -200,7 +200,7 @@ items:
     deprecation_message: ''
   - name: Glacier
     summary: |
-      Applies to `Class.Terrain` only.
+      Applies to `Class.BasePart` and `Class.Terrain`.
     value: 1552
     tags: []
     deprecation_message: ''
