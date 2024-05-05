@@ -428,10 +428,8 @@ else {
 
 ### Conditional Operator
 
-Luau doesn't offer a direct equivalent to the C# conditional operator, `a ? b : c`. However, the Luau idiom `a and b or c` offers a close approximation, provided `b` isn't `false` or `nil`.
-
-```lua title='Approximate of the conditional operator in Luau'
-local max = x > y and x or y
+```lua title='Conditional operator in Luau'
+local max = if x > y then x else y
 ```
 
 ```cs title='Conditional operator in C#'
