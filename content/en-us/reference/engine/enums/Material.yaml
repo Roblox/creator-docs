@@ -1,7 +1,9 @@
 name: Material
 type: enum
-summary: ''
-description: ''
+summary: |
+  Materials used for parts and/or terrain.
+description: |
+  The following base materials are used for [parts](../../../parts/index.md) and/or [terrain](../../../parts/terrain.md). See the [Materials](../../../parts/materials.md) guide for more details on using and modifying materials.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -237,42 +239,50 @@ items:
       - NotBrowsable
     deprecation_message: ''
   - name: Cardboard
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2304
     tags: []
     deprecation_message: ''
   - name: Carpet
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2305
     tags: []
     deprecation_message: ''
   - name: CeramicTiles
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2306
     tags: []
     deprecation_message: ''
   - name: ClayRoofTiles
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2307
     tags: []
     deprecation_message: ''
   - name: RoofShingles
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2308
     tags: []
     deprecation_message: ''
   - name: Leather
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2309
     tags: []
     deprecation_message: ''
   - name: Plaster
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2310
     tags: []
     deprecation_message: ''
   - name: Rubber
-    summary: ''
+    summary: |
+      Applies to `Class.BasePart` only.
     value: 2311
     tags: []
     deprecation_message: ''
