@@ -1049,8 +1049,9 @@ events:
         type: bool
         default:
         summary: |
-          Whether the item was successfully purchased (false for errors and
-          cancellations).
+          Indicates if the user pressed OK (true), Cancel (false), or errored
+          (false). Do not use this to process purchases, instead use
+          `Class.MarketplaceService.ProcessReceipt`.
     tags: []
     deprecation_message: ''
     security: None
@@ -1092,8 +1093,9 @@ events:
         type: bool
         default:
         summary: |
-          Whether the item was successfully purchased (false for errors and
-          cancellations).
+          Indicates if the user pressed OK (true), Cancel (false), or errored
+          (false). This may not accurately reflect if the purchase itself has
+          successfully processed.
     tags: []
     deprecation_message: ''
     security: None

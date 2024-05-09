@@ -3,7 +3,10 @@ type: enum
 summary: |
   Materials used for parts and/or terrain.
 description: |
-  The following base materials are used for [parts](../../../parts/index.md) and/or [terrain](../../../parts/terrain.md). See the [Materials](../../../parts/materials.md) guide for more details on using and modifying materials.
+  The following base materials are used for [parts](../../../parts/index.md)
+  and/or [terrain](../../../parts/terrain.md). See the
+  [Materials](../../../parts/materials.md) guide for more details on using and
+  modifying materials.
 code_samples:
 tags: []
 deprecation_message: ''

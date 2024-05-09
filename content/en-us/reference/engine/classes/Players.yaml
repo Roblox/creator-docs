@@ -696,7 +696,7 @@ methods:
           <td>Describes the BrickColor values for each limb</td>
         </tr>
         <tr>
-          <td><code>bodyColors3</code></td>
+          <td><code>bodyColor3s</code></td>
           <td>table (see below)</td>
           <td>Describes the Color3 instance for each limb which may not match perfectly with bodyColors</td>
         </tr>

@@ -76,4 +76,5 @@ jobs:
           CHECK_PROTECTED_FIELDS: true
           COMMIT_HASH: ${{ github.event.pull_request.head.sha }}
           EVENT_NAME: ${{ github.event_name }}
+          POST_PULL_REQUEST_COMMENTS: true
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}

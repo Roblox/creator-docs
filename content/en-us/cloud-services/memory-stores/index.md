@@ -270,7 +270,7 @@ The following table lists and describes the recommended solution for each respon
              placeBid("MyItem", 40)
              print("done")
              ```
-          <li>Investigate to see if you’re calling `Class.MemoryStoreService` efficiently to avoid conflicts. Ideally, you shouldn't over-send requests.</li>
+          <li>Investigate to see if you're calling `Class.MemoryStoreService` efficiently to avoid conflicts. Ideally, you shouldn't over-send requests.</li>
           <li>Consistently remove items once they are read using the `Class.MemoryStoreQueue:RemoveAsync()` method for queues and `Class.MemoryStoreSortedMap:RemoveAsync()` for sorted maps.</li>
         </ul>
       </td>
@@ -308,6 +308,7 @@ The following table lists and describes the recommended solution for each respon
         </ul>
       </td>
     </tr>
+
   </tbody>
 </table>
 

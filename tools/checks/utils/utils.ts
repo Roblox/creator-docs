@@ -14,19 +14,6 @@ export enum Emoji {
   WhiteCheckMark = '✅',
 }
 
-export enum Locale {
-  DE_DE = 'de-de',
-  EN_US = 'en-us',
-  ES_ES = 'es-es',
-  FR_FR = 'fr-fr',
-  JA_JP = 'ja-jp',
-  KO_KR = 'ko-kr',
-  PT_BR = 'pt-br',
-  RU_RU = 'ru-ru',
-  ZH_CN = 'zh-cn',
-  ZH_TW = 'zh-tw',
-}
-
 export type Tuple = Array<string | number>;
 
 /**

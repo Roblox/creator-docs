@@ -3,10 +3,6 @@ title: Native Code Generation
 description: Luau Native Code Generation allows Luau code to be translated directly to CPU machine code.
 ---
 
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Luau&nbsp;Native&nbsp;Code**.
-</Alert>
-
 With Luau support for native code generation, server-side scripts in your experience can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can be used to improve execution speed for some scripts on the server, in particular those that have a lot of numerical computation without using too many heavy Luau library or Roblox API calls.
 
 ## Enabling Native
@@ -94,6 +90,21 @@ If the script is using `--!native` but a function doesn't show the `<native>` an
 In the [Luau Heap](../studio/optimization/memory-usage.md#luau-heap) profiler, memory taken by native functions displays as `[native]` elements in the graph.
 
 <img src="../assets/studio/console/LuauHeap-Native-Annotation.png" width="840" alt="Example of native memory usage flagged in the Luau Heap profiler" />
+
+### Size Analysis
+
+Every natively-compiled script consumes memory. When the size of compiled code reaches a predefined limit, native compilation stops and the remaining code is run non‑natively. This makes it essential to choose scripts carefully for native compilation.
+
+To monitor the native code size of individual functions and scripts:
+
+1. Make sure you're in **Server** view through the [client/server toggle](../studio/testing-modes.md#clientserver-toggle) button.
+2. Invoke `debug.dumpcodesize()` from the [Command Bar](../studio/ui-overview.md#command-bar).
+
+In the [Output](../studio/output.md) window, you'll see the total number of scripts and functions that have been natively compiled up to the point of invocation, the memory consumed by their native code, and the native code size limit. Following the summary, you'll see a table for every natively‑compiled script in descending order of code size.
+
+<img src="../assets/studio/debugging/Native-Code-Size-Analysis.png" width="850" alt="Example of native code size displayed in the Output window."/>
+
+For each script, the output displays the number of functions compiled and the native code memory consumption. Each function is then listed in descending order of native code size, with anonymous functions shown as `[anonymous]` and entire scripts shown as `[top level]`. In the final column, the percentage is computed with respect to the native code size limit. Note that native code size of functions is reported precisely but the memory consumption for scripts is rounded up to the nearest page size.
 
 ## Limits and Troubleshooting
 

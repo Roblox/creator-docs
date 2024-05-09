@@ -1675,6 +1675,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/PlayerGui.yaml
         ignoreTranslation: true
+      - title: PlayerHydrationService
+        path: /reference/engine/classes/PlayerHydrationService
+        type: engineapi
+        source: /reference/engine/classes/PlayerHydrationService.yaml
+        ignoreTranslation: true
       - title: PlayerMouse
         path: /reference/engine/classes/PlayerMouse
         type: engineapi
@@ -4033,6 +4038,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/IXPLoadingStatus.yaml
         ignoreTranslation: true
+      - title: JoinSource
+        path: /reference/engine/enums/JoinSource
+        type: engineapi
+        source: /reference/engine/enums/JoinSource.yaml
+        ignoreTranslation: true
       - title: JointCreationMode
         path: /reference/engine/enums/JointCreationMode
         type: engineapi
@@ -4102,6 +4112,21 @@ navigation:
         path: /reference/engine/enums/LoadDynamicHeads
         type: engineapi
         source: /reference/engine/enums/LoadDynamicHeads.yaml
+        ignoreTranslation: true
+      - title: MarketplaceBulkPurchasePromptStatus
+        path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus.yaml
+        ignoreTranslation: true
+      - title: MarketplaceItemPurchaseStatus
+        path: /reference/engine/enums/MarketplaceItemPurchaseStatus
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceItemPurchaseStatus.yaml
+        ignoreTranslation: true
+      - title: MarketplaceProductType
+        path: /reference/engine/enums/MarketplaceProductType
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceProductType.yaml
         ignoreTranslation: true
       - title: MarkupKind
         path: /reference/engine/enums/MarkupKind

@@ -34,10 +34,12 @@ methods:
       - name: name
         type: string
         default:
-        summary: The name of the hash map.
+        summary: |
+          The name of the hash map.
     returns:
       - type: MemoryStoreHashMap
-        summary: A `Class.MemoryStoreHashMap` instance for the provided name.
+        summary: |
+          A `Class.MemoryStoreHashMap` instance for the provided name.
     tags: []
     deprecation_message: ''
     security: None

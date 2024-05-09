@@ -9,7 +9,8 @@ import {
   readListFromFile,
   repositoryRoot,
 } from './files.js';
-import { Emoji, Locale } from './utils.js';
+import { Locale } from './localization.js';
+import { Emoji } from './utils.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
@@ -363,7 +364,7 @@ export const checkContentLinks = ({
 };
 
 export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
-  console.log(`${Emoji.Mag} Checking for unused assets...`);
+  console.log(`::group::${Emoji.Mag} Checking for unused assets...`);
   // Get all files to check
   const allFiles = [
     ...getAllContentFileNamesWithExtension({
@@ -415,6 +416,7 @@ export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
     }
     return false;
   });
+  console.log('::endgroup::');
   console.log(`${Emoji.Bulb} Total unused assets: ${unusedAssets.length}`);
 
   if (config.deleteUnusedAssets) {
