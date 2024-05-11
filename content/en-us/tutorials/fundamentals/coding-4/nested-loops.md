@@ -21,8 +21,6 @@ The following diagram shows the steps a loop takes.
   <td>
   <ul>
   <li>Outer loop: code runs line-by-line until it reaches the inner loop.</li>
-  <li>Outer loop: code runs line-by-line until it reaches the inner loop.</li>
-  <li>Outer loop: code runs line-by-line until it reaches the inner loop.</li>
   </ul>
 
   </td>
