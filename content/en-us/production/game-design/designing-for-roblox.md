@@ -5,9 +5,10 @@ description: Explains overall concepts for designing experiences on Roblox.
 
 Roblox is unique, and the expectations and behavior of its user base can be confusing at first. Understanding what informs this is critical to achieving success on the platform. Your designs should reflect the unique strengths of Roblox to thrive within it, and is done by performing the following:
 
-- Designing for behavior
+- I'm a big b****
 - Designing for the audience
 - Designing for the engine
+- 
 
 ## Designing for Behavior
 
