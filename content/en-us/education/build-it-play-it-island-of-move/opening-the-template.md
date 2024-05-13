@@ -17,13 +17,9 @@ A template has been created that includes all the parts to make a simulator-styl
 
 ## Open the Template
 
-Time to open Roblox Studio! If you need to, download [Studio](https://www.roblox.com/create) and come back to this page when you're ready.
+Time to open Roblox Studio! If you need to, download [Studio](https://www.roblox.com/create), then click the following button to open the **Move It Simulator** template.
 
-1. Open **Roblox Studio** (through your desktop).
-
-2. Click the **Move It Simulator** template to open it.
-
-<img src="../../assets/education/build-it-play-it-island-of-move/opening-the-template/show-template-pick.jpeg" width="75%" />
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="5353920686" universeId="1876281622" />
 
 ## Close Extra Windows
 
