@@ -140,7 +140,7 @@ The **Mansion of Wonder** template includes high-quality 3D objects and scripts 
 
 ## Flat Terrain
 
-The **Flat Terrain** template includes an empty data model with a flat, grassy terrain.
+The **Flat Terrain** template includes an empty data model with flat, grassy terrain.
 
 <img src="../assets/resources/templates/Flat-Terrain-Template.png" width="50%" alt="" />
 

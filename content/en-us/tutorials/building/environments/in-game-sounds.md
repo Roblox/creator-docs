@@ -1,5 +1,5 @@
 ---
-title: In-Game
+title: In-Game Sounds
 description: The process for creating positional and feedback sounds to enhance an experience.
 prev: /tutorials/building/environments/playing-background-music
 ---

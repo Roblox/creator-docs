@@ -502,7 +502,7 @@ Similar to the real-world, the mist evaporation process allows a rainbow to form
 <GridContainer numColumns="2">
   <figure>
     <img src="../../../assets/tutorials/creating-waterfalls/Mist-Texture.png" alt="The 2D texture that represents the mist." width="80%"/>
-    <figcaption>Rainbow Texture = rbxassetid://16830667309</figcaption>
+    <figcaption>Mist Texture = rbxassetid://16830667309</figcaption>
   </figure>
   <figure>
     <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-Texture.png" alt="The 2D texture that represents the rainbow." width="80%"/>

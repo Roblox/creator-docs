@@ -49,20 +49,16 @@ navigation:
         path: /tutorials/3D-art/creating-flickering-lights
       - title: Assembling Modular Environments
         path: /tutorials/3D-art/assembling-modular-environments
-      - title: Enhancing Outdoor Environments with Future Lighting
+      - title: Enhancing Outdoor Environments
         path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
   - title: Effects
     section:
-      - title: Basic Particle Effects
-        path: /tutorials/building/effects/basic-particle-effects
-      - title: Custom Particle Effects
-        path: /tutorials/building/effects/custom-particle-effects
+      - title: Creating Waterfalls
+        path: /tutorials/building/effects/creating-waterfalls
       - title: Creating Laser Beams
         path: /tutorials/building/effects/laser-traps-with-beams
       - title: Using Particles for Explosions
         path: /tutorials/building/effects/using-particles-for-explosions
-      - title: Creating Waterfalls
-        path: /tutorials/building/effects/creating-waterfalls
   - title: Physics
     section:
       - title: Building a Hinged Door
