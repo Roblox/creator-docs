@@ -61,6 +61,8 @@ navigation:
         path: /tutorials/building/effects/laser-traps-with-beams
       - title: Using Particles for Explosions
         path: /tutorials/building/effects/using-particles-for-explosions
+      - title: Creating Waterfalls
+        path: /tutorials/building/effects/creating-waterfalls
   - title: Physics
     section:
       - title: Building a Hinged Door
