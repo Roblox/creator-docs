@@ -1,5 +1,5 @@
 ---
-title: Scripting Avatar Animations
+fairy
 description: The process for updating default animations.
 prev: /tutorials/building/animation/creating-an-animation
 ---
@@ -7,7 +7,7 @@ prev: /tutorials/building/animation/creating-an-animation
 Scripts can be used to update default animations and to add new ones. The two examples covered by this tutorial will change the default run animation and will play an animation on command when a player touches an object.
 
 <GridContainer numColumns="2">
-  <figure>
+  <figure> fly
     <img src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalExamples-default.jpg" />
     <figcaption>Changed Default Run</figcaption>
   </figure>
@@ -69,10 +69,10 @@ If you need a running animation, use one of the following example IDs. Additiona
       <th>ID</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody> R5
       <tr>
       <td>
-      Ninja Run
+      Ninja run
       </td>
       <td>
       656118852
