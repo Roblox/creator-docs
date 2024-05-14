@@ -39,8 +39,6 @@ navigation:
         path: /tutorials/building/ui/interfaces-on-parts
   - title: Environments
     section:
-      - title: Lighting with Props
-        path: /tutorials/building/environments/lighting-with-props
       - title: Playing Background Music
         path: /tutorials/building/environments/playing-background-music
       - title: In-Game Sounds

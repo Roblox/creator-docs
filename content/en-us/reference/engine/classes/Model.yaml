@@ -249,11 +249,11 @@ methods:
     summary: |
       Breaks connections between `BaseParts`, including surface connections with
       any adjacent parts, `Class.WeldConstraint|WeldConstraints` and all
-      `Class.Weld|Welds` and other `Class.JointInstance`s.
+      `Class.Weld|Welds` and other `Class.JointInstance|JointInstances`.
     description: |
       Breaks connections between `BaseParts`, including surface connections with
       any adjacent parts, `Class.WeldConstraint|WeldConstraints`, and all
-      `Class.Weld|Welds` and other `Class.JointInstance`s.
+      `Class.Weld|Welds` and other `Class.JointInstance|JointInstances`.
 
       When BreakJoints is used on a Player character `Class.Model`, the
       character's `Class.Humanoid` will die as it relies on the Neck joint.
@@ -283,30 +283,19 @@ methods:
       `Class.BasePart` children within a `Class.Model`. The volume's orientation
       is based on the orientation of the `Class.Model.PrimaryPart|PrimaryPart`,
       and matches the selection box rendered in Studio when the model is
-      selected. The description is provided in the form of a `Datatype.CFrame`
-      **orientation** and `Datatype.Vector3` **size**.
+      selected. Mirroring the behavior of `Class.Terrain:FillBlock()`, it
+      returns a `Datatype.CFrame` representing the center of that bounding box
+      and a `Datatype.Vector3` representing its size.
 
-      Mirroring the behavior of `Class.Terrain:FillBlock()`, it returns a CFrame
-      representing the center of that bounding box and a Vector3 representing
-      its size.
-
-      If there is no PrimaryPart for the model, the BoundingBox will be aligned
-      to the world axes.
-
-      #### Example
-
-      Pictured below is a `Class.Model` with a pink semitransparent `Class.Part`
-      whose `Class.BasePart.CFrame|CFrame` and `Class.BasePart.Size|Size` have
-      been set to the return values of this function called on the model.
-
-      ![A model of an Observation Tower with a pink semitransparent part representing the volume returned by GetBoundingBox](/assets/legacy/Model-GetBoundingBox.png)
-
-      #### Usage
+      If there is no `Class.Model.PrimaryPart|PrimaryPart` for the model, the
+      bounding box will be aligned to the world axes.
 
       ```lua
       local model = workspace.Model
       local part = workspace.Part
       local orientation, size = model:GetBoundingBox()
+
+      -- Resize and position part equal to bounding box of model
       part.Size = size
       part.CFrame = orientation
       ```
@@ -352,10 +341,10 @@ methods:
   - name: Model:GetModelCFrame
     summary: |
       This value historically returned the CFrame of a central position in the
-      model. It has been deprecated as it did not provide reliable results.
+      model.
     description: |
       This value historically returned the CFrame of a central position in the
-      model. It has been deprecated as it did not provide reliable results.
+      model.
     code_samples:
     parameters: []
     returns:
@@ -364,9 +353,9 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function has been deprecated. Developers can instead use
-      `Class.Model:GetPrimaryPartCFrame()` to retrieve the `Datatype.CFrame` of
-      the model's primary part.
+      This function has been deprecated as it did not provide reliable results.
+      You can instead use `Class.Model:GetPrimaryPartCFrame()` to retrieve the
+      `Datatype.CFrame` of the model's primary part.
     security: None
     thread_safety: Unsafe
   - name: Model:GetModelSize

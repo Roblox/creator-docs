@@ -120,7 +120,7 @@ properties:
       can_save: false
   - name: Team.Score
     summary: |
-      Deprecated. This property can be used to store an integer value associated
+      This property can be used to store an integer value associated
       with the team. This property offers no additional functionality and is not
       used by any game services.
     description: |

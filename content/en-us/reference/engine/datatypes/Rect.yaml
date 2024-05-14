@@ -3,31 +3,34 @@ type: datatype
 summary: |
   A value that represents a two-dimensional rectangle.
 description: |
-  The `Datatype.Rect` describes a rectangle on a 2D plane. It is constructed
-  using two of its corners, either using two `Datatype.Vector2` form or as four
-  numbers:
+  **Rect** describes a rectangle on a 2D plane. It is constructed using two corners, either two `Datatype.Vector2` positions or four numbers:
 
   ```lua
-  Rect.new(Vector2.new(1, 2), Vector2.new(3, 4))
-  Rect.new(1, 2, 3, 4)
+  local rect1 = Rect.new(Vector2.new(10, 10), Vector2.new(80, 80))
+  local rect2 = Rect.new(10, 10, 80, 80)
   ```
 
-  The Rect data type is used in the `Class.ImageLabel.SliceCenter` property,
-  which determines the center area of a scaled image.
+  This data type is used in the `Class.ImageLabel.SliceCenter` property which
+  determines the center area of a scaled image.
 code_samples:
 tags: []
 deprecation_message: ''
 constructors:
   - name: Rect.new
-    summary: Returns a new Rect with zero `Datatype.Vector2`s.
-    description: 'Constructs a new Rect given two zero `Datatype.Vector2`: `min` as top left corner and `max` as bottom right corner.'
+    summary: |
+      Returns a new **Rect** with zero `Datatype.Vector2` positions.
+    description: |
+      Constructs a new **Rect** with two zero `Datatype.Vector2` positions.
     parameters:
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Rect.new
-    summary: Returns a new Rect from the given `Datatype.Vector2`s.
-    description: 'Constructs a new Rect given two `Datatype.Vector2`: `min` as top left corner and `max` as bottom right corner.'
+    summary: |
+      Returns a new **Rect** from the given `Datatype.Vector2` positions.
+    description: |
+      Constructs a new **Rect** given two `Datatype.Vector2` positions: `min` as
+      the top-left corner and `max` as the bottom-right corner.
     parameters:
       - name: min
         type: Vector2
@@ -41,8 +44,13 @@ constructors:
     tags: []
     deprecation_message: ''
   - name: Rect.new
-    summary: Returns a new Rect using the first and last two arguments as coordinates for corners.
-    description: Constructs a new Rect using minX and minY as coordinates for the top left corner, and maxX and maxY as coordinates for the bottom right corner.
+    summary: |
+      Returns a new **Rect** using the first and last two arguments as
+      coordinates for corners.
+    description: |
+      Constructs a new **Rect** using `minX` and `minY` as coordinates for the
+      top-left corner, and `maxX` and `maxY` as coordinates for the bottom-right
+      corner.
     parameters:
       - name: minX
         type: number
@@ -68,18 +76,18 @@ properties:
   - name: Rect.Width
     type: number
     summary: |
-      The width of the Rect.
+      The width of the **Rect**.
     description: |
-      The width of the Rect in pixels.
+      The width of the **Rect** in pixels.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Rect.Height
     type: number
     summary: |
-      The height of the Rect.
+      The height of the **Rect**.
     description: |
-      The height of the Rect in pixels.
+      The height of the **Rect** in pixels.
     code_samples: []
     tags: []
     deprecation_message: ''

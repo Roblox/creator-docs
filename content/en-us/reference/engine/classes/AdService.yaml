@@ -3,12 +3,10 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A decommissioned service that is no longer operational. Historically used to
-  display mobile video ads.
+  A class that allows the display of mobile video ads.
 description: |
-  This **AdService** class was historically a service for displaying mobile
-  video ads as a form of monetization. This service has been decommissioned and
-  is no longer operational.
+  This **AdService** is a service for displaying mobile
+  video ads as a form of monetization.
 code_samples:
 inherits:
   - Instance
@@ -21,10 +19,9 @@ properties: []
 methods:
   - name: AdService:ShowVideoAd
     summary: |
-      Historically used to show mobile video advertisements.
+      Show mobile video advertisements.
     description: |
-      Historically used to show mobile video advertisements. No longer
-      operational as `Class.AdService` has been decommissioned.
+      Show mobile video advertisements.
     code_samples:
     parameters: []
     returns:
@@ -41,9 +38,9 @@ methods:
 events:
   - name: AdService.VideoAdClosed
     summary: |
-      Historically fired when an `Class.AdService` video closed.
+      Fires when an `Class.AdService` video closes.
     description: |
-      No longer fires because `Class.AdService` has been decommissioned.
+      Fires when an `Class.AdService` video closes.
     code_samples:
     parameters:
       - name: adShown

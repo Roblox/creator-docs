@@ -13,7 +13,7 @@ description: |
   sequence or one plus the length of the subject string. As in the string
   library, negative indices count from the end of the string.
 
-  You can find a large catalog of usable `UTF-8`characters
+  You can find a large catalog of usable `UTF-8` characters
   [here](https://www.w3schools.com/charsets/ref_html_utf8.asp).
 code_samples:
 properties:
@@ -137,16 +137,16 @@ functions:
     code_samples:
   - name: utf8.offset
     summary: |
-      Returns the position (in bytes) where the encoding of the n-th codepoint
+      Returns the position (in bytes) where the encoding of the `n`‑th codepoint
       of `s` (counting from byte position `i`) starts.
     description: |
-      Returns the position (in bytes) where the encoding of the n-th codepoint
+      Returns the position (in bytes) where the encoding of the `n`‑th codepoint
       of `s` (counting from byte position `i`) starts. A negative `n` gets
       characters before position `i`. The default for `i` is `1` when `n` is
       non-negative and `#s + 1` otherwise, so that `utf8.offset(s, -n)` gets the
-      offset of the n-th character from the end of the string. If the specified
-      character is neither in the subject nor right after its end, the function
-      returns `nil`.
+      offset of the `n`‑th character from the end of the string. If the
+      specified character is neither in the subject nor right after its end, the
+      function returns `nil`.
     parameters:
       - name: s
         type: string

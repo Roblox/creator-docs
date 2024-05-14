@@ -12,7 +12,7 @@ description: |
   `Class.GuiObject|GuiObjects`, such as `Class.TextLabel`, `Class.ImageLabel`.
   The key benefit to using a Frame over a `Class.Folder` as a container object
   is the ability to further manipulate the `Class.GuiObject.Size` and
-  `Class.GuiObject.Position` of any descendant `Class.GuiObject`s.
+  `Class.GuiObject.Position` of any descendant `Class.GuiObject`.
 code_samples:
 inherits:
   - GuiObject

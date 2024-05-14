@@ -129,21 +129,21 @@ When you insert an ad unit into an eligible experience, it's important to check 
 
 Eligible users can see two types of video ads within Roblox experiences, depending on how the advertiser bids:
 
-- A **click-to-play** video ad is served when an advertiser bids on users viewing at least 15 seconds of the ad. Users initiate a rewarded video ad by clicking on the ad unit, which prompts the video to play in full-screen with sound on. Publishers are paid each time a video ad is watched for at least 15 seconds.
+- A **click-to-play** video ad is served when an advertiser bids on users viewing at least 15 seconds of the ad. Users initiate a video ad by clicking on the ad unit, which prompts the video to play in full-screen with sound on. Publishers are paid each time a video ad is watched for at least 15 seconds.
 - An **autoplaying** video is served when an advertiser bids on users seeing their ad, and starts playing with the sound off when a user looks at it. If they look away, the video pauses. The video ad includes controls to unmute and expand to full screen. Publishers are paid based on the number of impressions the ad receives.
 
 To insert a video ad:
 
 1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
 
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="800" />
+   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
-1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
-   1. Hover over the part and click the **⊕** button. A contextual menu displays.
+   1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
    1. From the menu, insert an **AdGui**.
-1. Ensure that the `EnableVideoAds` checkbox of the AdGui is enabled in order to show video ads. Otherwise, the unit will only show image ads.
+1. In the [Properties](../../studio/properties.md) window, with the new **AdGui** selected, navigate to the **Face** property and choose a face, or keep the default face.
+1. Ensure that the **EnableVideoAds** checkbox is enabled in order to show video ads. Otherwise, the unit will only show image ads.
 
 To incentivize users to watch a click-to-play video ad for least 15 seconds, you may choose to implement a **reward mechanism** in your experience. A reward can only be given **once per ad rotation**, and ads rotate every 5 minutes. Choose an enticing reward, such as in-game currency or an in-game item, and ensure the reward is visible to users before they watch the ad. This can be through the UI or a sign next to the ad unit.
 
@@ -208,7 +208,7 @@ To insert an image ad:
 
 1. From the [Home](../../studio/home-tab.md) or [Model](../../studio/model-tab.md) tab, insert a **Block** part into your experience.
 
-   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" />
+   <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
 1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
 1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.

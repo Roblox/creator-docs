@@ -101,7 +101,7 @@ The `Class.DepthOfFieldEffect` effect blurs parts of your experience that aren't
 </TabItem>
 </Tabs>
 
-<img src="../assets/legacy/DepthOfField-Diagram.svg" width="80%" />
+<img src="../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" width="80%" />
 
 ## Sun Rays
 

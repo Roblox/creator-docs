@@ -21,24 +21,11 @@ deprecation_message: ''
 properties:
   - name: MeshPart.DoubleSided
     summary: |
-      Render both faces of polygons in the mesh.
+      Determines whether to render both faces of polygons in the mesh.
     description: |
-      This property determines whether to render both faces or polygons in the
+      This property determines whether to render both faces of polygons in the
       mesh. It is only changeable in Studio. This is useful for meshes that are
-      typically modeled as cards such as a leaf, hair and cloth.
-
-      Example: The tree leaves are modeled with single sided cards.
-
-      ![Leaves as cards](/assets/legacy/MeshPartsAsCards.png)
-
-      With MeshPart.DoubleSided disabled some leaves are missing since they are
-      back facing the camera.
-
-      ![DoubleSided property disabled](/assets/legacy/DoubleSidedOff.png)
-
-      With MeshPart.DoubleSided enabled, both faces of the leaves are rendered.
-
-      ![DoubleSided property enabled](/assets/legacy/DoubleSidedOn.png)
+      typically modeled as "cards" such as a leaf, hair, or cloth.
     code_samples:
     type: bool
     tags: []

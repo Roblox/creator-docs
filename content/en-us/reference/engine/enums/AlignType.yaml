@@ -14,20 +14,18 @@ deprecation_message: ''
 items:
   - name: Parallel
     value: 0
-    summary: |
-      Deprecated. Use **PrimaryAxisParallel** instead.
+    summary: ''
     tags:
       - Deprecated
     deprecation_message: |
-      Deprecated. Use **PrimaryAxisParallel** instead.
+      Use **PrimaryAxisParallel** instead.
   - name: Perpendicular
     value: 1
-    summary: |
-      Deprecated. Use **PrimaryAxisPerpendicular** instead.
+    summary: ''
     tags:
       - Deprecated
     deprecation_message: |
-      Deprecated. Use **PrimaryAxisPerpendicular** instead.
+      Use **PrimaryAxisPerpendicular** instead.
   - name: PrimaryAxisParallel
     summary: |
       Aligns the primary axis to be parallel to the axis given by

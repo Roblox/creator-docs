@@ -48,8 +48,6 @@ properties:
       It should be noted that sparkles have a partial
       `Class.ParticleEmitter.LightEmission` effect, so dark colors tend to
       render more transparent and white colors look very bright.
-
-      This property functions identically to `Class.Sparkles.SparkleColor`.
     code_samples:
       - Give-Sparkles
     type: Color3

@@ -3,31 +3,18 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  Provides functions to load and preview `Class.KeyframeSequence`s.
+  Provides functions to load and preview `Class.KeyframeSequence`.
 description: |
-  The KeyframeSequenceProvider service provides functions to load and preview
-  `Class.KeyframeSequence`s. It includes a number of functions that are useful
-  when working with `Class.Animation`s.
-
-  ## What is a KeyframeSequence?
+  The **KeyframeSequenceProvider** service provides functions to load and
+  preview `Class.KeyframeSequence|KeyframeSequences`. It includes a number of
+  functions that are useful when working with `Class.Animation|Animations`.
 
   A `Class.KeyframeSequence` stores a series of `Class.Pose|Poses` that encode
   the hierarchy and motion of an animation. The animation data Roblox uses in
   the playback of an animation, referenced by the `Class.Animation.AnimationId`
   property, can be constructed from a `Class.KeyframeSequence`.
   `Class.KeyframeSequence|KeyframeSequences` are usually created by the Roblox
-  Animation Editor but can be created through other plugins or even manually.
-
-  For more information, see the `Class.KeyframeSequence` page.
-
-  ## What does the KeyframeSequenceProvider do?
-
-  The KeyframeSequenceProvider has a number of uses.
-
-  - Download the `Class.KeyframeSequence` associated with an animation content
-    ID from the Roblox website
-  - Generate a temporary id to locally preview an animation
-  - Fetch the content IDs of animations owned by a particular user.
+  [Animation Editor](../../../animation/editor.md) but can be created through other plugins or even manually.
 code_samples:
   - KeyframeSequenceProvider-RegisterKeyframeSequence
 inherits:
@@ -37,8 +24,9 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: |
-  This service is deprecated and does not support the new 'AnimationClip's.
-  Developers are recommended to use 'AnimationClipProvider' instead.
+  This service is deprecated and does not support the newer
+  `Class.AnimationClip`. It's recommended to use `Class.AnimationClipProvider`
+  instead.
 properties: []
 methods:
   - name: KeyframeSequenceProvider:GetKeyframeSequence
